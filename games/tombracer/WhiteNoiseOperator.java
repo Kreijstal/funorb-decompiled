@@ -229,7 +229,7 @@ final class WhiteNoiseOperator extends TextureOperator {
           } else {
             stackIn_126_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_122_0), ((StringBuilder) (Object) stackIn_125_1).append(stackIn_126_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_122_0), ((StringBuilder) (Object) stackIn_125_1).append(stackIn_126_2).append(')').toString());
         }
     }
 

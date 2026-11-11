@@ -91,11 +91,11 @@ final class qp extends we {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final static int c(int param0, int param1, int param2) {
+    final static int scaleLightness(int param0, int param1, int param2) {
         if (param2 <= 116) {
           return -119;
         }
@@ -139,7 +139,7 @@ final class qp extends we {
         try {
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "qp.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "qp.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

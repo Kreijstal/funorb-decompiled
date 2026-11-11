@@ -57,7 +57,7 @@ final class jd extends OpenGlTexture implements lv {
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
             if (BeamShooterBehaviour.isAccountNameCharacter(param0 + 16, (char) var7)) {
-              var8 = cp.a((byte) 0, (char) var7);
+              var8 = cp.foldAccountNameChar((byte) 0, (char) var7);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -77,7 +77,7 @@ final class jd extends OpenGlTexture implements lv {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class jd extends OpenGlTexture implements lv {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -154,10 +154,10 @@ final class jd extends OpenGlTexture implements lv {
           this.field_k = param2;
           this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
-          jaggl.OpenGL.glTexImage3Dub(this.field_i, 0, this.d(120), this.field_k, this.field_l, this.field_n, 0, waa.a(this.field_f, 1383), 5121, param5, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.field_i, 0, this.d(120), this.field_k, this.field_l, this.field_n, 0, waa.toGlFormat(this.field_f, 1383), 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class jd extends OpenGlTexture implements lv {
           }
           super.setFilter(param0 + 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "jd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "jd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class jd extends OpenGlTexture implements lv {
         }
     }
 
-    final static String a(boolean param0) {
+    final static String listMusicTrackNames(boolean param0) {
         int var3 = 0;
         String var1;
         String[] var2;

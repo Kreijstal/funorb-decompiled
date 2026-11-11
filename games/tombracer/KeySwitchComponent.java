@@ -30,7 +30,7 @@ final class KeySwitchComponent extends SwitchComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mj.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mj.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class KeySwitchComponent extends SwitchComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class KeySwitchComponent extends SwitchComponent {
           }
           gj.field_d.put(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mj.FC(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mj.FC(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -151,50 +151,50 @@ final class KeySwitchComponent extends SwitchComponent {
         int incrementValue$8 = 0;
         try {
           var7 = (GameAssetLoader) (dma.field_l);
-          var7.a(param4, (byte) 47, param1);
-          o.field_d = jta.a((byte) 120, "b12_old", param3, "", param2);
+          var7.drawLoadingProgress(param4, (byte) 47, param1);
+          o.field_d = jta.loadBinaryFont((byte) 120, "b12_old", param3, "", param2);
           incrementValue$0 = param4;
           param4++;
-          var7.a(incrementValue$0, (byte) 47, param1);
+          var7.drawLoadingProgress(incrementValue$0, (byte) 47, param1);
           if (param0 > -8) {
             File var6 = (File) null;
             KeySwitchComponent.a((String) null, (File) null, -60);
           }
-          cq.field_d = jta.a((byte) 112, "newfont_old", param3, "", param2);
+          cq.field_d = jta.loadBinaryFont((byte) 112, "newfont_old", param3, "", param2);
           incrementValue$1 = param4;
           param4++;
-          var7.a(incrementValue$1, (byte) 47, param1);
-          kv.field_a = joa.a("b12", param2, "", (byte) 76);
+          var7.drawLoadingProgress(incrementValue$1, (byte) 47, param1);
+          kv.field_a = joa.loadFontMetrics("b12", param2, "", (byte) 76);
           incrementValue$2 = param4;
           param4++;
-          var7.a(incrementValue$2, (byte) 47, param1);
-          MatchStatistics.field_n = joa.a("newfont", param2, "", (byte) -111);
+          var7.drawLoadingProgress(incrementValue$2, (byte) 47, param1);
+          MatchStatistics.field_n = joa.loadFontMetrics("newfont", param2, "", (byte) -111);
           incrementValue$3 = param4;
           param4++;
-          var7.a(incrementValue$3, (byte) 47, param1);
-          wb.field_a = joa.a("newfont_lrg", param2, "", (byte) -92);
+          var7.drawLoadingProgress(incrementValue$3, (byte) 47, param1);
+          wb.field_a = joa.loadFontMetrics("newfont_lrg", param2, "", (byte) -92);
           incrementValue$4 = param4;
           param4++;
-          var7.a(incrementValue$4, (byte) 47, param1);
-          qp.field_r = joa.a("newfont_sml", param2, "", (byte) 126);
+          var7.drawLoadingProgress(incrementValue$4, (byte) 47, param1);
+          qp.field_r = joa.loadFontMetrics("newfont_sml", param2, "", (byte) 126);
           incrementValue$5 = param4;
           param4++;
-          var7.a(incrementValue$5, (byte) 47, param1);
+          var7.drawLoadingProgress(incrementValue$5, (byte) 47, param1);
           rc.field_b = SpriteData.loadSheet(param3, "", "fillfont");
           incrementValue$6 = param4;
           param4++;
-          var7.a(incrementValue$6, (byte) 47, param1);
+          var7.drawLoadingProgress(incrementValue$6, (byte) 47, param1);
           gga.field_O = SpriteData.loadSheet(param3, "", "font_small");
           incrementValue$7 = param4;
           param4++;
-          var7.a(incrementValue$7, (byte) 47, param1);
+          var7.drawLoadingProgress(incrementValue$7, (byte) 47, param1);
           MatchState.field_j = SpriteData.loadSheet(param3, "", "font_med");
           incrementValue$8 = param4;
           param4++;
-          var7.a(incrementValue$8, (byte) 47, param1);
+          var7.drawLoadingProgress(incrementValue$8, (byte) 47, param1);
           MovingPlatformComponent.field_O = SpriteData.loadSheet(param3, "", "font_large");
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mj.VB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mj.VB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

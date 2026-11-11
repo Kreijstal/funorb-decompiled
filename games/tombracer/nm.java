@@ -7,7 +7,7 @@ final class nm extends vo implements sca {
     static SpriteData field_i;
     static String field_j;
 
-    final static void a(Sprite param0, byte param1) {
+    final static void setRasterTarget(Sprite param0, byte param1) {
         gb.a(-29711);
         if (param1 < 88) {
           return;
@@ -15,14 +15,14 @@ final class nm extends vo implements sca {
         try {
           SoftwareRasterizer.setTarget(param0.pixels, param0.field_n, param0.field_k);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "nm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "nm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final long b(int param0) {
         if (param0 != 19135) {
           Sprite var3 = (Sprite) null;
-          nm.a((Sprite) null, (byte) -94);
+          nm.setRasterTarget((Sprite) null, (byte) -94);
           return 0L;
         }
         return 0L;
@@ -43,7 +43,7 @@ final class nm extends vo implements sca {
         try {
           this.field_k = param3;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "nm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "nm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class nm extends vo implements sca {
         try {
           this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

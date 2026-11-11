@@ -68,7 +68,7 @@ final class TrackMountComponent extends PrefabComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class TrackMountComponent extends PrefabComponent {
           super.encode(param0, param1);
           param1.writeBits((byte) 28, SpawnerBehaviour.a((byte) 8, 4, this.field_F), 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wha.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wha.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class TrackMountComponent extends PrefabComponent {
         try {
           this.field_F = NodeHashTable.a(param2.readBits((byte) 44, 8), 104, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

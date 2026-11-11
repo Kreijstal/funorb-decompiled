@@ -69,7 +69,7 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -233,7 +233,7 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -414,7 +414,7 @@ abstract class MazeComponent extends PrefabComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "hn.CC(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "hn.CC(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -18,7 +18,7 @@ final class fa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "fa.C(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "fa.C(" + param0 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class fa {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 > -110) {
-            fa.a(119, (BitPacketBuffer) null, -102, (int[]) null);
+            fa.readBitValues(119, (BitPacketBuffer) null, -102, (int[]) null);
           }
           var1 = null;
           var2 = null;
@@ -51,12 +51,12 @@ final class fa {
           if (OpenGlUnderwaterEffect.field_q == 2 &&
             !DisplaySettingsDialog.f(24316)) {
             if (QueuedPlayerEvent.a(false, mn.field_n)) {
-              var2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(87, ConsoleToken.field_n, new String[]{wp.field_a});
+              var2 = LegacyOpenGlFlowingWaterEffect.formatText(87, ConsoleToken.field_n, new String[]{wp.field_a});
               if (var10 != 0) {
-                var2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(83, pba.field_a, new String[]{wp.field_a});
+                var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, pba.field_a, new String[]{wp.field_a});
               }
             } else {
-              var2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(83, pba.field_a, new String[]{wp.field_a});
+              var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, pba.field_a, new String[]{wp.field_a});
             }
             if (vo.field_b) {
               TreasureValuesOverlay.a(0, true, (String) null, (String) (var2), (String) null, 2);
@@ -75,14 +75,14 @@ final class fa {
           }
           if (decompiledFrameRemainder0) {
             var3 = MenuEntry.field_k;
-            var3 = ima.a(var3, (byte) 8);
+            var3 = ima.prefixRightsIcon(var3, (byte) 8);
             var4 = "";
             var5 = "|";
             var6 = OpenGlUnderwaterEffect.field_q;
             var7 = 0;
             if (var6 == 2) {
-              var4 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(88, TrackMountComponent.field_G, new String[]{wp.field_a});
-              var8 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(111, li.field_a, new String[]{var3});
+              var4 = LegacyOpenGlFlowingWaterEffect.formatText(88, TrackMountComponent.field_G, new String[]{wp.field_a});
+              var8 = LegacyOpenGlFlowingWaterEffect.formatText(111, li.field_a, new String[]{var3});
               var7 = ComponentMount.field_b.field_G + (CharacterChoiceFactory.field_g.field_G - 485) + PlatformBehaviour.field_s.stringWidth(var8) - PlatformBehaviour.field_s.stringWidth(var4);
               if (0 > var7) {
                 var7 = 0;
@@ -98,7 +98,7 @@ final class fa {
                 if (null != C2SChooseRewardPacket.field_a) {
                   if (!kp.field_c ||
                     tla.field_f == null) {
-                    var4 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(110, UiComponent.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
+                    var4 = "[" + LegacyOpenGlFlowingWaterEffect.formatText(110, UiComponent.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + tla.field_f + "] ";
                     }
@@ -150,7 +150,7 @@ final class fa {
               ComponentMount.field_b.field_o = false;
             }
             if (ComponentMount.field_b.field_o) {
-              var1 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(126, RenderLayer.field_c, new String[]{var3, wp.field_a});
+              var1 = LegacyOpenGlFlowingWaterEffect.formatText(126, RenderLayer.field_c, new String[]{var3, wp.field_a});
             }
           }
           stackIn_102_0 = var1;
@@ -158,7 +158,7 @@ final class fa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (var1), "fa.D(" + param0 + ')');
+          throw tba.wrapException((Throwable) (var1), "fa.D(" + param0 + ')');
         }
     }
 
@@ -174,11 +174,11 @@ final class fa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "fa.E(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "fa.E(" + param0 + ')');
         }
     }
 
-    final static int[] a(int param0, BitPacketBuffer param1, int param2, int[] param3) {
+    final static int[] readBitValues(int param0, BitPacketBuffer param1, int param2, int[] param3) {
         Object stackIn_5_0 = null;
         int[] stackIn_28_0 = null;
         RuntimeException stackIn_32_0 = null;
@@ -254,7 +254,7 @@ final class fa {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ final class fa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4), "fa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4), "fa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

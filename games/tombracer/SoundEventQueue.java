@@ -14,7 +14,7 @@ abstract class SoundEventQueue {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -3) {
-            stackIn_4_0 = ega.a(10, param0, true, true);
+            stackIn_4_0 = ega.isNumber(10, param0, true, true);
             return stackIn_4_0;
           }
           return false;
@@ -28,7 +28,7 @@ abstract class SoundEventQueue {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -41,7 +41,7 @@ abstract class SoundEventQueue {
             field_a = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sqa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sqa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,7 +83,7 @@ abstract class SoundEventQueue {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 

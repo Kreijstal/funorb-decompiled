@@ -69,7 +69,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
             this.field_k = this.field_e != null ? true : false;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rpa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rpa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
           }
           return;
         }
-        bt.field_h = null;
+        PitSnakeModel.field_h = null;
         if (!param2) {
           return;
         }
@@ -178,11 +178,11 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param1) {
-          tga.field_a.a(param2, (byte) -104, param0, jg.a(param3, (byte) -79, param4), param5);
+          tga.field_a.a(param2, (byte) -104, param0, jg.withAlpha(param3, (byte) -79, param4), param5);
           return;
         }
         field_g = (String) null;
-        tga.field_a.a(param2, (byte) -104, param0, jg.a(param3, (byte) -79, param4), param5);
+        tga.field_a.a(param2, (byte) -104, param0, jg.withAlpha(param3, (byte) -79, param4), param5);
     }
 
     final void disable(boolean param0) {

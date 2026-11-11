@@ -14,7 +14,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         try {
           this.field_x = new StatusEffect(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           super.encode(param0, param1);
           this.field_x.encode(-29928, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "rl.U(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "rl.U(" + param0 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

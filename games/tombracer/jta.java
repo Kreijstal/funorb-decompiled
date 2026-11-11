@@ -210,7 +210,7 @@ final class jta extends SingleChildWidget {
         return null;
     }
 
-    final static BinaryBitmapFont a(byte param0, String param1, ResourceArchive param2, String param3, ResourceArchive param4) {
+    final static BinaryBitmapFont loadBinaryFont(byte param0, String param1, ResourceArchive param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -261,7 +261,7 @@ final class jta extends SingleChildWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class jta extends SingleChildWidget {
           var3.field_B = true;
           var3.requestKeyboardFocus((UiWidget) (this), false);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "jta.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "jta.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

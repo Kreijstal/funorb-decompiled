@@ -18,7 +18,7 @@ final class FallbackShaderEffect extends ShaderEffect {
           }
           this.owner.a((byte) -108, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vu.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vu.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class FallbackShaderEffect extends ShaderEffect {
               } else {
                 stackIn_38_2 = TombRacer.field_F;
               }
-              stackIn_37_0.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(stackIn_37_1, stackIn_38_2, new String[]{hw.field_a.field_r});
+              stackIn_37_0.field_r = LegacyOpenGlFlowingWaterEffect.formatText(stackIn_37_1, stackIn_38_2, new String[]{hw.field_a.field_r});
               MessageOverlay.field_t.field_r = RenderLayer.field_h;
               bc.field_b.field_X = true;
               TouchSwitchBehaviour.field_s = true;
@@ -252,7 +252,7 @@ final class FallbackShaderEffect extends ShaderEffect {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4), "vu.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4), "vu.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

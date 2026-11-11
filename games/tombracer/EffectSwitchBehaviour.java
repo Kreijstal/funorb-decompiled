@@ -26,7 +26,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         try {
           this.field_t.encode(param1, (byte) -124);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "eia.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "eia.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -390,7 +390,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           this.field_t = new FlagSet(6);
           this.field_n = 1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "eia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "eia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -427,7 +427,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

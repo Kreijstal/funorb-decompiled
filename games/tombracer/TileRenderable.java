@@ -16,7 +16,7 @@ abstract class TileRenderable implements Renderable {
             TileRenderable.releaseStatics(-92);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uq.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uq.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

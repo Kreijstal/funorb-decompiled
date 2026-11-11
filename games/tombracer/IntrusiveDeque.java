@@ -49,7 +49,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "vna.F(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "vna.F(" + param0 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class IntrusiveDeque {
           }
           if (decompiledFrameRemainder1) {
             dqa.field_e.field_X = true;
-            is.field_yb.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(99, uba.field_h, new String[]{ol.field_b});
+            is.field_yb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(99, uba.field_h, new String[]{ol.field_b});
             dn.field_b.field_vb.field_vb.field_r = null;
             var6 = null;
             var7 = (mu) (var4.first(-80));
@@ -265,17 +265,17 @@ final class IntrusiveDeque {
                     !var7.field_zb.field_o) {
                     if (var7.field_y != 0) {
                       var16 = var7.field_tb;
-                      DateInputWidget.a(dn.field_b.field_vb, -1, var16, 0L, -11635, (int[]) null, var7, -1, (String) null);
+                      DateInputWidget.openPlayerContextMenu(dn.field_b.field_vb, -1, var16, 0L, -11635, (int[]) null, var7, -1, (String) null);
                       if (var7.field_Cb != null &&
                         !RewardChoicePhase.isPrivateChatTarget(hka.field_b.field_i, (byte) -13) &&
                         !fua.field_g) {
                         if (!PowerDownItemBehaviour.field_s) {
                           var17 = hka.field_b;
-                          var18 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(114, RoomViewRenderer.field_b, new String[]{var16});
+                          var18 = LegacyOpenGlFlowingWaterEffect.formatText(114, RoomViewRenderer.field_b, new String[]{var16});
                           var17.field_f.addItem((byte) -79, 8, var18);
                         }
                         var17Lifetime1 = hka.field_b;
-                        var18Lifetime1 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(86, SceneLight.field_f, new String[]{var16});
+                        var18Lifetime1 = LegacyOpenGlFlowingWaterEffect.formatText(86, SceneLight.field_f, new String[]{var16});
                         var17Lifetime1.field_f.addItem((byte) -97, 18, var18Lifetime1);
                       }
                       var5 = var7;
@@ -311,7 +311,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "vna.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "vna.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -339,7 +339,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "vna.M(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "vna.M(" + param0 + ')');
         }
     }
 
@@ -372,7 +372,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "vna.L(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "vna.L(" + param0 + ')');
         }
     }
 
@@ -389,7 +389,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "vna.I(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "vna.I(" + param0 + ')');
         }
     }
 
@@ -413,7 +413,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "vna.D(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "vna.D(" + param0 + ')');
         }
     }
 
@@ -445,7 +445,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -473,7 +473,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "vna.A(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "vna.A(" + param0 + ')');
         }
     }
 
@@ -491,7 +491,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "vna.G(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "vna.G(" + param0 + ')');
         }
     }
 
@@ -519,7 +519,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "vna.E(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "vna.E(" + param0 + ')');
         }
     }
 
@@ -549,7 +549,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "vna.N(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vna.N(" + param0 + ')');
         }
     }
 
@@ -575,7 +575,7 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "vna.C(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "vna.C(" + param0 + ')');
         }
     }
 
@@ -585,7 +585,7 @@ final class IntrusiveDeque {
           this.sentinel.previous = this.sentinel;
           this.sentinel.next = this.sentinel;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vna.<init>()");
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vna.<init>()");
         }
     }
 

@@ -123,7 +123,7 @@ final class CachedArchiveSource extends ArchiveSource {
                   this.field_m = this.field_m + 1;
                   continue;
                 }
-                if (!this.field_u.b(-21)) {
+                if (!this.field_u.isPrefetchQueueFull(-21)) {
                   if (this.field_n[this.field_m] != 1) {
                     discarded$2 = this.requestGroup(2, 126, this.field_m);
                   }
@@ -152,7 +152,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
         if (this.field_v &&
           this.field_c <= bva.currentTimeMillis((byte) -107)) {
-          var2 = (ArchiveRequest) (this.field_p.d(param0 - 1000));
+          var2 = (ArchiveRequest) (this.field_p.firstWithKey(param0 - 1000));
           while (var2 != null) {
             if (!var2.field_m) {
               if (!var2.field_k) {
@@ -173,13 +173,13 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    final static void a(double param0, int param1) {
+    final static void setGamma(double param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != -256) {
-            CachedArchiveSource.a(0.721841364009857, 28);
+            CachedArchiveSource.setGamma(0.721841364009857, 28);
           }
           if (param0 != ed.field_a) {
             for (var3_int = 0; var3_int < 256; var3_int++) {
@@ -189,7 +189,7 @@ final class CachedArchiveSource extends ArchiveSource {
             ed.field_a = param0;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "js.G(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "js.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -280,10 +280,10 @@ final class CachedArchiveSource extends ArchiveSource {
           return this.field_k;
         }
         if (this.field_q == null) {
-          if (this.field_u.d(-21)) {
+          if (this.field_u.isUrgentQueueFull(-21)) {
             return null;
           }
-          this.field_q = (ArchiveRequest) ((Object) this.field_u.a(this.field_j, true, 255, -21, (byte) 0));
+          this.field_q = (ArchiveRequest) ((Object) this.field_u.queueRequest(this.field_j, true, 255, -21, (byte) 0));
         }
         if (!param0) {
           this.a((byte) -56);
@@ -306,8 +306,8 @@ final class CachedArchiveSource extends ArchiveSource {
             var3 = decompiledCaughtException;
             this.field_u.invalidateConnection(-1);
             this.field_k = null;
-            if (!this.field_u.d(-21)) {
-              this.field_q = (ArchiveRequest) ((Object) this.field_u.a(this.field_j, true, 255, -21, (byte) 0));
+            if (!this.field_u.isUrgentQueueFull(-21)) {
+              this.field_q = (ArchiveRequest) ((Object) this.field_u.queueRequest(this.field_j, true, 255, -21, (byte) 0));
             } else {
               this.field_q = null;
             }
@@ -329,8 +329,8 @@ final class CachedArchiveSource extends ArchiveSource {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
             this.field_k = null;
-            if (!this.field_u.d(-21)) {
-              this.field_q = (ArchiveRequest) ((Object) this.field_u.a(this.field_j, true, 255, -21, (byte) 0));
+            if (!this.field_u.isUrgentQueueFull(-21)) {
+              this.field_q = (ArchiveRequest) ((Object) this.field_u.queueRequest(this.field_j, true, 255, -21, (byte) 0));
             } else {
               this.field_q = null;
             }
@@ -391,20 +391,20 @@ final class CachedArchiveSource extends ArchiveSource {
               if (this.field_n[param2] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_u.b(-21)) {
+              if (this.field_u.isPrefetchQueueFull(-21)) {
                 return null;
               }
-              var4 = this.field_u.a(param2, false, this.field_j, -21, (byte) 2);
+              var4 = this.field_u.queueRequest(param2, false, this.field_j, -21, (byte) 2);
             }
           } else {
             if (null != this.field_h &&
               this.field_n[param2] != -1) {
               var4 = this.field_i.a(15871, this.field_h, param2);
             } else {
-              if (this.field_u.d(-21)) {
+              if (this.field_u.isUrgentQueueFull(-21)) {
                 return null;
               }
-              var4 = this.field_u.a(param2, true, this.field_j, -21, (byte) 2);
+              var4 = this.field_u.queueRequest(param2, true, this.field_j, -21, (byte) 2);
             }
           }
           this.field_p.put((long)param2, 118, (IntrusiveNode) (var4));
@@ -460,10 +460,10 @@ final class CachedArchiveSource extends ArchiveSource {
             if (!((ArchiveRequest) (var4)).field_l) {
               return null;
             }
-            if (this.field_u.d(-21)) {
+            if (this.field_u.isUrgentQueueFull(-21)) {
               return null;
             }
-            var4 = this.field_u.a(param2, true, this.field_j, -21, (byte) 2);
+            var4 = this.field_u.queueRequest(param2, true, this.field_j, -21, (byte) 2);
             this.field_p.put((long)param2, 117, (IntrusiveNode) (var4));
             return null;
           }
@@ -503,8 +503,8 @@ final class CachedArchiveSource extends ArchiveSource {
           if (!((ArchiveRequest) (var4)).field_l) {
             return null;
           }
-          if (!this.field_u.d(-21)) {
-            var4 = this.field_u.a(param2, true, this.field_j, -21, (byte) 2);
+          if (!this.field_u.isUrgentQueueFull(-21)) {
+            var4 = this.field_u.queueRequest(param2, true, this.field_j, -21, (byte) 2);
             this.field_p.put((long)param2, 125, (IntrusiveNode) (var4));
           }
           return null;
@@ -597,7 +597,7 @@ final class CachedArchiveSource extends ArchiveSource {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

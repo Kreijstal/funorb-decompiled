@@ -5,7 +5,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
     private aaa field_c;
     private tla field_d;
 
-    final static String a(byte param0, String param1, String[] param2) {
+    final static String formatText(byte param0, String param1, String[] param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -40,7 +40,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
             var6_int = param1.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (OpenGlEnvironmentWaterEffect.a(123, param1.charAt(var5))) {
+                if (OpenGlEnvironmentWaterEffect.isAsciiDigit(123, param1.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -77,7 +77,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
               return stackIn_30_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (OpenGlEnvironmentWaterEffect.a(113, param1.charAt(var5Lifetime1))) {
+              if (OpenGlEnvironmentWaterEffect.isAsciiDigit(113, param1.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
@@ -114,7 +114,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -134,16 +134,16 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
             this.field_c = (aaa) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "gl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(boolean param0, boolean param1, byte param2) {
         String var5 = (String) null;
-        FollowCamera.a(param0, param1, false, (String) null);
+        FollowCamera.openLoginForm(param0, param1, false, (String) null);
         if (param2 < 87) {
           String[] var4 = (String[]) null;
-          LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(-98, (String) null, (String[]) null);
+          LegacyOpenGlFlowingWaterEffect.formatText(-98, (String) null, (String[]) null);
         }
     }
 
@@ -240,7 +240,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           this.toolkit.e(0, true);
           this.field_d.b((byte) 10);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String $cfr$intArgs$a$53ce4ab4c593(int param0, String param1, String[] param2) {
+    final static String formatText(int param0, String param1, String[] param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -293,7 +293,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
             var6_int = param1.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (OpenGlEnvironmentWaterEffect.a(123, param1.charAt(var5))) {
+                if (OpenGlEnvironmentWaterEffect.isAsciiDigit(123, param1.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -330,7 +330,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
               return stackIn_30_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (OpenGlEnvironmentWaterEffect.a(113, param1.charAt(var5Lifetime1))) {
+              if (OpenGlEnvironmentWaterEffect.isAsciiDigit(113, param1.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
@@ -367,7 +367,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 }

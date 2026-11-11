@@ -24,7 +24,7 @@ final class BannerCommand extends ConsoleMethod {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -42,7 +42,7 @@ final class BannerCommand extends ConsoleMethod {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = new ConsoleValue(rma.a(-80));
+            stackIn_4_0 = new ConsoleValue(rma.readFreeLevelBanner(-80));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -57,7 +57,7 @@ final class BannerCommand extends ConsoleMethod {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

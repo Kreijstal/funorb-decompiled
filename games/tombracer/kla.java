@@ -59,7 +59,7 @@ final class kla {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -95,10 +95,10 @@ final class kla {
     final static void b(int param0) {
         if (OpenGlSceneLight.field_o != null) {
           OpenGlSceneLight.field_o.field_h = false;
-          C2SChooseRewardPacket.b(12475, param0);
+          C2SChooseRewardPacket.notifyPageResizing(12475, param0);
           return;
         }
-        C2SChooseRewardPacket.b(12475, param0);
+        C2SChooseRewardPacket.notifyPageResizing(12475, param0);
     }
 
     public static void releaseStatics(int param0) {

@@ -827,7 +827,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text1", (byte) 108);
                 if (var2 != null) {
-                  daa.field_f = jaa.decodeText((byte) 31, var2);
+                  CharacterSelection.field_f = jaa.decodeText((byte) 31, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text2", (byte) 125);
                 if (var2 != null) {
@@ -1301,7 +1301,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("spectator", (byte) 124);
                 if (null != var2) {
-                  dpa.field_c = jaa.decodeText((byte) 78, var2);
+                  PitTile.field_c = jaa.decodeText((byte) 78, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("watching", (byte) 113);
                 if (null != var2) {
@@ -1529,35 +1529,35 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,0", (byte) 107);
                 if (null != var2) {
-                  nta.crushDeathMessages[0] = jaa.decodeText((byte) 127, var2);
+                  MonsterRemains.crushDeathMessages[0] = jaa.decodeText((byte) 127, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,1", (byte) 119);
                 if (var2 != null) {
-                  nta.crushDeathMessages[1] = jaa.decodeText((byte) 121, var2);
+                  MonsterRemains.crushDeathMessages[1] = jaa.decodeText((byte) 121, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,2", (byte) 117);
                 if (null != var2) {
-                  nta.crushDeathMessages[2] = jaa.decodeText((byte) 42, var2);
+                  MonsterRemains.crushDeathMessages[2] = jaa.decodeText((byte) 42, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,3", (byte) 126);
                 if (var2 != null) {
-                  nta.crushDeathMessages[3] = jaa.decodeText((byte) 32, var2);
+                  MonsterRemains.crushDeathMessages[3] = jaa.decodeText((byte) 32, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,4", (byte) 109);
                 if (null != var2) {
-                  nta.crushDeathMessages[4] = jaa.decodeText((byte) 115, var2);
+                  MonsterRemains.crushDeathMessages[4] = jaa.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,5", (byte) 118);
                 if (var2 != null) {
-                  nta.crushDeathMessages[5] = jaa.decodeText((byte) 85, var2);
+                  MonsterRemains.crushDeathMessages[5] = jaa.decodeText((byte) 85, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,6", (byte) 126);
                 if (var2 != null) {
-                  nta.crushDeathMessages[6] = jaa.decodeText((byte) 100, var2);
+                  MonsterRemains.crushDeathMessages[6] = jaa.decodeText((byte) 100, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedhorizontal,7", (byte) 118);
                 if (var2 != null) {
-                  nta.crushDeathMessages[7] = jaa.decodeText((byte) 27, var2);
+                  MonsterRemains.crushDeathMessages[7] = jaa.decodeText((byte) 27, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_squishedvertical,0", (byte) 125);
                 if (null != var2) {
@@ -2007,39 +2007,39 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,0", (byte) 117);
                 if (var2 != null) {
-                  vj.worldNames[0] = jaa.decodeText((byte) 95, var2);
+                  SecondaryLinkQueue.worldNames[0] = jaa.decodeText((byte) 95, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,1", (byte) 124);
                 if (null != var2) {
-                  vj.worldNames[1] = jaa.decodeText((byte) 50, var2);
+                  SecondaryLinkQueue.worldNames[1] = jaa.decodeText((byte) 50, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,2", (byte) 107);
                 if (var2 != null) {
-                  vj.worldNames[2] = jaa.decodeText((byte) 87, var2);
+                  SecondaryLinkQueue.worldNames[2] = jaa.decodeText((byte) 87, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,3", (byte) 120);
                 if (var2 != null) {
-                  vj.worldNames[3] = jaa.decodeText((byte) 59, var2);
+                  SecondaryLinkQueue.worldNames[3] = jaa.decodeText((byte) 59, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,4", (byte) 111);
                 if (null != var2) {
-                  vj.worldNames[4] = jaa.decodeText((byte) 106, var2);
+                  SecondaryLinkQueue.worldNames[4] = jaa.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,5", (byte) 116);
                 if (null != var2) {
-                  vj.worldNames[5] = jaa.decodeText((byte) 36, var2);
+                  SecondaryLinkQueue.worldNames[5] = jaa.decodeText((byte) 36, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,6", (byte) 100);
                 if (null != var2) {
-                  vj.worldNames[6] = jaa.decodeText((byte) 40, var2);
+                  SecondaryLinkQueue.worldNames[6] = jaa.decodeText((byte) 40, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,7", (byte) 125);
                 if (null != var2) {
-                  vj.worldNames[7] = jaa.decodeText((byte) 80, var2);
+                  SecondaryLinkQueue.worldNames[7] = jaa.decodeText((byte) 80, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tomb_names,8", (byte) 118);
                 if (var2 != null) {
-                  vj.worldNames[8] = jaa.decodeText((byte) 73, var2);
+                  SecondaryLinkQueue.worldNames[8] = jaa.decodeText((byte) 73, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("multiplayer_lobby", (byte) 125);
                 if (null != var2) {
@@ -2150,7 +2150,7 @@ final class pfa {
                   } else {
                     stackIn_1832_2 = "{...}";
                   }
-                  throw tba.a((Throwable) ((Object) stackIn_1831_0), ((StringBuilder) (Object) stackIn_1831_1).append(stackIn_1832_2).append(',').append(param1).append(')').toString());
+                  throw tba.wrapException((Throwable) ((Object) stackIn_1831_0), ((StringBuilder) (Object) stackIn_1831_1).append(stackIn_1832_2).append(',').append(param1).append(')').toString());
                 }
                 if (GameApplet.field_m) {
                   TombRacer.field_G = (var4 == 0);
@@ -2168,7 +2168,7 @@ final class pfa {
         try {
           this.a(-28562, hq.field_b[param1] << 16, LoginForm.field_z[param1] << 16);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pfa.F(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2223,7 +2223,7 @@ final class pfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "pfa.C(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "pfa.C(" + param0 + ')');
         }
     }
 
@@ -2243,11 +2243,11 @@ final class pfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "pfa.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_b = (boolean[][]) null;
           field_a = null;
@@ -2256,7 +2256,7 @@ final class pfa {
             pfa.loadLocalizedText((ResourceArchive) null, 68);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pfa.A(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.A(" + param0 + ')');
         }
     }
 
@@ -2273,7 +2273,7 @@ final class pfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "pfa.H(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "pfa.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2284,7 +2284,7 @@ final class pfa {
             this.a(73, (byte) 91);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pfa.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2302,7 +2302,7 @@ final class pfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "pfa.D(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "pfa.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2326,7 +2326,7 @@ final class pfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "pfa.G(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.G(" + param0 + ')');
         }
     }
 
@@ -2340,7 +2340,7 @@ final class pfa {
           this.field_g = false;
           this.field_f = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pfa.<init>(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.<init>(" + param0 + ',' + param1 + ')');
         }
     }
 

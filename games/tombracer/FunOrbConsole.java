@@ -25,7 +25,7 @@ final class FunOrbConsole extends ConsoleWindow {
         int var5 = 0;
         String var6 = null;
         ConsoleToken var7 = null;
-        vj var7_ref = null;
+        SecondaryLinkQueue var7_ref = null;
         int var8_int = 0;
         StringBuilder var8 = null;
         int var9 = 0;
@@ -42,7 +42,7 @@ final class FunOrbConsole extends ConsoleWindow {
         var14 = TombRacer.field_G ? 1 : 0;
         try {
           var2 = this.field_o.getText((byte) -114);
-          var3 = this.field_o.j(-1320);
+          var3 = this.field_o.getCaret(-1320);
           var4 = LaserShooterComponent.a((byte) 126, var2);
           var5 = PlayerViewport.a(true, var4, var3);
           var6 = "";
@@ -63,7 +63,7 @@ final class FunOrbConsole extends ConsoleWindow {
           var9 = var6.length();
           var10 = 1;
           var11 = 2147483647;
-          var12_ref_ela = (ConsoleMethod) (var7_ref.b((byte) 38));
+          var12_ref_ela = (ConsoleMethod) (var7_ref.first((byte) 38));
           while (true) {
             if (var12_ref_ela != null) {
               stackIn_43_0 = var11;
@@ -72,7 +72,7 @@ final class FunOrbConsole extends ConsoleWindow {
                 if (stackIn_43_0 > stackIn_43_1) {
                   var11 = var12_ref_ela.field_l.length();
                 }
-                var12_ref_ela = (ConsoleMethod) (var7_ref.c(param0 - 21275));
+                var12_ref_ela = (ConsoleMethod) (var7_ref.next(param0 - 21275));
                 continue;
               }
             } else {
@@ -84,8 +84,8 @@ final class FunOrbConsole extends ConsoleWindow {
                     break;
                   }
                   if (stackIn_43_0 > stackIn_43_1) {
-                    var12 = ((ConsoleMethod) (var7_ref.b((byte) 38))).field_l.charAt(var9);
-                    var13 = (ConsoleMethod) (var7_ref.c(param0 ^ 21291));
+                    var12 = ((ConsoleMethod) (var7_ref.first((byte) 38))).field_l.charAt(var9);
+                    var13 = (ConsoleMethod) (var7_ref.next(param0 ^ 21291));
                     while (var13 != null) {
                       stackIn_47_0 = var10;
                       stackIn_47_1 = ~var12;
@@ -96,7 +96,7 @@ final class FunOrbConsole extends ConsoleWindow {
                         stackIn_36_1 = 1;
                       }
                       var10 = stackIn_47_0 & stackIn_36_1;
-                      var13 = (ConsoleMethod) (var7_ref.c(28));
+                      var13 = (ConsoleMethod) (var7_ref.next(28));
                     }
                     if (var10 != 0) {
                       discarded$0 = var8.append((char) var12);
@@ -123,33 +123,33 @@ final class FunOrbConsole extends ConsoleWindow {
             discarded$1 = var8.append("()");
             var12Lifetime1++;
             if (1 == var7_ref.size((byte) -34) &&
-              ((ConsoleMethod) (var7_ref.b((byte) 38))).field_n.length == 0) {
+              ((ConsoleMethod) (var7_ref.first((byte) 38))).field_n.length == 0) {
               var12Lifetime1++;
             }
           }
           this.field_o.setText((byte) 96, var2.substring(0, var3) + var8.toString() + var2.substring(var3));
-          this.field_o.c(var12Lifetime1, 1);
+          this.field_o.setCaretAndAnchor(var12Lifetime1, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "gq.I(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "gq.I(" + param0 + ')');
         }
     }
 
-    private final vj b(boolean param0, String param1) {
-        vj var3 = null;
+    private final SecondaryLinkQueue b(boolean param0, String param1) {
+        SecondaryLinkQueue var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        vj stackIn_10_0 = null;
+        SecondaryLinkQueue stackIn_10_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          var3 = new vj();
+          var3 = new SecondaryLinkQueue();
           var4 = 0;
           if (param0) {
             field_u = (dn) null;
@@ -157,7 +157,7 @@ final class FunOrbConsole extends ConsoleWindow {
           while (var4 < this.methods.length) {
             if (this.methods[var4].field_l.startsWith(param1)) {
               this.methods[var4].unlinkSecondary(-7975);
-              var3.a(this.methods[var4], (byte) -78);
+              var3.addLast(this.methods[var4], (byte) -78);
             }
             var4++;
             if (var5 == 0) {
@@ -177,7 +177,7 @@ final class FunOrbConsole extends ConsoleWindow {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class FunOrbConsole extends ConsoleWindow {
           try {
             try {
               if (false) throw (jj) null;
-              var3 = lp.a((byte) 48, param0);
+              var3 = lp.tokenize((byte) 48, param0);
               var5 = 80 / ((-44 - param1) / 36);
               var4 = new cr(var3);
               var6 = ed.a(var4, -31733);
@@ -229,7 +229,7 @@ final class FunOrbConsole extends ConsoleWindow {
             } else {
               stackIn_13_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -251,7 +251,7 @@ final class FunOrbConsole extends ConsoleWindow {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "gq.F(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "gq.F(" + param0 + ')');
         }
     }
 
@@ -308,7 +308,7 @@ final class FunOrbConsole extends ConsoleWindow {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class FunOrbConsole extends ConsoleWindow {
         int var5 = 0;
         String var6 = null;
         ConsoleToken var7 = null;
-        vj var7_ref = null;
+        SecondaryLinkQueue var7_ref = null;
         int var8_int = 0;
         String[] var8 = null;
         int var9 = 0;
@@ -336,7 +336,7 @@ final class FunOrbConsole extends ConsoleWindow {
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           var2 = this.field_o.getText((byte) -115);
-          var3 = this.field_o.j(-1320);
+          var3 = this.field_o.getCaret(-1320);
           var4 = LaserShooterComponent.a((byte) 126, var2);
           var5 = PlayerViewport.a(true, var4, var3);
           if (param0) {
@@ -396,7 +396,7 @@ final class FunOrbConsole extends ConsoleWindow {
           var7_ref = this.b(param0, var6);
           var8 = new String[var7_ref.size((byte) -99)];
           var9Lifetime1 = 0;
-          var10 = (ConsoleMethod) (var7_ref.b((byte) 38));
+          var10 = (ConsoleMethod) (var7_ref.first((byte) 38));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var10))) {
             stackIn_43_0 = var8;
@@ -404,7 +404,7 @@ final class FunOrbConsole extends ConsoleWindow {
               incrementValue$0 = var9Lifetime1;
               var9Lifetime1++;
               stackIn_43_0[incrementValue$0] = var10.field_k;
-              var10 = (ConsoleMethod) (var7_ref.c(28));
+              var10 = (ConsoleMethod) (var7_ref.next(28));
               continue;
             }
             break;
@@ -416,7 +416,7 @@ final class FunOrbConsole extends ConsoleWindow {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "gq.E(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "gq.E(" + param0 + ')');
         }
     }
 
@@ -452,7 +452,7 @@ final class FunOrbConsole extends ConsoleWindow {
             return stackIn_5_0;
           }
           var4 = this.field_o.getText((byte) -106);
-          var5 = this.field_o.j(-1320);
+          var5 = this.field_o.getCaret(-1320);
           var6 = 0;
           var7 = 0;
           var8 = 0;
@@ -524,7 +524,7 @@ final class FunOrbConsole extends ConsoleWindow {
             var7 == 0 &&
             param1 == 41 &&
             var10Lifetime1 == 41) {
-            this.field_o.c(1 + var5, 1);
+            this.field_o.setCaretAndAnchor(1 + var5, 1);
           }
           if ((var6 == 0 ||
             var8 != 0 ||
@@ -550,24 +550,24 @@ final class FunOrbConsole extends ConsoleWindow {
             }
             discarded$0 = super.handleKey((byte) -72, param1, param2);
             var4Lifetime1 = this.field_o.getText((byte) -124);
-            var5Lifetime1 = this.field_o.j(-1320);
+            var5Lifetime1 = this.field_o.getCaret(-1320);
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 40) {
               this.field_o.handleKey(-1, -19696, ')');
-              this.field_o.a(var5Lifetime1, (byte) 84, var5Lifetime1);
+              this.field_o.setSelection(var5Lifetime1, (byte) 84, var5Lifetime1);
             }
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 34) {
               this.field_o.handleKey(-1, -19696, '"');
-              this.field_o.a(var5Lifetime1, (byte) 95, var5Lifetime1);
+              this.field_o.setSelection(var5Lifetime1, (byte) 95, var5Lifetime1);
             }
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 39) {
               this.field_o.handleKey(-1, -19696, '\'');
-              this.field_o.a(var5Lifetime1, (byte) 72, var5Lifetime1);
+              this.field_o.setSelection(var5Lifetime1, (byte) 72, var5Lifetime1);
             }
           }
           gsa.field_w = ResultsPhase.highlightConsoleSyntax(this.field_o.getText((byte) -112), (byte) -110);
@@ -578,7 +578,7 @@ final class FunOrbConsole extends ConsoleWindow {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4_ref), "gq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4_ref), "gq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -590,7 +590,7 @@ final class FunOrbConsole extends ConsoleWindow {
           super.drawOverlay(param0);
           this.field_o.field_Cb.field_r = var2;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "gq.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gq.B(" + param0 + ')');
         }
     }
 

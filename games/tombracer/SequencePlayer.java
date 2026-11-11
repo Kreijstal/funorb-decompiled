@@ -93,12 +93,12 @@ final class SequencePlayer {
           }
           DefaultRoomObjectRenderer.field_b = ai.a((byte) 121, "");
           DefaultRoomObjectRenderer.field_b.a(-71, false);
-          fha.a(true, param1, param0, param4);
+          fha.loadCommonUiSprites(true, param1, param0, param4);
           CharacterChoiceFactory.b(117);
           LegacyOpenGlTexture.field_a = fta.field_c;
           wt.field_d = fta.field_c;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cra.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cra.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class SequencePlayer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class SequencePlayer {
           discarded$1 = this.advanceFrame(-95);
           this.field_k = -1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cra.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cra.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class SequencePlayer {
           this.frameChanged = true;
           this.field_i = 1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cra.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cra.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

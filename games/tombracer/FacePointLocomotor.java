@@ -22,7 +22,7 @@ final class FacePointLocomotor extends Locomotor {
         if (param4 > -75) {
           return (ResourceArchive) null;
         }
-        return nt.a(param1, param3, 5200, param2, false, param0);
+        return nt.openArchive(param1, param3, 5200, param2, false, param0);
     }
 
     final static QuickChatMenu a(UiComponent param0, UiComponent param1, UiComponent param2, int[] param3, boolean param4) {
@@ -108,7 +108,7 @@ final class FacePointLocomotor extends Locomotor {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class FacePointLocomotor extends Locomotor {
           param0.writeBits((byte) 79, this.field_o ? 1 : 0, 1);
           param0.writeBits((byte) 56, dqa.toOffsetBinary(true, this.field_s, 12), 12);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class FacePointLocomotor extends Locomotor {
           var6 = this.field_q - var3 >> 10;
           var4 = this.field_p - var2 >> 10;
         }
-        var7 = tia.a(var6, var4, -29543) - tia.a(-256, 0, -29543);
+        var7 = tia.atan2(var6, var4, -29543) - tia.atan2(-256, 0, -29543);
         for (var7 = var7 * -1; var7 < 0; var7 += 8192) {
         }
         regionExit1: {
@@ -219,7 +219,7 @@ final class FacePointLocomotor extends Locomotor {
           }
           super.attachToTrap(110, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -261,7 +261,7 @@ final class FacePointLocomotor extends Locomotor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 

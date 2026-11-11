@@ -172,7 +172,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -346,7 +346,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "voa.E(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "voa.E(" + param0 + ')');
         }
     }
 

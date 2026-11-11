@@ -47,8 +47,8 @@ abstract class ConsoleMethod extends DualLinkNode {
                 this.field_n[var4_int] != Character.TYPE) {
                 return false;
               }
-              if (TextureFilter.a((byte) -88, var5) &&
-                !TextureFilter.a((byte) -70, this.field_n[var4_int])) {
+              if (TextureFilter.isNumericPrimitive((byte) -88, var5) &&
+                !TextureFilter.isNumericPrimitive((byte) -70, this.field_n[var4_int])) {
                 return false;
               }
             } else {
@@ -79,7 +79,7 @@ abstract class ConsoleMethod extends DualLinkNode {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ abstract class ConsoleMethod extends DualLinkNode {
           }
           this.field_k = var8.toString();
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ela.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ela.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

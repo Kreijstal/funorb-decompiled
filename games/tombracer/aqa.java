@@ -14,7 +14,7 @@ final class aqa {
         }
         cm var3 = new cm();
         var3.a(param0, 0);
-        hw.a((byte) -111, 1, 78, var3);
+        hw.sendGamePacket((byte) -111, 1, 78, var3);
     }
 
     public static void releaseStatics(byte param0) {

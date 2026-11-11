@@ -172,7 +172,7 @@ final class TeleportLocomotor extends Locomotor {
             this.field_u = param1.readBits((byte) 44, 8);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class TeleportLocomotor extends Locomotor {
           param0.writeBits((byte) -126, this.field_p ? 1 : 0, 1);
           param0.writeBits((byte) -127, this.field_u, 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "lo.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "lo.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

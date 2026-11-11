@@ -7,7 +7,7 @@ final class mp {
     static SpriteData field_d;
     static String field_b;
 
-    final static void a(String param0, java.applet.Applet param1, int param2) {
+    final static void writeSettingsCookie(String param0, java.applet.Applet param1, int param2) {
         try {
           Throwable throwable = null;
           RuntimeException runtimeException = null;
@@ -60,7 +60,7 @@ final class mp {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -89,7 +89,7 @@ final class mp {
             if (var3 != 0) {
               while (true) {
                 if (stackIn_23_0) {
-                  var2.field_f.e(var2.field_g * HardwareRidgedWaterNoise.field_v + 128 >> 8);
+                  var2.field_f.setVolume(var2.field_g * HardwareRidgedWaterNoise.field_v + 128 >> 8);
                 }
                 var2.unlink(param0 + 2);
                 var2 = (vb) (Obstacle.field_f.next(113));
@@ -101,7 +101,7 @@ final class mp {
             }
             if (stackIn_23_0 ||
               var3 != 0) {
-              var2.field_f.e(var2.field_g * HardwareRidgedWaterNoise.field_v + 128 >> 8);
+              var2.field_f.setVolume(var2.field_g * HardwareRidgedWaterNoise.field_v + 128 >> 8);
             }
             var2 = (vb) (DivisionMazeGenerator.field_e.next(112));
             if (var3 == 0) {
@@ -117,7 +117,7 @@ final class mp {
               }
               stackIn_23_0Lifetime1 = var2Lifetime1.field_h.isLinked((byte) 44);
               if (stackIn_23_0Lifetime1) {
-                var2Lifetime1.field_f.e(var2Lifetime1.field_g * HardwareRidgedWaterNoise.field_v + 128 >> 8);
+                var2Lifetime1.field_f.setVolume(var2Lifetime1.field_g * HardwareRidgedWaterNoise.field_v + 128 >> 8);
               } else {
                 var2Lifetime1.unlink(param0 + 2);
               }
@@ -128,7 +128,7 @@ final class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "mp.E(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mp.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "mp.A(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "mp.A(" + param0 + ')');
         }
     }
 
@@ -225,7 +225,7 @@ final class mp {
           ComponentMount.field_b = new UiComponent(0L, (UiComponent) null);
           ComponentMount.field_b.field_w = var16;
           RotaterMountComponent.field_K.b(-125, ComponentMount.field_b);
-          bt.field_c = new UiComponent[5];
+          PitSnakeModel.field_c = new UiComponent[5];
           PitModel.field_p = new UiComponent[5];
           MembersUpsellMenu.field_y = new UiComponent[5];
           OpenGlSceneLight.field_p = new UiComponent[5];
@@ -255,12 +255,12 @@ final class mp {
               }
               if (decompiledFrameRemainder0) {
                 OpenGlSceneLight.field_p[var18] = new UiComponent(0L, param10);
-                bt.field_c[var18] = new UiComponent(0L, VortexBehaviour.field_t, var19);
+                PitSnakeModel.field_c[var18] = new UiComponent(0L, VortexBehaviour.field_t, var19);
                 MembersUpsellMenu.field_y[var18] = new UiComponent(0L, (UiComponent) null);
                 MembersUpsellMenu.field_y[var18].field_bb = 1;
                 PitModel.field_p[var18] = new UiComponent(0L, VortexBehaviour.field_t);
                 PitModel.field_p[var18].field_bb = 1;
-                OpenGlSceneLight.field_p[var18].b(-122, bt.field_c[var18]);
+                OpenGlSceneLight.field_p[var18].b(-122, PitSnakeModel.field_c[var18]);
                 OpenGlSceneLight.field_p[var18].b(param6 - 125, MembersUpsellMenu.field_y[var18]);
                 OpenGlSceneLight.field_p[var18].b(-125, PitModel.field_p[var18]);
                 OpenGlSceneLight.field_p[var18].a(-10966);
@@ -348,7 +348,7 @@ final class mp {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "mp.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "mp.B(" + param0 + ')');
         }
     }
 

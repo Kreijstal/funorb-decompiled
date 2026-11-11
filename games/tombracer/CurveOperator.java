@@ -43,7 +43,7 @@ final class CurveOperator extends TextureOperator {
           ica.field_b = param1;
           bb.a(-21844);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fs.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fs.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -240,11 +240,11 @@ final class CurveOperator extends TextureOperator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1) {
+    final static boolean isValidAccountName(boolean param0, CharSequence param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -254,7 +254,7 @@ final class CurveOperator extends TextureOperator {
         RuntimeException decompiledCaughtException = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!ej.a(false, param0, param1)) {
+          if (!ej.isValidDisplayName(false, param0, param1)) {
             return false;
           }
           var2_int = 0;
@@ -279,7 +279,7 @@ final class CurveOperator extends TextureOperator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

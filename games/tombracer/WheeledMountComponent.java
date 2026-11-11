@@ -37,7 +37,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         return true;
     }
 
-    final static void s(byte param0) {
+    final static void updateSounds(byte param0) {
         int var1_int = 0;
         fla var2 = null;
         int var3 = 0;
@@ -60,7 +60,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "ipa.UB(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "ipa.UB(" + param0 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class WheeledMountComponent extends PathMoverComponent {
             return stackIn_15_0;
           }
           if (tia.field_d != param0) {
-            stackIn_20_0 = daa.field_d.field_c;
+            stackIn_20_0 = CharacterSelection.field_d.field_c;
             return stackIn_20_0;
           }
           stackIn_18_0 = vea.field_c.field_c;
@@ -127,7 +127,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         try {
           this.field_Q = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ipa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ipa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           super.encode(param0, param1);
           param1.writeBits((byte) -19, this.field_Q, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ipa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ipa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

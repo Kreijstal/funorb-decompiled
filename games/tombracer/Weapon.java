@@ -52,7 +52,7 @@ final class Weapon {
             discarded$0 = this.hasUnlimitedAmmo((byte) 22);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "roa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "roa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -161,8 +161,8 @@ final class Weapon {
               this.field_w = 123;
             }
             var12 = ModelAnimator.cos2048(0, param0 >> 2);
-            var13 = param3 + gqa.a(var11_int, (byte) 24, param8);
-            var14 = param4 + gqa.a(var12, (byte) 24, param8);
+            var13 = param3 + gqa.multiplyFixed(var11_int, (byte) 24, param8);
+            var14 = param4 + gqa.multiplyFixed(var12, (byte) 24, param8);
             if (!this.field_m) {
               param7 = 0;
               param6 = 0;
@@ -179,8 +179,8 @@ final class Weapon {
               if (this.field_w > 0) {
                 var20 = var20 + var15.nextBounded(this.field_w, 0);
               }
-              var21 = param6 + gqa.a(var18, (byte) 24, var20);
-              var22 = param7 + gqa.a(var19, (byte) 24, var20);
+              var21 = param6 + gqa.multiplyFixed(var18, (byte) 24, var20);
+              var22 = param7 + gqa.multiplyFixed(var19, (byte) 24, var20);
               var23 = param5.spawnProjectile(var14, var13, 127, param1);
               var23.init(this.field_a, param5, this.field_l, 66, this.field_b, this.field_k);
               var23.setVelocity(var21, var22, (byte) -92);
@@ -240,7 +240,7 @@ final class Weapon {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 

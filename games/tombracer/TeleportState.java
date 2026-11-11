@@ -66,7 +66,7 @@ final class TeleportState {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class TeleportState {
             TeleportState.createOpenGlToolkit((java.awt.Canvas) null, (TextureProvider) null, 122, (byte) 69);
           }
           for (var4 = 0; var4 < param0.length(); var4++) {
-            if (!SwitchComponent.a(false, param0.charAt(var4))) {
+            if (!SwitchComponent.isNameCharacter(false, param0.charAt(var4))) {
               stackIn_12_0 = StripedMazeGenerator.field_b;
               return stackIn_12_0;
             }
@@ -128,7 +128,7 @@ final class TeleportState {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

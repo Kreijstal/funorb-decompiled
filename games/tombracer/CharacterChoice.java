@@ -7,7 +7,7 @@ final class CharacterChoice implements dv {
     static String field_a;
     private int characterId;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 3) {
           String var2 = (String) null;
@@ -47,7 +47,7 @@ final class CharacterChoice implements dv {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -162,13 +162,13 @@ final class CharacterChoice implements dv {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param5).append(')').toString());
         }
     }
 
     final int getCharacter(int param0) {
         if (param0 <= 52) {
-          CharacterChoice.a(72);
+          CharacterChoice.releaseStatics(72);
           return this.characterId;
         }
         return this.characterId;
@@ -285,7 +285,7 @@ final class CharacterChoice implements dv {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -296,7 +296,7 @@ final class CharacterChoice implements dv {
             this.player = (Player) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -317,7 +317,7 @@ final class CharacterChoice implements dv {
           var7_int = param3 + param0;
           var8 = param6 - param0;
           for (var11 = param3; var7_int > var11; var11++) {
-            nra.a((byte) -55, param2, param1, vaa.field_a[var11], param4);
+            nra.fillRange((byte) -55, param2, param1, vaa.field_a[var11], param4);
           }
           var9 = param0 + param4;
           if (param5 != 27) {
@@ -325,18 +325,18 @@ final class CharacterChoice implements dv {
           }
           var10 = param1 - param0;
           for (var11Lifetime1 = param6; var8 < var11Lifetime1; var11Lifetime1--) {
-            nra.a((byte) -55, param2, param1, vaa.field_a[var11Lifetime1], param4);
+            nra.fillRange((byte) -55, param2, param1, vaa.field_a[var11Lifetime1], param4);
           }
           for (var11Lifetime2 = var7_int; var8 >= var11Lifetime2; var11Lifetime2++) {
             var17 = vaa.field_a[var11Lifetime2];
-            nra.a((byte) -55, param2, var9, var17, param4);
-            nra.a((byte) -55, param2, param1, var17, var10);
+            nra.fillRange((byte) -55, param2, var9, var17, param4);
+            nra.fillRange((byte) -55, param2, param1, var17, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var7), "wd.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) var7), "wd.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -348,7 +348,7 @@ final class CharacterChoice implements dv {
           this.player = param1;
           this.setCharacter(this.characterId, (byte) 37);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wd.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wd.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -384,11 +384,11 @@ final class CharacterChoice implements dv {
           this.player = param0;
           this.characterId = -1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static mf a(byte param0, HardwareOpenGlToolkit param1, byte[] param2, int param3) {
+    final static mf compileAssemblyProgram(byte param0, HardwareOpenGlToolkit param1, byte[] param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         mf stackIn_5_0 = null;
@@ -436,7 +436,7 @@ final class CharacterChoice implements dv {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 

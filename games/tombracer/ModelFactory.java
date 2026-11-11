@@ -17,7 +17,7 @@ final class ModelFactory implements ModelCodec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wu.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wu.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class ModelFactory implements ModelCodec {
             stackIn_88_0 = stackIn_83_0;
             stackIn_88_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class ModelFactory implements ModelCodec {
             stackIn_12_0 = stackIn_7_0;
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -316,18 +316,18 @@ final class ModelFactory implements ModelCodec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wu.C(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wu.C(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           if (param0 != 91) {
             field_a = (jta) null;
           }
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wu.D(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wu.D(" + param0 + ')');
         }
     }
 
@@ -364,7 +364,7 @@ final class ModelFactory implements ModelCodec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "wu.<init>()");
+          throw tba.wrapException((Throwable) ((Object) var1), "wu.<init>()");
         }
     }
 
@@ -464,7 +464,7 @@ final class ModelFactory implements ModelCodec {
             stackIn_42_0 = stackIn_37_0;
             stackIn_42_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
         }
     }
 

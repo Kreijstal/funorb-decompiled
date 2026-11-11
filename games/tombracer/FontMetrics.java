@@ -146,7 +146,7 @@ final class FontMetrics {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class FontMetrics {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -232,11 +232,11 @@ final class FontMetrics {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4), "qla.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4), "qla.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final int a(String param0, ToolkitSprite[] param1, int param2) {
+    private final int stringWidthWithIcons(String param0, ToolkitSprite[] param1, int param2) {
         int stackIn_5_0 = 0;
         int stackIn_72_0 = 0;
         RuntimeException stackIn_76_0 = null;
@@ -387,7 +387,7 @@ final class FontMetrics {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -404,11 +404,11 @@ final class FontMetrics {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "qla.I(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "qla.I(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final int a(String param0, int param1, String[] param2, ToolkitSprite[] param3, int[] param4) {
+    final int wrapLines(String param0, int param1, String[] param2, ToolkitSprite[] param3, int[] param4) {
         int stackIn_3_0 = 0;
         int stackIn_117_0 = 0;
         int stackIn_141_0 = 0;
@@ -693,7 +693,7 @@ final class FontMetrics {
           } else {
             stackIn_185_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_172_0), ((StringBuilder) (Object) stackIn_184_1).append(stackIn_185_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_172_0), ((StringBuilder) (Object) stackIn_184_1).append(stackIn_185_2).append(')').toString());
         }
     }
 
@@ -707,7 +707,7 @@ final class FontMetrics {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 35 % ((param1 + 44) / 54);
-          stackIn_1_0 = this.a(param0, (ToolkitSprite[]) null, -61);
+          stackIn_1_0 = this.stringWidthWithIcons(param0, (ToolkitSprite[]) null, -61);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -719,11 +719,11 @@ final class FontMetrics {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final String a(boolean param0, ToolkitSprite[] param1, String param2, int param3) {
+    final String ellipsize(boolean param0, ToolkitSprite[] param1, String param2, int param3) {
         String stackIn_3_0 = null;
         String stackIn_60_0 = null;
         String stackIn_76_0 = null;
@@ -751,11 +751,11 @@ final class FontMetrics {
         int var14 = 0;
         var14 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.a(param2, param1, -93) <= param3) {
+          if (this.stringWidthWithIcons(param2, param1, -93) <= param3) {
             stackIn_3_0 = (String) (param2);
             return stackIn_3_0;
           }
-          param3 = param3 - this.a("...", (ToolkitSprite[]) null, -61);
+          param3 = param3 - this.stringWidthWithIcons("...", (ToolkitSprite[]) null, -61);
           var5_int = -1;
           var6 = -1;
           var7 = 0;
@@ -892,11 +892,11 @@ final class FontMetrics {
           } else {
             stackIn_93_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static String a(int param0, java.applet.Applet param1) {
+    final static String readSettingsCookie(int param0, java.applet.Applet param1) {
         try {
           String var2 = null;
           RuntimeException var2_ref = null;
@@ -955,7 +955,7 @@ final class FontMetrics {
             } else {
               stackIn_26_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -989,7 +989,7 @@ final class FontMetrics {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1009,7 +1009,7 @@ final class FontMetrics {
           if (0 == param4) {
             param4 = this.field_a;
           }
-          var6_int = this.a(param0, -124, dra.field_a, param2, new int[]{param1});
+          var6_int = this.wrapLines(param0, -124, dra.field_a, param2, new int[]{param1});
           var7 = (var6_int - 1) * param4;
           var8 = 72 / ((-41 - param3) / 54);
           stackIn_3_0 = this.field_h + var7 + this.field_g;
@@ -1030,7 +1030,7 @@ final class FontMetrics {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1198,11 +1198,11 @@ final class FontMetrics {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_f = null;
           field_b = null;
@@ -1211,7 +1211,7 @@ final class FontMetrics {
             FontMetrics.a(true, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "qla.F(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "qla.F(" + param0 + ')');
         }
     }
 

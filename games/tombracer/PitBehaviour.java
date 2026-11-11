@@ -172,7 +172,7 @@ final class PitBehaviour extends Behaviour {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class PitBehaviour extends Behaviour {
           this.field_u = PasswordValidator.field_l;
           this.c(0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class PitBehaviour extends Behaviour {
           this.field_q = (this.trap.getHeight((byte) 55) - this.field_t.height * this.field_u) / 2;
           this.trap.getRoom((byte) -93).addTileOccupancy(1, -1, this.trap.getX(3), this.trap.getY(9648), this.trap.getWidth(-27), this.trap.getHeight((byte) 55), 123);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -303,7 +303,7 @@ final class PitBehaviour extends Behaviour {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -322,7 +322,7 @@ final class PitBehaviour extends Behaviour {
           param1.writeBits((byte) 69, this.field_u >> 16, 10);
           param1.writeBits((byte) -128, !this.field_s ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mo.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mo.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

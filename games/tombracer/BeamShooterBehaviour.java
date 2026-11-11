@@ -25,7 +25,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.field_u = -49;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ov.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -78,9 +78,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         var4 = MouseInputHandler.sin2048((byte) 111, var3);
         var5 = ModelAnimator.cos2048(0, var3);
         var6 = 131072 + RandomBrickOperator.max(this.trap.getWidth(param0 - 5467), this.trap.getHeight((byte) 55), param0 ^ 5416) / 2;
-        var7 = this.trap.getX(3) + gqa.a(var4, (byte) 24, var6);
-        var8 = this.trap.getY(9648) + gqa.a(var5, (byte) 24, var6);
-        this.field_s.a(var7, gqa.a(var4, (byte) 24, this.field_o) + var7, var8, gqa.a(var5, (byte) 24, this.field_o) + var8, 44);
+        var7 = this.trap.getX(3) + gqa.multiplyFixed(var4, (byte) 24, var6);
+        var8 = this.trap.getY(9648) + gqa.multiplyFixed(var5, (byte) 24, var6);
+        this.field_s.a(var7, gqa.multiplyFixed(var4, (byte) 24, this.field_o) + var7, var8, gqa.multiplyFixed(var5, (byte) 24, this.field_o) + var8, 44);
         this.field_s.field_b = this.field_o;
         this.field_s.field_i = this.trap.getTopElevation(param0 ^ param0) << 16;
         var9_int = this.field_r.type;
@@ -138,7 +138,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (q.a(param1, 11955)) {
+          if (q.isAlphanumeric(param1, 11955)) {
             return true;
           }
           var6 = aba.field_c;
@@ -170,7 +170,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "ov.R(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "ov.R(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -182,11 +182,11 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           }
           this.timingPattern.encode(15637, param1);
           param1.writeBits((byte) -23, this.field_w >> 16, 10);
-          this.field_r.a(param1, (byte) 125);
+          this.field_r.encode(param1, (byte) 125);
           param1.writeBits((byte) 85, !this.field_q ? 0 : 1, 1);
           param1.writeBits((byte) 45, this.field_u >> 16, 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ov.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -235,7 +235,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         int var19Lifetime1Lifetime1;
         var23 = TombRacer.field_G ? 1 : 0;
         try {
-          PlayerProfile.a(-57, param1);
+          PlayerProfile.ensureScratchCapacity(-57, param1);
           var7_int = 0;
           var8 = -param0 + param1;
           if (0 > var8) {
@@ -256,9 +256,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             var17 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + param1);
             var18 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 - var8);
             var19 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var8);
-            nra.a((byte) -55, param4, var18, var39, var16);
-            nra.a((byte) -55, param5, var19, var39, var18);
-            nra.a((byte) -55, param4, var17, var39, var19);
+            nra.fillRange((byte) -55, param4, var18, var39, var16);
+            nra.fillRange((byte) -55, param5, var19, var39, var18);
+            nra.fillRange((byte) -55, param4, var17, var39, var19);
           }
           var14 = -1;
           while (true) {
@@ -287,10 +287,10 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
                   var17Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var7_int);
                   var18Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var7_int + param6);
                   if (var16Lifetime1 <= hc.field_h) {
-                    nra.a((byte) -55, param4, var17Lifetime1, vaa.field_a[var16Lifetime1], var18Lifetime1);
+                    nra.fillRange((byte) -55, param4, var17Lifetime1, vaa.field_a[var16Lifetime1], var18Lifetime1);
                   }
                   if (gca.field_d <= var15) {
-                    nra.a((byte) -55, param4, var17Lifetime1, vaa.field_a[var15], var18Lifetime1);
+                    nra.fillRange((byte) -55, param4, var17Lifetime1, vaa.field_a[var15], var18Lifetime1);
                   }
                 } else {
                   var17Lifetime1 = GasVentModel.field_m[var9];
@@ -300,15 +300,15 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
                   var21 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var17Lifetime1 + param6);
                   if (var16Lifetime1 <= hc.field_h) {
                     var40 = vaa.field_a[var16Lifetime1];
-                    nra.a((byte) -55, param4, var21, var40, var19Lifetime1);
-                    nra.a((byte) -55, param5, var20, var40, var21);
-                    nra.a((byte) -55, param4, var18Lifetime1, var40, var20);
+                    nra.fillRange((byte) -55, param4, var21, var40, var19Lifetime1);
+                    nra.fillRange((byte) -55, param5, var20, var40, var21);
+                    nra.fillRange((byte) -55, param4, var18Lifetime1, var40, var20);
                   }
                   if (var15 >= gca.field_d) {
                     var41 = vaa.field_a[var15];
-                    nra.a((byte) -55, param4, var21, var41, var19Lifetime1);
-                    nra.a((byte) -55, param5, var20, var41, var21);
-                    nra.a((byte) -55, param4, var18Lifetime1, var41, var20);
+                    nra.fillRange((byte) -55, param4, var21, var41, var19Lifetime1);
+                    nra.fillRange((byte) -55, param5, var20, var41, var21);
+                    nra.fillRange((byte) -55, param4, var18Lifetime1, var41, var20);
                   }
                 }
               }
@@ -333,12 +333,12 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             var18Lifetime1Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var18Lifetime1Lifetime1);
             if (var8 <= var7_int) {
               if (hc.field_h >= var16Lifetime1Lifetime1) {
-                nra.a((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var16Lifetime1Lifetime1], var18Lifetime1Lifetime1);
+                nra.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var16Lifetime1Lifetime1], var18Lifetime1Lifetime1);
               }
               if (gca.field_d > var15Lifetime1) {
                 continue;
               }
-              nra.a((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var15Lifetime1], var18Lifetime1Lifetime1);
+              nra.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var15Lifetime1], var18Lifetime1Lifetime1);
               continue;
             }
             if (var11 < var7_int) {
@@ -351,22 +351,22 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             var21Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var19Lifetime1Lifetime1 + param6);
             if (var16Lifetime1Lifetime1 <= hc.field_h) {
               var42 = vaa.field_a[var16Lifetime1Lifetime1];
-              nra.a((byte) -55, param4, var21Lifetime1, var42, var18Lifetime1Lifetime1);
-              nra.a((byte) -55, param5, var20Lifetime1, var42, var21Lifetime1);
-              nra.a((byte) -55, param4, var17Lifetime1Lifetime1, var42, var20Lifetime1);
+              nra.fillRange((byte) -55, param4, var21Lifetime1, var42, var18Lifetime1Lifetime1);
+              nra.fillRange((byte) -55, param5, var20Lifetime1, var42, var21Lifetime1);
+              nra.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, var42, var20Lifetime1);
             }
             if (var15Lifetime1 < gca.field_d) {
               continue;
             }
             var43 = vaa.field_a[var15Lifetime1];
-            nra.a((byte) -55, param4, var21Lifetime1, var43, var18Lifetime1Lifetime1);
-            nra.a((byte) -55, param5, var20Lifetime1, var43, var21Lifetime1);
-            nra.a((byte) -55, param4, var17Lifetime1Lifetime1, var43, var20Lifetime1);
+            nra.fillRange((byte) -55, param4, var21Lifetime1, var43, var18Lifetime1Lifetime1);
+            nra.fillRange((byte) -55, param5, var20Lifetime1, var43, var21Lifetime1);
+            nra.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, var43, var20Lifetime1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var7), "ov.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) var7), "ov.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -385,7 +385,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         try {
           this.timingPattern = new TimingPattern(param0.formatVersion, param1);
           this.field_w = param1.readBits((byte) 44, 10) << 16;
-          this.field_r = ad.a((byte) 87, param1);
+          this.field_r = ad.decodeEffect((byte) 87, param1);
           if (8 <= param0.formatVersion) {
             stackIn_5_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_q = stackIn_5_1;
@@ -410,7 +410,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -458,7 +458,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.freezesInTimeStop((byte) -109);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ov.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -470,7 +470,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.field_q = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ov.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -489,11 +489,11 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         try {
           this.timingPattern = new TimingPattern();
           this.field_r = new Effect(1, 10);
-          this.field_r.b(1, 13);
+          this.field_r.setDeathMessageIndex(1, 13);
           this.field_w = 0;
           this.field_u = 0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ov.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -504,7 +504,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.getTypeId(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ov.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -246,11 +246,11 @@ final class FleeLocomotor extends Locomotor {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_y = null;
         field_q = null;
         field_C = null;
@@ -273,7 +273,7 @@ final class FleeLocomotor extends Locomotor {
         try {
           super.attachToTrap(96, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "bha.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "bha.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -356,7 +356,7 @@ final class FleeLocomotor extends Locomotor {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -367,16 +367,16 @@ final class FleeLocomotor extends Locomotor {
           DateInputWidget.field_z = new lqa(1, 4, true, true, true, true, true, true, true, false, true);
           vea.field_c = new lqa(1, 1, true, false, false, true, true, true, true, false, true);
           UsernameSuggestionsPanel.field_x = new lqa(0, 1, true, false, false, false, false, false, false, true, false);
-          daa.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
-          rc.field_a = new ei[]{(ei) ((Object) kra.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) daa.field_d)};
+          CharacterSelection.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
+          rc.field_a = new ei[]{(ei) ((Object) kra.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) CharacterSelection.field_d)};
           return;
         }
         field_B = (String) null;
         DateInputWidget.field_z = new lqa(1, 4, true, true, true, true, true, true, true, false, true);
         vea.field_c = new lqa(1, 1, true, false, false, true, true, true, true, false, true);
         UsernameSuggestionsPanel.field_x = new lqa(0, 1, true, false, false, false, false, false, false, true, false);
-        daa.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
-        rc.field_a = new ei[]{(ei) ((Object) kra.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) daa.field_d)};
+        CharacterSelection.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
+        rc.field_a = new ei[]{(ei) ((Object) kra.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) CharacterSelection.field_d)};
     }
 
     static {

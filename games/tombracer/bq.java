@@ -42,7 +42,7 @@ final class bq {
           if (param3 != -13) {
             bq.a(61, -28, 117, (byte) -18, -123);
           }
-          nra.a((byte) -55, param2, param4 + param1, vaa.field_a[param0], -param4 + param1);
+          nra.fillRange((byte) -55, param2, param4 + param1, vaa.field_a[param0], -param4 + param1);
           while (var6 > var5_int) {
             var8 += 2;
             var5_int++;
@@ -54,21 +54,21 @@ final class bq {
               var10_ref_int__ = vaa.field_a[-var6 + param0];
               var11_int = param1 + var5_int;
               var12_int = -var5_int + param1;
-              nra.a((byte) -55, param2, var11_int, var9_ref_int__, var12_int);
-              nra.a((byte) -55, param2, var11_int, var10_ref_int__, var12_int);
+              nra.fillRange((byte) -55, param2, var11_int, var9_ref_int__, var12_int);
+              nra.fillRange((byte) -55, param2, var11_int, var10_ref_int__, var12_int);
             }
             var9 = param1 + var6;
             var10 = param1 - var6;
             var11 = vaa.field_a[var5_int + param0];
             var12 = vaa.field_a[-var5_int + param0];
-            nra.a((byte) -55, param2, var9, var11, var10);
-            nra.a((byte) -55, param2, var9, var12, var10);
+            nra.fillRange((byte) -55, param2, var9, var11, var10);
+            nra.fillRange((byte) -55, param2, var9, var12, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var5), "bq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) var5), "bq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 final class HardwareSceneLight extends SceneLight {
     static UiComponent field_o;
 
-    final static void c(byte param0) {
+    final static void resetChatRateLimit(byte param0) {
         int var1 = -20 % ((64 - param0) / 44);
         vaa.field_b = bva.currentTimeMillis((byte) -107);
         gp.field_h = 0;
@@ -82,7 +82,7 @@ final class HardwareSceneLight extends SceneLight {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

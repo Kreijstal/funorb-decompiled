@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BridgeModel extends TrapModel {
-    private faa[][] field_q;
+    private BridgeTile[][] field_q;
     private int field_p;
     static IntrusiveDeque field_m;
     private int field_r;
@@ -13,7 +13,7 @@ final class BridgeModel extends TrapModel {
 
     final int getSceneLayer(byte param0) {
         if (param0 != -99) {
-          this.field_q = (faa[][]) null;
+          this.field_q = (BridgeTile[][]) null;
         }
         if (this.body.isFallingIntoPit(param0 + 98)) {
           return 2;
@@ -59,7 +59,7 @@ final class BridgeModel extends TrapModel {
         int var24Lifetime1;
         var25 = TombRacer.field_G ? 1 : 0;
         try {
-          PlayerProfile.a(-76, param1);
+          PlayerProfile.ensureScratchCapacity(-76, param1);
           var7_int = param2;
           var8 = -param5 + param1;
           if (var8 < 0) {
@@ -73,10 +73,10 @@ final class BridgeModel extends TrapModel {
           var14 = -1;
           var35 = vaa.field_a[param0];
           var16 = param6 - var8;
-          nra.a((byte) -55, param4, var16, var35, param6 - param1);
+          nra.fillRange((byte) -55, param4, var16, var35, param6 - param1);
           var17 = param6 + var8;
-          nra.a((byte) -55, param3, var17, var35, var16);
-          nra.a((byte) -55, param4, param6 + param1, var35, var17);
+          nra.fillRange((byte) -55, param3, var17, var35, var16);
+          nra.fillRange((byte) -55, param4, param6 + param1, var35, var17);
           while (var7_int < var9) {
             var13 += 2;
             var14 += 2;
@@ -98,8 +98,8 @@ final class BridgeModel extends TrapModel {
                 var19 = var26;
                 var20 = param6 + var7_int;
                 var21 = param6 - var7_int;
-                nra.a((byte) -55, param4, var20, var30, var21);
-                nra.a((byte) -55, param4, var20, var26, var21);
+                nra.fillRange((byte) -55, param4, var20, var30, var21);
+                nra.fillRange((byte) -55, param4, var20, var26, var21);
               } else {
                 var28 = vaa.field_a[param0 + var9];
                 var29 = vaa.field_a[-var9 + param0];
@@ -108,12 +108,12 @@ final class BridgeModel extends TrapModel {
                 var22 = -var7_int + param6;
                 var23 = param6 + var20;
                 var24 = param6 - var20;
-                nra.a((byte) -55, param4, var24, var28, var22);
-                nra.a((byte) -55, param3, var23, var28, var24);
-                nra.a((byte) -55, param4, var21, var28, var23);
-                nra.a((byte) -55, param4, var24, var29, var22);
-                nra.a((byte) -55, param3, var23, var29, var24);
-                nra.a((byte) -55, param4, var21, var29, var23);
+                nra.fillRange((byte) -55, param4, var24, var28, var22);
+                nra.fillRange((byte) -55, param3, var23, var28, var24);
+                nra.fillRange((byte) -55, param4, var21, var28, var23);
+                nra.fillRange((byte) -55, param4, var24, var29, var22);
+                nra.fillRange((byte) -55, param3, var23, var29, var24);
+                nra.fillRange((byte) -55, param4, var21, var29, var23);
               }
             }
             var31 = vaa.field_a[var7_int + param0];
@@ -121,8 +121,8 @@ final class BridgeModel extends TrapModel {
             var20Lifetime1 = var9 + param6;
             var21Lifetime1 = param6 - var9;
             if (var7_int >= var8) {
-              nra.a((byte) -55, param4, var20Lifetime1, var31, var21Lifetime1);
-              nra.a((byte) -55, param4, var20Lifetime1, var32, var21Lifetime1);
+              nra.fillRange((byte) -55, param4, var20Lifetime1, var31, var21Lifetime1);
+              nra.fillRange((byte) -55, param4, var20Lifetime1, var32, var21Lifetime1);
               continue;
             }
             if (var7_int > var11) {
@@ -133,18 +133,18 @@ final class BridgeModel extends TrapModel {
             var22Lifetime1 = stackIn_20_0;
             var23Lifetime1 = param6 + var22Lifetime1;
             var24Lifetime1 = param6 - var22Lifetime1;
-            nra.a((byte) -55, param4, var24Lifetime1, var31, var21Lifetime1);
-            nra.a((byte) -55, param3, var23Lifetime1, var31, var24Lifetime1);
-            nra.a((byte) -55, param4, var20Lifetime1, var31, var23Lifetime1);
-            nra.a((byte) -55, param4, var24Lifetime1, var32, var21Lifetime1);
-            nra.a((byte) -55, param3, var23Lifetime1, var32, var24Lifetime1);
-            nra.a((byte) -55, param4, var20Lifetime1, var32, var23Lifetime1);
+            nra.fillRange((byte) -55, param4, var24Lifetime1, var31, var21Lifetime1);
+            nra.fillRange((byte) -55, param3, var23Lifetime1, var31, var24Lifetime1);
+            nra.fillRange((byte) -55, param4, var20Lifetime1, var31, var23Lifetime1);
+            nra.fillRange((byte) -55, param4, var24Lifetime1, var32, var21Lifetime1);
+            nra.fillRange((byte) -55, param3, var23Lifetime1, var32, var24Lifetime1);
+            nra.fillRange((byte) -55, param4, var20Lifetime1, var32, var23Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var7), "vsa.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) var7), "vsa.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -154,9 +154,9 @@ final class BridgeModel extends TrapModel {
           if (param1 <= 82) {
             field_m = (IntrusiveDeque) null;
           }
-          this.field_q = (faa[][]) null;
+          this.field_q = (BridgeTile[][]) null;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vsa.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vsa.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -198,11 +198,11 @@ final class BridgeModel extends TrapModel {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(boolean param0, faa param1) {
+    private final void a(boolean param0, BridgeTile param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -238,7 +238,7 @@ final class BridgeModel extends TrapModel {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ final class BridgeModel extends TrapModel {
     final void mirror(int param0) {
         int var2 = 0;
         int var3 = 0;
-        faa var4 = null;
+        BridgeTile var4 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         super.mirror(19);
@@ -265,7 +265,7 @@ final class BridgeModel extends TrapModel {
           }
         }
         if (param0 < 0) {
-          this.field_q = (faa[][]) null;
+          this.field_q = (BridgeTile[][]) null;
         }
     }
 
@@ -337,7 +337,7 @@ final class BridgeModel extends TrapModel {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class BridgeModel extends TrapModel {
         try {
           int var6_int = 29 / ((param4 + 38) / 47);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vsa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vsa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -357,7 +357,7 @@ final class BridgeModel extends TrapModel {
             this.style = -32;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vsa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vsa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -397,7 +397,7 @@ final class BridgeModel extends TrapModel {
           int var3_int = -50 / ((param0 + 8) / 40);
           param1.writeBits((byte) 18, this.style, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vsa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vsa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -408,7 +408,7 @@ final class BridgeModel extends TrapModel {
           }
           super.addToScene(param0 ^ param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vsa.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vsa.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -435,7 +435,7 @@ final class BridgeModel extends TrapModel {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vsa.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vsa.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -453,7 +453,7 @@ final class BridgeModel extends TrapModel {
         int var7;
         int var9;
         int var10;
-        faa var12;
+        BridgeTile var12;
         int var13;
         int var14;
         int var15;
@@ -475,13 +475,13 @@ final class BridgeModel extends TrapModel {
         }
         this.field_r = var6 / 2097152;
         this.field_p = var5 / 2097152;
-        this.field_q = new faa[this.field_p][this.field_r];
+        this.field_q = new BridgeTile[this.field_p][this.field_r];
         var7 = -(var6 / 2) + var4 + 1048576;
         var9 = 123 % ((param0 + 16) / 56);
         for (var8 = 0; var8 < this.field_r; var8++) {
           var10 = 1048576 + (var3 - var5 / 2);
           for (var11 = 0; var11 < this.field_p; var11++) {
-            var12 = new faa();
+            var12 = new BridgeTile();
             this.field_q[var11][var8] = var12;
             stackIn_10_0 = (var11 <= 0) ? 0 : 1;
             var13 = stackIn_10_0;
@@ -506,7 +506,7 @@ final class BridgeModel extends TrapModel {
             }
             boolean decompiledFrameRemainder0 = true;
             var18 = 0;
-            var12.field_c = this;
+            var12.bridge = this;
             if (var17 != 1) {
               if (var14 != 0 &&
                 var13 != 0) {
@@ -580,7 +580,7 @@ final class BridgeModel extends TrapModel {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -656,7 +656,7 @@ final class BridgeModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "vsa.F(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "vsa.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -684,7 +684,7 @@ final class BridgeModel extends TrapModel {
           param1.field_O = 0;
           param1.field_K = 0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vsa.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vsa.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

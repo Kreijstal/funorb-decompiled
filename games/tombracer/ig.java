@@ -36,11 +36,11 @@ final class ig {
             fua.field_a = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, DualLinkNode param1, DualLinkNode param2) {
+    final static void insertSecondaryAfter(int param0, DualLinkNode param1, DualLinkNode param2) {
         try {
           if (null != param1.secondaryPrevious) {
             param1.unlinkSecondary(-7975);
@@ -51,7 +51,7 @@ final class ig {
           param1.secondaryPrevious.secondaryNext = param1;
           param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

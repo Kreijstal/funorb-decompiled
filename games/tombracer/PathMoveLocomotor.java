@@ -78,7 +78,7 @@ final class PathMoveLocomotor extends Locomotor {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class PathMoveLocomotor extends Locomotor {
             this.trap.move((byte) -77, var13Lifetime6, var14Lifetime6);
             return;
           }
-          var11Lifetime6 = S2CRoundResultPacket.a(8192, -16390, var10, this.trap.getFacingAngle(-25787));
+          var11Lifetime6 = S2CRoundResultPacket.wrapDelta(8192, -16390, var10, this.trap.getFacingAngle(-25787));
           var12Lifetime6 = S2CNextRoundPacket.abs(var11Lifetime6, 39);
           if (this.field_v == 0) {
             this.trap.rotateBy(false, -var11Lifetime6);
@@ -247,7 +247,7 @@ final class PathMoveLocomotor extends Locomotor {
           this.trap.move((byte) -77, var13Lifetime2, var14Lifetime2);
           return;
         }
-        var11Lifetime3 = S2CRoundResultPacket.a(8192, -16390, var10Lifetime1, this.trap.getFacingAngle(-25787));
+        var11Lifetime3 = S2CRoundResultPacket.wrapDelta(8192, -16390, var10Lifetime1, this.trap.getFacingAngle(-25787));
         var12Lifetime3 = S2CNextRoundPacket.abs(var11Lifetime3, 39);
         if (this.field_v == 0) {
           this.trap.rotateBy(false, -var11Lifetime3);
@@ -315,7 +315,7 @@ final class PathMoveLocomotor extends Locomotor {
             param0.writeBits((byte) -128, this.field_v, 12);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ro.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ro.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -326,7 +326,7 @@ final class PathMoveLocomotor extends Locomotor {
             field_q = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ro.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ro.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class PathMoveLocomotor extends Locomotor {
           this.path = new WaypointPath();
           this.speed = 131072;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -371,7 +371,7 @@ final class PathMoveLocomotor extends Locomotor {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ final class PathMoveLocomotor extends Locomotor {
         return this.speed;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         if (param0 > -101) {
           String var2 = (String) null;
@@ -450,7 +450,7 @@ final class PathMoveLocomotor extends Locomotor {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 }

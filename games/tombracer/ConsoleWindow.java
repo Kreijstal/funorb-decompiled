@@ -53,7 +53,7 @@ abstract class ConsoleWindow implements ShellListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ abstract class ConsoleWindow implements ShellListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ abstract class ConsoleWindow implements ShellListener {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -295,7 +295,7 @@ abstract class ConsoleWindow implements ShellListener {
             ArchiveNetworkClient.textureHeight = param1;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uta.L(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uta.L(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -339,7 +339,7 @@ abstract class ConsoleWindow implements ShellListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ abstract class ConsoleWindow implements ShellListener {
           this.printColouredText(24219, param1, 13421772);
           int var3_int = 22 / ((param0 - 82) / 40);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uta.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uta.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -421,7 +421,7 @@ abstract class ConsoleWindow implements ShellListener {
           }
           this.printLine(126, param1 != null ? param1.toString() : "null");
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uta.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uta.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -465,9 +465,9 @@ abstract class ConsoleWindow implements ShellListener {
           }
         }
         if (!this.field_o.getText((byte) -117).equals(this.field_r) ||
-          this.field_o.j(-1320) != this.field_c) {
+          this.field_o.getCaret(-1320) != this.field_c) {
           this.field_r = this.field_o.getText((byte) -121);
-          this.field_c = this.field_o.j(-1320);
+          this.field_c = this.field_o.getCaret(-1320);
           this.field_b = this.a(false);
           if (this.field_b != null &&
             this.field_b.length == 0) {
@@ -534,7 +534,7 @@ abstract class ConsoleWindow implements ShellListener {
           this.field_a.field_tb.field_t = var4_int;
           this.field_a.field_tb.field_T = -var4_int + this.field_a.field_t;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uta.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uta.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -592,7 +592,7 @@ abstract class ConsoleWindow implements ShellListener {
           this.field_p = new UiComponent(0L, var12);
           this.field_p.field_qb = 0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

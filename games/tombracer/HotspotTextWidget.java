@@ -53,7 +53,7 @@ class HotspotTextWidget extends FocusableWidget {
         try {
           this.field_r = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "lga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "lga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ class HotspotTextWidget extends FocusableWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ class HotspotTextWidget extends FocusableWidget {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ class HotspotTextWidget extends FocusableWidget {
               if (var8 != var11) {
                 stackIn_27_0 = var28.field_c[0];
               } else {
-                stackIn_27_0 = var27.a((byte) -59, var5);
+                stackIn_27_0 = var27.getCaretX((byte) -59, var5);
               }
               var13 = stackIn_27_0;
               if (var11 != var9) {
@@ -210,7 +210,7 @@ class HotspotTextWidget extends FocusableWidget {
                   stackIn_32_0 = var28.field_c[-1 + var28.field_c.length];
                 }
               } else {
-                stackIn_32_0 = var27.a((byte) -59, var2);
+                stackIn_32_0 = var27.getCaretX((byte) -59, var2);
               }
               var14 = stackIn_32_0;
               var29 = new bm(var7Lifetime2, var13, var28.field_d, var14 - var13, Math.max(var30.getLineInkHeight((byte) -90), var28.field_b - var28.field_d));
@@ -246,7 +246,7 @@ class HotspotTextWidget extends FocusableWidget {
             if (var8Lifetime1 != var11Lifetime1) {
               stackIn_10_0 = var23.field_c[0];
             } else {
-              stackIn_10_0 = var22.a((byte) -59, var5Lifetime1);
+              stackIn_10_0 = var22.getCaretX((byte) -59, var5Lifetime1);
             }
             var13Lifetime1 = stackIn_10_0;
             if (var11Lifetime1 != var9Lifetime1) {
@@ -256,7 +256,7 @@ class HotspotTextWidget extends FocusableWidget {
                 stackIn_15_0 = var23.field_c[-1 + var23.field_c.length];
               }
             } else {
-              stackIn_15_0 = var22.a((byte) -59, var2Lifetime1);
+              stackIn_15_0 = var22.getCaretX((byte) -59, var2Lifetime1);
             }
             var14Lifetime1 = stackIn_15_0;
             var24 = new bm(var7Lifetime1Lifetime1, var13Lifetime1, var23.field_d, var14Lifetime1 - var13Lifetime1, Math.max(var17_ref.getLineInkHeight((byte) -90), var23.field_b - var23.field_d));
@@ -343,7 +343,7 @@ class HotspotTextWidget extends FocusableWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ class HotspotTextWidget extends FocusableWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -427,7 +427,7 @@ class HotspotTextWidget extends FocusableWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -501,7 +501,7 @@ class HotspotTextWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1_ref), "lga.M(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1_ref), "lga.M(" + param0 + ')');
         }
     }
 

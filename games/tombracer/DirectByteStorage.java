@@ -40,7 +40,7 @@ final class DirectByteStorage extends ByteStorage {
           this.field_g.position(0);
           this.field_g.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ie.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ie.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

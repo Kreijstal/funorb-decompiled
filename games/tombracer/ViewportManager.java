@@ -43,7 +43,7 @@ final class ViewportManager {
         return false;
     }
 
-    private final void c(int param0) {
+    private final void applyRequestedSize(int param0) {
         int var2;
         int var3;
         int var4;
@@ -139,7 +139,7 @@ final class ViewportManager {
         }
     }
 
-    final void a(boolean param0) {
+    final void update(boolean param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
@@ -160,7 +160,7 @@ final class ViewportManager {
             if (this.field_i > cba.field_d) {
               this.field_h = false;
             } else {
-              this.c(-102);
+              this.applyRequestedSize(-102);
             }
             return;
           }
@@ -180,7 +180,7 @@ final class ViewportManager {
           }
           return;
         }
-        this.a(true);
+        this.update(true);
         if (null != dq.field_f) {
           return;
         }
@@ -195,7 +195,7 @@ final class ViewportManager {
             if (this.field_i > cba.field_d) {
               this.field_h = false;
             } else {
-              this.c(-102);
+              this.applyRequestedSize(-102);
             }
             return;
           }
@@ -226,7 +226,7 @@ final class ViewportManager {
           if (this.field_i > cba.field_d) {
             this.field_h = false;
           } else {
-            this.c(-102);
+            this.applyRequestedSize(-102);
           }
           return;
         }
@@ -259,7 +259,7 @@ final class ViewportManager {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setDisplayMode(int param0, int param1, int param2) {
         this.field_s = param0;
         this.field_p = param1;
         if (param2 != -1) {
@@ -267,7 +267,7 @@ final class ViewportManager {
         }
     }
 
-    final via b(int param0) {
+    final via enterFullscreen(int param0) {
         via var2 = null;
         via var2Lifetime1;
         this.field_j = qf.field_i;
@@ -294,20 +294,20 @@ final class ViewportManager {
         return var2Lifetime1;
     }
 
-    final void a(int param0, boolean param1, int param2) {
+    final void setRequestedSize(int param0, boolean param1, int param2) {
         this.field_d = param0;
         if (param1) {
-          this.a(true);
+          this.update(true);
           this.field_t = param2;
           return;
         }
         this.field_t = param2;
     }
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean isSizeSupported(int param0, byte param1, int param2) {
         boolean stackIn_13_0 = false;
         if (param1 < 37) {
-          this.a(6, -40, -5);
+          this.setDisplayMode(6, -40, -5);
           if (this.field_n > param2) {
             return false;
           }
@@ -349,7 +349,7 @@ final class ViewportManager {
 
     final boolean d(int param0) {
         if (param0 != -1) {
-          this.a(-62, true, 91);
+          this.setRequestedSize(-62, true, 91);
           if (ReportAbuseDialog.field_ub <= 0) {
             return false;
           }

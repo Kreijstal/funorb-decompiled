@@ -17,11 +17,11 @@ final class wg extends MatchScoringObserver {
           }
           super.onPenalty(param0 + 0, param1, param2, param3, param4, param5);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static String a(int param0, int[] param1) {
+    final static String arrayToString(int param0, int[] param1) {
         int var3 = 0;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -56,16 +56,16 @@ final class wg extends MatchScoringObserver {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     final void onRoomEntered(int param0, Player param1, Room param2) {
         try {
-          MatchPhase.a(param2, 100, this.field_f);
+          MatchPhase.sendRoomEnteredStat(param2, 100, this.field_f);
           super.onRoomEntered(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wg.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wg.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class wg extends MatchScoringObserver {
           UrlDownloadRequest.sendRoomCompletedStat(this.field_f, param1, 108);
           super.onRoomCompleted(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wg.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wg.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class wg extends MatchScoringObserver {
               var6 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, DefaultTileRenderable.field_g[var3_int], true);
               var4 = var4 + mha.field_C;
               var7 = -(var6 >> 1) + ega.field_c;
-              if (CrusherBehaviour.a(param2, var6 + (InvisibleTouchSwitchComponent.field_L << 1), -InvisibleTouchSwitchComponent.field_L + var7, param1, (GasVentModel.field_p << 1) + nt.field_d, false, var4)) {
+              if (CrusherBehaviour.rectContainsPoint(param2, var6 + (InvisibleTouchSwitchComponent.field_L << 1), -InvisibleTouchSwitchComponent.field_L + var7, param1, (GasVentModel.field_p << 1) + nt.field_d, false, var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
@@ -135,7 +135,7 @@ final class wg extends MatchScoringObserver {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wg.T(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wg.T(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

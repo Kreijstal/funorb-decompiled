@@ -10,7 +10,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         if (param0) {
           ArchiveRequest.hasFlag2048(-49, 62, -28);
           if (LegacyOpenGlTexture.field_a == gsa.field_y) {
-            return faa.field_g;
+            return BridgeTile.field_g;
           }
           if (!DefaultRoomObjectRenderer.field_b.b(88)) {
             return DefaultRoomObjectRenderer.field_b.a((byte) 119);
@@ -21,7 +21,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           return DefaultRoomObjectRenderer.field_b.a((byte) 100);
         }
         if (LegacyOpenGlTexture.field_a == gsa.field_y) {
-          return faa.field_g;
+          return BridgeTile.field_g;
         }
         if (!DefaultRoomObjectRenderer.field_b.b(88)) {
           return DefaultRoomObjectRenderer.field_b.a((byte) 119);
@@ -65,7 +65,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

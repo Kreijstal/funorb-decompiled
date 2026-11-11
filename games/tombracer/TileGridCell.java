@@ -47,7 +47,7 @@ final class TileGridCell {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class TileGridCell {
             this.getGrid(-124);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pca.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pca.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class TileGridCell {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class TileGridCell {
         try {
           param0.writeBits((byte) 92, this.tileType, 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pca.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pca.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class TileGridCell {
             this.addOccupancy(-52, 68, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pca.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pca.T(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class TileGridCell {
     final boolean b(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
-          TileGridCell.a(89, (byte) 98);
+          TileGridCell.getPermutationTable(89, (byte) 98);
         }
         stackIn_6_0 = (null != this.renderable) && (this.renderable.isDusty(param0 - 2));
         return stackIn_6_0;
@@ -218,7 +218,7 @@ final class TileGridCell {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -245,11 +245,11 @@ final class TileGridCell {
             this.column = -39;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pca.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pca.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static byte[] a(int param0, byte param1) {
+    final static byte[] getPermutationTable(int param0, byte param1) {
         woa var2;
         byte[] var3;
         Random var4;
@@ -276,7 +276,7 @@ final class TileGridCell {
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 255; var5Lifetime1++) {
             var6 = -var5Lifetime1 + 255;
-            var7 = BufferedSocket.a(var6, var4, -110);
+            var7 = BufferedSocket.randomBelow(var6, var4, -110);
             var8 = var11[var7];
             var3[var7] = var11[var6];
             var3[-var5Lifetime1 + 511] = (byte) var8;
@@ -328,7 +328,7 @@ final class TileGridCell {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

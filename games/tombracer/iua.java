@@ -31,9 +31,9 @@ final class iua {
         float var22 = 0.0f;
         float var23 = 0.0f;
         if (this.field_s) {
-          this.field_k.b((int)param0, bt.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
-          this.field_k.b((int)param1, bt.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
-          this.field_k.b((int)param2, bt.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.b((int)param0, PitSnakeModel.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.b((int)param1, PitSnakeModel.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.b((int)param2, PitSnakeModel.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
           return;
         }
         float var13 = param4 - param3;
@@ -1975,7 +1975,7 @@ final class iua {
               do {
                 param2++;
                 if (param9 < param1[param2]) {
-                  param0[param2] = bt.field_h[(int)param7];
+                  param0[param2] = PitSnakeModel.field_h[(int)param7];
                 }
                 param9 = param9 + param10;
                 param7 = param7 + param8;
@@ -1987,7 +1987,7 @@ final class iua {
               do {
                 param2++;
                 if (param9 < param1[param2]) {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                   var14 = param0[param2];
                   param0[param2] = (var13 | var14 >> 24) << 24 | param3 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & 65280) * var12 >> 8 & 65280);
@@ -2005,7 +2005,7 @@ final class iua {
             if (this.field_b == 0) {
               if (param4 > 0) {
                 do {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param7 = param7 + param8;
                   param2++;
                   if (param9 < param1[param2]) {
@@ -2032,7 +2032,7 @@ final class iua {
               }
               param4 = param6 - param5 & 3;
               if (!(param4 <= 0)) {
-                param3 = bt.field_h[(int)param7];
+                param3 = PitSnakeModel.field_h[(int)param7];
                 do {
                   param2++;
                   if (param9 < param1[param2]) {
@@ -2049,7 +2049,7 @@ final class iua {
               var13 = 256 - this.field_b;
               if (param4 > 0) {
                 do {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param7 = param7 + param8;
                   param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                   param2++;
@@ -2081,7 +2081,7 @@ final class iua {
               }
               param4 = param6 - param5 & 3;
               if (param4 > 0) {
-                param3 = bt.field_h[(int)param7];
+                param3 = PitSnakeModel.field_h[(int)param7];
                 param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                 do {
                   param2++;
@@ -2102,7 +2102,7 @@ final class iua {
               do {
                 param2++;
                 if (param9 < param1[param2]) {
-                  param0[param2] = bt.field_h[(int)param7];
+                  param0[param2] = PitSnakeModel.field_h[(int)param7];
                   param1[param2] = param9;
                 }
                 param9 = param9 + param10;
@@ -2115,7 +2115,7 @@ final class iua {
               do {
                 param2++;
                 if (param9 < param1[param2]) {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                   var14 = param0[param2];
                   param0[param2] = (var13 | var14 >> 24) << 24 | param3 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & 65280) * var12 >> 8 & 65280);
@@ -2134,7 +2134,7 @@ final class iua {
             if (this.field_b == 0) {
               if (param4 > 0) {
                 do {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param7 = param7 + param8;
                   param2++;
                   if (param9 < param1[param2]) {
@@ -2167,7 +2167,7 @@ final class iua {
               if (param4 <= 0) {
                 return;
               }
-              param3 = bt.field_h[(int)param7];
+              param3 = PitSnakeModel.field_h[(int)param7];
               do {
                 param2++;
                 if (param9 < param1[param2]) {
@@ -2184,7 +2184,7 @@ final class iua {
               var13 = 256 - this.field_b;
               if (param4 > 0) {
                 do {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param7 = param7 + param8;
                   param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                   param2++;
@@ -2220,7 +2220,7 @@ final class iua {
               }
               param4 = param6 - param5 & 3;
               if (param4 > 0) {
-                param3 = bt.field_h[(int)param7];
+                param3 = PitSnakeModel.field_h[(int)param7];
                 param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                 do {
                   param2++;
@@ -7490,7 +7490,7 @@ final class iua {
               do {
                 param2++;
                 if (param9 < param1[param2]) {
-                  param0[param2] = bt.field_h[(int)param7];
+                  param0[param2] = PitSnakeModel.field_h[(int)param7];
                 }
                 param9 = param9 + param10;
                 param7 = param7 + param8;
@@ -7502,7 +7502,7 @@ final class iua {
               do {
                 param2++;
                 if (param9 < param1[param2]) {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                   var14 = param0[param2];
                   param0[param2] = param3 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & 65280) * var12 >> 8 & 65280);
@@ -7520,7 +7520,7 @@ final class iua {
             if (this.field_b == 0) {
               if (param4 > 0) {
                 do {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param7 = param7 + param8;
                   param2++;
                   if (param9 < param1[param2]) {
@@ -7547,7 +7547,7 @@ final class iua {
               }
               param4 = param6 - param5 & 3;
               if (!(param4 <= 0)) {
-                param3 = bt.field_h[(int)param7];
+                param3 = PitSnakeModel.field_h[(int)param7];
                 do {
                   param2++;
                   if (param9 < param1[param2]) {
@@ -7564,7 +7564,7 @@ final class iua {
               var13 = 256 - this.field_b;
               if (param4 > 0) {
                 do {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param7 = param7 + param8;
                   param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                   param2++;
@@ -7596,7 +7596,7 @@ final class iua {
               }
               param4 = param6 - param5 & 3;
               if (param4 > 0) {
-                param3 = bt.field_h[(int)param7];
+                param3 = PitSnakeModel.field_h[(int)param7];
                 param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                 do {
                   param2++;
@@ -7617,7 +7617,7 @@ final class iua {
               do {
                 param2++;
                 if (param9 < param1[param2]) {
-                  param0[param2] = bt.field_h[(int)param7];
+                  param0[param2] = PitSnakeModel.field_h[(int)param7];
                   param1[param2] = param9;
                 }
                 param9 = param9 + param10;
@@ -7630,7 +7630,7 @@ final class iua {
               do {
                 param2++;
                 if (param9 < param1[param2]) {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                   var14 = param0[param2];
                   param0[param2] = param3 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & 65280) * var12 >> 8 & 65280);
@@ -7649,7 +7649,7 @@ final class iua {
             if (this.field_b == 0) {
               if (param4 > 0) {
                 do {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param7 = param7 + param8;
                   param2++;
                   if (param9 < param1[param2]) {
@@ -7682,7 +7682,7 @@ final class iua {
               if (param4 <= 0) {
                 return;
               }
-              param3 = bt.field_h[(int)param7];
+              param3 = PitSnakeModel.field_h[(int)param7];
               do {
                 param2++;
                 if (param9 < param1[param2]) {
@@ -7699,7 +7699,7 @@ final class iua {
               var13 = 256 - this.field_b;
               if (param4 > 0) {
                 do {
-                  param3 = bt.field_h[(int)param7];
+                  param3 = PitSnakeModel.field_h[(int)param7];
                   param7 = param7 + param8;
                   param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                   param2++;
@@ -7735,7 +7735,7 @@ final class iua {
               }
               param4 = param6 - param5 & 3;
               if (param4 > 0) {
-                param3 = bt.field_h[(int)param7];
+                param3 = PitSnakeModel.field_h[(int)param7];
                 param3 = ((param3 & 16711935) * var13 >> 8 & 16711935) + ((param3 & 65280) * var13 >> 8 & 65280);
                 do {
                   param2++;
@@ -7759,9 +7759,9 @@ final class iua {
         float var22 = 0.0f;
         float var23 = 0.0f;
         if (this.field_s) {
-          this.field_k.b((int)param0, bt.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
-          this.field_k.b((int)param1, bt.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
-          this.field_k.b((int)param2, bt.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.b((int)param0, PitSnakeModel.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.b((int)param1, PitSnakeModel.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.b((int)param2, PitSnakeModel.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
           return;
         }
         float var13 = param4 - param3;

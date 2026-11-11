@@ -49,18 +49,18 @@ final class CollisionGrid {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final Collidable[] b(int param0, int param1, int param2, int param3, int param4) {
+    final Collidable[] queryBox(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != -1) {
           return (Collidable[]) null;
         }
-        return this.a(-1 + (param3 / 2 + param2), -(param3 / 2) + param2, -1 + (param0 + param4 / 2), (byte) -102, -(param4 / 2) + param0);
+        return this.queryRect(-1 + (param3 / 2 + param2), -(param3 / 2) + param2, -1 + (param0 + param4 / 2), (byte) -102, -(param4 / 2) + param0);
     }
 
-    final Collidable[] a(byte param0, Collidable param1) {
+    final Collidable[] queryCollidable(byte param0, Collidable param1) {
         RuntimeException var3 = null;
         Collidable[] stackIn_2_0 = null;
         Collidable[] stackIn_4_0 = null;
@@ -70,7 +70,7 @@ final class CollisionGrid {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -26) {
-            stackIn_4_0 = this.b(param1.getY(9648), -1, param1.getX(3), param1.getWidth(-48), param1.getHeight((byte) 55));
+            stackIn_4_0 = this.queryBox(param1.getY(9648), -1, param1.getX(3), param1.getWidth(-48), param1.getHeight((byte) 55));
             return stackIn_4_0;
           }
           stackIn_2_0 = (Collidable[]) null;
@@ -85,11 +85,11 @@ final class CollisionGrid {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    private final Collidable[] a(int param0, int param1, int param2, int param3, int param4) {
+    private final Collidable[] queryLine(int param0, int param1, int param2, int param3, int param4) {
         int var11 = 0;
         int fieldTemp$0 = 0;
         int var6;
@@ -104,7 +104,7 @@ final class CollisionGrid {
         while (!this.field_b.field_d) {
           var6 = this.field_b.b((byte) 75);
           var7 = this.field_b.b(2);
-          var8 = (q) (this.field_h.get((byte) -119, (long)ConstrainToRectangleLocomotor.a(var6, var7, (byte) 36)));
+          var8 = (q) (this.field_h.get((byte) -119, (long)ConstrainToRectangleLocomotor.hashCell(var6, var7, (byte) 36)));
           while (var8 != null) {
             if (var8.a(var6, var7, true)) {
               var9 = 1;
@@ -142,7 +142,7 @@ final class CollisionGrid {
         return (param1 >> this.field_c) / 32;
     }
 
-    private final Collidable[] a(int param0, int param1, int param2, byte param3, int param4) {
+    private final Collidable[] queryRect(int param0, int param1, int param2, byte param3, int param4) {
         int var10 = 0;
         int var11 = 0;
         int var15 = 0;
@@ -166,7 +166,7 @@ final class CollisionGrid {
         this.field_d = 0;
         for (var10 = var6; var8 >= var10; var10++) {
           for (var11 = var7; var11 <= var9; var11++) {
-            var12 = (q) (this.field_h.get((byte) -80, (long)ConstrainToRectangleLocomotor.a(var10, var11, (byte) -124)));
+            var12 = (q) (this.field_h.get((byte) -80, (long)ConstrainToRectangleLocomotor.hashCell(var10, var11, (byte) -124)));
             while (var12 != null) {
               if (var12.a(var10, var11, true)) {
                 var13 = 1;
@@ -245,7 +245,7 @@ final class CollisionGrid {
                   var9 = (q) (this.field_e.nextWithSameKey((byte) 35));
                 }
                 if (decompiledFrameCompleted0) {
-                  var10 = ShaderEffect.a(var7, param0, var8, true);
+                  var10 = ShaderEffect.obtainGridEntry(var7, param0, var8, true);
                   this.field_e.put(param1 ^ -7074, var10, (long)param0.getCollisionId(true));
                   this.field_h.put((long)var10.hashCode(), 115, var10);
                 }
@@ -263,11 +263,11 @@ final class CollisionGrid {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final Collidable[] a(BeamSegment param0, byte param1) {
+    final Collidable[] querySegment(BeamSegment param0, byte param1) {
         RuntimeException var3 = null;
         Collidable[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -278,7 +278,7 @@ final class CollisionGrid {
           if (param1 > -4) {
             this.field_b = (nf) null;
           }
-          stackIn_3_0 = this.a(param0.field_e, param0.field_d, param0.field_k, param0.field_a, 0);
+          stackIn_3_0 = this.queryLine(param0.field_e, param0.field_d, param0.field_k, param0.field_a, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -290,7 +290,7 @@ final class CollisionGrid {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -335,7 +335,7 @@ final class CollisionGrid {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

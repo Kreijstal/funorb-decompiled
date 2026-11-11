@@ -63,7 +63,7 @@ final class CrusherBehaviour extends Behaviour {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -76,9 +76,9 @@ final class CrusherBehaviour extends Behaviour {
           param1.writeBits((byte) -20, this.retractTicks, 8);
           param1.writeBits((byte) -126, this.field_u ? 1 : 0, 1);
           param1.writeBits((byte) -23, this.field_p ? 1 : 0, 1);
-          this.crushEffect.a(param1, (byte) 125);
+          this.crushEffect.encode(param1, (byte) 125);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -92,10 +92,10 @@ final class CrusherBehaviour extends Behaviour {
           this.waitTicks = 50;
           this.windUpTicks = 25;
           this.crushEffect = new Effect(0, 100);
-          this.crushEffect.b(1, 4);
+          this.crushEffect.setDeathMessageIndex(1, 4);
           this.k((byte) -106);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class CrusherBehaviour extends Behaviour {
             this.retractTicks = 50;
           }
           if (16 <= param0.formatVersion) {
-            this.crushEffect = ad.a((byte) 87, param1);
+            this.crushEffect = ad.decodeEffect((byte) 87, param1);
           } else {
             this.crushEffect = new Effect(0, 100);
           }
@@ -216,7 +216,7 @@ final class CrusherBehaviour extends Behaviour {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -338,7 +338,7 @@ final class CrusherBehaviour extends Behaviour {
         this.waitTicks = -69;
     }
 
-    final static IndexedSprite[] a(ResourceArchive param0, int param1, int param2, byte param3) {
+    final static IndexedSprite[] loadIndexedSprites(ResourceArchive param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
         IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -364,14 +364,14 @@ final class CrusherBehaviour extends Behaviour {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 != 12134) {
-          CrusherBehaviour.a(85, 105, 55, -55, 43, true, 103);
+          CrusherBehaviour.rectContainsPoint(85, 105, 55, -55, 43, true, 103);
         }
     }
 
@@ -404,10 +404,10 @@ final class CrusherBehaviour extends Behaviour {
         return this.phaseTicks;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    final static boolean rectContainsPoint(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         boolean stackIn_18_0 = false;
         if (param5) {
-          CrusherBehaviour.a(-44, -75, 109, 115, -67, true, -126);
+          CrusherBehaviour.rectContainsPoint(-44, -75, 109, 115, -67, true, -126);
           if (param2 > param3) {
             return false;
           }
@@ -455,7 +455,7 @@ final class CrusherBehaviour extends Behaviour {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -500,7 +500,7 @@ final class CrusherBehaviour extends Behaviour {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 

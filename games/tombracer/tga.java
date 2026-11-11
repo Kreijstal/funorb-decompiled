@@ -4,7 +4,7 @@
 final class tga {
     static GraphicsToolkit field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void intersectClip(int param0, int param1, int param2, int param3, int param4) {
         gb.a(-29711);
         if (param0 != -21953) {
           return;

@@ -10,16 +10,16 @@ abstract class SpriteState extends DualLinkNode {
     int field_n;
     int field_m;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          SpriteState.a(18);
+          SpriteState.installDefaultFactories(18);
           field_l = null;
           return;
         }
         field_l = null;
     }
 
-    final static void a(int param0) {
+    final static void installDefaultFactories(int param0) {
         rm.field_a = (ModelCodec) ((Object) new ModelFactory());
         vha.field_c = (RoomComponentCodec) ((Object) new RoomComponentFactory());
         if (param0 == -18035) {
@@ -75,7 +75,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

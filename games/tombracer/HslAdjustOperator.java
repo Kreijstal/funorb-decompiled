@@ -280,11 +280,11 @@ final class HslAdjustOperator extends TextureOperator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4) {
+    final static int gradient(int param0, int param1, int param2, int param3, int param4) {
         int var5;
         int var6;
         int stackIn_3_0 = 0;

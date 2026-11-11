@@ -21,7 +21,7 @@ final class vba extends we {
           }
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vba.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vba.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -290,7 +290,7 @@ final class vba extends we {
         try {
           var14 = new String[10];
           var10 = var14;
-          var11 = param1.a(param0, -99, var14, (ToolkitSprite[]) null, new int[]{param3});
+          var11 = param1.wrapLines(param0, -99, var14, (ToolkitSprite[]) null, new int[]{param3});
           if (param6 != 128) {
             stackIn_3_0 = -59;
             return stackIn_3_0;
@@ -322,7 +322,7 @@ final class vba extends we {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

@@ -52,7 +52,7 @@ final class MirrorMoverLocomotor extends Locomotor {
           param0.writeBits((byte) -128, !this.field_p ? 0 : 1, 1);
           param0.writeBits((byte) -125, this.field_q ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ws.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ws.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class MirrorMoverLocomotor extends Locomotor {
           this.field_p = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_q = param1.readBits((byte) 44, 1) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ws.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ws.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

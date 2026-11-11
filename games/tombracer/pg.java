@@ -63,11 +63,11 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_A = null;
         if (param0 != 0) {
@@ -104,7 +104,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           this.field_w = param0;
           this.field_B = new FocusableWidget(aua.field_d, (WidgetListener) null);
           this.field_B.field_r = (WidgetPainter) ((Object) new td());
-          var7 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(108, SafeZoneBehaviour.field_q, new String[]{this.c(-58), this.d(-35)});
+          var7 = LegacyOpenGlFlowingWaterEffect.formatText(108, SafeZoneBehaviour.field_q, new String[]{this.c(-58), this.d(-35)});
           var3 = 20;
           var4 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
           this.field_z = new HotspotTextWidget(var7, var4);
@@ -138,7 +138,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           this.addChild(this.field_B, -1);
           this.setBounds((byte) -31, 300, var5 + (55 + var3), 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

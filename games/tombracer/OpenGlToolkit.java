@@ -39,7 +39,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private Framebuffer[] field_kd;
     private Framebuffer[] field_ub;
     private OpenGlSprite field_Mb;
-    private vj field_F;
+    private SecondaryLinkQueue field_F;
     private OpenGlFramebuffer field_bb;
     private int field_Zc;
     private Framebuffer field_t;
@@ -224,7 +224,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -353,7 +353,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -462,7 +462,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -548,7 +548,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -576,7 +576,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             this.b(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cka.W(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cka.W(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -890,7 +890,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -922,7 +922,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.a(param3, param2 + 35476);
           jaggl.OpenGL.glDrawElements(param1, param4, var6_int, (long)param0 + param3.b(19135));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cka.TB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cka.TB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -966,7 +966,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -1015,7 +1015,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1121,7 +1121,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1178,7 +1178,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         try {
           jaggl.OpenGL.glLoadMatrixf(param0.affineMatrix(-45), param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cka.CC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cka.CC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1189,7 +1189,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           param0[0] = this.field_Ib;
           param0[2] = this.field_B;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cka.K(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cka.K(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1399,7 +1399,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1438,7 +1438,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1448,7 +1448,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glMultMatrixf(param0.affineMatrix(96), 0);
           int var3_int = -49 / ((52 - param1) / 47);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cka.SC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cka.SC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1730,7 +1730,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_M = new Framebuffer[4];
         this.field_x = -1;
         this.field_kd = new Framebuffer[4];
-        this.field_F = new vj();
+        this.field_F = new SecondaryLinkQueue();
         this.field_Wc = new NodeHashTable(16);
         this.field_Lc = new IntrusiveDeque();
         this.field_pd = new IntrusiveDeque();
@@ -1787,10 +1787,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         try {
           this.field_gb = param2;
           this.field_ad = param0;
-          if (!StringCursor.a("jaclib", 480)) {
+          if (!StringCursor.loadNativeLibrary("jaclib", 480)) {
             throw new RuntimeException("");
           }
-          if (!StringCursor.a("jaggl", 480)) {
+          if (!StringCursor.loadNativeLibrary("jaggl", 480)) {
             throw new RuntimeException("");
           }
           try {
@@ -1938,7 +1938,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1981,7 +1981,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2030,7 +2030,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_t = param0;
           this.field_t.bindDrawFramebuffer((byte) -120);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cka.GE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cka.GE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -2351,7 +2351,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -2528,7 +2528,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -2579,7 +2579,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2711,7 +2711,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -2733,7 +2733,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glEnd();
     }
 
-    public static void t(int param0) {
+    public static void releaseStatics(int param0) {
         field_fd = null;
         field_Mc = null;
         if (param0 != 7312) {
@@ -2798,7 +2798,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 var3 = var9;
                 this.field_rc = this.field_rc + var9.field_o;
                 while (this.field_rc > 2097152) {
-                  var4 = this.field_F.b(-125);
+                  var4 = this.field_F.removeLast(-125);
                   if (var4 != null) {
                     var10 = (OpenGlRenderbuffer) (var4);
                     var10.unlinkSecondary(-7975);
@@ -2811,7 +2811,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 }
                 this.field_Wc.put((long)(this.field_Mb.width() << 16 | this.field_Mb.height()), 124, var9);
               }
-              this.field_F.a(97, var3);
+              this.field_F.addFirst(97, var3);
               this.field_bb.a(8, var3, true);
             }
             this.field_bb.a(true, this.field_Mb.field_a, 0);
@@ -2825,7 +2825,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               var3_ref = var7;
               this.field_rc = this.field_rc + 4 * var7.field_p;
               while (2097152 < this.field_rc) {
-                var4 = this.field_F.b(-119);
+                var4 = this.field_F.removeLast(-119);
                 if (var4 != null) {
                   var8 = (cla) (var4);
                   var8.unlinkSecondary(-7975);
@@ -2838,7 +2838,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               }
               this.field_Wc.put((long)(this.field_Mb.width() << 16 | this.field_Mb.height()), 112, var7);
             }
-            this.field_F.a(75, var3_ref);
+            this.field_F.addFirst(75, var3_ref);
             this.field_l.setPbuffer(var3_ref.a((byte) 101));
           }
           this.field_Y = param0.width();
@@ -2857,7 +2857,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2902,7 +2902,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_Qb = param1;
           this.field_Qb.bindReadFramebuffer((byte) 86);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cka.MC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cka.MC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -3064,7 +3064,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3179,7 +3179,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -3273,7 +3273,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glRasterPos2i(0, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cka.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cka.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -3361,7 +3361,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3421,7 +3421,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -42,7 +42,7 @@ final class rf {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          if (!CurveOperator.a(param0, var6)) {
+          if (!CurveOperator.isValidAccountName(param0, var6)) {
             stackIn_3_0 = pk.field_v;
             return stackIn_3_0;
           }
@@ -56,7 +56,7 @@ final class rf {
           }
           stackIn_14_0 = !param0;
           if (QueuedPlayerEvent.a(stackIn_14_0, param1)) {
-            stackIn_17_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(119, PlatformModel.field_w, new String[]{param1});
+            stackIn_17_0 = LegacyOpenGlFlowingWaterEffect.formatText(119, PlatformModel.field_w, new String[]{param1});
             return stackIn_17_0;
           }
           if (ii.field_a >= 100 &&
@@ -69,7 +69,7 @@ final class rf {
             return stackIn_24_0;
           }
           if (MouseWheelInput.a(2180, param1)) {
-            stackIn_28_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(119, S2CCharacterChoicePacket.field_c, new String[]{param1});
+            stackIn_28_0 = LegacyOpenGlFlowingWaterEffect.formatText(119, S2CCharacterChoicePacket.field_c, new String[]{param1});
             return stackIn_28_0;
           }
           var5 = ql.field_k;
@@ -91,7 +91,7 @@ final class rf {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 

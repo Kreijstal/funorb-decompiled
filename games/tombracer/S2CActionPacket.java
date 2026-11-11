@@ -49,7 +49,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -68,14 +68,14 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -1) {
-          S2CActionPacket.a(59);
+          S2CActionPacket.releaseStatics(59);
         }
         var2 = param1;
         if (4 == var2) {
           return HardwareGraphicsToolkit.D((byte) -110);
         }
         if (var2 == 0) {
-          return Transform3D.a(true);
+          return Transform3D.createDefaultWeapon(true);
         }
         if (var2 == 1) {
           return ik.b(-17698);
@@ -107,11 +107,11 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
           }
           param1.endBitWrite(param0 - 1826190886);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "tt.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "tt.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 4) {
           ResourceArchive var2 = (ResourceArchive) null;
           S2CActionPacket.a((ResourceArchive) null, (byte) -100);
@@ -141,7 +141,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -32,7 +32,7 @@ final class psa extends MidiPcmStream {
         int var9 = 0;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = this.b((byte) 125);
+          var4_int = this.getMasterVolume((byte) 125);
           this.setMasterVolume(this.field_S * var4_int >> 8, -81);
           super.fill(param0, param1, param2);
           if (!this.field_P) {
@@ -76,7 +76,7 @@ final class psa extends MidiPcmStream {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class psa extends MidiPcmStream {
           this.f(-377538388);
           super.startTrack(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "psa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "psa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class psa extends MidiPcmStream {
         try {
           this.f(-377538388);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "psa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "psa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

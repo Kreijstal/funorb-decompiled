@@ -12,11 +12,11 @@ final class upa extends IntrusiveNode {
     int field_l;
     boolean field_i;
 
-    final static void a(String param0, byte param1) {
+    final static void printError(String param0, byte param1) {
         System.out.println("Error: " + qf.replaceAllOccurrences(966747152, "\n", "%0a", param0));
         if (param1 != -24) {
           String var3 = (String) null;
-          upa.a((String) null, (byte) 67);
+          upa.printError((String) null, (byte) 67);
         }
     }
 
@@ -51,7 +51,7 @@ final class upa extends IntrusiveNode {
         UiComponent stackIn_64_0 = null;
         int stackIn_64_1 = 0;
         boolean stackIn_65_2 = false;
-        tga.a(-21953, -640 + SoftwareRasterizer.width >> 1, 640 + SoftwareRasterizer.width >> 1, 0, SoftwareRasterizer.height);
+        tga.intersectClip(-21953, -640 + SoftwareRasterizer.width >> 1, 640 + SoftwareRasterizer.width >> 1, 0, SoftwareRasterizer.height);
         if (mla.field_a <= 0) {
           if (GameKeyHandler.field_a > param1) {
             if (null != fta.field_b) {
@@ -135,7 +135,7 @@ final class upa extends IntrusiveNode {
           return (!param0 ? 6029 : 0) + param1 * 7459;
         }
         String var4 = (String) null;
-        upa.a((String) null, (byte) -14);
+        upa.printError((String) null, (byte) -14);
         return (!param0 ? 6029 : 0) + param1 * 7459;
     }
 

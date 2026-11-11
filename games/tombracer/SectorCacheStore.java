@@ -48,7 +48,7 @@ final class SectorCacheStore {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class SectorCacheStore {
                 return (byte[]) (stackIn_3_0);
               }
               this.field_b.seek((byte) 20, (long)(6 * param0));
-              this.field_b.a(StaticCrusherComponent.field_F, 6, 0, (byte) -64);
+              this.field_b.readFully(StaticCrusherComponent.field_F, 6, 0, (byte) -64);
               var6 = -2 / ((param1 + 40) / 57);
               var4_int = (255 & StaticCrusherComponent.field_F[2]) + (((255 & StaticCrusherComponent.field_F[1]) << 8) + (StaticCrusherComponent.field_F[0] << 16 & 16711680));
               var5 = (16711680 & StaticCrusherComponent.field_F[3] << 16) - (-((StaticCrusherComponent.field_F[4] & 255) << 8) - (StaticCrusherComponent.field_F[5] & 255));
@@ -129,7 +129,7 @@ final class SectorCacheStore {
                   if (510 < var10) {
                     var10 = 510;
                   }
-                  this.field_c.a(StaticCrusherComponent.field_F, var10 + var15, 0, (byte) -28);
+                  this.field_c.readFully(StaticCrusherComponent.field_F, var10 + var15, 0, (byte) -28);
                   var12 = (255 & StaticCrusherComponent.field_F[5]) + (StaticCrusherComponent.field_F[4] << 8 & 65280);
                   var13 = ((255 & StaticCrusherComponent.field_F[6]) << 16) + ((65280 & StaticCrusherComponent.field_F[7] << 8) + (StaticCrusherComponent.field_F[8] & 255));
                   var11 = (16711680 & StaticCrusherComponent.field_F[1] << 16) + (-16777216 & StaticCrusherComponent.field_F[0] << 24) - (-(StaticCrusherComponent.field_F[2] << 8 & 65280) - (255 & StaticCrusherComponent.field_F[3]));
@@ -139,7 +139,7 @@ final class SectorCacheStore {
                     var10 = 512;
                   }
                   var15 = 8;
-                  this.field_c.a(StaticCrusherComponent.field_F, var15 + var10, 0, (byte) -30);
+                  this.field_c.readFully(StaticCrusherComponent.field_F, var15 + var10, 0, (byte) -30);
                   var12 = ((StaticCrusherComponent.field_F[2] & 255) << 8) + (StaticCrusherComponent.field_F[3] & 255);
                   var14 = 255 & StaticCrusherComponent.field_F[7];
                   var13 = (255 & StaticCrusherComponent.field_F[6]) + ((255 & StaticCrusherComponent.field_F[4]) << 16) + (65280 & StaticCrusherComponent.field_F[5] << 8);
@@ -217,7 +217,7 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_b.seek((byte) -124, (long)(6 * param4));
-                  this.field_b.a(StaticCrusherComponent.field_F, 6, 0, (byte) -34);
+                  this.field_b.readFully(StaticCrusherComponent.field_F, 6, 0, (byte) -34);
                   var7_int = (StaticCrusherComponent.field_F[3] << 16 & 16711680) + ((255 & StaticCrusherComponent.field_F[4]) << 8) + (255 & StaticCrusherComponent.field_F[5]);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= this.field_c.b(true) / 520L)) {
@@ -236,7 +236,7 @@ final class SectorCacheStore {
                 StaticCrusherComponent.field_F[3] = (byte)(var7_int >> 16);
                 StaticCrusherComponent.field_F[4] = (byte)(var7_int >> 8);
                 this.field_b.seek((byte) -118, (long)(param4 * 6));
-                this.field_b.a(StaticCrusherComponent.field_F, 0, (byte) -17, 6);
+                this.field_b.write(StaticCrusherComponent.field_F, 0, (byte) -17, 6);
                 if (!param3) {
                   this.readFile(58, 109);
                 }
@@ -250,7 +250,7 @@ final class SectorCacheStore {
                       this.field_c.seek((byte) 91, (long)(var7_int * 520));
                       if (param4 <= 65535) {
                         try {
-                          this.field_c.a(StaticCrusherComponent.field_F, 8, 0, (byte) -115);
+                          this.field_c.readFully(StaticCrusherComponent.field_F, 8, 0, (byte) -115);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -266,7 +266,7 @@ final class SectorCacheStore {
                         var13 = StaticCrusherComponent.field_F[7] & 255;
                       } else {
                         try {
-                          this.field_c.a(StaticCrusherComponent.field_F, 10, 0, (byte) -33);
+                          this.field_c.readFully(StaticCrusherComponent.field_F, 10, 0, (byte) -33);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -317,12 +317,12 @@ final class SectorCacheStore {
                       StaticCrusherComponent.field_F[8] = (byte)var10;
                       StaticCrusherComponent.field_F[2] = (byte)(param4 >> 8);
                       this.field_c.seek((byte) 36, (long)(520 * var7_int));
-                      this.field_c.a(StaticCrusherComponent.field_F, 0, (byte) -17, 10);
+                      this.field_c.write(StaticCrusherComponent.field_F, 0, (byte) -17, 10);
                       var11 = param1 - var8;
                       if (var11 > 510) {
                         var11 = 510;
                       }
-                      this.field_c.a(param2, var8, (byte) -17, var11);
+                      this.field_c.write(param2, var8, (byte) -17, var11);
                       var8 = var8 + var11;
                     } else {
                       StaticCrusherComponent.field_F[4] = (byte)(var10 >> 16);
@@ -334,12 +334,12 @@ final class SectorCacheStore {
                       StaticCrusherComponent.field_F[1] = (byte)param4;
                       StaticCrusherComponent.field_F[7] = (byte)this.field_d;
                       this.field_c.seek((byte) -109, (long)(var7_int * 520));
-                      this.field_c.a(StaticCrusherComponent.field_F, 0, (byte) -17, 8);
+                      this.field_c.write(StaticCrusherComponent.field_F, 0, (byte) -17, 8);
                       var11 = param1 - var8;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_c.a(param2, var8, (byte) -17, var11);
+                      this.field_c.write(param2, var8, (byte) -17, var11);
                       var8 = var8 + var11;
                     }
                     var9++;
@@ -365,7 +365,7 @@ final class SectorCacheStore {
             } else {
               stackIn_71_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -388,7 +388,7 @@ final class SectorCacheStore {
           ql.field_k.writeShort(-1477662136, param0.getTicksSinceReset((byte) 107));
           int var3_int = 79 / ((param1 - 9) / 53);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ppa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ppa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -406,7 +406,7 @@ final class SectorCacheStore {
           this.field_b = param2;
           this.field_e = param3;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ppa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ppa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

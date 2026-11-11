@@ -14,7 +14,7 @@ final class rg extends SingleChildWidget {
           this.child = param0;
           this.field_y = 256;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class rg extends SingleChildWidget {
         OpenGlSceneLight.field_q[10] = pfa.field_a;
         OpenGlSceneLight.field_q[1] = StandingsPhase.field_s;
         OpenGlSceneLight.field_q[21] = MiscItemBehaviour.field_t;
-        OpenGlSceneLight.field_q[11] = oia.field_e;
+        OpenGlSceneLight.field_q[11] = PitEdgePiece.field_e;
         OpenGlSceneLight.field_q[20] = wq.field_d;
         OpenGlSceneLight.field_q[26] = wg.field_m[0];
         OpenGlSceneLight.field_q[38] = RangeOperator.field_n;
@@ -148,7 +148,7 @@ final class rg extends SingleChildWidget {
           tk.field_a[8] = gca.skeletonDeathMessages;
           tk.field_a[14] = CourseLayoutFactory.boulderDeathMessages;
           tk.field_a[10] = hg.bladeDeathMessages;
-          tk.field_a[3] = nta.crushDeathMessages;
+          tk.field_a[3] = MonsterRemains.crushDeathMessages;
           tk.field_a[11] = jr.gunshotDeathMessages;
           tk.field_a[2] = dta.skipRoomMessages;
           tk.field_a[0] = kla.unknownDeathMessages;
@@ -162,7 +162,7 @@ final class rg extends SingleChildWidget {
           tk.field_a[7] = fpa.snakeDeathMessages;
           tk.field_a[4] = TurbulenceNoise3D.fallingObjectDeathMessages;
           IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
-          Effect.field_h[0] = new String[]{daa.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
+          Effect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
           IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, dka.field_c};
           Effect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, ne.field_e};
           IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, AnimationSequence.field_a};
@@ -200,7 +200,7 @@ final class rg extends SingleChildWidget {
         tk.field_a[8] = gca.skeletonDeathMessages;
         tk.field_a[14] = CourseLayoutFactory.boulderDeathMessages;
         tk.field_a[10] = hg.bladeDeathMessages;
-        tk.field_a[3] = nta.crushDeathMessages;
+        tk.field_a[3] = MonsterRemains.crushDeathMessages;
         tk.field_a[11] = jr.gunshotDeathMessages;
         tk.field_a[2] = dta.skipRoomMessages;
         tk.field_a[0] = kla.unknownDeathMessages;
@@ -214,7 +214,7 @@ final class rg extends SingleChildWidget {
         tk.field_a[7] = fpa.snakeDeathMessages;
         tk.field_a[4] = TurbulenceNoise3D.fallingObjectDeathMessages;
         IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
-        Effect.field_h[0] = new String[]{daa.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
+        Effect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
         IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, dka.field_c};
         Effect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, ne.field_e};
         IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, AnimationSequence.field_a};
@@ -255,7 +255,7 @@ final class rg extends SingleChildWidget {
         }
         if (this.field_y != 256) {
           var6 = new Sprite(this.child.field_m, this.child.field_p);
-          nm.a(var6, (byte) 110);
+          nm.setRasterTarget(var6, (byte) 110);
           this.child.renderLayer(param2, 0, 0, param3);
           pfa.a(1);
           var6.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_y);

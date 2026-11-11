@@ -856,11 +856,11 @@ final class gja extends ka {
                 this.field_U[var16] = this.field_v;
               }
               TimeSwitchBehaviour.field_q = null;
-              this.field_kb = FullscreenConfirmationDialog.a(this.field_kb, 119, this.field_fb);
-              this.field_G = FullscreenConfirmationDialog.a(this.field_G, 112, this.field_fb);
-              this.field_lb = FullscreenConfirmationDialog.a(this.field_lb, 114, this.field_fb);
-              this.field_m = FullscreenConfirmationDialog.a(this.field_m, 114, this.field_fb);
-              this.field_p = FullscreenConfirmationDialog.a(this.field_p, 123, this.field_fb);
+              this.field_kb = FullscreenConfirmationDialog.copyOf(this.field_kb, 119, this.field_fb);
+              this.field_G = FullscreenConfirmationDialog.copyOf(this.field_G, 112, this.field_fb);
+              this.field_lb = FullscreenConfirmationDialog.copyOf(this.field_lb, 114, this.field_fb);
+              this.field_m = FullscreenConfirmationDialog.copyOf(this.field_m, 114, this.field_fb);
+              this.field_p = FullscreenConfirmationDialog.copyOf(this.field_p, 123, this.field_fb);
               this.field_w = kaa.copyByteRange(0, this.field_w, this.field_fb);
               this.field_eb = fba.a(1, this.field_eb, this.field_fb);
               this.field_t = fba.a(1, this.field_t, this.field_fb);
@@ -967,7 +967,7 @@ final class gja extends ka {
           } else {
             stackIn_397_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_392_0), ((StringBuilder) (Object) stackIn_396_1).append(stackIn_397_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_392_0), ((StringBuilder) (Object) stackIn_396_1).append(stackIn_397_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -998,7 +998,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "gja.NA()");
+          throw tba.wrapException((Throwable) ((Object) var1), "gja.NA()");
         }
     }
 
@@ -1024,7 +1024,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "gja.R(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.R(" + param0 + ')');
         }
     }
 
@@ -1104,7 +1104,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var5), "gja.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) var5), "gja.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1245,7 +1245,7 @@ final class gja extends ka {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1302,7 +1302,7 @@ final class gja extends ka {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1397,7 +1397,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "gja.IA(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "gja.IA(" + param0 + ')');
         }
     }
 
@@ -1420,7 +1420,7 @@ final class gja extends ka {
                 stackIn_2_0 = (byte[]) null;
                 return stackIn_2_0;
               }
-              ControllerLocomotor.a(var3, 107, param0, param1);
+              ControllerLocomotor.readFileInto(var3, 107, param0, param1);
               stackIn_4_0 = var3;
               return stackIn_4_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -1439,7 +1439,7 @@ final class gja extends ka {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1521,7 +1521,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "gja.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "gja.B(" + param0 + ')');
         }
     }
 
@@ -1749,7 +1749,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "gja.GA(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "gja.GA(" + param0 + ')');
         }
     }
 
@@ -1767,7 +1767,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "gja.P(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "gja.P(" + param0 + ')');
         }
     }
 
@@ -1827,7 +1827,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "gja.T(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "gja.T(" + param0 + ')');
         }
     }
 
@@ -1860,7 +1860,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "gja.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1887,7 +1887,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "gja.wa()");
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.wa()");
         }
     }
 
@@ -2113,7 +2113,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "gja.L(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "gja.L(" + param0 + ')');
         }
     }
 
@@ -2187,7 +2187,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "gja.D(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.D(" + param0 + ')');
         }
     }
 
@@ -2205,7 +2205,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "gja.HA(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "gja.HA(" + param0 + ')');
         }
     }
 
@@ -2238,7 +2238,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "gja.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2270,7 +2270,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "gja.FA(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.FA(" + param0 + ')');
         }
     }
 
@@ -2932,7 +2932,7 @@ final class gja extends ka {
           } else {
             stackIn_319_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_314_0), ((StringBuilder) (Object) stackIn_318_1).append(stackIn_319_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_314_0), ((StringBuilder) (Object) stackIn_318_1).append(stackIn_319_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -3572,7 +3572,7 @@ final class gja extends ka {
           } else {
             stackIn_293_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_292_0), ((StringBuilder) (Object) stackIn_292_1).append(stackIn_293_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_292_0), ((StringBuilder) (Object) stackIn_292_1).append(stackIn_293_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -3589,7 +3589,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "gja.J(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.J(" + param0 + ')');
         }
     }
 
@@ -3619,7 +3619,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "gja.F(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "gja.F(" + param0 + ')');
         }
     }
 
@@ -4535,7 +4535,7 @@ final class gja extends ka {
           } else {
             stackIn_426_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_421_0), ((StringBuilder) (Object) stackIn_425_1).append(stackIn_426_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_421_0), ((StringBuilder) (Object) stackIn_425_1).append(stackIn_426_2).append(')').toString());
         }
     }
 
@@ -4607,7 +4607,7 @@ final class gja extends ka {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -4692,7 +4692,7 @@ final class gja extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4_ref), "gja.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4_ref), "gja.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4849,7 +4849,7 @@ final class gja extends ka {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -4905,7 +4905,7 @@ final class gja extends ka {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

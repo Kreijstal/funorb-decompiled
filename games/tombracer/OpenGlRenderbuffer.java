@@ -14,7 +14,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
     private int field_r;
     int field_n;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -48) {
           OpenGlRenderbuffer.f(-96);
           field_u = null;
@@ -33,7 +33,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
         int var2 = 57 % ((11 - param0) / 45);
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isLeapYear(int param0, int param1) {
         if (0 > param1) {
           return (param1 + 1) % 4 == 0 ? true : false;
         }
@@ -98,7 +98,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
           jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_t, this.field_n, this.field_l);
           this.field_o = this.field_n * (this.field_l * this.field_p.a(this.field_t, (byte) -86));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "kba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "kba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
           jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, this.field_t, this.field_n, this.field_l);
           this.field_o = this.field_n * this.field_l * this.field_p.a(this.field_t, (byte) -64);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "kba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "kba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

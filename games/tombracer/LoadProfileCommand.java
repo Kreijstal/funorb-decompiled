@@ -13,7 +13,7 @@ final class LoadProfileCommand extends ConsoleMethod {
         super(param0, param1, param2);
     }
 
-    final static Sprite a(int param0, int param1, int param2) {
+    final static Sprite createSolidSprite(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         Sprite var6 = new Sprite(param2, param2);
@@ -25,7 +25,7 @@ final class LoadProfileCommand extends ConsoleMethod {
           }
           return var3;
         }
-        LoadProfileCommand.a(44, 69, 69);
+        LoadProfileCommand.createSolidSprite(44, 69, 69);
         for (var4Lifetime1 = 0; var3.pixels.length > var4Lifetime1; var4Lifetime1++) {
           var6.pixels[var4Lifetime1] = param0;
         }
@@ -65,7 +65,7 @@ final class LoadProfileCommand extends ConsoleMethod {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -78,7 +78,7 @@ final class BitPacketBuffer extends PacketBuffer {
             this.readBits((byte) -116, 2);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "kh.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "kh.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class BitPacketBuffer extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class BitPacketBuffer extends PacketBuffer {
                 baa.field_d.a(0, new ei[]{(ei) ((Object) vea.field_c)});
               } else {
                 if (FontMetrics.field_f == PitModel.field_s) {
-                  baa.field_d.a(0, new ei[]{(ei) ((Object) daa.field_d)});
+                  baa.field_d.a(0, new ei[]{(ei) ((Object) CharacterSelection.field_d)});
                 }
               }
             } else {
@@ -334,7 +334,7 @@ final class BitPacketBuffer extends PacketBuffer {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

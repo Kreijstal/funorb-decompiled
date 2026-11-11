@@ -13,7 +13,7 @@ final class FacePlayerLocomotor extends Locomotor {
           }
           super.attachToTrap(89, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pt.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pt.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class FacePlayerLocomotor extends Locomotor {
         this.trap.rotateBy(false, var7);
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2) {
+    final static byte[] copyOf(byte[] param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -116,7 +116,7 @@ final class FacePlayerLocomotor extends Locomotor {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class FacePlayerLocomotor extends Locomotor {
         this.field_o = param0;
     }
 
-    final static void b(int param0, byte param1) {
+    final static void applyLanguage(int param0, byte param1) {
         if (param1 == 65) {
           ObjectList.field_b = GameAssetLoader.connectingTranslations[param0];
           hra.field_c = TrackMountComponent.waitingForTextTranslations[param0];
@@ -158,7 +158,7 @@ final class FacePlayerLocomotor extends Locomotor {
         try {
           this.field_o = 16;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class FacePlayerLocomotor extends Locomotor {
         try {
           this.field_o = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class FacePlayerLocomotor extends Locomotor {
             FacePlayerLocomotor.a(-12, 90, -68, 66);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pt.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pt.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

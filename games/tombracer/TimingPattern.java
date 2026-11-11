@@ -41,7 +41,7 @@ final class TimingPattern {
           }
           param1.writeBits((byte) -36, this.phaseOffset, 12);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class TimingPattern {
         if (param0 != -94) {
           TimingPattern.a(44);
         }
-        return GameApplet.a(param0 + 104, this.durations);
+        return GameApplet.sum(param0 + 104, this.durations);
     }
 
     final void setPhaseOffset(boolean param0, int param1) {
@@ -131,7 +131,7 @@ final class TimingPattern {
           this.stepIndex = 38;
         }
         if (param1 > 0) {
-          param1 = param1 % GameApplet.a(10, this.durations);
+          param1 = param1 % GameApplet.sum(10, this.durations);
           var3 = 0;
           while (param1 > 0) {
             this.tick(0);
@@ -182,7 +182,7 @@ final class TimingPattern {
           this.constant = 0 == this.getTotalDuration((byte) -94) ? true : false;
           this.setPhaseOffset(false, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class TimingPattern {
           }
           this.setPhaseOffset(false, this.phaseOffset);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -239,7 +239,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             return;
           }
           var16 = (int)((float)var16 * (float)var12 / (float)var10);
-          var25 = za.$cfr$intArgs$a$c604db63f465(0, 92, java.lang.reflect.Array.getLength(var23) - 1, java.lang.reflect.Array.getLength(var23) - (int)(var13 * (float)(-1 + java.lang.reflect.Array.getLength(var23))));
+          var25 = za.clampValue(0, 92, java.lang.reflect.Array.getLength(var23) - 1, java.lang.reflect.Array.getLength(var23) - (int)(var13 * (float)(-1 + java.lang.reflect.Array.getLength(var23))));
           var26Lifetime1 = Math.min(var25, java.lang.reflect.Array.getLength(var23) - 1);
           PlayPhase.a(var8, ((int[]) (var23))[var26Lifetime1], (byte) 123, 128, var16, var9);
           return;
@@ -259,7 +259,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_141_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_136_0), ((StringBuilder) (Object) stackIn_140_1).append(stackIn_141_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_136_0), ((StringBuilder) (Object) stackIn_140_1).append(stackIn_141_2).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "gva.J(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "gva.J(" + param0 + ')');
         }
     }
 
@@ -610,7 +610,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_129_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_120_0), ((StringBuilder) (Object) stackIn_128_1).append(stackIn_129_2).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_120_0), ((StringBuilder) (Object) stackIn_128_1).append(stackIn_129_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -658,7 +658,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -685,7 +685,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -714,7 +714,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -772,7 +772,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -826,7 +826,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -884,7 +884,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -83,10 +83,10 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
             this.field_m = false;
             return;
           }
-          this.field_e = CharacterChoice.a((byte) -70, param0, param1.getFileByName("gl", (byte) 122, "uw_ground_unlit"), 34336);
-          this.field_l = CharacterChoice.a((byte) -70, param0, param1.getFileByName("gl", (byte) 126, "uw_ground_lit"), 34336);
-          this.field_r = CharacterChoice.a((byte) -70, param0, param1.getFileByName("gl", (byte) 121, "uw_model_unlit"), 34336);
-          this.field_o = CharacterChoice.a((byte) -70, param0, param1.getFileByName("gl", (byte) 115, "uw_model_lit"), 34336);
+          this.field_e = CharacterChoice.compileAssemblyProgram((byte) -70, param0, param1.getFileByName("gl", (byte) 122, "uw_ground_unlit"), 34336);
+          this.field_l = CharacterChoice.compileAssemblyProgram((byte) -70, param0, param1.getFileByName("gl", (byte) 126, "uw_ground_lit"), 34336);
+          this.field_r = CharacterChoice.compileAssemblyProgram((byte) -70, param0, param1.getFileByName("gl", (byte) 121, "uw_model_unlit"), 34336);
+          this.field_o = CharacterChoice.compileAssemblyProgram((byte) -70, param0, param1.getFileByName("gl", (byte) 115, "uw_model_lit"), 34336);
           stackIn_6_0 = (this.field_r == null) ? 0 : 1;
           if (this.field_e == null) {
             stackIn_9_1 = 0;
@@ -128,7 +128,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -248,7 +248,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

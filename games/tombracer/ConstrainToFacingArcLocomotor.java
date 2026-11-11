@@ -27,7 +27,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         int var2 = 6 % ((param0 + 69) / 42);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_t = null;
         field_v = null;
@@ -77,7 +77,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
           }
           param0.writeBits((byte) -3, ResourceArchive.a((byte) -104, this.field_u, 8192, 8), 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "oqa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "oqa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         try {
           this.field_u = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "oqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "oqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

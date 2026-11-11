@@ -19,7 +19,7 @@ final class BufferedCacheFile {
     private long field_j;
     private long field_l;
 
-    private final void a(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -69,14 +69,14 @@ final class BufferedCacheFile {
     }
 
     final void b(byte param0) throws IOException {
-        this.a((byte) -16);
+        this.flush((byte) -16);
         this.field_b.b((byte) -127);
         if (param0 >= -14) {
           BufferedCacheFile.releaseStatics(false);
         }
     }
 
-    private final void a(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2;
         int var3;
         int var4;
@@ -107,9 +107,9 @@ final class BufferedCacheFile {
 
     final void a(byte[] param0, int param1) throws IOException {
         try {
-          this.a(param0, param0.length, param1, (byte) -112);
+          this.readFully(param0, param0.length, param1, (byte) -112);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ph.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ph.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final void a(byte[] param0, int param1, byte param2, int param3) throws IOException {
+    final void write(byte[] param0, int param1, byte param2, int param3) throws IOException {
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
@@ -150,10 +150,10 @@ final class BufferedCacheFile {
             if (-1L != this.field_l) {
               if (this.field_g >= this.field_l) {
                 if (((long)this.field_f + this.field_l) < this.field_g) {
-                  this.a((byte) -16);
+                  this.flush((byte) -16);
                 }
               } else {
-                this.a((byte) -16);
+                this.flush((byte) -16);
               }
             }
             if (this.field_l != -1L &&
@@ -164,7 +164,7 @@ final class BufferedCacheFile {
               param1 = param1 + var5_int;
               param3 = param3 - var5_int;
               this.field_f = this.field_e.length;
-              this.a((byte) -16);
+              this.flush((byte) -16);
             }
             if (this.field_e.length >= param3) {
               if (param3 <= 0) {
@@ -235,11 +235,11 @@ final class BufferedCacheFile {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, byte param3) throws IOException {
+    final void readFully(byte[] param0, int param1, int param2, byte param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
@@ -309,7 +309,7 @@ final class BufferedCacheFile {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param1 > 0)) {
-              this.a(-1);
+              this.fillReadBuffer(-1);
               var9_intLifetime1Lifetime1 = param1;
               if (this.field_a < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_a;
@@ -384,7 +384,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class BufferedCacheFile {
           this.field_e = new byte[param2];
           this.field_h = new byte[param1];
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

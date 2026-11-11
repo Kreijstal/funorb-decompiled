@@ -38,7 +38,7 @@ final class CoinBagItemComponent extends ItemComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   decompiledSharedTail0 = (var19 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  var10_ref_String = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(84, ld.field_f, new String[]{Integer.toString(ValidatedTextInputWidget.field_K)});
+                  var10_ref_String = LegacyOpenGlFlowingWaterEffect.formatText(84, ld.field_f, new String[]{Integer.toString(ValidatedTextInputWidget.field_K)});
                 }
                 if ((lh.field_a & 16) == 0 &&
                   !tla.field_e) {
@@ -291,7 +291,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   if (stackIn_80_0 == 0) {
                     var13_ref_String = GasTrapComponent.field_J;
                     if (var12 == 0) {
-                      var14_ref_String = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, field_I, new String[]{(String) (var11_ref)});
+                      var14_ref_String = LegacyOpenGlFlowingWaterEffect.formatText(82, field_I, new String[]{(String) (var11_ref)});
                       if (var19 != 0) {
                         var14_ref_String = MatchProtocol.field_j + (String) (var11_ref);
                       }
@@ -301,7 +301,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   } else {
                     var13_ref_String = LegacyOpenGlTexture3D.field_m;
                     if (var12 == 0) {
-                      var14_ref_String = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(102, bl.field_b, new String[]{(String) (var11_ref)});
+                      var14_ref_String = LegacyOpenGlFlowingWaterEffect.formatText(102, bl.field_b, new String[]{(String) (var11_ref)});
                       if (var19 != 0) {
                         var14_ref_String = CharacterSelectPhase.field_w + (String) (var11_ref);
                       }
@@ -424,7 +424,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   hw.field_a.field_X = false;
                   if (hw.field_a.field_pb) {
                     if (rm.field_e.field_a.field_wb != 0) {
-                      ArchiveNetworkClient.field_b = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(126, GridWidgetContainer.field_A, new String[]{BitPacketBuffer.field_p});
+                      ArchiveNetworkClient.field_b = LegacyOpenGlFlowingWaterEffect.formatText(126, GridWidgetContainer.field_A, new String[]{BitPacketBuffer.field_p});
                       if (var19 != 0) {
                         ArchiveNetworkClient.field_b = BitPacketBuffer.field_o;
                       }
@@ -436,16 +436,16 @@ final class CoinBagItemComponent extends ItemComponent {
               }
               if (var19 != 0) {
                 var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
-                StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(113, UiComponent.field_nb, new String[]{var9_ref_String}).toUpperCase();
+                StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.formatText(113, UiComponent.field_nb, new String[]{var9_ref_String}).toUpperCase();
                 MessageOverlay.field_t.setBounds(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
-                MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
+                MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(107, TextLayout.field_d, new String[]{var9_ref_String});
                 var8 = MessageOverlay.field_t;
               }
             } else {
               var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
-              StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(113, UiComponent.field_nb, new String[]{var9_ref_String}).toUpperCase();
+              StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.formatText(113, UiComponent.field_nb, new String[]{var9_ref_String}).toUpperCase();
               MessageOverlay.field_t.setBounds(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
-              MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
+              MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(107, TextLayout.field_d, new String[]{var9_ref_String});
               var8 = MessageOverlay.field_t;
             }
             if (TileRenderable.field_d != 0L) {
@@ -454,9 +454,9 @@ final class CoinBagItemComponent extends ItemComponent {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(97, DelegatingCanvas.field_b, new String[]{Integer.toString(var9)});
+              var8.field_r = LegacyOpenGlFlowingWaterEffect.formatText(97, DelegatingCanvas.field_b, new String[]{Integer.toString(var9)});
             }
-            cea.field_a.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(106, TextInputWidget.field_A, new String[]{Integer.toString(C2SChooseRewardPacket.field_a.field_Mb), Integer.toString(C2SChooseRewardPacket.field_a.field_Jb)});
+            cea.field_a.field_r = LegacyOpenGlFlowingWaterEffect.formatText(106, TextInputWidget.field_A, new String[]{Integer.toString(C2SChooseRewardPacket.field_a.field_Mb), Integer.toString(C2SChooseRewardPacket.field_a.field_Jb)});
           }
           stackIn_168_0 = nra.field_c;
           stackIn_168_1 = -98;
@@ -493,11 +493,11 @@ final class CoinBagItemComponent extends ItemComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var5), "aja.SB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) var5), "aja.SB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void A(int param0) {
+    public static void releaseStatics(int param0) {
         field_I = null;
         if (param0 != 32076) {
           CoinBagItemComponent.a(false, 126, -63, false, true);

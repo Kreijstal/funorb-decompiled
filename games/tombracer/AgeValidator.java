@@ -14,13 +14,13 @@ final class AgeValidator extends TextFieldValidator {
         if (param1) {
           var3 = param2 - param0 >> 16;
           var4 = 128 + 128 * var3 / 256;
-          var4 = za.$cfr$intArgs$a$c604db63f465(0, 40, 255, var4);
+          var4 = za.clampValue(0, 40, 255, var4);
           return var4;
         }
         field_j = -65;
         var3Lifetime1 = param2 - param0 >> 16;
         var4Lifetime1 = 128 + 128 * var3Lifetime1 / 256;
-        var4Lifetime1 = za.$cfr$intArgs$a$c604db63f465(0, 40, 255, var4Lifetime1);
+        var4Lifetime1 = za.clampValue(0, 40, 255, var4Lifetime1);
         return var4Lifetime1;
     }
 
@@ -64,7 +64,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -101,11 +101,11 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_k = null;
         if (param0 != 501386288) {

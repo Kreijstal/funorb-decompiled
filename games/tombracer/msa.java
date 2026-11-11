@@ -42,7 +42,7 @@ final class msa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "msa.A(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "msa.A(" + param0 + ',' + param1 + ')');
         }
     }
 

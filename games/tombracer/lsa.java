@@ -7,7 +7,7 @@ final class lsa {
     static int field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 13) {
           field_a = 78;
           field_c = null;

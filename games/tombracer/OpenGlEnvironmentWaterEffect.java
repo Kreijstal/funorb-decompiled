@@ -69,7 +69,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 24595) {
-            OpenGlEnvironmentWaterEffect.a(93, '￹');
+            OpenGlEnvironmentWaterEffect.isAsciiDigit(93, '￹');
           }
           if (this.field_h) {
             return;
@@ -186,7 +186,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -196,9 +196,9 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAsciiDigit(int param0, char param1) {
         if (param0 < 111) {
-          OpenGlEnvironmentWaterEffect.a(-40, '￫');
+          OpenGlEnvironmentWaterEffect.isAsciiDigit(-40, '￫');
           if (param1 < 48) {
             return false;
           }

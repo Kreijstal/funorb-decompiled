@@ -56,7 +56,7 @@ final class gga extends ofa implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class gga extends ofa implements ButtonListener {
         if (TimeSwitchBehaviour.field_r > 200) {
           var5 = (250 - TimeSwitchBehaviour.field_r << 8) / 50;
         }
-        nm.a(vha.field_a, (byte) 108);
+        nm.setRasterTarget(vha.field_a, (byte) 108);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
         RenderScene.a(false);
@@ -147,7 +147,7 @@ final class gga extends ofa implements ButtonListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class gga extends ofa implements ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

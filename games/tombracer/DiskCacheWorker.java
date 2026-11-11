@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DiskCacheWorker implements Runnable {
-    private vj field_d;
+    private SecondaryLinkQueue field_d;
     static int field_c;
     int field_b;
     private Thread field_a;
@@ -23,7 +23,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.field_e) {
             var2 = this.field_d;
             synchronized (var2) {
-              var7 = (DiskArchiveRequest) (this.field_d.c((byte) 116));
+              var7 = (DiskArchiveRequest) (this.field_d.removeFirst((byte) 116));
               if (var7 == null) {
                 try {
                   this.field_d.wait();
@@ -125,7 +125,7 @@ final class DiskCacheWorker implements Runnable {
           var4.field_q = 1;
           var5 = this.field_d;
           synchronized (var5) {
-            var6 = (DiskArchiveRequest) (this.field_d.b((byte) 38));
+            var6 = (DiskArchiveRequest) (this.field_d.first((byte) 38));
             while (var6 != null) {
               if ((long)param2 == var6.secondaryKey &&
                 var6.field_o == param1 &&
@@ -135,7 +135,7 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_9_0 = var4;
                 return stackIn_9_0;
               }
-              var6 = (DiskArchiveRequest) (this.field_d.c(28));
+              var6 = (DiskArchiveRequest) (this.field_d.next(28));
             }
           }
           if (param0 != 15871) {
@@ -156,7 +156,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class DiskCacheWorker implements Runnable {
 
     private final void a(int param0, DiskArchiveRequest param1) {
         synchronized (this.field_d) {
-          this.field_d.a(param1, (byte) -105);
+          this.field_d.addLast(param1, (byte) -105);
           if (param0 >= -27) {
             SectorCacheStore var5 = (SectorCacheStore) null;
             this.queueRead((byte) -87, 82, (SectorCacheStore) null);
@@ -263,13 +263,13 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     DiskCacheWorker(PlatformTaskDispatcher param0) {
         AsyncRequest var2 = null;
-        this.field_d = new vj();
+        this.field_d = new SecondaryLinkQueue();
         this.field_b = 0;
         this.field_e = false;
         try {
@@ -282,7 +282,7 @@ final class DiskCacheWorker implements Runnable {
           }
           this.field_a = (Thread) (var2.field_f);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ss.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ss.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

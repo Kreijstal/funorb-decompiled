@@ -38,7 +38,7 @@ final class dra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1_ref), "dra.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1_ref), "dra.B(" + param0 + ')');
         }
     }
 

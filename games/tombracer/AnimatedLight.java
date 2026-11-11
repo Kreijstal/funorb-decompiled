@@ -138,7 +138,7 @@ final class AnimatedLight {
             AnimatedLight.a(-83);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "aga.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "aga.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class AnimatedLight {
         this.light.setIntensity((byte) 105, (float)((var4 * this.field_h >> 11) + this.field_g) / 2048.0f);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -113) {
           AnimatedLight.a(111);
         }
@@ -252,7 +252,7 @@ final class AnimatedLight {
           }
           this.setMode(param7, (byte) -42);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "aga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "aga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

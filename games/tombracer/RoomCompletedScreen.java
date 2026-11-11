@@ -31,14 +31,14 @@ final class RoomCompletedScreen extends MatchOverlay {
           var4 = 240;
           var5 = this.field_g.simulations[0].rooms[0];
           var4 += 20;
-          MembersUpsellMenu.a("Total Time: " + dea.a(this.field_g.simulations[0].tick, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
+          MembersUpsellMenu.a("Total Time: " + dea.formatTime(this.field_g.simulations[0].tick, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
           var4 += 20;
           MembersUpsellMenu.a("Deaths: " + var5.getDeathCount(0), var2, kn.field_p, -1, var4, 320, 0);
           return;
         }
     }
 
-    final static int a(int param0, int param1, boolean param2, int param3, int param4) {
+    final static int overlapLength(int param0, int param1, boolean param2, int param3, int param4) {
         if (param2) {
           return MidiVoiceMixer.min(param1, param0, -81) - RandomBrickOperator.max(param3, param4, 2);
         }
@@ -124,7 +124,7 @@ final class RoomCompletedScreen extends MatchOverlay {
             var6 = var6 | 16;
           }
           ql.field_k.writeByte(var6, 0);
-          var7 = FontMetrics.a(0, di.a(46));
+          var7 = FontMetrics.readSettingsCookie(0, di.a(46));
           if (var7 == null) {
             var7 = "";
           }
@@ -146,7 +146,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 

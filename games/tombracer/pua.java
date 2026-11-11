@@ -38,10 +38,10 @@ final class pua extends hq {
           var7_int = rp.clamp(hc.field_h, -16226, gca.field_d, param4 + param2);
           var8 = rp.clamp(hc.field_h, -16226, gca.field_d, param3 - param4);
           for (var15 = var11; var7_int > var15; var15++) {
-            nra.a((byte) -55, param5, var14, vaa.field_a[var15], var13);
+            nra.fillRange((byte) -55, param5, var14, vaa.field_a[var15], var13);
           }
           for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
-            nra.a((byte) -55, param5, var14, vaa.field_a[var15Lifetime1], var13);
+            nra.fillRange((byte) -55, param5, var14, vaa.field_a[var15Lifetime1], var13);
           }
           var9 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param4 + param1);
           var10 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param4 + param6);
@@ -50,14 +50,14 @@ final class pua extends hq {
           }
           for (var15Lifetime2 = var7_int; var15Lifetime2 <= var8; var15Lifetime2++) {
             var21 = vaa.field_a[var15Lifetime2];
-            nra.a((byte) -55, param5, var9, var21, var13);
-            nra.a((byte) -55, param5, var14, var21, var10);
+            nra.fillRange((byte) -55, param5, var9, var21, var13);
+            nra.fillRange((byte) -55, param5, var14, var21, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var7), "pua.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) var7), "pua.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

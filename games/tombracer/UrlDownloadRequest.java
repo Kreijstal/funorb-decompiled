@@ -30,7 +30,7 @@ final class UrlDownloadRequest implements Runnable {
           ql.field_k.writeShort(-1477662136, param1.getId((byte) -82));
           ql.field_k.writeShort(-1477662136, param1.getTicksSinceReset((byte) 107));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "caa.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "caa.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -191,13 +191,13 @@ final class UrlDownloadRequest implements Runnable {
             field_i = 59;
           }
           for (var6_int = param3; param4 >= var6_int; var6_int++) {
-            nra.a((byte) -55, param0, param1, vaa.field_a[var6_int], param2);
+            nra.fillRange((byte) -55, param0, param1, vaa.field_a[var6_int], param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var6), "caa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) var6), "caa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class UrlDownloadRequest implements Runnable {
           this.field_g = param0;
           this.field_h = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "caa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "caa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

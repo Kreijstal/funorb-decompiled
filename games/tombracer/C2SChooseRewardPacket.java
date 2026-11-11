@@ -102,7 +102,7 @@ final class C2SChooseRewardPacket implements GamePacket {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class C2SChooseRewardPacket implements GamePacket {
           this.field_b = param0.readBits((byte) 44, 2);
           param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uu.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uu.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class C2SChooseRewardPacket implements GamePacket {
         return TileGridCell.hasFlag16(param1, 113, param0) & FollowCamera.hasFlag2048(-1, param0, param1);
     }
 
-    final static void b(int param0, int param1) {
+    final static void notifyPageResizing(int param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
@@ -163,7 +163,7 @@ final class C2SChooseRewardPacket implements GamePacket {
           param1.writeBits((byte) -125, this.field_b, 2);
           param1.endBitWrite(param0 ^ -1826190742);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uu.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uu.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class C2SChooseRewardPacket implements GamePacket {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

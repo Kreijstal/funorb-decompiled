@@ -19,7 +19,7 @@ final class CoinItemComponent extends ItemComponent {
           qpa.a(440, MirrorComponent.field_H, 1, 40, 440, 125, 290);
           qpa.a(275, S2CPlayerSyncPacket.field_d, 3, 40, 440, 126, 200);
           qpa.a(275, PathMoverComponent.field_F, 5, 40, 440, 124, 200);
-          qpa.a(275, vj.field_a, 6, 40, 440, 125, 200);
+          qpa.a(275, SecondaryLinkQueue.field_a, 6, 40, 440, 125, 200);
           qpa.a(480, MatchingTextValidator.field_j, 2, 40, 440, 124, 200);
           qpa.a(185, ll.field_g, 4, 40, 440, 126, 200);
           qpa.a(185, hh.field_c, 12, 40, 440, 124, 200);
@@ -32,7 +32,7 @@ final class CoinItemComponent extends ItemComponent {
           param0.stringWidth(qf.field_l);
           param0.stringWidth(DamageableBehaviour.field_x);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "bla.SB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "bla.SB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class CoinItemComponent extends ItemComponent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

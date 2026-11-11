@@ -23,7 +23,7 @@ final class ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var9), "ck.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw tba.wrapException((Throwable) ((Object) var9), "ck.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -97,10 +97,10 @@ final class ck {
           efa.field_w = param13;
           SafeZoneBehaviour.field_u = param14;
           RasterizerOperator.field_m = param5;
-          SoundEventPlayer.field_f = BoulderComponent.a(param10, "lobby", 5, "gameprivacy");
-          wt.field_c = BoulderComponent.a(param10, "lobby", 5, "ratedgame");
-          InvisibleTouchSwitchComponent.field_K = BoulderComponent.a(param10, "lobby", 5, "opentome");
-          TileGridCell.field_k = BoulderComponent.a(param10, "lobby", 5, "allowspectators");
+          SoundEventPlayer.field_f = BoulderComponent.loadSpritesByName(param10, "lobby", 5, "gameprivacy");
+          wt.field_c = BoulderComponent.loadSpritesByName(param10, "lobby", 5, "ratedgame");
+          InvisibleTouchSwitchComponent.field_K = BoulderComponent.loadSpritesByName(param10, "lobby", 5, "opentome");
+          TileGridCell.field_k = BoulderComponent.loadSpritesByName(param10, "lobby", 5, "allowspectators");
           SocketArchiveNetworkClient.field_w = new String[5];
           SocketArchiveNetworkClient.field_w[0] = HardwareOpenGlToolkit.field_cd;
           SocketArchiveNetworkClient.field_w[2] = EmbossOperator.field_q;
@@ -425,7 +425,7 @@ final class ck {
           } else {
             stackIn_176_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_135_0), ((StringBuilder) (Object) stackIn_175_1).append(stackIn_176_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_135_0), ((StringBuilder) (Object) stackIn_175_1).append(stackIn_176_2).append(')').toString());
         }
     }
 
@@ -574,7 +574,7 @@ final class ck {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -592,7 +592,7 @@ final class ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "ck.C(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "ck.C(" + param0 + ')');
         }
     }
 

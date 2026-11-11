@@ -12,7 +12,7 @@ final class rc {
         int var10 = 0;
         int var11 = 0;
         try {
-          DateInputWidget.a(param6, -1, param2.field_vb, param2.field_yb, param3 - 11542, (int[]) null, param2, -1, param2.field_wb);
+          DateInputWidget.openPlayerContextMenu(param6, -1, param2.field_vb, param2.field_yb, param3 - 11542, (int[]) null, param2, -1, param2.field_wb);
           hka.field_b.a((byte) -22, true);
           hka.field_b.addSocialActions((int[]) null, 0, 19);
           if (param3 != -93) {
@@ -26,7 +26,7 @@ final class rc {
           var11 = param4;
           var12.field_f.openAt(var9, var11, -80, var10, var8);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -12,7 +12,7 @@ final class mf {
         super.finalize();
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           mf.a(-23);
         }
@@ -44,7 +44,7 @@ final class mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "mf.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "mf.B(" + param0 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class mf {
           this.field_b = param2;
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

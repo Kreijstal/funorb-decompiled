@@ -55,30 +55,30 @@ final class ura {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     final static Sprite[] createBeveledFrameSprites(int param0, int param1, boolean param2, int param3, int param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = LoadProfileCommand.a(param0, 48, param3);
+        Sprite dupTemp$0 = LoadProfileCommand.createSolidSprite(param0, 48, param3);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = LoadProfileCommand.a(param4, 110, param3);
+        Sprite dupTemp$1 = LoadProfileCommand.createSolidSprite(param4, 110, param3);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param1 != 0) {
-          var6[4] = LoadProfileCommand.a(param1, 112, 64);
+          var6[4] = LoadProfileCommand.createSolidSprite(param1, 112, 64);
         }
         if (!param2) {
           return var5;
         }
-        ura.a(true);
+        ura.releaseStatics(true);
         return var5;
     }
 
@@ -86,7 +86,7 @@ final class ura {
         throw new IllegalStateException();
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_b = null;
         if (param0) {

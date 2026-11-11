@@ -19,17 +19,17 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
         this.toolkit.setLightingSuppressed(-109, param0);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 > -103) {
-          LegacyOpenGlUnlitEffect.a(114, -12, 14, -11);
+          LegacyOpenGlUnlitEffect.getAnimationSequence(114, -12, 14, -11);
           field_d = null;
           return;
         }
         field_d = null;
     }
 
-    final static AnimationSequence a(int param0, int param1, int param2, int param3) {
+    final static AnimationSequence getAnimationSequence(int param0, int param1, int param2, int param3) {
         int var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -67,12 +67,12 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
     final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
         try {
           if (param1 != 32221) {
-            LegacyOpenGlUnlitEffect.c(66);
+            LegacyOpenGlUnlitEffect.releaseStatics(66);
           }
           this.toolkit.a(true, param2);
           this.toolkit.d(1, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "tva.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "tva.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

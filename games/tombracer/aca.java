@@ -8,17 +8,17 @@ final class aca extends IntrusiveNode {
     static String field_g;
     int field_f;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         field_g = null;
         field_h = null;
         if (param0) {
           ShellListener var2 = (ShellListener) null;
-          aca.a((ShellListener) null, 1);
+          aca.addShellListenerFirst((ShellListener) null, 1);
         }
     }
 
-    final static void a(ShellListener param0, int param1) {
+    final static void addShellListenerFirst(ShellListener param0, int param1) {
         try {
           kra.field_c.insertElementAt(param0, 0);
           if (param1 != 19711) {
@@ -26,7 +26,7 @@ final class aca extends IntrusiveNode {
             aca.a((ResourceArchive) null, 32, (ResourceArchive) null, (byte) -47, 55);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "aca.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "aca.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class aca extends IntrusiveNode {
           if (!GameApplet.a(false, param4, param1, param2)) {
             return null;
           }
-          stackIn_7_0 = RoomHeader.a(param0.a(false, param1, param4), (byte) 103);
+          stackIn_7_0 = RoomHeader.decodeBinaryFont(param0.a(false, param1, param4), (byte) 103);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class aca extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

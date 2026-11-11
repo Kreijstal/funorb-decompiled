@@ -48,7 +48,7 @@ final class TreasureValuesOverlay extends MatchOverlay {
             var12 = this.field_g.players[var10].getTotal(false);
             var13 = this.field_g.players[var10].j(false);
             var14 = var13 + var12;
-            MembersUpsellMenu.a(rka.a(1 + var9, 114) + "  " + this.field_i.getPlayerName(var10, false) + "  " + PrimMazeGenerator.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, kn.field_p, -1, var8 + var9 * var5, this.field_m, 0);
+            MembersUpsellMenu.a(rka.toOrdinal(1 + var9, 114) + "  " + this.field_i.getPlayerName(var10, false) + "  " + PrimMazeGenerator.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, kn.field_p, -1, var8 + var9 * var5, this.field_m, 0);
           }
         }
     }
@@ -202,7 +202,7 @@ final class TreasureValuesOverlay extends MatchOverlay {
           var6 = new gqa(param5, param2, param0, param4, param3);
           DivisionMazeGenerator.appendChatHistory(16599, var6);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "gu.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gu.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

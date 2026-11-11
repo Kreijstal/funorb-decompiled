@@ -13,7 +13,7 @@ final class hw {
         field_a = null;
     }
 
-    final static void a(byte param0, int param1, int param2, GamePacket param3) {
+    final static void sendGamePacket(byte param0, int param1, int param2, GamePacket param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -61,7 +61,7 @@ final class hw {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

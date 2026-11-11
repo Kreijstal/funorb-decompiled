@@ -43,7 +43,7 @@ final class uo {
           var2 = 0;
           var3 = 0;
           for (var4 = 0; OpenGlRenderbuffer.f(-1) > var4; var4++) {
-            var5 = rga.b(26499, var4);
+            var5 = rga.getCourseRoomCount(26499, var4);
             for (var6 = 0; var6 < var5; var6++) {
               var15 = DateInputWidget.c(var4, 91, var6);
               if (-1 != var15.field_a ||
@@ -100,7 +100,7 @@ final class uo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "uo.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "uo.B(" + param0 + ')');
         }
     }
 

@@ -11,7 +11,7 @@ final class S2CNextRoundPacket implements GamePacket {
             this.apply(113, (MatchProtocol) null, (MatchScreen) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ua.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ua.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -22,7 +22,7 @@ final class S2CNextRoundPacket implements GamePacket {
             field_a = (ResourceArchive) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ua.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ua.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class S2CNextRoundPacket implements GamePacket {
             S2CNextRoundPacket.describeGameJoinStatus(-112, (String) null, -64);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,11 +51,11 @@ final class S2CNextRoundPacket implements GamePacket {
             field_a = (ResourceArchive) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ua.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ua.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static byte[] a(Object param0, int param1, int param2, boolean param3) {
+    final static byte[] copyBytesFrom(Object param0, int param1, int param2, boolean param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         ByteStorage var5 = null;
@@ -93,7 +93,7 @@ final class S2CNextRoundPacket implements GamePacket {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -127,49 +127,49 @@ final class S2CNextRoundPacket implements GamePacket {
             field_a = (ResourceArchive) null;
           }
           if (param0 == 1) {
-            stackIn_5_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(103, MatchScoringObserver.field_e, new String[]{param1});
+            stackIn_5_0 = LegacyOpenGlFlowingWaterEffect.formatText(103, MatchScoringObserver.field_e, new String[]{param1});
             return stackIn_5_0;
           }
           if (param0 == 2) {
-            stackIn_9_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, S2CRoundResultPacket.field_f, new String[]{param1});
+            stackIn_9_0 = LegacyOpenGlFlowingWaterEffect.formatText(96, S2CRoundResultPacket.field_f, new String[]{param1});
             return stackIn_9_0;
           }
           if (param0 == 3) {
-            stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(102, np.field_V, new String[]{param1});
+            stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.formatText(102, np.field_V, new String[]{param1});
             return stackIn_13_0;
           }
           if (param0 == 4) {
-            stackIn_17_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(117, TouchSwitchBehaviour.field_o, new String[]{param1});
+            stackIn_17_0 = LegacyOpenGlFlowingWaterEffect.formatText(117, TouchSwitchBehaviour.field_o, new String[]{param1});
             return stackIn_17_0;
           }
           if (5 == param0) {
-            stackIn_21_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(85, TextureSampleOperator.field_o, new String[]{param1});
+            stackIn_21_0 = LegacyOpenGlFlowingWaterEffect.formatText(85, TextureSampleOperator.field_o, new String[]{param1});
             return stackIn_21_0;
           }
           if (param0 == 6) {
-            stackIn_24_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(93, PrefabComponent.field_C, new String[]{param1});
+            stackIn_24_0 = LegacyOpenGlFlowingWaterEffect.formatText(93, PrefabComponent.field_C, new String[]{param1});
             return stackIn_24_0;
           }
           if (param0 == 7) {
-            stackIn_27_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(110, TrackMountComponent.field_H, new String[]{param1});
+            stackIn_27_0 = LegacyOpenGlFlowingWaterEffect.formatText(110, TrackMountComponent.field_H, new String[]{param1});
             return stackIn_27_0;
           }
           if (8 == param0) {
-            stackIn_30_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, Locomotor.field_m, new String[]{param1});
+            stackIn_30_0 = LegacyOpenGlFlowingWaterEffect.formatText(125, Locomotor.field_m, new String[]{param1});
             return stackIn_30_0;
           }
           if (11 == param0) {
-            stackIn_33_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(112, LegacySwitchModel.field_m, new String[]{param1});
+            stackIn_33_0 = LegacyOpenGlFlowingWaterEffect.formatText(112, LegacySwitchModel.field_m, new String[]{param1});
             return stackIn_33_0;
           }
           if (12 == param0) {
-            stackIn_37_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, TestModel.field_p, new String[]{param1});
+            stackIn_37_0 = LegacyOpenGlFlowingWaterEffect.formatText(82, TestModel.field_p, new String[]{param1});
             return stackIn_37_0;
           }
           if (param0 != 13) {
             return null;
           }
-          stackIn_41_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, DoorwayModel.field_n, new String[]{param1});
+          stackIn_41_0 = LegacyOpenGlFlowingWaterEffect.formatText(96, DoorwayModel.field_n, new String[]{param1});
           return stackIn_41_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -181,7 +181,7 @@ final class S2CNextRoundPacket implements GamePacket {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class S2CNextRoundPacket implements GamePacket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "ua.E(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "ua.E(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -15,7 +15,7 @@ final class MovingSawComponent extends PathMoverComponent {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != 15) {
-            MovingSawComponent.s((byte) 58);
+            MovingSawComponent.releaseStatics((byte) 58);
           }
           var3_int = 0;
           while (param2 > 0) {
@@ -28,7 +28,7 @@ final class MovingSawComponent extends PathMoverComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "uk.TB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "uk.TB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class MovingSawComponent extends PathMoverComponent {
           var12.addLocomotor(var5, 0);
           var6 = new ConstantEffectBehaviour(param2, param0);
           var7 = new Effect(0, 10);
-          var7.b(1, 15);
+          var7.setDeathMessageIndex(1, 15);
           var6.a(true, var7);
           var6.setLocked((byte) -24, true);
           var12.addBehaviour((byte) 83, (Behaviour) (var6));
@@ -106,7 +106,7 @@ final class MovingSawComponent extends PathMoverComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class MovingSawComponent extends PathMoverComponent {
 
     final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          MovingSawComponent.s((byte) -72);
+          MovingSawComponent.releaseStatics((byte) -72);
           return false;
         }
         return false;
@@ -137,7 +137,7 @@ final class MovingSawComponent extends PathMoverComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uk.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uk.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class MovingSawComponent extends PathMoverComponent {
         return false;
     }
 
-    public static void s(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_M = null;
         field_O = null;
         if (param0 < 112) {

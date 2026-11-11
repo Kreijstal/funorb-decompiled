@@ -60,7 +60,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1_ref), "at.J(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1_ref), "at.J(" + param0 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                 }
                 if (OpenGlSceneLight.field_o != null &&
                   null != this.field_P[var2_int] &&
-                  !OpenGlSceneLight.field_o.a(this.field_P[var2_int].field_c, (byte) 43, this.field_P[var2_int].field_a)) {
+                  !OpenGlSceneLight.field_o.isSizeSupported(this.field_P[var2_int].field_c, (byte) 43, this.field_P[var2_int].field_a)) {
                   this.field_P[var2_int] = null;
                 }
               }
@@ -144,7 +144,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                 this.field_P[incrementValue$0] = var3_ref_dh__[var5];
               }
             }
-            FollowCamera.a(-95, this.field_P);
+            FollowCamera.sortDisplayModes(-95, this.field_P);
           }
           stackIn_31_1 = !(this.field_P.length <= 0);
           this.field_M = stackIn_31_1;
@@ -263,7 +263,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_97_2 = "{...}";
           }
-          throw tba.a((Throwable) (stackIn_96_0), ((StringBuilder) (Object) stackIn_96_1).append(stackIn_97_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) (stackIn_96_0), ((StringBuilder) (Object) stackIn_96_1).append(stackIn_97_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -481,7 +481,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -551,7 +551,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -602,7 +602,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -650,7 +650,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                   StringCursor.a(-30600, true);
                   this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
                 } else {
-                  OpenGlSceneLight.field_o.a(this.field_P[var2].field_a, this.field_P[var2].field_c, -1);
+                  OpenGlSceneLight.field_o.setDisplayMode(this.field_P[var2].field_a, this.field_P[var2].field_c, -1);
                   StringCursor.a(-30600, true);
                   this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
                 }
@@ -740,7 +740,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -792,7 +792,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

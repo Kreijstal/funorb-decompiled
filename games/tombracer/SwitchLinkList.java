@@ -62,7 +62,7 @@ final class SwitchLinkList {
           }
           this.targets = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "koa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "koa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class SwitchLinkList {
         int var5 = TombRacer.field_G ? 1 : 0;
         try {
           this.a((byte) -12);
-          param2.writeBits((byte) 43, this.targets.length, RandomBrickOperator.d(this.field_e, 22972));
+          param2.writeBits((byte) 43, this.targets.length, RandomBrickOperator.bitLength(this.field_e, 22972));
           for (var4_int = 0; this.targets.length > var4_int; var4_int++) {
             if (this.targets[var4_int].getScope((byte) 114) != param1) {
               param2.writeBits((byte) -126, 0, 1);
@@ -85,7 +85,7 @@ final class SwitchLinkList {
             this.pendingTargetIds = (dha[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "koa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "koa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class SwitchLinkList {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -159,7 +159,7 @@ final class SwitchLinkList {
         RuntimeException var5 = null;
         try {
           this.field_e = param0;
-          var5_int = param3.readBits((byte) 44, RandomBrickOperator.d(param0, 22972));
+          var5_int = param3.readBits((byte) 44, RandomBrickOperator.bitLength(param0, 22972));
           this.targets = new Switchable[var5_int];
           this.pendingTargetIds = new dha[var5_int];
           for (var6 = 0; var6 < var5_int; var6++) {
@@ -193,11 +193,11 @@ final class SwitchLinkList {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;

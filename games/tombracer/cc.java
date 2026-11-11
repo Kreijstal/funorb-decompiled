@@ -150,11 +150,11 @@ final class cc extends IntrusiveNode {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1, String param2) {
+    final static void writeSessionCookie(int param0, java.applet.Applet param1, String param2) {
         try {
           String var7 = null;
           String var4 = null;
@@ -166,7 +166,7 @@ final class cc extends IntrusiveNode {
               var7 = param1.getParameter("cookieprefix");
               if (param0 <= 1) {
                 String var6 = (String) null;
-                cc.a(-59, (java.applet.Applet) null, (String) null);
+                cc.writeSessionCookie(-59, (java.applet.Applet) null, (String) null);
               }
               var4 = param1.getParameter("cookiehost");
               var8 = var7 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
@@ -179,7 +179,7 @@ final class cc extends IntrusiveNode {
             }
             MatchProtocol.updatePageLinks((byte) 64, param1);
           } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "cc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw tba.wrapException((Throwable) ((Object) runtimeException), "cc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -231,7 +231,7 @@ final class cc extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class cc extends IntrusiveNode {
         boolean stackIn_6_0 = false;
         if (param0) {
           var3 = (String) null;
-          cc.a(42, (java.applet.Applet) null, (String) null);
+          cc.writeSessionCookie(42, (java.applet.Applet) null, (String) null);
         }
         stackIn_6_0 = (mca.a((byte) 6, this.field_i)) && (mca.a((byte) 6, this.field_g));
         return stackIn_6_0;
@@ -250,7 +250,7 @@ final class cc extends IntrusiveNode {
         this(param0, param1, -1, -1, param2, 0);
     }
 
-    final static nl a(byte param0, java.applet.Applet param1) {
+    final static nl readLastLoginMethod(byte param0, java.applet.Applet param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -268,7 +268,7 @@ final class cc extends IntrusiveNode {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           var2_int = -61 / ((param0 - 61) / 57);
-          var3 = og.a(param1, "jagex-last-login-method", (byte) 86);
+          var3 = og.readCookie(param1, "jagex-last-login-method", (byte) 86);
           if (var3 == null) {
             stackIn_4_0 = CollisionGrid.field_f;
             return stackIn_4_0;
@@ -299,7 +299,7 @@ final class cc extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

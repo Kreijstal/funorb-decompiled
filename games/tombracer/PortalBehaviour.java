@@ -43,7 +43,7 @@ final class PortalBehaviour extends Behaviour {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -52,11 +52,11 @@ final class PortalBehaviour extends Behaviour {
         try {
           this.field_p = new SwitchLinkList(1, 1, param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static FloatingMessage a(int param0, String param1, int param2, int param3, String param4) {
+    final static FloatingMessage createChatMessage(int param0, String param1, int param2, int param3, String param4) {
         int var5_int = 0;
         int var6 = 0;
         FloatingMessage stackIn_8_0 = null;
@@ -100,7 +100,7 @@ final class PortalBehaviour extends Behaviour {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class PortalBehaviour extends Behaviour {
         try {
           this.field_p = new SwitchLinkList(1, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class PortalBehaviour extends Behaviour {
           super.attachToTrap(param0, param1);
           param1.b((byte) -126, 3);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "im.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "im.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -151,13 +151,13 @@ final class PortalBehaviour extends Behaviour {
         return param0;
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 124) {
           field_o = null;
           return;
         }
         String var2 = (String) null;
-        PortalBehaviour.a(21, (String) null, -123, -2, (String) null);
+        PortalBehaviour.createChatMessage(21, (String) null, -123, -2, (String) null);
         field_o = null;
     }
 
@@ -174,7 +174,7 @@ final class PortalBehaviour extends Behaviour {
           super.encode(param0, param1);
           this.field_p.encode(30489, this.getScope((byte) 122), param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "im.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "im.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -288,7 +288,7 @@ final class PortalBehaviour extends Behaviour {
         var10 = ((Trap) (var3)).getWidth(param0 - 5510);
         var11 = ((Trap) (var3)).getHeight((byte) 55);
         var12 = this.getRoom(true);
-        var13 = var12.collisionGrid.b(var5, -1, var4, var6, var7);
+        var13 = var12.collisionGrid.queryBox(var5, -1, var4, var6, var7);
         var14 = var13;
         for (var15 = 0; var14.length > var15; var15++) {
           var16 = var14[var15];

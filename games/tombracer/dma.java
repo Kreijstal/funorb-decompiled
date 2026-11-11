@@ -16,7 +16,7 @@ final class dma extends OpenGlTexture implements na {
         try {
           super.setFilter(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,14 +36,14 @@ final class dma extends OpenGlTexture implements na {
           this.field_j.bindTexture(true, (GpuTexture) (this));
           if (param2) {
             for (var5_int = 0; var5_int < 6; var5_int++) {
-              this.a((byte) 99, var5_int + 34069, param1, param3[var5_int], param1);
+              this.uploadIntMipmaps((byte) 99, var5_int + 34069, param1, param3[var5_int], param1);
             }
             return;
           }
           var7 = 0;
           var5_intLifetime1 = var7;
           while (6 > var7) {
-            jaggl.OpenGL.glTexImage2Di(34069 + var7, 0, this.d(92), param1, param1, 0, waa.a(this.field_f, 1383), this.field_j.field_od, param3[var7], 0);
+            jaggl.OpenGL.glTexImage2Di(34069 + var7, 0, this.d(92), param1, param1, 0, waa.toGlFormat(this.field_f, 1383), this.field_j.field_od, param3[var7], 0);
             var7++;
           }
           return;
@@ -63,7 +63,7 @@ final class dma extends OpenGlTexture implements na {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

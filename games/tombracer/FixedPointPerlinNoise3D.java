@@ -51,7 +51,7 @@ abstract class FixedPointPerlinNoise3D {
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < 255; var3Lifetime1++) {
           var4 = -var3Lifetime1 + 255;
-          var5 = BufferedSocket.a(var4, var2, -120);
+          var5 = BufferedSocket.randomBelow(var4, var2, -120);
           var6 = this.permutation[var5];
           this.permutation[var5] = this.permutation[var4];
           this.permutation[256 + var4] = (short) var6;
@@ -182,18 +182,18 @@ abstract class FixedPointPerlinNoise3D {
                 var28 = this.permutation[var14 + var24];
                 var26 = this.permutation[var23 + var14];
                 var27 = this.permutation[var24 + var13];
-                var29 = HslAdjustOperator.a(var6, var5, 0, (int) this.permutation[var25 + var11], var7);
-                var30 = HslAdjustOperator.a(var6, var20, 0, (int) this.permutation[var25 + var12], var7);
+                var29 = HslAdjustOperator.gradient(var6, var5, 0, (int) this.permutation[var25 + var11], var7);
+                var30 = HslAdjustOperator.gradient(var6, var20, 0, (int) this.permutation[var25 + var12], var7);
                 var31 = var29 + (var17 * (-var29 + var30) >> 12);
-                var29Lifetime1 = HslAdjustOperator.a(var21, var5, 0, (int) this.permutation[var11 + var26], var7);
-                var30Lifetime1 = HslAdjustOperator.a(var21, var20, 0, (int) this.permutation[var26 + var12], var7);
+                var29Lifetime1 = HslAdjustOperator.gradient(var21, var5, 0, (int) this.permutation[var11 + var26], var7);
+                var30Lifetime1 = HslAdjustOperator.gradient(var21, var20, 0, (int) this.permutation[var26 + var12], var7);
                 var32 = (var17 * (-var29Lifetime1 + var30Lifetime1) >> 12) + var29Lifetime1;
-                var29Lifetime2 = HslAdjustOperator.a(var6, var5, 0, (int) this.permutation[var27 + var11], var22);
+                var29Lifetime2 = HslAdjustOperator.gradient(var6, var5, 0, (int) this.permutation[var27 + var11], var22);
                 var33 = ((-var31 + var32) * var18 >> 12) + var31;
-                var30Lifetime2 = HslAdjustOperator.a(var6, var20, 0, (int) this.permutation[var12 + var27], var22);
+                var30Lifetime2 = HslAdjustOperator.gradient(var6, var20, 0, (int) this.permutation[var12 + var27], var22);
                 var31Lifetime1 = ((-var29Lifetime2 + var30Lifetime2) * var17 >> 12) + var29Lifetime2;
-                var29Lifetime3 = HslAdjustOperator.a(var21, var5, 0, (int) this.permutation[var28 + var11], var22);
-                var30Lifetime3 = HslAdjustOperator.a(var21, var20, 0, (int) this.permutation[var28 + var12], var22);
+                var29Lifetime3 = HslAdjustOperator.gradient(var21, var5, 0, (int) this.permutation[var28 + var11], var22);
+                var30Lifetime3 = HslAdjustOperator.gradient(var21, var20, 0, (int) this.permutation[var28 + var12], var22);
                 var32Lifetime1 = var29Lifetime3 + ((-var29Lifetime3 + var30Lifetime3) * var17 >> 12);
                 var34 = ((-var31Lifetime1 + var32Lifetime1) * var18 >> 12) + var31Lifetime1;
                 this.accumulateOctave(((var34 - var33) * var19 >> 12) + var33, (byte) -96, var38);

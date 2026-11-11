@@ -23,7 +23,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
             this.field_cb = (ProgressBarWidget) null;
           }
           if (!this.field_Y) {
-            SimpleHoverMountComponent.a("tochangedisplayname.ws", di.a(72), (byte) -68);
+            SimpleHoverMountComponent.openRelativeUrl("tochangedisplayname.ws", di.a(72), (byte) -68);
             return;
           }
           jsa.a(false, 3);
@@ -39,7 +39,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           this.field_cb.field_D = true;
           this.addChild(this.field_cb, -1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 

@@ -22,7 +22,7 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "fga.G(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "fga.G(" + param0 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "fga.I(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "fga.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3_ref), "fga.D(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3_ref), "fga.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "fga.A(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "fga.A(" + param0 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4), "fga.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4), "fga.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class fga implements ShellListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -299,7 +299,7 @@ final class fga implements ShellListener {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw tba.a((Throwable) ((Object) var2), "fga.B(" + param0 + ')');
+            throw tba.wrapException((Throwable) ((Object) var2), "fga.B(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -325,7 +325,7 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "fga.F(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "fga.F(" + param0 + ')');
         }
     }
 
@@ -412,16 +412,16 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4), "fga.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4), "fga.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           int var1_int = 78 / ((63 - param0) / 40);
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fga.J(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fga.J(" + param0 + ')');
         }
     }
 

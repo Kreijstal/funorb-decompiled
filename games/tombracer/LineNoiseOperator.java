@@ -79,7 +79,7 @@ final class LineNoiseOperator extends TextureOperator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -132,12 +132,12 @@ final class LineNoiseOperator extends TextureOperator {
             if (this.field_q <= 0) {
               stackIn_8_0 = this.field_r;
             } else {
-              stackIn_8_0 = this.field_r + BufferedSocket.a(this.field_q, var6, -102) - var4;
+              stackIn_8_0 = this.field_r + BufferedSocket.randomBelow(this.field_q, var6, -102) - var4;
             }
             var8 = stackIn_8_0;
             var8 = var8 >> 4 & 255;
-            var9 = BufferedSocket.a(LegacyOpenGlTurbulentTextureEffect.textureWidth, var6, 44);
-            var10 = BufferedSocket.a(ArchiveNetworkClient.textureHeight, var6, -127);
+            var9 = BufferedSocket.randomBelow(LegacyOpenGlTurbulentTextureEffect.textureWidth, var6, 44);
+            var10 = BufferedSocket.randomBelow(ArchiveNetworkClient.textureHeight, var6, -127);
             var11 = (this.field_o * ColourFillOperator.field_r[var8] >> 12) + var9;
             var12 = var10 + (CourseGenerator.field_e[var8] * this.field_o >> 12);
             var13 = var12 - var10;
@@ -173,7 +173,7 @@ final class LineNoiseOperator extends TextureOperator {
               var18 = -var10 + var12;
               var19 = -var17Lifetime2 / 2;
               var20 = 2048 / var17Lifetime2;
-              var21 = -(BufferedSocket.a(4096, var6, -85) >> 2) + 1024;
+              var21 = -(BufferedSocket.randomBelow(4096, var6, -85) >> 2) + 1024;
               stackIn_29_0 = (var12 > var10) ? 1 : -1;
               var22 = stackIn_29_0;
               if (var18 < 0) {

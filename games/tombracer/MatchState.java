@@ -157,7 +157,7 @@ final class MatchState implements dv {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class MatchState implements dv {
             this.d(-118);
           }
           for (var3_int = 0; this.players.length > var3_int; var3_int++) {
-            if (faa.accountNamesMatch(param0, 109, this.playerNames[var3_int])) {
+            if (BridgeTile.accountNamesMatch(param0, 109, this.playerNames[var3_int])) {
               stackIn_8_0 = var3_int;
               return stackIn_8_0;
             }
@@ -203,7 +203,7 @@ final class MatchState implements dv {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -291,9 +291,9 @@ final class MatchState implements dv {
           this.roundSeed = param0.readBits((byte) 44, 32);
           this.characterChoices = (CharacterChoice[]) (gha.readDecodableArray(this.characterChoices, 1, 8, -16499, TileOperator.field_q, param0));
           this.courseLayouts = (CourseLayout[]) (gha.readDecodableArray(this.courseLayouts, 1, 8, -16499, OpenGlRenderbuffer.field_u, param0));
-          this.roundWins = fa.a(0, param0, 8, this.roundWins);
+          this.roundWins = fa.readBitValues(0, param0, 8, this.roundWins);
           this.roundWinner = uma.readSignedBits(32, param0, -26803);
-          this.finishedRound = PooledObject.a(8, this.finishedRound, (byte) 93, param0);
+          this.finishedRound = PooledObject.readBitFlags(8, this.finishedRound, (byte) 93, param0);
           this.playersRemaining = param0.readBits((byte) 44, 32);
           this.field_s = CircleMovementLocomotor.readBitFlag(5907, param0);
           if (!CircleMovementLocomotor.readBitFlag(5907, param0)) {
@@ -305,7 +305,7 @@ final class MatchState implements dv {
             this.rewardChoice.decode(param0, false);
           }
           this.field_E = uma.readSignedBits(32, param0, -26803);
-          this.field_I = PooledObject.a(8, this.field_I, (byte) -41, param0);
+          this.field_I = PooledObject.readBitFlags(8, this.field_I, (byte) -41, param0);
           if (param1) {
             return;
           }
@@ -321,7 +321,7 @@ final class MatchState implements dv {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -356,7 +356,7 @@ final class MatchState implements dv {
           return (String) null;
         }
         if (param0 < 0) {
-          return dpa.field_c;
+          return PitTile.field_c;
         }
         return this.colouredPlayerNames[param0];
     }
@@ -517,7 +517,7 @@ final class MatchState implements dv {
 
     final String getPlayerName(int param0, int param1) {
         if (param1 > param0) {
-          return dpa.field_c;
+          return PitTile.field_c;
         }
         return this.playerNames[param0];
     }
@@ -545,7 +545,7 @@ final class MatchState implements dv {
           var3 = this.simulations[param1.getCourse(3)];
           var3.getObserver(9262).queueEvent(var3, param1, false);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ff.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ff.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -734,7 +734,7 @@ final class MatchState implements dv {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 

@@ -109,7 +109,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
         discarded$0 = WeaveOperator.field_n.append((char) var4);
         var5Lifetime1 = 485;
         var60 = MenuEntry.field_k;
-        var16 = ima.a(var60, (byte) 8);
+        var16 = ima.prefixRightsIcon(var60, (byte) 8);
         var64 = var16;
         if (OpenGlUnderwaterEffect.field_q != 2) {
           var7 = "";
@@ -128,7 +128,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
                     DarknessBehaviour.padTo(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                     return true;
                   }
-                  var7 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, UiComponent.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
+                  var7 = "[" + LegacyOpenGlFlowingWaterEffect.formatText(94, UiComponent.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
                 }
                 var66 = var7 + var64 + ": ";
                 var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var66);
@@ -152,15 +152,15 @@ final class ChooseRewardFactory implements BitDecodableFactory {
                 DarknessBehaviour.padTo(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                 return true;
               }
-              var7 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, UiComponent.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
+              var7 = "[" + LegacyOpenGlFlowingWaterEffect.formatText(94, UiComponent.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
             }
           }
           var69 = var7 + var64 + ": ";
           var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var69);
         } else {
           var73 = (CharSequence) ((Object) wp.field_a);
-          var61 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(115, TrackMountComponent.field_G, new String[]{wt.normalizeBase37Name(30433, var73)});
-          var62 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(102, li.field_a, new String[]{var16});
+          var61 = LegacyOpenGlFlowingWaterEffect.formatText(115, TrackMountComponent.field_G, new String[]{wt.normalizeBase37Name(30433, var73)});
+          var62 = LegacyOpenGlFlowingWaterEffect.formatText(102, li.field_a, new String[]{var16});
           var9 = PlatformBehaviour.field_s.stringWidth(var61);
           var10 = PlatformBehaviour.field_s.stringWidth(var62);
           if (var9 > var10) {

@@ -42,7 +42,7 @@ final class tw {
     Model field_m;
     int[] field_q;
 
-    final static IndexedSprite[] a(byte param0, String param1, String param2, ResourceArchive param3) {
+    final static IndexedSprite[] loadIndexedSpritesByName(byte param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -60,7 +60,7 @@ final class tw {
           var4_int = param3.getGroupId(param2, -7768);
           var6 = 86 % ((param0 - 78) / 45);
           var5 = param3.getFileId(true, param1, var4_int);
-          stackIn_1_0 = CrusherBehaviour.a(param3, var4_int, var5, (byte) 42);
+          stackIn_1_0 = CrusherBehaviour.loadIndexedSprites(param3, var4_int, var5, (byte) 42);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,7 +84,7 @@ final class tw {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class tw {
             this.field_B = 90;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "tw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "tw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class tw {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

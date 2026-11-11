@@ -53,7 +53,7 @@ final class Bzip2State {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          if (!CurveOperator.a(true, var6)) {
+          if (!CurveOperator.isValidAccountName(true, var6)) {
             stackIn_2_0 = pk.field_v;
             return stackIn_2_0;
           }
@@ -66,7 +66,7 @@ final class Bzip2State {
             return stackIn_9_0;
           }
           if (MouseWheelInput.a(2180, param1)) {
-            stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, bva.field_a, new String[]{param1});
+            stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.formatText(125, bva.field_a, new String[]{param1});
             return stackIn_13_0;
           }
           if (100 <= tba.field_k) {
@@ -74,7 +74,7 @@ final class Bzip2State {
             return stackIn_17_0;
           }
           if (QueuedPlayerEvent.a(false, param1)) {
-            stackIn_20_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, FleeLocomotor.field_o, new String[]{param1});
+            stackIn_20_0 = LegacyOpenGlFlowingWaterEffect.formatText(94, FleeLocomotor.field_o, new String[]{param1});
             return stackIn_20_0;
           }
           var5 = ql.field_k;
@@ -96,7 +96,7 @@ final class Bzip2State {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 

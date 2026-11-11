@@ -31,7 +31,7 @@ final class mha extends FocusableWidget {
           this.field_A = this.field_A + 1;
           super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mha.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mha.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class mha extends FocusableWidget {
         try {
           this.field_z = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class mha extends FocusableWidget {
           var10 = var15.field_k << 1;
           if (null == aj.field_l) {
             aj.field_l = new Sprite(var9, var10);
-            nm.a(aj.field_l, (byte) 108);
+            nm.setRasterTarget(aj.field_l, (byte) 108);
             var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
@@ -73,7 +73,7 @@ final class mha extends FocusableWidget {
           }
           if (aj.field_l.field_m < var9) {
             aj.field_l = new Sprite(var9, var10);
-            nm.a(aj.field_l, (byte) 108);
+            nm.setRasterTarget(aj.field_l, (byte) 108);
             var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
@@ -81,13 +81,13 @@ final class mha extends FocusableWidget {
           }
           if (var10 > aj.field_l.field_q) {
             aj.field_l = new Sprite(var9, var10);
-            nm.a(aj.field_l, (byte) 108);
+            nm.setRasterTarget(aj.field_l, (byte) 108);
             var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
-          nm.a(aj.field_l, (byte) 95);
+          nm.setRasterTarget(aj.field_l, (byte) 95);
           SoftwareRasterizer.clear();
           var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
           pfa.a(1);
@@ -100,7 +100,7 @@ final class mha extends FocusableWidget {
           var10Lifetime1 = var16.field_k << 1;
           if (null == aj.field_l) {
             aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
-            nm.a(aj.field_l, (byte) 108);
+            nm.setRasterTarget(aj.field_l, (byte) 108);
             var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
@@ -108,7 +108,7 @@ final class mha extends FocusableWidget {
           }
           if (aj.field_l.field_m < var9Lifetime1) {
             aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
-            nm.a(aj.field_l, (byte) 108);
+            nm.setRasterTarget(aj.field_l, (byte) 108);
             var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
@@ -116,13 +116,13 @@ final class mha extends FocusableWidget {
           }
           if (var10Lifetime1 > aj.field_l.field_q) {
             aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
-            nm.a(aj.field_l, (byte) 108);
+            nm.setRasterTarget(aj.field_l, (byte) 108);
             var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.a(1);
             aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
-          nm.a(aj.field_l, (byte) 95);
+          nm.setRasterTarget(aj.field_l, (byte) 95);
           SoftwareRasterizer.clear();
           var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
           pfa.a(1);
@@ -162,7 +162,7 @@ final class mha extends FocusableWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

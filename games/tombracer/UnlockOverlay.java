@@ -81,7 +81,7 @@ final class UnlockOverlay extends MatchOverlay {
             this.field_o.a(param1.a(-13939), false, 0, 37, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class UnlockOverlay extends MatchOverlay {
             MembersUpsellMenu.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             OpenGlFramebuffer.field_i[var4].a((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4].width() / 2, (SwitchLinkList.b(0) >> 1) - OpenGlFramebuffer.field_i[var4].height() / 2 - 20);
             PlayerInputQueue.field_a.a(var2, var3 + 60);
-            MembersUpsellMenu.a(vj.worldNames[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.a(SecondaryLinkQueue.worldNames[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> 1, -1);
             return;
           }
           return;
@@ -140,7 +140,7 @@ final class UnlockOverlay extends MatchOverlay {
           MembersUpsellMenu.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
           OpenGlFramebuffer.field_i[var4Lifetime1].a((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].width() / 2, (SwitchLinkList.b(0) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].height() / 2 - 20);
           PlayerInputQueue.field_a.a(var2Lifetime1, var3Lifetime1 + 60);
-          MembersUpsellMenu.a(vj.worldNames[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, aaa.a(false) >> 1, -1);
+          MembersUpsellMenu.a(SecondaryLinkQueue.worldNames[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, aaa.a(false) >> 1, -1);
           return;
         }
     }

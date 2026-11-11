@@ -34,7 +34,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "ri.CA(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.CA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1_ref), "ri.N(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1_ref), "ri.N(" + param0 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class SweepRotateLocomotor extends Locomotor {
             this.sweepSpeed = 106;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ri.FA(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.FA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "ri.H(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.H(" + param0 + ')');
         }
     }
 
@@ -253,7 +253,7 @@ final class SweepRotateLocomotor extends Locomotor {
             field_q = 91;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ri.V(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.V(" + param0 + ')');
         }
     }
 
@@ -286,7 +286,7 @@ final class SweepRotateLocomotor extends Locomotor {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -334,7 +334,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "ri.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "ri.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -351,7 +351,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ri.P(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ri.P(" + param0 + ')');
         }
     }
 
@@ -362,7 +362,7 @@ final class SweepRotateLocomotor extends Locomotor {
             this.sweepSpeed = 121;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ri.DA(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.DA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -390,7 +390,7 @@ final class SweepRotateLocomotor extends Locomotor {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ final class SweepRotateLocomotor extends Locomotor {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -431,7 +431,7 @@ final class SweepRotateLocomotor extends Locomotor {
             this.encode((BitPacketBuffer) null, (byte) -85);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ri.L(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.L(" + param0 + ')');
         }
     }
 
@@ -456,7 +456,7 @@ final class SweepRotateLocomotor extends Locomotor {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -474,7 +474,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "ri.Q(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "ri.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -537,7 +537,7 @@ final class SweepRotateLocomotor extends Locomotor {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

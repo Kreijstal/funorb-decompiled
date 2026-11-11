@@ -14,7 +14,7 @@ final class fta {
         return BeamShooterBehaviour.field_p;
     }
 
-    final static String a(String param0, String param1, int param2, String param3) {
+    final static String replaceAll(String param0, String param1, int param2, String param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -94,7 +94,7 @@ final class fta {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class fta {
     final boolean a(int param0) {
         if (param0 != 0) {
           String var3 = (String) null;
-          fta.a((String) null, (String) null, -76, (String) null);
+          fta.replaceAll((String) null, (String) null, -76, (String) null);
           if (TestModel.field_o == this) {
             return true;
           }

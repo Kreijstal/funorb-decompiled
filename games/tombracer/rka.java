@@ -14,9 +14,9 @@ abstract class rka {
     final static void a(String param0, boolean param1) {
         try {
           TrackingCrusherComponent.a(param0, (byte) -55);
-          vn.a(100, gja.field_bb, param1);
+          vn.showMessageDialog(100, gja.field_bb, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ abstract class rka {
         return (String) null;
     }
 
-    final static String a(int param0, int param1) {
+    final static String toOrdinal(int param0, int param1) {
         int var2 = param0;
         if (var2 > 20) {
           var2 = var2 % 10;

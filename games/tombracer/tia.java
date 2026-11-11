@@ -14,7 +14,7 @@ final class tia {
           param1.removeFocusListener(ColourGradientOperator.field_n);
           tka.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "tia.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "tia.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class tia {
         field_b = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int atan2(int param0, int param1, int param2) {
         if (param2 != -29543) {
           field_b = (String) null;
         }
@@ -76,10 +76,10 @@ final class tia {
           }
           incrementValue$0 = param1;
           param1++;
-          nra.a((byte) -55, param3, param2, vaa.field_a[incrementValue$0], param4);
+          nra.fillRange((byte) -55, param3, param2, vaa.field_a[incrementValue$0], param4);
           incrementValue$1 = param0;
           param0--;
-          nra.a((byte) -55, param3, param2, vaa.field_a[incrementValue$1], param4);
+          nra.fillRange((byte) -55, param3, param2, vaa.field_a[incrementValue$1], param4);
           for (var6_int = param1; param0 >= var6_int; var6_int++) {
             var7 = vaa.field_a[var6_int];
             var7[param2] = param3;
@@ -89,7 +89,7 @@ final class tia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var6), "tia.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) var6), "tia.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

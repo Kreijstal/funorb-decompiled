@@ -56,7 +56,7 @@ final class RenderableNode extends IntrusiveNode {
         field_i = (UiComponent) null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_g = null;
         field_j = null;
@@ -78,7 +78,7 @@ final class RenderableNode extends IntrusiveNode {
         try {
           this.renderable = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "oea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "oea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

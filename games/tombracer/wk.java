@@ -49,21 +49,21 @@ final class wk extends IntrusiveNode {
         }
     }
 
-    final static void a(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
+    final static void initLogoAssets(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
         try {
           SwitchableId.field_b = param1 * aqa.getFrameRate(1188664449) / 1000;
-          ne.a(param3, -101);
+          ne.loadJagexLogoSound(param3, -101);
           gja.a(param3, 0);
-          jp.a(param3, (byte) 20);
+          jp.loadFinalFrame(param3, (byte) 20);
           if (param2 != 11861) {
             ResourceArchive var5 = (ResourceArchive) null;
-            wk.a((PcmStreamMixer) null, 0, -42, (ResourceArchive) null);
+            wk.initLogoAssets((PcmStreamMixer) null, 0, -42, (ResourceArchive) null);
           }
           mf.a(85);
           ica.a(16777215);
           TimeSwitchBehaviour.field_r = 0 - SwitchableId.field_b;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -240,7 +240,7 @@ final class DefaultTileRenderable extends TileRenderable {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 

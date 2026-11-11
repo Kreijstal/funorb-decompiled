@@ -10,7 +10,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
     private int loadWeight;
     static String[] field_s;
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         if (param0 != 1) {
           field_r = 91;
@@ -39,7 +39,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         }
         var2 = 0;
         var3 = this.getRoom(true).collisionGrid;
-        var4 = var3.a((byte) -26, this.trap);
+        var4 = var3.queryCollidable((byte) -26, this.trap);
         for (var5 = 0; var5 < var4.length; var5++) {
           if (this.a(var4[var5], (byte) -103)) {
             var2 = var2 + var4[var5].getWeight(75);
@@ -71,7 +71,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
           param1.writeBits((byte) -128, !this.field_q ? 0 : 1, 1);
           this.field_n.encode(this.getScope((byte) 117), (byte) 117, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dja.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dja.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
           }
           this.field_n = new SwitchState(15, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
           this.requiredWeight = 50;
           this.field_n = new SwitchState(15);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
     final void setRequiredWeight(int param0, boolean param1) {
         this.requiredWeight = param0;
         if (!param1) {
-          PressureSwitchBehaviour.l(56);
+          PressureSwitchBehaviour.releaseStatics(56);
         }
     }
 
@@ -170,7 +170,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         return this.loadWeight;
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAsciiLetter(byte param0, char param1) {
         int var2;
         boolean stackIn_8_0 = false;
         boolean decompiledFrameRemainder0 = true;

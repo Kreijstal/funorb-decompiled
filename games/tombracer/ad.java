@@ -60,7 +60,7 @@ final class ad extends IntrusiveNode {
         return this.field_f == -1 ? true : false;
     }
 
-    final static Effect a(byte param0, BitPacketBuffer param1) {
+    final static Effect decodeEffect(byte param0, BitPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -75,7 +75,7 @@ final class ad extends IntrusiveNode {
           var2_int = param1.readBits((byte) 44, 4);
           if (param0 != 87) {
             var5 = (BitPacketBuffer) null;
-            ad.a((byte) -125, (BitPacketBuffer) null);
+            ad.decodeEffect((byte) -125, (BitPacketBuffer) null);
           }
           var3 = param1.readBits((byte) 44, 10);
           var4 = new Effect(var2_int, var3);
@@ -91,7 +91,7 @@ final class ad extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class ad extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
         }
         stackIn_6_0 = VariantMask.field_a;
         try {
@@ -125,7 +125,7 @@ final class ad extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
         }
     }
 

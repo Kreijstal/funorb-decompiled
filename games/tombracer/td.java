@@ -42,7 +42,7 @@ final class td extends TextWidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1_ref), "td.C(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1_ref), "td.C(" + param0 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class td extends TextWidgetPainter {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -151,7 +151,7 @@ final class ChatOverlay {
           param2.setTiming(false, 25, 12, 150);
           param2.a(1, aaa.a(false) / 3);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ila.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ila.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class ChatOverlay {
               }
               PushableBlockMazeComponent.field_L = false;
               if (var6 != null) {
-                mp.a(var6, di.a(41), -21407);
+                mp.writeSettingsCookie(var6, di.a(41), -21407);
               }
               if (0 >= ReportAbuseDialog.field_ub &&
                 !ai.field_a) {
@@ -396,7 +396,7 @@ final class ChatOverlay {
             } else {
               stackIn_111_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(',').append(param5).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -511,7 +511,7 @@ final class ChatOverlay {
         try {
           this.addMessage(param0, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ila.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ila.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

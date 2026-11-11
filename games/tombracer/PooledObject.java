@@ -16,7 +16,7 @@ abstract class PooledObject extends IntrusiveNode implements Renderable {
 
     abstract boolean isExpired(int param0);
 
-    final static boolean[] a(int param0, boolean[] param1, byte param2, BitPacketBuffer param3) {
+    final static boolean[] readBitFlags(int param0, boolean[] param1, byte param2, BitPacketBuffer param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -65,7 +65,7 @@ abstract class PooledObject extends IntrusiveNode implements Renderable {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

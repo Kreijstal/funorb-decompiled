@@ -24,7 +24,7 @@ final class ClampOperator extends TextureOperator {
           rv.field_c.setBounds(-24 + (VboVertexArray.field_k.field_G - 24), -20 + VboVertexArray.field_k.field_t - 24, -23776, 16, 24);
           BrickOperator.field_v.setBounds(80, 24, param1 ^ -26595, -24 + VboVertexArray.field_k.field_t - 20, 120);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wja.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wja.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class ClampOperator extends TextureOperator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -14,7 +14,7 @@ final class qba {
         return (param2 & 50560) != 0 ? true : false;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         if (param0) {
           field_c = 45;

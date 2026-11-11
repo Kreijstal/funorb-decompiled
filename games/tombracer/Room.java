@@ -64,7 +64,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 < -121) {
-            stackIn_4_0 = this.classifySupport(param4, 32238, param2, param3, this.collisionGrid.b(param4, -1, param3, param0, param1), param0, param1);
+            stackIn_4_0 = this.classifySupport(param4, 32238, param2, param3, this.collisionGrid.queryBox(param4, -1, param3, param0, param1), param0, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = -66;
@@ -79,7 +79,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           }
           this.soundQueue = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "la.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "la.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -293,7 +293,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             this.trapIdAllocator = (SwitchableIdAllocator) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "la.LC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "la.LC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -526,7 +526,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -573,7 +573,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             return stackIn_6_0;
           }
           var4_int = 0;
-          var5 = this.collisionGrid.a(param1, (byte) -103);
+          var5 = this.collisionGrid.querySegment(param1, (byte) -103);
           for (var6 = 0; var6 < var5.length; var6++) {
             var4_int = var4_int + var5[var6].applyBeamEffect(param2, 12, param1);
           }
@@ -595,7 +595,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -618,7 +618,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           var5_int = 0;
           var7 = 67 % ((param3 + 40) / 60);
           param1.blocked = false;
-          var6 = this.collisionGrid.a(param1, (byte) -68);
+          var6 = this.collisionGrid.querySegment(param1, (byte) -68);
           for (var8 = 0; var6.length > var8; var8++) {
             if (var6[var8].interceptsBeam(-1, param2, param0, param1)) {
               param1.blocked = true;
@@ -643,7 +643,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -690,7 +690,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             field_R = (AsyncRequest) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "la.KC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "la.KC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -809,7 +809,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             this.hasActiveVariant((byte) 66);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "la.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "la.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -838,7 +838,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -877,7 +877,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -922,7 +922,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           return (Trap[]) null;
         }
         var6 = new ObjectList();
-        var7 = this.collisionGrid.b(param1, -1, param4, param0, param3);
+        var7 = this.collisionGrid.queryBox(param1, -1, param4, param0, param3);
         for (var8_int = 0; var7.length > var8_int; var8_int++) {
           if (var7[var8_int] instanceof Trap) {
             var9 = (Trap) (var7[var8_int]);
@@ -1209,7 +1209,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -1231,7 +1231,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           if (param3 == 0) {
             return false;
           }
-          var14 = this.collisionGrid.b(param4, -1, param5, param8, param1);
+          var14 = this.collisionGrid.queryBox(param4, -1, param5, param8, param1);
           var10 = var14;
           if (param2 != 2) {
             Room.releaseStatics(-15);
@@ -1268,7 +1268,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param8).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -1299,7 +1299,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1315,7 +1315,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         try {
           this.corpses.copyFrom(23436, param0.recentDeaths);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "la.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "la.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1344,7 +1344,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1387,7 +1387,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           var4 = param1.getY(9648);
           var5 = param1.getWidth(param0 ^ -38);
           var6 = param1.getHeight((byte) 55);
-          var7 = this.collisionGrid.b(var4, param0 - 1, var3_int, var5, var6);
+          var7 = this.collisionGrid.queryBox(var4, param0 - 1, var3_int, var5, var6);
           var8 = this.classifySupport(var4, 32238, param1, var3_int, var7, var5, var6);
           var9 = this.mainSupporter;
           if (var8 != 0) {
@@ -1411,7 +1411,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -1465,7 +1465,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             return stackIn_3_0;
           }
           var7_int = 0;
-          var8 = this.collisionGrid.b(param1, -1, param5, param4, param3);
+          var8 = this.collisionGrid.queryBox(param1, -1, param5, param4, param3);
           var9 = 96 / ((82 - param0) / 41);
           for (var10 = 0; var10 < var8.length; var10++) {
             var7_int = var7_int + var8[var10].applyAreaEffect(param2, param4, param5, 0, param1, param3);
@@ -1482,7 +1482,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1662,7 +1662,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         RuntimeException decompiledCaughtException = null;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          var13 = this.collisionGrid.b(param0, -1, param5, param1, param4);
+          var13 = this.collisionGrid.queryBox(param0, -1, param5, param1, param4);
           var8 = var13;
           var9 = 0;
           for (var10 = param2; var13.length > var10; var10++) {
@@ -1683,7 +1683,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -1752,7 +1752,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1813,7 +1813,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             return stackIn_5_0;
           }
           var4_int = 0;
-          var5 = this.collisionGrid.a((byte) -26, param0);
+          var5 = this.collisionGrid.queryCollidable((byte) -26, param0);
           for (var6 = 0; var6 < var5.length; var6++) {
             var4_int = var4_int + var5[var6].applyProjectileEffect(param2, param0, -117);
           }
@@ -1835,7 +1835,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -1877,7 +1877,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           }
           var14_int = 0;
           var15 = 0;
-          var17 = this.collisionGrid.b(param10, -1, param7, param3, param6);
+          var17 = this.collisionGrid.queryBox(param10, -1, param7, param3, param6);
           if (param5 != 12) {
             stackIn_13_0 = -128;
             return stackIn_13_0;
@@ -1965,7 +1965,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -1981,7 +1981,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           }
           this.deathCount = this.deathCount + 1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "la.VB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "la.VB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2069,7 +2069,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

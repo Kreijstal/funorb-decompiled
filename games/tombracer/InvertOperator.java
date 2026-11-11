@@ -54,7 +54,7 @@ final class InvertOperator extends TextureOperator {
           field_n = (String) null;
         }
         IndexedSprite var1 = new IndexedSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[0], pg.field_C[0], mq.field_b[0], ImageProducerCanvasImageBuffer.field_m[0], ck.field_c[0], mga.field_g);
-        MazeGenerator.a((byte) 127);
+        MazeGenerator.releaseStatics((byte) 127);
         return var1;
     }
 
@@ -88,7 +88,7 @@ final class InvertOperator extends TextureOperator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -10,7 +10,7 @@ abstract class ka {
 
     abstract void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != -11) {
@@ -81,7 +81,7 @@ abstract class ka {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ abstract class ka {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -441,7 +441,7 @@ abstract class ka {
           } else {
             stackIn_108_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param11).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -478,7 +478,7 @@ abstract class ka {
           this.wa();
           this.b();
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ka.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ka.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

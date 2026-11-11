@@ -7,7 +7,7 @@ final class dn {
     static ToolkitSprite[] field_d;
     private static String[] field_c;
 
-    final static byte[] a(byte param0, String param1) {
+    final static byte[] loadFile(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
@@ -29,7 +29,7 @@ final class dn {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

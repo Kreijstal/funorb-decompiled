@@ -62,7 +62,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "wv.I(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wv.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -102,13 +102,13 @@ abstract class MenuScreen extends GameScreen {
               var6 = 0;
               if (this.field_k.isHomePressed(0) &&
                 tk.a(-22636) > 0) {
-                qfa.a(0, 20815);
+                qfa.applyMusicVolume(0, 20815);
                 var6 = 1;
               }
               if (this.field_k.isEndPressed(75) &&
                 tk.a(-22636) < CircleMovementLocomotor.e((byte) 71)) {
                 var6 = 1;
-                qfa.a(CircleMovementLocomotor.e((byte) 126), 20815);
+                qfa.applyMusicVolume(CircleMovementLocomotor.e((byte) 126), 20815);
               }
               if (this.field_k.isPointerHeld((byte) -128)) {
                 var8 = -24 + (aaa.a(false) >> 1);
@@ -126,12 +126,12 @@ abstract class MenuScreen extends GameScreen {
                 }
                 stackIn_44_0 = (~tk.a(-22636) == ~var10) ? 0 : 1;
                 var6 = stackIn_44_0;
-                qfa.a(var10, 20815);
+                qfa.applyMusicVolume(var10, 20815);
               }
               if (this.field_k.isLeftPressed(96) &&
                 0 < tk.a(-22636)) {
                 var6 = 1;
-                to.b(11);
+                to.lowerMusicVolume(11);
               }
               if (this.field_k.isRightPressed(94) &&
                 tk.a(-22636) < CircleMovementLocomotor.e((byte) 87)) {
@@ -194,7 +194,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4), "wv.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4), "wv.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wv.T(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wv.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -247,7 +247,7 @@ abstract class MenuScreen extends GameScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wv.F(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wv.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -279,7 +279,7 @@ abstract class MenuScreen extends GameScreen {
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (lca.a(false)) {
+          if (SnakePitTile.a(false)) {
             return;
           }
           var4_int = 0;
@@ -335,7 +335,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4_ref), "wv.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4_ref), "wv.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -352,7 +352,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wv.O(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wv.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -367,7 +367,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "wv.L(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "wv.L(" + param0 + ')');
         }
     }
 
@@ -390,7 +390,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wv.U(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wv.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -417,7 +417,7 @@ abstract class MenuScreen extends GameScreen {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -671,7 +671,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4), "wv.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4), "wv.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -724,7 +724,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wv.M(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wv.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -749,7 +749,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "wv.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wv.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -759,7 +759,7 @@ abstract class MenuScreen extends GameScreen {
             this.firstItemY = 36;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wv.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wv.B(" + param0 + ')');
         }
     }
 
@@ -776,7 +776,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "wv.S(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "wv.S(" + param0 + ')');
         }
     }
 
@@ -814,7 +814,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4), "wv.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4), "wv.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -897,7 +897,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3_ref), "wv.G(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3_ref), "wv.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -914,7 +914,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wv.P(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wv.P(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -929,7 +929,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wv.E(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wv.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -939,7 +939,7 @@ abstract class MenuScreen extends GameScreen {
             field_h = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wv.Q(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wv.Q(" + param0 + ')');
         }
     }
 
@@ -961,7 +961,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wv.N(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wv.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -978,7 +978,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "wv.D(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "wv.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -994,7 +994,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "wv.K(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "wv.K(" + param0 + ')');
         }
     }
 
@@ -1045,7 +1045,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4), "wv.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4), "wv.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1180,7 +1180,7 @@ abstract class MenuScreen extends GameScreen {
           } else {
             stackIn_67_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(')').toString());
         }
     }
 

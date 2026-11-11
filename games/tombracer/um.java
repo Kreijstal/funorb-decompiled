@@ -6,7 +6,7 @@ class um extends DualLinkNode {
     static byte[] field_m;
     static mpa field_l;
 
-    final static vb a(int param0, int param1, u param2, int param3, int param4) {
+    final static vb playSampleDelayed(int param0, int param1, u param2, int param3, int param4) {
         PcmSampleStream var5 = null;
         RuntimeException var5_ref = null;
         DelayedPcmStream var6 = null;
@@ -37,7 +37,7 @@ class um extends DualLinkNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -48,7 +48,7 @@ class um extends DualLinkNode {
         if (~param2 != param1) {
           return epa.field_r[param2];
         }
-        if (OpenGlRenderbuffer.a(param1 + 1, param0)) {
+        if (OpenGlRenderbuffer.isLeapYear(param1 + 1, param0)) {
           return 29;
         }
         return epa.field_r[param2];

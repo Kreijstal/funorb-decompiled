@@ -51,7 +51,7 @@ final class ProxySocketConnector extends SocketConnector {
             return stackIn_14_0;
           }
           if (param2 == 9) {
-            stackIn_17_0 = nta.field_e;
+            stackIn_17_0 = MonsterRemains.field_e;
             return stackIn_17_0;
           }
           if (param2 == 10) {
@@ -65,7 +65,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (14 != param2) {
             return null;
           }
-          stackIn_28_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(92, IntPoint.field_e, new String[]{param0});
+          stackIn_28_0 = LegacyOpenGlFlowingWaterEffect.formatText(92, IntPoint.field_e, new String[]{param0});
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,7 +77,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -98,11 +98,11 @@ final class ProxySocketConnector extends SocketConnector {
                 baa.field_d.a(0, new ei[]{(ei) ((Object) UsernameSuggestionsPanel.field_x)});
               } else {
                 if (UsernameSuggestionsPanel.field_x != var1) {
-                  if (var1 == daa.field_d) {
+                  if (var1 == CharacterSelection.field_d) {
                     baa.field_d.a(0, new ei[]{(ei) ((Object) kra.field_a)});
                   }
                 } else {
-                  baa.field_d.a(0, new ei[]{(ei) ((Object) daa.field_d)});
+                  baa.field_d.a(0, new ei[]{(ei) ((Object) CharacterSelection.field_d)});
                 }
               }
             }
@@ -320,7 +320,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

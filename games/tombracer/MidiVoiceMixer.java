@@ -55,10 +55,10 @@ final class MidiVoiceMixer extends PcmStream {
         LoadProfileCommand.field_r = param0 ? true : false;
         gj.field_r = true;
         ej.field_a.e(true);
-        vn.a(86, KeySwitchComponent.field_M, false);
+        vn.showMessageDialog(86, KeySwitchComponent.field_M, false);
     }
 
-    final static void a(byte param0, String param1, java.awt.Color param2, int param3, boolean param4) {
+    final static void drawAwtLoadingBar(byte param0, String param1, java.awt.Color param2, int param3, boolean param4) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -146,7 +146,7 @@ final class MidiVoiceMixer extends PcmStream {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class MidiVoiceMixer extends PcmStream {
                 param2.field_x = PcmSampleStream.create(param2.field_n, param2.field_x.getStepMagnitude(), param2.field_x.getVolume(), param2.field_x.getPan());
               }
               if (param2.field_y.field_g[param2.field_m] < 0) {
-                param2.field_x.b(-1);
+                param2.field_x.setLoopCount(-1);
               }
               param1 = param2.field_r / var4_int;
             }
@@ -200,7 +200,7 @@ final class MidiVoiceMixer extends PcmStream {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class MidiVoiceMixer extends PcmStream {
                 param3.field_x = PcmSampleStream.create(param3.field_n, var11.getStepMagnitude(), var11.getVolume(), var11.getPan());
               }
               if (param3.field_y.field_g[param3.field_m] < 0) {
-                param3.field_x.b(-1);
+                param3.field_x.setLoopCount(-1);
               }
               var11.fadeOut(var9);
               var11.fill(param2, param1, param0 - param1);
@@ -286,7 +286,7 @@ final class MidiVoiceMixer extends PcmStream {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ final class MidiVoiceMixer extends PcmStream {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class MidiVoiceMixer extends PcmStream {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "et.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "et.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

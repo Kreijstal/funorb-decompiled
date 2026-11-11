@@ -33,7 +33,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
           this.musicVolume = param0.readBits((byte) 44, 8);
           param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dba.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dba.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
           ala.a((byte) -30, ura.field_b, UnlockOverlay.field_l, OpenGlToolkit.field_jc);
           fga.a(0, false, 0, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dba.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dba.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
             C2SSubmitSettingsPacket.a((java.awt.Canvas) null, (byte) 16);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dba.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dba.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

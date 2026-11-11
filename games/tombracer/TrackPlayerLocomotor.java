@@ -95,7 +95,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           this.field_q = this.a(param1.readBits((byte) 44, 8), false);
           this.field_p = param1.readBits((byte) 44, 10) << 16;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           var4 = Corpse.field_i.field_H.countWrappedLines(param1, 500);
           var5 = 6 + Corpse.field_i.field_H.getWrappedWidth(param1, 500);
           var6 = di.field_a * var4 + 2;
-          var7 = bt.a((byte) -8, var5, 12, var2_int);
+          var7 = PitSnakeModel.a((byte) -8, var5, 12, var2_int);
           var8 = hsa.a(20, var6, var3, (byte) -107);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
@@ -130,7 +130,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           }
           Corpse.field_i.field_H.drawParagraph(param1, var7 + 3, -Corpse.field_i.field_H.field_w + (hsa.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hia.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hia.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           param0.writeBits((byte) -125, this.b(0, this.field_q), 8);
           param0.writeBits((byte) -128, this.field_p >> 16, 10);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hia.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hia.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

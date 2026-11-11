@@ -89,7 +89,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
           this.phase = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "qh.GB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "qh.GB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class MatchScreen extends GameScreen implements rqa {
           this.a(this.matchState.field_g[0], 5, this.matchState.field_F[0]);
           var4 = uca.cosmeticRandom.nextBounded(7, param2 - 15283);
           PlayerViewport.field_b = PlayerViewport.field_b + var4;
-          nta.field_h = nta.field_h + var4;
+          MonsterRemains.field_h = MonsterRemains.field_h + var4;
           var4Lifetime1 = uca.cosmeticRandom.nextBounded(7, 0);
           CommonChooseReward.field_b = CommonChooseReward.field_b + (long)var4Lifetime1;
           ClientMemoryVertexArray.field_f = ClientMemoryVertexArray.field_f + (long)var4Lifetime1;
@@ -205,7 +205,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
         } else {
           if (TextWidgetPainter.a(80)) {
-            GameClock.field_b = qca.a((byte) 13, CharacterChoiceFactory.field_e);
+            GameClock.field_b = qca.hasNonZeroEntry((byte) 13, CharacterChoiceFactory.field_e);
             stackIn_8_0 = !(this.n((byte) 19) <= 0);
             uma.field_c = stackIn_8_0;
             SoftwareTransform3D.field_p = stackIn_8_0;
@@ -396,7 +396,7 @@ final class MatchScreen extends GameScreen implements rqa {
           CommonChooseReward.field_b = 1180282300L;
           MidiVoiceMixer.field_j = 17219L;
           PlayerViewport.field_b = 1727002282;
-          nta.field_h = -2073743619;
+          MonsterRemains.field_h = -2073743619;
           PlayTrackCommand.field_o = 17825;
           ClientMemoryVertexArray.field_f = 2023746978L;
           nb.field_c = 22238L;
@@ -438,7 +438,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -493,7 +493,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -522,7 +522,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -622,7 +622,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -643,7 +643,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!this.matchState.hasLeft(param1 ^ -28, var3) &&
             (1 << var3 & param0) > 0) {
             this.matchState.markLeft((byte) -95, var3);
-            var4 = BannerCommand.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(87, RemovedFromGameMenu.field_r, new String[]{this.getPlayerName(var3, false)}), (byte) -72);
+            var4 = BannerCommand.a(LegacyOpenGlFlowingWaterEffect.formatText(87, RemovedFromGameMenu.field_r, new String[]{this.getPlayerName(var3, false)}), (byte) -72);
             iqa.field_c.addMessageNow(param1 + 23, var4);
           }
         }
@@ -768,7 +768,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!this.matchState.hasResigned((byte) -93, var3) &&
             (param1 & 1 << var3) > 0) {
             this.matchState.markResigned(param0 ^ 4, var3);
-            var4 = BannerCommand.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
+            var4 = BannerCommand.a(LegacyOpenGlFlowingWaterEffect.formatText(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
             iqa.field_c.addMessageNow(0, var4);
           }
           var3++;
@@ -808,7 +808,7 @@ final class MatchScreen extends GameScreen implements rqa {
         var9Lifetime1 = var5;
         if (var8_intLifetime1 != var9Lifetime1) {
           if (uca.cosmeticRandom.nextBounded(2, 0) == 0) {
-            nta.field_h = nta.field_h - OpenGlToolkit.field_Z * (-var9Lifetime1 + var8_intLifetime1);
+            MonsterRemains.field_h = MonsterRemains.field_h - OpenGlToolkit.field_Z * (-var9Lifetime1 + var8_intLifetime1);
           } else {
             PlayerViewport.field_b = PlayerViewport.field_b + OpenGlToolkit.field_Z * (var8_intLifetime1 - var9Lifetime1);
           }
@@ -931,7 +931,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -960,7 +960,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1017,7 +1017,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -1075,12 +1075,12 @@ final class MatchScreen extends GameScreen implements rqa {
           this.isInPlayPhase(63);
         }
         if (this.matchState.hasFinishedCourse((byte) 90, param1)) {
-          var3 = RewardChoicePhase.createTextMessage(-41, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(124, ara.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
+          var3 = RewardChoicePhase.createTextMessage(-41, LegacyOpenGlFlowingWaterEffect.formatText(124, ara.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.formatTime(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
         } else {
           if (this.matchState.hasTimedOut((byte) -66, param1)) {
-            var3 = RewardChoicePhase.createTextMessage(-79, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(107, hu.field_a, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.a(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
+            var3 = RewardChoicePhase.createTextMessage(-79, LegacyOpenGlFlowingWaterEffect.formatText(107, hu.field_a, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.formatTime(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
           } else {
-            var3 = RewardChoicePhase.createTextMessage(-108, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(99, DisplaySettingsDialog.field_Q, new String[]{this.getColouredPlayerName(param1, 9)}));
+            var3 = RewardChoicePhase.createTextMessage(-108, LegacyOpenGlFlowingWaterEffect.formatText(99, DisplaySettingsDialog.field_Q, new String[]{this.getColouredPlayerName(param1, 9)}));
           }
         }
         iqa.field_c.addMessageNow(0, var3);
@@ -1154,7 +1154,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
           this.setPhase(6, new ResultsPhase(this, this.protocol, param0));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "qh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "qh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1194,7 +1194,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -1309,7 +1309,7 @@ final class MatchScreen extends GameScreen implements rqa {
           dupTemp$1 = "<col=" + PasswordValidator.field_k[var5] + ">" + var6 + "</col>";
           var9 = dupTemp$1;
           var6Lifetime1 = dupTemp$1;
-          stackIn_3_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(84, var9, new String[]{var7});
+          stackIn_3_0 = LegacyOpenGlFlowingWaterEffect.formatText(84, var9, new String[]{var7});
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1321,7 +1321,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1418,7 +1418,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1434,7 +1434,7 @@ final class MatchScreen extends GameScreen implements rqa {
 
     final void onCharacterChoice(int param0, int param1, int param2) {
         if (this.phase instanceof CharacterSelectPhase) {
-          ((CharacterSelectPhase) (this.phase)).a(param2, 0, param0);
+          ((CharacterSelectPhase) (this.phase)).onCharacterChosen(param2, 0, param0);
         }
         int var4 = 25 % ((param1 - 54) / 49);
     }

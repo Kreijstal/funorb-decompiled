@@ -12,7 +12,7 @@ final class SkeletonComponent extends dna {
         RuntimeException decompiledCaughtException = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!ej.a(false, param0, param1)) {
+          if (!ej.isValidDisplayName(false, param0, param1)) {
             return false;
           }
           var3_int = 0;
@@ -23,7 +23,7 @@ final class SkeletonComponent extends dna {
               }
               return false;
             }
-            if (SwitchComponent.a(false, param1.charAt(var3_int))) {
+            if (SwitchComponent.isNameCharacter(false, param1.charAt(var3_int))) {
               var3_int++;
               continue;
             }
@@ -40,7 +40,7 @@ final class SkeletonComponent extends dna {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class SkeletonComponent extends dna {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class SkeletonComponent extends dna {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "lg.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "lg.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

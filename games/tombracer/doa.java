@@ -31,7 +31,7 @@ final class doa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -39,7 +39,7 @@ final class doa {
         if (param0 != 2) {
           return -126;
         }
-        return gqa.a(param2, (byte) 24, param1 >> 8) << 8;
+        return gqa.multiplyFixed(param2, (byte) 24, param1 >> 8) << 8;
     }
 
     final static RoomDefinition b(int param0, int param1, int param2) {
@@ -79,7 +79,7 @@ final class doa {
           }
           discarded$4 = new tj(this.field_a, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "doa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "doa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

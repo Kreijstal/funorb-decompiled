@@ -4,7 +4,7 @@
 final class qt {
     static BitmapFont field_a;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -25809) {
           AccountRegistrationPanel var2 = (AccountRegistrationPanel) null;
@@ -183,7 +183,7 @@ final class qt {
                 WhiteLightSensorComponent.field_K.put(-1, var4, (long)var3);
               }
               ed.a(32, var4, true, var1);
-              cua.a(var4, (byte) 80);
+              cua.insertSorted(var4, (byte) 80);
               return;
             }
             if (var2 == 9) {
@@ -225,7 +225,7 @@ final class qt {
                     var17_ref.field_Ib = var4_intLifetime1;
                   }
                   var14.field_gc = false;
-                  cua.a(var17_ref, (byte) 48);
+                  cua.insertSorted(var17_ref, (byte) 48);
                 }
                 return;
               }
@@ -346,7 +346,7 @@ final class qt {
             } else {
               var25.field_Sb = true;
             }
-            cua.a(var25, (byte) -97);
+            cua.insertSorted(var25, (byte) -97);
             return;
           }
           var3_ref_pha = (pha) (qha.field_g.first(-80));
@@ -406,7 +406,7 @@ final class qt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1_ref), "qt.D(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1_ref), "qt.D(" + param0 + ')');
         }
     }
 
@@ -442,7 +442,7 @@ final class qt {
           QuickChatPhraseDefinition.field_n = param2;
           ConstraintLocomotor.field_p = param4;
           PlantModel.field_n = null;
-          faa.field_g = param3;
+          BridgeTile.field_g = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -472,7 +472,7 @@ final class qt {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
         }
     }
 

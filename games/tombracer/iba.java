@@ -11,14 +11,14 @@ public class iba {
     private static int field_a;
     private static Hashtable field_d;
 
-    public static File a(String param0, byte param1) {
+    public static File resolveDefaultCacheFile(String param0, byte param1) {
         if (param1 > -67) {
           return (File) null;
         }
-        return iba.a(field_e, param0, 0, field_a);
+        return iba.resolveCacheFile(field_e, param0, 0, field_a);
     }
 
-    public static void a(int param0, int param1, String param2) {
+    public static void initCacheDirectory(int param0, int param1, String param2) {
         int var3_int = 0;
         Exception var3 = null;
         Throwable decompiledCaughtException = null;
@@ -47,7 +47,7 @@ public class iba {
         field_c = "~/";
     }
 
-    public static File a(String param0, String param1, int param2, int param3) {
+    public static File resolveCacheFile(String param0, String param1, int param2, int param3) {
         return net.alterorb.launcher.Hook.cacheRedirect(param0, param1);
     }
 

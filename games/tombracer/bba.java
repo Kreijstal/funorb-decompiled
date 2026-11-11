@@ -64,7 +64,7 @@ final class bba {
         RuntimeException var20 = null;
         try {
           SingleChildWidget.a(false, param16, param18, param11, param14);
-          gj.a(param14, true);
+          gj.loadBasicSprites(param14, true);
           if (param6 <= 15) {
             return;
           }
@@ -168,7 +168,7 @@ final class bba {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class bba {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

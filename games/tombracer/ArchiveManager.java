@@ -50,10 +50,10 @@ final class ArchiveManager {
           return true;
         }
         if (null == this.field_b) {
-          if (this.field_h.d(-21)) {
+          if (this.field_h.isUrgentQueueFull(-21)) {
             return false;
           }
-          this.field_b = this.field_h.a(255, true, 255, -21, (byte) 0);
+          this.field_b = this.field_h.queueRequest(255, true, 255, -21, (byte) 0);
         }
         if (this.field_b.field_m) {
           return false;
@@ -201,7 +201,7 @@ final class ArchiveManager {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -255,8 +255,8 @@ final class ArchiveManager {
           this.field_h = param0;
           this.field_a = param3;
           this.field_c = param1;
-          if (!this.field_h.d(-21)) {
-            this.field_b = this.field_h.a(255, true, 255, -21, (byte) 0);
+          if (!this.field_h.isUrgentQueueFull(-21)) {
+            this.field_b = this.field_h.queueRequest(255, true, 255, -21, (byte) 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -287,7 +287,7 @@ final class ArchiveManager {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

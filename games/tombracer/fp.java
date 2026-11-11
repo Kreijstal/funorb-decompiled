@@ -23,7 +23,7 @@ final class fp {
         throw new IllegalStateException();
     }
 
-    final static void a(String param0, int param1, ResourceArchive param2, byte param3) {
+    final static void loadTitleSprites(String param0, int param1, ResourceArchive param2, byte param3) {
         int var5_int = 0;
         int var9_int = 0;
         int var12_int = 0;
@@ -39,7 +39,7 @@ final class fp {
         GameAssetLoader var16_ref = (GameAssetLoader) (dma.field_l);
         int var10_intLifetime1;
         int var11_intLifetime1;
-        var16_ref.a(param1, (byte) 47, param0);
+        var16_ref.drawLoadingProgress(param1, (byte) 47, param0);
         ArrayWidgetGroup.field_v = SpriteData.loadSprite(param2, "", "title");
         eta.field_a = new SpriteData[6][];
         eta.field_a[0] = new SpriteData[1];
@@ -56,7 +56,7 @@ final class fp {
         eta.field_a[5][0] = SpriteData.loadSprite(param2, "", "billboard_gas");
         int incrementValue$0 = param1;
         param1++;
-        var16_ref.a(incrementValue$0, (byte) 47, param0);
+        var16_ref.drawLoadingProgress(incrementValue$0, (byte) 47, param0);
         ColourFillOperator.field_p = new SpriteData[6];
         ColourFillOperator.field_p[0] = SpriteData.loadSprite(param2, "", "menu_button_sml");
         ColourFillOperator.field_p[1] = SpriteData.loadSprite(param2, "", "menu_button_mid");
@@ -66,7 +66,7 @@ final class fp {
         ColourFillOperator.field_p[5] = SpriteData.loadSprite(param2, "", "button_main2");
         int incrementValue$1 = param1;
         param1++;
-        var16_ref.a(incrementValue$1, (byte) 47, param0);
+        var16_ref.drawLoadingProgress(incrementValue$1, (byte) 47, param0);
         dna.field_F = SpriteData.loadSprite(param2, "", "bg_slab");
         RoundWinnerPhase.field_p = SpriteData.loadSheet(param2, "", "inset_frame");
         tba.field_f = SpriteData.loadSheet(param2, "", "keys");
@@ -115,7 +115,7 @@ final class fp {
         }
         int incrementValue$2 = param1;
         param1++;
-        var16_ref.a(incrementValue$2, (byte) 47, param0);
+        var16_ref.drawLoadingProgress(incrementValue$2, (byte) 47, param0);
         ara.field_vb = SpriteData.loadSprite(param2, "", "hud_score");
         tla.field_g = SpriteData.loadSprite(param2, "", "hud_room");
         CharacterChoice.field_c = SpriteData.loadSprite(param2, "", "hud_timer");
@@ -130,7 +130,7 @@ final class fp {
         nm.field_i = SpriteData.loadSprite(param2, "", "map_room");
         int incrementValue$3 = param1;
         param1++;
-        var16_ref.a(incrementValue$3, (byte) 47, param0);
+        var16_ref.drawLoadingProgress(incrementValue$3, (byte) 47, param0);
         WidgetStyleLayer.field_f = SpriteData.loadSheet(param2, "", "achievements");
         MatchStatistics.field_g = SpriteData.loadSprite(PitComponent.field_G, "basic", "unachieved");
         aa.field_a = SpriteData.loadSprite(param2, "", "map_routedot");
@@ -140,7 +140,7 @@ final class fp {
         TimeSwitchBehaviour.field_n = SpriteData.loadSprite(param2, "", "map_locationdot");
         int incrementValue$4 = param1;
         param1++;
-        var16_ref.a(incrementValue$4, (byte) 47, param0);
+        var16_ref.drawLoadingProgress(incrementValue$4, (byte) 47, param0);
         WallCrusherComponent.field_F = new SpriteData[9];
         WallCrusherComponent.field_F[0] = SpriteData.loadSprite(param2, "", "map_set1");
         WallCrusherComponent.field_F[1] = SpriteData.loadSprite(param2, "", "map_set2a");
@@ -153,7 +153,7 @@ final class fp {
         WallCrusherComponent.field_F[8] = SpriteData.loadSprite(param2, "", "map_set5");
         int incrementValue$5 = param1;
         param1++;
-        var16_ref.a(incrementValue$5, (byte) 47, param0);
+        var16_ref.drawLoadingProgress(incrementValue$5, (byte) 47, param0);
         LegacyOpenGlCubeTexture.field_l = SpriteData.loadSprite(param2, "", "silhoutte");
         baa.field_g = SpriteData.loadSprite(param2, "", "slab_small1");
         FullscreenConfirmationDialog.field_O = SpriteData.loadSprite(param2, "", "slab_small2");
@@ -162,7 +162,7 @@ final class fp {
         vua.field_y = SpriteData.loadSprite(param2, "", "slab_medium");
         int incrementValue$6 = param1;
         param1++;
-        var16_ref.a(incrementValue$6, (byte) 47, param0);
+        var16_ref.drawLoadingProgress(incrementValue$6, (byte) 47, param0);
         Effect.field_e = new SpriteData[7];
         Effect.field_e[0] = SpriteData.loadSprite(param2, "", "reward_coin");
         Effect.field_e[1] = SpriteData.loadSprite(param2, "", "reward_moneybag");
@@ -174,7 +174,7 @@ final class fp {
         MenuInputState.field_j = SpriteData.loadSprite(param2, "", "podium");
         int incrementValue$7 = param1;
         param1++;
-        var16_ref.a(incrementValue$7, (byte) 47, param0);
+        var16_ref.drawLoadingProgress(incrementValue$7, (byte) 47, param0);
         ht.field_Db = SpriteData.loadSprite(param2, "", "options_bar_empty");
         RenderableNode.field_j = SpriteData.loadSprite(param2, "", "options_bar_full");
         ResourceArchive.field_h = SpriteData.loadSprite(param2, "", "button_music");
@@ -204,12 +204,12 @@ final class fp {
           hka.field_c = var11[var13];
           incrementValue$8 = param1;
           param1++;
-          var16_ref.a(incrementValue$8, (byte) 47, param0);
+          var16_ref.drawLoadingProgress(incrementValue$8, (byte) 47, param0);
           MaskBlendOperator.a(PitComponent.field_G, "basic", "orbcoin", -121);
           MatchState.field_p = MaskBlendOperator.a(param2, "", "lobby_game_logo", -119);
-          RoundWinnerPhase.field_m = BoulderComponent.a(param2, "", 5, "lobby_icons");
+          RoundWinnerPhase.field_m = BoulderComponent.loadSpritesByName(param2, "", 5, "lobby_icons");
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ final class fp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "fp.C(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "fp.C(" + param0 + ')');
         }
     }
 
@@ -343,7 +343,7 @@ final class fp {
           return;
         }
         int var2 = aq.a(-5640);
-        int var3 = BufferedSocket.a(2147483647, new Random(), 45);
+        int var3 = BufferedSocket.randomBelow(2147483647, new Random(), 45);
         cs.field_c = new MatchScreen(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, new qha(var3));
         cs.field_c.k((byte) -25);
         wka.field_d = true;

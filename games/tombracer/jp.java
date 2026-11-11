@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class jp extends ota {
-    final static void a(ResourceArchive param0, byte param1) {
+    final static void loadFinalFrame(ResourceArchive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         Sprite var2 = new Sprite(param0.getFileByName("final_frame.jpg", (byte) 114, ""), (java.awt.Component) ((Object) nma.field_l));
@@ -22,7 +22,7 @@ abstract class jp extends ota {
           Player.field_W.field_p = bra.field_O.field_q;
           pfa.a(1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "jp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "jp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

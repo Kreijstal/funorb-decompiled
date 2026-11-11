@@ -19,7 +19,7 @@ class hga extends TextWidgetPainter {
           }
           super.paintWidget(param0, param1, param2 + 0, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ class hga extends TextWidgetPainter {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_w, -1, 2147483647, false);
     }
 
-    final static void a(boolean param0, byte[] param1) {
+    final static void parseRoomData(boolean param0, byte[] param1) {
         int var11_int = 0;
         int var15_int = 0;
         int var18 = 0;
@@ -207,7 +207,7 @@ class hga extends TextWidgetPainter {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(')').toString());
         }
     }
 

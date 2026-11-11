@@ -51,7 +51,7 @@ final class gqa {
         return 11;
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int multiplyFixed(int param0, byte param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -86,7 +86,7 @@ final class gqa {
             field_a = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "gqa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gqa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class gqa {
           this.field_b = param3;
           this.field_h = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "gqa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gqa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

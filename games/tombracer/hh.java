@@ -22,7 +22,7 @@ final class hh {
         SimpleMoveLocomotor.field_s.b(108, param1);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_a = null;
         if (param0) {

@@ -6,7 +6,7 @@ class ql extends DualLinkNode {
     static String[] field_m;
     static float field_l;
 
-    final static vb a(int param0, u param1, byte param2, int param3, int param4) {
+    final static vb playSample(int param0, u param1, byte param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         vb stackIn_1_0 = null;
@@ -16,7 +16,7 @@ class ql extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 28 % ((param2 + 76) / 32);
-          stackIn_1_0 = pea.a(PcmSampleStream.createAtRateAndPan(param1, param0, param3, param4), 1);
+          stackIn_1_0 = pea.playSampleStream(PcmSampleStream.createAtRateAndPan(param1, param0, param3, param4), 1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -28,7 +28,7 @@ class ql extends DualLinkNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ class ql extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ql.A(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ql.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ class ql extends DualLinkNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

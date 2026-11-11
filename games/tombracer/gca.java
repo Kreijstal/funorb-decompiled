@@ -50,7 +50,7 @@ final class gca {
           this.field_c = param1.field_c;
           this.field_m = param1.field_m;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "gca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -40,12 +40,12 @@ final class ResourceArchive {
           }
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var6, -12754), 1);
+          var4_int = this.field_i.field_b.a(HardwareUnlitEffect.hashString(var6, -12754), 1);
           if (!this.isGroupValid(-1, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.a(var7, -12754), 1);
+          var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.hashString(var7, -12754), 1);
           stackIn_10_0 = this.a(var4_int, (byte) -126, var5);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,11 +64,11 @@ final class ResourceArchive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_f = null;
         field_e = null;
@@ -138,7 +138,7 @@ final class ResourceArchive {
             this.a((String) null, true);
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var5, -12754), 1);
+          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.hashString(var5, -12754), 1);
           if (var3_int >= 0) {
             return true;
           }
@@ -153,7 +153,7 @@ final class ResourceArchive {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.field_i.field_e[param2].a(HardwareUnlitEffect.a(var5, -12754), 1);
+          var4_int = this.field_i.field_e[param2].a(HardwareUnlitEffect.hashString(var5, -12754), 1);
           if (this.isValidFileSlot(param2, var4_int, (byte) -75)) {
             stackIn_9_0 = var4_int;
             return stackIn_9_0;
@@ -244,7 +244,7 @@ final class ResourceArchive {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -419,7 +419,7 @@ final class ResourceArchive {
             stackIn_35_0 = var12_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param1 != null);
-            throw tba.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var10.length).append(" ").append(sq.a(var10.length, var10, (byte) -103)).append(" ").append(sq.a(-2 + var10.length, var10, (byte) -99)).append(" ").append(this.field_i.field_j[param0]).append(" ").append(this.field_i.field_d).toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var10.length).append(" ").append(sq.a(var10.length, var10, (byte) -103)).append(" ").append(sq.a(-2 + var10.length, var10, (byte) -99)).append(" ").append(this.field_i.field_j[param0]).append(" ").append(this.field_i.field_d).toString());
           }
           if (this.field_g) {
             this.field_a[param0] = null;
@@ -545,7 +545,7 @@ final class ResourceArchive {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -615,12 +615,12 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var6, -12754), 1);
+          var4_int = this.field_i.field_b.a(HardwareUnlitEffect.hashString(var6, -12754), 1);
           if (var4_int < param2) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.a(var7, -12754), 1);
+          var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.hashString(var7, -12754), 1);
           if (0 <= var5) {
             return true;
           }
@@ -641,7 +641,7 @@ final class ResourceArchive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -691,7 +691,7 @@ final class ResourceArchive {
             return stackIn_5_0;
           }
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var4, -12754), param1 ^ -7767);
+          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.hashString(var4, -12754), param1 ^ -7767);
           if (this.isGroupValid(param1 ^ 7767, var3_int)) {
             return var3_int;
           }
@@ -707,7 +707,7 @@ final class ResourceArchive {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -729,7 +729,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var4, -12754), 1);
+          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.hashString(var4, -12754), 1);
           stackIn_8_0 = this.ensureGroupLoaded(var3_int, -2);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -742,7 +742,7 @@ final class ResourceArchive {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -768,7 +768,7 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var6, -12754), 1);
+          var4_int = this.field_i.field_b.a(HardwareUnlitEffect.hashString(var6, -12754), 1);
           if (!this.isGroupValid(-1, var4_int)) {
             return null;
           }
@@ -776,7 +776,7 @@ final class ResourceArchive {
             this.areAllGroupsAvailable(((int[]) (this.field_a[12]))[21]);
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.a(var7, -12754), 1);
+          var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.hashString(var7, -12754), 1);
           stackIn_9_0 = this.a(false, var4_int, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -795,7 +795,7 @@ final class ResourceArchive {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -882,7 +882,7 @@ final class ResourceArchive {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.a((Throwable) (stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) (stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -914,7 +914,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.a(var4, -12754), 1);
+          var3_int = this.field_i.field_b.a(HardwareUnlitEffect.hashString(var4, -12754), 1);
           stackIn_6_0 = this.getGroupProgress(var3_int, (byte) 119);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -927,7 +927,7 @@ final class ResourceArchive {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -965,7 +965,7 @@ final class ResourceArchive {
           this.field_d = param0;
           this.field_g = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

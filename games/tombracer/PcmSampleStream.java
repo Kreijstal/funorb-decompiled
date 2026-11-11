@@ -370,7 +370,7 @@ final class PcmSampleStream extends PcmStream {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
-          this.e(0);
+          this.setVolume(0);
           this.unlink(84);
           return;
         }
@@ -887,7 +887,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized int g() {
+    final synchronized int getTargetPan() {
         return this.field_o < 0 ? -1 : this.field_o + 32 >> 6;
     }
 
@@ -1139,11 +1139,11 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final synchronized void b(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_j = param0;
     }
 
-    final synchronized void e(int param0) {
+    final synchronized void setVolume(int param0) {
         this.a(param0, this.getPan());
     }
 
@@ -1280,7 +1280,7 @@ final class PcmSampleStream extends PcmStream {
         return param1 < 0 ? -param0 : (int)((double)param0 * Math.sqrt((double)param1 * 0.0001220703125) + 0.5);
     }
 
-    final synchronized int k() {
+    final synchronized int getTargetVolume() {
         return this.field_q == -2147483648 ? 0 : this.field_q + 32 >> 6;
     }
 

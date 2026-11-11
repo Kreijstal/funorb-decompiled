@@ -55,7 +55,7 @@ final class cla extends DualLinkNode {
           this.field_p = param2 * param1;
           this.field_k = this.field_l.field_l.createPbuffer(param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -81,14 +81,14 @@ final class cla extends DualLinkNode {
         return LegacyRidgedWaterNoise.a(uca.field_d, -1);
     }
 
-    final static void f(int param0) {
+    final static void initConsole(int param0) {
         TripBeamComponent.b(1, param0);
         SoftwareRasterizer.clear();
         fp.a(122);
         if (!(ld.field_e < 2)) {
           HelloCommand.field_o = new FunOrbConsole(jk.createConsoleMethods((byte) 122), o.field_d, dsa.field_c);
-          aca.a(HelloCommand.field_o, 19711);
-          aca.a(oq.a((byte) 124), 19711);
+          aca.addShellListenerFirst(HelloCommand.field_o, 19711);
+          aca.addShellListenerFirst(oq.getSharedShellListener((byte) 124), 19711);
         }
         if (TextWidgetPainter.a(83)) {
           UrlDownloadRequest.a((byte) -59);

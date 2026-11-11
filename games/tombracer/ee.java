@@ -23,7 +23,7 @@ final class ee implements WidgetPainter {
             var8.drawAdditive(1 + var6_int + (-var8.field_n + param0.field_m >> 1), var7 + 1 + (-var8.field_k + param0.field_p >> 1), 256);
           }
           if (param2 != 16777215) {
-            ee.a(55);
+            ee.releaseStatics(55);
           }
           if (!param0.hasKeyboardFocus((byte) -34)) {
             return;
@@ -40,11 +40,11 @@ final class ee implements WidgetPainter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void a(int param0) {
+    final static void releaseStatics(int param0) {
         if (param0 != -1) {
           return;
         }

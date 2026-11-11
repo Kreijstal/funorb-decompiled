@@ -47,7 +47,7 @@ final class SnakePitBehaviour extends Behaviour {
             var14 = SimulationObserver.a(var11.g(0), 12, var13, var11.g(0), param2, var12, 2);
             if (var14 > 0) {
               var15 = wm.a(4096, var14, 15);
-              this.a(var8 + gqa.a(-var8 + var9, (byte) 24, var15), var6 + gqa.a(var7 - var6, (byte) 24, var15), var11, (byte) -102, param1);
+              this.a(var8 + gqa.multiplyFixed(-var8 + var9, (byte) 24, var15), var6 + gqa.multiplyFixed(var7 - var6, (byte) 24, var15), var11, (byte) -102, param1);
             }
           }
           stackIn_10_0 = 0;
@@ -68,7 +68,7 @@ final class SnakePitBehaviour extends Behaviour {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class SnakePitBehaviour extends Behaviour {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class SnakePitBehaviour extends Behaviour {
           this.d(param0);
           param1.setHandlesEffectType(26492, true, 3);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sea.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sea.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -212,7 +212,7 @@ final class SnakePitBehaviour extends Behaviour {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1_ref), "sea.P(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1_ref), "sea.P(" + param0 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class SnakePitBehaviour extends Behaviour {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -308,7 +308,7 @@ final class SnakePitBehaviour extends Behaviour {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -408,7 +408,7 @@ final class SnakePitBehaviour extends Behaviour {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

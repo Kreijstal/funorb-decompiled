@@ -96,7 +96,7 @@ final class ColourRowCache {
               var6 = apa.$cfr$intArgs$a$62abead39cee(-50, true, cna.field_b[var3_int]);
               var7 = Transform3D.field_a - (var6 >> 1);
               var4 = var4 + aqa.field_a;
-              if (CrusherBehaviour.a(param2, var6 + (S2CCharacterChoicePacket.field_a << 1), var7 - S2CCharacterChoicePacket.field_a, param0, FurnitureModel.field_n + (RenderLayer.field_d << 1), false, var4)) {
+              if (CrusherBehaviour.rectContainsPoint(param2, var6 + (S2CCharacterChoicePacket.field_a << 1), var7 - S2CCharacterChoicePacket.field_a, param0, FurnitureModel.field_n + (RenderLayer.field_d << 1), false, var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
@@ -111,7 +111,7 @@ final class ColourRowCache {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "fk.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "fk.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

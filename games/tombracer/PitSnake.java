@@ -194,7 +194,7 @@ final class PitSnake extends IntrusiveNode {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ final class PitSnake extends IntrusiveNode {
             var8 = this.field_r + param2;
             var9 = -var7Lifetime1 + param4.getX(3);
             var10 = -var8 + param4.getY(9648);
-            this.field_f = ConstrainToCircleLocomotor.a(var9, var10, -111);
+            this.field_f = ConstrainToCircleLocomotor.toDirection8(var9, var10, -111);
             this.field_l = true;
           }
           if (param0 <= 98) {
@@ -278,7 +278,7 @@ final class PitSnake extends IntrusiveNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -306,7 +306,7 @@ final class PitSnake extends IntrusiveNode {
           byte[] var2 = (byte[]) null;
           PitSnake.computeCrc32((byte[]) null, 116, 108, 51);
         }
-        if (daa.field_d != baa.field_d.field_i.field_b) {
+        if (CharacterSelection.field_d != baa.field_d.field_i.field_b) {
           return -1;
         }
         return 5;
@@ -386,7 +386,7 @@ final class PitSnake extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ final class PitSnake extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -424,7 +424,7 @@ final class PitSnake extends IntrusiveNode {
           }
           this.cooldownTicks = 50 + param0.getRandom(-120).nextBounded(50, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "aia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "aia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -464,12 +464,12 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var31 = var31 + di.field_a * var39Lifetime1;
               }
               if (var12.field_gc) {
-                var12.field_hc.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(123, LoadProfileCommand.field_o, new String[]{var32});
+                var12.field_hc.field_r = LegacyOpenGlFlowingWaterEffect.formatText(123, LoadProfileCommand.field_o, new String[]{var32});
                 var12.field_hc.setBounds(var12.field_G - 2 * mna.field_d, di.field_a, -23776, var31, mna.field_d);
                 var31 = var31 + di.field_a;
               }
               if (var12.field_Sb) {
-                var12.field_dc.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(121, SweeperMountComponent.field_I, new String[]{var32});
+                var12.field_dc.field_r = LegacyOpenGlFlowingWaterEffect.formatText(121, SweeperMountComponent.field_I, new String[]{var32});
                 var12.field_dc.setBounds(-(mna.field_d * 2) + var12.field_G, di.field_a, -23776, var31, mna.field_d);
                 var31 = var31 + di.field_a;
               }
@@ -566,7 +566,7 @@ final class PlayTrackCommand extends ConsoleMethod {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var7), "bh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) var7), "bh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -595,7 +595,7 @@ final class PlayTrackCommand extends ConsoleMethod {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

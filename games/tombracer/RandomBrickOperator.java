@@ -69,13 +69,13 @@ final class RandomBrickOperator extends TextureOperator {
           if (this.field_m <= 0) {
             stackIn_4_0 = 4096;
           } else {
-            stackIn_4_0 = 4096 - BufferedSocket.a(this.field_m, param6, 66);
+            stackIn_4_0 = 4096 - BufferedSocket.randomBelow(this.field_m, param6, 66);
           }
           var8_int = stackIn_4_0;
           var9 = this.field_u * this.field_o >> 12;
           stackIn_6_0 = this.field_o;
           if (var9 > 0) {
-            stackIn_7_1 = BufferedSocket.a(var9, param6, 83);
+            stackIn_7_1 = BufferedSocket.randomBelow(var9, param6, 83);
           } else {
             stackIn_7_1 = 0;
           }
@@ -217,11 +217,11 @@ final class RandomBrickOperator extends TextureOperator {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
-    final static int d(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2_int = 0;
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
@@ -239,7 +239,7 @@ final class RandomBrickOperator extends TextureOperator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "iia.E(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "iia.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -313,7 +313,7 @@ final class RandomBrickOperator extends TextureOperator {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -425,8 +425,8 @@ final class RandomBrickOperator extends TextureOperator {
           var20 = var47;
           var21 = new Random((long)this.field_x);
           while (true) {
-            var23 = var14 + BufferedSocket.a(-var14 + var15, var21, 126);
-            var24 = var16 + BufferedSocket.a(-var16 + var17, var21, 96);
+            var23 = var14 + BufferedSocket.randomBelow(-var14 + var15, var21, 126);
+            var24 = var16 + BufferedSocket.randomBelow(-var16 + var17, var21, 96);
             var25 = var8 + var23;
             if (LegacyOpenGlTurbulentTextureEffect.textureWidth < var25) {
               var25 = LegacyOpenGlTurbulentTextureEffect.textureWidth;
@@ -533,7 +533,7 @@ final class RandomBrickOperator extends TextureOperator {
             var12 = var13;
             var7 = var6;
             var13 = 0;
-            var6 = BufferedSocket.a(LegacyOpenGlTurbulentTextureEffect.textureWidth, var21, 71);
+            var6 = BufferedSocket.randomBelow(LegacyOpenGlTurbulentTextureEffect.textureWidth, var21, 71);
             var5 = var6 - var7;
             var8 = 0;
             var28Lifetime1 = var5;

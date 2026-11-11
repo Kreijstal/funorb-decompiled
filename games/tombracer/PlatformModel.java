@@ -12,7 +12,7 @@ final class PlatformModel extends TrapModel {
     private fla field_t;
     static boolean field_B;
     static int[][] field_A;
-    private eh[][] tiles;
+    private PlatformTile[][] tiles;
     private fla field_v;
     private int offsetX;
     private fla field_o;
@@ -32,7 +32,7 @@ final class PlatformModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ce.L(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ce.L(" + param0 + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class PlatformModel extends TrapModel {
           if (this.tiles != null) {
             for (var3_int = 0; this.columns > var3_int; var3_int++) {
               for (var4 = 0; var4 < this.rows; var4++) {
-                this.tiles[var3_int][var4].a(55);
+                this.tiles[var3_int][var4].buildAnimator(55);
               }
             }
             return;
@@ -70,7 +70,7 @@ final class PlatformModel extends TrapModel {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class PlatformModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ce.J(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ce.J(" + param0 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class PlatformModel extends TrapModel {
             stackIn_11_0 = stackIn_6_0;
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class PlatformModel extends TrapModel {
             stackIn_14_0 = stackIn_9_0;
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class PlatformModel extends TrapModel {
           }
           field_A = (int[][]) null;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ce.P(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ce.P(" + param0 + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class PlatformModel extends TrapModel {
         int var4 = 0;
         int var5 = 0;
         int var7 = 0;
-        eh var9 = null;
+        PlatformTile var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -232,7 +232,7 @@ final class PlatformModel extends TrapModel {
             this.buildSingleTile((byte) 95);
             return;
           }
-          this.tiles = new eh[this.columns][this.rows];
+          this.tiles = new PlatformTile[this.columns][this.rows];
           var5 = 1048576 + (-(this.body.getHeight((byte) 55) / 2) + var4);
           if (!param0) {
             this.field_o = (fla) null;
@@ -241,7 +241,7 @@ final class PlatformModel extends TrapModel {
             var7 = -(this.body.getWidth(-117) / 2) + (var3 + 1048576);
             for (var8 = 0; this.columns > var8; var8++) {
               boolean decompiledFrameRemainder0 = true;
-              var9 = new eh();
+              var9 = new PlatformTile();
               this.tiles[var8][var6] = var9;
               if (0 != this.style) {
                 stackIn_25_0 = (var8 > 0) ? 1 : 0;
@@ -287,7 +287,7 @@ final class PlatformModel extends TrapModel {
                             if (var11 == 0) {
                               if (var13 != 0) {
                                 var9.field_a = GameScreen.positiveModulo(var15 + mpa.field_W[var9.field_h], 2048, -70);
-                                var9.field_e = this;
+                                var9.platform = this;
                                 var9.field_b = var17.getSeededRandom(true).nextBounded(100, 0);
                                 var9.field_c = var5 - var4;
                                 var9.field_d = -var3 + var7;
@@ -325,7 +325,7 @@ final class PlatformModel extends TrapModel {
                 var9.field_a = 512;
               }
               if (decompiledFrameRemainder0) {
-                var9.field_e = this;
+                var9.platform = this;
                 var9.field_b = var17.getSeededRandom(true).nextBounded(100, 0);
                 var9.field_c = var5 - var4;
                 var9.field_d = -var3 + var7;
@@ -339,7 +339,7 @@ final class PlatformModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ce.I(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ce.I(" + param0 + ')');
         }
     }
 
@@ -358,7 +358,7 @@ final class PlatformModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ce.F(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ce.F(" + param0 + ')');
         }
     }
 
@@ -387,7 +387,7 @@ final class PlatformModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3_ref), "ce.LA(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3_ref), "ce.LA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -523,7 +523,7 @@ final class PlatformModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ce.K(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ce.K(" + param0 + ')');
         }
     }
 
@@ -549,7 +549,7 @@ final class PlatformModel extends TrapModel {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -559,7 +559,7 @@ final class PlatformModel extends TrapModel {
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        eh var4 = null;
+        PlatformTile var4 = null;
         int var5 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
@@ -582,7 +582,7 @@ final class PlatformModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ce.HA(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ce.HA(" + param0 + ')');
         }
     }
 
@@ -593,7 +593,7 @@ final class PlatformModel extends TrapModel {
           }
           this.style = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ce.Q(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ce.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -608,7 +608,7 @@ final class PlatformModel extends TrapModel {
             this.addToScene(-71, (RenderScene) null);
           }
           super.removeFromScene(param0, 105);
-          this.tiles = (eh[][]) null;
+          this.tiles = (PlatformTile[][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -620,7 +620,7 @@ final class PlatformModel extends TrapModel {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -657,32 +657,32 @@ final class PlatformModel extends TrapModel {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
     private final void buildSingleTile(byte param0) {
-        eh var3 = null;
-        eh var2 = null;
+        PlatformTile var3 = null;
+        PlatformTile var2 = null;
         try {
           this.rows = 1;
           this.columns = 1;
-          this.tiles = new eh[1][1];
+          this.tiles = new PlatformTile[1][1];
           if (param0 < 74) {
             this.onRemoved((byte) 41, 36);
           }
-          var3 = new eh();
+          var3 = new PlatformTile();
           var2 = var3;
           var2.field_a = 0;
           var2.field_c = 0;
           var2.field_d = 0;
           var2.field_h = 0;
-          var2.field_e = this;
+          var2.platform = this;
           var2.field_b = this.getRoom(53).getSeededRandom(true).nextBounded(100, 0);
           var2.field_f = this.pickTileSprite(var3, 2);
           this.tiles[0][0] = var3;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ce.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ce.B(" + param0 + ')');
         }
     }
 
@@ -700,7 +700,7 @@ final class PlatformModel extends TrapModel {
             return stackIn_4_0;
           }
           if (param0 != -99) {
-            this.tiles = (eh[][]) null;
+            this.tiles = (PlatformTile[][]) null;
           }
           var2_int = this.style;
           if (var2_int == 2) {
@@ -716,7 +716,7 @@ final class PlatformModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ce.S(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ce.S(" + param0 + ')');
         }
     }
 
@@ -761,7 +761,7 @@ final class PlatformModel extends TrapModel {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -801,7 +801,7 @@ final class PlatformModel extends TrapModel {
             stackIn_11_0 = stackIn_6_0;
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -820,11 +820,11 @@ final class PlatformModel extends TrapModel {
           CourseLayout.a(22050, 1024, RewardChoicePhase.field_n, true, (java.awt.Component) ((Object) nma.field_l), dsa.field_c);
           wra.a(0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ce.R(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ce.R(" + param0 + ')');
         }
     }
 
-    private final int pickTileSprite(eh param0, int param1) {
+    private final int pickTileSprite(PlatformTile param0, int param1) {
         int stackIn_3_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_19_0 = 0;
@@ -928,7 +928,7 @@ final class PlatformModel extends TrapModel {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -952,7 +952,7 @@ final class PlatformModel extends TrapModel {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -969,7 +969,7 @@ final class PlatformModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "ce.T(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "ce.T(" + param0 + ')');
         }
     }
 

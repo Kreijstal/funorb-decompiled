@@ -29,12 +29,12 @@ final class dqa extends mna {
           ComponentMount.field_b.field_G = param1;
           if (param4 < 118) {
             ResourceArchive var6 = (ResourceArchive) null;
-            dqa.a((ResourceArchive) null, (ResourceArchive) null, (byte) 102, (ResourceArchive) null);
+            dqa.createTextureProvider((ResourceArchive) null, (ResourceArchive) null, (byte) 102, (ResourceArchive) null);
           }
           CharacterChoiceFactory.field_g.field_G = CharacterChoiceFactory.field_g.field_G - ComponentMount.field_b.field_G;
           ComponentMount.field_b.field_qb = ComponentMount.field_b.field_qb - ComponentMount.field_b.field_G;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dqa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dqa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class dqa extends mna {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dqa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dqa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,14 +60,14 @@ final class dqa extends mna {
         return (1 << -1 + param2) + param1;
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
+    final static void createTextureProvider(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         try {
           MatchPhase.field_l = (TextureProvider) ((Object) new sja(param1, param0, param3));
           if (param2 != 55) {
             field_e = (UiComponent) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dqa.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dqa.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

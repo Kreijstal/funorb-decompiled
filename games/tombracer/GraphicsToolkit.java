@@ -30,7 +30,7 @@ abstract class GraphicsToolkit {
         try {
           this.a(this.createRenderTarget(param0, !param1 ? null : this.b(param0.width(), param0.height())));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ha.AE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ha.AE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ abstract class GraphicsToolkit {
             return stackIn_2_0;
           }
           if (param3 == 2) {
-            stackIn_6_0 = PressureSwitchComponent.a(param1, param6, param4, (byte) -62, param0);
+            stackIn_6_0 = PressureSwitchComponent.createNativeSoftwareToolkit(param1, param6, param4, (byte) -62, param0);
             return stackIn_6_0;
           }
           if (param3 == 1) {
@@ -108,11 +108,11 @@ abstract class GraphicsToolkit {
             return stackIn_10_0;
           }
           if (5 == param3) {
-            stackIn_13_0 = rua.a(true, param0, param2, param6, param5);
+            stackIn_13_0 = rua.initOpenGlToolkit(true, param0, param2, param6, param5);
             return stackIn_13_0;
           }
           if (param3 == 3) {
-            stackIn_16_0 = oua.a(param0, param5, (byte) -50, param2, param6);
+            stackIn_16_0 = oua.createDirect3DToolkit(param0, param5, (byte) -50, param2, param6);
             return stackIn_16_0;
           }
           if (param7 == -17441) {
@@ -142,7 +142,7 @@ abstract class GraphicsToolkit {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param7).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ abstract class GraphicsToolkit {
           }
           this.field_a = var2_int;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -260,7 +260,7 @@ abstract class GraphicsToolkit {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

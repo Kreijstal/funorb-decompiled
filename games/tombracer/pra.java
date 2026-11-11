@@ -4,7 +4,7 @@
 final class pra {
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -113) {
           pra.a(103, 84, 45, -30, 12, 72, 89, 38);
         }
@@ -36,18 +36,18 @@ final class pra {
           var8_int = rp.clamp(hc.field_h, -16226, gca.field_d, param6 + param2);
           var9 = rp.clamp(hc.field_h, -16226, gca.field_d, param5 - param2);
           for (var16 = var12; var8_int > var16; var16++) {
-            nra.a((byte) -55, param1, var15, vaa.field_a[var16], var14);
+            nra.fillRange((byte) -55, param1, var15, vaa.field_a[var16], var14);
           }
           for (var16Lifetime1 = var13; var9 < var16Lifetime1; var16Lifetime1--) {
-            nra.a((byte) -55, param1, var15, vaa.field_a[var16Lifetime1], var14);
+            nra.fillRange((byte) -55, param1, var15, vaa.field_a[var16Lifetime1], var14);
           }
           var10 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param2 + param0);
           var11 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param2 + param4);
           for (var16Lifetime2 = var8_int; var16Lifetime2 <= var9; var16Lifetime2++) {
             var22 = vaa.field_a[var16Lifetime2];
-            nra.a((byte) -55, param1, var10, var22, var14);
-            nra.a((byte) -55, param7, var11, var22, var10);
-            nra.a((byte) -55, param1, var15, var22, var11);
+            nra.fillRange((byte) -55, param1, var10, var22, var14);
+            nra.fillRange((byte) -55, param7, var11, var22, var10);
+            nra.fillRange((byte) -55, param1, var15, var22, var11);
           }
           if (param3 < 88) {
             pra.b(-52);
@@ -56,7 +56,7 @@ final class pra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var8), "pra.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw tba.wrapException((Throwable) ((Object) var8), "pra.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

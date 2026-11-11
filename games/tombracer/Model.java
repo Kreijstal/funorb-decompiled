@@ -473,7 +473,7 @@ final class Model extends ka {
             if (this.field_Fb[param0] != -1) {
               this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
             } else {
-              this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, bt.field_h[this.field_t[param0] & 65535]);
+              this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, PitSnakeModel.field_h[this.field_t[param0] & 65535]);
             }
           }
         }
@@ -509,7 +509,7 @@ final class Model extends ka {
               this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
               this.field_w.a((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], (float)this.field_hb[0], (float)this.field_hb[2], (float)this.field_hb[3]);
             } else {
-              var16Lifetime1Lifetime1 = bt.field_h[this.field_t[param0] & 65535];
+              var16Lifetime1Lifetime1 = PitSnakeModel.field_h[this.field_t[param0] & 65535];
               this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, var16Lifetime1Lifetime1);
               this.field_w.b((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], var16Lifetime1Lifetime1);
             }
@@ -682,7 +682,7 @@ final class Model extends ka {
           if (this.field_Fb[param0] != -1) {
             this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], (float)(this.field_t[param0] & 65535), (float)(this.field_o[param0] & 65535), (float)(this.field_Fb[param0] & 65535));
           } else {
-            this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], bt.field_h[this.field_t[param0] & 65535]);
+            this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], PitSnakeModel.field_h[this.field_t[param0] & 65535]);
           }
         }
     }
@@ -1135,7 +1135,7 @@ final class Model extends ka {
             for (var9Lifetime5Lifetime1 = 0; var9Lifetime5Lifetime1 < this.field_m; var9Lifetime5Lifetime1++) {
               var27 = this.field_e[var9Lifetime5Lifetime1];
               var26 = this.field_db[var9Lifetime5Lifetime1];
-              var26.field_k = var26.field_k & -16777216 | bt.field_h[tg.a((byte) -123, this.field_ob[var27.field_j] & 65535) & 65535] & 16777215;
+              var26.field_k = var26.field_k & -16777216 | PitSnakeModel.field_h[tg.a((byte) -123, this.field_ob[var27.field_j] & 65535) & 65535] & 16777215;
             }
             return;
           }
@@ -1290,9 +1290,9 @@ final class Model extends ka {
           }
           else {
             if (this.field_Fb[param0] != -1) {
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, bt.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, bt.field_h[this.field_Fb[param0] & 65535], 20048));
+              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
             } else {
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048));
+              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
             }
           }
         } else {
@@ -1352,9 +1352,9 @@ final class Model extends ka {
           }
           else {
             if (this.field_Fb[param0] != -1) {
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, bt.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, bt.field_h[this.field_Fb[param0] & 65535], 20048));
+              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
             } else {
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048));
+              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
             }
           }
         }
@@ -1396,7 +1396,7 @@ final class Model extends ka {
           while (var10 < this.field_m) {
             var6 = this.field_e[var10];
             var7 = this.field_db[var10];
-            var7.field_k = var7.field_k & -16777216 | bt.field_h[tg.a((byte) -120, this.field_ob[var6.field_j] & 65535)] & 16777215;
+            var7.field_k = var7.field_k & -16777216 | PitSnakeModel.field_h[tg.a((byte) -120, this.field_ob[var6.field_j] & 65535)] & 16777215;
             var10++;
           }
         }
@@ -2412,7 +2412,7 @@ final class Model extends ka {
             for (var10Lifetime5Lifetime1 = 0; var10Lifetime5Lifetime1 < this.field_m; var10Lifetime5Lifetime1++) {
               var62 = this.field_e[var10Lifetime5Lifetime1];
               var61 = this.field_db[var10Lifetime5Lifetime1];
-              var61.field_k = var61.field_k & -16777216 | bt.field_h[tg.a((byte) -114, this.field_ob[var62.field_j] & 65535) & 65535] & 16777215;
+              var61.field_k = var61.field_k & -16777216 | PitSnakeModel.field_h[tg.a((byte) -114, this.field_ob[var62.field_j] & 65535) & 65535] & 16777215;
             }
             return;
           }
@@ -2577,9 +2577,9 @@ final class Model extends ka {
           }
           else {
             if (this.field_Fb[param0] != -1) {
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, bt.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, bt.field_h[this.field_Fb[param0] & 65535], 20048));
+              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
             } else {
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048));
+              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
             }
           }
         } else {
@@ -2639,9 +2639,9 @@ final class Model extends ka {
           }
           else {
             if (this.field_Fb[param0] != -1) {
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, bt.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, bt.field_h[this.field_Fb[param0] & 65535], 20048));
+              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
             } else {
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, bt.field_h[this.field_t[param0] & 65535], 20048));
+              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
             }
           }
         }
@@ -2836,7 +2836,7 @@ final class Model extends ka {
             if (this.field_Fb[param0] != -1) {
               this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
             } else {
-              this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, bt.field_h[this.field_t[param0] & 65535]);
+              this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, PitSnakeModel.field_h[this.field_t[param0] & 65535]);
             }
           }
         }
@@ -2872,7 +2872,7 @@ final class Model extends ka {
               this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
               this.field_w.b((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], (float)this.field_hb[0], (float)this.field_hb[2], (float)this.field_hb[3]);
             } else {
-              var16Lifetime1Lifetime1 = bt.field_h[this.field_t[param0] & 65535];
+              var16Lifetime1Lifetime1 = PitSnakeModel.field_h[this.field_t[param0] & 65535];
               this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, var16Lifetime1Lifetime1);
               this.field_w.a((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], var16Lifetime1Lifetime1);
             }
@@ -2922,7 +2922,7 @@ final class Model extends ka {
           if (this.field_Fb[param0] != -1) {
             this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], (float)(this.field_t[param0] & 65535), (float)(this.field_o[param0] & 65535), (float)(this.field_Fb[param0] & 65535));
           } else {
-            this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], bt.field_h[this.field_t[param0] & 65535]);
+            this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], PitSnakeModel.field_h[this.field_t[param0] & 65535]);
           }
         }
     }
@@ -4102,7 +4102,7 @@ final class Model extends ka {
           while (var54 < param1.field_m.length) {
             var59 = param1.field_m[var54];
             var60 = fw.a(var59.field_d, false);
-            var14Lifetime1 = bt.field_h[param1.field_A[var59.field_a] & 65535] & 16777215;
+            var14Lifetime1 = PitSnakeModel.field_h[param1.field_A[var59.field_a] & 65535] & 16777215;
             stackIn_57_0 = var14Lifetime1;
             stackIn_57_1 = 255;
             if (param1.field_n == null) {

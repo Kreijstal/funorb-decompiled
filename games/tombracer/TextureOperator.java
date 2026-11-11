@@ -39,7 +39,7 @@ abstract class TextureOperator extends IntrusiveNode {
             this.getMonochromeRow(1, -94);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -87,11 +87,11 @@ abstract class TextureOperator extends IntrusiveNode {
         return -1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         if (param0 >= -69) {
           byte[] var2 = (byte[]) null;
-          TextureOperator.a((byte[]) null, (byte) 54);
+          TextureOperator.decodeAntialiasedFont((byte[]) null, (byte) 54);
         }
     }
 
@@ -126,7 +126,7 @@ abstract class TextureOperator extends IntrusiveNode {
         this.monochrome = param1 ? true : false;
     }
 
-    final static AntialiasedBitmapFont a(byte[] param0, byte param1) {
+    final static AntialiasedBitmapFont decodeAntialiasedFont(byte[] param0, byte param1) {
         AntialiasedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -142,7 +142,7 @@ abstract class TextureOperator extends IntrusiveNode {
             return (AntialiasedBitmapFont) (stackIn_2_0);
           }
           var2 = new AntialiasedBitmapFont(param0, LoadLevelCommand.field_p, pg.field_C, mq.field_b, ImageProducerCanvasImageBuffer.field_m, mga.field_g, ck.field_c);
-          MazeGenerator.a((byte) -70);
+          MazeGenerator.releaseStatics((byte) -70);
           var3 = -23 % ((-28 - param1) / 37);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -156,7 +156,7 @@ abstract class TextureOperator extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

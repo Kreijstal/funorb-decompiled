@@ -32,7 +32,7 @@ final class nl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -88,12 +88,12 @@ final class nl {
             } else {
               incrementValue$0 = param2;
               param2++;
-              nra.a((byte) -55, param0, param4, vaa.field_a[incrementValue$0], param1);
+              nra.fillRange((byte) -55, param0, param4, vaa.field_a[incrementValue$0], param1);
             }
             if (hc.field_h >= param3) {
               incrementValue$1 = param3;
               param3--;
-              nra.a((byte) -55, param0, param4, vaa.field_a[incrementValue$1], param1);
+              nra.fillRange((byte) -55, param0, param4, vaa.field_a[incrementValue$1], param1);
             } else {
               param3 = hc.field_h;
             }
@@ -124,11 +124,11 @@ final class nl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var6), "nl.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) var6), "nl.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static MenuScreen a(int param0, byte param1) {
+    final static MenuScreen getMenuScreen(int param0, byte param1) {
         if (param1 != 50) {
           field_f = (IntrusiveDeque) null;
         }
@@ -139,23 +139,23 @@ final class nl {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "nl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "nl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(java.applet.Applet param0, int param1) {
         try {
-          LegacyOpenGlTexture3D.a(this.field_a, "jagex-last-login-method", (byte) 121, 31536000L, param0);
+          LegacyOpenGlTexture3D.writeCookie(this.field_a, "jagex-last-login-method", (byte) 121, 31536000L, param0);
           if (param1 != 5) {
             String var4 = (String) null;
             this.a((String) null, -66);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "nl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "nl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -35) {
           nl.a(55, 84, -11, -72, -118, -51);
         }

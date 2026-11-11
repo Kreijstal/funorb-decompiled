@@ -9,7 +9,7 @@ final class nt {
     static int field_d;
     static int field_b;
 
-    final static ResourceArchive a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
+    final static ResourceArchive openArchive(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
@@ -37,7 +37,7 @@ final class nt {
             }
             if (param2 != 5200) {
               var9 = (java.applet.Applet) null;
-              nt.a((java.applet.Applet) null, 34);
+              nt.reloadPage((java.applet.Applet) null, 34);
             }
             var8 = IntrusiveDequeCursor.field_a.a((SectorCacheStore) (var7), param0, (SectorCacheStore) (var6), param4, param2 ^ 5167);
             if (param3) {
@@ -64,7 +64,7 @@ final class nt {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void reloadPage(java.applet.Applet param0, int param1) {
         try {
           String var2 = null;
           Exception var2_ref = null;
@@ -110,7 +110,7 @@ final class nt {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

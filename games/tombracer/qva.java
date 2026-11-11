@@ -9,10 +9,10 @@ final class qva extends Exception {
 
     final static int a(byte param0, int param1, int param2) {
         if (param0 <= -5) {
-          return 2048 - tia.a(param1 >> 16, param2 >> 16, -29543);
+          return 2048 - tia.atan2(param1 >> 16, param2 >> 16, -29543);
         }
         qva.a((byte) 104, -40, 14);
-        return 2048 - tia.a(param1 >> 16, param2 >> 16, -29543);
+        return 2048 - tia.atan2(param1 >> 16, param2 >> 16, -29543);
     }
 
     static {

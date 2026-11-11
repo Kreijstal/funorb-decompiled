@@ -9,7 +9,7 @@ final class qja extends IntrusiveNode {
     static AnimationSequence[] field_f;
     static UiComponent field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 <= -37) {
           field_j = null;

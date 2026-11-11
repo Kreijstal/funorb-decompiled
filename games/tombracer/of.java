@@ -12,7 +12,7 @@ class of {
           return ck.field_a;
         }
         if (param1 != -1) {
-          return nt.a(param1, 1, 5200, false, true, true);
+          return nt.openArchive(param1, 1, 5200, false, true, true);
         }
         return ck.field_a;
     }

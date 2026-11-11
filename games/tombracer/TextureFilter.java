@@ -11,7 +11,7 @@ final class TextureFilter {
         throw new IllegalStateException();
     }
 
-    final static boolean a(byte param0, Class param1) {
+    final static boolean isNumericPrimitive(byte param0, Class param1) {
         int var2_int = 0;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -33,7 +33,7 @@ final class TextureFilter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -45,7 +45,7 @@ final class TextureFilter {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 32768) {
           TextureFilter.a(false, (byte) -65);
         }

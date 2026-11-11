@@ -169,7 +169,7 @@ final class PlayPhase extends MatchPhase {
             var6Lifetime1 = 256;
             var7_intLifetime1 = 64;
             PlayerViewport.drawTiledFrame(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            SocketConnector.a(dpa.field_c, 0, SingleChildWidget.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
+            SocketConnector.a(PitTile.field_c, 0, SingleChildWidget.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
             SocketConnector.a(CrossedSineBandsOperator.field_q + ": " + this.screen.getColouredPlayerName(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
@@ -231,8 +231,8 @@ final class PlayPhase extends MatchPhase {
               var9 = -64 + SwitchLinkList.b(0);
               var10 = var5.getTick((byte) 69);
               var11 = 16777215;
-              RoomEffectTraps.a(0, -34, -16 + var9, "Par Time: " + dea.a(var7.field_h, (byte) -8), var8Lifetime1, kn.field_p, 16777215);
-              var17 = "Room total: " + dea.a(var10, (byte) -8);
+              RoomEffectTraps.a(0, -34, -16 + var9, "Par Time: " + dea.formatTime(var7.field_h, (byte) -8), var8Lifetime1, kn.field_p, 16777215);
+              var17 = "Room total: " + dea.formatTime(var10, (byte) -8);
               var12 = var17;
               var12Lifetime1 = var17;
               var12Lifetime2 = var17;
@@ -251,7 +251,7 @@ final class PlayPhase extends MatchPhase {
               var13 = var16.getExitTick(2158);
               if (var13 > 0) {
                 var11Lifetime1 = 16777215;
-                var18 = "Last room total: " + dea.a(var13, (byte) -8);
+                var18 = "Last room total: " + dea.formatTime(var13, (byte) -8);
                 var12Lifetime4 = var18;
                 var12Lifetime4Lifetime1 = var18;
                 var12Lifetime4Lifetime2 = var18;
@@ -448,7 +448,7 @@ final class PlayPhase extends MatchPhase {
         if (param2 < 122) {
           return;
         }
-        tga.field_a.za(param0, param5, param4, jg.a(param3, (byte) -115, param1), 2);
+        tga.field_a.za(param0, param5, param4, jg.withAlpha(param3, (byte) -115, param1), 2);
     }
 
     final static int a(goa param0, String param1, boolean param2, int param3, goa param4, int param5, int param6) {
@@ -521,14 +521,14 @@ final class PlayPhase extends MatchPhase {
               jg.field_a.writeVersionedString(var14, (byte) 0);
               jg.field_a.writeVersionedString(var8, (byte) 0);
               var15 = (CharSequence) ((Object) param1);
-              jg.field_a.writeVersionedString(KaleidoscopeOperator.a((byte) 126, var15), (byte) 0);
+              jg.field_a.writeVersionedString(KaleidoscopeOperator.normalizeName((byte) 126, var15), (byte) 0);
               jg.field_a.writeShort(-1477662136, param6);
               jg.field_a.writeByte(param3, 0);
               jg.field_a.writeByte(var9, 0);
               ql.field_k.writeByte(18, 0);
               ql.field_k.position = ql.field_k.position + 2;
               var10 = ql.field_k.position;
-              var11_ref_StringLifetime4 = FontMetrics.a(0, di.a(62));
+              var11_ref_StringLifetime4 = FontMetrics.readSettingsCookie(0, di.a(62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
@@ -581,7 +581,7 @@ final class PlayPhase extends MatchPhase {
               }
               if (99 == var9Lifetime1) {
                 LegacyRidgedWaterNoise.a(FleeLocomotor.f(1), -1);
-                kia.field_b = new Boolean(di.a(WeaveOperator.field_q, (byte) 107));
+                kia.field_b = new Boolean(di.readBoolean(WeaveOperator.field_q, (byte) 107));
                 WeaveOperator.field_q.position = 0;
               } else {
                 MembersUpsellMenu.field_z = var9Lifetime1;
@@ -612,7 +612,7 @@ final class PlayPhase extends MatchPhase {
             if (MembersUpsellMenu.field_z == 255) {
               var9_ref_String = WeaveOperator.field_q.readNullableString(-28690);
               if (var9_ref_String != null) {
-                mp.a(var9_ref_String, di.a(82), -21407);
+                mp.writeSettingsCookie(var9_ref_String, di.a(82), -21407);
               }
             } else {
               io.field_b = WeaveOperator.field_q.readString((byte) -76);
@@ -662,7 +662,7 @@ final class PlayPhase extends MatchPhase {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -707,7 +707,7 @@ final class PlayPhase extends MatchPhase {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -736,7 +736,7 @@ final class PlayPhase extends MatchPhase {
           this.screen.roundDeadlineTick = -1;
           this.applyViewportLayout((byte) 122);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,7 +11,7 @@ final class SoundEvent extends IntrusiveNode {
     static String field_l;
     private int parameter;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_l = null;
         if (param0 > -119) {
@@ -93,15 +93,15 @@ final class SoundEvent extends IntrusiveNode {
         if (param8 <= -58) {
           return;
         }
-        SoundEvent.d(31);
+        SoundEvent.releaseStatics(31);
     }
 
     final static int a(boolean param0, int param1) {
         if (param0) {
           field_h = (SpriteData) null;
-          return jg.a(255, (byte) -96, param1);
+          return jg.withAlpha(255, (byte) -96, param1);
         }
-        return jg.a(255, (byte) -96, param1);
+        return jg.withAlpha(255, (byte) -96, param1);
     }
 
     final int getSoundId(int param0) {

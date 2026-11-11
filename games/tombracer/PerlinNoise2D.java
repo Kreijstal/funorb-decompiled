@@ -102,7 +102,7 @@ final class PerlinNoise2D extends TextureOperator {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -234,7 +234,7 @@ final class PerlinNoise2D extends TextureOperator {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class PerlinNoise2D extends TextureOperator {
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        this.field_p = TileGridCell.a(this.field_z, (byte) 109);
+        this.field_p = TileGridCell.getPermutationTable(this.field_z, (byte) 109);
         if (param0 != 116) {
           this.b((byte) 55);
         }
@@ -303,7 +303,7 @@ final class PerlinNoise2D extends TextureOperator {
           PerlinNoise2D.a(param0, param1, -1 + var5, param3);
           PerlinNoise2D.a(param0, 1 + var5, param2, param3 + 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "lva.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "lva.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

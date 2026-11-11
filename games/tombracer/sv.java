@@ -157,7 +157,7 @@ final class sv extends MenuScreen {
             return (AntialiasedBitmapFont) (stackIn_2_0);
           }
           if (param3 == 24876) {
-            stackIn_7_0 = TextureOperator.a(param0.a(false, param1, param4), (byte) -123);
+            stackIn_7_0 = TextureOperator.decodeAntialiasedFont(param0.a(false, param1, param4), (byte) -123);
             return stackIn_7_0;
           }
           stackIn_5_0 = (AntialiasedBitmapFont) null;
@@ -178,7 +178,7 @@ final class sv extends MenuScreen {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

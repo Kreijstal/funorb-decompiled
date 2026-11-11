@@ -20,7 +20,7 @@ final class cs {
         return uaa.field_a;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 3840) {
           field_b = null;
           field_a = null;

@@ -31,7 +31,7 @@ final class nk extends IntrusiveNode {
         }
     }
 
-    final static TextWidgetPainter a(int param0) {
+    final static TextWidgetPainter getDefaultTextPainter(int param0) {
         if (param0 != -21819) {
           return (TextWidgetPainter) null;
         }
@@ -110,7 +110,7 @@ final class nk extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

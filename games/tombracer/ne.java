@@ -16,7 +16,7 @@ final class ne {
         return gj.a((byte) 41, this.a(param1, -1));
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadJagexLogoSound(ResourceArchive param0, int param1) {
         VorbisSample var2 = null;
         try {
           VorbisSample.decodeSetup(param0.getFileByName("headers.packvorbis", (byte) 124, ""));
@@ -24,7 +24,7 @@ final class ne {
           var2.decodeAll();
           int var3 = -87 % ((param1 - 12) / 50);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ne.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ne.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class ne {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "ne.H(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "ne.H(" + param0 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class ne {
           this.field_b = this.field_b + 1;
           this.field_a = this.field_a | (long)(param1.field_i << fieldTemp$0 * gj.field_f);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ne.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ne.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class ne {
           this.field_b = 1;
           this.field_a = (long)param0.field_i;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class ne {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

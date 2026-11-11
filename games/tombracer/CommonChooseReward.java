@@ -239,7 +239,7 @@ final class CommonChooseReward implements dv {
 
     public final void decode(BitPacketBuffer param0, boolean param1) {
         try {
-          this.reward = fa.a(0, param0, 8, this.reward);
+          this.reward = fa.readBitValues(0, param0, 8, this.reward);
           this.currentPos = param0.readBits((byte) 44, 3);
           this.currentPlayerId = uma.readSignedBits(4, param0, -26803);
           this.currentPlayerTicks = param0.readBits((byte) 44, 16);
@@ -249,7 +249,7 @@ final class CommonChooseReward implements dv {
           this.finished = CircleMovementLocomotor.readBitFlag(5907, param0);
           this.takenCount = param0.readBits((byte) 44, 2);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -269,7 +269,7 @@ final class CommonChooseReward implements dv {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

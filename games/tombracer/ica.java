@@ -336,7 +336,7 @@ final class ica {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -347,7 +347,7 @@ final class ica {
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
           var1 = new Sprite(540, 140);
-          nm.a(var1, (byte) 112);
+          nm.setRasterTarget(var1, (byte) 112);
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
           TimeSwitchBehaviour.field_r = 0;
@@ -364,7 +364,7 @@ final class ica {
           var1.drawHalfSize(0, 0);
           pfa.a(1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ica.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ica.B(" + param0 + ')');
         }
     }
 

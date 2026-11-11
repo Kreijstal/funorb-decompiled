@@ -3,10 +3,10 @@
  */
 final class PitModel extends TrapModel {
     private LightSource field_u;
-    private oia[][] edgePieces;
+    private PitEdgePiece[][] edgePieces;
     static PcmStreamMixer field_n;
     static String field_r;
-    private dpa[][] tiles;
+    private PitTile[][] tiles;
     static UiComponent[] field_p;
     static kea field_s;
     private int field_t;
@@ -30,8 +30,8 @@ final class PitModel extends TrapModel {
             this.field_t = 34;
           }
           super.removeFromScene(param0, 87);
-          this.edgePieces = (oia[][]) null;
-          this.tiles = (dpa[][]) null;
+          this.edgePieces = (PitEdgePiece[][]) null;
+          this.tiles = (PitTile[][]) null;
           if (null != this.field_u) {
             var3 = param0.getListener((byte) 59);
             if (var3 instanceof RoomLighting) {
@@ -51,11 +51,11 @@ final class PitModel extends TrapModel {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final ka a(int param0, dpa param1) {
+    final ka a(int param0, PitTile param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -119,11 +119,11 @@ final class PitModel extends TrapModel {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
-    final ka a(dpa param0, int param1) {
+    final ka a(PitTile param0, int param1) {
         ka stackIn_10_0 = null;
         ka stackIn_12_0 = null;
         ka stackIn_15_0 = null;
@@ -215,7 +215,7 @@ final class PitModel extends TrapModel {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class PitModel extends TrapModel {
         int var6;
         int var7;
         int var9;
-        dpa var11;
+        PitTile var11;
         int var12;
         int var13;
         int var14;
@@ -260,11 +260,11 @@ final class PitModel extends TrapModel {
         int var24;
         int var25;
         int var26;
-        dpa var27;
-        dpa var28;
-        dpa var29;
+        PitTile var27;
+        PitTile var28;
+        PitTile var29;
         Room var30;
-        dpa var31;
+        PitTile var31;
         var26 = TombRacer.field_G ? 1 : 0;
         var30 = this.getRoom(113);
         var3 = var30.getWidth((byte) -86);
@@ -273,16 +273,16 @@ final class PitModel extends TrapModel {
         var6 = this.body.getY(param0 + 9758);
         this.field_o = this.body.getWidth(-128) / 2097152;
         this.field_t = this.body.getHeight((byte) 55) / 2097152;
-        this.tiles = new dpa[this.field_o][this.field_t];
+        this.tiles = new PitTile[this.field_o][this.field_t];
         var7 = -(this.body.getHeight((byte) 55) / 2) + (var6 + 1048576);
         if (param0 != -110) {
-          var27 = (dpa) null;
-          this.a(-101, (dpa) null);
+          var27 = (PitTile) null;
+          this.a(-101, (PitTile) null);
         }
         for (var8 = 0; var8 < this.field_t; var8++) {
           var9 = -(this.body.getWidth(-53) / 2) + var5 + 1048576;
           for (var10 = 0; var10 < this.field_o; var10++) {
-            var28 = new dpa();
+            var28 = new PitTile();
             var29 = var28;
             var31 = var29;
             var11 = var31;
@@ -494,13 +494,13 @@ final class PitModel extends TrapModel {
             var31.field_f = GameScreen.positiveModulo(var21 + LegacyOpenGlUnderwaterEffect.field_j[var31.field_j], 2048, param0 ^ -57);
             var31.field_a = -var6 + var7;
             var31.field_i = -var5 + var9;
-            var31.field_e = this;
+            var31.pit = this;
             var22 = 0;
             var23 = 80;
             var24 = 80;
             while (var23 > var22) {
               var22 = var22 + var24;
-              var11.field_b = var11.b(53);
+              var11.field_b = var11.copy(53);
               var11.field_b.field_h = var22;
               var11 = var11.field_b;
             }
@@ -523,14 +523,14 @@ final class PitModel extends TrapModel {
           super.encode((byte) -68, param1);
           param1.writeBits((byte) -127, this.style, 2);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "kva.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "kva.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void mirror(int param0) {
         int var2 = 0;
         int var3 = 0;
-        dpa var4 = null;
+        PitTile var4 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param0 < 0) {
@@ -565,10 +565,10 @@ final class PitModel extends TrapModel {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        dpa var6 = null;
+        PitTile var6 = null;
         int var7 = 0;
         int var8 = 0;
-        dpa var9 = null;
+        PitTile var9 = null;
         int var4_intLifetime1;
         int var5Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -614,7 +614,7 @@ final class PitModel extends TrapModel {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -635,11 +635,11 @@ final class PitModel extends TrapModel {
         try {
           int var6_int = -76 / ((param4 + 38) / 47);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "kva.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "kva.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final ka a(byte param0, oia param1) {
+    final ka a(byte param0, PitEdgePiece param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -675,7 +675,7 @@ final class PitModel extends TrapModel {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -712,7 +712,7 @@ final class PitModel extends TrapModel {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -720,21 +720,21 @@ final class PitModel extends TrapModel {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        oia var8 = null;
+        PitEdgePiece var8 = null;
         int var9 = TombRacer.field_G ? 1 : 0;
         int var2 = this.body.getX(3);
         int var3 = this.body.getY(param0 - 211);
         if (param0 != 9859) {
           return;
         }
-        this.edgePieces = new oia[this.field_o][this.field_t];
+        this.edgePieces = new PitEdgePiece[this.field_o][this.field_t];
         int var4 = -(this.body.getHeight((byte) 55) / 2) + var3 + 1048576;
         for (var5 = 0; this.field_t > var5; var5++) {
           var6 = 1048576 + (var2 - this.body.getWidth(-100) / 2);
           for (var7 = 0; var7 < this.field_o; var7++) {
-            var8 = new oia();
+            var8 = new PitEdgePiece();
             this.edgePieces[var7][var5] = var8;
-            var8.field_c = this;
+            var8.pit = this;
             var8.field_b = var4 - var3;
             var8.field_a = var6 - var2;
             var6 = var6 + 2097152;
@@ -751,10 +751,10 @@ final class PitModel extends TrapModel {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        dpa var6 = null;
+        PitTile var6 = null;
         int var7 = 0;
         int var8 = 0;
-        dpa var9 = null;
+        PitTile var9 = null;
         int var4_intLifetime1;
         int var5Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -800,7 +800,7 @@ final class PitModel extends TrapModel {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -827,7 +827,7 @@ final class PitModel extends TrapModel {
           }
           super.addToScene(param0 + param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "kva.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "kva.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

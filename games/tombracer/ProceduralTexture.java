@@ -62,7 +62,7 @@ final class ProceduralTexture extends DualLinkNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class ProceduralTexture extends DualLinkNode {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ final class ProceduralTexture extends DualLinkNode {
             stackIn_6_0 = (int[]) null;
             return stackIn_6_0;
           }
-          CachedArchiveSource.a(param3, -256);
+          CachedArchiveSource.setGamma(param3, -256);
           ConsoleWindow.a(0, param0, param6);
           var26 = new int[param6 * param0];
           var10 = var26;
@@ -340,7 +340,7 @@ final class ProceduralTexture extends DualLinkNode {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -378,7 +378,7 @@ final class ProceduralTexture extends DualLinkNode {
           this.operators = new TextureOperator[var2_int];
           var12 = new int[var2_int][];
           for (var6 = 0; var6 < var2_int; var6++) {
-            var13 = MirrorComponent.a(param0, 0);
+            var13 = MirrorComponent.decodeTextureOperator(param0, 0);
             var14 = var13;
             if (var14.getSpriteId(125) >= 0) {
               var3++;
@@ -433,7 +433,7 @@ final class ProceduralTexture extends DualLinkNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -476,7 +476,7 @@ final class ProceduralTexture extends DualLinkNode {
           for (var9_int = 0; this.operators.length > var9_int; var9_int++) {
             this.operators[var9_int].createRowCache(param0, param2, -256);
           }
-          CachedArchiveSource.a(param3, -256);
+          CachedArchiveSource.setGamma(param3, -256);
           ConsoleWindow.a(0, param2, param0);
           if (param6) {
             this.field_m = (TextureOperator) null;
@@ -577,7 +577,7 @@ final class ProceduralTexture extends DualLinkNode {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param6).append(')').toString());
         }
     }
 

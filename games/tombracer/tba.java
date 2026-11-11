@@ -90,7 +90,7 @@ final class tba extends IntrusiveNode {
         return new Sprite[]{null, null, null, (Sprite) (var10), var17, (Sprite) (var11), null, null, null};
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (param0 instanceof ClientException) {
           var2 = (ClientException) ((Object) param0);

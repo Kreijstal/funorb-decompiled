@@ -40,7 +40,7 @@ final class di {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -310,7 +310,7 @@ final class di {
                   }
                 }
                 try {
-                  var12 = VoronoiNoiseOperator.a(var7.field_a, -29355, this.field_c, var7.field_b, ck.field_a, param0);
+                  var12 = VoronoiNoiseOperator.createToolkit(var7.field_a, -29355, this.field_c, var7.field_b, ck.field_a, param0);
                   if (var12 != null) {
                     var9 = new iqa(var12, var7, param0);
                     if (var7.a(var9, (byte) -126)) {
@@ -357,7 +357,7 @@ final class di {
           } else {
             stackIn_114_2 = "{...}";
           }
-          throw tba.a((Throwable) (stackIn_113_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) (stackIn_113_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class di {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -415,11 +415,11 @@ final class di {
           BridgeModel.initNativeLibraries(param0, param3, -55);
           this.a(0, param4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(PacketBuffer param0, byte param1) {
+    final static boolean readBoolean(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -448,7 +448,7 @@ final class di {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

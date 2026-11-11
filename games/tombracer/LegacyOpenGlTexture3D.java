@@ -29,7 +29,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
           jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.field_r, this.field_q, this.field_o, 0, sja.b(this.internalFormat, 20934), 5121, (byte[]) null, 0);
           this.setLinearFiltering(true, 3);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "lha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "lha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
           jaggl.OpenGL.glPixelStorei(3317, 4);
           this.setLinearFiltering(true, 3);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "lha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "lha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
         }
     }
 
-    final static void a(String param0, String param1, byte param2, long param3, java.applet.Applet param4) {
+    final static void writeCookie(String param0, String param1, byte param2, long param3, java.applet.Applet param4) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;
@@ -129,7 +129,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

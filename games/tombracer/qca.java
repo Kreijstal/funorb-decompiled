@@ -10,7 +10,7 @@ final class qca {
         super.finalize();
     }
 
-    final static boolean a(byte param0, int[] param1) {
+    final static boolean hasNonZeroEntry(byte param0, int[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -45,7 +45,7 @@ final class qca {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class qca {
           this.field_a = param0;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "qca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "qca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

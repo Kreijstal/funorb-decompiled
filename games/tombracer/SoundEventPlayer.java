@@ -35,7 +35,7 @@ final class SoundEventPlayer extends SoundEventQueue {
         } else {
           var4 = (fla) (this.playing.first(-80));
           while (var4 != null) {
-            rs.a(var4, 107);
+            rs.queueSoundRelease(var4, 107);
             var4 = (fla) (this.playing.next(107));
           }
           this.playing.clear(8);
@@ -44,7 +44,7 @@ final class SoundEventPlayer extends SoundEventQueue {
         }
         var4Lifetime1 = (fla) (this.playing.first(-80));
         while (var4Lifetime1 != null) {
-          rs.a(var4Lifetime1, 107);
+          rs.queueSoundRelease(var4Lifetime1, 107);
           var4Lifetime1 = (fla) (this.playing.next(107));
         }
         this.playing.clear(8);
@@ -134,7 +134,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           }
           var11 = MatchProtocol.a(100, (byte) -58, var9, var4, var6, var10);
           if (var7 != 0) {
-            var11.field_f.b(-1);
+            var11.field_f.setLoopCount(-1);
           }
           var12 = new fla(var11, var3_int, var7 != 0, var4, var10, var9);
           this.playing.addLast((byte) -100, var12);
@@ -227,7 +227,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
         }
     }
 

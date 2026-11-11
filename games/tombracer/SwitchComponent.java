@@ -25,7 +25,7 @@ abstract class SwitchComponent extends PrefabComponent {
             param1.writeBits((byte) -19, !this.initiallyOn ? 0 : 1, 1);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fqa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fqa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,10 +37,10 @@ abstract class SwitchComponent extends PrefabComponent {
         }
     }
 
-    public static void A(int param0) {
+    public static void releaseStatics(int param0) {
         fireDeathMessages = null;
         if (param0 != 1) {
-          SwitchComponent.a(false, 'ￆ');
+          SwitchComponent.isNameCharacter(false, 'ￆ');
         }
     }
 
@@ -53,11 +53,11 @@ abstract class SwitchComponent extends PrefabComponent {
         return new int[8];
     }
 
-    final static boolean a(boolean param0, char param1) {
+    final static boolean isNameCharacter(boolean param0, char param1) {
         if (Character.isISOControl(param1)) {
           return false;
         }
-        if (q.a(param1, 11955)) {
+        if (q.isAlphanumeric(param1, 11955)) {
           return true;
         }
         if (param0) {
@@ -83,7 +83,7 @@ abstract class SwitchComponent extends PrefabComponent {
         try {
           this.targets = new ComponentTargetList(this.getMaxTargets(31609), 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ abstract class SwitchComponent extends PrefabComponent {
             this.initiallyOn = param2.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,7 +129,7 @@ abstract class SwitchComponent extends PrefabComponent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

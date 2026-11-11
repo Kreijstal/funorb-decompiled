@@ -34,7 +34,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.setColorModel(this.field_k);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "st.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "st.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "st.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "st.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.a(-19216);
           int var5_int = 15 / ((74 - param3) / 41);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "st.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "st.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -124,22 +124,22 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         String var15 = null;
         PlayerContextMenu var16 = null;
         try {
-          DateInputWidget.a(nsa.field_i, param1.f(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
+          DateInputWidget.openPlayerContextMenu(nsa.field_i, param1.f(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
           if (param1.field_ec && (param1.field_yb == 2 ||
             !(ld.field_e < 2))) {
             var10 = hka.field_b;
-            var11 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(109, ColourFillOperator.field_o, new String[]{param3});
+            var11 = LegacyOpenGlFlowingWaterEffect.formatText(109, ColourFillOperator.field_o, new String[]{param3});
             var10.field_f.addItem((byte) -125, 10, var11);
           }
           hka.field_b.addLobbyGameActions((byte) -84);
           if (param2) {
             if (hka.field_b.field_k == RasterizerOperator.field_o) {
               var14 = hka.field_b;
-              var15 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(103, dka.field_d, new String[]{param3});
+              var15 = LegacyOpenGlFlowingWaterEffect.formatText(103, dka.field_d, new String[]{param3});
               var14.field_f.addItem((byte) -65, 16, var15);
             } else {
               var12 = hka.field_b;
-              var13 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, IdolItemComponent.field_J, new String[]{param3});
+              var13 = LegacyOpenGlFlowingWaterEffect.formatText(125, IdolItemComponent.field_J, new String[]{param3});
               var12.field_f.addItem((byte) -90, 15, var13);
             }
           }
@@ -168,7 +168,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.a((byte) 10);
           param2.drawImage(this.field_a, param1, param0, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "st.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "st.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

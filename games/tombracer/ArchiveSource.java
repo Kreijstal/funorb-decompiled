@@ -21,7 +21,7 @@ abstract class ArchiveSource {
 
     abstract byte[] getPackedGroup(int param0, byte param1);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 <= 85) {
           ArchiveSource.a(102, -17);

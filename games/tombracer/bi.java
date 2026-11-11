@@ -7,7 +7,7 @@ final class bi {
     static su field_d;
     static String[] field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_b = null;
         if (param0) {
@@ -29,7 +29,7 @@ final class bi {
           param0.SA(param1, var3.field_A, SoftwareRasterizer.width, var3.field_t, SoftwareRasterizer.pixels, SoftwareRasterizer.width * var3.field_A, SoftwareRasterizer.width);
           var2.a(param1 ^ -64);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -9,7 +9,7 @@ final class fha {
         int var1 = -23 % ((param0 - 77) / 44);
     }
 
-    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
+    final static void loadCommonUiSprites(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         Sprite var17 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -27,21 +27,21 @@ final class fha {
         int var13 = TombRacer.field_G ? 1 : 0;
         int var8Lifetime1;
         int var9Lifetime1;
-        uca.field_f = BoulderComponent.a(param2, "commonui", 5, "frame_top");
+        uca.field_f = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "frame_top");
         if (!param0) {
           return;
         }
         try {
-          fua.field_f = BoulderComponent.a(param2, "commonui", 5, "frame_bottom");
+          fua.field_f = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "frame_bottom");
           ApproachPlayerLocomotor.field_s = MaskBlendOperator.a(param2, "commonui", "jagex_logo_grey", -101);
-          MonochromeFillOperator.field_n = BoulderComponent.a(param2, "commonui", 5, "button");
+          MonochromeFillOperator.field_n = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "button");
           CharacterChoiceFactory.field_b = Particle.a("validation", param2, "commonui", -57);
-          BlendModeOperator.field_o = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo12"));
-          KeySwitchComponent.field_J = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo14"));
-          ft.field_c = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo14bold"));
+          BlendModeOperator.field_o = (BitmapFont) ((Object) SnakePitModel.loadAntialiasedFont(param2, param1, false, "commonui", "arezzo12"));
+          KeySwitchComponent.field_J = (BitmapFont) ((Object) SnakePitModel.loadAntialiasedFont(param2, param1, false, "commonui", "arezzo14"));
+          ft.field_c = (BitmapFont) ((Object) SnakePitModel.loadAntialiasedFont(param2, param1, false, "commonui", "arezzo14bold"));
           var17 = new Sprite(param3.getFileByName("button.gif", (byte) 118, ""), (java.awt.Component) ((Object) nma.field_l));
           LegacyOpenGlBloomEffect.loadIndexedSprite("dropdown", param2, "commonui", 8864);
-          var5 = tw.a((byte) 127, "screen_options", "commonui", param2);
+          var5 = tw.loadIndexedSpritesByName((byte) 127, "screen_options", "commonui", param2);
           ita.field_e = new IndexedSprite[4];
           RasterShape.field_a = new IndexedSprite[4];
           DirectByteStorage.field_f = new IndexedSprite[4];
@@ -81,7 +81,7 @@ final class fha {
           pfa.a(1);
           MonochromeFillOperator.field_n = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fha.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fha.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

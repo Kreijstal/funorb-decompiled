@@ -114,11 +114,11 @@ final class GameAssetLoader implements LoadingStage {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final void a(int param0, byte param1, String param2) {
+    final void drawLoadingProgress(int param0, byte param1, String param2) {
         try {
           if (param1 != 47) {
             this.field_e = (ResourceArchive) null;
@@ -126,11 +126,11 @@ final class GameAssetLoader implements LoadingStage {
           ima.a((float)param0, param2, -106);
           ad.field_j.draw(0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sra.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sra.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c(int param0) {
+    private final void loadNextAsset(int param0) {
         int var2;
         int var3;
         int var4;
@@ -144,9 +144,9 @@ final class GameAssetLoader implements LoadingStage {
           return;
         }
         if (this.field_d != null) {
-          SpriteState.a(-18035);
-          this.a(30, (byte) 47, uba.loadingQuipsShort[0]);
-          Transform3D.a(this.field_d, 17572);
+          SpriteState.installDefaultFactories(-18035);
+          this.drawLoadingProgress(30, (byte) 47, uba.loadingQuipsShort[0]);
+          Transform3D.loadRoomDefinitions(this.field_d, 17572);
           uo.b((byte) -125);
           this.field_d = null;
           C2SActionPacket.a(-33);
@@ -154,15 +154,15 @@ final class GameAssetLoader implements LoadingStage {
         }
         if (this.field_h != null &&
           null != this.field_p) {
-          fp.a(uba.loadingQuipsShort[1], 40, this.field_h, (byte) 17);
+          fp.loadTitleSprites(uba.loadingQuipsShort[1], 40, this.field_h, (byte) 17);
           TextLayout.a((byte) -105, this.field_p, 50, uba.loadingQuipsShort[2]);
           this.field_p = null;
           KeySwitchComponent.a((byte) -86, uba.loadingQuipsShort[3], this.field_q, this.field_h, 60);
-          this.a(65, (byte) 47, uba.loadingQuipsShort[4]);
-          dqa.a(this.field_r, this.field_m, (byte) 55, this.field_h);
-          this.a(70, (byte) 47, uba.loadingQuipsShort[5]);
+          this.drawLoadingProgress(65, (byte) 47, uba.loadingQuipsShort[4]);
+          dqa.createTextureProvider(this.field_r, this.field_m, (byte) 55, this.field_h);
+          this.drawLoadingProgress(70, (byte) 47, uba.loadingQuipsShort[5]);
           this.d(-10242);
-          this.a(75, (byte) 47, uba.loadingQuipsShort[6]);
+          this.drawLoadingProgress(75, (byte) 47, uba.loadingQuipsShort[6]);
           this.field_r = null;
           this.field_m = null;
           this.field_h = null;
@@ -192,9 +192,9 @@ final class GameAssetLoader implements LoadingStage {
             fea.a(false, var3);
           }
           for (var3Lifetime1 = 0; var3Lifetime1 < 4; var3Lifetime1++) {
-            DateInputWidget.a(false, var3Lifetime1);
+            DateInputWidget.loadMusicTrack(false, var3Lifetime1);
           }
-          RewardChoicePhase.field_n.field_y.e(0);
+          RewardChoicePhase.field_n.field_y.clearPatchSampleIds(0);
           this.field_o = null;
           this.field_k = null;
           this.field_l = null;
@@ -202,7 +202,7 @@ final class GameAssetLoader implements LoadingStage {
           return;
         }
         if (baa.field_d == null) {
-          this.a(95, (byte) 47, uba.loadingQuipsShort[9]);
+          this.drawLoadingProgress(95, (byte) 47, uba.loadingQuipsShort[9]);
           FleeLocomotor.e((byte) -33);
           baa.field_d = new di(MatchPhase.field_l, rc.field_a);
         }
@@ -213,7 +213,7 @@ final class GameAssetLoader implements LoadingStage {
         this.field_c = true;
     }
 
-    public final boolean a(int param0) {
+    public final boolean isReadyToStart(int param0) {
         if (!this.field_n &&
           HotspotTextWidget.pollAndMergeAchievementMask(false)) {
           this.field_n = true;
@@ -302,7 +302,7 @@ final class GameAssetLoader implements LoadingStage {
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -311,11 +311,11 @@ final class GameAssetLoader implements LoadingStage {
         }
     }
 
-    public final boolean b(int param0) {
+    public final boolean loadStep(int param0) {
         rg.e(-2339);
         PlatformComponent.A(67);
         if (!this.field_c) {
-          this.c(124);
+          this.loadNextAsset(124);
           return false;
         }
         C2SActionPacket.a(-33);
@@ -334,18 +334,18 @@ final class GameAssetLoader implements LoadingStage {
         field_i = null;
     }
 
-    public final void b(byte param0) {
+    public final void finishLoading(byte param0) {
         CoinItemComponent.a(cq.field_d, (byte) 52);
         hd.setFrameRate(50, param0 ^ -78);
         wm.field_a = null;
-        SpriteTileOperator.field_t = (GameScreen) ((Object) nl.a(0, (byte) 50));
+        SpriteTileOperator.field_t = (GameScreen) ((Object) nl.getMenuScreen(0, (byte) 50));
         ima.a(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);
         ad.field_j.draw(param0 ^ -49);
         gn.field_C.a(-19216);
         if (param0 != -49) {
-          this.c(-107);
+          this.loadNextAsset(-107);
         }
-        cla.f(0);
+        cla.initConsole(0);
         C2SActionPacket.a(param0 + 16);
         if (null != mq.field_e) {
           eda.a(mq.field_e.field_g, true);
@@ -370,7 +370,7 @@ final class GameAssetLoader implements LoadingStage {
           }
         }
         if (param0 != -10242) {
-          this.b((byte) 30);
+          this.finishLoading((byte) 30);
         }
         if (!dna.field_G) {
           dea.field_c = false;

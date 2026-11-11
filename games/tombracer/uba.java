@@ -28,7 +28,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
               return (String) (stackIn_7_0);
             }
           } else {
-            stackIn_4_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(91, era.field_b, new String[]{"1890", Integer.toString(var5 - 3)});
+            stackIn_4_0 = LegacyOpenGlFlowingWaterEffect.formatText(91, era.field_b, new String[]{"1890", Integer.toString(var5 - 3)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -62,7 +62,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
             this.onTextChanged((TextInputWidget) null, -90);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
         try {
           this.markEdited(-81);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uba.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uba.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
             field_f = -61;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uba.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uba.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

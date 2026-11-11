@@ -22,7 +22,7 @@ final class q extends ql {
     }
 
     public final int hashCode() {
-        return ConstrainToRectangleLocomotor.a(this.field_q, this.field_p, (byte) -93);
+        return ConstrainToRectangleLocomotor.hashCell(this.field_q, this.field_p, (byte) -93);
     }
 
     final Collidable a(byte param0) {
@@ -43,11 +43,11 @@ final class q extends ql {
             this.a(92, (Collidable) null, (byte) -51, 63);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "q.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "q.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAlphanumeric(char param0, int param1) {
         boolean stackIn_28_0 = false;
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
@@ -161,11 +161,11 @@ final class q extends ql {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 8) {
           field_r = false;
@@ -198,7 +198,7 @@ final class q extends ql {
           this.field_n = param0;
           this.field_p = param2;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "q.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "q.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

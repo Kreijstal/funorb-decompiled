@@ -81,7 +81,7 @@ final class ConsoleToken extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "mi.A(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "mi.A(" + param0 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class ConsoleToken extends IntrusiveNode {
           this.text = param2;
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class ConsoleToken extends IntrusiveNode {
                 var7[incrementValue$0] = var5.a(-1, param1);
                 var5 = (ConsoleToken) (this.field_i.next(114));
               }
-              stackIn_9_0 = BeamSegment.a(param1, 19, this.text, var8);
+              stackIn_9_0 = BeamSegment.invokeConsoleMethod(param1, 19, this.text, var8);
               return stackIn_9_0;
             }
             if (CrusherModel.field_o == this.kind) {
@@ -232,7 +232,7 @@ final class ConsoleToken extends IntrusiveNode {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 

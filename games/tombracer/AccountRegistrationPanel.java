@@ -54,7 +54,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         }
         var4 = stackIn_3_0;
         if (param2) {
-          AccountRegistrationPanel.f(-14);
+          AccountRegistrationPanel.releaseStatics(-14);
         }
         if (param1 < 0.0f) {
           stackIn_8_0 = -param1;
@@ -195,7 +195,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         poa dupTemp$1 = new poa(10000536);
         this.field_C.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_E.field_r = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.e(127)});
+        String var2 = LegacyOpenGlFlowingWaterEffect.formatText(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.e(127)});
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, HardwareSpecularEffect.field_f);
         var3 = var3 + (this.addFieldWithHelp(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
@@ -284,7 +284,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -319,7 +319,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -395,7 +395,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -404,7 +404,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           super.updatePointerState(param0, param1, param2, param3);
           this.field_F.field_y = this.g(param1 - 2095275);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -419,11 +419,11 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           }
           ((TextInputWidget) ((Object) var3)).setText(false, -16719, var4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mr.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mr.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_w = null;
           field_H = null;
@@ -482,7 +482,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -490,7 +490,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         Weapon var1 = new Weapon();
         if (param0 > 123) {
           var1.effect = new Effect(1, 3);
-          var1.effect.b(1, 12);
+          var1.effect.setDeathMessageIndex(1, 12);
           var1.field_n = 655360;
           var1.maxAmmo = 250;
           var1.field_k = 12;
@@ -505,7 +505,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         }
         AccountRegistrationPanel.a(-0.43077895045280457f, 0.6055110096931458f, true, 1.4660576581954956f);
         var1.effect = new Effect(1, 3);
-        var1.effect.b(1, 12);
+        var1.effect.setDeathMessageIndex(1, 12);
         var1.field_n = 655360;
         var1.maxAmmo = 250;
         var1.field_k = 12;
@@ -549,7 +549,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -591,7 +591,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 

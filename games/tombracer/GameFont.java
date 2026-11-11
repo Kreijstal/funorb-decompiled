@@ -19,7 +19,7 @@ abstract class GameFont {
         try {
           this.a(false, param2 - this.field_a.a(param5, (byte) 107) / 2, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param5, 0, param4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -148,7 +148,7 @@ abstract class GameFont {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ abstract class GameFont {
           } else {
             var18 = new int[]{param11};
           }
-          var19 = this.field_a.a(param2, -127, WeaponShooterBehaviour.field_q, param7, (int[]) (var18));
+          var19 = this.field_a.wrapLines(param2, -127, WeaponShooterBehaviour.field_q, param7, (int[]) (var18));
           if (param14 == -1) {
             param14 = param9 / param13;
             if (0 >= param14) {
@@ -197,7 +197,7 @@ abstract class GameFont {
           }
           if (param14 > 0 &&
             var19 >= param14) {
-            WeaponShooterBehaviour.field_q[-1 + param14] = this.field_a.a(false, param7, WeaponShooterBehaviour.field_q[-1 + param14], param11);
+            WeaponShooterBehaviour.field_q[-1 + param14] = this.field_a.ellipsize(false, param7, WeaponShooterBehaviour.field_q[-1 + param14], param11);
             var19 = param14;
           }
           if (3 == param6 &&
@@ -275,7 +275,7 @@ abstract class GameFont {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw tba.a((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw tba.wrapException((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -326,7 +326,7 @@ abstract class GameFont {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -502,7 +502,7 @@ abstract class GameFont {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -552,7 +552,7 @@ abstract class GameFont {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param14).append(',').append(param15).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param14).append(',').append(param15).append(')').toString());
         }
     }
 
@@ -564,7 +564,7 @@ abstract class GameFont {
           this.a(param4, param5, 125);
           this.a(param1, param3, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "da.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "da.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -579,7 +579,7 @@ abstract class GameFont {
           this.a(param4, param3, 118);
           this.a(false, -this.field_a.a(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -588,7 +588,7 @@ abstract class GameFont {
           this.field_a = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -39,7 +39,7 @@ abstract class Transform3D {
 
     abstract void translate(int param0, int param1, int param2);
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadRoomDefinitions(ResourceArchive param0, int param1) {
         qg[] var10 = null;
         int var3 = 0;
         qg var4 = null;
@@ -49,18 +49,18 @@ abstract class Transform3D {
         byte[] var14 = null;
         int var9 = TombRacer.field_G ? 1 : 0;
         try {
-          hga.a(true, param0.getFileByName("", (byte) 124, "roomdata.csv"));
+          hga.parseRoomData(true, param0.getFileByName("", (byte) 124, "roomdata.csv"));
           var10 = cm.field_a;
           for (var3 = 0; var3 < var10.length; var3++) {
             var4 = var10[var3];
             var5 = var4.field_c;
             for (var6 = 0; var6 < var5.length; var6++) {
               var7 = var5[var6];
-              bt.field_b = bt.field_b + 1;
+              PitSnakeModel.field_b = PitSnakeModel.field_b + 1;
               var14 = param0.getFileByName(var7.field_g, (byte) 127, var7.field_b);
               var7.field_c = new BitPacketBuffer(var14);
               var7.field_c.beginBitAccess((byte) -38);
-              var7.field_e = PillarComponent.a(-1, var7.field_c);
+              var7.field_e = PillarComponent.decodeRoomHeader(-1, var7.field_c);
               var7.field_c.endBitAccess((byte) 98);
             }
             PerlinNoise2D.a(var4.field_c, 0, -1 + var4.field_c.length, -1);
@@ -70,7 +70,7 @@ abstract class Transform3D {
           }
           du.field_e = true;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "gda.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gda.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -90,13 +90,13 @@ abstract class Transform3D {
 
     abstract void rotateX(int param0);
 
-    final static Weapon a(boolean param0) {
+    final static Weapon createDefaultWeapon(boolean param0) {
         Weapon var1 = new Weapon();
         var1.effect = new Effect(0, 5);
         if (!param0) {
           return (Weapon) null;
         }
-        var1.effect.b(1, 9);
+        var1.effect.setDeathMessageIndex(1, 9);
         var1.field_d = 0;
         var1.field_h = 25;
         var1.maxAmmo = -1;

@@ -19,16 +19,16 @@ final class ina {
         ka dupTemp$3 = null;
         ka dupTemp$4 = null;
         try {
-          SwitchState.field_a = tc.a(SoftReferenceCache.field_b, -8829, param0);
-          ContextMenu.field_Ib = tc.a(OpenGlBuffer.field_c, -8829, param0);
-          mma.field_b = tc.a(DoorwayComponent.field_K, -8829, param0);
-          RevolverItemComponent.field_J = tc.a(C2SActionPacket.field_l, param1 - 8829, param0);
-          ta.field_ub = tc.a(CourseLayoutFactory.field_e, -8829, param0);
-          PowerUpItemBehaviour.field_t = tc.a(dq.field_h, -8829, param0);
-          GameApplet.field_j = tc.a(gta.field_f, param1 ^ -8829, param0);
-          gca.field_g = tc.a(cba.field_b, param1 ^ -8829, param0);
-          DoorwayComponent.field_F = tc.a(TriangleMesh.field_g, -8829, param0);
-          SwitchLinkList.field_b = tc.a(ControllerLocomotor.field_p, -8829, param0);
+          SwitchState.field_a = tc.createModels(SoftReferenceCache.field_b, -8829, param0);
+          ContextMenu.field_Ib = tc.createModels(OpenGlBuffer.field_c, -8829, param0);
+          mma.field_b = tc.createModels(DoorwayComponent.field_K, -8829, param0);
+          RevolverItemComponent.field_J = tc.createModels(C2SActionPacket.field_l, param1 - 8829, param0);
+          ta.field_ub = tc.createModels(CourseLayoutFactory.field_e, -8829, param0);
+          PowerUpItemBehaviour.field_t = tc.createModels(dq.field_h, -8829, param0);
+          GameApplet.field_j = tc.createModels(gta.field_f, param1 ^ -8829, param0);
+          gca.field_g = tc.createModels(cba.field_b, param1 ^ -8829, param0);
+          DoorwayComponent.field_F = tc.createModels(TriangleMesh.field_g, -8829, param0);
+          SwitchLinkList.field_b = tc.createModels(ControllerLocomotor.field_p, -8829, param0);
           dupTemp$0 = RevolverItemComponent.field_J[9].a((byte) 0, 654255, false);
           RevolverItemComponent.field_J[9] = dupTemp$0;
           dupTemp$0.O(224, 224, 224);
@@ -84,7 +84,7 @@ final class ina {
           }
           AllPlatformsMazeComponent.field_O = RevolverItemComponent.field_J[4];
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ina.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ina.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class ina {
             this.a((byte) 90);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ina.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ina.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class ina {
           this.field_e = this.field_e + 1;
           this.field_h[fieldTemp$0] = var8;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ina.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ina.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class ina {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class ina {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -203,7 +203,7 @@ final class ina {
             this.field_g = 68;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ina.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ina.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

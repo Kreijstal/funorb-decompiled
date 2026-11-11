@@ -33,7 +33,7 @@ final class hpa extends aa {
           } else {
             stackIn_3_1 = param1.field_e;
           }
-          DateInputWidget.a((ScrollPane) (stackIn_2_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
+          DateInputWidget.openPlayerContextMenu((ScrollPane) (stackIn_2_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
           if (0 == param1.field_d &&
             !MonochromeFillOperator.c(param0 + 2) &&
             null == C2SChooseRewardPacket.field_a &&
@@ -83,7 +83,7 @@ final class hpa extends aa {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

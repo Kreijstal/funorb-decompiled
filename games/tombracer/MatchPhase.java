@@ -32,7 +32,7 @@ abstract class MatchPhase {
 
     abstract boolean allowsChat(int param0);
 
-    final static void a(Room param0, int param1, MatchState param2) {
+    final static void sendRoomEnteredStat(Room param0, int param1, MatchState param2) {
         if (param1 != 100) {
           field_e = (int[]) null;
         }
@@ -47,7 +47,7 @@ abstract class MatchPhase {
           ql.field_k.writeCipheredOpcode(96, -2988);
           ql.field_k.writeShort(-1477662136, param0.getId((byte) -82));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "qra.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "qra.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -237,7 +237,7 @@ abstract class MatchPhase {
           this.screen = param0;
           this.a((byte) -78);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "qra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "qra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

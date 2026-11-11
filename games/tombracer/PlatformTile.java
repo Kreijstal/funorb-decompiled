@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh implements Renderable {
+final class PlatformTile implements Renderable {
     int field_f;
     static byte[][] field_i;
-    PlatformModel field_e;
+    PlatformModel platform;
     int field_h;
     int field_a;
     ModelAnimator field_g;
@@ -16,17 +16,17 @@ final class eh implements Renderable {
         if (param0 != 48) {
           return false;
         }
-        return this.field_e.isRenderExpired((byte) 48);
+        return this.platform.isRenderExpired((byte) 48);
     }
 
-    final void a(int param0) {
+    final void buildAnimator(int param0) {
         int var3;
         Camera var4;
         Camera var4Lifetime1;
         Camera var4Lifetime2;
         var3 = TombRacer.field_G ? 1 : 0;
         this.field_g = new ModelAnimator(1, this.field_f);
-        if (this.field_e.getStyle((byte) 87) == 4) {
+        if (this.platform.getStyle((byte) 87) == 4) {
           if (this.field_b < 33) {
             this.field_g.a(3, false, (byte) -96, 10);
           } else {
@@ -38,7 +38,7 @@ final class eh implements Renderable {
           }
           return;
         }
-        if (this.field_e.getStyle((byte) 87) != 0) {
+        if (this.platform.getStyle((byte) 87) != 0) {
           return;
         }
         if (this.field_b < 33) {
@@ -80,16 +80,16 @@ final class eh implements Renderable {
             this.updateAnimation(-75);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "eh.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "eh.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final int getRenderY(byte param0) {
         if (param0 >= 91) {
-          return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.getOffsetY(1024);
+          return this.platform.getRenderY((byte) 112) + this.field_c + this.platform.getOffsetY(1024);
         }
         this.isRenderExpired((byte) 85);
-        return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.getOffsetY(1024);
+        return this.platform.getRenderY((byte) 112) + this.field_c + this.platform.getOffsetY(1024);
     }
 
     public final void updateAnimation(int param0) {
@@ -101,17 +101,17 @@ final class eh implements Renderable {
 
     public final int getRenderX(byte param0) {
         int var2 = 116 % ((-23 - param0) / 53);
-        return this.field_e.getRenderX((byte) -89) + this.field_d + this.field_e.getOffsetX(-13019);
+        return this.platform.getRenderX((byte) -89) + this.field_d + this.platform.getOffsetX(-13019);
     }
 
     public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           return 121;
         }
-        if (this.field_e.getStyle((byte) 87) != 1) {
-          return this.field_e.getRenderZ((byte) -88) - 655360;
+        if (this.platform.getStyle((byte) 87) != 1) {
+          return this.platform.getRenderZ((byte) -88) - 655360;
         }
-        return this.field_e.getRenderZ((byte) -121);
+        return this.platform.getRenderZ((byte) -121);
     }
 
     static {

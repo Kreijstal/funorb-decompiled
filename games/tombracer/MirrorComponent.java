@@ -54,7 +54,7 @@ final class MirrorComponent extends PrefabComponent {
     final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           PacketBuffer var3 = (PacketBuffer) null;
-          MirrorComponent.a((PacketBuffer) null, -27);
+          MirrorComponent.decodeTextureOperator((PacketBuffer) null, -27);
           return false;
         }
         return false;
@@ -71,7 +71,7 @@ final class MirrorComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
     }
 
-    final static TextureOperator a(PacketBuffer param0, int param1) {
+    final static TextureOperator decodeTextureOperator(PacketBuffer param0, int param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -108,7 +108,7 @@ final class MirrorComponent extends PrefabComponent {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class MirrorComponent extends PrefabComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "aw.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "aw.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class MirrorComponent extends PrefabComponent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

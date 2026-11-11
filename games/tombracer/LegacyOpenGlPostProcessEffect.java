@@ -61,7 +61,7 @@ abstract class LegacyOpenGlPostProcessEffect extends IntrusiveNode {
         try {
           this.toolkit = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "oga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "oga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

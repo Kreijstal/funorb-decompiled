@@ -7,7 +7,7 @@ class tc extends lu {
     static SecondaryNodeHashTable field_d;
     static String field_f;
 
-    final static ka[] a(oc[] param0, int param1, GraphicsToolkit param2) {
+    final static ka[] createModels(oc[] param0, int param1, GraphicsToolkit param2) {
         int var4 = 0;
         ka[] var3 = null;
         RuntimeException var3_ref = null;
@@ -51,11 +51,11 @@ class tc extends lu {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 17129) {
           tc.a(false, 119);
           field_d = null;
@@ -74,7 +74,7 @@ class tc extends lu {
           param0.writeLong(1736565456, this.field_g);
           param0.writeBase38Name(this.field_e, -124);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "tc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "tc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -107,7 +107,7 @@ class tc extends lu {
           this.field_e = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "tc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "tc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

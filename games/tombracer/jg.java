@@ -57,11 +57,11 @@ abstract class jg {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int withAlpha(int param0, byte param1, int param2) {
         if (param2 < 0) {
           return 0;
         }

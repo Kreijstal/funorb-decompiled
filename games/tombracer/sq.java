@@ -49,7 +49,7 @@ final class sq extends PcmStream {
               }
               this.field_w = param5;
               if (param5 != null) {
-                this.field_l.a(param5, false, (byte) 80);
+                this.field_l.playTrack(param5, false, (byte) 80);
                 this.a(1048576, param3, param0, this.field_l);
               }
             } else {
@@ -58,7 +58,7 @@ final class sq extends PcmStream {
               }
               this.field_u = param5;
               if (param5 != null) {
-                this.field_y.a(param5, false, (byte) 80);
+                this.field_y.playTrack(param5, false, (byte) 80);
                 this.a(1048576, param3, param0, this.field_y);
               }
             }
@@ -95,7 +95,7 @@ final class sq extends PcmStream {
               stackIn_51_0 = this.field_y;
               stackIn_51_1 = (MusicTrack) (param5);
               stackIn_52_2 = !(param4);
-              ((MidiPcmStream) (Object) stackIn_51_0).a(stackIn_51_1, stackIn_52_2, (byte) 80);
+              ((MidiPcmStream) (Object) stackIn_51_0).playTrack(stackIn_51_1, stackIn_52_2, (byte) 80);
               this.a(1048576, param3, param0, this.field_y);
             }
             this.field_m = param1;
@@ -108,7 +108,7 @@ final class sq extends PcmStream {
               stackIn_42_0 = this.field_l;
               stackIn_42_1 = (MusicTrack) (param5);
               stackIn_43_2 = !(param4);
-              ((MidiPcmStream) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_43_2, (byte) 80);
+              ((MidiPcmStream) (Object) stackIn_42_0).playTrack(stackIn_42_1, stackIn_43_2, (byte) 80);
               this.a(1048576, param3, param0, this.field_l);
             }
             this.field_m = -param1;
@@ -128,7 +128,7 @@ final class sq extends PcmStream {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(')').toString());
         }
     }
 
@@ -170,13 +170,13 @@ final class sq extends PcmStream {
           }
           if (this.field_q) {
             if (this.field_m > 0 &&
-              !this.field_y.a((byte) -72)) {
+              !this.field_y.hasMidiData((byte) -72)) {
               this.field_q = false;
               this.field_m = -this.field_m;
               this.field_u = null;
             } else {
               if (this.field_m < 0 &&
-                !this.field_l.a((byte) -117)) {
+                !this.field_l.hasMidiData((byte) -117)) {
                 this.field_q = false;
                 this.field_w = null;
                 this.field_m = -this.field_m;
@@ -289,7 +289,7 @@ final class sq extends PcmStream {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class sq extends PcmStream {
           this.field_r = param2;
           this.field_n = this.field_y;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sq.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sq.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ final class sq extends PcmStream {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -351,7 +351,7 @@ final class sq extends PcmStream {
           }
           param3.a(param1, (byte) 55);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -373,7 +373,7 @@ final class sq extends PcmStream {
           }
           if (this.field_q) {
             if (this.field_m > 0 &&
-              !this.field_y.a((byte) -91)) {
+              !this.field_y.hasMidiData((byte) -91)) {
               this.field_m = -this.field_m;
               this.field_q = false;
               this.field_u = null;
@@ -408,7 +408,7 @@ final class sq extends PcmStream {
               return;
             }
             if (this.field_m < 0 &&
-              !this.field_l.a((byte) -127)) {
+              !this.field_l.hasMidiData((byte) -127)) {
               this.field_q = false;
               this.field_m = -this.field_m;
               this.field_w = null;
@@ -490,7 +490,7 @@ final class sq extends PcmStream {
           }
           if (this.field_q) {
             if (this.field_m > 0 &&
-              !this.field_y.a((byte) -91)) {
+              !this.field_y.hasMidiData((byte) -91)) {
               this.field_m = -this.field_m;
               this.field_q = false;
               this.field_u = null;
@@ -525,7 +525,7 @@ final class sq extends PcmStream {
               return;
             }
             if (this.field_m < 0 &&
-              !this.field_l.a((byte) -127)) {
+              !this.field_l.hasMidiData((byte) -127)) {
               this.field_q = false;
               this.field_m = -this.field_m;
               this.field_w = null;
@@ -607,7 +607,7 @@ final class sq extends PcmStream {
         }
         if (this.field_q) {
           if (this.field_m > 0 &&
-            !this.field_y.a((byte) -91)) {
+            !this.field_y.hasMidiData((byte) -91)) {
             this.field_m = -this.field_m;
             this.field_q = false;
             this.field_u = null;
@@ -649,7 +649,7 @@ final class sq extends PcmStream {
               this.field_u = null;
               return;
             }
-            if (!this.field_l.a((byte) -127)) {
+            if (!this.field_l.hasMidiData((byte) -127)) {
               this.field_q = false;
               this.field_m = -this.field_m;
               this.field_w = null;
@@ -697,7 +697,7 @@ final class sq extends PcmStream {
         try {
           this.a(param1, param0, 1048576);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

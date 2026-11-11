@@ -56,7 +56,7 @@ final class ReportAbuseDialog extends UiComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class ReportAbuseDialog extends UiComponent {
             this.field_wb.field_w = Player.createScrollbarSprites(this.field_wb.field_t, 2105376, 3, 11579568, -125, 8421504);
             var23 = 13 + (13 + var19);
             var24 = 10 + var17Lifetime5 + (var22 + 24);
-            var25 = bt.a((byte) -8, var23, param2, param0);
+            var25 = PitSnakeModel.a((byte) -8, var23, param2, param0);
             var26 = hsa.a(param3, var24, param1, (byte) -99);
             this.setBounds(var23, var24, -23776, var26, var25);
             return;
@@ -320,7 +320,7 @@ final class ReportAbuseDialog extends UiComponent {
           this.field_wb.field_w = Player.createScrollbarSprites(this.field_wb.field_t, 2105376, 3, 11579568, -121, 8421504);
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
-          var20Lifetime1 = bt.a((byte) -8, var18Lifetime1, param2, param0);
+          var20Lifetime1 = PitSnakeModel.a((byte) -8, var18Lifetime1, param2, param0);
           var21Lifetime1 = hsa.a(param3, var19Lifetime1, param1, (byte) 53);
           this.setBounds(var18Lifetime1, var19Lifetime1, -23776, var21Lifetime1, var20Lifetime1);
           return;
@@ -370,7 +370,7 @@ final class ReportAbuseDialog extends UiComponent {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -428,7 +428,7 @@ final class ReportAbuseDialog extends UiComponent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

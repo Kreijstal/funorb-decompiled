@@ -72,11 +72,11 @@ class MidiPcmStream extends PcmStream {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final synchronized boolean a(byte param0) {
+    final synchronized boolean hasMidiData(byte param0) {
         if (param0 > -70) {
           this.a((byte) -3, 35, 27);
         }
@@ -155,7 +155,7 @@ class MidiPcmStream extends PcmStream {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -196,11 +196,11 @@ class MidiPcmStream extends PcmStream {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           MidiPcmStream.a(8, -95, (java.awt.Canvas) null, (TextureProvider) null, -74);
         }
@@ -236,7 +236,7 @@ class MidiPcmStream extends PcmStream {
           stackIn_11_1 = -44;
         }
         if (stackIn_11_0 > stackIn_11_1) {
-          this.a((byte) -62);
+          this.hasMidiData((byte) -62);
         }
     }
 
@@ -251,7 +251,7 @@ class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 127) {
-            MidiPcmStream.c(-1);
+            MidiPcmStream.releaseStatics(-1);
           }
           stackIn_3_0 = new SoftwareGraphicsToolkit(param2, param3, param4, param0);
           return (GraphicsToolkit) ((Object) stackIn_3_0);
@@ -271,11 +271,11 @@ class MidiPcmStream extends PcmStream {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void handleMidiMessage(int param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -428,7 +428,7 @@ class MidiPcmStream extends PcmStream {
               this.field_J[var4Lifetime1Lifetime3] = 16384 + (SnakePitBehaviour.bitwiseAnd(this.field_J[var4Lifetime1Lifetime3], 16256) + var6Lifetime1Lifetime2);
               break;
             case 120:
-              this.b(true, var4Lifetime1Lifetime3);
+              this.fadeOutChannelNotes(true, var4Lifetime1Lifetime3);
               break;
             case 121:
               this.a((byte) 101, var4Lifetime1Lifetime3);
@@ -516,14 +516,14 @@ class MidiPcmStream extends PcmStream {
         this.field_H = param0;
     }
 
-    final synchronized void a(MusicTrack param0, boolean param1, byte param2) {
+    final synchronized void playTrack(MusicTrack param0, boolean param1, byte param2) {
         if (param2 != 80) {
           return;
         }
         try {
           this.startTrack(param1, param0, (byte) 40, true);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "l.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "l.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -613,7 +613,7 @@ class MidiPcmStream extends PcmStream {
           return;
         }
         if (param0) {
-          this.b(true, -1);
+          this.fadeOutChannelNotes(true, -1);
         }
         if (!param0 ||
           var4 != 0) {
@@ -641,9 +641,9 @@ class MidiPcmStream extends PcmStream {
     }
 
     final synchronized void b(int param0) {
-        this.a(-191040664, true);
+        this.stopTrack(-191040664, true);
         if (param0 != 2) {
-          this.e(110);
+          this.clearPatchSampleIds(110);
         }
     }
 
@@ -697,18 +697,18 @@ class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final int b(byte param0) {
+    final int getMasterVolume(byte param0) {
         if (param0 <= 118) {
           return 11;
         }
         return this.masterVolume;
     }
 
-    private final void b(boolean param0, int param1) {
+    private final void fadeOutChannelNotes(boolean param0, int param1) {
         rta var3;
         int var4;
         int stackIn_16_0 = 0;
@@ -830,7 +830,7 @@ class MidiPcmStream extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -939,7 +939,7 @@ class MidiPcmStream extends PcmStream {
           var7 = param0.field_v;
           param0.field_p = param0.field_p + var7.field_d;
           if (param3 != 6) {
-            this.c(94, 39);
+            this.handleMidiMessage(94, 39);
           }
           var8 = 0;
           param0.field_l = param0.field_l + 1;
@@ -1068,7 +1068,7 @@ class MidiPcmStream extends PcmStream {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1076,11 +1076,11 @@ class MidiPcmStream extends PcmStream {
         return (PcmStream) ((Object) this.field_v);
     }
 
-    final synchronized void e(int param0) {
+    final synchronized void clearPatchSampleIds(int param0) {
         int var3 = 0;
         tn var4 = null;
         var3 = TombRacer.field_G ? 1 : 0;
-        var4 = (tn) (this.field_r.d(param0));
+        var4 = (tn) (this.field_r.firstWithKey(param0));
         while (var4 != null) {
           var4.a(false);
           var4 = (tn) (this.field_r.nextWithKey(param0 ^ 20806));
@@ -1091,7 +1091,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(int param0, MusicTrack param1, ResourceArchive param2, SoundCache param3, int param4) {
+    final synchronized boolean prepareTrack(int param0, MusicTrack param1, ResourceArchive param2, SoundCache param3, int param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -1116,7 +1116,7 @@ class MidiPcmStream extends PcmStream {
           if (0 < param0) {
             var7 = new int[]{param0};
           }
-          var8 = (jk) (param1.field_f.d(param4));
+          var8 = (jk) (param1.field_f.firstWithKey(param4));
           scanLoop1: while (true) {
             if (var8 != null) {
               var9 = (int)var8.key;
@@ -1124,7 +1124,7 @@ class MidiPcmStream extends PcmStream {
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var10 == null) {
-                  var10 = SimpleConditionBehaviour.a(param2, var9, 15);
+                  var10 = SimpleConditionBehaviour.loadInstrumentPatch(param2, var9, 15);
                   if (var10 == null) {
                     var6_int = 0;
                     decompiledFrameRemainder0 = false;
@@ -1172,7 +1172,7 @@ class MidiPcmStream extends PcmStream {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1254,7 +1254,7 @@ class MidiPcmStream extends PcmStream {
                       break scanLoop2;
                     }
                     if (this.field_x != null) {
-                      this.a(this.field_x, this.field_t, (byte) 80);
+                      this.playTrack(this.field_x, this.field_t, (byte) 80);
                       this.advanceMidiEvents(119);
                       return;
                     }
@@ -1268,7 +1268,7 @@ class MidiPcmStream extends PcmStream {
                     return;
                   }
                   if (0 != (var6 & 128)) {
-                    this.c(var6, 128);
+                    this.handleMidiMessage(var6, 128);
                   }
                   this.field_w.readDelta(var2);
                   this.field_w.saveTrackPosition(var2);
@@ -1305,7 +1305,7 @@ class MidiPcmStream extends PcmStream {
 
     private final void b(int param0, int param1, int param2) {
         if (param2 != 98) {
-          this.a((byte) 90);
+          this.hasMidiData((byte) 90);
         }
     }
 
@@ -1321,7 +1321,7 @@ class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          this.a(-191040664, param3);
+          this.stopTrack(-191040664, param3);
           this.field_w.parse(param1.field_g);
           this.field_E = 0L;
           stackIn_4_1 = (param0);
@@ -1354,7 +1354,7 @@ class MidiPcmStream extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1439,7 +1439,7 @@ class MidiPcmStream extends PcmStream {
           var7.field_x = PcmSampleStream.create(var6, this.computeNoteSampleStep(param1 - 71, var7), this.voiceVolume(var7, 113), this.voicePan(-2421, var7));
         }
         if (0 > var10.field_g[param0]) {
-          var7.field_x.b(-1);
+          var7.field_x.setLoopCount(-1);
         }
         if (var7.field_z >= 0) {
           var8 = this.field_n[param2][var7.field_z];
@@ -1455,7 +1455,7 @@ class MidiPcmStream extends PcmStream {
         return;
     }
 
-    private final synchronized void a(int param0, boolean param1) {
+    private final synchronized void stopTrack(int param0, boolean param1) {
         this.field_w.release();
         if (param0 != -191040664) {
           return;
@@ -1504,7 +1504,7 @@ class MidiPcmStream extends PcmStream {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1564,7 +1564,7 @@ class MidiPcmStream extends PcmStream {
           this.a((byte) -105, 256, -1);
           this.resetSynthesizer(true, -119);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

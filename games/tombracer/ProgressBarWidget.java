@@ -63,7 +63,7 @@ final class ProgressBarWidget extends UiWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class ProgressBarWidget extends UiWidget {
         int var9 = TombRacer.field_G ? 1 : 0;
         int var2 = this.field_p >> 1;
         Sprite var3 = new Sprite(var2, this.field_p);
-        nm.a(var3, (byte) 93);
+        nm.setRasterTarget(var3, (byte) 93);
         if (param0 <= 66) {
           this.field_z = (Sprite) null;
         }
@@ -117,7 +117,7 @@ final class ProgressBarWidget extends UiWidget {
         int var6 = param1 + this.field_n;
         this.drawRoundedStripes(var6, this.field_w[param2], var5, 93);
         if (this.field_B < 65536) {
-          tga.a(-21953, (this.field_B * this.field_m >> 16) + var5, this.field_m + var5, var6, var6 + this.field_p);
+          tga.intersectClip(-21953, (this.field_B * this.field_m >> 16) + var5, this.field_m + var5, var6, var6 + this.field_p);
           this.drawRoundedStripes(var6, this.field_w[1], var5, 115);
           pfa.a(param2 + 1);
         }
@@ -159,7 +159,7 @@ final class ProgressBarWidget extends UiWidget {
         int var9Lifetime1;
         int var10Lifetime1;
         int var13Lifetime1;
-        nm.a(var5, (byte) 110);
+        nm.setRasterTarget(var5, (byte) 110);
         int var6 = this.field_p >> 1;
         for (var7 = 0; this.field_p > var7; var7++) {
           var8 = (var7 >> 1) * (this.field_u * 2 - 1) % (2 * this.field_u);
@@ -193,7 +193,7 @@ final class ProgressBarWidget extends UiWidget {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var5_int = param2 + this.field_m;
-          tga.a(-21953, this.field_A.field_m + param2, var5_int - this.field_A.field_m, param0, this.field_p + param0);
+          tga.intersectClip(-21953, this.field_A.field_m + param2, var5_int - this.field_A.field_m, param0, this.field_p + param0);
           if (param3 <= 86) {
             this.setColors(true, -45, -128);
           }
@@ -202,7 +202,7 @@ final class ProgressBarWidget extends UiWidget {
           }
           pfa.a(1);
           if (SoftwareRasterizer.clipLeft <= this.field_A.field_m + param2) {
-            nm.a(this.field_E, (byte) 116);
+            nm.setRasterTarget(this.field_E, (byte) 116);
             param1.drawTransparent(-this.field_y, 0);
             param1.drawTransparent(2 * this.field_u - this.field_y, 0);
             this.field_z.drawMultiply(0, 0);
@@ -210,7 +210,7 @@ final class ProgressBarWidget extends UiWidget {
             this.field_E.drawTransparent(param2, param0);
           }
           if (SoftwareRasterizer.clipRight >= -this.field_A.field_m + var5_int) {
-            nm.a(this.field_E, (byte) 91);
+            nm.setRasterTarget(this.field_E, (byte) 91);
             for (var7 = this.field_y + this.field_m - this.field_A.field_m; 2 * this.field_u < var7; var7 = var7 - 2 * this.field_u) {
             }
             param1.drawTransparent(-var7, 0);
@@ -231,7 +231,7 @@ final class ProgressBarWidget extends UiWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

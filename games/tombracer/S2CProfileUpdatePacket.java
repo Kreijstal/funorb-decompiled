@@ -21,9 +21,9 @@ final class S2CProfileUpdatePacket implements GamePacket {
           return;
         }
         try {
-          param0.a(8, this.field_a);
+          param0.queueUpdate(8, this.field_a);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "bga.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "bga.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class S2CProfileUpdatePacket implements GamePacket {
         try {
           this.field_a.a(param1, param0 ^ 32582);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "bga.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "bga.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class S2CProfileUpdatePacket implements GamePacket {
             field_d = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "bga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "bga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

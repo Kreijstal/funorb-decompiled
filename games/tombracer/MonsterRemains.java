@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nta implements Renderable {
+final class MonsterRemains implements Renderable {
     private int field_g;
     static String field_e;
     private int field_a;
@@ -13,7 +13,7 @@ final class nta implements Renderable {
     private int field_j;
     static int field_h;
 
-    final void a(byte param0, RenderScene param1, int param2) {
+    final void addToLayer(byte param0, RenderScene param1, int param2) {
         if (param1 == null) {
           return;
         }
@@ -21,7 +21,7 @@ final class nta implements Renderable {
           param1.addToLayer((byte) -100, 2, (Renderable) (this));
           int var4_int = 5 / ((-52 - param0) / 57);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "nta.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "nta.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class nta implements Renderable {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class nta implements Renderable {
         return this.field_j;
     }
 
-    nta(int param0, int param1, int param2, ModelAnimator param3, int param4, int param5) {
+    MonsterRemains(int param0, int param1, int param2, ModelAnimator param3, int param4, int param5) {
         try {
           this.field_a = param5;
           this.field_j = param0;
@@ -117,7 +117,7 @@ final class nta implements Renderable {
           this.field_g = param2;
           this.field_f = param3;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "nta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "nta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -18,7 +18,7 @@ final class pl {
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 64) {
-            pl.a(-48);
+            pl.releaseStatics(-48);
           }
           if (cm.field_a == null) {
             stackIn_6_0 = -1;
@@ -41,7 +41,7 @@ final class pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "pl.A(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "pl.A(" + param0 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class pl {
         this.field_d = param0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != 0) {

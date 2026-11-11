@@ -18,7 +18,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
         return true;
     }
 
-    public static void f(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_M = null;
         field_O = null;
         if (param0) {
@@ -33,7 +33,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "qi.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "qi.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
             } else {
               stackIn_25_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -158,11 +158,11 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static String a(int param0, Throwable param1) throws IOException {
+    final static String describeException(int param0, Throwable param1) throws IOException {
         String var2;
         ClientException var3;
         StringWriter var3_ref;
@@ -356,7 +356,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -8,10 +8,10 @@ final class BrazierComponent extends PrefabComponent {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         if (param3 > param0) {
-          nra.a((byte) -55, param1, param3, vaa.field_a[param2], param0);
+          nra.fillRange((byte) -55, param1, param3, vaa.field_a[param2], param0);
           return;
         }
-        nra.a((byte) -55, param1, param0, vaa.field_a[param2], param3);
+        nra.fillRange((byte) -55, param1, param0, vaa.field_a[param2], param3);
         if (!param4) {
           return;
         }
@@ -88,7 +88,7 @@ final class BrazierComponent extends PrefabComponent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class BrazierComponent extends PrefabComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class BrazierComponent extends PrefabComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

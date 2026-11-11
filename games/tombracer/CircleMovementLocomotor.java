@@ -31,8 +31,8 @@ final class CircleMovementLocomotor extends Locomotor {
         var3 = this.getTrapInitialLocalY(false);
         if (!this.field_p &&
           !this.field_t) {
-          var4 = (cr.a(true, this.field_q >> 2) >> 8) * (this.field_o >> 8) + var2;
-          var5 = var3 + (pla.b(35, this.field_q >> 2) >> 8) * (this.field_o >> 8);
+          var4 = (cr.sin8192(true, this.field_q >> 2) >> 8) * (this.field_o >> 8) + var2;
+          var5 = var3 + (pla.cos8192(35, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         } else {
           var4 = this.trap.getLocalX(25745);
           var5 = this.trap.getLocalY(false);
@@ -41,8 +41,8 @@ final class CircleMovementLocomotor extends Locomotor {
         this.field_q = this.field_q - this.field_r;
         this.field_q = GameScreen.positiveModulo(this.field_q, 32768, 78);
         var7 = 49 % ((param0 + 69) / 42);
-        var6 = var2 + (cr.a(true, this.field_q >> 2) >> 8) * (this.field_o >> 8);
-        var8 = var3 + (pla.b(102, this.field_q >> 2) >> 8) * (this.field_o >> 8);
+        var6 = var2 + (cr.sin8192(true, this.field_q >> 2) >> 8) * (this.field_o >> 8);
+        var8 = var3 + (pla.cos8192(102, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         this.trap.move((byte) -94, -var4 + var6, var8 - var5);
     }
 
@@ -69,7 +69,7 @@ final class CircleMovementLocomotor extends Locomotor {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class CircleMovementLocomotor extends Locomotor {
             this.field_r = -34;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uha.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uha.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class CircleMovementLocomotor extends Locomotor {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class CircleMovementLocomotor extends Locomotor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class CircleMovementLocomotor extends Locomotor {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param9).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param9).append(')').toString());
         }
     }
 

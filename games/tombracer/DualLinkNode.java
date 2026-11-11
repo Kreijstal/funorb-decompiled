@@ -8,7 +8,7 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode secondaryNext;
     long secondaryKey;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_i = 103;
           field_h = null;
@@ -31,7 +31,7 @@ class DualLinkNode extends IntrusiveNode {
 
     final void setSecondaryKey(boolean param0, long param1) {
         if (param0) {
-          DualLinkNode.b(-57);
+          DualLinkNode.releaseStatics(-57);
           if (this.secondaryPrevious == null) {
             this.secondaryKey = param1;
             return;
@@ -83,7 +83,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

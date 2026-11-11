@@ -75,7 +75,7 @@ final class VortexBehaviour extends Behaviour {
           var27.configure(false, 2, 3, 4, 25);
           var27.setPlanarVelocity(param0 - 5361, var14 * this.field_r / var17_int, this.field_r * var13 / var17_int);
         }
-        var17 = this.getRoom(true).collisionGrid.b(var3, -1, var2, var4, var5);
+        var17 = this.getRoom(true).collisionGrid.queryBox(var3, -1, var2, var4, var5);
         var18 = var17;
         for (var19 = 0; var19 < var18.length; var19++) {
           var20 = var18[var19];
@@ -90,8 +90,8 @@ final class VortexBehaviour extends Behaviour {
               if (var25 <= var11 &&
                 var25 != 0) {
                 var6 = (var25 << 16) / var11;
-                var6 = -gqa.a(var6, (byte) 24, var8 - var7) + var8;
-                var6 = za.$cfr$intArgs$a$c604db63f465(var7, 74, var8, var6);
+                var6 = -gqa.multiplyFixed(var6, (byte) 24, var8 - var7) + var8;
+                var6 = za.clampValue(var7, 74, var8, var6);
                 if (this.field_q) {
                   var6 = -var6;
                 }
@@ -146,7 +146,7 @@ final class VortexBehaviour extends Behaviour {
           param1.writeBits((byte) 32, this.field_r, 4);
           param1.writeBits((byte) -127, this.field_p, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "bn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "bn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class VortexBehaviour extends Behaviour {
           this.field_r = param1.readBits((byte) 44, 4);
           this.field_p = param1.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

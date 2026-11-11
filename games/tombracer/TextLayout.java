@@ -17,10 +17,10 @@ abstract class TextLayout {
         }
         String[] var4 = new String[1];
         var4[0] = var3;
-        int var5 = BufferedSocket.a(2147483647, new Random(), -76);
+        int var5 = BufferedSocket.randomBelow(2147483647, new Random(), -76);
         wka.field_d = false;
         id var6 = new id(param0, var5);
-        SecondaryNodeDequeIterator.field_a = new MatchScreen(false, var5, var4, 0, false, rga.b(26499, param0), 0, 1, param2, param0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, var6);
+        SecondaryNodeDequeIterator.field_a = new MatchScreen(false, var5, var4, 0, false, rga.getCourseRoomCount(26499, param0), 0, 1, param2, param0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, var6);
         SecondaryNodeDequeIterator.field_a.initPlayers((byte) -64);
         SecondaryNodeDequeIterator.field_a.showCharacterSelect((byte) -52);
         int var7 = -125 / ((param1 - 57) / 38);
@@ -100,11 +100,11 @@ abstract class TextLayout {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final int a(int param0) {
+    final int getMaxLineWidth(int param0) {
         int var4 = 0;
         int var2;
         kha[] var3;
@@ -143,10 +143,10 @@ abstract class TextLayout {
         RuntimeException var4_ref = null;
         try {
           var4 = (GameAssetLoader) (dma.field_l);
-          var4.a(param2, (byte) 47, param3);
+          var4.drawLoadingProgress(param2, (byte) 47, param3);
           haa.field_A = new SpriteData();
           haa.field_A.field_f = param1.getFileByName("", (byte) 127, "map.png");
-          var4.a(param2 + 5, (byte) 47, param3);
+          var4.drawLoadingProgress(param2 + 5, (byte) 47, param3);
           du.field_c = new SpriteData();
           du.field_c.field_f = param1.getFileByName("", (byte) 117, "wall_bg.jpg");
           if (param0 > -100) {
@@ -170,7 +170,7 @@ abstract class TextLayout {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ abstract class TextLayout {
         return stackIn_5_0;
     }
 
-    final int a(byte param0, int param1) {
+    final int getCaretX(byte param0, int param1) {
         int var4 = 0;
         kha var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;

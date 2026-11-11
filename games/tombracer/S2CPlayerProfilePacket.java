@@ -10,9 +10,9 @@ final class S2CPlayerProfilePacket implements GamePacket {
           return;
         }
         try {
-          this.profile.a(-2016804080, param1);
+          this.profile.encode(-2016804080, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "aoa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "aoa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,12 +54,12 @@ final class S2CPlayerProfilePacket implements GamePacket {
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
           this.profile = new PlayerProfile();
-          this.profile.a(param0, (byte) 122);
+          this.profile.decode(param0, (byte) 122);
           if (param1 != -19) {
             field_b = (apa) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "aoa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "aoa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -58,7 +58,7 @@ final class FinishOrderOverlay extends MatchOverlay {
               var13 = var6;
             }
             if (this.field_g.simulations[var12].isFinished(0)) {
-              MembersUpsellMenu.a((dta.field_b[var11] + "  " + this.field_i.getPlayerName(var12, false) + "  " + dea.a(this.field_g.simulations[var12].tick, (byte) -8)).toUpperCase(), var13, qf.field_j, -1, var7 * var11 + var10, var2, 0);
+              MembersUpsellMenu.a((dta.field_b[var11] + "  " + this.field_i.getPlayerName(var12, false) + "  " + dea.formatTime(this.field_g.simulations[var12].tick, (byte) -8)).toUpperCase(), var13, qf.field_j, -1, var7 * var11 + var10, var2, 0);
             } else {
               if (!this.field_g.simulations[var12].hasTimedOut(-31170) &&
                 this.field_i.matchState.getRoundWinner(2) < 0) {

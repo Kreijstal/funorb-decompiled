@@ -28,7 +28,7 @@ final class uca {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param0);
-          if (!CurveOperator.a(true, var10)) {
+          if (!CurveOperator.isValidAccountName(true, var10)) {
             stackIn_3_0 = pk.field_v;
             return stackIn_3_0;
           }
@@ -38,7 +38,7 @@ final class uca {
           }
           var8 = wp.a(94, param0);
           if (var8 == null) {
-            stackIn_10_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(88, LegacyOpenGlCubeTexture.field_m, new String[]{param0});
+            stackIn_10_0 = LegacyOpenGlFlowingWaterEffect.formatText(88, LegacyOpenGlCubeTexture.field_m, new String[]{param0});
             return stackIn_10_0;
           }
           if (param1 != 102) {
@@ -75,7 +75,7 @@ final class uca {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class uca {
           var5.appendCrc32(var4, 64);
           var5.backpatchByteLength(-var4 + var5.position, (byte) -122);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

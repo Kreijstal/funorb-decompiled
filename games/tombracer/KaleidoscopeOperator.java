@@ -10,7 +10,7 @@ final class KaleidoscopeOperator extends TextureOperator {
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
           CharSequence var7 = (CharSequence) null;
-          KaleidoscopeOperator.a((byte) -31, (CharSequence) null);
+          KaleidoscopeOperator.normalizeName((byte) -31, (CharSequence) null);
         }
         int[] var8 = this.monochromeCache.getRow((byte) -111, param1);
         int[] var3 = var8;
@@ -24,7 +24,7 @@ final class KaleidoscopeOperator extends TextureOperator {
         return var3;
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String normalizeName(byte param0, CharSequence param1) {
         int var5 = 0;
         int var2_int = 0;
         int var3 = 0;
@@ -75,7 +75,7 @@ final class KaleidoscopeOperator extends TextureOperator {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class KaleidoscopeOperator extends TextureOperator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

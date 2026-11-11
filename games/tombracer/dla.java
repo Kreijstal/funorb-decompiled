@@ -234,11 +234,11 @@ final class dla {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
         }
     }
 
-    final static int a(int param0) {
+    final static int getLoadingPercent(int param0) {
         if (cga.field_f < 2) {
           return 0;
         }
@@ -304,7 +304,7 @@ final class dla {
           rua.field_gb.b(36, false);
         }
         if (param0 != 23713) {
-          dla.a(120);
+          dla.getLoadingPercent(120);
         }
     }
 
@@ -328,7 +328,7 @@ final class dla {
           }
           this.a(-23918, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

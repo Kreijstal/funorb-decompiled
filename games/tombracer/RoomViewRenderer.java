@@ -220,7 +220,7 @@ final class RoomViewRenderer {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class RoomViewRenderer {
           }
           var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], var5);
         }
-        MazeGenerator.a((byte) -50);
+        MazeGenerator.releaseStatics((byte) -50);
         return var1;
     }
 

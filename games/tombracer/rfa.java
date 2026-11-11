@@ -59,9 +59,9 @@ abstract class rfa extends AppletGameShell implements ShellListener {
             S2CEventPacket.field_c[9] = -1;
             S2CEventPacket.field_c[10] = -1;
             kra.field_c = new Vector();
-            aca.a((ShellListener) (this), 19711);
+            aca.addShellListenerFirst((ShellListener) (this), 19711);
           } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "rfa.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+            throw tba.wrapException((Throwable) ((Object) runtimeException), "rfa.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -81,7 +81,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
 
     public abstract void updateScreen(boolean param0, boolean param1);
 
-    public static void w(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         if (param0 < 105) {
           Sprite[] var2 = (Sprite[]) null;
@@ -90,7 +90,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         field_B = null;
     }
 
-    abstract void b(int param0, int param1);
+    abstract void pollMessageGroups(int param0, int param1);
 
     private final void b(boolean param0) {
         boolean stackIn_3_0 = false;
@@ -107,7 +107,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
         stackIn_3_0 = !param0;
-        if (lca.a(stackIn_3_0)) {
+        if (SnakePitTile.a(stackIn_3_0)) {
           this.updateScreen(param0, false);
         } else {
           if (!una.a((byte) 127)) {
@@ -132,7 +132,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                 if (sr.a(119)) {
                   au.b(false);
                 } else {
-                  var3 = kc.a(true);
+                  var3 = kc.pollKeyEvents(true);
                   if (var3 == 1) {
                     RoomEffectTraps.a((byte) -63, ura.field_a, true);
                   }
@@ -256,7 +256,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -289,14 +289,14 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         this.u(97);
         if (!lla.field_b) {
           tc.a(pg.field_y, -2886);
-          if (dma.field_l.b(-4171)) {
-            dma.field_l.b((byte) -49);
+          if (dma.field_l.loadStep(-4171)) {
+            dma.field_l.finishLoading((byte) -49);
             lla.field_b = true;
           }
         } else {
           if (!MazeSolver.field_e) {
             if (!TextWidgetPainter.a(84)) {
-              if (dma.field_l.a(-127)) {
+              if (dma.field_l.isReadyToStart(-127)) {
                 MazeSolver.field_e = true;
                 this.onLoadingComplete(24230);
                 PlatformComponent.A(116);
@@ -323,7 +323,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           var2 = this.updateConnection(8);
           if (0 == var2 ||
             var2 == 1) {
-            this.b(var2, 120);
+            this.pollMessageGroups(var2, 120);
           }
           var3 = 0;
           if (var2 == 2) {

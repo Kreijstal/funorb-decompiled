@@ -126,7 +126,7 @@ final class WallTile implements Renderable {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -582,7 +582,7 @@ final class WallTile implements Renderable {
               bsa.field_k = false;
               var3_int = 1;
             }
-            MidiVoiceMixer.a((byte) 108, tn.a(-10918), OpenGlUnderwaterEffect.field_i, dla.a(7), var3_int != 0);
+            MidiVoiceMixer.drawAwtLoadingBar((byte) 108, tn.a(-10918), OpenGlUnderwaterEffect.field_i, dla.getLoadingPercent(7), var3_int != 0);
           } else {
             if (!LegacyOpenGlSpriteTexture.i(250)) {
               SoftwareRasterizer.clear();
@@ -611,7 +611,7 @@ final class WallTile implements Renderable {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 

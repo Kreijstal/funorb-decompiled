@@ -50,7 +50,7 @@ final class fba {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -144,8 +144,8 @@ final class fba {
         if (ika.field_b > 0) {
           fieldTemp$21 = ika.field_b - 1;
           ika.field_b = ika.field_b - 1;
-          var2_ref_byte__Lifetime1 = eh.field_i[fieldTemp$21];
-          eh.field_i[ika.field_b] = null;
+          var2_ref_byte__Lifetime1 = PlatformTile.field_i[fieldTemp$21];
+          PlatformTile.field_i[ika.field_b] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param1 != 0) {

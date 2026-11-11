@@ -8,14 +8,14 @@ final class IntNode extends IntrusiveNode {
     static IntrusiveDeque field_g;
     static su field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 > 56) {
           field_g = null;
           return;
         }
         BeamSegment var2 = (BeamSegment) null;
-        IntNode.a((BeamSegment) null, 17, -109, (BeamSegment) null);
+        IntNode.intersectSegments((BeamSegment) null, 17, -109, (BeamSegment) null);
         field_g = null;
     }
 
@@ -23,7 +23,7 @@ final class IntNode extends IntrusiveNode {
         this.value = param0;
     }
 
-    final static int a(BeamSegment param0, int param1, int param2, BeamSegment param3) {
+    final static int intersectSegments(BeamSegment param0, int param1, int param2, BeamSegment param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         BeamSegment var5 = null;
@@ -43,7 +43,7 @@ final class IntNode extends IntrusiveNode {
           }
           if (param2 != 12) {
             var5 = (BeamSegment) null;
-            IntNode.a((BeamSegment) null, 111, 55, (BeamSegment) null);
+            IntNode.intersectSegments((BeamSegment) null, 111, 55, (BeamSegment) null);
           }
           stackIn_5_0 = var4_int;
           return stackIn_5_0;
@@ -63,7 +63,7 @@ final class IntNode extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

@@ -11,7 +11,7 @@ final class cba {
         if (param0 != -123) {
           return -102;
         }
-        return ProceduralTextureProvider.a((byte) 123, (double)param2 * param1 / 360.0);
+        return ProceduralTextureProvider.roundToInt((byte) 123, (double)param2 * param1 / 360.0);
     }
 
     public static void releaseStatics(byte param0) {
@@ -46,7 +46,7 @@ final class cba {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

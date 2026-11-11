@@ -94,7 +94,7 @@ final class ScoreStandings {
           var4 = var13;
           var5 = null;
           try {
-            var11 = iba.a(var10, (byte) -94);
+            var11 = iba.resolveDefaultCacheFile(var10, (byte) -94);
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref_RuntimeException = (RuntimeException) (Object) decompiledCaughtException;
@@ -106,7 +106,7 @@ final class ScoreStandings {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             var6 = 1;
-            var14 = vj.a(var11, (byte) -86);
+            var14 = SecondaryLinkQueue.readFileBytes(var11, (byte) -86);
             var12 = var14;
             var7 = var12;
             if (var7 != null &&
@@ -150,7 +150,7 @@ final class ScoreStandings {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -204,7 +204,7 @@ final class ScoreStandings {
           this.matchState = param0;
           this.resetForRemainingPlayers((byte) -54);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

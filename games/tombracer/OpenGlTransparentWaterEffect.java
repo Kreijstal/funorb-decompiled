@@ -19,7 +19,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
             this.field_d = (mf) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pja.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pja.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           if (param1 != null &&
             this.field_f.c(-30634) &&
             this.field_e.field_qd) {
-            this.field_d = CharacterChoice.a((byte) -70, this.field_e, param1.getFileByName("gl", (byte) 123, "transparent_water"), 34336);
+            this.field_d = CharacterChoice.compileAssemblyProgram((byte) -70, this.field_e, param1.getFileByName("gl", (byte) 123, "transparent_water"), 34336);
             return;
           }
           this.field_d = null;
@@ -112,7 +112,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

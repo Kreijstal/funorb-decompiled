@@ -10,7 +10,7 @@ final class id extends CourseGenerator {
     static String field_i;
 
     id(int param0, int param1) {
-        super(rga.b(26499, param0), param1);
+        super(rga.getCourseRoomCount(26499, param0), param1);
         this.field_f = param0;
         this.field_j = this.field_f == pl.a((byte) 64) ? true : false;
     }

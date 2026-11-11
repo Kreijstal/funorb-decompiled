@@ -50,7 +50,7 @@ final class SwitchableIdAllocator {
         var18 = TombRacer.field_G ? 1 : 0;
         try {
           var19_ref = (GameAssetLoader) (dma.field_l);
-          var19_ref.a(param2, (byte) 47, param1);
+          var19_ref.drawLoadingProgress(param2, (byte) 47, param1);
           SoftReferenceCache.field_b = new oc[13];
           var5 = gha.a("", "characters/models/deaths/gibs", 33, param0);
           var6 = gha.a("", "characters/models/props/jadeidol", 122, param0);
@@ -62,7 +62,7 @@ final class SwitchableIdAllocator {
           var12 = gha.a("", "characters/models/deaths/henryj_gibs", 104, param0);
           incrementValue$9 = param2;
           param2++;
-          var19_ref.a(incrementValue$9, (byte) 47, param1);
+          var19_ref.drawLoadingProgress(incrementValue$9, (byte) 47, param1);
           for (var13_int = 0; var13_int < 13; var13_int++) {
             var20 = gn.field_w[var13_int];
             if (var13_int != 9 &&
@@ -75,7 +75,7 @@ final class SwitchableIdAllocator {
           }
           incrementValue$10 = param2;
           param2++;
-          var19_ref.a(incrementValue$10, (byte) 47, param1);
+          var19_ref.drawLoadingProgress(incrementValue$10, (byte) 47, param1);
           OpenGlBuffer.field_c = new oc[13];
           for (var13_intLifetime1 = 0; 13 > var13_intLifetime1; var13_intLifetime1++) {
             var21 = gn.field_w[var13_intLifetime1];
@@ -84,7 +84,7 @@ final class SwitchableIdAllocator {
           }
           incrementValue$11 = param2;
           param2++;
-          var19_ref.a(incrementValue$11, (byte) 47, param1);
+          var19_ref.drawLoadingProgress(incrementValue$11, (byte) 47, param1);
           DoorwayComponent.field_K = new oc[13];
           for (var13_intLifetime2 = 0; var13_intLifetime2 < 13; var13_intLifetime2++) {
             var22 = gn.field_w[var13_intLifetime2];
@@ -93,7 +93,7 @@ final class SwitchableIdAllocator {
           }
           incrementValue$12 = param2;
           param2++;
-          var19_ref.a(incrementValue$12, (byte) 47, param1);
+          var19_ref.drawLoadingProgress(incrementValue$12, (byte) 47, param1);
           C2SActionPacket.field_l = new oc[115];
           C2SActionPacket.field_l[0] = gha.a("", "objects/wheeledblock/wheeledblock", -112, param0);
           C2SActionPacket.field_l[109] = gha.a("", "objects/mirrorblock/mirrorblock_immovable", -126, param0);
@@ -209,7 +209,7 @@ final class SwitchableIdAllocator {
           C2SActionPacket.field_l[114] = gha.a("", "pits/chasmkit/chasm_straight_impassable2_lip", 67, param0);
           incrementValue$13 = param2;
           param2++;
-          var19_ref.a(incrementValue$13, (byte) 47, param1);
+          var19_ref.drawLoadingProgress(incrementValue$13, (byte) 47, param1);
           CourseLayoutFactory.field_e = new oc[26];
           CourseLayoutFactory.field_e[0] = gha.a("", "walls/wallkit/wall_straight_1a", 85, param0);
           CourseLayoutFactory.field_e[1] = gha.a("", "walls/wallkit/wall_straight_1b", 124, param0);
@@ -239,7 +239,7 @@ final class SwitchableIdAllocator {
           CourseLayoutFactory.field_e[25] = gha.a("", "walls/wallkit/door_4x1_lintel", -117, param0);
           incrementValue$14 = param2;
           param2++;
-          var19_ref.a(incrementValue$14, (byte) 47, param1);
+          var19_ref.drawLoadingProgress(incrementValue$14, (byte) 47, param1);
           dq.field_h = new oc[8];
           dq.field_h[0] = gha.a("", "objects/coin/coin", -110, param0);
           dq.field_h[1] = gha.a("", "objects/bagoloot/bagoloot", -126, param0);
@@ -251,7 +251,7 @@ final class SwitchableIdAllocator {
           dq.field_h[7] = gha.a("", "objects/speedboost/speedboost", -114, param0);
           incrementValue$15 = param2;
           param2++;
-          var19_ref.a(incrementValue$15, (byte) 47, param1);
+          var19_ref.drawLoadingProgress(incrementValue$15, (byte) 47, param1);
           gta.field_f = new oc[5];
           gta.field_f[1] = gha.a("", "objects/plants/plant_01_green", 58, param0);
           gta.field_f[0] = gha.a("", "objects/plants/plant_01_red", 51, param0);
@@ -260,7 +260,7 @@ final class SwitchableIdAllocator {
           gta.field_f[4] = gha.a("", "objects/plants/hangingmoss1", -118, param0);
           incrementValue$16 = param2;
           param2++;
-          var19_ref.a(incrementValue$16, (byte) 47, param1);
+          var19_ref.drawLoadingProgress(incrementValue$16, (byte) 47, param1);
           cba.field_b = new oc[26];
           cba.field_b[0] = gha.a("", "floortiles/brickfloor1a", 74, param0);
           cba.field_b[1] = gha.a("", "floortiles/brickfloor1b", 118, param0);
@@ -289,7 +289,7 @@ final class SwitchableIdAllocator {
           cba.field_b[25] = gha.a("", "floortiles/overlaytiles/fadetoblack_2x2", -121, param0);
           incrementValue$17 = param2;
           param2++;
-          var19_ref.a(incrementValue$17, (byte) 47, param1);
+          var19_ref.drawLoadingProgress(incrementValue$17, (byte) 47, param1);
           TriangleMesh.field_g = new oc[5];
           var13 = gha.a("", "monsters/skeleton/new_skeleton", -126, param0);
           var14 = gha.a("", "monsters/skeleton/new_skeleton_nojoints", -125, param0);
@@ -320,7 +320,7 @@ final class SwitchableIdAllocator {
           ControllerLocomotor.field_p[13] = gha.a("", "objects/youarehere/youarehere_yellow", 91, param0);
           tba.field_l = gha.a("", "test/javatextures", -117, param0);
           if (param3 > -48) {
-            SwitchableIdAllocator.a(57);
+            SwitchableIdAllocator.releaseStatics(57);
           }
           VariantMask.field_a = new int[tba.field_l.field_r.length];
           for (var17 = 0; tba.field_l.field_r.length > var17; var17++) {
@@ -343,7 +343,7 @@ final class SwitchableIdAllocator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -374,7 +374,7 @@ final class SwitchableIdAllocator {
         return var3;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 4) {
           String var2 = (String) null;

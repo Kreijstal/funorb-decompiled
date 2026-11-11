@@ -47,11 +47,11 @@ final class gba extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
-    final static Room a(int param0, boolean param1, RoomDefinition param2, int param3, PlayerSimulation param4) {
+    final static Room createRoom(int param0, boolean param1, RoomDefinition param2, int param3, PlayerSimulation param4) {
         Room var5 = null;
         Exception var5_ref = null;
         RuntimeException var5_ref2 = null;
@@ -76,7 +76,7 @@ final class gba extends IntrusiveNode {
             decompiledCaughtException = decompiledCaughtParameter0;
             var5_ref = (Exception) (Object) decompiledCaughtException;
             var5_ref.printStackTrace();
-            stackIn_5_0 = mua.a(param4, param3 - 21678);
+            stackIn_5_0 = mua.createEmptyRoom(param4, param3 - 21678);
             return stackIn_5_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -95,7 +95,7 @@ final class gba extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -116,14 +116,14 @@ final class gba extends IntrusiveNode {
         if (param1 == -1) {
           return HotspotTextWidget.field_B;
         }
-        return nt.a(param1, 1, 5200, false, true, true);
+        return nt.openArchive(param1, 1, 5200, false, true, true);
     }
 
     gba(String[] param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "gba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -91,9 +91,9 @@ abstract class ota {
           var49 = vaa.field_a[param7];
           var48 = var49;
           var39 = var48;
-          nra.a((byte) -55, param3, param4 - var11, var39, -param2 + param4);
-          nra.a((byte) -55, param6, param4 + var11, var39, param4 - var11);
-          nra.a((byte) -55, param3, param2 + param4, var49, param4 + var11);
+          nra.fillRange((byte) -55, param3, param4 - var11, var39, -param2 + param4);
+          nra.fillRange((byte) -55, param6, param4 + var11, var39, param4 - var11);
+          nra.fillRange((byte) -55, param3, param2 + param4, var49, param4 + var11);
           while (true) {
             if (var9 <= 0) {
               return;
@@ -148,23 +148,23 @@ abstract class ota {
             var43 = param4 + var8_int;
             var44 = -var8_int + param4;
             if (var40 == 0) {
-              nra.a((byte) -55, param3, var43, vaa.field_a[var41], var44);
-              nra.a((byte) -55, param3, var43, vaa.field_a[var42], var44);
+              nra.fillRange((byte) -55, param3, var43, vaa.field_a[var41], var44);
+              nra.fillRange((byte) -55, param3, var43, vaa.field_a[var42], var44);
               continue;
             }
             var45 = param4 + var10;
             var46 = param4 - var10;
-            nra.a((byte) -55, param3, var46, vaa.field_a[var41], var44);
-            nra.a((byte) -55, param6, var45, vaa.field_a[var41], var46);
-            nra.a((byte) -55, param3, var43, vaa.field_a[var41], var45);
-            nra.a((byte) -55, param3, var46, vaa.field_a[var42], var44);
-            nra.a((byte) -55, param6, var45, vaa.field_a[var42], var46);
-            nra.a((byte) -55, param3, var43, vaa.field_a[var42], var45);
+            nra.fillRange((byte) -55, param3, var46, vaa.field_a[var41], var44);
+            nra.fillRange((byte) -55, param6, var45, vaa.field_a[var41], var46);
+            nra.fillRange((byte) -55, param3, var43, vaa.field_a[var41], var45);
+            nra.fillRange((byte) -55, param3, var46, vaa.field_a[var42], var44);
+            nra.fillRange((byte) -55, param6, var45, vaa.field_a[var42], var46);
+            nra.fillRange((byte) -55, param3, var43, vaa.field_a[var42], var45);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var8), "ota.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw tba.wrapException((Throwable) ((Object) var8), "ota.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ abstract class ota {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

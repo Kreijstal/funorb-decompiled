@@ -23,7 +23,7 @@ final class cp extends za {
         this.field_h = new jaclib.memory.heap.NativeHeap(param0);
     }
 
-    final static char a(byte param0, char param1) {
+    final static char foldAccountNameChar(byte param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;

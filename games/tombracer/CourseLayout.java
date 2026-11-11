@@ -9,14 +9,14 @@ final class CourseLayout implements dv {
     private boolean[] roomFlags;
 
     public final void decode(BitPacketBuffer param0, boolean param1) {
-        this.roomFlags = PooledObject.a(8, this.roomFlags, (byte) -84, param0);
+        this.roomFlags = PooledObject.readBitFlags(8, this.roomFlags, (byte) -84, param0);
         if (param1) {
           return;
         }
         try {
-          this.roomIds = fa.a(0, param0, 8, this.roomIds);
+          this.roomIds = fa.readBitValues(0, param0, 8, this.roomIds);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wea.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wea.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -44,9 +44,9 @@ final class CourseLayout implements dv {
 
     final static void a(int param0, int param1, sq param2, boolean param3, java.awt.Component param4, PlatformTaskDispatcher param5) {
         try {
-          nba.a(param5, param2, param1, param0, param0, param4, -45, param3);
+          nba.initAudioOutputs(param5, param2, param1, param0, param0, param4, -45, param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "wea.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "wea.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class CourseLayout implements dv {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

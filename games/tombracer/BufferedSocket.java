@@ -23,7 +23,7 @@ final class BufferedSocket implements Runnable {
         this.close((byte) 105);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 >= -64) {
           field_g = 33;
@@ -79,7 +79,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class BufferedSocket implements Runnable {
         }
         if (param0 != -2147483648) {
           Random var3 = (Random) null;
-          BufferedSocket.a(-72, (Random) null, -100);
+          BufferedSocket.randomBelow(-72, (Random) null, -100);
         }
         return this.field_h.read();
     }
@@ -101,8 +101,8 @@ final class BufferedSocket implements Runnable {
         if (param1 != 1) {
           field_b = (UiComponent) null;
         }
-        int var10 = RoomCompletedScreen.a(param7, param8, true, param9, param6);
-        int var11 = RoomCompletedScreen.a(param4, param3, true, param0, param2);
+        int var10 = RoomCompletedScreen.overlapLength(param7, param8, true, param9, param6);
+        int var11 = RoomCompletedScreen.overlapLength(param4, param3, true, param0, param2);
         if (param5 > 0) {
           var10 = var10 + (1 << param5 - 1);
           var11 = var11 + (1 << -1 + param5);
@@ -162,7 +162,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -271,7 +271,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static int a(int param0, Random param1, int param2) {
+    final static int randomBelow(int param0, Random param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -307,7 +307,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -358,7 +358,7 @@ final class BufferedSocket implements Runnable {
           this.field_l = this.field_e.getOutputStream();
           this.field_d = param2;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "jqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "jqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

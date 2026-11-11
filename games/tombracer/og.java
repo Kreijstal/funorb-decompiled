@@ -32,7 +32,7 @@ final class og extends OpenGlBuffer implements qm {
         }
     }
 
-    final static String a(java.applet.Applet param0, String param1, byte param2) {
+    final static String readCookie(java.applet.Applet param0, String param1, byte param2) {
         try {
           int var5 = 0;
           String var3 = null;
@@ -89,7 +89,7 @@ final class og extends OpenGlBuffer implements qm {
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -25,7 +25,7 @@ final class mca {
         if (mq.field_e == null) {
           return false;
         }
-        stackIn_12_0 = (mq.field_e.a((byte) -102, param1));
+        stackIn_12_0 = (mq.field_e.isCourseUnlocked((byte) -102, param1));
         return stackIn_12_0;
     }
 
@@ -56,7 +56,7 @@ final class mca {
           var8.appendCrc32(var4, 64);
           var8.backpatchByteLength(-var4 + var8.position, (byte) 72);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mca.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mca.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

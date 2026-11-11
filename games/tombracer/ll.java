@@ -16,7 +16,7 @@ final class ll {
     int field_i;
     static String field_h;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_g = null;
         if (param0 <= 78) {
@@ -53,7 +53,7 @@ final class ll {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "ll.B(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "ll.B(" + param0 + ',' + param1 + ')');
         }
     }
 

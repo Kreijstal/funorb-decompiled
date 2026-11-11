@@ -104,13 +104,13 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_n = this.field_n + (var7.measureWrappedHeight(this.field_F, this.field_m - 40, var7.field_w) + 5);
           }
           var8 = PooledObject.field_h;
-          var9 = cc.a((byte) 122, di.a(28));
+          var9 = cc.readLastLoginMethod((byte) 122, di.a(28));
           if (ShaderEffect.field_a != var9) {
             if (var9 == ObjectList.field_d) {
               var8 = SectorCacheStore.field_a;
             }
           } else {
-            var8 = daa.field_c;
+            var8 = CharacterSelection.field_c;
           }
           dupTemp$0 = new jsa(10, this.field_n, -20 + this.field_m, 25, this.field_A, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
@@ -173,7 +173,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                 }
               }
             } else {
-              qfa.a((byte) 6);
+              qfa.openAccountRegistration((byte) 6);
             }
           } else {
             this.submitLogin((byte) 85);
@@ -226,7 +226,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             field_z = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "jw.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "jw.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -252,7 +252,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           this.field_C.clearText(-10);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "jw.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "jw.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -347,7 +347,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

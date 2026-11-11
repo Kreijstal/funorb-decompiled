@@ -130,7 +130,7 @@ abstract class SceneLight extends IntrusiveNode {
           OpenGlEnvironmentWaterEffect.field_d = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -105, haa.field_A.field_f);
           Room.field_j = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -104, du.field_c.field_f);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ob.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ob.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

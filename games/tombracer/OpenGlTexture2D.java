@@ -20,9 +20,9 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           this.width = param3;
           this.height = param4;
           this.field_j.bindTexture(true, (GpuTexture) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(108), param3, param4, 0, waa.a(this.field_f, 1383), ClientException.glDataType(this.field_a, 5126), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(108), param3, param4, 0, waa.toGlFormat(this.field_f, 1383), ClientException.glDataType(this.field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -30,10 +30,10 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         try {
           this.field_j.bindTexture(param8, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexSubImage2Df(this.field_i, 0, param0, param2, param3, param4, waa.a(param7, 1383), 5121, param1, param5);
+          jaggl.OpenGL.glTexSubImage2Df(this.field_i, 0, param0, param2, param3, param4, waa.toGlFormat(param7, 1383), 5121, param1, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hm.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -80,10 +80,10 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           if (param4 &&
             param7 == 0 &&
             0 == param6) {
-            this.a(this.field_i, param2, param5, -118, param3);
+            this.uploadByteMipmaps(this.field_i, param2, param5, -118, param3);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(110), param2, param3, 0, waa.a(this.field_f, 1383), 5121, param5, param6);
+            jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(110), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5121, param5, param6);
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
@@ -110,7 +110,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           if (param3 &&
             param6 == 0 &&
             param5 == 0) {
-            this.a((byte) 99, this.field_i, param2, param4, param1);
+            this.uploadIntMipmaps((byte) 99, this.field_i, param2, param4, param1);
             return;
           }
           jaggl.OpenGL.glPixelStorei(3314, param6);
@@ -211,7 +211,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -244,11 +244,11 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           if (!param4 &&
             param7 == 0 &&
             0 == param6) {
-            this.a(-1, param5, param3, this.field_i, param2);
+            this.uploadFloatMipmaps(-1, param5, param3, this.field_i, param2);
             return;
           }
           jaggl.OpenGL.glPixelStorei(3314, param7);
-          jaggl.OpenGL.glTexImage2Df(this.field_i, 0, this.d(44), param2, param3, 0, waa.a(this.field_f, 1383), 5126, param5, param6 * 4);
+          jaggl.OpenGL.glTexImage2Df(this.field_i, 0, this.d(44), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5126, param5, param6 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -273,7 +273,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -1223,7 +1223,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           jaggl.OpenGL.glTexSubImage2Di(this.field_i, 0, param7, param4, param6, param1, 32993, this.field_j.field_od, param5, param0);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hm.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -1240,12 +1240,12 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param4);
-          jaggl.OpenGL.glTexSubImage2Dub(this.field_i, 0, param0, param8, param7, param2, waa.a(param6, 1383), 5121, param3, param5);
+          jaggl.OpenGL.glTexSubImage2Dub(this.field_i, 0, param0, param8, param7, param2, waa.toGlFormat(param6, 1383), 5121, param3, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
           int var10_int = -48 % ((-62 - param1) / 60);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hm.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -1253,7 +1253,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         try {
           super.setFilter(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

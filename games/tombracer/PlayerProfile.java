@@ -63,14 +63,14 @@ final class PlayerProfile {
         field_q = null;
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean isCourseUnlocked(byte param0, int param1) {
         if (param0 >= -22) {
           return true;
         }
         return this.coursesUnlocked.get(param1);
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void decode(BitPacketBuffer param0, byte param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -127,30 +127,30 @@ final class PlayerProfile {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final boolean b(byte param0, int param1) {
+    final boolean isCharacterUnlocked(byte param0, int param1) {
         if (param0 != 4) {
           this.field_l = false;
         }
         return this.charactersUnlocked.get(param1);
     }
 
-    final taa c(int param0) {
+    final taa pollPendingUpdate(int param0) {
         if (param0 < 29) {
           PlayerProfile.releaseStatics(90);
         }
         return (taa) (this.field_i.removeFirst(59));
     }
 
-    final int a(int param0) {
+    final int getPendingUpdateCount(int param0) {
         int var2 = -45 / ((-54 - param0) / 34);
         return this.field_i.size((byte) -16);
     }
 
-    final static void a(int param0, int param1) {
+    final static void ensureScratchCapacity(int param0, int param1) {
         if (null == GasVentModel.field_m ||
           param1 > GasVentModel.field_m.length) {
           GasVentModel.field_m = new int[param1];
@@ -160,7 +160,7 @@ final class PlayerProfile {
         }
     }
 
-    final void a(int param0, BitPacketBuffer param1) {
+    final void encode(int param0, BitPacketBuffer param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -209,7 +209,7 @@ final class PlayerProfile {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -229,14 +229,14 @@ final class PlayerProfile {
         this.field_k = 255;
     }
 
-    final void a(int param0, taa param1) {
+    final void queueUpdate(int param0, taa param1) {
         try {
           if (param0 != 8) {
             PlayerProfile.a(true);
           }
           this.field_i.addLast((byte) -48, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ufa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ufa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -283,7 +283,7 @@ final class hk {
             } else {
               stackIn_69_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -337,12 +337,12 @@ final class hk {
           if (!this.field_g) {
             this.field_d = new GpuTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
-              var17 = S2CNextRoundPacket.a(LoadLevelCommand.field_o, 32768, 32768 * var2_int, false);
+              var17 = S2CNextRoundPacket.copyBytesFrom(LoadLevelCommand.field_o, 32768, 32768 * var2_int, false);
               this.field_d[var2_int] = this.field_b.a(128, var17, true, VboVertexArray.field_i, -117, 128);
             }
             this.field_a = new GpuTexture2D[16];
             for (var2_intLifetime1 = 0; 16 > var2_intLifetime1; var2_intLifetime1++) {
-              var18 = S2CNextRoundPacket.a(lt.field_f, 32768, var2_intLifetime1 * 32768, false);
+              var18 = S2CNextRoundPacket.copyBytesFrom(lt.field_f, 32768, var2_intLifetime1 * 32768, false);
               this.field_a[var2_intLifetime1] = this.field_b.a(128, var18, true, VboVertexArray.field_i, -77, 128);
             }
             return;
@@ -362,11 +362,11 @@ final class hk {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, long[] param1, int param2, int[] param3, int param4) {
+    final static void sortByKeys(int param0, long[] param1, int param2, int[] param3, int param4) {
         int var11 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -389,7 +389,7 @@ final class hk {
         try {
           if (param4 != -2646) {
             var16 = (int[]) null;
-            hk.a(-57, (long[]) null, -21, (int[]) null, -66);
+            hk.sortByKeys(-57, (long[]) null, -21, (int[]) null, -66);
           }
           if (param2 < param0) {
             var5_int = (param2 + param0) / 2;
@@ -416,8 +416,8 @@ final class hk {
             param1[var6] = var7;
             param3[param0] = param3[var6];
             param3[var6] = var9;
-            hk.a(-1 + var6, param1, param2, param3, -2646);
-            hk.a(param0, param1, 1 + var6, param3, -2646);
+            hk.sortByKeys(-1 + var6, param1, param2, param3, -2646);
+            hk.sortByKeys(param0, param1, 1 + var6, param3, -2646);
             return;
           }
           return;
@@ -437,7 +437,7 @@ final class hk {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 

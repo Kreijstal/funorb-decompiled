@@ -35,7 +35,7 @@ abstract class RasterShape {
           if (fua.field_b != null) {
             try {
               fua.field_b.seek((byte) 27, 0L);
-              fua.field_b.a(WeaveOperator.field_q.payload, WeaveOperator.field_q.position, (byte) -17, 24);
+              fua.field_b.write(WeaveOperator.field_q.payload, WeaveOperator.field_q.position, (byte) -17, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (Exception) (Object) decompiledCaughtException;

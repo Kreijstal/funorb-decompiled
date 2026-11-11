@@ -29,7 +29,7 @@ final class FuseBehaviour extends Behaviour {
             var5 = (BeamSegment) null;
             this.onBeamEffect(102, (Effect) null, (BeamSegment) null);
           }
-          stackIn_3_0 = this.a(param1, (byte) -115);
+          stackIn_3_0 = this.reactToEffect(param1, (byte) -115);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,7 +47,7 @@ final class FuseBehaviour extends Behaviour {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class FuseBehaviour extends Behaviour {
           if (param0 != 25940) {
             this.getTypeId(false);
           }
-          stackIn_3_0 = this.a(param2, (byte) -115);
+          stackIn_3_0 = this.reactToEffect(param2, (byte) -115);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,7 +95,7 @@ final class FuseBehaviour extends Behaviour {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -123,10 +123,10 @@ final class FuseBehaviour extends Behaviour {
           this.field_u = param1.readBits((byte) 44, 8);
           this.field_o = param1.readBits((byte) 44, 8);
           this.field_r = param1.readBits((byte) 44, 8);
-          this.field_p = ad.a((byte) 87, param1);
+          this.field_p = ad.decodeEffect((byte) 87, param1);
           this.field_n = param1.readBits((byte) 44, 8) << 16;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ula.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ula.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class FuseBehaviour extends Behaviour {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class FuseBehaviour extends Behaviour {
         }
     }
 
-    private final void j(byte param0) {
+    private final void explode(byte param0) {
         Effect var2 = new Effect(this.getRoot(6), this.field_p);
         if (param0 != -67) {
           this.field_q = (FlagSet) null;
@@ -191,10 +191,10 @@ final class FuseBehaviour extends Behaviour {
           param1.writeBits((byte) -11, this.field_u, 8);
           param1.writeBits((byte) 42, this.field_o, 8);
           param1.writeBits((byte) 125, this.field_r, 8);
-          this.field_p.a(param1, (byte) 125);
+          this.field_p.encode(param1, (byte) 125);
           param1.writeBits((byte) 127, this.field_n >> 16, 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ula.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ula.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -212,7 +212,7 @@ final class FuseBehaviour extends Behaviour {
         return true;
     }
 
-    private final int a(Effect param0, byte param1) {
+    private final int reactToEffect(Effect param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -227,15 +227,15 @@ final class FuseBehaviour extends Behaviour {
           }
           var3_int = param0.type;
           var4 = param0.size;
-          if (!this.b(8) &&
+          if (!this.isBurning(8) &&
             this.a(113, var3_int, var4)) {
             if (this.field_r > 0) {
               this.field_s = this.field_r;
             } else {
-              this.j((byte) -67);
+              this.explode((byte) -67);
             }
           }
-          if (this.b(8)) {
+          if (this.isBurning(8)) {
             if (!this.a(true, var4, var3_int)) {
               return 0;
             }
@@ -253,11 +253,11 @@ final class FuseBehaviour extends Behaviour {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static boolean k(byte param0) {
+    final static boolean loadMasterIndex(byte param0) {
         int var1 = -55 / ((-52 - param0) / 59);
         return IntrusiveDequeCursor.field_a.loadMasterIndex(false);
     }
@@ -266,21 +266,21 @@ final class FuseBehaviour extends Behaviour {
         int discarded$0 = 0;
         if (param0 != 5418) {
           Effect var3 = (Effect) null;
-          discarded$0 = this.a((Effect) null, (byte) -1);
+          discarded$0 = this.reactToEffect((Effect) null, (byte) -1);
         }
         if (this.field_s > 0) {
           this.field_s = this.field_s - 1;
           if (this.field_s == 0) {
-            this.j((byte) -67);
+            this.explode((byte) -67);
           }
         }
     }
 
-    private final boolean b(int param0) {
+    private final boolean isBurning(int param0) {
         int discarded$0 = 0;
         if (param0 != 8) {
           Effect var3 = (Effect) null;
-          discarded$0 = this.a((Effect) null, (byte) -80);
+          discarded$0 = this.reactToEffect((Effect) null, (byte) -80);
         }
         return 0 != this.field_s ? true : false;
     }
@@ -295,7 +295,7 @@ final class FuseBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           var7_int = -62 / ((62 - param4) / 52);
-          stackIn_1_0 = this.a(param2, (byte) -115);
+          stackIn_1_0 = this.reactToEffect(param2, (byte) -115);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -307,7 +307,7 @@ final class FuseBehaviour extends Behaviour {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

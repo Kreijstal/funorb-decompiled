@@ -90,7 +90,7 @@ final class ik extends IntrusiveNode {
     final static Weapon b(int param0) {
         Weapon var1 = new Weapon();
         var1.effect = new Effect(0, 5);
-        var1.effect.b(param0 ^ -17697, 10);
+        var1.effect.setDeathMessageIndex(param0 ^ -17697, 10);
         var1.field_t = 14;
         var1.field_k = 150;
         var1.field_x = true;
@@ -128,7 +128,7 @@ final class ik extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "ik.C(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "ik.C(" + param0 + ')');
         }
     }
 

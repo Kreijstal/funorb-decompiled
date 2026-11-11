@@ -5,14 +5,14 @@ import java.io.*;
 import java.util.*;
 
 abstract class ArchiveNetworkClient {
-    vj field_e;
+    SecondaryLinkQueue field_e;
     static String field_l;
-    vj field_m;
+    SecondaryLinkQueue field_m;
     static String field_f;
     static int textureHeight;
     static String field_b;
-    vj field_c;
-    vj field_k;
+    SecondaryLinkQueue field_c;
+    SecondaryLinkQueue field_k;
     long field_j;
     PacketBuffer field_o;
     int field_p;
@@ -31,14 +31,14 @@ abstract class ArchiveNetworkClient {
         field_f = null;
     }
 
-    final boolean d(int param0) {
+    final boolean isUrgentQueueFull(int param0) {
         if (param0 != -21) {
-          this.b(-15);
+          this.isPrefetchQueueFull(-15);
         }
-        return this.f(-3) >= 20 ? true : false;
+        return this.getUrgentRequestCount(-3) >= 20 ? true : false;
     }
 
-    final int f(int param0) {
+    final int getUrgentRequestCount(int param0) {
         if (param0 != -3) {
           ArchiveNetworkClient.b((byte) 52);
         }
@@ -70,7 +70,7 @@ abstract class ArchiveNetworkClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "qda.B(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "qda.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -166,14 +166,14 @@ abstract class ArchiveNetworkClient {
 
     abstract void attachConnection(Object param0, byte param1, boolean param2);
 
-    final boolean b(int param0) {
+    final boolean isPrefetchQueueFull(int param0) {
         if (param0 != -21) {
           this.field_o = (PacketBuffer) null;
         }
-        return this.a((byte) 78) >= 20 ? true : false;
+        return this.getPrefetchRequestCount((byte) 78) >= 20 ? true : false;
     }
 
-    final static int a(BitSet param0, int param1) {
+    final static int countSetBits(BitSet param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
@@ -206,18 +206,18 @@ abstract class ArchiveNetworkClient {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final int a(byte param0) {
+    final int getPrefetchRequestCount(byte param0) {
         if (param0 != 78) {
-          this.field_k = (vj) null;
+          this.field_k = (SecondaryLinkQueue) null;
         }
         return this.field_c.size((byte) -77) + this.field_k.size((byte) -43);
     }
 
-    final NetworkArchiveRequest a(int param0, boolean param1, int param2, int param3, byte param4) {
+    final NetworkArchiveRequest queueRequest(int param0, boolean param1, int param2, int param3, byte param4) {
         long var6 = ((long)param2 << 32) + (long)param0;
         NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.secondaryKey = var6;
@@ -227,15 +227,15 @@ abstract class ArchiveNetworkClient {
         var8.field_l = param1 ? true : false;
         var8.field_q = param4;
         if (param1) {
-          if (!(this.f(param3 ^ 22) < 20)) {
+          if (!(this.getUrgentRequestCount(param3 ^ 22) < 20)) {
             throw new RuntimeException();
           }
-          this.field_e.a(var8, (byte) -78);
+          this.field_e.addLast(var8, (byte) -78);
         } else {
-          if (!(this.a((byte) 78) < 20)) {
+          if (!(this.getPrefetchRequestCount((byte) 78) < 20)) {
             throw new RuntimeException();
           }
-          this.field_c.a(var8, (byte) -96);
+          this.field_c.addLast(var8, (byte) -96);
         }
         return var8;
     }
@@ -256,8 +256,8 @@ abstract class ArchiveNetworkClient {
           }
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!PressureSwitchBehaviour.a((byte) -20, (char) var3) &&
-              !OpenGlEnvironmentWaterEffect.a(param0 + 190, (char) var3)) {
+            if (!PressureSwitchBehaviour.isAsciiLetter((byte) -20, (char) var3) &&
+              !OpenGlEnvironmentWaterEffect.isAsciiDigit(param0 + 190, (char) var3)) {
               return true;
             }
           }
@@ -272,15 +272,15 @@ abstract class ArchiveNetworkClient {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     ArchiveNetworkClient() {
-        this.field_e = new vj();
-        this.field_m = new vj();
-        this.field_c = new vj();
-        this.field_k = new vj();
+        this.field_e = new SecondaryLinkQueue();
+        this.field_m = new SecondaryLinkQueue();
+        this.field_c = new SecondaryLinkQueue();
+        this.field_k = new SecondaryLinkQueue();
         this.field_o = new PacketBuffer(6);
         this.field_a = 0;
         this.field_n = 0;

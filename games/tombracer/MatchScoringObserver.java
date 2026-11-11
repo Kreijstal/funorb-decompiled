@@ -34,7 +34,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -61,10 +61,10 @@ class MatchScoringObserver extends SimulationObserver {
           var9 = null;
           if (1 != param5) {
             var8 = -10;
-            var9_ref = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(104, ConsoleWindow.field_n, new String[]{String.valueOf(var8)});
+            var9_ref = LegacyOpenGlFlowingWaterEffect.formatText(104, ConsoleWindow.field_n, new String[]{String.valueOf(var8)});
           } else {
             var8 = -5;
-            var9_ref = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(107, rf.field_a, new String[]{String.valueOf(var8)});
+            var9_ref = LegacyOpenGlFlowingWaterEffect.formatText(107, rf.field_a, new String[]{String.valueOf(var8)});
           }
           param1.addScore(param0 - 15, var8);
           this.field_f.statistics.recordPenalty(param5, param1.getPlayerIndex(0), param0 - 19);
@@ -95,7 +95,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ class MatchScoringObserver extends SimulationObserver {
         try {
           this.field_f.copyCorpsesToRoom(true, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "tu.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "tu.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -212,7 +212,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -340,14 +340,14 @@ class MatchScoringObserver extends SimulationObserver {
           if (this.field_f.isSinglePlayer(-1878) &&
             !this.field_f.d(-127)) {
             if (0 != var7) {
-              var9_ref_jha = RewardChoicePhase.createTextMessage(-89, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
+              var9_ref_jha = RewardChoicePhase.createTextMessage(-89, LegacyOpenGlFlowingWaterEffect.formatText(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
             } else {
-              var9_ref_jha = RewardChoicePhase.createTextMessage(-66, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(92, BevelOperator.field_q, new String[]{String.valueOf(var6)}));
+              var9_ref_jha = RewardChoicePhase.createTextMessage(-66, LegacyOpenGlFlowingWaterEffect.formatText(92, BevelOperator.field_q, new String[]{String.valueOf(var6)}));
             }
             iqa.field_c.addMessageNow(0, var9_ref_jha);
             var10 = param0.getRoomTreasureScore(-7991);
             if (var10 > 0) {
-              dupTemp$0 = RewardChoicePhase.createTextMessage(-96, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, VariantMask.field_c, new String[]{String.valueOf(var10)}));
+              dupTemp$0 = RewardChoicePhase.createTextMessage(-96, LegacyOpenGlFlowingWaterEffect.formatText(82, VariantMask.field_c, new String[]{String.valueOf(var10)}));
               var12 = dupTemp$0;
               var9_ref_jhaLifetime1 = dupTemp$0;
               iqa.field_c.addMessage(3, 0, var12);
@@ -380,7 +380,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -389,7 +389,7 @@ class MatchScoringObserver extends SimulationObserver {
           this.field_f = param0;
           this.field_c = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "tu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "tu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

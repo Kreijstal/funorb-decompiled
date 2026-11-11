@@ -8,7 +8,7 @@ final class ega {
     static ToolkitSprite field_e;
     private static String[] field_a;
 
-    final static boolean a(int param0, CharSequence param1, boolean param2, boolean param3) {
+    final static boolean isNumber(int param0, CharSequence param1, boolean param2, boolean param3) {
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -35,7 +35,7 @@ final class ega {
             var8 = 0;
             if (!param2) {
               var12 = (CharSequence) null;
-              ega.a(-127, (CharSequence) null, true, false);
+              ega.isNumber(-127, (CharSequence) null, true, false);
             }
             while (var8 < var7) {
               boolean decompiledFrameRemainder0 = true;
@@ -91,7 +91,7 @@ final class ega {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

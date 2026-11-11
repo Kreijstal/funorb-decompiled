@@ -10,7 +10,7 @@ final class mm extends IntrusiveNode {
         return (2048 & param1) != 0 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -44) {
           mm.hasFlag2048(-1, -14, 26);
           field_f = null;

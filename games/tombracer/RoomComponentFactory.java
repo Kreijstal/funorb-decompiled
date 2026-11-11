@@ -36,7 +36,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
         dsa.componentTypeNames[27] = "Flame Shooter";
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -103) {
           RoomComponentFactory.a(8);
         }
@@ -456,7 +456,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
           } else {
             stackIn_231_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_230_0), ((StringBuilder) (Object) stackIn_230_1).append(stackIn_231_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_230_0), ((StringBuilder) (Object) stackIn_230_1).append(stackIn_231_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -818,7 +818,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
           } else {
             stackIn_237_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_230_0), ((StringBuilder) (Object) stackIn_236_1).append(stackIn_237_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_230_0), ((StringBuilder) (Object) stackIn_236_1).append(stackIn_237_2).append(')').toString());
         }
     }
 
@@ -854,7 +854,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -866,7 +866,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
             field_a = (float[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

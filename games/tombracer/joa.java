@@ -10,7 +10,7 @@ final class joa {
     static UiComponent field_d;
     private java.util.zip.Inflater field_b;
 
-    final static FontMetrics a(String param0, ResourceArchive param1, String param2, byte param3) {
+    final static FontMetrics loadFontMetrics(String param0, ResourceArchive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         byte[] var5 = null;
@@ -55,7 +55,7 @@ final class joa {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class joa {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -177,7 +177,7 @@ final class joa {
           return;
         }
         String var2 = (String) null;
-        joa.a((String) null, (ResourceArchive) null, (String) null, (byte) 49);
+        joa.loadFontMetrics((String) null, (ResourceArchive) null, (String) null, (byte) 49);
         field_c = null;
     }
 
@@ -232,7 +232,7 @@ final class joa {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

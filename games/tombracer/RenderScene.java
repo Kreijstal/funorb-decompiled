@@ -37,7 +37,7 @@ final class RenderScene {
             this.renderTarget = (Camera) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uw.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uw.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class RenderScene {
         try {
           this.layers[param0].remove((byte) 64, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uw.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uw.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class RenderScene {
             this.layers = (RenderLayer[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uw.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uw.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class RenderScene {
           this.layers[param1].add(param2, (byte) -61);
           int var4_int = -46 % ((param0 + 45) / 37);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uw.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uw.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -218,8 +218,8 @@ final class RenderScene {
           var5Lifetime1 = vs.field_P[11] >> 8;
           var6Lifetime1 = TimeSwitchBehaviour.field_r << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = cr.a(true, var6Lifetime1) >> 8;
-          var9Lifetime1 = pla.b(119, var6Lifetime1) >> 8;
+          var8Lifetime1 = cr.sin8192(true, var6Lifetime1) >> 8;
+          var9Lifetime1 = pla.cos8192(119, var6Lifetime1) >> 8;
           if (AgeValidator.field_j != -1 &&
             GridWidgetContainer.field_B != -1) {
             var7Lifetime1 = -320 + AgeValidator.field_j;
@@ -260,7 +260,7 @@ final class RenderScene {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "uw.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "uw.B(" + param0 + ')');
         }
     }
 

@@ -5,14 +5,14 @@ final class SnakePitModel extends TrapModel {
     private SnakePitBehaviour field_p;
     private int field_q;
     private int field_o;
-    private bt[] field_s;
-    private lca[][] field_r;
+    private PitSnakeModel[] field_s;
+    private SnakePitTile[][] field_r;
     static String field_m;
     static jua field_t;
     private int field_u;
     static byte[] field_n;
 
-    final static AntialiasedBitmapFont a(ResourceArchive param0, ResourceArchive param1, boolean param2, String param3, String param4) {
+    final static AntialiasedBitmapFont loadAntialiasedFont(ResourceArchive param0, ResourceArchive param1, boolean param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -63,7 +63,7 @@ final class SnakePitModel extends TrapModel {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class SnakePitModel extends TrapModel {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class SnakePitModel extends TrapModel {
         int var4;
         int var5;
         int var7;
-        lca var9;
+        SnakePitTile var9;
         int var10;
         int var11;
         int var12;
@@ -142,19 +142,19 @@ final class SnakePitModel extends TrapModel {
         Room var17;
         var16 = TombRacer.field_G ? 1 : 0;
         if (param0 != -3440) {
-          this.field_r = (lca[][]) null;
+          this.field_r = (SnakePitTile[][]) null;
         }
         var17 = this.getRoom(param0 + 3494);
         var3 = this.body.getX(3);
         var4 = this.body.getY(9648);
         this.field_o = this.body.getWidth(param0 ^ 3403) / C2SSubmitSettingsPacket.field_a;
         this.field_q = this.body.getHeight((byte) 55) / C2SSubmitSettingsPacket.field_a;
-        this.field_r = new lca[this.field_o][this.field_q];
+        this.field_r = new SnakePitTile[this.field_o][this.field_q];
         var5 = -(this.body.getHeight((byte) 55) / 2) + (var4 + C2SSubmitSettingsPacket.field_a / 2);
         for (var6 = 0; var6 < this.field_q; var6++) {
           var7 = var3 - this.body.getWidth(-60) / 2 + C2SSubmitSettingsPacket.field_a / 2;
           for (var8 = 0; this.field_o > var8; var8++) {
-            var9 = new lca();
+            var9 = new SnakePitTile();
             this.field_r[var8][var6] = var9;
             stackIn_9_0 = (var8 <= 0) ? 0 : 1;
             var10 = stackIn_9_0;
@@ -228,7 +228,7 @@ final class SnakePitModel extends TrapModel {
                 break;
             }
             var9.field_c = var17.getSeededRandom(true).nextBounded(100, param0 + 3440);
-            var9.field_a = this;
+            var9.snakePit = this;
             var9.field_e = GameScreen.positiveModulo(var15 + OpenGlTexture.field_d[var9.field_f], 2048, -78);
             var9.field_d = -var4 + var5;
             var9.field_b = var7 - var3;
@@ -267,7 +267,7 @@ final class SnakePitModel extends TrapModel {
           }
           super.addToScene(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "oo.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "oo.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class SnakePitModel extends TrapModel {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -329,14 +329,14 @@ final class SnakePitModel extends TrapModel {
         try {
           int var6_int = 23 % ((param4 + 38) / 47);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "oo.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "oo.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void mirror(int param0) {
         int var2 = 0;
         int var3 = 0;
-        lca var4 = null;
+        SnakePitTile var4 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         super.mirror(106);
@@ -403,7 +403,7 @@ final class SnakePitModel extends TrapModel {
                 ara.field_ub.setBounds(var8, var7Lifetime1, -23776, var13, var6_int);
               } else {
                 OpenGlSceneLight.field_p[var12].setBounds(var8, var7Lifetime1, -23776, var13, var6_int);
-                bt.field_c[var12].setBounds(var9 - param2, var7Lifetime1, -23776, 0, param2);
+                PitSnakeModel.field_c[var12].setBounds(var9 - param2, var7Lifetime1, -23776, 0, param2);
                 MembersUpsellMenu.field_y[var12].setBounds(param0, -param4 + (var7Lifetime1 - param4), -23776, param4, var9);
                 PitModel.field_p[var12].setBounds(-var10 + (var8 - param2), -param4 + (var7Lifetime1 - param4), -23776, param4, var10);
               }
@@ -413,7 +413,7 @@ final class SnakePitModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var6), "oo.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) var6), "oo.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -426,17 +426,17 @@ final class SnakePitModel extends TrapModel {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_p == null) {
-          this.field_s = new bt[]{};
+          this.field_s = new PitSnakeModel[]{};
           return;
         }
-        this.field_s = new bt[this.field_p.getSnakeCount(3)];
+        this.field_s = new PitSnakeModel[this.field_p.getSnakeCount(3)];
         if (param0 != -20687) {
           return;
         }
         for (var2 = 0; var2 < this.field_s.length; var2++) {
-          this.field_s[var2] = new bt();
-          this.field_s[var2].field_a = this;
-          this.field_s[var2].field_e = this.field_p.getSnake(45, var2);
+          this.field_s[var2] = new PitSnakeModel();
+          this.field_s[var2].snakePit = this;
+          this.field_s[var2].snake = this.field_p.getSnake(45, var2);
         }
     }
 
@@ -463,7 +463,7 @@ final class SnakePitModel extends TrapModel {
         } else {
           this.field_u = uca.cosmeticRandom.nextBounded(100, 0) + 50;
           var3_int = uca.cosmeticRandom.nextBounded(this.field_s.length, ~param0);
-          if (this.field_s[var3_int].field_e.isScared(0)) {
+          if (this.field_s[var3_int].snake.isScared(0)) {
             var2.play(new SoundEvent(24, this.field_s[var3_int].getRenderX((byte) -123), this.field_s[var3_int].getRenderY((byte) 94), this.field_s[var3_int].getRenderZ((byte) -112)), param0 - 57);
           } else {
             var7.play(new SoundEvent(23, this.field_s[var3_int].getRenderX((byte) -83), this.field_s[var3_int].getRenderY((byte) 122), this.field_s[var3_int].getRenderZ((byte) -107)), param0 - 57);
@@ -490,7 +490,7 @@ final class SnakePitModel extends TrapModel {
         return;
     }
 
-    final ka a(boolean param0, lca param1) {
+    final ka a(boolean param0, SnakePitTile param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RenderScene var4 = null;
@@ -533,7 +533,7 @@ final class SnakePitModel extends TrapModel {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -548,10 +548,10 @@ final class SnakePitModel extends TrapModel {
           return;
         }
         try {
-          this.field_r = (lca[][]) null;
+          this.field_r = (SnakePitTile[][]) null;
           this.field_s = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "oo.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "oo.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -562,7 +562,7 @@ final class SnakePitModel extends TrapModel {
             this.field_p = (SnakePitBehaviour) (param0);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "oo.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "oo.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

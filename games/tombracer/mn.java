@@ -43,7 +43,7 @@ final class mn extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class mn extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -98,12 +98,12 @@ final class mn extends TextFieldValidator {
         try {
           this.field_j = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void h(int param0) {
-        oq.a((byte) 124).c(76);
+        oq.getSharedShellListener((byte) 124).c(76);
         if (param0 != 30001) {
           field_n = (String) null;
         }
@@ -117,7 +117,7 @@ final class mn extends TextFieldValidator {
         return ofa.field_D;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 >= -15) {
           mn.h(-88);

@@ -29,7 +29,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
         try {
           kv.a(this.field_x.getYear(22829), this.field_x.a(109), 95, this.field_x.getDay((byte) 110));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ada.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ada.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
           super.updatePointerState(param0, param1, param2, param3);
           this.field_B.field_y = this.field_x.getValidationSource((byte) 47).getState(-4666) == LightSource.field_k ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ada.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ada.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
     static int field_K;
     static String field_L;
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 200) {
           ValidatedTextInputWidget.a(-98, (byte) 40, -89);
           field_J = null;
@@ -24,7 +24,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           super.updatePointerState(param0, param1, param2, param3);
           this.field_M = -param0 + AgeValidator.field_j - this.field_i;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "so.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "so.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
             field_K = -19;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "so.BB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "so.BB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,13 +74,13 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
             }
           }
           if ((null != RoomHeader.field_e) &&
-            (stackIn_20_0 = RoomHeader.field_e.a((byte) -114))) {
+            (stackIn_20_0 = RoomHeader.field_e.hasMidiData((byte) -114))) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1_ref), "so.VA(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1_ref), "so.VA(" + param0 + ')');
         }
     }
 

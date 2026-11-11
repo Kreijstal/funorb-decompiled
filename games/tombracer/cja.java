@@ -225,7 +225,7 @@ final class cja {
           } else {
             stackIn_99_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -272,13 +272,13 @@ final class cja {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final void b(byte param0) {
         if (TextWidgetPainter.a(param0 ^ -48) ||
-          !dma.field_l.a(param0 - 60)) {
+          !dma.field_l.isReadyToStart(param0 - 60)) {
           return;
         }
         MatchScreen var2 = SecondaryNodeDequeIterator.field_a;

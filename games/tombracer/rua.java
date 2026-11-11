@@ -22,7 +22,7 @@ final class rua extends MessageDialog implements ButtonListener {
           SingleChildWidget.d(-7694);
           this.i((byte) 13);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rua.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rua.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class rua extends MessageDialog implements ButtonListener {
         try {
           this.field_fb = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class rua extends MessageDialog implements ButtonListener {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -163,11 +163,11 @@ final class rua extends MessageDialog implements ButtonListener {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
-    final static GraphicsToolkit a(boolean param0, TextureProvider param1, ResourceArchive param2, java.awt.Canvas param3, int param4) {
+    final static GraphicsToolkit initOpenGlToolkit(boolean param0, TextureProvider param1, ResourceArchive param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
         HardwareOpenGlToolkit var8 = null;
@@ -183,10 +183,10 @@ final class rua extends MessageDialog implements ButtonListener {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!mja.a((byte) -50)) {
+          if (!mja.loadDirect3DLibraries((byte) -50)) {
             throw new RuntimeException("");
           }
-          if (!StringCursor.a("jaggl", 480)) {
+          if (!StringCursor.loadNativeLibrary("jaggl", 480)) {
             throw new RuntimeException("");
           }
           var9 = new jaggl.OpenGL();
@@ -224,7 +224,7 @@ final class rua extends MessageDialog implements ButtonListener {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 

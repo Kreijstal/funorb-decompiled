@@ -115,7 +115,7 @@ final class ColourGradientOperator extends TextureOperator {
           if (param0 == 107) {
             return;
           }
-          ColourGradientOperator.d((byte) 91);
+          ColourGradientOperator.releaseStatics((byte) 91);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -127,11 +127,11 @@ final class ColourGradientOperator extends TextureOperator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -109) {
           ColourGradientOperator.c(103);
           field_n = null;
@@ -365,7 +365,7 @@ final class ColourGradientOperator extends TextureOperator {
 
     final static boolean c(int param0) {
         if (param0 > -111) {
-          ColourGradientOperator.d((byte) -62);
+          ColourGradientOperator.releaseStatics((byte) -62);
           if (cga.field_f < 20) {
             return true;
           }

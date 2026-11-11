@@ -38,7 +38,7 @@ final class PillarComponent extends PrefabComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -46,7 +46,7 @@ final class PillarComponent extends PrefabComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "m.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "m.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,14 +70,14 @@ final class PillarComponent extends PrefabComponent {
     }
 
     final static int A(int param0) {
-        if (!lca.a(false)) {
+        if (!SnakePitTile.a(false)) {
           return -1;
         }
         if (param0 == -7111) {
           return ModelFactory.field_a.e(param0 ^ 7110);
         }
         String var2 = (String) null;
-        PillarComponent.a((String) null, 34, (ResourceArchive) null, (String) null);
+        PillarComponent.loadAnimationSequence((String) null, 34, (ResourceArchive) null, (String) null);
         return ModelFactory.field_a.e(param0 ^ 7110);
     }
 
@@ -97,7 +97,7 @@ final class PillarComponent extends PrefabComponent {
         this.setSize(-91, 2097152, 2097152);
     }
 
-    final static RoomHeader a(int param0, BitPacketBuffer param1) {
+    final static RoomHeader decodeRoomHeader(int param0, BitPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RoomHeader stackIn_2_0 = null;
@@ -129,7 +129,7 @@ final class PillarComponent extends PrefabComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class PillarComponent extends PrefabComponent {
         return 7;
     }
 
-    final static AnimationSequence a(String param0, int param1, ResourceArchive param2, String param3) {
+    final static AnimationSequence loadAnimationSequence(String param0, int param1, ResourceArchive param2, String param3) {
         RuntimeException var4 = null;
         AnimationSequence stackIn_2_0 = null;
         AnimationSequence stackIn_4_0 = null;
@@ -181,7 +181,7 @@ final class PillarComponent extends PrefabComponent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

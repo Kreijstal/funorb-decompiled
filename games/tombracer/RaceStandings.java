@@ -69,7 +69,7 @@ final class RaceStandings {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 >= -119) {
           RaceStandings.b(-126);
@@ -89,15 +89,15 @@ final class RaceStandings {
           }
           var1 = (vb) (DivisionMazeGenerator.field_e.first(-80));
           while (var1 != null) {
-            var2 = new fla(var1, var1.field_f.k(), var1.field_f.g());
-            rs.a(var2, -58);
+            var2 = new fla(var1, var1.field_f.getTargetVolume(), var1.field_f.getTargetPan());
+            rs.queueSoundRelease(var2, -58);
             var1 = (vb) (DivisionMazeGenerator.field_e.next(119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1_ref), "kqa.D(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1_ref), "kqa.D(" + param0 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class RaceStandings {
           this.matchState = param0;
           this.reset(false);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "kqa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "kqa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

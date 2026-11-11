@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bt implements Renderable {
+final class PitSnakeModel implements Renderable {
     private boolean field_g;
     static int field_b;
-    SnakePitModel field_a;
+    SnakePitModel snakePit;
     private boolean field_f;
     private ModelAnimator field_d;
-    PitSnake field_e;
+    PitSnake snake;
     static UiComponent[] field_c;
     static int[] field_h;
 
@@ -15,7 +15,7 @@ final class bt implements Renderable {
         if (param0 <= 91) {
           return 125;
         }
-        return this.field_a.getRenderY((byte) 112) + this.field_e.f(0);
+        return this.snakePit.getRenderY((byte) 112) + this.snake.f(0);
     }
 
     public static void releaseStatics(int param0) {
@@ -31,20 +31,20 @@ final class bt implements Renderable {
         int var4 = 0;
         ka var5 = null;
         try {
-          var3_int = this.field_e.d(2);
+          var3_int = this.snake.d(2);
           var4 = GameScreen.positiveModulo(-(PortalBehaviour.directionToAngle(ne.field_f[var3_int][1], ne.field_f[var3_int][0], 1) >> 2) + 512, 2048, 73);
           if (param0 < 103) {
-            bt.a((byte) 44, -55, -63, 37);
+            PitSnakeModel.a((byte) 44, -55, -63, 37);
           }
           var5 = this.field_d.getModel((byte) 74);
           gqa.a(var4, -83584144, this.getRenderY((byte) 120), this.getRenderX((byte) -89), var5, this.getRenderZ((byte) -95));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "bt.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "bt.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void updateAnimation(int param0) {
-        if (this.field_e.isCoolingDown(180)) {
+        if (this.snake.isCoolingDown(180)) {
           if (!this.field_g) {
             this.field_d.a(1, false, (byte) -85, 9);
             this.field_d.a(6, this.field_d.c((byte) 50), 1, -1);
@@ -70,7 +70,7 @@ final class bt implements Renderable {
 
     public final int getRenderX(byte param0) {
         int var2 = -13 / ((-23 - param0) / 53);
-        return this.field_a.getRenderX((byte) 101) + this.field_e.a((byte) 84);
+        return this.snakePit.getRenderX((byte) 101) + this.snake.a((byte) 84);
     }
 
     final static int a(byte param0, int param1, int param2, int param3) {
@@ -78,7 +78,7 @@ final class bt implements Renderable {
           return param3;
         }
         if (param0 != -8) {
-          bt.a((byte) 51, -70, 71, 100);
+          PitSnakeModel.a((byte) 51, -70, 71, 100);
           if (-param1 + param3 + param2 < 0) {
             return -param1 + SoftwareRasterizer.width;
           }
@@ -92,13 +92,13 @@ final class bt implements Renderable {
 
     public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
-          this.field_e = (PitSnake) null;
-          return this.field_a.isRenderExpired((byte) 48);
+          this.snake = (PitSnake) null;
+          return this.snakePit.isRenderExpired((byte) 48);
         }
-        return this.field_a.isRenderExpired((byte) 48);
+        return this.snakePit.isRenderExpired((byte) 48);
     }
 
-    bt() {
+    PitSnakeModel() {
         this.field_d = new ModelAnimator(6, 4, 1);
         this.field_d.a(1, true, (byte) -102, 7);
         this.field_f = true;
@@ -106,10 +106,10 @@ final class bt implements Renderable {
 
     public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
-          bt.releaseStatics(-6);
-          return this.field_a.getRenderZ((byte) -94);
+          PitSnakeModel.releaseStatics(-6);
+          return this.snakePit.getRenderZ((byte) -94);
         }
-        return this.field_a.getRenderZ((byte) -94);
+        return this.snakePit.getRenderZ((byte) -94);
     }
 
     static {

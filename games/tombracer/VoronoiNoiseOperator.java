@@ -64,7 +64,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           return;
         }
         try {
-          DateInputWidget.a((ScrollPane) null, -1, (String) null, 0L, -11635, (int[]) null, param2, param1, (String) null);
+          DateInputWidget.openPlayerContextMenu((ScrollPane) null, -1, (String) null, 0L, -11635, (int[]) null, param2, param1, (String) null);
           if (param1 == 0) {
             var10 = hka.field_b;
             var11 = ColouriseOperator.field_m[0];
@@ -126,7 +126,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           var7 = param2.field_t;
           var37.field_f.openAt(var5, var7, -67, var6, var4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "nw.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "nw.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -414,7 +414,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
         this.field_v = new short[512];
         if (this.field_r > 0) {
           for (var3 = 0; 512 > var3; var3++) {
-            this.field_v[var3] = (short)BufferedSocket.a(this.field_r, var5, 86);
+            this.field_v[var3] = (short)BufferedSocket.randomBelow(this.field_r, var5, 86);
           }
         }
         var3Lifetime1 = -16 / ((param0 + 54) / 37);
@@ -424,11 +424,11 @@ final class VoronoiNoiseOperator extends TextureOperator {
         if (param0 != 116) {
           return;
         }
-        this.field_q = TileGridCell.a(this.field_n, (byte) 76);
+        this.field_q = TileGridCell.getPermutationTable(this.field_n, (byte) 76);
         this.c(-94);
     }
 
-    final static GraphicsToolkit a(int param0, int param1, TextureProvider param2, int param3, ResourceArchive param4, java.awt.Canvas param5) {
+    final static GraphicsToolkit createToolkit(int param0, int param1, TextureProvider param2, int param3, ResourceArchive param4, java.awt.Canvas param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -479,7 +479,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

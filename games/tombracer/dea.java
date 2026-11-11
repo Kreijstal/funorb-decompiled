@@ -17,7 +17,7 @@ final class dea {
         this.field_d = 0.0f;
     }
 
-    final static String a(int param0, byte param1) {
+    final static String formatTime(int param0, byte param1) {
         String var8 = null;
         String var9 = null;
         String var6 = null;

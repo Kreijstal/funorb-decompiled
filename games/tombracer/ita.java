@@ -11,7 +11,7 @@ final class ita implements RenderBuffer {
     static int field_f;
     float[] field_h;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 != 48) {

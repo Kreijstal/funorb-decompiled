@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oq {
-    final static fga a(byte param0) {
+    final static fga getSharedShellListener(byte param0) {
         if (param0 != 124) {
           return (fga) null;
         }

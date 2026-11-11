@@ -5,7 +5,7 @@ final class mua {
     static int field_b;
     static fpa field_a;
 
-    final static Room a(PlayerSimulation param0, int param1) {
+    final static Room createEmptyRoom(PlayerSimulation param0, int param1) {
         RuntimeException var2 = null;
         PlayerSimulation var3 = null;
         Room stackIn_3_0 = null;
@@ -16,7 +16,7 @@ final class mua {
         try {
           if (param1 < 10) {
             var3 = (PlayerSimulation) null;
-            mua.a((PlayerSimulation) null, -83);
+            mua.createEmptyRoom((PlayerSimulation) null, -83);
           }
           stackIn_3_0 = new Room(param0, 0, (BitPacketBuffer) null, 0, false);
           return stackIn_3_0;
@@ -30,7 +30,7 @@ final class mua {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

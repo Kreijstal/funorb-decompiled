@@ -173,7 +173,7 @@ final class SoftReferenceCache {
             if ((long)param1 < fieldTemp$0) {
               var4 = new eba(var3.f(29243), var3.field_m);
               this.field_c.put(var4, (byte) 124, var3.key);
-              ig.a(31, var4, var3);
+              ig.insertSecondaryAfter(31, var4, var3);
               var3.unlink(126);
               var3.unlinkSecondary(-7975);
             }
@@ -198,16 +198,16 @@ final class SoftReferenceCache {
         try {
           this.a(-1, param1, 1, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static ResourceArchive openArchive(int param0, int param1) {
         if (param1 == 1) {
-          return nt.a(param0, 1, 5200, false, false, true);
+          return nt.openArchive(param0, 1, 5200, false, false, true);
         }
         SoftReferenceCache.releaseStatics(10);
-        return nt.a(param0, 1, 5200, false, false, true);
+        return nt.openArchive(param0, 1, 5200, false, false, true);
     }
 
     public static void releaseStatics(int param0) {
@@ -245,7 +245,7 @@ final class SoftReferenceCache {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class SoftReferenceCache {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

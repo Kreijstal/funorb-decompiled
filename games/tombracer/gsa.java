@@ -58,10 +58,10 @@ final class gsa {
             this.field_b = true;
             this.field_x = this.field_x + this.field_u;
           }
-        } else if (nta.field_d <= param1 &&
+        } else if (MonsterRemains.field_d <= param1 &&
           param1 < og.field_m) {
           if (!this.field_d &&
-            nta.field_d + param2 * 50 <= param1) {
+            MonsterRemains.field_d + param2 * 50 <= param1) {
             this.field_x = this.field_x + this.field_n;
             this.field_d = true;
             if (this.field_n > 0) {
@@ -69,7 +69,7 @@ final class gsa {
             }
           }
           if (!this.field_h &&
-            !(param1 < 25 + (50 * param2 + nta.field_d))) {
+            !(param1 < 25 + (50 * param2 + MonsterRemains.field_d))) {
             this.field_x = this.field_x + this.field_z;
             if (this.field_z > 0 &&
               this.field_n == 0) {
@@ -232,7 +232,7 @@ final class gsa {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

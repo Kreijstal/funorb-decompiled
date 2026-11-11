@@ -18,16 +18,16 @@ abstract class ShaderEffect {
 
     abstract void bindTexture(int param0, GpuTexture param1, int param2);
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != 101) {
           Collidable var2 = (Collidable) null;
-          ShaderEffect.a(-92, (Collidable) null, -43, true);
+          ShaderEffect.obtainGridEntry(-92, (Collidable) null, -43, true);
         }
     }
 
-    final static q a(int param0, Collidable param1, int param2, boolean param3) {
+    final static q obtainGridEntry(int param0, Collidable param1, int param2, boolean param3) {
         q var4 = null;
         RuntimeException var4_ref = null;
         q stackIn_5_0 = null;
@@ -59,7 +59,7 @@ abstract class ShaderEffect {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ abstract class ShaderEffect {
         try {
           this.owner = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

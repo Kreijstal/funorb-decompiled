@@ -9,7 +9,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract boolean i(byte param0);
 
-    final static void a(ScrollPane param0, int param1, String param2, long param3, int param4, int[] param5, UiComponent param6, int param7, String param8) {
+    final static void openPlayerContextMenu(ScrollPane param0, int param1, String param2, long param3, int param4, int[] param5, UiComponent param6, int param7, String param8) {
         if (param4 != -11635) {
           return;
         }
@@ -17,7 +17,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           lu.field_b = param0;
           hka.field_b = new PlayerContextMenu(param6, param3, param2, param8, param1, param7, param5);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "paa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "paa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         return (ValidationSource) ((Object) this.field_w);
     }
 
-    public static void k(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_y = null;
         if (param0 >= 29) {
           field_z = null;
@@ -55,11 +55,11 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           this.field_w = param1;
           this.field_w.field_i = this;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "paa.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "paa.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void loadMusicTrack(boolean param0, int param1) {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -80,13 +80,13 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           if (3 == param1) {
             MenuEntry.field_j[3] = MusicTrack.load(TextLayout.field_a, "", "TR_lose_jingle_long");
           }
-          while (!RewardChoicePhase.field_n.field_y.a(176400, MenuEntry.field_j[param1], S2CNextRoundPacket.field_a, LegacyOpenGlTurbulentTextureEffect.field_j, 0)) {
+          while (!RewardChoicePhase.field_n.field_y.prepareTrack(176400, MenuEntry.field_j[param1], S2CNextRoundPacket.field_a, LegacyOpenGlTurbulentTextureEffect.field_j, 0)) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "paa.F(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "paa.F(" + param0 + ',' + param1 + ')');
         }
     }
 

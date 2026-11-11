@@ -6,7 +6,7 @@ final class vn {
     static String field_c;
     static LoginForm field_b;
 
-    final static void a(int param0, String param1, boolean param2) {
+    final static void showMessageDialog(int param0, String param1, boolean param2) {
         try {
           S2CProfileUpdatePacket.field_d = param2;
           TileOperator.field_p = true;
@@ -14,7 +14,7 @@ final class vn {
           int var3_int = -94 / ((43 - param0) / 34);
           ej.field_a.c(TextureOperator.field_l, 104);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

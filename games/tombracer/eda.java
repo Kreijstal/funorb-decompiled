@@ -58,7 +58,7 @@ final class eda {
         BitPacketBuffer.a(param1, var2Lifetime5, var3Lifetime5);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 < 24) {
           field_e = 15;

@@ -192,7 +192,7 @@ final class QuickChatMenu extends UiComponent {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class QuickChatMenu extends UiComponent {
               ResultsPhase.a(OpenGlUnderwaterEffect.field_q, (String) null, param1, 32371, wp.field_a, var5);
               oi.a(ica.field_b, var5, 4, wp.field_a, OpenGlUnderwaterEffect.field_q);
               ComponentTargetList.b(param3 - 48);
-              HardwareSceneLight.c((byte) -25);
+              HardwareSceneLight.resetChatRateLimit((byte) -25);
             } else {
               kra.a(false);
               ComponentTargetList.b(param3 + 7);

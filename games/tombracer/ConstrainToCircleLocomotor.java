@@ -53,8 +53,8 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
             var8 = qva.a((byte) -41, var5 << 16, var4 << 16);
             var9 = MouseInputHandler.sin2048((byte) 110, var8 >> 2);
             var10 = ModelAnimator.cos2048(0, var8 >> 2);
-            var11 = gqa.a(var9, (byte) 24, this.field_u >> 8) << 8;
-            var12 = gqa.a(var10, (byte) 24, this.field_u >> 8) << 8;
+            var11 = gqa.multiplyFixed(var9, (byte) 24, this.field_u >> 8) << 8;
+            var12 = gqa.multiplyFixed(var10, (byte) 24, this.field_u >> 8) << 8;
             this.trap.move((byte) -105, var2 + (var11 - this.trap.getLocalX(25745)), -this.trap.getLocalY(false) + (var3 + var12));
             return;
           }
@@ -68,8 +68,8 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
           var8Lifetime3 = qva.a((byte) -41, var5 << 16, var4 << 16);
           var9Lifetime3 = MouseInputHandler.sin2048((byte) 110, var8Lifetime3 >> 2);
           var10Lifetime3 = ModelAnimator.cos2048(0, var8Lifetime3 >> 2);
-          var11Lifetime3 = gqa.a(var9Lifetime3, (byte) 24, this.field_u >> 8) << 8;
-          var12Lifetime3 = gqa.a(var10Lifetime3, (byte) 24, this.field_u >> 8) << 8;
+          var11Lifetime3 = gqa.multiplyFixed(var9Lifetime3, (byte) 24, this.field_u >> 8) << 8;
+          var12Lifetime3 = gqa.multiplyFixed(var10Lifetime3, (byte) 24, this.field_u >> 8) << 8;
           this.trap.move((byte) -105, var2 + (var11Lifetime3 - this.trap.getLocalX(25745)), -this.trap.getLocalY(false) + (var3 + var12Lifetime3));
           return;
         }
@@ -83,8 +83,8 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
           var8Lifetime1 = qva.a((byte) -41, var5 << 16, var4 << 16);
           var9Lifetime1 = MouseInputHandler.sin2048((byte) 110, var8Lifetime1 >> 2);
           var10Lifetime1 = ModelAnimator.cos2048(0, var8Lifetime1 >> 2);
-          var11Lifetime1 = gqa.a(var9Lifetime1, (byte) 24, this.field_u >> 8) << 8;
-          var12Lifetime1 = gqa.a(var10Lifetime1, (byte) 24, this.field_u >> 8) << 8;
+          var11Lifetime1 = gqa.multiplyFixed(var9Lifetime1, (byte) 24, this.field_u >> 8) << 8;
+          var12Lifetime1 = gqa.multiplyFixed(var10Lifetime1, (byte) 24, this.field_u >> 8) << 8;
           this.trap.move((byte) -105, var2 + (var11Lifetime1 - this.trap.getLocalX(25745)), -this.trap.getLocalY(false) + (var3 + var12Lifetime1));
           return;
         }
@@ -98,8 +98,8 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
         var8Lifetime2 = qva.a((byte) -41, var5 << 16, var4 << 16);
         var9Lifetime2 = MouseInputHandler.sin2048((byte) 110, var8Lifetime2 >> 2);
         var10Lifetime2 = ModelAnimator.cos2048(0, var8Lifetime2 >> 2);
-        var11Lifetime2 = gqa.a(var9Lifetime2, (byte) 24, this.field_u >> 8) << 8;
-        var12Lifetime2 = gqa.a(var10Lifetime2, (byte) 24, this.field_u >> 8) << 8;
+        var11Lifetime2 = gqa.multiplyFixed(var9Lifetime2, (byte) 24, this.field_u >> 8) << 8;
+        var12Lifetime2 = gqa.multiplyFixed(var10Lifetime2, (byte) 24, this.field_u >> 8) << 8;
         this.trap.move((byte) -105, var2 + (var11Lifetime2 - this.trap.getLocalX(25745)), -this.trap.getLocalY(false) + (var3 + var12Lifetime2));
     }
 
@@ -124,7 +124,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
             this.attachToTrap(73, (Trap) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uqa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uqa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
           this.field_u = param1.readBits((byte) 44, 10) << 16;
           this.field_s = param1.readBits((byte) 44, 1) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
           param0.writeBits((byte) -5, this.field_u >> 16, 10);
           param0.writeBits((byte) 78, !this.field_s ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uqa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uqa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
         field_A = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int toDirection8(int param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;

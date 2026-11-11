@@ -41,7 +41,7 @@ final class WindZoneBehaviour extends Behaviour {
           this.field_r = param1.readBits((byte) 44, 4);
           this.field_p = param1.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class WindZoneBehaviour extends Behaviour {
           }
           ((Particle) (Object) stackIn_18_0).setPlanarVelocity(stackIn_18_1, stackIn_19_2, 0);
         }
-        var15 = this.getRoom(true).collisionGrid.b(var3, -1, var2, var4, var5);
+        var15 = this.getRoom(true).collisionGrid.queryBox(var3, -1, var2, var4, var5);
         var16 = var15;
         for (var17 = 0; var17 < var16.length; var17++) {
           var18 = var16[var17];
@@ -202,8 +202,8 @@ final class WindZoneBehaviour extends Behaviour {
               if (!(var22 > 262144) ||
                 !this.getRoom(true).traceBeamSegment(1, this.field_v, this.getRoot(param0 ^ 5420), (byte) 60)) {
                 var8 = GameEvent.divideFixed16(var12, param0 ^ -25604, var22);
-                var8 = -gqa.a(var8, (byte) 24, -var9 + var10) + var10;
-                var8 = za.$cfr$intArgs$a$c604db63f465(var9, 113, var10, var8);
+                var8 = -gqa.multiplyFixed(var8, (byte) 24, -var9 + var10) + var10;
+                var8 = za.clampValue(var9, 113, var10, var8);
                 stackIn_56_0 = var18;
                 stackIn_56_1 = 120;
                 stackIn_56_2 = false;
@@ -212,7 +212,7 @@ final class WindZoneBehaviour extends Behaviour {
                 } else {
                   stackIn_57_3 = 1;
                 }
-                ((Collidable) (Object) stackIn_56_0).tryPush(stackIn_56_1, stackIn_56_2, stackIn_57_3, gqa.a(var7, (byte) 24, var8), gqa.a(var6, (byte) 24, var8), 0);
+                ((Collidable) (Object) stackIn_56_0).tryPush(stackIn_56_1, stackIn_56_2, stackIn_57_3, gqa.multiplyFixed(var7, (byte) 24, var8), gqa.multiplyFixed(var6, (byte) 24, var8), 0);
               }}
           }
         }
@@ -241,7 +241,7 @@ final class WindZoneBehaviour extends Behaviour {
           param1.writeBits((byte) 44, this.field_r, 4);
           param1.writeBits((byte) -128, this.field_p, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "th.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "th.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,7 +11,7 @@ final class tj {
     static int field_a;
     LegacyVertexArray field_d;
 
-    final static java.awt.Container b(int param0) {
+    final static java.awt.Container getTopContainer(int param0) {
         if (null != DropdownList.field_x) {
           return (java.awt.Container) ((Object) DropdownList.field_x);
         }
@@ -22,7 +22,7 @@ final class tj {
         return (java.awt.Container) ((Object) di.a(param0 - 25099));
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 360) {
           field_a = 58;
           field_h = null;
@@ -38,7 +38,7 @@ final class tj {
           this.field_d = param0;
           this.field_f = (byte)param2;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

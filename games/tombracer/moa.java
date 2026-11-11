@@ -36,9 +36,9 @@ final class moa {
             if (!param0.field_m) {
               if (param0.field_c == 0 &&
                 param0.field_o == 0) {
-                var3 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(114, TrackMountComponent.field_G, new String[]{(String) (var2)});
+                var3 = LegacyOpenGlFlowingWaterEffect.formatText(114, TrackMountComponent.field_G, new String[]{(String) (var2)});
               } else {
-                var3 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(112, li.field_a, new String[]{(String) (var2)});
+                var3 = LegacyOpenGlFlowingWaterEffect.formatText(112, li.field_a, new String[]{(String) (var2)});
               }
             }
           } else {
@@ -47,7 +47,7 @@ final class moa {
               var3 = "[" + cla.field_o + "] ";
             }
             if (param0.field_d == 1) {
-              var3 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, UiComponent.field_nb, new String[]{param0.field_b}) + "] ";
+              var3 = "[" + LegacyOpenGlFlowingWaterEffect.formatText(96, UiComponent.field_nb, new String[]{param0.field_b}) + "] ";
             }
             if (4 == param0.field_d &&
               null != tla.field_f) {
@@ -76,7 +76,7 @@ final class moa {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw tba.a((Throwable) (stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) (stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
         }
     }
 

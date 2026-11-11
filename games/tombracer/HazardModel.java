@@ -20,7 +20,7 @@ final class HazardModel extends TrapModel {
           }
           this.field_u = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fu.H(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fu.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class HazardModel extends TrapModel {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class HazardModel extends TrapModel {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -139,13 +139,13 @@ final class HazardModel extends TrapModel {
             }
           }
           if (param0 > -37) {
-            HazardModel.n((byte) 14);
+            HazardModel.releaseStatics((byte) 14);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "fu.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "fu.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -189,18 +189,18 @@ final class HazardModel extends TrapModel {
             stackIn_14_0 = stackIn_9_0;
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void n(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           field_t = null;
           if (param0 != -51) {
             field_t = (UiComponent) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fu.F(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fu.F(" + param0 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ final class HazardModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "fu.K(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "fu.K(" + param0 + ')');
         }
     }
 

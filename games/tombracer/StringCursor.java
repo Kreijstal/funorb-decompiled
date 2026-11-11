@@ -33,8 +33,8 @@ final class StringCursor {
               }
               return;
             }
-            dq.field_f = OpenGlSceneLight.field_o.b(27013);
-            C2SChooseRewardPacket.b(param0 ^ -18237, 2);
+            dq.field_f = OpenGlSceneLight.field_o.enterFullscreen(27013);
+            C2SChooseRewardPacket.notifyPageResizing(param0 ^ -18237, 2);
             if (dq.field_f == null) {
               var2 = 3;
             } else {
@@ -76,8 +76,8 @@ final class StringCursor {
             fpa.a(dq.field_f, (byte) 75);
             var2 = 2;
           } else {
-            dq.field_f = OpenGlSceneLight.field_o.b(27013);
-            C2SChooseRewardPacket.b(param0 ^ -18237, 2);
+            dq.field_f = OpenGlSceneLight.field_o.enterFullscreen(27013);
+            C2SChooseRewardPacket.notifyPageResizing(param0 ^ -18237, 2);
             if (dq.field_f == null) {
               var2 = 3;
             } else {
@@ -104,7 +104,7 @@ final class StringCursor {
         field_a = null;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean loadNativeLibrary(String param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -127,7 +127,7 @@ final class StringCursor {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class StringCursor {
           this.text = param0;
           this.length = this.text.length();
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "in.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "in.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

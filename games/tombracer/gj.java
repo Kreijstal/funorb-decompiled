@@ -27,7 +27,7 @@ final class gj {
         throw new IllegalStateException();
     }
 
-    final static void a(ResourceArchive param0, boolean param1) {
+    final static void loadBasicSprites(ResourceArchive param0, boolean param1) {
         UiComponent stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         UiComponent stackIn_7_0 = null;
@@ -55,7 +55,7 @@ final class gj {
           dqa.field_e.b(-126, MatchScreen.field_F);
           if (!param1) {
             var4 = (ResourceArchive) null;
-            gj.a((ResourceArchive) null, true);
+            gj.loadBasicSprites((ResourceArchive) null, true);
           }
           dqa.field_e.b(-123, Puddle.field_v);
           dqa.field_e.b(-123, dn.field_b);
@@ -84,7 +84,7 @@ final class gj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class gj {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

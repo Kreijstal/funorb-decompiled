@@ -48,7 +48,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         int var7_intLifetime3;
         var18 = TombRacer.field_G ? 1 : 0;
         try {
-          var20 = tw.a((byte) -69, "crowns", "lobby", param4);
+          var20 = tw.loadIndexedSpritesByName((byte) -69, "crowns", "lobby", param4);
           var5 = var20;
           RoomComponent.field_n = var20.length;
           if (param2 != null) {
@@ -206,9 +206,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           di.field_a = 15;
           wg.field_i = 2;
           mna.field_d = 4;
-          var7 = jta.a((byte) 123, "largefont", param4, "lobby", param3);
-          PenaltyNotice.field_f = jta.a((byte) 118, "generalfont", param4, "lobby", param3);
-          LegacyOpenGlRidgedWaterEffect.field_e = jta.a((byte) 127, "chatfont", param4, "lobby", param3);
+          var7 = jta.loadBinaryFont((byte) 123, "largefont", param4, "lobby", param3);
+          PenaltyNotice.field_f = jta.loadBinaryFont((byte) 118, "generalfont", param4, "lobby", param3);
+          LegacyOpenGlRidgedWaterEffect.field_e = jta.loadBinaryFont((byte) 127, "chatfont", param4, "lobby", param3);
           var7.setInlineSprites(var5, var24);
           PenaltyNotice.field_f.setInlineSprites(var5, var24);
           LegacyOpenGlRidgedWaterEffect.field_e.setInlineSprites(var5, var24);
@@ -227,16 +227,16 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           var10.field_bb = 1;
           var11.field_z = 1;
           CharacterSelectPhase.field_s = new UiComponent(0L, var8);
-          CharacterSelectPhase.field_s.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "heading"), 126);
+          CharacterSelectPhase.field_s.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "heading"), 126);
           joa.field_d = new UiComponent(0L, (UiComponent) null);
           joa.field_d.field_w = tba.a(-74, false, 120, 8421504, 4210752, false);
           NodeHashTable.field_g = new UiComponent(0L, (UiComponent) null);
           NodeHashTable.field_g.field_w = Player.createScrollbarSprites(114, 1, 3, 6316128, -111, 6316128);
           lw.field_a = new UiComponent(0L, (UiComponent) null);
-          lw.field_a.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "popup"), 113);
-          var12 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "popup_mouseover"), 122);
-          var13 = BoulderComponent.a(param4, "lobby", 5, "button");
-          var14 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_active"), 113);
+          lw.field_a.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "popup"), 113);
+          var12 = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "popup_mouseover"), 122);
+          var13 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button");
+          var14 = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_active"), 113);
           OpenGlTransform3D.field_f = new UiComponent(0L, var8);
           OpenGlTransform3D.field_f.field_w = var14;
           cga.field_g = new UiComponent(0L, (UiComponent) null);
@@ -278,7 +278,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           iea.field_g.applyStyle(false, PressureSwitchBehaviour.field_p);
           S2CStartRoundPacket.field_a = new UiComponent(0L, una.field_j);
           S2CStartRoundPacket.field_a.applyStyle(param0, PressureSwitchBehaviour.field_p);
-          var16 = BoulderComponent.a(param4, "lobby", 5, "button_mouseover");
+          var16 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button_mouseover");
           SimpleBlockBehaviour.field_n = new ContextMenu(lw.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, di.field_a);
           AllPlatformsMazeComponent.field_M = new UiComponent(0L, PressureSwitchBehaviour.field_p);
           AllPlatformsMazeComponent.field_M.field_fb = 1;
@@ -287,14 +287,14 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           AllPlatformsMazeComponent.field_M.field_w = var13;
           AllPlatformsMazeComponent.field_M.field_C = var16;
           AllPlatformsMazeComponent.field_M.field_W = 1;
-          AllPlatformsMazeComponent.field_M.field_db = BoulderComponent.a(param4, "lobby", 5, "button_mouseheld");
-          AllPlatformsMazeComponent.field_M.field_n = BoulderComponent.a(param4, "lobby", 5, "button_active");
-          AllPlatformsMazeComponent.field_M.field_M = BoulderComponent.a(param4, "lobby", 5, "button_disabled");
+          AllPlatformsMazeComponent.field_M.field_db = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button_mouseheld");
+          AllPlatformsMazeComponent.field_M.field_n = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button_active");
+          AllPlatformsMazeComponent.field_M.field_M = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button_disabled");
           AllPlatformsMazeComponent.field_M.field_z = 1;
           Effect.field_a = new UiComponent(0L, PressureSwitchBehaviour.field_p);
           Effect.field_a.field_z = 1;
-          Effect.field_a.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_inactive"), 113);
-          Effect.field_a.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_mouseover"), 113);
+          Effect.field_a.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_inactive"), 113);
+          Effect.field_a.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_mouseover"), 113);
           Effect.field_a.field_n = var14;
           CachedArchiveSource.field_d = new UiComponent(0L, (UiComponent) null);
           CachedArchiveSource.field_d.field_w = Player.createScrollbarSprites(206, -1, 3, 1856141, -113, 1127256);
@@ -319,46 +319,46 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           HardwareSceneLight.field_o = new UiComponent(0L, jk.field_g);
           dn.field_a = new UiComponent(0L, jk.field_g);
           qja.field_j = new UiComponent(0L, jk.field_g);
-          jk.field_g.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "smallbutton"), 124);
-          jk.field_g.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "smallbutton_mouseover"), 127);
-          dupTemp$0 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "smallbutton_active"), 114);
+          jk.field_g.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton"), 124);
+          jk.field_g.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton_mouseover"), 127);
+          dupTemp$0 = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton_active"), 114);
           jk.field_g.field_n = dupTemp$0;
           jk.field_g.field_db = dupTemp$0;
-          jk.field_g.field_M = rfa.a(BoulderComponent.a(param4, "lobby", 5, "smallbutton_disabled"), 127);
-          OpenGlEnvironmentWaterEffect.field_i.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "mediumbutton"), 125);
-          OpenGlEnvironmentWaterEffect.field_i.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "mediumbutton_mouseover"), 115);
-          OpenGlEnvironmentWaterEffect.field_i.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "mediumbutton_mouseheld"), 114);
-          hg.field_g.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "bigbutton"), 127);
-          hg.field_g.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "bigbutton_mouseover"), 118);
-          hg.field_g.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "bigbutton_mouseheld"), 122);
-          hg.field_g.field_M = rfa.a(BoulderComponent.a(param4, "lobby", 5, "bigbutton_disabled"), 124);
-          ModelAnimator.field_g.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "greenbutton"), 124);
-          ModelAnimator.field_g.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "greenbutton_mouseover"), 116);
-          ModelAnimator.field_g.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "greenbutton_mouseheld"), 123);
-          kv.field_b.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "redbutton"), 113);
-          kv.field_b.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "redbutton_mouseover"), 123);
-          kv.field_b.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "redbutton_mouseheld"), 116);
-          ssa.field_g.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "backbutton"), 125);
-          ssa.field_g.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "backbutton_mouseover"), 117);
-          ssa.field_g.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "backbutton_mouseheld"), 123);
-          ssa.field_g.field_M = rfa.a(BoulderComponent.a(param4, "lobby", 5, "backbutton_disabled"), 116);
-          qja.field_j.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "gameoptionbutton"), 118);
-          qja.field_j.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "gameoptionbutton_mouseover"), 113);
-          dupTemp$1 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "gameoptionbutton_active"), 118);
+          jk.field_g.field_M = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton_disabled"), 127);
+          OpenGlEnvironmentWaterEffect.field_i.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "mediumbutton"), 125);
+          OpenGlEnvironmentWaterEffect.field_i.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "mediumbutton_mouseover"), 115);
+          OpenGlEnvironmentWaterEffect.field_i.field_db = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "mediumbutton_mouseheld"), 114);
+          hg.field_g.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton"), 127);
+          hg.field_g.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton_mouseover"), 118);
+          hg.field_g.field_db = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton_mouseheld"), 122);
+          hg.field_g.field_M = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton_disabled"), 124);
+          ModelAnimator.field_g.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton"), 124);
+          ModelAnimator.field_g.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton_mouseover"), 116);
+          ModelAnimator.field_g.field_db = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton_mouseheld"), 123);
+          kv.field_b.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton"), 113);
+          kv.field_b.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton_mouseover"), 123);
+          kv.field_b.field_db = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton_mouseheld"), 116);
+          ssa.field_g.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton"), 125);
+          ssa.field_g.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_mouseover"), 117);
+          ssa.field_g.field_db = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_mouseheld"), 123);
+          ssa.field_g.field_M = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_disabled"), 116);
+          qja.field_j.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton"), 118);
+          qja.field_j.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton_mouseover"), 113);
+          dupTemp$1 = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton_active"), 118);
           qja.field_j.field_n = dupTemp$1;
           qja.field_j.field_db = dupTemp$1;
-          qja.field_j.field_M = rfa.a(BoulderComponent.a(param4, "lobby", 5, "gameoptionbutton_disabled"), 125);
-          HardwareSceneLight.field_o.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatbutton"), 116);
-          HardwareSceneLight.field_o.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatbutton_mouseover"), 119);
-          dupTemp$2 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatbutton_active"), 119);
+          qja.field_j.field_M = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton_disabled"), 125);
+          HardwareSceneLight.field_o.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatbutton"), 116);
+          HardwareSceneLight.field_o.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatbutton_mouseover"), 119);
+          dupTemp$2 = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatbutton_active"), 119);
           HardwareSceneLight.field_o.field_n = dupTemp$2;
           HardwareSceneLight.field_o.field_db = dupTemp$2;
-          dn.field_a.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatfilterbutton"), 112);
-          dn.field_a.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
-          dupTemp$3 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatfilterbutton_active"), 118);
+          dn.field_a.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton"), 112);
+          dn.field_a.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
+          dupTemp$3 = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton_active"), 118);
           dn.field_a.field_n = dupTemp$3;
           dn.field_a.field_db = dupTemp$3;
-          var17 = BoulderComponent.a(param4, "lobby", 5, "checkbox");
+          var17 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "checkbox");
           FacePlayerMountComponent.field_F = new ta(0L, var17[1], var17[0], 1, PressureSwitchBehaviour.field_p, (String) null);
           ClientException.field_b = new UiComponent(0L, (UiComponent) null);
           ClientException.field_b.field_w = ArrowShooterComponent.createCentreOnlyFrame((byte) -118, MaskBlendOperator.a(param4, "lobby", "slideregion", 115));
@@ -366,10 +366,10 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           ClientException.field_b.field_db = ArrowShooterComponent.createCentreOnlyFrame((byte) -118, MaskBlendOperator.a(param4, "lobby", "slideregion_mouseheld", 123));
           ClientException.field_b.field_M = ArrowShooterComponent.createCentreOnlyFrame((byte) -87, MaskBlendOperator.a(param4, "lobby", "slideregion_disabled", 106));
           DirectByteStorage.field_h = new UiComponent(0L, (UiComponent) null);
-          DirectByteStorage.field_h.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar"), 122);
-          DirectByteStorage.field_h.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar_mouseover"), 121);
-          DirectByteStorage.field_h.field_db = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar_mouseheld"), 113);
-          DirectByteStorage.field_h.field_M = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar_disabled"), 116);
+          DirectByteStorage.field_h.field_w = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar"), 122);
+          DirectByteStorage.field_h.field_C = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_mouseover"), 121);
+          DirectByteStorage.field_h.field_db = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_mouseheld"), 113);
+          DirectByteStorage.field_h.field_M = rfa.a(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_disabled"), 116);
           pk.field_s = new UiComponent(0L, (UiComponent) null);
           pk.field_s.field_R = MaskBlendOperator.a(param4, "lobby", "upbutton", -121);
           pk.field_s.field_rb = MaskBlendOperator.a(param4, "lobby", "upbutton_mouseover", -87);
@@ -411,7 +411,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -438,7 +438,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -472,7 +472,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         if (param0 != -7694) {
           field_w = (ft) null;
         }
-        rma.a(true, faa.field_g, ConstraintLocomotor.field_p, (byte) 119);
+        rma.a(true, BridgeTile.field_g, ConstraintLocomotor.field_p, (byte) 119);
         S2CProfileUpdatePacket.field_d = true;
     }
 
@@ -508,7 +508,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -535,7 +535,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -596,7 +596,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -633,7 +633,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -681,7 +681,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -712,7 +712,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 

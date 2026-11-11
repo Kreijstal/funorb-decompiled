@@ -26,7 +26,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -96) {
-            StatefulWidgetPainter.b(91);
+            StatefulWidgetPainter.releaseStatics(91);
           }
           var2 = param0.getParameter("username");
           if (var2 != null) {
@@ -46,7 +46,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -125,11 +125,11 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 < 36) {
           field_q = true;
@@ -148,7 +148,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
           }
           this.field_o[param1].field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vga.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vga.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
             stackIn_3_0 = (UiWidget) (param0);
           }
           var10 = (FocusableWidget) (stackIn_3_0);
-          tga.a(param2 - 16799168, param0.field_i + param1, param1 + param0.field_i + param0.field_m, param0.field_n + param3, param0.field_n + param3 + param0.field_p);
+          tga.intersectClip(param2 - 16799168, param0.field_i + param1, param1 + param0.field_i + param0.field_m, param0.field_n + param3, param0.field_n + param3 + param0.field_p);
           if (var10 != null) {
             param4 = param4 & var10.field_y;
           }
@@ -237,7 +237,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
         try {
           param0.a((byte) -16, this, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class Effect implements noa {
     private int preset;
     WorldBody field_g;
     static SpriteData[] field_e;
-    private int field_k;
+    private int deathMessageIndex;
     static String[][] field_h;
     int size;
     private static String[] field_i;
@@ -22,7 +22,7 @@ final class Effect implements noa {
         try {
           this.source = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "up.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "up.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -49,12 +49,12 @@ final class Effect implements noa {
         return true;
     }
 
-    final int e(int param0) {
+    final int getDeathMessageIndex(int param0) {
         if (param0 > -78) {
           this.type = 23;
-          return this.field_k;
+          return this.deathMessageIndex;
         }
-        return this.field_k;
+        return this.deathMessageIndex;
     }
 
     final int getPreset(int param0) {
@@ -76,7 +76,7 @@ final class Effect implements noa {
         lavaDeathMessages = null;
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         try {
           param0.writeBits((byte) -125, this.preset, 4);
           if (param1 != 125) {
@@ -84,14 +84,14 @@ final class Effect implements noa {
           }
           param0.writeBits((byte) 116, this.size, 10);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "up.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "up.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     private final void updateType(int param0) {
         this.type = this.typeForPreset(true);
         if (param0 > -37) {
-          this.b(-40, 82);
+          this.setDeathMessageIndex(-40, 82);
         }
     }
 
@@ -103,7 +103,7 @@ final class Effect implements noa {
         }
     }
 
-    final int c(int param0) {
+    final int getDeathCause(int param0) {
         int var2 = 77 % ((-68 - param0) / 55);
         int var3 = this.preset;
         if (0 == var3) {
@@ -177,7 +177,7 @@ final class Effect implements noa {
 
     final boolean d(int param0) {
         if (param0 != 6734) {
-          this.b(94, -61);
+          this.setDeathMessageIndex(94, -61);
           if (this.type != 1) {
             return this.type == 2 ? true : false;
           }
@@ -196,8 +196,8 @@ final class Effect implements noa {
         this((WorldBody) null, param0, param1);
     }
 
-    final void b(int param0, int param1) {
-        this.field_k = param1;
+    final void setDeathMessageIndex(int param0, int param1) {
+        this.deathMessageIndex = param1;
         if (param0 != 1) {
           field_e = (SpriteData[]) null;
         }
@@ -206,9 +206,9 @@ final class Effect implements noa {
     Effect(WorldBody param0, Effect param1) {
         this(param0, param1.preset, param1.size);
         try {
-          this.field_k = param1.field_k;
+          this.deathMessageIndex = param1.deathMessageIndex;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class Effect implements noa {
           this.setSource(param0, 2348);
           this.updateType(-70);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

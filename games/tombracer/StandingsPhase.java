@@ -105,7 +105,7 @@ final class StandingsPhase extends MatchPhase {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class StandingsPhase extends MatchPhase {
             if (!this.matchState.hasResigned((byte) -102, var22)) {
               var13 = 7829367;
               if (-2 != this.matchState.declaredWinner) {
-                SocketConnector.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.roundWins[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.a(LegacyOpenGlFlowingWaterEffect.formatText(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.roundWins[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               } else {
                 SocketConnector.a(DateInputWidget.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               }
@@ -227,7 +227,7 @@ final class StandingsPhase extends MatchPhase {
           if (var11 != 0) {
             var10_ref_String = id.field_k.toUpperCase();
           } else {
-            var10_ref_String = vj.worldNames[var9].toUpperCase();
+            var10_ref_String = SecondaryLinkQueue.worldNames[var9].toUpperCase();
           }
           SocketConnector.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
           MembersUpsellMenu.a(this.screen.getPlayerName(this.screen.localPlayerIndex, false).toUpperCase(), wga.field_a[this.screen.localPlayerIndex], eda.field_f, -1, -15 + var4, var3, -1);
@@ -258,19 +258,19 @@ final class StandingsPhase extends MatchPhase {
             }
           }
           if (var11 != 0) {
-            var24 = dea.a(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
+            var24 = dea.formatTime(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
             MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
             MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
             var13 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(74);
             MembersUpsellMenu.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
-            var23 = dea.a(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
+            var23 = dea.formatTime(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
             MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
             za.field_g.a(-200 + var3, var4 + 60);
             var13 = LegacyOpenGlShoreWaveWaterEffect.a(var9, 0);
-            RoomEffectTraps.a(-1, -36, var4 + 79, dea.a(var13, (byte) -8), -200 + (var3 + za.field_g.paddedWidth()) + 5, kn.field_p, 2431750);
+            RoomEffectTraps.a(-1, -36, var4 + 79, dea.formatTime(var13, (byte) -8), -200 + (var3 + za.field_g.paddedWidth()) + 5, kn.field_p, 2431750);
             VariantMask.field_d.a(var3 - 110, 60 + var4);
-            RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), VariantMask.field_d.paddedWidth() + (var3 - 110) + 5, kn.field_p, 2431750);
+            RoomEffectTraps.a(-1, -92, 79 + var4, dea.formatTime(var13 + var13 / 2, (byte) -8), VariantMask.field_d.paddedWidth() + (var3 - 110) + 5, kn.field_p, 2431750);
             MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
             var14 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(110);
             MembersUpsellMenu.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
@@ -280,7 +280,7 @@ final class StandingsPhase extends MatchPhase {
               var15 = FacePlayerLocomotor.field_p.field_p[1][0];
               var16 = -var15 + var14;
               if (var15 != 0) {
-                MembersUpsellMenu.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(103, ItemComponent.field_F, new String[]{Integer.toString(var15).toUpperCase() + " " + ByteStorage.a(var16, -1)}), 2431750, kn.field_p, -1, 50 + var4, 120 + var3, -1);
+                MembersUpsellMenu.a(LegacyOpenGlFlowingWaterEffect.formatText(103, ItemComponent.field_F, new String[]{Integer.toString(var15).toUpperCase() + " " + ByteStorage.formatSignedOffset(var16, -1)}), 2431750, kn.field_p, -1, 50 + var4, 120 + var3, -1);
               }
               var17 = 0;
               var18 = null;
@@ -295,7 +295,7 @@ final class StandingsPhase extends MatchPhase {
               }
               if (var18 != null) {
                 var16 = var14 - var17;
-                SocketConnector.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(121, PenaltyNotice.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + ByteStorage.a(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
+                SocketConnector.a(LegacyOpenGlFlowingWaterEffect.formatText(121, PenaltyNotice.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + ByteStorage.formatSignedOffset(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
               }
             }
           }

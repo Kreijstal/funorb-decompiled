@@ -91,7 +91,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], var17));
           }
         }
-        MazeGenerator.a((byte) 2);
+        MazeGenerator.releaseStatics((byte) 2);
         return var1;
     }
 

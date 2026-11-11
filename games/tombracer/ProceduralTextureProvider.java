@@ -10,11 +10,11 @@ class ProceduralTextureProvider implements TextureProvider {
     private ResourceArchive field_d;
     private ResourceArchive field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 < 10) {
           java.awt.Component var2 = (java.awt.Component) null;
-          ProceduralTextureProvider.a((java.awt.Component) null, 70);
+          ProceduralTextureProvider.attachKeyListener((java.awt.Component) null, 70);
         }
     }
 
@@ -36,7 +36,7 @@ class ProceduralTextureProvider implements TextureProvider {
         return this.textureCount;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyListener(java.awt.Component param0, int param1) {
         param0.setFocusTraversalKeysEnabled(false);
         param0.addKeyListener(TileOperator.field_n);
         if (param1 > -4) {
@@ -45,7 +45,7 @@ class ProceduralTextureProvider implements TextureProvider {
         try {
           param0.addFocusListener(TileOperator.field_n);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "qma.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "qma.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -275,18 +275,18 @@ class ProceduralTextureProvider implements TextureProvider {
           } else {
             stackIn_135_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_128_0), ((StringBuilder) (Object) stackIn_134_1).append(stackIn_135_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_128_0), ((StringBuilder) (Object) stackIn_134_1).append(stackIn_135_2).append(')').toString());
         }
     }
 
     public final int[] loadPixels(byte param0, int param1, float param2, int param3, boolean param4, int param5) {
         if (param0 != 40) {
-          ProceduralTextureProvider.a((byte) 28, 0.7337705479498259);
+          ProceduralTextureProvider.roundToInt((byte) 28, 0.7337705479498259);
         }
         return this.getProceduralTexture(param3, 0).a(param1, this.metadata[param3].field_e, param5, (double)param2, this.field_d, (TextureProvider) (this), false);
     }
 
-    final static int a(byte param0, double param1) {
+    final static int roundToInt(byte param0, double param1) {
         if (param0 != 123) {
           field_f = (String) null;
         }

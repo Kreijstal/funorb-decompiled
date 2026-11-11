@@ -53,7 +53,7 @@ abstract class AppletGameShell extends GameApplet {
           this.field_v = 64;
         }
         String var2 = LegacyTurbulentWaterNoise.f(12);
-        cc.a(55, di.a(78), var2);
+        cc.writeSessionCookie(55, di.a(78), var2);
     }
 
     private final void readServerTextMessage(byte param0) {
@@ -159,7 +159,7 @@ abstract class AppletGameShell extends GameApplet {
             Transform3D.field_c = 10;
           }
           if (var4 == 7) {
-            ft.a(89, di.a(113));
+            ft.openServerList(89, di.a(113));
           }
           if (8 == var4) {
             cua.a((byte) -65, di.a(37));
@@ -171,11 +171,11 @@ abstract class AppletGameShell extends GameApplet {
             ql.field_k.writeCipheredOpcode(17, -2988);
           }
           if (11 == var4) {
-            nt.a(di.a(41), -1978);
+            nt.reloadPage(di.a(41), -1978);
           }
           var5Lifetime3 = 70 / ((param0 + 35) / 35);
           if (var4 == 12) {
-            SimpleHoverMountComponent.a(mn.g(-128), di.a(28), (byte) -74);
+            SimpleHoverMountComponent.openRelativeUrl(mn.g(-128), di.a(28), (byte) -74);
           }
           if (13 == var4) {
             try {
@@ -414,7 +414,7 @@ abstract class AppletGameShell extends GameApplet {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         ApproachPlayerLocomotor.field_t = this.field_z;
-        FacePlayerLocomotor.b(ApproachPlayerLocomotor.field_t, (byte) 65);
+        FacePlayerLocomotor.applyLanguage(ApproachPlayerLocomotor.field_t, (byte) 65);
         IsaacCipher.configureClientConnection(this.field_s, this.field_v, dsa.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, ApproachPlayerLocomotor.field_t, param5, this.field_w);
         MazeSolver.a(ApproachPlayerLocomotor.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
         wka.patchJavaKeyCodeMap(520);
@@ -501,7 +501,7 @@ abstract class AppletGameShell extends GameApplet {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -556,11 +556,11 @@ abstract class AppletGameShell extends GameApplet {
         var5 = TombRacer.field_G ? 1 : 0;
         if (null != OpenGlSceneLight.field_o) {
           if (null == dq.field_f) {
-            var6 = tj.b(25128);
+            var6 = tj.getTopContainer(25128);
             var4_ref_java_awt_Dimension = var6.getSize();
-            OpenGlSceneLight.field_o.a(var4_ref_java_awt_Dimension.width, false, var4_ref_java_awt_Dimension.height);
+            OpenGlSceneLight.field_o.setRequestedSize(var4_ref_java_awt_Dimension.width, false, var4_ref_java_awt_Dimension.height);
           }
-          OpenGlSceneLight.field_o.a(false);
+          OpenGlSceneLight.field_o.update(false);
         }
         DisplaySettingsDialog.j(3321);
         BoulderComponent.snapshotMouseInput((byte) -44);
@@ -661,7 +661,7 @@ abstract class AppletGameShell extends GameApplet {
           UnlockOverlay.field_l = false;
         }
         if (cga.field_f == 0 &&
-          FuseBehaviour.k((byte) -117)) {
+          FuseBehaviour.loadMasterIndex((byte) -117)) {
           cga.field_f = 1;
         }
         if (cga.field_f == 1) {
@@ -695,7 +695,7 @@ abstract class AppletGameShell extends GameApplet {
         if (cga.field_f == 3 &&
           esa.areCommonUiArchivesReady(WeaveOperator.field_p, tk.field_b, -128, OpenGlTexture2D.field_n) &&
           S2CActionPacket.a(WeaveOperator.field_p, (byte) -53)) {
-          ee.a(-1);
+          ee.releaseStatics(-1);
           SimulationObserver.composeAgreementText((byte) -27);
           ura.field_b = nl.field_c;
           GameAssetLoader.field_t = false;
@@ -704,7 +704,7 @@ abstract class AppletGameShell extends GameApplet {
             null != BrickOperator.field_s) {
             stackIn_101_0 = !(ofa.field_I);
             stackIn_104_1 = !(ofa.field_I);
-            FollowCamera.a(stackIn_101_0, stackIn_104_1, false, BrickOperator.field_s);
+            FollowCamera.openLoginForm(stackIn_101_0, stackIn_104_1, false, BrickOperator.field_s);
           }
           if (NotLoggedInMenu.field_r) {
             S2CPlayerProfilePacket.b(true);
@@ -713,7 +713,7 @@ abstract class AppletGameShell extends GameApplet {
             ScoreStandings.field_c = epa.d((byte) -91);
             TextureOperator.field_k = fta.c(-93);
           }
-          wk.a(ScoreStandings.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
+          wk.initLogoAssets(ScoreStandings.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
           OpenGlTexture2D.field_n = null;
           tk.field_b = null;
           WeaveOperator.field_p = null;
@@ -732,7 +732,7 @@ abstract class AppletGameShell extends GameApplet {
         if (cga.field_f == 11) {
           if (ConstrainToFacingArcLocomotor.field_v != null && (!ConstrainToFacingArcLocomotor.field_v.ensureIndex(-100) ||
             !ConstrainToFacingArcLocomotor.field_v.areAllGroupsAvailable(0))) {
-            ima.a(0.0f, S2CEventPacket.a(CrossedSineBandsOperator.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
+            ima.a(0.0f, S2CEventPacket.formatLoadingProgress(CrossedSineBandsOperator.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
             decompiledFrameRemainder0 = false;
           }
           else {

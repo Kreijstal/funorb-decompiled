@@ -24,7 +24,7 @@ final class lla {
           var4 = new UiComponent[]{param1, dqa.field_e, (UiComponent) ((Object) OpenGlSprite.field_j)};
           this.field_a = new bv(0L, Effect.field_a, var3, CachedArchiveSource.field_d, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "lla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "lla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

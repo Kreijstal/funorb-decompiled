@@ -199,7 +199,7 @@ final class vb extends IntrusiveNode {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
         }
     }
 
@@ -218,9 +218,9 @@ final class vb extends IntrusiveNode {
           this.field_f = param0;
           this.field_g = param0.getVolume();
           this.field_h = param1;
-          this.field_f.e(128 + HardwareRidgedWaterNoise.field_v * this.field_g >> 8);
+          this.field_f.setVolume(128 + HardwareRidgedWaterNoise.field_v * this.field_g >> 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

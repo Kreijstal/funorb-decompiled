@@ -21,7 +21,7 @@ abstract class OpenGlTexture implements GpuTexture {
         return !this.field_b ? var2 : var2 * 4 / 3;
     }
 
-    final void a(int param0, float[] param1, int param2, int param3, int param4) {
+    final void uploadFloatMipmaps(int param0, float[] param1, int param2, int param3, int param4) {
         int var16 = 0;
         int var20 = 0;
         int var21 = 0;
@@ -64,7 +64,7 @@ abstract class OpenGlTexture implements GpuTexture {
           var11 = param1;
           var12 = new float[var9 * (var10 * var6_int)];
           while (true) {
-            jaggl.OpenGL.glTexImage2Df(param3, var7, this.d(124), param4, param2, 0, waa.a(this.field_f, param0 + 1384), 5126, var11, 0);
+            jaggl.OpenGL.glTexImage2Df(param3, var7, this.d(124), param4, param2, 0, waa.toGlFormat(this.field_f, param0 + 1384), 5126, var11, 0);
             if (var8 <= 1) {
               return;
             }
@@ -110,7 +110,7 @@ abstract class OpenGlTexture implements GpuTexture {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ abstract class OpenGlTexture implements GpuTexture {
           }
           if (param0 != 7672) {
             var4 = (float[]) null;
-            this.a(-102, (float[]) null, -122, 31, 81);
+            this.uploadFloatMipmaps(-102, (float[]) null, -122, 31, 81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -149,7 +149,7 @@ abstract class OpenGlTexture implements GpuTexture {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ abstract class OpenGlTexture implements GpuTexture {
         return -92;
     }
 
-    final static CanvasImageBuffer a(int param0, int param1, java.awt.Canvas param2, int param3) {
+    final static CanvasImageBuffer createCanvasImageBuffer(int param0, int param1, java.awt.Canvas param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
@@ -285,7 +285,7 @@ abstract class OpenGlTexture implements GpuTexture {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -316,7 +316,7 @@ abstract class OpenGlTexture implements GpuTexture {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3, int param4) {
+    final void uploadByteMipmaps(int param0, int param1, byte[] param2, int param3, int param4) {
         int var16 = 0;
         int var20 = 0;
         int var21 = 0;
@@ -362,7 +362,7 @@ abstract class OpenGlTexture implements GpuTexture {
           var11 = param2;
           var12 = new byte[var10 * var9 * var6_int];
           while (true) {
-            jaggl.OpenGL.glTexImage2Dub(param0, var7, this.d(115), param1, param4, 0, waa.a(this.field_f, 1383), 5121, var11, 0);
+            jaggl.OpenGL.glTexImage2Dub(param0, var7, this.d(115), param1, param4, 0, waa.toGlFormat(this.field_f, 1383), 5121, var11, 0);
             if (var8 <= 1) {
               return;
             }
@@ -408,11 +408,11 @@ abstract class OpenGlTexture implements GpuTexture {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void a(byte param0, int param1, int param2, int[] param3, int param4) {
+    final void uploadIntMipmaps(byte param0, int param1, int param2, int[] param3, int param4) {
         int var24 = 0;
         int var25 = 0;
         int incrementValue$4 = 0;
@@ -521,7 +521,7 @@ abstract class OpenGlTexture implements GpuTexture {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -554,7 +554,7 @@ abstract class OpenGlTexture implements GpuTexture {
           this.applyFilter((byte) -97);
           this.a((byte) -128, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "tfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "tfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

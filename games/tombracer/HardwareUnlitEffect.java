@@ -44,7 +44,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
         return stackIn_6_0;
     }
 
-    final static int a(CharSequence param0, int param1) {
+    final static int hashString(CharSequence param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -77,7 +77,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -87,10 +87,10 @@ final class HardwareUnlitEffect extends ShaderEffect {
           this.owner.a((byte) -35, param0);
           if (param2 != 24595) {
             CharSequence var5 = (CharSequence) null;
-            HardwareUnlitEffect.a((CharSequence) null, -89);
+            HardwareUnlitEffect.hashString((CharSequence) null, -89);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "vta.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "vta.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
     final boolean isSupported(int param0) {
         if (param0 != 1185) {
           CharSequence var3 = (CharSequence) null;
-          HardwareUnlitEffect.a((CharSequence) null, -5);
+          HardwareUnlitEffect.hashString((CharSequence) null, -5);
           return true;
         }
         return true;

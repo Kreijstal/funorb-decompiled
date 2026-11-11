@@ -42,7 +42,7 @@ final class cua {
         var4Lifetime1.writeShort(-1477662136, param0);
     }
 
-    final static void a(ht param0, byte param1) {
+    final static void insertSorted(ht param0, byte param1) {
         RuntimeException runtimeException = null;
         ht var2 = null;
         int var3 = 0;
@@ -79,19 +79,19 @@ final class cua {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
-        cc.a(37, param1, "");
+        cc.writeSessionCookie(37, param1, "");
         if (param0 > -16) {
           return;
         }
         try {
-          nt.a(param1, -1978);
+          nt.reloadPage(param1, -1978);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cua.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cua.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class cua {
           this.field_c = param1;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "cua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "cua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

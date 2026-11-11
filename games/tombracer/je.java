@@ -95,11 +95,11 @@ final class je extends haa {
           return (Sprite) null;
         }
         Sprite var4 = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[0], pg.field_C[0], mq.field_b[0], ImageProducerCanvasImageBuffer.field_m[0], var3);
-        MazeGenerator.a((byte) 113);
+        MazeGenerator.releaseStatics((byte) 113);
         return var4;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_E = null;
         if (param0 > -117) {
           je.buildFirstDecodedSprite((byte) 41);
@@ -126,7 +126,7 @@ final class je extends haa {
             throw new IllegalStateException();
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "je.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "je.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class je extends haa {
           this.field_K = this.field_F.field_w + this.field_F.field_k;
           this.a(param2, 0, param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

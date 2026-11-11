@@ -4,7 +4,7 @@
 final class kk {
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 120) {
           kk.a(26);

@@ -12,13 +12,13 @@ final class rma {
         }
         try {
           ScrollControlWidget.field_E = param1;
-          vn.a(108, gja.field_bb, param0);
+          vn.showMessageDialog(108, gja.field_bb, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static String a(int param0) {
+    final static String readFreeLevelBanner(int param0) {
         int var1 = 9 / ((param0 - 74) / 41);
         return FontMetrics.a(true, "\\\\contentfs\\mgcontent_v4\\WIP\\tombracer\\src\\freelevels\\banner.trlev");
     }

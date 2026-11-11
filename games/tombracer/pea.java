@@ -6,17 +6,17 @@ final class pea {
     static String field_f;
     private DualLinkNode field_d;
     private NodeHashTable field_e;
-    private vj field_a;
+    private SecondaryLinkQueue field_a;
     private int field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < -92) {
           field_f = null;
           field_c = null;
           return;
         }
         PcmSampleStream var2 = (PcmSampleStream) null;
-        pea.a((PcmSampleStream) null, -115);
+        pea.playSampleStream((PcmSampleStream) null, -115);
         field_f = null;
         field_c = null;
     }
@@ -29,11 +29,11 @@ final class pea {
         if (var4 == null) {
           return var4;
         }
-        this.field_a.a(var4, (byte) -75);
+        this.field_a.addLast(var4, (byte) -75);
         return var4;
     }
 
-    final static vb a(PcmSampleStream param0, int param1) {
+    final static vb playSampleStream(PcmSampleStream param0, int param1) {
         vb var2 = null;
         RuntimeException var2_ref = null;
         vb stackIn_3_0 = null;
@@ -45,7 +45,7 @@ final class pea {
           var2 = new vb(param0, param0);
           DivisionMazeGenerator.field_e.addLast((byte) -68, var2);
           if (param1 != 1) {
-            pea.a((byte) -106);
+            pea.releaseStatics((byte) -106);
           }
           PitModel.field_n.a(param0);
           stackIn_3_0 = var2;
@@ -60,7 +60,7 @@ final class pea {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -73,26 +73,26 @@ final class pea {
           if (0 != this.field_b) {
             this.field_b = this.field_b - 1;
           } else {
-            var5 = this.field_a.c((byte) 127);
+            var5 = this.field_a.removeFirst((byte) 127);
             var5.unlink(36);
             var5.unlinkSecondary(-7975);
             if (this.field_d == var5) {
-              var5 = this.field_a.c((byte) 124);
+              var5 = this.field_a.removeFirst((byte) 124);
               var5.unlink(75);
               var5.unlinkSecondary(-7975);
             }
           }
           this.field_e.put(param2, 126, param0);
-          this.field_a.a(param0, (byte) -77);
+          this.field_a.addLast(param0, (byte) -77);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     pea(int param0) {
         int var2 = 0;
         this.field_d = new DualLinkNode();
-        this.field_a = new vj();
+        this.field_a = new SecondaryLinkQueue();
         this.field_b = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
         }

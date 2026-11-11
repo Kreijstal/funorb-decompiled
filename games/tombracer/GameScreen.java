@@ -32,14 +32,14 @@ abstract class GameScreen {
               }
               if (VerticalGradientOperator.field_n != 2) {
                 if (2 == VerticalGradientOperator.field_n) {
-                  if (VerticalScrollbar.isRetryAllowed(-1)) {
+                  if (VerticalScrollbar.isChatSendAllowed(-1)) {
                     var4 = (String) null;
                     ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                   }
                   return true;
                 }
                 if (var3 == 0) {
-                  if (VerticalScrollbar.isRetryAllowed(-1)) {
+                  if (VerticalScrollbar.isChatSendAllowed(-1)) {
                     var4 = (String) null;
                     ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                   }
@@ -52,7 +52,7 @@ abstract class GameScreen {
                   var3 != 0) {
                   return false;
                 }
-                if (VerticalScrollbar.isRetryAllowed(-1)) {
+                if (VerticalScrollbar.isChatSendAllowed(-1)) {
                   var4 = (String) null;
                   ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                 }
@@ -73,7 +73,7 @@ abstract class GameScreen {
                 var3 != 0) {
                 return false;
               }
-              if (VerticalScrollbar.isRetryAllowed(-1)) {
+              if (VerticalScrollbar.isChatSendAllowed(-1)) {
                 var4Lifetime3 = (String) null;
                 ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
               }
@@ -108,7 +108,7 @@ abstract class GameScreen {
               var3 != 0) {
               return false;
             }
-            if (VerticalScrollbar.isRetryAllowed(-1)) {
+            if (VerticalScrollbar.isChatSendAllowed(-1)) {
               var4Lifetime1 = (String) null;
               ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
             }
@@ -128,7 +128,7 @@ abstract class GameScreen {
             var3 != 0) {
             return false;
           }
-          if (VerticalScrollbar.isRetryAllowed(-1)) {
+          if (VerticalScrollbar.isChatSendAllowed(-1)) {
             var4Lifetime2 = (String) null;
             ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
           }
@@ -178,7 +178,7 @@ abstract class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var5), "dfa.FC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) var5), "dfa.FC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -294,7 +294,7 @@ abstract class GameScreen {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 

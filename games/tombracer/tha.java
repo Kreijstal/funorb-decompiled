@@ -134,7 +134,7 @@ final class tha extends WidgetContainer implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "tha.D(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "tha.D(" + param0 + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class tha extends WidgetContainer implements ButtonListener {
             return;
           }
           if (this.field_z == param2) {
-            qfa.a((byte) 6);
+            qfa.openAccountRegistration((byte) 6);
             return;
           }
           if (this.field_x != param2) {
@@ -205,7 +205,7 @@ final class tha extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class tha extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

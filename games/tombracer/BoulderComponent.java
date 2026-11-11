@@ -41,7 +41,7 @@ final class BoulderComponent extends PathMoverComponent {
           return;
         }
         String var7 = (String) null;
-        BoulderComponent.a((ResourceArchive) null, (String) null, -33, (String) null);
+        BoulderComponent.loadSpritesByName((ResourceArchive) null, (String) null, -33, (String) null);
         var3Lifetime1 = IntrusiveDeque.a(param2, param0, -117);
         if (var3Lifetime1 != null) {
           hka.field_b.a((byte) -22, false);
@@ -60,11 +60,11 @@ final class BoulderComponent extends PathMoverComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "uka.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "uka.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static Sprite[] a(ResourceArchive param0, String param1, int param2, String param3) {
+    final static Sprite[] loadSpritesByName(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -107,7 +107,7 @@ final class BoulderComponent extends PathMoverComponent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class BoulderComponent extends PathMoverComponent {
           var11.setStatCategory(2, 146366800);
           var5 = new ConstantEffectBehaviour(param2, param0);
           var6 = new Effect(0, 10);
-          var6.b(1, 14);
+          var6.setDeathMessageIndex(1, 14);
           var5.a(true, var6);
           var11.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = new SimpleBlockBehaviour(param2, param0);
@@ -188,7 +188,7 @@ final class BoulderComponent extends PathMoverComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

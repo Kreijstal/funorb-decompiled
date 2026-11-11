@@ -46,7 +46,7 @@ final class is extends UiComponent {
               this.field_vb.length() > 0) {
               discarded$3 = this.field_vb.append((char) var2);
             }
-            if (PressureSwitchBehaviour.a((byte) -17, (char) var2)) {
+            if (PressureSwitchBehaviour.isAsciiLetter((byte) -17, (char) var2)) {
               discarded$4 = this.field_vb.append((char) var2);
               if (MenuEntry.field_h == 84) {
                 if (this.field_vb.length() <= 0) {
@@ -65,7 +65,7 @@ final class is extends UiComponent {
               field_Ab = -0.0745474174618721f;
               return true;
             }
-            if (OpenGlEnvironmentWaterEffect.a(125, (char) var2)) {
+            if (OpenGlEnvironmentWaterEffect.isAsciiDigit(125, (char) var2)) {
               discarded$5 = this.field_vb.append((char) var2);
               if (MenuEntry.field_h == 84) {
                 if (this.field_vb.length() <= 0) {
@@ -128,7 +128,7 @@ final class is extends UiComponent {
           this.field_vb.length() > 0) {
           discarded$0 = this.field_vb.append((char) var2Lifetime1);
         }
-        if (PressureSwitchBehaviour.a((byte) -17, (char) var2Lifetime1)) {
+        if (PressureSwitchBehaviour.isAsciiLetter((byte) -17, (char) var2Lifetime1)) {
           discarded$1 = this.field_vb.append((char) var2Lifetime1);
           if (MenuEntry.field_h == 84) {
             if (this.field_vb.length() <= 0) {
@@ -147,7 +147,7 @@ final class is extends UiComponent {
           field_Ab = -0.0745474174618721f;
           return true;
         }
-        if (!OpenGlEnvironmentWaterEffect.a(125, (char) var2Lifetime1)) {
+        if (!OpenGlEnvironmentWaterEffect.isAsciiDigit(125, (char) var2Lifetime1)) {
           if (MenuEntry.field_h == 84) {
             if (this.field_vb.length() <= 0) {
               this.field_ub = 1;
@@ -293,7 +293,7 @@ final class is extends UiComponent {
           this.field_tb.setBounds(var9_int, di.field_a, -23776, 3 + di.field_a, 5);
           var10 = 5 + (var9_int + 5);
           var11 = di.field_a * 2 + 6;
-          var12 = bt.a((byte) -8, var10, param2, param0);
+          var12 = PitSnakeModel.a((byte) -8, var10, param2, param0);
           var13 = hsa.a(param3, var11, param1, (byte) 69);
           this.setBounds(var10, var11, -23776, var13, var12);
           return;
@@ -325,7 +325,7 @@ final class is extends UiComponent {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

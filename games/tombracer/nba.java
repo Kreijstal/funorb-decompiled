@@ -43,11 +43,11 @@ final class nba {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(PlatformTaskDispatcher param0, sq param1, int param2, int param3, int param4, java.awt.Component param5, int param6, boolean param7) {
+    final static void initAudioOutputs(PlatformTaskDispatcher param0, sq param1, int param2, int param3, int param4, java.awt.Component param5, int param6, boolean param7) {
         try {
           AudioOutput.configure(param3, param7, 10);
           WheeledMountComponent.field_P = AudioOutput.createOutput(param0, param5, 0, param4);
@@ -60,7 +60,7 @@ final class nba {
           LegacyOpenGlUnlitEffect.field_d.a((byte) 100, MatchState.field_w);
           WheeledMountComponent.field_P.setStream(LegacyOpenGlUnlitEffect.field_d);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "nba.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "nba.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 

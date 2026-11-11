@@ -16,7 +16,7 @@ final class fpa {
           if (param1 != 75) {
             field_c = false;
           }
-          ProceduralTextureProvider.a((java.awt.Component) ((Object) param0), -71);
+          ProceduralTextureProvider.attachKeyListener((java.awt.Component) ((Object) param0), -71);
           SweepRotateLocomotor.attachMouseListeners((java.awt.Component) ((Object) param0), true);
           if (tja.field_q == null) {
             return;
@@ -33,7 +33,7 @@ final class fpa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

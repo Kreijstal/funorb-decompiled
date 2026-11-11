@@ -60,7 +60,7 @@ final class cia {
             this.field_e = this.field_e + (var3 << 17);
             this.field_b = this.field_b + (var2 << 17);
             this.field_d = true;
-            this.field_f = (tia.a(var3 << 8, var2 << 8, -29543) >> 2) - 512;
+            this.field_f = (tia.atan2(var3 << 8, var2 << 8, -29543) >> 2) - 512;
           } else {
             if (var3 == 0) {
               if (this.field_d) {
@@ -75,7 +75,7 @@ final class cia {
               this.field_e = this.field_e + (var3 << 17);
               this.field_b = this.field_b + (var2 << 17);
               this.field_d = true;
-              this.field_f = (tia.a(var3 << 8, var2 << 8, -29543) >> 2) - 512;
+              this.field_f = (tia.atan2(var3 << 8, var2 << 8, -29543) >> 2) - 512;
             }
           }
           this.field_c.tick(0);
@@ -95,7 +95,7 @@ final class cia {
           this.field_e = this.field_e + (var3Lifetime1 << 17);
           this.field_b = this.field_b + (var2 << 17);
           this.field_d = true;
-          this.field_f = (tia.a(var3Lifetime1 << 8, var2 << 8, -29543) >> 2) - 512;
+          this.field_f = (tia.atan2(var3Lifetime1 << 8, var2 << 8, -29543) >> 2) - 512;
         } else {
           if (var3Lifetime1 == 0) {
             if (this.field_d) {
@@ -110,7 +110,7 @@ final class cia {
             this.field_e = this.field_e + (var3Lifetime1 << 17);
             this.field_b = this.field_b + (var2 << 17);
             this.field_d = true;
-            this.field_f = (tia.a(var3Lifetime1 << 8, var2 << 8, -29543) >> 2) - 512;
+            this.field_f = (tia.atan2(var3Lifetime1 << 8, var2 << 8, -29543) >> 2) - 512;
           }
         }
         this.field_c.tick(0);

@@ -20,20 +20,20 @@ final class qfa {
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void openAccountRegistration(byte param0) {
         TeleportState.field_b = new AccountRegistrationPanel();
         if (param0 == 6) {
           um.field_l.transitionToContent(103, TeleportState.field_b);
           return;
         }
-        qfa.a((byte) -122);
+        qfa.openAccountRegistration((byte) -122);
         um.field_l.transitionToContent(103, TeleportState.field_b);
     }
 
-    final static void a(int param0, int param1) {
+    final static void applyMusicVolume(int param0, int param1) {
         mp.setMusicVolume(param1 - 20813, param0);
         if (param1 != 20815) {
-          qfa.a(61, 98);
+          qfa.applyMusicVolume(61, 98);
         }
     }
 

@@ -99,7 +99,7 @@ abstract class gn extends WidgetContainer {
           this.field_z = param0;
           this.field_B = false;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ abstract class gn extends WidgetContainer {
         }
         if (fta.field_a == null) {
           fta.field_a = new Sprite(this.field_m, this.field_p);
-          nm.a(fta.field_a, (byte) 118);
+          nm.setRasterTarget(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.a(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
@@ -127,7 +127,7 @@ abstract class gn extends WidgetContainer {
         }
         if (fta.field_a.field_m < this.field_m) {
           fta.field_a = new Sprite(this.field_m, this.field_p);
-          nm.a(fta.field_a, (byte) 118);
+          nm.setRasterTarget(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.a(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
@@ -136,7 +136,7 @@ abstract class gn extends WidgetContainer {
           return;
         }
         if (fta.field_a.field_q >= this.field_p) {
-          nm.a(fta.field_a, (byte) 118);
+          nm.setRasterTarget(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.a(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
@@ -145,7 +145,7 @@ abstract class gn extends WidgetContainer {
           return;
         }
         fta.field_a = new Sprite(this.field_m, this.field_p);
-        nm.a(fta.field_a, (byte) 118);
+        nm.setRasterTarget(fta.field_a, (byte) 118);
         SoftwareRasterizer.clear();
         this.a(0, (byte) -67, 0);
         super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);

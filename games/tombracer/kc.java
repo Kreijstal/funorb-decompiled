@@ -5,7 +5,7 @@ final class kc {
     static int field_b;
     static int field_a;
 
-    final static int a(boolean param0) {
+    final static int pollKeyEvents(boolean param0) {
         int var1_int = 0;
         int var3 = 0;
         int stackIn_8_0 = 0;
@@ -44,7 +44,7 @@ final class kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "kc.B(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "kc.B(" + param0 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class kc {
         try {
           stackIn_3_0 = !param2;
           var8 = (CharSequence) ((Object) param0);
-          if (!CurveOperator.a(stackIn_3_0, var8)) {
+          if (!CurveOperator.isValidAccountName(stackIn_3_0, var8)) {
             stackIn_6_0 = pk.field_v;
             return stackIn_6_0;
           }
@@ -78,7 +78,7 @@ final class kc {
           }
           var7 = LightSource.a(param3, 115);
           if (var7 == null) {
-            stackIn_12_0 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(119, ConstrainToCircleLocomotor.field_A, new String[]{param3});
+            stackIn_12_0 = LegacyOpenGlFlowingWaterEffect.formatText(119, ConstrainToCircleLocomotor.field_A, new String[]{param3});
             return stackIn_12_0;
           }
           var7.unlink(105);
@@ -109,7 +109,7 @@ final class kc {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

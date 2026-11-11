@@ -817,7 +817,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         try {
           this.a(125, this.getRenderX((byte) -122), this.getRenderZ((byte) -114), this.getRenderY((byte) 95));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hf.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hf.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -867,7 +867,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -893,7 +893,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           var3 = new AnimatedLight(tga.field_a, 0, 0, 0, 0, 0, 0, 0);
           this.field_l = new LightSource(var3);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -917,7 +917,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           var5 = (RoomLighting) (var4);
           var5.addLightSource((byte) 45, this.field_l);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "hf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "hf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

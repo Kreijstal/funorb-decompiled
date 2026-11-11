@@ -154,7 +154,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "np.S(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "np.S(" + param0 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "np.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "np.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class np extends ka {
         int var11Lifetime1;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          var6_int = cla.field_m[qp.c(param1, param4, 117)];
+          var6_int = cla.field_m[qp.scaleLightness(param1, param4, 117)];
           if (param3 != -1) {
             var7 = this.field_R.field_c.metadata((byte) -79, 65535 & param3);
             var8 = 255 & var7.field_c;
@@ -276,7 +276,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var6), "np.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.wrapException((Throwable) ((Object) var6), "np.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "np.FA(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "np.FA(" + param0 + ')');
         }
     }
 
@@ -382,7 +382,7 @@ final class np extends ka {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param9).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -1043,7 +1043,7 @@ final class np extends ka {
           } else {
             stackIn_335_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_330_0), ((StringBuilder) (Object) stackIn_334_1).append(stackIn_335_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_330_0), ((StringBuilder) (Object) stackIn_334_1).append(stackIn_335_2).append(')').toString());
         }
     }
 
@@ -1124,7 +1124,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3_ref), "np.D(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3_ref), "np.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1206,7 +1206,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var5), "np.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) var5), "np.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1287,7 +1287,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var4_ref), "np.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var4_ref), "np.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1426,7 +1426,7 @@ final class np extends ka {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2301,7 +2301,7 @@ final class np extends ka {
           } else {
             stackIn_440_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_435_0), ((StringBuilder) (Object) stackIn_439_1).append(stackIn_440_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_435_0), ((StringBuilder) (Object) stackIn_439_1).append(stackIn_440_2).append(')').toString());
         }
     }
 
@@ -2322,7 +2322,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "np.P(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "np.P(" + param0 + ')');
         }
     }
 
@@ -2403,7 +2403,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2_ref), "np.F(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2_ref), "np.F(" + param0 + ')');
         }
     }
 
@@ -2562,7 +2562,7 @@ final class np extends ka {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2596,7 +2596,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "np.NA()");
+          throw tba.wrapException((Throwable) ((Object) var1), "np.NA()");
         }
     }
 
@@ -3234,7 +3234,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "np.T(" + param0 + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "np.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3305,7 +3305,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "np.L(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "np.L(" + param0 + ')');
         }
     }
 
@@ -3344,7 +3344,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "np.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "np.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3957,11 +3957,11 @@ final class np extends ka {
           } else {
             stackIn_285_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_284_0), ((StringBuilder) (Object) stackIn_284_1).append(stackIn_285_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_284_0), ((StringBuilder) (Object) stackIn_284_1).append(stackIn_285_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_V = null;
           int var1_int = -40 % ((56 - param0) / 48);
@@ -3969,7 +3969,7 @@ final class np extends ka {
           field_m = null;
           field_x = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "np.M(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "np.M(" + param0 + ')');
         }
     }
 
@@ -4003,7 +4003,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) runtimeException), "np.wa()");
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "np.wa()");
         }
     }
 
@@ -4223,7 +4223,7 @@ final class np extends ka {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var2), "np.J(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var2), "np.J(" + param0 + ')');
         }
     }
 
@@ -4259,7 +4259,7 @@ final class np extends ka {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -5061,7 +5061,7 @@ final class np extends ka {
                 this.field_E = ListChannelsCommand.a(this.field_E, true, this.field_L);
                 this.field_Y = ListChannelsCommand.a(this.field_Y, true, this.field_L);
                 this.field_cb = ListChannelsCommand.a(this.field_cb, true, this.field_L);
-                this.field_O = FacePlayerLocomotor.a(this.field_O, this.field_L, 4096);
+                this.field_O = FacePlayerLocomotor.copyOf(this.field_O, this.field_L, 4096);
                 this.field_n = PlatformBehaviour.a(this.field_L, 50, this.field_n);
                 this.field_y = PlatformBehaviour.a(this.field_L, 50, this.field_y);
                 if (null != param1.field_l &&
@@ -5151,7 +5151,7 @@ final class np extends ka {
           } else {
             stackIn_396_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_391_0), ((StringBuilder) (Object) stackIn_395_1).append(stackIn_396_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_391_0), ((StringBuilder) (Object) stackIn_395_1).append(stackIn_396_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

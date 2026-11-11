@@ -7,7 +7,7 @@ final class ej {
     static String field_b;
     static uca[] field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -1) {
           field_d = null;
           field_a = null;
@@ -16,14 +16,14 @@ final class ej {
           return;
         }
         CharSequence var2 = (CharSequence) null;
-        ej.a(false, false, (CharSequence) null);
+        ej.isValidDisplayName(false, false, (CharSequence) null);
         field_d = null;
         field_a = null;
         field_b = null;
         field_c = null;
     }
 
-    final static boolean a(boolean param0, boolean param1, CharSequence param2) {
+    final static boolean isValidDisplayName(boolean param0, boolean param1, CharSequence param2) {
         int var6 = 0;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
@@ -44,7 +44,7 @@ final class ej {
           if (var3_int >= 1 &&
             var3_int <= 12) {
             if (param0) {
-              ej.a(-107);
+              ej.releaseStatics(-107);
             }
             var4 = jd.normalizeDisplayName(1, param2);
             if (var4 == null) {
@@ -86,7 +86,7 @@ final class ej {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 

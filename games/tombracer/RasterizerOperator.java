@@ -63,7 +63,7 @@ final class RasterizerOperator extends TextureOperator {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class RasterizerOperator extends TextureOperator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class RasterizerOperator extends TextureOperator {
         super(0, true);
     }
 
-    final static void d(byte param0) {
+    final static void clearStatics(byte param0) {
         if (param0 != -128) {
           RasterizerOperator.d(63);
         }
@@ -165,7 +165,7 @@ final class RasterizerOperator extends TextureOperator {
               }
             }
           } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "rda.C(" + param0 + ')');
+            throw tba.wrapException((Throwable) ((Object) runtimeException), "rda.C(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -174,7 +174,7 @@ final class RasterizerOperator extends TextureOperator {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_n = null;
         if (param0 > -82) {

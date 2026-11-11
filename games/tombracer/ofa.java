@@ -193,9 +193,9 @@ abstract class ofa extends gn {
             long[] var4 = (long[]) null;
             ofa.a((int[]) null, (long[]) null, -57);
           }
-          hk.a(-1 + param1.length, param1, 0, param0, -2646);
+          hk.sortByKeys(-1 + param1.length, param1, 0, param0, -2646);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ofa.QA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ofa.QA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

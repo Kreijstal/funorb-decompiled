@@ -121,7 +121,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static RasterBuffer a(int param0, int param1, java.awt.Component param2, int param3) {
+    final static RasterBuffer createRasterBuffer(int param0, int param1, java.awt.Component param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
@@ -172,7 +172,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -189,7 +189,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
             field_j = (SoundCache) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ns.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ns.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

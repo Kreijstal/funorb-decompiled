@@ -32,7 +32,7 @@ final class ResultsPhase extends MatchPhase {
           }
           var8.backpatchByteLength(-var7 + var8.position, (byte) 10);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "opa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "opa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class ResultsPhase extends MatchPhase {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var7), "opa.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) var7), "opa.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -455,9 +455,9 @@ final class ResultsPhase extends MatchPhase {
               var21.a(var19Lifetime1, var20, var41.width() >> 1, var41.height() >> 1);
             }
           } else if (!this.field_m &&
-            var7Lifetime2 >= var8Lifetime3 * 50 + nta.field_d &&
-            50 + (this.matchState.playerCount * 50 + nta.field_d) > var7Lifetime2) {
-            stackIn_126_0 = (25 + (nta.field_d + var8Lifetime3 * 50) > var7Lifetime2) ? 0 : 1;
+            var7Lifetime2 >= var8Lifetime3 * 50 + MonsterRemains.field_d &&
+            50 + (this.matchState.playerCount * 50 + MonsterRemains.field_d) > var7Lifetime2) {
+            stackIn_126_0 = (25 + (MonsterRemains.field_d + var8Lifetime3 * 50) > var7Lifetime2) ? 0 : 1;
             var11Lifetime1Lifetime1 = stackIn_126_0;
             var36 = Integer.toString(this.field_r[var8Lifetime3].field_r);
             stackIn_128_0 = new StringBuilder().append("$");
@@ -634,7 +634,7 @@ final class ResultsPhase extends MatchPhase {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -757,7 +757,7 @@ final class ResultsPhase extends MatchPhase {
             var17Lifetime2 += 50;
           }
           if (var9 > 0.0) {
-            nta.field_d = var17Lifetime2;
+            MonsterRemains.field_d = var17Lifetime2;
             var17Lifetime2 = 50 + var4_int * 50 + var17Lifetime2;
             og.field_m = var17Lifetime2;
             var17Lifetime2 += 100;
@@ -806,7 +806,7 @@ final class ResultsPhase extends MatchPhase {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 

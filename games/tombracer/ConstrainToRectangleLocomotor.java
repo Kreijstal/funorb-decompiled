@@ -13,7 +13,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         return 11;
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int hashCell(int param0, int param1, byte param2) {
         int var3 = -54 / ((-50 - param2) / 41);
         return param0 * -1918454973 + -669632447 * param1;
     }
@@ -232,7 +232,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3_ref), "ira.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3_ref), "ira.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 
@@ -411,7 +411,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           this.field_u = param1.readBits((byte) 44, 10) << 16;
           this.field_s = param1.readBits((byte) 44, 10) << 16;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ira.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ira.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -444,7 +444,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           }
           param0.writeBits((byte) 16, this.field_s >> 16, 10);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ira.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ira.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -456,7 +456,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           }
           super.attachToTrap(112, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ira.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ira.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

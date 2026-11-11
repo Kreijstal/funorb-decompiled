@@ -49,11 +49,11 @@ final class eca {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 30152) {
           field_b = (String[][]) null;
           field_c = null;
@@ -68,7 +68,7 @@ final class eca {
     final static Sprite[] a(int param0, int param1) {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
-        var3[param0] = LoadProfileCommand.a(param1, 124, 64);
+        var3[param0] = LoadProfileCommand.createSolidSprite(param1, 124, 64);
         return var2;
     }
 

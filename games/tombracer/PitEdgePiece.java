@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oia implements SelectivelyLitRenderable {
-    PitModel field_c;
+final class PitEdgePiece implements SelectivelyLitRenderable {
+    PitModel pit;
     int field_a;
     static String field_e;
     private static String[] field_d;
@@ -10,10 +10,10 @@ final class oia implements SelectivelyLitRenderable {
 
     public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
-          oia.releaseStatics(true);
-          return this.field_c.isRenderExpired((byte) 48);
+          PitEdgePiece.releaseStatics(true);
+          return this.pit.isRenderExpired((byte) 48);
         }
-        return this.field_c.isRenderExpired((byte) 48);
+        return this.pit.isRenderExpired((byte) 48);
     }
 
     public final boolean ignoresLight(boolean param0, LightSource param1) {
@@ -37,32 +37,32 @@ final class oia implements SelectivelyLitRenderable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     public final int getRenderY(byte param0) {
         if (param0 > 91) {
-          return this.field_c.getRenderY((byte) 103) + this.field_b;
+          return this.pit.getRenderY((byte) 103) + this.field_b;
         }
         this.field_a = -18;
-        return this.field_c.getRenderY((byte) 103) + this.field_b;
+        return this.pit.getRenderY((byte) 103) + this.field_b;
     }
 
     public final void render(int param0, Camera param1) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        TrapPart var3 = this.field_c.getPart(-100);
+        TrapPart var3 = this.pit.getPart(-100);
         if (var3 != null &&
           !var3.isEnabled(-101)) {
           return;
         }
         if (param0 < 103) {
           sda var8 = (sda) null;
-          oia.a(9, (sda) null, 48);
+          PitEdgePiece.a(9, (sda) null, 48);
         }
-        ka var4 = this.field_c.a((byte) 9, this);
+        ka var4 = this.pit.a((byte) 9, this);
         if (var4 == null) {
           return;
         }
@@ -72,7 +72,7 @@ final class oia implements SelectivelyLitRenderable {
           var7 = this.getRenderZ((byte) -114);
           gqa.a(0, -83584144, var6, var5, var4, var7);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "oia.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "oia.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class oia implements SelectivelyLitRenderable {
           param1.field_l = var6.readInt(115);
           var6.backpatchByteLength(-var4 + var6.position, (byte) -110);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "oia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "oia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -125,15 +125,15 @@ final class oia implements SelectivelyLitRenderable {
 
     public final int getRenderZ(byte param0) {
         if (param0 < -86) {
-          return this.field_c.getRenderZ((byte) -119) - 17825792;
+          return this.pit.getRenderZ((byte) -119) - 17825792;
         }
         this.field_a = 113;
-        return this.field_c.getRenderZ((byte) -119) - 17825792;
+        return this.pit.getRenderZ((byte) -119) - 17825792;
     }
 
     public final int getRenderX(byte param0) {
         int var2 = 35 / ((param0 + 23) / 53);
-        return this.field_c.getRenderX((byte) 103) + this.field_a;
+        return this.pit.getRenderX((byte) 103) + this.field_a;
     }
 
     static {

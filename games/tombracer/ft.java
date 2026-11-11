@@ -6,16 +6,16 @@ final class ft {
     int field_b;
     static boolean field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           int var1_int = 62 % ((param0 - 12) / 39);
           field_c = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ft.D(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ft.D(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openServerList(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           if (param0 < 75) {
@@ -42,7 +42,7 @@ final class ft {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "ft.toString()");
+          throw tba.wrapException((Throwable) ((Object) var1), "ft.toString()");
         }
     }
 
@@ -254,7 +254,7 @@ final class ft {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class ft {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class ft {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ft.<init>(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ft.<init>(" + param0 + ')');
         }
     }
 

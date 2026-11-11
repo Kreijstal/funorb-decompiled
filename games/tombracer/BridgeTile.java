@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class faa implements Renderable {
+final class BridgeTile implements Renderable {
     static String field_g;
     int field_e;
     int field_b;
-    BridgeModel field_c;
+    BridgeModel bridge;
     int field_d;
     ModelAnimator field_f;
     int field_a;
@@ -31,7 +31,7 @@ final class faa implements Renderable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 67) {
-            faa.a(true);
+            BridgeTile.releaseStatics(true);
           }
           var5 = (CharSequence) ((Object) param0);
           var3 = jd.normalizeDisplayName(1, var5);
@@ -65,7 +65,7 @@ final class faa implements Renderable {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -75,15 +75,15 @@ final class faa implements Renderable {
         if (this.field_b == 0) {
           var3 = 0;
         } else {
-          var3 = this.field_c.o((byte) 122);
+          var3 = this.bridge.o((byte) 122);
         }
-        return var3 + (this.field_c.getRenderX((byte) -86) + this.field_d);
+        return var3 + (this.bridge.getRenderX((byte) -86) + this.field_d);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           String var2 = (String) null;
-          faa.accountNamesMatch((String) null, -123, (String) null);
+          BridgeTile.accountNamesMatch((String) null, -123, (String) null);
           field_g = null;
           return;
         }
@@ -95,10 +95,10 @@ final class faa implements Renderable {
         if (this.field_b == 0) {
           var2 = 0;
         } else {
-          var2 = this.field_c.p((byte) 68);
+          var2 = this.bridge.p((byte) 68);
         }
         if (param0 >= 91) {
-          return this.field_c.getRenderY((byte) 124) + this.field_a + var2;
+          return this.bridge.getRenderY((byte) 124) + this.field_a + var2;
         }
         return 78;
     }
@@ -106,21 +106,21 @@ final class faa implements Renderable {
     public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
           field_g = (String) null;
-          return this.field_c.isRenderExpired((byte) 48);
+          return this.bridge.isRenderExpired((byte) 48);
         }
-        return this.field_c.isRenderExpired((byte) 48);
+        return this.bridge.isRenderExpired((byte) 48);
     }
 
     public final int getRenderZ(byte param0) {
         if (param0 > -86) {
-          faa.a(true);
+          BridgeTile.releaseStatics(true);
           if (this.field_b != 0) {
-            return this.field_c.getRenderZ((byte) -104);
+            return this.bridge.getRenderZ((byte) -104);
           }
           return 0;
         }
         if (this.field_b != 0) {
-          return this.field_c.getRenderZ((byte) -104);
+          return this.bridge.getRenderZ((byte) -104);
         }
         return 0;
     }
@@ -129,7 +129,7 @@ final class faa implements Renderable {
         if (param0 <= 103) {
           this.field_f = (ModelAnimator) null;
         }
-        TrapPart var3 = this.field_c.getPart(-98);
+        TrapPart var3 = this.bridge.getPart(-98);
         if (var3 != null &&
           !var3.isEnabled(-127)) {
           return;
@@ -140,7 +140,7 @@ final class faa implements Renderable {
         try {
           gqa.a(this.field_e, -83584144, this.getRenderY((byte) 105), this.getRenderX((byte) -102), this.field_f.getModel((byte) 74), this.getRenderZ((byte) -98));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

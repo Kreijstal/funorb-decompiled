@@ -26,7 +26,7 @@ final class RoomHeader {
         field_e = null;
     }
 
-    final static BinaryBitmapFont a(byte[] param0, byte param1) {
+    final static BinaryBitmapFont decodeBinaryFont(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         BinaryBitmapFont var3 = null;
@@ -41,7 +41,7 @@ final class RoomHeader {
           }
           var2_int = -71 / ((5 - param1) / 35);
           var3 = new BinaryBitmapFont(param0, LoadLevelCommand.field_p, pg.field_C, mq.field_b, ImageProducerCanvasImageBuffer.field_m, ck.field_c);
-          MazeGenerator.a((byte) 123);
+          MazeGenerator.releaseStatics((byte) 123);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ final class RoomHeader {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class RoomHeader {
           return;
         }
         byte[] var2 = (byte[]) null;
-        RoomHeader.a((byte[]) null, (byte) 68);
+        RoomHeader.decodeBinaryFont((byte[]) null, (byte) 68);
         CharSequence var3 = (CharSequence) ((Object) MenuEntry.field_k);
         tia.field_b = jd.normalizeDisplayName(1, var3);
     }
@@ -82,7 +82,7 @@ final class RoomHeader {
           param0.writeBits((byte) -128, this.field_b, 8);
           param0.writeBits((byte) 64, this.field_f, 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "fq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "fq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class RoomHeader {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

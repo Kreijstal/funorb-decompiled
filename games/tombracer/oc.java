@@ -219,7 +219,7 @@ final class oc {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -751,7 +751,7 @@ final class oc {
           } else {
             stackIn_188_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_187_0), ((StringBuilder) (Object) stackIn_187_1).append(stackIn_188_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_187_0), ((StringBuilder) (Object) stackIn_187_1).append(stackIn_188_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1154,7 +1154,7 @@ final class oc {
           } else {
             stackIn_116_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(')').toString());
         }
     }
 
@@ -1188,7 +1188,7 @@ final class oc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1514,7 +1514,7 @@ final class oc {
           } else {
             stackIn_117_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_116_0), ((StringBuilder) (Object) stackIn_116_1).append(stackIn_117_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_116_0), ((StringBuilder) (Object) stackIn_116_1).append(stackIn_117_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -48,7 +48,7 @@ final class ContextMenu extends UiComponent {
           return;
         }
         var7Lifetime1 = this.field_tb + (this.field_zb * this.field_Gb + this.field_tb);
-        var8Lifetime1 = bt.a((byte) -8, var6, param3, param4);
+        var8Lifetime1 = PitSnakeModel.a((byte) -8, var6, param3, param4);
         var9 = hsa.a(param1, var7Lifetime1, param0, (byte) -98);
         this.setBounds(var6, var7Lifetime1, -23776, var9, var8Lifetime1);
         for (var10 = 0; this.field_zb > var10; var10++) {
@@ -57,7 +57,7 @@ final class ContextMenu extends UiComponent {
         return;
     }
 
-    final boolean f(int param0) {
+    final boolean handleEscape(int param0) {
         if (this.field_xb != param0) {
           return false;
         }
@@ -83,7 +83,7 @@ final class ContextMenu extends UiComponent {
           this.field_Gb = param8;
           this.field_wb = param5;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ola.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ola.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class ContextMenu extends UiComponent {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -39) {
           ContextMenu.f((byte) -65);
         }
@@ -152,7 +152,7 @@ final class ContextMenu extends UiComponent {
           this.field_Fb[this.field_zb] = param1;
           this.field_zb = this.field_zb + 1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ola.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ola.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class ContextMenu extends UiComponent {
           this.field_Fb[this.field_zb] = param1;
           this.field_zb = this.field_zb + 1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ola.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ola.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class ContextMenu extends UiComponent {
             field_Eb = -36;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ola.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ola.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

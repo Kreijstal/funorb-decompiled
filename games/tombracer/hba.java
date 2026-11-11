@@ -23,18 +23,18 @@ final class hba {
           var5.a(-7, param1);
           var5.a(param3, -71);
           var5.b(40, param0);
-          var5.a(PlayerViewport.field_b, PlayTrackCommand.field_o, nta.field_h, OpenGlToolkit.field_Z, -113);
+          var5.a(PlayerViewport.field_b, PlayTrackCommand.field_o, MonsterRemains.field_h, OpenGlToolkit.field_Z, -113);
           var5.a(MidiVoiceMixer.field_j, nb.field_c, false, ClientMemoryVertexArray.field_f, CommonChooseReward.field_b);
-          hw.a((byte) -111, 1, 74, var5);
+          hw.sendGamePacket((byte) -111, 1, 74, var5);
           return;
         }
         field_a = (float[]) null;
         var5.a(-7, param1);
         var5.a(param3, -71);
         var5.b(40, param0);
-        var5.a(PlayerViewport.field_b, PlayTrackCommand.field_o, nta.field_h, OpenGlToolkit.field_Z, -113);
+        var5.a(PlayerViewport.field_b, PlayTrackCommand.field_o, MonsterRemains.field_h, OpenGlToolkit.field_Z, -113);
         var5.a(MidiVoiceMixer.field_j, nb.field_c, false, ClientMemoryVertexArray.field_f, CommonChooseReward.field_b);
-        hw.a((byte) -111, 1, 74, var5);
+        hw.sendGamePacket((byte) -111, 1, 74, var5);
     }
 
     static {

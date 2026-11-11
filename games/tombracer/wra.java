@@ -28,7 +28,7 @@ final class wra extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "wra.A(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "wra.A(" + param0 + ')');
         }
     }
 

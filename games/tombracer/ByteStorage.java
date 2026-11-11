@@ -19,7 +19,7 @@ abstract class ByteStorage {
         field_b = null;
     }
 
-    final static String a(int param0, int param1) {
+    final static String formatSignedOffset(int param0, int param1) {
         if (param1 == -1) {
           return " (" + (param0 <= 0 ? "+" : "-") + Math.abs(param0) + ")";
         }

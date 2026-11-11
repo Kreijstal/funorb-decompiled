@@ -35,7 +35,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.field_r = new NodeHashTable(4);
         this.field_h = false;
         try {
-          if (!StringCursor.a("sw3d", 480)) {
+          if (!StringCursor.loadNativeLibrary("sw3d", 480)) {
             throw new RuntimeException("");
           }
           ho.b(false);

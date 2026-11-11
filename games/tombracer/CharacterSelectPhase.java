@@ -3,7 +3,7 @@
  */
 final class CharacterSelectPhase extends MatchPhase {
     static ToolkitSprite field_r;
-    private daa field_m;
+    private CharacterSelection selection;
     private IntrusiveDeque field_n;
     static String field_w;
     static String field_o;
@@ -16,7 +16,7 @@ final class CharacterSelectPhase extends MatchPhase {
     private int field_v;
     static int field_x;
 
-    private final boolean f(int param0) {
+    private final boolean updateHover(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != 0) {
           return true;
@@ -36,15 +36,15 @@ final class CharacterSelectPhase extends MatchPhase {
     final boolean handleKey(char param0, int param1, int param2) {
         boolean discarded$1 = false;
         if (0 != this.field_p &&
-          this.i(param1 ^ -26)) {
+          this.canChoose(param1 ^ -26)) {
           if (param1 != 25) {
-            discarded$1 = this.f(94);
+            discarded$1 = this.updateHover(94);
           }
           if (84 != param2 &&
             param2 != 83) {
             return false;
           }
-          this.a(true, this.field_v);
+          this.chooseLocalCharacter(true, this.field_v);
           return true;
         }
         return false;
@@ -68,7 +68,7 @@ final class CharacterSelectPhase extends MatchPhase {
         Room.field_j.a(0, 0);
         var3 = aaa.a(false) / 2;
         var4 = SwitchLinkList.b(0) / 2;
-        stackIn_3_0 = (this.i(-1)) ? 0 : 1;
+        stackIn_3_0 = (this.canChoose(-1)) ? 0 : 1;
         var5 = stackIn_3_0;
         ik.field_h.a(0, 0);
         SocketConnector.a(gta.field_a.toUpperCase(), 1, SingleChildWidget.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
@@ -131,12 +131,12 @@ final class CharacterSelectPhase extends MatchPhase {
           }
           return;
         }
-        this.field_m.a(32221);
+        this.selection.unmuteSounds(32221);
         if (param1 &&
-          this.i(param0 - 81)) {
-          this.g(-13);
+          this.canChoose(param0 - 81)) {
+          this.handleInput(-13);
         }
-        if (this.field_m.a(false)) {
+        if (this.selection.isComplete(false)) {
           this.field_u = 100;
         }
         if (param0 != 80) {
@@ -145,8 +145,8 @@ final class CharacterSelectPhase extends MatchPhase {
         this.field_p = this.field_p + 1;
     }
 
-    private final void a(boolean param0, int param1) {
-        if (!this.i(-1)) {
+    private final void chooseLocalCharacter(boolean param0, int param1) {
+        if (!this.canChoose(-1)) {
           return;
         }
         if (!param0) {
@@ -155,7 +155,7 @@ final class CharacterSelectPhase extends MatchPhase {
         if (null != this.protocol) {
           this.protocol.sendCharacterChoice(param1, 73);
         } else {
-          this.a(this.screen.localPlayerIndex, 0, param1);
+          this.onCharacterChosen(this.screen.localPlayerIndex, 0, param1);
         }
     }
 
@@ -181,8 +181,8 @@ final class CharacterSelectPhase extends MatchPhase {
         this.field_v = 0;
         this.field_u = -1;
         try {
-          this.field_m = new daa(this.matchState);
-          this.field_m.field_b = new SoundEventPlayer();
+          this.selection = new CharacterSelection(this.matchState);
+          this.selection.field_b = new SoundEventPlayer();
           this.field_n = new IntrusiveDeque();
           for (var3_int = 0; var3_int < 13; var3_int++) {
             var4 = aaa.a(false);
@@ -224,31 +224,31 @@ final class CharacterSelectPhase extends MatchPhase {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2) {
-        this.field_m.a((byte) -69, param2, param0);
+    final void onCharacterChosen(int param0, int param1, int param2) {
+        this.selection.chooseCharacter((byte) -69, param2, param0);
         this.field_t[param0] = new rp(param2);
         ModelAnimator var4 = this.field_t[param0].field_j;
         var4.a(param2, false, param1, 5, true);
         int var5 = var4.c((byte) 114);
         var4.queueAnimation(param1 + 107, var5, param2, 0, 0);
-        FloatingMessage var6 = RewardChoicePhase.createTextMessage(param1 ^ -41, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, SpriteSampleOperator.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
+        FloatingMessage var6 = RewardChoicePhase.createTextMessage(param1 ^ -41, LegacyOpenGlFlowingWaterEffect.formatText(82, SpriteSampleOperator.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
         iqa.field_c.addMessageNow(0, var6);
     }
 
-    private final boolean i(int param0) {
+    private final boolean canChoose(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -1) {
           this.field_p = -18;
         }
-        stackIn_6_0 = (!this.screen.isSpectating((byte) 111)) && (this.field_m.a(0, this.screen.localPlayerIndex) == -1);
+        stackIn_6_0 = (!this.screen.isSpectating((byte) 111)) && (this.selection.getCharacter(0, this.screen.localPlayerIndex) == -1);
         return stackIn_6_0;
     }
 
-    private final void g(int param0) {
+    private final void handleInput(int param0) {
         int stackIn_26_1 = 0;
         int stackIn_28_2 = 0;
         int var3;
@@ -257,9 +257,9 @@ final class CharacterSelectPhase extends MatchPhase {
           return;
         }
         if (ProceduralTextureProvider.field_c &&
-          this.f(0) &&
+          this.updateHover(0) &&
           PlayerModel.field_b == 1) {
-          this.a(true, this.field_v);
+          this.chooseLocalCharacter(true, this.field_v);
         }
         if (this.screen.isActionJustPressed(0, 2)) {
           this.field_v = this.field_v - 7;
@@ -308,7 +308,7 @@ final class CharacterSelectPhase extends MatchPhase {
           boolean decompiledFrameRemainder0 = true;
           if (!di.field_g[param0] && (!di.field_f[param0] &&
             ReportAbuseDialog.field_ub <= 0 ||
-            !mq.field_e.b((byte) 4, param0)) && !SimpleBlockBehaviour.c(0)) {
+            !mq.field_e.isCharacterUnlocked((byte) 4, param0)) && !SimpleBlockBehaviour.c(0)) {
             stackIn_16_0 = false;
             decompiledFrameRemainder0 = false;
           }

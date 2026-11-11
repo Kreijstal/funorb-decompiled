@@ -203,7 +203,7 @@ final class dh {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class dh {
           if (param9 != 29870) {
             field_e = (UiComponent) null;
           }
-          stackIn_3_0 = param0.a((aa) null, param11, param3, 0, param7, jg.a(param1, (byte) -90, param8), (int[]) null, param2, jg.a(param1, (byte) -45, param6), param12, (byte) -118, param5, 0, (ToolkitSprite[]) null, param4, param10);
+          stackIn_3_0 = param0.a((aa) null, param11, param3, 0, param7, jg.withAlpha(param1, (byte) -90, param8), (int[]) null, param2, jg.withAlpha(param1, (byte) -45, param6), param12, (byte) -118, param5, 0, (ToolkitSprite[]) null, param4, param10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -245,7 +245,7 @@ final class dh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

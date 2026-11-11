@@ -24,7 +24,7 @@ final class MatchProtocol {
           this.decodePacket(var4, 112, param1);
           var4.apply(param2, true, this);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,14 +39,14 @@ final class MatchProtocol {
           this.decodePacket(var4, 124, param1);
           var4.apply(param0, 0, this);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void sendCharacterChoice(int param0, int param1) {
         C2SChooseCharacterPacket var3 = new C2SChooseCharacterPacket();
         var3.setCharacter(param0, (byte) -119);
-        hw.a((byte) -111, 1, param1, var3);
+        hw.sendGamePacket((byte) -111, 1, param1, var3);
     }
 
     final void reset(boolean param0) {
@@ -74,7 +74,7 @@ final class MatchProtocol {
           var4.a(4545315, this, param2);
           int var5 = -6 / ((param0 + 78) / 34);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class MatchProtocol {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -154,14 +154,14 @@ final class MatchProtocol {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final void sendRewardChoice(int param0, int param1) {
         C2SChooseRewardPacket var3 = new C2SChooseRewardPacket();
         var3.setChoice(param1 + 44, param0);
-        hw.a((byte) -111, param1, 72, var3);
+        hw.sendGamePacket((byte) -111, param1, 72, var3);
     }
 
     final void pumpActions(MatchScreen param0, int param1) {
@@ -254,7 +254,7 @@ final class MatchProtocol {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class MatchProtocol {
           this.decodePacket(var4, param0 - 82, param2);
           var4.apply((byte) -78, param1, this);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class MatchProtocol {
           int var4_int = -28 / ((param1 - 61) / 43);
           param0.decode(param2, (byte) -19);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class MatchProtocol {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ final class MatchProtocol {
           this.decodePacket(var4, -53, param1);
           var4.apply(this, 0, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class MatchProtocol {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ final class MatchProtocol {
           }
           int var3_int = 110 % ((param1 - 27) / 62);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -447,7 +447,7 @@ final class MatchProtocol {
           this.decodePacket(var4, 117, param1);
           var4.apply(param0, this, (byte) 119);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.CA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.CA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -461,7 +461,7 @@ final class MatchProtocol {
           this.decodePacket(var4, param0 - 129, param2);
           var4.apply(2, this, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -521,7 +521,7 @@ final class MatchProtocol {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -540,7 +540,7 @@ final class MatchProtocol {
           this.decodePacket(var4, -4, param1);
           param0.matchState.deliverPendingEvent((byte) 121, var4.getEvent((byte) 118));
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "v.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -575,9 +575,9 @@ final class MatchProtocol {
           var6 = CauldronComponent.field_J[param3];
         }
         if (param4 > 0) {
-          return um.a(param2, param4, var6, -6455, param5);
+          return um.playSampleDelayed(param2, param4, var6, -6455, param5);
         }
-        return ql.a(param0, var6, (byte) 108, param5, param2);
+        return ql.playSample(param0, var6, (byte) 108, param5, param2);
     }
 
     final void a(int param0) {
@@ -623,7 +623,7 @@ final class MatchProtocol {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -642,7 +642,7 @@ final class MatchProtocol {
         var6.setRoom(8469, param3);
         var6.setRound(param1, (byte) -113);
         this.unacknowledged.addLast((byte) -104, var6);
-        hw.a((byte) -111, 0, 71, var6);
+        hw.sendGamePacket((byte) -111, 0, 71, var6);
     }
 
     final void a(byte param0) {

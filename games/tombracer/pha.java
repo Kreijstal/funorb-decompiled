@@ -24,7 +24,7 @@ final class pha extends UiComponent {
     int field_Lb;
     int field_Jb;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Bb = null;
         field_Ib = null;
         if (param0 == -68) {
@@ -75,7 +75,7 @@ final class pha extends UiComponent {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class pha extends UiComponent {
           var6 = (CharSequence) ((Object) this.field_vb);
           jd.normalizeDisplayName(1, var6);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -105,13 +105,13 @@ final class pha extends UiComponent {
         try {
           this.field_vb = param2;
           if (param1 <= 23) {
-            pha.d((byte) 68);
+            pha.releaseStatics((byte) 68);
           }
           this.field_wb = param0;
           var5 = (CharSequence) ((Object) this.field_vb);
           jd.normalizeDisplayName(1, var5);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "pha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "pha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class pha extends UiComponent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -8,7 +8,7 @@ final class waa {
     private int field_a;
     static String field_e;
 
-    final static int a(ft param0, int param1) {
+    final static int toGlFormat(ft param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
@@ -59,7 +59,7 @@ final class waa {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class waa {
           return;
         }
         ft var3 = (ft) null;
-        waa.a((ft) null, 19);
+        waa.toGlFormat((ft) null, 19);
         this.field_d.tick(0);
     }
 

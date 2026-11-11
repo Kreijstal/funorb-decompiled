@@ -101,7 +101,7 @@ final class VerticalScrollbar extends UiComponent {
         var19.field_t = var8;
     }
 
-    final static boolean isRetryAllowed(int param0) {
+    final static boolean isChatSendAllowed(int param0) {
         long var1;
         long var3;
         int var5;
@@ -139,7 +139,7 @@ final class VerticalScrollbar extends UiComponent {
 
     final boolean isThumbHeld(int param0) {
         if (param0 != -1) {
-          VerticalScrollbar.isRetryAllowed(3);
+          VerticalScrollbar.isChatSendAllowed(3);
         }
         return this.thumb.field_E != 0 ? true : false;
     }
@@ -213,7 +213,7 @@ final class VerticalScrollbar extends UiComponent {
           }
         }
         if (param0 >= -75) {
-          VerticalScrollbar.isRetryAllowed(98);
+          VerticalScrollbar.isChatSendAllowed(98);
           return false;
         }
         return false;
@@ -297,7 +297,7 @@ final class VerticalScrollbar extends UiComponent {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -395,7 +395,7 @@ final class VerticalScrollbar extends UiComponent {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

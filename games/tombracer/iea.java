@@ -29,7 +29,7 @@ final class iea {
           this.field_a = param5;
           this.field_b = param4;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "iea.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "iea.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class iea {
               }
             }
             if (var6.field_y != 0) {
-              DateInputWidget.a(OpenGlSprite.field_j.field_vb, -1, var6.field_yb, 0L, param1 - 11579, (int[]) null, var6, -1, var6.field_tb);
+              DateInputWidget.openPlayerContextMenu(OpenGlSprite.field_j.field_vb, -1, var6.field_yb, 0L, param1 - 11579, (int[]) null, var6, -1, var6.field_tb);
               var16 = hka.field_b;
               var13_ref_String = uma.field_a;
               var16.field_f.addItem((byte) -100, 7, var13_ref_String);
@@ -163,20 +163,20 @@ final class iea {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "iea.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "iea.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(boolean param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         try {
           mp.a(joa.field_d, tka.field_q, param0, una.field_j, DateFieldsWidget.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, HardwareSceneLight.field_o, NodeHashTable.field_g, dn.field_a, LegacyOpenGlRidgedWaterEffect.field_e);
-          ColouriseOperator.field_m = BoulderComponent.a(param1, "lobby", 5, "chatfilter");
+          ColouriseOperator.field_m = BoulderComponent.loadSpritesByName(param1, "lobby", 5, "chatfilter");
           StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
           StripedMazeGenerator.field_c[param2] = OpenGlTexture2D.field_m;
           StripedMazeGenerator.field_c[1] = MonochromeFillOperator.field_o;
           WaypointPath.a(0, param3, PenaltyNotice.field_f);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "iea.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "iea.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class iea {
           var17 = var10 * ((var6_int << 1) + 3);
           var18 = var11 * (-3 + (var7 << 1));
           var19 = var16 * (var6_int + 1);
-          nra.a((byte) -55, param2, param0 + param1, vaa.field_a[param3], param0 - param1);
+          nra.fillRange((byte) -55, param2, param0 + param1, vaa.field_a[param3], param0 - param1);
           if (param4 <= 50) {
             field_e = (String) null;
           }
@@ -250,14 +250,14 @@ final class iea {
             var22 = var7 + param3;
             var23 = param0 + var6_int;
             var24 = param0 - var6_int;
-            nra.a((byte) -55, param2, var23, vaa.field_a[var21], var24);
-            nra.a((byte) -55, param2, var23, vaa.field_a[var22], var24);
+            nra.fillRange((byte) -55, param2, var23, vaa.field_a[var21], var24);
+            nra.fillRange((byte) -55, param2, var23, vaa.field_a[var22], var24);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var6), "iea.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.wrapException((Throwable) ((Object) var6), "iea.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

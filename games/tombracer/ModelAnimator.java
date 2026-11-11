@@ -32,16 +32,16 @@ final class ModelAnimator {
           this.field_e = param4;
           if (null != this.player) {
             this.player.reset((byte) -105);
-            this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           if (this.field_l <= 0) {
             this.player = new SequencePlayer();
-            this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           this.player = new SequencePlayer(this.field_l);
-          this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+          this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
           return;
         }
         if (param4 != this.field_e) {
@@ -50,16 +50,16 @@ final class ModelAnimator {
           this.field_e = param4;
           if (null != this.player) {
             this.player.reset((byte) -105);
-            this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           if (this.field_l <= 0) {
             this.player = new SequencePlayer();
-            this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           this.player = new SequencePlayer(this.field_l);
-          this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+          this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
           return;
         }
         if (param2 != this.field_a) {
@@ -68,16 +68,16 @@ final class ModelAnimator {
           this.field_e = param4;
           if (null != this.player) {
             this.player.reset((byte) -105);
-            this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           if (this.field_l <= 0) {
             this.player = new SequencePlayer();
-            this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+            this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
             return;
           }
           this.player = new SequencePlayer(this.field_l);
-          this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+          this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
           return;
         }
         if (param0 == this.field_j) {
@@ -88,16 +88,16 @@ final class ModelAnimator {
         this.field_e = param4;
         if (null != this.player) {
           this.player.reset((byte) -105);
-          this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+          this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
           return;
         }
         if (this.field_l > 0) {
           this.player = new SequencePlayer(this.field_l);
-          this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+          this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
           return;
         }
         this.player = new SequencePlayer();
-        this.player.play(LegacyOpenGlUnlitEffect.a(param1 ^ -2, param0, param2, param4), -30988);
+        this.player.play(LegacyOpenGlUnlitEffect.getAnimationSequence(param1 ^ -2, param0, param2, param4), -30988);
     }
 
     final void tick(int param0) {
@@ -126,11 +126,11 @@ final class ModelAnimator {
 
     final void queueAnimation(int param0, int param1, int param2, int param3, int param4) {
         if (param0 >= 41) {
-          this.player.queue(LegacyOpenGlUnlitEffect.a(-2, param3, param2, param4), param1, 8198);
+          this.player.queue(LegacyOpenGlUnlitEffect.getAnimationSequence(-2, param3, param2, param4), param1, 8198);
           return;
         }
         this.queueAnimation(57, -19, 81, -80, -19);
-        this.player.queue(LegacyOpenGlUnlitEffect.a(-2, param3, param2, param4), param1, 8198);
+        this.player.queue(LegacyOpenGlUnlitEffect.getAnimationSequence(-2, param3, param2, param4), param1, 8198);
     }
 
     final boolean isFinished(int param0) {
@@ -257,13 +257,13 @@ final class ModelAnimator {
         AnimationSequence var5Lifetime1;
         if (param1 != 66) {
           field_g = (UiComponent) null;
-          var5 = LegacyOpenGlUnlitEffect.a(-2, param3, param0, param2);
+          var5 = LegacyOpenGlUnlitEffect.getAnimationSequence(-2, param3, param0, param2);
           if (var5 == null) {
             return 0;
           }
           return var5.a((byte) 117, true);
         }
-        var5Lifetime1 = LegacyOpenGlUnlitEffect.a(-2, param3, param0, param2);
+        var5Lifetime1 = LegacyOpenGlUnlitEffect.getAnimationSequence(-2, param3, param0, param2);
         if (var5Lifetime1 == null) {
           return 0;
         }

@@ -46,7 +46,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           stackIn_68_2 = (param0) && (!param2) && (LegacyOpenGlBloomEffect.field_o);
           ((UiComponent) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
         } else {
-          PerlinNoise2D.field_t.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
+          PerlinNoise2D.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
           stackIn_7_0 = nra.field_a;
           stackIn_7_1 = 65;
           stackIn_8_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);
@@ -180,7 +180,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param10).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         return true;
     }
 
-    final static void a(String param0, java.applet.Applet param1, byte param2) {
+    final static void openRelativeUrl(String param0, java.applet.Applet param1, byte param2) {
         try {
           java.net.URL var3 = null;
           int var3_int = 0;
@@ -282,7 +282,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -325,7 +325,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -39,7 +39,7 @@ final class ssa {
             }
             var3 = "";
             if (param2 != null) {
-              var3 = AllPlatformsMazeComponent.a(107, param2);
+              var3 = AllPlatformsMazeComponent.describeException(107, param2);
             }
             if (param0 != null) {
               if (param2 != null) {
@@ -47,7 +47,7 @@ final class ssa {
               }
               var3 = var3 + param0;
             }
-            upa.a(var3, (byte) -24);
+            upa.printError(var3, (byte) -24);
             var7 = qf.replaceAllOccurrences(966747152, "%3a", ":", var3);
             var8 = qf.replaceAllOccurrences(966747152, "%40", "@", var7);
             var9 = qf.replaceAllOccurrences(966747152, "%26", "&", var8);
@@ -259,7 +259,7 @@ final class ssa {
             throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: data overrun: start=" + var5 + " length=" + var3_int + " end=" + var6 + " overranto=" + param0.position));
           }
           if (param2) {
-            System.out.println("Loading funorbprofile local: achievements=" + wg.a(0, var28));
+            System.out.println("Loading funorbprofile local: achievements=" + wg.arrayToString(0, var28));
           }
           stackIn_47_0 = var10;
           return (byte[]) (stackIn_47_0);
@@ -273,7 +273,7 @@ final class ssa {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class ssa {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ssa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ssa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -315,7 +315,7 @@ final class ssa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1_ref), "ssa.E(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1_ref), "ssa.E(" + param0 + ')');
         }
     }
 

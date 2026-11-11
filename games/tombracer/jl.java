@@ -5,13 +5,13 @@ final class jl {
     static String field_a;
     private static String[] field_b;
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] createPitchYawRotation(int param0, int param1, int param2) {
         int var9 = 0;
         int var10 = 0;
-        int var3 = cr.a(true, param1);
-        int var4 = pla.b(61, param1);
-        int var5 = cr.a(true, param0);
-        int var6 = pla.b(52, param0);
+        int var3 = cr.sin8192(true, param1);
+        int var4 = pla.cos8192(61, param1);
+        int var5 = cr.sin8192(true, param0);
+        int var6 = pla.cos8192(52, param0);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         if (param2 == 0) {
@@ -35,7 +35,7 @@ final class jl {
 
     final static void a(byte param0, boolean param1) {
         if (param0 > -46) {
-          jl.a(-79, 78, -90);
+          jl.createPitchYawRotation(-79, 78, -90);
           if (bl.field_a != null) {
             bl.field_a.b(40, param1);
             return;
@@ -48,7 +48,7 @@ final class jl {
         bl.field_a.b(40, param1);
     }
 
-    final static Weapon a(Room param0, boolean param1, BitPacketBuffer param2) {
+    final static Weapon decodeWeapon(Room param0, boolean param1, BitPacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         BitPacketBuffer var4 = null;
@@ -62,7 +62,7 @@ final class jl {
         try {
           if (!param1) {
             var4 = (BitPacketBuffer) null;
-            jl.a((Room) null, false, (BitPacketBuffer) null);
+            jl.decodeWeapon((Room) null, false, (BitPacketBuffer) null);
           }
           var3_int = param2.readBits((byte) 44, 5);
           stackIn_3_0 = TextureOperator.a(var3_int, -1);
@@ -83,7 +83,7 @@ final class jl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

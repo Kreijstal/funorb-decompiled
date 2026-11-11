@@ -97,7 +97,7 @@ final class BrickOperator extends TextureOperator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class BrickOperator extends TextureOperator {
         for (var5 = 0; var5 < this.field_n; var5++) {
           if (var5 > 0) {
             var6 = this.field_E;
-            var7 = (BufferedSocket.a(4096, var10, -100) - 2048) * this.field_C >> 12;
+            var7 = (BufferedSocket.randomBelow(4096, var10, -100) - 2048) * this.field_C >> 12;
             var6 = var6 + (var4 * var7 >> 12);
             this.field_u[var5] = var6 + this.field_u[var5 - 1];
           }
@@ -146,11 +146,11 @@ final class BrickOperator extends TextureOperator {
           for (var6Lifetime1 = 0; this.field_o > var6Lifetime1; var6Lifetime1++) {
             if (var6Lifetime1 > 0) {
               var7Lifetime1 = this.field_r;
-              var8 = (-2048 + BufferedSocket.a(4096, var10, -93)) * this.field_D >> 12;
+              var8 = (-2048 + BufferedSocket.randomBelow(4096, var10, -93)) * this.field_D >> 12;
               var7Lifetime1 = var7Lifetime1 + (var3 * var8 >> 12);
               this.field_y[var5][var6Lifetime1] = this.field_y[var5][var6Lifetime1 - 1] + var7Lifetime1;
             }
-            this.field_B[var5][var6Lifetime1] = this.field_x > 0 ? -BufferedSocket.a(this.field_x, var10, -120) + 4096 : 4096;
+            this.field_B[var5][var6Lifetime1] = this.field_x > 0 ? -BufferedSocket.randomBelow(this.field_x, var10, -120) + 4096 : 4096;
           }
           this.field_y[var5][this.field_o] = 4096;
         }
@@ -165,7 +165,7 @@ final class BrickOperator extends TextureOperator {
         return stackIn_7_0;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -21771) {
           BrickOperator.d(5, -48, 96);
         }
@@ -236,7 +236,7 @@ final class BrickOperator extends TextureOperator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 

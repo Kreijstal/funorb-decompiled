@@ -18,7 +18,7 @@ final class toa extends IntrusiveNode {
         return QuickChatPhraseDefinition.field_n;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 3402) {
           toa.a(false);
           field_f = null;

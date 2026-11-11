@@ -34,7 +34,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
                 var2++;
                 var5 = this.children[incrementValue$0];
                 if (var5 != null) {
-                  this.a(var3, var5, var4, (byte) 85);
+                  this.layoutCell(var3, var5, var4, (byte) 85);
                 }
                 var4++;
                 continue;
@@ -51,7 +51,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
         }
     }
 
-    private final void a(int param0, UiWidget param1, int param2, byte param3) {
+    private final void layoutCell(int param0, UiWidget param1, int param2, byte param3) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_35_0 = null;
@@ -159,7 +159,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -274,7 +274,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -290,11 +290,11 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
           this.field_I[this.field_D] = param2;
           this.children[this.field_D] = param1;
           if (param1 != null) {
-            this.a(var5, param1, var4_int, (byte) 85);
+            this.layoutCell(var5, param1, var4_int, (byte) 85);
           }
           this.field_D = this.field_D + 1;
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sta.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sta.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param6).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
           this.setColumnWidths(var10, (byte) -97);
           this.setColumnWeights(var9, 48);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -396,7 +396,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
           this.resizeChildColumns(var4, var3_int, 192);
           this.d(var3_int, -110, var4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sta.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sta.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -427,7 +427,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
           this.c(var4, var3_int, 0);
           this.f(param1 + 28657, var3_int, var4);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "sta.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "sta.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

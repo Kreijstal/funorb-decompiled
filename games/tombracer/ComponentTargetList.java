@@ -51,7 +51,7 @@ final class ComponentTargetList {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -435,8 +435,8 @@ final class ComponentTargetList {
         int stackIn_26_0Lifetime1;
         var23 = TombRacer.field_G ? 1 : 0;
         try {
-          if (null == bt.field_h) {
-            bt.field_h = new int[65536];
+          if (null == PitSnakeModel.field_h) {
+            PitSnakeModel.field_h = new int[65536];
             if (var23 == 0) {
               var1_double = Math.random() * 0.03 - 0.015 + 0.7;
               var3 = 0;
@@ -505,7 +505,7 @@ final class ComponentTargetList {
                     var22 = var21 + ((var19 << 16) - 16777216) + (var20 << 8);
                     incrementValue$0 = var3;
                     var3++;
-                    bt.field_h[incrementValue$0] = var22;
+                    PitSnakeModel.field_h[incrementValue$0] = var22;
                     var7++;
                   }
                   var4++;
@@ -524,11 +524,11 @@ final class ComponentTargetList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var1), "f.F(" + param0 + ')');
+          throw tba.wrapException((Throwable) ((Object) var1), "f.F(" + param0 + ')');
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_c = null;
         if (param0 != 24641) {
@@ -539,7 +539,7 @@ final class ComponentTargetList {
     final static int a(boolean param0) {
         if (param0) {
           ComponentTargetList.b((byte) -68);
-          if (!lca.a(param0)) {
+          if (!SnakePitTile.a(param0)) {
             return -1;
           }
           if (null != ModelFactory.field_a.a((byte) 127)) {
@@ -547,7 +547,7 @@ final class ComponentTargetList {
           }
           return -1;
         }
-        if (!lca.a(param0)) {
+        if (!SnakePitTile.a(param0)) {
           return -1;
         }
         if (null != ModelFactory.field_a.a((byte) 127)) {
@@ -580,7 +580,7 @@ final class ComponentTargetList {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           this.maxTargets = param0;
-          var5_int = param3.readBits((byte) 44, RandomBrickOperator.d(param0, 22972));
+          var5_int = param3.readBits((byte) 44, RandomBrickOperator.bitLength(param0, 22972));
           this.targets = new RoomComponent[var5_int];
           this.pendingTargetIds = new cva[var5_int];
           var6 = 0;
@@ -615,7 +615,7 @@ final class ComponentTargetList {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -635,7 +635,7 @@ final class ComponentTargetList {
             field_c = (int[]) null;
           }
           this.a(0);
-          param0.writeBits((byte) 44, this.targets.length, RandomBrickOperator.d(this.maxTargets, 22972));
+          param0.writeBits((byte) 44, this.targets.length, RandomBrickOperator.bitLength(this.maxTargets, 22972));
           var4_int = 0;
           while (this.targets.length > var4_int) {
             if (var5 != 0) {
@@ -667,7 +667,7 @@ final class ComponentTargetList {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

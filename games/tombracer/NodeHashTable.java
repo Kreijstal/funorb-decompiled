@@ -11,7 +11,7 @@ final class NodeHashTable {
     private int field_a;
     static String field_d;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 123) {
           NodeHashTable.a(-27, -70, -10);
         }
@@ -41,7 +41,7 @@ final class NodeHashTable {
         return null;
     }
 
-    final IntrusiveNode d(int param0) {
+    final IntrusiveNode firstWithKey(int param0) {
         this.field_e = param0;
         return this.nextWithKey(20806);
     }
@@ -123,7 +123,7 @@ final class NodeHashTable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

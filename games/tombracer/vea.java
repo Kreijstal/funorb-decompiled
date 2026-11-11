@@ -7,7 +7,7 @@ final class vea {
     static lqa field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 <= 25) {
           field_b = false;

@@ -181,7 +181,7 @@ final class PlayerInputQueue {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw tba.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -223,7 +223,7 @@ final class PlayerInputQueue {
         qpa var3 = new qpa();
         var3.b(param1, -123);
         var3.a(7, param0);
-        hw.a((byte) -111, 1, 79, var3);
+        hw.sendGamePacket((byte) -111, 1, 79, var3);
     }
 
     final void clear(boolean param0) {

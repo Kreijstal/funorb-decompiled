@@ -62,7 +62,7 @@ final class rga {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -83,27 +83,27 @@ final class rga {
           var9 = param7 - param0;
           var8_int = param0 + param4;
           for (var12 = param4; var8_int > var12; var12++) {
-            nra.a((byte) -55, param5, param6, vaa.field_a[var12], param3);
+            nra.fillRange((byte) -55, param5, param6, vaa.field_a[var12], param3);
           }
           if (param1 <= 97) {
             rga.releaseStatics((byte) -93);
           }
           for (var12Lifetime1 = param7; var12Lifetime1 > var9; var12Lifetime1--) {
-            nra.a((byte) -55, param5, param6, vaa.field_a[var12Lifetime1], param3);
+            nra.fillRange((byte) -55, param5, param6, vaa.field_a[var12Lifetime1], param3);
           }
           var11 = param6 - param0;
           var10 = param3 + param0;
           for (var12Lifetime2 = var8_int; var9 >= var12Lifetime2; var12Lifetime2++) {
             var18 = vaa.field_a[var12Lifetime2];
-            nra.a((byte) -55, param5, var10, var18, param3);
-            nra.a((byte) -55, param2, var11, var18, var10);
-            nra.a((byte) -55, param5, param6, var18, var11);
+            nra.fillRange((byte) -55, param5, var10, var18, param3);
+            nra.fillRange((byte) -55, param2, var11, var18, var10);
+            nra.fillRange((byte) -55, param5, param6, var18, var11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var8), "rga.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw tba.wrapException((Throwable) ((Object) var8), "rga.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class rga {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -144,7 +144,7 @@ final class rga {
         return new rga(this.field_c, param1);
     }
 
-    final static int b(int param0, int param1) {
+    final static int getCourseRoomCount(int param0, int param1) {
         if (param0 != 26499) {
           String var3 = (String) null;
           rga.splitPreservingEmptyParts(121, (String) null, 'J');

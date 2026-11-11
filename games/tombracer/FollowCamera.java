@@ -30,7 +30,7 @@ final class FollowCamera implements Camera {
         return this.x;
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2, String param3) {
+    final static void openLoginForm(boolean param0, boolean param1, boolean param2, String param3) {
         try {
           LegacyOpenGlPostProcessEffect.a(param2);
           ej.field_a.e(true);
@@ -38,7 +38,7 @@ final class FollowCamera implements Camera {
           um.field_l = new mpa(ej.field_a, vn.field_b);
           ej.field_a.c(um.field_l, 114);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ag.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ag.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class FollowCamera implements Camera {
             discarded$0 = this.clampAxis(-111, 10, 84, 17, 71);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "ag.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "ag.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class FollowCamera implements Camera {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class FollowCamera implements Camera {
         return var7;
     }
 
-    final static void a(int param0, dh[] param1) {
+    final static void sortDisplayModes(int param0, dh[] param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -283,7 +283,7 @@ final class FollowCamera implements Camera {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

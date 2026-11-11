@@ -13,7 +13,7 @@ abstract class MotionTrackingModel extends TrapModel {
     static volatile int field_p;
     private int field_n;
 
-    public static void n(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 0) {
           MotionTrackingModel.a(-97, true);
           field_u = null;

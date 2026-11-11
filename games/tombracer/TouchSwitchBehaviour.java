@@ -9,7 +9,7 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
     static String field_r;
     private SwitchState field_p;
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_q = null;
         field_r = null;
@@ -23,7 +23,7 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
           super.encode(param0, param1);
           this.field_p.encode(this.getScope((byte) 113), (byte) 82, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
         try {
           this.field_p = new SwitchState(15);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
         try {
           this.field_p = new SwitchState(15, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

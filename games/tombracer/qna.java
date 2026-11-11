@@ -158,7 +158,7 @@ final class qna {
               SpriteTileOperator.field_w[1] = 5;
             }
           } else {
-            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, rr.field_G, new String[]{"<br><%0><br>"}), rg.field_z, 1, ClientMemoryVertexArray.field_c);
+            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.formatText(96, rr.field_G, new String[]{"<br><%0><br>"}), rg.field_z, 1, ClientMemoryVertexArray.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ClientMemoryVertexArray.field_c[var5])) {
@@ -175,7 +175,7 @@ final class qna {
             ToggleMusicChannelCommand.field_o = new String[-var4 + var3_int - 1];
             ArrayUtils.copy(ClientMemoryVertexArray.field_c, var4 + 1, ToggleMusicChannelCommand.field_o, 0, -1 + (-var4 + var3_int));
             var4 = -1;
-            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(89, lqa.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, ClientMemoryVertexArray.field_c);
+            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.formatText(89, lqa.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, ClientMemoryVertexArray.field_c);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ClientMemoryVertexArray.field_c[var5])) {
                 continue;
@@ -318,7 +318,7 @@ final class qna {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) ((Object) var3), "qna.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw tba.wrapException((Throwable) ((Object) var3), "qna.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
