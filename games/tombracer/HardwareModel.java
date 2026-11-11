@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class gja extends ka {
+final class HardwareModel extends ToolkitModel {
     private HardwareGraphicsToolkit field_S;
     private int field_I;
     private short field_T;
@@ -68,7 +68,7 @@ final class gja extends ka {
     private int field_cb;
     static String field_k;
 
-    gja(HardwareGraphicsToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
+    HardwareModel(HardwareGraphicsToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
         this(param0, param2, param5, true, false);
         int fieldTemp$0 = 0;
         short dupTemp$1 = 0;
@@ -758,19 +758,19 @@ final class gja extends ka {
                   var35 = param1.field_t[var17_int];
                   var36 = param1.field_J[var17_int];
                   var37 = var11[var34];
-                  this.field_M[var16] = this.a(var37.field_d, var16, var22_float, var34, var37.field_a, var37.field_c, var32_long, var37.field_b, var23, true, param1);
+                  this.field_M[var16] = this.findOrAddVertex(var37.field_d, var16, var22_float, var34, var37.field_a, var37.field_c, var32_long, var37.field_b, var23, true, param1);
                   var37 = var11[var35];
-                  this.field_z[var16] = this.a(var37.field_d, var16, var24, var35, var37.field_a, var37.field_c, var32_long + (long)var28, var37.field_b, var25, true, param1);
+                  this.field_z[var16] = this.findOrAddVertex(var37.field_d, var16, var24, var35, var37.field_a, var37.field_c, var32_long + (long)var28, var37.field_b, var25, true, param1);
                   var37 = var11[var36];
-                  this.field_V[var16] = this.a(var37.field_d, var16, var26, var36, var37.field_a, var37.field_c, var32_long + (long)var29, var37.field_b, var27, true, param1);
+                  this.field_V[var16] = this.findOrAddVertex(var37.field_d, var16, var26, var36, var37.field_a, var37.field_c, var32_long + (long)var29, var37.field_b, var27, true, param1);
                 } else {
                   if (var31 == 1) {
                     var32 = var15[var17_int];
                     stackIn_295_0 = (0 >= var32.field_c) ? 2048 : 1024;
                     var33 = (long)(stackIn_295_0 + ((var19 << 2) + (var32.field_d + 256 << 12)) + (var32.field_h + 256 << 22)) + ((long)var20 + (long)(var30 << 24) + (long)(var18 << 8) << 32);
-                    this.field_M[var16] = this.a(var32.field_d, var16, var22_float, (int) param1.field_a[var17_int], var32.field_h, 0, var33, var32.field_c, var23, true, param1);
-                    this.field_z[var16] = this.a(var32.field_d, var16, var24, (int) param1.field_t[var17_int], var32.field_h, 0, (long)var28 + var33, var32.field_c, var25, true, param1);
-                    this.field_V[var16] = this.a(var32.field_d, var16, var26, (int) param1.field_J[var17_int], var32.field_h, 0, (long)var29 + var33, var32.field_c, var27, true, param1);
+                    this.field_M[var16] = this.findOrAddVertex(var32.field_d, var16, var22_float, (int) param1.field_a[var17_int], var32.field_h, 0, var33, var32.field_c, var23, true, param1);
+                    this.field_z[var16] = this.findOrAddVertex(var32.field_d, var16, var24, (int) param1.field_t[var17_int], var32.field_h, 0, (long)var28 + var33, var32.field_c, var25, true, param1);
+                    this.field_V[var16] = this.findOrAddVertex(var32.field_d, var16, var26, (int) param1.field_J[var17_int], var32.field_h, 0, (long)var29 + var33, var32.field_c, var27, true, param1);
                   }
                 }
                 if (null != param1.field_n) {
@@ -1028,7 +1028,7 @@ final class gja extends ka {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void tintColours(int param0, int param1, int param2, int param3) {
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1099,7 +1099,7 @@ final class gja extends ka {
             }
             break;
           }
-          this.e(0);
+          this.invalidateColourBuffer(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1108,10 +1108,10 @@ final class gja extends ka {
         }
     }
 
-    final void a() {
+    final void lockForUpdate() {
     }
 
-    final void a(Transform3D param0, el param1, int param2, int param3) {
+    final void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3) {
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
@@ -1146,7 +1146,7 @@ final class gja extends ka {
           var5 = this.field_S.field_bb;
           var6 = (AffineTransform3D) (param0);
           if (!this.field_A) {
-            this.f(-913);
+            this.computeBounds(-913);
           }
           MatchPhase.field_d = var5.field_o * var6.field_q + var6.field_l * var5.field_p + var6.field_o * var5.field_h;
           gj.field_h = var6.field_e * var5.field_p + var5.field_o * var6.field_n + var6.field_i * var5.field_h + var5.field_i;
@@ -1224,9 +1224,9 @@ final class gja extends ka {
             }
           }
           this.field_S.a((float)param2, -229);
-          this.field_S.j((byte) 102);
-          this.field_S.a(var6, (byte) 88);
-          this.b((byte) -100);
+          this.field_S.prepareOrthographicModelRendering((byte) 102);
+          this.field_S.setModelTransform(var6, (byte) 88);
+          this.renderBuffers((byte) -100);
           this.c(-125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1306,8 +1306,8 @@ final class gja extends ka {
         }
     }
 
-    private final void f(int param0) {
-        ka discarded$0 = null;
+    private final void computeBounds(int param0) {
+        ToolkitModel discarded$0 = null;
         int stackIn_32_0 = 0;
         int stackIn_32_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1391,7 +1391,7 @@ final class gja extends ka {
             stackIn_32_1 = -913;
           }
           if (stackIn_32_0 != stackIn_32_1) {
-            discarded$0 = this.a((gja) null, true, (gja) null, false, -20, false);
+            discarded$0 = this.copyInto((HardwareModel) null, true, (HardwareModel) null, false, -20, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1448,7 +1448,7 @@ final class gja extends ka {
         }
     }
 
-    private final boolean h(int param0) {
+    private final boolean uploadIndexBuffer(int param0) {
         RuntimeException decompiledCaughtException = null;
         VertexBuffer var2 = null;
         RuntimeException var2_ref = null;
@@ -1466,7 +1466,7 @@ final class gja extends ka {
             this.field_g.field_d = this.field_S.createIndexBuffer(26, this.field_F);
           }
           if (param0 != 0) {
-            this.a((byte) -37, -100, true);
+            this.copy((byte) -37, -100, true);
           }
           var2 = this.field_g.field_d;
           var2.allocate(param0 + 28, 6 * this.field_v);
@@ -1475,7 +1475,7 @@ final class gja extends ka {
             boolean decompiledFrameCompleted1 = true;
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
-            var4 = this.field_S.a(var3, 127);
+            var4 = this.field_S.streamForBuffer(var3, 127);
             if (jaclib.memory.Stream.b()) {
               var5 = 0;
               while (var5 < this.field_v) {
@@ -1552,7 +1552,7 @@ final class gja extends ka {
                 this.field_ib.b(16440)) {
                 var2_int = 1;
                 if (!this.field_A) {
-                  this.f(-913);
+                  this.computeBounds(-913);
                   if (var5 != 0) {
                     this.field_N = true;
                   }
@@ -1567,7 +1567,7 @@ final class gja extends ka {
                 this.field_ib.b(16440)) {
                 var3 = 1;
                 if (!this.field_A) {
-                  this.f(-913);
+                  this.computeBounds(-913);
                   if (var5 != 0) {
                     this.field_N = true;
                   }
@@ -1583,13 +1583,13 @@ final class gja extends ka {
                 this.field_N = true;
                 if (var5 != 0) {
                   if (!this.field_A) {
-                    this.f(-913);
+                    this.computeBounds(-913);
                   }
                   var4 = 1;
                 }
               } else {
                 if (!this.field_A) {
-                  this.f(-913);
+                  this.computeBounds(-913);
                 }
                 var4 = 1;
               }
@@ -1771,7 +1771,7 @@ final class gja extends ka {
         }
     }
 
-    private final void b(byte param0) {
+    private final void renderBuffers(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -1788,16 +1788,16 @@ final class gja extends ka {
           if (param0 > -8) {
             return;
           }
-          if (this.c((byte) 66) &&
-            this.h(0)) {
-            this.field_S.a(-126, 0, this.field_ib.field_e);
-            this.field_S.a(-128, 1, this.field_E.field_e);
-            this.field_S.a(-127, 2, this.field_d.field_e);
+          if (this.uploadVertexBuffers((byte) 66) &&
+            this.uploadIndexBuffer(0)) {
+            this.field_S.bindVertexBuffer(-126, 0, this.field_ib.field_e);
+            this.field_S.bindVertexBuffer(-128, 1, this.field_E.field_e);
+            this.field_S.bindVertexBuffer(-127, 2, this.field_d.field_e);
             boolean decompiledSharedTail0 = ((55 & this.field_h) == 0);
             if (!decompiledSharedTail0) {
               this.field_S.setLightingEnabled(0, true);
               var2_int = 1;
-              this.field_S.a(-127, 3, this.field_O.field_e);
+              this.field_S.bindVertexBuffer(-127, 3, this.field_O.field_e);
               this.field_S.bindVertexLayout(this.field_S.field_nc, -32);
               decompiledSharedTail0 = (var7 != 0);
             }
@@ -1817,8 +1817,8 @@ final class gja extends ka {
               if (var6 == 65535) {
                 var6 = -1;
               }
-              this.field_S.a((byte) -80, var2_int != 0, true, var6);
-              this.field_S.a(this.field_g.field_c, -19394, this.field_j[var3], var4 * 3, ArchiveManager.field_f, this.field_R[var3], var5 - var4);
+              this.field_S.bindMaterialTexture((byte) -80, var2_int != 0, true, var6);
+              this.field_S.drawIndexedPrimitives(this.field_g.field_c, -19394, this.field_j[var3], var4 * 3, ArchiveManager.field_f, this.field_R[var3], var5 - var4);
               var3++;
             }
           }
@@ -1854,7 +1854,7 @@ final class gja extends ka {
             }
             var4_int++;
           }
-          this.d(1);
+          this.invalidatePositionBuffer(1);
           this.field_A = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1881,7 +1881,7 @@ final class gja extends ka {
               return;
             }
           }
-          this.d(-121);
+          this.invalidatePositionBuffer(-121);
           this.field_A = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1891,10 +1891,10 @@ final class gja extends ka {
         }
     }
 
-    final void b() {
+    final void unlockForUpdate() {
     }
 
-    private final boolean c(byte param0) {
+    private final boolean uploadVertexBuffers(byte param0) {
         int stackIn_5_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_16_0 = 0;
@@ -1954,7 +1954,7 @@ final class gja extends ka {
               return true;
             }
             if (this.field_ib.field_a == null) {
-              this.field_ib.field_a = this.field_S.c(6, this.field_F);
+              this.field_ib.field_a = this.field_S.createVertexBuffer(6, this.field_F);
             }
             var7 = this.field_ib.field_a;
             var7.allocate(12 * this.field_fb, 12, true);
@@ -1986,7 +1986,7 @@ final class gja extends ka {
           }
           if (var2_int != 0) {
             if (null == this.field_E.field_a) {
-              this.field_E.field_a = this.field_S.c(param0 - 60, this.field_F);
+              this.field_E.field_a = this.field_S.createVertexBuffer(param0 - 60, this.field_F);
             }
             var7Lifetime1 = this.field_E.field_a;
             var7Lifetime1.allocate(this.field_fb * 4, 4, true);
@@ -2034,7 +2034,7 @@ final class gja extends ka {
           boolean decompiledFrameRemainder1 = true;
           if (var3 != 0) {
             if (null == this.field_O.field_a) {
-              this.field_O.field_a = this.field_S.c(param0 ^ 68, this.field_F);
+              this.field_O.field_a = this.field_S.createVertexBuffer(param0 ^ 68, this.field_F);
             }
             var7Lifetime2 = this.field_O.field_a;
             var7Lifetime2.allocate(this.field_fb * 12, 12, true);
@@ -2076,7 +2076,7 @@ final class gja extends ka {
           }
           if (var5 != 0) {
             if (this.field_d.field_a == null) {
-              this.field_d.field_a = this.field_S.c(6, this.field_F);
+              this.field_d.field_a = this.field_S.createVertexBuffer(6, this.field_F);
             }
             var7Lifetime3 = this.field_d.field_a;
             var7Lifetime3.allocate(this.field_fb * 8, 8, true);
@@ -2142,10 +2142,10 @@ final class gja extends ka {
           if (null != this.field_u) {
             stackIn_7_0 = this.field_S;
             stackIn_8_1 = !(this.field_f);
-            ((HardwareGraphicsToolkit) (Object) stackIn_7_0).a(stackIn_8_1, 0);
+            ((HardwareGraphicsToolkit) (Object) stackIn_7_0).setDepthWriteAllowed(stackIn_8_1, 0);
             this.field_S.setLightingEnabled(0, false);
-            this.field_S.a(LruNodeCache.field_c, 1, -79);
-            this.field_S.a(1, false, LruNodeCache.field_c);
+            this.field_S.setColorCombineSource(LruNodeCache.field_c, 1, -79);
+            this.field_S.setAlphaCombineSource(1, false, LruNodeCache.field_c);
             var4 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var4 >= this.field_L))) {
@@ -2153,7 +2153,7 @@ final class gja extends ka {
               var6 = this.field_nb[var4];
               if (var15 == 0) {
                 if (!var5.field_e ||
-                  !this.field_S.f()) {
+                  !this.field_S.isBloomEnabled()) {
                   var7 = 0.3333333134651184f * (float)(this.field_Z[var5.field_i] + (this.field_Z[var5.field_c] + this.field_Z[var5.field_k]));
                   var8 = 0.3333333134651184f * (float)(this.field_r[var5.field_k] + (this.field_r[var5.field_i] + this.field_r[var5.field_c]));
                   var9 = (float)(this.field_l[var5.field_k] + this.field_l[var5.field_c] + this.field_l[var5.field_i]) * 0.3333333134651184f;
@@ -2161,15 +2161,15 @@ final class gja extends ka {
                   var11 = var9 * ct.field_b + (ScoreSubmission.field_p * var8 + var7 * vs.field_O) + MatchScoringObserver.field_g;
                   var12 = gj.field_h + (var9 * TextureFilter.field_c + (var7 * pl.field_a + MatchPhase.field_d * var8));
                   var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + var10 * var10)))) * (float)var5.field_b;
-                  var3 = this.field_S.y((byte) -77);
+                  var3 = this.field_S.getModelTransform((byte) -77);
                   var3.a(var10 + (float)var6.field_e - var10 * var13, var6.field_m * var5.field_j >> 7, var5.field_a * var6.field_k >> 7, var6.field_c, 2, var12 - var12 * var13, var11 + (float)var6.field_b - var13 * var11);
                   var3.b(this.field_S.field_Y, 3);
-                  this.field_S.F(-1662);
+                  this.field_S.modelTransformChanged(-1662);
                   var14 = var6.field_h;
-                  this.field_S.a((byte) -80, false, false, (int) var5.field_l);
+                  this.field_S.bindMaterialTexture((byte) -80, false, false, (int) var5.field_l);
                   this.field_S.setBlendMode((int) var5.field_f, 1);
-                  this.field_S.g(3625, var14);
-                  this.field_S.y(2);
+                  this.field_S.setTextureConstantColor(3625, var14);
+                  this.field_S.drawUnitQuad(2);
                 }
                 var4++;
                 continue;
@@ -2177,10 +2177,10 @@ final class gja extends ka {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              this.field_S.a(1, false, PlayerContextMenu.field_j);
-              this.field_S.a(PlayerContextMenu.field_j, 1, -117);
+              this.field_S.setAlphaCombineSource(1, false, PlayerContextMenu.field_j);
+              this.field_S.setColorCombineSource(PlayerContextMenu.field_j, 1, -117);
             }
-            this.field_S.a(true, 0);
+            this.field_S.setDepthWriteAllowed(true, 0);
             return;
           }
           return;
@@ -2191,7 +2191,7 @@ final class gja extends ka {
         }
     }
 
-    private final void e(int param0) {
+    private final void invalidateColourBuffer(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -2232,7 +2232,7 @@ final class gja extends ka {
             }
             var4_int++;
           }
-          this.d(11);
+          this.invalidatePositionBuffer(11);
           this.field_A = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2264,7 +2264,7 @@ final class gja extends ka {
               return;
             }
           }
-          this.d(94);
+          this.invalidatePositionBuffer(94);
           this.field_A = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2274,7 +2274,7 @@ final class gja extends ka {
         }
     }
 
-    private final ka a(gja param0, boolean param1, gja param2, boolean param3, int param4, boolean param5) {
+    private final ToolkitModel copyInto(HardwareModel param0, boolean param1, HardwareModel param2, boolean param3, int param4, boolean param5) {
         int[] array$0 = null;
         int[] array$1 = null;
         int[] array$2 = null;
@@ -2293,7 +2293,7 @@ final class gja extends ka {
         gca[] array$15 = null;
         short discarded$16 = 0;
         int stackIn_75_0 = 0;
-        gja stackIn_310_0 = null;
+        HardwareModel stackIn_310_0 = null;
         RuntimeException stackIn_314_0 = null;
         StringBuilder stackIn_314_1 = null;
         String stackIn_315_2 = null;
@@ -2881,7 +2881,7 @@ final class gja extends ka {
           }
           if (decompiledFrameCompleted0) {
             if (param1) {
-              discarded$16 = this.a(119, -102, -0.9161184430122375f, 115, -91, 115, -41L, -82, 0.9345446825027466f, false, (oc) null);
+              discarded$16 = this.findOrAddVertex(119, -102, -0.9161184430122375f, 115, -91, 115, -41L, -82, 0.9345446825027466f, false, (oc) null);
             }
             param0.field_hb = this.field_hb;
             param0.field_mb = this.field_mb;
@@ -2914,8 +2914,8 @@ final class gja extends ka {
           } else {
             param0.field_A = false;
           }
-          stackIn_310_0 = (gja) (param0);
-          return (ka) ((Object) stackIn_310_0);
+          stackIn_310_0 = (HardwareModel) (param0);
+          return (ToolkitModel) ((Object) stackIn_310_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -2936,7 +2936,7 @@ final class gja extends ka {
         }
     }
 
-    final void a(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void applyTransform(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         int stackIn_17_0 = 0;
         int stackIn_17_1 = 0;
         int stackIn_44_0 = 0;
@@ -3198,7 +3198,7 @@ final class gja extends ka {
                   }
                   break;
                 }
-                this.e(0);
+                this.invalidateColourBuffer(0);
                 return;
               }
               return;
@@ -3386,7 +3386,7 @@ final class gja extends ka {
                 }
                 break;
               }
-              this.e(0);
+              this.invalidateColourBuffer(0);
               return;
             }
             return;
@@ -3576,7 +3576,7 @@ final class gja extends ka {
         }
     }
 
-    private final void d(int param0) {
+    private final void invalidatePositionBuffer(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3593,7 +3593,7 @@ final class gja extends ka {
         }
     }
 
-    final void e(byte param0) {
+    final void releaseBuffers(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -4329,7 +4329,7 @@ final class gja extends ka {
                 }
                 break;
               }
-              this.e(0);
+              this.invalidateColourBuffer(0);
               return;
             }
             return;
@@ -4515,7 +4515,7 @@ final class gja extends ka {
               }
               break;
             }
-            this.e(0);
+            this.invalidateColourBuffer(0);
             return;
           }
           return;
@@ -4539,7 +4539,7 @@ final class gja extends ka {
         }
     }
 
-    private final short a(int param0, int param1, float param2, int param3, int param4, int param5, long param6, int param7, float param8, boolean param9, oc param10) {
+    private final short findOrAddVertex(int param0, int param1, float param2, int param3, int param4, int param5, long param6, int param7, float param8, boolean param9, oc param10) {
         int fieldTemp$0 = 0;
         short stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
@@ -4611,19 +4611,19 @@ final class gja extends ka {
         }
     }
 
-    final ka a(byte param0, int param1, boolean param2) {
-        gja dupTemp$1 = null;
-        gja var4 = null;
+    final ToolkitModel copy(byte param0, int param1, boolean param2) {
+        HardwareModel dupTemp$1 = null;
+        HardwareModel var4 = null;
         RuntimeException var4_ref = null;
-        gja var5 = null;
+        HardwareModel var5 = null;
         int var6 = 0;
         Object stackIn_23_0;
-        gja stackIn_23_1;
+        HardwareModel stackIn_23_1;
         boolean stackIn_23_2;
-        gja stackIn_23_3;
+        HardwareModel stackIn_23_3;
         Object stackIn_24_0;
         boolean stackIn_24_4;
-        ka stackIn_25_0 = null;
+        ToolkitModel stackIn_25_0 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
@@ -4642,7 +4642,7 @@ final class gja extends ka {
                 if (param0 != 4 ||
                   var6 != 0) {
                   if (5 != param0) {
-                    dupTemp$1 = new gja(this.field_S, 0, 0, true, false);
+                    dupTemp$1 = new HardwareModel(this.field_S, 0, 0, true, false);
                     var5 = dupTemp$1;
                     var4 = dupTemp$1;
                     if (var6 != 0) {
@@ -4687,7 +4687,7 @@ final class gja extends ka {
             stackIn_24_0 = this;
             stackIn_24_4 = true;
           }
-          stackIn_25_0 = this.a(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, param1, param2);
+          stackIn_25_0 = this.copyInto(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, param1, param2);
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4696,7 +4696,7 @@ final class gja extends ka {
         }
     }
 
-    final void a(Transform3D param0, el param1, int param2) {
+    final void draw(Transform3D param0, el param1, int param2) {
         RuntimeException stackIn_70_0 = null;
         StringBuilder stackIn_70_1 = null;
         String stackIn_71_2 = null;
@@ -4733,7 +4733,7 @@ final class gja extends ka {
           var4 = this.field_S.field_bb;
           var5 = (AffineTransform3D) (param0);
           if (!this.field_A) {
-            this.f(-913);
+            this.computeBounds(-913);
           }
           MatchPhase.field_d = var5.field_o * var4.field_h + (var4.field_o * var5.field_q + var4.field_p * var5.field_l);
           gj.field_h = var5.field_n * var4.field_o + var5.field_e * var4.field_p + var4.field_h * var5.field_i + var4.field_i;
@@ -4828,9 +4828,9 @@ final class gja extends ka {
               var23 >= var22) {
             }
           }
-          this.field_S.s(11);
-          this.field_S.a(var5, (byte) 93);
-          this.b((byte) -51);
+          this.field_S.preparePerspectiveModelRendering(11);
+          this.field_S.setModelTransform(var5, (byte) 93);
+          this.renderBuffers((byte) -51);
           this.c(-119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4853,7 +4853,7 @@ final class gja extends ka {
         }
     }
 
-    gja(HardwareGraphicsToolkit param0, int param1, int param2, boolean param3, boolean param4) {
+    HardwareModel(HardwareGraphicsToolkit param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_37_2 = null;

@@ -6,52 +6,52 @@ abstract class GraphicsToolkit {
     TextureProvider field_c;
     int field_a;
 
-    abstract boolean f();
+    abstract boolean isBloomEnabled();
 
-    final void a(boolean param0) {
+    final void close(boolean param0) {
         if (!param0) {
           this.finalize();
         }
         LegacyOpenGlTurbulentTextureEffect.field_d[this.field_a] = false;
-        this.k();
+        this.dispose();
     }
 
-    abstract void d(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawRectOutline(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    abstract Transform3D b();
+    abstract Transform3D createTransform();
 
     abstract void la();
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawHorizontalLineAt(int param0, int param1, int param2, int param3, int param4) {
         this.drawHorizontalLine(param3, param2, param1, param4, param0);
     }
 
-    void a(ToolkitSprite param0, boolean param1) {
+    void bindSpriteTarget(ToolkitSprite param0, boolean param1) {
         try {
-          this.a(this.createRenderTarget(param0, !param1 ? null : this.b(param0.width(), param0.height())));
+          this.bindRenderTarget(this.createRenderTarget(param0, !param1 ? null : this.createRenderBuffer(param0.width(), param0.height())));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ha.AE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     protected void finalize() {
-        this.a(true);
+        this.close(true);
     }
 
     abstract void present(int param0, int param1) throws qva;
 
-    abstract void a(float param0, float param1, float param2);
+    abstract void setBloomParameters(float param0, float param1, float param2);
 
     abstract ToolkitSprite createSprite(SpriteData param0, boolean param1);
 
-    final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
-        this.d(param1, param0, param3, param2, param4, 1);
+    final void drawRectOutlineAlpha(int param0, int param1, int param2, int param3, int param4, byte param5) {
+        this.drawRectOutline(param1, param0, param3, param2, param4, 1);
         if (param5 > -57) {
           this.field_c = (TextureProvider) null;
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9);
+    abstract void fillShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9);
 
     abstract void ea(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8);
 
@@ -61,15 +61,15 @@ abstract class GraphicsToolkit {
 
     abstract void intersectClip(int param0, int param1, int param2, int param3);
 
-    abstract boolean h();
+    abstract boolean enableBloom();
 
-    abstract ka a(oc param0, int param1, int param2, int param3, int param4);
+    abstract ToolkitModel createModel(oc param0, int param1, int param2, int param3, int param4);
 
-    abstract Transform3D e();
+    abstract Transform3D getTransform();
 
-    final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void fillRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param4 != -22971) {
-          this.a(-0.8806686997413635f, -0.4391394555568695f, 0.2737298011779785f);
+          this.setBloomParameters(-0.8806686997413635f, -0.4391394555568695f, 0.2737298011779785f);
         }
         this.fillRectangle(param1, param3, param2, param5, param0, 1);
     }
@@ -78,7 +78,7 @@ abstract class GraphicsToolkit {
 
     abstract void HA(int param0, int param1, int param2, int param3, int[] param4);
 
-    final synchronized static GraphicsToolkit a(TextureProvider param0, int param1, ResourceArchive param2, int param3, int param4, int param5, java.awt.Canvas param6, int param7) {
+    final synchronized static GraphicsToolkit createToolkit(TextureProvider param0, int param1, ResourceArchive param2, int param3, int param4, int param5, java.awt.Canvas param6, int param7) {
         RuntimeException var8 = null;
         GraphicsToolkit stackIn_2_0 = null;
         GraphicsToolkit stackIn_6_0 = null;
@@ -146,13 +146,13 @@ abstract class GraphicsToolkit {
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3);
+    abstract void setPostProcessBounds(int param0, int param1, int param2, int param3);
 
     abstract void v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
-    abstract void a();
+    abstract void copyFrontToBack();
 
-    abstract void c();
+    abstract void applyPostProcessing();
 
     abstract void za(int param0, int param1, int param2, int param3, int param4);
 
@@ -170,9 +170,9 @@ abstract class GraphicsToolkit {
 
     abstract void xa(float param0);
 
-    abstract void d();
+    abstract void restoreCanvasTarget();
 
-    final void e(int param0) throws qva {
+    final void presentFrame(int param0) throws qva {
         this.present(param0, 0);
     }
 
@@ -182,17 +182,17 @@ abstract class GraphicsToolkit {
 
     abstract void updateTime(int param0);
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLineReordered(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.drawLine(param2, param0, param5, param3, param1, param4);
     }
 
-    abstract void a(za param0);
+    abstract void useHeap(za param0);
 
     abstract void da(int param0, int param1, int param2, int[] param3);
 
     abstract void setClip(int param0, int param1, int param2, int param3);
 
-    abstract za a(int param0);
+    abstract za createHeap(int param0);
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = 30 / ((88 - param1) / 33);
@@ -223,19 +223,19 @@ abstract class GraphicsToolkit {
 
     abstract void drawCircle(int param0, int param1, int param2, int param3, int param4);
 
-    abstract RenderBuffer b(int param0, int param1);
+    abstract RenderBuffer createRenderBuffer(int param0, int param1);
 
     abstract SceneLight createLight(int param0, int param1, int param2, int param3, int param4, float param5);
 
     abstract ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
 
-    abstract void b(int param0);
+    abstract void setModelBufferSize(int param0);
 
-    abstract boolean j();
+    abstract boolean supportsHeap();
 
-    abstract int l();
+    abstract int getMaxLights();
 
-    abstract void a(Transform3D param0);
+    abstract void setTransform(Transform3D param0);
 
     final ToolkitSprite createSpriteCopy(int[] param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
@@ -246,7 +246,7 @@ abstract class GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 73) {
-            this.a(1.7194017171859741f, 0.590789794921875f, 1.4003089666366577f);
+            this.setBloomParameters(1.7194017171859741f, 0.590789794921875f, 1.4003089666366577f);
           }
           stackIn_3_0 = this.createSprite(param0, param5, param3, param4, param1, true);
           return stackIn_3_0;
@@ -264,7 +264,7 @@ abstract class GraphicsToolkit {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void drawCircleAlpha(int param0, int param1, int param2, int param3, int param4) {
         this.drawCircle(param0, param4, param2, param3, 1);
         if (param1 != -11185) {
           this.L(-114, 43, -49);
@@ -279,13 +279,13 @@ abstract class GraphicsToolkit {
 
     abstract int XA();
 
-    abstract void a(RenderTarget param0);
+    abstract void bindRenderTarget(RenderTarget param0);
 
     abstract void DA(int param0, int param1, int param2, int param3);
 
     abstract RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1);
 
-    abstract void k();
+    abstract void dispose();
 
     static {
     }

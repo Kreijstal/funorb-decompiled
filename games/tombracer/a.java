@@ -39,13 +39,13 @@ final class a implements e {
 
     private final native void E(long param0, boolean param1);
 
-    final void a(ka param0, Transform3D param1, int[] param2, int param3, int param4) {
+    final void a(ToolkitModel param0, Transform3D param1, int[] param2, int param3, int param4) {
         this.f(this.field_nativeid, ((i) (param0)).field_nativeid, ((NativeTransform3D) (param1)).field_nativeid, param2, param3, param4);
     }
 
     private final native void UA(long param0, long param1, long param2, int[] param3, int param4);
 
-    final ka a(i param0, byte param1, int param2, boolean param3) {
+    final ToolkitModel a(i param0, byte param1, int param2, boolean param3) {
         i dupTemp$0 = null;
         i stackIn_3_0;
         i stackIn_3_1;
@@ -100,7 +100,7 @@ final class a implements e {
           ((i) (Object) stackIn_3_0).ZA(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param3);
           var5.field_e = param0.field_e;
           var5.field_d = param0.field_d;
-          return (ka) ((Object) var5);
+          return (ToolkitModel) ((Object) var5);
         }
         if (param1 == 2) {
           var6Lifetime1 = this.field_f;
@@ -113,7 +113,7 @@ final class a implements e {
           ((i) (Object) stackIn_8_0).ZA(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_9_4, param3);
           var5Lifetime1.field_e = param0.field_e;
           var5Lifetime1.field_d = param0.field_d;
-          return (ka) ((Object) var5Lifetime1);
+          return (ToolkitModel) ((Object) var5Lifetime1);
         }
         if (param1 == 3) {
           var6Lifetime2 = this.field_g;
@@ -126,7 +126,7 @@ final class a implements e {
           ((i) (Object) stackIn_13_0).ZA(stackIn_13_1, stackIn_13_2, stackIn_13_3, stackIn_14_4, param3);
           var5Lifetime2.field_e = param0.field_e;
           var5Lifetime2.field_d = param0.field_d;
-          return (ka) ((Object) var5Lifetime2);
+          return (ToolkitModel) ((Object) var5Lifetime2);
         }
         if (param1 == 4) {
           var6Lifetime3 = this.field_j;
@@ -139,7 +139,7 @@ final class a implements e {
           ((i) (Object) stackIn_18_0).ZA(stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_19_4, param3);
           var5Lifetime3.field_e = param0.field_e;
           var5Lifetime3.field_d = param0.field_d;
-          return (ka) ((Object) var5Lifetime3);
+          return (ToolkitModel) ((Object) var5Lifetime3);
         }
         if (param1 == 5) {
           var6Lifetime4 = this.field_d;
@@ -152,7 +152,7 @@ final class a implements e {
           ((i) (Object) stackIn_27_0).ZA(stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4, param3);
           var5Lifetime4.field_e = param0.field_e;
           var5Lifetime4.field_d = param0.field_d;
-          return (ka) ((Object) var5Lifetime4);
+          return (ToolkitModel) ((Object) var5Lifetime4);
         }
         dupTemp$0 = new i(this.field_e);
         var6Lifetime5 = dupTemp$0;
@@ -165,12 +165,12 @@ final class a implements e {
         ((i) (Object) stackIn_23_0).ZA(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, param3);
         var5Lifetime5.field_e = param0.field_e;
         var5Lifetime5.field_d = param0.field_d;
-        return (ka) ((Object) var5Lifetime5);
+        return (ToolkitModel) ((Object) var5Lifetime5);
     }
 
     private final native void f(long param0, long param1, long param2, int[] param3, int param4, int param5);
 
-    final void a(ka param0, Transform3D param1, int[] param2, int param3) {
+    final void a(ToolkitModel param0, Transform3D param1, int[] param2, int param3) {
         this.UA(this.field_nativeid, ((i) (param0)).field_nativeid, ((NativeTransform3D) (param1)).field_nativeid, param2, param3);
     }
 

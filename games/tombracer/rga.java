@@ -107,10 +107,10 @@ final class rga {
         }
     }
 
-    final static ka a(ka param0, byte param1, int param2) {
+    final static ToolkitModel a(ToolkitModel param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ka stackIn_4_0 = null;
+        ToolkitModel stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -120,7 +120,7 @@ final class rga {
           if (param0 == null) {
             return null;
           }
-          stackIn_4_0 = param0.a(param1, 654255, false);
+          stackIn_4_0 = param0.copy(param1, 654255, false);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,8 +138,8 @@ final class rga {
 
     final rga a(int param0, int param1) {
         if (param0 != 0) {
-          ka var4 = (ka) null;
-          rga.a((ka) null, (byte) 71, 47);
+          ToolkitModel var4 = (ToolkitModel) null;
+          rga.a((ToolkitModel) null, (byte) 71, 47);
         }
         return new rga(this.field_c, param1);
     }

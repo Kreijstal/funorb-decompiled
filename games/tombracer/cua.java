@@ -96,7 +96,7 @@ final class cua {
     }
 
     protected final void finalize() throws Throwable {
-        this.field_a.a((byte) -105, this.field_c);
+        this.field_a.queueShaderObjectDeletion((byte) -105, this.field_c);
         super.finalize();
     }
 

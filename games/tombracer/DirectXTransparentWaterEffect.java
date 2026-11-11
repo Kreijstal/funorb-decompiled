@@ -8,12 +8,12 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     private Direct3DToolkit field_e;
 
     final void disable(int param0) {
-        this.field_e.a((jagdx.IDirect3DVertexShader) null, -1);
-        this.owner.a(ej.field_c, 0, -54);
-        this.owner.a(OpenGlDisplayLists.field_c, 1, -56);
-        this.owner.a(LruNodeCache.field_c, 2, -116);
+        this.field_e.bindVertexShader((jagdx.IDirect3DVertexShader) null, -1);
+        this.owner.setColorCombineSource(ej.field_c, 0, -54);
+        this.owner.setColorCombineSource(OpenGlDisplayLists.field_c, 1, -56);
+        this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -116);
         if (param0 <= -4) {
-          this.owner.a((byte) 51, true);
+          this.owner.setFogAllowed((byte) 51, true);
           return;
         }
     }
@@ -31,7 +31,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         AffineTransform3D var3 = null;
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
-          var3 = this.field_e.n((byte) 95);
+          var3 = this.field_e.getModelViewTransform((byte) 95);
           var2.setVertexShaderConstantF(0, var3.writeRowMajor4x4(false, field_d));
         }
         if (param0 == 107) {
@@ -87,7 +87,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         AffineTransform3D var3 = null;
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
-          var3 = this.field_e.n((byte) -86);
+          var3 = this.field_e.getModelViewTransform((byte) -86);
           var2.setVertexShaderConstantF(0, var3.writeRowMajor4x4(false, field_d));
         }
         if (param0) {
@@ -157,7 +157,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
               var5 = -512.0f + var4;
               var7.setVertexShaderConstantF(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
             }
-            this.owner.g(3625, this.owner.field_g);
+            this.owner.setTextureConstantColor(3625, this.owner.field_g);
           }
           return;
         }
@@ -173,7 +173,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
             var5Lifetime1 = -512.0f + var4Lifetime1;
             var6.setVertexShaderConstantF(10, var5Lifetime1, 1.0f / (-var5Lifetime1 + var4Lifetime1), var4Lifetime1, 1.0f / (var3Lifetime1 - var4Lifetime1));
           }
-          this.owner.g(3625, this.owner.field_g);
+          this.owner.setTextureConstantColor(3625, this.owner.field_g);
         }
     }
 
@@ -191,11 +191,11 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     }
 
     final void enable(int param0, boolean param1) {
-        this.owner.a(ej.field_c, 0, -100);
-        this.owner.a(LruNodeCache.field_c, 1, -21);
-        this.owner.a(OpenGlDisplayLists.field_c, 2, -6219, false, true);
-        this.owner.a((byte) 77, false);
-        this.field_e.a(this.field_f, -1);
+        this.owner.setColorCombineSource(ej.field_c, 0, -100);
+        this.owner.setColorCombineSource(LruNodeCache.field_c, 1, -21);
+        this.owner.setColorCombineSource(OpenGlDisplayLists.field_c, 2, -6219, false, true);
+        this.owner.setFogAllowed((byte) 77, false);
+        this.field_e.bindVertexShader(this.field_f, -1);
         this.onViewMatrixChanged((byte) 107);
         this.onTextureMatrixChanged(true);
         this.onProjectionChanged(77);

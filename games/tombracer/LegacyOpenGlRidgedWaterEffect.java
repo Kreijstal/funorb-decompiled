@@ -12,7 +12,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         int var5 = TombRacer.field_G ? 1 : 0;
         if ((param0 & 1) != 1) {
           if (this.field_c.field_g) {
-            this.toolkit.a(true, this.field_c.field_h);
+            this.toolkit.bindTexture(true, this.field_c.field_h);
             hba.field_a[3] = 0.0f;
             hba.field_a[2] = 0.0f;
             hba.field_a[0] = 0.0f;
@@ -24,7 +24,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
             }
             return;
           }
-          this.toolkit.a(true, this.field_c.field_f[0]);
+          this.toolkit.bindTexture(true, this.field_c.field_f[0]);
           if (param2 <= 117) {
             this.isSupported(-10);
             return;
@@ -32,7 +32,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
           return;
         }
         if (this.field_c.field_g) {
-          this.toolkit.a(true, this.field_c.field_h);
+          this.toolkit.bindTexture(true, this.field_c.field_h);
           hba.field_a[1] = 0.0f;
           hba.field_a[0] = 0.0f;
           hba.field_a[2] = 0.0f;
@@ -45,7 +45,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
           return;
         }
         int var4 = this.toolkit.field_Oc % 4000 * 16 / 4000;
-        this.toolkit.a(true, this.field_c.field_f[var4]);
+        this.toolkit.bindTexture(true, this.field_c.field_f[var4]);
         if (param2 > 117) {
           return;
         }
@@ -64,12 +64,12 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         LegacyOpenGlTexture var3 = null;
         this.field_g = new OpenGlDisplayLists(this.toolkit, 2);
         this.field_g.beginList((byte) 6, 0);
-        this.toolkit.e(1, true);
+        this.toolkit.setActiveTextureUnit(1, true);
         this.toolkit.setTextureCombineOperations(7681, 8960, 260);
         this.toolkit.setTextureCombineOperands(0, 0, 34168, 768);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glEnable(3168);
-        this.toolkit.e(0, true);
+        this.toolkit.setActiveTextureUnit(0, true);
         jaggl.OpenGL.glTexEnvf(8960, 34163, 2.0f);
         if (this.field_c.field_g) {
           jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
@@ -80,11 +80,11 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         }
         this.field_g.endList((byte) -119);
         this.field_g.beginList((byte) 6, 1);
-        this.toolkit.e(1, true);
+        this.toolkit.setActiveTextureUnit(1, true);
         this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
         this.toolkit.setTextureCombineOperands(0, 0, 5890, 768);
         jaggl.OpenGL.glDisable(3168);
-        this.toolkit.e(0, true);
+        this.toolkit.setActiveTextureUnit(0, true);
         jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
         if (this.field_c.field_g) {
           jaggl.OpenGL.glDisable(3170);
@@ -146,7 +146,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         int var3 = -115 % ((56 - param1) / 48);
         if (this.toolkit.field_Kb > 0) {
           var4 = -0.5f / (float)this.toolkit.field_Kb;
-          this.toolkit.e(1, true);
+          this.toolkit.setActiveTextureUnit(1, true);
           hba.field_a[2] = var4;
           hba.field_a[0] = 0.0f;
           hba.field_a[3] = 0.25f + var4 * this.toolkit.field_Uc;
@@ -155,9 +155,9 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glTexGenfv(8192, 9474, hba.field_a, 0);
           jaggl.OpenGL.glPopMatrix();
-          this.toolkit.a((float)this.toolkit.field_Kb, true, 0.5f);
-          this.toolkit.a(true, this.field_d);
-          this.toolkit.e(0, true);
+          this.toolkit.setFogDepthAdjustment((float)this.toolkit.field_Kb, true, 0.5f);
+          this.toolkit.bindTexture(true, this.field_d);
+          this.toolkit.setActiveTextureUnit(0, true);
         }
         this.field_g.callList(4864, '\0');
         jaggl.OpenGL.glMatrixMode(5890);
@@ -195,10 +195,10 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
     final void disable(boolean param0) {
         this.field_g.callList(4864, '\001');
         if (!(this.toolkit.field_Kb <= 0)) {
-          this.toolkit.e(1, true);
-          this.toolkit.a(true, (LegacyOpenGlTexture) null);
-          this.toolkit.a(0.0f, true, 1.0f);
-          this.toolkit.e(0, true);
+          this.toolkit.setActiveTextureUnit(1, true);
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
+          this.toolkit.setFogDepthAdjustment(0.0f, true, 1.0f);
+          this.toolkit.setActiveTextureUnit(0, true);
         }
         this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
         jaggl.OpenGL.glMatrixMode(5890);

@@ -126,7 +126,7 @@ class SpriteSampleOperator extends TextureOperator {
         if (this.field_o < 0) {
           return false;
         }
-        SpriteData var2 = BevelOperator.field_m >= 0 ? SpriteData.loadSprite(np.field_m, BevelOperator.field_m, this.field_o) : SpriteData.loadSprite(np.field_m, this.field_o);
+        SpriteData var2 = BevelOperator.field_m >= 0 ? SpriteData.loadSprite(OpenGlModel.field_m, BevelOperator.field_m, this.field_o) : SpriteData.loadSprite(OpenGlModel.field_m, this.field_o);
         var2.expandToFullSize();
         this.field_p = var2.getArgbPixels();
         this.field_r = var2.field_a;

@@ -19,7 +19,7 @@ final class HelloCommand extends ConsoleMethod {
         field_r = null;
     }
 
-    final static ka a(boolean param0, int param1, boolean param2, byte param3) {
+    final static ToolkitModel a(boolean param0, int param1, boolean param2, byte param3) {
         if (param0) {
           return ContextMenu.field_Ib[param1];
         }

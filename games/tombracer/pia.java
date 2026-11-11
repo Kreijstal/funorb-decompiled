@@ -109,7 +109,7 @@ final class pia extends nqa implements GpuTexture2D {
           this.field_h = param3;
           this.field_i = param4;
         }
-        this.field_f = this.field_d.field_jd.createTexture(param3, param4, 1, 0, Direct3DToolkit.a(this.field_e, -128, this.field_b), 1);
+        this.field_f = this.field_d.field_jd.createTexture(param3, param4, 1, 0, Direct3DToolkit.d3dFormat(this.field_e, -128, this.field_b), 1);
     }
 
     pia(Direct3DToolkit param0, ft param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
@@ -148,9 +148,9 @@ final class pia extends nqa implements GpuTexture2D {
           this.field_h = param2;
         }
         if (param4) {
-          this.field_f = this.field_d.field_jd.createTexture(this.field_h, this.field_i, 0, 1024, Direct3DToolkit.a(this.field_e, -128, una.field_g), 1);
+          this.field_f = this.field_d.field_jd.createTexture(this.field_h, this.field_i, 0, 1024, Direct3DToolkit.d3dFormat(this.field_e, -128, una.field_g), 1);
         } else {
-          this.field_f = this.field_d.field_jd.createTexture(this.field_h, this.field_i, 1, 0, Direct3DToolkit.a(this.field_e, -128, una.field_g), 1);
+          this.field_f = this.field_d.field_jd.createTexture(this.field_h, this.field_i, 1, 0, Direct3DToolkit.d3dFormat(this.field_e, -128, una.field_g), 1);
         }
         var13 = this.field_d.field_Nc;
         var10 = this.field_f.LockRect(0, 0, 0, param2, param3, 0, var13);
@@ -197,7 +197,7 @@ final class pia extends nqa implements GpuTexture2D {
     }
 
     public final void bind(byte param0) {
-        this.field_d.a(this, true);
+        this.field_d.bindDirectXTexture2D(this, true);
         if (param0 <= 32) {
           this.setWrap((byte) 121, true, false);
         }

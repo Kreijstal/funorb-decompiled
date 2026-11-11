@@ -26,7 +26,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         jagdx.IDirect3DDevice var3 = null;
         if (this.field_j != null &&
           this.field_d) {
-          var4 = this.owner.c(true);
+          var4 = this.owner.getTransposedViewTransform(true);
           AffineTransform3D var2 = var4;
           var3 = this.field_i.field_jd;
           var3.setVertexShaderConstantF(13, this.owner.field_sc * this.owner.field_fc, this.owner.field_fc * this.owner.field_yb, this.owner.field_fc * this.owner.field_Kb, 1.0f);
@@ -45,14 +45,14 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
 
     final void enable(int param0, boolean param1) {
         this.field_d = param1 ? true : false;
-        this.owner.e(1, false);
+        this.owner.setActiveTextureUnit(1, false);
         int var3 = 101 / ((param0 - 41) / 62);
         this.owner.bindTexture(true, this.field_g);
         this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
-        this.owner.a(LruNodeCache.field_c, 0, -55);
-        this.owner.a(ej.field_c, 2, -6219, true, false);
-        this.owner.a(0, false, PlayerContextMenu.field_j);
-        this.owner.e(0, false);
+        this.owner.setColorCombineSource(LruNodeCache.field_c, 0, -55);
+        this.owner.setColorCombineSource(ej.field_c, 2, -6219, true, false);
+        this.owner.setAlphaCombineSource(0, false, PlayerContextMenu.field_j);
+        this.owner.setActiveTextureUnit(0, false);
         this.d(122);
     }
 
@@ -65,12 +65,12 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
     final void bindTexture(int param0, GpuTexture param1, int param2) {
         if (param1 != null) {
           if (this.field_e) {
-            this.owner.a(ej.field_c, 0, -90);
-            this.owner.a(0, false, ej.field_c);
+            this.owner.setColorCombineSource(ej.field_c, 0, -90);
+            this.owner.setAlphaCombineSource(0, false, ej.field_c);
             this.field_e = false;
           }
           this.owner.bindTexture(true, param1);
-          this.owner.a((byte) -124, param0);
+          this.owner.setTextureCombineMode((byte) -124, param0);
           if (param2 != 24595) {
             this.refreshState(true, -82);
             return;
@@ -79,9 +79,9 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
         if (!this.field_e) {
           this.owner.bindTexture(true, this.owner.field_Jb);
-          this.owner.a((byte) -85, 1);
-          this.owner.a(PlayerContextMenu.field_j, 0, -82);
-          this.owner.a(0, false, PlayerContextMenu.field_j);
+          this.owner.setTextureCombineMode((byte) -85, 1);
+          this.owner.setColorCombineSource(PlayerContextMenu.field_j, 0, -82);
+          this.owner.setAlphaCombineSource(0, false, PlayerContextMenu.field_j);
           this.field_e = true;
           if (param2 != 24595) {
             this.refreshState(true, -82);
@@ -153,7 +153,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           if ((stackIn_14_0 & stackIn_15_1) == 0) {
             this.field_n = false;
           } else {
-            this.field_g = this.owner.a(true, 1, false, 2, new int[]{0, -1});
+            this.field_g = this.owner.createIntTexture2D(true, 1, false, 2, new int[]{0, -1});
             this.field_g.setWrap((byte) -128, false, false);
             this.field_n = true;
           }
@@ -163,28 +163,28 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
     }
 
     final void disable(int param0) {
-        this.owner.e(1, false);
+        this.owner.setActiveTextureUnit(1, false);
         this.owner.bindTexture(true, (GpuTexture) null);
         this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-        this.owner.a(ej.field_c, 0, -58);
-        this.owner.a(LruNodeCache.field_c, 2, -122);
-        this.owner.a(0, false, ej.field_c);
-        this.owner.e(0, false);
+        this.owner.setColorCombineSource(ej.field_c, 0, -58);
+        this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -122);
+        this.owner.setAlphaCombineSource(0, false, ej.field_c);
+        this.owner.setActiveTextureUnit(0, false);
         if (this.field_e) {
-          this.owner.a(ej.field_c, 0, -48);
-          this.owner.a(0, false, ej.field_c);
+          this.owner.setColorCombineSource(ej.field_c, 0, -48);
+          this.owner.setAlphaCombineSource(0, false, ej.field_c);
           this.field_e = false;
         }
         if (param0 < -4) {
           if (null != this.field_j) {
-            this.field_i.a((jagdx.IDirect3DVertexShader) null, -1);
+            this.field_i.bindVertexShader((jagdx.IDirect3DVertexShader) null, -1);
             this.field_j = null;
           }
           return;
         }
         this.field_k = (jagdx.IDirect3DVertexShader) null;
         if (null != this.field_j) {
-          this.field_i.a((jagdx.IDirect3DVertexShader) null, -1);
+          this.field_i.bindVertexShader((jagdx.IDirect3DVertexShader) null, -1);
           this.field_j = null;
         }
     }
@@ -194,7 +194,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         AffineTransform3D var3 = null;
         if (this.field_j != null) {
           var2 = this.field_i.field_jd;
-          var3 = this.field_i.n((byte) -101);
+          var3 = this.field_i.getModelViewTransform((byte) -101);
           var2.setVertexShaderConstantF(0, var3.writeRowMajor4x4(false, field_f));
         }
         if (param0 == 107) {
@@ -226,8 +226,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           var5 = -((float)(-var4 + var3) * 0.125f) + (float)var3;
           var6 = -((float)(-var4 + var3) * 0.25f) + (float)var3;
           var2.setVertexShaderConstantF(10, var6, 1.0f / (-var6 + var5), var5, 1.0f / ((float)var3 - var5));
-          var2.setVertexShaderConstantF(11, 1.0f / (float)this.owner.g(false), (float)this.owner.A(-2903) / 255.0f, this.owner.field_Hc, 1.0f / (-this.owner.field_B + this.owner.field_Hc));
-          this.owner.g(3625, this.owner.t(65280));
+          var2.setVertexShaderConstantF(11, 1.0f / (float)this.owner.underwaterFogDivisor(false), (float)this.owner.underwaterFogIntensity(-2903) / 255.0f, this.owner.field_Hc, 1.0f / (-this.owner.field_B + this.owner.field_Hc));
+          this.owner.setTextureConstantColor(3625, this.owner.underwaterFogColor(65280));
         }
     }
 
@@ -242,8 +242,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         if (param0 < 83) {
           this.onModelMatrixChanged(false);
           var6 = this.field_i.field_jd;
-          var4 = this.owner.d(false);
-          var5 = this.owner.E(8);
+          var4 = this.owner.underwaterSurfaceHeight(false);
+          var5 = this.owner.getViewTransform(8);
           if (!this.field_d) {
             var2 = var4 != 2147483647 ? this.field_l : this.field_m;
           } else {
@@ -255,7 +255,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             return;
           }
           this.field_j = var2;
-          this.field_i.a(var2, -1);
+          this.field_i.bindVertexShader(var2, -1);
           this.e(1);
           this.onProjectionChanged(125);
           this.onTextureMatrixChanged(true);
@@ -267,8 +267,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           return;
         }
         jagdx.IDirect3DDevice var7 = this.field_i.field_jd;
-        var4Lifetime1 = this.owner.d(false);
-        var5Lifetime1 = this.owner.E(8);
+        var4Lifetime1 = this.owner.underwaterSurfaceHeight(false);
+        var5Lifetime1 = this.owner.getViewTransform(8);
         if (!this.field_d) {
           var2Lifetime1 = var4Lifetime1 != 2147483647 ? this.field_l : this.field_m;
         } else {
@@ -280,7 +280,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           return;
         }
         this.field_j = var2Lifetime1;
-        this.field_i.a(var2Lifetime1, -1);
+        this.field_i.bindVertexShader(var2Lifetime1, -1);
         this.e(1);
         this.onProjectionChanged(125);
         this.onTextureMatrixChanged(true);
@@ -305,7 +305,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         if (param0) {
           if (null != this.field_j) {
             var2 = this.field_i.field_jd;
-            var3 = this.field_i.n((byte) 10);
+            var3 = this.field_i.getModelViewTransform((byte) 10);
             stackIn_5_0 = var2;
             stackIn_5_1 = 0;
             stackIn_5_2 = var3;
@@ -316,7 +316,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           this.onTextureMatrixChanged(false);
           if (null != this.field_j) {
             var2 = this.field_i.field_jd;
-            var3 = this.field_i.n((byte) 10);
+            var3 = this.field_i.getModelViewTransform((byte) 10);
             stackIn_12_0 = var2;
             stackIn_12_1 = 0;
             stackIn_12_2 = var3;

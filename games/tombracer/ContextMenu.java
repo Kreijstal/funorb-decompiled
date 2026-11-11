@@ -16,7 +16,7 @@ final class ContextMenu extends UiComponent {
     private int field_Hb;
     static PacketBuffer field_Bb;
     private UiComponent field_Ab;
-    static ka[] field_Ib;
+    static ToolkitModel[] field_Ib;
     private int field_xb;
 
     final void openAt(int param0, int param1, int param2, int param3, int param4) {

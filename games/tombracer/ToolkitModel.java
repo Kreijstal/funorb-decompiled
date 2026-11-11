@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ka {
+abstract class ToolkitModel {
     static float[] field_b;
     boolean field_a;
     private static String[] field_c;
@@ -14,11 +14,11 @@ abstract class ka {
         field_c = null;
         field_b = null;
         if (param0 != -11) {
-          ka.a((byte) -43);
+          ToolkitModel.a((byte) -43);
         }
     }
 
-    abstract void b();
+    abstract void unlockForUpdate();
 
     abstract void O(int param0, int param1, int param2);
 
@@ -85,15 +85,15 @@ abstract class ka {
         }
     }
 
-    abstract void a(Transform3D param0, el param1, int param2);
+    abstract void draw(Transform3D param0, el param1, int param2);
 
-    abstract ka a(byte param0, int param1, boolean param2);
+    abstract ToolkitModel copy(byte param0, int param1, boolean param2);
 
-    abstract void a();
+    abstract void lockForUpdate();
 
-    abstract void a(Transform3D param0, el param1, int param2, int param3);
+    abstract void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3);
 
-    private final void a(int[] param0, int param1, int param2, int[] param3, boolean param4, int param5, int param6, int param7, int param8, byte param9) {
+    private final void applyFrameTransform(int[] param0, int param1, int param2, int[] param3, boolean param4, int param5, int param6, int param7, int param8, byte param9) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -169,12 +169,12 @@ abstract class ka {
           }
           if (param9 <= 81) {
             var13 = (el) null;
-            this.a((Transform3D) null, (el) null, -114);
+            this.draw((Transform3D) null, (el) null, -114);
           }
           if (param5 != 65535) {
             this.I(param2, param0, param7, param8, param6, param4, param5, param3);
           } else {
-            this.a(param2, param0, param7, param8, param6, param1, param4);
+            this.applyTransform(param2, param0, param7, param8, param6, param1, param4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,7 +197,7 @@ abstract class ka {
         }
     }
 
-    private final void a(int param0, boolean param1, boolean param2, rq param3, int param4, int[] param5, int param6, nk param7, rq param8, int param9, boolean[] param10, boolean param11) {
+    private final void applyAnimationFrames(int param0, boolean param1, boolean param2, rq param3, int param4, int[] param5, int param6, nk param7, rq param8, int param9, boolean[] param10, boolean param11) {
         int stackIn_10_0 = 0;
         int stackIn_13_1 = 0;
         int stackIn_39_0 = 0;
@@ -324,10 +324,10 @@ abstract class ka {
                   }
                   if (-1 == var23) {
                     if (-1 != var28) {
-                      this.a(param7.field_f[var28], param4, 0, param5, param2, param7.field_i[var28] & param6, 0, 0, 0, (byte) 85);
+                      this.applyFrameTransform(param7.field_f[var28], param4, 0, param5, param2, param7.field_i[var28] & param6, 0, 0, 0, (byte) 85);
                     }
                   } else {
-                    this.a(param7.field_f[var23], param4, 0, param5, param2, param7.field_i[var23] & param6, 0, 0, 0, (byte) 103);
+                    this.applyFrameTransform(param7.field_f[var23], param4, 0, param5, param2, param7.field_i[var23] & param6, 0, 0, 0, (byte) 103);
                   }
                   if ((var24 & 2) == 0 &&
                     (var29 & 1) == 0) {
@@ -378,7 +378,7 @@ abstract class ka {
                     var31 = var21;
                     var30 = var20;
                   }
-                  this.a(param7.field_f[var39], param4, var19, param5, param2, param6 & param7.field_i[var39], var32, var30, var31, (byte) 114);
+                  this.applyFrameTransform(param7.field_f[var39], param4, var19, param5, param2, param6 & param7.field_i[var39], var32, var30, var31, (byte) 114);
                 }
               }
               var39++;
@@ -401,9 +401,9 @@ abstract class ka {
             if (decompiledSharedTail0) {
               var15 = param3.field_j[var13_int];
               if (-1 != var15) {
-                this.a(param7.field_f[var15], param4, 0, param5, param2, param7.field_i[var15] & param6, 0, 0, 0, (byte) 96);
+                this.applyFrameTransform(param7.field_f[var15], param4, 0, param5, param2, param7.field_i[var15] & param6, 0, 0, 0, (byte) 96);
               }
-              this.a(param7.field_f[var14], param4, param7.field_h[var14], param5, param2, param7.field_i[var14] & param6, (int) param3.field_d[var13_int], (int) param3.field_l[var13_int], (int) param3.field_k[var13_int], (byte) 90);
+              this.applyFrameTransform(param7.field_f[var14], param4, param7.field_h[var14], param5, param2, param7.field_i[var14] & param6, (int) param3.field_d[var13_int], (int) param3.field_l[var13_int], (int) param3.field_k[var13_int], (byte) 90);
             }
           }
           return;
@@ -445,11 +445,11 @@ abstract class ka {
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3);
+    abstract void tintColours(int param0, int param1, int param2, int param3);
 
     abstract void H(int param0, int param1, int param2);
 
-    final void a(int param0, ena param1, int param2, int param3, int param4, ena param5, int param6, boolean param7, int param8) {
+    final void animate(int param0, ena param1, int param2, int param3, int param4, ena param5, int param6, boolean param7, int param8) {
         rq var14 = null;
         nk var11 = null;
         Object var12 = null;
@@ -457,9 +457,9 @@ abstract class ka {
         if (-1 == param3) {
           return;
         }
-        this.a();
+        this.lockForUpdate();
         if (!this.NA()) {
-          this.b();
+          this.unlockForUpdate();
           return;
         }
         try {
@@ -474,9 +474,9 @@ abstract class ka {
             }
           }
           int var13 = -124 / ((-85 - param0) / 35);
-          this.a(param4, false, param7, var14, param8, (int[]) null, 65535, var11, (rq) (var12), param6, (boolean[]) null, false);
+          this.applyAnimationFrames(param4, false, param7, var14, param8, (int[]) null, 65535, var11, (rq) (var12), param6, (boolean[]) null, false);
           this.wa();
-          this.b();
+          this.unlockForUpdate();
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ka.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -486,7 +486,7 @@ abstract class ka {
 
     final static void a(byte param0) {
         if (param0 != -33) {
-          ka.a((byte) 65);
+          ToolkitModel.a((byte) 65);
         }
         if (TextureOperator.field_l != null) {
           TextureOperator.field_l.i((byte) -7);
@@ -495,9 +495,9 @@ abstract class ka {
         um.field_l.transitionToContent(100, PushableMountComponent.field_F);
     }
 
-    abstract void a(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void applyTransform(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    protected ka() {
+    protected ToolkitModel() {
         this.field_a = false;
     }
 

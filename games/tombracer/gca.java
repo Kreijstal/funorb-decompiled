@@ -9,7 +9,7 @@ final class gca {
     static int field_d;
     int field_k;
     int field_h;
-    static ka[] field_g;
+    static ToolkitModel[] field_g;
     static int[] field_f;
     int field_b;
     int field_m;

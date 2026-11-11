@@ -86,10 +86,10 @@ final class MidiVoiceMixer extends PcmStream {
               param2 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (np.field_x == null) {
-                np.field_x = nma.field_l.createImage(304, 34);
+              if (OpenGlModel.field_x == null) {
+                OpenGlModel.field_x = nma.field_l.createImage(304, 34);
               }
-              var10 = np.field_x.getGraphics();
+              var10 = OpenGlModel.field_x.getGraphics();
               var10.setColor(param2);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, param3 * 3, 30);
@@ -99,7 +99,7 @@ final class MidiVoiceMixer extends PcmStream {
               var10.setFont(UsernameSuggestionsPanel.field_y);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param1, (-(6 * param1.length()) + 304) / 2, 22);
-              var9.drawImage(np.field_x, -152 + mma.field_a / 2, qf.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(OpenGlModel.field_x, -152 + mma.field_a / 2, qf.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

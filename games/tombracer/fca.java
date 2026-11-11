@@ -16,7 +16,7 @@ final class fca {
     }
 
     protected final void finalize() throws Throwable {
-        this.field_c.a((byte) -105, this.field_a);
+        this.field_c.queueShaderObjectDeletion((byte) -105, this.field_a);
         super.finalize();
     }
 

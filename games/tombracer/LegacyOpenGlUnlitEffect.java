@@ -69,8 +69,8 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
           if (param1 != 32221) {
             LegacyOpenGlUnlitEffect.releaseStatics(66);
           }
-          this.toolkit.a(true, param2);
-          this.toolkit.d(1, param0);
+          this.toolkit.bindTexture(true, param2);
+          this.toolkit.setTextureCombineMode(1, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "tva.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

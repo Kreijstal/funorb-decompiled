@@ -16,7 +16,7 @@ final class FallbackShaderEffect extends ShaderEffect {
           if (param2 != 24595) {
             field_e = (String) null;
           }
-          this.owner.a((byte) -108, param0);
+          this.owner.setTextureCombineMode((byte) -108, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "vu.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

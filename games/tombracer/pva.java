@@ -6,7 +6,7 @@ final class pva {
     int field_a;
 
     protected final void finalize() throws Throwable {
-        this.field_b.i(this.field_a, -1);
+        this.field_b.queueProgramDeletion(this.field_a, -1);
         super.finalize();
     }
 

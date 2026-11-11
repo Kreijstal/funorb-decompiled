@@ -40,9 +40,9 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
             this.field_e = false;
             return;
           }
-          var6 = ka.compileShader((byte) -95, param1.getFileByName("gl", (byte) 122, "environment_mapped_water_v"), 35633, param0);
+          var6 = ToolkitModel.compileShader((byte) -95, param1.getFileByName("gl", (byte) 122, "environment_mapped_water_v"), 35633, param0);
           var4 = var6;
-          var5 = ka.compileShader((byte) 123, param1.getFileByName("gl", (byte) 127, "environment_mapped_water_f"), 35632, param0);
+          var5 = ToolkitModel.compileShader((byte) 123, param1.getFileByName("gl", (byte) 127, "environment_mapped_water_f"), 35632, param0);
           this.field_k = PasswordValidator.linkShaderProgram(new pr[]{var6, var5}, param0, 1);
           stackIn_12_1 = (this.field_k != null) && (this.field_f.b(-37));
           this.field_e = stackIn_12_1;
@@ -99,9 +99,9 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     final void disable(int param0) {
         if (param0 < -4) {
           if (this.field_h) {
-            this.owner.e(1, false);
+            this.owner.setActiveTextureUnit(1, false);
             this.owner.bindTexture(true, (GpuTexture) null);
-            this.owner.e(0, false);
+            this.owner.setActiveTextureUnit(0, false);
             this.owner.bindTexture(true, (GpuTexture) null);
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             this.field_h = false;
@@ -110,9 +110,9 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
         this.isSupported(6);
         if (this.field_h) {
-          this.owner.e(1, false);
+          this.owner.setActiveTextureUnit(1, false);
           this.owner.bindTexture(true, (GpuTexture) null);
-          this.owner.e(0, false);
+          this.owner.setActiveTextureUnit(0, false);
           this.owner.bindTexture(true, (GpuTexture) null);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_h = false;
@@ -142,12 +142,12 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     final void enable(int param0, boolean param1) {
         long var5 = 0L;
         int var4 = -72 % ((41 - param0) / 62);
-        na var3 = this.owner.n(11);
+        na var3 = this.owner.environmentCubeTexture(11);
         if (this.field_e &&
           var3 != null) {
-          this.owner.e(1, false);
+          this.owner.setActiveTextureUnit(1, false);
           this.owner.bindTexture(true, var3);
-          this.owner.e(0, false);
+          this.owner.setActiveTextureUnit(0, false);
           this.owner.bindTexture(true, this.field_f.field_f);
           var5 = this.field_k.field_b;
           jaggl.OpenGL.glUseProgramObjectARB(var5);
@@ -174,7 +174,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
             return;
           }
           this.owner.bindTexture(true, param1);
-          this.owner.a((byte) 10, param0);
+          this.owner.setTextureCombineMode((byte) 10, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

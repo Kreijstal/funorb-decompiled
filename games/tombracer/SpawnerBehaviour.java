@@ -8,7 +8,7 @@ final class SpawnerBehaviour extends Behaviour {
     static IntrusiveDeque field_n;
     private TimingPattern field_o;
 
-    final static ka a(int param0, int param1, int param2) {
+    final static ToolkitModel a(int param0, int param1, int param2) {
         if (param1 == 12166) {
           return ScoreSubmission.getModelForCategory(param0, false, false, 2, param2);
         }

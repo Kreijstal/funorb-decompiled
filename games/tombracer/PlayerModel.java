@@ -98,11 +98,11 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         int var6;
         int var7;
         int var8;
-        ka var9;
+        ToolkitModel var9;
         int var10;
         int var11;
-        ka var12;
-        ka var13_ref_ka;
+        ToolkitModel var12;
+        ToolkitModel var13_ref_ka;
         int var13;
         Object var14;
         int var15;
@@ -233,7 +233,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             var14 = AllPlatformsMazeComponent.field_O;
           }
           if (var14 != null) {
-            gqa.a(this.field_h, -83584144, param3, param1, (ka) (var14), param2 + 3670016);
+            gqa.a(this.field_h, -83584144, param3, param1, (ToolkitModel) (var14), param2 + 3670016);
           }
         }
         return;
@@ -361,7 +361,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         if (null == this.field_c) {
           return;
         }
-        ka var6 = this.field_c.getModel((byte) 74);
+        ToolkitModel var6 = this.field_c.getModel((byte) 74);
         hp.drawModelPreview(param2, param3, 0, var6, -1918106173, param4, param1);
     }
 

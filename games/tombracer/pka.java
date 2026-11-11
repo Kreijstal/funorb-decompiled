@@ -81,7 +81,7 @@ final class pka {
           }
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var1 = 1;
-          np.b(-69);
+          OpenGlModel.b(-69);
           if (PlayPhase.beginReconnectGracePeriod(89)) {
             if (una.a((byte) -87)) {
               if (!sr.a(125)) {

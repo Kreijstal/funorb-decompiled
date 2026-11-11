@@ -13,11 +13,11 @@ final class ina {
     static SpriteData[] field_c;
 
     final static void createGameModels(GraphicsToolkit param0, int param1) {
-        ka dupTemp$0 = null;
-        ka dupTemp$1 = null;
-        ka dupTemp$2 = null;
-        ka dupTemp$3 = null;
-        ka dupTemp$4 = null;
+        ToolkitModel dupTemp$0 = null;
+        ToolkitModel dupTemp$1 = null;
+        ToolkitModel dupTemp$2 = null;
+        ToolkitModel dupTemp$3 = null;
+        ToolkitModel dupTemp$4 = null;
         try {
           SwitchState.field_a = tc.createModels(SoftReferenceCache.field_b, -8829, param0);
           ContextMenu.field_Ib = tc.createModels(OpenGlBuffer.field_c, -8829, param0);
@@ -29,23 +29,23 @@ final class ina {
           gca.field_g = tc.createModels(cba.field_b, param1 ^ -8829, param0);
           DoorwayComponent.field_F = tc.createModels(TriangleMesh.field_g, -8829, param0);
           SwitchLinkList.field_b = tc.createModels(ControllerLocomotor.field_p, -8829, param0);
-          dupTemp$0 = RevolverItemComponent.field_J[9].a((byte) 0, 654255, false);
+          dupTemp$0 = RevolverItemComponent.field_J[9].copy((byte) 0, 654255, false);
           RevolverItemComponent.field_J[9] = dupTemp$0;
           dupTemp$0.O(224, 224, 224);
-          dupTemp$1 = RevolverItemComponent.field_J[10].a((byte) 0, 654255, false);
+          dupTemp$1 = RevolverItemComponent.field_J[10].copy((byte) 0, 654255, false);
           RevolverItemComponent.field_J[10] = dupTemp$1;
           dupTemp$1.O(224, 224, 224);
           if (param1 != 0) {
             CharSequence var3 = (CharSequence) null;
             ina.a((byte) -94, (CharSequence) null);
           }
-          dupTemp$2 = RevolverItemComponent.field_J[77].a((byte) 0, 654255, false);
+          dupTemp$2 = RevolverItemComponent.field_J[77].copy((byte) 0, 654255, false);
           RevolverItemComponent.field_J[77] = dupTemp$2;
           dupTemp$2.O(256, 256, 256);
-          dupTemp$3 = RevolverItemComponent.field_J[78].a((byte) 0, 654255, false);
+          dupTemp$3 = RevolverItemComponent.field_J[78].copy((byte) 0, 654255, false);
           RevolverItemComponent.field_J[78] = dupTemp$3;
           dupTemp$3.O(256, 256, 256);
-          dupTemp$4 = RevolverItemComponent.field_J[79].a((byte) 0, 654255, false);
+          dupTemp$4 = RevolverItemComponent.field_J[79].copy((byte) 0, 654255, false);
           RevolverItemComponent.field_J[79] = dupTemp$4;
           dupTemp$4.O(256, 256, 256);
           if (!TorchComponent.field_F) {

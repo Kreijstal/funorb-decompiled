@@ -125,9 +125,9 @@ final class ura {
         int var9 = 16384;
         tga.field_a.L(var8, var9, 0);
         tga.field_a.f(-16384, 16384);
-        Transform3D var10 = tga.field_a.b();
+        Transform3D var10 = tga.field_a.createTransform();
         var10.setIdentity();
-        tga.field_a.a(var10);
+        tga.field_a.setTransform(var10);
         if (param0 == -10985) {
           return;
         }

@@ -5,7 +5,7 @@ final class mma {
     static wm field_c;
     static int field_a;
     static hra field_d;
-    static ka[] field_b;
+    static ToolkitModel[] field_b;
 
     public static void releaseStatics(int param0) {
         field_b = null;
@@ -21,7 +21,7 @@ final class mma {
 
     final void a(int param0, int param1) {
         if (param0 != -978) {
-          field_b = (ka[]) null;
+          field_b = (ToolkitModel[]) null;
         }
     }
 

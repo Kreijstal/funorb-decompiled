@@ -122,11 +122,11 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param5 == 6) {
-          tga.field_a.c(SoundEvent.withFullAlpha(false, param4), param0, param2, param3, param5 - 22977, param1);
+          tga.field_a.fillRectangleAlpha(SoundEvent.withFullAlpha(false, param4), param0, param2, param3, param5 - 22977, param1);
           return;
         }
         MessageDialog.a(-35, -13, -25, -10, -41, -25);
-        tga.field_a.c(SoundEvent.withFullAlpha(false, param4), param0, param2, param3, param5 - 22977, param1);
+        tga.field_a.fillRectangleAlpha(SoundEvent.withFullAlpha(false, param4), param0, param2, param3, param5 - 22977, param1);
     }
 
     MessageDialog(jta param0, BitmapFont param1, String param2, boolean param3, boolean param4) {

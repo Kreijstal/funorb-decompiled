@@ -8,7 +8,7 @@ final class DoorwayComponent extends PrefabComponent {
     static oc[] field_K;
     static int field_I;
     private int field_H;
-    static ka[] field_F;
+    static ToolkitModel[] field_F;
 
     final boolean hasAngle(byte param0) {
         if (param0 != -122) {

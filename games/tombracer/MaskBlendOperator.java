@@ -157,7 +157,7 @@ final class MaskBlendOperator extends TextureOperator {
 
     final static void initToolkitResources(int param0) {
         tga.field_a = baa.field_d.field_i.field_d;
-        tga.field_a.b(8192);
+        tga.field_a.setModelBufferSize(8192);
         ImageProducerCanvasImageBuffer.field_o = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
         EditableTextField.k((byte) 94);
         OpenGlTexture2D.h((byte) 45);

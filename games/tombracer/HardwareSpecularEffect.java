@@ -11,27 +11,27 @@ final class HardwareSpecularEffect extends ShaderEffect {
     final void disable(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (!this.field_g) {
-          this.owner.a(0, false, ej.field_c);
+          this.owner.setAlphaCombineSource(0, false, ej.field_c);
         } else {
-          this.owner.e(1, false);
+          this.owner.setActiveTextureUnit(1, false);
           this.owner.bindTexture(true, (GpuTexture) null);
           this.owner.applyTexCoordGeneration(ItemModel.field_o, (byte) 0);
-          this.owner.p((byte) 127);
+          this.owner.resetTextureTransform((byte) 127);
           if (!this.field_d) {
             this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-            this.owner.a(ej.field_c, 0, -90);
-            this.owner.e(2, false);
+            this.owner.setColorCombineSource(ej.field_c, 0, -90);
+            this.owner.setActiveTextureUnit(2, false);
             this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-            this.owner.a(ej.field_c, 0, -108);
-            this.owner.a(PlayerContextMenu.field_j, 1, -15);
-            this.owner.a(0, false, ej.field_c);
+            this.owner.setColorCombineSource(ej.field_c, 0, -108);
+            this.owner.setColorCombineSource(PlayerContextMenu.field_j, 1, -15);
+            this.owner.setAlphaCombineSource(0, false, ej.field_c);
             this.owner.bindTexture(true, (GpuTexture) null);
           } else {
             this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-            this.owner.a(ej.field_c, 0, -94);
-            this.owner.a(0, false, ej.field_c);
+            this.owner.setColorCombineSource(ej.field_c, 0, -94);
+            this.owner.setAlphaCombineSource(0, false, ej.field_c);
           }
-          this.owner.e(0, false);
+          this.owner.setActiveTextureUnit(0, false);
           this.field_g = false;
         }
         this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
@@ -129,9 +129,9 @@ final class HardwareSpecularEffect extends ShaderEffect {
               }
             }
             this.field_e = new na[3];
-            this.field_e[0] = this.owner.a((byte) 37, var27, false, 64);
-            this.field_e[1] = this.owner.a((byte) 112, var28, false, 64);
-            this.field_e[2] = this.owner.a((byte) 64, var29, false, 64);
+            this.field_e[0] = this.owner.createCubeTexture((byte) 37, var27, false, 64);
+            this.field_e[1] = this.owner.createCubeTexture((byte) 112, var28, false, 64);
+            this.field_e[2] = this.owner.createCubeTexture((byte) 64, var29, false, 64);
             return;
           }
           return;
@@ -151,9 +151,9 @@ final class HardwareSpecularEffect extends ShaderEffect {
 
     final void setParameters(byte param0, int param1, int param2) {
         if (this.field_g) {
-          this.owner.e(1, false);
+          this.owner.setActiveTextureUnit(1, false);
           this.owner.bindTexture(true, this.field_e[-1 + param1]);
-          this.owner.e(0, false);
+          this.owner.setActiveTextureUnit(0, false);
         }
         if (param0 != 55) {
           this.disable(-91);
@@ -168,29 +168,29 @@ final class HardwareSpecularEffect extends ShaderEffect {
         var3 = -121 / ((param0 - 41) / 62);
         if (null != this.field_e &&
           param1) {
-          this.owner.e(1, false);
+          this.owner.setActiveTextureUnit(1, false);
           this.owner.applyTexCoordGeneration(IdolItemComponent.field_H, (byte) 0);
-          var4 = this.owner.C(0);
+          var4 = this.owner.getActiveTextureTransform(0);
           var4.setRotationX(-94, 1024);
-          this.owner.a(cva.field_b, false);
+          this.owner.setTextureTransformMode(cva.field_b, false);
           if (!this.field_d) {
             this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, PlatformComponent.field_F);
-            this.owner.a(PlayerContextMenu.field_j, 0, -34);
-            this.owner.e(2, false);
+            this.owner.setColorCombineSource(PlayerContextMenu.field_j, 0, -34);
+            this.owner.setActiveTextureUnit(2, false);
             this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
-            this.owner.a(PlayerContextMenu.field_j, 0, -47);
-            this.owner.a(PlayerContextMenu.field_j, 1, -6219, true, false);
-            this.owner.a(0, false, OpenGlDisplayLists.field_c);
+            this.owner.setColorCombineSource(PlayerContextMenu.field_j, 0, -47);
+            this.owner.setColorCombineSource(PlayerContextMenu.field_j, 1, -6219, true, false);
+            this.owner.setAlphaCombineSource(0, false, OpenGlDisplayLists.field_c);
             this.owner.bindTexture(true, this.owner.field_Jb);
           } else {
             this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
-            this.owner.a(ej.field_c, 0, -6219, true, false);
-            this.owner.a(0, false, OpenGlDisplayLists.field_c);
+            this.owner.setColorCombineSource(ej.field_c, 0, -6219, true, false);
+            this.owner.setAlphaCombineSource(0, false, OpenGlDisplayLists.field_c);
           }
-          this.owner.e(0, false);
+          this.owner.setActiveTextureUnit(0, false);
           this.field_g = true;
         } else {
-          this.owner.a(0, false, OpenGlDisplayLists.field_c);
+          this.owner.setAlphaCombineSource(0, false, OpenGlDisplayLists.field_c);
         }
     }
 
@@ -215,7 +215,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
           return;
         }
         try {
-          this.owner.a((byte) 108, param0);
+          this.owner.setTextureCombineMode((byte) 108, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "em.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

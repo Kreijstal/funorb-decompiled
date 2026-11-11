@@ -13,7 +13,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (tga.field_a == null) {
           return;
         }
-        tga.field_a.a(true);
+        tga.field_a.close(true);
         if (param0 < 91) {
           return;
         }

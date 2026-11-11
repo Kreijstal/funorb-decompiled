@@ -22,20 +22,20 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         try {
           if (param2 == null) {
             if (!this.field_c) {
-              this.toolkit.a(true, this.toolkit.field_lc);
-              this.toolkit.d(1, 1);
+              this.toolkit.bindTexture(true, this.toolkit.field_lc);
+              this.toolkit.setTextureCombineMode(1, 1);
               this.toolkit.setTextureCombineOperands(0, param1 - 32221, 34168, 768);
-              this.toolkit.b(34168, param1 - 32218, 0, 770);
+              this.toolkit.setAlphaCombineArgument(34168, param1 - 32218, 0, 770);
               this.field_c = true;
             }
           } else {
             if (this.field_c) {
               this.toolkit.setTextureCombineOperands(0, 0, 5890, 768);
-              this.toolkit.b(5890, 3, 0, 770);
+              this.toolkit.setAlphaCombineArgument(5890, 3, 0, 770);
               this.field_c = false;
             }
-            this.toolkit.a(true, param2);
-            this.toolkit.d(1, param0);
+            this.toolkit.bindTexture(true, param2);
+            this.toolkit.setTextureCombineMode(1, param0);
           }
           if (param1 == 32221) {
             return;
@@ -58,14 +58,14 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
 
     final void enable(boolean param0, int param1) {
         this.field_e = param0 ? true : false;
-        this.toolkit.e(1, true);
-        this.toolkit.a(true, this.field_l);
+        this.toolkit.setActiveTextureUnit(1, true);
+        this.toolkit.bindTexture(true, this.field_l);
         this.toolkit.setTextureCombineOperations(34165, 8960, 7681);
         int var3 = 90 % ((param1 - 56) / 48);
         this.toolkit.setTextureCombineOperands(0, 0, 34166, 768);
         this.toolkit.setTextureCombineOperands(2, 0, 5890, 770);
-        this.toolkit.b(34168, 3, 0, 770);
-        this.toolkit.e(0, true);
+        this.toolkit.setAlphaCombineArgument(34168, 3, 0, 770);
+        this.toolkit.setActiveTextureUnit(0, true);
         this.a((byte) -120);
     }
 
@@ -164,35 +164,35 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         stackIn_5_0 = this.toolkit;
         stackIn_5_1 = 1;
         stackIn_6_2 = (param0) ? false : true;
-        ((OpenGlToolkit) (Object) stackIn_5_0).e(stackIn_5_1, stackIn_6_2);
+        ((OpenGlToolkit) (Object) stackIn_5_0).setActiveTextureUnit(stackIn_5_1, stackIn_6_2);
         stackIn_8_0 = this.toolkit;
         stackIn_9_1 = (param0) ? false : true;
-        ((OpenGlToolkit) (Object) stackIn_8_0).a(stackIn_9_1, (LegacyOpenGlTexture) null);
+        ((OpenGlToolkit) (Object) stackIn_8_0).bindTexture(stackIn_9_1, (LegacyOpenGlTexture) null);
         if (!param0) {
           this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
           this.toolkit.setTextureCombineOperands(0, 0, 5890, 768);
           this.toolkit.setTextureCombineOperands(2, 0, 34166, 770);
-          this.toolkit.b(5890, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(5890, 3, 0, 770);
           stackIn_19_0 = this.toolkit;
           stackIn_19_1 = 0;
           stackIn_20_2 = (param0) ? false : true;
-          ((OpenGlToolkit) (Object) stackIn_19_0).e(stackIn_19_1, stackIn_20_2);
+          ((OpenGlToolkit) (Object) stackIn_19_0).setActiveTextureUnit(stackIn_19_1, stackIn_20_2);
         } else {
           field_j = (int[]) null;
           this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
           this.toolkit.setTextureCombineOperands(0, 0, 5890, 768);
           this.toolkit.setTextureCombineOperands(2, 0, 34166, 770);
-          this.toolkit.b(5890, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(5890, 3, 0, 770);
           stackIn_12_0 = this.toolkit;
           stackIn_12_1 = 0;
           stackIn_13_2 = (param0) ? false : true;
-          ((OpenGlToolkit) (Object) stackIn_12_0).e(stackIn_12_1, stackIn_13_2);
+          ((OpenGlToolkit) (Object) stackIn_12_0).setActiveTextureUnit(stackIn_12_1, stackIn_13_2);
         }
         if (!this.field_c) {
           return;
         }
         this.toolkit.setTextureCombineOperands(0, 0, 5890, 768);
-        this.toolkit.b(5890, 3, 0, 770);
+        this.toolkit.setAlphaCombineArgument(5890, 3, 0, 770);
         this.field_c = false;
     }
 
@@ -226,9 +226,9 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
           var4 = -(0.125f * (float)(var2 - var3)) + (float)var2;
           var5 = -((float)(var2 - var3) * 0.25f) + (float)var2;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.toolkit.field_vb, (float)this.toolkit.field_nb / 255.0f);
-          this.toolkit.e(1, true);
+          this.toolkit.setActiveTextureUnit(1, true);
           this.toolkit.setTextureConstantArgb(1104971864, this.toolkit.field_xc);
-          this.toolkit.e(0, true);
+          this.toolkit.setActiveTextureUnit(0, true);
         }
         if (param0 <= -48) {
           return;

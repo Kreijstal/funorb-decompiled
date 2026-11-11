@@ -116,7 +116,7 @@ abstract class OpenGlTexture implements GpuTexture {
 
     private final void f(byte param0) {
         if (0 < this.field_c) {
-          this.field_j.a(this.field_c, this.getMemorySize((byte) -120), 2);
+          this.field_j.queueTextureDeletion(this.field_c, this.getMemorySize((byte) -120), 2);
           this.field_c = 0;
         }
         int var2 = -75 % ((16 - param0) / 61);
@@ -159,7 +159,7 @@ abstract class OpenGlTexture implements GpuTexture {
     }
 
     public void bind(byte param0) {
-        int var2 = this.field_j.o((byte) 106);
+        int var2 = this.field_j.getActiveTextureUnit((byte) 106);
         if (param0 < 32) {
           return;
         }

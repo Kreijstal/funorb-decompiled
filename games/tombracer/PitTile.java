@@ -55,7 +55,7 @@ final class PitTile implements Renderable {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ka var4 = null;
+        ToolkitModel var4 = null;
         TrapPart var3 = this.pit.getPart(-85);
         if (var3 != null &&
           !var3.isEnabled(-102)) {

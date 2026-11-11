@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Model extends ka {
+final class Model extends ToolkitModel {
     private tw field_z;
     private Model field_Gb;
     private Model field_u;
@@ -259,7 +259,7 @@ final class Model extends ka {
         return param0;
     }
 
-    final void a() {
+    final void lockForUpdate() {
         try {
           Throwable decompiledCaughtException = null;
           Object var1 = null;
@@ -517,7 +517,7 @@ final class Model extends ka {
         }
     }
 
-    final void a(Transform3D param0, el param1, int param2) {
+    final void draw(Transform3D param0, el param1, int param2) {
         this.b(param0, param1, -1, param2);
     }
 
@@ -811,7 +811,7 @@ final class Model extends ka {
         }
     }
 
-    final void b() {
+    final void unlockForUpdate() {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (this.field_d.field_u > 1) {
@@ -836,7 +836,7 @@ final class Model extends ka {
         }
     }
 
-    final void a(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void applyTransform(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -1194,7 +1194,7 @@ final class Model extends ka {
         }
     }
 
-    final ka a(byte param0, int param1, boolean param2) {
+    final ToolkitModel copy(byte param0, int param1, boolean param2) {
         Model dupTemp$0 = null;
         Model var5 = null;
         Model var4 = null;
@@ -1361,7 +1361,7 @@ final class Model extends ka {
 
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void tintColours(int param0, int param1, int param2, int param3) {
         int var5;
         hna var6;
         int var6_int;
@@ -1406,7 +1406,7 @@ final class Model extends ka {
         return;
     }
 
-    private final ka a(Model param0, Model param1, int param2, boolean param3, boolean param4) {
+    private final ToolkitModel a(Model param0, Model param1, int param2, boolean param3, boolean param4) {
         int[] array$0 = null;
         int[] array$1 = null;
         int[] array$2 = null;
@@ -1808,7 +1808,7 @@ final class Model extends ka {
         param0.field_e = this.field_e;
         param0.field_ub = this.field_ub;
         param0.field_P = param2;
-        return (ka) ((Object) param0);
+        return (ToolkitModel) ((Object) param0);
     }
 
     final void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
@@ -3747,7 +3747,7 @@ final class Model extends ka {
         return;
     }
 
-    final void a(Transform3D param0, el param1, int param2, int param3) {
+    final void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3) {
         this.b(param0, param1, param2, param3);
     }
 

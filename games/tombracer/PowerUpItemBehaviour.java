@@ -4,7 +4,7 @@
 final class PowerUpItemBehaviour extends ItemBehaviour {
     private StatusEffect field_x;
     static String field_s;
-    static ka[] field_t;
+    static ToolkitModel[] field_t;
     static String field_v;
     static boolean[][] field_u;
     static int field_w;

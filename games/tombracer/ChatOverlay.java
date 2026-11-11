@@ -297,9 +297,9 @@ final class ChatOverlay {
                 WeaveOperator.field_q.readUnsignedByte(255);
                 WeaveOperator.field_q.readInt(-104);
                 LegacyOpenGlTexture.field_k = WeaveOperator.field_q.readUnsignedShort(121);
-                np.field_J = new byte[LegacyOpenGlTexture.field_k];
+                OpenGlModel.field_J = new byte[LegacyOpenGlTexture.field_k];
                 for (var8 = 0; var8 < LegacyOpenGlTexture.field_k; var8++) {
-                  np.field_J[var8] = WeaveOperator.field_q.readByte((byte) 103);
+                  OpenGlModel.field_J[var8] = WeaveOperator.field_q.readByte((byte) 103);
                 }
               }
               MenuEntry.field_k = WeaveOperator.field_q.readString((byte) -76);
@@ -451,12 +451,12 @@ final class ChatOverlay {
         var7 = TombRacer.field_G ? 1 : 0;
         var8 = WeaveOperator.field_q;
         var3 = var8.readUnsignedByte(param0 + 19042);
-        gja.field_x = 127 & var3;
+        HardwareModel.field_x = 127 & var3;
         stackIn_3_0 = ((128 & var3) != 0);
         sb.field_b = stackIn_3_0;
         GreyscaleOperator.field_m = var8.readUnsignedByte(255);
         ScrollContainer.field_z = var8.readLong(param0 ^ -290628099);
-        if (gja.field_x == 2) {
+        if (HardwareModel.field_x == 2) {
           gb.field_a = var8.readUnsignedShort(127);
           ega.field_b = var8.readUnsignedMedium(-32768);
         } else {
@@ -471,8 +471,8 @@ final class ChatOverlay {
         } else {
           TextureSampleOperator.field_q = esa.field_c;
         }
-        if (gja.field_x != 1 &&
-          gja.field_x != 4) {
+        if (HardwareModel.field_x != 1 &&
+          HardwareModel.field_x != 4) {
           era.field_a = 0;
           dga.field_a = null;
         } else {

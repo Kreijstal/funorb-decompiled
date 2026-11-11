@@ -79,7 +79,7 @@ final class gqa {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, ka param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, ToolkitModel param4, int param5) {
         try {
           via.drawModelRotated(param4, param0, 0, param5, param3, param2, 51, 0);
           if (param1 != -83584144) {
@@ -102,7 +102,7 @@ final class gqa {
 
     gqa(boolean param0) {
         this.field_i = ScrollContainer.field_z;
-        this.field_d = gja.field_x;
+        this.field_d = HardwareModel.field_x;
         this.field_m = sb.field_b;
         this.field_o = ega.field_b;
         this.field_f = ConveyorBehaviour.field_p;

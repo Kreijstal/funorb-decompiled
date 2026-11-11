@@ -45,7 +45,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
-        tga.field_a.c(jg.withAlpha(param0, (byte) -68, param2), param6, param3, param5, -22971, param1);
+        tga.field_a.fillRectangleAlpha(jg.withAlpha(param0, (byte) -68, param2), param6, param3, param5, -22971, param1);
         if (param4 < 0) {
           field_a = (MatchScreen) null;
         }

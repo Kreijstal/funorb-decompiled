@@ -31,9 +31,9 @@ final class iua {
         float var22 = 0.0f;
         float var23 = 0.0f;
         if (this.field_s) {
-          this.field_k.b((int)param0, PitSnakeModel.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
-          this.field_k.b((int)param1, PitSnakeModel.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
-          this.field_k.b((int)param2, PitSnakeModel.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.drawLineReordered((int)param0, PitSnakeModel.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.drawLineReordered((int)param1, PitSnakeModel.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.drawLineReordered((int)param2, PitSnakeModel.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
           return;
         }
         float var13 = param4 - param3;
@@ -1163,9 +1163,9 @@ final class iua {
         float var39Lifetime1;
         float var39Lifetime2;
         if (this.field_s) {
-          this.field_k.b((int)param0, -16777216 | param9, (int)param3, (int)param1, 1, (int)param4);
-          this.field_k.b((int)param1, -16777216 | param9, (int)param4, (int)param2, 1, (int)param5);
-          this.field_k.b((int)param2, -16777216 | param9, (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.drawLineReordered((int)param0, -16777216 | param9, (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.drawLineReordered((int)param1, -16777216 | param9, (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.drawLineReordered((int)param2, -16777216 | param9, (int)param5, (int)param0, 1, (int)param3);
           return;
         }
         float var13 = param4 - param3;
@@ -2241,9 +2241,9 @@ final class iua {
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9) {
         if (this.field_s) {
-          this.field_k.b((int)param0, param9, (int)param3, (int)param1, 1, (int)param4);
-          this.field_k.b((int)param1, param9, (int)param4, (int)param2, 1, (int)param5);
-          this.field_k.b((int)param2, param9, (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.drawLineReordered((int)param0, param9, (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.drawLineReordered((int)param1, param9, (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.drawLineReordered((int)param2, param9, (int)param5, (int)param0, 1, (int)param3);
           return;
         }
         float var11 = param4 - param3;
@@ -2922,7 +2922,7 @@ final class iua {
         float var45Lifetime1;
         float var54Lifetime1;
         if (param22 != this.field_c) {
-          this.field_w = this.field_k.h(param22);
+          this.field_w = this.field_k.getTexturePixels(param22);
           if (this.field_w == null) {
             this.b((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, MidiPcmStream.alphaBlend(param18 | param19 << 24, param15, 20048), MidiPcmStream.alphaBlend(param18 | param20 << 24, param16, 20048), MidiPcmStream.alphaBlend(param18 | param21 << 24, param17, 20048));
             return;
@@ -4817,7 +4817,7 @@ final class iua {
         float var45Lifetime1;
         float var54Lifetime1;
         if (param22 != this.field_c) {
-          this.field_w = this.field_k.h(param22);
+          this.field_w = this.field_k.getTexturePixels(param22);
           if (this.field_w == null) {
             this.a((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, MidiPcmStream.alphaBlend(param18 | param19 << 24, param15, 20048), MidiPcmStream.alphaBlend(param18 | param20 << 24, param16, 20048), MidiPcmStream.alphaBlend(param18 | param21 << 24, param17, 20048));
             return;
@@ -5901,9 +5901,9 @@ final class iua {
 
     final void b(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9) {
         if (this.field_s) {
-          this.field_k.b((int)param0, param9, (int)param3, (int)param1, 1, (int)param4);
-          this.field_k.b((int)param1, param9, (int)param4, (int)param2, 1, (int)param5);
-          this.field_k.b((int)param2, param9, (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.drawLineReordered((int)param0, param9, (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.drawLineReordered((int)param1, param9, (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.drawLineReordered((int)param2, param9, (int)param5, (int)param0, 1, (int)param3);
           return;
         }
         float var11 = param4 - param3;
@@ -6682,9 +6682,9 @@ final class iua {
         float var39Lifetime1;
         float var39Lifetime2;
         if (this.field_s) {
-          this.field_k.b((int)param0, -16777216 | param9, (int)param3, (int)param1, 1, (int)param4);
-          this.field_k.b((int)param1, -16777216 | param9, (int)param4, (int)param2, 1, (int)param5);
-          this.field_k.b((int)param2, -16777216 | param9, (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.drawLineReordered((int)param0, -16777216 | param9, (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.drawLineReordered((int)param1, -16777216 | param9, (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.drawLineReordered((int)param2, -16777216 | param9, (int)param5, (int)param0, 1, (int)param3);
           return;
         }
         float var13 = param4 - param3;
@@ -7759,9 +7759,9 @@ final class iua {
         float var22 = 0.0f;
         float var23 = 0.0f;
         if (this.field_s) {
-          this.field_k.b((int)param0, PitSnakeModel.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
-          this.field_k.b((int)param1, PitSnakeModel.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
-          this.field_k.b((int)param2, PitSnakeModel.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
+          this.field_k.drawLineReordered((int)param0, PitSnakeModel.field_h[(int)param9], (int)param3, (int)param1, 1, (int)param4);
+          this.field_k.drawLineReordered((int)param1, PitSnakeModel.field_h[(int)param9], (int)param4, (int)param2, 1, (int)param5);
+          this.field_k.drawLineReordered((int)param2, PitSnakeModel.field_h[(int)param9], (int)param5, (int)param0, 1, (int)param3);
           return;
         }
         float var13 = param4 - param3;

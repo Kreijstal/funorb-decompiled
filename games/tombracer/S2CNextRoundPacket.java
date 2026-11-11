@@ -135,7 +135,7 @@ final class S2CNextRoundPacket implements GamePacket {
             return stackIn_9_0;
           }
           if (param0 == 3) {
-            stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.formatText(102, np.field_V, new String[]{param1});
+            stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.formatText(102, OpenGlModel.field_V, new String[]{param1});
             return stackIn_13_0;
           }
           if (param0 == 4) {

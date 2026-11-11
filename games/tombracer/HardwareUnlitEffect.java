@@ -84,7 +84,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
     final void bindTexture(int param0, GpuTexture param1, int param2) {
         try {
           this.owner.bindTexture(true, param1);
-          this.owner.a((byte) -35, param0);
+          this.owner.setTextureCombineMode((byte) -35, param0);
           if (param2 != 24595) {
             CharSequence var5 = (CharSequence) null;
             HardwareUnlitEffect.hashString((CharSequence) null, -89);

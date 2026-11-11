@@ -173,7 +173,7 @@ final class LegacyTextureCache {
             this.field_d.put(param1 + 29166, var40, (long)param0);
             return var40;
           }
-          if (this.field_e.f()) {
+          if (this.field_e.isBloomEnabled()) {
             var11 = this.field_b.loadFloatPixels(param1 ^ 122, var6, var6, param0, 0.699999988079071f, false);
             var10 = var11;
             var9 = var10;
@@ -272,7 +272,7 @@ final class LegacyTextureCache {
           this.field_d.put(param1 + 29166, var13, (long)param0);
           return var13;
         }
-        if (this.field_e.f()) {
+        if (this.field_e.isBloomEnabled()) {
           var11Lifetime1 = this.field_b.loadFloatPixels(param1 ^ 122, var6Lifetime1, var6Lifetime1, param0, 0.699999988079071f, false);
           var10Lifetime1 = var11Lifetime1;
           var9Lifetime1 = var10Lifetime1;

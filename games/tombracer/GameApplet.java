@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
-    static ka[] field_j;
+    static ToolkitModel[] field_j;
     boolean field_b;
     public static boolean field_m;
     public static boolean field_k;

@@ -4,7 +4,7 @@
 final class RevolverItemComponent extends ItemComponent {
     static ResourceArchive field_H;
     static String field_G;
-    static ka[] field_J;
+    static ToolkitModel[] field_J;
     static String field_I;
 
     public static void releaseStatics(byte param0) {
@@ -12,7 +12,7 @@ final class RevolverItemComponent extends ItemComponent {
         field_J = null;
         field_I = null;
         if (param0 != -18) {
-          field_J = (ka[]) null;
+          field_J = (ToolkitModel[]) null;
           field_G = null;
           return;
         }

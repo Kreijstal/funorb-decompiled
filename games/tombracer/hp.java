@@ -20,7 +20,7 @@ final class hp {
         return -1.8763647079467773f;
     }
 
-    final static void drawModelPreview(int param0, int param1, int param2, ka param3, int param4, int param5, int param6) {
+    final static void drawModelPreview(int param0, int param1, int param2, ToolkitModel param3, int param4, int param5, int param6) {
         Transform3D var7 = null;
         if (param4 != -1918106173) {
           field_a = (int[][]) null;
@@ -34,11 +34,11 @@ final class hp {
         try {
           tga.field_a.ya();
           tga.field_a.DA(param6, param5, 32, 32);
-          var7 = tga.field_a.e();
+          var7 = tga.field_a.getTransform();
           var7.setIdentity();
           var7.rotateY(param1 << 3);
           var7.rotateX(-param2 << 3);
-          param3.a(var7, (el) null, param0 * 128 / 2048, 0);
+          param3.drawAtFixedDepth(var7, (el) null, param0 * 128 / 2048, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "hp.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

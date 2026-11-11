@@ -38,8 +38,8 @@ final class gh extends ToolkitSprite {
         GpuTexture2D stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         TextureFilter stackIn_5_2 = null;
-        var27 = this.field_c.y((byte) -77);
-        var12 = this.field_c.C(0);
+        var27 = this.field_c.getModelTransform((byte) -77);
+        var12 = this.field_c.getActiveTextureTransform(0);
         stackIn_4_0 = this.field_d;
         stackIn_4_1 = 7672;
         if (!this.field_a &&
@@ -50,13 +50,13 @@ final class gh extends ToolkitSprite {
           stackIn_5_2 = MiscItemBehaviour.field_v;
         }
         ((GpuTexture2D) (Object) stackIn_4_0).setFilter(stackIn_4_1, stackIn_5_2);
-        this.field_c.k((byte) 121);
+        this.field_c.prepareSpriteRendering((byte) 121);
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param8, 1);
-        this.field_c.a((byte) -97, param6);
-        this.field_c.a(LruNodeCache.field_c, 1, -82);
-        this.field_c.a(1, false, LruNodeCache.field_c);
-        this.field_c.g(3625, param7);
+        this.field_c.setTextureCombineMode((byte) -97, param6);
+        this.field_c.setColorCombineSource(LruNodeCache.field_c, 1, -82);
+        this.field_c.setAlphaCombineSource(1, false, LruNodeCache.field_c);
+        this.field_c.setTextureConstantColor(3625, param7);
         if (this.field_b) {
           var13 = (float)this.paddedWidth();
           var14 = (float)this.paddedHeight();
@@ -82,12 +82,12 @@ final class gh extends ToolkitSprite {
         var27.a(0.0f, 0.0f, (byte) 102, 0.0f, 0.0f, -param0 + param2, -param0 + param4, -param1 + param3, 1.0f, -param1 + param5);
         var27.translate(param1, -108, param0, 0.0f);
         var12.setScale(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(62, (float)this.field_k));
-        this.field_c.a(pfa.field_i, false);
-        this.field_c.F(-1662);
-        this.field_c.y(2);
-        this.field_c.p((byte) -60);
-        this.field_c.a(PlayerContextMenu.field_j, 1, -22);
-        this.field_c.a(1, false, PlayerContextMenu.field_j);
+        this.field_c.setTextureTransformMode(pfa.field_i, false);
+        this.field_c.modelTransformChanged(-1662);
+        this.field_c.drawUnitQuad(2);
+        this.field_c.resetTextureTransform((byte) -60);
+        this.field_c.setColorCombineSource(PlayerContextMenu.field_j, 1, -22);
+        this.field_c.setAlphaCombineSource(1, false, PlayerContextMenu.field_j);
     }
 
     final int width() {
@@ -95,27 +95,27 @@ final class gh extends ToolkitSprite {
     }
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
-        AffineTransform3D var8 = this.field_c.y((byte) -77);
-        AffineTransform3D var7 = this.field_c.C(0);
+        AffineTransform3D var8 = this.field_c.getModelTransform((byte) -77);
+        AffineTransform3D var7 = this.field_c.getActiveTextureTransform(0);
         param1 = param1 + this.field_j;
         param0 = param0 + this.field_g;
         this.field_d.setFilter(7672, MiscItemBehaviour.field_v);
-        this.field_c.k((byte) 105);
+        this.field_c.prepareSpriteRendering((byte) 105);
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param4, 1);
-        this.field_c.a((byte) -19, param2);
-        this.field_c.a(LruNodeCache.field_c, 1, -26);
-        this.field_c.a(1, false, LruNodeCache.field_c);
-        this.field_c.g(3625, param3);
+        this.field_c.setTextureCombineMode((byte) -19, param2);
+        this.field_c.setColorCombineSource(LruNodeCache.field_c, 1, -26);
+        this.field_c.setAlphaCombineSource(1, false, LruNodeCache.field_c);
+        this.field_c.setTextureConstantColor(3625, param3);
         var8.setScale(0.0f, (float)this.field_l, false, (float)this.field_k);
         var8.translate(param0, param1, 0);
         var7.setScale(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(93, (float)this.field_k));
-        this.field_c.a(pfa.field_i, false);
-        this.field_c.F(-1662);
-        this.field_c.y(2);
-        this.field_c.p((byte) -58);
-        this.field_c.a(PlayerContextMenu.field_j, 1, -89);
-        this.field_c.a(1, false, PlayerContextMenu.field_j);
+        this.field_c.setTextureTransformMode(pfa.field_i, false);
+        this.field_c.modelTransformChanged(-1662);
+        this.field_c.drawUnitQuad(2);
+        this.field_c.resetTextureTransform((byte) -58);
+        this.field_c.setColorCombineSource(PlayerContextMenu.field_j, 1, -89);
+        this.field_c.setAlphaCombineSource(1, false, PlayerContextMenu.field_j);
     }
 
     final static void a(BitPacketBuffer param0, byte param1) {
@@ -195,8 +195,8 @@ final class gh extends ToolkitSprite {
         GpuTexture2D stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         TextureFilter stackIn_6_2 = null;
-        var11 = this.field_c.y((byte) -77);
-        var10 = this.field_c.C(0);
+        var11 = this.field_c.getModelTransform((byte) -77);
+        var10 = this.field_c.getActiveTextureTransform(0);
         stackIn_4_0 = this.field_d;
         stackIn_4_1 = 7672;
         if (!this.field_a &&
@@ -207,13 +207,13 @@ final class gh extends ToolkitSprite {
           stackIn_6_2 = MiscItemBehaviour.field_v;
         }
         ((GpuTexture2D) (Object) stackIn_4_0).setFilter(stackIn_4_1, stackIn_6_2);
-        this.field_c.k((byte) 118);
+        this.field_c.prepareSpriteRendering((byte) 118);
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param6, 1);
-        this.field_c.a((byte) 117, param4);
-        this.field_c.a(LruNodeCache.field_c, 1, -74);
-        this.field_c.a(1, false, LruNodeCache.field_c);
-        this.field_c.g(3625, param5);
+        this.field_c.setTextureCombineMode((byte) 117, param4);
+        this.field_c.setColorCombineSource(LruNodeCache.field_c, 1, -74);
+        this.field_c.setAlphaCombineSource(1, false, LruNodeCache.field_c);
+        this.field_c.setTextureConstantColor(3625, param5);
         var10.setScale(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(81, (float)this.field_k));
         if (this.field_b) {
           param2 = this.field_l * param2 / this.paddedWidth();
@@ -223,12 +223,12 @@ final class gh extends ToolkitSprite {
         }
         var11.setScale(0.0f, (float)param2, false, (float)param3);
         var11.translate(param0, param1, 0);
-        this.field_c.a(pfa.field_i, false);
-        this.field_c.F(-1662);
-        this.field_c.y(2);
-        this.field_c.p((byte) 84);
-        this.field_c.a(PlayerContextMenu.field_j, 1, -64);
-        this.field_c.a(1, false, PlayerContextMenu.field_j);
+        this.field_c.setTextureTransformMode(pfa.field_i, false);
+        this.field_c.modelTransformChanged(-1662);
+        this.field_c.drawUnitQuad(2);
+        this.field_c.resetTextureTransform((byte) 84);
+        this.field_c.setColorCombineSource(PlayerContextMenu.field_j, 1, -64);
+        this.field_c.setAlphaCombineSource(1, false, PlayerContextMenu.field_j);
     }
 
     gh(HardwareGraphicsToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {

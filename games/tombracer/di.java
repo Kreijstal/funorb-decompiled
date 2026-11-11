@@ -305,7 +305,7 @@ final class di {
                   if (this.field_i.field_b.field_b == var7.field_b &&
                     this.field_i.field_d != null) {
                     var3 = this.field_i.captureState((byte) -43);
-                    this.field_i.field_d.a(true);
+                    this.field_i.field_d.close(true);
                     this.field_i = null;
                   }
                 }
@@ -322,10 +322,10 @@ final class di {
                           return;
                         }
                         var3 = this.field_i.captureState((byte) -124);
-                        this.field_i.field_d.a(true);
+                        this.field_i.field_d.close(true);
                       }
-                      if (var9.field_d.j()) {
-                        var9.field_d.a(var9.field_d.a(100663296));
+                      if (var9.field_d.supportsHeap()) {
+                        var9.field_d.useHeap(var9.field_d.createHeap(100663296));
                       }
                       if (var3 == null) {
                         var9.field_f = bva.currentTimeMillis((byte) -107);

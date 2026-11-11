@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SwitchLinkList {
-    static ka[] field_b;
+    static ToolkitModel[] field_b;
     static String field_d;
     private int field_e;
     private Switchable[] targets;
@@ -110,7 +110,7 @@ final class SwitchLinkList {
           }
           this.pendingTargetIds = null;
           if (param1 != 8) {
-            field_b = (ka[]) null;
+            field_b = (ToolkitModel[]) null;
             this.pruneDudTargets((byte) -12);
           } else {
             this.pruneDudTargets((byte) -12);

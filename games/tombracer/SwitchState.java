@@ -4,7 +4,7 @@
 final class SwitchState implements noa {
     private int releaseDelay;
     private int pressDelay;
-    static ka[] field_a;
+    static ToolkitModel[] field_a;
     private boolean firesOnActivate;
     private int usesLeft;
     private int activateDelay;

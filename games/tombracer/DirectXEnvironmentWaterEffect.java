@@ -74,11 +74,11 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
 
     final void disable(int param0) {
         if (this.field_j) {
-          this.field_i.a((jagdx.IDirect3DVertexShader) null, -1);
-          this.field_i.a(-92, (jagdx.IDirect3DPixelShader) null);
-          this.owner.e(1, false);
+          this.field_i.bindVertexShader((jagdx.IDirect3DVertexShader) null, -1);
+          this.field_i.bindPixelShader(-92, (jagdx.IDirect3DPixelShader) null);
+          this.owner.setActiveTextureUnit(1, false);
           this.owner.bindTexture(true, (GpuTexture) null);
-          this.owner.e(0, false);
+          this.owner.setActiveTextureUnit(0, false);
           this.owner.bindTexture(true, (GpuTexture) null);
           this.field_j = false;
           if (param0 >= -4) {
@@ -102,17 +102,17 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
     final void enable(int param0, boolean param1) {
         jagdx.IDirect3DDevice var5 = null;
         int var4 = 11 % ((param0 - 41) / 62);
-        na var3 = this.owner.n(33);
+        na var3 = this.owner.environmentCubeTexture(33);
         if (!this.field_d) {
           return;
         }
         if (var3 != null) {
           var5 = this.field_i.field_jd;
-          this.field_i.a(this.field_e, -1);
-          this.field_i.a(-108, this.field_g);
-          this.owner.e(1, false);
+          this.field_i.bindVertexShader(this.field_e, -1);
+          this.field_i.bindPixelShader(-108, this.field_g);
+          this.owner.setActiveTextureUnit(1, false);
           this.owner.bindTexture(true, var3);
-          this.owner.e(0, false);
+          this.owner.setActiveTextureUnit(0, false);
           this.owner.bindTexture(true, this.field_f.field_f);
           this.field_j = true;
           this.onModelMatrixChanged(true);
@@ -175,8 +175,8 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (param0) {
           if (this.field_j) {
             var2 = this.field_i.field_jd;
-            var3 = this.field_i.E(14);
-            var4 = this.field_i.n((byte) 4);
+            var3 = this.field_i.getViewTransform(14);
+            var4 = this.field_i.getModelViewTransform((byte) 4);
             var2.setVertexShaderConstantF(0, var4.writeRowMajor4x4(false, field_h));
             var2.setVertexShaderConstantF(4, var3.writeLinearRowMajor4x4(field_h, 74));
           }
@@ -189,7 +189,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         AffineTransform3D var3 = null;
         if (this.field_j) {
           var2 = this.field_i.field_jd;
-          var3 = this.field_i.n((byte) -124);
+          var3 = this.field_i.getModelViewTransform((byte) -124);
           var2.setVertexShaderConstantF(0, var3.writeRowMajor4x4(false, field_h));
         }
         if (param0 == 107) {

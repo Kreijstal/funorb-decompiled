@@ -10,7 +10,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         int var3 = 127 / ((param0 - 41) / 62);
         jaggl.OpenGL.glBindProgramARB(34336, this.field_d.field_b);
         jaggl.OpenGL.glEnable(34336);
-        this.owner.a(PlayerContextMenu.field_j, 0, -37);
+        this.owner.setColorCombineSource(PlayerContextMenu.field_j, 0, -37);
     }
 
     final void bindTexture(int param0, GpuTexture param1, int param2) {
@@ -39,7 +39,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     }
 
     final void disable(int param0) {
-        this.owner.a(ej.field_c, 0, -123);
+        this.owner.setColorCombineSource(ej.field_c, 0, -123);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34820);
         if (param0 <= -4) {

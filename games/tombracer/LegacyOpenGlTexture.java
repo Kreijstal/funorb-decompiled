@@ -30,7 +30,7 @@ abstract class LegacyOpenGlTexture implements FramebufferAttachment {
         int var2 = 0;
         if (this.toolkit.field_id) {
           var2 = this.estimatedBytes(9729);
-          this.toolkit.a(true, this);
+          this.toolkit.bindTexture(true, this);
           jaggl.OpenGL.glGenerateMipmapEXT(this.target);
           this.mipmapped = true;
           this.applyFilter(true);
@@ -45,7 +45,7 @@ abstract class LegacyOpenGlTexture implements FramebufferAttachment {
     }
 
     private final void applyFilter(boolean param0) {
-        this.toolkit.a(param0, this);
+        this.toolkit.bindTexture(param0, this);
         if (!this.linearFiltering) {
           jaggl.OpenGL.glTexParameteri(this.target, 10241, this.mipmapped ? 9984 : 9728);
           jaggl.OpenGL.glTexParameteri(this.target, 10240, 9728);
@@ -84,7 +84,7 @@ abstract class LegacyOpenGlTexture implements FramebufferAttachment {
     }
 
     private final int estimatedBytes(int param0) {
-        int var2 = this.toolkit.a(this.internalFormat, (byte) -65) * this.texelCount;
+        int var2 = this.toolkit.bytesPerPixel(this.internalFormat, (byte) -65) * this.texelCount;
         if (param0 == 9729) {
           return this.mipmapped ? var2 * 4 / 3 : var2;
         }
@@ -142,7 +142,7 @@ abstract class LegacyOpenGlTexture implements FramebufferAttachment {
 
     final void close(int param0) {
         if (param0 < this.textureId) {
-          this.toolkit.a((byte) -16, this.textureId, this.estimatedBytes(9729));
+          this.toolkit.queueTextureDeletion((byte) -16, this.textureId, this.estimatedBytes(9729));
           this.textureId = 0;
         }
     }

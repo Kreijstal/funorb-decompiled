@@ -39,9 +39,9 @@ final class WallTile implements Renderable {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        ka var6 = null;
-        ka var7 = null;
-        ka var8 = null;
+        ToolkitModel var6 = null;
+        ToolkitModel var7 = null;
+        ToolkitModel var8 = null;
         int var9 = 0;
         int var10 = 0;
         var10 = TombRacer.field_G ? 1 : 0;

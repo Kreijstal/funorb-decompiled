@@ -171,7 +171,7 @@ public final class TombRacer extends rfa implements ls {
           }
           if (PlayPhase.beginReconnectGracePeriod(param2 ^ 110) &&
             !SnakePitTile.a(false)) {
-            tga.field_a.c(-1073741824, 0, aaa.a(false), 0, param2 ^ -22956, SwitchLinkList.b(0));
+            tga.field_a.fillRectangleAlpha(-1073741824, 0, aaa.a(false), 0, param2 ^ -22956, SwitchLinkList.b(0));
             var5_ref_ssa = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
             var5_ref_ssa.pushIntersectClip(aaa.a(false) + mp.a((byte) -112) >> 1, SwitchLinkList.b(0) - MatchPhase.a(96) >> 1, (byte) -12, SwitchLinkList.b(0) + MatchPhase.a(96) >> 1, aaa.a(false) - mp.a((byte) -125) >> 1);
             if (dq.field_f == null) {
@@ -187,7 +187,7 @@ public final class TombRacer extends rfa implements ls {
             if (!SnakePitTile.a(false)) {
               tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             } else {
-              tga.field_a.c(-1073741824, 0, aaa.a(false), 0, -22971, SwitchLinkList.b(0));
+              tga.field_a.fillRectangleAlpha(-1073741824, 0, aaa.a(false), 0, -22971, SwitchLinkList.b(0));
               var5 = ComponentTargetList.a(false);
               var6 = PlantComponent.A(-1);
               var7 = PillarComponent.A(param2 - 7128);
@@ -374,7 +374,7 @@ public final class TombRacer extends rfa implements ls {
         za.releaseStatics((byte) 86);
         FontMetrics.releaseStatics(-63);
         oc.releaseStatics((byte) -71);
-        ka.releaseStatics(-11);
+        ToolkitModel.releaseStatics(-11);
         SceneLight.releaseStatics(false);
         SecondaryLinkQueue.releaseStatics(param0 + 3556);
         ConsoleWindow.releaseStatics(0);
@@ -699,7 +699,7 @@ public final class TombRacer extends rfa implements ls {
         OpenGlFramebuffer.releaseStatics(param0 ^ -33413);
         LegacyOpenGlTexture.releaseStatics(1956);
         LegacyOpenGlTexture2D.releaseStatics(-1);
-        np.releaseStatics(0);
+        OpenGlModel.releaseStatics(0);
         tj.releaseStatics(360);
         qf.releaseStatics((byte) -93);
         LegacyOpenGlCubeTexture.releaseStatics(34067);
@@ -713,7 +713,7 @@ public final class TombRacer extends rfa implements ls {
         ShaderEffect.releaseStatics((byte) 101);
         ld.releaseStatics((byte) -126);
         mna.releaseStatics(false);
-        gja.g(3);
+        HardwareModel.g(3);
         ft.releaseStatics((byte) 102);
         fp.releaseStatics(29325);
         dn.releaseStatics(0);
@@ -995,10 +995,10 @@ public final class TombRacer extends rfa implements ls {
         int var2 = aaa.a(false);
         int var3 = SwitchLinkList.b(0);
         if (DefaultTileRenderable.e(-22766)) {
-          tga.field_a.h();
-          tga.field_a.a(0.8999999761581421f, 1.0f, 1.0f);
-          if (tga.field_a.f()) {
-            tga.field_a.a(0, 0, var2, var3);
+          tga.field_a.enableBloom();
+          tga.field_a.setBloomParameters(0.8999999761581421f, 1.0f, 1.0f);
+          if (tga.field_a.isBloomEnabled()) {
+            tga.field_a.setPostProcessBounds(0, 0, var2, var3);
           }
         }
         int var4 = 106 / ((param0 + 73) / 46);
@@ -1006,9 +1006,9 @@ public final class TombRacer extends rfa implements ls {
         tga.field_a.ya();
         tga.field_a.DA(var2 / 2, var3 / 2, 512, 512);
         tga.field_a.f(8, 16384);
-        Transform3D var5 = tga.field_a.b();
+        Transform3D var5 = tga.field_a.createTransform();
         var5.setCamera(0, 0, -1600, 0, 0, 0);
-        tga.field_a.a(var5);
+        tga.field_a.setTransform(var5);
     }
 
     final boolean isConnectionBusy(byte param0) {
@@ -1419,8 +1419,8 @@ public final class TombRacer extends rfa implements ls {
           qva qva = null;
           Throwable decompiledCaughtException = null;
           if (DefaultTileRenderable.e(-22766) &&
-            tga.field_a.f()) {
-            tga.field_a.c();
+            tga.field_a.isBloomEnabled()) {
+            tga.field_a.applyPostProcessing();
           }
           tga.field_a.setLights(0, (SceneLight[]) null);
           if (HelloCommand.field_o != null &&
@@ -1431,7 +1431,7 @@ public final class TombRacer extends rfa implements ls {
             return;
           }
           try {
-            tga.field_a.e(param0 + 28581);
+            tga.field_a.presentFrame(param0 + 28581);
           } catch (qva decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             qva = (qva) (Object) decompiledCaughtException;

@@ -490,12 +490,12 @@ final class SnakePitModel extends TrapModel {
         return;
     }
 
-    final ka getTileModel(boolean param0, SnakePitTile param1) {
+    final ToolkitModel getTileModel(boolean param0, SnakePitTile param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RenderScene var4 = null;
-        ka stackIn_9_0 = null;
-        ka stackIn_13_0 = null;
+        ToolkitModel stackIn_9_0 = null;
+        ToolkitModel stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

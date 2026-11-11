@@ -266,8 +266,8 @@ final class fga implements ShellListener {
                   stackIn_47_0 = (!this.a((byte) -121, var6_intLifetime1)) ? -13391309 : -2013231104;
                   var8 = stackIn_47_0;
                 }
-                var3.c(var8, this.field_d[var5Lifetime1], 40, this.field_b[var5Lifetime1], -22971, 30);
-                var3.a(this.field_b[var5Lifetime1], this.field_d[var5Lifetime1], 30, 40, -10066330, (byte) -107);
+                var3.fillRectangleAlpha(var8, this.field_d[var5Lifetime1], 40, this.field_b[var5Lifetime1], -22971, 30);
+                var3.drawRectOutlineAlpha(this.field_b[var5Lifetime1], this.field_d[var5Lifetime1], 30, 40, -10066330, (byte) -107);
                 var9 = null;
                 if (var6_intLifetime1 != -1) {
                   var9 = Integer.toString(var6_intLifetime1);
@@ -289,7 +289,7 @@ final class fga implements ShellListener {
             }
             RoomEffectTraps.a(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + RandomAccessFileHandle.getConnectorRoomCount(param0 + 86), 10, kn.field_p, 16777215);
             try {
-              var3.e(param0 - 1);
+              var3.presentFrame(param0 - 1);
             } catch (qva decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (qva) (Object) decompiledCaughtException;

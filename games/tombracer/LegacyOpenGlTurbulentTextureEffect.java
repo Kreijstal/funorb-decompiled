@@ -31,12 +31,12 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
           return;
         }
         this.field_i.callList(4864, '\0');
-        this.toolkit.e(1, true);
+        this.toolkit.setActiveTextureUnit(1, true);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glLoadMatrixf(this.toolkit.field_Tc.affineMatrix(-103), 0);
         int var3 = 5 / ((56 - param1) / 48);
         jaggl.OpenGL.glMatrixMode(5888);
-        this.toolkit.e(0, true);
+        this.toolkit.setActiveTextureUnit(0, true);
         if (this.field_h == this.toolkit.field_Oc) {
         } else {
           var4 = this.toolkit.field_Oc % 5000 * 128 / 5000;
@@ -183,8 +183,8 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
 
     final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
         try {
-          this.toolkit.a(true, param2);
-          this.toolkit.d(1, param0);
+          this.toolkit.bindTexture(true, param2);
+          this.toolkit.setTextureCombineMode(1, param0);
           if (param1 != 32221) {
             field_j = (SoundCache) null;
           }
@@ -196,23 +196,23 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
     private final void a(byte param0) {
         this.field_i = new OpenGlDisplayLists(this.toolkit, 2);
         this.field_i.beginList((byte) 6, 0);
-        this.toolkit.e(1, true);
+        this.toolkit.setActiveTextureUnit(1, true);
         this.toolkit.setTextureConstantArgb(1104971864, -16777216);
         this.toolkit.setTextureCombineOperations(260, 8960, 7681);
-        this.toolkit.b(34166, 3, 0, 770);
-        this.toolkit.e(0, true);
+        this.toolkit.setAlphaCombineArgument(34166, 3, 0, 770);
+        this.toolkit.setActiveTextureUnit(0, true);
         int var2 = 67 / ((param0 + 62) / 58);
         jaggl.OpenGL.glBindProgramARB(34336, this.field_k.field_a);
         jaggl.OpenGL.glEnable(34336);
         this.field_i.endList((byte) -94);
         this.field_i.beginList((byte) 6, 1);
-        this.toolkit.e(1, true);
+        this.toolkit.setActiveTextureUnit(1, true);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glMatrixMode(5888);
-        this.toolkit.d(1, 0);
-        this.toolkit.b(5890, 3, 0, 770);
-        this.toolkit.e(0, true);
+        this.toolkit.setTextureCombineMode(1, 0);
+        this.toolkit.setAlphaCombineArgument(5890, 3, 0, 770);
+        this.toolkit.setActiveTextureUnit(0, true);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34336);
         jaggl.OpenGL.glDisable(34820);
@@ -235,32 +235,32 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
         if (this.field_i == null) {
           return;
         }
-        this.toolkit.e(1, true);
+        this.toolkit.setActiveTextureUnit(1, true);
         if ((128 & param0) == 0) {
           if (1 != (param1 & 1)) {
             if (!this.field_m.field_g) {
-              this.toolkit.a(true, this.field_m.field_f[0]);
+              this.toolkit.bindTexture(true, this.field_m.field_f[0]);
             } else {
-              this.toolkit.a(true, this.field_m.field_h);
+              this.toolkit.bindTexture(true, this.field_m.field_h);
             }
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
           } else {
             if (!this.field_m.field_g) {
               var4 = 16 * (this.toolkit.field_Oc % 4000) / 4000;
-              this.toolkit.a(true, this.field_m.field_f[var4]);
+              this.toolkit.bindTexture(true, this.field_m.field_f[var4]);
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
             } else {
-              this.toolkit.a(true, this.field_m.field_h);
+              this.toolkit.bindTexture(true, this.field_m.field_h);
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, this.field_l, 0.0f, 0.0f, 1.0f);
             }
           }
         } else {
-          this.toolkit.a(true, (LegacyOpenGlTexture) null);
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
         }
         if (param2 <= 117) {
           this.field_e = (float[]) null;
         }
-        this.toolkit.e(0, true);
+        this.toolkit.setActiveTextureUnit(0, true);
         if ((64 & param0) != 0) {
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
         } else {
@@ -286,9 +286,9 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
           return;
         }
         this.field_i.callList(4864, '\001');
-        this.toolkit.e(1, !param0 ? true : false);
-        this.toolkit.a(true, (LegacyOpenGlTexture) null);
-        this.toolkit.e(0, !param0 ? true : false);
+        this.toolkit.setActiveTextureUnit(1, !param0 ? true : false);
+        this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
+        this.toolkit.setActiveTextureUnit(0, !param0 ? true : false);
         if (param0) {
           this.field_e = (float[]) null;
         }

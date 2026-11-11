@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class np extends ka {
+final class OpenGlModel extends ToolkitModel {
     private float[] field_y;
     private byte field_Z;
     private fd[] field_f;
@@ -64,7 +64,7 @@ final class np extends ka {
     private int[] field_A;
     private short[] field_db;
 
-    private final void c(int param0) {
+    private final void computeBounds(int param0) {
         int stackIn_33_0 = 0;
         int stackIn_33_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -269,7 +269,7 @@ final class np extends ka {
             }
           }
           if (param0 != -2117016184) {
-            this.b();
+            this.unlockForUpdate();
           }
           stackIn_31_0 = (var6_int << 8) + 255 - (param2 & 255);
           return stackIn_31_0;
@@ -314,7 +314,7 @@ final class np extends ka {
         }
     }
 
-    private final short a(long param0, int param1, int param2, int param3, byte param4, int param5, int param6, float param7, oc param8, float param9) {
+    private final short findOrAddVertex(long param0, int param1, int param2, int param3, byte param4, int param5, int param6, float param7, oc param8, float param9) {
         int fieldTemp$0 = 0;
         short stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -386,7 +386,7 @@ final class np extends ka {
         }
     }
 
-    private final ka a(boolean param0, int param1, boolean param2, int param3, np param4, np param5) {
+    private final ToolkitModel copyInto(boolean param0, int param1, boolean param2, int param3, OpenGlModel param4, OpenGlModel param5) {
         int[] array$0 = null;
         int[] array$1 = null;
         int[] array$2 = null;
@@ -404,7 +404,7 @@ final class np extends ka {
         short[] array$14 = null;
         fd[] array$15 = null;
         int stackIn_79_0 = 0;
-        np stackIn_326_0 = null;
+        OpenGlModel stackIn_326_0 = null;
         RuntimeException stackIn_330_0 = null;
         StringBuilder stackIn_330_1 = null;
         String stackIn_331_2 = null;
@@ -1025,8 +1025,8 @@ final class np extends ka {
           param5.field_p = this.field_p;
           param5.field_fb = this.field_fb;
           param5.field_d = this.field_d;
-          stackIn_326_0 = (np) (param5);
-          return (ka) ((Object) stackIn_326_0);
+          stackIn_326_0 = (OpenGlModel) (param5);
+          return (ToolkitModel) ((Object) stackIn_326_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -1128,7 +1128,7 @@ final class np extends ka {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void tintColours(int param0, int param1, int param2, int param3) {
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1210,17 +1210,17 @@ final class np extends ka {
         }
     }
 
-    final ka a(byte param0, int param1, boolean param2) {
-        np dupTemp$0 = null;
+    final ToolkitModel copy(byte param0, int param1, boolean param2) {
+        OpenGlModel dupTemp$0 = null;
         boolean stackIn_23_1 = false;
         int stackIn_23_2 = 0;
         Object stackIn_24_0;
         boolean stackIn_24_3;
-        ka stackIn_25_0 = null;
+        ToolkitModel stackIn_25_0 = null;
         RuntimeException decompiledCaughtException = null;
-        np var4 = null;
+        OpenGlModel var4 = null;
         RuntimeException var4_ref = null;
-        np var5 = null;
+        OpenGlModel var5 = null;
         int var6 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
@@ -1242,7 +1242,7 @@ final class np extends ka {
                     var5 = this.field_R.field_Xb;
                     var4 = this.field_R.field_yb;
                     if (var6 != 0) {
-                      dupTemp$0 = new np(this.field_R);
+                      dupTemp$0 = new OpenGlModel(this.field_R);
                       var5 = dupTemp$0;
                       var4 = dupTemp$0;
                       var5 = this.field_R.field_D;
@@ -1251,7 +1251,7 @@ final class np extends ka {
                       var5 = this.field_R.field_i;
                     }
                   } else {
-                    dupTemp$0 = new np(this.field_R);
+                    dupTemp$0 = new OpenGlModel(this.field_R);
                     var5 = dupTemp$0;
                     var4 = dupTemp$0;
                     if (var6 != 0) {
@@ -1282,7 +1282,7 @@ final class np extends ka {
             stackIn_24_0 = this;
             stackIn_24_3 = true;
           }
-          stackIn_25_0 = this.a(stackIn_23_1, stackIn_23_2, stackIn_24_3, -22857, var5, var4);
+          stackIn_25_0 = this.copyInto(stackIn_23_1, stackIn_23_2, stackIn_24_3, -22857, var5, var4);
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1291,7 +1291,7 @@ final class np extends ka {
         }
     }
 
-    final void a(Transform3D param0, el param1, int param2, int param3) {
+    final void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3) {
         OpenGlTransform3D var5 = null;
         OpenGlTransform3D var6 = null;
         float var7 = 0.0f;
@@ -1325,7 +1325,7 @@ final class np extends ka {
           }
           var5 = this.field_R.field_jd;
           if (!this.field_l) {
-            this.c(2709);
+            this.computeBounds(2709);
           }
           var6 = (OpenGlTransform3D) (param0);
           it.field_a = var6.field_h * var5.field_q + (var5.field_j * var6.field_k + var5.field_h * var6.field_r);
@@ -1403,12 +1403,12 @@ final class np extends ka {
               this.field_R.field_Gc <= var22) {
             }
           }
-          this.field_R.a((byte) 88, (float)param2);
-          this.field_R.j((byte) -121);
-          this.field_R.b(var6, 112);
+          this.field_R.setOrthographicScale((byte) 88, (float)param2);
+          this.field_R.prepareOrthographicModelRendering((byte) -121);
+          this.field_R.pushTransformMatrix(var6, 112);
           this.a(false);
-          this.field_R.n((byte) -91);
-          this.b((byte) -30);
+          this.field_R.popMatrix((byte) -91);
+          this.renderBuffers((byte) -30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2326,7 +2326,7 @@ final class np extends ka {
         }
     }
 
-    private final void b(byte param0) {
+    private final void renderBuffers(byte param0) {
         int var14 = 0;
         OpenGlToolkit stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
@@ -2352,12 +2352,12 @@ final class np extends ka {
           boolean decompiledFrameCompleted0 = true;
           if (null != this.field_r) {
             var2 = this.field_R.field_mc;
-            this.field_R.u(28630);
+            this.field_R.pushMatrix(28630);
             stackIn_7_0 = this.field_R;
             stackIn_8_1 = !(this.field_s);
-            ((OpenGlToolkit) (Object) stackIn_7_0).a(stackIn_8_1, false);
+            ((OpenGlToolkit) (Object) stackIn_7_0).setDepthWriteAllowed(stackIn_8_1, false);
             this.field_R.setLightingEnabled(param0 ^ -35, false);
-            this.field_R.a((tj) null, this.field_R.field_Rb, (tj) null, -114, this.field_R.field_Bc);
+            this.field_R.bindVertexArrays((tj) null, this.field_R.field_Rb, (tj) null, -114, this.field_R.field_Bc);
             var3 = 0;
             while (var3 < this.field_G) {
               var4 = this.field_r[var3];
@@ -2370,7 +2370,7 @@ final class np extends ka {
                 break;
               }
               if (!stackIn_11_0 ||
-                !this.field_R.f()) {
+                !this.field_R.isBloomEnabled()) {
                 var6 = (float)(this.field_P[var4.field_b] + this.field_P[var4.field_k] + this.field_P[var4.field_m]) * 0.3333333134651184f;
                 var7 = 0.3333333134651184f * (float)(this.field_K[var4.field_b] + this.field_K[var4.field_k] + this.field_K[var4.field_m]);
                 var8 = (float)(this.field_A[var4.field_k] + this.field_A[var4.field_m] + this.field_A[var4.field_b]) * 0.3333333134651184f;
@@ -2379,25 +2379,25 @@ final class np extends ka {
                 var11 = TextLayout.field_b + (NativeSceneLight.field_q * var8 + (var7 * it.field_a + var6 * Weapon.field_u));
                 var12 = (float)(1.0 / Math.sqrt((double)(var11 * var11 + (var10 * var10 + var9 * var9)))) * (float)var4.field_j;
                 var2.a(var5.field_g, var12 * var11 + -var11, var9 + (float)var5.field_h - var9 * var12, var4.field_e * var5.field_f >> 7, (byte) -60, var4.field_i * var5.field_b >> 7, var12 * var10 + (-var10 + (float)var5.field_a));
-                this.field_R.a(var2, 0);
+                this.field_R.loadTransformMatrix(var2, 0);
                 var13 = var5.field_c;
                 jaggl.OpenGL.glColor4ub((byte)(var13 >> 16), (byte)(var13 >> 8), (byte)var13, (byte)(var13 >> 24));
-                this.field_R.c((int) var4.field_f, 32677);
-                this.field_R.a((byte) 94, (int) var4.field_c);
-                this.field_R.a(0, 4, 7, true);
+                this.field_R.bindMaterialDefault((int) var4.field_f, 32677);
+                this.field_R.setBlendMode((byte) 94, (int) var4.field_c);
+                this.field_R.drawArrays(0, 4, 7, true);
               }
               var3++;
             }
             if (decompiledFrameCompleted0) {
-              this.field_R.a(true, false);
-              this.field_R.n((byte) -65);
+              this.field_R.setDepthWriteAllowed(true, false);
+              this.field_R.popMatrix((byte) -65);
             }
           }
           if (decompiledFrameCompleted0) {
             stackIn_21_0 = param0;
           }
           if (stackIn_21_0 != -30) {
-            this.a(-99, (int[]) null, -39, -40, 4, -64, false);
+            this.applyTransform(-99, (int[]) null, -39, -40, 4, -64, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2407,7 +2407,7 @@ final class np extends ka {
         }
     }
 
-    final void a(Transform3D param0, el param1, int param2) {
+    final void draw(Transform3D param0, el param1, int param2) {
         RuntimeException stackIn_67_0 = null;
         StringBuilder stackIn_67_1 = null;
         String stackIn_68_2 = null;
@@ -2444,7 +2444,7 @@ final class np extends ka {
           var4 = this.field_R.field_jd;
           var5 = (OpenGlTransform3D) (param0);
           if (!this.field_l) {
-            this.c(2709);
+            this.computeBounds(2709);
           }
           TextLayout.field_b = var4.field_o + (var4.field_j * var5.field_m + var4.field_h * var5.field_p + var4.field_q * var5.field_o);
           it.field_a = var5.field_k * var4.field_j + var4.field_h * var5.field_r + var4.field_q * var5.field_h;
@@ -2540,11 +2540,11 @@ final class np extends ka {
               var23 >= var22) {
             }
           }
-          this.field_R.c(false);
-          this.field_R.b(var5, 117);
+          this.field_R.preparePerspectiveModelRendering(false);
+          this.field_R.pushTransformMatrix(var5, 117);
           this.a(false);
-          this.field_R.n((byte) -96);
-          this.b((byte) -30);
+          this.field_R.popMatrix((byte) -96);
+          this.renderBuffers((byte) -30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2566,7 +2566,7 @@ final class np extends ka {
         }
     }
 
-    final void b() {
+    final void unlockForUpdate() {
     }
 
     final boolean NA() {
@@ -3238,7 +3238,7 @@ final class np extends ka {
         }
     }
 
-    final void a() {
+    final void lockForUpdate() {
     }
 
     private final void a(boolean param0) {
@@ -3278,7 +3278,7 @@ final class np extends ka {
               stackIn_24_1 = 96;
               stackIn_25_2 = (this.field_F != null);
               ((OpenGlToolkit) (Object) stackIn_24_0).setLightingEnabled(stackIn_24_1, stackIn_25_2);
-              this.field_R.a(this.field_kb, this.field_ab, this.field_F, -120, this.field_g);
+              this.field_R.bindVertexArrays(this.field_kb, this.field_ab, this.field_F, -120, this.field_g);
               var2_int = -1 + this.field_p.length;
               var3 = 0;
               while (var3 < var2_int) {
@@ -3294,8 +3294,8 @@ final class np extends ka {
                 stackIn_37_0 = this.field_R;
                 stackIn_37_1 = 70;
                 stackIn_38_2 = (null != this.field_F);
-                ((OpenGlToolkit) (Object) stackIn_37_0).a((byte) stackIn_37_1, stackIn_38_2, var6);
-                this.field_R.a(3 * var4, 4, -513, this.field_w.field_a, 3 * (var5 - var4));
+                ((OpenGlToolkit) (Object) stackIn_37_0).bindMaterial((byte) stackIn_37_1, stackIn_38_2, var6);
+                this.field_R.drawIndexedElements(3 * var4, 4, -513, this.field_w.field_a, 3 * (var5 - var4));
                 var3++;
               }
             }
@@ -3348,7 +3348,7 @@ final class np extends ka {
         }
     }
 
-    final void a(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void applyTransform(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
         int stackIn_45_0 = 0;
@@ -4032,7 +4032,7 @@ final class np extends ka {
               if (this.field_g == null ||
                 this.field_g.field_d != null) {
                 if (!this.field_l) {
-                  this.c(2709);
+                  this.computeBounds(2709);
                 }
                 var2_int = 1;
                 if (var5 != 0) {
@@ -4050,13 +4050,13 @@ final class np extends ka {
                 this.field_gb = true;
                 if (var5 != 0) {
                   if (!this.field_l) {
-                    this.c(2709);
+                    this.computeBounds(2709);
                   }
                   var3 = 1;
                 }
               } else {
                 if (!this.field_l) {
-                  this.c(2709);
+                  this.computeBounds(2709);
                 }
                 var3 = 1;
               }
@@ -4066,7 +4066,7 @@ final class np extends ka {
               if (this.field_g == null ||
                 null != this.field_g.field_d) {
                 if (!this.field_l) {
-                  this.c(2709);
+                  this.computeBounds(2709);
                 }
                 var4 = 1;
                 if (var5 != 0) {
@@ -4227,7 +4227,7 @@ final class np extends ka {
         }
     }
 
-    np(OpenGlToolkit param0) {
+    OpenGlModel(OpenGlToolkit param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -4263,7 +4263,7 @@ final class np extends ka {
         }
     }
 
-    np(OpenGlToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
+    OpenGlModel(OpenGlToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
         int fieldTemp$0 = 0;
         short dupTemp$1 = 0;
         short dupTemp$2 = 0;
@@ -4974,11 +4974,11 @@ final class np extends ka {
                     var35 = param1.field_t[var17];
                     var36 = param1.field_J[var17];
                     var37 = var11[var34];
-                    this.field_H[var16] = this.a(var32_long, var37.field_a, var37.field_b, var37.field_d, (byte) -40, var34, var37.field_e, var23, param1, var22);
+                    this.field_H[var16] = this.findOrAddVertex(var32_long, var37.field_a, var37.field_b, var37.field_d, (byte) -40, var34, var37.field_e, var23, param1, var22);
                     var37 = var11[var35];
-                    this.field_z[var16] = this.a(var32_long + (long)var28, var37.field_a, var37.field_b, var37.field_d, (byte) -40, var35, var37.field_e, var25, param1, var24);
+                    this.field_z[var16] = this.findOrAddVertex(var32_long + (long)var28, var37.field_a, var37.field_b, var37.field_d, (byte) -40, var35, var37.field_e, var25, param1, var24);
                     var37 = var11[var36];
-                    this.field_hb[var16] = this.a(var32_long + (long)var29, var37.field_a, var37.field_b, var37.field_d, (byte) -40, var36, var37.field_e, var27, param1, var26);
+                    this.field_hb[var16] = this.findOrAddVertex(var32_long + (long)var29, var37.field_a, var37.field_b, var37.field_d, (byte) -40, var36, var37.field_e, var27, param1, var26);
                   } else {
                     if (var31 == 1) {
                       var32 = var15[var17];
@@ -4989,9 +4989,9 @@ final class np extends ka {
                         stackIn_313_1 = 2048;
                       }
                       var33 = (long)(stackIn_312_0 + stackIn_313_1) + ((long)var20 + (long)(var18 << 8) + (long)(var30 << 24) << 32);
-                      this.field_H[var16] = this.a(var33, var32.field_a, var32.field_c, 0, (byte) -40, (int) param1.field_a[var17], var32.field_b, var23, param1, var22);
-                      this.field_z[var16] = this.a(var33 + (long)var28, var32.field_a, var32.field_c, 0, (byte) -40, (int) param1.field_t[var17], var32.field_b, var25, param1, var24);
-                      this.field_hb[var16] = this.a((long)var29 + var33, var32.field_a, var32.field_c, 0, (byte) -40, (int) param1.field_J[var17], var32.field_b, var27, param1, var26);
+                      this.field_H[var16] = this.findOrAddVertex(var33, var32.field_a, var32.field_c, 0, (byte) -40, (int) param1.field_a[var17], var32.field_b, var23, param1, var22);
+                      this.field_z[var16] = this.findOrAddVertex(var33 + (long)var28, var32.field_a, var32.field_c, 0, (byte) -40, (int) param1.field_t[var17], var32.field_b, var25, param1, var24);
+                      this.field_hb[var16] = this.findOrAddVertex((long)var29 + var33, var32.field_a, var32.field_c, 0, (byte) -40, (int) param1.field_J[var17], var32.field_b, var27, param1, var26);
                     }
                   }
                   if (param1.field_n != null) {

@@ -116,7 +116,7 @@ final class SecondaryLinkQueue {
           if (param1 >= -85) {
             field_c = (String) null;
           }
-          stackIn_3_0 = gja.readFileBytes((int)param0.length(), param0, 0);
+          stackIn_3_0 = HardwareModel.readFileBytes((int)param0.length(), param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

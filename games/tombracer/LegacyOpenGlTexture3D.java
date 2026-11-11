@@ -25,7 +25,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
           this.field_o = param4;
           this.field_r = param2;
           this.field_q = param3;
-          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
           jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.field_r, this.field_q, this.field_o, 0, sja.toBaseInternalFormat(this.internalFormat, 20934), 5121, (byte[]) null, 0);
           this.setLinearFiltering(true, 3);
         } catch (RuntimeException runtimeException) {
@@ -34,7 +34,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
     }
 
     final void copyFromFramebuffer(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+        this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
         jaggl.OpenGL.glCopyTexSubImage3D(this.target, param6, param3, param0, param2, param1, param4, param5, param7);
         jaggl.OpenGL.glFlush();
     }
@@ -47,7 +47,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
           this.field_o = param4;
           this.field_r = param2;
           this.field_q = param3;
-          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.field_r, this.field_q, this.field_o, 0, param6, 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);

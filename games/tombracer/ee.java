@@ -49,7 +49,7 @@ final class ee implements WidgetPainter {
           return;
         }
         UsernameSuggestionsPanel.field_y = null;
-        np.field_x = null;
+        OpenGlModel.field_x = null;
     }
 
     static {

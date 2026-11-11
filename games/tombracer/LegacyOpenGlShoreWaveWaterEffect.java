@@ -35,10 +35,10 @@ final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
 
     final void disable(boolean param0) {
         if (this.field_e) {
-          this.toolkit.e(1, true);
-          this.toolkit.a(true, (LegacyOpenGlTexture) null);
-          this.toolkit.e(0, true);
-          this.toolkit.a(!param0 ? true : false, (LegacyOpenGlTexture) null);
+          this.toolkit.setActiveTextureUnit(1, true);
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
+          this.toolkit.setActiveTextureUnit(0, true);
+          this.toolkit.bindTexture(!param0 ? true : false, (LegacyOpenGlTexture) null);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_e = false;
         }
@@ -63,8 +63,8 @@ final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
         RuntimeException var4 = null;
         try {
           if (!this.field_e) {
-            this.toolkit.a(true, param2);
-            this.toolkit.d(param1 - 32220, param0);
+            this.toolkit.bindTexture(true, param2);
+            this.toolkit.setTextureCombineMode(param1 - 32220, param0);
           }
           if (param1 != 32221) {
             this.setParameters(-9, -76, 44);
@@ -236,15 +236,15 @@ final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
     final void enable(boolean param0, int param1) {
         float var5 = 0.0f;
         long var6 = 0L;
-        LegacyOpenGlCubeTexture var3 = this.toolkit.n(16664);
+        LegacyOpenGlCubeTexture var3 = this.toolkit.environmentCubeTexture(16664);
         int var4 = -104 / ((56 - param1) / 48);
         if (this.field_c &&
           var3 != null) {
           var5 = (-Math.abs(this.toolkit.field_Wb[1]) + 1.0f) * 2.0f + 1.0f;
-          this.toolkit.e(1, true);
-          this.toolkit.a(true, var3);
-          this.toolkit.e(0, true);
-          this.toolkit.a(true, this.field_f.field_c);
+          this.toolkit.setActiveTextureUnit(1, true);
+          this.toolkit.bindTexture(true, var3);
+          this.toolkit.setActiveTextureUnit(0, true);
+          this.toolkit.bindTexture(true, this.field_f.field_c);
           var6 = this.field_d.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var6);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var6, "normalSampler"), 0);

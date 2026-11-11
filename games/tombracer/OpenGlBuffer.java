@@ -329,7 +329,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
             jaggl.OpenGL.glBufferDataARBub(this.field_k, param1, (byte[]) null, 0, !this.field_j ? 35044 : 35040);
             this.field_h.field_X = this.field_h.field_X + (-this.field_d + param1);
           } else {
-            this.field_b = this.field_h.a(false, param1, false);
+            this.field_b = this.field_h.allocateNativeBuffer(false, param1, false);
           }
           this.field_d = param1;
         }

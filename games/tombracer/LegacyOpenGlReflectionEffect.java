@@ -13,8 +13,8 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           if (param1 != 32221) {
             this.refreshState(true, -91);
           }
-          this.toolkit.a(true, param2);
-          this.toolkit.d(1, param0);
+          this.toolkit.bindTexture(true, param2);
+          this.toolkit.setTextureCombineMode(1, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ma.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -22,37 +22,37 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
 
     final void enable(boolean param0, int param1) {
         int var3 = 33 % ((56 - param1) / 48);
-        LegacyOpenGlCubeTexture var4 = this.toolkit.n(16664);
+        LegacyOpenGlCubeTexture var4 = this.toolkit.environmentCubeTexture(16664);
         if (this.field_d == null) {
-          this.toolkit.b(34168, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(34168, 3, 0, 770);
           return;
         }
         if (var4 == null) {
-          this.toolkit.b(34168, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(34168, 3, 0, 770);
           return;
         }
         if (param0) {
           this.field_d.callList(4864, '\0');
-          this.toolkit.e(1, true);
-          this.toolkit.a(true, var4);
+          this.toolkit.setActiveTextureUnit(1, true);
+          this.toolkit.bindTexture(true, var4);
           jaggl.OpenGL.glMatrixMode(5890);
           jaggl.OpenGL.glLoadMatrixf(this.toolkit.field_Tc.rotationMatrix((byte) 57), 0);
           jaggl.OpenGL.glMatrixMode(5888);
-          this.toolkit.e(0, true);
+          this.toolkit.setActiveTextureUnit(0, true);
           this.field_c = true;
           return;
         }
-        this.toolkit.b(34168, 3, 0, 770);
+        this.toolkit.setAlphaCombineArgument(34168, 3, 0, 770);
     }
 
     final void disable(boolean param0) {
         if (!this.field_c) {
-          this.toolkit.b(5890, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(5890, 3, 0, 770);
         } else {
           this.field_d.callList(4864, '\001');
-          this.toolkit.e(1, true);
-          this.toolkit.a(!param0 ? true : false, (LegacyOpenGlTexture) null);
-          this.toolkit.e(0, true);
+          this.toolkit.setActiveTextureUnit(1, true);
+          this.toolkit.bindTexture(!param0 ? true : false, (LegacyOpenGlTexture) null);
+          this.toolkit.setActiveTextureUnit(0, true);
         }
         this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
         this.field_c = param0 ? true : false;
@@ -78,30 +78,30 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           }
           this.field_d = new OpenGlDisplayLists(param0, 2);
           this.field_d.beginList((byte) 6, 0);
-          this.toolkit.e(1, true);
+          this.toolkit.setActiveTextureUnit(1, true);
           this.toolkit.setTextureCombineOperations(34165, 8960, 7681);
           this.toolkit.setTextureCombineOperands(2, 0, 34168, 770);
-          this.toolkit.b(34167, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(34167, 3, 0, 770);
           jaggl.OpenGL.glTexGeni(8192, 9472, 34066);
           jaggl.OpenGL.glTexGeni(8193, 9472, 34066);
           jaggl.OpenGL.glTexGeni(8194, 9472, 34066);
           jaggl.OpenGL.glEnable(3168);
           jaggl.OpenGL.glEnable(3169);
           jaggl.OpenGL.glEnable(3170);
-          this.toolkit.e(0, true);
+          this.toolkit.setActiveTextureUnit(0, true);
           this.field_d.endList((byte) 5);
           this.field_d.beginList((byte) 6, 1);
-          this.toolkit.e(1, true);
+          this.toolkit.setActiveTextureUnit(1, true);
           this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
           this.toolkit.setTextureCombineOperands(2, 0, 34166, 770);
-          this.toolkit.b(5890, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(5890, 3, 0, 770);
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
           jaggl.OpenGL.glDisable(3170);
           jaggl.OpenGL.glMatrixMode(5890);
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glMatrixMode(5888);
-          this.toolkit.e(0, true);
+          this.toolkit.setActiveTextureUnit(0, true);
           this.field_d.endList((byte) 22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

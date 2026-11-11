@@ -15,7 +15,7 @@ final class pr {
     }
 
     protected final void finalize() throws Throwable {
-        this.field_a.a(this.field_c, -6115);
+        this.field_a.queueShaderObjectDeletion(this.field_c, -6115);
         super.finalize();
     }
 

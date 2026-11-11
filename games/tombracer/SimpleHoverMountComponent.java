@@ -136,7 +136,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         return true;
     }
 
-    final static void drawModelRow(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, ka param7, int param8, ka param9, int param10) {
+    final static void drawModelRow(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, ToolkitModel param7, int param8, ToolkitModel param9, int param10) {
         int var16 = 0;
         int var11_int = 0;
         int var12 = 0;

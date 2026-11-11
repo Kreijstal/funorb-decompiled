@@ -161,7 +161,7 @@ final class SequencePlayer {
         }
     }
 
-    final void applyToModel(int param0, ka param1) {
+    final void applyToModel(int param0, ToolkitModel param1) {
         int var3_int = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -171,9 +171,9 @@ final class SequencePlayer {
         try {
           var3_int = -103 / ((param0 + 36) / 51);
           if (!this.sequence.field_i) {
-            param1.a(-121, hba.field_c, -1, this.field_g, 0, (ena) null, 0, this.sequence.field_h, 0);
+            param1.animate(-121, hba.field_c, -1, this.field_g, 0, (ena) null, 0, this.sequence.field_h, 0);
           } else {
-            param1.a(-124, hba.field_c, this.field_c, this.field_g, this.field_i - this.field_d, hba.field_c, this.field_i, this.sequence.field_h, 0);
+            param1.animate(-124, hba.field_c, this.field_c, this.field_g, this.field_i - this.field_d, hba.field_c, this.field_i, this.sequence.field_h, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

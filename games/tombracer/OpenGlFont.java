@@ -8,8 +8,8 @@ final class OpenGlFont extends GameFont {
     private OpenGlDisplayLists field_f;
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
-        this.field_e.o(-104);
-        this.field_e.a(true, this.field_d);
+        this.field_e.prepareGlyphRendering(-104);
+        this.field_e.bindTexture(true, this.field_d);
         if (!this.field_g &&
           !param4) {
           this.field_e.setTextureCombineOperations(7681, 8960, 7681);
@@ -34,8 +34,8 @@ final class OpenGlFont extends GameFont {
         float var12;
         var9 = (au) (param5);
         var10 = var9.field_d;
-        this.field_e.o(107);
-        this.field_e.a(true, this.field_d);
+        this.field_e.prepareGlyphRendering(107);
+        this.field_e.bindTexture(true, this.field_d);
         if (!this.field_g &&
           !param4) {
           this.field_e.setTextureCombineOperations(7681, 8960, 7681);
@@ -43,8 +43,8 @@ final class OpenGlFont extends GameFont {
           this.field_e.setTextureCombineOperations(7681, 8960, 8448);
           this.field_e.setTextureCombineOperands(0, 0, 34168, 768);
         }
-        this.field_e.e(1, true);
-        this.field_e.a(true, var10);
+        this.field_e.setActiveTextureUnit(1, true);
+        this.field_e.bindTexture(true, var10);
         this.field_e.setTextureCombineOperations(7681, 8960, 8448);
         this.field_e.setTextureCombineOperands(0, 0, 34168, 768);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
@@ -63,8 +63,8 @@ final class OpenGlFont extends GameFont {
         jaggl.OpenGL.glDisable(3169);
         this.field_e.setTextureCombineOperands(0, 0, 5890, 768);
         this.field_e.setTextureCombineOperations(8448, 8960, 8448);
-        this.field_e.a(true, (LegacyOpenGlTexture) null);
-        this.field_e.e(0, true);
+        this.field_e.bindTexture(true, (LegacyOpenGlTexture) null);
+        this.field_e.setActiveTextureUnit(0, true);
         if (this.field_g ||
           param4) {
           this.field_e.setTextureCombineOperands(0, 0, 5890, 768);

@@ -74,9 +74,9 @@ final class CrusherModel extends TrapModel {
               !(param1 + param0 <= BlockModel.field_n.length)) {
               BlockModel.field_n = new int[2 * (param1 + param0)];
             }
-            if (gja.field_B == null ||
-              !(gja.field_B.length >= param0)) {
-              gja.field_B = new boolean[2 * param0];
+            if (HardwareModel.field_B == null ||
+              !(HardwareModel.field_B.length >= param0)) {
+              HardwareModel.field_B = new boolean[2 * param0];
             }
           } else {
             if (bq.field_h.length < param0) {
@@ -93,9 +93,9 @@ final class CrusherModel extends TrapModel {
                 !(param1 + param0 <= BlockModel.field_n.length)) {
                 BlockModel.field_n = new int[2 * (param1 + param0)];
               }
-              if (gja.field_B == null ||
-                !(gja.field_B.length >= param0)) {
-                gja.field_B = new boolean[2 * param0];
+              if (HardwareModel.field_B == null ||
+                !(HardwareModel.field_B.length >= param0)) {
+                HardwareModel.field_B = new boolean[2 * param0];
               }
             } else {
               if (PortalBehaviour.field_o == null) {
@@ -108,9 +108,9 @@ final class CrusherModel extends TrapModel {
                   !(param1 + param0 <= BlockModel.field_n.length)) {
                   BlockModel.field_n = new int[2 * (param1 + param0)];
                 }
-                if (gja.field_B == null ||
-                  !(gja.field_B.length >= param0)) {
-                  gja.field_B = new boolean[2 * param0];
+                if (HardwareModel.field_B == null ||
+                  !(HardwareModel.field_B.length >= param0)) {
+                  HardwareModel.field_B = new boolean[2 * param0];
                 }
               } else {
                 if (param0 > PortalBehaviour.field_o.length) {
@@ -123,9 +123,9 @@ final class CrusherModel extends TrapModel {
                     !(param1 + param0 <= BlockModel.field_n.length)) {
                     BlockModel.field_n = new int[2 * (param1 + param0)];
                   }
-                  if (gja.field_B == null ||
-                    !(gja.field_B.length >= param0)) {
-                    gja.field_B = new boolean[2 * param0];
+                  if (HardwareModel.field_B == null ||
+                    !(HardwareModel.field_B.length >= param0)) {
+                    HardwareModel.field_B = new boolean[2 * param0];
                   }
                 } else {
                   if (ic.field_c == null ||
@@ -136,11 +136,11 @@ final class CrusherModel extends TrapModel {
                     !(param1 + param0 <= BlockModel.field_n.length)) {
                     BlockModel.field_n = new int[2 * (param1 + param0)];
                   }
-                  if (gja.field_B == null) {
-                    gja.field_B = new boolean[2 * param0];
+                  if (HardwareModel.field_B == null) {
+                    HardwareModel.field_B = new boolean[2 * param0];
                   } else {
-                    if (gja.field_B.length < param0) {
-                      gja.field_B = new boolean[2 * param0];
+                    if (HardwareModel.field_B.length < param0) {
+                      HardwareModel.field_B = new boolean[2 * param0];
                     }
                   }
                 }
@@ -163,9 +163,9 @@ final class CrusherModel extends TrapModel {
                 !(param1 + param0 <= BlockModel.field_n.length)) {
                 BlockModel.field_n = new int[2 * (param1 + param0)];
               }
-              if (gja.field_B == null ||
-                !(gja.field_B.length >= param0)) {
-                gja.field_B = new boolean[2 * param0];
+              if (HardwareModel.field_B == null ||
+                !(HardwareModel.field_B.length >= param0)) {
+                HardwareModel.field_B = new boolean[2 * param0];
               }
             } else {
               if (bq.field_h.length < param0) {
@@ -182,9 +182,9 @@ final class CrusherModel extends TrapModel {
                   !(param1 + param0 <= BlockModel.field_n.length)) {
                   BlockModel.field_n = new int[2 * (param1 + param0)];
                 }
-                if (gja.field_B == null ||
-                  !(gja.field_B.length >= param0)) {
-                  gja.field_B = new boolean[2 * param0];
+                if (HardwareModel.field_B == null ||
+                  !(HardwareModel.field_B.length >= param0)) {
+                  HardwareModel.field_B = new boolean[2 * param0];
                 }
               } else {
                 if (PortalBehaviour.field_o == null) {
@@ -197,9 +197,9 @@ final class CrusherModel extends TrapModel {
                     !(param1 + param0 <= BlockModel.field_n.length)) {
                     BlockModel.field_n = new int[2 * (param1 + param0)];
                   }
-                  if (gja.field_B == null ||
-                    !(gja.field_B.length >= param0)) {
-                    gja.field_B = new boolean[2 * param0];
+                  if (HardwareModel.field_B == null ||
+                    !(HardwareModel.field_B.length >= param0)) {
+                    HardwareModel.field_B = new boolean[2 * param0];
                   }
                 } else {
                   if (param0 > PortalBehaviour.field_o.length) {
@@ -212,9 +212,9 @@ final class CrusherModel extends TrapModel {
                       !(param1 + param0 <= BlockModel.field_n.length)) {
                       BlockModel.field_n = new int[2 * (param1 + param0)];
                     }
-                    if (gja.field_B == null ||
-                      !(gja.field_B.length >= param0)) {
-                      gja.field_B = new boolean[2 * param0];
+                    if (HardwareModel.field_B == null ||
+                      !(HardwareModel.field_B.length >= param0)) {
+                      HardwareModel.field_B = new boolean[2 * param0];
                     }
                   } else {
                     if (ic.field_c == null ||
@@ -225,11 +225,11 @@ final class CrusherModel extends TrapModel {
                       !(param1 + param0 <= BlockModel.field_n.length)) {
                       BlockModel.field_n = new int[2 * (param1 + param0)];
                     }
-                    if (gja.field_B == null) {
-                      gja.field_B = new boolean[2 * param0];
+                    if (HardwareModel.field_B == null) {
+                      HardwareModel.field_B = new boolean[2 * param0];
                     } else {
-                      if (gja.field_B.length < param0) {
-                        gja.field_B = new boolean[2 * param0];
+                      if (HardwareModel.field_B.length < param0) {
+                        HardwareModel.field_B = new boolean[2 * param0];
                       }
                     }
                   }
@@ -252,11 +252,11 @@ final class CrusherModel extends TrapModel {
                 !(param1 + param0 <= BlockModel.field_n.length)) {
                 BlockModel.field_n = new int[2 * (param1 + param0)];
               }
-              if (gja.field_B == null) {
-                gja.field_B = new boolean[2 * param0];
+              if (HardwareModel.field_B == null) {
+                HardwareModel.field_B = new boolean[2 * param0];
               } else {
-                if (gja.field_B.length < param0) {
-                  gja.field_B = new boolean[2 * param0];
+                if (HardwareModel.field_B.length < param0) {
+                  HardwareModel.field_B = new boolean[2 * param0];
                 }
               }
             } else {
@@ -274,9 +274,9 @@ final class CrusherModel extends TrapModel {
                   !(param1 + param0 <= BlockModel.field_n.length)) {
                   BlockModel.field_n = new int[2 * (param1 + param0)];
                 }
-                if (gja.field_B == null ||
-                  !(gja.field_B.length >= param0)) {
-                  gja.field_B = new boolean[2 * param0];
+                if (HardwareModel.field_B == null ||
+                  !(HardwareModel.field_B.length >= param0)) {
+                  HardwareModel.field_B = new boolean[2 * param0];
                 }
               } else {
                 if (PortalBehaviour.field_o == null) {
@@ -311,11 +311,11 @@ final class CrusherModel extends TrapModel {
                     }
                   }
                 }
-                if (gja.field_B == null) {
-                  gja.field_B = new boolean[2 * param0];
+                if (HardwareModel.field_B == null) {
+                  HardwareModel.field_B = new boolean[2 * param0];
                 } else {
-                  if (gja.field_B.length < param0) {
-                    gja.field_B = new boolean[2 * param0];
+                  if (HardwareModel.field_B.length < param0) {
+                    HardwareModel.field_B = new boolean[2 * param0];
                   }
                 }
               }
@@ -713,7 +713,7 @@ final class CrusherModel extends TrapModel {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
-        ka var9 = null;
+        ToolkitModel var9 = null;
         int var10 = 0;
         int var11 = 0;
         RuntimeException stackIn_9_0 = null;

@@ -35,13 +35,13 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         int var22 = 0;
         Object var23 = null;
         Object var24 = null;
-        ka var24_ref = null;
-        ka var25_ref_ka = null;
+        ToolkitModel var24_ref = null;
+        ToolkitModel var25_ref_ka = null;
         int var25 = 0;
         int var26 = 0;
-        ka var26_ref_ka = null;
+        ToolkitModel var26_ref_ka = null;
         int var27 = 0;
-        ka var28 = null;
+        ToolkitModel var28 = null;
         int var29 = 0;
         ToolkitSprite var19Lifetime1;
         Object var24Lifetime1;
@@ -159,9 +159,9 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               var26Lifetime2 = param2.getAge(0) * 255 / param2.getLifetime(true);
               stackIn_85_0 = (RoomCompletedScreen.c(param1 ^ -25)) ? 15 : 14;
               var27 = stackIn_85_0;
-              var28 = SpawnerBehaviour.a(var27, param1 ^ -12189, 7).a((byte) 1, 526343, true);
+              var28 = SpawnerBehaviour.a(var27, param1 ^ -12189, 7).copy((byte) 1, 526343, true);
               var28.O(var26Lifetime2 >> 2, 128, var26Lifetime2 >> 2);
-              var28.a(-1, 10, 30, var26Lifetime2);
+              var28.tintColours(-1, 10, 30, var26Lifetime2);
               gqa.a(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
               if (var29 == 0) {
                 break regionExit1;
@@ -325,7 +325,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         int var10 = 0;
         int var11 = 0;
         lqa var12 = null;
-        ka var13 = null;
+        ToolkitModel var13 = null;
         int var14 = 0;
         int var15 = 0;
         var15 = TombRacer.field_G ? 1 : 0;
@@ -360,7 +360,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
                 var12.field_f) {
                 var11 = 15;
               }
-              var13 = SpawnerBehaviour.a(var11, 12166, 7).a((byte) 1, 526343, true);
+              var13 = SpawnerBehaviour.a(var11, 12166, 7).copy((byte) 1, 526343, true);
               var13.O(var10 << 2, 512, var10 << 2);
               stackIn_36_0 = (Projectile) (param2);
               stackIn_37_1 = !(param1);

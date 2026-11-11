@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class AllPlatformsMazeComponent extends MazeComponent {
-    static ka field_O;
+    static ToolkitModel field_O;
     static float field_L;
     static UiComponent field_M;
     static int[] field_K;
@@ -64,7 +64,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
               return false;
             }
             if (param0 != 30054) {
-              field_O = (ka) null;
+              field_O = (ToolkitModel) null;
             }
             var4 = null;
             if (var4 == null) {
@@ -134,7 +134,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            field_O = (ka) null;
+            field_O = (ToolkitModel) null;
           }
           var4 = new Trap(param2, param1);
           var4.setSize((byte) -11, 2097152, 2097152);

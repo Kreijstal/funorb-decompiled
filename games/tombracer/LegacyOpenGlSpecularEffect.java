@@ -9,8 +9,8 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
 
     final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
         try {
-          this.toolkit.a(true, param2);
-          this.toolkit.d(1, param0);
+          this.toolkit.bindTexture(true, param2);
+          this.toolkit.setTextureCombineMode(1, param0);
           if (param1 != 32221) {
             this.field_f = (OpenGlDisplayLists) null;
           }
@@ -23,7 +23,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
         int var3 = TombRacer.field_G ? 1 : 0;
         this.field_f = new OpenGlDisplayLists(this.toolkit, 2);
         this.field_f.beginList((byte) 6, 0);
-        this.toolkit.e(1, true);
+        this.toolkit.setActiveTextureUnit(1, true);
         jaggl.OpenGL.glTexGeni(8192, 9472, 34065);
         jaggl.OpenGL.glTexGeni(8193, 9472, 34065);
         jaggl.OpenGL.glTexGeni(8194, 9472, 34065);
@@ -37,20 +37,20 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
         if (!this.field_c) {
           this.toolkit.setTextureCombineOperations(7681, param0 + 9035, 8448);
           this.toolkit.setTextureCombineOperands(0, 0, 34168, 768);
-          this.toolkit.e(2, true);
+          this.toolkit.setActiveTextureUnit(2, true);
           this.toolkit.setTextureCombineOperations(260, param0 ^ -9035, 7681);
           this.toolkit.setTextureCombineOperands(0, 0, 34168, 768);
           this.toolkit.setTextureCombineOperands(1, 0, 34168, 770);
-          this.toolkit.b(34167, param0 + 78, 0, 770);
+          this.toolkit.setAlphaCombineArgument(34167, param0 + 78, 0, 770);
         } else {
           this.toolkit.setTextureCombineOperations(260, 8960, 7681);
           this.toolkit.setTextureCombineOperands(0, 0, 5890, 770);
-          this.toolkit.b(34167, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(34167, 3, 0, 770);
         }
-        this.toolkit.e(0, true);
+        this.toolkit.setActiveTextureUnit(0, true);
         this.field_f.endList((byte) -92);
         this.field_f.beginList((byte) 6, 1);
-        this.toolkit.e(1, true);
+        this.toolkit.setActiveTextureUnit(1, true);
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);
         jaggl.OpenGL.glDisable(3170);
@@ -60,17 +60,17 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
         if (!this.field_c) {
           this.toolkit.setTextureCombineOperations(8448, param0 + 9035, 8448);
           this.toolkit.setTextureCombineOperands(0, 0, 5890, 768);
-          this.toolkit.e(2, true);
+          this.toolkit.setActiveTextureUnit(2, true);
           this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
           this.toolkit.setTextureCombineOperands(0, 0, 5890, 768);
           this.toolkit.setTextureCombineOperands(1, param0 ^ -75, 34168, 768);
-          this.toolkit.b(5890, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(5890, 3, 0, 770);
         } else {
           this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
           this.toolkit.setTextureCombineOperands(0, 0, 5890, 768);
-          this.toolkit.b(5890, param0 ^ -74, 0, 770);
+          this.toolkit.setAlphaCombineArgument(5890, param0 ^ -74, 0, 770);
         }
-        this.toolkit.e(0, true);
+        this.toolkit.setActiveTextureUnit(0, true);
         this.field_f.endList((byte) -104);
         if (param0 != -75) {
           this.isSupported(-115);
@@ -82,23 +82,23 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
         if (this.field_f != null &&
           param0) {
           if (!this.field_c) {
-            this.toolkit.e(2, true);
-            this.toolkit.a(true, this.toolkit.field_lc);
-            this.toolkit.e(0, true);
+            this.toolkit.setActiveTextureUnit(2, true);
+            this.toolkit.bindTexture(true, this.toolkit.field_lc);
+            this.toolkit.setActiveTextureUnit(0, true);
           }
           this.field_f.callList(4864, '\0');
           this.field_e = true;
         } else {
-          this.toolkit.b(34168, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(34168, 3, 0, 770);
         }
         var3 = -100 / ((param1 - 56) / 48);
     }
 
     final void setParameters(int param0, int param1, int param2) {
         if (this.field_e) {
-          this.toolkit.e(1, true);
-          this.toolkit.a(true, this.field_d[-1 + param0]);
-          this.toolkit.e(0, true);
+          this.toolkit.setActiveTextureUnit(1, true);
+          this.toolkit.bindTexture(true, this.field_d[-1 + param0]);
+          this.toolkit.setActiveTextureUnit(0, true);
         }
         if (param2 <= 117) {
           this.a((byte) -84);
@@ -167,15 +167,15 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
 
     final void disable(boolean param0) {
         if (!this.field_e) {
-          this.toolkit.b(5890, 3, 0, 770);
+          this.toolkit.setAlphaCombineArgument(5890, 3, 0, 770);
         } else {
           if (!this.field_c) {
-            this.toolkit.e(2, !param0 ? true : false);
-            this.toolkit.a(true, (LegacyOpenGlTexture) null);
+            this.toolkit.setActiveTextureUnit(2, !param0 ? true : false);
+            this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
           }
-          this.toolkit.e(1, true);
-          this.toolkit.a(true, (LegacyOpenGlTexture) null);
-          this.toolkit.e(0, !param0 ? true : false);
+          this.toolkit.setActiveTextureUnit(1, true);
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
+          this.toolkit.setActiveTextureUnit(0, !param0 ? true : false);
           this.field_f.callList(4864, '\001');
           this.field_e = false;
         }

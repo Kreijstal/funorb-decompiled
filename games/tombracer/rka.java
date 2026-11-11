@@ -14,7 +14,7 @@ abstract class rka {
     final static void a(String param0, boolean param1) {
         try {
           TrackingCrusherComponent.a(param0, (byte) -55);
-          vn.showMessageDialog(100, gja.field_bb, param1);
+          vn.showMessageDialog(100, HardwareModel.field_bb, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "rka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

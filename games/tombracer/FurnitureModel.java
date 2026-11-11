@@ -11,8 +11,8 @@ final class FurnitureModel extends TrapModel {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ka var9 = null;
-        ka var10 = null;
+        ToolkitModel var9 = null;
+        ToolkitModel var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

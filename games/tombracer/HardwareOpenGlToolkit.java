@@ -37,7 +37,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     private String field_jd;
     private int field_md;
 
-    final void a(int param0, int param1, qm param2) {
+    final void bindVertexBuffer(int param0, int param1, qm param2) {
         try {
           this.field_id[param1] = (og) (param2);
           if (param0 >= -124) {
@@ -48,8 +48,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void k() {
-        super.k();
+    final void dispose() {
+        super.dispose();
         if (null != this.field_Mc) {
           this.field_Mc.detachFromThread();
           this.field_Mc.release();
@@ -57,19 +57,19 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void f(int param0) {
+    final void applyColorCombineOperation(int param0) {
         if (param0 != -3485) {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
-          this.a((Object) null, false, (java.awt.Canvas) null);
+          this.releaseSurface((Object) null, false, (java.awt.Canvas) null);
         }
         jaggl.OpenGL.glTexEnvi(8960, 34161, VerticalScrollbar.toGlTextureEnvMode((byte) 126, this.field_mc[this.field_Cc]));
     }
 
-    final boolean f() {
+    final boolean isBloomEnabled() {
         return false;
     }
 
-    final void a(VertexBuffer param0, int param1, int param2, int param3, iw param4, int param5, int param6) {
+    final void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, iw param4, int param5, int param6) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -116,7 +116,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           var11.bind(-3);
           jaggl.OpenGL.glDrawElements(var8_int, var9, ClientException.glDataType(var10, 5126), var11.b(true) + (long)(param3 * var10.field_e));
           if (param1 != -19394) {
-            this.N(76);
+            this.applyTextureConstantColor(76);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final qm c(int param0, boolean param1) {
+    final qm createVertexBuffer(int param0, boolean param1) {
         if (param0 != 6) {
           this.field_dd = (IntrusiveDeque) null;
         }
@@ -195,7 +195,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            this.a(-57, 53, 67);
+            this.queueTextureDeletion(-57, 53, 67);
           }
           stackIn_3_0 = new dqa(param0);
           return (mna) ((Object) stackIn_3_0);
@@ -266,7 +266,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glFogfv(2918, HelloCommand.field_r, 0);
     }
 
-    final na a(byte param0, int[][] param1, boolean param2, int param3) {
+    final na createCubeTexture(byte param0, int[][] param1, boolean param2, int param3) {
         RuntimeException var5 = null;
         dma stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -293,7 +293,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a() {
+    final void copyFrontToBack() {
         if (this.field_Hb <= 0 &&
           this.field_jc <= 0) {
           return;
@@ -311,8 +311,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.setDepthTestEnabled(0, false);
         this.setDepthWriteEnabled(false, (byte) 81);
         this.bindTexture(true, (GpuTexture) null);
-        this.a((byte) -80, false, false, -2);
-        this.a((byte) 118, 1);
+        this.bindMaterialTexture((byte) -80, false, false, -2);
+        this.setTextureCombineMode((byte) 118, 1);
         this.setBlendMode(0, 1);
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadIdentity();
@@ -327,7 +327,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.setClip(var1, var3, var2, var4);
     }
 
-    final void B(byte param0) {
+    final void applyViewport(byte param0) {
         if (param0 != -116) {
           this.field_id = (og[]) null;
         }
@@ -341,14 +341,14 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return (VertexBuffer) ((Object) new OpenGlVertexBuffer(this, una.field_f, param1));
     }
 
-    final void g(byte param0) {
+    final void applyPointLights(byte param0) {
         SceneLight var3 = null;
         int var4 = 0;
         int var5 = 0;
         float var6 = 0.0f;
         int var2 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
-        this.i((byte) 123);
+        this.resetModelTransform((byte) 123);
         for (var2 = 0; this.field_Bc > var2; var2++) {
           var3 = this.field_ib[var2];
           var4 = var3.getColour(param0 ^ -43);
@@ -371,7 +371,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glDisable(var2 + 16386);
           var2++;
         }
-        super.g(param0);
+        super.applyPointLights(param0);
     }
 
     final RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1) {
@@ -406,7 +406,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void r(int param0) {
+    final void applyAmbientLightColor(int param0) {
         HelloCommand.field_r[3] = 1.0f;
         HelloCommand.field_r[param0] = this.field_fc * this.field_sc;
         HelloCommand.field_r[2] = this.field_Kb * this.field_fc;
@@ -414,7 +414,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glLightModelfv(2899, HelloCommand.field_r, 0);
     }
 
-    final boolean h() {
+    final boolean enableBloom() {
         return false;
     }
 
@@ -464,7 +464,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void M(int param0) {
+    final void applyBlendEnabled(int param0) {
         if (!this.field_Yb) {
           jaggl.OpenGL.glDisable(3042);
         } else {
@@ -488,7 +488,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glDepthMask(stackIn_4_0);
     }
 
-    final boolean a(boolean param0, una param1, ft param2) {
+    final boolean supportsTexture2D(boolean param0, una param1, ft param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -521,7 +521,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final GpuTexture2D a(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
+    final GpuTexture2D createByteTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
         RuntimeException var9 = null;
         OpenGlTexture2D var10 = null;
         OpenGlTexture2D stackIn_7_0 = null;
@@ -570,7 +570,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void z(int param0) {
+    final void applyTextureMatrix(int param0) {
         if (param0 != 0) {
           field_cd = (String) null;
         }
@@ -583,7 +583,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    final synchronized void a(long param0, int param1) {
+    final synchronized void queueShaderObjectDeletion(long param0, int param1) {
         IntrusiveNode var4 = new IntrusiveNode();
         if (param1 != -6115) {
           this.field_ad = (IntrusiveDeque) null;
@@ -594,7 +594,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
 
     final void unbindTexture(int param0) {
         if (param0 != 1) {
-          this.a((byte) 9, (int[][]) null, false, -5);
+          this.createCubeTexture((byte) 9, (int[][]) null, false, -5);
         }
         int var2 = this.field_Sc[this.field_Cc];
         if (var2 != 0) {
@@ -620,13 +620,13 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glLightfv(16385, 4609, HelloCommand.field_r, 0);
     }
 
-    final void a(RenderTarget param0) {
+    final void bindRenderTarget(RenderTarget param0) {
     }
 
-    final void a(float param0, float param1, float param2) {
+    final void setBloomParameters(float param0, float param1, float param2) {
     }
 
-    final void d(byte param0) {
+    final void applyScissorEnabled(byte param0) {
         if (!this.field_Wb) {
           jaggl.OpenGL.glDisable(3089);
         } else {
@@ -647,11 +647,11 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void z(byte param0) {
+    final void applyModelMatrix(byte param0) {
         if (param0 != -73) {
-          this.a();
+          this.copyFrontToBack();
         }
-        this.i(false);
+        this.loadModelViewMatrix(false);
     }
 
     final void applyDepthTest(byte param0) {
@@ -669,7 +669,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.field_Mc.swapBuffers();
     }
 
-    final void a(int param0, iw param1, int param2, int param3) {
+    final void drawPrimitives(int param0, iw param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -708,7 +708,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             }
           }
           if (param3 != 0) {
-            this.i(false);
+            this.loadModelViewMatrix(false);
           }
           jaggl.OpenGL.glDrawArrays(var5_int, param2, var6);
           return;
@@ -726,7 +726,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void d() {
+    final void restoreCanvasTarget() {
     }
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
@@ -734,7 +734,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           this.usePixelProjection(19822);
           this.bindTexture(true, (GpuTexture) null);
           this.setBlendMode(0, 1);
-          this.i((byte) 126);
+          this.resetModelTransform((byte) 126);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
           jaggl.OpenGL.glRasterPos2i(param0, param1);
           jaggl.OpenGL.glDrawPixelsi(param2, param3, 32993, this.field_od, param4, param5);
@@ -859,7 +859,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                 var12 = (IntNode) (this.field_bd.removeFirst(-99));
                 jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
               }
-              if ((!(this.Q(10) <= 100663296)) &&
+              if ((!(this.estimatedResourceBytes(10) <= 100663296)) &&
                 (!(bva.currentTimeMillis((byte) -107) <= this.field_Xc + 60000L))) {
                 System.gc();
                 this.field_Xc = bva.currentTimeMillis((byte) -107);
@@ -922,7 +922,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             var12Lifetime1 = (IntNode) (this.field_bd.removeFirst(-99));
             jaggl.OpenGL.glDeleteLists((int)var12Lifetime1.key, var12Lifetime1.value);
           }
-          if (!(this.Q(10) <= 100663296) &&
+          if (!(this.estimatedResourceBytes(10) <= 100663296) &&
             !(bva.currentTimeMillis((byte) -107) <= this.field_Xc + 60000L)) {
             System.gc();
             this.field_Xc = bva.currentTimeMillis((byte) -107);
@@ -942,9 +942,9 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glClear(256);
     }
 
-    final void h(boolean param0) {
+    final void applyViewMatrix(boolean param0) {
         this.field_Zc = param0 ? true : false;
-        this.i(param0);
+        this.loadModelViewMatrix(param0);
     }
 
     public static void releaseStatics(int param0) {
@@ -957,16 +957,16 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
 
     final void applyAlphaCombineOperation(byte param0) {
         if (param0 != -23) {
-          this.f(47);
+          this.applyColorCombineOperation(47);
         }
         jaggl.OpenGL.glTexEnvi(8960, 34162, VerticalScrollbar.toGlTextureEnvMode((byte) 101, this.field_db[this.field_Cc]));
     }
 
-    final RenderBuffer b(int param0, int param1) {
+    final RenderBuffer createRenderBuffer(int param0, int param1) {
         return null;
     }
 
-    final void N(int param0) {
+    final void applyTextureConstantColor(int param0) {
         if (param0 >= -10) {
           this.queueProgramDeletion(20, (byte) 35);
         }
@@ -977,14 +977,14 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glTexEnvfv(8960, 8705, HelloCommand.field_r, 0);
     }
 
-    final float c(byte param0) {
+    final float pixelCenterOffset(byte param0) {
         if (param0 >= -39) {
           this.field_Oc = (IntrusiveDeque) null;
         }
         return 0.0f;
     }
 
-    final boolean a(una param0, int param1, ft param2) {
+    final boolean supportsTexture3D(una param0, int param1, ft param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -1017,7 +1017,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final GpuTexture2D a(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7) {
+    final GpuTexture2D createFloatTexture2D(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7) {
         RuntimeException var9 = null;
         OpenGlTexture2D var10 = null;
         GpuTexture2D stackIn_2_0 = null;
@@ -1260,7 +1260,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return 0 != (32 & param0) ? true : false;
     }
 
-    final void e(boolean param0) {
+    final void applyActiveTexture(boolean param0) {
         jaggl.OpenGL.glActiveTexture(this.field_Cc + 33984);
         if (param0) {
           this.field_Mc = (jaggl.OpenGL) null;
@@ -1347,7 +1347,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final lv a(byte[] param0, ft param1, byte param2, int param3, int param4, int param5) {
+    final lv createTexture3D(byte[] param0, ft param1, byte param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         jd stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -1358,7 +1358,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -1) {
-            this.i(true);
+            this.loadModelViewMatrix(true);
           }
           stackIn_3_0 = new jd(this, param1, param4, param3, param5, param0);
           return (lv) ((Object) stackIn_3_0);
@@ -1404,7 +1404,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return (ShaderEffect) ((Object) new OpenGlEnvironmentWaterEffect(this, this.field_I, this.field_Mb));
     }
 
-    final void w(byte param0) {
+    final void applyDirectionalLightsEnabled(byte param0) {
         if (!this.field_Zb) {
           jaggl.OpenGL.glDisable(16384);
           jaggl.OpenGL.glDisable(16385);
@@ -1417,7 +1417,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void w(int param0) {
+    final void applyAlphaTest(int param0) {
         if (param0 > -30) {
           return;
         }
@@ -1618,7 +1618,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             decompiledCaughtException = decompiledCaughtParameter3;
             var8 = decompiledCaughtException;
             var8.printStackTrace();
-            this.a(true);
+            this.close(true);
             throw new RuntimeException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
@@ -1653,7 +1653,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void S(int param0) {
+    final void applyScissor(int param0) {
         jaggl.OpenGL.glScissor(this.field_A + this.field_i, -this.field_jb + this.field_Kc + this.field_jc, this.field_C - this.field_A, -this.field_K + this.field_jb);
         if (param0 != -3335) {
           field_pd = false;
@@ -1669,16 +1669,16 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.field_dd.addLast((byte) -80, var4);
     }
 
-    final void a(int param0, byte param1) {
+    final void setTextureCoordinateIndex(int param0, byte param1) {
         if (param1 < 27) {
-          this.a(-22, 75, 26, 3);
+          this.setPostProcessBounds(-22, 75, 26, 3);
         }
     }
 
-    final void a(ToolkitSprite param0, boolean param1) {
+    final void bindSpriteTarget(ToolkitSprite param0, boolean param1) {
     }
 
-    private final void i(boolean param0) {
+    private final void loadModelViewMatrix(boolean param0) {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_rd) {
@@ -1692,7 +1692,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glLoadMatrixf(this.field_Qb.writeColumnMajor4x4(AgeValidator.field_k, (byte) -37), 0);
             this.field_Zc = true;
             this.applyLightPositions(70);
-            this.g((byte) 92);
+            this.applyPointLights((byte) 92);
           }
           if (this.field_gb) {
             this.field_rd = false;
@@ -1711,7 +1711,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void D(int param0) {
+    final void applyFogEnabled(int param0) {
         if (this.field_U &&
           this.field_Bb &&
           0 <= this.field_J) {
@@ -1724,7 +1724,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a(fp param0, int param1, int param2, boolean param3, boolean param4) {
+    final void setColorCombineSource(fp param0, int param1, int param2, boolean param3, boolean param4) {
         int stackIn_5_0 = 0;
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
@@ -1775,7 +1775,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void setMultisampling(int param0, boolean param1) {
         if (!param1) {
           jaggl.OpenGL.glDisable(32925);
         } else {
@@ -1786,10 +1786,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void a(fp param0, int param1, boolean param2, int param3) {
+    final void setAlphaCombineSource(fp param0, int param1, boolean param2, int param3) {
         try {
           if (param1 != 15802) {
-            this.N(120);
+            this.applyTextureConstantColor(120);
           }
           jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, BrickOperator.a(param0, true));
           jaggl.OpenGL.glTexEnvi(8960, 34200 + param3, !param2 ? 770 : 771);
@@ -1804,10 +1804,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glLightfv(16385, 4611, this.field_M, 0);
     }
 
-    final void c() {
+    final void applyPostProcessing() {
     }
 
-    final synchronized void a(int param0, int param1, int param2) {
+    final synchronized void queueTextureDeletion(int param0, int param1, int param2) {
         if (param2 != 2) {
           return;
         }
@@ -1816,7 +1816,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.field_Rc.addLast((byte) -67, var4);
     }
 
-    final void a(Object param0, boolean param1, java.awt.Canvas param2) {
+    final void releaseSurface(Object param0, boolean param1, java.awt.Canvas param2) {
         Long var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -1852,16 +1852,16 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void e(byte param0) {
+    final void applyProjectionMatrix(byte param0) {
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadMatrixf(this.field_T, 0);
         jaggl.OpenGL.glMatrixMode(5888);
         if (param0 < 26) {
-          this.d();
+          this.restoreCanvasTarget();
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void setPostProcessBounds(int param0, int param1, int param2, int param3) {
     }
 
     static {

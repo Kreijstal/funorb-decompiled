@@ -30,9 +30,9 @@ final class gb {
         throw new IllegalStateException();
     }
 
-    final static ka a(oc param0, int param1, GraphicsToolkit param2) {
+    final static ToolkitModel a(oc param0, int param1, GraphicsToolkit param2) {
         RuntimeException var3 = null;
-        ka stackIn_6_0 = null;
+        ToolkitModel stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -46,7 +46,7 @@ final class gb {
           if (param1 != 128) {
             field_a = 94;
           }
-          stackIn_6_0 = param2.a(param0, 654255, 23, 128, 128);
+          stackIn_6_0 = param2.createModel(param0, 654255, 23, 128, 128);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

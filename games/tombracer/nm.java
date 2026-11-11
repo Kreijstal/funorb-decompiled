@@ -69,7 +69,7 @@ final class nm extends vo implements sca {
     }
 
     final void d(int param0) {
-        this.field_h.a((sca) (this), param0 ^ 0);
+        this.field_h.bindIndexArray((sca) (this), param0 ^ 0);
         if (param0 != 34963) {
           byte[] var3 = (byte[]) null;
           this.a(-86, -126, (byte[]) null, -64);

@@ -55,15 +55,15 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final ka a(int param0, PitTile param1) {
+    final ToolkitModel a(int param0, PitTile param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         BitPacketBuffer var5 = null;
-        ka stackIn_15_0 = null;
-        ka stackIn_23_0 = null;
-        ka stackIn_25_0 = null;
-        ka stackIn_27_0 = null;
+        ToolkitModel stackIn_15_0 = null;
+        ToolkitModel stackIn_23_0 = null;
+        ToolkitModel stackIn_25_0 = null;
+        ToolkitModel stackIn_27_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -123,20 +123,20 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final ka a(PitTile param0, int param1) {
-        ka stackIn_10_0 = null;
-        ka stackIn_12_0 = null;
-        ka stackIn_15_0 = null;
-        ka stackIn_18_0 = null;
-        ka stackIn_21_0 = null;
-        ka stackIn_24_0 = null;
-        ka stackIn_27_0 = null;
-        ka stackIn_30_0 = null;
-        ka stackIn_33_0 = null;
-        ka stackIn_36_0 = null;
-        ka stackIn_38_0 = null;
-        ka stackIn_40_0 = null;
-        ka stackIn_42_0 = null;
+    final ToolkitModel a(PitTile param0, int param1) {
+        ToolkitModel stackIn_10_0 = null;
+        ToolkitModel stackIn_12_0 = null;
+        ToolkitModel stackIn_15_0 = null;
+        ToolkitModel stackIn_18_0 = null;
+        ToolkitModel stackIn_21_0 = null;
+        ToolkitModel stackIn_24_0 = null;
+        ToolkitModel stackIn_27_0 = null;
+        ToolkitModel stackIn_30_0 = null;
+        ToolkitModel stackIn_33_0 = null;
+        ToolkitModel stackIn_36_0 = null;
+        ToolkitModel stackIn_38_0 = null;
+        ToolkitModel stackIn_40_0 = null;
+        ToolkitModel stackIn_42_0 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -639,14 +639,14 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final ka getEdgeModel(byte param0, PitEdgePiece param1) {
+    final ToolkitModel getEdgeModel(byte param0, PitEdgePiece param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ka stackIn_6_0 = null;
+        ToolkitModel stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

@@ -245,14 +245,14 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.fillRectangle(0, 0, this.field_K, this.field_h, param0, 0);
     }
 
-    final void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRectOutline(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.drawHorizontalLine(param0, param1, param2, param4, param5);
         this.drawHorizontalLine(param0, param1 + param3 - 1, param2, param4, param5);
         this.drawVerticalLine(param0, param1 + 1, param3 - 2, param4, param5);
         this.drawVerticalLine(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
     }
 
-    private final void b(java.awt.Canvas param0, int param1, int param2) {
+    private final void recreateCanvasBuffer(java.awt.Canvas param0, int param1, int param2) {
         CanvasImageBuffer var7 = null;
         java.awt.Dimension var5 = null;
         float[] array$0 = null;
@@ -280,7 +280,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
               this.field_n = array$0;
               this.field_H = array$0;
             }
-            this.m();
+            this.refreshContexts();
           }
           return;
         }
@@ -345,11 +345,11 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void g(int param0) {
+    private final void bindContextToCurrentThread(int param0) {
         this.field_Y[param0].a((Runnable) ((Object) Thread.currentThread()), (byte) 100);
     }
 
-    final void a(Transform3D param0) {
+    final void setTransform(Transform3D param0) {
         this.field_A = (SoftwareTransform3D) (param0);
     }
 
@@ -381,7 +381,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.drawLine(this.field_L + (int)((float)this.field_Q * var11 / var9), this.field_w + (int)((float)this.field_C * var12 / var9), this.field_L + (int)((float)this.field_Q * var13 / var10), this.field_w + (int)((float)this.field_C * var14 / var10), param6, param7);
     }
 
-    final void a(za param0) {
+    final void useHeap(za param0) {
     }
 
     final boolean j(int param0) {
@@ -408,11 +408,11 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean f() {
+    final boolean isBloomEnabled() {
         return false;
     }
 
-    final void a(float param0, float param1, float param2) {
+    final void setBloomParameters(float param0, float param1, float param2) {
     }
 
     final void DA(int param0, int param1, int param2, int param3) {
@@ -420,13 +420,13 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.field_w = param1;
         this.field_Q = param2;
         this.field_C = param3;
-        this.g();
+        this.updateContextClipBounds();
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void setPostProcessBounds(int param0, int param1, int param2, int param3) {
     }
 
-    final int[] h(int param0) {
+    final int[] getTexturePixels(int param0) {
         ScrollingTexturePixels var2 = null;
         Object var3 = null;
         TextureMetadata var4 = null;
@@ -497,27 +497,27 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.field_W = param2;
         this.field_d = param1;
         this.field_P = param3;
-        this.g();
+        this.updateContextClipBounds();
     }
 
-    final ka a(oc param0, int param1, int param2, int param3, int param4) {
-        return (ka) ((Object) new Model(this, param0, param1, param3, param4, param2));
+    final ToolkitModel createModel(oc param0, int param1, int param2, int param3, int param4) {
+        return (ToolkitModel) ((Object) new Model(this, param0, param1, param3, param4, param2));
     }
 
     final boolean n() {
         return this.field_z;
     }
 
-    final boolean j() {
+    final boolean supportsHeap() {
         return false;
     }
 
-    final Transform3D e() {
+    final Transform3D getTransform() {
         tw var1 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
         return (Transform3D) ((Object) var1.field_u);
     }
 
-    final void d() {
+    final void restoreCanvasTarget() {
         if (this.field_t != null) {
           this.field_r = this.field_T.pixels;
           this.field_K = this.field_T.width;
@@ -534,10 +534,10 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           this.field_n = null;
         }
         this.field_D = null;
-        this.m();
+        this.refreshContexts();
     }
 
-    final void k() {
+    final void dispose() {
         if (this.field_E) {
           LegacyOpenGlEnvironmentWaterEffect.a(false, true, true);
           this.field_E = false;
@@ -1084,7 +1084,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           if (this.field_v != param6) {
             var11 = (ToolkitSprite) (this.field_X.get((byte) 75, (long)param6));
             if (var11 == null) {
-              var16 = this.h(param6);
+              var16 = this.getTexturePixels(param6);
               var14 = var16;
               var12 = var14;
               if (var12 == null) {
@@ -1128,7 +1128,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           if (this.field_v != param6) {
             var11 = (ToolkitSprite) (this.field_X.get((byte) 55, (long)param6));
             if (var11 == null) {
-              var16 = this.h(param6);
+              var16 = this.getTexturePixels(param6);
               var14 = var16;
               var12 = var14;
               if (var12 == null) {
@@ -1153,7 +1153,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final RenderBuffer b(int param0, int param1) {
+    final RenderBuffer createRenderBuffer(int param0, int param1) {
         return (RenderBuffer) ((Object) new ita(param0, param1));
     }
 
@@ -1162,10 +1162,10 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.field_d = 0;
         this.field_W = this.field_K;
         this.field_P = this.field_h;
-        this.g();
+        this.updateContextClipBounds();
     }
 
-    final Transform3D b() {
+    final Transform3D createTransform() {
         return (Transform3D) ((Object) new SoftwareTransform3D());
     }
 
@@ -1177,7 +1177,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_g;
     }
 
-    final void a(RenderTarget param0) {
+    final void bindRenderTarget(RenderTarget param0) {
         bf var2 = (bf) (param0);
         this.field_K = var2.field_c;
         this.field_h = var2.field_d;
@@ -1186,7 +1186,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.field_y = var2.field_c;
         this.field_s = var2.field_d;
         this.field_n = var2.field_e;
-        this.m();
+        this.refreshContexts();
     }
 
     final void L(int param0, int param1, int param2) {
@@ -1219,7 +1219,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final za a(int param0) {
+    final za createHeap(int param0) {
         return null;
     }
 
@@ -1227,7 +1227,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return null;
     }
 
-    private final void m() {
+    private final void refreshContexts() {
         int var1 = 0;
         for (var1 = 0; var1 < this.field_u; var1++) {
           this.field_Y[var1].a(-39);
@@ -1248,25 +1248,25 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         if (this.field_P > param3) {
           this.field_P = param3;
         }
-        this.g();
+        this.updateContextClipBounds();
     }
 
     SoftwareGraphicsToolkit(java.awt.Canvas param0, TextureProvider param1, int param2, int param3) {
         this(param1);
         try {
-          this.a(param0, param2, param3);
-          this.a(param0);
+          this.registerCanvas(param0, param2, param3);
+          this.selectCanvas(param0);
         } catch (Throwable throwable) {
           throwable.printStackTrace();
-          this.a(true);
+          this.close(true);
           throw new RuntimeException("");
         }
     }
 
-    final void c() {
+    final void applyPostProcessing() {
     }
 
-    private final void a(java.awt.Canvas param0, int param1, int param2) {
+    private final void registerCanvas(java.awt.Canvas param0, int param1, int param2) {
         CanvasImageBuffer var4;
         var4 = (CanvasImageBuffer) (this.field_G.get((byte) -104, (long)param0.hashCode()));
         if (var4 != null) {
@@ -1274,7 +1274,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             var4.height == param2) {
             return;
           }
-          this.b(param0, param1, param2);
+          this.recreateCanvasBuffer(param0, param1, param2);
         } else {
           var4 = OpenGlTexture.createCanvasImageBuffer(param2, param1, param0, 0);
           this.field_G.put((long)param0.hashCode(), 125, var4);
@@ -1393,13 +1393,13 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           this.field_F = new SoftReferenceCache(256);
           this.field_A = new SoftwareTransform3D();
           this.createContexts(1);
-          this.g(0);
+          this.bindContextToCurrentThread(0);
           CanvasImageBuffer.a(true, (byte) 100, true);
           this.field_E = true;
           this.field_j = (int)bva.currentTimeMillis((byte) -107);
         } catch (Throwable throwable) {
           throwable.printStackTrace();
-          this.a(true);
+          this.close(true);
           throw new RuntimeException("");
         }
     }
@@ -1511,7 +1511,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_U;
     }
 
-    private final void g() {
+    private final void updateContextClipBounds() {
         iua var2_ref_iua = null;
         int var2 = 0;
         int var3 = 0;
@@ -1581,10 +1581,10 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a() {
+    final void copyFrontToBack() {
     }
 
-    private final void a(java.awt.Canvas param0) {
+    private final void selectCanvas(java.awt.Canvas param0) {
         float[] array$1 = null;
         CanvasImageBuffer var2;
         java.awt.Dimension var3;
@@ -1597,7 +1597,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             this.field_K = 1;
             this.field_s = 1;
             this.field_y = 1;
-            this.m();
+            this.refreshContexts();
           }
         } else {
           var2 = (CanvasImageBuffer) (this.field_G.get((byte) -116, (long)param0.hashCode()));
@@ -1621,7 +1621,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
                 this.field_n = array$1;
                 this.field_H = array$1;
               }
-              this.m();
+              this.refreshContexts();
             }
           }
         }
@@ -2946,14 +2946,14 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return;
     }
 
-    final void b(int param0) {
+    final void setModelBufferSize(int param0) {
         Model.field_q = param0;
         Model.field_G = param0;
         if (this.field_u > 1) {
           throw new IllegalStateException("No MT");
         }
         this.createContexts(this.field_u);
-        this.g(0);
+        this.bindContextToCurrentThread(0);
     }
 
     final void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -3069,15 +3069,15 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_c.metadata((byte) -5, param0).field_d;
     }
 
-    final boolean h() {
+    final boolean enableBloom() {
         return false;
     }
 
-    final int l() {
+    final int getMaxLights() {
         return 0;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final void fillShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         iua stackIn_7_0 = null;
         boolean stackIn_9_1 = false;
         tw var11;

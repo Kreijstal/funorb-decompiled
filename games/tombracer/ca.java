@@ -133,7 +133,7 @@ final class ca extends GameFont {
               }
             }
           }
-          this.field_f = param0.a(true, var6Lifetime1, false, var6Lifetime1, var39);
+          this.field_f = param0.createIntTexture2D(true, var6Lifetime1, false, var6Lifetime1, var39);
           this.field_e = false;
         } else {
           var35 = new byte[var6Lifetime1 * var6Lifetime1];
@@ -176,27 +176,27 @@ final class ca extends GameFont {
               }
             }
           }
-          if (!param0.a(false, una.field_g, rp.field_g)) {
+          if (!param0.supportsTexture2D(false, una.field_g, rp.field_g)) {
             var36 = new int[var35.length];
             var28 = var36;
             var8_ref_int__ = var28;
             for (var9 = 0; var9 < var35.length; var9++) {
               var8_ref_int__[var9] = var35[var9] << 24;
             }
-            this.field_f = param0.a(true, var6Lifetime1, false, var6Lifetime1, var36);
+            this.field_f = param0.createIntTexture2D(true, var6Lifetime1, false, var6Lifetime1, var36);
           } else {
-            this.field_f = param0.a(var6Lifetime1, var35, false, rp.field_g, -128, var6Lifetime1);
+            this.field_f = param0.createByteTexture2D(var6Lifetime1, var35, false, rp.field_g, -128, var6Lifetime1);
           }
           this.field_e = true;
         }
         this.field_f.setFilter(7672, MiscItemBehaviour.field_v);
-        this.field_d = param0.c(6, false);
+        this.field_d = param0.createVertexBuffer(6, false);
         this.field_d.allocate(20480, 20, true);
         var7 = 0;
         while (var7 < 4) {
           var33 = this.field_d.mapBuffer(-15730, true);
           if (var33 != null) {
-            var34 = this.field_g.a(var33, 127);
+            var34 = this.field_g.streamForBuffer(var33, 127);
             var10 = this.field_f.textureV((float)var6Lifetime1, (byte) -33) / (float)var6Lifetime1;
             var11 = this.field_f.textureU(105, (float)var6Lifetime1) / (float)var6Lifetime1;
             var24 = 0;
@@ -273,25 +273,25 @@ final class ca extends GameFont {
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         AffineTransform3D var6;
-        this.field_g.H(-122);
+        this.field_g.prepareGlyphRendering(-122);
         this.field_g.bindTexture(true, this.field_f);
         if (!this.field_e &&
           !param4) {
           this.field_g.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
         } else {
           this.field_g.setTextureCombineOperations(iw.field_c, (byte) -110, PlatformComponent.field_F);
-          this.field_g.a(LruNodeCache.field_c, 0, -121);
-          this.field_g.g(3625, param3);
+          this.field_g.setColorCombineSource(LruNodeCache.field_c, 0, -121);
+          this.field_g.setTextureConstantColor(3625, param3);
         }
-        var6 = this.field_g.y((byte) -77);
+        var6 = this.field_g.getModelTransform((byte) -77);
         var6.setTranslation(false, param1, param2, 0);
-        this.field_g.F(-1662);
-        this.field_g.a(-128, 0, this.field_d);
+        this.field_g.modelTransformChanged(-1662);
+        this.field_g.bindVertexBuffer(-128, 0, this.field_d);
         this.field_g.bindVertexLayout(this.field_g.field_Db, -32);
-        this.field_g.a(2, vs.field_T, param0 * 4, 0);
+        this.field_g.drawPrimitives(2, vs.field_T, param0 * 4, 0);
         if (this.field_e ||
           param4) {
-          this.field_g.a(ej.field_c, 0, -32);
+          this.field_g.setColorCombineSource(ej.field_c, 0, -32);
         }
     }
 }

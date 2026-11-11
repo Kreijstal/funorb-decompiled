@@ -112,7 +112,7 @@ final class ProceduralTexture extends DualLinkNode {
         var18 = TombRacer.field_G ? 1 : 0;
         try {
           PenaltyNotice.field_j = param0;
-          np.field_m = param5;
+          OpenGlModel.field_m = param5;
           for (var7_int = 0; this.operators.length > var7_int; var7_int++) {
             this.operators[var7_int].createRowCache(param3, param2, -256);
           }
@@ -241,7 +241,7 @@ final class ProceduralTexture extends DualLinkNode {
         var24 = TombRacer.field_G ? 1 : 0;
         try {
           PenaltyNotice.field_j = param4;
-          np.field_m = param1;
+          OpenGlModel.field_m = param1;
           for (var10_int = 0; this.operators.length > var10_int; var10_int++) {
             this.operators[var10_int].createRowCache(param6, param0, -256);
           }
@@ -472,7 +472,7 @@ final class ProceduralTexture extends DualLinkNode {
         var21 = TombRacer.field_G ? 1 : 0;
         try {
           PenaltyNotice.field_j = param5;
-          np.field_m = param4;
+          OpenGlModel.field_m = param4;
           for (var9_int = 0; this.operators.length > var9_int; var9_int++) {
             this.operators[var9_int].createRowCache(param0, param2, -256);
           }

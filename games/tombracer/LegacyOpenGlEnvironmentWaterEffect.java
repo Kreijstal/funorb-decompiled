@@ -23,13 +23,13 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
     final void enable(boolean param0, int param1) {
         long var5 = 0L;
         int var4 = 82 % ((56 - param1) / 48);
-        LegacyOpenGlCubeTexture var3 = this.toolkit.n(16664);
+        LegacyOpenGlCubeTexture var3 = this.toolkit.environmentCubeTexture(16664);
         if (this.field_k &&
           var3 != null) {
-          this.toolkit.e(1, true);
-          this.toolkit.a(true, var3);
-          this.toolkit.e(0, true);
-          this.toolkit.a(true, this.field_i.field_c);
+          this.toolkit.setActiveTextureUnit(1, true);
+          this.toolkit.bindTexture(true, var3);
+          this.toolkit.setActiveTextureUnit(0, true);
+          this.toolkit.bindTexture(true, this.field_i.field_c);
           var5 = this.field_e.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var5);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "normalSampler"), 0);
@@ -92,8 +92,8 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
           if (this.field_h) {
             return;
           }
-          this.toolkit.a(true, param2);
-          this.toolkit.d(1, param0);
+          this.toolkit.bindTexture(true, param2);
+          this.toolkit.setTextureCombineMode(1, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -198,30 +198,30 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
         boolean stackIn_19_2 = false;
         if (!param0) {
           if (this.field_h) {
-            this.toolkit.e(1, true);
+            this.toolkit.setActiveTextureUnit(1, true);
             stackIn_5_0 = this.toolkit;
             stackIn_6_1 = (param0) ? false : true;
-            ((OpenGlToolkit) (Object) stackIn_5_0).a(stackIn_6_1, (LegacyOpenGlTexture) null);
+            ((OpenGlToolkit) (Object) stackIn_5_0).bindTexture(stackIn_6_1, (LegacyOpenGlTexture) null);
             stackIn_8_0 = this.toolkit;
             stackIn_8_1 = 0;
             stackIn_9_2 = (param0) ? false : true;
-            ((OpenGlToolkit) (Object) stackIn_8_0).e(stackIn_8_1, stackIn_9_2);
-            this.toolkit.a(true, (LegacyOpenGlTexture) null);
+            ((OpenGlToolkit) (Object) stackIn_8_0).setActiveTextureUnit(stackIn_8_1, stackIn_9_2);
+            this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             this.field_h = false;
           }
         } else {
           field_d = true;
           if (this.field_h) {
-            this.toolkit.e(1, true);
+            this.toolkit.setActiveTextureUnit(1, true);
             stackIn_15_0 = this.toolkit;
             stackIn_16_1 = (param0) ? false : true;
-            ((OpenGlToolkit) (Object) stackIn_15_0).a(stackIn_16_1, (LegacyOpenGlTexture) null);
+            ((OpenGlToolkit) (Object) stackIn_15_0).bindTexture(stackIn_16_1, (LegacyOpenGlTexture) null);
             stackIn_18_0 = this.toolkit;
             stackIn_18_1 = 0;
             stackIn_19_2 = (param0) ? false : true;
-            ((OpenGlToolkit) (Object) stackIn_18_0).e(stackIn_18_1, stackIn_19_2);
-            this.toolkit.a(true, (LegacyOpenGlTexture) null);
+            ((OpenGlToolkit) (Object) stackIn_18_0).setActiveTextureUnit(stackIn_18_1, stackIn_19_2);
+            this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             this.field_h = false;
           }

@@ -44,7 +44,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
           if (null != this.field_l) {
-            this.toolkit.b((Framebuffer) (this.field_s), (byte) 81);
+            this.toolkit.pushReadDrawFramebuffer((Framebuffer) (this.field_s), (byte) 81);
             var5_int = WidgetContainer.highestOneBit(this.field_t, (byte) 85);
             var6 = WidgetContainer.highestOneBit(this.field_n, (byte) 96);
             var7_int = 0;
@@ -60,7 +60,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
                   var5_int = var5_int >> 1;
                 }
                 if (0 != var7_int) {
-                  this.toolkit.a(true, this.field_l[-1 + var7_int]);
+                  this.toolkit.bindTexture(true, this.field_l[-1 + var7_int]);
                   jaggl.OpenGL.glBegin(7);
                   jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
                   jaggl.OpenGL.glVertex2i(0, 0);
@@ -72,7 +72,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
                   jaggl.OpenGL.glVertex2i(0, 1);
                   jaggl.OpenGL.glEnd();
                 } else {
-                  this.toolkit.a(true, param0);
+                  this.toolkit.bindTexture(true, param0);
                   jaggl.OpenGL.glBegin(7);
                   jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
                   jaggl.OpenGL.glVertex2i(0, 0);
@@ -87,9 +87,9 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
                 var7_int++;
               }
               {
-                this.toolkit.b(this.field_s, 0);
-                this.toolkit.a(true, this.field_l[-1 + var7_int]);
-                this.toolkit.b((Framebuffer) (this.field_q), (byte) 81);
+                this.toolkit.popReadDrawFramebuffer(this.field_s, 0);
+                this.toolkit.bindTexture(true, this.field_l[-1 + var7_int]);
+                this.toolkit.pushReadDrawFramebuffer((Framebuffer) (this.field_q), (byte) 81);
                 this.field_q.setDrawBuffer(0, (byte) -91);
                 jaggl.OpenGL.glViewport(0, 0, 256, 256);
                 var8 = this.field_v.field_c;
@@ -111,8 +111,8 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.toolkit.a(true, param0);
-            this.toolkit.b((Framebuffer) (this.field_q), (byte) 81);
+            this.toolkit.bindTexture(true, param0);
+            this.toolkit.pushReadDrawFramebuffer((Framebuffer) (this.field_q), (byte) 81);
             this.field_q.setDrawBuffer(0, (byte) -91);
             jaggl.OpenGL.glViewport(0, 0, 256, 256);
             var5_long = this.field_m.field_c;
@@ -131,7 +131,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
             jaggl.OpenGL.glEnd();
           }
           this.field_q.setDrawBuffer(1, (byte) -91);
-          this.toolkit.a(true, this.field_x);
+          this.toolkit.bindTexture(true, this.field_x);
           var5_longLifetime1 = this.field_w.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var5_longLifetime1);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5_longLifetime1, "baseTex"), 0);
@@ -147,7 +147,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           jaggl.OpenGL.glVertex2i(0, 1);
           jaggl.OpenGL.glEnd();
           this.field_q.setDrawBuffer(0, (byte) -91);
-          this.toolkit.a(true, this.field_i);
+          this.toolkit.bindTexture(true, this.field_i);
           jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_longLifetime1, "step"), 0.0f, 0.00390625f, 0.0f);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
@@ -165,16 +165,16 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           jaggl.OpenGL.glPopAttrib();
           jaggl.OpenGL.glPopMatrix();
           jaggl.OpenGL.glMatrixMode(5888);
-          this.toolkit.b(this.field_q, 0);
+          this.toolkit.popReadDrawFramebuffer(this.field_q, 0);
           var7 = this.field_j.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var7);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "sceneTex"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "bloomTex"), 1);
           jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "params"), vba.field_v, ConstantEffectBehaviour.field_p, 0.0f);
-          this.toolkit.e(1, true);
-          this.toolkit.a(true, this.field_x);
-          this.toolkit.e(0, true);
-          this.toolkit.a(true, param0);
+          this.toolkit.setActiveTextureUnit(1, true);
+          this.toolkit.bindTexture(true, this.field_x);
+          this.toolkit.setActiveTextureUnit(0, true);
+          this.toolkit.bindTexture(true, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -365,9 +365,9 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
 
     final void endPass(int param0, byte param1) {
         jaggl.OpenGL.glUseProgramObjectARB(0L);
-        this.toolkit.e(1, true);
-        this.toolkit.a(true, (LegacyOpenGlTexture) null);
-        this.toolkit.e(0, true);
+        this.toolkit.setActiveTextureUnit(1, true);
+        this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
+        this.toolkit.setActiveTextureUnit(0, true);
         if (param1 < 117) {
           this.e(-29);
         }
@@ -392,15 +392,15 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
         this.field_x.setWrap(false, false, -3554);
         this.field_i = new LegacyOpenGlTexture2D(this.toolkit, 3553, 34842, 256, 256);
         this.field_i.setWrap(false, false, -3554);
-        this.toolkit.b((Framebuffer) (this.field_q), (byte) 81);
+        this.toolkit.pushReadDrawFramebuffer((Framebuffer) (this.field_q), (byte) 81);
         this.field_q.attachTexture(true, this.field_x, 0);
         this.field_q.attachTexture(true, this.field_i, 1);
         this.field_q.setDrawBuffer(0, (byte) -91);
         if (!this.field_q.isComplete(-84)) {
-          this.toolkit.b(this.field_q, 0);
+          this.toolkit.popReadDrawFramebuffer(this.field_q, 0);
           return false;
         }
-        this.toolkit.b(this.field_q, 0);
+        this.toolkit.popReadDrawFramebuffer(this.field_q, 0);
         this.field_m = dga.linkShaderProgram(21885, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(param0 - 1, this.toolkit, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
         this.field_v = dga.linkShaderProgram(param0 ^ 21820, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(64, this.toolkit, 35632, "uniform vec3 params;\nuniform sampler2D sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2D(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
         this.field_j = dga.linkShaderProgram(21885, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(64, this.toolkit, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform vec3 dimScale;\nuniform sampler2D bloomTex;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n\t vec4 bloomCol = texture2D(bloomTex, gl_TexCoord[1].xy);\n\t vec4 sceneCol = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n\t float preLum = 0.99*dot(lumCoef, sceneCol.rgb)+0.01;\n    float postLum = preLum*(1.0+(preLum/params.y))/(preLum+1.0);\n\t gl_FragColor = sceneCol*(postLum/preLum)+bloomCol*params.x;\n}\n")});

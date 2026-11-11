@@ -93,14 +93,14 @@ final class ni {
         int var5Lifetime1;
         try {
           param0.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b, gj.field_n}), new ne(gj.field_e)}, 0);
-          this.field_a = param0.c(6, true);
-          this.field_d = param0.c(6, false);
+          this.field_a = param0.createVertexBuffer(6, true);
+          this.field_d = param0.createVertexBuffer(6, false);
           this.field_d.allocate(393168, 12, true);
           this.field_b = param0.createIndexBuffer(26, false);
           this.field_b.allocate(18, 49146);
           var7 = this.field_b.map(true, (byte) -44);
           if (var7 != null) {
-            var8 = param0.a(var7, 125);
+            var8 = param0.streamForBuffer(var7, 125);
             if (jaclib.memory.Stream.b()) {
               for (var4_int = 0; var4_int < 8191; var4_int++) {
                 var5 = var4_int * 4;
@@ -127,7 +127,7 @@ final class ni {
           }
           var9 = this.field_d.mapBuffer(-15730, true);
           if (var9 != null) {
-            var4 = param0.a(var9, 127);
+            var4 = param0.streamForBuffer(var9, 127);
             if (!jaclib.memory.Stream.b()) {
               for (var5Lifetime1 = 0; var5Lifetime1 < 8191; var5Lifetime1++) {
                 var4.a(0.0f);

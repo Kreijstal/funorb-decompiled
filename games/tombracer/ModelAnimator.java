@@ -167,11 +167,11 @@ final class ModelAnimator {
         this(param0, param1, 0);
     }
 
-    final ka buildModel(boolean param0, int param1, boolean param2, byte param3) {
-        ka var5;
-        ka var6;
-        ka var7;
-        ka var8;
+    final ToolkitModel buildModel(boolean param0, int param1, boolean param2, byte param3) {
+        ToolkitModel var5;
+        ToolkitModel var6;
+        ToolkitModel var7;
+        ToolkitModel var8;
         var5 = ScoreSubmission.getModelForCategory(this.field_d, param0, param2, param1 + 3, this.field_b);
         if (var5 == null) {
           return var5;
@@ -236,9 +236,9 @@ final class ModelAnimator {
         return this.getAnimationLength(this.field_a, (byte) 66, this.field_e, this.field_j);
     }
 
-    final ka getModel(byte param0) {
+    final ToolkitModel getModel(byte param0) {
         if (param0 != 74) {
-          return (ka) null;
+          return (ToolkitModel) null;
         }
         return this.buildModel(false, param0 ^ -75, false, (byte) 1);
     }

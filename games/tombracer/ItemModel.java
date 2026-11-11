@@ -119,7 +119,7 @@ final class ItemModel extends TrapModel {
 
     final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         int stackIn_9_0 = 0;
-        ka stackIn_21_0 = null;
+        ToolkitModel stackIn_21_0 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
@@ -186,7 +186,7 @@ final class ItemModel extends TrapModel {
           }
           if (var7 != null) {
             var9 = GameScreen.positiveModulo(-this.body.getFacingAngle(-25787) + 4096 + this.field_m >> 2, 2048, -117);
-            gqa.a(var9, -83584144, param1, param2, (ka) (var7), param3);
+            gqa.a(var9, -83584144, param1, param2, (ToolkitModel) (var7), param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

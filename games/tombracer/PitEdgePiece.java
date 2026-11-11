@@ -62,7 +62,7 @@ final class PitEdgePiece implements SelectivelyLitRenderable {
           sda var8 = (sda) null;
           PitEdgePiece.a(9, (sda) null, 48);
         }
-        ka var4 = this.pit.getEdgeModel((byte) 9, this);
+        ToolkitModel var4 = this.pit.getEdgeModel((byte) 9, this);
         if (var4 == null) {
           return;
         }

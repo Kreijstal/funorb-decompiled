@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hh {
-    static ka[] field_b;
+    static ToolkitModel[] field_b;
     private static String[] field_a;
     static int[] field_c;
 

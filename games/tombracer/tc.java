@@ -7,13 +7,13 @@ class tc extends lu {
     static SecondaryNodeHashTable field_d;
     static String field_f;
 
-    final static ka[] createModels(oc[] param0, int param1, GraphicsToolkit param2) {
+    final static ToolkitModel[] createModels(oc[] param0, int param1, GraphicsToolkit param2) {
         int var4 = 0;
-        ka[] var3 = null;
+        ToolkitModel[] var3 = null;
         RuntimeException var3_ref = null;
         int var5 = 0;
-        ka[] var6 = null;
-        ka[] stackIn_10_0 = null;
+        ToolkitModel[] var6 = null;
+        ToolkitModel[] stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -25,7 +25,7 @@ class tc extends lu {
           if (param0 == null) {
             return null;
           }
-          var6 = new ka[param0.length];
+          var6 = new ToolkitModel[param0.length];
           var3 = var6;
           if (param1 != -8829) {
             field_f = (String) null;

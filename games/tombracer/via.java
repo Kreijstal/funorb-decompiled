@@ -89,7 +89,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
         }
     }
 
-    final static void drawModelRotated(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawModelRotated(ToolkitModel param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -105,7 +105,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
           if (param0 == null) {
             return;
           }
-          var11 = tga.field_a.e();
+          var11 = tga.field_a.getTransform();
           var11.setIdentity();
           if (param2 != 0) {
             var11.rotateX(param2 << 3);
@@ -119,9 +119,9 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
           var11.translate(param4 >> 14, -param3 >> 14, -param5 >> 14);
           try {
             if (ica.field_a) {
-              param0.a(var11, (el) null, 0);
+              param0.draw(var11, (el) null, 0);
             } else {
-              param0.a(var11, (el) null, 2048, 0);
+              param0.drawAtFixedDepth(var11, (el) null, 2048, 0);
             }
             if (param6 >= 44) {
               return;

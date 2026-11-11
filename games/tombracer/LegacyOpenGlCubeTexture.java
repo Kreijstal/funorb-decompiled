@@ -22,7 +22,7 @@ final class LegacyOpenGlCubeTexture extends LegacyOpenGlTexture {
         this.field_q = -1;
         this.field_o = -1;
         try {
-          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
           for (var7_int = 0; var7_int < 6; var7_int++) {
             jaggl.OpenGL.glTexImage2Dub(var7_int + 34069, 0, this.internalFormat, param2, param2, 0, param5, 5121, param4[var7_int], 0);
           }

@@ -157,7 +157,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -46, "mu_x_entered_other_game");
                 if (var2 != null) {
-                  np.field_V = jaa.decodeText((byte) 109, var2);
+                  OpenGlModel.field_V = jaa.decodeText((byte) 109, var2);
                 }
                 var2 = dn.loadFile((byte) -17, "mu_x_left_lobby");
                 if (null != var2) {
@@ -1083,7 +1083,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 127, "logging_in");
                 if (null != var2) {
-                  gja.field_bb = jaa.decodeText((byte) 81, var2);
+                  HardwareModel.field_bb = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = dn.loadFile((byte) -96, "reconnect");
                 if (null != var2) {
@@ -2453,7 +2453,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -118, "autorespond");
                 if (var2 != null) {
-                  gja.field_k = jaa.decodeText((byte) 112, var2);
+                  HardwareModel.field_k = jaa.decodeText((byte) 112, var2);
                 }
                 var2 = dn.loadFile((byte) -102, "quickchat_help");
                 if (var2 != null) {

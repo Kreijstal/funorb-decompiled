@@ -85,7 +85,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+            this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
             jaggl.OpenGL.glPixelStorei(3317, 1);
             stackIn_17_0 = ~param7;
           }
@@ -128,7 +128,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
 
     final void setWrap(boolean param0, boolean param1, int param2) {
         if (param2 == ~this.target) {
-          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
           jaggl.OpenGL.glTexParameteri(this.target, 10242, param1 ? 10497 : 33071);
           jaggl.OpenGL.glTexParameteri(this.target, 10243, param0 ? 10497 : 33071);
         }
@@ -136,7 +136,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
 
     final void copyFromFramebuffer(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         int var8 = this.toolkit.field_I - param5 - param6;
-        this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+        this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
         jaggl.OpenGL.glCopyTexSubImage2D(this.target, 0, param3, this.field_o - param2 - param6, param0, var8, param1, param6);
         jaggl.OpenGL.glFlush();
         if (param4 < -62) {
@@ -193,7 +193,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+            this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
             stackIn_13_0 = -34038;
           }
           boolean decompiledSharedTail0 = (stackIn_13_0 == ~this.target ||
@@ -247,7 +247,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
         try {
           this.field_l = param3;
           this.field_o = param4;
-          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
           boolean decompiledSharedTail0 = (!(param5) ||
             this.target == 34037);
           if (!decompiledSharedTail0) {
@@ -329,7 +329,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+            this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
             jaggl.OpenGL.glPixelStorei(3317, 1);
             stackIn_13_0 = param5 ? 1 : 0;
           }
@@ -374,7 +374,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
         try {
           this.field_o = param4;
           this.field_l = param3;
-          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
           jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.internalFormat, param3, param4, 0, sja.toBaseInternalFormat(this.internalFormat, 20934), 5121, (byte[]) null, 0);
           this.setLinearFiltering(true, 3);
         } catch (RuntimeException runtimeException) {
@@ -430,7 +430,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
             stackIn_17_0 = -72 / ((-66 - param6) / 44);
           }
           var10_int = stackIn_17_0;
-          this.toolkit.a(true, (LegacyOpenGlTexture) (this));
+          this.toolkit.bindTexture(true, (LegacyOpenGlTexture) (this));
           if (param3 != param1) {
             jaggl.OpenGL.glPixelStorei(3314, param1);
           }

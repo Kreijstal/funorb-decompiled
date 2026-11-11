@@ -29,7 +29,7 @@ final class PitSnakeModel implements Renderable {
     public final void render(int param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
-        ka var5 = null;
+        ToolkitModel var5 = null;
         try {
           var3_int = this.snake.getDirection(2);
           var4 = GameScreen.positiveModulo(-(PortalBehaviour.directionToAngle(ne.field_f[var3_int][1], ne.field_f[var3_int][0], 1) >> 2) + 512, 2048, 73);

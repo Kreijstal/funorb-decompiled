@@ -463,10 +463,10 @@ abstract class GameFont {
                 }
                 var15 = this.field_a.characterWidth(255, var14);
                 if (nt.field_b != -1) {
-                  this.field_b.a(1, var15, (int)((double)this.field_a.field_a * 0.7) + param8, param1, nt.field_b);
+                  this.field_b.drawHorizontalLineAt(1, var15, (int)((double)this.field_a.field_a * 0.7) + param8, param1, nt.field_b);
                 }
                 if (moa.field_b != -1) {
-                  this.field_b.a(1, var15, param8 + this.field_a.field_a + 1, param1, moa.field_b);
+                  this.field_b.drawHorizontalLineAt(1, var15, param8 + this.field_a.field_a + 1, param1, moa.field_b);
                 }
                 param1 = param1 + var15;
                 var11 = var14;

@@ -43,9 +43,9 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
           CanvasImageBuffer.a(true, (byte) 98, false);
           this.field_h = true;
           this.field_i = (Transform3D) ((Object) new NativeTransform3D());
-          this.a(new NativeTransform3D());
+          this.setTransform(new NativeTransform3D());
           this.createRenderContexts(1);
-          this.g(0);
+          this.bindContextToCurrentThread(0);
           if (param0 != null) {
             this.prepareCanvasSurface(param0, param2, param3);
             this.bindCanvasSurface(param0);
@@ -54,7 +54,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          this.a(true);
+          this.close(true);
           throw new RuntimeException();
         }
     }
@@ -63,12 +63,12 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     private final native void va(za param0);
 
-    final void a(Transform3D param0) {
+    final void setTransform(Transform3D param0) {
         this.field_j = param0;
         this.ma(((NativeTransform3D) (param0)).field_nativeid);
     }
 
-    final RenderBuffer b(int param0, int param1) {
+    final RenderBuffer createRenderBuffer(int param0, int param1) {
         return (RenderBuffer) ((Object) new xa(param0, param1));
     }
 
@@ -105,7 +105,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.N(param0, field_g, field_d);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void setPostProcessBounds(int param0, int param1, int param2, int param3) {
     }
 
     final native void xa(float param0);
@@ -145,7 +145,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
 
-    final a m() {
+    final a contextForThread() {
         int var1 = 0;
         for (var1 = 0; var1 < this.field_l; var1++) {
           if (this.field_q[var1].field_h == Thread.currentThread()) {
@@ -157,7 +157,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     private final native void AA(short param0, short param1, int param2, byte param3, byte param4, int param5, boolean param6, byte param7, byte param8, byte param9, byte param10, boolean param11, boolean param12, boolean param13, boolean param14, boolean param15, byte param16, boolean param17, boolean param18, int param19);
 
-    final void d() {
+    final void restoreCanvasTarget() {
         this.bindCanvasSurface(this.field_f.field_f);
     }
 
@@ -195,14 +195,14 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    final void b(int param0) {
+    final void setModelBufferSize(int param0) {
         this.field_k = param0;
         this.field_n = param0;
         if (this.field_l > 1) {
           throw new IllegalStateException("No MT");
         }
         this.createRenderContexts(this.field_l);
-        this.g(0);
+        this.bindContextToCurrentThread(0);
     }
 
     final RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1) {
@@ -213,30 +213,30 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void ya();
 
-    final void c() {
+    final void applyPostProcessing() {
     }
 
-    final boolean f() {
+    final boolean isBloomEnabled() {
         return false;
     }
 
-    final boolean j() {
+    final boolean supportsHeap() {
         return true;
     }
 
     private final native void FA();
 
-    final Transform3D e() {
+    final Transform3D getTransform() {
         return this.field_i;
     }
 
-    final ka a(oc param0, int param1, int param2, int param3, int param4) {
-        return (ka) ((Object) new i(this, this.field_p, param0, param1, param2, param3, param4));
+    final ToolkitModel createModel(oc param0, int param1, int param2, int param3, int param4) {
+        return (ToolkitModel) ((Object) new i(this, this.field_p, param0, param1, param2, param3, param4));
     }
 
     final native void setClip(int param0, int param1, int param2, int param3);
 
-    final Transform3D b() {
+    final Transform3D createTransform() {
         return (Transform3D) ((Object) new NativeTransform3D());
     }
 
@@ -292,7 +292,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     private final native void n(long param0, long param1);
 
-    final void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRectOutline(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.drawHorizontalLine(param0, param1, param2, param4, param5);
         this.drawHorizontalLine(param0, param1 + param3 - 1, param2, param4, param5);
         this.P(param0, param1 + 1, param3 - 1, param4, param5);
@@ -322,13 +322,13 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     }
 
     protected final synchronized void finalize() {
-        this.a(true);
+        this.close(true);
         if (this.field_nativeid != 0L) {
           ho.a(-1, (e) (this));
         }
     }
 
-    final int l() {
+    final int getMaxLights() {
         return 4;
     }
 
@@ -357,7 +357,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.wa(param0, param1, param2, param3, param4, param5);
     }
 
-    final za a(int param0) {
+    final za createHeap(int param0) {
         ya var2 = new ya(this, param0);
         this.field_o.addLast((byte) -97, var2);
         return (za) ((Object) var2);
@@ -388,7 +388,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void DA(int param0, int param1, int param2, int param3);
 
-    final void k() {
+    final void dispose() {
         if (this.field_s) {
           return;
         }
@@ -408,12 +408,12 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
           LegacyOpenGlEnvironmentWaterEffect.a(true, false, true);
           this.field_h = false;
         }
-        this.g();
+        this.collectGarbage();
         ho.a(-1);
         this.field_s = true;
     }
 
-    final void a(RenderTarget param0) {
+    final void bindRenderTarget(RenderTarget param0) {
         wa var2 = (wa) (param0);
         this.n(var2.field_b.field_nativeid, var2.field_a.field_nativeid);
     }
@@ -424,11 +424,11 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native int i();
 
-    private final void g(int param0) {
+    private final void bindContextToCurrentThread(int param0) {
         this.field_q[param0].a();
     }
 
-    private final void g() {
+    private final void collectGarbage() {
         System.gc();
         System.runFinalization();
         ho.a(true);
@@ -438,18 +438,18 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void clear(int param0);
 
-    final void a(ToolkitSprite param0, boolean param1) {
+    final void bindSpriteTarget(ToolkitSprite param0, boolean param1) {
         this.n(((j) (param0)).field_nativeid, 0L);
     }
 
-    final void a() {
+    final void copyFrontToBack() {
     }
 
-    final boolean h() {
+    final boolean enableBloom() {
         return false;
     }
 
-    final void a(za param0) {
+    final void useHeap(za param0) {
         this.field_p = (ya) (param0);
         this.va(param0);
     }
@@ -458,11 +458,11 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void HA(int param0, int param1, int param2, int param3, int[] param4);
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final void fillShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         throw new IllegalStateException();
     }
 
-    final void a(float param0, float param1, float param2) {
+    final void setBloomParameters(float param0, float param1, float param2) {
     }
 
     static {

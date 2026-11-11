@@ -3,7 +3,7 @@
  */
 final class ta extends UiComponent {
     static int[] field_vb;
-    static ka[] field_ub;
+    static ToolkitModel[] field_ub;
     private UiComponent field_wb;
     private UiComponent field_tb;
 
@@ -39,7 +39,7 @@ final class ta extends UiComponent {
           this.field_tb.setBounds(this.field_G - var3, this.field_t, -23776, 0, var3);
           return;
         }
-        field_ub = (ka[]) null;
+        field_ub = (ToolkitModel[]) null;
         this.field_wb.setBounds(this.field_wb.measureNaturalWidth((byte) 69), this.field_t, -23776, 0, 0);
         var3Lifetime1 = param1 + this.field_wb.field_G;
         this.field_tb.setBounds(this.field_G - var3Lifetime1, this.field_t, -23776, 0, var3Lifetime1);
@@ -62,7 +62,7 @@ final class ta extends UiComponent {
     public static void releaseStatics(byte param0) {
         field_vb = null;
         if (param0 != -17) {
-          field_ub = (ka[]) null;
+          field_ub = (ToolkitModel[]) null;
           field_ub = null;
           return;
         }

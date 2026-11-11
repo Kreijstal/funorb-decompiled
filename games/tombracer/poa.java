@@ -27,7 +27,7 @@ final class poa extends hga {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -4) {
-            stackIn_4_0 = OpenGlToolkit.a('*', param1.field_o.length(), -59);
+            stackIn_4_0 = OpenGlToolkit.repeatCharacter('*', param1.field_o.length(), -59);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

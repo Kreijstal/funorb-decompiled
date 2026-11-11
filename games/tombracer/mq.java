@@ -52,7 +52,7 @@ final class mq {
           var12 = this.field_c.field_ic;
           var6 = new OpenGlRenderbuffer(this.field_c, 6408, param3.field_r, param3.field_q);
           var8 = 0;
-          this.field_c.b((Framebuffer) (var12), (byte) 81);
+          this.field_c.pushReadDrawFramebuffer((Framebuffer) (var12), (byte) 81);
           var12.attachRenderbuffer(0, var6, true);
           if (var12.isComplete(86)) {
             jaggl.OpenGL.glPushMatrix();
@@ -69,7 +69,7 @@ final class mq {
             jaggl.OpenGL.glUniform2fARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_f.field_c, "sampleSize"), 1.0f / (float)param2.field_r, 1.0f / (float)param2.field_q);
             for (var9 = 0; var9 < param3.field_o; var9++) {
               var10 = (float)var9 / (float)param3.field_o;
-              this.field_c.a(true, param2);
+              this.field_c.bindTexture(true, param2);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord3f(0.0f, 0.0f, var10);
               jaggl.OpenGL.glVertex2f(0.0f, 0.0f);
@@ -90,7 +90,7 @@ final class mq {
             var8 = 1;
           }
           var12.detachAttachment(55, 0);
-          this.field_c.b(var12, 0);
+          this.field_c.popReadDrawFramebuffer(var12, 0);
           stackIn_10_0 = var8;
           return stackIn_10_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

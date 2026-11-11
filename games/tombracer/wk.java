@@ -53,7 +53,7 @@ final class wk extends IntrusiveNode {
         try {
           SwitchableId.field_b = param1 * aqa.getFrameRate(1188664449) / 1000;
           ne.loadJagexLogoSound(param3, -101);
-          gja.loadLogoMeshes(param3, 0);
+          HardwareModel.loadLogoMeshes(param3, 0);
           jp.loadFinalFrame(param3, (byte) 20);
           if (param2 != 11861) {
             ResourceArchive var5 = (ResourceArchive) null;

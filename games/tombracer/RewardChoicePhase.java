@@ -172,7 +172,7 @@ final class RewardChoicePhase extends MatchPhase {
                 if (this.isLocalPlayersTurn(true) &&
                   var10 == this.selectedRow &&
                   var11_int == this.selectedColumn) {
-                  tga.field_a.c(SoundEvent.withFullAlpha(false, wga.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
+                  tga.field_a.fillRectangleAlpha(SoundEvent.withFullAlpha(false, wga.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
                 }
                 var12_ref_fv.drawSlot(1);
               }

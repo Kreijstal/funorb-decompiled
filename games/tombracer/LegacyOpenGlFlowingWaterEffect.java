@@ -128,8 +128,8 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
 
     final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
         try {
-          this.toolkit.a(true, param2);
-          this.toolkit.d(1, param0);
+          this.toolkit.bindTexture(true, param2);
+          this.toolkit.setTextureCombineMode(1, param0);
           if (param1 != 32221) {
             this.field_c = (aaa) null;
           }
@@ -172,35 +172,35 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
         var6 = stackIn_5_0;
         stackIn_8_0 = ((param0 & 128) == 0) ? 0 : 1;
         var7 = stackIn_8_0;
-        this.toolkit.e(1, true);
+        this.toolkit.setActiveTextureUnit(1, true);
         if (var7 == 0) {
-          ka.field_b[2] = var6;
-          ka.field_b[0] = 0.0f;
-          ka.field_b[3] = 0.0f;
-          ka.field_b[1] = 0.0f;
+          ToolkitModel.field_b[2] = var6;
+          ToolkitModel.field_b[0] = 0.0f;
+          ToolkitModel.field_b[3] = 0.0f;
+          ToolkitModel.field_b[1] = 0.0f;
         } else {
-          ka.field_b[3] = 0.0f;
-          ka.field_b[1] = 0.0f;
-          ka.field_b[0] = var6;
-          ka.field_b[2] = 0.0f;
+          ToolkitModel.field_b[3] = 0.0f;
+          ToolkitModel.field_b[1] = 0.0f;
+          ToolkitModel.field_b[0] = var6;
+          ToolkitModel.field_b[2] = 0.0f;
         }
-        jaggl.OpenGL.glTexGenfv(8192, 9474, ka.field_b, 0);
-        ka.field_b[2] = 0.0f;
-        ka.field_b[1] = var6;
-        ka.field_b[0] = 0.0f;
-        ka.field_b[3] = var4 * (float)this.toolkit.field_Oc % 1.0f;
-        jaggl.OpenGL.glTexGenfv(8193, 9474, ka.field_b, 0);
+        jaggl.OpenGL.glTexGenfv(8192, 9474, ToolkitModel.field_b, 0);
+        ToolkitModel.field_b[2] = 0.0f;
+        ToolkitModel.field_b[1] = var6;
+        ToolkitModel.field_b[0] = 0.0f;
+        ToolkitModel.field_b[3] = var4 * (float)this.toolkit.field_Oc % 1.0f;
+        jaggl.OpenGL.glTexGenfv(8193, 9474, ToolkitModel.field_b, 0);
         if (!this.field_c.field_g) {
           var8 = (int)(16.0f * (var5 * (float)this.toolkit.field_Oc));
-          this.toolkit.a(true, this.field_c.field_i[var8 % 16]);
+          this.toolkit.bindTexture(true, this.field_c.field_i[var8 % 16]);
         } else {
-          ka.field_b[3] = var5 * (float)this.toolkit.field_Oc % 1.0f;
-          ka.field_b[1] = 0.0f;
-          ka.field_b[2] = 0.0f;
-          ka.field_b[0] = 0.0f;
-          jaggl.OpenGL.glTexGenfv(8194, 9473, ka.field_b, 0);
+          ToolkitModel.field_b[3] = var5 * (float)this.toolkit.field_Oc % 1.0f;
+          ToolkitModel.field_b[1] = 0.0f;
+          ToolkitModel.field_b[2] = 0.0f;
+          ToolkitModel.field_b[0] = 0.0f;
+          jaggl.OpenGL.glTexGenfv(8194, 9473, ToolkitModel.field_b, 0);
         }
-        this.toolkit.e(0, true);
+        this.toolkit.setActiveTextureUnit(0, true);
     }
 
     final void disable(boolean param0) {
@@ -208,9 +208,9 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
         if (param0) {
           return;
         }
-        this.toolkit.e(1, true);
-        this.toolkit.a(true, (LegacyOpenGlTexture) null);
-        this.toolkit.e(0, !param0 ? true : false);
+        this.toolkit.setActiveTextureUnit(1, true);
+        this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
+        this.toolkit.setActiveTextureUnit(0, !param0 ? true : false);
     }
 
     LegacyOpenGlFlowingWaterEffect(OpenGlToolkit param0, aaa param1) {
@@ -219,7 +219,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           this.field_c = param1;
           this.field_d = new OpenGlDisplayLists(param0, 2);
           this.field_d.beginList((byte) 6, 0);
-          this.toolkit.e(1, true);
+          this.toolkit.setActiveTextureUnit(1, true);
           if (this.field_c.field_g) {
             jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
             jaggl.OpenGL.glEnable(3170);
@@ -228,16 +228,16 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
           jaggl.OpenGL.glEnable(3168);
           jaggl.OpenGL.glEnable(3169);
-          this.toolkit.e(0, true);
+          this.toolkit.setActiveTextureUnit(0, true);
           this.field_d.endList((byte) 77);
           this.field_d.beginList((byte) 6, 1);
-          this.toolkit.e(1, true);
+          this.toolkit.setActiveTextureUnit(1, true);
           if (this.field_c.field_g) {
             jaggl.OpenGL.glDisable(3170);
           }
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
-          this.toolkit.e(0, true);
+          this.toolkit.setActiveTextureUnit(0, true);
           this.field_d.endList((byte) 10);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -248,9 +248,9 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
         this.field_d.callList(4864, '\0');
         int var3 = -99 / ((56 - param1) / 48);
         if (this.field_c.field_g) {
-          this.toolkit.e(1, true);
-          this.toolkit.a(true, this.field_c.field_a);
-          this.toolkit.e(0, true);
+          this.toolkit.setActiveTextureUnit(1, true);
+          this.toolkit.bindTexture(true, this.field_c.field_a);
+          this.toolkit.setActiveTextureUnit(0, true);
         }
     }
 

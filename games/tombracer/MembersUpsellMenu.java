@@ -191,9 +191,9 @@ final class MembersUpsellMenu extends MenuScreen {
           var7Lifetime1 = SwitchLinkList.b(0) / 2 + this.field_r;
           var4Lifetime2 = 350;
           var5Lifetime1 = 100;
-          tga.field_a.c(-1442774783, var6 - (var4Lifetime2 >> 1), var4Lifetime2, -(var5Lifetime1 >> 1) + var7Lifetime1, -22971, var5Lifetime1);
-          tga.field_a.a(var7Lifetime1 - (var5Lifetime1 >> 1), -(var4Lifetime2 >> 1) + var6, var5Lifetime1, var4Lifetime2, -1442774783, (byte) -75);
-          tga.field_a.a(var7Lifetime1 - (var5Lifetime1 >> 1) + 1, 1 - (var4Lifetime2 >> 1) + var6, -2 + var5Lifetime1, var4Lifetime2 - 2, -1426063361, (byte) -128);
+          tga.field_a.fillRectangleAlpha(-1442774783, var6 - (var4Lifetime2 >> 1), var4Lifetime2, -(var5Lifetime1 >> 1) + var7Lifetime1, -22971, var5Lifetime1);
+          tga.field_a.drawRectOutlineAlpha(var7Lifetime1 - (var5Lifetime1 >> 1), -(var4Lifetime2 >> 1) + var6, var5Lifetime1, var4Lifetime2, -1442774783, (byte) -75);
+          tga.field_a.drawRectOutlineAlpha(var7Lifetime1 - (var5Lifetime1 >> 1) + 1, 1 - (var4Lifetime2 >> 1) + var6, -2 + var5Lifetime1, var4Lifetime2 - 2, -1426063361, (byte) -128);
           if (!TextWidgetPainter.a(42) &&
             var3 != 0) {
             var8 = ByteStorage.field_c;

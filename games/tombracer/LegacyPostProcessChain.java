@@ -91,7 +91,7 @@ final class LegacyPostProcessChain {
         }
         if (this.field_h) {
           if (this.field_e == null) {
-            this.field_t.b((Framebuffer) (this.field_i), (byte) 81);
+            this.field_t.pushReadDrawFramebuffer((Framebuffer) (this.field_i), (byte) 81);
             this.field_i.detachAttachment(-110, 0);
             this.field_i.detachAttachment(-114, 1);
             this.field_i.detachAttachment(36, 8);
@@ -104,9 +104,9 @@ final class LegacyPostProcessChain {
             } else {
               this.field_i.attachRenderbuffer(8, this.field_b, true);
             }
-            this.field_t.b(this.field_i, 0);
+            this.field_t.popReadDrawFramebuffer(this.field_i, 0);
           } else {
-            this.field_t.b((Framebuffer) (this.field_i), (byte) 81);
+            this.field_t.pushReadDrawFramebuffer((Framebuffer) (this.field_i), (byte) 81);
             this.field_i.detachAttachment(-93, 0);
             this.field_i.detachAttachment(-123, 1);
             this.field_i.detachAttachment(107, 8);
@@ -117,22 +117,22 @@ final class LegacyPostProcessChain {
             if (this.field_u) {
               this.field_i.attachTexture(true, this.field_m, 8);
             }
-            this.field_t.b(this.field_i, 0);
-            this.field_t.b((Framebuffer) (this.field_e), (byte) 81);
+            this.field_t.popReadDrawFramebuffer(this.field_i, 0);
+            this.field_t.pushReadDrawFramebuffer((Framebuffer) (this.field_e), (byte) 81);
             this.field_e.detachAttachment(124, 0);
             this.field_e.detachAttachment(71, 8);
             this.field_e.attachRenderbuffer(0, this.field_l, true);
             this.field_e.attachRenderbuffer(8, this.field_b, true);
-            this.field_t.b(this.field_e, 0);
+            this.field_t.popReadDrawFramebuffer(this.field_e, 0);
           }
           this.field_h = false;
           this.field_n = true;
         }
         if (this.field_n) {
-          this.field_t.b((Framebuffer) (this.field_d), (byte) 81);
+          this.field_t.pushReadDrawFramebuffer((Framebuffer) (this.field_d), (byte) 81);
           stackIn_55_1 = !(this.field_d.isComplete(20));
           this.field_n = stackIn_55_1;
-          this.field_t.b(this.field_d, param0 + 739);
+          this.field_t.popReadDrawFramebuffer(this.field_d, param0 + 739);
         }
         stackIn_59_0 = !(this.field_n);
         return stackIn_59_0;
@@ -207,7 +207,7 @@ final class LegacyPostProcessChain {
           this.field_q = param3;
           this.field_a = true;
           this.field_o = param1;
-          this.field_t.b((Framebuffer) (this.field_d), (byte) 81);
+          this.field_t.pushReadDrawFramebuffer((Framebuffer) (this.field_d), (byte) 81);
           this.field_d.setDrawBuffer(0, (byte) -91);
           this.field_t.a(4, -this.field_t.field_I + (this.field_g + this.field_q), -this.field_o);
           return true;
@@ -247,7 +247,7 @@ final class LegacyPostProcessChain {
         }
         if (null != this.field_e) {
           var2 = 16384;
-          this.field_t.a(this.field_e, -1090);
+          this.field_t.popFramebuffer(this.field_e, -1090);
           this.field_t.pushFramebuffer(0, this.field_i);
           this.field_e.setReadBuffer(-1, 0);
           this.field_i.setDrawBuffer(0, (byte) -91);
@@ -255,12 +255,12 @@ final class LegacyPostProcessChain {
             var2 = var2 | 256;
           }
           jaggl.OpenGL.glBlitFramebufferEXT(0, 0, this.field_k, this.field_g, 0, 0, this.field_k, this.field_g, var2, 9728);
-          this.field_t.a((Framebuffer) (this.field_e), (byte) -38);
-          this.field_t.c(this.field_i, -4);
+          this.field_t.popDrawFramebuffer((Framebuffer) (this.field_e), (byte) -38);
+          this.field_t.pushDrawFramebuffer(this.field_i, -4);
         }
-        this.field_t.q(2);
-        this.field_t.a((byte) 66, 0);
-        this.field_t.d(1, 1);
+        this.field_t.prepareSpriteRendering(2);
+        this.field_t.setBlendMode((byte) 66, 0);
+        this.field_t.setTextureCombineMode(1, 1);
         this.field_t.la();
         var2Lifetime1 = 0;
         var3 = 1;
@@ -272,7 +272,7 @@ final class LegacyPostProcessChain {
             var4.apply(this.field_r[var2Lifetime1], var7, (byte) -100, this.field_m);
             if (var5 == null &&
               -1 + var6 == var7) {
-              this.field_t.b(this.field_i, 0);
+              this.field_t.popReadDrawFramebuffer(this.field_i, 0);
               this.field_t.a(4, 0, 0);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord2f(0.0f, (float)this.field_g);

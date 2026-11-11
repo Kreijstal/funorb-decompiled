@@ -125,9 +125,9 @@ final class WallModel extends TrapModel {
         return 0;
     }
 
-    final ka getTileModel(WallTile param0, byte param1) {
+    final ToolkitModel getTileModel(WallTile param0, byte param1) {
         int discarded$0 = 0;
-        ka stackIn_44_0 = null;
+        ToolkitModel stackIn_44_0 = null;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
         String stackIn_48_2 = null;

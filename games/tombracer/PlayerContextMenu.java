@@ -282,7 +282,7 @@ final class PlayerContextMenu {
                 2 != param1 &&
                 !fua.field_g) {
                 this.field_e = param0;
-                this.field_f.addItem((byte) -90, 19, LegacyOpenGlFlowingWaterEffect.formatText(119, gja.field_k, new String[]{var7}));
+                this.field_f.addItem((byte) -90, 19, LegacyOpenGlFlowingWaterEffect.formatText(119, HardwareModel.field_k, new String[]{var7}));
               }
             }
             if (var5 != null) {
@@ -294,7 +294,7 @@ final class PlayerContextMenu {
                 this.field_f.addItem((byte) -118, 18, LegacyOpenGlFlowingWaterEffect.formatText(108, SceneLight.field_f, new String[]{var7}));
                 if (param0 != null) {
                   this.field_e = param0;
-                  this.field_f.addItem((byte) -71, 19, LegacyOpenGlFlowingWaterEffect.formatText(96, gja.field_k, new String[]{var7}));
+                  this.field_f.addItem((byte) -71, 19, LegacyOpenGlFlowingWaterEffect.formatText(96, HardwareModel.field_k, new String[]{var7}));
                 }
               }
               this.field_f.addItem((byte) -104, 5, LegacyOpenGlFlowingWaterEffect.formatText(90, LegacyTurbulentWaterNoise.field_q, new String[]{var7}));

@@ -465,7 +465,7 @@ final class BlockModel extends TrapModel {
           }
           if (var8 != null) {
             var9Lifetime1 = GameScreen.positiveModulo(4096 + (var7 - this.body.getFacingAngle(-25787)) >> 2, 2048, -28);
-            gqa.a(var9Lifetime1, -83584144, param1, param2, (ka) (var8), param3);
+            gqa.a(var9Lifetime1, -83584144, param1, param2, (ToolkitModel) (var8), param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

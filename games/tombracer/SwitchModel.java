@@ -706,31 +706,31 @@ final class SwitchModel extends TrapModel {
 
     final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         int stackIn_6_0 = 0;
-        ka[] stackIn_14_0 = null;
+        ToolkitModel[] stackIn_14_0 = null;
         int stackIn_15_1 = 0;
-        ka[] stackIn_17_0 = null;
+        ToolkitModel[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
-        ka[] stackIn_23_0 = null;
+        ToolkitModel[] stackIn_23_0 = null;
         int stackIn_24_1 = 0;
-        ka[] stackIn_26_0 = null;
+        ToolkitModel[] stackIn_26_0 = null;
         int stackIn_27_1 = 0;
-        ka[] stackIn_30_0 = null;
+        ToolkitModel[] stackIn_30_0 = null;
         int stackIn_31_1 = 0;
-        ka[] stackIn_33_0 = null;
+        ToolkitModel[] stackIn_33_0 = null;
         int stackIn_34_1 = 0;
-        ka[] stackIn_49_0 = null;
+        ToolkitModel[] stackIn_49_0 = null;
         int stackIn_50_1 = 0;
-        ka[] stackIn_54_0 = null;
+        ToolkitModel[] stackIn_54_0 = null;
         int stackIn_55_1 = 0;
-        ka[] stackIn_58_0 = null;
+        ToolkitModel[] stackIn_58_0 = null;
         int stackIn_59_1 = 0;
-        ka[] stackIn_63_0 = null;
+        ToolkitModel[] stackIn_63_0 = null;
         int stackIn_64_1 = 0;
-        ka[] stackIn_68_0 = null;
+        ToolkitModel[] stackIn_68_0 = null;
         int stackIn_69_1 = 0;
-        ka[] stackIn_72_0 = null;
+        ToolkitModel[] stackIn_72_0 = null;
         int stackIn_73_1 = 0;
-        ka stackIn_77_0 = null;
+        ToolkitModel stackIn_77_0 = null;
         RuntimeException stackIn_94_0 = null;
         StringBuilder stackIn_94_1 = null;
         String stackIn_95_2 = null;
@@ -742,11 +742,11 @@ final class SwitchModel extends TrapModel {
         int var9 = 0;
         int var10 = 0;
         Object var11 = null;
-        ka var12 = null;
-        ka var13 = null;
+        ToolkitModel var12 = null;
+        ToolkitModel var13 = null;
         int var14 = 0;
         int var15 = 0;
-        ka var16 = null;
+        ToolkitModel var16 = null;
         int var14Lifetime1;
         int var14Lifetime2;
         var15 = TombRacer.field_G ? 1 : 0;
@@ -905,7 +905,7 @@ final class SwitchModel extends TrapModel {
           }
           if (var11 != null) {
             var14Lifetime1 = GameScreen.positiveModulo(var10 + (2048 - this.body.getFacingAngle(-25787)) >> 2, 2048, -38);
-            gqa.a(var14Lifetime1, -83584144, param1, param2, (ka) (var11), param3);
+            gqa.a(var14Lifetime1, -83584144, param1, param2, (ToolkitModel) (var11), param3);
           }
           if (this.field_q == 1) {
             if (var7 == 0) {

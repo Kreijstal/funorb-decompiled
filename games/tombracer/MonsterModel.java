@@ -12,7 +12,7 @@ final class MonsterModel extends MotionTrackingModel {
 
     final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         int var7 = 0;
-        ka var8 = null;
+        ToolkitModel var8 = null;
         if (this.field_C == null) {
           return;
         }

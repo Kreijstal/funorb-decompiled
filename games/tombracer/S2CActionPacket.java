@@ -72,7 +72,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
         }
         var2 = param1;
         if (4 == var2) {
-          return HardwareGraphicsToolkit.D((byte) -110);
+          return HardwareGraphicsToolkit.createGunWeaponPreset((byte) -110);
         }
         if (var2 == 0) {
           return Transform3D.createDefaultWeapon(true);

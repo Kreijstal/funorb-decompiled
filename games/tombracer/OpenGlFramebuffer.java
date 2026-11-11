@@ -217,7 +217,7 @@ final class OpenGlFramebuffer implements Framebuffer {
     }
 
     protected final void finalize() throws Throwable {
-        this.field_f.e(2, this.field_b);
+        this.field_f.queueFramebufferDeletion(2, this.field_b);
         super.finalize();
     }
 

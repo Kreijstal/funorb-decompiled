@@ -455,7 +455,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
             var9 = (UiComponent) null;
             VoronoiNoiseOperator.a(false, -120, (UiComponent) null);
           }
-          stackIn_5_0 = GraphicsToolkit.a(param2, var7, param4, param3, var6_int, param0, param5, -17441);
+          stackIn_5_0 = GraphicsToolkit.createToolkit(param2, var7, param4, param3, var6_int, param0, param5, -17441);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

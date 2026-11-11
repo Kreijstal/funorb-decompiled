@@ -195,7 +195,7 @@ final class RoomLighting implements RenderListener {
           if (LightSource.a((byte) -7)) {
             var4_int = param1 instanceof Particle ? 1 : 0;
             var5 = 0;
-            var6 = MidiVoiceMixer.min(this.activeLights.length, tga.field_a.l(), -97);
+            var6 = MidiVoiceMixer.min(this.activeLights.length, tga.field_a.getMaxLights(), -97);
             var7 = null;
             if (param1 instanceof SelectivelyLitRenderable) {
               var7 = (SelectivelyLitRenderable) (param1);

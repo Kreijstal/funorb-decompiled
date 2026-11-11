@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends ka implements e {
+final class i extends ToolkitModel implements e {
     private ya field_g;
     private NativeSoftwareGraphicsToolkit field_f;
     long field_nativeid;
     rga[] field_d;
     ava[] field_e;
 
-    final void a(Transform3D param0, el param1, int param2) {
+    final void draw(Transform3D param0, el param1, int param2) {
         if (param1 == null) {
-          this.field_f.m().a((ka) (this), param0, (int[]) null, param2);
+          this.field_f.contextForThread().a((ToolkitModel) (this), param0, (int[]) null, param2);
         } else {
           NativeSoftwareGraphicsToolkit.field_t[5] = 0;
-          this.field_f.m().a((ka) (this), param0, NativeSoftwareGraphicsToolkit.field_t, param2);
+          this.field_f.contextForThread().a((ToolkitModel) (this), param0, NativeSoftwareGraphicsToolkit.field_t, param2);
         }
     }
 
@@ -21,7 +21,7 @@ final class i extends ka implements e {
 
     private final native void l(long param0, int param1, int[] param2, int param3, int param4, int param5, int param6, boolean param7);
 
-    final void b() {
+    final void unlockForUpdate() {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (this.field_f.field_l > 1) {
@@ -33,14 +33,14 @@ final class i extends ka implements e {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void tintColours(int param0, int param1, int param2, int param3) {
     }
 
-    final ka a(byte param0, int param1, boolean param2) {
-        return this.field_f.m().a(this, param0, param1, param2);
+    final ToolkitModel copy(byte param0, int param1, boolean param2) {
+        return this.field_f.contextForThread().a(this, param0, param1, param2);
     }
 
-    final void a(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void applyTransform(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         this.l(this.field_nativeid, param0, param1, param2, param3, param4, param5, param6);
     }
 
@@ -54,7 +54,7 @@ final class i extends ka implements e {
 
     final native void I(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 
-    final void a() {
+    final void lockForUpdate() {
         try {
           Throwable decompiledCaughtException = null;
           Object var1 = null;
@@ -86,12 +86,12 @@ final class i extends ka implements e {
 
     final native void H(int param0, int param1, int param2);
 
-    final void a(Transform3D param0, el param1, int param2, int param3) {
+    final void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3) {
         if (param1 == null) {
-          this.field_f.m().a((ka) (this), param0, (int[]) null, param2, param3);
+          this.field_f.contextForThread().a((ToolkitModel) (this), param0, (int[]) null, param2, param3);
         } else {
           NativeSoftwareGraphicsToolkit.field_t[5] = 0;
-          this.field_f.m().a((ka) (this), param0, NativeSoftwareGraphicsToolkit.field_t, param2, param3);
+          this.field_f.contextForThread().a((ToolkitModel) (this), param0, NativeSoftwareGraphicsToolkit.field_t, param2, param3);
         }
     }
 

@@ -115,9 +115,9 @@ final class ClipStack {
 
     final void popClip(int param0) {
         if (this.field_e != this.field_c.field_a) {
-          this.field_b.d();
+          this.field_b.restoreCanvasTarget();
           if (this.field_c.field_a != null) {
-            this.field_b.a(this.field_c.field_a, true);
+            this.field_b.bindSpriteTarget(this.field_c.field_a, true);
           }
           this.field_e = this.field_c.field_a;
         }
