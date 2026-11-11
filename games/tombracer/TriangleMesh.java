@@ -26,7 +26,7 @@ final class TriangleMesh {
     short[] field_y;
     int field_m;
     int[] field_F;
-    static oc[] field_g;
+    static ModelData[] field_g;
     short[] field_d;
     short[] field_s;
     short[] field_w;
@@ -57,7 +57,7 @@ final class TriangleMesh {
     public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != -32768) {
-          field_g = (oc[]) null;
+          field_g = (ModelData[]) null;
         }
     }
 

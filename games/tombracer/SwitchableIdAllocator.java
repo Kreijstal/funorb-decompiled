@@ -18,19 +18,19 @@ final class SwitchableIdAllocator {
         int incrementValue$16 = 0;
         int incrementValue$17 = 0;
         int var17 = 0;
-        oc var5 = null;
-        oc var6 = null;
-        oc var7 = null;
-        oc var8 = null;
-        oc var9 = null;
-        oc var10 = null;
-        oc var11 = null;
-        oc var12 = null;
+        ModelData var5 = null;
+        ModelData var6 = null;
+        ModelData var7 = null;
+        ModelData var8 = null;
+        ModelData var9 = null;
+        ModelData var10 = null;
+        ModelData var11 = null;
+        ModelData var12 = null;
         int var13_int = 0;
-        oc var13 = null;
-        oc var14 = null;
-        oc var15 = null;
-        oc var16 = null;
+        ModelData var13 = null;
+        ModelData var14 = null;
+        ModelData var15 = null;
+        ModelData var16 = null;
         int var18 = 0;
         Object var19 = null;
         GameAssetLoader var19_ref = null;
@@ -51,7 +51,7 @@ final class SwitchableIdAllocator {
         try {
           var19_ref = (GameAssetLoader) (dma.field_l);
           var19_ref.drawLoadingProgress(param2, (byte) 47, param1);
-          SoftReferenceCache.field_b = new oc[13];
+          SoftReferenceCache.field_b = new ModelData[13];
           var5 = gha.loadModelData("", "characters/models/deaths/gibs", 33, param0);
           var6 = gha.loadModelData("", "characters/models/props/jadeidol", 122, param0);
           var7 = gha.loadModelData("", "characters/models/props/jadeidol2", 48, param0);
@@ -64,37 +64,37 @@ final class SwitchableIdAllocator {
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$9, (byte) 47, param1);
           for (var13_int = 0; var13_int < 13; var13_int++) {
-            var20 = gn.field_w[var13_int];
+            var20 = FadingDialog.field_w[var13_int];
             if (var13_int != 9 &&
               0 != var13_int) {
               var14 = gha.loadModelData("", "characters/models/deaths/" + var20 + "_gibs", -128, param0);
             } else {
               var14 = var12;
             }
-            SoftReferenceCache.field_b[var13_int] = new oc(new oc[]{gha.loadModelData("", "characters/models/" + var20, 81, param0), var14, var11, var5, var8, var9, var10, var6, var7}, 9);
+            SoftReferenceCache.field_b[var13_int] = new ModelData(new ModelData[]{gha.loadModelData("", "characters/models/" + var20, 81, param0), var14, var11, var5, var8, var9, var10, var6, var7}, 9);
           }
           incrementValue$10 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$10, (byte) 47, param1);
-          OpenGlBuffer.field_c = new oc[13];
+          OpenGlBuffer.field_c = new ModelData[13];
           for (var13_intLifetime1 = 0; 13 > var13_intLifetime1; var13_intLifetime1++) {
-            var21 = gn.field_w[var13_intLifetime1];
+            var21 = FadingDialog.field_w[var13_intLifetime1];
             var15 = gha.loadModelData("", "characters/models/deaths/body_parts/" + var21 + "_inhalf", -123, param0);
-            OpenGlBuffer.field_c[var13_intLifetime1] = new oc(new oc[]{var15, var5}, 2);
+            OpenGlBuffer.field_c[var13_intLifetime1] = new ModelData(new ModelData[]{var15, var5}, 2);
           }
           incrementValue$11 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$11, (byte) 47, param1);
-          DoorwayComponent.field_K = new oc[13];
+          DoorwayComponent.field_K = new ModelData[13];
           for (var13_intLifetime2 = 0; var13_intLifetime2 < 13; var13_intLifetime2++) {
-            var22 = gn.field_w[var13_intLifetime2];
+            var22 = FadingDialog.field_w[var13_intLifetime2];
             var15 = gha.loadModelData("", "characters/models/deaths/body_parts/" + var22 + "_beheaded", -113, param0);
-            DoorwayComponent.field_K[var13_intLifetime2] = new oc(new oc[]{var15, var5}, 2);
+            DoorwayComponent.field_K[var13_intLifetime2] = new ModelData(new ModelData[]{var15, var5}, 2);
           }
           incrementValue$12 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$12, (byte) 47, param1);
-          C2SActionPacket.field_l = new oc[115];
+          C2SActionPacket.field_l = new ModelData[115];
           C2SActionPacket.field_l[0] = gha.loadModelData("", "objects/wheeledblock/wheeledblock", -112, param0);
           C2SActionPacket.field_l[109] = gha.loadModelData("", "objects/mirrorblock/mirrorblock_immovable", -126, param0);
           C2SActionPacket.field_l[1] = gha.loadModelData("", "objects/mirrorblock/mirrorblock", 67, param0);
@@ -210,7 +210,7 @@ final class SwitchableIdAllocator {
           incrementValue$13 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$13, (byte) 47, param1);
-          CourseLayoutFactory.field_e = new oc[26];
+          CourseLayoutFactory.field_e = new ModelData[26];
           CourseLayoutFactory.field_e[0] = gha.loadModelData("", "walls/wallkit/wall_straight_1a", 85, param0);
           CourseLayoutFactory.field_e[1] = gha.loadModelData("", "walls/wallkit/wall_straight_1b", 124, param0);
           CourseLayoutFactory.field_e[2] = gha.loadModelData("", "walls/wallkit/wall_straight_2a", -127, param0);
@@ -240,7 +240,7 @@ final class SwitchableIdAllocator {
           incrementValue$14 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$14, (byte) 47, param1);
-          dq.field_h = new oc[8];
+          dq.field_h = new ModelData[8];
           dq.field_h[0] = gha.loadModelData("", "objects/coin/coin", -110, param0);
           dq.field_h[1] = gha.loadModelData("", "objects/bagoloot/bagoloot", -126, param0);
           dq.field_h[2] = gha.loadModelData("", "objects/jadeidol/static_jade_idol", 94, param0);
@@ -252,7 +252,7 @@ final class SwitchableIdAllocator {
           incrementValue$15 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$15, (byte) 47, param1);
-          gta.field_f = new oc[5];
+          gta.field_f = new ModelData[5];
           gta.field_f[1] = gha.loadModelData("", "objects/plants/plant_01_green", 58, param0);
           gta.field_f[0] = gha.loadModelData("", "objects/plants/plant_01_red", 51, param0);
           gta.field_f[2] = gha.loadModelData("", "objects/plants/plant_02", 15, param0);
@@ -261,7 +261,7 @@ final class SwitchableIdAllocator {
           incrementValue$16 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$16, (byte) 47, param1);
-          cba.field_b = new oc[26];
+          cba.field_b = new ModelData[26];
           cba.field_b[0] = gha.loadModelData("", "floortiles/brickfloor1a", 74, param0);
           cba.field_b[1] = gha.loadModelData("", "floortiles/brickfloor1b", 118, param0);
           cba.field_b[2] = gha.loadModelData("", "floortiles/brickfloor1c", -112, param0);
@@ -290,17 +290,17 @@ final class SwitchableIdAllocator {
           incrementValue$17 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$17, (byte) 47, param1);
-          TriangleMesh.field_g = new oc[5];
+          TriangleMesh.field_g = new ModelData[5];
           var13 = gha.loadModelData("", "monsters/skeleton/new_skeleton", -126, param0);
           var14 = gha.loadModelData("", "monsters/skeleton/new_skeleton_nojoints", -125, param0);
           var15 = gha.loadModelData("", "monsters/skeleton/new_skeleton_bandaged", 115, param0);
           var16 = gha.loadModelData("", "monsters/skeleton/new_skeleton_scorched", 46, param0);
-          TriangleMesh.field_g[0] = new oc(new oc[]{var13}, 1);
-          TriangleMesh.field_g[1] = new oc(new oc[]{var14}, 1);
-          TriangleMesh.field_g[2] = new oc(new oc[]{var15}, 1);
-          TriangleMesh.field_g[3] = new oc(new oc[]{var16}, 1);
+          TriangleMesh.field_g[0] = new ModelData(new ModelData[]{var13}, 1);
+          TriangleMesh.field_g[1] = new ModelData(new ModelData[]{var14}, 1);
+          TriangleMesh.field_g[2] = new ModelData(new ModelData[]{var15}, 1);
+          TriangleMesh.field_g[3] = new ModelData(new ModelData[]{var16}, 1);
           TriangleMesh.field_g[4] = gha.loadModelData("", "monsters/snakes/snake_kingsnake", 33, param0);
-          ControllerLocomotor.field_p = new oc[17];
+          ControllerLocomotor.field_p = new ModelData[17];
           ControllerLocomotor.field_p[0] = gha.loadModelData("", "effects/projectile_blade", 116, param0);
           ControllerLocomotor.field_p[1] = gha.loadModelData("", "effects/projectile_bullet", -122, param0);
           ControllerLocomotor.field_p[2] = gha.loadModelData("", "effects/projectile_dart", -113, param0);

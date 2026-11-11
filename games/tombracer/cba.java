@@ -4,7 +4,7 @@
 final class cba {
     static int field_d;
     static java.applet.Applet field_a;
-    static oc[] field_b;
+    static ModelData[] field_b;
     static String field_c;
 
     final static int a(byte param0, double param1, int param2) {

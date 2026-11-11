@@ -31,7 +31,7 @@ final class CircleMovementLocomotor extends Locomotor {
         var3 = this.getTrapInitialLocalY(false);
         if (!this.field_p &&
           !this.field_t) {
-          var4 = (cr.sin8192(true, this.field_q >> 2) >> 8) * (this.field_o >> 8) + var2;
+          var4 = (ConsoleTokenStream.sin8192(true, this.field_q >> 2) >> 8) * (this.field_o >> 8) + var2;
           var5 = var3 + (IntIntHashTable.cos8192(35, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         } else {
           var4 = this.trap.getLocalX(25745);
@@ -41,7 +41,7 @@ final class CircleMovementLocomotor extends Locomotor {
         this.field_q = this.field_q - this.field_r;
         this.field_q = GameScreen.positiveModulo(this.field_q, 32768, 78);
         var7 = 49 % ((param0 + 69) / 42);
-        var6 = var2 + (cr.sin8192(true, this.field_q >> 2) >> 8) * (this.field_o >> 8);
+        var6 = var2 + (ConsoleTokenStream.sin8192(true, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         var8 = var3 + (IntIntHashTable.cos8192(102, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         this.trap.move((byte) -94, -var4 + var6, var8 - var5);
     }

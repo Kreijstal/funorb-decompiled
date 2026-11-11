@@ -230,7 +230,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         return this.field_i;
     }
 
-    final ToolkitModel createModel(oc param0, int param1, int param2, int param3, int param4) {
+    final ToolkitModel createModel(ModelData param0, int param1, int param2, int param3, int param4) {
         return (ToolkitModel) ((Object) new i(this, this.field_p, param0, param1, param2, param3, param4));
     }
 
@@ -425,7 +425,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     final native int i();
 
     private final void bindContextToCurrentThread(int param0) {
-        this.field_q[param0].a();
+        this.field_q[param0].bindToCurrentThread();
     }
 
     private final void collectGarbage() {

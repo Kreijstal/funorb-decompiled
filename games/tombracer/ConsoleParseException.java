@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends Exception {
+final class ConsoleParseException extends Exception {
     int field_a;
 
     final static boolean hasAnyMask33(int param0, int param1, int param2) {
@@ -13,7 +13,7 @@ final class jj extends Exception {
 
     final static int glFormatComponents(int param0, byte param1) {
         if (param1 >= -56) {
-          jj.hasAnyMask33(-126, -76, -57);
+          ConsoleParseException.hasAnyMask33(-126, -76, -57);
           if (6406 == param0) {
             return 1;
           }
@@ -55,7 +55,7 @@ final class jj extends Exception {
         return 4;
     }
 
-    jj(int param0) {
+    ConsoleParseException(int param0) {
         this.field_a = param0;
     }
 

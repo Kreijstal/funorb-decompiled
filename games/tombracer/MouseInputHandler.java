@@ -158,7 +158,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != ColourGradientOperator.field_n) {
             MatchScoringObserver.field_h = 0;
-            cr.field_d = param0.getX();
+            ConsoleTokenStream.field_d = param0.getX();
             TestModel.field_m = param0.getY();
             bva.currentTimeMillis((byte) -107);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {

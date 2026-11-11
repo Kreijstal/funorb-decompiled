@@ -254,7 +254,7 @@ final class ItemModel extends TrapModel {
         qpa.a(275, LobbyGameWidget.field_Pb, 3, 40, 440, 126, 200);
         qpa.a(275, PbufferEntry.field_n, 5, 40, 440, 126, 200);
         qpa.a(275, RemovedFromGameMenu.field_s, 6, 40, 440, 124, 200);
-        qpa.a(335, jta.field_z, 9, 40, 440, 125, 200);
+        qpa.a(335, DialogStack.field_z, 9, 40, 440, 125, 200);
         if (param0 < 97) {
           OpenGlToolkit var2 = (OpenGlToolkit) null;
           ItemModel.ensureWaterNoiseTextures((OpenGlToolkit) null, -2);

@@ -8,7 +8,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
     private int field_h;
     private int hash;
     private int round;
-    static oc[] field_l;
+    static ModelData[] field_l;
     static ur field_i;
 
     final static void a(int param0) {
@@ -202,7 +202,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
             this.orders[var3_int] = DraggableWidget.a(param0.readBits((byte) 44, 7), -6487);
           }
           if (param1 != -19) {
-            field_l = (oc[]) null;
+            field_l = (ModelData[]) null;
             param0.endBitAccess((byte) 98);
           } else {
             param0.endBitAccess((byte) 98);

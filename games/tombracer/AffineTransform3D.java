@@ -33,7 +33,7 @@ final class AffineTransform3D extends Transform3D {
         this.field_l = 0.0f;
     }
 
-    final void a(Transform3D param0, byte param1) {
+    final void setTransposedFrom(Transform3D param0, byte param1) {
         AffineTransform3D var5 = null;
         try {
           var5 = (AffineTransform3D) (param0);
@@ -92,7 +92,7 @@ final class AffineTransform3D extends Transform3D {
         return param0 * this.field_h + (this.field_p * param1 + this.field_o * param3) + this.field_i;
     }
 
-    final void b(Transform3D param0, int param1) {
+    final void multiply(Transform3D param0, int param1) {
         AffineTransform3D var12 = null;
         float var4 = 0.0f;
         float var5 = 0.0f;
@@ -462,7 +462,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void a(Transform3D param0, Transform3D param1, byte param2) {
+    final void setProduct(Transform3D param0, Transform3D param1, byte param2) {
         AffineTransform3D var6 = null;
         AffineTransform3D var5 = null;
         try {
@@ -488,7 +488,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void a(float param0, float param1, byte param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9) {
+    final void setComponents(float param0, float param1, byte param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9) {
         if (param2 > 12) {
           this.field_i = 0.0f;
           this.field_q = param9;
@@ -568,7 +568,7 @@ final class AffineTransform3D extends Transform3D {
           param0[8] = this.field_p;
           if (param1 <= 1) {
             var4 = (Transform3D) null;
-            this.b((Transform3D) null, -14);
+            this.multiply((Transform3D) null, -14);
           }
           param0[7] = 0.0f;
           param0[10] = this.field_h;
@@ -666,7 +666,7 @@ final class AffineTransform3D extends Transform3D {
           return this.field_e + (param3 * this.field_f + (this.field_l * param2 + param1 * this.field_g));
         }
         Transform3D var6 = (Transform3D) null;
-        this.b((Transform3D) null, -20);
+        this.multiply((Transform3D) null, -20);
         return this.field_e + (param3 * this.field_f + (this.field_l * param2 + param1 * this.field_g));
     }
 
@@ -742,7 +742,7 @@ final class AffineTransform3D extends Transform3D {
           return;
         }
         Transform3D var6 = (Transform3D) null;
-        this.b((Transform3D) null, 20);
+        this.multiply((Transform3D) null, 20);
         this.field_n = 0.0f;
         this.field_m = 0.0f;
         this.field_h = param0;

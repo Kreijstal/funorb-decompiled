@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cr {
+final class ConsoleTokenStream {
     private ConsoleToken[] field_a;
     int field_c;
     static volatile int field_d;
@@ -56,7 +56,7 @@ final class cr {
         field_b = null;
     }
 
-    final boolean a(byte param0) {
+    final boolean isAtEnd(byte param0) {
         if (param0 >= 77) {
           return this.field_a.length <= this.field_c ? true : false;
         }
@@ -93,7 +93,7 @@ final class cr {
         }
     }
 
-    cr(IntrusiveDeque param0) {
+    ConsoleTokenStream(IntrusiveDeque param0) {
         int incrementValue$2 = 0;
         int var2_int = 0;
         ConsoleToken var3 = null;
@@ -129,7 +129,7 @@ final class cr {
         }
     }
 
-    final ConsoleToken c(byte param0) {
+    final ConsoleToken next(byte param0) {
         int fieldTemp$0 = 0;
         if (param0 < -125) {
           fieldTemp$0 = this.field_c;

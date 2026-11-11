@@ -70,7 +70,7 @@ final class iea {
           stackIn_3_4 = param2 * 3 * (2 + di.field_a);
           stackIn_3_5 = 2 + di.field_a;
           stackIn_4_6 = (OpenGlSprite.field_j.field_vb == lu.field_b);
-          var3_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
           var4 = OpenGlSprite.field_j.field_tb.field_J;
           if (param1 != -56) {
             return;

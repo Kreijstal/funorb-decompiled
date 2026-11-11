@@ -139,7 +139,7 @@ final class mp {
         RuntimeException var1 = null;
         try {
           var1_int = 11 % ((-52 - param0) / 57);
-          stackIn_1_0 = ej.field_a.g(-110);
+          stackIn_1_0 = ej.field_a.maxVisibleDialogWidth(-110);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -276,7 +276,7 @@ final class mp {
             ara.field_ub = new UiComponent(0L, param8);
             ara.field_ub.field_r = ShooterComponent.field_G;
             era.field_e.addChild(-128, ara.field_ub);
-            stackIn_31_0 = o.e(540800) ? 1 : 0;
+            stackIn_31_0 = HeapIndexArray.e(540800) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&
             !fua.field_g) {

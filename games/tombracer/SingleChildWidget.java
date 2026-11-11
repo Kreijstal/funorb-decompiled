@@ -25,7 +25,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         return stackIn_10_0;
     }
 
-    private final boolean b(UiWidget param0, int param1) {
+    private final boolean focusChildOnShiftTab(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -125,7 +125,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         }
     }
 
-    final static void a(boolean param0, int[] param1, IndexedSprite[] param2, ResourceArchive param3, ResourceArchive param4) {
+    final static void loadLobbySprites(boolean param0, int[] param1, IndexedSprite[] param2, ResourceArchive param3, ResourceArchive param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
@@ -168,7 +168,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         int var7_intLifetime3;
         var18 = TombRacer.field_G ? 1 : 0;
         try {
-          var20 = tw.loadIndexedSpritesByName((byte) -69, "crowns", "lobby", param4);
+          var20 = SoftwareRenderContext.loadIndexedSpritesByName((byte) -69, "crowns", "lobby", param4);
           var5 = var20;
           RoomComponent.field_n = var20.length;
           if (param2 != null) {
@@ -206,9 +206,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           di.field_a = 15;
           wg.field_i = 2;
           mna.field_d = 4;
-          var7 = jta.loadBinaryFont((byte) 123, "largefont", param4, "lobby", param3);
-          PenaltyNotice.field_f = jta.loadBinaryFont((byte) 118, "generalfont", param4, "lobby", param3);
-          LegacyOpenGlRidgedWaterEffect.field_e = jta.loadBinaryFont((byte) 127, "chatfont", param4, "lobby", param3);
+          var7 = DialogStack.loadBinaryFont((byte) 123, "largefont", param4, "lobby", param3);
+          PenaltyNotice.field_f = DialogStack.loadBinaryFont((byte) 118, "generalfont", param4, "lobby", param3);
+          LegacyOpenGlRidgedWaterEffect.field_e = DialogStack.loadBinaryFont((byte) 127, "chatfont", param4, "lobby", param3);
           var7.setInlineSprites(var5, var24);
           PenaltyNotice.field_f.setInlineSprites(var5, var24);
           LegacyOpenGlRidgedWaterEffect.field_e.setInlineSprites(var5, var24);
@@ -370,17 +370,17 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           DirectByteStorage.field_h.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_mouseover"), 121);
           DirectByteStorage.field_h.field_db = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_mouseheld"), 113);
           DirectByteStorage.field_h.field_M = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_disabled"), 116);
-          pk.field_s = new UiComponent(0L, (UiComponent) null);
-          pk.field_s.field_R = MaskBlendOperator.loadSpriteByName(param4, "lobby", "upbutton", -121);
-          pk.field_s.field_rb = MaskBlendOperator.loadSpriteByName(param4, "lobby", "upbutton_mouseover", -87);
-          pk.field_s.field_U = MaskBlendOperator.loadSpriteByName(param4, "lobby", "upbutton_mouseheld", 71);
-          pk.field_s.field_B = MaskBlendOperator.loadSpriteByName(param4, "lobby", "upbutton_disabled", 71);
+          HiscoresScreen.field_s = new UiComponent(0L, (UiComponent) null);
+          HiscoresScreen.field_s.field_R = MaskBlendOperator.loadSpriteByName(param4, "lobby", "upbutton", -121);
+          HiscoresScreen.field_s.field_rb = MaskBlendOperator.loadSpriteByName(param4, "lobby", "upbutton_mouseover", -87);
+          HiscoresScreen.field_s.field_U = MaskBlendOperator.loadSpriteByName(param4, "lobby", "upbutton_mouseheld", 71);
+          HiscoresScreen.field_s.field_B = MaskBlendOperator.loadSpriteByName(param4, "lobby", "upbutton_disabled", 71);
           BufferedSocket.field_b = new UiComponent(0L, (UiComponent) null);
           BufferedSocket.field_b.field_R = MaskBlendOperator.loadSpriteByName(param4, "lobby", "downbutton", 119);
           BufferedSocket.field_b.field_rb = MaskBlendOperator.loadSpriteByName(param4, "lobby", "downbutton_mouseover", -73);
           BufferedSocket.field_b.field_U = MaskBlendOperator.loadSpriteByName(param4, "lobby", "downbutton_mouseheld", 56);
           BufferedSocket.field_b.field_B = MaskBlendOperator.loadSpriteByName(param4, "lobby", "downbutton_disabled", 113);
-          DateFieldsWidget.field_F = new VerticalScrollbar(0L, pk.field_s, BufferedSocket.field_b, ClientException.field_b, DirectByteStorage.field_h);
+          DateFieldsWidget.field_F = new VerticalScrollbar(0L, HiscoresScreen.field_s, BufferedSocket.field_b, ClientException.field_b, DirectByteStorage.field_h);
           aaa.field_d = new hla(0L, (UiComponent) null, rfa.field_C, DateFieldsWidget.field_F, jk.field_g, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -481,11 +481,11 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         if (param0 != 0) {
           return true;
         }
-        stackIn_6_0 = (PortalComponent.A(param0 ^ 108)) && ((8 & pk.field_C) == 0);
+        stackIn_6_0 = (PortalComponent.A(param0 ^ 108)) && ((8 & HiscoresScreen.field_C) == 0);
         return stackIn_6_0;
     }
 
-    private final boolean a(UiWidget param0, int param1) {
+    private final boolean focusChildOnTab(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -548,7 +548,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         }
     }
 
-    final static boolean d(int param0, int param1, int param2) {
+    final static boolean hasFlag32(int param0, int param1, int param2) {
         if (param2 != 32) {
           field_v = (GameFont) null;
         }
@@ -617,7 +617,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         try {
           if (param0 != 59) {
             var8 = (ResourceArchive) null;
-            SingleChildWidget.a(false, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null, (ResourceArchive) null);
+            SingleChildWidget.loadLobbySprites(false, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null, (ResourceArchive) null);
           }
           if (null != this.child) {
             this.child.handlePointerRelease((byte) 59, param1, param2, this.field_i + param3, param4 + this.field_n, param5);
@@ -666,9 +666,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
             return false;
           }
           if (!VerticalScrollbar.field_tb[81]) {
-            stackIn_13_0 = this.a(param1, 71);
+            stackIn_13_0 = this.focusChildOnTab(param1, 71);
           } else {
-            stackIn_13_0 = this.b(param1, 3815994);
+            stackIn_13_0 = this.focusChildOnShiftTab(param1, 3815994);
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -735,7 +735,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         }
         if (param2 != 0) {
           ResourceArchive var6 = (ResourceArchive) null;
-          SingleChildWidget.a(false, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null, (ResourceArchive) null);
+          SingleChildWidget.loadLobbySprites(false, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 

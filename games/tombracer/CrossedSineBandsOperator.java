@@ -369,8 +369,8 @@ final class CrossedSineBandsOperator extends TextureOperator {
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
         if (!param1 && (SoftwareRasterizer.width != SceneLight.field_i ||
-          BufferedSocket.field_g != SoftwareRasterizer.height) && (SoftwareRasterizer.height == gn.field_C.field_e &&
-          gn.field_C.field_f == SoftwareRasterizer.width)) {
+          BufferedSocket.field_g != SoftwareRasterizer.height) && (SoftwareRasterizer.height == FadingDialog.field_C.field_e &&
+          FadingDialog.field_C.field_f == SoftwareRasterizer.width)) {
           if (null != C2SChooseRewardPacket.field_a) {
             MazeComponent.c(false, 2);
           } else {

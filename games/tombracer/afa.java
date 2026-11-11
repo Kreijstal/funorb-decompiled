@@ -4,7 +4,7 @@
 final class afa {
     static kn field_c;
     static String field_b;
-    sca field_a;
+    IndexArray field_a;
     private static String field_z;
 
     public static void releaseStatics(byte param0) {

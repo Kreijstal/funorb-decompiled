@@ -526,7 +526,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 wk.refreshReportedHeapLimit((byte) -84);
                 this.recreateCanvas((byte) 68);
-                gn.field_C = LegacyOpenGlTurbulentTextureEffect.createRasterBuffer(117, mma.field_a, (java.awt.Component) ((Object) nma.field_l), qf.field_i);
+                FadingDialog.field_C = LegacyOpenGlTurbulentTextureEffect.createRasterBuffer(117, mma.field_a, (java.awt.Component) ((Object) nma.field_l), qf.field_i);
                 this.initializeGame(-71);
                 cq.field_a = VariantMask.createClock(0);
                 do {

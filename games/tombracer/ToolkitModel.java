@@ -489,7 +489,7 @@ abstract class ToolkitModel {
           ToolkitModel.a((byte) 65);
         }
         if (TextureOperator.field_l != null) {
-          TextureOperator.field_l.i((byte) -7);
+          TextureOperator.field_l.dismiss((byte) -7);
         }
         PushableMountComponent.field_F = new efa();
         um.field_l.transitionToContent(100, PushableMountComponent.field_F);

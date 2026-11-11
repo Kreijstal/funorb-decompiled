@@ -17,7 +17,7 @@ final class gb {
           return;
         }
         GraphicsToolkit var2 = (GraphicsToolkit) null;
-        gb.a((oc) null, -85, (GraphicsToolkit) null);
+        gb.a((ModelData) null, -85, (GraphicsToolkit) null);
         var1Lifetime1 = (bd) (vt.field_a.pollLast((byte) 22));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new bd();
@@ -30,7 +30,7 @@ final class gb {
         throw new IllegalStateException();
     }
 
-    final static ToolkitModel a(oc param0, int param1, GraphicsToolkit param2) {
+    final static ToolkitModel a(ModelData param0, int param1, GraphicsToolkit param2) {
         RuntimeException var3 = null;
         ToolkitModel stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

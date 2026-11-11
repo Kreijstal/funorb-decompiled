@@ -78,7 +78,7 @@ final class epa extends MenuScreen {
               if (S2CProfileUpdatePacket.field_d) {
                 param2 = KeySwitchComponent.field_K;
               }
-              TextureOperator.field_l.a(param0, (byte) 94, param2);
+              TextureOperator.field_l.showResultMessage(param0, (byte) 94, param2);
             }
             if (param0 != 256) {
               if (10 == param0) {

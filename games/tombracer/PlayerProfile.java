@@ -138,11 +138,11 @@ final class PlayerProfile {
         return this.charactersUnlocked.get(param1);
     }
 
-    final taa pollPendingUpdate(int param0) {
+    final UnlockEntry pollPendingUpdate(int param0) {
         if (param0 < 29) {
           PlayerProfile.releaseStatics(90);
         }
-        return (taa) (this.field_i.removeFirst(59));
+        return (UnlockEntry) (this.field_i.removeFirst(59));
     }
 
     final int getPendingUpdateCount(int param0) {
@@ -229,7 +229,7 @@ final class PlayerProfile {
         this.field_k = 255;
     }
 
-    final void queueUpdate(int param0, taa param1) {
+    final void queueUpdate(int param0, UnlockEntry param1) {
         try {
           if (param0 != 8) {
             PlayerProfile.clearChatInput(true);

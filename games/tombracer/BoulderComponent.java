@@ -134,7 +134,7 @@ final class BoulderComponent extends PathMoverComponent {
           ProceduralTextureProvider.field_c = PlayerContextMenu.field_c;
           PlayerContextMenu.field_c = false;
           PlayerModel.field_b = DisplaySettingsDialog.field_X;
-          PasswordValidator.field_m = cr.field_d;
+          PasswordValidator.field_m = ConsoleTokenStream.field_d;
           RidgedNoise3D.field_p = TestModel.field_m;
           DisplaySettingsDialog.field_X = 0;
         }

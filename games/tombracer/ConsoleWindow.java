@@ -189,7 +189,7 @@ abstract class ConsoleWindow implements ShellListener {
         }
     }
 
-    abstract String[] a(boolean param0);
+    abstract String[] getCompletions(boolean param0);
 
     public static void releaseStatics(int param0) {
         field_f = null;
@@ -202,7 +202,7 @@ abstract class ConsoleWindow implements ShellListener {
         }
     }
 
-    private final UiComponent a(int param0, byte param1, int param2) {
+    private final UiComponent createColouredPanel(int param0, byte param1, int param2) {
         UiComponent var4 = new UiComponent(0L, (UiComponent) null);
         int var5 = 39 / ((-89 - param1) / 36);
         var4.field_w = RoomLighting.a(param2, param0, 4);
@@ -299,7 +299,7 @@ abstract class ConsoleWindow implements ShellListener {
         }
     }
 
-    private final UiComponent a(byte param0, int param1) {
+    private final UiComponent createFilledPanel(byte param0, int param1) {
         UiComponent var3 = new UiComponent();
         if (param0 <= 80) {
           String var4 = (String) null;
@@ -371,7 +371,7 @@ abstract class ConsoleWindow implements ShellListener {
               if (param2 != 80) {
                 this.field_o.handleKey(param2, param0 - 19624, param1);
               } else {
-                this.e(param0 + 21375);
+                this.autocomplete(param0 + 21375);
               }
             }
           } else {
@@ -395,7 +395,7 @@ abstract class ConsoleWindow implements ShellListener {
           }
           this.printColouredText(24219, this.field_t + var7, 5635925);
           var5 = (UiComponent) (this.field_a.field_tb.field_J.last(3));
-          if (!this.a(var7, (byte) -112)) {
+          if (!this.executeCommand(var7, (byte) -112)) {
             var5.field_ib = 16733525;
           }
           this.field_o.clear((byte) -113);
@@ -414,7 +414,7 @@ abstract class ConsoleWindow implements ShellListener {
         }
     }
 
-    final void a(byte param0, Object param1) {
+    final void printResult(byte param0, Object param1) {
         try {
           if (param0 > -15) {
             field_f = (String[]) null;
@@ -425,9 +425,9 @@ abstract class ConsoleWindow implements ShellListener {
         }
     }
 
-    abstract void e(int param0);
+    abstract void autocomplete(int param0);
 
-    abstract boolean a(String param0, byte param1);
+    abstract boolean executeCommand(String param0, byte param1);
 
     private final void toggleOpen(int param0) {
         boolean stackIn_3_1 = false;
@@ -468,7 +468,7 @@ abstract class ConsoleWindow implements ShellListener {
           this.field_o.getCaret(-1320) != this.field_c) {
           this.field_r = this.field_o.getText((byte) -121);
           this.field_c = this.field_o.getCaret(-1320);
-          this.field_b = this.a(false);
+          this.field_b = this.getCompletions(false);
           if (this.field_b != null &&
             this.field_b.length == 0) {
             this.field_b = null;
@@ -487,8 +487,8 @@ abstract class ConsoleWindow implements ShellListener {
         }
         this.field_h = this.field_h + 1;
         this.field_i.layoutFullScreen(83, param1);
-        this.field_a.b(param0, 0, this.field_k * 2 * pg.field_y, this.field_k);
-        this.field_o.h((byte) 87);
+        this.field_a.updateScroll(param0, 0, this.field_k * 2 * pg.field_y, this.field_k);
+        this.field_o.handleMouseSelection((byte) 87);
     }
 
     final static bb a(int param0, int param1, int param2, int param3, int param4) {
@@ -562,15 +562,15 @@ abstract class ConsoleWindow implements ShellListener {
           this.field_m = param0;
           this.field_k = this.field_m.field_w + this.field_m.field_k;
           var3_int = 4 + this.field_k;
-          var4 = this.a((byte) 104, 65793);
+          var4 = this.createFilledPanel((byte) 104, 65793);
           var5 = var4;
           var6 = var4;
           var7 = var4;
-          var8 = this.a(7829367, (byte) 31, 2236962);
-          var9 = this.a(65793, (byte) 21, 65793);
-          var10 = this.a(3355443, (byte) -126, 65793);
+          var8 = this.createColouredPanel(7829367, (byte) 31, 2236962);
+          var9 = this.createColouredPanel(65793, (byte) 21, 65793);
+          var10 = this.createColouredPanel(3355443, (byte) -126, 65793);
           var11 = this.createSelectionStyle(-91, 2263074);
-          var12 = this.a(2236962, (byte) -125, 65793);
+          var12 = this.createColouredPanel(2236962, (byte) -125, 65793);
           this.field_i = new UiComponent(0L, var5);
           this.field_i.setBounds(mma.field_a, 200, -23776, -200, 0);
           var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
@@ -578,7 +578,7 @@ abstract class ConsoleWindow implements ShellListener {
           var14.field_J = new IntrusiveDeque();
           this.field_a = new ScrollPane(0L, var14, var6, var13);
           this.field_a.field_tb.field_J = new IntrusiveDeque();
-          this.field_a.a(this.field_i.field_G - 10, 0, (byte) 127, 5, 15, -var3_int + 185, 5);
+          this.field_a.setPaneBounds(this.field_i.field_G - 10, 0, (byte) 127, 5, 15, -var3_int + 185, 5);
           this.field_i.addChild(-128, this.field_a);
           var15 = new UiComponent();
           var15.field_H = this.field_m;
@@ -586,8 +586,8 @@ abstract class ConsoleWindow implements ShellListener {
           var15.field_S = 5;
           var15.field_V = 2;
           this.field_o = new EditableTextField(0L, var7, var11, var15);
-          this.field_o.b(this.field_a.field_G, 127, this.field_a.field_T + this.field_a.field_t + 5, var3_int, this.field_a.field_qb);
-          this.field_o.a(param1, (byte) -127);
+          this.field_o.setFieldBounds(this.field_a.field_G, 127, this.field_a.field_T + this.field_a.field_t + 5, var3_int, this.field_a.field_qb);
+          this.field_o.setClipboardDispatcher(param1, (byte) -127);
           this.field_i.addChild(-126, this.field_o);
           this.field_p = new UiComponent(0L, var12);
           this.field_p.field_qb = 0;

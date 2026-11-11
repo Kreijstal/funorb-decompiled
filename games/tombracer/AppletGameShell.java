@@ -42,7 +42,7 @@ abstract class AppletGameShell extends GameApplet {
             Puddle.b(7, (byte) -105);
           }
           if (hd.field_a[8]) {
-            nf.a((byte) 5);
+            GridLineWalker.a((byte) 5);
           }
         }
         return var2;
@@ -252,7 +252,7 @@ abstract class AppletGameShell extends GameApplet {
                 au.a(3);
               } else {
                 if (var2 == 4) {
-                  ScrollPane.f(0);
+                  ScrollPane.handlePendingRequestReply(0);
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
@@ -571,7 +571,7 @@ abstract class AppletGameShell extends GameApplet {
         if (null != tja.field_q) {
           pg.field_y = tja.field_q.pollWheelRotation(65);
         }
-        if (o.e(540800)) {
+        if (HeapIndexArray.e(540800)) {
           var3 = aqa.getFrameRate(1188664449) * 1200;
           if (this.field_y ||
             !(rg.g((byte) 118) <= var3) &&

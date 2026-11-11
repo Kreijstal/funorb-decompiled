@@ -134,7 +134,7 @@ final class PlantComponent extends PrefabComponent {
             !PbufferEntry.isPowerOfTwoOrZero(9181, param6)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = jj.glFormatComponents(param0, (byte) -119);
+          var7_int = ConsoleParseException.glFormatComponents(param0, (byte) -119);
           var8 = 0;
           stackIn_11_0 = (param6 > param5) ? param5 : param6;
           var9 = stackIn_11_0;
@@ -230,8 +230,8 @@ final class PlantComponent extends PrefabComponent {
           PlantComponent.A(33);
         }
         if (SnakePitTile.a(false) &&
-          ModelFactory.field_a.a((byte) 70) != null) {
-          return ModelFactory.field_a.a((byte) 101).field_n;
+          ModelFactory.field_a.getTopVisibleDialog((byte) 70) != null) {
+          return ModelFactory.field_a.getTopVisibleDialog((byte) 101).field_n;
         }
         return -1;
     }

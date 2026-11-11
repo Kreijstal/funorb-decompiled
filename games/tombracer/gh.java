@@ -79,7 +79,7 @@ final class gh extends ToolkitSprite {
           param3 = var20 + (var24 + param3);
           param5 = var26 + (param5 + var22);
         }
-        var27.a(0.0f, 0.0f, (byte) 102, 0.0f, 0.0f, -param0 + param2, -param0 + param4, -param1 + param3, 1.0f, -param1 + param5);
+        var27.setComponents(0.0f, 0.0f, (byte) 102, 0.0f, 0.0f, -param0 + param2, -param0 + param4, -param1 + param3, 1.0f, -param1 + param5);
         var27.translate(param1, -108, param0, 0.0f);
         var12.setScale(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(62, (float)this.field_k));
         this.field_c.setTextureTransformMode(pfa.field_i, false);

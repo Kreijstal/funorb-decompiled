@@ -152,7 +152,7 @@ final class KeySwitchComponent extends SwitchComponent {
         try {
           var7 = (GameAssetLoader) (dma.field_l);
           var7.drawLoadingProgress(param4, (byte) 47, param1);
-          o.field_d = jta.loadBinaryFont((byte) 120, "b12_old", param3, "", param2);
+          HeapIndexArray.field_d = DialogStack.loadBinaryFont((byte) 120, "b12_old", param3, "", param2);
           incrementValue$0 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$0, (byte) 47, param1);
@@ -160,7 +160,7 @@ final class KeySwitchComponent extends SwitchComponent {
             File var6 = (File) null;
             KeySwitchComponent.a((String) null, (File) null, -60);
           }
-          cq.field_d = jta.loadBinaryFont((byte) 112, "newfont_old", param3, "", param2);
+          cq.field_d = DialogStack.loadBinaryFont((byte) 112, "newfont_old", param3, "", param2);
           incrementValue$1 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$1, (byte) 47, param1);
@@ -176,7 +176,7 @@ final class KeySwitchComponent extends SwitchComponent {
           incrementValue$4 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$4, (byte) 47, param1);
-          qp.field_r = joa.loadFontMetrics("newfont_sml", param2, "", (byte) 126);
+          RatingsScreen.field_r = joa.loadFontMetrics("newfont_sml", param2, "", (byte) 126);
           incrementValue$5 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$5, (byte) 47, param1);

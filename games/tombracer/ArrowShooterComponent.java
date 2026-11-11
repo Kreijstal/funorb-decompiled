@@ -13,7 +13,7 @@ final class ArrowShooterComponent extends ShooterComponent {
             field_K = (String) null;
           }
           SingleChildWidget.field_v = param0.createFont(wb.field_a, MovingPlatformComponent.field_O, true);
-          qf.field_j = param0.createFont(qp.field_r, gga.field_O, true);
+          qf.field_j = param0.createFont(RatingsScreen.field_r, gga.field_O, true);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "wpa.WB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

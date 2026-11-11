@@ -3,7 +3,7 @@
  */
 final class UnlockOverlay extends MatchOverlay {
     private ModelAnimator field_o;
-    private taa field_m;
+    private UnlockEntry field_m;
     private boolean field_k;
     static int field_n;
     static boolean field_p;
@@ -67,18 +67,18 @@ final class UnlockOverlay extends MatchOverlay {
         }
         if (this.field_o != null) {
           this.field_o.tick(0);
-          this.field_o.a(this.field_m.a(-13939), false, 0, 37, false);
+          this.field_o.a(this.field_m.getIndex(-13939), false, 0, 37, false);
         }
     }
 
-    UnlockOverlay(MatchScreen param0, taa param1) {
+    UnlockOverlay(MatchScreen param0, UnlockEntry param1) {
         super(param0);
         this.field_k = false;
         try {
           this.field_m = param1;
-          if (0 == param1.c(16)) {
-            this.field_o = new ModelAnimator(0, param1.a(-13939), 1);
-            this.field_o.a(param1.a(-13939), false, 0, 37, true);
+          if (0 == param1.getKind(16)) {
+            this.field_o = new ModelAnimator(0, param1.getIndex(-13939), 1);
+            this.field_o.a(param1.getIndex(-13939), false, 0, 37, true);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "rca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -101,46 +101,46 @@ final class UnlockOverlay extends MatchOverlay {
           this.d((byte) 83);
           var2 = aaa.a(false) - PlayerInputQueue.field_a.width() >> 1;
           var3 = SwitchLinkList.b(0) - PlayerInputQueue.field_a.height() >> 1;
-          if (this.field_m.c(16) == 0) {
+          if (this.field_m.getKind(16) == 0) {
             var6 = SocketArchiveNetworkClient.field_v;
-            var7 = Room.field_m[this.field_m.a(-13939)];
-            MembersUpsellMenu.a(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+            var7 = Room.field_m[this.field_m.getIndex(-13939)];
+            MembersUpsellMenu.drawCentredTextWithShadow(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             ura.a(-10985);
             hp.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
             RemovedFromGameMenu.f((byte) -6);
             PlayerInputQueue.field_a.draw(var2, var3 + 85);
-            MembersUpsellMenu.a(var7.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(var7.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
             return;
           }
-          if (this.field_m.c(16) == 1) {
-            var4 = this.field_m.a(-13939);
-            MembersUpsellMenu.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+          if (this.field_m.getKind(16) == 1) {
+            var4 = this.field_m.getIndex(-13939);
+            MembersUpsellMenu.drawCentredTextWithShadow(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             OpenGlFramebuffer.field_i[var4].draw((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4].width() / 2, (SwitchLinkList.b(0) >> 1) - OpenGlFramebuffer.field_i[var4].height() / 2 - 20);
             PlayerInputQueue.field_a.draw(var2, var3 + 60);
-            MembersUpsellMenu.a(SecondaryLinkQueue.worldNames[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(SecondaryLinkQueue.worldNames[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> 1, -1);
             return;
           }
           return;
         }
         var2Lifetime1 = aaa.a(false) - PlayerInputQueue.field_a.width() >> 1;
         var3Lifetime1 = SwitchLinkList.b(0) - PlayerInputQueue.field_a.height() >> 1;
-        if (this.field_m.c(16) == 0) {
+        if (this.field_m.getKind(16) == 0) {
           var8 = SocketArchiveNetworkClient.field_v;
-          var9 = Room.field_m[this.field_m.a(-13939)];
-          MembersUpsellMenu.a(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+          var9 = Room.field_m[this.field_m.getIndex(-13939)];
+          MembersUpsellMenu.drawCentredTextWithShadow(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
           ura.a(-10985);
           hp.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
           RemovedFromGameMenu.f((byte) -6);
           PlayerInputQueue.field_a.draw(var2Lifetime1, var3Lifetime1 + 85);
-          MembersUpsellMenu.a(var9.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(var9.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
           return;
         }
-        if (this.field_m.c(16) == 1) {
-          var4Lifetime1 = this.field_m.a(-13939);
-          MembersUpsellMenu.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
+        if (this.field_m.getKind(16) == 1) {
+          var4Lifetime1 = this.field_m.getIndex(-13939);
+          MembersUpsellMenu.drawCentredTextWithShadow(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
           OpenGlFramebuffer.field_i[var4Lifetime1].draw((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].width() / 2, (SwitchLinkList.b(0) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].height() / 2 - 20);
           PlayerInputQueue.field_a.draw(var2Lifetime1, var3Lifetime1 + 60);
-          MembersUpsellMenu.a(SecondaryLinkQueue.worldNames[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, aaa.a(false) >> 1, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(SecondaryLinkQueue.worldNames[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, aaa.a(false) >> 1, -1);
           return;
         }
     }

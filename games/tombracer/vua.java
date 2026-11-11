@@ -109,11 +109,11 @@ final class vua extends SingleChildWidget {
         boolean stackIn_15_0 = false;
         boolean stackIn_16_1 = false;
         boolean stackIn_20_0 = false;
-        if (!we.b(param0, param1, 2048)) {
+        if (!DropInMenuScreen.hasFlag2048(param0, param1, 2048)) {
           return false;
         }
         if (param2 == 13650) {
-          stackIn_15_0 = o.hasAnyMask540800(-1, param1, param0);
+          stackIn_15_0 = HeapIndexArray.hasAnyMask540800(-1, param1, param0);
           stackIn_16_1 = ((45056 & param0) == 0) ? false : true;
           if (stackIn_15_0 | stackIn_16_1 | mpa.hasAnyMask1048832(false, param1, param0)) {
             return true;
@@ -122,7 +122,7 @@ final class vua extends SingleChildWidget {
           return stackIn_20_0 & (SequencePlayer.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
         }
         field_A = (ToolkitSprite) null;
-        stackIn_5_0 = o.hasAnyMask540800(-1, param1, param0);
+        stackIn_5_0 = HeapIndexArray.hasAnyMask540800(-1, param1, param0);
         stackIn_6_1 = ((45056 & param0) == 0) ? false : true;
         if (stackIn_5_0 | stackIn_6_1 | mpa.hasAnyMask1048832(false, param1, param0)) {
           return true;

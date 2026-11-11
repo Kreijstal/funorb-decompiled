@@ -83,8 +83,8 @@ final class FallbackShaderEffect extends ShaderEffect {
         try {
           dga.a(GameKeyHandler.field_a, 199);
           if (null != WaveformOperator.field_n) {
-            pk.field_z.field_t = 0;
-            var15 = pk.field_z;
+            HiscoresScreen.field_z.field_t = 0;
+            var15 = HiscoresScreen.field_z;
             var17 = var15;
             var17.field_G = 0;
             hw.field_a.field_t = 0;

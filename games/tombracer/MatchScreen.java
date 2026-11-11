@@ -339,7 +339,7 @@ final class MatchScreen extends GameScreen implements rqa {
         this.pausedByOverlay = false;
         try {
           if (param9 >= 0 && (!mca.isCourseAvailable((byte) 6, param9) ||
-            !BrickOperator.d(-74, param9))) {
+            !BrickOperator.isCourseAccessible(-74, param9))) {
             throw new IllegalStateException("CA:" + param9);
           }
           this.field_E = param9;

@@ -157,7 +157,7 @@ final class BrickOperator extends TextureOperator {
         this.field_u[this.field_n] = 4096;
     }
 
-    final static boolean d(int param0, int param1) {
+    final static boolean isCourseAccessible(int param0, int param1) {
         int var2;
         boolean stackIn_7_0 = false;
         var2 = 76 / ((-20 - param0) / 40);
@@ -195,7 +195,7 @@ final class BrickOperator extends TextureOperator {
         this.field_x = 1024;
     }
 
-    final static int a(fp param0, boolean param1) {
+    final static int glCombineSource(fp param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;

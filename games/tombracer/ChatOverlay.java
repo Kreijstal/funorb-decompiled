@@ -367,7 +367,7 @@ final class ChatOverlay {
                 if (rf.millisSinceLastReceive((byte) -121) > 30000L) {
                   io.field_b = SpriteTileOperator.field_u;
                 } else {
-                  io.field_b = sq.field_x;
+                  io.field_b = MusicPlayer.field_x;
                 }
                 PushableBlockMazeComponent.field_L = false;
                 stackIn_102_0 = 3;

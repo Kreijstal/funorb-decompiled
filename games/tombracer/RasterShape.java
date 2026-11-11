@@ -182,7 +182,7 @@ abstract class RasterShape {
           RasterShape.releaseStatics(false);
         }
         if (param3 == param5) {
-          nf.a(param5, param2, param6, param0, param7, param1, -91);
+          GridLineWalker.a(param5, param2, param6, param0, param7, param1, -91);
           return;
         }
         if (pka.field_b > param0 - param5) {

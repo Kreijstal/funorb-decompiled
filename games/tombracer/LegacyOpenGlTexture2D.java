@@ -60,7 +60,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
           }
           boolean decompiledFrameCompleted0 = true;
           if (param9) {
-            var11_int = jj.glFormatComponents(param8, (byte) -72);
+            var11_int = ConsoleParseException.glFormatComponents(param8, (byte) -72);
             var12 = param7 * var11_int;
             var13 = var11_int * param0;
             var14 = new byte[param2 * var12];

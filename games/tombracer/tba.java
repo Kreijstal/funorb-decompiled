@@ -6,7 +6,7 @@ final class tba extends IntrusiveNode {
     static byte[] field_m;
     static String[] reconnectingMessages;
     int field_j;
-    static oc field_l;
+    static ModelData field_l;
     static SpriteData[] field_f;
     int field_h;
     static String field_g;

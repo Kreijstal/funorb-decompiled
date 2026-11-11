@@ -76,7 +76,7 @@ final class ala extends GameScreen {
         int stackIn_85_5;
         boolean stackIn_86_6;
         int var4;
-        pk.field_C = pk.field_C + 1;
+        HiscoresScreen.field_C = HiscoresScreen.field_C + 1;
         bna.a((byte) 10);
         if (null == C2SChooseRewardPacket.field_a) {
           var4 = 0;
@@ -139,9 +139,9 @@ final class ala extends GameScreen {
               ql.field_k.writeCipheredOpcode(10, param2 ^ -12313);
               du.field_g = false;
             }
-            if (qp.field_s) {
+            if (RatingsScreen.field_s) {
               ClampOperator.a(jk.field_i, 15165);
-              qp.field_s = false;
+              RatingsScreen.field_s = false;
             }
             return;
           }
@@ -179,9 +179,9 @@ final class ala extends GameScreen {
           ql.field_k.writeCipheredOpcode(10, param2 ^ -12313);
           du.field_g = false;
         }
-        if (qp.field_s) {
+        if (RatingsScreen.field_s) {
           ClampOperator.a(jk.field_i, 15165);
-          qp.field_s = false;
+          RatingsScreen.field_s = false;
         }
     }
 
@@ -276,7 +276,7 @@ final class ala extends GameScreen {
     final static void a(byte param0, String param1, boolean param2, float param3) {
         if (null == ena.field_p) {
           ena.field_p = new vs(ej.field_a, SnakePitBehaviour.field_o);
-          ej.field_a.c(ena.field_p, 89);
+          ej.field_a.pushDialog(ena.field_p, 89);
         }
         ena.field_p.setProgress(param3, param1, param2, (byte) 110);
         SoftwareRasterizer.clear();

@@ -542,16 +542,16 @@ final class ComponentTargetList {
           if (!SnakePitTile.a(param0)) {
             return -1;
           }
-          if (null != ModelFactory.field_a.a((byte) 127)) {
-            return ModelFactory.field_a.a((byte) -73).field_i;
+          if (null != ModelFactory.field_a.getTopVisibleDialog((byte) 127)) {
+            return ModelFactory.field_a.getTopVisibleDialog((byte) -73).field_i;
           }
           return -1;
         }
         if (!SnakePitTile.a(param0)) {
           return -1;
         }
-        if (null != ModelFactory.field_a.a((byte) 127)) {
-          return ModelFactory.field_a.a((byte) -73).field_i;
+        if (null != ModelFactory.field_a.getTopVisibleDialog((byte) 127)) {
+          return ModelFactory.field_a.getTopVisibleDialog((byte) -73).field_i;
         }
         return -1;
     }

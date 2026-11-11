@@ -43,7 +43,7 @@ final class rf {
         try {
           var6 = (CharSequence) ((Object) param1);
           if (!CurveOperator.isValidAccountName(param0, var6)) {
-            stackIn_3_0 = pk.field_v;
+            stackIn_3_0 = HiscoresScreen.field_v;
             return stackIn_3_0;
           }
           if (UiWidget.field_g != 2) {

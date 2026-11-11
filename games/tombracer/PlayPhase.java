@@ -194,13 +194,13 @@ final class PlayPhase extends MatchPhase {
             PlayerViewport.drawTiledFrame(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -MatchStatistics.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
             if (this.field_q > 50) {
               if (0 != this.matchState.gameMode) {
-                MembersUpsellMenu.a(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
+                MembersUpsellMenu.drawCentredTextWithShadow(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
               } else {
-                MembersUpsellMenu.a(ConstrainToCircleLocomotor.field_z + " " + (1 + this.matchState.roundIndex), 16777215, eda.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
-                MembersUpsellMenu.a(var4, 16777215, eda.field_f, -1, 255, var6Lifetime1Lifetime1, 0);
+                MembersUpsellMenu.drawCentredTextWithShadow(ConstrainToCircleLocomotor.field_z + " " + (1 + this.matchState.roundIndex), 16777215, eda.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
+                MembersUpsellMenu.drawCentredTextWithShadow(var4, 16777215, eda.field_f, -1, 255, var6Lifetime1Lifetime1, 0);
               }
             } else {
-              MembersUpsellMenu.a(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
+              MembersUpsellMenu.drawCentredTextWithShadow(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
             }
           }
           if (this.field_p) {
@@ -627,7 +627,7 @@ final class PlayPhase extends MatchPhase {
               if (rf.millisSinceLastReceive((byte) -121) > 30000L) {
                 io.field_b = SpriteTileOperator.field_u;
               } else {
-                io.field_b = sq.field_x;
+                io.field_b = MusicPlayer.field_x;
               }
               PushableBlockMazeComponent.field_L = false;
               stackIn_65_0 = 249;

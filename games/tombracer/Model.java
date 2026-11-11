@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Model extends ToolkitModel {
-    private tw field_z;
+    private SoftwareRenderContext field_z;
     private Model field_Gb;
     private Model field_u;
     private short[] field_M;
@@ -28,7 +28,7 @@ final class Model extends ToolkitModel {
     private oha[] field_D;
     private short[] field_Eb;
     private int[] field_yb;
-    private iua field_w;
+    private ModelTriangleRasterizer field_w;
     private short[] field_ub;
     private Model field_pb;
     private int field_P;
@@ -47,7 +47,7 @@ final class Model extends ToolkitModel {
     static int field_G;
     private int field_ib;
     private int[] field_hb;
-    private tw field_F;
+    private SoftwareRenderContext field_F;
     private int field_H;
     private int field_eb;
     private short[] field_x;
@@ -90,7 +90,7 @@ final class Model extends ToolkitModel {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (this.field_eb == 0) {
-          this.a(false);
+          this.computeLightingLocked(false);
         } else {
           if (this.field_d.field_u <= 1) {
             this.h();
@@ -285,7 +285,7 @@ final class Model extends ToolkitModel {
         }
     }
 
-    private final void b(int param0) {
+    private final void drawClippedFaceArgb(int param0) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -463,17 +463,17 @@ final class Model extends ToolkitModel {
             }
             var17 = var16 | this.field_t[param0] & 16777215;
             if (this.field_Fb[param0] != -1) {
-              this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17, var17, var17, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangleArgb((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17, var17, var17, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
             } else {
-              this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17, var17, var17, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangleArgb((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17, var17, var17, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (this.field_Fb[param0] != -1) {
-              this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
+              this.field_w.fillGouraudTriangleArgb((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
             } else {
-              this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, PitSnakeModel.field_h[this.field_t[param0] & 65535]);
+              this.field_w.fillFlatTriangleArgb((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, PitSnakeModel.field_h[this.field_t[param0] & 65535]);
             }
           }
         }
@@ -497,28 +497,28 @@ final class Model extends ToolkitModel {
               }
               var17Lifetime1 = var16Lifetime1 | this.field_t[param0] & 16777215;
               if (this.field_Fb[param0] != -1) {
-                this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
-                this.field_w.a((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var9Lifetime1, (float)this.field_yb[3], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+                this.field_w.fillTexturedTriangleArgb((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+                this.field_w.fillTexturedTriangleArgb((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var9Lifetime1, (float)this.field_yb[3], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
               } else {
-                this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
-                this.field_w.a((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var9Lifetime1, (float)this.field_yb[3], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+                this.field_w.fillTexturedTriangleArgb((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+                this.field_w.fillTexturedTriangleArgb((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var9Lifetime1, (float)this.field_yb[3], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
               }
               break regionExit1;
             }
             if (this.field_Fb[param0] != -1) {
-              this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
-              this.field_w.a((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], (float)this.field_hb[0], (float)this.field_hb[2], (float)this.field_hb[3]);
+              this.field_w.fillGouraudTriangleArgb((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
+              this.field_w.fillGouraudTriangleArgb((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], (float)this.field_hb[0], (float)this.field_hb[2], (float)this.field_hb[3]);
             } else {
               var16Lifetime1Lifetime1 = PitSnakeModel.field_h[this.field_t[param0] & 65535];
-              this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, var16Lifetime1Lifetime1);
-              this.field_w.b((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], var16Lifetime1Lifetime1);
+              this.field_w.fillFlatTriangleArgb((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, var16Lifetime1Lifetime1);
+              this.field_w.fillFlatTriangleArgb((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], var16Lifetime1Lifetime1);
             }
           }
         }
     }
 
     final void draw(Transform3D param0, el param1, int param2) {
-        this.b(param0, param1, -1, param2);
+        this.render(param0, param1, -1, param2);
     }
 
     private final void clearCaches() {
@@ -554,7 +554,7 @@ final class Model extends ToolkitModel {
         }
     }
 
-    private final void b(int param0, boolean param1, boolean param2) {
+    private final void drawFaceArgb(int param0, boolean param1, boolean param2) {
         int var4;
         int var5;
         int var6;
@@ -608,7 +608,7 @@ final class Model extends ToolkitModel {
           var20 = var16 * var12_int - var10 * var18;
           var21 = var10 * var15 - var13 * var12_int;
           if (!(var11_int * var19 + var14 * var20 + var17 * var21 <= 0)) {
-            this.b(param0);
+            this.drawClippedFaceArgb(param0);
           }
           decompiledFrameRemainder0 = false;
         }
@@ -668,10 +668,10 @@ final class Model extends ToolkitModel {
             var5 = 255 - (this.field_h[param0] & 255) << 24;
           }
           if (this.field_Fb[param0] != -1) {
-            this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var5 | this.field_t[param0] & 16777215, var5 | this.field_o[param0] & 16777215, var5 | this.field_Fb[param0] & 16777215, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+            this.field_w.fillTexturedTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var5 | this.field_t[param0] & 16777215, var5 | this.field_o[param0] & 16777215, var5 | this.field_Fb[param0] & 16777215, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
           } else {
             var6 = var5 | this.field_t[param0] & 16777215;
-            this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var6, var6, var6, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+            this.field_w.fillTexturedTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var6, var6, var6, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
           }
         } else {
           if (this.field_h != null) {
@@ -680,14 +680,14 @@ final class Model extends ToolkitModel {
             this.field_w.field_b = 0;
           }
           if (this.field_Fb[param0] != -1) {
-            this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], (float)(this.field_t[param0] & 65535), (float)(this.field_o[param0] & 65535), (float)(this.field_Fb[param0] & 65535));
+            this.field_w.fillGouraudTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], (float)(this.field_t[param0] & 65535), (float)(this.field_o[param0] & 65535), (float)(this.field_Fb[param0] & 65535));
           } else {
-            this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], PitSnakeModel.field_h[this.field_t[param0] & 65535]);
+            this.field_w.fillFlatTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], PitSnakeModel.field_h[this.field_t[param0] & 65535]);
           }
         }
     }
 
-    private final boolean c(int param0) {
+    private final boolean isFaceTransparent(int param0) {
         if (this.field_h == null) {
           return false;
         }
@@ -697,7 +697,7 @@ final class Model extends ToolkitModel {
         return true;
     }
 
-    private final void a(boolean param0, boolean param1, int param2, int param3) {
+    private final void drawFaces(boolean param0, boolean param1, int param2, int param3) {
         int var5;
         hna var6_ref_hna;
         int var6;
@@ -712,26 +712,26 @@ final class Model extends ToolkitModel {
         if (!this.field_ab &&
           this.field_e == null) {
           for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
-            this.a(var5Lifetime1, param0, param1);
+            this.drawFace(var5Lifetime1, param0, param1);
           }
         } else if ((this.field_P & 256) == 0 &&
           this.field_ub != null) {
           for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
             var6 = this.field_ub[var5Lifetime1];
-            this.a(var6, param0, param1);
+            this.drawFace(var6, param0, param1);
           }
         } else {
           for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
-            if (!this.c(var5Lifetime1) &&
+            if (!this.isFaceTransparent(var5Lifetime1) &&
               !this.h(var5Lifetime1)) {
-              this.a(var5Lifetime1, param0, param1);
+              this.drawFace(var5Lifetime1, param0, param1);
             }
           }
           if (this.field_wb == null) {
             for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
-              if (this.c(var5Lifetime1) ||
+              if (this.isFaceTransparent(var5Lifetime1) ||
                 this.h(var5Lifetime1)) {
-                this.a(var5Lifetime1, param0, param1);
+                this.drawFace(var5Lifetime1, param0, param1);
               }
             }
           } else {
@@ -739,9 +739,9 @@ final class Model extends ToolkitModel {
               var7 = 0;
               var6 = var7;
               while (var7 < this.field_g) {
-                if (this.field_wb[var7] == var5Lifetime1 && (this.c(var7) ||
+                if (this.field_wb[var7] == var5Lifetime1 && (this.isFaceTransparent(var7) ||
                   this.h(var7))) {
-                  this.a(var7, param0, param1);
+                  this.drawFace(var7, param0, param1);
                 }
                 var7++;
               }
@@ -750,7 +750,7 @@ final class Model extends ToolkitModel {
         }
     }
 
-    private final int a(int param0, short param1, int param2) {
+    private final int computeTexturedFaceColour(int param0, short param1, int param2) {
         int var4;
         TextureMetadata var5;
         int var6;
@@ -794,7 +794,7 @@ final class Model extends ToolkitModel {
         return var4;
     }
 
-    private final void g() {
+    private final void computeNormalsLocked() {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (this.field_eb == 0 &&
@@ -823,15 +823,15 @@ final class Model extends ToolkitModel {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void computeLightingLocked(boolean param0) {
         Throwable decompiledCaughtException = null;
         Object var2 = null;
         if (this.field_d.field_u <= 1) {
-          this.b(param0);
+          this.computeLighting(param0);
         } else {
           var2 = this;
           synchronized (var2) {
-            this.b(param0);
+            this.computeLighting(param0);
           }
         }
     }
@@ -1198,7 +1198,7 @@ final class Model extends ToolkitModel {
         Model dupTemp$0 = null;
         Model var5 = null;
         Model var4 = null;
-        this.a(Thread.currentThread());
+        this.bindScratchContext(Thread.currentThread());
         if (param0 == 1) {
           var5 = this.field_n;
           var4 = this.field_pb;
@@ -1227,7 +1227,7 @@ final class Model extends ToolkitModel {
             }
           }
         }
-        return this.a(var4, var5, param1, param0 != 0 ? true : false, param2);
+        return this.copyInto(var4, var5, param1, param0 != 0 ? true : false, param2);
     }
 
     private final void i(int param0) {
@@ -1281,18 +1281,18 @@ final class Model extends ToolkitModel {
               var8 = 255 - (this.field_h[param0] & 255) << 24;
             }
             if (this.field_Fb[param0] != -1) {
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var8 | this.field_t[param0] & 16777215, var8 | this.field_o[param0] & 16777215, var8 | this.field_Fb[param0] & 16777215, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var8 | this.field_t[param0] & 16777215, var8 | this.field_o[param0] & 16777215, var8 | this.field_Fb[param0] & 16777215, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
             } else {
               var9 = var8 | this.field_t[param0] & 16777215;
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var9, var9, var9, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var9, var9, var9, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (this.field_Fb[param0] != -1) {
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
+              this.field_w.fillGradientTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
             } else {
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
+              this.field_w.fillGradientTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
             }
           }
         } else {
@@ -1343,18 +1343,18 @@ final class Model extends ToolkitModel {
               var9 = 255 - (this.field_h[param0] & 255) << 24;
             }
             if (this.field_Fb[param0] != -1) {
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var9 | this.field_t[param0] & 16777215, var9 | this.field_o[param0] & 16777215, var9 | this.field_Fb[param0] & 16777215, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var9 | this.field_t[param0] & 16777215, var9 | this.field_o[param0] & 16777215, var9 | this.field_Fb[param0] & 16777215, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
             } else {
               var10 = var9 | this.field_t[param0] & 16777215;
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var10, var10, var10, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var10, var10, var10, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (this.field_Fb[param0] != -1) {
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
+              this.field_w.fillGradientTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
             } else {
-              this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
+              this.field_w.fillGradientTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
             }
           }
         }
@@ -1406,7 +1406,7 @@ final class Model extends ToolkitModel {
         return;
     }
 
-    private final ToolkitModel a(Model param0, Model param1, int param2, boolean param3, boolean param4) {
+    private final ToolkitModel copyInto(Model param0, Model param1, int param2, boolean param3, boolean param4) {
         int[] array$0 = null;
         int[] array$1 = null;
         int[] array$2 = null;
@@ -1569,14 +1569,14 @@ final class Model extends ToolkitModel {
         if ((param2 & 618520) == 0) {
           if ((param2 & 128) == 0) {
             if (param4) {
-              this.a(false);
+              this.computeLightingLocked(false);
             }
             param0.field_t = this.field_t;
             param0.field_o = this.field_o;
             param0.field_Fb = this.field_Fb;
           } else {
             if (param4) {
-              this.a(false);
+              this.computeLightingLocked(false);
             }
             if (this.field_t != null) {
               if (param1.field_t != null &&
@@ -1637,7 +1637,7 @@ final class Model extends ToolkitModel {
         if ((param2 & 8) == 0 &&
           (param2 & 16) == 0) {
           if (param4) {
-            this.g();
+            this.computeNormalsLocked();
           }
           param0.field_lb = this.field_lb;
           param0.field_I = this.field_I;
@@ -2568,18 +2568,18 @@ final class Model extends ToolkitModel {
               var8 = 255 - (this.field_h[param0] & 255) << 24;
             }
             if (this.field_Fb[param0] != -1) {
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var8 | this.field_t[param0] & 16777215, var8 | this.field_o[param0] & 16777215, var8 | this.field_Fb[param0] & 16777215, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var8 | this.field_t[param0] & 16777215, var8 | this.field_o[param0] & 16777215, var8 | this.field_Fb[param0] & 16777215, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
             } else {
               var9 = var8 | this.field_t[param0] & 16777215;
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var9, var9, var9, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var9, var9, var9, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (this.field_Fb[param0] != -1) {
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
+              this.field_w.fillGradientTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
             } else {
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
+              this.field_w.fillGradientTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
             }
           }
         } else {
@@ -2630,25 +2630,25 @@ final class Model extends ToolkitModel {
               var9 = 255 - (this.field_h[param0] & 255) << 24;
             }
             if (this.field_Fb[param0] != -1) {
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var9 | this.field_t[param0] & 16777215, var9 | this.field_o[param0] & 16777215, var9 | this.field_Fb[param0] & 16777215, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var9 | this.field_t[param0] & 16777215, var9 | this.field_o[param0] & 16777215, var9 | this.field_Fb[param0] & 16777215, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
             } else {
               var10 = var9 | this.field_t[param0] & 16777215;
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var10, var10, var10, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var10, var10, var10, this.field_F.field_D, var5, var6, var7, (int) this.field_X[param0]);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (this.field_Fb[param0] != -1) {
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
+              this.field_w.fillGradientTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_o[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_Fb[param0] & 65535], 20048));
             } else {
-              this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
+              this.field_w.fillGradientTriangleArgb((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], MidiPcmStream.alphaBlend(var5 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var6 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048), MidiPcmStream.alphaBlend(var7 << 24 | this.field_F.field_D, PitSnakeModel.field_h[this.field_t[param0] & 65535], 20048));
             }
           }
         }
 
     }
 
-    private final void e(int param0) {
+    private final void drawClippedFace(int param0) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -2826,17 +2826,17 @@ final class Model extends ToolkitModel {
             }
             var17 = var16 | this.field_t[param0] & 16777215;
             if (this.field_Fb[param0] != -1) {
-              this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17, var17, var17, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangle((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17, var17, var17, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
             } else {
-              this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17, var17, var17, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+              this.field_w.fillTexturedTriangle((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17, var17, var17, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (this.field_Fb[param0] != -1) {
-              this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
+              this.field_w.fillGouraudTriangle((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
             } else {
-              this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, PitSnakeModel.field_h[this.field_t[param0] & 65535]);
+              this.field_w.fillFlatTriangle((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, PitSnakeModel.field_h[this.field_t[param0] & 65535]);
             }
           }
         }
@@ -2860,21 +2860,21 @@ final class Model extends ToolkitModel {
               }
               var17Lifetime1 = var16Lifetime1 | this.field_t[param0] & 16777215;
               if (this.field_Fb[param0] != -1) {
-                this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
-                this.field_w.b((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var9Lifetime1, (float)this.field_yb[3], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+                this.field_w.fillTexturedTriangle((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+                this.field_w.fillTexturedTriangle((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var9Lifetime1, (float)this.field_yb[3], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
               } else {
-                this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
-                this.field_w.b((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var9Lifetime1, (float)this.field_yb[3], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+                this.field_w.fillTexturedTriangle((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+                this.field_w.fillTexturedTriangle((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var9Lifetime1, (float)this.field_yb[3], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var17Lifetime1, var17Lifetime1, var17Lifetime1, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
               }
               break regionExit1;
             }
             if (this.field_Fb[param0] != -1) {
-              this.field_w.b((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
-              this.field_w.b((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], (float)this.field_hb[0], (float)this.field_hb[2], (float)this.field_hb[3]);
+              this.field_w.fillGouraudTriangle((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, (float)this.field_hb[0], (float)this.field_hb[1], (float)this.field_hb[2]);
+              this.field_w.fillGouraudTriangle((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], (float)this.field_hb[0], (float)this.field_hb[2], (float)this.field_hb[3]);
             } else {
               var16Lifetime1Lifetime1 = PitSnakeModel.field_h[this.field_t[param0] & 65535];
-              this.field_w.a((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, var16Lifetime1Lifetime1);
-              this.field_w.a((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], var16Lifetime1Lifetime1);
+              this.field_w.fillFlatTriangle((float)var13Lifetime3, (float)var14, (float)var15, (float)var10Lifetime3, (float)var11Lifetime3, (float)var12Lifetime3, (float)var7Lifetime1, (float)var8Lifetime1, (float)var9Lifetime1, var16Lifetime1Lifetime1);
+              this.field_w.fillFlatTriangle((float)var13Lifetime3, (float)var15, (float)this.field_E[3], (float)var10Lifetime3, (float)var12Lifetime3, (float)this.field_y[3], (float)var7Lifetime1, (float)var8Lifetime1, (float)this.field_yb[3], var16Lifetime1Lifetime1);
             }
           }
         }
@@ -2908,10 +2908,10 @@ final class Model extends ToolkitModel {
             var5 = 255 - (this.field_h[param0] & 255) << 24;
           }
           if (this.field_Fb[param0] != -1) {
-            this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var5 | this.field_t[param0] & 16777215, var5 | this.field_o[param0] & 16777215, var5 | this.field_Fb[param0] & 16777215, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+            this.field_w.fillTexturedTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var5 | this.field_t[param0] & 16777215, var5 | this.field_o[param0] & 16777215, var5 | this.field_Fb[param0] & 16777215, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
           } else {
             var6 = var5 | this.field_t[param0] & 16777215;
-            this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var6, var6, var6, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
+            this.field_w.fillTexturedTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], this.field_W[param0][0], this.field_W[param0][1], this.field_W[param0][2], this.field_l[param0][0], this.field_l[param0][1], this.field_l[param0][2], var6, var6, var6, this.field_F.field_D, 0, 0, 0, (int) this.field_X[param0]);
           }
         } else {
           if (this.field_h != null) {
@@ -2920,9 +2920,9 @@ final class Model extends ToolkitModel {
             this.field_w.field_b = 0;
           }
           if (this.field_Fb[param0] != -1) {
-            this.field_w.b((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], (float)(this.field_t[param0] & 65535), (float)(this.field_o[param0] & 65535), (float)(this.field_Fb[param0] & 65535));
+            this.field_w.fillGouraudTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], (float)(this.field_t[param0] & 65535), (float)(this.field_o[param0] & 65535), (float)(this.field_Fb[param0] & 65535));
           } else {
-            this.field_w.a((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], PitSnakeModel.field_h[this.field_t[param0] & 65535]);
+            this.field_w.fillFlatTriangle((float)this.field_J[var2], (float)this.field_J[var3], (float)this.field_J[var4], (float)this.field_v[var2], (float)this.field_v[var3], (float)this.field_v[var4], (float)this.field_mb[var2], (float)this.field_mb[var3], (float)this.field_mb[var4], PitSnakeModel.field_h[this.field_t[param0] & 65535]);
           }
         }
     }
@@ -2961,14 +2961,14 @@ final class Model extends ToolkitModel {
         return true;
     }
 
-    private final void b(Transform3D param0, el param1, int param2, int param3) {
+    private final void render(Transform3D param0, el param1, int param2, int param3) {
         try {
           float stackIn_17_0 = 0.0f;
           float stackIn_27_0 = 0.0f;
           float stackIn_42_0 = 0.0f;
           int stackIn_73_0 = 0;
           int stackIn_81_0 = 0;
-          iua stackIn_143_0 = null;
+          ModelTriangleRasterizer stackIn_143_0 = null;
           boolean stackIn_144_1 = false;
           int stackIn_148_0 = 0;
           int stackIn_152_1 = 0;
@@ -3175,11 +3175,11 @@ final class Model extends ToolkitModel {
               this.field_zb = true;
             }
           }
-          this.b(Thread.currentThread());
+          this.bindDrawContext(Thread.currentThread());
           if ((param3 & 2) == 0) {
-            this.field_w.a(false);
+            this.field_w.setWireframe(false);
           } else {
-            this.field_w.a(true);
+            this.field_w.setWireframe(true);
           }
           var31 = 0;
           stackIn_73_0 = (var11 > this.field_d.field_g) ? 0 : 1;
@@ -3343,7 +3343,7 @@ final class Model extends ToolkitModel {
               }
             }
           }
-          this.a(true);
+          this.computeLightingLocked(true);
           stackIn_143_0 = this.field_w;
           stackIn_144_1 = ((param3 & 1) != 0) ? false : true;
           stackIn_143_0.field_j = stackIn_144_1;
@@ -3362,7 +3362,7 @@ final class Model extends ToolkitModel {
               else {
                 stackIn_164_2 = true;
               }
-              this.a(stackIn_160_1 != 0, stackIn_164_2, var11, var12 - var11);
+              this.drawFaces(stackIn_160_1 != 0, stackIn_164_2, var11, var12 - var11);
             } else {
               boolean decompiledFrameRemainder0 = true;
               stackIn_152_1 = var31;
@@ -3374,7 +3374,7 @@ final class Model extends ToolkitModel {
               else {
                 stackIn_156_2 = true;
               }
-              this.b(stackIn_152_1 != 0, stackIn_156_2, var11, var12 - var11);
+              this.drawFacesArgb(stackIn_152_1 != 0, stackIn_156_2, var11, var12 - var11);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -3469,8 +3469,8 @@ final class Model extends ToolkitModel {
         return;
     }
 
-    private final void b(Thread param0) {
-        tw var2 = this.field_d.contextForThread((Runnable) ((Object) param0));
+    private final void bindDrawContext(Thread param0) {
+        SoftwareRenderContext var2 = this.field_d.contextForThread((Runnable) ((Object) param0));
         this.field_w = var2.field_v;
         if (var2 == this.field_F) {
           return;
@@ -3490,7 +3490,7 @@ final class Model extends ToolkitModel {
         this.field_jb = this.field_F.field_l;
     }
 
-    private final void b(boolean param0, boolean param1, int param2, int param3) {
+    private final void drawFacesArgb(boolean param0, boolean param1, int param2, int param3) {
         int var5;
         hna var6_ref_hna;
         int var6;
@@ -3505,26 +3505,26 @@ final class Model extends ToolkitModel {
         if (!this.field_ab &&
           this.field_e == null) {
           for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
-            this.b(var5Lifetime1, param0, param1);
+            this.drawFaceArgb(var5Lifetime1, param0, param1);
           }
         } else if ((this.field_P & 256) == 0 &&
           this.field_ub != null) {
           for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
             var6 = this.field_ub[var5Lifetime1];
-            this.b(var6, param0, param1);
+            this.drawFaceArgb(var6, param0, param1);
           }
         } else {
           for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
-            if (!this.c(var5Lifetime1) &&
+            if (!this.isFaceTransparent(var5Lifetime1) &&
               !this.h(var5Lifetime1)) {
-              this.b(var5Lifetime1, param0, param1);
+              this.drawFaceArgb(var5Lifetime1, param0, param1);
             }
           }
           if (this.field_wb == null) {
             for (var5Lifetime1 = 0; var5Lifetime1 < this.field_g; var5Lifetime1++) {
-              if (this.c(var5Lifetime1) ||
+              if (this.isFaceTransparent(var5Lifetime1) ||
                 this.h(var5Lifetime1)) {
-                this.b(var5Lifetime1, param0, param1);
+                this.drawFaceArgb(var5Lifetime1, param0, param1);
               }
             }
           } else {
@@ -3532,9 +3532,9 @@ final class Model extends ToolkitModel {
               var7 = 0;
               var6 = var7;
               while (var7 < this.field_g) {
-                if (this.field_wb[var7] == var5Lifetime1 && (this.c(var7) ||
+                if (this.field_wb[var7] == var5Lifetime1 && (this.isFaceTransparent(var7) ||
                   this.h(var7))) {
-                  this.b(var7, param0, param1);
+                  this.drawFaceArgb(var7, param0, param1);
                 }
                 var7++;
               }
@@ -3543,7 +3543,7 @@ final class Model extends ToolkitModel {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void computeLighting(boolean param0) {
         int var8 = 0;
         int stackIn_35_0 = 0;
         int stackIn_42_0 = 0;
@@ -3587,7 +3587,7 @@ final class Model extends ToolkitModel {
           }
           return;
         }
-        this.g();
+        this.computeNormalsLocked();
         var2 = this.field_d.field_x;
         var3 = this.field_d.field_V;
         var4 = this.field_d.field_S;
@@ -3635,7 +3635,7 @@ final class Model extends ToolkitModel {
                 stackIn_70_0 = (var15 <= 256) ? var7 : var6;
                 var16 = stackIn_70_0;
                 var14 = this.clampHslLightness((var5 >> 2) + (var16 * var15 >> 18));
-                this.field_t[var8] = var14 << 24 | this.a(var12, (short) var11, var14);
+                this.field_t[var8] = var14 << 24 | this.computeTexturedFaceColour(var12, (short) var11, var14);
                 if (this.field_D != null &&
                   this.field_D[this.field_bb[var8]] != null) {
                   var13 = this.field_D[this.field_bb[var8]];
@@ -3646,7 +3646,7 @@ final class Model extends ToolkitModel {
                 stackIn_77_0 = (var15 <= 256) ? var7 : var6;
                 var16 = stackIn_77_0;
                 var14 = this.clampHslLightness((var5 >> 2) + (var16 * var15 >> 18));
-                this.field_o[var8] = var14 << 24 | this.a(var12, (short) var11, var14);
+                this.field_o[var8] = var14 << 24 | this.computeTexturedFaceColour(var12, (short) var11, var14);
                 if (this.field_D != null &&
                   this.field_D[this.field_x[var8]] != null) {
                   var13 = this.field_D[this.field_x[var8]];
@@ -3657,7 +3657,7 @@ final class Model extends ToolkitModel {
                 stackIn_84_0 = (var15 <= 256) ? var7 : var6;
                 var16 = stackIn_84_0;
                 var14 = this.clampHslLightness((var5 >> 2) + (var16 * var15 >> 18));
-                this.field_Fb[var8] = var14 << 24 | this.a(var12, (short) var11, var14);
+                this.field_Fb[var8] = var14 << 24 | this.computeTexturedFaceColour(var12, (short) var11, var14);
                 break regionExit1;
               }
               if (var9 == 1) {
@@ -3666,7 +3666,7 @@ final class Model extends ToolkitModel {
                 stackIn_90_0 = (var14 <= 256) ? var7 : var6;
                 var15 = stackIn_90_0;
                 var16 = this.clampHslLightness((var5 >> 2) + (var15 * var14 >> 18));
-                this.field_t[var8] = var16 << 24 | this.a(var12, (short) var11, var16);
+                this.field_t[var8] = var16 << 24 | this.computeTexturedFaceColour(var12, (short) var11, var16);
                 this.field_Fb[var8] = -1;
                 break regionExit1;
               }
@@ -3748,11 +3748,11 @@ final class Model extends ToolkitModel {
     }
 
     final void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3) {
-        this.b(param0, param1, param2, param3);
+        this.render(param0, param1, param2, param3);
     }
 
-    private final void a(Thread param0) {
-        tw var2 = this.field_d.contextForThread((Runnable) ((Object) param0));
+    private final void bindScratchContext(Thread param0) {
+        SoftwareRenderContext var2 = this.field_d.contextForThread((Runnable) ((Object) param0));
         if (var2 == this.field_z) {
           return;
         }
@@ -3769,7 +3769,7 @@ final class Model extends ToolkitModel {
         this.field_fb = this.field_z.field_r;
     }
 
-    private final void a(int param0, boolean param1, boolean param2) {
+    private final void drawFace(int param0, boolean param1, boolean param2) {
         int var4;
         int var5;
         int var6;
@@ -3823,7 +3823,7 @@ final class Model extends ToolkitModel {
           var20 = var16 * var12_int - var10 * var18;
           var21 = var10 * var15 - var13 * var12_int;
           if (!(var11_int * var19 + var14 * var20 + var17 * var21 <= 0)) {
-            this.e(param0);
+            this.drawClippedFace(param0);
           }
           decompiledFrameRemainder0 = false;
         }
@@ -3880,7 +3880,7 @@ final class Model extends ToolkitModel {
         this.field_d = param0;
     }
 
-    Model(SoftwareGraphicsToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
+    Model(SoftwareGraphicsToolkit param0, ModelData param1, int param2, int param3, int param4, int param5) {
         int var9_int = 0;
         int stackIn_6_0 = 0;
         int stackIn_41_0 = 0;
@@ -3955,7 +3955,7 @@ final class Model extends ToolkitModel {
         long[] var58;
         jt var59;
         lp var60;
-        tw var61;
+        SoftwareRenderContext var61;
         TextureMetadata var62;
         float[] var65;
         float[] var66;
@@ -4340,11 +4340,11 @@ final class Model extends ToolkitModel {
         }
         if (param1.field_l != null &&
           (this.field_P & 32) != 0) {
-          this.field_sb = param1.a(true, (byte) 64);
+          this.field_sb = param1.groupVerticesByLabel(true, (byte) 64);
         }
         if (param1.field_D != null &&
           (this.field_P & 384) != 0) {
-          this.field_Cb = param1.c((byte) -61);
+          this.field_Cb = param1.groupFacesByLabel((byte) -61);
         }
         if (param1.field_m != null &&
           (this.field_P & 1024) != 0) {

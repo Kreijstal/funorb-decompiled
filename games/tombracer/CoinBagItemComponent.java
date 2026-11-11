@@ -113,9 +113,9 @@ final class CoinBagItemComponent extends ItemComponent {
           dga.a(fp.field_e, 199);
           if (null != C2SChooseRewardPacket.field_a) {
             bc.field_b.field_X = true;
-            var22 = pk.field_z;
+            var22 = HiscoresScreen.field_z;
             var26 = var22;
-            pk.field_z.field_t = 0;
+            HiscoresScreen.field_z.field_t = 0;
             var26.field_G = 0;
             var6 = hw.field_a;
             hw.field_a.field_t = 0;
@@ -126,19 +126,19 @@ final class CoinBagItemComponent extends ItemComponent {
             if (ComponentMount.b(param1 + 8193)) {
               StatusEffect.field_g.field_r = una.field_d.toUpperCase();
               var9 = (2 + dka.field_b.field_G) / 2;
-              pk.field_z.setBounds(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
+              HiscoresScreen.field_z.setBounds(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
               if (C2SChooseRewardPacket.field_a.field_Mb >= C2SChooseRewardPacket.field_a.field_Jb) {
-                pk.field_z.field_r = RandomAccessFileHandle.field_c.toUpperCase();
-                pk.field_z.field_X = false;
+                HiscoresScreen.field_z.field_r = RandomAccessFileHandle.field_c.toUpperCase();
+                HiscoresScreen.field_z.field_X = false;
                 if (var19 != 0) {
-                  pk.field_z.field_r = eu.field_b.toUpperCase();
-                  pk.field_z.field_X = true;
+                  HiscoresScreen.field_z.field_r = eu.field_b.toUpperCase();
+                  HiscoresScreen.field_z.field_X = true;
                 }
               } else {
-                pk.field_z.field_r = eu.field_b.toUpperCase();
-                pk.field_z.field_X = true;
+                HiscoresScreen.field_z.field_r = eu.field_b.toUpperCase();
+                HiscoresScreen.field_z.field_X = true;
               }
-              pk.field_z.field_w = hg.field_g.field_w;
+              HiscoresScreen.field_z.field_w = hg.field_g.field_w;
               if (ValidatedTextInputWidget.field_K > 0) {
                 boolean decompiledSharedTail0 = (1 != ValidatedTextInputWidget.field_K);
                 if (!decompiledSharedTail0) {
@@ -150,9 +150,9 @@ final class CoinBagItemComponent extends ItemComponent {
                 }
                 if ((lh.field_a & 16) == 0 &&
                   !OpenGlDisplayLists.field_e) {
-                  pk.field_z.field_w = hg.field_g.field_C;
+                  HiscoresScreen.field_z.field_w = hg.field_g.field_C;
                 }
-                pk.field_z.field_r = pk.field_z.field_r + "<br>" + var10_ref_String;
+                HiscoresScreen.field_z.field_r = HiscoresScreen.field_z.field_r + "<br>" + var10_ref_String;
               }
               hw.field_a.setBounds(dka.field_b.field_G - var9, 40, -23776, dka.field_b.field_t - 40, var9);
               hw.field_a.field_r = PlantModel.field_p.toUpperCase();
@@ -481,7 +481,7 @@ final class CoinBagItemComponent extends ItemComponent {
             if (hw.field_a.field_y != 0) {
               LegacyOpenGlCubeTexture.field_p = true;
             }
-            if (pk.field_z.field_y != 0) {
+            if (HiscoresScreen.field_z.field_y != 0) {
               OpenGlDisplayLists.field_e = true;
             }
             if (Trap.field_q.field_y != 0) {

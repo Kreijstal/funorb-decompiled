@@ -255,9 +255,9 @@ final class kn {
           this.field_f = 3;
           this.field_b = 3;
           this.field_o = -1;
-          var4.createStateLayer(0, (byte) 41).withTextColour(15658734, -2147483648).setSprites(2, gn.b(8947848, 1, 10066329, 7829367));
-          var4.createStateLayer(1, (byte) 98).setSprites(2, gn.b(11184810, 1, 10066329, 13421772));
-          var4.createStateLayer(3, (byte) 42).setSprites(2, gn.b(8947848, 1, 7829367, 10066329)).c(-1, 1).setHorizontalOffset(1, 1);
+          var4.createStateLayer(0, (byte) 41).withTextColour(15658734, -2147483648).setSprites(2, FadingDialog.createFrameSprites(8947848, 1, 10066329, 7829367));
+          var4.createStateLayer(1, (byte) 98).setSprites(2, FadingDialog.createFrameSprites(11184810, 1, 10066329, 13421772));
+          var4.createStateLayer(3, (byte) 42).setSprites(2, FadingDialog.createFrameSprites(8947848, 1, 7829367, 10066329)).c(-1, 1).setHorizontalOffset(1, 1);
           var5 = new Sprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -279,7 +279,7 @@ final class kn {
           discarded$1 = new cj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
           var17.copyTo(var8, -107);
-          var8.createStateLayer(0, (byte) 65).setSprites(2, gn.b(15658734, 1, 7829367, 10066329)).withTextColour(1118481, -2147483648).a((byte) 7, -1);
+          var8.createStateLayer(0, (byte) 65).setSprites(2, FadingDialog.createFrameSprites(15658734, 1, 7829367, 10066329)).withTextColour(1118481, -2147483648).a((byte) 7, -1);
           var8.createStateLayer(4, (byte) 87).a(-2, true).setSprites(2, var5);
           this.field_e = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];

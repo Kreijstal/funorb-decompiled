@@ -78,10 +78,10 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
                 if (VerticalScrollbar.field_tb[12]) {
                   WallTile.b(param3, -22243);
                 } else {
-                  qp.field_s = true;
+                  RatingsScreen.field_s = true;
                 }
               } else {
-                qp.field_s = true;
+                RatingsScreen.field_s = true;
               }
             }
           }

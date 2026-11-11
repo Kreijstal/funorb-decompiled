@@ -31,7 +31,7 @@ final class VboVertexArray extends vo implements LegacyVertexArray {
         }
     }
 
-    final void d(int param0) {
+    final void bind(int param0) {
         this.field_h.bindVertexArray(101, (LegacyVertexArray) (this));
         if (param0 != 34963) {
           byte[] var3 = (byte[]) null;

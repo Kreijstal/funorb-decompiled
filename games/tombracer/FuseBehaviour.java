@@ -123,7 +123,7 @@ final class FuseBehaviour extends Behaviour {
           this.field_u = param1.readBits((byte) 44, 8);
           this.field_o = param1.readBits((byte) 44, 8);
           this.field_r = param1.readBits((byte) 44, 8);
-          this.field_p = ad.decodeEffect((byte) 87, param1);
+          this.field_p = CharacterChoiceTile.decodeEffect((byte) 87, param1);
           this.field_n = param1.readBits((byte) 44, 8) << 16;
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ula.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

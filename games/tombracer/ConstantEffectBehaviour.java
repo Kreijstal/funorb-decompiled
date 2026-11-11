@@ -29,7 +29,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         super(param0, param1, param2);
         this.field_o = 0;
         try {
-          this.field_r = ad.decodeEffect((byte) 87, param1);
+          this.field_r = CharacterChoiceTile.decodeEffect((byte) 87, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "fra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -98,8 +98,8 @@ final class fba {
             rg.field_B > 0) {
             fieldTemp$3 = rg.field_B - 1;
             rg.field_B = rg.field_B - 1;
-            var2_ref_byte__ = tw.field_f[fieldTemp$3];
-            tw.field_f[rg.field_B] = null;
+            var2_ref_byte__ = SoftwareRenderContext.field_f[fieldTemp$3];
+            SoftwareRenderContext.field_f[rg.field_B] = null;
             return var2_ref_byte__;
           }
           if (param0 != 30000) {
@@ -180,8 +180,8 @@ final class fba {
         if (rg.field_B > 0) {
           fieldTemp$16 = rg.field_B - 1;
           rg.field_B = rg.field_B - 1;
-          var2_ref_byte__Lifetime3 = tw.field_f[fieldTemp$16];
-          tw.field_f[rg.field_B] = null;
+          var2_ref_byte__Lifetime3 = SoftwareRenderContext.field_f[fieldTemp$16];
+          SoftwareRenderContext.field_f[rg.field_B] = null;
           return var2_ref_byte__Lifetime3;
         }
         if (param0 != 30000) {

@@ -683,7 +683,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextPrecariousPlatforms", (byte) 120);
                 if (null != var2) {
-                  gn.field_y = jaa.decodeText((byte) 82, var2);
+                  FadingDialog.field_y = jaa.decodeText((byte) 82, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleCrumblyBlocks", (byte) 103);
                 if (null != var2) {
@@ -1161,7 +1161,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_completed", (byte) 117);
                 if (var2 != null) {
-                  ad.field_i = jaa.decodeText((byte) 91, var2);
+                  CharacterChoiceTile.field_i = jaa.decodeText((byte) 91, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_dnf", (byte) 117);
                 if (var2 != null) {
@@ -2161,18 +2161,18 @@ final class pfa {
         decompiledBody.run();
     }
 
-    final void b(byte param0, int param1) {
+    final void walkToCourse(byte param0, int param1) {
         if (param0 != 58) {
           return;
         }
         try {
-          this.a(-28562, hq.field_b[param1] << 16, LoginForm.field_z[param1] << 16);
+          this.queueWaypoint(-28562, hq.field_b[param1] << 16, LoginForm.field_z[param1] << 16);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.F(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final void a(boolean param0) {
+    final void update(boolean param0) {
         ModelAnimator stackIn_33_0 = null;
         int stackIn_33_1 = 0;
         boolean stackIn_34_2 = false;
@@ -2227,7 +2227,7 @@ final class pfa {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void queueWaypoint(int param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         wk var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -2236,7 +2236,7 @@ final class pfa {
           var4.field_g = param2;
           var4.field_k = param1;
           if (param0 != -28562) {
-            this.b(96, -22, 33);
+            this.draw(96, -22, 33);
           }
           this.field_f.addLast((byte) -79, var4);
           return;
@@ -2260,7 +2260,7 @@ final class pfa {
         }
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean isAtCourse(byte param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -2277,23 +2277,23 @@ final class pfa {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void draw(int param0, int param1, int param2) {
         try {
           hp.drawModelPreview(2048, this.field_h, 1900, this.field_c.getModel((byte) 74), param1 ^ -1918096900, 10 + ((this.field_e >> 16) + param0), (this.field_j >> 16) + param2 + 18);
           if (param1 != 11327) {
-            this.a(73, (byte) 91);
+            this.placeAtCourse(73, (byte) 91);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void placeAtCourse(int param0, byte param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (param1 > -98) {
-            this.a((byte) -74, -14);
+            this.isAtCourse((byte) -74, -14);
           }
           this.field_j = LoginForm.field_z[param0] << 16;
           this.field_e = hq.field_b[param0] << 16;

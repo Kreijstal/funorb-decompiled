@@ -37,7 +37,7 @@ final class OpenGlTransform3D extends Transform3D {
 
     final static boolean c(int param0, int param1, int param2) {
         if (param2 == -19531) {
-          return HardwareUnlitEffect.a(param1, param0, param2 + 21579) & ((0 != (8192 & param0) ? true : false) | kaa.hasMask24OrAll544(param1, param0, false) | rg.e(param1, -56, param0));
+          return HardwareUnlitEffect.a(param1, param0, param2 + 21579) & ((0 != (8192 & param0) ? true : false) | kaa.hasMask24OrAll544(param1, param0, false) | rg.hasFlag65536(param1, -56, param0));
         }
         return false;
     }
@@ -59,7 +59,7 @@ final class OpenGlTransform3D extends Transform3D {
         this.field_o = var2 * this.field_o + var7 * var3;
     }
 
-    final void a(Transform3D param0, byte param1) {
+    final void setTransposedFrom(Transform3D param0, byte param1) {
         OpenGlTransform3D var5 = null;
         try {
           var5 = (OpenGlTransform3D) (param0);
@@ -136,7 +136,7 @@ final class OpenGlTransform3D extends Transform3D {
         }
     }
 
-    final void c(byte param0) {
+    final void negateYZ(byte param0) {
         this.field_q = -this.field_q;
         this.field_o = -this.field_o;
         this.field_h = -this.field_h;

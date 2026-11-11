@@ -20,13 +20,13 @@ final class rua extends MessageDialog implements ButtonListener {
         }
         try {
           SingleChildWidget.d(-7694);
-          this.i((byte) 13);
+          this.dismiss((byte) 13);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "rua.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    rua(jta param0, AccountRegistrationPanel param1) {
+    rua(DialogStack param0, AccountRegistrationPanel param1) {
         super(param0, ft.field_c, dsa.field_d, false, false);
         try {
           this.field_fb = param1;
@@ -36,7 +36,7 @@ final class rua extends MessageDialog implements ButtonListener {
     }
 
     final void h(boolean param0) {
-        this.a(7, param0, doa.a(qp.field_v, 248, (byte) 114));
+        this.a(7, param0, doa.a(RatingsScreen.field_v, 248, (byte) 114));
     }
 
     final static String a(String param0, int param1) {
@@ -111,7 +111,7 @@ final class rua extends MessageDialog implements ButtonListener {
                   jp.a(false);
                 }
                 this.field_ib = true;
-                var4 = qp.field_v;
+                var4 = RatingsScreen.field_v;
               }
             } else {
               var4 = ProceduralTextureProvider.field_f;
@@ -228,7 +228,7 @@ final class rua extends MessageDialog implements ButtonListener {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean updateFade(int param0) {
         jua var2 = null;
         if (this.field_B &&
           !this.field_eb) {
@@ -240,7 +240,7 @@ final class rua extends MessageDialog implements ButtonListener {
         if (param0 < 126) {
           this.field_fb = (AccountRegistrationPanel) null;
         }
-        return super.a(127);
+        return super.updateFade(127);
     }
 
     static {

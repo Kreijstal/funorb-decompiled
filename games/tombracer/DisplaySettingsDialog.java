@@ -64,7 +64,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         }
     }
 
-    DisplaySettingsDialog(jta param0) {
+    DisplaySettingsDialog(DialogStack param0) {
         super(param0, 430, 254);
         int incrementValue$0 = 0;
         int var7_int = 0;
@@ -148,7 +148,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           }
           stackIn_31_1 = !(this.field_P.length <= 0);
           this.field_M = stackIn_31_1;
-          stackIn_34_0 = (!GridWidgetContainer.g((byte) 97)) ? 0 : 1;
+          stackIn_34_0 = (!GridWidgetContainer.canResizeViewport((byte) 97)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_1 = !(TextWidgetPainter.a(56));
           this.field_Y = stackIn_37_1;
@@ -187,7 +187,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           }
           this.field_T = new GridWidgetContainer(stackIn_51_3, stackIn_52_4, 410, 105, (WidgetPainter) null, var3Lifetime1, 1);
           this.field_T.field_E = 83;
-          this.field_T.a(5, 5, (byte) 97);
+          this.field_T.setCellSpacing(5, 5, (byte) 97);
           this.addChild(this.field_T, -1);
           this.field_W = this.addIconButton(-82, DirectByteStorage.field_f, ke.field_a, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
@@ -453,10 +453,10 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                       if (ReportAbuseDialog.field_ub > 0) {
                         this.selectButton(20306, param2);
                       } else {
-                        this.field_z.c(new bra(this.field_z), 84);
+                        this.field_z.pushDialog(new bra(this.field_z), 84);
                       }
                     } else {
-                      this.field_z.c(new gga(this.field_z, gj.field_o), 95);
+                      this.field_z.pushDialog(new gga(this.field_z, gj.field_o), 95);
                     }
                   }
                 } else {
@@ -648,15 +648,15 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                 var2 = this.field_ab.getSelectedIndex((byte) 123);
                 if (var2 < 0) {
                   StringCursor.a(-30600, true);
-                  this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
+                  this.field_z.pushDialog(new FullscreenConfirmationDialog(this.field_z), 89);
                 } else {
                   OpenGlSceneLight.field_o.setDisplayMode(this.field_P[var2].field_a, this.field_P[var2].field_c, -1);
                   StringCursor.a(-30600, true);
-                  this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
+                  this.field_z.pushDialog(new FullscreenConfirmationDialog(this.field_z), 89);
                 }
               } else {
                 StringCursor.a(-30600, true);
-                this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
+                this.field_z.pushDialog(new FullscreenConfirmationDialog(this.field_z), 89);
               }
             }
           }
@@ -719,7 +719,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           if (!this.field_Y &&
             !TextWidgetPainter.a(127)) {
             this.h(-8266);
-            this.field_z.c(new DisplaySettingsDialog(this.field_z), 109);
+            this.field_z.pushDialog(new DisplaySettingsDialog(this.field_z), 109);
           }
           if (this.field_ab != null) {
             stackIn_14_0 = (this.field_ab.isOpen((byte) -125)) ? 0 : 1;

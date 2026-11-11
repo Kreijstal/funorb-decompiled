@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ej {
-    static jta field_a;
+    static DialogStack field_a;
     static fp field_c;
     static String field_b;
     static uca[] field_d;

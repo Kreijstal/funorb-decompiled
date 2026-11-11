@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn extends we {
+final class jn extends DropInMenuScreen {
     static String field_r;
 
     final boolean isActionEnabled(int param0, int param1) {
@@ -61,7 +61,7 @@ final class jn extends we {
         }
     }
 
-    final void a(boolean param0, int param1, byte param2) {
+    final void drawPanelContent(boolean param0, int param1, byte param2) {
         int stackIn_27_0 = 0;
         int stackIn_45_0 = 0;
         int stackIn_48_0 = 0;
@@ -171,16 +171,16 @@ final class jn extends we {
           var11Lifetime1 = stackIn_51_0;
           stackIn_54_0 = (var9Lifetime1 != 0) ? 1 : 7;
           var12Lifetime1 = stackIn_54_0;
-          taa.a((byte) -112, var8Lifetime1, var10Lifetime1, 80);
+          UnlockEntry.a((byte) -112, var8Lifetime1, var10Lifetime1, 80);
           stackIn_57_0 = (var9Lifetime1 == 0) ? 5 : 3;
           var13Lifetime1 = stackIn_57_0;
-          taa.a((byte) -107, var8Lifetime1, var12Lifetime1, 96);
-          taa.a((byte) -126, var8Lifetime1, var11Lifetime1, 112);
-          taa.a((byte) -108, var8Lifetime1, var13Lifetime1, 127);
-          taa.a((byte) -107, 25 + var8Lifetime1, 9, 115);
-          taa.a((byte) -123, var8Lifetime1 + 50, 8, 118);
-          taa.a((byte) -108, var8Lifetime1 + 75, 10, 115);
-          taa.a((byte) -109, var8Lifetime1 + 100, 11, 106);
+          UnlockEntry.a((byte) -107, var8Lifetime1, var12Lifetime1, 96);
+          UnlockEntry.a((byte) -126, var8Lifetime1, var11Lifetime1, 112);
+          UnlockEntry.a((byte) -108, var8Lifetime1, var13Lifetime1, 127);
+          UnlockEntry.a((byte) -107, 25 + var8Lifetime1, 9, 115);
+          UnlockEntry.a((byte) -123, var8Lifetime1 + 50, 8, 118);
+          UnlockEntry.a((byte) -108, var8Lifetime1 + 75, 10, 115);
+          UnlockEntry.a((byte) -109, var8Lifetime1 + 100, 11, 106);
         }
     }
 
@@ -240,7 +240,7 @@ final class jn extends we {
           this.field_k.captureKey((byte) -50);
           this.activateItem(false, false, this.field_k.selectedIndex);
         } else {
-          this.c(-6);
+          this.goBack(-6);
         }
         if (param2 == 1) {
           return true;

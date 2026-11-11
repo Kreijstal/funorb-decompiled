@@ -11,7 +11,7 @@ final class RewardChoicePhase extends MatchPhase {
     static int[] field_t;
     private CommonChooseReward rewardChoice;
     private int selectedRow;
-    static sq field_n;
+    static MusicPlayer field_n;
     private RewardChoiceSlot[][] field_p;
 
     public static void releaseStatics(int param0) {
@@ -342,7 +342,7 @@ final class RewardChoicePhase extends MatchPhase {
     private final boolean isLocalPlayersTurn(boolean param0) {
         boolean stackIn_6_0 = false;
         if (!param0) {
-          field_n = (sq) null;
+          field_n = (MusicPlayer) null;
         }
         stackIn_6_0 = (!this.screen.isSpectating((byte) 98)) && (this.screen.localPlayerIndex == this.rewardChoice.getCurrentPlayerId(-1));
         return stackIn_6_0;

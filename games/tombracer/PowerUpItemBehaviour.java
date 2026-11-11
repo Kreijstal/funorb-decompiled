@@ -71,7 +71,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           ej.field_a.processPointerFrame(SocketArchiveNetworkClient.field_u, true, oi.field_b, -116);
-          ej.field_a.g((byte) -127);
+          ej.field_a.pruneFadedDialogs((byte) -127);
           while (NanoTickClock.pollKeyEvent(true)) {
             ej.field_a.dispatchKeyInput((byte) 116, MenuEntry.field_h, HardwareOpenGlToolkit.field_td);
           }

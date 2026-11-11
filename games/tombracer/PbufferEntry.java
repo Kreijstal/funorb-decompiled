@@ -86,7 +86,7 @@ final class PbufferEntry extends DualLinkNode {
         SoftwareRasterizer.clear();
         fp.startMenuBackgroundDemo(122);
         if (!(ld.field_e < 2)) {
-          HelloCommand.field_o = new FunOrbConsole(jk.createConsoleMethods((byte) 122), o.field_d, dsa.field_c);
+          HelloCommand.field_o = new FunOrbConsole(jk.createConsoleMethods((byte) 122), HeapIndexArray.field_d, dsa.field_c);
           aca.addShellListenerFirst(HelloCommand.field_o, 19711);
           aca.addShellListenerFirst(oq.getSharedShellListener((byte) 124), 19711);
         }

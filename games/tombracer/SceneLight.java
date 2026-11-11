@@ -73,7 +73,7 @@ abstract class SceneLight extends IntrusiveNode {
           dn.field_d = LoadLevelCommand.createToolkitSprites(param0, ProxySocketConnector.field_e, -100);
           PlayerProfile.field_r = LoadLevelCommand.createToolkitSprites(param0, via.field_a, param1 ^ -17261);
           bm.field_f = LoadLevelCommand.createToolkitSprites(param0, Transform3D.field_d, -112);
-          ega.field_e = su.createToolkitSprite(nm.field_i, param0, (byte) 126);
+          ega.field_e = su.createToolkitSprite(OpenGlIndexArray.field_i, param0, (byte) 126);
           tv.field_wb = su.createToolkitSprite(lt.field_a, param0, (byte) 127);
           GridWidgetContainer.field_y = LoadLevelCommand.createToolkitSprites(param0, ina.field_c, -104);
           PlayerInputQueue.field_a = su.createToolkitSprite(FleeLocomotor.field_C, param0, (byte) 127);
@@ -116,7 +116,7 @@ abstract class SceneLight extends IntrusiveNode {
           su.createToolkitSprite(field_n, param0, (byte) 125);
           gg.field_f = su.createToolkitSprite(vua.field_y, param0, (byte) 127);
           eca.field_c = LoadLevelCommand.createToolkitSprites(param0, Effect.field_e, -64);
-          nm.field_l = su.createToolkitSprite(ena.field_l, param0, (byte) 127);
+          OpenGlIndexArray.field_l = su.createToolkitSprite(ena.field_l, param0, (byte) 127);
           su.createToolkitSprite(MirrorComponent.field_F, param0, (byte) -2);
           gca.field_a = su.createToolkitSprite(rp.field_f, param0, (byte) 126);
           WidgetStyleLayer.field_b = LoadLevelCommand.createToolkitSprites(param0, StandingsPhase.field_o, param1 - 17309);

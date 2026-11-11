@@ -167,7 +167,7 @@ final class ck {
           rv.field_c = new UiComponent(0L, Corpse.field_i);
           rv.field_c.field_bb = 0;
           rv.field_c.field_z = 1;
-          BrickOperator.field_v = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, nf.field_j.toUpperCase());
+          BrickOperator.field_v = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, GridLineWalker.field_j.toUpperCase());
           VboVertexArray.field_k = new UiComponent(0L, WallModel.field_r);
           VboVertexArray.field_k.addChild(param11 - 25572, rv.field_c);
           VboVertexArray.field_k.addChild(-122, BrickOperator.field_v);
@@ -314,7 +314,7 @@ final class ck {
               }
               var17_int++;
             }
-            pk.field_z = new UiComponent(0L, hg.field_g);
+            HiscoresScreen.field_z = new UiComponent(0L, hg.field_g);
             hw.field_a = new UiComponent(0L, hg.field_g);
             MessageOverlay.field_t = new UiComponent(0L, tka.field_q);
             MessageOverlay.field_t.applyStyle(false, Corpse.field_i);
@@ -349,7 +349,7 @@ final class ck {
             }
             var18Lifetime1++;
           }
-          dka.field_b.addChild(-128, pk.field_z);
+          dka.field_b.addChild(-128, HiscoresScreen.field_z);
           dka.field_b.addChild(-125, hw.field_a);
           dka.field_b.addChild(-123, MessageOverlay.field_t);
           S2CEventPacket.field_e = new UiComponent(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());

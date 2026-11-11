@@ -74,11 +74,11 @@ final class PillarComponent extends PrefabComponent {
           return -1;
         }
         if (param0 == -7111) {
-          return ModelFactory.field_a.e(param0 ^ 7110);
+          return ModelFactory.field_a.topDialogWidth(param0 ^ 7110);
         }
         String var2 = (String) null;
         PillarComponent.loadAnimationSequence((String) null, 34, (ResourceArchive) null, (String) null);
-        return ModelFactory.field_a.e(param0 ^ 7110);
+        return ModelFactory.field_a.topDialogWidth(param0 ^ 7110);
     }
 
     final boolean isSwitchable(int param0) {

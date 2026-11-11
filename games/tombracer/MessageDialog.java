@@ -27,7 +27,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
             return;
           }
           jsa.a(false, 3);
-          this.i((byte) -124);
+          this.dismiss((byte) -124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
             stackIn_7_0 = super.handleKeyInput(param0, param1, param2, true);
             return stackIn_7_0;
           }
-          this.i((byte) -115);
+          this.dismiss((byte) -115);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,7 +92,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
 
     final static void j(byte param0) {
         if (ej.field_a != null) {
-          ej.field_a.h(-1);
+          ej.field_a.pruneHiddenDialogs(-1);
           if (null != ena.field_p) {
             ena.field_p.f(12936);
           }
@@ -116,20 +116,20 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         field_Z = null;
         field_X = null;
         if (param0 != 7707) {
-          MessageDialog.a(12, -99, 63, -9, 57, 8);
+          MessageDialog.fillTranslucentRect(12, -99, 63, -9, 57, 8);
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillTranslucentRect(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param5 == 6) {
           tga.field_a.fillRectangleAlpha(SoundEvent.withFullAlpha(false, param4), param0, param2, param3, param5 - 22977, param1);
           return;
         }
-        MessageDialog.a(-35, -13, -25, -10, -41, -25);
+        MessageDialog.fillTranslucentRect(-35, -13, -25, -10, -41, -25);
         tga.field_a.fillRectangleAlpha(SoundEvent.withFullAlpha(false, param4), param0, param2, param3, param5 - 22977, param1);
     }
 
-    MessageDialog(jta param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    MessageDialog(DialogStack param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new sr((MessageDialog) null, param1, param2), 77, 10, 10);
         try {
           this.field_ab = param1;
@@ -145,7 +145,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         }
     }
 
-    final void a(int param0, byte param1, String param2) {
+    final void showResultMessage(int param0, byte param1, String param2) {
         boolean stackIn_9_1 = false;
         sr stackIn_13_0 = null;
         String stackIn_14_1 = null;
@@ -222,7 +222,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         }
     }
 
-    final void i(byte param0) {
+    final void dismiss(byte param0) {
         if (!this.field_B) {
           return;
         }

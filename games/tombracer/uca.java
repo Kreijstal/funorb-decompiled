@@ -29,7 +29,7 @@ final class uca {
         try {
           var10 = (CharSequence) ((Object) param0);
           if (!CurveOperator.isValidAccountName(true, var10)) {
-            stackIn_3_0 = pk.field_v;
+            stackIn_3_0 = HiscoresScreen.field_v;
             return stackIn_3_0;
           }
           if (UiWidget.field_g != 2) {

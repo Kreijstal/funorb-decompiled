@@ -37,7 +37,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -43, "loginm2");
                 if (null != var2) {
-                  sq.field_x = jaa.decodeText((byte) 60, var2);
+                  MusicPlayer.field_x = jaa.decodeText((byte) 60, var2);
                 }
                 var2 = dn.loadFile((byte) 118, "loginm1");
                 if (null != var2) {
@@ -73,7 +73,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -52, "create_ineligible");
                 if (null != var2) {
-                  qp.field_v = jaa.decodeText((byte) 111, var2);
+                  RatingsScreen.field_v = jaa.decodeText((byte) 111, var2);
                 }
                 var2 = dn.loadFile((byte) -35, "usernameprompt");
                 if (null != var2) {
@@ -939,11 +939,11 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -96, "rule_0_2");
                 if (null != var2) {
-                  tw.field_g = jaa.decodeText((byte) 35, var2);
+                  SoftwareRenderContext.field_g = jaa.decodeText((byte) 35, var2);
                 }
                 var2 = dn.loadFile((byte) -101, "rule_0_3");
                 if (null != var2) {
-                  gn.field_A = jaa.decodeText((byte) 41, var2);
+                  FadingDialog.field_A = jaa.decodeText((byte) 41, var2);
                 }
                 var2 = dn.loadFile((byte) -8, "rule_0_4");
                 if (null != var2) {
@@ -1659,7 +1659,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -104, "invalid_name");
                 if (null != var2) {
-                  pk.field_v = jaa.decodeText((byte) 96, var2);
+                  HiscoresScreen.field_v = jaa.decodeText((byte) 96, var2);
                 }
                 var2 = dn.loadFile((byte) -37, "cannot_add_yourself");
                 if (null != var2) {
@@ -2017,7 +2017,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 112, "ok");
                 if (null != var2) {
-                  nf.field_j = jaa.decodeText((byte) 94, var2);
+                  GridLineWalker.field_j = jaa.decodeText((byte) 94, var2);
                 }
                 var2 = dn.loadFile((byte) 105, "on");
                 if (var2 != null) {
@@ -2285,7 +2285,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -51, "no_highscores");
                 if (var2 != null) {
-                  nm.field_j = jaa.decodeText((byte) 80, var2);
+                  OpenGlIndexArray.field_j = jaa.decodeText((byte) 80, var2);
                 }
                 var2 = dn.loadFile((byte) -39, "hs_name");
                 if (null != var2) {
@@ -2357,7 +2357,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 114, "mp_x_wantstodraw");
                 if (null != var2) {
-                  ad.field_h = jaa.decodeText((byte) 88, var2);
+                  CharacterChoiceTile.field_h = jaa.decodeText((byte) 88, var2);
                 }
                 var2 = dn.loadFile((byte) -65, "mp_x_offersrematch");
                 if (null != var2) {

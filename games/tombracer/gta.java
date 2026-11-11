@@ -4,7 +4,7 @@
 final class gta {
     static String field_e;
     static UiComponent field_b;
-    static oc[] field_f;
+    static ModelData[] field_f;
     static String field_a;
     int field_c;
     static int[] field_g;

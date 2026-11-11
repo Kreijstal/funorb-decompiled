@@ -118,7 +118,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
         }
     }
 
-    FullscreenConfirmationDialog(jta param0) {
+    FullscreenConfirmationDialog(DialogStack param0) {
         super(param0, 200, 200);
         UiWidget var3 = null;
         try {
@@ -321,19 +321,19 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           if (0 >= var7) {
             og.exitFullscreen(0);
             this.i((byte) 109);
-            this.field_z.c(new gga(this.field_z, TileRenderable.field_b), 120);
+            this.field_z.pushDialog(new gga(this.field_z, TileRenderable.field_b), 120);
           } else {
             this.field_L.field_o = "" + var7;
           }
           if (this.field_B &&
             null == dq.field_f) {
             this.i((byte) 109);
-            this.field_z.c(new gga(this.field_z, TurbulenceNoise3D.field_j), 102);
+            this.field_z.pushDialog(new gga(this.field_z, TurbulenceNoise3D.field_j), 102);
           }
           if (null != dq.field_f &&
             dq.field_f.field_b) {
             this.i((byte) 109);
-            this.field_z.c(new gga(this.field_z, TurbulenceNoise3D.field_j), 85);
+            this.field_z.pushDialog(new gga(this.field_z, TurbulenceNoise3D.field_j), 85);
             return;
           }
           return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qp extends we {
+final class RatingsScreen extends DropInMenuScreen {
     static String field_v;
     static boolean field_s;
     private int[][] field_u;
@@ -33,7 +33,7 @@ final class qp extends we {
         return super.getActionLabel(param0, (byte) 112);
     }
 
-    private final void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, String param8) {
+    private final void drawRow(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, String param8) {
         String stackIn_7_0 = null;
         String stackIn_10_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -118,7 +118,7 @@ final class qp extends we {
         return 100;
     }
 
-    final void h(int param0, int param1) {
+    final void selectTable(int param0, int param1) {
         this.field_x = param1;
         if (param0 != 18608) {
           this.getItemY(-85, -41);
@@ -132,7 +132,7 @@ final class qp extends we {
         return this.getItemX((byte) 116, param0) + this.items[param0].getWidth(-163);
     }
 
-    qp(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    RatingsScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_x = 0;
         this.field_w = 0;
@@ -143,7 +143,7 @@ final class qp extends we {
         }
     }
 
-    private final boolean a(byte param0, int param1, int param2) {
+    private final boolean drawTable(byte param0, int param1, int param2) {
         String[] var4;
         int[] var5;
         upa var6;
@@ -206,7 +206,7 @@ final class qp extends we {
               stackIn_19_0 = this;
               stackIn_19_8 = 2431750;
             }
-            this.a(stackIn_18_1, (byte) stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_18_7, stackIn_19_8 | -16777216, var12);
+            this.drawRow(stackIn_18_1, (byte) stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_18_7, stackIn_19_8 | -16777216, var12);
             var7 = 1;
             var9 = var11;
           }
@@ -215,7 +215,7 @@ final class qp extends we {
         }
         if (var8 == 0) {
           var7 = 1;
-          this.a(-1, (byte) 127, var6.field_f, var6.field_g, var9 + 20, var6.field_j, var6.field_l, -5818367, MenuEntry.field_k);
+          this.drawRow(-1, (byte) 127, var6.field_f, var6.field_g, var9 + 20, var6.field_j, var6.field_l, -5818367, MenuEntry.field_k);
         }
         return var7 != 0;
     }
@@ -228,7 +228,7 @@ final class qp extends we {
         }
     }
 
-    final void a(boolean param0, int param1, byte param2) {
+    final void drawPanelContent(boolean param0, int param1, byte param2) {
         boolean discarded$3 = false;
         boolean discarded$5 = false;
         boolean discarded$4 = false;
@@ -239,7 +239,7 @@ final class qp extends we {
         String var8;
         NanoTickClock.field_h = new int[]{85, 130, 260, 365, 470, 540};
         if (param2 > -9) {
-          this.a(false, -74, (byte) 102);
+          this.drawPanelContent(false, -74, (byte) 102);
         }
         SingleChildWidget.field_v.drawLeft(param1 + 63, false, WidgetContainer.field_v.toUpperCase() + " - " + wg.field_m[this.field_x].toUpperCase(), 65, -14279929, -1);
         var4 = 120 + param1;
@@ -254,26 +254,26 @@ final class qp extends we {
         if (0 == var6) {
           var7 = PlayerSimulation.field_n;
           if (var7 != null) {
-            MembersUpsellMenu.a(var7.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(var7.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
             return;
           }
-          discarded$3 = this.a((byte) 106, this.field_x, param1);
+          discarded$3 = this.drawTable((byte) 106, this.field_x, param1);
           return;
         }
         if (var6 != 1) {
           if (var5 != null) {
-            MembersUpsellMenu.a(((String) (var5)).toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(((String) (var5)).toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
             return;
           }
-          discarded$5 = this.a((byte) 106, this.field_x, param1);
+          discarded$5 = this.drawTable((byte) 106, this.field_x, param1);
           return;
         }
         var8 = FacePlayerMountComponent.field_H;
         if (var8 != null) {
-          MembersUpsellMenu.a(var8.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(var8.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
           return;
         }
-        discarded$4 = this.a((byte) 106, this.field_x, param1);
+        discarded$4 = this.drawTable((byte) 106, this.field_x, param1);
         return;
     }
 
@@ -321,7 +321,7 @@ final class qp extends we {
           return;
         }
         var6 = (String) null;
-        this.a(38, (byte) 100, -54, 60, 55, -54, -22, -27, (String) null);
+        this.drawRow(38, (byte) 100, -54, 60, 55, -54, -22, -27, (String) null);
         if (!param0) {
           return;
         }
@@ -350,11 +350,11 @@ final class qp extends we {
         return;
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isItemSelected(int param0, int param1) {
         if (param0 == -13) {
           return this.field_x == -1 + param1 ? true : false;
         }
-        boolean discarded$3 = this.a((byte) 118, -37, -116);
+        boolean discarded$3 = this.drawTable((byte) 118, -37, -116);
         return this.field_x == -1 + param1 ? true : false;
     }
 

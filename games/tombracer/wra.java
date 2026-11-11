@@ -22,7 +22,7 @@ final class wra extends IOException {
             field_b = (String) null;
           }
           for (var1_int = 0; Obstacle.field_h.field_c.length > var1_int; var1_int++) {
-            Obstacle.field_h.field_c[var1_int] = vba.field_x[var1_int];
+            Obstacle.field_h.field_c[var1_int] = AchievementsScreen.field_x[var1_int];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

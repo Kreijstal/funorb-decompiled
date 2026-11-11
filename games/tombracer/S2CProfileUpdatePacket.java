@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class S2CProfileUpdatePacket implements GamePacket {
-    private taa field_a;
+    private UnlockEntry field_a;
     static AsyncRequest field_c;
     static int field_b;
     static boolean field_d;
@@ -32,7 +32,7 @@ final class S2CProfileUpdatePacket implements GamePacket {
           return;
         }
         try {
-          this.field_a.a(param1, param0 ^ 32582);
+          this.field_a.write(param1, param0 ^ 32582);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "bga.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

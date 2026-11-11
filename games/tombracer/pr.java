@@ -22,7 +22,7 @@ final class pr {
     final static void showLoginForm(int param0, String param1, String param2) {
         try {
           if (TextureOperator.field_l != null) {
-            TextureOperator.field_l.i((byte) 20);
+            TextureOperator.field_l.dismiss((byte) 20);
           }
           if (param0 != 0) {
             field_b = (String[]) null;

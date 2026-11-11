@@ -7,7 +7,7 @@ final class ScrollPane extends UiComponent {
     UiComponent field_vb;
     VerticalScrollbar field_wb;
 
-    final static void f(int param0) {
+    final static void handlePendingRequestReply(int param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -74,7 +74,7 @@ final class ScrollPane extends UiComponent {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void layoutChildren(int param0, int param1, byte param2) {
         this.field_vb.field_G = -param1 + this.field_G - param0;
         this.field_tb.field_qb = 0;
         this.field_vb.field_t = this.field_t;
@@ -137,7 +137,7 @@ final class ScrollPane extends UiComponent {
         this.field_wb.layoutThumb(this.field_vb.field_t, this.field_tb.field_t, (byte) -74, -this.field_tb.field_T);
     }
 
-    private final boolean a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6) {
+    private final boolean updateContentLayoutInternal(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6) {
         int var8;
         int var8Lifetime1;
         if (param0) {
@@ -166,13 +166,13 @@ final class ScrollPane extends UiComponent {
         return var8Lifetime1 != 0;
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
+    final void setPaneBounds(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         if (param2 == 127) {
           this.field_qb = param3;
           this.field_t = param5;
           this.field_G = param0;
           this.field_T = param6;
-          this.a(param4, param1, (byte) 125);
+          this.layoutChildren(param4, param1, (byte) 125);
           return;
         }
         field_ub = 74;
@@ -180,21 +180,21 @@ final class ScrollPane extends UiComponent {
         this.field_t = param5;
         this.field_G = param0;
         this.field_T = param6;
-        this.a(param4, param1, (byte) 125);
+        this.layoutChildren(param4, param1, (byte) 125);
     }
 
-    final boolean a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
+    final boolean updateContentLayout(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
         if (param2 <= 68) {
           return true;
         }
-        return this.a(param5, param3, param0, this.field_vb.field_t, param4, param1, true);
+        return this.updateContentLayoutInternal(param5, param3, param0, this.field_vb.field_t, param4, param1, true);
     }
 
-    final void b(boolean param0, int param1, int param2, int param3) {
+    final void updateScroll(boolean param0, int param1, int param2, int param3) {
         boolean discarded$0 = false;
         this.applyScrollInput(param2, param0, this.field_vb.field_t, param3, (byte) 117);
         if (param1 != 0) {
-          discarded$0 = this.a(false, -87, -125, 47, 100, false, true);
+          discarded$0 = this.updateContentLayoutInternal(false, -87, -125, 47, 100, false, true);
         }
     }
 

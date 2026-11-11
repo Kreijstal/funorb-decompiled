@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sq extends PcmStream {
+final class MusicPlayer extends PcmStream {
     private int[] field_t;
     MidiPcmStream field_y;
     private MidiPcmStream field_k;
@@ -23,7 +23,7 @@ final class sq extends PcmStream {
         return null;
     }
 
-    final synchronized void a(int param0, int param1, byte param2, int param3, boolean param4, MusicTrack param5) {
+    final synchronized void playTrack(int param0, int param1, byte param2, int param3, boolean param4, MusicTrack param5) {
         boolean stackIn_20_1 = false;
         int stackIn_32_0 = 0;
         MidiPcmStream stackIn_42_0 = null;
@@ -50,7 +50,7 @@ final class sq extends PcmStream {
               this.field_w = param5;
               if (param5 != null) {
                 this.field_l.playTrack(param5, false, (byte) 80);
-                this.a(1048576, param3, param0, this.field_l);
+                this.startOnStream(1048576, param3, param0, this.field_l);
               }
             } else {
               if (null != this.field_u) {
@@ -59,7 +59,7 @@ final class sq extends PcmStream {
               this.field_u = param5;
               if (param5 != null) {
                 this.field_y.playTrack(param5, false, (byte) 80);
-                this.a(1048576, param3, param0, this.field_y);
+                this.startOnStream(1048576, param3, param0, this.field_y);
               }
             }
             return;
@@ -68,12 +68,12 @@ final class sq extends PcmStream {
           this.field_q = stackIn_20_1;
           if (param5 == this.field_u) {
             this.field_m = param1;
-            this.a(1048576, param3, param0, this.field_y);
+            this.startOnStream(1048576, param3, param0, this.field_y);
             return;
           }
           if (param5 == this.field_w) {
             this.field_m = -param1;
-            this.a(1048576, param3, param0, this.field_l);
+            this.startOnStream(1048576, param3, param0, this.field_l);
             return;
           }
           if (this.field_u == null) {
@@ -96,7 +96,7 @@ final class sq extends PcmStream {
               stackIn_51_1 = (MusicTrack) (param5);
               stackIn_52_2 = !(param4);
               ((MidiPcmStream) (Object) stackIn_51_0).playTrack(stackIn_51_1, stackIn_52_2, (byte) 80);
-              this.a(1048576, param3, param0, this.field_y);
+              this.startOnStream(1048576, param3, param0, this.field_y);
             }
             this.field_m = param1;
           } else {
@@ -109,7 +109,7 @@ final class sq extends PcmStream {
               stackIn_42_1 = (MusicTrack) (param5);
               stackIn_43_2 = !(param4);
               ((MidiPcmStream) (Object) stackIn_42_0).playTrack(stackIn_42_1, stackIn_43_2, (byte) 80);
-              this.a(1048576, param3, param0, this.field_l);
+              this.startOnStream(1048576, param3, param0, this.field_l);
             }
             this.field_m = -param1;
           }
@@ -293,7 +293,7 @@ final class sq extends PcmStream {
         }
     }
 
-    private final void a(MidiPcmStream param0, MidiPcmStream param1, int param2) {
+    private final void setStreams(MidiPcmStream param0, MidiPcmStream param1, int param2) {
         try {
           this.field_l = param0;
           this.field_y = param1;
@@ -304,7 +304,7 @@ final class sq extends PcmStream {
         }
     }
 
-    final static int a(int param0, byte[] param1, byte param2) {
+    final static int computeCrc32(int param0, byte[] param1, byte param2) {
         RuntimeException var3 = null;
         byte[] var4 = null;
         int stackIn_3_0 = 0;
@@ -315,7 +315,7 @@ final class sq extends PcmStream {
         try {
           if (param2 > -94) {
             var4 = (byte[]) null;
-            sq.a(59, (byte[]) null, (byte) -100);
+            MusicPlayer.computeCrc32(59, (byte[]) null, (byte) -100);
           }
           stackIn_3_0 = PitSnake.computeCrc32(param1, param0, 71, 0);
           return stackIn_3_0;
@@ -337,19 +337,19 @@ final class sq extends PcmStream {
         return 2;
     }
 
-    final synchronized void a(byte param0, int param1) {
+    final synchronized void setVolume(byte param0, int param1) {
         int var3 = -104 / ((-2 - param0) / 53);
         this.field_s = param1;
     }
 
-    private final void a(int param0, int param1, int param2, MidiPcmStream param3) {
+    private final void startOnStream(int param0, int param1, int param2, MidiPcmStream param3) {
         try {
           this.field_n = param3;
-          param3.a((byte) -105, param2, -1);
+          param3.setChannelVolumeScale((byte) -105, param2, -1);
           if (param0 != 1048576) {
             this.field_o = (int[]) null;
           }
-          param3.a(param1, (byte) 55);
+          param3.setMasterVolume(param1, (byte) 55);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "sq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -690,12 +690,12 @@ final class sq extends PcmStream {
         }
     }
 
-    sq(MidiPcmStream param0, MidiPcmStream param1) {
+    MusicPlayer(MidiPcmStream param0, MidiPcmStream param1) {
         this.field_s = 256;
         this.field_p = false;
         this.field_j = 0;
         try {
-          this.a(param1, param0, 1048576);
+          this.setStreams(param1, param0, 1048576);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

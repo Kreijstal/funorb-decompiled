@@ -182,7 +182,7 @@ final class qt {
                 var4 = new LobbyGameWidget(ColourRowCache.field_b);
                 WhiteLightSensorComponent.field_K.put(-1, var4, (long)var3);
               }
-              ed.decodeLobbyGame(32, var4, true, var1);
+              ConsoleExpressionParser.decodeLobbyGame(32, var4, true, var1);
               cua.insertSorted(var4, (byte) 80);
               return;
             }
@@ -237,7 +237,7 @@ final class qt {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
                     var26 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
                     var27 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
-                    var7 = vba.a((byte) -40, var3_longLifetime2);
+                    var7 = AchievementsScreen.a((byte) -40, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new pha(var26, var27, var3_longLifetime2);
                       tc.field_d.put(-1, var7, var3_longLifetime2);
@@ -257,7 +257,7 @@ final class qt {
                   if (var2 == 19) {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                    var15 = vba.a((byte) -40, var3_longLifetime2);
+                    var15 = AchievementsScreen.a((byte) -40, var3_longLifetime2);
                     var28 = var15;
                     if (var15 == null) {
                       return;
@@ -273,7 +273,7 @@ final class qt {
                     return;
                   }
                   if (var2 == 20) {
-                    ed.decodeLobbyGame(32, C2SChooseRewardPacket.field_a, false, var1);
+                    ConsoleExpressionParser.decodeLobbyGame(32, C2SChooseRewardPacket.field_a, false, var1);
                     return;
                   }
                   if (21 == var2) {
@@ -378,7 +378,7 @@ final class qt {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(125);
             C2SChooseRewardPacket.field_a = new LobbyGameWidget(ColourRowCache.field_b);
             C2SChooseRewardPacket.field_a.setSecondaryKey(false, (long)var3Lifetime1);
-            ed.decodeLobbyGame(32, C2SChooseRewardPacket.field_a, false, var1);
+            ConsoleExpressionParser.decodeLobbyGame(32, C2SChooseRewardPacket.field_a, false, var1);
             TileRenderable.field_d = 0L;
           }
           if (var2 != 2 &&
@@ -431,8 +431,8 @@ final class qt {
             field_a = (BitmapFont) null;
           }
           var8 = new rua(ej.field_a, param5);
-          ej.field_a.c(var8, 88);
-          if (rg.f(7)) {
+          ej.field_a.pushDialog(var8, 88);
+          if (rg.hasTuhstatbutCookie(7)) {
             var8.h(param1);
             return true;
           }

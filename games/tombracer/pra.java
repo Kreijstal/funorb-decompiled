@@ -61,14 +61,14 @@ final class pra {
     }
 
     final static void b(int param0) {
-        if (gn.field_C.field_e != mha.field_E) {
-          tj.field_b = tj.field_b + (-mha.field_E + gn.field_C.field_e);
-          mha.field_E = gn.field_C.field_e;
+        if (FadingDialog.field_C.field_e != mha.field_E) {
+          tj.field_b = tj.field_b + (-mha.field_E + FadingDialog.field_C.field_e);
+          mha.field_E = FadingDialog.field_C.field_e;
         }
-        if (pk.field_r > 0) {
-          pk.field_r = pk.field_r - 1;
+        if (HiscoresScreen.field_r > 0) {
+          HiscoresScreen.field_r = HiscoresScreen.field_r - 1;
         }
-        if (~pk.field_r < param0) {
+        if (~HiscoresScreen.field_r < param0) {
           rg.a((byte) 44);
         }
     }

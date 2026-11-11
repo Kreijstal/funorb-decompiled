@@ -156,7 +156,7 @@ final class fga implements ShellListener {
               fga.drawFramebufferToCanvas(-59, false, -121, (java.awt.Canvas) null);
             }
             var4 = param3.getGraphics();
-            gn.field_C.drawImage(param2, param0, var4, 2);
+            FadingDialog.field_C.drawImage(param2, param0, var4, 2);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -273,14 +273,14 @@ final class fga implements ShellListener {
                   var9 = Integer.toString(var6_intLifetime1);
                 }
                 if (var9 != null) {
-                  MembersUpsellMenu.a((String) (var9), 16777215, kn.field_p, -1, this.field_b[var5Lifetime1] + 15, 20 + this.field_d[var5Lifetime1], 0);
+                  MembersUpsellMenu.drawCentredTextWithShadow((String) (var9), 16777215, kn.field_p, -1, this.field_b[var5Lifetime1] + 15, 20 + this.field_d[var5Lifetime1], 0);
                 }
                 var9Lifetime1 = null;
                 if (AnimatedLight.a(false, var6_intLifetime1).field_d) {
                   var9Lifetime1 = "M";
                 }
                 if (null != var9Lifetime1) {
-                  MembersUpsellMenu.a((String) (var9Lifetime1), 16777215, kn.field_p, -1, 26 + this.field_b[var5Lifetime1], this.field_d[var5Lifetime1] + 20, 0);
+                  MembersUpsellMenu.drawCentredTextWithShadow((String) (var9Lifetime1), 16777215, kn.field_p, -1, 26 + this.field_b[var5Lifetime1], this.field_d[var5Lifetime1] + 20, 0);
                 }
                 var5Lifetime1++;
                 continue;

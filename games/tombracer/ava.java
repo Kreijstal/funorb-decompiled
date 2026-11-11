@@ -136,7 +136,7 @@ final class ava {
           stackIn_43_4 = param2 * (8 + di.field_a * 4);
           stackIn_43_5 = 2 * (di.field_a + param4);
           stackIn_44_6 = (lu.field_b == param0);
-          stackIn_47_0 = (!((ScrollPane) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_43_5, stackIn_44_6)) ? 0 : 1;
+          stackIn_47_0 = (!((ScrollPane) (Object) stackIn_43_0).updateContentLayout(stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_43_5, stackIn_44_6)) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
           var10 = param0.field_tb.field_J;
           var11 = null;

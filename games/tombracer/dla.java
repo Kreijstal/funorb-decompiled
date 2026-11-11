@@ -311,7 +311,7 @@ final class dla {
     dla(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_d = sq.a(param0.length, param0, (byte) -124);
+          this.field_d = MusicPlayer.computeCrc32(param0.length, param0, (byte) -124);
           if (param1 != this.field_d) {
             throw new RuntimeException();
           }

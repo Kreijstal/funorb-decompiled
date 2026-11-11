@@ -151,7 +151,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     int field_kb;
     float field_Sb;
     private boolean field_qc;
-    private sca field_Rc;
+    private IndexArray field_Rc;
     qf field_cb;
     OpenGlModel field_eb;
     private int field_f;
@@ -204,7 +204,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void bindRenderTarget(RenderTarget param0) {
     }
 
-    final ToolkitModel createModel(oc param0, int param1, int param2, int param3, int param4) {
+    final ToolkitModel createModel(ModelData param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         OpenGlModel stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -365,7 +365,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glDisable(2896);
         }
         if (param0 != -52) {
-          this.field_Rc = (sca) null;
+          this.field_Rc = (IndexArray) null;
         }
     }
 
@@ -570,8 +570,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         try {
           this.field_jd.copyStateFrom(param0, 124);
           this.field_j.copyStateFrom(this.field_jd, -66);
-          this.field_j.c((byte) 57);
-          this.field_Tc.a((Transform3D) (this.field_j), (byte) 112);
+          this.field_j.negateYZ((byte) 57);
+          this.field_Tc.setTransposedFrom((Transform3D) (this.field_j), (byte) 112);
           if (this.field_e != 1) {
             this.loadViewMatrix(false);
           }
@@ -911,16 +911,16 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void drawIndexedElements(int param0, int param1, int param2, sca param3, int param4) {
+    final void drawIndexedElements(int param0, int param1, int param2, IndexArray param3, int param4) {
         int var6_int = 0;
         try {
-          var6_int = param3.c(-1771);
+          var6_int = param3.getIndexType(-1771);
           param0 = param0 * this.glTypeSize((byte) -10, var6_int);
           if (param2 != -513) {
             this.clipChanged((byte) 90);
           }
           this.bindIndexArray(param3, param2 + 35476);
-          jaggl.OpenGL.glDrawElements(param1, param4, var6_int, (long)param0 + param3.b(19135));
+          jaggl.OpenGL.glDrawElements(param1, param4, var6_int, (long)param0 + param3.getPointer(19135));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "cka.TB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -1372,7 +1372,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void bindIndexArray(sca param0, int param1) {
+    final void bindIndexArray(IndexArray param0, int param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -1381,7 +1381,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         try {
           if (this.field_Rc != param0) {
             if (this.field_Q) {
-              jaggl.OpenGL.glBindBufferARB(34963, param0.a(9624));
+              jaggl.OpenGL.glBindBufferARB(34963, param0.getBufferId(9624));
             }
             this.field_Rc = param0;
           }
@@ -2616,7 +2616,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void setBloomParameters(float param0, float param1, float param2) {
         ql.field_l = param0;
         ConstantEffectBehaviour.field_p = param1;
-        vba.field_v = param2;
+        AchievementsScreen.field_v = param2;
     }
 
     private final void attachContextToThread(byte param0) {
@@ -3390,27 +3390,27 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final sca createVertexBuffer(int param0, int param1, int param2, boolean param3, byte[] param4) {
+    final IndexArray createVertexBuffer(int param0, int param1, int param2, boolean param3, byte[] param4) {
         RuntimeException var6 = null;
-        sca stackIn_2_0 = null;
-        nm stackIn_8_0 = null;
-        o stackIn_10_0 = null;
+        IndexArray stackIn_2_0 = null;
+        OpenGlIndexArray stackIn_8_0 = null;
+        HeapIndexArray stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -49) {
-            stackIn_2_0 = (sca) null;
+            stackIn_2_0 = (IndexArray) null;
             return stackIn_2_0;
           }
           if (this.field_Q && (!param3 ||
             this.field_bd)) {
-            stackIn_8_0 = new nm(this, param2, param4, param1, param3);
-            return (sca) ((Object) stackIn_8_0);
+            stackIn_8_0 = new OpenGlIndexArray(this, param2, param4, param1, param3);
+            return (IndexArray) ((Object) stackIn_8_0);
           }
-          stackIn_10_0 = new o(this, param2, param4, param1);
-          return (sca) ((Object) stackIn_10_0);
+          stackIn_10_0 = new HeapIndexArray(this, param2, param4, param1);
+          return (IndexArray) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

@@ -17,7 +17,7 @@ final class OpenGlModel extends ToolkitModel {
     private LegacyVertexArray field_Q;
     private short[] field_z;
     private short[] field_cb;
-    private sca field_jb;
+    private IndexArray field_jb;
     private boolean field_l;
     private short field_T;
     private tj field_F;
@@ -214,7 +214,7 @@ final class OpenGlModel extends ToolkitModel {
         int var11Lifetime1;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          var6_int = PbufferEntry.field_m[qp.scaleLightness(param1, param4, 117)];
+          var6_int = PbufferEntry.field_m[RatingsScreen.scaleLightness(param1, param4, 117)];
           if (param3 != -1) {
             var7 = this.field_R.field_c.metadata((byte) -79, 65535 & param3);
             var8 = 255 & var7.field_c;
@@ -314,7 +314,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    private final short findOrAddVertex(long param0, int param1, int param2, int param3, byte param4, int param5, int param6, float param7, oc param8, float param9) {
+    private final short findOrAddVertex(long param0, int param1, int param2, int param3, byte param4, int param5, int param6, float param7, ModelData param8, float param9) {
         int fieldTemp$0 = 0;
         short stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -447,7 +447,7 @@ final class OpenGlModel extends ToolkitModel {
           param5.field_ib = this.field_ib;
           param5.field_L = this.field_L;
           param5.field_lb = this.field_lb;
-          var7_int = jj.hasAnyMask33(this.field_u, param1, -32842) ? 1 : 0;
+          var7_int = ConsoleParseException.hasAnyMask33(this.field_u, param1, -32842) ? 1 : 0;
           var8 = TimingPattern.hasAnyMask34((byte) -53, this.field_u, param1) ? 1 : 0;
           var9 = gha.hasAnyMask52(this.field_u, param1, param3 ^ -22830) ? 1 : 0;
           var10 = var8 | var7_int | var9;
@@ -595,7 +595,7 @@ final class OpenGlModel extends ToolkitModel {
             param5.field_g.field_g = this.field_g.field_g;
           }
           boolean decompiledFrameCompleted8 = true;
-          if (o.hasAnyMask540800(-1, this.field_u, param1)) {
+          if (HeapIndexArray.hasAnyMask540800(-1, this.field_u, param1)) {
             if (null == param4.field_X ||
               !(this.field_W <= param4.field_X.length)) {
               array$3 = new short[this.field_W];
@@ -663,7 +663,7 @@ final class OpenGlModel extends ToolkitModel {
             decompiledFrameRemainder3 = (var13 != 0);
           }
           if (decompiledFrameRemainder3) {
-            if (we.b(param1, this.field_u, 2048)) {
+            if (DropInMenuScreen.hasFlag2048(param1, this.field_u, 2048)) {
               param5.field_kb = this.field_kb;
               if (var13 != 0) {
                 param5.field_kb = null;
@@ -851,7 +851,7 @@ final class OpenGlModel extends ToolkitModel {
             param5.field_ab.field_d = this.field_ab.field_d;
           }
           boolean decompiledFrameCompleted3 = true;
-          if (qp.hasFlag16(param1, (byte) -71, this.field_u)) {
+          if (RatingsScreen.hasFlag16(param1, (byte) -71, this.field_u)) {
             regionExit4: {
               if (param4.field_H != null &&
                 param4.field_H.length >= this.field_W) {
@@ -1104,10 +1104,10 @@ final class OpenGlModel extends ToolkitModel {
               if (null == this.field_jb) {
                 this.field_jb = this.field_R.createVertexBuffer(-81, var3.position, 5123, true, var3.payload);
                 if (var5 != 0) {
-                  this.field_jb.a(var3.position, -11783, var3.payload, 5123);
+                  this.field_jb.setIndices(var3.position, -11783, var3.payload, 5123);
                 }
               } else {
-                this.field_jb.a(var3.position, -11783, var3.payload, 5123);
+                this.field_jb.setIndices(var3.position, -11783, var3.payload, 5123);
               }
               this.field_w.field_a = this.field_jb;
             }
@@ -4263,7 +4263,7 @@ final class OpenGlModel extends ToolkitModel {
         }
     }
 
-    OpenGlModel(OpenGlToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
+    OpenGlModel(OpenGlToolkit param0, ModelData param1, int param2, int param3, int param4, int param5) {
         int fieldTemp$0 = 0;
         short dupTemp$1 = 0;
         short dupTemp$2 = 0;
@@ -4292,7 +4292,7 @@ final class OpenGlModel extends ToolkitModel {
         int stackIn_313_1 = 0;
         int stackIn_332_0 = 0;
         int stackIn_332_1 = 0;
-        oc stackIn_353_0 = null;
+        ModelData stackIn_353_0 = null;
         int stackIn_356_0 = 0;
         int stackIn_356_1 = 0;
         int stackIn_372_0 = 0;
@@ -4416,7 +4416,7 @@ final class OpenGlModel extends ToolkitModel {
           if (ScoreSubmission.a(param5, param2, (byte) 17)) {
             this.field_F = new tj((LegacyVertexArray) null, 5126, 3, 0);
           }
-          if (we.b(param2, param5, 2048)) {
+          if (DropInMenuScreen.hasFlag2048(param2, param5, 2048)) {
             this.field_kb = new tj((LegacyVertexArray) null, 5121, 4, 0);
           }
           if (mm.hasFlag2048(-122, param2, param5)) {
@@ -4730,7 +4730,7 @@ final class OpenGlModel extends ToolkitModel {
               if (var16 < this.field_W) {
                 var17 = var8[var16];
                 var18 = param1.field_A[var17] & 65535;
-                stackIn_353_0 = (oc) (param1);
+                stackIn_353_0 = (ModelData) (param1);
                 if (var63 == 0) {
                   if (stackIn_353_0.field_g == null) {
                     var19_int = -1;
@@ -5066,13 +5066,13 @@ final class OpenGlModel extends ToolkitModel {
                 this.field_y = PlatformBehaviour.a(this.field_L, 50, this.field_y);
                 if (null != param1.field_l &&
                   HardwareOpenGlToolkit.hasFlag32(param2, 104, this.field_u)) {
-                  this.field_d = param1.a(false, (byte) 64);
+                  this.field_d = param1.groupVerticesByLabel(false, (byte) 64);
                 }
                 if (null != param1.field_m &&
                   HardwareGraphicsToolkit.hasFlag1024(this.field_u, (byte) 83, param2)) {
                   this.field_C = param1.b((byte) -91);
                 }
-                stackIn_353_0 = (oc) (param1);
+                stackIn_353_0 = (ModelData) (param1);
               }
               if (stackIn_353_0.field_D == null) {
                 return;

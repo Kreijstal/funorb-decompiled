@@ -6,12 +6,12 @@ final class hka {
     static PlayerContextMenu field_b;
     static int field_a;
 
-    final static taa a(int param0, PacketBuffer param1) {
+    final static UnlockEntry a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         PacketBuffer var4 = null;
-        taa stackIn_3_0 = null;
+        UnlockEntry stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -23,7 +23,7 @@ final class hka {
           }
           var2_int = param1.readUnsignedByte(255);
           var3 = param1.readUnsignedByte(255);
-          stackIn_3_0 = new taa(var2_int, var3);
+          stackIn_3_0 = new UnlockEntry(var2_int, var3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

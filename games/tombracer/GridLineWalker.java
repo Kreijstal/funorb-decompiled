@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf {
+final class GridLineWalker {
     private int field_a;
     private int field_r;
     private int field_m;
@@ -30,7 +30,7 @@ final class nf {
         IntNode.field_g = new IntrusiveDeque();
     }
 
-    private final boolean c(int param0) {
+    private final boolean isWithinBounds(int param0) {
         if (this.field_n < this.field_c) {
           return false;
         }
@@ -49,7 +49,7 @@ final class nf {
         return false;
     }
 
-    final int b(int param0) {
+    final int cellY(int param0) {
         if (param0 != 2) {
           this.field_h = -59;
           return this.field_i;
@@ -57,7 +57,7 @@ final class nf {
         return this.field_i;
     }
 
-    final void d(int param0) {
+    final void step(int param0) {
         boolean discarded$0 = false;
         if (param0 >= 98) {
           if (this.field_d) {
@@ -81,14 +81,14 @@ final class nf {
             if (this.field_e) {
               return;
             }
-            if (this.c(17973)) {
+            if (this.isWithinBounds(17973)) {
               return;
             }
           }
           this.field_d = true;
           return;
         }
-        discarded$0 = this.c(-119);
+        discarded$0 = this.isWithinBounds(-119);
         if (this.field_d) {
           return;
         }
@@ -110,7 +110,7 @@ final class nf {
           if (this.field_e) {
             return;
           }
-          if (this.c(17973)) {
+          if (this.isWithinBounds(17973)) {
             return;
           }
         }
@@ -118,7 +118,7 @@ final class nf {
         return;
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final void begin(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11;
         int var12;
         int var13;
@@ -205,15 +205,15 @@ final class nf {
           this.field_e = true;
           this.field_d = false;
           while (!this.field_d) {
-            if (!this.c(17973)) {
-              this.d(121);
+            if (!this.isWithinBounds(17973)) {
+              this.step(121);
               continue;
             }
             break;
           }
           this.field_e = false;
           if (param1 != 7) {
-            this.a(39, (byte) -58, -65, -8, -39, 28, -20, -89, -15, -1);
+            this.begin(39, (byte) -58, -65, -8, -39, 28, -20, -89, -15, -1);
           }
           return;
         }
@@ -244,15 +244,15 @@ final class nf {
           this.field_e = true;
           this.field_d = false;
           while (!this.field_d) {
-            if (!this.c(17973)) {
-              this.d(121);
+            if (!this.isWithinBounds(17973)) {
+              this.step(121);
               continue;
             }
             break;
           }
           this.field_e = false;
           if (param1 != 7) {
-            this.a(39, (byte) -58, -65, -8, -39, 28, -20, -89, -15, -1);
+            this.begin(39, (byte) -58, -65, -8, -39, 28, -20, -89, -15, -1);
           }
           return;
         }
@@ -271,8 +271,8 @@ final class nf {
           this.field_e = true;
           this.field_d = false;
           while (!this.field_d) {
-            if (!this.c(17973)) {
-              this.d(121);
+            if (!this.isWithinBounds(17973)) {
+              this.step(121);
               continue;
             }
             break;
@@ -284,8 +284,8 @@ final class nf {
             this.field_e = true;
             this.field_d = false;
             while (!this.field_d) {
-              if (!this.c(17973)) {
-                this.d(121);
+              if (!this.isWithinBounds(17973)) {
+                this.step(121);
                 continue;
               }
               break;
@@ -305,8 +305,8 @@ final class nf {
             this.field_e = true;
             this.field_d = false;
             while (!this.field_d) {
-              if (!this.c(17973)) {
-                this.d(121);
+              if (!this.isWithinBounds(17973)) {
+                this.step(121);
                 continue;
               }
               break;
@@ -317,10 +317,10 @@ final class nf {
         if (param1 == 7) {
           return;
         }
-        this.a(39, (byte) -58, -65, -8, -39, 28, -20, -89, -15, -1);
+        this.begin(39, (byte) -58, -65, -8, -39, 28, -20, -89, -15, -1);
     }
 
-    final int b(byte param0) {
+    final int cellX(byte param0) {
         if (param0 != 75) {
           this.field_k = -47;
           return this.field_n;
@@ -356,12 +356,12 @@ final class nf {
         field_p = null;
         field_j = null;
         if (param0 != -25802) {
-          nf.a(-39, -25, -55, -64, -108, -100, 117);
+          GridLineWalker.a(-39, -25, -55, -64, -108, -100, 117);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        this.a(param5, (byte) 7, param3, param6 - 1, param4, param1, param7, param0, -1 + param2, 0);
+    final void beginInGrid(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        this.begin(param5, (byte) 7, param3, param6 - 1, param4, param1, param7, param0, -1 + param2, 0);
     }
 
     static {

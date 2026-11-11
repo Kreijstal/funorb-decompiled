@@ -33,8 +33,8 @@ final class cc extends IntrusiveNode {
         int var9 = var7 / (param0 + 1);
         int var10 = var8 / (1 + param0);
         int var11 = 1;
-        if (!BrickOperator.d(107, this.field_i) ||
-          !BrickOperator.d(-121, this.field_g)) {
+        if (!BrickOperator.isCourseAccessible(107, this.field_i) ||
+          !BrickOperator.isCourseAccessible(-121, this.field_g)) {
           var11 = 0;
         }
         int var12 = 0;

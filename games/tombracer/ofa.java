@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ofa extends gn {
+abstract class ofa extends FadingDialog {
     private int field_H;
     private int field_G;
     static boolean field_I;
@@ -13,7 +13,7 @@ abstract class ofa extends gn {
 
     final void a(int param0, int param1, int param2, byte param3) {
         if (param0 <= 0) {
-          this.c(-11560, param2, param1);
+          this.setCentredSize(-11560, param2, param1);
           return;
         }
         this.field_E = param2;
@@ -27,18 +27,18 @@ abstract class ofa extends gn {
         }
     }
 
-    ofa(jta param0, int param1, int param2) {
+    ofa(DialogStack param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_G = 0;
         this.field_F = 0;
     }
 
-    boolean a(byte param0) {
+    boolean snapFade(byte param0) {
         if (param0 >= -53) {
           ofa.releaseStatics(69);
         }
         this.finishTransition(true);
-        return super.a((byte) -92);
+        return super.snapFade((byte) -92);
     }
 
     void drawDialogFrame(int param0, byte param1, int param2) {
@@ -158,7 +158,7 @@ abstract class ofa extends gn {
         }
     }
 
-    boolean a(int param0) {
+    boolean updateFade(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -182,9 +182,9 @@ abstract class ofa extends gn {
             var3 = this.field_H + (this.field_E - this.field_H) * var4 / var5;
             var2 = this.field_J + (-this.field_J + this.field_K) * var4 / var5;
           }
-          this.c(-11560, var3, var2);
+          this.setCentredSize(-11560, var3, var2);
         }
-        return super.a(127);
+        return super.updateFade(127);
     }
 
     final static void a(int[] param0, long[] param1, int param2) {
@@ -214,7 +214,7 @@ abstract class ofa extends gn {
         if (this.field_F <= 0) {
           return;
         }
-        this.c(-11560, this.field_E, this.field_K);
+        this.setCentredSize(-11560, this.field_E, this.field_K);
         this.field_F = 0;
         this.onResizeFinished(-90);
     }

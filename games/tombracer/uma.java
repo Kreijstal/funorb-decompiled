@@ -49,7 +49,7 @@ final class uma {
           return false;
         }
         if (!HorizontalGradientOperator.field_m) {
-          return !o.e(param0 + 540801) ? true : false;
+          return !HeapIndexArray.e(param0 + 540801) ? true : false;
         }
         return false;
     }

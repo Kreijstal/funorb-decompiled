@@ -75,7 +75,7 @@ final class FontMetrics {
           if (null != param3.field_q) {
             var12 = 0;
             while (!(param3.field_q.length <= var12)) {
-              var13_ref_br = taa.field_g.getCategory((byte) 98, param3.field_q[var12]);
+              var13_ref_br = UnlockEntry.field_g.getCategory((byte) 98, param3.field_q[var12]);
               var8[var12] = var13_ref_br.field_n;
               var9[var12] = param3.field_k[var12];
               var11[var12] = FontMetrics.a(param0, param1, param2, var13_ref_br, param4);

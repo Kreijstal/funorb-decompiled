@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jta extends SingleChildWidget {
+final class DialogStack extends SingleChildWidget {
     static int[] field_z;
     private IntrusiveDeque field_y;
 
@@ -14,50 +14,50 @@ final class jta extends SingleChildWidget {
         field_z = null;
     }
 
-    final void g(byte param0) {
+    final void pruneFadedDialogs(byte param0) {
         IntrusiveDequeCursor var2;
-        gn var3;
+        FadingDialog var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_y);
-        var3 = (gn) (var2.first(true));
+        var3 = (FadingDialog) (var2.first(true));
         if (param0 < -105) {
           while (var3 != null) {
-            if (var3.a(127)) {
+            if (var3.updateFade(127)) {
               var3.unlink(71);
             }
-            var3 = (gn) (var2.next(-1));
+            var3 = (FadingDialog) (var2.next(-1));
           }
         } else {
-          this.g((byte) 58);
+          this.pruneFadedDialogs((byte) 58);
           while (var3 != null) {
-            if (var3.a(127)) {
+            if (var3.updateFade(127)) {
               var3.unlink(71);
             }
-            var3 = (gn) (var2.next(-1));
+            var3 = (FadingDialog) (var2.next(-1));
           }
         }
-        this.child = (UiWidget) ((Object) this.a((byte) -58));
+        this.child = (UiWidget) ((Object) this.getTopVisibleDialog((byte) -58));
     }
 
-    final int g(int param0) {
+    final int maxVisibleDialogWidth(int param0) {
         IntrusiveDequeCursor var2;
         int var3;
-        gn var4;
+        FadingDialog var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_y);
         var3 = -2147483648;
-        var4 = (gn) (var2.first(true));
+        var4 = (FadingDialog) (var2.first(true));
         while (var4 != null) {
           if (var4.field_B) {
             if (var3 >= var4.field_m) {
-              var4 = (gn) (var2.next(-1));
+              var4 = (FadingDialog) (var2.next(-1));
               continue;
             }
             var3 = var4.field_m;
           }
-          var4 = (gn) (var2.next(-1));
+          var4 = (FadingDialog) (var2.next(-1));
         }
         if (param0 < -72) {
           return var3;
@@ -88,45 +88,45 @@ final class jta extends SingleChildWidget {
         }
     }
 
-    final void h(int param0) {
+    final void pruneHiddenDialogs(int param0) {
         IntrusiveDequeCursor var2;
-        gn var3;
+        FadingDialog var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_y);
-        var3 = (gn) (var2.first(true));
+        var3 = (FadingDialog) (var2.first(true));
         if (param0 == -1) {
           while (var3 != null) {
-            if (var3.a((byte) -115)) {
+            if (var3.snapFade((byte) -115)) {
               var3.unlink(param0 ^ -111);
             }
-            var3 = (gn) (var2.next(-1));
+            var3 = (FadingDialog) (var2.next(-1));
           }
         } else {
-          this.d(true);
+          this.topDialogHeight(true);
           while (var3 != null) {
-            if (var3.a((byte) -115)) {
+            if (var3.snapFade((byte) -115)) {
               var3.unlink(param0 ^ -111);
             }
-            var3 = (gn) (var2.next(-1));
+            var3 = (FadingDialog) (var2.next(-1));
           }
         }
     }
 
-    final gn a(byte param0) {
+    final FadingDialog getTopVisibleDialog(byte param0) {
         int var2;
         IntrusiveDequeCursor var3;
-        gn var4;
+        FadingDialog var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = -31 % ((6 - param0) / 61);
         var3 = new IntrusiveDequeCursor(this.field_y);
-        var4 = (gn) (var3.first(true));
+        var4 = (FadingDialog) (var3.first(true));
         while (var4 != null) {
           if (var4.field_B) {
             return var4;
           }
-          var4 = (gn) (var3.next(-1));
+          var4 = (FadingDialog) (var3.next(-1));
         }
         return null;
     }
@@ -148,24 +148,24 @@ final class jta extends SingleChildWidget {
         field_z = (int[]) null;
     }
 
-    final int f(int param0) {
+    final int maxVisibleDialogHeight(int param0) {
         IntrusiveDequeCursor var2;
         int var3;
-        gn var4;
+        FadingDialog var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_y);
         var3 = param0;
-        var4 = (gn) (var2.first(true));
+        var4 = (FadingDialog) (var2.first(true));
         while (var4 != null) {
           if (var4.field_B) {
             if (var4.field_p <= var3) {
-              var4 = (gn) (var2.next(-1));
+              var4 = (FadingDialog) (var2.next(-1));
               continue;
             }
             var3 = var4.field_p;
           }
-          var4 = (gn) (var2.next(-1));
+          var4 = (FadingDialog) (var2.next(-1));
         }
         return var3;
     }
@@ -173,39 +173,39 @@ final class jta extends SingleChildWidget {
     final UiWidget getFocusedChild(boolean param0) {
         IntrusiveDequeCursor var2;
         Object var3;
-        gn var3_ref;
+        FadingDialog var3_ref;
         int var4;
         IntrusiveDequeCursor stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         IntrusiveDequeCursor stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
         IntrusiveDequeCursor var2Lifetime1;
-        gn var3_refLifetime1;
+        FadingDialog var3_refLifetime1;
         var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         if (!param0) {
           var2 = new IntrusiveDequeCursor(this.field_y);
           stackIn_13_0 = var2;
           stackIn_14_1 = (param0) ? false : true;
-          var3_ref = (gn) (((IntrusiveDequeCursor) (Object) stackIn_13_0).first(stackIn_14_1));
+          var3_ref = (FadingDialog) (((IntrusiveDequeCursor) (Object) stackIn_13_0).first(stackIn_14_1));
           while (var3_ref != null) {
             if (var3_ref.field_B) {
               return var3_ref.getFocusedChild((byte) 52);
             }
-            var3_ref = (gn) (var2.next(-1));
+            var3_ref = (FadingDialog) (var2.next(-1));
           }
           return null;
         }
-        this.d(false);
+        this.topDialogHeight(false);
         var2Lifetime1 = new IntrusiveDequeCursor(this.field_y);
         stackIn_3_0 = var2Lifetime1;
         stackIn_4_1 = (param0) ? false : true;
-        var3_refLifetime1 = (gn) (((IntrusiveDequeCursor) (Object) stackIn_3_0).first(stackIn_4_1));
+        var3_refLifetime1 = (FadingDialog) (((IntrusiveDequeCursor) (Object) stackIn_3_0).first(stackIn_4_1));
         while (var3_refLifetime1 != null) {
           if (var3_refLifetime1.field_B) {
             return var3_refLifetime1.getFocusedChild((byte) 52);
           }
-          var3_refLifetime1 = (gn) (var2Lifetime1.next(-1));
+          var3_refLifetime1 = (FadingDialog) (var2Lifetime1.next(-1));
         }
         return null;
     }
@@ -265,16 +265,16 @@ final class jta extends SingleChildWidget {
         }
     }
 
-    final void c(UiWidget param0, int param1) {
-        gn var3 = null;
-        if (!(param0 instanceof gn)) {
+    final void pushDialog(UiWidget param0, int param1) {
+        FadingDialog var3 = null;
+        if (!(param0 instanceof FadingDialog)) {
           throw new IllegalArgumentException();
         }
         if (param1 <= 81) {
           return;
         }
         try {
-          var3 = (gn) (param0);
+          var3 = (FadingDialog) (param0);
           this.field_y.addFirst((byte) 125, (IntrusiveNode) (var3));
           var3.field_B = true;
           var3.requestKeyboardFocus((UiWidget) (this), false);
@@ -283,13 +283,13 @@ final class jta extends SingleChildWidget {
         }
     }
 
-    final void e(boolean param0) {
+    final void hideAllDialogs(boolean param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_y);
-        gn var3 = (gn) (var2.first(param0));
+        FadingDialog var3 = (FadingDialog) (var2.first(param0));
         while (var3 != null) {
           var3.field_B = false;
-          var3 = (gn) (var2.next(-1));
+          var3 = (FadingDialog) (var2.next(-1));
         }
         if (param0) {
           this.child = null;
@@ -297,14 +297,14 @@ final class jta extends SingleChildWidget {
         }
     }
 
-    final int d(boolean param0) {
+    final int topDialogHeight(boolean param0) {
         int var2 = 0;
-        gn var3 = null;
-        gn var3Lifetime1;
+        FadingDialog var3 = null;
+        FadingDialog var3Lifetime1;
         int var2Lifetime1;
         if (param0) {
           var2 = -1;
-          var3 = this.a((byte) -87);
+          var3 = this.getTopVisibleDialog((byte) -87);
           if (var3 != null) {
             var2 = var3.field_p;
           }
@@ -312,21 +312,21 @@ final class jta extends SingleChildWidget {
         }
         this.field_y = (IntrusiveDeque) null;
         var2Lifetime1 = -1;
-        var3Lifetime1 = this.a((byte) -87);
+        var3Lifetime1 = this.getTopVisibleDialog((byte) -87);
         if (var3Lifetime1 != null) {
           var2Lifetime1 = var3Lifetime1.field_p;
         }
         return var2Lifetime1;
     }
 
-    public jta() {
+    public DialogStack() {
         super(0, 0, bb.field_m, qba.field_a, (WidgetPainter) null, (WidgetListener) null);
         this.field_y = new IntrusiveDeque();
     }
 
-    final int e(int param0) {
+    final int topDialogWidth(int param0) {
         int var2 = param0;
-        gn var3 = this.a((byte) -79);
+        FadingDialog var3 = this.getTopVisibleDialog((byte) -79);
         if (var3 != null) {
           var2 = var3.field_m;
         }

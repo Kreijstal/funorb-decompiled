@@ -194,7 +194,7 @@ final class CrusherBehaviour extends Behaviour {
             this.retractTicks = 50;
           }
           if (16 <= param0.formatVersion) {
-            this.crushEffect = ad.decodeEffect((byte) 87, param1);
+            this.crushEffect = CharacterChoiceTile.decodeEffect((byte) 87, param1);
           } else {
             this.crushEffect = new Effect(0, 100);
           }

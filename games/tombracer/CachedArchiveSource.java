@@ -181,12 +181,12 @@ final class CachedArchiveSource extends ArchiveSource {
           if (param1 != -256) {
             CachedArchiveSource.setGamma(0.721841364009857, 28);
           }
-          if (param0 != ed.field_a) {
+          if (param0 != ConsoleExpressionParser.field_a) {
             for (var3_int = 0; var3_int < 256; var3_int++) {
               var4 = (int)(Math.pow((double)var3_int / 255.0, param0) * 255.0);
               IterableNodeHashTable.field_c[var3_int] = var4 <= 255 ? var4 : 255;
             }
-            ed.field_a = param0;
+            ConsoleExpressionParser.field_a = param0;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "js.G(" + param0 + ',' + param1 + ')');

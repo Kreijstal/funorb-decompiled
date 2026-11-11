@@ -26,26 +26,26 @@ final class a implements e {
         }
     }
 
-    private final void b() {
+    private final void bindNativeContext() {
         this.M(this.field_nativeid);
     }
 
-    final void a() {
+    final void bindToCurrentThread() {
         this.field_h = (Runnable) ((Object) Thread.currentThread());
-        this.b();
+        this.bindNativeContext();
     }
 
     private final native void M(long param0);
 
     private final native void E(long param0, boolean param1);
 
-    final void a(ToolkitModel param0, Transform3D param1, int[] param2, int param3, int param4) {
+    final void drawModelAtDepth(ToolkitModel param0, Transform3D param1, int[] param2, int param3, int param4) {
         this.f(this.field_nativeid, ((i) (param0)).field_nativeid, ((NativeTransform3D) (param1)).field_nativeid, param2, param3, param4);
     }
 
     private final native void UA(long param0, long param1, long param2, int[] param3, int param4);
 
-    final ToolkitModel a(i param0, byte param1, int param2, boolean param3) {
+    final ToolkitModel copyModel(i param0, byte param1, int param2, boolean param3) {
         i dupTemp$0 = null;
         i stackIn_3_0;
         i stackIn_3_1;
@@ -170,7 +170,7 @@ final class a implements e {
 
     private final native void f(long param0, long param1, long param2, int[] param3, int param4, int param5);
 
-    final void a(ToolkitModel param0, Transform3D param1, int[] param2, int param3) {
+    final void drawModel(ToolkitModel param0, Transform3D param1, int[] param2, int param3) {
         this.UA(this.field_nativeid, ((i) (param0)).field_nativeid, ((NativeTransform3D) (param1)).field_nativeid, param2, param3);
     }
 

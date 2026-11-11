@@ -13,7 +13,7 @@ final class oi {
           }
           VerticalGradientOperator.field_n = param4;
           apa.field_a = param0;
-          cr.field_b = param3;
+          ConsoleTokenStream.field_b = param3;
           CharacterSelectPhase.field_q = param1;
           LegacyOpenGlTurbulentTextureEffect.field_f = true;
         } catch (RuntimeException runtimeException) {

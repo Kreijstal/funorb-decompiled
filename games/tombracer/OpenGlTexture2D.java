@@ -125,7 +125,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         gg.field_f = null;
         CharacterSelectPhase.field_r = null;
         LegacyOpenGlEffectManager.field_a = null;
-        nm.field_l = null;
+        OpenGlIndexArray.field_l = null;
         Projectile.field_n = null;
         int var1 = 60 / ((-20 - param0) / 45);
         MirrorBehaviour.field_r = null;

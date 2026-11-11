@@ -63,7 +63,7 @@ abstract class GraphicsToolkit {
 
     abstract boolean enableBloom();
 
-    abstract ToolkitModel createModel(oc param0, int param1, int param2, int param3, int param4);
+    abstract ToolkitModel createModel(ModelData param0, int param1, int param2, int param3, int param4);
 
     abstract Transform3D getTransform();
 
@@ -96,7 +96,7 @@ abstract class GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (0 == param3) {
-            stackIn_2_0 = MidiPcmStream.a(param1, 127, param6, param0, param4);
+            stackIn_2_0 = MidiPcmStream.createSoftwareToolkit(param1, 127, param6, param0, param4);
             return stackIn_2_0;
           }
           if (param3 == 2) {

@@ -347,7 +347,7 @@ final class ica {
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
           var1 = new Sprite(540, 140);
-          nm.setRasterTarget(var1, (byte) 112);
+          OpenGlIndexArray.setRasterTarget(var1, (byte) 112);
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
           TimeSwitchBehaviour.field_r = 0;

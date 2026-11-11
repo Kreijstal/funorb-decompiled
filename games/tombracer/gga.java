@@ -85,7 +85,7 @@ final class gga extends ofa implements ButtonListener {
         if (TimeSwitchBehaviour.field_r > 200) {
           var5 = (250 - TimeSwitchBehaviour.field_r << 8) / 50;
         }
-        nm.setRasterTarget(vha.field_a, (byte) 108);
+        OpenGlIndexArray.setRasterTarget(vha.field_a, (byte) 108);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
         RenderScene.a(false);
@@ -151,7 +151,7 @@ final class gga extends ofa implements ButtonListener {
         }
     }
 
-    gga(jta param0, nt param1) {
+    gga(DialogStack param0, nt param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -169,7 +169,7 @@ final class gga extends ofa implements ButtonListener {
             if (TurbulenceNoise3D.field_j == param1) {
               this.field_p = this.field_p + 10;
               var3 = S2CEventPacket.field_b;
-              if (GridWidgetContainer.g((byte) 97)) {
+              if (GridWidgetContainer.canResizeViewport((byte) 97)) {
                 var3 = tj.field_h;
                 this.field_p = this.field_p + 20;
               }

@@ -78,7 +78,7 @@ class MidiPcmStream extends PcmStream {
 
     final synchronized boolean hasMidiData(byte param0) {
         if (param0 > -70) {
-          this.a((byte) -3, 35, 27);
+          this.setChannelVolumeScale((byte) -3, 35, 27);
         }
         return this.field_w.isReady();
     }
@@ -202,7 +202,7 @@ class MidiPcmStream extends PcmStream {
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          MidiPcmStream.a(8, -95, (java.awt.Canvas) null, (TextureProvider) null, -74);
+          MidiPcmStream.createSoftwareToolkit(8, -95, (java.awt.Canvas) null, (TextureProvider) null, -74);
         }
         field_K = null;
     }
@@ -240,7 +240,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static GraphicsToolkit a(int param0, int param1, java.awt.Canvas param2, TextureProvider param3, int param4) {
+    final static GraphicsToolkit createSoftwareToolkit(int param0, int param1, java.awt.Canvas param2, TextureProvider param3, int param4) {
         RuntimeException var5 = null;
         SoftwareGraphicsToolkit stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -325,7 +325,7 @@ class MidiPcmStream extends PcmStream {
             var4Lifetime1Lifetime1 = param0 & 15;
             var5Lifetime1Lifetime1 = (32529 & param0) >> 8;
             var6Lifetime1Lifetime1 = (param0 & 8342767) >> 16;
-            this.a(var6Lifetime1Lifetime1, (byte) -104, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1);
+            this.handlePolyphonicPressure(var6Lifetime1Lifetime1, (byte) -104, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1);
             return;
           }
           if (var3 != 176) {
@@ -338,7 +338,7 @@ class MidiPcmStream extends PcmStream {
             if (208 == var3) {
               var4Lifetime1Lifetime2Lifetime1 = 15 & param0;
               var5Lifetime1Lifetime2Lifetime1 = (32632 & param0) >> 8;
-              this.b(var4Lifetime1Lifetime2Lifetime1, var5Lifetime1Lifetime2Lifetime1, 98);
+              this.handleChannelPressure(var4Lifetime1Lifetime2Lifetime1, var5Lifetime1Lifetime2Lifetime1, 98);
               return;
             }
             if (var3 == 224) {
@@ -456,7 +456,7 @@ class MidiPcmStream extends PcmStream {
               break;
             case 81:
               if (var6Lifetime1Lifetime2 < 64) {
-                this.e(28583, var4Lifetime1Lifetime3);
+                this.resetRetriggerPhases(28583, var4Lifetime1Lifetime3);
                 this.field_M[var4Lifetime1Lifetime3] = SnakePitBehaviour.bitwiseAnd(this.field_M[var4Lifetime1Lifetime3], -5);
                 if (var8 != 0) {
                   this.field_M[var4Lifetime1Lifetime3] = WallTile.bitwiseOr(this.field_M[var4Lifetime1Lifetime3], 4);
@@ -466,10 +466,10 @@ class MidiPcmStream extends PcmStream {
               }
               break;
             case 17:
-              this.a(var4Lifetime1Lifetime3, (-16257 & this.field_o[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7), (byte) -78);
+              this.setRetriggerRate(var4Lifetime1Lifetime3, (-16257 & this.field_o[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7), (byte) -78);
               break;
             case 49:
-              this.a(var4Lifetime1Lifetime3, (-128 & this.field_o[var4Lifetime1Lifetime3]) + var6Lifetime1Lifetime2, (byte) -78);
+              this.setRetriggerRate(var4Lifetime1Lifetime3, (-128 & this.field_o[var4Lifetime1Lifetime3]) + var6Lifetime1Lifetime2, (byte) -78);
               return;
             default:
               break;
@@ -494,24 +494,24 @@ class MidiPcmStream extends PcmStream {
         this.field_L[param1] = 12800;
         this.field_A[param1] = 8192;
         if (param0 <= 86) {
-          this.e(27, 5);
+          this.resetRetriggerPhases(27, 5);
         }
         this.field_y[param1] = 16383;
         this.field_D[param1] = 8192;
         this.field_m[param1] = 0;
         this.field_z[param1] = 8192;
         this.releasePortamentoVoices(-50, param1);
-        this.e(28583, param1);
+        this.resetRetriggerPhases(28583, param1);
         this.field_M[param1] = 0;
         this.field_J[param1] = 32767;
         this.field_F[param1] = 256;
         this.field_q[param1] = 0;
-        this.a(param1, 8192, (byte) -78);
+        this.setRetriggerRate(param1, 8192, (byte) -78);
     }
 
-    final synchronized void a(int param0, byte param1) {
+    final synchronized void setMasterVolume(int param0, byte param1) {
         if (param1 != 55) {
-          this.e(61, 49);
+          this.resetRetriggerPhases(61, 49);
         }
         this.field_H = param0;
     }
@@ -527,7 +527,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void setRetriggerRate(int param0, int param1, byte param2) {
         if (param2 != -78) {
           field_K = (UiComponent) null;
         }
@@ -741,7 +741,7 @@ class MidiPcmStream extends PcmStream {
           stackIn_16_0 = param0 ? 1 : 0;
         }
         if (stackIn_16_0 != 1) {
-          this.a(-124, (byte) 75, -116, -85);
+          this.handlePolyphonicPressure(-124, (byte) 75, -116, -85);
         }
         return;
     }
@@ -834,7 +834,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void e(int param0, int param1) {
+    private final void resetRetriggerPhases(int param0, int param1) {
         rta var3;
         int var4;
         int stackIn_8_0 = 0;
@@ -888,7 +888,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int param3) {
+    private final void handlePolyphonicPressure(int param0, byte param1, int param2, int param3) {
         int var5 = -31 % ((-47 - param1) / 56);
     }
 
@@ -1176,7 +1176,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    synchronized void a(byte param0, int param1, int param2) {
+    synchronized void setChannelVolumeScale(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -1303,7 +1303,7 @@ class MidiPcmStream extends PcmStream {
         return null;
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void handleChannelPressure(int param0, int param1, int param2) {
         if (param2 != 98) {
           this.hasMidiData((byte) 90);
         }
@@ -1532,7 +1532,7 @@ class MidiPcmStream extends PcmStream {
         this.field_w = new MidiFileReader();
         this.field_v = new MidiVoiceMixer(this);
         this.field_r = new NodeHashTable(128);
-        this.a((byte) -105, 256, -1);
+        this.setChannelVolumeScale((byte) -105, 256, -1);
         this.resetSynthesizer(true, -116);
     }
 
@@ -1561,7 +1561,7 @@ class MidiPcmStream extends PcmStream {
         this.field_v = new MidiVoiceMixer(this);
         try {
           this.field_r = param0.field_r;
-          this.a((byte) -105, 256, -1);
+          this.setChannelVolumeScale((byte) -105, 256, -1);
           this.resetSynthesizer(true, -119);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ')');

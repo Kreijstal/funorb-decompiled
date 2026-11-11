@@ -54,7 +54,7 @@ class MatchScoringObserver extends SimulationObserver {
         Room var11 = null;
         try {
           if (RewardChoicePhase.field_n != null) {
-            RewardChoicePhase.field_n.field_y.a((byte) -105, 77, -1);
+            RewardChoicePhase.field_n.field_y.setChannelVolumeScale((byte) -105, 77, -1);
           }
           var7 = new PenaltyNotice(param1, param3, param2, param5, param4);
           this.field_c.addLast((byte) -88, var7);
@@ -167,7 +167,7 @@ class MatchScoringObserver extends SimulationObserver {
           this.onRoomCompleted((Player) null, (Room) null, false);
         }
         if (null != RewardChoicePhase.field_n) {
-          RewardChoicePhase.field_n.field_y.a((byte) -105, 256, -1);
+          RewardChoicePhase.field_n.field_y.setChannelVolumeScale((byte) -105, 256, -1);
         }
         if (null == this.field_f) {
           return;

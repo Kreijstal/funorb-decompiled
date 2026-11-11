@@ -124,7 +124,7 @@ final class GameAssetLoader implements LoadingStage {
             this.field_e = (ResourceArchive) null;
           }
           ima.a((float)param0, param2, -106);
-          ad.field_j.draw(0);
+          CharacterChoiceTile.field_j.draw(0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "sra.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -312,7 +312,7 @@ final class GameAssetLoader implements LoadingStage {
     }
 
     public final boolean loadStep(int param0) {
-        rg.e(-2339);
+        rg.initializeMenuActionLabels(-2339);
         PlatformComponent.A(67);
         if (!this.field_c) {
           this.loadNextAsset(124);
@@ -340,8 +340,8 @@ final class GameAssetLoader implements LoadingStage {
         wm.field_a = null;
         SpriteTileOperator.field_t = (GameScreen) ((Object) nl.getMenuScreen(0, (byte) 50));
         ima.a(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);
-        ad.field_j.draw(param0 ^ -49);
-        gn.field_C.makeTarget(-19216);
+        CharacterChoiceTile.field_j.draw(param0 ^ -49);
+        FadingDialog.field_C.makeTarget(-19216);
         if (param0 != -49) {
           this.loadNextAsset(-107);
         }

@@ -170,7 +170,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           jaggl.OpenGL.glUseProgramObjectARB(var7);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "sceneTex"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "bloomTex"), 1);
-          jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "params"), vba.field_v, ConstantEffectBehaviour.field_p, 0.0f);
+          jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "params"), AchievementsScreen.field_v, ConstantEffectBehaviour.field_p, 0.0f);
           this.toolkit.setActiveTextureUnit(1, true);
           this.toolkit.bindTexture(true, this.field_x);
           this.toolkit.setActiveTextureUnit(0, true);
@@ -438,12 +438,12 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
     final static boolean a(int param0, int param1, int param2) {
         if (param1 != 1) {
           field_k = (String[]) null;
-          if (!(jj.hasAnyMask33(param0, param2, -32842) | (0 != (458752 & param2) ? true : false))) {
+          if (!(ConsoleParseException.hasAnyMask33(param0, param2, -32842) | (0 != (458752 & param2) ? true : false))) {
             return ValidatedTextInputWidget.a(param2, (byte) -105, param0) ? true : false;
           }
           return true;
         }
-        if (jj.hasAnyMask33(param0, param2, -32842) | (0 != (458752 & param2) ? true : false)) {
+        if (ConsoleParseException.hasAnyMask33(param0, param2, -32842) | (0 != (458752 & param2) ? true : false)) {
           return true;
         }
         if (!ValidatedTextInputWidget.a(param2, (byte) -105, param0)) {

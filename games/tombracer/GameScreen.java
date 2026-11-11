@@ -34,27 +34,27 @@ abstract class GameScreen {
                 if (2 == VerticalGradientOperator.field_n) {
                   if (VerticalScrollbar.isChatSendAllowed(-1)) {
                     var4 = (String) null;
-                    ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+                    ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, ConsoleTokenStream.field_b, CharacterSelectPhase.field_q);
                   }
                   return true;
                 }
                 if (var3 == 0) {
                   if (VerticalScrollbar.isChatSendAllowed(-1)) {
                     var4 = (String) null;
-                    ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+                    ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, ConsoleTokenStream.field_b, CharacterSelectPhase.field_q);
                   }
                   return true;
                 }
                 return false;
               }
-              if (ota.isPlayerReachable(apa.field_a, (byte) 13, cr.field_b)) {
+              if (ota.isPlayerReachable(apa.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
                 if (2 != VerticalGradientOperator.field_n &&
                   var3 != 0) {
                   return false;
                 }
                 if (VerticalScrollbar.isChatSendAllowed(-1)) {
                   var4 = (String) null;
-                  ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+                  ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, ConsoleTokenStream.field_b, CharacterSelectPhase.field_q);
                 }
                 return true;
               }
@@ -66,7 +66,7 @@ abstract class GameScreen {
             }
             if (LegacyOpenGlTurbulentTextureEffect.field_f) {
               if (VerticalGradientOperator.field_n == 2 &&
-                !ota.isPlayerReachable(apa.field_a, (byte) 13, cr.field_b)) {
+                !ota.isPlayerReachable(apa.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
                 return false;
               }
               if (2 != VerticalGradientOperator.field_n &&
@@ -75,7 +75,7 @@ abstract class GameScreen {
               }
               if (VerticalScrollbar.isChatSendAllowed(-1)) {
                 var4Lifetime3 = (String) null;
-                ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+                ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, ConsoleTokenStream.field_b, CharacterSelectPhase.field_q);
               }
               return true;
             }
@@ -101,7 +101,7 @@ abstract class GameScreen {
               return false;
             }
             if (VerticalGradientOperator.field_n == 2 &&
-              !ota.isPlayerReachable(apa.field_a, (byte) 13, cr.field_b)) {
+              !ota.isPlayerReachable(apa.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
               return false;
             }
             if (2 != VerticalGradientOperator.field_n &&
@@ -110,7 +110,7 @@ abstract class GameScreen {
             }
             if (VerticalScrollbar.isChatSendAllowed(-1)) {
               var4Lifetime1 = (String) null;
-              ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+              ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, ConsoleTokenStream.field_b, CharacterSelectPhase.field_q);
             }
             return true;
           }
@@ -121,7 +121,7 @@ abstract class GameScreen {
             return false;
           }
           if (VerticalGradientOperator.field_n == 2 &&
-            !ota.isPlayerReachable(apa.field_a, (byte) 13, cr.field_b)) {
+            !ota.isPlayerReachable(apa.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
             return false;
           }
           if (2 != VerticalGradientOperator.field_n &&
@@ -130,7 +130,7 @@ abstract class GameScreen {
           }
           if (VerticalScrollbar.isChatSendAllowed(-1)) {
             var4Lifetime2 = (String) null;
-            ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+            ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, ConsoleTokenStream.field_b, CharacterSelectPhase.field_q);
           }
           return true;
         }

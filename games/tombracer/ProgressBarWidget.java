@@ -75,7 +75,7 @@ final class ProgressBarWidget extends UiWidget {
         int var9 = TombRacer.field_G ? 1 : 0;
         int var2 = this.field_p >> 1;
         Sprite var3 = new Sprite(var2, this.field_p);
-        nm.setRasterTarget(var3, (byte) 93);
+        OpenGlIndexArray.setRasterTarget(var3, (byte) 93);
         if (param0 <= 66) {
           this.field_z = (Sprite) null;
         }
@@ -159,7 +159,7 @@ final class ProgressBarWidget extends UiWidget {
         int var9Lifetime1;
         int var10Lifetime1;
         int var13Lifetime1;
-        nm.setRasterTarget(var5, (byte) 110);
+        OpenGlIndexArray.setRasterTarget(var5, (byte) 110);
         int var6 = this.field_p >> 1;
         for (var7 = 0; this.field_p > var7; var7++) {
           var8 = (var7 >> 1) * (this.field_u * 2 - 1) % (2 * this.field_u);
@@ -202,7 +202,7 @@ final class ProgressBarWidget extends UiWidget {
           }
           pfa.popRasterState(1);
           if (SoftwareRasterizer.clipLeft <= this.field_A.field_m + param2) {
-            nm.setRasterTarget(this.field_E, (byte) 116);
+            OpenGlIndexArray.setRasterTarget(this.field_E, (byte) 116);
             param1.drawTransparent(-this.field_y, 0);
             param1.drawTransparent(2 * this.field_u - this.field_y, 0);
             this.field_z.drawMultiply(0, 0);
@@ -210,7 +210,7 @@ final class ProgressBarWidget extends UiWidget {
             this.field_E.drawTransparent(param2, param0);
           }
           if (SoftwareRasterizer.clipRight >= -this.field_A.field_m + var5_int) {
-            nm.setRasterTarget(this.field_E, (byte) 91);
+            OpenGlIndexArray.setRasterTarget(this.field_E, (byte) 91);
             for (var7 = this.field_y + this.field_m - this.field_A.field_m; 2 * this.field_u < var7; var7 = var7 - 2 * this.field_u) {
             }
             param1.drawTransparent(-var7, 0);

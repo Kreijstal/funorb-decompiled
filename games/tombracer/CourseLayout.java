@@ -42,7 +42,7 @@ final class CourseLayout implements dv {
         this.roomIds[param0] = param1;
     }
 
-    final static void initAudioOutputs(int param0, int param1, sq param2, boolean param3, java.awt.Component param4, PlatformTaskDispatcher param5) {
+    final static void initAudioOutputs(int param0, int param1, MusicPlayer param2, boolean param3, java.awt.Component param4, PlatformTaskDispatcher param5) {
         try {
           nba.initAudioOutputs(param5, param2, param1, param0, param0, param4, -45, param3);
         } catch (RuntimeException runtimeException) {

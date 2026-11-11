@@ -82,12 +82,12 @@ final class MembersUpsellMenu extends MenuScreen {
           }
         }
         this.field_t = 0;
-        this.field_r = this.e(-18796);
-        this.field_x.a(true);
+        this.field_r = this.computeDropOffset(-18796);
+        this.field_x.update(true);
         if (PlayerModel.field_b == 1) {
           for (var5 = 0; LoginForm.field_z.length > var5; var5++) {
             if (mca.isCourseAvailable((byte) 6, var5) &&
-              BrickOperator.d(100, var5)) {
+              BrickOperator.isCourseAccessible(100, var5)) {
               var6 = LoginForm.field_z[var5] + (this.field_t + (ConsoleWindow.field_d.width() >> 1));
               var7 = this.field_r - (-hq.field_b[var5] - (ConsoleWindow.field_d.height() >> 1));
               var8 = 20;
@@ -96,10 +96,10 @@ final class MembersUpsellMenu extends MenuScreen {
                 GridWidgetContainer.field_B > -var8 + var7 &&
                 var8 + var7 > GridWidgetContainer.field_B) {
                 this.field_v = var5;
-                if (this.field_x.a((byte) 79, var5)) {
-                  this.b(false);
+                if (this.field_x.isAtCourse((byte) 79, var5)) {
+                  this.startSinglePlayer(false);
                 } else {
-                  this.field_x.a(var5, (byte) -109);
+                  this.field_x.placeAtCourse(var5, (byte) -109);
                 }
               }
             }
@@ -177,14 +177,14 @@ final class MembersUpsellMenu extends MenuScreen {
           }
         }
         ura.a(-10985);
-        this.field_x.b(this.field_r, 11327, this.field_t);
+        this.field_x.draw(this.field_r, 11327, this.field_t);
         RemovedFromGameMenu.f((byte) -6);
         var6 = aaa.a(false) >> 1;
         var5 = 40;
         var4Lifetime1 = 260;
         var7 = this.field_r - (100 - SwitchLinkList.b(param0 + 28));
         PlayerInputQueue.field_a.draw(var6 - (PlayerInputQueue.field_a.width() >> 1), -(PlayerInputQueue.field_a.height() >> 1) + var7);
-        SocketConnector.a(SecondaryLinkQueue.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
+        SocketConnector.a(SecondaryLinkQueue.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
         if (MultiplayerLoginMenu.b(false) && (TextWidgetPainter.a(62) ||
           mq.field_e.field_a ||
           var3 != 0)) {
@@ -207,8 +207,8 @@ final class MembersUpsellMenu extends MenuScreen {
           SocketConnector.a(var8, 1, kn.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
         }
         if (SimpleBlockBehaviour.c(0)) {
-          MembersUpsellMenu.a("Unlock: Key 2-9", 16777215, kn.field_p, -1, this.field_r + SwitchLinkList.b(param0 + 28) - 100, -100 + aaa.a(false), -1);
-          MembersUpsellMenu.a("Play All: Insert", 16777215, kn.field_p, -1, -80 + (this.field_r + SwitchLinkList.b(0)), aaa.a(false) - 100, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow("Unlock: Key 2-9", 16777215, kn.field_p, -1, this.field_r + SwitchLinkList.b(param0 + 28) - 100, -100 + aaa.a(false), -1);
+          MembersUpsellMenu.drawCentredTextWithShadow("Play All: Insert", 16777215, kn.field_p, -1, -80 + (this.field_r + SwitchLinkList.b(0)), aaa.a(false) - 100, -1);
         }
         return;
     }
@@ -224,7 +224,7 @@ final class MembersUpsellMenu extends MenuScreen {
         super.onActivated((byte) 85);
         this.field_s = -30;
         this.field_t = 0;
-        this.field_r = this.e(-18796);
+        this.field_r = this.computeDropOffset(-18796);
         this.field_x = new pfa(0, this.field_v);
         this.field_q = new IntrusiveDeque();
         this.field_q.addLast((byte) -118, new cc(0, 1, 2));
@@ -244,7 +244,7 @@ final class MembersUpsellMenu extends MenuScreen {
         this.field_q.addLast((byte) -51, new cc(7, 8, ta.field_vb[4], EdgeDetectOperator.field_m[4], 1, 2));
     }
 
-    private final void b(boolean param0) {
+    private final void startSinglePlayer(boolean param0) {
         TextLayout.startSinglePlayerMatch(this.field_v, (byte) -102, 1);
         if (param0) {
           this.handleKey(-11, '￘', 77);
@@ -258,7 +258,7 @@ final class MembersUpsellMenu extends MenuScreen {
         return SwitchLinkList.b(0) - 25;
     }
 
-    final static void a(String param0, int param1, GameFont param2, int param3, int param4, int param5, int param6) {
+    final static void drawCentredTextWithShadow(String param0, int param1, GameFont param2, int param3, int param4, int param5, int param6) {
         try {
           param2.drawCentred(SoundEvent.withFullAlpha(false, param6), param3, param5, SoundEvent.withFullAlpha(false, param1), param4, param0);
         } catch (RuntimeException runtimeException) {
@@ -295,7 +295,7 @@ final class MembersUpsellMenu extends MenuScreen {
           super.activateItem(param0, param1, param2);
           if (this.field_k.isActivated(param0) &&
             this.items[param2].field_g == 21) {
-            this.b(false);
+            this.startSinglePlayer(false);
           }
           return;
         }
@@ -373,9 +373,9 @@ final class MembersUpsellMenu extends MenuScreen {
                 }
                 var10 = stackIn_43_0;
                 if (mca.isCourseAvailable((byte) 6, var10) &&
-                  BrickOperator.d(96, var10)) {
+                  BrickOperator.isCourseAccessible(96, var10)) {
                   if (var9.b(true)) {
-                    this.field_x.a(-28562, var9.field_k << 16, var9.field_j << 16);
+                    this.field_x.queueWaypoint(-28562, var9.field_k << 16, var9.field_j << 16);
                   }
                   var8 = var10;
                   decompiledFrameRemainder0 = false;
@@ -388,20 +388,20 @@ final class MembersUpsellMenu extends MenuScreen {
             }
             if (var8 != this.field_v) {
               this.field_v = var8;
-              this.field_x.b((byte) 58, this.field_v);
+              this.field_x.walkToCourse((byte) 58, this.field_v);
             }
             if (param0 != 84 &&
               83 != param0) {
               break;
             }
-            this.b(false);
+            this.startSinglePlayer(false);
             break;
           }
         }
         return true;
     }
 
-    private final int e(int param0) {
+    private final int computeDropOffset(int param0) {
         int var3 = 0;
         int var2 = SwitchLinkList.b(0);
         int var3Lifetime1;

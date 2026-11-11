@@ -103,7 +103,7 @@ final class bra extends ofa implements ButtonListener {
         }
     }
 
-    bra(jta param0) {
+    bra(DialogStack param0) {
         super(param0, 200, 130);
         UiWidget var2 = null;
         try {

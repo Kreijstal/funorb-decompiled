@@ -452,7 +452,7 @@ final class RoomEffectTraps {
             !PbufferEntry.isPowerOfTwoOrZero(9181, param4)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = jj.glFormatComponents(param5, (byte) -104);
+          var7_int = ConsoleParseException.glFormatComponents(param5, (byte) -104);
           var8 = 0;
           if (param0 <= 51) {
             var24 = (String) null;

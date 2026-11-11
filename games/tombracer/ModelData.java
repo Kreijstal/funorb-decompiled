@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc {
+final class ModelData {
     int[] field_d;
     int[] field_j;
     short[] field_s;
@@ -41,7 +41,7 @@ final class oc {
     short[] field_a;
     short[] field_r;
 
-    final int[][] c(byte param0) {
+    final int[][] groupFacesByLabel(byte param0) {
         int var5_int = 0;
         int[] array$2 = null;
         int dupTemp$0 = 0;
@@ -99,7 +99,7 @@ final class oc {
     public static void releaseStatics(byte param0) {
         field_H = null;
         if (param0 != -71) {
-          oc.releaseStatics((byte) 123);
+          ModelData.releaseStatics((byte) 123);
         }
     }
 
@@ -145,7 +145,7 @@ final class oc {
           var11[var5Lifetime1] = 0;
         }
         if (param0 >= -76) {
-          this.a(false, (byte) -5);
+          this.groupVerticesByLabel(false, (byte) -5);
         }
         for (var5Lifetime2 = 0; this.field_m.length > var5Lifetime2; var5Lifetime2++) {
           var6 = this.field_m[var5Lifetime2].field_b;
@@ -159,7 +159,7 @@ final class oc {
         return var4;
     }
 
-    private final int a(int param0, short param1, oc param2, int param3) {
+    private final int mergeVertex(int param0, short param1, ModelData param2, int param3) {
         int var8 = 0;
         int fieldTemp$0 = 0;
         int stackIn_10_0 = 0;
@@ -223,7 +223,7 @@ final class oc {
         }
     }
 
-    private final void a(byte[] param0, int param1) {
+    private final void decodeNewFormat(byte[] param0, int param1) {
         byte dupTemp$0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
@@ -755,7 +755,7 @@ final class oc {
         }
     }
 
-    final int[][] a(boolean param0, byte param1) {
+    final int[][] groupVerticesByLabel(boolean param0, byte param1) {
         int var6_int = 0;
         int[] array$2 = null;
         int dupTemp$0 = 0;
@@ -819,7 +819,7 @@ final class oc {
         return var6;
     }
 
-    private final void a(int param0, byte[] param1) {
+    private final void decodeOldFormat(int param0, byte[] param1) {
         RuntimeException stackIn_115_0 = null;
         StringBuilder stackIn_115_1 = null;
         String stackIn_116_2 = null;
@@ -1158,7 +1158,7 @@ final class oc {
         }
     }
 
-    oc(byte[] param0) {
+    ModelData(byte[] param0) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -1173,10 +1173,10 @@ final class oc {
         try {
           if (param0[param0.length - 1] == -1 &&
             param0[param0.length - 2] == -1) {
-            this.a(param0, 0);
+            this.decodeNewFormat(param0, 0);
             return;
           }
-          this.a(5474, param0);
+          this.decodeOldFormat(5474, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1192,7 +1192,7 @@ final class oc {
         }
     }
 
-    oc(oc[] param0, int param1) {
+    ModelData(ModelData[] param0, int param1) {
         int incrementValue$2 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$0 = 0;
@@ -1225,10 +1225,10 @@ final class oc {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        oc var13_ref_oc = null;
+        ModelData var13_ref_oc = null;
         int var14 = 0;
-        oc var14_ref_oc = null;
-        oc var15 = null;
+        ModelData var14_ref_oc = null;
+        ModelData var15 = null;
         int var15_int = 0;
         int var16 = 0;
         jt var16_ref_jt = null;
@@ -1428,25 +1428,25 @@ final class oc {
                     this.field_D[this.field_o] = -1;
                   }
                 }
-                this.field_a[this.field_o] = (short)this.a((int) var14_ref_oc.field_a[var15_intLifetime1], (short) var13, var14_ref_oc, 1);
-                this.field_t[this.field_o] = (short)this.a((int) var14_ref_oc.field_t[var15_intLifetime1], (short) var13, var14_ref_oc, 1);
-                this.field_J[this.field_o] = (short)this.a((int) var14_ref_oc.field_J[var15_intLifetime1], (short) var13, var14_ref_oc, 1);
+                this.field_a[this.field_o] = (short)this.mergeVertex((int) var14_ref_oc.field_a[var15_intLifetime1], (short) var13, var14_ref_oc, 1);
+                this.field_t[this.field_o] = (short)this.mergeVertex((int) var14_ref_oc.field_t[var15_intLifetime1], (short) var13, var14_ref_oc, 1);
+                this.field_J[this.field_o] = (short)this.mergeVertex((int) var14_ref_oc.field_J[var15_intLifetime1], (short) var13, var14_ref_oc, 1);
                 this.field_h[this.field_o] = (short)var13;
                 this.field_A[this.field_o] = var14_ref_oc.field_A[var15_intLifetime1];
                 this.field_o = this.field_o + 1;
               }
               if (null != var14_ref_oc.field_B) {
                 for (var15_intLifetime2 = 0; var14_ref_oc.field_B.length > var15_intLifetime2; var15_intLifetime2++) {
-                  var16 = this.a(var14_ref_oc.field_B[var15_intLifetime2].field_a, (short) var13, var14_ref_oc, 1);
-                  var17 = this.a(var14_ref_oc.field_B[var15_intLifetime2].field_c, (short) var13, var14_ref_oc, 1);
-                  var18 = this.a(var14_ref_oc.field_B[var15_intLifetime2].field_b, (short) var13, var14_ref_oc, 1);
+                  var16 = this.mergeVertex(var14_ref_oc.field_B[var15_intLifetime2].field_a, (short) var13, var14_ref_oc, 1);
+                  var17 = this.mergeVertex(var14_ref_oc.field_B[var15_intLifetime2].field_c, (short) var13, var14_ref_oc, 1);
+                  var18 = this.mergeVertex(var14_ref_oc.field_B[var15_intLifetime2].field_b, (short) var13, var14_ref_oc, 1);
                   this.field_B[var3_intLifetime1] = var14_ref_oc.field_B[var15_intLifetime2].a(0, var17, var18, var16);
                   var3_intLifetime1++;
                 }
               }
               if (null != var14_ref_oc.field_e) {
                 for (var15_intLifetime3 = 0; var14_ref_oc.field_e.length > var15_intLifetime3; var15_intLifetime3++) {
-                  var16Lifetime2 = this.a(var14_ref_oc.field_e[var15_intLifetime3].field_a, (short) var13, var14_ref_oc, 1);
+                  var16Lifetime2 = this.mergeVertex(var14_ref_oc.field_e[var15_intLifetime3].field_a, (short) var13, var14_ref_oc, 1);
                   this.field_e[var4Lifetime1] = var14_ref_oc.field_e[var15_intLifetime3].a(0, var16Lifetime2);
                   var4Lifetime1++;
                 }
@@ -1479,9 +1479,9 @@ final class oc {
                 this.field_u[this.field_F] = dupTemp$0;
                 var17Lifetime1 = dupTemp$0;
                 if (var17Lifetime1 == 0) {
-                  this.field_s[this.field_F] = (short)this.a((int) var15.field_s[var16Lifetime1Lifetime1], (short) var14, var15, 1);
-                  this.field_q[this.field_F] = (short)this.a((int) var15.field_q[var16Lifetime1Lifetime1], (short) var14, var15, 1);
-                  this.field_K[this.field_F] = (short)this.a((int) var15.field_K[var16Lifetime1Lifetime1], (short) var14, var15, 1);
+                  this.field_s[this.field_F] = (short)this.mergeVertex((int) var15.field_s[var16Lifetime1Lifetime1], (short) var14, var15, 1);
+                  this.field_q[this.field_F] = (short)this.mergeVertex((int) var15.field_q[var16Lifetime1Lifetime1], (short) var14, var15, 1);
+                  this.field_K[this.field_F] = (short)this.mergeVertex((int) var15.field_K[var16Lifetime1Lifetime1], (short) var14, var15, 1);
                 }
                 if (var17Lifetime1 >= 1 &&
                   var17Lifetime1 <= 3) {

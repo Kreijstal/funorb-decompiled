@@ -385,7 +385,7 @@ final class SnakePitModel extends TrapModel {
           CharacterChoiceFactory.field_g.setBounds(-param2 + RotaterMountComponent.field_K.field_G - ComponentMount.field_b.field_G, param5, -23776, 0, param2);
           var7 = var7 - (2 + param5);
           ComponentMount.field_b.setBounds(ComponentMount.field_b.field_G, param5, -23776, 0, param2 + CharacterChoiceFactory.field_g.field_G);
-          ne.field_d.a(param3 + (2 + param2) + 485, 2, (byte) 127, 5, param3, -5 + var7, 5);
+          ne.field_d.setPaneBounds(param3 + (2 + param2) + 485, 2, (byte) 127, 5, param3, -5 + var7, 5);
           if (apa.field_c != null) {
             apa.field_c.setBounds((byte) -31, ne.field_d.field_G, ne.field_d.field_t, ne.field_d.field_qb, ne.field_d.field_T);
           }

@@ -352,13 +352,13 @@ class HotspotTextWidget extends FocusableWidget {
         this.rebuildHotspots(18758);
     }
 
-    final static oc loadModelData(ResourceArchive param0, String param1, String param2, boolean param3) {
+    final static ModelData loadModelData(ResourceArchive param0, String param1, String param2, boolean param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
-        oc stackIn_2_0 = null;
+        ModelData stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        oc stackIn_7_0 = null;
+        ModelData stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -369,17 +369,17 @@ class HotspotTextWidget extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param3) {
-            stackIn_2_0 = (oc) null;
+            stackIn_2_0 = (ModelData) null;
             return stackIn_2_0;
           }
           var5 = param0.getFileByName(param2, (byte) 115, param1);
           var4 = var5;
           if (var5 != null) {
-            stackIn_7_0 = new oc(var5);
+            stackIn_7_0 = new ModelData(var5);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (oc) (stackIn_5_0);
+          return (ModelData) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;

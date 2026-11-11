@@ -188,7 +188,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           }
           SpriteTileOperator.field_t = BlendModeOperator.getScreenById(param1, 121);
           if (SpriteTileOperator.field_t instanceof MenuScreen) {
-            ((MenuScreen) (SpriteTileOperator.field_t)).a(0, 0, param0);
+            ((MenuScreen) (SpriteTileOperator.field_t)).onShow(0, 0, param0);
           }
           SpriteTileOperator.field_t.onActivated((byte) 114);
           if (mpa.field_X) {
@@ -224,7 +224,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           }
           if (SpriteTileOperator.field_t instanceof MenuScreen &&
             wm.field_a instanceof MenuScreen &&
-            ((MenuScreen) (wm.field_a)).a(true, (MenuScreen) (SpriteTileOperator.field_t))) {
+            ((MenuScreen) (wm.field_a)).isShallowerThan(true, (MenuScreen) (SpriteTileOperator.field_t))) {
             SpriteTileOperator.field_t.field_d = wm.field_a.field_c;
           }
           var3_int = 69 % ((40 - param2) / 38);

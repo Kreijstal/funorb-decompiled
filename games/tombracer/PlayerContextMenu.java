@@ -387,7 +387,7 @@ final class PlayerContextMenu {
               return;
             }
             var14 = nl.a(true, this.field_g);
-            var4 = vba.a((byte) -40, this.field_g);
+            var4 = AchievementsScreen.a((byte) -40, this.field_g);
             var5 = this.getDisplayName(-13);
             if (var4 != null) {
               if (!C2SChooseRewardPacket.field_a.field_ec) {
@@ -432,7 +432,7 @@ final class PlayerContextMenu {
           return;
         }
         var13 = nl.a(true, this.field_g);
-        var4Lifetime1 = vba.a((byte) -40, this.field_g);
+        var4Lifetime1 = AchievementsScreen.a((byte) -40, this.field_g);
         var5 = this.getDisplayName(-13);
         if (var4Lifetime1 != null) {
           if (C2SChooseRewardPacket.field_a.field_ec &&

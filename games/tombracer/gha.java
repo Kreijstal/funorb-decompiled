@@ -115,11 +115,11 @@ final class gha implements pp {
         cp1252HighChars = null;
     }
 
-    final static oc loadModelData(String param0, String param1, int param2, ResourceArchive param3) {
+    final static ModelData loadModelData(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Exception var5 = null;
-        oc stackIn_2_0 = null;
+        ModelData stackIn_2_0 = null;
         Object stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -138,7 +138,7 @@ final class gha implements pp {
             decompiledCaughtException = decompiledCaughtParameter0;
             var5 = (Exception) (Object) decompiledCaughtException;
             stackIn_4_0 = null;
-            return (oc) (stackIn_4_0);
+            return (ModelData) (stackIn_4_0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

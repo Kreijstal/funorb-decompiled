@@ -249,8 +249,8 @@ final class ResultsPhase extends MatchPhase {
         var3 = -250 + aaa.a(false);
         var4 = -10 + WidgetStyleLayer.field_b[1].height() - 70;
         WidgetStyleLayer.field_b[1].draw(var3, -10);
-        nm.field_l.draw(var3, 0);
-        nm.field_l.draw(var3, var4);
+        OpenGlIndexArray.field_l.draw(var3, 0);
+        OpenGlIndexArray.field_l.draw(var3, var4);
         var5 = 3;
         var6 = (var3 - 50) / (var5 + 1);
         for (var7 = 0; var5 > var7; var7++) {
@@ -371,9 +371,9 @@ final class ResultsPhase extends MatchPhase {
             var7Lifetime2 < -100 + fd.field_e) {
             var26--;
           }
-          MembersUpsellMenu.a(Integer.toString(var26), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -47 + (var24Lifetime1 - 1), 55, 0);
-          MembersUpsellMenu.a(Integer.toString(this.matchState.roundsToWin), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
-          MembersUpsellMenu.a("_", wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -40 + var24Lifetime1, 55, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var26), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -47 + (var24Lifetime1 - 1), 55, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(this.matchState.roundsToWin), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow("_", wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -40 + var24Lifetime1, 55, 0);
         }
         for (var8Lifetime3 = 0; var8Lifetime3 < this.matchState.playerCount; var8Lifetime3++) {
           stackIn_61_0 = 95 * var8Lifetime3 + 105;
@@ -386,9 +386,9 @@ final class ResultsPhase extends MatchPhase {
           if (-100 + fd.field_e <= var7Lifetime2 &&
             var8Lifetime3 == this.matchState.getRoundWinner(2)) {
             if (this.matchState.roundsToWin == this.matchState.roundWins[var8Lifetime3]) {
-              MembersUpsellMenu.a(FallbackShaderEffect.field_d.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
+              MembersUpsellMenu.drawCentredTextWithShadow(FallbackShaderEffect.field_d.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             } else {
-              MembersUpsellMenu.a(RasterBuffer.field_h.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
+              MembersUpsellMenu.drawCentredTextWithShadow(RasterBuffer.field_h.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             }
             var10Lifetime1 = 0;
             for (var11Lifetime1 = 0; this.field_r.length > var11Lifetime1; var11Lifetime1++) {
@@ -398,7 +398,7 @@ final class ResultsPhase extends MatchPhase {
               }
             }
             if (var10Lifetime1 != 0) {
-              MembersUpsellMenu.a(CharacterSelectPhase.field_o.toUpperCase(), 2431750, eda.field_f, -1, var9Lifetime2, 20 + (50 + var3 >> 1), -1);
+              MembersUpsellMenu.drawCentredTextWithShadow(CharacterSelectPhase.field_o.toUpperCase(), 2431750, eda.field_f, -1, var9Lifetime2, 20 + (50 + var3 >> 1), -1);
             }
           }
           tga.field_a.setClip(0, var9Lifetime2 - 100, (int)(2.0 + this.field_r[var8Lifetime3].field_q), var9Lifetime2 + 50);
@@ -406,7 +406,7 @@ final class ResultsPhase extends MatchPhase {
           gca.field_a.draw(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
           tga.field_a.la();
           this.matchState.players[var8Lifetime3].getAnimator((byte) -42).drawPortrait(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
-          MembersUpsellMenu.a(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
           if (!this.field_p &&
             var7Lifetime2 >= var8Lifetime3 * 50 + efa.field_y &&
             var7Lifetime2 < 50 + efa.field_y + this.matchState.playerCount * 50) {

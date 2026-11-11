@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nm extends vo implements sca {
+final class OpenGlIndexArray extends vo implements IndexArray {
     static ToolkitSprite field_l;
     private int field_k;
     static SpriteData field_i;
@@ -19,23 +19,23 @@ final class nm extends vo implements sca {
         }
     }
 
-    public final long b(int param0) {
+    public final long getPointer(int param0) {
         if (param0 != 19135) {
           Sprite var3 = (Sprite) null;
-          nm.setRasterTarget((Sprite) null, (byte) -94);
+          OpenGlIndexArray.setRasterTarget((Sprite) null, (byte) -94);
           return 0L;
         }
         return 0L;
     }
 
-    public final int a(int param0) {
+    public final int getBufferId(int param0) {
         if (param0 != 9624) {
           return 39;
         }
         return this.field_e;
     }
 
-    public final void a(int param0, int param1, byte[] param2, int param3) {
+    public final void setIndices(int param0, int param1, byte[] param2, int param3) {
         this.uploadData(-101, param2, param0);
         if (param1 != -11783) {
           return;
@@ -47,7 +47,7 @@ final class nm extends vo implements sca {
         }
     }
 
-    nm(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
+    OpenGlIndexArray(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
         super(param0, 34963, param2, param3, param4);
         try {
           this.field_k = param1;
@@ -68,17 +68,17 @@ final class nm extends vo implements sca {
         field_j = null;
     }
 
-    final void d(int param0) {
-        this.field_h.bindIndexArray((sca) (this), param0 ^ 0);
+    final void bind(int param0) {
+        this.field_h.bindIndexArray((IndexArray) (this), param0 ^ 0);
         if (param0 != 34963) {
           byte[] var3 = (byte[]) null;
-          this.a(-86, -126, (byte[]) null, -64);
+          this.setIndices(-86, -126, (byte[]) null, -64);
         }
     }
 
-    public final int c(int param0) {
+    public final int getIndexType(int param0) {
         if (param0 != -1771) {
-          this.d(-113);
+          this.bind(-113);
           return this.field_k;
         }
         return this.field_k;

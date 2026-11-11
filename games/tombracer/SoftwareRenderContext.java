@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tw {
+final class SoftwareRenderContext {
     int field_B;
     int field_M;
     private SoftwareGraphicsToolkit field_z;
@@ -27,7 +27,7 @@ final class tw {
     int[] field_k;
     int[] field_c;
     Model field_K;
-    iua field_v;
+    ModelTriangleRasterizer field_v;
     Model field_C;
     Model field_E;
     int[] field_I;
@@ -88,7 +88,7 @@ final class tw {
         }
     }
 
-    final void a(Runnable param0, byte param1) {
+    final void setOwnerThread(Runnable param0, byte param1) {
         try {
           this.field_b = param0;
           if (param1 <= 25) {
@@ -99,8 +99,8 @@ final class tw {
         }
     }
 
-    final void a(int param0) {
-        this.field_v = new iua(this.field_z, this);
+    final void recreateRasterizer(int param0) {
+        this.field_v = new ModelTriangleRasterizer(this.field_z, this);
         int var2 = -88 % ((param0 - 32) / 60);
     }
 
@@ -115,7 +115,7 @@ final class tw {
         field_f = (byte[][]) null;
     }
 
-    tw(SoftwareGraphicsToolkit param0) {
+    SoftwareRenderContext(SoftwareGraphicsToolkit param0) {
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -143,7 +143,7 @@ final class tw {
         try {
           this.field_z = param0;
           this.field_B = -255 + this.field_z.field_U;
-          this.field_v = new iua(param0, this);
+          this.field_v = new ModelTriangleRasterizer(param0, this);
           this.field_C = new Model(this.field_z);
           this.field_t = new Model(this.field_z);
           this.field_m = new Model(this.field_z);

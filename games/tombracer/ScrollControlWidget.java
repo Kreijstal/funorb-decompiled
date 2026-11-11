@@ -38,24 +38,24 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
             this.field_x) {
             if (this.field_P &&
               param2 == this.field_F) {
-              this.a(this.field_O - this.field_M, (byte) -91);
+              this.scrollHorizontally(this.field_O - this.field_M, (byte) -91);
               return;
             }
             if (this.field_P &&
               param2 == this.field_H) {
-              this.a(this.field_M + this.field_O, (byte) -94);
+              this.scrollHorizontally(this.field_M + this.field_O, (byte) -94);
               return;
             }
             if (this.field_J &&
               this.field_L == param2) {
-              this.b(13328, -this.field_A + this.field_C);
+              this.scrollVertically(13328, -this.field_A + this.field_C);
               return;
             }
             if (this.field_J) {
               if (this.field_z != param2) {
                 return;
               }
-              this.b(13328, this.field_A + this.field_C);
+              this.scrollVertically(13328, this.field_A + this.field_C);
               return;
             }
           }
@@ -121,7 +121,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         this.field_N.refreshLayout((byte) 121);
     }
 
-    private final void b(int param0, boolean param1) {
+    private final void updateVerticalScrollbar(int param0, boolean param1) {
         FocusableWidget stackIn_3_0 = null;
         boolean stackIn_5_1 = false;
         FocusableWidget stackIn_11_0 = null;
@@ -153,7 +153,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void scrollVertically(int param0, int param1) {
         this.setVerticalFraction(param0 ^ 22876, param1);
         if (param0 != 13328) {
           return;
@@ -180,7 +180,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         this.field_N.field_i = var2 + ((var3 - var2) * this.field_C >> 16);
     }
 
-    private final void a(int param0, byte param1) {
+    private final void scrollHorizontally(int param0, byte param1) {
         this.setHorizontalFraction(16, param0);
         if (param1 >= -90) {
           this.field_A = 107;
@@ -318,33 +318,33 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
             if (this.field_P) {
               if (!this.field_J) {
                 if (GridWidgetContainer.field_B <= (this.field_N.field_p >> 1) + (this.field_N.field_n + param3)) {
-                  this.a(this.field_O - this.field_B, (byte) -91);
+                  this.scrollHorizontally(this.field_O - this.field_B, (byte) -91);
                 } else {
-                  this.a(this.field_O + this.field_B, (byte) -109);
+                  this.scrollHorizontally(this.field_O + this.field_B, (byte) -109);
                 }
               } else {
                 var5_intLifetime1 = -(this.field_N.field_m >> 1) - (this.field_N.field_i + this.field_i - AgeValidator.field_j + param0);
                 var6 = GridWidgetContainer.field_B - param3 - this.field_n - ((this.field_N.field_p >> 1) + this.field_N.field_n);
                 if (Math.abs(var6) <= Math.abs(var5_intLifetime1)) {
                   if (var5_intLifetime1 <= 0) {
-                    this.b(13328, this.field_C - this.field_y);
+                    this.scrollVertically(13328, this.field_C - this.field_y);
                   } else {
-                    this.b(13328, this.field_y + this.field_C);
+                    this.scrollVertically(13328, this.field_y + this.field_C);
                   }
                 } else {
                   if (0 >= var6) {
-                    this.a(-this.field_B + this.field_O, (byte) -113);
+                    this.scrollHorizontally(-this.field_B + this.field_O, (byte) -113);
                   } else {
-                    this.a(this.field_O + this.field_B, (byte) -102);
+                    this.scrollHorizontally(this.field_O + this.field_B, (byte) -102);
                   }
                 }
               }
             } else {
               if (this.field_J) {
                 if ((this.field_N.field_m >> 1) + param0 + this.field_N.field_i < AgeValidator.field_j) {
-                  this.b(param1 ^ 2110480, this.field_y + this.field_C);
+                  this.scrollVertically(param1 ^ 2110480, this.field_y + this.field_C);
                 } else {
-                  this.b(param1 - 2083824, this.field_C - this.field_y);
+                  this.scrollVertically(param1 - 2083824, this.field_C - this.field_y);
                 }
               }
             }
@@ -476,48 +476,48 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
               return false;
             }
             if (param2 == 98) {
-              this.a(this.field_O - this.field_M, (byte) -123);
+              this.scrollHorizontally(this.field_O - this.field_M, (byte) -123);
               return true;
             }
             if (param2 == 99) {
-              this.a(this.field_O + this.field_M, (byte) -111);
+              this.scrollHorizontally(this.field_O + this.field_M, (byte) -111);
               return true;
             }
             if (param2 == 96) {
-              this.b(13328, this.field_C - this.field_A);
+              this.scrollVertically(13328, this.field_C - this.field_A);
               return true;
             }
             if (97 == param2) {
-              this.b(13328, this.field_C + this.field_A);
+              this.scrollVertically(13328, this.field_C + this.field_A);
               return true;
             }
             if (104 == param2) {
-              this.a(this.field_O - this.getVerticalPageFraction(1553449360), (byte) -99);
+              this.scrollHorizontally(this.field_O - this.getVerticalPageFraction(1553449360), (byte) -99);
               return true;
             }
             if (105 == param2) {
-              this.a(this.field_O + this.getVerticalPageFraction(1553449360), (byte) -127);
+              this.scrollHorizontally(this.field_O + this.getVerticalPageFraction(1553449360), (byte) -127);
               return true;
             }
             if (102 == param2) {
               if (this.field_P &&
                 VerticalScrollbar.field_tb[82]) {
-                this.a(0, (byte) -105);
+                this.scrollHorizontally(0, (byte) -105);
                 return true;
               }
               if (this.field_J) {
-                this.b(13328, 0);
+                this.scrollVertically(13328, 0);
                 return true;
               }
             } else {
               if (param2 == 103) {
                 if (this.field_P &&
                   VerticalScrollbar.field_tb[82]) {
-                  this.a(65536, (byte) -123);
+                  this.scrollHorizontally(65536, (byte) -123);
                   return true;
                 }
                 if (this.field_J) {
-                  this.b(13328, 65536);
+                  this.scrollVertically(13328, 65536);
                   return true;
                 }
               }
@@ -546,10 +546,10 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
             var4 = this.field_I;
           }
           this.field_N.setBounds((byte) -31, var4, this.field_N.field_p, this.field_N.field_i, this.field_N.field_n);
-          this.b(-122, true);
+          this.updateVerticalScrollbar(-122, true);
         } else {
           this.field_N.setBounds((byte) -31, this.field_D.field_m, this.field_N.field_p, this.field_N.field_i, this.field_N.field_n);
-          this.b(-82, false);
+          this.updateVerticalScrollbar(-82, false);
         }
         if (param0 >= -81) {
           this.field_z = (FocusableWidget) null;
@@ -564,19 +564,19 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         }
         if (param1 >= param0) {
           this.field_N.setBounds((byte) -31, this.field_N.field_m, this.field_D.field_p, this.field_N.field_i, this.field_N.field_n);
-          this.a(1, false);
+          this.updateHorizontalScrollbar(1, false);
         } else {
           var4 = param1 * this.field_D.field_p / param0;
           if (this.field_G > var4) {
             var4 = this.field_G;
           }
           this.field_N.setBounds((byte) -31, this.field_N.field_m, var4, this.field_N.field_i, this.field_N.field_n);
-          this.a(1, true);
+          this.updateHorizontalScrollbar(1, true);
         }
         this.positionThumbHorizontally(param2 ^ 1789710944);
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void updateHorizontalScrollbar(int param0, boolean param1) {
         FocusableWidget stackIn_5_0 = null;
         boolean stackIn_7_1 = false;
         FocusableWidget stackIn_12_0 = null;

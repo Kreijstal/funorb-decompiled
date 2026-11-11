@@ -8,7 +8,7 @@ final class FunOrbConsole extends ConsoleWindow {
     static ica field_w;
     static dn field_u;
 
-    final void e(int param0) {
+    final void autocomplete(int param0) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         int stackIn_36_1 = 0;
@@ -55,7 +55,7 @@ final class FunOrbConsole extends ConsoleWindow {
               var6 = var7.text.substring(0, var8_int);
             }
           }
-          var7_ref = this.b(false, var6);
+          var7_ref = this.findMethodsWithPrefix(false, var6);
           if (var7_ref.size((byte) -48) == 0) {
             return;
           }
@@ -137,7 +137,7 @@ final class FunOrbConsole extends ConsoleWindow {
         }
     }
 
-    private final SecondaryLinkQueue b(boolean param0, String param1) {
+    private final SecondaryLinkQueue findMethodsWithPrefix(boolean param0, String param1) {
         SecondaryLinkQueue var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -181,12 +181,12 @@ final class FunOrbConsole extends ConsoleWindow {
         }
     }
 
-    final boolean a(String param0, byte param1) {
+    final boolean executeCommand(String param0, byte param1) {
         try {
           IntrusiveDeque var3 = null;
-          jj var3_ref = null;
+          ConsoleParseException var3_ref = null;
           RuntimeException var3_ref2 = null;
-          cr var4 = null;
+          ConsoleTokenStream var4 = null;
           UiComponent var4_ref = null;
           int var5 = 0;
           ConsoleToken var6 = null;
@@ -197,19 +197,19 @@ final class FunOrbConsole extends ConsoleWindow {
           rv var3_ref3 = null;
           try {
             try {
-              if (false) throw (jj) null;
+              if (false) throw (ConsoleParseException) null;
               var3 = lp.tokenize((byte) 48, param0);
               var5 = 80 / ((-44 - param1) / 36);
-              var4 = new cr(var3);
-              var6 = ed.a(var4, -31733);
-              if (!var4.a((byte) 85)) {
-                throw new jj(var4.c((byte) -127).field_h);
+              var4 = new ConsoleTokenStream(var3);
+              var6 = ConsoleExpressionParser.parseExpression(var4, -31733);
+              if (!var4.isAtEnd((byte) 85)) {
+                throw new ConsoleParseException(var4.next((byte) -127).field_h);
               }
-              this.a((byte) -80, var6.evaluate(-1, this.methods));
+              this.printResult((byte) -80, var6.evaluate(-1, this.methods));
               return true;
-            } catch (jj decompiledCaughtParameter0) {
+            } catch (ConsoleParseException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3_ref = (jj) (Object) decompiledCaughtException;
+              var3_ref = (ConsoleParseException) (Object) decompiledCaughtException;
               param0 = "<col=55ff55>" + param0.substring(0, var3_ref.field_a) + "</col>" + param0.substring(var3_ref.field_a);
               var4_ref = (UiComponent) (this.field_a.field_tb.field_J.last(3));
               var4_ref.field_r = this.field_t + param0;
@@ -312,7 +312,7 @@ final class FunOrbConsole extends ConsoleWindow {
         }
     }
 
-    final String[] a(boolean param0) {
+    final String[] getCompletions(boolean param0) {
         int incrementValue$0 = 0;
         int stackIn_31_0 = 0;
         int stackIn_31_1 = 0;
@@ -340,7 +340,7 @@ final class FunOrbConsole extends ConsoleWindow {
           var4 = LaserShooterComponent.tokenizeCommand((byte) 126, var2);
           var5 = PlayerViewport.findTokenAtPosition(true, var4, var3);
           if (param0) {
-            this.a((String) null, (byte) -83);
+            this.executeCommand((String) null, (byte) -83);
           }
           boolean decompiledFrameRemainder1 = true;
           this.field_p.field_qb = 0;
@@ -393,7 +393,7 @@ final class FunOrbConsole extends ConsoleWindow {
               }
             }
           }
-          var7_ref = this.b(param0, var6);
+          var7_ref = this.findMethodsWithPrefix(param0, var6);
           var8 = new String[var7_ref.size((byte) -99)];
           var9Lifetime1 = 0;
           var10 = (ConsoleMethod) (var7_ref.first((byte) 38));

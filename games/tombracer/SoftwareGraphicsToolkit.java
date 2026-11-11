@@ -37,7 +37,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     int field_U;
     int field_J;
     int field_x;
-    private tw[] field_Y;
+    private SoftwareRenderContext[] field_Y;
     int field_L;
     int field_P;
     int field_V;
@@ -50,7 +50,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private int field_v;
     private ToolkitSprite field_R;
 
-    final tw contextForThread(Runnable param0) {
+    final SoftwareRenderContext contextForThread(Runnable param0) {
         int var2 = 0;
         for (var2 = 0; var2 < this.field_u; var2++) {
           if (this.field_Y[var2].field_b == param0) {
@@ -167,9 +167,9 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private final void createContexts(int param0) {
         int var2 = 0;
         this.field_u = param0;
-        this.field_Y = new tw[this.field_u];
+        this.field_Y = new SoftwareRenderContext[this.field_u];
         for (var2 = 0; var2 < this.field_u; var2++) {
-          this.field_Y[var2] = new tw(this);
+          this.field_Y[var2] = new SoftwareRenderContext(this);
         }
     }
 
@@ -210,7 +210,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void f(int param0, int param1) {
-        tw var3 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
+        SoftwareRenderContext var3 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
         this.field_g = param0;
         this.field_U = param1;
         var3.field_B = this.field_U - 255;
@@ -346,7 +346,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     private final void bindContextToCurrentThread(int param0) {
-        this.field_Y[param0].a((Runnable) ((Object) Thread.currentThread()), (byte) 100);
+        this.field_Y[param0].setOwnerThread((Runnable) ((Object) Thread.currentThread()), (byte) 100);
     }
 
     final void setTransform(Transform3D param0) {
@@ -500,7 +500,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.updateContextClipBounds();
     }
 
-    final ToolkitModel createModel(oc param0, int param1, int param2, int param3, int param4) {
+    final ToolkitModel createModel(ModelData param0, int param1, int param2, int param3, int param4) {
         return (ToolkitModel) ((Object) new Model(this, param0, param1, param3, param4, param2));
     }
 
@@ -513,7 +513,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final Transform3D getTransform() {
-        tw var1 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
+        SoftwareRenderContext var1 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
         return (Transform3D) ((Object) var1.field_u);
     }
 
@@ -1191,7 +1191,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     final void L(int param0, int param1, int param2) {
         int var4 = 0;
-        tw var5;
+        SoftwareRenderContext var5;
         int var6;
         int var7;
         int var8;
@@ -1230,7 +1230,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private final void refreshContexts() {
         int var1 = 0;
         for (var1 = 0; var1 < this.field_u; var1++) {
-          this.field_Y[var1].a(-39);
+          this.field_Y[var1].recreateRasterizer(-39);
         }
         this.la();
     }
@@ -1512,7 +1512,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     private final void updateContextClipBounds() {
-        iua var2_ref_iua = null;
+        ModelTriangleRasterizer var2_ref_iua = null;
         int var2 = 0;
         int var3 = 0;
         int var1 = 0;
@@ -3078,10 +3078,10 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void fillShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        iua stackIn_7_0 = null;
+        ModelTriangleRasterizer stackIn_7_0 = null;
         boolean stackIn_9_1 = false;
-        tw var11;
-        iua var12;
+        SoftwareRenderContext var11;
+        ModelTriangleRasterizer var12;
         int var13;
         var11 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
         var12 = var11.field_v;
@@ -3103,21 +3103,21 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           if (param9 == 1) {
             var12.field_b = 255 - var13;
             var12.field_g = false;
-            var12.b((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
+            var12.fillGradientTriangle((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
           } else {
             if (param9 != 2) {
               throw new IllegalArgumentException();
             }
             var12.field_b = 128;
             var12.field_g = true;
-            var12.b((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
+            var12.fillGradientTriangle((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
           }
           decompiledFrameRemainder0 = false;
         }
         else {
           var12.field_b = 0;
           var12.field_g = false;
-          var12.b((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
+          var12.fillGradientTriangle((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
         }
         var12.field_j = true;
         var12.field_m = false;

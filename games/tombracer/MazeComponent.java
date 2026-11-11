@@ -302,7 +302,7 @@ abstract class MazeComponent extends PrefabComponent {
           }
           ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 18, -23776, param1 + di.field_a, 0);
           RopeBridgeComponent.field_F.setBounds(42 + io.field_a, 18, param1 - 23778, 2 + di.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
-          tn.field_n.a(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (di.field_a + 22), 20 + (2 + di.field_a));
+          tn.field_n.setPaneBounds(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (di.field_a + 22), 20 + (2 + di.field_a));
           bc.field_b.setBounds(C2SRoomResultPacket.field_c.field_G, 40, -23776, -40 + C2SRoomResultPacket.field_c.field_t, 0);
           StatusEffect.field_g.setBounds(dka.field_b.field_G, 30, -23776, 0, 0);
           C2SSubmitSettingsPacket.field_g.setBounds(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
@@ -356,8 +356,8 @@ abstract class MazeComponent extends PrefabComponent {
               } else {
                 if (param0) {
                   if (var6 >= 4) {
-                    if (null != vba.field_u) {
-                      stackIn_57_0 = (vba.field_u[var6 - 4]) ? 1 : 0;
+                    if (null != AchievementsScreen.field_u) {
+                      stackIn_57_0 = (AchievementsScreen.field_u[var6 - 4]) ? 1 : 0;
                     } else {
                       stackIn_57_0 = 0;
                     }

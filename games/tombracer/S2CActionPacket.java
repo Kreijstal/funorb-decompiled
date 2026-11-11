@@ -78,10 +78,10 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
           return Transform3D.createDefaultWeapon(true);
         }
         if (var2 == 1) {
-          return ik.b(-17698);
+          return ik.createBladeWeaponPreset(-17698);
         }
         if (2 == var2) {
-          return AccountRegistrationPanel.a((byte) 125);
+          return AccountRegistrationPanel.createFireWeaponPreset((byte) 125);
         }
         throw new IllegalStateException("Unknown/unimplemented weapon preset: " + param1);
     }

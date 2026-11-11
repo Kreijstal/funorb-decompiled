@@ -41,7 +41,7 @@ final class fha {
           ft.field_c = (BitmapFont) ((Object) SnakePitModel.loadAntialiasedFont(param2, param1, false, "commonui", "arezzo14bold"));
           var17 = new Sprite(param3.getFileByName("button.gif", (byte) 118, ""), (java.awt.Component) ((Object) nma.field_l));
           LegacyOpenGlBloomEffect.loadIndexedSprite("dropdown", param2, "commonui", 8864);
-          var5 = tw.loadIndexedSpritesByName((byte) 127, "screen_options", "commonui", param2);
+          var5 = SoftwareRenderContext.loadIndexedSpritesByName((byte) 127, "screen_options", "commonui", param2);
           ita.field_e = new IndexedSprite[4];
           RasterShape.field_a = new IndexedSprite[4];
           DirectByteStorage.field_f = new IndexedSprite[4];

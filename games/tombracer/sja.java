@@ -101,7 +101,7 @@ final class sja extends ProceduralTextureProvider {
           if (((lqa) (baa.field_d.field_i.field_b)).field_j) {
             return super.isTextureReady(param0, (byte) 79);
           }
-          if (ad.a(-13545, param0)) {
+          if (CharacterChoiceTile.a(-13545, param0)) {
             return super.isTextureReady(param0, (byte) 79);
           }
           return false;
@@ -109,7 +109,7 @@ final class sja extends ProceduralTextureProvider {
         if (((lqa) (baa.field_d.field_i.field_b)).field_j) {
           return super.isTextureReady(param0, (byte) 79);
         }
-        if (ad.a(-13545, param0)) {
+        if (CharacterChoiceTile.a(-13545, param0)) {
           return super.isTextureReady(param0, (byte) 79);
         }
         return false;

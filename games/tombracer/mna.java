@@ -100,7 +100,7 @@ abstract class mna {
         if (CrossedSineBandsOperator.field_v) {
           ne.field_d.field_tb.field_K = -ne.field_d.field_tb.field_T + var9;
         }
-        ne.field_d.b(true, 0, param1 * param2 * 2, param2);
+        ne.field_d.updateScroll(true, 0, param1 * param2 * 2, param2);
         stackIn_44_0 = (var9 == ne.field_d.field_tb.field_K + ne.field_d.field_tb.field_T);
         CrossedSineBandsOperator.field_v = stackIn_44_0;
         return (gqa) (var4);

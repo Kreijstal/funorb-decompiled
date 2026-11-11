@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed {
+final class ConsoleExpressionParser {
     static double field_a;
 
     final static void decodeLobbyGame(int param0, LobbyGameWidget param1, boolean param2, PacketBuffer param3) {
@@ -107,7 +107,7 @@ final class ed {
         }
     }
 
-    final static ConsoleToken a(cr param0, int param1) throws jj {
+    final static ConsoleToken parseExpression(ConsoleTokenStream param0, int param1) throws ConsoleParseException {
         ConsoleToken stackIn_6_0 = null;
         ConsoleToken stackIn_20_0 = null;
         ConsoleToken stackIn_26_0 = null;
@@ -120,7 +120,7 @@ final class ed {
         ConsoleToken var5 = null;
         ConsoleToken var6 = null;
         try {
-          var4 = param0.c((byte) -127);
+          var4 = param0.next((byte) -127);
           if (var4.kind != LegacyOpenGlReflectionEffect.field_e &&
             nl.field_d != var4.kind &&
             CrusherModel.field_o != var4.kind &&
@@ -129,36 +129,36 @@ final class ed {
               field_a = -1.1603987584850415;
             }
             if (var4.kind != tr.field_f) {
-              throw new jj(var4.field_h);
+              throw new ConsoleParseException(var4.field_h);
             }
-            if (param0.a((byte) 100)) {
-              throw new jj(var4.field_h);
+            if (param0.isAtEnd((byte) 100)) {
+              throw new ConsoleParseException(var4.field_h);
             }
-            var5 = param0.c((byte) -126);
+            var5 = param0.next((byte) -126);
             if (var5.kind != lna.field_a) {
-              throw new jj(var5.field_h);
+              throw new ConsoleParseException(var5.field_h);
             }
             var4.field_i = new IntrusiveDeque();
             while (true) {
-              if (param0.a((byte) 127)) {
-                throw new jj(var4.field_h);
+              if (param0.isAtEnd((byte) 127)) {
+                throw new ConsoleParseException(var4.field_h);
               }
-              if (param0.c((byte) -127).kind == rs.field_a) {
+              if (param0.next((byte) -127).kind == rs.field_a) {
                 stackIn_20_0 = var4;
                 return stackIn_20_0;
               }
               param0.field_c = param0.field_c - 1;
-              var4.field_i.addLast((byte) -127, ed.a(param0, -31733));
-              if (param0.a((byte) 125)) {
-                throw new jj(var4.field_h);
+              var4.field_i.addLast((byte) -127, ConsoleExpressionParser.parseExpression(param0, -31733));
+              if (param0.isAtEnd((byte) 125)) {
+                throw new ConsoleParseException(var4.field_h);
               }
-              var6 = param0.c((byte) -126);
+              var6 = param0.next((byte) -126);
               if (var6.kind == rs.field_a) {
                 stackIn_26_0 = var4;
                 return stackIn_26_0;
               }
               if (var6.kind != qba.field_c) {
-                throw new jj(var6.field_h);
+                throw new ConsoleParseException(var6.field_h);
               }
             }
           }

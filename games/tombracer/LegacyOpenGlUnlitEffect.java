@@ -3,7 +3,7 @@
  */
 final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
     static String field_c;
-    static sq field_d;
+    static MusicPlayer field_d;
 
     LegacyOpenGlUnlitEffect(OpenGlToolkit param0) {
         super(param0);

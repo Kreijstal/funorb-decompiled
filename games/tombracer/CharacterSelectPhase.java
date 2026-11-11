@@ -21,14 +21,14 @@ final class CharacterSelectPhase extends MatchPhase {
         if (param0 != 0) {
           return true;
         }
-        ad var2 = (ad) (this.field_n.first(param0 ^ -80));
+        CharacterChoiceTile var2 = (CharacterChoiceTile) (this.field_n.first(param0 ^ -80));
         while (var2 != null) {
-          if (var2.a((byte) -85) &&
-            !var2.a(-64)) {
+          if (var2.isHovered((byte) -85) &&
+            !var2.isEmpty(-64)) {
             this.field_v = var2.field_f;
             return true;
           }
-          var2 = (ad) (this.field_n.next(111));
+          var2 = (CharacterChoiceTile) (this.field_n.next(111));
         }
         return false;
     }
@@ -56,7 +56,7 @@ final class CharacterSelectPhase extends MatchPhase {
         int var3;
         int var4;
         int var5;
-        ad var6_ref_ad;
+        CharacterChoiceTile var6_ref_ad;
         int var6;
         int var7;
         int var8;
@@ -76,12 +76,12 @@ final class CharacterSelectPhase extends MatchPhase {
           var5 != 0) {
           SocketConnector.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, SwitchLinkList.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
         }
-        var6_ref_ad = (ad) (this.field_n.first(-80));
+        var6_ref_ad = (CharacterChoiceTile) (this.field_n.first(-80));
         while (var6_ref_ad != null) {
           stackIn_12_0 = (var6_ref_ad.field_f == this.field_v) ? 1 : 0;
           var7 = stackIn_12_0;
-          var6_ref_ad.a((byte) -9, var7 != 0);
-          var6_ref_ad = (ad) (this.field_n.next(119));
+          var6_ref_ad.draw((byte) -9, var7 != 0);
+          var6_ref_ad = (CharacterChoiceTile) (this.field_n.next(119));
         }
         if (param0 >= -50) {
           this.update(33, true);
@@ -175,7 +175,7 @@ final class CharacterSelectPhase extends MatchPhase {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ad var8 = null;
+        CharacterChoiceTile var8 = null;
         int var3_intLifetime1;
         this.field_p = 0;
         this.field_v = 0;
@@ -198,9 +198,9 @@ final class CharacterSelectPhase extends MatchPhase {
             if (var3_int >= 7) {
               var6 += 32;
             }
-            var8 = new ad(var6, var7);
+            var8 = new CharacterChoiceTile(var6, var7);
             if (this.isCharacterAvailable(var3_int, (byte) -35)) {
-              var8 = new ad(var3_int, var6, var7);
+              var8 = new CharacterChoiceTile(var3_int, var6, var7);
             }
             this.field_n.addLast((byte) -104, var8);
           }

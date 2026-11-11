@@ -60,7 +60,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var5 = param2.getX(true);
           var6 = param2.getY(0);
           var7 = param2.getZ(true);
-          cr.a(var4, var7, var5, var6, (byte) 35);
+          ConsoleTokenStream.a(var4, var7, var5, var6, (byte) 35);
           var8 = var4[0];
           var9 = var4[1];
           var10 = var4[2];
@@ -337,7 +337,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var5 = param2.getRenderX((byte) 57);
           var6 = param2.getRenderY((byte) 93);
           var7 = param2.getRenderZ((byte) -98);
-          cr.a(var4, var7, var5, var6, (byte) 35);
+          ConsoleTokenStream.a(var4, var7, var5, var6, (byte) 35);
           var8 = var4[0];
           var9 = var4[1];
           if (var8 == -1 &&
@@ -742,7 +742,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           }
           var4_int = param2.getStartSize(-71);
           var5 = this.field_a;
-          cr.a(var5, param2.getZ(true), param2.getX(true), param2.getY(0), (byte) 35);
+          ConsoleTokenStream.a(var5, param2.getZ(true), param2.getX(true), param2.getY(0), (byte) 35);
           var6 = var5[0];
           var7 = var5[1];
           var8 = (float)param2.getAge(param0 + 14066) / (float)param2.getLifetime(true);

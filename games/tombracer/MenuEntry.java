@@ -227,7 +227,7 @@ final class MenuEntry {
                   var12.drawScaled(var10, var11, var13, var14, 2, 1610612736, 1);
                 }
               }
-              MembersUpsellMenu.a(this.field_e, var5, var6, -1, 5 + var9, this.field_b, var15);
+              MembersUpsellMenu.drawCentredTextWithShadow(this.field_e, var5, var6, -1, 5 + var9, this.field_b, var15);
               if (var24 == 0) {
                 return;
               }
@@ -236,7 +236,7 @@ final class MenuEntry {
             var19 = 120;
             if (39 == this.field_g) {
               WidgetStyleLayer.field_k[4].drawScaled(-89 + this.field_b, -16 + (-(var19 >> 1) + var9), var18, var19, 0, -4144960, 1);
-              MembersUpsellMenu.a(bc.field_a, var5, var6, -1, var9 + (-(var19 >> 1) + 25), -94 + (var18 >> 1) + this.field_b, var15);
+              MembersUpsellMenu.drawCentredTextWithShadow(bc.field_a, var5, var6, -1, var9 + (-(var19 >> 1) + 25), -94 + (var18 >> 1) + this.field_b, var15);
             }
             var26 = tga.field_a;
             var21_int = this.field_b - 8;
@@ -257,7 +257,7 @@ final class MenuEntry {
             if (TrapSpawner.b(30000) == var27) {
               var15 = 2236962;
               var5 = 10827264;
-              MembersUpsellMenu.a("X", var5, var6, -1, -8 + (var9 - 1), this.field_b, var15);
+              MembersUpsellMenu.drawCentredTextWithShadow("X", var5, var6, -1, -8 + (var9 - 1), this.field_b, var15);
             }
             var21 = this.field_e;
             if (!WheeledMountComponent.a(dna.A(param2 + 124), true, var27)) {
@@ -265,7 +265,7 @@ final class MenuEntry {
               var21 = "<str=010101>" + this.field_e + "</str>";
               var15 = -1;
             }
-            MembersUpsellMenu.a(var21, var5, var6, -1, 10 + var9, this.field_b, var15);
+            MembersUpsellMenu.drawCentredTextWithShadow(var21, var5, var6, -1, 10 + var9, this.field_b, var15);
             if (var24 == 0) {
               return;
             }
@@ -274,7 +274,7 @@ final class MenuEntry {
           var19Lifetime2 = 120;
           if (this.field_g == 36) {
             WidgetStyleLayer.field_k[5].drawScaled(-63 + this.field_b, var9 - (var19Lifetime2 >> 1) - 16, var18Lifetime2, var19Lifetime2, 0, -4144960, 1);
-            MembersUpsellMenu.a(dna.field_I, var5, var6, -1, 25 + (-(var19Lifetime2 >> 1) + var9), -65 + (this.field_b + (var18Lifetime2 >> 1)), var15);
+            MembersUpsellMenu.drawCentredTextWithShadow(dna.field_I, var5, var6, -1, 25 + (-(var19Lifetime2 >> 1) + var9), -65 + (this.field_b + (var18Lifetime2 >> 1)), var15);
           }
           var29 = tga.field_a;
           var21_intLifetime1 = this.field_b - 8;
@@ -298,7 +298,7 @@ final class MenuEntry {
           if (var20_ref_kea == var21_ref) {
             var15 = 2236962;
             var5 = 10827264;
-            MembersUpsellMenu.a("X", var5, var6, param2 - 2, -8 + var9 - 1, this.field_b, var15);
+            MembersUpsellMenu.drawCentredTextWithShadow("X", var5, var6, param2 - 2, -8 + var9 - 1, this.field_b, var15);
           }
           var22 = this.field_e;
           if (!WheeledMountComponent.a(var20_ref_kea, true, TrapSpawner.b(30000))) {
@@ -306,7 +306,7 @@ final class MenuEntry {
             var5 = 2431750;
             var22 = "<str=010101>" + this.field_e + "</str>";
           }
-          MembersUpsellMenu.a(var22, var5, var6, -1, var9 + 10, this.field_b, var15);
+          MembersUpsellMenu.drawCentredTextWithShadow(var22, var5, var6, -1, var9 + 10, this.field_b, var15);
           if (var24 == 0) {
             return;
           }
@@ -316,7 +316,7 @@ final class MenuEntry {
         if (this.field_g == 5) {
           WidgetStyleLayer.field_k[5].drawScaled(this.field_b + (-(var18Lifetime1 >> 1) + 10), var9 - (var19Lifetime1 >> 1) + 13, var18Lifetime1, var19Lifetime1, 0, -4144960, 1);
         }
-        MembersUpsellMenu.a(this.field_e, var5, var6, param2 - 2, var9, -64 + this.field_b, var15);
+        MembersUpsellMenu.drawCentredTextWithShadow(this.field_e, var5, var6, param2 - 2, var9, -64 + this.field_b, var15);
         if (this.field_g != 5) {
           stackIn_78_0 = jg.getSoundVolume((byte) -103);
         } else {

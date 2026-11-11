@@ -385,7 +385,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         try {
           this.timingPattern = new TimingPattern(param0.formatVersion, param1);
           this.field_w = param1.readBits((byte) 44, 10) << 16;
-          this.field_r = ad.decodeEffect((byte) 87, param1);
+          this.field_r = CharacterChoiceTile.decodeEffect((byte) 87, param1);
           if (8 <= param0.formatVersion) {
             stackIn_5_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_q = stackIn_5_1;

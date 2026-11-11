@@ -211,11 +211,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             if (this.field_H != null &&
               this.field_H.field_m >= var11 &&
               var12 <= this.field_H.field_q) {
-              nm.setRasterTarget(this.field_H, (byte) 120);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 120);
               SoftwareRasterizer.clear();
             } else {
               this.field_H = new Sprite(var11, var12);
-              nm.setRasterTarget(this.field_H, (byte) 121);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
             }
             var21.drawRotatedScaled(112, 144, var21.field_n << 4, var21.field_k << 4, -this.field_F << 10, 4096);
             pfa.popRasterState(1);
@@ -246,18 +246,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12Lifetime5 = var25.field_k << 1;
           if (this.field_H == null) {
             this.field_H = new Sprite(var11Lifetime5, var12Lifetime5);
-            nm.setRasterTarget(this.field_H, (byte) 121);
+            OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
           } else {
             if (this.field_H.field_m < var11Lifetime5) {
               this.field_H = new Sprite(var11Lifetime5, var12Lifetime5);
-              nm.setRasterTarget(this.field_H, (byte) 121);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
             } else {
               if (var12Lifetime5 <= this.field_H.field_q) {
-                nm.setRasterTarget(this.field_H, (byte) 120);
+                OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 120);
                 SoftwareRasterizer.clear();
               } else {
                 this.field_H = new Sprite(var11Lifetime5, var12Lifetime5);
-                nm.setRasterTarget(this.field_H, (byte) 121);
+                OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
               }
             }
           }
@@ -296,11 +296,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             if (this.field_H != null &&
               this.field_H.field_m >= var11Lifetime1 &&
               var12Lifetime1 <= this.field_H.field_q) {
-              nm.setRasterTarget(this.field_H, (byte) 120);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 120);
               SoftwareRasterizer.clear();
             } else {
               this.field_H = new Sprite(var11Lifetime1, var12Lifetime1);
-              nm.setRasterTarget(this.field_H, (byte) 121);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
             }
             var30.drawRotatedScaled(112, 144, var30.field_n << 4, var30.field_k << 4, -this.field_F << 10, 4096);
             pfa.popRasterState(1);
@@ -331,18 +331,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12Lifetime1Lifetime1 = var34.field_k << 1;
           if (this.field_H == null) {
             this.field_H = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-            nm.setRasterTarget(this.field_H, (byte) 121);
+            OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
           } else {
             if (this.field_H.field_m < var11Lifetime1Lifetime1) {
               this.field_H = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-              nm.setRasterTarget(this.field_H, (byte) 121);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
             } else {
               if (var12Lifetime1Lifetime1 <= this.field_H.field_q) {
-                nm.setRasterTarget(this.field_H, (byte) 120);
+                OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 120);
                 SoftwareRasterizer.clear();
               } else {
                 this.field_H = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-                nm.setRasterTarget(this.field_H, (byte) 121);
+                OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
               }
             }
           }
@@ -379,11 +379,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             if (this.field_H != null &&
               this.field_H.field_m >= var11Lifetime2 &&
               var12Lifetime2 <= this.field_H.field_q) {
-              nm.setRasterTarget(this.field_H, (byte) 120);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 120);
               SoftwareRasterizer.clear();
             } else {
               this.field_H = new Sprite(var11Lifetime2, var12Lifetime2);
-              nm.setRasterTarget(this.field_H, (byte) 121);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
             }
             var53.drawRotatedScaled(112, 144, var53.field_n << 4, var53.field_k << 4, -this.field_F << 10, 4096);
             pfa.popRasterState(1);
@@ -417,18 +417,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12Lifetime2Lifetime1 = var47.field_k << 1;
           if (this.field_H == null) {
             this.field_H = new Sprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
-            nm.setRasterTarget(this.field_H, (byte) 121);
+            OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
           } else {
             if (this.field_H.field_m < var11Lifetime2Lifetime1) {
               this.field_H = new Sprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
-              nm.setRasterTarget(this.field_H, (byte) 121);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
             } else {
               if (var12Lifetime2Lifetime1 <= this.field_H.field_q) {
-                nm.setRasterTarget(this.field_H, (byte) 120);
+                OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 120);
                 SoftwareRasterizer.clear();
               } else {
                 this.field_H = new Sprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
-                nm.setRasterTarget(this.field_H, (byte) 121);
+                OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
               }
             }
           }
@@ -467,11 +467,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (this.field_H != null &&
             this.field_H.field_m >= var11Lifetime3 &&
             var12Lifetime3 <= this.field_H.field_q) {
-            nm.setRasterTarget(this.field_H, (byte) 120);
+            OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 120);
             SoftwareRasterizer.clear();
           } else {
             this.field_H = new Sprite(var11Lifetime3, var12Lifetime3);
-            nm.setRasterTarget(this.field_H, (byte) 121);
+            OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
           }
           var39.drawRotatedScaled(112, 144, var39.field_n << 4, var39.field_k << 4, -this.field_F << 10, 4096);
           pfa.popRasterState(1);
@@ -502,17 +502,17 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var12Lifetime4 = var43.field_k << 1;
         if (this.field_H == null) {
           this.field_H = new Sprite(var11Lifetime4, var12Lifetime4);
-          nm.setRasterTarget(this.field_H, (byte) 121);
+          OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
         } else {
           if (this.field_H.field_m < var11Lifetime4) {
             this.field_H = new Sprite(var11Lifetime4, var12Lifetime4);
-            nm.setRasterTarget(this.field_H, (byte) 121);
+            OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
           } else {
             if (var12Lifetime4 > this.field_H.field_q) {
               this.field_H = new Sprite(var11Lifetime4, var12Lifetime4);
-              nm.setRasterTarget(this.field_H, (byte) 121);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
             } else {
-              nm.setRasterTarget(this.field_H, (byte) 120);
+              OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 120);
               SoftwareRasterizer.clear();
             }
           }

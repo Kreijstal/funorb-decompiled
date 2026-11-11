@@ -5,7 +5,7 @@ final class DoorwayComponent extends PrefabComponent {
     private int field_J;
     static String[] field_L;
     static String field_G;
-    static oc[] field_K;
+    static ModelData[] field_K;
     static int field_I;
     private int field_H;
     static ToolkitModel[] field_F;

@@ -4,7 +4,7 @@
 final class dq extends IntrusiveNode {
     int field_g;
     int field_i;
-    static oc[] field_h;
+    static ModelData[] field_h;
     static via field_f;
 
     dq(int param0, int param1) {

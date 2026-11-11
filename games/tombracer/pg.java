@@ -92,7 +92,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
             return;
           }
           SingleChildWidget.d(-7694);
-          this.field_w.i((byte) 111);
+          this.field_w.dismiss((byte) 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

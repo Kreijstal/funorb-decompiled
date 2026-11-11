@@ -61,7 +61,7 @@ final class sr extends WidgetContainer implements ButtonListener {
             if (this.field_x[var6_int] == param2) {
               var7 = this.field_w[var6_int];
               if (var7 == -1) {
-                this.field_y.i((byte) -1);
+                this.field_y.dismiss((byte) -1);
                 break;
               }
               jsa.a(false, this.field_w[var6_int]);

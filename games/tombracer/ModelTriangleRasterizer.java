@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iua {
+final class ModelTriangleRasterizer {
     boolean field_j;
     private int[] field_w;
     int field_h;
@@ -13,7 +13,7 @@ final class iua {
     private int field_i;
     private int field_l;
     int field_v;
-    private tw field_o;
+    private SoftwareRenderContext field_o;
     private float[] field_u;
     private int field_r;
     boolean field_g;
@@ -26,7 +26,7 @@ final class iua {
     private int[] field_a;
     private boolean field_d;
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11) {
+    final void fillGouraudTriangleArgb(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11) {
         float var21 = 0.0f;
         float var22 = 0.0f;
         float var23 = 0.0f;
@@ -103,7 +103,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param3 = param3 + var22;
                 param9 = param9 + var26;
@@ -115,7 +115,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param4 = param4 + var21;
                 param9 = param9 + var26;
@@ -133,7 +133,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param3 = param3 + var22;
                 param9 = param9 + var26;
@@ -145,7 +145,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param4 = param4 + var21;
                 param9 = param9 + var26;
@@ -163,7 +163,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param3 = param3 + var22;
                 param9 = param9 + var26;
@@ -175,7 +175,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param4 = param4 + var21;
                 param9 = param9 + var26;
@@ -192,7 +192,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
               param5 = param5 + var23;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -204,7 +204,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
               param5 = param5 + var23;
               param4 = param4 + var21;
               param9 = param9 + var26;
@@ -235,7 +235,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
               param4 = param4 + var23;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -247,7 +247,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
               param5 = param5 + var21;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -265,7 +265,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
               param4 = param4 + var23;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -277,7 +277,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
               param5 = param5 + var21;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -295,7 +295,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
               param4 = param4 + var23;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -307,7 +307,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
               param5 = param5 + var21;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -324,7 +324,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
+            this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
             param4 = param4 + var23;
             param3 = param3 + var22;
             param9 = param9 + var26;
@@ -336,7 +336,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+            this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
             param5 = param5 + var21;
             param3 = param3 + var22;
             param9 = param9 + var26;
@@ -380,7 +380,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param4 = param4 + var21;
                 param10 = param10 + var26;
@@ -392,7 +392,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param5 = param5 + var23;
                 param10 = param10 + var26;
@@ -410,7 +410,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param4 = param4 + var21;
                 param10 = param10 + var26;
@@ -422,7 +422,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param5 = param5 + var23;
                 param10 = param10 + var26;
@@ -440,7 +440,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param4 = param4 + var21;
                 param10 = param10 + var26;
@@ -452,7 +452,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
+                this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param5 = param5 + var23;
                 param10 = param10 + var26;
@@ -469,7 +469,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
               param3 = param3 + var22;
               param4 = param4 + var21;
               param10 = param10 + var26;
@@ -481,7 +481,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
               param3 = param3 + var22;
               param5 = param5 + var23;
               param10 = param10 + var26;
@@ -511,7 +511,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param10, var25, param7, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param10, var25, param7, var27);
               param5 = param5 + var22;
               param4 = param4 + var21;
               param10 = param10 + var26;
@@ -523,7 +523,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
               param3 = param3 + var23;
               param4 = param4 + var21;
               param10 = param10 + var26;
@@ -540,7 +540,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param10, var25, param7, var27);
+            this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param10, var25, param7, var27);
             param5 = param5 + var22;
             param4 = param4 + var21;
             param10 = param10 + var26;
@@ -552,7 +552,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+            this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
             param3 = param3 + var23;
             param4 = param4 + var21;
             param10 = param10 + var26;
@@ -594,7 +594,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
               param4 = param4 + var21;
               param5 = param5 + var23;
               param11 = param11 + var26;
@@ -606,7 +606,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param11, var25, param8, var27);
+              this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param11, var25, param8, var27);
               param4 = param4 + var21;
               param3 = param3 + var22;
               param11 = param11 + var26;
@@ -623,7 +623,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
+            this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
             param4 = param4 + var21;
             param5 = param5 + var23;
             param11 = param11 + var26;
@@ -635,7 +635,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param11, var25, param8, var27);
+            this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param11, var25, param8, var27);
             param4 = param4 + var21;
             param3 = param3 + var22;
             param11 = param11 + var26;
@@ -665,7 +665,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param11, var25, param8, var27);
+            this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param11, var25, param8, var27);
             param3 = param3 + var21;
             param5 = param5 + var23;
             param11 = param11 + var26;
@@ -677,7 +677,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
+            this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
             param4 = param4 + var22;
             param5 = param5 + var23;
             param11 = param11 + var26;
@@ -694,7 +694,7 @@ final class iua {
           if (!(param1 >= 0.0f)) {
             break;
           }
-          this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param11, var25, param8, var27);
+          this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param11, var25, param8, var27);
           param3 = param3 + var21;
           param5 = param5 + var23;
           param11 = param11 + var26;
@@ -706,7 +706,7 @@ final class iua {
           if (!(param0 >= 0.0f)) {
             break;
           }
-          this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
+          this.drawGouraudScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
           param4 = param4 + var22;
           param5 = param5 + var23;
           param11 = param11 + var26;
@@ -715,7 +715,7 @@ final class iua {
         }
     }
 
-    private final void a(int[] param0, int[] param1, int param2, int param3, int param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14, float param15, float param16, float param17, float param18, float param19, float param20) {
+    private final void drawTexturedScanline(int[] param0, int[] param1, int param2, int param3, int param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14, float param15, float param16, float param17, float param18, float param19, float param20) {
         int incrementValue$0 = 0;
         int stackIn_28_0 = 0;
         int var22;
@@ -850,7 +850,7 @@ final class iua {
         }
     }
 
-    private final void b(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8) {
+    private final void drawFlatScanlineArgb(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8) {
         int var10;
         int var11;
         int var12;
@@ -1149,7 +1149,7 @@ final class iua {
         }
     }
 
-    final void b(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9, int param10, int param11) {
+    final void fillGradientTriangle(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9, int param10, int param11) {
         float var25 = 0.0f;
         float var26 = 0.0f;
         float var27 = 0.0f;
@@ -1247,7 +1247,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var30;
@@ -1261,7 +1261,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param4 = param4 + var25;
                 param6 = param6 + var30;
@@ -1281,7 +1281,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var30;
@@ -1295,7 +1295,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param4 = param4 + var25;
                 param6 = param6 + var30;
@@ -1315,7 +1315,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var30;
@@ -1329,7 +1329,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param4 = param4 + var25;
                 param6 = param6 + var30;
@@ -1348,7 +1348,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -1362,7 +1362,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var27;
               param4 = param4 + var25;
               param6 = param6 + var30;
@@ -1397,7 +1397,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -1411,7 +1411,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var25;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -1431,7 +1431,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -1445,7 +1445,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var25;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -1465,7 +1465,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -1479,7 +1479,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var25;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -1498,7 +1498,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+            this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
             param4 = param4 + var27;
             param3 = param3 + var26;
             param6 = param6 + var30;
@@ -1512,7 +1512,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+            this.drawGradientScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
             param5 = param5 + var25;
             param3 = param3 + var26;
             param6 = param6 + var30;
@@ -1562,7 +1562,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param4 = param4 + var25;
                 param7 = param7 + var30;
@@ -1576,7 +1576,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param5 = param5 + var27;
                 param7 = param7 + var30;
@@ -1596,7 +1596,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param4 = param4 + var25;
                 param7 = param7 + var30;
@@ -1610,7 +1610,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param5 = param5 + var27;
                 param7 = param7 + var30;
@@ -1630,7 +1630,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param4 = param4 + var25;
                 param7 = param7 + var30;
@@ -1644,7 +1644,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param5 = param5 + var27;
                 param7 = param7 + var30;
@@ -1663,7 +1663,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param3 = param3 + var26;
               param4 = param4 + var25;
               param7 = param7 + var30;
@@ -1677,7 +1677,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param3 = param3 + var26;
               param5 = param5 + var27;
               param7 = param7 + var30;
@@ -1711,7 +1711,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param5 = param5 + var26;
               param4 = param4 + var25;
               param7 = param7 + var30;
@@ -1725,7 +1725,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param3 = param3 + var27;
               param4 = param4 + var25;
               param7 = param7 + var30;
@@ -1744,7 +1744,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+            this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
             param5 = param5 + var26;
             param4 = param4 + var25;
             param7 = param7 + var30;
@@ -1758,7 +1758,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+            this.drawGradientScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
             param3 = param3 + var27;
             param4 = param4 + var25;
             param7 = param7 + var30;
@@ -1806,7 +1806,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
               param4 = param4 + var25;
               param5 = param5 + var27;
               param8 = param8 + var30;
@@ -1820,7 +1820,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+              this.drawGradientScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
               param4 = param4 + var25;
               param3 = param3 + var26;
               param8 = param8 + var30;
@@ -1839,7 +1839,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGradientScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param4 = param4 + var25;
             param5 = param5 + var27;
             param8 = param8 + var30;
@@ -1853,7 +1853,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGradientScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param4 = param4 + var25;
             param3 = param3 + var26;
             param8 = param8 + var30;
@@ -1887,7 +1887,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGradientScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param3 = param3 + var25;
             param5 = param5 + var27;
             param8 = param8 + var30;
@@ -1901,7 +1901,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGradientScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param4 = param4 + var26;
             param5 = param5 + var27;
             param8 = param8 + var30;
@@ -1920,7 +1920,7 @@ final class iua {
           if (!(param1 >= 0.0f)) {
             break;
           }
-          this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+          this.drawGradientScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
           param3 = param3 + var25;
           param5 = param5 + var27;
           param8 = param8 + var30;
@@ -1934,7 +1934,7 @@ final class iua {
           if (!(param0 >= 0.0f)) {
             break;
           }
-          this.a(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+          this.drawGradientScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
           param4 = param4 + var26;
           param5 = param5 + var27;
           param8 = param8 + var30;
@@ -1945,11 +1945,11 @@ final class iua {
         }
     }
 
-    final void a(boolean param0) {
+    final void setWireframe(boolean param0) {
         this.field_s = param0 ? true : false;
     }
 
-    private final void a(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10) {
+    private final void drawGouraudScanlineArgb(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10) {
         int var12;
         int var13;
         int var14;
@@ -2239,7 +2239,7 @@ final class iua {
 
     }
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9) {
+    final void fillFlatTriangle(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9) {
         if (this.field_s) {
           this.field_k.drawLineReordered((int)param0, param9, (int)param3, (int)param1, 1, (int)param4);
           this.field_k.drawLineReordered((int)param1, param9, (int)param4, (int)param2, 1, (int)param5);
@@ -2304,7 +2304,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                 param5 = param5 + var19;
                 param3 = param3 + var17;
                 param6 = param6 + var22;
@@ -2315,7 +2315,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
                 param5 = param5 + var19;
                 param4 = param4 + var18;
                 param6 = param6 + var22;
@@ -2332,7 +2332,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param3 = param3 + var17;
                 param6 = param6 + var22;
@@ -2343,7 +2343,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param4 = param4 + var18;
                 param6 = param6 + var22;
@@ -2360,7 +2360,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param3 = param3 + var17;
                 param6 = param6 + var22;
@@ -2371,7 +2371,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param4 = param4 + var18;
                 param6 = param6 + var22;
@@ -2387,7 +2387,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
               param5 = param5 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -2398,7 +2398,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
               param5 = param5 + var19;
               param4 = param4 + var18;
               param6 = param6 + var22;
@@ -2427,7 +2427,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
               param4 = param4 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -2438,7 +2438,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
               param5 = param5 + var18;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -2455,7 +2455,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
               param4 = param4 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -2466,7 +2466,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
               param5 = param5 + var18;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -2483,7 +2483,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
               param4 = param4 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -2494,7 +2494,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
               param5 = param5 + var18;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -2510,7 +2510,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+            this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
             param4 = param4 + var19;
             param3 = param3 + var17;
             param6 = param6 + var22;
@@ -2521,7 +2521,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+            this.drawFlatScanline(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
             param5 = param5 + var18;
             param3 = param3 + var17;
             param6 = param6 + var22;
@@ -2562,7 +2562,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                 param3 = param3 + var17;
                 param4 = param4 + var18;
                 param7 = param7 + var22;
@@ -2573,7 +2573,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
                 param3 = param3 + var17;
                 param5 = param5 + var19;
                 param7 = param7 + var22;
@@ -2590,7 +2590,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param4 = param4 + var18;
                 param7 = param7 + var22;
@@ -2601,7 +2601,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param5 = param5 + var19;
                 param7 = param7 + var22;
@@ -2618,7 +2618,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param4 = param4 + var18;
                 param7 = param7 + var22;
@@ -2629,7 +2629,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param5 = param5 + var19;
                 param7 = param7 + var22;
@@ -2645,7 +2645,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
               param3 = param3 + var17;
               param4 = param4 + var18;
               param7 = param7 + var22;
@@ -2656,7 +2656,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
               param3 = param3 + var17;
               param5 = param5 + var19;
               param7 = param7 + var22;
@@ -2684,7 +2684,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
               param5 = param5 + var17;
               param4 = param4 + var18;
               param7 = param7 + var22;
@@ -2695,7 +2695,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
               param3 = param3 + var19;
               param4 = param4 + var18;
               param7 = param7 + var22;
@@ -2711,7 +2711,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
+            this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
             param5 = param5 + var17;
             param4 = param4 + var18;
             param7 = param7 + var22;
@@ -2722,7 +2722,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+            this.drawFlatScanline(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
             param3 = param3 + var19;
             param4 = param4 + var18;
             param7 = param7 + var22;
@@ -2761,7 +2761,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
               param4 = param4 + var18;
               param5 = param5 + var19;
               param8 = param8 + var22;
@@ -2772,7 +2772,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
+              this.drawFlatScanline(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
               param4 = param4 + var18;
               param3 = param3 + var17;
               param8 = param8 + var22;
@@ -2788,7 +2788,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+            this.drawFlatScanline(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
             param4 = param4 + var18;
             param5 = param5 + var19;
             param8 = param8 + var22;
@@ -2799,7 +2799,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
+            this.drawFlatScanline(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
             param4 = param4 + var18;
             param3 = param3 + var17;
             param8 = param8 + var22;
@@ -2827,7 +2827,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
+            this.drawFlatScanline(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
             param3 = param3 + var18;
             param5 = param5 + var19;
             param8 = param8 + var22;
@@ -2838,7 +2838,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+            this.drawFlatScanline(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
             param4 = param4 + var17;
             param5 = param5 + var19;
             param8 = param8 + var22;
@@ -2854,7 +2854,7 @@ final class iua {
           if (!(param1 >= 0.0f)) {
             break;
           }
-          this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
+          this.drawFlatScanline(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
           param3 = param3 + var18;
           param5 = param5 + var19;
           param8 = param8 + var22;
@@ -2865,7 +2865,7 @@ final class iua {
           if (!(param0 >= 0.0f)) {
             break;
           }
-          this.a(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+          this.drawFlatScanline(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
           param4 = param4 + var17;
           param5 = param5 + var19;
           param8 = param8 + var22;
@@ -2873,7 +2873,7 @@ final class iua {
         }
     }
 
-    final void b(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14, int param15, int param16, int param17, int param18, int param19, int param20, int param21, int param22) {
+    final void fillTexturedTriangle(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14, int param15, int param16, int param17, int param18, int param19, int param20, int param21, int param22) {
         float var24;
         float var25;
         float var26;
@@ -2924,7 +2924,7 @@ final class iua {
         if (param22 != this.field_c) {
           this.field_w = this.field_k.getTexturePixels(param22);
           if (this.field_w == null) {
-            this.b((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, MidiPcmStream.alphaBlend(param18 | param19 << 24, param15, 20048), MidiPcmStream.alphaBlend(param18 | param20 << 24, param16, 20048), MidiPcmStream.alphaBlend(param18 | param21 << 24, param17, 20048));
+            this.fillGradientTriangle((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, MidiPcmStream.alphaBlend(param18 | param19 << 24, param15, 20048), MidiPcmStream.alphaBlend(param18 | param20 << 24, param16, 20048), MidiPcmStream.alphaBlend(param18 | param21 << 24, param17, 20048));
             return;
           }
           if (!this.field_k.j(param22)) {
@@ -3086,7 +3086,7 @@ final class iua {
               while (true) {
                 param2 = param2 - 1.0f;
                 if (param2 >= 0.0f) {
-                  this.a(this.field_a, this.field_w, (int)param0, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+                  this.drawTexturedScanline(this.field_a, this.field_w, (int)param0, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
                   param4 = param4 + var54Lifetime1;
                   param3 = param3 + var36;
                   param7 = param7 + var55;
@@ -3115,7 +3115,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   return;
                 }
-                this.a(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                this.drawTexturedScanline(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                 param3 = param3 + var36;
                 param5 = param5 + var45Lifetime1;
                 param6 = param6 + var37;
@@ -3143,7 +3143,7 @@ final class iua {
             while (true) {
               param2 = param2 - 1.0f;
               if (param2 >= 0.0f) {
-                this.a(this.field_a, this.field_w, (int)param0, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+                this.drawTexturedScanline(this.field_a, this.field_w, (int)param0, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
                 param3 = param3 + var36;
                 param4 = param4 + var54Lifetime1;
                 param6 = param6 + var37;
@@ -3172,7 +3172,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 return;
               }
-              this.a(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+              this.drawTexturedScanline(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
               param5 = param5 + var45Lifetime1;
               param3 = param3 + var36;
               param8 = param8 + var46;
@@ -3246,7 +3246,7 @@ final class iua {
             while (true) {
               param1 = param1 - 1.0f;
               if (param1 >= 0.0f) {
-                this.a(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                this.drawTexturedScanline(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                 param3 = param3 + var36;
                 param5 = param5 + var54Lifetime1;
                 param6 = param6 + var37;
@@ -3275,7 +3275,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 return;
               }
-              this.a(this.field_a, this.field_w, (int)param0, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+              this.drawTexturedScanline(this.field_a, this.field_w, (int)param0, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
               param4 = param4 + var45Lifetime1;
               param5 = param5 + var54Lifetime1;
               param7 = param7 + var46;
@@ -3303,7 +3303,7 @@ final class iua {
           while (true) {
             param1 = param1 - 1.0f;
             if (param1 >= 0.0f) {
-              this.a(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+              this.drawTexturedScanline(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
               param3 = param3 + var36;
               param5 = param5 + var54Lifetime1;
               param6 = param6 + var37;
@@ -3332,7 +3332,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               return;
             }
-            this.a(this.field_a, this.field_w, (int)param0, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+            this.drawTexturedScanline(this.field_a, this.field_w, (int)param0, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
             param4 = param4 + var45Lifetime1;
             param5 = param5 + var54Lifetime1;
             param7 = param7 + var46;
@@ -3414,7 +3414,7 @@ final class iua {
               while (true) {
                 param1 = param1 - 1.0f;
                 if (param1 >= 0.0f) {
-                  this.a(this.field_a, this.field_w, (int)param2, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+                  this.drawTexturedScanline(this.field_a, this.field_w, (int)param2, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
                   param5 = param5 + var54Lifetime1;
                   param3 = param3 + var45Lifetime1;
                   param8 = param8 + var55;
@@ -3443,7 +3443,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   return;
                 }
-                this.a(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                this.drawTexturedScanline(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                 param5 = param5 + var54Lifetime1;
                 param4 = param4 + var36;
                 param8 = param8 + var55;
@@ -3471,7 +3471,7 @@ final class iua {
             while (true) {
               param1 = param1 - 1.0f;
               if (param1 >= 0.0f) {
-                this.a(this.field_a, this.field_w, (int)param2, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                this.drawTexturedScanline(this.field_a, this.field_w, (int)param2, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                 param3 = param3 + var45Lifetime1;
                 param5 = param5 + var54Lifetime1;
                 param6 = param6 + var46;
@@ -3500,7 +3500,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 return;
               }
-              this.a(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+              this.drawTexturedScanline(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
               param4 = param4 + var36;
               param5 = param5 + var54Lifetime1;
               param7 = param7 + var37;
@@ -3571,7 +3571,7 @@ final class iua {
             while (true) {
               param0 = param0 - 1.0f;
               if (param0 >= 0.0f) {
-                this.a(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                this.drawTexturedScanline(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                 param5 = param5 + var54Lifetime1;
                 param4 = param4 + var45Lifetime1;
                 param8 = param8 + var55;
@@ -3600,7 +3600,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 return;
               }
-              this.a(this.field_a, this.field_w, (int)param2, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+              this.drawTexturedScanline(this.field_a, this.field_w, (int)param2, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
               param3 = param3 + var36;
               param4 = param4 + var45Lifetime1;
               param6 = param6 + var37;
@@ -3628,7 +3628,7 @@ final class iua {
           while (true) {
             param0 = param0 - 1.0f;
             if (param0 >= 0.0f) {
-              this.a(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+              this.drawTexturedScanline(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
               param4 = param4 + var45Lifetime1;
               param5 = param5 + var54Lifetime1;
               param7 = param7 + var46;
@@ -3657,7 +3657,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               return;
             }
-            this.a(this.field_a, this.field_w, (int)param2, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+            this.drawTexturedScanline(this.field_a, this.field_w, (int)param2, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
             param4 = param4 + var45Lifetime1;
             param3 = param3 + var36;
             param7 = param7 + var46;
@@ -3738,7 +3738,7 @@ final class iua {
             while (true) {
               param0 = param0 - 1.0f;
               if (param0 >= 0.0f) {
-                this.a(this.field_a, this.field_w, (int)param1, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+                this.drawTexturedScanline(this.field_a, this.field_w, (int)param1, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
                 param4 = param4 + var45Lifetime1;
                 param5 = param5 + var36;
                 param7 = param7 + var46;
@@ -3767,7 +3767,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 return;
               }
-              this.a(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+              this.drawTexturedScanline(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
               param4 = param4 + var45Lifetime1;
               param3 = param3 + var54Lifetime1;
               param7 = param7 + var46;
@@ -3792,7 +3792,7 @@ final class iua {
           while (true) {
             param0 = param0 - 1.0f;
             if (param0 >= 0.0f) {
-              this.a(this.field_a, this.field_w, (int)param1, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+              this.drawTexturedScanline(this.field_a, this.field_w, (int)param1, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
               param5 = param5 + var36;
               param4 = param4 + var45Lifetime1;
               param8 = param8 + var37;
@@ -3821,7 +3821,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               return;
             }
-            this.a(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+            this.drawTexturedScanline(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
             param3 = param3 + var54Lifetime1;
             param4 = param4 + var45Lifetime1;
             param6 = param6 + var55;
@@ -3895,7 +3895,7 @@ final class iua {
           while (true) {
             param2 = param2 - 1.0f;
             if (param2 >= 0.0f) {
-              this.a(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24Lifetime1, var28, var27Lifetime1, var31, var30Lifetime1, var34, var33Lifetime1);
+              this.drawTexturedScanline(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24Lifetime1, var28, var27Lifetime1, var31, var30Lifetime1, var34, var33Lifetime1);
               param4 = param4 + var45Lifetime1;
               param3 = param3 + var36;
               param7 = param7 + var46;
@@ -3924,7 +3924,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               return;
             }
-            this.a(this.field_a, this.field_w, (int)param1, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24Lifetime1, var29, var27Lifetime1, var32, var30Lifetime1, var35, var33Lifetime1);
+            this.drawTexturedScanline(this.field_a, this.field_w, (int)param1, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24Lifetime1, var29, var27Lifetime1, var32, var30Lifetime1, var35, var33Lifetime1);
             param5 = param5 + var54Lifetime1;
             param3 = param3 + var36;
             param8 = param8 + var55;
@@ -3952,7 +3952,7 @@ final class iua {
         while (true) {
           param2 = param2 - 1.0f;
           if (param2 >= 0.0f) {
-            this.a(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24Lifetime1, var25, var27Lifetime1, var28, var30Lifetime1, var31, var33Lifetime1, var34);
+            this.drawTexturedScanline(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24Lifetime1, var25, var27Lifetime1, var28, var30Lifetime1, var31, var33Lifetime1, var34);
             param3 = param3 + var36;
             param4 = param4 + var45Lifetime1;
             param6 = param6 + var37;
@@ -3981,7 +3981,7 @@ final class iua {
           if (!(param0 >= 0.0f)) {
             return;
           }
-          this.a(this.field_a, this.field_w, (int)param1, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24Lifetime1, var26, var27Lifetime1, var29, var30Lifetime1, var32, var33Lifetime1, var35);
+          this.drawTexturedScanline(this.field_a, this.field_w, (int)param1, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24Lifetime1, var26, var27Lifetime1, var29, var30Lifetime1, var32, var33Lifetime1, var35);
           param3 = param3 + var36;
           param5 = param5 + var54Lifetime1;
           param6 = param6 + var37;
@@ -4004,7 +4004,7 @@ final class iua {
         }
     }
 
-    private final void a(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14) {
+    private final void drawGradientScanline(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14) {
         int incrementValue$36 = 0;
         int incrementValue$35 = 0;
         int incrementValue$34 = 0;
@@ -4768,7 +4768,7 @@ final class iua {
 
     }
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14, int param15, int param16, int param17, int param18, int param19, int param20, int param21, int param22) {
+    final void fillTexturedTriangleArgb(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14, int param15, int param16, int param17, int param18, int param19, int param20, int param21, int param22) {
         float var24;
         float var25;
         float var26;
@@ -4819,7 +4819,7 @@ final class iua {
         if (param22 != this.field_c) {
           this.field_w = this.field_k.getTexturePixels(param22);
           if (this.field_w == null) {
-            this.a((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, MidiPcmStream.alphaBlend(param18 | param19 << 24, param15, 20048), MidiPcmStream.alphaBlend(param18 | param20 << 24, param16, 20048), MidiPcmStream.alphaBlend(param18 | param21 << 24, param17, 20048));
+            this.fillGradientTriangleArgb((float)(int)param0, (float)(int)param1, (float)(int)param2, (float)(int)param3, (float)(int)param4, (float)(int)param5, (float)(int)param6, (float)(int)param7, (float)(int)param8, MidiPcmStream.alphaBlend(param18 | param19 << 24, param15, 20048), MidiPcmStream.alphaBlend(param18 | param20 << 24, param16, 20048), MidiPcmStream.alphaBlend(param18 | param21 << 24, param17, 20048));
             return;
           }
           if (!this.field_k.j(param22)) {
@@ -4981,7 +4981,7 @@ final class iua {
               while (true) {
                 param2 = param2 - 1.0f;
                 if (param2 >= 0.0f) {
-                  this.b(this.field_a, this.field_w, (int)param0, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+                  this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param0, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
                   param4 = param4 + var54Lifetime1;
                   param3 = param3 + var36;
                   param7 = param7 + var55;
@@ -5010,7 +5010,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   return;
                 }
-                this.b(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                 param3 = param3 + var36;
                 param5 = param5 + var45Lifetime1;
                 param6 = param6 + var37;
@@ -5038,7 +5038,7 @@ final class iua {
             while (true) {
               param2 = param2 - 1.0f;
               if (param2 >= 0.0f) {
-                this.b(this.field_a, this.field_w, (int)param0, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+                this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param0, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
                 param3 = param3 + var36;
                 param4 = param4 + var54Lifetime1;
                 param6 = param6 + var37;
@@ -5067,7 +5067,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 return;
               }
-              this.b(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+              this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
               param5 = param5 + var45Lifetime1;
               param3 = param3 + var36;
               param8 = param8 + var46;
@@ -5141,7 +5141,7 @@ final class iua {
             while (true) {
               param1 = param1 - 1.0f;
               if (param1 >= 0.0f) {
-                this.b(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param0, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                 param3 = param3 + var36;
                 param5 = param5 + var54Lifetime1;
                 param6 = param6 + var37;
@@ -5170,7 +5170,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 return;
               }
-              this.b(this.field_a, this.field_w, (int)param0, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+              this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param0, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
               param4 = param4 + var45Lifetime1;
               param5 = param5 + var54Lifetime1;
               param7 = param7 + var46;
@@ -5198,7 +5198,7 @@ final class iua {
           while (true) {
             param1 = param1 - 1.0f;
             if (param1 >= 0.0f) {
-              this.b(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+              this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param0, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
               param3 = param3 + var36;
               param5 = param5 + var54Lifetime1;
               param6 = param6 + var37;
@@ -5227,7 +5227,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               return;
             }
-            this.b(this.field_a, this.field_w, (int)param0, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+            this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param0, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
             param4 = param4 + var45Lifetime1;
             param5 = param5 + var54Lifetime1;
             param7 = param7 + var46;
@@ -5309,7 +5309,7 @@ final class iua {
               while (true) {
                 param1 = param1 - 1.0f;
                 if (param1 >= 0.0f) {
-                  this.b(this.field_a, this.field_w, (int)param2, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
+                  this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param2, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24, var29, var27, var32, var30, var35, var33);
                   param5 = param5 + var54Lifetime1;
                   param3 = param3 + var45Lifetime1;
                   param8 = param8 + var55;
@@ -5338,7 +5338,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   return;
                 }
-                this.b(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                 param5 = param5 + var54Lifetime1;
                 param4 = param4 + var36;
                 param8 = param8 + var55;
@@ -5366,7 +5366,7 @@ final class iua {
             while (true) {
               param1 = param1 - 1.0f;
               if (param1 >= 0.0f) {
-                this.b(this.field_a, this.field_w, (int)param2, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
+                this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param2, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24, var26, var27, var29, var30, var32, var33, var35);
                 param3 = param3 + var45Lifetime1;
                 param5 = param5 + var54Lifetime1;
                 param6 = param6 + var46;
@@ -5395,7 +5395,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 return;
               }
-              this.b(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+              this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
               param4 = param4 + var36;
               param5 = param5 + var54Lifetime1;
               param7 = param7 + var37;
@@ -5466,7 +5466,7 @@ final class iua {
             while (true) {
               param0 = param0 - 1.0f;
               if (param0 >= 0.0f) {
-                this.b(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+                this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param2, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
                 param5 = param5 + var54Lifetime1;
                 param4 = param4 + var45Lifetime1;
                 param8 = param8 + var55;
@@ -5495,7 +5495,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 return;
               }
-              this.b(this.field_a, this.field_w, (int)param2, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+              this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param2, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
               param3 = param3 + var36;
               param4 = param4 + var45Lifetime1;
               param6 = param6 + var37;
@@ -5523,7 +5523,7 @@ final class iua {
           while (true) {
             param0 = param0 - 1.0f;
             if (param0 >= 0.0f) {
-              this.b(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+              this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param2, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
               param4 = param4 + var45Lifetime1;
               param5 = param5 + var54Lifetime1;
               param7 = param7 + var46;
@@ -5552,7 +5552,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               return;
             }
-            this.b(this.field_a, this.field_w, (int)param2, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+            this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param2, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
             param4 = param4 + var45Lifetime1;
             param3 = param3 + var36;
             param7 = param7 + var46;
@@ -5633,7 +5633,7 @@ final class iua {
             while (true) {
               param0 = param0 - 1.0f;
               if (param0 >= 0.0f) {
-                this.b(this.field_a, this.field_w, (int)param1, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
+                this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param1, (int)param4, (int)param5, param7, param8, param10, param11, param13, param14, (float)param20, (float)param21, var25, var26, var28, var29, var31, var32, var34, var35);
                 param4 = param4 + var45Lifetime1;
                 param5 = param5 + var36;
                 param7 = param7 + var46;
@@ -5662,7 +5662,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 return;
               }
-              this.b(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
+              this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24, var28, var27, var31, var30, var34, var33);
               param4 = param4 + var45Lifetime1;
               param3 = param3 + var54Lifetime1;
               param7 = param7 + var46;
@@ -5687,7 +5687,7 @@ final class iua {
           while (true) {
             param0 = param0 - 1.0f;
             if (param0 >= 0.0f) {
-              this.b(this.field_a, this.field_w, (int)param1, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
+              this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param1, (int)param5, (int)param4, param8, param7, param11, param10, param14, param13, (float)param21, (float)param20, var26, var25, var29, var28, var32, var31, var35, var34);
               param5 = param5 + var36;
               param4 = param4 + var45Lifetime1;
               param8 = param8 + var37;
@@ -5716,7 +5716,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               return;
             }
-            this.b(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
+            this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24, var25, var27, var28, var30, var31, var33, var34);
             param3 = param3 + var54Lifetime1;
             param4 = param4 + var45Lifetime1;
             param6 = param6 + var55;
@@ -5790,7 +5790,7 @@ final class iua {
           while (true) {
             param2 = param2 - 1.0f;
             if (param2 >= 0.0f) {
-              this.b(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24Lifetime1, var28, var27Lifetime1, var31, var30Lifetime1, var34, var33Lifetime1);
+              this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param1, (int)param4, (int)param3, param7, param6, param10, param9, param13, param12, (float)param20, (float)param19, var25, var24Lifetime1, var28, var27Lifetime1, var31, var30Lifetime1, var34, var33Lifetime1);
               param4 = param4 + var45Lifetime1;
               param3 = param3 + var36;
               param7 = param7 + var46;
@@ -5819,7 +5819,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               return;
             }
-            this.b(this.field_a, this.field_w, (int)param1, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24Lifetime1, var29, var27Lifetime1, var32, var30Lifetime1, var35, var33Lifetime1);
+            this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param1, (int)param5, (int)param3, param8, param6, param11, param9, param14, param12, (float)param21, (float)param19, var26, var24Lifetime1, var29, var27Lifetime1, var32, var30Lifetime1, var35, var33Lifetime1);
             param5 = param5 + var54Lifetime1;
             param3 = param3 + var36;
             param8 = param8 + var55;
@@ -5847,7 +5847,7 @@ final class iua {
         while (true) {
           param2 = param2 - 1.0f;
           if (param2 >= 0.0f) {
-            this.b(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24Lifetime1, var25, var27Lifetime1, var28, var30Lifetime1, var31, var33Lifetime1, var34);
+            this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param1, (int)param3, (int)param4, param6, param7, param9, param10, param12, param13, (float)param19, (float)param20, var24Lifetime1, var25, var27Lifetime1, var28, var30Lifetime1, var31, var33Lifetime1, var34);
             param3 = param3 + var36;
             param4 = param4 + var45Lifetime1;
             param6 = param6 + var37;
@@ -5876,7 +5876,7 @@ final class iua {
           if (!(param0 >= 0.0f)) {
             return;
           }
-          this.b(this.field_a, this.field_w, (int)param1, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24Lifetime1, var26, var27Lifetime1, var29, var30Lifetime1, var32, var33Lifetime1, var35);
+          this.drawTexturedScanlineArgb(this.field_a, this.field_w, (int)param1, (int)param3, (int)param5, param6, param8, param9, param11, param12, param14, (float)param19, (float)param21, var24Lifetime1, var26, var27Lifetime1, var29, var30Lifetime1, var32, var33Lifetime1, var35);
           param3 = param3 + var36;
           param5 = param5 + var54Lifetime1;
           param6 = param6 + var37;
@@ -5899,7 +5899,7 @@ final class iua {
         }
     }
 
-    final void b(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9) {
+    final void fillFlatTriangleArgb(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9) {
         if (this.field_s) {
           this.field_k.drawLineReordered((int)param0, param9, (int)param3, (int)param1, 1, (int)param4);
           this.field_k.drawLineReordered((int)param1, param9, (int)param4, (int)param2, 1, (int)param5);
@@ -5964,7 +5964,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                 param5 = param5 + var19;
                 param3 = param3 + var17;
                 param6 = param6 + var22;
@@ -5975,7 +5975,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
                 param5 = param5 + var19;
                 param4 = param4 + var18;
                 param6 = param6 + var22;
@@ -5992,7 +5992,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param3 = param3 + var17;
                 param6 = param6 + var22;
@@ -6003,7 +6003,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param4 = param4 + var18;
                 param6 = param6 + var22;
@@ -6020,7 +6020,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param3 = param3 + var17;
                 param6 = param6 + var22;
@@ -6031,7 +6031,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param4 = param4 + var18;
                 param6 = param6 + var22;
@@ -6047,7 +6047,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
               param5 = param5 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -6058,7 +6058,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
               param5 = param5 + var19;
               param4 = param4 + var18;
               param6 = param6 + var22;
@@ -6087,7 +6087,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
               param4 = param4 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -6098,7 +6098,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
               param5 = param5 + var18;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -6115,7 +6115,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
               param4 = param4 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -6126,7 +6126,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
               param5 = param5 + var18;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -6143,7 +6143,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
               param4 = param4 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -6154,7 +6154,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
               param5 = param5 + var18;
               param3 = param3 + var17;
               param6 = param6 + var22;
@@ -6170,7 +6170,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+            this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
             param4 = param4 + var19;
             param3 = param3 + var17;
             param6 = param6 + var22;
@@ -6181,7 +6181,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+            this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
             param5 = param5 + var18;
             param3 = param3 + var17;
             param6 = param6 + var22;
@@ -6222,7 +6222,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                 param3 = param3 + var17;
                 param4 = param4 + var18;
                 param7 = param7 + var22;
@@ -6233,7 +6233,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
                 param3 = param3 + var17;
                 param5 = param5 + var19;
                 param7 = param7 + var22;
@@ -6250,7 +6250,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param4 = param4 + var18;
                 param7 = param7 + var22;
@@ -6261,7 +6261,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param5 = param5 + var19;
                 param7 = param7 + var22;
@@ -6278,7 +6278,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param4 = param4 + var18;
                 param7 = param7 + var22;
@@ -6289,7 +6289,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param5 = param5 + var19;
                 param7 = param7 + var22;
@@ -6305,7 +6305,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
               param3 = param3 + var17;
               param4 = param4 + var18;
               param7 = param7 + var22;
@@ -6316,7 +6316,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
               param3 = param3 + var17;
               param5 = param5 + var19;
               param7 = param7 + var22;
@@ -6344,7 +6344,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
               param5 = param5 + var17;
               param4 = param4 + var18;
               param7 = param7 + var22;
@@ -6355,7 +6355,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
               param3 = param3 + var19;
               param4 = param4 + var18;
               param7 = param7 + var22;
@@ -6371,7 +6371,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
+            this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
             param5 = param5 + var17;
             param4 = param4 + var18;
             param7 = param7 + var22;
@@ -6382,7 +6382,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+            this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
             param3 = param3 + var19;
             param4 = param4 + var18;
             param7 = param7 + var22;
@@ -6421,7 +6421,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
               param4 = param4 + var18;
               param5 = param5 + var19;
               param8 = param8 + var22;
@@ -6432,7 +6432,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
+              this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
               param4 = param4 + var18;
               param3 = param3 + var17;
               param8 = param8 + var22;
@@ -6448,7 +6448,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+            this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
             param4 = param4 + var18;
             param5 = param5 + var19;
             param8 = param8 + var22;
@@ -6459,7 +6459,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
+            this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
             param4 = param4 + var18;
             param3 = param3 + var17;
             param8 = param8 + var22;
@@ -6487,7 +6487,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
+            this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
             param3 = param3 + var18;
             param5 = param5 + var19;
             param8 = param8 + var22;
@@ -6498,7 +6498,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+            this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
             param4 = param4 + var17;
             param5 = param5 + var19;
             param8 = param8 + var22;
@@ -6514,7 +6514,7 @@ final class iua {
           if (!(param1 >= 0.0f)) {
             break;
           }
-          this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
+          this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
           param3 = param3 + var18;
           param5 = param5 + var19;
           param8 = param8 + var22;
@@ -6525,7 +6525,7 @@ final class iua {
           if (!(param0 >= 0.0f)) {
             break;
           }
-          this.b(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+          this.drawFlatScanlineArgb(this.field_a, this.field_u, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
           param4 = param4 + var17;
           param5 = param5 + var19;
           param8 = param8 + var22;
@@ -6533,7 +6533,7 @@ final class iua {
         }
     }
 
-    private final void b(int[] param0, int[] param1, int param2, int param3, int param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14, float param15, float param16, float param17, float param18, float param19, float param20) {
+    private final void drawTexturedScanlineArgb(int[] param0, int[] param1, int param2, int param3, int param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14, float param15, float param16, float param17, float param18, float param19, float param20) {
         int incrementValue$0 = 0;
         int stackIn_28_0 = 0;
         int var22;
@@ -6668,7 +6668,7 @@ final class iua {
         }
     }
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9, int param10, int param11) {
+    final void fillGradientTriangleArgb(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9, int param10, int param11) {
         float var25 = 0.0f;
         float var26 = 0.0f;
         float var27 = 0.0f;
@@ -6766,7 +6766,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var30;
@@ -6780,7 +6780,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param4 = param4 + var25;
                 param6 = param6 + var30;
@@ -6800,7 +6800,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var30;
@@ -6814,7 +6814,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param4 = param4 + var25;
                 param6 = param6 + var30;
@@ -6834,7 +6834,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var30;
@@ -6848,7 +6848,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param4 = param4 + var25;
                 param6 = param6 + var30;
@@ -6867,7 +6867,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -6881,7 +6881,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var27;
               param4 = param4 + var25;
               param6 = param6 + var30;
@@ -6916,7 +6916,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -6930,7 +6930,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var25;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -6950,7 +6950,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -6964,7 +6964,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var25;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -6984,7 +6984,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -6998,7 +6998,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var25;
               param3 = param3 + var26;
               param6 = param6 + var30;
@@ -7017,7 +7017,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+            this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
             param4 = param4 + var27;
             param3 = param3 + var26;
             param6 = param6 + var30;
@@ -7031,7 +7031,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+            this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
             param5 = param5 + var25;
             param3 = param3 + var26;
             param6 = param6 + var30;
@@ -7081,7 +7081,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param4 = param4 + var25;
                 param7 = param7 + var30;
@@ -7095,7 +7095,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param5 = param5 + var27;
                 param7 = param7 + var30;
@@ -7115,7 +7115,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param4 = param4 + var25;
                 param7 = param7 + var30;
@@ -7129,7 +7129,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param5 = param5 + var27;
                 param7 = param7 + var30;
@@ -7149,7 +7149,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param4 = param4 + var25;
                 param7 = param7 + var30;
@@ -7163,7 +7163,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param5 = param5 + var27;
                 param7 = param7 + var30;
@@ -7182,7 +7182,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param3 = param3 + var26;
               param4 = param4 + var25;
               param7 = param7 + var30;
@@ -7196,7 +7196,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param3 = param3 + var26;
               param5 = param5 + var27;
               param7 = param7 + var30;
@@ -7230,7 +7230,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param5 = param5 + var26;
               param4 = param4 + var25;
               param7 = param7 + var30;
@@ -7244,7 +7244,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param3 = param3 + var27;
               param4 = param4 + var25;
               param7 = param7 + var30;
@@ -7263,7 +7263,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+            this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
             param5 = param5 + var26;
             param4 = param4 + var25;
             param7 = param7 + var30;
@@ -7277,7 +7277,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+            this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
             param3 = param3 + var27;
             param4 = param4 + var25;
             param7 = param7 + var30;
@@ -7325,7 +7325,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
               param4 = param4 + var25;
               param5 = param5 + var27;
               param8 = param8 + var30;
@@ -7339,7 +7339,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+              this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
               param4 = param4 + var25;
               param3 = param3 + var26;
               param8 = param8 + var30;
@@ -7358,7 +7358,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param4 = param4 + var25;
             param5 = param5 + var27;
             param8 = param8 + var30;
@@ -7372,7 +7372,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param4 = param4 + var25;
             param3 = param3 + var26;
             param8 = param8 + var30;
@@ -7406,7 +7406,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param3 = param3 + var25;
             param5 = param5 + var27;
             param8 = param8 + var30;
@@ -7420,7 +7420,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param4 = param4 + var26;
             param5 = param5 + var27;
             param8 = param8 + var30;
@@ -7439,7 +7439,7 @@ final class iua {
           if (!(param1 >= 0.0f)) {
             break;
           }
-          this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+          this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
           param3 = param3 + var25;
           param5 = param5 + var27;
           param8 = param8 + var30;
@@ -7453,7 +7453,7 @@ final class iua {
           if (!(param0 >= 0.0f)) {
             break;
           }
-          this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+          this.drawGradientScanlineArgb(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
           param4 = param4 + var26;
           param5 = param5 + var27;
           param8 = param8 + var30;
@@ -7464,7 +7464,7 @@ final class iua {
         }
     }
 
-    private final void b(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10) {
+    private final void drawGouraudScanline(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10) {
         int var12;
         int var13;
         int var14;
@@ -7754,7 +7754,7 @@ final class iua {
 
     }
 
-    final void b(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11) {
+    final void fillGouraudTriangle(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9, float param10, float param11) {
         float var21 = 0.0f;
         float var22 = 0.0f;
         float var23 = 0.0f;
@@ -7831,7 +7831,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param3 = param3 + var22;
                 param9 = param9 + var26;
@@ -7843,7 +7843,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param4 = param4 + var21;
                 param9 = param9 + var26;
@@ -7861,7 +7861,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param3 = param3 + var22;
                 param9 = param9 + var26;
@@ -7873,7 +7873,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param4 = param4 + var21;
                 param9 = param9 + var26;
@@ -7891,7 +7891,7 @@ final class iua {
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param3 = param3 + var22;
                 param9 = param9 + var26;
@@ -7903,7 +7903,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param5, param9, var25, param6, var27);
                 param5 = param5 + var23;
                 param4 = param4 + var21;
                 param9 = param9 + var26;
@@ -7920,7 +7920,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
               param5 = param5 + var23;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -7932,7 +7932,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param4, param9, var25, param6, var27);
               param5 = param5 + var23;
               param4 = param4 + var21;
               param9 = param9 + var26;
@@ -7963,7 +7963,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
               param4 = param4 + var23;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -7975,7 +7975,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
               param5 = param5 + var21;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -7993,7 +7993,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
               param4 = param4 + var23;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -8005,7 +8005,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
               param5 = param5 + var21;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -8023,7 +8023,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param4, param9, var25, param6, var27);
               param4 = param4 + var23;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -8035,7 +8035,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param3, (int)param5, param9, var25, param6, var27);
               param5 = param5 + var21;
               param3 = param3 + var22;
               param9 = param9 + var26;
@@ -8052,7 +8052,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
+            this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param4, (int)param3, param9, var25, param6, var27);
             param4 = param4 + var23;
             param3 = param3 + var22;
             param9 = param9 + var26;
@@ -8064,7 +8064,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
+            this.drawGouraudScanline(this.field_a, this.field_u, (int)param0, 0, 0, (int)param5, (int)param3, param9, var25, param6, var27);
             param5 = param5 + var21;
             param3 = param3 + var22;
             param9 = param9 + var26;
@@ -8108,7 +8108,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param4 = param4 + var21;
                 param10 = param10 + var26;
@@ -8120,7 +8120,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param5 = param5 + var23;
                 param10 = param10 + var26;
@@ -8138,7 +8138,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param4 = param4 + var21;
                 param10 = param10 + var26;
@@ -8150,7 +8150,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param5 = param5 + var23;
                 param10 = param10 + var26;
@@ -8168,7 +8168,7 @@ final class iua {
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param4 = param4 + var21;
                 param10 = param10 + var26;
@@ -8180,7 +8180,7 @@ final class iua {
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
+                this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param3, param10, var25, param7, var27);
                 param3 = param3 + var22;
                 param5 = param5 + var23;
                 param10 = param10 + var26;
@@ -8197,7 +8197,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
               param3 = param3 + var22;
               param4 = param4 + var21;
               param10 = param10 + var26;
@@ -8209,7 +8209,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param5, param10, var25, param7, var27);
               param3 = param3 + var22;
               param5 = param5 + var23;
               param10 = param10 + var26;
@@ -8239,7 +8239,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param10, var25, param7, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param5, param10, var25, param7, var27);
               param5 = param5 + var22;
               param4 = param4 + var21;
               param10 = param10 + var26;
@@ -8251,7 +8251,7 @@ final class iua {
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param4, (int)param3, param10, var25, param7, var27);
               param3 = param3 + var23;
               param4 = param4 + var21;
               param10 = param10 + var26;
@@ -8268,7 +8268,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param10, var25, param7, var27);
+            this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param5, (int)param4, param10, var25, param7, var27);
             param5 = param5 + var22;
             param4 = param4 + var21;
             param10 = param10 + var26;
@@ -8280,7 +8280,7 @@ final class iua {
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
+            this.drawGouraudScanline(this.field_a, this.field_u, (int)param1, 0, 0, (int)param3, (int)param4, param10, var25, param7, var27);
             param3 = param3 + var23;
             param4 = param4 + var21;
             param10 = param10 + var26;
@@ -8322,7 +8322,7 @@ final class iua {
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
               param4 = param4 + var21;
               param5 = param5 + var23;
               param11 = param11 + var26;
@@ -8334,7 +8334,7 @@ final class iua {
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param11, var25, param8, var27);
+              this.drawGouraudScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param4, param11, var25, param8, var27);
               param4 = param4 + var21;
               param3 = param3 + var22;
               param11 = param11 + var26;
@@ -8351,7 +8351,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
+            this.drawGouraudScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
             param4 = param4 + var21;
             param5 = param5 + var23;
             param11 = param11 + var26;
@@ -8363,7 +8363,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param11, var25, param8, var27);
+            this.drawGouraudScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param3, param11, var25, param8, var27);
             param4 = param4 + var21;
             param3 = param3 + var22;
             param11 = param11 + var26;
@@ -8393,7 +8393,7 @@ final class iua {
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param11, var25, param8, var27);
+            this.drawGouraudScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param3, param11, var25, param8, var27);
             param3 = param3 + var21;
             param5 = param5 + var23;
             param11 = param11 + var26;
@@ -8405,7 +8405,7 @@ final class iua {
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
+            this.drawGouraudScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param5, (int)param4, param11, var25, param8, var27);
             param4 = param4 + var22;
             param5 = param5 + var23;
             param11 = param11 + var26;
@@ -8422,7 +8422,7 @@ final class iua {
           if (!(param1 >= 0.0f)) {
             break;
           }
-          this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param11, var25, param8, var27);
+          this.drawGouraudScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param3, (int)param5, param11, var25, param8, var27);
           param3 = param3 + var21;
           param5 = param5 + var23;
           param11 = param11 + var26;
@@ -8434,7 +8434,7 @@ final class iua {
           if (!(param0 >= 0.0f)) {
             break;
           }
-          this.b(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
+          this.drawGouraudScanline(this.field_a, this.field_u, (int)param2, 0, 0, (int)param4, (int)param5, param11, var25, param8, var27);
           param4 = param4 + var22;
           param5 = param5 + var23;
           param11 = param11 + var26;
@@ -8443,7 +8443,7 @@ final class iua {
         }
     }
 
-    private final void a(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8) {
+    private final void drawFlatScanline(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8) {
         int var10;
         int var11;
         int var12;
@@ -8742,7 +8742,7 @@ final class iua {
         }
     }
 
-    private final void b(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14) {
+    private final void drawGradientScanlineArgb(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14) {
         int incrementValue$21 = 0;
         int incrementValue$20 = 0;
         int incrementValue$19 = 0;
@@ -9506,7 +9506,7 @@ final class iua {
 
     }
 
-    iua(SoftwareGraphicsToolkit param0, tw param1) {
+    ModelTriangleRasterizer(SoftwareGraphicsToolkit param0, SoftwareRenderContext param1) {
         this.field_j = true;
         this.field_m = false;
         this.field_p = new int[4096];

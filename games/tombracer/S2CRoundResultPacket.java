@@ -145,7 +145,7 @@ final class S2CRoundResultPacket implements GamePacket {
           RoomHeader.field_e.setMasterVolume(param0, -83);
         }
         if (null != LegacyOpenGlUnlitEffect.field_d) {
-          LegacyOpenGlUnlitEffect.field_d.a((byte) 91, param0);
+          LegacyOpenGlUnlitEffect.field_d.setVolume((byte) 91, param0);
         }
     }
 

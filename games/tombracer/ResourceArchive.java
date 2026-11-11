@@ -419,7 +419,7 @@ final class ResourceArchive {
             stackIn_35_0 = var12_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param1 != null);
-            throw tba.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var10.length).append(" ").append(sq.a(var10.length, var10, (byte) -103)).append(" ").append(sq.a(-2 + var10.length, var10, (byte) -99)).append(" ").append(this.field_i.field_j[param0]).append(" ").append(this.field_i.field_d).toString());
+            throw tba.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var10.length).append(" ").append(MusicPlayer.computeCrc32(var10.length, var10, (byte) -103)).append(" ").append(MusicPlayer.computeCrc32(-2 + var10.length, var10, (byte) -99)).append(" ").append(this.field_i.field_j[param0]).append(" ").append(this.field_i.field_d).toString());
           }
           if (this.field_g) {
             this.field_a[param0] = null;

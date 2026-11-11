@@ -816,7 +816,7 @@ final class PlatformModel extends TrapModel {
           if (param0 != 32454) {
             PlatformModel.releaseStatics(-98);
           }
-          RewardChoicePhase.field_n = new sq(var1, var2);
+          RewardChoicePhase.field_n = new MusicPlayer(var1, var2);
           CourseLayout.initAudioOutputs(22050, 1024, RewardChoicePhase.field_n, true, (java.awt.Component) ((Object) nma.field_l), dsa.field_c);
           wra.a(0);
         } catch (RuntimeException runtimeException) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ModelFactory implements ModelCodec {
-    static jta field_a;
+    static DialogStack field_a;
 
     final static boolean a(int param0, int param1, int param2) {
         boolean stackIn_7_0 = false;
@@ -58,7 +58,7 @@ final class ModelFactory implements ModelCodec {
         try {
           var4_int = param1.readBits((byte) 44, 6);
           if (param2) {
-            field_a = (jta) null;
+            field_a = (DialogStack) null;
           }
           var5 = var4_int;
           if (1 == var5) {
@@ -174,7 +174,7 @@ final class ModelFactory implements ModelCodec {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 15682) {
-            field_a = (jta) null;
+            field_a = (DialogStack) null;
           }
           param1.writeBits((byte) -128, param2.getCategory((byte) 81), 6);
           param2.encode((byte) 88, param1);
@@ -323,7 +323,7 @@ final class ModelFactory implements ModelCodec {
     public static void releaseStatics(byte param0) {
         try {
           if (param0 != 91) {
-            field_a = (jta) null;
+            field_a = (DialogStack) null;
           }
           field_a = null;
         } catch (RuntimeException runtimeException) {

@@ -6,7 +6,7 @@ final class mpa extends ContentTransitionDialog {
     static apa field_V;
     static boolean field_X;
 
-    mpa(jta param0, UiWidget param1) {
+    mpa(DialogStack param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

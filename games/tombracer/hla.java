@@ -21,7 +21,7 @@ final class hla extends UiComponent {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = (param3 + this.field_G) / 2;
         int var6 = this.field_t - param0;
-        this.field_vb.a(this.field_G, param3, (byte) 127, 0, param1, -param3 + var6, 0);
+        this.field_vb.setPaneBounds(this.field_G, param3, (byte) 127, 0, param1, -param3 + var6, 0);
         this.field_yb.field_G = var5 - param3;
         this.field_yb.field_qb = param2;
         this.field_yb.field_t = param0;

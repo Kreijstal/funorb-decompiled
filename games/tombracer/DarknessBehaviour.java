@@ -114,7 +114,7 @@ final class DarknessBehaviour extends Behaviour {
         if (null == this.mask) {
           return 0;
         }
-        nm.setRasterTarget(this.mask, (byte) 89);
+        OpenGlIndexArray.setRasterTarget(this.mask, (byte) 89);
         var7 = 0;
         var8 = param5 - (param0 / 2 + this.trap.getX(3) - this.trap.getWidth(-15) / 2);
         var9 = -this.trap.getY(9648) + this.trap.getHeight((byte) 55) / 2 + (param2 - param1 / 2);
@@ -354,7 +354,7 @@ final class DarknessBehaviour extends Behaviour {
             var8 = 9;
           }
           var9 = var8 * HardwareReflectionEffect.field_e.length / 10;
-          nm.setRasterTarget(this.mask, (byte) 110);
+          OpenGlIndexArray.setRasterTarget(this.mask, (byte) 110);
           iha.drawGlowingLine(var4_int / 8 >> 16, var6 / 8 >> 16, var5 / 8 >> 16, var7 / 8 >> 16, 2, var9, HardwareReflectionEffect.field_e);
           pfa.popRasterState(1);
           stackIn_6_0 = 0;

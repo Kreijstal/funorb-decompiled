@@ -173,7 +173,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
         field_y = null;
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void resizeColumnWidthArray(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         int var4 = null != this.field_F ? this.field_F.length : 0;
@@ -192,7 +192,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
         }
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void setCellSpacing(int param0, int param1, byte param2) {
         if (param2 != 97) {
           return;
         }
@@ -200,7 +200,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
         this.field_x = param0;
     }
 
-    private final void f(int param0, int param1, int param2) {
+    private final void resizeColumnWeightArray(int param0, int param1, int param2) {
         int var4 = this.field_C != null ? this.field_C.length : 0;
         if (param0 != 28705) {
           UiWidget var6 = (UiWidget) null;
@@ -216,7 +216,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
         this.field_I = var5;
     }
 
-    private final void c(int param0, int param1, int param2) {
+    private final void resizeChildArray(int param0, int param1, int param2) {
         int var4 = null == this.field_C ? 0 : this.field_C.length;
         UiWidget[] var5 = new UiWidget[var4 * param0];
         if (null != this.children && this.children.length > 0 && var5.length > 0 &&
@@ -325,7 +325,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
         }
     }
 
-    final static boolean g(byte param0) {
+    final static boolean canResizeViewport(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 97) {
           field_G = (String) null;
@@ -394,7 +394,7 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
           }
           var6Lifetime1 = -21 / ((-43 - param1) / 50);
           this.resizeChildColumns(var4, var3_int, 192);
-          this.d(var3_int, -110, var4);
+          this.resizeColumnWidthArray(var3_int, -110, var4);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "sta.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -424,8 +424,8 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
             var5[var6] = dupTemp$0;
             var6++;
           }
-          this.c(var4, var3_int, 0);
-          this.f(param1 + 28657, var3_int, var4);
+          this.resizeChildArray(var4, var3_int, 0);
+          this.resizeColumnWeightArray(param1 + 28657, var3_int, var4);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "sta.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

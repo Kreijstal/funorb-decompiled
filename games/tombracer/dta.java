@@ -126,7 +126,7 @@ final class dta {
               if (var9.hasFinishedCourse((byte) 90, param2)) {
                 tga.field_a.setClip(param0, param5, param1, param6);
                 Room.field_j.draw(0, 0);
-                SocketConnector.a(ad.field_i.toUpperCase(), 1, SingleChildWidget.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
+                SocketConnector.a(CharacterChoiceTile.field_i.toUpperCase(), 1, SingleChildWidget.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
                 SocketConnector.a(DropAnimation.formatTime(var9.getSimulationTick((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
                 tga.field_a.la();
                 return;
@@ -154,7 +154,7 @@ final class dta {
                 var21 = (var21 >> 1) + 1;
                 var20 = 1 + (var20 >> 1);
               }
-              MembersUpsellMenu.a(LegacyOpenGlFlowingWaterEffect.formatText(102, TimingPattern.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, eda.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
+              MembersUpsellMenu.drawCentredTextWithShadow(LegacyOpenGlFlowingWaterEffect.formatText(102, TimingPattern.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, eda.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
               var18Lifetime1 = -75 + param6 - var8_int;
               var17Lifetime1 = -10;
               var22 = var12.getWeapon(-163585215);
@@ -265,7 +265,7 @@ final class dta {
                 var31Lifetime1 = -stackIn_72_0 + var29Lifetime2 + 26;
                 var32 = var12.getTreasure(196608, var30Lifetime2);
                 PlayerProfile.field_r[var30Lifetime2].draw(var17Lifetime5, var29Lifetime2);
-                MembersUpsellMenu.a(Integer.toString(var32), 11903361, qf.field_j, -1, var31Lifetime1, var17Lifetime5 - 19, 1);
+                MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var32), 11903361, qf.field_j, -1, var31Lifetime1, var17Lifetime5 - 19, 1);
                 if (var32 != this.field_a[var30Lifetime2]) {
                   this.field_h[var30Lifetime2] = Integer.toString(-this.field_a[var30Lifetime2] + var32) + "+";
                   this.field_a[var30Lifetime2] = var32;
@@ -277,7 +277,7 @@ final class dta {
                   var34_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].width() * var33_float);
                   var35_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].height() * var33_float);
                   PlayerProfile.field_r[var30Lifetime2].drawScaled(var17Lifetime5 + (-var34_int + PlayerProfile.field_r[var30Lifetime2].width()) / 2, (PlayerProfile.field_r[var30Lifetime2].height() - var35_int) / 2 + var29Lifetime2, var34_int, var35_int, 1, -1, 1);
-                  MembersUpsellMenu.a(this.field_h[var30Lifetime2], 14142651, qf.field_j, -1, var31Lifetime1, -49 + var17Lifetime5, 1);
+                  MembersUpsellMenu.drawCentredTextWithShadow(this.field_h[var30Lifetime2], 14142651, qf.field_j, -1, var31Lifetime1, -49 + var17Lifetime5, 1);
                 }
                 var31Lifetime1 += 23;
                 var29Lifetime2 += 24;
@@ -377,7 +377,7 @@ final class dta {
           var9_int = (-param0 + param1 >> 1) + param0;
           var10Lifetime1 = param5 + (param6 - param5 >> 1);
           PlayerViewport.drawTiledFrame(50, 200, (byte) 94, var9_int - 100, aq.field_a, -34 + var10Lifetime1);
-          MembersUpsellMenu.a(hu.field_d, 11903361, eda.field_f, -1, var10Lifetime1, var9_int, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow(hu.field_d, 11903361, eda.field_f, -1, var10Lifetime1, var9_int, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

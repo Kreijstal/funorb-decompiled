@@ -50,7 +50,7 @@ final class SnakePitTile implements Renderable {
           if (null == ModelFactory.field_a) {
             return false;
           }
-          if (ModelFactory.field_a.a((byte) 119) != null) {
+          if (ModelFactory.field_a.getTopVisibleDialog((byte) 119) != null) {
             return true;
           }
           return false;
@@ -58,7 +58,7 @@ final class SnakePitTile implements Renderable {
         if (null == ModelFactory.field_a) {
           return false;
         }
-        if (ModelFactory.field_a.a((byte) 119) != null) {
+        if (ModelFactory.field_a.getTopVisibleDialog((byte) 119) != null) {
           return true;
         }
         return false;

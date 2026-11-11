@@ -1737,7 +1737,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, param1 + 34176, BrickOperator.a(param0, true));
+          jaggl.OpenGL.glTexEnvi(8960, param1 + 34176, BrickOperator.glCombineSource(param0, true));
           if (param2 != -6219) {
             this.field_Tc = (jaggl.MapBuffer) null;
           }
@@ -1791,7 +1791,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (param1 != 15802) {
             this.applyTextureConstantColor(120);
           }
-          jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, BrickOperator.a(param0, true));
+          jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, BrickOperator.glCombineSource(param0, true));
           jaggl.OpenGL.glTexEnvi(8960, 34200 + param3, !param2 ? 770 : 771);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "kda.AC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

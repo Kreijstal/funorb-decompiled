@@ -588,7 +588,7 @@ final class BlendModeOperator extends TextureOperator {
         try {
           var1_int = 0;
           while (true) {
-            var2 = taa.field_g.getCategory((byte) 115, var1_int);
+            var2 = UnlockEntry.field_g.getCategory((byte) 115, var1_int);
             if (!var2.field_m) {
               var1_int++;
               continue;

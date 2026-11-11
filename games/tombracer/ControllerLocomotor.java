@@ -9,7 +9,7 @@ final class ControllerLocomotor extends Locomotor {
     static String field_q;
     private Locomotor[] field_u;
     private int field_s;
-    static oc[] field_p;
+    static ModelData[] field_p;
     static String field_o;
     static ResourceArchive field_v;
 

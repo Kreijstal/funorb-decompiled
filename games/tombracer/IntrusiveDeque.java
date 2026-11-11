@@ -160,7 +160,7 @@ final class IntrusiveDeque {
           stackIn_7_5 = di.field_a + 2;
           stackIn_8_6 = (dn.field_b.field_vb == lu.field_b);
           boolean decompiledFrameRemainder1 = true;
-          var3_int = ((ScrollPane) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_8_6) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_7_0).updateContentLayout(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_8_6) ? 1 : 0;
           var4 = dn.field_b.field_tb.field_J;
           var5 = null;
           if (UiWidget.field_g != 2) {

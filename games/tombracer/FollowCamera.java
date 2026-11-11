@@ -33,10 +33,10 @@ final class FollowCamera implements Camera {
     final static void openLoginForm(boolean param0, boolean param1, boolean param2, String param3) {
         try {
           LegacyOpenGlPostProcessEffect.a(param2);
-          ej.field_a.e(true);
+          ej.field_a.hideAllDialogs(true);
           vn.field_b = new LoginForm(ScrollControlWidget.field_E, (String) null, LoadProfileCommand.field_r, param1, param0);
           um.field_l = new mpa(ej.field_a, vn.field_b);
-          ej.field_a.c(um.field_l, 114);
+          ej.field_a.pushDialog(um.field_l, 114);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ag.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -127,7 +127,7 @@ final class fp {
         via.field_a[0] = SpriteData.loadSprite(param2, "", "hud_coin");
         via.field_a[1] = SpriteData.loadSprite(param2, "", "hud_bag");
         Transform3D.field_d = SpriteData.loadSheet(param2, "", "frame_main");
-        nm.field_i = SpriteData.loadSprite(param2, "", "map_room");
+        OpenGlIndexArray.field_i = SpriteData.loadSprite(param2, "", "map_room");
         int incrementValue$3 = param1;
         param1++;
         var16_ref.drawLoadingProgress(incrementValue$3, (byte) 47, param0);

@@ -51,14 +51,14 @@ final class wt {
     final static void a(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
-        ej.field_a.e(true);
+        ej.field_a.hideAllDialogs(true);
         if (null != ena.field_p) {
-          ej.field_a.c(ena.field_p, 87);
+          ej.field_a.pushDialog(ena.field_p, 87);
           var1 = 44 % ((param0 + 68) / 49);
           return;
         }
         ena.field_p = new vs(ej.field_a, SnakePitBehaviour.field_o);
-        ej.field_a.c(ena.field_p, 87);
+        ej.field_a.pushDialog(ena.field_p, 87);
         var1Lifetime1 = 44 % ((param0 + 68) / 49);
     }
 

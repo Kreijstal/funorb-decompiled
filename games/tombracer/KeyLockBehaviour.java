@@ -138,12 +138,12 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
     final static boolean a(int param0, int param1, int param2) {
         if (param0 != 2) {
           KeyLockBehaviour.a(52, -115, -20);
-          if (!o.hasAnyMask540800(-1, param2, param1)) {
+          if (!HeapIndexArray.hasAnyMask540800(-1, param2, param1)) {
             return vua.e(param1, param2, 13650) ? true : false;
           }
           return true;
         }
-        if (o.hasAnyMask540800(-1, param2, param1)) {
+        if (HeapIndexArray.hasAnyMask540800(-1, param2, param1)) {
           return true;
         }
         if (!vua.e(param1, param2, 13650)) {

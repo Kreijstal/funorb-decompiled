@@ -8,9 +8,9 @@ final class jl {
     final static int[] createPitchYawRotation(int param0, int param1, int param2) {
         int var9 = 0;
         int var10 = 0;
-        int var3 = cr.sin8192(true, param1);
+        int var3 = ConsoleTokenStream.sin8192(true, param1);
         int var4 = IntIntHashTable.cos8192(61, param1);
-        int var5 = cr.sin8192(true, param0);
+        int var5 = ConsoleTokenStream.sin8192(true, param0);
         int var6 = IntIntHashTable.cos8192(52, param0);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);

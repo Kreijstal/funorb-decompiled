@@ -58,7 +58,7 @@ abstract class ContentTransitionDialog extends ofa {
           return;
         }
         if (this.field_M != S2CRewardChoicePacket.field_a) {
-          this.c(-11560, this.field_T.field_p + (this.field_S + 12), 12 + this.field_T.field_m);
+          this.setCentredSize(-11560, this.field_T.field_p + (this.field_S + 12), 12 + this.field_T.field_m);
           this.a(false, this.field_T);
         } else {
           this.field_P.field_y = 256;
@@ -107,7 +107,7 @@ abstract class ContentTransitionDialog extends ofa {
         }
     }
 
-    boolean a(int param0) {
+    boolean updateFade(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
@@ -119,9 +119,9 @@ abstract class ContentTransitionDialog extends ofa {
               this.field_P.field_y = 256 - (this.field_R << 8) / this.field_O;
               if (param0 <= 126) {
                 this.field_T = (UiWidget) null;
-                return super.a(127);
+                return super.updateFade(127);
               }
-              return super.a(127);
+              return super.updateFade(127);
             }
             this.field_M = AvailabilityQuery.field_e;
             this.a(this.field_Q, this.field_T.field_m + 12, this.field_T.field_p + (this.field_S + 12), (byte) -103);
@@ -129,16 +129,16 @@ abstract class ContentTransitionDialog extends ofa {
             this.field_P.field_y = 0;
             if (param0 <= 126) {
               this.field_T = (UiWidget) null;
-              return super.a(127);
+              return super.updateFade(127);
             }
-            return super.a(127);
+            return super.updateFade(127);
           }
           if (S2CRewardChoicePacket.field_a != this.field_M) {
             if (param0 > 126) {
-              return super.a(127);
+              return super.updateFade(127);
             }
             this.field_T = (UiWidget) null;
-            return super.a(127);
+            return super.updateFade(127);
           }
           fieldTemp$1 = this.field_R + 1;
           this.field_R = this.field_R + 1;
@@ -146,23 +146,23 @@ abstract class ContentTransitionDialog extends ofa {
             this.field_M = null;
             this.field_P.field_y = 256;
             if (param0 > 126) {
-              return super.a(127);
+              return super.updateFade(127);
             }
             this.field_T = (UiWidget) null;
-            return super.a(127);
+            return super.updateFade(127);
           }
           this.field_P.field_y = (this.field_R << 8) / this.field_U;
           if (param0 > 126) {
-            return super.a(127);
+            return super.updateFade(127);
           }
           this.field_T = (UiWidget) null;
-          return super.a(127);
+          return super.updateFade(127);
         }
         if (param0 > 126) {
-          return super.a(127);
+          return super.updateFade(127);
         }
         this.field_T = (UiWidget) null;
-        return super.a(127);
+        return super.updateFade(127);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -228,7 +228,7 @@ abstract class ContentTransitionDialog extends ofa {
         }
     }
 
-    ContentTransitionDialog(jta param0, UiWidget param1, int param2, int param3, int param4) {
+    ContentTransitionDialog(DialogStack param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_m + 12, param1.field_p + param2 + 12);
         try {
           this.field_U = param3;
@@ -241,12 +241,12 @@ abstract class ContentTransitionDialog extends ofa {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean snapFade(byte param0) {
         if (param0 > -53) {
           return false;
         }
         this.finishTransition(true);
-        return super.a((byte) -120);
+        return super.snapFade((byte) -120);
     }
 
     static {

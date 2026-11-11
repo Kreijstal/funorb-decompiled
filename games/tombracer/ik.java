@@ -87,7 +87,7 @@ final class ik extends IntrusiveNode {
         field_h = null;
     }
 
-    final static Weapon b(int param0) {
+    final static Weapon createBladeWeaponPreset(int param0) {
         Weapon var1 = new Weapon();
         var1.effect = new Effect(0, 5);
         var1.effect.setDeathMessageIndex(param0 ^ -17697, 10);

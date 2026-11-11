@@ -218,7 +218,7 @@ final class RenderScene {
           var5Lifetime1 = vs.field_P[11] >> 8;
           var6Lifetime1 = TimeSwitchBehaviour.field_r << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = cr.sin8192(true, var6Lifetime1) >> 8;
+          var8Lifetime1 = ConsoleTokenStream.sin8192(true, var6Lifetime1) >> 8;
           var9Lifetime1 = IntIntHashTable.cos8192(119, var6Lifetime1) >> 8;
           if (AgeValidator.field_j != -1 &&
             GridWidgetContainer.field_B != -1) {

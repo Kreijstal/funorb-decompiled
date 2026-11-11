@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o extends ora implements sca {
+final class HeapIndexArray extends ora implements IndexArray {
     private int field_c;
     static BinaryBitmapFont field_d;
 
-    public final long b(int param0) {
+    public final long getPointer(int param0) {
         if (param0 != 19135) {
           this.field_c = 80;
           return this.field_b.getAddress();
@@ -13,11 +13,11 @@ final class o extends ora implements sca {
         return this.field_b.getAddress();
     }
 
-    public final void a(int param0, int param1, byte[] param2, int param3) {
+    public final void setIndices(int param0, int param1, byte[] param2, int param3) {
         try {
           this.setData(param2, param0);
           if (param1 != -11783) {
-            this.a(100);
+            this.getBufferId(100);
           }
           this.field_c = param3;
         } catch (RuntimeException runtimeException) {
@@ -25,7 +25,7 @@ final class o extends ora implements sca {
         }
     }
 
-    public final int a(int param0) {
+    public final int getBufferId(int param0) {
         if (param0 != 9624) {
           this.field_c = 12;
           return 0;
@@ -60,7 +60,7 @@ final class o extends ora implements sca {
         }
     }
 
-    public final int c(int param0) {
+    public final int getIndexType(int param0) {
         if (param0 != -1771) {
           this.field_c = -125;
           return this.field_c;
@@ -68,7 +68,7 @@ final class o extends ora implements sca {
         return this.field_c;
     }
 
-    o(OpenGlToolkit param0, int param1, byte[] param2, int param3) {
+    HeapIndexArray(OpenGlToolkit param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
         try {
           this.field_c = param1;

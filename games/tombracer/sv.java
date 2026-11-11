@@ -73,8 +73,8 @@ final class sv extends MenuScreen {
         return aaa.a(false) / 2 + 30;
     }
 
-    final void a(int param0, int param1, boolean param2) {
-        super.a(param0, param1, param2);
+    final void onShow(int param0, int param1, boolean param2) {
+        super.onShow(param0, param1, param2);
         this.field_r.startDrop(param0 ^ -87);
     }
 

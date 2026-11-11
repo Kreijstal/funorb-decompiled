@@ -213,7 +213,7 @@ final class RandomMazeBehaviour extends Behaviour {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        nf var9 = null;
+        GridLineWalker var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -239,11 +239,11 @@ final class RandomMazeBehaviour extends Behaviour {
             var18 = (BeamSegment) null;
             this.interceptsBeam(10, -109, (BeamSegment) null, 116);
           }
-          var9 = new nf();
-          var9.a(var6, var7, this.field_z.height, this.field_t, var5, 0, this.field_z.width, var8);
+          var9 = new GridLineWalker();
+          var9.beginInGrid(var6, var7, this.field_z.height, this.field_t, var5, 0, this.field_z.width, var8);
           while (!var9.field_d) {
-            var10 = var9.b((byte) 75);
-            var11 = var9.b(2);
+            var10 = var9.cellX((byte) 75);
+            var11 = var9.cellY(2);
             if (this.field_z.getCell((byte) -5, var11, var10) > 0) {
               var12 = 16;
               var13 = this.field_t * var10;
@@ -255,7 +255,7 @@ final class RandomMazeBehaviour extends Behaviour {
                 return true;
               }
             }
-            var9.d(param1 ^ -102);
+            var9.step(param1 ^ -102);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

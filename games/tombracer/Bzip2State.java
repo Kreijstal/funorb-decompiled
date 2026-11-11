@@ -54,7 +54,7 @@ final class Bzip2State {
         try {
           var6 = (CharSequence) ((Object) param1);
           if (!CurveOperator.isValidAccountName(true, var6)) {
-            stackIn_2_0 = pk.field_v;
+            stackIn_2_0 = HiscoresScreen.field_v;
             return stackIn_2_0;
           }
           if (MiscItemBehaviour.a(param1, 0)) {

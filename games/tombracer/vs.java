@@ -67,14 +67,14 @@ final class vs extends ofa {
         }
     }
 
-    vs(jta param0, String param1) {
+    vs(DialogStack param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_M = param1;
           if (null != this.field_M) {
             var3_int = ft.field_c.measureWrappedHeight(this.field_M, 260, ft.field_c.field_w);
-            this.c(-11560, var3_int + 150, 300);
+            this.setCentredSize(-11560, var3_int + 150, 300);
           }
           this.field_L = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Q = false;

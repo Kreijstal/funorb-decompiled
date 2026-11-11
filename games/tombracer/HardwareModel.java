@@ -68,7 +68,7 @@ final class HardwareModel extends ToolkitModel {
     private int field_cb;
     static String field_k;
 
-    HardwareModel(HardwareGraphicsToolkit param0, oc param1, int param2, int param3, int param4, int param5) {
+    HardwareModel(HardwareGraphicsToolkit param0, ModelData param1, int param2, int param3, int param4, int param5) {
         this(param0, param2, param5, true, false);
         int fieldTemp$0 = 0;
         short dupTemp$1 = 0;
@@ -93,7 +93,7 @@ final class HardwareModel extends ToolkitModel {
         int stackIn_175_0 = 0;
         int stackIn_190_0 = 0;
         int stackIn_295_0 = 0;
-        oc stackIn_351_0 = null;
+        ModelData stackIn_351_0 = null;
         int stackIn_354_0 = 0;
         int stackIn_354_1 = 0;
         int stackIn_371_0 = 0;
@@ -506,7 +506,7 @@ final class HardwareModel extends ToolkitModel {
             if (this.field_I > var16) {
               var17_int = var8[var16];
               var18 = 65535 & param1.field_A[var17_int];
-              stackIn_351_0 = (oc) (param1);
+              stackIn_351_0 = (ModelData) (param1);
               if (var63 == 0) {
                 if (stackIn_351_0.field_g != null) {
                   var19 = param1.field_g[var17_int];
@@ -865,14 +865,14 @@ final class HardwareModel extends ToolkitModel {
               this.field_eb = fba.copyFloats(1, this.field_eb, this.field_fb);
               this.field_t = fba.copyFloats(1, this.field_t, this.field_fb);
               if (null != param1.field_l &&
-                SingleChildWidget.d(param2, this.field_h, 32)) {
-                this.field_D = param1.a(false, (byte) 64);
+                SingleChildWidget.hasFlag32(param2, this.field_h, 32)) {
+                this.field_D = param1.groupVerticesByLabel(false, (byte) 64);
               }
               if (null != param1.field_m &&
                 ObjectList.a(this.field_h, param2, (byte) -122)) {
                 this.field_mb = param1.b((byte) -124);
               }
-              stackIn_351_0 = (oc) (param1);
+              stackIn_351_0 = (ModelData) (param1);
             }
             if (stackIn_351_0.field_D == null) {
               return;
@@ -1730,7 +1730,7 @@ final class HardwareModel extends ToolkitModel {
           }
           var2_intLifetime1 = -112 / ((47 - param0) / 41);
           if (this.field_D != null &&
-            !SingleChildWidget.d(this.field_Y, this.field_h, 32)) {
+            !SingleChildWidget.hasFlag32(this.field_Y, this.field_h, 32)) {
             this.field_D = (int[][]) null;
             this.field_hb = null;
           }
@@ -2163,7 +2163,7 @@ final class HardwareModel extends ToolkitModel {
                   var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + var10 * var10)))) * (float)var5.field_b;
                   var3 = this.field_S.getModelTransform((byte) -77);
                   var3.a(var10 + (float)var6.field_e - var10 * var13, var6.field_m * var5.field_j >> 7, var5.field_a * var6.field_k >> 7, var6.field_c, 2, var12 - var12 * var13, var11 + (float)var6.field_b - var13 * var11);
-                  var3.b(this.field_S.field_Y, 3);
+                  var3.multiply(this.field_S.field_Y, 3);
                   this.field_S.modelTransformChanged(-1662);
                   var14 = var6.field_h;
                   this.field_S.bindMaterialTexture((byte) -80, false, false, (int) var5.field_l);
@@ -2881,7 +2881,7 @@ final class HardwareModel extends ToolkitModel {
           }
           if (decompiledFrameCompleted0) {
             if (param1) {
-              discarded$16 = this.findOrAddVertex(119, -102, -0.9161184430122375f, 115, -91, 115, -41L, -82, 0.9345446825027466f, false, (oc) null);
+              discarded$16 = this.findOrAddVertex(119, -102, -0.9161184430122375f, 115, -91, 115, -41L, -82, 0.9345446825027466f, false, (ModelData) null);
             }
             param0.field_hb = this.field_hb;
             param0.field_mb = this.field_mb;
@@ -4539,7 +4539,7 @@ final class HardwareModel extends ToolkitModel {
         }
     }
 
-    private final short findOrAddVertex(int param0, int param1, float param2, int param3, int param4, int param5, long param6, int param7, float param8, boolean param9, oc param10) {
+    private final short findOrAddVertex(int param0, int param1, float param2, int param3, int param4, int param5, long param6, int param7, float param8, boolean param9, ModelData param10) {
         int fieldTemp$0 = 0;
         short stackIn_19_0 = 0;
         int stackIn_22_0 = 0;

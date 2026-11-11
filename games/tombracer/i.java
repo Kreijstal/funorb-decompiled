@@ -10,10 +10,10 @@ final class i extends ToolkitModel implements e {
 
     final void draw(Transform3D param0, el param1, int param2) {
         if (param1 == null) {
-          this.field_f.contextForThread().a((ToolkitModel) (this), param0, (int[]) null, param2);
+          this.field_f.contextForThread().drawModel((ToolkitModel) (this), param0, (int[]) null, param2);
         } else {
           NativeSoftwareGraphicsToolkit.field_t[5] = 0;
-          this.field_f.contextForThread().a((ToolkitModel) (this), param0, NativeSoftwareGraphicsToolkit.field_t, param2);
+          this.field_f.contextForThread().drawModel((ToolkitModel) (this), param0, NativeSoftwareGraphicsToolkit.field_t, param2);
         }
     }
 
@@ -37,7 +37,7 @@ final class i extends ToolkitModel implements e {
     }
 
     final ToolkitModel copy(byte param0, int param1, boolean param2) {
-        return this.field_f.contextForThread().a(this, param0, param1, param2);
+        return this.field_f.contextForThread().copyModel(this, param0, param1, param2);
     }
 
     final void applyTransform(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
@@ -88,10 +88,10 @@ final class i extends ToolkitModel implements e {
 
     final void drawAtFixedDepth(Transform3D param0, el param1, int param2, int param3) {
         if (param1 == null) {
-          this.field_f.contextForThread().a((ToolkitModel) (this), param0, (int[]) null, param2, param3);
+          this.field_f.contextForThread().drawModelAtDepth((ToolkitModel) (this), param0, (int[]) null, param2, param3);
         } else {
           NativeSoftwareGraphicsToolkit.field_t[5] = 0;
-          this.field_f.contextForThread().a((ToolkitModel) (this), param0, NativeSoftwareGraphicsToolkit.field_t, param2, param3);
+          this.field_f.contextForThread().drawModelAtDepth((ToolkitModel) (this), param0, NativeSoftwareGraphicsToolkit.field_t, param2, param3);
         }
     }
 
@@ -101,7 +101,7 @@ final class i extends ToolkitModel implements e {
         }
     }
 
-    i(NativeSoftwareGraphicsToolkit param0, ya param1, oc param2, int param3, int param4, int param5, int param6) {
+    i(NativeSoftwareGraphicsToolkit param0, ya param1, ModelData param2, int param3, int param4, int param5, int param6) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

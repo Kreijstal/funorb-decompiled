@@ -195,7 +195,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         poa dupTemp$1 = new poa(10000536);
         this.field_C.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_E.field_r = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = LegacyOpenGlFlowingWaterEffect.formatText(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.e(127)});
+        String var2 = LegacyOpenGlFlowingWaterEffect.formatText(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.linkEnd(127)});
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, HardwareSpecularEffect.field_f);
         var3 = var3 + (this.addFieldWithHelp(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
@@ -430,13 +430,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           dayNames = null;
           return;
         }
-        AccountRegistrationPanel.a((byte) 10);
+        AccountRegistrationPanel.createFireWeaponPreset((byte) 10);
         field_w = null;
         field_H = null;
         dayNames = null;
     }
 
-    private final String e(int param0) {
+    private final String linkEnd(int param0) {
         int var2 = 105 % ((param0 - 83) / 38);
         return "</col></u>";
     }
@@ -486,7 +486,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         }
     }
 
-    final static Weapon a(byte param0) {
+    final static Weapon createFireWeaponPreset(byte param0) {
         Weapon var1 = new Weapon();
         if (param0 > 123) {
           var1.effect = new Effect(1, 3);

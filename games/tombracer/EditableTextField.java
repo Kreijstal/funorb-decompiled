@@ -67,7 +67,7 @@ final class EditableTextField extends UiComponent {
         }
     }
 
-    final void h(byte param0) {
+    final void handleMouseSelection(byte param0) {
         try {
           int dupTemp$0 = 0;
           boolean stackIn_6_1 = false;
@@ -294,12 +294,12 @@ final class EditableTextField extends UiComponent {
             if (dq.field_f != null &&
               dq.field_f.field_b) {
               og.exitFullscreen(0);
-              ModelFactory.field_a.c(new gga(ModelFactory.field_a, TurbulenceNoise3D.field_j), 122);
+              ModelFactory.field_a.pushDialog(new gga(ModelFactory.field_a, TurbulenceNoise3D.field_j), 122);
             }
             return;
           }
           ModelFactory.field_a.processPointerFrame(DelayedPcmStream.field_k, true, ConstrainToFacingArcLocomotor.field_w, param0 ^ -11);
-          ModelFactory.field_a.g((byte) -128);
+          ModelFactory.field_a.pruneFadedDialogs((byte) -128);
           while (NanoTickClock.pollKeyEvent(true)) {
             ModelFactory.field_a.dispatchKeyInput((byte) -53, MenuEntry.field_h, HardwareOpenGlToolkit.field_td);
           }
@@ -345,7 +345,7 @@ final class EditableTextField extends UiComponent {
         }
     }
 
-    final void a(PlatformTaskDispatcher param0, byte param1) {
+    final void setClipboardDispatcher(PlatformTaskDispatcher param0, byte param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -852,7 +852,7 @@ final class EditableTextField extends UiComponent {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void setFieldBounds(int param0, int param1, int param2, int param3, int param4) {
         try {
           this.setBounds(param0, param3, -23776, param2, param4);
           this.field_Cb.setBounds(param0, param3, -23776, 0, 0);

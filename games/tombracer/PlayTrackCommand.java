@@ -129,7 +129,7 @@ final class PlayTrackCommand extends ConsoleMethod {
           stackIn_5_4 = param3 * (2 + di.field_a) * 4;
           stackIn_5_5 = 2 * (2 + di.field_a);
           stackIn_6_6 = (nsa.field_i == lu.field_b);
-          var7_int = ((ScrollPane) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
+          var7_int = ((ScrollPane) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
           var8 = nsa.field_i.field_tb.field_J;
           var9 = bva.currentTimeMillis((byte) -107);
           var11 = null;

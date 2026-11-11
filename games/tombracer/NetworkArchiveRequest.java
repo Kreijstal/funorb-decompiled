@@ -93,7 +93,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static ima a(int[] param0, oc param1, int param2, byte param3) {
+    final static ima a(int[] param0, ModelData param1, int param2, byte param3) {
         ima stackIn_3_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;

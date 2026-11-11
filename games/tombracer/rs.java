@@ -18,12 +18,12 @@ final class rs {
           PlayingSound var2 = (PlayingSound) null;
           rs.queueSoundRelease((PlayingSound) null, -74);
           if (SnakePitTile.a(false)) {
-            return ModelFactory.field_a.d(true);
+            return ModelFactory.field_a.topDialogHeight(true);
           }
           return -1;
         }
         if (SnakePitTile.a(false)) {
-          return ModelFactory.field_a.d(true);
+          return ModelFactory.field_a.topDialogHeight(true);
         }
         return -1;
     }

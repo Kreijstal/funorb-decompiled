@@ -46,10 +46,10 @@ final class TrackingCrusherComponent extends PrefabComponent {
         aca.field_h[9] = MotionTrackingModel.field_u;
         aca.field_h[21] = rua.field_jb;
         aca.field_h[19] = GrowableIntList.field_b;
-        aca.field_h[5] = tw.field_g;
+        aca.field_h[5] = SoftwareRenderContext.field_g;
         aca.field_h[4] = ScoreStandings.field_d;
         aca.field_h[6] = nt.field_c;
-        aca.field_h[7] = gn.field_A;
+        aca.field_h[7] = FadingDialog.field_A;
         if (param0 == 12) {
           aca.field_h[15] = oda.field_h;
           aca.field_h[16] = BlendModeOperator.field_n;

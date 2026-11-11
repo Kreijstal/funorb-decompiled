@@ -79,7 +79,7 @@ final class RoomViewRenderer {
           var10 = var9.getRoom((byte) 73);
           var11 = -param1 + param2;
           var12 = param4 - param3;
-          MessageDialog.a(param1, var12, var11, param3, 0, 6);
+          MessageDialog.fillTranslucentRect(param1, var12, var11, param3, 0, 6);
           var13 = var11 / 2 + param1;
           var14 = var12 / 2 + param3;
           var15 = var10.getScene((byte) -81);

@@ -7,7 +7,7 @@ class tc extends lu {
     static SecondaryNodeHashTable field_d;
     static String field_f;
 
-    final static ToolkitModel[] createModels(oc[] param0, int param1, GraphicsToolkit param2) {
+    final static ToolkitModel[] createModels(ModelData[] param0, int param1, GraphicsToolkit param2) {
         int var4 = 0;
         ToolkitModel[] var3 = null;
         RuntimeException var3_ref = null;

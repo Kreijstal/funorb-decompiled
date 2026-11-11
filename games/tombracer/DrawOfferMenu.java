@@ -93,8 +93,8 @@ final class DrawOfferMenu extends MenuScreen {
         return var3;
     }
 
-    final void a(int param0, int param1, boolean param2) {
-        super.a(param0, param1, param2);
+    final void onShow(int param0, int param1, boolean param2) {
+        super.onShow(param0, param1, param2);
         this.field_r.startDrop(-72);
     }
 
@@ -117,10 +117,10 @@ final class DrawOfferMenu extends MenuScreen {
         this.field_r = new DropAnimation();
     }
 
-    final void c(int param0) {
+    final void goBack(int param0) {
         ConstrainToRectangleLocomotor.showMenuScreen(false, -1, (byte) -125);
         if (param0 != -6) {
-          this.c(49);
+          this.goBack(49);
         }
     }
 

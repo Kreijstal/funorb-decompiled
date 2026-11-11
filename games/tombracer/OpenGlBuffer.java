@@ -10,7 +10,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
     private int field_g;
     private int field_e;
     private int field_k;
-    static oc[] field_c;
+    static ModelData[] field_c;
     private int field_d;
     private boolean field_j;
 

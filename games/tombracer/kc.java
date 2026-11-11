@@ -69,7 +69,7 @@ final class kc {
           stackIn_3_0 = !param2;
           var8 = (CharSequence) ((Object) param0);
           if (!CurveOperator.isValidAccountName(stackIn_3_0, var8)) {
-            stackIn_6_0 = pk.field_v;
+            stackIn_6_0 = HiscoresScreen.field_v;
             return stackIn_6_0;
           }
           if (UiWidget.field_g != 2) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vba extends we {
+final class AchievementsScreen extends DropInMenuScreen {
     private int[] field_w;
     private int[] field_r;
     private int field_t;
@@ -10,7 +10,7 @@ final class vba extends we {
     static boolean[] field_u;
     private int field_s;
 
-    vba(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    AchievementsScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         int var7_int = 0;
         this.field_w = new int[42];
@@ -65,9 +65,9 @@ final class vba extends we {
         if (!this.field_q.isSettled(20)) {
           return;
         }
-        this.field_s = this.b(GridWidgetContainer.field_B, AgeValidator.field_j, true);
+        this.field_s = this.findAchievementAt(GridWidgetContainer.field_B, AgeValidator.field_j, true);
         if (PlayerModel.field_b == 1) {
-          var4Lifetime1 = this.b(RidgedNoise3D.field_p, PasswordValidator.field_m, true);
+          var4Lifetime1 = this.findAchievementAt(RidgedNoise3D.field_p, PasswordValidator.field_m, true);
           if (var4Lifetime1 != this.field_t) {
             if (var4Lifetime1 != -1) {
               this.field_t = var4Lifetime1;
@@ -78,16 +78,16 @@ final class vba extends we {
         }
     }
 
-    private final ToolkitSprite h(int param0, int param1) {
+    private final ToolkitSprite getAchievementIcon(int param0, int param1) {
         if ((!SimpleBlockBehaviour.c(param1) ||
           !VerticalScrollbar.field_tb[82]) &&
-          !this.a(false, param0)) {
+          !this.isAchievementEarned(false, param0)) {
           return PerlinNoise2D.field_m[42 + this.field_w[param0]];
         }
         return PerlinNoise2D.field_m[param0];
     }
 
-    private final int b(int param0, int param1, boolean param2) {
+    private final int findAchievementAt(int param0, int param1, boolean param2) {
         int stackIn_38_0 = 0;
         int var4;
         int var5;
@@ -98,7 +98,7 @@ final class vba extends we {
         int var10;
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
-        var4 = this.d(-29787);
+        var4 = this.countListedAchievements(-29787);
         var5 = -1;
         var6 = 0;
         var7 = -1;
@@ -117,7 +117,7 @@ final class vba extends we {
             var7 = (40 * (9 - var10) >> 1) + ((-360 + (-188 + (aaa.a(false) - 80)) >> 1) + 40);
             var8 = 44 * var5 + ((-540 + (-80 + aaa.a(false) - 8) >> 1) + 80);
           }
-          if (this.i(var9, 38)) {
+          if (this.isAchievementListed(var9, 38)) {
             if (param1 >= var7 &&
               param0 >= var8 &&
               var7 + 40 > param1 &&
@@ -133,7 +133,7 @@ final class vba extends we {
         return -1;
     }
 
-    private final void j(int param0, int param1) {
+    private final void drawAchievementGrid(int param0, int param1) {
         int stackIn_10_0 = 0;
         int var3;
         int var4;
@@ -146,7 +146,7 @@ final class vba extends we {
         int var10;
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
-        var3 = this.d(-29787);
+        var3 = this.countListedAchievements(-29787);
         var4 = -1;
         if (param0 > -102) {
           return;
@@ -165,8 +165,8 @@ final class vba extends we {
             var6 = (40 * (-var9_int + 9) >> 1) + (-540 + (-80 + aaa.a(false) - 8) >> 1) + 40;
             var7 = (-8 + (aaa.a(false) - 80) - 540 >> 1) + param1 + 80 + 44 * var4;
           }
-          if (this.i(var8, 94)) {
-            var9 = this.h(var8, 0);
+          if (this.isAchievementListed(var8, 94)) {
+            var9 = this.getAchievementIcon(var8, 0);
             var10 = this.field_r[var8];
             var9.drawScaled(-(var10 >> 1) + (var6 + 4), -(var10 >> 1) + (var7 + 4), var10 + 32, var10 + 32);
             var5++;
@@ -178,11 +178,11 @@ final class vba extends we {
         return;
     }
 
-    private final boolean a(boolean param0, int param1) {
+    private final boolean isAchievementEarned(boolean param0, int param1) {
         int discarded$0 = 0;
         if (param0) {
           GameFont var4 = (GameFont) null;
-          discarded$0 = this.a((String) null, (FontMetrics) null, -5, -61, -30, (GameFont) null, 39, -50, -125);
+          discarded$0 = this.drawWrappedText((String) null, (FontMetrics) null, -5, -61, -30, (GameFont) null, 39, -50, -125);
         }
         return vaa.isBitSet(SimpleConditionBehaviour.field_o, param1, -101);
     }
@@ -194,9 +194,9 @@ final class vba extends we {
         return (pha) (tc.field_d.get(param0 ^ 88, param1));
     }
 
-    private final boolean i(int param0, int param1) {
+    private final boolean isAchievementListed(int param0, int param1) {
         if (param1 <= 30) {
-          this.a(false, 72, (byte) -87);
+          this.drawPanelContent(false, 72, (byte) -87);
         }
         return RoomRegion.field_h[param0];
     }
@@ -208,7 +208,7 @@ final class vba extends we {
         return aaa.a(false) / 2 - (-15 + this.items[param1].getWidth(-163) / 2 * this.items.length) + this.items[param1].getWidth(-163) * param1;
     }
 
-    private final void c(int param0, byte param1) {
+    private final void drawAchievementDetails(int param0, byte param1) {
         int discarded$0 = 0;
         int stackIn_5_0 = 0;
         int var3;
@@ -243,22 +243,22 @@ final class vba extends we {
         if (-1 == var6) {
           return;
         }
-        if (!this.i(var6, 65)) {
+        if (!this.isAchievementListed(var6, 65)) {
           return;
         }
-        this.h(var6, 0).draw(var4 + var3, var3 + var5);
+        this.getAchievementIcon(var6, 0).draw(var4 + var3, var3 + var5);
         var7Lifetime1 = var5 + 20 + 180;
         var8 = ShowLevelSetCommand.achievementNames[var6].toUpperCase();
         var12 = kv.achievementDescriptions[var6];
-        var10 = this.a(var8, MatchStatistics.field_n, -6671872, 180, var4, eda.field_f, 128, var7Lifetime1, 15);
+        var10 = this.drawWrappedText(var8, MatchStatistics.field_n, -6671872, 180, var4, eda.field_f, 128, var7Lifetime1, 15);
         var7Lifetime1 = var7Lifetime1 + (5 + 15 * var10);
-        if (!this.a(false, var6)) {
+        if (!this.isAchievementEarned(false, var6)) {
           kn.field_p.drawLeft(var7Lifetime1, false, pg.field_x, var4, -6671872, -1);
         } else {
           kn.field_p.drawLeft(var7Lifetime1, false, MessageOverlay.field_p, var4, -14671840, -1);
         }
         var7Lifetime1 += 20;
-        discarded$0 = this.a(var12 + "<br><br>" + jn.field_r + EditableTextField.field_zb[var6] + "       " + DisplacementOperator.field_m + EditableTextField.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, param1 ^ -150, var7Lifetime1, 15);
+        discarded$0 = this.drawWrappedText(var12 + "<br><br>" + jn.field_r + EditableTextField.field_zb[var6] + "       " + DisplacementOperator.field_m + EditableTextField.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, param1 ^ -150, var7Lifetime1, 15);
         return;
     }
 
@@ -269,7 +269,7 @@ final class vba extends we {
         return -30 + SwitchLinkList.b(param1 ^ 30);
     }
 
-    private final int a(String param0, FontMetrics param1, int param2, int param3, int param4, GameFont param5, int param6, int param7, int param8) {
+    private final int drawWrappedText(String param0, FontMetrics param1, int param2, int param3, int param4, GameFont param5, int param6, int param7, int param8) {
         int var12 = 0;
         String[] var10 = null;
         RuntimeException var10_ref = null;
@@ -336,10 +336,10 @@ final class vba extends we {
         return super.getActionLabel(param0, (byte) 121);
     }
 
-    final void a(boolean param0, int param1, byte param2) {
+    final void drawPanelContent(boolean param0, int param1, byte param2) {
         SingleChildWidget.field_v.drawLeft(63 + param1, false, qja.field_i.toUpperCase(), 65, -14279929, -1);
-        this.j(-119, param1);
-        this.c(param1, (byte) -22);
+        this.drawAchievementGrid(-119, param1);
+        this.drawAchievementDetails(param1, (byte) -22);
         if (TextWidgetPainter.a(7)) {
           kn.field_p.drawCentred(-1, -1, aaa.a(false) / 2, -14345466, 405 + param1, ooa.field_h);
         }
@@ -348,18 +348,18 @@ final class vba extends we {
         }
     }
 
-    private final int d(int param0) {
+    private final int countListedAchievements(int param0) {
         int discarded$1 = 0;
         int var3 = 0;
         int var2;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (param0 != -29787) {
-          discarded$1 = this.d(76);
+          discarded$1 = this.countListedAchievements(76);
         }
         var2 = 0;
         for (var3 = 0; 42 > var3; var3++) {
-          if (this.i(var3, 37)) {
+          if (this.isAchievementListed(var3, 37)) {
             var2++;
           }
         }

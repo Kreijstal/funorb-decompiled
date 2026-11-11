@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ad extends IntrusiveNode {
+final class CharacterChoiceTile extends IntrusiveNode {
     static String field_i;
     static String field_h;
     int field_f;
@@ -9,7 +9,7 @@ final class ad extends IntrusiveNode {
     static TombRacer field_j;
     private int field_k;
 
-    final boolean a(byte param0) {
+    final boolean isHovered(byte param0) {
         if (param0 >= -62) {
           this.field_k = -99;
           if (this.field_k > AgeValidator.field_j) {
@@ -48,12 +48,12 @@ final class ad extends IntrusiveNode {
         field_j = null;
     }
 
-    ad(int param0, int param1, int param2) {
+    CharacterChoiceTile(int param0, int param1, int param2) {
         this(param1, param2);
         this.field_f = param0;
     }
 
-    final boolean a(int param0) {
+    final boolean isEmpty(int param0) {
         if (param0 != -64) {
           return true;
         }
@@ -75,7 +75,7 @@ final class ad extends IntrusiveNode {
           var2_int = param1.readBits((byte) 44, 4);
           if (param0 != 87) {
             var5 = (BitPacketBuffer) null;
-            ad.decodeEffect((byte) -125, (BitPacketBuffer) null);
+            CharacterChoiceTile.decodeEffect((byte) -125, (BitPacketBuffer) null);
           }
           var3 = param1.readBits((byte) 44, 10);
           var4 = new Effect(var2_int, var3);
@@ -129,7 +129,7 @@ final class ad extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void draw(byte param0, boolean param1) {
         String var10 = null;
         int var3 = 0;
         String var4 = null;
@@ -142,14 +142,14 @@ final class ad extends IntrusiveNode {
         int var3Lifetime1;
         TextInputWidget.paintNineSliceFrame(1, var7, (byte) -96, var4_int, var8, 64, 1, 64, var6, 0);
         tga.field_a.setClip(this.field_k, this.field_g, this.field_k + 64, -3 + this.field_g + 64);
-        if (this.a(-64)) {
+        if (this.isEmpty(-64)) {
           nc.field_e.draw(this.field_k, this.field_g);
           tga.field_a.la();
           var3 = 2431750;
           if (param1) {
             var3 = 10309393;
           }
-          var10 = !this.a(-64) ? Room.field_m[this.field_f] : "";
+          var10 = !this.isEmpty(-64) ? Room.field_m[this.field_f] : "";
           var4 = var10;
           SocketConnector.a(var10.toUpperCase(), 1, qf.field_j, var3, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
           return;
@@ -160,12 +160,12 @@ final class ad extends IntrusiveNode {
         if (param1) {
           var3Lifetime1 = 10309393;
         }
-        String var9 = !this.a(-64) ? Room.field_m[this.field_f] : "";
+        String var9 = !this.isEmpty(-64) ? Room.field_m[this.field_f] : "";
         var4Lifetime1 = var9;
         SocketConnector.a(var9.toUpperCase(), 1, qf.field_j, var3Lifetime1, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
     }
 
-    ad(int param0, int param1) {
+    CharacterChoiceTile(int param0, int param1) {
         this.field_f = -1;
         this.field_k = -2 + param0 + uca.cosmeticRandom.nextBounded(4, 0);
         this.field_g = -5 + (uca.cosmeticRandom.nextBounded(10, 0) + param1);

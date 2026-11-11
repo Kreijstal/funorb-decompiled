@@ -11,7 +11,7 @@ final class ColourKeyOperator extends TextureOperator {
 
     final static su[] c(int param0) {
         int var1 = 23 % ((-4 - param0) / 36);
-        return new su[]{MovingSawComponent.field_M, FuseBehaviour.field_v, RoomComponent.field_y, ll.field_d, DiskArchiveRequest.field_n, bi.field_d, OpenGlEnvironmentWaterEffect.field_g, wc.field_e, IntrusiveDeque.field_a, HslAdjustOperator.field_v, IntNode.field_f, kea.field_c, DoorwayModel.field_o, oc.field_H};
+        return new su[]{MovingSawComponent.field_M, FuseBehaviour.field_v, RoomComponent.field_y, ll.field_d, DiskArchiveRequest.field_n, bi.field_d, OpenGlEnvironmentWaterEffect.field_g, wc.field_e, IntrusiveDeque.field_a, HslAdjustOperator.field_v, IntNode.field_f, kea.field_c, DoorwayModel.field_o, ModelData.field_H};
     }
 
     public ColourKeyOperator() {

@@ -190,7 +190,7 @@ final class StandingsPhase extends MatchPhase {
             }
             var12 = 150;
             RasterBuffer.a(-60 + var11, 2, tga.field_a, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
-            MembersUpsellMenu.a(this.screen.getPlayerName(var22, false).toUpperCase(), wga.field_a[var22], kn.field_p, -1, var10 - 230, var11, 0);
+            MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(var22, false).toUpperCase(), wga.field_a[var22], kn.field_p, -1, var10 - 230, var11, 0);
             try {
               tga.field_a.fillShadedTriangle(var11, var10 - 140, 10 + var11, -151 + var10, var11, var10 - 151, 65793 | var12 << 24, var12 << 24 | 65793, var12 << 24 | 65793, 1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -208,7 +208,7 @@ final class StandingsPhase extends MatchPhase {
                 SocketConnector.a(SoundEventPlayer.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
               }
             } else {
-              MembersUpsellMenu.a(id.field_i.toUpperCase(), 11141120, kn.field_p, -1, var10 - 190, var11, 0);
+              MembersUpsellMenu.drawCentredTextWithShadow(id.field_i.toUpperCase(), 11141120, kn.field_p, -1, var10 - 190, var11, 0);
             }
             var22++;
           }
@@ -229,13 +229,13 @@ final class StandingsPhase extends MatchPhase {
           } else {
             var10_ref_String = SecondaryLinkQueue.worldNames[var9].toUpperCase();
           }
-          SocketConnector.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
-          MembersUpsellMenu.a(this.screen.getPlayerName(this.screen.localPlayerIndex, false).toUpperCase(), wga.field_a[this.screen.localPlayerIndex], eda.field_f, -1, -15 + var4, var3, -1);
+          SocketConnector.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
+          MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(this.screen.localPlayerIndex, false).toUpperCase(), wga.field_a[this.screen.localPlayerIndex], eda.field_f, -1, -15 + var4, var3, -1);
           if (this.matchState.declaredWinner < 0) {
-            MembersUpsellMenu.a(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
-            MembersUpsellMenu.a(SafeZoneBehaviour.field_n.toUpperCase(), 2431750, kn.field_p, -1, 45 + var4, var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(SafeZoneBehaviour.field_n.toUpperCase(), 2431750, kn.field_p, -1, 45 + var4, var3, -1);
           } else {
-            MembersUpsellMenu.a(iaa.field_a.toUpperCase(), 2431750, eda.field_f, -1, -40 + var4, var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(iaa.field_a.toUpperCase(), 2431750, eda.field_f, -1, -40 + var4, var3, -1);
             if (var9 == uca.field_a) {
               var12_ref = null;
               var13_ref_String = SpriteTileOperator.field_v;
@@ -254,33 +254,33 @@ final class StandingsPhase extends MatchPhase {
               if (var12_ref != null) {
                 ((ToolkitSprite) (var12_ref)).draw(var3 - (120 + ((ToolkitSprite) (var12_ref)).paddedWidth() / 2), var4 - 10);
               }
-              MembersUpsellMenu.a(var13_ref_String, 65793, kn.field_p, -1, 35 + var4, var3 - 120, -1);
+              MembersUpsellMenu.drawCentredTextWithShadow(var13_ref_String, 65793, kn.field_p, -1, 35 + var4, var3 - 120, -1);
             }
           }
           if (var11 != 0) {
             var24 = DropAnimation.formatTime(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
-            MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
-            MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
             var13 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(74);
-            MembersUpsellMenu.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
             var23 = DropAnimation.formatTime(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
-            MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
             za.field_g.draw(-200 + var3, var4 + 60);
             var13 = LegacyOpenGlShoreWaveWaterEffect.sumRoomParTimes(var9, 0);
             RoomEffectTraps.a(-1, -36, var4 + 79, DropAnimation.formatTime(var13, (byte) -8), -200 + (var3 + za.field_g.paddedWidth()) + 5, kn.field_p, 2431750);
             VariantMask.field_d.draw(var3 - 110, 60 + var4);
             RoomEffectTraps.a(-1, -92, 79 + var4, DropAnimation.formatTime(var13 + var13 / 2, (byte) -8), VariantMask.field_d.paddedWidth() + (var3 - 110) + 5, kn.field_p, 2431750);
-            MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
             var14 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(110);
-            MembersUpsellMenu.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
             if (FacePlayerLocomotor.field_p != null &&
               FacePlayerLocomotor.field_p.field_p != null &&
               FacePlayerLocomotor.field_p.field_h) {
               var15 = FacePlayerLocomotor.field_p.field_p[1][0];
               var16 = -var15 + var14;
               if (var15 != 0) {
-                MembersUpsellMenu.a(LegacyOpenGlFlowingWaterEffect.formatText(103, ItemComponent.field_F, new String[]{Integer.toString(var15).toUpperCase() + " " + ByteStorage.formatSignedOffset(var16, -1)}), 2431750, kn.field_p, -1, 50 + var4, 120 + var3, -1);
+                MembersUpsellMenu.drawCentredTextWithShadow(LegacyOpenGlFlowingWaterEffect.formatText(103, ItemComponent.field_F, new String[]{Integer.toString(var15).toUpperCase() + " " + ByteStorage.formatSignedOffset(var16, -1)}), 2431750, kn.field_p, -1, 50 + var4, 120 + var3, -1);
               }
               var17 = 0;
               var18 = null;

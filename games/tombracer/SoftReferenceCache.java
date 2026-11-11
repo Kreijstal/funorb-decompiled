@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoftReferenceCache {
-    static oc[] field_b;
+    static ModelData[] field_b;
     private SecondaryNodeDeque field_f;
     private IterableNodeHashTable field_c;
     private int field_e;

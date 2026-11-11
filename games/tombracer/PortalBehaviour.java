@@ -9,7 +9,7 @@ final class PortalBehaviour extends Behaviour {
     final static void a(int param0, boolean param1, MusicTrack param2, int param3) {
         RuntimeException var4 = null;
         MusicTrack var5 = null;
-        sq stackIn_2_0;
+        MusicPlayer stackIn_2_0;
         int stackIn_2_1;
         int stackIn_2_2;
         int stackIn_2_3;
@@ -26,7 +26,7 @@ final class PortalBehaviour extends Behaviour {
           stackIn_2_3 = -44;
           stackIn_2_4 = 1000000;
           stackIn_3_5 = !(param1);
-          ((sq) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, (byte) stackIn_2_3, stackIn_2_4, stackIn_3_5, param2);
+          ((MusicPlayer) (Object) stackIn_2_0).playTrack(stackIn_2_1, stackIn_2_2, (byte) stackIn_2_3, stackIn_2_4, stackIn_3_5, param2);
           if (param0 == 9) {
             return;
           }

@@ -8,7 +8,7 @@ final class CollisionGrid {
     private NodeHashTable field_h;
     private SecondaryNodeHashTable field_e;
     private int field_c;
-    private nf field_b;
+    private GridLineWalker field_b;
     private int field_d;
     private Collidable[] field_a;
 
@@ -99,11 +99,11 @@ final class CollisionGrid {
         Collidable var10;
         int var12;
         var12 = TombRacer.field_G ? 1 : 0;
-        this.field_b.a(-2147483648, (byte) 7, 32, 2147483647, param1 >> this.field_c, param2 >> this.field_c, param3 >> this.field_c, param0 >> this.field_c, 2147483647, -2147483648);
+        this.field_b.begin(-2147483648, (byte) 7, 32, 2147483647, param1 >> this.field_c, param2 >> this.field_c, param3 >> this.field_c, param0 >> this.field_c, 2147483647, -2147483648);
         this.field_d = param4;
         while (!this.field_b.field_d) {
-          var6 = this.field_b.b((byte) 75);
-          var7 = this.field_b.b(2);
+          var6 = this.field_b.cellX((byte) 75);
+          var7 = this.field_b.cellY(2);
           var8 = (CollisionGridEntry) (this.field_h.get((byte) -119, (long)ConstrainToRectangleLocomotor.hashCell(var6, var7, (byte) 36)));
           while (var8 != null) {
             if (var8.isAtCell(var6, var7, true)) {
@@ -127,7 +127,7 @@ final class CollisionGrid {
             }
             var8 = (CollisionGridEntry) (this.field_h.nextWithSameKey(-128));
           }
-          this.field_b.d(113);
+          this.field_b.step(113);
         }
         return this.copyResults(0);
     }
@@ -276,7 +276,7 @@ final class CollisionGrid {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -4) {
-            this.field_b = (nf) null;
+            this.field_b = (GridLineWalker) null;
           }
           stackIn_3_0 = this.queryLine(param0.field_e, param0.field_d, param0.field_k, param0.field_a, 0);
           return stackIn_3_0;
@@ -347,7 +347,7 @@ final class CollisionGrid {
     }
 
     private CollisionGrid(int param0, boolean param1, int param2) {
-        this.field_b = new nf();
+        this.field_b = new GridLineWalker();
         this.field_a = new Collidable[128];
         this.field_i = 1 << param0;
         this.field_h = new NodeHashTable(this.field_i);

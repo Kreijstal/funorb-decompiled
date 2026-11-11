@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gn extends WidgetContainer {
+abstract class FadingDialog extends WidgetContainer {
     static RasterBuffer field_C;
     static String field_y;
     private int field_x;
-    jta field_z;
+    DialogStack field_z;
     static String[] field_w;
     boolean field_B;
     static String field_A;
 
-    private final int b(boolean param0) {
+    private final int targetOpacity(boolean param0) {
         if (!param0) {
-          return this.field_B ? this == this.field_z.a((byte) -76) ? 256 : 0 : 0;
+          return this.field_B ? this == this.field_z.getTopVisibleDialog((byte) -76) ? 256 : 0 : 0;
         }
         return 84;
     }
@@ -39,15 +39,15 @@ abstract class gn extends WidgetContainer {
         return (UiWidget) (this);
     }
 
-    boolean a(int param0) {
+    boolean updateFade(int param0) {
         int var2;
         int var3;
         boolean stackIn_11_0 = false;
         boolean stackIn_21_0 = false;
         if (param0 < 126) {
-          this.c(-76, -128, 127);
+          this.setCentredSize(-76, -128, 127);
         }
-        var2 = this.b(false);
+        var2 = this.targetOpacity(false);
         var3 = -this.field_x + var2;
         if (var3 <= 0) {
           if (0 > var3) {
@@ -70,11 +70,11 @@ abstract class gn extends WidgetContainer {
         return stackIn_11_0;
     }
 
-    boolean a(byte param0) {
+    boolean snapFade(byte param0) {
         if (param0 > -53) {
           return true;
         }
-        this.field_x = this.b(false);
+        this.field_x = this.targetOpacity(false);
         if (this.field_x != 0) {
           return false;
         }
@@ -84,15 +84,15 @@ abstract class gn extends WidgetContainer {
         return false;
     }
 
-    final static Sprite[] b(int param0, int param1, int param2, int param3) {
+    final static Sprite[] createFrameSprites(int param0, int param1, int param2, int param3) {
         if (param1 == 1) {
           return ura.createBeveledFrameSprites(param2, param0, false, 1, param3);
         }
-        gn.releaseStatics(91);
+        FadingDialog.releaseStatics(91);
         return ura.createBeveledFrameSprites(param2, param0, false, 1, param3);
     }
 
-    gn(jta param0, int param1, int param2) {
+    FadingDialog(DialogStack param0, int param1, int param2) {
         super(bb.field_m - param1 >> 1, -param2 + qba.field_a >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_x = 0;
@@ -117,7 +117,7 @@ abstract class gn extends WidgetContainer {
         }
         if (fta.field_a == null) {
           fta.field_a = new Sprite(this.field_m, this.field_p);
-          nm.setRasterTarget(fta.field_a, (byte) 118);
+          OpenGlIndexArray.setRasterTarget(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
@@ -127,7 +127,7 @@ abstract class gn extends WidgetContainer {
         }
         if (fta.field_a.field_m < this.field_m) {
           fta.field_a = new Sprite(this.field_m, this.field_p);
-          nm.setRasterTarget(fta.field_a, (byte) 118);
+          OpenGlIndexArray.setRasterTarget(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
@@ -136,7 +136,7 @@ abstract class gn extends WidgetContainer {
           return;
         }
         if (fta.field_a.field_q >= this.field_p) {
-          nm.setRasterTarget(fta.field_a, (byte) 118);
+          OpenGlIndexArray.setRasterTarget(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
@@ -145,7 +145,7 @@ abstract class gn extends WidgetContainer {
           return;
         }
         fta.field_a = new Sprite(this.field_m, this.field_p);
-        nm.setRasterTarget(fta.field_a, (byte) 118);
+        OpenGlIndexArray.setRasterTarget(fta.field_a, (byte) 118);
         SoftwareRasterizer.clear();
         this.drawDialogFrame(0, (byte) -67, 0);
         super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
@@ -155,7 +155,7 @@ abstract class gn extends WidgetContainer {
 
     abstract void drawDialogFrame(int param0, byte param1, int param2);
 
-    final void c(int param0, int param1, int param2) {
+    final void setCentredSize(int param0, int param1, int param2) {
         if (param0 == -11560) {
           this.setBounds((byte) -31, param2, param1, -param2 + bb.field_m >> 1, qba.field_a - param1 >> 1);
           return;

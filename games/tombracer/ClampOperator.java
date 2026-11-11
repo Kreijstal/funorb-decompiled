@@ -11,8 +11,8 @@ final class ClampOperator extends TextureOperator {
         int var5 = 0;
         rv.field_c.field_r = param0;
         LegacyOpenGlBloomEffect.field_o = true;
-        int var2_int = gn.field_C.field_f;
-        int var3 = gn.field_C.field_e;
+        int var2_int = FadingDialog.field_C.field_f;
+        int var3 = FadingDialog.field_C.field_e;
         if (param1 != 15165) {
           return;
         }

@@ -41,7 +41,7 @@ abstract class MenuScreen extends GameScreen {
             if (var5 == 0) {
               if (stackIn_4_0) {
                 stackIn_12_0 = var4;
-                stackIn_12_1 = this.a(param0 + 15, var3_int);
+                stackIn_12_1 = this.isItemSelected(param0 + 15, var3_int);
                 stackIn_12_2 = this.isActionEnabled(var4.field_g, -30487);
                 stackIn_12_3 = 1;
                 stackIn_13_4 = (this.field_k.selectedIndex == var3_int);
@@ -298,7 +298,7 @@ abstract class MenuScreen extends GameScreen {
               }
             } else {
               if (param2 != 15283) {
-                this.c(34);
+                this.goBack(34);
               }
               if (!param1) {
                 break scanLoop1;
@@ -394,7 +394,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    final boolean a(boolean param0, MenuScreen param1) {
+    final boolean isShallowerThan(boolean param0, MenuScreen param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -559,26 +559,26 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var7 == 23 &&
                 var8 == 0) {
-                ((pk) (RenderScene.field_g[3])).b((byte) 94, 0);
+                ((HiscoresScreen) (RenderScene.field_g[3])).selectTable((byte) 94, 0);
                 return true;
               }
               if (var7 == 24) {
-                ((pk) (RenderScene.field_g[3])).b((byte) 84, 1);
+                ((HiscoresScreen) (RenderScene.field_g[3])).selectTable((byte) 84, 1);
                 return true;
               }
               if (var7 == 25 &&
                 var8 == 0) {
-                ((pk) (RenderScene.field_g[3])).b((byte) 126, 2);
+                ((HiscoresScreen) (RenderScene.field_g[3])).selectTable((byte) 126, 2);
                 return true;
               }
               if (var7 == 26 &&
                 var8 == 0) {
-                ((qp) (RenderScene.field_g[5])).h(18608, 0);
+                ((RatingsScreen) (RenderScene.field_g[5])).selectTable(18608, 0);
                 return true;
               }
               if (27 == var7 &&
                 var8 == 0) {
-                ((qp) (RenderScene.field_g[5])).h(18608, 1);
+                ((RatingsScreen) (RenderScene.field_g[5])).selectTable(18608, 1);
                 return true;
               }
               if (var7 == 28 &&
@@ -728,7 +728,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    void a(int param0, int param1, boolean param2) {
+    void onShow(int param0, int param1, boolean param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -791,16 +791,16 @@ abstract class MenuScreen extends GameScreen {
               this.field_k.handleHorizontalNavigation(0, param2 ^ -123);
               if (var5 != 0) {
                 this.field_k.handleVerticalNavigation(117);
-                this.c(-6);
+                this.goBack(-6);
               }
             } else {
               this.field_k.handleVerticalNavigation(117);
               if (var5 != 0) {
-                this.c(-6);
+                this.goBack(-6);
               }
             }
           } else {
-            this.c(-6);
+            this.goBack(-6);
           }
           if (param2 != 1) {
             this.firstItemY = 76;
@@ -918,7 +918,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    boolean a(int param0, int param1) {
+    boolean isItemSelected(int param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -982,7 +982,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    void c(int param0) {
+    void goBack(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {

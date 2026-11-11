@@ -140,7 +140,7 @@ final class ConsoleToken extends IntrusiveNode {
         }
     }
 
-    final ConsoleValue evaluate(int param0, ConsoleMethod[] param1) throws rv, jj {
+    final ConsoleValue evaluate(int param0, ConsoleMethod[] param1) throws rv, ConsoleParseException {
         int incrementValue$0 = 0;
         ConsoleValue stackIn_9_0 = null;
         ConsoleValue stackIn_13_0 = null;

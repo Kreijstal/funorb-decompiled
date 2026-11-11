@@ -17,14 +17,14 @@ final class PressureSwitchComponent extends SwitchComponent {
         gqa var9 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (pk.field_r < SoftwareTransform3D.field_q) {
-            pk.field_r = pk.field_r + 1;
+          if (HiscoresScreen.field_r < SoftwareTransform3D.field_q) {
+            HiscoresScreen.field_r = HiscoresScreen.field_r + 1;
           }
-          if (mha.field_E != gn.field_C.field_e) {
-            tj.field_b = tj.field_b + (gn.field_C.field_e - mha.field_E);
-            mha.field_E = gn.field_C.field_e;
+          if (mha.field_E != FadingDialog.field_C.field_e) {
+            tj.field_b = tj.field_b + (FadingDialog.field_C.field_e - mha.field_E);
+            mha.field_E = FadingDialog.field_C.field_e;
           }
-          if (pk.field_r <= 0) {
+          if (HiscoresScreen.field_r <= 0) {
             return;
           }
           rg.a((byte) -53);

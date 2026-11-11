@@ -71,15 +71,15 @@ final class qpa implements GamePacket {
             } else {
               if (param2 != 2) {
                 if (param2 == 3) {
-                  RenderScene.field_g[param2] = (MenuScreen) ((Object) new pk(param2, param6, param4, param0, param3, param1));
+                  RenderScene.field_g[param2] = (MenuScreen) ((Object) new HiscoresScreen(param2, param6, param4, param0, param3, param1));
                 } else {
                   if (4 != param2 &&
                     param2 != 12) {
                     if (param2 == 5) {
-                      RenderScene.field_g[param2] = (MenuScreen) ((Object) new qp(param2, param6, param4, param0, param3, param1));
+                      RenderScene.field_g[param2] = (MenuScreen) ((Object) new RatingsScreen(param2, param6, param4, param0, param3, param1));
                     } else {
                       if (param2 == 6) {
-                        RenderScene.field_g[param2] = (MenuScreen) ((Object) new vba(param2, param6, param4, param0, param3, param1));
+                        RenderScene.field_g[param2] = (MenuScreen) ((Object) new AchievementsScreen(param2, param6, param4, param0, param3, param1));
                       } else {
                         if (param2 == 7) {
                           RenderScene.field_g[param2] = (MenuScreen) ((Object) new DrawOfferMenu(param2, param6, param4, param0, param3, param1));

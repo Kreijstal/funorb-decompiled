@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk extends we {
+final class HiscoresScreen extends DropInMenuScreen {
     static UiComponent field_z;
     private int field_u;
     private int[] field_A;
@@ -77,10 +77,10 @@ final class pk extends we {
         return;
     }
 
-    final void b(byte param0, int param1) {
+    final void selectTable(byte param0, int param1) {
         boolean discarded$0 = false;
         if (param0 <= 54) {
-          discarded$0 = this.a(-109, (byte) -61, 118);
+          discarded$0 = this.drawTable(-109, (byte) -61, 118);
         }
         this.field_x = param1;
     }
@@ -99,7 +99,7 @@ final class pk extends we {
         return SwitchLinkList.b(0) - 30;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, String param5) {
+    private final void drawRow(int param0, int param1, int param2, int param3, int param4, String param5) {
         GameFont var11 = null;
         GameFont var12 = null;
         String var8 = null;
@@ -121,7 +121,7 @@ final class pk extends we {
         }
     }
 
-    private final boolean a(int param0, byte param1, int param2) {
+    private final boolean drawTable(int param0, byte param1, int param2) {
         int stackIn_3_0 = 0;
         Object stackIn_20_0;
         int stackIn_20_1;
@@ -181,7 +181,7 @@ final class pk extends we {
               stackIn_21_0 = this;
               stackIn_21_4 = 2431750;
             }
-            this.a(stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_21_4, -105, var13);
+            this.drawRow(stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_21_4, -105, var13);
             var8 = 1;
           }
           var11++;
@@ -190,7 +190,7 @@ final class pk extends we {
         if (var9 == 0 &&
           this.field_u == var7.courseId) {
           var8 = 1;
-          this.a(var10 + 20, -1, var7.scores[0], -5818367, -91, MenuEntry.field_k);
+          this.drawRow(var10 + 20, -1, var7.scores[0], -5818367, -91, MenuEntry.field_k);
         }
         if (param1 >= -85) {
           stackIn_29_0 = (String) null;
@@ -199,7 +199,7 @@ final class pk extends we {
         return var8 != 0;
     }
 
-    final void a(boolean param0, int param1, byte param2) {
+    final void drawPanelContent(boolean param0, int param1, byte param2) {
         boolean discarded$0 = false;
         int var4;
         Object var5;
@@ -238,14 +238,14 @@ final class pk extends we {
             var5Lifetime1 = FacePlayerMountComponent.field_H;
           } else {
             if (3 == var6Lifetime1) {
-              var5Lifetime1 = nm.field_j;
+              var5Lifetime1 = OpenGlIndexArray.field_j;
             }
           }
         }
         if (var5Lifetime1 != null) {
-          MembersUpsellMenu.a(((String) (var5Lifetime1)).toUpperCase(), 65793, eda.field_f, -1, 240 + param1, aaa.a(false) / 2, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(((String) (var5Lifetime1)).toUpperCase(), 65793, eda.field_f, -1, 240 + param1, aaa.a(false) / 2, -1);
         } else {
-          discarded$0 = this.a(this.field_x, (byte) -91, 50 + param1);
+          discarded$0 = this.drawTable(this.field_x, (byte) -91, 50 + param1);
         }
         kn.field_p.drawCentred(-1, -1, aaa.a(false) / 2, -14345466, param1 + 405, LegacyOpenGlEnvironmentWaterEffect.field_f);
         return;
@@ -258,7 +258,7 @@ final class pk extends we {
         return param0 * 160 + 465 - 80 * this.items.length;
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean isItemSelected(int param0, int param1) {
         if (param0 != -13) {
           return true;
         }
@@ -267,14 +267,14 @@ final class pk extends we {
 
     public static void releaseStatics(boolean param0) {
         if (!param0) {
-          pk.releaseStatics(false);
+          HiscoresScreen.releaseStatics(false);
         }
         field_z = null;
         field_s = null;
         field_v = null;
     }
 
-    pk(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    HiscoresScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         int var7_int = 0;
         int var8 = 0;

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class taa extends IntrusiveNode {
+final class UnlockEntry extends IntrusiveNode {
     private int field_f;
     private int field_h;
     static nc field_g;
 
-    final void a(PacketBuffer param0, int param1) {
+    final void write(PacketBuffer param0, int param1) {
         try {
           if (param1 != 32654) {
-            taa.releaseStatics((byte) -36);
+            UnlockEntry.releaseStatics((byte) -36);
           }
           param0.writeByte(this.field_h, 0);
           param0.writeByte(this.field_f, 0);
@@ -18,7 +18,7 @@ final class taa extends IntrusiveNode {
         }
     }
 
-    final int c(int param0) {
+    final int getKind(int param0) {
         if (param0 != 16) {
           return -13;
         }
@@ -63,7 +63,7 @@ final class taa extends IntrusiveNode {
             }
           }
           if (param0 >= -106) {
-            taa.a((byte) -56, 127, 63, -18);
+            UnlockEntry.a((byte) -56, 127, 63, -18);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,12 +73,12 @@ final class taa extends IntrusiveNode {
         }
     }
 
-    taa(int param0, int param1) {
+    UnlockEntry(int param0, int param1) {
         this.field_h = param0;
         this.field_f = param1;
     }
 
-    final boolean b(int param0) {
+    final boolean isNotYetOwned(int param0) {
         boolean stackIn_10_0 = false;
         if (param0 != 1) {
           return false;
@@ -90,7 +90,7 @@ final class taa extends IntrusiveNode {
         return stackIn_10_0;
     }
 
-    final int a(int param0) {
+    final int getIndex(int param0) {
         if (param0 != -13939) {
           this.field_f = 74;
         }

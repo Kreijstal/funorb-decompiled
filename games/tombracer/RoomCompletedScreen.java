@@ -27,13 +27,13 @@ final class RoomCompletedScreen extends MatchOverlay {
           var3 = 160;
           SecondaryNodeDequeIterator.a(192, 160, 3145728, 240, (byte) 22, var3, 200);
           WhiteLightShooterComponent.a(200, (byte) -85, var3, 5242880, 2, 160, 240);
-          MembersUpsellMenu.a("Room Completed", var2, eda.field_f, -1, var3 + 40, 320, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow("Room Completed", var2, eda.field_f, -1, var3 + 40, 320, 0);
           var4 = 240;
           var5 = this.field_g.simulations[0].rooms[0];
           var4 += 20;
-          MembersUpsellMenu.a("Total Time: " + DropAnimation.formatTime(this.field_g.simulations[0].tick, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow("Total Time: " + DropAnimation.formatTime(this.field_g.simulations[0].tick, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
           var4 += 20;
-          MembersUpsellMenu.a("Deaths: " + var5.getDeathCount(0), var2, kn.field_p, -1, var4, 320, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow("Deaths: " + var5.getDeathCount(0), var2, kn.field_p, -1, var4, 320, 0);
           return;
         }
     }

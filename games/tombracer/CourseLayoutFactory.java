@@ -3,7 +3,7 @@
  */
 final class CourseLayoutFactory implements BitDecodableFactory {
     static kia field_d;
-    static oc[] field_e;
+    static ModelData[] field_e;
     static String field_a;
     static String[] boulderDeathMessages;
     static byte[] field_b;

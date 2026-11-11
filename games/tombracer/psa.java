@@ -54,7 +54,7 @@ final class psa extends MidiPcmStream {
                   this.field_Q[var6] = 0;
                   this.field_T[var6] = var8 << 12;
                 }
-                super.a((byte) -105, this.field_T[var6] >> 12, var6);
+                super.setChannelVolumeScale((byte) -105, this.field_T[var6] >> 12, var6);
               }
             }
             if (var5 != 0) {
@@ -125,12 +125,12 @@ final class psa extends MidiPcmStream {
         }
     }
 
-    final synchronized void a(byte param0, int param1, int param2) {
+    final synchronized void setChannelVolumeScale(byte param0, int param1, int param2) {
         if (param2 == -1) {
           this.field_S = param1;
           return;
         }
-        super.a(param0, param1, param2);
+        super.setChannelVolumeScale(param0, param1, param2);
         this.field_T[param2] = param1 << 12;
     }
 
@@ -143,7 +143,7 @@ final class psa extends MidiPcmStream {
         for (var2 = 0; 16 > var2; var2++) {
           this.field_T[var2] = 1048576;
         }
-        super.a((byte) -105, 256, -1);
+        super.setChannelVolumeScale((byte) -105, 256, -1);
     }
 
     public psa() {

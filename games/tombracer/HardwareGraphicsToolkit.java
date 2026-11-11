@@ -1049,8 +1049,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_bb = (AffineTransform3D) (param0);
           this.field_Qb.copyStateFrom(this.field_bb, 1);
           this.field_Qb.negateYZ((byte) 42);
-          this.field_rc.a((Transform3D) (this.field_Qb), (byte) 127);
-          this.field_Y.a((Transform3D) (this.field_bb), (byte) -31);
+          this.field_rc.setTransposedFrom((Transform3D) (this.field_Qb), (byte) 127);
+          this.field_Y.setTransposedFrom((Transform3D) (this.field_bb), (byte) -31);
           if (this.field_r.a(-38)) {
             this.modelViewChanged((byte) 94);
           }
@@ -1901,7 +1901,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final AffineTransform3D getModelViewTransform(byte param0) {
         if (!this.field_p) {
-          this.field_xc.a(this.field_Qb, this.field_q, (byte) 127);
+          this.field_xc.setProduct(this.field_Qb, this.field_q, (byte) 127);
           this.field_p = true;
         }
         int var2 = 30 / ((param0 - 51) / 41);
@@ -2376,7 +2376,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_D;
     }
 
-    final ToolkitModel createModel(oc param0, int param1, int param2, int param3, int param4) {
+    final ToolkitModel createModel(ModelData param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         HardwareModel stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
