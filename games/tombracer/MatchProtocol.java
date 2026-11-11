@@ -78,7 +78,7 @@ final class MatchProtocol {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void fadeMusicChannelIn(int param0, int param1) {
         if (null == MenuEntry.field_j) {
           return;
         }

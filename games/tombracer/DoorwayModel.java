@@ -246,7 +246,7 @@ final class DoorwayModel extends TrapModel {
         super(param0);
     }
 
-    final void a(int param0, boolean param1) {
+    final void setVariant(int param0, boolean param1) {
         this.field_q = param0;
         if (!param1) {
           Camera var4 = (Camera) null;

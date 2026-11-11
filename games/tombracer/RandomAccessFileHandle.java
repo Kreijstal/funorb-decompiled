@@ -19,7 +19,7 @@ final class RandomAccessFileHandle {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 22) {
-            RandomAccessFileHandle.a(80);
+            RandomAccessFileHandle.getConnectorRoomCount(80);
           }
           var5_int = this.field_a.read(param1, param3, param2);
           if (var5_int > 0) {
@@ -70,7 +70,7 @@ final class RandomAccessFileHandle {
           this.field_a.close();
           this.field_a = null;
           if (param0 > -62) {
-            RandomAccessFileHandle.a(-10);
+            RandomAccessFileHandle.getConnectorRoomCount(-10);
             return;
           }
           return;
@@ -78,10 +78,10 @@ final class RandomAccessFileHandle {
         if (param0 <= -62) {
           return;
         }
-        RandomAccessFileHandle.a(-10);
+        RandomAccessFileHandle.getConnectorRoomCount(-10);
     }
 
-    final static int a(int param0) {
+    final static int getConnectorRoomCount(int param0) {
         if (param0 < 37) {
           return -3;
         }
@@ -91,7 +91,7 @@ final class RandomAccessFileHandle {
     public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 != -7) {
-          RandomAccessFileHandle.a(-107);
+          RandomAccessFileHandle.getConnectorRoomCount(-107);
         }
     }
 

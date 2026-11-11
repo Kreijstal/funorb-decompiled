@@ -333,9 +333,9 @@ final class MatchState implements dv {
           if (param0 != 0) {
             return;
           }
-          S2CPlayerProfilePacket.a(108, 13);
-          S2CPlayerProfilePacket.a(84, 14);
-          S2CPlayerProfilePacket.a(43, 15);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(108, 13);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(84, 14);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(43, 15);
           return;
         }
     }

@@ -13,7 +13,7 @@ final class HazardModel extends TrapModel {
     private int field_q;
     static UiComponent field_t;
 
-    final void a(boolean param0, int param1) {
+    final void setVariant(boolean param0, int param1) {
         try {
           if (param0) {
             this.field_r = (PlayingSound) null;
@@ -287,7 +287,7 @@ final class HazardModel extends TrapModel {
             }
           }
           if (this.field_v != null) {
-            this.field_v.updateVolumeAndPan(this.getRenderX((byte) -83), var10_ref.field_c, -128, var10_ref.field_h, this.getRenderY((byte) 107));
+            this.field_v.updateVolumeAndPan(this.getRenderX((byte) -83), var10_ref.listenerY, -128, var10_ref.listenerX, this.getRenderY((byte) 107));
           }
           if (this.field_u == 1) {
             var11 = var3_ref.behaviours;

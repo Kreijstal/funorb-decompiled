@@ -70,7 +70,7 @@ final class cm implements GamePacket {
         }
     }
 
-    final static void updateLobbyGameOptionControls(int param0, ht param1, int param2, boolean param3) {
+    final static void updateLobbyGameOptionControls(int param0, LobbyGameWidget param1, int param2, boolean param3) {
         tv dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;

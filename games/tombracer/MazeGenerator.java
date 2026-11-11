@@ -186,7 +186,7 @@ abstract class MazeGenerator {
         pg.field_C = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4) {
+    final static void setFillClip(int param0, boolean param1, int param2, int param3, int param4) {
         DiskCacheWorker.field_c = param0;
         hc.field_h = param4;
         if (param1) {

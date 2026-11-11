@@ -52,7 +52,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         if (this.monochromeCache.rowMissed) {
           var4 = sj.textureRowCoords[param1] - 2048;
           for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
-            var6 = -2048 + ht.textureColumnCoords[var5];
+            var6 = -2048 + LobbyGameWidget.textureColumnCoords[var5];
             var7 = this.field_p + var6;
             if (var7 < -2048) {
               stackIn_8_0 = var7 + 4096;
@@ -382,7 +382,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
           }
         }
         if (param1) {
-          ava.field_d = ht.field_Xb;
+          ava.field_d = LobbyGameWidget.field_Xb;
         } else {
           ava.field_d = (-640 + SceneLight.field_i) / 2;
         }

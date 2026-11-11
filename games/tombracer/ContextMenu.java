@@ -102,7 +102,7 @@ final class ContextMenu extends UiComponent {
     final int updateAndPollAction(int param0, boolean param1) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
-        this.c(-102, param1);
+        this.layoutFullScreen(-102, param1);
         if (!param1) {
           return -2;
         }

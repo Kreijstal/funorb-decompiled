@@ -48,7 +48,7 @@ final class mn extends TextFieldValidator {
     }
 
     final it validateText(byte param0, String param1) {
-        us var3 = null;
+        AvailabilityQuery var3 = null;
         RuntimeException var3_ref = null;
         it stackIn_3_0 = null;
         it stackIn_8_0 = null;
@@ -63,7 +63,7 @@ final class mn extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_m)) {
-            var3 = CharacterChoice.a((byte) -115, param1);
+            var3 = CharacterChoice.requestAvailabilityCheck((byte) -115, param1);
             if (!var3.isComplete(47)) {
               stackIn_8_0 = tea.field_b;
               return stackIn_8_0;

@@ -13,7 +13,7 @@ final class WhiteNoiseOperator extends TextureOperator {
         if (this.monochromeCache.rowMissed) {
           var4 = sj.textureRowCoords[param1];
           for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
-            var8[var5] = this.hashNoise(param0 + 1876, ht.textureColumnCoords[var5], var4) % 4096;
+            var8[var5] = this.hashNoise(param0 + 1876, LobbyGameWidget.textureColumnCoords[var5], var4) % 4096;
           }
         }
         if (param0 != 1) {

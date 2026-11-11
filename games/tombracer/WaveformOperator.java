@@ -7,7 +7,7 @@ final class WaveformOperator extends TextureOperator {
     private int field_m;
     private int field_t;
     static String field_r;
-    static ht field_n;
+    static LobbyGameWidget field_n;
     static SpriteData field_q;
     static String field_s;
 
@@ -175,7 +175,7 @@ final class WaveformOperator extends TextureOperator {
           var4 = sj.textureRowCoords[param1];
           var5 = var4 - 2048 >> 1;
           for (var6 = 0; var6 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var6++) {
-            var8 = ht.textureColumnCoords[var6];
+            var8 = LobbyGameWidget.textureColumnCoords[var6];
             var9 = var8 - 2048 >> 1;
             if (0 != this.field_o) {
               var10 = var5 * var5 + var9 * var9 >> 12;

@@ -569,7 +569,7 @@ abstract class AppletGameShell extends GameApplet {
           EditableTextField.h(100);
         }
         if (null != tja.field_q) {
-          pg.field_y = tja.field_q.b(65);
+          pg.field_y = tja.field_q.pollWheelRotation(65);
         }
         if (o.e(540800)) {
           var3 = aqa.getFrameRate(1188664449) * 1200;

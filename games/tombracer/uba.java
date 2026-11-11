@@ -17,7 +17,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
         Object stackIn_7_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_i.a(param0 - 1780);
+          var2_int = this.field_i.year(param0 - 1780);
           var3 = this.field_i.getYear(param0 + 20939);
           var4 = this.field_i.getDay((byte) 110);
           var5 = ResourceArchive.currentYear((byte) 60);
@@ -77,7 +77,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
         it stackIn_10_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_i.a(111);
+          var2_int = this.field_i.year(111);
           var3 = this.field_i.getYear(22829);
           var4 = this.field_i.getDay((byte) 110);
           var5 = ResourceArchive.currentYear((byte) 125);

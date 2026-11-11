@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ht extends UiComponent {
+final class LobbyGameWidget extends UiComponent {
     UiComponent field_vb;
     UiComponent field_hc;
     boolean field_Sb;
@@ -44,7 +44,7 @@ final class ht extends UiComponent {
     UiComponent field_xb;
     byte[] field_ac;
 
-    final boolean sortsBefore(ht param0, int param1) {
+    final boolean sortsBefore(LobbyGameWidget param0, int param1) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_14_0 = 0;
@@ -176,12 +176,12 @@ final class ht extends UiComponent {
         }
     }
 
-    ht(int param0) {
+    LobbyGameWidget(int param0) {
         super(0L, (UiComponent) null);
         this.field_ac = new byte[param0];
     }
 
-    final int f(int param0) {
+    final int getGameId(int param0) {
         if (param0 != 0) {
           this.field_Cb = (String[]) null;
         }

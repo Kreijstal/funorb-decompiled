@@ -195,7 +195,7 @@ final class Weapon {
               }
               var23.setEffect(-126, new Effect(param2, this.effect));
               if (this.field_i != -1) {
-                var23.a(this.field_i, -38);
+                var23.setTrailParticle(this.field_i, -38);
               }
               if (this.field_x) {
                 var23.setHighCollision(true, 101);

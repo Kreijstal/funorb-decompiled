@@ -94,7 +94,7 @@ final class WeaveOperator extends TextureOperator {
           for (var4 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var4; var4++) {
             regionExit1: {
               regionExit2: {
-                var5 = ht.textureColumnCoords[var4];
+                var5 = LobbyGameWidget.textureColumnCoords[var4];
                 var6 = sj.textureRowCoords[param1];
                 var7 = var5 * this.field_r >> 12;
                 var8 = this.field_t * var6 >> 12;
@@ -139,7 +139,7 @@ final class WeaveOperator extends TextureOperator {
         for (var4Lifetime1 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var4Lifetime1; var4Lifetime1++) {
           regionExit3: {
             regionExit4: {
-              var5Lifetime1 = ht.textureColumnCoords[var4Lifetime1];
+              var5Lifetime1 = LobbyGameWidget.textureColumnCoords[var4Lifetime1];
               var6Lifetime1 = sj.textureRowCoords[param1];
               var7Lifetime1 = var5Lifetime1 * this.field_r >> 12;
               var8Lifetime1 = this.field_t * var6Lifetime1 >> 12;

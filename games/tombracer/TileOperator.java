@@ -445,7 +445,7 @@ final class TileOperator extends TextureOperator {
         field_q = null;
     }
 
-    final static void a(int[][] param0, int param1) {
+    final static void setTargetRows(int[][] param0, int param1) {
         try {
           vaa.field_a = param0;
           int var2_int = -93 % ((param1 - 57) / 49);
@@ -479,7 +479,7 @@ final class TileOperator extends TextureOperator {
             }
           }
           if (param0 != 107) {
-            TileOperator.a((int[][]) null, 80);
+            TileOperator.setTargetRows((int[][]) null, 80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

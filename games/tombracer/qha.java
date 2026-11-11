@@ -6,7 +6,7 @@ final class qha extends CourseGenerator {
     static IntrusiveDeque field_g;
 
     qha(int param0) {
-        super(-1 + aq.a(-5640) + aq.a(-5640), param0);
+        super(-1 + aq.getMainRoomCount(-5640) + aq.getMainRoomCount(-5640), param0);
     }
 
     public static void releaseStatics(byte param0) {
@@ -38,18 +38,18 @@ final class qha extends CourseGenerator {
         int var10Lifetime1;
         var12 = TombRacer.field_G ? 1 : 0;
         var2 = new CourseLayout(this.roomCount);
-        var3 = aq.a(-5640);
-        var4 = RandomAccessFileHandle.a(57);
+        var3 = aq.getMainRoomCount(-5640);
+        var4 = RandomAccessFileHandle.getConnectorRoomCount(57);
         var5 = 0;
         var6 = 0;
         var7 = 1;
         if (param0 == 58) {
           for (var8 = 0; this.roomCount > var8; var8++) {
             if (var7 == 0) {
-              var9 = MazeComponent.b(param0 - 58, var6).field_f;
+              var9 = MazeComponent.getConnectorRoom(param0 - 58, var6).field_f;
             } else {
-              var10 = LoadLevelCommand.a(var5, (byte) 127);
-              var14 = ta.d(var10, false);
+              var10 = LoadLevelCommand.getMainRoomKey(var5, (byte) 127);
+              var14 = ta.findMainRoomByKey(var10, false);
               var9 = var14.field_f;
             }
             var2.setRoom(var8, var9, this.randomFlag((byte) -56), (byte) -63);
@@ -72,10 +72,10 @@ final class qha extends CourseGenerator {
         field_f = -112;
         for (var8Lifetime1 = 0; this.roomCount > var8Lifetime1; var8Lifetime1++) {
           if (var7 == 0) {
-            var9Lifetime1 = MazeComponent.b(param0 - 58, var6).field_f;
+            var9Lifetime1 = MazeComponent.getConnectorRoom(param0 - 58, var6).field_f;
           } else {
-            var10Lifetime1 = LoadLevelCommand.a(var5, (byte) 127);
-            var13 = ta.d(var10Lifetime1, false);
+            var10Lifetime1 = LoadLevelCommand.getMainRoomKey(var5, (byte) 127);
+            var13 = ta.findMainRoomByKey(var10Lifetime1, false);
             var9Lifetime1 = var13.field_f;
           }
           var2.setRoom(var8Lifetime1, var9Lifetime1, this.randomFlag((byte) -56), (byte) -63);

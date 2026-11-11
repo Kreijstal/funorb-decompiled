@@ -270,9 +270,9 @@ abstract class ConsoleWindow implements ShellListener {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (param2 != LegacyOpenGlTurbulentTextureEffect.textureWidth) {
-          ht.textureColumnCoords = new int[param2];
+          LobbyGameWidget.textureColumnCoords = new int[param2];
           for (var3_int = 0; var3_int < param2; var3_int++) {
-            ht.textureColumnCoords[var3_int] = (var3_int << 12) / param2;
+            LobbyGameWidget.textureColumnCoords[var3_int] = (var3_int << 12) / param2;
           }
           ooa.field_g = 32 * param2;
           una.textureWidthMask = -1 + param2;
@@ -284,7 +284,7 @@ abstract class ConsoleWindow implements ShellListener {
         try {
           if (param1 != ArchiveNetworkClient.textureHeight) {
             if (param1 == LegacyOpenGlTurbulentTextureEffect.textureWidth) {
-              sj.textureRowCoords = ht.textureColumnCoords;
+              sj.textureRowCoords = LobbyGameWidget.textureColumnCoords;
             } else {
               sj.textureRowCoords = new int[param1];
               for (var3_int = 0; param1 > var3_int; var3_int++) {
@@ -486,7 +486,7 @@ abstract class ConsoleWindow implements ShellListener {
           }
         }
         this.field_h = this.field_h + 1;
-        this.field_i.c(83, param1);
+        this.field_i.layoutFullScreen(83, param1);
         this.field_a.b(param0, 0, this.field_k * 2 * pg.field_y, this.field_k);
         this.field_o.h((byte) 87);
     }

@@ -11,9 +11,9 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract void b(int param0, java.awt.Component param1);
+    abstract void detachWheelListener(int param0, java.awt.Component param1);
 
-    abstract int b(int param0);
+    abstract int pollWheelRotation(int param0);
 
     final static boolean a(int param0, String param1) {
         RuntimeException var2 = null;
@@ -42,7 +42,7 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void attachWheelListener(int param0, java.awt.Component param1);
 
     static {
         field_a = new String[][]{new String[]{"3 rooms per round", "4 rooms per round", "5 rooms per round", "6 rooms per round"}, new String[]{"First player to win 2 rounds wins the match", "First player to win 3 rounds wins the match"}};

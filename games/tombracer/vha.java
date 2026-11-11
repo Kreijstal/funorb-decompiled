@@ -16,13 +16,13 @@ final class vha {
         if (!vo.field_b) {
           return;
         }
-        rua.field_gb.c(-59, param2);
+        rua.field_gb.layoutFullScreen(-59, param2);
         var4 = ItemModel.field_n.hasPressedItem(param1 ^ 95) ? 1 : 0;
         boolean decompiledFrameRemainder0 = true;
         if (0 != PlayerModel.field_b) {
           if (var4 != 0) {
             if (!param2) {
-              rua.field_gb.c(30, param2);
+              rua.field_gb.layoutFullScreen(30, param2);
               var5 = ItemModel.field_n.getOpenChainWidth(param1 + 22419) + ItemModel.field_n.field_q;
               if (640 < var5) {
                 MenuScreen.field_j = MenuScreen.field_j + 5;
@@ -35,7 +35,7 @@ final class vha {
               return;
             }
             ItemModel.field_n.processPressedItems(param0, param3, (byte) -115);
-            rua.field_gb.c(30, param2);
+            rua.field_gb.layoutFullScreen(30, param2);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -48,7 +48,7 @@ final class vha {
             ItemModel.field_n.processPressedItems(param0, param3, (byte) -115);
           }
           if (var4 != 0) {
-            rua.field_gb.c(30, param2);
+            rua.field_gb.layoutFullScreen(30, param2);
           }
         }
         var5Lifetime1 = ItemModel.field_n.getOpenChainWidth(param1 + 22419) + ItemModel.field_n.field_q;

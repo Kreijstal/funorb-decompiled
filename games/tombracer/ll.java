@@ -20,14 +20,14 @@ final class ll {
         field_h = null;
         field_g = null;
         if (param0 <= 78) {
-          ll.a(-66, -115);
+          ll.findMainRoomKey(-66, -115);
           field_d = null;
           return;
         }
         field_d = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int findMainRoomKey(int param0, int param1) {
         int var3 = 0;
         RoomDefinition[] var2 = null;
         RuntimeException var2_ref = null;

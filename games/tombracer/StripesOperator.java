@@ -72,7 +72,7 @@ final class StripesOperator extends TextureOperator {
             while (!(LegacyOpenGlTurbulentTextureEffect.textureWidth <= var5Lifetime1)) {
               var6Lifetime1 = 0;
               var7 = 0;
-              var8 = ht.textureColumnCoords[var5Lifetime1];
+              var8 = LobbyGameWidget.textureColumnCoords[var5Lifetime1];
               var9 = this.field_q;
               if (var9 != 1) {
                 if (var9 != 2) {

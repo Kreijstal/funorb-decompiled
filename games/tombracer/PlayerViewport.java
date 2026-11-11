@@ -20,7 +20,7 @@ final class PlayerViewport {
     private int targetBottom;
     private MatchScreen field_a;
 
-    final boolean c(int param0) {
+    final boolean isDismissed(int param0) {
         if (param0 != 1727002282) {
           return true;
         }
@@ -218,7 +218,7 @@ final class PlayerViewport {
         return false;
     }
 
-    final void a(int param0, boolean param1) {
+    final void setDismissed(int param0, boolean param1) {
         this.field_q = param1 ? true : false;
         if (param0 > 26) {
           return;

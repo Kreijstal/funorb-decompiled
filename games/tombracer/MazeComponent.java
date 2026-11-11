@@ -47,7 +47,7 @@ abstract class MazeComponent extends PrefabComponent {
         try {
           super.encode(param0, param1);
           if (param0) {
-            MazeComponent.b(88, -88);
+            MazeComponent.getConnectorRoom(88, -88);
           }
           if (this.supportsItems(0)) {
             param1.writeBits((byte) 107, this.itemCount, 3);
@@ -239,7 +239,7 @@ abstract class MazeComponent extends PrefabComponent {
 
     abstract boolean supportsItems(int param0);
 
-    final static RoomDefinition b(int param0, int param1) {
+    final static RoomDefinition getConnectorRoom(int param0, int param1) {
         if (param0 != 0) {
           return (RoomDefinition) null;
         }

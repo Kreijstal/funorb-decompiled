@@ -24,7 +24,7 @@ final class CoinBagItemComponent extends ItemComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (ItemModel) (var6.createModel(12, 125));
-          var7.b((byte) 123, 1);
+          var7.setVariant((byte) 123, 1);
           var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
@@ -461,22 +461,22 @@ final class CoinBagItemComponent extends ItemComponent {
           stackIn_168_0 = C2SRoomResultPacket.field_c;
           stackIn_168_1 = -98;
           stackIn_169_2 = (param4) && (!param0) && (!OpenGlDisplayLists.field_e);
-          ((UiComponent) (Object) stackIn_168_0).c(stackIn_168_1, stackIn_169_2);
+          ((UiComponent) (Object) stackIn_168_0).layoutFullScreen(stackIn_168_1, stackIn_169_2);
           stackIn_173_0 = dka.field_b;
           stackIn_173_1 = 67;
           stackIn_174_2 = (param4) && (!param0) && (!OpenGlDisplayLists.field_e);
-          ((UiComponent) (Object) stackIn_173_0).c(stackIn_173_1, stackIn_174_2);
+          ((UiComponent) (Object) stackIn_173_0).layoutFullScreen(stackIn_173_1, stackIn_174_2);
           stackIn_178_0 = PlayerModel.field_a;
           stackIn_178_1 = 36;
           stackIn_179_2 = (param4) && (!param0) && (OpenGlDisplayLists.field_e);
-          ((UiComponent) (Object) stackIn_178_0).c(stackIn_178_1, stackIn_179_2);
+          ((UiComponent) (Object) stackIn_178_0).layoutFullScreen(stackIn_178_1, stackIn_179_2);
           rm.field_e.field_a.processTabPresses((byte) -98);
           if (param1 != -1) {
             return;
           }
           if (null != C2SChooseRewardPacket.field_a) {
             if (0 != bc.field_b.field_y) {
-              MidiVoiceMixer.a(param2, 30, C2SChooseRewardPacket.field_a.f(0));
+              MidiVoiceMixer.a(param2, 30, C2SChooseRewardPacket.field_a.getGameId(0));
             }
             if (hw.field_a.field_y != 0) {
               LegacyOpenGlCubeTexture.field_p = true;

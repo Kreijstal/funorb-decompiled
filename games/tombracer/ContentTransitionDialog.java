@@ -79,7 +79,7 @@ abstract class ContentTransitionDialog extends ofa {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_T = param1;
-          if (this.field_M != us.field_e) {
+          if (this.field_M != AvailabilityQuery.field_e) {
             if (StripesOperator.field_p != this.field_M) {
               this.field_M = StripesOperator.field_p;
               this.field_R = 0;
@@ -123,7 +123,7 @@ abstract class ContentTransitionDialog extends ofa {
               }
               return super.a(127);
             }
-            this.field_M = us.field_e;
+            this.field_M = AvailabilityQuery.field_e;
             this.a(this.field_Q, this.field_T.field_m + 12, this.field_T.field_p + (this.field_S + 12), (byte) -103);
             this.field_R = 0;
             this.field_P.field_y = 0;

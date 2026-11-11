@@ -251,7 +251,7 @@ final class ItemModel extends TrapModel {
     }
 
     final static void i(int param0) {
-        qpa.a(275, ht.field_Pb, 3, 40, 440, 126, 200);
+        qpa.a(275, LobbyGameWidget.field_Pb, 3, 40, 440, 126, 200);
         qpa.a(275, PbufferEntry.field_n, 5, 40, 440, 126, 200);
         qpa.a(275, RemovedFromGameMenu.field_s, 6, 40, 440, 124, 200);
         qpa.a(335, jta.field_z, 9, 40, 440, 125, 200);
@@ -330,7 +330,7 @@ final class ItemModel extends TrapModel {
         }
     }
 
-    final void b(byte param0, int param1) {
+    final void setVariant(byte param0, int param1) {
         this.field_t = param1;
         if (param0 <= 73) {
           OpenGlToolkit var4 = (OpenGlToolkit) null;

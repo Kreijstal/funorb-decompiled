@@ -210,9 +210,9 @@ final class joa {
             break;
           }
           if (param0) {
-            MatchProtocol.b(var3_int, 0);
+            MatchProtocol.fadeMusicChannelIn(var3_int, 0);
           } else {
-            S2CPlayerProfilePacket.a(120, var3_int);
+            S2CPlayerProfilePacket.fadeMusicChannelOut(120, var3_int);
           }
           stackIn_10_0 = new StringBuilder().append(param2).append(" set ");
           if (!param0) {

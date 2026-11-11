@@ -86,7 +86,7 @@ final class HorizontalGradientOperator extends TextureOperator {
         if (param0 != 1) {
           HorizontalGradientOperator.decreaseMusicVolume(97);
         }
-        return ht.textureColumnCoords;
+        return LobbyGameWidget.textureColumnCoords;
     }
 
     final static void decreaseMusicVolume(int param0) {

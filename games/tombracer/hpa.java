@@ -50,7 +50,7 @@ final class hpa extends aa {
           if (param1.field_d == 1 &&
             !MonochromeFillOperator.c(0) &&
             C2SChooseRewardPacket.field_a != null &&
-            param1.field_e == C2SChooseRewardPacket.field_a.f(0)) {
+            param1.field_e == C2SChooseRewardPacket.field_a.getGameId(0)) {
             if (!PowerDownItemBehaviour.field_s) {
               var9 = hka.field_b;
               var10 = lw.field_i;
@@ -61,7 +61,7 @@ final class hpa extends aa {
             var11.field_f.addItem((byte) -93, 20, var12);
           }
           hka.field_b.addLobbyGameActions((byte) -19);
-          hka.field_b.a((byte) -22, false);
+          hka.field_b.populateItems((byte) -22, false);
           hka.field_b.addSocialActions(param1.field_h, param1.field_d, 19);
           hka.field_b.c(0);
           hka.field_b.addChatFilterActions(param1, 13);

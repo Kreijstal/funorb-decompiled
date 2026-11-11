@@ -91,7 +91,7 @@ final class SequencePlayer {
             ResourceArchive var6 = (ResourceArchive) null;
             SequencePlayer.a((ResourceArchive) null, (ResourceArchive) null, -57, true, (ResourceArchive) null);
           }
-          DefaultRoomObjectRenderer.field_b = ai.a((byte) 121, "");
+          DefaultRoomObjectRenderer.field_b = ai.createAvailabilityQuery((byte) 121, "");
           DefaultRoomObjectRenderer.field_b.complete(-71, false);
           fha.loadCommonUiSprites(true, param1, param0, param4);
           CharacterChoiceFactory.b(117);

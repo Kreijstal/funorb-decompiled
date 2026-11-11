@@ -36,29 +36,29 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           stackIn_55_0 = C2SRoomResultPacket.field_a;
           stackIn_55_1 = 65;
           stackIn_56_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);
-          ((UiComponent) (Object) stackIn_55_0).c(stackIn_55_1, stackIn_56_2);
+          ((UiComponent) (Object) stackIn_55_0).layoutFullScreen(stackIn_55_1, stackIn_56_2);
           stackIn_62_0 = OpenGlToolkit.field_fd;
           stackIn_62_1 = -67;
           stackIn_63_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (null == WaveformOperator.field_n);
-          ((UiComponent) (Object) stackIn_62_0).c(stackIn_62_1, stackIn_63_2);
+          ((UiComponent) (Object) stackIn_62_0).layoutFullScreen(stackIn_62_1, stackIn_63_2);
           stackIn_67_0 = VboVertexArray.field_k;
           stackIn_67_1 = -127;
           stackIn_68_2 = (param0) && (!param2) && (LegacyOpenGlBloomEffect.field_o);
-          ((UiComponent) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
+          ((UiComponent) (Object) stackIn_67_0).layoutFullScreen(stackIn_67_1, stackIn_68_2);
         } else {
           PerlinNoise2D.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(89, OpenGlDisplayLists.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
           stackIn_7_0 = C2SRoomResultPacket.field_a;
           stackIn_7_1 = 65;
           stackIn_8_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);
-          ((UiComponent) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_8_2);
+          ((UiComponent) (Object) stackIn_7_0).layoutFullScreen(stackIn_7_1, stackIn_8_2);
           stackIn_14_0 = OpenGlToolkit.field_fd;
           stackIn_14_1 = -67;
           stackIn_15_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (null == WaveformOperator.field_n);
-          ((UiComponent) (Object) stackIn_14_0).c(stackIn_14_1, stackIn_15_2);
+          ((UiComponent) (Object) stackIn_14_0).layoutFullScreen(stackIn_14_1, stackIn_15_2);
           stackIn_19_0 = VboVertexArray.field_k;
           stackIn_19_1 = -127;
           stackIn_20_2 = (param0) && (!param2) && (LegacyOpenGlBloomEffect.field_o);
-          ((UiComponent) (Object) stackIn_19_0).c(stackIn_19_1, stackIn_20_2);
+          ((UiComponent) (Object) stackIn_19_0).layoutFullScreen(stackIn_19_1, stackIn_20_2);
         }
         oca.field_b.field_a.processTabPresses((byte) -111);
         if (!param1) {

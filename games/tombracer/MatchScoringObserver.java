@@ -237,7 +237,7 @@ class MatchScoringObserver extends SimulationObserver {
             param2 != null &&
             param2.collisionGrid != null) {
             var4_int = param2.getPlayer(-2).getPlayerIndex(param0 + 2);
-            if (param2.j(0) &&
+            if (param2.isConnectorRoom(0) &&
               !this.field_f.isSinglePlayer(param0 - 1876)) {
               ProxySocketConnector.a(var4_int, 5);
             } else {
@@ -332,7 +332,7 @@ class MatchScoringObserver extends SimulationObserver {
             !this.field_f.isSinglePlayer(-1878) &&
             this.field_f.field_x != null &&
             !this.a(param1, (byte) 74, var8)) {
-            var9 = ll.a(param1.getId((byte) -82), 0);
+            var9 = ll.findMainRoomKey(param1.getId((byte) -82), 0);
             if (var9 >= 0) {
               this.field_f.field_x[var8].set(var9);
             }

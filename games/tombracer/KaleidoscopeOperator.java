@@ -88,7 +88,7 @@ final class KaleidoscopeOperator extends TextureOperator {
         if (param2 != -5455) {
           field_m = -128;
         }
-        var4 = ht.textureColumnCoords[param0];
+        var4 = LobbyGameWidget.textureColumnCoords[param0];
         var5 = sj.textureRowCoords[param1];
         var6 = (float)Math.atan2((double)(-2048 + var4), (double)(var5 - 2048));
         if ((double)var6 >= -3.141592653589793 &&

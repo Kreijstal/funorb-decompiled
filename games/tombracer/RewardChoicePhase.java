@@ -158,7 +158,7 @@ final class RewardChoicePhase extends MatchPhase {
           if (var3 == 0) {
             SocketConnector.a(LegacyOpenGlFlowingWaterEffect.formatText(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.width());
           } else {
-            SocketConnector.a(us.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.width());
+            SocketConnector.a(AvailabilityQuery.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.width());
             var10 = (-this.rewardChoice.getCurrentPlayerTicks(-1) + 750) / 50 + 1;
             if (var10 < 0) {
               var10 = 0;

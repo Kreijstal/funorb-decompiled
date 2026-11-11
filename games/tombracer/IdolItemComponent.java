@@ -28,7 +28,7 @@ final class IdolItemComponent extends ItemComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (ItemModel) (var6.createModel(12, param1 ^ 117));
-          var7.b((byte) 98, 2);
+          var7.setVariant((byte) 98, 2);
           var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;

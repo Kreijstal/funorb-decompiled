@@ -121,7 +121,7 @@ final class DateFieldsWidget extends DateInputWidget {
         }
     }
 
-    final int a(int param0) {
+    final int year(int param0) {
         NumberFormatException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

@@ -110,14 +110,14 @@ final class dua extends MatchOverlay {
           for (var12 = var6; var7 > var12; var12++) {
             var24 = var23.getRoomAt(true, var12);
             if (var24 != null &&
-              !var24.j(0)) {
+              !var24.isConnectorRoom(0)) {
               var13 = 16;
               var14 = var3;
               var16 = var9;
               ega.field_e.draw(var13 - 4, var16 - 5);
               var9 = var9 - (var4 << 1);
-              if (!var24.j(0)) {
-                if (var23.d(28091)) {
+              if (!var24.isConnectorRoom(0)) {
+                if (var23.hasConnectorRooms(28091)) {
                   var17 = String.valueOf(1 + var12 / 2);
                 } else {
                   var17 = String.valueOf(1 + var12);
@@ -175,14 +175,14 @@ final class dua extends MatchOverlay {
         for (var12Lifetime1 = var6Lifetime1; var7Lifetime1 > var12Lifetime1; var12Lifetime1++) {
           var21 = var20.getRoomAt(true, var12Lifetime1);
           if (var21 != null &&
-            !var21.j(0)) {
+            !var21.isConnectorRoom(0)) {
             var13Lifetime1 = 16;
             var14Lifetime1 = var3Lifetime1;
             var16Lifetime1 = var9Lifetime1;
             ega.field_e.draw(var13Lifetime1 - 4, var16Lifetime1 - 5);
             var9Lifetime1 = var9Lifetime1 - (var4Lifetime1 << 1);
-            if (!var21.j(0)) {
-              if (var20.d(28091)) {
+            if (!var21.isConnectorRoom(0)) {
+              if (var20.hasConnectorRooms(28091)) {
                 var17Lifetime1 = String.valueOf(1 + var12Lifetime1 / 2);
               } else {
                 var17Lifetime1 = String.valueOf(1 + var12Lifetime1);

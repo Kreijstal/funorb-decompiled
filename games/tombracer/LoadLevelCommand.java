@@ -137,7 +137,7 @@ final class LoadLevelCommand extends ConsoleMethod {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int getMainRoomKey(int param0, byte param1) {
         int var2 = 113 / ((-14 - param1) / 40);
         if (qg.field_a.length <= param0) {
           return -1;

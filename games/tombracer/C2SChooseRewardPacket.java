@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class C2SChooseRewardPacket implements GamePacket {
-    static ht field_a;
+    static LobbyGameWidget field_a;
     static int field_c;
     private int field_b;
 

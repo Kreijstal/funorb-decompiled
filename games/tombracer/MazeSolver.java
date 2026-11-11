@@ -268,11 +268,11 @@ final class MazeSolver {
         this.clearDistances(true);
     }
 
-    final static ht a(int param0, int param1) {
+    final static LobbyGameWidget findLobbyGame(int param0, int param1) {
         if (param1 != 0) {
-          MazeSolver.a(96, 11);
+          MazeSolver.findLobbyGame(96, 11);
         }
-        return null != WhiteLightSensorComponent.field_K ? (ht) (WhiteLightSensorComponent.field_K.get(-122, (long)param0)) : null;
+        return null != WhiteLightSensorComponent.field_K ? (LobbyGameWidget) (WhiteLightSensorComponent.field_K.get(-122, (long)param0)) : null;
     }
 
     private final boolean isOpen(int param0, int param1, int param2) {

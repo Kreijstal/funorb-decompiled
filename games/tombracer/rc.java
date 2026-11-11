@@ -13,7 +13,7 @@ final class rc {
         int var11 = 0;
         try {
           DateInputWidget.openPlayerContextMenu(param6, -1, param2.field_vb, param2.field_yb, param3 - 11542, (int[]) null, param2, -1, param2.field_wb);
-          hka.field_b.a((byte) -22, true);
+          hka.field_b.populateItems((byte) -22, true);
           hka.field_b.addSocialActions((int[]) null, 0, 19);
           if (param3 != -93) {
             field_b = (SpriteData[]) null;

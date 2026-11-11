@@ -74,7 +74,7 @@ final class PlantComponent extends PrefabComponent {
             return stackIn_15_0;
           }
           var7 = (PlantModel) (var5.createModel(14, 82));
-          var7.a(true, var6);
+          var7.setVariant(true, var6);
           var9.addModel((TrapPart) null, (byte) 124, var7);
           stackIn_17_0 = var9;
           return stackIn_17_0;

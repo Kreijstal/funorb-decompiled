@@ -77,7 +77,7 @@ final class ComponentMount {
         if (null == SecondaryNodeDequeIterator.field_a) {
           return;
         }
-        MatchProtocol.b(param0, 0);
+        MatchProtocol.fadeMusicChannelIn(param0, 0);
     }
 
     final void setOwner(int param0, int param1, RoomComponent param2) {
@@ -95,15 +95,15 @@ final class ComponentMount {
         int var1 = 36 / ((-63 - param0) / 42);
     }
 
-    final int a(boolean param0) {
+    final int getAngle(boolean param0) {
         if (param0) {
-          this.a(false);
+          this.getAngle(false);
           return this.field_f;
         }
         return this.field_f;
     }
 
-    final int b(byte param0) {
+    final int getElevation(byte param0) {
         if (param0 != -125) {
           this.rotatedOffset = (IntPoint) null;
           return this.field_c;

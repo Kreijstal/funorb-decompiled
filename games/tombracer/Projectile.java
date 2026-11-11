@@ -38,7 +38,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         return this.age;
     }
 
-    final void a(int param0, int param1) {
+    final void setTrailParticle(int param0, int param1) {
         int var3 = -21 % ((20 - param1) / 42);
         this.field_i = param0;
     }

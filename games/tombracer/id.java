@@ -28,7 +28,7 @@ final class id extends CourseGenerator {
         var5 = TombRacer.field_G ? 1 : 0;
         var6 = new CourseLayout(this.roomCount);
         var2 = var6;
-        var3 = ht.getCourseRoomIds(this.field_f, true);
+        var3 = LobbyGameWidget.getCourseRoomIds(this.field_f, true);
         if (param0 != 58) {
           this.field_j = true;
         }

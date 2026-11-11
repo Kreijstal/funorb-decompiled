@@ -296,7 +296,7 @@ final class BrickOperator extends TextureOperator {
               }
               var5 = stackIn_23_0;
               var6 = 0;
-              for (var8 = ht.textureColumnCoords[var4] + (this.field_r * var5 >> 12); var8 < 0; var8 += 4096) {
+              for (var8 = LobbyGameWidget.textureColumnCoords[var4] + (this.field_r * var5 >> 12); var8 < 0; var8 += 4096) {
               }
               while (var8 > 4096) {
                 var8 -= 4096;

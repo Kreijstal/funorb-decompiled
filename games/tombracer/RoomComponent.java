@@ -142,7 +142,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
     }
 
-    private final void m(byte param0) {
+    private final void mirrorMounts(byte param0) {
         int var3 = 0;
         ComponentMount var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
@@ -288,7 +288,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.angle = GameScreen.positiveModulo(-this.angle, 8192, -85);
           this.updateRotation(true);
           this.field_v = !this.field_v ? true : false;
-          this.m((byte) -24);
+          this.mirrorMounts((byte) -24);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "csa.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -468,7 +468,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
             }
           }
           if (this.field_v) {
-            this.m((byte) -24);
+            this.mirrorMounts((byte) -24);
             this.updateRotation(true);
           } else {
             this.updateRotation(true);
@@ -751,7 +751,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
         int var2 = this.angle;
         if (null != this.parent) {
-          var2 = var2 + (this.parent.getFacingAngle(-25787) + this.parent.getMount(this.parentSlot, param0 ^ -17595).a(false));
+          var2 = var2 + (this.parent.getFacingAngle(-25787) + this.parent.getMount(this.parentSlot, param0 ^ -17595).getAngle(false));
         }
         return var2;
     }

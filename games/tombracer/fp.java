@@ -175,7 +175,7 @@ final class fp {
         int incrementValue$7 = param1;
         param1++;
         var16_ref.drawLoadingProgress(incrementValue$7, (byte) 47, param0);
-        ht.field_Db = SpriteData.loadSprite(param2, "", "options_bar_empty");
+        LobbyGameWidget.field_Db = SpriteData.loadSprite(param2, "", "options_bar_empty");
         RenderableNode.field_j = SpriteData.loadSprite(param2, "", "options_bar_full");
         ResourceArchive.field_h = SpriteData.loadSprite(param2, "", "button_music");
         re.field_a = SpriteData.loadSprite(param2, "", "button_sound");
@@ -342,7 +342,7 @@ final class fp {
           !cs.field_c.isEnded(126)) {
           return;
         }
-        int var2 = aq.a(-5640);
+        int var2 = aq.getMainRoomCount(-5640);
         int var3 = BufferedSocket.randomBelow(2147483647, new Random(), 45);
         cs.field_c = new MatchScreen(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, new qha(var3));
         cs.field_c.startMenuBackgroundDemo((byte) -25);

@@ -1277,7 +1277,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("choose_reward", (byte) 106);
                 if (null != var2) {
-                  us.field_c = jaa.decodeText((byte) 102, var2);
+                  AvailabilityQuery.field_c = jaa.decodeText((byte) 102, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("choose_reward_timeleft", (byte) 124);
                 if (var2 != null) {

@@ -26,14 +26,14 @@ final class PlayTrackCommand extends ConsoleMethod {
         boolean stackIn_6_6;
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
-        ht stackIn_12_0;
+        LobbyGameWidget stackIn_12_0;
         UiComponent stackIn_12_1;
         UiComponent stackIn_12_2;
         long stackIn_12_3;
         UiComponent stackIn_13_1 = null;
         UiComponent stackIn_13_2 = null;
         UiComponent stackIn_13_4 = null;
-        ht stackIn_31_0;
+        LobbyGameWidget stackIn_31_0;
         UiComponent stackIn_31_1;
         UiComponent stackIn_31_2;
         long stackIn_31_3;
@@ -56,7 +56,7 @@ final class PlayTrackCommand extends ConsoleMethod {
         IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
-        ht var12 = null;
+        LobbyGameWidget var12 = null;
         int var13 = 0;
         int var14 = 0;
         UiComponent var18 = null;
@@ -133,7 +133,7 @@ final class PlayTrackCommand extends ConsoleMethod {
           var8 = nsa.field_i.field_tb.field_J;
           var9 = bva.currentTimeMillis((byte) -107);
           var11 = null;
-          var12 = (ht) (var8.first(-80));
+          var12 = (LobbyGameWidget) (var8.first(-80));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_J) {
@@ -552,15 +552,15 @@ final class PlayTrackCommand extends ConsoleMethod {
                 if (var12.field_ec && (!var12.field_Yb ||
                   !var12.field_Bb &&
                   !var12.field_gc)) {
-                  LegacyOpenGlRidgedWaterEffect.a(param5, false, var12.f(0));
+                  LegacyOpenGlRidgedWaterEffect.a(param5, false, var12.getGameId(0));
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  CollisionGridEntry.a((byte) -111, param5, var12.f(param1 ^ 0));
+                  CollisionGridEntry.a((byte) -111, param5, var12.getGameId(param1 ^ 0));
                 }
               }
             }
-            var12 = (ht) (var8.next(param1 + 114));
+            var12 = (LobbyGameWidget) (var8.next(param1 + 114));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -173,8 +173,8 @@ final class MiscItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final void a(boolean param0, byte param1) {
-        super.a(param0, param1);
+    final void setWaitingForPlayerToLeave(boolean param0, byte param1) {
+        super.setWaitingForPlayerToLeave(param0, param1);
         if (!param0) {
           return;
         }

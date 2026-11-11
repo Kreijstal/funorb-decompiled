@@ -4,19 +4,19 @@
 final class ed {
     static double field_a;
 
-    final static void decodeLobbyGame(int param0, ht param1, boolean param2, PacketBuffer param3) {
+    final static void decodeLobbyGame(int param0, LobbyGameWidget param1, boolean param2, PacketBuffer param3) {
         int var8 = 0;
-        ht stackIn_6_0 = null;
+        LobbyGameWidget stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        ht stackIn_9_0 = null;
+        LobbyGameWidget stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        ht stackIn_12_0 = null;
+        LobbyGameWidget stackIn_12_0 = null;
         int stackIn_13_1 = 0;
-        ht stackIn_15_0 = null;
+        LobbyGameWidget stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
-        ht stackIn_19_0 = null;
+        LobbyGameWidget stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
-        ht stackIn_22_0 = null;
+        LobbyGameWidget stackIn_22_0 = null;
         boolean stackIn_23_1 = false;
         int stackIn_26_0 = 0;
         int stackIn_29_0 = 0;
@@ -40,26 +40,26 @@ final class ed {
           param1.field_Jb = param3.readUnsignedByte(255);
           param1.field_cc = param3.readUnsignedByte(255);
           var4_int = param3.readUnsignedByte(255);
-          stackIn_6_0 = (ht) (param1);
+          stackIn_6_0 = (LobbyGameWidget) (param1);
           stackIn_7_1 = ((128 & var4_int) != 0);
           stackIn_6_0.field_Tb = stackIn_7_1;
-          stackIn_9_0 = (ht) (param1);
+          stackIn_9_0 = (LobbyGameWidget) (param1);
           stackIn_10_1 = (0 != (var4_int & 64));
           stackIn_9_0.field_ec = stackIn_10_1;
-          stackIn_12_0 = (ht) (param1);
+          stackIn_12_0 = (LobbyGameWidget) (param1);
           if (0 != (var4_int & 16)) {
             stackIn_13_1 = 2;
           } else {
             stackIn_13_1 = 1;
           }
           stackIn_12_0.field_yb = stackIn_13_1;
-          stackIn_15_0 = (ht) (param1);
+          stackIn_15_0 = (LobbyGameWidget) (param1);
           stackIn_16_1 = ((var4_int & param0) != 0);
           stackIn_15_0.field_Ob = stackIn_16_1;
-          stackIn_19_0 = (ht) (param1);
+          stackIn_19_0 = (LobbyGameWidget) (param1);
           stackIn_20_1 = (param1.field_Tb) && (param1.field_Jb > param1.field_Mb);
           stackIn_19_0.field_Bb = stackIn_20_1;
-          stackIn_22_0 = (ht) (param1);
+          stackIn_22_0 = (LobbyGameWidget) (param1);
           stackIn_23_1 = ((var4_int & 8) != 0);
           stackIn_22_0.field_Yb = stackIn_23_1;
           stackIn_26_0 = ((4 & var4_int) == 0) ? 0 : 1;

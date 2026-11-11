@@ -27,7 +27,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
           return;
         }
         try {
-          kv.a(this.field_x.getYear(22829), this.field_x.a(109), 95, this.field_x.getDay((byte) 110));
+          kv.a(this.field_x.getYear(22829), this.field_x.year(109), 95, this.field_x.getDay((byte) 110));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ada.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

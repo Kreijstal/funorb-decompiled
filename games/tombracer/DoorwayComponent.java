@@ -118,11 +118,11 @@ final class DoorwayComponent extends PrefabComponent {
               var16 = 1;
             }
             var17_ref = (DoorwayModel) (var6.createModel(6, 87));
-            var17_ref.a(var15, true);
+            var17_ref.setVariant(var15, true);
             var7_ref_fsa.addModel((TrapPart) null, (byte) 124, var17_ref);
             var7_ref_fsa.addHeight(param1 + 7, 1048576);
             var18_ref = (DoorwayModel) (var6.createModel(6, 101));
-            var18_ref.a(var16, true);
+            var18_ref.setVariant(var16, true);
             var11.addModel((TrapPart) null, (byte) 124, var18_ref);
             var11.addHeight(param1 + 7, 1048576);
           }
@@ -132,7 +132,7 @@ final class DoorwayComponent extends PrefabComponent {
             var7 = 2;
           }
           var21_ref = (DoorwayModel) (var6.createModel(6, 126));
-          var21_ref.a(var7, true);
+          var21_ref.setVariant(var7, true);
           var20.addModel((TrapPart) null, (byte) 124, var21_ref);
           stackIn_23_0 = var20;
           return stackIn_23_0;

@@ -21,7 +21,7 @@ final class PlayPhase extends MatchPhase {
         var3 = this.screen.getViewedPlayerIndex(115);
         if (this.field_o &&
           this.matchState.isAwaitingFirstTick(0)) {
-          this.g(param0 - 208);
+          this.showRoundStartBanner(param0 - 208);
         }
         if (this.field_q > 0) {
           this.field_q = this.field_q - 1;
@@ -34,9 +34,9 @@ final class PlayPhase extends MatchPhase {
           this.screen.tickMatch(110);
         }
         for (var4 = 0; this.viewports.length > var4; var4++) {
-          if (!this.viewports[var4].c(1727002282) &&
+          if (!this.viewports[var4].isDismissed(1727002282) &&
             this.matchState.hasResigned((byte) -127, var4)) {
-            this.viewports[var4].a(60, true);
+            this.viewports[var4].setDismissed(60, true);
             this.viewports[var4].scrollBy(0, (byte) 108, 2 * aaa.a(false));
           }
         }
@@ -218,7 +218,7 @@ final class PlayPhase extends MatchPhase {
                 if (this.matchState.getCourseId(0) != -1) {
                   var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, this.matchState.getCourseId(0));
                 } else {
-                  if (var5.j(0)) {
+                  if (var5.isConnectorRoom(0)) {
                     var7 = mna.findRoomDefinitionFrom(0, var6Lifetime1Lifetime2);
                   } else {
                     var7 = PlayerInputQueue.findRoomDefinition(-111, var6Lifetime1Lifetime2);
@@ -380,7 +380,7 @@ final class PlayPhase extends MatchPhase {
         }
     }
 
-    private final void g(int param0) {
+    private final void showRoundStartBanner(int param0) {
         this.field_o = false;
         this.field_q = 75;
         if (param0 >= -67) {

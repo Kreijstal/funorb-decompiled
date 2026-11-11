@@ -38,7 +38,7 @@ final class RevolverItemComponent extends ItemComponent {
           var4.setStatCategory(param1, 146366800);
           var6 = rm.field_a;
           var7 = (ItemModel) (var6.createModel(12, 104));
-          var7.b((byte) 74, 4);
+          var7.setVariant((byte) 74, 4);
           var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;

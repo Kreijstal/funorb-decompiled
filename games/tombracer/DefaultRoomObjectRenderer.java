@@ -3,7 +3,7 @@
  */
 final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
     private int[] field_a;
-    static us field_b;
+    static AvailabilityQuery field_b;
 
     public final void drawParticle(Camera param0, byte param1, Particle param2) {
         int stackIn_85_0 = 0;
@@ -411,7 +411,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         RuntimeException var1 = null;
         try {
           if (param0 != 13908) {
-            field_b = (us) null;
+            field_b = (AvailabilityQuery) null;
           }
           field_b = null;
           return;

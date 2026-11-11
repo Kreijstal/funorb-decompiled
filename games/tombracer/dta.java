@@ -150,7 +150,7 @@ final class dta {
               RoomEffectTraps.a(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), eda.field_f, 11903361);
               var20 = 1 + var12.getCourseIndex(-104);
               var21 = var12.getSimulation(-1).getRoomArrayLength(122);
-              if (var12.getSimulation(-1).d(28091)) {
+              if (var12.getSimulation(-1).hasConnectorRooms(28091)) {
                 var21 = (var21 >> 1) + 1;
                 var20 = 1 + (var20 >> 1);
               }

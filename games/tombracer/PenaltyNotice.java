@@ -69,7 +69,7 @@ final class PenaltyNotice extends IntrusiveNode {
             return;
           }
           if (null != SecondaryNodeDequeIterator.field_a) {
-            MatchProtocol.b(15, 0);
+            MatchProtocol.fadeMusicChannelIn(15, 0);
             return;
           }
           return;
@@ -78,7 +78,7 @@ final class PenaltyNotice extends IntrusiveNode {
           return;
         }
         if (null != SecondaryNodeDequeIterator.field_a) {
-          MatchProtocol.b(15, 0);
+          MatchProtocol.fadeMusicChannelIn(15, 0);
           return;
         }
     }

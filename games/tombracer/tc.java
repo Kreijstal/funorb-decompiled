@@ -83,7 +83,7 @@ class tc extends lu {
           TrackPlayerLocomotor.drawTooltip(-107, ArchiveNetworkClient.field_b);
         }
         if (hka.field_b != null) {
-          hka.field_b.a(true, param0);
+          hka.field_b.draw(true, param0);
         }
         if (param1 != 0) {
           field_d = (SecondaryNodeHashTable) null;

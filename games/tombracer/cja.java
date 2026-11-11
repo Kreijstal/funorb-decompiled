@@ -16,7 +16,7 @@ final class cja {
         var2.draw((byte) -38);
     }
 
-    final static void findValidSettingCombination(int param0, int param1, ht param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final static void findValidSettingCombination(int param0, int param1, LobbyGameWidget param2, int param3, int param4, int param5, int param6, boolean param7) {
         tv[][] stackIn_32_0 = null;
         int stackIn_33_1 = 0;
         int stackIn_52_0 = 0;

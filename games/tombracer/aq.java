@@ -9,9 +9,9 @@ final class aq {
         int var1 = 75 % ((param0 + 32) / 34);
     }
 
-    final static int a(int param0) {
+    final static int getMainRoomCount(int param0) {
         if (param0 != -5640) {
-          aq.a(-88);
+          aq.getMainRoomCount(-88);
           return qg.field_a.length;
         }
         return qg.field_a.length;

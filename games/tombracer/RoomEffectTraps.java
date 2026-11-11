@@ -297,7 +297,7 @@ final class RoomEffectTraps {
           }
           this.barrierTraps[var11Lifetime1] = new Trap(this.room, var12Lifetime1, var13Lifetime1, var9, var10, 0, true);
           var14 = new WindZoneBehaviour(this.room, true);
-          var14.b(param2 ^ 5, param3);
+          var14.setDirection(param2 ^ 5, param3);
           var14.a(param0, param1, 19072);
           this.barrierTraps[var11Lifetime1].addBehaviour((byte) 83, (Behaviour) (var14));
           this.room.addTrap(this.barrierTraps[var11Lifetime1], (byte) 32);

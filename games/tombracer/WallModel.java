@@ -112,7 +112,7 @@ final class WallModel extends TrapModel {
             }
           }
           if (this.field_o != null) {
-            this.field_o.updateVolumeAndPan(this.getRenderX((byte) -93), var6.field_c, -128, var6.field_h, this.getRenderY((byte) 110));
+            this.field_o.updateVolumeAndPan(this.getRenderX((byte) -93), var6.listenerY, -128, var6.listenerX, this.getRenderY((byte) 110));
           }
         }
     }

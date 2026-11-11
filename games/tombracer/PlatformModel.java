@@ -447,8 +447,8 @@ final class PlatformModel extends TrapModel {
           }
           var5_ref = (Trap) (this.body);
           var6 = 1;
-          var7 = this.getRenderX((byte) 84) - var4_ref.field_h >> 16;
-          var8 = this.getRenderY((byte) 126) - var4_ref.field_c >> 16;
+          var7 = this.getRenderX((byte) 84) - var4_ref.listenerX >> 16;
+          var8 = this.getRenderY((byte) 126) - var4_ref.listenerY >> 16;
           var9 = (double)S2CNextRoundPacket.abs(var7, -118);
           var11 = (double)S2CNextRoundPacket.abs(var8, -125);
           var13 = Math.sqrt(var11 * var11 + var9 * var9);
@@ -514,10 +514,10 @@ final class PlatformModel extends TrapModel {
             }
           }
           if (this.field_o != null) {
-            this.field_o.updateVolumeAndPan(this.getRenderX((byte) -97), var4_ref.field_c, param0 ^ 127, var4_ref.field_h, this.getRenderY((byte) 96));
+            this.field_o.updateVolumeAndPan(this.getRenderX((byte) -97), var4_ref.listenerY, param0 ^ 127, var4_ref.listenerX, this.getRenderY((byte) 96));
           }
           if (this.field_t != null) {
-            this.field_t.updateVolumeAndPan(this.getRenderX((byte) 103), var4_ref.field_c, -128, var4_ref.field_h, this.getRenderY((byte) 127));
+            this.field_t.updateVolumeAndPan(this.getRenderX((byte) 103), var4_ref.listenerY, -128, var4_ref.listenerX, this.getRenderY((byte) 127));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

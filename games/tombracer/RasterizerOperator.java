@@ -87,8 +87,8 @@ final class RasterizerOperator extends TextureOperator {
             RasterizerOperator.d(56);
           }
           var4 = ArchiveNetworkClient.textureHeight;
-          TileOperator.a(param1, param0 ^ -8901);
-          MazeGenerator.a(una.textureWidthMask, false, 0, 0, hba.textureHeightMask);
+          TileOperator.setTargetRows(param1, param0 ^ -8901);
+          MazeGenerator.setFillClip(una.textureWidthMask, false, 0, 0, hba.textureHeightMask);
           if (null != this.field_p) {
             for (var5 = 0; var5 < this.field_p.length; var5++) {
               var6 = this.field_p[var5];

@@ -53,30 +53,30 @@ final class qt {
         long var3_long = 0L;
         int var3 = 0;
         pha var3_ref_pha = null;
-        ht var4 = null;
+        LobbyGameWidget var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        ht var6 = null;
+        LobbyGameWidget var6 = null;
         pha var7 = null;
         int var8 = 0;
         pha var8_ref_pha = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ht var14 = null;
+        LobbyGameWidget var14 = null;
         pha var15 = null;
         Object var16 = null;
         Object var17 = null;
-        ht var17_ref = null;
+        LobbyGameWidget var17_ref = null;
         Object var18 = null;
         Object var19 = null;
-        ht var19_ref = null;
+        LobbyGameWidget var19_ref = null;
         String var20 = null;
         pha var21 = null;
         String var22 = null;
         String var23 = null;
         Object var24 = null;
-        ht var25 = null;
+        LobbyGameWidget var25 = null;
         String var26 = null;
         String var27 = null;
         pha var28 = null;
@@ -84,8 +84,8 @@ final class qt {
         pha var30 = null;
         pha var31 = null;
         pha var32 = null;
-        ht var33 = null;
-        ht var34 = null;
+        LobbyGameWidget var33 = null;
+        LobbyGameWidget var34 = null;
         pha var3_ref_phaLifetime1;
         long var3_longLifetime1;
         long var3_longLifetime2;
@@ -177,9 +177,9 @@ final class qt {
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(125);
-              var4 = (ht) (WhiteLightSensorComponent.field_K.get(-126, (long)var3));
+              var4 = (LobbyGameWidget) (WhiteLightSensorComponent.field_K.get(-126, (long)var3));
               if (var4 == null) {
-                var4 = new ht(ColourRowCache.field_b);
+                var4 = new LobbyGameWidget(ColourRowCache.field_b);
                 WhiteLightSensorComponent.field_K.put(-1, var4, (long)var3);
               }
               ed.decodeLobbyGame(32, var4, true, var1);
@@ -189,7 +189,7 @@ final class qt {
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(121);
               var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-              var33 = (ht) (WhiteLightSensorComponent.field_K.get(-107, (long)var3Lifetime4));
+              var33 = (LobbyGameWidget) (WhiteLightSensorComponent.field_K.get(-107, (long)var3Lifetime4));
               if (var33 != null) {
                 if (0 != var4_int) {
                   var33.field_zb = qsa.field_a;
@@ -202,11 +202,11 @@ final class qt {
               return;
             }
             if (var2 == 10) {
-              var34 = (ht) (AffineTransform3D.field_j.first(-80));
+              var34 = (LobbyGameWidget) (AffineTransform3D.field_j.first(-80));
               while (var34 != null) {
                 var34.unlink(122);
                 var34.unlinkSecondary(-7975);
-                var34 = (ht) (AffineTransform3D.field_j.next(127));
+                var34 = (LobbyGameWidget) (AffineTransform3D.field_j.next(127));
               }
               return;
             }
@@ -215,7 +215,7 @@ final class qt {
               if (13 == var2) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(127);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                var17_ref = (ht) (WhiteLightSensorComponent.field_K.get(-112, (long)var3Lifetime5));
+                var17_ref = (LobbyGameWidget) (WhiteLightSensorComponent.field_K.get(-112, (long)var3Lifetime5));
                 if (var17_ref != null) {
                   var14 = var17_ref;
                   var6 = var14;
@@ -336,7 +336,7 @@ final class qt {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(123);
-            var19_ref = (ht) (WhiteLightSensorComponent.field_K.get(-111, (long)var3Lifetime6));
+            var19_ref = (LobbyGameWidget) (WhiteLightSensorComponent.field_K.get(-111, (long)var3Lifetime6));
             var25 = var19_ref;
             if (var25 == null) {
               return;
@@ -376,7 +376,7 @@ final class qt {
             C2SChooseRewardPacket.field_a = null;
           } else {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(125);
-            C2SChooseRewardPacket.field_a = new ht(ColourRowCache.field_b);
+            C2SChooseRewardPacket.field_a = new LobbyGameWidget(ColourRowCache.field_b);
             C2SChooseRewardPacket.field_a.setSecondaryKey(false, (long)var3Lifetime1);
             ed.decodeLobbyGame(32, C2SChooseRewardPacket.field_a, false, var1);
             TileRenderable.field_d = 0L;
@@ -386,7 +386,7 @@ final class qt {
             WaveformOperator.field_n = null;
           } else {
             if (WaveformOperator.field_n == null) {
-              WaveformOperator.field_n = new ht(ColourRowCache.field_b);
+              WaveformOperator.field_n = new LobbyGameWidget(ColourRowCache.field_b);
             }
           }
           if (var2 != 3) {

@@ -40,22 +40,22 @@ final class TripBeamComponent extends SwitchComponent {
             return;
           }
           for (var4 = 0; 16 > var4; var4++) {
-            MatchProtocol.b(var4, 0);
+            MatchProtocol.fadeMusicChannelIn(var4, 0);
           }
           if (param1 != 1) {
             return;
           }
-          S2CPlayerProfilePacket.a(112, 1);
-          S2CPlayerProfilePacket.a(45, 2);
-          S2CPlayerProfilePacket.a(param0 ^ 61, 3);
-          S2CPlayerProfilePacket.a(61, 4);
-          S2CPlayerProfilePacket.a(59, 5);
-          S2CPlayerProfilePacket.a(125, 6);
-          S2CPlayerProfilePacket.a(param0 ^ 57, 7);
-          S2CPlayerProfilePacket.a(122, 8);
-          S2CPlayerProfilePacket.a(param0 ^ 125, 13);
-          S2CPlayerProfilePacket.a(84, 14);
-          S2CPlayerProfilePacket.a(105, 15);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(112, 1);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(45, 2);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(param0 ^ 61, 3);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(61, 4);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(59, 5);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(125, 6);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(param0 ^ 57, 7);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(122, 8);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(param0 ^ 125, 13);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(84, 14);
+          S2CPlayerProfilePacket.fadeMusicChannelOut(105, 15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -69,7 +69,7 @@ final class ta extends UiComponent {
         field_ub = null;
     }
 
-    final static RoomDefinition d(int param0, boolean param1) {
+    final static RoomDefinition findMainRoomByKey(int param0, boolean param1) {
         RoomDefinition[] var2;
         int var3;
         RoomDefinition var4;
@@ -89,7 +89,7 @@ final class ta extends UiComponent {
           }
           return null;
         }
-        ta.d(32, false);
+        ta.findMainRoomByKey(32, false);
         for (var3Lifetime1 = 0; var6.length > var3Lifetime1; var3Lifetime1++) {
           var4Lifetime1 = var6[var3Lifetime1];
           if (param0 == var4Lifetime1.field_a) {

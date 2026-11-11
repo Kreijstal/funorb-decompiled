@@ -4,8 +4,8 @@
 final class SoundEventPlayer extends SoundEventQueue {
     private boolean muted;
     int[] playingCounts;
-    int field_c;
-    int field_h;
+    int listenerY;
+    int listenerX;
     private IntrusiveDeque playing;
     static Sprite[] field_f;
     static String field_d;
@@ -178,7 +178,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           if (26 == var3_int) {
             this.enqueue(-101, new SoundEvent(28, param0.getX(param1 - 43), param0.getY(-127), param0.getParameter(4)));
           }
-          if (this.a(-123, var3_int)) {
+          if (this.triggersFollowUpSound(-123, var3_int)) {
             this.enqueue(param1 ^ 86, new SoundEvent(89, param0.getX(param1 + 105), param0.getY(-121), param0.getParameter(param1 ^ -62)));
           }
           var4 = to.field_j[var3_int];
@@ -205,8 +205,8 @@ final class SoundEventPlayer extends SoundEventQueue {
           var9 = -1;
           var10 = to.field_n[var3_int];
           if (var8 == 0) {
-            var9 = AgeValidator.a(this.field_h, true, param0.getX(param1 - 52));
-            var10 = ol.computeDistanceVolume(param0.getX(-118), var3_int, (byte) -91, this.field_h, param0.getY(-121), this.field_c);
+            var9 = AgeValidator.a(this.listenerX, true, param0.getX(param1 - 52));
+            var10 = ol.computeDistanceVolume(param0.getX(-118), var3_int, (byte) -91, this.listenerX, param0.getY(-121), this.listenerY);
           }
           var11 = MatchProtocol.a(100, (byte) -58, var9, var4, var6, var10);
           if (var7 != 0) {
@@ -246,7 +246,7 @@ final class SoundEventPlayer extends SoundEventQueue {
         this.muted = param0 ? true : false;
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean triggersFollowUpSound(int param0, int param1) {
         if (param0 > -89) {
           this.playing = (IntrusiveDeque) null;
           if (param1 == 85) {
@@ -289,14 +289,14 @@ final class SoundEventPlayer extends SoundEventQueue {
         field_f = null;
     }
 
-    final void b(int param0, int param1, int param2) {
-        this.field_h = param1;
+    final void setListenerPosition(int param0, int param1, int param2) {
+        this.listenerX = param1;
         if (param2 != 89) {
           field_d = (String) null;
-          this.field_c = param0;
+          this.listenerY = param0;
           return;
         }
-        this.field_c = param0;
+        this.listenerY = param0;
     }
 
     final void playQueuedEvents(int param0, boolean param1) {
@@ -311,7 +311,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           var5 = (SoundEvent) (this.events.next(124));
         }
         if (param0 < 75) {
-          discarded$1 = this.a(53, -23);
+          discarded$1 = this.triggersFollowUpSound(53, -23);
         } else {
           var6 = (PlayingSound) (this.playing.first(-80));
           while (var6 != null) {

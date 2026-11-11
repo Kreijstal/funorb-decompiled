@@ -186,7 +186,7 @@ final class PlantModel extends TrapModel {
         super(param0, param1, param2);
     }
 
-    final void a(boolean param0, int param1) {
+    final void setVariant(boolean param0, int param1) {
         this.field_m = param1;
         if (!param0) {
           field_p = (String) null;

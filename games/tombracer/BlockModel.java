@@ -242,7 +242,7 @@ final class BlockModel extends TrapModel {
             }
           }
           if (null != this.field_x) {
-            this.field_x.updateVolumeAndPan(this.getRenderX((byte) -114), var11.field_c, -128, var11.field_h, this.getRenderY((byte) 105));
+            this.field_x.updateVolumeAndPan(this.getRenderX((byte) -114), var11.listenerY, -128, var11.listenerX, this.getRenderY((byte) 105));
           }
         }
         if (16 == this.field_v) {

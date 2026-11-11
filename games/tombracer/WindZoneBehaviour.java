@@ -245,7 +245,7 @@ final class WindZoneBehaviour extends Behaviour {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void setDirection(int param0, int param1) {
         int var3 = 118 / ((param0 + 45) / 59);
         this.field_q = param1;
     }

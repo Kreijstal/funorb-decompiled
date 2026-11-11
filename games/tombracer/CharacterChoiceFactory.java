@@ -75,7 +75,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
           if (tja.field_q == null) {
             return;
           }
-          tja.field_q.b(116, (java.awt.Component) ((Object) param0));
+          tja.field_q.detachWheelListener(116, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

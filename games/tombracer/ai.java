@@ -20,9 +20,9 @@ final class ai {
         field_b = null;
     }
 
-    final static us a(byte param0, String param1) {
+    final static AvailabilityQuery createAvailabilityQuery(byte param0, String param1) {
         RuntimeException var2 = null;
-        us stackIn_3_0 = null;
+        AvailabilityQuery stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -31,7 +31,7 @@ final class ai {
           if (param0 <= 114) {
             field_d = (String) null;
           }
-          stackIn_3_0 = new us(param1);
+          stackIn_3_0 = new AvailabilityQuery(param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

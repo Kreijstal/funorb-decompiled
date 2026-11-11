@@ -57,7 +57,7 @@ final class sda extends IntrusiveNode {
             !PitSnake.field_j.equals(param0.getParameter("session"))) {
             var4 = PitSnake.field_j;
           }
-          stackIn_12_0 = us.rewriteAppletUrl((byte) 66, param2, (String) (var4), -1, (String) (var3));
+          stackIn_12_0 = AvailabilityQuery.rewriteAppletUrl((byte) 66, param2, (String) (var4), -1, (String) (var3));
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

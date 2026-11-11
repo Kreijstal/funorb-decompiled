@@ -75,7 +75,7 @@ final class fga implements ShellListener {
                     RidgedNoise3D.field_p > this.field_b[var3_int] &&
                     (this.field_b[var3_int] + 30) > RidgedNoise3D.field_p &&
                     !VerticalScrollbar.field_tb[82]) {
-                    var4 = LoadLevelCommand.a(var3_int, (byte) 56);
+                    var4 = LoadLevelCommand.getMainRoomKey(var3_int, (byte) 56);
                     stackIn_32_1 = 74;
                     stackIn_33_2 = !(ComponentTargetList.field_e.get(var4));
                     this.a((byte) stackIn_32_1, stackIn_33_2, var4);
@@ -210,7 +210,7 @@ final class fga implements ShellListener {
             if (ComponentTargetList.field_e == null) {
               return;
             }
-            var2_int = aq.a(-5640);
+            var2_int = aq.getMainRoomCount(-5640);
             if (null == this.field_d ||
               var2_int != this.field_d.length) {
               this.field_b = new int[var2_int];
@@ -250,7 +250,7 @@ final class fga implements ShellListener {
                 stackIn_61_0 = 0;
                 break;
               }
-              var6_intLifetime1 = LoadLevelCommand.a(var5Lifetime1, (byte) 95);
+              var6_intLifetime1 = LoadLevelCommand.getMainRoomKey(var5Lifetime1, (byte) 95);
               var7 = ComponentTargetList.field_e.get(var6_intLifetime1) ? 1 : 0;
               var8 = -10079437;
               stackIn_61_0 = var7;
@@ -287,7 +287,7 @@ final class fga implements ShellListener {
               }
               break;
             }
-            RoomEffectTraps.a(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + RandomAccessFileHandle.a(param0 + 86), 10, kn.field_p, 16777215);
+            RoomEffectTraps.a(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + RandomAccessFileHandle.getConnectorRoomCount(param0 + 86), 10, kn.field_p, 16777215);
             try {
               var3.e(param0 - 1);
             } catch (qva decompiledCaughtParameter0) {
@@ -358,13 +358,13 @@ final class fga implements ShellListener {
             var4_int = 0;
             var5 = 0;
             scanLoop1: while (true) {
-              if (var5 < aq.a(-5640)) {
+              if (var5 < aq.getMainRoomCount(-5640)) {
                 stackIn_45_0 = var4_int;
                 if (var7 != 0) {
                   break scanLoop1;
                 }
                 if (stackIn_45_0 < 10) {
-                  var6 = LoadLevelCommand.a(var5, (byte) 125);
+                  var6 = LoadLevelCommand.getMainRoomKey(var5, (byte) 125);
                   if (AnimatedLight.a(false, var6).field_d) {
                     this.a((byte) 110, true, var5);
                     var4_int++;
@@ -389,13 +389,13 @@ final class fga implements ShellListener {
           } while (var7 == 0);
           var5Lifetime1 = 0;
           scanLoop2: while (true) {
-            if (var5Lifetime1 < aq.a(param0 - 5568)) {
+            if (var5Lifetime1 < aq.getMainRoomCount(param0 - 5568)) {
               stackIn_32_0 = 30;
               if (var7 != 0) {
                 break scanLoop2;
               }
               if (stackIn_32_0 > var4_int) {
-                var6Lifetime1 = LoadLevelCommand.a(var5Lifetime1, (byte) 111);
+                var6Lifetime1 = LoadLevelCommand.getMainRoomKey(var5Lifetime1, (byte) 111);
                 if (!AnimatedLight.a(false, var6Lifetime1).field_d ||
                   var7 != 0) {
                   this.a((byte) 46, true, var5Lifetime1);

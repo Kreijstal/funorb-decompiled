@@ -335,7 +335,7 @@ public final class TombRacer extends rfa implements ls {
         PlayerContextMenu.releaseStatics((byte) 67);
         ReportAbuseDialog.a(true);
         pha.releaseStatics((byte) -68);
-        ht.releaseStatics((byte) -113);
+        LobbyGameWidget.releaseStatics((byte) -113);
         SecondaryNodeHashTable.releaseStatics(123);
         re.releaseStatics((byte) -33);
         DualLinkNode.releaseStatics(0);
@@ -904,7 +904,7 @@ public final class TombRacer extends rfa implements ls {
         rv.releaseStatics(-31950);
         StringCursor.releaseStatics(true);
         cr.releaseStatics((byte) -128);
-        us.releaseStatics(-1);
+        AvailabilityQuery.releaseStatics(-1);
         fta.releaseStatics(0);
         rha.releaseStatics(-29867);
         aca.releaseStatics(false);
@@ -1213,7 +1213,7 @@ public final class TombRacer extends rfa implements ls {
           }
           if (param0 == 14) {
             CircleMovementLocomotor.initializeLobbyCollections(DoorwayComponent.r((byte) 107), lla.nextPowerOfTwo(false, 4), (byte) -51, vo.e(35040), lla.nextPowerOfTwo(false, 2000), MirrorMoverLocomotor.field_o.length, LoadProfileCommand.field_t, 1024, TextSpewerBehaviour.b(19845), 150);
-            us.a(-8250, PitBehaviour.b(-80), fa.b((byte) 123));
+            AvailabilityQuery.a(-8250, PitBehaviour.b(-80), fa.b((byte) 123));
             RandomMazeBehaviour.field_n = true;
             LegacyOpenGlEnvironmentWaterEffect.field_d = false;
             ConstrainToRectangleLocomotor.showMenuScreen(false, -2, (byte) 90);

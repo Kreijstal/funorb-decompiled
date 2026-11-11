@@ -13,7 +13,7 @@ final class cua {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void selectLobbyGame(int param0, int param1, int param2) {
         BitPacketBuffer var4 = null;
         BitPacketBuffer var4Lifetime1;
         if (param1 != 3) {
@@ -22,8 +22,8 @@ final class cua {
         if (RasterizerOperator.field_o == param0) {
           return;
         }
-        ht var6 = (ht) (WhiteLightSensorComponent.field_K.get(-115, (long)RasterizerOperator.field_o));
-        ht var7 = var6;
+        LobbyGameWidget var6 = (LobbyGameWidget) (WhiteLightSensorComponent.field_K.get(-115, (long)RasterizerOperator.field_o));
+        LobbyGameWidget var7 = var6;
         RasterizerOperator.field_o = param0;
         if (var7 != null) {
           var7.field_Cb = null;
@@ -42,9 +42,9 @@ final class cua {
         var4Lifetime1.writeShort(-1477662136, param0);
     }
 
-    final static void insertSorted(ht param0, byte param1) {
+    final static void insertSorted(LobbyGameWidget param0, byte param1) {
         RuntimeException runtimeException = null;
-        ht var2 = null;
+        LobbyGameWidget var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -54,10 +54,10 @@ final class cua {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           param0.unlink(17);
-          var2 = (ht) (AffineTransform3D.field_j.first(-80));
+          var2 = (LobbyGameWidget) (AffineTransform3D.field_j.first(-80));
           while (var2 != null) {
             if (var2.sortsBefore(param0, 71)) {
-              var2 = (ht) (AffineTransform3D.field_j.next(113));
+              var2 = (LobbyGameWidget) (AffineTransform3D.field_j.next(113));
               continue;
             }
             break;

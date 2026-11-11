@@ -77,11 +77,11 @@ abstract class PrefabComponent extends RoomComponent {
               stackIn_14_1 = param0;
               stackIn_14_2 = true;
               stackIn_14_3 = (Room) (param2);
-              stackIn_14_4 = param3 + var10.b((byte) -125);
+              stackIn_14_4 = param3 + var10.getElevation((byte) -125);
               stackIn_14_5 = param4;
               stackIn_14_6 = var10;
               stackIn_15_7 = !(param1);
-              ((RoomComponent) (Object) stackIn_14_0).instantiate(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5 + ((ComponentMount) (Object) stackIn_14_6).a(stackIn_15_7), param5, var13);
+              ((RoomComponent) (Object) stackIn_14_0).instantiate(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5 + ((ComponentMount) (Object) stackIn_14_6).getAngle(stackIn_15_7), param5, var13);
             }
           }
           if (param6 == null) {

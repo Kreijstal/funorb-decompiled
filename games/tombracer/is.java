@@ -200,7 +200,7 @@ final class is extends UiComponent {
         if (param1 != 1513) {
           field_wb = (hra) null;
         }
-        this.c(-57, param0);
+        this.layoutFullScreen(-57, param0);
         if (!param0) {
           this.field_tb.field_r = this.field_vb.toString();
           if (param0 &&

@@ -28,7 +28,7 @@ final class PressureSwitchComponent extends SwitchComponent {
             return;
           }
           rg.a((byte) -53);
-          era.field_e.c(37, param0);
+          era.field_e.layoutFullScreen(37, param0);
           if (null != apa.field_c) {
             if (!fua.field_g) {
               apa.field_c = null;

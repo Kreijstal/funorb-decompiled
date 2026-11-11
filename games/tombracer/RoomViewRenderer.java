@@ -132,7 +132,7 @@ final class RoomViewRenderer {
           var28 = var16_ref.getX(-30661);
           var29 = var16_ref.getY((byte) 70);
           param5.soundPlayers[param0].a(var29 << 16, 50, var28 << 16);
-          param5.soundPlayers[param0].b(var9.getY(9648), var9.getX(3), 89);
+          param5.soundPlayers[param0].setListenerPosition(var9.getY(9648), var9.getX(3), 89);
           var22 = var28 << 2;
           var23 = var29 << 2;
           var30 = var20;

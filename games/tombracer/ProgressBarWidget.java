@@ -131,7 +131,7 @@ final class ProgressBarWidget extends UiWidget {
         if (GasTrapComponent.isDialogOpen((byte) -118)) {
           iqa.a(-109, param3, param5, param1);
           if (hka.field_b != null &&
-            hka.field_b.a(param1, param6, param0, param2 ^ -107, param3)) {
+            hka.field_b.handleMenuAction(param1, param6, param0, param2 ^ -107, param3)) {
             wp.closeContextMenu(-1);
             param1 = false;
           }

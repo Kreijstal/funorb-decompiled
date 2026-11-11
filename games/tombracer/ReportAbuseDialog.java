@@ -453,7 +453,7 @@ final class ReportAbuseDialog extends UiComponent {
         boolean stackIn_16_1 = false;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        this.c(44, param1);
+        this.layoutFullScreen(44, param1);
         if (null != this.field_xb) {
           this.field_xb.field_r = this.field_vb.toString();
           this.field_xb.field_qb = (this.field_G - this.field_xb.field_H.stringWidth(this.field_xb.field_r)) / 2;

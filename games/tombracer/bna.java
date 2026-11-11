@@ -19,7 +19,7 @@ final class bna extends IntrusiveNode {
     final static void a(byte param0) {
         RuntimeException decompiledCaughtException = null;
         pha var1 = null;
-        ht var1_ref = null;
+        LobbyGameWidget var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
         pha var1Lifetime1;
@@ -41,7 +41,7 @@ final class bna extends IntrusiveNode {
           if (param0 != 10) {
             return;
           }
-          var1_ref = (ht) (AffineTransform3D.field_j.first(-80));
+          var1_ref = (LobbyGameWidget) (AffineTransform3D.field_j.first(-80));
           while (var1_ref != null) {
             if (var1_ref.field_zb > 0) {
               var1_ref.field_zb = var1_ref.field_zb - 1;
@@ -52,7 +52,7 @@ final class bna extends IntrusiveNode {
                 }
               }
             }
-            var1_ref = (ht) (AffineTransform3D.field_j.next(120));
+            var1_ref = (LobbyGameWidget) (AffineTransform3D.field_j.next(120));
           }
           var1Lifetime1 = (pha) (qha.field_g.first(param0 ^ -70));
           while (var1Lifetime1 != null) {

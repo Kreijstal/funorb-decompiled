@@ -47,7 +47,7 @@ final class uo {
             for (var6 = 0; var6 < var5; var6++) {
               var15 = DateInputWidget.getCourseRoom(var4, 91, var6);
               if (-1 != var15.field_a ||
-                var15.field_e.a(-25584)) {
+                var15.field_e.isConnector(-25584)) {
                 var8 = var15.field_e.c(1);
                 if (var8 > 0) {
                   var9 = 0;
@@ -67,7 +67,7 @@ final class uo {
                   if (var9 == 0) {
                     var16.add((byte) -37, var15);
                   }
-                  if (!var15.field_e.a(-25584)) {
+                  if (!var15.field_e.isConnector(-25584)) {
                     var2++;
                   } else {
                     var3++;
@@ -86,7 +86,7 @@ final class uo {
           for (var6Lifetime1 = 0; var16.size(-1) > var6Lifetime1; var6Lifetime1++) {
             var14 = (RoomDefinition) (var16.get(true, var6Lifetime1));
             var17 = var14;
-            if (!var17.field_e.a(-25584)) {
+            if (!var17.field_e.isConnector(-25584)) {
               incrementValue$0 = var4Lifetime1;
               var4Lifetime1++;
               qg.field_a[incrementValue$0] = var17;

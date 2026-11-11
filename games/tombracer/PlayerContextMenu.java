@@ -54,7 +54,7 @@ final class PlayerContextMenu {
         return var2;
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void draw(boolean param0, boolean param1) {
         if (!param0) {
           this.field_g = -102L;
           this.field_f.drawFullScreen(44, param1);
@@ -66,7 +66,7 @@ final class PlayerContextMenu {
     final void addLobbyGameActions(byte param0) {
         String var3;
         int var4;
-        ht var5;
+        LobbyGameWidget var5;
         var4 = TombRacer.field_G ? 1 : 0;
         if (null != C2SChooseRewardPacket.field_a) {
           if (param0 <= -10) {
@@ -75,7 +75,7 @@ final class PlayerContextMenu {
           this.field_e = (int[]) null;
           return;
         }
-        var5 = MazeSolver.a(this.field_k, 0);
+        var5 = MazeSolver.findLobbyGame(this.field_k, 0);
         if (var5 == null) {
           if (param0 <= -10) {
             return;
@@ -113,7 +113,7 @@ final class PlayerContextMenu {
         return;
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4) {
+    final boolean handleMenuAction(boolean param0, int param1, int param2, int param3, int param4) {
         int var6 = this.field_f.updateAndPollAction(0, param0);
         if (param3 == var6) {
           return false;
@@ -188,12 +188,12 @@ final class PlayerContextMenu {
                   LegacyOpenGlRidgedWaterEffect.a(param2, false, this.field_k);
                 } else {
                   if (param1 == 15) {
-                    cua.a(this.field_k, param0 + 21, param2);
+                    cua.selectLobbyGame(this.field_k, param0 + 21, param2);
                   } else {
                     if (param1 != 16) {
                       return false;
                     }
-                    cua.a(0, 3, param2);
+                    cua.selectLobbyGame(0, 3, param2);
                   }
                 }
               }
@@ -368,7 +368,7 @@ final class PlayerContextMenu {
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void populateItems(byte param0, boolean param1) {
         pha var4;
         String var5;
         int var6;

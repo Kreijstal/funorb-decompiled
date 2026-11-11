@@ -14,7 +14,7 @@ abstract class r extends DualLinkNode {
             return;
           }
           if (C2SChooseRewardPacket.field_a != null) {
-            MidiVoiceMixer.a(11, 30, C2SChooseRewardPacket.field_a.f(param0 ^ 0));
+            MidiVoiceMixer.a(11, 30, C2SChooseRewardPacket.field_a.getGameId(param0 ^ 0));
           }
           ColouriseOperator.field_q = true;
           return;
@@ -24,7 +24,7 @@ abstract class r extends DualLinkNode {
           return;
         }
         if (C2SChooseRewardPacket.field_a != null) {
-          MidiVoiceMixer.a(11, 30, C2SChooseRewardPacket.field_a.f(param0 ^ 0));
+          MidiVoiceMixer.a(11, 30, C2SChooseRewardPacket.field_a.getGameId(param0 ^ 0));
         }
         ColouriseOperator.field_q = true;
     }

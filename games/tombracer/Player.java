@@ -1255,7 +1255,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           if (decompiledFrameRemainder0) {
             var3.setItemType(0, false);
           }
-          var3.a(true, (byte) 2);
+          var3.setWaitingForPlayerToLeave(true, (byte) 2);
           var2.addBehaviour((byte) 83, (Behaviour) (var3));
           var2.rebuildBehaviourModels(437453352, true);
           var2.setPushable(true, param0 ^ 30447);

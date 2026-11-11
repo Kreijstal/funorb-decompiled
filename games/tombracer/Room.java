@@ -454,11 +454,11 @@ final class Room implements SwitchableScope, Renderable, noa {
         return (Projectile) (this.projectilePool.spawn(-2698, param0, param3, this.scene, param1));
     }
 
-    final boolean j(int param0) {
+    final boolean isConnectorRoom(int param0) {
         if (param0 != 0) {
           return false;
         }
-        return this.header.a(-25584);
+        return this.header.isConnector(-25584);
     }
 
     private final void reset(boolean param0, byte param1) {

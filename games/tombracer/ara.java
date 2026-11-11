@@ -15,7 +15,7 @@ final class ara extends UiComponent {
           field_yb = (String) null;
         }
         boolean decompiledFrameRemainder0 = true;
-        this.c(42, true);
+        this.layoutFullScreen(42, true);
         if ((PlayerModel.field_b == 0 ||
           0 != this.field_y) && this.field_tb.field_y == 0) {
           stackIn_9_0 = false;

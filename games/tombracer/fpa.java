@@ -21,7 +21,7 @@ final class fpa {
           if (tja.field_q == null) {
             return;
           }
-          tja.field_q.a(param1 ^ -59, (java.awt.Component) ((Object) param0));
+          tja.field_q.attachWheelListener(param1 ^ -59, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

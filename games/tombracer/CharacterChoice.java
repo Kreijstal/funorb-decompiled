@@ -11,29 +11,29 @@ final class CharacterChoice implements dv {
         field_a = null;
         if (param0 != 3) {
           String var2 = (String) null;
-          CharacterChoice.a((byte) -5, (String) null);
+          CharacterChoice.requestAvailabilityCheck((byte) -5, (String) null);
           field_c = null;
           return;
         }
         field_c = null;
     }
 
-    final static us a(byte param0, String param1) {
+    final static AvailabilityQuery requestAvailabilityCheck(byte param0, String param1) {
         RuntimeException var2 = null;
-        us stackIn_2_0 = null;
-        us stackIn_7_0 = null;
+        AvailabilityQuery stackIn_2_0 = null;
+        AvailabilityQuery stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -11) {
-            stackIn_2_0 = (us) null;
+            stackIn_2_0 = (AvailabilityQuery) null;
             return stackIn_2_0;
           }
           if (DefaultRoomObjectRenderer.field_b.isComplete(127) &&
             !param1.equals(DefaultRoomObjectRenderer.field_b.getName((byte) 106))) {
-            DefaultRoomObjectRenderer.field_b = ai.a((byte) 120, param1);
+            DefaultRoomObjectRenderer.field_b = ai.createAvailabilityQuery((byte) 120, param1);
           }
           stackIn_7_0 = DefaultRoomObjectRenderer.field_b;
           return stackIn_7_0;

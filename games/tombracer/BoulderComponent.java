@@ -28,7 +28,7 @@ final class BoulderComponent extends PathMoverComponent {
         if (param1 < -76) {
           var3 = IntrusiveDeque.a(param2, param0, -117);
           if (var3 != null) {
-            hka.field_b.a((byte) -22, false);
+            hka.field_b.populateItems((byte) -22, false);
             var4 = hka.field_b;
             var5_ref_String = ai.field_d;
             var4.field_f.addItem((byte) -101, 5, var5_ref_String);
@@ -44,7 +44,7 @@ final class BoulderComponent extends PathMoverComponent {
         BoulderComponent.loadSpritesByName((ResourceArchive) null, (String) null, -33, (String) null);
         var3Lifetime1 = IntrusiveDeque.a(param2, param0, -117);
         if (var3Lifetime1 != null) {
-          hka.field_b.a((byte) -22, false);
+          hka.field_b.populateItems((byte) -22, false);
           var4Lifetime1 = hka.field_b;
           var5_ref_StringLifetime1 = ai.field_d;
           var4Lifetime1.field_f.addItem((byte) -101, 5, var5_ref_StringLifetime1);
@@ -174,7 +174,7 @@ final class BoulderComponent extends PathMoverComponent {
           var11.addLocomotor(var8, 0);
           var9 = rm.field_a;
           var10 = (HazardModel) (var9.createModel(8, param1 ^ 76));
-          var10.a(false, 0);
+          var10.setVariant(false, 0);
           var11.addModel(var5, (byte) 124, var10);
           stackIn_1_0 = var11;
           return stackIn_1_0;

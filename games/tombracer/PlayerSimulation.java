@@ -227,7 +227,7 @@ final class PlayerSimulation {
         return this.field_l;
     }
 
-    final boolean d(int param0) {
+    final boolean hasConnectorRooms(int param0) {
         if (param0 != 28091) {
           return true;
         }
@@ -475,7 +475,7 @@ final class PlayerSimulation {
         try {
           param2.setCourseIndex(param1, false);
           if (param0 != -28088) {
-            this.d(41);
+            this.hasConnectorRooms(41);
           }
           this.rooms[param1] = param2;
         } catch (RuntimeException runtimeException) {
@@ -485,7 +485,7 @@ final class PlayerSimulation {
 
     final SimulationObserver getObserver(int param0) {
         if (param0 != 9262) {
-          this.d(36);
+          this.hasConnectorRooms(36);
           return this.observer;
         }
         return this.observer;

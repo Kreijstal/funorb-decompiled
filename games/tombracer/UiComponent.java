@@ -303,7 +303,7 @@ class UiComponent extends um {
         this.field_t = var8;
     }
 
-    final void c(int param0, boolean param1) {
+    final void layoutFullScreen(int param0, boolean param1) {
         FuseBehaviour.field_w = !param1 ? true : false;
         int var3 = -103 / ((-16 - param0) / 34);
         DrawOfferMenu.field_s = !param1 ? true : false;

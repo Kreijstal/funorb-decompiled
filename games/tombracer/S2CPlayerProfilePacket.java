@@ -16,7 +16,7 @@ final class S2CPlayerProfilePacket implements GamePacket {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void fadeMusicChannelOut(int param0, int param1) {
         if (param0 < 38) {
           return;
         }

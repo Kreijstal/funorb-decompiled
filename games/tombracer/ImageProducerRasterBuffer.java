@@ -105,7 +105,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static void a(byte param0, ht param1, boolean param2, String param3) {
+    final static void a(byte param0, LobbyGameWidget param1, boolean param2, String param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -124,7 +124,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         String var15 = null;
         PlayerContextMenu var16 = null;
         try {
-          DateInputWidget.openPlayerContextMenu(nsa.field_i, param1.f(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
+          DateInputWidget.openPlayerContextMenu(nsa.field_i, param1.getGameId(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
           if (param1.field_ec && (param1.field_yb == 2 ||
             !(ld.field_e < 2))) {
             var10 = hka.field_b;
@@ -148,7 +148,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           var6 = RidgedNoise3D.field_p;
           if (param0 >= -45) {
             var7 = (String) null;
-            ImageProducerRasterBuffer.a((byte) 0, (ht) null, false, (String) null);
+            ImageProducerRasterBuffer.a((byte) 0, (LobbyGameWidget) null, false, (String) null);
           }
           var16.field_f.openAt(var6, 0, -61, 0, var5);
           return;

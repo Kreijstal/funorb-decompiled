@@ -92,7 +92,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract int getYear(int param0);
 
-    abstract int a(int param0);
+    abstract int year(int param0);
 
     final static vb c(int param0) {
         if (param0 != 141) {

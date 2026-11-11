@@ -75,7 +75,7 @@ final class RoomHeader {
     final void encode(BitPacketBuffer param0, int param1) {
         try {
           if (param1 != 23) {
-            this.a(-16);
+            this.isConnector(-16);
           }
           param0.writeBits((byte) 118, !this.field_a ? 0 : 1, 1);
           param0.writeBits((byte) -125, this.field_d, 2);
@@ -93,7 +93,7 @@ final class RoomHeader {
         return this.field_b;
     }
 
-    final boolean a(int param0) {
+    final boolean isConnector(int param0) {
         if (param0 != -25584) {
           return true;
         }

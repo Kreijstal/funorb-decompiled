@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class us {
+final class AvailabilityQuery {
     private boolean field_d;
     private String field_a;
     private boolean field_b;
@@ -344,7 +344,7 @@ final class us {
         }
     }
 
-    us(String param0) {
+    AvailabilityQuery(String param0) {
         this.field_b = false;
         this.field_d = false;
         try {

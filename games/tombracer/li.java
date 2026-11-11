@@ -14,22 +14,22 @@ final class li {
         if (MenuEntry.field_j == null) {
           return;
         }
-        S2CPlayerProfilePacket.a(77, 1);
+        S2CPlayerProfilePacket.fadeMusicChannelOut(77, 1);
         if (param1 <= 105) {
           return;
         }
-        S2CPlayerProfilePacket.a(91, 2);
+        S2CPlayerProfilePacket.fadeMusicChannelOut(91, 2);
         if (DoorwayComponent.field_I == 0) {
-          MatchProtocol.b(2, 0);
+          MatchProtocol.fadeMusicChannelIn(2, 0);
           DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;
           ProxySocketConnector.a(param0, 5);
-          MatchProtocol.b(uca.cosmeticRandom.nextBounded(6, 0) + 3, 0);
+          MatchProtocol.fadeMusicChannelIn(uca.cosmeticRandom.nextBounded(6, 0) + 3, 0);
           return;
         }
-        MatchProtocol.b(1, 0);
+        MatchProtocol.fadeMusicChannelIn(1, 0);
         DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;
         ProxySocketConnector.a(param0, 5);
-        MatchProtocol.b(uca.cosmeticRandom.nextBounded(6, 0) + 3, 0);
+        MatchProtocol.fadeMusicChannelIn(uca.cosmeticRandom.nextBounded(6, 0) + 3, 0);
     }
 
     final static su a(int param0, byte param1) {

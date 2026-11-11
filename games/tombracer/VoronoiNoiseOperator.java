@@ -209,7 +209,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
             rp.field_h = 2147483647;
             CorpseList.field_b = 2147483647;
             TextFieldValidator.field_h = 2147483647;
-            var15 = 2048 + ht.textureColumnCoords[var14] * this.field_t;
+            var15 = 2048 + LobbyGameWidget.textureColumnCoords[var14] * this.field_t;
             var16 = var15 >> 12;
             var17 = var16 + 1;
             for (var8 = var5 - 1; var8 <= var6; var8++) {

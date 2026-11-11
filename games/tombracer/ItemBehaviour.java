@@ -19,7 +19,7 @@ abstract class ItemBehaviour extends Behaviour {
 
     final boolean isCollected(int param0) {
         if (param0 >= -64) {
-          this.a(false, (byte) -88);
+          this.setWaitingForPlayerToLeave(false, (byte) -88);
           return this.collected;
         }
         return this.collected;
@@ -51,7 +51,7 @@ abstract class ItemBehaviour extends Behaviour {
         int var1 = 56 % ((param0 - 57) / 45);
     }
 
-    void a(boolean param0, byte param1) {
+    void setWaitingForPlayerToLeave(boolean param0, byte param1) {
         this.waitingForPlayerToLeave = param0 ? true : false;
         if (param1 != 2) {
           this.collected = false;
