@@ -103,13 +103,13 @@ final class DivisionMazeGenerator extends MazeGenerator {
               param2.setCell(var6, 0, 0, var5_int);
             }
           }
-          this.a(0, param2.width, 0, param2, param2.height, 1);
+          this.divide(0, param2.width, 0, param2, param2.height, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "tna.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2, MazeGrid param3, int param4, int param5) {
+    private final void divide(int param0, int param1, int param2, MazeGrid param3, int param4, int param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -146,10 +146,10 @@ final class DivisionMazeGenerator extends MazeGenerator {
             if (var9Lifetime2 != 3) {
               param3.setCell(var8, 0, 0, 1 + this.random.nextBounded(-1 + param2 + (param1 - var7_int), 0) / 2 * 2 + var7_int);
             }
-            this.a(param0, -param2 + (var7_int + 1), param2, param3, var8 + 1 - param0, 1);
-            this.a(param0, param2 + param1 - var7_int, var7_int, param3, var8 + (1 - param0), 1);
-            this.a(var8, -param2 + (var7_int + 1), param2, param3, param0 + (param4 - var8), param5 + 0);
-            this.a(var8, param2 - (-param1 + var7_int), var7_int, param3, -var8 + (param0 + param4), param5 ^ 0);
+            this.divide(param0, -param2 + (var7_int + 1), param2, param3, var8 + 1 - param0, 1);
+            this.divide(param0, param2 + param1 - var7_int, var7_int, param3, var8 + (1 - param0), 1);
+            this.divide(var8, -param2 + (var7_int + 1), param2, param3, param0 + (param4 - var8), param5 + 0);
+            this.divide(var8, param2 - (-param1 + var7_int), var7_int, param3, -var8 + (param0 + param4), param5 ^ 0);
             return;
           }
           return;

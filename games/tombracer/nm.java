@@ -8,7 +8,7 @@ final class nm extends vo implements sca {
     static String field_j;
 
     final static void setRasterTarget(Sprite param0, byte param1) {
-        gb.a(-29711);
+        gb.pushRasterState(-29711);
         if (param1 < 88) {
           return;
         }

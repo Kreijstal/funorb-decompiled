@@ -16,7 +16,7 @@ final class SwitchLinkList {
         return qf.field_i;
     }
 
-    private final void a(byte param0) {
+    private final void pruneDudTargets(byte param0) {
         int var3_int = 0;
         int var5 = 0;
         int incrementValue$0 = 0;
@@ -70,7 +70,7 @@ final class SwitchLinkList {
         int var4_int = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         try {
-          this.a((byte) -12);
+          this.pruneDudTargets((byte) -12);
           param2.writeBits((byte) 43, this.targets.length, RandomBrickOperator.bitLength(this.field_e, 22972));
           for (var4_int = 0; this.targets.length > var4_int; var4_int++) {
             if (this.targets[var4_int].getScope((byte) 114) != param1) {
@@ -111,9 +111,9 @@ final class SwitchLinkList {
           this.pendingTargetIds = null;
           if (param1 != 8) {
             field_b = (ka[]) null;
-            this.a((byte) -12);
+            this.pruneDudTargets((byte) -12);
           } else {
-            this.a((byte) -12);
+            this.pruneDudTargets((byte) -12);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

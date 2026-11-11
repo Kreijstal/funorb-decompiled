@@ -27,7 +27,7 @@ final class BrickOperator extends TextureOperator {
     final static void d(byte param0) {
         aca var1 = (aca) (io.field_d.first(-80));
         if (var1 == null) {
-          dea.a(60);
+          dea.closeGameSocket(60);
           return;
         }
         BitPacketBuffer var2 = WeaveOperator.field_q;
@@ -114,7 +114,7 @@ final class BrickOperator extends TextureOperator {
         return 2;
     }
 
-    private final void c(int param0) {
+    private final void generateBrickLayout(int param0) {
         int var5 = 0;
         int var8 = 0;
         int var6 = 0;
@@ -176,11 +176,11 @@ final class BrickOperator extends TextureOperator {
         field_t = null;
     }
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         if (param0 != 116) {
           return;
         }
-        this.c(122);
+        this.generateBrickLayout(122);
     }
 
     public BrickOperator() {

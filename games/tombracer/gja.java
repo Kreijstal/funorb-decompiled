@@ -862,8 +862,8 @@ final class gja extends ka {
               this.field_m = FullscreenConfirmationDialog.copyOf(this.field_m, 114, this.field_fb);
               this.field_p = FullscreenConfirmationDialog.copyOf(this.field_p, 123, this.field_fb);
               this.field_w = kaa.copyByteRange(0, this.field_w, this.field_fb);
-              this.field_eb = fba.a(1, this.field_eb, this.field_fb);
-              this.field_t = fba.a(1, this.field_t, this.field_fb);
+              this.field_eb = fba.copyFloats(1, this.field_eb, this.field_fb);
+              this.field_t = fba.copyFloats(1, this.field_t, this.field_fb);
               if (null != param1.field_l &&
                 SingleChildWidget.d(param2, this.field_h, 32)) {
                 this.field_D = param1.a(false, (byte) 64);

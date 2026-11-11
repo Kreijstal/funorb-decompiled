@@ -17,7 +17,7 @@ final class PlatformMazeComponent extends MazeComponent {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8, int param9) {
+    final static void drawBezierCurve(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8, int param9) {
         int var25 = 0;
         int var10_int = 0;
         int var11 = 0;
@@ -94,7 +94,7 @@ final class PlatformMazeComponent extends MazeComponent {
         }
     }
 
-    final boolean D(int param0) {
+    final boolean supportsItems(int param0) {
         if (param0 != 0) {
           Room var3 = (Room) null;
           this.createOpenCellTrap((Room) null, false, false);
@@ -135,7 +135,7 @@ final class PlatformMazeComponent extends MazeComponent {
           var4 = new Trap(param0, param2);
           var4.setSize((byte) -11, 2097152, 2097152);
           var5 = new PlatformBehaviour(param0, param1);
-          var5.b(-5, this.field_K);
+          var5.setWeightThreshold(-5, this.field_K);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (PlatformModel) (var6.createModel(17, 102));

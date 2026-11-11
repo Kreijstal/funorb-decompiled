@@ -28,7 +28,7 @@ abstract class SocketConnector {
           if (param10 != 60) {
             field_c = 5;
           }
-          stackIn_3_0 = param2.a((aa) null, param11, param4, 0, param7, SoundEvent.a(false, param9), (int[]) null, param6, SoundEvent.a(false, param3), param0, (byte) 88, param5, 0, (ToolkitSprite[]) null, param8, param1);
+          stackIn_3_0 = param2.a((aa) null, param11, param4, 0, param7, SoundEvent.withFullAlpha(false, param9), (int[]) null, param6, SoundEvent.withFullAlpha(false, param3), param0, (byte) 88, param5, 0, (ToolkitSprite[]) null, param8, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

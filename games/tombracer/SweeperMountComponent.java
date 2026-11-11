@@ -80,7 +80,7 @@ final class SweeperMountComponent extends PrefabComponent {
         return true;
     }
 
-    final static int b(int param0, int param1) {
+    final static int mirrorDirection(int param0, int param1) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;

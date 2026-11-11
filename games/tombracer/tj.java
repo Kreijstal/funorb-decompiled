@@ -16,10 +16,10 @@ final class tj {
           return (java.awt.Container) ((Object) DropdownList.field_x);
         }
         if (param0 == 25128) {
-          return (java.awt.Container) ((Object) di.a(param0 - 25099));
+          return (java.awt.Container) ((Object) di.getApplet(param0 - 25099));
         }
         field_c = -12;
-        return (java.awt.Container) ((Object) di.a(param0 - 25099));
+        return (java.awt.Container) ((Object) di.getApplet(param0 - 25099));
     }
 
     public static void releaseStatics(int param0) {

@@ -172,7 +172,7 @@ final class bba {
         }
     }
 
-    final boolean a(RoomComponent param0, boolean param1, boolean param2) {
+    final boolean containsComponent(RoomComponent param0, boolean param1, boolean param2) {
         IntrusiveDequeCursor var4 = null;
         RuntimeException var4_ref = null;
         RoomComponent var5 = null;

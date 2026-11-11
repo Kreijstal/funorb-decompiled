@@ -59,7 +59,7 @@ final class fa {
               var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, pba.field_a, new String[]{wp.field_a});
             }
             if (vo.field_b) {
-              TreasureValuesOverlay.a(0, true, (String) null, (String) (var2), (String) null, 2);
+              TreasureValuesOverlay.addChatMessage(0, true, (String) null, (String) (var2), (String) null, 2);
               Room.l(2097152);
             }
           }
@@ -167,7 +167,7 @@ final class fa {
         RuntimeException var1 = null;
         try {
           if (param0 != -23172) {
-            fa.a(67, -121, true, -29);
+            fa.isValidDate(67, -121, true, -29);
           }
           field_a = null;
           return;
@@ -258,7 +258,7 @@ final class fa {
         }
     }
 
-    final static boolean a(int param0, int param1, boolean param2, int param3) {
+    final static boolean isValidDate(int param0, int param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException decompiledCaughtException = null;
         try {

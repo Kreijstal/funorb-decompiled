@@ -16,7 +16,7 @@ final class MenuEntry {
     private boolean field_l;
 
     final void reset(int param0) {
-        this.field_c.c(-72);
+        this.field_c.startDrop(-72);
         if (param0 != 1701110401) {
           this.field_e = (String) null;
         }
@@ -50,7 +50,7 @@ final class MenuEntry {
         if (param0 != 11919) {
           field_k = (String) null;
         }
-        var2 = this.b(-28425);
+        var2 = this.getSprite(-28425);
         var3 = var2.height();
         if (1 == this.field_g ||
           this.field_g == 3) {
@@ -73,14 +73,14 @@ final class MenuEntry {
         boolean stackIn_6_2 = false;
         boolean stackIn_7_3;
         if (param3 != 6) {
-          this.a(-5, 1, -105);
+          this.containsPoint(-5, 1, -105);
         }
         if (!this.field_a) {
           stackIn_6_0 = this.field_c;
           stackIn_6_1 = -115;
           stackIn_6_2 = param0;
           stackIn_7_3 = (param2) ? false : true;
-          ((dea) (Object) stackIn_6_0).a((byte) stackIn_6_1, stackIn_6_2, stackIn_7_3);
+          ((dea) (Object) stackIn_6_0).updateFall((byte) stackIn_6_1, stackIn_6_2, stackIn_7_3);
         }
         if (param1) {
           if (6 > this.field_d) {
@@ -147,13 +147,13 @@ final class MenuEntry {
         var6 = eda.field_f;
         var7 = this.getWidth(-163) / 2;
         var8 = this.getHeight(param2 + 11918) / 2;
-        var9 = this.field_i + this.field_c.e(param2 ^ -103);
+        var9 = this.field_i + this.field_c.getPosition(param2 ^ -103);
         if (param2 != 1) {
           return;
         }
         var10 = -var7 + this.field_b;
         var11 = var9 - var8;
-        var12 = this.b(-28425);
+        var12 = this.getSprite(-28425);
         var13 = this.getWidth(-163);
         var14 = this.getHeight(11919);
         var15 = -1;
@@ -360,16 +360,16 @@ final class MenuEntry {
         if (param0 != -163) {
           return -37;
         }
-        ToolkitSprite var2 = this.b(param0 ^ 28586);
+        ToolkitSprite var2 = this.getSprite(param0 ^ 28586);
         return var2.width() + this.field_d;
     }
 
-    final void a(boolean param0) {
+    final void finishDropAnimation(boolean param0) {
         if (param0) {
           String var3 = (String) null;
           MenuEntry.validateEmail(86, (String) null);
         }
-        this.field_c.d(31990);
+        this.field_c.snapToRest(31990);
     }
 
     final static hra validateEmail(int param0, String param1) {
@@ -432,7 +432,7 @@ final class MenuEntry {
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean containsPoint(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -441,12 +441,12 @@ final class MenuEntry {
         int var9;
         ToolkitSprite var10;
         int var5Lifetime1;
-        if (!this.field_c.b(20)) {
+        if (!this.field_c.isSettled(20)) {
           return false;
         }
         if (this.field_g != 1 &&
           3 != this.field_g) {
-          var10 = this.b(-28425);
+          var10 = this.getSprite(-28425);
           var5 = var10.width();
           var6 = var10.height();
           if (param0 != -30323) {
@@ -465,7 +465,7 @@ final class MenuEntry {
         return RewardChoicePhase.isPointInRect(-(var5Lifetime1 / 2) + this.field_i, param1, var5Lifetime1 / 2 + this.field_i, param2, this.field_b + var4 / 2, this.field_b - var4 / 2, 104);
     }
 
-    private final ToolkitSprite b(int param0) {
+    private final ToolkitSprite getSprite(int param0) {
         if (this.field_g == 1) {
           return ConstantEffectBehaviour.field_q;
         }

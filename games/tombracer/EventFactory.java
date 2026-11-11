@@ -44,10 +44,10 @@ final class EventFactory {
     final static void a(byte param0) {
         if (param0 >= -33) {
           EventFactory.a((byte) 116);
-          RotaterMountComponent.r((byte) 63);
+          RotaterMountComponent.updateMusicFadeIn((byte) 63);
           return;
         }
-        RotaterMountComponent.r((byte) 63);
+        RotaterMountComponent.updateMusicFadeIn((byte) 63);
     }
 
     static {

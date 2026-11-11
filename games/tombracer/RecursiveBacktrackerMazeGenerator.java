@@ -18,13 +18,13 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
               param2.setCell(var6, -1, 0, var5_int);
             }
           }
-          this.a(param2, param3, param0, 21619);
+          this.carveFrom(param2, param3, param0, 21619);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "fva.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    private final boolean a(int param0, MazeGrid param1, int param2, int param3) {
+    private final boolean isUnvisitedCell(int param0, MazeGrid param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_16_0 = null;
@@ -66,7 +66,7 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
         field_b = null;
     }
 
-    private final void a(MazeGrid param0, int param1, int param2, int param3) {
+    private final void carveFrom(MazeGrid param0, int param1, int param2, int param3) {
         int var6 = 0;
         int[] var5 = null;
         int var7 = 0;
@@ -86,7 +86,7 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
         try {
           if (param3 != 21619) {
             var11 = (MazeGrid) null;
-            this.a((MazeGrid) null, -65, 4, -46);
+            this.carveFrom((MazeGrid) null, -65, 4, -46);
           }
           var14 = this.randomPermutation(4, param3 - 23971);
           var13 = var14;
@@ -96,9 +96,9 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
             var7 = var14[var6];
             var8 = param1 + 2 * dma.field_k[var7][0];
             var9 = dma.field_k[var7][1] * 2 + param2;
-            if (this.a(var9, param0, var8, -74)) {
+            if (this.isUnvisitedCell(var9, param0, var8, -74)) {
               this.carvePassage(param2, (byte) -42, param0, param1, var9, var8);
-              this.a(param0, var8, var9, 21619);
+              this.carveFrom(param0, var8, var9, 21619);
             }
           }
           return;

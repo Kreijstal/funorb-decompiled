@@ -16,7 +16,7 @@ final class CurveOperator extends TextureOperator {
         textArchive = null;
     }
 
-    private final int[] d(int param0, int param1) {
+    private final int[] getControlPoint(int param0, int param1) {
         if (param0 > param1) {
           return this.field_o;
         }
@@ -47,7 +47,7 @@ final class CurveOperator extends TextureOperator {
         }
     }
 
-    private final void d(byte param0) {
+    private final void buildCurveTable(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -85,10 +85,10 @@ final class CurveOperator extends TextureOperator {
             }
             var22 = this.field_n[var3 - 1];
             var34 = this.field_n[var3];
-            var7 = this.d(0, -2 + var3)[1];
+            var7 = this.getControlPoint(0, -2 + var3)[1];
             var8 = var22[1];
             var9 = var34[1];
-            var10 = this.d(0, var3 + 1)[1];
+            var10 = this.getControlPoint(0, var3 + 1)[1];
             var11 = (-var22[0] + var4 << 12) / (var34[0] - var22[0]);
             var12 = var11 * var11 >> 12;
             var13 = var8 - var7 + (-var9 + var10);
@@ -191,7 +191,7 @@ final class CurveOperator extends TextureOperator {
         return 7459 * param1 + param2;
     }
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         if (param0 != 116) {
           this.field_n = (int[][]) null;
         }
@@ -202,10 +202,10 @@ final class CurveOperator extends TextureOperator {
           throw new RuntimeException("Curve operation requires at least two markers");
         }
         if (this.field_r == 2) {
-          this.a(false);
+          this.computeVirtualEndpoints(false);
         }
         tka.b((byte) 59);
-        this.d((byte) 119);
+        this.buildCurveTable((byte) 119);
     }
 
     final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
@@ -283,13 +283,13 @@ final class CurveOperator extends TextureOperator {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void computeVirtualEndpoints(boolean param0) {
         int[] var9 = this.field_n[0];
         int[] var7 = var9;
         int[] var6 = var7;
         int[] var2 = var6;
         if (param0) {
-          this.d((byte) -128);
+          this.buildCurveTable((byte) -128);
         }
         int[] var12 = this.field_n[1];
         int[] var4 = this.field_n[this.field_n.length - 2];

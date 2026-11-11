@@ -20,8 +20,8 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var2 = this.f(10);
-        int var3 = this.g((byte) 30);
+        int var2 = this.getAnchorX(10);
+        int var3 = this.getAnchorY((byte) 30);
         int var4 = this.trap.getLocalX(25745) - var2 >> 16;
         int var5 = this.trap.getLocalY(false) - var3 >> 16;
         int var6Lifetime1;

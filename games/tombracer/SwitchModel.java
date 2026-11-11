@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class SwitchModel extends TrapModel {
-    private fla field_p;
+    private PlayingSound field_p;
     private ModelAnimator field_s;
     private boolean field_n;
     private int field_q;
@@ -234,7 +234,7 @@ final class SwitchModel extends TrapModel {
                       if (this.field_q == 1 &&
                         !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                         this.field_p != null) {
-                        this.field_p.a(91, var6);
+                        this.field_p.release(91, var6);
                         this.field_p = null;
                       }
                     }
@@ -242,7 +242,7 @@ final class SwitchModel extends TrapModel {
                     if (this.field_q == 1 &&
                       !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                       this.field_p != null) {
-                      this.field_p.a(91, var6);
+                      this.field_p.release(91, var6);
                       this.field_p = null;
                     }
                   }
@@ -250,7 +250,7 @@ final class SwitchModel extends TrapModel {
                   if (this.field_q == 1 &&
                     !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                     this.field_p != null) {
-                    this.field_p.a(91, var6);
+                    this.field_p.release(91, var6);
                     this.field_p = null;
                   }
                 }
@@ -267,7 +267,7 @@ final class SwitchModel extends TrapModel {
                       if (this.field_q == 1 &&
                         !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                         this.field_p != null) {
-                        this.field_p.a(91, var6);
+                        this.field_p.release(91, var6);
                         this.field_p = null;
                       }
                     }
@@ -275,7 +275,7 @@ final class SwitchModel extends TrapModel {
                     if (this.field_q == 1 &&
                       !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                       this.field_p != null) {
-                      this.field_p.a(91, var6);
+                      this.field_p.release(91, var6);
                       this.field_p = null;
                     }
                   }
@@ -283,7 +283,7 @@ final class SwitchModel extends TrapModel {
                   if (this.field_q == 1 &&
                     !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                     this.field_p != null) {
-                    this.field_p.a(91, var6);
+                    this.field_p.release(91, var6);
                     this.field_p = null;
                   }
                 }
@@ -310,7 +310,7 @@ final class SwitchModel extends TrapModel {
               if (this.field_q == 1 &&
                 !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                 this.field_p != null) {
-                this.field_p.a(91, var6);
+                this.field_p.release(91, var6);
                 this.field_p = null;
               }
               stackIn_70_1 = (var3 != 0);
@@ -330,7 +330,7 @@ final class SwitchModel extends TrapModel {
                 stackIn_86_1 = (var3 != 0);
                 this.field_n = stackIn_86_1;
               } else {
-                this.field_p.a(91, var6);
+                this.field_p.release(91, var6);
                 this.field_p = null;
                 stackIn_90_1 = (var3 != 0);
                 this.field_n = stackIn_90_1;
@@ -357,7 +357,7 @@ final class SwitchModel extends TrapModel {
                       if (this.field_q == 1 &&
                         !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                         this.field_p != null) {
-                        this.field_p.a(91, var7);
+                        this.field_p.release(91, var7);
                         this.field_p = null;
                       }
                     }
@@ -365,7 +365,7 @@ final class SwitchModel extends TrapModel {
                     if (this.field_q == 1 &&
                       !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                       this.field_p != null) {
-                      this.field_p.a(91, var7);
+                      this.field_p.release(91, var7);
                       this.field_p = null;
                     }
                   }
@@ -373,7 +373,7 @@ final class SwitchModel extends TrapModel {
                   if (this.field_q == 1 &&
                     !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                     this.field_p != null) {
-                    this.field_p.a(91, var7);
+                    this.field_p.release(91, var7);
                     this.field_p = null;
                   }
                 }
@@ -390,7 +390,7 @@ final class SwitchModel extends TrapModel {
                   if (this.field_q == 1 &&
                     !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                     this.field_p != null) {
-                    this.field_p.a(91, var7);
+                    this.field_p.release(91, var7);
                     this.field_p = null;
                   }
                 }
@@ -417,7 +417,7 @@ final class SwitchModel extends TrapModel {
               if (this.field_q == 1 &&
                 !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                 this.field_p != null) {
-                this.field_p.a(91, var7);
+                this.field_p.release(91, var7);
                 this.field_p = null;
               }
               stackIn_152_1 = (var3Lifetime1 != 0);
@@ -437,7 +437,7 @@ final class SwitchModel extends TrapModel {
                 stackIn_168_1 = (var3Lifetime1 != 0);
                 this.field_n = stackIn_168_1;
               } else {
-                this.field_p.a(91, var7);
+                this.field_p.release(91, var7);
                 this.field_p = null;
                 stackIn_172_1 = (var3Lifetime1 != 0);
                 this.field_n = stackIn_172_1;
@@ -471,7 +471,7 @@ final class SwitchModel extends TrapModel {
                     stackIn_203_1 = (var3Lifetime2 != 0);
                     this.field_n = stackIn_203_1;
                   } else {
-                    this.field_p.a(91, var7);
+                    this.field_p.release(91, var7);
                     this.field_p = null;
                     stackIn_199_1 = (var3Lifetime2 != 0);
                     this.field_n = stackIn_199_1;
@@ -493,7 +493,7 @@ final class SwitchModel extends TrapModel {
                 stackIn_219_1 = (var3Lifetime2 != 0);
                 this.field_n = stackIn_219_1;
               } else {
-                this.field_p.a(91, var7);
+                this.field_p.release(91, var7);
                 this.field_p = null;
                 stackIn_223_1 = (var3Lifetime2 != 0);
                 this.field_n = stackIn_223_1;
@@ -516,7 +516,7 @@ final class SwitchModel extends TrapModel {
               if (this.field_q == 1 &&
                 !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
                 this.field_p != null) {
-                this.field_p.a(91, var7);
+                this.field_p.release(91, var7);
                 this.field_p = null;
                 stackIn_265_1 = true;
                 this.field_n = stackIn_265_1;
@@ -529,7 +529,7 @@ final class SwitchModel extends TrapModel {
             if (this.field_q == 1 &&
               !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
               this.field_p != null) {
-              this.field_p.a(91, var7);
+              this.field_p.release(91, var7);
               this.field_p = null;
               stackIn_276_1 = true;
               this.field_n = stackIn_276_1;
@@ -551,7 +551,7 @@ final class SwitchModel extends TrapModel {
             if (this.field_q == 1 &&
               !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
               this.field_p != null) {
-              this.field_p.a(91, var7);
+              this.field_p.release(91, var7);
               this.field_p = null;
               stackIn_236_1 = false;
               this.field_n = stackIn_236_1;
@@ -564,7 +564,7 @@ final class SwitchModel extends TrapModel {
           if (this.field_q == 1 &&
             !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
             this.field_p != null) {
-            this.field_p.a(91, var7);
+            this.field_p.release(91, var7);
             this.field_p = null;
             stackIn_247_1 = false;
             this.field_n = stackIn_247_1;
@@ -586,7 +586,7 @@ final class SwitchModel extends TrapModel {
           if (this.field_q == 1 &&
             !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
             this.field_p != null) {
-            this.field_p.a(91, var7);
+            this.field_p.release(91, var7);
             this.field_p = null;
             stackIn_296_1 = (var3Lifetime2 != 0);
             this.field_n = stackIn_296_1;
@@ -609,7 +609,7 @@ final class SwitchModel extends TrapModel {
             if (this.field_q == 1 &&
               !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
               this.field_p != null) {
-              this.field_p.a(91, var7);
+              this.field_p.release(91, var7);
               this.field_p = null;
               stackIn_349_1 = true;
               this.field_n = stackIn_349_1;
@@ -622,7 +622,7 @@ final class SwitchModel extends TrapModel {
           if (this.field_q == 1 &&
             !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
             this.field_p != null) {
-            this.field_p.a(91, var7);
+            this.field_p.release(91, var7);
             this.field_p = null;
             stackIn_360_1 = true;
             this.field_n = stackIn_360_1;
@@ -642,7 +642,7 @@ final class SwitchModel extends TrapModel {
             if (this.field_q == 1 &&
               !this.field_o.getSwitchState((byte) -87).isActive((byte) 72) &&
               this.field_p != null) {
-              this.field_p.a(91, var7);
+              this.field_p.release(91, var7);
               this.field_p = null;
             }
             stackIn_316_1 = false;
@@ -662,7 +662,7 @@ final class SwitchModel extends TrapModel {
               stackIn_331_1 = false;
               this.field_n = stackIn_331_1;
             } else {
-              this.field_p.a(91, var7);
+              this.field_p.release(91, var7);
               this.field_p = null;
               stackIn_335_1 = false;
               this.field_n = stackIn_335_1;
@@ -850,11 +850,11 @@ final class SwitchModel extends TrapModel {
               if (var14 != 1) {
                 if (var14 != 3) {
                   if (4 == var14) {
-                    SimpleHoverMountComponent.a(2097152, 0, (byte) 88, param2, this.body.getWidth(-20), 1024, param3, var13, 0, var12, param1);
+                    SimpleHoverMountComponent.drawModelRow(2097152, 0, (byte) 88, param2, this.body.getWidth(-20), 1024, param3, var13, 0, var12, param1);
                     return;
                   }
                   if (var14 == 5) {
-                    gba.a(2, param2, 2097152, var12, -512, var13, param1, 512, 512, this.body.getHeight((byte) 55), param3);
+                    gba.drawModelRow(2, param2, 2097152, var12, -512, var13, param1, 512, 512, this.body.getHeight((byte) 55), param3);
                     return;
                   }
                 } else {

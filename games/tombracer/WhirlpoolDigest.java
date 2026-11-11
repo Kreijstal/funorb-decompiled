@@ -214,7 +214,7 @@ final class WhirlpoolDigest {
             break;
           }
           if (var3 == null) {
-            dea.a(60);
+            dea.closeGameSocket(60);
             return;
           }
           var4 = var14.readUnsignedByte(255);
@@ -227,7 +227,7 @@ final class WhirlpoolDigest {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               bra.field_M[var6_int] = var14.readString((byte) -76);
             }
-            CrusherModel.a(var4, var5, (byte) 47);
+            CrusherModel.ensureRankingCapacity(var4, var5, (byte) 47);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               dga.a(var14, 0);
               if (var6_intLifetime1 != 0) {

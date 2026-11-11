@@ -32,7 +32,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         super.onTrapLoaded((byte) 75);
         if (param0 <= 68) {
           this.field_n = 46;
-          this.q((byte) 92);
+          this.updateBeamSegment((byte) 92);
           if (this.field_D) {
             this.field_z = null;
             return;
@@ -40,7 +40,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           this.field_z = new Effect(this.getRoot(6), 4, 128);
           return;
         }
-        this.q((byte) 92);
+        this.updateBeamSegment((byte) 92);
         if (this.field_D) {
           this.field_z = null;
           return;
@@ -153,7 +153,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         this.field_o = ModelAnimator.cos2048(0, this.field_x);
         var6 = this.trap.getTopElevation(0) << 16;
         if (!this.field_D) {
-          this.q((byte) 92);
+          this.updateBeamSegment((byte) 92);
           stackIn_28_0 = var11;
           if (this.field_v) {
             stackIn_29_1 = 3;
@@ -162,7 +162,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           }
           ((Room) (Object) stackIn_28_0).castBeamSegment(stackIn_29_1, this.trap, -44, this.field_u, this.getRoot(6), this.field_z);
           var4 = this.a(this.field_u, (byte) 72);
-          this.q((byte) 92);
+          this.updateBeamSegment((byte) 92);
           var11.castBeamSegment(1, this.trap, -91, this.field_u, this.getRoot(6), this.field_z);
           var11.getParticleEffects(false).spawnBeamParticles((byte) 119, this.field_u, this.field_z);
           var7_ref_pc = this.field_u;
@@ -172,7 +172,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           var11.getParticleEffects(false).spawnBeamHitParticles(var7_ref_pc, this.trap, (byte) -119);
           var5 = this.a(this.field_u, (byte) -65);
         } else {
-          this.q((byte) 92);
+          this.updateBeamSegment((byte) 92);
           stackIn_24_0 = var11;
           if (!this.field_v) {
             stackIn_25_1 = 4;
@@ -181,7 +181,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           }
           ((Room) (Object) stackIn_24_0).traceBeamSegment(stackIn_25_1, this.field_u, this.getRoot(6), (byte) -123);
           var4 = this.a(this.field_u, (byte) -68);
-          this.q((byte) 92);
+          this.updateBeamSegment((byte) 92);
           var11.traceBeamSegment(1, this.field_u, this.getRoot(6), (byte) 75);
           var5 = this.a(this.field_u, (byte) 57);
         }
@@ -404,7 +404,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         this.field_q = param0;
     }
 
-    final void a(byte param0, TimingPattern param1) {
+    final void setTimingPattern(byte param0, TimingPattern param1) {
         try {
           if (param0 != -8) {
             this.getTypeId(true);
@@ -464,10 +464,10 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         return 5570594;
     }
 
-    private final void q(byte param0) {
+    private final void updateBeamSegment(byte param0) {
         int var2 = this.trap.getX(3) + gqa.multiplyFixed(this.field_E, (byte) 24, this.trap.getWidth(-31) / 2);
         int var3 = this.trap.getY(param0 + 9556) + gqa.multiplyFixed(this.field_o, (byte) 24, this.trap.getWidth(-64) / 2);
-        this.field_u.a(var2, var2 + gqa.multiplyFixed(this.field_E, (byte) 24, this.field_s), var3, gqa.multiplyFixed(this.field_o, (byte) 24, this.field_s) + var3, 44);
+        this.field_u.setEndpoints(var2, var2 + gqa.multiplyFixed(this.field_E, (byte) 24, this.field_s), var3, gqa.multiplyFixed(this.field_o, (byte) 24, this.field_s) + var3, 44);
         this.field_u.field_b = this.field_s;
         this.field_u.field_i = this.trap.getTopElevation(param0 ^ 92) << 16;
         if (param0 == 92) {

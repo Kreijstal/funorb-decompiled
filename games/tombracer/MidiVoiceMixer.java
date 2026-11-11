@@ -262,7 +262,7 @@ final class MidiVoiceMixer extends PcmStream {
               if (!var11.isRamping()) {
                 continue;
               }
-              this.field_m.a(var11);
+              this.field_m.prependStream(var11);
             }
           }
           if (param5) {

@@ -639,7 +639,7 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final ka a(byte param0, PitEdgePiece param1) {
+    final ka getEdgeModel(byte param0, PitEdgePiece param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

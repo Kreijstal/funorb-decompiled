@@ -75,7 +75,7 @@ final class vi {
         } else {
           var4 = (S2CActionPacket) (this.field_b.first(-80));
           while (var4 != null) {
-            if (var4.a(false, param1)) {
+            if (var4.hasOrdersFor(false, param1)) {
               var3++;
             }
             var4 = (S2CActionPacket) (this.field_b.next(107));
@@ -84,7 +84,7 @@ final class vi {
         }
         var4Lifetime1 = (S2CActionPacket) (this.field_b.first(-80));
         while (var4Lifetime1 != null) {
-          if (var4Lifetime1.a(false, param1)) {
+          if (var4Lifetime1.hasOrdersFor(false, param1)) {
             var3++;
           }
           var4Lifetime1 = (S2CActionPacket) (this.field_b.next(107));

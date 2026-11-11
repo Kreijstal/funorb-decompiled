@@ -44,10 +44,10 @@ final class SnakePitBehaviour extends Behaviour {
             var11 = this.snakes[var10];
             var12 = var4_int + var11.getOffsetX((byte) 110);
             var13 = var5 + var11.getOffsetY(0);
-            var14 = SimulationObserver.a(var11.getSize(0), 12, var13, var11.getSize(0), param2, var12, 2);
+            var14 = SimulationObserver.clipBeamToBox(var11.getSize(0), 12, var13, var11.getSize(0), param2, var12, 2);
             if (var14 > 0) {
               var15 = wm.a(4096, var14, 15);
-              this.a(var8 + gqa.multiplyFixed(-var8 + var9, (byte) 24, var15), var6 + gqa.multiplyFixed(var7 - var6, (byte) 24, var15), var11, (byte) -102, param1);
+              this.applyEffectToSnake(var8 + gqa.multiplyFixed(-var8 + var9, (byte) 24, var15), var6 + gqa.multiplyFixed(var7 - var6, (byte) 24, var15), var11, (byte) -102, param1);
             }
           }
           stackIn_10_0 = 0;
@@ -119,7 +119,7 @@ final class SnakePitBehaviour extends Behaviour {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(param0, param1);
-          this.d(param0);
+          this.spawnSnakes(param0);
           param1.setHandlesEffectType(26492, true, 3);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "sea.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -220,7 +220,7 @@ final class SnakePitBehaviour extends Behaviour {
         super(param0, param1);
     }
 
-    private final void a(int param0, int param1, PitSnake param2, byte param3, Effect param4) {
+    private final void applyEffectToSnake(int param0, int param1, PitSnake param2, byte param3, Effect param4) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -292,7 +292,7 @@ final class SnakePitBehaviour extends Behaviour {
             var11 = var10_ref_aia.getOffsetX((byte) 91) + var7_int;
             var12 = var8 + var10_ref_aia.getOffsetY(0);
             if (io.centredBoxesOverlap(param1, var12, (byte) -61, param0, var11, param5, var10_ref_aia.getSize(0), var10_ref_aia.getSize(0), param3)) {
-              this.a(-this.trap.getY(9648) + param5, -this.trap.getX(3) + param3, var10_ref_aia, (byte) -115, param2);
+              this.applyEffectToSnake(-this.trap.getY(9648) + param5, -this.trap.getX(3) + param3, var10_ref_aia, (byte) -115, param2);
             }
           }
           var10 = -90 / ((param4 - 62) / 52);
@@ -424,7 +424,7 @@ final class SnakePitBehaviour extends Behaviour {
         super(param0, param1, param2);
     }
 
-    private final void d(boolean param0) {
+    private final void spawnSnakes(boolean param0) {
         int var6 = 0;
         int var2;
         int var3;

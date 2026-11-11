@@ -121,7 +121,7 @@ final class PitSnake extends IntrusiveNode {
               if (this.field_p != 0 &&
                 lw.signum(this.field_p, (byte) -95) == lw.signum(this.field_m - this.offsetY, (byte) -93)) {
                 this.field_p = -this.field_p;
-                this.direction = SweeperMountComponent.b(0, this.direction);
+                this.direction = SweeperMountComponent.mirrorDirection(0, this.direction);
               }
             }
             if (0 != this.field_s &&

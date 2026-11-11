@@ -2,39 +2,39 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ItemBehaviour extends Behaviour {
-    private boolean field_n;
-    private boolean field_o;
-    private int field_q;
-    private int field_r;
+    private boolean waitingForPlayerToLeave;
+    private boolean collected;
+    private int respawnTicks;
+    private int respawnTimer;
     static int[] field_p;
 
     void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -128, this.field_q / 50, 8);
+          param1.writeBits((byte) -128, this.respawnTicks / 50, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "pd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isCollected(int param0) {
         if (param0 >= -64) {
           this.a(false, (byte) -88);
-          return this.field_o;
+          return this.collected;
         }
-        return this.field_o;
+        return this.collected;
     }
 
     final int hashState(int param0, int param1) {
-        param0 = upa.a(this.field_o, param0, (byte) -53);
-        param0 = upa.a(this.field_n, param0, (byte) -111);
+        param0 = upa.a(this.collected, param0, (byte) -53);
+        param0 = upa.a(this.waitingForPlayerToLeave, param0, (byte) -111);
         if (param1 < -48) {
-          param0 = CurveOperator.mixHash((byte) 37, param0, this.field_r);
+          param0 = CurveOperator.mixHash((byte) 37, param0, this.respawnTimer);
           return param0;
         }
         Player var4 = (Player) null;
         this.tryCollect(-22, (Player) null);
-        param0 = CurveOperator.mixHash((byte) 37, param0, this.field_r);
+        param0 = CurveOperator.mixHash((byte) 37, param0, this.respawnTimer);
         return param0;
     }
 
@@ -47,14 +47,14 @@ abstract class ItemBehaviour extends Behaviour {
     }
 
     final static void b(int param0) {
-        ooa.field_e = fba.a(8, 0.4000000059604645f, 8, true, 4, 1, 2048, 35);
+        ooa.field_e = fba.generatePerlinRow(8, 0.4000000059604645f, 8, true, 4, 1, 2048, 35);
         int var1 = 56 % ((param0 - 57) / 45);
     }
 
     void a(boolean param0, byte param1) {
-        this.field_n = param0 ? true : false;
+        this.waitingForPlayerToLeave = param0 ? true : false;
         if (param1 != 2) {
-          this.field_o = false;
+          this.collected = false;
         }
     }
 
@@ -71,13 +71,13 @@ abstract class ItemBehaviour extends Behaviour {
         Player var10;
         Player var3Lifetime1;
         if (param0 != 5418) {
-          this.field_r = -20;
-          if (!this.field_o) {
-            if (this.field_o) {
+          this.respawnTimer = -20;
+          if (!this.collected) {
+            if (this.collected) {
               return;
             }
             var4 = this.getPlayer((byte) 19);
-            if (!this.field_n) {
+            if (!this.waitingForPlayerToLeave) {
               if (var4.isDying(81)) {
                 return;
               }
@@ -85,10 +85,10 @@ abstract class ItemBehaviour extends Behaviour {
                 return;
               }
               if (this.tryCollect(param0 - 5533, var4)) {
-                if (0 < this.field_q) {
-                  this.field_r = this.field_q;
+                if (0 < this.respawnTicks) {
+                  this.respawnTimer = this.respawnTicks;
                 }
-                this.field_o = true;
+                this.collected = true;
                 return;
               }
             } else {
@@ -98,18 +98,18 @@ abstract class ItemBehaviour extends Behaviour {
               if (this.trap.intersectsRect((byte) 110, var4.getY(9648), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-63))) {
                 return;
               }
-              this.field_n = false;
+              this.waitingForPlayerToLeave = false;
             }
             return;
           }
-          if (0 < this.field_r) {
-            this.field_r = this.field_r - 1;
-            if (this.field_r != 0) {
-              if (this.field_o) {
+          if (0 < this.respawnTimer) {
+            this.respawnTimer = this.respawnTimer - 1;
+            if (this.respawnTimer != 0) {
+              if (this.collected) {
                 return;
               }
               var5 = this.getPlayer((byte) 19);
-              if (!this.field_n) {
+              if (!this.waitingForPlayerToLeave) {
                 if (var5.isDying(81)) {
                   return;
                 }
@@ -117,10 +117,10 @@ abstract class ItemBehaviour extends Behaviour {
                   return;
                 }
                 if (this.tryCollect(param0 - 5533, var5)) {
-                  if (0 < this.field_q) {
-                    this.field_r = this.field_q;
+                  if (0 < this.respawnTicks) {
+                    this.respawnTimer = this.respawnTicks;
                   }
-                  this.field_o = true;
+                  this.collected = true;
                   return;
                 }
               } else {
@@ -130,26 +130,26 @@ abstract class ItemBehaviour extends Behaviour {
                 if (this.trap.intersectsRect((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(-63))) {
                   return;
                 }
-                this.field_n = false;
+                this.waitingForPlayerToLeave = false;
               }
               return;
             }
-            this.field_o = false;
-            this.g((byte) 3);
+            this.collected = false;
+            this.onRespawn((byte) 3);
           }
-          if (this.field_o) {
+          if (this.collected) {
             return;
           }
           var6 = this.getPlayer((byte) 19);
           var3 = var6;
-          if (this.field_n) {
+          if (this.waitingForPlayerToLeave) {
             if (var6.isDying(102)) {
               return;
             }
             if (this.trap.intersectsRect((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(-63))) {
               return;
             }
-            this.field_n = false;
+            this.waitingForPlayerToLeave = false;
             return;
           }
           if (var6.isDying(81)) {
@@ -161,25 +161,25 @@ abstract class ItemBehaviour extends Behaviour {
           if (!this.tryCollect(param0 - 5533, var6)) {
             return;
           }
-          if (0 < this.field_q) {
-            this.field_r = this.field_q;
+          if (0 < this.respawnTicks) {
+            this.respawnTimer = this.respawnTicks;
           }
-          this.field_o = true;
+          this.collected = true;
           return;
         }
-        if (!this.field_o) {
-          if (this.field_o) {
+        if (!this.collected) {
+          if (this.collected) {
             return;
           }
           var7 = this.getPlayer((byte) 19);
-          if (this.field_n) {
+          if (this.waitingForPlayerToLeave) {
             if (var7.isDying(102)) {
               return;
             }
             if (this.trap.intersectsRect((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(-63))) {
               return;
             }
-            this.field_n = false;
+            this.waitingForPlayerToLeave = false;
             return;
           }
           if (var7.isDying(81)) {
@@ -191,26 +191,26 @@ abstract class ItemBehaviour extends Behaviour {
           if (!this.tryCollect(param0 - 5533, var7)) {
             return;
           }
-          if (0 < this.field_q) {
-            this.field_r = this.field_q;
+          if (0 < this.respawnTicks) {
+            this.respawnTimer = this.respawnTicks;
           }
-          this.field_o = true;
+          this.collected = true;
           return;
         }
-        if (0 >= this.field_r) {
-          if (this.field_o) {
+        if (0 >= this.respawnTimer) {
+          if (this.collected) {
             return;
           }
           var8 = this.getPlayer((byte) 19);
           var3Lifetime1 = var8;
-          if (this.field_n) {
+          if (this.waitingForPlayerToLeave) {
             if (var8.isDying(102)) {
               return;
             }
             if (this.trap.intersectsRect((byte) 110, var8.getY(9648), var8.getX(3), var8.getHeight((byte) 55), var8.getWidth(-63))) {
               return;
             }
-            this.field_n = false;
+            this.waitingForPlayerToLeave = false;
             return;
           }
           if (var8.isDying(81)) {
@@ -222,58 +222,58 @@ abstract class ItemBehaviour extends Behaviour {
           if (!this.tryCollect(param0 - 5533, var8)) {
             return;
           }
-          if (0 < this.field_q) {
-            this.field_r = this.field_q;
+          if (0 < this.respawnTicks) {
+            this.respawnTimer = this.respawnTicks;
           }
-          this.field_o = true;
+          this.collected = true;
           return;
         }
-        this.field_r = this.field_r - 1;
-        if (this.field_r != 0) {
-          if (!this.field_o) {
+        this.respawnTimer = this.respawnTimer - 1;
+        if (this.respawnTimer != 0) {
+          if (!this.collected) {
             var10 = this.getPlayer((byte) 19);
-            if (!this.field_n) {
+            if (!this.waitingForPlayerToLeave) {
               if (!var10.isDying(81) &&
                 this.trap.intersectsRect((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-125))) {
                 if (!this.tryCollect(param0 - 5533, var10)) {
                   return;
                 }
-                if (0 < this.field_q) {
-                  this.field_r = this.field_q;
+                if (0 < this.respawnTicks) {
+                  this.respawnTimer = this.respawnTicks;
                 }
-                this.field_o = true;
+                this.collected = true;
                 return;
               }
             } else {
               if (!var10.isDying(102) &&
                 !this.trap.intersectsRect((byte) 110, var10.getY(9648), var10.getX(3), var10.getHeight((byte) 55), var10.getWidth(-63))) {
-                this.field_n = false;
+                this.waitingForPlayerToLeave = false;
                 return;
               }
             }
           }
           return;
         }
-        this.field_o = false;
-        this.g((byte) 3);
-        if (!this.field_o) {
+        this.collected = false;
+        this.onRespawn((byte) 3);
+        if (!this.collected) {
           var9 = this.getPlayer((byte) 19);
-          if (!this.field_n) {
+          if (!this.waitingForPlayerToLeave) {
             if (!var9.isDying(81) &&
               this.trap.intersectsRect((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-125))) {
               if (!this.tryCollect(param0 - 5533, var9)) {
                 return;
               }
-              if (0 < this.field_q) {
-                this.field_r = this.field_q;
+              if (0 < this.respawnTicks) {
+                this.respawnTimer = this.respawnTicks;
               }
-              this.field_o = true;
+              this.collected = true;
               return;
             }
           } else {
             if (!var9.isDying(102) &&
               !this.trap.intersectsRect((byte) 110, var9.getY(9648), var9.getX(3), var9.getHeight((byte) 55), var9.getWidth(-63))) {
-              this.field_n = false;
+              this.waitingForPlayerToLeave = false;
               return;
             }
           }
@@ -282,12 +282,12 @@ abstract class ItemBehaviour extends Behaviour {
 
     ItemBehaviour(Room param0, boolean param1) {
         super(param0, param1);
-        this.field_o = false;
-        this.field_n = false;
-        this.field_r = -1;
+        this.collected = false;
+        this.waitingForPlayerToLeave = false;
+        this.respawnTimer = -1;
     }
 
-    abstract void g(byte param0);
+    abstract void onRespawn(byte param0);
 
     public static void releaseStatics(int param0) {
         if (param0 <= 31) {
@@ -300,11 +300,11 @@ abstract class ItemBehaviour extends Behaviour {
 
     ItemBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
-        this.field_o = false;
-        this.field_n = false;
-        this.field_r = -1;
+        this.collected = false;
+        this.waitingForPlayerToLeave = false;
+        this.respawnTimer = -1;
         try {
-          this.field_q = 50 * param1.readBits((byte) 44, 8);
+          this.respawnTicks = 50 * param1.readBits((byte) 44, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

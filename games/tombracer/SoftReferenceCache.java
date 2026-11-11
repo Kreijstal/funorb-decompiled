@@ -21,7 +21,7 @@ final class SoftReferenceCache {
         var2 = (pb) (this.field_c.next((byte) 55));
         if (param0 == 60) {
           while (var2 != null) {
-            var3 = var2.f(29243);
+            var3 = var2.getValue(29243);
             if (var3 != null) {
               return var3;
             }
@@ -38,7 +38,7 @@ final class SoftReferenceCache {
           if (var2 == null) {
             return null;
           }
-          var3Lifetime1 = var2.f(29243);
+          var3Lifetime1 = var2.getValue(29243);
           if (var3Lifetime1 != null) {
             return var3Lifetime1;
           }
@@ -60,7 +60,7 @@ final class SoftReferenceCache {
         }
         if (param0 <= 14) {
           field_d = (int[]) null;
-          var8 = var7.f(29243);
+          var8 = var7.getValue(29243);
           if (var8 != null) {
             if (!var7.a(14646)) {
               this.field_f.addLast(var7, -11396);
@@ -80,7 +80,7 @@ final class SoftReferenceCache {
           this.field_e = this.field_e + var7.field_m;
           return null;
         }
-        Object var9 = var7.f(29243);
+        Object var9 = var7.getValue(29243);
         if (var9 != null) {
           if (!var7.a(14646)) {
             this.field_f.addLast(var7, -11396);
@@ -126,7 +126,7 @@ final class SoftReferenceCache {
         if (param0 > 83) {
           var2 = (pb) (this.field_c.first((byte) 35));
           while (var2 != null) {
-            var3 = var2.f(29243);
+            var3 = var2.getValue(29243);
             if (var3 != null) {
               return var3;
             }
@@ -144,7 +144,7 @@ final class SoftReferenceCache {
           if (var2Lifetime1 == null) {
             return null;
           }
-          var3Lifetime1 = var2Lifetime1.f(29243);
+          var3Lifetime1 = var2Lifetime1.getValue(29243);
           if (var3Lifetime1 != null) {
             return var3Lifetime1;
           }
@@ -171,14 +171,14 @@ final class SoftReferenceCache {
             fieldTemp$0 = var3.secondaryKey + 1L;
             var3.secondaryKey = var3.secondaryKey + 1L;
             if ((long)param1 < fieldTemp$0) {
-              var4 = new eba(var3.f(29243), var3.field_m);
+              var4 = new eba(var3.getValue(29243), var3.field_m);
               this.field_c.put(var4, (byte) 124, var3.key);
               ig.insertSecondaryAfter(31, var4, var3);
               var3.unlink(126);
               var3.unlinkSecondary(-7975);
             }
           } else {
-            if (var3.f(29243) != null) {
+            if (var3.getValue(29243) != null) {
               var3 = (pb) (this.field_f.a(-122));
               continue;
             }

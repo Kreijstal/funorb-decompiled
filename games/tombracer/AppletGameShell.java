@@ -52,8 +52,8 @@ abstract class AppletGameShell extends GameApplet {
         if (param0 <= 95) {
           this.field_v = 64;
         }
-        String var2 = LegacyTurbulentWaterNoise.f(12);
-        cc.writeSessionCookie(55, di.a(78), var2);
+        String var2 = LegacyTurbulentWaterNoise.readIncomingString(12);
+        cc.writeSessionCookie(55, di.getApplet(78), var2);
     }
 
     private final void readServerTextMessage(byte param0) {
@@ -65,7 +65,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         byte[] var5 = new byte[var4];
         WeaveOperator.field_q.readCipheredBytes(0, param0 - 103, var5, var4);
-        SimpleBlockBehaviour.openUrl(param0 ^ -16, di.a(param0 + 82), jaa.decodeText((byte) 64, var5), var3 != 0);
+        SimpleBlockBehaviour.openUrl(param0 ^ -16, di.getApplet(param0 + 82), jaa.decodeText((byte) 64, var5), var3 != 0);
     }
 
     final static boolean isFreeChatAllowed(int param0) {
@@ -148,34 +148,34 @@ abstract class AppletGameShell extends GameApplet {
               HorizontalGradientOperator.field_m = true;
               Transform3D.field_c = 10;
             } else {
-              cua.a((byte) -26, di.a(118));
+              cua.clearSessionAndReload((byte) -26, di.getApplet(118));
             }
           }
           if (5 == var4) {
-            ArchiveRequest.openQuitPage(di.a(104), (byte) -117);
+            ArchiveRequest.openQuitPage(di.getApplet(104), (byte) -117);
           }
           if (var4 == 6 &&
             GameAssetLoader.field_t) {
             Transform3D.field_c = 10;
           }
           if (var4 == 7) {
-            ft.openServerList(89, di.a(113));
+            ft.openServerList(89, di.getApplet(113));
           }
           if (8 == var4) {
-            cua.a((byte) -65, di.a(37));
+            cua.clearSessionAndReload((byte) -65, di.getApplet(37));
           }
           if (9 == var4) {
-            IsaacCipher.openSupportPage(di.a(104), -87);
+            IsaacCipher.openSupportPage(di.getApplet(104), -87);
           }
           if (var4 == 10) {
             ql.field_k.writeCipheredOpcode(17, -2988);
           }
           if (11 == var4) {
-            nt.reloadPage(di.a(41), -1978);
+            nt.reloadPage(di.getApplet(41), -1978);
           }
           var5Lifetime3 = 70 / ((param0 + 35) / 35);
           if (var4 == 12) {
-            SimpleHoverMountComponent.openRelativeUrl(mn.g(-128), di.a(28), (byte) -74);
+            SimpleHoverMountComponent.openRelativeUrl(mn.g(-128), di.getApplet(28), (byte) -74);
           }
           if (13 == var4) {
             try {
@@ -278,7 +278,7 @@ abstract class AppletGameShell extends GameApplet {
                                 return;
                               }
                               ssa.reportClientError("MGS1: " + kk.formatPacketDump(32), (byte) 123, (Throwable) null);
-                              dea.a(60);
+                              dea.closeGameSocket(60);
                               return;
                             }
                             stackIn_24_0 = -18787;
@@ -303,7 +303,7 @@ abstract class AppletGameShell extends GameApplet {
           return;
         }
         ssa.reportClientError("MGS2: " + kk.formatPacketDump(32), (byte) 120, (Throwable) null);
-        dea.a(60);
+        dea.closeGameSocket(60);
     }
 
     private final int attemptReconnect(byte param0) {
@@ -419,7 +419,7 @@ abstract class AppletGameShell extends GameApplet {
         MazeSolver.initializeArchiveServices(ApproachPlayerLocomotor.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
         wka.patchJavaKeyCodeMap(520);
         tja.field_q = dka.createMouseWheelInput((byte) -86);
-        fpa.a(nma.field_l, (byte) 75);
+        fpa.attachCanvasInput(nma.field_l, (byte) 75);
         bi.field_c = param2;
         MonochromeFillOperator.field_p = param3;
         tj.field_c = param6;
@@ -577,7 +577,7 @@ abstract class AppletGameShell extends GameApplet {
             !(rg.g((byte) 118) <= var3) &&
             !(var3 >= ada.b(false))) {
             this.field_y = false;
-            dea.a(60);
+            dea.closeGameSocket(60);
             TextureMetadata.b((byte) -84);
             epa.a(2, (byte) -84, WindZoneBehaviour.field_n);
             LineNoiseOperator.c(9033);
@@ -759,10 +759,10 @@ abstract class AppletGameShell extends GameApplet {
           ReportAbuseDialog.field_Cb) {
           CharacterChoiceFactory.detachCanvasInput(nma.field_l, false);
           this.recreateCanvas((byte) 14);
-          fpa.a(nma.field_l, (byte) 75);
+          fpa.attachCanvasInput(nma.field_l, (byte) 75);
         }
         if (hd.field_a[8]) {
-          dra.a(true);
+          dra.sendReflectionCheckResponses(true);
         }
     }
 

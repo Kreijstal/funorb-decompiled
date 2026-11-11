@@ -24,7 +24,7 @@ abstract class RasterBuffer {
         field_h = null;
     }
 
-    final void a(int param0) {
+    final void makeTarget(int param0) {
         if (param0 == -19216) {
           SoftwareRasterizer.setTarget(this.field_g, this.field_f, this.field_e);
           return;

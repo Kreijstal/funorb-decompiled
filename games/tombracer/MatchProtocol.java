@@ -104,7 +104,7 @@ final class MatchProtocol {
         if (this.field_d < param1) {
           return;
         }
-        if (!var3.a(false, this.field_d)) {
+        if (!var3.hasOrdersFor(false, this.field_d)) {
           return;
         }
         try {
@@ -218,7 +218,7 @@ final class MatchProtocol {
           while (var4 != null) {
             for (var5 = 0; var8.players.length > var5; var5++) {
               if (this.field_d != var5 &&
-                var4.a(false, var5)) {
+                var4.hasOrdersFor(false, var5)) {
                 for (var6 = 0; var6 < 8; var6++) {
                   if (this.field_b[var5] == -1) {
                     break;
@@ -226,7 +226,7 @@ final class MatchProtocol {
                   if (this.field_b[var5] > 0) {
                     this.field_b[var5] = this.field_b[var5] - 1;
                   } else {
-                    param0.queuePlayerInput(var4.a(false, var5, var6), var5, false);
+                    param0.queuePlayerInput(var4.getOrder(false, var5, var6), var5, false);
                   }
                 }
               }
@@ -571,7 +571,7 @@ final class MatchProtocol {
         }
         u var6 = CauldronComponent.field_J[param3];
         if (var6 == null) {
-          fea.a(false, param3);
+          fea.loadSoundEffect(false, param3);
           var6 = CauldronComponent.field_J[param3];
         }
         if (param4 > 0) {

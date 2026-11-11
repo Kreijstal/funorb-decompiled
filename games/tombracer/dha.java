@@ -147,7 +147,7 @@ final class dha {
           }
         }
         if (13 == MenuEntry.field_h) {
-          PlayerProfile.a(true);
+          PlayerProfile.clearChatInput(true);
           var4 = 1;
           ni.field_c = false;
         }

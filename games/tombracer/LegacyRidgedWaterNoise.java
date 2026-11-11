@@ -17,7 +17,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
         return this.field_t;
     }
 
-    final static int a(BitmapFont param0, String param1, int param2, int param3, String[] param4) {
+    final static int splitIntoBalancedLines(BitmapFont param0, String param1, int param2, int param3, String[] param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -47,7 +47,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
         try {
           if (param3 != 1) {
             var14 = (String[]) null;
-            LegacyRidgedWaterNoise.a((BitmapFont) null, (String) null, -117, -80, (String[]) null);
+            LegacyRidgedWaterNoise.splitIntoBalancedLines((BitmapFont) null, (String) null, -117, -80, (String[]) null);
           }
           var5_int = param0.stringWidth(param1);
           if (var5_int <= param2 &&
@@ -145,13 +145,13 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
             var2_int = OpenGlTransform3D.field_e.available(~param1);
             if (var2_int <= 0) {
               if (~var2_int > param1) {
-                dea.a(60);
+                dea.closeGameSocket(60);
                 return false;
               }
               if (rf.b((byte) -121) <= 30000L) {
                 return false;
               }
-              dea.a(60);
+              dea.closeGameSocket(60);
               return false;
             }
             if (var2_int > -WeaveOperator.field_q.position + param0) {
@@ -168,7 +168,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            dea.a(60);
+            dea.closeGameSocket(60);
             return false;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

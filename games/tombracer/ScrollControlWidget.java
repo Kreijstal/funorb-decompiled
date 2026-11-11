@@ -618,7 +618,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (GasTrapComponent.r((byte) -98)) {
+        if (GasTrapComponent.isDialogOpen((byte) -98)) {
           param1 = false;
         }
         FacePointLocomotor.a(param1, (byte) 88);

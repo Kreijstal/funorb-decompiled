@@ -53,8 +53,8 @@ final class mq {
           var6 = new OpenGlRenderbuffer(this.field_c, 6408, param3.field_r, param3.field_q);
           var8 = 0;
           this.field_c.b((Framebuffer) (var12), (byte) 81);
-          var12.a(0, var6, true);
-          if (var12.c(86)) {
+          var12.attachRenderbuffer(0, var6, true);
+          if (var12.isComplete(86)) {
             jaggl.OpenGL.glPushMatrix();
             jaggl.OpenGL.glLoadIdentity();
             jaggl.OpenGL.glMatrixMode(5889);
@@ -89,7 +89,7 @@ final class mq {
             jaggl.OpenGL.glPopMatrix();
             var8 = 1;
           }
-          var12.a(55, 0);
+          var12.detachAttachment(55, 0);
           this.field_c.b(var12, 0);
           stackIn_10_0 = var8;
           return stackIn_10_0 != 0;

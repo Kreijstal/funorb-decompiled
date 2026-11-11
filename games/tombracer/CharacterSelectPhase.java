@@ -102,7 +102,7 @@ final class CharacterSelectPhase extends MatchPhase {
           var11++;
         }
         RemovedFromGameMenu.f((byte) -6);
-        this.d(-27142);
+        this.drawMenuButton(-27142);
     }
 
     final void update(int param0, boolean param1) {
@@ -119,7 +119,7 @@ final class CharacterSelectPhase extends MatchPhase {
           }
         }
         if (param1) {
-          this.c(7);
+          this.updateMenuButton(7);
         }
         if (this.field_u >= 0) {
           this.field_u = this.field_u - 1;
@@ -199,7 +199,7 @@ final class CharacterSelectPhase extends MatchPhase {
               var6 += 32;
             }
             var8 = new ad(var6, var7);
-            if (this.a(var3_int, (byte) -35)) {
+            if (this.isCharacterAvailable(var3_int, (byte) -35)) {
               var8 = new ad(var3_int, var6, var7);
             }
             this.field_n.addLast((byte) -104, var8);
@@ -233,7 +233,7 @@ final class CharacterSelectPhase extends MatchPhase {
         this.field_t[param0] = new rp(param2);
         ModelAnimator var4 = this.field_t[param0].field_j;
         var4.a(param2, false, param1, 5, true);
-        int var5 = var4.c((byte) 114);
+        int var5 = var4.getCurrentAnimationLength((byte) 114);
         var4.queueAnimation(param1 + 107, var5, param2, 0, 0);
         FloatingMessage var6 = RewardChoicePhase.createTextMessage(param1 ^ -41, LegacyOpenGlFlowingWaterEffect.formatText(82, SpriteSampleOperator.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
         iqa.field_c.addMessageNow(0, var6);
@@ -279,7 +279,7 @@ final class CharacterSelectPhase extends MatchPhase {
         if (0 > this.field_v) {
           this.field_v = this.field_v + 13;
         }
-        while (!this.a(this.field_v, (byte) -74)) {
+        while (!this.isCharacterAvailable(this.field_v, (byte) -74)) {
           stackIn_26_1 = this.field_v;
           if (!this.screen.isActionJustPressed(0, 0) &&
             !this.screen.isActionJustPressed(0, 2)) {
@@ -298,7 +298,7 @@ final class CharacterSelectPhase extends MatchPhase {
         }
     }
 
-    private final boolean a(int param0, byte param1) {
+    private final boolean isCharacterAvailable(int param0, byte param1) {
         boolean stackIn_16_0 = false;
         if (param1 >= -29) {
           field_s = (UiComponent) null;

@@ -10,7 +10,7 @@ final class WallModel extends TrapModel {
     private int field_m;
     private int field_w;
     private boolean field_s;
-    private fla field_o;
+    private PlayingSound field_o;
     private boolean field_n;
     static UiComponent field_r;
     private boolean field_p;
@@ -107,12 +107,12 @@ final class WallModel extends TrapModel {
             if (this.field_o != null &&
               var4 == 0) {
               var6.play(new SoundEvent(18, this.getRenderX((byte) 101), this.getRenderY((byte) 109), this.getRenderZ((byte) -89)), -58);
-              this.field_o.a(14, var6);
+              this.field_o.release(14, var6);
               this.field_o = null;
             }
           }
           if (this.field_o != null) {
-            this.field_o.a(this.getRenderX((byte) -93), var6.field_c, -128, var6.field_h, this.getRenderY((byte) 110));
+            this.field_o.updateVolumeAndPan(this.getRenderX((byte) -93), var6.field_c, -128, var6.field_h, this.getRenderY((byte) 110));
           }
         }
     }
@@ -354,7 +354,7 @@ final class WallModel extends TrapModel {
                 var4.field_a = 11;
               }
             }
-            var4.a(0);
+            var4.mirrorSides(0);
           }
         }
         if (param0 <= 0) {
@@ -855,7 +855,7 @@ final class WallModel extends TrapModel {
             }
             var36 = stackIn_300_0;
             var12 = var12 + 2097152;
-            var14.a(var33 != 0, (byte) 24, var34 != 0, var36 != 0, var35 != 0);
+            var14.computeEdgeFlags(var33 != 0, (byte) 24, var34 != 0, var36 != 0, var35 != 0);
           }
           var10 = var10 + 2097152;
         }

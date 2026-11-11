@@ -270,8 +270,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
           if (this.field_Qb != this.field_bb) {
             throw new RuntimeException();
           }
-          this.field_bb.a(-92, 0);
-          this.field_bb.a(-120, 8);
+          this.field_bb.detachAttachment(-92, 0);
+          this.field_bb.detachAttachment(-120, 8);
           this.b(this.field_bb, 0);
         } else {
           if (!this.field_Yc) {
@@ -1080,7 +1080,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           if (this.field_T.isEnabled((byte) -127)) {
             return true;
           }
-          if (!this.field_L.a(1, this.field_T)) {
+          if (!this.field_L.addEffect(1, this.field_T)) {
             return false;
           }
           this.field_hd.a(10659);
@@ -1903,7 +1903,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             this.initializeDeviceResources((byte) 124);
             this.field_zc = new mq(this);
             this.field_L = new cw(this);
-            if (this.field_L.b((byte) -43)) {
+            if (this.field_L.hasFramebuffer((byte) -43)) {
               this.field_T = new LegacyOpenGlBloomEffect(this);
               if (!this.field_T.e(34842)) {
                 this.field_T.release((byte) -60);
@@ -2418,7 +2418,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var1 = this.field_qb.next(125);
         }
         if (null != this.field_L) {
-          this.field_L.a(-110);
+          this.field_L.releaseAll(-110);
         }
         if (this.field_l != null) {
           this.k(19770);
@@ -2812,9 +2812,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 this.field_Wc.put((long)(this.field_Mb.width() << 16 | this.field_Mb.height()), 124, var9);
               }
               this.field_F.addFirst(97, var3);
-              this.field_bb.a(8, var3, true);
+              this.field_bb.attachRenderbuffer(8, var3, true);
             }
-            this.field_bb.a(true, this.field_Mb.field_a, 0);
+            this.field_bb.attachTexture(true, this.field_Mb.field_a, 0);
           } else {
             if (!this.field_Yc) {
               throw new RuntimeException("");
@@ -2830,7 +2830,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                   var8 = (cla) (var4);
                   var8.unlinkSecondary(-7975);
                   var8.unlink(21);
-                  this.field_l.releasePbuffer(var8.a((byte) 101));
+                  this.field_l.releasePbuffer(var8.getPbufferHandle((byte) 101));
                   this.field_rc = this.field_rc - var8.field_p;
                   continue;
                 }
@@ -2839,7 +2839,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               this.field_Wc.put((long)(this.field_Mb.width() << 16 | this.field_Mb.height()), 112, var7);
             }
             this.field_F.addFirst(75, var3_ref);
-            this.field_l.setPbuffer(var3_ref.a((byte) 101));
+            this.field_l.setPbuffer(var3_ref.getPbufferHandle((byte) 101));
           }
           this.field_Y = param0.width();
           this.field_I = param0.height();

@@ -100,7 +100,7 @@ final class PlantComponent extends PrefabComponent {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, float[] param4, int param5, int param6) {
+    final static void generateFloatMipmaps(int param0, int param1, int param2, int param3, float[] param4, int param5, int param6) {
         int var17 = 0;
         int var21 = 0;
         int var22 = 0;

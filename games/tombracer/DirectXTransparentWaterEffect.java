@@ -26,7 +26,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         return this.field_f != null ? true : false;
     }
 
-    final void b(byte param0) {
+    final void onViewMatrixChanged(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
         if (null != this.field_f) {
@@ -41,7 +41,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         this.bindTexture(-5, (GpuTexture) null, 86);
     }
 
-    final void b(int param0) {
+    final void onProjectionChanged(int param0) {
         jagdx.IDirect3DDevice var2 = null;
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
@@ -50,10 +50,10 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (param0 >= 64) {
           return;
         }
-        this.b((byte) -60);
+        this.onViewMatrixChanged((byte) -60);
     }
 
-    final void c(boolean param0) {
+    final void onTextureMatrixChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
         if (null != this.field_f) {
@@ -82,7 +82,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         }
     }
 
-    final void b(boolean param0) {
+    final void onModelMatrixChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
         if (null != this.field_f) {
@@ -93,7 +93,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (param0) {
           return;
         }
-        this.b(true);
+        this.onModelMatrixChanged(true);
     }
 
     final void setParameters(byte param0, int param1, int param2) {
@@ -136,7 +136,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         }
     }
 
-    final void a(boolean param0) {
+    final void onFogChanged(boolean param0) {
         jagdx.IDirect3DDevice var7 = null;
         jagdx.IDirect3DDevice var6 = null;
         float var3 = 0.0f;
@@ -161,7 +161,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
           }
           return;
         }
-        this.a(false);
+        this.onFogChanged(false);
         if (this.field_f == null) {
         } else {
           var6 = this.field_e.field_jd;
@@ -196,11 +196,11 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         this.owner.a(tla.field_c, 2, -6219, false, true);
         this.owner.a((byte) 77, false);
         this.field_e.a(this.field_f, -1);
-        this.b((byte) 107);
-        this.c(true);
-        this.b(77);
+        this.onViewMatrixChanged((byte) 107);
+        this.onTextureMatrixChanged(true);
+        this.onProjectionChanged(77);
         int var3 = 91 % ((param0 - 41) / 62);
-        this.a(true);
+        this.onFogChanged(true);
     }
 
     static {

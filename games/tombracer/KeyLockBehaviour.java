@@ -15,16 +15,16 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
           this.stop(false);
         }
         if (param0 == 5418) {
-          this.field_t = this.r(param0 - 5416);
+          this.field_t = this.isPlayerUnlocking(param0 - 5416);
           this.field_q.setInput((byte) -14, this.field_t);
           return;
         }
         this.b(-64, 64);
-        this.field_t = this.r(param0 - 5416);
+        this.field_t = this.isPlayerUnlocking(param0 - 5416);
         this.field_q.setInput((byte) -14, this.field_t);
     }
 
-    private final boolean r(int param0) {
+    private final boolean isPlayerUnlocking(int param0) {
         int stackIn_6_1 = 0;
         int stackIn_19_1 = 0;
         int var3;

@@ -210,7 +210,7 @@ class FocusableWidget extends UiWidget {
           if (var2 == 0) {
             var10 = (mm) (SpawnerBehaviour.field_n.first(-80));
             if (var10 == null) {
-              dea.a(60);
+              dea.closeGameSocket(60);
               return;
             }
             var4 = var11.readUnsignedByte(param0 ^ 251);
@@ -225,12 +225,12 @@ class FocusableWidget extends UiWidget {
               var10.unlink(95);
               return;
             }
-            dea.a(60);
+            dea.closeGameSocket(60);
             return;
           }
           if (var2 != 1) {
             ssa.reportClientError("A1: " + kk.formatPacketDump(32), (byte) 117, (Throwable) null);
-            dea.a(60);
+            dea.closeGameSocket(60);
             return;
           }
           var3 = var11.readInt(-34);
@@ -246,7 +246,7 @@ class FocusableWidget extends UiWidget {
             var4_ref_sda.unlink(24);
             return;
           }
-          dea.a(60);
+          dea.closeGameSocket(60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

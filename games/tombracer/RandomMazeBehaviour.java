@@ -170,7 +170,7 @@ final class RandomMazeBehaviour extends Behaviour {
         return 11;
     }
 
-    private final boolean a(boolean param0, int param1, int param2, int param3, BeamSegment param4, int param5) {
+    private final boolean clipBeamToCell(boolean param0, int param1, int param2, int param3, BeamSegment param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -189,7 +189,7 @@ final class RandomMazeBehaviour extends Behaviour {
             return false;
           }
           var9 = wm.a(1 << var7_int, var8, -75);
-          param4.a(var9, (byte) 47);
+          param4.shortenTo(var9, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,7 +205,7 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    private final boolean a(BeamSegment param0, int param1) {
+    private final boolean traceBeamThroughMaze(BeamSegment param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -251,7 +251,7 @@ final class RandomMazeBehaviour extends Behaviour {
               var15 = OpenGlTexture2D.a(var8, (byte) -15, var13, this.field_t + var13, var14 + this.field_t, var12, var6, var7, var5, var14);
               if (var15 > 0) {
                 var16 = wm.a(1 << var12, var15, -51);
-                param0.a(var16, (byte) 47);
+                param0.shortenTo(var16, (byte) 47);
                 return true;
               }
             }
@@ -460,7 +460,7 @@ final class RandomMazeBehaviour extends Behaviour {
         this.field_t = 2097152;
         try {
           this.filledCellTemplate = new Trap(param0, false);
-          CharacterChoice.a((byte) -98, 1, true, param0, this.filledCellTemplate, false);
+          CharacterChoice.configureBlockTrap((byte) -98, 1, true, param0, this.filledCellTemplate, false);
           this.filledCellTemplate.setAttachedToParent(false, 11468);
           this.openCellTemplate = new Trap(param0, false);
           this.itemTemplate = new Trap(param0, false);
@@ -502,13 +502,13 @@ final class RandomMazeBehaviour extends Behaviour {
             var8 = this.field_t * this.field_z.width;
             var9 = this.field_z.height * this.field_t;
             var10 = this.field_y + var8;
-            if (!this.a(false, var9, var6, var7, param2, this.field_y)) {
+            if (!this.clipBeamToCell(false, var9, var6, var7, param2, this.field_y)) {
               stackIn_14_0 = (var5_int != 0) ? 1 : 0;
             } else {
               stackIn_14_0 = 1;
             }
             var5_int = stackIn_14_0;
-            if (!this.a(false, var9, var10 + var6, var7, param2, this.trap.getWidth(-45) - var10)) {
+            if (!this.clipBeamToCell(false, var9, var10 + var6, var7, param2, this.trap.getWidth(-45) - var10)) {
               stackIn_20_0 = (var5_int != 0) ? 1 : 0;
             } else {
               stackIn_20_0 = 1;
@@ -519,7 +519,7 @@ final class RandomMazeBehaviour extends Behaviour {
             var11 = (Collidable) null;
             this.blocksOverlap(-49, 56, -14, 110, -69, 19, (Collidable) null);
           }
-          if (this.a(param2, param1 ^ -2)) {
+          if (this.traceBeamThroughMaze(param2, param1 ^ -2)) {
             stackIn_29_0 = 1;
           } else {
             stackIn_29_0 = (var5_int != 0) ? 1 : 0;
@@ -594,7 +594,7 @@ final class RandomMazeBehaviour extends Behaviour {
           this.itemTemplate = null;
           if (this.field_u) {
             this.filledCellTemplate = new Trap(param0, false);
-            CharacterChoice.a((byte) -120, 1, true, param0, this.filledCellTemplate, false);
+            CharacterChoice.configureBlockTrap((byte) -120, 1, true, param0, this.filledCellTemplate, false);
             this.openCellTemplate = new Trap(param0, false);
           } else {
             this.filledCellTemplate = new Trap(param0, param1, false);
@@ -606,7 +606,7 @@ final class RandomMazeBehaviour extends Behaviour {
           }
           if (this.itemTemplate == null) {
             this.itemTemplate = new Trap(param0, false);
-            CharacterChoice.a((byte) -93, 7, true, param0, this.itemTemplate, false);
+            CharacterChoice.configureBlockTrap((byte) -93, 7, true, param0, this.itemTemplate, false);
             this.initTemplates(true);
           } else {
             this.initTemplates(true);
@@ -732,7 +732,7 @@ final class RandomMazeBehaviour extends Behaviour {
         boolean discarded$0 = false;
         if (param0 != 5418) {
           BeamSegment var3 = (BeamSegment) null;
-          discarded$0 = this.a(false, -81, 38, -44, (BeamSegment) null, -15);
+          discarded$0 = this.clipBeamToCell(false, -81, 38, -44, (BeamSegment) null, -15);
         }
     }
 

@@ -219,7 +219,7 @@ final class FallbackShaderEffect extends ShaderEffect {
               hw.field_a.field_r = mq.field_d.toUpperCase();
             }
           }
-          stackIn_67_0 = nra.field_c;
+          stackIn_67_0 = C2SRoomResultPacket.field_c;
           stackIn_67_1 = param0 ^ -102;
           stackIn_68_2 = (param1) && (!param2) && (!tla.field_e);
           ((UiComponent) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);

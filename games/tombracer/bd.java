@@ -113,7 +113,7 @@ final class bd extends IntrusiveNode {
         field_j = null;
     }
 
-    final void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void capture(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_m = param0;
           this.field_k = param4;

@@ -131,7 +131,7 @@ final class AnimatedLight {
         }
     }
 
-    private final void a(int param0, int param1, GraphicsToolkit param2, int param3, int param4, int param5, int param6) {
+    private final void createLight(int param0, int param1, GraphicsToolkit param2, int param3, int param4, int param5, int param6) {
         try {
           this.light = param2.createLight(param5, param1, param0, param3, param6, 1.0f);
           if (param4 != 512) {
@@ -142,7 +142,7 @@ final class AnimatedLight {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void updateIntensity(boolean param0, int param1, int param2) {
         int var5;
         int var6;
         int var7;
@@ -244,7 +244,7 @@ final class AnimatedLight {
           if (ooa.field_e == null) {
             ItemBehaviour.b(2);
           }
-          this.a(param4, param3, param0, param6, 512, param2, param5);
+          this.createLight(param4, param3, param0, param6, 512, param2, param5);
           var9_int = (-SweepRotateLocomotor.field_q + 2 * param6 >> ResourceArchive.field_b) + 1;
           this.field_b = new short[var9_int];
           for (var10 = 0; var10 < this.field_b.length; var10++) {

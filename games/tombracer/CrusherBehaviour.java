@@ -93,13 +93,13 @@ final class CrusherBehaviour extends Behaviour {
           this.windUpTicks = 25;
           this.crushEffect = new Effect(0, 100);
           this.crushEffect.setDeathMessageIndex(1, 4);
-          this.k((byte) -106);
+          this.clampPhaseTicks((byte) -106);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "rea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void k(byte param0) {
+    private final void clampPhaseTicks(byte param0) {
         int var2;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -198,7 +198,7 @@ final class CrusherBehaviour extends Behaviour {
           } else {
             this.crushEffect = new Effect(0, 100);
           }
-          this.k((byte) -101);
+          this.clampPhaseTicks((byte) -101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -488,7 +488,7 @@ final class CrusherBehaviour extends Behaviour {
             var6 = (BeamSegment) null;
             this.interceptsBeam(-121, -9, (BeamSegment) null, -81);
           }
-          param2.a(param3, (byte) 47);
+          param2.shortenTo(param3, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

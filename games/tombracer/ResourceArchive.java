@@ -36,7 +36,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           if (param1 != 2) {
-            this.a(((boolean[]) (((Object[]) (this.field_a[4]))[5]))[6], 76, -83);
+            this.getFile(((boolean[]) (((Object[]) (this.field_a[4]))[5]))[6], 76, -83);
           }
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
@@ -46,7 +46,7 @@ final class ResourceArchive {
           }
           var7 = (CharSequence) ((Object) param2);
           var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.hashString(var7, -12754), 1);
-          stackIn_10_0 = this.a(var4_int, (byte) -126, var5);
+          stackIn_10_0 = this.ensureFileReady(var4_int, (byte) -126, var5);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,7 +166,7 @@ final class ResourceArchive {
 
     final synchronized boolean ensureIndex(int param0) {
         if (param0 > -30) {
-          this.a(((int[]) (this.field_a[0]))[3], (byte) -61, 31);
+          this.ensureFileReady(((int[]) (this.field_a[0]))[3], (byte) -61, 31);
         }
         if (null == this.field_i) {
           this.field_i = this.field_d.getIndex(true);
@@ -265,12 +265,12 @@ final class ResourceArchive {
         return false;
     }
 
-    final synchronized boolean a(int param0, int param1) {
+    final synchronized boolean ensureFileReadyById(int param0, int param1) {
         if (!this.ensureIndex(-71)) {
           return false;
         }
         if (this.field_i.field_p.length == 1) {
-          return this.a(0, (byte) -127, param1);
+          return this.ensureFileReady(0, (byte) -127, param1);
         }
         if (!this.isGroupValid(-1, param1)) {
           return false;
@@ -279,7 +279,7 @@ final class ResourceArchive {
           return ((boolean[]) (this.field_a[6]))[1];
         }
         if (this.field_i.field_p[param1] == 1) {
-          return this.a(param1, (byte) -80, 0);
+          return this.ensureFileReady(param1, (byte) -80, 0);
         }
         throw new RuntimeException();
     }
@@ -549,7 +549,7 @@ final class ResourceArchive {
         }
     }
 
-    final int c(int param0) {
+    final int getGroupCount(int param0) {
         if (param0 != 4) {
           this.field_a[4] = ((Object[]) (this.field_a[0]))[5];
         }
@@ -596,7 +596,7 @@ final class ResourceArchive {
         return var4;
     }
 
-    final boolean a(String param0, String param1, int param2) {
+    final boolean hasFile(String param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -645,18 +645,18 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized byte[] f(int param0, int param1) {
+    final synchronized byte[] getFileById(int param0, int param1) {
         if (!this.ensureIndex(-63)) {
           return null;
         }
         if (this.field_i.field_p.length == 1) {
-          return this.a(false, 0, param0);
+          return this.getFile(false, 0, param0);
         }
         if (!this.isGroupValid(-1, param0)) {
           return null;
         }
         if (this.field_i.field_p[param0] == 1) {
-          return this.a(false, param0, 0);
+          return this.getFile(false, param0, 0);
         }
         int var3 = -8 / ((50 - param1) / 42);
         throw new RuntimeException();
@@ -777,7 +777,7 @@ final class ResourceArchive {
           }
           var7 = (CharSequence) ((Object) param2);
           var5 = this.field_i.field_e[var4_int].a(HardwareUnlitEffect.hashString(var7, -12754), 1);
-          stackIn_9_0 = this.a(false, var4_int, var5);
+          stackIn_9_0 = this.getFile(false, var4_int, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -799,7 +799,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized boolean a(int param0, byte param1, int param2) {
+    final synchronized boolean ensureFileReady(int param0, byte param1, int param2) {
         if (!this.isValidFileSlot(param0, param2, (byte) -97)) {
           return false;
         }
@@ -886,7 +886,7 @@ final class ResourceArchive {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getFileCount(byte param0, int param1) {
         if (!this.isGroupValid(-1, param1)) {
           return 0;
         }
@@ -946,7 +946,7 @@ final class ResourceArchive {
         return true;
     }
 
-    final byte[] a(boolean param0, int param1, int param2) {
+    final byte[] getFile(boolean param0, int param1, int param2) {
         boolean discarded$0 = false;
         if (param0) {
           discarded$0 = this.isGroupValid(((int[]) (this.field_a[11]))[23], 94);

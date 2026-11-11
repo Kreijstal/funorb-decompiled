@@ -5,22 +5,22 @@ import java.util.*;
 
 final class PlatformBehaviour extends Behaviour {
     private int field_t;
-    private int field_u;
-    private int field_q;
+    private int collapseCountdown;
+    private int collapseDelay;
     private boolean field_r;
     static Random field_p;
     static BitmapFont field_s;
-    private int field_n;
+    private int weightThreshold;
     static int field_v;
     static boolean field_w;
     static int field_o;
 
     PlatformBehaviour(Room param0, boolean param1) {
         super(param0, param1);
-        this.field_u = -1;
+        this.collapseCountdown = -1;
         try {
-          this.field_q = 50;
-          this.field_n = 50;
+          this.collapseDelay = 50;
+          this.weightThreshold = 50;
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "lpa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -37,24 +37,24 @@ final class PlatformBehaviour extends Behaviour {
         if (param4 >= 79) {
           return S2CRoundDeadlinePacket.a(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
         }
-        this.field_q = -65;
+        this.collapseDelay = -65;
         return S2CRoundDeadlinePacket.a(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
     }
 
     final boolean g(byte param0) {
         if (param0 >= 63) {
-          return this.field_u <= 0 ? true : false;
+          return this.collapseCountdown <= 0 ? true : false;
         }
         Trap var3 = (Trap) null;
         this.attachToTrap(false, (Trap) null);
-        return this.field_u <= 0 ? true : false;
+        return this.collapseCountdown <= 0 ? true : false;
     }
 
     final int hashState(int param0, int param1) {
         if (param1 >= -48) {
           return 39;
         }
-        param0 = CurveOperator.mixHash((byte) 71, param0, this.field_u);
+        param0 = CurveOperator.mixHash((byte) 71, param0, this.collapseCountdown);
         return param0;
     }
 
@@ -70,8 +70,8 @@ final class PlatformBehaviour extends Behaviour {
         }
     }
 
-    final void b(int param0, int param1) {
-        this.field_n = param1;
+    final void setWeightThreshold(int param0, int param1) {
+        this.weightThreshold = param1;
         if (param0 != -5) {
           this.getSurfaceCoverage(3, -95, -50, 37, (byte) -23, 92);
         }
@@ -88,26 +88,26 @@ final class PlatformBehaviour extends Behaviour {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) 36, this.field_n, 8);
-          param1.writeBits((byte) 87, this.field_q, 8);
+          param1.writeBits((byte) 36, this.weightThreshold, 8);
+          param1.writeBits((byte) 87, this.collapseDelay, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "lpa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean d(boolean param0) {
+    final boolean isCollapsing(boolean param0) {
         if (param0) {
           return true;
         }
-        return this.field_u != -1 ? true : false;
+        return this.collapseCountdown != -1 ? true : false;
     }
 
     PlatformBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
-        this.field_u = -1;
+        this.collapseCountdown = -1;
         try {
-          this.field_n = param1.readBits((byte) 44, 8);
-          this.field_q = param1.readBits((byte) 44, 8);
+          this.weightThreshold = param1.readBits((byte) 44, 8);
+          this.collapseDelay = param1.readBits((byte) 44, 8);
           if (param0.formatVersion >= 4 &&
             19 >= param0.formatVersion) {
             param1.readBits((byte) 44, 1);
@@ -150,9 +150,9 @@ final class PlatformBehaviour extends Behaviour {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void setCollapseDelay(int param0, byte param1) {
         int var3 = -16 % ((16 - param1) / 44);
-        this.field_q = param0;
+        this.collapseDelay = param0;
     }
 
     public final void toggle(int param0) {
@@ -168,21 +168,21 @@ final class PlatformBehaviour extends Behaviour {
         if (param0 != 5418) {
           return;
         }
-        if (this.d(false)) {
-          this.field_u = this.field_u - 1;
-          if (this.field_u <= 0) {
+        if (this.isCollapsing(false)) {
+          this.collapseCountdown = this.collapseCountdown - 1;
+          if (this.collapseCountdown <= 0) {
             this.field_r = true;
             this.trap.startFalling(true);
             return;
           }
           return;
         }
-        if (this.field_n <= 0) {
+        if (this.weightThreshold <= 0) {
           this.field_t = 0;
           return;
         }
-        if (this.field_n <= this.field_t) {
-          this.field_u = this.field_q;
+        if (this.weightThreshold <= this.field_t) {
+          this.collapseCountdown = this.collapseDelay;
           return;
         }
         this.field_t = 0;
@@ -220,7 +220,7 @@ final class PlatformBehaviour extends Behaviour {
               }
             }
           }
-          if (this.field_u != -1) {
+          if (this.collapseCountdown != -1) {
             return;
           }
           this.field_t = this.field_t + param2.getWeight(-89);

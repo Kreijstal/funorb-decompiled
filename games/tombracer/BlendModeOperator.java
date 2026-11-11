@@ -521,7 +521,7 @@ final class BlendModeOperator extends TextureOperator {
         return var3;
     }
 
-    final static GameScreen d(int param0, int param1) {
+    final static GameScreen getScreenById(int param0, int param1) {
         int var2;
         if (param1 <= 120) {
           return (GameScreen) null;
@@ -557,7 +557,7 @@ final class BlendModeOperator extends TextureOperator {
             }
           }
           if (param0 != 107) {
-            BlendModeOperator.d(111, -90);
+            BlendModeOperator.getScreenById(111, -90);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

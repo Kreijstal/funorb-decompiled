@@ -194,9 +194,9 @@ final class WindZoneBehaviour extends Behaviour {
               if (var22 > 262144) {
                 if (this.field_q != 0 &&
                   this.field_q != 2) {
-                  this.field_v.a(var11, var21, var20, var20, 44);
+                  this.field_v.setEndpoints(var11, var21, var20, var20, 44);
                 } else {
-                  this.field_v.a(var19, var19, var11, var21, 44);
+                  this.field_v.setEndpoints(var19, var19, var11, var21, 44);
                 }
               }
               if (!(var22 > 262144) ||

@@ -18,7 +18,7 @@ final class MonsterModel extends MotionTrackingModel {
         }
         try {
           int var6_int = 0 % ((-38 - param4) / 47);
-          var7 = this.i(-6874);
+          var7 = this.getModelHeading(-6874);
           var8 = this.field_C.buildModel(false, -1, false, (byte) 1);
           gqa.a(var7, -83584144, param1, param2, var8, param3);
         } catch (RuntimeException runtimeException) {
@@ -61,7 +61,7 @@ final class MonsterModel extends MotionTrackingModel {
           this.field_C.a(1, true, (byte) -101, 3);
         }
         if (var3 != 0) {
-          var5_intLifetime1 = this.i(-6874);
+          var5_intLifetime1 = this.getModelHeading(-6874);
           var6 = new MonsterRemains(this.getRenderX((byte) 40), this.getRenderY((byte) 123), this.getRenderZ((byte) -96), this.field_C, var5_intLifetime1, var3);
           var6.addToLayer((byte) -113, this.body.getRoom((byte) -109).getScene((byte) -118), this.getSceneLayer((byte) -99));
         }
@@ -317,7 +317,7 @@ final class MonsterModel extends MotionTrackingModel {
         return;
     }
 
-    private final int i(int param0) {
+    private final int getModelHeading(int param0) {
         if (param0 == -6874) {
           return GameScreen.positiveModulo(-this.body.getFacingAngle(param0 - 18913) >> 2, 2048, param0 ^ -6797);
         }

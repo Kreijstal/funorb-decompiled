@@ -27,9 +27,9 @@ final class nc {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_d.a(false, 0, 32767 & param1);
+          var4 = this.field_d.getFile(false, 0, 32767 & param1);
         } else {
-          var4 = this.field_a.a(false, 0, param1);
+          var4 = this.field_a.getFile(false, 0, param1);
         }
         QuickChatCategory var6 = new QuickChatCategory();
         if (var4 == null) {
@@ -62,12 +62,12 @@ final class nc {
           this.field_a = param1;
           this.field_d = param2;
           if (this.field_a != null) {
-            this.field_a.a((byte) -88, 0);
+            this.field_a.getFileCount((byte) -88, 0);
           }
           if (null == this.field_d) {
             return;
           }
-          this.field_d.a((byte) -91, 0);
+          this.field_d.getFileCount((byte) -91, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

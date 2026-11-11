@@ -17,7 +17,7 @@ final class ToggleMusicChannelCommand extends ConsoleMethod {
             var4 = (ConsoleValue[]) null;
             this.invoke((ConsoleValue[]) null, -90);
           }
-          stackIn_3_0 = new ConsoleValue(joa.a(param0[1].a(false), (byte) 77, (String) (param0[0].field_d)));
+          stackIn_3_0 = new ConsoleValue(joa.a(param0[1].booleanValue(false), (byte) 77, (String) (param0[0].field_d)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

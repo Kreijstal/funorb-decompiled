@@ -9,13 +9,13 @@ final class PlatformModel extends TrapModel {
     private boolean field_p;
     private static String[] locomotorTypeNames;
     private int offsetY;
-    private fla field_t;
+    private PlayingSound field_t;
     static boolean field_B;
     static int[][] field_A;
     private PlatformTile[][] tiles;
-    private fla field_v;
+    private PlayingSound field_v;
     private int offsetX;
-    private fla field_o;
+    private PlayingSound field_o;
     private int field_y;
     private int columns;
 
@@ -235,7 +235,7 @@ final class PlatformModel extends TrapModel {
           this.tiles = new PlatformTile[this.columns][this.rows];
           var5 = 1048576 + (-(this.body.getHeight((byte) 55) / 2) + var4);
           if (!param0) {
-            this.field_o = (fla) null;
+            this.field_o = (PlayingSound) null;
           }
           for (var6 = 0; this.rows > var6; var6++) {
             var7 = -(this.body.getWidth(-117) / 2) + (var3 + 1048576);
@@ -376,11 +376,11 @@ final class PlatformModel extends TrapModel {
           }
           var3.play(new SoundEvent(3, this.getRenderX((byte) -93), this.getRenderY((byte) 115), this.getRenderZ((byte) -89)), -58);
           if (this.field_t != null) {
-            this.field_t.a(-120, var3);
+            this.field_t.release(-120, var3);
             this.field_t = null;
           }
           if (null != this.field_o) {
-            this.field_o.a(-100, var3);
+            this.field_o.release(-100, var3);
             this.field_o = null;
           }
           return;
@@ -424,7 +424,7 @@ final class PlatformModel extends TrapModel {
           var2_int = 0;
           var3 = 0;
           if (this.field_m != null &&
-            this.field_m.d(false)) {
+            this.field_m.isCollapsing(false)) {
             this.offsetX = -131072 + uca.cosmeticRandom.nextBounded(262144, ~param0);
             this.offsetY = uca.cosmeticRandom.nextBounded(262144, param0 + 1) - 131072;
             var2_int = 1;
@@ -443,7 +443,7 @@ final class PlatformModel extends TrapModel {
             return;
           }
           if (param0 != -1) {
-            this.field_t = (fla) null;
+            this.field_t = (PlayingSound) null;
           }
           var5_ref = (Trap) (this.body);
           var6 = 1;
@@ -462,7 +462,7 @@ final class PlatformModel extends TrapModel {
             } else {
               if (var2_int == 0 &&
                 null != this.field_t) {
-                this.field_t.a(param0 - 117, var4_ref);
+                this.field_t.release(param0 - 117, var4_ref);
                 this.field_t = null;
               }
             }
@@ -500,7 +500,7 @@ final class PlatformModel extends TrapModel {
             }
             if (var17 == 0 &&
               this.field_v != null) {
-              this.field_v.a(param0 + 15, var4_ref);
+              this.field_v.release(param0 + 15, var4_ref);
               this.field_v = null;
             }
           } else if (this.field_o == null &&
@@ -509,15 +509,15 @@ final class PlatformModel extends TrapModel {
           } else {
             if (this.field_o != null &&
               var6 == 0) {
-              this.field_o.a(param0 + 112, var4_ref);
+              this.field_o.release(param0 + 112, var4_ref);
               this.field_o = null;
             }
           }
           if (this.field_o != null) {
-            this.field_o.a(this.getRenderX((byte) -97), var4_ref.field_c, param0 ^ 127, var4_ref.field_h, this.getRenderY((byte) 96));
+            this.field_o.updateVolumeAndPan(this.getRenderX((byte) -97), var4_ref.field_c, param0 ^ 127, var4_ref.field_h, this.getRenderY((byte) 96));
           }
           if (this.field_t != null) {
-            this.field_t.a(this.getRenderX((byte) 103), var4_ref.field_c, -128, var4_ref.field_h, this.getRenderY((byte) 127));
+            this.field_t.updateVolumeAndPan(this.getRenderX((byte) 103), var4_ref.field_c, -128, var4_ref.field_h, this.getRenderY((byte) 127));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -636,7 +636,7 @@ final class PlatformModel extends TrapModel {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 <= 40) {
-            this.field_v = (fla) null;
+            this.field_v = (PlayingSound) null;
           }
           if (null != this.tiles) {
             for (var4_int = 0; this.columns > var4_int; var4_int++) {
@@ -805,7 +805,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final static void j(int param0) {
+    final static void startAudioOutput(int param0) {
         psa var1 = null;
         psa var2 = null;
         try {
@@ -817,7 +817,7 @@ final class PlatformModel extends TrapModel {
             PlatformModel.releaseStatics(-98);
           }
           RewardChoicePhase.field_n = new sq(var1, var2);
-          CourseLayout.a(22050, 1024, RewardChoicePhase.field_n, true, (java.awt.Component) ((Object) nma.field_l), dsa.field_c);
+          CourseLayout.initAudioOutputs(22050, 1024, RewardChoicePhase.field_n, true, (java.awt.Component) ((Object) nma.field_l), dsa.field_c);
           wra.a(0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ce.R(" + param0 + ')');

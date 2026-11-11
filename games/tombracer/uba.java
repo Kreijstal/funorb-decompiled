@@ -23,7 +23,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
           var5 = ResourceArchive.currentYear((byte) 60);
           if (var4 >= param0 &&
             -3 + var5 >= var4) {
-            if (fa.a(var3, var2_int, true, var4)) {
+            if (fa.isValidDate(var3, var2_int, true, var4)) {
               stackIn_7_0 = null;
               return (String) (stackIn_7_0);
             }
@@ -41,9 +41,9 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
     public final boolean isEmpty(boolean param0) {
         if (!param0) {
           this.field_i = (DateInputWidget) null;
-          return this.field_i.i((byte) 64);
+          return this.field_i.isEmpty((byte) 64);
         }
-        return this.field_i.i((byte) 64);
+        return this.field_i.isEmpty((byte) 64);
     }
 
     public static void releaseStatics(byte param0) {
@@ -89,7 +89,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
             stackIn_6_0 = fp.field_c;
             return stackIn_6_0;
           }
-          if (!fa.a(var3, var2_int, true, var4)) {
+          if (!fa.isValidDate(var3, var2_int, true, var4)) {
             stackIn_10_0 = fp.field_c;
             return stackIn_10_0;
           }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SkeletonComponent extends dna {
-    final static boolean a(boolean param0, CharSequence param1, int param2) {
+    final static boolean isValidPlayerName(boolean param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

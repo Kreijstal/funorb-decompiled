@@ -13,7 +13,7 @@ final class WhiteNoiseOperator extends TextureOperator {
         if (this.monochromeCache.rowMissed) {
           var4 = sj.textureRowCoords[param1];
           for (var5 = 0; var5 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var5++) {
-            var8[var5] = this.d(param0 + 1876, ht.textureColumnCoords[var5], var4) % 4096;
+            var8[var5] = this.hashNoise(param0 + 1876, ht.textureColumnCoords[var5], var4) % 4096;
           }
         }
         if (param0 != 1) {
@@ -237,7 +237,7 @@ final class WhiteNoiseOperator extends TextureOperator {
         super(0, true);
     }
 
-    private final int d(int param0, int param1, int param2) {
+    private final int hashNoise(int param0, int param1, int param2) {
         if (param0 != 1877) {
           field_m = -3;
         }

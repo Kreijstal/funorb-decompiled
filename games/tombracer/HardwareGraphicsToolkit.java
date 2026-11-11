@@ -423,7 +423,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         this.e((byte) 119);
         if (null != this.field_pb) {
-          this.field_pb.b(param0 + 62);
+          this.field_pb.onProjectionChanged(param0 + 62);
         }
     }
 
@@ -511,7 +511,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_p = false;
         this.z((byte) -73);
         if (this.field_pb != null) {
-          this.field_pb.b((byte) 107);
+          this.field_pb.onViewMatrixChanged((byte) 107);
         }
     }
 
@@ -1000,7 +1000,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_mb = (mna) null;
         }
         if (this.field_pb != null) {
-          this.field_pb.a(true);
+          this.field_pb.onFogChanged(true);
         }
         this.applyFogParameters(1);
     }
@@ -2477,7 +2477,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private final void v(byte param0) {
         this.field_p = false;
         if (null != this.field_pb) {
-          this.field_pb.b(true);
+          this.field_pb.onModelMatrixChanged(true);
         }
         this.h(false);
         if (param0 != 94) {
@@ -2499,7 +2499,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private final void u(int param0) {
         this.z(param0);
         if (null != this.field_pb) {
-          this.field_pb.c(true);
+          this.field_pb.onTextureMatrixChanged(true);
         }
     }
 

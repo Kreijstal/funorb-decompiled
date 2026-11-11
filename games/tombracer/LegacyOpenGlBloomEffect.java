@@ -52,7 +52,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
               while ((!(var5_int <= 256) ||
                 !(var6 <= 256))) {
                 jaggl.OpenGL.glViewport(0, 0, var5_int, var6);
-                this.field_s.a(true, this.field_l[var7_int], 0);
+                this.field_s.attachTexture(true, this.field_l[var7_int], 0);
                 if (var6 > 256) {
                   var6 = var6 >> 1;
                 }
@@ -90,7 +90,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
                 this.toolkit.b(this.field_s, 0);
                 this.toolkit.a(true, this.field_l[-1 + var7_int]);
                 this.toolkit.b((Framebuffer) (this.field_q), (byte) 81);
-                this.field_q.a(0, (byte) -91);
+                this.field_q.setDrawBuffer(0, (byte) -91);
                 jaggl.OpenGL.glViewport(0, 0, 256, 256);
                 var8 = this.field_v.field_c;
                 jaggl.OpenGL.glUseProgramObjectARB(var8);
@@ -113,7 +113,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           if (decompiledFrameCompleted0) {
             this.toolkit.a(true, param0);
             this.toolkit.b((Framebuffer) (this.field_q), (byte) 81);
-            this.field_q.a(0, (byte) -91);
+            this.field_q.setDrawBuffer(0, (byte) -91);
             jaggl.OpenGL.glViewport(0, 0, 256, 256);
             var5_long = this.field_m.field_c;
             jaggl.OpenGL.glUseProgramObjectARB(var5_long);
@@ -130,7 +130,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
             jaggl.OpenGL.glVertex2i(0, 1);
             jaggl.OpenGL.glEnd();
           }
-          this.field_q.a(1, (byte) -91);
+          this.field_q.setDrawBuffer(1, (byte) -91);
           this.toolkit.a(true, this.field_x);
           var5_longLifetime1 = this.field_w.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var5_longLifetime1);
@@ -146,7 +146,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           jaggl.OpenGL.glTexCoord2f(0.0f, 1.0f);
           jaggl.OpenGL.glVertex2i(0, 1);
           jaggl.OpenGL.glEnd();
-          this.field_q.a(0, (byte) -91);
+          this.field_q.setDrawBuffer(0, (byte) -91);
           this.toolkit.a(true, this.field_i);
           jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_longLifetime1, "step"), 0.0f, 0.00390625f, 0.0f);
           jaggl.OpenGL.glBegin(7);
@@ -393,10 +393,10 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
         this.field_i = new LegacyOpenGlTexture2D(this.toolkit, 3553, 34842, 256, 256);
         this.field_i.setWrap(false, false, -3554);
         this.toolkit.b((Framebuffer) (this.field_q), (byte) 81);
-        this.field_q.a(true, this.field_x, 0);
-        this.field_q.a(true, this.field_i, 1);
-        this.field_q.a(0, (byte) -91);
-        if (!this.field_q.c(-84)) {
+        this.field_q.attachTexture(true, this.field_x, 0);
+        this.field_q.attachTexture(true, this.field_i, 1);
+        this.field_q.setDrawBuffer(0, (byte) -91);
+        if (!this.field_q.isComplete(-84)) {
           this.toolkit.b(this.field_q, 0);
           return false;
         }

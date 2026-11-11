@@ -224,7 +224,7 @@ final class BoxBlurOperator extends TextureOperator {
         }
     }
 
-    final static boolean a(boolean param0, byte param1, int param2, int param3) {
+    final static boolean compareRankingEntries(boolean param0, byte param1, int param2, int param3) {
         int var4;
         int var5;
         if (param0) {
@@ -263,7 +263,7 @@ final class BoxBlurOperator extends TextureOperator {
           return false;
         }
         if (param1 < 117) {
-          BoxBlurOperator.a(false, (byte) -6, 50, 41);
+          BoxBlurOperator.compareRankingEntries(false, (byte) -6, 50, 41);
         }
         return !(param2 <= param3);
     }

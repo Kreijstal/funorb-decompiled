@@ -235,7 +235,7 @@ final class ObjectPool implements Renderable {
           if (param1 != 0) {
             field_g = (String) null;
           }
-          stackIn_3_0 = SkeletonComponent.a(false, param0, param1 + 1617);
+          stackIn_3_0 = SkeletonComponent.isValidPlayerName(false, param0, param1 + 1617);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -53,7 +53,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         var29 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2.hasText(param1 - 820)) {
-            this.a(-14066, param0, param2);
+            this.drawTextParticle(-14066, param0, param2);
             return;
           }
           var4 = this.field_a;
@@ -422,7 +422,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         }
     }
 
-    private final void a(int param0, TileGridCell param1, DefaultTileRenderable param2, int param3, TileGrid param4, int param5) {
+    private final void styleConnectedTile(int param0, TileGridCell param1, DefaultTileRenderable param2, int param3, TileGrid param4, int param5) {
         RuntimeException stackIn_120_0 = null;
         StringBuilder stackIn_120_1 = null;
         String stackIn_121_2 = null;
@@ -452,10 +452,10 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var7_int = param1.tileType;
           if (var7_int != 0) {
             var8 = 1;
-            var9 = this.a(param5, var7_int, param4, -1 + param3, 109) ? 1 : 0;
-            var10 = this.a(param5, var7_int, param4, 1 + param3, -115) ? 1 : 0;
-            var11 = this.a(param5 + 1, var7_int, param4, param3, 76) ? 1 : 0;
-            var12 = this.a(-1 + param5, var7_int, param4, param3, 127) ? 1 : 0;
+            var9 = this.isConnectedNeighbour(param5, var7_int, param4, -1 + param3, 109) ? 1 : 0;
+            var10 = this.isConnectedNeighbour(param5, var7_int, param4, 1 + param3, -115) ? 1 : 0;
+            var11 = this.isConnectedNeighbour(param5 + 1, var7_int, param4, param3, 76) ? 1 : 0;
+            var12 = this.isConnectedNeighbour(-1 + param5, var7_int, param4, param3, 127) ? 1 : 0;
             var13 = 0;
             if (var9 != 0) {
               var13++;
@@ -543,10 +543,10 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
                 case 4:
                   if (var13 == 4 ||
                     var19 != 0) {
-                    var14Lifetime1 = this.a(-1 + param5, var7_int, param4, -1 + param3, param0 - 17861) ? 1 : 0;
-                    var15 = this.a(1 + param5, var7_int, param4, param3 - 1, 116) ? 1 : 0;
-                    var16 = this.a(1 + param5, var7_int, param4, 1 + param3, param0 ^ 17723) ? 1 : 0;
-                    var17 = this.a(-1 + param5, var7_int, param4, 1 + param3, 87) ? 1 : 0;
+                    var14Lifetime1 = this.isConnectedNeighbour(-1 + param5, var7_int, param4, -1 + param3, param0 - 17861) ? 1 : 0;
+                    var15 = this.isConnectedNeighbour(1 + param5, var7_int, param4, param3 - 1, 116) ? 1 : 0;
+                    var16 = this.isConnectedNeighbour(1 + param5, var7_int, param4, 1 + param3, param0 ^ 17723) ? 1 : 0;
+                    var17 = this.isConnectedNeighbour(-1 + param5, var7_int, param4, 1 + param3, 87) ? 1 : 0;
                     var18 = 2;
                     if (var14Lifetime1 == 0) {
                       param2.setEdgeStyle(var8, 7, var18, (byte) 73);
@@ -646,7 +646,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             }
             var4++;
           }
-          this.a(param1, var3.getColumnCount(109) - 1, 0, 2048, 0, var3.getRowCount(77) - 1);
+          this.restyleTileRange(param1, var3.getColumnCount(109) - 1, 0, 2048, 0, var3.getRowCount(77) - 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -689,7 +689,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         }
     }
 
-    private final boolean a(int param0, int param1, TileGrid param2, int param3, int param4) {
+    private final boolean isConnectedNeighbour(int param0, int param1, TileGrid param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         boolean stackIn_9_0 = false;
@@ -718,7 +718,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         }
     }
 
-    private final void a(int param0, Camera param1, Particle param2) {
+    private final void drawTextParticle(int param0, Camera param1, Particle param2) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -830,7 +830,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         }
     }
 
-    private final void a(Room param0, int param1, int param2, int param3, int param4, int param5) {
+    private final void restyleTileRange(Room param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         TileGrid var7 = null;
         int var8 = 0;
@@ -864,7 +864,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
                 stackIn_5_0 = stackOut_9_0 ? 1 : 0;
                 stackIn_10_0 = stackOut_9_0;
                 if (stackIn_10_0) {
-                  this.a(17767, var10, (DefaultTileRenderable) (var10.getRenderable((byte) -128)), var9, var7, var8);
+                  this.styleConnectedTile(17767, var10, (DefaultTileRenderable) (var10.getRenderable((byte) -128)), var9, var7, var8);
                 }
                 var9++;
               }

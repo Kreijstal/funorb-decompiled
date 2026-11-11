@@ -891,7 +891,7 @@ class TextInputWidget extends FocusableWidget {
         try {
           boolean decompiledSharedTail0 = !(MatchState.field_w <= 32);
           if (!decompiledSharedTail0) {
-            S2CRoundResultPacket.a(0, param0 + 8);
+            S2CRoundResultPacket.setSoundVolume(0, param0 + 8);
             decompiledSharedTail0 = (TombRacer.field_G);
           }
           if (decompiledSharedTail0) {
@@ -899,7 +899,7 @@ class TextInputWidget extends FocusableWidget {
             if (0 == var1_int) {
               var1_int = 32;
             }
-            S2CRoundResultPacket.a(-var1_int + MatchState.field_w, param0 - 1);
+            S2CRoundResultPacket.setSoundVolume(-var1_int + MatchState.field_w, param0 - 1);
           }
           if (param0 != -113) {
             TextInputWidget.ensureHardwareWaterNoise(-73);

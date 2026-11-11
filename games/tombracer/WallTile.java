@@ -130,7 +130,7 @@ final class WallTile implements Renderable {
         }
     }
 
-    final void a(boolean param0, byte param1, boolean param2, boolean param3, boolean param4) {
+    final void computeEdgeFlags(boolean param0, byte param1, boolean param2, boolean param3, boolean param4) {
         int var6;
         int var7;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -537,7 +537,7 @@ final class WallTile implements Renderable {
         return this.field_g.getRenderY((byte) 126) + this.field_f;
     }
 
-    final void a(int param0) {
+    final void mirrorSides(int param0) {
         int var2 = this.field_e ? 1 : 0;
         this.field_e = this.field_c;
         this.field_c = var2 != 0 ? true : false;
@@ -552,7 +552,7 @@ final class WallTile implements Renderable {
           return this.field_g.getRenderZ((byte) -115);
         }
         java.awt.Canvas var3 = (java.awt.Canvas) null;
-        WallTile.a(true, (java.awt.Canvas) null, -71);
+        WallTile.drawLoadingScreen(true, (java.awt.Canvas) null, -71);
         return this.field_g.getRenderZ((byte) -115);
     }
 
@@ -562,11 +562,11 @@ final class WallTile implements Renderable {
 
     public final void updateAnimation(int param0) {
         if (param0 != -4366) {
-          this.a(-19);
+          this.mirrorSides(-19);
         }
     }
 
-    final static void a(boolean param0, java.awt.Canvas param1, int param2) {
+    final static void drawLoadingScreen(boolean param0, java.awt.Canvas param1, int param2) {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

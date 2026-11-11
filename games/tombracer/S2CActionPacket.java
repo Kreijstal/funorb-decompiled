@@ -145,7 +145,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
         }
     }
 
-    final boolean a(boolean param0, int param1) {
+    final boolean hasOrdersFor(boolean param0, int param1) {
         if (param0) {
           return true;
         }
@@ -157,7 +157,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
         this.hasPlayerOrders = new boolean[param0];
     }
 
-    final int a(boolean param0, int param1, int param2) {
+    final int getOrder(boolean param0, int param1, int param2) {
         if (param0) {
           ResourceArchive var5 = (ResourceArchive) null;
           S2CActionPacket.a((ResourceArchive) null, (byte) 42);

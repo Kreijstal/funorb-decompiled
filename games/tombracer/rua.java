@@ -65,7 +65,7 @@ final class rua extends MessageDialog implements ButtonListener {
             }
             break;
           }
-          TripBeamComponent.b(1, var2_int);
+          TripBeamComponent.playMusicTrack(1, var2_int);
           stackIn_5_0 = "Playing track " + param0;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

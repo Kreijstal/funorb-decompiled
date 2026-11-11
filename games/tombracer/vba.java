@@ -62,7 +62,7 @@ final class vba extends we {
             this.field_r[this.field_t] = 8;
           }
         }
-        if (!this.field_q.b(20)) {
+        if (!this.field_q.isSettled(20)) {
           return;
         }
         this.field_s = this.b(GridWidgetContainer.field_B, AgeValidator.field_j, true);
@@ -253,9 +253,9 @@ final class vba extends we {
         var10 = this.a(var8, MatchStatistics.field_n, -6671872, 180, var4, eda.field_f, 128, var7Lifetime1, 15);
         var7Lifetime1 = var7Lifetime1 + (5 + 15 * var10);
         if (!this.a(false, var6)) {
-          kn.field_p.a(var7Lifetime1, false, pg.field_x, var4, -6671872, -1);
+          kn.field_p.drawLeft(var7Lifetime1, false, pg.field_x, var4, -6671872, -1);
         } else {
-          kn.field_p.a(var7Lifetime1, false, MessageOverlay.field_p, var4, -14671840, -1);
+          kn.field_p.drawLeft(var7Lifetime1, false, MessageOverlay.field_p, var4, -14671840, -1);
         }
         var7Lifetime1 += 20;
         discarded$0 = this.a(var12 + "<br><br>" + jn.field_r + EditableTextField.field_zb[var6] + "       " + DisplacementOperator.field_m + EditableTextField.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, param1 ^ -150, var7Lifetime1, 15);
@@ -296,7 +296,7 @@ final class vba extends we {
             return stackIn_3_0;
           }
           for (var12 = 0; var14.length > var12; var12++) {
-            param5.a(var12 * param8 + param7, false, var14[var12], param4, param2, -1);
+            param5.drawLeft(var12 * param8 + param7, false, var14[var12], param4, param2, -1);
           }
           stackIn_8_0 = var11;
           return stackIn_8_0;
@@ -337,11 +337,11 @@ final class vba extends we {
     }
 
     final void a(boolean param0, int param1, byte param2) {
-        SingleChildWidget.field_v.a(63 + param1, false, qja.field_i.toUpperCase(), 65, -14279929, -1);
+        SingleChildWidget.field_v.drawLeft(63 + param1, false, qja.field_i.toUpperCase(), 65, -14279929, -1);
         this.j(-119, param1);
         this.c(param1, (byte) -22);
         if (TextWidgetPainter.a(7)) {
-          kn.field_p.a(-1, -1, aaa.a(false) / 2, -14345466, 405 + param1, ooa.field_h);
+          kn.field_p.drawCentred(-1, -1, aaa.a(false) / 2, -14345466, 405 + param1, ooa.field_h);
         }
         if (param2 >= -9) {
           this.field_r = (int[]) null;

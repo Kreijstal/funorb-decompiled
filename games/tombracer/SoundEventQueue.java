@@ -87,7 +87,7 @@ abstract class SoundEventQueue {
         }
     }
 
-    abstract void a(int param0, boolean param1);
+    abstract void playQueuedEvents(int param0, boolean param1);
 
     public static void releaseStatics(byte param0) {
         field_a = null;

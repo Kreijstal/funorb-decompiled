@@ -240,11 +240,11 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -119 % ((65 - param0) / 35);
-          if (this.field_c.c(4) == 1) {
+          if (this.field_c.getGroupCount(4) == 1) {
             stackIn_2_0 = this.getVorbisSample(param2, param1, (byte) 101, 0);
             return stackIn_2_0;
           }
-          if (this.field_c.a((byte) 66, param2) != 1) {
+          if (this.field_c.getFileCount((byte) 66, param2) != 1) {
             throw new RuntimeException();
           }
           stackIn_5_0 = this.getVorbisSample(0, param1, (byte) 83, param2);
@@ -308,11 +308,11 @@ final class SoundCache {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_b.c(param2 + 4) == 1) {
+          if (this.field_b.getGroupCount(param2 + 4) == 1) {
             stackIn_2_0 = this.loadSoundEffect(param2 ^ 52, 0, param0, param1);
             return stackIn_2_0;
           }
-          if (this.field_b.a((byte) -96, param0) == 1) {
+          if (this.field_b.getFileCount((byte) -96, param0) == 1) {
             stackIn_6_0 = this.loadSoundEffect(param2 + 115, param0, 0, param1);
             return stackIn_6_0;
           }

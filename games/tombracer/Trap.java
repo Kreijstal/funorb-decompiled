@@ -1415,7 +1415,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.A((byte) 26) ||
+          if (this.isRoomVariantActive((byte) 26) ||
             this.B((byte) -81)) {
             param0.removeFromLayer(9, (Renderable) (this), (byte) -33);
           }
@@ -1448,7 +1448,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.clearModels(-1332);
         Behaviour var3 = (Behaviour) (this.behaviours.first(param0 ^ -437453416));
         while (var3 != null) {
-          this.addModel(var3, (byte) 124, rm.field_a.a(var3, (WorldBody) (this), -126));
+          this.addModel(var3, (byte) 124, rm.field_a.createTrapModel(var3, (WorldBody) (this), -126));
           var3 = (Behaviour) (this.behaviours.next(107));
         }
         if (param1) {
@@ -2013,7 +2013,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         int var3 = 18 / ((-5 - param0) / 36);
     }
 
-    final void a(Camera param0, int param1) {
+    final void updateForCamera(Camera param0, int param1) {
         boolean discarded$1 = false;
         int var4 = 0;
         Behaviour var5 = null;
@@ -2027,12 +2027,12 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         try {
           var5 = (Behaviour) (this.behaviours.first(-80));
           while (var5 != null) {
-            var5.b(123, param0);
+            var5.updateForCamera(123, param0);
             var5 = (Behaviour) (this.behaviours.next(param1 + 10546));
           }
           var6 = (Trap) (this.children.first(-80));
           while (var6 != null) {
-            var6.a(param0, -10425);
+            var6.updateForCamera(param0, -10425);
             var6 = (Trap) (this.children.next(123));
           }
           if (param1 != -10425) {
@@ -2063,7 +2063,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.A((byte) 105) ||
+          if (this.isRoomVariantActive((byte) 105) ||
             this.B((byte) -81)) {
             param0.addToLayer((byte) 4, 9, (Renderable) (this));
           }
@@ -2748,7 +2748,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             stackIn_9_0 = 0;
             return stackIn_9_0;
           }
-          var4_int = SimulationObserver.a(this.width, param1, this.getY(param1 + 9636), this.height, param2, this.getX(param1 ^ 15), 2);
+          var4_int = SimulationObserver.clipBeamToBox(this.width, param1, this.getY(param1 + 9636), this.height, param2, this.getX(param1 ^ 15), 2);
           if (var4_int == -1) {
             stackIn_12_0 = 0;
             return stackIn_12_0;
@@ -3006,7 +3006,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return !this.children.isEmpty((byte) 14) ? true : false;
     }
 
-    private final boolean A(byte param0) {
+    private final boolean isRoomVariantActive(byte param0) {
         if (param0 <= 12) {
           return false;
         }
@@ -3098,7 +3098,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             !this.alwaysBlocksBeams) {
             return false;
           }
-          var5_int = SimulationObserver.a(this.width, 12, this.getY(param0 + 9649), this.height, param3, this.getX(3), 2);
+          var5_int = SimulationObserver.clipBeamToBox(this.width, 12, this.getY(param0 + 9649), this.height, param3, this.getX(3), 2);
           if (param0 == var5_int) {
             return false;
           }

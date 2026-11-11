@@ -26,7 +26,7 @@ final class NotLoggedInMenu extends MenuScreen {
 
     final void update(boolean param0, boolean param1, int param2) {
         super.update(param0, param1, param2);
-        this.field_s.a((byte) -117, param0, !param1 ? true : false);
+        this.field_s.updateFall((byte) -117, param0, !param1 ? true : false);
     }
 
     final int getItemY(int param0, int param1) {
@@ -39,7 +39,7 @@ final class NotLoggedInMenu extends MenuScreen {
 
     final static void a(int param0, byte param1, int param2, int param3, GameFont param4, String param5, int param6, int param7, int param8) {
         try {
-          param4.a(jg.withAlpha(param2, (byte) -76, param3), -1, param8, jg.withAlpha(param0, (byte) -121, param7), param6, param5);
+          param4.drawCentred(jg.withAlpha(param2, (byte) -76, param3), -1, param8, jg.withAlpha(param0, (byte) -121, param7), param6, param5);
           int var9_int = -7 % ((66 - param1) / 47);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "vv.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
@@ -81,7 +81,7 @@ final class NotLoggedInMenu extends MenuScreen {
     }
 
     final void draw(byte param0, boolean param1) {
-        int var3 = this.field_s.e(param0 ^ 103);
+        int var3 = this.field_s.getPosition(param0 ^ 103);
         gg.field_f.a(aaa.a(false) - gg.field_f.width() >> 1, var3 + gg.field_f.height() / 2);
         this.h(-127, var3);
         super.draw(param0, param1);

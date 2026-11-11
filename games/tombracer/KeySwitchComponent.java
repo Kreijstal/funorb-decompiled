@@ -67,7 +67,7 @@ final class KeySwitchComponent extends SwitchComponent {
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new KeyLockBehaviour(param2, param0);
           var5.b(0, 1);
-          this.a(var5, (byte) -101);
+          this.bindSwitchState(var5, (byte) -101);
           var6 = var5.getSwitchState((byte) -98);
           var6.setUses(1, 106);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
@@ -138,7 +138,7 @@ final class KeySwitchComponent extends SwitchComponent {
         this.setSize(param0 + 223, 2097152, 2097152);
     }
 
-    final static void a(byte param0, String param1, ResourceArchive param2, ResourceArchive param3, int param4) {
+    final static void loadFonts(byte param0, String param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         GameAssetLoader var7 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

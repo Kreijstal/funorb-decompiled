@@ -17,11 +17,11 @@ final class cla extends DualLinkNode {
     }
 
     protected final void finalize() throws Throwable {
-        this.h(-6814);
+        this.releasePbuffer(-6814);
         super.finalize();
     }
 
-    private final void h(int param0) {
+    private final void releasePbuffer(int param0) {
         if (param0 == -6814) {
           if (this.field_k > 0L) {
             this.field_l.field_l.releasePbuffer(this.field_k);
@@ -42,7 +42,7 @@ final class cla extends DualLinkNode {
         field_n = null;
     }
 
-    final long a(byte param0) {
+    final long getPbufferHandle(byte param0) {
         if (param0 != 101) {
           return -83L;
         }
@@ -59,7 +59,7 @@ final class cla extends DualLinkNode {
         }
     }
 
-    final static boolean g(int param0) {
+    final static boolean ensurePacketPayload(int param0) {
         if (-1 == uca.field_d) {
           if (!LegacyRidgedWaterNoise.ensureGamePacketBytes(1, -1)) {
             return false;
@@ -82,7 +82,7 @@ final class cla extends DualLinkNode {
     }
 
     final static void initConsole(int param0) {
-        TripBeamComponent.b(1, param0);
+        TripBeamComponent.playMusicTrack(1, param0);
         SoftwareRasterizer.clear();
         fp.startMenuBackgroundDemo(122);
         if (!(ld.field_e < 2)) {
@@ -91,7 +91,7 @@ final class cla extends DualLinkNode {
           aca.addShellListenerFirst(oq.getSharedShellListener((byte) 124), 19711);
         }
         if (TextWidgetPainter.a(83)) {
-          UrlDownloadRequest.a((byte) -59);
+          UrlDownloadRequest.startTutorial((byte) -59);
         }
     }
 

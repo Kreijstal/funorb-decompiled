@@ -68,7 +68,7 @@ final class cj implements WidgetPainter {
               WeaveOperator.field_q.position = 0;
               uca.field_d = param0[GameKeyHandler.field_b];
             }
-            if (!cla.g(param1 + 0)) {
+            if (!cla.ensurePacketPayload(param1 + 0)) {
               return false;
             }
             if (0 == WallCrusherComponent.field_H) {

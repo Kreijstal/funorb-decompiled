@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ListChannelsCommand extends ConsoleMethod {
-    final static short[] a(short[] param0, boolean param1, int param2) {
+    final static short[] copyShorts(short[] param0, boolean param1, int param2) {
         short[] var3 = null;
         RuntimeException var3_ref = null;
         short[] var4 = null;

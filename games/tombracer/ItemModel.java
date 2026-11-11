@@ -137,7 +137,7 @@ final class ItemModel extends TrapModel {
             return;
           }
           if (this.part instanceof ItemBehaviour) {
-            stackIn_9_0 = (((ItemBehaviour) (this.part)).c(-72)) ? 1 : 0;
+            stackIn_9_0 = (((ItemBehaviour) (this.part)).isCollected(-72)) ? 1 : 0;
           } else {
             stackIn_9_0 = 0;
           }
@@ -257,7 +257,7 @@ final class ItemModel extends TrapModel {
         qpa.a(335, jta.field_z, 9, 40, 440, 125, 200);
         if (param0 < 97) {
           OpenGlToolkit var2 = (OpenGlToolkit) null;
-          ItemModel.a((OpenGlToolkit) null, -2);
+          ItemModel.ensureWaterNoiseTextures((OpenGlToolkit) null, -2);
         }
     }
 
@@ -296,7 +296,7 @@ final class ItemModel extends TrapModel {
         }
     }
 
-    final static void a(OpenGlToolkit param0, int param1) {
+    final static void ensureWaterNoiseTextures(OpenGlToolkit param0, int param1) {
         LegacyRidgedWaterNoise var7 = null;
         byte[] var19 = null;
         LegacyTurbulentWaterNoise var9 = null;
@@ -334,7 +334,7 @@ final class ItemModel extends TrapModel {
         this.field_t = param1;
         if (param0 <= 73) {
           OpenGlToolkit var4 = (OpenGlToolkit) null;
-          ItemModel.a((OpenGlToolkit) null, 79);
+          ItemModel.ensureWaterNoiseTextures((OpenGlToolkit) null, 79);
         }
     }
 

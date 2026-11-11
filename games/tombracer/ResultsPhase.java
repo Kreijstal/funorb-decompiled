@@ -10,7 +10,7 @@ final class ResultsPhase extends MatchPhase {
     private boolean field_s;
     static ConsoleToken[] field_n;
 
-    final static void a(int param0, String param1, int param2, int param3, String param4, int param5) {
+    final static void writeChatMessage(int param0, String param1, int param2, int param3, String param4, int param5) {
         BitPacketBuffer var8 = null;
         int var7 = 0;
         try {
@@ -112,7 +112,7 @@ final class ResultsPhase extends MatchPhase {
             for (var8Lifetime1 = param1; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = BlockModel.field_n[var8Lifetime1];
               var10Lifetime1 = BlockModel.field_n[var8Lifetime1 + 1];
-              if (BoxBlurOperator.a(param6, (byte) 119, var10Lifetime1, var9Lifetime1)) {
+              if (BoxBlurOperator.compareRankingEntries(param6, (byte) 119, var10Lifetime1, var9Lifetime1)) {
                 BlockModel.field_n[var8Lifetime1] = var10Lifetime1;
                 BlockModel.field_n[var8Lifetime1 + 1] = var9Lifetime1;
               }
@@ -557,7 +557,7 @@ final class ResultsPhase extends MatchPhase {
           }
         }
         RemovedFromGameMenu.f((byte) -6);
-        this.d(-27142);
+        this.drawMenuButton(-27142);
     }
 
     final static String highlightConsoleSyntax(String param0, byte param1) {
@@ -586,7 +586,7 @@ final class ResultsPhase extends MatchPhase {
         ConsoleToken[] var11 = null;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var11 = LaserShooterComponent.a((byte) 126, param0);
+          var11 = LaserShooterComponent.tokenizeCommand((byte) 126, param0);
           var2 = var11;
           var3 = new StringBuilder();
           var4 = -99 % ((param1 - 5) / 54);
@@ -686,7 +686,7 @@ final class ResultsPhase extends MatchPhase {
           for (var5_int = 0; var4_int > var5_int; var5_int++) {
             this.field_r[var5_int] = new gsa(this.matchState.players[var5_int], param2[var5_int]);
           }
-          TripBeamComponent.b(1, 0);
+          TripBeamComponent.playMusicTrack(1, 0);
           this.field_s = false;
           AccountRegistrationPanel.field_w = new SoundEventPlayer();
           var5 = 0.0;
@@ -831,7 +831,7 @@ final class ResultsPhase extends MatchPhase {
         }
         this.field_q = true;
         if (param1) {
-          this.c(7);
+          this.updateMenuButton(7);
         }
         this.matchState.field_E = this.matchState.field_E + 1;
         var3Lifetime1 = this.matchState.field_E;
@@ -848,7 +848,7 @@ final class ResultsPhase extends MatchPhase {
         stackIn_21_0 = AccountRegistrationPanel.field_w;
         stackIn_21_1 = param0 + 35;
         stackIn_22_2 = (param1) ? false : true;
-        ((SoundEventPlayer) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
+        ((SoundEventPlayer) (Object) stackIn_21_0).playQueuedEvents(stackIn_21_1, stackIn_22_2);
     }
 
     static {

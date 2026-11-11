@@ -420,7 +420,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
         var3Lifetime1 = -16 / ((param0 + 54) / 37);
     }
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         if (param0 != 116) {
           return;
         }

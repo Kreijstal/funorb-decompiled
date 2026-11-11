@@ -293,7 +293,7 @@ final class is extends UiComponent {
           this.field_tb.setBounds(var9_int, di.field_a, -23776, 3 + di.field_a, 5);
           var10 = 5 + (var9_int + 5);
           var11 = di.field_a * 2 + 6;
-          var12 = PitSnakeModel.a((byte) -8, var10, param2, param0);
+          var12 = PitSnakeModel.clampToScreenX((byte) -8, var10, param2, param0);
           var13 = hsa.a(param3, var11, param1, (byte) 69);
           this.setBounds(var10, var11, -23776, var13, var12);
           return;

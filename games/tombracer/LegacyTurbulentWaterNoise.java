@@ -36,9 +36,9 @@ final class LegacyTurbulentWaterNoise extends TurbulenceNoise3D {
         return this.field_p;
     }
 
-    final static String f(int param0) {
+    final static String readIncomingString(int param0) {
         if (param0 != 12) {
-          LegacyTurbulentWaterNoise.f(68);
+          LegacyTurbulentWaterNoise.readIncomingString(68);
           return WeaveOperator.field_q.readString((byte) -76);
         }
         return WeaveOperator.field_q.readString((byte) -76);

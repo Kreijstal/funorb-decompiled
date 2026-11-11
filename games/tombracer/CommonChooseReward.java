@@ -13,7 +13,7 @@ final class CommonChooseReward implements dv {
     private int currentPos;
     static long field_b;
 
-    final void a(int param0, byte param1) {
+    final void takeReward(int param0, byte param1) {
         int var3;
         if (this.finished) {
           return;
@@ -50,7 +50,7 @@ final class CommonChooseReward implements dv {
         }
         this.currentPlayerTicks = 0;
         this.currentPos = this.currentPos + 1;
-        this.d(-14447);
+        this.advanceToNextChooser(-14447);
     }
 
     final int getCurrentPlayerTicks(int param0) {
@@ -76,7 +76,7 @@ final class CommonChooseReward implements dv {
         return this.reward[param1];
     }
 
-    private final void d(int param0) {
+    private final void advanceToNextChooser(int param0) {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -14447) {
@@ -184,7 +184,7 @@ final class CommonChooseReward implements dv {
         return var1;
     }
 
-    final void d(byte param0) {
+    final void tickChooser(byte param0) {
         if (param0 != -124) {
           field_b = -84L;
           if (this.finished) {
@@ -195,13 +195,13 @@ final class CommonChooseReward implements dv {
               this.currentPlayerTicks = this.currentPlayerTicks + 1;
               return;
             }
-            this.d(-14447);
+            this.advanceToNextChooser(-14447);
             this.currentPlayerTicks = this.currentPlayerTicks + 1;
             return;
           }
-          this.field_g.a(108, false);
+          this.field_g.playQueuedEvents(108, false);
           if (-1 == this.currentPlayerId) {
-            this.d(-14447);
+            this.advanceToNextChooser(-14447);
             this.currentPlayerTicks = this.currentPlayerTicks + 1;
             return;
           }
@@ -212,12 +212,12 @@ final class CommonChooseReward implements dv {
           return;
         }
         if (this.field_g != null) {
-          this.field_g.a(108, false);
+          this.field_g.playQueuedEvents(108, false);
           if (-1 != this.currentPlayerId) {
             this.currentPlayerTicks = this.currentPlayerTicks + 1;
             return;
           }
-          this.d(-14447);
+          this.advanceToNextChooser(-14447);
           this.currentPlayerTicks = this.currentPlayerTicks + 1;
           return;
         }
@@ -225,7 +225,7 @@ final class CommonChooseReward implements dv {
           this.currentPlayerTicks = this.currentPlayerTicks + 1;
           return;
         }
-        this.d(-14447);
+        this.advanceToNextChooser(-14447);
         this.currentPlayerTicks = this.currentPlayerTicks + 1;
     }
 

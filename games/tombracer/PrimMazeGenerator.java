@@ -7,7 +7,7 @@ final class PrimMazeGenerator extends MazeGenerator {
     static int field_e;
     private IntrusiveDeque field_d;
 
-    private final void a(MazeGrid param0, int param1, int param2, int param3) {
+    private final void carveFrom(MazeGrid param0, int param1, int param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -26,7 +26,7 @@ final class PrimMazeGenerator extends MazeGenerator {
         int[] var19 = null;
         var15 = TombRacer.field_G ? 1 : 0;
         try {
-          this.a(param3, param0, param2, param1);
+          this.addToMaze(param3, param0, param2, param1);
           while (true) {
             if (this.field_d.isEmpty((byte) 14)) {
               return;
@@ -55,7 +55,7 @@ final class PrimMazeGenerator extends MazeGenerator {
               if (param0.isInBounds(var13, var14, (byte) -128) &&
                 0 == param0.getCell((byte) -5, var14, var13)) {
                 this.carvePassage(var10, (byte) -42, param0, var9, var14, var13);
-                this.a(param3 + 0, param0, var9, var10);
+                this.addToMaze(param3 + 0, param0, var9, var10);
                 var5.unlink(param3 ^ 30);
                 var11 = 1;
               }
@@ -76,7 +76,7 @@ final class PrimMazeGenerator extends MazeGenerator {
         }
     }
 
-    private final void a(int param0, int param1, MazeGrid param2, byte param3) {
+    private final void addFrontierCell(int param0, int param1, MazeGrid param2, byte param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -122,13 +122,13 @@ final class PrimMazeGenerator extends MazeGenerator {
         field_b = null;
     }
 
-    private final void a(int param0, MazeGrid param1, int param2, int param3) {
+    private final void addToMaze(int param0, MazeGrid param1, int param2, int param3) {
         try {
           param1.setCell(param3, 0, 0, param2);
-          this.a(param2, param3 - 2, param1, (byte) 119);
-          this.a(param2, param3 + 2, param1, (byte) 126);
-          this.a(param2 - 2, param3, param1, (byte) 109);
-          this.a(param2 + param0, param3, param1, (byte) 95);
+          this.addFrontierCell(param2, param3 - 2, param1, (byte) 119);
+          this.addFrontierCell(param2, param3 + 2, param1, (byte) 126);
+          this.addFrontierCell(param2 - 2, param3, param1, (byte) 109);
+          this.addFrontierCell(param2 + param0, param3, param1, (byte) 95);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "rja.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -140,7 +140,7 @@ final class PrimMazeGenerator extends MazeGenerator {
           return;
         }
         try {
-          this.a(param2, param0, param3, 2);
+          this.carveFrom(param2, param0, param3, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "rja.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

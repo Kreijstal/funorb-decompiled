@@ -97,7 +97,7 @@ final class qha extends CourseGenerator {
     }
 
     final static void a(int param0, boolean param1) {
-        if (GasTrapComponent.r((byte) -73)) {
+        if (GasTrapComponent.isDialogOpen((byte) -73)) {
           param1 = false;
         }
         upa.a(param1, param0);

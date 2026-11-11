@@ -70,7 +70,7 @@ final class AnimationSequence {
         field_k = null;
     }
 
-    final int a(byte param0, boolean param1) {
+    final int getTotalDuration(byte param0, boolean param1) {
         int var6 = 0;
         int var7 = 0;
         int var3;
@@ -286,7 +286,7 @@ final class AnimationSequence {
         this.field_b = -1;
         try {
           this.field_f = true;
-          var11 = param0.a(false, param1, param2);
+          var11 = param0.getFile(false, param1, param2);
           var10 = var11;
           var9 = var10;
           var4 = var9;

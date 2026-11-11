@@ -55,7 +55,7 @@ final class CharacterSelection {
           return;
         }
         if (this.field_b != null) {
-          this.field_b.a(84, false);
+          this.field_b.playQueuedEvents(84, false);
         }
     }
 

@@ -14,7 +14,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
 
     final void update(boolean param0, boolean param1, int param2) {
         super.update(param0, param1, param2);
-        this.field_q.a((byte) -120, param0, !param1 ? true : false);
+        this.field_q.updateFall((byte) -120, param0, !param1 ? true : false);
     }
 
     final int getItemRight(int param0, byte param1) {
@@ -51,7 +51,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
     }
 
     final void draw(byte param0, boolean param1) {
-        int var3 = this.field_q.e(param0 + 111);
+        int var3 = this.field_q.getPosition(param0 + 111);
         gg.field_f.a(aaa.a(false) - gg.field_f.width() >> 1, var3 + gg.field_f.height() / 2);
         this.h(var3, 3);
         super.draw(param0, param1);

@@ -13,7 +13,7 @@ final class dra {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void sendReflectionCheckResponses(boolean param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         BitPacketBuffer var1 = null;

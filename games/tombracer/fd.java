@@ -11,7 +11,7 @@ final class fd {
     int field_a;
     static lu field_d;
 
-    final fd a(byte param0) {
+    final fd copy(byte param0) {
         if (param0 == 78) {
           return new fd(this.field_c, this.field_b, this.field_f, this.field_h, this.field_a, this.field_g);
         }

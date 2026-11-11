@@ -77,7 +77,7 @@ final class ik extends IntrusiveNode {
           var12 = gca.field_d;
           var10 = (gca.field_d - var14 << 12) / var13;
         }
-        ara.a(0, param3, var9, var10, var11, var12);
+        ara.drawClippedLine(0, param3, var9, var10, var11, var12);
         return;
     }
 

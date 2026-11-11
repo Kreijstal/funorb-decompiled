@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fla extends IntrusiveNode {
+final class PlayingSound extends IntrusiveNode {
     private int field_j;
     private int field_m;
     private int field_l;
@@ -27,7 +27,7 @@ final class fla extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, SoundEventPlayer param1, boolean param2) {
+    final void update(int param0, SoundEventPlayer param1, boolean param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -35,32 +35,32 @@ final class fla extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 564550600) {
-            this.a(0, -104, 21, 61, -117);
+            this.updateVolumeAndPan(0, -104, 21, 61, -117);
           }
           if (param2 &&
             this.field_h > 0) {
-            this.c(-90);
+            this.fadeOutStep(-90);
           }
           if (!param2 &&
             this.field_j >> 8 != this.field_h) {
-            this.b(4216);
+            this.fadeInStep(4216);
           }
           if (this.field_i == null) {
-            this.a(-91, param1);
+            this.release(-91, param1);
             return;
           }
           if (this.field_i.field_f == null) {
-            this.a(-91, param1);
+            this.release(-91, param1);
             return;
           }
           if (this.field_i.field_f.isOutOfRange()) {
-            this.a(-91, param1);
+            this.release(-91, param1);
             return;
           }
           if (this.field_i.isLinked((byte) 103)) {
             return;
           }
-          this.a(-91, param1);
+          this.release(-91, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class fla extends IntrusiveNode {
         }
     }
 
-    final void c(int param0) {
+    final void fadeOutStep(int param0) {
         this.field_g = this.field_g - this.field_n;
         int var2 = -91 % ((param0 + 18) / 36);
         if (0 <= this.field_g) {
@@ -96,7 +96,7 @@ final class fla extends IntrusiveNode {
         this.field_i.a(this.field_m, this.field_h, (byte) -21);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void updateVolumeAndPan(int param0, int param1, int param2, int param3, int param4) {
         this.field_h = ol.a(param0, this.field_l, (byte) -91, param3, param4, param1);
         if (param2 <= -127) {
           this.field_m = AgeValidator.a(param3, true, param0);
@@ -104,12 +104,12 @@ final class fla extends IntrusiveNode {
           return;
         }
         SoundEventPlayer var7 = (SoundEventPlayer) null;
-        this.a(-1, (SoundEventPlayer) null, false);
+        this.update(-1, (SoundEventPlayer) null, false);
         this.field_m = AgeValidator.a(param3, true, param0);
         this.field_i.a(this.field_m, this.field_h, (byte) -21);
     }
 
-    final void a(int param0, SoundEventPlayer param1) {
+    final void release(int param0, SoundEventPlayer param1) {
         try {
           int var3_int = 54 % ((-44 - param0) / 44);
           if (!(0 >= param1.playingCounts[this.field_l])) {
@@ -122,7 +122,7 @@ final class fla extends IntrusiveNode {
         }
     }
 
-    fla(vb param0, int param1, boolean param2, int param3, int param4, int param5) {
+    PlayingSound(vb param0, int param1, boolean param2, int param3, int param4, int param5) {
         this(param0, param4, param5);
         try {
           this.field_l = param1;
@@ -131,7 +131,7 @@ final class fla extends IntrusiveNode {
         }
     }
 
-    fla(vb param0, int param1, int param2) {
+    PlayingSound(vb param0, int param1, int param2) {
         try {
           this.field_i = param0;
           this.field_h = param1;
@@ -145,7 +145,7 @@ final class fla extends IntrusiveNode {
         }
     }
 
-    private final void b(int param0) {
+    private final void fadeInStep(int param0) {
         this.field_g = this.field_g + this.field_n;
         if (this.field_g >= this.field_j) {
           this.field_g = this.field_j;
@@ -155,7 +155,7 @@ final class fla extends IntrusiveNode {
           this.field_i.a(this.field_m, this.field_h, (byte) -21);
           return;
         }
-        this.b(22);
+        this.fadeInStep(22);
         this.field_h = this.field_g >> 8;
         this.field_i.a(this.field_m, this.field_h, (byte) -21);
     }

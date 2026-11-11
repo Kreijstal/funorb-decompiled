@@ -10,7 +10,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
     private boolean field_j;
     private jagdx.IDirect3DVertexShader field_e;
 
-    final void a(boolean param0) {
+    final void onFogChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         float var4 = 0.0f;
         float var3 = 0.0f;
@@ -95,7 +95,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
 
     final void refreshState(boolean param0, int param1) {
         if (param1 != 5744) {
-          this.b(-28);
+          this.onProjectionChanged(-28);
         }
     }
 
@@ -115,10 +115,10 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
           this.owner.e(0, false);
           this.owner.bindTexture(true, this.field_f.field_f);
           this.field_j = true;
-          this.b(true);
-          this.c(true);
-          this.b(118);
-          this.a(true);
+          this.onModelMatrixChanged(true);
+          this.onTextureMatrixChanged(true);
+          this.onProjectionChanged(118);
+          this.onFogChanged(true);
           var5.setPixelShaderConstantF(1, -this.owner.field_Gb[0], -this.owner.field_Gb[1], -this.owner.field_Gb[2], 0.0f);
           var5.setPixelShaderConstantF(2, this.owner.field_sc, this.owner.field_yb, this.owner.field_Kb, 1.0f);
           var5.setPixelShaderConstantF(3, 96.0f + 928.0f * Math.abs(this.owner.field_Gb[1]), 0.0f, 0.0f, 0.0f);
@@ -149,7 +149,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         this.field_f = (hk) null;
     }
 
-    final void b(int param0) {
+    final void onProjectionChanged(int param0) {
         jagdx.IDirect3DDevice var2 = null;
         if (param0 > 64) {
           if (this.field_j) {
@@ -162,13 +162,13 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
 
     final boolean isSupported(int param0) {
         if (param0 != 1185) {
-          this.b(-122);
+          this.onProjectionChanged(-122);
           return this.field_d;
         }
         return this.field_d;
     }
 
-    final void b(boolean param0) {
+    final void onModelMatrixChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
         AffineTransform3D var4 = null;
@@ -184,7 +184,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    final void b(byte param0) {
+    final void onViewMatrixChanged(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
         if (this.field_j) {
@@ -198,7 +198,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         this.field_g = (jagdx.IDirect3DPixelShader) null;
     }
 
-    final void c(boolean param0) {
+    final void onTextureMatrixChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
         if (this.field_j) {

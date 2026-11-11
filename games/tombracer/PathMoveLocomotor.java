@@ -394,12 +394,12 @@ final class PathMoveLocomotor extends Locomotor {
     final void mirror(byte param0) {
         if (param0 <= -116) {
           super.mirror((byte) -119);
-          this.path.a(true);
+          this.path.mirror(true);
           return;
         }
         this.waypointIndex = -124;
         super.mirror((byte) -119);
-        this.path.a(true);
+        this.path.mirror(true);
     }
 
     final void setSpeed(byte param0, int param1) {

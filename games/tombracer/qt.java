@@ -295,7 +295,7 @@ final class qt {
                     return;
                   }
                   ssa.reportClientError("L1: " + kk.formatPacketDump(32), (byte) 118, (Throwable) null);
-                  dea.a(60);
+                  dea.closeGameSocket(60);
                   return;
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);

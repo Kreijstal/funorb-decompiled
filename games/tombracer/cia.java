@@ -10,7 +10,7 @@ final class cia {
     private int field_f;
     private ModelAnimator field_c;
 
-    final int a(int param0) {
+    final int getX(int param0) {
         if (param0 != 617) {
           this.field_d = false;
           return this.field_e >> 16;
@@ -18,7 +18,7 @@ final class cia {
         return this.field_e >> 16;
     }
 
-    final int a(byte param0) {
+    final int getY(byte param0) {
         if (param0 != 25) {
           this.field_e = 18;
           return this.field_b >> 16;
@@ -116,7 +116,7 @@ final class cia {
         this.field_c.tick(0);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setPosition(int param0, int param1, int param2) {
         this.field_e = param1 << 16;
         this.field_b = param0 << 16;
         if (param2 != 1823844912) {

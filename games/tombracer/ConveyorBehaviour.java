@@ -20,7 +20,7 @@ final class ConveyorBehaviour extends Behaviour {
         if (param0 != 5418) {
           this.freezesInTimeStop((byte) 4);
         }
-        this.b(0);
+        this.updateBeltVelocity(0);
         var8 = this.getRoom(true).collisionGrid;
         var3 = var8.queryCollidable((byte) -26, this.trap);
         var4 = this.getRoot(6);
@@ -34,7 +34,7 @@ final class ConveyorBehaviour extends Behaviour {
         }
     }
 
-    private final void b(int param0) {
+    private final void updateBeltVelocity(int param0) {
         int var2 = MouseInputHandler.sin2048((byte) 111, this.trap.getFacingAngle(-25787) >> 2);
         int var3 = ModelAnimator.cos2048(param0, this.trap.getFacingAngle(-25787) >> 2);
         this.field_n = -gqa.multiplyFixed(this.field_r, (byte) 24, var2) + gqa.multiplyFixed(this.field_s, (byte) 24, var3);
@@ -159,7 +159,7 @@ final class ConveyorBehaviour extends Behaviour {
         try {
           super.attachToTrap(param0, param1);
           param1.b((byte) 60, 3);
-          this.b(0);
+          this.updateBeltVelocity(0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "hi.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

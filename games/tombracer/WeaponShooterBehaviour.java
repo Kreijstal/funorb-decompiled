@@ -22,7 +22,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final static ConsoleToken a(int param0, StringCursor param1) {
+    final static ConsoleToken readLiteralToken(int param0, StringCursor param1) {
         int fieldTemp$2 = 0;
         StringBuilder discarded$3 = null;
         int var2_int = 0;
@@ -86,7 +86,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final void a(Weapon param0, byte param1) {
+    final void setWeapon(Weapon param0, byte param1) {
         try {
           if (param1 < 40) {
             this.getTypeId(true);
@@ -100,7 +100,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
     public final void setTimingPattern(int param0, TimingPattern param1) {
         try {
           if (param0 < 81) {
-            this.l(-69);
+            this.getWeapon(-69);
           }
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
@@ -113,7 +113,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         this.field_o = true;
         try {
           this.field_n = new TimingPattern();
-          this.field_u = TextureOperator.a(0, -1);
+          this.field_u = TextureOperator.createFullWeapon(0, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -150,7 +150,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         return false;
     }
 
-    final Weapon l(int param0) {
+    final Weapon getWeapon(int param0) {
         if (param0 != -2) {
           WeaponShooterBehaviour.releaseStatics(-6);
           return this.field_u;
@@ -319,7 +319,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           return param0;
         }
         StringCursor var4 = (StringCursor) null;
-        WeaponShooterBehaviour.a(-27, (StringCursor) null);
+        WeaponShooterBehaviour.readLiteralToken(-27, (StringCursor) null);
         param0 = upa.a(this.field_t, param0, (byte) -119);
         param0 = CurveOperator.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
         return param0;

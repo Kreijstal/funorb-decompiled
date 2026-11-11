@@ -12,7 +12,7 @@ final class CorpseList {
         this.corpses.clear(8);
     }
 
-    final void a(RenderScene param0, int param1) {
+    final void addToScene(RenderScene param0, int param1) {
         Corpse var3 = null;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;

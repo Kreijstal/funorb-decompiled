@@ -30,7 +30,7 @@ final class ScrollPane extends UiComponent {
           if (var2 == param0) {
             var4 = (ik) (Player.field_I.first(param0 ^ -80));
             if (var4 == null) {
-              dea.a(60);
+              dea.closeGameSocket(60);
               return;
             }
             var5 = -var10.position + uca.field_d;
@@ -61,11 +61,11 @@ final class ScrollPane extends UiComponent {
               var5_ref_toa.unlink(103);
               return;
             }
-            dea.a(60);
+            dea.closeGameSocket(60);
             return;
           }
           ssa.reportClientError("LR1: " + kk.formatPacketDump(32), (byte) 122, (Throwable) null);
-          dea.a(60);
+          dea.closeGameSocket(60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

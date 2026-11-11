@@ -16,7 +16,7 @@ final class bv extends UiComponent {
         this.field_T = param3;
         this.field_G = param2;
         this.field_qb = param6;
-        this.b(param1, 32, param0);
+        this.layoutTabs(param1, 32, param0);
     }
 
     final static void d(byte param0) {
@@ -49,7 +49,7 @@ final class bv extends UiComponent {
         }
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void layoutTabs(int param0, int param1, int param2) {
         UiComponent dupTemp$0 = null;
         int var4;
         int var5;

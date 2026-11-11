@@ -5,7 +5,7 @@ final class TrapSpawner extends Spawner {
     private Trap template;
     static String field_b;
 
-    final void a(byte param0) {
+    final void resolveSwitchLinks(byte param0) {
         if (param0 < 67) {
           return;
         }
@@ -49,7 +49,7 @@ final class TrapSpawner extends Spawner {
         }
     }
 
-    final void a(byte param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3) {
+    final void assignSwitchableIds(byte param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3) {
         try {
           int var5_int = -11 % ((param0 - 31) / 61);
           this.template.assignSwitchableIds(true, param2, param3, param1);
@@ -73,7 +73,7 @@ final class TrapSpawner extends Spawner {
         return 0;
     }
 
-    final Switchable a(boolean param0, int param1, int param2) {
+    final Switchable findSwitchableRecursive(boolean param0, int param1, int param2) {
         if (param1 > -3) {
           return (Switchable) null;
         }

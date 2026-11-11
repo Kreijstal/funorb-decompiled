@@ -256,7 +256,7 @@ final class ChatOverlay {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  dea.a(60);
+                  dea.closeGameSocket(60);
                   PushableBlockMazeComponent.field_L = false;
                   stackIn_31_0 = var6_intLifetime1;
                   return stackIn_31_0;
@@ -268,7 +268,7 @@ final class ChatOverlay {
               }
             }
             if (HardwareGraphicsToolkit.field_w == ProceduralTexture.field_p &&
-              cla.g(0)) {
+              cla.ensurePacketPayload(0)) {
               tr.field_g = WeaveOperator.field_q.readLong(param2 + 290646830);
               gj.field_q = param1;
               ld.field_e = WeaveOperator.field_q.readUnsignedByte(param2 ^ 205);
@@ -308,27 +308,27 @@ final class ChatOverlay {
               lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               ProceduralTexture.field_p = LegacyOpenGlTexture1D.field_n;
               if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
-                ShaderEffect.field_a.a(di.a(120), param2 ^ 55);
+                ShaderEffect.field_a.a(di.getApplet(120), param2 ^ 55);
               } else {
                 if (fd.field_d.a((byte) 113) == ViewportManager.field_f) {
-                  ObjectList.field_d.a(di.a(109), 5);
+                  ObjectList.field_d.a(di.getApplet(109), 5);
                 }
               }
               PushableBlockMazeComponent.field_L = false;
               if (var6 != null) {
-                mp.writeSettingsCookie(var6, di.a(41), -21407);
+                mp.writeSettingsCookie(var6, di.getApplet(41), -21407);
               }
               if (0 >= ReportAbuseDialog.field_ub &&
                 !ai.field_a) {
                 try {
-                  JavaScriptBridge.callWindowFunction(di.a(26), 2864, "unzap");
+                  JavaScriptBridge.callWindowFunction(di.getApplet(26), 2864, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", di.a(param2 + 43), new Object[]{sv.decodeBase37Name((byte) -38, tr.field_g)});
+                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", di.getApplet(param2 + 43), new Object[]{sv.decodeBase37Name((byte) -38, tr.field_g)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -346,8 +346,8 @@ final class ChatOverlay {
               return stackIn_81_0;
             }
             if (bi.field_a == ProceduralTexture.field_p &&
-              cla.g(0)) {
-              dea.a(60);
+              cla.ensurePacketPayload(0)) {
+              dea.closeGameSocket(60);
               if (MembersUpsellMenu.field_z == 7 &&
                 !PushableBlockMazeComponent.field_L) {
                 PushableBlockMazeComponent.field_L = true;

@@ -92,7 +92,7 @@ final class ava {
           var8 = 0;
           if (C2SChooseRewardPacket.field_a != null && (PowerUpItemBehaviour.field_u != null ||
             hp.field_a != null ||
-            nra.field_g != null ||
+            C2SRoomResultPacket.field_g != null ||
             HotspotTextWidget.field_z != null)) {
             for (var9 = 0; ColourRowCache.field_b > var9; var9++) {
               var10_int = 255 & C2SChooseRewardPacket.field_a.field_ac[var9];
@@ -116,9 +116,9 @@ final class ava {
                 null != HotspotTextWidget.field_z[var9]) {
                 var8 = var8 | HotspotTextWidget.field_z[var9][var10_int];
               }
-              if (nra.field_g != null &&
-                null != nra.field_g[var9]) {
-                var11_intLifetime1 = nra.field_g[var9][var10_int];
+              if (C2SRoomResultPacket.field_g != null &&
+                null != C2SRoomResultPacket.field_g[var9]) {
+                var11_intLifetime1 = C2SRoomResultPacket.field_g[var9][var10_int];
                 if (0 != var11_intLifetime1 &&
                   !dea.field_c) {
                   var5_int = 1;
@@ -413,9 +413,9 @@ final class ava {
                       var29 = 1;
                     }
                   }
-                  if (null != nra.field_g &&
-                    null != nra.field_g[var27_int]) {
-                    var30_intLifetime1 = nra.field_g[var27_int][var28];
+                  if (null != C2SRoomResultPacket.field_g &&
+                    null != C2SRoomResultPacket.field_g[var27_int]) {
+                    var30_intLifetime1 = C2SRoomResultPacket.field_g[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
                       !dea.field_c &&
                       !var12.field_tb) {

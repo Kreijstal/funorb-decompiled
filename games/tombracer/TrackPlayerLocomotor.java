@@ -107,7 +107,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         this.field_o = new IntPoint();
     }
 
-    final static void a(int param0, String param1) {
+    final static void drawTooltip(int param0, String param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -121,7 +121,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           var4 = Corpse.field_i.field_H.countWrappedLines(param1, 500);
           var5 = 6 + Corpse.field_i.field_H.getWrappedWidth(param1, 500);
           var6 = di.field_a * var4 + 2;
-          var7 = PitSnakeModel.a((byte) -8, var5, 12, var2_int);
+          var7 = PitSnakeModel.clampToScreenX((byte) -8, var5, 12, var2_int);
           var8 = hsa.a(20, var6, var3, (byte) -107);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);

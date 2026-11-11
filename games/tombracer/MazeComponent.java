@@ -4,8 +4,8 @@
 abstract class MazeComponent extends PrefabComponent {
     static String field_F;
     static String field_G;
-    private int field_I;
-    private int field_H;
+    private int itemCount;
+    private int itemType;
     private int field_J;
 
     final boolean hasSize(int param0) {
@@ -32,7 +32,7 @@ abstract class MazeComponent extends PrefabComponent {
 
     final boolean hasAngle(byte param0) {
         if (param0 != -122) {
-          this.field_H = -72;
+          this.itemType = -72;
           return false;
         }
         return false;
@@ -49,10 +49,10 @@ abstract class MazeComponent extends PrefabComponent {
           if (param0) {
             MazeComponent.b(88, -88);
           }
-          if (this.D(0)) {
-            param1.writeBits((byte) 107, this.field_I, 3);
-            if (0 < this.field_I) {
-              param1.writeBits((byte) -128, this.field_H, 2);
+          if (this.supportsItems(0)) {
+            param1.writeBits((byte) 107, this.itemCount, 3);
+            if (0 < this.itemCount) {
+              param1.writeBits((byte) -128, this.itemType, 2);
             }
           }
           if (this.C(1)) {
@@ -130,10 +130,10 @@ abstract class MazeComponent extends PrefabComponent {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.D(0)) {
-            this.field_I = param2.readBits((byte) 44, 3);
-            if (this.field_I > 0) {
-              this.field_H = param2.readBits((byte) 44, 2);
+          if (this.supportsItems(0)) {
+            this.itemCount = param2.readBits((byte) 44, 3);
+            if (this.itemCount > 0) {
+              this.itemType = param2.readBits((byte) 44, 2);
             }
           }
           if (this.C(1)) {
@@ -168,7 +168,7 @@ abstract class MazeComponent extends PrefabComponent {
 
     final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          this.field_I = 109;
+          this.itemCount = 109;
           return false;
         }
         return false;
@@ -198,14 +198,14 @@ abstract class MazeComponent extends PrefabComponent {
         MiscItemBehaviour var11 = null;
         ModelCodec var12 = null;
         try {
-          if (this.field_I <= 0) {
+          if (this.itemCount <= 0) {
             return null;
           }
           var9 = new Trap(param1, param0);
           var5 = -31 % ((param2 + 48) / 57);
           var9.setSize((byte) -11, 2097152, 2097152);
           var9.setFloating((byte) 17, false);
-          var7 = this.field_H;
+          var7 = this.itemType;
           if (var7 != 0 &&
             var7 == 1) {
             var11 = new MiscItemBehaviour(param1, param0);
@@ -219,7 +219,7 @@ abstract class MazeComponent extends PrefabComponent {
             var9.addBehaviour((byte) 83, (Behaviour) (var10));
           }
           var12 = rm.field_a;
-          var8 = var12.a(var6, var9, -102);
+          var8 = var12.createTrapModel(var6, var9, -102);
           var9.addModel(var6, (byte) 124, var8);
           stackIn_9_0 = var9;
           return stackIn_9_0;
@@ -237,7 +237,7 @@ abstract class MazeComponent extends PrefabComponent {
         }
     }
 
-    abstract boolean D(int param0);
+    abstract boolean supportsItems(int param0);
 
     final static RoomDefinition b(int param0, int param1) {
         if (param0 != 0) {
@@ -291,7 +291,7 @@ abstract class MazeComponent extends PrefabComponent {
             stackIn_4_0 = fp.field_e;
           }
           dga.a(stackIn_4_0, 199);
-          rm.field_e.a(0, 0, param1 + 18, nra.field_c.field_G, -2 + nra.field_c.field_t - 40);
+          rm.field_e.a(0, 0, param1 + 18, C2SRoomResultPacket.field_c.field_G, -2 + C2SRoomResultPacket.field_c.field_t - 40);
           cea.field_a.setBounds(RoomRegion.field_l.field_G, di.field_a, param1 ^ -23774, 0, 0);
           stackIn_6_0 = uaa.field_b;
           stackIn_6_1 = RoomRegion.field_l.field_G;
@@ -303,7 +303,7 @@ abstract class MazeComponent extends PrefabComponent {
           ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 18, -23776, param1 + di.field_a, 0);
           RopeBridgeComponent.field_F.setBounds(42 + io.field_a, 18, param1 - 23778, 2 + di.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
           tn.field_n.a(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (di.field_a + 22), 20 + (2 + di.field_a));
-          bc.field_b.setBounds(nra.field_c.field_G, 40, -23776, -40 + nra.field_c.field_t, 0);
+          bc.field_b.setBounds(C2SRoomResultPacket.field_c.field_G, 40, -23776, -40 + C2SRoomResultPacket.field_c.field_t, 0);
           StatusEffect.field_g.setBounds(dka.field_b.field_G, 30, -23776, 0, 0);
           C2SSubmitSettingsPacket.field_g.setBounds(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
           var2_int = 3 + ColourRowCache.field_b;
@@ -426,7 +426,7 @@ abstract class MazeComponent extends PrefabComponent {
         if (param0 != -1) {
           field_F = (String) null;
         }
-        return this.field_I;
+        return this.itemCount;
     }
 
     public static void releaseStatics(boolean param0) {

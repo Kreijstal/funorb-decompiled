@@ -161,7 +161,7 @@ final class PortalBehaviour extends Behaviour {
         field_o = null;
     }
 
-    final SwitchLinkList g(byte param0) {
+    final SwitchLinkList getSwitchLinks(byte param0) {
         if (param0 != 99) {
           field_o = (int[]) null;
           return this.field_p;

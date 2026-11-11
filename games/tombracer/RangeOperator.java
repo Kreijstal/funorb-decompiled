@@ -90,7 +90,7 @@ final class RangeOperator extends TextureOperator {
         }
     }
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         if (param0 != 116) {
           this.field_m = 0;
         }

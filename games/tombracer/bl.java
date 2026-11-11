@@ -92,7 +92,7 @@ final class bl {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                dea.a(60);
+                dea.closeGameSocket(60);
               }
               ql.field_k.position = 0;
             }

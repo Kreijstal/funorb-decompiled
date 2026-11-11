@@ -16,7 +16,7 @@ abstract class ConsoleMethod extends DualLinkNode {
         int var1 = 6 / ((param0 - 56) / 60);
     }
 
-    final boolean a(int param0, String param1, ConsoleValue[] param2) {
+    final boolean matches(int param0, String param1, ConsoleValue[] param2) {
         int var4_int = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -61,7 +61,7 @@ abstract class ConsoleMethod extends DualLinkNode {
             return true;
           }
           var7 = (ConsoleValue[]) null;
-          this.a(-67, (String) null, (ConsoleValue[]) null);
+          this.matches(-67, (String) null, (ConsoleValue[]) null);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

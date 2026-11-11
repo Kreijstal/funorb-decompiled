@@ -66,7 +66,7 @@ class ProceduralTextureProvider implements TextureProvider {
         if (var3 != null) {
           return (ProceduralTexture) (var3);
         }
-        byte[] var4 = this.field_g.f(param0, -109);
+        byte[] var4 = this.field_g.getFileById(param0, -109);
         if (var4 == null) {
           return null;
         }
@@ -133,7 +133,7 @@ class ProceduralTextureProvider implements TextureProvider {
         try {
           this.field_d = param2;
           this.field_g = param1;
-          var7 = new PacketBuffer(param0.a(false, 0, 0));
+          var7 = new PacketBuffer(param0.getFile(false, 0, 0));
           this.textureCount = var7.readUnsignedShort(123);
           this.metadata = new TextureMetadata[this.textureCount];
           for (var5 = 0; var5 < this.textureCount; var5++) {

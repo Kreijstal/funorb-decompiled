@@ -330,7 +330,7 @@ final class RandomBrickOperator extends TextureOperator {
         this.field_u = 1024;
     }
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         if (param0 != 116) {
           this.field_t = 123;
         }

@@ -48,7 +48,7 @@ final class PowerDownItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final void g(byte param0) {
+    final void onRespawn(byte param0) {
         if (param0 != 3) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(true, (BitPacketBuffer) null);

@@ -14,7 +14,7 @@ final class ooa extends wka {
             var1 = vn.field_b.a(39);
           }
           if (var1.length() == 0) {
-            var1 = PathMoverComponent.r((byte) 69);
+            var1 = PathMoverComponent.getLocalPlayerNameOrEmpty((byte) 69);
           }
           if (var1.length() == 0) {
             var1 = RenderScene.field_a;
@@ -26,7 +26,7 @@ final class ooa extends wka {
           var1 = vn.field_b.a(39);
         }
         if (var1.length() == 0) {
-          var1 = PathMoverComponent.r((byte) 69);
+          var1 = PathMoverComponent.getLocalPlayerNameOrEmpty((byte) 69);
         }
         if (var1.length() == 0) {
           var1 = RenderScene.field_a;

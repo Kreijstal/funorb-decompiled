@@ -150,7 +150,7 @@ final class jn extends we {
               }
               hp.a(var11Lifetime2, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.a(no.field_u[td.field_r][var8], 12166, no.field_m[td.field_r][var8]), -1918106173, var7 + no.field_k[td.field_r][var8], -50 + var9);
             }
-            var11Lifetime2Lifetime1 = kn.field_p.a((aa) null, var10, 15, 0, var7, SoundEvent.a(false, -1), SpriteState.field_l, 0, SoundEvent.a(false, 65793), var5[var8], (byte) 99, 640, 0, id.field_h, var9, 0);
+            var11Lifetime2Lifetime1 = kn.field_p.a((aa) null, var10, 15, 0, var7, SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), var5[var8], (byte) 99, 640, 0, id.field_h, var9, 0);
             if (td.field_r > 0) {
               var11Lifetime2Lifetime1 = Math.max(var11Lifetime2Lifetime1, 3);
             }

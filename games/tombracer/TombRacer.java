@@ -299,7 +299,7 @@ public final class TombRacer extends rfa implements ls {
         BufferedSocket.releaseStatics(-97);
         SoundCache.releaseStatics(-1);
         sq.releaseStatics(true);
-        fla.releaseStatics(0);
+        PlayingSound.releaseStatics(0);
         ru.releaseStatics(false);
         dra.releaseStatics(-109);
         SoundEventPlayer.releaseStatics(-101);
@@ -477,7 +477,7 @@ public final class TombRacer extends rfa implements ls {
         wga.releaseStatics(true);
         C2SChooseRewardPacket.releaseStatics(0);
         C2SChooseCharacterPacket.releaseStatics((byte) 40);
-        nra.releaseStatics((byte) 95);
+        C2SRoomResultPacket.releaseStatics((byte) 95);
         cm.releaseStatics(true);
         qpa.releaseStatics(false);
         C2SSubmitSettingsPacket.releaseStatics((byte) -121);
@@ -1036,7 +1036,7 @@ public final class TombRacer extends rfa implements ls {
           if (PasswordValidator.field_n == -2) {
             LegacyOpenGlBloomEffect.d(30785);
           } else {
-            ConstrainToRectangleLocomotor.a(false, PasswordValidator.field_n, (byte) -46);
+            ConstrainToRectangleLocomotor.showMenuScreen(false, PasswordValidator.field_n, (byte) -46);
           }
           PasswordValidator.field_n = 2147483647;
         }
@@ -1109,7 +1109,7 @@ public final class TombRacer extends rfa implements ls {
           this.beginFrame(125);
         }
         S2CRoundDeadlinePacket.field_b = false;
-        PlatformModel.j(32454);
+        PlatformModel.startAudioOutput(32454);
         S2CEventPacket.field_c[81] = -1;
         S2CEventPacket.field_c[75] = -1;
         S2CEventPacket.field_c[74] = -2;
@@ -1207,7 +1207,7 @@ public final class TombRacer extends rfa implements ls {
           }
           if (param0 == 9) {
             LegacyOpenGlEnvironmentWaterEffect.field_d = false;
-            ConstrainToRectangleLocomotor.a(false, 1, (byte) -77);
+            ConstrainToRectangleLocomotor.showMenuScreen(false, 1, (byte) -77);
             SecondaryLinkQueue.a(param1.readString((byte) -76), -79);
             return true;
           }
@@ -1216,7 +1216,7 @@ public final class TombRacer extends rfa implements ls {
             us.a(-8250, PitBehaviour.b(-80), fa.b((byte) 123));
             RandomMazeBehaviour.field_n = true;
             LegacyOpenGlEnvironmentWaterEffect.field_d = false;
-            ConstrainToRectangleLocomotor.a(false, -2, (byte) 90);
+            ConstrainToRectangleLocomotor.showMenuScreen(false, -2, (byte) 90);
             return true;
           }
           if (15 == param0) {
@@ -1226,7 +1226,7 @@ public final class TombRacer extends rfa implements ls {
               era.field_c = true;
               RandomMazeBehaviour.field_n = false;
               iqa.field_c.closePanel(88);
-              ConstrainToRectangleLocomotor.a(false, 0, (byte) 111);
+              ConstrainToRectangleLocomotor.showMenuScreen(false, 0, (byte) 111);
             }
             LegacyOpenGlEnvironmentWaterEffect.field_d = false;
             ColouriseOperator.field_q = false;
@@ -1276,7 +1276,7 @@ public final class TombRacer extends rfa implements ls {
             if (param0 == 66) {
               if (SecondaryNodeDequeIterator.field_a != null) {
                 SecondaryNodeDequeIterator.field_a.endMatch(false, true, 0);
-                ConstrainToRectangleLocomotor.a(false, -2, (byte) -33);
+                ConstrainToRectangleLocomotor.showMenuScreen(false, -2, (byte) -33);
                 iqa.field_c.disableWithPanel(96);
               }
               ColouriseOperator.field_q = false;
@@ -1291,7 +1291,7 @@ public final class TombRacer extends rfa implements ls {
               mq.field_e = var26.getProfile(false);
               mq.field_e.field_a = mq.field_e.roomsComplete.get(78);
               mp.setMusicVolume(2, mq.field_e.field_h);
-              S2CRoundResultPacket.a(mq.field_e.field_k, -114);
+              S2CRoundResultPacket.setSoundVolume(mq.field_e.field_k, -114);
               if (null != baa.field_d &&
                 baa.field_d.field_i != null) {
                 eda.a(mq.field_e.field_g, true);
@@ -1299,7 +1299,7 @@ public final class TombRacer extends rfa implements ls {
               if (wka.field_d &&
                 !mq.field_e.field_l &&
                 !PlayTrackCommand.field_p) {
-                UrlDownloadRequest.a((byte) 101);
+                UrlDownloadRequest.startTutorial((byte) 101);
               }
               return true;
             }
@@ -1317,7 +1317,7 @@ public final class TombRacer extends rfa implements ls {
               return true;
             }
             if (88 == param0) {
-              dea.a(60);
+              dea.closeGameSocket(60);
               return true;
             }
             if (param0 == 89) {
@@ -1381,7 +1381,7 @@ public final class TombRacer extends rfa implements ls {
           SecondaryNodeDequeIterator.field_a.decodeInitialState(120, param1);
           SecondaryNodeDequeIterator.field_a.initPlayers((byte) -121);
           iqa.field_c.enableWithPanel(-68);
-          ConstrainToRectangleLocomotor.a(false, -1, (byte) 83);
+          ConstrainToRectangleLocomotor.showMenuScreen(false, -1, (byte) 83);
           ColouriseOperator.field_q = false;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1541,12 +1541,12 @@ public final class TombRacer extends rfa implements ls {
               !SecondaryNodeDequeIterator.field_a.isSpectating((byte) 79)) {
               SecondaryLinkQueue.a(BufferedCacheFile.field_k, -114);
               SecondaryNodeDequeIterator.field_a = null;
-              ConstrainToRectangleLocomotor.a(false, 1, (byte) 122);
+              ConstrainToRectangleLocomotor.showMenuScreen(false, 1, (byte) 122);
             } else {
               wm.field_a = null;
               SecondaryNodeDequeIterator.field_a = null;
               fp.startMenuBackgroundDemo(-82);
-              ConstrainToRectangleLocomotor.a(false, 0, (byte) 124);
+              ConstrainToRectangleLocomotor.showMenuScreen(false, 0, (byte) 124);
             }
             ((MenuScreen) (SpriteTileOperator.field_t)).a(0, 0, false);
             RandomMazeBehaviour.field_n = false;

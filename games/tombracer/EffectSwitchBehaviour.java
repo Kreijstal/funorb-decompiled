@@ -96,7 +96,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         return 18;
     }
 
-    private final boolean a(byte param0, int param1) {
+    private final boolean isTriggeredBy(byte param0, int param1) {
         if (param0 >= -109) {
           this.field_q = (SwitchState) null;
         }
@@ -259,7 +259,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
             stackIn_5_0 = param1.size;
             return stackIn_5_0;
           }
-          if (!this.a((byte) -127, var3_int)) {
+          if (!this.isTriggeredBy((byte) -127, var3_int)) {
             stackIn_10_0 = 0;
             return stackIn_10_0;
           }
@@ -310,7 +310,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         return 12320699;
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void setTriggeredBy(boolean param0, int param1, int param2) {
         int discarded$0 = 0;
         this.field_t.set(param1, -17075, param0);
         if (param2 > -32) {

@@ -17,7 +17,7 @@ abstract class SimulationObserver {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, BeamSegment param4, int param5, int param6) {
+    final static int clipBeamToBox(int param0, int param1, int param2, int param3, BeamSegment param4, int param5, int param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
@@ -60,7 +60,7 @@ abstract class SimulationObserver {
 
     abstract void onTrapDestroyed(Trap param0, int param1);
 
-    final void a(PlayerSimulation param0, int param1, int param2) {
+    final void stepSimulation(PlayerSimulation param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -94,7 +94,7 @@ abstract class SimulationObserver {
         rfa.field_B = FleeLocomotor.field_B + " <b>" + WeaveOperator.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + NativeSceneLight.field_p + "<br>" + "<br>" + wg.field_k;
         if (param0 != -27) {
           BeamSegment var2 = (BeamSegment) null;
-          SimulationObserver.a(-114, -20, 86, 69, (BeamSegment) null, -36, 11);
+          SimulationObserver.clipBeamToBox(-114, -20, 86, 69, (BeamSegment) null, -36, 11);
         }
     }
 

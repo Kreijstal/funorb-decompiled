@@ -33,12 +33,12 @@ final class PlantModel extends TrapModel {
         super(param0);
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachKeyboardHandler(int param0, java.awt.Component param1) {
         try {
           param1.removeKeyListener(TileOperator.field_n);
           if (param0 != -18520) {
             java.awt.Component var3 = (java.awt.Component) null;
-            PlantModel.a(-126, (java.awt.Component) null);
+            PlantModel.detachKeyboardHandler(-126, (java.awt.Component) null);
           }
           param1.removeFocusListener(TileOperator.field_n);
           ita.field_f = -1;

@@ -17,12 +17,12 @@ final class re {
         BufferedSocket.field_g = SoftwareRasterizer.height;
         SceneLight.field_i = SoftwareRasterizer.width;
         NodeHashTable.a(16);
-        oca.field_b.a(0, 0, 20, nra.field_a.field_G, -2 + (-40 + nra.field_a.field_t));
+        oca.field_b.a(0, 0, 20, C2SRoomResultPacket.field_a.field_G, -2 + (-40 + C2SRoomResultPacket.field_a.field_t));
         PerlinNoise2D.field_t.setBounds(hk.field_e.field_G, di.field_a, param0 + 5264, 0, 0);
         int var1 = 2 + di.field_a;
         RasterShape.field_e.setBounds(hk.field_e.field_G, hk.field_e.field_t - (UnlockOverlay.field_p ? var1 : 0), -23776, !UnlockOverlay.field_p ? 0 : var1, 0);
         GameFont.a(false);
-        ImageProducerRasterBuffer.field_j.setBounds(nra.field_a.field_G, 40, -23776, nra.field_a.field_t - 40, 0);
+        ImageProducerRasterBuffer.field_j.setBounds(C2SRoomResultPacket.field_a.field_G, 40, -23776, C2SRoomResultPacket.field_a.field_t - 40, 0);
         C2SChooseCharacterPacket.field_a.setBounds(OpenGlToolkit.field_fd.field_G, 30, -23776, 0, 0);
         Obstacle.field_s.setBounds(OpenGlToolkit.field_fd.field_G, OpenGlToolkit.field_fd.field_t - 40 - 2 - 30, param0 + 5264, 30, 0);
         gta.field_b.setBounds(68, 30, -23776, 5, 5);

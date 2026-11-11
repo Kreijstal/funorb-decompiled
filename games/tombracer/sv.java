@@ -75,12 +75,12 @@ final class sv extends MenuScreen {
 
     final void a(int param0, int param1, boolean param2) {
         super.a(param0, param1, param2);
-        this.field_r.c(param0 ^ -87);
+        this.field_r.startDrop(param0 ^ -87);
     }
 
     final void draw(byte param0, boolean param1) {
         super.draw(param0, param1);
-        int var3 = this.items[1].field_i - 70 + this.field_r.e(47) - 150;
+        int var3 = this.items[1].field_i - 70 + this.field_r.getPosition(47) - 150;
         WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
     }
 
@@ -101,7 +101,7 @@ final class sv extends MenuScreen {
 
     final void update(boolean param0, boolean param1, int param2) {
         super.update(param0, param1, param2);
-        this.field_r.a((byte) -111, param0, !param1 ? true : false);
+        this.field_r.updateFall((byte) -111, param0, !param1 ? true : false);
     }
 
     final boolean handleKey(int param0, char param1, int param2) {
@@ -157,7 +157,7 @@ final class sv extends MenuScreen {
             return (AntialiasedBitmapFont) (stackIn_2_0);
           }
           if (param3 == 24876) {
-            stackIn_7_0 = TextureOperator.decodeAntialiasedFont(param0.a(false, param1, param4), (byte) -123);
+            stackIn_7_0 = TextureOperator.decodeAntialiasedFont(param0.getFile(false, param1, param4), (byte) -123);
             return stackIn_7_0;
           }
           stackIn_5_0 = (AntialiasedBitmapFont) null;

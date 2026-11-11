@@ -4,7 +4,7 @@
 abstract class Spawner implements noa {
     Room field_a;
 
-    abstract void a(byte param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3);
+    abstract void assignSwitchableIds(byte param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3);
 
     void encode(BitPacketBuffer param0, byte param1) {
         try {
@@ -17,7 +17,7 @@ abstract class Spawner implements noa {
         }
     }
 
-    abstract void a(byte param0);
+    abstract void resolveSwitchLinks(byte param0);
 
     abstract int getTypeId(boolean param0);
 
@@ -25,7 +25,7 @@ abstract class Spawner implements noa {
         this(param0);
     }
 
-    abstract Switchable a(boolean param0, int param1, int param2);
+    abstract Switchable findSwitchableRecursive(boolean param0, int param1, int param2);
 
     abstract void spawn(int param0, int param1, int param2, int param3);
 

@@ -47,7 +47,7 @@ final class RoomDefinition {
             param7 == param9 &&
             param0 == param2 &&
             param5 == param3) {
-            ara.a(0, param8, param6, param2, param9, param5);
+            ara.drawClippedLine(0, param8, param6, param2, param9, param5);
           } else {
             var10_int = param6;
             var11 = param9;
@@ -74,7 +74,7 @@ final class RoomDefinition {
               var32 = var23 * var24;
               var33 = (var31 + var27 + var29 >> 12) + param6;
               var34 = param9 + (var32 + var30 + var28 >> 12);
-              ara.a(0, param8, var10_int, var33, var11, var34);
+              ara.drawClippedLine(0, param8, var10_int, var33, var11, var34);
               var11 = var34;
               var10_int = var33;
             }

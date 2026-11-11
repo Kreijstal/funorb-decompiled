@@ -313,7 +313,7 @@ final class fp {
               var9 = stackIn_45_0;
               var1_int = var1_int + mha.field_C;
               if (var9 != null) {
-                var9.a((byte) 57, var7Lifetime1 + (InvisibleTouchSwitchComponent.field_L << 1), var1_int, -InvisibleTouchSwitchComponent.field_L + var8Lifetime1, nt.field_d + (GasVentModel.field_p << 1));
+                var9.drawFrame((byte) 57, var7Lifetime1 + (InvisibleTouchSwitchComponent.field_L << 1), var1_int, -InvisibleTouchSwitchComponent.field_L + var8Lifetime1, nt.field_d + (GasVentModel.field_p << 1));
               }
               var1_int = var1_int + GasVentModel.field_p;
             }

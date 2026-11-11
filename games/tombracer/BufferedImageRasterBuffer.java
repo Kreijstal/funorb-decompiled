@@ -23,7 +23,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
         this.field_a = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
         this.field_i = param2;
         int var8 = -23 % ((param3 - 74) / 41);
-        this.a(-19216);
+        this.makeTarget(-19216);
     }
 
     public BufferedImageRasterBuffer() {

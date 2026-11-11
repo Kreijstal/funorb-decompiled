@@ -55,9 +55,9 @@ final class upa extends IntrusiveNode {
         if (mla.field_a <= 0) {
           if (GameKeyHandler.field_a > param1) {
             if (null != fta.field_b) {
-              fta.field_b.drawOpaque(nra.field_c.field_qb, 0);
+              fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
             }
-            stackIn_46_0 = nra.field_c;
+            stackIn_46_0 = C2SRoomResultPacket.field_c;
             stackIn_46_1 = param1 + 118;
             stackIn_47_2 = (param0) && (!tla.field_e);
             ((UiComponent) (Object) stackIn_46_0).drawFullScreen(stackIn_46_1, stackIn_47_2);
@@ -68,9 +68,9 @@ final class upa extends IntrusiveNode {
           } else {
             if (0 < fp.field_e) {
               if (null != fta.field_b) {
-                fta.field_b.drawOpaque(nra.field_c.field_qb, 0);
+                fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
               }
-              stackIn_60_0 = nra.field_c;
+              stackIn_60_0 = C2SRoomResultPacket.field_c;
               stackIn_60_1 = param1 + 118;
               stackIn_61_2 = (param0) && (!tla.field_e);
               ((UiComponent) (Object) stackIn_60_0).drawFullScreen(stackIn_60_1, stackIn_61_2);
@@ -82,9 +82,9 @@ final class upa extends IntrusiveNode {
           }
         } else {
           if (fta.field_b != null) {
-            fta.field_b.drawOpaque(nra.field_a.field_qb, 0);
+            fta.field_b.drawOpaque(C2SRoomResultPacket.field_a.field_qb, 0);
           }
-          stackIn_6_0 = nra.field_a;
+          stackIn_6_0 = C2SRoomResultPacket.field_a;
           stackIn_6_1 = param1 + 80;
           stackIn_7_2 = (param0) && (!LegacyOpenGlBloomEffect.field_o);
           ((UiComponent) (Object) stackIn_6_0).drawFullScreen(stackIn_6_1, stackIn_7_2);
@@ -94,9 +94,9 @@ final class upa extends IntrusiveNode {
           ((UiComponent) (Object) stackIn_10_0).drawFullScreen(stackIn_10_1, stackIn_11_2);
           if (GameKeyHandler.field_a > param1) {
             if (null != fta.field_b) {
-              fta.field_b.drawOpaque(nra.field_c.field_qb, 0);
+              fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
             }
-            stackIn_32_0 = nra.field_c;
+            stackIn_32_0 = C2SRoomResultPacket.field_c;
             stackIn_32_1 = param1 + 118;
             stackIn_33_2 = (param0) && (!tla.field_e);
             ((UiComponent) (Object) stackIn_32_0).drawFullScreen(stackIn_32_1, stackIn_33_2);
@@ -107,9 +107,9 @@ final class upa extends IntrusiveNode {
           } else {
             if (0 < fp.field_e) {
               if (null != fta.field_b) {
-                fta.field_b.drawOpaque(nra.field_c.field_qb, 0);
+                fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
               }
-              stackIn_19_0 = nra.field_c;
+              stackIn_19_0 = C2SRoomResultPacket.field_c;
               stackIn_19_1 = param1 + 118;
               stackIn_20_2 = (param0) && (!tla.field_e);
               ((UiComponent) (Object) stackIn_19_0).drawFullScreen(stackIn_19_1, stackIn_20_2);

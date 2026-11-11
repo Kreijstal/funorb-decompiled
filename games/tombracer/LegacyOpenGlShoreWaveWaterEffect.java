@@ -7,7 +7,7 @@ final class LegacyOpenGlShoreWaveWaterEffect extends LegacyOpenGlEffect {
     private aaa field_f;
     private boolean field_e;
 
-    final static int a(int param0, int param1) {
+    final static int sumRoomParTimes(int param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

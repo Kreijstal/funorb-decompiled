@@ -121,7 +121,7 @@ final class EmbossOperator extends TextureOperator {
         int var5 = this.field_n[1] * this.field_n[1] >> 12;
         int var6 = this.field_n[2] * this.field_n[2] >> 12;
         if (param0 != 28427) {
-          this.b((byte) -32);
+          this.onDecoded((byte) -32);
         }
         int var7 = (int)(Math.sqrt((double)(var6 + var4 + var5 >> 12)) * 4096.0);
         if (var7 != 0) {
@@ -131,7 +131,7 @@ final class EmbossOperator extends TextureOperator {
         }
     }
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         if (param0 != 116) {
           return;
         }

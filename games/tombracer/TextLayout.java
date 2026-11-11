@@ -9,7 +9,7 @@ abstract class TextLayout {
     kha[] field_c;
     static float field_b;
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void startSinglePlayerMatch(int param0, byte param1, int param2) {
         MandelbrotOperator.field_o = null;
         String var3 = MenuEntry.field_k;
         if (var3 == null) {
@@ -25,7 +25,7 @@ abstract class TextLayout {
         SecondaryNodeDequeIterator.field_a.showCharacterSelect((byte) -52);
         int var7 = -125 / ((param1 - 57) / 38);
         iqa.field_c.enable(0);
-        ConstrainToRectangleLocomotor.a(false, -1, (byte) 92);
+        ConstrainToRectangleLocomotor.showMenuScreen(false, -1, (byte) 92);
     }
 
     public static void releaseStatics(int param0) {
@@ -126,12 +126,12 @@ abstract class TextLayout {
           }
         }
         if (param0 != 0) {
-          this.a(62, 38, 65);
+          this.characterIndexAt(62, 38, 65);
         }
         return var2;
     }
 
-    final static void a(byte param0, ResourceArchive param1, int param2, String param3) {
+    final static void loadMenuBackgrounds(byte param0, ResourceArchive param1, int param2, String param3) {
         GameAssetLoader var4 = null;
         String var5 = null;
         RuntimeException stackIn_5_0 = null;
@@ -151,7 +151,7 @@ abstract class TextLayout {
           du.field_c.field_f = param1.getFileByName("", (byte) 117, "wall_bg.jpg");
           if (param0 > -100) {
             var5 = (String) null;
-            TextLayout.a((byte) -1, (ResourceArchive) null, 32, (String) null);
+            TextLayout.loadMenuBackgrounds((byte) -1, (ResourceArchive) null, 32, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -174,7 +174,7 @@ abstract class TextLayout {
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int characterIndexAt(int param0, int param1, int param2) {
         int var5 = 0;
         kha var6 = null;
         int var7 = 0;

@@ -174,7 +174,7 @@ final class PlayPhase extends MatchPhase {
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             PlayerViewport.drawTiledFrame(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.a(false, 0), SpriteState.field_l, 1, SoundEvent.a(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
+            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
             return;
@@ -216,7 +216,7 @@ final class PlayPhase extends MatchPhase {
               var6Lifetime1Lifetime2 = var5.getId((byte) -82);
               if (this.matchState.gameMode != 3) {
                 if (this.matchState.getCourseId(0) != -1) {
-                  var7 = doa.b(var6Lifetime1Lifetime2, 0, this.matchState.getCourseId(0));
+                  var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, this.matchState.getCourseId(0));
                 } else {
                   if (var5.j(0)) {
                     var7 = mna.a(0, var6Lifetime1Lifetime2);
@@ -225,7 +225,7 @@ final class PlayPhase extends MatchPhase {
                   }
                 }
               } else {
-                var7 = doa.b(var6Lifetime1Lifetime2, 0, pl.a((byte) 64));
+                var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, pl.a((byte) 64));
               }
               var8Lifetime1 = 64;
               var9 = -64 + SwitchLinkList.b(0);
@@ -326,7 +326,7 @@ final class PlayPhase extends MatchPhase {
           if (param2 == 24) {
             if (!this.screen.hasMessageOverlay(0)) {
               var5 = new MessageOverlay(this.screen, (MessagePanel) null);
-              var5.a("TITLE!", "Lalala here is some text to test with", "Press fire to continue. Or not.", (byte) 125);
+              var5.setMessages("TITLE!", "Lalala here is some text to test with", "Press fire to continue. Or not.", (byte) 125);
               this.screen.addOverlay(var5, param1 + 655);
               return true;
             }
@@ -528,7 +528,7 @@ final class PlayPhase extends MatchPhase {
               ql.field_k.writeByte(18, 0);
               ql.field_k.position = ql.field_k.position + 2;
               var10 = ql.field_k.position;
-              var11_ref_StringLifetime4 = FontMetrics.readSettingsCookie(0, di.a(62));
+              var11_ref_StringLifetime4 = FontMetrics.readSettingsCookie(0, di.getApplet(62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
@@ -572,9 +572,9 @@ final class PlayPhase extends MatchPhase {
               PressureSwitchBehaviour.field_s = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                pu.clearStatusCookie(di.a(21), 255);
+                pu.clearStatusCookie(di.getApplet(21), 255);
                 io.field_b = ArchiveNetworkClient.field_f;
-                dea.a(60);
+                dea.closeGameSocket(60);
                 PushableBlockMazeComponent.field_L = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
@@ -600,7 +600,7 @@ final class PlayPhase extends MatchPhase {
                 for (var12 = 0; var11 > var12; var12++) {
                   PressureSwitchBehaviour.field_s[var12] = WeaveOperator.field_q.readVersionedString(121);
                 }
-                dea.a(60);
+                dea.closeGameSocket(60);
                 PushableBlockMazeComponent.field_L = false;
                 stackIn_46_0 = var11 + 100;
                 return stackIn_46_0;
@@ -608,16 +608,16 @@ final class PlayPhase extends MatchPhase {
             }
           }
           if (pe.field_m == ProceduralTexture.field_p &&
-            cla.g(0)) {
+            cla.ensurePacketPayload(0)) {
             if (MembersUpsellMenu.field_z == 255) {
               var9_ref_String = WeaveOperator.field_q.readNullableString(-28690);
               if (var9_ref_String != null) {
-                mp.writeSettingsCookie(var9_ref_String, di.a(82), -21407);
+                mp.writeSettingsCookie(var9_ref_String, di.getApplet(82), -21407);
               }
             } else {
               io.field_b = WeaveOperator.field_q.readString((byte) -76);
             }
-            dea.a(60);
+            dea.closeGameSocket(60);
             PushableBlockMazeComponent.field_L = false;
             stackIn_57_0 = MembersUpsellMenu.field_z;
             return stackIn_57_0;
@@ -731,7 +731,7 @@ final class PlayPhase extends MatchPhase {
             if (this.screen.field_D) {
               this.screen.addOverlay(new dua(this.screen), 680);
             }
-            TripBeamComponent.b(1, 1);
+            TripBeamComponent.playMusicTrack(1, 1);
           }
           this.screen.roundDeadlineTick = -1;
           this.applyViewportLayout((byte) 122);

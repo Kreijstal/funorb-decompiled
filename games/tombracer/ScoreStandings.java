@@ -32,7 +32,7 @@ final class ScoreStandings {
         field_d = null;
     }
 
-    final static int a(String param0, int param1) {
+    final static int loadNativeLibrary(String param0, int param1) {
         int var8_int = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -81,7 +81,7 @@ final class ScoreStandings {
             return stackIn_12_0;
           }
           var3 = aqa.field_c + var10;
-          if (!SecondaryNodeHashTable.field_b.a(var3, "", param1 - 28893)) {
+          if (!SecondaryNodeHashTable.field_b.hasFile(var3, "", param1 - 28893)) {
             stackIn_15_0 = -1;
             return stackIn_15_0;
           }

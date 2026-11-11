@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fea {
-    final static void a(boolean param0, int param1) {
+    final static void loadSoundEffect(boolean param0, int param1) {
         if (param1 == 0) {
           CauldronComponent.field_J[0] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_ceramic_knock_01", 121, "");
         }
@@ -292,7 +292,7 @@ final class fea {
           CauldronComponent.field_J[95] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_lazer_loop_01");
         }
         if (param0) {
-          fea.a(false, -49);
+          fea.loadSoundEffect(false, -49);
         }
         if (96 == param1) {
           CauldronComponent.field_J[96] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_lazer_loop_02");

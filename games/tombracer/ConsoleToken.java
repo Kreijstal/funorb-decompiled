@@ -65,7 +65,7 @@ final class ConsoleToken extends IntrusiveNode {
               var9 = stackIn_17_0;
               var2 = var2 + aqa.field_a;
               if (var9 != null) {
-                var9.a((byte) 57, (S2CCharacterChoicePacket.field_a << 1) + var7, var2, var8 - S2CCharacterChoicePacket.field_a, FurnitureModel.field_n + (RenderLayer.field_d << 1));
+                var9.drawFrame((byte) 57, (S2CCharacterChoicePacket.field_a << 1) + var7, var2, var8 - S2CCharacterChoicePacket.field_a, FurnitureModel.field_n + (RenderLayer.field_d << 1));
               }
               var2 = var2 + RenderLayer.field_d;
             }

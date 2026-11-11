@@ -174,7 +174,7 @@ final class dta {
               var25 = 16;
               if (!param4.field_D &&
                 !param4.c(false)) {
-                var26 = doa.b(var12.getRoom((byte) 125).getId((byte) -82), 0, param4.getCourseId(-1)).field_h;
+                var26 = doa.findCourseRoom(var12.getRoom((byte) 125).getId((byte) -82), 0, param4.getCourseId(-1)).field_h;
                 if (0 == var26) {
                   var26 = 750;
                 }
@@ -335,20 +335,20 @@ final class dta {
                   var38 = 0;
                 }
                 if (var30Lifetime3 != 0) {
-                  var39 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.a(false, 0), SpriteState.field_l, var38, SoundEvent.a(false, 11903361), aca.field_g, (byte) 124, 48, 0, id.field_h, param0, 2);
+                  var39 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), aca.field_g, (byte) 124, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39;
                 }
                 if (var32Lifetime1 != 0) {
-                  var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.a(false, 0), SpriteState.field_l, var38, SoundEvent.a(false, 11903361), hda.field_h, (byte) 72, 48, 0, id.field_h, param0, 2);
+                  var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), hda.field_h, (byte) 72, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime1;
                 } else {
                   if (var31Lifetime2 != 0) {
-                    var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.a(false, 0), SpriteState.field_l, var38, SoundEvent.a(false, 11903361), qja.field_k, (byte) -106, 48, 0, id.field_h, param0, 2);
+                    var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), qja.field_k, (byte) -106, 48, 0, id.field_h, param0, 2);
                     param6 = param6 - var39Lifetime1 * var37Lifetime1;
                   }
                 }
                 if (var33 != 0) {
-                  var39Lifetime2 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.a(false, 0), SpriteState.field_l, var38, SoundEvent.a(false, 11903361), bb.field_l, (byte) 107, 48, 0, id.field_h, param0, 2);
+                  var39Lifetime2 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), bb.field_l, (byte) 107, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime2;
                 }
               }

@@ -80,7 +80,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         this.owner.a(0, false, ej.field_c);
     }
 
-    final void c(boolean param0) {
+    final void onTextureMatrixChanged(boolean param0) {
         AffineTransform3D var2 = null;
         AffineTransform3D var3 = null;
         if (param0) {
@@ -141,7 +141,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         this.owner.e(0, false);
         this.owner.g(3625, -16777216);
         this.owner.a(0, false, pea.field_c);
-        this.c(true);
+        this.onTextureMatrixChanged(true);
         int var3 = -101 % ((41 - param0) / 62);
     }
 

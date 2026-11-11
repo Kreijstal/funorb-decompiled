@@ -35,16 +35,16 @@ final class iqa {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (pka.field_b > -param4 + param3) {
-          TileOperator.a(0, param4, param2, param3, param1);
+          TileOperator.fillClippedCircle(0, param4, param2, param3, param1);
         } else {
           if (param3 + param4 > DiskCacheWorker.field_c) {
-            TileOperator.a(0, param4, param2, param3, param1);
+            TileOperator.fillClippedCircle(0, param4, param2, param3, param1);
           } else {
             if (gca.field_d > param1 - param4) {
-              TileOperator.a(0, param4, param2, param3, param1);
+              TileOperator.fillClippedCircle(0, param4, param2, param3, param1);
             } else {
               if (param1 + param4 > hc.field_h) {
-                TileOperator.a(0, param4, param2, param3, param1);
+                TileOperator.fillClippedCircle(0, param4, param2, param3, param1);
               } else {
                 bq.a(param1, param3, param2, (byte) -13, param4);
               }

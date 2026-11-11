@@ -5,7 +5,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
     private Weapon field_t;
     static float field_s;
 
-    final void g(byte param0) {
+    final void onRespawn(byte param0) {
         this.field_t = this.field_t.createCopy(-1);
         if (param0 != 3) {
           Weapon var3 = (Weapon) null;
@@ -46,7 +46,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
     WeaponItemBehaviour(Room param0, boolean param1) {
         super(param0, param1);
         try {
-          this.field_t = TextureOperator.a(4, -1);
+          this.field_t = TextureOperator.createFullWeapon(4, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

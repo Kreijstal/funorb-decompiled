@@ -11,7 +11,7 @@ final class CrusherModel extends TrapModel {
     private int field_n;
     private int field_q;
     private boolean field_u;
-    private fla field_s;
+    private PlayingSound field_s;
 
     final void decode(int param0, Room param1, BitPacketBuffer param2) {
         try {
@@ -49,7 +49,7 @@ final class CrusherModel extends TrapModel {
         this.field_n = 160;
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void ensureRankingCapacity(int param0, int param1, byte param2) {
         if (null == ItemBehaviour.field_p ||
           !(param0 <= ItemBehaviour.field_p.length)) {
           ItemBehaviour.field_p = new int[param0 * 2];
@@ -400,7 +400,7 @@ final class CrusherModel extends TrapModel {
             } else {
               if (this.field_s != null &&
                 var6 == 0) {
-                this.field_s.a(1, var13);
+                this.field_s.release(1, var13);
                 this.field_s = null;
                 var13.play(new SoundEvent(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
@@ -448,7 +448,7 @@ final class CrusherModel extends TrapModel {
             } else {
               if (this.field_s != null &&
                 var6Lifetime3 == 0) {
-                this.field_s.a(1, var9);
+                this.field_s.release(1, var9);
                 this.field_s = null;
                 var9.play(new SoundEvent(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
@@ -496,7 +496,7 @@ final class CrusherModel extends TrapModel {
             } else {
               if (this.field_s != null &&
                 var6Lifetime4 == 0) {
-                this.field_s.a(1, var11);
+                this.field_s.release(1, var11);
                 this.field_s = null;
                 var11.play(new SoundEvent(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
@@ -540,7 +540,7 @@ final class CrusherModel extends TrapModel {
             } else {
               if (this.field_s != null &&
                 var6Lifetime1 == 0) {
-                this.field_s.a(1, var15);
+                this.field_s.release(1, var15);
                 this.field_s = null;
                 var15.play(new SoundEvent(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
               }
@@ -621,7 +621,7 @@ final class CrusherModel extends TrapModel {
         }
         if (this.field_s != null) {
           if (var6Lifetime2 == 0) {
-            this.field_s.a(1, var17_ref);
+            this.field_s.release(1, var17_ref);
             this.field_s = null;
             var17_ref.play(new SoundEvent(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
             if (!this.field_u &&

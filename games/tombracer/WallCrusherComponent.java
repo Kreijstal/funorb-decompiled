@@ -160,7 +160,7 @@ final class WallCrusherComponent extends PrefabComponent {
         }
     }
 
-    final static boolean r(byte param0) {
+    final static boolean isMatchScreenActive(byte param0) {
         if (param0 > -14) {
           WallCrusherComponent.releaseStatics(-59);
           return SpriteTileOperator.field_t instanceof MatchScreen;

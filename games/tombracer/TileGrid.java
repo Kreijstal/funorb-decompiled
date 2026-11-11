@@ -89,7 +89,7 @@ final class TileGrid implements Renderable {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1, Room param2) {
+    final void decodeCells(byte param0, BitPacketBuffer param1, Room param2) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -346,7 +346,7 @@ final class TileGrid implements Renderable {
         return var3;
     }
 
-    final void a(RenderScene param0, int param1) {
+    final void addTilesToScene(RenderScene param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -431,7 +431,7 @@ final class TileGrid implements Renderable {
         var15 = MidiVoiceMixer.min(this.toCellCoordinate(var11 + (param3 - var9), false), this.endRow - 1, 101);
         if (param2 > -104) {
           var20 = (Room) null;
-          this.a((byte) -39, (BitPacketBuffer) null, (Room) null);
+          this.decodeCells((byte) -39, (BitPacketBuffer) null, (Room) null);
         }
         for (var16 = var12; var14 >= var16; var16++) {
           for (var17 = var13; var17 <= var15; var17++) {
@@ -490,7 +490,7 @@ final class TileGrid implements Renderable {
         }
     }
 
-    final void a(int param0, BitPacketBuffer param1) {
+    final void encodeCells(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;

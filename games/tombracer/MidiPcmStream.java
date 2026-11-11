@@ -723,7 +723,7 @@ class MidiPcmStream extends PcmStream {
               if (null != var3.field_x) {
                 var3.field_x.fadeOut(AudioOutput.field_d / 100);
                 if (var3.field_x.isRamping()) {
-                  this.field_v.field_m.a(var3.field_x);
+                  this.field_v.field_m.prependStream(var3.field_x);
                 }
                 var3.a(5806);
               }
@@ -1041,7 +1041,7 @@ class MidiPcmStream extends PcmStream {
             param0.field_x.fill(param1, param2, param4);
           }
           if (param0.field_x.isRamping()) {
-            this.field_v.field_m.a(param0.field_x);
+            this.field_v.field_m.prependStream(param0.field_x);
           }
           param0.a(param3 ^ 5800);
           if (param0.field_t >= 0) {

@@ -123,7 +123,7 @@ final class Weapon {
         if (param0 != -1) {
           return (Weapon) null;
         }
-        return TextureOperator.a(this.typeId, -1);
+        return TextureOperator.createFullWeapon(this.typeId, -1);
     }
 
     final boolean fire(int param0, int param1, WorldBody param2, int param3, int param4, Room param5, int param6, int param7, int param8, boolean param9) {

@@ -27,7 +27,7 @@ final class ara extends UiComponent {
         return stackIn_9_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawClippedLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_18_0 = 0;
         int stackIn_29_0 = 0;
         RuntimeException decompiledCaughtException = null;

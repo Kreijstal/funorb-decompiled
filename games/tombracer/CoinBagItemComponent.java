@@ -314,7 +314,7 @@ final class CoinBagItemComponent extends ItemComponent {
               }
               if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != PowerUpItemBehaviour.field_u ||
                 null != hp.field_a ||
-                nra.field_g != null ||
+                C2SRoomResultPacket.field_g != null ||
                 null != HotspotTextWidget.field_z)) {
                 var11 = 0;
                 var12 = 0;
@@ -346,9 +346,9 @@ final class CoinBagItemComponent extends ItemComponent {
                       null != HotspotTextWidget.field_z[var16]) {
                       var15 = var15 | HotspotTextWidget.field_z[var16][var17_int];
                     }
-                    if (null != nra.field_g &&
-                      nra.field_g[var16] != null) {
-                      var18_intLifetime1 = nra.field_g[var16][var17_int];
+                    if (null != C2SRoomResultPacket.field_g &&
+                      C2SRoomResultPacket.field_g[var16] != null) {
+                      var18_intLifetime1 = C2SRoomResultPacket.field_g[var16][var17_int];
                       if (var14 < var18_intLifetime1) {
                         var14 = var18_intLifetime1;
                       }
@@ -458,7 +458,7 @@ final class CoinBagItemComponent extends ItemComponent {
             }
             cea.field_a.field_r = LegacyOpenGlFlowingWaterEffect.formatText(106, TextInputWidget.field_A, new String[]{Integer.toString(C2SChooseRewardPacket.field_a.field_Mb), Integer.toString(C2SChooseRewardPacket.field_a.field_Jb)});
           }
-          stackIn_168_0 = nra.field_c;
+          stackIn_168_0 = C2SRoomResultPacket.field_c;
           stackIn_168_1 = -98;
           stackIn_169_2 = (param4) && (!param0) && (!tla.field_e);
           ((UiComponent) (Object) stackIn_168_0).c(stackIn_168_1, stackIn_169_2);

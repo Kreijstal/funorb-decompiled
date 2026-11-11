@@ -368,7 +368,7 @@ final class ModelFactory implements ModelCodec {
         }
     }
 
-    public final TrapModel a(TrapPart param0, WorldBody param1, int param2) {
+    public final TrapModel createTrapModel(TrapPart param0, WorldBody param1, int param2) {
         TrapModel stackIn_31_0 = null;
         TrapModel stackIn_33_0 = null;
         RuntimeException stackIn_37_0 = null;

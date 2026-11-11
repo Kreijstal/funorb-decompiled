@@ -26,7 +26,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           var8 = rp.clamp(DiskCacheWorker.field_c, param4 - 16236, pka.field_b, param1);
           var9 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0);
           for (var10 = var6_int; var7 >= var10; var10++) {
-            nra.fillRange((byte) -55, param3, var9, vaa.field_a[var10], var8);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var9, vaa.field_a[var10], var8);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

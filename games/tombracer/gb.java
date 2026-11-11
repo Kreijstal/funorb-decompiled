@@ -4,7 +4,7 @@
 final class gb {
     static int field_a;
 
-    final static void a(int param0) {
+    final static void pushRasterState(int param0) {
         bd var1 = null;
         bd var1Lifetime1;
         if (param0 == -29711) {
@@ -12,7 +12,7 @@ final class gb {
           if (var1 == null) {
             var1 = new bd();
           }
-          var1.a(SoftwareRasterizer.width, SoftwareRasterizer.pixels, 116, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.clipBottom);
+          var1.capture(SoftwareRasterizer.width, SoftwareRasterizer.pixels, 116, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.clipBottom);
           gg.field_e.addLast((byte) -111, var1);
           return;
         }
@@ -22,7 +22,7 @@ final class gb {
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new bd();
         }
-        var1Lifetime1.a(SoftwareRasterizer.width, SoftwareRasterizer.pixels, 116, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.clipBottom);
+        var1Lifetime1.capture(SoftwareRasterizer.width, SoftwareRasterizer.pixels, 116, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.clipBottom);
         gg.field_e.addLast((byte) -111, var1Lifetime1);
     }
 

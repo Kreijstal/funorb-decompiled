@@ -7,7 +7,7 @@ final class SoundEffect {
     private SoundTone[] field_a;
 
     final static SoundEffect loadFromArchive(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(false, param1, param2);
+        byte[] var3 = param0.getFile(false, param1, param2);
         if (var3 == null) {
           return null;
         }

@@ -5,7 +5,7 @@ final class gba extends IntrusiveNode {
     String[] field_g;
     static int[] field_f;
 
-    final static void a(int param0, int param1, int param2, ka param3, int param4, ka param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void drawModelRow(int param0, int param1, int param2, ka param3, int param4, ka param5, int param6, int param7, int param8, int param9, int param10) {
         int var15 = 0;
         int var11_int = 0;
         int var12 = 0;

@@ -21,19 +21,19 @@ final class PenaltyNotice extends IntrusiveNode {
         int var1Lifetime1;
         if (param0 == 256) {
           if (224 <= MatchState.field_w) {
-            S2CRoundResultPacket.a(256, -116);
+            S2CRoundResultPacket.setSoundVolume(256, -116);
           } else {
             var1 = MatchState.field_w % 32;
-            S2CRoundResultPacket.a(MatchState.field_w - (-32 + var1), -127);
+            S2CRoundResultPacket.setSoundVolume(MatchState.field_w - (-32 + var1), -127);
           }
           return;
         }
         PenaltyNotice.releaseStatics(false);
         if (224 <= MatchState.field_w) {
-          S2CRoundResultPacket.a(256, -116);
+          S2CRoundResultPacket.setSoundVolume(256, -116);
         } else {
           var1Lifetime1 = MatchState.field_w % 32;
-          S2CRoundResultPacket.a(MatchState.field_w - (-32 + var1Lifetime1), -127);
+          S2CRoundResultPacket.setSoundVolume(MatchState.field_w - (-32 + var1Lifetime1), -127);
         }
     }
 

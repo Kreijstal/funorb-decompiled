@@ -59,14 +59,14 @@ abstract class TextureOperator extends IntrusiveNode {
         return var5;
     }
 
-    final static Weapon a(int param0, int param1) {
+    final static Weapon createFullWeapon(int param0, int param1) {
         Weapon var2 = S2CActionPacket.createWeaponPreset(param1, param0);
         var2.typeId = param0;
         var2.ammo = var2.maxAmmo;
         return var2;
     }
 
-    void b(byte param0) {
+    void onDecoded(byte param0) {
         if (param0 != 116) {
           this.getTextureId((byte) 122);
         }
@@ -100,7 +100,7 @@ abstract class TextureOperator extends IntrusiveNode {
           this.monochromeCache.release(false);
           this.monochromeCache = null;
           if (param0 >= -32) {
-            this.b((byte) 31);
+            this.onDecoded((byte) 31);
             return;
           }
           return;
@@ -108,7 +108,7 @@ abstract class TextureOperator extends IntrusiveNode {
         this.colourCache.release(2);
         this.colourCache = null;
         if (param0 >= -32) {
-          this.b((byte) 31);
+          this.onDecoded((byte) 31);
           return;
         }
     }
@@ -162,7 +162,7 @@ abstract class TextureOperator extends IntrusiveNode {
 
     int getTextureId(byte param0) {
         if (param0 != -117) {
-          this.b((byte) -6);
+          this.onDecoded((byte) -6);
           return -1;
         }
         return -1;

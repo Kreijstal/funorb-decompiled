@@ -276,7 +276,7 @@ final class rg extends SingleChildWidget {
         if (param0 != 7) {
           return true;
         }
-        return SwitchableId.hasTuhstatbutCookie((byte) 108, di.a(31));
+        return SwitchableId.hasTuhstatbutCookie((byte) 108, di.getApplet(31));
     }
 
     final static int g(byte param0) {

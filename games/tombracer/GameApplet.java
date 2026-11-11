@@ -41,7 +41,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_b = true;
             System.out.println("error_game_" + param1);
             try {
-              JavaScriptBridge.callWindowFunction(di.a(43), 2864, "loggedout");
+              JavaScriptBridge.callWindowFunction(di.getApplet(43), 2864, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -312,7 +312,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param3.a(param0, param2, param1);
+          var4 = param3.getFile(param0, param2, param1);
           if (null == var4) {
             return false;
           }
@@ -763,7 +763,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               if (param0) {
                 this.paint((java.awt.Graphics) null);
               }
-              GameScreen.field_e = di.a(49);
+              GameScreen.field_e = di.getApplet(49);
               dupTemp$0 = new PlatformTaskDispatcher(param5, param6, param3, true);
               dsa.field_c = dupTemp$0;
               nea.field_c = dupTemp$0;

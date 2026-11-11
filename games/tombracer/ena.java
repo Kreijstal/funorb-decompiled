@@ -9,7 +9,7 @@ final class ena extends DualLinkNode {
     rq[] field_o;
     static volatile int field_n;
 
-    final boolean a(byte param0) {
+    final boolean ensureLoaded(byte param0) {
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         Object var2_ref_Object = null;
@@ -44,7 +44,7 @@ final class ena extends DualLinkNode {
             var28 = AnimationSequence.field_c.fileIds(param0 - 216, this.field_k);
             this.field_m = new byte[var28.length][];
             for (var4 = 0; var28.length > var4; var4++) {
-              this.field_m[var4] = AnimationSequence.field_c.a(false, this.field_k, var28[var4]);
+              this.field_m[var4] = AnimationSequence.field_c.getFile(false, this.field_k, var28[var4]);
             }
           }
         }
@@ -60,7 +60,7 @@ final class ena extends DualLinkNode {
           var6 = var15.readUnsignedShort(124);
           var7 = SwitchState.field_j;
           synchronized (var7) {
-            var2 = var2 != 0 & SwitchState.field_j.a(param0 ^ -15228, var6) ? 1 : 0;
+            var2 = var2 != 0 & SwitchState.field_j.ensureFileReadyById(param0 ^ -15228, var6) ? 1 : 0;
             var3++;
           }
         }
@@ -70,7 +70,7 @@ final class ena extends DualLinkNode {
         var19 = new IntrusiveDeque();
         var5_ref_Object = AnimationSequence.field_c;
         synchronized (var5_ref_Object) {
-          var6 = AnimationSequence.field_c.a((byte) -117, this.field_k);
+          var6 = AnimationSequence.field_c.getFileCount((byte) -117, this.field_k);
           this.field_o = new rq[var6];
           var30 = AnimationSequence.field_c.fileIds(-79, this.field_k);
           var5 = 0;
@@ -93,7 +93,7 @@ final class ena extends DualLinkNode {
           if (var9 == null) {
             var10_ref = SwitchState.field_j;
             synchronized (var10_ref) {
-              var9 = new nk(var8, SwitchState.field_j.f(var8, -93));
+              var9 = new nk(var8, SwitchState.field_j.getFileById(var8, -93));
             }
             var19.addLast((byte) -124, (IntrusiveNode) (var9));
           }

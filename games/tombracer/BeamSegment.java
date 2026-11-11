@@ -29,7 +29,7 @@ final class BeamSegment {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setEndpoints(int param0, int param1, int param2, int param3, int param4) {
         this.field_k = param2;
         this.field_c = param1;
         this.field_e = param1;
@@ -48,7 +48,7 @@ final class BeamSegment {
         field_g = null;
     }
 
-    final void a(int param0, byte param1) {
+    final void shortenTo(int param0, byte param1) {
         int var3 = this.field_e - this.field_d;
         int var4 = this.field_a - this.field_k;
         this.field_e = this.field_d + gqa.multiplyFixed(param0, (byte) 24, var3);
@@ -101,7 +101,7 @@ final class BeamSegment {
         try {
           var4_int = 0;
           while (var4_int < param0.length) {
-            if (!param0[var4_int].a(-120, param2, param3)) {
+            if (!param0[var4_int].matches(-120, param2, param3)) {
               var4_int++;
               continue;
             }

@@ -327,7 +327,7 @@ abstract class MenuScreen extends GameScreen {
               SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(param2 ^ 15283, SecondaryNodeDequeIterator.field_a.getViewedPlayerIndex(param2 ^ 15336)) != null) {
               var4 = (SoundEventPlayer) (SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(0, SecondaryNodeDequeIterator.field_a.getViewedPlayerIndex(param2 ^ 15326)).soundQueue);
               if (var4 != null) {
-                var4.a(108, true);
+                var4.playQueuedEvents(108, true);
               }
             }
           }
@@ -445,7 +445,7 @@ abstract class MenuScreen extends GameScreen {
           if (var7 != 22 ||
             var8 != 0) {
             if (var7 == 1) {
-              ConstrainToRectangleLocomotor.a(param1, 9, (byte) -16);
+              ConstrainToRectangleLocomotor.showMenuScreen(param1, 9, (byte) -16);
               return true;
             }
             if (2 == var7 &&
@@ -457,19 +457,19 @@ abstract class MenuScreen extends GameScreen {
               if (!TextWidgetPainter.a(27)) {
                 LegacyOpenGlBloomEffect.d(30785);
               } else {
-                ConstrainToRectangleLocomotor.a(param1, 11, (byte) 106);
+                ConstrainToRectangleLocomotor.showMenuScreen(param1, 11, (byte) 106);
                 PasswordValidator.field_n = -2;
               }
               return true;
             }
             if (var7 == 12) {
               if (this.field_c != 7) {
-                ConstrainToRectangleLocomotor.a(param1, 4, (byte) -11);
+                ConstrainToRectangleLocomotor.showMenuScreen(param1, 4, (byte) -11);
                 if (var8 != 0) {
-                  ConstrainToRectangleLocomotor.a(param1, 12, (byte) -113);
+                  ConstrainToRectangleLocomotor.showMenuScreen(param1, 12, (byte) -113);
                 }
               } else {
-                ConstrainToRectangleLocomotor.a(param1, 12, (byte) -113);
+                ConstrainToRectangleLocomotor.showMenuScreen(param1, 12, (byte) -113);
               }
               return true;
             }
@@ -480,7 +480,7 @@ abstract class MenuScreen extends GameScreen {
                 SecondaryNodeDequeIterator.field_a.field_D &&
                 !SecondaryNodeDequeIterator.field_a.isSpectating((byte) 90)) {
                 ql.field_k.writeCipheredOpcode(65, -2988);
-                ConstrainToRectangleLocomotor.a(param1, -1, (byte) 105);
+                ConstrainToRectangleLocomotor.showMenuScreen(param1, -1, (byte) 105);
                 return true;
               }
               return true;
@@ -494,25 +494,25 @@ abstract class MenuScreen extends GameScreen {
             }
             if (13 == var7 &&
               var8 == 0) {
-              ConstrainToRectangleLocomotor.a(param1, 5, (byte) -112);
+              ConstrainToRectangleLocomotor.showMenuScreen(param1, 5, (byte) -112);
               return true;
             }
             if (14 == var7) {
-              ConstrainToRectangleLocomotor.a(param1, 6, (byte) 82);
+              ConstrainToRectangleLocomotor.showMenuScreen(param1, 6, (byte) 82);
               return true;
             }
             if (var7 == 0 &&
               var8 == 0) {
-              ConstrainToRectangleLocomotor.a(param1, 0, (byte) -17);
+              ConstrainToRectangleLocomotor.showMenuScreen(param1, 0, (byte) -17);
               return true;
             }
             if (var7 == 4 &&
               var8 == 0) {
-              ConstrainToRectangleLocomotor.a(param1, 2, (byte) 85);
+              ConstrainToRectangleLocomotor.showMenuScreen(param1, 2, (byte) 85);
               return true;
             }
             if (var7 == 8) {
-              ConstrainToRectangleLocomotor.a(param1, 3, (byte) -101);
+              ConstrainToRectangleLocomotor.showMenuScreen(param1, 3, (byte) -101);
               return true;
             }
             if (var7 != 5 &&
@@ -522,7 +522,7 @@ abstract class MenuScreen extends GameScreen {
                 return true;
               }
               if (var7 == 9) {
-                ArchiveRequest.openQuitPage(di.a(94), (byte) -112);
+                ArchiveRequest.openQuitPage(di.getApplet(94), (byte) -112);
                 return true;
               }
               if (var7 == 16) {
@@ -534,7 +534,7 @@ abstract class MenuScreen extends GameScreen {
                 var4_int = SecondaryNodeDequeIterator.field_a.getCourseId(-1);
                 var5 = SecondaryNodeDequeIterator.field_a.getCharacterChoice(0, 9);
                 var6 = SecondaryNodeDequeIterator.field_a.matchState.gameMode;
-                TextLayout.a(var4_int, (byte) 101, var6);
+                TextLayout.startSinglePlayerMatch(var4_int, (byte) 101, var6);
                 SecondaryNodeDequeIterator.field_a.setCharacterChoice(var5, 50, 0);
                 SecondaryNodeDequeIterator.field_a.initPlayers((byte) -49);
                 SecondaryNodeDequeIterator.field_a.startRound(125);
@@ -544,17 +544,17 @@ abstract class MenuScreen extends GameScreen {
                 return true;
               }
               if (var7 == 15) {
-                ConstrainToRectangleLocomotor.a(param1, -1, (byte) 107);
+                ConstrainToRectangleLocomotor.showMenuScreen(param1, -1, (byte) 107);
                 return true;
               }
               if (17 == var7 &&
                 var8 == 0) {
-                ConstrainToRectangleLocomotor.a(param1, 7, (byte) -101);
+                ConstrainToRectangleLocomotor.showMenuScreen(param1, 7, (byte) -101);
                 return true;
               }
               if (18 == var7 &&
                 var8 == 0) {
-                ConstrainToRectangleLocomotor.a(param1, 8, (byte) -109);
+                ConstrainToRectangleLocomotor.showMenuScreen(param1, 8, (byte) -109);
                 return true;
               }
               if (var7 == 23 &&
@@ -607,7 +607,7 @@ abstract class MenuScreen extends GameScreen {
               if (var7 == 32 &&
                 var8 == 0) {
                 mpa.field_X = true;
-                ConstrainToRectangleLocomotor.a(param1, 0, (byte) -107);
+                ConstrainToRectangleLocomotor.showMenuScreen(param1, 0, (byte) -107);
                 return true;
               }
               if (var7 == 36) {
@@ -666,7 +666,7 @@ abstract class MenuScreen extends GameScreen {
               return true;
             }
           }
-          UrlDownloadRequest.a((byte) 105);
+          UrlDownloadRequest.startTutorial((byte) 105);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1013,7 +1013,7 @@ abstract class MenuScreen extends GameScreen {
         try {
           if (this.field_k.selectedIndex >= 0 &&
             this.isItemEnabled(this.field_k.selectedIndex, 0) &&
-            this.items[this.field_k.selectedIndex].a(-30323, param2, param0)) {
+            this.items[this.field_k.selectedIndex].containsPoint(-30323, param2, param0)) {
             stackIn_9_0 = this.field_k.selectedIndex;
             return stackIn_9_0;
           }
@@ -1029,7 +1029,7 @@ abstract class MenuScreen extends GameScreen {
             stackIn_15_0 = stackOut_14_0;
             if (var5 == 0) {
               if (stackIn_15_0 &&
-                this.items[var4_int].a(-30323, param2, param0)) {
+                this.items[var4_int].containsPoint(-30323, param2, param0)) {
                 stackIn_22_0 = var4_int;
                 return stackIn_22_0;
               }

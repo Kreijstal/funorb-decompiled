@@ -33,7 +33,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         NodeHashTable.a(16);
         if (ProxySocketConnector.field_f < 0) {
           PerlinNoise2D.field_t.field_r = null;
-          stackIn_55_0 = nra.field_a;
+          stackIn_55_0 = C2SRoomResultPacket.field_a;
           stackIn_55_1 = 65;
           stackIn_56_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);
           ((UiComponent) (Object) stackIn_55_0).c(stackIn_55_1, stackIn_56_2);
@@ -47,7 +47,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           ((UiComponent) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
         } else {
           PerlinNoise2D.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
-          stackIn_7_0 = nra.field_a;
+          stackIn_7_0 = C2SRoomResultPacket.field_a;
           stackIn_7_1 = 65;
           stackIn_8_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);
           ((UiComponent) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_8_2);
@@ -136,7 +136,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         return true;
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, ka param7, int param8, ka param9, int param10) {
+    final static void drawModelRow(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, ka param7, int param8, ka param9, int param10) {
         int var16 = 0;
         int var11_int = 0;
         int var12 = 0;

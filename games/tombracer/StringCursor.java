@@ -24,7 +24,7 @@ final class StringCursor {
               if (dq.field_f == null) {
                 var2 = 3;
               } else {
-                fpa.a(dq.field_f, (byte) 75);
+                fpa.attachCanvasInput(dq.field_f, (byte) 75);
                 var2 = 2;
               }
               if (OpenGlSceneLight.field_o == null &&
@@ -38,7 +38,7 @@ final class StringCursor {
             if (dq.field_f == null) {
               var2 = 3;
             } else {
-              fpa.a(dq.field_f, (byte) 75);
+              fpa.attachCanvasInput(dq.field_f, (byte) 75);
               var2 = 2;
             }
           }
@@ -73,7 +73,7 @@ final class StringCursor {
               }
               return;
             }
-            fpa.a(dq.field_f, (byte) 75);
+            fpa.attachCanvasInput(dq.field_f, (byte) 75);
             var2 = 2;
           } else {
             dq.field_f = OpenGlSceneLight.field_o.enterFullscreen(27013);
@@ -81,7 +81,7 @@ final class StringCursor {
             if (dq.field_f == null) {
               var2 = 3;
             } else {
-              fpa.a(dq.field_f, (byte) 75);
+              fpa.attachCanvasInput(dq.field_f, (byte) 75);
               var2 = 2;
             }
           }

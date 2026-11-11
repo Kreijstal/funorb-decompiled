@@ -95,7 +95,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.refreshState(true, -82);
     }
 
-    final void c(boolean param0) {
+    final void onTextureMatrixChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
         jagdx.IDirect3DDevice var2Lifetime1;
@@ -116,7 +116,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
     }
 
-    final void b(int param0) {
+    final void onProjectionChanged(int param0) {
         jagdx.IDirect3DDevice var2 = null;
         if (this.field_j != null) {
           var2 = this.field_i.field_jd;
@@ -189,7 +189,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
     }
 
-    final void b(byte param0) {
+    final void onViewMatrixChanged(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
         AffineTransform3D var3 = null;
         if (this.field_j != null) {
@@ -200,7 +200,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         if (param0 == 107) {
           return;
         }
-        this.b(116);
+        this.onProjectionChanged(116);
     }
 
     final boolean isSupported(int param0) {
@@ -210,7 +210,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         return this.field_n;
     }
 
-    final void a(boolean param0) {
+    final void onFogChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -240,7 +240,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         AffineTransform3D var5Lifetime1;
         int var4Lifetime1;
         if (param0 < 83) {
-          this.b(false);
+          this.onModelMatrixChanged(false);
           var6 = this.field_i.field_jd;
           var4 = this.owner.d(false);
           var5 = this.owner.E(8);
@@ -257,11 +257,11 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           this.field_j = var2;
           this.field_i.a(var2, -1);
           this.e(1);
-          this.b(125);
-          this.c(true);
-          this.b((byte) 107);
-          this.b(true);
-          this.a(true);
+          this.onProjectionChanged(125);
+          this.onTextureMatrixChanged(true);
+          this.onViewMatrixChanged((byte) 107);
+          this.onModelMatrixChanged(true);
+          this.onFogChanged(true);
           var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
           var6.setVertexShaderConstantF(12, field_h);
           return;
@@ -282,16 +282,16 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.field_j = var2Lifetime1;
         this.field_i.a(var2Lifetime1, -1);
         this.e(1);
-        this.b(125);
-        this.c(true);
-        this.b((byte) 107);
-        this.b(true);
-        this.a(true);
+        this.onProjectionChanged(125);
+        this.onTextureMatrixChanged(true);
+        this.onViewMatrixChanged((byte) 107);
+        this.onModelMatrixChanged(true);
+        this.onFogChanged(true);
         var5Lifetime1.a(32560, 0.0f, 0.0f, field_h, (float)var4Lifetime1, -1.0f);
         var7.setVertexShaderConstantF(12, field_h);
     }
 
-    final void b(boolean param0) {
+    final void onModelMatrixChanged(boolean param0) {
         jagdx.IDirect3DDevice stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         AffineTransform3D stackIn_5_2 = null;
@@ -313,7 +313,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).setVertexShaderConstantF(stackIn_5_1, ((AffineTransform3D) (Object) stackIn_5_2).writeRowMajor4x4(stackIn_6_3, field_f));
           }
         } else {
-          this.c(false);
+          this.onTextureMatrixChanged(false);
           if (null != this.field_j) {
             var2 = this.field_i.field_jd;
             var3 = this.field_i.n((byte) 10);

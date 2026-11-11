@@ -24,7 +24,7 @@ final class RewardChoiceSlot {
         var4.backpatchByteLength(-var5 + var4.position, (byte) -111);
     }
 
-    final void a(int param0) {
+    final void drawSlot(int param0) {
         int var3 = 0;
         ToolkitSprite var4 = null;
         int var2 = this.phase.getRewardChoice((byte) -75).getReward(param0 ^ 28, this.field_f);
@@ -46,7 +46,7 @@ final class RewardChoiceSlot {
         }
     }
 
-    final boolean a(int param0, boolean param1, int param2) {
+    final boolean containsPoint(int param0, boolean param1, int param2) {
         if (param1) {
           return true;
         }

@@ -34,7 +34,7 @@ final class PitSnakeModel implements Renderable {
           var3_int = this.snake.getDirection(2);
           var4 = GameScreen.positiveModulo(-(PortalBehaviour.directionToAngle(ne.field_f[var3_int][1], ne.field_f[var3_int][0], 1) >> 2) + 512, 2048, 73);
           if (param0 < 103) {
-            PitSnakeModel.a((byte) 44, -55, -63, 37);
+            PitSnakeModel.clampToScreenX((byte) 44, -55, -63, 37);
           }
           var5 = this.field_d.getModel((byte) 74);
           gqa.a(var4, -83584144, this.getRenderY((byte) 120), this.getRenderX((byte) -89), var5, this.getRenderZ((byte) -95));
@@ -47,14 +47,14 @@ final class PitSnakeModel implements Renderable {
         if (this.snake.isCoolingDown(180)) {
           if (!this.field_g) {
             this.field_d.a(1, false, (byte) -85, 9);
-            this.field_d.a(6, this.field_d.c((byte) 50), 1, -1);
+            this.field_d.a(6, this.field_d.getCurrentAnimationLength((byte) 50), 1, -1);
           }
           this.field_f = false;
           this.field_g = true;
         } else {
           if (!this.field_f) {
             this.field_d.a(1, false, (byte) 120, 8);
-            this.field_d.a(7, this.field_d.c((byte) -97), 1, -1);
+            this.field_d.a(7, this.field_d.getCurrentAnimationLength((byte) -97), 1, -1);
           }
           this.field_f = true;
           this.field_g = false;
@@ -73,12 +73,12 @@ final class PitSnakeModel implements Renderable {
         return this.snakePit.getRenderX((byte) 101) + this.snake.getOffsetX((byte) 84);
     }
 
-    final static int a(byte param0, int param1, int param2, int param3) {
+    final static int clampToScreenX(byte param0, int param1, int param2, int param3) {
         if (SoftwareRasterizer.width >= param3 + param1) {
           return param3;
         }
         if (param0 != -8) {
-          PitSnakeModel.a((byte) 51, -70, 71, 100);
+          PitSnakeModel.clampToScreenX((byte) 51, -70, 71, 100);
           if (-param1 + param3 + param2 < 0) {
             return -param1 + SoftwareRasterizer.width;
           }

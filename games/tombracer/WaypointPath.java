@@ -22,7 +22,7 @@ final class WaypointPath {
         field_c = null;
     }
 
-    final void a(boolean param0) {
+    final void mirror(boolean param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         for (var2 = 0; var2 < this.points.length; var2++) {

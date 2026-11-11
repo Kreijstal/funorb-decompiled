@@ -32,7 +32,7 @@ final class LoadLevelCommand extends ConsoleMethod {
         }
     }
 
-    final static ToolkitSprite[] a(GraphicsToolkit param0, SpriteData[] param1, int param2) {
+    final static ToolkitSprite[] createToolkitSprites(GraphicsToolkit param0, SpriteData[] param1, int param2) {
         int var4 = 0;
         ToolkitSprite[] var3 = null;
         RuntimeException var3_ref = null;

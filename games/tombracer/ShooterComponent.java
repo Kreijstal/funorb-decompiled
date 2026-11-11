@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ShooterComponent extends PrefabComponent {
-    private boolean field_I;
+    private boolean randomPhase;
     static String field_G;
-    private int field_F;
-    private int field_H;
+    private int timingPatternId;
+    private int phaseOffset;
 
     final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          this.field_F = -66;
+          this.timingPatternId = -66;
           return true;
         }
         return true;
@@ -19,19 +19,19 @@ abstract class ShooterComponent extends PrefabComponent {
         try {
           if (param0) {
             Room var4 = (Room) null;
-            this.a((byte) -1, (mra) null, (Room) null);
+            this.applyTimingPattern((byte) -1, (mra) null, (Room) null);
           }
           super.encode(param0, param1);
-          if (this.A(-1)) {
-            param1.writeBits((byte) 124, this.field_F, 4);
-            if (!this.B(-23309)) {
+          if (this.usesTimingPattern(-1)) {
+            param1.writeBits((byte) 124, this.timingPatternId, 4);
+            if (!this.usesPhaseOffset(-23309)) {
               return;
             }
-            if (this.C(128)) {
-              param1.writeBits((byte) 14, !this.field_I ? 0 : 1, 1);
+            if (this.canRandomisePhase(128)) {
+              param1.writeBits((byte) 14, !this.randomPhase ? 0 : 1, 1);
             }
-            if (!this.field_I) {
-              param1.writeBits((byte) 104, this.field_H, 4);
+            if (!this.randomPhase) {
+              param1.writeBits((byte) 104, this.phaseOffset, 4);
               return;
             }
           }
@@ -40,25 +40,25 @@ abstract class ShooterComponent extends PrefabComponent {
         }
     }
 
-    abstract boolean A(int param0);
+    abstract boolean usesTimingPattern(int param0);
 
-    abstract boolean B(int param0);
+    abstract boolean usesPhaseOffset(int param0);
 
     ShooterComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
-          if (!this.A(-1)) {
+          if (!this.usesTimingPattern(-1)) {
             return;
           }
-          this.field_F = param2.readBits((byte) 44, 4);
-          if (this.B(-23309)) {
-            if (this.C(128)) {
-              this.field_I = param2.readBits((byte) 44, 1) == 1 ? true : false;
+          this.timingPatternId = param2.readBits((byte) 44, 4);
+          if (this.usesPhaseOffset(-23309)) {
+            if (this.canRandomisePhase(128)) {
+              this.randomPhase = param2.readBits((byte) 44, 1) == 1 ? true : false;
             }
-            if (this.field_I) {
+            if (this.randomPhase) {
               return;
             }
-            this.field_H = param2.readBits((byte) 44, 4);
+            this.phaseOffset = param2.readBits((byte) 44, 4);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -92,7 +92,7 @@ abstract class ShooterComponent extends PrefabComponent {
         }
     }
 
-    final void a(byte param0, mra param1, Room param2) {
+    final void applyTimingPattern(byte param0, mra param1, Room param2) {
         RuntimeException var4 = null;
         IsaacCipher var5 = null;
         Weapon var6 = null;
@@ -108,20 +108,20 @@ abstract class ShooterComponent extends PrefabComponent {
           if (param0 != 43) {
             return;
           }
-          if (!this.A(param0 - 44)) {
+          if (!this.usesTimingPattern(param0 - 44)) {
             return;
           }
-          var8 = PlatformComponent.b(this.field_F, 23688);
-          if (this.B(-23309)) {
-            if (this.field_I) {
+          var8 = PlatformComponent.createTimingPattern(this.timingPatternId, 23688);
+          if (this.usesPhaseOffset(-23309)) {
+            if (this.randomPhase) {
               var5 = param2.getRandom(-85);
-              this.field_H = var5.nextBounded(16, param0 - 43);
+              this.phaseOffset = var5.nextBounded(16, param0 - 43);
               if (!(param1 instanceof WeaponShooterBehaviour)) {
-                var8.setPhaseOffset(false, this.field_H * var8.getTotalDuration((byte) -94) / 16);
+                var8.setPhaseOffset(false, this.phaseOffset * var8.getTotalDuration((byte) -94) / 16);
                 param1.setTimingPattern(102, var8);
                 return;
               }
-              var6 = ((WeaponShooterBehaviour) (param1)).l(-2);
+              var6 = ((WeaponShooterBehaviour) (param1)).getWeapon(-2);
               if (var6 != null) {
                 var7 = var6.a(true);
                 if (var7 > 0) {
@@ -129,7 +129,7 @@ abstract class ShooterComponent extends PrefabComponent {
                 }
               }
             }
-            var8.setPhaseOffset(false, this.field_H * var8.getTotalDuration((byte) -94) / 16);
+            var8.setPhaseOffset(false, this.phaseOffset * var8.getTotalDuration((byte) -94) / 16);
           }
           param1.setTimingPattern(102, var8);
           return;
@@ -153,16 +153,16 @@ abstract class ShooterComponent extends PrefabComponent {
         }
     }
 
-    final boolean s(byte param0) {
+    final boolean hasRandomPhase(byte param0) {
         if (param0 < 64) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(true, (BitPacketBuffer) null);
-          return this.field_I;
+          return this.randomPhase;
         }
-        return this.field_I;
+        return this.randomPhase;
     }
 
-    abstract boolean C(int param0);
+    abstract boolean canRandomisePhase(int param0);
 
     final boolean a(int param0) {
         if (param0 != 6) {

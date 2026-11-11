@@ -58,7 +58,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             this.field_a = -123;
           }
           this.ensureTextLayout(param0, 14157);
-          stackIn_3_0 = param0.field_l.a(-1, -this.getTextOriginX(param0, param3, (byte) 119) + param5, -this.textTop(param4, param0, (byte) -48) + param2);
+          stackIn_3_0 = param0.field_l.characterIndexAt(-1, -this.getTextOriginX(param0, param3, (byte) 119) + param5, -this.textTop(param4, param0, (byte) -48) + param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

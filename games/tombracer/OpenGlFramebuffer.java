@@ -12,7 +12,7 @@ final class OpenGlFramebuffer implements Framebuffer {
     private int field_d;
     private FramebufferAttachment[] field_h;
 
-    private final void a(int param0, LegacyOpenGlTexture2D param1, int param2, int param3) {
+    private final void attachTextureLevel(int param0, LegacyOpenGlTexture2D param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         RuntimeException stackIn_12_0 = null;
@@ -51,7 +51,7 @@ final class OpenGlFramebuffer implements Framebuffer {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isComplete(int param0) {
         int var2 = jaggl.OpenGL.glCheckFramebufferStatusEXT(this.field_a);
         int var3 = 59 % ((param0 - 53) / 33);
         if (36053 != var2) {
@@ -63,7 +63,7 @@ final class OpenGlFramebuffer implements Framebuffer {
     public final void bindReadFramebuffer(byte param0) {
         jaggl.OpenGL.glBindFramebufferEXT(36009, this.field_b);
         this.field_d = this.field_d | 2;
-        this.field_a = this.e(0);
+        this.field_a = this.getBindTarget(0);
         if (param0 < 29) {
           this.bindDrawFramebuffer((byte) -62);
         }
@@ -73,7 +73,7 @@ final class OpenGlFramebuffer implements Framebuffer {
         jaggl.OpenGL.glBindFramebufferEXT(36008, 0);
         if (param0 >= 10) {
           this.field_d = this.field_d & -2;
-          this.field_a = this.e(0);
+          this.field_a = this.getBindTarget(0);
           return;
         }
     }
@@ -82,12 +82,12 @@ final class OpenGlFramebuffer implements Framebuffer {
         if (param0 < -115) {
           jaggl.OpenGL.glBindFramebufferEXT(36008, this.field_b);
           this.field_d = this.field_d | 1;
-          this.field_a = this.e(0);
+          this.field_a = this.getBindTarget(0);
           return;
         }
     }
 
-    final void b(int param0, int param1) {
+    final void setReadBuffer(int param0, int param1) {
         if (param0 == this.field_a) {
           throw new RuntimeException();
         }
@@ -98,16 +98,16 @@ final class OpenGlFramebuffer implements Framebuffer {
         if (param0 == -36) {
           jaggl.OpenGL.glBindFramebufferEXT(36160, 0);
           this.field_d = this.field_d & -5;
-          this.field_a = this.e(0);
+          this.field_a = this.getBindTarget(0);
           return;
         }
         this.bindReadFramebuffer((byte) 91);
         jaggl.OpenGL.glBindFramebufferEXT(36160, 0);
         this.field_d = this.field_d & -5;
-        this.field_a = this.e(0);
+        this.field_a = this.getBindTarget(0);
     }
 
-    final void a(int param0, int param1) {
+    final void detachAttachment(int param0, int param1) {
         int var3 = -110 % ((-35 - param0) / 34);
         if (null != this.field_h[param1]) {
           this.field_h[param1].detachFramebuffer(109);
@@ -116,7 +116,7 @@ final class OpenGlFramebuffer implements Framebuffer {
         this.field_h[param1] = null;
     }
 
-    final void a(int param0, OpenGlRenderbuffer param1, boolean param2) {
+    final void attachRenderbuffer(int param0, OpenGlRenderbuffer param1, boolean param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         RuntimeException stackIn_15_0 = null;
@@ -139,7 +139,7 @@ final class OpenGlFramebuffer implements Framebuffer {
           }
           param1.attachFramebuffer(HardwareUnlitEffect.field_d[param0], this.field_a, -23992);
           if (!param2) {
-            this.a(-122, 86);
+            this.detachAttachment(-122, 86);
           }
           this.field_h[param0] = (FramebufferAttachment) ((Object) param1);
           this.field_e = this.field_e | var4_int;
@@ -158,9 +158,9 @@ final class OpenGlFramebuffer implements Framebuffer {
         }
     }
 
-    final void a(boolean param0, LegacyOpenGlTexture2D param1, int param2) {
+    final void attachTexture(boolean param0, LegacyOpenGlTexture2D param1, int param2) {
         try {
-          this.a(1, param1, 0, param2);
+          this.attachTextureLevel(1, param1, 0, param2);
           if (!param0) {
             OpenGlFramebuffer.releaseStatics(-3);
           }
@@ -169,9 +169,9 @@ final class OpenGlFramebuffer implements Framebuffer {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void setDrawBuffer(int param0, byte param1) {
         if (param1 != -91) {
-          this.a(-7, -21);
+          this.detachAttachment(-7, -21);
           if (this.field_a == -1) {
             throw new RuntimeException();
           }
@@ -184,7 +184,7 @@ final class OpenGlFramebuffer implements Framebuffer {
         jaggl.OpenGL.glDrawBuffer(HardwareUnlitEffect.field_d[param0]);
     }
 
-    private final int e(int param0) {
+    private final int getBindTarget(int param0) {
         if ((this.field_d & 4) != 0) {
           return 36160;
         }
@@ -200,20 +200,20 @@ final class OpenGlFramebuffer implements Framebuffer {
     public final void b(int param0) {
         jaggl.OpenGL.glBindFramebufferEXT(36160, this.field_b);
         this.field_d = this.field_d | 4;
-        this.field_a = this.e(param0 ^ param0);
+        this.field_a = this.getBindTarget(param0 ^ param0);
     }
 
     public final void unbindFramebuffer(int param0) {
         if (param0 == 4245) {
           jaggl.OpenGL.glBindFramebufferEXT(36009, 0);
           this.field_d = this.field_d & -3;
-          this.field_a = this.e(0);
+          this.field_a = this.getBindTarget(0);
           return;
         }
-        int discarded$0 = this.e(-53);
+        int discarded$0 = this.getBindTarget(-53);
         jaggl.OpenGL.glBindFramebufferEXT(36009, 0);
         this.field_d = this.field_d & -3;
-        this.field_a = this.e(0);
+        this.field_a = this.getBindTarget(0);
     }
 
     protected final void finalize() throws Throwable {

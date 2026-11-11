@@ -104,7 +104,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_n = this.field_n + (var7.measureWrappedHeight(this.field_F, this.field_m - 40, var7.field_w) + 5);
           }
           var8 = PooledObject.field_h;
-          var9 = cc.readLastLoginMethod((byte) 122, di.a(28));
+          var9 = cc.readLastLoginMethod((byte) 122, di.getApplet(28));
           if (ShaderEffect.field_a != var9) {
             if (var9 == ObjectList.field_d) {
               var8 = SectorCacheStore.field_a;

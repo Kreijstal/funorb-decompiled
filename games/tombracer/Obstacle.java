@@ -279,12 +279,12 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           if (param0 != -1) {
             field_s = (UiComponent) null;
           }
-          var5_int = SimulationObserver.a(this.width, 12, this.y, this.height, param3, this.x, 2);
+          var5_int = SimulationObserver.clipBeamToBox(this.width, 12, this.y, this.height, param3, this.x, 2);
           if (var5_int == -1) {
             return false;
           }
           var6 = wm.a(4096, var5_int, param0 - 59);
-          param3.a(var6, (byte) 47);
+          param3.shortenTo(var6, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -420,7 +420,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         if (param0 != -8195) {
           return;
         }
-        this.addModel(rm.field_a.a((TrapPart) null, (WorldBody) (this), -116), true);
+        this.addModel(rm.field_a.createTrapModel((TrapPart) null, (WorldBody) (this), -116), true);
     }
 
     public final int getRenderZ(byte param0) {

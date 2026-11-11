@@ -22,7 +22,7 @@ abstract class CourseGenerator {
         return this.random.nextBounded(2, 0) == 0 ? true : false;
     }
 
-    private final void b(int param0) {
+    private final void initRandom(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         int var2Lifetime1;
@@ -39,7 +39,7 @@ abstract class CourseGenerator {
     CourseGenerator(int param0, int param1) {
         this.roomCount = param0;
         this.seed = param1;
-        this.b(-125);
+        this.initRandom(-125);
     }
 
     static {

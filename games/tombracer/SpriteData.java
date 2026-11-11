@@ -70,7 +70,7 @@ final class SpriteData {
     }
 
     final static SpriteData loadSprite(ResourceArchive param0, int param1) {
-        byte[] var2 = param0.f(param1, -105);
+        byte[] var2 = param0.getFileById(param1, -105);
         if (var2 == null) {
           return null;
         }
@@ -86,7 +86,7 @@ final class SpriteData {
     }
 
     final static SpriteData loadSprite(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(false, param1, param2);
+        byte[] var3 = param0.getFile(false, param1, param2);
         if (var3 == null) {
           return null;
         }

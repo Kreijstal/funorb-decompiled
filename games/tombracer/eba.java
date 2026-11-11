@@ -147,9 +147,9 @@ final class eba extends pb {
         return stackIn_7_0;
     }
 
-    final Object f(int param0) {
+    final Object getValue(int param0) {
         if (param0 != 29243) {
-          this.f(-86);
+          this.getValue(-86);
           return this.field_o.get();
         }
         return this.field_o.get();

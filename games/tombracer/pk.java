@@ -113,9 +113,9 @@ final class pk extends we {
             var8 = "";
           }
           var10 = ComponentTargetList.a(2843, true, ApproachPlayerLocomotor.field_t, (long)param2, 0);
-          var11.a(-1, -1, RewardChoicePhase.field_t[0], param3 | -16777216, param0, var8);
-          var11.a(param0, false, param5, RewardChoicePhase.field_t[1], param3 | -16777216, -1);
-          var12.a(12199, param0, var10, -1, param3 | -16777216, RewardChoicePhase.field_t[2]);
+          var11.drawCentred(-1, -1, RewardChoicePhase.field_t[0], param3 | -16777216, param0, var8);
+          var11.drawLeft(param0, false, param5, RewardChoicePhase.field_t[1], param3 | -16777216, -1);
+          var12.drawRight(12199, param0, var10, -1, param3 | -16777216, RewardChoicePhase.field_t[2]);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "pk.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -210,7 +210,7 @@ final class pk extends we {
         Object var5Lifetime1;
         Object var5Lifetime2;
         var7 = TombRacer.field_G ? 1 : 0;
-        SingleChildWidget.field_v.a(param1 + 63, false, vea.field_a.toUpperCase() + " - " + bi.field_b[this.field_x].toUpperCase(), 65, -14279929, -1);
+        SingleChildWidget.field_v.drawLeft(param1 + 63, false, vea.field_a.toUpperCase() + " - " + bi.field_b[this.field_x].toUpperCase(), 65, -14279929, -1);
         if (param2 > -9) {
           return;
         }
@@ -226,9 +226,9 @@ final class pk extends we {
           ((ToolkitSprite) (var5Lifetime2)).a(this.field_A[var4] - (this.field_D[var4] >> 1), -(this.field_t[var4] >> 1) + (this.field_B[var4] + param1), this.field_D[var4], this.field_t[var4], 0, 16777215 | var6 << 24, 1);
         }
         var4Lifetime1 = 120 + param1 + 50;
-        eda.field_f.a(-1, -1, RewardChoicePhase.field_t[0], -14671840, var4Lifetime1, OpenGlBuffer.field_a);
-        eda.field_f.a(var4Lifetime1, false, ObjectPool.field_g.toUpperCase(), RewardChoicePhase.field_t[1], -14671840, -1);
-        eda.field_f.a(12199, var4Lifetime1, ContentTransitionDialog.field_L.toUpperCase(), -1, -14671840, RewardChoicePhase.field_t[2]);
+        eda.field_f.drawCentred(-1, -1, RewardChoicePhase.field_t[0], -14671840, var4Lifetime1, OpenGlBuffer.field_a);
+        eda.field_f.drawLeft(var4Lifetime1, false, ObjectPool.field_g.toUpperCase(), RewardChoicePhase.field_t[1], -14671840, -1);
+        eda.field_f.drawRight(12199, var4Lifetime1, ContentTransitionDialog.field_L.toUpperCase(), -1, -14671840, RewardChoicePhase.field_t[2]);
         var5Lifetime1 = null;
         var6Lifetime1 = this.field_E;
         if (var6Lifetime1 == 0) {
@@ -247,7 +247,7 @@ final class pk extends we {
         } else {
           discarded$0 = this.a(this.field_x, (byte) -91, 50 + param1);
         }
-        kn.field_p.a(-1, -1, aaa.a(false) / 2, -14345466, param1 + 405, LegacyOpenGlEnvironmentWaterEffect.field_f);
+        kn.field_p.drawCentred(-1, -1, aaa.a(false) / 2, -14345466, param1 + 405, LegacyOpenGlEnvironmentWaterEffect.field_f);
         return;
     }
 

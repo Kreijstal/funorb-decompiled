@@ -192,12 +192,12 @@ final class TreasureValuesOverlay extends MatchOverlay {
         return null;
     }
 
-    final static void a(int param0, boolean param1, String param2, String param3, String param4, int param5) {
+    final static void addChatMessage(int param0, boolean param1, String param2, String param3, String param4, int param5) {
         gqa var6 = null;
         try {
           if (!param1) {
             String var7 = (String) null;
-            TreasureValuesOverlay.a(-67, true, (String) null, (String) null, (String) null, 15);
+            TreasureValuesOverlay.addChatMessage(-67, true, (String) null, (String) null, (String) null, 15);
           }
           var6 = new gqa(param5, param2, param0, param4, param3);
           DivisionMazeGenerator.appendChatHistory(16599, var6);

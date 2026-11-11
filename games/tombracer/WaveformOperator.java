@@ -11,7 +11,7 @@ final class WaveformOperator extends TextureOperator {
     static SpriteData field_q;
     static String field_s;
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         if (param0 != 116) {
           return;
         }

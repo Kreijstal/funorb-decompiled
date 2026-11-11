@@ -86,7 +86,7 @@ final class RopeBridgeComponent extends PrefabComponent {
             var13.setSize((byte) -11, 4194304, this.width);
           }
           var5 = new PlatformBehaviour(param2, param0);
-          var5.b(-5, this.field_H);
+          var5.setWeightThreshold(-5, this.field_H);
           var13.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new Trap(param2, param0);
           var7 = new Trap(param2, param0);
@@ -104,14 +104,14 @@ final class RopeBridgeComponent extends PrefabComponent {
           var6.setFloating((byte) 17, false);
           var6.setObstructionLevel(3, param1 - 3);
           var8 = new SimpleBlockBehaviour(param2, param0);
-          var8.a(true, -45);
-          var8.a(-28592, true);
+          var8.setPassesProjectiles(true, -45);
+          var8.setPassesBeams(-28592, true);
           var6.addBehaviour((byte) 83, (Behaviour) (var8));
           var7.setFloating((byte) 17, false);
           var7.setObstructionLevel(param1, 0);
           var9 = new SimpleBlockBehaviour(param2, param0);
-          var9.a(true, -128);
-          var9.a(-28592, true);
+          var9.setPassesProjectiles(true, -128);
+          var9.setPassesBeams(-28592, true);
           var7.addBehaviour((byte) 83, (Behaviour) (var9));
           var13.addChild(-107, var6);
           var13.addChild(param1 ^ -61, var7);

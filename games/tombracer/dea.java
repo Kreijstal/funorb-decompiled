@@ -9,7 +9,7 @@ final class dea {
     private boolean field_f;
     private float field_e;
 
-    final void d(int param0) {
+    final void snapToRest(int param0) {
         if (param0 != 31990) {
           return;
         }
@@ -57,7 +57,7 @@ final class dea {
         return (String) null;
     }
 
-    final boolean b(int param0) {
+    final boolean isSettled(int param0) {
         float var2 = this.field_e - this.field_b;
         if (param0 != 20) {
           field_c = true;
@@ -78,7 +78,7 @@ final class dea {
         return false;
     }
 
-    final void a(byte param0, boolean param1, boolean param2) {
+    final void updateFall(byte param0, boolean param1, boolean param2) {
         float var4;
         float var4Lifetime1;
         if (param0 <= -109) {
@@ -104,7 +104,7 @@ final class dea {
           this.field_b = this.field_e;
           return;
         }
-        this.c(-29);
+        this.startDrop(-29);
         var4Lifetime1 = (float)SwitchLinkList.b(0) / 500.0f;
         this.field_d = this.field_d + var4Lifetime1 * var4Lifetime1;
         this.field_b = this.field_b + this.field_d;
@@ -127,7 +127,7 @@ final class dea {
         this.field_b = this.field_e;
     }
 
-    final void c(int param0) {
+    final void startDrop(int param0) {
         this.field_f = false;
         this.field_d = 0.0f;
         if (param0 <= -47) {
@@ -136,7 +136,7 @@ final class dea {
         }
     }
 
-    final static void a(int param0) {
+    final static void closeGameSocket(int param0) {
         if (param0 == 60) {
           if (OpenGlTransform3D.field_e != null) {
             OpenGlTransform3D.field_e.close((byte) 105);
@@ -151,7 +151,7 @@ final class dea {
         }
     }
 
-    final int e(int param0) {
+    final int getPosition(int param0) {
         int var2 = -25 % ((param0 + 41) / 39);
         return (int)this.field_b;
     }
@@ -171,7 +171,7 @@ final class dea {
 
     dea(int param0) {
         this.field_e = (float)param0;
-        this.c(-125);
+        this.startDrop(-125);
     }
 
     static {

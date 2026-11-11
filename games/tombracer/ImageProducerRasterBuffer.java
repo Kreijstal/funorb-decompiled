@@ -98,7 +98,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param2.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
           this.a((byte) 10);
           param2.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
-          this.a(-19216);
+          this.makeTarget(-19216);
           int var5_int = 15 / ((74 - param3) / 41);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "st.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

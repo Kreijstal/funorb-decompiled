@@ -564,7 +564,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         if (param0 != 48) {
           return true;
         }
-        return this.g((byte) -105);
+        return this.isFinished((byte) -105);
     }
 
     void attach(TrapPart param0, WorldBody param1, byte param2) {
@@ -593,7 +593,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
 
     abstract void drawAt(Camera param0, int param1, int param2, int param3, byte param4);
 
-    private final boolean g(byte param0) {
+    private final boolean isFinished(byte param0) {
         int var2;
         var2 = -58 % ((-38 - param0) / 60);
         if (this.a((byte) 74)) {
@@ -641,7 +641,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             var4 = (this.elevationOffset << 16) + this.body.getElevation((byte) 115);
             this.drawAt(param1, this.body.getY(9648), this.body.getX(3), var4, (byte) 46);
             if (var3 != null) {
-              ((Trap) (var3)).a(param1, -10425);
+              ((Trap) (var3)).updateForCamera(param1, -10425);
             }
           }
           if (param0 <= 103) {

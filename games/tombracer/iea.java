@@ -219,7 +219,7 @@ final class iea {
           var17 = var10 * ((var6_int << 1) + 3);
           var18 = var11 * (-3 + (var7 << 1));
           var19 = var16 * (var6_int + 1);
-          nra.fillRange((byte) -55, param2, param0 + param1, vaa.field_a[param3], param0 - param1);
+          C2SRoomResultPacket.fillRange((byte) -55, param2, param0 + param1, vaa.field_a[param3], param0 - param1);
           if (param4 <= 50) {
             field_e = (String) null;
           }
@@ -250,8 +250,8 @@ final class iea {
             var22 = var7 + param3;
             var23 = param0 + var6_int;
             var24 = param0 - var6_int;
-            nra.fillRange((byte) -55, param2, var23, vaa.field_a[var21], var24);
-            nra.fillRange((byte) -55, param2, var23, vaa.field_a[var22], var24);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, var23, vaa.field_a[var21], var24);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, var23, vaa.field_a[var22], var24);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

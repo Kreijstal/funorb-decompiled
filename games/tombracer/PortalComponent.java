@@ -97,7 +97,7 @@ final class PortalComponent extends PrefabComponent {
         if (var4.length >= 1) {
           var3 = var4[0];
           if (var3 instanceof Trap) {
-            this.field_F.g((byte) 99).setTargets(9, new Switchable[]{var3});
+            this.field_F.getSwitchLinks((byte) 99).setTargets(9, new Switchable[]{var3});
           }
         }
     }

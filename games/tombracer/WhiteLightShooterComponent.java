@@ -45,9 +45,9 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         return false;
     }
 
-    final boolean C(int param0) {
+    final boolean canRandomisePhase(int param0) {
         if (param0 != 128) {
-          this.B(18);
+          this.usesPhaseOffset(18);
           return true;
         }
         return true;
@@ -130,7 +130,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         field_L = null;
     }
 
-    final boolean A(int param0) {
+    final boolean usesTimingPattern(int param0) {
         if (param0 != -1) {
           field_L = (String) null;
           return true;
@@ -138,7 +138,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         return true;
     }
 
-    final boolean B(int param0) {
+    final boolean usesPhaseOffset(int param0) {
         if (param0 != -23309) {
           return true;
         }
@@ -163,7 +163,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new BeamShooterBehaviour(param2, param0);
           var5.setEffect(new Effect(6, 10), true);
-          this.a((byte) 43, var5, param2);
+          this.applyTimingPattern((byte) 43, var5, param2);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (BlockModel) (var6.createModel(7, param1 ^ 77));

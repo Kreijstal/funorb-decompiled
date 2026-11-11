@@ -5,13 +5,13 @@ final class BlockModel extends TrapModel {
     private int field_m;
     static pl field_s;
     static long field_t;
-    private fla field_w;
+    private PlayingSound field_w;
     private int field_v;
     static int[] field_n;
-    private fla field_r;
-    private fla field_q;
-    private fla field_x;
-    private fla field_u;
+    private PlayingSound field_r;
+    private PlayingSound field_q;
+    private PlayingSound field_x;
+    private PlayingSound field_u;
     static float[] field_y;
     private int field_p;
     static int field_o;
@@ -42,15 +42,15 @@ final class BlockModel extends TrapModel {
           var5.play(new SoundEvent(2, this.getRenderX((byte) -122), this.getRenderY((byte) 109), this.getRenderZ((byte) -97)), -58);
         }
         if (null != this.field_r) {
-          this.field_r.a(-98, var5);
+          this.field_r.release(-98, var5);
           this.field_r = null;
         }
         if (this.field_q != null) {
-          this.field_q.a(-111, var5);
+          this.field_q.release(-111, var5);
           this.field_q = null;
         }
         if (null != this.field_x) {
-          this.field_x.a(27, var5);
+          this.field_x.release(27, var5);
           this.field_x = null;
         }
     }
@@ -69,18 +69,18 @@ final class BlockModel extends TrapModel {
             return;
           }
           if (this.field_r != null) {
-            this.field_r.a(50, var3);
+            this.field_r.release(50, var3);
             this.field_r = null;
           }
           if (param0 >= -39) {
             return;
           }
           if (null != this.field_q) {
-            this.field_q.a(-89, var3);
+            this.field_q.release(-89, var3);
             this.field_q = null;
           }
           if (this.field_x != null) {
-            this.field_x.a(117, var3);
+            this.field_x.release(117, var3);
             this.field_x = null;
           }
           return;
@@ -211,7 +211,7 @@ final class BlockModel extends TrapModel {
           } else {
             if (null != this.field_r &&
               var4 == 0) {
-              this.field_r.a(-96, var11);
+              this.field_r.release(-96, var11);
               this.field_r = null;
             }
           }
@@ -237,12 +237,12 @@ final class BlockModel extends TrapModel {
             if (var7_int == 0 &&
               null != this.field_x) {
               var11.play(new SoundEvent(6, this.getRenderX((byte) 117), this.getRenderY((byte) 108), this.getRenderZ((byte) -116)), -58);
-              this.field_x.a(81, var11);
+              this.field_x.release(81, var11);
               this.field_x = null;
             }
           }
           if (null != this.field_x) {
-            this.field_x.a(this.getRenderX((byte) -114), var11.field_c, -128, var11.field_h, this.getRenderY((byte) 105));
+            this.field_x.updateVolumeAndPan(this.getRenderX((byte) -114), var11.field_c, -128, var11.field_h, this.getRenderY((byte) 105));
           }
         }
         if (16 == this.field_v) {
@@ -273,13 +273,13 @@ final class BlockModel extends TrapModel {
                 }
                 this.field_m = var8;
                 if (null != this.field_w) {
-                  this.field_w.a(-119, var11);
+                  this.field_w.release(-119, var11);
                   this.field_w = null;
                 }
                 this.field_w = var11.play(new SoundEvent(29 + this.field_m - 1, this.getRenderX((byte) -80), this.getRenderY((byte) 109), this.getRenderZ((byte) -97)), -58);
               } else {
                 if (null != this.field_w) {
-                  this.field_w.a(-94, var11);
+                  this.field_w.release(-94, var11);
                   this.field_w = null;
                   var7 = (Behaviour) (var15.next(-1));
                   continue;
@@ -303,7 +303,7 @@ final class BlockModel extends TrapModel {
                 var7 = (Behaviour) (var17.next(-1));
                 continue;
               }
-              this.field_u.a(param0 - 100, var11);
+              this.field_u.release(param0 - 100, var11);
               this.field_u = null;
               var7 = (Behaviour) (var17.next(-1));
               continue;
@@ -328,7 +328,7 @@ final class BlockModel extends TrapModel {
               }
               this.field_p = var8Lifetime1;
               if (this.field_u != null) {
-                this.field_u.a(-123, var11);
+                this.field_u.release(-123, var11);
                 this.field_u = null;
               }
               this.field_u = var11.play(new SoundEvent(39 + this.field_p - 1, this.getRenderX((byte) 87), this.getRenderY((byte) 127), this.getRenderZ((byte) -111)), -58);
@@ -342,7 +342,7 @@ final class BlockModel extends TrapModel {
         } else {
           if (!var3.isFallingIntoPit(-1) &&
             null != this.field_q) {
-            this.field_q.a(66, var11);
+            this.field_q.release(66, var11);
             this.field_q = null;
           }
         }

@@ -54,13 +54,13 @@ final class StandingsPhase extends MatchPhase {
             this.field_r[var3_int] = var4;
           }
           if (this.screen.isSpectating((byte) 116)) {
-            TripBeamComponent.b(1, 0);
+            TripBeamComponent.playMusicTrack(1, 0);
           } else {
             if (0 == this.field_r[this.screen.localPlayerIndex] &&
               this.matchState.declaredWinner >= 0) {
-              TripBeamComponent.b(1, 2);
+              TripBeamComponent.playMusicTrack(1, 2);
             } else {
-              TripBeamComponent.b(1, 3);
+              TripBeamComponent.playMusicTrack(1, 3);
             }
           }
           if (this.screen.field_D &&
@@ -69,11 +69,11 @@ final class StandingsPhase extends MatchPhase {
             this.field_p[0] = new MenuEntry(33, OpenGlSceneLight.field_q[33], 1, false);
             this.field_p[0].field_b = aaa.a(false) - 110;
             this.field_p[0].field_i = SwitchLinkList.b(0) - 25;
-            this.field_p[0].a(false);
+            this.field_p[0].finishDropAnimation(false);
             this.field_p[1] = new MenuEntry(34, OpenGlSceneLight.field_q[34], 1, false);
             this.field_p[1].field_b = 100;
             this.field_p[1].field_i = SwitchLinkList.b(0) - 25;
-            this.field_p[1].a(false);
+            this.field_p[1].finishDropAnimation(false);
             return;
           }
           this.field_p = new MenuEntry[1];
@@ -82,7 +82,7 @@ final class StandingsPhase extends MatchPhase {
           this.field_p[0] = new MenuEntry(var3_intLifetime1, OpenGlSceneLight.field_q[var3_intLifetime1], 0, false);
           this.field_p[0].field_b = -100 + aaa.a(false);
           this.field_p[0].field_i = SwitchLinkList.b(0) - 25;
-          this.field_p[0].a(false);
+          this.field_p[0].finishDropAnimation(false);
           if (!this.screen.field_D &&
             !TextWidgetPainter.a(43)) {
             this.field_p[0].field_e = aua.field_d.toUpperCase();
@@ -118,13 +118,13 @@ final class StandingsPhase extends MatchPhase {
 
     final boolean handleKey(char param0, int param1, int param2) {
         if (param2 == 13) {
-          this.a(127, 0);
+          this.handleMenuChoice(127, 0);
         } else {
           if (param2 == 34) {
-            this.a(127, 0);
+            this.handleMenuChoice(127, 0);
           } else {
             if (param2 == 83) {
-              this.a(127, 0);
+              this.handleMenuChoice(127, 0);
             }
           }
         }
@@ -267,7 +267,7 @@ final class StandingsPhase extends MatchPhase {
             var23 = dea.formatTime(this.matchState.getSimulationTick((byte) 115, this.screen.localPlayerIndex), (byte) -8);
             MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
             za.field_g.a(-200 + var3, var4 + 60);
-            var13 = LegacyOpenGlShoreWaveWaterEffect.a(var9, 0);
+            var13 = LegacyOpenGlShoreWaveWaterEffect.sumRoomParTimes(var9, 0);
             RoomEffectTraps.a(-1, -36, var4 + 79, dea.formatTime(var13, (byte) -8), -200 + (var3 + za.field_g.paddedWidth()) + 5, kn.field_p, 2431750);
             VariantMask.field_d.a(var3 - 110, 60 + var4);
             RoomEffectTraps.a(-1, -92, 79 + var4, dea.formatTime(var13 + var13 / 2, (byte) -8), VariantMask.field_d.paddedWidth() + (var3 - 110) + 5, kn.field_p, 2431750);
@@ -314,7 +314,7 @@ final class StandingsPhase extends MatchPhase {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void handleMenuChoice(int param0, int param1) {
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (param1 == -1) {
@@ -401,7 +401,7 @@ final class StandingsPhase extends MatchPhase {
           if (param1 &&
             var4 != 0 &&
             0 != PlayerModel.field_b) {
-            this.a(120, var3Lifetime1);
+            this.handleMenuChoice(120, var3Lifetime1);
           }
         }
         if (this.screen.field_D &&

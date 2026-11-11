@@ -359,10 +359,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.a(param1, (byte) -126, param2);
+            param0.ensureFileReady(param1, (byte) -126, param2);
             return null;
           }
-          byte[] var3 = param0.a(false, param1, param2);
+          byte[] var3 = param0.getFile(false, param1, param2);
           if (var3 == null) {
             return null;
           }
@@ -383,7 +383,7 @@ final class VorbisSample extends IntrusiveNode {
     private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_j) {
-          var1 = param0.a(false, 0, 0);
+          var1 = param0.getFile(false, 0, 0);
           if (var1 == null) {
             return false;
           }

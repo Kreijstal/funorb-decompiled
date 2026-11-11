@@ -115,15 +115,15 @@ final class bra extends ofa implements ButtonListener {
           var2.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(BlendModeOperator.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var2, -1);
           if (TextWidgetPainter.a(94)) {
-            this.field_L = this.a(UiWidget.field_k, (byte) 91, (WidgetListener) (this));
+            this.field_L = this.appendDialogButton(UiWidget.field_k, (byte) 91, (WidgetListener) (this));
           }
-          this.field_N = this.a(BitPacketBuffer.field_j, (byte) 54, (WidgetListener) (this));
+          this.field_N = this.appendDialogButton(BitPacketBuffer.field_j, (byte) 54, (WidgetListener) (this));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "bra.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final FocusableWidget a(String param0, byte param1, WidgetListener param2) {
+    private final FocusableWidget appendDialogButton(String param0, byte param1, WidgetListener param2) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

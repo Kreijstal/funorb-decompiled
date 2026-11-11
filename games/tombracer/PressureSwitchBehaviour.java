@@ -41,7 +41,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         var3 = this.getRoom(true).collisionGrid;
         var4 = var3.queryCollidable((byte) -26, this.trap);
         for (var5 = 0; var5 < var4.length; var5++) {
-          if (this.a(var4[var5], (byte) -103)) {
+          if (this.isPressingPlate(var4[var5], (byte) -103)) {
             var2 = var2 + var4[var5].getWeight(75);
           }
         }
@@ -134,7 +134,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    private final boolean a(Collidable param0, byte param1) {
+    private final boolean isPressingPlate(Collidable param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

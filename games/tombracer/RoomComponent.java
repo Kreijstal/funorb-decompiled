@@ -89,9 +89,9 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
         hk.field_e.addChild(-127, RasterShape.field_e);
         oca.field_b = new lla(cla.field_o, hk.field_e);
-        nra.field_a = new UiComponent(0L, (UiComponent) null);
-        nra.field_a.addChild(-122, oca.field_b.field_a);
-        nra.field_a.addChild(-128, ImageProducerRasterBuffer.field_j);
+        C2SRoomResultPacket.field_a = new UiComponent(0L, (UiComponent) null);
+        C2SRoomResultPacket.field_a.addChild(-122, oca.field_b.field_a);
+        C2SRoomResultPacket.field_a.addChild(-128, ImageProducerRasterBuffer.field_j);
         re.a(-29040);
     }
 
@@ -153,7 +153,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
-          var4.a(this.field_f, (byte) -61, this.room, this.field_h);
+          var4.mirror(this.field_f, (byte) -61, this.room, this.field_h);
         }
     }
 
@@ -726,7 +726,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         if (this.room.w(0) == null) {
           return true;
         }
-        return this.room.w(0).a(this, true, true);
+        return this.room.w(0).containsComponent(this, true, true);
     }
 
     public final int getX(int param0) {

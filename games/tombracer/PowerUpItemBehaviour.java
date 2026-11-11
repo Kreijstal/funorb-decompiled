@@ -27,7 +27,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         return 7;
     }
 
-    final void g(byte param0) {
+    final void onRespawn(byte param0) {
         if (param0 != 3) {
           return;
         }

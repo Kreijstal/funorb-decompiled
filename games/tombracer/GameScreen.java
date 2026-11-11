@@ -34,14 +34,14 @@ abstract class GameScreen {
                 if (2 == VerticalGradientOperator.field_n) {
                   if (VerticalScrollbar.isChatSendAllowed(-1)) {
                     var4 = (String) null;
-                    ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+                    ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                   }
                   return true;
                 }
                 if (var3 == 0) {
                   if (VerticalScrollbar.isChatSendAllowed(-1)) {
                     var4 = (String) null;
-                    ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+                    ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                   }
                   return true;
                 }
@@ -54,7 +54,7 @@ abstract class GameScreen {
                 }
                 if (VerticalScrollbar.isChatSendAllowed(-1)) {
                   var4 = (String) null;
-                  ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+                  ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                 }
                 return true;
               }
@@ -75,7 +75,7 @@ abstract class GameScreen {
               }
               if (VerticalScrollbar.isChatSendAllowed(-1)) {
                 var4Lifetime3 = (String) null;
-                ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+                ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
               }
               return true;
             }
@@ -110,7 +110,7 @@ abstract class GameScreen {
             }
             if (VerticalScrollbar.isChatSendAllowed(-1)) {
               var4Lifetime1 = (String) null;
-              ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+              ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
             }
             return true;
           }
@@ -130,7 +130,7 @@ abstract class GameScreen {
           }
           if (VerticalScrollbar.isChatSendAllowed(-1)) {
             var4Lifetime2 = (String) null;
-            ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
+            ResultsPhase.writeChatMessage(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
           }
           return true;
         }
@@ -195,7 +195,7 @@ abstract class GameScreen {
             ql.field_k.writeCipheredOpcode(1, -2988);
             bl.flushPacketBuffer(0, -1);
           }
-          dea.a(60);
+          dea.closeGameSocket(60);
           return;
         }
         GameScreen.a(-50, false, 79);
@@ -204,7 +204,7 @@ abstract class GameScreen {
           ql.field_k.writeCipheredOpcode(1, -2988);
           bl.flushPacketBuffer(0, -1);
         }
-        dea.a(60);
+        dea.closeGameSocket(60);
     }
 
     abstract boolean isFullScreen(int param0);

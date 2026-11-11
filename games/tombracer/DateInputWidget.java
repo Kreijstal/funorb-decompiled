@@ -7,7 +7,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
     static int[] field_x;
     private uba field_w;
 
-    abstract boolean i(byte param0);
+    abstract boolean isEmpty(byte param0);
 
     final static void openPlayerContextMenu(ScrollPane param0, int param1, String param2, long param3, int param4, int[] param5, UiComponent param6, int param7, String param8) {
         if (param4 != -11635) {

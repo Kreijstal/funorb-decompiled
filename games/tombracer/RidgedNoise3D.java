@@ -212,7 +212,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
           if (0 == qpa.field_b.field_y) {
             return;
           }
-          PlayerProfile.a(true);
+          PlayerProfile.clearChatInput(true);
           ni.field_c = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

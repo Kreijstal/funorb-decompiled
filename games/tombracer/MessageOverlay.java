@@ -17,7 +17,7 @@ final class MessageOverlay extends MatchOverlay {
     private int field_s;
 
     final void draw(byte param0) {
-        int var2 = this.field_n.e(-115);
+        int var2 = this.field_n.getPosition(-115);
         ToolkitSprite var3 = gg.field_f;
         int var4 = var3.paddedWidth();
         int var5 = var3.paddedHeight();
@@ -38,21 +38,21 @@ final class MessageOverlay extends MatchOverlay {
                 this.panel.draw(var2 + this.field_u - this.panel.getWidth(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.panel.getHeight(false) / 2 - 10));
               }
               if (this.field_k != null &&
-                this.field_n.b(20)) {
-                kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.a(false, -1), SpriteState.field_l, 1, SoundEvent.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+                this.field_n.isSettled(20)) {
+                kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
               }
               return;
             }
             return;
           }
-          kn.field_p.a((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.a(false, -1), SpriteState.field_l, 0, SoundEvent.a(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
+          kn.field_p.a((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
           if (param0 >= -13) {
             return;
           }
           if (this.panel == null) {
             if (this.field_k != null &&
-              this.field_n.b(20)) {
-              kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.a(false, -1), SpriteState.field_l, 1, SoundEvent.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+              this.field_n.isSettled(20)) {
+              kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
             }
             return;
           }
@@ -60,32 +60,32 @@ final class MessageOverlay extends MatchOverlay {
           if (this.field_k == null) {
             return;
           }
-          if (!this.field_n.b(20)) {
+          if (!this.field_n.isSettled(20)) {
             return;
           }
-          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.a(false, -1), SpriteState.field_l, 1, SoundEvent.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
         if (this.field_j != null) {
-          kn.field_p.a((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.a(false, -1), SpriteState.field_l, 0, SoundEvent.a(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
+          kn.field_p.a((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
           if (param0 >= -13) {
             return;
           }
           if (this.panel != null) {
             this.panel.draw(var2 + this.field_u - this.panel.getWidth(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.panel.getHeight(false) / 2 - 10));
             if (this.field_k != null &&
-              this.field_n.b(20)) {
-              kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.a(false, -1), SpriteState.field_l, 1, SoundEvent.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+              this.field_n.isSettled(20)) {
+              kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
             }
             return;
           }
           if (this.field_k == null) {
             return;
           }
-          if (!this.field_n.b(20)) {
+          if (!this.field_n.isSettled(20)) {
             return;
           }
-          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.a(false, -1), SpriteState.field_l, 1, SoundEvent.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
         if (param0 >= -13) {
@@ -96,22 +96,22 @@ final class MessageOverlay extends MatchOverlay {
           if (this.field_k == null) {
             return;
           }
-          if (!this.field_n.b(20)) {
+          if (!this.field_n.isSettled(20)) {
             return;
           }
-          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.a(false, -1), SpriteState.field_l, 1, SoundEvent.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
         if (this.field_k == null) {
           return;
         }
-        if (this.field_n.b(20)) {
-          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.a(false, -1), SpriteState.field_l, 1, SoundEvent.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+        if (this.field_n.isSettled(20)) {
+          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
     }
 
-    final void a(String param0, String param1, String param2, byte param3) {
+    final void setMessages(String param0, String param1, String param2, byte param3) {
         try {
           int var5_int = -15 / ((-54 - param3) / 43);
           this.field_k = param2;
@@ -167,7 +167,7 @@ final class MessageOverlay extends MatchOverlay {
           this.field_u = this.field_u - 32;
           if (this.field_u < -gg.field_f.height()) {
             super.finish(-10968);
-            this.field_n.a((byte) -113, true, false);
+            this.field_n.updateFall((byte) -113, true, false);
             if (null != this.panel) {
               this.panel.update(-7109);
             }
@@ -183,7 +183,7 @@ final class MessageOverlay extends MatchOverlay {
             return;
           }
         }
-        this.field_n.a((byte) -113, true, false);
+        this.field_n.updateFall((byte) -113, true, false);
         if (null != this.panel) {
           this.panel.update(-7109);
           if (param0 >= -107) {

@@ -74,9 +74,9 @@ final class DateFieldsWidget extends DateInputWidget {
         if (param3 == 0) {
           param1 = param1 + this.field_n;
           param0 = param0 + this.field_i;
-          this.a(-44, param0, this.field_B, param1, oda.field_i);
-          this.a(-121, param0, this.field_E, param1, kp.field_d);
-          this.a(param2 - 62, param0, this.field_D, param1, DropdownList.field_y);
+          this.drawFieldLabel(-44, param0, this.field_B, param1, oda.field_i);
+          this.drawFieldLabel(-121, param0, this.field_E, param1, kp.field_d);
+          this.drawFieldLabel(param2 - 62, param0, this.field_D, param1, DropdownList.field_y);
           return;
         }
     }
@@ -110,7 +110,7 @@ final class DateFieldsWidget extends DateInputWidget {
         return null;
     }
 
-    private final void a(int param0, int param1, UiWidget param2, int param3, String param4) {
+    private final void drawFieldLabel(int param0, int param1, UiWidget param2, int param3, String param4) {
         try {
           if (param0 > -25) {
             this.field_B = (TextInputWidget) null;
@@ -140,7 +140,7 @@ final class DateFieldsWidget extends DateInputWidget {
         }
     }
 
-    final boolean i(byte param0) {
+    final boolean isEmpty(byte param0) {
         int var2 = 39 / ((31 - param0) / 33);
         if (this.field_B.field_o == null) {
           return true;

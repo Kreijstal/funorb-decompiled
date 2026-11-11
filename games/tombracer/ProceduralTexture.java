@@ -26,14 +26,14 @@ final class ProceduralTexture extends DualLinkNode {
         try {
           if (param2 <= BevelOperator.field_m) {
             for (var4_int = 0; var4_int < this.spriteIds.length; var4_int++) {
-              if (!param0.a(BevelOperator.field_m, (byte) -106, this.spriteIds[var4_int])) {
+              if (!param0.ensureFileReady(BevelOperator.field_m, (byte) -106, this.spriteIds[var4_int])) {
                 return false;
               }
             }
           } else {
             var4_int = 0;
             while (var4_int < this.spriteIds.length) {
-              if (param0.a(-15121, this.spriteIds[var4_int])) {
+              if (param0.ensureFileReadyById(-15121, this.spriteIds[var4_int])) {
                 var4_int++;
                 continue;
               }

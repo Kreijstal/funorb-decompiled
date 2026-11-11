@@ -7,7 +7,7 @@ abstract class ConstraintLocomotor extends Locomotor {
     private int field_q;
     private int field_o;
 
-    final int g(byte param0) {
+    final int getAnchorY(byte param0) {
         if (param0 == 30) {
           return this.getTrapInitialLocalY(false) + this.field_q;
         }
@@ -79,11 +79,11 @@ abstract class ConstraintLocomotor extends Locomotor {
         }
     }
 
-    final int f(int param0) {
+    final int getAnchorX(int param0) {
         if (param0 == 10) {
           return this.getTrapInitialLocalX((byte) -52) + this.field_o;
         }
-        this.f(-109);
+        this.getAnchorX(-109);
         return this.getTrapInitialLocalX((byte) -52) + this.field_o;
     }
 
@@ -93,7 +93,7 @@ abstract class ConstraintLocomotor extends Locomotor {
         int var1 = -33 / ((-22 - param0) / 52);
     }
 
-    final int e(byte param0) {
+    final int getAnchorAngle(byte param0) {
         if (param0 != -43) {
           this.field_o = 9;
           return this.getTrapInitialAngle(true);

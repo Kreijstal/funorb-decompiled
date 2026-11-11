@@ -465,7 +465,7 @@ final class ColourGradientOperator extends TextureOperator {
         return var11;
     }
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         if (this.field_o == null) {
           this.d(1, -6333);
         }

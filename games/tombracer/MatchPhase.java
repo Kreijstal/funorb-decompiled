@@ -62,23 +62,23 @@ abstract class MatchPhase {
         return ej.field_a.f(param0 ^ -2147483552);
     }
 
-    private final void a(byte param0) {
+    private final void createMenuButton(byte param0) {
         this.field_k = new MenuEntry(0, OpenGlSceneLight.field_q[0], 0, false);
         if (param0 == -78) {
           this.field_k.field_b = this.field_k.getWidth(-163) / 2 + 10;
           this.field_k.field_i = -25 + SwitchLinkList.b(0);
-          this.field_k.a(false);
+          this.field_k.finishDropAnimation(false);
           this.field_a = new MenuInputState(1);
           return;
         }
-        this.a((byte) 97);
+        this.createMenuButton((byte) 97);
         this.field_k.field_b = this.field_k.getWidth(-163) / 2 + 10;
         this.field_k.field_i = -25 + SwitchLinkList.b(0);
-        this.field_k.a(false);
+        this.field_k.finishDropAnimation(false);
         this.field_a = new MenuInputState(1);
     }
 
-    final void c(int param0) {
+    final void updateMenuButton(int param0) {
         boolean stackIn_4_1 = false;
         int stackIn_14_0 = 0;
         MenuInputState stackIn_16_0 = null;
@@ -146,7 +146,7 @@ abstract class MatchPhase {
           }
           stackIn_27_0 = false;
           stackIn_28_1 = (!this.screen.field_D) ? 9 : 7;
-          ConstrainToRectangleLocomotor.a(stackIn_27_0, stackIn_28_1, (byte) 97);
+          ConstrainToRectangleLocomotor.showMenuScreen(stackIn_27_0, stackIn_28_1, (byte) 97);
           return;
         }
         if (this.field_k.field_b + 80 <= AgeValidator.field_j) {
@@ -184,7 +184,7 @@ abstract class MatchPhase {
           }
           stackIn_58_0 = false;
           stackIn_59_1 = (!this.screen.field_D) ? 9 : 7;
-          ConstrainToRectangleLocomotor.a(stackIn_58_0, stackIn_59_1, (byte) 97);
+          ConstrainToRectangleLocomotor.showMenuScreen(stackIn_58_0, stackIn_59_1, (byte) 97);
           return;
         }
         if (-25 + this.field_k.field_i <= GridWidgetContainer.field_B) {
@@ -226,7 +226,7 @@ abstract class MatchPhase {
         }
         stackIn_92_0 = false;
         stackIn_93_1 = (!this.screen.field_D) ? 9 : 7;
-        ConstrainToRectangleLocomotor.a(stackIn_92_0, stackIn_93_1, (byte) 97);
+        ConstrainToRectangleLocomotor.showMenuScreen(stackIn_92_0, stackIn_93_1, (byte) 97);
         return;
     }
 
@@ -235,13 +235,13 @@ abstract class MatchPhase {
           this.matchState = param0.matchState;
           this.protocol = param1;
           this.screen = param0;
-          this.a((byte) -78);
+          this.createMenuButton((byte) -78);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "qra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void d(int param0) {
+    final void drawMenuButton(int param0) {
         if (param0 != -27142) {
           return;
         }

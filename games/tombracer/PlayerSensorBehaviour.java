@@ -27,7 +27,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
         return param0;
     }
 
-    private final boolean r(int param0) {
+    private final boolean isPlayerFacingSensor(int param0) {
         int var2 = this.getPlayer((byte) 19).getFacingAngle(-25787);
         int var3 = S2CNextRoundPacket.abs(var2 - (4096 + this.field_v), -120);
         var3 = GameScreen.positiveModulo(var3, param0, 109);
@@ -45,7 +45,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    private final boolean l(int param0) {
+    private final boolean isPlayerInSensorArc(int param0) {
         int var2 = this.trap.getFacingAngle(-25787);
         int var3 = S2CNextRoundPacket.abs(var2 - this.field_v, -113);
         var3 = GameScreen.positiveModulo(var3, param0, param0 ^ -8300);
@@ -86,7 +86,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
         return this.field_n;
     }
 
-    private final boolean e(boolean param0) {
+    private final boolean isPlayerInRange(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -228,23 +228,23 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
               }
               if (var2 != 0 &&
                 this.field_s) {
-                stackIn_13_0 = (!this.r(8192)) ? 0 : 1;
+                stackIn_13_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;
                 var2 = stackIn_13_0;
               }
               if (var2 != 0 &&
                 this.field_r) {
-                stackIn_20_0 = (!this.l(8192)) ? 0 : 1;
+                stackIn_20_0 = (!this.isPlayerInSensorArc(8192)) ? 0 : 1;
                 var2 = stackIn_20_0;
               }
               if (var2 != 0 &&
                 this.field_q) {
-                stackIn_26_0 = (!this.e(false)) ? 0 : 1;
+                stackIn_26_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
                 var2 = stackIn_26_0;
               }
               this.field_n.setInput((byte) -14, var2 != 0);
               return;
             }
-            stackIn_34_0 = (!this.d(false)) ? 0 : 1;
+            stackIn_34_0 = (!this.hasPlayerFired(false)) ? 0 : 1;
             var2 = stackIn_34_0;
           }
           if (var2 != 0) {
@@ -260,17 +260,17 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
                 var5 = var8.getY(9648) - this.trap.getY(9648);
                 this.field_v = qva.a((byte) -94, var5, var4);
                 if (this.field_s) {
-                  stackIn_42_0 = (!this.r(8192)) ? 0 : 1;
+                  stackIn_42_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;
                   var2 = stackIn_42_0;
                 }
                 if (var2 != 0 &&
                   this.field_r) {
-                  stackIn_49_0 = (!this.l(8192)) ? 0 : 1;
+                  stackIn_49_0 = (!this.isPlayerInSensorArc(8192)) ? 0 : 1;
                   var2 = stackIn_49_0;
                 }
                 if (var2 != 0 &&
                   this.field_q) {
-                  stackIn_55_0 = (!this.e(false)) ? 0 : 1;
+                  stackIn_55_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
                   var2 = stackIn_55_0;
                 }
                 this.field_n.setInput((byte) -14, var2 != 0);
@@ -280,26 +280,26 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
           }
           if (var2 != 0 &&
             this.field_s) {
-            stackIn_66_0 = (!this.r(8192)) ? 0 : 1;
+            stackIn_66_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;
             var2 = stackIn_66_0;
           }
           boolean decompiledFrameRemainder2 = true;
           if (var2 != 0) {
             if (!this.field_r) {
               if (this.field_q) {
-                stackIn_73_0 = (!this.e(false)) ? 0 : 1;
+                stackIn_73_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
                 var2 = stackIn_73_0;
               }
               decompiledFrameRemainder2 = false;
             }
             else {
-              stackIn_81_0 = (!this.l(8192)) ? 0 : 1;
+              stackIn_81_0 = (!this.isPlayerInSensorArc(8192)) ? 0 : 1;
               var2 = stackIn_81_0;
             }
           }
           if ((decompiledFrameRemainder2) && (var2 != 0 &&
             this.field_q)) {
-            stackIn_89_0 = (!this.e(false)) ? 0 : 1;
+            stackIn_89_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
             var2 = stackIn_89_0;
           }
         } else {
@@ -321,48 +321,48 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
               }
               if (var2 != 0 &&
                 this.field_s) {
-                stackIn_104_0 = (!this.r(8192)) ? 0 : 1;
+                stackIn_104_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;
                 var2 = stackIn_104_0;
               }
               if (var2 != 0 &&
                 this.field_r) {
-                stackIn_111_0 = (!this.l(8192)) ? 0 : 1;
+                stackIn_111_0 = (!this.isPlayerInSensorArc(8192)) ? 0 : 1;
                 var2 = stackIn_111_0;
               }
               if (var2 != 0 &&
                 this.field_q) {
-                stackIn_117_0 = (!this.e(false)) ? 0 : 1;
+                stackIn_117_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
                 var2 = stackIn_117_0;
               }
               this.field_n.setInput((byte) -14, var2 != 0);
               return;
             }
-            stackIn_126_0 = (!this.d(false)) ? 0 : 1;
+            stackIn_126_0 = (!this.hasPlayerFired(false)) ? 0 : 1;
             var2 = stackIn_126_0;
           }
           if (var2 == 0) {
             if (var2 != 0 &&
               this.field_s) {
-              stackIn_133_0 = (!this.r(8192)) ? 0 : 1;
+              stackIn_133_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;
               var2 = stackIn_133_0;
             }
             boolean decompiledFrameRemainder1 = true;
             if (var2 != 0) {
               if (!this.field_r) {
                 if (this.field_q) {
-                  stackIn_141_0 = (!this.e(false)) ? 0 : 1;
+                  stackIn_141_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
                   var2 = stackIn_141_0;
                 }
                 decompiledFrameRemainder1 = false;
               }
               else {
-                stackIn_147_0 = (!this.l(8192)) ? 0 : 1;
+                stackIn_147_0 = (!this.isPlayerInSensorArc(8192)) ? 0 : 1;
                 var2 = stackIn_147_0;
               }
             }
             if ((decompiledFrameRemainder1) && (var2 != 0 &&
               this.field_q)) {
-              stackIn_155_0 = (!this.e(false)) ? 0 : 1;
+              stackIn_155_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
               var2 = stackIn_155_0;
             }
           } else {
@@ -373,26 +373,26 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
               this.field_v = qva.a((byte) -94, var5, var4);
               if (var2 != 0 &&
                 this.field_s) {
-                stackIn_218_0 = (!this.r(8192)) ? 0 : 1;
+                stackIn_218_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;
                 var2 = stackIn_218_0;
               }
               boolean decompiledFrameRemainder0 = true;
               if (var2 != 0) {
                 if (!this.field_r) {
                   if (this.field_q) {
-                    stackIn_226_0 = (!this.e(false)) ? 0 : 1;
+                    stackIn_226_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
                     var2 = stackIn_226_0;
                   }
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  stackIn_232_0 = (!this.l(8192)) ? 0 : 1;
+                  stackIn_232_0 = (!this.isPlayerInSensorArc(8192)) ? 0 : 1;
                   var2 = stackIn_232_0;
                 }
               }
               if ((decompiledFrameRemainder0) && (var2 != 0 &&
                 this.field_q)) {
-                stackIn_240_0 = (!this.e(false)) ? 0 : 1;
+                stackIn_240_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
                 var2 = stackIn_240_0;
               }
               this.field_n.setInput((byte) -14, var2 != 0);
@@ -405,17 +405,17 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
               this.field_v = qva.a((byte) -94, var5, var4);
               if (var2 != 0 &&
                 this.field_s) {
-                stackIn_195_0 = (!this.r(8192)) ? 0 : 1;
+                stackIn_195_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;
                 var2 = stackIn_195_0;
               }
               if (var2 != 0 &&
                 this.field_r) {
-                stackIn_202_0 = (!this.l(8192)) ? 0 : 1;
+                stackIn_202_0 = (!this.isPlayerInSensorArc(8192)) ? 0 : 1;
                 var2 = stackIn_202_0;
               }
               if (var2 != 0 &&
                 this.field_q) {
-                stackIn_210_0 = (!this.e(false)) ? 0 : 1;
+                stackIn_210_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
                 var2 = stackIn_210_0;
               }
               this.field_n.setInput((byte) -14, var2 != 0);
@@ -423,24 +423,24 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
             }
             if (var2 != 0 &&
               this.field_s) {
-              stackIn_165_0 = (!this.r(8192)) ? 0 : 1;
+              stackIn_165_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;
               var2 = stackIn_165_0;
             }
             if (var2 != 0) {
               if (!this.field_r) {
                 if (this.field_q) {
-                  stackIn_173_0 = (!this.e(false)) ? 0 : 1;
+                  stackIn_173_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
                   var2 = stackIn_173_0;
                 }
                 this.field_n.setInput((byte) -14, var2 != 0);
                 return;
               }
-              stackIn_179_0 = (!this.l(8192)) ? 0 : 1;
+              stackIn_179_0 = (!this.isPlayerInSensorArc(8192)) ? 0 : 1;
               var2 = stackIn_179_0;
             }
             if (var2 != 0 &&
               this.field_q) {
-              stackIn_187_0 = (!this.e(false)) ? 0 : 1;
+              stackIn_187_0 = (!this.isPlayerInRange(false)) ? 0 : 1;
               var2 = stackIn_187_0;
             }
           }
@@ -475,7 +475,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    private final boolean d(boolean param0) {
+    private final boolean hasPlayerFired(boolean param0) {
         if (param0) {
           return false;
         }

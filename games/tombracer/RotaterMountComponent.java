@@ -17,7 +17,7 @@ final class RotaterMountComponent extends PrefabComponent {
           field_H = null;
           return;
         }
-        RotaterMountComponent.r((byte) 98);
+        RotaterMountComponent.updateMusicFadeIn((byte) 98);
         field_G = null;
         field_K = null;
         field_H = null;
@@ -38,7 +38,7 @@ final class RotaterMountComponent extends PrefabComponent {
         this.setMounts((byte) 89, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 8)});
     }
 
-    final static void r(byte param0) {
+    final static void updateMusicFadeIn(byte param0) {
         int var1 = 0;
         if (HardwareRidgedWaterNoise.field_v < 224) {
           var1 = HardwareRidgedWaterNoise.field_v % 32;

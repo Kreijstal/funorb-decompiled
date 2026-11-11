@@ -8,10 +8,10 @@ final class BrazierComponent extends PrefabComponent {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         if (param3 > param0) {
-          nra.fillRange((byte) -55, param1, param3, vaa.field_a[param2], param0);
+          C2SRoomResultPacket.fillRange((byte) -55, param1, param3, vaa.field_a[param2], param0);
           return;
         }
-        nra.fillRange((byte) -55, param1, param0, vaa.field_a[param2], param3);
+        C2SRoomResultPacket.fillRange((byte) -55, param1, param0, vaa.field_a[param2], param3);
         if (!param4) {
           return;
         }

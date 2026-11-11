@@ -13,7 +13,7 @@ final class TripBeamComponent extends SwitchComponent {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void playMusicTrack(int param0, int param1) {
         int var4 = 0;
         MusicTrack var2 = null;
         RuntimeException var2_ref = null;
@@ -93,9 +93,9 @@ final class TripBeamComponent extends SwitchComponent {
           var4.setObstructionLevel(param1, 0);
           var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new TripBeamBehaviour(param2, param0);
-          var5.a((byte) -8, new TimingPattern(new int[]{}));
+          var5.setTimingPattern((byte) -8, new TimingPattern(new int[]{}));
           var5.b(0, 636);
-          this.a(var5, (byte) -107);
+          this.bindSwitchState(var5, (byte) -107);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (BlockModel) (var6.createModel(7, 82));

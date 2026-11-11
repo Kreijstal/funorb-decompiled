@@ -155,9 +155,9 @@ final class GameAssetLoader implements LoadingStage {
         if (this.field_h != null &&
           null != this.field_p) {
           fp.loadTitleSprites(uba.loadingQuipsShort[1], 40, this.field_h, (byte) 17);
-          TextLayout.a((byte) -105, this.field_p, 50, uba.loadingQuipsShort[2]);
+          TextLayout.loadMenuBackgrounds((byte) -105, this.field_p, 50, uba.loadingQuipsShort[2]);
           this.field_p = null;
-          KeySwitchComponent.a((byte) -86, uba.loadingQuipsShort[3], this.field_q, this.field_h, 60);
+          KeySwitchComponent.loadFonts((byte) -86, uba.loadingQuipsShort[3], this.field_q, this.field_h, 60);
           this.drawLoadingProgress(65, (byte) 47, uba.loadingQuipsShort[4]);
           dqa.createTextureProvider(this.field_r, this.field_m, (byte) 55, this.field_h);
           this.drawLoadingProgress(70, (byte) 47, uba.loadingQuipsShort[5]);
@@ -176,7 +176,7 @@ final class GameAssetLoader implements LoadingStage {
           return;
         }
         if (null != this.field_f) {
-          TileOperator.a(this.field_f, uba.loadingQuipsShort[8], false, 90, this.field_g, this.field_a);
+          TileOperator.loadCharacterAnimations(this.field_f, uba.loadingQuipsShort[8], false, 90, this.field_g, this.field_a);
           this.field_g = null;
           this.field_a = null;
           this.field_f = null;
@@ -189,7 +189,7 @@ final class GameAssetLoader implements LoadingStage {
           this.field_o != null) {
           sb.a(-70, this.field_k, this.field_o, this.field_l, this.field_b);
           for (var3 = 0; 237 > var3; var3++) {
-            fea.a(false, var3);
+            fea.loadSoundEffect(false, var3);
           }
           for (var3Lifetime1 = 0; var3Lifetime1 < 4; var3Lifetime1++) {
             DateInputWidget.loadMusicTrack(false, var3Lifetime1);
@@ -287,7 +287,7 @@ final class GameAssetLoader implements LoadingStage {
             var6 = var11.readUnsignedByte(255);
             dga.a(var11, 0);
             var12.a(var11, var6, (byte) 39);
-            mq.field_e = var12.a(79);
+            mq.field_e = var12.getProfile(79);
             ComponentTargetList.field_e = var12.b((byte) -78);
             toa.field_j = true;
             stackIn_18_0 = "profile loaded";
@@ -341,7 +341,7 @@ final class GameAssetLoader implements LoadingStage {
         SpriteTileOperator.field_t = (GameScreen) ((Object) nl.getMenuScreen(0, (byte) 50));
         ima.a(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);
         ad.field_j.draw(param0 ^ -49);
-        gn.field_C.a(-19216);
+        gn.field_C.makeTarget(-19216);
         if (param0 != -49) {
           this.loadNextAsset(-107);
         }

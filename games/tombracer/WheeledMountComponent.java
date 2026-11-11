@@ -39,7 +39,7 @@ final class WheeledMountComponent extends PathMoverComponent {
 
     final static void updateSounds(byte param0) {
         int var1_int = 0;
-        fla var2 = null;
+        PlayingSound var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -47,14 +47,14 @@ final class WheeledMountComponent extends PathMoverComponent {
         try {
           ValidatedTextInputWidget.pumpAudio(-16310);
           var1_int = -106 / ((-7 - param0) / 37);
-          var2 = (fla) (nl.field_f.first(-80));
+          var2 = (PlayingSound) (nl.field_f.first(-80));
           while (var2 != null) {
-            var2.c(-97);
+            var2.fadeOutStep(-97);
             if (var2.field_h <= 0) {
               VariantMask.removeSoundStream(var2.field_i, (byte) -42);
               var2.unlink(25);
             }
-            var2 = (fla) (nl.field_f.next(107));
+            var2 = (PlayingSound) (nl.field_f.next(107));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

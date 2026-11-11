@@ -23,7 +23,7 @@ final class LaserShooterComponent extends ShooterComponent {
           var6 = new Effect(1, 10);
           var6.setDeathMessageIndex(1, 13);
           var5.setEffect(var6, true);
-          this.a((byte) 43, var5, param2);
+          this.applyTimingPattern((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (BlockModel) (var7.createModel(7, 100));
@@ -124,7 +124,7 @@ final class LaserShooterComponent extends ShooterComponent {
         return false;
     }
 
-    final static ConsoleToken[] a(byte param0, String param1) {
+    final static ConsoleToken[] tokenizeCommand(byte param0, String param1) {
         int incrementValue$1 = 0;
         IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
@@ -184,14 +184,14 @@ final class LaserShooterComponent extends ShooterComponent {
         return 7;
     }
 
-    final boolean B(int param0) {
+    final boolean usesPhaseOffset(int param0) {
         if (param0 != -23309) {
           return false;
         }
         return true;
     }
 
-    final boolean C(int param0) {
+    final boolean canRandomisePhase(int param0) {
         if (param0 != 128) {
           return true;
         }
@@ -223,7 +223,7 @@ final class LaserShooterComponent extends ShooterComponent {
         this.setSize(112, 2097152, 2097152);
     }
 
-    final boolean A(int param0) {
+    final boolean usesTimingPattern(int param0) {
         if (param0 != -1) {
           return true;
         }

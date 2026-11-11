@@ -80,7 +80,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         var6 = 131072 + RandomBrickOperator.max(this.trap.getWidth(param0 - 5467), this.trap.getHeight((byte) 55), param0 ^ 5416) / 2;
         var7 = this.trap.getX(3) + gqa.multiplyFixed(var4, (byte) 24, var6);
         var8 = this.trap.getY(9648) + gqa.multiplyFixed(var5, (byte) 24, var6);
-        this.field_s.a(var7, gqa.multiplyFixed(var4, (byte) 24, this.field_o) + var7, var8, gqa.multiplyFixed(var5, (byte) 24, this.field_o) + var8, 44);
+        this.field_s.setEndpoints(var7, gqa.multiplyFixed(var4, (byte) 24, this.field_o) + var7, var8, gqa.multiplyFixed(var5, (byte) 24, this.field_o) + var8, 44);
         this.field_s.field_b = this.field_o;
         this.field_s.field_i = this.trap.getTopElevation(param0 ^ param0) << 16;
         var9_int = this.field_r.type;
@@ -256,9 +256,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             var17 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + param1);
             var18 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 - var8);
             var19 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var8);
-            nra.fillRange((byte) -55, param4, var18, var39, var16);
-            nra.fillRange((byte) -55, param5, var19, var39, var18);
-            nra.fillRange((byte) -55, param4, var17, var39, var19);
+            C2SRoomResultPacket.fillRange((byte) -55, param4, var18, var39, var16);
+            C2SRoomResultPacket.fillRange((byte) -55, param5, var19, var39, var18);
+            C2SRoomResultPacket.fillRange((byte) -55, param4, var17, var39, var19);
           }
           var14 = -1;
           while (true) {
@@ -287,10 +287,10 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
                   var17Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var7_int);
                   var18Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var7_int + param6);
                   if (var16Lifetime1 <= hc.field_h) {
-                    nra.fillRange((byte) -55, param4, var17Lifetime1, vaa.field_a[var16Lifetime1], var18Lifetime1);
+                    C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1, vaa.field_a[var16Lifetime1], var18Lifetime1);
                   }
                   if (gca.field_d <= var15) {
-                    nra.fillRange((byte) -55, param4, var17Lifetime1, vaa.field_a[var15], var18Lifetime1);
+                    C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1, vaa.field_a[var15], var18Lifetime1);
                   }
                 } else {
                   var17Lifetime1 = GasVentModel.field_m[var9];
@@ -300,15 +300,15 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
                   var21 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var17Lifetime1 + param6);
                   if (var16Lifetime1 <= hc.field_h) {
                     var40 = vaa.field_a[var16Lifetime1];
-                    nra.fillRange((byte) -55, param4, var21, var40, var19Lifetime1);
-                    nra.fillRange((byte) -55, param5, var20, var40, var21);
-                    nra.fillRange((byte) -55, param4, var18Lifetime1, var40, var20);
+                    C2SRoomResultPacket.fillRange((byte) -55, param4, var21, var40, var19Lifetime1);
+                    C2SRoomResultPacket.fillRange((byte) -55, param5, var20, var40, var21);
+                    C2SRoomResultPacket.fillRange((byte) -55, param4, var18Lifetime1, var40, var20);
                   }
                   if (var15 >= gca.field_d) {
                     var41 = vaa.field_a[var15];
-                    nra.fillRange((byte) -55, param4, var21, var41, var19Lifetime1);
-                    nra.fillRange((byte) -55, param5, var20, var41, var21);
-                    nra.fillRange((byte) -55, param4, var18Lifetime1, var41, var20);
+                    C2SRoomResultPacket.fillRange((byte) -55, param4, var21, var41, var19Lifetime1);
+                    C2SRoomResultPacket.fillRange((byte) -55, param5, var20, var41, var21);
+                    C2SRoomResultPacket.fillRange((byte) -55, param4, var18Lifetime1, var41, var20);
                   }
                 }
               }
@@ -333,12 +333,12 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             var18Lifetime1Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var18Lifetime1Lifetime1);
             if (var8 <= var7_int) {
               if (hc.field_h >= var16Lifetime1Lifetime1) {
-                nra.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var16Lifetime1Lifetime1], var18Lifetime1Lifetime1);
+                C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var16Lifetime1Lifetime1], var18Lifetime1Lifetime1);
               }
               if (gca.field_d > var15Lifetime1) {
                 continue;
               }
-              nra.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var15Lifetime1], var18Lifetime1Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var15Lifetime1], var18Lifetime1Lifetime1);
               continue;
             }
             if (var11 < var7_int) {
@@ -351,17 +351,17 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             var21Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var19Lifetime1Lifetime1 + param6);
             if (var16Lifetime1Lifetime1 <= hc.field_h) {
               var42 = vaa.field_a[var16Lifetime1Lifetime1];
-              nra.fillRange((byte) -55, param4, var21Lifetime1, var42, var18Lifetime1Lifetime1);
-              nra.fillRange((byte) -55, param5, var20Lifetime1, var42, var21Lifetime1);
-              nra.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, var42, var20Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param4, var21Lifetime1, var42, var18Lifetime1Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param5, var20Lifetime1, var42, var21Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, var42, var20Lifetime1);
             }
             if (var15Lifetime1 < gca.field_d) {
               continue;
             }
             var43 = vaa.field_a[var15Lifetime1];
-            nra.fillRange((byte) -55, param4, var21Lifetime1, var43, var18Lifetime1Lifetime1);
-            nra.fillRange((byte) -55, param5, var20Lifetime1, var43, var21Lifetime1);
-            nra.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, var43, var20Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param4, var21Lifetime1, var43, var18Lifetime1Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param5, var20Lifetime1, var43, var21Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, var43, var20Lifetime1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -497,9 +497,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final void b(int param0, Camera param1) {
+    final void updateForCamera(int param0, Camera param1) {
         try {
-          super.b(117, param1);
+          super.updateForCamera(117, param1);
           if (param0 < 112) {
             this.getTypeId(true);
           }

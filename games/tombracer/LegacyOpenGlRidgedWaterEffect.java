@@ -52,7 +52,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         this.isSupported(-10);
     }
 
-    final static java.awt.Canvas b(byte param0) {
+    final static java.awt.Canvas getActiveCanvas(byte param0) {
         if (param0 == -97) {
           return null != dq.field_f ? (java.awt.Canvas) ((Object) dq.field_f) : nma.field_l;
         }
@@ -166,7 +166,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    final static int a(int param0, int param1) {
+    final static int smootherStep(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

@@ -21,7 +21,7 @@ final class ArrowShooterComponent extends ShooterComponent {
 
     final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
-          this.A(101);
+          this.usesTimingPattern(101);
           return false;
         }
         return false;
@@ -61,7 +61,7 @@ final class ArrowShooterComponent extends ShooterComponent {
         }
     }
 
-    final boolean C(int param0) {
+    final boolean canRandomisePhase(int param0) {
         if (param0 != 128) {
           return false;
         }
@@ -95,16 +95,16 @@ final class ArrowShooterComponent extends ShooterComponent {
           var9.setObstructionLevel(param1, 0);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
-          var6 = TextureOperator.a(0, -1);
+          var6 = TextureOperator.createFullWeapon(0, -1);
           var6.refillAmmo(91, true);
-          if (this.s((byte) 73)) {
+          if (this.hasRandomPhase((byte) 73)) {
             var7_int = var6.a(true);
             if (var7_int > 0) {
               var6.setCooldown(param2.getRandom(122).nextBounded(var7_int, 0), false);
             }
           }
-          var5.a(var6, (byte) 66);
-          this.a((byte) 43, var5, param2);
+          var5.setWeapon(var6, (byte) 66);
+          this.applyTimingPattern((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (BlockModel) (var7.createModel(7, 86));
@@ -141,7 +141,7 @@ final class ArrowShooterComponent extends ShooterComponent {
         return true;
     }
 
-    final boolean A(int param0) {
+    final boolean usesTimingPattern(int param0) {
         if (param0 != -1) {
           return true;
         }
@@ -171,7 +171,7 @@ final class ArrowShooterComponent extends ShooterComponent {
         return (char)var2;
     }
 
-    final boolean B(int param0) {
+    final boolean usesPhaseOffset(int param0) {
         if (param0 != -23309) {
           field_K = (String) null;
           return true;

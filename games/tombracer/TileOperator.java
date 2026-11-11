@@ -8,7 +8,7 @@ final class TileOperator extends TextureOperator {
     static GameKeyHandler field_n;
     static boolean field_p;
 
-    final static void a(ResourceArchive param0, String param1, boolean param2, int param3, ResourceArchive param4, ResourceArchive param5) {
+    final static void loadCharacterAnimations(ResourceArchive param0, String param1, boolean param2, int param3, ResourceArchive param4, ResourceArchive param5) {
         GameAssetLoader var11 = null;
         String var12 = null;
         int incrementValue$0 = 0;
@@ -29,7 +29,7 @@ final class TileOperator extends TextureOperator {
           var11.drawLoadingProgress(param3, (byte) 47, param1);
           woa.a(-122, param4, param0, 0);
           bb.field_f = new ena(0);
-          while (!bb.field_f.a((byte) 107)) {
+          while (!bb.field_f.ensureLoaded((byte) 107)) {
           }
           ContextMenu.a(13, bb.field_f);
           wl.field_f = new AnimationSequence[13][38];
@@ -269,7 +269,7 @@ final class TileOperator extends TextureOperator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillClippedCircle(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -295,7 +295,7 @@ final class TileOperator extends TextureOperator {
           var8 = -1;
           var9 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + param1);
           var10 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - param1);
-          nra.fillRange((byte) -55, param2, var9, vaa.field_a[param4], var10);
+          C2SRoomResultPacket.fillRange((byte) -55, param2, var9, vaa.field_a[param4], var10);
           while (var6 > var5_int) {
             var8 += 2;
             var7 = var7 + var8;
@@ -309,10 +309,10 @@ final class TileOperator extends TextureOperator {
                 var13 = rp.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, var5_int + param3);
                 var14 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var5_int);
                 if (var12 <= hc.field_h) {
-                  nra.fillRange((byte) -55, param2, var13, vaa.field_a[var12], var14);
+                  C2SRoomResultPacket.fillRange((byte) -55, param2, var13, vaa.field_a[var12], var14);
                 }
                 if (var11 >= gca.field_d) {
-                  nra.fillRange((byte) -55, param2, var13, vaa.field_a[var11], var14);
+                  C2SRoomResultPacket.fillRange((byte) -55, param2, var13, vaa.field_a[var11], var14);
                 }
               }
             }
@@ -328,12 +328,12 @@ final class TileOperator extends TextureOperator {
             var13Lifetime1 = rp.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, param3 + var6);
             var14Lifetime1 = rp.clamp(DiskCacheWorker.field_c, param0 - 16226, pka.field_b, param3 - var6);
             if (hc.field_h >= var12Lifetime1) {
-              nra.fillRange((byte) -55, param2, var13Lifetime1, vaa.field_a[var12Lifetime1], var14Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param2, var13Lifetime1, vaa.field_a[var12Lifetime1], var14Lifetime1);
             }
             if (gca.field_d > var11Lifetime1) {
               continue;
             }
-            nra.fillRange((byte) -55, param2, var13Lifetime1, vaa.field_a[var11Lifetime1], var14Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, var13Lifetime1, vaa.field_a[var11Lifetime1], var14Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

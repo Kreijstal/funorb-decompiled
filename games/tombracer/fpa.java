@@ -6,7 +6,7 @@ final class fpa {
     static String field_a;
     static boolean field_c;
 
-    final static void a(java.awt.Canvas param0, byte param1) {
+    final static void attachCanvasInput(java.awt.Canvas param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

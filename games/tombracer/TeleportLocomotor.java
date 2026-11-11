@@ -195,12 +195,12 @@ final class TeleportLocomotor extends Locomotor {
     final void mirror(byte param0) {
         if (param0 < -116) {
           super.mirror((byte) -118);
-          this.field_q.a(true);
+          this.field_q.mirror(true);
           return;
         }
         this.field_s = (TimingPattern) null;
         super.mirror((byte) -118);
-        this.field_q.a(true);
+        this.field_q.mirror(true);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {

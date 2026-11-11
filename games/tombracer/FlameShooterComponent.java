@@ -9,9 +9,9 @@ final class FlameShooterComponent extends ShooterComponent {
         super(param0, param1);
     }
 
-    final boolean A(int param0) {
+    final boolean usesTimingPattern(int param0) {
         if (param0 != -1) {
-          this.C(-60);
+          this.canRandomisePhase(-60);
           return true;
         }
         return true;
@@ -112,14 +112,14 @@ final class FlameShooterComponent extends ShooterComponent {
         return 7;
     }
 
-    final boolean C(int param0) {
+    final boolean canRandomisePhase(int param0) {
         if (param0 != 128) {
           return true;
         }
         return true;
     }
 
-    final boolean B(int param0) {
+    final boolean usesPhaseOffset(int param0) {
         if (param0 != -23309) {
           this.applyDefaults((byte) -44);
         }
@@ -144,10 +144,10 @@ final class FlameShooterComponent extends ShooterComponent {
           var9.setObstructionLevel(param1, 0);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
-          var6 = TextureOperator.a(2, param1 ^ -4);
+          var6 = TextureOperator.createFullWeapon(2, param1 ^ -4);
           var6.refillAmmo(-43, true);
-          var5.a(var6, (byte) 73);
-          this.a((byte) 43, var5, param2);
+          var5.setWeapon(var6, (byte) 73);
+          this.applyTimingPattern((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (BlockModel) (var7.createModel(7, 100));

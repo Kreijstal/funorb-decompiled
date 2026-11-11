@@ -90,12 +90,12 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           if (param0 != -1) {
             this.endSize = 97;
           }
-          var5_int = SimulationObserver.a(this.size, 12, this.y, this.size, param3, this.x, 2);
+          var5_int = SimulationObserver.clipBeamToBox(this.size, 12, this.y, this.size, param3, this.x, 2);
           if (var5_int == -1) {
             return false;
           }
           var6 = wm.a(4096, var5_int, 108);
-          param3.a(var6, (byte) 47);
+          param3.shortenTo(var6, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,7 +165,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (SimulationObserver.a(this.size, param1, this.y, this.size, param2, this.x, 2) < 0) {
+          if (SimulationObserver.clipBeamToBox(this.size, param1, this.y, this.size, param2, this.x, 2) < 0) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }

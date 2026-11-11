@@ -39,7 +39,7 @@ final class ComponentTargetList {
             }
           }
           this.pendingTargetIds = null;
-          this.a(0);
+          this.pruneTargets(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,7 +55,7 @@ final class ComponentTargetList {
         }
     }
 
-    private final void a(int param0) {
+    private final void pruneTargets(int param0) {
         int var2 = 0;
         int var3_int = 0;
         int var5 = 0;
@@ -398,7 +398,7 @@ final class ComponentTargetList {
         }
         int var1 = -18 % ((-10 - param0) / 43);
         if (OpenGlUnderwaterEffect.field_q != 0) {
-          PlayerProfile.a(true);
+          PlayerProfile.clearChatInput(true);
         }
         MenuScreen.field_j = 0;
     }
@@ -634,7 +634,7 @@ final class ComponentTargetList {
           if (param1 <= 105) {
             field_c = (int[]) null;
           }
-          this.a(0);
+          this.pruneTargets(0);
           param0.writeBits((byte) 44, this.targets.length, RandomBrickOperator.bitLength(this.maxTargets, 22972));
           var4_int = 0;
           while (this.targets.length > var4_int) {

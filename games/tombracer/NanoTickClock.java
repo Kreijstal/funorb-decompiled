@@ -46,7 +46,7 @@ final class NanoTickClock extends GameClock {
     }
 
     final long getMillisUntilNextTick(byte param0) {
-        this.field_d = this.field_d + this.d(-97);
+        this.field_d = this.field_d + this.averageDelta(-97);
         if (param0 < 27) {
           NanoTickClock.pollKeyEvent(false);
         }
@@ -77,7 +77,7 @@ final class NanoTickClock extends GameClock {
         return stackIn_8_0;
     }
 
-    private final long d(int param0) {
+    private final long averageDelta(int param0) {
         int var8 = 0;
         int var9 = TombRacer.field_G ? 1 : 0;
         long var2 = System.nanoTime();

@@ -21,7 +21,7 @@ final class ConsoleValue {
         field_e = null;
     }
 
-    final boolean a(boolean param0) {
+    final boolean booleanValue(boolean param0) {
         if (param0) {
           ConsoleValue.releaseStatics(-40);
           return ((Boolean) (this.field_d)).booleanValue();

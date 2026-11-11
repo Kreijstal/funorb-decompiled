@@ -124,7 +124,7 @@ final class RoomCompletedScreen extends MatchOverlay {
             var6 = var6 | 16;
           }
           ql.field_k.writeByte(var6, 0);
-          var7 = FontMetrics.readSettingsCookie(0, di.a(46));
+          var7 = FontMetrics.readSettingsCookie(0, di.getApplet(46));
           if (var7 == null) {
             var7 = "";
           }

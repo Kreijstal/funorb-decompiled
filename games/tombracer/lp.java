@@ -83,7 +83,7 @@ final class lp {
                 var2.addLast((byte) -107, new ConsoleToken(qba.field_c, var3.position - 1));
                 continue;
               }
-              var2.addLast((byte) -75, WeaponShooterBehaviour.a(param0 - 93, var3));
+              var2.addLast((byte) -75, WeaponShooterBehaviour.readLiteralToken(param0 - 93, var3));
               continue;
             }
             var2.addLast((byte) -81, SpriteTileOperator.readQuotedToken(var3, false));

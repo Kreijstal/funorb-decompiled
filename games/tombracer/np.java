@@ -987,7 +987,7 @@ final class np extends ka {
               param5.field_f = array$15;
               var12Lifetime1 = 0;
               while (this.field_G > var12Lifetime1) {
-                param5.field_f[var12Lifetime1] = this.field_f[var12Lifetime1].a((byte) 78);
+                param5.field_f[var12Lifetime1] = this.field_f[var12Lifetime1].copy((byte) 78);
                 var12Lifetime1++;
                 if (var13 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -2316,7 +2316,7 @@ final class np extends ka {
           }
           var1_int = NormalMapOperator.d(-77);
           var2 = za.a(18998);
-          S2CPlayerProfilePacket.field_b.a((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
+          S2CPlayerProfilePacket.field_b.drawFrame((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
           ConsoleToken.a(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5058,9 +5058,9 @@ final class np extends ka {
                 }
                 this.field_p[var16] = this.field_ib;
                 StandingsPhase.field_m = null;
-                this.field_E = ListChannelsCommand.a(this.field_E, true, this.field_L);
-                this.field_Y = ListChannelsCommand.a(this.field_Y, true, this.field_L);
-                this.field_cb = ListChannelsCommand.a(this.field_cb, true, this.field_L);
+                this.field_E = ListChannelsCommand.copyShorts(this.field_E, true, this.field_L);
+                this.field_Y = ListChannelsCommand.copyShorts(this.field_Y, true, this.field_L);
+                this.field_cb = ListChannelsCommand.copyShorts(this.field_cb, true, this.field_L);
                 this.field_O = FacePlayerLocomotor.copyOf(this.field_O, this.field_L, 4096);
                 this.field_n = PlatformBehaviour.a(this.field_L, 50, this.field_n);
                 this.field_y = PlatformBehaviour.a(this.field_L, 50, this.field_y);

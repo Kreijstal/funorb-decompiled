@@ -8,7 +8,7 @@ abstract class ShaderEffect {
 
     abstract void enable(int param0, boolean param1);
 
-    void c(boolean param0) {
+    void onTextureMatrixChanged(boolean param0) {
         if (!param0) {
           field_a = (nl) null;
         }
@@ -63,19 +63,19 @@ abstract class ShaderEffect {
         }
     }
 
-    void b(byte param0) {
+    void onViewMatrixChanged(byte param0) {
         if (param0 != 107) {
-          this.b((byte) 23);
+          this.onViewMatrixChanged((byte) 23);
         }
     }
 
-    void a(boolean param0) {
+    void onFogChanged(boolean param0) {
         if (!param0) {
-          this.a(false);
+          this.onFogChanged(false);
         }
     }
 
-    void b(int param0) {
+    void onProjectionChanged(int param0) {
         if (param0 <= 64) {
           this.setParameters((byte) 45, -125, -56);
         }
@@ -93,7 +93,7 @@ abstract class ShaderEffect {
 
     abstract void setParameters(byte param0, int param1, int param2);
 
-    void b(boolean param0) {
+    void onModelMatrixChanged(boolean param0) {
         if (!param0) {
           field_b = (UiComponent) null;
         }

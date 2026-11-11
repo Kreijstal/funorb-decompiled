@@ -73,10 +73,10 @@ final class BridgeModel extends TrapModel {
           var14 = -1;
           var35 = vaa.field_a[param0];
           var16 = param6 - var8;
-          nra.fillRange((byte) -55, param4, var16, var35, param6 - param1);
+          C2SRoomResultPacket.fillRange((byte) -55, param4, var16, var35, param6 - param1);
           var17 = param6 + var8;
-          nra.fillRange((byte) -55, param3, var17, var35, var16);
-          nra.fillRange((byte) -55, param4, param6 + param1, var35, var17);
+          C2SRoomResultPacket.fillRange((byte) -55, param3, var17, var35, var16);
+          C2SRoomResultPacket.fillRange((byte) -55, param4, param6 + param1, var35, var17);
           while (var7_int < var9) {
             var13 += 2;
             var14 += 2;
@@ -98,8 +98,8 @@ final class BridgeModel extends TrapModel {
                 var19 = var26;
                 var20 = param6 + var7_int;
                 var21 = param6 - var7_int;
-                nra.fillRange((byte) -55, param4, var20, var30, var21);
-                nra.fillRange((byte) -55, param4, var20, var26, var21);
+                C2SRoomResultPacket.fillRange((byte) -55, param4, var20, var30, var21);
+                C2SRoomResultPacket.fillRange((byte) -55, param4, var20, var26, var21);
               } else {
                 var28 = vaa.field_a[param0 + var9];
                 var29 = vaa.field_a[-var9 + param0];
@@ -108,12 +108,12 @@ final class BridgeModel extends TrapModel {
                 var22 = -var7_int + param6;
                 var23 = param6 + var20;
                 var24 = param6 - var20;
-                nra.fillRange((byte) -55, param4, var24, var28, var22);
-                nra.fillRange((byte) -55, param3, var23, var28, var24);
-                nra.fillRange((byte) -55, param4, var21, var28, var23);
-                nra.fillRange((byte) -55, param4, var24, var29, var22);
-                nra.fillRange((byte) -55, param3, var23, var29, var24);
-                nra.fillRange((byte) -55, param4, var21, var29, var23);
+                C2SRoomResultPacket.fillRange((byte) -55, param4, var24, var28, var22);
+                C2SRoomResultPacket.fillRange((byte) -55, param3, var23, var28, var24);
+                C2SRoomResultPacket.fillRange((byte) -55, param4, var21, var28, var23);
+                C2SRoomResultPacket.fillRange((byte) -55, param4, var24, var29, var22);
+                C2SRoomResultPacket.fillRange((byte) -55, param3, var23, var29, var24);
+                C2SRoomResultPacket.fillRange((byte) -55, param4, var21, var29, var23);
               }
             }
             var31 = vaa.field_a[var7_int + param0];
@@ -121,8 +121,8 @@ final class BridgeModel extends TrapModel {
             var20Lifetime1 = var9 + param6;
             var21Lifetime1 = param6 - var9;
             if (var7_int >= var8) {
-              nra.fillRange((byte) -55, param4, var20Lifetime1, var31, var21Lifetime1);
-              nra.fillRange((byte) -55, param4, var20Lifetime1, var32, var21Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param4, var20Lifetime1, var31, var21Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param4, var20Lifetime1, var32, var21Lifetime1);
               continue;
             }
             if (var7_int > var11) {
@@ -133,12 +133,12 @@ final class BridgeModel extends TrapModel {
             var22Lifetime1 = stackIn_20_0;
             var23Lifetime1 = param6 + var22Lifetime1;
             var24Lifetime1 = param6 - var22Lifetime1;
-            nra.fillRange((byte) -55, param4, var24Lifetime1, var31, var21Lifetime1);
-            nra.fillRange((byte) -55, param3, var23Lifetime1, var31, var24Lifetime1);
-            nra.fillRange((byte) -55, param4, var20Lifetime1, var31, var23Lifetime1);
-            nra.fillRange((byte) -55, param4, var24Lifetime1, var32, var21Lifetime1);
-            nra.fillRange((byte) -55, param3, var23Lifetime1, var32, var24Lifetime1);
-            nra.fillRange((byte) -55, param4, var20Lifetime1, var32, var23Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param4, var24Lifetime1, var31, var21Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var23Lifetime1, var31, var24Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param4, var20Lifetime1, var31, var23Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param4, var24Lifetime1, var32, var21Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var23Lifetime1, var32, var24Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param4, var20Lifetime1, var32, var23Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,7 +202,7 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    private final void a(boolean param0, BridgeTile param1) {
+    private final void assignTileAnimator(boolean param0, BridgeTile param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -370,7 +370,7 @@ final class BridgeModel extends TrapModel {
         PlayerAnimator var4 = null;
         super.tick(param0);
         if (this.field_o != null &&
-          this.field_o.d(false)) {
+          this.field_o.isCollapsing(false)) {
           this.field_n = uca.cosmeticRandom.nextBounded(262144, 0) - 131072;
           this.field_s = -131072 + uca.cosmeticRandom.nextBounded(262144, 0);
         }
@@ -542,7 +542,7 @@ final class BridgeModel extends TrapModel {
             var12.field_d = var10 - var3;
             var20.getSeededRandom(true).nextBounded(100, 0);
             var10 = var10 + 2097152;
-            this.a(true, var12);
+            this.assignTileAnimator(true, var12);
           }
           var7 = var7 + 2097152;
         }

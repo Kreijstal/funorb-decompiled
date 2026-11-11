@@ -368,7 +368,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    void b(int param0, Camera param1) {
+    void updateForCamera(int param0, Camera param1) {
         try {
           if (param0 < 112) {
             this.onTrapLoaded((byte) -120);

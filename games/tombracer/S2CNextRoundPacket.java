@@ -17,7 +17,7 @@ final class S2CNextRoundPacket implements GamePacket {
 
     final static void a(int param0, GameFont param1, String param2, int param3, int param4, int param5, int param6) {
         try {
-          param1.a(12199, param5, param2, SoundEvent.a(false, param4), SoundEvent.a(false, param6), param3);
+          param1.drawRight(12199, param5, param2, SoundEvent.withFullAlpha(false, param4), SoundEvent.withFullAlpha(false, param6), param3);
           if (param0 != 4) {
             field_a = (ResourceArchive) null;
           }

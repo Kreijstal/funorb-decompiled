@@ -236,7 +236,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
             if (this.field_y) {
               var3 = 0;
               if (param0 != 88) {
-                discarded$2 = this.a(-26, -25);
+                discarded$2 = this.scrollByLines(-26, -25);
               }
               if (this.field_x == null) {
                 stackIn_8_0 = this.field_m;
@@ -276,13 +276,13 @@ final class ScrollContainer extends ArrayWidgetGroup {
                 }
                 ((ScrollControlWidget) (Object) stackIn_20_0).setBounds((byte) stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5);
               }
-              this.c(-31791);
+              this.updateScrollbars(-31791);
               return;
             }
             if (null == this.field_D) {
               var3Lifetime4 = 0;
               if (param0 != 88) {
-                discarded$1 = this.a(-26, -25);
+                discarded$1 = this.scrollByLines(-26, -25);
               }
               if (this.field_x == null) {
                 stackIn_29_0 = this.field_m;
@@ -322,7 +322,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
                 }
                 ((ScrollControlWidget) (Object) stackIn_41_0).setBounds((byte) stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4, stackIn_42_5);
               }
-              this.c(-31791);
+              this.updateScrollbars(-31791);
               return;
             }
             var3Lifetime5 = this.field_D.field_p;
@@ -365,10 +365,10 @@ final class ScrollContainer extends ArrayWidgetGroup {
                 }
                 ((ScrollControlWidget) (Object) stackIn_78_0).setBounds((byte) stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_79_5);
               }
-              this.c(-31791);
+              this.updateScrollbars(-31791);
               return;
             }
-            discarded$0 = this.a(-26, -25);
+            discarded$0 = this.scrollByLines(-26, -25);
             if (this.field_x == null) {
               stackIn_48_0 = this.field_m;
             } else {
@@ -407,7 +407,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
               }
               ((ScrollControlWidget) (Object) stackIn_60_0).setBounds((byte) stackIn_60_1, stackIn_60_2, stackIn_60_3, stackIn_60_4, stackIn_61_5);
             }
-            this.c(-31791);
+            this.updateScrollbars(-31791);
             return;
           }
           stackIn_83_0 = this.field_x.field_m;
@@ -454,10 +454,10 @@ final class ScrollContainer extends ArrayWidgetGroup {
               }
               ((ScrollControlWidget) (Object) stackIn_118_0).setBounds((byte) stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_118_4, stackIn_119_5);
             }
-            this.c(-31791);
+            this.updateScrollbars(-31791);
             return;
           }
-          discarded$5 = this.a(-26, -25);
+          discarded$5 = this.scrollByLines(-26, -25);
           if (this.field_x == null) {
             stackIn_88_0 = this.field_m;
           } else {
@@ -496,7 +496,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
             }
             ((ScrollControlWidget) (Object) stackIn_100_0).setBounds((byte) stackIn_100_1, stackIn_100_2, stackIn_100_3, stackIn_100_4, stackIn_101_5);
           }
-          this.c(-31791);
+          this.updateScrollbars(-31791);
           return;
         }
         if (null != this.field_D) {
@@ -540,10 +540,10 @@ final class ScrollContainer extends ArrayWidgetGroup {
               }
               ((ScrollControlWidget) (Object) stackIn_193_0).setBounds((byte) stackIn_193_1, stackIn_193_2, stackIn_193_3, stackIn_193_4, stackIn_194_5);
             }
-            this.c(-31791);
+            this.updateScrollbars(-31791);
             return;
           }
-          discarded$3 = this.a(-26, -25);
+          discarded$3 = this.scrollByLines(-26, -25);
           if (this.field_x == null) {
             stackIn_163_0 = this.field_m;
           } else {
@@ -582,7 +582,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
             }
             ((ScrollControlWidget) (Object) stackIn_175_0).setBounds((byte) stackIn_175_1, stackIn_175_2, stackIn_175_3, stackIn_175_4, stackIn_176_5);
           }
-          this.c(-31791);
+          this.updateScrollbars(-31791);
           return;
         }
         var3Lifetime3 = 0;
@@ -625,10 +625,10 @@ final class ScrollContainer extends ArrayWidgetGroup {
             }
             ((ScrollControlWidget) (Object) stackIn_156_0).setBounds((byte) stackIn_156_1, stackIn_156_2, stackIn_156_3, stackIn_156_4, stackIn_157_5);
           }
-          this.c(-31791);
+          this.updateScrollbars(-31791);
           return;
         }
-        discarded$4 = this.a(-26, -25);
+        discarded$4 = this.scrollByLines(-26, -25);
         if (this.field_x == null) {
           stackIn_126_0 = this.field_m;
         } else {
@@ -667,7 +667,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
           }
           ((ScrollControlWidget) (Object) stackIn_138_0).setBounds((byte) stackIn_138_1, stackIn_138_2, stackIn_138_3, stackIn_138_4, stackIn_139_5);
         }
-        this.c(-31791);
+        this.updateScrollbars(-31791);
         return;
     }
 
@@ -697,7 +697,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
         }
     }
 
-    private final void c(int param0) {
+    private final void updateScrollbars(int param0) {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_x == null) {
@@ -755,7 +755,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
     final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.c(-31791);
+          this.updateScrollbars(-31791);
           this.applyScrollPositions((byte) -125);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "cca.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -799,7 +799,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
           if (super.handleMouseWheel(param0, param1, param2, param3, param4, param5, param6)) {
             return true;
           }
-          stackIn_8_0 = (this.hasKeyboardFocus((byte) -34)) && (this.a(param0, ~param6));
+          stackIn_8_0 = (this.hasKeyboardFocus((byte) -34)) && (this.scrollByLines(param0, ~param6));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -829,7 +829,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
         }
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean scrollByLines(int param0, int param1) {
         if (param1 != 0) {
           return false;
         }

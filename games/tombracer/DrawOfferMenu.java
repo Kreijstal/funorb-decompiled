@@ -95,7 +95,7 @@ final class DrawOfferMenu extends MenuScreen {
 
     final void a(int param0, int param1, boolean param2) {
         super.a(param0, param1, param2);
-        this.field_r.c(-72);
+        this.field_r.startDrop(-72);
     }
 
     final static void a(byte param0, String[] param1) {
@@ -118,7 +118,7 @@ final class DrawOfferMenu extends MenuScreen {
     }
 
     final void c(int param0) {
-        ConstrainToRectangleLocomotor.a(false, -1, (byte) -125);
+        ConstrainToRectangleLocomotor.showMenuScreen(false, -1, (byte) -125);
         if (param0 != -6) {
           this.c(49);
         }
@@ -139,7 +139,7 @@ final class DrawOfferMenu extends MenuScreen {
 
     final void draw(byte param0, boolean param1) {
         super.draw(param0, param1);
-        int var3 = this.items[1].field_i - 70 + this.field_r.e(93) - 150;
+        int var3 = this.items[1].field_i - 70 + this.field_r.getPosition(93) - 150;
         WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
     }
 
@@ -187,7 +187,7 @@ final class DrawOfferMenu extends MenuScreen {
     final void update(boolean param0, boolean param1, int param2) {
         int var5 = TombRacer.field_G ? 1 : 0;
         super.update(param0, param1, param2);
-        this.field_r.a((byte) -120, param0, !param1 ? true : false);
+        this.field_r.updateFall((byte) -120, param0, !param1 ? true : false);
         if (SecondaryNodeDequeIterator.field_a == null) {
           return;
         }

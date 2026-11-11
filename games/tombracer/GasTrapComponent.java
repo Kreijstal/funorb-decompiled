@@ -38,7 +38,7 @@ final class GasTrapComponent extends PrefabComponent {
         return false;
     }
 
-    final static boolean r(byte param0) {
+    final static boolean isDialogOpen(byte param0) {
         int var1 = -84 % ((27 - param0) / 45);
         if (hka.field_b != null) {
           return true;
@@ -57,7 +57,7 @@ final class GasTrapComponent extends PrefabComponent {
 
     final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          GasTrapComponent.r((byte) 71);
+          GasTrapComponent.isDialogOpen((byte) 71);
           return false;
         }
         return false;

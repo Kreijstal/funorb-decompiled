@@ -83,7 +83,7 @@ final class cua {
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void clearSessionAndReload(byte param0, java.applet.Applet param1) {
         cc.writeSessionCookie(37, param1, "");
         if (param0 > -16) {
           return;

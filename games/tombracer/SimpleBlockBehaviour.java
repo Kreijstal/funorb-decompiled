@@ -6,13 +6,13 @@ final class SimpleBlockBehaviour extends Behaviour {
     static int field_r;
     private boolean field_u;
     static int[] field_p;
-    private boolean field_t;
+    private boolean passesBeams;
     private boolean field_q;
     private int field_s;
-    private boolean field_o;
+    private boolean passesProjectiles;
 
-    final void a(int param0, boolean param1) {
-        this.field_t = param1 ? true : false;
+    final void setPassesBeams(int param0, boolean param1) {
+        this.passesBeams = param1 ? true : false;
         if (param0 != -28592) {
           this.hashState(-6, 77);
         }
@@ -70,8 +70,8 @@ final class SimpleBlockBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, int param1) {
-        this.field_o = param0 ? true : false;
+    final void setPassesProjectiles(boolean param0, int param1) {
+        this.passesProjectiles = param0 ? true : false;
         if (param1 >= -23) {
           BeamSegment var4 = (BeamSegment) null;
           this.interceptsBeam(33, -58, (BeamSegment) null, 39);
@@ -134,7 +134,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 instanceof Projectile &&
-            this.field_o) {
+            this.passesProjectiles) {
             return false;
           }
           if (param2 == 1) {
@@ -177,10 +177,10 @@ final class SimpleBlockBehaviour extends Behaviour {
             this.field_u = 1 == param1.readBits((byte) 44, 1) ? true : false;
           }
           if (param0.formatVersion >= 11) {
-            this.field_t = param1.readBits((byte) 44, 1) == 1 ? true : false;
+            this.passesBeams = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
           if (param0.formatVersion >= 20) {
-            this.field_o = param1.readBits((byte) 44, 1) == 1 ? true : false;
+            this.passesProjectiles = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "eq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -203,13 +203,13 @@ final class SimpleBlockBehaviour extends Behaviour {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_t) {
+          if (this.passesBeams) {
             return false;
           }
           if (param1 != 1) {
-            this.a(true, 49);
+            this.setPassesProjectiles(true, 49);
           }
-          param2.a(param3, (byte) 47);
+          param2.shortenTo(param3, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -285,8 +285,8 @@ final class SimpleBlockBehaviour extends Behaviour {
           super.encode(param0, param1);
           param1.writeBits((byte) 56, this.field_q ? 1 : 0, 1);
           param1.writeBits((byte) -125, this.field_u ? 1 : 0, 1);
-          param1.writeBits((byte) 69, this.field_t ? 1 : 0, 1);
-          param1.writeBits((byte) -125, this.field_o ? 1 : 0, 1);
+          param1.writeBits((byte) 69, this.passesBeams ? 1 : 0, 1);
+          param1.writeBits((byte) -125, this.passesProjectiles ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "eq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

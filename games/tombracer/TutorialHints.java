@@ -124,7 +124,7 @@ final class TutorialHints {
             this.b((byte) 111);
           }
           var5 = new MessageOverlay(this.field_l, param1);
-          var5.a(tea.field_a, param0, ColouriseOperator.field_n, (byte) 21);
+          var5.setMessages(tea.field_a, param0, ColouriseOperator.field_n, (byte) 21);
           this.field_c.addLast((byte) -125, new mga(var5, param2));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "sna.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

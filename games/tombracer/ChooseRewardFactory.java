@@ -56,22 +56,22 @@ final class ChooseRewardFactory implements BitDecodableFactory {
             if (OpenGlUnderwaterEffect.field_q == 0) {
               return true;
             }
-            PlayerProfile.a(true);
+            PlayerProfile.clearChatInput(true);
             return true;
           }
           if (WeaveOperator.field_n.length() <= 0) {
-            PlayerProfile.a(true);
+            PlayerProfile.clearChatInput(true);
             return true;
           }
           var4_ref_String = WeaveOperator.field_n.toString();
           if (lt.containsFilterText(var4_ref_String, -1)) {
             var13 = (String) null;
             var12 = (String) null;
-            TreasureValuesOverlay.a(0, param1, (String) null, InvertOperator.field_m, (String) null, 2);
+            TreasureValuesOverlay.addChatMessage(0, param1, (String) null, InvertOperator.field_m, (String) null, 2);
             var15 = (String) null;
             var14 = (String) null;
-            TreasureValuesOverlay.a(0, true, (String) null, mm.field_f, (String) null, 2);
-            PlayerProfile.a(true);
+            TreasureValuesOverlay.addChatMessage(0, true, (String) null, mm.field_f, (String) null, 2);
+            PlayerProfile.clearChatInput(true);
             return true;
           }
           var5 = OpenGlUnderwaterEffect.field_q;
@@ -82,8 +82,8 @@ final class ChooseRewardFactory implements BitDecodableFactory {
           if (Transform3D.a(var5, -20011) == 2) {
             MazeGenerator.a(var5, param2, (byte) 108, 1);
           }
-          ResultsPhase.a(OpenGlUnderwaterEffect.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
-          PlayerProfile.a(true);
+          ResultsPhase.writeChatMessage(OpenGlUnderwaterEffect.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
+          PlayerProfile.clearChatInput(true);
           return true;
         }
         if (MenuEntry.field_h == 85) {

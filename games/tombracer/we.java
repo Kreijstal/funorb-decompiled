@@ -6,7 +6,7 @@ abstract class we extends MenuScreen {
 
     void update(boolean param0, boolean param1, int param2) {
         super.update(param0, param1, param2);
-        this.field_q.a((byte) -125, param0, !param1 ? true : false);
+        this.field_q.updateFall((byte) -125, param0, !param1 ? true : false);
     }
 
     final static boolean b(int param0, int param1, int param2) {
@@ -17,7 +17,7 @@ abstract class we extends MenuScreen {
     }
 
     final void draw(byte param0, boolean param1) {
-        int var3 = this.field_q.e(-82);
+        int var3 = this.field_q.getPosition(-82);
         ik.field_h.a(0, var3);
         this.a(param1, var3, (byte) -104);
         super.draw(param0, param1);
@@ -25,7 +25,7 @@ abstract class we extends MenuScreen {
 
     final void a(int param0, int param1, boolean param2) {
         super.a(param0 ^ param0, param1, param2);
-        this.field_q.c(-65);
+        this.field_q.startDrop(-65);
     }
 
     we(int param0, int param1, int param2, int param3, int param4, int[] param5) {

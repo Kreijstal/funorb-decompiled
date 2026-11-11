@@ -34,7 +34,7 @@ final class CollisionGrid {
             if (param0 == var5.a((byte) -128)) {
               var5.unlink(100);
               var5.unlinkSecondary(-7975);
-              ft.a(var5, -201);
+              ft.releaseGridEntry(var5, -201);
             }
             var5 = (q) (this.field_e.nextWithSameKey((byte) 27));
           }
@@ -320,7 +320,7 @@ final class CollisionGrid {
               !var8.a(var7, var6, var4, var3_int, -98)) {
               var8.unlink(104);
               var8.unlinkSecondary(-7975);
-              ft.a(var8, -201);
+              ft.releaseGridEntry(var8, -201);
             }
             var8 = (q) (this.field_e.nextWithSameKey((byte) 119));
           }

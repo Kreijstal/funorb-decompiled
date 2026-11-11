@@ -51,7 +51,7 @@ final class CharacterChoice implements dv {
         }
     }
 
-    final static void a(byte param0, int param1, boolean param2, Room param3, Trap param4, boolean param5) {
+    final static void configureBlockTrap(byte param0, int param1, boolean param2, Room param3, Trap param4, boolean param5) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -123,7 +123,7 @@ final class CharacterChoice implements dv {
                     param4.setObstructionLevel(3, 0);
                     param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
                     var6 = new WeaponShooterBehaviour(param3, param5);
-                    var6.a(TextureOperator.a(2, -1), (byte) 100);
+                    var6.setWeapon(TextureOperator.createFullWeapon(2, -1), (byte) 100);
                     param4.addBehaviour((byte) 83, (Behaviour) (var6));
                     param4.addLocomotor(new RotateLocomotor(param3, param5), 0);
                   }
@@ -174,7 +174,7 @@ final class CharacterChoice implements dv {
         return this.characterId;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
+    final static void generateMipmaps(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
         int var26 = 0;
         int var27 = 0;
         int incrementValue$9 = 0;
@@ -212,7 +212,7 @@ final class CharacterChoice implements dv {
           }
           if (param3 <= 49) {
             var29 = (int[]) null;
-            CharacterChoice.a(127, 113, -99, -33, (int[]) null, 112, 62, 15);
+            CharacterChoice.generateMipmaps(127, 113, -99, -33, (int[]) null, 112, 62, 15);
           }
           if (param7 > 0 &&
             !cla.isPowerOfTwoOrZero(9181, param7)) {
@@ -317,7 +317,7 @@ final class CharacterChoice implements dv {
           var7_int = param3 + param0;
           var8 = param6 - param0;
           for (var11 = param3; var7_int > var11; var11++) {
-            nra.fillRange((byte) -55, param2, param1, vaa.field_a[var11], param4);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, param1, vaa.field_a[var11], param4);
           }
           var9 = param0 + param4;
           if (param5 != 27) {
@@ -325,12 +325,12 @@ final class CharacterChoice implements dv {
           }
           var10 = param1 - param0;
           for (var11Lifetime1 = param6; var8 < var11Lifetime1; var11Lifetime1--) {
-            nra.fillRange((byte) -55, param2, param1, vaa.field_a[var11Lifetime1], param4);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, param1, vaa.field_a[var11Lifetime1], param4);
           }
           for (var11Lifetime2 = var7_int; var8 >= var11Lifetime2; var11Lifetime2++) {
             var17 = vaa.field_a[var11Lifetime2];
-            nra.fillRange((byte) -55, param2, var9, var17, param4);
-            nra.fillRange((byte) -55, param2, param1, var17, var10);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, var9, var17, param4);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, param1, var17, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

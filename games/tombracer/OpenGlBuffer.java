@@ -208,9 +208,9 @@ abstract class OpenGlBuffer implements GpuBuffer {
             var41 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param5 + param3);
             var42 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var11);
             var43 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var11);
-            nra.fillRange((byte) -55, param0, var42, var57, var40);
-            nra.fillRange((byte) -55, param1, var43, var57, var42);
-            nra.fillRange((byte) -55, param0, var41, var57, var43);
+            C2SRoomResultPacket.fillRange((byte) -55, param0, var42, var57, var40);
+            C2SRoomResultPacket.fillRange((byte) -55, param1, var43, var57, var42);
+            C2SRoomResultPacket.fillRange((byte) -55, param0, var41, var57, var43);
           }
           while (true) {
             if (var9 <= 0) {
@@ -273,29 +273,29 @@ abstract class OpenGlBuffer implements GpuBuffer {
             var43Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var8_int);
             if (var39 == 0) {
               if (var40Lifetime1 >= gca.field_d) {
-                nra.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var40Lifetime1], var43Lifetime1);
+                C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var40Lifetime1], var43Lifetime1);
               }
               if (var41Lifetime1 > hc.field_h) {
                 continue;
               }
-              nra.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var41Lifetime1], var43Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var41Lifetime1], var43Lifetime1);
               continue;
             }
             var44 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var10);
             var45 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var10);
             if (var40Lifetime1 >= gca.field_d) {
               var58 = vaa.field_a[var40Lifetime1];
-              nra.fillRange((byte) -55, param0, var45, var58, var43Lifetime1);
-              nra.fillRange((byte) -55, param1, var44, var58, var45);
-              nra.fillRange((byte) -55, param0, var42Lifetime1, var58, var44);
+              C2SRoomResultPacket.fillRange((byte) -55, param0, var45, var58, var43Lifetime1);
+              C2SRoomResultPacket.fillRange((byte) -55, param1, var44, var58, var45);
+              C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, var58, var44);
             }
             if (var41Lifetime1 > hc.field_h) {
               continue;
             }
             var59 = vaa.field_a[var41Lifetime1];
-            nra.fillRange((byte) -55, param0, var45, var59, var43Lifetime1);
-            nra.fillRange((byte) -55, param1, var44, var59, var45);
-            nra.fillRange((byte) -55, param0, var42Lifetime1, var59, var44);
+            C2SRoomResultPacket.fillRange((byte) -55, param0, var45, var59, var43Lifetime1);
+            C2SRoomResultPacket.fillRange((byte) -55, param1, var44, var59, var45);
+            C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, var59, var44);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

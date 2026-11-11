@@ -88,12 +88,12 @@ final class nl {
             } else {
               incrementValue$0 = param2;
               param2++;
-              nra.fillRange((byte) -55, param0, param4, vaa.field_a[incrementValue$0], param1);
+              C2SRoomResultPacket.fillRange((byte) -55, param0, param4, vaa.field_a[incrementValue$0], param1);
             }
             if (hc.field_h >= param3) {
               incrementValue$1 = param3;
               param3--;
-              nra.fillRange((byte) -55, param0, param4, vaa.field_a[incrementValue$1], param1);
+              C2SRoomResultPacket.fillRange((byte) -55, param0, param4, vaa.field_a[incrementValue$1], param1);
             } else {
               param3 = hc.field_h;
             }

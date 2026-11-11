@@ -766,7 +766,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           var2.setBounds(var3, (byte) -3, (this.height >> 16) - var3, var3, -var3 + (this.width >> 16));
         }
         this.getPlayer(-12).addToScene(25, this.scene);
-        this.corpses.a(this.scene, -28255);
+        this.corpses.addToScene(this.scene, -28255);
         this.projectilePool.a(this.scene, (byte) -89, true, 7);
         this.particlePool.a(this.scene, (byte) 126, true, 7);
         this.puddlePool.a(this.scene, (byte) -33, false, 6);
@@ -786,7 +786,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           var7 = (RoomComponent) (this.components.next(116));
         }
         dea.roomObjectRenderer.prepareRoom(121, this);
-        this.tileGrid.a(this.scene, 0);
+        this.tileGrid.addTilesToScene(this.scene, 0);
         if (null != this.soundQueue) {
           this.soundQueue.clear((byte) 119);
         }
@@ -1093,7 +1093,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.addTrap(var7_ref_fsa, (byte) 32);
           var7_ref_fsa.saveTickStartPositions((byte) 118);
         }
-        this.tileGrid.a((byte) 25, var3, this);
+        this.tileGrid.decodeCells((byte) 25, var3, this);
         if (this.formatVersion >= 11) {
           var6Lifetime1 = var3.readBits((byte) 44, 8);
           for (var7 = 0; var6Lifetime1 > var7; var7++) {
@@ -1547,7 +1547,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           }
         }
         if (null != this.soundQueue) {
-          this.soundQueue.a(param1 + 82, false);
+          this.soundQueue.playQueuedEvents(param1 + 82, false);
         }
         this.tick = this.tick + 1;
         this.ticksSinceReset = this.ticksSinceReset + 1;
@@ -1731,7 +1731,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             }
             var6 = (Trap) (this.traps.next(114));
           }
-          this.tileGrid.a(8, param0);
+          this.tileGrid.encodeCells(8, param0);
           param0.writeBits((byte) 120, this.components.size((byte) -16), 8);
           var7 = (RoomComponent) (this.components.first(-80));
           while (var7 != null) {

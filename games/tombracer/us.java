@@ -337,7 +337,7 @@ final class us {
           return;
         }
         try {
-          fla.field_f = param1.field_J;
+          PlayingSound.field_f = param1.field_J;
           ObjectList.b(0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "us.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

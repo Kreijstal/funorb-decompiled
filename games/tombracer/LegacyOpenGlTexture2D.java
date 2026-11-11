@@ -201,7 +201,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
             param7 != 0 ||
             0 != param8);
           if (!decompiledSharedTail0) {
-            CharacterChoice.a(this.target, 32993, this.internalFormat, 81, param6, this.toolkit.field_P, this.field_l, this.field_o);
+            CharacterChoice.generateMipmaps(this.target, 32993, this.internalFormat, 81, param6, this.toolkit.field_P, this.field_l, this.field_o);
             this.noteMipmaps(true, 4);
             decompiledSharedTail0 = (var16 != 0);
           }
@@ -251,7 +251,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
           boolean decompiledSharedTail0 = (!(param5) ||
             this.target == 34037);
           if (!decompiledSharedTail0) {
-            PlantComponent.a(param7, 92, param1, param2, param6, param3, param4);
+            PlantComponent.generateFloatMipmaps(param7, 92, param1, param2, param6, param3, param4);
             this.noteMipmaps(true, 4);
             decompiledSharedTail0 = (TombRacer.field_G);
           }
@@ -341,7 +341,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
             decompiledSharedTail0 = (var15 != 0);
           }
           if (decompiledSharedTail0) {
-            RoomEffectTraps.a((byte) 53, param6, param1, param3, param4, param7, param2);
+            RoomEffectTraps.generateByteMipmaps((byte) 53, param6, param1, param3, param4, param7, param2);
             this.noteMipmaps(true, 4);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);

@@ -72,13 +72,13 @@ final class RaceStandings {
     public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 >= -119) {
-          RaceStandings.b(-126);
+          RaceStandings.releaseAllSounds(-126);
         }
     }
 
-    final static void b(int param0) {
+    final static void releaseAllSounds(int param0) {
         vb var1 = null;
-        fla var2 = null;
+        PlayingSound var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
@@ -89,7 +89,7 @@ final class RaceStandings {
           }
           var1 = (vb) (DivisionMazeGenerator.field_e.first(-80));
           while (var1 != null) {
-            var2 = new fla(var1, var1.field_f.getTargetVolume(), var1.field_f.getTargetPan());
+            var2 = new PlayingSound(var1, var1.field_f.getTargetVolume(), var1.field_f.getTargetPan());
             rs.queueSoundRelease(var2, -58);
             var1 = (vb) (DivisionMazeGenerator.field_e.next(119));
           }
@@ -115,7 +115,7 @@ final class RaceStandings {
         int var4 = TombRacer.field_G ? 1 : 0;
         int var2 = this.matchState.players.length;
         if (param0) {
-          RaceStandings.b(110);
+          RaceStandings.releaseAllSounds(110);
         }
         this.sortKeys = new int[var2];
         this.order = new int[var2];

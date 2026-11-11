@@ -35,7 +35,7 @@ final class fha {
           fua.field_f = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "frame_bottom");
           ApproachPlayerLocomotor.field_s = MaskBlendOperator.a(param2, "commonui", "jagex_logo_grey", -101);
           MonochromeFillOperator.field_n = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "button");
-          CharacterChoiceFactory.field_b = Particle.a("validation", param2, "commonui", -57);
+          CharacterChoiceFactory.field_b = Particle.loadSpritesByName("validation", param2, "commonui", -57);
           BlendModeOperator.field_o = (BitmapFont) ((Object) SnakePitModel.loadAntialiasedFont(param2, param1, false, "commonui", "arezzo12"));
           KeySwitchComponent.field_J = (BitmapFont) ((Object) SnakePitModel.loadAntialiasedFont(param2, param1, false, "commonui", "arezzo14"));
           ft.field_c = (BitmapFont) ((Object) SnakePitModel.loadAntialiasedFont(param2, param1, false, "commonui", "arezzo14bold"));
@@ -65,7 +65,7 @@ final class fha {
             }
           }
           var9Lifetime1 = var17.field_q;
-          gb.a(-29711);
+          gb.pushRasterState(-29711);
           var17.makeRasterTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);

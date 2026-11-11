@@ -20,7 +20,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean D(int param0) {
+    final boolean supportsItems(int param0) {
         if (param0 != 0) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(false, (BitPacketBuffer) null);

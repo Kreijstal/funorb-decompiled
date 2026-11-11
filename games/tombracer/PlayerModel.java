@@ -466,7 +466,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
                 var11 = 31;
                 var4 = 17;
               }
-              var6 = this.field_c.a(this.field_j, (byte) 66, 0, var11);
+              var6 = this.field_c.getAnimationLength(this.field_j, (byte) 66, 0, var11);
               this.field_c.playAnimation(var11, 0, this.field_j, param2, 0, var5);
               this.field_c.queueAnimation(64, var6, this.field_j, var4, 0);
               if (var12 == 0) {
@@ -497,7 +497,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
               var4 = 29;
               var11 = 30;
             }
-            var6 = this.field_c.a(this.field_j, (byte) 66, 0, var11);
+            var6 = this.field_c.getAnimationLength(this.field_j, (byte) 66, 0, var11);
             this.field_c.playAnimation(var11, 0, this.field_j, param2, 0, var5);
             this.field_c.queueAnimation(126, var6, this.field_j, var4, 0);
             if (var12 == 0) {
@@ -533,7 +533,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
               var4 = 3;
               var10 = 26;
               var11 = this.field_p.getFacingOctant(0);
-              var6 = this.field_c.a(this.field_j, (byte) 66, 0, var10);
+              var6 = this.field_c.getAnimationLength(this.field_j, (byte) 66, 0, var10);
               if (var11 == 6) {
                 var4 = 32;
                 if (var12 != 0 &&
@@ -562,7 +562,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
           case 5:
             var4 = 4;
-            var6 = this.field_c.a(this.field_j, (byte) 66, 0, var4);
+            var6 = this.field_c.getAnimationLength(this.field_j, (byte) 66, 0, var4);
             this.field_c.playAnimation(var4, 0, this.field_j, param2, 0, var5);
             this.field_c.queueAnimation(48, var6, this.field_j, 0, 0);
             if (var12 == 0) {
@@ -570,7 +570,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
           case 6:
             var4 = 5;
-            var6 = this.field_c.a(this.field_j, (byte) 66, 0, var4);
+            var6 = this.field_c.getAnimationLength(this.field_j, (byte) 66, 0, var4);
             this.field_c.playAnimation(var4, 0, this.field_j, param2, 0, var5);
             this.field_c.queueAnimation(92, var6, this.field_j, 0, 0);
             if (var12 == 0) {
@@ -578,7 +578,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
           case 18:
             var4 = 23;
-            var6 = this.field_c.a(this.field_j, (byte) 66, 0, var4);
+            var6 = this.field_c.getAnimationLength(this.field_j, (byte) 66, 0, var4);
             this.field_c.playAnimation(var4, param0 ^ 26, this.field_j, param2, 0, var5);
             this.field_c.queueAnimation(107, var6, this.field_j, 0, 0);
             if (var12 == 0) {
@@ -586,7 +586,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
           case 23:
             var4 = 37;
-            var6 = this.field_c.a(this.field_j, (byte) 66, 0, var4);
+            var6 = this.field_c.getAnimationLength(this.field_j, (byte) 66, 0, var4);
             this.field_c.playAnimation(var4, 0, this.field_j, param2, 0, var5);
             this.field_c.queueAnimation(param0 + 79, var6, this.field_j, 0, 0);
             if (var12 == 0) {
@@ -777,10 +777,10 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
           case 11:
             var4 = 7;
-            var6 = this.field_c.a(this.field_j, (byte) 66, 0, var4);
+            var6 = this.field_c.getAnimationLength(this.field_j, (byte) 66, 0, var4);
             this.field_c.playAnimation(var4, 0, this.field_j, param2, 0, var5);
             this.field_c.queueAnimation(86, var6, this.field_j, 27, 0);
-            var6 = var6 + this.field_c.a(this.field_j, (byte) 66, 0, 27);
+            var6 = var6 + this.field_c.getAnimationLength(this.field_j, (byte) 66, 0, 27);
             this.field_c.queueAnimation(42, var6, this.field_j, 17, 0);
             if (var12 == 0) {
               break;

@@ -42,7 +42,7 @@ final class doa {
         return gqa.multiplyFixed(param2, (byte) 24, param1 >> 8) << 8;
     }
 
-    final static RoomDefinition b(int param0, int param1, int param2) {
+    final static RoomDefinition findCourseRoom(int param0, int param1, int param2) {
         int var4 = 0;
         RoomDefinition[] var3;
         RoomDefinition var5;

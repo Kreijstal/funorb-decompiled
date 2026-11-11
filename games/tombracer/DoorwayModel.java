@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DoorwayModel extends TrapModel {
-    private fla field_s;
+    private PlayingSound field_s;
     private int field_p;
     private int field_r;
     static String field_m;
@@ -227,7 +227,7 @@ final class DoorwayModel extends TrapModel {
         if (null == this.field_s) {
           return;
         }
-        this.field_s.a(78, var6_ref);
+        this.field_s.release(78, var6_ref);
         this.field_s = null;
         return;
     }

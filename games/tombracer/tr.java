@@ -31,9 +31,9 @@ final class tr {
           return var3;
         }
         if (32768 > param1) {
-          var4 = this.field_a.a(param0, 1, param1);
+          var4 = this.field_a.getFile(param0, 1, param1);
         } else {
-          var4 = this.field_h.a(false, 1, param1 & 32767);
+          var4 = this.field_h.getFile(false, 1, param1 & 32767);
         }
         if (param0) {
           return (QuickChatPhraseDefinition) null;
@@ -64,12 +64,12 @@ final class tr {
           this.field_a = param1;
           this.field_h = param2;
           if (null != this.field_a) {
-            this.field_a.a((byte) 106, 1);
+            this.field_a.getFileCount((byte) 106, 1);
           }
           if (null == this.field_h) {
             return;
           }
-          this.field_h.a((byte) 118, 1);
+          this.field_h.getFileCount((byte) 118, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -10,7 +10,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
     static int[] field_K;
     static int field_N;
 
-    final boolean D(int param0) {
+    final boolean supportsItems(int param0) {
         if (param0 != 0) {
           field_K = (int[]) null;
           return true;
@@ -139,8 +139,8 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           var4 = new Trap(param2, param1);
           var4.setSize((byte) -11, 2097152, 2097152);
           var5 = new PlatformBehaviour(param2, false);
-          var5.b(-5, 2);
-          var5.a(1, (byte) 71);
+          var5.setWeightThreshold(-5, 2);
+          var5.setCollapseDelay(1, (byte) 71);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (PlatformModel) (var6.createModel(17, 81));
@@ -338,7 +338,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           var4 = new Trap(param0, param2);
           var4.setSize((byte) -11, 2097152, 2097152);
           var5 = new PlatformBehaviour(param0, param1);
-          var5.b(-5, 0);
+          var5.setWeightThreshold(-5, 0);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (PlatformModel) (var6.createModel(17, 87));

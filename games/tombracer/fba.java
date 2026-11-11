@@ -4,7 +4,7 @@
 final class fba {
     static float field_a;
 
-    final static int[] a(int param0, float param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
+    final static int[] generatePerlinRow(int param0, float param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
         int[] var10 = new int[param6];
         int[] var8 = var10;
         PerlinNoise2D var9 = new PerlinNoise2D();
@@ -14,13 +14,13 @@ final class fba {
         var9.field_w = param0;
         var9.field_s = param3 ? true : false;
         var9.field_x = (int)(4096.0f * param1);
-        var9.b((byte) 116);
+        var9.onDecoded((byte) 116);
         ConsoleWindow.a(0, param5, param6);
         var9.fillRow(var10, -1, 0);
         return var10;
     }
 
-    final static float[] a(int param0, float[] param1, int param2) {
+    final static float[] copyFloats(int param0, float[] param1, int param2) {
         float[] var3 = null;
         RuntimeException var3_ref = null;
         float[] var4 = null;
@@ -33,7 +33,7 @@ final class fba {
         try {
           if (param0 != 1) {
             var4 = (float[]) null;
-            fba.a(60, (float[]) null, -59);
+            fba.copyFloats(60, (float[]) null, -59);
           }
           var5 = new float[param2];
           var3 = var5;

@@ -95,7 +95,7 @@ final class RewardChoicePhase extends MatchPhase {
             }
           }
           this.selectColumn(0);
-          TripBeamComponent.b(1, 0);
+          TripBeamComponent.playMusicTrack(1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,9 +172,9 @@ final class RewardChoicePhase extends MatchPhase {
                 if (this.isLocalPlayersTurn(true) &&
                   var10 == this.selectedRow &&
                   var11_int == this.selectedColumn) {
-                  tga.field_a.c(SoundEvent.a(false, wga.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
+                  tga.field_a.c(SoundEvent.withFullAlpha(false, wga.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
                 }
-                var12_ref_fv.a(1);
+                var12_ref_fv.drawSlot(1);
               }
             }
           }
@@ -217,7 +217,7 @@ final class RewardChoicePhase extends MatchPhase {
           var17++;
         }
         RemovedFromGameMenu.f((byte) -6);
-        this.d(-27142);
+        this.drawMenuButton(-27142);
     }
 
     final static boolean isPrivateChatTarget(String param0, byte param1) {
@@ -299,10 +299,10 @@ final class RewardChoicePhase extends MatchPhase {
           if (param2 == -1) {
             var6 = RewardChoicePhase.createTextMessage(-9, LegacyOpenGlFlowingWaterEffect.formatText(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
             iqa.field_c.addMessageNow(0, var6);
-            this.rewardChoice.a(param2, (byte) 112);
+            this.rewardChoice.takeReward(param2, (byte) 112);
           } else {
             var4 = this.rewardChoice.getReward(-108, param2);
-            this.rewardChoice.a(param2, (byte) 119);
+            this.rewardChoice.takeReward(param2, (byte) 119);
             this.selectColumn(0);
             var5 = RewardChoicePhase.createTextMessage(-58, LegacyOpenGlFlowingWaterEffect.formatText(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
             iqa.field_c.addMessageNow(0, var5);
@@ -362,7 +362,7 @@ final class RewardChoicePhase extends MatchPhase {
         if (null != this.protocol) {
           this.protocol.sendRewardChoice(var2, 1);
         } else {
-          this.rewardChoice.a(var2, (byte) 102);
+          this.rewardChoice.takeReward(var2, (byte) 102);
         }
     }
 
@@ -371,7 +371,7 @@ final class RewardChoicePhase extends MatchPhase {
           this.field_r = this.field_r - 1;
           return;
         }
-        this.rewardChoice.d((byte) -124);
+        this.rewardChoice.tickChooser((byte) -124);
         if (param1 &&
           this.isLocalPlayersTurn(true)) {
           this.handleInput(param0 - 80);
@@ -383,7 +383,7 @@ final class RewardChoicePhase extends MatchPhase {
           this.field_r = 100;
         }
         if (param1) {
-          this.c(7);
+          this.updateMenuButton(7);
         }
         this.field_v = this.field_v + 1;
         if (this.rewardChoice.getCurrentPlayerId(-1) == this.screen.localPlayerIndex &&
@@ -416,7 +416,7 @@ final class RewardChoicePhase extends MatchPhase {
           for (var5 = 0; this.field_s > var5; var5++) {
             var6 = this.field_p[var4][var5];
             if (var6 != null &&
-              var6.a(param0, false, param2)) {
+              var6.containsPoint(param0, false, param2)) {
               return this.selectCell(var5, var4, (byte) 122);
             }
           }

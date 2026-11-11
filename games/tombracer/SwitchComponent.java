@@ -99,7 +99,7 @@ abstract class SwitchComponent extends PrefabComponent {
         }
     }
 
-    final void a(SwitchSource param0, byte param1) {
+    final void bindSwitchState(SwitchSource param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

@@ -12,7 +12,7 @@ final class gsa {
     int field_x;
     int field_f;
     int field_a;
-    private fla field_t;
+    private PlayingSound field_t;
     int field_u;
     int field_r;
     static int field_j;

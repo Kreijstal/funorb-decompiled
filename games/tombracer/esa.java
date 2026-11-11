@@ -9,7 +9,7 @@ final class esa {
     private BitSet field_d;
     static String field_a;
 
-    final PlayerProfile a(int param0) {
+    final PlayerProfile getProfile(int param0) {
         if (param0 < 72) {
           return (PlayerProfile) null;
         }

@@ -95,7 +95,7 @@ final class MirrorComponent extends PrefabComponent {
             var6 = param0.readUnsignedByte(param1 + 255);
             var3.decodeParameter((byte) 107, param0, var6);
           }
-          var3.b((byte) 116);
+          var3.onDecoded((byte) 116);
           stackIn_5_0 = var3;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -164,7 +164,7 @@ final class MirrorComponent extends PrefabComponent {
           var11.setFloating((byte) 17, false);
           var11.setCollisionLevel(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param0);
-          var5.a(-28592, true);
+          var5.setPassesBeams(-28592, true);
           var11.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new Trap(param2, param0);
           var6.setSize((byte) -11, this.height, this.width);

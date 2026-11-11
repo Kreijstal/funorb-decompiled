@@ -55,7 +55,7 @@ final class aca extends IntrusiveNode {
           if (!GameApplet.a(false, param4, param1, param2)) {
             return null;
           }
-          stackIn_7_0 = RoomHeader.decodeBinaryFont(param0.a(false, param1, param4), (byte) 103);
+          stackIn_7_0 = RoomHeader.decodeBinaryFont(param0.getFile(false, param1, param4), (byte) 103);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

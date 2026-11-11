@@ -123,7 +123,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         return stackIn_47_0;
     }
 
-    final static void a(boolean param0, int param1, byte param2) {
+    final static void showMenuScreen(boolean param0, int param1, byte param2) {
         RuntimeException decompiledCaughtException = null;
         int[] var3 = null;
         int var3_int = 0;
@@ -154,8 +154,8 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               param1 != 7 &&
               param1 != 8 &&
               param1 != 12) {
-              TripBeamComponent.b(1, 0);
-              RaceStandings.b(18916);
+              TripBeamComponent.playMusicTrack(1, 0);
+              RaceStandings.releaseAllSounds(18916);
               if ((!(wka.field_d) ||
                 cs.field_c == null)) {
                 fp.startMenuBackgroundDemo(48);
@@ -164,14 +164,14 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             }
             else {
               if (-2 == param1) {
-                TripBeamComponent.b(1, 0);
-                RaceStandings.b(18916);
+                TripBeamComponent.playMusicTrack(1, 0);
+                RaceStandings.releaseAllSounds(18916);
                 wka.field_d = false;
                 cs.field_c = null;
               }
             }
           } else {
-            TripBeamComponent.b(1, 1);
+            TripBeamComponent.playMusicTrack(1, 1);
             cs.field_c = null;
             wka.field_d = false;
           }
@@ -186,7 +186,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               SpawnerBehaviour.sendSettings(tk.a(-22636), 12, mq.field_e.field_g, jg.a((byte) -80));
             }
           }
-          SpriteTileOperator.field_t = BlendModeOperator.d(param1, 121);
+          SpriteTileOperator.field_t = BlendModeOperator.getScreenById(param1, 121);
           if (SpriteTileOperator.field_t instanceof MenuScreen) {
             ((MenuScreen) (SpriteTileOperator.field_t)).a(0, 0, param0);
           }
@@ -383,8 +383,8 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
     }
 
     final void applyConstraint(int param0) {
-        int var2 = this.trap.getLocalX(25745) - this.f(10);
-        int var3 = this.trap.getLocalY(false) - this.g((byte) 30);
+        int var2 = this.trap.getLocalX(25745) - this.getAnchorX(10);
+        int var3 = this.trap.getLocalY(false) - this.getAnchorY((byte) 30);
         int var4 = 0;
         if (var2 > this.field_u) {
           var4 = -(var2 - this.field_u);
@@ -440,7 +440,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           super.encode(param0, (byte) -106);
           param0.writeBits((byte) -126, this.field_u >> 16, 10);
           if (param1 >= -78) {
-            ConstrainToRectangleLocomotor.a(true, -95, (byte) -90);
+            ConstrainToRectangleLocomotor.showMenuScreen(true, -95, (byte) -90);
           }
           param0.writeBits((byte) 16, this.field_s >> 16, 10);
         } catch (RuntimeException runtimeException) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nra implements GamePacket {
+final class C2SRoomResultPacket implements GamePacket {
     static int[][] field_g;
     private long field_l;
     private int field_f;
@@ -121,7 +121,7 @@ final class nra implements GamePacket {
         }
     }
 
-    final void a(int param0, long param1) {
+    final void setRoomTicks(int param0, long param1) {
         this.field_j = param1;
         if (param0 == -7) {
           return;
@@ -129,7 +129,7 @@ final class nra implements GamePacket {
         this.field_k = -64;
     }
 
-    final void a(long param0, long param1, boolean param2, long param3, long param4) {
+    final void setLongCounters(long param0, long param1, boolean param2, long param3, long param4) {
         this.field_e = param3;
         this.field_l = param0;
         if (!param2) {
@@ -143,7 +143,7 @@ final class nra implements GamePacket {
         this.field_b = param4;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setIntCounters(int param0, int param1, int param2, int param3, int param4) {
         this.field_i = param2;
         this.field_h = param0;
         this.field_d = param3;
@@ -151,12 +151,12 @@ final class nra implements GamePacket {
         int var6 = -68 % ((-66 - param4) / 36);
     }
 
-    final void b(int param0, int param1) {
+    final void setCourseId(int param0, int param1) {
         int var3 = -109 % ((87 - param0) / 38);
         this.field_f = param1;
     }
 
-    final void a(int param0, int param1) {
+    final void setRoomId(int param0, int param1) {
         if (param1 > -69) {
           this.field_e = 126L;
           this.field_m = param0;

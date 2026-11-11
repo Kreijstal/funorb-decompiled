@@ -7,7 +7,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
     static String field_t;
     static TextureFilter field_v;
 
-    final void g(byte param0) {
+    final void onRespawn(byte param0) {
         if (param0 != 3) {
           this.itemType = 4;
         }

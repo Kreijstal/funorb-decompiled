@@ -12,7 +12,7 @@ abstract class jp extends ota {
         try {
           var3 = var2.field_m;
           var4 = var2.field_q;
-          gb.a(param1 - 29731);
+          gb.pushRasterState(param1 - 29731);
           bra.field_O = new Sprite(var3, var4 * 3 / 4);
           bra.field_O.makeRasterTarget();
           var2.drawOpaque(0, 0);
@@ -32,7 +32,7 @@ abstract class jp extends ota {
         if (param0) {
           return;
         }
-        pu.clearStatusCookie(di.a(111), 255);
+        pu.clearStatusCookie(di.getApplet(111), 255);
     }
 
     private jp() throws Throwable {

@@ -83,7 +83,7 @@ final class MatchScreen extends GameScreen implements rqa {
 
     private final void setPhase(int param0, MatchPhase param1) {
         try {
-          RaceStandings.b(18916);
+          RaceStandings.releaseAllSounds(18916);
           if (param0 != 6) {
             this.update(false, true, 46);
           }
@@ -162,7 +162,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (this.protocol == null) {
           if (3 != this.matchState.gameMode) {
             if (this.matchState.field_I[this.localPlayerIndex]) {
-              hba.a(this.field_E, this.field_m, (byte) 64, this.field_i);
+              hba.sendRoomResult(this.field_E, this.field_m, (byte) 64, this.field_i);
               this.matchState.field_I[this.localPlayerIndex] = false;
             }
             if (this.matchState.getSimulation(this.localPlayerIndex, 0).isFinished(0)) {
@@ -212,18 +212,18 @@ final class MatchScreen extends GameScreen implements rqa {
             if (this.matchState.gameMode != 3 && (GameClock.field_b ||
               uma.field_c ||
               SoftwareTransform3D.field_p)) {
-              ConstrainToRectangleLocomotor.a(param0, 10, (byte) 106);
+              ConstrainToRectangleLocomotor.showMenuScreen(param0, 10, (byte) 106);
               decompiledFrameRemainder0 = false;
             }
             else {
-              ConstrainToRectangleLocomotor.a(param0, 9, (byte) 91);
+              ConstrainToRectangleLocomotor.showMenuScreen(param0, 9, (byte) 91);
             }
           } else {
             if (this.matchState.gameMode == 3) {
-              ConstrainToRectangleLocomotor.a(param0, 0, (byte) 82);
+              ConstrainToRectangleLocomotor.showMenuScreen(param0, 0, (byte) 82);
             } else {
               this.submitScore(-18570);
-              ConstrainToRectangleLocomotor.a(param0, 9, (byte) -62);
+              ConstrainToRectangleLocomotor.showMenuScreen(param0, 9, (byte) -62);
             }
           }
         }
@@ -1267,7 +1267,7 @@ final class MatchScreen extends GameScreen implements rqa {
           !this.c(false) && (this.isSpectating((byte) 81) ||
           null != this.phase &&
           this.phase.allowsChat(param2 ^ -9201))) {
-          ConstrainToRectangleLocomotor.a(false, 7, (byte) -92);
+          ConstrainToRectangleLocomotor.showMenuScreen(false, 7, (byte) -92);
           return true;
         }
         if (param2 != 1) {

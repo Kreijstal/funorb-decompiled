@@ -9,7 +9,7 @@ abstract class pb extends DualLinkNode {
 
     abstract boolean a(int param0);
 
-    abstract Object f(int param0);
+    abstract Object getValue(int param0);
 
     public static void releaseStatics(byte param0) {
         field_l = (byte[][]) null;

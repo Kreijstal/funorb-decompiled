@@ -184,13 +184,13 @@ final class LightSource extends IntrusiveNode {
         if (param0 >= 21) {
           var3 = this.animatedLight.light.getRadius((byte) 107);
           this.field_p = var3 * (var3 * 2);
-          this.animatedLight.a(false, param1 + this.field_n, -1814184927);
+          this.animatedLight.updateIntensity(false, param1 + this.field_n, -1814184927);
           return;
         }
         LightSource.a((byte) 98);
         var3Lifetime1 = this.animatedLight.light.getRadius((byte) 107);
         this.field_p = var3Lifetime1 * (var3Lifetime1 * 2);
-        this.animatedLight.a(false, param1 + this.field_n, -1814184927);
+        this.animatedLight.updateIntensity(false, param1 + this.field_n, -1814184927);
     }
 
     final void setRadius(int param0, int param1) {

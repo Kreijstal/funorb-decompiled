@@ -26,7 +26,7 @@ final class BladeShooterComponent extends ShooterComponent {
         return true;
     }
 
-    final boolean A(int param0) {
+    final boolean usesTimingPattern(int param0) {
         if (param0 != -1) {
           return false;
         }
@@ -37,7 +37,7 @@ final class BladeShooterComponent extends ShooterComponent {
         super(param0, param1);
     }
 
-    final boolean B(int param0) {
+    final boolean usesPhaseOffset(int param0) {
         if (param0 != -23309) {
           this.usesBehaviourModels(-114);
           return true;
@@ -63,10 +63,10 @@ final class BladeShooterComponent extends ShooterComponent {
           var9.setObstructionLevel(3, param1 ^ param1);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
-          var6 = TextureOperator.a(1, -1);
+          var6 = TextureOperator.createFullWeapon(1, -1);
           var6.refillAmmo(param1 ^ -119, true);
-          var5.a(var6, (byte) 61);
-          this.a((byte) 43, var5, param2);
+          var5.setWeapon(var6, (byte) 61);
+          this.applyTimingPattern((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (BlockModel) (var7.createModel(7, param1 ^ 122));
@@ -88,7 +88,7 @@ final class BladeShooterComponent extends ShooterComponent {
         }
     }
 
-    final boolean C(int param0) {
+    final boolean canRandomisePhase(int param0) {
         if (param0 != 128) {
           this.usesBehaviourModels(-65);
           return true;

@@ -66,7 +66,7 @@ final class MatchState implements dv {
         if (!param0) {
           return;
         }
-        var4.getObserver(9262).a(var4, param1, 104);
+        var4.getObserver(9262).stepSimulation(var4, param1, 104);
         if (!var4.isActive(-19271)) {
           this.markFinishedRound(121, param2);
         }

@@ -26,7 +26,7 @@ final class PlayerProfile {
     static String[] field_q;
     static ToolkitSprite[] field_r;
 
-    final static void a(boolean param0) {
+    final static void clearChatInput(boolean param0) {
         if (!param0) {
           PlayerProfile.releaseStatics(-1);
         }
@@ -232,7 +232,7 @@ final class PlayerProfile {
     final void queueUpdate(int param0, taa param1) {
         try {
           if (param0 != 8) {
-            PlayerProfile.a(true);
+            PlayerProfile.clearChatInput(true);
           }
           this.field_i.addLast((byte) -48, param1);
         } catch (RuntimeException runtimeException) {

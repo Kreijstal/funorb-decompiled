@@ -114,7 +114,7 @@ final class dga {
         int var2 = (SceneLight.field_i - 640) / 2;
         int var3 = SoftwareTransform3D.field_q * SoftwareTransform3D.field_q;
         int var4 = var3 - param0 * param0;
-        nra.field_c.setBounds(param1, -124 + SoftwareRasterizer.height - 90, -23776, 90, -(var4 * 199 / var3) + var2);
+        C2SRoomResultPacket.field_c.setBounds(param1, -124 + SoftwareRasterizer.height - 90, -23776, 90, -(var4 * 199 / var3) + var2);
         dka.field_b.setBounds(438, -124 + SoftwareRasterizer.height, param1 - 23975, 0, var2 + 202 + var4 * 438 / var3);
     }
 

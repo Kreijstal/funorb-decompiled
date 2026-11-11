@@ -141,7 +141,7 @@ final class C2SChooseRewardPacket implements GamePacket {
             return;
           }
           try {
-            JavaScriptBridge.callWithArguments(-96, "resizing", di.a(111), new Object[]{new Integer(param1)});
+            JavaScriptBridge.callWithArguments(-96, "resizing", di.getApplet(111), new Object[]{new Integer(param1)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

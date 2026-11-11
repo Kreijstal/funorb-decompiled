@@ -5,7 +5,7 @@ final class DisplacementOperator extends TextureOperator {
     static String field_m;
     private int field_n;
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         if (param0 != 116) {
           this.field_n = -128;
         }
@@ -28,7 +28,7 @@ final class DisplacementOperator extends TextureOperator {
         int[][] var32 = null;
         int var17 = TombRacer.field_G ? 1 : 0;
         if (param1 != -1) {
-          this.b((byte) -123);
+          this.onDecoded((byte) -123);
         }
         int[][] var23 = this.colourCache.getRow(param0, (byte) 115);
         int[][] var19 = var23;

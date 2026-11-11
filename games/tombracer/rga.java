@@ -83,21 +83,21 @@ final class rga {
           var9 = param7 - param0;
           var8_int = param0 + param4;
           for (var12 = param4; var8_int > var12; var12++) {
-            nra.fillRange((byte) -55, param5, param6, vaa.field_a[var12], param3);
+            C2SRoomResultPacket.fillRange((byte) -55, param5, param6, vaa.field_a[var12], param3);
           }
           if (param1 <= 97) {
             rga.releaseStatics((byte) -93);
           }
           for (var12Lifetime1 = param7; var12Lifetime1 > var9; var12Lifetime1--) {
-            nra.fillRange((byte) -55, param5, param6, vaa.field_a[var12Lifetime1], param3);
+            C2SRoomResultPacket.fillRange((byte) -55, param5, param6, vaa.field_a[var12Lifetime1], param3);
           }
           var11 = param6 - param0;
           var10 = param3 + param0;
           for (var12Lifetime2 = var8_int; var9 >= var12Lifetime2; var12Lifetime2++) {
             var18 = vaa.field_a[var12Lifetime2];
-            nra.fillRange((byte) -55, param5, var10, var18, param3);
-            nra.fillRange((byte) -55, param2, var11, var18, var10);
-            nra.fillRange((byte) -55, param5, param6, var18, var11);
+            C2SRoomResultPacket.fillRange((byte) -55, param5, var10, var18, param3);
+            C2SRoomResultPacket.fillRange((byte) -55, param2, var11, var18, var10);
+            C2SRoomResultPacket.fillRange((byte) -55, param5, param6, var18, var11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

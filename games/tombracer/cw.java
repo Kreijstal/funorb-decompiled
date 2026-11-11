@@ -35,7 +35,7 @@ final class cw {
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -739) {
           var4 = (LegacyOpenGlPostProcessEffect) null;
-          this.a(22, (LegacyOpenGlPostProcessEffect) null);
+          this.addEffect(22, (LegacyOpenGlPostProcessEffect) null);
         }
         if (this.field_c) {
           if (null != this.field_b) {
@@ -92,37 +92,37 @@ final class cw {
         if (this.field_h) {
           if (this.field_e == null) {
             this.field_t.b((Framebuffer) (this.field_i), (byte) 81);
-            this.field_i.a(-110, 0);
-            this.field_i.a(-114, 1);
-            this.field_i.a(36, 8);
-            this.field_i.a(true, this.field_r[0], 0);
+            this.field_i.detachAttachment(-110, 0);
+            this.field_i.detachAttachment(-114, 1);
+            this.field_i.detachAttachment(36, 8);
+            this.field_i.attachTexture(true, this.field_r[0], 0);
             if (1 < this.field_p) {
-              this.field_i.a(true, this.field_r[1], 1);
+              this.field_i.attachTexture(true, this.field_r[1], 1);
             }
             if (this.field_u) {
-              this.field_i.a(true, this.field_m, 8);
+              this.field_i.attachTexture(true, this.field_m, 8);
             } else {
-              this.field_i.a(8, this.field_b, true);
+              this.field_i.attachRenderbuffer(8, this.field_b, true);
             }
             this.field_t.b(this.field_i, 0);
           } else {
             this.field_t.b((Framebuffer) (this.field_i), (byte) 81);
-            this.field_i.a(-93, 0);
-            this.field_i.a(-123, 1);
-            this.field_i.a(107, 8);
-            this.field_i.a(true, this.field_r[0], 0);
+            this.field_i.detachAttachment(-93, 0);
+            this.field_i.detachAttachment(-123, 1);
+            this.field_i.detachAttachment(107, 8);
+            this.field_i.attachTexture(true, this.field_r[0], 0);
             if (1 < this.field_p) {
-              this.field_i.a(true, this.field_r[1], 1);
+              this.field_i.attachTexture(true, this.field_r[1], 1);
             }
             if (this.field_u) {
-              this.field_i.a(true, this.field_m, 8);
+              this.field_i.attachTexture(true, this.field_m, 8);
             }
             this.field_t.b(this.field_i, 0);
             this.field_t.b((Framebuffer) (this.field_e), (byte) 81);
-            this.field_e.a(124, 0);
-            this.field_e.a(71, 8);
-            this.field_e.a(0, this.field_l, true);
-            this.field_e.a(8, this.field_b, true);
+            this.field_e.detachAttachment(124, 0);
+            this.field_e.detachAttachment(71, 8);
+            this.field_e.attachRenderbuffer(0, this.field_l, true);
+            this.field_e.attachRenderbuffer(8, this.field_b, true);
             this.field_t.b(this.field_e, 0);
           }
           this.field_h = false;
@@ -130,7 +130,7 @@ final class cw {
         }
         if (this.field_n) {
           this.field_t.b((Framebuffer) (this.field_d), (byte) 81);
-          stackIn_55_1 = !(this.field_d.c(20));
+          stackIn_55_1 = !(this.field_d.isComplete(20));
           this.field_n = stackIn_55_1;
           this.field_t.b(this.field_d, param0 + 739);
         }
@@ -138,7 +138,7 @@ final class cw {
         return stackIn_59_0;
     }
 
-    final boolean a(int param0, LegacyOpenGlPostProcessEffect param1) {
+    final boolean addEffect(int param0, LegacyOpenGlPostProcessEffect param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -164,7 +164,7 @@ final class cw {
               return true;
             }
           }
-          this.a(false, param1);
+          this.removeEffect(false, param1);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,7 +208,7 @@ final class cw {
           this.field_a = true;
           this.field_o = param1;
           this.field_t.b((Framebuffer) (this.field_d), (byte) 81);
-          this.field_d.a(0, (byte) -91);
+          this.field_d.setDrawBuffer(0, (byte) -91);
           this.field_t.a(4, -this.field_t.field_I + (this.field_g + this.field_q), -this.field_o);
           return true;
         }
@@ -218,7 +218,7 @@ final class cw {
         return false;
     }
 
-    private final void a(boolean param0, LegacyOpenGlPostProcessEffect param1) {
+    private final void removeEffect(boolean param0, LegacyOpenGlPostProcessEffect param1) {
         try {
           param1.enabled = param0 ? true : false;
           param1.release((byte) -71);
@@ -240,7 +240,7 @@ final class cw {
         int var2Lifetime1;
         var8 = TombRacer.field_G ? 1 : 0;
         if (param0 >= -43) {
-          this.b((byte) -49);
+          this.hasFramebuffer((byte) -49);
         }
         if (!this.field_a) {
           return;
@@ -249,8 +249,8 @@ final class cw {
           var2 = 16384;
           this.field_t.a(this.field_e, -1090);
           this.field_t.pushFramebuffer(0, this.field_i);
-          this.field_e.b(-1, 0);
-          this.field_i.a(0, (byte) -91);
+          this.field_e.setReadBuffer(-1, 0);
+          this.field_i.setDrawBuffer(0, (byte) -91);
           if (this.field_u) {
             var2 = var2 | 256;
           }
@@ -289,7 +289,7 @@ final class cw {
               jaggl.OpenGL.glVertex2i(this.field_k + this.field_o, this.field_q);
               jaggl.OpenGL.glEnd();
             } else {
-              this.field_i.a(0 + var3, (byte) -91);
+              this.field_i.setDrawBuffer(0 + var3, (byte) -91);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord2f(0.0f, (float)this.field_g);
               jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 1.0f);
@@ -381,14 +381,14 @@ final class cw {
         this.field_p = var4;
     }
 
-    final boolean b(byte param0) {
+    final boolean hasFramebuffer(byte param0) {
         if (param0 != -43) {
           this.field_d = (OpenGlFramebuffer) null;
         }
         return this.field_d != null ? true : false;
     }
 
-    final void a(int param0) {
+    final void releaseAll(int param0) {
         IntrusiveNode var2 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
         this.field_l = null;

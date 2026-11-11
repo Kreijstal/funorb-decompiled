@@ -13,14 +13,14 @@ abstract class PathMoverComponent extends PrefabComponent {
     final void mirror(Room param0, int param1) {
         try {
           super.mirror(param0, param1);
-          this.field_K.a(true);
+          this.field_K.mirror(true);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ra.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
-        tga.field_a.a(param2, param5, param3, param0, SoundEvent.a(param4, param1), (byte) -128);
+        tga.field_a.a(param2, param5, param3, param0, SoundEvent.withFullAlpha(param4, param1), (byte) -128);
     }
 
     abstract boolean C(int param0);
@@ -132,7 +132,7 @@ abstract class PathMoverComponent extends PrefabComponent {
         }
     }
 
-    final static String r(byte param0) {
+    final static String getLocalPlayerNameOrEmpty(byte param0) {
         if (MenuEntry.field_k == null) {
           return "";
         }

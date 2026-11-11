@@ -22,7 +22,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
         int var2 = -27 / ((param0 + 69) / 42);
     }
 
-    private final void k(byte param0) {
+    private final void ensureOddSpacing(byte param0) {
         if (this.field_v % 2 != 1) {
           this.field_v = this.field_v + 1;
         }
@@ -69,7 +69,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
           this.field_y = param1.readBits((byte) 44, 10) << 16;
           this.field_v = param1.readBits((byte) 44, 7);
           this.field_w = param1.readBits((byte) 44, 7);
-          this.k((byte) -56);
+          this.ensureOddSpacing((byte) -56);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "rsa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -89,8 +89,8 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
         int var12;
         int var13;
         var13 = TombRacer.field_G ? 1 : 0;
-        var2 = this.trap.getLocalX(25745) - this.f(10);
-        var3 = this.trap.getLocalY(false) - this.g((byte) 30);
+        var2 = this.trap.getLocalX(25745) - this.getAnchorX(10);
+        var3 = this.trap.getLocalY(false) - this.getAnchorY((byte) 30);
         if (var2 == 0 &&
           0 == var3) {
           return;

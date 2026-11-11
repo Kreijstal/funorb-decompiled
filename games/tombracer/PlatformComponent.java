@@ -49,7 +49,7 @@ final class PlatformComponent extends PrefabComponent {
         int var1 = -6 / ((-10 - param0) / 45);
     }
 
-    final static TimingPattern b(int param0, int param1) {
+    final static TimingPattern createTimingPattern(int param0, int param1) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
@@ -130,7 +130,7 @@ final class PlatformComponent extends PrefabComponent {
           var4 = new Trap(param2, param0);
           var4.setSize((byte) -11, this.height, this.width);
           var5 = new PlatformBehaviour(param2, false);
-          var5.b(-5, this.field_G);
+          var5.setWeightThreshold(-5, this.field_G);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           if (param1 != 3) {

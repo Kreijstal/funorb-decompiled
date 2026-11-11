@@ -80,7 +80,7 @@ class tc extends lu {
 
     final static void a(boolean param0, int param1) {
         if (null != ArchiveNetworkClient.field_b) {
-          TrackPlayerLocomotor.a(-107, ArchiveNetworkClient.field_b);
+          TrackPlayerLocomotor.drawTooltip(-107, ArchiveNetworkClient.field_b);
         }
         if (hka.field_b != null) {
           hka.field_b.a(true, param0);

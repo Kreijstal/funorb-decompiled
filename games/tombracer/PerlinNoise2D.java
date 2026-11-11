@@ -258,14 +258,14 @@ final class PerlinNoise2D extends TextureOperator {
         return stackIn_7_0;
     }
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         int var2 = 0;
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         this.field_p = TileGridCell.getPermutationTable(this.field_z, (byte) 109);
         if (param0 != 116) {
-          this.b((byte) 55);
+          this.onDecoded((byte) 55);
         }
         this.buildOctaves(0);
         for (var2 = this.field_n - 1; var2 >= 1; var2--) {

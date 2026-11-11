@@ -25,11 +25,11 @@ final class MirrorBehaviour extends Behaviour {
           return;
         }
         super.onTrapLoaded((byte) 102);
-        this.b(1659280738);
-        this.j((byte) 1);
+        this.updateMirrorDirection(1659280738);
+        this.updateMirrorSegment((byte) 1);
     }
 
-    private final void b(int param0) {
+    private final void updateMirrorDirection(int param0) {
         int var2 = this.trap.getFacingAngle(-25787);
         if (param0 != 1659280738) {
           BeamSegment var3 = (BeamSegment) null;
@@ -125,7 +125,7 @@ final class MirrorBehaviour extends Behaviour {
             return false;
           }
           var6 = wm.a(4096, var5_int, -61);
-          param2.a(var6, (byte) 47);
+          param2.shortenTo(var6, (byte) 47);
           this.field_o = param2;
           this.field_s = this.a(true, param2);
           this.field_q = param0;
@@ -206,7 +206,7 @@ final class MirrorBehaviour extends Behaviour {
           var13 = ModelAnimator.cos2048(0, var11 >> 2);
           var14 = param2.field_b - gqa.multiplyFixed(param2.field_b, (byte) 24, this.field_w);
           var15 = var14 >> 8;
-          var5.a(var6, (var12 >> 8) * var15 + var6, var7, (var13 >> 8) * var15 + var7, 44);
+          var5.setEndpoints(var6, (var12 >> 8) * var15 + var6, var7, (var13 >> 8) * var15 + var7, 44);
           var5.field_b = var14;
           var16 = this.getRoom(true);
           var16.castBeamSegment(this.field_q, this.trap, -108, var5, this.getRoot(6), param1);
@@ -237,14 +237,14 @@ final class MirrorBehaviour extends Behaviour {
           super.attachToTrap(true, param1);
           param1.setAlwaysBlocksBeams(param0, 120);
           this.field_n = MidiVoiceMixer.min(param1.getHeight((byte) 55), param1.getWidth(-23), -23);
-          this.b(1659280738);
-          this.j((byte) 1);
+          this.updateMirrorDirection(1659280738);
+          this.updateMirrorSegment((byte) 1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "mc.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void j(byte param0) {
+    private final void updateMirrorSegment(byte param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -255,19 +255,19 @@ final class MirrorBehaviour extends Behaviour {
           var4 = this.field_n >> 8;
           var5 = (this.field_t >> 8) * var4 / 2;
           var6 = var4 * (this.field_p >> 8) / 2;
-          this.field_u.a(var2 - var5, var5 + var2, -var6 + var3, var6 + var3, 44);
+          this.field_u.setEndpoints(var2 - var5, var5 + var2, -var6 + var3, var6 + var3, 44);
           return;
         }
     }
 
     final void tick(int param0) {
-        this.b(param0 ^ 1659275336);
+        this.updateMirrorDirection(param0 ^ 1659275336);
         if (param0 == 5418) {
-          this.j((byte) 1);
+          this.updateMirrorSegment((byte) 1);
           return;
         }
         this.field_p = 81;
-        this.j((byte) 1);
+        this.updateMirrorSegment((byte) 1);
     }
 
     static {

@@ -18,7 +18,7 @@ final class LineNoiseOperator extends TextureOperator {
         monthNames = null;
     }
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         if (param0 != 116) {
           PacketBuffer var3 = (PacketBuffer) null;
           this.decodeParameter((byte) 61, (PacketBuffer) null, -62);

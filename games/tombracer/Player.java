@@ -727,7 +727,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             stackIn_7_0 = 1;
             return stackIn_7_0;
           }
-          if (SimulationObserver.a(this.size, param1, this.y, this.size, param2, this.x, 2) == -1) {
+          if (SimulationObserver.clipBeamToBox(this.size, param1, this.y, this.size, param2, this.x, 2) == -1) {
             stackIn_12_0 = 0;
             return stackIn_12_0;
           }
@@ -2849,12 +2849,12 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           if (!this.canBeHitBy(param1, param2, 1)) {
             return false;
           }
-          var5_int = SimulationObserver.a(this.size, 12, this.getY(9648), this.size, param3, this.getX(3), 2);
+          var5_int = SimulationObserver.clipBeamToBox(this.size, 12, this.getY(9648), this.size, param3, this.getX(3), 2);
           if (-1 == var5_int) {
             return false;
           }
           var6 = wm.a(4096, var5_int, -110);
-          param3.a(var6, (byte) 47);
+          param3.shortenTo(var6, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

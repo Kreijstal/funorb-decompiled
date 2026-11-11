@@ -103,7 +103,7 @@ final class RoomEffectTraps {
           if (param1 >= -11) {
             field_b = -58;
           }
-          param5.a(param2, false, param3, param4, SoundEvent.a(false, param6), SoundEvent.a(false, param0));
+          param5.drawLeft(param2, false, param3, param4, SoundEvent.withFullAlpha(false, param6), SoundEvent.withFullAlpha(false, param0));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ts.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
@@ -417,7 +417,7 @@ final class RoomEffectTraps {
         this.darknessTraps = null;
     }
 
-    final static void a(byte param0, byte[] param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void generateByteMipmaps(byte param0, byte[] param1, int param2, int param3, int param4, int param5, int param6) {
         int var17 = 0;
         int var21 = 0;
         int var22 = 0;

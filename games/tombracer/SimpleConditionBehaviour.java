@@ -25,7 +25,7 @@ final class SimpleConditionBehaviour extends Behaviour {
             stackIn_2_0 = (tn) null;
             return stackIn_2_0;
           }
-          var4 = param0.f(param1, 105);
+          var4 = param0.getFileById(param1, 105);
           var3 = var4;
           if (var4 == null) {
             return null;
@@ -47,7 +47,7 @@ final class SimpleConditionBehaviour extends Behaviour {
     }
 
     final void tick(int param0) {
-        this.j((byte) 79);
+        this.evaluateCondition((byte) 79);
         this.field_n.setInput((byte) -14, this.field_s);
         if (param0 != 5418) {
           this.stop(false);
@@ -90,7 +90,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         }
     }
 
-    private final void j(byte param0) {
+    private final void evaluateCondition(byte param0) {
         boolean stackIn_8_1 = false;
         int var2;
         int var3;

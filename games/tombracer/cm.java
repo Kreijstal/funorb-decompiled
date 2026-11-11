@@ -391,9 +391,9 @@ final class cm implements GamePacket {
                     var12 = 1;
                   }
                 }
-                if (null != nra.field_g &&
-                  nra.field_g[var7] != null) {
-                  var16Lifetime2 = nra.field_g[var7][var9];
+                if (null != C2SRoomResultPacket.field_g &&
+                  C2SRoomResultPacket.field_g[var7] != null) {
+                  var16Lifetime2 = C2SRoomResultPacket.field_g[var7][var9];
                   if (var16Lifetime2 != 0 &&
                     !dea.field_c &&
                     0 >= ReportAbuseDialog.field_ub) {
@@ -529,7 +529,7 @@ final class cm implements GamePacket {
                     var21 = ai.field_b;
                   } else {
                     if (var11 != 0) {
-                      var22_int = nra.field_g[var7][var9] - FleeLocomotor.field_z;
+                      var22_int = C2SRoomResultPacket.field_g[var7][var9] - FleeLocomotor.field_z;
                       if (var22_int == 1) {
                         var21 = rm.field_b;
                       } else {

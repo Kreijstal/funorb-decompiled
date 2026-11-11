@@ -11,7 +11,7 @@ final class ComponentMount {
     private IntPoint rotatedOffset;
     private int field_f;
 
-    final void a(int param0, byte param1, Room param2, int param3) {
+    final void mirror(int param0, byte param1, Room param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

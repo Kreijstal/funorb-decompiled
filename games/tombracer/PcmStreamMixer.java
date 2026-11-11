@@ -152,7 +152,7 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void prependStream(PcmStream param0) {
         this.field_l.addFirst((byte) 110, (IntrusiveNode) (param0));
     }
 

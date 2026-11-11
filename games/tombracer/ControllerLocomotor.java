@@ -29,7 +29,7 @@ final class ControllerLocomotor extends Locomotor {
         int var2 = 52 / ((param0 + 69) / 42);
     }
 
-    private final void e(int param0) {
+    private final void advanceStep(int param0) {
         this.field_s = this.field_s + 1;
         if (param0 > -15) {
           return;
@@ -86,7 +86,7 @@ final class ControllerLocomotor extends Locomotor {
         if (this.locked) {
           return;
         }
-        this.e(-114);
+        this.advanceStep(-114);
         int var2 = 94 % ((28 - param0) / 49);
     }
 

@@ -132,7 +132,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
     }
 
-    final void a(boolean param0) {
+    final void onFogChanged(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         float var4 = 0.0f;
@@ -154,7 +154,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           }
           return;
         }
-        this.a(false);
+        this.onFogChanged(false);
         if (this.field_g) {
           var2Lifetime1 = this.owner.XA();
           var3Lifetime1 = this.owner.i();
@@ -293,7 +293,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           return;
         }
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, this.field_h[0], this.field_h[1], this.field_h[2], this.field_h[3]);
-        this.a(true);
+        this.onFogChanged(true);
     }
 
     static {

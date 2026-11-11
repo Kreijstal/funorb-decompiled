@@ -123,7 +123,7 @@ final class SweepRotateLocomotor extends Locomotor {
               if (param0 != 14180) {
                 field_q = 74;
               }
-              dea.a(param0 ^ 14168);
+              dea.closeGameSocket(param0 ^ 14168);
               return;
             }
             UiWidget.field_g = 1;
@@ -156,7 +156,7 @@ final class SweepRotateLocomotor extends Locomotor {
             fieldTemp$0 = ii.field_a;
             ii.field_a = ii.field_a + 1;
             var6Lifetime1.field_Db = fieldTemp$0;
-            fla.field_f.addLast((byte) -61, var6Lifetime1);
+            PlayingSound.field_f.addLast((byte) -61, var6Lifetime1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -165,7 +165,7 @@ final class SweepRotateLocomotor extends Locomotor {
           var6Lifetime1.field_Cb = (String) (var3Lifetime1);
           var6Lifetime1.field_tb = var4_ref_StringLifetime1;
           var6Lifetime1.unlink(70);
-          var7 = (mu) (fla.field_f.first(-80));
+          var7 = (mu) (PlayingSound.field_f.first(-80));
           scanLoop1: while (true) {
             if (null != var7) {
               stackIn_55_0 = var7;
@@ -173,7 +173,7 @@ final class SweepRotateLocomotor extends Locomotor {
                 break scanLoop1;
               }
               if (ol.comesBefore(stackIn_55_0, true, var6Lifetime1)) {
-                var7 = (mu) (fla.field_f.next(param0 - 14058));
+                var7 = (mu) (PlayingSound.field_f.next(param0 - 14058));
                 continue;
               }
             }
@@ -181,7 +181,7 @@ final class SweepRotateLocomotor extends Locomotor {
             break;
           }
           if (stackIn_55_0 == null) {
-            fla.field_f.addLast((byte) -112, var6Lifetime1);
+            PlayingSound.field_f.addLast((byte) -112, var6Lifetime1);
             if (var9 == 0) {
               return;
             }

@@ -48,7 +48,7 @@ final class ContextMenu extends UiComponent {
           return;
         }
         var7Lifetime1 = this.field_tb + (this.field_zb * this.field_Gb + this.field_tb);
-        var8Lifetime1 = PitSnakeModel.a((byte) -8, var6, param3, param4);
+        var8Lifetime1 = PitSnakeModel.clampToScreenX((byte) -8, var6, param3, param4);
         var9 = hsa.a(param1, var7Lifetime1, param0, (byte) -98);
         this.setBounds(var6, var7Lifetime1, -23776, var9, var8Lifetime1);
         for (var10 = 0; this.field_zb > var10; var10++) {

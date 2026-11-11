@@ -16,15 +16,15 @@ final class tja extends pb {
 
     final boolean a(int param0) {
         if (param0 != 14646) {
-          this.f(6);
+          this.getValue(6);
           return false;
         }
         return false;
     }
 
-    final Object f(int param0) {
+    final Object getValue(int param0) {
         if (param0 != 29243) {
-          this.f(77);
+          this.getValue(77);
           return this.field_o;
         }
         return this.field_o;

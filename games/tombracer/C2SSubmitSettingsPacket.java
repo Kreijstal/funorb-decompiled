@@ -113,7 +113,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         return "C2SSubmitSettingsPacket: graphics mode: " + this.graphicsMode + " Sfx vol: " + this.soundEffectsVolume + " Music Vol: " + this.musicVolume;
     }
 
-    final void a(int param0, int param1) {
+    final void setMusicVolume(int param0, int param1) {
         if (param1 != 2097152) {
           return;
         }

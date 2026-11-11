@@ -1336,7 +1336,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
-          if (SimulationObserver.a(this.size, param1, this.y, this.size, param2, this.x, 2) >= 0) {
+          if (SimulationObserver.clipBeamToBox(this.size, param1, this.y, this.size, param2, this.x, 2) >= 0) {
             stackIn_7_0 = this.reactToEffect(115, param0);
             return stackIn_7_0;
           }

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class HazardModel extends TrapModel {
-    private fla field_r;
-    private fla field_v;
+    private PlayingSound field_r;
+    private PlayingSound field_v;
     private int field_s;
     private int field_p;
     private int field_o;
@@ -16,7 +16,7 @@ final class HazardModel extends TrapModel {
     final void a(boolean param0, int param1) {
         try {
           if (param0) {
-            this.field_r = (fla) null;
+            this.field_r = (PlayingSound) null;
           }
           this.field_u = param1;
         } catch (RuntimeException runtimeException) {
@@ -131,7 +131,7 @@ final class HazardModel extends TrapModel {
                 }
                 if (var5 != null) {
                   var6 = (String) null;
-                  TreasureValuesOverlay.a(0, true, var4, (String) (var5), (String) null, 2);
+                  TreasureValuesOverlay.addChatMessage(0, true, var4, (String) (var5), (String) null, 2);
                 }
               }
               bl.field_a = null;
@@ -281,13 +281,13 @@ final class HazardModel extends TrapModel {
             } else {
               if (this.field_v != null &&
                 var4Lifetime1 == 0) {
-                this.field_v.a(-90, var10_ref);
+                this.field_v.release(-90, var10_ref);
                 this.field_v = null;
               }
             }
           }
           if (this.field_v != null) {
-            this.field_v.a(this.getRenderX((byte) -83), var10_ref.field_c, -128, var10_ref.field_h, this.getRenderY((byte) 107));
+            this.field_v.updateVolumeAndPan(this.getRenderX((byte) -83), var10_ref.field_c, -128, var10_ref.field_h, this.getRenderY((byte) 107));
           }
           if (this.field_u == 1) {
             var11 = var3_ref.behaviours;
@@ -307,7 +307,7 @@ final class HazardModel extends TrapModel {
             }
             if (this.field_r != null &&
               this.field_r.field_i.field_f.isOutOfRange()) {
-              this.field_r.a(-88, var10_ref);
+              this.field_r.release(-88, var10_ref);
               this.field_r = null;
             }
           }

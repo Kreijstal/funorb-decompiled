@@ -85,7 +85,7 @@ abstract class za extends IntrusiveNode {
             hc.field_h >= param5) {
             var22 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + param2);
             var23 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 - param2);
-            nra.fillRange((byte) -55, param3, var22, vaa.field_a[param5], var23);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var22, vaa.field_a[param5], var23);
           }
           while (true) {
             if (var7 <= 0) {
@@ -123,12 +123,12 @@ abstract class za extends IntrusiveNode {
             var24 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + var6_int);
             var25 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var6_int + param0);
             if (var22Lifetime1 >= gca.field_d) {
-              nra.fillRange((byte) -55, param3, var24, vaa.field_a[var22Lifetime1], var25);
+              C2SRoomResultPacket.fillRange((byte) -55, param3, var24, vaa.field_a[var22Lifetime1], var25);
             }
             if (var23Lifetime1 > hc.field_h) {
               continue;
             }
-            nra.fillRange((byte) -55, param3, var24, vaa.field_a[var23Lifetime1], var25);
+            C2SRoomResultPacket.fillRange((byte) -55, param3, var24, vaa.field_a[var23Lifetime1], var25);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

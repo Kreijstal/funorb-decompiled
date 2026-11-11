@@ -234,7 +234,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
               break;
             }
             if (var4 == null) {
-              dea.a(60);
+              dea.closeGameSocket(60);
               return;
             }
             var5 = var28.readUnsignedByte(255);
@@ -333,7 +333,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
               break;
             }
             if (var6_ref_kb == null) {
-              dea.a(60);
+              dea.closeGameSocket(60);
               return;
             }
             var6_ref_kb.serverResult = var4_long;
@@ -341,7 +341,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
             return;
           }
           ssa.reportClientError("HS1: " + kk.formatPacketDump(32), (byte) 121, (Throwable) null);
-          dea.a(60);
+          dea.closeGameSocket(60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -358,7 +358,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         field_s = null;
     }
 
-    final void b(byte param0) {
+    final void onDecoded(byte param0) {
         tka.b((byte) 105);
         if (param0 != 116) {
           this.field_p = 92;

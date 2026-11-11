@@ -26,52 +26,52 @@ final class SoundEvent extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8, int param9) {
         if (param2 < pka.field_b) {
-          PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+          PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
         } else {
           if (DiskCacheWorker.field_c < param2) {
-            PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+            PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
           } else {
             if (param1 < pka.field_b) {
-              PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+              PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
             } else {
               if (DiskCacheWorker.field_c < param1) {
-                PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
               } else {
                 if (pka.field_b > param7) {
-                  PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                  PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                 } else {
                   if (param7 > DiskCacheWorker.field_c) {
-                    PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                    PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                   } else {
                     if (pka.field_b > param0) {
-                      PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                      PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                     } else {
                       if (DiskCacheWorker.field_c < param0) {
-                        PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                        PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                       } else {
                         if (gca.field_d > param5) {
-                          PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                          PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                         } else {
                           if (param5 > hc.field_h) {
-                            PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                            PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                           } else {
                             if (param9 < gca.field_d) {
-                              PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                              PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                             } else {
                               if (param9 > hc.field_h) {
-                                PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                                PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                               } else {
                                 if (gca.field_d > param3) {
-                                  PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                                  PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                 } else {
                                   if (param3 > hc.field_h) {
-                                    PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                                    PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                   } else {
                                     if (param6 < gca.field_d) {
-                                      PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                                      PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                     } else {
                                       if (param6 > hc.field_h) {
-                                        PlatformMazeComponent.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                                        PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                       } else {
                                         RoomDefinition.a(param7, param1, param0, param3, -93, param6, param2, param9, param4, param5);
                                       }
@@ -96,7 +96,7 @@ final class SoundEvent extends IntrusiveNode {
         SoundEvent.releaseStatics(31);
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int withFullAlpha(boolean param0, int param1) {
         if (param0) {
           field_h = (SpriteData) null;
           return jg.withAlpha(255, (byte) -96, param1);

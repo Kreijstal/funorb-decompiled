@@ -144,9 +144,9 @@ final class UrlDownloadRequest implements Runnable {
         return false;
     }
 
-    final static void a(byte param0) {
+    final static void startTutorial(byte param0) {
         PlayTrackCommand.field_p = true;
-        TextLayout.a(pl.a((byte) 64), (byte) 126, 3);
+        TextLayout.startSinglePlayerMatch(pl.a((byte) 64), (byte) 126, 3);
         int var1 = 72 / ((param0 - 55) / 46);
         SecondaryNodeDequeIterator.field_a.startTutorial((byte) 106);
     }
@@ -191,7 +191,7 @@ final class UrlDownloadRequest implements Runnable {
             field_i = 59;
           }
           for (var6_int = param3; param4 >= var6_int; var6_int++) {
-            nra.fillRange((byte) -55, param0, param1, vaa.field_a[var6_int], param2);
+            C2SRoomResultPacket.fillRange((byte) -55, param0, param1, vaa.field_a[var6_int], param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

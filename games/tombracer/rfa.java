@@ -12,9 +12,9 @@ abstract class rfa extends AppletGameShell implements ShellListener {
     final void draw(int param0) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
-        java.awt.Canvas var2 = LegacyOpenGlRidgedWaterEffect.b((byte) -97);
+        java.awt.Canvas var2 = LegacyOpenGlRidgedWaterEffect.getActiveCanvas((byte) -97);
         if (ColourGradientOperator.isLoginFlowIncomplete(-127)) {
-          WallTile.a(PortalComponent.A(90), var2, param0 ^ 0);
+          WallTile.drawLoadingScreen(PortalComponent.A(90), var2, param0 ^ 0);
           return;
         }
         if (!lla.field_b) {
@@ -123,7 +123,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                   og.b(0);
                 }
                 if (2 == var3) {
-                  ArchiveRequest.openQuitPage(di.a(110), (byte) -95);
+                  ArchiveRequest.openQuitPage(di.getApplet(110), (byte) -95);
                 }
                 this.updateScreen(true, false);
               }
@@ -317,7 +317,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
             woa.a(4, var5, false);
           }
         }
-        dra.a(param0);
+        dra.sendReflectionCheckResponses(param0);
         BridgeModel.flushGamePackets((byte) 120, 0);
         if (uma.b(-1)) {
           var2 = this.updateConnection(8);

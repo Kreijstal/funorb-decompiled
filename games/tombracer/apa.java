@@ -13,7 +13,7 @@ final class apa {
         field_b = null;
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
+    final void drawFrame(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 == 57) {
           ConstrainToLatticeLocomotor.drawNineSlice(param4, this.field_d, param2, -119, param1, param3);
           return;

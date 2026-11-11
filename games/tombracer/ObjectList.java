@@ -46,7 +46,7 @@ final class ObjectList {
           ol.field_b = null;
           ii.field_a = 0;
           tba.field_k = param0;
-          fla.field_f.clear(8);
+          PlayingSound.field_f.clear(8);
           MenuScreen.field_l.clear(8);
           var1 = TrackPlayerLocomotor.field_s.startTraversal(16);
           while (var1 != null) {

@@ -231,9 +231,9 @@ final class ModelAnimator {
         field_g = null;
     }
 
-    final int c(byte param0) {
+    final int getCurrentAnimationLength(byte param0) {
         int var2 = 88 % ((-47 - param0) / 34);
-        return this.a(this.field_a, (byte) 66, this.field_e, this.field_j);
+        return this.getAnimationLength(this.field_a, (byte) 66, this.field_e, this.field_j);
     }
 
     final ka getModel(byte param0) {
@@ -252,7 +252,7 @@ final class ModelAnimator {
         this.frameAccumulator = 0.5494057536125183f;
     }
 
-    final int a(int param0, byte param1, int param2, int param3) {
+    final int getAnimationLength(int param0, byte param1, int param2, int param3) {
         AnimationSequence var5 = null;
         AnimationSequence var5Lifetime1;
         if (param1 != 66) {
@@ -261,13 +261,13 @@ final class ModelAnimator {
           if (var5 == null) {
             return 0;
           }
-          return var5.a((byte) 117, true);
+          return var5.getTotalDuration((byte) 117, true);
         }
         var5Lifetime1 = LegacyOpenGlUnlitEffect.getAnimationSequence(-2, param3, param0, param2);
         if (var5Lifetime1 == null) {
           return 0;
         }
-        return var5Lifetime1.a((byte) 117, true);
+        return var5Lifetime1.getTotalDuration((byte) 117, true);
     }
 
     private final void stop(int param0) {

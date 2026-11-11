@@ -67,7 +67,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          PlantModel.a(-18520, (java.awt.Component) ((Object) param0));
+          PlantModel.detachKeyboardHandler(-18520, (java.awt.Component) ((Object) param0));
           tia.detachMouseHandler(0, (java.awt.Component) ((Object) param0));
           if (param1) {
             return;

@@ -62,7 +62,7 @@ final class di {
         if (param0 != 100663296) {
           return false;
         }
-        return this.a(-101, LegacyOpenGlRidgedWaterEffect.b((byte) -97));
+        return this.a(-101, LegacyOpenGlRidgedWaterEffect.getActiveCanvas((byte) -97));
     }
 
     final static void advanceLobbyTransitions(byte param0, boolean param1) {
@@ -136,7 +136,7 @@ final class di {
           }
         }
         if (param0 != -98) {
-          di.a(57);
+          di.getApplet(57);
         }
     }
 
@@ -172,7 +172,7 @@ final class di {
                   if (!HotspotTextWidget.field_B.ensureIndex(-35)) {
                     return;
                   }
-                  var8_int = ScoreStandings.a("hw3d", 28893);
+                  var8_int = ScoreStandings.loadNativeLibrary("hw3d", 28893);
                   if (var8_int == -1) {
                     var7.field_c = false;
                     decompiledFrameRemainder0 = false;
@@ -181,7 +181,7 @@ final class di {
                     if (var8_int < 100) {
                       return;
                     }
-                    var9_int = ScoreStandings.a("jaclib", 28893);
+                    var9_int = ScoreStandings.loadNativeLibrary("jaclib", 28893);
                     if (var9_int == -1) {
                       var7.field_c = false;
                       decompiledFrameRemainder0 = false;
@@ -190,7 +190,7 @@ final class di {
                       if (var9_int < 100) {
                         return;
                       }
-                      var10 = ScoreStandings.a("jaggl", 28893);
+                      var10 = ScoreStandings.loadNativeLibrary("jaggl", 28893);
                       if (var10 == -1) {
                         var7.field_c = false;
                         decompiledFrameRemainder0 = false;
@@ -211,7 +211,7 @@ final class di {
                       if (!HotspotTextWidget.field_B.ensureIndex(-63)) {
                         return;
                       }
-                      var8_int = ScoreStandings.a("jaclib", 28893);
+                      var8_int = ScoreStandings.loadNativeLibrary("jaclib", 28893);
                       if (-1 == var8_int) {
                         var7.field_c = false;
                         decompiledFrameRemainder0 = false;
@@ -220,7 +220,7 @@ final class di {
                         if (100 > var8_int) {
                           return;
                         }
-                        var9_int = ScoreStandings.a("sw3d", 28893);
+                        var9_int = ScoreStandings.loadNativeLibrary("sw3d", 28893);
                         if (var9_int == -1) {
                           var7.field_c = false;
                           decompiledFrameRemainder0 = false;
@@ -235,7 +235,7 @@ final class di {
                       if (!HotspotTextWidget.field_B.ensureIndex(-63)) {
                         return;
                       }
-                      var8_int = ScoreStandings.a("jaclib", 28893);
+                      var8_int = ScoreStandings.loadNativeLibrary("jaclib", 28893);
                       if (var8_int == -1) {
                         var7.field_c = false;
                         decompiledFrameRemainder0 = false;
@@ -244,7 +244,7 @@ final class di {
                         if (var8_int < 100) {
                           return;
                         }
-                        var9_int = ScoreStandings.a("jagdx", 28893);
+                        var9_int = ScoreStandings.loadNativeLibrary("jagdx", 28893);
                         if (var9_int == -1) {
                           var7.field_c = false;
                           decompiledFrameRemainder0 = false;
@@ -253,7 +253,7 @@ final class di {
                           if (100 > var9_int) {
                             return;
                           }
-                          var10 = ScoreStandings.a("hw3d", 28893);
+                          var10 = ScoreStandings.loadNativeLibrary("hw3d", 28893);
                           if (-1 == var10) {
                             var7.field_c = false;
                             decompiledFrameRemainder0 = false;
@@ -270,7 +270,7 @@ final class di {
                     if (!HotspotTextWidget.field_B.ensureIndex(-53)) {
                       return;
                     }
-                    var8_int = ScoreStandings.a("jaclib", 28893);
+                    var8_int = ScoreStandings.loadNativeLibrary("jaclib", 28893);
                     if (var8_int == -1) {
                       var7.field_c = false;
                       decompiledFrameRemainder0 = false;
@@ -279,7 +279,7 @@ final class di {
                       if (100 > var8_int) {
                         return;
                       }
-                      var9_int = ScoreStandings.a("jaggl", 28893);
+                      var9_int = ScoreStandings.loadNativeLibrary("jaggl", 28893);
                       if (-1 == var9_int) {
                         var7.field_c = false;
                         decompiledFrameRemainder0 = false;
@@ -452,7 +452,7 @@ final class di {
         }
     }
 
-    final static java.applet.Applet a(int param0) {
+    final static java.applet.Applet getApplet(int param0) {
         if (param0 <= 16) {
           field_d = (iw) null;
         }

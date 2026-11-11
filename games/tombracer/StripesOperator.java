@@ -39,7 +39,7 @@ final class StripesOperator extends TextureOperator {
         var12 = var13;
         var3 = var12;
         if (param0 != 1) {
-          this.c(-75);
+          this.buildStripeTables(-75);
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.monochromeCache.rowMissed) {
@@ -111,14 +111,14 @@ final class StripesOperator extends TextureOperator {
         return var3;
     }
 
-    final void b(byte param0) {
-        this.c(param0 ^ -117);
+    final void onDecoded(byte param0) {
+        this.buildStripeTables(param0 ^ -117);
         if (param0 != 116) {
           this.field_o = (int[]) null;
         }
     }
 
-    private final void c(int param0) {
+    private final void buildStripeTables(int param0) {
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         this.field_o = new int[this.field_n - param0];

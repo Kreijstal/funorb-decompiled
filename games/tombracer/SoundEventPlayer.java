@@ -27,25 +27,25 @@ final class SoundEventPlayer extends SoundEventQueue {
     }
 
     final void stopAll(byte param0) {
-        fla var4 = null;
+        PlayingSound var4 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
-        fla var4Lifetime1;
+        PlayingSound var4Lifetime1;
         if (param0 >= -118) {
           this.playing = (IntrusiveDeque) null;
         } else {
-          var4 = (fla) (this.playing.first(-80));
+          var4 = (PlayingSound) (this.playing.first(-80));
           while (var4 != null) {
             rs.queueSoundRelease(var4, 107);
-            var4 = (fla) (this.playing.next(107));
+            var4 = (PlayingSound) (this.playing.next(107));
           }
           this.playing.clear(8);
           this.resetCounts(true);
           return;
         }
-        var4Lifetime1 = (fla) (this.playing.first(-80));
+        var4Lifetime1 = (PlayingSound) (this.playing.first(-80));
         while (var4Lifetime1 != null) {
           rs.queueSoundRelease(var4Lifetime1, 107);
-          var4Lifetime1 = (fla) (this.playing.next(107));
+          var4Lifetime1 = (PlayingSound) (this.playing.next(107));
         }
         this.playing.clear(8);
         this.resetCounts(true);
@@ -138,10 +138,10 @@ final class SoundEventPlayer extends SoundEventQueue {
         }
     }
 
-    final fla play(SoundEvent param0, int param1) {
+    final PlayingSound play(SoundEvent param0, int param1) {
         Object stackIn_11_0 = null;
         Object stackIn_20_0 = null;
-        fla stackIn_37_0 = null;
+        PlayingSound stackIn_37_0 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -156,7 +156,7 @@ final class SoundEventPlayer extends SoundEventQueue {
         int var9 = 0;
         int var10 = 0;
         vb var11 = null;
-        fla var12 = null;
+        PlayingSound var12 = null;
         try {
           var3_int = param0.getSoundId(9800);
           if (this.muted) {
@@ -173,7 +173,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           }
           if (this.playingCounts[var3_int] >= QueuedPlayerEvent.field_f[var3_int]) {
             stackIn_11_0 = null;
-            return (fla) (stackIn_11_0);
+            return (PlayingSound) (stackIn_11_0);
           }
           if (26 == var3_int) {
             this.enqueue(-101, new SoundEvent(28, param0.getX(param1 - 43), param0.getY(-127), param0.getParameter(4)));
@@ -184,7 +184,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           var4 = to.field_j[var3_int];
           if (var4 == -1) {
             stackIn_20_0 = null;
-            return (fla) (stackIn_20_0);
+            return (PlayingSound) (stackIn_20_0);
           }
           var5 = to.field_i[var3_int];
           if (0 < var5) {
@@ -212,7 +212,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           if (var7 != 0) {
             var11.field_f.setLoopCount(-1);
           }
-          var12 = new fla(var11, var3_int, var7 != 0, var4, var10, var9);
+          var12 = new PlayingSound(var11, var3_int, var7 != 0, var4, var10, var9);
           this.playing.addLast((byte) -100, var12);
           this.playingCounts[var3_int] = this.playingCounts[var3_int] + 1;
           stackIn_37_0 = var12;
@@ -242,7 +242,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           this.muted = param0 ? true : false;
           return;
         }
-        this.a(110, true);
+        this.playQueuedEvents(110, true);
         this.muted = param0 ? true : false;
     }
 
@@ -299,12 +299,12 @@ final class SoundEventPlayer extends SoundEventQueue {
         this.field_c = param0;
     }
 
-    final void a(int param0, boolean param1) {
+    final void playQueuedEvents(int param0, boolean param1) {
         boolean discarded$1 = false;
-        fla var6 = null;
+        PlayingSound var6 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         SoundEvent var5 = (SoundEvent) (this.events.first(-80));
-        fla var6Lifetime1;
+        PlayingSound var6Lifetime1;
         while (var5 != null) {
           this.play(var5, -58);
           var5.unlink(15);
@@ -313,17 +313,17 @@ final class SoundEventPlayer extends SoundEventQueue {
         if (param0 < 75) {
           discarded$1 = this.a(53, -23);
         } else {
-          var6 = (fla) (this.playing.first(-80));
+          var6 = (PlayingSound) (this.playing.first(-80));
           while (var6 != null) {
-            var6.a(564550600, this, param1);
-            var6 = (fla) (this.playing.next(110));
+            var6.update(564550600, this, param1);
+            var6 = (PlayingSound) (this.playing.next(110));
           }
           return;
         }
-        var6Lifetime1 = (fla) (this.playing.first(-80));
+        var6Lifetime1 = (PlayingSound) (this.playing.first(-80));
         while (var6Lifetime1 != null) {
-          var6Lifetime1.a(564550600, this, param1);
-          var6Lifetime1 = (fla) (this.playing.next(110));
+          var6Lifetime1.update(564550600, this, param1);
+          var6Lifetime1 = (PlayingSound) (this.playing.next(110));
         }
     }
 

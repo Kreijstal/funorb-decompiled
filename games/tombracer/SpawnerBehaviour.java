@@ -19,7 +19,7 @@ final class SpawnerBehaviour extends Behaviour {
     final void resolveSwitchLinks(int param0) {
         super.resolveSwitchLinks(param0);
         if (this.field_q != null) {
-          this.field_q.a((byte) 82);
+          this.field_q.resolveSwitchLinks((byte) 82);
         }
     }
 
@@ -30,7 +30,7 @@ final class SpawnerBehaviour extends Behaviour {
         C2SSubmitSettingsPacket var4 = new C2SSubmitSettingsPacket();
         var4.setGraphicsMode(param2, (byte) -60);
         var4.setSoundEffectsVolume(param0, (byte) 123);
-        var4.a(param3, 2097152);
+        var4.setMusicVolume(param3, 2097152);
         ql.field_k.writeCipheredOpcode(80, param1 ^ -2984);
         var4.encode(200, ql.field_k);
         if (param1 == 12) {
@@ -55,7 +55,7 @@ final class SpawnerBehaviour extends Behaviour {
         if (var4 != null) {
           return var4;
         }
-        return this.field_q.a(param2, -65, param1);
+        return this.field_q.findSwitchableRecursive(param2, -65, param1);
     }
 
     final void attachToTrap(boolean param0, Trap param1) {
@@ -71,7 +71,7 @@ final class SpawnerBehaviour extends Behaviour {
         try {
           super.assignSwitchableIds(-125, param1, param2, param3);
           if (null != this.field_q) {
-            this.field_q.a((byte) -36, new SwitchableIdAllocator(), param2, param1);
+            this.field_q.assignSwitchableIds((byte) -36, new SwitchableIdAllocator(), param2, param1);
           }
           int var5_int = -85 % ((param0 + 58) / 57);
         } catch (RuntimeException runtimeException) {
@@ -167,14 +167,14 @@ final class SpawnerBehaviour extends Behaviour {
         if (param1 == 0) {
           hh.a(40, param0);
           if (null != ArchiveNetworkClient.field_b) {
-            TrackPlayerLocomotor.a(-65, ArchiveNetworkClient.field_b);
+            TrackPlayerLocomotor.drawTooltip(-65, ArchiveNetworkClient.field_b);
           }
           return;
         }
         SpawnerBehaviour.a(false, 4);
         hh.a(40, param0);
         if (null != ArchiveNetworkClient.field_b) {
-          TrackPlayerLocomotor.a(-65, ArchiveNetworkClient.field_b);
+          TrackPlayerLocomotor.drawTooltip(-65, ArchiveNetworkClient.field_b);
         }
     }
 

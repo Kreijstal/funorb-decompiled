@@ -8,11 +8,11 @@ abstract class GameFont {
 
     abstract void drawGlyph(char param0, int param1, int param2, int param3, boolean param4);
 
-    final void a(int param0, int param1, int param2, int param3, int param4, String param5) {
+    final void drawCentred(int param0, int param1, int param2, int param3, int param4, String param5) {
         if (param5 == null) {
           return;
         }
-        this.a(param3, param0, param1 + 116);
+        this.setColours(param3, param0, param1 + 116);
         if (param1 != -1) {
           return;
         }
@@ -25,7 +25,7 @@ abstract class GameFont {
 
     abstract void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
 
-    private final void a(int param0, int param1, int param2) {
+    private final void setColours(int param0, int param1, int param2) {
         nt.field_b = -1;
         if (param2 < 106) {
           this.field_a = (FontMetrics) null;
@@ -104,7 +104,7 @@ abstract class GameFont {
                                 } else {
                                   if (!param0.equals("/shad")) {
                                     if (param0.equals("br")) {
-                                      this.a(ClientMemoryVertexArray.field_g, KeyItemComponent.field_G, 122);
+                                      this.setColours(ClientMemoryVertexArray.field_g, KeyItemComponent.field_G, 122);
                                     }
                                   } else {
                                     GasTrapComponent.field_G = KeyItemComponent.field_G;
@@ -178,7 +178,7 @@ abstract class GameFont {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          this.a(param16, param15, 109);
+          this.setColours(param16, param15, 109);
           if (param13 == 0) {
             param13 = this.field_a.field_a;
           }
@@ -236,7 +236,7 @@ abstract class GameFont {
                   if (var19 - 1 == var22Lifetime1) {
                     this.a(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
                   } else {
-                    this.a(true, param11, WeaponShooterBehaviour.field_q[var22Lifetime1]);
+                    this.computeJustification(true, param11, WeaponShooterBehaviour.field_q[var22Lifetime1]);
                     this.a(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
                     OpenGlToolkit.field_ab = 0;
                   }
@@ -279,7 +279,7 @@ abstract class GameFont {
         }
     }
 
-    private final void a(boolean param0, int param1, String param2) {
+    private final void computeJustification(boolean param0, int param1, String param2) {
         int var6 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -556,19 +556,19 @@ abstract class GameFont {
         }
     }
 
-    final void a(int param0, boolean param1, String param2, int param3, int param4, int param5) {
+    final void drawLeft(int param0, boolean param1, String param2, int param3, int param4, int param5) {
         if (param2 == null) {
           return;
         }
         try {
-          this.a(param4, param5, 125);
+          this.setColours(param4, param5, 125);
           this.a(param1, param3, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "da.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final void a(int param0, int param1, String param2, int param3, int param4, int param5) {
+    final void drawRight(int param0, int param1, String param2, int param3, int param4, int param5) {
         if (param2 == null) {
           return;
         }
@@ -576,7 +576,7 @@ abstract class GameFont {
           if (param0 != 12199) {
             this.field_a = (FontMetrics) null;
           }
-          this.a(param4, param3, 118);
+          this.setColours(param4, param3, 118);
           this.a(false, -this.field_a.a(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
