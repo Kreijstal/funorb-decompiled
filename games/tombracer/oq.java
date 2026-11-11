@@ -6,11 +6,11 @@ final class oq {
         if (param0 != 124) {
           return (fga) null;
         }
-        if (null == bba.field_d) {
-          bba.field_d = new fga();
-          return bba.field_d;
+        if (null == RoomVariant.field_d) {
+          RoomVariant.field_d = new fga();
+          return RoomVariant.field_d;
         }
-        return bba.field_d;
+        return RoomVariant.field_d;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {

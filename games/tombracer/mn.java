@@ -64,12 +64,12 @@ final class mn extends TextFieldValidator {
           }
           if (!param1.equals(this.field_m)) {
             var3 = CharacterChoice.a((byte) -115, param1);
-            if (!var3.b(47)) {
+            if (!var3.isComplete(47)) {
               stackIn_8_0 = tea.field_b;
               return stackIn_8_0;
             }
             this.field_m = param1;
-            this.field_l = var3.c(81);
+            this.field_l = var3.getResult(81);
           }
           if (this.field_l) {
             stackIn_13_0 = LightSource.field_k;

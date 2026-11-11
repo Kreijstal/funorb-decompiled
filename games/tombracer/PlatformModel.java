@@ -811,8 +811,8 @@ final class PlatformModel extends TrapModel {
         try {
           var1 = new psa();
           var2 = new psa(var1);
-          var1.d(128, 9, param0 + 6);
-          var2.d(128, 9, 32460);
+          var1.setChannelProgram(128, 9, param0 + 6);
+          var2.setChannelProgram(128, 9, 32460);
           if (param0 != 32454) {
             PlatformModel.releaseStatics(-98);
           }

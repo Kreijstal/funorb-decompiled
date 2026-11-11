@@ -362,7 +362,7 @@ final class ica {
           }
           bw.field_a.makeRasterTarget();
           var1.drawHalfSize(0, 0);
-          pfa.a(1);
+          pfa.popRasterState(1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ica.B(" + param0 + ')');
         }

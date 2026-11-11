@@ -25,7 +25,7 @@ final class TorchComponent extends PrefabComponent {
           var4.setWeight((byte) -3, 5);
           var5 = rm.field_a;
           var6 = (FurnitureModel) (var5.createModel(4, 80));
-          var6.b(1, (byte) 77);
+          var6.setVariant(1, (byte) 77);
           var4.addModel((TrapPart) null, (byte) 124, var6);
           var7 = (LightSourceModel) (var5.createModel(5, 88));
           var7.setElevationOffset(64, 119);

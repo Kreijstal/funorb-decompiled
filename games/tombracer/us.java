@@ -8,12 +8,12 @@ final class us {
     static sla field_e;
     static String field_c;
 
-    final boolean c(int param0) {
+    final boolean getResult(int param0) {
         int var2 = -59 % ((param0 + 57) / 37);
         return this.field_b;
     }
 
-    final boolean b(int param0) {
+    final boolean isComplete(int param0) {
         if (param0 < 42) {
           return false;
         }
@@ -164,14 +164,14 @@ final class us {
         }
     }
 
-    final String a(byte param0) {
+    final String getName(byte param0) {
         if (param0 < 78) {
           field_e = (sla) null;
         }
         return this.field_a;
     }
 
-    final void a(int param0, boolean param1) {
+    final void complete(int param0, boolean param1) {
         this.field_b = param1 ? true : false;
         int var3 = 97 % ((13 - param0) / 39);
         this.field_d = true;

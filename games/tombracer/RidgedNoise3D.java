@@ -86,7 +86,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
         String[] var20 = null;
         try {
           var20 = (String[]) null;
-          bba.a(param12, param9, param3, param0, param17, (String[]) null, 95, param15, param13, param5, param6, param7, param18, param2, param14, param4, param8, param16, param10, param11);
+          RoomVariant.a(param12, param9, param3, param0, param17, (String[]) null, 95, param15, param13, param5, param6, param7, param18, param2, param14, param4, param8, param16, param10, param11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

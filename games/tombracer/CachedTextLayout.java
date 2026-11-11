@@ -13,7 +13,7 @@ final class CachedTextLayout extends TextLayout {
     private int field_g;
     private int field_m;
 
-    final static int a(int param0, int param1, int param2, byte param3, RoomDefinition[] param4) {
+    final static int partitionRoomDefinitions(int param0, int param1, int param2, byte param3, RoomDefinition[] param4) {
         int var7 = 0;
         RoomDefinition var5 = null;
         RuntimeException var5_ref = null;

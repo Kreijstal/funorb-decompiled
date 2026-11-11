@@ -86,7 +86,7 @@ final class MembersUpsellMenu extends MenuScreen {
         this.field_x.a(true);
         if (PlayerModel.field_b == 1) {
           for (var5 = 0; LoginForm.field_z.length > var5; var5++) {
-            if (mca.a((byte) 6, var5) &&
+            if (mca.isCourseAvailable((byte) 6, var5) &&
               BrickOperator.d(100, var5)) {
               var6 = LoginForm.field_z[var5] + (this.field_t + (ConsoleWindow.field_d.width() >> 1));
               var7 = this.field_r - (-hq.field_b[var5] - (ConsoleWindow.field_d.height() >> 1));
@@ -140,8 +140,8 @@ final class MembersUpsellMenu extends MenuScreen {
         if (SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
           return;
         }
-        ik.field_h.a(this.field_t, this.field_r);
-        OpenGlEnvironmentWaterEffect.field_d.a(this.field_t, this.field_r);
+        ik.field_h.draw(this.field_t, this.field_r);
+        OpenGlEnvironmentWaterEffect.field_d.draw(this.field_t, this.field_r);
         var10 = (cc) (this.field_q.first(-80));
         while (var10 != null) {
           var10.a(99, this.field_t, this.field_r);
@@ -153,13 +153,13 @@ final class MembersUpsellMenu extends MenuScreen {
         }
         var3 = 0;
         for (var4 = 0; var4 < OpenGlFramebuffer.field_i.length; var4++) {
-          if (mca.a((byte) 6, var4)) {
+          if (mca.isCourseAvailable((byte) 6, var4)) {
             if (MultiplayerLoginMenu.b(false) &&
               !dta.field_g[var4]) {
               var3 = 1;
               qf.field_k[var4].draw(pha.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
             } else {
-              OpenGlFramebuffer.field_i[var4].a(pha.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
+              OpenGlFramebuffer.field_i[var4].draw(pha.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
               var5_ref_nh = ConsoleWindow.field_d;
               if (null != mq.field_e) {
                 if (mq.field_e.worldMedals[var4] == 3) {
@@ -172,7 +172,7 @@ final class MembersUpsellMenu extends MenuScreen {
                   var5_ref_nh = CharacterChoiceFactory.field_a;
                 }
               }
-              var5_ref_nh.a(LoginForm.field_z[var4] + this.field_t, this.field_r + hq.field_b[var4]);
+              var5_ref_nh.draw(LoginForm.field_z[var4] + this.field_t, this.field_r + hq.field_b[var4]);
             }
           }
         }
@@ -183,7 +183,7 @@ final class MembersUpsellMenu extends MenuScreen {
         var5 = 40;
         var4Lifetime1 = 260;
         var7 = this.field_r - (100 - SwitchLinkList.b(param0 + 28));
-        PlayerInputQueue.field_a.a(var6 - (PlayerInputQueue.field_a.width() >> 1), -(PlayerInputQueue.field_a.height() >> 1) + var7);
+        PlayerInputQueue.field_a.draw(var6 - (PlayerInputQueue.field_a.width() >> 1), -(PlayerInputQueue.field_a.height() >> 1) + var7);
         SocketConnector.a(SecondaryLinkQueue.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
         if (MultiplayerLoginMenu.b(false) && (TextWidgetPainter.a(62) ||
           mq.field_e.field_a ||
@@ -372,7 +372,7 @@ final class MembersUpsellMenu extends MenuScreen {
                   stackIn_43_0 = var9.field_i;
                 }
                 var10 = stackIn_43_0;
-                if (mca.a((byte) 6, var10) &&
+                if (mca.isCourseAvailable((byte) 6, var10) &&
                   BrickOperator.d(96, var10)) {
                   if (var9.b(true)) {
                     this.field_x.a(-28562, var9.field_k << 16, var9.field_j << 16);

@@ -73,7 +73,7 @@ final class HazardModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_u == 0) {
-            via.a(RevolverItemComponent.field_J[17], this.field_m, this.field_q, param3 + 1572864, param2, param1, 111, 0);
+            via.drawModelRotated(RevolverItemComponent.field_J[17], this.field_m, this.field_q, param3 + 1572864, param2, param1, 111, 0);
           } else {
             if (this.field_u == 1) {
               gqa.a(this.field_m, -83584144, param1, param2, RevolverItemComponent.field_J[76], param3);
@@ -245,7 +245,7 @@ final class HazardModel extends TrapModel {
             this.field_o = var4;
             if (var2_int != 0 ||
               var3_int != 0) {
-              this.field_m = GameScreen.positiveModulo(qva.a((byte) -103, -var3_int, var2_int) >> 2, 2048, 125);
+              this.field_m = GameScreen.positiveModulo(qva.headingFromVector((byte) -103, -var3_int, var2_int) >> 2, 2048, 125);
               this.field_q = GameScreen.positiveModulo(this.field_q - (S2CNextRoundPacket.abs(var2_int >> 13, -113) + S2CNextRoundPacket.abs(var3_int >> 13, 67)), 2048, -100);
               if (!(65536 >= S2CNextRoundPacket.abs(var2_int, param0 + 93)) ||
                 !(S2CNextRoundPacket.abs(var3_int, param0 ^ -85) <= 65536)) {

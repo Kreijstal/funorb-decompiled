@@ -13,7 +13,7 @@ abstract class OpenGlTexture implements GpuTexture {
     static int[] field_d;
     int field_i;
 
-    private final int c(byte param0) {
+    private final int getMemorySize(byte param0) {
         if (param0 != -120) {
           field_e = (int[][]) null;
         }
@@ -48,11 +48,11 @@ abstract class OpenGlTexture implements GpuTexture {
         var22 = TombRacer.field_G ? 1 : 0;
         try {
           if (~param4 < param0 &&
-            !cla.isPowerOfTwoOrZero(9181, param4)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param4)) {
             throw new IllegalArgumentException("");
           }
           if (0 < param2 &&
-            !cla.isPowerOfTwoOrZero(param0 + 9182, param2)) {
+            !PbufferEntry.isPowerOfTwoOrZero(param0 + 9182, param2)) {
             throw new IllegalArgumentException("");
           }
           var6_int = this.field_f.field_b;
@@ -64,7 +64,7 @@ abstract class OpenGlTexture implements GpuTexture {
           var11 = param1;
           var12 = new float[var9 * (var10 * var6_int)];
           while (true) {
-            jaggl.OpenGL.glTexImage2Df(param3, var7, this.d(124), param4, param2, 0, waa.toGlFormat(this.field_f, param0 + 1384), 5126, var11, 0);
+            jaggl.OpenGL.glTexImage2Df(param3, var7, this.getGlFormat(124), param4, param2, 0, waa.toGlFormat(this.field_f, param0 + 1384), 5126, var11, 0);
             if (var8 <= 1) {
               return;
             }
@@ -116,7 +116,7 @@ abstract class OpenGlTexture implements GpuTexture {
 
     private final void f(byte param0) {
         if (0 < this.field_c) {
-          this.field_j.a(this.field_c, this.c((byte) -120), 2);
+          this.field_j.a(this.field_c, this.getMemorySize((byte) -120), 2);
           this.field_c = 0;
         }
         int var2 = -75 % ((16 - param0) / 61);
@@ -175,7 +175,7 @@ abstract class OpenGlTexture implements GpuTexture {
         jaggl.OpenGL.glBindTexture(this.field_i, this.field_c);
     }
 
-    final int d(int param0) {
+    final int getGlFormat(int param0) {
         if (una.field_g == this.field_a) {
           if (it.field_b == this.field_f) {
             return 6407;
@@ -343,11 +343,11 @@ abstract class OpenGlTexture implements GpuTexture {
         var22 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 > 0 &&
-            !cla.isPowerOfTwoOrZero(9181, param1)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param1)) {
             throw new IllegalArgumentException("");
           }
           if (param4 > 0 &&
-            !cla.isPowerOfTwoOrZero(9181, param4)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param4)) {
             throw new IllegalArgumentException("");
           }
           var6_int = this.field_f.field_b;
@@ -362,7 +362,7 @@ abstract class OpenGlTexture implements GpuTexture {
           var11 = param2;
           var12 = new byte[var10 * var9 * var6_int];
           while (true) {
-            jaggl.OpenGL.glTexImage2Dub(param0, var7, this.d(115), param1, param4, 0, waa.toGlFormat(this.field_f, 1383), 5121, var11, 0);
+            jaggl.OpenGL.glTexImage2Dub(param0, var7, this.getGlFormat(115), param1, param4, 0, waa.toGlFormat(this.field_f, 1383), 5121, var11, 0);
             if (var8 <= 1) {
               return;
             }
@@ -444,11 +444,11 @@ abstract class OpenGlTexture implements GpuTexture {
         var26 = TombRacer.field_G ? 1 : 0;
         try {
           if (param4 > 0 &&
-            !cla.isPowerOfTwoOrZero(9181, param4)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param4)) {
             throw new IllegalArgumentException("");
           }
           if (0 < param2 &&
-            !cla.isPowerOfTwoOrZero(9181, param2)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param2)) {
             throw new IllegalArgumentException("");
           }
           if (this.field_f != SwitchableId.field_a) {
@@ -465,7 +465,7 @@ abstract class OpenGlTexture implements GpuTexture {
           var10 = param3;
           var11 = new int[var8 * var9];
           while (true) {
-            jaggl.OpenGL.glTexImage2Di(param1, var6_int, this.d(param0 ^ 94), param4, param2, 0, 32993, this.field_j.field_od, var10, 0);
+            jaggl.OpenGL.glTexImage2Di(param1, var6_int, this.getGlFormat(param0 ^ 94), param4, param2, 0, 32993, this.field_j.field_od, var10, 0);
             if (1 >= var7) {
               return;
             }
@@ -534,7 +534,7 @@ abstract class OpenGlTexture implements GpuTexture {
 
     private final void a(byte param0, int param1) {
         this.field_j.field_Xb = this.field_j.field_Xb - param1;
-        this.field_j.field_Xb = this.field_j.field_Xb + this.c((byte) -120);
+        this.field_j.field_Xb = this.field_j.field_Xb + this.getMemorySize((byte) -120);
         if (param0 > -88) {
           this.bind((byte) 93);
         }

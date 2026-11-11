@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hsa {
+final class LegacyTextureCache {
     private SoftReferenceCache field_d;
     private TextureProvider field_b;
     static int field_a;
     private OpenGlToolkit field_e;
     static String field_c;
 
-    final void c(int param0) {
+    final void ageCache(int param0) {
         if (param0 != -29413) {
           field_a = 14;
           this.field_d.demoteOldEntries(104, 5);
@@ -226,7 +226,7 @@ final class hsa {
           this.field_d.put(param1 + 29166, var41, (long)param0);
           return var41;
         }
-        hsa.releaseStatics(74);
+        LegacyTextureCache.releaseStatics(74);
         if (var3 != null) {
           return (LegacyOpenGlTexture2D) (var3);
         }
@@ -367,7 +367,7 @@ final class hsa {
         return var35;
     }
 
-    final static int a(int param0, int param1, int param2, byte param3) {
+    final static int clampToScreenY(int param0, int param1, int param2, byte param3) {
         int var4 = 77 % ((param3 + 18) / 63);
         if (!(param1 + (param0 + param2) > SoftwareRasterizer.height)) {
           return param0 + param2;
@@ -378,7 +378,7 @@ final class hsa {
         return -param1 + param2;
     }
 
-    final void a(int param0) {
+    final void clearCache(int param0) {
         this.field_d.clear((byte) -118);
         if (param0 != 10659) {
           this.field_e = (OpenGlToolkit) null;
@@ -390,7 +390,7 @@ final class hsa {
         field_c = null;
     }
 
-    hsa(OpenGlToolkit param0, TextureProvider param1) {
+    LegacyTextureCache(OpenGlToolkit param0, TextureProvider param1) {
         this.field_d = new SoftReferenceCache(256);
         try {
           this.field_b = param1;

@@ -16,7 +16,7 @@ final class ColourFillOperator extends TextureOperator {
 
     private ColourFillOperator(int param0) {
         super(0, false);
-        this.a(param0, (byte) -55);
+        this.setColour(param0, (byte) -55);
     }
 
     public static void releaseStatics(int param0) {
@@ -40,7 +40,7 @@ final class ColourFillOperator extends TextureOperator {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.a(param1.readUnsignedMedium(param0 ^ -32661), (byte) -55);
+            this.setColour(param1.readUnsignedMedium(param0 ^ -32661), (byte) -55);
           }
           if (param0 != 107) {
             var5 = (PacketBuffer) null;
@@ -80,12 +80,12 @@ final class ColourFillOperator extends TextureOperator {
           }
         }
         if (param1 != -1) {
-          this.a(84, (byte) -17);
+          this.setColour(84, (byte) -17);
         }
         return var3;
     }
 
-    private final void a(int param0, byte param1) {
+    private final void setColour(int param0, byte param1) {
         this.field_n = (param0 & 16711680) >> 12;
         if (param1 != -55) {
           PacketBuffer var4 = (PacketBuffer) null;

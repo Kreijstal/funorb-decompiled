@@ -258,7 +258,7 @@ final class ft {
         }
     }
 
-    final static void releaseGridEntry(q param0, int param1) {
+    final static void releaseGridEntry(CollisionGridEntry param0, int param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

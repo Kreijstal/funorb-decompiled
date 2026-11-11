@@ -41,7 +41,7 @@ final class WhirlpoolDigest {
         }
         var3 = 0;
         while (var2 < 8) {
-          this.field_m[var2] = SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(vi.bitwiseAnd((long)this.field_e[4 + var3] << 24, 4278190080L), SnakePitModel.bitwiseXor(vi.bitwiseAnd(255L, (long)this.field_e[3 + var3]) << 32, SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor((long)this.field_e[var3] << 56, vi.bitwiseAnd((long)this.field_e[1 + var3] << 48, 71776119061217280L)), vi.bitwiseAnd(280375465082880L, (long)this.field_e[var3 + 2] << 40)))), vi.bitwiseAnd((long)this.field_e[5 + var3], 255L) << 16), vi.bitwiseAnd(255L, (long)this.field_e[6 + var3]) << 8), vi.bitwiseAnd((long)this.field_e[7 + var3], 255L));
+          this.field_m[var2] = SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor(ActionPacketQueue.bitwiseAnd((long)this.field_e[4 + var3] << 24, 4278190080L), SnakePitModel.bitwiseXor(ActionPacketQueue.bitwiseAnd(255L, (long)this.field_e[3 + var3]) << 32, SnakePitModel.bitwiseXor(SnakePitModel.bitwiseXor((long)this.field_e[var3] << 56, ActionPacketQueue.bitwiseAnd((long)this.field_e[1 + var3] << 48, 71776119061217280L)), ActionPacketQueue.bitwiseAnd(280375465082880L, (long)this.field_e[var3 + 2] << 40)))), ActionPacketQueue.bitwiseAnd((long)this.field_e[5 + var3], 255L) << 16), ActionPacketQueue.bitwiseAnd(255L, (long)this.field_e[6 + var3]) << 8), ActionPacketQueue.bitwiseAnd((long)this.field_e[7 + var3], 255L));
           var2++;
           var3 += 8;
         }
@@ -214,7 +214,7 @@ final class WhirlpoolDigest {
             break;
           }
           if (var3 == null) {
-            dea.closeGameSocket(60);
+            DropAnimation.closeGameSocket(60);
             return;
           }
           var4 = var14.readUnsignedByte(255);
@@ -294,7 +294,7 @@ final class WhirlpoolDigest {
         }
     }
 
-    final void b(byte param0) {
+    final void reset(byte param0) {
         int var2 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         int var2Lifetime1;

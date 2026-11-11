@@ -67,7 +67,7 @@ final class aaa {
           var21 = IntPoint.unwrapByteStorage(TreasureValuesOverlay.field_l, 13588, false);
           this.field_a = new LegacyOpenGlTexture3D(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_zc;
-          if (var10.a((byte) 11)) {
+          if (var10.ensureShader((byte) 11)) {
             var22 = IntPoint.unwrapByteStorage(LegacyOpenGlTexture1D.field_m, 13588, false);
             this.field_c = new LegacyOpenGlTexture3D(param0, 6408, 128, 128, 16);
             var4 = new LegacyOpenGlTexture3D(param0, 6409, 128, 128, 16, var22, 6409);

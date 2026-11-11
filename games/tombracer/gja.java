@@ -365,7 +365,7 @@ final class gja extends ka {
               if (stackIn_116_0 == stackIn_116_1) {
                 throw new RuntimeException();
               }
-              var16 = 16777215 & cla.field_m[65535 & param1.field_A[((jt) (var13_ref)).field_a]];
+              var16 = 16777215 & PbufferEntry.field_m[65535 & param1.field_A[((jt) (var13_ref)).field_a]];
               stackIn_122_0 = var16;
               if (param1.field_n != null) {
                 stackIn_123_1 = param1.field_n[((jt) (var13_ref)).field_a];
@@ -1059,7 +1059,7 @@ final class gja extends ka {
                 if (stackIn_20_0 > stackIn_20_1) {
                   var6 = this.field_u[var5_int];
                   var7 = this.field_nb[var5_int];
-                  var7.field_h = -16777216 & var7.field_h | cla.field_m[65535 & this.field_P[var6.field_m]] & 16777215;
+                  var7.field_h = -16777216 & var7.field_h | PbufferEntry.field_m[65535 & this.field_P[var6.field_m]] & 16777215;
                   var5_int++;
                   return;
                 }
@@ -1091,7 +1091,7 @@ final class gja extends ka {
               }
               var6Lifetime1 = this.field_u[var5_int];
               var7Lifetime1 = this.field_nb[var5_int];
-              var7Lifetime1.field_h = -16777216 & var7Lifetime1.field_h | cla.field_m[65535 & this.field_P[var6Lifetime1.field_m]] & 16777215;
+              var7Lifetime1.field_h = -16777216 & var7Lifetime1.field_h | PbufferEntry.field_m[65535 & this.field_P[var6Lifetime1.field_m]] & 16777215;
               var5_int++;
               if (var10 != 0) {
                 return;
@@ -2144,8 +2144,8 @@ final class gja extends ka {
             stackIn_8_1 = !(this.field_f);
             ((HardwareGraphicsToolkit) (Object) stackIn_7_0).a(stackIn_8_1, 0);
             this.field_S.setLightingEnabled(0, false);
-            this.field_S.a(pea.field_c, 1, -79);
-            this.field_S.a(1, false, pea.field_c);
+            this.field_S.a(LruNodeCache.field_c, 1, -79);
+            this.field_S.a(1, false, LruNodeCache.field_c);
             var4 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var4 >= this.field_L))) {
@@ -3310,7 +3310,7 @@ final class gja extends ka {
                     if (stackIn_229_0 > stackIn_229_1) {
                       var11_refLifetime1 = this.field_u[var10];
                       var12_ref_gcaLifetime1 = this.field_nb[var10];
-                      var12_ref_gcaLifetime1.field_h = 16777215 & cla.field_m[this.field_P[var11_refLifetime1.field_m] & 65535] | var12_ref_gcaLifetime1.field_h & -16777216;
+                      var12_ref_gcaLifetime1.field_h = 16777215 & PbufferEntry.field_m[this.field_P[var11_refLifetime1.field_m] & 65535] | var12_ref_gcaLifetime1.field_h & -16777216;
                       var10++;
                       return;
                     }
@@ -3378,7 +3378,7 @@ final class gja extends ka {
                   }
                   var11_refLifetime1Lifetime1 = this.field_u[var10];
                   var12_ref_gcaLifetime1Lifetime1 = this.field_nb[var10];
-                  var12_ref_gcaLifetime1Lifetime1.field_h = 16777215 & cla.field_m[this.field_P[var11_refLifetime1Lifetime1.field_m] & 65535] | var12_ref_gcaLifetime1Lifetime1.field_h & -16777216;
+                  var12_ref_gcaLifetime1Lifetime1.field_h = 16777215 & PbufferEntry.field_m[this.field_P[var11_refLifetime1Lifetime1.field_m] & 65535] | var12_ref_gcaLifetime1Lifetime1.field_h & -16777216;
                   var10++;
                   if (var21 != 0) {
                     return;
@@ -4441,7 +4441,7 @@ final class gja extends ka {
                   if (stackIn_358_0 > stackIn_358_1) {
                     var12_refLifetime1 = this.field_u[var11];
                     var13_ref_gcaLifetime1 = this.field_nb[var11];
-                    var13_ref_gcaLifetime1.field_h = cla.field_m[65535 & this.field_P[var12_refLifetime1.field_m]] & 16777215 | var13_ref_gcaLifetime1.field_h & -16777216;
+                    var13_ref_gcaLifetime1.field_h = PbufferEntry.field_m[65535 & this.field_P[var12_refLifetime1.field_m]] & 16777215 | var13_ref_gcaLifetime1.field_h & -16777216;
                     var11++;
                     return;
                   }
@@ -4507,7 +4507,7 @@ final class gja extends ka {
                 }
                 var12_refLifetime1Lifetime1 = this.field_u[var11];
                 var13_ref_gcaLifetime1Lifetime1 = this.field_nb[var11];
-                var13_ref_gcaLifetime1Lifetime1.field_h = cla.field_m[65535 & this.field_P[var12_refLifetime1Lifetime1.field_m]] & 16777215 | var13_ref_gcaLifetime1Lifetime1.field_h & -16777216;
+                var13_ref_gcaLifetime1Lifetime1.field_h = PbufferEntry.field_m[65535 & this.field_P[var12_refLifetime1Lifetime1.field_m]] & 16777215 | var13_ref_gcaLifetime1Lifetime1.field_h & -16777216;
                 var11++;
                 if (var47 != 0) {
                   return;

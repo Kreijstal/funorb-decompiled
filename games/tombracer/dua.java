@@ -114,7 +114,7 @@ final class dua extends MatchOverlay {
               var13 = 16;
               var14 = var3;
               var16 = var9;
-              ega.field_e.a(var13 - 4, var16 - 5);
+              ega.field_e.draw(var13 - 4, var16 - 5);
               var9 = var9 - (var4 << 1);
               if (!var24.j(0)) {
                 if (var23.d(28091)) {
@@ -179,7 +179,7 @@ final class dua extends MatchOverlay {
             var13Lifetime1 = 16;
             var14Lifetime1 = var3Lifetime1;
             var16Lifetime1 = var9Lifetime1;
-            ega.field_e.a(var13Lifetime1 - 4, var16Lifetime1 - 5);
+            ega.field_e.draw(var13Lifetime1 - 4, var16Lifetime1 - 5);
             var9Lifetime1 = var9Lifetime1 - (var4Lifetime1 << 1);
             if (!var21.j(0)) {
               if (var20.d(28091)) {

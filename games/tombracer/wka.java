@@ -10,18 +10,18 @@ class wka extends eta {
     }
 
     final static void patchJavaKeyCodeMap(int param0) {
-        bba.field_c[59] = 57;
-        bba.field_c[45] = 26;
-        bba.field_c[61] = 27;
-        bba.field_c[46] = 72;
-        bba.field_c[47] = 73;
-        bba.field_c[44] = 71;
-        bba.field_c[92] = 74;
-        bba.field_c[93] = 43;
-        bba.field_c[91] = 42;
-        bba.field_c[192] = 28;
-        bba.field_c[222] = 58;
-        bba.field_c[param0] = 59;
+        RoomVariant.field_c[59] = 57;
+        RoomVariant.field_c[45] = 26;
+        RoomVariant.field_c[61] = 27;
+        RoomVariant.field_c[46] = 72;
+        RoomVariant.field_c[47] = 73;
+        RoomVariant.field_c[44] = 71;
+        RoomVariant.field_c[92] = 74;
+        RoomVariant.field_c[93] = 43;
+        RoomVariant.field_c[91] = 42;
+        RoomVariant.field_c[192] = 28;
+        RoomVariant.field_c[222] = 58;
+        RoomVariant.field_c[param0] = 59;
     }
 
     public static void releaseStatics(int param0) {

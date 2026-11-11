@@ -103,18 +103,18 @@ final class ChatOverlay {
         if (this.enabled) {
           var7_ref = (FloatingMessage) (this.field_b.first(-80));
           while (var7_ref != null) {
-            var7_ref.d((byte) 80);
-            if (var7_ref.a((byte) -100) <= 0) {
+            var7_ref.decrementRemainingTicks((byte) 80);
+            if (var7_ref.getRemainingTicks((byte) -100) <= 0) {
               this.visibleMessages.addLast((byte) -77, var7_ref);
             }
             var7_ref = (FloatingMessage) (this.field_b.next(111));
           }
           var7_refLifetime1 = (FloatingMessage) (this.visibleMessages.first(-80));
           while (var7_refLifetime1 != null) {
-            var7_refLifetime1.a(var6Lifetime1, 4, aaa.a(false) - var7_refLifetime1.c((byte) -96));
+            var7_refLifetime1.setPosition(var6Lifetime1, 4, aaa.a(false) - var7_refLifetime1.getWidth((byte) -96));
             var7_refLifetime1.tick(-43);
             if (var7_refLifetime1.c(-1)) {
-              var6Lifetime1 = var6Lifetime1 + var7_refLifetime1.a(true);
+              var6Lifetime1 = var6Lifetime1 + var7_refLifetime1.getHeight(true);
             }
             if (var7_refLifetime1.isExpired((byte) -39)) {
               var7_refLifetime1.unlink(3);
@@ -143,13 +143,13 @@ final class ChatOverlay {
             this.visibleMessages.addLast((byte) -67, param2);
           } else {
             this.field_b.addLast((byte) -80, param2);
-            param2.a(false, param0);
+            param2.setRemainingTicks(false, param0);
           }
           if (param1 != 0) {
             this.enabled = true;
           }
           param2.setTiming(false, 25, 12, 150);
-          param2.a(1, aaa.a(false) / 3);
+          param2.setWidth(1, aaa.a(false) / 3);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ila.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -256,7 +256,7 @@ final class ChatOverlay {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  dea.closeGameSocket(60);
+                  DropAnimation.closeGameSocket(60);
                   PushableBlockMazeComponent.field_L = false;
                   stackIn_31_0 = var6_intLifetime1;
                   return stackIn_31_0;
@@ -268,7 +268,7 @@ final class ChatOverlay {
               }
             }
             if (HardwareGraphicsToolkit.field_w == ProceduralTexture.field_p &&
-              cla.ensurePacketPayload(0)) {
+              PbufferEntry.ensurePacketPayload(0)) {
               tr.field_g = WeaveOperator.field_q.readLong(param2 + 290646830);
               gj.field_q = param1;
               ld.field_e = WeaveOperator.field_q.readUnsignedByte(param2 ^ 205);
@@ -292,7 +292,7 @@ final class ChatOverlay {
               }
               stackIn_54_0 = (0 != (var7 & 16));
               GraphicsToolkit.field_b = stackIn_54_0;
-              if (q.field_r) {
+              if (CollisionGridEntry.field_r) {
                 WeaveOperator.field_q.readUnsignedByte(255);
                 WeaveOperator.field_q.readUnsignedByte(255);
                 WeaveOperator.field_q.readInt(-104);
@@ -308,10 +308,10 @@ final class ChatOverlay {
               lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               ProceduralTexture.field_p = LegacyOpenGlTexture1D.field_n;
               if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
-                ShaderEffect.field_a.a(di.getApplet(120), param2 ^ 55);
+                ShaderEffect.field_a.saveAsLastLoginMethod(di.getApplet(120), param2 ^ 55);
               } else {
                 if (fd.field_d.a((byte) 113) == ViewportManager.field_f) {
-                  ObjectList.field_d.a(di.getApplet(109), 5);
+                  ObjectList.field_d.saveAsLastLoginMethod(di.getApplet(109), 5);
                 }
               }
               PushableBlockMazeComponent.field_L = false;
@@ -346,8 +346,8 @@ final class ChatOverlay {
               return stackIn_81_0;
             }
             if (bi.field_a == ProceduralTexture.field_p &&
-              cla.ensurePacketPayload(0)) {
-              dea.closeGameSocket(60);
+              PbufferEntry.ensurePacketPayload(0)) {
+              DropAnimation.closeGameSocket(60);
               if (MembersUpsellMenu.field_z == 7 &&
                 !PushableBlockMazeComponent.field_L) {
                 PushableBlockMazeComponent.field_L = true;
@@ -364,7 +364,7 @@ final class ChatOverlay {
             }
             if (null == OpenGlTransform3D.field_e) {
               if (PushableBlockMazeComponent.field_L) {
-                if (rf.b((byte) -121) > 30000L) {
+                if (rf.millisSinceLastReceive((byte) -121) > 30000L) {
                   io.field_b = SpriteTileOperator.field_u;
                 } else {
                   io.field_b = sq.field_x;
@@ -485,7 +485,7 @@ final class ChatOverlay {
         } else {
           var5 = var8.readUnsignedShort(121);
           try {
-            var9 = ByteStorage.field_a.a(false, var5);
+            var9 = ByteStorage.field_a.getPhrase(false, var5);
             ConveyorBehaviour.field_p = var9.getPreview((byte) -5);
             if (!TextureSampleOperator.field_q.equals(MenuEntry.field_k)) {
               stackIn_21_0 = var9.field_m;
@@ -496,7 +496,7 @@ final class ChatOverlay {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            ssa.reportClientError("CC1", (byte) 115, (Throwable) ((Object) var6));
+            ClipStack.reportClientError("CC1", (byte) 115, (Throwable) ((Object) var6));
             ConveyorBehaviour.field_p = null;
             MatchPhase.field_e = null;
           }

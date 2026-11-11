@@ -9,7 +9,7 @@ final class sr extends WidgetContainer implements ButtonListener {
     private BitmapFont field_B;
     private int[] field_w;
 
-    final FocusableWidget a(String param0, byte param1, WidgetListener param2) {
+    final FocusableWidget appendButton(String param0, byte param1, WidgetListener param2) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -91,13 +91,13 @@ final class sr extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void addAction(String param0, int param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = this.field_z;
           this.ensureActionCapacity(var4_int + 1, (byte) 104);
           int var5 = -11 % ((-15 - param2) / 38);
-          this.field_x[var4_int] = this.a(param0, (byte) -102, (WidgetListener) (this));
+          this.field_x[var4_int] = this.appendButton(param0, (byte) -102, (WidgetListener) (this));
           this.field_w[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "sr.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

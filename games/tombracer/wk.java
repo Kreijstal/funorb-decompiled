@@ -85,7 +85,7 @@ final class wk extends IntrusiveNode {
           this.field_l = var4 / 20;
           var5 = this.field_k - param2;
           this.field_f = var5 / 20;
-          this.field_h = GameScreen.positiveModulo(qva.a((byte) -100, var5, -var4) >> 2, 2048, -126);
+          this.field_h = GameScreen.positiveModulo(qva.headingFromVector((byte) -100, var5, -var4) >> 2, 2048, -126);
           return;
         }
     }

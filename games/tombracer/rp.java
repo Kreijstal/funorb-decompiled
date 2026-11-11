@@ -28,7 +28,7 @@ final class rp extends IntrusiveNode {
         if (param3 != 73) {
           return;
         }
-        hp.a(param1, 0, 0, this.field_j.getModel((byte) 74), -1918106173, param2, param0);
+        hp.drawModelPreview(param1, 0, 0, this.field_j.getModel((byte) 74), -1918106173, param2, param0);
     }
 
     rp(int param0) {

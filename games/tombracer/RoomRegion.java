@@ -83,7 +83,7 @@ final class RoomRegion extends IntrusiveNode implements qn, Renderable, noa {
         RuntimeException var3 = null;
         try {
           if (!this.isOutsideActiveVariant((byte) -1)) {
-            dea.roomObjectRenderer.drawRegion(param1, 15, this);
+            DropAnimation.roomObjectRenderer.drawRegion(param1, 15, this);
           }
           if (param0 <= 103) {
             this.flipped = false;

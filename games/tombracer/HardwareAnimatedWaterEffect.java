@@ -140,7 +140,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         this.owner.a(0, (byte) 77);
         this.owner.e(0, false);
         this.owner.g(3625, -16777216);
-        this.owner.a(0, false, pea.field_c);
+        this.owner.a(0, false, LruNodeCache.field_c);
         this.onTextureMatrixChanged(true);
         int var3 = -101 % ((41 - param0) / 62);
     }

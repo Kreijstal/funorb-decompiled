@@ -70,7 +70,7 @@ final class di {
         var3 = TombRacer.field_G ? 1 : 0;
         if (param1 ||
           C2SChooseRewardPacket.field_a == null) {
-          tla.field_e = false;
+          OpenGlDisplayLists.field_e = false;
         }
         if (param1) {
           if (mla.field_a > 0) {
@@ -87,7 +87,7 @@ final class di {
         } else {
           if (null == C2SChooseRewardPacket.field_a) {
             if (WaveformOperator.field_n == null) {
-              tla.field_e = false;
+              OpenGlDisplayLists.field_e = false;
               if (0 < GameKeyHandler.field_a) {
                 GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
               } else {
@@ -304,7 +304,7 @@ final class di {
                   }
                   if (this.field_i.field_b.field_b == var7.field_b &&
                     this.field_i.field_d != null) {
-                    var3 = this.field_i.a((byte) -43);
+                    var3 = this.field_i.captureState((byte) -43);
                     this.field_i.field_d.a(true);
                     this.field_i = null;
                   }
@@ -321,7 +321,7 @@ final class di {
                           this.field_i = var9;
                           return;
                         }
-                        var3 = this.field_i.a((byte) -124);
+                        var3 = this.field_i.captureState((byte) -124);
                         this.field_i.field_d.a(true);
                       }
                       if (var9.field_d.j()) {

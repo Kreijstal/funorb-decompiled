@@ -761,7 +761,7 @@ final class Model extends ka {
         int var7Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
-        var4 = cla.field_m[this.scaleHslLightness(param0, param2)];
+        var4 = PbufferEntry.field_m[this.scaleHslLightness(param0, param2)];
         var5 = this.field_d.field_c.metadata((byte) -52, param1 & 65535);
         var6 = var5.field_c & 255;
         if (var6 != 0) {
@@ -1732,7 +1732,7 @@ final class Model extends ka {
             param1.field_db.length >= this.field_m) {
             param0.field_db = param1.field_db;
             for (var10Lifetime7 = 0; var10Lifetime7 < this.field_m; var10Lifetime7++) {
-              param0.field_db[var10Lifetime7].a(this.field_db[var10Lifetime7], (byte) -6);
+              param0.field_db[var10Lifetime7].copyFrom(this.field_db[var10Lifetime7], (byte) -6);
             }
           } else {
             var10Lifetime7 = this.field_m;

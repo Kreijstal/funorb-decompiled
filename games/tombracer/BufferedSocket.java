@@ -83,7 +83,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int d(int param0) throws IOException {
+    final int readSingleByte(int param0) throws IOException {
         if (this.field_a) {
           return 0;
         }
@@ -262,7 +262,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            ssa.reportClientError((String) null, (byte) 122, (Throwable) ((Object) var1_ref));
+            ClipStack.reportClientError((String) null, (byte) 122, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -287,7 +287,7 @@ final class BufferedSocket implements Runnable {
             throw new IllegalArgumentException();
           }
           var3_int = -43 % ((param2 + 14) / 57);
-          if (cla.isPowerOfTwoOrZero(9181, param0)) {
+          if (PbufferEntry.isPowerOfTwoOrZero(9181, param0)) {
             stackIn_6_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param0 >> 32);
             return stackIn_6_0;
           }

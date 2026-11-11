@@ -29,7 +29,7 @@ final class ParticleEffects {
             Effect var5 = (Effect) null;
             this.spawnBeamParticles((byte) 23, (BeamSegment) null, (Effect) null);
           }
-          this.spawnBurst(param0.field_a, (byte) -101, param0.field_j, param0.field_i, 1, qva.a((byte) -120, -param0.field_k + param0.field_f, param0.field_c - param0.field_d) - 4096, 8, 393216, param0.field_e, 4, 8);
+          this.spawnBurst(param0.field_a, (byte) -101, param0.field_j, param0.field_i, 1, qva.headingFromVector((byte) -120, -param0.field_k + param0.field_f, param0.field_c - param0.field_d) - 4096, 8, 393216, param0.field_e, 4, 8);
           this.spawnBurst(param0.field_a, (byte) -110, param0.field_j, param0.field_i, 1, 0, 5, 0, param0.field_e, 6, 12);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "dj.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -104,7 +104,7 @@ final class ParticleEffects {
             0 == var5) {
             return;
           }
-          var6 = qva.a((byte) -26, var5, var4_int);
+          var6 = qva.headingFromVector((byte) -26, var5, var4_int);
           var7 = 8;
           var8 = var7 * MouseInputHandler.sin2048((byte) 112, var6 >> 2);
           var9 = ModelAnimator.cos2048(0, var6 >> 2) * var7;

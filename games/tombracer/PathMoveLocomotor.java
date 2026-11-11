@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PathMoveLocomotor extends Locomotor {
-    private int field_v;
+    private int turnSpeed;
     static String field_q;
     private int waypointIndex;
     private boolean field_s;
     private WaypointPath path;
-    private boolean field_o;
-    private boolean field_u;
+    private boolean turnsToFaceWaypoint;
+    private boolean stopsWhileTurning;
     private int speed;
     static int field_p;
 
@@ -19,8 +19,8 @@ final class PathMoveLocomotor extends Locomotor {
         return 5;
     }
 
-    final void a(boolean param0, int param1) {
-        this.field_o = param0 ? true : false;
+    final void setTurnsToFaceWaypoint(boolean param0, int param1) {
+        this.turnsToFaceWaypoint = param0 ? true : false;
         if (param1 != -606738686) {
           this.tick((byte) -25);
         }
@@ -54,11 +54,11 @@ final class PathMoveLocomotor extends Locomotor {
           }
           if (param0.formatVersion >= 12) {
             stackIn_13_1 = (param1.readBits((byte) 44, 1) == 1);
-            this.field_o = stackIn_13_1;
-            if (this.field_o) {
+            this.turnsToFaceWaypoint = stackIn_13_1;
+            if (this.turnsToFaceWaypoint) {
               stackIn_17_1 = (param1.readBits((byte) 44, 1) == 1);
-              this.field_u = stackIn_17_1;
-              this.field_v = param1.readBits((byte) 44, 12);
+              this.stopsWhileTurning = stackIn_17_1;
+              this.turnSpeed = param1.readBits((byte) 44, 12);
             }
           }
           return;
@@ -82,11 +82,11 @@ final class PathMoveLocomotor extends Locomotor {
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void setStopsWhileTurning(int param0, boolean param1) {
         if (param0 != 4) {
           return;
         }
-        this.field_u = param1 ? true : false;
+        this.stopsWhileTurning = param1 ? true : false;
     }
 
     final void tick(byte param0) {
@@ -162,8 +162,8 @@ final class PathMoveLocomotor extends Locomotor {
             this.waypointIndex = this.waypointIndex + 1;
             return;
           }
-          var10 = qva.a((byte) -99, var7, var6);
-          if (!this.field_o) {
+          var10 = qva.headingFromVector((byte) -99, var7, var6);
+          if (!this.turnsToFaceWaypoint) {
             var11 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
             var12 = ModelAnimator.cos2048(0, var10 >> 2);
             var13 = doa.a(2, this.speed, var11);
@@ -181,7 +181,7 @@ final class PathMoveLocomotor extends Locomotor {
           }
           var11Lifetime6 = S2CRoundResultPacket.wrapDelta(8192, -16390, var10, this.trap.getFacingAngle(-25787));
           var12Lifetime6 = S2CNextRoundPacket.abs(var11Lifetime6, 39);
-          if (this.field_v == 0) {
+          if (this.turnSpeed == 0) {
             this.trap.rotateBy(false, -var11Lifetime6);
             this.field_s = false;
             var11Lifetime6 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
@@ -191,7 +191,7 @@ final class PathMoveLocomotor extends Locomotor {
             this.trap.move((byte) -77, var13Lifetime7, var14Lifetime7);
             return;
           }
-          if (var12Lifetime6 <= this.field_v) {
+          if (var12Lifetime6 <= this.turnSpeed) {
             this.trap.rotateBy(false, -var11Lifetime6);
             this.field_s = false;
             var11Lifetime6 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
@@ -201,8 +201,8 @@ final class PathMoveLocomotor extends Locomotor {
             this.trap.move((byte) -77, var13Lifetime8, var14Lifetime8);
             return;
           }
-          this.trap.rotateBy(false, -lw.signum(var11Lifetime6, (byte) -76) * this.field_v);
-          if (this.field_u) {
+          this.trap.rotateBy(false, -lw.signum(var11Lifetime6, (byte) -76) * this.turnSpeed);
+          if (this.stopsWhileTurning) {
             return;
           }
           var11Lifetime7 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
@@ -230,8 +230,8 @@ final class PathMoveLocomotor extends Locomotor {
           this.waypointIndex = this.waypointIndex + 1;
           return;
         }
-        var10Lifetime1 = qva.a((byte) -99, var7Lifetime1, var6Lifetime1);
-        if (!this.field_o) {
+        var10Lifetime1 = qva.headingFromVector((byte) -99, var7Lifetime1, var6Lifetime1);
+        if (!this.turnsToFaceWaypoint) {
           var11Lifetime1 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime1 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
           var13Lifetime1 = doa.a(2, this.speed, var11Lifetime1);
@@ -249,7 +249,7 @@ final class PathMoveLocomotor extends Locomotor {
         }
         var11Lifetime3 = S2CRoundResultPacket.wrapDelta(8192, -16390, var10Lifetime1, this.trap.getFacingAngle(-25787));
         var12Lifetime3 = S2CNextRoundPacket.abs(var11Lifetime3, 39);
-        if (this.field_v == 0) {
+        if (this.turnSpeed == 0) {
           this.trap.rotateBy(false, -var11Lifetime3);
           this.field_s = false;
           var11Lifetime3 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
@@ -259,7 +259,7 @@ final class PathMoveLocomotor extends Locomotor {
           this.trap.move((byte) -77, var13Lifetime3, var14Lifetime3);
           return;
         }
-        if (var12Lifetime3 <= this.field_v) {
+        if (var12Lifetime3 <= this.turnSpeed) {
           this.trap.rotateBy(false, -var11Lifetime3);
           this.field_s = false;
           var11Lifetime3 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
@@ -269,8 +269,8 @@ final class PathMoveLocomotor extends Locomotor {
           this.trap.move((byte) -77, var13Lifetime4, var14Lifetime4);
           return;
         }
-        this.trap.rotateBy(false, -lw.signum(var11Lifetime3, (byte) -76) * this.field_v);
-        if (this.field_u) {
+        this.trap.rotateBy(false, -lw.signum(var11Lifetime3, (byte) -76) * this.turnSpeed);
+        if (this.stopsWhileTurning) {
           return;
         }
         var11Lifetime4 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
@@ -280,8 +280,8 @@ final class PathMoveLocomotor extends Locomotor {
         this.trap.move((byte) -77, var13Lifetime5, var14Lifetime5);
     }
 
-    final void c(int param0, int param1) {
-        this.field_v = param0;
+    final void setTurnSpeed(int param0, int param1) {
+        this.turnSpeed = param0;
         int var3 = 18 % ((37 - param1) / 55);
     }
 
@@ -305,14 +305,14 @@ final class PathMoveLocomotor extends Locomotor {
         try {
           super.encode(param0, (byte) -91);
           if (param1 >= -78) {
-            this.field_o = true;
+            this.turnsToFaceWaypoint = true;
           }
           this.path.encode(param0, 0);
           param0.writeBits((byte) 54, this.b(0, this.speed), 8);
-          param0.writeBits((byte) -127, !this.field_o ? 0 : 1, 1);
-          if (this.field_o) {
-            param0.writeBits((byte) -126, this.field_u ? 1 : 0, 1);
-            param0.writeBits((byte) -128, this.field_v, 12);
+          param0.writeBits((byte) -127, !this.turnsToFaceWaypoint ? 0 : 1, 1);
+          if (this.turnsToFaceWaypoint) {
+            param0.writeBits((byte) -126, this.stopsWhileTurning ? 1 : 0, 1);
+            param0.writeBits((byte) -128, this.turnSpeed, 12);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ro.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

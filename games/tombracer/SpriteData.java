@@ -12,7 +12,7 @@ final class SpriteData {
     int field_e;
     int field_i;
 
-    final int[] e() {
+    final int[] getArgbPixels() {
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
         int incrementValue$2 = 0;
@@ -23,8 +23,8 @@ final class SpriteData {
         int var5;
         int var6;
         int var7;
-        var1 = this.a();
-        var2 = new int[var1 * this.c()];
+        var1 = this.getFullWidth();
+        var2 = new int[var1 * this.getFullHeight()];
         if (this.field_h != null) {
           for (var3 = 0; var3 < this.field_a; var3++) {
             var4 = var3 * this.field_i;
@@ -57,7 +57,7 @@ final class SpriteData {
         return var2;
     }
 
-    private final int a() {
+    private final int getFullWidth() {
         return this.field_i + this.field_d + this.field_b;
     }
 
@@ -233,7 +233,7 @@ final class SpriteData {
         return var3;
     }
 
-    final void b() {
+    final void flipHorizontally() {
         int var1;
         byte[] var2;
         byte[] var3_ref_byte__;
@@ -285,11 +285,11 @@ final class SpriteData {
         this.field_b = var3Lifetime1;
     }
 
-    private final int c() {
+    private final int getFullHeight() {
         return this.field_a + this.field_c + this.field_e;
     }
 
-    final void d() {
+    final void expandToFullSize() {
         int var4 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -303,8 +303,8 @@ final class SpriteData {
         int var5;
         int var6;
         int var7;
-        var1 = this.a();
-        var2 = this.c();
+        var1 = this.getFullWidth();
+        var2 = this.getFullHeight();
         if (this.field_i == var1 &&
           this.field_a == var2) {
           return;

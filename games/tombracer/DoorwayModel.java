@@ -181,7 +181,7 @@ final class DoorwayModel extends TrapModel {
           return;
         }
         var3 = (Trap) (this.body);
-        if (var3.getSimulation(param0 + 15471).i(param0 - 14885)) {
+        if (var3.getSimulation(param0 + 15471).wasRoomResetThisTick(param0 - 14885)) {
           return;
         }
         if (param0 == -1) {

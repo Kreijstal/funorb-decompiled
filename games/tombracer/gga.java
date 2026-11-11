@@ -92,7 +92,7 @@ final class gga extends ofa implements ButtonListener {
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
         }
-        pfa.a(1);
+        pfa.popRasterState(1);
         if (TimeSwitchBehaviour.field_r >= 150) {
           bra.field_O.drawAlpha(var3 + 15, var4 + 10, var5);
         } else {

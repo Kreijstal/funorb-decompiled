@@ -10,10 +10,10 @@ final class SpawnerBehaviour extends Behaviour {
 
     final static ka a(int param0, int param1, int param2) {
         if (param1 == 12166) {
-          return ScoreSubmission.a(param0, false, false, 2, param2);
+          return ScoreSubmission.getModelForCategory(param0, false, false, 2, param2);
         }
         SpawnerBehaviour.a(true, -97);
-        return ScoreSubmission.a(param0, false, false, 2, param2);
+        return ScoreSubmission.getModelForCategory(param0, false, false, 2, param2);
     }
 
     final void resolveSwitchLinks(int param0) {
@@ -155,7 +155,7 @@ final class SpawnerBehaviour extends Behaviour {
         }
     }
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int fixed16ToBits(byte param0, int param1, int param2) {
         if (param0 == 8) {
           return param2 >> -param1 + 16;
         }

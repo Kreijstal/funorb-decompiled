@@ -102,7 +102,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(io.a(-377, (char) var7) & 255);
+              var7 = (char)(io.charToCp1252(-377, (char) var7) & 255);
               var4 = var4 + this.field_B[var7];
               if (this.field_F != null &&
                 var3 != 0) {
@@ -413,7 +413,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int charWidth(char param0) {
-        return this.field_B[io.a(-377, param0) & 255];
+        return this.field_B[io.charToCp1252(-377, param0) & 255];
     }
 
     private final void drawStyledText(String param0, int param1, int param2) {
@@ -506,7 +506,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(io.a(-377, (char) var8) & 255);
+              var8 = (char)(io.charToCp1252(-377, (char) var8) & 255);
               if (this.field_F != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_F[(var5 << 8) + var8];
@@ -707,7 +707,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_t.append((char) var14);
-                var14 = (char)(io.a(-377, (char) var14) & 255);
+                var14 = (char)(io.charToCp1252(-377, (char) var14) & 255);
                 var4 = var4 + this.field_B[var14];
                 if (this.field_F != null &&
                   var10 != 0) {

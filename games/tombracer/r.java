@@ -51,7 +51,7 @@ abstract class r extends DualLinkNode {
           var7.field_d = var8;
           var7.field_d.add((java.awt.Component) ((Object) var7));
           if (param2 != 19293) {
-            r.f(32);
+            r.packSettings(32);
           }
           var7.setBounds(0, 0, param4, param0);
           var7.addFocusListener(var7);
@@ -84,7 +84,7 @@ abstract class r extends DualLinkNode {
         field_m = null;
     }
 
-    final static int f(int param0) {
+    final static int packSettings(int param0) {
         if (param0 == 11) {
           return UrlDownloadRequest.field_i + (k.field_A << 4) + (nba.field_b << 2);
         }

@@ -4,7 +4,7 @@
 final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
     private float field_l;
     static String field_c;
-    private tla field_i;
+    private OpenGlDisplayLists field_i;
     static boolean[] field_d;
     static int textureWidth;
     private float[] field_e;
@@ -30,7 +30,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
         if (this.field_i == null) {
           return;
         }
-        this.field_i.a(4864, '\0');
+        this.field_i.callList(4864, '\0');
         this.toolkit.e(1, true);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glLoadMatrixf(this.toolkit.field_Tc.affineMatrix(-103), 0);
@@ -82,11 +82,11 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
             if (null == this.field_k) {
               return;
             }
-            var16 = MandelbrotOperator.a(false, 0, 3, 0.4000000059604645f, 64, (byte) -95, 4, 4, 256);
+            var16 = MandelbrotOperator.generatePerlinGrid(false, 0, 3, 0.4000000059604645f, 64, (byte) -95, 4, 4, 256);
             var12 = var16;
             var11 = var12;
             var3 = var11;
-            var23 = MandelbrotOperator.a(false, 8, 3, 0.4000000059604645f, 64, (byte) -102, 4, 4, 256);
+            var23 = MandelbrotOperator.generatePerlinGrid(false, 8, 3, 0.4000000059604645f, 64, (byte) -102, 4, 4, 256);
             this.field_e = new float[32768];
             var5 = 0;
             for (var6 = 0; var6 < 256; var6++) {
@@ -194,8 +194,8 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
     }
 
     private final void a(byte param0) {
-        this.field_i = new tla(this.toolkit, 2);
-        this.field_i.a((byte) 6, 0);
+        this.field_i = new OpenGlDisplayLists(this.toolkit, 2);
+        this.field_i.beginList((byte) 6, 0);
         this.toolkit.e(1, true);
         this.toolkit.setTextureConstantArgb(1104971864, -16777216);
         this.toolkit.setTextureCombineOperations(260, 8960, 7681);
@@ -204,8 +204,8 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
         int var2 = 67 / ((param0 + 62) / 58);
         jaggl.OpenGL.glBindProgramARB(34336, this.field_k.field_a);
         jaggl.OpenGL.glEnable(34336);
-        this.field_i.b((byte) -94);
-        this.field_i.a((byte) 6, 1);
+        this.field_i.endList((byte) -94);
+        this.field_i.beginList((byte) 6, 1);
         this.toolkit.e(1, true);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glLoadIdentity();
@@ -216,7 +216,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34336);
         jaggl.OpenGL.glDisable(34820);
-        this.field_i.b((byte) 74);
+        this.field_i.endList((byte) 74);
     }
 
     final boolean isSupported(int param0) {
@@ -285,7 +285,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
         if (null == this.field_i) {
           return;
         }
-        this.field_i.a(4864, '\001');
+        this.field_i.callList(4864, '\001');
         this.toolkit.e(1, !param0 ? true : false);
         this.toolkit.a(true, (LegacyOpenGlTexture) null);
         this.toolkit.e(0, !param0 ? true : false);

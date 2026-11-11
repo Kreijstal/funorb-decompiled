@@ -71,7 +71,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var8 = var8 + RenderScene.field_e;
           var9 = var9 + MovingPlatformComponent.field_N;
           var11 = (FollowCamera) (param0);
-          var12 = var11.a(-862393232);
+          var12 = var11.getViewportScale(-862393232);
           var13 = (float)param2.getAge(0) / (float)param2.getLifetime(true);
           var14 = param2.getStartSize(param1 - 88);
           var15 = param2.getEndSize(-6782);

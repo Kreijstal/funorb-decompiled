@@ -36,7 +36,7 @@ final class nm extends vo implements sca {
     }
 
     public final void a(int param0, int param1, byte[] param2, int param3) {
-        this.a(-101, param2, param0);
+        this.uploadData(-101, param2, param0);
         if (param1 != -11783) {
           return;
         }

@@ -43,7 +43,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
           this.owner.e(1, false);
           this.owner.applyTexCoordGeneration(ItemModel.field_o, (byte) 0);
           this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
-          this.owner.a(pea.field_c, 2, -21);
+          this.owner.a(LruNodeCache.field_c, 2, -21);
           this.owner.a(0, false, ej.field_c);
           this.owner.p((byte) -87);
           this.owner.bindTexture(true, (GpuTexture) null);
@@ -64,12 +64,12 @@ final class HardwareReflectionEffect extends ShaderEffect {
         int var4Lifetime1;
         int var4Lifetime2;
         if (var3 == null) {
-          this.owner.a(0, false, tla.field_c);
+          this.owner.a(0, false, OpenGlDisplayLists.field_c);
           var4 = 19 % ((param0 - 41) / 62);
           return;
         }
         if (!param1) {
-          this.owner.a(0, false, tla.field_c);
+          this.owner.a(0, false, OpenGlDisplayLists.field_c);
           var4Lifetime1 = 19 % ((param0 - 41) / 62);
           return;
         }
@@ -79,7 +79,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
         this.owner.e(1, false);
         this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
         this.owner.a(PlayerContextMenu.field_j, 2, -6219, true, false);
-        this.owner.a(0, false, tla.field_c);
+        this.owner.a(0, false, OpenGlDisplayLists.field_c);
         AffineTransform3D var4_ref_asa = this.owner.C(0);
         var4_ref_asa.copyStateFrom(1217, this.owner.c(true));
         this.owner.a(cva.field_b, false);

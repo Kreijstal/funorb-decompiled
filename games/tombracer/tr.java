@@ -22,7 +22,7 @@ final class tr {
         field_e = null;
     }
 
-    final QuickChatPhraseDefinition a(boolean param0, int param1) {
+    final QuickChatPhraseDefinition getPhrase(boolean param0, int param1) {
         QuickChatPhraseDefinition var3;
         byte[] var4;
         QuickChatPhraseDefinition var3Lifetime1;

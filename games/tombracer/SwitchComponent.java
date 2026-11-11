@@ -57,7 +57,7 @@ abstract class SwitchComponent extends PrefabComponent {
         if (Character.isISOControl(param1)) {
           return false;
         }
-        if (q.isAlphanumeric(param1, 11955)) {
+        if (CollisionGridEntry.isAlphanumeric(param1, 11955)) {
           return true;
         }
         if (param0) {

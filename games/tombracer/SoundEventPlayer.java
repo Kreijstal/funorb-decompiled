@@ -206,7 +206,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           var10 = to.field_n[var3_int];
           if (var8 == 0) {
             var9 = AgeValidator.a(this.field_h, true, param0.getX(param1 - 52));
-            var10 = ol.a(param0.getX(-118), var3_int, (byte) -91, this.field_h, param0.getY(-121), this.field_c);
+            var10 = ol.computeDistanceVolume(param0.getX(-118), var3_int, (byte) -91, this.field_h, param0.getY(-121), this.field_c);
           }
           var11 = MatchProtocol.a(100, (byte) -58, var9, var4, var6, var10);
           if (var7 != 0) {

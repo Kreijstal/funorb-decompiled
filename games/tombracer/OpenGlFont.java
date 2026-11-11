@@ -5,7 +5,7 @@ final class OpenGlFont extends GameFont {
     private boolean field_g;
     private LegacyOpenGlSpriteTexture field_d;
     private OpenGlToolkit field_e;
-    private tla field_f;
+    private OpenGlDisplayLists field_f;
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         this.field_e.o(-104);
@@ -19,7 +19,7 @@ final class OpenGlFont extends GameFont {
         }
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
-        this.field_f.a(4864, param0);
+        this.field_f.callList(4864, param0);
         jaggl.OpenGL.glLoadIdentity();
         if (this.field_g ||
           param4) {
@@ -57,7 +57,7 @@ final class OpenGlFont extends GameFont {
         jaggl.OpenGL.glEnable(3169);
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
-        this.field_f.a(4864, param0);
+        this.field_f.callList(4864, param0);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);
@@ -236,7 +236,7 @@ final class OpenGlFont extends GameFont {
           this.field_g = true;
         }
         this.field_d.setLinearFiltering(false, 3);
-        this.field_f = new tla(param0, 256);
+        this.field_f = new OpenGlDisplayLists(param0, 256);
         var7 = this.field_d.field_r / (float)this.field_d.field_t;
         var8 = this.field_d.field_v / (float)this.field_d.field_s;
         for (var9 = 0; var9 < 256; var9++) {
@@ -251,7 +251,7 @@ final class OpenGlFont extends GameFont {
           var18 = var16 * var8;
           var19 = (var15 + (float)var12Lifetime1) * var7;
           var20 = (var16 + (float)var11Lifetime1) * var8;
-          this.field_f.a((byte) 6, var9);
+          this.field_f.beginList((byte) 6, var9);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(var17, this.field_d.field_v - var18);
           jaggl.OpenGL.glVertex2i(var14Lifetime1, var13Lifetime1);
@@ -262,7 +262,7 @@ final class OpenGlFont extends GameFont {
           jaggl.OpenGL.glTexCoord2f(var19, this.field_d.field_v - var18);
           jaggl.OpenGL.glVertex2i(var14Lifetime1 + var12Lifetime1, var13Lifetime1);
           jaggl.OpenGL.glEnd();
-          this.field_f.b((byte) -111);
+          this.field_f.endList((byte) -111);
         }
     }
 }

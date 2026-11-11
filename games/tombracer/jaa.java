@@ -11,7 +11,7 @@ final class jaa implements noa {
     private int field_f;
     static String field_a;
 
-    final int a(int param0) {
+    final int getColour(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == -43946608) {

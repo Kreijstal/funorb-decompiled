@@ -225,7 +225,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
             }
           }
           this.field_p.paint(-83, param1, this, param3, param0);
-          pfa.a(1);
+          pfa.popRasterState(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -264,7 +264,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
             var8 = (Sprite[]) null;
             this.a(-72, (Sprite[]) null);
           }
-          super.a(param1, param0 - 64);
+          super.copyTo(param1, param0 - 64);
           if (param2) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_o[var4_int];

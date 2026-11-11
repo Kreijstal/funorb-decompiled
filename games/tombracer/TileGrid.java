@@ -171,7 +171,7 @@ final class TileGrid implements Renderable {
           for (var4 = this.firstRow; this.endRow > var4; var4++) {
             var5 = var2[this.tileIndex((byte) 93, var4, -1 - var3 + this.columnCount)];
             this.setTile(var3, var5, var4, 10);
-            var5.e(param0 - 64);
+            var5.mirror(param0 - 64);
           }
         }
         RoomRegion var7 = (RoomRegion) (this.field_p.first(param0 ^ -16));

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bba {
+final class RoomVariant {
     static int[] field_a;
     static int[] field_c;
     private int field_b;
     private IntrusiveDeque field_e;
     static fga field_d;
 
-    final int a(boolean param0) {
+    final int getIndex(boolean param0) {
         if (param0) {
           return -123;
         }
@@ -24,7 +24,7 @@ final class bba {
         field_c = null;
     }
 
-    private bba() throws Throwable {
+    private RoomVariant() throws Throwable {
         throw new Error();
     }
 

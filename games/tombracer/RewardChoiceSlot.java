@@ -38,10 +38,10 @@ final class RewardChoiceSlot {
         if (var2 != -1) {
           var3 = OpenGlUnderwaterEffect.field_n[var2];
           var4 = eca.field_c[var3];
-          var4.a((this.field_j >> 1) + this.field_g - (var4.width() >> 1), (this.field_i >> 1) + (this.field_c - (var4.height() >> 1)));
+          var4.draw((this.field_j >> 1) + this.field_g - (var4.width() >> 1), (this.field_i >> 1) + (this.field_c - (var4.height() >> 1)));
         }
         if (0 <= var2) {
-          GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var2]].a(-20 + (this.field_g + (this.field_j >> 1)), (this.field_i >> 1) + this.field_c - 10);
+          GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var2]].draw(-20 + (this.field_g + (this.field_j >> 1)), (this.field_i >> 1) + this.field_c - 10);
           return;
         }
     }

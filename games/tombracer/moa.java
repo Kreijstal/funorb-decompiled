@@ -44,14 +44,14 @@ final class moa {
           } else {
             if (param0.field_d == 0 &&
               PlayerInputQueue.field_c) {
-              var3 = "[" + cla.field_o + "] ";
+              var3 = "[" + PbufferEntry.field_o + "] ";
             }
             if (param0.field_d == 1) {
               var3 = "[" + LegacyOpenGlFlowingWaterEffect.formatText(96, UiComponent.field_nb, new String[]{param0.field_b}) + "] ";
             }
             if (4 == param0.field_d &&
-              null != tla.field_f) {
-              var3 = "[" + tla.field_f + "] ";
+              null != OpenGlDisplayLists.field_f) {
+              var3 = "[" + OpenGlDisplayLists.field_f + "] ";
             }
             if (param0.field_d == 3) {
               var3 = "[#" + param0.field_b + "] ";

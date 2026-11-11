@@ -88,7 +88,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           field_n = -21;
         }
         hk.field_e.addChild(-127, RasterShape.field_e);
-        oca.field_b = new lla(cla.field_o, hk.field_e);
+        oca.field_b = new lla(PbufferEntry.field_o, hk.field_e);
         C2SRoomResultPacket.field_a = new UiComponent(0L, (UiComponent) null);
         C2SRoomResultPacket.field_a.addChild(-122, oca.field_b.field_a);
         C2SRoomResultPacket.field_a.addChild(-128, ImageProducerRasterBuffer.field_j);
@@ -453,7 +453,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
             this.angle = SnakePitModel.a(4, 8192, 0, param2.readBits((byte) 44, 4));
           }
           if (20 <= param0.formatVersion &&
-            this.a(6)) {
+            this.storesInitialOnBit(6)) {
             stackIn_16_1 = (param2.readBits((byte) 44, 1) == 1);
             this.field_x = stackIn_16_1;
           }
@@ -661,7 +661,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return (Switchable) ((Object) this.findComponentById(param1, param2, 20));
     }
 
-    boolean a(int param0) {
+    boolean storesInitialOnBit(int param0) {
         if (param0 != 6) {
           return false;
         }
@@ -719,14 +719,14 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         this.height = param2;
     }
 
-    final boolean k(byte param0) {
+    final boolean isInActiveVariant(byte param0) {
         if (param0 > -52) {
           return true;
         }
-        if (this.room.w(0) == null) {
+        if (this.room.getVariant(0) == null) {
           return true;
         }
-        return this.room.w(0).containsComponent(this, true, true);
+        return this.room.getVariant(0).containsComponent(this, true, true);
     }
 
     public final int getX(int param0) {
@@ -800,7 +800,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           if (this.hasAngle((byte) -122)) {
             param1.writeBits((byte) 8, ResourceArchive.a((byte) 103, this.angle, 8192, 4), 4);
           }
-          if (this.a(6)) {
+          if (this.storesInitialOnBit(6)) {
             stackIn_12_0 = (BitPacketBuffer) (param1);
             stackIn_12_1 = 116;
             if (this.field_x) {

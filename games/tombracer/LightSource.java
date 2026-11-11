@@ -25,7 +25,7 @@ final class LightSource extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setCurrentInfluence(int param0, int param1) {
         int var3 = -39 % ((-18 - param1) / 50);
         this.field_l = param0;
     }
@@ -204,7 +204,7 @@ final class LightSource extends IntrusiveNode {
         }
     }
 
-    final int b(int param0) {
+    final int getCurrentInfluence(int param0) {
         if (param0 < 104) {
           this.x = -79;
           return this.field_l;

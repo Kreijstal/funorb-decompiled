@@ -19,7 +19,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
           this.field_q.setInput((byte) -14, this.field_t);
           return;
         }
-        this.b(-64, 64);
+        this.setMaxLevel(-64, 64);
         this.field_t = this.isPlayerUnlocking(param0 - 5416);
         this.field_q.setInput((byte) -14, this.field_t);
     }
@@ -175,7 +175,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         return this.field_q.hashState(77, param0);
     }
 
-    final void b(int param0, int param1) {
+    final void setMaxLevel(int param0, int param1) {
         this.field_p = param1;
         if (param0 != 0) {
           KeyLockBehaviour.a(8, -65, -15);

@@ -179,7 +179,7 @@ final class PlayerContextMenu {
             HardwareAnimatedWaterEffect.a(param2, this.field_g, -120);
           } else {
             if (param1 == 2) {
-              q.a((byte) -123, param2, this.field_k);
+              CollisionGridEntry.a((byte) -123, param2, this.field_k);
             } else {
               if (param1 == 3) {
                 MidiVoiceMixer.a(param2, 30, this.field_k);
@@ -335,7 +335,7 @@ final class PlayerContextMenu {
             if (k.field_A == 0) {
               this.field_f.addItem((byte) -66, 12, LegacyOpenGlEffect.field_b);
             }
-            this.field_f.addItem((byte) -86, 13, pea.field_f);
+            this.field_f.addItem((byte) -86, 13, LruNodeCache.field_f);
           }
           if (1 == param0.field_d) {
             if (0 == nba.field_b) {

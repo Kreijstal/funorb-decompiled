@@ -8,7 +8,7 @@ final class mca {
     short[] field_e;
     short[] field_c;
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean isCourseAvailable(byte param0, int param1) {
         boolean stackIn_12_0 = false;
         if (0 == param1) {
           return true;
@@ -17,7 +17,7 @@ final class mca {
           return true;
         }
         if (param0 != 6) {
-          mca.a((byte) 65, -116);
+          mca.isCourseAvailable((byte) 65, -116);
         }
         if (TextWidgetPainter.a(114)) {
           return false;

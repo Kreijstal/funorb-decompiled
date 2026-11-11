@@ -210,7 +210,7 @@ final class vb extends IntrusiveNode {
           field_i = 102;
         }
         this.field_g = param1;
-        this.field_f.a(128 + param1 * HardwareRidgedWaterNoise.field_v >> 8, param0);
+        this.field_f.setVolumeAndPan(128 + param1 * HardwareRidgedWaterNoise.field_v >> 8, param0);
     }
 
     vb(PcmSampleStream param0, IntrusiveNode param1) {

@@ -8,7 +8,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     static UiComponent field_j;
     private java.awt.image.ColorModel field_k;
 
-    private final synchronized void a(byte param0) {
+    private final synchronized void pushPixels(byte param0) {
         if (param0 != 10) {
           java.awt.Image var3 = (java.awt.Image) null;
           this.imageUpdate((java.awt.Image) null, -80, 60, -118, 83, 123);
@@ -92,11 +92,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.field_e = param1;
           this.field_k = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_a = param2.createImage((java.awt.image.ImageProducer) (this));
-          this.a((byte) 10);
+          this.pushPixels((byte) 10);
           param2.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
-          this.a((byte) 10);
+          this.pushPixels((byte) 10);
           param2.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
-          this.a((byte) 10);
+          this.pushPixels((byte) 10);
           param2.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
           this.makeTarget(-19216);
           int var5_int = 15 / ((74 - param3) / 41);
@@ -187,7 +187,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (param3 != 2) {
             ImageProducerRasterBuffer.releaseStatics(-107);
           }
-          this.a((byte) 10);
+          this.pushPixels((byte) 10);
           param2.drawImage(this.field_a, param1, param0, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "st.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

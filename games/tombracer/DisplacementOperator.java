@@ -9,7 +9,7 @@ final class DisplacementOperator extends TextureOperator {
         if (param0 != 116) {
           this.field_n = -128;
         }
-        tka.b((byte) 48);
+        tka.buildSinCosTables((byte) 48);
     }
 
     final int[][] getColourRow(int param0, int param1) {

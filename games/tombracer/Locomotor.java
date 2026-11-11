@@ -112,9 +112,9 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     final int b(int param0, int param1) {
         if (param0 != 0) {
           this.enabled = false;
-          return SpawnerBehaviour.a((byte) 8, 4, param1);
+          return SpawnerBehaviour.fixed16ToBits((byte) 8, 4, param1);
         }
-        return SpawnerBehaviour.a((byte) 8, 4, param1);
+        return SpawnerBehaviour.fixed16ToBits((byte) 8, 4, param1);
     }
 
     final int getTrapInitialLocalX(byte param0) {
@@ -148,9 +148,9 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
     final int a(int param0, boolean param1) {
         if (param1) {
           this.room = (Room) null;
-          return NodeHashTable.a(param0, 122, 4);
+          return NodeHashTable.bitsToFixed16(param0, 122, 4);
         }
-        return NodeHashTable.a(param0, 122, 4);
+        return NodeHashTable.bitsToFixed16(param0, 122, 4);
     }
 
     Locomotor(Room param0, BitPacketBuffer param1, boolean param2) {

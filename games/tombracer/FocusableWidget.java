@@ -203,14 +203,14 @@ class FocusableWidget extends UiWidget {
         try {
           if (param0 != 4) {
             var7 = (ResourceArchive) null;
-            FocusableWidget.a((ResourceArchive) null, 5, -25, (byte) 14);
+            FocusableWidget.loadSprites((ResourceArchive) null, 5, -25, (byte) 14);
           }
           var11 = WeaveOperator.field_q;
           var2 = var11.readUnsignedByte(255);
           if (var2 == 0) {
             var10 = (mm) (SpawnerBehaviour.field_n.first(-80));
             if (var10 == null) {
-              dea.closeGameSocket(60);
+              DropAnimation.closeGameSocket(60);
               return;
             }
             var4 = var11.readUnsignedByte(param0 ^ 251);
@@ -225,12 +225,12 @@ class FocusableWidget extends UiWidget {
               var10.unlink(95);
               return;
             }
-            dea.closeGameSocket(60);
+            DropAnimation.closeGameSocket(60);
             return;
           }
           if (var2 != 1) {
-            ssa.reportClientError("A1: " + kk.formatPacketDump(32), (byte) 117, (Throwable) null);
-            dea.closeGameSocket(60);
+            ClipStack.reportClientError("A1: " + kk.formatPacketDump(32), (byte) 117, (Throwable) null);
+            DropAnimation.closeGameSocket(60);
             return;
           }
           var3 = var11.readInt(-34);
@@ -246,7 +246,7 @@ class FocusableWidget extends UiWidget {
             var4_ref_sda.unlink(24);
             return;
           }
-          dea.closeGameSocket(60);
+          DropAnimation.closeGameSocket(60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,7 +263,7 @@ class FocusableWidget extends UiWidget {
         this.field_r = afa.field_c.field_v;
     }
 
-    final static Sprite[] a(ResourceArchive param0, int param1, int param2, byte param3) {
+    final static Sprite[] loadSprites(ResourceArchive param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -271,7 +271,7 @@ class FocusableWidget extends UiWidget {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!GameApplet.a(false, param1, param2, param0)) {
+          if (!GameApplet.loadSpriteSheet(false, param1, param2, param0)) {
             return null;
           }
           if (param3 != -82) {

@@ -117,9 +117,9 @@ final class ChooseRewardFactory implements BitDecodableFactory {
             if (null == C2SChooseRewardPacket.field_a) {
               if (!PlayerInputQueue.field_c) {
                 if (C2SChooseRewardPacket.field_a != null) {
-                  if (kp.field_c &&
-                    tla.field_f != null) {
-                    var63 = "[" + tla.field_f + "] ";
+                  if (HardwareTextureCache.field_c &&
+                    OpenGlDisplayLists.field_f != null) {
+                    var63 = "[" + OpenGlDisplayLists.field_f + "] ";
                     var65 = var63 + var64 + ": ";
                     var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var65);
                     if (var5Lifetime1 >= PlatformBehaviour.field_s.stringWidth(WeaveOperator.field_n.toString())) {
@@ -138,12 +138,12 @@ final class ChooseRewardFactory implements BitDecodableFactory {
                 DarknessBehaviour.padTo(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                 return true;
               }
-              var7 = "[" + cla.field_o + "] ";
+              var7 = "[" + PbufferEntry.field_o + "] ";
             }
             if (C2SChooseRewardPacket.field_a != null) {
-              if (kp.field_c &&
-                tla.field_f != null) {
-                var67 = "[" + tla.field_f + "] ";
+              if (HardwareTextureCache.field_c &&
+                OpenGlDisplayLists.field_f != null) {
+                var67 = "[" + OpenGlDisplayLists.field_f + "] ";
                 var68 = var67 + var64 + ": ";
                 var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var68);
                 if (var5Lifetime1 >= PlatformBehaviour.field_s.stringWidth(WeaveOperator.field_n.toString())) {

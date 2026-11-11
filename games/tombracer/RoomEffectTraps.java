@@ -445,11 +445,11 @@ final class RoomEffectTraps {
         var23 = TombRacer.field_G ? 1 : 0;
         try {
           if (0 < param3 &&
-            !cla.isPowerOfTwoOrZero(9181, param3)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param3)) {
             throw new IllegalArgumentException("");
           }
           if (param4 > 0 &&
-            !cla.isPowerOfTwoOrZero(9181, param4)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param4)) {
             throw new IllegalArgumentException("");
           }
           var7_int = jj.glFormatComponents(param5, (byte) -104);

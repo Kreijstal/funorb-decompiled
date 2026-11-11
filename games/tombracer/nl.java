@@ -143,7 +143,7 @@ final class nl {
         }
     }
 
-    final void a(java.applet.Applet param0, int param1) {
+    final void saveAsLastLoginMethod(java.applet.Applet param0, int param1) {
         try {
           LegacyOpenGlTexture3D.writeCookie(this.field_a, "jagex-last-login-method", (byte) 121, 31536000L, param0);
           if (param1 != 5) {

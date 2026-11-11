@@ -4,7 +4,7 @@
 abstract class jg {
     static PacketBuffer field_a;
 
-    final static boolean a(int param0, String param1, String param2) {
+    final static boolean isPasswordAcceptable(int param0, String param1, String param2) {
         RuntimeException var3 = null;
         String var4 = null;
         RuntimeException stackIn_30_0 = null;
@@ -14,7 +14,7 @@ abstract class jg {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ArchiveNetworkClient.a((byte) -72, param2)) {
+          if (ArchiveNetworkClient.containsNonAlphanumeric((byte) -72, param2)) {
             return false;
           }
           if (eba.hasUniformCharacters(param2, 6912)) {
@@ -39,7 +39,7 @@ abstract class jg {
             return true;
           }
           var4 = (String) null;
-          jg.a(104, (String) null, (String) null);
+          jg.isPasswordAcceptable(104, (String) null, (String) null);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,7 +77,7 @@ abstract class jg {
 
     abstract void a(float param0, float param1, float param2, int param3, float[] param4, float param5, int param6, int param7, int param8, int param9, int param10);
 
-    final static int a(byte param0) {
+    final static int getSoundVolume(byte param0) {
         int var1 = 16 / ((73 - param0) / 52);
         return MatchState.field_w;
     }

@@ -204,7 +204,7 @@ final class CurveOperator extends TextureOperator {
         if (this.field_r == 2) {
           this.computeVirtualEndpoints(false);
         }
-        tka.b((byte) 59);
+        tka.buildSinCosTables((byte) 59);
         this.buildCurveTable((byte) 119);
     }
 

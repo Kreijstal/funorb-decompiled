@@ -89,7 +89,7 @@ final class RoomViewRenderer {
           var16_ref = (FollowCamera) (var15.getRenderTarget(0));
           var17 = (var12 + var11) / 2;
           var18 = var17 * 2048 / 512;
-          var16_ref.a(var18, (byte) -88);
+          var16_ref.setViewportScale(var18, (byte) -88);
           tga.field_a.ya();
           if (ica.field_a) {
             tga.field_a.DA(var13, var14, var17, var17);
@@ -174,7 +174,7 @@ final class RoomViewRenderer {
           tga.field_a.a(var19);
           MovingPlatformComponent.field_N = param3;
           RenderScene.field_e = param1;
-          ImageProducerCanvasImageBuffer.field_o.a(param2, param3, (byte) -12, param4, param1);
+          ImageProducerCanvasImageBuffer.field_o.pushIntersectClip(param2, param3, (byte) -12, param4, param1);
           var10.renderScene(false);
           if (param5.isMenuBackgroundDemo((byte) 33)) {
             var31 = 0;
@@ -203,12 +203,12 @@ final class RoomViewRenderer {
               }
             }
             if (var31 <= 0) {
-              ImageProducerCanvasImageBuffer.field_o.a(109);
+              ImageProducerCanvasImageBuffer.field_o.popClip(109);
               return;
             }
             SecondaryNodeDequeIterator.a(var31 * 255 >> 8, param4, 0, param2, (byte) 25, param3, param1);
           }
-          ImageProducerCanvasImageBuffer.field_o.a(109);
+          ImageProducerCanvasImageBuffer.field_o.popClip(109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

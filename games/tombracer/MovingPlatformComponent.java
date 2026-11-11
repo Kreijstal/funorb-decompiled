@@ -35,7 +35,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
         return true;
     }
 
-    final boolean C(int param0) {
+    final boolean storesSpeed(int param0) {
         if (param0 != 1760) {
           field_P = (String) null;
           return true;

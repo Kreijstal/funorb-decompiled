@@ -122,7 +122,7 @@ final class ck {
           var15.field_z = 1;
           PerlinNoise2D.field_t = new UiComponent(0L, Corpse.field_i);
           PerlinNoise2D.field_t.field_z = 1;
-          ImageProducerRasterBuffer.field_j = new UiComponent(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
+          ImageProducerRasterBuffer.field_j = new UiComponent(0L, ClipStack.field_g, S2CActionPacket.field_g.toUpperCase());
           C2SChooseCharacterPacket.field_a = new UiComponent(0L, CharacterSelectPhase.field_s, tha.field_B.toUpperCase());
           Obstacle.field_s = new UiComponent(0L, CommonChooseReward.field_c);
           gta.field_b = new UiComponent(0L, ooa.field_f, SnakePitModel.field_m);
@@ -188,7 +188,7 @@ final class ck {
             RoomRegion.field_l.addChild(-122, RopeBridgeComponent.field_F);
           }
           RoomRegion.field_l.addChild(-124, tn.field_n);
-          bc.field_b = new UiComponent(0L, ssa.field_g, OpenGlSprite.field_k.toUpperCase());
+          bc.field_b = new UiComponent(0L, ClipStack.field_g, OpenGlSprite.field_k.toUpperCase());
           StatusEffect.field_g = new UiComponent(0L, CharacterSelectPhase.field_s);
           C2SSubmitSettingsPacket.field_g = new UiComponent(0L, CommonChooseReward.field_c);
           qna.field_b = new UiComponent(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
@@ -472,7 +472,7 @@ final class ck {
           td.clearFaceDepthBuckets((byte) -62);
           if (param2.field_K > 0 &&
             param2.field_q != null) {
-            ssa.clearMeshDepthBucketCounts(0);
+            ClipStack.clearMeshDepthBucketCounts(0);
           }
           CharacterChoiceFactory.field_f = 0;
           var8 = 0;

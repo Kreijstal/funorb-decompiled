@@ -140,7 +140,7 @@ final class ConsoleToken extends IntrusiveNode {
         }
     }
 
-    final ConsoleValue a(int param0, ConsoleMethod[] param1) throws rv, jj {
+    final ConsoleValue evaluate(int param0, ConsoleMethod[] param1) throws rv, jj {
         int incrementValue$0 = 0;
         ConsoleValue stackIn_9_0 = null;
         ConsoleValue stackIn_13_0 = null;
@@ -177,7 +177,7 @@ final class ConsoleToken extends IntrusiveNode {
               while (var5 != null) {
                 incrementValue$0 = var4;
                 var4++;
-                var7[incrementValue$0] = var5.a(-1, param1);
+                var7[incrementValue$0] = var5.evaluate(-1, param1);
                 var5 = (ConsoleToken) (this.field_i.next(114));
               }
               stackIn_9_0 = BeamSegment.invokeConsoleMethod(param1, 19, this.text, var8);

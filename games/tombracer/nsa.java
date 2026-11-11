@@ -33,7 +33,7 @@ final class nsa {
         return new nsa(this.field_k, this.field_m, this.field_g, this.field_b, this.field_a, this.field_j);
     }
 
-    final void a(nsa param0, byte param1) {
+    final void copyFrom(nsa param0, byte param1) {
         try {
           this.field_g = param0.field_g;
           this.field_k = param0.field_k;

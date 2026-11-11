@@ -44,7 +44,7 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final byte[] a(byte param0, int param1, int param2) {
+    final byte[] getBytes(byte param0, int param1, int param2) {
         byte[] var5 = new byte[param1];
         byte[] var4 = var5;
         this.field_g.position(param2);

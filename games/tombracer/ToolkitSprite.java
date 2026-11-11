@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ToolkitSprite implements RenderSurface {
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         this.draw(param0, param1, 1, 0, 1);
     }
 
@@ -30,18 +30,18 @@ abstract class ToolkitSprite implements RenderSurface {
           var17 = (-((float)this.paddedWidth() - param2) * var12 + -param3 * var13) / 4096.0f + param1;
           var18 = (-param2 * var13 + ((float)this.paddedHeight() - param3) * var12) / 4096.0f + param0;
           var19 = (-(-param2) * var12 + ((float)this.paddedHeight() - param3) * var13) / 4096.0f + param1;
-          this.a(var14, var15, var16, var17, var18, var19, param6, param7, param8);
+          this.drawAffine(var14, var15, var16, var17, var18, var19, param6, param7, param8);
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         this.drawScaled(param0, param1, param2, param3, 1, 0, 1, 1);
     }
 
     abstract void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.drawScaled(param0, param1, param2, param3, param4, param5, param6, 1);
     }
 
@@ -55,7 +55,7 @@ abstract class ToolkitSprite implements RenderSurface {
 
     abstract int paddedHeight();
 
-    private final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8) {
+    private final void drawAffine(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8) {
         this.drawAffine(param0, param1, param2, param3, param4, param5, param6, param7, param8, 1);
     }
 

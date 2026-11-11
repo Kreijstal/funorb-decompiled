@@ -115,7 +115,7 @@ final class gha implements pp {
         cp1252HighChars = null;
     }
 
-    final static oc a(String param0, String param1, int param2, ResourceArchive param3) {
+    final static oc loadModelData(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Exception var5 = null;
@@ -132,7 +132,7 @@ final class gha implements pp {
         try {
           var4_int = -46 / ((-55 - param2) / 54);
           try {
-            stackIn_2_0 = HotspotTextWidget.a(param3, param1, param0, true);
+            stackIn_2_0 = HotspotTextWidget.loadModelData(param3, param1, param0, true);
             return stackIn_2_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

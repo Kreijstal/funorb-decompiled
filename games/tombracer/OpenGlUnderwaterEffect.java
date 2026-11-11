@@ -35,7 +35,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.owner.e(1, false);
         this.owner.bindTexture(true, this.field_p);
         this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
-        this.owner.a(pea.field_c, 0, -30);
+        this.owner.a(LruNodeCache.field_c, 0, -30);
         this.owner.a(ej.field_c, 2, -6219, true, false);
         this.owner.a(0, false, PlayerContextMenu.field_j);
         int var3 = -29 % ((param0 - 41) / 62);
@@ -173,7 +173,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           this.owner.bindTexture(true, (GpuTexture) null);
           this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
           this.owner.a(ej.field_c, 0, -49);
-          this.owner.a(pea.field_c, 2, -53);
+          this.owner.a(LruNodeCache.field_c, 2, -53);
           this.owner.a(0, false, ej.field_c);
           this.owner.e(0, false);
           if (this.field_j) {
@@ -193,7 +193,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.owner.bindTexture(true, (GpuTexture) null);
         this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
         this.owner.a(ej.field_c, 0, -49);
-        this.owner.a(pea.field_c, 2, -53);
+        this.owner.a(LruNodeCache.field_c, 2, -53);
         this.owner.a(0, false, ej.field_c);
         this.owner.e(0, false);
         if (this.field_j) {

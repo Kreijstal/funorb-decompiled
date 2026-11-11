@@ -145,13 +145,13 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
             var2_int = OpenGlTransform3D.field_e.available(~param1);
             if (var2_int <= 0) {
               if (~var2_int > param1) {
-                dea.closeGameSocket(60);
+                DropAnimation.closeGameSocket(60);
                 return false;
               }
-              if (rf.b((byte) -121) <= 30000L) {
+              if (rf.millisSinceLastReceive((byte) -121) <= 30000L) {
                 return false;
               }
-              dea.closeGameSocket(60);
+              DropAnimation.closeGameSocket(60);
               return false;
             }
             if (var2_int > -WeaveOperator.field_q.position + param0) {
@@ -168,7 +168,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            dea.closeGameSocket(60);
+            DropAnimation.closeGameSocket(60);
             return false;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

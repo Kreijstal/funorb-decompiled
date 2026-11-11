@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ssa {
+final class ClipStack {
     private iea field_c;
     private int[] field_a;
     private GraphicsToolkit field_b;
@@ -35,7 +35,7 @@ final class ssa {
           var6 = TombRacer.field_G ? 1 : 0;
           try {
             if (param1 < 112) {
-              ssa.releaseStatics(-5);
+              ClipStack.releaseStatics(-5);
             }
             var3 = "";
             if (param2 != null) {
@@ -89,7 +89,7 @@ final class ssa {
         }
     }
 
-    private final void c(int param0) {
+    private final void pushClip(int param0) {
         iea var2 = null;
         this.field_b.getClip(this.field_a);
         if (param0 != -31138) {
@@ -105,15 +105,15 @@ final class ssa {
         this.field_c = var2;
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        this.c(param2 ^ 31146);
+    final void pushIntersectClip(int param0, int param1, byte param2, int param3, int param4) {
+        this.pushClip(param2 ^ 31146);
         this.field_b.intersectClip(param4, param1, param0, param3);
         if (param2 != -12) {
-          this.c(-41);
+          this.pushClip(-41);
         }
     }
 
-    final void a(int param0) {
+    final void popClip(int param0) {
         if (this.field_e != this.field_c.field_a) {
           this.field_b.d();
           if (this.field_c.field_a != null) {
@@ -182,7 +182,7 @@ final class ssa {
           var6 = var5 + var3_int;
           var7 = param0.readUnsignedShort(126);
           if (2 < var7) {
-            throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: header error: version=" + var7));
+            throw ClipStack.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: header error: version=" + var7));
           }
           var28 = SwitchComponent.e(true);
           var25 = var28;
@@ -256,7 +256,7 @@ final class ssa {
             }
           }
           if (param0.position > var6) {
-            throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: data overrun: start=" + var5 + " length=" + var3_int + " end=" + var6 + " overranto=" + param0.position));
+            throw ClipStack.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: data overrun: start=" + var5 + " length=" + var3_int + " end=" + var6 + " overranto=" + param0.position));
           }
           if (param2) {
             System.out.println("Loading funorbprofile local: achievements=" + wg.arrayToString(0, var28));
@@ -277,7 +277,7 @@ final class ssa {
         }
     }
 
-    ssa(GraphicsToolkit param0) {
+    ClipStack(GraphicsToolkit param0) {
         this.field_e = null;
         this.field_a = new int[4];
         try {

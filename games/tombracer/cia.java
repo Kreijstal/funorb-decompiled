@@ -28,7 +28,7 @@ final class cia {
 
     final void b(int param0, int param1, int param2) {
         ura.a(-10985);
-        hp.a(2048, this.field_f, 1900, this.field_c.getModel((byte) 74), -1918106173, (this.field_e >> 16) + param1, param0 + (this.field_b >> 16));
+        hp.drawModelPreview(2048, this.field_f, 1900, this.field_c.getModel((byte) 74), -1918106173, (this.field_e >> 16) + param1, param0 + (this.field_b >> 16));
         RemovedFromGameMenu.f((byte) -6);
         int var4 = -43 / ((param2 - 6) / 58);
     }

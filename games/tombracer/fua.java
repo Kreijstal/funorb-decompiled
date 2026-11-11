@@ -57,7 +57,7 @@ final class fua implements WidgetPainter {
             nn.a(var6_int + 2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
           }
           SoftwareRasterizer.setClip(var6_int, var7, var6_int + (param0.field_m - 2), var7 + param0.field_p);
-          var8 = this.field_d.field_z.d(124);
+          var8 = this.field_d.field_z.getSelectedItem(124);
           if (var8 != null) {
             var9 = var8.toString();
             this.field_d.field_H.drawText(var9, var6_int + 2, -1 + (param0.field_p + this.field_d.field_H.field_w >> 1) + var7, 10000536, -1);

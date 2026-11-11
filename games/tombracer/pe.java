@@ -64,7 +64,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           this.field_l = param3;
           this.field_n = param4;
           this.field_j.bindTexture(true, (GpuTexture) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(78), param3, param4, 0, waa.toGlFormat(this.field_f, 1383), ClientException.glDataType(this.field_a, 5126), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.getGlFormat(78), param3, param4, 0, waa.toGlFormat(this.field_f, 1383), ClientException.glDataType(this.field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -141,7 +141,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(125), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5121, param4, param5);
+          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.getGlFormat(125), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5121, param4, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
@@ -209,7 +209,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           this.field_l = param2;
           this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Df(this.field_i, 0, this.d(75), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5126, param4, 4 * param5);
+          jaggl.OpenGL.glTexImage2Df(this.field_i, 0, this.getGlFormat(75), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5126, param4, 4 * param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');

@@ -369,7 +369,7 @@ abstract class GameFont {
           var12 = param6.length();
           for (var13 = 0; var12 > var13; var13++) {
             boolean decompiledFrameRemainder0 = true;
-            var14 = (char)(io.a(-377, param6.charAt(var13)) & 255);
+            var14 = (char)(io.charToCp1252(-377, param6.charAt(var13)) & 255);
             if (var14 == 60) {
               var10_int = var13;
             } else {

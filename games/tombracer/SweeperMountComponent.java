@@ -53,7 +53,7 @@ final class SweeperMountComponent extends PrefabComponent {
           var9.addLocomotor(var5, 0);
           var7 = rm.field_a;
           var8 = (TrapBaseModel) (var7.createModel(16, param1 ^ 107));
-          var8.b(param1 ^ 8021, 2);
+          var8.setVariant(param1 ^ 8021, 2);
           var9.addModel(var5, (byte) 124, var8);
           stackIn_6_0 = var9;
           return stackIn_6_0;

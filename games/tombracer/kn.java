@@ -26,13 +26,13 @@ final class kn {
     int field_t;
 
     final void a(byte param0) {
-        pfa.a(1);
+        pfa.popRasterState(1);
         if (param0 < 22) {
           kn.releaseStatics(-128);
         }
     }
 
-    private final void a(int param0, String param1, int param2, int param3) {
+    private final void drawWrappedTooltip(int param0, String param1, int param2, int param3) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -113,7 +113,7 @@ final class kn {
         }
     }
 
-    final void a(String param0, int param1, boolean param2, int param3) {
+    final void drawTooltip(String param0, int param1, boolean param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -124,9 +124,9 @@ final class kn {
             this.field_g = 12;
           }
           if (!this.field_n) {
-            this.a(param3, param1, param0, (byte) 73);
+            this.drawSingleLineTooltip(param3, param1, param0, (byte) 73);
           } else {
-            this.a(67, param0, param3, param1);
+            this.drawWrappedTooltip(67, param0, param3, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -143,18 +143,18 @@ final class kn {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    final void fillRectangleAlpha(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         SoftwareRasterizer.fillRectangleAlpha(param6, param0, param5, param1, param2, param3);
         if (param4 <= 103) {
           this.field_n = false;
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
+    final void setClip(byte param0, int param1, int param2, int param3, int param4) {
         tga.intersectClip(-21953, param2, param4, param3, param1);
         if (param0 <= 25) {
           String var7 = (String) null;
-          this.a(97, (String) null, -120, -122);
+          this.drawWrappedTooltip(97, (String) null, -120, -122);
         }
     }
 
@@ -166,7 +166,7 @@ final class kn {
         field_p = null;
     }
 
-    private final void a(int param0, int param1, String param2, byte param3) {
+    private final void drawSingleLineTooltip(int param0, int param1, String param2, byte param3) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -208,9 +208,9 @@ final class kn {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param2 != 8947848) {
-          this.a((byte) 41, 95, -41, 50, 51);
+          this.setClip((byte) 41, 95, -41, 50, 51);
         }
         SoftwareRasterizer.drawLine(param3, param0, param4, param5, param1);
     }
@@ -243,7 +243,7 @@ final class kn {
           var17.field_j = 16777215;
           this.field_k = (WidgetPainter) ((Object) var17);
           var4 = new StatefulWidgetPainter();
-          var17.a(var4, -49);
+          var17.copyTo(var4, -49);
           this.field_t = 3;
           this.field_q = param0;
           this.field_i = 3;
@@ -278,7 +278,7 @@ final class kn {
           discarded$0 = new bsa(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new cj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
-          var17.a(var8, -107);
+          var17.copyTo(var8, -107);
           var8.createStateLayer(0, (byte) 65).setSprites(2, gn.b(15658734, 1, 7829367, 10066329)).withTextColour(1118481, -2147483648).a((byte) 7, -1);
           var8.createStateLayer(4, (byte) 87).a(-2, true).setSprites(2, var5);
           this.field_e = (WidgetPainter) ((Object) var8);

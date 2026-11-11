@@ -195,7 +195,7 @@ final class ht extends UiComponent {
         return !this.isSecondaryLinked(param0 ^ 0) ? true : false;
     }
 
-    final static int[] d(int param0, boolean param1) {
+    final static int[] getCourseRoomIds(int param0, boolean param1) {
         int var5 = 0;
         RoomDefinition var6 = null;
         int incrementValue$0 = 0;

@@ -11,7 +11,7 @@ final class jn extends we {
         return this.isItemEnabled(param0, 0);
     }
 
-    private final int h(int param0, int param1) {
+    private final int getItemWidth(int param0, int param1) {
         if (param1 != 1) {
           this.activateItem(true, true, 29);
         }
@@ -27,9 +27,9 @@ final class jn extends we {
 
     final int getItemRight(int param0, byte param1) {
         if (param1 != -48) {
-          this.a(-68, false);
+          this.previousPage(-68, false);
         }
-        return this.getItemX((byte) 112, param0) + this.h(param0, 1);
+        return this.getItemX((byte) 112, param0) + this.getItemWidth(param0, 1);
     }
 
     final void activateItem(boolean param0, boolean param1, int param2) {
@@ -52,11 +52,11 @@ final class jn extends we {
         if (var5 != 10) {
           if (11 == var5 &&
             this.field_k.isActivated(false)) {
-            this.b(-103, param1);
+            this.nextPage(-103, param1);
           }
         } else {
           if (this.field_k.isActivated(param0)) {
-            this.a(1, param1);
+            this.previousPage(1, param1);
           }
         }
     }
@@ -91,7 +91,7 @@ final class jn extends we {
         int var11Lifetime2Lifetime1;
         var15 = TombRacer.field_G ? 1 : 0;
         SocketConnector.a(SnakePitBehaviour.field_q.toUpperCase(), 1, SingleChildWidget.field_v, 2497287, -1, 160, 1, param1 - 20, 0, -1, (byte) 60, 320);
-        S2CNextRoundPacket.a(4, SingleChildWidget.field_v, rka.a(td.field_r, true), 600, -1, param1 + 72, 11288327);
+        S2CNextRoundPacket.a(4, SingleChildWidget.field_v, rka.formatPageNumber(td.field_r, true), 600, -1, param1 + 72, 11288327);
         var16 = IntrusiveDeque.field_d[td.field_r];
         var4 = var16;
         var5 = Effect.field_h[td.field_r];
@@ -132,23 +132,23 @@ final class jn extends we {
                   var12 = 20;
                   var13 = var11Lifetime2;
                   var14 = 4;
-                  hp.a(var13, 512 + no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.a(var14, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] + var12, -50 + var9);
+                  hp.drawModelPreview(var13, 512 + no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.a(var14, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] + var12, -50 + var9);
                 }
               } else {
                 var12 = -4;
                 var13 = var11Lifetime2;
                 stackIn_27_0 = (no.field_p[td.field_r][var8] == 1) ? 1 : 109;
                 var14 = stackIn_27_0;
-                hp.a(var13, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.a(var14, 12166, 1), -1918106173, var12 + (no.field_k[td.field_r][var8] + var7), -50 + var9);
+                hp.drawModelPreview(var13, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.a(var14, 12166, 1), -1918106173, var12 + (no.field_k[td.field_r][var8] + var7), -50 + var9);
               }
               if (no.field_p[td.field_r][var8] == 2) {
-                hp.a(var11Lifetime2, 1024, no.field_s[td.field_r][var8], SpawnerBehaviour.a(31, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] - 16, var9 - 50);
-                hp.a(var11Lifetime2, 1024, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, -16 + var7 + no.field_k[td.field_r][var8], var9 - 65);
-                hp.a(var11Lifetime2, 0, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, var7 + (no.field_k[td.field_r][var8] + 16), var9 - 34);
-                hp.a(var11Lifetime2, 512, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] + 16, -65 + var9);
-                hp.a(var11Lifetime2, 1536, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] - 16, -34 + var9);
+                hp.drawModelPreview(var11Lifetime2, 1024, no.field_s[td.field_r][var8], SpawnerBehaviour.a(31, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] - 16, var9 - 50);
+                hp.drawModelPreview(var11Lifetime2, 1024, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, -16 + var7 + no.field_k[td.field_r][var8], var9 - 65);
+                hp.drawModelPreview(var11Lifetime2, 0, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, var7 + (no.field_k[td.field_r][var8] + 16), var9 - 34);
+                hp.drawModelPreview(var11Lifetime2, 512, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] + 16, -65 + var9);
+                hp.drawModelPreview(var11Lifetime2, 1536, no.field_s[td.field_r][var8], SpawnerBehaviour.a(29, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] - 16, -34 + var9);
               }
-              hp.a(var11Lifetime2, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.a(no.field_u[td.field_r][var8], 12166, no.field_m[td.field_r][var8]), -1918106173, var7 + no.field_k[td.field_r][var8], -50 + var9);
+              hp.drawModelPreview(var11Lifetime2, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.a(no.field_u[td.field_r][var8], 12166, no.field_m[td.field_r][var8]), -1918106173, var7 + no.field_k[td.field_r][var8], -50 + var9);
             }
             var11Lifetime2Lifetime1 = kn.field_p.a((aa) null, var10, 15, 0, var7, SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), var5[var8], (byte) 99, 640, 0, id.field_h, var9, 0);
             if (td.field_r > 0) {
@@ -191,7 +191,7 @@ final class jn extends we {
         return this.firstItemY - this.items[param0].getHeight(11919) / 2;
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void previousPage(int param0, boolean param1) {
         int var3 = 0;
         if (param0 != 1) {
           return;
@@ -251,9 +251,9 @@ final class jn extends we {
 
     final int getItemX(byte param0, int param1) {
         int discarded$0 = 0;
-        int var3 = this.h(param1, 1);
+        int var3 = this.getItemWidth(param1, 1);
         if (param0 <= 111) {
-          discarded$0 = this.h(-63, 56);
+          discarded$0 = this.getItemWidth(-63, 56);
         }
         if (param1 == 1) {
           return 0;
@@ -264,7 +264,7 @@ final class jn extends we {
         return -(var3 >> 1) + 320;
     }
 
-    private final void b(int param0, boolean param1) {
+    private final void nextPage(int param0, boolean param1) {
         int var3 = 0;
         td.field_r = td.field_r + 1;
         if (param0 > -89) {
@@ -285,7 +285,7 @@ final class jn extends we {
 
     final boolean isItemEnabled(int param0, int param1) {
         if (param1 != 0) {
-          this.b(57, true);
+          this.nextPage(57, true);
         }
         if (param0 == 1 &&
           td.field_r == 0) {

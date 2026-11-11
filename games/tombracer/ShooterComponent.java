@@ -164,7 +164,7 @@ abstract class ShooterComponent extends PrefabComponent {
 
     abstract boolean canRandomisePhase(int param0);
 
-    final boolean a(int param0) {
+    final boolean storesInitialOnBit(int param0) {
         if (param0 != 6) {
           return false;
         }

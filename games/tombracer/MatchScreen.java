@@ -144,7 +144,7 @@ final class MatchScreen extends GameScreen implements rqa {
           var6 = (MatchOverlay) (this.overlays.next(param2 - 15171));
         }
         if (null != this.field_n) {
-          this.field_n.a((byte) 44);
+          this.field_n.showQueuedHints((byte) 44);
         }
         if (this.isMenuBackgroundDemo((byte) 33)) {
           return;
@@ -338,7 +338,7 @@ final class MatchScreen extends GameScreen implements rqa {
         this.field_p = false;
         this.pausedByOverlay = false;
         try {
-          if (param9 >= 0 && (!mca.a((byte) 6, param9) ||
+          if (param9 >= 0 && (!mca.isCourseAvailable((byte) 6, param9) ||
             !BrickOperator.d(-74, param9))) {
             throw new IllegalStateException("CA:" + param9);
           }
@@ -1075,10 +1075,10 @@ final class MatchScreen extends GameScreen implements rqa {
           this.isInPlayPhase(63);
         }
         if (this.matchState.hasFinishedCourse((byte) 90, param1)) {
-          var3 = RewardChoicePhase.createTextMessage(-41, LegacyOpenGlFlowingWaterEffect.formatText(124, ara.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.formatTime(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
+          var3 = RewardChoicePhase.createTextMessage(-41, LegacyOpenGlFlowingWaterEffect.formatText(124, ara.field_yb, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + DropAnimation.formatTime(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
         } else {
           if (this.matchState.hasTimedOut((byte) -66, param1)) {
-            var3 = RewardChoicePhase.createTextMessage(-79, LegacyOpenGlFlowingWaterEffect.formatText(107, hu.field_a, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + dea.formatTime(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
+            var3 = RewardChoicePhase.createTextMessage(-79, LegacyOpenGlFlowingWaterEffect.formatText(107, hu.field_a, new String[]{this.getColouredPlayerName(param1, 9)}) + ": " + DropAnimation.formatTime(this.matchState.getSimulationTick((byte) 115, param1), (byte) -8));
           } else {
             var3 = RewardChoicePhase.createTextMessage(-108, LegacyOpenGlFlowingWaterEffect.formatText(99, DisplaySettingsDialog.field_Q, new String[]{this.getColouredPlayerName(param1, 9)}));
           }

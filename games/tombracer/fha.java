@@ -33,7 +33,7 @@ final class fha {
         }
         try {
           fua.field_f = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "frame_bottom");
-          ApproachPlayerLocomotor.field_s = MaskBlendOperator.a(param2, "commonui", "jagex_logo_grey", -101);
+          ApproachPlayerLocomotor.field_s = MaskBlendOperator.loadSpriteByName(param2, "commonui", "jagex_logo_grey", -101);
           MonochromeFillOperator.field_n = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "button");
           CharacterChoiceFactory.field_b = Particle.loadSpritesByName("validation", param2, "commonui", -57);
           BlendModeOperator.field_o = (BitmapFont) ((Object) SnakePitModel.loadAntialiasedFont(param2, param1, false, "commonui", "arezzo12"));
@@ -78,7 +78,7 @@ final class fha {
           var12 = new Sprite(var17.field_m - var9Lifetime1 * 2, var9Lifetime1);
           var12.makeRasterTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
-          pfa.a(1);
+          pfa.popRasterState(1);
           MonochromeFillOperator.field_n = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "fha.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

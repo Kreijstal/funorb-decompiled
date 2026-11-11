@@ -20,13 +20,13 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           this.width = param3;
           this.height = param4;
           this.field_j.bindTexture(true, (GpuTexture) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(108), param3, param4, 0, waa.toGlFormat(this.field_f, 1383), ClientException.glDataType(this.field_a, 5126), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.getGlFormat(108), param3, param4, 0, waa.toGlFormat(this.field_f, 1383), ClientException.glDataType(this.field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0, float[] param1, int param2, int param3, int param4, int param5, int param6, ft param7, boolean param8) {
+    final void uploadFloatRegion(int param0, float[] param1, int param2, int param3, int param4, int param5, int param6, ft param7, boolean param8) {
         try {
           this.field_j.bindTexture(param8, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3314, param6);
@@ -57,7 +57,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           return this.height;
         }
         ft var3 = (ft) null;
-        this.a(-26, (byte) -121, -51, (byte[]) null, 52, 85, (ft) null, -93, 99);
+        this.uploadByteRegion(-26, (byte) -121, -51, (byte[]) null, 52, 85, (ft) null, -93, 99);
         return this.height;
     }
 
@@ -83,7 +83,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
             this.uploadByteMipmaps(this.field_i, param2, param5, -118, param3);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.d(110), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5121, param5, param6);
+            jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.getGlFormat(110), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5121, param5, param6);
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
@@ -223,7 +223,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           return;
         }
         ft var5 = (ft) null;
-        this.a(-2, (byte) 55, 95, (byte[]) null, -118, 102, (ft) null, -23, 82);
+        this.uploadByteRegion(-2, (byte) 55, 95, (byte[]) null, -118, 102, (ft) null, -23, 82);
     }
 
     OpenGlTexture2D(HardwareOpenGlToolkit param0, ft param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
@@ -248,7 +248,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
             return;
           }
           jaggl.OpenGL.glPixelStorei(3314, param7);
-          jaggl.OpenGL.glTexImage2Df(this.field_i, 0, this.d(44), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5126, param5, param6 * 4);
+          jaggl.OpenGL.glTexImage2Df(this.field_i, 0, this.getGlFormat(44), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5126, param5, param6 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -277,7 +277,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         }
     }
 
-    final static int a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static int intersectSegmentWithBox(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10;
         int var11;
         int var12;
@@ -1213,7 +1213,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         return var12Lifetime3;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7) {
+    final void uploadIntRegion(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7) {
         try {
           this.field_j.bindTexture(true, (GpuTexture) (this));
           if (param3 < 101) {
@@ -1235,7 +1235,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         return param1 / (float)this.height;
     }
 
-    final void a(int param0, byte param1, int param2, byte[] param3, int param4, int param5, ft param6, int param7, int param8) {
+    final void uploadByteRegion(int param0, byte param1, int param2, byte[] param3, int param4, int param5, ft param6, int param7, int param8) {
         try {
           this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
@@ -1262,7 +1262,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           return this.width;
         }
         int[] var3 = (int[]) null;
-        this.a(-114, 19, 79, 107, -106, (int[]) null, -103, 40);
+        this.uploadIntRegion(-114, 19, 79, 107, -106, (int[]) null, -103, 40);
         return this.width;
     }
 

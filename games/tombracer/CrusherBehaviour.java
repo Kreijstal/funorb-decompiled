@@ -346,7 +346,7 @@ final class CrusherBehaviour extends Behaviour {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!GameApplet.a(false, param2, param1, param0)) {
+          if (!GameApplet.loadSpriteSheet(false, param2, param1, param0)) {
             return null;
           }
           if (param3 <= 20) {

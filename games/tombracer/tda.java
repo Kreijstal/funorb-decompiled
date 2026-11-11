@@ -7,7 +7,7 @@ final class tda extends jg {
     private int[] field_c;
     static String field_b;
 
-    final static int a(int param0, int param1) {
+    final static int bitCount(int param0, int param1) {
         param1 = (param1 & 1431655765) + ((-1431655765 & param1) >>> 1);
         param1 = (param1 & 858993459) + (param1 >>> 2 & -1288490189);
         param1 = param1 + (param1 >>> 4) & 252645135;

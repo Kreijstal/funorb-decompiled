@@ -151,7 +151,7 @@ final class FlameShooterComponent extends ShooterComponent {
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (BlockModel) (var7.createModel(7, 100));
-          var8.b(param1 + 111, 11);
+          var8.setVariant(param1 + 111, 11);
           var9.addModel(var5, (byte) 124, var8);
           this.addMuzzleLight(var9, 0, var5, 16777130);
           stackIn_1_0 = var9;

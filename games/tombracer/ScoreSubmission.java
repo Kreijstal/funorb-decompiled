@@ -14,7 +14,7 @@ final class ScoreSubmission extends IntrusiveNode {
     int field_i;
     int field_g;
 
-    final static ka a(int param0, boolean param1, boolean param2, int param3, int param4) {
+    final static ka getModelForCategory(int param0, boolean param1, boolean param2, int param3, int param4) {
         int var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
@@ -96,7 +96,7 @@ final class ScoreSubmission extends IntrusiveNode {
     }
 
     final static void a(int param0, boolean param1) {
-        DefaultRoomObjectRenderer.field_b.a(-63, param1);
+        DefaultRoomObjectRenderer.field_b.complete(-63, param1);
         if (param0 != 2753) {
           field_p = 0.6975499391555786f;
         }

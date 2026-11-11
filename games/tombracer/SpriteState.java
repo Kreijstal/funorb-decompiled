@@ -23,11 +23,11 @@ abstract class SpriteState extends DualLinkNode {
         rm.field_a = (ModelCodec) ((Object) new ModelFactory());
         vha.field_c = (RoomComponentCodec) ((Object) new RoomComponentFactory());
         if (param0 == -18035) {
-          dea.roomObjectRenderer = (RoomObjectRenderer) ((Object) new DefaultRoomObjectRenderer());
+          DropAnimation.roomObjectRenderer = (RoomObjectRenderer) ((Object) new DefaultRoomObjectRenderer());
           return;
         }
         field_l = (int[]) null;
-        dea.roomObjectRenderer = (RoomObjectRenderer) ((Object) new DefaultRoomObjectRenderer());
+        DropAnimation.roomObjectRenderer = (RoomObjectRenderer) ((Object) new DefaultRoomObjectRenderer());
     }
 
     final static void drawRecolouredThreeSlice(int param0, Sprite[] param1, int param2, int param3, int param4, int param5) {

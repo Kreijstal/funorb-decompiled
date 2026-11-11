@@ -545,7 +545,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           if (param0 <= 103) {
             this.getWeight(-91);
           }
-          dea.roomObjectRenderer.drawPuddle(this, 95, param1);
+          DropAnimation.roomObjectRenderer.drawPuddle(this, 95, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "mda.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

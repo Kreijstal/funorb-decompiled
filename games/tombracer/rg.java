@@ -162,7 +162,7 @@ final class rg extends SingleChildWidget {
           tk.field_a[7] = fpa.snakeDeathMessages;
           tk.field_a[4] = TurbulenceNoise3D.fallingObjectDeathMessages;
           IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
-          Effect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
+          Effect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, LegacyTextureCache.field_c};
           IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, dka.field_c};
           Effect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, ne.field_e};
           IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, AnimationSequence.field_a};
@@ -214,7 +214,7 @@ final class rg extends SingleChildWidget {
         tk.field_a[7] = fpa.snakeDeathMessages;
         tk.field_a[4] = TurbulenceNoise3D.fallingObjectDeathMessages;
         IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
-        Effect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
+        Effect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, LegacyTextureCache.field_c};
         IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, dka.field_c};
         Effect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, ne.field_e};
         IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, AnimationSequence.field_a};
@@ -257,7 +257,7 @@ final class rg extends SingleChildWidget {
           var6 = new Sprite(this.child.field_m, this.child.field_p);
           nm.setRasterTarget(var6, (byte) 110);
           this.child.renderLayer(param2, 0, 0, param3);
-          pfa.a(1);
+          pfa.popRasterState(1);
           var6.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_y);
           return;
         }

@@ -6,14 +6,14 @@ final class MicrosoftDisplayController implements com.ms.directX.IEnumModesCallb
     private static int field_b;
     private static int[] field_c;
 
-    final void a(java.awt.Frame param0, byte param1) {
+    final void exitFullscreen(java.awt.Frame param0, byte param1) {
         if (param1 == -108) {
           this.field_a.restoreDisplayMode();
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
           return;
         }
         java.awt.Frame var4 = (java.awt.Frame) null;
-        this.a((java.awt.Frame) null, (byte) -47);
+        this.exitFullscreen((java.awt.Frame) null, (byte) -47);
         this.field_a.restoreDisplayMode();
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
     }

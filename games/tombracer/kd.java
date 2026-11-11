@@ -39,12 +39,12 @@ final class kd extends FocusableWidget {
           }
           var8_int = var8_int * this.field_A / var9;
           if (1 == param4) {
-            this.field_D.a(var8_int, (byte) 84);
+            this.field_D.add(var8_int, (byte) 84);
           } else {
             if (param4 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; var12 < this.field_D.b(-1); var12++) {
+              for (var12 = 0; var12 < this.field_D.size(-1); var12++) {
                 var13 = -var8_int + this.field_D.get(-1, var12);
                 var13 = var13 * var13;
                 if (var13 < var10) {
@@ -75,7 +75,7 @@ final class kd extends FocusableWidget {
 
     final int a(int param0, byte param1) {
         if (0 > param0 ||
-          param0 >= this.field_D.b(param1 + 13)) {
+          param0 >= this.field_D.size(param1 + 13)) {
           return -1;
         }
         if (param1 != -14) {
@@ -88,7 +88,7 @@ final class kd extends FocusableWidget {
         if (param0 != -3) {
           this.a(-86, (byte) 101);
         }
-        return this.field_D.b(param0 ^ 2);
+        return this.field_D.size(param0 ^ 2);
     }
 
     final int b(int param0) {

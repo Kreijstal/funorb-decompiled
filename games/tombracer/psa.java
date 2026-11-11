@@ -8,12 +8,12 @@ final class psa extends MidiPcmStream {
     private int[] field_T;
     private mp field_R;
 
-    final synchronized void a(int param0, int param1, byte param2, int param3) {
+    final synchronized void rampChannelVolume(int param0, int param1, byte param2, int param3) {
         int var5 = param3 * AudioOutput.field_d / 1000;
         if (param2 != -4) {
           return;
         }
-        this.c(-30515, param1, var5, param0);
+        this.rampChannelVolumeSamples(-30515, param1, var5, param0);
     }
 
     final synchronized void fill(int[] param0, int param1, int param2) {
@@ -82,7 +82,7 @@ final class psa extends MidiPcmStream {
 
     final synchronized void startTrack(boolean param0, MusicTrack param1, byte param2, boolean param3) {
         try {
-          this.f(-377538388);
+          this.resetChannelVolumes(-377538388);
           super.startTrack(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "psa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -95,13 +95,13 @@ final class psa extends MidiPcmStream {
         this.field_T = new int[16];
         this.field_S = 256;
         try {
-          this.f(-377538388);
+          this.resetChannelVolumes(-377538388);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "psa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final synchronized void c(int param0, int param1, int param2, int param3) {
+    final synchronized void rampChannelVolumeSamples(int param0, int param1, int param2, int param3) {
         this.field_P = false;
         if (this.field_R == null) {
           this.field_R = new mp();
@@ -134,7 +134,7 @@ final class psa extends MidiPcmStream {
         this.field_T[param2] = param1 << 12;
     }
 
-    private final void f(int param0) {
+    private final void resetChannelVolumes(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -377538388) {
@@ -150,7 +150,7 @@ final class psa extends MidiPcmStream {
         this.field_Q = new int[16];
         this.field_T = new int[16];
         this.field_S = 256;
-        this.f(-377538388);
+        this.resetChannelVolumes(-377538388);
     }
 
     static {

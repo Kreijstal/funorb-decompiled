@@ -278,7 +278,7 @@ final class ala extends GameScreen {
           ena.field_p = new vs(ej.field_a, SnakePitBehaviour.field_o);
           ej.field_a.c(ena.field_p, 89);
         }
-        ena.field_p.a(param3, param1, param2, (byte) 110);
+        ena.field_p.setProgress(param3, param1, param2, (byte) 110);
         SoftwareRasterizer.clear();
         if (param0 != -30) {
           return;

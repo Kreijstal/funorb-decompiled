@@ -171,7 +171,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           if (param2 != this.field_M) {
             return;
           }
-          og.b(0);
+          og.exitFullscreen(0);
           this.i((byte) 109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -319,7 +319,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           var5_long = -this.field_P + bva.currentTimeMillis((byte) -107);
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (0 >= var7) {
-            og.b(0);
+            og.exitFullscreen(0);
             this.i((byte) 109);
             this.field_z.c(new gga(this.field_z, TileRenderable.field_b), 120);
           } else {

@@ -50,7 +50,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.validateText((byte) 14, param1) == fp.field_c) {
-            stackIn_3_0 = pla.field_b;
+            stackIn_3_0 = IntIntHashTable.field_b;
             return stackIn_3_0;
           }
           if (param0 != -1) {

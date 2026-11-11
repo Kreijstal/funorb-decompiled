@@ -13,7 +13,7 @@ final class sja extends ProceduralTextureProvider {
         }
     }
 
-    final static int b(int param0, int param1) {
+    final static int toBaseInternalFormat(int param0, int param1) {
         if (param1 == 20934) {
           if (param0 != 6407 &&
             34843 != param0 &&

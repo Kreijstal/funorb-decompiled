@@ -12,7 +12,7 @@ final class ina {
     float field_i;
     static SpriteData[] field_c;
 
-    final static void a(GraphicsToolkit param0, int param1) {
+    final static void createGameModels(GraphicsToolkit param0, int param1) {
         ka dupTemp$0 = null;
         ka dupTemp$1 = null;
         ka dupTemp$2 = null;
@@ -90,16 +90,16 @@ final class ina {
 
     final void a(String param0, byte param1, String param2, ResourceArchive param3, String param4) {
         try {
-          this.a(param0, -1, param4, param2, param3, (byte) -108);
+          this.addStage(param0, -1, param4, param2, param3, (byte) -108);
           if (param1 != -36) {
-            this.a((byte) 90);
+            this.pollLoaded((byte) 90);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ina.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(String param0, int param1, String param2, String param3, ResourceArchive param4, byte param5) {
+    private final void addStage(String param0, int param1, String param2, String param3, ResourceArchive param4, byte param5) {
         lt[] var9 = null;
         int fieldTemp$0 = 0;
         if (this.field_h.length <= this.field_e) {
@@ -198,7 +198,7 @@ final class ina {
 
     final void a(int param0, ResourceArchive param1, String param2, String param3) {
         try {
-          this.a(param3, -1, param2, (String) null, param1, (byte) -108);
+          this.addStage(param3, -1, param2, (String) null, param1, (byte) -108);
           if (param0 != 256) {
             this.field_g = 68;
           }
@@ -207,7 +207,7 @@ final class ina {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean pollLoaded(byte param0) {
         lt var2;
         int var3;
         lt var4;

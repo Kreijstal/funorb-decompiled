@@ -4,7 +4,7 @@
 final class NotLoggedInMenu extends MenuScreen {
     static gb field_q;
     static boolean field_r;
-    private dea field_s;
+    private DropAnimation field_s;
 
     final int getItemX(byte param0, int param1) {
         if (param0 > 111) {
@@ -16,7 +16,7 @@ final class NotLoggedInMenu extends MenuScreen {
 
     NotLoggedInMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
-        this.field_s = new dea(0);
+        this.field_s = new DropAnimation(0);
         try {
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
@@ -82,7 +82,7 @@ final class NotLoggedInMenu extends MenuScreen {
 
     final void draw(byte param0, boolean param1) {
         int var3 = this.field_s.getPosition(param0 ^ 103);
-        gg.field_f.a(aaa.a(false) - gg.field_f.width() >> 1, var3 + gg.field_f.height() / 2);
+        gg.field_f.draw(aaa.a(false) - gg.field_f.width() >> 1, var3 + gg.field_f.height() / 2);
         this.h(-127, var3);
         super.draw(param0, param1);
     }

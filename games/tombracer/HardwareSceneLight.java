@@ -55,13 +55,13 @@ final class HardwareSceneLight extends SceneLight {
             var9 = (OpenGlToolkit) null;
             HardwareSceneLight.a((byte[]) null, 99, (byte) 8, -3, (OpenGlToolkit) null, -12, false, 23);
           }
-          if (!param4.field_Gb && (!cla.isPowerOfTwoOrZero(9181, param5) ||
-            !cla.isPowerOfTwoOrZero(9181, param7))) {
+          if (!param4.field_Gb && (!PbufferEntry.isPowerOfTwoOrZero(9181, param5) ||
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param7))) {
             if (param4.field_Cc) {
               stackIn_10_0 = new LegacyOpenGlSpriteTexture(param4, 34037, param3, param5, param7, param6, param0, param1);
               return stackIn_10_0;
             }
-            stackIn_8_0 = new LegacyOpenGlSpriteTexture(param4, param3, param5, param7, lla.a(false, param5), lla.a(false, param7), param0, param1);
+            stackIn_8_0 = new LegacyOpenGlSpriteTexture(param4, param3, param5, param7, lla.nextPowerOfTwo(false, param5), lla.nextPowerOfTwo(false, param7), param0, param1);
             return stackIn_8_0;
           }
           stackIn_12_0 = new LegacyOpenGlSpriteTexture(param4, 3553, param3, param5, param7, param6, param0, param1);

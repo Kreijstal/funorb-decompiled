@@ -18,7 +18,7 @@ final class nc {
         field_e = null;
     }
 
-    final QuickChatCategory a(byte param0, int param1) {
+    final QuickChatCategory getCategory(byte param0, int param1) {
         byte[] var4 = null;
         int var5 = 0;
         QuickChatCategory var3 = (QuickChatCategory) (this.field_c.get((byte) 114, (long)param1));

@@ -117,7 +117,7 @@ final class fp {
         param1++;
         var16_ref.drawLoadingProgress(incrementValue$2, (byte) 47, param0);
         ara.field_vb = SpriteData.loadSprite(param2, "", "hud_score");
-        tla.field_g = SpriteData.loadSprite(param2, "", "hud_room");
+        OpenGlDisplayLists.field_g = SpriteData.loadSprite(param2, "", "hud_room");
         CharacterChoice.field_c = SpriteData.loadSprite(param2, "", "hud_timer");
         LegacyOpenGlTexture3D.field_l = SpriteData.loadSprite(param2, "", "hud_timer_head");
         wj.field_a = SpriteData.loadSprite(param2, "", "hud_timer_jaw");
@@ -205,8 +205,8 @@ final class fp {
           incrementValue$8 = param1;
           param1++;
           var16_ref.drawLoadingProgress(incrementValue$8, (byte) 47, param0);
-          MaskBlendOperator.a(PitComponent.field_G, "basic", "orbcoin", -121);
-          MatchState.field_p = MaskBlendOperator.a(param2, "", "lobby_game_logo", -119);
+          MaskBlendOperator.loadSpriteByName(PitComponent.field_G, "basic", "orbcoin", -121);
+          MatchState.field_p = MaskBlendOperator.loadSpriteByName(param2, "", "lobby_game_logo", -119);
           RoundWinnerPhase.field_m = BoulderComponent.loadSpritesByName(param2, "", 5, "lobby_icons");
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "fp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -321,7 +321,7 @@ final class fp {
               qt.field_a.drawText(var6, var8Lifetime1, MatchPhase.field_j + var1_int, var5, -1);
               var1_int = var1_int + (nt.field_d + GasVentModel.field_p + mha.field_C);
             } else {
-              ConsoleValue.field_c.drawText(var6, var8Lifetime1, var1_int + vi.field_a, var5, -1);
+              ConsoleValue.field_c.drawText(var6, var8Lifetime1, var1_int + ActionPacketQueue.field_a, var5, -1);
               var1_int = var1_int + ComponentTargetList.field_b;
             }
           }

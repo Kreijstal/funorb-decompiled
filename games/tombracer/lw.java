@@ -12,7 +12,7 @@ final class lw {
     private ModelAnimator field_d;
     static int[] field_g;
 
-    final void a(int param0, int param1, int param2) {
+    final void setPosition(int param0, int param1, int param2) {
         this.field_e = param2 << 16;
         if (param0 >= -98) {
           return;
@@ -122,17 +122,17 @@ final class lw {
     final void a(byte param0, int param1, int param2) {
         if (param0 > 11) {
           ura.a(-10985);
-          hp.a(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
+          hp.drawModelPreview(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
           RemovedFromGameMenu.f((byte) -6);
           return;
         }
         this.field_b = false;
         ura.a(-10985);
-        hp.a(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
+        hp.drawModelPreview(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
         RemovedFromGameMenu.f((byte) -6);
     }
 
-    final int a(int param0) {
+    final int getX(int param0) {
         if (param0 < 68) {
           this.c(-38);
           return this.field_f >> 16;
@@ -140,7 +140,7 @@ final class lw {
         return this.field_f >> 16;
     }
 
-    final int a(byte param0) {
+    final int getY(byte param0) {
         if (param0 > -85) {
           return -6;
         }

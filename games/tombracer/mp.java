@@ -249,7 +249,7 @@ final class mp {
                 if (!PlayerInputQueue.field_c) {
                   stackIn_27_0 = wra.field_a;
                 } else {
-                  stackIn_27_0 = cla.field_o;
+                  stackIn_27_0 = PbufferEntry.field_o;
                 }
                 var19 = stackIn_27_0;
               }

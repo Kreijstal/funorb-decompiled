@@ -38,7 +38,7 @@ final class je extends haa {
         }
     }
 
-    final Object d(int param0) {
+    final Object getSelectedItem(int param0) {
         Object stackIn_7_0 = null;
         if (param0 <= 113) {
           return (Object) null;
@@ -113,7 +113,7 @@ final class je extends haa {
         return null != this.field_I ? this.field_K * (1 + this.field_I.length * 2) >> 1 : 200;
     }
 
-    private final void a(Object[] param0, int param1, int param2) {
+    private final void setItems(Object[] param0, int param1, int param2) {
         this.field_H = -1;
         if (param1 != 0) {
           return;
@@ -154,7 +154,7 @@ final class je extends haa {
           this.field_F = param1;
           this.field_J = param0;
           this.field_K = this.field_F.field_w + this.field_F.field_k;
-          this.a(param2, 0, param3);
+          this.setItems(param2, 0, param3);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "je.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

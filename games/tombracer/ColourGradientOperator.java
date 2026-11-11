@@ -109,7 +109,7 @@ final class ColourGradientOperator extends TextureOperator {
                 this.field_o[var5][3] = param1.readUnsignedByte(255) << 4;
               }
             } else {
-              this.d(var4_int, -6333);
+              this.setPresetGradient(var4_int, -6333);
             }
           }
           if (param0 == 107) {
@@ -145,7 +145,7 @@ final class ColourGradientOperator extends TextureOperator {
         this.field_m = new int[257];
     }
 
-    private final void d(int param0, int param1) {
+    private final void setPresetGradient(int param0, int param1) {
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -467,7 +467,7 @@ final class ColourGradientOperator extends TextureOperator {
 
     final void onDecoded(byte param0) {
         if (this.field_o == null) {
-          this.d(1, -6333);
+          this.setPresetGradient(1, -6333);
         }
         if (param0 == 116) {
           this.buildPalette(112);

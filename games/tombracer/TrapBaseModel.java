@@ -80,7 +80,7 @@ final class TrapBaseModel extends MotionTrackingModel {
         return 6;
     }
 
-    final void b(int param0, int param1) {
+    final void setVariant(int param0, int param1) {
         this.field_w = param1;
         if (param0 != 8022) {
           this.field_w = 97;

@@ -70,7 +70,7 @@ final class ema implements WidgetPainter {
         var9 = var8;
         var6 = 0;
         if (param0) {
-          var9.b();
+          var9.flipHorizontally();
         }
         if (param2 >= param1 &&
           0 <= param4 &&
@@ -84,14 +84,14 @@ final class ema implements WidgetPainter {
           }
           var7 = stackIn_17_0;
           if (param0) {
-            var9.b();
+            var9.flipHorizontally();
           }
           return var7 != 0;
         }
         if (!param0) {
           return false;
         }
-        var9.b();
+        var9.flipHorizontally();
         return false;
     }
 

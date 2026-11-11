@@ -61,7 +61,7 @@ final class PcmSampleStream extends PcmStream {
             this.field_q = 0;
           }
           this.field_x = 0;
-          this.n();
+          this.updateChannelVolumes();
           return;
         }
     }
@@ -355,11 +355,11 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized void a(int param0, int param1) {
+    final synchronized void setVolumeAndPan(int param0, int param1) {
         this.field_q = param0;
         this.field_o = param1;
         this.field_x = 0;
-        this.n();
+        this.updateChannelVolumes();
     }
 
     final synchronized int getVolume() {
@@ -525,7 +525,7 @@ final class PcmSampleStream extends PcmStream {
           this.field_n == var2 &&
           this.field_m == var3) {
           if (this.field_q != -2147483648) {
-            this.n();
+            this.updateChannelVolumes();
             return false;
           }
           this.field_q = 0;
@@ -780,7 +780,7 @@ final class PcmSampleStream extends PcmStream {
         int var6 = 0;
         int var6Lifetime1;
         if (param0 == 0) {
-          this.a(param1, param2);
+          this.setVolumeAndPan(param1, param2);
           return;
         }
         int var4 = PcmSampleStream.leftChannelVolume(param1, param2);
@@ -1144,7 +1144,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     final synchronized void setVolume(int param0) {
-        this.a(param0, this.getPan());
+        this.setVolumeAndPan(param0, this.getPan());
     }
 
     private final static int mixForwardMonoAlignedRamp(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
@@ -1266,7 +1266,7 @@ final class PcmSampleStream extends PcmStream {
         }
     }
 
-    private final void n() {
+    private final void updateChannelVolumes() {
         this.field_k = this.field_q;
         this.field_n = PcmSampleStream.leftChannelVolume(this.field_q, this.field_o);
         this.field_m = PcmSampleStream.rightChannelVolume(this.field_q, this.field_o);
@@ -1318,7 +1318,7 @@ final class PcmSampleStream extends PcmStream {
               param0 = this.field_x;
             }
             this.field_x = 0;
-            this.n();
+            this.updateChannelVolumes();
           }
         }
         var2 = (u) (this.field_i);
@@ -1650,7 +1650,7 @@ final class PcmSampleStream extends PcmStream {
         return this.field_x != 0;
     }
 
-    final synchronized void b(int param0, int param1) {
+    final synchronized void rampVolumeKeepPan(int param0, int param1) {
         this.rampVolume(param0, param1, this.getPan());
     }
 
@@ -1729,6 +1729,6 @@ final class PcmSampleStream extends PcmStream {
         this.field_q = param2;
         this.field_o = param3;
         this.field_u = 0;
-        this.n();
+        this.updateChannelVolumes();
     }
 }

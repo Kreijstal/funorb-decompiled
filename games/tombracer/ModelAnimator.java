@@ -172,7 +172,7 @@ final class ModelAnimator {
         ka var6;
         ka var7;
         ka var8;
-        var5 = ScoreSubmission.a(this.field_d, param0, param2, param1 + 3, this.field_b);
+        var5 = ScoreSubmission.getModelForCategory(this.field_d, param0, param2, param1 + 3, this.field_b);
         if (var5 == null) {
           return var5;
         }

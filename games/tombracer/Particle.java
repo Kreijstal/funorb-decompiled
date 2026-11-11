@@ -166,7 +166,7 @@ final class Particle extends PooledObject implements Renderable {
 
     public final void render(int param0, Camera param1) {
         try {
-          dea.roomObjectRenderer.drawParticle(param1, (byte) -27, this);
+          DropAnimation.roomObjectRenderer.drawParticle(param1, (byte) -27, this);
           if (param0 < 103) {
             this.accelerationZ = -7;
           }

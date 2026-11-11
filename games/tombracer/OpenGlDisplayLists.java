@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tla {
+final class OpenGlDisplayLists {
     static boolean field_b;
     static SpriteData field_g;
     static String field_d;
@@ -13,26 +13,26 @@ final class tla {
     static String field_h;
     static String field_a;
 
-    final void a(byte param0, int param1) {
+    final void beginList(byte param0, int param1) {
         jaggl.OpenGL.glNewList(this.field_i + param1, 4864);
         if (param0 != 6) {
-          this.a(-22, '~');
+          this.callList(-22, '~');
         }
     }
 
-    final void a(int param0, char param1) {
+    final void callList(int param0, char param1) {
         if (param0 != 4864) {
           return;
         }
         jaggl.OpenGL.glCallList(this.field_i + param1);
     }
 
-    final void b(byte param0) {
+    final void endList(byte param0) {
         jaggl.OpenGL.glEndList();
         int var2 = -28 / ((-44 - param0) / 48);
     }
 
-    tla(OpenGlToolkit param0, int param1) {
+    OpenGlDisplayLists(OpenGlToolkit param0, int param1) {
         try {
           this.field_i = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {

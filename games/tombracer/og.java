@@ -16,7 +16,7 @@ final class og extends OpenGlBuffer implements qm {
         return super.a(this.field_h.field_Tc, param1, 1);
     }
 
-    final static void b(int param0) {
+    final static void exitFullscreen(int param0) {
         if (null == dq.field_f) {
           return;
         }

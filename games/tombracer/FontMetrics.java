@@ -75,7 +75,7 @@ final class FontMetrics {
           if (null != param3.field_q) {
             var12 = 0;
             while (!(param3.field_q.length <= var12)) {
-              var13_ref_br = taa.field_g.a((byte) 98, param3.field_q[var12]);
+              var13_ref_br = taa.field_g.getCategory((byte) 98, param3.field_q[var12]);
               var8[var12] = var13_ref_br.field_n;
               var9[var12] = param3.field_k[var12];
               var11[var12] = FontMetrics.a(param0, param1, param2, var13_ref_br, param4);
@@ -100,7 +100,7 @@ final class FontMetrics {
               }
               if (var15 != -1 ||
                 var17 != 0) {
-                var16 = ByteStorage.field_a.a(false, var15);
+                var16 = ByteStorage.field_a.getPhrase(false, var15);
                 var8[var12Lifetime1 + var14] = var16.getPreview((byte) -5);
                 var9[var12Lifetime1 + var14] = param3.field_o[var14];
                 if (0 >= var9[var12Lifetime1 + var14]) {
@@ -354,7 +354,7 @@ final class FontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (-1 == var4_int)) {
-                  var6 = var6 + (this.field_e[io.a(-377, (char) var9) & 255] & 255);
+                  var6 = var6 + (this.field_e[io.charToCp1252(-377, (char) var9) & 255] & 255);
                   if (this.field_c != null &&
                     var5 != -1) {
                     var6 = var6 + this.field_c[var5][var9];
@@ -469,7 +469,7 @@ final class FontMetrics {
           var15 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var15 >= var14))) {
-            var16 = 255 & io.a(-377, param0.charAt(var15));
+            var16 = 255 & io.charToCp1252(-377, param0.charAt(var15));
             var17 = 0;
             stackIn_164_0 = 60;
             stackIn_164_1 = var16;
@@ -846,7 +846,7 @@ final class FontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var5_int == -1)) {
-                  var7 = var7 + (this.field_e[io.a(-377, (char) var11) & 255] & 255);
+                  var7 = var7 + (this.field_e[io.charToCp1252(-377, (char) var11) & 255] & 255);
                   if (null != this.field_c &&
                     -1 != var6) {
                     var7 = var7 + this.field_c[var6][var11];

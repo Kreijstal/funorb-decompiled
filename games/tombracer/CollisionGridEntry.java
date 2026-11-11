@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class q extends ql {
+final class CollisionGridEntry extends ql {
     static boolean field_r;
     private int field_p;
     private int field_q;
@@ -25,7 +25,7 @@ final class q extends ql {
         return ConstrainToRectangleLocomotor.hashCell(this.field_q, this.field_p, (byte) -93);
     }
 
-    final Collidable a(byte param0) {
+    final Collidable getCollidable(byte param0) {
         if (param0 >= -67) {
           this.field_q = 19;
           return this.field_n;
@@ -33,14 +33,14 @@ final class q extends ql {
         return this.field_n;
     }
 
-    final void a(int param0, Collidable param1, byte param2, int param3) {
+    final void set(int param0, Collidable param1, byte param2, int param3) {
         try {
           this.field_p = param3;
           this.field_n = param1;
           this.field_q = param0;
           if (param2 != 116) {
             Collidable var6 = (Collidable) null;
-            this.a(92, (Collidable) null, (byte) -51, 63);
+            this.set(92, (Collidable) null, (byte) -51, 63);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "q.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -172,7 +172,7 @@ final class q extends ql {
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2) {
+    final boolean isAtCell(int param0, int param1, boolean param2) {
         if (!param2) {
           field_r = false;
           if (this.field_q != param0) {
@@ -192,7 +192,7 @@ final class q extends ql {
         return false;
     }
 
-    q(Collidable param0, int param1, int param2) {
+    CollisionGridEntry(Collidable param0, int param1, int param2) {
         try {
           this.field_q = param1;
           this.field_n = param0;

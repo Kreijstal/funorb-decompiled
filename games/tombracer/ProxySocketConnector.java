@@ -43,7 +43,7 @@ final class ProxySocketConnector extends SocketConnector {
             return stackIn_7_0;
           }
           if (param2 == 7) {
-            stackIn_11_0 = tla.field_j;
+            stackIn_11_0 = OpenGlDisplayLists.field_j;
             return stackIn_11_0;
           }
           if (param2 == 8) {

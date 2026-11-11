@@ -16,7 +16,7 @@ class ql extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 28 % ((param2 + 76) / 32);
-          stackIn_1_0 = pea.playSampleStream(PcmSampleStream.createAtRateAndPan(param1, param0, param3, param4), 1);
+          stackIn_1_0 = LruNodeCache.playSampleStream(PcmSampleStream.createAtRateAndPan(param1, param0, param3, param4), 1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

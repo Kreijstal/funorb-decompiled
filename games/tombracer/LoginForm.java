@@ -267,7 +267,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final void a(byte param0) {
+    final void clearFields(byte param0) {
         if (param0 != -92) {
           this.field_w = false;
         }
@@ -351,7 +351,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final String a(int param0) {
+    final String getUsername(int param0) {
         if (this.field_A.field_o != null) {
           if (param0 < 29) {
             this.renderLayer(-72, 15, 19, 125);

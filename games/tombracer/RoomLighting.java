@@ -216,7 +216,7 @@ final class RoomLighting implements RenderListener {
                 } else {
                   var8 = var11.getInfluence(param1.getRenderZ((byte) -124), param1.getRenderX((byte) -101), param1.getRenderY((byte) 95), -43);
                 }
-                var11.a(var8, 92);
+                var11.setCurrentInfluence(var8, 92);
                 var11 = (LightSource) (this.lightSources.next(119));
               }
               while (var5 < var6) {
@@ -224,7 +224,7 @@ final class RoomLighting implements RenderListener {
                 var9Lifetime1 = 0;
                 var11Lifetime1 = (LightSource) (this.lightSources.first(-80));
                 while (var11Lifetime1 != null) {
-                  var8Lifetime1 = var11Lifetime1.b(121);
+                  var8Lifetime1 = var11Lifetime1.getCurrentInfluence(121);
                   if (0 < var8Lifetime1 &&
                     var8Lifetime1 > var9Lifetime1) {
                     var10Lifetime1 = var11Lifetime1;
@@ -235,7 +235,7 @@ final class RoomLighting implements RenderListener {
                 if (var10Lifetime1 == null) {
                   break;
                 }
-                ((LightSource) (var10Lifetime1)).a(-1, 81);
+                ((LightSource) (var10Lifetime1)).setCurrentInfluence(-1, 81);
                 this.activeLights[var5] = ((LightSource) (var10Lifetime1)).getAnimatedLight(47).light;
                 var5++;
               }

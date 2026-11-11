@@ -33,7 +33,7 @@ final class vs extends ofa {
         field_P = null;
     }
 
-    final void a(float param0, String param1, boolean param2, byte param3) {
+    final void setProgress(float param0, String param1, boolean param2, byte param3) {
         try {
           if ((param2 ? 1 : 0) != (!this.field_N ? 1 : 0)) {
           } else {

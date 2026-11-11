@@ -92,7 +92,7 @@ abstract class PrefabComponent extends RoomComponent {
           } else {
             param6.addChild(-39, var13);
           }
-          if (this.a(6) &&
+          if (this.storesInitialOnBit(6) &&
             !this.field_x) {
             var13.toggle(-82);
           }

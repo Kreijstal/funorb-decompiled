@@ -74,7 +74,7 @@ final class SnakePitTile implements Renderable {
           return;
         }
         try {
-          gqa.a(GameScreen.positiveModulo(this.field_e, 2048, -108), -83584144, this.getRenderY((byte) 97), this.getRenderX((byte) -92), this.snakePit.a(false, this), this.getRenderZ((byte) -110));
+          gqa.a(GameScreen.positiveModulo(this.field_e, 2048, -108), -83584144, this.getRenderY((byte) 97), this.getRenderX((byte) -92), this.snakePit.getTileModel(false, this), this.getRenderZ((byte) -110));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "lca.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -12,7 +12,7 @@ final class MatchProtocol {
     private IntrusiveDeque unacknowledged;
     private boolean sendWindowFull;
     private int[] field_b;
-    private vi field_c;
+    private ActionPacketQueue field_c;
 
     private final void handleStartRoundPacket(byte param0, BitPacketBuffer param1, MatchScreen param2) {
         S2CStartRoundPacket var4 = null;
@@ -55,13 +55,13 @@ final class MatchProtocol {
           this.a((byte) -48);
         }
         this.unacknowledged.clear(8);
-        this.field_c.a(0);
+        this.field_c.clear(0);
         this.sendWindowFull = false;
     }
 
     final void queueLocalInput(boolean param0, int param1) {
         if (!param0) {
-          this.field_c = (vi) null;
+          this.field_c = (ActionPacketQueue) null;
         }
         this.localInputs.add((byte) -113, param1);
     }
@@ -86,7 +86,7 @@ final class MatchProtocol {
         if (param1 == var2) {
           var2 = 1;
         }
-        ((psa) (RewardChoicePhase.field_n.field_n)).a(param0, vba.field_x[param0], (byte) -4, var2);
+        ((psa) (RewardChoicePhase.field_n.field_n)).rampChannelVolume(param0, vba.field_x[param0], (byte) -4, var2);
     }
 
     final boolean isSendWindowFull(int param0) {
@@ -99,7 +99,7 @@ final class MatchProtocol {
     private final void handleActionPacket(BitPacketBuffer param0, int param1) {
         S2CActionPacket var3 = new S2CActionPacket(this.field_e);
         this.decodePacket(var3, -67, param0);
-        int var4 = this.field_c.a((byte) 36, var3) ? 1 : 0;
+        int var4 = this.field_c.add((byte) 36, var3) ? 1 : 0;
         int var5 = 1;
         if (this.field_d < param1) {
           return;
@@ -339,7 +339,7 @@ final class MatchProtocol {
         int var2Lifetime1;
         RoomEffectTraps.a(0, -121, var2 + 10, "unack: " + this.unacknowledged.size((byte) -16), 16, kn.field_p, 16777215);
         var2Lifetime1 = 48;
-        RoomEffectTraps.a(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.a((byte) 107), param0, kn.field_p, 16777215);
+        RoomEffectTraps.a(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.size((byte) 107), param0, kn.field_p, 16777215);
     }
 
     final boolean handleServerPacket(byte param0, MatchScreen param1, BitPacketBuffer param2, int param3) {
@@ -474,13 +474,13 @@ final class MatchProtocol {
         if (param0 != -16) {
           return (S2CActionPacket) null;
         }
-        return this.field_c.a(true);
+        return this.field_c.poll(true);
     }
 
     final void a(int param0, byte param1, int param2) {
         this.field_b[param2] = param0;
         int var4 = -75 % ((param1 + 73) / 32);
-        this.field_b[param2] = this.field_b[param2] + 8 * this.field_c.a((byte) 25, param2);
+        this.field_b[param2] = this.field_b[param2] + 8 * this.field_c.countWithOrdersFor((byte) 25, param2);
     }
 
     final static void updatePageLinks(byte param0, java.applet.Applet param1) {
@@ -580,7 +580,7 @@ final class MatchProtocol {
         return ql.playSample(param0, var6, (byte) 108, param5, param2);
     }
 
-    final void a(int param0) {
+    final void sendResultsFinished(int param0) {
         if (null == ql.field_k) {
           return;
         }
@@ -661,7 +661,7 @@ final class MatchProtocol {
         this.unacknowledged = new IntrusiveDeque();
         this.field_d = param0;
         this.field_e = param1;
-        this.field_c = new vi();
+        this.field_c = new ActionPacketQueue();
         this.field_b = new int[param1];
     }
 

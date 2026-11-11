@@ -70,7 +70,7 @@ final class ComponentTargetList {
             this.targets[var3_int] = null;
             var2++;
           } else {
-            if (!this.targets[var3_int].k((byte) -115)) {
+            if (!this.targets[var3_int].isInActiveVariant((byte) -115)) {
               this.targets[var3_int] = null;
               var2++;
             }

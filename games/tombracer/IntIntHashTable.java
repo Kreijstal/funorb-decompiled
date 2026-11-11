@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pla {
+final class IntIntHashTable {
     private int[] field_a;
     static String field_b;
 
@@ -12,7 +12,7 @@ final class pla {
         }
     }
 
-    pla(int[] param0) {
+    IntIntHashTable(int[] param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -64,7 +64,7 @@ final class pla {
           var2 = new jua(false);
           var2.field_c = param1;
           if (param0 <= 80) {
-            pla.releaseStatics(3);
+            IntIntHashTable.releaseStatics(3);
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -93,14 +93,14 @@ final class pla {
         return param1 >= 2048 ? -ida.field_b[-2048 + param1] : ida.field_b[2048 - param1];
     }
 
-    final static goa a(int param0) {
+    final static goa createCredentials(int param0) {
         if (param0 != -1) {
           field_b = (String) null;
         }
         return new goa(ArchiveRequest.a(false), NodeHashTableIterator.b((byte) -107));
     }
 
-    final int a(int param0, int param1) {
+    final int lookup(int param0, int param1) {
         int var3;
         int var4;
         int var5;

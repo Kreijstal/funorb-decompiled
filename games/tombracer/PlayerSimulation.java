@@ -150,7 +150,7 @@ final class PlayerSimulation {
         return this.finished;
     }
 
-    final boolean i(int param0) {
+    final boolean wasRoomResetThisTick(int param0) {
         if (param0 != -14886) {
           this.timedOut = true;
           return this.field_h;

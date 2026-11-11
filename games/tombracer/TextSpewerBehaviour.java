@@ -24,14 +24,14 @@ final class TextSpewerBehaviour extends Behaviour {
     }
 
     final static void a(byte param0, MenuEntry[] param1) {
-        dea var7 = null;
+        DropAnimation var7 = null;
         MenuEntry[] var3 = null;
         int var4 = 0;
         MenuEntry var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         try {
           var7 = param1[0].field_c;
-          dea var2 = var7;
+          DropAnimation var2 = var7;
           if (param0 != -91) {
             TextSpewerBehaviour.b(-52);
           }

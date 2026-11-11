@@ -150,7 +150,7 @@ final class RasterizerOperator extends TextureOperator {
             }
             if (null != wka.field_c) {
               try {
-                wka.field_c.b((byte) -52);
+                wka.field_c.close((byte) -52);
               } catch (IOException iOException) {
               }
             }
@@ -158,7 +158,7 @@ final class RasterizerOperator extends TextureOperator {
               for (var1_int = 0; var1_int < DivisionMazeGenerator.field_c.length; var1_int++) {
                 if (DivisionMazeGenerator.field_c[var1_int] != null) {
                   try {
-                    DivisionMazeGenerator.field_c[var1_int].b((byte) -37);
+                    DivisionMazeGenerator.field_c[var1_int].close((byte) -37);
                   } catch (IOException var2_ref) {
                   }
                 }

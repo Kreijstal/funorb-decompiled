@@ -20,14 +20,14 @@ final class bi {
     }
 
     final static void a(GraphicsToolkit param0, int param1) {
-        ssa var2 = null;
+        ClipStack var2 = null;
         UiComponent var3 = null;
         try {
           var2 = IntrusiveDequeCursor.a((byte) 65, param0);
           var3 = SimpleMoveLocomotor.field_s;
-          var2.a(var3.field_q + var3.field_G, var3.field_A, (byte) -12, var3.field_t + var3.field_A, var3.field_q);
+          var2.pushIntersectClip(var3.field_q + var3.field_G, var3.field_A, (byte) -12, var3.field_t + var3.field_A, var3.field_q);
           param0.SA(param1, var3.field_A, SoftwareRasterizer.width, var3.field_t, SoftwareRasterizer.pixels, SoftwareRasterizer.width * var3.field_A, SoftwareRasterizer.width);
-          var2.a(param1 ^ -64);
+          var2.popClip(param1 ^ -64);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

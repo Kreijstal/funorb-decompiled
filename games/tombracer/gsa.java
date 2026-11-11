@@ -116,7 +116,7 @@ final class gsa {
             this.field_t.isLinked((byte) -98)) {
             if (((var6 == 0)) &&
               ((null != this.field_t))) {
-              this.field_t.a(AccountRegistrationPanel.field_w, (byte) -113);
+              this.field_t.releaseFromPlayer(AccountRegistrationPanel.field_w, (byte) -113);
               this.field_t = null;
             }
             decompiledFrameRemainder0 = false;
@@ -125,14 +125,14 @@ final class gsa {
             this.field_t = AccountRegistrationPanel.field_w.play(new SoundEvent(param2 + 94, 0, 0, 0), -58);
             if (var6 == 0 &&
               null != this.field_t) {
-              this.field_t.a(AccountRegistrationPanel.field_w, (byte) -113);
+              this.field_t.releaseFromPlayer(AccountRegistrationPanel.field_w, (byte) -113);
               this.field_t = null;
             }
           }
         } else {
           if (var6 == 0 &&
             null != this.field_t) {
-            this.field_t.a(AccountRegistrationPanel.field_w, (byte) -113);
+            this.field_t.releaseFromPlayer(AccountRegistrationPanel.field_w, (byte) -113);
             this.field_t = null;
           }
         }

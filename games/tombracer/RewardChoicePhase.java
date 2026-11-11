@@ -139,7 +139,7 @@ final class RewardChoicePhase extends MatchPhase {
         int var8Lifetime1;
         int var9Lifetime1;
         var16 = TombRacer.field_G ? 1 : 0;
-        Room.field_j.a(0, 0);
+        Room.field_j.draw(0, 0);
         var3 = 0;
         var4 = this.rewardChoice.getCurrentPlayerId(-1);
         if (!this.screen.isSpectating((byte) 63) &&
@@ -154,7 +154,7 @@ final class RewardChoicePhase extends MatchPhase {
         if (var4 >= 0) {
           var8 = (aaa.a(false) >> 1) - (gg.field_f.width() >> 1);
           var9 = (SwitchLinkList.b(0) >> 1) - (gg.field_f.height() >> 1);
-          gg.field_f.a(var8, var9);
+          gg.field_f.draw(var8, var9);
           if (var3 == 0) {
             SocketConnector.a(LegacyOpenGlFlowingWaterEffect.formatText(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.width());
           } else {
@@ -163,7 +163,7 @@ final class RewardChoicePhase extends MatchPhase {
             if (var10 < 0) {
               var10 = 0;
             }
-            SocketConnector.a(LegacyOpenGlFlowingWaterEffect.formatText(108, tla.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.width());
+            SocketConnector.a(LegacyOpenGlFlowingWaterEffect.formatText(108, OpenGlDisplayLists.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.width());
           }
           for (var10 = 0; this.field_q > var10; var10++) {
             for (var11_int = 0; var11_int < this.field_s; var11_int++) {

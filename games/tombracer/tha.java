@@ -39,10 +39,10 @@ final class tha extends WidgetContainer implements ButtonListener {
         int var26 = 0;
         var26 = TombRacer.field_G ? 1 : 0;
         try {
-          if (cla.field_m != null) {
+          if (PbufferEntry.field_m != null) {
             return;
           }
-          cla.field_m = new int[65536];
+          PbufferEntry.field_m = new int[65536];
           var1_double = 0.7 + (Math.random() * 0.03 - 0.015);
           var3 = 0;
           if (param0 != 906) {
@@ -117,7 +117,7 @@ final class tha extends WidgetContainer implements ButtonListener {
               var17 = (int)(var12 * 256.0);
               var18 = (int)(var14 * 256.0);
               var19 = (var17 << 8) + (var16 << 16) + var18;
-              cla.field_m[var3] = var19;
+              PbufferEntry.field_m[var3] = var19;
             } else {
               var10 = Math.pow(var10, var1_double);
               var12 = Math.pow(var12, var1_double);
@@ -126,7 +126,7 @@ final class tha extends WidgetContainer implements ButtonListener {
               var17 = (int)(var12 * 256.0);
               var18 = (int)(var14 * 256.0);
               var19 = (var17 << 8) + (var16 << 16) + var18;
-              cla.field_m[var3] = var19;
+              PbufferEntry.field_m[var3] = var19;
             }
             var3++;
           }

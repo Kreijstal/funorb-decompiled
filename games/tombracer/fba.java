@@ -15,7 +15,7 @@ final class fba {
         var9.field_s = param3 ? true : false;
         var9.field_x = (int)(4096.0f * param1);
         var9.onDecoded((byte) 116);
-        ConsoleWindow.a(0, param5, param6);
+        ConsoleWindow.setTextureSize(0, param5, param6);
         var9.fillRow(var10, -1, 0);
         return var10;
     }

@@ -138,7 +138,7 @@ final class BlockModel extends TrapModel {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void setVariant(int param0, int param1) {
         if (param0 <= 104) {
           field_o = 62;
         }

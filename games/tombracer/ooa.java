@@ -11,7 +11,7 @@ final class ooa extends wka {
         String var1 = "";
         if (param0 < -46) {
           if (null != vn.field_b) {
-            var1 = vn.field_b.a(39);
+            var1 = vn.field_b.getUsername(39);
           }
           if (var1.length() == 0) {
             var1 = PathMoverComponent.getLocalPlayerNameOrEmpty((byte) 69);
@@ -23,7 +23,7 @@ final class ooa extends wka {
         }
         ooa.getAccountNameOrFallback((byte) -83);
         if (null != vn.field_b) {
-          var1 = vn.field_b.a(39);
+          var1 = vn.field_b.getUsername(39);
         }
         if (var1.length() == 0) {
           var1 = PathMoverComponent.getLocalPlayerNameOrEmpty((byte) 69);

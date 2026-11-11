@@ -33,7 +33,7 @@ abstract class rka {
 
     abstract void draw(int param0, int param1);
 
-    final static String a(int param0, boolean param1) {
+    final static String formatPageNumber(int param0, boolean param1) {
         if (param1) {
           return 1 + param0 + "/" + 11;
         }

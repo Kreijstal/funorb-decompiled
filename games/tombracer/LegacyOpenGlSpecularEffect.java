@@ -4,7 +4,7 @@
 final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
     private LegacyOpenGlCubeTexture[] field_d;
     private boolean field_c;
-    private tla field_f;
+    private OpenGlDisplayLists field_f;
     private boolean field_e;
 
     final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
@@ -12,7 +12,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           this.toolkit.a(true, param2);
           this.toolkit.d(1, param0);
           if (param1 != 32221) {
-            this.field_f = (tla) null;
+            this.field_f = (OpenGlDisplayLists) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "cpa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -21,8 +21,8 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
 
     private final void a(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        this.field_f = new tla(this.toolkit, 2);
-        this.field_f.a((byte) 6, 0);
+        this.field_f = new OpenGlDisplayLists(this.toolkit, 2);
+        this.field_f.beginList((byte) 6, 0);
         this.toolkit.e(1, true);
         jaggl.OpenGL.glTexGeni(8192, 9472, 34065);
         jaggl.OpenGL.glTexGeni(8193, 9472, 34065);
@@ -48,8 +48,8 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           this.toolkit.b(34167, 3, 0, 770);
         }
         this.toolkit.e(0, true);
-        this.field_f.b((byte) -92);
-        this.field_f.a((byte) 6, 1);
+        this.field_f.endList((byte) -92);
+        this.field_f.beginList((byte) 6, 1);
         this.toolkit.e(1, true);
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);
@@ -71,7 +71,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           this.toolkit.b(5890, param0 ^ -74, 0, 770);
         }
         this.toolkit.e(0, true);
-        this.field_f.b((byte) -104);
+        this.field_f.endList((byte) -104);
         if (param0 != -75) {
           this.isSupported(-115);
         }
@@ -86,7 +86,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
             this.toolkit.a(true, this.toolkit.field_lc);
             this.toolkit.e(0, true);
           }
-          this.field_f.a(4864, '\0');
+          this.field_f.callList(4864, '\0');
           this.field_e = true;
         } else {
           this.toolkit.b(34168, 3, 0, 770);
@@ -176,7 +176,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           this.toolkit.e(1, true);
           this.toolkit.a(true, (LegacyOpenGlTexture) null);
           this.toolkit.e(0, !param0 ? true : false);
-          this.field_f.a(4864, '\001');
+          this.field_f.callList(4864, '\001');
           this.field_e = false;
         }
         this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
@@ -195,7 +195,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
     final void refreshState(boolean param0, int param1) {
         this.toolkit.setTextureCombineOperations(8448, 8960, 7681);
         if (param1 <= 77) {
-          this.field_f = (tla) null;
+          this.field_f = (OpenGlDisplayLists) null;
         }
     }
 

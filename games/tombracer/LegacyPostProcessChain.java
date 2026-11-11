@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cw {
+final class LegacyPostProcessChain {
     private int field_o;
     private OpenGlToolkit field_t;
     private int field_q;
@@ -39,7 +39,7 @@ final class cw {
         }
         if (this.field_c) {
           if (null != this.field_b) {
-            this.field_b.g(param0 ^ 653);
+            this.field_b.release(param0 ^ 653);
             this.field_b = null;
           }
           if (null != this.field_m) {
@@ -62,7 +62,7 @@ final class cw {
         }
         if (this.field_f) {
           if (this.field_l != null) {
-            this.field_l.g(80);
+            this.field_l.release(80);
             this.field_l = null;
           }
           if (null != this.field_r[0]) {
@@ -412,7 +412,7 @@ final class cw {
         }
     }
 
-    cw(OpenGlToolkit param0) {
+    LegacyPostProcessChain(OpenGlToolkit param0) {
         OpenGlFramebuffer dupTemp$2 = null;
         OpenGlFramebuffer dupTemp$3 = null;
         RuntimeException runtimeException = null;

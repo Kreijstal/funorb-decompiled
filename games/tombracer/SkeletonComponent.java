@@ -85,7 +85,7 @@ final class SkeletonComponent extends dna {
           var12.setPushable(true, 124);
           var12.setCrushThreshold(1, -1);
           var5 = new ApproachPlayerLocomotor(param2, param0);
-          var5.a(false, 98304);
+          var5.setSpeed(false, 98304);
           var12.addLocomotor(var5, 0);
           var6 = new FacePlayerLocomotor(param2, param0);
           var6.a(256, (byte) 124);
@@ -105,7 +105,7 @@ final class SkeletonComponent extends dna {
           var12.addBehaviour((byte) 83, (Behaviour) (var8));
           var10 = rm.field_a;
           var11 = (MonsterModel) (var10.createModel(18, 98));
-          var11.b(param1 + 87, 0);
+          var11.setVariant(param1 + 87, 0);
           var12.addModel((TrapPart) null, (byte) 124, var11);
           var12.setDestroyStatType(0, 122);
           stackIn_1_0 = var12;

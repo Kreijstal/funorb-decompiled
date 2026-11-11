@@ -19,7 +19,7 @@ final class FloatingMessage extends IntrusiveNode {
     private int field_t;
     private int field_i;
 
-    final void a(int param0, int param1, int param2) {
+    final void setPosition(int param0, int param1, int param2) {
         this.field_p = param2;
         if (param1 != 4) {
           this.field_s = 34;
@@ -31,7 +31,7 @@ final class FloatingMessage extends IntrusiveNode {
 
     final String getText(int param0) {
         if (param0 != 29161) {
-          this.a(true);
+          this.getHeight(true);
           return this.field_n;
         }
         return this.field_n;
@@ -45,15 +45,15 @@ final class FloatingMessage extends IntrusiveNode {
         dh.a(kn.field_p, var2, 0, 16, 4 + this.field_t, this.field_k - 8, var4, this.field_s + 4, 1, 29870, 1, -8 + this.field_g, this.field_q);
     }
 
-    final int a(boolean param0) {
+    final int getHeight(boolean param0) {
         if (!param0) {
-          this.a(true);
+          this.getHeight(true);
           return this.field_k;
         }
         return this.field_k;
     }
 
-    final int a(byte param0) {
+    final int getRemainingTicks(byte param0) {
         if (param0 != -100) {
           this.field_o = 82;
           return this.field_j;
@@ -113,7 +113,7 @@ final class FloatingMessage extends IntrusiveNode {
                 if (param0 < -36) {
                   return;
                 }
-                this.c((byte) 42);
+                this.getWidth((byte) 42);
                 return;
               }
               this.field_q = this.field_h + ": " + this.field_n;
@@ -139,7 +139,7 @@ final class FloatingMessage extends IntrusiveNode {
               this.field_t = this.field_p + (256 * this.field_o >> 16);
               if (null != this.field_q) {
                 if (param0 >= -36) {
-                  this.c((byte) 42);
+                  this.getWidth((byte) 42);
                 }
                 return;
               }
@@ -157,10 +157,10 @@ final class FloatingMessage extends IntrusiveNode {
         if (param0 < -36) {
           return;
         }
-        this.c((byte) 42);
+        this.getWidth((byte) 42);
     }
 
-    final int c(byte param0) {
+    final int getWidth(byte param0) {
         if (param0 != -96) {
           this.c(-105);
           return this.field_g;
@@ -178,7 +178,7 @@ final class FloatingMessage extends IntrusiveNode {
         }
     }
 
-    final void d(byte param0) {
+    final void decrementRemainingTicks(byte param0) {
         this.field_j = this.field_j - 1;
         if (param0 <= 2) {
           this.field_s = -20;
@@ -189,11 +189,11 @@ final class FloatingMessage extends IntrusiveNode {
         if (param0 == -39) {
           return this.field_l <= this.field_m ? true : false;
         }
-        this.d((byte) 38);
+        this.decrementRemainingTicks((byte) 38);
         return this.field_l <= this.field_m ? true : false;
     }
 
-    final void a(int param0, int param1) {
+    final void setWidth(int param0, int param1) {
         if (param0 != 1) {
           this.tick(-94);
           this.field_g = param1;
@@ -202,7 +202,7 @@ final class FloatingMessage extends IntrusiveNode {
         this.field_g = param1;
     }
 
-    final void a(boolean param0, int param1) {
+    final void setRemainingTicks(boolean param0, int param1) {
         this.field_j = param1;
         if (param0) {
           this.field_i = -2;

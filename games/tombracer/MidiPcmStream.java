@@ -35,7 +35,7 @@ class MidiPcmStream extends PcmStream {
     private boolean field_s;
     private MusicTrack field_x;
 
-    final synchronized void d(int param0, int param1, int param2) {
+    final synchronized void setChannelProgram(int param0, int param1, int param2) {
         this.setChannelProgramAndBank(param1, 125, param0);
         if (param2 != 32460) {
           this.field_E = -39L;
@@ -431,7 +431,7 @@ class MidiPcmStream extends PcmStream {
               this.fadeOutChannelNotes(true, var4Lifetime1Lifetime3);
               break;
             case 121:
-              this.a((byte) 101, var4Lifetime1Lifetime3);
+              this.resetChannelControllers((byte) 101, var4Lifetime1Lifetime3);
               break;
             case 123:
               this.releaseChannelNotes(var4Lifetime1Lifetime3, 92);
@@ -477,7 +477,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void resetChannelControllers(byte param0, int param1) {
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (param1 < 0) {
@@ -486,7 +486,7 @@ class MidiPcmStream extends PcmStream {
             if (16 <= param1) {
               return;
             }
-            this.a((byte) 91, param1);
+            this.resetChannelControllers((byte) 91, param1);
             param1++;
           } while (var4 == 0);
           return;
@@ -619,7 +619,7 @@ class MidiPcmStream extends PcmStream {
           var4 != 0) {
           this.releaseChannelNotes(-1, 117);
         }
-        this.a((byte) 110, -1);
+        this.resetChannelControllers((byte) 110, -1);
         var3 = 0;
         do {
           if (var3 >= 16) {
@@ -640,7 +640,7 @@ class MidiPcmStream extends PcmStream {
         return;
     }
 
-    final synchronized void b(int param0) {
+    final synchronized void stop(int param0) {
         this.stopTrack(-191040664, true);
         if (param0 != 2) {
           this.clearPatchSampleIds(110);

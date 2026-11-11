@@ -61,11 +61,11 @@ final class WallCrusherComponent extends PrefabComponent {
           var5 = new SimpleBlockBehaviour(param2, param0);
           var14.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new SimpleMoveLocomotor(param2, param0);
-          var6.c(this.field_J, 26621);
+          var6.setSpeed(this.field_J, 26621);
           var14.addLocomotor(var6, 0);
           var7 = new SimpleMoveLocomotor(param2, param0);
-          var7.c(this.field_I, 26621);
-          var7.d(4, 4096);
+          var7.setSpeed(this.field_I, 26621);
+          var7.setDirection(4, 4096);
           var7.toggle(112);
           var14.addLocomotor(var7, param1 ^ param1);
           this.field_G = new TimeSwitchBehaviour(param2, param0);
@@ -123,10 +123,10 @@ final class WallCrusherComponent extends PrefabComponent {
         this.field_I = 262144;
         this.field_O = 65536;
         try {
-          this.field_O = NodeHashTable.a(param2.readBits((byte) 44, 4), 116, 2);
-          this.field_J = NodeHashTable.a(param2.readBits((byte) 44, 8), 100, 4);
-          this.field_M = NodeHashTable.a(param2.readBits((byte) 44, 4), 88, 2);
-          this.field_I = NodeHashTable.a(param2.readBits((byte) 44, 8), 107, 4);
+          this.field_O = NodeHashTable.bitsToFixed16(param2.readBits((byte) 44, 4), 116, 2);
+          this.field_J = NodeHashTable.bitsToFixed16(param2.readBits((byte) 44, 8), 100, 4);
+          this.field_M = NodeHashTable.bitsToFixed16(param2.readBits((byte) 44, 4), 88, 2);
+          this.field_I = NodeHashTable.bitsToFixed16(param2.readBits((byte) 44, 8), 107, 4);
           stackIn_4_1 = (1 == param2.readBits((byte) 44, 1));
           this.field_N = stackIn_4_1;
           if (this.field_N) {
@@ -179,10 +179,10 @@ final class WallCrusherComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -128, SpawnerBehaviour.a((byte) 8, 2, this.field_O), 4);
-          param1.writeBits((byte) -127, SpawnerBehaviour.a((byte) 8, 4, this.field_J), 8);
-          param1.writeBits((byte) -4, SpawnerBehaviour.a((byte) 8, 2, this.field_M), 4);
-          param1.writeBits((byte) -17, SpawnerBehaviour.a((byte) 8, 4, this.field_I), 8);
+          param1.writeBits((byte) -128, SpawnerBehaviour.fixed16ToBits((byte) 8, 2, this.field_O), 4);
+          param1.writeBits((byte) -127, SpawnerBehaviour.fixed16ToBits((byte) 8, 4, this.field_J), 8);
+          param1.writeBits((byte) -4, SpawnerBehaviour.fixed16ToBits((byte) 8, 2, this.field_M), 4);
+          param1.writeBits((byte) -17, SpawnerBehaviour.fixed16ToBits((byte) 8, 4, this.field_I), 8);
           stackIn_2_0 = (BitPacketBuffer) (param1);
           stackIn_2_1 = -127;
           if (this.field_N) {

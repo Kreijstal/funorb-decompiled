@@ -31,8 +31,8 @@ final class CharacterChoice implements dv {
             stackIn_2_0 = (us) null;
             return stackIn_2_0;
           }
-          if (DefaultRoomObjectRenderer.field_b.b(127) &&
-            !param1.equals(DefaultRoomObjectRenderer.field_b.a((byte) 106))) {
+          if (DefaultRoomObjectRenderer.field_b.isComplete(127) &&
+            !param1.equals(DefaultRoomObjectRenderer.field_b.getName((byte) 106))) {
             DefaultRoomObjectRenderer.field_b = ai.a((byte) 120, param1);
           }
           stackIn_7_0 = DefaultRoomObjectRenderer.field_b;
@@ -106,7 +106,7 @@ final class CharacterChoice implements dv {
                         param4.addBehaviour((byte) 83, (Behaviour) (new CrusherBehaviour(param3, param5)));
                         var9 = new ApproachPlayerLocomotor(param3, param5);
                         param4.addLocomotor(var9, 0);
-                        var9.c(124, 0);
+                        var9.setStopDistance(124, 0);
                       } else {
                         if (var6_int == 7) {
                           param4.setWeight((byte) -3, 2);
@@ -207,7 +207,7 @@ final class CharacterChoice implements dv {
         var28 = TombRacer.field_G ? 1 : 0;
         try {
           if (0 < param6 &&
-            !cla.isPowerOfTwoOrZero(9181, param6)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param6)) {
             throw new IllegalArgumentException("");
           }
           if (param3 <= 49) {
@@ -215,7 +215,7 @@ final class CharacterChoice implements dv {
             CharacterChoice.generateMipmaps(127, 113, -99, -33, (int[]) null, 112, 62, 15);
           }
           if (param7 > 0 &&
-            !cla.isPowerOfTwoOrZero(9181, param7)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param7)) {
             throw new IllegalArgumentException("");
           }
           if (param1 != 32993) {

@@ -18,7 +18,7 @@ abstract class vo {
         return nsa.field_i.field_tb;
     }
 
-    final void a(int param0, byte[] param1, int param2) {
+    final void uploadData(int param0, byte[] param1, int param2) {
         try {
           this.d(34963);
           if (param2 > this.field_g) {

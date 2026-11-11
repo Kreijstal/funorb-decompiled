@@ -27,7 +27,7 @@ final class BrickOperator extends TextureOperator {
     final static void d(byte param0) {
         aca var1 = (aca) (io.field_d.first(-80));
         if (var1 == null) {
-          dea.closeGameSocket(60);
+          DropAnimation.closeGameSocket(60);
           return;
         }
         BitPacketBuffer var2 = WeaveOperator.field_q;
@@ -210,7 +210,7 @@ final class BrickOperator extends TextureOperator {
             stackIn_11_0 = 5890;
             return stackIn_11_0;
           }
-          if (tla.field_c == param0) {
+          if (OpenGlDisplayLists.field_c == param0) {
             stackIn_9_0 = 34167;
             return stackIn_9_0;
           }
@@ -218,7 +218,7 @@ final class BrickOperator extends TextureOperator {
             stackIn_4_0 = 34168;
             return stackIn_4_0;
           }
-          if (param0 == pea.field_c) {
+          if (param0 == LruNodeCache.field_c) {
             stackIn_7_0 = 34166;
             return stackIn_7_0;
           }

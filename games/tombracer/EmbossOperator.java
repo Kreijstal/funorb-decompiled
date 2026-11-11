@@ -112,7 +112,7 @@ final class EmbossOperator extends TextureOperator {
         }
     }
 
-    private final void c(int param0) {
+    private final void computeLightDirection(int param0) {
         double var2 = Math.cos((double)((float)this.field_m / 4096.0f));
         this.field_n[0] = (int)(4096.0 * (Math.sin((double)((float)this.field_p / 4096.0f)) * var2));
         this.field_n[1] = (int)(Math.cos((double)((float)this.field_p / 4096.0f)) * var2 * 4096.0);
@@ -135,7 +135,7 @@ final class EmbossOperator extends TextureOperator {
         if (param0 != 116) {
           return;
         }
-        this.c(28427);
+        this.computeLightDirection(28427);
     }
 
     public static void releaseStatics(boolean param0) {

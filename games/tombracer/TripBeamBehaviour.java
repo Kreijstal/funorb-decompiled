@@ -395,7 +395,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void setMaxBeamLength(int param0, int param1) {
         if (param1 != 636) {
           this.field_u = (BeamSegment) null;
           this.field_q = param0;

@@ -127,11 +127,11 @@ final class PlantComponent extends PrefabComponent {
         var23 = TombRacer.field_G ? 1 : 0;
         try {
           if (param5 > 0 &&
-            !cla.isPowerOfTwoOrZero(9181, param5)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param5)) {
             throw new IllegalArgumentException("");
           }
           if (param6 > 0 &&
-            !cla.isPowerOfTwoOrZero(9181, param6)) {
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param6)) {
             throw new IllegalArgumentException("");
           }
           var7_int = jj.glFormatComponents(param0, (byte) -119);

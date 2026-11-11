@@ -122,13 +122,13 @@ final class TrackPlayerLocomotor extends Locomotor {
           var5 = 6 + Corpse.field_i.field_H.getWrappedWidth(param1, 500);
           var6 = di.field_a * var4 + 2;
           var7 = PitSnakeModel.clampToScreenX((byte) -8, var5, 12, var2_int);
-          var8 = hsa.a(20, var6, var3, (byte) -107);
+          var8 = LegacyTextureCache.clampToScreenY(20, var6, var3, (byte) -107);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
           if (param0 > -63) {
             field_s = (SecondaryNodeHashTable) null;
           }
-          Corpse.field_i.field_H.drawParagraph(param1, var7 + 3, -Corpse.field_i.field_H.field_w + (hsa.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
+          Corpse.field_i.field_H.drawParagraph(param1, var7 + 3, -Corpse.field_i.field_H.field_w + (LegacyTextureCache.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "hia.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -143,7 +143,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         this.field_t = param1 ? true : false;
     }
 
-    final void a(boolean param0, int param1) {
+    final void setSpeed(boolean param0, int param1) {
         if (param0) {
           BitPacketBuffer var4 = (BitPacketBuffer) null;
           this.encode((BitPacketBuffer) null, (byte) -118);

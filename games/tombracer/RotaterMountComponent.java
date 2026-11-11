@@ -94,11 +94,11 @@ final class RotaterMountComponent extends PrefabComponent {
           var8.setPushMode(param1 ^ 109, 2);
           var8.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new RotateLocomotor(param2, param0);
-          var5.a((byte) -124, this.field_F * 8);
+          var5.setRotationSpeed((byte) -124, this.field_F * 8);
           var8.addLocomotor(var5, 0);
           var6 = rm.field_a;
           var7 = (TrapBaseModel) (var6.createModel(16, 124));
-          var7.b(8022, 2);
+          var7.setVariant(8022, 2);
           var8.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var8;
           return stackIn_1_0;

@@ -92,7 +92,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
     }
 
     final static void b(int param0) {
-        afa.field_c = LegacyOpenGlSpriteTexture.h(-57);
+        afa.field_c = LegacyOpenGlSpriteTexture.getTooltipStyle(-57);
         ej.field_a = new jta();
         if (param0 <= 112) {
           return;

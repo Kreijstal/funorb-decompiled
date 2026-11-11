@@ -67,7 +67,7 @@ final class MandelbrotOperator extends TextureOperator {
         return var15;
     }
 
-    final static int[][] a(boolean param0, int param1, int param2, float param3, int param4, byte param5, int param6, int param7, int param8) {
+    final static int[][] generatePerlinGrid(boolean param0, int param1, int param2, float param3, int param4, byte param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var12 = TombRacer.field_G ? 1 : 0;
         if (param5 >= -46) {
@@ -84,7 +84,7 @@ final class MandelbrotOperator extends TextureOperator {
         var10.field_w = param7;
         var10.field_u = param6;
         var10.onDecoded((byte) 116);
-        ConsoleWindow.a(0, param8, param4);
+        ConsoleWindow.setTextureSize(0, param8, param4);
         for (var11 = 0; var11 < param8; var11++) {
           var10.fillRow(var15[var11], -1, var11);
         }
@@ -138,7 +138,7 @@ final class MandelbrotOperator extends TextureOperator {
     public static void a(boolean param0) {
         field_o = null;
         if (!param0) {
-          MandelbrotOperator.a(false, 72, -128, 0.8583102226257324f, -87, (byte) 7, -60, -76, -111);
+          MandelbrotOperator.generatePerlinGrid(false, 72, -128, 0.8583102226257324f, -87, (byte) 7, -60, -76, -111);
         }
     }
 

@@ -352,7 +352,7 @@ class HotspotTextWidget extends FocusableWidget {
         this.rebuildHotspots(18758);
     }
 
-    final static oc a(ResourceArchive param0, String param1, String param2, boolean param3) {
+    final static oc loadModelData(ResourceArchive param0, String param1, String param2, boolean param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;

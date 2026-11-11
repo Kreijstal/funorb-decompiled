@@ -61,7 +61,7 @@ final class MaskBlendOperator extends TextureOperator {
         int[] var56Lifetime1;
         var19 = TombRacer.field_G ? 1 : 0;
         if (param1 != -1) {
-          MaskBlendOperator.d(86);
+          MaskBlendOperator.initToolkitResources(86);
         }
         var31 = this.colourCache.getRow(param0, (byte) 113);
         var21 = var31;
@@ -105,7 +105,7 @@ final class MaskBlendOperator extends TextureOperator {
         return var3;
     }
 
-    final static Sprite a(ResourceArchive param0, String param1, String param2, int param3) {
+    final static Sprite loadSpriteByName(ResourceArchive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -155,7 +155,7 @@ final class MaskBlendOperator extends TextureOperator {
         super(3, false);
     }
 
-    final static void d(int param0) {
+    final static void initToolkitResources(int param0) {
         tga.field_a = baa.field_d.field_i.field_d;
         tga.field_a.b(8192);
         ImageProducerCanvasImageBuffer.field_o = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
@@ -163,10 +163,10 @@ final class MaskBlendOperator extends TextureOperator {
         OpenGlTexture2D.h((byte) 45);
         if (param0 != -25405) {
           String var2 = (String) null;
-          MaskBlendOperator.a((ResourceArchive) null, (String) null, (String) null, 78);
+          MaskBlendOperator.loadSpriteByName((ResourceArchive) null, (String) null, (String) null, 78);
         }
         rka.a(false);
-        ina.a(tga.field_a, 0);
+        ina.createGameModels(tga.field_a, 0);
         SceneLight.createGameToolkitSprites(tga.field_a, 17186);
         ArrowShooterComponent.createFonts(tga.field_a, -90);
     }

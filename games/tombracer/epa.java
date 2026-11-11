@@ -85,7 +85,7 @@ final class epa extends MenuScreen {
                 return;
               }
               if (!LoadProfileCommand.field_r) {
-                vn.field_b.a((byte) -92);
+                vn.field_b.clearFields((byte) -92);
                 return;
               }
             }

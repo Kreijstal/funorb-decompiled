@@ -180,17 +180,17 @@ final class HardwareSpecularEffect extends ShaderEffect {
             this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
             this.owner.a(PlayerContextMenu.field_j, 0, -47);
             this.owner.a(PlayerContextMenu.field_j, 1, -6219, true, false);
-            this.owner.a(0, false, tla.field_c);
+            this.owner.a(0, false, OpenGlDisplayLists.field_c);
             this.owner.bindTexture(true, this.owner.field_Jb);
           } else {
             this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
             this.owner.a(ej.field_c, 0, -6219, true, false);
-            this.owner.a(0, false, tla.field_c);
+            this.owner.a(0, false, OpenGlDisplayLists.field_c);
           }
           this.owner.e(0, false);
           this.field_g = true;
         } else {
-          this.owner.a(0, false, tla.field_c);
+          this.owner.a(0, false, OpenGlDisplayLists.field_c);
         }
     }
 

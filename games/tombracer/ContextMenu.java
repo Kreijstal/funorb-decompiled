@@ -49,7 +49,7 @@ final class ContextMenu extends UiComponent {
         }
         var7Lifetime1 = this.field_tb + (this.field_zb * this.field_Gb + this.field_tb);
         var8Lifetime1 = PitSnakeModel.clampToScreenX((byte) -8, var6, param3, param4);
-        var9 = hsa.a(param1, var7Lifetime1, param0, (byte) -98);
+        var9 = LegacyTextureCache.clampToScreenY(param1, var7Lifetime1, param0, (byte) -98);
         this.setBounds(var6, var7Lifetime1, -23776, var9, var8Lifetime1);
         for (var10 = 0; this.field_zb > var10; var10++) {
           this.field_Db[var10].a(var6 - this.field_Hb * 2, this.field_Hb, this.field_vb, this.field_Gb, 0, this.field_wb, this.field_tb + var10 * this.field_Gb);
@@ -117,7 +117,7 @@ final class ContextMenu extends UiComponent {
         return this.field_xb;
     }
 
-    final static void f(byte param0) {
+    final static void releaseKeyboardHandler(byte param0) {
         int var1 = 0;
         Throwable decompiledCaughtException = null;
         Object var2 = null;
@@ -132,7 +132,7 @@ final class ContextMenu extends UiComponent {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -39) {
-          ContextMenu.f((byte) -65);
+          ContextMenu.releaseKeyboardHandler((byte) -65);
         }
         field_yb = null;
         field_Ib = null;

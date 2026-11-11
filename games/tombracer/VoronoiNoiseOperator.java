@@ -82,7 +82,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
             var17 = ColouriseOperator.field_m[2];
             var29Lifetime6 = var17;
             var29Lifetime7 = var17;
-            var18 = pea.field_f;
+            var18 = LruNodeCache.field_f;
             var16.field_f.addIconItem(var17, 13, var18, false);
           }
           if (param1 == 1) {

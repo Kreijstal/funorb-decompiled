@@ -131,7 +131,7 @@ final class TutorialHints {
         }
     }
 
-    final void a(byte param0) {
+    final void showQueuedHints(byte param0) {
         mga var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;

@@ -127,7 +127,7 @@ final class FurnitureModel extends TrapModel {
         }
     }
 
-    final void b(int param0, byte param1) {
+    final void setVariant(int param0, byte param1) {
         this.field_m = param0;
         if (param1 != 77) {
           field_n = -49;

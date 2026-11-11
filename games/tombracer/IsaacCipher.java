@@ -267,7 +267,7 @@ final class IsaacCipher {
           try {
             WeaveOperator.field_q = new BitPacketBuffer(param6);
             ql.field_k = new BitPacketBuffer(param7);
-            q.field_r = param9;
+            CollisionGridEntry.field_r = param9;
             SocketConnector.field_c = param0;
             RoomComponent.field_g = param11;
             nn.field_b = param3;

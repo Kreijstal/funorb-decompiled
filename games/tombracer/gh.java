@@ -54,8 +54,8 @@ final class gh extends ToolkitSprite {
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param8, 1);
         this.field_c.a((byte) -97, param6);
-        this.field_c.a(pea.field_c, 1, -82);
-        this.field_c.a(1, false, pea.field_c);
+        this.field_c.a(LruNodeCache.field_c, 1, -82);
+        this.field_c.a(1, false, LruNodeCache.field_c);
         this.field_c.g(3625, param7);
         if (this.field_b) {
           var13 = (float)this.paddedWidth();
@@ -104,8 +104,8 @@ final class gh extends ToolkitSprite {
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param4, 1);
         this.field_c.a((byte) -19, param2);
-        this.field_c.a(pea.field_c, 1, -26);
-        this.field_c.a(1, false, pea.field_c);
+        this.field_c.a(LruNodeCache.field_c, 1, -26);
+        this.field_c.a(1, false, LruNodeCache.field_c);
         this.field_c.g(3625, param3);
         var8.setScale(0.0f, (float)this.field_l, false, (float)this.field_k);
         var8.translate(param0, param1, 0);
@@ -211,8 +211,8 @@ final class gh extends ToolkitSprite {
         this.field_c.bindTexture(true, this.field_d);
         this.field_c.setBlendMode(param6, 1);
         this.field_c.a((byte) 117, param4);
-        this.field_c.a(pea.field_c, 1, -74);
-        this.field_c.a(1, false, pea.field_c);
+        this.field_c.a(LruNodeCache.field_c, 1, -74);
+        this.field_c.a(1, false, LruNodeCache.field_c);
         this.field_c.g(3625, param5);
         var10.setScale(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(81, (float)this.field_k));
         if (this.field_b) {

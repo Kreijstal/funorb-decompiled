@@ -120,7 +120,7 @@ final class tn extends IntrusiveNode {
           return SwitchModel.field_r;
         }
         if (!tk.field_b.isGroupAvailableByName("commonui", param0 ^ 10971)) {
-          return q.field_o + " - " + tk.field_b.a("commonui", true) + "%";
+          return CollisionGridEntry.field_o + " - " + tk.field_b.a("commonui", true) + "%";
         }
         if (!OpenGlTexture2D.field_n.ensureIndex(-99)) {
           return MouseInputHandler.field_a;

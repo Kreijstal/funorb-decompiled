@@ -4,7 +4,7 @@
 final class MenuEntry {
     static MusicTrack[] field_j;
     static int field_h;
-    dea field_c;
+    DropAnimation field_c;
     static String field_k;
     String field_e;
     int field_g;
@@ -68,7 +68,7 @@ final class MenuEntry {
     }
 
     final void update(boolean param0, boolean param1, boolean param2, int param3) {
-        dea stackIn_6_0 = null;
+        DropAnimation stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         boolean stackIn_6_2 = false;
         boolean stackIn_7_3;
@@ -80,7 +80,7 @@ final class MenuEntry {
           stackIn_6_1 = -115;
           stackIn_6_2 = param0;
           stackIn_7_3 = (param2) ? false : true;
-          ((dea) (Object) stackIn_6_0).updateFall((byte) stackIn_6_1, stackIn_6_2, stackIn_7_3);
+          ((DropAnimation) (Object) stackIn_6_0).updateFall((byte) stackIn_6_1, stackIn_6_2, stackIn_7_3);
         }
         if (param1) {
           if (6 > this.field_d) {
@@ -204,27 +204,27 @@ final class MenuEntry {
             if (var17 == 0) {
               if (param1) {
                 if (param3) {
-                  var12.a(var10, var11, var13, var14);
+                  var12.drawScaled(var10, var11, var13, var14);
                 }
                 if (!param3 ||
                   var24 != 0) {
-                  var12.a(var10, var11, var13, var14, 0, -4144960, 1);
+                  var12.drawScaled(var10, var11, var13, var14, 0, -4144960, 1);
                   if (var24 != 0) {
                     if (param3) {
-                      var12.a(var10, var11, var13, var14, 2, 1614823488, 1);
-                      var12.a(var10, var11, var13, var14, 2, 1610612736, 1);
+                      var12.drawScaled(var10, var11, var13, var14, 2, 1614823488, 1);
+                      var12.drawScaled(var10, var11, var13, var14, 2, 1610612736, 1);
                     } else {
-                      var12.a(var10, var11, var13, var14, 2, 1610612736, 1);
+                      var12.drawScaled(var10, var11, var13, var14, 2, 1610612736, 1);
                     }
                   }
                 }} else {
                 if (param3) {
-                  var12.a(var10, var11, var13, var14, 2, 1614823488, 1);
+                  var12.drawScaled(var10, var11, var13, var14, 2, 1614823488, 1);
                   if (var24 != 0) {
-                    var12.a(var10, var11, var13, var14, 2, 1610612736, 1);
+                    var12.drawScaled(var10, var11, var13, var14, 2, 1610612736, 1);
                   }
                 } else {
-                  var12.a(var10, var11, var13, var14, 2, 1610612736, 1);
+                  var12.drawScaled(var10, var11, var13, var14, 2, 1610612736, 1);
                 }
               }
               MembersUpsellMenu.a(this.field_e, var5, var6, -1, 5 + var9, this.field_b, var15);
@@ -235,7 +235,7 @@ final class MenuEntry {
             var18 = 300;
             var19 = 120;
             if (39 == this.field_g) {
-              WidgetStyleLayer.field_k[4].a(-89 + this.field_b, -16 + (-(var19 >> 1) + var9), var18, var19, 0, -4144960, 1);
+              WidgetStyleLayer.field_k[4].drawScaled(-89 + this.field_b, -16 + (-(var19 >> 1) + var9), var18, var19, 0, -4144960, 1);
               MembersUpsellMenu.a(bc.field_a, var5, var6, -1, var9 + (-(var19 >> 1) + 25), -94 + (var18 >> 1) + this.field_b, var15);
             }
             var26 = tga.field_a;
@@ -273,7 +273,7 @@ final class MenuEntry {
           var18Lifetime2 = 300;
           var19Lifetime2 = 120;
           if (this.field_g == 36) {
-            WidgetStyleLayer.field_k[5].a(-63 + this.field_b, var9 - (var19Lifetime2 >> 1) - 16, var18Lifetime2, var19Lifetime2, 0, -4144960, 1);
+            WidgetStyleLayer.field_k[5].drawScaled(-63 + this.field_b, var9 - (var19Lifetime2 >> 1) - 16, var18Lifetime2, var19Lifetime2, 0, -4144960, 1);
             MembersUpsellMenu.a(dna.field_I, var5, var6, -1, 25 + (-(var19Lifetime2 >> 1) + var9), -65 + (this.field_b + (var18Lifetime2 >> 1)), var15);
           }
           var29 = tga.field_a;
@@ -314,11 +314,11 @@ final class MenuEntry {
         var18Lifetime1 = 300;
         var19Lifetime1 = 100;
         if (this.field_g == 5) {
-          WidgetStyleLayer.field_k[5].a(this.field_b + (-(var18Lifetime1 >> 1) + 10), var9 - (var19Lifetime1 >> 1) + 13, var18Lifetime1, var19Lifetime1, 0, -4144960, 1);
+          WidgetStyleLayer.field_k[5].drawScaled(this.field_b + (-(var18Lifetime1 >> 1) + 10), var9 - (var19Lifetime1 >> 1) + 13, var18Lifetime1, var19Lifetime1, 0, -4144960, 1);
         }
         MembersUpsellMenu.a(this.field_e, var5, var6, param2 - 2, var9, -64 + this.field_b, var15);
         if (this.field_g != 5) {
-          stackIn_78_0 = jg.a((byte) -103);
+          stackIn_78_0 = jg.getSoundVolume((byte) -103);
         } else {
           stackIn_78_0 = tk.a(param2 ^ -22635);
         }
@@ -328,7 +328,7 @@ final class MenuEntry {
         }
         if (param3 ||
           var24 != 0) {
-          tka.field_p.a(this.field_b - 34, -16 + var9);
+          tka.field_p.draw(this.field_b - 34, -16 + var9);
         }
         tga.field_a.setClip(this.field_b - 35, -17 + var9, (var20 >> 1) - 35 + this.field_b, var9);
         if (!param3) {
@@ -336,7 +336,7 @@ final class MenuEntry {
         }
         if (param3 ||
           var24 != 0) {
-          Projectile.field_n.a(-34 + this.field_b, -16 + var9);
+          Projectile.field_n.draw(-34 + this.field_b, -16 + var9);
         }
         tga.field_a.la();
         if (this.field_g != 6) {
@@ -347,7 +347,7 @@ final class MenuEntry {
         var30 = stackIn_89_0;
         var21_ref2 = var30;
         if (param3) {
-          var30.a(-12 + ((var20 >> 1) - 35) + this.field_b, var9 - (var30.height() >> 1) - 6);
+          var30.draw(-12 + ((var20 >> 1) - 35) + this.field_b, var9 - (var30.height() >> 1) - 6);
           if (var24 == 0) {
             return;
           }
@@ -479,7 +479,7 @@ final class MenuEntry {
     }
 
     MenuEntry(int param0, String param1, int param2, boolean param3) {
-        this.field_c = new dea();
+        this.field_c = new DropAnimation();
         try {
           this.field_g = param0;
           this.field_l = param3 ? true : false;

@@ -91,7 +91,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           this.field_z.field_n = -this.field_z.field_p + this.field_p >> 1;
           this.field_D.field_m = -this.field_z.field_m + (this.field_m - this.field_D.field_i);
         }
-        this.h((byte) -125);
+        this.positionThumbVertically((byte) -125);
         if (this.field_F != null) {
           this.field_F.field_i = -this.field_F.field_m + this.field_m >> 1;
           this.field_F.field_n = 0;
@@ -109,7 +109,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         } else {
           this.field_D.field_p = this.field_p - this.field_D.field_n;
         }
-        this.e(param0 - 214);
+        this.positionThumbHorizontally(param0 - 214);
         if (!this.field_P) {
           this.field_N.field_n = 0;
           this.field_N.field_p = this.field_D.field_p;
@@ -154,7 +154,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
     }
 
     private final void b(int param0, int param1) {
-        this.a(param0 ^ 22876, param1);
+        this.setVerticalFraction(param0 ^ 22876, param1);
         if (param0 != 13328) {
           return;
         }
@@ -171,7 +171,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         field_K = null;
     }
 
-    private final void h(byte param0) {
+    private final void positionThumbVertically(byte param0) {
         if (param0 > -30) {
           return;
         }
@@ -181,7 +181,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
     }
 
     private final void a(int param0, byte param1) {
-        this.c(16, param0);
+        this.setHorizontalFraction(16, param0);
         if (param1 >= -90) {
           this.field_A = 107;
         }
@@ -293,20 +293,20 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           if ((!(this.field_N.child instanceof FocusableWidget) ||
             ((FocusableWidget) (this.field_N.child)).field_y) && this.field_N.field_s == 1) {
             if (!this.field_J) {
-              this.h((byte) -101);
+              this.positionThumbVertically((byte) -101);
             } else {
               var5_int = this.field_C;
-              this.d(-66);
+              this.updateVerticalFractionFromThumb(-66);
               if (this.field_C != var5_int &&
                 this.field_h instanceof tua) {
                 ((tua) (this.field_h)).a(this.field_C, this, true, this.field_C);
               }
             }
             if (!this.field_P) {
-              this.e(-125);
+              this.positionThumbHorizontally(-125);
             } else {
               var5_intLifetime2 = this.field_O;
-              this.f(param1 - 2031616);
+              this.updateHorizontalFractionFromThumb(param1 - 2031616);
               if (this.field_O != var5_intLifetime2 &&
                 this.field_h instanceof tua) {
                 ((tua) (this.field_h)).a(this.field_C, this, true, this.field_O);
@@ -405,8 +405,8 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           stackIn_7_1 = (param11);
           this.field_J = stackIn_7_1;
           this.field_I = param9;
-          this.a(27980, param13);
-          this.c(16, param14);
+          this.setVerticalFraction(27980, param13);
+          this.setHorizontalFraction(16, param14);
           this.setBounds((byte) -31, param2, param3, param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -435,16 +435,16 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         }
     }
 
-    private final void f(int param0) {
+    private final void updateHorizontalFractionFromThumb(int param0) {
         if (param0 != 65536) {
           return;
         }
         int var2 = null != this.field_F ? this.field_F.field_n + this.field_F.field_p : this.field_D.field_n;
         int var3 = this.field_H != null ? this.field_H.field_n - this.field_N.field_p : -this.field_N.field_p + this.field_D.field_p + this.field_D.field_n;
-        this.c(16, var2 >= var3 ? 0 : (-var2 + this.field_N.field_n << 16) / (var3 - var2));
+        this.setHorizontalFraction(16, var2 >= var3 ? 0 : (-var2 + this.field_N.field_n << 16) / (var3 - var2));
     }
 
-    private final void a(int param0, int param1) {
+    private final void setVerticalFraction(int param0, int param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         if (param1 < 0) {
           this.field_C = 0;
@@ -455,7 +455,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
             this.field_C = 65536;
           }
         }
-        this.h((byte) -110);
+        this.positionThumbVertically((byte) -110);
         if (param0 != 27980) {
           this.field_D = (FocusableWidget) null;
         }
@@ -538,7 +538,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setVerticalExtent(byte param0, int param1, int param2) {
         int var4 = 0;
         if (param1 < param2) {
           var4 = param1 * this.field_D.field_m / param2;
@@ -554,13 +554,13 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         if (param0 >= -81) {
           this.field_z = (FocusableWidget) null;
         }
-        this.h((byte) -110);
+        this.positionThumbVertically((byte) -110);
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void setHorizontalExtent(int param0, int param1, int param2) {
         int var4 = 0;
         if (param2 != -1789710879) {
-          this.c(-65, -82, -68);
+          this.setHorizontalExtent(-65, -82, -68);
         }
         if (param1 >= param0) {
           this.field_N.setBounds((byte) -31, this.field_N.field_m, this.field_D.field_p, this.field_N.field_i, this.field_N.field_n);
@@ -573,7 +573,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           this.field_N.setBounds((byte) -31, this.field_N.field_m, var4, this.field_N.field_i, this.field_N.field_n);
           this.a(1, true);
         }
-        this.e(param2 ^ 1789710944);
+        this.positionThumbHorizontally(param2 ^ 1789710944);
     }
 
     private final void a(int param0, boolean param1) {
@@ -586,7 +586,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         FocusableWidget stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
         if (param0 != 1) {
-          this.d(64);
+          this.updateVerticalFractionFromThumb(64);
         }
         stackIn_5_0 = this.field_D;
         stackIn_7_1 = (param1) || (this.field_J);
@@ -608,10 +608,10 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         }
     }
 
-    private final void e(int param0) {
+    private final void positionThumbHorizontally(int param0) {
         int var2 = this.field_F != null ? this.field_F.field_n + this.field_F.field_p : this.field_D.field_n;
         if (param0 >= -122) {
-          this.c(127, -127, -34);
+          this.setHorizontalExtent(127, -127, -34);
         }
         int var3 = null != this.field_H ? -this.field_N.field_p + this.field_H.field_n : this.field_D.field_p + (this.field_D.field_n - this.field_N.field_p);
         this.field_N.field_n = ((var3 - var2) * this.field_O >> 16) + var2;
@@ -668,14 +668,14 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         }
     }
 
-    private final void d(int param0) {
+    private final void updateVerticalFractionFromThumb(int param0) {
         int var2 = this.field_L != null ? this.field_L.field_m + this.field_L.field_i : this.field_D.field_i;
         int var4 = 26 % ((param0 - 22) / 59);
         int var3 = null != this.field_z ? -this.field_N.field_m + this.field_z.field_i : -this.field_N.field_m + this.field_D.field_i + this.field_D.field_m;
-        this.a(27980, var2 < var3 ? (-var2 + this.field_N.field_i << 16) / (var3 - var2) : 0);
+        this.setVerticalFraction(27980, var2 < var3 ? (-var2 + this.field_N.field_i << 16) / (var3 - var2) : 0);
     }
 
-    final void c(int param0, int param1) {
+    final void setHorizontalFraction(int param0, int param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         if (param1 < 0) {
           this.field_O = 0;
@@ -689,7 +689,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         if (param0 != 16) {
           return;
         }
-        this.e(param0 ^ -111);
+        this.positionThumbHorizontally(param0 ^ -111);
     }
 
     final static TriangleMesh decodeMesh(BitPacketBuffer param0, boolean param1) {

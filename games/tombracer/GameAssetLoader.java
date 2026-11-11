@@ -187,7 +187,7 @@ final class GameAssetLoader implements LoadingStage {
           this.field_l != null &&
           this.field_b != null &&
           this.field_o != null) {
-          sb.a(-70, this.field_k, this.field_o, this.field_l, this.field_b);
+          sb.initAudioArchives(-70, this.field_k, this.field_o, this.field_l, this.field_b);
           for (var3 = 0; 237 > var3; var3++) {
             fea.loadSoundEffect(false, var3);
           }
@@ -273,7 +273,7 @@ final class GameAssetLoader implements LoadingStage {
             var9.position = 0;
             var4_ref = null;
             try {
-              var15 = ssa.a(var9, -26, true);
+              var15 = ClipStack.a(var9, -26, true);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var5 = (Exception) (Object) decompiledCaughtException;
@@ -345,7 +345,7 @@ final class GameAssetLoader implements LoadingStage {
         if (param0 != -49) {
           this.loadNextAsset(-107);
         }
-        cla.initConsole(0);
+        PbufferEntry.initConsole(0);
         C2SActionPacket.a(param0 + 16);
         if (null != mq.field_e) {
           eda.a(mq.field_e.field_g, true);
@@ -373,7 +373,7 @@ final class GameAssetLoader implements LoadingStage {
           this.finishLoading((byte) 30);
         }
         if (!dna.field_G) {
-          dea.field_c = false;
+          DropAnimation.field_c = false;
           FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, LoadProfileCommand.field_t, mga.field_f, var2);
           cq.field_d = PenaltyNotice.field_f;
           tda.initializeChatHistory(200, (byte) -71);

@@ -15,7 +15,7 @@ final class rf {
         field_a = null;
     }
 
-    final static long b(byte param0) {
+    final static long millisSinceLastReceive(byte param0) {
         if (param0 != -121) {
           return 20L;
         }

@@ -37,13 +37,13 @@ final class mga extends IntrusiveNode {
             stackIn_2_0 = (LegacyOpenGlSpriteTexture) null;
             return stackIn_2_0;
           }
-          if (!param7.field_Gb && (!cla.isPowerOfTwoOrZero(9181, param1) ||
-            !cla.isPowerOfTwoOrZero(9181, param0))) {
+          if (!param7.field_Gb && (!PbufferEntry.isPowerOfTwoOrZero(9181, param1) ||
+            !PbufferEntry.isPowerOfTwoOrZero(9181, param0))) {
             if (param7.field_Cc) {
               stackIn_11_0 = new LegacyOpenGlSpriteTexture(param7, 34037, param1, param0, param6, param2, param3, param5);
               return stackIn_11_0;
             }
-            stackIn_9_0 = new LegacyOpenGlSpriteTexture(param7, param1, param0, lla.a(false, param1), lla.a(false, param0), param2);
+            stackIn_9_0 = new LegacyOpenGlSpriteTexture(param7, param1, param0, lla.nextPowerOfTwo(false, param1), lla.nextPowerOfTwo(false, param0), param2);
             return stackIn_9_0;
           }
           stackIn_13_0 = new LegacyOpenGlSpriteTexture(param7, 3553, param1, param0, param6, param2, param3, param5);

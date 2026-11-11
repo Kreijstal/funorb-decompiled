@@ -252,7 +252,7 @@ final class ItemModel extends TrapModel {
 
     final static void i(int param0) {
         qpa.a(275, ht.field_Pb, 3, 40, 440, 126, 200);
-        qpa.a(275, cla.field_n, 5, 40, 440, 126, 200);
+        qpa.a(275, PbufferEntry.field_n, 5, 40, 440, 126, 200);
         qpa.a(275, RemovedFromGameMenu.field_s, 6, 40, 440, 124, 200);
         qpa.a(335, jta.field_z, 9, 40, 440, 125, 200);
         if (param0 < 97) {
@@ -318,7 +318,7 @@ final class ItemModel extends TrapModel {
           if (param1 < 116) {
             ItemModel.releaseStatics((byte) 16);
           }
-          if (var11.a((byte) 89)) {
+          if (var11.ensureShader((byte) 89)) {
             if (LegacyOpenGlTexture1D.field_m != null) {
               return;
             }

@@ -9,7 +9,7 @@ final class ScrollingTexturePixels extends IntrusiveNode {
     private int[] field_k;
     int field_f;
 
-    final int[] b() {
+    final int[] getPixels() {
         return this.field_k;
     }
 

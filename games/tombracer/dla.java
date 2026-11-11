@@ -7,8 +7,8 @@ final class dla {
     int[] field_f;
     private int[][] field_m;
     int[] field_k;
-    pla[] field_e;
-    pla field_b;
+    IntIntHashTable[] field_e;
+    IntIntHashTable field_b;
     int[][] field_n;
     private int field_o;
     int[] field_p;
@@ -126,7 +126,7 @@ final class dla {
               for (var10Lifetime1Lifetime1 = 0; this.field_o > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
                 this.field_g[this.field_k[var10Lifetime1Lifetime1]] = var17.readInt(119);
               }
-              this.field_b = new pla(this.field_g);
+              this.field_b = new IntIntHashTable(this.field_g);
             }
             for (var10Lifetime2 = 0; this.field_o > var10Lifetime2; var10Lifetime2++) {
               this.field_j[this.field_k[var10Lifetime2]] = var17.readInt(-69);
@@ -199,7 +199,7 @@ final class dla {
               }
             }
             if (var6 != 0) {
-              this.field_e = new pla[var9 + 1];
+              this.field_e = new IntIntHashTable[var9 + 1];
               this.field_m = new int[1 + var9][];
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_o; var10Lifetime5++) {
                 var11Lifetime1 = this.field_k[var10Lifetime5];
@@ -217,7 +217,7 @@ final class dla {
                   }
                   this.field_m[var11Lifetime1][var14Lifetime1] = var17.readInt(kha.bitwiseXor(param0, 23927));
                 }
-                this.field_e[var11Lifetime1] = new pla(this.field_m[var11Lifetime1]);
+                this.field_e[var11Lifetime1] = new IntIntHashTable(this.field_m[var11Lifetime1]);
               }
               return;
             }

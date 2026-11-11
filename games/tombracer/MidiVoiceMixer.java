@@ -250,7 +250,7 @@ final class MidiVoiceMixer extends PcmStream {
                 stackIn_12_2 = (rta) (param3);
                 stackIn_13_3 = !(param3.field_y.field_g[param3.field_m] >= 0);
                 ((MidiPcmStream) (Object) stackIn_12_0).applyNoteSampleOffset((byte) stackIn_12_1, stackIn_12_2, stackIn_13_3);
-                param3.field_x.b(var9, var11.getVolume());
+                param3.field_x.rampVolumeKeepPan(var9, var11.getVolume());
               } else {
                 param3.field_x = PcmSampleStream.create(param3.field_n, var11.getStepMagnitude(), var11.getVolume(), var11.getPan());
               }

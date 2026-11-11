@@ -144,7 +144,7 @@ final class DarknessBehaviour extends Behaviour {
             var18++;
           }
         }
-        pfa.a(1);
+        pfa.popRasterState(1);
         return var7;
     }
 
@@ -356,7 +356,7 @@ final class DarknessBehaviour extends Behaviour {
           var9 = var8 * HardwareReflectionEffect.field_e.length / 10;
           nm.setRasterTarget(this.mask, (byte) 110);
           iha.drawGlowingLine(var4_int / 8 >> 16, var6 / 8 >> 16, var5 / 8 >> 16, var7 / 8 >> 16, 2, var9, HardwareReflectionEffect.field_e);
-          pfa.a(1);
+          pfa.popRasterState(1);
           stackIn_6_0 = 0;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

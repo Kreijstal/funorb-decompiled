@@ -221,15 +221,15 @@ final class FallbackShaderEffect extends ShaderEffect {
           }
           stackIn_67_0 = C2SRoomResultPacket.field_c;
           stackIn_67_1 = param0 ^ -102;
-          stackIn_68_2 = (param1) && (!param2) && (!tla.field_e);
+          stackIn_68_2 = (param1) && (!param2) && (!OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
           stackIn_72_0 = dka.field_b;
           stackIn_72_1 = -111;
-          stackIn_73_2 = (param1) && (!param2) && (!tla.field_e);
+          stackIn_73_2 = (param1) && (!param2) && (!OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_72_0).c(stackIn_72_1, stackIn_73_2);
           stackIn_77_0 = PlayerModel.field_a;
           stackIn_77_1 = -113;
-          stackIn_78_2 = (param1) && (!param2) && (tla.field_e);
+          stackIn_78_2 = (param1) && (!param2) && (OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_77_0).c(stackIn_77_1, stackIn_78_2);
           rm.field_e.field_a.processTabPresses((byte) -99);
           if (param0 != 1) {

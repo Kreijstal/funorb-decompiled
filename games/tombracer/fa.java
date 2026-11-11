@@ -93,17 +93,17 @@ final class fa {
               if (var6 == 0) {
                 if (C2SChooseRewardPacket.field_a == null &&
                   PlayerInputQueue.field_c) {
-                  var4 = "[" + cla.field_o + "] ";
+                  var4 = "[" + PbufferEntry.field_o + "] ";
                 }
                 if (null != C2SChooseRewardPacket.field_a) {
-                  if (!kp.field_c ||
-                    tla.field_f == null) {
+                  if (!HardwareTextureCache.field_c ||
+                    OpenGlDisplayLists.field_f == null) {
                     var4 = "[" + LegacyOpenGlFlowingWaterEffect.formatText(110, UiComponent.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
                     if (var10 != 0) {
-                      var4 = "[" + tla.field_f + "] ";
+                      var4 = "[" + OpenGlDisplayLists.field_f + "] ";
                     }
                   } else {
-                    var4 = "[" + tla.field_f + "] ";
+                    var4 = "[" + OpenGlDisplayLists.field_f + "] ";
                   }
                   var6 = 1;
                 }

@@ -382,7 +382,7 @@ final class cm implements GamePacket {
                   hp.field_a[var7] != null) {
                   var16 = hp.field_a[var7][var9];
                   if (0 != var16 &&
-                    !dea.field_c &&
+                    !DropAnimation.field_c &&
                     ReportAbuseDialog.field_ub <= 0) {
                     var10 = 1;
                   }
@@ -395,7 +395,7 @@ final class cm implements GamePacket {
                   C2SRoomResultPacket.field_g[var7] != null) {
                   var16Lifetime2 = C2SRoomResultPacket.field_g[var7][var9];
                   if (var16Lifetime2 != 0 &&
-                    !dea.field_c &&
+                    !DropAnimation.field_c &&
                     0 >= ReportAbuseDialog.field_ub) {
                     var10 = 1;
                   }
@@ -537,7 +537,7 @@ final class cm implements GamePacket {
                       }
                     }
                     if (var12 != 0) {
-                      var31 = LegacyOpenGlFlowingWaterEffect.formatText(106, kp.field_f, new String[]{Integer.toString(ProxySocketConnector.field_f), Integer.toString(hp.field_a[var7][var9])});
+                      var31 = LegacyOpenGlFlowingWaterEffect.formatText(106, HardwareTextureCache.field_f, new String[]{Integer.toString(ProxySocketConnector.field_f), Integer.toString(hp.field_a[var7][var9])});
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;

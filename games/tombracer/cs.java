@@ -14,7 +14,7 @@ final class cs {
         if (wt.field_d == gsa.field_y) {
           return uaa.field_a;
         }
-        if (DefaultRoomObjectRenderer.field_b.b(124)) {
+        if (DefaultRoomObjectRenderer.field_b.isComplete(124)) {
           return ScrollControlWidget.field_E;
         }
         return uaa.field_a;

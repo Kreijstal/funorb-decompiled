@@ -27,7 +27,7 @@ final class PlayerViewport {
         return this.field_q;
     }
 
-    final static int a(boolean param0, ConsoleToken[] param1, int param2) {
+    final static int findTokenAtPosition(boolean param0, ConsoleToken[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -105,14 +105,14 @@ final class PlayerViewport {
         this.moveDivisor = 16;
     }
 
-    final void b(int param0) {
+    final void draw(int param0) {
         if (!this.isOnScreen(0)) {
           return;
         }
         this.field_n.render(this.field_e, this.left, this.right, this.top, this.bottom, this.field_a, 51);
         if (param0 != 23479) {
           ConsoleToken[] var3 = (ConsoleToken[]) null;
-          PlayerViewport.a(true, (ConsoleToken[]) null, 44);
+          PlayerViewport.findTokenAtPosition(true, (ConsoleToken[]) null, 44);
           if (this.field_a.isMenuBackgroundDemo((byte) 33)) {
             return;
           }
@@ -290,22 +290,22 @@ final class PlayerViewport {
           var6_int = aq.field_a[0].width();
           param1 = (var6_int / 2 + param1) / var6_int * var6_int;
           var7 = aq.field_a[0].height();
-          param4[0].a(param3, param5);
+          param4[0].draw(param3, param5);
           param0 = (param0 + var7 / 2) / var7 * var7;
-          param4[2].a(-var6_int + param1 + param3, param5);
-          param4[6].a(param3, -var7 + param0 + param5);
-          param4[8].a(-var6_int + (param3 + param1), param5 + param0 - var7);
+          param4[2].draw(-var6_int + param1 + param3, param5);
+          param4[6].draw(param3, -var7 + param0 + param5);
+          param4[8].draw(-var6_int + (param3 + param1), param5 + param0 - var7);
           for (var8 = var6_int + param3; param3 - (-param1 + var6_int * 2) >= var8; var8 = var8 + var6_int) {
-            param4[1].a(var8, param5);
-            param4[7].a(var8, param0 + (param5 - var7));
+            param4[1].draw(var8, param5);
+            param4[7].draw(var8, param0 + (param5 - var7));
           }
           for (var8Lifetime1 = param5 + var7; var8Lifetime1 <= -(var7 * 2) + param0 + param5; var8Lifetime1 = var8Lifetime1 + var7) {
-            param4[3].a(param3, var8Lifetime1);
-            param4[5].a(param1 + (param3 - var6_int), var8Lifetime1);
+            param4[3].draw(param3, var8Lifetime1);
+            param4[5].draw(param1 + (param3 - var6_int), var8Lifetime1);
           }
           for (var8Lifetime2 = var6_int + param3; var8Lifetime2 <= param1 + param3 - 2 * var6_int; var8Lifetime2 = var8Lifetime2 + var6_int) {
             for (var9 = param5 + var7; param5 + (param0 - var7 * 2) >= var9; var9 = var9 + var7) {
-              param4[4].a(var8Lifetime2, var9);
+              param4[4].draw(var8Lifetime2, var9);
             }
           }
           if (param2 > 64) {

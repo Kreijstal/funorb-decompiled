@@ -74,7 +74,7 @@ final class ProceduralTexture extends DualLinkNode {
         }
     }
 
-    final float[] a(TextureProvider param0, byte param1, int param2, int param3, boolean param4, ResourceArchive param5) {
+    final float[] generateFloatPixels(TextureProvider param0, byte param1, int param2, int param3, boolean param4, ResourceArchive param5) {
         int var7_int = 0;
         int var15 = 0;
         int incrementValue$0 = 0;
@@ -116,7 +116,7 @@ final class ProceduralTexture extends DualLinkNode {
           for (var7_int = 0; this.operators.length > var7_int; var7_int++) {
             this.operators[var7_int].createRowCache(param3, param2, -256);
           }
-          ConsoleWindow.a(0, param2, param3);
+          ConsoleWindow.setTextureSize(0, param2, param3);
           var20 = new float[4 * param2 * param3];
           var7 = var20;
           var8 = 0;
@@ -250,7 +250,7 @@ final class ProceduralTexture extends DualLinkNode {
             return stackIn_6_0;
           }
           CachedArchiveSource.setGamma(param3, -256);
-          ConsoleWindow.a(0, param0, param6);
+          ConsoleWindow.setTextureSize(0, param0, param6);
           var26 = new int[param6 * param0];
           var10 = var26;
           if (param2) {
@@ -477,7 +477,7 @@ final class ProceduralTexture extends DualLinkNode {
             this.operators[var9_int].createRowCache(param0, param2, -256);
           }
           CachedArchiveSource.setGamma(param3, -256);
-          ConsoleWindow.a(0, param2, param0);
+          ConsoleWindow.setTextureSize(0, param2, param0);
           if (param6) {
             this.field_m = (TextureOperator) null;
           }

@@ -12,7 +12,7 @@ final class PlayingSound extends IntrusiveNode {
     int field_h;
     static IntrusiveDeque field_f;
 
-    final void a(SoundEventPlayer param0, byte param1) {
+    final void releaseFromPlayer(SoundEventPlayer param0, byte param1) {
         try {
           if (param1 > -32) {
             this.field_l = 53;
@@ -97,7 +97,7 @@ final class PlayingSound extends IntrusiveNode {
     }
 
     final void updateVolumeAndPan(int param0, int param1, int param2, int param3, int param4) {
-        this.field_h = ol.a(param0, this.field_l, (byte) -91, param3, param4, param1);
+        this.field_h = ol.computeDistanceVolume(param0, this.field_l, (byte) -91, param3, param4, param1);
         if (param2 <= -127) {
           this.field_m = AgeValidator.a(param3, true, param0);
           this.field_i.a(this.field_m, this.field_h, (byte) -21);

@@ -12,7 +12,7 @@ final class SwitchModel extends TrapModel {
     static Hashtable field_m;
     static String field_r;
 
-    final void b(int param0, byte param1) {
+    final void setVariant(int param0, byte param1) {
         if (param1 != -112) {
           this.tick(-35);
           this.field_q = param0;
@@ -697,7 +697,7 @@ final class SwitchModel extends TrapModel {
     }
 
     final static void o(byte param0) {
-        wp.a(-1);
+        wp.closeContextMenu(-1);
         RasterizerOperator.clearStatics((byte) -128);
         RoomViewRenderer.field_c = null;
         int var1 = 43 / ((param0 + 55) / 48);

@@ -30,7 +30,7 @@ final class lp {
             if (var4_int == 0) {
               return;
             }
-            this.a(param2, param1, (byte) -124, var4_int);
+            this.decodeOpcode(param2, param1, (byte) -124, var4_int);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,7 +104,7 @@ final class lp {
         }
     }
 
-    private final void a(PacketBuffer param0, int param1, byte param2, int param3) {
+    private final void decodeOpcode(PacketBuffer param0, int param1, byte param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

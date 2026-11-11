@@ -57,7 +57,7 @@ final class WaypointPath {
           rua.field_gb = new UiComponent(0L, (UiComponent) null);
           if (param1 == null) {
             var10 = (Throwable) null;
-            ssa.reportClientError("QC1", (byte) 123, (Throwable) null);
+            ClipStack.reportClientError("QC1", (byte) 123, (Throwable) null);
             return;
           }
           param1.field_j = 0;
@@ -67,7 +67,7 @@ final class WaypointPath {
           var4 = BlendModeOperator.findRootQuickChatCategory((byte) 86);
           if (var4 == null) {
             var11 = (Throwable) null;
-            ssa.reportClientError("QC2", (byte) 122, (Throwable) null);
+            ClipStack.reportClientError("QC2", (byte) 122, (Throwable) null);
             return;
           }
           DraggableWidget.a(-1, var4);

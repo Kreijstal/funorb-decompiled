@@ -167,7 +167,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (BlockModel) (var6.createModel(7, param1 ^ 77));
-          var7.b(113, 15);
+          var7.setVariant(113, 15);
           var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;

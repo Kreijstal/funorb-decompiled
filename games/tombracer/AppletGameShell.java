@@ -101,7 +101,7 @@ abstract class AppletGameShell extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5 = RasterBuffer.a(pla.a(-1), RotaterMountComponent.A(49), 2);
+            var5 = RasterBuffer.a(IntIntHashTable.createCredentials(-1), RotaterMountComponent.A(49), 2);
             if (-1 != var5) {
               WaveformOperator.a(PressureSwitchBehaviour.field_s, var5, io.field_b, (byte) 100);
               io.field_b = null;
@@ -196,7 +196,7 @@ abstract class AppletGameShell extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              ssa.reportClientError("S1", (byte) 121, (Throwable) ((Object) var6));
+              ClipStack.reportClientError("S1", (byte) 121, (Throwable) ((Object) var6));
               var11 = (String) null;
               NodeHashTableIterator.a((String) null, -1);
               DarknessBehaviour.field_o = null;
@@ -277,8 +277,8 @@ abstract class AppletGameShell extends GameApplet {
                                 HardwareUnlitEffect.c((byte) 101);
                                 return;
                               }
-                              ssa.reportClientError("MGS1: " + kk.formatPacketDump(32), (byte) 123, (Throwable) null);
-                              dea.closeGameSocket(60);
+                              ClipStack.reportClientError("MGS1: " + kk.formatPacketDump(32), (byte) 123, (Throwable) null);
+                              DropAnimation.closeGameSocket(60);
                               return;
                             }
                             stackIn_24_0 = -18787;
@@ -302,8 +302,8 @@ abstract class AppletGameShell extends GameApplet {
           }
           return;
         }
-        ssa.reportClientError("MGS2: " + kk.formatPacketDump(32), (byte) 120, (Throwable) null);
-        dea.closeGameSocket(60);
+        ClipStack.reportClientError("MGS2: " + kk.formatPacketDump(32), (byte) 120, (Throwable) null);
+        DropAnimation.closeGameSocket(60);
     }
 
     private final int attemptReconnect(byte param0) {
@@ -487,7 +487,7 @@ abstract class AppletGameShell extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            ssa.reportClientError((String) null, (byte) 126, (Throwable) ((Object) var6_ref));
+            ClipStack.reportClientError((String) null, (byte) 126, (Throwable) ((Object) var6_ref));
             this.reportError(-6738, "crash");
           }
           return;
@@ -577,7 +577,7 @@ abstract class AppletGameShell extends GameApplet {
             !(rg.g((byte) 118) <= var3) &&
             !(var3 >= ada.b(false))) {
             this.field_y = false;
-            dea.closeGameSocket(60);
+            DropAnimation.closeGameSocket(60);
             TextureMetadata.b((byte) -84);
             epa.a(2, (byte) -84, WindZoneBehaviour.field_n);
             LineNoiseOperator.c(9033);
@@ -747,7 +747,7 @@ abstract class AppletGameShell extends GameApplet {
         if (cga.field_f == 13) {
           var4 = 1;
           if (null != RidgedNoise3D.field_r) {
-            stackIn_133_0 = (!RidgedNoise3D.field_r.a((byte) 37)) ? 0 : 1;
+            stackIn_133_0 = (!RidgedNoise3D.field_r.pollLoaded((byte) 37)) ? 0 : 1;
             var4 = stackIn_133_0;
             ima.a(RidgedNoise3D.field_r.field_i, RidgedNoise3D.field_r.field_b, -65);
           }

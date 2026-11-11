@@ -31,14 +31,14 @@ final class ch implements Runnable {
               }
               TrapSpawner.sleepMillis(0, 10L);
               var5 = (Object) null;
-              kla.a(this.field_d, (byte) 50, (Object) null);
+              kla.postDummyEvent(this.field_d, (byte) 50, (Object) null);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var6 = (String) null;
-            ssa.reportClientError((String) null, (byte) 121, (Throwable) ((Object) var1));
+            ClipStack.reportClientError((String) null, (byte) 121, (Throwable) ((Object) var1));
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

@@ -49,7 +49,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         int var3 = 101 / ((param0 - 41) / 62);
         this.owner.bindTexture(true, this.field_g);
         this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, r.field_m);
-        this.owner.a(pea.field_c, 0, -55);
+        this.owner.a(LruNodeCache.field_c, 0, -55);
         this.owner.a(ej.field_c, 2, -6219, true, false);
         this.owner.a(0, false, PlayerContextMenu.field_j);
         this.owner.e(0, false);
@@ -167,7 +167,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.owner.bindTexture(true, (GpuTexture) null);
         this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
         this.owner.a(ej.field_c, 0, -58);
-        this.owner.a(pea.field_c, 2, -122);
+        this.owner.a(LruNodeCache.field_c, 2, -122);
         this.owner.a(0, false, ej.field_c);
         this.owner.e(0, false);
         if (this.field_e) {

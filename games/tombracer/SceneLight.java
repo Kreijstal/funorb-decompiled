@@ -59,14 +59,14 @@ abstract class SceneLight extends IntrusiveNode {
           HardwareSpecularEffect.field_h = new ToolkitSprite[6];
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 6; var2_intLifetime1++) {
             WidgetStyleLayer.field_k[var2_intLifetime1] = su.createToolkitSprite(ColourFillOperator.field_p[var2_intLifetime1], param0, (byte) -68);
-            ColourFillOperator.field_p[var2_intLifetime1].b();
+            ColourFillOperator.field_p[var2_intLifetime1].flipHorizontally();
             HardwareSpecularEffect.field_h[var2_intLifetime1] = su.createToolkitSprite(ColourFillOperator.field_p[var2_intLifetime1], param0, (byte) 125);
-            ColourFillOperator.field_p[var2_intLifetime1].b();
+            ColourFillOperator.field_p[var2_intLifetime1].flipHorizontally();
           }
           ik.field_h = su.createToolkitSprite(dna.field_F, param0, (byte) 127);
           ArchiveSource.field_a = LoadLevelCommand.createToolkitSprites(param0, RoundWinnerPhase.field_p, -79);
           bd.field_i = su.createToolkitSprite(ara.field_vb, param0, (byte) -20);
-          ColourFillOperator.field_m = su.createToolkitSprite(tla.field_g, param0, (byte) -99);
+          ColourFillOperator.field_m = su.createToolkitSprite(OpenGlDisplayLists.field_g, param0, (byte) -99);
           CachedTextLayout.field_l = su.createToolkitSprite(CharacterChoice.field_c, param0, (byte) 25);
           lh.field_b = su.createToolkitSprite(LegacyOpenGlTexture3D.field_l, param0, (byte) 127);
           vua.field_A = su.createToolkitSprite(wj.field_a, param0, (byte) 126);
@@ -91,7 +91,7 @@ abstract class SceneLight extends IntrusiveNode {
           OpenGlFramebuffer.field_i = LoadLevelCommand.createToolkitSprites(param0, WallCrusherComponent.field_F, -67);
           qf.field_k = new ToolkitSprite[OpenGlFramebuffer.field_i.length];
           for (var2_intLifetime2 = 0; OpenGlFramebuffer.field_i.length > var2_intLifetime2; var2_intLifetime2++) {
-            var13 = WallCrusherComponent.field_F[var2_intLifetime2].e();
+            var13 = WallCrusherComponent.field_F[var2_intLifetime2].getArgbPixels();
             var12 = var13;
             var3 = var12;
             for (var4 = 0; var13.length > var4; var4++) {

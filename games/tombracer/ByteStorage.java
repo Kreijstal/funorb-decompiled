@@ -8,7 +8,7 @@ abstract class ByteStorage {
     static tr field_a;
     static String field_c;
 
-    abstract byte[] a(byte param0, int param1, int param2);
+    abstract byte[] getBytes(byte param0, int param1, int param2);
 
     public static void releaseStatics(int param0) {
         field_a = null;

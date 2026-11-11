@@ -89,7 +89,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
-          if (!DefaultRoomObjectRenderer.field_b.b(108)) {
+          if (!DefaultRoomObjectRenderer.field_b.isComplete(108)) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }

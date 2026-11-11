@@ -294,8 +294,8 @@ final class qt {
                     SimpleConditionBehaviour.field_r = ((PacketBuffer) ((Object) var1)).readLong(290646880);
                     return;
                   }
-                  ssa.reportClientError("L1: " + kk.formatPacketDump(32), (byte) 118, (Throwable) null);
-                  dea.closeGameSocket(60);
+                  ClipStack.reportClientError("L1: " + kk.formatPacketDump(32), (byte) 118, (Throwable) null);
+                  DropAnimation.closeGameSocket(60);
                   return;
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);

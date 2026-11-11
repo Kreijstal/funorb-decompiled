@@ -21,8 +21,8 @@ public class dxVertexLayout extends mna {
         for (var5 = 0; var5 < param1.length; var5++) {
           var6 = 0;
           var7 = param1[var5];
-          for (var8 = 0; var7.b((byte) 56) > var8; var8++) {
-            var9 = var7.b(0, var8);
+          for (var8 = 0; var7.size((byte) 56) > var8; var8++) {
+            var9 = var7.get(0, var8);
             if (var9 == gj.field_p) {
               var10.addElement(var5, 2, 0, 0, 0, var6);
             } else {

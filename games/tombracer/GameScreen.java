@@ -183,11 +183,11 @@ abstract class GameScreen {
     }
 
     final static void c(byte param0) {
-        og.b(0);
+        og.exitFullscreen(0);
         if (null != nma.field_l) {
           CharacterChoiceFactory.detachCanvasInput(nma.field_l, false);
         }
-        ContextMenu.f((byte) 101);
+        ContextMenu.releaseKeyboardHandler((byte) 101);
         BeamSegment.releaseMouseHandler(5);
         if (param0 == 62) {
           RasterizerOperator.closeNetworkAndCacheResources(0);
@@ -195,7 +195,7 @@ abstract class GameScreen {
             ql.field_k.writeCipheredOpcode(1, -2988);
             bl.flushPacketBuffer(0, -1);
           }
-          dea.closeGameSocket(60);
+          DropAnimation.closeGameSocket(60);
           return;
         }
         GameScreen.a(-50, false, 79);
@@ -204,7 +204,7 @@ abstract class GameScreen {
           ql.field_k.writeCipheredOpcode(1, -2988);
           bl.flushPacketBuffer(0, -1);
         }
-        dea.closeGameSocket(60);
+        DropAnimation.closeGameSocket(60);
     }
 
     abstract boolean isFullScreen(int param0);

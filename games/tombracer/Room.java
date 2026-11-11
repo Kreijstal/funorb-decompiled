@@ -33,7 +33,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     private int ticksSinceReset;
     private BitPacketBuffer data;
     private SwitchableIdAllocator trapIdAllocator;
-    private bba field_U;
+    private RoomVariant field_U;
     private int tick;
     private boolean mirrored;
     private SwitchableIdAllocator componentIdAllocator;
@@ -83,7 +83,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
     }
 
-    final bba w(int param0) {
+    final RoomVariant getVariant(int param0) {
         if (param0 != 0) {
           this.field_C = 2;
         }
@@ -409,9 +409,9 @@ final class Room implements SwitchableScope, Renderable, noa {
             this.getPlayer(-9).mirror((byte) -57);
           }
           this.corpses.mirrorInRoom(this, -110);
-          this.projectilePool.a(121);
-          this.puddlePool.a(119);
-          this.particlePool.a(97);
+          this.projectilePool.mirrorAll(121);
+          this.puddlePool.mirrorAll(119);
+          this.particlePool.mirrorAll(97);
         }
     }
 
@@ -785,7 +785,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           var7.addToScene(-1704, this.scene);
           var7 = (RoomComponent) (this.components.next(116));
         }
-        dea.roomObjectRenderer.prepareRoom(121, this);
+        DropAnimation.roomObjectRenderer.prepareRoom(121, this);
         this.tileGrid.addTilesToScene(this.scene, 0);
         if (null != this.soundQueue) {
           this.soundQueue.clear((byte) 119);
@@ -1007,7 +1007,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (param0 != 6029) {
           return -14;
         }
-        return null == this.field_U ? -1 : this.field_U.a(false);
+        return null == this.field_U ? -1 : this.field_U.getIndex(false);
     }
 
     final void setTick(byte param0, int param1) {
@@ -1625,7 +1625,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (param2 < 104) {
           field_p = (ToolkitSprite[][]) null;
         }
-        if (var7.b(0) ||
+        if (var7.isDusty(0) ||
           uca.cosmeticRandom.nextBounded(5, 0) == 0) {
           this.particleEffects.spawnDust(param0, param3, param5, param1, 0, param4);
         }
@@ -1768,7 +1768,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (var7 == null) {
           return;
         }
-        if (var7.b(0) &&
+        if (var7.isDusty(0) &&
           0 == uca.cosmeticRandom.nextBounded(5, 0)) {
           this.particleEffects.spawnDust(param4, param1, param3, param2, 0, param5);
         }

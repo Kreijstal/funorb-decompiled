@@ -149,7 +149,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   var10_ref_String = LegacyOpenGlFlowingWaterEffect.formatText(84, ld.field_f, new String[]{Integer.toString(ValidatedTextInputWidget.field_K)});
                 }
                 if ((lh.field_a & 16) == 0 &&
-                  !tla.field_e) {
+                  !OpenGlDisplayLists.field_e) {
                   pk.field_z.field_w = hg.field_g.field_C;
                 }
                 pk.field_z.field_r = pk.field_z.field_r + "<br>" + var10_ref_String;
@@ -335,7 +335,7 @@ final class CoinBagItemComponent extends ItemComponent {
                       hp.field_a[var16] != null) {
                       var18_int = hp.field_a[var16][var17_int];
                       if (0 != var18_int &&
-                        !dea.field_c) {
+                        !DropAnimation.field_c) {
                         var11 = 1;
                       }
                       if (var13Lifetime1 < var18_int) {
@@ -353,7 +353,7 @@ final class CoinBagItemComponent extends ItemComponent {
                         var14 = var18_intLifetime1;
                       }
                       if (0 != var18_intLifetime1 &&
-                        !dea.field_c) {
+                        !DropAnimation.field_c) {
                         var11 = 1;
                       }
                     }
@@ -460,15 +460,15 @@ final class CoinBagItemComponent extends ItemComponent {
           }
           stackIn_168_0 = C2SRoomResultPacket.field_c;
           stackIn_168_1 = -98;
-          stackIn_169_2 = (param4) && (!param0) && (!tla.field_e);
+          stackIn_169_2 = (param4) && (!param0) && (!OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_168_0).c(stackIn_168_1, stackIn_169_2);
           stackIn_173_0 = dka.field_b;
           stackIn_173_1 = 67;
-          stackIn_174_2 = (param4) && (!param0) && (!tla.field_e);
+          stackIn_174_2 = (param4) && (!param0) && (!OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_173_0).c(stackIn_173_1, stackIn_174_2);
           stackIn_178_0 = PlayerModel.field_a;
           stackIn_178_1 = 36;
-          stackIn_179_2 = (param4) && (!param0) && (tla.field_e);
+          stackIn_179_2 = (param4) && (!param0) && (OpenGlDisplayLists.field_e);
           ((UiComponent) (Object) stackIn_178_0).c(stackIn_178_1, stackIn_179_2);
           rm.field_e.field_a.processTabPresses((byte) -98);
           if (param1 != -1) {
@@ -482,10 +482,10 @@ final class CoinBagItemComponent extends ItemComponent {
               LegacyOpenGlCubeTexture.field_p = true;
             }
             if (pk.field_z.field_y != 0) {
-              tla.field_e = true;
+              OpenGlDisplayLists.field_e = true;
             }
             if (Trap.field_q.field_y != 0) {
-              tla.field_e = false;
+              OpenGlDisplayLists.field_e = false;
             }
             cm.updateLobbyGameOptionControls(param2, C2SChooseRewardPacket.field_a, param1 ^ 21289, false);
           }

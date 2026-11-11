@@ -153,7 +153,7 @@ final class BrazierComponent extends PrefabComponent {
           var9.setObstructionLevel(3, param1 - 3);
           var6 = rm.field_a;
           var7 = (FurnitureModel) (var6.createModel(4, 91));
-          var7.b(0, (byte) 77);
+          var7.setVariant(0, (byte) 77);
           var9.addModel((TrapPart) null, (byte) 124, var7);
           var8 = (LightSourceModel) (var6.createModel(5, 74));
           var8.setElevationOffset(64, 122);

@@ -28,7 +28,7 @@ final class lla {
         }
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int nextPowerOfTwo(boolean param0, int param1) {
         param1--;
         if (!param0) {
           param1 = param1 | param1 >>> 1;
@@ -38,7 +38,7 @@ final class lla {
           param1 = param1 | param1 >>> 16;
           return 1 + param1;
         }
-        lla.a(false, 59);
+        lla.nextPowerOfTwo(false, 59);
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;
         param1 = param1 | param1 >>> 4;

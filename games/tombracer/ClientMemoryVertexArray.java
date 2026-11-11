@@ -11,7 +11,7 @@ final class ClientMemoryVertexArray extends ora implements LegacyVertexArray {
 
     public final void upload(int param0, int param1, byte param2, byte[] param3) {
         try {
-          this.a(param3, param1);
+          this.setData(param3, param1);
           if (param2 > -109) {
             this.getPointer(-37);
           }

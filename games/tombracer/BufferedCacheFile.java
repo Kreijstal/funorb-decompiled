@@ -68,9 +68,9 @@ final class BufferedCacheFile {
         }
     }
 
-    final void b(byte param0) throws IOException {
+    final void close(byte param0) throws IOException {
         this.flush((byte) -16);
-        this.field_b.b((byte) -127);
+        this.field_b.close((byte) -127);
         if (param0 >= -14) {
           BufferedCacheFile.releaseStatics(false);
         }
@@ -105,7 +105,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final void a(byte[] param0, int param1) throws IOException {
+    final void readFully(byte[] param0, int param1) throws IOException {
         try {
           this.readFully(param0, param0.length, param1, (byte) -112);
         } catch (RuntimeException runtimeException) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dea {
+final class DropAnimation {
     static RoomObjectRenderer roomObjectRenderer;
     private float field_d;
     static boolean field_c;
@@ -156,7 +156,7 @@ final class dea {
         return (int)this.field_b;
     }
 
-    public dea() {
+    public DropAnimation() {
         this(0);
     }
 
@@ -169,7 +169,7 @@ final class dea {
         roomObjectRenderer = null;
     }
 
-    dea(int param0) {
+    DropAnimation(int param0) {
         this.field_e = (float)param0;
         this.startDrop(-125);
     }

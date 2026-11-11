@@ -243,19 +243,19 @@ final class ResultsPhase extends MatchPhase {
           this.field_s = false;
         }
         ura.a(-10985);
-        Room.field_j.a(0, 0);
-        ik.field_h.a(0, 0);
-        WidgetStyleLayer.field_b[1].a(50, -10);
+        Room.field_j.draw(0, 0);
+        ik.field_h.draw(0, 0);
+        WidgetStyleLayer.field_b[1].draw(50, -10);
         var3 = -250 + aaa.a(false);
         var4 = -10 + WidgetStyleLayer.field_b[1].height() - 70;
-        WidgetStyleLayer.field_b[1].a(var3, -10);
-        nm.field_l.a(var3, 0);
-        nm.field_l.a(var3, var4);
+        WidgetStyleLayer.field_b[1].draw(var3, -10);
+        nm.field_l.draw(var3, 0);
+        nm.field_l.draw(var3, var4);
         var5 = 3;
         var6 = (var3 - 50) / (var5 + 1);
         for (var7 = 0; var5 > var7; var7++) {
           var8 = 50 + (1 + var7) * var6;
-          WidgetStyleLayer.field_b[0].a(var8, 0);
+          WidgetStyleLayer.field_b[0].draw(var8, 0);
         }
         for (var7Lifetime1 = 0; 3 > var7Lifetime1; var7Lifetime1++) {
           var8Lifetime1 = -30 + (var3 - 50 >> 2) * 3;
@@ -276,10 +276,10 @@ final class ResultsPhase extends MatchPhase {
           var10 = stackIn_12_0 + (stackIn_12_1 + stackIn_13_2);
           var11 = -50 + var10;
           var12 = var10 - 25;
-          eca.field_c[2].a(3 + var9Lifetime1, var11, eca.field_c[2].width() >> 2, eca.field_c[2].height() >> 2);
+          eca.field_c[2].drawScaled(3 + var9Lifetime1, var11, eca.field_c[2].width() >> 2, eca.field_c[2].height() >> 2);
           var13 = var10;
-          eca.field_c[1].a(var9Lifetime1, var12, eca.field_c[1].width() >> 2, eca.field_c[1].height() >> 2);
-          eca.field_c[0].a(2 + var9Lifetime1, var13, eca.field_c[0].width() / 3, eca.field_c[0].height() / 3);
+          eca.field_c[1].drawScaled(var9Lifetime1, var12, eca.field_c[1].width() >> 2, eca.field_c[1].height() >> 2);
+          eca.field_c[0].drawScaled(2 + var9Lifetime1, var13, eca.field_c[0].width() / 3, eca.field_c[0].height() / 3);
           var14_ref_gsa = this.field_r[var8Lifetime2];
           if (!var14_ref_gsa.field_l) {
             stackIn_16_0 = 0;
@@ -359,7 +359,7 @@ final class ResultsPhase extends MatchPhase {
             var24 = stackIn_52_0;
             var31 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var21_int]];
             var25 = var31;
-            var25.a(var23, var24, var31.width() >> 1, var31.height() >> 1);
+            var25.drawScaled(var23, var24, var31.width() >> 1, var31.height() >> 1);
           }
           var23Lifetime1 = 80 + var9Lifetime1;
           var24Lifetime1 = 32 + var10;
@@ -442,7 +442,7 @@ final class ResultsPhase extends MatchPhase {
             }
             var17Lifetime1 = stackIn_167_0 + (stackIn_167_1 - stackIn_168_2);
             var18 = var9Lifetime2 - 70;
-            eca.field_c[0].a(var17Lifetime1, -5 + var18, eca.field_c[0].width() >> 1, eca.field_c[0].height() >> 1);
+            eca.field_c[0].drawScaled(var17Lifetime1, -5 + var18, eca.field_c[0].width() >> 1, eca.field_c[0].height() >> 1);
             RoomEffectTraps.a(0, -123, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             RoomEffectTraps.a(0, -51, 17 + var18, var39, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             RoomEffectTraps.a(0, -103, var18 + 55, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
@@ -452,7 +452,7 @@ final class ResultsPhase extends MatchPhase {
               var20 = -11 + var18;
               var41 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
               var21 = var41;
-              var21.a(var19Lifetime1, var20, var41.width() >> 1, var41.height() >> 1);
+              var21.drawScaled(var19Lifetime1, var20, var41.width() >> 1, var41.height() >> 1);
             }
           } else if (!this.field_m &&
             var7Lifetime2 >= var8Lifetime3 * 50 + MonsterRemains.field_d &&
@@ -493,7 +493,7 @@ final class ResultsPhase extends MatchPhase {
             }
             var17Lifetime1 = stackIn_142_0 - stackIn_143_1;
             var18 = var9Lifetime2 - 70;
-            eca.field_c[1].a(var17Lifetime1, -5 + var18, eca.field_c[1].width() >> 2, eca.field_c[1].height() >> 2);
+            eca.field_c[1].drawScaled(var17Lifetime1, -5 + var18, eca.field_c[1].width() >> 2, eca.field_c[1].height() >> 2);
             RoomEffectTraps.a(0, -42, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             RoomEffectTraps.a(0, -124, var18 + 17, var36, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             RoomEffectTraps.a(0, -92, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
@@ -503,7 +503,7 @@ final class ResultsPhase extends MatchPhase {
               var20 = var18 - 11;
               var38 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
               var21 = var38;
-              var21.a(var19Lifetime1, var20, var38.width() >> 1, var38.height() >> 1);
+              var21.drawScaled(var19Lifetime1, var20, var38.width() >> 1, var38.height() >> 1);
             }
           } else {
             if (!this.field_o &&
@@ -541,7 +541,7 @@ final class ResultsPhase extends MatchPhase {
               }
               var17Lifetime1 = stackIn_117_0 + (stackIn_117_1 - stackIn_118_2);
               var18 = -70 + var9Lifetime2;
-              eca.field_c[2].a(var17Lifetime1, var18 - 5, eca.field_c[2].width() >> 2, eca.field_c[2].height() >> 2);
+              eca.field_c[2].drawScaled(var17Lifetime1, var18 - 5, eca.field_c[2].width() >> 2, eca.field_c[2].height() >> 2);
               RoomEffectTraps.a(0, -30, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
               RoomEffectTraps.a(0, -100, var18 + 17, var33, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
               RoomEffectTraps.a(0, -126, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
@@ -551,7 +551,7 @@ final class ResultsPhase extends MatchPhase {
                 var20 = -11 + var18;
                 var35 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
                 var21 = var35;
-                var21.a(var19Lifetime1, var20, var35.width() >> 1, var35.height() >> 1);
+                var21.drawScaled(var19Lifetime1, var20, var35.width() >> 1, var35.height() >> 1);
               }
             }
           }
@@ -838,7 +838,7 @@ final class ResultsPhase extends MatchPhase {
         if (fd.field_e <= var3Lifetime1 &&
           !this.field_s) {
           if (this.protocol != null) {
-            this.protocol.a(6418);
+            this.protocol.sendResultsFinished(6418);
           }
           this.field_s = true;
         }

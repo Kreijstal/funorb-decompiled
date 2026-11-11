@@ -84,7 +84,7 @@ final class au extends aa {
             }
             var12 = (bna) (MovingWallComponent.field_N.first(-80));
             if (var12 == null) {
-              dea.closeGameSocket(60);
+              DropAnimation.closeGameSocket(60);
               return;
             }
             var12.field_f = var3;
@@ -94,18 +94,18 @@ final class au extends aa {
             if (var2 == 1) {
               var13 = (cga) (aba.field_a.first(-80));
               if (var13 == null) {
-                dea.closeGameSocket(60);
+                DropAnimation.closeGameSocket(60);
                 return;
               }
               var13.unlink(35);
             } else {
               if (var2 != 2) {
-                ssa.reportClientError("A1: " + kk.formatPacketDump(32), (byte) 116, (Throwable) null);
-                dea.closeGameSocket(param0 ^ 63);
+                ClipStack.reportClientError("A1: " + kk.formatPacketDump(32), (byte) 116, (Throwable) null);
+                DropAnimation.closeGameSocket(param0 ^ 63);
               } else {
                 var15 = (bna) (MovingWallComponent.field_N.first(-80));
                 if (var15 == null) {
-                  dea.closeGameSocket(60);
+                  DropAnimation.closeGameSocket(60);
                   return;
                 }
                 var15.field_f = SwitchComponent.e(true);

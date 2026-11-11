@@ -196,7 +196,7 @@ class TextInputWidget extends FocusableWidget {
         StringBuilder stackIn_122_1 = null;
         String stackIn_123_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ssa var10 = null;
+        ClipStack var10 = null;
         RuntimeException var10_ref = null;
         int var11 = 0;
         int var12 = 0;
@@ -270,29 +270,29 @@ class TextInputWidget extends FocusableWidget {
               var23 = var13 * param7 / (var13 + var14) + param8;
             }
             if (null != param1[0]) {
-              var10.a(var21, param8, (byte) -12, var23, param3);
+              var10.pushIntersectClip(var21, param8, (byte) -12, var23, param3);
               param1[0].draw(param3, param8, param0, param9, param6);
-              var10.a(97);
+              var10.popClip(97);
             }
             if (null != param1[2]) {
-              var10.a(var15, param8, (byte) -12, var23, var22);
+              var10.pushIntersectClip(var15, param8, (byte) -12, var23, var22);
               param1[2].draw(var18, param8, param0, param9, param6);
-              var10.a(-88);
+              var10.popClip(-88);
             }
             if (param1[6] != null) {
-              var10.a(var21, var24, (byte) -12, var16, param3);
+              var10.pushIntersectClip(var21, var24, (byte) -12, var16, param3);
               param1[6].draw(param3, var20, param0, param9, param6);
-              var10.a(-33);
+              var10.popClip(-33);
             }
             if (null != param1[8]) {
-              var10.a(var15, var24, (byte) -12, var16, var22);
+              var10.pushIntersectClip(var15, var24, (byte) -12, var16, var22);
               param1[8].draw(var18, var20, param0, param9, param6);
-              var10.a(-66);
+              var10.popClip(-66);
             }
             boolean decompiledFrameCompleted4 = true;
             if (null != param1[1] &&
               param1[1].paddedWidth() != 0) {
-              var10.a(var22, param8, (byte) -12, var23, var21);
+              var10.pushIntersectClip(var22, param8, (byte) -12, var23, var21);
               var25 = var17;
               while (var25 < var18) {
                 param1[1].draw(var25, param8, param0, param9, param6);
@@ -303,13 +303,13 @@ class TextInputWidget extends FocusableWidget {
                 }
               }
               if (decompiledFrameCompleted4) {
-                var10.a(100);
+                var10.popClip(100);
               }
             }
             boolean decompiledFrameCompleted3 = true;
             if (null != param1[7] &&
               0 != param1[7].paddedWidth()) {
-              var10.a(var22, var24, (byte) -12, var16, var21);
+              var10.pushIntersectClip(var22, var24, (byte) -12, var16, var21);
               var25Lifetime1 = var17;
               while (var25Lifetime1 < var18) {
                 param1[7].draw(var25Lifetime1, var20, param0, param9, param6);
@@ -320,13 +320,13 @@ class TextInputWidget extends FocusableWidget {
                 }
               }
               if (decompiledFrameCompleted3) {
-                var10.a(121);
+                var10.popClip(121);
               }
             }
             boolean decompiledFrameCompleted2 = true;
             if (param1[3] != null &&
               param1[3].paddedHeight() != 0) {
-              var10.a(var21, var23, (byte) -12, var24, param3);
+              var10.pushIntersectClip(var21, var23, (byte) -12, var24, param3);
               var25Lifetime2 = var19;
               while (var25Lifetime2 < var20) {
                 param1[3].draw(param3, var25Lifetime2, param0, param9, param6);
@@ -337,13 +337,13 @@ class TextInputWidget extends FocusableWidget {
                 }
               }
               if (decompiledFrameCompleted2) {
-                var10.a(-83);
+                var10.popClip(-83);
               }
             }
             boolean decompiledFrameCompleted1 = true;
             if (param1[5] != null &&
               param1[5].paddedHeight() != 0) {
-              var10.a(var15, var23, (byte) -12, var24, var22);
+              var10.pushIntersectClip(var15, var23, (byte) -12, var24, var22);
               var25Lifetime3 = var19;
               while (var20 > var25Lifetime3) {
                 param1[5].draw(var18, var25Lifetime3, param0, param9, param6);
@@ -354,14 +354,14 @@ class TextInputWidget extends FocusableWidget {
                 }
               }
               if (decompiledFrameCompleted1) {
-                var10.a(99);
+                var10.popClip(99);
               }
             }
             boolean decompiledFrameCompleted0 = true;
             if (param1[4] != null &&
               0 != param1[4].paddedWidth() &&
               param1[4].paddedHeight() != 0) {
-              var10.a(var22, var23, (byte) -12, var24, var21);
+              var10.pushIntersectClip(var22, var23, (byte) -12, var24, var21);
               var25Lifetime4 = var19;
               while (var25Lifetime4 < var20) {
                 stackIn_111_0 = var17;
@@ -377,7 +377,7 @@ class TextInputWidget extends FocusableWidget {
                 var25Lifetime4 = var25Lifetime4 + param1[4].paddedHeight();
               }
               if (decompiledFrameCompleted0) {
-                var10.a(123);
+                var10.popClip(123);
               }
             }
             if (decompiledFrameCompleted0) {

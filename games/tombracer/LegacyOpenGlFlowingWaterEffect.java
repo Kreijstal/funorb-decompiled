@@ -3,7 +3,7 @@
  */
 final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
     private aaa field_c;
-    private tla field_d;
+    private OpenGlDisplayLists field_d;
 
     final static String formatText(byte param0, String param1, String[] param2) {
         StringBuilder discarded$2 = null;
@@ -120,7 +120,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
 
     final boolean isSupported(int param0) {
         if (param0 != -11921) {
-          this.field_d = (tla) null;
+          this.field_d = (OpenGlDisplayLists) null;
           return true;
         }
         return true;
@@ -204,7 +204,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
     }
 
     final void disable(boolean param0) {
-        this.field_d.a(4864, '\001');
+        this.field_d.callList(4864, '\001');
         if (param0) {
           return;
         }
@@ -217,8 +217,8 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
         super(param0);
         try {
           this.field_c = param1;
-          this.field_d = new tla(param0, 2);
-          this.field_d.a((byte) 6, 0);
+          this.field_d = new OpenGlDisplayLists(param0, 2);
+          this.field_d.beginList((byte) 6, 0);
           this.toolkit.e(1, true);
           if (this.field_c.field_g) {
             jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
@@ -229,8 +229,8 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           jaggl.OpenGL.glEnable(3168);
           jaggl.OpenGL.glEnable(3169);
           this.toolkit.e(0, true);
-          this.field_d.b((byte) 77);
-          this.field_d.a((byte) 6, 1);
+          this.field_d.endList((byte) 77);
+          this.field_d.beginList((byte) 6, 1);
           this.toolkit.e(1, true);
           if (this.field_c.field_g) {
             jaggl.OpenGL.glDisable(3170);
@@ -238,14 +238,14 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
           this.toolkit.e(0, true);
-          this.field_d.b((byte) 10);
+          this.field_d.endList((byte) 10);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void enable(boolean param0, int param1) {
-        this.field_d.a(4864, '\0');
+        this.field_d.callList(4864, '\0');
         int var3 = -99 / ((56 - param1) / 48);
         if (this.field_c.field_g) {
           this.toolkit.e(1, true);

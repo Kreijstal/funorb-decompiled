@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kp {
+final class HardwareTextureCache {
     private TextureProvider field_e;
     static String field_d;
     private HardwareGraphicsToolkit field_a;
@@ -17,11 +17,11 @@ final class kp {
         field_d = null;
     }
 
-    final void a(int param0) {
+    final void ageCache(int param0) {
         this.field_b.demoteOldEntries(123, param0);
     }
 
-    final GpuTexture2D a(int param0, int param1) {
+    final GpuTexture2D getTexture(int param0, int param1) {
         int[] var13 = null;
         GpuTexture2D var14 = null;
         int[] var22 = null;
@@ -103,7 +103,7 @@ final class kp {
         return var21Lifetime2;
     }
 
-    kp(HardwareGraphicsToolkit param0, TextureProvider param1) {
+    HardwareTextureCache(HardwareGraphicsToolkit param0, TextureProvider param1) {
         this.field_b = new SoftReferenceCache(256);
         try {
           this.field_e = param1;

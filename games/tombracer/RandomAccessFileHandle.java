@@ -61,11 +61,11 @@ final class RandomAccessFileHandle {
     protected final void finalize() throws Throwable {
         if (this.field_a != null) {
           System.out.println("");
-          this.b((byte) -102);
+          this.close((byte) -102);
         }
     }
 
-    final void b(byte param0) throws IOException {
+    final void close(byte param0) throws IOException {
         if (this.field_a != null) {
           this.field_a.close();
           this.field_a = null;

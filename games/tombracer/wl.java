@@ -6,7 +6,7 @@ final class wl extends IntrusiveNode {
     static AnimationSequence[][] field_f;
     static int[] field_i;
     GraphicsToolkit field_g;
-    ssa field_j;
+    ClipStack field_j;
 
     public static void releaseStatics(byte param0) {
         field_i = null;
@@ -17,7 +17,7 @@ final class wl extends IntrusiveNode {
         }
     }
 
-    wl(GraphicsToolkit param0, ssa param1) {
+    wl(GraphicsToolkit param0, ClipStack param1) {
         try {
           this.field_g = param0;
           this.field_j = param1;

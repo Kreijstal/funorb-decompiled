@@ -66,14 +66,14 @@ final class KeySwitchComponent extends SwitchComponent {
           var9.setObstructionLevel(3, param1 ^ param1);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new KeyLockBehaviour(param2, param0);
-          var5.b(0, 1);
+          var5.setMaxLevel(0, 1);
           this.bindSwitchState(var5, (byte) -101);
           var6 = var5.getSwitchState((byte) -98);
           var6.setUses(1, 106);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (SwitchModel) (var7.createModel(9, param1 + 103));
-          var8.b(3, (byte) -112);
+          var8.setVariant(3, (byte) -112);
           var9.addModel(var5, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;

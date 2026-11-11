@@ -95,7 +95,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
           if (var5 == 0) {
             var5 = 1;
           }
-          var8Lifetime2 = qva.a((byte) -73, var5, var4);
+          var8Lifetime2 = qva.headingFromVector((byte) -73, var5, var4);
           var9Lifetime2 = MouseInputHandler.sin2048((byte) 107, var8Lifetime2 >> 2);
           var10Lifetime2 = ModelAnimator.cos2048(0, var8Lifetime2 >> 2);
           var11Lifetime2 = doa.a(2, this.field_v, var9Lifetime2);
@@ -173,7 +173,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
           var11Lifetime1 = var5;
           this.trap.move((byte) -120, var10Lifetime1, var11Lifetime1);
         } else {
-          var8Lifetime1 = qva.a((byte) -73, var5, var4);
+          var8Lifetime1 = qva.headingFromVector((byte) -73, var5, var4);
           var9Lifetime1 = MouseInputHandler.sin2048((byte) 107, var8Lifetime1 >> 2);
           var10Lifetime1 = ModelAnimator.cos2048(0, var8Lifetime1 >> 2);
           var11Lifetime1 = doa.a(2, this.field_v, var9Lifetime1);
@@ -183,7 +183,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         return;
     }
 
-    final void c(int param0, int param1) {
+    final void setStopDistance(int param0, int param1) {
         this.field_q = param1;
         int var3 = 108 / ((param0 + 57) / 33);
     }
@@ -275,7 +275,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         return param1;
     }
 
-    final void a(boolean param0, int param1) {
+    final void setSpeed(boolean param0, int param1) {
         this.field_v = param1;
         if (param0) {
           field_p = (String) null;
@@ -294,7 +294,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         try {
           super.attachToTrap(66, param1);
           if (param0 <= 35) {
-            this.c(65, 104);
+            this.setStopDistance(65, 104);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "bg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

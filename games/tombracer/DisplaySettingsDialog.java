@@ -233,7 +233,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 == 0) {
-              stackIn_74_0 = tla.field_a;
+              stackIn_74_0 = OpenGlDisplayLists.field_a;
             } else {
               stackIn_74_0 = RewardChoicePhase.field_w;
             }
@@ -524,7 +524,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           if (param1 == this.field_V) {
             if (var3 == param1) {
               if (this.field_ab != null) {
-                var4 = this.field_ab.i((byte) 126);
+                var4 = this.field_ab.getSelectedIndex((byte) 126);
                 var5 = this.field_P[var4];
                 if (OpenGlSceneLight.field_o.field_s == var5.field_a &&
                   OpenGlSceneLight.field_o.field_p == var5.field_c) {
@@ -632,11 +632,11 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_W == this.field_S) {
-          og.b(param0 + 1);
+          og.exitFullscreen(param0 + 1);
           kla.b(0);
         } else {
           if (this.field_S == this.field_N) {
-            og.b(0);
+            og.exitFullscreen(0);
             cva.a(-117);
           } else {
             if (this.field_S != this.field_V) {
@@ -645,7 +645,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             }
             else {
               if (null != this.field_ab) {
-                var2 = this.field_ab.i((byte) 123);
+                var2 = this.field_ab.getSelectedIndex((byte) 123);
                 if (var2 < 0) {
                   StringCursor.a(-30600, true);
                   this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
@@ -722,12 +722,12 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             this.field_z.c(new DisplaySettingsDialog(this.field_z), 109);
           }
           if (this.field_ab != null) {
-            stackIn_14_0 = (this.field_ab.j((byte) -125)) ? 0 : 1;
+            stackIn_14_0 = (this.field_ab.isOpen((byte) -125)) ? 0 : 1;
             if (stackIn_14_0 != (this.field_O ? 1 : 0)) {
               return;
             }
             this.selectButton(20306, this.field_V);
-            this.field_O = this.field_ab.j((byte) 76);
+            this.field_O = this.field_ab.isOpen((byte) 76);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

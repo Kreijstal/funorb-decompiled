@@ -7,7 +7,7 @@ final class io {
     static iw field_c;
     static IntrusiveDeque field_d;
 
-    final static byte a(int param0, char param1) {
+    final static byte charToCp1252(int param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;

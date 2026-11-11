@@ -234,7 +234,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
               break;
             }
             if (var4 == null) {
-              dea.closeGameSocket(60);
+              DropAnimation.closeGameSocket(60);
               return;
             }
             var5 = var28.readUnsignedByte(255);
@@ -333,15 +333,15 @@ final class CrossedSineBandsOperator extends TextureOperator {
               break;
             }
             if (var6_ref_kb == null) {
-              dea.closeGameSocket(60);
+              DropAnimation.closeGameSocket(60);
               return;
             }
             var6_ref_kb.serverResult = var4_long;
             var6_ref_kb.unlink(39);
             return;
           }
-          ssa.reportClientError("HS1: " + kk.formatPacketDump(32), (byte) 121, (Throwable) null);
-          dea.closeGameSocket(60);
+          ClipStack.reportClientError("HS1: " + kk.formatPacketDump(32), (byte) 121, (Throwable) null);
+          DropAnimation.closeGameSocket(60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -359,7 +359,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
     }
 
     final void onDecoded(byte param0) {
-        tka.b((byte) 105);
+        tka.buildSinCosTables((byte) 105);
         if (param0 != 116) {
           this.field_p = 92;
         }
@@ -398,7 +398,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         if (0 < fp.field_e) {
           CoinBagItemComponent.updateLobbyGameControls(param1, -1, param6, param8, param5);
         }
-        if (tla.field_e &&
+        if (OpenGlDisplayLists.field_e &&
           C2SChooseRewardPacket.field_a.field_Mb >= C2SChooseRewardPacket.field_a.field_Jb) {
           RasterShape.field_e.field_X = false;
           bsa.field_j.field_vb.field_r = RandomAccessFileHandle.field_c;

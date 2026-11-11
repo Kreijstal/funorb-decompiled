@@ -64,7 +64,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         }
     }
 
-    final boolean C(int param0) {
+    final boolean storesSpeed(int param0) {
         if (param0 != 1760) {
           return false;
         }
@@ -143,7 +143,7 @@ final class WheeledMountComponent extends PathMoverComponent {
 
     final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
-          this.C(8);
+          this.storesSpeed(8);
           return false;
         }
         return false;
@@ -180,13 +180,13 @@ final class WheeledMountComponent extends PathMoverComponent {
           var8.setPushMode(126, 2);
           var8.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = this.createPathMove((byte) -41, param2, param0);
-          var5.a(true, -606738686);
-          var5.b(4, true);
-          var5.c(this.field_Q * 8, -60);
+          var5.setTurnsToFaceWaypoint(true, -606738686);
+          var5.setStopsWhileTurning(4, true);
+          var5.setTurnSpeed(this.field_Q * 8, -60);
           var8.addLocomotor(var5, 0);
           var6 = rm.field_a;
           var7 = (TrapBaseModel) (var6.createModel(16, param1 + 71));
-          var7.b(8022, 0);
+          var7.setVariant(8022, 0);
           var8.addModel((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var8;
           return stackIn_1_0;

@@ -125,9 +125,9 @@ final class dta {
             if (var9.playersRemaining > 1) {
               if (var9.hasFinishedCourse((byte) 90, param2)) {
                 tga.field_a.setClip(param0, param5, param1, param6);
-                Room.field_j.a(0, 0);
+                Room.field_j.draw(0, 0);
                 SocketConnector.a(ad.field_i.toUpperCase(), 1, SingleChildWidget.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
-                SocketConnector.a(dea.formatTime(var9.getSimulationTick((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
+                SocketConnector.a(DropAnimation.formatTime(var9.getSimulationTick((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
                 tga.field_a.la();
                 return;
               }
@@ -143,9 +143,9 @@ final class dta {
             }
             if (var16 != 0) {
               var17 = 8;
-              ColourFillOperator.field_m.a(var17, 0);
+              ColourFillOperator.field_m.draw(var17, 0);
               var18 = 0;
-              var19 = dea.formatTime(var14, (byte) -8);
+              var19 = DropAnimation.formatTime(var14, (byte) -8);
               RoomEffectTraps.a(0, -106, var18 + (param5 + 34), var19.substring(0, -3 + var19.length()), 12 + param0 + var17, SingleChildWidget.field_v, 11903361);
               RoomEffectTraps.a(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), eda.field_f, 11903361);
               var20 = 1 + var12.getCourseIndex(-104);
@@ -160,11 +160,11 @@ final class dta {
               var22 = var12.getWeapon(-163585215);
               var23 = var12.s(0) ? 1 : 0;
               if (var22 != null) {
-                LegacyOpenGlEffectManager.field_a.a(var17Lifetime1 + 20, var18Lifetime1 + 5);
+                LegacyOpenGlEffectManager.field_a.draw(var17Lifetime1 + 20, var18Lifetime1 + 5);
               } else {
                 if (var23 != 0) {
                   ura.a(-10985);
-                  hp.a(1024, 512, 0, this.field_c.getModel((byte) 74), -1918106173, 70 + var18Lifetime1, var17Lifetime1 + 55);
+                  hp.drawModelPreview(1024, 512, 0, this.field_c.getModel((byte) 74), -1918106173, 70 + var18Lifetime1, var17Lifetime1 + 55);
                   RemovedFromGameMenu.f((byte) -6);
                 }
               }
@@ -202,18 +202,18 @@ final class dta {
                 }
                 qf.field_j.a((aa) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.height() - 32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
                 var30 = 30 + (-CachedTextLayout.field_l.height() + var18Lifetime2) + 80;
-                vua.field_A.a(param1 - (CachedTextLayout.field_l.width() - var24), var18Lifetime2 - CachedTextLayout.field_l.height() + (-vua.field_A.height() + var25));
+                vua.field_A.draw(param1 - (CachedTextLayout.field_l.width() - var24), var18Lifetime2 - CachedTextLayout.field_l.height() + (-vua.field_A.height() + var25));
                 var31 = (int)(-var28_double + (double)var30);
-                lh.field_b.a(-lh.field_b.width() + (param1 - 1) + var24, var18Lifetime2 - lh.field_b.height() - CachedTextLayout.field_l.height());
+                lh.field_b.draw(-lh.field_b.width() + (param1 - 1) + var24, var18Lifetime2 - lh.field_b.height() - CachedTextLayout.field_l.height());
                 tga.field_a.setClip(param1 - 28 + var24, 0, var24 - 20 + param1, 10 + var31);
                 if (var28_double < 80.0) {
-                  dn.field_d[(var14 >> 2) % 4 + 3].a(-48 + (param1 - CachedTextLayout.field_l.width()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.height() + vua.field_A.height())));
+                  dn.field_d[(var14 >> 2) % 4 + 3].draw(-48 + (param1 - CachedTextLayout.field_l.width()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.height() + vua.field_A.height())));
                 }
                 tga.field_a.la();
                 tga.field_a.setClip(param1 - (30 - var24), var31, -20 + param1 + var24, var30);
-                MirrorBehaviour.field_r.a(var24 + (-30 + param1), var31);
+                MirrorBehaviour.field_r.draw(var24 + (-30 + param1), var31);
                 tga.field_a.la();
-                CachedTextLayout.field_l.a(-1 + param1 - CachedTextLayout.field_l.width() + var24, -CachedTextLayout.field_l.height() + var18Lifetime2);
+                CachedTextLayout.field_l.draw(-1 + param1 - CachedTextLayout.field_l.width() + var24, -CachedTextLayout.field_l.height() + var18Lifetime2);
               }
               if (var24 > 30) {
                 var24 = 35;
@@ -221,12 +221,12 @@ final class dta {
               var18Lifetime3 = 0;
               var17Lifetime3 = var24 + (param1 - 60);
               var26Lifetime1 = var17Lifetime3;
-              tv.field_wb.a(26 + (var17Lifetime3 + (-var24 - (tv.field_wb.width() >> 1))), -42 + param6);
+              tv.field_wb.draw(26 + (var17Lifetime3 + (-var24 - (tv.field_wb.width() >> 1))), -42 + param6);
               for (var27_intLifetime1 = 0; var27_intLifetime1 < 3; var27_intLifetime1++) {
                 var28_int = -68 + param6;
                 var29 = var12.getRoomTreasure(393216, var27_intLifetime1);
                 for (var30Lifetime1 = 0; var29 > var30Lifetime1; var30Lifetime1++) {
-                  PlayerProfile.field_r[var27_intLifetime1].a(var26Lifetime1, var28_int);
+                  PlayerProfile.field_r[var27_intLifetime1].draw(var26Lifetime1, var28_int);
                   var28_int -= 5;
                 }
                 var26Lifetime1 -= 20;
@@ -239,7 +239,7 @@ final class dta {
               S2CNextRoundPacket.a(4, var28, var41.toUpperCase(), 34 + (var17Lifetime3 + (10 - var24)), 0, -16 + param6, 11903361);
               var18Lifetime4 = 0;
               var17Lifetime4 = param1 - var8_int - 140;
-              bd.field_i.a(var17Lifetime4, var18Lifetime4);
+              bd.field_i.draw(var17Lifetime4, var18Lifetime4);
               var27Lifetime3 = "";
               var28Lifetime1 = eda.field_f;
               if (!param4.field_D &&
@@ -264,7 +264,7 @@ final class dta {
                 }
                 var31Lifetime1 = -stackIn_72_0 + var29Lifetime2 + 26;
                 var32 = var12.getTreasure(196608, var30Lifetime2);
-                PlayerProfile.field_r[var30Lifetime2].a(var17Lifetime5, var29Lifetime2);
+                PlayerProfile.field_r[var30Lifetime2].draw(var17Lifetime5, var29Lifetime2);
                 MembersUpsellMenu.a(Integer.toString(var32), 11903361, qf.field_j, -1, var31Lifetime1, var17Lifetime5 - 19, 1);
                 if (var32 != this.field_a[var30Lifetime2]) {
                   this.field_h[var30Lifetime2] = Integer.toString(-this.field_a[var30Lifetime2] + var32) + "+";
@@ -276,7 +276,7 @@ final class dta {
                   var33_float = 1.0f + (0.10000000149011612f + 0.20000000298023224f * (float)Math.sin(0.7 * (double)this.field_f[var30Lifetime2]));
                   var34_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].width() * var33_float);
                   var35_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].height() * var33_float);
-                  PlayerProfile.field_r[var30Lifetime2].a(var17Lifetime5 + (-var34_int + PlayerProfile.field_r[var30Lifetime2].width()) / 2, (PlayerProfile.field_r[var30Lifetime2].height() - var35_int) / 2 + var29Lifetime2, var34_int, var35_int, 1, -1, 1);
+                  PlayerProfile.field_r[var30Lifetime2].drawScaled(var17Lifetime5 + (-var34_int + PlayerProfile.field_r[var30Lifetime2].width()) / 2, (PlayerProfile.field_r[var30Lifetime2].height() - var35_int) / 2 + var29Lifetime2, var34_int, var35_int, 1, -1, 1);
                   MembersUpsellMenu.a(this.field_h[var30Lifetime2], 14142651, qf.field_j, -1, var31Lifetime1, -49 + var17Lifetime5, 1);
                 }
                 var31Lifetime1 += 23;
@@ -371,7 +371,7 @@ final class dta {
           }
           if (!param4.isSendWindowFull(99)) {
             tga.field_a.setClip(param0, param5, param1, param6);
-            Room.field_j.a(0, 0);
+            Room.field_j.draw(0, 0);
             tga.field_a.la();
           }
           var9_int = (-param0 + param1 >> 1) + param0;

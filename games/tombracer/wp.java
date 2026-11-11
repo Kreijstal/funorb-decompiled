@@ -79,7 +79,7 @@ final class wp {
         }
     }
 
-    final static void a(int param0) {
+    final static void closeContextMenu(int param0) {
         String var2 = null;
         String var2Lifetime1;
         if (null != hka.field_b) {

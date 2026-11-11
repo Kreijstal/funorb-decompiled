@@ -105,7 +105,7 @@ final class ava {
                 hp.field_a[var9] != null) {
                 var11_int = hp.field_a[var9][var10_int];
                 if (var11_int != 0 &&
-                  !dea.field_c) {
+                  !DropAnimation.field_c) {
                   var5_int = 1;
                 }
                 if (var6 < var11_int) {
@@ -120,7 +120,7 @@ final class ava {
                 null != C2SRoomResultPacket.field_g[var9]) {
                 var11_intLifetime1 = C2SRoomResultPacket.field_g[var9][var10_int];
                 if (0 != var11_intLifetime1 &&
-                  !dea.field_c) {
+                  !DropAnimation.field_c) {
                   var5_int = 1;
                 }
                 if (var7 < var11_intLifetime1) {
@@ -405,7 +405,7 @@ final class ava {
                     null != hp.field_a[var27_int]) {
                     var30_int = hp.field_a[var27_int][var28];
                     if (var30_int != 0 &&
-                      !dea.field_c &&
+                      !DropAnimation.field_c &&
                       !var12.field_tb) {
                       var29 = 1;
                     }
@@ -417,7 +417,7 @@ final class ava {
                     null != C2SRoomResultPacket.field_g[var27_int]) {
                     var30_intLifetime1 = C2SRoomResultPacket.field_g[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
-                      !dea.field_c &&
+                      !DropAnimation.field_c &&
                       !var12.field_tb) {
                       var29 = 1;
                     }

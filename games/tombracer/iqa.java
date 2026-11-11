@@ -10,7 +10,7 @@ final class iqa {
     GraphicsToolkit field_d;
     static String field_g;
 
-    final soa a(byte param0) {
+    final soa captureState(byte param0) {
         if (param0 < -12) {
           if (null == this.field_e) {
             this.field_e = new soa();

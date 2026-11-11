@@ -110,7 +110,7 @@ final class MovingSawComponent extends PathMoverComponent {
         }
     }
 
-    final boolean C(int param0) {
+    final boolean storesSpeed(int param0) {
         if (param0 != 1760) {
           return false;
         }

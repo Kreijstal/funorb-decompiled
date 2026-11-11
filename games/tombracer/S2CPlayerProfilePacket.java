@@ -27,7 +27,7 @@ final class S2CPlayerProfilePacket implements GamePacket {
         if (var2 == 0) {
           var2 = 1;
         }
-        ((psa) (RewardChoicePhase.field_n.field_n)).c(-30515, 0, var2, param1);
+        ((psa) (RewardChoicePhase.field_n.field_n)).rampChannelVolumeSamples(-30515, 0, var2, param1);
     }
 
     final static void b(boolean param0) {

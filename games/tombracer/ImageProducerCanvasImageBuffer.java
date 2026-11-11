@@ -10,12 +10,12 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
     private java.awt.image.ImageConsumer field_n;
     private java.awt.Image field_l;
     static String field_k;
-    static ssa field_o;
+    static ClipStack field_o;
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    private final synchronized void b(int param0) {
+    private final synchronized void pushAllPixels(int param0) {
         if (this.field_n != null) {
           this.field_n.setPixels(0, param0, this.width, this.height, this.field_j, this.pixels, 0, this.width);
           this.field_n.imageComplete(2);
@@ -52,7 +52,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
         }
     }
 
-    private final synchronized void a(int param0, int param1, int param2, int param3, boolean param4) {
+    private final synchronized void pushPixels(int param0, int param1, int param2, int param3, boolean param4) {
         if (!param4) {
           return;
         }
@@ -74,11 +74,11 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
           this.pixels = new int[this.width * this.height];
           this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_l = this.field_p.createImage((java.awt.image.ImageProducer) (this));
-          this.b(0);
+          this.pushAllPixels(0);
           this.field_p.prepareImage(this.field_l, (java.awt.image.ImageObserver) ((Object) this.field_p));
-          this.b(param2 ^ param2);
+          this.pushAllPixels(param2 ^ param2);
           this.field_p.prepareImage(this.field_l, (java.awt.image.ImageObserver) ((Object) this.field_p));
-          this.b(param2 - 11329);
+          this.pushAllPixels(param2 - 11329);
           this.field_p.prepareImage(this.field_l, (java.awt.image.ImageObserver) ((Object) this.field_p));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "iga.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -91,7 +91,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
           if (param3 < 61) {
             ImageProducerCanvasImageBuffer.releaseStatics(90);
           }
-          this.a(param4, param0, param7, param2, true);
+          this.pushPixels(param4, param0, param7, param2, true);
           var9 = param6.getClip();
           param6.clipRect(param5, param1, param7, param0);
           param6.drawImage(this.field_l, param5 - param2, -param4 + param1, (java.awt.image.ImageObserver) ((Object) this.field_p));

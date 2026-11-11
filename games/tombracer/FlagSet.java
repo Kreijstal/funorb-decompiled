@@ -7,7 +7,7 @@ final class FlagSet {
     static String field_d;
     private boolean[] flags;
 
-    final void a(int[] param0, int param1) {
+    final void setAll(int[] param0, int param1) {
         int var4 = 0;
         int[] var3 = null;
         int var5 = 0;

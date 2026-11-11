@@ -229,7 +229,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
             }
             var18 = var14;
             var19 = var15;
-            SoftwareRasterizer.saveClip(bba.field_a);
+            SoftwareRasterizer.saveClip(RoomVariant.field_a);
             if (var18 > var19) {
               var19 = var8 * param0 / (var9 + var8) + param2;
               var18 = var8 * param0 / (var9 + var8) + param2;
@@ -237,22 +237,22 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
             if (param1[0] != null) {
               SoftwareRasterizer.intersectClip(param5, param2, var16, var18);
               param1[0].drawTransparent(param5, param2);
-              SoftwareRasterizer.restoreClip(bba.field_a);
+              SoftwareRasterizer.restoreClip(RoomVariant.field_a);
             }
             if (null != param1[2]) {
               SoftwareRasterizer.intersectClip(var17, param2, var10, var18);
               param1[2].drawTransparent(var13, param2);
-              SoftwareRasterizer.restoreClip(bba.field_a);
+              SoftwareRasterizer.restoreClip(RoomVariant.field_a);
             }
             if (param1[6] != null) {
               SoftwareRasterizer.intersectClip(param5, var19, var16, var11);
               param1[6].drawTransparent(param5, var15);
-              SoftwareRasterizer.restoreClip(bba.field_a);
+              SoftwareRasterizer.restoreClip(RoomVariant.field_a);
             }
             if (param1[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param1[8].drawTransparent(var13, var15);
-              SoftwareRasterizer.restoreClip(bba.field_a);
+              SoftwareRasterizer.restoreClip(RoomVariant.field_a);
             }
             if (param3 > -116) {
               return;
@@ -263,7 +263,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
               for (var20 = var12; var13 > var20; var20 = var20 + param1[1].field_n) {
                 param1[1].drawTransparent(var20, param2);
               }
-              SoftwareRasterizer.restoreClip(bba.field_a);
+              SoftwareRasterizer.restoreClip(RoomVariant.field_a);
             }
             if (param1[7] != null &&
               param1[7].field_n != 0) {
@@ -271,7 +271,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].field_n) {
                 param1[7].drawTransparent(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.restoreClip(bba.field_a);
+              SoftwareRasterizer.restoreClip(RoomVariant.field_a);
             }
             if (param1[3] != null &&
               param1[3].field_k != 0) {
@@ -279,7 +279,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param1[3].field_k) {
                 param1[3].drawTransparent(param5, var20Lifetime2);
               }
-              SoftwareRasterizer.restoreClip(bba.field_a);
+              SoftwareRasterizer.restoreClip(RoomVariant.field_a);
             }
             if (param1[5] != null &&
               param1[5].field_k != 0) {
@@ -287,7 +287,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param1[5].field_k) {
                 param1[5].drawTransparent(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.restoreClip(bba.field_a);
+              SoftwareRasterizer.restoreClip(RoomVariant.field_a);
             }
             if (null != param1[4] &&
               0 != param1[4].field_n &&
@@ -298,7 +298,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
                   param1[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.restoreClip(bba.field_a);
+              SoftwareRasterizer.restoreClip(RoomVariant.field_a);
               return;
             }
             return;

@@ -76,7 +76,7 @@ final class S2CNextRoundPacket implements GamePacket {
           }
           if (param0 instanceof ByteStorage) {
             var5 = (ByteStorage) (param0);
-            stackIn_9_0 = var5.a((byte) -104, param1, param2);
+            stackIn_9_0 = var5.getBytes((byte) -104, param1, param2);
             return stackIn_9_0;
           }
           if (param3) {

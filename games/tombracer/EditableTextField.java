@@ -176,7 +176,7 @@ final class EditableTextField extends UiComponent {
         }
     }
 
-    private final void k(int param0) {
+    private final void cutSelection(int param0) {
         if (this.field_Bb == null) {
           return;
         }
@@ -293,7 +293,7 @@ final class EditableTextField extends UiComponent {
           if (!SnakePitTile.a(false)) {
             if (dq.field_f != null &&
               dq.field_f.field_b) {
-              og.b(0);
+              og.exitFullscreen(0);
               ModelFactory.field_a.c(new gga(ModelFactory.field_a, TurbulenceNoise3D.field_j), 122);
             }
             return;
@@ -679,7 +679,7 @@ final class EditableTextField extends UiComponent {
                   }
                   if (VerticalScrollbar.field_tb[82] &&
                     param0 == 65) {
-                    this.k(param1 ^ 19666);
+                    this.cutSelection(param1 ^ 19666);
                     return true;
                   }
                   if (VerticalScrollbar.field_tb[82] &&

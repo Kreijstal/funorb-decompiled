@@ -23,7 +23,7 @@ final class LineNoiseOperator extends TextureOperator {
           PacketBuffer var3 = (PacketBuffer) null;
           this.decodeParameter((byte) 61, (PacketBuffer) null, -62);
         }
-        tka.b((byte) 115);
+        tka.buildSinCosTables((byte) 115);
     }
 
     public LineNoiseOperator() {

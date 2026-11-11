@@ -23,7 +23,7 @@ abstract class PathMoverComponent extends PrefabComponent {
         tga.field_a.a(param2, param5, param3, param0, SoundEvent.withFullAlpha(param4, param1), (byte) -128);
     }
 
-    abstract boolean C(int param0);
+    abstract boolean storesSpeed(int param0);
 
     public static void releaseStatics(int param0) {
         field_G = null;
@@ -58,7 +58,7 @@ abstract class PathMoverComponent extends PrefabComponent {
             stackIn_4_1 = !(this.field_I);
             ((WaypointPath) (Object) stackIn_3_0).a(stackIn_4_1, 1);
           }
-          if (this.C(1760)) {
+          if (this.storesSpeed(1760)) {
             var4.setSpeed((byte) -99, this.field_J);
           }
           var4.setPath(99, this.field_K);
@@ -101,10 +101,10 @@ abstract class PathMoverComponent extends PrefabComponent {
             stackIn_5_1 = (param2.readBits((byte) 44, 1) == 1);
             this.field_I = stackIn_5_1;
           }
-          if (!this.C(1760)) {
+          if (!this.storesSpeed(1760)) {
             return;
           }
-          this.field_J = NodeHashTable.a(param2.readBits((byte) 44, 8), 107, 4);
+          this.field_J = NodeHashTable.bitsToFixed16(param2.readBits((byte) 44, 8), 107, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,10 +165,10 @@ abstract class PathMoverComponent extends PrefabComponent {
           if (param0) {
             this.field_J = -18;
           }
-          if (!this.C(1760)) {
+          if (!this.storesSpeed(1760)) {
             return;
           }
-          param1.writeBits((byte) 103, SpawnerBehaviour.a((byte) 8, 4, this.field_J), 8);
+          param1.writeBits((byte) 103, SpawnerBehaviour.fixed16ToBits((byte) 8, 4, this.field_J), 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

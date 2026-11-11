@@ -41,7 +41,7 @@ final class VboVertexArray extends vo implements LegacyVertexArray {
 
     public final void upload(int param0, int param1, byte param2, byte[] param3) {
         try {
-          this.a(-114, param3, param1);
+          this.uploadData(-114, param3, param1);
           if (param2 > -109) {
             this.getStride(-43);
           }

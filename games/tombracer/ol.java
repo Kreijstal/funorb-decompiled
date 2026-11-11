@@ -14,7 +14,7 @@ final class ol {
         }
     }
 
-    final static int a(int param0, int param1, byte param2, int param3, int param4, int param5) {
+    final static int computeDistanceVolume(int param0, int param1, byte param2, int param3, int param4, int param5) {
         int var6 = tk.a(-22636);
         if (var6 == 0) {
           return 0;

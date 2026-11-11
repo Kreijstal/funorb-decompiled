@@ -9,11 +9,11 @@ final class mq {
     private OpenGlToolkit field_c;
     private cua field_f;
 
-    final boolean a(byte param0) {
+    final boolean ensureShader(byte param0) {
         fca var3 = null;
         fca var2 = null;
         if (param0 < 2) {
-          this.a((byte) 62);
+          this.ensureShader((byte) 62);
         }
         if (this.field_c.field_id &&
           this.field_c.field_Vc &&
@@ -45,7 +45,7 @@ final class mq {
         RuntimeException decompiledCaughtException = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!this.a((byte) 10)) {
+          if (!this.ensureShader((byte) 10)) {
             return false;
           }
           var7 = -116 % ((param0 + 63) / 46);
@@ -80,7 +80,7 @@ final class mq {
               jaggl.OpenGL.glTexCoord3f(0.0f, 1.0f, var10);
               jaggl.OpenGL.glVertex2f(0.0f, 1.0f);
               jaggl.OpenGL.glEnd();
-              param3.a(0, 0, var9, 0, 0, param3.field_r, 0, param3.field_q);
+              param3.copyFromFramebuffer(0, 0, var9, 0, 0, param3.field_r, 0, param3.field_q);
             }
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             jaggl.OpenGL.glPopAttrib();

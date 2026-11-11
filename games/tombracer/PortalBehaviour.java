@@ -71,7 +71,7 @@ final class PortalBehaviour extends Behaviour {
         try {
           var5_int = 52 % ((20 - param2) / 58);
           if (param0 == 0) {
-            param4 = "[" + cla.field_o.toUpperCase() + "] " + param4;
+            param4 = "[" + PbufferEntry.field_o.toUpperCase() + "] " + param4;
           } else {
             if (2 == param0) {
               param1 = "<col=ff0000>" + param1 + "</col>";

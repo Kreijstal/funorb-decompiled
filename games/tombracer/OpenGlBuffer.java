@@ -36,7 +36,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
             this.unmap((jaggl.MapBuffer) null, -94);
           }
           if (this.field_e == 0) {
-            this.d(1);
+            this.createBufferObject(1);
             if (0 >= this.field_f) {
               this.field_e = 2;
               stackIn_20_0 = this.field_b;
@@ -85,12 +85,12 @@ abstract class OpenGlBuffer implements GpuBuffer {
         }
     }
 
-    private final void d(int param0) {
+    private final void createBufferObject(int param0) {
         if (0 <= this.field_f) {
           return;
         }
         if (param0 != 1) {
-          this.d(14);
+          this.createBufferObject(14);
         }
         if (this.field_h.field_fd) {
           jaggl.OpenGL.glGenBuffersARB(1, ConstrainToCircleLocomotor.field_x, 0);
@@ -106,7 +106,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         super.finalize();
     }
 
-    final void c(int param0) {
+    final void bind(int param0) {
         if (param0 != -3) {
           return;
         }
@@ -323,7 +323,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
 
     void allocate(int param0, int param1) {
         if (this.field_d < param1) {
-          this.d(1);
+          this.createBufferObject(1);
           if (this.field_f > 0) {
             jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
             jaggl.OpenGL.glBufferDataARBub(this.field_k, param1, (byte[]) null, 0, !this.field_j ? 35044 : 35040);

@@ -18,7 +18,7 @@ final class CollisionGrid {
 
     final void remove(Collidable param0, byte param1) {
         int var4 = 0;
-        q var5 = null;
+        CollisionGridEntry var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -29,14 +29,14 @@ final class CollisionGrid {
           if (param1 <= 72) {
             this.field_g = false;
           }
-          var5 = (q) (this.field_e.get(-128, (long)param0.getCollisionId(true)));
+          var5 = (CollisionGridEntry) (this.field_e.get(-128, (long)param0.getCollisionId(true)));
           while (var5 != null) {
-            if (param0 == var5.a((byte) -128)) {
+            if (param0 == var5.getCollidable((byte) -128)) {
               var5.unlink(100);
               var5.unlinkSecondary(-7975);
               ft.releaseGridEntry(var5, -201);
             }
-            var5 = (q) (this.field_e.nextWithSameKey((byte) 27));
+            var5 = (CollisionGridEntry) (this.field_e.nextWithSameKey((byte) 27));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -94,7 +94,7 @@ final class CollisionGrid {
         int fieldTemp$0 = 0;
         int var6;
         int var7;
-        q var8;
+        CollisionGridEntry var8;
         int var9;
         Collidable var10;
         int var12;
@@ -104,11 +104,11 @@ final class CollisionGrid {
         while (!this.field_b.field_d) {
           var6 = this.field_b.b((byte) 75);
           var7 = this.field_b.b(2);
-          var8 = (q) (this.field_h.get((byte) -119, (long)ConstrainToRectangleLocomotor.hashCell(var6, var7, (byte) 36)));
+          var8 = (CollisionGridEntry) (this.field_h.get((byte) -119, (long)ConstrainToRectangleLocomotor.hashCell(var6, var7, (byte) 36)));
           while (var8 != null) {
-            if (var8.a(var6, var7, true)) {
+            if (var8.isAtCell(var6, var7, true)) {
               var9 = 1;
-              var10 = var8.a((byte) -80);
+              var10 = var8.getCollidable((byte) -80);
               for (var11 = 0; var11 < this.field_d; var11++) {
                 if (var10 != this.field_a[var11]) {
                   continue;
@@ -119,13 +119,13 @@ final class CollisionGrid {
               if (var9 != 0) {
                 fieldTemp$0 = this.field_d;
                 this.field_d = this.field_d + 1;
-                this.field_a[fieldTemp$0] = var8.a((byte) -96);
+                this.field_a[fieldTemp$0] = var8.getCollidable((byte) -96);
                 if (this.field_a.length <= this.field_d) {
                   return this.copyResults(0);
                 }
               }
             }
-            var8 = (q) (this.field_h.nextWithSameKey(-128));
+            var8 = (CollisionGridEntry) (this.field_h.nextWithSameKey(-128));
           }
           this.field_b.d(113);
         }
@@ -151,7 +151,7 @@ final class CollisionGrid {
         int var7;
         int var8;
         int var9;
-        q var12;
+        CollisionGridEntry var12;
         int var13;
         Collidable var14;
         int var16;
@@ -166,11 +166,11 @@ final class CollisionGrid {
         this.field_d = 0;
         for (var10 = var6; var8 >= var10; var10++) {
           for (var11 = var7; var11 <= var9; var11++) {
-            var12 = (q) (this.field_h.get((byte) -80, (long)ConstrainToRectangleLocomotor.hashCell(var10, var11, (byte) -124)));
+            var12 = (CollisionGridEntry) (this.field_h.get((byte) -80, (long)ConstrainToRectangleLocomotor.hashCell(var10, var11, (byte) -124)));
             while (var12 != null) {
-              if (var12.a(var10, var11, true)) {
+              if (var12.isAtCell(var10, var11, true)) {
                 var13 = 1;
-                var14 = var12.a((byte) -75);
+                var14 = var12.getCollidable((byte) -75);
                 for (var15 = 0; var15 < this.field_d; var15++) {
                   if (this.field_a[var15] != var14) {
                     continue;
@@ -181,13 +181,13 @@ final class CollisionGrid {
                 if (var13 != 0) {
                   fieldTemp$0 = this.field_d;
                   this.field_d = this.field_d + 1;
-                  this.field_a[fieldTemp$0] = var12.a((byte) -71);
+                  this.field_a[fieldTemp$0] = var12.getCollidable((byte) -71);
                   if (this.field_d >= this.field_a.length) {
                     return this.copyResults(0);
                   }
                 }
               }
-              var12 = (q) (this.field_h.nextWithSameKey(-106));
+              var12 = (CollisionGridEntry) (this.field_h.nextWithSameKey(-106));
             }
           }
         }
@@ -219,8 +219,8 @@ final class CollisionGrid {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        q var9 = null;
-        q var10 = null;
+        CollisionGridEntry var9 = null;
+        CollisionGridEntry var10 = null;
         int var11 = 0;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
@@ -236,13 +236,13 @@ final class CollisionGrid {
               boolean decompiledFrameCompleted0 = true;
               if (!this.field_g ||
                 param0.overlapsBox(32 << this.field_c, (WorldBody) null, 113, 32 << this.field_c, var8 * 32 + 16 << this.field_c, (Collidable) null, 32 * var7 + 16 << this.field_c, 0)) {
-                var9 = (q) (this.field_e.get(-121, (long)param0.getCollisionId(true)));
+                var9 = (CollisionGridEntry) (this.field_e.get(-121, (long)param0.getCollisionId(true)));
                 while (var9 != null) {
                   if (var9.a(var8, var7, param0, 123)) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var9 = (q) (this.field_e.nextWithSameKey((byte) 35));
+                  var9 = (CollisionGridEntry) (this.field_e.nextWithSameKey((byte) 35));
                 }
                 if (decompiledFrameCompleted0) {
                   var10 = ShaderEffect.obtainGridEntry(var7, param0, var8, true);
@@ -300,7 +300,7 @@ final class CollisionGrid {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        q var8 = null;
+        CollisionGridEntry var8 = null;
         int var9 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -314,15 +314,15 @@ final class CollisionGrid {
           var4 = this.toCell(2, param0.getY(9648) - param0.getHeight((byte) 55) / 2);
           var6 = this.toCell(2, -1 + param0.getX(3) + param0.getWidth(-51) / 2);
           var7 = this.toCell(2, -1 + (param0.getY(9648) + param0.getHeight((byte) 55) / 2));
-          var8 = (q) (this.field_e.get(-120, (long)param0.getCollisionId(true)));
+          var8 = (CollisionGridEntry) (this.field_e.get(-120, (long)param0.getCollisionId(true)));
           while (var8 != null) {
-            if (var8.a((byte) -76) == param0 &&
+            if (var8.getCollidable((byte) -76) == param0 &&
               !var8.a(var7, var6, var4, var3_int, -98)) {
               var8.unlink(104);
               var8.unlinkSecondary(-7975);
               ft.releaseGridEntry(var8, -201);
             }
-            var8 = (q) (this.field_e.nextWithSameKey((byte) 119));
+            var8 = (CollisionGridEntry) (this.field_e.nextWithSameKey((byte) 119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

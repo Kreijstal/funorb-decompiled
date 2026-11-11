@@ -66,7 +66,7 @@ final class FacePointLocomotor extends Locomotor {
           var9 = 49;
           try {
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
-              var11 = ByteStorage.field_a.a(false, param3[var10_int]);
+              var11 = ByteStorage.field_a.getPhrase(false, param3[var10_int]);
               var6[var10_int] = var11.getPreview((byte) -5);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
@@ -130,7 +130,7 @@ final class FacePointLocomotor extends Locomotor {
           FacePointLocomotor.buildQuickChatPhraseMenu((UiComponent) null, (UiComponent) null, (UiComponent) null, (int[]) null, true);
         }
         if ((GameKeyHandler.field_a > 0 || fp.field_e > 0) &&
-          tla.field_e) {
+          OpenGlDisplayLists.field_e) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, era.field_e.field_A);
           PlayerModel.field_a.drawFullScreen(85, param0);
         }

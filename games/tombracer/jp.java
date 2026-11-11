@@ -20,7 +20,7 @@ abstract class jp extends ota {
           Player.field_W.makeRasterTarget();
           var2.drawOpaque(0, -bra.field_O.field_q);
           Player.field_W.field_p = bra.field_O.field_q;
-          pfa.a(1);
+          pfa.popRasterState(1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "jp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

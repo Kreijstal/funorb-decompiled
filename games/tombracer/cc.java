@@ -22,7 +22,7 @@ final class cc extends IntrusiveNode {
         }
         if (this.b(true)) {
           this.a(this.field_f, var5, param1 + LoginForm.field_z[this.field_g], hq.field_b[this.field_g] + param2, var4, (byte) 35);
-          CharacterSelectPhase.field_r.a(this.field_j + param1 + CharacterSelectPhase.field_r.width(), param2 + (this.field_k + CharacterSelectPhase.field_r.height()));
+          CharacterSelectPhase.field_r.draw(this.field_j + param1 + CharacterSelectPhase.field_r.width(), param2 + (this.field_k + CharacterSelectPhase.field_r.height()));
         }
     }
 
@@ -242,7 +242,7 @@ final class cc extends IntrusiveNode {
           var3 = (String) null;
           cc.writeSessionCookie(42, (java.applet.Applet) null, (String) null);
         }
-        stackIn_6_0 = (mca.a((byte) 6, this.field_i)) && (mca.a((byte) 6, this.field_g));
+        stackIn_6_0 = (mca.isCourseAvailable((byte) 6, this.field_i)) && (mca.isCourseAvailable((byte) 6, this.field_g));
         return stackIn_6_0;
     }
 

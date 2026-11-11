@@ -206,13 +206,13 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
     final static boolean dispatchCancelKey(int param0, int param1, byte param2, int param3) {
         if (hka.field_b != null &&
           hka.field_b.handleEscape(13)) {
-          wp.a(param2 ^ 105);
+          wp.closeContextMenu(param2 ^ 105);
           return true;
         }
         if (null != RoomViewRenderer.field_c &&
           RoomViewRenderer.field_c.handleCancelKey(true)) {
           RoomViewRenderer.field_c = null;
-          wp.a(-1);
+          wp.closeContextMenu(-1);
           return true;
         }
         if (param2 != -106) {

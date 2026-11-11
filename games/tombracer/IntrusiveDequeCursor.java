@@ -115,13 +115,13 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final static ssa a(byte param0, GraphicsToolkit param1) {
+    final static ClipStack a(byte param0, GraphicsToolkit param1) {
         wl var2 = null;
         RuntimeException var2_ref = null;
-        ssa var3 = null;
+        ClipStack var3 = null;
         GraphicsToolkit var4 = null;
-        ssa stackIn_3_0 = null;
-        ssa stackIn_14_0 = null;
+        ClipStack stackIn_3_0 = null;
+        ClipStack stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -139,7 +139,7 @@ final class IntrusiveDequeCursor {
             if (var2 != null) {
               var2.unlink(68);
             }
-            var3 = new ssa(param1);
+            var3 = new ClipStack(param1);
             hla.field_ub.put((long)param1.field_a, 109, new wl(param1, var3));
           }
           if (param0 != 65) {

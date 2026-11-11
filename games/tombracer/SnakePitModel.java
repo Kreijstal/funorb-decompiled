@@ -33,7 +33,7 @@ final class SnakePitModel extends TrapModel {
             field_n = (byte[]) null;
           }
           var6 = param0.getFileId(true, param4, var5_int);
-          stackIn_3_0 = sv.a(param1, var5_int, param0, 24876, var6);
+          stackIn_3_0 = sv.loadAntialiasedFont(param1, var5_int, param0, 24876, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class SnakePitModel extends TrapModel {
         return 0;
     }
 
-    private final void k(int param0) {
+    private final void buildTiles(int param0) {
         int var6 = 0;
         int var8 = 0;
         int stackIn_9_0 = 0;
@@ -260,10 +260,10 @@ final class SnakePitModel extends TrapModel {
     final void addToScene(int param0, RenderScene param1) {
         try {
           if (this.field_r == null) {
-            this.k(-3440);
+            this.buildTiles(-3440);
           }
           if (null == this.field_s) {
-            this.i(-20687);
+            this.createSnakeModels(-20687);
           }
           super.addToScene(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -422,7 +422,7 @@ final class SnakePitModel extends TrapModel {
         this.field_u = 20;
     }
 
-    private final void i(int param0) {
+    private final void createSnakeModels(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_p == null) {
@@ -490,7 +490,7 @@ final class SnakePitModel extends TrapModel {
         return;
     }
 
-    final ka a(boolean param0, SnakePitTile param1) {
+    final ka getTileModel(boolean param0, SnakePitTile param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RenderScene var4 = null;

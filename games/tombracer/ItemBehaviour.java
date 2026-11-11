@@ -346,7 +346,7 @@ abstract class ItemBehaviour extends Behaviour {
             ItemBehaviour.a((int[]) null, 49);
           }
           for (var3 = 0; param0.length > var3; var3++) {
-            var2_int = var2_int + tda.a(param1 - 1922, param0[var3]);
+            var2_int = var2_int + tda.bitCount(param1 - 1922, param0[var3]);
           }
           stackIn_7_0 = var2_int;
           return stackIn_7_0;

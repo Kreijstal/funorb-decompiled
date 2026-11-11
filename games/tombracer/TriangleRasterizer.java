@@ -30,7 +30,7 @@ final class TriangleRasterizer {
         viewportHeight = param3 - param1;
         TriangleRasterizer.centerProjection();
         if (rowOffsets.length < viewportHeight) {
-          rowOffsets = new int[lla.a(false, viewportHeight)];
+          rowOffsets = new int[lla.nextPowerOfTwo(false, viewportHeight)];
         }
         int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < viewportHeight; var5++) {

@@ -46,7 +46,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           stackIn_68_2 = (param0) && (!param2) && (LegacyOpenGlBloomEffect.field_o);
           ((UiComponent) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
         } else {
-          PerlinNoise2D.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
+          PerlinNoise2D.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(89, OpenGlDisplayLists.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
           stackIn_7_0 = C2SRoomResultPacket.field_a;
           stackIn_7_1 = 65;
           stackIn_8_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);
@@ -68,7 +68,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           du.field_g = true;
         }
         if (0 != TileRenderable.field_c.field_y) {
-          if (dea.field_c) {
+          if (DropAnimation.field_c) {
             WallTile.b(param3, -22243);
           } else {
             if (ReportAbuseDialog.field_ub > 0) {
@@ -102,7 +102,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         super(param0, param1);
     }
 
-    final boolean C(int param0) {
+    final boolean storesSpeed(int param0) {
         if (param0 != 1760) {
           this.hasAngle((byte) 115);
           return true;
@@ -216,7 +216,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           var4.addLocomotor(var5, 0);
           var6 = rm.field_a;
           var7 = (TrapBaseModel) (var6.createModel(16, 78));
-          var7.b(8022, 3);
+          var7.setVariant(8022, 3);
           var4.addModel((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;

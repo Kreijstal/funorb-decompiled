@@ -119,18 +119,18 @@ final class SweepRotateLocomotor extends Locomotor {
               return;
             }
             if (var2 != 4) {
-              ssa.reportClientError("F1: " + kk.formatPacketDump(32), (byte) 116, (Throwable) null);
+              ClipStack.reportClientError("F1: " + kk.formatPacketDump(32), (byte) 116, (Throwable) null);
               if (param0 != 14180) {
                 field_q = 74;
               }
-              dea.closeGameSocket(param0 ^ 14168);
+              DropAnimation.closeGameSocket(param0 ^ 14168);
               return;
             }
             UiWidget.field_g = 1;
             var3 = var1.readString((byte) -76);
             ol.field_b = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
-            WaveformOperator.d(var4, 3);
+            WaveformOperator.unpackSettings(var4, 3);
             return;
           }
           if (TrackPlayerLocomotor.field_s == null) {

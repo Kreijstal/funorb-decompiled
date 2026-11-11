@@ -5,7 +5,7 @@ class ora {
     private OpenGlToolkit field_a;
     jaclib.memory.Buffer field_b;
 
-    final void a(byte[] param0, int param1) {
+    final void setData(byte[] param0, int param1) {
         if (this.field_b == null ||
           this.field_b.getSize() < param1) {
           this.field_b = (jaclib.memory.Buffer) ((Object) this.field_a.field_md.a(param1, false));

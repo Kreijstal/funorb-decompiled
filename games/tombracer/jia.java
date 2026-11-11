@@ -82,8 +82,8 @@ final class jia implements MessagePanel {
           var4_ref_waa.b(-9310);
         }
         this.field_b.c(param0 + 4637);
-        var2 = this.field_b.a((byte) -120);
-        var3Lifetime1 = this.field_b.a(param0 ^ -7082);
+        var2 = this.field_b.getY((byte) -120);
+        var3Lifetime1 = this.field_b.getX(param0 ^ -7082);
         var4 = 0;
         if (var2 < 0) {
           var2 = 0;
@@ -104,7 +104,7 @@ final class jia implements MessagePanel {
           var3Lifetime1 = 0;
         }
         if (var4 != 0) {
-          this.field_b.a(-115, var3Lifetime1, var2);
+          this.field_b.setPosition(-115, var3Lifetime1, var2);
         }
     }
 
@@ -130,7 +130,7 @@ final class jia implements MessagePanel {
         int var1 = 0;
         this.field_c = new waa[10];
         this.field_b = new lw();
-        this.field_b.a(-112, this.getWidth(-8660) / 2, this.getHeight(false) / 2);
+        this.field_b.setPosition(-112, this.getWidth(-8660) / 2, this.getHeight(false) / 2);
         for (var1 = 0; this.field_c.length > var1; var1++) {
           this.field_c[var1] = new waa(this.getHeight(false), this.getWidth(-8660));
         }

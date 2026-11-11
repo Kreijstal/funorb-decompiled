@@ -52,7 +52,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!GameApplet.a(false, param1, param0, param2)) {
+          if (!GameApplet.loadSpriteSheet(false, param1, param0, param2)) {
             return null;
           }
           if (param3) {

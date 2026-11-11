@@ -164,7 +164,7 @@ final class LightSourceModel extends TrapModel {
         var7 = this.field_q;
         if (var7 == 0) {
           var6 = 0;
-          var11 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          var11 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
           this.field_s = new LightSource(var11);
           this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
@@ -177,7 +177,7 @@ final class LightSourceModel extends TrapModel {
           var7 = this.field_o;
           if (var7 == 0) {
             var6 = 16;
-            var13 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            var13 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
             this.field_s = new LightSource(var13);
             this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
@@ -188,7 +188,7 @@ final class LightSourceModel extends TrapModel {
           }
           if (1 == var7) {
             var6 = 15;
-            var14 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            var14 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
             this.field_s = new LightSource(var14);
             this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
@@ -198,7 +198,7 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           if (2 != var7) {
-            var12 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            var12 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
             this.field_s = new LightSource(var12);
             this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
@@ -208,7 +208,7 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           var6 = 14;
-          var15 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          var15 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
           this.field_s = new LightSource(var15);
           this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
@@ -221,7 +221,7 @@ final class LightSourceModel extends TrapModel {
           var7 = this.field_o;
           if (var7 == 0) {
             var6 = 11;
-            var17 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            var17 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
             this.field_s = new LightSource(var17);
             this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
@@ -232,7 +232,7 @@ final class LightSourceModel extends TrapModel {
           }
           if (var7 == 1) {
             var6 = 7;
-            var18 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            var18 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
             this.field_s = new LightSource(var18);
             this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
@@ -242,7 +242,7 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           if (2 != var7) {
-            var16 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            var16 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
             this.field_s = new LightSource(var16);
             this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
@@ -252,7 +252,7 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           var6 = 9;
-          var19 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          var19 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
           this.field_s = new LightSource(var19);
           this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
@@ -264,7 +264,7 @@ final class LightSourceModel extends TrapModel {
         if (var7 != 3) {
           if (var7 == 4) {
             var6 = 5;
-            var24 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            var24 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
             this.field_s = new LightSource(var24);
             this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
@@ -274,7 +274,7 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           if (var7 != 5) {
-            var10 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+            var10 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
             this.field_s = new LightSource(var10);
             this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
             if (this.field_r) {
@@ -284,7 +284,7 @@ final class LightSourceModel extends TrapModel {
             return;
           }
           var6 = 4;
-          var25 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          var25 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
           this.field_s = new LightSource(var25);
           this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
@@ -296,7 +296,7 @@ final class LightSourceModel extends TrapModel {
         var7Lifetime1 = this.field_o;
         if (var7Lifetime1 == 0) {
           var6 = 10;
-          var21 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          var21 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
           this.field_s = new LightSource(var21);
           this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
@@ -307,7 +307,7 @@ final class LightSourceModel extends TrapModel {
         }
         if (1 == var7Lifetime1) {
           var6 = 6;
-          var22 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          var22 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
           this.field_s = new LightSource(var22);
           this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
@@ -317,7 +317,7 @@ final class LightSourceModel extends TrapModel {
           return;
         }
         if (var7Lifetime1 != 2) {
-          var20 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6);
+          var20 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6);
           this.field_s = new LightSource(var20);
           this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
           if (this.field_r) {
@@ -327,7 +327,7 @@ final class LightSourceModel extends TrapModel {
           return;
         }
         var6Lifetime1 = 8;
-        var23 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.a(-43946608), this.field_m, var6Lifetime1);
+        var23 = new AnimatedLight(tga.field_a, param0, 0, 0, 0, this.field_n.getColour(-43946608), this.field_m, var6Lifetime1);
         this.field_s = new LightSource(var23);
         this.field_s.setPosition(this.getRenderZ((byte) -121), (byte) 110, this.getRenderY((byte) 107), this.getRenderX((byte) -95));
         if (this.field_r) {

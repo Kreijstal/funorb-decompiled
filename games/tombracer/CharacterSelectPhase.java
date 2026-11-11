@@ -65,12 +65,12 @@ final class CharacterSelectPhase extends MatchPhase {
         int var11;
         int var7Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
-        Room.field_j.a(0, 0);
+        Room.field_j.draw(0, 0);
         var3 = aaa.a(false) / 2;
         var4 = SwitchLinkList.b(0) / 2;
         stackIn_3_0 = (this.canChoose(-1)) ? 0 : 1;
         var5 = stackIn_3_0;
-        ik.field_h.a(0, 0);
+        ik.field_h.draw(0, 0);
         SocketConnector.a(gta.field_a.toUpperCase(), 1, SingleChildWidget.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
         if (-1 == this.field_u &&
           var5 != 0) {

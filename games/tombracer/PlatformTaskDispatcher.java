@@ -216,7 +216,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_p) {
                           Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.field_i, new Object[]{});
                         } else {
-                          this.field_w.a((java.awt.Frame) (var8.field_c), (byte) -108);
+                          this.field_w.exitFullscreen((java.awt.Frame) (var8.field_c), (byte) -108);
                         }
                         break;
                       case 6:
@@ -356,7 +356,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (null != this.field_n) {
             try {
-              this.field_n.b((byte) -112);
+              this.field_n.close((byte) -112);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -364,7 +364,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (null != this.field_q) {
             try {
-              this.field_q.b((byte) -77);
+              this.field_q.close((byte) -77);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -374,7 +374,7 @@ final class PlatformTaskDispatcher implements Runnable {
             for (var2_int = 0; var2_int < this.field_h.length; var2_int++) {
               if (null != this.field_h[var2_int]) {
                 try {
-                  this.field_h[var2_int].b((byte) -101);
+                  this.field_h[var2_int].close((byte) -101);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -384,7 +384,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_x != null) {
             try {
-              this.field_x.b((byte) -101);
+              this.field_x.close((byte) -101);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;

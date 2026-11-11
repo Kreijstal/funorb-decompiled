@@ -80,13 +80,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         this.field_cb.setColors(param0, 4210752, 2121792);
         if (param0) {
           var2 = new sr(this, this.field_ab, fua.field_e);
-          var2.a(GameAssetLoader.field_i, 15, -127);
+          var2.addAction(GameAssetLoader.field_i, 15, -127);
           this.transitionToContent(101, var2);
           return;
         }
         this.field_Y = false;
         var2Lifetime1 = new sr(this, this.field_ab, fua.field_e);
-        var2Lifetime1.a(GameAssetLoader.field_i, 15, -127);
+        var2Lifetime1.addAction(GameAssetLoader.field_i, 15, -127);
         this.transitionToContent(101, var2Lifetime1);
     }
 
@@ -174,11 +174,11 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           var7 = new sr(this, this.field_ab, param2);
           var4 = var7;
           if (param0 == 5) {
-            var7.a(InvertOperator.field_n, 11, 61);
-            var7.a(ControllerLocomotor.field_q, 17, 36);
+            var7.addAction(InvertOperator.field_n, 11, 61);
+            var7.addAction(ControllerLocomotor.field_q, 17, 36);
           } else {
             if (param0 == 256) {
-              var7.a(MonochromeFillOperator.field_q, (byte) -102, (WidgetListener) (this));
+              var7.appendButton(MonochromeFillOperator.field_q, (byte) -102, (WidgetListener) (this));
             } else {
               stackIn_13_0 = var7;
               if (this.field_V) {
@@ -186,11 +186,11 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
               } else {
                 stackIn_14_1 = KeyLockBehaviour.field_o;
               }
-              ((sr) (Object) stackIn_13_0).a(stackIn_14_1, -1, 78);
+              ((sr) (Object) stackIn_13_0).addAction(stackIn_14_1, -1, 78);
             }
           }
           if (3 == param0) {
-            var7.a(MovingWallComponent.field_M, 7, 28);
+            var7.addAction(MovingWallComponent.field_M, 7, 28);
           } else {
             if (param0 != 4) {
               if (param0 != 6) {
@@ -198,12 +198,12 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
                   this.transitionToContent(95, var7);
                   return;
                 }
-                var7.a(epa.field_q, (byte) -102, (WidgetListener) (this));
+                var7.appendButton(epa.field_q, (byte) -102, (WidgetListener) (this));
               } else {
-                var7.a(RenderLayer.field_a, 9, -65);
+                var7.addAction(RenderLayer.field_a, 9, -65);
               }
             } else {
-              var7.a(ApproachPlayerLocomotor.field_p, 8, -83);
+              var7.addAction(ApproachPlayerLocomotor.field_p, 8, -83);
             }
           }
           this.transitionToContent(95, var7);

@@ -138,7 +138,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (q.isAlphanumeric(param1, 11955)) {
+          if (CollisionGridEntry.isAlphanumeric(param1, 11955)) {
             return true;
           }
           var6 = aba.field_c;

@@ -365,7 +365,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         return;
     }
 
-    final void d(int param0, int param1) {
+    final void setDirection(int param0, int param1) {
         if (param0 != 4) {
           return;
         }
@@ -413,7 +413,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         return 0;
     }
 
-    final void c(int param0, int param1) {
+    final void setSpeed(int param0, int param1) {
         if (param1 != 26621) {
           this.applyConstraint(99);
           this.field_t = param0;

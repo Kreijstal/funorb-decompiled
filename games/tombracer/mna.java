@@ -106,7 +106,7 @@ abstract class mna {
         return (gqa) (var4);
     }
 
-    final static RoomDefinition a(int param0, int param1) {
+    final static RoomDefinition findRoomDefinitionFrom(int param0, int param1) {
         int var3 = 0;
         RoomDefinition[] var2;
         RoomDefinition var4;

@@ -181,7 +181,7 @@ final class joa {
         field_c = null;
     }
 
-    final static String a(boolean param0, byte param1, String param2) {
+    final static String playMusicTrackByName(boolean param0, byte param1, String param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

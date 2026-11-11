@@ -62,7 +62,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              ssa.reportClientError((String) null, (byte) 125, (Throwable) ((Object) var2_ref));
+              ClipStack.reportClientError((String) null, (byte) 125, (Throwable) ((Object) var2_ref));
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {
@@ -175,7 +175,7 @@ final class DiskCacheWorker implements Runnable {
           var4.secondaryKey = (long)param1;
           var4.field_q = 3;
           var4.field_l = false;
-          this.a(-42, var4);
+          this.enqueueRequest(-42, var4);
           if (param0 >= -42) {
             var5 = (byte[]) null;
             this.writeAsync(true, 61, (SectorCacheStore) null, (byte[]) null);
@@ -211,7 +211,7 @@ final class DiskCacheWorker implements Runnable {
         return var1.field_h;
     }
 
-    private final void a(int param0, DiskArchiveRequest param1) {
+    private final void enqueueRequest(int param0, DiskArchiveRequest param1) {
         synchronized (this.field_d) {
           this.field_d.addLast(param1, (byte) -105);
           if (param0 >= -27) {
@@ -244,7 +244,7 @@ final class DiskCacheWorker implements Runnable {
           stackIn_2_0 = var5;
           stackIn_3_1 = (param0);
           stackIn_2_0.field_l = stackIn_3_1;
-          this.a(-98, var5);
+          this.enqueueRequest(-98, var5);
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

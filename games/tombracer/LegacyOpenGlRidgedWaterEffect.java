@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
-    private tla field_g;
+    private OpenGlDisplayLists field_g;
     static BinaryBitmapFont field_e;
     private LegacyOpenGlTexture1D field_d;
     private aaa field_c;
@@ -62,8 +62,8 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
 
     private final void a(byte param0) {
         LegacyOpenGlTexture var3 = null;
-        this.field_g = new tla(this.toolkit, 2);
-        this.field_g.a((byte) 6, 0);
+        this.field_g = new OpenGlDisplayLists(this.toolkit, 2);
+        this.field_g.beginList((byte) 6, 0);
         this.toolkit.e(1, true);
         this.toolkit.setTextureCombineOperations(7681, 8960, 260);
         this.toolkit.setTextureCombineOperands(0, 0, 34168, 768);
@@ -78,8 +78,8 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
           jaggl.OpenGL.glEnable(3170);
           jaggl.OpenGL.glEnable(3171);
         }
-        this.field_g.b((byte) -119);
-        this.field_g.a((byte) 6, 1);
+        this.field_g.endList((byte) -119);
+        this.field_g.beginList((byte) 6, 1);
         this.toolkit.e(1, true);
         this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
         this.toolkit.setTextureCombineOperands(0, 0, 5890, 768);
@@ -94,10 +94,10 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
           var3 = (LegacyOpenGlTexture) null;
           this.bindTexture(73, 20, (LegacyOpenGlTexture) null);
         } else {
-          this.field_g.b((byte) 89);
+          this.field_g.endList((byte) 89);
           return;
         }
-        this.field_g.b((byte) 89);
+        this.field_g.endList((byte) 89);
     }
 
     LegacyOpenGlRidgedWaterEffect(OpenGlToolkit param0, aaa param1) {
@@ -106,7 +106,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
           this.field_c = param1;
           this.a((byte) -122);
           this.field_d = new LegacyOpenGlTexture1D(this.toolkit, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
-          this.field_d.a(76, false);
+          this.field_d.setWrap(76, false);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -159,7 +159,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
           this.toolkit.a(true, this.field_d);
           this.toolkit.e(0, true);
         }
-        this.field_g.a(4864, '\0');
+        this.field_g.callList(4864, '\0');
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glPushMatrix();
         jaggl.OpenGL.glScalef(0.25f, 0.25f, 1.0f);
@@ -193,7 +193,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
     }
 
     final void disable(boolean param0) {
-        this.field_g.a(4864, '\001');
+        this.field_g.callList(4864, '\001');
         if (!(this.toolkit.field_Kb <= 0)) {
           this.toolkit.e(1, true);
           this.toolkit.a(true, (LegacyOpenGlTexture) null);

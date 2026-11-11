@@ -27,7 +27,7 @@ final class LaserShooterComponent extends ShooterComponent {
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (BlockModel) (var7.createModel(7, 100));
-          var8.b(114, 16);
+          var8.setVariant(114, 16);
           var9.addModel(var5, (byte) 124, var8);
           this.addMuzzleLight(var9, param1 ^ 3, var5, 16777130);
           stackIn_1_0 = var9;
@@ -206,7 +206,7 @@ final class LaserShooterComponent extends ShooterComponent {
           return;
         }
         if (baa.field_d.b(100663296)) {
-          MaskBlendOperator.d(-25405);
+          MaskBlendOperator.initToolkitResources(-25405);
           return;
         }
         if (tga.field_a != null) {
@@ -215,7 +215,7 @@ final class LaserShooterComponent extends ShooterComponent {
         if (null == baa.field_d.field_i) {
           return;
         }
-        MaskBlendOperator.d(-25405);
+        MaskBlendOperator.initToolkitResources(-25405);
     }
 
     final void applyDefaults(byte param0) {

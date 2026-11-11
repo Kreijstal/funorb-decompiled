@@ -291,7 +291,7 @@ final class PerlinNoise2D extends TextureOperator {
         return var4;
     }
 
-    final static void a(RoomDefinition[] param0, int param1, int param2, int param3) {
+    final static void sortRoomDefinitions(RoomDefinition[] param0, int param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         if (param1 >= param2) {
@@ -299,9 +299,9 @@ final class PerlinNoise2D extends TextureOperator {
         }
         try {
           var4_int = param1;
-          var5 = CachedTextLayout.a(param2, var4_int, param1, (byte) -65, param0);
-          PerlinNoise2D.a(param0, param1, -1 + var5, param3);
-          PerlinNoise2D.a(param0, 1 + var5, param2, param3 + 0);
+          var5 = CachedTextLayout.partitionRoomDefinitions(param2, var4_int, param1, (byte) -65, param0);
+          PerlinNoise2D.sortRoomDefinitions(param0, param1, -1 + var5, param3);
+          PerlinNoise2D.sortRoomDefinitions(param0, 1 + var5, param2, param3 + 0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "lva.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

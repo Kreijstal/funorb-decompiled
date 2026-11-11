@@ -28,7 +28,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           this.ensureTextLayout(param1, 14157);
           if (param0 != 3459) {
             var4 = (TextWidgetPainter) null;
-            this.a((TextWidgetPainter) null, -5);
+            this.copyTo((TextWidgetPainter) null, -5);
           }
           stackIn_3_0 = param1.field_l.getMaxLineWidth(0) - (-this.field_h - this.field_c);
           return stackIn_3_0;
@@ -201,7 +201,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             this.field_e.drawParagraph(this.getDisplayText(param5 ^ -12591, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128), var9_int, var10, param7, param0, this.field_l, this.field_a, this.field_f);
           }
-          pfa.a(1);
+          pfa.popRasterState(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,7 +225,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         return this.field_e.field_w + this.field_e.field_k;
     }
 
-    final void a(TextWidgetPainter param0, int param1) {
+    final void copyTo(TextWidgetPainter param0, int param1) {
         int discarded$0 = 0;
         try {
           param0.field_m = this.field_m;
@@ -308,9 +308,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 stackIn_21_0 = var18.getCaretX((byte) -59, var9);
               }
               var15 = stackIn_21_0;
-              afa.field_c.a(param1.field_j + (param2 + (param1.field_n + this.field_g + var13.field_d)), var13.field_b, this.field_d, this.field_d >>> 24, (byte) 118, -var14 + var15, this.a(param1, var14, param3, -3));
+              afa.field_c.fillRectangleAlpha(param1.field_j + (param2 + (param1.field_n + this.field_g + var13.field_d)), var13.field_b, this.field_d, this.field_d >>> 24, (byte) 118, -var14 + var15, this.a(param1, var14, param3, -3));
             }
-            pfa.a(param0 ^ -2);
+            pfa.popRasterState(param0 ^ -2);
             return;
           }
           return;
@@ -614,8 +614,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var11 = this.textTop(param1, param4, (byte) -110) + Math.max(0, var8.field_d);
             var12 = this.textTop(param1, param4, (byte) -44) + Math.min(this.b(2147483647, param4), Math.min(var8.field_b, var7 + 1 >= var14.field_c.length ? var8.field_b : var13.field_c[1 + var7].field_d));
             tga.intersectClip(-21953, param4.field_i + param3, param4.field_i + (param3 + param4.field_m), param1 + param4.field_n, param4.field_n + (param1 + param4.field_p));
-            afa.field_c.a(var11, this.field_k, 8947848, var10, var10, var12);
-            pfa.a(1);
+            afa.field_c.drawLine(var11, this.field_k, 8947848, var10, var10, var12);
+            pfa.popRasterState(1);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "vpa.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

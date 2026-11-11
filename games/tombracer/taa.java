@@ -37,29 +37,29 @@ final class taa extends IntrusiveNode {
             param3 = param3 - (id.field_h[0].width() * 2 + id.field_h[0].width() / 2);
             for (var4_int = 0; var4_int < 4; var4_int++) {
               var5 = var4_int + 12;
-              id.field_h[var5].a(param3, param1 - (id.field_h[var5].height() >> 1));
+              id.field_h[var5].draw(param3, param1 - (id.field_h[var5].height() >> 1));
               param3 = param3 + id.field_h[var5].width();
             }
           } else if (param2 == 9) {
             param3 = param3 - (id.field_h[0].width() + id.field_h[0].width() / 2);
             for (var4_int = 0; var4_int < 2; var4_int++) {
               var5 = var4_int + 10;
-              id.field_h[var5].a(param3, -(id.field_h[var5].height() >> 1) + param1);
+              id.field_h[var5].draw(param3, -(id.field_h[var5].height() >> 1) + param1);
               param3 = param3 + id.field_h[var5].width();
             }
           } else if (param2 == 8) {
             param3 = param3 - (id.field_h[0].width() + id.field_h[0].width() / 2);
             for (var4_int = 0; var4_int < 2; var4_int++) {
               var5 = var4_int + 8;
-              id.field_h[var5].a(param3, -(id.field_h[var5].height() >> 1) + param1);
+              id.field_h[var5].draw(param3, -(id.field_h[var5].height() >> 1) + param1);
               param3 = param3 + id.field_h[var5].width();
             }
           } else if (param2 >= 0 &&
             7 >= param2) {
-            id.field_h[param2].a(-(id.field_h[param2].width() >> 1) + param3, -(id.field_h[param2].height() >> 1) + param1);
+            id.field_h[param2].draw(-(id.field_h[param2].width() >> 1) + param3, -(id.field_h[param2].height() >> 1) + param1);
           } else {
             if (param2 == 11) {
-              id.field_h[16].a(-(id.field_h[16].width() >> 1) + param3, -(id.field_h[16].height() >> 1) + param1);
+              id.field_h[16].draw(-(id.field_h[16].width() >> 1) + param3, -(id.field_h[16].height() >> 1) + param1);
             }
           }
           if (param0 >= -106) {

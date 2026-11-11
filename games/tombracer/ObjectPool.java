@@ -204,7 +204,7 @@ final class ObjectPool implements Renderable {
         return 0;
     }
 
-    final void a(int param0) {
+    final void mirrorAll(int param0) {
         int var3;
         PooledObject var4;
         var3 = TombRacer.field_G ? 1 : 0;

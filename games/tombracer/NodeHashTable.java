@@ -13,7 +13,7 @@ final class NodeHashTable {
 
     public static void releaseStatics(int param0) {
         if (param0 < 123) {
-          NodeHashTable.a(-27, -70, -10);
+          NodeHashTable.bitsToFixed16(-27, -70, -10);
         }
         field_g = null;
         field_d = null;
@@ -143,7 +143,7 @@ final class NodeHashTable {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int bitsToFixed16(int param0, int param1, int param2) {
         if (param1 < 82) {
           field_d = (String) null;
         }

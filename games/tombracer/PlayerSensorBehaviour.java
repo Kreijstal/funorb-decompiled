@@ -217,13 +217,13 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
                 var6 = this.getPlayer((byte) 19);
                 var4 = var6.getX(3) - this.trap.getX(3);
                 var5 = var6.getY(9648) - this.trap.getY(9648);
-                this.field_v = qva.a((byte) -94, var5, var4);
+                this.field_v = qva.headingFromVector((byte) -94, var5, var4);
               } else {
                 if (this.field_r) {
                   var7 = this.getPlayer((byte) 19);
                   var4 = var7.getX(3) - this.trap.getX(3);
                   var5 = var7.getY(9648) - this.trap.getY(9648);
-                  this.field_v = qva.a((byte) -94, var5, var4);
+                  this.field_v = qva.headingFromVector((byte) -94, var5, var4);
                 }
               }
               if (var2 != 0 &&
@@ -252,13 +252,13 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
               var9 = this.getPlayer((byte) 19);
               var4 = var9.getX(3) - this.trap.getX(3);
               var5 = var9.getY(9648) - this.trap.getY(9648);
-              this.field_v = qva.a((byte) -94, var5, var4);
+              this.field_v = qva.headingFromVector((byte) -94, var5, var4);
             } else {
               if (this.field_r) {
                 var8 = this.getPlayer((byte) 19);
                 var4 = var8.getX(3) - this.trap.getX(3);
                 var5 = var8.getY(9648) - this.trap.getY(9648);
-                this.field_v = qva.a((byte) -94, var5, var4);
+                this.field_v = qva.headingFromVector((byte) -94, var5, var4);
                 if (this.field_s) {
                   stackIn_42_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;
                   var2 = stackIn_42_0;
@@ -310,13 +310,13 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
                 var10 = this.getPlayer((byte) 19);
                 var4 = var10.getX(3) - this.trap.getX(3);
                 var5 = var10.getY(9648) - this.trap.getY(9648);
-                this.field_v = qva.a((byte) -94, var5, var4);
+                this.field_v = qva.headingFromVector((byte) -94, var5, var4);
               } else {
                 if (this.field_r) {
                   var11 = this.getPlayer((byte) 19);
                   var4 = var11.getX(3) - this.trap.getX(3);
                   var5 = var11.getY(9648) - this.trap.getY(9648);
-                  this.field_v = qva.a((byte) -94, var5, var4);
+                  this.field_v = qva.headingFromVector((byte) -94, var5, var4);
                 }
               }
               if (var2 != 0 &&
@@ -370,7 +370,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
               var13 = this.getPlayer((byte) 19);
               var4 = var13.getX(3) - this.trap.getX(3);
               var5 = var13.getY(9648) - this.trap.getY(9648);
-              this.field_v = qva.a((byte) -94, var5, var4);
+              this.field_v = qva.headingFromVector((byte) -94, var5, var4);
               if (var2 != 0 &&
                 this.field_s) {
                 stackIn_218_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;
@@ -402,7 +402,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
               var12 = this.getPlayer((byte) 19);
               var4 = var12.getX(3) - this.trap.getX(3);
               var5 = var12.getY(9648) - this.trap.getY(9648);
-              this.field_v = qva.a((byte) -94, var5, var4);
+              this.field_v = qva.headingFromVector((byte) -94, var5, var4);
               if (var2 != 0 &&
                 this.field_s) {
                 stackIn_195_0 = (!this.isPlayerFacingSensor(8192)) ? 0 : 1;

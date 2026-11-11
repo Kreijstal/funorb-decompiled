@@ -67,7 +67,7 @@ abstract class SocketConnector {
               if (param3 + param5 > hc.field_h) {
                 za.a(param0, param3, param4, param1, (byte) 115, param5);
               } else {
-                iea.a(param0, param4, param1, param5, 110, param3);
+                iea.fillEllipse(param0, param4, param1, param5, 110, param3);
               }
             }
           }

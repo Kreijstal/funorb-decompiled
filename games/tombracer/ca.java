@@ -280,7 +280,7 @@ final class ca extends GameFont {
           this.field_g.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
         } else {
           this.field_g.setTextureCombineOperations(iw.field_c, (byte) -110, PlatformComponent.field_F);
-          this.field_g.a(pea.field_c, 0, -121);
+          this.field_g.a(LruNodeCache.field_c, 0, -121);
           this.field_g.g(3625, param3);
         }
         var6 = this.field_g.y((byte) -77);

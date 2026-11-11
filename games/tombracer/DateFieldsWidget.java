@@ -75,7 +75,7 @@ final class DateFieldsWidget extends DateInputWidget {
           param1 = param1 + this.field_n;
           param0 = param0 + this.field_i;
           this.drawFieldLabel(-44, param0, this.field_B, param1, oda.field_i);
-          this.drawFieldLabel(-121, param0, this.field_E, param1, kp.field_d);
+          this.drawFieldLabel(-121, param0, this.field_E, param1, HardwareTextureCache.field_d);
           this.drawFieldLabel(param2 - 62, param0, this.field_D, param1, DropdownList.field_y);
           return;
         }

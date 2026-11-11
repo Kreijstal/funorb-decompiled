@@ -10,7 +10,7 @@ final class GrowableIntList {
     static String field_b;
     private int field_d;
 
-    final int b(int param0) {
+    final int size(int param0) {
         if (param0 != -1) {
           return -58;
         }
@@ -28,7 +28,7 @@ final class GrowableIntList {
         return this.field_c[param1];
     }
 
-    final void a(int param0, byte param1) {
+    final void add(int param0, byte param1) {
         int var3 = 91 / ((param1 - 26) / 53);
         this.set(this.field_d + 1, param0, -1);
     }

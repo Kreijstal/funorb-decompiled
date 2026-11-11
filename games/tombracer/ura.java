@@ -28,7 +28,7 @@ final class ura {
               PlantModel.field_n = doa.a(param3, param0, (byte) 114);
             } else {
               if (param0 <= 105) {
-                PlantModel.field_n = pla.a(param2 + 228, param1);
+                PlantModel.field_n = IntIntHashTable.a(param2 + 228, param1);
               } else {
                 PlantModel.field_n = doa.a(param3, param0, (byte) 114);
               }

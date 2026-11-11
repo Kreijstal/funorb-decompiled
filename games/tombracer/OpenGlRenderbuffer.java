@@ -16,7 +16,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
 
     public static void releaseStatics(byte param0) {
         if (param0 != -48) {
-          OpenGlRenderbuffer.f(-96);
+          OpenGlRenderbuffer.getCourseCount(-96);
           field_u = null;
           field_k = null;
           return;
@@ -25,7 +25,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
         field_k = null;
     }
 
-    final void g(int param0) {
+    final void release(int param0) {
         if (this.field_m > 0) {
           this.field_p.c(2, this.field_o, this.field_m);
           this.field_m = 0;
@@ -53,7 +53,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
     }
 
     protected final void finalize() throws Throwable {
-        this.g(96);
+        this.release(96);
         super.finalize();
     }
 
@@ -64,7 +64,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
           this.field_r = param0;
           return;
         }
-        OpenGlRenderbuffer.f(-114);
+        OpenGlRenderbuffer.getCourseCount(-114);
         jaggl.OpenGL.glFramebufferRenderbufferEXT(param1, param0, 36161, this.field_m);
         this.field_q = param1;
         this.field_r = param0;
@@ -77,7 +77,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
         this.field_r = -1;
     }
 
-    final static int f(int param0) {
+    final static int getCourseCount(int param0) {
         if (param0 != -1) {
           return 119;
         }

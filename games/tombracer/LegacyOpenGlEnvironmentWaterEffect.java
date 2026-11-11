@@ -119,7 +119,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
           }
           KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m - 1;
           if (KaleidoscopeOperator.field_m == 0) {
-            cla.field_m = null;
+            PbufferEntry.field_m = null;
             return;
           }
           return;
@@ -134,7 +134,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
           }
           KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m - 1;
           if (KaleidoscopeOperator.field_m == 0) {
-            cla.field_m = null;
+            PbufferEntry.field_m = null;
             return;
           }
           return;
@@ -148,7 +148,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
         }
         KaleidoscopeOperator.field_m = KaleidoscopeOperator.field_m - 1;
         if (KaleidoscopeOperator.field_m == 0) {
-          cla.field_m = null;
+          PbufferEntry.field_m = null;
           return;
         }
     }

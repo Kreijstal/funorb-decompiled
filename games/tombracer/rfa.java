@@ -120,7 +120,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                 this.updateScreen(true, false);
               } else {
                 if (dq.field_f != null) {
-                  og.b(0);
+                  og.exitFullscreen(0);
                 }
                 if (2 == var3) {
                   ArchiveRequest.openQuitPage(di.getApplet(110), (byte) -95);
@@ -187,7 +187,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                   }
                 }
               } else {
-                og.b(0);
+                og.exitFullscreen(0);
               }
             }
           }
@@ -270,7 +270,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         var4 = TombRacer.field_G ? 1 : 0;
         if (dq.field_f != null &&
           dq.field_f.field_b) {
-          og.b(0);
+          og.exitFullscreen(0);
           RandomMazeBehaviour.b(1);
         }
         stackIn_5_1 = -127;
@@ -286,7 +286,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
             return;
           }
         }
-        this.u(97);
+        this.processIncomingPackets(97);
         if (!lla.field_b) {
           tc.a(pg.field_y, -2886);
           if (dma.field_l.loadStep(-4171)) {
@@ -343,7 +343,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
 
     abstract void onLoadingComplete(int param0);
 
-    private final void u(int param0) {
+    private final void processIncomingPackets(int param0) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;

@@ -23,7 +23,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract int getDay(byte param0);
 
-    final static RoomDefinition c(int param0, int param1, int param2) {
+    final static RoomDefinition getCourseRoom(int param0, int param1, int param2) {
         qg var5 = cm.field_a[param0];
         qg var3 = var5;
         int var4 = 70 / ((param1 - 5) / 61);
@@ -44,7 +44,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           field_x = null;
           return;
         }
-        DateInputWidget.c(81, -67, 72);
+        DateInputWidget.getCourseRoom(81, -67, 72);
         field_z = null;
         field_x = null;
     }

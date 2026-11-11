@@ -147,9 +147,9 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
               var7[var8] = param1.readBits((byte) 44, 4);
             }
             this.field_u = new FlagSet(6);
-            this.field_u.a(var12, 0);
+            this.field_u.setAll(var12, 0);
             this.field_t = new FlagSet(6);
-            this.field_t.a(var13, 0);
+            this.field_t.setAll(var13, 0);
             return;
           }
           this.field_u = new FlagSet(6, param0.formatVersion, param1);

@@ -143,7 +143,7 @@ final class ad extends IntrusiveNode {
         TextInputWidget.paintNineSliceFrame(1, var7, (byte) -96, var4_int, var8, 64, 1, 64, var6, 0);
         tga.field_a.setClip(this.field_k, this.field_g, this.field_k + 64, -3 + this.field_g + 64);
         if (this.a(-64)) {
-          nc.field_e.a(this.field_k, this.field_g);
+          nc.field_e.draw(this.field_k, this.field_g);
           tga.field_a.la();
           var3 = 2431750;
           if (param1) {
@@ -154,7 +154,7 @@ final class ad extends IntrusiveNode {
           SocketConnector.a(var10.toUpperCase(), 1, qf.field_j, var3, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
           return;
         }
-        fa.field_a[this.field_f].a(this.field_k, this.field_g);
+        fa.field_a[this.field_f].draw(this.field_k, this.field_g);
         tga.field_a.la();
         var3Lifetime1 = 2431750;
         if (param1) {

@@ -44,7 +44,7 @@ final class FunOrbConsole extends ConsoleWindow {
           var2 = this.field_o.getText((byte) -114);
           var3 = this.field_o.getCaret(-1320);
           var4 = LaserShooterComponent.tokenizeCommand((byte) 126, var2);
-          var5 = PlayerViewport.a(true, var4, var3);
+          var5 = PlayerViewport.findTokenAtPosition(true, var4, var3);
           var6 = "";
           if (var5 >= 0) {
             var7 = var4[var5];
@@ -205,7 +205,7 @@ final class FunOrbConsole extends ConsoleWindow {
               if (!var4.a((byte) 85)) {
                 throw new jj(var4.c((byte) -127).field_h);
               }
-              this.a((byte) -80, var6.a(-1, this.methods));
+              this.a((byte) -80, var6.evaluate(-1, this.methods));
               return true;
             } catch (jj decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -338,7 +338,7 @@ final class FunOrbConsole extends ConsoleWindow {
           var2 = this.field_o.getText((byte) -115);
           var3 = this.field_o.getCaret(-1320);
           var4 = LaserShooterComponent.tokenizeCommand((byte) 126, var2);
-          var5 = PlayerViewport.a(true, var4, var3);
+          var5 = PlayerViewport.findTokenAtPosition(true, var4, var3);
           if (param0) {
             this.a((String) null, (byte) -83);
           }

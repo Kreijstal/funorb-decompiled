@@ -61,7 +61,7 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
         field_u = null;
         field_w = null;
         if (param0 < 80) {
-          LegacyOpenGlSpriteTexture.h(-13);
+          LegacyOpenGlSpriteTexture.getTooltipStyle(-13);
         }
     }
 
@@ -82,7 +82,7 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
     final static void a(int param0, GraphicsToolkit param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           if (param3 < 34) {
-            LegacyOpenGlSpriteTexture.h(-73);
+            LegacyOpenGlSpriteTexture.getTooltipStyle(-73);
           }
           RasterBuffer.a(param7, 2, param1, param6, param2, param5, param0, 1, param4);
         } catch (RuntimeException runtimeException) {
@@ -90,7 +90,7 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
         }
     }
 
-    final static kn h(int param0) {
+    final static kn getTooltipStyle(int param0) {
         int var1 = 119 % ((63 - param0) / 41);
         if (joa.field_c == null) {
           joa.field_c = new kn();

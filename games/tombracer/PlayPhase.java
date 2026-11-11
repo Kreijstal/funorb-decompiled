@@ -113,7 +113,7 @@ final class PlayPhase extends MatchPhase {
         int var5_intLifetime1Lifetime1;
         var14 = TombRacer.field_G ? 1 : 0;
         var3 = this.screen.getViewedPlayerIndex(81);
-        this.viewports[var3].b(23479);
+        this.viewports[var3].draw(23479);
         if (!this.screen.isMenuBackgroundDemo((byte) 33)) {
           var4_int = 0;
           for (var5_int = 0; this.matchState.standings.order.length > var5_int; var5_int++) {
@@ -136,7 +136,7 @@ final class PlayPhase extends MatchPhase {
               }
             }
             this.viewports[var6Lifetime2].applyLayout(0, ByteStorage.field_e, -20186);
-            this.viewports[var6Lifetime2].b(23479);
+            this.viewports[var6Lifetime2].draw(23479);
           } else {
             if (var5_int > 2) {
               var19 = new int[var5_int][2];
@@ -155,7 +155,7 @@ final class PlayPhase extends MatchPhase {
                 if (var8 != -1 &&
                   var3 != var8) {
                   this.viewports[var8].applyLayout(var7_int, mma.field_c, -20186);
-                  this.viewports[var8].b(23479);
+                  this.viewports[var8].draw(23479);
                 }
               }
             }
@@ -219,7 +219,7 @@ final class PlayPhase extends MatchPhase {
                   var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, this.matchState.getCourseId(0));
                 } else {
                   if (var5.j(0)) {
-                    var7 = mna.a(0, var6Lifetime1Lifetime2);
+                    var7 = mna.findRoomDefinitionFrom(0, var6Lifetime1Lifetime2);
                   } else {
                     var7 = PlayerInputQueue.findRoomDefinition(-111, var6Lifetime1Lifetime2);
                   }
@@ -231,8 +231,8 @@ final class PlayPhase extends MatchPhase {
               var9 = -64 + SwitchLinkList.b(0);
               var10 = var5.getTick((byte) 69);
               var11 = 16777215;
-              RoomEffectTraps.a(0, -34, -16 + var9, "Par Time: " + dea.formatTime(var7.field_h, (byte) -8), var8Lifetime1, kn.field_p, 16777215);
-              var17 = "Room total: " + dea.formatTime(var10, (byte) -8);
+              RoomEffectTraps.a(0, -34, -16 + var9, "Par Time: " + DropAnimation.formatTime(var7.field_h, (byte) -8), var8Lifetime1, kn.field_p, 16777215);
+              var17 = "Room total: " + DropAnimation.formatTime(var10, (byte) -8);
               var12 = var17;
               var12Lifetime1 = var17;
               var12Lifetime2 = var17;
@@ -251,7 +251,7 @@ final class PlayPhase extends MatchPhase {
               var13 = var16.getExitTick(2158);
               if (var13 > 0) {
                 var11Lifetime1 = 16777215;
-                var18 = "Last room total: " + dea.formatTime(var13, (byte) -8);
+                var18 = "Last room total: " + DropAnimation.formatTime(var13, (byte) -8);
                 var12Lifetime4 = var18;
                 var12Lifetime4Lifetime1 = var18;
                 var12Lifetime4Lifetime2 = var18;
@@ -574,7 +574,7 @@ final class PlayPhase extends MatchPhase {
               if (var9Lifetime1 == 248) {
                 pu.clearStatusCookie(di.getApplet(21), 255);
                 io.field_b = ArchiveNetworkClient.field_f;
-                dea.closeGameSocket(60);
+                DropAnimation.closeGameSocket(60);
                 PushableBlockMazeComponent.field_L = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
@@ -600,7 +600,7 @@ final class PlayPhase extends MatchPhase {
                 for (var12 = 0; var11 > var12; var12++) {
                   PressureSwitchBehaviour.field_s[var12] = WeaveOperator.field_q.readVersionedString(121);
                 }
-                dea.closeGameSocket(60);
+                DropAnimation.closeGameSocket(60);
                 PushableBlockMazeComponent.field_L = false;
                 stackIn_46_0 = var11 + 100;
                 return stackIn_46_0;
@@ -608,7 +608,7 @@ final class PlayPhase extends MatchPhase {
             }
           }
           if (pe.field_m == ProceduralTexture.field_p &&
-            cla.ensurePacketPayload(0)) {
+            PbufferEntry.ensurePacketPayload(0)) {
             if (MembersUpsellMenu.field_z == 255) {
               var9_ref_String = WeaveOperator.field_q.readNullableString(-28690);
               if (var9_ref_String != null) {
@@ -617,14 +617,14 @@ final class PlayPhase extends MatchPhase {
             } else {
               io.field_b = WeaveOperator.field_q.readString((byte) -76);
             }
-            dea.closeGameSocket(60);
+            DropAnimation.closeGameSocket(60);
             PushableBlockMazeComponent.field_L = false;
             stackIn_57_0 = MembersUpsellMenu.field_z;
             return stackIn_57_0;
           }
           if (null == OpenGlTransform3D.field_e) {
             if (PushableBlockMazeComponent.field_L) {
-              if (rf.b((byte) -121) > 30000L) {
+              if (rf.millisSinceLastReceive((byte) -121) > 30000L) {
                 io.field_b = SpriteTileOperator.field_u;
               } else {
                 io.field_b = sq.field_x;
@@ -691,7 +691,7 @@ final class PlayPhase extends MatchPhase {
             var4 = param1;
           }
           var5 = new WhirlpoolDigest();
-          var5.b((byte) -6);
+          var5.reset((byte) -6);
           var5.updateBits(var4, (long)(param3 * param0), (byte) -59);
           var6 = new byte[64];
           var5.finishDigest(0, param3 ^ 40, var6);

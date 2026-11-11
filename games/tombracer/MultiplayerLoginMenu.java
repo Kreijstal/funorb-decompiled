@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MultiplayerLoginMenu extends MenuScreen {
-    private dea field_q;
+    private DropAnimation field_q;
     static ur field_r;
 
     public static void releaseStatics(int param0) {
@@ -52,7 +52,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
 
     final void draw(byte param0, boolean param1) {
         int var3 = this.field_q.getPosition(param0 + 111);
-        gg.field_f.a(aaa.a(false) - gg.field_f.width() >> 1, var3 + gg.field_f.height() / 2);
+        gg.field_f.draw(aaa.a(false) - gg.field_f.width() >> 1, var3 + gg.field_f.height() / 2);
         this.h(var3, 3);
         super.draw(param0, param1);
     }
@@ -61,7 +61,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
         if (param0 >= 111) {
           return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].getWidth(-163) / 2) + param1 * this.items[param1].getWidth(-163));
         }
-        this.field_q = (dea) null;
+        this.field_q = (DropAnimation) null;
         return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].getWidth(-163) / 2) + param1 * this.items[param1].getWidth(-163));
     }
 
@@ -89,7 +89,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
 
     MultiplayerLoginMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
-        this.field_q = new dea();
+        this.field_q = new DropAnimation();
         try {
           this.field_o = false;
         } catch (RuntimeException runtimeException) {

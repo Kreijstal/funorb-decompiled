@@ -81,7 +81,7 @@ final class gqa {
 
     final static void a(int param0, int param1, int param2, int param3, ka param4, int param5) {
         try {
-          via.a(param4, param0, 0, param5, param3, param2, 51, 0);
+          via.drawModelRotated(param4, param0, 0, param5, param3, param2, 51, 0);
           if (param1 != -83584144) {
             field_a = (String) null;
           }

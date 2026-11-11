@@ -31,7 +31,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           var4 = 240;
           var5 = this.field_g.simulations[0].rooms[0];
           var4 += 20;
-          MembersUpsellMenu.a("Total Time: " + dea.formatTime(this.field_g.simulations[0].tick, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
+          MembersUpsellMenu.a("Total Time: " + DropAnimation.formatTime(this.field_g.simulations[0].tick, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
           var4 += 20;
           MembersUpsellMenu.a("Deaths: " + var5.getDeathCount(0), var2, kn.field_p, -1, var4, 320, 0);
           return;
@@ -114,7 +114,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           if (ft.field_a) {
             var6 = var6 | 1;
           }
-          if (q.field_r) {
+          if (CollisionGridEntry.field_r) {
             var6 = var6 | 4;
           }
           if (param4) {

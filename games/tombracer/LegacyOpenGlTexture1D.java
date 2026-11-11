@@ -6,7 +6,7 @@ final class LegacyOpenGlTexture1D extends LegacyOpenGlTexture {
     private int field_l;
     static fta field_n;
 
-    final void a(int param0, boolean param1) {
+    final void setWrap(int param0, boolean param1) {
         this.toolkit.a(true, (LegacyOpenGlTexture) (this));
         int var3 = -71 / ((17 - param0) / 38);
         jaggl.OpenGL.glTexParameteri(this.target, 10242, !param1 ? 33071 : 10497);

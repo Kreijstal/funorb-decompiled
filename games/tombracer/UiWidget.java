@@ -134,14 +134,14 @@ class UiWidget extends IntrusiveNode {
             if (param0 < -23) {
               var11 = of.a(1);
               if (var11 != null) {
-                afa.field_c.a(var11, RenderLayer.field_f, true, ConsoleToken.field_f);
+                afa.field_c.drawTooltip(var11, RenderLayer.field_f, true, ConsoleToken.field_f);
               }
               return;
             }
             this.field_m = -42;
             var10 = of.a(1);
             if (var10 != null) {
-              afa.field_c.a(var10, RenderLayer.field_f, true, ConsoleToken.field_f);
+              afa.field_c.drawTooltip(var10, RenderLayer.field_f, true, ConsoleToken.field_f);
             }
             return;
           }
@@ -150,7 +150,7 @@ class UiWidget extends IntrusiveNode {
           if (var6 != 0) {
             var7 = of.a(1);
             if (var7 != null) {
-              afa.field_c.a(var7, RenderLayer.field_f, true, ConsoleToken.field_f);
+              afa.field_c.drawTooltip(var7, RenderLayer.field_f, true, ConsoleToken.field_f);
             }
             return;
           }

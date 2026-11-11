@@ -70,7 +70,7 @@ final class BladeShooterComponent extends ShooterComponent {
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (BlockModel) (var7.createModel(7, param1 ^ 122));
-          var8.b(106, 13);
+          var8.setVariant(106, 13);
           var9.addModel(var5, (byte) 124, var8);
           stackIn_1_0 = var9;
           return stackIn_1_0;

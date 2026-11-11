@@ -52,7 +52,7 @@ final class aca extends IntrusiveNode {
             stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
-          if (!GameApplet.a(false, param4, param1, param2)) {
+          if (!GameApplet.loadSpriteSheet(false, param4, param1, param2)) {
             return null;
           }
           stackIn_7_0 = RoomHeader.decodeBinaryFont(param0.getFile(false, param1, param4), (byte) 103);

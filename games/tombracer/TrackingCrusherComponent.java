@@ -95,8 +95,8 @@ final class TrackingCrusherComponent extends PrefabComponent {
           var9.setFloating((byte) 17, true);
           var9.setCollisionLevel(4, (byte) -12, true);
           var5 = new ApproachPlayerLocomotor(param2, param0);
-          var5.c(66, 0);
-          var5.a(false, 262144);
+          var5.setStopDistance(66, 0);
+          var5.setSpeed(false, 262144);
           var9.addLocomotor(var5, param1 ^ 3);
           var6 = new CrusherBehaviour(param2, param0);
           var6.setTimings(25, 12, 1, 25, 12);

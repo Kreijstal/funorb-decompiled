@@ -214,7 +214,7 @@ final class np extends ka {
         int var11Lifetime1;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          var6_int = cla.field_m[qp.scaleLightness(param1, param4, 117)];
+          var6_int = PbufferEntry.field_m[qp.scaleLightness(param1, param4, 117)];
           if (param3 != -1) {
             var7 = this.field_R.field_c.metadata((byte) -79, 65535 & param3);
             var8 = 255 & var7.field_c;
@@ -1160,7 +1160,7 @@ final class np extends ka {
                 if (stackIn_23_0 < stackIn_23_1) {
                   var6 = this.field_r[var5_int];
                   var7 = this.field_f[var5_int];
-                  var7.field_c = 16777215 & cla.field_m[this.field_X[var6.field_l] & 65535] | -16777216 & var7.field_c;
+                  var7.field_c = 16777215 & PbufferEntry.field_m[this.field_X[var6.field_l] & 65535] | -16777216 & var7.field_c;
                   var5_int++;
                   return;
                 }
@@ -1191,7 +1191,7 @@ final class np extends ka {
               }
               var6Lifetime1 = this.field_r[var5_int];
               var7Lifetime1 = this.field_f[var5_int];
-              var7Lifetime1.field_c = 16777215 & cla.field_m[this.field_X[var6Lifetime1.field_l] & 65535] | -16777216 & var7Lifetime1.field_c;
+              var7Lifetime1.field_c = 16777215 & PbufferEntry.field_m[this.field_X[var6Lifetime1.field_l] & 65535] | -16777216 & var7Lifetime1.field_c;
               var5_int++;
               if (var10 != 0) {
                 return;
@@ -1927,7 +1927,7 @@ final class np extends ka {
                   if (stackIn_373_0 < stackIn_373_1) {
                     var11_ref_pm = this.field_r[var10];
                     var12_ref = this.field_f[var10];
-                    var12_ref.field_c = cla.field_m[this.field_X[var11_ref_pm.field_l] & 65535] & 16777215 | var12_ref.field_c & -16777216;
+                    var12_ref.field_c = PbufferEntry.field_m[this.field_X[var11_ref_pm.field_l] & 65535] & 16777215 | var12_ref.field_c & -16777216;
                     var10++;
                     return;
                   }
@@ -1984,7 +1984,7 @@ final class np extends ka {
                 }
                 var11_ref_pm = this.field_r[var10];
                 var12_ref = this.field_f[var10];
-                var12_ref.field_c = cla.field_m[this.field_X[var11_ref_pm.field_l] & 65535] & 16777215 | var12_ref.field_c & -16777216;
+                var12_ref.field_c = PbufferEntry.field_m[this.field_X[var11_ref_pm.field_l] & 65535] & 16777215 | var12_ref.field_c & -16777216;
                 var10++;
               } while (var47 == 0);
               return;
@@ -3112,13 +3112,13 @@ final class np extends ka {
                   }
                   if (stackIn_244_0 != ~var20Lifetime1) {
                     var21Lifetime1 = var17 / (float)var20Lifetime1;
-                    var12.a((byte) 114, var21Lifetime1 * (float)var13Lifetime1[var19Lifetime1]);
-                    var12.a((byte) 114, (float)var14Lifetime1[var19Lifetime1] * var21Lifetime1);
-                    var12.a((byte) 114, (float)var15Lifetime1[var19Lifetime1] * var21Lifetime1);
+                    var12.writeFloatLittleEndian((byte) 114, var21Lifetime1 * (float)var13Lifetime1[var19Lifetime1]);
+                    var12.writeFloatLittleEndian((byte) 114, (float)var14Lifetime1[var19Lifetime1] * var21Lifetime1);
+                    var12.writeFloatLittleEndian((byte) 114, (float)var15Lifetime1[var19Lifetime1] * var21Lifetime1);
                   } else {
-                    var12.a((byte) 114, var18Lifetime1 * (float)var13Lifetime1[var19Lifetime1]);
-                    var12.a((byte) 114, (float)var14Lifetime1[var19Lifetime1] * var18Lifetime1);
-                    var12.a((byte) 114, (float)var15Lifetime1[var19Lifetime1] * var18Lifetime1);
+                    var12.writeFloatLittleEndian((byte) 114, var18Lifetime1 * (float)var13Lifetime1[var19Lifetime1]);
+                    var12.writeFloatLittleEndian((byte) 114, (float)var14Lifetime1[var19Lifetime1] * var18Lifetime1);
+                    var12.writeFloatLittleEndian((byte) 114, (float)var15Lifetime1[var19Lifetime1] * var18Lifetime1);
                   }
                   var12.position = var12.position + (-12 + var7);
                   var19Lifetime1++;
@@ -3182,8 +3182,8 @@ final class np extends ka {
               (decompiledFrameCompleted1)) {
               var13_intLifetime2Lifetime1 = 0;
               while (this.field_L > var13_intLifetime2Lifetime1) {
-                var12.a((byte) 114, this.field_n[var13_intLifetime2Lifetime1]);
-                var12.a((byte) 114, this.field_y[var13_intLifetime2Lifetime1]);
+                var12.writeFloatLittleEndian((byte) 114, this.field_n[var13_intLifetime2Lifetime1]);
+                var12.writeFloatLittleEndian((byte) 114, this.field_y[var13_intLifetime2Lifetime1]);
                 var12.position = var12.position + (-8 + var7);
                 var13_intLifetime2Lifetime1++;
                 if (var35 != 0) {
@@ -3609,7 +3609,7 @@ final class np extends ka {
                       if (stackIn_221_0 > stackIn_221_1) {
                         var10_ref_pm = this.field_r[var9];
                         var11_ref = this.field_f[var9];
-                        var11_ref.field_c = 16777215 & cla.field_m[this.field_X[var10_ref_pm.field_l] & 65535] | -16777216 & var11_ref.field_c;
+                        var11_ref.field_c = 16777215 & PbufferEntry.field_m[this.field_X[var10_ref_pm.field_l] & 65535] | -16777216 & var11_ref.field_c;
                         var9++;
                         return;
                       }
@@ -3668,7 +3668,7 @@ final class np extends ka {
                   }
                   var10_ref_pm = this.field_r[var9];
                   var11_ref = this.field_f[var9];
-                  var11_ref.field_c = 16777215 & cla.field_m[this.field_X[var10_ref_pm.field_l] & 65535] | -16777216 & var11_ref.field_c;
+                  var11_ref.field_c = 16777215 & PbufferEntry.field_m[this.field_X[var10_ref_pm.field_l] & 65535] | -16777216 & var11_ref.field_c;
                   var9++;
                 } while (var21 == 0);
                 return;
@@ -4590,7 +4590,7 @@ final class np extends ka {
                 if (stackIn_139_0 == stackIn_139_1) {
                   throw new RuntimeException();
                 }
-                var16 = cla.field_m[param1.field_A[((jt) (var13_ref)).field_a] & 65535] & 16777215;
+                var16 = PbufferEntry.field_m[param1.field_A[((jt) (var13_ref)).field_a] & 65535] & 16777215;
                 stackIn_145_0 = var16;
                 stackIn_145_1 = 255;
                 if (param1.field_n != null) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pea {
+final class LruNodeCache {
     static fp field_c;
     static String field_f;
     private DualLinkNode field_d;
@@ -16,12 +16,12 @@ final class pea {
           return;
         }
         PcmSampleStream var2 = (PcmSampleStream) null;
-        pea.playSampleStream((PcmSampleStream) null, -115);
+        LruNodeCache.playSampleStream((PcmSampleStream) null, -115);
         field_f = null;
         field_c = null;
     }
 
-    final DualLinkNode a(int param0, long param1) {
+    final DualLinkNode get(int param0, long param1) {
         if (param0 != 0) {
           return (DualLinkNode) null;
         }
@@ -45,7 +45,7 @@ final class pea {
           var2 = new vb(param0, param0);
           DivisionMazeGenerator.field_e.addLast((byte) -68, var2);
           if (param1 != 1) {
-            pea.releaseStatics((byte) -106);
+            LruNodeCache.releaseStatics((byte) -106);
           }
           PitModel.field_n.prependStream(param0);
           stackIn_3_0 = var2;
@@ -64,7 +64,7 @@ final class pea {
         }
     }
 
-    final void a(DualLinkNode param0, byte param1, long param2) {
+    final void put(DualLinkNode param0, byte param1, long param2) {
         DualLinkNode var5 = null;
         if (param1 <= 6) {
           return;
@@ -89,7 +89,7 @@ final class pea {
         }
     }
 
-    pea(int param0) {
+    LruNodeCache(int param0) {
         int var2 = 0;
         this.field_d = new DualLinkNode();
         this.field_a = new SecondaryLinkQueue();

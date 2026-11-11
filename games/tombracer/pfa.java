@@ -849,7 +849,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionsPage1Text6", (byte) 116);
                 if (var2 != null) {
-                  hsa.field_c = jaa.decodeText((byte) 100, var2);
+                  LegacyTextureCache.field_c = jaa.decodeText((byte) 100, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("loadingStrings,0", (byte) 100);
                 if (var2 != null) {
@@ -1281,7 +1281,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("choose_reward_timeleft", (byte) 124);
                 if (var2 != null) {
-                  tla.field_h = jaa.decodeText((byte) 35, var2);
+                  OpenGlDisplayLists.field_h = jaa.decodeText((byte) 35, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waiting_for_others", (byte) 126);
                 if (var2 != null) {
@@ -2279,7 +2279,7 @@ final class pfa {
 
     final void b(int param0, int param1, int param2) {
         try {
-          hp.a(2048, this.field_h, 1900, this.field_c.getModel((byte) 74), param1 ^ -1918096900, 10 + ((this.field_e >> 16) + param0), (this.field_j >> 16) + param2 + 18);
+          hp.drawModelPreview(2048, this.field_h, 1900, this.field_c.getModel((byte) 74), param1 ^ -1918096900, 10 + ((this.field_e >> 16) + param0), (this.field_j >> 16) + param2 + 18);
           if (param1 != 11327) {
             this.a(73, (byte) 91);
           }
@@ -2306,7 +2306,7 @@ final class pfa {
         }
     }
 
-    final static void a(int param0) {
+    final static void popRasterState(int param0) {
         RuntimeException runtimeException = null;
         bd var1 = null;
         RuntimeException decompiledCaughtException = null;

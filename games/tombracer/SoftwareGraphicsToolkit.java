@@ -477,7 +477,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           }
         }
         var2.field_g = true;
-        return var2.b();
+        return var2.getPixels();
     }
 
     final void setClip(int param0, int param1, int param2, int param3) {

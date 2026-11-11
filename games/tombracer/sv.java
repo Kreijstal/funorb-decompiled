@@ -3,7 +3,7 @@
  */
 final class sv extends MenuScreen {
     static String field_q;
-    private dea field_r;
+    private DropAnimation field_r;
 
     final static String decodeBase37Name(byte param0, long param1) {
         StringBuilder discarded$0 = null;
@@ -81,7 +81,7 @@ final class sv extends MenuScreen {
     final void draw(byte param0, boolean param1) {
         super.draw(param0, param1);
         int var3 = this.items[1].field_i - 70 + this.field_r.getPosition(47) - 150;
-        WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
+        WhiteLightShooterComponent.field_K.draw((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
     }
 
     public static void releaseStatics(int param0) {
@@ -111,7 +111,7 @@ final class sv extends MenuScreen {
         if (param2 == 1) {
           return super.handleKey(param0, param1, 1);
         }
-        this.field_r = (dea) null;
+        this.field_r = (DropAnimation) null;
         return super.handleKey(param0, param1, 1);
     }
 
@@ -140,7 +140,7 @@ final class sv extends MenuScreen {
         return this.firstItemY + ((param0 - 3) * this.itemSpacing - this.items[param0].getHeight(11919));
     }
 
-    final static AntialiasedBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
+    final static AntialiasedBitmapFont loadAntialiasedFont(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         AntialiasedBitmapFont stackIn_5_0 = null;
@@ -152,7 +152,7 @@ final class sv extends MenuScreen {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!GameApplet.a(false, param4, param1, param2)) {
+          if (!GameApplet.loadSpriteSheet(false, param4, param1, param2)) {
             stackIn_2_0 = null;
             return (AntialiasedBitmapFont) (stackIn_2_0);
           }
@@ -184,7 +184,7 @@ final class sv extends MenuScreen {
 
     sv(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
-        this.field_r = new dea();
+        this.field_r = new DropAnimation();
     }
 
     static {

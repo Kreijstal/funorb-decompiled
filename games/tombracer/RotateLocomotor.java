@@ -25,7 +25,7 @@ final class RotateLocomotor extends Locomotor {
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void setRotationSpeed(byte param0, int param1) {
         if (param0 > -121) {
           this.field_p = -76;
           this.field_p = param1;
@@ -59,7 +59,7 @@ final class RotateLocomotor extends Locomotor {
 
     final void applyConstraint(int param0) {
         if (param0 != 1) {
-          this.a((byte) 79, 28);
+          this.setRotationSpeed((byte) 79, 28);
         }
     }
 

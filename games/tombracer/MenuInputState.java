@@ -324,7 +324,7 @@ final class MenuInputState {
     }
 
     final static void openDisplaySettings(byte param0) {
-        afa.field_c = LegacyOpenGlSpriteTexture.h(122);
+        afa.field_c = LegacyOpenGlSpriteTexture.getTooltipStyle(122);
         ModelFactory.field_a = new jta();
         if (param0 < 10) {
           MenuInputState.openDisplaySettings((byte) -39);

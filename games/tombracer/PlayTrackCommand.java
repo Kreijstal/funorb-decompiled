@@ -556,7 +556,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  q.a((byte) -111, param5, var12.f(param1 ^ 0));
+                  CollisionGridEntry.a((byte) -111, param5, var12.f(param1 ^ 0));
                 }
               }
             }

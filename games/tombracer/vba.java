@@ -168,7 +168,7 @@ final class vba extends we {
           if (this.i(var8, 94)) {
             var9 = this.h(var8, 0);
             var10 = this.field_r[var8];
-            var9.a(-(var10 >> 1) + (var6 + 4), -(var10 >> 1) + (var7 + 4), var10 + 32, var10 + 32);
+            var9.drawScaled(-(var10 >> 1) + (var6 + 4), -(var10 >> 1) + (var7 + 4), var10 + 32, var10 + 32);
             var5++;
             var3--;
             var6 += 40;
@@ -246,7 +246,7 @@ final class vba extends we {
         if (!this.i(var6, 65)) {
           return;
         }
-        this.h(var6, 0).a(var4 + var3, var3 + var5);
+        this.h(var6, 0).draw(var4 + var3, var3 + var5);
         var7Lifetime1 = var5 + 20 + 180;
         var8 = ShowLevelSetCommand.achievementNames[var6].toUpperCase();
         var12 = kv.achievementDescriptions[var6];

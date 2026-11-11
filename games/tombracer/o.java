@@ -15,7 +15,7 @@ final class o extends ora implements sca {
 
     public final void a(int param0, int param1, byte[] param2, int param3) {
         try {
-          this.a(param2, param0);
+          this.setData(param2, param0);
           if (param1 != -11783) {
             this.a(100);
           }

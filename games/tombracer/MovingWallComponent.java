@@ -94,7 +94,7 @@ final class MovingWallComponent extends PathMoverComponent {
         return true;
     }
 
-    final boolean C(int param0) {
+    final boolean storesSpeed(int param0) {
         if (param0 != 1760) {
           this.hasSize(46);
           return true;

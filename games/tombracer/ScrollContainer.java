@@ -18,7 +18,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!GameApplet.a(false, param0, param3, param1)) {
+          if (!GameApplet.loadSpriteSheet(false, param0, param3, param1)) {
             stackIn_2_0 = null;
             return (Sprite[]) (stackIn_2_0);
           }
@@ -706,26 +706,26 @@ final class ScrollContainer extends ArrayWidgetGroup {
           }
         } else {
           if (this.field_A.field_p < this.field_A.child.field_p) {
-            this.field_x.c(this.field_A.child.field_p, this.field_A.field_p, -1789710879);
+            this.field_x.setHorizontalExtent(this.field_A.child.field_p, this.field_A.field_p, -1789710879);
             if (param0 != -31791) {
               this.applyScrollPositions((byte) 98);
             }
             if (this.field_D != null) {
               if (this.field_A.child.field_m <= this.field_A.field_m) {
-                this.field_D.a((byte) -84, 1, 1);
+                this.field_D.setVerticalExtent((byte) -84, 1, 1);
               } else {
-                this.field_D.a((byte) -101, this.field_A.field_m, this.field_A.child.field_m);
+                this.field_D.setVerticalExtent((byte) -101, this.field_A.field_m, this.field_A.child.field_m);
               }
             }
             return;
           }
-          this.field_x.c(1, 1, param0 ^ 1789701680);
+          this.field_x.setHorizontalExtent(1, 1, param0 ^ 1789701680);
           if (param0 == -31791) {
             if (this.field_D != null) {
               if (this.field_A.child.field_m <= this.field_A.field_m) {
-                this.field_D.a((byte) -84, 1, 1);
+                this.field_D.setVerticalExtent((byte) -84, 1, 1);
               } else {
-                this.field_D.a((byte) -101, this.field_A.field_m, this.field_A.child.field_m);
+                this.field_D.setVerticalExtent((byte) -101, this.field_A.field_m, this.field_A.child.field_m);
               }
             }
             return;
@@ -736,9 +736,9 @@ final class ScrollContainer extends ArrayWidgetGroup {
           return;
         }
         if (this.field_A.child.field_m <= this.field_A.field_m) {
-          this.field_D.a((byte) -84, 1, 1);
+          this.field_D.setVerticalExtent((byte) -84, 1, 1);
         } else {
-          this.field_D.a((byte) -101, this.field_A.field_m, this.field_A.child.field_m);
+          this.field_D.setVerticalExtent((byte) -101, this.field_A.field_m, this.field_A.child.field_m);
         }
     }
 
@@ -836,7 +836,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
         if (null == this.field_x) {
           return false;
         }
-        this.field_x.c(16, this.field_x.field_M * param0 + this.field_x.field_O);
+        this.field_x.setHorizontalFraction(16, this.field_x.field_M * param0 + this.field_x.field_O);
         return true;
     }
 

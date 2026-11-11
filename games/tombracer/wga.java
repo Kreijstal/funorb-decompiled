@@ -22,7 +22,7 @@ final class wga implements GamePacket {
           var2.writeCipheredOpcode(param1, -2988);
           var2.writeByte(2, 0);
           var2.writeByte(4, 0);
-          var2.writeByte(r.f(11), 0);
+          var2.writeByte(r.packSettings(11), 0);
           return;
         }
     }

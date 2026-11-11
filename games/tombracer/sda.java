@@ -8,7 +8,7 @@ final class sda extends IntrusiveNode {
     static String field_i;
     static String field_h;
     static String field_k;
-    static ssa field_g;
+    static ClipStack field_g;
 
     public static void releaseStatics(int param0) {
         field_i = null;

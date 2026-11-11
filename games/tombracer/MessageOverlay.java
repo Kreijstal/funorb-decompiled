@@ -3,7 +3,7 @@
  */
 final class MessageOverlay extends MatchOverlay {
     static String field_p;
-    private dea field_n;
+    private DropAnimation field_n;
     static UiComponent field_t;
     private boolean field_v;
     private String field_j;
@@ -21,7 +21,7 @@ final class MessageOverlay extends MatchOverlay {
         ToolkitSprite var3 = gg.field_f;
         int var4 = var3.paddedWidth();
         int var5 = var3.paddedHeight();
-        var3.a(-(var4 / 2) + this.field_s, var2 + (this.field_u - var5 / 2));
+        var3.draw(-(var4 / 2) + this.field_s, var2 + (this.field_u - var5 / 2));
         int var6 = 20;
         int var7 = 20;
         if (null != this.panel) {
@@ -124,7 +124,7 @@ final class MessageOverlay extends MatchOverlay {
 
     MessageOverlay(MatchScreen param0, MessagePanel param1) {
         super(param0);
-        this.field_n = new dea();
+        this.field_n = new DropAnimation();
         this.field_l = 20;
         try {
           this.field_s = aaa.a(false) / 2;

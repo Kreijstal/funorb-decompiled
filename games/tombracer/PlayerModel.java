@@ -341,7 +341,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             this.field_p.getRoom((byte) -123).getTileGrid((byte) 93) != null) {
             var3 = this.field_p.getRoom((byte) -88).getTileGrid((byte) 93).getCellAt(this.getRenderY((byte) 106), this.getRenderX((byte) 102), (byte) 119);
             if (var3 != null &&
-              var3.b(param0 ^ 21463)) {
+              var3.isDusty(param0 ^ 21463)) {
               this.field_k = 1;
             }
           }
@@ -362,7 +362,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           return;
         }
         ka var6 = this.field_c.getModel((byte) 74);
-        hp.a(param2, param3, 0, var6, -1918106173, param4, param1);
+        hp.drawModelPreview(param2, param3, 0, var6, -1918106173, param4, param1);
     }
 
     public final void setCharacter(int param0, int param1) {

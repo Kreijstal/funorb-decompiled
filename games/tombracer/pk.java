@@ -223,7 +223,7 @@ final class pk extends we {
             var6 = var6 >> 1;
             var5Lifetime2 = qf.field_k[var4];
           }
-          ((ToolkitSprite) (var5Lifetime2)).a(this.field_A[var4] - (this.field_D[var4] >> 1), -(this.field_t[var4] >> 1) + (this.field_B[var4] + param1), this.field_D[var4], this.field_t[var4], 0, 16777215 | var6 << 24, 1);
+          ((ToolkitSprite) (var5Lifetime2)).drawScaled(this.field_A[var4] - (this.field_D[var4] >> 1), -(this.field_t[var4] >> 1) + (this.field_B[var4] + param1), this.field_D[var4], this.field_t[var4], 0, 16777215 | var6 << 24, 1);
         }
         var4Lifetime1 = 120 + param1 + 50;
         eda.field_f.drawCentred(-1, -1, RewardChoicePhase.field_t[0], -14671840, var4Lifetime1, OpenGlBuffer.field_a);

@@ -94,12 +94,12 @@ final class TripBeamComponent extends SwitchComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new TripBeamBehaviour(param2, param0);
           var5.setTimingPattern((byte) -8, new TimingPattern(new int[]{}));
-          var5.b(0, 636);
+          var5.setMaxBeamLength(0, 636);
           this.bindSwitchState(var5, (byte) -107);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (BlockModel) (var6.createModel(7, 82));
-          var7.b(119, 16);
+          var7.setVariant(119, 16);
           var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;

@@ -45,7 +45,7 @@ final class vua extends SingleChildWidget {
             return;
           }
           if (this.field_p != 0) {
-            afa.field_c.a((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
+            afa.field_c.setClip((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
             this.child.renderLayer(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
             afa.field_c.a((byte) 38);
             return;
@@ -62,7 +62,7 @@ final class vua extends SingleChildWidget {
           if (this.field_p == 0) {
             return;
           }
-          afa.field_c.a((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
+          afa.field_c.setClip((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
           this.child.renderLayer(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
           afa.field_c.a((byte) 38);
           return;
@@ -77,7 +77,7 @@ final class vua extends SingleChildWidget {
         if (this.field_p == 0) {
           return;
         }
-        afa.field_c.a((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
+        afa.field_c.setClip((byte) 125, this.field_p + this.field_n + param1, param0 + this.field_i, this.field_n + param1, this.field_i + (param0 + this.field_m));
         this.child.renderLayer(param0 + this.field_i, this.field_n + param1, param2 ^ 0, param3);
         afa.field_c.a((byte) 38);
     }

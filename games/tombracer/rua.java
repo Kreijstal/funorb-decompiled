@@ -131,24 +131,24 @@ final class rua extends MessageDialog implements ButtonListener {
               this.transitionToContent(param0 ^ 86, new pg(this));
               return;
             }
-            var5.a(aua.field_d, (byte) -102, (WidgetListener) (this));
+            var5.appendButton(aua.field_d, (byte) -102, (WidgetListener) (this));
           } else {
             if (!this.field_ib) {
               if (param2.field_f != 5) {
-                var5.a(KeyLockBehaviour.field_o, -1, 40);
+                var5.addAction(KeyLockBehaviour.field_o, -1, 40);
               } else {
-                var5.a(InvertOperator.field_n, 11, 102);
-                var5.a(ControllerLocomotor.field_q, 17, 59);
+                var5.addAction(InvertOperator.field_n, 11, 102);
+                var5.addAction(ControllerLocomotor.field_q, 17, 59);
               }
             } else {
-              var5.a(aua.field_d, (byte) -102, (WidgetListener) (this));
+              var5.appendButton(aua.field_d, (byte) -102, (WidgetListener) (this));
             }
             if (param2.field_f != 3) {
               if (param2.field_f == 6) {
-                var5.a(RenderLayer.field_a, 9, -126);
+                var5.addAction(RenderLayer.field_a, 9, -126);
               }
             } else {
-              var5.a(MovingWallComponent.field_M, 7, 58);
+              var5.addAction(MovingWallComponent.field_M, 7, 58);
             }
           }
           this.transitionToContent(param0 + 80, var5);

@@ -31,8 +31,8 @@ final class RemovedFromGameMenu extends MenuScreen {
         if (!param1) {
           return;
         }
-        Room.field_j.a(0, 0);
-        gg.field_f.a((aaa.a(false) - gg.field_f.paddedWidth()) / 2, (SwitchLinkList.b(0) - gg.field_f.paddedHeight()) / 2);
+        Room.field_j.draw(0, 0);
+        gg.field_f.draw((aaa.a(false) - gg.field_f.paddedWidth()) / 2, (SwitchLinkList.b(0) - gg.field_f.paddedHeight()) / 2);
         MembersUpsellMenu.a(ValidatedTextInputWidget.field_L.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, 60 + (SwitchLinkList.b(param0 + 28) - gg.field_f.paddedHeight()) / 2, aaa.a(false) / 2, -1);
         SocketConnector.a(OpenGlBuffer.field_i, 1, kn.field_p, 2431750, 20, 200, 1, -100 + SwitchLinkList.b(param0 + 28) / 2, aaa.a(false) / 2 - 150, -1, (byte) 60, 300);
         super.draw(param0, param1);

@@ -44,7 +44,7 @@ final class HslAdjustOperator extends TextureOperator {
           var9 = var20[1];
           var10 = var20[2];
           for (var11 = 0; var11 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var11++) {
-            this.b(2, var29[var11], var30[var11], var31[var11]);
+            this.rgbToHsl(2, var29[var11], var30[var11], var31[var11]);
             this.field_m = this.field_m + this.field_o;
             this.field_n = this.field_n + this.field_s;
             this.field_p = this.field_p + this.field_u;
@@ -66,7 +66,7 @@ final class HslAdjustOperator extends TextureOperator {
             if (this.field_p > 4096) {
               this.field_p = 4096;
             }
-            this.a(this.field_n, 27261, this.field_m, this.field_p);
+            this.hslToRgb(this.field_n, 27261, this.field_m, this.field_p);
             var8[var11] = this.field_t;
             var9[var11] = this.field_r;
             var10[var11] = this.field_q;
@@ -82,7 +82,7 @@ final class HslAdjustOperator extends TextureOperator {
         this.field_s = 0;
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void hslToRgb(int param0, int param1, int param2, int param3) {
         int stackIn_5_0 = 0;
         int var5;
         int var6;
@@ -165,7 +165,7 @@ final class HslAdjustOperator extends TextureOperator {
         field_v = null;
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
+    private final void rgbToHsl(int param0, int param1, int param2, int param3) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;

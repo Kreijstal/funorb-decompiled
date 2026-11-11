@@ -4,7 +4,7 @@
 final class BoulderComponent extends PathMoverComponent {
     static UiComponent field_M;
 
-    final boolean C(int param0) {
+    final boolean storesSpeed(int param0) {
         if (param0 != 1760) {
           field_M = (UiComponent) null;
           return true;
@@ -83,7 +83,7 @@ final class BoulderComponent extends PathMoverComponent {
             field_M = (UiComponent) null;
           }
           var5 = param0.getFileId(true, param3, var4_int);
-          stackIn_3_0 = FocusableWidget.a(param0, var5, var4_int, (byte) -82);
+          stackIn_3_0 = FocusableWidget.loadSprites(param0, var5, var4_int, (byte) -82);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

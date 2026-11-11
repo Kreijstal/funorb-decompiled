@@ -20,7 +20,7 @@ final class hp {
         return -1.8763647079467773f;
     }
 
-    final static void a(int param0, int param1, int param2, ka param3, int param4, int param5, int param6) {
+    final static void drawModelPreview(int param0, int param1, int param2, ka param3, int param4, int param5, int param6) {
         Transform3D var7 = null;
         if (param4 != -1918106173) {
           field_a = (int[][]) null;

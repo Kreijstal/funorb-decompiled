@@ -240,7 +240,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_5_0 = dva.field_a;
             return stackIn_5_0;
           }
-          if (ArchiveNetworkClient.a((byte) -72, var5)) {
+          if (ArchiveNetworkClient.containsNonAlphanumeric((byte) -72, var5)) {
             stackIn_8_0 = NetworkArchiveRequest.field_o;
             return stackIn_8_0;
           }
@@ -323,7 +323,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_6_0 = fp.field_c;
             return stackIn_6_0;
           }
-          if (!jg.a(-102, var3, var4)) {
+          if (!jg.isPasswordAcceptable(-102, var3, var4)) {
             stackIn_10_0 = fp.field_c;
             return stackIn_10_0;
           }

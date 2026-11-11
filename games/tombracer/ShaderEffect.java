@@ -27,27 +27,27 @@ abstract class ShaderEffect {
         }
     }
 
-    final static q obtainGridEntry(int param0, Collidable param1, int param2, boolean param3) {
-        q var4 = null;
+    final static CollisionGridEntry obtainGridEntry(int param0, Collidable param1, int param2, boolean param3) {
+        CollisionGridEntry var4 = null;
         RuntimeException var4_ref = null;
-        q stackIn_5_0 = null;
-        q stackIn_7_0 = null;
+        CollisionGridEntry stackIn_5_0 = null;
+        CollisionGridEntry stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = (q) (StatefulWidgetPainter.field_n.removeFirst(27));
+          var4 = (CollisionGridEntry) (StatefulWidgetPainter.field_n.removeFirst(27));
           if (var4 == null) {
-            var4 = new q(param1, param0, param2);
+            var4 = new CollisionGridEntry(param1, param0, param2);
           } else {
-            var4.a(param0, param1, (byte) 116, param2);
+            var4.set(param0, param1, (byte) 116, param2);
           }
           if (param3) {
             stackIn_7_0 = var4;
             return stackIn_7_0;
           }
-          stackIn_5_0 = (q) null;
+          stackIn_5_0 = (CollisionGridEntry) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

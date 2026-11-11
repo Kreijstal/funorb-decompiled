@@ -15,7 +15,7 @@ final class WaveformOperator extends TextureOperator {
         if (param0 != 116) {
           return;
         }
-        tka.b((byte) 122);
+        tka.buildSinCosTables((byte) 122);
     }
 
     public WaveformOperator() {
@@ -226,8 +226,8 @@ final class WaveformOperator extends TextureOperator {
             if (param1 >= 100 &&
               param1 <= 105) {
               var4 = args;
-              DrawOfferMenu.a((byte) -109, var4);
-              SnakePitModel.field_t = pla.a(90, args);
+              DrawOfferMenu.setUsernameSuggestions((byte) -109, var4);
+              SnakePitModel.field_t = IntIntHashTable.a(90, args);
             } else {
               SnakePitModel.field_t = doa.a(param2, param1, (byte) 114);
             }
@@ -236,7 +236,7 @@ final class WaveformOperator extends TextureOperator {
             stackIn_5_1 = !(QuickChatPhraseDefinition.field_n >= 13);
             SnakePitModel.field_t = NanoTickClock.$cfr$intArgs$a$78544449ccb1(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
-            DrawOfferMenu.a((byte) -101, (String[]) null);
+            DrawOfferMenu.setUsernameSuggestions((byte) -101, (String[]) null);
           }
           var4_int = -13 % ((param3 + 59) / 56);
           return;
@@ -260,7 +260,7 @@ final class WaveformOperator extends TextureOperator {
         }
     }
 
-    final static void d(int param0, int param1) {
+    final static void unpackSettings(int param0, int param1) {
         k.field_A = param0 >> 4 & param1;
         if (k.field_A > 2) {
           k.field_A = 2;

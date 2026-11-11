@@ -128,7 +128,7 @@ abstract class ArchiveNetworkClient {
                   return stackIn_31_0;
                 }
               } else {
-                var1_int = jia.field_a.d(-2147483648);
+                var1_int = jia.field_a.readSingleByte(-2147483648);
                 if (var1_int != 0) {
                   stackIn_26_0 = du.recordArchiveConnectionFailure(var1_int, (byte) -26);
                   return stackIn_26_0;
@@ -240,7 +240,7 @@ abstract class ArchiveNetworkClient {
         return var8;
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean containsNonAlphanumeric(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

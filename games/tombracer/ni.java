@@ -36,7 +36,7 @@ final class ni {
             if (null != fua.field_b) {
               try {
                 fua.field_b.seek((byte) 2, 0L);
-                fua.field_b.a(var6, 0);
+                fua.field_b.readFully(var6, 0);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

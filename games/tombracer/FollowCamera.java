@@ -16,7 +16,7 @@ final class FollowCamera implements Camera {
     private int minX;
     private int field_e;
 
-    final int a(int param0) {
+    final int getViewportScale(int param0) {
         if (param0 != -862393232) {
           this.field_c = -119;
         }
@@ -206,7 +206,7 @@ final class FollowCamera implements Camera {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void setViewportScale(int param0, byte param1) {
         this.field_e = param0;
         if (param1 != -88) {
           this.maxX = 40;

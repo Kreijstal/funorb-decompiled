@@ -6,7 +6,7 @@ class ProceduralTextureProvider implements TextureProvider {
     static boolean field_c;
     private TextureMetadata[] metadata;
     static String field_f;
-    private pea field_e;
+    private LruNodeCache field_e;
     private ResourceArchive field_d;
     private ResourceArchive field_g;
 
@@ -62,7 +62,7 @@ class ProceduralTextureProvider implements TextureProvider {
     }
 
     private final ProceduralTexture getProceduralTexture(int param0, int param1) {
-        DualLinkNode var3 = this.field_e.a(param1 + param1, (long)param0);
+        DualLinkNode var3 = this.field_e.get(param1 + param1, (long)param0);
         if (var3 != null) {
           return (ProceduralTexture) (var3);
         }
@@ -71,7 +71,7 @@ class ProceduralTextureProvider implements TextureProvider {
           return null;
         }
         ProceduralTexture var5 = new ProceduralTexture(new PacketBuffer(var4));
-        this.field_e.a(var5, (byte) 96, (long)param0);
+        this.field_e.put(var5, (byte) 96, (long)param0);
         return var5;
     }
 
@@ -79,7 +79,7 @@ class ProceduralTextureProvider implements TextureProvider {
         if (param0 <= 114) {
           field_f = (String) null;
         }
-        return this.getProceduralTexture(param3, 0).a((TextureProvider) (this), (byte) -127, param1, param2, this.metadata[param3].field_e, this.field_d);
+        return this.getProceduralTexture(param3, 0).generateFloatPixels((TextureProvider) (this), (byte) -127, param1, param2, this.metadata[param3].field_e, this.field_d);
     }
 
     ProceduralTextureProvider(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2) {
@@ -129,7 +129,7 @@ class ProceduralTextureProvider implements TextureProvider {
         int var5Lifetime17;
         int var5Lifetime18;
         int var5Lifetime19;
-        this.field_e = new pea(256);
+        this.field_e = new LruNodeCache(256);
         try {
           this.field_d = param2;
           this.field_g = param1;

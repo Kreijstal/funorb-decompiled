@@ -9,11 +9,11 @@ final class ne {
     static fta field_c;
     static String field_e;
 
-    final gj b(int param0, int param1) {
+    final gj get(int param0, int param1) {
         if (param0 != 0) {
           return (gj) null;
         }
-        return gj.a((byte) 41, this.a(param1, -1));
+        return gj.a((byte) 41, this.getNibble(param1, -1));
     }
 
     final static void loadJagexLogoSound(ResourceArchive param0, int param1) {
@@ -73,7 +73,7 @@ final class ne {
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int getNibble(int param0, int param1) {
         if (param1 != -1) {
           this.field_b = -59;
           return (int)(this.field_a >> gj.field_f * param0) & 15;
@@ -123,12 +123,12 @@ final class ne {
         }
     }
 
-    final int b(byte param0) {
+    final int size(byte param0) {
         int var2 = -110 % ((param0 + 27) / 42);
         return this.field_b;
     }
 
-    private final void a(int param0, gj param1) {
+    private final void add(int param0, gj param1) {
         int fieldTemp$0 = 0;
         if (param0 != 1) {
           return;
@@ -160,7 +160,7 @@ final class ne {
         RuntimeException var2 = null;
         try {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
-            this.a(1, param0[var2_int]);
+            this.add(1, param0[var2_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

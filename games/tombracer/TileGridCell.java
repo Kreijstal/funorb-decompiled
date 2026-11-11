@@ -178,7 +178,7 @@ final class TileGridCell {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isDusty(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
           TileGridCell.getPermutationTable(89, (byte) 98);
@@ -229,7 +229,7 @@ final class TileGridCell {
         }
     }
 
-    final void e(int param0) {
+    final void mirror(int param0) {
         if (null != this.renderable) {
           this.renderable.mirror(true);
         }
@@ -262,7 +262,7 @@ final class TileGridCell {
         byte[] var11;
         int var5Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
-        var2 = (woa) (is.field_xb.a(0, (long)param0));
+        var2 = (woa) (is.field_xb.get(0, (long)param0));
         if (param1 < 37) {
           return (byte[]) null;
         }
@@ -283,7 +283,7 @@ final class TileGridCell {
             var3[var6] = (byte) var8;
           }
           var2 = new woa(var11);
-          is.field_xb.a(var2, (byte) 52, (long)param0);
+          is.field_xb.put(var2, (byte) 52, (long)param0);
         }
         return var2.field_k;
     }

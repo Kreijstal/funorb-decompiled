@@ -21,11 +21,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private int field_Y;
     private doa field_Ec;
     int field_gb;
-    private hsa field_hd;
+    private LegacyTextureCache field_hd;
     private LegacyOpenGlEffectManager field_Hb;
     private LegacyOpenGlBloomEffect field_T;
     int field_dc;
-    private cw field_L;
+    private LegacyPostProcessChain field_L;
     private OpenGlTransform3D field_fc;
     OpenGlTransform3D field_mc;
     private boolean field_Ob;
@@ -770,7 +770,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             var12 = (IntNode) (this.field_Lc.removeFirst(-99));
             jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
           }
-          this.field_hd.c(-29413);
+          this.field_hd.ageCache(-29413);
           if (!(this.f(-44) <= 100663296) &&
             !(bva.currentTimeMillis((byte) -107) <= (60000L + this.field_Lb))) {
             System.gc();
@@ -795,7 +795,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             var12 = (IntNode) (this.field_Lc.removeFirst(-99));
             jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
           }
-          this.field_hd.c(-29413);
+          this.field_hd.ageCache(-29413);
           if (!(this.f(-44) <= 100663296) &&
             !(bva.currentTimeMillis((byte) -107) <= (60000L + this.field_Lb))) {
             System.gc();
@@ -853,26 +853,26 @@ final class OpenGlToolkit extends GraphicsToolkit {
               var3.writeFloat(17133, 0.0f);
               var3.writeFloat(17133, 0.0f);
             } else {
-              var3.a((byte) 114, -1.0f);
-              var3.a((byte) 114, -1.0f);
-              var3.a((byte) 114, 0.0f);
-              var3.a((byte) 114, 0.0f);
-              var3.a((byte) 114, 1.0f);
-              var3.a((byte) 114, 1.0f);
-              var3.a((byte) 114, -1.0f);
-              var3.a((byte) 114, 0.0f);
-              var3.a((byte) 114, 1.0f);
-              var3.a((byte) 114, 1.0f);
-              var3.a((byte) 114, 1.0f);
-              var3.a((byte) 114, 1.0f);
-              var3.a((byte) 114, 0.0f);
-              var3.a((byte) 114, 1.0f);
-              var3.a((byte) 114, 0.0f);
-              var3.a((byte) 114, -1.0f);
-              var3.a((byte) 114, 1.0f);
-              var3.a((byte) 114, 0.0f);
-              var3.a((byte) 114, 0.0f);
-              var3.a((byte) 114, 0.0f);
+              var3.writeFloatLittleEndian((byte) 114, -1.0f);
+              var3.writeFloatLittleEndian((byte) 114, -1.0f);
+              var3.writeFloatLittleEndian((byte) 114, 0.0f);
+              var3.writeFloatLittleEndian((byte) 114, 0.0f);
+              var3.writeFloatLittleEndian((byte) 114, 1.0f);
+              var3.writeFloatLittleEndian((byte) 114, 1.0f);
+              var3.writeFloatLittleEndian((byte) 114, -1.0f);
+              var3.writeFloatLittleEndian((byte) 114, 0.0f);
+              var3.writeFloatLittleEndian((byte) 114, 1.0f);
+              var3.writeFloatLittleEndian((byte) 114, 1.0f);
+              var3.writeFloatLittleEndian((byte) 114, 1.0f);
+              var3.writeFloatLittleEndian((byte) 114, 1.0f);
+              var3.writeFloatLittleEndian((byte) 114, 0.0f);
+              var3.writeFloatLittleEndian((byte) 114, 1.0f);
+              var3.writeFloatLittleEndian((byte) 114, 0.0f);
+              var3.writeFloatLittleEndian((byte) 114, -1.0f);
+              var3.writeFloatLittleEndian((byte) 114, 1.0f);
+              var3.writeFloatLittleEndian((byte) 114, 0.0f);
+              var3.writeFloatLittleEndian((byte) 114, 0.0f);
+              var3.writeFloatLittleEndian((byte) 114, 0.0f);
             }
             this.field_X = this.createVertexBuffer(var3.position, var3.payload, 20, false, (byte) 108);
             this.field_Bc = new tj(this.field_X, 5126, 3, 0);
@@ -1083,7 +1083,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           if (!this.field_L.addEffect(1, this.field_T)) {
             return false;
           }
-          this.field_hd.a(10659);
+          this.field_hd.clearCache(10659);
           return true;
         }
         return false;
@@ -1899,10 +1899,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
             }
             CanvasImageBuffer.a(true, (byte) 99, false);
             this.field_Ob = true;
-            this.field_hd = new hsa(this, this.field_c);
+            this.field_hd = new LegacyTextureCache(this, this.field_c);
             this.initializeDeviceResources((byte) 124);
             this.field_zc = new mq(this);
-            this.field_L = new cw(this);
+            this.field_L = new LegacyPostProcessChain(this);
             if (this.field_L.hasFramebuffer((byte) -43)) {
               this.field_T = new LegacyOpenGlBloomEffect(this);
               if (!this.field_T.e(34842)) {
@@ -2772,12 +2772,12 @@ final class OpenGlToolkit extends GraphicsToolkit {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         OpenGlRenderbuffer var3 = null;
-        cla var3_ref = null;
+        PbufferEntry var3_ref = null;
         RuntimeException var3_ref2 = null;
         DualLinkNode var4 = null;
         int var6 = 0;
-        cla var7 = null;
-        cla var8 = null;
+        PbufferEntry var7 = null;
+        PbufferEntry var8 = null;
         OpenGlRenderbuffer var9 = null;
         OpenGlRenderbuffer var10 = null;
         var6 = TombRacer.field_G ? 1 : 0;
@@ -2803,7 +2803,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                     var10 = (OpenGlRenderbuffer) (var4);
                     var10.unlinkSecondary(-7975);
                     var10.unlink(125);
-                    var10.g(77);
+                    var10.release(77);
                     this.field_rc = this.field_rc - var10.field_o;
                     continue;
                   }
@@ -2819,15 +2819,15 @@ final class OpenGlToolkit extends GraphicsToolkit {
             if (!this.field_Yc) {
               throw new RuntimeException("");
             }
-            var3_ref = (cla) (this.field_Wc.get((byte) -109, (long)(this.field_Mb.width() << 16 | this.field_Mb.height())));
+            var3_ref = (PbufferEntry) (this.field_Wc.get((byte) -109, (long)(this.field_Mb.width() << 16 | this.field_Mb.height())));
             if (var3_ref == null) {
-              var7 = new cla(this, this.field_Mb.width(), this.field_Mb.height());
+              var7 = new PbufferEntry(this, this.field_Mb.width(), this.field_Mb.height());
               var3_ref = var7;
               this.field_rc = this.field_rc + 4 * var7.field_p;
               while (2097152 < this.field_rc) {
                 var4 = this.field_F.removeLast(-119);
                 if (var4 != null) {
-                  var8 = (cla) (var4);
+                  var8 = (PbufferEntry) (var4);
                   var8.unlinkSecondary(-7975);
                   var8.unlink(21);
                   this.field_l.releasePbuffer(var8.getPbufferHandle((byte) 101));

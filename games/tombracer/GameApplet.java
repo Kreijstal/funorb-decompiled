@@ -134,7 +134,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (Corpse.field_j == this &&
-            !tla.field_b) {
+            !OpenGlDisplayLists.field_b) {
             BlockModel.field_t = bva.currentTimeMillis((byte) -107) + 4000L;
             return;
           }
@@ -238,7 +238,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == Corpse.field_j &&
-            !tla.field_b) {
+            !OpenGlDisplayLists.field_b) {
             BlockModel.field_t = bva.currentTimeMillis((byte) -107);
             TrapSpawner.sleepMillis(0, 5000L);
             nea.field_c = null;
@@ -304,7 +304,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2, ResourceArchive param3) {
+    final static boolean loadSpriteSheet(boolean param0, int param1, int param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_8_0 = null;
@@ -397,7 +397,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (Corpse.field_j == this &&
-            !tla.field_b) {
+            !OpenGlDisplayLists.field_b) {
             BlockModel.field_t = 0L;
             return;
           }
@@ -547,7 +547,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(ScoringObserverFactory.field_a > var3)) {
                       this.runDrawPass(270);
-                      kla.a(dsa.field_c, (byte) 86, nma.field_l);
+                      kla.postDummyEvent(dsa.field_c, (byte) 86, nma.field_l);
                       break;
                     }
                     this.runUpdateTick(-6);
@@ -558,7 +558,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              ssa.reportClientError((String) null, (byte) 127, (Throwable) (var1));
+              ClipStack.reportClientError((String) null, (byte) 127, (Throwable) (var1));
               this.reportError(-6738, "crash");
             }
             this.shutdown((byte) 109, true);
@@ -584,7 +584,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if (Corpse.field_j == this &&
-            !tla.field_b) {
+            !OpenGlDisplayLists.field_b) {
             bsa.field_k = true;
             if (GameFont.field_c &&
               -lt.field_b + bva.currentTimeMillis((byte) -107) > 1000L) {
@@ -651,17 +651,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (tla.field_b) {
+            if (OpenGlDisplayLists.field_b) {
               return;
             }
-            tla.field_b = true;
+            OpenGlDisplayLists.field_b = true;
           }
           if (null != cba.field_a) {
             cba.field_a.destroy();
           }
           try {
             if (param0 != 109) {
-              GameApplet.a(false, -94, 60, (ResourceArchive) null);
+              GameApplet.loadSpriteSheet(false, -94, 60, (ResourceArchive) null);
             }
             this.shutdownGame(param0 ^ -45);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -780,7 +780,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              ssa.reportClientError((String) null, (byte) 118, var8_ref);
+              ClipStack.reportClientError((String) null, (byte) 118, var8_ref);
               this.reportError(-6738, "crash");
             }
             return;

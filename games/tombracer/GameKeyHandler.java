@@ -74,8 +74,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           MotionTrackingModel.field_p = 0;
           var2_int = param0.getKeyCode();
           if (0 <= var2_int &&
-            var2_int < bba.field_c.length) {
-            var2_int = bba.field_c[var2_int];
+            var2_int < RoomVariant.field_c.length) {
+            var2_int = RoomVariant.field_c[var2_int];
             if ((var2_int & 128) != 0) {
               var2_int = -1;
             }
@@ -158,8 +158,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             MotionTrackingModel.field_p = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
-              var2_int < bba.field_c.length) {
-              var2_int = bba.field_c[var2_int] & -129;
+              var2_int < RoomVariant.field_c.length) {
+              var2_int = RoomVariant.field_c[var2_int] & -129;
             } else {
               var2_int = -1;
             }

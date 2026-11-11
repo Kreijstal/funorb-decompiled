@@ -7,7 +7,7 @@ final class qf extends PacketBuffer {
     static ToolkitSprite[] field_k;
     static int field_i;
 
-    final void a(byte param0, float param1) {
+    final void writeFloatLittleEndian(byte param0, float param1) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3 = jaclib.memory.Stream.floatToRawIntBits(param1);

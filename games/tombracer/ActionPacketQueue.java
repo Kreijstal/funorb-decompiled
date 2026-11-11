@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vi {
+final class ActionPacketQueue {
     private IntrusiveDeque field_b;
     static int field_a;
 
-    final void a(int param0) {
+    final void clear(int param0) {
         if (param0 == 0) {
           this.field_b.clear(param0 ^ 8);
           return;
         }
         S2CActionPacket var3 = (S2CActionPacket) null;
-        this.a((byte) 62, (S2CActionPacket) null);
+        this.add((byte) 62, (S2CActionPacket) null);
         this.field_b.clear(param0 ^ 8);
     }
 
-    final S2CActionPacket a(boolean param0) {
+    final S2CActionPacket poll(boolean param0) {
         if (!param0) {
           this.field_b = (IntrusiveDeque) null;
           if (!this.field_b.isEmpty((byte) 14)) {
@@ -33,7 +33,7 @@ final class vi {
         return param0 & param1;
     }
 
-    final boolean a(byte param0, S2CActionPacket param1) {
+    final boolean add(byte param0, S2CActionPacket param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -60,18 +60,18 @@ final class vi {
         }
     }
 
-    final int a(byte param0) {
+    final int size(byte param0) {
         int var2 = 35 % ((51 - param0) / 46);
         return this.field_b.size((byte) -16);
     }
 
-    final int a(byte param0, int param1) {
+    final int countWithOrdersFor(byte param0, int param1) {
         S2CActionPacket var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
         int var3 = 0;
         S2CActionPacket var4Lifetime1;
         if (param0 < 21) {
-          this.a((byte) 71, -82);
+          this.countWithOrdersFor((byte) 71, -82);
         } else {
           var4 = (S2CActionPacket) (this.field_b.first(-80));
           while (var4 != null) {
@@ -92,7 +92,7 @@ final class vi {
         return var3;
     }
 
-    vi() {
+    ActionPacketQueue() {
         this.field_b = new IntrusiveDeque();
     }
 

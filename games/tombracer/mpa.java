@@ -31,7 +31,7 @@ final class mpa extends ContentTransitionDialog {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 == null) {
-            stackIn_3_0 = ssa.field_d;
+            stackIn_3_0 = ClipStack.field_d;
             return stackIn_3_0;
           }
           if (param0 >= -66) {
@@ -68,10 +68,10 @@ final class mpa extends ContentTransitionDialog {
               stackIn_20_0 = gta.field_e;
               return stackIn_20_0;
             }
-            stackIn_15_0 = ssa.field_d;
+            stackIn_15_0 = ClipStack.field_d;
             return stackIn_15_0;
           }
-          stackIn_10_0 = ssa.field_d;
+          stackIn_10_0 = ClipStack.field_d;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

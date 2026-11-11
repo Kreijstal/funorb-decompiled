@@ -192,19 +192,19 @@ final class PressureSwitchComponent extends SwitchComponent {
           if (var8 != 3) {
             if (var8 != 4) {
               if (54 == var8) {
-                var7.b(4, (byte) -112);
+                var7.setVariant(4, (byte) -112);
               } else {
                 if (var8 != 55) {
                   var10.addModel(var5, (byte) 124, var7);
                   return var10;
                 }
-                var7.b(5, (byte) -112);
+                var7.setVariant(5, (byte) -112);
               }
             } else {
-              var7.b(2, (byte) -112);
+              var7.setVariant(2, (byte) -112);
             }
           } else {
-            var7.b(0, (byte) -112);
+            var7.setVariant(0, (byte) -112);
           }
           var10.addModel(var5, (byte) 124, var7);
           stackIn_20_0 = var10;

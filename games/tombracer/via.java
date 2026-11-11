@@ -89,7 +89,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
         }
     }
 
-    final static void a(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawModelRotated(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;

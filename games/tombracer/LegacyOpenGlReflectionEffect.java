@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
-    private tla field_d;
+    private OpenGlDisplayLists field_d;
     private boolean field_c;
     static int field_e;
     static int[] field_f;
@@ -32,7 +32,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           return;
         }
         if (param0) {
-          this.field_d.a(4864, '\0');
+          this.field_d.callList(4864, '\0');
           this.toolkit.e(1, true);
           this.toolkit.a(true, var4);
           jaggl.OpenGL.glMatrixMode(5890);
@@ -49,7 +49,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
         if (!this.field_c) {
           this.toolkit.b(5890, 3, 0, 770);
         } else {
-          this.field_d.a(4864, '\001');
+          this.field_d.callList(4864, '\001');
           this.toolkit.e(1, true);
           this.toolkit.a(!param0 ? true : false, (LegacyOpenGlTexture) null);
           this.toolkit.e(0, true);
@@ -60,7 +60,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
 
     final void setParameters(int param0, int param1, int param2) {
         if (param2 < 117) {
-          this.field_d = (tla) null;
+          this.field_d = (OpenGlDisplayLists) null;
         }
     }
 
@@ -76,8 +76,8 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           if (!param0.field_Kc) {
             return;
           }
-          this.field_d = new tla(param0, 2);
-          this.field_d.a((byte) 6, 0);
+          this.field_d = new OpenGlDisplayLists(param0, 2);
+          this.field_d.beginList((byte) 6, 0);
           this.toolkit.e(1, true);
           this.toolkit.setTextureCombineOperations(34165, 8960, 7681);
           this.toolkit.setTextureCombineOperands(2, 0, 34168, 770);
@@ -89,8 +89,8 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           jaggl.OpenGL.glEnable(3169);
           jaggl.OpenGL.glEnable(3170);
           this.toolkit.e(0, true);
-          this.field_d.b((byte) 5);
-          this.field_d.a((byte) 6, 1);
+          this.field_d.endList((byte) 5);
+          this.field_d.beginList((byte) 6, 1);
           this.toolkit.e(1, true);
           this.toolkit.setTextureCombineOperations(8448, 8960, 8448);
           this.toolkit.setTextureCombineOperands(2, 0, 34166, 770);
@@ -102,7 +102,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glMatrixMode(5888);
           this.toolkit.e(0, true);
-          this.field_d.b((byte) 22);
+          this.field_d.endList((byte) 22);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

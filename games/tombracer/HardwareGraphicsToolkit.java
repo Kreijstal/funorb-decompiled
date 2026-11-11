@@ -120,7 +120,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     boolean field_Ob;
     int field_h;
     private float field_Pb;
-    private kp field_Ec;
+    private HardwareTextureCache field_Ec;
     private ShaderEffect[] field_sb;
     gja field_W;
     private AffineTransform3D field_Ab;
@@ -852,7 +852,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     void updateTime(int param0) {
         if (null != this.field_Ec) {
-          this.field_Ec.a(5);
+          this.field_Ec.ageCache(5);
         }
         this.field_Dc = param0 & 2147483647;
     }
@@ -1062,8 +1062,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.g(114);
         this.g(3625, param4);
-        this.a(pea.field_c, 0, -117);
-        this.a(0, false, pea.field_c);
+        this.a(LruNodeCache.field_c, 0, -117);
+        this.a(0, false, LruNodeCache.field_c);
         this.setBlendMode(param5, 1);
         this.field_q.setScale(1.0f, (float)param2, false, (float)param3);
         this.field_q.translate(param0, param1, 0);
@@ -1158,8 +1158,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void drawCircle(int param0, int param1, int param2, int param3, int param4) {
         this.g(118);
         this.g(3625, param3);
-        this.a(pea.field_c, 0, -71);
-        this.a(0, false, pea.field_c);
+        this.a(LruNodeCache.field_c, 0, -71);
+        this.a(0, false, LruNodeCache.field_c);
         this.setBlendMode(param4, 1);
         this.field_q.setScale(1.0f, (float)param2, false, (float)param2);
         this.field_q.translate(param0, param1, 0);
@@ -1207,7 +1207,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           stackIn_8_0 = (this.field_L) ? 3 : 0;
           var9 = stackIn_8_0;
           if (param3 >= 0) {
-            var5 = this.field_Ec.a(param3, 111);
+            var5 = this.field_Ec.getTexture(param3, 111);
             var10 = this.field_c.metadata((byte) -47, param3);
             if (0 == var10.field_s &&
               var10.field_o == 0) {
@@ -1328,8 +1328,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         this.g(121);
         this.g(3625, param4);
-        this.a(pea.field_c, 0, -61);
-        this.a(0, false, pea.field_c);
+        this.a(LruNodeCache.field_c, 0, -61);
+        this.a(0, false, LruNodeCache.field_c);
         this.setBlendMode(param5, 1);
         this.i((byte) 106);
         this.b(1, false);
@@ -1679,8 +1679,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         float var7 = this.c((byte) -76);
         this.g(119);
         this.g(3625, param4);
-        this.a(pea.field_c, 0, -126);
-        this.a(0, false, pea.field_c);
+        this.a(LruNodeCache.field_c, 0, -126);
+        this.a(0, false, LruNodeCache.field_c);
         this.setBlendMode(param5, 1);
         this.field_q.setScale(1.0f, (float)(param2 - 1), false, (float)(param3 - 1));
         this.field_q.translate(-var7 + (float)param1, -39, (float)param0 - var7, 0.0f);
@@ -1704,8 +1704,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void za(int param0, int param1, int param2, int param3, int param4) {
         this.g(118);
         this.g(3625, param3);
-        this.a(pea.field_c, 0, -74);
-        this.a(0, false, pea.field_c);
+        this.a(LruNodeCache.field_c, 0, -74);
+        this.a(0, false, LruNodeCache.field_c);
         this.setBlendMode(param4, 1);
         this.field_q.setScale(1.0f, (float)param2, false, (float)param2);
         this.field_q.translate(param0, param1, 0);
@@ -2020,7 +2020,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.field_F = param5;
             CanvasImageBuffer.a(true, (byte) 107, false);
             if (this.field_c != null) {
-              this.field_Ec = new kp(this, this.field_c);
+              this.field_Ec = new HardwareTextureCache(this, this.field_c);
               this.field_P = new jagex3.graphics2.hw.NativeInterface(this.field_c.textureCount(-15061), this.field_F);
               for (var8 = 0; var8 < this.field_c.textureCount(-15061); var8++) {
                 var9 = this.field_c.metadata((byte) -79, var8);
@@ -2099,8 +2099,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.g(3625, param7);
         this.bindTexture(true, this.field_Jb);
         this.a((byte) -95, 1);
-        this.a(pea.field_c, 0, -87);
-        this.a(0, false, pea.field_c);
+        this.a(LruNodeCache.field_c, 0, -87);
+        this.a(0, false, LruNodeCache.field_c);
         this.i((byte) 104);
         this.b(1, false);
         this.C((byte) -70);
@@ -2414,8 +2414,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.g(3625, param6);
         this.bindTexture(true, this.field_Jb);
         this.a((byte) -12, 1);
-        this.a(pea.field_c, 0, -117);
-        this.a(0, false, pea.field_c);
+        this.a(LruNodeCache.field_c, 0, -117);
+        this.a(0, false, LruNodeCache.field_c);
         this.i((byte) 119);
         this.b(1, false);
         this.C((byte) -70);

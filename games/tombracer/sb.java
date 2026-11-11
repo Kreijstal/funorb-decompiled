@@ -12,11 +12,11 @@ final class sb {
         field_c = null;
         if (param0 != 0) {
           int[] var2 = (int[]) null;
-          sb.a(121, (int[]) null);
+          sb.listSetBits(121, (int[]) null);
         }
     }
 
-    final static int[] a(int param0, int[] param1) {
+    final static int[] listSetBits(int param0, int[] param1) {
         int var4 = 0;
         int var5 = 0;
         int incrementValue$1 = 0;
@@ -62,7 +62,7 @@ final class sb {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
+    final static void initAudioArchives(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           TextLayout.field_a = param4;
           qoa.field_b = param1;

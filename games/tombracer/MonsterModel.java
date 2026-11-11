@@ -324,7 +324,7 @@ final class MonsterModel extends MotionTrackingModel {
         return -83;
     }
 
-    final void b(int param0, int param1) {
+    final void setVariant(int param0, int param1) {
         this.field_x = param1;
         if (param0 < 28) {
           this.field_z = -120;

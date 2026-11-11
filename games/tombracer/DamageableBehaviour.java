@@ -187,7 +187,7 @@ final class DamageableBehaviour extends Behaviour {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (GameApplet.a(param0, param1, param3, param2)) {
+          if (GameApplet.loadSpriteSheet(param0, param1, param3, param2)) {
             return InvertOperator.buildIndexedSprite((byte) 120);
           }
           return null;

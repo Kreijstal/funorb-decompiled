@@ -4,7 +4,7 @@
 final class kla {
     static String[] unknownDeathMessages;
 
-    final static void a(PlatformTaskDispatcher param0, byte param1, Object param2) {
+    final static void postDummyEvent(PlatformTaskDispatcher param0, byte param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -30,7 +30,7 @@ final class kla {
           }
           if (param1 <= 45) {
             var5 = (Object) null;
-            kla.a((PlatformTaskDispatcher) null, (byte) 44, (Object) null);
+            kla.postDummyEvent((PlatformTaskDispatcher) null, (byte) 44, (Object) null);
           }
           try {
             if (param2 == null) {
@@ -81,7 +81,7 @@ final class kla {
           return;
         }
         Object var2 = (Object) null;
-        kla.a((PlatformTaskDispatcher) null, (byte) -10, (Object) null);
+        kla.postDummyEvent((PlatformTaskDispatcher) null, (byte) -10, (Object) null);
         if (null != TextureOperator.field_l) {
           TextureOperator.field_l.i((byte) -108);
         }

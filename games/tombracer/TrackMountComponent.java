@@ -50,11 +50,11 @@ final class TrackMountComponent extends PrefabComponent {
           stackIn_5_1 = param1 - 3;
           stackIn_6_2 = (var6 == 0);
           ((TrackPlayerLocomotor) (Object) stackIn_5_0).c(stackIn_5_1, stackIn_6_2);
-          var5.a(false, this.field_F);
+          var5.setSpeed(false, this.field_F);
           var9.addLocomotor(var5, param1 ^ param1);
           var7 = rm.field_a;
           var8 = (TrapBaseModel) (var7.createModel(16, param1 + 119));
-          var8.b(param1 ^ 8021, 0);
+          var8.setVariant(param1 ^ 8021, 0);
           var9.addModel(var5, (byte) 124, var8);
           stackIn_7_0 = var9;
           return stackIn_7_0;
@@ -75,7 +75,7 @@ final class TrackMountComponent extends PrefabComponent {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) 28, SpawnerBehaviour.a((byte) 8, 4, this.field_F), 8);
+          param1.writeBits((byte) 28, SpawnerBehaviour.fixed16ToBits((byte) 8, 4, this.field_F), 8);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "wha.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -85,7 +85,7 @@ final class TrackMountComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
         this.field_F = 131072;
         try {
-          this.field_F = NodeHashTable.a(param2.readBits((byte) 44, 8), 104, 4);
+          this.field_F = NodeHashTable.bitsToFixed16(param2.readBits((byte) 44, 8), 104, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "wha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

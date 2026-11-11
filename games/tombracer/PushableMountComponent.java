@@ -61,7 +61,7 @@ final class PushableMountComponent extends PrefabComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (BlockModel) (var6.createModel(7, 103));
-          var7.b(125, 0);
+          var7.setVariant(125, 0);
           var4.addModel((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;

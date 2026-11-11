@@ -24,7 +24,7 @@ final class PillarComponent extends PrefabComponent {
           var4.setObstructionLevel(3, param1 - 3);
           var6 = rm.field_a;
           var7 = (FurnitureModel) (var6.createModel(4, 108));
-          var7.b(param1, (byte) 77);
+          var7.setVariant(param1, (byte) 77);
           var4.addModel((TrapPart) null, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;

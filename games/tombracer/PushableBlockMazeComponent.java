@@ -94,7 +94,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
           }
           var8 = rm.field_a;
           var9 = (BlockModel) (var8.createModel(7, 75));
-          var9.b(124, 0);
+          var9.setVariant(124, 0);
           var10.addModel((TrapPart) null, (byte) 124, var9);
           stackIn_3_0 = var10;
           return stackIn_3_0;

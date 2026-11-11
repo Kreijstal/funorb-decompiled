@@ -3,7 +3,7 @@
  */
 final class DrawOfferMenu extends MenuScreen {
     static boolean field_s;
-    private dea field_r;
+    private DropAnimation field_r;
     static int[] field_q;
 
     final void onActivated(byte param0) {
@@ -11,7 +11,7 @@ final class DrawOfferMenu extends MenuScreen {
         var3 = TombRacer.field_G ? 1 : 0;
         super.onActivated((byte) 89);
         if (param0 <= 78) {
-          this.field_r = (dea) null;
+          this.field_r = (DropAnimation) null;
         }
         if (null == SecondaryNodeDequeIterator.field_a) {
           return;
@@ -98,7 +98,7 @@ final class DrawOfferMenu extends MenuScreen {
         this.field_r.startDrop(-72);
     }
 
-    final static void a(byte param0, String[] param1) {
+    final static void setUsernameSuggestions(byte param0, String[] param1) {
         try {
           if (TeleportState.field_b != null) {
             TeleportState.field_b.field_y.setSuggestions(13597, param1);
@@ -114,7 +114,7 @@ final class DrawOfferMenu extends MenuScreen {
 
     DrawOfferMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
-        this.field_r = new dea();
+        this.field_r = new DropAnimation();
     }
 
     final void c(int param0) {
@@ -140,7 +140,7 @@ final class DrawOfferMenu extends MenuScreen {
     final void draw(byte param0, boolean param1) {
         super.draw(param0, param1);
         int var3 = this.items[1].field_i - 70 + this.field_r.getPosition(93) - 150;
-        WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
+        WhiteLightShooterComponent.field_K.draw((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
     }
 
     final static UiComponent a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12) {

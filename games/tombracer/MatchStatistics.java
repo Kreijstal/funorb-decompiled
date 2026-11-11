@@ -9,7 +9,7 @@ final class MatchStatistics {
     private int[] charactersFaced;
     private boolean[] penalised;
     static int[] field_f;
-    private int[] field_p;
+    private int[] snakeDeaths;
     static FontMetrics field_n;
     private int[] bladeDeaths;
     private int[] treasureScore;
@@ -40,7 +40,7 @@ final class MatchStatistics {
         }
         var4 = param0;
         if (var4 == 7) {
-          this.a(param1, 9266);
+          this.addSnakeDeath(param1, 9266);
         } else {
           if (5 == var4) {
             this.addFallDeath(-127, param1);
@@ -135,11 +135,11 @@ final class MatchStatistics {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void addSnakeDeath(int param0, int param1) {
         if (param1 != 9266) {
           return;
         }
-        this.field_p[param0] = this.field_p[param0] + 1;
+        this.snakeDeaths[param0] = this.snakeDeaths[param0] + 1;
     }
 
     final void markCharacterPlayed(int param0, byte param1, int param2) {
@@ -182,7 +182,7 @@ final class MatchStatistics {
     MatchStatistics(int param0) {
         this.fireDeaths = new int[param0];
         this.trapsDestroyed = new int[param0];
-        this.field_p = new int[param0];
+        this.snakeDeaths = new int[param0];
         this.charactersFaced = new int[param0];
         this.crushDeaths = new int[param0];
         this.fallDeaths = new int[param0];

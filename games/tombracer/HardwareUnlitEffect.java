@@ -63,7 +63,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
           }
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = -var3 + ((var3 << 5) + io.a(-377, param0.charAt(var4)));
+            var3 = -var3 + ((var3 << 5) + io.charToCp1252(-377, param0.charAt(var4)));
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;

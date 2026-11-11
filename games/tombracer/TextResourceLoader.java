@@ -125,7 +125,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 107, "mu_chat_lobby");
                 if (null != var2) {
-                  cla.field_o = jaa.decodeText((byte) 123, var2);
+                  PbufferEntry.field_o = jaa.decodeText((byte) 123, var2);
                 }
                 var2 = dn.loadFile((byte) 122, "mu_chat_public");
                 if (var2 != null) {
@@ -201,7 +201,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 115, "mu_game_has_started");
                 if (var2 != null) {
-                  tla.field_j = jaa.decodeText((byte) 82, var2);
+                  OpenGlDisplayLists.field_j = jaa.decodeText((byte) 82, var2);
                 }
                 var2 = dn.loadFile((byte) 127, "mu_you_declined_invite");
                 if (null != var2) {
@@ -421,7 +421,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 104, "mu_chat_lobby_hide");
                 if (var2 != null) {
-                  pea.field_f = jaa.decodeText((byte) 32, var2);
+                  LruNodeCache.field_f = jaa.decodeText((byte) 32, var2);
                 }
                 var2 = dn.loadFile((byte) -32, "mu_chat_game_show_all");
                 if (var2 != null) {
@@ -461,7 +461,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 115, "your_rating_is_x");
                 if (var2 != null) {
-                  tla.field_d = jaa.decodeText((byte) 38, var2);
+                  OpenGlDisplayLists.field_d = jaa.decodeText((byte) 38, var2);
                 }
                 var2 = dn.loadFile((byte) -14, "you_are_on_x_server");
                 if (var2 != null) {
@@ -781,7 +781,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -68, "gameopt_needrating");
                 if (null != var2) {
-                  kp.field_f = jaa.decodeText((byte) 72, var2);
+                  HardwareTextureCache.field_f = jaa.decodeText((byte) 72, var2);
                 }
                 var2 = dn.loadFile((byte) 127, "gameopt_unratedonly");
                 if (var2 != null) {
@@ -1319,7 +1319,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 126, "month");
                 if (var2 != null) {
-                  kp.field_d = jaa.decodeText((byte) 103, var2);
+                  HardwareTextureCache.field_d = jaa.decodeText((byte) 103, var2);
                 }
                 var2 = dn.loadFile((byte) 113, "year");
                 if (var2 != null) {
@@ -1579,7 +1579,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 112, "create_alert_namelength");
                 if (var2 != null) {
-                  ssa.field_d = jaa.decodeText((byte) 42, var2);
+                  ClipStack.field_d = jaa.decodeText((byte) 42, var2);
                 }
                 var2 = dn.loadFile((byte) 126, "create_alert_namechars");
                 if (null != var2) {
@@ -1623,7 +1623,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -109, "create_alert_invalidemail");
                 if (null != var2) {
-                  pla.field_b = jaa.decodeText((byte) 106, var2);
+                  IntIntHashTable.field_b = jaa.decodeText((byte) 106, var2);
                 }
                 var2 = dn.loadFile((byte) -117, "create_alert_email_unavailable");
                 if (var2 != null) {
@@ -1797,7 +1797,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 121, "loading_graphics");
                 if (null != var2) {
-                  q.field_o = jaa.decodeText((byte) 114, var2);
+                  CollisionGridEntry.field_o = jaa.decodeText((byte) 114, var2);
                 }
                 var2 = dn.loadFile((byte) -9, "loading_models");
                 if (var2 != null) {
@@ -2807,7 +2807,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -115, "graphics_config_need_memory");
                 if (null != var2) {
-                  tla.field_a = jaa.decodeText((byte) 73, var2);
+                  OpenGlDisplayLists.field_a = jaa.decodeText((byte) 73, var2);
                 }
                 var2 = dn.loadFile((byte) 120, "pleasewait_dotdotdot");
                 if (var2 != null) {

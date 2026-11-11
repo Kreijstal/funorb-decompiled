@@ -175,15 +175,15 @@ final class MirrorComponent extends PrefabComponent {
           var8 = rm.field_a;
           if (this.typeId != 19) {
             var13 = (TrapBaseModel) (var8.createModel(16, param1 ^ 105));
-            var13.b(8022, 4);
+            var13.setVariant(8022, 4);
             var11.addModel((TrapPart) null, (byte) 124, var13);
           } else {
             var12 = (TrapBaseModel) (var8.createModel(16, 127));
-            var12.b(param1 + 8019, 1);
+            var12.setVariant(param1 + 8019, 1);
             var11.addModel((TrapPart) null, (byte) 124, var12);
           }
           var14 = (BlockModel) (var8.createModel(7, 125));
-          var14.b(param1 + 116, 9);
+          var14.setVariant(param1 + 116, 9);
           var11.addModel(var7, (byte) 124, var14);
           stackIn_8_0 = var11;
           return stackIn_8_0;

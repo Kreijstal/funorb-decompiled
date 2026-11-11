@@ -108,7 +108,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (BlockModel) (var7.createModel(7, 86));
-          var8.b(127, 12);
+          var8.setVariant(127, 12);
           var9.addModel(var5, (byte) 124, var8);
           stackIn_6_0 = var9;
           return stackIn_6_0;

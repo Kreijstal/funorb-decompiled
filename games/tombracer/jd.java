@@ -154,7 +154,7 @@ final class jd extends OpenGlTexture implements lv {
           this.field_k = param2;
           this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
-          jaggl.OpenGL.glTexImage3Dub(this.field_i, 0, this.d(120), this.field_k, this.field_l, this.field_n, 0, waa.toGlFormat(this.field_f, 1383), 5121, param5, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.field_i, 0, this.getGlFormat(120), this.field_k, this.field_l, this.field_n, 0, waa.toGlFormat(this.field_f, 1383), 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

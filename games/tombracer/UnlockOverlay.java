@@ -96,7 +96,7 @@ final class UnlockOverlay extends MatchOverlay {
         int var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        ik.field_h.a(0, 0);
+        ik.field_h.draw(0, 0);
         if (param0 > -13) {
           this.d((byte) 83);
           var2 = aaa.a(false) - PlayerInputQueue.field_a.width() >> 1;
@@ -106,17 +106,17 @@ final class UnlockOverlay extends MatchOverlay {
             var7 = Room.field_m[this.field_m.a(-13939)];
             MembersUpsellMenu.a(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             ura.a(-10985);
-            hp.a(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
+            hp.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
             RemovedFromGameMenu.f((byte) -6);
-            PlayerInputQueue.field_a.a(var2, var3 + 85);
+            PlayerInputQueue.field_a.draw(var2, var3 + 85);
             MembersUpsellMenu.a(var7.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
             return;
           }
           if (this.field_m.c(16) == 1) {
             var4 = this.field_m.a(-13939);
             MembersUpsellMenu.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
-            OpenGlFramebuffer.field_i[var4].a((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4].width() / 2, (SwitchLinkList.b(0) >> 1) - OpenGlFramebuffer.field_i[var4].height() / 2 - 20);
-            PlayerInputQueue.field_a.a(var2, var3 + 60);
+            OpenGlFramebuffer.field_i[var4].draw((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4].width() / 2, (SwitchLinkList.b(0) >> 1) - OpenGlFramebuffer.field_i[var4].height() / 2 - 20);
+            PlayerInputQueue.field_a.draw(var2, var3 + 60);
             MembersUpsellMenu.a(SecondaryLinkQueue.worldNames[var4].toUpperCase(), 65793, eda.field_f, -1, 92 + var3, aaa.a(false) >> 1, -1);
             return;
           }
@@ -129,17 +129,17 @@ final class UnlockOverlay extends MatchOverlay {
           var9 = Room.field_m[this.field_m.a(-13939)];
           MembersUpsellMenu.a(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
           ura.a(-10985);
-          hp.a(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
+          hp.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
           RemovedFromGameMenu.f((byte) -6);
-          PlayerInputQueue.field_a.a(var2Lifetime1, var3Lifetime1 + 85);
+          PlayerInputQueue.field_a.draw(var2Lifetime1, var3Lifetime1 + 85);
           MembersUpsellMenu.a(var9.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
           return;
         }
         if (this.field_m.c(16) == 1) {
           var4Lifetime1 = this.field_m.a(-13939);
           MembersUpsellMenu.a(r.field_k.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
-          OpenGlFramebuffer.field_i[var4Lifetime1].a((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].width() / 2, (SwitchLinkList.b(0) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].height() / 2 - 20);
-          PlayerInputQueue.field_a.a(var2Lifetime1, var3Lifetime1 + 60);
+          OpenGlFramebuffer.field_i[var4Lifetime1].draw((aaa.a(false) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].width() / 2, (SwitchLinkList.b(0) >> 1) - OpenGlFramebuffer.field_i[var4Lifetime1].height() / 2 - 20);
+          PlayerInputQueue.field_a.draw(var2Lifetime1, var3Lifetime1 + 60);
           MembersUpsellMenu.a(SecondaryLinkQueue.worldNames[var4Lifetime1].toUpperCase(), 65793, eda.field_f, -1, 92 + var3Lifetime1, aaa.a(false) >> 1, -1);
           return;
         }

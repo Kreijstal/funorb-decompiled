@@ -7,7 +7,7 @@ final class is extends UiComponent {
     private int field_ub;
     private UiComponent field_zb;
     static hra field_wb;
-    static pea field_xb;
+    static LruNodeCache field_xb;
     static float field_Ab;
     static UiComponent field_yb;
 
@@ -294,7 +294,7 @@ final class is extends UiComponent {
           var10 = 5 + (var9_int + 5);
           var11 = di.field_a * 2 + 6;
           var12 = PitSnakeModel.clampToScreenX((byte) -8, var10, param2, param0);
-          var13 = hsa.a(param3, var11, param1, (byte) 69);
+          var13 = LegacyTextureCache.clampToScreenY(param3, var11, param1, (byte) 69);
           this.setBounds(var10, var11, -23776, var13, var12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -331,6 +331,6 @@ final class is extends UiComponent {
 
     static {
         field_wb = new hra();
-        field_xb = new pea(16);
+        field_xb = new LruNodeCache(16);
     }
 }

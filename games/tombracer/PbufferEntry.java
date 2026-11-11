@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cla extends DualLinkNode {
+final class PbufferEntry extends DualLinkNode {
     static String field_o;
     private long field_k;
     int field_p;
@@ -49,7 +49,7 @@ final class cla extends DualLinkNode {
         return this.field_k;
     }
 
-    cla(OpenGlToolkit param0, int param1, int param2) {
+    PbufferEntry(OpenGlToolkit param0, int param1, int param2) {
         try {
           this.field_l = param0;
           this.field_p = param2 * param1;

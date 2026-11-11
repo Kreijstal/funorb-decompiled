@@ -1177,13 +1177,13 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (ej.field_c == param0) {
           return 2;
         }
-        if (tla.field_c == param0) {
+        if (OpenGlDisplayLists.field_c == param0) {
           return 0;
         }
         if (param0 == PlayerContextMenu.field_j) {
           return 1;
         }
-        if (pea.field_c != param0) {
+        if (LruNodeCache.field_c != param0) {
           throw new IllegalArgumentException();
         }
         return 3;

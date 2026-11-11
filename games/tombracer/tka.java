@@ -27,7 +27,7 @@ final class tka extends TextWidgetPainter {
         field_q = null;
     }
 
-    final static void b(byte param0) {
+    final static void buildSinCosTables(byte param0) {
         int var1_int = 0;
         double var2 = 0.0;
         int var4 = 0;
@@ -106,7 +106,7 @@ final class tka extends TextWidgetPainter {
           if (param2 == 16777215) {
             return;
           }
-          tka.b((byte) 56);
+          tka.buildSinCosTables((byte) 56);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

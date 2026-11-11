@@ -10,8 +10,8 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     final void disable(int param0) {
         this.field_e.a((jagdx.IDirect3DVertexShader) null, -1);
         this.owner.a(ej.field_c, 0, -54);
-        this.owner.a(tla.field_c, 1, -56);
-        this.owner.a(pea.field_c, 2, -116);
+        this.owner.a(OpenGlDisplayLists.field_c, 1, -56);
+        this.owner.a(LruNodeCache.field_c, 2, -116);
         if (param0 <= -4) {
           this.owner.a((byte) 51, true);
           return;
@@ -192,8 +192,8 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
 
     final void enable(int param0, boolean param1) {
         this.owner.a(ej.field_c, 0, -100);
-        this.owner.a(pea.field_c, 1, -21);
-        this.owner.a(tla.field_c, 2, -6219, false, true);
+        this.owner.a(LruNodeCache.field_c, 1, -21);
+        this.owner.a(OpenGlDisplayLists.field_c, 2, -6219, false, true);
         this.owner.a((byte) 77, false);
         this.field_e.a(this.field_f, -1);
         this.onViewMatrixChanged((byte) 107);

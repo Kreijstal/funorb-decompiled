@@ -266,7 +266,7 @@ abstract class ConsoleWindow implements ShellListener {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setTextureSize(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (param2 != LegacyOpenGlTurbulentTextureEffect.textureWidth) {
