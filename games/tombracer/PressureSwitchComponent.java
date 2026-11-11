@@ -20,9 +20,9 @@ final class PressureSwitchComponent extends SwitchComponent {
           if (HiscoresScreen.field_r < SoftwareTransform3D.field_q) {
             HiscoresScreen.field_r = HiscoresScreen.field_r + 1;
           }
-          if (mha.field_E != FadingDialog.field_C.field_e) {
-            VertexArrayPointer.field_b = VertexArrayPointer.field_b + (FadingDialog.field_C.field_e - mha.field_E);
-            mha.field_E = FadingDialog.field_C.field_e;
+          if (ValidationStatusIcon.field_E != FadingDialog.field_C.field_e) {
+            VertexArrayPointer.field_b = VertexArrayPointer.field_b + (FadingDialog.field_C.field_e - ValidationStatusIcon.field_E);
+            ValidationStatusIcon.field_E = FadingDialog.field_C.field_e;
           }
           if (HiscoresScreen.field_r <= 0) {
             return;

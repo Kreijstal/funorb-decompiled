@@ -91,10 +91,10 @@ final class InstructionsScreen extends DropInMenuScreen {
         int var11Lifetime2Lifetime1;
         var15 = TombRacer.field_G ? 1 : 0;
         SocketConnector.drawWrappedText(SnakePitBehaviour.field_q.toUpperCase(), 1, SingleChildWidget.field_v, 2497287, -1, 160, 1, param1 - 20, 0, -1, (byte) 60, 320);
-        S2CNextRoundPacket.drawRightTextWithShadow(4, SingleChildWidget.field_v, rka.formatPageNumber(td.field_r, true), 600, -1, param1 + 72, 11288327);
-        var16 = IntrusiveDeque.field_d[td.field_r];
+        S2CNextRoundPacket.drawRightTextWithShadow(4, SingleChildWidget.field_v, rka.formatPageNumber(DialogButtonPainter.field_r, true), 600, -1, param1 + 72, 11288327);
+        var16 = IntrusiveDeque.field_d[DialogButtonPainter.field_r];
         var4 = var16;
-        var5 = HazardEffect.field_h[td.field_r];
+        var5 = HazardEffect.field_h[DialogButtonPainter.field_r];
         TextureTransformMode.a(-10985);
         var6 = Math.max(var5.length, var16.length);
         var7 = 80 + param1;
@@ -105,8 +105,8 @@ final class InstructionsScreen extends DropInMenuScreen {
             if (null == no.field_m) {
               return;
             }
-            if (no.field_m[td.field_r].length > var8 &&
-              no.field_m[td.field_r][var8] != -1) {
+            if (no.field_m[DialogButtonPainter.field_r].length > var8 &&
+              no.field_m[DialogButtonPainter.field_r][var8] != -1) {
               var10 -= 60;
               var9 += 60;
             }
@@ -115,43 +115,43 @@ final class InstructionsScreen extends DropInMenuScreen {
             null != var16[var8]) {
             var7 += 30;
             var11 = 0;
-            if (var8 < no.field_m[td.field_r].length &&
-              no.field_m[td.field_r][var8] == -2) {
+            if (var8 < no.field_m[DialogButtonPainter.field_r].length &&
+              no.field_m[DialogButtonPainter.field_r][var8] == -2) {
               var11 -= 60;
             }
             RoomEffectTraps.drawLeftTextWithShadow(-1, -22, var7, var16[var8].toUpperCase(), var9 + var11, eda.field_f, 11288327);
             var7 += 10;
           }
           if (var5.length > var8) {
-            if (var8 < no.field_m[td.field_r].length &&
-              0 <= no.field_m[td.field_r][var8] &&
-              no.field_p[td.field_r][var8] != 3) {
-              var11Lifetime2 = no.field_q[td.field_r][var8];
-              if (27 != no.field_u[td.field_r][var8]) {
-                if (1 == no.field_p[td.field_r][var8]) {
+            if (var8 < no.field_m[DialogButtonPainter.field_r].length &&
+              0 <= no.field_m[DialogButtonPainter.field_r][var8] &&
+              no.field_p[DialogButtonPainter.field_r][var8] != 3) {
+              var11Lifetime2 = no.field_q[DialogButtonPainter.field_r][var8];
+              if (27 != no.field_u[DialogButtonPainter.field_r][var8]) {
+                if (1 == no.field_p[DialogButtonPainter.field_r][var8]) {
                   var12 = 20;
                   var13 = var11Lifetime2;
                   var14 = 4;
-                  hp.drawModelPreview(var13, 512 + no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.getCategoryModel(var14, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] + var12, -50 + var9);
+                  hp.drawModelPreview(var13, 512 + no.field_r[DialogButtonPainter.field_r][var8], no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(var14, 12166, 1), -1918106173, var7 + no.field_k[DialogButtonPainter.field_r][var8] + var12, -50 + var9);
                 }
               } else {
                 var12 = -4;
                 var13 = var11Lifetime2;
-                stackIn_27_0 = (no.field_p[td.field_r][var8] == 1) ? 1 : 109;
+                stackIn_27_0 = (no.field_p[DialogButtonPainter.field_r][var8] == 1) ? 1 : 109;
                 var14 = stackIn_27_0;
-                hp.drawModelPreview(var13, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.getCategoryModel(var14, 12166, 1), -1918106173, var12 + (no.field_k[td.field_r][var8] + var7), -50 + var9);
+                hp.drawModelPreview(var13, no.field_r[DialogButtonPainter.field_r][var8], no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(var14, 12166, 1), -1918106173, var12 + (no.field_k[DialogButtonPainter.field_r][var8] + var7), -50 + var9);
               }
-              if (no.field_p[td.field_r][var8] == 2) {
-                hp.drawModelPreview(var11Lifetime2, 1024, no.field_s[td.field_r][var8], SpawnerBehaviour.getCategoryModel(31, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] - 16, var9 - 50);
-                hp.drawModelPreview(var11Lifetime2, 1024, no.field_s[td.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, -16 + var7 + no.field_k[td.field_r][var8], var9 - 65);
-                hp.drawModelPreview(var11Lifetime2, 0, no.field_s[td.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + (no.field_k[td.field_r][var8] + 16), var9 - 34);
-                hp.drawModelPreview(var11Lifetime2, 512, no.field_s[td.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] + 16, -65 + var9);
-                hp.drawModelPreview(var11Lifetime2, 1536, no.field_s[td.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + no.field_k[td.field_r][var8] - 16, -34 + var9);
+              if (no.field_p[DialogButtonPainter.field_r][var8] == 2) {
+                hp.drawModelPreview(var11Lifetime2, 1024, no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(31, 12166, 1), -1918106173, var7 + no.field_k[DialogButtonPainter.field_r][var8] - 16, var9 - 50);
+                hp.drawModelPreview(var11Lifetime2, 1024, no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, -16 + var7 + no.field_k[DialogButtonPainter.field_r][var8], var9 - 65);
+                hp.drawModelPreview(var11Lifetime2, 0, no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + (no.field_k[DialogButtonPainter.field_r][var8] + 16), var9 - 34);
+                hp.drawModelPreview(var11Lifetime2, 512, no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + no.field_k[DialogButtonPainter.field_r][var8] + 16, -65 + var9);
+                hp.drawModelPreview(var11Lifetime2, 1536, no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(29, 12166, 1), -1918106173, var7 + no.field_k[DialogButtonPainter.field_r][var8] - 16, -34 + var9);
               }
-              hp.drawModelPreview(var11Lifetime2, no.field_r[td.field_r][var8], no.field_s[td.field_r][var8], SpawnerBehaviour.getCategoryModel(no.field_u[td.field_r][var8], 12166, no.field_m[td.field_r][var8]), -1918106173, var7 + no.field_k[td.field_r][var8], -50 + var9);
+              hp.drawModelPreview(var11Lifetime2, no.field_r[DialogButtonPainter.field_r][var8], no.field_s[DialogButtonPainter.field_r][var8], SpawnerBehaviour.getCategoryModel(no.field_u[DialogButtonPainter.field_r][var8], 12166, no.field_m[DialogButtonPainter.field_r][var8]), -1918106173, var7 + no.field_k[DialogButtonPainter.field_r][var8], -50 + var9);
             }
             var11Lifetime2Lifetime1 = TooltipRenderer.field_p.drawWrapped((aa) null, var10, 15, 0, var7, SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), var5[var8], (byte) 99, 640, 0, SinglePlayerCourseGenerator.field_h, var9, 0);
-            if (td.field_r > 0) {
+            if (DialogButtonPainter.field_r > 0) {
               var11Lifetime2Lifetime1 = Math.max(var11Lifetime2Lifetime1, 3);
             }
             var7 = var7 + (10 + 15 * var11Lifetime2Lifetime1);
@@ -161,7 +161,7 @@ final class InstructionsScreen extends DropInMenuScreen {
         if (param2 >= -9) {
           return;
         }
-        if (0 == td.field_r) {
+        if (0 == DialogButtonPainter.field_r) {
           var8Lifetime1 = 205 + param1;
           stackIn_45_0 = (0L >= bva.currentTimeMillis((byte) -107) / 1000L % 2L) ? 0 : 1;
           var9Lifetime1 = stackIn_45_0;
@@ -196,9 +196,9 @@ final class InstructionsScreen extends DropInMenuScreen {
         if (param0 != 1) {
           return;
         }
-        td.field_r = td.field_r - 1;
+        DialogButtonPainter.field_r = DialogButtonPainter.field_r - 1;
         if (!param1 &&
-          td.field_r == 0) {
+          DialogButtonPainter.field_r == 0) {
           var3 = MenuEntry.field_h;
           MenuEntry.field_h = 97;
           this.field_k.handleHorizontalNavigation(1, 63);
@@ -266,12 +266,12 @@ final class InstructionsScreen extends DropInMenuScreen {
 
     private final void nextPage(int param0, boolean param1) {
         int var3 = 0;
-        td.field_r = td.field_r + 1;
+        DialogButtonPainter.field_r = DialogButtonPainter.field_r + 1;
         if (param0 > -89) {
           return;
         }
         if (!param1 &&
-          10 == td.field_r) {
+          10 == DialogButtonPainter.field_r) {
           var3 = MenuEntry.field_h;
           MenuEntry.field_h = 96;
           this.field_k.handleHorizontalNavigation(1, 95);
@@ -288,11 +288,11 @@ final class InstructionsScreen extends DropInMenuScreen {
           this.nextPage(57, true);
         }
         if (param0 == 1 &&
-          td.field_r == 0) {
+          DialogButtonPainter.field_r == 0) {
           return false;
         }
         if (param0 == 2 &&
-          10 == td.field_r) {
+          10 == DialogButtonPainter.field_r) {
           return false;
         }
         return super.isItemEnabled(param0, 0);

@@ -72,7 +72,7 @@ abstract class SceneLight extends IntrusiveNode {
           vua.field_A = QuickChatParamType.createToolkitSprite(wj.field_a, param0, (byte) 126);
           TextureCoordinateGeneration.field_d = LoadLevelCommand.createToolkitSprites(param0, ProxySocketConnector.field_e, -100);
           PlayerProfile.field_r = LoadLevelCommand.createToolkitSprites(param0, FullscreenCanvas.field_a, param1 ^ -17261);
-          bm.field_f = LoadLevelCommand.createToolkitSprites(param0, Transform3D.field_d, -112);
+          TextHotspot.field_f = LoadLevelCommand.createToolkitSprites(param0, Transform3D.field_d, -112);
           ega.field_e = QuickChatParamType.createToolkitSprite(OpenGlIndexArray.field_i, param0, (byte) 126);
           ContextMenuRow.field_wb = QuickChatParamType.createToolkitSprite(LoadingStep.field_a, param0, (byte) 127);
           GridWidgetContainer.field_y = LoadLevelCommand.createToolkitSprites(param0, LoadingStepList.field_c, -104);

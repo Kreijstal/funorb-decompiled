@@ -650,8 +650,8 @@ final class AffineTransform3D extends Transform3D {
         }
         try {
           ItemModel.field_n = param1;
-          rua.field_gb.field_J.clear(8);
-          rua.field_gb.addChild(-125, ItemModel.field_n);
+          AccountCreationDialog.field_gb.field_J.clear(8);
+          AccountCreationDialog.field_gb.addChild(-125, ItemModel.field_n);
           if (param0 >= -20) {
             field_j = (IntrusiveDeque) null;
           }

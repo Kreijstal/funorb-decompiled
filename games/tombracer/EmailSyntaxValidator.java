@@ -4,12 +4,12 @@
 final class EmailSyntaxValidator extends TextFieldValidator {
     static TextureTransformMode field_j;
 
-    final it validateText(byte param0, String param1) {
+    final ValidationState validateText(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_5_0 = 0;
-        it stackIn_8_0 = null;
+        ValidationState stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

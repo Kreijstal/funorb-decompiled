@@ -5,17 +5,17 @@ class HotspotTextWidget extends FocusableWidget {
     private IntrusiveDeque field_D;
     static int[][] field_z;
     static ResourceArchive field_B;
-    private bm field_A;
+    private TextHotspot field_A;
     private String[] field_C;
 
-    private final bm findHotspot(int param0, int param1, byte param2) {
-        bm var4;
-        bm var5;
+    private final TextHotspot findHotspot(int param0, int param1, byte param2) {
+        TextHotspot var4;
+        TextHotspot var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
-        var4 = (bm) (this.field_D.first(param2 ^ 92));
+        var4 = (TextHotspot) (this.field_D.first(param2 ^ 92));
         if (param2 != -20) {
-          return (bm) null;
+          return (TextHotspot) null;
         }
         while (var4 != null) {
           var5 = var4;
@@ -28,7 +28,7 @@ class HotspotTextWidget extends FocusableWidget {
             }
             var5 = var5.field_k;
           }
-          var4 = (bm) (this.field_D.next(122));
+          var4 = (TextHotspot) (this.field_D.next(122));
         }
         return null;
     }
@@ -153,7 +153,7 @@ class HotspotTextWidget extends FocusableWidget {
         String var21;
         TextBlockLayout var22;
         TextLineLayout var23;
-        bm var24;
+        TextHotspot var24;
         Object var25;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
@@ -162,7 +162,7 @@ class HotspotTextWidget extends FocusableWidget {
         String var26;
         TextBlockLayout var27;
         TextLineLayout var28;
-        bm var29;
+        TextHotspot var29;
         WidgetTextLayout var30;
         int var2Lifetime1;
         int var5Lifetime1;
@@ -213,9 +213,9 @@ class HotspotTextWidget extends FocusableWidget {
                 stackIn_32_0 = var27.getCaretX((byte) -59, var2);
               }
               var14 = stackIn_32_0;
-              var29 = new bm(var7Lifetime2, var13, var28.field_d, var14 - var13, Math.max(var30.getLineInkHeight((byte) -90), var28.field_b - var28.field_d));
+              var29 = new TextHotspot(var7Lifetime2, var13, var28.field_d, var14 - var13, Math.max(var30.getLineInkHeight((byte) -90), var28.field_b - var28.field_d));
               if (var10 != null) {
-                ((bm) (var10)).field_k = var29;
+                ((TextHotspot) (var10)).field_k = var29;
               }
               this.field_D.addLast((byte) -46, var29);
               var10 = var29;
@@ -259,9 +259,9 @@ class HotspotTextWidget extends FocusableWidget {
               stackIn_15_0 = var22.getCaretX((byte) -59, var2Lifetime1);
             }
             var14Lifetime1 = stackIn_15_0;
-            var24 = new bm(var7Lifetime1Lifetime1, var13Lifetime1, var23.field_d, var14Lifetime1 - var13Lifetime1, Math.max(var17_ref.getLineInkHeight((byte) -90), var23.field_b - var23.field_d));
+            var24 = new TextHotspot(var7Lifetime1Lifetime1, var13Lifetime1, var23.field_d, var14Lifetime1 - var13Lifetime1, Math.max(var17_ref.getLineInkHeight((byte) -90), var23.field_b - var23.field_d));
             if (var10Lifetime1 != null) {
-              ((bm) (var10Lifetime1)).field_k = var24;
+              ((TextHotspot) (var10Lifetime1)).field_k = var24;
             }
             this.field_D.addLast((byte) -46, var24);
             var10Lifetime1 = var24;
@@ -270,8 +270,8 @@ class HotspotTextWidget extends FocusableWidget {
     }
 
     final void activate(int param0, int param1, int param2, int param3) {
-        bm var7 = null;
-        bm var7Lifetime1;
+        TextHotspot var7 = null;
+        TextHotspot var7Lifetime1;
         super.activate(param0, param1, param2, -118);
         int var5 = param2 - this.field_i;
         int var6 = -this.field_n + param0;
@@ -306,7 +306,7 @@ class HotspotTextWidget extends FocusableWidget {
           return;
         }
         WidgetTextLayout var5 = (WidgetTextLayout) ((Object) this.field_r);
-        bm var6 = this.field_A;
+        TextHotspot var6 = this.field_A;
         if (var6 != null) {
           var7 = var5.getTextOriginX((UiWidget) (this), param0, (byte) 119);
           var8 = var5.textTop(param1, (UiWidget) (this), (byte) -49);

@@ -4,7 +4,7 @@
 final class BevelOperator extends TextureOperator {
     private int field_n;
     static String field_q;
-    static it field_p;
+    static ValidationState field_p;
     static String field_o;
     static int field_m;
 
@@ -12,7 +12,7 @@ final class BevelOperator extends TextureOperator {
         field_p = null;
         field_o = null;
         if (param0 >= -91) {
-          field_p = (it) null;
+          field_p = (ValidationState) null;
           field_q = null;
           return;
         }
@@ -117,7 +117,7 @@ final class BevelOperator extends TextureOperator {
           }
           return var9;
         }
-        field_p = (it) null;
+        field_p = (ValidationState) null;
         var11Lifetime1 = this.monochromeCache.getRow((byte) 17, param1);
         var10Lifetime1 = var11Lifetime1;
         var9Lifetime1 = var10Lifetime1;
@@ -226,7 +226,7 @@ final class BevelOperator extends TextureOperator {
 
     static {
         field_q = "Room complete +<%0>";
-        field_p = new it();
+        field_p = new ValidationState();
         field_o = "Idols";
         field_m = -1;
     }

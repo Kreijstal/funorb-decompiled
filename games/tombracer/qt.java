@@ -240,7 +240,7 @@ final class qt {
                     var7 = AchievementsScreen.findLobbyPlayer((byte) -40, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new LobbyPlayerEntry(var26, var27, var3_longLifetime2);
-                      tc.field_d.put(-1, var7, var3_longLifetime2);
+                      IdChatTarget.field_d.put(-1, var7, var3_longLifetime2);
                       C2SChooseRewardPacket.field_a.field_Mb = C2SChooseRewardPacket.field_a.field_Mb + 1;
                     }
                     var7.field_Jb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(122);
@@ -412,7 +412,7 @@ final class qt {
 
     final static boolean startAccountCreation(String param0, boolean param1, int param2, String param3, String param4, AccountRegistrationPanel param5, boolean param6) {
         RuntimeException var7 = null;
-        rua var8 = null;
+        AccountCreationDialog var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -430,13 +430,13 @@ final class qt {
           if (!param1) {
             field_a = (BitmapFont) null;
           }
-          var8 = new rua(ej.field_a, param5);
+          var8 = new AccountCreationDialog(ej.field_a, param5);
           ej.field_a.pushDialog(var8, 88);
           if (rg.hasTuhstatbutCookie(7)) {
             var8.h(param1);
             return true;
           }
-          LegacyOpenGlTexture.field_a = gsa.field_y;
+          LegacyOpenGlTexture.field_a = PlayerResultRow.field_y;
           ObjectList.field_i = param0;
           IntNode.field_j = param6;
           QuickChatPhraseDefinition.field_n = param2;

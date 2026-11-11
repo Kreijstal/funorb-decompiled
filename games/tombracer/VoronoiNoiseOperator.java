@@ -108,7 +108,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           if (param1 == 2) {
             var28 = hka.field_b;
             var29Lifetime2 = ColouriseOperator.field_m[0];
-            var30 = jsa.field_z;
+            var30 = FormFieldRow.field_z;
             var28.field_f.addIconItem(var29Lifetime2, 11, var30, param0);
             var31 = hka.field_b;
             var32 = ColouriseOperator.field_m[1];

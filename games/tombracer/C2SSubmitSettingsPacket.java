@@ -46,7 +46,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
             field_c = (String) null;
           }
           ala.showProgress((byte) -30, TextureTransformMode.field_b, UnlockOverlay.field_l, OpenGlToolkit.field_jc);
-          fga.drawFramebufferToCanvas(0, false, 0, param0);
+          LevelSelectOverlay.drawFramebufferToCanvas(0, false, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dba.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

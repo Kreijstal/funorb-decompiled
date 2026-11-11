@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mu extends UiComponent {
+final class ContactListEntry extends UiComponent {
     String field_yb;
     static String field_wb;
     UiComponent field_Ab;
@@ -15,7 +15,7 @@ final class mu extends UiComponent {
     UiComponent field_xb;
     private static String field_Eb;
 
-    mu() {
+    ContactListEntry() {
         super(0L, (UiComponent) null);
     }
 

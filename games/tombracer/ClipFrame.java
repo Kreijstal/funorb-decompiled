@@ -49,7 +49,7 @@ final class ClipFrame {
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
-        mu var6 = null;
+        ContactListEntry var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -85,7 +85,7 @@ final class ClipFrame {
           OpenGlSprite.field_j.field_X = true;
           OpenGlSprite.field_j.field_vb.field_vb.field_r = null;
           var5 = null;
-          var6 = (mu) (var4.first(-80));
+          var6 = (ContactListEntry) (var4.first(-80));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_J == null) {
@@ -148,16 +148,16 @@ final class ClipFrame {
               var17.field_f.openAt(var14, 0, -69, 0, var13);
             }
             var5 = var6;
-            var6 = (mu) (var4.next(126));
+            var6 = (ContactListEntry) (var4.next(126));
           }
           if (OpenGlSprite.field_j.field_yb.field_y != 0) {
-            bl.field_a = new is(OpenGlSprite.field_j.field_yb.field_q, OpenGlSprite.field_j.field_yb.field_A, OpenGlSprite.field_j.field_yb.field_G, OpenGlSprite.field_j.field_yb.field_t, pe.field_k, lw.field_a, Corpse.field_i, Corpse.field_i);
+            bl.field_a = new NameEntryPopup(OpenGlSprite.field_j.field_yb.field_q, OpenGlSprite.field_j.field_yb.field_A, OpenGlSprite.field_j.field_yb.field_G, OpenGlSprite.field_j.field_yb.field_t, pe.field_k, lw.field_a, Corpse.field_i, Corpse.field_i);
             ResourceArchive.field_k = 2;
           }
           if (0 == OpenGlSprite.field_j.field_wb.field_y) {
             return;
           }
-          bl.field_a = new is(OpenGlSprite.field_j.field_wb.field_q, OpenGlSprite.field_j.field_wb.field_A, OpenGlSprite.field_j.field_wb.field_G, OpenGlSprite.field_j.field_wb.field_t, MazeSolver.field_b, lw.field_a, Corpse.field_i, Corpse.field_i);
+          bl.field_a = new NameEntryPopup(OpenGlSprite.field_j.field_wb.field_q, OpenGlSprite.field_j.field_wb.field_A, OpenGlSprite.field_j.field_wb.field_G, OpenGlSprite.field_j.field_wb.field_t, MazeSolver.field_b, lw.field_a, Corpse.field_i, Corpse.field_i);
           ResourceArchive.field_k = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

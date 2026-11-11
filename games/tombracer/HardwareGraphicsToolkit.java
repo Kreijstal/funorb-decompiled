@@ -1218,7 +1218,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
               var12 = 50 * var11;
               var13 = this.getActiveTextureTransform(0);
               var13.setTranslationFloat((byte) 126, (float)(var10.field_o * (this.field_Dc % var12)) / (float)var12, 0.0f, (float)(var10.field_s * (this.field_Dc % var12)) / (float)var12);
-              this.setTextureTransformMode(pfa.field_i, false);
+              this.setTextureTransformMode(CourseMapWalker.field_i, false);
             }
             var6 = var10.field_q;
             if (!this.field_L) {
@@ -2253,7 +2253,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final static void q(int param0) {
-        jsa.a(false, 17);
+        FormFieldRow.a(false, 17);
         int var1 = 36 % ((param0 + 38) / 62);
     }
 

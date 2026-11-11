@@ -3,7 +3,7 @@
  */
 final class ColourRowCache {
     private ColourRowCacheEntry[] field_k;
-    static it field_d;
+    static ValidationState field_d;
     private int field_g;
     private int field_c;
     private int field_e;
@@ -155,6 +155,6 @@ final class ColourRowCache {
 
     static {
         field_j = "The temple door creaks open... <br>Use <img=4><img=7><img=6><img=5> or <img=0><img=1><img=2><img=3> to reach the chamber exit to the north.";
-        field_d = new it();
+        field_d = new ValidationState();
     }
 }

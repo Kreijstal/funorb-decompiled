@@ -15,7 +15,7 @@ abstract class GameScreen {
         String var4Lifetime2;
         String var4Lifetime3;
         if (MenuEntry.field_h == 9) {
-          if (!SoundEventQueue.a(uba.field_f, 110, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g, CoinItemComponent.field_I)) {
+          if (!SoundEventQueue.a(DateValidationSource.field_f, 110, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g, CoinItemComponent.field_I)) {
             if (MenuEntry.field_h == 10) {
               if (var3 != 0) {
                 return false;
@@ -81,11 +81,11 @@ abstract class GameScreen {
             }
             return false;
           }
-          if (uba.field_f != 2 &&
+          if (DateValidationSource.field_f != 2 &&
             var3 != 0) {
             return false;
           }
-          return eca.openQuickChatForPlayer((byte) -121, uba.field_f, CoinItemComponent.field_I, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g);
+          return eca.openQuickChatForPlayer((byte) -121, DateValidationSource.field_f, CoinItemComponent.field_I, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g);
         }
         if (MenuEntry.field_h == 10) {
           if (var3 != 0) {

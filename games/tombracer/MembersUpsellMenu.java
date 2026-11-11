@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MembersUpsellMenu extends MenuScreen {
-    private pfa field_x;
+    private CourseMapWalker field_x;
     private int field_r;
     static int field_z;
     private int field_v;
@@ -201,7 +201,7 @@ final class MembersUpsellMenu extends MenuScreen {
             if (!TextWidgetPainter.a(109)) {
               var8 = DivisionMazeGenerator.field_d;
             } else {
-              var8 = tc.field_f;
+              var8 = IdChatTarget.field_f;
             }
           }
           SocketConnector.drawWrappedText(var8, 1, TooltipRenderer.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
@@ -225,7 +225,7 @@ final class MembersUpsellMenu extends MenuScreen {
         this.field_s = -30;
         this.field_t = 0;
         this.field_r = this.computeDropOffset(-18796);
-        this.field_x = new pfa(0, this.field_v);
+        this.field_x = new CourseMapWalker(0, this.field_v);
         this.field_q = new IntrusiveDeque();
         this.field_q.addLast((byte) -118, new CourseMapPath(0, 1, 2));
         this.field_q.addLast((byte) -54, new CourseMapPath(0, 2, 6));
@@ -355,7 +355,7 @@ final class MembersUpsellMenu extends MenuScreen {
           var6 == 0 &&
           var7 == 0 &&
           TextureCombineSource.field_a != param0 &&
-          gsa.field_j != param0 &&
+          PlayerResultRow.field_j != param0 &&
           param0 != 84) {
           return true;
         }

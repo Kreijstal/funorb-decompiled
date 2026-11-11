@@ -70,12 +70,12 @@ final class MatchingTextValidator extends TextFieldValidator {
         field_j = null;
     }
 
-    final it validateText(byte param0, String param1) {
+    final ValidationState validateText(byte param0, String param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        it stackIn_5_0 = null;
-        it stackIn_11_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jia implements MessagePanel {
+final class SneakHintPanel implements MessagePanel {
     private lw field_b;
     private waa[] field_c;
     static BufferedSocket field_a;
@@ -30,13 +30,13 @@ final class jia implements MessagePanel {
         if (!this.field_b.field_b) {
           stackIn_8_0 = 1348493408;
         } else {
-          stackIn_8_0 = (!VerticalScrollbar.field_tb[hra.field_b]) ? 1627324416 : 805371648;
+          stackIn_8_0 = (!VerticalScrollbar.field_tb[ValidationOutcome.field_b]) ? 1627324416 : 805371648;
         }
         LegacyOpenGlSpriteTexture.a(stackIn_8_0, tga.field_a, param0, param1 ^ 20688, this.getWidth(-8660), 20 + this.getHeight(false), 16, -10 + param2);
-        if (!VerticalScrollbar.field_tb[hra.field_b] &&
+        if (!VerticalScrollbar.field_tb[ValidationOutcome.field_b] &&
           this.field_b.field_b) {
-          SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, pg.field_A, (byte) -122, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
-        } else if (VerticalScrollbar.field_tb[hra.field_b] &&
+          SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, TermsLinksPanel.field_A, (byte) -122, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
+        } else if (VerticalScrollbar.field_tb[ValidationOutcome.field_b] &&
           this.field_b.field_b) {
           SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, ConsoleHistoryEntry.field_f, (byte) 93, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         } else {
@@ -110,7 +110,7 @@ final class jia implements MessagePanel {
 
     final static void drawLine3D(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param5 < 15) {
-          jia.releaseStatics((byte) -91);
+          SneakHintPanel.releaseStatics((byte) -91);
         }
         if (TextureCombineOperation.field_a) {
           tga.field_a.v(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, jg.withAlpha(param1, (byte) -60, param3), 1);
@@ -126,7 +126,7 @@ final class jia implements MessagePanel {
         return 140;
     }
 
-    public jia() {
+    public SneakHintPanel() {
         int var1 = 0;
         this.field_c = new waa[10];
         this.field_b = new lw();

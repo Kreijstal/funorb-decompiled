@@ -225,7 +225,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
             }
           }
           this.field_p.paint(-83, param1, this, param3, param0);
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -61,9 +61,9 @@ final class pra {
     }
 
     final static void b(int param0) {
-        if (FadingDialog.field_C.field_e != mha.field_E) {
-          VertexArrayPointer.field_b = VertexArrayPointer.field_b + (-mha.field_E + FadingDialog.field_C.field_e);
-          mha.field_E = FadingDialog.field_C.field_e;
+        if (FadingDialog.field_C.field_e != ValidationStatusIcon.field_E) {
+          VertexArrayPointer.field_b = VertexArrayPointer.field_b + (-ValidationStatusIcon.field_E + FadingDialog.field_C.field_e);
+          ValidationStatusIcon.field_E = FadingDialog.field_C.field_e;
         }
         if (HiscoresScreen.field_r > 0) {
           HiscoresScreen.field_r = HiscoresScreen.field_r - 1;

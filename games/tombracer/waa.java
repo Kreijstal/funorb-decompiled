@@ -24,7 +24,7 @@ final class waa {
           if (param1 != 1383) {
             field_e = (String) null;
           }
-          if (param0 == it.field_b) {
+          if (param0 == ValidationState.field_b) {
             stackIn_20_0 = 6407;
             return stackIn_20_0;
           }

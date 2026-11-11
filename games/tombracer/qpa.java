@@ -113,7 +113,7 @@ final class qpa implements GamePacket {
               }
             }
           } else {
-            RenderScene.field_g[param2] = (MenuScreen) ((Object) new sv(param2, param6, param4, param0, param3, param1));
+            RenderScene.field_g[param2] = (MenuScreen) ((Object) new MainMenuScreen(param2, param6, param4, param0, param3, param1));
           }
           RenderScene.field_g[param2].field_p = pm.field_h[param2];
           return;

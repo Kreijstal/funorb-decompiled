@@ -44,7 +44,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         aca.field_h[20] = afa.field_b;
         aca.field_h[11] = aqa.field_b;
         aca.field_h[9] = MotionTrackingModel.field_u;
-        aca.field_h[21] = rua.field_jb;
+        aca.field_h[21] = AccountCreationDialog.field_jb;
         aca.field_h[19] = GrowableIntList.field_b;
         aca.field_h[5] = SoftwareRenderContext.field_g;
         aca.field_h[4] = ScoreStandings.field_d;

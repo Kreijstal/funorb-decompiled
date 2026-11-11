@@ -29,7 +29,7 @@ final class gga extends ResizingDialog implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param0, param1);
-          var4.field_r = (WidgetPainter) ((Object) new td());
+          var4.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
           var5 = this.field_p - 6;
           this.field_p = this.field_p + 38;
           if (param2 >= -82) {
@@ -92,7 +92,7 @@ final class gga extends ResizingDialog implements ButtonListener {
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
         }
-        pfa.popRasterState(1);
+        CourseMapWalker.popRasterState(1);
         if (TimeSwitchBehaviour.field_r >= 150) {
           bra.field_O.drawAlpha(var3 + 15, var4 + 10, var5);
         } else {

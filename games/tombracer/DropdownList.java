@@ -6,7 +6,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
     private FocusableWidget field_I;
     private boolean field_B;
     private FocusableWidget field_E;
-    static bna field_D;
+    static PendingReply field_D;
     boolean field_G;
     String field_w;
     static java.awt.Frame field_x;

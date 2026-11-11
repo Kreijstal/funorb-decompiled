@@ -29,7 +29,7 @@ final class GameAssetLoader implements LoadingStage {
 
     public final void openArchives(byte param0) {
         if (null != ConstrainToFacingArcLocomotor.field_v) {
-          pfa.loadLocalizedText(ConstrainToFacingArcLocomotor.field_v, param0 + 157);
+          CourseMapWalker.loadLocalizedText(ConstrainToFacingArcLocomotor.field_v, param0 + 157);
           ConstrainToFacingArcLocomotor.field_v = null;
           C2SActionPacket.resetFrameTiming(-33);
         }
@@ -145,7 +145,7 @@ final class GameAssetLoader implements LoadingStage {
         }
         if (this.field_d != null) {
           SpriteState.installDefaultFactories(-18035);
-          this.drawLoadingProgress(30, (byte) 47, uba.loadingQuipsShort[0]);
+          this.drawLoadingProgress(30, (byte) 47, DateValidationSource.loadingQuipsShort[0]);
           Transform3D.loadRoomDefinitions(this.field_d, 17572);
           uo.b((byte) -125);
           this.field_d = null;
@@ -154,15 +154,15 @@ final class GameAssetLoader implements LoadingStage {
         }
         if (this.field_h != null &&
           null != this.field_p) {
-          TextureCombineSource.loadTitleSprites(uba.loadingQuipsShort[1], 40, this.field_h, (byte) 17);
-          TextBlockLayout.loadMenuBackgrounds((byte) -105, this.field_p, 50, uba.loadingQuipsShort[2]);
+          TextureCombineSource.loadTitleSprites(DateValidationSource.loadingQuipsShort[1], 40, this.field_h, (byte) 17);
+          TextBlockLayout.loadMenuBackgrounds((byte) -105, this.field_p, 50, DateValidationSource.loadingQuipsShort[2]);
           this.field_p = null;
-          KeySwitchComponent.loadFonts((byte) -86, uba.loadingQuipsShort[3], this.field_q, this.field_h, 60);
-          this.drawLoadingProgress(65, (byte) 47, uba.loadingQuipsShort[4]);
+          KeySwitchComponent.loadFonts((byte) -86, DateValidationSource.loadingQuipsShort[3], this.field_q, this.field_h, 60);
+          this.drawLoadingProgress(65, (byte) 47, DateValidationSource.loadingQuipsShort[4]);
           dqa.createTextureProvider(this.field_r, this.field_m, (byte) 55, this.field_h);
-          this.drawLoadingProgress(70, (byte) 47, uba.loadingQuipsShort[5]);
+          this.drawLoadingProgress(70, (byte) 47, DateValidationSource.loadingQuipsShort[5]);
           this.d(-10242);
-          this.drawLoadingProgress(75, (byte) 47, uba.loadingQuipsShort[6]);
+          this.drawLoadingProgress(75, (byte) 47, DateValidationSource.loadingQuipsShort[6]);
           this.field_r = null;
           this.field_m = null;
           this.field_h = null;
@@ -170,13 +170,13 @@ final class GameAssetLoader implements LoadingStage {
           return;
         }
         if (this.field_j != null) {
-          SwitchableIdAllocator.a(this.field_j, uba.loadingQuipsShort[7], 80, -79);
+          SwitchableIdAllocator.a(this.field_j, DateValidationSource.loadingQuipsShort[7], 80, -79);
           this.field_j = null;
           C2SActionPacket.resetFrameTiming(-33);
           return;
         }
         if (null != this.field_f) {
-          TileOperator.loadCharacterAnimations(this.field_f, uba.loadingQuipsShort[8], false, 90, this.field_g, this.field_a);
+          TileOperator.loadCharacterAnimations(this.field_f, DateValidationSource.loadingQuipsShort[8], false, 90, this.field_g, this.field_a);
           this.field_g = null;
           this.field_a = null;
           this.field_f = null;
@@ -202,7 +202,7 @@ final class GameAssetLoader implements LoadingStage {
           return;
         }
         if (baa.field_d == null) {
-          this.drawLoadingProgress(95, (byte) 47, uba.loadingQuipsShort[9]);
+          this.drawLoadingProgress(95, (byte) 47, DateValidationSource.loadingQuipsShort[9]);
           FleeLocomotor.createRendererOptions((byte) -33);
           baa.field_d = new ToolkitSelector(MatchPhase.field_l, rc.field_a);
         }
@@ -339,7 +339,7 @@ final class GameAssetLoader implements LoadingStage {
         hd.setFrameRate(50, param0 ^ -78);
         wm.field_a = null;
         SpriteTileOperator.field_t = (GameScreen) ((Object) LoginMethod.getMenuScreen(0, (byte) 50));
-        ima.setLoadingProgress(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);
+        ima.setLoadingProgress(100.0f, DateValidationSource.loadingQuipsShort[10], param0 ^ 115);
         CharacterChoiceTile.field_j.draw(param0 ^ -49);
         FadingDialog.field_C.makeTarget(-19216);
         if (param0 != -49) {

@@ -5,7 +5,7 @@ final class apa {
     static long field_a;
     static String field_b;
     private Sprite[] field_d;
-    static ada field_c;
+    static DateOfBirthPanel field_c;
 
     public static void releaseStatics(byte param0) {
         field_c = null;

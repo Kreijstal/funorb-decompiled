@@ -11,7 +11,7 @@ final class ColourKeyOperator extends TextureOperator {
 
     final static QuickChatParamType[] values(int param0) {
         int var1 = 23 % ((-4 - param0) / 36);
-        return new QuickChatParamType[]{MovingSawComponent.field_M, FuseBehaviour.field_v, RoomComponent.field_y, ll.field_d, DiskArchiveRequest.field_n, bi.field_d, OpenGlEnvironmentWaterEffect.field_g, wc.field_e, IntrusiveDeque.field_a, HslAdjustOperator.field_v, IntNode.field_f, GraphicsQuality.field_c, DoorwayModel.field_o, ModelData.field_H};
+        return new QuickChatParamType[]{MovingSawComponent.field_M, FuseBehaviour.field_v, RoomComponent.field_y, ll.field_d, DiskArchiveRequest.field_n, bi.field_d, OpenGlEnvironmentWaterEffect.field_g, NamedChatTarget.field_e, IntrusiveDeque.field_a, HslAdjustOperator.field_v, IntNode.field_f, GraphicsQuality.field_c, DoorwayModel.field_o, ModelData.field_H};
     }
 
     public ColourKeyOperator() {

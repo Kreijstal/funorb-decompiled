@@ -41,7 +41,7 @@ final class au extends aa {
             if (!SoftReferenceCache.field_a) {
               KeyItemComponent.e(true);
             } else {
-              pg.b(param0);
+              TermsLinksPanel.b(param0);
             }
             ObjectList.field_c = vb.field_i;
           }
@@ -64,10 +64,10 @@ final class au extends aa {
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
-        bna var12 = null;
+        PendingReply var12 = null;
         cga var13 = null;
         BitPacketBuffer var14 = null;
-        bna var15 = null;
+        PendingReply var15 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var14 = WeaveOperator.field_q;
@@ -82,7 +82,7 @@ final class au extends aa {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(99);
             }
-            var12 = (bna) (MovingWallComponent.field_N.first(-80));
+            var12 = (PendingReply) (MovingWallComponent.field_N.first(-80));
             if (var12 == null) {
               DropAnimation.closeGameSocket(60);
               return;
@@ -103,7 +103,7 @@ final class au extends aa {
                 ClipStack.reportClientError("A1: " + kk.formatPacketDump(32), (byte) 116, (Throwable) null);
                 DropAnimation.closeGameSocket(param0 ^ 63);
               } else {
-                var15 = (bna) (MovingWallComponent.field_N.first(-80));
+                var15 = (PendingReply) (MovingWallComponent.field_N.first(-80));
                 if (var15 == null) {
                   DropAnimation.closeGameSocket(60);
                   return;

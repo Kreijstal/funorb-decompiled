@@ -343,7 +343,7 @@ final class CollisionGrid {
         if (param0 != 32) {
           CollisionGrid.releaseStatics(-128);
         }
-        return wt.field_d == gsa.field_y ? true : false;
+        return wt.field_d == PlayerResultRow.field_y ? true : false;
     }
 
     private CollisionGrid(int param0, boolean param1, int param2) {

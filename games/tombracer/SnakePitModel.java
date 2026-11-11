@@ -33,7 +33,7 @@ final class SnakePitModel extends TrapModel {
             field_n = (byte[]) null;
           }
           var6 = param0.getFileId(true, param4, var5_int);
-          stackIn_3_0 = sv.loadAntialiasedFont(param1, var5_int, param0, 24876, var6);
+          stackIn_3_0 = MainMenuScreen.loadAntialiasedFont(param1, var5_int, param0, 24876, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

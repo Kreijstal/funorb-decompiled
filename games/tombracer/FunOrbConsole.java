@@ -570,7 +570,7 @@ final class FunOrbConsole extends ConsoleWindow {
               this.field_o.setSelection(var5Lifetime1, (byte) 72, var5Lifetime1);
             }
           }
-          gsa.field_w = ResultsPhase.highlightConsoleSyntax(this.field_o.getText((byte) -112), (byte) -110);
+          PlayerResultRow.field_w = ResultsPhase.highlightConsoleSyntax(this.field_o.getText((byte) -112), (byte) -110);
           if (param0 != -72) {
             this.methods = (ConsoleMethod[]) null;
           }
@@ -586,7 +586,7 @@ final class FunOrbConsole extends ConsoleWindow {
         String var2 = null;
         try {
           var2 = this.field_o.field_Cb.field_r;
-          this.field_o.field_Cb.field_r = gsa.field_w;
+          this.field_o.field_Cb.field_r = PlayerResultRow.field_w;
           super.drawOverlay(param0);
           this.field_o.field_Cb.field_r = var2;
         } catch (RuntimeException runtimeException) {

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends WidgetContainer implements HotspotListener, ButtonListener {
+final class TermsLinksPanel extends WidgetContainer implements HotspotListener, ButtonListener {
     private HotspotTextWidget field_z;
     static String field_A;
     static int field_y;
     static String field_x;
     private FocusableWidget field_B;
-    private rua field_w;
+    private AccountCreationDialog field_w;
     static int[] field_C;
 
     final static void b(boolean param0) {
@@ -108,7 +108,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
         }
     }
 
-    pg(rua param0) {
+    TermsLinksPanel(AccountCreationDialog param0) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
@@ -118,7 +118,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
         try {
           this.field_w = param0;
           this.field_B = new FocusableWidget(PlainScoringObserverFactory.field_d, (WidgetListener) null);
-          this.field_B.field_r = (WidgetPainter) ((Object) new td());
+          this.field_B.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
           var7 = LegacyOpenGlFlowingWaterEffect.formatText(108, SafeZoneBehaviour.field_q, new String[]{this.linkStart(-58), this.linkEnd(-35)});
           var3 = 20;
           var4 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);

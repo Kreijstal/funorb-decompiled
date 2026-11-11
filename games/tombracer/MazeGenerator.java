@@ -183,7 +183,7 @@ abstract class MazeGenerator {
         ImageProducerCanvasImageBuffer.field_m = null;
         int var1 = 85 % ((57 - param0) / 49);
         ck.field_c = (byte[][]) null;
-        pg.field_C = null;
+        TermsLinksPanel.field_C = null;
     }
 
     final static void setFillClip(int param0, boolean param1, int param2, int param3, int param4) {

@@ -134,15 +134,15 @@ final class Corpse extends IntrusiveNode implements Renderable {
         }
     }
 
-    final static hra validateEmailDomainLabel(String param0, int param1) {
+    final static ValidationOutcome validateEmailDomainLabel(String param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
         int var5 = 0;
-        hra stackIn_6_0 = null;
-        hra stackIn_10_0 = null;
-        hra stackIn_19_0 = null;
-        hra stackIn_22_0 = null;
+        ValidationOutcome stackIn_6_0 = null;
+        ValidationOutcome stackIn_10_0 = null;
+        ValidationOutcome stackIn_19_0 = null;
+        ValidationOutcome stackIn_22_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -155,7 +155,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
           }
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_6_0 = is.field_wb;
+            stackIn_6_0 = NameEntryPopup.field_wb;
             return stackIn_6_0;
           }
           if (var2_int > 63) {
@@ -171,7 +171,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
                 return stackIn_19_0;
               }
             } else {
-              if (gsa.field_s.indexOf(var4) == -1) {
+              if (PlayerResultRow.field_s.indexOf(var4) == -1) {
                 stackIn_22_0 = fb.field_c;
                 return stackIn_22_0;
               }

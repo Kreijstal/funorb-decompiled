@@ -24,14 +24,14 @@ final class AgeValidator extends TextFieldValidator {
         return var4Lifetime1;
     }
 
-    final it validateText(byte param0, String param1) {
+    final ValidationState validateText(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
         CharSequence var5 = null;
-        it stackIn_2_0 = null;
-        it stackIn_5_0 = null;
-        it stackIn_10_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -43,7 +43,7 @@ final class AgeValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (param0 != 14) {
-            stackIn_5_0 = (it) null;
+            stackIn_5_0 = (ValidationState) null;
             return stackIn_5_0;
           }
           var5 = (CharSequence) ((Object) param1);

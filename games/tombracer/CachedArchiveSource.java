@@ -16,7 +16,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private DiskCacheWorker field_i;
     static UiComponent field_d;
     private SectorCacheStore field_s;
-    private dla field_k;
+    private ArchiveIndex field_k;
     private int field_m;
     private boolean field_r;
     private IntrusiveDeque field_f;
@@ -267,7 +267,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    final dla getIndex(boolean param0) {
+    final ArchiveIndex getIndex(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -300,7 +300,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_k = new dla(var7, this.field_t, this.field_o);
+            this.field_k = new ArchiveIndex(var7, this.field_t, this.field_o);
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
@@ -321,7 +321,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_k = new dla(var7, this.field_t, this.field_o);
+            this.field_k = new ArchiveIndex(var7, this.field_t, this.field_o);
             if (this.field_k.field_a != this.field_e) {
               throw new RuntimeException();
             }

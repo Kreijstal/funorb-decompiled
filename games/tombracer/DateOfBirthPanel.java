@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ada extends ArrayWidgetGroup implements ButtonListener {
+final class DateOfBirthPanel extends ArrayWidgetGroup implements ButtonListener {
     static TextureTransformMode field_z;
     private DateFieldsWidget field_x;
     static int[] field_y;
@@ -38,13 +38,13 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
         BlendModeOperator.field_o.drawText(mca.field_d, this.field_i + (param0 + 4), 4 + (BlendModeOperator.field_o.field_w + (this.field_n + param1)), 16777215, -1);
     }
 
-    ada(int param0, int param1, int param2, int param3) {
+    DateOfBirthPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_x = new DateFieldsWidget(new hga(10000536), GraphicsToolkit.field_b, 0, 0, 140, 25);
-        this.field_x.setValidator((byte) 111, new uba());
+        this.field_x.setValidator((byte) 111, new DateValidationSource());
         this.field_B = new FocusableWidget(PlainScoringObserverFactory.field_d, (WidgetListener) (this));
         this.children = new UiWidget[]{(UiWidget) ((Object) this.field_x), (UiWidget) ((Object) this.field_B)};
-        this.field_B.field_r = (WidgetPainter) ((Object) new td());
+        this.field_B.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
         this.refreshLayout((byte) 127);
     }
 
@@ -59,7 +59,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
 
     final static int b(boolean param0) {
         if (param0) {
-          ada.releaseStatics(-7);
+          DateOfBirthPanel.releaseStatics(-7);
           return MatchScoringObserver.field_h;
         }
         return MatchScoringObserver.field_h;

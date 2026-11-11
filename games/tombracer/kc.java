@@ -52,7 +52,7 @@ final class kc {
         RuntimeException var4 = null;
         BitPacketBuffer var5 = null;
         int var6 = 0;
-        mu var7 = null;
+        ContactListEntry var7 = null;
         CharSequence var8 = null;
         boolean stackIn_3_0 = false;
         String stackIn_6_0 = null;

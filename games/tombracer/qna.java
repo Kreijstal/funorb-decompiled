@@ -212,7 +212,7 @@ final class qna {
             DefaultTileRenderable.field_g[1] = WeaveOperator.field_s;
             DefaultTileRenderable.field_g[0] = FleeLocomotor.field_B;
             SpriteTileOperator.field_w = new int[2];
-            DefaultTileRenderable.field_g[3] = mha.field_F;
+            DefaultTileRenderable.field_g[3] = ValidationStatusIcon.field_F;
             DefaultTileRenderable.field_g[4] = NativeSceneLight.field_p;
             CoinItemComponent.field_H[3] = 1;
             SpriteTileOperator.field_w[1] = 2;
@@ -273,7 +273,7 @@ final class qna {
               }
             }
           }
-          HardwareModelVertexStream.field_f = FacePointLocomotor.field_r.itemCount * (mha.field_C + GasVentModel.field_p << 1);
+          HardwareModelVertexStream.field_f = FacePointLocomotor.field_r.itemCount * (ValidationStatusIcon.field_C + GasVentModel.field_p << 1);
           FurnitureModel.field_o = ega.field_c - (var3_intLifetime1 >> 1);
           tia.field_a = var3_intLifetime1 + (ega.field_c - (var3_intLifetime1 >> 1));
           for (var4Lifetime2 = 0; var4Lifetime2 < DefaultTileRenderable.field_g.length; var4Lifetime2++) {
@@ -296,13 +296,13 @@ final class qna {
             var6Lifetime1 = CoinItemComponent.field_H[var4Lifetime3];
             if (0 <= var6Lifetime1) {
               var7Lifetime2 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, DefaultTileRenderable.field_g[var4Lifetime3], true);
-              var5Lifetime3 = var5Lifetime3 + mha.field_C;
+              var5Lifetime3 = var5Lifetime3 + ValidationStatusIcon.field_C;
               var8Lifetime1 = ega.field_c - (var7Lifetime2 >> 1);
               TripBeamComponent.field_K[var4Lifetime3] = new int[4];
               TripBeamComponent.field_K[var4Lifetime3][0] = -InvisibleTouchSwitchComponent.field_L + var8Lifetime1;
               TripBeamComponent.field_K[var4Lifetime3][1] = var5Lifetime3;
               TripBeamComponent.field_K[var4Lifetime3][2] = (InvisibleTouchSwitchComponent.field_L << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (nt.field_d + ((GasVentModel.field_p << 1) + mha.field_C));
+              var5Lifetime3 = var5Lifetime3 + (nt.field_d + ((GasVentModel.field_p << 1) + ValidationStatusIcon.field_C));
               TripBeamComponent.field_K[var4Lifetime3][3] = nt.field_d + (GasVentModel.field_p << 1);
             } else {
               var5Lifetime3 = var5Lifetime3 + ComponentTargetList.field_b;

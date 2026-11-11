@@ -51,8 +51,8 @@ final class cj implements WidgetPainter {
               for (var5_int = 0; var5_int < uca.field_d; var5_int++) {
                 WeaveOperator.field_q.payload[var5_int] = var4_ref_rha.field_g[var5_int];
               }
-              vua.field_B = hla.field_xb;
-              hla.field_xb = PlayerProfile.field_c;
+              vua.field_B = TitledScrollPanel.field_xb;
+              TitledScrollPanel.field_xb = PlayerProfile.field_c;
               PlayerProfile.field_c = MembersUpsellMenu.field_z;
               MembersUpsellMenu.field_z = var4_ref_rha.field_i;
               return true;
@@ -72,8 +72,8 @@ final class cj implements WidgetPainter {
               return false;
             }
             if (0 == WallCrusherComponent.field_H) {
-              vua.field_B = hla.field_xb;
-              hla.field_xb = PlayerProfile.field_c;
+              vua.field_B = TitledScrollPanel.field_xb;
+              TitledScrollPanel.field_xb = PlayerProfile.field_c;
               PlayerProfile.field_c = MembersUpsellMenu.field_z;
               MembersUpsellMenu.field_z = GameKeyHandler.field_b;
               GameKeyHandler.field_b = -1;

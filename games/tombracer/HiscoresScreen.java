@@ -23,7 +23,7 @@ final class HiscoresScreen extends DropInMenuScreen {
           this.update(false, true, 79);
         }
         if (param0 == 0) {
-          return fga.field_a;
+          return LevelSelectOverlay.field_a;
         }
         return super.getActionLabel(param0, (byte) 113);
     }

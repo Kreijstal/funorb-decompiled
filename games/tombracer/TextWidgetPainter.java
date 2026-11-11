@@ -201,7 +201,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             this.field_e.drawParagraph(this.getDisplayText(param5 ^ -12591, param2), this.textX(param2, param3, param4, -3), this.textY(param6, param1, param2, (byte) -128), var9_int, var10, param7, param0, this.field_l, this.field_a, this.field_f);
           }
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -310,7 +310,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var15 = stackIn_21_0;
               afa.field_c.fillRectangleAlpha(param1.field_j + (param2 + (param1.field_n + this.field_g + var13.field_d)), var13.field_b, this.field_d, this.field_d >>> 24, (byte) 118, -var14 + var15, this.textX(param1, var14, param3, -3));
             }
-            pfa.popRasterState(param0 ^ -2);
+            CourseMapWalker.popRasterState(param0 ^ -2);
             return;
           }
           return;
@@ -615,7 +615,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var12 = this.textTop(param1, param4, (byte) -44) + Math.min(this.contentWidth(2147483647, param4), Math.min(var8.field_b, var7 + 1 >= var14.field_c.length ? var8.field_b : var13.field_c[1 + var7].field_d));
             tga.intersectClip(-21953, param4.field_i + param3, param4.field_i + (param3 + param4.field_m), param1 + param4.field_n, param4.field_n + (param1 + param4.field_p));
             afa.field_c.drawLine(var11, this.field_k, 8947848, var10, var10, var12);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vpa.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

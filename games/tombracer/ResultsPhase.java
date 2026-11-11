@@ -3,7 +3,7 @@
  */
 final class ResultsPhase extends MatchPhase {
     private boolean field_o;
-    private gsa[] field_r;
+    private PlayerResultRow[] field_r;
     private boolean field_m;
     private boolean field_p;
     private boolean field_q;
@@ -26,7 +26,7 @@ final class ResultsPhase extends MatchPhase {
             var8.writeString(param4, false);
           }
           if (param1 != null) {
-            wq.writeHuffmanString(param1, var8, 0);
+            MovementHintPanel.writeHuffmanString(param1, var8, 0);
           } else {
             var8.writeShort(-1477662136, param5);
           }
@@ -180,7 +180,7 @@ final class ResultsPhase extends MatchPhase {
         int var12;
         int var13;
         int var14;
-        gsa var14_ref_gsa;
+        PlayerResultRow var14_ref_gsa;
         int var15;
         int var16;
         String var16_ref_String;
@@ -408,9 +408,9 @@ final class ResultsPhase extends MatchPhase {
           this.matchState.players[var8Lifetime3].getAnimator((byte) -42).drawPortrait(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
           MembersUpsellMenu.drawCentredTextWithShadow(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, TooltipRenderer.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
           if (!this.field_p &&
-            var7Lifetime2 >= var8Lifetime3 * 50 + efa.field_y &&
-            var7Lifetime2 < 50 + efa.field_y + this.matchState.playerCount * 50) {
-            stackIn_151_0 = (var8Lifetime3 * 50 + efa.field_y + 25 > var7Lifetime2) ? 0 : 1;
+            var7Lifetime2 >= var8Lifetime3 * 50 + DisplayNameForm.field_y &&
+            var7Lifetime2 < 50 + DisplayNameForm.field_y + this.matchState.playerCount * 50) {
+            stackIn_151_0 = (var8Lifetime3 * 50 + DisplayNameForm.field_y + 25 > var7Lifetime2) ? 0 : 1;
             var11Lifetime1Lifetime1 = stackIn_151_0;
             var39 = Integer.toString(this.field_r[var8Lifetime3].field_p);
             stackIn_153_0 = new StringBuilder().append("$");
@@ -660,13 +660,13 @@ final class ResultsPhase extends MatchPhase {
         double var9 = 0.0;
         double var11 = 0.0;
         double var13 = 0.0;
-        gsa var14 = null;
+        PlayerResultRow var14 = null;
         double var15 = 0.0;
         int var15_int = 0;
         int var16 = 0;
         int var17 = 0;
         double var18 = 0.0;
-        gsa var18_ref_gsa = null;
+        PlayerResultRow var18_ref_gsa = null;
         double var19 = 0.0;
         double var21 = 0.0;
         double var23 = 0.0;
@@ -674,17 +674,17 @@ final class ResultsPhase extends MatchPhase {
         double var27 = 0.0;
         double var29 = 0.0;
         double var31 = 0.0;
-        gsa var18_ref_gsaLifetime1;
-        gsa var18_ref_gsaLifetime2;
+        PlayerResultRow var18_ref_gsaLifetime1;
+        PlayerResultRow var18_ref_gsaLifetime2;
         int var17Lifetime1;
         int var17Lifetime2;
         double var21Lifetime1;
         double var21Lifetime2;
         try {
           var4_int = this.matchState.players.length;
-          this.field_r = new gsa[var4_int];
+          this.field_r = new PlayerResultRow[var4_int];
           for (var5_int = 0; var4_int > var5_int; var5_int++) {
-            this.field_r[var5_int] = new gsa(this.matchState.players[var5_int], param2[var5_int]);
+            this.field_r[var5_int] = new PlayerResultRow(this.matchState.players[var5_int], param2[var5_int]);
           }
           TripBeamComponent.playMusicTrack(1, 0);
           this.field_s = false;
@@ -750,7 +750,7 @@ final class ResultsPhase extends MatchPhase {
           if (!(0.0 < var7)) {
             this.field_p = true;
           } else {
-            efa.field_y = var17Lifetime2;
+            DisplayNameForm.field_y = var17Lifetime2;
             var17Lifetime2 = var4_int * 50 + (var17Lifetime2 + 50);
             SweeperMountComponent.field_H = var17Lifetime2;
             var17Lifetime2 += 100;

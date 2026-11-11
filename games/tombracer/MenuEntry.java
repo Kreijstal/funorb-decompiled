@@ -372,16 +372,16 @@ final class MenuEntry {
         this.field_c.snapToRest(31990);
     }
 
-    final static hra validateEmail(int param0, String param1) {
+    final static ValidationOutcome validateEmail(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
-        hra var5 = null;
+        ValidationOutcome var5 = null;
         int var6 = 0;
-        hra stackIn_4_0 = null;
-        hra stackIn_8_0 = null;
-        hra stackIn_12_0 = null;
+        ValidationOutcome stackIn_4_0 = null;
+        ValidationOutcome stackIn_8_0 = null;
+        ValidationOutcome stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -391,7 +391,7 @@ final class MenuEntry {
             0 != param1.length()) {
             var2_int = param1.indexOf('@');
             if (var2_int == -1) {
-              stackIn_8_0 = is.field_wb;
+              stackIn_8_0 = NameEntryPopup.field_wb;
               return stackIn_8_0;
             }
             var3 = param1.substring(0, var2_int);

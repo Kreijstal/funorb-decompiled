@@ -11,9 +11,9 @@ final class dsa {
         int var1 = uca.cosmeticRandom.nextBounded(6, 0);
         if (param0 > -11) {
           field_b = 76;
-          return it.playMenuSound(255, var1);
+          return ValidationState.playMenuSound(255, var1);
         }
-        return it.playMenuSound(255, var1);
+        return ValidationState.playMenuSound(255, var1);
     }
 
     public static void releaseStatics(byte param0) {

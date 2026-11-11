@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gsa {
+final class PlayerResultRow {
     boolean field_h;
     boolean field_l;
     int field_m;
@@ -39,10 +39,10 @@ final class gsa {
         double var7Lifetime2;
         var9 = TombRacer.field_G ? 1 : 0;
         var4 = -1;
-        if (efa.field_y <= param1 &&
+        if (DisplayNameForm.field_y <= param1 &&
           param1 < SweeperMountComponent.field_H) {
           if (!this.field_k &&
-            param1 >= efa.field_y + 50 * param2) {
+            param1 >= DisplayNameForm.field_y + 50 * param2) {
             if (this.field_v > 0) {
               var4 = 63;
             }
@@ -50,7 +50,7 @@ final class gsa {
             this.field_x = this.field_x + this.field_v;
           }
           if (!this.field_b &&
-            !(25 + (efa.field_y + param2 * 50) > param1)) {
+            !(25 + (DisplayNameForm.field_y + param2 * 50) > param1)) {
             if (this.field_u > 0 &&
               this.field_v == 0) {
               var4 = 63;
@@ -178,7 +178,7 @@ final class gsa {
         }
     }
 
-    gsa(Player param0, int[] param1) {
+    PlayerResultRow(Player param0, int[] param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

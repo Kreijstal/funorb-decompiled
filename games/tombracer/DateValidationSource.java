@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uba extends DebouncedValidationSource implements TextInputListener, DropdownListener {
+final class DateValidationSource extends DebouncedValidationSource implements TextInputListener, DropdownListener {
     static int field_f;
     DateInputWidget field_i;
     static String[] loadingQuipsShort;
@@ -50,7 +50,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
         loadingQuipsShort = null;
         field_h = null;
         if (param0 != -128) {
-          uba.releaseStatics((byte) -33);
+          DateValidationSource.releaseStatics((byte) -33);
         }
     }
 
@@ -66,15 +66,15 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
         }
     }
 
-    final it computeState(int param0) {
+    final ValidationState computeState(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        it stackIn_3_0 = null;
-        it stackIn_6_0 = null;
-        it stackIn_10_0 = null;
+        ValidationState stackIn_3_0 = null;
+        ValidationState stackIn_6_0 = null;
+        ValidationState stackIn_10_0 = null;
         Throwable decompiledCaughtException = null;
         try {
           var2_int = this.field_i.year(111);
@@ -112,7 +112,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
         }
     }
 
-    public uba() {
+    public DateValidationSource() {
     }
 
     public final void onEnterPressed(int param0, TextInputWidget param1) {

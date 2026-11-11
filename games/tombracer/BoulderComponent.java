@@ -13,12 +13,12 @@ final class BoulderComponent extends PathMoverComponent {
     }
 
     final static void b(int param0, int param1, boolean param2) {
-        mu var3 = null;
+        ContactListEntry var3 = null;
         PlayerContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        mu var3Lifetime1;
+        ContactListEntry var3Lifetime1;
         PlayerContextMenu var4Lifetime1;
         String var5_ref_StringLifetime1;
         PlayerContextMenu var4Lifetime2;

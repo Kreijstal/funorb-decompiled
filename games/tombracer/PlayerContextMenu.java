@@ -255,7 +255,7 @@ final class PlayerContextMenu {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        mu var5 = null;
+        ContactListEntry var5 = null;
         int var6 = 0;
         String var7 = null;
         try {

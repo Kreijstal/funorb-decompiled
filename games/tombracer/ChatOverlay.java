@@ -328,7 +328,7 @@ final class ChatOverlay {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", ToolkitSelector.getApplet(param2 + 43), new Object[]{sv.decodeBase37Name((byte) -38, QuickChatPhraseSource.field_g)});
+                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", ToolkitSelector.getApplet(param2 + 43), new Object[]{MainMenuScreen.decodeBase37Name((byte) -38, QuickChatPhraseSource.field_g)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

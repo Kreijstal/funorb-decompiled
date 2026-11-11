@@ -191,7 +191,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         if (param0 != -40) {
           field_v = -0.5121414661407471f;
         }
-        return (LobbyPlayerEntry) (tc.field_d.get(param0 ^ 88, param1));
+        return (LobbyPlayerEntry) (IdChatTarget.field_d.get(param0 ^ 88, param1));
     }
 
     private final boolean isAchievementListed(int param0, int param1) {
@@ -253,7 +253,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         var10 = this.drawWrappedText(var8, MatchStatistics.field_n, -6671872, 180, var4, eda.field_f, 128, var7Lifetime1, 15);
         var7Lifetime1 = var7Lifetime1 + (5 + 15 * var10);
         if (!this.isAchievementEarned(false, var6)) {
-          TooltipRenderer.field_p.drawLeft(var7Lifetime1, false, pg.field_x, var4, -6671872, -1);
+          TooltipRenderer.field_p.drawLeft(var7Lifetime1, false, TermsLinksPanel.field_x, var4, -6671872, -1);
         } else {
           TooltipRenderer.field_p.drawLeft(var7Lifetime1, false, MessageOverlay.field_p, var4, -14671840, -1);
         }
@@ -331,7 +331,7 @@ final class AchievementsScreen extends DropInMenuScreen {
           field_u = (boolean[]) null;
         }
         if (0 == param0) {
-          return fga.field_a;
+          return LevelSelectOverlay.field_a;
         }
         return super.getActionLabel(param0, (byte) 121);
     }

@@ -18,7 +18,7 @@ final class HardwareGraphicsHeap extends GraphicsHeap {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        rua.field_gb.setBounds(param0, param5, param3 ^ -23751, param6, param1);
+        AccountCreationDialog.field_gb.setBounds(param0, param5, param3 ^ -23751, param6, param1);
         if (ItemModel.field_n != null) {
           ItemModel.field_n.layoutMenu(param4, -MenuScreen.field_j + param2, -3269, param5, param5, param2);
         }

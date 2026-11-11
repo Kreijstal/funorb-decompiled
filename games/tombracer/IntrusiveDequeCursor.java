@@ -131,7 +131,7 @@ final class IntrusiveDequeCursor {
             stackIn_3_0 = sda.field_g;
             return stackIn_3_0;
           }
-          var2 = (ClipStackEntry) (hla.field_ub.get((byte) -96, (long)param1.field_a));
+          var2 = (ClipStackEntry) (TitledScrollPanel.field_ub.get((byte) -96, (long)param1.field_a));
           if (var2 != null &&
             var2.field_g == param1) {
             var3 = var2.field_j;
@@ -140,7 +140,7 @@ final class IntrusiveDequeCursor {
               var2.unlink(68);
             }
             var3 = new ClipStack(param1);
-            hla.field_ub.put((long)param1.field_a, 109, new ClipStackEntry(param1, var3));
+            TitledScrollPanel.field_ub.put((long)param1.field_a, 109, new ClipStackEntry(param1, var3));
           }
           if (param0 != 65) {
             var4 = (GraphicsToolkit) null;

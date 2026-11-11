@@ -121,7 +121,7 @@ abstract class FadingDialog extends WidgetContainer {
           SoftwareRasterizer.clear();
           this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
-          pfa.popRasterState(param2 ^ 1);
+          CourseMapWalker.popRasterState(param2 ^ 1);
           fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
         }
@@ -131,7 +131,7 @@ abstract class FadingDialog extends WidgetContainer {
           SoftwareRasterizer.clear();
           this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
-          pfa.popRasterState(param2 ^ 1);
+          CourseMapWalker.popRasterState(param2 ^ 1);
           fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
         }
@@ -140,7 +140,7 @@ abstract class FadingDialog extends WidgetContainer {
           SoftwareRasterizer.clear();
           this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
-          pfa.popRasterState(param2 ^ 1);
+          CourseMapWalker.popRasterState(param2 ^ 1);
           fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
         }
@@ -149,7 +149,7 @@ abstract class FadingDialog extends WidgetContainer {
         SoftwareRasterizer.clear();
         this.drawDialogFrame(0, (byte) -67, 0);
         super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
-        pfa.popRasterState(param2 ^ 1);
+        CourseMapWalker.popRasterState(param2 ^ 1);
         fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
     }
 

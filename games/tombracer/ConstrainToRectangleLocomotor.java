@@ -278,7 +278,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           var17 = var16;
           var17.position = -2 + param1.length;
           fa.field_b = var17.readUnsignedShort(123);
-          pg.field_C = new int[fa.field_b];
+          TermsLinksPanel.field_C = new int[fa.field_b];
           ck.field_c = new byte[fa.field_b][];
           LoadLevelCommand.field_p = new int[fa.field_b];
           ImageProducerCanvasImageBuffer.field_m = new int[fa.field_b];
@@ -293,7 +293,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             LoadLevelCommand.field_p[var4] = var16.readUnsignedShort(121);
           }
           for (var4Lifetime1 = param0; var4Lifetime1 < fa.field_b; var4Lifetime1++) {
-            pg.field_C[var4Lifetime1] = var17.readUnsignedShort(127);
+            TermsLinksPanel.field_C[var4Lifetime1] = var17.readUnsignedShort(127);
           }
           for (var4Lifetime2 = 0; fa.field_b > var4Lifetime2; var4Lifetime2++) {
             mq.field_b[var4Lifetime2] = var17.readUnsignedShort(TextLineLayout.bitwiseXor(param0, 122));

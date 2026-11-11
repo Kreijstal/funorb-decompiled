@@ -216,8 +216,8 @@ class WidgetContainer extends UiWidget implements WidgetParent {
     final static ChatTarget createChatTarget(String param0, int param1, String param2, boolean param3, long param4) {
         RuntimeException var6 = null;
         hda stackIn_6_0 = null;
-        wc stackIn_8_0 = null;
-        tc stackIn_10_0 = null;
+        NamedChatTarget stackIn_8_0 = null;
+        IdChatTarget stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -227,14 +227,14 @@ class WidgetContainer extends UiWidget implements WidgetParent {
         try {
           if (param4 == (long)param1 &&
             param2 != null) {
-            stackIn_8_0 = new wc(param2, param0);
+            stackIn_8_0 = new NamedChatTarget(param2, param0);
             return (ChatTarget) ((Object) stackIn_8_0);
           }
           if (param3) {
             stackIn_6_0 = new hda(param4, param0);
             return (ChatTarget) ((Object) stackIn_6_0);
           }
-          stackIn_10_0 = new tc(param4, param0);
+          stackIn_10_0 = new IdChatTarget(param4, param0);
           return (ChatTarget) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

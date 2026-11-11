@@ -7,7 +7,7 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
     private TextInputWidget field_i;
     static int field_f;
 
-    abstract it validateText(byte param0, String param1);
+    abstract ValidationState validateText(byte param0, String param1);
 
     abstract String validationMessageForText(int param0, String param1);
 
@@ -66,7 +66,7 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
         }
     }
 
-    final it computeState(int param0) {
+    final ValidationState computeState(int param0) {
         if (param0 == -1891) {
           return this.validateText((byte) 14, this.field_i.field_o);
         }

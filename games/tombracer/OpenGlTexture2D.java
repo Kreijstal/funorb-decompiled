@@ -133,7 +133,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         OpenGlEnvironmentWaterEffect.field_d = null;
         ContextMenuRow.field_wb = null;
         GridWidgetContainer.field_y = null;
-        bm.field_f = null;
+        TextHotspot.field_f = null;
         IntrusiveDeque.field_c = null;
         TripBeamBehaviour.field_y = null;
         Room.field_j = null;

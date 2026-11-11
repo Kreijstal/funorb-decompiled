@@ -80,7 +80,7 @@ final class SimpleActionBehaviour extends Behaviour {
         field_n = null;
     }
 
-    final static hra validateEmailDomain(int param0, String param1) {
+    final static ValidationOutcome validateEmailDomain(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -88,13 +88,13 @@ final class SimpleActionBehaviour extends Behaviour {
         int var5 = 0;
         String var6_ref_String = null;
         int var6 = 0;
-        hra var7 = null;
+        ValidationOutcome var7 = null;
         int var8 = 0;
-        hra stackIn_4_0 = null;
-        hra stackIn_8_0 = null;
-        hra stackIn_12_0 = null;
-        hra stackIn_17_0 = null;
-        hra stackIn_20_0 = null;
+        ValidationOutcome stackIn_4_0 = null;
+        ValidationOutcome stackIn_8_0 = null;
+        ValidationOutcome stackIn_12_0 = null;
+        ValidationOutcome stackIn_17_0 = null;
+        ValidationOutcome stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -103,7 +103,7 @@ final class SimpleActionBehaviour extends Behaviour {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = is.field_wb;
+            stackIn_4_0 = NameEntryPopup.field_wb;
             return stackIn_4_0;
           }
           if (255 < var2_int) {
@@ -112,7 +112,7 @@ final class SimpleActionBehaviour extends Behaviour {
           }
           var3 = rga.splitPreservingEmptyParts(32287, param1, '.');
           if (var3.length < 2) {
-            stackIn_12_0 = is.field_wb;
+            stackIn_12_0 = NameEntryPopup.field_wb;
             return stackIn_12_0;
           }
           var4 = var3;

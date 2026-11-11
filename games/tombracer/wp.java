@@ -14,16 +14,16 @@ final class wp {
         }
     }
 
-    final static mu findFriendByName(int param0, String param1) {
+    final static ContactListEntry findFriendByName(int param0, String param1) {
         String var2 = null;
-        mu var3 = null;
+        ContactListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         Object stackIn_10_0 = null;
-        mu stackIn_13_0 = null;
-        mu stackIn_19_0 = null;
+        ContactListEntry stackIn_13_0 = null;
+        ContactListEntry stackIn_19_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -44,13 +44,13 @@ final class wp {
           var2 = OpenGlTexture3D.normalizeDisplayName(1, var6);
           if (var2 == null) {
             stackIn_10_0 = null;
-            return (mu) (stackIn_10_0);
+            return (ContactListEntry) (stackIn_10_0);
           }
           if (param0 <= 85) {
-            stackIn_13_0 = (mu) null;
+            stackIn_13_0 = (ContactListEntry) null;
             return stackIn_13_0;
           }
-          var3 = (mu) (TrackPlayerLocomotor.field_s.get(-128, (long)var2.hashCode()));
+          var3 = (ContactListEntry) (TrackPlayerLocomotor.field_s.get(-128, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;
@@ -58,7 +58,7 @@ final class wp {
             var7 = (CharSequence) ((Object) var3.field_tb);
             var4 = OpenGlTexture3D.normalizeDisplayName(1, var7);
             if (!var4.equals(var2)) {
-              var3 = (mu) (TrackPlayerLocomotor.field_s.nextWithSameKey((byte) 47));
+              var3 = (ContactListEntry) (TrackPlayerLocomotor.field_s.nextWithSameKey((byte) 47));
               continue;
             }
             break;

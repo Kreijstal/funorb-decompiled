@@ -362,7 +362,7 @@ final class TextureCombineOperation {
           }
           bw.field_a.makeRasterTarget();
           var1.drawHalfSize(0, 0);
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ica.B(" + param0 + ')');
         }

@@ -248,7 +248,7 @@ final class CircleMovementLocomotor extends Locomotor {
           }
           DemoCourseGenerator.field_g = param0.field_J;
           DemoCourseGenerator.field_g.clear(8);
-          tc.field_d = new SecondaryNodeHashTable(param1);
+          IdChatTarget.field_d = new SecondaryNodeHashTable(param1);
           qsa.field_a = param9;
           TileRenderable.field_d = 0L;
           return;

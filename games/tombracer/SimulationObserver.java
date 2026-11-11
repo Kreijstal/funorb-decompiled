@@ -91,7 +91,7 @@ abstract class SimulationObserver {
     }
 
     final static void composeAgreementText(byte param0) {
-        TombRacerShell.field_B = FleeLocomotor.field_B + " <b>" + WeaveOperator.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + NativeSceneLight.field_p + "<br>" + "<br>" + StatReportingScoringObserver.field_k;
+        TombRacerShell.field_B = FleeLocomotor.field_B + " <b>" + WeaveOperator.field_s + "</b> " + cq.field_c + " <b>" + ValidationStatusIcon.field_F + "</b> " + NativeSceneLight.field_p + "<br>" + "<br>" + StatReportingScoringObserver.field_k;
         if (param0 != -27) {
           BeamSegment var2 = (BeamSegment) null;
           SimulationObserver.clipBeamToBox(-114, -20, 86, 69, (BeamSegment) null, -36, 11);

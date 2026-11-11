@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hda extends tc {
+final class hda extends IdChatTarget {
     static String field_h;
 
     final ChatChannelType getChannelType(byte param0) {

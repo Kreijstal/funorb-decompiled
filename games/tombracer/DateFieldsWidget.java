@@ -163,7 +163,7 @@ final class DateFieldsWidget extends DateInputWidget {
         return true;
     }
 
-    final void setValidator(byte param0, uba param1) {
+    final void setValidator(byte param0, DateValidationSource param1) {
         try {
           super.setValidator((byte) -95, param1);
           this.field_B.field_h = (WidgetListener) ((Object) param1);

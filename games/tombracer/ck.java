@@ -94,7 +94,7 @@ final class ck {
           DebouncedValidationSource.field_e = param4;
           no.field_o = param8;
           eca.field_b = param1;
-          efa.field_w = param13;
+          DisplayNameForm.field_w = param13;
           SafeZoneBehaviour.field_u = param14;
           RasterizerOperator.field_m = param5;
           SoundEventPlayer.field_f = BoulderComponent.loadSpritesByName(param10, "lobby", 5, "gameprivacy");
@@ -258,13 +258,13 @@ final class ck {
                 var18 = stackIn_71_0;
                 while (var18 < (SnakePitModel.field_n[var17_int] & 255)) {
                   stackIn_78_0 = null;
-                  if (stackIn_78_0 == efa.field_w) {
+                  if (stackIn_78_0 == DisplayNameForm.field_w) {
                     stackIn_61_0 = null;
                   } else {
-                    if (null == efa.field_w[var17_int]) {
+                    if (null == DisplayNameForm.field_w[var17_int]) {
                       stackIn_61_0 = null;
                     } else {
-                      stackIn_61_0 = efa.field_w[var17_int][var18];
+                      stackIn_61_0 = DisplayNameForm.field_w[var17_int][var18];
                     }
                   }
                   var19_ref_iu = stackIn_61_0;
@@ -469,7 +469,7 @@ final class ck {
           var5_int = CauldronComponent.bitLength((byte) 93, 3 * (param4 - param0));
           var6 = 3 * param0;
           var7 = -10 + var5_int;
-          td.clearFaceDepthBuckets((byte) -62);
+          DialogButtonPainter.clearFaceDepthBuckets((byte) -62);
           if (param2.field_K > 0 &&
             param2.field_q != null) {
             ClipStack.clearMeshDepthBucketCounts(0);

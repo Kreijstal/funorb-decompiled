@@ -108,7 +108,7 @@ abstract class GraphicsToolkit {
             return stackIn_10_0;
           }
           if (5 == param3) {
-            stackIn_13_0 = rua.initOpenGlToolkit(true, param0, param2, param6, param5);
+            stackIn_13_0 = AccountCreationDialog.initOpenGlToolkit(true, param0, param2, param6, param5);
             return stackIn_13_0;
           }
           if (param3 == 3) {

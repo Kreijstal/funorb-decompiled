@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class it {
+final class ValidationState {
     static TextureFormat field_b;
     static float field_a;
 

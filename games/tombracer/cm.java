@@ -207,7 +207,7 @@ final class cm implements GamePacket {
             }
             if (SoftwareRenderTarget.field_b[0][2].field_pb) {
               if (ComponentMount.isLocalPlayerHost(8192)) {
-                ArchiveNetworkClient.field_b = jsa.field_y;
+                ArchiveNetworkClient.field_b = FormFieldRow.field_y;
               } else {
                 ArchiveNetworkClient.field_b = LegacyOpenGlFlowingWaterEffect.formatText(101, EffectEvent.field_i, new String[]{C2SChooseRewardPacket.field_a.field_tb});
               }
@@ -405,9 +405,9 @@ final class cm implements GamePacket {
                   }
                 }
                 if (param3) {
-                  if (pfa.field_b != null) {
-                    if (pfa.field_b[var7] != null) {
-                      stackIn_205_0 = (!pfa.field_b[var7][var9]) ? 0 : 1;
+                  if (CourseMapWalker.field_b != null) {
+                    if (CourseMapWalker.field_b[var7] != null) {
+                      stackIn_205_0 = (!CourseMapWalker.field_b[var7][var9]) ? 0 : 1;
                     } else {
                       stackIn_205_0 = 0;
                     }

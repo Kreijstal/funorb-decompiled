@@ -112,7 +112,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final static mu a(boolean param0, int param1, int param2) {
+    final static ContactListEntry a(boolean param0, int param1, int param2) {
         ScrollPanel stackIn_7_0;
         int stackIn_7_1;
         boolean stackIn_7_2;
@@ -132,7 +132,7 @@ final class IntrusiveDeque {
         IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
-        mu var7 = null;
+        ContactListEntry var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -164,7 +164,7 @@ final class IntrusiveDeque {
           var4 = TextureCoordinateGeneration.field_b.field_tb.field_J;
           var5 = null;
           if (UiWidget.field_g != 2) {
-            is.field_yb.field_r = PlayerSimulation.field_n;
+            NameEntryPopup.field_yb.field_r = PlayerSimulation.field_n;
             dqa.field_e.field_X = false;
             if (UiWidget.field_g != 1) {
               TextureCoordinateGeneration.field_b.field_vb.field_vb.field_r = LoginMethod.field_c;
@@ -179,10 +179,10 @@ final class IntrusiveDeque {
           }
           if (decompiledFrameRemainder1) {
             dqa.field_e.field_X = true;
-            is.field_yb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(99, uba.field_h, new String[]{ol.field_b});
+            NameEntryPopup.field_yb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(99, DateValidationSource.field_h, new String[]{ol.field_b});
             TextureCoordinateGeneration.field_b.field_vb.field_vb.field_r = null;
             var6 = null;
-            var7 = (mu) (var4.first(-80));
+            var7 = (ContactListEntry) (var4.first(-80));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var7 != null) {
@@ -286,13 +286,13 @@ final class IntrusiveDeque {
                   } else {
                     ArchiveNetworkClient.field_b = var7.field_vb;
                   }
-                  var7 = (mu) (var4.next(111));
+                  var7 = (ContactListEntry) (var4.next(111));
                   continue;
                 }
               } else {
                 decompiledFrameRemainder0 = (TextureCoordinateGeneration.field_b.field_yb.field_y != 0);
                 if (decompiledFrameRemainder0) {
-                  bl.field_a = new is(TextureCoordinateGeneration.field_b.field_yb.field_q, TextureCoordinateGeneration.field_b.field_yb.field_A, TextureCoordinateGeneration.field_b.field_yb.field_G, TextureCoordinateGeneration.field_b.field_yb.field_t, QuickChatPhraseSource.field_c, lw.field_a, Corpse.field_i, Corpse.field_i);
+                  bl.field_a = new NameEntryPopup(TextureCoordinateGeneration.field_b.field_yb.field_q, TextureCoordinateGeneration.field_b.field_yb.field_A, TextureCoordinateGeneration.field_b.field_yb.field_G, TextureCoordinateGeneration.field_b.field_yb.field_t, QuickChatPhraseSource.field_c, lw.field_a, Corpse.field_i, Corpse.field_i);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -301,13 +301,13 @@ final class IntrusiveDeque {
               if (0 == TextureCoordinateGeneration.field_b.field_wb.field_y) {
                 break;
               }
-              bl.field_a = new is(TextureCoordinateGeneration.field_b.field_wb.field_q, TextureCoordinateGeneration.field_b.field_wb.field_A, TextureCoordinateGeneration.field_b.field_wb.field_G, TextureCoordinateGeneration.field_b.field_wb.field_t, PathMoveLocomotor.field_q, lw.field_a, Corpse.field_i, Corpse.field_i);
+              bl.field_a = new NameEntryPopup(TextureCoordinateGeneration.field_b.field_wb.field_q, TextureCoordinateGeneration.field_b.field_wb.field_A, TextureCoordinateGeneration.field_b.field_wb.field_G, TextureCoordinateGeneration.field_b.field_wb.field_t, PathMoveLocomotor.field_q, lw.field_a, Corpse.field_i, Corpse.field_i);
               ResourceArchive.field_k = 1;
               break;
             }
           }
           stackIn_107_0 = var5;
-          return (mu) (stackIn_107_0);
+          return (ContactListEntry) (stackIn_107_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

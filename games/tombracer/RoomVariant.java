@@ -6,7 +6,7 @@ final class RoomVariant {
     static int[] field_c;
     private int field_b;
     private IntrusiveDeque field_e;
-    static fga field_d;
+    static LevelSelectOverlay field_d;
 
     final int getIndex(boolean param0) {
         if (param0) {

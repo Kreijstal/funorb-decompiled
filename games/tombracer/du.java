@@ -18,7 +18,7 @@ final class du {
         var4 = TombRacer.field_G ? 1 : 0;
         S2CProfileUpdatePacket.field_c = null;
         var2 = -112 / ((param1 - 76) / 38);
-        jia.field_a = null;
+        SneakHintPanel.field_a = null;
         ColourKeyOperator.field_m = 0;
         var3 = field_d;
         field_d = MenuInputState.field_d;

@@ -43,7 +43,7 @@ final class ooa extends wka {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param2 <= -42) {
-          return (((param1 & 8192) != 0 ? true : false) | SequencePlayer.hasMask24OrAll544(param0, -57, param1) | wq.hasFlag65536(param0, param1, 8000)) & ScoreSubmission.a(param0, param1, (byte) 17);
+          return (((param1 & 8192) != 0 ? true : false) | SequencePlayer.hasMask24OrAll544(param0, -57, param1) | MovementHintPanel.hasFlag65536(param0, param1, 8000)) & ScoreSubmission.a(param0, param1, (byte) 17);
         }
         return true;
     }

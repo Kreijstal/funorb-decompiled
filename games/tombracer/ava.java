@@ -234,7 +234,7 @@ final class ava {
                   if (var12.field_Fb) {
                     var12.field_Nb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(105, uaa.field_c, new String[]{var20});
                     var12.field_Kb.field_r = r.field_l;
-                    var12.field_Cb.field_r = sv.field_q;
+                    var12.field_Cb.field_r = MainMenuScreen.field_q;
                   } else {
                     var12.field_Kb.field_r = FallbackShaderEffect.field_e;
                   }
@@ -379,7 +379,7 @@ final class ava {
                     if (1 == var25_int) {
                       var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.formatText(115, FlagSet.field_d, new String[]{var20});
                     }
-                    var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.formatText(97, td.field_q, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = LegacyOpenGlFlowingWaterEffect.formatText(97, DialogButtonPainter.field_q, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               }

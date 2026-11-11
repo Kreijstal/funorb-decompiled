@@ -43,15 +43,15 @@ final class VertexAttribute {
         UiComponent var7 = null;
         try {
           ConsoleValue.field_e = MaskBlendOperator.loadSpriteByName(param0, "basic", "display_name_changed", 121);
-          TextureCoordinateGeneration.field_b = new hla(0L, LegacyOpenGlWaterTextures.field_d, GraphicsQuality.field_a, ai.field_d);
-          OpenGlSprite.field_j = new hla(0L, LegacyOpenGlWaterTextures.field_d, ParticleEffects.field_a, uma.field_a);
+          TextureCoordinateGeneration.field_b = new TitledScrollPanel(0L, LegacyOpenGlWaterTextures.field_d, GraphicsQuality.field_a, ai.field_d);
+          OpenGlSprite.field_j = new TitledScrollPanel(0L, LegacyOpenGlWaterTextures.field_d, ParticleEffects.field_a, uma.field_a);
           dqa.field_e = new UiComponent(0L, (UiComponent) null);
-          is.field_yb = new UiComponent(0L, Corpse.field_i);
-          is.field_yb.field_z = 1;
+          NameEntryPopup.field_yb = new UiComponent(0L, Corpse.field_i);
+          NameEntryPopup.field_yb.field_z = 1;
           MatchScreen.field_F = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
           Puddle.field_v = new UiComponent(0L, SecondaryNodeDeque.field_b, C2SChooseCharacterPacket.field_c);
           SoftwareDepthBuffer.field_c = new UiComponent(0L, PressureSwitchBehaviour.field_p);
-          dqa.field_e.addChild(-122, is.field_yb);
+          dqa.field_e.addChild(-122, NameEntryPopup.field_yb);
           dqa.field_e.addChild(-126, MatchScreen.field_F);
           if (!param1) {
             var4 = (ResourceArchive) null;

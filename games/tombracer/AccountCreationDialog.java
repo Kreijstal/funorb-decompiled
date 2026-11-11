@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rua extends MessageDialog implements ButtonListener {
+final class AccountCreationDialog extends MessageDialog implements ButtonListener {
     static String field_jb;
     static String field_hb;
     static UiComponent field_gb;
@@ -26,7 +26,7 @@ final class rua extends MessageDialog implements ButtonListener {
         }
     }
 
-    rua(DialogStack param0, AccountRegistrationPanel param1) {
+    AccountCreationDialog(DialogStack param0, AccountRegistrationPanel param1) {
         super(param0, TextureFormat.field_c, dsa.field_d, false, false);
         try {
           this.field_fb = param1;
@@ -128,7 +128,7 @@ final class rua extends MessageDialog implements ButtonListener {
           }
           if (param2.field_e) {
             if (param2.field_a) {
-              this.transitionToContent(param0 ^ 86, new pg(this));
+              this.transitionToContent(param0 ^ 86, new TermsLinksPanel(this));
               return;
             }
             var5.appendButton(PlainScoringObserverFactory.field_d, (byte) -102, (WidgetListener) (this));

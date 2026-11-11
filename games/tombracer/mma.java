@@ -4,7 +4,7 @@
 final class mma {
     static wm field_c;
     static int field_a;
-    static hra field_d;
+    static ValidationOutcome field_d;
     static ToolkitModel[] field_b;
 
     public static void releaseStatics(int param0) {
@@ -27,6 +27,6 @@ final class mma {
 
     static {
         field_c = new wm();
-        field_d = new hra();
+        field_d = new ValidationOutcome();
     }
 }

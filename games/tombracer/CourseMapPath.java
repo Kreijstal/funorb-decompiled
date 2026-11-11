@@ -54,7 +54,7 @@ final class CourseMapPath extends IntrusiveNode {
         return -1 != this.field_j ? true : false;
     }
 
-    final boolean a(pfa param0, int param1, byte param2) {
+    final boolean a(CourseMapWalker param0, int param1, byte param2) {
         int stackIn_11_0 = 0;
         int[] stackIn_13_0 = null;
         int stackIn_14_1 = 0;
@@ -195,7 +195,7 @@ final class CourseMapPath extends IntrusiveNode {
         field_l = null;
     }
 
-    private final boolean a(byte param0, pfa param1) {
+    private final boolean a(byte param0, CourseMapWalker param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

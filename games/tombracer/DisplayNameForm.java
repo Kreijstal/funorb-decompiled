@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class efa extends WidgetContainer implements SuggestionsHost, ButtonListener {
+final class DisplayNameForm extends WidgetContainer implements SuggestionsHost, ButtonListener {
     private ValidatedTextInputWidget field_z;
     static Sprite[][] field_w;
     static int field_y;
@@ -12,7 +12,7 @@ final class efa extends WidgetContainer implements SuggestionsHost, ButtonListen
     private final boolean isFieldValid(int param0, ValidationProvider param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        it var4 = null;
+        ValidationState var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -105,7 +105,7 @@ final class efa extends WidgetContainer implements SuggestionsHost, ButtonListen
         }
     }
 
-    public efa() {
+    public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_z = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(BlendModeOperator.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
@@ -115,7 +115,7 @@ final class efa extends WidgetContainer implements SuggestionsHost, ButtonListen
         this.field_z.field_q = rma.field_a;
         this.field_z.setValidationSource(-13861, new NameFieldValidator(this.field_z));
         this.field_A.field_y = false;
-        this.field_A.field_r = (WidgetPainter) ((Object) new td());
+        this.field_A.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
         this.field_B.field_r = (WidgetPainter) ((Object) new kaa());
         this.field_z.field_r = (WidgetPainter) ((Object) new hga(10000536));
         int var3 = 20;
@@ -144,7 +144,7 @@ final class efa extends WidgetContainer implements SuggestionsHost, ButtonListen
           var3 = this.field_z;
           var4 = param0;
           if (param1 < 18) {
-            efa.releaseStatics(false);
+            DisplayNameForm.releaseStatics(false);
           }
           ((TextInputWidget) ((Object) var3)).setText(false, -16719, var4);
         } catch (RuntimeException runtimeException) {
@@ -253,7 +253,7 @@ final class efa extends WidgetContainer implements SuggestionsHost, ButtonListen
     private final int addLabeledValidationMessageRow(int param0, UiWidget param1, int param2, String param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
-        jsa var10 = null;
+        FormFieldRow var10 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -264,7 +264,7 @@ final class efa extends WidgetContainer implements SuggestionsHost, ButtonListen
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new jsa(20, param0, 120 + param2, 25, param1, false, 120, param6, KeySwitchComponent.field_J, 16777215, param3);
+          var10 = new FormFieldRow(20, param0, 120 + param2, 25, param1, false, 120, param6, KeySwitchComponent.field_J, 16777215, param3);
           this.addChild(var10, -1);
           var9 = new ValidationMessageWidget(((ValidationProvider) ((Object) param1)).getValidationSource((byte) 124), param4, 126, param0 + var10.field_p, param2 + 25, param5);
           var9.field_h = (WidgetListener) (this);

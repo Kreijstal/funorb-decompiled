@@ -576,7 +576,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param1, param0);
-          var4.field_r = (WidgetPainter) ((Object) new td());
+          var4.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
           var5 = -46 + this.field_p;
           if (param2 != 30815) {
             stackIn_2_0 = (FocusableWidget) null;

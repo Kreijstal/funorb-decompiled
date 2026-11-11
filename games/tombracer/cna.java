@@ -7,8 +7,8 @@ final class cna {
     static int[] field_c;
     static String[] field_b;
 
-    final static bna newPendingRequest(int param0, int param1) {
-        bna var2 = new bna();
+    final static PendingReply newPendingRequest(int param0, int param1) {
+        PendingReply var2 = new PendingReply();
         MovingWallComponent.field_N.addLast((byte) -109, var2);
         TouchSwitchBehaviour.b(param0, param1 - 228);
         if (param1 == 128) {

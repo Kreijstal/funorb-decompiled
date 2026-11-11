@@ -90,7 +90,7 @@ final class ProgressBarWidget extends UiWidget {
             SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
-        pfa.popRasterState(1);
+        CourseMapWalker.popRasterState(1);
         return var3;
     }
 
@@ -119,7 +119,7 @@ final class ProgressBarWidget extends UiWidget {
         if (this.field_B < 65536) {
           tga.intersectClip(-21953, (this.field_B * this.field_m >> 16) + var5, this.field_m + var5, var6, var6 + this.field_p);
           this.drawRoundedStripes(var6, this.field_w[1], var5, 115);
-          pfa.popRasterState(param2 + 1);
+          CourseMapWalker.popRasterState(param2 + 1);
         }
     }
 
@@ -176,7 +176,7 @@ final class ProgressBarWidget extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(this.field_u + var8, var7, this.field_u, var13Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(var8 - this.field_u, var7, this.field_u, var13Lifetime1);
         }
-        pfa.popRasterState(1);
+        CourseMapWalker.popRasterState(1);
         return var5;
     }
 
@@ -200,13 +200,13 @@ final class ProgressBarWidget extends UiWidget {
           for (var6 = param2 - this.field_y; var5_int > var6; var6 = var6 + param1.field_m) {
             param1.drawTransparent(var6, param0);
           }
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           if (SoftwareRasterizer.clipLeft <= this.field_A.field_m + param2) {
             OpenGlIndexArray.setRasterTarget(this.field_E, (byte) 116);
             param1.drawTransparent(-this.field_y, 0);
             param1.drawTransparent(2 * this.field_u - this.field_y, 0);
             this.field_z.drawMultiply(0, 0);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             this.field_E.drawTransparent(param2, param0);
           }
           if (SoftwareRasterizer.clipRight >= -this.field_A.field_m + var5_int) {
@@ -216,7 +216,7 @@ final class ProgressBarWidget extends UiWidget {
             param1.drawTransparent(-var7, 0);
             param1.drawTransparent(-var7 + this.field_u * 2, 0);
             this.field_A.drawMultiply(0, 0);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             this.field_E.drawTransparent(-this.field_A.field_m + var5_int, param0);
             return;
           }

@@ -78,7 +78,7 @@ final class fha {
           var12 = new Sprite(var17.field_m - var9Lifetime1 * 2, var9Lifetime1);
           var12.makeRasterTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           MonochromeFillOperator.field_n = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fha.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

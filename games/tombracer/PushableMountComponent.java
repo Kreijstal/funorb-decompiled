@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PushableMountComponent extends PrefabComponent {
-    static efa field_F;
+    static DisplayNameForm field_F;
 
     final void encode(boolean param0, BitPacketBuffer param1) {
         if (param0) {
@@ -23,7 +23,7 @@ final class PushableMountComponent extends PrefabComponent {
 
     final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
-          field_F = (efa) null;
+          field_F = (DisplayNameForm) null;
           return false;
         }
         return false;
@@ -31,7 +31,7 @@ final class PushableMountComponent extends PrefabComponent {
 
     final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          field_F = (efa) null;
+          field_F = (DisplayNameForm) null;
           return false;
         }
         return false;
@@ -114,7 +114,7 @@ final class PushableMountComponent extends PrefabComponent {
 
     final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          field_F = (efa) null;
+          field_F = (DisplayNameForm) null;
           return false;
         }
         return false;

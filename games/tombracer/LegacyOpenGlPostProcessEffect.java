@@ -11,7 +11,7 @@ abstract class LegacyOpenGlPostProcessEffect extends IntrusiveNode {
     final static void a(boolean param0) {
         TileOperator.field_p = param0 ? true : false;
         LoadProfileCommand.field_r = false;
-        jsa.a(false, -1);
+        FormFieldRow.a(false, -1);
         LegacyOpenGlTexture.field_a = fta.field_c;
         wt.field_d = fta.field_c;
     }

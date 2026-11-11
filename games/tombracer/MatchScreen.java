@@ -275,11 +275,11 @@ final class MatchScreen extends GameScreen implements rqa {
           this.actionStates[0][1] = var9[mf.field_a];
           this.actionStates[0][2] = var9[ConsoleToken.field_k];
           this.actionStates[0][3] = var9[TextureCombineSource.field_a];
-          this.actionStates[0][4] = var9[gsa.field_j];
+          this.actionStates[0][4] = var9[PlayerResultRow.field_j];
           this.actionStates[0][7] = var9[MonochromeRowCache.field_i];
           this.actionStates[0][5] = var9[PlantModel.field_o];
           this.actionStates[0][8] = var9[MidiVoice.field_g];
-          this.actionStates[0][6] = var9[hra.field_b];
+          this.actionStates[0][6] = var9[ValidationOutcome.field_b];
           this.actionStates[1][1] = var9[97];
           this.actionStates[1][0] = var9[96];
           this.actionStates[1][7] = var9[85];
@@ -977,14 +977,14 @@ final class MatchScreen extends GameScreen implements rqa {
         this.setPhase(6, new CharacterSelectPhase(this, this.protocol));
     }
 
-    final static hra validateDigits(int param0, String param1) {
+    final static ValidationOutcome validateDigits(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
-        hra stackIn_11_0 = null;
-        hra stackIn_13_0 = null;
+        ValidationOutcome stackIn_11_0 = null;
+        ValidationOutcome stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -1005,7 +1005,7 @@ final class MatchScreen extends GameScreen implements rqa {
             stackIn_13_0 = fb.field_c;
             return stackIn_13_0;
           }
-          stackIn_11_0 = (hra) null;
+          stackIn_11_0 = (ValidationOutcome) null;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1381,7 +1381,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (this.roundDeadlineTick != -1 &&
             var2Lifetime1 <= 500 &&
             var2Lifetime1 % 50 == 0) {
-            it.playMenuSound(255, 131);
+            ValidationState.playMenuSound(255, 131);
           }
         }
         this.matchState.standings.update(16);

@@ -96,7 +96,7 @@ abstract class AppletGameShell extends GameApplet {
           int var5Lifetime2;
           int var5Lifetime3;
           var9 = TombRacer.field_G ? 1 : 0;
-          var4 = BlockComponent.a(ApproachPlayerLocomotor.field_t, pg.field_y, 103, param2);
+          var4 = BlockComponent.a(ApproachPlayerLocomotor.field_t, TermsLinksPanel.field_y, 103, param2);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -534,7 +534,7 @@ abstract class AppletGameShell extends GameApplet {
               if (0 == Transform3D.field_c) {
                 discarded$3 = this.pollLoginResponse((byte) -111, false, false);
               } else {
-                tc.a(pg.field_y, -2886);
+                IdChatTarget.a(TermsLinksPanel.field_y, -2886);
               }
             }
           }
@@ -569,13 +569,13 @@ abstract class AppletGameShell extends GameApplet {
           EditableTextField.h(100);
         }
         if (null != HardCacheEntry.field_q) {
-          pg.field_y = HardCacheEntry.field_q.pollWheelRotation(65);
+          TermsLinksPanel.field_y = HardCacheEntry.field_q.pollWheelRotation(65);
         }
         if (HeapIndexArray.e(540800)) {
           var3 = aqa.getFrameRate(1188664449) * 1200;
           if (this.field_y ||
             !(rg.g((byte) 118) <= var3) &&
-            !(var3 >= ada.b(false))) {
+            !(var3 >= DateOfBirthPanel.b(false))) {
             this.field_y = false;
             DropAnimation.closeGameSocket(60);
             TextureMetadata.b((byte) -84);
@@ -630,7 +630,7 @@ abstract class AppletGameShell extends GameApplet {
                     if (Trap.field_m != 5) {
                       epa.handleLoginResponseCode(256, (byte) -84, GasTrapComponent.field_H);
                     } else {
-                      epa.handleLoginResponseCode(5, (byte) -84, wq.field_a);
+                      epa.handleLoginResponseCode(5, (byte) -84, MovementHintPanel.field_a);
                     }
                   } else {
                     epa.handleLoginResponseCode(256, (byte) -84, NativeSceneLight.field_r);
@@ -732,7 +732,7 @@ abstract class AppletGameShell extends GameApplet {
         if (cga.field_f == 11) {
           if (ConstrainToFacingArcLocomotor.field_v != null && (!ConstrainToFacingArcLocomotor.field_v.ensureIndex(-100) ||
             !ConstrainToFacingArcLocomotor.field_v.areAllGroupsAvailable(0))) {
-            ima.setLoadingProgress(0.0f, S2CEventPacket.formatLoadingProgress(CrossedSineBandsOperator.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
+            ima.setLoadingProgress(0.0f, S2CEventPacket.formatLoadingProgress(CrossedSineBandsOperator.field_s, ValidationOutcome.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
             decompiledFrameRemainder0 = false;
           }
           else {

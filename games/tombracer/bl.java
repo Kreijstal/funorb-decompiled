@@ -5,7 +5,7 @@ import java.io.*;
 
 final class bl {
     static String field_b;
-    static is field_a;
+    static NameEntryPopup field_a;
     static int[] field_c;
 
     final static boolean b(int param0) {
@@ -66,7 +66,7 @@ final class bl {
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 <= 83) {
-          field_a = (is) null;
+          field_a = (NameEntryPopup) null;
           field_c = null;
           field_b = null;
           return;
@@ -82,13 +82,13 @@ final class bl {
           if (OpenGlTransform3D.field_e != null && (param0 < 0 ||
             LegacyOpenGlTexture1D.field_n == ProceduralTexture.field_p)) {
             if (param1 == ~ql.field_k.position &&
-              mha.field_D + 10000L < bva.currentTimeMillis((byte) -107)) {
+              ValidationStatusIcon.field_D + 10000L < bva.currentTimeMillis((byte) -107)) {
               ql.field_k.writeCipheredOpcode(param0, -2988);
             }
             if (ql.field_k.position > 0) {
               try {
                 OpenGlTransform3D.field_e.write(ql.field_k.payload, 0, ql.field_k.position, param1 + 119);
-                mha.field_D = bva.currentTimeMillis((byte) -107);
+                ValidationStatusIcon.field_D = bva.currentTimeMillis((byte) -107);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

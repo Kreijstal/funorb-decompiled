@@ -4,7 +4,7 @@
 import java.util.*;
 import java.util.BitSet;
 
-final class fga implements ShellListener {
+final class LevelSelectOverlay implements ShellListener {
     private boolean field_c;
     static String field_a;
     private int[] field_d;
@@ -153,7 +153,7 @@ final class fga implements ShellListener {
         try {
           try {
             if (param1) {
-              fga.drawFramebufferToCanvas(-59, false, -121, (java.awt.Canvas) null);
+              LevelSelectOverlay.drawFramebufferToCanvas(-59, false, -121, (java.awt.Canvas) null);
             }
             var4 = param3.getGraphics();
             FadingDialog.field_C.drawImage(param2, param0, var4, 2);
@@ -425,7 +425,7 @@ final class fga implements ShellListener {
         }
     }
 
-    fga() {
+    LevelSelectOverlay() {
         this.field_c = false;
         this.field_d = null;
         this.field_b = null;

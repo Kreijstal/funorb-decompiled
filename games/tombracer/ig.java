@@ -26,7 +26,7 @@ final class ig {
             DemoCourseGenerator.field_g.clear(8);
             DemoCourseGenerator.field_g = null;
           }
-          tc.field_d = null;
+          IdChatTarget.field_d = null;
           if (fua.field_a != null) {
             var3 = (LobbyPlayerEntry) (fua.field_a.startTraversal(-91));
             while (var3 != null) {

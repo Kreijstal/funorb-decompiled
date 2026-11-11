@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextureCoordinateGeneration {
-    static hla field_b;
+    static TitledScrollPanel field_b;
     static UiComponent field_a;
     static ToolkitSprite[] field_d;
     private static String[] field_c;

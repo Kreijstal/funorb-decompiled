@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bna extends IntrusiveNode {
+final class PendingReply extends IntrusiveNode {
     boolean field_g;
     int[] field_f;
 
@@ -9,7 +9,7 @@ final class bna extends IntrusiveNode {
         try {
           C2SChooseRewardPacket.writeEncryptedPayload(param4.position, (byte) -81, param4.payload, param2, param3, param0, 0);
           if (param1) {
-            bna.tickLobbyRemovalTimers((byte) 109);
+            PendingReply.tickLobbyRemovalTimers((byte) 109);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bna.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -77,7 +77,7 @@ final class bna extends IntrusiveNode {
         }
     }
 
-    bna() {
+    PendingReply() {
         this.field_g = false;
     }
 

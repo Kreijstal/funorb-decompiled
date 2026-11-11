@@ -5,7 +5,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
     static RendererOption field_z;
     static String field_y;
     static int[] field_x;
-    private uba field_w;
+    private DateValidationSource field_w;
 
     abstract boolean isEmpty(byte param0);
 
@@ -49,7 +49,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         field_x = null;
     }
 
-    void setValidator(byte param0, uba param1) {
+    void setValidator(byte param0, DateValidationSource param1) {
         try {
           int var3_int = 126 % ((-36 - param0) / 59);
           this.field_w = param1;
@@ -98,7 +98,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         if (param0 != 141) {
           return (vb) null;
         }
-        return it.playMenuSound(255, 141 + uca.cosmeticRandom.nextBounded(2, param0 ^ 141));
+        return ValidationState.playMenuSound(255, 141 + uca.cosmeticRandom.nextBounded(2, param0 ^ 141));
     }
 
     DateInputWidget(int param0, int param1, int param2, int param3, WidgetPainter param4) {

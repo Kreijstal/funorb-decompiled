@@ -18,7 +18,7 @@ final class RemovedFromGameMenu extends MenuScreen {
         if (null != wra.field_b) {
           var2 = wra.field_b;
           String var1 = var2;
-          ClampOperator.showCentredMessage(LegacyOpenGlFlowingWaterEffect.formatText(86, mu.field_Bb, new String[]{var2}), param0 + 15047);
+          ClampOperator.showCentredMessage(LegacyOpenGlFlowingWaterEffect.formatText(86, ContactListEntry.field_Bb, new String[]{var2}), param0 + 15047);
           wra.field_b = null;
         }
         if (param0 == 118) {

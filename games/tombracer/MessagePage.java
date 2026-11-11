@@ -22,7 +22,7 @@ final class MessagePage extends WidgetContainer implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param0, param2);
-          var4.field_r = (WidgetPainter) ((Object) new td());
+          var4.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
           var5 = this.field_p - 2;
           if (param1 != -102) {
             this.field_B = (BitmapFont) null;
@@ -64,7 +64,7 @@ final class MessagePage extends WidgetContainer implements ButtonListener {
                 this.field_y.dismiss((byte) -1);
                 break;
               }
-              jsa.a(false, this.field_w[var6_int]);
+              FormFieldRow.a(false, this.field_w[var6_int]);
               break;
             }
           }

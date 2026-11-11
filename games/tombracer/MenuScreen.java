@@ -145,7 +145,7 @@ abstract class MenuScreen extends GameScreen {
                 AgeValidator.field_j % 5 != 0) {
                 return;
               }
-              it.playMenuSound(255, 198);
+              ValidationState.playMenuSound(255, 198);
               if (var11 == 0) {
                 return;
               }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sv extends MenuScreen {
+final class MainMenuScreen extends MenuScreen {
     static String field_q;
     private DropAnimation field_r;
 
@@ -182,7 +182,7 @@ final class sv extends MenuScreen {
         }
     }
 
-    sv(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    MainMenuScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_r = new DropAnimation();
     }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class is extends UiComponent {
+final class NameEntryPopup extends UiComponent {
     private UiComponent field_tb;
     private StringBuilder field_vb;
     private int field_ub;
     private UiComponent field_zb;
-    static hra field_wb;
+    static ValidationOutcome field_wb;
     static LruNodeCache field_xb;
     static float field_Ab;
     static UiComponent field_yb;
@@ -18,7 +18,7 @@ final class is extends UiComponent {
           field_yb = null;
           return;
         }
-        field_wb = (hra) null;
+        field_wb = (ValidationOutcome) null;
         field_xb = null;
         field_wb = null;
         field_yb = null;
@@ -198,7 +198,7 @@ final class is extends UiComponent {
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (param1 != 1513) {
-          field_wb = (hra) null;
+          field_wb = (ValidationOutcome) null;
         }
         this.layoutFullScreen(-57, param0);
         if (!param0) {
@@ -261,7 +261,7 @@ final class is extends UiComponent {
         return 2;
     }
 
-    is(int param0, int param1, int param2, int param3, String param4, UiComponent param5, UiComponent param6, UiComponent param7) {
+    NameEntryPopup(int param0, int param1, int param2, int param3, String param4, UiComponent param5, UiComponent param6, UiComponent param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -330,7 +330,7 @@ final class is extends UiComponent {
     }
 
     static {
-        field_wb = new hra();
+        field_wb = new ValidationOutcome();
         field_xb = new LruNodeCache(16);
     }
 }

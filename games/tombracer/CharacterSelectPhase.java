@@ -74,7 +74,7 @@ final class CharacterSelectPhase extends MatchPhase {
         SocketConnector.drawWrappedText(gta.field_a.toUpperCase(), 1, SingleChildWidget.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
         if (-1 == this.field_u &&
           var5 != 0) {
-          SocketConnector.drawWrappedText(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, SwitchLinkList.getCanvasHeight(0) - 48, var3 - 256, -1, (byte) 60, 512);
+          SocketConnector.drawWrappedText(FormFieldRow.field_F, 1, eda.field_f, 2431750, 0, 48, 1, SwitchLinkList.getCanvasHeight(0) - 48, var3 - 256, -1, (byte) 60, 512);
         }
         var6_ref_ad = (CharacterChoiceTile) (this.field_n.first(-80));
         while (var6_ref_ad != null) {

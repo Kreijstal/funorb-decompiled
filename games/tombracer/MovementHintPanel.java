@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wq implements MessagePanel {
+final class MovementHintPanel implements MessagePanel {
     static String field_d;
     static String field_a;
     private cia field_b;
@@ -17,7 +17,7 @@ final class wq implements MessagePanel {
     public static void releaseStatics(boolean param0) {
         field_a = null;
         if (!param0) {
-          wq.releaseStatics(true);
+          MovementHintPanel.releaseStatics(true);
           field_d = null;
           return;
         }
@@ -204,7 +204,7 @@ final class wq implements MessagePanel {
         }
     }
 
-    public wq() {
+    public MovementHintPanel() {
         this.field_b = new cia();
         this.field_b.setPosition(this.getHeight(false) / 2, 15 + this.getWidth(-8660) / 2, 1823844912);
     }

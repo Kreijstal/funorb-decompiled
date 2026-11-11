@@ -1328,10 +1328,10 @@ final class OpenGlModel extends ToolkitModel {
             this.computeBounds(2709);
           }
           var6 = (OpenGlTransform3D) (param0);
-          it.field_a = var6.field_h * var5.field_q + (var5.field_j * var6.field_k + var5.field_h * var6.field_r);
+          ValidationState.field_a = var6.field_h * var5.field_q + (var5.field_j * var6.field_k + var5.field_h * var6.field_r);
           TextBlockLayout.field_b = var5.field_o + (var6.field_o * var5.field_q + (var6.field_p * var5.field_h + var5.field_j * var6.field_m));
-          var7 = TextBlockLayout.field_b + it.field_a * (float)this.field_eb;
-          var8 = TextBlockLayout.field_b + it.field_a * (float)this.field_v;
+          var7 = TextBlockLayout.field_b + ValidationState.field_a * (float)this.field_eb;
+          var8 = TextBlockLayout.field_b + ValidationState.field_a * (float)this.field_v;
           if (!(var7 > var8)) {
             var10 = var8 + (float)this.field_M;
             var9 = (float)(-this.field_M) + var7;
@@ -1387,9 +1387,9 @@ final class OpenGlModel extends ToolkitModel {
           }
           if (null != param1 ||
             null != this.field_r) {
-            is.field_Ab = var5.field_l * var6.field_l + var5.field_k * var6.field_i + var6.field_j * var5.field_s;
+            NameEntryPopup.field_Ab = var5.field_l * var6.field_l + var5.field_k * var6.field_i + var6.field_j * var5.field_s;
             Weapon.field_u = var6.field_l * var5.field_j + var5.field_h * var6.field_i + var6.field_j * var5.field_q;
-            mu.field_ub = var6.field_q * var5.field_s + (var5.field_l * var6.field_s + var5.field_k * var6.field_g);
+            ContactListEntry.field_ub = var6.field_q * var5.field_s + (var5.field_l * var6.field_s + var5.field_k * var6.field_g);
             bva.field_c = var6.field_q * var5.field_g + (var6.field_g * var5.field_r + var6.field_s * var5.field_i);
             AllPlatformsMazeComponent.field_L = var6.field_i * var5.field_r + var5.field_i * var6.field_l + var5.field_g * var6.field_j;
             NativeSceneLight.field_q = var5.field_h * var6.field_g + var6.field_s * var5.field_j + var6.field_q * var5.field_q;
@@ -1397,8 +1397,8 @@ final class OpenGlModel extends ToolkitModel {
           if (null != param1) {
             var19 = this.field_U + this.field_T >> 1;
             var20 = this.field_k + this.field_S >> 1;
-            var21 = (int)(it.field_a * (float)this.field_eb + (Weapon.field_u * (float)var19 + TextBlockLayout.field_b) + NativeSceneLight.field_q * (float)var20);
-            var22 = (int)((float)var20 * NativeSceneLight.field_q + (it.field_a * (float)this.field_v + (Weapon.field_u * (float)var19 + TextBlockLayout.field_b)));
+            var21 = (int)(ValidationState.field_a * (float)this.field_eb + (Weapon.field_u * (float)var19 + TextBlockLayout.field_b) + NativeSceneLight.field_q * (float)var20);
+            var22 = (int)((float)var20 * NativeSceneLight.field_q + (ValidationState.field_a * (float)this.field_v + (Weapon.field_u * (float)var19 + TextBlockLayout.field_b)));
             if (var21 < this.field_R.field_Gc &&
               this.field_R.field_Gc <= var22) {
             }
@@ -2374,9 +2374,9 @@ final class OpenGlModel extends ToolkitModel {
                 var6 = (float)(this.field_P[var4.field_b] + this.field_P[var4.field_k] + this.field_P[var4.field_m]) * 0.3333333134651184f;
                 var7 = 0.3333333134651184f * (float)(this.field_K[var4.field_b] + this.field_K[var4.field_k] + this.field_K[var4.field_m]);
                 var8 = (float)(this.field_A[var4.field_k] + this.field_A[var4.field_m] + this.field_A[var4.field_b]) * 0.3333333134651184f;
-                var9 = MonsterModel.field_B + (var8 * mu.field_ub + (ChooseRewardFactory.field_a * var7 + var6 * is.field_Ab));
+                var9 = MonsterModel.field_B + (var8 * ContactListEntry.field_ub + (ChooseRewardFactory.field_a * var7 + var6 * NameEntryPopup.field_Ab));
                 var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + VoronoiNoiseOperator.field_u * var7 + bva.field_c * var8);
-                var11 = TextBlockLayout.field_b + (NativeSceneLight.field_q * var8 + (var7 * it.field_a + var6 * Weapon.field_u));
+                var11 = TextBlockLayout.field_b + (NativeSceneLight.field_q * var8 + (var7 * ValidationState.field_a + var6 * Weapon.field_u));
                 var12 = (float)(1.0 / Math.sqrt((double)(var11 * var11 + (var10 * var10 + var9 * var9)))) * (float)var4.field_j;
                 var2.a(var5.field_g, var12 * var11 + -var11, var9 + (float)var5.field_h - var9 * var12, var4.field_e * var5.field_f >> 7, (byte) -60, var4.field_i * var5.field_b >> 7, var12 * var10 + (-var10 + (float)var5.field_a));
                 this.field_R.loadTransformMatrix(var2, 0);
@@ -2447,9 +2447,9 @@ final class OpenGlModel extends ToolkitModel {
             this.computeBounds(2709);
           }
           TextBlockLayout.field_b = var4.field_o + (var4.field_j * var5.field_m + var4.field_h * var5.field_p + var4.field_q * var5.field_o);
-          it.field_a = var5.field_k * var4.field_j + var4.field_h * var5.field_r + var4.field_q * var5.field_h;
-          var6 = TextBlockLayout.field_b + (float)this.field_eb * it.field_a;
-          var7 = TextBlockLayout.field_b + it.field_a * (float)this.field_v;
+          ValidationState.field_a = var5.field_k * var4.field_j + var4.field_h * var5.field_r + var4.field_q * var5.field_h;
+          var6 = TextBlockLayout.field_b + (float)this.field_eb * ValidationState.field_a;
+          var7 = TextBlockLayout.field_b + ValidationState.field_a * (float)this.field_v;
           if (var7 < var6) {
             var8 = var7 - (float)this.field_M;
             var9 = (float)this.field_M + var6;
@@ -2505,10 +2505,10 @@ final class OpenGlModel extends ToolkitModel {
           }
           if (param1 != null ||
             this.field_r != null) {
-            is.field_Ab = var5.field_i * var4.field_k + var5.field_l * var4.field_l + var4.field_s * var5.field_j;
+            NameEntryPopup.field_Ab = var5.field_i * var4.field_k + var5.field_l * var4.field_l + var4.field_s * var5.field_j;
             Weapon.field_u = var4.field_q * var5.field_j + (var5.field_l * var4.field_j + var5.field_i * var4.field_h);
             NativeSceneLight.field_q = var4.field_q * var5.field_q + (var5.field_g * var4.field_h + var4.field_j * var5.field_s);
-            mu.field_ub = var4.field_s * var5.field_q + (var4.field_l * var5.field_s + var5.field_g * var4.field_k);
+            ContactListEntry.field_ub = var4.field_s * var5.field_q + (var4.field_l * var5.field_s + var5.field_g * var4.field_k);
             AllPlatformsMazeComponent.field_L = var5.field_j * var4.field_g + (var5.field_i * var4.field_r + var4.field_i * var5.field_l);
             bva.field_c = var5.field_s * var4.field_i + var4.field_r * var5.field_g + var5.field_q * var4.field_g;
           }
@@ -2517,11 +2517,11 @@ final class OpenGlModel extends ToolkitModel {
             var19 = 1;
             var20 = this.field_U + this.field_T >> 1;
             var21 = this.field_k + this.field_S >> 1;
-            var22 = (int)((float)var21 * NativeSceneLight.field_q + (it.field_a * (float)this.field_eb + ((float)var20 * Weapon.field_u + TextBlockLayout.field_b)));
+            var22 = (int)((float)var21 * NativeSceneLight.field_q + (ValidationState.field_a * (float)this.field_eb + ((float)var20 * Weapon.field_u + TextBlockLayout.field_b)));
             if (this.field_R.field_Gc > var22) {
               var18 = 1;
             }
-            var23 = (int)(TextBlockLayout.field_b + Weapon.field_u * (float)var20 + it.field_a * (float)this.field_v + (float)var21 * NativeSceneLight.field_q);
+            var23 = (int)(TextBlockLayout.field_b + Weapon.field_u * (float)var20 + ValidationState.field_a * (float)this.field_v + (float)var21 * NativeSceneLight.field_q);
             if (var23 < this.field_R.field_Gc) {
               var18 = 1;
             }

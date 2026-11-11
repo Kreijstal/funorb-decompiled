@@ -37,7 +37,7 @@ final class TutorialHints {
         if (var4 != this.field_g) {
           this.field_g = var4;
           if (0 == this.field_g) {
-            this.queueHint(ColourRowCache.field_j, new wq(), 50, param0 ^ -9907);
+            this.queueHint(ColourRowCache.field_j, new MovementHintPanel(), 50, param0 ^ -9907);
           }
           var5_ref_fsa__ = var3.getAllTraps(16);
           var6_ref_fsa__ = var5_ref_fsa__;
@@ -51,7 +51,7 @@ final class TutorialHints {
             if (!this.field_i) {
               if (var8.getStatCategory((byte) 3) == 1) {
                 this.field_i = true;
-                this.queueHint(GasTrapComponent.field_F, new jia(), 25, param0 - 10059);
+                this.queueHint(GasTrapComponent.field_F, new SneakHintPanel(), 25, param0 - 10059);
               }
               if (!this.field_m &&
                 3 == var8.getStatCategory((byte) 3)) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pfa {
+final class CourseMapWalker {
     private IntrusiveDeque field_f;
     private int field_h;
     private ModelAnimator field_c;
@@ -475,7 +475,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1fire", (byte) 108);
                 if (null != var2) {
-                  gsa.field_j = 255 & var2[0];
+                  PlayerResultRow.field_j = 255 & var2[0];
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1reset", (byte) 105);
                 if (null != var2) {
@@ -491,7 +491,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1sneak", (byte) 123);
                 if (null != var2) {
-                  hra.field_b = var2[0] & 255;
+                  ValidationOutcome.field_b = var2[0] & 255;
                 }
                 var2 = ScoringObserverFactory.readTextEntry("oneplayer_timed", (byte) 113);
                 if (var2 != null) {
@@ -507,7 +507,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("difficulty_colon", (byte) 114);
                 if (null != var2) {
-                  wq.field_d = jaa.decodeText((byte) 85, var2);
+                  MovementHintPanel.field_d = jaa.decodeText((byte) 85, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("bloom", (byte) 110);
                 if (var2 != null) {
@@ -647,7 +647,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMobileLindemannTotems", (byte) 102);
                 if (var2 != null) {
-                  rua.field_hb = jaa.decodeText((byte) 122, var2);
+                  AccountCreationDialog.field_hb = jaa.decodeText((byte) 122, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMobileLindemannTotems", (byte) 120);
                 if (var2 != null) {
@@ -687,7 +687,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleCrumblyBlocks", (byte) 103);
                 if (null != var2) {
-                  td.field_u = jaa.decodeText((byte) 108, var2);
+                  DialogButtonPainter.field_u = jaa.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextCrumblyBlocks", (byte) 108);
                 if (null != var2) {
@@ -703,7 +703,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleSkeletons", (byte) 113);
                 if (null != var2) {
-                  td.field_n = jaa.decodeText((byte) 92, var2);
+                  DialogButtonPainter.field_n = jaa.decodeText((byte) 92, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextSkeletons", (byte) 101);
                 if (var2 != null) {
@@ -1005,47 +1005,47 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,0", (byte) 108);
                 if (null != var2) {
-                  uba.loadingQuipsShort[0] = jaa.decodeText((byte) 28, var2);
+                  DateValidationSource.loadingQuipsShort[0] = jaa.decodeText((byte) 28, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,1", (byte) 109);
                 if (null != var2) {
-                  uba.loadingQuipsShort[1] = jaa.decodeText((byte) 44, var2);
+                  DateValidationSource.loadingQuipsShort[1] = jaa.decodeText((byte) 44, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,2", (byte) 112);
                 if (null != var2) {
-                  uba.loadingQuipsShort[2] = jaa.decodeText((byte) 81, var2);
+                  DateValidationSource.loadingQuipsShort[2] = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,3", (byte) 126);
                 if (var2 != null) {
-                  uba.loadingQuipsShort[3] = jaa.decodeText((byte) 67, var2);
+                  DateValidationSource.loadingQuipsShort[3] = jaa.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,4", (byte) 118);
                 if (var2 != null) {
-                  uba.loadingQuipsShort[4] = jaa.decodeText((byte) 26, var2);
+                  DateValidationSource.loadingQuipsShort[4] = jaa.decodeText((byte) 26, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,5", (byte) 101);
                 if (var2 != null) {
-                  uba.loadingQuipsShort[5] = jaa.decodeText((byte) 84, var2);
+                  DateValidationSource.loadingQuipsShort[5] = jaa.decodeText((byte) 84, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,6", (byte) 123);
                 if (var2 != null) {
-                  uba.loadingQuipsShort[6] = jaa.decodeText((byte) 49, var2);
+                  DateValidationSource.loadingQuipsShort[6] = jaa.decodeText((byte) 49, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,7", (byte) 127);
                 if (var2 != null) {
-                  uba.loadingQuipsShort[7] = jaa.decodeText((byte) 42, var2);
+                  DateValidationSource.loadingQuipsShort[7] = jaa.decodeText((byte) 42, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,8", (byte) 107);
                 if (null != var2) {
-                  uba.loadingQuipsShort[8] = jaa.decodeText((byte) 106, var2);
+                  DateValidationSource.loadingQuipsShort[8] = jaa.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,9", (byte) 115);
                 if (var2 != null) {
-                  uba.loadingQuipsShort[9] = jaa.decodeText((byte) 46, var2);
+                  DateValidationSource.loadingQuipsShort[9] = jaa.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("unpackingStrings,10", (byte) 118);
                 if (null != var2) {
-                  uba.loadingQuipsShort[10] = jaa.decodeText((byte) 105, var2);
+                  DateValidationSource.loadingQuipsShort[10] = jaa.decodeText((byte) 105, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("error", (byte) 113);
                 if (var2 != null) {
@@ -1197,7 +1197,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("slowmoveshift", (byte) 110);
                 if (var2 != null) {
-                  pg.field_A = jaa.decodeText((byte) 103, var2);
+                  TermsLinksPanel.field_A = jaa.decodeText((byte) 103, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("slowmovegood", (byte) 119);
                 if (var2 != null) {
@@ -1285,7 +1285,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waiting_for_others", (byte) 126);
                 if (var2 != null) {
-                  jsa.field_F = jaa.decodeText((byte) 67, var2);
+                  FormFieldRow.field_F = jaa.decodeText((byte) 67, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("waiting_for", (byte) 127);
                 if (var2 != null) {
@@ -1373,7 +1373,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_coin10", (byte) 115);
                 if (var2 != null) {
-                  mu.field_wb = jaa.decodeText((byte) 124, var2);
+                  ContactListEntry.field_wb = jaa.decodeText((byte) 124, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_coin5", (byte) 108);
                 if (null != var2) {
@@ -1433,7 +1433,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_angelio", (byte) 103);
                 if (null != var2) {
-                  hra.field_a = jaa.decodeText((byte) 71, var2);
+                  ValidationOutcome.field_a = jaa.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_baroness", (byte) 109);
                 if (var2 != null) {
@@ -2047,7 +2047,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("options", (byte) 100);
                 if (var2 != null) {
-                  wc.field_d = jaa.decodeText((byte) 126, var2);
+                  NamedChatTarget.field_d = jaa.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("enter_tomb", (byte) 108);
                 if (null != var2) {
@@ -2083,7 +2083,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("justplay", (byte) 109);
                 if (null != var2) {
-                  tc.field_f = jaa.decodeText((byte) 54, var2);
+                  IdChatTarget.field_f = jaa.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("adding_coins", (byte) 102);
                 if (null != var2) {
@@ -2253,7 +2253,7 @@ final class pfa {
           field_a = null;
           field_i = null;
           if (param0 != 4) {
-            pfa.loadLocalizedText((ResourceArchive) null, 68);
+            CourseMapWalker.loadLocalizedText((ResourceArchive) null, 68);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pfa.A(" + param0 + ')');
@@ -2330,7 +2330,7 @@ final class pfa {
         }
     }
 
-    pfa(int param0, int param1) {
+    CourseMapWalker(int param0, int param1) {
         try {
           this.field_d = param0;
           this.field_c = new ModelAnimator(0, this.field_d, 1);

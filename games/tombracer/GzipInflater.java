@@ -136,7 +136,7 @@ final class GzipInflater {
             return false;
           }
           dupTemp$1 = bva.currentTimeMillis((byte) -107);
-          mha.field_D = dupTemp$1;
+          ValidationStatusIcon.field_D = dupTemp$1;
           MiscItemBehaviour.field_s = dupTemp$1;
           if (Room.field_R.field_b != 1) {
             ProceduralTexture.field_p = SecondaryNodeHashTable.field_g;
@@ -149,7 +149,7 @@ final class GzipInflater {
               var4.position = 0;
               stackIn_10_0 = (!param0) ? -1 : -2;
               vua.field_B = stackIn_10_0;
-              hla.field_xb = stackIn_10_0;
+              TitledScrollPanel.field_xb = stackIn_10_0;
               PlayerProfile.field_c = stackIn_10_0;
               C2SActionPacket.writeSessionHeader((byte) -125, RoomComponent.field_g, ql.field_k, WhirlpoolDigest.field_g, SocketConnector.field_c);
               bl.flushPacketBuffer(-1, -1);

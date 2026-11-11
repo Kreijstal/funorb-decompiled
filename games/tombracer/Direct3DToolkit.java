@@ -155,7 +155,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
           field_md = (int[]) null;
         }
         if (param2 == GpuDataType.field_g) {
-          if (it.field_b == param0) {
+          if (ValidationState.field_b == param0) {
             return 22;
           }
           if (param0 == SwitchableId.field_a) {
@@ -804,7 +804,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (param1 == OpenGlSprite.field_d) {
           return 1;
         }
-        if (pfa.field_i == param1) {
+        if (CourseMapWalker.field_i == param1) {
           return 2;
         }
         if (param1 == cva.field_b) {
@@ -813,7 +813,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (param1 == EmailSyntaxValidator.field_j) {
           return 4;
         }
-        if (ada.field_z == param1) {
+        if (DateOfBirthPanel.field_z == param1) {
           return 256;
         }
         if (param0 <= -46) {
@@ -1078,7 +1078,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         TextureCombineOperation var3;
         if (null == this.field_Vc &&
           DualLinkNode.field_h != this.field_v[this.field_Cc]) {
-          if (pfa.field_i == this.field_v[this.field_Cc]) {
+          if (CourseMapWalker.field_i == this.field_v[this.field_Cc]) {
             this.field_jd.SetTransform(16 + this.field_Cc, this.field_hc[this.field_Cc].writeTextureMatrix4x4((byte) -114, field_hd));
           } else {
             this.field_jd.SetTransform(16 + this.field_Cc, this.field_hc[this.field_Cc].writeColumnMajor4x4(field_hd, (byte) -37));

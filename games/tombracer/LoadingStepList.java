@@ -19,16 +19,16 @@ final class LoadingStepList {
         ToolkitModel dupTemp$3 = null;
         ToolkitModel dupTemp$4 = null;
         try {
-          SwitchState.field_a = tc.createModels(SoftReferenceCache.field_b, -8829, param0);
-          ContextMenu.field_Ib = tc.createModels(OpenGlBuffer.field_c, -8829, param0);
-          mma.field_b = tc.createModels(DoorwayComponent.field_K, -8829, param0);
-          RevolverItemComponent.field_J = tc.createModels(C2SActionPacket.field_l, param1 - 8829, param0);
-          LabelledRow.field_ub = tc.createModels(CourseLayoutFactory.field_e, -8829, param0);
-          PowerUpItemBehaviour.field_t = tc.createModels(ColourRowCacheEntry.field_h, -8829, param0);
-          GameApplet.field_j = tc.createModels(gta.field_f, param1 ^ -8829, param0);
-          gca.field_g = tc.createModels(cba.field_b, param1 ^ -8829, param0);
-          DoorwayComponent.field_F = tc.createModels(TriangleMesh.field_g, -8829, param0);
-          SwitchLinkList.field_b = tc.createModels(ControllerLocomotor.field_p, -8829, param0);
+          SwitchState.field_a = IdChatTarget.createModels(SoftReferenceCache.field_b, -8829, param0);
+          ContextMenu.field_Ib = IdChatTarget.createModels(OpenGlBuffer.field_c, -8829, param0);
+          mma.field_b = IdChatTarget.createModels(DoorwayComponent.field_K, -8829, param0);
+          RevolverItemComponent.field_J = IdChatTarget.createModels(C2SActionPacket.field_l, param1 - 8829, param0);
+          LabelledRow.field_ub = IdChatTarget.createModels(CourseLayoutFactory.field_e, -8829, param0);
+          PowerUpItemBehaviour.field_t = IdChatTarget.createModels(ColourRowCacheEntry.field_h, -8829, param0);
+          GameApplet.field_j = IdChatTarget.createModels(gta.field_f, param1 ^ -8829, param0);
+          gca.field_g = IdChatTarget.createModels(cba.field_b, param1 ^ -8829, param0);
+          DoorwayComponent.field_F = IdChatTarget.createModels(TriangleMesh.field_g, -8829, param0);
+          SwitchLinkList.field_b = IdChatTarget.createModels(ControllerLocomotor.field_p, -8829, param0);
           dupTemp$0 = RevolverItemComponent.field_J[9].copy((byte) 0, 654255, false);
           RevolverItemComponent.field_J[9] = dupTemp$0;
           dupTemp$0.O(224, 224, 224);

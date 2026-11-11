@@ -582,18 +582,18 @@ final class WallTile implements Renderable {
               bsa.field_k = false;
               var3_int = 1;
             }
-            MidiVoiceMixer.drawAwtLoadingBar((byte) 108, MidiPatch.loadingMessage(-10918), OpenGlUnderwaterEffect.field_i, dla.getLoadingPercent(7), var3_int != 0);
+            MidiVoiceMixer.drawAwtLoadingBar((byte) 108, MidiPatch.loadingMessage(-10918), OpenGlUnderwaterEffect.field_i, ArchiveIndex.getLoadingPercent(7), var3_int != 0);
           } else {
             if (!LegacyOpenGlSpriteTexture.i(250)) {
               SoftwareRasterizer.clear();
               gga.drawLoadingAnimation(320, 240, (byte) 113);
-              fga.drawFramebufferToCanvas(0, false, 0, param1);
+              LevelSelectOverlay.drawFramebufferToCanvas(0, false, 0, param1);
             } else {
               if (0 != Transform3D.field_c) {
                 C2SSubmitSettingsPacket.drawLoadingFrame(param1, (byte) 94);
               } else {
                 MazeSearchNode.a(false, param0, param2 ^ -128);
-                fga.drawFramebufferToCanvas(0, false, 0, param1);
+                LevelSelectOverlay.drawFramebufferToCanvas(0, false, 0, param1);
               }
             }
           }

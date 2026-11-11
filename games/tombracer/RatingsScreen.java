@@ -28,7 +28,7 @@ final class RatingsScreen extends DropInMenuScreen {
           return (String) null;
         }
         if (param0 == 0) {
-          return fga.field_a;
+          return LevelSelectOverlay.field_a;
         }
         return super.getActionLabel(param0, (byte) 112);
     }

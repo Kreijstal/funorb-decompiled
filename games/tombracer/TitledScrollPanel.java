@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hla extends UiComponent {
+final class TitledScrollPanel extends UiComponent {
     UiComponent field_yb;
     UiComponent field_tb;
     UiComponent field_wb;
@@ -11,7 +11,7 @@ final class hla extends UiComponent {
 
     public static void releaseStatics(int param0) {
         if (param0 != 23613) {
-          hla.releaseStatics(-65);
+          TitledScrollPanel.releaseStatics(-65);
           field_ub = null;
           return;
         }
@@ -41,14 +41,14 @@ final class hla extends UiComponent {
           this.layoutChildren(param1, param0, 0, param5);
           return;
         }
-        hla.releaseStatics(-42);
+        TitledScrollPanel.releaseStatics(-42);
         this.field_t = param6;
         this.field_qb = param3;
         this.field_G = param7;
         this.layoutChildren(param1, param0, 0, param5);
     }
 
-    hla(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3, UiComponent param4, String param5, String param6) {
+    TitledScrollPanel(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3, UiComponent param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_tb = new UiComponent(0L, (UiComponent) null);
@@ -65,7 +65,7 @@ final class hla extends UiComponent {
         }
     }
 
-    hla(long param0, hla param1, String param2, String param3) {
+    TitledScrollPanel(long param0, TitledScrollPanel param1, String param2, String param3) {
         this(param0, param1, param1.field_vb.field_vb, param1.field_vb.field_wb, param1.field_yb, param2, param3);
     }
 

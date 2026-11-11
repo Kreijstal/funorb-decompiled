@@ -121,7 +121,7 @@ final class PlayerViewport {
           }
           this.field_d.draw(this.left, this.right, this.field_e, -88, this.field_a, this.top, this.bottom);
           if (this.field_a.field_D) {
-            TextInputWidget.paintNineSliceFrame(0, bm.field_f, (byte) -72, this.left, tga.field_a, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
+            TextInputWidget.paintNineSliceFrame(0, TextHotspot.field_f, (byte) -72, this.left, tga.field_a, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
             return;
           }
           return;
@@ -136,7 +136,7 @@ final class PlayerViewport {
         if (!this.field_a.field_D) {
           return;
         }
-        TextInputWidget.paintNineSliceFrame(0, bm.field_f, (byte) -72, this.left, tga.field_a, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
+        TextInputWidget.paintNineSliceFrame(0, TextHotspot.field_f, (byte) -72, this.left, tga.field_a, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
     }
 
     final void applyLayout(int param0, wm param1, int param2) {

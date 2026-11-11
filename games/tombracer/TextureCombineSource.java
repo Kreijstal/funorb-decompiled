@@ -8,7 +8,7 @@ final class TextureCombineSource {
     static int field_e;
     static int field_a;
     static String field_b;
-    static it field_c;
+    static ValidationState field_c;
 
     public static void releaseStatics(int param0) {
         if (param0 != 29325) {
@@ -311,7 +311,7 @@ final class TextureCombineSource {
                 stackIn_45_0 = jaa.field_b;
               }
               var9 = stackIn_45_0;
-              var1_int = var1_int + mha.field_C;
+              var1_int = var1_int + ValidationStatusIcon.field_C;
               if (var9 != null) {
                 var9.drawFrame((byte) 57, var7Lifetime1 + (InvisibleTouchSwitchComponent.field_L << 1), var1_int, -InvisibleTouchSwitchComponent.field_L + var8Lifetime1, nt.field_d + (GasVentModel.field_p << 1));
               }
@@ -319,7 +319,7 @@ final class TextureCombineSource {
             }
             if (var4 >= 0) {
               qt.field_a.drawText(var6, var8Lifetime1, MatchPhase.field_j + var1_int, var5, -1);
-              var1_int = var1_int + (nt.field_d + GasVentModel.field_p + mha.field_C);
+              var1_int = var1_int + (nt.field_d + GasVentModel.field_p + ValidationStatusIcon.field_C);
             } else {
               ConsoleValue.field_c.drawText(var6, var8Lifetime1, var1_int + ActionPacketQueue.field_a, var5, -1);
               var1_int = var1_int + ComponentTargetList.field_b;
@@ -352,6 +352,6 @@ final class TextureCombineSource {
     static {
         field_a = 49;
         field_b = "Freezethrower";
-        field_c = new it();
+        field_c = new ValidationState();
     }
 }

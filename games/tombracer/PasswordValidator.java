@@ -300,21 +300,21 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final it validateText(byte param0, String param1) {
+    final ValidationState validateText(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        it stackIn_2_0 = null;
-        it stackIn_6_0 = null;
-        it stackIn_10_0 = null;
-        it stackIn_14_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_6_0 = null;
+        ValidationState stackIn_10_0 = null;
+        ValidationState stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 14) {
-            stackIn_2_0 = (it) null;
+            stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
           var3 = this.field_o.field_o.toLowerCase();

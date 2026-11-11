@@ -120,7 +120,7 @@ final class RatingTable extends IntrusiveNode {
             }
           }
         }
-        pfa.popRasterState(1);
+        CourseMapWalker.popRasterState(1);
     }
 
     final static boolean a(int param0, int param1, int param2) {

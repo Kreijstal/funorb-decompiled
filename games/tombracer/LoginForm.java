@@ -15,8 +15,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
 
     LoginForm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (WidgetPainter) null);
-        jsa dupTemp$0 = null;
-        jsa dupTemp$1 = null;
+        FormFieldRow dupTemp$0 = null;
+        FormFieldRow dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
@@ -31,13 +31,13 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        td var6 = null;
+        DialogButtonPainter var6 = null;
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
         LoginMethod var9 = null;
-        jsa var12 = null;
-        jsa var13 = null;
+        FormFieldRow var12 = null;
+        FormFieldRow var13 = null;
         try {
           stackIn_4_1 = (param4);
           this.field_w = stackIn_4_1;
@@ -76,7 +76,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           this.field_A.field_r = (WidgetPainter) ((Object) new hga(10000536));
           this.field_C.field_r = (WidgetPainter) ((Object) new poa(10000536));
-          var6 = new td();
+          var6 = new DialogButtonPainter();
           this.field_B.field_r = (WidgetPainter) ((Object) var6);
           if (this.field_y != null) {
             this.field_y.field_r = (WidgetPainter) ((Object) var6);
@@ -112,11 +112,11 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             var8 = CharacterSelection.field_c;
           }
-          dupTemp$0 = new jsa(10, this.field_n, -20 + this.field_m, 25, this.field_A, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new FormFieldRow(10, this.field_n, -20 + this.field_m, 25, this.field_A, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.addChild(dupTemp$0, -1);
           this.field_n = this.field_n + (((UiWidget) ((Object) var12)).field_p + 5);
-          dupTemp$1 = new jsa(10, this.field_n, -20 + this.field_m, 25, this.field_C, false, 80, 3, var7, 16777215, MidiVoice.field_j);
+          dupTemp$1 = new FormFieldRow(10, this.field_n, -20 + this.field_m, 25, this.field_C, false, 80, 3, var7, 16777215, MidiVoice.field_j);
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, -1);
           this.field_n = this.field_n + (((UiWidget) ((Object) var13)).field_p + 5);

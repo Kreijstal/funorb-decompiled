@@ -21,8 +21,8 @@ final class uca {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
-        mu var7 = null;
-        mu var8 = null;
+        ContactListEntry var7 = null;
+        ContactListEntry var8 = null;
         BitPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = TombRacer.field_G ? 1 : 0;
@@ -46,7 +46,7 @@ final class uca {
           }
           PlayingSound.field_f.startForwardFrom(-13854, var8);
           while (true) {
-            var7 = (mu) (PlayingSound.field_f.next(115));
+            var7 = (ContactListEntry) (PlayingSound.field_f.next(115));
             if (var7 != null) {
               var7.field_Db = var7.field_Db - 1;
               continue;

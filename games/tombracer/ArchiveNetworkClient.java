@@ -112,23 +112,23 @@ abstract class ArchiveNetworkClient {
               }
             }
             if (ColourKeyOperator.field_m == 2) {
-              jia.field_a = new BufferedSocket((java.net.Socket) (S2CProfileUpdatePacket.field_c.field_f), oi.field_a);
+              SneakHintPanel.field_a = new BufferedSocket((java.net.Socket) (S2CProfileUpdatePacket.field_c.field_f), oi.field_a);
               var2 = new PacketBuffer(13);
               C2SActionPacket.writeSessionHeader((byte) 107, pu.field_b, var2, MapWaypoint.field_n, GzipInflater.field_a);
               var2.writeByte(15, 0);
               var2.writeInt(CourseLayout.field_a, (byte) 117);
-              jia.field_a.write(var2.payload, 0, 13, 106);
+              SneakHintPanel.field_a.write(var2.payload, 0, 13, 106);
               ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
               pm.field_n = 30000L + bva.currentTimeMillis((byte) -107);
             }
             if (ColourKeyOperator.field_m == 3) {
-              if (jia.field_a.available(0) <= 0) {
+              if (SneakHintPanel.field_a.available(0) <= 0) {
                 if (bva.currentTimeMillis((byte) -107) > pm.field_n) {
                   stackIn_31_0 = du.recordArchiveConnectionFailure(-2, (byte) 17);
                   return stackIn_31_0;
                 }
               } else {
-                var1_int = jia.field_a.readSingleByte(-2147483648);
+                var1_int = SneakHintPanel.field_a.readSingleByte(-2147483648);
                 if (var1_int != 0) {
                   stackIn_26_0 = du.recordArchiveConnectionFailure(var1_int, (byte) -26);
                   return stackIn_26_0;
@@ -140,9 +140,9 @@ abstract class ArchiveNetworkClient {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            StatReportingScoringObserver.field_l.attachConnection(jia.field_a, (byte) 54, StatefulWidgetPainter.field_q);
+            StatReportingScoringObserver.field_l.attachConnection(SneakHintPanel.field_a, (byte) 54, StatefulWidgetPainter.field_q);
             ColourKeyOperator.field_m = 0;
-            jia.field_a = null;
+            SneakHintPanel.field_a = null;
             S2CProfileUpdatePacket.field_c = null;
             stackIn_34_0 = 0;
             return stackIn_34_0;

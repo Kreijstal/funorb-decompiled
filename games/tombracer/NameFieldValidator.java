@@ -10,13 +10,13 @@ final class NameFieldValidator extends TextFieldValidator {
         this.field_k = false;
     }
 
-    final it validateText(byte param0, String param1) {
+    final ValidationState validateText(byte param0, String param1) {
         jua var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
-        it stackIn_4_0 = null;
-        it stackIn_10_0 = null;
-        it stackIn_15_0 = null;
+        ValidationState stackIn_4_0 = null;
+        ValidationState stackIn_10_0 = null;
+        ValidationState stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;

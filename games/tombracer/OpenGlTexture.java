@@ -177,7 +177,7 @@ abstract class OpenGlTexture implements GpuTexture {
 
     final int getGlFormat(int param0) {
         if (GpuDataType.field_g == this.field_a) {
-          if (it.field_b == this.field_f) {
+          if (ValidationState.field_b == this.field_f) {
             return 6407;
           }
           if (this.field_f == SwitchableId.field_a) {
@@ -198,7 +198,7 @@ abstract class OpenGlTexture implements GpuTexture {
         } else {
           if (GpuDataType.field_l != this.field_a) {
             if (this.field_a == GpuDataType.field_h) {
-              if (this.field_f == it.field_b) {
+              if (this.field_f == ValidationState.field_b) {
                 return 34837;
               }
               if (this.field_f == SwitchableId.field_a) {
@@ -218,7 +218,7 @@ abstract class OpenGlTexture implements GpuTexture {
               }
             }
           } else {
-            if (this.field_f == it.field_b) {
+            if (this.field_f == ValidationState.field_b) {
               return 34843;
             }
             if (SwitchableId.field_a == this.field_f) {

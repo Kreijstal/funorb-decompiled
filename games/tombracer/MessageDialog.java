@@ -26,7 +26,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
             SimpleHoverMountComponent.openRelativeUrl("tochangedisplayname.ws", ToolkitSelector.getApplet(72), (byte) -68);
             return;
           }
-          jsa.a(false, 3);
+          FormFieldRow.a(false, 3);
           this.dismiss((byte) -124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

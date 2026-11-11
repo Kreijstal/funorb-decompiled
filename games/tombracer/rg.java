@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rg extends SingleChildWidget {
-    static hra field_A;
+    static ValidationOutcome field_A;
     int field_y;
     static int field_z;
     static int field_B;
@@ -21,7 +21,7 @@ final class rg extends SingleChildWidget {
     public static void releaseStatics(byte param0) {
         field_A = null;
         if (param0 > -125) {
-          field_A = (hra) null;
+          field_A = (ValidationOutcome) null;
         }
     }
 
@@ -29,15 +29,15 @@ final class rg extends SingleChildWidget {
         int var1 = SoftwareTransform3D.field_q * SoftwareTransform3D.field_q;
         int var2 = var1 - HiscoresScreen.field_r * HiscoresScreen.field_r;
         int var4 = -80 % ((param0 + 19) / 32);
-        int var3 = var2 * (mha.field_E - VertexArrayPointer.field_b) / var1 + VertexArrayPointer.field_b;
+        int var3 = var2 * (ValidationStatusIcon.field_E - VertexArrayPointer.field_b) / var1 + VertexArrayPointer.field_b;
         era.field_e.setBounds(640, 120, -23776, var3, ava.field_d);
-        HardwareGraphicsHeap.a(640, 5, mna.field_d, 25, pda.field_c, mha.field_E - 24, 0);
+        HardwareGraphicsHeap.a(640, 5, mna.field_d, 25, pda.field_c, ValidationStatusIcon.field_E - 24, 0);
     }
 
     final static void initializeMenuActionLabels(int param0) {
         OpenGlSceneLight.field_q = new String[42];
         OpenGlSceneLight.field_q[5] = FloatPacketBuffer.field_l;
-        OpenGlSceneLight.field_q[12] = wc.field_d;
+        OpenGlSceneLight.field_q[12] = NamedChatTarget.field_d;
         OpenGlSceneLight.field_q[16] = ResourceArchive.field_e;
         OpenGlSceneLight.field_q[3] = ol.field_a;
         OpenGlSceneLight.field_q[6] = DamageableBehaviour.field_x;
@@ -46,19 +46,19 @@ final class rg extends SingleChildWidget {
         OpenGlSceneLight.field_q[22] = SinglePlayerCourseGenerator.field_k;
         OpenGlSceneLight.field_q[8] = vea.field_a;
         OpenGlSceneLight.field_q[7] = s.field_a;
-        OpenGlSceneLight.field_q[17] = fga.field_a;
+        OpenGlSceneLight.field_q[17] = LevelSelectOverlay.field_a;
         OpenGlSceneLight.field_q[15] = GameAssetLoader.field_i;
         OpenGlSceneLight.field_q[13] = WidgetContainer.field_v;
         OpenGlSceneLight.field_q[18] = ChatChannelType.field_b;
-        OpenGlSceneLight.field_q[0] = fga.field_a;
+        OpenGlSceneLight.field_q[0] = LevelSelectOverlay.field_a;
         OpenGlSceneLight.field_q[19] = PrimMazeGenerator.field_b;
         OpenGlSceneLight.field_q[2] = FuseBehaviour.field_t;
         OpenGlSceneLight.field_q[9] = VortexBehaviour.field_u;
-        OpenGlSceneLight.field_q[10] = pfa.field_a;
+        OpenGlSceneLight.field_q[10] = CourseMapWalker.field_a;
         OpenGlSceneLight.field_q[1] = StandingsPhase.field_s;
         OpenGlSceneLight.field_q[21] = MiscItemBehaviour.field_t;
         OpenGlSceneLight.field_q[11] = PitEdgePiece.field_e;
-        OpenGlSceneLight.field_q[20] = wq.field_d;
+        OpenGlSceneLight.field_q[20] = MovementHintPanel.field_d;
         OpenGlSceneLight.field_q[26] = StatReportingScoringObserver.field_m[0];
         OpenGlSceneLight.field_q[38] = RangeOperator.field_n;
         OpenGlSceneLight.field_q[41] = WidgetStyleLayer.field_e;
@@ -106,7 +106,7 @@ final class rg extends SingleChildWidget {
         sla.field_b = new String[7];
         dta.field_b[3] = tda.field_b;
         dta.field_b[0] = ArchiveManager.field_d;
-        sla.field_b[1] = mu.field_wb;
+        sla.field_b[1] = ContactListEntry.field_wb;
         sla.field_b[5] = MatchStatistics.field_k;
         sla.field_b[0] = SnakePitBehaviour.field_p;
         Room.field_m = new String[13];
@@ -122,7 +122,7 @@ final class rg extends SingleChildWidget {
         Room.field_m[5] = GameScreen.field_a;
         Room.field_m[0] = ClipFrame.field_e;
         Room.field_m[7] = FacePlayerLocomotor.field_q;
-        Room.field_m[2] = hra.field_a;
+        Room.field_m[2] = ValidationOutcome.field_a;
         Room.field_m[11] = msa.field_b;
         Room.field_m[3] = poa.field_p;
         Room.field_m[12] = QuickChatPhraseSource.field_e;
@@ -132,7 +132,7 @@ final class rg extends SingleChildWidget {
         FadingDialog.field_w[0] = "henryj";
         FadingDialog.field_w[9] = "johnsson";
         if (param0 != -2339) {
-          field_A = (hra) null;
+          field_A = (ValidationOutcome) null;
           tk.field_a = new String[17][];
           FadingDialog.field_w[7] = "hans";
           FadingDialog.field_w[4] = "borees";
@@ -167,18 +167,18 @@ final class rg extends SingleChildWidget {
           HazardEffect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, VertexStreamLayout.field_e};
           IntrusiveDeque.field_d[2] = new String[]{GraphicsQuality.field_b, baa.field_a, AnimationSequence.field_a};
           HazardEffect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
-          IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
+          IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, AccountCreationDialog.field_hb, Player.field_s};
           IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
           HazardEffect.field_h[3] = new String[]{InvertOperator.field_o, CourseLayoutFactory.field_a, SwitchLinkList.field_d};
           HazardEffect.field_h[4] = new String[]{DisplaySettingsDialog.field_R, FadingDialog.field_y, QuickChatPhraseSource.field_d};
-          IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
+          IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, DialogButtonPainter.field_u, PitModel.field_r};
           HazardEffect.field_h[5] = new String[]{TreasureValuesOverlay.field_k, MazeComponent.field_G, du.field_b};
           IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
           HazardEffect.field_h[6] = new String[]{apa.field_b, SoftwareTransform3D.field_k, bq.field_e};
           IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
           IntrusiveDeque.field_d[8] = new String[]{LegacyOpenGlBloomEffect.field_u, OpenGlTexture3D.field_m, LegacyOpenGlCubeTexture.field_n};
           HazardEffect.field_h[7] = new String[]{ProceduralTexture.field_n, ld.field_d};
-          IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
+          IntrusiveDeque.field_d[9] = new String[]{DialogButtonPainter.field_n, nea.field_b, gga.field_L};
           HazardEffect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
           HazardEffect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
           IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
@@ -219,18 +219,18 @@ final class rg extends SingleChildWidget {
         HazardEffect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, VertexStreamLayout.field_e};
         IntrusiveDeque.field_d[2] = new String[]{GraphicsQuality.field_b, baa.field_a, AnimationSequence.field_a};
         HazardEffect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
-        IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
+        IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, AccountCreationDialog.field_hb, Player.field_s};
         IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
         HazardEffect.field_h[3] = new String[]{InvertOperator.field_o, CourseLayoutFactory.field_a, SwitchLinkList.field_d};
         HazardEffect.field_h[4] = new String[]{DisplaySettingsDialog.field_R, FadingDialog.field_y, QuickChatPhraseSource.field_d};
-        IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, PitModel.field_r};
+        IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, DialogButtonPainter.field_u, PitModel.field_r};
         HazardEffect.field_h[5] = new String[]{TreasureValuesOverlay.field_k, MazeComponent.field_G, du.field_b};
         IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
         HazardEffect.field_h[6] = new String[]{apa.field_b, SoftwareTransform3D.field_k, bq.field_e};
         IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
         IntrusiveDeque.field_d[8] = new String[]{LegacyOpenGlBloomEffect.field_u, OpenGlTexture3D.field_m, LegacyOpenGlCubeTexture.field_n};
         HazardEffect.field_h[7] = new String[]{ProceduralTexture.field_n, ld.field_d};
-        IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
+        IntrusiveDeque.field_d[9] = new String[]{DialogButtonPainter.field_n, nea.field_b, gga.field_L};
         HazardEffect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
         HazardEffect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
         IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
@@ -257,7 +257,7 @@ final class rg extends SingleChildWidget {
           var6 = new Sprite(this.child.field_m, this.child.field_p);
           OpenGlIndexArray.setRasterTarget(var6, (byte) 110);
           this.child.renderLayer(param2, 0, 0, param3);
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           var6.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_y);
           return;
         }
@@ -288,7 +288,7 @@ final class rg extends SingleChildWidget {
     }
 
     static {
-        field_A = new hra();
+        field_A = new ValidationOutcome();
         field_B = 0;
     }
 }

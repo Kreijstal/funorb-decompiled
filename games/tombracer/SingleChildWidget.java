@@ -381,7 +381,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           BufferedSocket.field_b.field_U = MaskBlendOperator.loadSpriteByName(param4, "lobby", "downbutton_mouseheld", 56);
           BufferedSocket.field_b.field_B = MaskBlendOperator.loadSpriteByName(param4, "lobby", "downbutton_disabled", 113);
           DateFieldsWidget.field_F = new VerticalScrollbar(0L, HiscoresScreen.field_s, BufferedSocket.field_b, ClientException.field_b, DirectByteStorage.field_h);
-          LegacyOpenGlWaterTextures.field_d = new hla(0L, (UiComponent) null, TombRacerShell.field_C, DateFieldsWidget.field_F, jk.field_g, (String) null, (String) null);
+          LegacyOpenGlWaterTextures.field_d = new TitledScrollPanel(0L, (UiComponent) null, TombRacerShell.field_C, DateFieldsWidget.field_F, jk.field_g, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

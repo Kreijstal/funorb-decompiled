@@ -77,7 +77,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           }
           if (SoftwareRenderTarget.field_a != -1) {
             var1_int = SoftwareRenderTarget.field_a;
-            jsa.a(false, -1);
+            FormFieldRow.a(false, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }
@@ -85,7 +85,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (gsa.field_y == wt.field_d) {
+          if (PlayerResultRow.field_y == wt.field_d) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -96,7 +96,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           if (param0 > -87) {
             field_u = (boolean[][]) null;
           }
-          if (gsa.field_y != LegacyOpenGlTexture.field_a) {
+          if (PlayerResultRow.field_y != LegacyOpenGlTexture.field_a) {
             stackIn_25_0 = -1;
             return stackIn_25_0;
           }

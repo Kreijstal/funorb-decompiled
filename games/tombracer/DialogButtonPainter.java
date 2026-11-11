@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td extends TextWidgetPainter {
+final class DialogButtonPainter extends TextWidgetPainter {
     private int field_t;
     private int field_p;
     private int field_s;
@@ -100,11 +100,11 @@ final class td extends TextWidgetPainter {
         }
     }
 
-    public td() {
+    public DialogButtonPainter() {
         this(2188450, 2591221, 9543);
     }
 
-    private td(int param0, int param1, int param2) {
+    private DialogButtonPainter(int param0, int param1, int param2) {
         this.field_p = param2;
         this.field_s = param1;
         this.field_o = MonochromeFillOperator.field_n;

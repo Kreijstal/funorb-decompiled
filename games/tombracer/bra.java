@@ -80,7 +80,7 @@ final class bra extends ResizingDialog implements ButtonListener {
             field_M = (String[]) null;
           }
           if (param2 == this.field_L) {
-            pg.b(false);
+            TermsLinksPanel.b(false);
             this.f(-25050);
             return;
           }
@@ -137,7 +137,7 @@ final class bra extends ResizingDialog implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param0, param2);
-          var4.field_r = (WidgetPainter) ((Object) new td());
+          var4.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
           var5 = this.field_p - 6;
           this.field_p = this.field_p + 38;
           var4.setBounds((byte) -31, -30 + this.field_m, 30, 15, var5);

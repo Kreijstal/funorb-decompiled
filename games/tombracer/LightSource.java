@@ -6,7 +6,7 @@ final class LightSource extends IntrusiveNode {
     static UiComponent field_h;
     private int x;
     private int field_l;
-    static it field_k;
+    static ValidationState field_k;
     private int field_p;
     private AnimatedLight animatedLight;
     private int y;
@@ -58,7 +58,7 @@ final class LightSource extends IntrusiveNode {
         if (param3 <= -33) {
           return -(var7 * var7 + var5 * var5 + var6 * var6 >> 2) + this.field_p;
         }
-        field_k = (it) null;
+        field_k = (ValidationState) null;
         return -(var7 * var7 + var5 * var5 + var6 * var6 >> 2) + this.field_p;
     }
 
@@ -70,15 +70,15 @@ final class LightSource extends IntrusiveNode {
         return this.animatedLight;
     }
 
-    final static mu findIgnoredByName(String param0, int param1) {
+    final static ContactListEntry findIgnoredByName(String param0, int param1) {
         String var2 = null;
-        mu var3 = null;
+        ContactListEntry var3 = null;
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
         CharSequence var7 = null;
         CharSequence var8 = null;
-        mu stackIn_14_0 = null;
+        ContactListEntry stackIn_14_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -94,7 +94,7 @@ final class LightSource extends IntrusiveNode {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (mu) (CoinItemComponent.field_G.get(-114, (long)var2.hashCode()));
+          var3 = (ContactListEntry) (CoinItemComponent.field_G.get(-114, (long)var2.hashCode()));
           var4 = -95 / ((param1 + 46) / 54);
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_tb);
@@ -106,7 +106,7 @@ final class LightSource extends IntrusiveNode {
               stackIn_14_0 = var3;
               return stackIn_14_0;
             }
-            var3 = (mu) (CoinItemComponent.field_G.nextWithSameKey((byte) 99));
+            var3 = (ContactListEntry) (CoinItemComponent.field_G.nextWithSameKey((byte) 99));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,7 +134,7 @@ final class LightSource extends IntrusiveNode {
           this.animatedLight.light.setColour(255, param1);
           return;
         }
-        field_k = (it) null;
+        field_k = (ValidationState) null;
         this.animatedLight.light.setColour(255, param1);
     }
 
@@ -217,7 +217,7 @@ final class LightSource extends IntrusiveNode {
           this.disabled = param0 ? true : false;
           return;
         }
-        field_k = (it) null;
+        field_k = (ValidationState) null;
         this.disabled = param0 ? true : false;
     }
 
@@ -271,6 +271,6 @@ final class LightSource extends IntrusiveNode {
 
     static {
         field_i = "Invite <%0> to this game";
-        field_k = new it();
+        field_k = new ValidationState();
     }
 }

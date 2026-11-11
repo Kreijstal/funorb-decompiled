@@ -77,18 +77,18 @@ final class ala extends GameScreen {
         boolean stackIn_86_6;
         int var4;
         HiscoresScreen.field_C = HiscoresScreen.field_C + 1;
-        bna.tickLobbyRemovalTimers((byte) 10);
+        PendingReply.tickLobbyRemovalTimers((byte) 10);
         if (null == C2SChooseRewardPacket.field_a) {
           var4 = 0;
           if (param2 == 15283) {
             if (param1) {
               stackIn_5_0 = true;
               stackIn_5_1 = 14;
-              stackIn_5_2 = pg.field_y;
+              stackIn_5_2 = TermsLinksPanel.field_y;
               stackIn_5_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
               stackIn_5_4 = 13;
               stackIn_5_5 = 61;
-              stackIn_6_6 = (50 >= ada.b(false)) ? false : true;
+              stackIn_6_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
               vha.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6, -1, 15, var4 != 0, 11, param1);
             }
           } else {
@@ -96,11 +96,11 @@ final class ala extends GameScreen {
             if (param1) {
               stackIn_20_0 = true;
               stackIn_20_1 = 14;
-              stackIn_20_2 = pg.field_y;
+              stackIn_20_2 = TermsLinksPanel.field_y;
               stackIn_20_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
               stackIn_20_4 = 13;
               stackIn_20_5 = 61;
-              stackIn_21_6 = (50 >= ada.b(false)) ? false : true;
+              stackIn_21_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
               vha.a(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_21_6, -1, 15, var4 != 0, 11, param1);
             }
           }
@@ -111,11 +111,11 @@ final class ala extends GameScreen {
               if (param1) {
                 stackIn_70_0 = true;
                 stackIn_70_1 = 14;
-                stackIn_70_2 = pg.field_y;
+                stackIn_70_2 = TermsLinksPanel.field_y;
                 stackIn_70_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
                 stackIn_70_4 = 13;
                 stackIn_70_5 = 61;
-                stackIn_71_6 = (50 >= ada.b(false)) ? false : true;
+                stackIn_71_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
                 vha.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, stackIn_70_4, stackIn_70_5, stackIn_71_6, -1, 15, var4 != 0, 11, param1);
               }
             } else {
@@ -123,11 +123,11 @@ final class ala extends GameScreen {
               if (param1) {
                 stackIn_85_0 = true;
                 stackIn_85_1 = 14;
-                stackIn_85_2 = pg.field_y;
+                stackIn_85_2 = TermsLinksPanel.field_y;
                 stackIn_85_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
                 stackIn_85_4 = 13;
                 stackIn_85_5 = 61;
-                stackIn_86_6 = (50 >= ada.b(false)) ? false : true;
+                stackIn_86_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
                 vha.a(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_85_4, stackIn_85_5, stackIn_86_6, -1, 15, var4 != 0, 11, param1);
               }
             }
@@ -150,11 +150,11 @@ final class ala extends GameScreen {
             if (param1) {
               stackIn_38_0 = true;
               stackIn_38_1 = 14;
-              stackIn_38_2 = pg.field_y;
+              stackIn_38_2 = TermsLinksPanel.field_y;
               stackIn_38_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
               stackIn_38_4 = 13;
               stackIn_38_5 = 61;
-              stackIn_39_6 = (50 >= ada.b(false)) ? false : true;
+              stackIn_39_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
               vha.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_38_5, stackIn_39_6, -1, 15, var4 != 0, 11, param1);
             }
           } else {
@@ -162,11 +162,11 @@ final class ala extends GameScreen {
             if (param1) {
               stackIn_53_0 = true;
               stackIn_53_1 = 14;
-              stackIn_53_2 = pg.field_y;
+              stackIn_53_2 = TermsLinksPanel.field_y;
               stackIn_53_3 = WallCrusherComponent.isMatchScreenActive((byte) -88);
               stackIn_53_4 = 13;
               stackIn_53_5 = 61;
-              stackIn_54_6 = (50 >= ada.b(false)) ? false : true;
+              stackIn_54_6 = (50 >= DateOfBirthPanel.b(false)) ? false : true;
               vha.a(stackIn_53_0, stackIn_53_1, stackIn_53_2, stackIn_53_3, stackIn_53_4, stackIn_53_5, stackIn_54_6, -1, 15, var4 != 0, 11, param1);
             }
           }

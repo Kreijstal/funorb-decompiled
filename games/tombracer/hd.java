@@ -22,7 +22,7 @@ final class hd {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (gsa.field_y == wt.field_d) {
+          if (PlayerResultRow.field_y == wt.field_d) {
             return null;
           }
           if (param0 <= 114) {
@@ -35,7 +35,7 @@ final class hd {
             return stackIn_11_0;
           }
           SnakePitModel.field_t = null;
-          wt.field_d = gsa.field_y;
+          wt.field_d = PlayerResultRow.field_y;
           uaa.field_a = param1;
           stackIn_9_0 = null;
           return (jua) (stackIn_9_0);

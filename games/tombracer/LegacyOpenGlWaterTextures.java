@@ -6,7 +6,7 @@ final class LegacyOpenGlWaterTextures {
     LegacyOpenGlTexture2D[] field_i;
     LegacyOpenGlTexture3D field_h;
     LegacyOpenGlTexture2D[] field_f;
-    static hla field_d;
+    static TitledScrollPanel field_d;
     LegacyOpenGlTexture3D field_a;
     static int field_b;
     static String field_e;
@@ -20,7 +20,7 @@ final class LegacyOpenGlWaterTextures {
 
     final static int getCanvasWidth(boolean param0) {
         if (param0) {
-          field_d = (hla) null;
+          field_d = (TitledScrollPanel) null;
           return mma.field_a;
         }
         return mma.field_a;

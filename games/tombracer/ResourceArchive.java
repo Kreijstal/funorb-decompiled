@@ -7,7 +7,7 @@ final class ResourceArchive {
     static String field_c;
     static SpriteData field_h;
     boolean field_g;
-    private dla field_i;
+    private ArchiveIndex field_i;
     static String field_e;
     static int field_k;
     static int field_b;

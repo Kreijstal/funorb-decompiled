@@ -87,7 +87,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     final void renderLayer(int param0, int param1, int param2, int param3) {
-        it var6;
+        ValidationState var6;
         int var9;
         int var10;
         int var13;
@@ -166,11 +166,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         int var11Lifetime2Lifetime1;
         int var12Lifetime1Lifetime1;
         int var12Lifetime2Lifetime1;
-        it var6Lifetime1;
-        it var6Lifetime2;
-        it var6Lifetime3;
+        ValidationState var6Lifetime1;
+        ValidationState var6Lifetime2;
+        ValidationState var6Lifetime3;
         String var5Lifetime1;
-        it var6Lifetime1Lifetime1;
+        ValidationState var6Lifetime1Lifetime1;
         var18 = null;
         var22 = null;
         var27 = null;
@@ -218,7 +218,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
             }
             var21.drawRotatedScaled(112, 144, var21.field_n << 4, var21.field_k << 4, -this.field_F << 10, 4096);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             this.field_H.drawAdditive(var9 - (var21.field_n >> 1), var10 - var21.field_k, 256);
             return;
           }
@@ -262,7 +262,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             }
           }
           var25.drawRotatedScaled(112, 144, var25.field_n << 4, var25.field_k << 4, -this.field_F << 10, 4096);
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           this.field_H.drawAdditive(var9Lifetime5 - (var25.field_n >> 1), var10Lifetime5 - var25.field_k, 256);
           return;
         }
@@ -303,7 +303,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
             }
             var30.drawRotatedScaled(112, 144, var30.field_n << 4, var30.field_k << 4, -this.field_F << 10, 4096);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             this.field_H.drawAdditive(var9Lifetime1 - (var30.field_n >> 1), var10Lifetime1 - var30.field_k, 256);
             return;
           }
@@ -347,7 +347,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             }
           }
           var34.drawRotatedScaled(112, 144, var34.field_n << 4, var34.field_k << 4, -this.field_F << 10, 4096);
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           this.field_H.drawAdditive(var9Lifetime1Lifetime1 - (var34.field_n >> 1), var10Lifetime1Lifetime1 - var34.field_k, 256);
           return;
         }
@@ -386,7 +386,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
             }
             var53.drawRotatedScaled(112, 144, var53.field_n << 4, var53.field_k << 4, -this.field_F << 10, 4096);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             this.field_H.drawAdditive(var9Lifetime2 - (var53.field_n >> 1), var10Lifetime2 - var53.field_k, 256);
             return;
           }
@@ -433,7 +433,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             }
           }
           var47.drawRotatedScaled(112, 144, var47.field_n << 4, var47.field_k << 4, -this.field_F << 10, 4096);
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           this.field_H.drawAdditive(var9Lifetime2Lifetime1 - (var47.field_n >> 1), var10Lifetime2Lifetime1 - var47.field_k, 256);
           return;
         }
@@ -474,7 +474,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             OpenGlIndexArray.setRasterTarget(this.field_H, (byte) 121);
           }
           var39.drawRotatedScaled(112, 144, var39.field_n << 4, var39.field_k << 4, -this.field_F << 10, 4096);
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           this.field_H.drawAdditive(var9Lifetime3 - (var39.field_n >> 1), var10Lifetime3 - var39.field_k, 256);
           return;
         }
@@ -518,7 +518,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           }
         }
         var43.drawRotatedScaled(112, 144, var43.field_n << 4, var43.field_k << 4, -this.field_F << 10, 4096);
-        pfa.popRasterState(1);
+        CourseMapWalker.popRasterState(1);
         this.field_H.drawAdditive(var9Lifetime4 - (var43.field_n >> 1), var10Lifetime4 - var43.field_k, 256);
         return;
     }

@@ -138,7 +138,7 @@ final class FullscreenConfirmationDialog extends ResizingDialog implements Butto
           this.field_L.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(TextureFormat.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(this.field_L, -1);
           this.field_N = this.addButton((WidgetListener) (this), 77, WeaveOperator.field_s);
-          this.field_M = this.addButton((WidgetListener) (this), 71, mha.field_F);
+          this.field_M = this.addButton((WidgetListener) (this), 71, ValidationStatusIcon.field_F);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "op.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -239,7 +239,7 @@ final class FullscreenConfirmationDialog extends ResizingDialog implements Butto
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param2, param0);
-          var4.field_r = (WidgetPainter) ((Object) new td());
+          var4.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
           var5 = -6 + this.field_p;
           this.field_p = this.field_p + 38;
           if (param1 <= 34) {

@@ -12,14 +12,14 @@ final class RasterStateFrame extends IntrusiveNode {
     static String field_j;
     int field_l;
 
-    final static hra validateEmailLocalPart(int param0, String param1) {
-        hra stackIn_4_0 = null;
-        hra stackIn_7_0 = null;
-        hra stackIn_11_0 = null;
+    final static ValidationOutcome validateEmailLocalPart(int param0, String param1) {
+        ValidationOutcome stackIn_4_0 = null;
+        ValidationOutcome stackIn_7_0 = null;
+        ValidationOutcome stackIn_11_0 = null;
         int stackIn_20_0 = 0;
-        hra stackIn_24_0 = null;
-        hra stackIn_38_0 = null;
-        hra stackIn_42_0 = null;
+        ValidationOutcome stackIn_24_0 = null;
+        ValidationOutcome stackIn_38_0 = null;
+        ValidationOutcome stackIn_42_0 = null;
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
@@ -37,7 +37,7 @@ final class RasterStateFrame extends IntrusiveNode {
         try {
           var2_int = param1.length();
           if (~var2_int == param0) {
-            stackIn_4_0 = is.field_wb;
+            stackIn_4_0 = NameEntryPopup.field_wb;
             return stackIn_4_0;
           }
           if (var2_int > 64) {

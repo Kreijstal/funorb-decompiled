@@ -45,7 +45,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
         field_d = null;
     }
 
-    abstract it computeState(int param0);
+    abstract ValidationState computeState(int param0);
 
     final static void a(boolean param0, int param1, int param2) {
         int var5 = 0;
@@ -65,7 +65,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
         }
     }
 
-    public final it getState(int param0) {
+    public final ValidationState getState(int param0) {
         if (param0 != -4666) {
           this.getMessage(82);
           if (this.isEmpty(true)) {

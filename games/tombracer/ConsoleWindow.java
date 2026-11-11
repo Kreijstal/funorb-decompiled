@@ -487,7 +487,7 @@ abstract class ConsoleWindow implements ShellListener {
         }
         this.field_h = this.field_h + 1;
         this.field_i.layoutFullScreen(83, param1);
-        this.field_a.updateScroll(param0, 0, this.field_k * 2 * pg.field_y, this.field_k);
+        this.field_a.updateScroll(param0, 0, this.field_k * 2 * TermsLinksPanel.field_y, this.field_k);
         this.field_o.handleMouseSelection((byte) 87);
     }
 

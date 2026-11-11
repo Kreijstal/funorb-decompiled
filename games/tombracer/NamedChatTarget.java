@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc extends ChatTarget {
+final class NamedChatTarget extends ChatTarget {
     private String field_g;
     private String field_f;
     static String field_d;
@@ -9,7 +9,7 @@ final class wc extends ChatTarget {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -78) {
-          wc.releaseStatics((byte) 127);
+          NamedChatTarget.releaseStatics((byte) 127);
           field_d = null;
           field_e = null;
           return;
@@ -37,7 +37,7 @@ final class wc extends ChatTarget {
         }
     }
 
-    wc(String param0, String param1) {
+    NamedChatTarget(String param0, String param1) {
         try {
           this.field_f = param1;
           this.field_g = param0;

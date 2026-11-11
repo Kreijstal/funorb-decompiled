@@ -50,7 +50,7 @@ final class lw {
           return;
         }
         if (!this.field_c) {
-          if (VerticalScrollbar.field_tb[hra.field_b]) {
+          if (VerticalScrollbar.field_tb[ValidationOutcome.field_b]) {
             this.field_d.play(0, false, 0, 24, true);
           } else {
             if (!this.field_c) {
@@ -58,7 +58,7 @@ final class lw {
                 this.field_d.play(0, false, 0, 1, true);
               }
             } else {
-              if (!VerticalScrollbar.field_tb[hra.field_b]) {
+              if (!VerticalScrollbar.field_tb[ValidationOutcome.field_b]) {
                 this.field_d.play(0, false, 0, 1, true);
               } else {
                 if (!this.field_b) {
@@ -69,9 +69,9 @@ final class lw {
           }
         } else {
           if (!this.field_b) {
-            if (!VerticalScrollbar.field_tb[hra.field_b]) {
+            if (!VerticalScrollbar.field_tb[ValidationOutcome.field_b]) {
               if (this.field_c &&
-                !VerticalScrollbar.field_tb[hra.field_b]) {
+                !VerticalScrollbar.field_tb[ValidationOutcome.field_b]) {
                 this.field_d.play(0, false, 0, 1, true);
               } else {
                 if (!this.field_b) {
@@ -87,7 +87,7 @@ final class lw {
                 this.field_d.play(0, false, 0, 1, true);
               }
             } else {
-              if (!VerticalScrollbar.field_tb[hra.field_b]) {
+              if (!VerticalScrollbar.field_tb[ValidationOutcome.field_b]) {
                 this.field_d.play(0, false, 0, 1, true);
               } else {
                 if (!this.field_b) {
@@ -97,7 +97,7 @@ final class lw {
             }
           }
         }
-        this.field_c = VerticalScrollbar.field_tb[hra.field_b];
+        this.field_c = VerticalScrollbar.field_tb[ValidationOutcome.field_b];
         this.field_b = true;
         if (this.field_c) {
           var2 = var2 << 14;

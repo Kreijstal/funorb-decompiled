@@ -533,7 +533,7 @@ final class PlayPhase extends MatchPhase {
                 var11_ref_StringLifetime4 = "";
               }
               ql.field_k.writeString(var11_ref_StringLifetime4, false);
-              bna.writeEncryptedBlock(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
+              PendingReply.writeEncryptedBlock(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
               ql.field_k.backpatchShortLength(ql.field_k.position - var10, (byte) -35);
             } else {
               jg.field_a.position = 0;
@@ -556,7 +556,7 @@ final class PlayPhase extends MatchPhase {
               ql.field_k.writeByte(16, 0);
               ql.field_k.position = ql.field_k.position + 1;
               var9 = ql.field_k.position;
-              bna.writeEncryptedBlock(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
+              PendingReply.writeEncryptedBlock(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
               ql.field_k.backpatchByteLength(ql.field_k.position - var9, (byte) -115);
             }
             bl.flushPacketBuffer(-1, -1);

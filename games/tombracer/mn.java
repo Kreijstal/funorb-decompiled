@@ -47,12 +47,12 @@ final class mn extends TextFieldValidator {
         }
     }
 
-    final it validateText(byte param0, String param1) {
+    final ValidationState validateText(byte param0, String param1) {
         AvailabilityQuery var3 = null;
         RuntimeException var3_ref = null;
-        it stackIn_3_0 = null;
-        it stackIn_8_0 = null;
-        it stackIn_13_0 = null;
+        ValidationState stackIn_3_0 = null;
+        ValidationState stackIn_8_0 = null;
+        ValidationState stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

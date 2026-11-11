@@ -81,7 +81,7 @@ final class dh {
           var41 = var49;
           var8 = var41;
           var64 = new int[param3.field_A];
-          var63 = ada.field_y;
+          var63 = DateOfBirthPanel.field_y;
           var62 = DirectByteStorage.field_i;
           var61 = SoftReferenceCache.field_d;
           if (param7 != -23) {
@@ -119,19 +119,19 @@ final class dh {
             var15Lifetime1 = param3.field_B[var14Lifetime1];
             var16 = param3.field_w[var14Lifetime1];
             var17 = param3.field_f[var14Lifetime1];
-            if (ada.field_y.length > param3.field_C[var14Lifetime1]) {
+            if (DateOfBirthPanel.field_y.length > param3.field_C[var14Lifetime1]) {
               stackIn_26_0 = param3.field_C[var14Lifetime1];
             } else {
               stackIn_26_0 = -1;
             }
             var18 = stackIn_26_0;
-            if (ada.field_y.length <= param3.field_s[var14Lifetime1]) {
+            if (DateOfBirthPanel.field_y.length <= param3.field_s[var14Lifetime1]) {
               stackIn_29_0 = -1;
             } else {
               stackIn_29_0 = param3.field_s[var14Lifetime1];
             }
             var19 = stackIn_29_0;
-            if (param3.field_y[var14Lifetime1] < ada.field_y.length) {
+            if (param3.field_y[var14Lifetime1] < DateOfBirthPanel.field_y.length) {
               stackIn_32_0 = param3.field_y[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;

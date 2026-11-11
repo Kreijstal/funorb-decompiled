@@ -9,7 +9,7 @@ final class fca {
 
     final static void a(boolean param0, int param1) {
         NodeHashTableIterator.a(-1, param0);
-        tc.drawUiOverlays(param0, 0);
+        IdChatTarget.drawUiOverlays(param0, 0);
         if (param1 != 7) {
           fca.releaseStatics(-109);
         }

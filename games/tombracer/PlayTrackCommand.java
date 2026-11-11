@@ -580,7 +580,7 @@ final class PlayTrackCommand extends ConsoleMethod {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = new ConsoleValue(rua.playTrackByName((String) (param0[0].field_d), -62));
+            stackIn_4_0 = new ConsoleValue(AccountCreationDialog.playTrackByName((String) (param0[0].field_d), -62));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

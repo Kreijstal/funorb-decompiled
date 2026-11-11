@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mha extends FocusableWidget {
+final class ValidationStatusIcon extends FocusableWidget {
     static long field_D;
     private ValidationSource field_z;
     private int field_A;
@@ -35,7 +35,7 @@ final class mha extends FocusableWidget {
         }
     }
 
-    mha(ValidationSource param0) {
+    ValidationStatusIcon(ValidationSource param0) {
         try {
           this.field_z = param0;
         } catch (RuntimeException runtimeException) {
@@ -58,7 +58,7 @@ final class mha extends FocusableWidget {
         }
         int var5 = (this.field_m >> 1) + this.field_i + param0;
         int var6 = (this.field_p >> 1) + param1 + this.field_n;
-        it var8 = this.field_z.getState(-4666);
+        ValidationState var8 = this.field_z.getState(-4666);
         if (BevelOperator.field_p == var8) {
           var15 = CharacterChoiceFactory.field_b[0];
           var9 = var15.field_n << 1;
@@ -67,7 +67,7 @@ final class mha extends FocusableWidget {
             ReflectionCheck.field_l = new Sprite(var9, var10);
             OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             ReflectionCheck.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
@@ -75,7 +75,7 @@ final class mha extends FocusableWidget {
             ReflectionCheck.field_l = new Sprite(var9, var10);
             OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             ReflectionCheck.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
@@ -83,14 +83,14 @@ final class mha extends FocusableWidget {
             ReflectionCheck.field_l = new Sprite(var9, var10);
             OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             ReflectionCheck.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
           OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 95);
           SoftwareRasterizer.clear();
           var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           ReflectionCheck.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
           return;
         }
@@ -102,7 +102,7 @@ final class mha extends FocusableWidget {
             ReflectionCheck.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
             OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             ReflectionCheck.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
@@ -110,7 +110,7 @@ final class mha extends FocusableWidget {
             ReflectionCheck.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
             OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             ReflectionCheck.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
@@ -118,14 +118,14 @@ final class mha extends FocusableWidget {
             ReflectionCheck.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
             OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
-            pfa.popRasterState(1);
+            CourseMapWalker.popRasterState(1);
             ReflectionCheck.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
           OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 95);
           SoftwareRasterizer.clear();
           var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
-          pfa.popRasterState(1);
+          CourseMapWalker.popRasterState(1);
           ReflectionCheck.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
           return;
         }

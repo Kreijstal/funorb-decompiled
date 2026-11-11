@@ -26,7 +26,7 @@ final class TooltipRenderer {
     int field_t;
 
     final void a(byte param0) {
-        pfa.popRasterState(1);
+        CourseMapWalker.popRasterState(1);
         if (param0 < 22) {
           TooltipRenderer.releaseStatics(-128);
         }
@@ -266,7 +266,7 @@ final class TooltipRenderer {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.createStateLayer(4, (byte) 127).a(-2, true).setSprites(2, var5);
-          var4.createStateLayer(5, (byte) 107).setSprites(2, jsa.b(65793, 2, 0, 0, 0)).a(-2, true).withTextColour(-1, -2147483648);
+          var4.createStateLayer(5, (byte) 107).setSprites(2, FormFieldRow.b(65793, 2, 0, 0, 0)).a(-2, true).withTextColour(-1, -2147483648);
           this.field_u = (WidgetPainter) ((Object) var4);
           var6 = new StatefulWidgetPainter(var4, true);
           var6.field_l = 0;

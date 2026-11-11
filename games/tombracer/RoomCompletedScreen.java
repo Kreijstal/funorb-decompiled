@@ -132,7 +132,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           if (null != NodeHashTable.field_d) {
             ql.field_k.writeVersionedString(NodeHashTable.field_d, (byte) 0);
           }
-          bna.writeEncryptedBlock(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
+          PendingReply.writeEncryptedBlock(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
           ql.field_k.backpatchShortLength(ql.field_k.position - var5_int, (byte) 114);
           bl.flushPacketBuffer(-1, -1);
           return;

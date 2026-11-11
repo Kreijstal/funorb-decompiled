@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tc extends ChatTarget {
+class IdChatTarget extends ChatTarget {
     private String field_e;
     private long field_g;
     static SecondaryNodeHashTable field_d;
@@ -57,7 +57,7 @@ class tc extends ChatTarget {
 
     public static void releaseStatics(int param0) {
         if (param0 != 17129) {
-          tc.drawUiOverlays(false, 119);
+          IdChatTarget.drawUiOverlays(false, 119);
           field_d = null;
           field_f = null;
           return;
@@ -102,7 +102,7 @@ class tc extends ChatTarget {
         PowerUpItemBehaviour.r(-93);
     }
 
-    tc(long param0, String param1) {
+    IdChatTarget(long param0, String param1) {
         try {
           this.field_e = param1;
           this.field_g = param0;

@@ -42,7 +42,7 @@ final class SweepRotateLocomotor extends Locomotor {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int stackIn_11_0 = 0;
-        mu stackIn_55_0 = null;
+        ContactListEntry stackIn_55_0 = null;
         RuntimeException decompiledCaughtException = null;
         BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
@@ -52,15 +52,15 @@ final class SweepRotateLocomotor extends Locomotor {
         int var4 = 0;
         String var4_ref_String = null;
         String var5 = null;
-        mu var6 = null;
-        mu var7 = null;
+        ContactListEntry var6 = null;
+        ContactListEntry var7 = null;
         String var7_ref = null;
         String var8 = null;
         int var9 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
-        mu var6Lifetime1;
+        ContactListEntry var6Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           var1 = WeaveOperator.field_q;
@@ -93,7 +93,7 @@ final class SweepRotateLocomotor extends Locomotor {
               }
             }
             if (null == var6) {
-              var6 = new mu();
+              var6 = new ContactListEntry();
               CoinItemComponent.field_G.put(param0 ^ -14181, var6, (long)var8.hashCode());
               fieldTemp$1 = MonochromeRowCacheEntry.field_k;
               MonochromeRowCacheEntry.field_k = MonochromeRowCacheEntry.field_k + 1;
@@ -151,7 +151,7 @@ final class SweepRotateLocomotor extends Locomotor {
             }
           }
           if (var6Lifetime1 == null) {
-            var6Lifetime1 = new mu();
+            var6Lifetime1 = new ContactListEntry();
             TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)OpenGlTexture3D.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$0 = ii.field_a;
             ii.field_a = ii.field_a + 1;
@@ -165,7 +165,7 @@ final class SweepRotateLocomotor extends Locomotor {
           var6Lifetime1.field_Cb = (String) (var3Lifetime1);
           var6Lifetime1.field_tb = var4_ref_StringLifetime1;
           var6Lifetime1.unlink(70);
-          var7 = (mu) (PlayingSound.field_f.first(-80));
+          var7 = (ContactListEntry) (PlayingSound.field_f.first(-80));
           scanLoop1: while (true) {
             if (null != var7) {
               stackIn_55_0 = var7;
@@ -173,7 +173,7 @@ final class SweepRotateLocomotor extends Locomotor {
                 break scanLoop1;
               }
               if (ol.comesBefore(stackIn_55_0, true, var6Lifetime1)) {
-                var7 = (mu) (PlayingSound.field_f.next(param0 - 14058));
+                var7 = (ContactListEntry) (PlayingSound.field_f.next(param0 - 14058));
                 continue;
               }
             }

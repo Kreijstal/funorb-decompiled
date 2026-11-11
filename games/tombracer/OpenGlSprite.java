@@ -14,7 +14,7 @@ final class OpenGlSprite extends ToolkitSprite {
     private int field_m;
     static String field_k;
     static String field_l;
-    static hla field_j;
+    static TitledScrollPanel field_j;
 
     public static void releaseStatics(boolean param0) {
         field_j = null;

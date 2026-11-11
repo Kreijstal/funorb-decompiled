@@ -82,7 +82,7 @@ final class HardwareSprite extends ToolkitSprite {
         var27.setComponents(0.0f, 0.0f, (byte) 102, 0.0f, 0.0f, -param0 + param2, -param0 + param4, -param1 + param3, 1.0f, -param1 + param5);
         var27.translate(param1, -108, param0, 0.0f);
         var12.setScale(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(62, (float)this.field_k));
-        this.field_c.setTextureTransformMode(pfa.field_i, false);
+        this.field_c.setTextureTransformMode(CourseMapWalker.field_i, false);
         this.field_c.modelTransformChanged(-1662);
         this.field_c.drawUnitQuad(2);
         this.field_c.resetTextureTransform((byte) -60);
@@ -110,7 +110,7 @@ final class HardwareSprite extends ToolkitSprite {
         var8.setScale(0.0f, (float)this.field_l, false, (float)this.field_k);
         var8.translate(param0, param1, 0);
         var7.setScale(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(93, (float)this.field_k));
-        this.field_c.setTextureTransformMode(pfa.field_i, false);
+        this.field_c.setTextureTransformMode(CourseMapWalker.field_i, false);
         this.field_c.modelTransformChanged(-1662);
         this.field_c.drawUnitQuad(2);
         this.field_c.resetTextureTransform((byte) -58);
@@ -223,7 +223,7 @@ final class HardwareSprite extends ToolkitSprite {
         }
         var11.setScale(0.0f, (float)param2, false, (float)param3);
         var11.translate(param0, param1, 0);
-        this.field_c.setTextureTransformMode(pfa.field_i, false);
+        this.field_c.setTextureTransformMode(CourseMapWalker.field_i, false);
         this.field_c.modelTransformChanged(-1662);
         this.field_c.drawUnitQuad(2);
         this.field_c.resetTextureTransform((byte) 84);

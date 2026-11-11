@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dla {
+final class ArchiveIndex {
     int field_d;
     int field_l;
     int[] field_f;
@@ -301,14 +301,14 @@ final class dla {
     final static void drawDimmedOverlay(int param0) {
         if (vo.field_b) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
-          rua.field_gb.drawFullScreen(36, false);
+          AccountCreationDialog.field_gb.drawFullScreen(36, false);
         }
         if (param0 != 23713) {
-          dla.getLoadingPercent(120);
+          ArchiveIndex.getLoadingPercent(120);
         }
     }
 
-    dla(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
           this.field_d = MusicPlayer.computeCrc32(param0.length, param0, (byte) -124);

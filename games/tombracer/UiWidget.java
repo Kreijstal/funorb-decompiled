@@ -514,7 +514,7 @@ class UiWidget extends IntrusiveNode {
           this.refreshLayout((byte) -121);
           return param1;
         }
-        if (0 == pg.field_y) {
+        if (0 == TermsLinksPanel.field_y) {
           if (PlayerModel.field_b != 0) {
             if (!this.handlePointerPress(97, param2, param0, RidgedNoise3D.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
               if (var5 == 0) {
@@ -641,7 +641,7 @@ class UiWidget extends IntrusiveNode {
           this.refreshLayout((byte) -121);
           return param1;
         }
-        this.handleMouseWheel(pg.field_y, param0, param2, GridWidgetContainer.field_B, this, AgeValidator.field_j, -1);
+        this.handleMouseWheel(TermsLinksPanel.field_y, param0, param2, GridWidgetContainer.field_B, this, AgeValidator.field_j, -1);
         if (PlayerModel.field_b != 0) {
           if (!this.handlePointerPress(97, param2, param0, RidgedNoise3D.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
             this.clearKeyboardFocus((byte) -98);

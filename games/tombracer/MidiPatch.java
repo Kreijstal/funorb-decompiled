@@ -112,7 +112,7 @@ final class MidiPatch extends IntrusiveNode {
         }
         if (InvisibleTouchSwitchComponent.field_J != null) {
           if (!InvisibleTouchSwitchComponent.field_J.ensureIndex(-60)) {
-            return hra.field_c;
+            return ValidationOutcome.field_c;
           }
           return CrossedSineBandsOperator.field_s;
         }

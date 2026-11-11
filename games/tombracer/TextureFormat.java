@@ -208,7 +208,7 @@ final class TextureFormat {
                 var17 = param2[11];
                 var18 = 0;
                 while (!(var18 >= param0.field_A)) {
-                  stackIn_69_0 = ~ada.field_y.length;
+                  stackIn_69_0 = ~DateOfBirthPanel.field_y.length;
                   stackIn_69_1 = ~var18;
                   if (var30 != 0) {
                     break scanLoop1;
@@ -219,7 +219,7 @@ final class TextureFormat {
                   var19 = param0.field_k[var18];
                   var20 = param0.field_c[var18];
                   var21Lifetime2 = param0.field_r[var18];
-                  ada.field_y[var18] = var19 * var9 + var20 * var12 + var21Lifetime2 * var15 >> 16;
+                  DateOfBirthPanel.field_y[var18] = var19 * var9 + var20 * var12 + var21Lifetime2 * var15 >> 16;
                   DirectByteStorage.field_i[var18] = var19 * var10 + (var13 * var20 + var21Lifetime2 * var16) >> 16;
                   SoftReferenceCache.field_d[var18] = var21Lifetime2 * var17 + var14 * var20 + var19 * var11 >> 16;
                   var18++;

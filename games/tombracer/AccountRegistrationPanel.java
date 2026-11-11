@@ -59,7 +59,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     }
 
     private final int addLabeledField(UiWidget param0, int param1, int param2, byte param3, String param4) {
-        jsa var6 = null;
+        FormFieldRow var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -70,7 +70,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new jsa(20, param1, param2 + 120, 25, param0, false, 120, 3, KeySwitchComponent.field_J, 16777215, param4);
+          var6 = new FormFieldRow(20, param1, param2 + 120, 25, param0, false, 120, 3, KeySwitchComponent.field_J, 16777215, param4);
           this.addChild(var6, -1);
           if (param3 >= 33) {
             stackIn_4_0 = var6.field_p;
@@ -184,7 +184,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_C.setValidationSource(-13861, new MatchingTextValidator(this.field_C, this.field_E));
         this.field_I.setValidationSource(-13861, new AgeValidator(this.field_I));
         this.field_F.field_y = false;
-        this.field_F.field_r = (WidgetPainter) ((Object) new td());
+        this.field_F.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
         this.field_B.field_r = (WidgetPainter) ((Object) new kaa());
         this.field_G.field_r = (WidgetPainter) ((Object) new hga(10000536));
         hga dupTemp$0 = new hga(10000536);
@@ -203,7 +203,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         var3 = var3 + (this.addHelpField(WaypointPath.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
         var3 = var3 + (this.addHelpField(CrusherBehaviour.field_r, GraphicsHeap.field_f, this.field_G, -3, 170, var3) + 5);
         var3 = var3 + this.addValidatedField(this.field_I, var3, (byte) 99, ToolkitInstance.field_g, 170);
-        jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, BlendModeOperator.field_o, 11579568, OpenGlSprite.field_l);
+        FormFieldRow var4 = new FormFieldRow(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, BlendModeOperator.field_o, 11579568, OpenGlSprite.field_l);
         this.addChild(var4, -1);
         var3 = var3 + var4.field_p;
         TextWidgetPainter var5 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
@@ -239,7 +239,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     private final int addFieldWithHelp(int param0, int param1, UiWidget param2, int param3, int param4, String param5, String param6) {
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
-        jsa var10 = null;
+        FormFieldRow var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -251,7 +251,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new jsa(20, param0, param3 + 120, 25, param2, false, 120, 3, KeySwitchComponent.field_J, 16777215, param6);
+          var10 = new FormFieldRow(20, param0, param3 + 120, 25, param2, false, 120, 3, KeySwitchComponent.field_J, 16777215, param6);
           this.addChild(var10, -1);
           var9 = new ValidationMessageWidget(((ValidationProvider) ((Object) param2)).getValidationSource((byte) 120), param5, 126, var10.field_p + param0, param3 + 50, param4);
           var9.field_h = (WidgetListener) (this);
@@ -361,7 +361,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     private final boolean validateField(byte param0, ValidationProvider param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        it var4 = null;
+        ValidationState var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -555,8 +555,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
 
     private final int addValidatedField(UiWidget param0, int param1, byte param2, String param3, int param4) {
         RuntimeException var6 = null;
-        mha var7 = null;
-        jsa var8 = null;
+        ValidationStatusIcon var7 = null;
+        FormFieldRow var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -565,12 +565,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new jsa(20, param1, 120 + param4, 25, param0, false, 120, 3, KeySwitchComponent.field_J, 16777215, param3);
+          var8 = new FormFieldRow(20, param1, 120 + param4, 25, param0, false, 120, 3, KeySwitchComponent.field_J, 16777215, param3);
           this.addChild(var8, -1);
           if (param2 < 51) {
             field_w = (SoundEventPlayer) null;
           }
-          var7 = new mha(((ValidationProvider) ((Object) param0)).getValidationSource((byte) 106));
+          var7 = new ValidationStatusIcon(((ValidationProvider) ((Object) param0)).getValidationSource((byte) 106));
           this.addChild(var7, -1);
           var7.setBounds((byte) -31, 15, 15, 3 + (var8.field_m + var8.field_i), var8.field_n + (var8.field_p - 15 >> 1));
           stackIn_3_0 = var8.field_p;

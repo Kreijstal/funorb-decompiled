@@ -54,7 +54,7 @@ final class WaypointPath {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           var3_int = ApproachPlayerLocomotor.field_t;
-          rua.field_gb = new UiComponent(0L, (UiComponent) null);
+          AccountCreationDialog.field_gb = new UiComponent(0L, (UiComponent) null);
           if (param1 == null) {
             var10 = (Throwable) null;
             ClipStack.reportClientError("QC1", (byte) 123, (Throwable) null);
@@ -85,7 +85,7 @@ final class WaypointPath {
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
           cia.field_g = GameFontMetrics.createQuickChatMenu(true, BoulderComponent.field_M, MembersUpsellMenu.field_w, var4, tg.field_c);
-          rua.field_gb.field_J = new IntrusiveDeque();
+          AccountCreationDialog.field_gb.field_J = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

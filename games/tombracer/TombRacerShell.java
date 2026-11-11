@@ -38,7 +38,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
           this.c(true);
         } else {
           pka.a(false);
-          fga.drawFramebufferToCanvas(0, false, 0, var2);
+          LevelSelectOverlay.drawFramebufferToCanvas(0, false, 0, var2);
         }
     }
 
@@ -288,7 +288,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
         }
         this.processIncomingPackets(97);
         if (!lla.field_b) {
-          tc.a(pg.field_y, -2886);
+          IdChatTarget.a(TermsLinksPanel.field_y, -2886);
           if (OpenGlCubeTexture.field_l.loadStep(-4171)) {
             OpenGlCubeTexture.field_l.finishLoading((byte) -49);
             lla.field_b = true;

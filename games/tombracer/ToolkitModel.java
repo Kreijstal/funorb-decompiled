@@ -491,7 +491,7 @@ abstract class ToolkitModel {
         if (TextureOperator.field_l != null) {
           TextureOperator.field_l.dismiss((byte) -7);
         }
-        PushableMountComponent.field_F = new efa();
+        PushableMountComponent.field_F = new DisplayNameForm();
         um.field_l.transitionToContent(100, PushableMountComponent.field_F);
     }
 

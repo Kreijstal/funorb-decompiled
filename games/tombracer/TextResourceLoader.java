@@ -65,7 +65,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 119, "login_gameupdated");
                 if (var2 != null) {
-                  wq.field_a = jaa.decodeText((byte) 44, var2);
+                  MovementHintPanel.field_a = jaa.decodeText((byte) 44, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -19, "create_unable");
                 if (null != var2) {
@@ -441,7 +441,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -90, "mu_chat_pm_show_all");
                 if (null != var2) {
-                  jsa.field_z = jaa.decodeText((byte) 50, var2);
+                  FormFieldRow.field_z = jaa.decodeText((byte) 50, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -62, "mu_chat_pm_friends_only");
                 if (null != var2) {
@@ -457,7 +457,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -97, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
-                  mu.field_Bb = jaa.decodeText((byte) 81, var2);
+                  ContactListEntry.field_Bb = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 115, "your_rating_is_x");
                 if (var2 != null) {
@@ -465,7 +465,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -14, "you_are_on_x_server");
                 if (var2 != null) {
-                  uba.field_h = jaa.decodeText((byte) 54, var2);
+                  DateValidationSource.field_h = jaa.decodeText((byte) 54, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -84, "rated_game");
                 if (null != var2) {
@@ -577,7 +577,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 111, "reject");
                 if (var2 != null) {
-                  sv.field_q = jaa.decodeText((byte) 89, var2);
+                  MainMenuScreen.field_q = jaa.decodeText((byte) 89, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -15, "invite");
                 if (var2 != null) {
@@ -753,7 +753,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 125, "thisisrunescapeclan");
                 if (var2 != null) {
-                  jsa.field_y = jaa.decodeText((byte) 125, var2);
+                  FormFieldRow.field_y = jaa.decodeText((byte) 125, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -126, "thisisrunescapeclan_notowner");
                 if (null != var2) {
@@ -817,7 +817,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -63, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
-                  td.field_q = jaa.decodeText((byte) 110, var2);
+                  DialogButtonPainter.field_q = jaa.decodeText((byte) 110, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -99, "gameopt_youneedratedgames");
                 if (null != var2) {
@@ -987,7 +987,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 105, "rule_2_1");
                 if (var2 != null) {
-                  rua.field_jb = jaa.decodeText((byte) 38, var2);
+                  AccountCreationDialog.field_jb = jaa.decodeText((byte) 38, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -116, "rule_2_2");
                 if (var2 != null) {
@@ -1961,7 +1961,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -96, "menu");
                 if (null != var2) {
-                  fga.field_a = jaa.decodeText((byte) 74, var2);
+                  LevelSelectOverlay.field_a = jaa.decodeText((byte) 74, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 125, "selectlevel");
                 if (null != var2) {
@@ -2033,7 +2033,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 115, "prev");
                 if (var2 != null) {
-                  pfa.field_a = jaa.decodeText((byte) 86, var2);
+                  CourseMapWalker.field_a = jaa.decodeText((byte) 86, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -70, "next");
                 if (null != var2) {
@@ -2253,7 +2253,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 122, "notyetachieved");
                 if (var2 != null) {
-                  pg.field_x = jaa.decodeText((byte) 97, var2);
+                  TermsLinksPanel.field_x = jaa.decodeText((byte) 97, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 118, "achieved");
                 if (null != var2) {
@@ -2651,7 +2651,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 121, "fs_button_cancel");
                 if (var2 != null) {
-                  mha.field_F = jaa.decodeText((byte) 102, var2);
+                  ValidationStatusIcon.field_F = jaa.decodeText((byte) 102, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -72, "fs_accept_aftercancel");
                 if (null != var2) {
@@ -3050,7 +3050,7 @@ final class TextResourceLoader extends eta {
 
     final static void b(int param0) {
         try {
-          jsa.a(false, 4);
+          FormFieldRow.a(false, 4);
           int var1_int = 74 / ((param0 + 31) / 39);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jga.C(" + param0 + ')');
