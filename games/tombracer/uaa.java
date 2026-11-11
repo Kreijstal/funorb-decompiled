@@ -3,7 +3,7 @@
  */
 final class uaa {
     static String field_d;
-    static jea field_b;
+    static UiComponent field_b;
     static String field_a;
     static String field_c;
 

@@ -190,7 +190,7 @@ final class SnakePitBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = (aj) (al.field_g.first(-80));
+          var4 = (aj) (IntNode.field_g.first(-80));
           var1 = var4;
           if (var1 == null) {
             return false;

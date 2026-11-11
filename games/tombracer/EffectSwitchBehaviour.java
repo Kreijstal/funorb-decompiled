@@ -71,15 +71,15 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final void a(boolean param0, int param1, byte param2) {
+    final void setTriggeringType(boolean param0, int param1, byte param2) {
         boolean discarded$0 = false;
         if (param2 >= -119) {
-          discarded$0 = this.a(true, -31);
+          discarded$0 = this.isTriggeringType(true, -31);
         }
         this.field_u.set(param1, -17075, param0);
     }
 
-    private final boolean a(boolean param0, int param1) {
+    private final boolean isTriggeringType(boolean param0, int param1) {
         if (!param0) {
           this.tick(85);
         }
@@ -185,7 +185,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         RuntimeException decompiledCaughtException = null;
         try {
           var7_int = -56 % ((62 - param4) / 52);
-          stackIn_1_0 = this.a((byte) 14, param2);
+          stackIn_1_0 = this.reactToEffect((byte) 14, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,7 +214,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           if (param0 != 25940) {
             this.field_w = 2;
           }
-          stackIn_3_0 = this.a((byte) 14, param2);
+          stackIn_3_0 = this.reactToEffect((byte) 14, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -236,7 +236,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    private final int a(byte param0, Effect param1) {
+    private final int reactToEffect(byte param0, Effect param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -253,7 +253,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
             return stackIn_2_0;
           }
           var3_int = param1.type;
-          if (this.a(true, var3_int)) {
+          if (this.isTriggeringType(true, var3_int)) {
             this.field_p = 3;
             this.field_s = this.field_s + param1.size;
             stackIn_5_0 = param1.size;
@@ -315,7 +315,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         this.field_t.set(param1, -17075, param0);
         if (param2 > -32) {
           Effect var5 = (Effect) null;
-          discarded$0 = this.a((byte) -27, (Effect) null);
+          discarded$0 = this.reactToEffect((byte) -27, (Effect) null);
         }
     }
 
@@ -406,7 +406,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -85) {
-            stackIn_4_0 = this.a((byte) 14, param1);
+            stackIn_4_0 = this.reactToEffect((byte) 14, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = 59;

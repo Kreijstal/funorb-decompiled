@@ -18,7 +18,7 @@ final class Weapon {
     int field_k;
     private int cooldown;
     int field_d;
-    int field_r;
+    int typeId;
     int ammo;
     int field_b;
     private boolean field_e;
@@ -44,10 +44,10 @@ final class Weapon {
         return this.field_d;
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void encode(BitPacketBuffer param0, byte param1) {
         boolean discarded$0 = false;
         try {
-          param0.writeBits((byte) -127, this.field_r, 5);
+          param0.writeBits((byte) -127, this.typeId, 5);
           if (param1 <= 3) {
             discarded$0 = this.hasUnlimitedAmmo((byte) 22);
           }
@@ -83,7 +83,7 @@ final class Weapon {
         var3Lifetime1 = -22 / ((46 - param0) / 36);
     }
 
-    final void c(int param0) {
+    final void tick(int param0) {
         if (this.cooldown > 0) {
           this.cooldown = this.cooldown - 1;
         }
@@ -93,7 +93,7 @@ final class Weapon {
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void setCooldown(int param0, boolean param1) {
         if (param1) {
           this.effect = (Effect) null;
           this.cooldown = param0;
@@ -102,7 +102,7 @@ final class Weapon {
         this.cooldown = param0;
     }
 
-    final boolean a(int param0) {
+    final boolean hasAmmo(int param0) {
         if (param0 != 12111) {
           this.effect = (Effect) null;
           if (!this.hasUnlimitedAmmo((byte) 125)) {
@@ -119,14 +119,14 @@ final class Weapon {
         return true;
     }
 
-    final Weapon e(int param0) {
+    final Weapon createCopy(int param0) {
         if (param0 != -1) {
           return (Weapon) null;
         }
-        return TextureOperator.a(this.field_r, -1);
+        return TextureOperator.a(this.typeId, -1);
     }
 
-    final boolean a(int param0, int param1, WorldBody param2, int param3, int param4, Room param5, int param6, int param7, int param8, boolean param9) {
+    final boolean fire(int param0, int param1, WorldBody param2, int param3, int param4, Room param5, int param6, int param7, int param8, boolean param9) {
         int var16 = 0;
         Projectile stackIn_31_0 = null;
         boolean stackIn_32_1 = false;
@@ -155,12 +155,12 @@ final class Weapon {
         var26 = TombRacer.field_G ? 1 : 0;
         try {
           if (0 >= this.cooldown &&
-            this.a(12111)) {
+            this.hasAmmo(12111)) {
             var11_int = MouseInputHandler.sin2048((byte) 122, param0 >> 2);
             if (param9) {
               this.field_w = 123;
             }
-            var12 = bua.cos2048(0, param0 >> 2);
+            var12 = ModelAnimator.cos2048(0, param0 >> 2);
             var13 = param3 + gqa.a(var11_int, (byte) 24, param8);
             var14 = param4 + gqa.a(var12, (byte) 24, param8);
             if (!this.field_m) {
@@ -174,7 +174,7 @@ final class Weapon {
                 var17 = var17 + (var15.nextBounded(this.field_s, 0) - this.field_s / 2);
               }
               var18 = MouseInputHandler.sin2048((byte) 110, var17 >> 2);
-              var19 = bua.cos2048(0, var17 >> 2);
+              var19 = ModelAnimator.cos2048(0, var17 >> 2);
               var20 = this.field_n;
               if (this.field_w > 0) {
                 var20 = var20 + var15.nextBounded(this.field_w, 0);

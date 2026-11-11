@@ -18,28 +18,28 @@ final class re {
         SceneLight.field_i = SoftwareRasterizer.width;
         NodeHashTable.a(16);
         oca.field_b.a(0, 0, 20, nra.field_a.field_G, -2 + (-40 + nra.field_a.field_t));
-        PerlinNoise2D.field_t.a(hk.field_e.field_G, di.field_a, param0 + 5264, 0, 0);
+        PerlinNoise2D.field_t.setBounds(hk.field_e.field_G, di.field_a, param0 + 5264, 0, 0);
         int var1 = 2 + di.field_a;
-        RasterShape.field_e.a(hk.field_e.field_G, hk.field_e.field_t - (UnlockOverlay.field_p ? var1 : 0), -23776, !UnlockOverlay.field_p ? 0 : var1, 0);
+        RasterShape.field_e.setBounds(hk.field_e.field_G, hk.field_e.field_t - (UnlockOverlay.field_p ? var1 : 0), -23776, !UnlockOverlay.field_p ? 0 : var1, 0);
         GameFont.a(false);
-        ImageProducerRasterBuffer.field_j.a(nra.field_a.field_G, 40, -23776, nra.field_a.field_t - 40, 0);
-        C2SChooseCharacterPacket.field_a.a(OpenGlToolkit.field_fd.field_G, 30, -23776, 0, 0);
-        Obstacle.field_s.a(OpenGlToolkit.field_fd.field_G, OpenGlToolkit.field_fd.field_t - 40 - 2 - 30, param0 + 5264, 30, 0);
-        gta.field_b.a(68, 30, -23776, 5, 5);
-        RandomBrickOperator.field_r.a(78, 30, -23776, 5, 75);
-        RotateLocomotor.field_o.a(48, 30, -23776, 5, 155);
+        ImageProducerRasterBuffer.field_j.setBounds(nra.field_a.field_G, 40, -23776, nra.field_a.field_t - 40, 0);
+        C2SChooseCharacterPacket.field_a.setBounds(OpenGlToolkit.field_fd.field_G, 30, -23776, 0, 0);
+        Obstacle.field_s.setBounds(OpenGlToolkit.field_fd.field_G, OpenGlToolkit.field_fd.field_t - 40 - 2 - 30, param0 + 5264, 30, 0);
+        gta.field_b.setBounds(68, 30, -23776, 5, 5);
+        RandomBrickOperator.field_r.setBounds(78, 30, -23776, 5, 75);
+        RotateLocomotor.field_o.setBounds(48, 30, -23776, 5, 155);
         if (param0 == -29040) {
-          MidiPcmStream.field_K.a(48, 30, -23776, 5, 205);
+          MidiPcmStream.field_K.setBounds(48, 30, -23776, 5, 205);
           var2 = UnlockOverlay.field_p ? 250 : 200;
-          MirrorComponent.field_I.a(-var2 + 363, 30, -23776, 5, 5 + var2);
-          cq.field_e.a(-365 + (-5 + (OpenGlToolkit.field_fd.field_G - 5)), 30, -23776, 5, 370);
+          MirrorComponent.field_I.setBounds(-var2 + 363, 30, -23776, 5, 5 + var2);
+          cq.field_e.setBounds(-365 + (-5 + (OpenGlToolkit.field_fd.field_G - 5)), 30, -23776, 5, 370);
           nsa.field_i.a(-5 + (Obstacle.field_s.field_G - 5), 2, (byte) 127, 5, io.field_a, -42 + Obstacle.field_s.field_t, 37);
           var3 = (2 + OpenGlToolkit.field_fd.field_G) / 2;
-          TileRenderable.field_c.a(var3 - 2, 40, param0 + 5264, -40 + OpenGlToolkit.field_fd.field_t, 0);
+          TileRenderable.field_c.setBounds(var3 - 2, 40, param0 + 5264, -40 + OpenGlToolkit.field_fd.field_t, 0);
           if (!UnlockOverlay.field_p) {
             var3 = 0;
           }
-          CharacterChoiceFactory.field_c.a(OpenGlToolkit.field_fd.field_G - var3, 40, param0 + 5264, OpenGlToolkit.field_fd.field_t - 40, var3);
+          CharacterChoiceFactory.field_c.setBounds(OpenGlToolkit.field_fd.field_G - var3, 40, param0 + 5264, OpenGlToolkit.field_fd.field_t - 40, var3);
           return;
         }
     }

@@ -199,7 +199,7 @@ final class RoomViewRenderer {
                   var9.setPosition(var10.getWidth((byte) -86) / 2, var34 + var32 << 16, 76473160);
                 }
               } else {
-                var9.b(16384, true);
+                var9.skipRoom(16384, true);
               }
             }
             if (var31 <= 0) {

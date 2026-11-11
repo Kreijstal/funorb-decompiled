@@ -264,7 +264,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_25_0 = wl.field_h;
             return stackIn_25_0;
           }
-          if (!jea.containsForwardOrReversed(true, var5, var6)) {
+          if (!UiComponent.containsForwardOrReversed(true, var5, var6)) {
             return dva.field_a;
           }
           stackIn_29_0 = LegacyOpenGlTexture.field_j;

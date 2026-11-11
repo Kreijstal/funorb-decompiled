@@ -40,7 +40,7 @@ final class fha {
           KeySwitchComponent.field_J = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo14"));
           ft.field_c = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo14bold"));
           var17 = new Sprite(param3.getFileByName("button.gif", (byte) 118, ""), (java.awt.Component) ((Object) nma.field_l));
-          uv.a("dropdown", param2, "commonui", 8864);
+          LegacyOpenGlBloomEffect.loadIndexedSprite("dropdown", param2, "commonui", 8864);
           var5 = tw.a((byte) 127, "screen_options", "commonui", param2);
           ita.field_e = new IndexedSprite[4];
           RasterShape.field_a = new IndexedSprite[4];

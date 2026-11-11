@@ -9,7 +9,7 @@ final class SecondaryNodeDeque implements Iterable {
     static int field_a;
     DualLinkNode sentinel;
     private DualLinkNode field_c;
-    static jea field_b;
+    static UiComponent field_b;
 
     final DualLinkNode c(int param0) {
         if (param0 > 89) {

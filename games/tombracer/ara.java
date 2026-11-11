@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ara extends jea {
-    static jea field_ub;
+final class ara extends UiComponent {
+    static UiComponent field_ub;
     static int field_xb;
     static boolean field_wb;
     static String field_yb;
-    private jea field_tb;
+    private UiComponent field_tb;
     static SpriteData field_vb;
 
     final boolean a(boolean param0, int param1) {
@@ -128,7 +128,7 @@ final class ara extends jea {
         }
     }
 
-    ara(jea param0, jea param1, jea param2, jea param3, jea param4, jea param5) {
+    ara(UiComponent param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -145,43 +145,43 @@ final class ara extends jea {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        jea var8 = null;
-        jea var9 = null;
+        UiComponent var8 = null;
+        UiComponent var9 = null;
         int var10 = 0;
         int var11 = 0;
-        jea var13 = null;
-        jea var14 = null;
+        UiComponent var13 = null;
+        UiComponent var14 = null;
         int var15 = 0;
-        jea var17 = null;
+        UiComponent var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new jea(0L, param1, iw.field_a.toUpperCase());
+          var17 = new UiComponent(0L, param1, iw.field_a.toUpperCase());
           var17.field_z = 1;
-          this.field_tb = new jea(0L, param2);
-          var8 = new jea(0L, param3);
-          var9 = new jea(0L, param3, FlagSet.field_b);
+          this.field_tb = new UiComponent(0L, param2);
+          var8 = new UiComponent(0L, param3);
+          var9 = new UiComponent(0L, param3, FlagSet.field_b);
           var9.field_z = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; PlayerProfile.field_q.length > var12; var12++) {
-            var13 = new jea(0L, param3, s.field_b[var12]);
-            var14 = new jea(0L, param3, PlayerProfile.field_q[var12]);
+            var13 = new UiComponent(0L, param3, s.field_b[var12]);
+            var14 = new UiComponent(0L, param3, PlayerProfile.field_q[var12]);
             var15 = param3.field_H.stringWidth(PlayerProfile.field_q[var12]);
             if (var11 < var15) {
               var11 = var15;
             }
-            var13.a(65, 15, -23776, var10, 20);
-            var14.a(640, 15, -23776, var10, 90);
+            var13.setBounds(65, 15, -23776, var10, 20);
+            var14.setBounds(640, 15, -23776, var10, 90);
             var8.b(-127, var13);
             var10 += 30;
             var8.b(-126, var14);
           }
-          var17.a(20 + var11 + 90, 24, -23776, 0, 0);
+          var17.setBounds(20 + var11 + 90, 24, -23776, 0, 0);
           var10 += 15;
-          this.a(var17.field_G, var17.field_t + var10, -23776, 100, 100);
-          this.field_tb.a(15, 15, -23776, 5, -20 + var17.field_G);
-          var8.a(this.field_G, this.field_t - var17.field_t, -23776, var17.field_t, 0);
-          var9.a(this.field_G, 15, -23776, 20, 0);
+          this.setBounds(var17.field_G, var17.field_t + var10, -23776, 100, 100);
+          this.field_tb.setBounds(15, 15, -23776, 5, -20 + var17.field_G);
+          var8.setBounds(this.field_G, this.field_t - var17.field_t, -23776, var17.field_t, 0);
+          var9.setBounds(this.field_G, 15, -23776, 20, 0);
           var8.field_w = Player.createScrollbarSprites(var8.field_t, 2105376, 3, 11579568, -125, 8421504);
           var17.b(-125, this.field_tb);
           var8.b(-128, var9);

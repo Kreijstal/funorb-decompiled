@@ -11,9 +11,9 @@ final class CourseLayoutFactory implements BitDecodableFactory {
     final static boolean b(int param0) {
         if (param0 <= 27) {
           field_b = (byte[]) null;
-          return al.field_j;
+          return IntNode.field_j;
         }
-        return al.field_j;
+        return IntNode.field_j;
     }
 
     final static int c(int param0) {

@@ -243,52 +243,52 @@ final class dla {
           return 0;
         }
         if (ApproachPlayerLocomotor.field_t == 0) {
-          if (!tk.field_b.b(-100)) {
+          if (!tk.field_b.ensureIndex(-100)) {
             return 20;
           }
-          if (!tk.field_b.c("commonui", param0 ^ -122)) {
+          if (!tk.field_b.isGroupAvailableByName("commonui", param0 ^ -122)) {
             return 40;
           }
-          if (!OpenGlTexture2D.field_n.b(param0 - 100)) {
+          if (!OpenGlTexture2D.field_n.ensureIndex(param0 - 100)) {
             return 50;
           }
-          if (!OpenGlTexture2D.field_n.c("commonui", -126)) {
+          if (!OpenGlTexture2D.field_n.isGroupAvailableByName("commonui", -126)) {
             return 60;
           }
-          if (!WeaveOperator.field_p.b(param0 ^ -123)) {
+          if (!WeaveOperator.field_p.ensureIndex(param0 ^ -123)) {
             return 70;
           }
-          if (!WeaveOperator.field_p.a(0)) {
+          if (!WeaveOperator.field_p.areAllGroupsAvailable(0)) {
             return 80;
           }
         } else {
           if (InvisibleTouchSwitchComponent.field_J != null) {
-            if (!InvisibleTouchSwitchComponent.field_J.b(-37)) {
+            if (!InvisibleTouchSwitchComponent.field_J.ensureIndex(-37)) {
               return 14;
             }
-            if (!InvisibleTouchSwitchComponent.field_J.a("", 127)) {
+            if (!InvisibleTouchSwitchComponent.field_J.hasGroupName("", 127)) {
               return 29;
             }
-            if (!InvisibleTouchSwitchComponent.field_J.c("", -127)) {
+            if (!InvisibleTouchSwitchComponent.field_J.isGroupAvailableByName("", -127)) {
               return 29;
             }
           }
-          if (!tk.field_b.b(param0 - 130)) {
+          if (!tk.field_b.ensureIndex(param0 - 130)) {
             return 43;
           }
-          if (!tk.field_b.c("commonui", -128)) {
+          if (!tk.field_b.isGroupAvailableByName("commonui", -128)) {
             return 57;
           }
-          if (!OpenGlTexture2D.field_n.b(param0 - 42)) {
+          if (!OpenGlTexture2D.field_n.ensureIndex(param0 - 42)) {
             return 71;
           }
-          if (!OpenGlTexture2D.field_n.c("commonui", -124)) {
+          if (!OpenGlTexture2D.field_n.isGroupAvailableByName("commonui", -124)) {
             return 80;
           }
-          if (!WeaveOperator.field_p.b(-128)) {
+          if (!WeaveOperator.field_p.ensureIndex(-128)) {
             return 82;
           }
-          if (!WeaveOperator.field_p.a(0)) {
+          if (!WeaveOperator.field_p.areAllGroupsAvailable(0)) {
             return 86;
           }
         }

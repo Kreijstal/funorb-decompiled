@@ -4,7 +4,7 @@
 final class hg {
     static String field_d;
     boolean field_b;
-    static jea field_g;
+    static UiComponent field_g;
     qm field_e;
     static String[] bladeDeathMessages;
     boolean field_h;
@@ -85,7 +85,7 @@ final class hg {
         field_d = null;
         field_g = null;
         if (param0 != 13648) {
-          field_g = (jea) null;
+          field_g = (UiComponent) null;
           bladeDeathMessages = null;
           return;
         }

@@ -4,7 +4,7 @@
 final class MessageOverlay extends MatchOverlay {
     static String field_p;
     private dea field_n;
-    static jea field_t;
+    static UiComponent field_t;
     private boolean field_v;
     private String field_j;
     static String field_m;

@@ -26,7 +26,7 @@ final class MidiVoiceMixer extends PcmStream {
         this.field_m.skip(param0);
         var3 = (rta) (this.field_l.first(-80));
         while (var3 != null) {
-          if (!this.field_k.c(15, var3)) {
+          if (!this.field_k.discardInactiveVoice(15, var3)) {
             var2 = param0;
             do {
               if (var3.field_B >= var2) {
@@ -36,7 +36,7 @@ final class MidiVoiceMixer extends PcmStream {
               }
               this.a(943, var3.field_B, var3);
               var2 = var2 - var3.field_B;
-            } while (!this.field_k.a(var3, (int[]) null, 0, (byte) 6, var2));
+            } while (!this.field_k.updateNote(var3, (int[]) null, 0, (byte) 6, var2));
           }
           var3 = (rta) (this.field_l.next(125));
         }
@@ -51,7 +51,7 @@ final class MidiVoiceMixer extends PcmStream {
     }
 
     final static void a(boolean param0) {
-        oga.a(!param0 ? true : false);
+        LegacyOpenGlPostProcessEffect.a(!param0 ? true : false);
         LoadProfileCommand.field_r = param0 ? true : false;
         gj.field_r = true;
         ej.field_a.e(true);
@@ -175,7 +175,7 @@ final class MidiVoiceMixer extends PcmStream {
                 stackIn_8_1 = -111;
                 stackIn_8_2 = (rta) (param2);
                 stackIn_9_3 = !(0 <= param2.field_y.field_g[param2.field_m]);
-                ((MidiPcmStream) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
+                ((MidiPcmStream) (Object) stackIn_8_0).applyNoteSampleOffset((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
               } else {
                 param2.field_x = PcmSampleStream.create(param2.field_n, param2.field_x.getStepMagnitude(), param2.field_x.getVolume(), param2.field_x.getPan());
               }
@@ -249,7 +249,7 @@ final class MidiVoiceMixer extends PcmStream {
                 stackIn_12_1 = -35;
                 stackIn_12_2 = (rta) (param3);
                 stackIn_13_3 = !(param3.field_y.field_g[param3.field_m] >= 0);
-                ((MidiPcmStream) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_12_2, stackIn_13_3);
+                ((MidiPcmStream) (Object) stackIn_12_0).applyNoteSampleOffset((byte) stackIn_12_1, stackIn_12_2, stackIn_13_3);
                 param3.field_x.b(var9, var11.getVolume());
               } else {
                 param3.field_x = PcmSampleStream.create(param3.field_n, var11.getStepMagnitude(), var11.getVolume(), var11.getPan());
@@ -305,7 +305,7 @@ final class MidiVoiceMixer extends PcmStream {
           this.field_m.fill(param0, param1, param2);
           var6 = (rta) (this.field_l.first(-80));
           while (var6 != null) {
-            if (!this.field_k.c(15, var6)) {
+            if (!this.field_k.discardInactiveVoice(15, var6)) {
               var4_int = param1;
               var5 = param2;
               do {
@@ -317,7 +317,7 @@ final class MidiVoiceMixer extends PcmStream {
                 this.mixVoice(var4_int + var5, var4_int, param0, var6, var6.field_B, false);
                 var4_int = var4_int + var6.field_B;
                 var5 = var5 - var6.field_B;
-              } while (!this.field_k.a(var6, param0, var4_int, (byte) 6, var5));
+              } while (!this.field_k.updateNote(var6, param0, var4_int, (byte) 6, var5));
             }
             var6 = (rta) (this.field_l.next(121));
           }

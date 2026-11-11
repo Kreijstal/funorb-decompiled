@@ -11,7 +11,7 @@ final class PitBehaviour extends Behaviour {
     private boolean field_r;
     private boolean field_p;
 
-    final static jea b(int param0) {
+    final static UiComponent b(int param0) {
         if (param0 > -31) {
           PitBehaviour.b(47);
         }
@@ -105,7 +105,7 @@ final class PitBehaviour extends Behaviour {
             }
             var19 = (Player) (param2);
             if (this.field_s) {
-              var19.a(10, (byte) -19);
+              var19.beginRoomExit(10, (byte) -19);
             } else {
               if (this.field_p) {
                 var19.kill(4, (byte) -18, 6);

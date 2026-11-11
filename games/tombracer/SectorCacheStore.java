@@ -25,9 +25,9 @@ final class SectorCacheStore {
           synchronized (var5) {
             if (param2 >= 0 &&
               param2 <= this.field_e) {
-              var6 = this.a(true, param2, param1, true, param0) ? 1 : 0;
+              var6 = this.writeSectors(true, param2, param1, true, param0) ? 1 : 0;
               if (var6 == 0) {
-                var6 = this.a(false, param2, param1, true, param0) ? 1 : 0;
+                var6 = this.writeSectors(false, param2, param1, true, param0) ? 1 : 0;
               }
               if (param3 < 112) {
                 this.field_d = -66;
@@ -187,7 +187,7 @@ final class SectorCacheStore {
         }
     }
 
-    private final boolean a(boolean param0, int param1, byte[] param2, boolean param3, int param4) {
+    private final boolean writeSectors(boolean param0, int param1, byte[] param2, boolean param3, int param4) {
         try {
           RuntimeException stackIn_70_0 = null;
           StringBuilder stackIn_70_1 = null;
@@ -374,7 +374,7 @@ final class SectorCacheStore {
         }
     }
 
-    final static void a(Room param0, int param1, MatchState param2) {
+    final static void sendRoomAbandonedStat(Room param0, int param1, MatchState param2) {
         if (TextWidgetPainter.a(112) ||
           param2.k(-25319)) {
           return;

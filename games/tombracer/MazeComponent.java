@@ -259,7 +259,7 @@ abstract class MazeComponent extends PrefabComponent {
         int var6 = 0;
         int var11 = 0;
         int stackIn_4_0 = 0;
-        jea stackIn_6_0 = null;
+        UiComponent stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
         Object stackIn_33_0 = null;
@@ -271,10 +271,10 @@ abstract class MazeComponent extends PrefabComponent {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        jea var7_ref_jea = null;
+        UiComponent var7_ref_jea = null;
         int var7 = 0;
         int var8 = 0;
-        jea var8_ref_jea = null;
+        UiComponent var8_ref_jea = null;
         tv var9_ref_tv = null;
         int var9 = 0;
         int var10 = 0;
@@ -292,7 +292,7 @@ abstract class MazeComponent extends PrefabComponent {
           }
           dga.a(stackIn_4_0, 199);
           rm.field_e.a(0, 0, param1 + 18, nra.field_c.field_G, -2 + nra.field_c.field_t - 40);
-          cea.field_a.a(RoomRegion.field_l.field_G, di.field_a, param1 ^ -23774, 0, 0);
+          cea.field_a.setBounds(RoomRegion.field_l.field_G, di.field_a, param1 ^ -23774, 0, 0);
           stackIn_6_0 = uaa.field_b;
           stackIn_6_1 = RoomRegion.field_l.field_G;
           if (!UnlockOverlay.field_p) {
@@ -300,12 +300,12 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_7_2 = 2 + (io.field_a + 40) + 2;
           }
-          ((jea) (Object) stackIn_6_0).a(stackIn_6_1 - stackIn_7_2, 18, -23776, param1 + di.field_a, 0);
-          RopeBridgeComponent.field_F.a(42 + io.field_a, 18, param1 - 23778, 2 + di.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
+          ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 18, -23776, param1 + di.field_a, 0);
+          RopeBridgeComponent.field_F.setBounds(42 + io.field_a, 18, param1 - 23778, 2 + di.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
           tn.field_n.a(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (di.field_a + 22), 20 + (2 + di.field_a));
-          bc.field_b.a(nra.field_c.field_G, 40, -23776, -40 + nra.field_c.field_t, 0);
-          StatusEffect.field_g.a(dka.field_b.field_G, 30, -23776, 0, 0);
-          C2SSubmitSettingsPacket.field_g.a(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
+          bc.field_b.setBounds(nra.field_c.field_G, 40, -23776, -40 + nra.field_c.field_t, 0);
+          StatusEffect.field_g.setBounds(dka.field_b.field_G, 30, -23776, 0, 0);
+          C2SSubmitSettingsPacket.field_g.setBounds(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
           var2_int = 3 + ColourRowCache.field_b;
           if (SafeZoneBehaviour.field_u.length < 2) {
             var2_int--;
@@ -321,7 +321,7 @@ abstract class MazeComponent extends PrefabComponent {
           if (var4 > 40) {
             var4 = 40;
           }
-          qna.field_b.a(-5 + (C2SSubmitSettingsPacket.field_g.field_G - 5), var4, -23776, 5, 5);
+          qna.field_b.setBounds(-5 + (C2SSubmitSettingsPacket.field_g.field_G - 5), var4, -23776, 5, 5);
           var5 = 7 + var4;
           for (var6 = 0; ColourRowCache.field_b + 4 > var6; var6++) {
             if ((var6 != 1 ||
@@ -380,7 +380,7 @@ abstract class MazeComponent extends PrefabComponent {
                     }
                   }
                 } else {
-                  SimpleConditionBehaviour.field_p[var6].a(103, var3, -23776, var5, 5);
+                  SimpleConditionBehaviour.field_p[var6].setBounds(103, var3, -23776, var5, 5);
                   var8 = 110;
                   if (param0) {
                     bf.field_b[var6][0].a(38, var8, pda.field_c, var3, 0, 2, var5);
@@ -403,12 +403,12 @@ abstract class MazeComponent extends PrefabComponent {
               }
             }
           }
-          PlayerModel.field_a.a(360, -134 + (SoftwareRasterizer.height - 10), -23776, 10, SoftwareRasterizer.width - 360 >> 1);
-          S2CEventPacket.field_e.a(PlayerModel.field_a.field_G, 24, -23776, 0, 0);
-          vs.field_R.a(PlayerModel.field_a.field_G, -24 + PlayerModel.field_a.field_t, -23776, 24, 0);
+          PlayerModel.field_a.setBounds(360, -134 + (SoftwareRasterizer.height - 10), -23776, 10, SoftwareRasterizer.width - 360 >> 1);
+          S2CEventPacket.field_e.setBounds(PlayerModel.field_a.field_G, 24, -23776, 0, 0);
+          vs.field_R.setBounds(PlayerModel.field_a.field_G, -24 + PlayerModel.field_a.field_t, -23776, 24, 0);
           vs.field_R.field_w = Player.createScrollbarSprites(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
-          RasterShape.field_e.a(-10 + vs.field_R.field_G, -24 + vs.field_R.field_t - 12, -23776, 5, 5);
-          Trap.field_q.a(80, 24, -23776, -5 + (vs.field_R.field_t - 24), (-80 + vs.field_R.field_G) / 2);
+          RasterShape.field_e.setBounds(-10 + vs.field_R.field_G, -24 + vs.field_R.field_t - 12, -23776, 5, 5);
+          Trap.field_q.setBounds(80, 24, -23776, -5 + (vs.field_R.field_t - 24), (-80 + vs.field_R.field_G) / 2);
           GameFont.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

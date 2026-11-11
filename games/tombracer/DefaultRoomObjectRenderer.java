@@ -355,7 +355,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             case 3:
               var11 = 16;
               var10 = param2.getAge(-1) * 255 / param2.getLifetime(false);
-              var12 = uv.b(param1);
+              var12 = LegacyOpenGlBloomEffect.b(param1);
               if (null != var12 &&
                 var12.field_f) {
                 var11 = 15;
@@ -477,31 +477,31 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
                     if (var11 != 0) {
                       if (var10 != 0) {
                         if (var12 != 0) {
-                          param2.g(-23801);
+                          param2.resetStyle(-23801);
                         }
                         if (var12 == 0 ||
                           var19 != 0) {
-                          param2.a(var8, 6, var14, (byte) 73);
+                          param2.setEdgeStyle(var8, 6, var14, (byte) 73);
                           if (var19 != 0) {
-                            param2.a(var8, 4, var14, (byte) 73);
-                            param2.a(var8, 2, var14, (byte) 73);
-                            param2.a(var8, 0, var14, (byte) 73);
+                            param2.setEdgeStyle(var8, 4, var14, (byte) 73);
+                            param2.setEdgeStyle(var8, 2, var14, (byte) 73);
+                            param2.setEdgeStyle(var8, 0, var14, (byte) 73);
                           }
                         }} else {
-                        param2.a(var8, 4, var14, (byte) 73);
+                        param2.setEdgeStyle(var8, 4, var14, (byte) 73);
                         if (var19 != 0) {
-                          param2.a(var8, 2, var14, (byte) 73);
-                          param2.a(var8, 0, var14, (byte) 73);
+                          param2.setEdgeStyle(var8, 2, var14, (byte) 73);
+                          param2.setEdgeStyle(var8, 0, var14, (byte) 73);
                         }
                       }
                     } else {
-                      param2.a(var8, 2, var14, (byte) 73);
+                      param2.setEdgeStyle(var8, 2, var14, (byte) 73);
                       if (var19 != 0) {
-                        param2.a(var8, 0, var14, (byte) 73);
+                        param2.setEdgeStyle(var8, 0, var14, (byte) 73);
                       }
                     }
                   } else {
-                    param2.a(var8, 0, var14, (byte) 73);
+                    param2.setEdgeStyle(var8, 0, var14, (byte) 73);
                   }
                   if (var19 == 0) {
                     break regionExit1;
@@ -514,31 +514,31 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
                     var12 == 0) {
                     if (var9 != 0 &&
                       var11 != 0) {
-                      param2.a(var8, 1, var14Lifetime2, (byte) 73);
+                      param2.setEdgeStyle(var8, 1, var14Lifetime2, (byte) 73);
                     }
                     if (var9 == 0 ||
                       var11 == 0 || var19 != 0) {
                       if (var10 != 0 &&
                         var11 != 0) {
-                        param2.a(var8, 3, var14Lifetime2, (byte) 73);
+                        param2.setEdgeStyle(var8, 3, var14Lifetime2, (byte) 73);
                       }
                       if (var10 == 0 ||
                         var11 == 0 || var19 != 0) {
                         if (var10 != 0 &&
                           var12 != 0) {
-                          param2.a(var8, 5, var14Lifetime2, (byte) 73);
+                          param2.setEdgeStyle(var8, 5, var14Lifetime2, (byte) 73);
                           if (var19 != 0) {
-                            param2.g(-23801);
-                            param2.a(var8, 7, var14Lifetime2, (byte) 73);
+                            param2.resetStyle(-23801);
+                            param2.setEdgeStyle(var8, 7, var14Lifetime2, (byte) 73);
                           }
                         } else {
-                          param2.g(-23801);
+                          param2.resetStyle(-23801);
                           if (var19 != 0) {
-                            param2.a(var8, 7, var14Lifetime2, (byte) 73);
+                            param2.setEdgeStyle(var8, 7, var14Lifetime2, (byte) 73);
                           }
                         }
                       }}} else {
-                    param2.a(var8, 7, var14Lifetime2, (byte) 73);
+                    param2.setEdgeStyle(var8, 7, var14Lifetime2, (byte) 73);
                   }
                 case 4:
                   if (var13 == 4 ||
@@ -549,30 +549,30 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
                     var17 = this.a(-1 + param5, var7_int, param4, 1 + param3, 87) ? 1 : 0;
                     var18 = 2;
                     if (var14Lifetime1 == 0) {
-                      param2.a(var8, 7, var18, (byte) 73);
+                      param2.setEdgeStyle(var8, 7, var18, (byte) 73);
                     }
                     if (var14Lifetime1 != 0 ||
                       var19 != 0) {
                       if (var15 == 0) {
-                        param2.a(var8, 1, var18, (byte) 73);
+                        param2.setEdgeStyle(var8, 1, var18, (byte) 73);
                       }
                       if (var15 != 0 ||
                         var19 != 0) {
                         if (var16 != 0) {
                           if (var17 != 0) {
-                            param2.g(-23801);
+                            param2.resetStyle(-23801);
                             if (var19 != 0) {
-                              param2.a(var8, 5, var18, (byte) 73);
-                              param2.a(var8, 3, var18, (byte) 73);
+                              param2.setEdgeStyle(var8, 5, var18, (byte) 73);
+                              param2.setEdgeStyle(var8, 3, var18, (byte) 73);
                             }
                           } else {
-                            param2.a(var8, 5, var18, (byte) 73);
+                            param2.setEdgeStyle(var8, 5, var18, (byte) 73);
                             if (var19 != 0) {
-                              param2.a(var8, 3, var18, (byte) 73);
+                              param2.setEdgeStyle(var8, 3, var18, (byte) 73);
                             }
                           }
                         } else {
-                          param2.a(var8, 3, var18, (byte) 73);
+                          param2.setEdgeStyle(var8, 3, var18, (byte) 73);
                         }
                       }}}
                   break;
@@ -581,9 +581,9 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           }
           if (var7_int == 0 ||
             var19 != 0) {
-            param2.g(-23801);
+            param2.resetStyle(-23801);
           }
-          param2.g((byte) -94);
+          param2.chooseSprite((byte) -94);
           if (param0 != 17767) {
             this.drawRegion((Camera) null, -59, (RoomRegion) null);
           }

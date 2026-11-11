@@ -8,7 +8,7 @@ final class VortexBehaviour extends Behaviour {
     static String field_u;
     static boolean field_n;
     private int field_r;
-    static jea field_t;
+    static UiComponent field_t;
     private int field_p;
 
     final void tick(int param0) {
@@ -62,7 +62,7 @@ final class VortexBehaviour extends Behaviour {
         var11 = MidiVoiceMixer.min(var10, var9, -1);
         var12 = this.getRandom((byte) 46).nextBounded(8192, 0);
         var13 = MouseInputHandler.sin2048((byte) 98, var12 >> 2);
-        var14 = bua.cos2048(0, var12 >> 2);
+        var14 = ModelAnimator.cos2048(0, var12 >> 2);
         var16 = this.trap.getTopElevation(0);
         if (this.field_q) {
           var17_int = 1 + this.getRandom((byte) 46).nextBounded(5, 0);

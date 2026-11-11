@@ -73,7 +73,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
             }
           }
           var4_intLifetime2 = 125 % ((57 - param2) / 55);
-          if (param0.matchState.field_K == 0) {
+          if (param0.matchState.gameMode == 0) {
             param0.showRewardChoice(-1);
           }
           return;

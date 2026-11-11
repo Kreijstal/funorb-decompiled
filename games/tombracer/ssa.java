@@ -8,7 +8,7 @@ final class ssa {
     private int[] field_a;
     private GraphicsToolkit field_b;
     static String field_d;
-    static jea field_g;
+    static UiComponent field_g;
     private iea field_f;
     private ToolkitSprite field_e;
 

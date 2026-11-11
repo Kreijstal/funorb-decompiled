@@ -432,7 +432,7 @@ final class PlatformModel extends TrapModel {
               var2_int = 0;
               for (var4_int = 0; this.columns > var4_int; var4_int++) {
                 for (var5_int = 0; this.rows > var5_int; var5_int++) {
-                  this.tiles[var4_int][var5_int].field_g.a(0);
+                  this.tiles[var4_int][var5_int].field_g.tick(0);
                 }
               }
               var3 = 1;
@@ -478,17 +478,17 @@ final class PlatformModel extends TrapModel {
             var18_ref = (Locomotor) (var16.first(true));
             while (var18_ref != null) {
               if (var18_ref instanceof PathMoveLocomotor) {
-                if (((PathMoveLocomotor) (var18_ref)).d(false) != this.field_y) {
+                if (((PathMoveLocomotor) (var18_ref)).getWaypointIndex(false) != this.field_y) {
                   var4_ref.play(new SoundEvent(20, this.getRenderX((byte) 39), this.getRenderY((byte) 109), this.getRenderZ((byte) -116)), -58);
-                  this.field_y = ((PathMoveLocomotor) (var18_ref)).d(false);
+                  this.field_y = ((PathMoveLocomotor) (var18_ref)).getWaypointIndex(false);
                 }
                 if (var18_ref.isEnabled(-58) &&
                   this.field_y == 0) {
-                  if (((PathMoveLocomotor) (var18_ref)).e(69) == 4096 &&
+                  if (((PathMoveLocomotor) (var18_ref)).getSpeed(69) == 4096 &&
                     this.field_v == null) {
                     this.field_v = var4_ref.play(new SoundEvent(21, this.getRenderX((byte) 114), this.getRenderY((byte) 94), this.getRenderZ((byte) -124)), -58);
                   } else {
-                    if (((PathMoveLocomotor) (var18_ref)).e(114) == 327680 &&
+                    if (((PathMoveLocomotor) (var18_ref)).getSpeed(114) == 327680 &&
                       null == this.field_v) {
                       this.field_v = var4_ref.play(new SoundEvent(22, this.getRenderX((byte) -86), this.getRenderY((byte) 101), this.getRenderZ((byte) -113)), -58);
                     }

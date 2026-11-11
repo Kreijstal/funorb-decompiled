@@ -140,10 +140,10 @@ final class PillarComponent extends PrefabComponent {
         return 7;
     }
 
-    final static dk a(String param0, int param1, ResourceArchive param2, String param3) {
+    final static AnimationSequence a(String param0, int param1, ResourceArchive param2, String param3) {
         RuntimeException var4 = null;
-        dk stackIn_2_0 = null;
-        dk stackIn_4_0 = null;
+        AnimationSequence stackIn_2_0 = null;
+        AnimationSequence stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -154,10 +154,10 @@ final class PillarComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < -123) {
-            stackIn_4_0 = new dk(param2, param3, param0);
+            stackIn_4_0 = new AnimationSequence(param2, param3, param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (dk) null;
+          stackIn_2_0 = (AnimationSequence) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

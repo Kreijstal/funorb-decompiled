@@ -1,47 +1,47 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ht extends jea {
-    jea field_vb;
-    jea field_hc;
+final class ht extends UiComponent {
+    UiComponent field_vb;
+    UiComponent field_hc;
     boolean field_Sb;
     boolean field_Tb;
     int field_Kb;
     long field_Gb;
-    jea field_Zb;
+    UiComponent field_Zb;
     int field_Jb;
-    jea field_Vb;
+    UiComponent field_Vb;
     int field_yb;
-    jea field_Rb;
+    UiComponent field_Rb;
     static int[] textureColumnCoords;
-    jea field_Hb;
-    jea[] field_Ub;
+    UiComponent field_Hb;
+    UiComponent[] field_Ub;
     long field_Ab;
     static SpriteData field_Db;
-    jea field_wb;
+    UiComponent field_wb;
     boolean field_Bb;
-    jea field_ub;
+    UiComponent field_ub;
     String field_tb;
-    jea field_fc;
+    UiComponent field_fc;
     int field_zb;
     static int[] field_Pb;
-    jea field_Nb;
-    jea field_dc;
-    jea field_Qb;
+    UiComponent field_Nb;
+    UiComponent field_dc;
+    UiComponent field_Qb;
     boolean field_Ob;
     String[] field_Cb;
     boolean field_gc;
-    jea field_bc;
+    UiComponent field_bc;
     boolean field_ec;
     int field_cc;
     boolean field_Yb;
     static int field_Xb;
     int field_Mb;
     int field_Ib;
-    jea field_Lb;
+    UiComponent field_Lb;
     int field_Wb;
-    jea field_Eb;
-    jea field_xb;
+    UiComponent field_Eb;
+    UiComponent field_xb;
     byte[] field_ac;
 
     final boolean sortsBefore(ht param0, int param1) {
@@ -177,7 +177,7 @@ final class ht extends jea {
     }
 
     ht(int param0) {
-        super(0L, (jea) null);
+        super(0L, (UiComponent) null);
         this.field_ac = new byte[param0];
     }
 

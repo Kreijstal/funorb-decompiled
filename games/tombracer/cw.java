@@ -31,11 +31,11 @@ final class cw {
         boolean stackIn_55_1 = false;
         boolean stackIn_59_0 = false;
         int var3;
-        oga var4;
+        LegacyOpenGlPostProcessEffect var4;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -739) {
-          var4 = (oga) null;
-          this.a(22, (oga) null);
+          var4 = (LegacyOpenGlPostProcessEffect) null;
+          this.a(22, (LegacyOpenGlPostProcessEffect) null);
         }
         if (this.field_c) {
           if (null != this.field_b) {
@@ -138,7 +138,7 @@ final class cw {
         return stackIn_59_0;
     }
 
-    final boolean a(int param0, oga param1) {
+    final boolean a(int param0, LegacyOpenGlPostProcessEffect param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -151,16 +151,16 @@ final class cw {
           if (this.field_d == null) {
             return false;
           }
-          if (param1.c((byte) 99) ||
-            param1.a((byte) 65)) {
+          if (param1.isInitialized((byte) 99) ||
+            param1.initialize((byte) 65)) {
             this.field_j.addLast((byte) -59, param1);
             this.b(114);
             if (this.c(-739)) {
               if (-1 != this.field_k &&
                 this.field_g != -1) {
-                param1.a(this.field_g, (byte) -71, this.field_k);
+                param1.resize(this.field_g, (byte) -71, this.field_k);
               }
-              param1.field_h = true;
+              param1.enabled = true;
               return true;
             }
           }
@@ -196,7 +196,7 @@ final class cw {
           this.field_g = param2;
           var6 = this.field_j.first(-80);
           while (this.field_j.sentinel != var6) {
-            ((oga) (var6)).a(this.field_g, (byte) -71, this.field_k);
+            ((LegacyOpenGlPostProcessEffect) (var6)).resize(this.field_g, (byte) -71, this.field_k);
             var6 = var6.next;
           }
           this.field_h = true;
@@ -218,10 +218,10 @@ final class cw {
         return false;
     }
 
-    private final void a(boolean param0, oga param1) {
+    private final void a(boolean param0, LegacyOpenGlPostProcessEffect param1) {
         try {
-          param1.field_h = param0 ? true : false;
-          param1.d((byte) -71);
+          param1.enabled = param0 ? true : false;
+          param1.release((byte) -71);
           param1.unlink(72);
           this.b(64);
         } catch (RuntimeException runtimeException) {
@@ -233,8 +233,8 @@ final class cw {
         int var7 = 0;
         int var2;
         int var3;
-        oga var4;
-        oga var5;
+        LegacyOpenGlPostProcessEffect var4;
+        LegacyOpenGlPostProcessEffect var5;
         int var6;
         int var8;
         int var2Lifetime1;
@@ -264,12 +264,12 @@ final class cw {
         this.field_t.la();
         var2Lifetime1 = 0;
         var3 = 1;
-        var4 = (oga) (this.field_j.first(-80));
+        var4 = (LegacyOpenGlPostProcessEffect) (this.field_j.first(-80));
         while (var4 != null) {
-          var5 = (oga) (this.field_j.next(125));
+          var5 = (LegacyOpenGlPostProcessEffect) (this.field_j.next(125));
           var6 = var4.c(1);
           for (var7 = 0; var6 > var7; var7++) {
-            var4.a(this.field_r[var2Lifetime1], var7, (byte) -100, this.field_m);
+            var4.apply(this.field_r[var2Lifetime1], var7, (byte) -100, this.field_m);
             if (var5 == null &&
               -1 + var6 == var7) {
               this.field_t.b(this.field_i, 0);
@@ -307,7 +307,7 @@ final class cw {
             }
             var3 = 1 & var3 + 1;
             var2Lifetime1 = 1 + var2Lifetime1 & 1;
-            var4.a(var7, (byte) 120);
+            var4.endPass(var7, (byte) 120);
           }
           var4 = var5;
         }
@@ -327,24 +327,24 @@ final class cw {
         int var6;
         int var7;
         int var8;
-        oga var9;
+        LegacyOpenGlPostProcessEffect var9;
         int var6Lifetime1;
         var8 = TombRacer.field_G ? 1 : 0;
         var2 = 0;
         var3 = 0;
         var4 = 0;
-        var9 = (oga) (this.field_j.first(-80));
+        var9 = (LegacyOpenGlPostProcessEffect) (this.field_j.first(-80));
         if (param0 < 35) {
           this.field_f = false;
         }
         while (var9 != null) {
-          var6 = var9.b(13727);
+          var6 = var9.getPassCount(13727);
           if (var6 > var3) {
             var3 = var6;
           }
           var4 = var4 + var9.c(1);
           var2 = var2 != 0 | var9.a(1) ? 1 : 0;
-          var9 = (oga) (this.field_j.next(107));
+          var9 = (LegacyOpenGlPostProcessEffect) (this.field_j.next(107));
         }
         if (var3 != 2) {
           if (var3 == 1) {
@@ -401,7 +401,7 @@ final class cw {
         if (!this.field_j.isEmpty((byte) 14)) {
           var2 = this.field_j.first(-80);
           while (this.field_j.sentinel != var2) {
-            ((oga) (var2)).d((byte) -35);
+            ((LegacyOpenGlPostProcessEffect) (var2)).release((byte) -35);
             var2 = var2.next;
           }
         }

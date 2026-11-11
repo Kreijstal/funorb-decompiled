@@ -8,7 +8,7 @@ final class gqa {
     int[] field_h;
     String field_f;
     static String field_a;
-    jea field_l;
+    UiComponent field_l;
     int field_n;
     int field_o;
     static String field_k;
@@ -73,7 +73,7 @@ final class gqa {
     }
 
     final static void a(byte param0) {
-        um.field_l.a(75, new tha());
+        um.field_l.transitionToContent(75, new tha());
         if (param0 < 0) {
           field_k = (String) null;
         }

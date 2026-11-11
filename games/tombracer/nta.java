@@ -5,7 +5,7 @@ final class nta implements Renderable {
     private int field_g;
     static String field_e;
     private int field_a;
-    private bua field_f;
+    private ModelAnimator field_f;
     private int field_i;
     static String[] crushDeathMessages;
     private int field_c;
@@ -45,7 +45,7 @@ final class nta implements Renderable {
         if (this.field_a > 0) {
           this.field_a = this.field_a - 1;
         }
-        this.field_f.a(0);
+        this.field_f.tick(0);
         if (param0 == -4366) {
           return;
         }
@@ -60,7 +60,7 @@ final class nta implements Renderable {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_f.b((byte) 74);
+          var3 = this.field_f.getModel((byte) 74);
           gqa.a(this.field_c, -83584144, this.getRenderY((byte) 106), this.getRenderX((byte) 90), var3, this.getRenderZ((byte) -106));
           if (param0 >= 103) {
             return;
@@ -108,7 +108,7 @@ final class nta implements Renderable {
         return this.field_j;
     }
 
-    nta(int param0, int param1, int param2, bua param3, int param4, int param5) {
+    nta(int param0, int param1, int param2, ModelAnimator param3, int param4, int param5) {
         try {
           this.field_a = param5;
           this.field_j = param0;

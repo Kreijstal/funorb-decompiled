@@ -32,7 +32,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
           var3 = this.field_e.n((byte) 95);
-          var2.setVertexShaderConstantF(0, var3.a(false, field_d));
+          var2.setVertexShaderConstantF(0, var3.writeRowMajor4x4(false, field_d));
         }
         if (param0 == 107) {
           return;
@@ -59,7 +59,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
           var3 = this.owner.textureTransform((byte) 113);
-          var3.a(field_d, -101);
+          var3.writeFirstTwoRows(field_d, -101);
           field_d[3] = field_d[3] * 0.25f;
           field_d[6] = field_d[6] * 0.25f;
           field_d[5] = field_d[5] * 0.25f;
@@ -88,7 +88,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (null != this.field_f) {
           var2 = this.field_e.field_jd;
           var3 = this.field_e.n((byte) -86);
-          var2.setVertexShaderConstantF(0, var3.a(false, field_d));
+          var2.setVertexShaderConstantF(0, var3.writeRowMajor4x4(false, field_d));
         }
         if (param0) {
           return;

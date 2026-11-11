@@ -32,9 +32,9 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           var3.setVertexShaderConstantF(13, this.owner.field_sc * this.owner.field_fc, this.owner.field_fc * this.owner.field_yb, this.owner.field_fc * this.owner.field_Kb, 1.0f);
           var3.setVertexShaderConstantF(14, this.owner.field_sc * this.owner.field_j, this.owner.field_yb * this.owner.field_j, this.owner.field_j * this.owner.field_Kb, 1.0f);
           var3.setVertexShaderConstantF(16, this.owner.field_pc * this.owner.field_sc, this.owner.field_pc * this.owner.field_yb, this.owner.field_pc * this.owner.field_Kb, 1.0f);
-          var4.a(field_h, this.owner.field_Gb[1], (byte) 76, this.owner.field_Gb[2], this.owner.field_Gb[0]);
+          var4.transformDirection(field_h, this.owner.field_Gb[1], (byte) 76, this.owner.field_Gb[2], this.owner.field_Gb[0]);
           var3.SetVertexShaderConstantF(15, field_h, 1);
-          var4.a(field_h, this.owner.field_M[1], (byte) 52, this.owner.field_M[2], this.owner.field_M[0]);
+          var4.transformDirection(field_h, this.owner.field_M[1], (byte) 52, this.owner.field_M[2], this.owner.field_M[0]);
           var3.SetVertexShaderConstantF(17, field_h, 1);
         }
         if (param0 == 1) {
@@ -104,7 +104,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           if (this.field_j != null) {
             var2 = this.field_i.field_jd;
             var3 = this.owner.textureTransform((byte) 116);
-            var2.SetVertexShaderConstantF(8, var3.a(field_f, -118), 2);
+            var2.SetVertexShaderConstantF(8, var3.writeFirstTwoRows(field_f, -118), 2);
           }
           return;
         }
@@ -112,7 +112,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         if (this.field_j != null) {
           var2Lifetime1 = this.field_i.field_jd;
           var3Lifetime1 = this.owner.textureTransform((byte) 116);
-          var2Lifetime1.SetVertexShaderConstantF(8, var3Lifetime1.a(field_f, -118), 2);
+          var2Lifetime1.SetVertexShaderConstantF(8, var3Lifetime1.writeFirstTwoRows(field_f, -118), 2);
         }
     }
 
@@ -195,7 +195,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         if (this.field_j != null) {
           var2 = this.field_i.field_jd;
           var3 = this.field_i.n((byte) -101);
-          var2.setVertexShaderConstantF(0, var3.a(false, field_f));
+          var2.setVertexShaderConstantF(0, var3.writeRowMajor4x4(false, field_f));
         }
         if (param0 == 107) {
           return;
@@ -310,7 +310,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             stackIn_5_1 = 0;
             stackIn_5_2 = var3;
             stackIn_6_3 = (param0) ? false : true;
-            ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).setVertexShaderConstantF(stackIn_5_1, ((AffineTransform3D) (Object) stackIn_5_2).a(stackIn_6_3, field_f));
+            ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).setVertexShaderConstantF(stackIn_5_1, ((AffineTransform3D) (Object) stackIn_5_2).writeRowMajor4x4(stackIn_6_3, field_f));
           }
         } else {
           this.c(false);
@@ -321,7 +321,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             stackIn_12_1 = 0;
             stackIn_12_2 = var3;
             stackIn_13_3 = (param0) ? false : true;
-            ((jagdx.IDirect3DDevice) (Object) stackIn_12_0).setVertexShaderConstantF(stackIn_12_1, ((AffineTransform3D) (Object) stackIn_12_2).a(stackIn_13_3, field_f));
+            ((jagdx.IDirect3DDevice) (Object) stackIn_12_0).setVertexShaderConstantF(stackIn_12_1, ((AffineTransform3D) (Object) stackIn_12_2).writeRowMajor4x4(stackIn_13_3, field_f));
           }
         }
     }

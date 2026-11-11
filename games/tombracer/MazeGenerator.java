@@ -4,7 +4,7 @@
 abstract class MazeGenerator {
     IsaacCipher random;
 
-    final void a(int param0, byte param1, MazeGrid param2, int param3, int param4, int param5) {
+    final void carvePassage(int param0, byte param1, MazeGrid param2, int param3, int param4, int param5) {
         try {
           param2.setCell((param4 + param0) / 2, 0, 0, (param5 + param3) / 2);
           param2.setCell(param0, 0, 0, param3);
@@ -142,7 +142,7 @@ abstract class MazeGenerator {
         }
     }
 
-    final int[] a(int param0, int param1) {
+    final int[] randomPermutation(int param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -204,7 +204,7 @@ abstract class MazeGenerator {
         }
     }
 
-    final MazeGrid a(int param0, int param1, int param2, int param3, int param4) {
+    final MazeGrid generateMaze(int param0, int param1, int param2, int param3, int param4) {
         param0 = -1 + 2 * ((param0 + 1) / 2);
         param2 = (param2 + 1) / 2 * 2 - 1;
         MazeGrid var6 = new MazeGrid(param2, param0, 1);

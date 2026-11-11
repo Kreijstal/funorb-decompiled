@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ScrollPane extends jea {
+final class ScrollPane extends UiComponent {
     static int field_ub;
-    jea field_tb;
-    jea field_vb;
+    UiComponent field_tb;
+    UiComponent field_vb;
     VerticalScrollbar field_wb;
 
     final static void f(int param0) {
@@ -83,10 +83,10 @@ final class ScrollPane extends jea {
         this.field_wb.a(this.field_tb.field_t, -this.field_tb.field_T, param0, false, this.field_G - param0, this.field_t, this.field_vb.field_t, 0);
     }
 
-    ScrollPane(long param0, jea param1, jea param2, VerticalScrollbar param3) {
-        super(param0, (jea) null);
+    ScrollPane(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3) {
+        super(param0, (UiComponent) null);
         try {
-          this.field_vb = new jea(0L, param2);
+          this.field_vb = new UiComponent(0L, param2);
           this.field_wb = new VerticalScrollbar(0L, param3);
           this.b(-123, this.field_vb);
           this.b(-128, this.field_wb);
@@ -142,7 +142,7 @@ final class ScrollPane extends jea {
         int var8Lifetime1;
         if (param0) {
           var8 = 1;
-          this.field_tb.a(var8 != 0, param2, 120, this.field_vb.field_t);
+          this.field_tb.layoutVerticalContent(var8 != 0, param2, 120, this.field_vb.field_t);
           this.applyScrollInput(param1, false, param3, param4, (byte) 114);
           if (!param6) {
             return false;
@@ -158,7 +158,7 @@ final class ScrollPane extends jea {
             var8Lifetime1 = 0;
           }
         }
-        this.field_tb.a(var8Lifetime1 != 0, param2, 120, this.field_vb.field_t);
+        this.field_tb.layoutVerticalContent(var8Lifetime1 != 0, param2, 120, this.field_vb.field_t);
         this.applyScrollInput(param1, false, param3, param4, (byte) 114);
         if (!param6) {
           return false;

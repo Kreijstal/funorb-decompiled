@@ -88,7 +88,7 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
             var11 = (MazeGrid) null;
             this.a((MazeGrid) null, -65, 4, -46);
           }
-          var14 = this.a(4, param3 - 23971);
+          var14 = this.randomPermutation(4, param3 - 23971);
           var13 = var14;
           var12 = var13;
           var5 = var12;
@@ -97,7 +97,7 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
             var8 = param1 + 2 * dma.field_k[var7][0];
             var9 = dma.field_k[var7][1] * 2 + param2;
             if (this.a(var9, param0, var8, -74)) {
-              this.a(param2, (byte) -42, param0, param1, var9, var8);
+              this.carvePassage(param2, (byte) -42, param0, param1, var9, var8);
               this.a(param0, var8, var9, 21619);
             }
           }

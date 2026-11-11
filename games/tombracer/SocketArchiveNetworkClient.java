@@ -28,7 +28,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     final void a(int param0) {
         if (null != this.field_t) {
-          this.field_t.a((byte) 105);
+          this.field_t.close((byte) 105);
         }
         if (param0 != -21) {
           field_v = (String) null;
@@ -52,7 +52,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           try {
             if (this.field_t != null) {
               try {
-                this.field_t.a((byte) 105);
+                this.field_t.close((byte) 105);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -89,12 +89,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                 this.field_o.writeByte(4, param1 - 54);
                 this.field_o.writeByte((int) this.field_d, param1 ^ 54);
                 this.field_o.writeInt(0, (byte) -17);
-                this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 124);
+                this.field_t.write(this.field_o.payload, 0, this.field_o.payload.length, 124);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_t.a((byte) 105);
+                  this.field_t.close((byte) 105);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -146,12 +146,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             }
             ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_5_1, 0);
             this.field_o.writeLong40(true, 0L);
-            this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 124);
+            this.field_t.write(this.field_o.payload, 0, this.field_o.payload.length, 124);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_t.a((byte) 105);
+              this.field_t.close((byte) 105);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -240,7 +240,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             this.field_p = this.field_p + var4;
             if (this.field_p > 30000) {
               try {
-                this.field_t.a((byte) 105);
+                this.field_t.close((byte) 105);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -264,7 +264,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               this.field_o.position = 0;
               this.field_o.writeByte(1, 0);
               this.field_o.writeLong40(true, var2.secondaryKey);
-              this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 119);
+              this.field_t.write(this.field_o.payload, 0, this.field_o.payload.length, 119);
               this.field_m.a(var2, (byte) -100);
               var2 = (NetworkArchiveRequest) (this.field_e.c(28));
             }
@@ -273,12 +273,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               this.field_o.position = 0;
               this.field_o.writeByte(0, 0);
               this.field_o.writeLong40(true, var2Lifetime1.secondaryKey);
-              this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 101);
+              this.field_t.write(this.field_o.payload, 0, this.field_o.payload.length, 101);
               this.field_k.a(var2Lifetime1, (byte) -99);
               var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.c(28));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_t.c(0);
+              var3_int = this.field_t.available(0);
               if (0 > var3_int) {
                 throw new IOException();
               }
@@ -401,7 +401,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_t.a((byte) 105);
+              this.field_t.close((byte) 105);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -424,7 +424,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     final void invalidateConnection(int param0) {
         try {
-          this.field_t.a((byte) 105);
+          this.field_t.close((byte) 105);
         } catch (Exception exception) {
         }
         this.field_t = null;
@@ -449,12 +449,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             this.field_o.writeByte(6, 0);
             this.field_o.writeMedium(-86, 3);
             this.field_o.writeShort(-1477662136, 0);
-            this.field_t.a(this.field_o.payload, 0, this.field_o.payload.length, 118);
+            this.field_t.write(this.field_o.payload, 0, this.field_o.payload.length, 118);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_t.a((byte) 105);
+              this.field_t.close((byte) 105);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;

@@ -3,7 +3,7 @@
  */
 final class ClientException extends RuntimeException {
     String context;
-    static jea field_b;
+    static UiComponent field_b;
     Throwable cause;
     static String field_e;
     static int field_c;
@@ -79,7 +79,7 @@ final class ClientException extends RuntimeException {
         if (param1 == 5122) {
           return param0 * (-param3 + param2) + param3;
         }
-        field_b = (jea) null;
+        field_b = (UiComponent) null;
         return param0 * (-param3 + param2) + param3;
     }
 

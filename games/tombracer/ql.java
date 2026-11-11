@@ -44,7 +44,7 @@ class ql extends DualLinkNode {
           }
           var4 = (aca) (io.field_d.first(-80));
           while (var4 != null) {
-            jea.a(param0, 1325, var4);
+            UiComponent.a(param0, 1325, var4);
             var4 = (aca) (io.field_d.next(113));
           }
           return;

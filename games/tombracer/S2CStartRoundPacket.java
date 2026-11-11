@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class S2CStartRoundPacket implements GamePacket {
-    static jea field_a;
+    static UiComponent field_a;
 
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
@@ -36,7 +36,7 @@ final class S2CStartRoundPacket implements GamePacket {
         RuntimeException var4 = null;
         try {
           if (!param1) {
-            field_a = (jea) null;
+            field_a = (UiComponent) null;
             param0.startRound(121);
           } else {
             param0.startRound(121);
@@ -64,7 +64,7 @@ final class S2CStartRoundPacket implements GamePacket {
 
     public static void releaseStatics(int param0) {
         if (param0 >= -54) {
-          field_a = (jea) null;
+          field_a = (UiComponent) null;
           field_a = null;
           return;
         }

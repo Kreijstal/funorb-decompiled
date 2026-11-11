@@ -4,7 +4,7 @@
 final class iea {
     static String field_e;
     int field_h;
-    static jea field_g;
+    static UiComponent field_g;
     int field_f;
     int field_d;
     int field_c;
@@ -14,7 +14,7 @@ final class iea {
     public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != -1) {
-          field_g = (jea) null;
+          field_g = (UiComponent) null;
         }
         field_e = null;
     }
@@ -41,7 +41,7 @@ final class iea {
         int stackIn_3_4;
         int stackIn_3_5;
         boolean stackIn_4_6 = false;
-        jea stackIn_22_0 = null;
+        UiComponent stackIn_22_0 = null;
         String stackIn_23_1 = null;
         int stackIn_26_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -89,21 +89,21 @@ final class iea {
           while (var6 != null) {
             var7 = 0;
             if (var6.field_J == null) {
-              var6.field_xb = new jea(0L, S2CStartRoundPacket.field_a);
+              var6.field_xb = new UiComponent(0L, S2CStartRoundPacket.field_a);
               var6.b(-127, var6.field_xb);
-              var6.field_zb = new jea(0L, S2CStartRoundPacket.field_a);
+              var6.field_zb = new UiComponent(0L, S2CStartRoundPacket.field_a);
               var6.b(param1 ^ 74, var6.field_zb);
               var7 = 1;
               var6.a(-10966);
             }
             var6.field_G = OpenGlSprite.field_j.field_tb.field_G;
-            var6.field_xb.a(var6.field_G, di.field_a, -23776, 0, 0);
+            var6.field_xb.setBounds(var6.field_G, di.field_a, -23776, 0, 0);
             var8 = 0;
             if (var6.field_vb != null &&
               !var6.field_vb.equals("")) {
               var6.field_zb.field_ab = 16737894;
               var6.field_zb.field_R = ConsoleValue.field_e;
-              var6.field_zb.a(ConsoleValue.field_e.field_n + 3, di.field_a, -23776, 0, 0);
+              var6.field_zb.setBounds(ConsoleValue.field_e.field_n + 3, di.field_a, -23776, 0, 0);
               var8 = 1;
             }
             var9 = 0;
@@ -121,12 +121,12 @@ final class iea {
             stackIn_22_0.field_r = stackIn_23_1;
             stackIn_26_0 = (var6.field_xb.field_r.equals(var6.field_tb)) ? 0 : 1;
             var11 = stackIn_26_0;
-            var6.field_xb.a(var10, di.field_a, param1 ^ 23784, 0, var9);
+            var6.field_xb.setBounds(var10, di.field_a, param1 ^ 23784, 0, var9);
             if (var3_int == 0) {
               var6.field_O = di.field_a - var6.field_t;
             }
             if (var7 != 0) {
-              OpenGlSprite.field_j.field_tb.a(2, (jea) (var5), var6, (byte) -122);
+              OpenGlSprite.field_j.field_tb.placeBelow(2, (UiComponent) (var5), var6, (byte) -122);
             }
             if (null != var6.field_zb &&
               var6.field_zb.field_o) {
@@ -157,7 +157,7 @@ final class iea {
           if (0 == OpenGlSprite.field_j.field_wb.field_y) {
             return;
           }
-          bl.field_a = new is(OpenGlSprite.field_j.field_wb.field_q, OpenGlSprite.field_j.field_wb.field_A, OpenGlSprite.field_j.field_wb.field_G, OpenGlSprite.field_j.field_wb.field_t, av.field_b, lw.field_a, Corpse.field_i, Corpse.field_i);
+          bl.field_a = new is(OpenGlSprite.field_j.field_wb.field_q, OpenGlSprite.field_j.field_wb.field_A, OpenGlSprite.field_j.field_wb.field_G, OpenGlSprite.field_j.field_wb.field_t, MazeSolver.field_b, lw.field_a, Corpse.field_i, Corpse.field_i);
           ResourceArchive.field_k = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -174,7 +174,7 @@ final class iea {
           StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
           StripedMazeGenerator.field_c[param2] = OpenGlTexture2D.field_m;
           StripedMazeGenerator.field_c[1] = MonochromeFillOperator.field_o;
-          gea.a(0, param3, PenaltyNotice.field_f);
+          WaypointPath.a(0, param3, PenaltyNotice.field_f);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "iea.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

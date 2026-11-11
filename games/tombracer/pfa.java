@@ -4,7 +4,7 @@
 final class pfa {
     private IntrusiveDeque field_f;
     private int field_h;
-    private bua field_c;
+    private ModelAnimator field_c;
     static ura field_i;
     int field_e;
     int field_j;
@@ -587,7 +587,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextCoins", (byte) 123);
                 if (null != var2) {
-                  dk.field_k = jaa.decodeText((byte) 119, var2);
+                  AnimationSequence.field_k = jaa.decodeText((byte) 119, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleBagsOLoot", (byte) 109);
                 if (var2 != null) {
@@ -623,7 +623,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleLagoonsOfLava", (byte) 119);
                 if (null != var2) {
-                  dk.field_a = jaa.decodeText((byte) 82, var2);
+                  AnimationSequence.field_a = jaa.decodeText((byte) 82, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextLagoonsOfLava", (byte) 101);
                 if (null != var2) {
@@ -663,7 +663,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMirrors", (byte) 116);
                 if (null != var2) {
-                  uv.field_u = jaa.decodeText((byte) 98, var2);
+                  LegacyOpenGlBloomEffect.field_u = jaa.decodeText((byte) 98, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMirrors", (byte) 127);
                 if (null != var2) {
@@ -2173,7 +2173,7 @@ final class pfa {
     }
 
     final void a(boolean param0) {
-        bua stackIn_33_0 = null;
+        ModelAnimator stackIn_33_0 = null;
         int stackIn_33_1 = 0;
         boolean stackIn_34_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -2214,11 +2214,11 @@ final class pfa {
             stackIn_33_0 = this.field_c;
             stackIn_33_1 = this.field_d;
             stackIn_34_2 = !(param0);
-            ((bua) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_34_2, 0, 0, true);
+            ((ModelAnimator) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_34_2, 0, 0, true);
             this.field_h = 0;
             this.field_g = false;
           }
-          this.field_c.a(0);
+          this.field_c.tick(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2266,7 +2266,7 @@ final class pfa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 79) {
-            this.field_c = (bua) null;
+            this.field_c = (ModelAnimator) null;
           }
           stackIn_10_0 = (~(LoginForm.field_z[param1] << 16) == ~this.field_j) && (this.field_e == hq.field_b[param1] << 16);
           return stackIn_10_0;
@@ -2279,7 +2279,7 @@ final class pfa {
 
     final void b(int param0, int param1, int param2) {
         try {
-          hp.a(2048, this.field_h, 1900, this.field_c.b((byte) 74), param1 ^ -1918096900, 10 + ((this.field_e >> 16) + param0), (this.field_j >> 16) + param2 + 18);
+          hp.a(2048, this.field_h, 1900, this.field_c.getModel((byte) 74), param1 ^ -1918096900, 10 + ((this.field_e >> 16) + param0), (this.field_j >> 16) + param2 + 18);
           if (param1 != 11327) {
             this.a(73, (byte) 91);
           }
@@ -2333,7 +2333,7 @@ final class pfa {
     pfa(int param0, int param1) {
         try {
           this.field_d = param0;
-          this.field_c = new bua(0, this.field_d, 1);
+          this.field_c = new ModelAnimator(0, this.field_d, 1);
           this.field_c.a(this.field_d, false, 0, 0, true);
           this.field_j = LoginForm.field_z[param1] << 16;
           this.field_e = hq.field_b[param1] << 16;

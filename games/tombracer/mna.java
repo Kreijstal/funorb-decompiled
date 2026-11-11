@@ -56,7 +56,7 @@ abstract class mna {
               var11 = moa.formatChatPrefix(var15, 94);
               var12 = var11 + BitmapFont.escapeMarkup(var15.field_f);
               var13 = uaa.a((byte) -116, var15);
-              var15.field_l = new jea(0L, VortexBehaviour.field_t, var12);
+              var15.field_l = new UiComponent(0L, VortexBehaviour.field_t, var12);
               var6 = var6 + param2;
               var15.field_l.field_ab = ((VortexBehaviour.field_t.field_ab & 16711422) >> 1) + var13 - (8355711 & var13 >> 1);
               var15.field_l.field_H = PlatformBehaviour.field_s;
@@ -72,7 +72,7 @@ abstract class mna {
           var16 = CourseLayout.field_d[var8Lifetime1];
           if (null != var16.field_l) {
             ne.field_d.field_tb.b(-125, var16.field_l);
-            var16.field_l.a(var16.field_l.b((byte) 69), param2, -23776, var7Lifetime1, param3);
+            var16.field_l.setBounds(var16.field_l.b((byte) 69), param2, -23776, var7Lifetime1, param3);
             if (var16.field_l.field_y != 0) {
               var4 = var16;
             }

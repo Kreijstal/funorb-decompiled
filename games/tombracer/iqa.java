@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class iqa {
-    static ila field_c;
+    static ChatOverlay field_c;
     ei field_b;
     long field_f;
     java.awt.Canvas field_a;
@@ -69,6 +69,6 @@ final class iqa {
 
     static {
         field_g = "Age:";
-        field_c = new ila();
+        field_c = new ChatOverlay();
     }
 }

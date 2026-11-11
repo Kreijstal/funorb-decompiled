@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hw {
-    static jea field_a;
+    static UiComponent field_a;
 
     public static void releaseStatics(int param0) {
         if (param0 > -44) {
-          field_a = (jea) null;
+          field_a = (UiComponent) null;
           field_a = null;
           return;
         }

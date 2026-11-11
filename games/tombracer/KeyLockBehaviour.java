@@ -7,7 +7,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
     private boolean field_s;
     private SwitchState field_q;
     private boolean field_t;
-    static jea field_r;
+    static UiComponent field_r;
     static String field_o;
 
     final void tick(int param0) {

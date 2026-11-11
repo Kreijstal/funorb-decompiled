@@ -45,7 +45,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         int var12;
         var12 = TombRacer.field_G ? 1 : 0;
         if (this.field_q &&
-          this.getPlayer((byte) 19).u(-25561)) {
+          this.getPlayer((byte) 19).isHiddenFromTrackers(-25561)) {
           this.field_t = false;
           return;
         }
@@ -76,7 +76,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
         var3 = this.trap.getFacingAngle(-25787) >> 2;
         var4 = MouseInputHandler.sin2048((byte) 111, var3);
-        var5 = bua.cos2048(0, var3);
+        var5 = ModelAnimator.cos2048(0, var3);
         var6 = 131072 + RandomBrickOperator.max(this.trap.getWidth(param0 - 5467), this.trap.getHeight((byte) 55), param0 ^ 5416) / 2;
         var7 = this.trap.getX(3) + gqa.a(var4, (byte) 24, var6);
         var8 = this.trap.getY(9648) + gqa.a(var5, (byte) 24, var6);

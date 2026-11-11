@@ -129,7 +129,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 101 / ((param1 - 15) / 60);
-          stackIn_1_0 = param0.a(0);
+          stackIn_1_0 = param0.areAllGroupsAvailable(0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uv extends oga {
+final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
     private LegacyOpenGlTexture2D field_i;
     private LegacyOpenGlTexture2D field_x;
     private static String[] field_k;
@@ -19,7 +19,7 @@ final class uv extends oga {
     private OpenGlFramebuffer field_q;
     private cua field_m;
 
-    final void a(LegacyOpenGlTexture2D param0, int param1, byte param2, LegacyOpenGlTexture2D param3) {
+    final void apply(LegacyOpenGlTexture2D param0, int param1, byte param2, LegacyOpenGlTexture2D param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7_int = 0;
@@ -44,7 +44,7 @@ final class uv extends oga {
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
           if (null != this.field_l) {
-            this.field_g.b((Framebuffer) (this.field_s), (byte) 81);
+            this.toolkit.b((Framebuffer) (this.field_s), (byte) 81);
             var5_int = WidgetContainer.highestOneBit(this.field_t, (byte) 85);
             var6 = WidgetContainer.highestOneBit(this.field_n, (byte) 96);
             var7_int = 0;
@@ -60,7 +60,7 @@ final class uv extends oga {
                   var5_int = var5_int >> 1;
                 }
                 if (0 != var7_int) {
-                  this.field_g.a(true, this.field_l[-1 + var7_int]);
+                  this.toolkit.a(true, this.field_l[-1 + var7_int]);
                   jaggl.OpenGL.glBegin(7);
                   jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
                   jaggl.OpenGL.glVertex2i(0, 0);
@@ -72,7 +72,7 @@ final class uv extends oga {
                   jaggl.OpenGL.glVertex2i(0, 1);
                   jaggl.OpenGL.glEnd();
                 } else {
-                  this.field_g.a(true, param0);
+                  this.toolkit.a(true, param0);
                   jaggl.OpenGL.glBegin(7);
                   jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
                   jaggl.OpenGL.glVertex2i(0, 0);
@@ -87,9 +87,9 @@ final class uv extends oga {
                 var7_int++;
               }
               {
-                this.field_g.b(this.field_s, 0);
-                this.field_g.a(true, this.field_l[-1 + var7_int]);
-                this.field_g.b((Framebuffer) (this.field_q), (byte) 81);
+                this.toolkit.b(this.field_s, 0);
+                this.toolkit.a(true, this.field_l[-1 + var7_int]);
+                this.toolkit.b((Framebuffer) (this.field_q), (byte) 81);
                 this.field_q.a(0, (byte) -91);
                 jaggl.OpenGL.glViewport(0, 0, 256, 256);
                 var8 = this.field_v.field_c;
@@ -111,8 +111,8 @@ final class uv extends oga {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.field_g.a(true, param0);
-            this.field_g.b((Framebuffer) (this.field_q), (byte) 81);
+            this.toolkit.a(true, param0);
+            this.toolkit.b((Framebuffer) (this.field_q), (byte) 81);
             this.field_q.a(0, (byte) -91);
             jaggl.OpenGL.glViewport(0, 0, 256, 256);
             var5_long = this.field_m.field_c;
@@ -131,7 +131,7 @@ final class uv extends oga {
             jaggl.OpenGL.glEnd();
           }
           this.field_q.a(1, (byte) -91);
-          this.field_g.a(true, this.field_x);
+          this.toolkit.a(true, this.field_x);
           var5_longLifetime1 = this.field_w.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var5_longLifetime1);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5_longLifetime1, "baseTex"), 0);
@@ -147,7 +147,7 @@ final class uv extends oga {
           jaggl.OpenGL.glVertex2i(0, 1);
           jaggl.OpenGL.glEnd();
           this.field_q.a(0, (byte) -91);
-          this.field_g.a(true, this.field_i);
+          this.toolkit.a(true, this.field_i);
           jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_longLifetime1, "step"), 0.0f, 0.00390625f, 0.0f);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
@@ -155,7 +155,7 @@ final class uv extends oga {
           jaggl.OpenGL.glTexCoord2f(1.0f, 0.0f);
           jaggl.OpenGL.glVertex2i(1, 0);
           if (param2 > -82) {
-            uv.d(-13);
+            LegacyOpenGlBloomEffect.d(-13);
           }
           jaggl.OpenGL.glTexCoord2f(1.0f, 1.0f);
           jaggl.OpenGL.glVertex2i(1, 1);
@@ -165,16 +165,16 @@ final class uv extends oga {
           jaggl.OpenGL.glPopAttrib();
           jaggl.OpenGL.glPopMatrix();
           jaggl.OpenGL.glMatrixMode(5888);
-          this.field_g.b(this.field_q, 0);
+          this.toolkit.b(this.field_q, 0);
           var7 = this.field_j.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var7);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "sceneTex"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "bloomTex"), 1);
           jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "params"), vba.field_v, ConstantEffectBehaviour.field_p, 0.0f);
-          this.field_g.e(1, true);
-          this.field_g.a(true, this.field_x);
-          this.field_g.e(0, true);
-          this.field_g.a(true, param0);
+          this.toolkit.e(1, true);
+          this.toolkit.a(true, this.field_x);
+          this.toolkit.e(0, true);
+          this.toolkit.a(true, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,24 +199,24 @@ final class uv extends oga {
     final boolean e(int param0) {
         if (param0 != 34842) {
           this.field_m = (cua) null;
-          if (!this.field_g.field_id) {
+          if (!this.toolkit.field_id) {
             return false;
           }
-          if (this.field_g.field_Vc) {
-            return this.field_g.field_z ? true : false;
+          if (this.toolkit.field_Vc) {
+            return this.toolkit.field_z ? true : false;
           }
           return false;
         }
-        if (!this.field_g.field_id) {
+        if (!this.toolkit.field_id) {
           return false;
         }
-        if (this.field_g.field_Vc) {
-          return this.field_g.field_z ? true : false;
+        if (this.toolkit.field_Vc) {
+          return this.toolkit.field_z ? true : false;
         }
         return false;
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void resize(int param0, byte param1, int param2) {
         int incrementValue$0 = 0;
         int var4;
         int var5;
@@ -262,7 +262,7 @@ final class uv extends oga {
               var7 = var5;
               var8 = 0;
             } else {
-              this.field_s = new OpenGlFramebuffer(this.field_g);
+              this.field_s = new OpenGlFramebuffer(this.toolkit);
               var6Lifetime1 = var4;
               this.field_l = new LegacyOpenGlTexture2D[var8];
               var7 = var5;
@@ -277,7 +277,7 @@ final class uv extends oga {
               }
               incrementValue$0 = var8;
               var8++;
-              this.field_l[incrementValue$0] = new LegacyOpenGlTexture2D(this.field_g, 3553, 34842, var6Lifetime1, var7);
+              this.field_l[incrementValue$0] = new LegacyOpenGlTexture2D(this.toolkit, 3553, 34842, var6Lifetime1, var7);
               if (var6Lifetime1 > 256) {
                 var6Lifetime1 = var6Lifetime1 >> 1;
               }
@@ -298,14 +298,14 @@ final class uv extends oga {
         }
     }
 
-    final int b(int param0) {
+    final int getPassCount(int param0) {
         if (param0 != 13727) {
           return -92;
         }
         return 1;
     }
 
-    final static IndexedSprite a(String param0, ResourceArchive param1, String param2, int param3) {
+    final static IndexedSprite loadIndexedSprite(String param0, ResourceArchive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -324,8 +324,8 @@ final class uv extends oga {
             stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var4_int = param1.b(param2, -7768);
-          var5 = param1.a(true, param0, var4_int);
+          var4_int = param1.getGroupId(param2, -7768);
+          var5 = param1.getFileId(true, param0, var4_int);
           stackIn_4_0 = DamageableBehaviour.loadIndexedSprite(false, var5, param1, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -354,57 +354,57 @@ final class uv extends oga {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isInitialized(byte param0) {
         if (param0 >= 78) {
           return this.field_q != null ? true : false;
         }
         String var3 = (String) null;
-        uv.a((String) null, (ResourceArchive) null, (String) null, -53);
+        LegacyOpenGlBloomEffect.loadIndexedSprite((String) null, (ResourceArchive) null, (String) null, -53);
         return this.field_q != null ? true : false;
     }
 
-    final void a(int param0, byte param1) {
+    final void endPass(int param0, byte param1) {
         jaggl.OpenGL.glUseProgramObjectARB(0L);
-        this.field_g.e(1, true);
-        this.field_g.a(true, (LegacyOpenGlTexture) null);
-        this.field_g.e(0, true);
+        this.toolkit.e(1, true);
+        this.toolkit.a(true, (LegacyOpenGlTexture) null);
+        this.toolkit.e(0, true);
         if (param1 < 117) {
           this.e(-29);
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean initialize(byte param0) {
         boolean stackIn_18_0 = false;
         if (param0 != 65) {
-          this.c((byte) -83);
+          this.isInitialized((byte) -83);
         }
-        if (!this.field_g.field_id) {
+        if (!this.toolkit.field_id) {
           return false;
         }
-        if (!this.field_g.field_Vc) {
+        if (!this.toolkit.field_Vc) {
           return false;
         }
-        if (!this.field_g.field_z) {
+        if (!this.toolkit.field_z) {
           return false;
         }
-        this.field_q = new OpenGlFramebuffer(this.field_g);
-        this.field_x = new LegacyOpenGlTexture2D(this.field_g, 3553, 34842, 256, 256);
+        this.field_q = new OpenGlFramebuffer(this.toolkit);
+        this.field_x = new LegacyOpenGlTexture2D(this.toolkit, 3553, 34842, 256, 256);
         this.field_x.setWrap(false, false, -3554);
-        this.field_i = new LegacyOpenGlTexture2D(this.field_g, 3553, 34842, 256, 256);
+        this.field_i = new LegacyOpenGlTexture2D(this.toolkit, 3553, 34842, 256, 256);
         this.field_i.setWrap(false, false, -3554);
-        this.field_g.b((Framebuffer) (this.field_q), (byte) 81);
+        this.toolkit.b((Framebuffer) (this.field_q), (byte) 81);
         this.field_q.a(true, this.field_x, 0);
         this.field_q.a(true, this.field_i, 1);
         this.field_q.a(0, (byte) -91);
         if (!this.field_q.c(-84)) {
-          this.field_g.b(this.field_q, 0);
+          this.toolkit.b(this.field_q, 0);
           return false;
         }
-        this.field_g.b(this.field_q, 0);
-        this.field_m = dga.linkShaderProgram(21885, this.field_g, new fca[]{LegacyOpenGlSpecularEffect.compileShader(param0 - 1, this.field_g, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
-        this.field_v = dga.linkShaderProgram(param0 ^ 21820, this.field_g, new fca[]{LegacyOpenGlSpecularEffect.compileShader(64, this.field_g, 35632, "uniform vec3 params;\nuniform sampler2D sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2D(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
-        this.field_j = dga.linkShaderProgram(21885, this.field_g, new fca[]{LegacyOpenGlSpecularEffect.compileShader(64, this.field_g, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform vec3 dimScale;\nuniform sampler2D bloomTex;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n\t vec4 bloomCol = texture2D(bloomTex, gl_TexCoord[1].xy);\n\t vec4 sceneCol = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n\t float preLum = 0.99*dot(lumCoef, sceneCol.rgb)+0.01;\n    float postLum = preLum*(1.0+(preLum/params.y))/(preLum+1.0);\n\t gl_FragColor = sceneCol*(postLum/preLum)+bloomCol*params.x;\n}\n")});
-        this.field_w = dga.linkShaderProgram(21885, this.field_g, new fca[]{LegacyOpenGlSpecularEffect.compileShader(param0 - 1, this.field_g, 35632, "uniform vec3 step;\nuniform sampler2D baseTex;\nvoid main() {\n\tvec4 fragCol = texture2D(baseTex, gl_TexCoord[0].xy)*0.091396265;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-8.0*step.xy))*0.012369139;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 8.0*step.xy))*0.012369139;\n\tgl_FragColor = fragCol;\n}\n")});
+        this.toolkit.b(this.field_q, 0);
+        this.field_m = dga.linkShaderProgram(21885, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(param0 - 1, this.toolkit, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
+        this.field_v = dga.linkShaderProgram(param0 ^ 21820, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(64, this.toolkit, 35632, "uniform vec3 params;\nuniform sampler2D sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2D(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")});
+        this.field_j = dga.linkShaderProgram(21885, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(64, this.toolkit, 35632, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform vec3 dimScale;\nuniform sampler2D bloomTex;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n\t vec4 bloomCol = texture2D(bloomTex, gl_TexCoord[1].xy);\n\t vec4 sceneCol = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n\t float preLum = 0.99*dot(lumCoef, sceneCol.rgb)+0.01;\n    float postLum = preLum*(1.0+(preLum/params.y))/(preLum+1.0);\n\t gl_FragColor = sceneCol*(postLum/preLum)+bloomCol*params.x;\n}\n")});
+        this.field_w = dga.linkShaderProgram(21885, this.toolkit, new fca[]{LegacyOpenGlSpecularEffect.compileShader(param0 - 1, this.toolkit, 35632, "uniform vec3 step;\nuniform sampler2D baseTex;\nvoid main() {\n\tvec4 fragCol = texture2D(baseTex, gl_TexCoord[0].xy)*0.091396265;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-8.0*step.xy))*0.012369139;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 8.0*step.xy))*0.012369139;\n\tgl_FragColor = fragCol;\n}\n")});
         if (null == this.field_v) {
           return false;
         }
@@ -415,7 +415,7 @@ final class uv extends oga {
         return stackIn_18_0;
     }
 
-    uv(OpenGlToolkit param0) {
+    LegacyOpenGlBloomEffect(OpenGlToolkit param0) {
         super(param0);
     }
 
@@ -431,7 +431,7 @@ final class uv extends oga {
         ql.field_k.writeCipheredOpcode(9, -2988);
         LegacyOpenGlEnvironmentWaterEffect.field_d = true;
         if (param0 != 30785) {
-          uv.releaseStatics(9);
+          LegacyOpenGlBloomEffect.releaseStatics(9);
         }
     }
 
@@ -459,12 +459,12 @@ final class uv extends oga {
           var1 = baa.field_d.field_i;
           return var1 == null ? null : (lqa) (var1.field_b);
         }
-        uv.d(-89);
+        LegacyOpenGlBloomEffect.d(-89);
         var1Lifetime1 = baa.field_d.field_i;
         return var1Lifetime1 == null ? null : (lqa) (var1Lifetime1.field_b);
     }
 
-    final void d(byte param0) {
+    final void release(byte param0) {
         this.field_q = null;
         this.field_w = null;
         this.field_x = null;

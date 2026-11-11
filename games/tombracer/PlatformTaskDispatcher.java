@@ -171,7 +171,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.field_p) {
                             Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_t, new Object[]{var15, new Boolean(var3_int != 0)});
                           } else {
-                            this.field_g.a(var3_int != 0, -54, var15);
+                            this.field_g.setCursorVisible(var3_int != 0, -54, var15);
                           }
                           break;
                         }

@@ -85,7 +85,7 @@ final class ScoreStandings {
             stackIn_15_0 = -1;
             return stackIn_15_0;
           }
-          if (!SecondaryNodeHashTable.field_b.c(var3, -122)) {
+          if (!SecondaryNodeHashTable.field_b.isGroupAvailableByName(var3, -122)) {
             stackIn_18_0 = SecondaryNodeHashTable.field_b.a(var3, true);
             return stackIn_18_0;
           }

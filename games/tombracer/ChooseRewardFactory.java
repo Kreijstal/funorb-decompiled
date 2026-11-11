@@ -115,7 +115,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
           var7 = "";
           if (0 == OpenGlUnderwaterEffect.field_q) {
             if (null == C2SChooseRewardPacket.field_a) {
-              if (!kq.field_c) {
+              if (!PlayerInputQueue.field_c) {
                 if (C2SChooseRewardPacket.field_a != null) {
                   if (kp.field_c &&
                     tla.field_f != null) {
@@ -128,7 +128,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
                     DarknessBehaviour.padTo(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                     return true;
                   }
-                  var7 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
+                  var7 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, UiComponent.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
                 }
                 var66 = var7 + var64 + ": ";
                 var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.stringWidth(var66);
@@ -152,7 +152,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
                 DarknessBehaviour.padTo(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                 return true;
               }
-              var7 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
+              var7 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, UiComponent.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
             }
           }
           var69 = var7 + var64 + ": ";

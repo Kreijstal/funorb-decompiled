@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bv extends jea {
+final class bv extends UiComponent {
     static long[] field_xb;
-    private jea field_tb;
-    private jea[] field_vb;
-    private jea[] field_ub;
+    private UiComponent field_tb;
+    private UiComponent[] field_vb;
+    private UiComponent[] field_ub;
     int field_wb;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -25,8 +25,8 @@ final class bv extends jea {
     }
 
     final void e(byte param0) {
-        jea dupTemp$0 = null;
-        jea dupTemp$1 = null;
+        UiComponent dupTemp$0 = null;
+        UiComponent dupTemp$1 = null;
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
@@ -50,7 +50,7 @@ final class bv extends jea {
     }
 
     private final void b(int param0, int param1, int param2) {
-        jea dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -69,11 +69,11 @@ final class bv extends jea {
           this.field_ub[var4].field_G = -var5 + var6;
           this.field_ub[var4].field_t = param2;
         }
-        this.field_tb.a(this.field_G, this.field_t - param2, -23776, param2, 0);
+        this.field_tb.setBounds(this.field_G, this.field_t - param2, -23776, param2, 0);
         var8 = 0;
         var4Lifetime1 = var8;
         while (var8 < this.field_vb.length) {
-          this.field_vb[var8].a(this.field_tb.field_G - param0 * 2, -(param0 * 2) + this.field_tb.field_t, -23776, param0, param0);
+          this.field_vb[var8].setBounds(this.field_tb.field_G - param0 * 2, -(param0 * 2) + this.field_tb.field_t, -23776, param0, param0);
           if (this.field_wb != var8) {
             dupTemp$0 = this.field_vb[var8];
             dupTemp$0.field_qb = dupTemp$0.field_qb + 10000;
@@ -89,8 +89,8 @@ final class bv extends jea {
         }
     }
 
-    bv(long param0, jea param1, String[] param2, jea param3, jea[] param4, int param5) {
-        super(param0, (jea) null);
+    bv(long param0, UiComponent param1, String[] param2, UiComponent param3, UiComponent[] param4, int param5) {
+        super(param0, (UiComponent) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -103,15 +103,15 @@ final class bv extends jea {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        jea var9 = null;
+        UiComponent var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_ub = new jea[param2.length];
-          this.field_tb = new jea(0L, param3);
+          this.field_ub = new UiComponent[param2.length];
+          this.field_tb = new UiComponent(0L, param3);
           this.field_vb = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new jea(0L, param1);
+            var9 = new UiComponent(0L, param1);
             var9.field_r = param2[var8_int];
             this.field_ub[var8_int] = var9;
             this.b(-124, var9);

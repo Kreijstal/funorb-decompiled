@@ -21,7 +21,7 @@ abstract class lu {
           if (param3 == 0) {
             vn.field_a = null;
             WallCrusherComponent.field_H = param3;
-            al.field_h = param1;
+            IntNode.field_h = param1;
             if (TextSpewerBehaviour.field_o == 0 &&
               0 < param0) {
               jla.field_z = new IntrusiveDeque();
@@ -32,7 +32,7 @@ abstract class lu {
             }
           } else {
             WallCrusherComponent.field_H = param3;
-            al.field_h = param1;
+            IntNode.field_h = param1;
             if (TextSpewerBehaviour.field_o != 0) {
               if (param0 == 0) {
                 jla.field_z = null;
@@ -51,7 +51,7 @@ abstract class lu {
           if (param3 > 0) {
             vn.field_a = new IntrusiveDeque();
             WallCrusherComponent.field_H = param3;
-            al.field_h = param1;
+            IntNode.field_h = param1;
             if (TextSpewerBehaviour.field_o == 0 &&
               0 < param0) {
               jla.field_z = new IntrusiveDeque();
@@ -65,7 +65,7 @@ abstract class lu {
               vn.field_a = null;
             }
             WallCrusherComponent.field_H = param3;
-            al.field_h = param1;
+            IntNode.field_h = param1;
             if (TextSpewerBehaviour.field_o != 0) {
               if (param0 == 0) {
                 jla.field_z = null;

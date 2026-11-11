@@ -6,7 +6,7 @@ final class CommonChooseReward implements dv {
     private int[] reward;
     private int currentPlayerId;
     private int takenCount;
-    static jea field_c;
+    static UiComponent field_c;
     private boolean finished;
     SoundEventPlayer field_g;
     private MatchState field_j;

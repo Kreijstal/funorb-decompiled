@@ -4,7 +4,7 @@
 final class S2CEventPacket implements GamePacket {
     private PendingEvent event;
     static int[] field_c;
-    static jea field_e;
+    static UiComponent field_e;
     static ur field_d;
     static String field_b;
 
@@ -24,7 +24,7 @@ final class S2CEventPacket implements GamePacket {
         try {
           this.event = new PendingEvent(param0);
           if (param1 != -19) {
-            field_e = (jea) null;
+            field_e = (UiComponent) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vca.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -66,12 +66,12 @@ final class S2CEventPacket implements GamePacket {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.b(-53)) {
+          if (!param2.ensureIndex(-53)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }
           var4_int = 45 / ((14 - param3) / 48);
-          stackIn_5_0 = param0 + " - " + param2.a(true) + "%";
+          stackIn_5_0 = param0 + " - " + param2.getOverallProgress(true) + "%";
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

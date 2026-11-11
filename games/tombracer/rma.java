@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rma {
-    static jea field_b;
+    static UiComponent field_b;
     static String field_a;
 
     final static void a(boolean param0, String param1, String param2, byte param3) {
@@ -27,7 +27,7 @@ final class rma {
         field_b = null;
         field_a = null;
         if (param0 != 13902) {
-          field_b = (jea) null;
+          field_b = (UiComponent) null;
         }
     }
 

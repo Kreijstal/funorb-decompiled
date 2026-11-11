@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kq {
-    private bka field_e;
+final class PlayerInputQueue {
+    private IntQueue masks;
     static String field_d;
     static boolean field_c;
     static ToolkitSprite field_a;
     static String field_b;
-    private int field_f;
+    private int pendingCount;
 
-    final void b(int param0, int param1) {
+    final void push(int param0, int param1) {
         if (param0 != 79) {
-          kq.releaseStatics(-1);
+          PlayerInputQueue.releaseStatics(-1);
         }
-        this.field_e.a((byte) -114, param1);
-        this.field_f = this.field_f + 1;
+        this.masks.add((byte) -114, param1);
+        this.pendingCount = this.pendingCount + 1;
     }
 
-    final boolean b(int param0) {
+    final boolean hasPending(int param0) {
         if (param0 > -122) {
           return false;
         }
-        return this.field_f > 0 ? true : false;
+        return this.pendingCount > 0 ? true : false;
     }
 
-    final int b(byte param0) {
+    final int getPendingCount(byte param0) {
         if (param0 <= 85) {
-          this.field_e = (bka) null;
+          this.masks = (IntQueue) null;
         }
-        return this.field_f;
+        return this.pendingCount;
     }
 
     public static void releaseStatics(int param0) {
@@ -163,7 +163,7 @@ final class kq {
               }
               var5++;
             }
-            al.field_g.addLast((byte) -109, var18);
+            IntNode.field_g.addLast((byte) -109, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -190,7 +190,7 @@ final class kq {
         }
     }
 
-    final static RoomDefinition a(int param0, int param1) {
+    final static RoomDefinition findRoomDefinition(int param0, int param1) {
         int var3 = 0;
         qg var4_ref_qg = null;
         RoomDefinition[] var5 = null;
@@ -226,28 +226,28 @@ final class kq {
         hw.a((byte) -111, 1, 79, var3);
     }
 
-    final void a(boolean param0) {
-        this.field_e.c(-84);
+    final void clear(boolean param0) {
+        this.masks.clear(-84);
         if (param0) {
           return;
         }
-        this.field_f = 0;
+        this.pendingCount = 0;
     }
 
-    final int a(byte param0) {
+    final int pop(byte param0) {
         if (param0 > -35) {
-          this.b(-122);
+          this.hasPending(-122);
         }
-        this.field_f = this.field_f - 1;
-        if (this.field_e.b((byte) -26)) {
+        this.pendingCount = this.pendingCount - 1;
+        if (this.masks.isEmpty((byte) -26)) {
           return -1;
         }
-        return this.field_e.a(104);
+        return this.masks.poll(104);
     }
 
-    public kq() {
-        this.field_e = new bka();
-        this.field_f = 0;
+    public PlayerInputQueue() {
+        this.masks = new IntQueue();
+        this.pendingCount = 0;
     }
 
     static {

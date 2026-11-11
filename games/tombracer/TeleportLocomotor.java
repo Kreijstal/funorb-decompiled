@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TeleportLocomotor extends Locomotor {
-    private gea field_q;
+    private WaypointPath field_q;
     static String field_o;
     private TimingPattern field_s;
     private int field_u;
@@ -27,10 +27,10 @@ final class TeleportLocomotor extends Locomotor {
         int var6Lifetime2;
         int var6Lifetime3;
         int var6Lifetime4;
-        if (this.field_q.a(-4075)) {
+        if (this.field_q.isEmpty(-4075)) {
           return;
         }
-        int[][] var10 = this.field_q.c(125);
+        int[][] var10 = this.field_q.getPoints(125);
         int[][] var8 = var10;
         int[][] var7 = var8;
         int[][] var13 = var7;
@@ -162,7 +162,7 @@ final class TeleportLocomotor extends Locomotor {
         this.field_p = false;
         this.field_t = new IntPoint();
         try {
-          this.field_q = new gea(param0.formatVersion, param1);
+          this.field_q = new WaypointPath(param0.formatVersion, param1);
           if (param0.formatVersion < 11) {
             this.field_q.a(1 == param1.readBits((byte) 44, 1) ? true : false, 1);
           }
@@ -183,7 +183,7 @@ final class TeleportLocomotor extends Locomotor {
             this.encode((BitPacketBuffer) null, (byte) 17);
           }
           super.encode(param0, (byte) -110);
-          this.field_q.a(param0, 0);
+          this.field_q.encode(param0, 0);
           this.field_s.encode(15637, param0);
           param0.writeBits((byte) -126, this.field_p ? 1 : 0, 1);
           param0.writeBits((byte) -127, this.field_u, 8);

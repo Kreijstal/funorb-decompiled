@@ -6,9 +6,9 @@ final class bt implements Renderable {
     static int field_b;
     SnakePitModel field_a;
     private boolean field_f;
-    private bua field_d;
+    private ModelAnimator field_d;
     PitSnake field_e;
-    static jea[] field_c;
+    static UiComponent[] field_c;
     static int[] field_h;
 
     public final int getRenderY(byte param0) {
@@ -36,7 +36,7 @@ final class bt implements Renderable {
           if (param0 < 103) {
             bt.a((byte) 44, -55, -63, 37);
           }
-          var5 = this.field_d.b((byte) 74);
+          var5 = this.field_d.getModel((byte) 74);
           gqa.a(var4, -83584144, this.getRenderY((byte) 120), this.getRenderX((byte) -89), var5, this.getRenderZ((byte) -95));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bt.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -62,10 +62,10 @@ final class bt implements Renderable {
         if (param0 != -4366) {
           field_h = (int[]) null;
         } else {
-          this.field_d.a(0);
+          this.field_d.tick(0);
           return;
         }
-        this.field_d.a(0);
+        this.field_d.tick(0);
     }
 
     public final int getRenderX(byte param0) {
@@ -99,7 +99,7 @@ final class bt implements Renderable {
     }
 
     bt() {
-        this.field_d = new bua(6, 4, 1);
+        this.field_d = new ModelAnimator(6, 4, 1);
         this.field_d.a(1, true, (byte) -102, 7);
         this.field_f = true;
     }

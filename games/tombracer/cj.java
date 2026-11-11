@@ -80,8 +80,8 @@ final class cj implements WidgetPainter {
               return true;
             }
             var4 = WallCrusherComponent.field_H;
-            if (0.0 != al.field_h) {
-              var4 = (int)((double)var4 + PlatformBehaviour.field_p.nextGaussian() * al.field_h);
+            if (0.0 != IntNode.field_h) {
+              var4 = (int)((double)var4 + PlatformBehaviour.field_p.nextGaussian() * IntNode.field_h);
               if (var4 < 0) {
                 var4 = 0;
               }

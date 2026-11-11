@@ -32,7 +32,7 @@ abstract class jg {
           if (kv.a((byte) 36, param2, param1)) {
             return false;
           }
-          if (jea.containsForwardOrReversed(true, param2, param1)) {
+          if (UiComponent.containsForwardOrReversed(true, param2, param1)) {
             return false;
           }
           if (param0 < -69) {

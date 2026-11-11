@@ -3,22 +3,22 @@
  */
 import java.io.*;
 
-final class VerticalScrollbar extends jea {
+final class VerticalScrollbar extends UiComponent {
     private int repeatDelay;
     static String field_zb;
-    private jea downButton;
-    private jea thumb;
+    private UiComponent downButton;
+    private UiComponent thumb;
     static String field_vb;
-    private jea trackAbove;
-    private jea field_ub;
-    private jea trackBelow;
-    private jea upButton;
+    private UiComponent trackAbove;
+    private UiComponent field_ub;
+    private UiComponent trackBelow;
+    private UiComponent upButton;
     static boolean[] field_tb;
 
     final void layoutThumb(int param0, int param1, byte param2, int param3) {
-        jea stackIn_15_0 = null;
-        jea stackIn_15_1 = null;
-        jea stackIn_15_2 = null;
+        UiComponent stackIn_15_0 = null;
+        UiComponent stackIn_15_1 = null;
+        UiComponent stackIn_15_2 = null;
         boolean stackIn_16_3 = false;
         int var5;
         int var6;
@@ -28,12 +28,12 @@ final class VerticalScrollbar extends jea {
         int var10;
         int var11;
         int var12;
-        jea var14;
-        jea var15;
-        jea var16;
-        jea var17;
-        jea var18;
-        jea var19;
+        UiComponent var14;
+        UiComponent var15;
+        UiComponent var16;
+        UiComponent var17;
+        UiComponent var18;
+        UiComponent var19;
         if (this.field_t < this.field_G * 2) {
           var6 = this.field_t / 2;
           var5 = this.field_t / 2;
@@ -333,8 +333,8 @@ final class VerticalScrollbar extends jea {
         this.layoutThumb(param6, param0, (byte) -87, param1);
     }
 
-    VerticalScrollbar(long param0, jea param1, jea param2, jea param3, jea param4) {
-        super(param0, (jea) null);
+    VerticalScrollbar(long param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4) {
+        super(param0, (UiComponent) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -346,24 +346,24 @@ final class VerticalScrollbar extends jea {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        jea var9 = null;
-        jea var10 = null;
+        UiComponent var9 = null;
+        UiComponent var10 = null;
         try {
-          this.upButton = new jea(0L, param1);
-          this.downButton = new jea(0L, param2);
+          this.upButton = new UiComponent(0L, param1);
+          this.downButton = new UiComponent(0L, param2);
           this.b(-123, this.upButton);
           this.b(-124, this.downButton);
-          this.field_ub = new jea(0L, (jea) null);
+          this.field_ub = new UiComponent(0L, (UiComponent) null);
           this.b(-128, this.field_ub);
-          this.trackAbove = new jea(0L, param3);
-          this.trackBelow = new jea(0L, param3);
+          this.trackAbove = new UiComponent(0L, param3);
+          this.trackBelow = new UiComponent(0L, param3);
           var9 = this.trackAbove;
           var10 = var9;
           this.trackBelow.field_eb = true;
           var10.field_eb = true;
           this.field_ub.b(-124, this.trackAbove);
           this.field_ub.b(-122, this.trackBelow);
-          this.thumb = new jea(0L, param4);
+          this.thumb = new UiComponent(0L, param4);
           this.thumb.field_F = true;
           this.field_ub.b(-123, this.thumb);
           return;

@@ -10,7 +10,7 @@ final class wg extends MatchScoringObserver {
 
     final void onPenalty(int param0, Player param1, int param2, Room param3, int param4, int param5) {
         try {
-          nba.a(this.field_f, param3, (byte) 108);
+          nba.sendRoomDeathStat(this.field_f, param3, (byte) 108);
           if (param0 != 15) {
             Room var8 = (Room) null;
             this.onRoomCompleted((Player) null, (Room) null, true);
@@ -89,7 +89,7 @@ final class wg extends MatchScoringObserver {
             Room var5 = (Room) null;
             this.onRoomCompleted((Player) null, (Room) null, false);
           }
-          UrlDownloadRequest.a(this.field_f, param1, 108);
+          UrlDownloadRequest.sendRoomCompletedStat(this.field_f, param1, 108);
           super.onRoomCompleted(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wg.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

@@ -25,7 +25,7 @@ final class FacePointLocomotor extends Locomotor {
         return nt.a(param1, param3, 5200, param2, false, param0);
     }
 
-    final static QuickChatMenu a(jea param0, jea param1, jea param2, int[] param3, boolean param4) {
+    final static QuickChatMenu a(UiComponent param0, UiComponent param1, UiComponent param2, int[] param3, boolean param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
@@ -121,13 +121,13 @@ final class FacePointLocomotor extends Locomotor {
 
     final static void a(boolean param0, byte param1) {
         if (mla.field_a > 0 &&
-          uv.field_o) {
+          LegacyOpenGlBloomEffect.field_o) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, era.field_e.field_A);
           VboVertexArray.field_k.b(108, param0);
         }
         if (param1 <= 6) {
           int[] var3 = (int[]) null;
-          FacePointLocomotor.a((jea) null, (jea) null, (jea) null, (int[]) null, true);
+          FacePointLocomotor.a((UiComponent) null, (UiComponent) null, (UiComponent) null, (int[]) null, true);
         }
         if ((GameKeyHandler.field_a > 0 || fp.field_e > 0) &&
           tla.field_e) {

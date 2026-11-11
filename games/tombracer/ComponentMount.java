@@ -6,7 +6,7 @@ final class ComponentMount {
     private int slot;
     private RoomComponent child;
     private RoomComponent owner;
-    static jea field_b;
+    static UiComponent field_b;
     private IntPoint offset;
     private IntPoint rotatedOffset;
     private int field_f;
@@ -143,7 +143,7 @@ final class ComponentMount {
             return true;
           }
           if (param1 != 13) {
-            field_b = (jea) null;
+            field_b = (UiComponent) null;
           }
           if (param0.field_a != param2.field_a) {
             return false;

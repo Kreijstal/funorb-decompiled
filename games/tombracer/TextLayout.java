@@ -24,7 +24,7 @@ abstract class TextLayout {
         SecondaryNodeDequeIterator.field_a.initPlayers((byte) -64);
         SecondaryNodeDequeIterator.field_a.showCharacterSelect((byte) -52);
         int var7 = -125 / ((param1 - 57) / 38);
-        iqa.field_c.g(0);
+        iqa.field_c.enable(0);
         ConstrainToRectangleLocomotor.a(false, -1, (byte) 92);
     }
 

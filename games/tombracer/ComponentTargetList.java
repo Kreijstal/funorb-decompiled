@@ -32,7 +32,7 @@ final class ComponentTargetList {
           var3_int = 0;
           while (var3_int < this.pendingTargetIds.length) {
             var4 = this.pendingTargetIds[var3_int];
-            this.targets[var3_int] = param0.a(var4.field_d, var4.field_a, 20);
+            this.targets[var3_int] = param0.findComponentById(var4.field_d, var4.field_a, 20);
             var3_int++;
             if (var5 != 0) {
               return;
@@ -394,7 +394,7 @@ final class ComponentTargetList {
     final static void b(int param0) {
         vo.field_b = false;
         if (ItemModel.field_n != null) {
-          ItemModel.field_n.a(true);
+          ItemModel.field_n.resetSelection(true);
         }
         int var1 = -18 % ((-10 - param0) / 43);
         if (OpenGlUnderwaterEffect.field_q != 0) {

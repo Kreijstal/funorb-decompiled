@@ -4,7 +4,7 @@
 final class ita implements RenderBuffer {
     static IndexedSprite[] field_e;
     int field_d;
-    static jea field_c;
+    static UiComponent field_c;
     static int[] field_a;
     static int field_g;
     int field_b;

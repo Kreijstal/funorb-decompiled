@@ -84,7 +84,7 @@ final class AffineTransform3D extends Transform3D {
         this.field_n = -((float)param2 * this.field_m) + (this.field_k * (float)(-param0) - this.field_q * (float)param1);
     }
 
-    final float a(float param0, float param1, byte param2, float param3) {
+    final float transformZ(float param0, float param1, byte param2, float param3) {
         if (param2 <= -40) {
           return param0 * this.field_h + (this.field_p * param1 + this.field_o * param3) + this.field_i;
         }
@@ -132,7 +132,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void a(float[] param0, float param1, byte param2, float param3, float param4) {
+    final void transformDirection(float[] param0, float param1, byte param2, float param3, float param4) {
         param0[1] = this.field_m * param3 + (param1 * this.field_q + this.field_k * param4);
         if (param2 < 42) {
           return;
@@ -145,7 +145,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void a(byte param0) {
+    final void negateYZ(byte param0) {
         this.field_h = -this.field_h;
         this.field_m = -this.field_m;
         this.field_k = -this.field_k;
@@ -155,11 +155,11 @@ final class AffineTransform3D extends Transform3D {
         this.field_n = -this.field_n;
         this.field_q = -this.field_q;
         if (param0 != 42) {
-          this.a((byte) -117, -0.41521722078323364f, -0.9205878973007202f, -0.2643323540687561f);
+          this.setTranslationFloat((byte) -117, -0.41521722078323364f, -0.9205878973007202f, -0.2643323540687561f);
         }
     }
 
-    final void a(byte param0, float param1, float param2, float param3) {
+    final void setTranslationFloat(byte param0, float param1, float param2, float param3) {
         this.field_h = 1.0f;
         this.field_q = 1.0f;
         if (param0 >= 116) {
@@ -188,7 +188,7 @@ final class AffineTransform3D extends Transform3D {
         this.field_e = param3;
     }
 
-    final float[] a(float[] param0, byte param1) {
+    final float[] writeColumnMajor4x4(float[] param0, byte param1) {
         RuntimeException var3 = null;
         float[] stackIn_2_0 = null;
         float[] stackIn_4_0 = null;
@@ -233,7 +233,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final float[] a(boolean param0, float[] param1) {
+    final float[] writeRowMajor4x4(boolean param0, float[] param1) {
         RuntimeException var3 = null;
         float[] stackIn_2_0 = null;
         float[] stackIn_4_0 = null;
@@ -304,7 +304,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void b(int param0, float param1, float param2, float param3) {
+    final void scale(int param0, float param1, float param2, float param3) {
         this.field_k = this.field_k * param2;
         this.field_i = this.field_i * param1;
         this.field_g = this.field_g * param3;
@@ -363,7 +363,7 @@ final class AffineTransform3D extends Transform3D {
         this.field_q = 1.0f;
     }
 
-    final float[] a(byte param0, float[] param1) {
+    final float[] writeTextureMatrix4x4(byte param0, float[] param1) {
         RuntimeException var3 = null;
         float[] stackIn_2_0 = null;
         float[] stackIn_4_0 = null;
@@ -425,7 +425,7 @@ final class AffineTransform3D extends Transform3D {
         this.field_n = var3 * var7 + this.field_n * var2;
     }
 
-    final float[] a(float[] param0, int param1) {
+    final float[] writeFirstTwoRows(float[] param0, int param1) {
         RuntimeException var3 = null;
         float[] stackIn_2_0 = null;
         float[] stackIn_4_0 = null;
@@ -543,7 +543,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final float a(float param0, float param1, float param2, byte param3) {
+    final float transformY(float param0, float param1, float param2, byte param3) {
         if (param3 >= 122) {
           return this.field_m * param1 + (param2 * this.field_q + this.field_k * param0) + this.field_n;
         }
@@ -551,7 +551,7 @@ final class AffineTransform3D extends Transform3D {
         return this.field_m * param1 + (param2 * this.field_q + this.field_k * param0) + this.field_n;
     }
 
-    final float[] b(float[] param0, int param1) {
+    final float[] writeLinearRowMajor4x4(float[] param0, int param1) {
         RuntimeException var3 = null;
         Transform3D var4 = null;
         float[] stackIn_3_0 = null;
@@ -661,7 +661,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final float a(int param0, float param1, float param2, float param3) {
+    final float transformX(int param0, float param1, float param2, float param3) {
         if (param0 == 1) {
           return this.field_e + (param3 * this.field_f + (this.field_l * param2 + param1 * this.field_g));
         }
@@ -725,7 +725,7 @@ final class AffineTransform3D extends Transform3D {
         }
     }
 
-    final void a(float param0, float param1, boolean param2, float param3) {
+    final void setScale(float param0, float param1, boolean param2, float param3) {
         this.field_e = 0.0f;
         this.field_k = 0.0f;
         this.field_g = param1;
@@ -791,7 +791,7 @@ final class AffineTransform3D extends Transform3D {
           this.field_q = 1.0f;
           return;
         }
-        this.a(-0.05258991941809654f, 0.013552773743867874f, false, 0.009597906842827797f);
+        this.setScale(-0.05258991941809654f, 0.013552773743867874f, false, 0.009597906842827797f);
         this.field_f = 0.0f;
         this.field_m = 0.0f;
         this.field_i = (float)param3;

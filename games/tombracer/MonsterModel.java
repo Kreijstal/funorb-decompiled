@@ -4,7 +4,7 @@
 final class MonsterModel extends MotionTrackingModel {
     static String field_A;
     private int field_z;
-    private bua field_C;
+    private ModelAnimator field_C;
     private int field_x;
     private boolean field_w;
     static float field_B;
@@ -19,7 +19,7 @@ final class MonsterModel extends MotionTrackingModel {
         try {
           int var6_int = 0 % ((-38 - param4) / 47);
           var7 = this.i(-6874);
-          var8 = this.field_C.a(false, -1, false, (byte) 1);
+          var8 = this.field_C.buildModel(false, -1, false, (byte) 1);
           gqa.a(var7, -83584144, param1, param2, var8, param3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aka.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -56,7 +56,7 @@ final class MonsterModel extends MotionTrackingModel {
           if (param1 == 4) {
             return;
           }
-          this.field_C.a(6, -23308, 1);
+          this.field_C.setModelIds(6, -23308, 1);
           var3 = -1;
           this.field_C.a(1, true, (byte) -101, 3);
         }
@@ -92,7 +92,7 @@ final class MonsterModel extends MotionTrackingModel {
     final void removeFromScene(RenderScene param0, int param1) {
         try {
           if (param1 < 82) {
-            this.field_C = (bua) null;
+            this.field_C = (ModelAnimator) null;
           }
           super.removeFromScene(param0, 93);
           this.field_C = null;
@@ -112,9 +112,9 @@ final class MonsterModel extends MotionTrackingModel {
           super.addToScene(param0 ^ param0, param1);
           var3_int = this.field_x;
           if (var3_int == 0) {
-            this.field_C = new bua(6, 0, 0);
+            this.field_C = new ModelAnimator(6, 0, 0);
             this.field_C.a(1, true, (byte) -121, 1);
-            this.field_C.a(false, 176);
+            this.field_C.setScale(false, 176);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class MonsterModel extends MotionTrackingModel {
           }
           this.field_C.a(1, false, (byte) -114, var4);
         }
-        this.field_C.a(param0 ^ param0);
+        this.field_C.tick(param0 ^ param0);
         var5 = (SoundEventPlayer) (this.body.getRoom((byte) -79).soundQueue);
         if (var5 == null) {
           return;

@@ -7,7 +7,7 @@ final class NodeHashTable {
     private IntrusiveNode[] field_f;
     private int field_e;
     private long field_h;
-    static jea field_g;
+    static UiComponent field_g;
     private int field_a;
     static String field_d;
 
@@ -154,7 +154,7 @@ final class NodeHashTable {
         IntrusiveNode var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param0 >= -78) {
-          field_g = (jea) null;
+          field_g = (UiComponent) null;
         }
         this.field_h = param1;
         IntrusiveNode var4 = this.field_f[(int)(param1 & (long)(this.field_a - 1))];
@@ -175,11 +175,11 @@ final class NodeHashTable {
         int var1 = (-640 + SceneLight.field_i) / 2;
         int var2 = SoftwareTransform3D.field_q * SoftwareTransform3D.field_q;
         int var3 = -(mla.field_a * mla.field_a) + var2;
-        nra.field_a.a(199, -214 + SoftwareRasterizer.height, -23776, 90, -(199 * var3 / var2) + var1);
+        nra.field_a.setBounds(199, -214 + SoftwareRasterizer.height, -23776, 90, -(199 * var3 / var2) + var1);
         if (param0 != 16) {
           return;
         }
-        OpenGlToolkit.field_fd.a(438, -4 + (-120 + SoftwareRasterizer.height), -23776, 0, 202 + var1 + 438 * var3 / var2);
+        OpenGlToolkit.field_fd.setBounds(438, -4 + (-120 + SoftwareRasterizer.height), -23776, 0, 202 + var1 + 438 * var3 / var2);
     }
 
     static {

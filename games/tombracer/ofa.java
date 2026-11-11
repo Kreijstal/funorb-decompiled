@@ -37,7 +37,7 @@ abstract class ofa extends gn {
         if (param0 >= -53) {
           ofa.releaseStatics(69);
         }
-        this.c(true);
+        this.finishTransition(true);
         return super.a((byte) -92);
     }
 
@@ -175,7 +175,7 @@ abstract class ofa extends gn {
           this.field_G = this.field_G + 1;
           if (this.field_F <= fieldTemp$0) {
             this.field_F = 0;
-            this.d(-69);
+            this.onResizeFinished(-69);
           } else {
             var4 = (-this.field_G + 2 * this.field_F) * this.field_G;
             var5 = this.field_F * this.field_F;
@@ -207,7 +207,7 @@ abstract class ofa extends gn {
         return (param0 & 384) != 0 ? true : false;
     }
 
-    void c(boolean param0) {
+    void finishTransition(boolean param0) {
         if (!param0) {
           this.field_G = -30;
         }
@@ -216,10 +216,10 @@ abstract class ofa extends gn {
         }
         this.c(-11560, this.field_E, this.field_K);
         this.field_F = 0;
-        this.d(-90);
+        this.onResizeFinished(-90);
     }
 
-    void d(int param0) {
+    void onResizeFinished(int param0) {
         if (param0 >= -20) {
           field_D = (String) null;
         }

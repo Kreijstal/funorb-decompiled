@@ -3,7 +3,7 @@
  */
 final class dta {
     static String field_e;
-    private bua field_c;
+    private ModelAnimator field_c;
     static boolean[] field_g;
     private int[] field_a;
     static String[] skipRoomMessages;
@@ -112,7 +112,7 @@ final class dta {
         try {
           var8_int = 10;
           if (param4.f(-12963, param2) &&
-            !param4.n(-95)) {
+            !param4.isSendWindowFull(-95)) {
             var10 = -94 / ((51 - param3) / 40);
             var9 = param4.matchState;
             var11 = param4.getViewedPlayerIndex(107);
@@ -164,7 +164,7 @@ final class dta {
               } else {
                 if (var23 != 0) {
                   ura.a(-10985);
-                  hp.a(1024, 512, 0, this.field_c.b((byte) 74), -1918106173, 70 + var18Lifetime1, var17Lifetime1 + 55);
+                  hp.a(1024, 512, 0, this.field_c.getModel((byte) 74), -1918106173, 70 + var18Lifetime1, var17Lifetime1 + 55);
                   RemovedFromGameMenu.f((byte) -6);
                 }
               }
@@ -369,7 +369,7 @@ final class dta {
             }
             return;
           }
-          if (!param4.n(99)) {
+          if (!param4.isSendWindowFull(99)) {
             tga.field_a.setClip(param0, param5, param1, param6);
             Room.field_j.a(0, 0);
             tga.field_a.la();
@@ -394,7 +394,7 @@ final class dta {
     }
 
     final void a(byte param0) {
-        this.field_c.a(0);
+        this.field_c.tick(0);
         if (param0 != -21) {
           field_g = (boolean[]) null;
         }
@@ -404,7 +404,7 @@ final class dta {
         this.field_a = new int[3];
         this.field_f = new int[3];
         this.field_h = new String[3];
-        this.field_c = new bua(3, 4);
+        this.field_c = new ModelAnimator(3, 4);
     }
 
     static {

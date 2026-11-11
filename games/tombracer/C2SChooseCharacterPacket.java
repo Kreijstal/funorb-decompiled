@@ -5,7 +5,7 @@ final class C2SChooseCharacterPacket implements GamePacket {
     static String field_c;
     private int field_b;
     static int field_d;
-    static jea field_a;
+    static UiComponent field_a;
 
     final void setCharacter(int param0, byte param1) {
         this.field_b = param0;

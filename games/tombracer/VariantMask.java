@@ -57,7 +57,7 @@ final class VariantMask {
 
     final static void a(vb param0, byte param1) {
         try {
-          PitModel.field_n.b(param0.field_f);
+          PitModel.field_n.removeSubstream(param0.field_f);
           if (param1 != -42) {
             VariantMask.b((byte) -90);
           }

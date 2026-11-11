@@ -17,7 +17,7 @@ final class ala extends GameScreen {
     }
 
     final void onActivated(byte param0) {
-        iqa.field_c.c(104);
+        iqa.field_c.closePanel(104);
         if (param0 < 78) {
           this.isFullScreen(-93);
         }

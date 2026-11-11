@@ -206,7 +206,7 @@ final class KeySwitchComponent extends SwitchComponent {
             return true;
           }
           if (MenuEntry.field_h == 102) {
-            ItemModel.field_n.a(true);
+            ItemModel.field_n.resetSelection(true);
             return true;
           }
           if (null == ItemModel.field_n) {
@@ -222,7 +222,7 @@ final class KeySwitchComponent extends SwitchComponent {
           return true;
         }
         if (MenuEntry.field_h == 102) {
-          ItemModel.field_n.a(true);
+          ItemModel.field_n.resetSelection(true);
           return true;
         }
         if (null == ItemModel.field_n) {

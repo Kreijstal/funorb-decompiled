@@ -3,7 +3,7 @@
  */
 final class kv {
     static FontMetrics field_a;
-    static jea field_b;
+    static UiComponent field_b;
     static String[] achievementDescriptions;
 
     final static boolean a(byte param0, String param1, String param2) {

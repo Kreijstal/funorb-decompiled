@@ -3,7 +3,7 @@
  */
 final class era {
     static int field_a;
-    static jea field_e;
+    static UiComponent field_e;
     static BitmapFont field_g;
     static String field_b;
     static String field_f;
@@ -18,7 +18,7 @@ final class era {
         field_e = null;
         field_d = null;
         if (param0 <= 110) {
-          field_e = (jea) null;
+          field_e = (UiComponent) null;
         }
     }
 

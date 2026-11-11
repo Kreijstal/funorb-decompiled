@@ -183,7 +183,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             }
             if (null != mq.field_e && (wm.field_a.field_c == 12 ||
               wm.field_a.field_c == 4)) {
-              SpawnerBehaviour.a(tk.a(-22636), 12, mq.field_e.field_g, jg.a((byte) -80));
+              SpawnerBehaviour.sendSettings(tk.a(-22636), 12, mq.field_e.field_g, jg.a((byte) -80));
             }
           }
           SpriteTileOperator.field_t = BlendModeOperator.d(param1, 121);

@@ -11,7 +11,7 @@ final class BrickOperator extends TextureOperator {
     static gb field_w;
     private int field_x;
     private int field_n;
-    static jea field_v;
+    static UiComponent field_v;
     private int field_C;
     private int[] field_u;
     private int[][] field_B;

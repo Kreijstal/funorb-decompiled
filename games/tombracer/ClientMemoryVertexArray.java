@@ -4,8 +4,8 @@
 final class ClientMemoryVertexArray extends ora implements LegacyVertexArray {
     static String[] field_c;
     static long field_f;
-    static jea field_e;
-    static jea field_d;
+    static UiComponent field_e;
+    static UiComponent field_d;
     static int field_g;
     private int field_h;
 

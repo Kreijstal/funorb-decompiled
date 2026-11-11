@@ -220,9 +220,9 @@ final class BridgeModel extends TrapModel {
           if (var3_intLifetime1 != 0) {
             if (var3_intLifetime1 == 1) {
             }
-            param1.field_f = new bua(1, 63);
+            param1.field_f = new ModelAnimator(1, 63);
           } else {
-            param1.field_f = new bua(1, 62);
+            param1.field_f = new ModelAnimator(1, 62);
           }
           if (!param0) {
             this.buildTiles((byte) -52);
@@ -660,20 +660,20 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final static void a(int param0, jea param1) {
-        jea var4 = null;
-        jea var2 = null;
+    final static void a(int param0, UiComponent param1) {
+        UiComponent var4 = null;
+        UiComponent var2 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
-        jea var2Lifetime1;
+        UiComponent var2Lifetime1;
         try {
-          var4 = (jea) (param1.field_J.first(-80));
+          var4 = (UiComponent) (param1.field_J.first(-80));
           var2 = var4;
           while (var4 != null) {
             var4.field_K = 0;
             var4.field_O = 0;
             var4.field_T = 0;
             var4.field_t = 0;
-            var4 = (jea) (param1.field_J.next(112));
+            var4 = (UiComponent) (param1.field_J.next(112));
             var2Lifetime1 = var4;
           }
           param1.field_t = 0;

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class SwitchModel extends TrapModel {
     private fla field_p;
-    private bua field_s;
+    private ModelAnimator field_s;
     private boolean field_n;
     private int field_q;
     private SwitchSource field_o;
@@ -48,10 +48,10 @@ final class SwitchModel extends TrapModel {
           }
           if (this.field_q != 3) {
             if (this.field_q == 1) {
-              this.field_s = new bua(7, 8);
+              this.field_s = new ModelAnimator(7, 8);
             }
           } else {
-            this.field_s = new bua(1, 10);
+            this.field_s = new ModelAnimator(1, 10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ final class SwitchModel extends TrapModel {
         try {
           super.configureFor(param0, param1 + 0, param2);
           if (param1 != -2159) {
-            this.field_s = (bua) null;
+            this.field_s = (ModelAnimator) null;
           }
           var4_int = param0.getWidth(-22);
           var5 = param0.getHeight((byte) 55);
@@ -339,7 +339,7 @@ final class SwitchModel extends TrapModel {
           }
           return;
         }
-        this.field_s.a(param0 + 1);
+        this.field_s.tick(param0 + 1);
         var7 = (SoundEventPlayer) (this.getRoom(58).soundQueue);
         if (param0 == -1) {
           if (var7 == null) {
@@ -861,7 +861,7 @@ final class SwitchModel extends TrapModel {
                   var11 = RevolverItemComponent.field_J[9];
                   var10 = -2048;
                   if (var7 != 0) {
-                    var11 = this.field_s.b((byte) 74);
+                    var11 = this.field_s.getModel((byte) 74);
                     this.field_s.a(3, false, (byte) -101, 6);
                   }
                 }
@@ -911,7 +911,7 @@ final class SwitchModel extends TrapModel {
             if (var7 == 0) {
               return;
             }
-            var16 = this.field_s.b((byte) 74);
+            var16 = this.field_s.getModel((byte) 74);
             this.field_s.a(3, false, (byte) 79, 7);
             var14Lifetime2 = GameScreen.positiveModulo(-this.body.getFacingAngle(-25787) + var10 + 2048 >> 2, 2048, -69);
             gqa.a(var14Lifetime2, -83584144, param1, param2 + 65536, var16, param3 + 2228224);

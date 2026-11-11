@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TeleportState {
-    private boolean field_c;
-    private boolean field_a;
+    private boolean locked;
+    private boolean touchedThisTick;
     static AccountRegistrationPanel field_b;
 
-    final void a(byte param0) {
-        this.field_a = true;
+    final void markTouching(byte param0) {
+        this.touchedThisTick = true;
         int var2 = -27 / ((55 - param0) / 56);
     }
 
-    final boolean b(int param0) {
+    final boolean isLocked(int param0) {
         if (param0 != -59) {
-          this.b(-10);
+          this.isLocked(-10);
         }
-        return this.field_c;
+        return this.locked;
     }
 
     public static void releaseStatics(int param0) {
@@ -25,15 +25,15 @@ final class TeleportState {
         field_b = null;
     }
 
-    final void c(int param0) {
-        this.field_a = true;
+    final void markTeleported(int param0) {
+        this.touchedThisTick = true;
         if (param0 > -18) {
           return;
         }
-        this.field_c = true;
+        this.locked = true;
     }
 
-    final static GraphicsToolkit a(java.awt.Canvas param0, TextureProvider param1, int param2, byte param3) {
+    final static GraphicsToolkit createOpenGlToolkit(java.awt.Canvas param0, TextureProvider param1, int param2, byte param3) {
         RuntimeException var4 = null;
         GraphicsToolkit stackIn_2_0 = null;
         OpenGlToolkit stackIn_4_0 = null;
@@ -70,21 +70,21 @@ final class TeleportState {
         }
     }
 
-    final void a(int param0) {
+    final void update(int param0) {
         if (param0 != 86) {
           return;
         }
-        if (!this.field_a) {
-          this.field_c = false;
+        if (!this.touchedThisTick) {
+          this.locked = false;
         }
-        this.field_a = false;
+        this.touchedThisTick = false;
     }
 
-    final void b(byte param0) {
-        this.field_a = false;
-        this.field_c = false;
+    final void reset(byte param0) {
+        this.touchedThisTick = false;
+        this.locked = false;
         if (param0 != 93) {
-          this.field_a = true;
+          this.touchedThisTick = true;
         }
     }
 
@@ -109,7 +109,7 @@ final class TeleportState {
           }
           if (param1 > -37) {
             var6 = (TextureProvider) null;
-            TeleportState.a((java.awt.Canvas) null, (TextureProvider) null, 122, (byte) 69);
+            TeleportState.createOpenGlToolkit((java.awt.Canvas) null, (TextureProvider) null, 122, (byte) 69);
           }
           for (var4 = 0; var4 < param0.length(); var4++) {
             if (!SwitchComponent.a(false, param0.charAt(var4))) {

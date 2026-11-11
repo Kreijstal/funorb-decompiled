@@ -6,7 +6,7 @@ final class cva {
     boolean field_a;
     static ura field_b;
     static String field_e;
-    static dk[] field_c;
+    static AnimationSequence[] field_c;
 
     final static void a(int param0) {
         if (OpenGlSceneLight.field_o != null) {

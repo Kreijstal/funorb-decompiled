@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al extends IntrusiveNode {
+final class IntNode extends IntrusiveNode {
     static boolean field_j;
     static double field_h;
-    int field_i;
+    int value;
     static IntrusiveDeque field_g;
     static su field_f;
 
@@ -15,12 +15,12 @@ final class al extends IntrusiveNode {
           return;
         }
         BeamSegment var2 = (BeamSegment) null;
-        al.a((BeamSegment) null, 17, -109, (BeamSegment) null);
+        IntNode.a((BeamSegment) null, 17, -109, (BeamSegment) null);
         field_g = null;
     }
 
-    al(int param0) {
-        this.field_i = param0;
+    IntNode(int param0) {
+        this.value = param0;
     }
 
     final static int a(BeamSegment param0, int param1, int param2, BeamSegment param3) {
@@ -43,7 +43,7 @@ final class al extends IntrusiveNode {
           }
           if (param2 != 12) {
             var5 = (BeamSegment) null;
-            al.a((BeamSegment) null, 111, 55, (BeamSegment) null);
+            IntNode.a((BeamSegment) null, 111, 55, (BeamSegment) null);
           }
           stackIn_5_0 = var4_int;
           return stackIn_5_0;

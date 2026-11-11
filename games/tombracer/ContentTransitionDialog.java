@@ -52,9 +52,9 @@ abstract class ContentTransitionDialog extends ofa {
         }
     }
 
-    final void c(boolean param0) {
+    final void finishTransition(boolean param0) {
         if (this.field_M == null) {
-          super.c(param0);
+          super.finishTransition(param0);
           return;
         }
         if (this.field_M != S2CRewardChoicePacket.field_a) {
@@ -63,15 +63,15 @@ abstract class ContentTransitionDialog extends ofa {
         } else {
           this.field_P.field_y = 256;
           this.field_M = null;
-          super.c(param0);
+          super.finishTransition(param0);
           return;
         }
         this.field_P.field_y = 256;
         this.field_M = null;
-        super.c(param0);
+        super.finishTransition(param0);
     }
 
-    void a(int param0, UiWidget param1) {
+    void transitionToContent(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -175,7 +175,7 @@ abstract class ContentTransitionDialog extends ofa {
         field_L = null;
     }
 
-    final void d(int param0) {
+    final void onResizeFinished(int param0) {
         if (this.field_M == StripesOperator.field_p) {
           return;
         }
@@ -245,7 +245,7 @@ abstract class ContentTransitionDialog extends ofa {
         if (param0 > -53) {
           return false;
         }
-        this.c(true);
+        this.finishTransition(true);
         return super.a((byte) -120);
     }
 

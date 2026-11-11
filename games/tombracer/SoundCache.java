@@ -8,7 +8,7 @@ final class SoundCache {
     private NodeHashTable field_e;
     private NodeHashTable field_a;
 
-    final u a(String param0, byte param1, String param2) {
+    final u getSoundEffectByName(String param0, byte param1, String param2) {
         RuntimeException var4 = null;
         u stackIn_2_0 = null;
         u stackIn_4_0 = null;
@@ -73,12 +73,12 @@ final class SoundCache {
             stackIn_2_0 = (u) null;
             return stackIn_2_0;
           }
-          var5_int = this.field_c.b(param3, -7768);
+          var5_int = this.field_c.getGroupId(param3, -7768);
           if (var5_int < 0) {
             stackIn_5_0 = null;
             return (u) (stackIn_5_0);
           }
-          var6 = this.field_c.a(true, param0, var5_int);
+          var6 = this.field_c.getFileId(true, param0, var5_int);
           if (var6 >= 0) {
             stackIn_10_0 = this.getVorbisSample(var6, param2, (byte) 101, var5_int);
             return stackIn_10_0;
@@ -127,7 +127,7 @@ final class SoundCache {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_b.b(param2, -7768);
+          var5_int = this.field_b.getGroupId(param2, -7768);
           if (var5_int < 0) {
             stackIn_2_0 = null;
             return (u) (stackIn_2_0);
@@ -136,7 +136,7 @@ final class SoundCache {
             stackIn_5_0 = (u) null;
             return stackIn_5_0;
           }
-          var6 = this.field_b.a(true, param1, var5_int);
+          var6 = this.field_b.getFileId(true, param1, var5_int);
           if (0 > var6) {
             return null;
           }
@@ -298,7 +298,7 @@ final class SoundCache {
         }
     }
 
-    final u a(int param0, int[] param1, int param2) {
+    final u getSoundEffectById(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
         u stackIn_2_0 = null;
         u stackIn_6_0 = null;

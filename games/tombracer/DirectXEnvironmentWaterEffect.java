@@ -177,8 +177,8 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
             var2 = this.field_i.field_jd;
             var3 = this.field_i.E(14);
             var4 = this.field_i.n((byte) 4);
-            var2.setVertexShaderConstantF(0, var4.a(false, field_h));
-            var2.setVertexShaderConstantF(4, var3.b(field_h, 74));
+            var2.setVertexShaderConstantF(0, var4.writeRowMajor4x4(false, field_h));
+            var2.setVertexShaderConstantF(4, var3.writeLinearRowMajor4x4(field_h, 74));
           }
           return;
         }
@@ -190,7 +190,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (this.field_j) {
           var2 = this.field_i.field_jd;
           var3 = this.field_i.n((byte) -124);
-          var2.setVertexShaderConstantF(0, var3.a(false, field_h));
+          var2.setVertexShaderConstantF(0, var3.writeRowMajor4x4(false, field_h));
         }
         if (param0 == 107) {
           return;
@@ -204,7 +204,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (this.field_j) {
           var2 = this.field_i.field_jd;
           var3 = this.owner.textureTransform((byte) 112);
-          var2.SetVertexShaderConstantF(12, var3.a(field_h, -96), 2);
+          var2.SetVertexShaderConstantF(12, var3.writeFirstTwoRows(field_h, -96), 2);
         }
         if (param0) {
           return;

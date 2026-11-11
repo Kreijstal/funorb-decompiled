@@ -5,7 +5,7 @@ final class tka extends TextWidgetPainter {
     private IndexedSprite[] field_o;
     static volatile int field_n;
     static ToolkitSprite field_p;
-    static jea field_q;
+    static UiComponent field_q;
 
     tka(IndexedSprite[] param0) {
         try {
@@ -18,7 +18,7 @@ final class tka extends TextWidgetPainter {
 
     public static void releaseStatics(byte param0) {
         if (param0 > -52) {
-          field_q = (jea) null;
+          field_q = (UiComponent) null;
           field_p = null;
           field_q = null;
           return;

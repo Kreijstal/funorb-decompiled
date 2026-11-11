@@ -150,7 +150,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         }
         this.field_x = this.trap.getFacingAngle(-25787) >> 2;
         this.field_E = MouseInputHandler.sin2048((byte) 102, this.field_x);
-        this.field_o = bua.cos2048(0, this.field_x);
+        this.field_o = ModelAnimator.cos2048(0, this.field_x);
         var6 = this.trap.getTopElevation(0) << 16;
         if (!this.field_D) {
           this.q((byte) 92);

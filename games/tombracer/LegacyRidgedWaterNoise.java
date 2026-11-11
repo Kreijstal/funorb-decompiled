@@ -142,7 +142,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
             return false;
           }
           try {
-            var2_int = OpenGlTransform3D.field_e.c(~param1);
+            var2_int = OpenGlTransform3D.field_e.available(~param1);
             if (var2_int <= 0) {
               if (~var2_int > param1) {
                 dea.a(60);

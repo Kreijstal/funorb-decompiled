@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mu extends jea {
+final class mu extends UiComponent {
     String field_yb;
     static String field_wb;
-    jea field_Ab;
+    UiComponent field_Ab;
     String field_vb;
     static float field_ub;
-    jea field_zb;
+    UiComponent field_zb;
     String field_tb;
     String field_Cb;
     static String field_Bb;
     int field_Db;
-    jea field_xb;
+    UiComponent field_xb;
     private static String field_Eb;
 
     mu() {
-        super(0L, (jea) null);
+        super(0L, (UiComponent) null);
     }
 
     public static void releaseStatics(byte param0) {

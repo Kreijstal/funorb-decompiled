@@ -7,7 +7,7 @@ final class PlayerContextMenu {
     private long field_g;
     private int[] field_e;
     ContextMenu field_f;
-    jea field_h;
+    UiComponent field_h;
     int field_k;
     static fp field_j;
     static volatile boolean field_c;
@@ -75,7 +75,7 @@ final class PlayerContextMenu {
           this.field_e = (int[]) null;
           return;
         }
-        var5 = av.a(this.field_k, 0);
+        var5 = MazeSolver.a(this.field_k, 0);
         if (var5 == null) {
           if (param0 <= -10) {
             return;
@@ -494,7 +494,7 @@ final class PlayerContextMenu {
         return true;
     }
 
-    PlayerContextMenu(jea param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    PlayerContextMenu(UiComponent param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_f = new ContextMenu(SimpleBlockBehaviour.field_n);
           this.field_i = param2;

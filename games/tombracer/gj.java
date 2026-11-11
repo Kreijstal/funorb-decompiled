@@ -28,29 +28,29 @@ final class gj {
     }
 
     final static void a(ResourceArchive param0, boolean param1) {
-        jea stackIn_4_0 = null;
+        UiComponent stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
-        jea stackIn_7_0 = null;
+        UiComponent stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        jea var3 = null;
+        UiComponent var3 = null;
         ResourceArchive var4 = null;
-        jea var6 = null;
-        jea var7 = null;
+        UiComponent var6 = null;
+        UiComponent var7 = null;
         try {
           ConsoleValue.field_e = MaskBlendOperator.a(param0, "basic", "display_name_changed", 121);
           dn.field_b = new hla(0L, aaa.field_d, kea.field_a, ai.field_d);
           OpenGlSprite.field_j = new hla(0L, aaa.field_d, ParticleEffects.field_a, uma.field_a);
-          dqa.field_e = new jea(0L, (jea) null);
-          is.field_yb = new jea(0L, Corpse.field_i);
+          dqa.field_e = new UiComponent(0L, (UiComponent) null);
+          is.field_yb = new UiComponent(0L, Corpse.field_i);
           is.field_yb.field_z = 1;
-          MatchScreen.field_F = new jea(0L, ooa.field_f, CanvasImageBuffer.field_i);
-          Puddle.field_v = new jea(0L, SecondaryNodeDeque.field_b, C2SChooseCharacterPacket.field_c);
-          ita.field_c = new jea(0L, PressureSwitchBehaviour.field_p);
+          MatchScreen.field_F = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
+          Puddle.field_v = new UiComponent(0L, SecondaryNodeDeque.field_b, C2SChooseCharacterPacket.field_c);
+          ita.field_c = new UiComponent(0L, PressureSwitchBehaviour.field_p);
           dqa.field_e.b(-122, is.field_yb);
           dqa.field_e.b(-126, MatchScreen.field_F);
           if (!param1) {
@@ -62,14 +62,14 @@ final class gj {
           dqa.field_e.b(-125, ita.field_c);
           stackIn_4_0 = dn.field_b.field_vb.field_vb;
           stackIn_5_1 = !(param1);
-          ((jea) (Object) stackIn_4_0).applyStyle(stackIn_5_1, Corpse.field_i);
+          ((UiComponent) (Object) stackIn_4_0).applyStyle(stackIn_5_1, Corpse.field_i);
           dn.field_b.field_vb.field_vb.field_bb = 1;
           var6 = dn.field_b.field_vb.field_vb;
           var7 = var6;
           var7.field_z = 1;
           stackIn_7_0 = OpenGlSprite.field_j.field_vb.field_vb;
           stackIn_8_1 = !(param1);
-          ((jea) (Object) stackIn_7_0).applyStyle(stackIn_8_1, Corpse.field_i);
+          ((UiComponent) (Object) stackIn_7_0).applyStyle(stackIn_8_1, Corpse.field_i);
           OpenGlSprite.field_j.field_vb.field_vb.field_bb = 1;
           var3 = OpenGlSprite.field_j.field_vb.field_vb;
           var3.field_z = 1;

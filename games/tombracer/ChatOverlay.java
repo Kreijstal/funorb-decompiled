@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ila {
-    private IntrusiveDeque field_d;
-    private boolean field_e;
-    private boolean field_c;
+final class ChatOverlay {
+    private IntrusiveDeque visibleMessages;
+    private boolean enabled;
+    private boolean panelOpen;
     private IntrusiveDeque field_b;
-    private gqa field_a;
+    private gqa lastShownMessage;
 
-    final void d(boolean param0) {
+    final void drawMessages(boolean param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        if (!this.field_e) {
+        if (!this.enabled) {
           return;
         }
         if (!param0) {
-          this.field_a = (gqa) null;
+          this.lastShownMessage = (gqa) null;
         }
-        FloatingMessage var4 = (FloatingMessage) (this.field_d.first(-80));
+        FloatingMessage var4 = (FloatingMessage) (this.visibleMessages.first(-80));
         while (var4 != null) {
           var4.draw((byte) -111);
-          var4 = (FloatingMessage) (this.field_d.next(107));
+          var4 = (FloatingMessage) (this.visibleMessages.next(107));
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isEnabled(int param0) {
         if (param0 != 4782) {
-          this.field_d = (IntrusiveDeque) null;
+          this.visibleMessages = (IntrusiveDeque) null;
         }
-        return this.field_e;
+        return this.enabled;
     }
 
     private final gqa getNewestChatMessage(int param0) {
         if (param0 != 1366884705) {
-          this.d(-116);
+          this.disableWithPanel(-116);
         }
         if (ara.field_xb == 0) {
           return null;
@@ -40,7 +40,7 @@ final class ila {
         return CourseLayout.field_d[-1 + ara.field_xb];
     }
 
-    final void a(byte param0, boolean param1, boolean param2) {
+    final void update(byte param0, boolean param1, boolean param2) {
         int var8 = 0;
         int stackIn_52_0 = 0;
         boolean stackIn_52_1 = false;
@@ -58,28 +58,28 @@ final class ila {
         String[] var10Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         if (param1) {
-          this.g(0);
+          this.enable(0);
         } else {
-          this.b(false);
+          this.setEnabled(false);
         }
         if (!param1) {
           return;
         }
-        if (null == this.field_a) {
-          this.field_a = this.getNewestChatMessage(1366884705);
+        if (null == this.lastShownMessage) {
+          this.lastShownMessage = this.getNewestChatMessage(1366884705);
         }
         var11 = this.getNewestChatMessage(1366884705);
         var4 = var11;
         var5 = -127 % ((param0 + 34) / 44);
         if (var11 != null &&
-          this.field_a != var11) {
+          this.lastShownMessage != var11) {
           var6 = 0;
           var10 = new String[10];
           var7 = var10;
           while (var6 < 10) {
             if (0 <= -var6 + (ara.field_xb - 1)) {
               var8_ref_gqa = CourseLayout.field_d[-1 + ara.field_xb - var6];
-              if (var8_ref_gqa != this.field_a) {
+              if (var8_ref_gqa != this.lastShownMessage) {
                 if (var8_ref_gqa.field_f != null &&
                   var8_ref_gqa.field_m) {
                   var10[var6] = var8_ref_gqa.field_f;
@@ -94,22 +94,22 @@ final class ila {
           for (var8 = 9; var8 >= 0; var8--) {
             if (null != var10Lifetime1[var8] &&
               "" != var10Lifetime1[var8]) {
-              this.a(0, BannerCommand.a(var10Lifetime1[var8], (byte) -62));
+              this.addMessageNow(0, BannerCommand.a(var10Lifetime1[var8], (byte) -62));
             }
           }
-          this.field_a = var11;
+          this.lastShownMessage = var11;
         }
         var6Lifetime1 = 120;
-        if (this.field_e) {
+        if (this.enabled) {
           var7_ref = (FloatingMessage) (this.field_b.first(-80));
           while (var7_ref != null) {
             var7_ref.d((byte) 80);
             if (var7_ref.a((byte) -100) <= 0) {
-              this.field_d.addLast((byte) -77, var7_ref);
+              this.visibleMessages.addLast((byte) -77, var7_ref);
             }
             var7_ref = (FloatingMessage) (this.field_b.next(111));
           }
-          var7_refLifetime1 = (FloatingMessage) (this.field_d.first(-80));
+          var7_refLifetime1 = (FloatingMessage) (this.visibleMessages.first(-80));
           while (var7_refLifetime1 != null) {
             var7_refLifetime1.a(var6Lifetime1, 4, aaa.a(false) - var7_refLifetime1.c((byte) -96));
             var7_refLifetime1.tick(-43);
@@ -119,10 +119,10 @@ final class ila {
             if (var7_refLifetime1.isExpired((byte) -39)) {
               var7_refLifetime1.unlink(3);
             }
-            var7_refLifetime1 = (FloatingMessage) (this.field_d.next(121));
+            var7_refLifetime1 = (FloatingMessage) (this.visibleMessages.next(121));
           }
         }
-        if (this.field_c) {
+        if (this.panelOpen) {
           stackIn_52_0 = 108;
           stackIn_52_1 = param1;
           ProgressBarWidget.b(stackIn_52_0, stackIn_52_1, aaa.a(false) >> 1, SwitchLinkList.b(0) >> 1);
@@ -130,23 +130,23 @@ final class ila {
         }
     }
 
-    final void a(int param0, int param1, FloatingMessage param2) {
+    final void addMessage(int param0, int param1, FloatingMessage param2) {
         if (param2 == null ||
           param2.getText(29161) == null) {
           return;
         }
-        if (!this.field_e) {
+        if (!this.enabled) {
           return;
         }
         try {
           if (param0 <= 0) {
-            this.field_d.addLast((byte) -67, param2);
+            this.visibleMessages.addLast((byte) -67, param2);
           } else {
             this.field_b.addLast((byte) -80, param2);
             param2.a(false, param0);
           }
           if (param1 != 0) {
-            this.field_e = true;
+            this.enabled = true;
           }
           param2.setTiming(false, 25, 12, 150);
           param2.a(1, aaa.a(false) / 3);
@@ -155,15 +155,15 @@ final class ila {
         }
     }
 
-    private final void c(boolean param0) {
-        if (this.field_c) {
+    private final void openPanel(boolean param0) {
+        if (this.panelOpen) {
           return;
         }
         MonsterModel.j(28191);
         int var2 = 4;
         int var3 = 16;
-        av.a(SwitchLinkList.b(0) >> 1, 20, var2, -5327, "", var2, var3, var3, aaa.a(param0) >> 1);
-        this.field_c = true;
+        MazeSolver.a(SwitchLinkList.b(0) >> 1, 20, var2, -5327, "", var2, var3, var3, aaa.a(param0) >> 1);
+        this.panelOpen = true;
     }
 
     final static int a(boolean param0, String param1, int param2, int param3, String param4, boolean param5) {
@@ -407,9 +407,9 @@ final class ila {
 
     final boolean a(int param0, int param1, char param2) {
         if (param1 != -1) {
-          ila.a(false);
+          ChatOverlay.a(false);
         }
-        if (!this.field_c) {
+        if (!this.panelOpen) {
           return false;
         }
         int var4 = 0;
@@ -417,26 +417,26 @@ final class ila {
         return var4 != 0;
     }
 
-    final void g(int param0) {
-        if (this.field_e) {
+    final void enable(int param0) {
+        if (this.enabled) {
           return;
         }
-        this.field_e = true;
-        this.field_d.clear(8);
+        this.enabled = true;
+        this.visibleMessages.clear(8);
         if (param0 != 0) {
-          this.field_a = (gqa) null;
+          this.lastShownMessage = (gqa) null;
         }
     }
 
     final static void a(boolean param0) {
         if (!param0) {
           String var2 = (String) null;
-          ila.a(false, (String) null, 15, -14, (String) null, true);
+          ChatOverlay.a(false, (String) null, 15, -14, (String) null, true);
         }
         PenaltyNotice.a(256);
     }
 
-    final static gqa a(int param0, boolean param1) {
+    final static gqa readChatMessage(int param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_21_0 = null;
@@ -502,64 +502,64 @@ final class ila {
           }
         }
         if (param0 != -18787) {
-          ila.a(true);
+          ChatOverlay.a(true);
         }
         return new gqa(param1);
     }
 
-    final void a(int param0, FloatingMessage param1) {
+    final void addMessageNow(int param0, FloatingMessage param1) {
         try {
-          this.a(param0, 0, param1);
+          this.addMessage(param0, 0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ila.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0) {
-        this.g(0);
-        this.c(false);
+    final void enableWithPanel(int param0) {
+        this.enable(0);
+        this.openPanel(false);
         if (param0 >= -57) {
           this.field_b = (IntrusiveDeque) null;
         }
     }
 
-    private final void b(boolean param0) {
-        if (!this.field_e) {
+    private final void setEnabled(boolean param0) {
+        if (!this.enabled) {
           return;
         }
-        this.field_e = param0 ? true : false;
-        this.field_d.clear(8);
+        this.enabled = param0 ? true : false;
+        this.visibleMessages.clear(8);
     }
 
-    final boolean e(int param0) {
+    final boolean isPanelActive(int param0) {
         gqa discarded$1 = null;
         boolean stackIn_6_0 = false;
         if (param0 != -8832) {
           discarded$1 = this.getNewestChatMessage(-98);
         }
-        stackIn_6_0 = (this.field_c) && (ni.field_c);
+        stackIn_6_0 = (this.panelOpen) && (ni.field_c);
         return stackIn_6_0;
     }
 
-    final void d(int param0) {
-        this.b(false);
-        this.c(-59);
+    final void disableWithPanel(int param0) {
+        this.setEnabled(false);
+        this.closePanel(-59);
         int var2 = -75 / ((31 - param0) / 57);
     }
 
-    final void c(int param0) {
+    final void closePanel(int param0) {
         int var2 = -48 % ((2 - param0) / 41);
-        if (!this.field_c) {
+        if (!this.panelOpen) {
           return;
         }
         ResourceArchive.e(19470);
-        this.field_c = false;
+        this.panelOpen = false;
     }
 
-    ila() {
-        this.field_e = false;
-        this.field_c = false;
-        this.field_d = new IntrusiveDeque();
+    ChatOverlay() {
+        this.enabled = false;
+        this.panelOpen = false;
+        this.visibleMessages = new IntrusiveDeque();
         this.field_b = new IntrusiveDeque();
     }
 

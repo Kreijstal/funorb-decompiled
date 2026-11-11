@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pk extends we {
-    static jea field_z;
+    static UiComponent field_z;
     private int field_u;
     private int[] field_A;
     private long[][] field_w;
     static String field_v;
     private int[][] field_F;
     private int[] field_B;
-    static jea field_s;
+    static UiComponent field_s;
     private int field_E;
     private int[] field_D;
     static int field_r;

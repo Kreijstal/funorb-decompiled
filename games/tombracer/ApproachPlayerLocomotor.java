@@ -38,7 +38,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         var13 = TombRacer.field_G ? 1 : 0;
         var3 = -93 % ((param0 + 69) / 42);
         var14 = this.trap.getPlayer(-122);
-        if (var14.u(-25561)) {
+        if (var14.isHiddenFromTrackers(-25561)) {
           return;
         }
         this.field_o.x = var14.getX(3);
@@ -97,7 +97,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
           }
           var8Lifetime2 = qva.a((byte) -73, var5, var4);
           var9Lifetime2 = MouseInputHandler.sin2048((byte) 107, var8Lifetime2 >> 2);
-          var10Lifetime2 = bua.cos2048(0, var8Lifetime2 >> 2);
+          var10Lifetime2 = ModelAnimator.cos2048(0, var8Lifetime2 >> 2);
           var11Lifetime2 = doa.a(2, this.field_v, var9Lifetime2);
           var12 = doa.a(2, this.field_v, var10Lifetime2);
           this.trap.move((byte) -113, var11Lifetime2, var12);
@@ -175,7 +175,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         } else {
           var8Lifetime1 = qva.a((byte) -73, var5, var4);
           var9Lifetime1 = MouseInputHandler.sin2048((byte) 107, var8Lifetime1 >> 2);
-          var10Lifetime1 = bua.cos2048(0, var8Lifetime1 >> 2);
+          var10Lifetime1 = ModelAnimator.cos2048(0, var8Lifetime1 >> 2);
           var11Lifetime1 = doa.a(2, this.field_v, var9Lifetime1);
           var12Lifetime1 = doa.a(2, this.field_v, var10Lifetime1);
           this.trap.move((byte) -113, var11Lifetime1, var12Lifetime1);

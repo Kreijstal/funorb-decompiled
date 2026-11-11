@@ -4,7 +4,7 @@
 final class tg {
     static String field_a;
     static int[] field_b;
-    static jea field_c;
+    static UiComponent field_c;
 
     final static short a(byte param0, int param1) {
         int var6 = 0;

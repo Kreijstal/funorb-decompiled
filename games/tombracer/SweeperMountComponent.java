@@ -40,14 +40,14 @@ final class SweeperMountComponent extends PrefabComponent {
           var9.setPushMode(param1 ^ 126, 2);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new SweepRotateLocomotor(param2, param0);
-          var5.a((byte) -35, 8 * this.field_G);
+          var5.setSweepSpeed((byte) -35, 8 * this.field_G);
           var6 = 2048;
           var7_int = this.getTypeId(12);
           if (var7_int == 31) {
-            var5.a(true, var6);
+            var5.setSweepRange(true, var6);
           } else {
             if (32 == var7_int) {
-              var5.a(true, var6 * 2);
+              var5.setSweepRange(true, var6 * 2);
             }
           }
           var9.addLocomotor(var5, 0);

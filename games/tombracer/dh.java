@@ -3,7 +3,7 @@
  */
 final class dh {
     int field_a;
-    static jea field_e;
+    static UiComponent field_e;
     int field_d;
     int field_c;
     int field_b;
@@ -209,7 +209,7 @@ final class dh {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -6) {
-          field_e = (jea) null;
+          field_e = (UiComponent) null;
         }
         field_e = null;
     }
@@ -225,7 +225,7 @@ final class dh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param9 != 29870) {
-            field_e = (jea) null;
+            field_e = (UiComponent) null;
           }
           stackIn_3_0 = param0.a((aa) null, param11, param3, 0, param7, jg.a(param1, (byte) -90, param8), (int[]) null, param2, jg.a(param1, (byte) -45, param6), param12, (byte) -118, param5, 0, (ToolkitSprite[]) null, param4, param10);
           return stackIn_3_0;

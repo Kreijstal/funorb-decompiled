@@ -4,13 +4,13 @@
 final class MatchProtocol {
     static int field_k;
     private static String[] field_g;
-    private bka field_a;
-    static jea field_i;
+    private IntQueue localInputs;
+    static UiComponent field_i;
     static String field_j;
     private int field_e;
     private int field_d;
     private IntrusiveDeque unacknowledged;
-    private boolean field_f;
+    private boolean sendWindowFull;
     private int[] field_b;
     private vi field_c;
 
@@ -33,7 +33,7 @@ final class MatchProtocol {
         try {
           if (param2 != 93) {
             java.applet.Applet var5 = (java.applet.Applet) null;
-            MatchProtocol.a((byte) -52, (java.applet.Applet) null);
+            MatchProtocol.updatePageLinks((byte) -52, (java.applet.Applet) null);
           }
           var4 = new S2CMatchResultPacket();
           this.decodePacket(var4, 124, param1);
@@ -49,21 +49,21 @@ final class MatchProtocol {
         hw.a((byte) -111, 1, param1, var3);
     }
 
-    final void a(boolean param0) {
-        this.field_a.c(-79);
+    final void reset(boolean param0) {
+        this.localInputs.clear(-79);
         if (!param0) {
           this.a((byte) -48);
         }
         this.unacknowledged.clear(8);
         this.field_c.a(0);
-        this.field_f = false;
+        this.sendWindowFull = false;
     }
 
-    final void a(boolean param0, int param1) {
+    final void queueLocalInput(boolean param0, int param1) {
         if (!param0) {
           this.field_c = (vi) null;
         }
-        this.field_a.a((byte) -113, param1);
+        this.localInputs.add((byte) -113, param1);
     }
 
     private final void a(int param0, BitPacketBuffer param1, MatchScreen param2) {
@@ -89,11 +89,11 @@ final class MatchProtocol {
         ((psa) (RewardChoicePhase.field_n.field_n)).a(param0, vba.field_x[param0], (byte) -4, var2);
     }
 
-    final boolean b(int param0) {
+    final boolean isSendWindowFull(int param0) {
         if (param0 != 1) {
           MatchProtocol.a(-38, (byte) 20, -69, 62, 48, -77);
         }
-        return this.field_f;
+        return this.sendWindowFull;
     }
 
     private final void handleActionPacket(BitPacketBuffer param0, int param1) {
@@ -135,7 +135,7 @@ final class MatchProtocol {
           this.decodePacket(var4, 126, param0);
           var4.apply(param1, param2 - 93);
           if (param2 != 93) {
-            this.field_a = (bka) null;
+            this.localInputs = (IntQueue) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -164,7 +164,7 @@ final class MatchProtocol {
         hw.a((byte) -111, param1, 72, var3);
     }
 
-    final void a(MatchScreen param0, int param1) {
+    final void pumpActions(MatchScreen param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         boolean stackIn_7_1 = false;
@@ -193,9 +193,9 @@ final class MatchProtocol {
           if (!param0.isSpectating((byte) 94)) {
             var4_int = this.unacknowledged.size((byte) -16);
             stackIn_7_1 = !(var4_int < 15);
-            this.field_f = stackIn_7_1;
+            this.sendWindowFull = stackIn_7_1;
             while (var4_int < 15) {
-              if (this.field_a.b(param1 - 1) < 8) {
+              if (this.localInputs.size(param1 - 1) < 8) {
                 break;
               }
               var5_ref_la = var8.getPlayerRoom(0, this.field_d);
@@ -210,7 +210,7 @@ final class MatchProtocol {
                 stackIn_13_0 = this;
                 stackIn_13_4 = 0;
               }
-              this.a(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4, var8.j(0, this.field_d));
+              this.sendActionPacket(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4, var8.getRoomHashByte(0, this.field_d));
               var4_int++;
             }
           }
@@ -226,7 +226,7 @@ final class MatchProtocol {
                   if (this.field_b[var5] > 0) {
                     this.field_b[var5] = this.field_b[var5] - 1;
                   } else {
-                    param0.a(var4.a(false, var5, var6), var5, false);
+                    param0.queuePlayerInput(var4.a(false, var5, var6), var5, false);
                   }
                 }
               }
@@ -235,11 +235,11 @@ final class MatchProtocol {
           }
           if (!param0.isSpectating((byte) 106)) {
             if (var8.simulations[this.field_d].isFinished(param1 - 1)) {
-              this.a(var8, (byte) -73);
+              this.flushLocalInputs(var8, (byte) -73);
               return;
             }
             if (var8.simulations[this.field_d].hasTimedOut(-31170)) {
-              this.a(var8, (byte) -73);
+              this.flushLocalInputs(var8, (byte) -73);
               return;
             }
           }
@@ -263,7 +263,7 @@ final class MatchProtocol {
         try {
           var4 = new S2CRewardChoicePacket();
           if (param0 != 16) {
-            this.a(24, 78, 58, -102, 85);
+            this.sendActionPacket(24, 78, 58, -102, 85);
           }
           this.decodePacket(var4, param0 - 82, param2);
           var4.apply((byte) -78, param1, this);
@@ -423,13 +423,13 @@ final class MatchProtocol {
         }
     }
 
-    private final void a(MatchState param0, byte param1) {
+    private final void flushLocalInputs(MatchState param0, byte param1) {
         Room var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          while (!this.field_a.b((byte) -26)) {
+          while (!this.localInputs.isEmpty((byte) -26)) {
             var3 = param0.getPlayerRoom(0, this.field_d);
-            this.a(-92, param0.roundIndex, 0, var3 == null ? 0 : var3.getId((byte) -82) + 1, 0);
+            this.sendActionPacket(-92, param0.roundIndex, 0, var3 == null ? 0 : var3.getId((byte) -82) + 1, 0);
           }
           int var3_int = 110 % ((param1 - 27) / 62);
         } catch (RuntimeException runtimeException) {
@@ -483,7 +483,7 @@ final class MatchProtocol {
         this.field_b[param2] = this.field_b[param2] + 8 * this.field_c.a((byte) 25, param2);
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void updatePageLinks(byte param0, java.applet.Applet param1) {
         try {
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -499,7 +499,7 @@ final class MatchProtocol {
               var3 = sda.appendSessionParameters(param1, param0 ^ -65, var4).getFile();
               JavaScriptBridge.callWithArguments(-104, "updatelinks", param1, new Object[]{"home", var3 + "home.ws"});
               if (param0 != 64) {
-                field_i = (jea) null;
+                field_i = (UiComponent) null;
               }
               JavaScriptBridge.callWithArguments(-121, "updatelinks", param1, new Object[]{"gamelist", var3 + "togamelist.ws"});
               JavaScriptBridge.callWithArguments(-65, "updatelinks", param1, new Object[]{"serverlist", var3 + "toserverlist.ws"});
@@ -544,12 +544,12 @@ final class MatchProtocol {
         }
     }
 
-    final void f(int param0) {
+    final void resetForNextRound(int param0) {
         this.unacknowledged.clear(8);
-        this.field_a.c(param0 - 134);
+        this.localInputs.clear(param0 - 134);
         this.field_b[this.field_d] = 0;
         if (param0 != 10) {
-          field_i = (jea) null;
+          field_i = (UiComponent) null;
         }
     }
 
@@ -604,7 +604,7 @@ final class MatchProtocol {
           this.decodePacket(var4, param2 ^ -115, param1);
           var4.apply(param0, (byte) -123, this);
           if (param2 != -1) {
-            this.a(false, 56);
+            this.queueLocalInput(false, 56);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -627,7 +627,7 @@ final class MatchProtocol {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void sendActionPacket(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = TombRacer.field_G ? 1 : 0;
         if (param0 >= -80) {
@@ -636,10 +636,10 @@ final class MatchProtocol {
         }
         C2SActionPacket var6 = new C2SActionPacket();
         for (var7 = 0; var7 < 8; var7++) {
-          var6.a(17, var7, this.field_a.a(-44));
+          var6.setOrder(17, var7, this.localInputs.poll(-44));
         }
         var6.setHash(-2767, param4);
-        var6.b(8469, param3);
+        var6.setRoom(8469, param3);
         var6.setRound(param1, (byte) -113);
         this.unacknowledged.addLast((byte) -104, var6);
         hw.a((byte) -111, 0, 71, var6);
@@ -657,7 +657,7 @@ final class MatchProtocol {
     }
 
     MatchProtocol(int param0, int param1) {
-        this.field_a = new bka();
+        this.localInputs = new IntQueue();
         this.unacknowledged = new IntrusiveDeque();
         this.field_d = param0;
         this.field_e = param1;

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class is extends jea {
-    private jea field_tb;
+final class is extends UiComponent {
+    private UiComponent field_tb;
     private StringBuilder field_vb;
     private int field_ub;
-    private jea field_zb;
+    private UiComponent field_zb;
     static hra field_wb;
     static pea field_xb;
     static float field_Ab;
-    static jea field_yb;
+    static UiComponent field_yb;
 
     public static void releaseStatics(int param0) {
         if (param0 == 2) {
@@ -261,7 +261,7 @@ final class is extends jea {
         return 2;
     }
 
-    is(int param0, int param1, int param2, int param3, String param4, jea param5, jea param6, jea param7) {
+    is(int param0, int param1, int param2, int param3, String param4, UiComponent param5, UiComponent param6, UiComponent param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -281,21 +281,21 @@ final class is extends jea {
         int var13 = 0;
         this.field_ub = 0;
         try {
-          this.field_zb = new jea(0L, param6, param4);
+          this.field_zb = new UiComponent(0L, param6, param4);
           this.b(-125, this.field_zb);
-          this.field_tb = new jea(0L, param7);
+          this.field_tb = new UiComponent(0L, param7);
           this.field_tb.field_ib = 16764006;
           this.b(-128, this.field_tb);
           this.field_tb.field_sb = "|";
           this.field_vb = new StringBuilder(12);
           var9_int = this.field_zb.b((byte) 69);
-          this.field_zb.a(var9_int, di.field_a, -23776, 3, 5);
-          this.field_tb.a(var9_int, di.field_a, -23776, 3 + di.field_a, 5);
+          this.field_zb.setBounds(var9_int, di.field_a, -23776, 3, 5);
+          this.field_tb.setBounds(var9_int, di.field_a, -23776, 3 + di.field_a, 5);
           var10 = 5 + (var9_int + 5);
           var11 = di.field_a * 2 + 6;
           var12 = bt.a((byte) -8, var10, param2, param0);
           var13 = hsa.a(param3, var11, param1, (byte) 69);
-          this.a(var10, var11, -23776, var13, var12);
+          this.setBounds(var10, var11, -23776, var13, var12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

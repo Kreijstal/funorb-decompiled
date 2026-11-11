@@ -7,11 +7,11 @@ final class MembersUpsellMenu extends MenuScreen {
     static int field_z;
     private int field_v;
     private int field_u;
-    static jea field_w;
+    static UiComponent field_w;
     private int field_s;
     private int field_t;
     private IntrusiveDeque field_q;
-    static jea[] field_y;
+    static UiComponent[] field_y;
     static String[] field_A;
 
     final void update(boolean param0, boolean param1, int param2) {
@@ -34,7 +34,7 @@ final class MembersUpsellMenu extends MenuScreen {
         }
         var4 = stackIn_6_0;
         if (param2 != 15283) {
-          field_y = (jea[]) null;
+          field_y = (UiComponent[]) null;
         }
         if (0 >= this.field_u) {
           if (!this.d((byte) -124)) {
@@ -183,7 +183,7 @@ final class MembersUpsellMenu extends MenuScreen {
         var5 = 40;
         var4Lifetime1 = 260;
         var7 = this.field_r - (100 - SwitchLinkList.b(param0 + 28));
-        kq.field_a.a(var6 - (kq.field_a.width() >> 1), -(kq.field_a.height() >> 1) + var7);
+        PlayerInputQueue.field_a.a(var6 - (PlayerInputQueue.field_a.width() >> 1), -(PlayerInputQueue.field_a.height() >> 1) + var7);
         SocketConnector.a(vj.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
         if (MultiplayerLoginMenu.b(false) && (TextWidgetPainter.a(62) ||
           mq.field_e.field_a ||

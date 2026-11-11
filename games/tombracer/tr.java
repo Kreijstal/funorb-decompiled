@@ -40,7 +40,7 @@ final class tr {
         }
         var3Lifetime1 = new QuickChatPhraseDefinition();
         if (var4 != null) {
-          var3Lifetime1.a(new PacketBuffer(var4), (byte) 113);
+          var3Lifetime1.decode(new PacketBuffer(var4), (byte) 113);
         }
         if (32768 <= param1) {
           var3Lifetime1.a(100);

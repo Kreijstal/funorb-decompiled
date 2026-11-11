@@ -32,7 +32,7 @@ final class TileOperator extends TextureOperator {
           while (!bb.field_f.a((byte) 107)) {
           }
           ContextMenu.a(13, bb.field_f);
-          wl.field_f = new dk[13][38];
+          wl.field_f = new AnimationSequence[13][38];
           var12 = "tr_character_01";
           wl.field_f[0][0] = PillarComponent.a("henryj_idle", -124, param5, var12);
           wl.field_f[0][1] = PillarComponent.a("henryj_run", -124, param5, var12);
@@ -226,7 +226,7 @@ final class TileOperator extends TextureOperator {
           wl.field_f[12][37] = PillarComponent.a("wilbur_cheer", -125, param5, var12);
           wl.field_f[12][1] = PillarComponent.a("wilbur_run", -128, param5, var12);
           var13 = "new_skeleton";
-          qja.field_f = new dk[10];
+          qja.field_f = new AnimationSequence[10];
           qja.field_f[0] = PillarComponent.a("new_skeleton_idle", -124, param5, var13);
           qja.field_f[1] = PillarComponent.a("new_skeleton_walk", -126, param5, var13);
           qja.field_f[2] = PillarComponent.a("new_skeleton_walk_2", -127, param5, var13);
@@ -242,12 +242,12 @@ final class TileOperator extends TextureOperator {
           param3++;
           var11.a(incrementValue$6, (byte) 47, param1);
           var15 = "rope_bridge";
-          cva.field_c = new dk[4];
+          cva.field_c = new AnimationSequence[4];
           cva.field_c[0] = PillarComponent.a("start", -127, param5, var15);
           cva.field_c[1] = PillarComponent.a("end", -127, param5, var15);
           cva.field_c[2] = PillarComponent.a("loop_start", -127, param5, var15);
           cva.field_c[3] = PillarComponent.a("loop_section", -126, param5, var15);
-          LoadProfileCommand.field_p = new dk[13];
+          LoadProfileCommand.field_p = new AnimationSequence[13];
           if (param2) {
             field_p = false;
           }

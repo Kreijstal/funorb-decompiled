@@ -139,14 +139,14 @@ final class dea {
     final static void a(int param0) {
         if (param0 == 60) {
           if (OpenGlTransform3D.field_e != null) {
-            OpenGlTransform3D.field_e.a((byte) 105);
+            OpenGlTransform3D.field_e.close((byte) 105);
             OpenGlTransform3D.field_e = null;
           }
           return;
         }
         roomObjectRenderer = (RoomObjectRenderer) null;
         if (OpenGlTransform3D.field_e != null) {
-          OpenGlTransform3D.field_e.a((byte) 105);
+          OpenGlTransform3D.field_e.close((byte) 105);
           OpenGlTransform3D.field_e = null;
         }
     }

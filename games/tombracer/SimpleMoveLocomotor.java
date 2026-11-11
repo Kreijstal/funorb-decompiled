@@ -6,7 +6,7 @@ final class SimpleMoveLocomotor extends Locomotor {
     private int field_r;
     private boolean field_q;
     private int field_t;
-    static jea field_s;
+    static UiComponent field_s;
     private int field_o;
 
     final int hashState(int param0, int param1) {
@@ -53,7 +53,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         if (0 >= this.field_r) {
           var3 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
           var6 = -112 % ((param0 + 69) / 42);
-          var4 = bua.cos2048(0, var2 >> 2);
+          var4 = ModelAnimator.cos2048(0, var2 >> 2);
           var5 = doa.a(2, this.field_t, var3);
           var7 = doa.a(2, this.field_t, var4);
           if (var7 == 0) {
@@ -152,7 +152,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         if (this.field_o + this.field_t <= this.field_r) {
           var3Lifetime1 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
           var6Lifetime1 = -112 % ((param0 + 69) / 42);
-          var4Lifetime1 = bua.cos2048(0, var2 >> 2);
+          var4Lifetime1 = ModelAnimator.cos2048(0, var2 >> 2);
           var5Lifetime1 = doa.a(2, this.field_t, var3Lifetime1);
           var7Lifetime1 = doa.a(2, this.field_t, var4Lifetime1);
           if (var7Lifetime1 == 0) {
@@ -251,7 +251,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         this.field_t = this.field_r - this.field_o;
         var3Lifetime2 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
         var6Lifetime2 = -112 % ((param0 + 69) / 42);
-        var4Lifetime2 = bua.cos2048(0, var2 >> 2);
+        var4Lifetime2 = ModelAnimator.cos2048(0, var2 >> 2);
         var5Lifetime2 = doa.a(2, this.field_t, var3Lifetime2);
         var7Lifetime2 = doa.a(2, this.field_t, var4Lifetime2);
         if (var7Lifetime2 != 0) {

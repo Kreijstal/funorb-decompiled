@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ContextMenu extends jea {
+final class ContextMenu extends UiComponent {
     static int field_Eb;
     private int field_tb;
     private tv[] field_Db;
@@ -11,11 +11,11 @@ final class ContextMenu extends jea {
     private int field_zb;
     private int field_wb;
     private int field_vb;
-    private jea field_ub;
+    private UiComponent field_ub;
     private Sprite[] field_Cb;
     private int field_Hb;
     static PacketBuffer field_Bb;
-    private jea field_Ab;
+    private UiComponent field_Ab;
     static ka[] field_Ib;
     private int field_xb;
 
@@ -30,7 +30,7 @@ final class ContextMenu extends jea {
         int var8Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
         if (this.field_zb == 0) {
-          this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_ub, (Sprite) null, LegacyOpenGlTurbulentTextureEffect.field_c);
+          this.field_Db[this.field_zb] = new tv(0L, (UiComponent) null, (UiComponent) null, this.field_ub, (Sprite) null, LegacyOpenGlTurbulentTextureEffect.field_c);
           this.field_Db[this.field_zb].field_bb = 1;
           this.b(-128, this.field_Db[this.field_zb]);
           this.field_Fb[this.field_zb] = -1;
@@ -50,7 +50,7 @@ final class ContextMenu extends jea {
         var7Lifetime1 = this.field_tb + (this.field_zb * this.field_Gb + this.field_tb);
         var8Lifetime1 = bt.a((byte) -8, var6, param3, param4);
         var9 = hsa.a(param1, var7Lifetime1, param0, (byte) -98);
-        this.a(var6, var7Lifetime1, -23776, var9, var8Lifetime1);
+        this.setBounds(var6, var7Lifetime1, -23776, var9, var8Lifetime1);
         for (var10 = 0; this.field_zb > var10; var10++) {
           this.field_Db[var10].a(var6 - this.field_Hb * 2, this.field_Hb, this.field_vb, this.field_Gb, 0, this.field_wb, this.field_tb + var10 * this.field_Gb);
         }
@@ -68,7 +68,7 @@ final class ContextMenu extends jea {
         return true;
     }
 
-    ContextMenu(jea param0, Sprite[] param1, jea param2, jea param3, int param4, int param5, int param6, int param7, int param8) {
+    ContextMenu(UiComponent param0, Sprite[] param1, UiComponent param2, UiComponent param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Db = new tv[256];
         this.field_Fb = new int[256];
@@ -140,7 +140,7 @@ final class ContextMenu extends jea {
     }
 
     final void addItem(byte param0, int param1, String param2) {
-        this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_Ab, (Sprite) null, param2);
+        this.field_Db[this.field_zb] = new tv(0L, (UiComponent) null, (UiComponent) null, this.field_Ab, (Sprite) null, param2);
         this.field_Db[this.field_zb].field_C = this.field_Cb;
         if (param0 > -63) {
           return;
@@ -158,7 +158,7 @@ final class ContextMenu extends jea {
 
     final void addIconItem(Sprite param0, int param1, String param2, boolean param3) {
         try {
-          this.field_Db[this.field_zb] = new tv(0L, (jea) null, (jea) null, this.field_Ab, param0, param2);
+          this.field_Db[this.field_zb] = new tv(0L, (UiComponent) null, (UiComponent) null, this.field_Ab, param0, param2);
           this.field_Db[this.field_zb].field_C = this.field_Cb;
           if (param3) {
             this.field_Cb = (Sprite[]) null;

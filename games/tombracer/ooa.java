@@ -5,7 +5,7 @@ final class ooa extends wka {
     static String field_h;
     static int[] field_e;
     static int field_g;
-    static jea field_f;
+    static UiComponent field_f;
 
     final static String a(byte param0) {
         String var1 = "";
@@ -43,7 +43,7 @@ final class ooa extends wka {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param2 <= -42) {
-          return (((param1 & 8192) != 0 ? true : false) | cra.hasMask24OrAll544(param0, -57, param1) | wq.b(param0, param1, 8000)) & kb.a(param0, param1, (byte) 17);
+          return (((param1 & 8192) != 0 ? true : false) | SequencePlayer.hasMask24OrAll544(param0, -57, param1) | wq.b(param0, param1, 8000)) & kb.a(param0, param1, (byte) 17);
         }
         return true;
     }

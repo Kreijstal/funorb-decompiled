@@ -15,7 +15,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
     private int field_r;
     private int field_m;
 
-    final static void a(boolean param0, int param1, jea param2) {
+    final static void a(boolean param0, int param1, UiComponent param2) {
         PlayerContextMenu var10 = null;
         Sprite var11 = null;
         String var12 = null;
@@ -433,7 +433,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
         RuntimeException var6 = null;
         int var7 = 0;
         java.awt.Dimension var8 = null;
-        jea var9 = null;
+        UiComponent var9 = null;
         GraphicsToolkit stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -452,8 +452,8 @@ final class VoronoiNoiseOperator extends TextureOperator {
             var7 = var8.height;
           }
           if (param1 != -29355) {
-            var9 = (jea) null;
-            VoronoiNoiseOperator.a(false, -120, (jea) null);
+            var9 = (UiComponent) null;
+            VoronoiNoiseOperator.a(false, -120, (UiComponent) null);
           }
           stackIn_5_0 = GraphicsToolkit.a(param2, var7, param4, param3, var6_int, param0, param5, -17441);
           return stackIn_5_0;

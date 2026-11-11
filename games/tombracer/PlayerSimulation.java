@@ -72,7 +72,7 @@ final class PlayerSimulation {
         RuntimeException var3_ref = null;
         try {
           if (param1 != -9774) {
-            this.a(false);
+            this.getRoomStateHash(false);
           }
           this.timeFrozen = false;
           this.field_h = true;
@@ -117,7 +117,7 @@ final class PlayerSimulation {
         return stackIn_12_0;
     }
 
-    final int a(boolean param0) {
+    final int getRoomStateHash(boolean param0) {
         if (this.finished) {
           return 0;
         }
@@ -263,7 +263,7 @@ final class PlayerSimulation {
         this.tick = this.tick + 1;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setEffectSlot(int param0, int param1, int param2) {
         this.effectSlots[param0] = param1;
         if (param2 >= -28) {
           this.player = (Player) null;
@@ -316,7 +316,7 @@ final class PlayerSimulation {
         return;
     }
 
-    final void a(Camera param0, int param1) {
+    final void createScenes(Camera param0, int param1) {
         int discarded$1 = 0;
         int var4 = 0;
         Room[] var3 = null;
@@ -429,7 +429,7 @@ final class PlayerSimulation {
     final void setRoomEffectSlot(int param0, int param1, int param2, int param3) {
         if (param2 >= -86) {
           Camera var6 = (Camera) null;
-          this.a((Camera) null, 103);
+          this.createScenes((Camera) null, 103);
           this.rooms[param3].setEffectSlot(false, param1, param0);
           return;
         }

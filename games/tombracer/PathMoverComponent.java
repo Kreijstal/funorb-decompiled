@@ -4,7 +4,7 @@
 abstract class PathMoverComponent extends PrefabComponent {
     static String field_G;
     static int[] field_F;
-    private gea field_K;
+    private WaypointPath field_K;
     static long field_L;
     static String field_H;
     private int field_J;
@@ -34,7 +34,7 @@ abstract class PathMoverComponent extends PrefabComponent {
 
     PathMoverComponent(Room param0, int param1) {
         super(param0, param1);
-        this.field_K = new gea();
+        this.field_K = new WaypointPath();
         this.field_J = 131072;
         this.field_I = true;
     }
@@ -43,7 +43,7 @@ abstract class PathMoverComponent extends PrefabComponent {
         PathMoveLocomotor var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        gea stackIn_3_0 = null;
+        WaypointPath stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         PathMoveLocomotor stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -56,12 +56,12 @@ abstract class PathMoverComponent extends PrefabComponent {
           if (this.A(-127)) {
             stackIn_3_0 = this.field_K;
             stackIn_4_1 = !(this.field_I);
-            ((gea) (Object) stackIn_3_0).a(stackIn_4_1, 1);
+            ((WaypointPath) (Object) stackIn_3_0).a(stackIn_4_1, 1);
           }
           if (this.C(1760)) {
-            var4.a((byte) -99, this.field_J);
+            var4.setSpeed((byte) -99, this.field_J);
           }
-          var4.a(99, this.field_K);
+          var4.setPath(99, this.field_K);
           stackIn_8_0 = var4;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,11 +92,11 @@ abstract class PathMoverComponent extends PrefabComponent {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_K = new gea();
+        this.field_K = new WaypointPath();
         this.field_J = 131072;
         this.field_I = true;
         try {
-          this.field_K = new gea(param0.formatVersion, param2);
+          this.field_K = new WaypointPath(param0.formatVersion, param2);
           if (this.A(-97)) {
             stackIn_5_1 = (param2.readBits((byte) 44, 1) == 1);
             this.field_I = stackIn_5_1;
@@ -151,7 +151,7 @@ abstract class PathMoverComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           super.encode(param0, param1);
-          this.field_K.a(param1, 0);
+          this.field_K.encode(param1, 0);
           if (this.A(64)) {
             stackIn_3_0 = (BitPacketBuffer) (param1);
             stackIn_3_1 = 118;

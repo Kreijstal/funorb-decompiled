@@ -9,7 +9,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract boolean i(byte param0);
 
-    final static void a(ScrollPane param0, int param1, String param2, long param3, int param4, int[] param5, jea param6, int param7, String param8) {
+    final static void a(ScrollPane param0, int param1, String param2, long param3, int param4, int[] param5, UiComponent param6, int param7, String param8) {
         if (param4 != -11635) {
           return;
         }

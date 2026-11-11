@@ -63,7 +63,7 @@ final class FacePlayerLocomotor extends Locomotor {
         var8 = TombRacer.field_G ? 1 : 0;
         var2 = 93 / ((-69 - param0) / 42);
         var3 = this.trap.getPlayer(-122);
-        if (var3.u(-25561)) {
+        if (var3.isHiddenFromTrackers(-25561)) {
           return;
         }
         var4 = var3.getX(3) - this.trap.getX(3);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class QuickChatMenu extends jea {
+final class QuickChatMenu extends UiComponent {
     private QuickChatMenu field_Eb;
     private int field_vb;
     private int field_Fb;
@@ -24,7 +24,7 @@ final class QuickChatMenu extends jea {
         return this.field_Fb + (null != this.field_Eb ? this.field_Eb.getOpenChainWidth(22514) : 0);
     }
 
-    final void a(boolean param0) {
+    final void resetSelection(boolean param0) {
         int var3 = 0;
         tv var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
@@ -39,7 +39,7 @@ final class QuickChatMenu extends jea {
           var4.field_y = 0;
         }
         if (null != this.field_Eb) {
-          this.field_Eb.a(param0);
+          this.field_Eb.resetSelection(param0);
           this.field_Eb.unlink(1);
         }
         this.field_Eb = null;
@@ -54,7 +54,7 @@ final class QuickChatMenu extends jea {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean hasPressedItem(int param0) {
         int var4 = 0;
         tv var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -66,7 +66,7 @@ final class QuickChatMenu extends jea {
         }
         if (var2 == 0 &&
           (this.field_tb != -1 && null != this.field_zb[this.field_tb])) {
-          var2 = this.field_zb[this.field_tb].h(param0 ^ 0) ? 1 : 0;
+          var2 = this.field_zb[this.field_tb].hasPressedItem(param0 ^ 0) ? 1 : 0;
         }
         return var2 != 0;
     }
@@ -87,7 +87,7 @@ final class QuickChatMenu extends jea {
         }
     }
 
-    QuickChatMenu(long param0, jea param1, jea param2, jea param3, QuickChatMenu[] param4, int[] param5, String[] param6, char[] param7) {
+    QuickChatMenu(long param0, UiComponent param1, UiComponent param2, UiComponent param3, QuickChatMenu[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -136,7 +136,7 @@ final class QuickChatMenu extends jea {
               -1 == this.field_ub[var13]) {
               var14 = EffectEvent.field_j;
             }
-            this.field_Gb[var13] = new tv(0L, param2, (jea) null, param3, (Sprite) (var14), param6[var13]);
+            this.field_Gb[var13] = new tv(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.b(-123, this.field_Gb[var13]);
             var15 = var17.stringWidth(param6[var13]);
             if (this.field_vb < var15) {
@@ -196,7 +196,7 @@ final class QuickChatMenu extends jea {
         }
     }
 
-    private final void a(int param0, int param1, int param2, byte param3) {
+    private final void activateItem(int param0, int param1, int param2, byte param3) {
         int var5;
         int var6;
         int var7;
@@ -207,7 +207,7 @@ final class QuickChatMenu extends jea {
         }
         if (param2 != this.field_tb) {
           if (this.field_zb[param2] != null) {
-            this.a(true);
+            this.resetSelection(true);
             this.setExpansionTicks(0, 60);
             this.field_tb = param2;
             this.field_Eb = this.field_zb[this.field_tb];
@@ -235,7 +235,7 @@ final class QuickChatMenu extends jea {
             }
           }
         } else {
-          this.a(true);
+          this.resetSelection(true);
           this.setExpansionTicks(0, 70);
         }
     }
@@ -252,7 +252,7 @@ final class QuickChatMenu extends jea {
         if (this.field_Eb != null) {
           if (var4 != 0 &&
             this.field_Eb.field_tb == -1) {
-            this.a(true);
+            this.resetSelection(true);
             this.setExpansionTicks(0, 124);
             return true;
           }
@@ -276,7 +276,7 @@ final class QuickChatMenu extends jea {
         }
         for (var6 = 0; var6 < this.field_xb.length; var6++) {
           if (this.field_xb[var6] == var5) {
-            this.a(param2, param0, var6, (byte) -62);
+            this.activateItem(param2, param0, var6, (byte) -62);
             return true;
           }
         }
@@ -295,7 +295,7 @@ final class QuickChatMenu extends jea {
         for (var4_int = 0; var4_int < this.field_Gb.length; var4_int++) {
           var5 = this.field_Gb[var4_int];
           if (var5.field_y == 1) {
-            this.a(param1, param0, var4_int, (byte) -62);
+            this.activateItem(param1, param0, var4_int, (byte) -62);
             stackIn_7_0 = var5;
             stackIn_8_1 = (var4_int == this.field_tb);
             stackIn_7_0.field_cb = stackIn_8_1;
@@ -316,14 +316,14 @@ final class QuickChatMenu extends jea {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void layoutMenu(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7;
         int var8;
         int var9;
         int var7Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         this.field_Fb = this.field_vb + 2 * param5;
-        this.a(this.field_Fb, this.field_yb, -23776, -this.field_yb + param4, param1);
+        this.setBounds(this.field_Fb, this.field_yb, -23776, -this.field_yb + param4, param1);
         if (param3 != this.field_Db) {
           this.field_Db = param3;
           this.setExpansionTicks(this.field_Cb, 77);
@@ -339,7 +339,7 @@ final class QuickChatMenu extends jea {
           var7Lifetime1 = this.field_zb[this.field_tb].field_Bb;
           for (var8 = (this.field_tb + var7Lifetime1) * this.field_wb + this.field_T; param4 < var8; var8 = var8 - this.field_wb) {
           }
-          this.field_zb[this.field_tb].a(param0, this.field_Fb + param1, param2 + 0, this.field_Gb[this.field_tb].field_A, var8, param5);
+          this.field_zb[this.field_tb].layoutMenu(param0, this.field_Fb + param1, param2 + 0, this.field_Gb[this.field_tb].field_A, var8, param5);
         }
     }
 

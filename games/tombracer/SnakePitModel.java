@@ -28,11 +28,11 @@ final class SnakePitModel extends TrapModel {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param0.b(param3, -7768);
+          var5_int = param0.getGroupId(param3, -7768);
           if (param2) {
             field_n = (byte[]) null;
           }
-          var6 = param0.a(true, param4, var5_int);
+          var6 = param0.getFileId(true, param4, var5_int);
           stackIn_3_0 = sv.a(param1, var5_int, param0, 24876, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -376,15 +376,15 @@ final class SnakePitModel extends TrapModel {
         var14 = TombRacer.field_G ? 1 : 0;
         try {
           var6_int = 8 + param3 + 8 + (param2 + 487);
-          MatchProtocol.field_i.a(var6_int - 6, -6 + era.field_e.field_t, -23776, 3, 3);
+          MatchProtocol.field_i.setBounds(var6_int - 6, -6 + era.field_e.field_t, -23776, 3, 3);
           var7 = -5 + MatchProtocol.field_i.field_t;
           if (param1 != -104) {
             SnakePitModel.a(-101, -90, 0, -88);
           }
-          RotaterMountComponent.field_K.a(2 + (485 + param2 + param3), param5, param1 - 23672, var7 - param5, 5);
-          CharacterChoiceFactory.field_g.a(-param2 + RotaterMountComponent.field_K.field_G - ComponentMount.field_b.field_G, param5, -23776, 0, param2);
+          RotaterMountComponent.field_K.setBounds(2 + (485 + param2 + param3), param5, param1 - 23672, var7 - param5, 5);
+          CharacterChoiceFactory.field_g.setBounds(-param2 + RotaterMountComponent.field_K.field_G - ComponentMount.field_b.field_G, param5, -23776, 0, param2);
           var7 = var7 - (2 + param5);
-          ComponentMount.field_b.a(ComponentMount.field_b.field_G, param5, -23776, 0, param2 + CharacterChoiceFactory.field_g.field_G);
+          ComponentMount.field_b.setBounds(ComponentMount.field_b.field_G, param5, -23776, 0, param2 + CharacterChoiceFactory.field_g.field_G);
           ne.field_d.a(param3 + (2 + param2) + 485, 2, (byte) 127, 5, param3, -5 + var7, 5);
           if (apa.field_c != null) {
             apa.field_c.setBounds((byte) -31, ne.field_d.field_G, ne.field_d.field_t, ne.field_d.field_qb, ne.field_d.field_T);
@@ -400,12 +400,12 @@ final class SnakePitModel extends TrapModel {
               var11++;
               var7Lifetime1 = -2 + (3 + var11 * (era.field_e.field_t - 6 + 2) / (1 + gka.field_g)) - var13;
               if (var12 >= 5) {
-                ara.field_ub.a(var8, var7Lifetime1, -23776, var13, var6_int);
+                ara.field_ub.setBounds(var8, var7Lifetime1, -23776, var13, var6_int);
               } else {
-                OpenGlSceneLight.field_p[var12].a(var8, var7Lifetime1, -23776, var13, var6_int);
-                bt.field_c[var12].a(var9 - param2, var7Lifetime1, -23776, 0, param2);
-                MembersUpsellMenu.field_y[var12].a(param0, -param4 + (var7Lifetime1 - param4), -23776, param4, var9);
-                PitModel.field_p[var12].a(-var10 + (var8 - param2), -param4 + (var7Lifetime1 - param4), -23776, param4, var10);
+                OpenGlSceneLight.field_p[var12].setBounds(var8, var7Lifetime1, -23776, var13, var6_int);
+                bt.field_c[var12].setBounds(var9 - param2, var7Lifetime1, -23776, 0, param2);
+                MembersUpsellMenu.field_y[var12].setBounds(param0, -param4 + (var7Lifetime1 - param4), -23776, param4, var9);
+                PitModel.field_p[var12].setBounds(-var10 + (var8 - param2), -param4 + (var7Lifetime1 - param4), -23776, param4, var10);
               }
             }
           }

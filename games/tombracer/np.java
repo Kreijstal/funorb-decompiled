@@ -674,7 +674,7 @@ final class np extends ka {
           }
           regionExit1: {
             boolean decompiledFrameCompleted5 = true;
-            if (!cra.hasMask24OrAll544(this.field_u, -17, param1)) {
+            if (!SequencePlayer.hasMask24OrAll544(this.field_u, -17, param1)) {
               param5.field_O = this.field_O;
               param5.field_i = this.field_i;
               param5.field_Y = this.field_Y;
@@ -4028,7 +4028,7 @@ final class np extends ka {
             var2_int = 0;
             var3 = 0;
             if (null != this.field_P &&
-              !uv.a(this.field_u, 1, this.field_bb)) {
+              !LegacyOpenGlBloomEffect.a(this.field_u, 1, this.field_bb)) {
               if (this.field_g == null ||
                 this.field_g.field_d != null) {
                 if (!this.field_l) {

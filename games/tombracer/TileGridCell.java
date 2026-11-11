@@ -183,7 +183,7 @@ final class TileGridCell {
         if (param0 != 0) {
           TileGridCell.a(89, (byte) 98);
         }
-        stackIn_6_0 = (null != this.renderable) && (this.renderable.c(param0 - 2));
+        stackIn_6_0 = (null != this.renderable) && (this.renderable.isDusty(param0 - 2));
         return stackIn_6_0;
     }
 
@@ -231,7 +231,7 @@ final class TileGridCell {
 
     final void e(int param0) {
         if (null != this.renderable) {
-          this.renderable.a(true);
+          this.renderable.mirror(true);
         }
         if (param0 != 0) {
           this.tileType = 1;

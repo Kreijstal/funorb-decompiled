@@ -43,11 +43,11 @@ final class moa {
             }
           } else {
             if (param0.field_d == 0 &&
-              kq.field_c) {
+              PlayerInputQueue.field_c) {
               var3 = "[" + cla.field_o + "] ";
             }
             if (param0.field_d == 1) {
-              var3 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, jea.field_nb, new String[]{param0.field_b}) + "] ";
+              var3 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, UiComponent.field_nb, new String[]{param0.field_b}) + "] ";
             }
             if (4 == param0.field_d &&
               null != tla.field_f) {

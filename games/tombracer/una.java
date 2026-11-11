@@ -13,7 +13,7 @@ final class una {
     static una field_i;
     static una field_l;
     static una field_h;
-    static jea field_j;
+    static UiComponent field_j;
     static int field_c;
     static String field_d;
     static int textureWidthMask;

@@ -24,10 +24,10 @@ final class nf {
     final static void a(byte param0) {
         if (param0 != 5) {
           field_j = (String) null;
-          al.field_g = new IntrusiveDeque();
+          IntNode.field_g = new IntrusiveDeque();
           return;
         }
-        al.field_g = new IntrusiveDeque();
+        IntNode.field_g = new IntrusiveDeque();
     }
 
     private final boolean c(int param0) {

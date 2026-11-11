@@ -7,7 +7,7 @@ abstract class TileRenderable implements Renderable {
     static int field_a;
     TileGridCell cell;
     static nt field_b;
-    static jea field_c;
+    static UiComponent field_c;
 
     final void setCell(int param0, TileGridCell param1) {
         try {
@@ -20,7 +20,7 @@ abstract class TileRenderable implements Renderable {
         }
     }
 
-    abstract boolean c(int param0);
+    abstract boolean isDusty(int param0);
 
     public static void releaseStatics(int param0) {
         field_c = null;
@@ -40,7 +40,7 @@ abstract class TileRenderable implements Renderable {
         return this.cell.getRoom(0);
     }
 
-    abstract void a(boolean param0);
+    abstract void mirror(boolean param0);
 
     static {
         field_f = "Show all lobby chat";

@@ -6,7 +6,7 @@ import java.io.*;
 final class AllPlatformsMazeComponent extends MazeComponent {
     static ka field_O;
     static float field_L;
-    static jea field_M;
+    static UiComponent field_M;
     static int[] field_K;
     static int field_N;
 

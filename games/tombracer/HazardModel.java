@@ -11,7 +11,7 @@ final class HazardModel extends TrapModel {
     private boolean field_n;
     private int field_u;
     private int field_q;
-    static jea field_t;
+    static UiComponent field_t;
 
     final void a(boolean param0, int param1) {
         try {
@@ -197,7 +197,7 @@ final class HazardModel extends TrapModel {
         try {
           field_t = null;
           if (param0 != -51) {
-            field_t = (jea) null;
+            field_t = (UiComponent) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fu.F(" + param0 + ')');
@@ -317,9 +317,9 @@ final class HazardModel extends TrapModel {
             var7 = (Locomotor) (var14.first(true));
             while (var7 != null) {
               if (var7 instanceof PathMoveLocomotor &&
-                ((PathMoveLocomotor) (var7)).d(false) != this.field_s) {
+                ((PathMoveLocomotor) (var7)).getWaypointIndex(false) != this.field_s) {
                 var10_ref.play(new SoundEvent(3, this.getRenderX((byte) 68), this.getRenderY((byte) 124), this.getRenderZ((byte) -111)), -58);
-                this.field_s = ((PathMoveLocomotor) (var7)).d(false);
+                this.field_s = ((PathMoveLocomotor) (var7)).getWaypointIndex(false);
               }
               var7 = (Locomotor) (var14.next(param0 + 0));
             }

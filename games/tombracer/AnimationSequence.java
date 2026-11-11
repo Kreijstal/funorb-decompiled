@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk {
+final class AnimationSequence {
     int field_b;
     private int[][] field_g;
-    int[] field_e;
-    int[] field_l;
+    int[] frameDurations;
+    int[] frameIds;
     static ResourceArchive field_c;
     boolean field_h;
     private int[] field_d;
@@ -15,15 +15,15 @@ final class dk {
     int field_j;
     boolean field_f;
 
-    private dk(ResourceArchive param0, int param1, String param2) {
-        this(param0, param1, param0.a(true, param2, param1));
+    private AnimationSequence(ResourceArchive param0, int param1, String param2) {
+        this(param0, param1, param0.getFileId(true, param2, param1));
     }
 
-    dk(ResourceArchive param0, String param1, String param2) {
-        this(param0, param0.b(param1, -7768), param2);
+    AnimationSequence(ResourceArchive param0, String param1, String param2) {
+        this(param0, param0.getGroupId(param1, -7768), param2);
     }
 
-    private final void a(int param0, PacketBuffer param1) {
+    private final void decode(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         dn var5 = null;
@@ -37,14 +37,14 @@ final class dk {
           while (true) {
             var3_int = param1.readUnsignedByte(255);
             if (var3_int != 0) {
-              this.a(var3_int, param1, 16588);
+              this.decodeOpcode(var3_int, param1, 16588);
               continue;
             }
             break;
           }
           if (param0 >= -89) {
             var5 = (dn) null;
-            dk.a((dn) null, -51);
+            AnimationSequence.a((dn) null, -51);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,11 +88,11 @@ final class dk {
         }
         var5 = stackIn_3_0;
         if (param0 <= 82) {
-          dk.releaseStatics((byte) -28);
+          AnimationSequence.releaseStatics((byte) -28);
         }
         for (var6 = 0; var6 < var5; var6++) {
-          for (var7 = var4; var7 < this.field_e.length; var7++) {
-            var3 = var3 + this.field_e[var7];
+          for (var7 = var4; var7 < this.frameDurations.length; var7++) {
+            var3 = var3 + this.frameDurations[var7];
           }
           if (this.field_b > 0) {
             var4 = this.field_b;
@@ -101,7 +101,7 @@ final class dk {
         return var3;
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void decodeOpcode(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_59_0 = null;
@@ -120,16 +120,16 @@ final class dk {
           }
           if (param0 == 1) {
             var4_int = param1.readUnsignedShort(127);
-            this.field_e = new int[var4_int];
+            this.frameDurations = new int[var4_int];
             for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_e[var5] = param1.readUnsignedShort(121);
+              this.frameDurations[var5] = param1.readUnsignedShort(121);
             }
-            this.field_l = new int[var4_int];
+            this.frameIds = new int[var4_int];
             for (var5 = 0; var4_int > var5; var5++) {
-              this.field_l[var5] = param1.readUnsignedShort(124);
+              this.frameIds[var5] = param1.readUnsignedShort(124);
             }
             for (var5 = 0; var4_int > var5; var5++) {
-              this.field_l[var5] = (param1.readUnsignedShort(123) << 16) + this.field_l[var5];
+              this.frameIds[var5] = (param1.readUnsignedShort(123) << 16) + this.frameIds[var5];
             }
           } else {
             if (2 == param0) {
@@ -268,7 +268,7 @@ final class dk {
         }
     }
 
-    private dk(ResourceArchive param0, int param1, int param2) {
+    private AnimationSequence(ResourceArchive param0, int param1, int param2) {
         int var7 = 0;
         byte[] var4 = null;
         int var5 = 0;
@@ -291,18 +291,18 @@ final class dk {
           var9 = var10;
           var4 = var9;
           if (var9 != null) {
-            this.a(-110, new PacketBuffer(var11));
+            this.decode(-110, new PacketBuffer(var11));
           }
           var5 = 0;
-          for (var6 = 0; var6 < this.field_l.length; var6++) {
-            if (this.field_l[var6] > var5) {
-              var5 = this.field_l[var6];
+          for (var6 = 0; var6 < this.frameIds.length; var6++) {
+            if (this.frameIds[var6] > var5) {
+              var5 = this.frameIds[var6];
             }
           }
           var6Lifetime1 = 0;
-          for (var7 = 0; var7 < this.field_e.length; var7++) {
-            if (var6Lifetime1 < this.field_e[var7]) {
-              var6Lifetime1 = this.field_e[var7];
+          for (var7 = 0; var7 < this.frameDurations.length; var7++) {
+            if (var6Lifetime1 < this.frameDurations[var7]) {
+              var6Lifetime1 = this.frameDurations[var7];
             }
           }
           return;

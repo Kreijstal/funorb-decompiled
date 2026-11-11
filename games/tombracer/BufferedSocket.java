@@ -9,7 +9,7 @@ final class BufferedSocket implements Runnable {
     private int field_k;
     private int field_d;
     private java.net.Socket field_e;
-    static jea field_b;
+    static UiComponent field_b;
     private InputStream field_h;
     private PlatformTaskDispatcher field_i;
     private OutputStream field_l;
@@ -20,7 +20,7 @@ final class BufferedSocket implements Runnable {
     private int field_m;
 
     protected final void finalize() {
-        this.a((byte) 105);
+        this.close((byte) 105);
     }
 
     public static void a(int param0) {
@@ -30,7 +30,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void write(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -99,7 +99,7 @@ final class BufferedSocket implements Runnable {
           return 0;
         }
         if (param1 != 1) {
-          field_b = (jea) null;
+          field_b = (UiComponent) null;
         }
         int var10 = RoomCompletedScreen.a(param7, param8, true, param9, param6);
         int var11 = RoomCompletedScreen.a(param4, param3, true, param0, param2);
@@ -123,7 +123,7 @@ final class BufferedSocket implements Runnable {
           throw new IOException();
         }
         if (param0 < 79) {
-          this.a((byte) 122);
+          this.close((byte) 122);
         }
     }
 
@@ -166,12 +166,12 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int c(int param0) throws IOException {
+    final int available(int param0) throws IOException {
         if (this.field_a) {
           return 0;
         }
         if (param0 != 0) {
-          this.a((byte) 47);
+          this.close((byte) 47);
         }
         return this.field_h.available();
     }
@@ -311,7 +311,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(byte param0) {
+    final void close(byte param0) {
         try {
           int var4 = 0;
           var4 = TombRacer.field_G ? 1 : 0;

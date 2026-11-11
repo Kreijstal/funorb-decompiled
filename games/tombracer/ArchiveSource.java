@@ -15,7 +15,7 @@ abstract class ArchiveSource {
         field_a = (ToolkitSprite[]) null;
     }
 
-    abstract dla a(boolean param0);
+    abstract dla getIndex(boolean param0);
 
     abstract int getGroupProgress(int param0, int param1);
 

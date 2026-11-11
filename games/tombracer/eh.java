@@ -7,7 +7,7 @@ final class eh implements Renderable {
     PlatformModel field_e;
     int field_h;
     int field_a;
-    bua field_g;
+    ModelAnimator field_g;
     int field_c;
     int field_d;
     int field_b;
@@ -25,7 +25,7 @@ final class eh implements Renderable {
         Camera var4Lifetime1;
         Camera var4Lifetime2;
         var3 = TombRacer.field_G ? 1 : 0;
-        this.field_g = new bua(1, this.field_f);
+        this.field_g = new ModelAnimator(1, this.field_f);
         if (this.field_e.getStyle((byte) 87) == 4) {
           if (this.field_b < 33) {
             this.field_g.a(3, false, (byte) -96, 10);
@@ -75,7 +75,7 @@ final class eh implements Renderable {
 
     public final void render(int param0, Camera param1) {
         try {
-          gqa.a(this.field_a, -83584144, this.getRenderY((byte) 123), this.getRenderX((byte) 122), this.field_g.b((byte) 74), this.getRenderZ((byte) -88));
+          gqa.a(this.field_a, -83584144, this.getRenderY((byte) 123), this.getRenderX((byte) 122), this.field_g.getModel((byte) 74), this.getRenderZ((byte) -88));
           if (param0 < 103) {
             this.updateAnimation(-75);
           }

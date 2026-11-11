@@ -17,7 +17,7 @@ final class MicrosoftCursorController extends com.ms.dll.Callback {
         com.ms.win32.User32.SetCursorPos(param1, param2);
     }
 
-    final void a(boolean param0, int param1, java.awt.Component param2) {
+    final void setCursorVisible(boolean param0, int param1, java.awt.Component param2) {
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
         boolean stackIn_18_1 = false;

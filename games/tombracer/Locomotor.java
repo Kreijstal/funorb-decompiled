@@ -61,7 +61,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         return true;
     }
 
-    void a(boolean param0, byte param1, SwitchableIdAllocator param2, SwitchableIdAllocator param3) {
+    void assignSwitchableIds(boolean param0, byte param1, SwitchableIdAllocator param2, SwitchableIdAllocator param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -195,7 +195,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
 
     abstract int hashState(int param0, int param1);
 
-    final Switchable a(boolean param0, int param1, int param2) {
+    final Switchable findSwitchable(boolean param0, int param1, int param2) {
         if (param1 != 1) {
           this.stopped = false;
           if (WhirlpoolDigest.matchesSwitchableId(param2, param0, -27201, (Switchable) (this))) {
@@ -275,7 +275,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         IntPoint discarded$0 = new IntPoint();
         try {
           this.room = param0;
-          this.a(param1, (byte) -119, param0.getTrapIdAllocator(116), (SwitchableIdAllocator) null);
+          this.assignSwitchableIds(param1, (byte) -119, param0.getTrapIdAllocator(116), (SwitchableIdAllocator) null);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

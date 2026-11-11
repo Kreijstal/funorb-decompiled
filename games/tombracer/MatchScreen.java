@@ -7,7 +7,7 @@ final class MatchScreen extends GameScreen implements rqa {
     private int[] actionHoldTicks;
     MatchState matchState;
     private MatchProtocol protocol;
-    static jea field_F;
+    static UiComponent field_F;
     int localPlayerIndex;
     private IntrusiveDeque overlays;
     static SpriteData field_q;
@@ -19,7 +19,7 @@ final class MatchScreen extends GameScreen implements rqa {
     private MatchPhase phase;
     private int[] field_o;
     private int[] pingTimes;
-    private kq[] field_C;
+    private PlayerInputQueue[] inputQueues;
     private int field_i;
     private TutorialHints field_n;
     boolean field_A;
@@ -54,7 +54,7 @@ final class MatchScreen extends GameScreen implements rqa {
             this.matchState.characterChoices[var3].setPlayer(11008, var4);
             var5 = new FollowCamera();
             var5.setTarget(var4, -1);
-            this.matchState.simulations[var3].a(var5, -1);
+            this.matchState.simulations[var3].createScenes(var5, -1);
             var6 = new SoundEventPlayer();
             this.soundPlayers[var3] = var6;
             if (var3 != this.getViewedPlayerIndex(103) ||
@@ -160,7 +160,7 @@ final class MatchScreen extends GameScreen implements rqa {
           ClientMemoryVertexArray.field_f = ClientMemoryVertexArray.field_f + (long)var4Lifetime1;
         }
         if (this.protocol == null) {
-          if (3 != this.matchState.field_K) {
+          if (3 != this.matchState.gameMode) {
             if (this.matchState.field_I[this.localPlayerIndex]) {
               hba.a(this.field_E, this.field_m, (byte) 64, this.field_i);
               this.matchState.field_I[this.localPlayerIndex] = false;
@@ -169,24 +169,24 @@ final class MatchScreen extends GameScreen implements rqa {
               if (this.field_p) {
                 return;
               }
-              kq.a(this.matchState.players[this.localPlayerIndex].getDeathCount((byte) -125), this.field_E, (byte) 114);
+              PlayerInputQueue.a(this.matchState.players[this.localPlayerIndex].getDeathCount((byte) -125), this.field_E, (byte) 114);
               this.field_p = true;
             }
           }
         } else {
-          this.protocol.a(this, 1);
+          this.protocol.pumpActions(this, 1);
         }
         return;
     }
 
-    private final void i(int param0) {
+    private final void resetInputs(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (null != this.protocol) {
-          this.protocol.a(true);
+          this.protocol.reset(true);
         }
         for (var2 = 0; var2 < this.matchState.players.length; var2++) {
-          this.field_C[var2].a(false);
+          this.inputQueues[var2].clear(false);
         }
         if (param0 != -1) {
           MatchScreen.releaseStatics(false);
@@ -209,7 +209,7 @@ final class MatchScreen extends GameScreen implements rqa {
             stackIn_8_0 = !(this.n((byte) 19) <= 0);
             uma.field_c = stackIn_8_0;
             SoftwareTransform3D.field_p = stackIn_8_0;
-            if (this.matchState.field_K != 3 && (GameClock.field_b ||
+            if (this.matchState.gameMode != 3 && (GameClock.field_b ||
               uma.field_c ||
               SoftwareTransform3D.field_p)) {
               ConstrainToRectangleLocomotor.a(param0, 10, (byte) 106);
@@ -219,7 +219,7 @@ final class MatchScreen extends GameScreen implements rqa {
               ConstrainToRectangleLocomotor.a(param0, 9, (byte) 91);
             }
           } else {
-            if (this.matchState.field_K == 3) {
+            if (this.matchState.gameMode == 3) {
               ConstrainToRectangleLocomotor.a(param0, 0, (byte) 82);
             } else {
               this.o(-18570);
@@ -246,7 +246,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param0 <= 11) {
           return;
         }
-        iqa.field_c.d(114);
+        iqa.field_c.disableWithPanel(114);
         this.matchState.characterChoices[this.localPlayerIndex].setCharacter(0, (byte) 37);
         this.startRound(106);
     }
@@ -269,7 +269,7 @@ final class MatchScreen extends GameScreen implements rqa {
         var4 = var9;
         if (param0 &&
           param1 &&
-          !iqa.field_c.e(-8832) && (BeamShooterBehaviour.isScreenActive(-67, -1) ||
+          !iqa.field_c.isPanelActive(-8832) && (BeamShooterBehaviour.isScreenActive(-67, -1) ||
           this.c(false))) {
           this.actionStates[0][0] = var9[HardwareOpenGlToolkit.field_hd];
           this.actionStates[0][1] = var9[mf.field_a];
@@ -365,12 +365,12 @@ final class MatchScreen extends GameScreen implements rqa {
             if (!param0) {
               this.matchState.startRound((byte) -89);
             }
-            this.field_C = new kq[var14_int];
+            this.inputQueues = new PlayerInputQueue[var14_int];
             this.matchState.field_x = null;
             for (var16 = 0; var16 < var14_int; var16++) {
               var17 = this.matchState.players[var16];
               if (var17 != null) {
-                this.field_C[var16] = new kq();
+                this.inputQueues[var16] = new PlayerInputQueue();
               }
             }
           }
@@ -442,11 +442,11 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void queuePlayerInput(int param0, int param1, boolean param2) {
         if (param2) {
           this.field_D = false;
         }
-        this.field_C[param1].b(79, param0);
+        this.inputQueues[param1].push(79, param0);
     }
 
     private final void j(int param0) {
@@ -644,7 +644,7 @@ final class MatchScreen extends GameScreen implements rqa {
             (1 << var3 & param0) > 0) {
             this.matchState.markLeft((byte) -95, var3);
             var4 = BannerCommand.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(87, RemovedFromGameMenu.field_r, new String[]{this.getPlayerName(var3, false)}), (byte) -72);
-            iqa.field_c.a(param1 + 23, var4);
+            iqa.field_c.addMessageNow(param1 + 23, var4);
           }
         }
         if (param1 != -23) {
@@ -671,7 +671,7 @@ final class MatchScreen extends GameScreen implements rqa {
           this.localPlayerIndex == 0) {
           var4 = this.matchState.players[this.localPlayerIndex];
           if (!var4.getSimulation(-1).isCourseComplete(0)) {
-            SectorCacheStore.a(var4.getRoom((byte) -127), 64, this.matchState);
+            SectorCacheStore.sendRoomAbandonedStat(var4.getRoom((byte) -127), 64, this.matchState);
           }
         }
         if (param2 != 0) {
@@ -694,11 +694,11 @@ final class MatchScreen extends GameScreen implements rqa {
         return this.protocol.a(param1, param0 ^ -13022);
     }
 
-    final void c(int param0, int param1) {
+    final void clearPlayerInputs(int param0, int param1) {
         if (param1 <= 15) {
           this.field_E = 44;
         }
-        this.field_C[param0].a(false);
+        this.inputQueues[param0].clear(false);
     }
 
     final int getCharacterChoice(int param0, int param1) {
@@ -769,7 +769,7 @@ final class MatchScreen extends GameScreen implements rqa {
             (param1 & 1 << var3) > 0) {
             this.matchState.markResigned(param0 ^ 4, var3);
             var4 = BannerCommand.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
-            iqa.field_c.a(0, var4);
+            iqa.field_c.addMessageNow(0, var4);
           }
           var3++;
         }
@@ -827,7 +827,7 @@ final class MatchScreen extends GameScreen implements rqa {
         return;
     }
 
-    private final void b(boolean param0, int param1, int param2) {
+    private final void processPlayerTick(boolean param0, int param1, int param2) {
         QueuedPlayerEvent var4;
         PendingEvent var5;
         int var6;
@@ -1030,7 +1030,7 @@ final class MatchScreen extends GameScreen implements rqa {
 
     final void onRewardChoice(byte param0, int param1, int param2) {
         if (this.phase instanceof RewardChoicePhase) {
-          ((RewardChoicePhase) (this.phase)).a(param1, true, param2);
+          ((RewardChoicePhase) (this.phase)).announceChoice(param1, true, param2);
         }
         int var4 = -88 / ((49 - param0) / 53);
     }
@@ -1045,12 +1045,12 @@ final class MatchScreen extends GameScreen implements rqa {
         return this.field_E;
     }
 
-    final boolean n(int param0) {
+    final boolean isSendWindowFull(int param0) {
         if (null == this.protocol) {
           return false;
         }
         int var2 = 86 % ((13 - param0) / 57);
-        return this.protocol.b(1);
+        return this.protocol.isSendWindowFull(1);
     }
 
     private final void showStandings(boolean param0) {
@@ -1083,7 +1083,7 @@ final class MatchScreen extends GameScreen implements rqa {
             var3 = RewardChoicePhase.createTextMessage(-108, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(99, DisplaySettingsDialog.field_Q, new String[]{this.getColouredPlayerName(param1, 9)}));
           }
         }
-        iqa.field_c.a(0, var3);
+        iqa.field_c.addMessageNow(0, var3);
     }
 
     private final void sendInputMask(boolean param0, int param1) {
@@ -1120,7 +1120,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (this.actionHoldTicks[8] > 0) {
           if (this.isInPlayPhase(0)) {
             if (!this.isSpectating((byte) 92) &&
-              this.matchState.players[param1].s((byte) 85)) {
+              this.matchState.players[param1].isSkipAllowed((byte) 85)) {
               var3 = var3 | 256;
             }
           } else {
@@ -1131,18 +1131,18 @@ final class MatchScreen extends GameScreen implements rqa {
           this.overlays = (IntrusiveDeque) null;
         }
         var3 = S2CMatchResultPacket.a(var3, 4);
-        if (null == this.field_C) {
-          this.field_C = new kq[this.matchState.playerCount];
+        if (null == this.inputQueues) {
+          this.inputQueues = new PlayerInputQueue[this.matchState.playerCount];
           for (var4 = 0; var4 < this.matchState.playerCount; var4++) {
             var5 = this.matchState.players[var4];
             if (var5 != null) {
-              this.field_C[var4] = new kq();
+              this.inputQueues[var4] = new PlayerInputQueue();
             }
           }
         }
-        this.field_C[param1].b(79, var3);
+        this.inputQueues[param1].push(79, var3);
         if (null != this.protocol) {
-          this.protocol.a(true, var3);
+          this.protocol.queueLocalInput(true, var3);
         }
     }
 
@@ -1161,7 +1161,7 @@ final class MatchScreen extends GameScreen implements rqa {
     final void startNextRound(byte param0) {
         if (this.protocol != null &&
           !this.isSpectating((byte) 120)) {
-          this.protocol.f(10);
+          this.protocol.resetForNextRound(10);
         }
         this.matchState.beginNextRound((byte) -82);
         this.initPlayers((byte) -108);
@@ -1327,7 +1327,7 @@ final class MatchScreen extends GameScreen implements rqa {
 
     final void tickMatch(int param0) {
         int var2;
-        kq var3;
+        PlayerInputQueue var3;
         int var4;
         MatchScoringObserver var5;
         PenaltyNotice var6;
@@ -1342,26 +1342,26 @@ final class MatchScreen extends GameScreen implements rqa {
         if (!this.matchState.matchOver) {
           if (!this.isSpectating((byte) 80) &&
             this.matchState.simulations[this.localPlayerIndex].isActive(-19271)) {
-            this.g((byte) -36);
+            this.pollLocalInput((byte) -36);
           }
           for (var2 = 0; var2 < this.matchState.players.length; var2++) {
-            var3 = this.field_C[var2];
-            if (var3.b(-123)) {
-              this.b(false, var2, var3.a((byte) -54));
+            var3 = this.inputQueues[var2];
+            if (var3.hasPending(-123)) {
+              this.processPlayerTick(false, var2, var3.pop((byte) -54));
             }
-            if (var3.b((byte) 116) > 16) {
+            if (var3.getPendingCount((byte) 116) > 16) {
               this.field_o[var2] = 1;
             } else {
               if (this.field_o[var2] > 0 &&
-                var3.b((byte) 97) <= 8) {
+                var3.getPendingCount((byte) 97) <= 8) {
                 this.field_o[var2] = 0;
               }
             }
             var4 = this.field_o[var2];
-            while (var3.b((byte) 102) > 0) {
+            while (var3.getPendingCount((byte) 102) > 0) {
               if (var4 > 0) {
                 var4--;
-                this.b(false, var2, var3.a((byte) -70));
+                this.processPlayerTick(false, var2, var3.pop((byte) -70));
                 continue;
               }
               break;
@@ -1369,10 +1369,10 @@ final class MatchScreen extends GameScreen implements rqa {
             var5 = (MatchScoringObserver) (this.matchState.simulations[var2].getObserver(9262));
             var6 = var5.pollPenaltyNotice((byte) 121);
             while (var6 != null) {
-              if (iqa.field_c.b(4782)) {
+              if (iqa.field_c.isEnabled(4782)) {
                 var7 = this.formatDeathMessage(var6.getPlayer(-14065), (byte) -9, var6.getKind(74));
                 var8 = RewardChoicePhase.createTextMessage(-23, var7);
-                iqa.field_c.a(0, var8);
+                iqa.field_c.addMessageNow(0, var8);
               }
               var6 = var5.pollPenaltyNotice((byte) -57);
             }
@@ -1399,10 +1399,10 @@ final class MatchScreen extends GameScreen implements rqa {
         RuntimeException var4 = null;
         try {
           var4_int = 119 % ((param0 - 56) / 44);
-          this.i(-1);
+          this.resetInputs(-1);
           this.matchState.setRoundWinner(param2, -1);
           this.clearOverlays((byte) 99);
-          if (0 != this.matchState.field_K) {
+          if (0 != this.matchState.gameMode) {
             this.setPhase(6, new RoundWinnerPhase(this, this.protocol));
           } else {
             this.setPhase(6, new ResultsPhase(this, this.protocol, param1));
@@ -1448,7 +1448,7 @@ final class MatchScreen extends GameScreen implements rqa {
 
     final void o(int param0) {
         int var2;
-        if (this.matchState.field_K == 3) {
+        if (this.matchState.gameMode == 3) {
           return;
         }
         if (this.field_E == 10) {
@@ -1559,7 +1559,7 @@ final class MatchScreen extends GameScreen implements rqa {
         this.field_j = param0;
     }
 
-    private final void g(byte param0) {
+    private final void pollLocalInput(byte param0) {
         if (this.isSpectating((byte) 85)) {
           return;
         }
@@ -1567,7 +1567,7 @@ final class MatchScreen extends GameScreen implements rqa {
           return;
         }
         if (this.protocol != null &&
-          this.protocol.b(1)) {
+          this.protocol.isSendWindowFull(1)) {
           return;
         }
         this.sendInputMask(false, this.localPlayerIndex);

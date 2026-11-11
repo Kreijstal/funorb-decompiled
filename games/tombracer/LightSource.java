@@ -3,7 +3,7 @@
  */
 final class LightSource extends IntrusiveNode {
     private int z;
-    static jea field_h;
+    static UiComponent field_h;
     private int x;
     private int field_l;
     static it field_k;
@@ -21,7 +21,7 @@ final class LightSource extends IntrusiveNode {
         field_k = null;
         field_i = null;
         if (param0 != 0) {
-          field_h = (jea) null;
+          field_h = (UiComponent) null;
         }
     }
 
@@ -139,7 +139,7 @@ final class LightSource extends IntrusiveNode {
     }
 
     final static boolean a(byte param0) {
-        lqa var1 = uv.b(false);
+        lqa var1 = LegacyOpenGlBloomEffect.b(false);
         if (var1 == null) {
           return false;
         }

@@ -30,7 +30,7 @@ final class rg extends SingleChildWidget {
         int var2 = var1 - pk.field_r * pk.field_r;
         int var4 = -80 % ((param0 + 19) / 32);
         int var3 = var2 * (mha.field_E - tj.field_b) / var1 + tj.field_b;
-        era.field_e.a(640, 120, -23776, var3, ava.field_d);
+        era.field_e.setBounds(640, 120, -23776, var3, ava.field_d);
         to.a(640, 5, mna.field_d, 25, pda.field_c, mha.field_E - 24, 0);
     }
 
@@ -68,14 +68,14 @@ final class rg extends SingleChildWidget {
         OpenGlSceneLight.field_q[37] = um.field_k;
         OpenGlSceneLight.field_q[31] = IntPoint.field_b;
         OpenGlSceneLight.field_q[30] = bq.field_a;
-        OpenGlSceneLight.field_q[36] = kq.field_b;
+        OpenGlSceneLight.field_q[36] = PlayerInputQueue.field_b;
         TripBeamBehaviour.field_w = new String[4][2];
         OpenGlSceneLight.field_q[32] = pka.field_a;
         OpenGlSceneLight.field_q[27] = wg.field_m[1];
         OpenGlSceneLight.field_q[34] = PrefabComponent.field_E;
         OpenGlSceneLight.field_q[35] = RopeBridgeComponent.field_I;
         OpenGlSceneLight.field_q[25] = bi.field_b[2];
-        OpenGlSceneLight.field_q[39] = kq.field_d;
+        OpenGlSceneLight.field_q[39] = PlayerInputQueue.field_d;
         OpenGlSceneLight.field_q[33] = OpenGlSprite.field_k;
         OpenGlSceneLight.field_q[40] = ResourceArchive.field_f;
         OpenGlSceneLight.field_q[29] = SweeperMountComponent.field_F;
@@ -164,8 +164,8 @@ final class rg extends SingleChildWidget {
           IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
           Effect.field_h[0] = new String[]{daa.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
           IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, dka.field_c};
-          Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
-          IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
+          Effect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, ne.field_e};
+          IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, AnimationSequence.field_a};
           Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
           IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
           IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
@@ -176,7 +176,7 @@ final class rg extends SingleChildWidget {
           IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
           Effect.field_h[6] = new String[]{apa.field_b, SoftwareTransform3D.field_k, bq.field_e};
           IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
-          IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, LegacyOpenGlCubeTexture.field_n};
+          IntrusiveDeque.field_d[8] = new String[]{LegacyOpenGlBloomEffect.field_u, jd.field_m, LegacyOpenGlCubeTexture.field_n};
           Effect.field_h[7] = new String[]{ProceduralTexture.field_n, ld.field_d};
           IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
           Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
@@ -216,8 +216,8 @@ final class rg extends SingleChildWidget {
         IntrusiveDeque.field_d[0] = new String[]{ConsoleMethod.field_m, fr.field_a, null, null, null, null, qfa.field_a};
         Effect.field_h[0] = new String[]{daa.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
         IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, dka.field_c};
-        Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
-        IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
+        Effect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, ne.field_e};
+        IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, AnimationSequence.field_a};
         Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
         IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
         IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
@@ -228,7 +228,7 @@ final class rg extends SingleChildWidget {
         IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
         Effect.field_h[6] = new String[]{apa.field_b, SoftwareTransform3D.field_k, bq.field_e};
         IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
-        IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, LegacyOpenGlCubeTexture.field_n};
+        IntrusiveDeque.field_d[8] = new String[]{LegacyOpenGlBloomEffect.field_u, jd.field_m, LegacyOpenGlCubeTexture.field_n};
         Effect.field_h[7] = new String[]{ProceduralTexture.field_n, ld.field_d};
         IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
         Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};

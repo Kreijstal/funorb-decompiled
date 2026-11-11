@@ -123,7 +123,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         try {
           super.encode(param0, param1);
           this.field_n.encode(15637, param1);
-          this.field_u.a(param1, (byte) 84);
+          this.field_u.encode(param1, (byte) 84);
           param1.writeBits((byte) -128, this.field_o ? 1 : 0, 1);
           param1.writeBits((byte) -128, this.field_p ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
@@ -235,20 +235,20 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         boolean stackIn_15_1 = false;
         boolean stackIn_45_1 = false;
         if (this.field_p) {
-          if (this.getPlayer((byte) 19).u(-25561)) {
+          if (this.getPlayer((byte) 19).isHiddenFromTrackers(-25561)) {
             return;
           }
           if (null != this.field_n) {
             this.field_n.tick(0);
             if (!this.field_n.hasToggled(0)) {
-              this.field_u.c(param0 - 5515);
+              this.field_u.tick(param0 - 5515);
               this.field_t = false;
               if (param0 != 5418) {
                 field_r = (kia) null;
               }
               if (this.field_s) {
-                this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
-                if (!this.field_u.a(12111)) {
+                this.field_t = this.field_u.fire(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
+                if (!this.field_u.hasAmmo(12111)) {
                   this.stop(false);
                 }
               }
@@ -257,13 +257,13 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
             stackIn_15_1 = !(this.field_s);
             this.field_s = stackIn_15_1;
           }
-          this.field_u.c(param0 - 5515);
+          this.field_u.tick(param0 - 5515);
           this.field_t = false;
           if (param0 != 5418) {
             field_r = (kia) null;
             if (this.field_s) {
-              this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
-              if (!this.field_u.a(12111)) {
+              this.field_t = this.field_u.fire(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
+              if (!this.field_u.hasAmmo(12111)) {
                 this.stop(false);
               }
             }
@@ -274,13 +274,13 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           if (null != this.field_n) {
             this.field_n.tick(0);
             if (!this.field_n.hasToggled(0)) {
-              this.field_u.c(param0 - 5515);
+              this.field_u.tick(param0 - 5515);
               this.field_t = false;
               if (param0 != 5418) {
                 field_r = (kia) null;
                 if (this.field_s) {
-                  this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
-                  if (!this.field_u.a(12111)) {
+                  this.field_t = this.field_u.fire(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
+                  if (!this.field_u.hasAmmo(12111)) {
                     this.stop(false);
                   }
                 }
@@ -294,7 +294,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
             }
           }
           if (decompiledFrameRemainder0) {
-            this.field_u.c(param0 - 5515);
+            this.field_u.tick(param0 - 5515);
             this.field_t = false;
             if (param0 != 5418) {
               field_r = (kia) null;
@@ -304,8 +304,8 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         if (!this.field_s) {
           return;
         }
-        this.field_t = this.field_u.a(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
-        if (this.field_u.a(12111)) {
+        this.field_t = this.field_u.fire(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
+        if (this.field_u.hasAmmo(12111)) {
           return;
         }
         this.stop(false);

@@ -71,9 +71,9 @@ final class TextSpewerBehaviour extends Behaviour {
         return param0;
     }
 
-    final static jea b(int param0) {
+    final static UiComponent b(int param0) {
         if (param0 != 19845) {
-          return (jea) null;
+          return (UiComponent) null;
         }
         return bsa.field_j.field_tb;
     }

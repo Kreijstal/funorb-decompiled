@@ -525,7 +525,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -120, "xs_game");
                 if (null != var2) {
-                  jea.field_nb = jaa.decodeText((byte) 73, var2);
+                  UiComponent.field_nb = jaa.decodeText((byte) 73, var2);
                 }
                 var2 = dn.a((byte) -98, "waiting_for_x_to_start_game");
                 if (var2 != null) {
@@ -895,7 +895,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 123, "gameopt_novalidcombos");
                 if (null != var2) {
-                  cra.field_a = jaa.decodeText((byte) 79, var2);
+                  SequencePlayer.field_a = jaa.decodeText((byte) 79, var2);
                 }
                 var2 = dn.a((byte) -47, "gameopt_pleasetrychanging");
                 if (null != var2) {
@@ -1279,7 +1279,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 113, "openinpopupwindow");
                 if (null != var2) {
-                  sw.field_Fb = jaa.decodeText((byte) 37, var2);
+                  EditableTextField.field_Fb = jaa.decodeText((byte) 37, var2);
                 }
                 var2 = dn.a((byte) 126, "create");
                 if (null != var2) {
@@ -1399,7 +1399,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -48, "create_password_confirm");
                 if (null != var2) {
-                  gea.field_c = jaa.decodeText((byte) 111, var2);
+                  WaypointPath.field_c = jaa.decodeText((byte) 111, var2);
                 }
                 var2 = dn.a((byte) 105, "create_email");
                 if (var2 != null) {
@@ -1729,7 +1729,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -69, "enterignore_del");
                 if (null != var2) {
-                  av.field_b = jaa.decodeText((byte) 49, var2);
+                  MazeSolver.field_b = jaa.decodeText((byte) 49, var2);
                 }
                 var2 = dn.a((byte) -30, "text_removed_from_game");
                 if (var2 != null) {
@@ -1977,7 +1977,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -111, "newgame");
                 if (var2 != null) {
-                  bua.field_c = jaa.decodeText((byte) 109, var2);
+                  ModelAnimator.field_c = jaa.decodeText((byte) 109, var2);
                 }
                 var2 = dn.a((byte) -80, "resumegame");
                 if (var2 != null) {
@@ -2109,7 +2109,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 111, "graphics_directx");
                 if (var2 != null) {
-                  kq.field_b = jaa.decodeText((byte) 119, var2);
+                  PlayerInputQueue.field_b = jaa.decodeText((byte) 119, var2);
                 }
                 var2 = dn.a((byte) 121, "graphics_opengl");
                 if (null != var2) {
@@ -2121,7 +2121,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 125, "graphics_quality_high");
                 if (var2 != null) {
-                  kq.field_d = jaa.decodeText((byte) 25, var2);
+                  PlayerInputQueue.field_d = jaa.decodeText((byte) 25, var2);
                 }
                 var2 = dn.a((byte) -93, "graphics_quality_low");
                 if (var2 != null) {

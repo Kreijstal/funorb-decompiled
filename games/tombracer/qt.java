@@ -438,7 +438,7 @@ final class qt {
           }
           LegacyOpenGlTexture.field_a = gsa.field_y;
           ObjectList.field_i = param0;
-          al.field_j = param6;
+          IntNode.field_j = param6;
           QuickChatPhraseDefinition.field_n = param2;
           ConstraintLocomotor.field_p = param4;
           PlantModel.field_n = null;

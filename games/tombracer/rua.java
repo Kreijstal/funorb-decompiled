@@ -4,7 +4,7 @@
 final class rua extends MessageDialog implements ButtonListener {
     static String field_jb;
     static String field_hb;
-    static jea field_gb;
+    static UiComponent field_gb;
     private AccountRegistrationPanel field_fb;
     private boolean field_eb;
     private boolean field_ib;
@@ -128,7 +128,7 @@ final class rua extends MessageDialog implements ButtonListener {
           }
           if (param2.field_e) {
             if (param2.field_a) {
-              this.a(param0 ^ 86, new pg(this));
+              this.transitionToContent(param0 ^ 86, new pg(this));
               return;
             }
             var5.a(aua.field_d, (byte) -102, (WidgetListener) (this));
@@ -151,7 +151,7 @@ final class rua extends MessageDialog implements ButtonListener {
               var5.a(MovingWallComponent.field_M, 7, 58);
             }
           }
-          this.a(param0 + 80, var5);
+          this.transitionToContent(param0 + 80, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

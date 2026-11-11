@@ -9,11 +9,11 @@ abstract class ConsoleWindow implements ShellListener {
     String field_t;
     private int field_k;
     ScrollPane field_a;
-    jea field_p;
-    sw field_o;
+    UiComponent field_p;
+    EditableTextField field_o;
     static ToolkitSprite field_d;
     static String field_e;
-    private jea field_i;
+    private UiComponent field_i;
     private IntrusiveDeque field_s;
     private int field_h;
     private boolean open;
@@ -202,16 +202,16 @@ abstract class ConsoleWindow implements ShellListener {
         }
     }
 
-    private final jea a(int param0, byte param1, int param2) {
-        jea var4 = new jea(0L, (jea) null);
+    private final UiComponent a(int param0, byte param1, int param2) {
+        UiComponent var4 = new UiComponent(0L, (UiComponent) null);
         int var5 = 39 / ((-89 - param1) / 36);
         var4.field_w = RoomLighting.a(param2, param0, 4);
         return var4;
     }
 
-    private final jea createSelectionStyle(int param0, int param1) {
+    private final UiComponent createSelectionStyle(int param0, int param1) {
         int var4 = -128 / ((-18 - param0) / 61);
-        jea var3 = new jea(0L, (jea) null);
+        UiComponent var3 = new UiComponent(0L, (UiComponent) null);
         var3.field_w = eca.a(4, param1);
         return var3;
     }
@@ -299,8 +299,8 @@ abstract class ConsoleWindow implements ShellListener {
         }
     }
 
-    private final jea a(byte param0, int param1) {
-        jea var3 = new jea();
+    private final UiComponent a(byte param0, int param1) {
+        UiComponent var3 = new UiComponent();
         if (param0 <= 80) {
           String var4 = (String) null;
           this.addToHistory(true, (String) null);
@@ -309,24 +309,24 @@ abstract class ConsoleWindow implements ShellListener {
         return var3;
     }
 
-    private final jea createLineWidget(String param0, int param1, int param2) {
-        jea var4 = null;
+    private final UiComponent createLineWidget(String param0, int param1, int param2) {
+        UiComponent var4 = null;
         RuntimeException var4_ref = null;
-        jea stackIn_2_0 = null;
-        jea stackIn_4_0 = null;
+        UiComponent stackIn_2_0 = null;
+        UiComponent stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new jea(0L, (jea) null, param0);
+          var4 = new UiComponent(0L, (UiComponent) null, param0);
           if (param1 != 16733525) {
-            stackIn_2_0 = (jea) null;
+            stackIn_2_0 = (UiComponent) null;
             return stackIn_2_0;
           }
           var4.field_H = this.field_m;
           var4.field_ib = param2;
-          var4.a(this.field_m.stringWidth(var4.field_r), this.field_k, -23776, 0, 5);
+          var4.setBounds(this.field_m.stringWidth(var4.field_r), this.field_k, -23776, 0, 5);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -345,7 +345,7 @@ abstract class ConsoleWindow implements ShellListener {
 
     public boolean handleKey(byte param0, char param1, int param2) {
         IntrusiveNode stackIn_19_1 = null;
-        jea var5;
+        UiComponent var5;
         int var6;
         String var7;
         var6 = TombRacer.field_G ? 1 : 0;
@@ -365,11 +365,11 @@ abstract class ConsoleWindow implements ShellListener {
               if (this.field_g != null &&
                 this.field_s.sentinel != this.field_g.previous) {
                 this.field_g = (gka) (this.field_g.previous);
-                this.field_o.a((byte) 74, this.field_g.field_h);
+                this.field_o.setText((byte) 74, this.field_g.field_h);
               }
             } else {
               if (param2 != 80) {
-                this.field_o.a(param2, param0 - 19624, param1);
+                this.field_o.handleKey(param2, param0 - 19624, param1);
               } else {
                 this.e(param0 + 21375);
               }
@@ -384,17 +384,17 @@ abstract class ConsoleWindow implements ShellListener {
               }
               this.field_g = (gka) (stackIn_19_1);
               if (this.field_g != null) {
-                this.field_o.a((byte) 12, this.field_g.field_h);
+                this.field_o.setText((byte) 12, this.field_g.field_h);
               }
             }
           }
         } else {
-          var7 = this.field_o.e((byte) -124);
+          var7 = this.field_o.getText((byte) -124);
           if (var7.length() <= 0) {
             return true;
           }
           this.printColouredText(24219, this.field_t + var7, 5635925);
-          var5 = (jea) (this.field_a.field_tb.field_J.last(3));
+          var5 = (UiComponent) (this.field_a.field_tb.field_J.last(3));
           if (!this.a(var7, (byte) -112)) {
             var5.field_ib = 16733525;
           }
@@ -438,7 +438,7 @@ abstract class ConsoleWindow implements ShellListener {
         }
         if (!this.open) {
           if (null != this.field_i) {
-            this.field_i.a(param0 ^ -125, (jea) null);
+            this.field_i.a(param0 ^ -125, (UiComponent) null);
           }
         } else {
           this.field_q = 15;
@@ -464,9 +464,9 @@ abstract class ConsoleWindow implements ShellListener {
             this.field_i.field_T = this.field_i.field_T - 28;
           }
         }
-        if (!this.field_o.e((byte) -117).equals(this.field_r) ||
+        if (!this.field_o.getText((byte) -117).equals(this.field_r) ||
           this.field_o.j(-1320) != this.field_c) {
-          this.field_r = this.field_o.e((byte) -121);
+          this.field_r = this.field_o.getText((byte) -121);
           this.field_c = this.field_o.j(-1320);
           this.field_b = this.a(false);
           if (this.field_b != null &&
@@ -514,7 +514,7 @@ abstract class ConsoleWindow implements ShellListener {
 
     private final void appendLine(String param0, int param1, int param2) {
         int var4_int = 0;
-        jea var5 = null;
+        UiComponent var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         try {
           this.field_a.field_tb.b(param2 ^ -155, this.createLineWidget(param0, 16733525, param1));
@@ -522,14 +522,14 @@ abstract class ConsoleWindow implements ShellListener {
             this.field_a.field_tb.field_J.removeFirst(-106);
           }
           var4_int = 5;
-          var5 = (jea) (this.field_a.field_tb.field_J.first(-80));
+          var5 = (UiComponent) (this.field_a.field_tb.field_J.first(-80));
           while (var5 != null) {
             var5.field_T = var4_int;
             var4_int = var4_int + this.field_k;
-            var5 = (jea) (this.field_a.field_tb.field_J.next(116));
+            var5 = (UiComponent) (this.field_a.field_tb.field_J.next(116));
           }
           if (param2 != 230) {
-            this.field_i = (jea) null;
+            this.field_i = (UiComponent) null;
           }
           this.field_a.field_tb.field_t = var4_int;
           this.field_a.field_tb.field_T = -var4_int + this.field_a.field_t;
@@ -540,18 +540,18 @@ abstract class ConsoleWindow implements ShellListener {
 
     ConsoleWindow(BitmapFont param0, PlatformTaskDispatcher param1) {
         int var3_int = 0;
-        jea var4 = null;
-        jea var5 = null;
-        jea var6 = null;
-        jea var7 = null;
-        jea var8 = null;
-        jea var9 = null;
-        jea var10 = null;
-        jea var11 = null;
-        jea var12 = null;
+        UiComponent var4 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
+        UiComponent var7 = null;
+        UiComponent var8 = null;
+        UiComponent var9 = null;
+        UiComponent var10 = null;
+        UiComponent var11 = null;
+        UiComponent var12 = null;
         VerticalScrollbar var13 = null;
-        jea var14 = null;
-        jea var15 = null;
+        UiComponent var14 = null;
+        UiComponent var15 = null;
         this.field_t = "# ";
         this.field_s = new IntrusiveDeque();
         this.open = false;
@@ -571,25 +571,25 @@ abstract class ConsoleWindow implements ShellListener {
           var10 = this.a(3355443, (byte) -126, 65793);
           var11 = this.createSelectionStyle(-91, 2263074);
           var12 = this.a(2236962, (byte) -125, 65793);
-          this.field_i = new jea(0L, var5);
-          this.field_i.a(mma.field_a, 200, -23776, -200, 0);
+          this.field_i = new UiComponent(0L, var5);
+          this.field_i.setBounds(mma.field_a, 200, -23776, -200, 0);
           var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
-          var14 = new jea();
+          var14 = new UiComponent();
           var14.field_J = new IntrusiveDeque();
           this.field_a = new ScrollPane(0L, var14, var6, var13);
           this.field_a.field_tb.field_J = new IntrusiveDeque();
           this.field_a.a(this.field_i.field_G - 10, 0, (byte) 127, 5, 15, -var3_int + 185, 5);
           this.field_i.b(-128, this.field_a);
-          var15 = new jea();
+          var15 = new UiComponent();
           var15.field_H = this.field_m;
           var15.field_ib = 13421772;
           var15.field_S = 5;
           var15.field_V = 2;
-          this.field_o = new sw(0L, var7, var11, var15);
+          this.field_o = new EditableTextField(0L, var7, var11, var15);
           this.field_o.b(this.field_a.field_G, 127, this.field_a.field_T + this.field_a.field_t + 5, var3_int, this.field_a.field_qb);
           this.field_o.a(param1, (byte) -127);
           this.field_i.b(-126, this.field_o);
-          this.field_p = new jea(0L, var12);
+          this.field_p = new UiComponent(0L, var12);
           this.field_p.field_qb = 0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

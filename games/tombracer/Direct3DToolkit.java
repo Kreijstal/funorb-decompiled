@@ -299,7 +299,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
           return;
         }
         if (this.field_r.a(-122)) {
-          this.field_Qb.a(field_hd, (byte) -37);
+          this.field_Qb.writeColumnMajor4x4(field_hd, (byte) -37);
         } else {
           field_hd[13] = 0.0f;
           field_hd[11] = 0.0f;
@@ -1064,7 +1064,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
           field_hd[14] = 0.0f;
           field_hd[5] = 1.0f;
         } else {
-          this.field_q.a(field_hd, (byte) -37);
+          this.field_q.writeColumnMajor4x4(field_hd, (byte) -37);
         }
         this.field_jd.SetTransform(256, field_hd);
     }
@@ -1079,9 +1079,9 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (null == this.field_Vc &&
           DualLinkNode.field_h != this.field_v[this.field_Cc]) {
           if (pfa.field_i == this.field_v[this.field_Cc]) {
-            this.field_jd.SetTransform(16 + this.field_Cc, this.field_hc[this.field_Cc].a((byte) -114, field_hd));
+            this.field_jd.SetTransform(16 + this.field_Cc, this.field_hc[this.field_Cc].writeTextureMatrix4x4((byte) -114, field_hd));
           } else {
-            this.field_jd.SetTransform(16 + this.field_Cc, this.field_hc[this.field_Cc].a(field_hd, (byte) -37));
+            this.field_jd.SetTransform(16 + this.field_Cc, this.field_hc[this.field_Cc].writeColumnMajor4x4(field_hd, (byte) -37));
           }
           var2 = Direct3DToolkit.a(-51, this.field_v[this.field_Cc]);
           if (this.field_gd[this.field_Cc] != var2) {

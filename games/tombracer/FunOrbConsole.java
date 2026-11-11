@@ -41,7 +41,7 @@ final class FunOrbConsole extends ConsoleWindow {
         int var12Lifetime1;
         var14 = TombRacer.field_G ? 1 : 0;
         try {
-          var2 = this.field_o.e((byte) -114);
+          var2 = this.field_o.getText((byte) -114);
           var3 = this.field_o.j(-1320);
           var4 = LaserShooterComponent.a((byte) 126, var2);
           var5 = PlayerViewport.a(true, var4, var3);
@@ -127,7 +127,7 @@ final class FunOrbConsole extends ConsoleWindow {
               var12Lifetime1++;
             }
           }
-          this.field_o.a((byte) 96, var2.substring(0, var3) + var8.toString() + var2.substring(var3));
+          this.field_o.setText((byte) 96, var2.substring(0, var3) + var8.toString() + var2.substring(var3));
           this.field_o.c(var12Lifetime1, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,7 +187,7 @@ final class FunOrbConsole extends ConsoleWindow {
           jj var3_ref = null;
           RuntimeException var3_ref2 = null;
           cr var4 = null;
-          jea var4_ref = null;
+          UiComponent var4_ref = null;
           int var5 = 0;
           ConsoleToken var6 = null;
           RuntimeException stackIn_12_0 = null;
@@ -211,7 +211,7 @@ final class FunOrbConsole extends ConsoleWindow {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (jj) (Object) decompiledCaughtException;
               param0 = "<col=55ff55>" + param0.substring(0, var3_ref.field_a) + "</col>" + param0.substring(var3_ref.field_a);
-              var4_ref = (jea) (this.field_a.field_tb.field_J.last(3));
+              var4_ref = (UiComponent) (this.field_a.field_tb.field_J.last(3));
               var4_ref.field_r = this.field_t + param0;
             } catch (rv decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -335,7 +335,7 @@ final class FunOrbConsole extends ConsoleWindow {
         int var9Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          var2 = this.field_o.e((byte) -115);
+          var2 = this.field_o.getText((byte) -115);
           var3 = this.field_o.j(-1320);
           var4 = LaserShooterComponent.a((byte) 126, var2);
           var5 = PlayerViewport.a(true, var4, var3);
@@ -451,7 +451,7 @@ final class FunOrbConsole extends ConsoleWindow {
             stackIn_5_0 = super.handleKey((byte) -72, param1, param2);
             return stackIn_5_0;
           }
-          var4 = this.field_o.e((byte) -106);
+          var4 = this.field_o.getText((byte) -106);
           var5 = this.field_o.j(-1320);
           var6 = 0;
           var7 = 0;
@@ -546,31 +546,31 @@ final class FunOrbConsole extends ConsoleWindow {
               var7 != 0 &&
               var9Lifetime1 == 39 &&
               39 == var10Lifetime1)) {
-              this.field_o.a(101, -19696, '￿');
+              this.field_o.handleKey(101, -19696, '￿');
             }
             discarded$0 = super.handleKey((byte) -72, param1, param2);
-            var4Lifetime1 = this.field_o.e((byte) -124);
+            var4Lifetime1 = this.field_o.getText((byte) -124);
             var5Lifetime1 = this.field_o.j(-1320);
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 40) {
-              this.field_o.a(-1, -19696, ')');
+              this.field_o.handleKey(-1, -19696, ')');
               this.field_o.a(var5Lifetime1, (byte) 84, var5Lifetime1);
             }
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 34) {
-              this.field_o.a(-1, -19696, '"');
+              this.field_o.handleKey(-1, -19696, '"');
               this.field_o.a(var5Lifetime1, (byte) 95, var5Lifetime1);
             }
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 39) {
-              this.field_o.a(-1, -19696, '\'');
+              this.field_o.handleKey(-1, -19696, '\'');
               this.field_o.a(var5Lifetime1, (byte) 72, var5Lifetime1);
             }
           }
-          gsa.field_w = ResultsPhase.highlightConsoleSyntax(this.field_o.e((byte) -112), (byte) -110);
+          gsa.field_w = ResultsPhase.highlightConsoleSyntax(this.field_o.getText((byte) -112), (byte) -110);
           if (param0 != -72) {
             this.methods = (ConsoleMethod[]) null;
           }

@@ -573,7 +573,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (!this.field_b) {
             this.layoutSingleLine(param1 ^ 14131, param0);
           } else {
-            ((CachedTextLayout) (param0.field_l)).a(this.field_e, (byte) -49, this.getDisplayText(param1 ^ -14159, param0), this.getAvailableTextWidth((byte) 91, param0), this.field_a, this.b(param1 ^ 2147469490, param0), this.field_l, this.field_f);
+            ((CachedTextLayout) (param0.field_l)).layoutParagraph(this.field_e, (byte) -49, this.getDisplayText(param1 ^ -14159, param0), this.getAvailableTextWidth((byte) 91, param0), this.field_a, this.b(param1 ^ 2147469490, param0), this.field_l, this.field_f);
           }
           stackIn_9_0 = param0.field_l;
           return stackIn_9_0;

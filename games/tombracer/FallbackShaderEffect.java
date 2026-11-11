@@ -45,24 +45,24 @@ final class FallbackShaderEffect extends ShaderEffect {
     final static void a(byte param0, boolean param1, boolean param2, int param3) {
         int stackIn_10_0 = 0;
         String stackIn_23_0 = null;
-        jea stackIn_34_0 = null;
+        UiComponent stackIn_34_0 = null;
         String stackIn_35_1 = null;
-        jea stackIn_37_0 = null;
+        UiComponent stackIn_37_0 = null;
         int stackIn_37_1 = 0;
         String stackIn_38_2 = null;
-        jea stackIn_67_0 = null;
+        UiComponent stackIn_67_0 = null;
         int stackIn_67_1 = 0;
         boolean stackIn_68_2 = false;
-        jea stackIn_72_0 = null;
+        UiComponent stackIn_72_0 = null;
         int stackIn_72_1 = 0;
         boolean stackIn_73_2 = false;
-        jea stackIn_77_0 = null;
+        UiComponent stackIn_77_0 = null;
         int stackIn_77_1 = 0;
         boolean stackIn_78_2 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        jea var5 = null;
-        jea var6 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -73,9 +73,9 @@ final class FallbackShaderEffect extends ShaderEffect {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        jea var15 = null;
+        UiComponent var15 = null;
         String var16 = null;
-        jea var17 = null;
+        UiComponent var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -95,8 +95,8 @@ final class FallbackShaderEffect extends ShaderEffect {
             var6.field_G = 0;
             StatusEffect.field_g.field_r = dka.field_a.toUpperCase();
             var7 = (dka.field_b.field_G + 2) / 2;
-            MessageOverlay.field_t.a(-2 + var7, 40, -23776, -40 + dka.field_b.field_t, 0);
-            hw.field_a.a(dka.field_b.field_G - var7, 40, param0 - 23777, -40 + dka.field_b.field_t, var7);
+            MessageOverlay.field_t.setBounds(-2 + var7, 40, -23776, -40 + dka.field_b.field_t, 0);
+            hw.field_a.setBounds(dka.field_b.field_G - var7, 40, param0 - 23777, -40 + dka.field_b.field_t, var7);
             if (SafeZoneBehaviour.field_u.length == 1 &&
               SafeZoneBehaviour.field_u[0] == 2) {
               var8 = 0;
@@ -188,7 +188,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                       }
                     }
                   }
-                  ArchiveNetworkClient.field_b = "<col=A00000>" + cra.field_a + "<br>" + WhiteLightSensorComponent.field_J + (String) (var9);
+                  ArchiveNetworkClient.field_b = "<col=A00000>" + SequencePlayer.field_a + "<br>" + WhiteLightSensorComponent.field_J + (String) (var9);
                 }
               }
             } else {
@@ -222,15 +222,15 @@ final class FallbackShaderEffect extends ShaderEffect {
           stackIn_67_0 = nra.field_c;
           stackIn_67_1 = param0 ^ -102;
           stackIn_68_2 = (param1) && (!param2) && (!tla.field_e);
-          ((jea) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
+          ((UiComponent) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
           stackIn_72_0 = dka.field_b;
           stackIn_72_1 = -111;
           stackIn_73_2 = (param1) && (!param2) && (!tla.field_e);
-          ((jea) (Object) stackIn_72_0).c(stackIn_72_1, stackIn_73_2);
+          ((UiComponent) (Object) stackIn_72_0).c(stackIn_72_1, stackIn_73_2);
           stackIn_77_0 = PlayerModel.field_a;
           stackIn_77_1 = -113;
           stackIn_78_2 = (param1) && (!param2) && (tla.field_e);
-          ((jea) (Object) stackIn_77_0).c(stackIn_77_1, stackIn_78_2);
+          ((UiComponent) (Object) stackIn_77_0).c(stackIn_77_1, stackIn_78_2);
           rm.field_e.field_a.e((byte) -99);
           if (param0 != 1) {
             FallbackShaderEffect.releaseStatics(-121);

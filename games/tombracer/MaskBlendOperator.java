@@ -120,9 +120,9 @@ final class MaskBlendOperator extends TextureOperator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.b(param1, -7768);
+          var4_int = param0.getGroupId(param1, -7768);
           var6 = 88 / ((-9 - param3) / 60);
-          var5 = param0.a(true, param2, var4_int);
+          var5 = param0.getFileId(true, param2, var4_int);
           stackIn_1_0 = HardwareRidgedWaterNoise.a(var4_int, var5, param0, true);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -159,7 +159,7 @@ final class MaskBlendOperator extends TextureOperator {
         tga.field_a = baa.field_d.field_i.field_d;
         tga.field_a.b(8192);
         ImageProducerCanvasImageBuffer.field_o = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
-        sw.k((byte) 94);
+        EditableTextField.k((byte) 94);
         OpenGlTexture2D.h((byte) 45);
         if (param0 != -25405) {
           String var2 = (String) null;

@@ -4,11 +4,11 @@
 final class CharacterChoiceFactory implements BitDecodableFactory {
     static int field_f;
     static int[] field_e;
-    static jea field_g;
+    static UiComponent field_g;
     static Sprite[] field_b;
     static ToolkitSprite field_a;
     static String field_d;
-    static jea field_c;
+    static UiComponent field_c;
 
     public final BitDecodable[] createArray(int param0, int param1) {
         if (param1 != -26955) {

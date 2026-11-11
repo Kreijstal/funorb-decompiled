@@ -108,7 +108,7 @@ final class CircleMovementLocomotor extends Locomotor {
     }
 
     final void encode(BitPacketBuffer param0, byte param1) {
-        jea var4 = null;
+        UiComponent var4 = null;
         BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
@@ -131,8 +131,8 @@ final class CircleMovementLocomotor extends Locomotor {
           }
           ((BitPacketBuffer) (Object) stackIn_2_0).writeBits((byte) stackIn_2_1, stackIn_3_2, 1);
           if (param1 >= -78) {
-            var4 = (jea) null;
-            CircleMovementLocomotor.a((jea) null, -46, (byte) 104, (jea) null, -72, 112, (byte[]) null, -67, (jea) null, 84);
+            var4 = (UiComponent) null;
+            CircleMovementLocomotor.a((UiComponent) null, -46, (byte) 104, (UiComponent) null, -72, 112, (byte[]) null, -67, (UiComponent) null, 84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -193,7 +193,7 @@ final class CircleMovementLocomotor extends Locomotor {
         }
     }
 
-    final static void a(jea param0, int param1, byte param2, jea param3, int param4, int param5, byte[] param6, int param7, jea param8, int param9) {
+    final static void a(UiComponent param0, int param1, byte param2, UiComponent param3, int param4, int param5, byte[] param6, int param7, UiComponent param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

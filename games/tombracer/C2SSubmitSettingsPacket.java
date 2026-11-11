@@ -5,7 +5,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
     private int musicVolume;
     private int soundEffectsVolume;
     private int graphicsMode;
-    static jea field_g;
+    static UiComponent field_g;
     static int field_a;
     static ur field_d;
     static String field_c;

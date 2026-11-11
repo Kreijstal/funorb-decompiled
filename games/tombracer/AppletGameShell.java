@@ -64,8 +64,8 @@ abstract class AppletGameShell extends GameApplet {
           AppletGameShell.resetConnectionStatics(39);
         }
         byte[] var5 = new byte[var4];
-        WeaveOperator.field_q.a(0, param0 - 103, var5, var4);
-        SimpleBlockBehaviour.a(param0 ^ -16, di.a(param0 + 82), jaa.decodeText((byte) 64, var5), var3 != 0);
+        WeaveOperator.field_q.readCipheredBytes(0, param0 - 103, var5, var4);
+        SimpleBlockBehaviour.openUrl(param0 ^ -16, di.a(param0 + 82), jaa.decodeText((byte) 64, var5), var3 != 0);
     }
 
     final static boolean isFreeChatAllowed(int param0) {
@@ -129,7 +129,7 @@ abstract class AppletGameShell extends GameApplet {
             if (param1) {
               TrackingCrusherComponent.field_G = false;
             } else {
-              var5Lifetime2 = ila.a(this.field_q, cja.a(0), 50, this.field_u, cs.a((byte) 81), false);
+              var5Lifetime2 = ChatOverlay.a(this.field_q, cja.a(0), 50, this.field_u, cs.a((byte) 81), false);
               if (var5Lifetime2 != -1) {
                 if (var5Lifetime2 == 0) {
                   ic.field_b = tr.field_g;
@@ -260,7 +260,7 @@ abstract class AppletGameShell extends GameApplet {
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
-                          kq.a(uca.field_d, dsa.field_c, (byte) 72, WeaveOperator.field_q);
+                          PlayerInputQueue.a(uca.field_d, dsa.field_c, (byte) 72, WeaveOperator.field_q);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -283,7 +283,7 @@ abstract class AppletGameShell extends GameApplet {
                             }
                             stackIn_24_0 = -18787;
                             stackIn_25_1 = (var2 == 12);
-                            var3 = ila.a(stackIn_24_0, stackIn_25_1);
+                            var3 = ChatOverlay.readChatMessage(stackIn_24_0, stackIn_25_1);
                             k.a((byte) 113, var3);
                           } else {
                             RoomHeader.a((byte) -68);
@@ -316,7 +316,7 @@ abstract class AppletGameShell extends GameApplet {
         if (TrackingCrusherComponent.field_G) {
           return -1;
         }
-        int var2 = ila.a(this.field_q, cja.a(0), 50, this.field_u, cs.a((byte) -118), true);
+        int var2 = ChatOverlay.a(this.field_q, cja.a(0), 50, this.field_u, cs.a((byte) -118), true);
         if (var2 == -1) {
           return -1;
         }
@@ -336,7 +336,7 @@ abstract class AppletGameShell extends GameApplet {
             TextureMetadata.b(param0);
             epa.a(var2, (byte) -84, io.field_b);
             TrackingCrusherComponent.field_G = true;
-            oga.field_f = bva.currentTimeMillis((byte) -107) + 15000L;
+            LegacyOpenGlPostProcessEffect.field_f = bva.currentTimeMillis((byte) -107) + 15000L;
             return var2;
           }
           if (Transform3D.field_c == 11 &&
@@ -416,7 +416,7 @@ abstract class AppletGameShell extends GameApplet {
         ApproachPlayerLocomotor.field_t = this.field_z;
         FacePlayerLocomotor.b(ApproachPlayerLocomotor.field_t, (byte) 65);
         IsaacCipher.configureClientConnection(this.field_s, this.field_v, dsa.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, ApproachPlayerLocomotor.field_t, param5, this.field_w);
-        av.a(ApproachPlayerLocomotor.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
+        MazeSolver.a(ApproachPlayerLocomotor.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
         wka.patchJavaKeyCodeMap(520);
         tja.field_q = dka.createMouseWheelInput((byte) -86);
         fpa.a(nma.field_l, (byte) 75);
@@ -566,7 +566,7 @@ abstract class AppletGameShell extends GameApplet {
         BoulderComponent.snapshotMouseInput((byte) -44);
         if (!ColourGradientOperator.c(-112) &&
           Transform3D.field_c != 11) {
-          sw.h(100);
+          EditableTextField.h(100);
         }
         if (null != tja.field_q) {
           pg.field_y = tja.field_q.b(65);
@@ -582,7 +582,7 @@ abstract class AppletGameShell extends GameApplet {
             epa.a(2, (byte) -84, WindZoneBehaviour.field_n);
             LineNoiseOperator.c(9033);
             TrackingCrusherComponent.field_G = true;
-            oga.field_f = 15000L + bva.currentTimeMillis((byte) -107);
+            LegacyOpenGlPostProcessEffect.field_f = 15000L + bva.currentTimeMillis((byte) -107);
           }
         }
         if (Trap.field_m == -1 ||
@@ -598,7 +598,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           if (Trap.field_m != -1 &&
             Trap.field_m != 0) {
-            oga.field_f = bva.currentTimeMillis((byte) -107) + 15000L;
+            LegacyOpenGlPostProcessEffect.field_f = bva.currentTimeMillis((byte) -107) + 15000L;
           }
         }
         if (-1 != Trap.field_m &&
@@ -648,7 +648,7 @@ abstract class AppletGameShell extends GameApplet {
         if ((Trap.field_m != -1 &&
           Trap.field_m != 0 ||
           uma.b(-1)) &&
-          oga.field_f <= bva.currentTimeMillis((byte) -107)) {
+          LegacyOpenGlPostProcessEffect.field_f <= bva.currentTimeMillis((byte) -107)) {
           TrackingCrusherComponent.field_G = false;
           if (-1 != Trap.field_m &&
             Trap.field_m != 0) {
@@ -677,9 +677,9 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (cga.field_f == 2) {
           if (null != InvisibleTouchSwitchComponent.field_J &&
-            InvisibleTouchSwitchComponent.field_J.b(-79)) {
-            if (InvisibleTouchSwitchComponent.field_J.a("", 108)) {
-              if (InvisibleTouchSwitchComponent.field_J.c("", -127)) {
+            InvisibleTouchSwitchComponent.field_J.ensureIndex(-79)) {
+            if (InvisibleTouchSwitchComponent.field_J.hasGroupName("", 108)) {
+              if (InvisibleTouchSwitchComponent.field_J.isGroupAvailableByName("", -127)) {
                 TextResourceLoader.loadStrings((byte) -45, InvisibleTouchSwitchComponent.field_J);
                 InvisibleTouchSwitchComponent.field_J = null;
                 C2SActionPacket.a(-33);
@@ -699,7 +699,7 @@ abstract class AppletGameShell extends GameApplet {
           SimulationObserver.composeAgreementText((byte) -27);
           ura.field_b = nl.field_c;
           GameAssetLoader.field_t = false;
-          cra.a(tk.field_b, OpenGlTexture2D.field_n, 1, ft.field_a, WeaveOperator.field_p);
+          SequencePlayer.a(tk.field_b, OpenGlTexture2D.field_n, 1, ft.field_a, WeaveOperator.field_p);
           if (ofa.field_I ||
             null != BrickOperator.field_s) {
             stackIn_101_0 = !(ofa.field_I);
@@ -730,8 +730,8 @@ abstract class AppletGameShell extends GameApplet {
         boolean decompiledFrameRemainder0 = true;
         var3Lifetime2 = 69 % ((param0 + 63) / 62);
         if (cga.field_f == 11) {
-          if (ConstrainToFacingArcLocomotor.field_v != null && (!ConstrainToFacingArcLocomotor.field_v.b(-100) ||
-            !ConstrainToFacingArcLocomotor.field_v.a(0))) {
+          if (ConstrainToFacingArcLocomotor.field_v != null && (!ConstrainToFacingArcLocomotor.field_v.ensureIndex(-100) ||
+            !ConstrainToFacingArcLocomotor.field_v.areAllGroupsAvailable(0))) {
             ima.a(0.0f, S2CEventPacket.a(CrossedSineBandsOperator.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
             decompiledFrameRemainder0 = false;
           }

@@ -27,7 +27,7 @@ final class CauldronComponent extends SwitchComponent {
           var10.setWeight((byte) -3, 6);
           var10.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new EffectSwitchBehaviour(param2, param0);
-          var5.a(true, 3, (byte) -122);
+          var5.setTriggeringType(true, 3, (byte) -122);
           var5.a(true, 4, -81);
           var5.a(10, 1, 5, param1 - 2032);
           this.a(var5, (byte) -118);

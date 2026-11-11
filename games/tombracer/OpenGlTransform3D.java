@@ -14,7 +14,7 @@ final class OpenGlTransform3D extends Transform3D {
     float field_l;
     float field_g;
     float field_q;
-    static jea field_f;
+    static UiComponent field_f;
     static String field_n;
     float field_s;
 

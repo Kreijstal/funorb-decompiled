@@ -21,7 +21,7 @@ final class bi {
 
     final static void a(GraphicsToolkit param0, int param1) {
         ssa var2 = null;
-        jea var3 = null;
+        UiComponent var3 = null;
         try {
           var2 = IntrusiveDequeCursor.a((byte) 65, param0);
           var3 = SimpleMoveLocomotor.field_s;

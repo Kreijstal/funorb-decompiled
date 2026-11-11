@@ -55,7 +55,7 @@ final class kd extends FocusableWidget {
               if (var11 < 0) {
                 return true;
               }
-              this.field_D.a(var11, 100);
+              this.field_D.removeAt(var11, 100);
             }
           }
           return true;

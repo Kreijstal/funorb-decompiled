@@ -8,7 +8,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     private boolean field_h;
     static wm field_j;
     static ToolkitSprite field_d;
-    static jea field_i;
+    static UiComponent field_i;
     static su field_g;
 
     OpenGlEnvironmentWaterEffect(HardwareOpenGlToolkit param0, ResourceArchive param1, hk param2) {
@@ -127,7 +127,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           field_d = null;
           return;
         }
-        field_i = (jea) null;
+        field_i = (UiComponent) null;
         field_g = null;
         field_d = null;
     }

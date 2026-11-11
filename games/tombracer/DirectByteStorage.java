@@ -4,7 +4,7 @@
 final class DirectByteStorage extends ByteStorage {
     private java.nio.ByteBuffer field_g;
     static int[] field_i;
-    static jea field_h;
+    static UiComponent field_h;
     static IndexedSprite[] field_f;
 
     public static void releaseStatics(int param0) {

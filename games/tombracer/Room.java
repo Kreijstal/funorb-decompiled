@@ -544,7 +544,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         this.componentIdAllocator.reset((byte) 74);
         RoomComponent var2_ref = (RoomComponent) (this.components.first(param0 ^ -71));
         while (var2_ref != null) {
-          var2_ref.a(false, 6, this.componentIdAllocator, new SwitchableIdAllocator());
+          var2_ref.assignSwitchableIds(false, 6, this.componentIdAllocator, new SwitchableIdAllocator());
           var2_ref = (RoomComponent) (this.components.next(108));
         }
     }
@@ -718,7 +718,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             }
             var4Lifetime1 = (RoomComponent) (this.components.first(-80));
             while (var4Lifetime1 != null) {
-              var4Lifetime1.a(true, 1);
+              var4Lifetime1.connectTargetsRecursive(true, 1);
               var4Lifetime1 = (RoomComponent) (this.components.next(115));
             }
             this.components.clear(8);
@@ -782,7 +782,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         var7 = (RoomComponent) (this.components.first(-80));
         while (var7 != null) {
-          var7.a(-1704, this.scene);
+          var7.addToScene(-1704, this.scene);
           var7 = (RoomComponent) (this.components.next(116));
         }
         dea.roomObjectRenderer.prepareRoom(121, this);
@@ -1328,7 +1328,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         try {
           this.components.addLast((byte) -88, param0);
           if (null != this.scene) {
-            param0.a(param1 - 33556136, this.scene);
+            param0.addToScene(param1 - 33556136, this.scene);
           }
           if (param1 != 33554432) {
             this.n((byte) -3);
@@ -2007,7 +2007,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         var4 = new IntrusiveDequeCursor(this.components);
         var5 = (RoomComponent) (var4.first(true));
         while (var5 != null) {
-          var6 = var5.a(param1, false, false);
+          var6 = var5.findByIdRecursive(param1, false, false);
           if (var6 != null) {
             return var6;
           }

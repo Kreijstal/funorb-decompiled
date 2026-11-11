@@ -29,16 +29,16 @@ final class esa {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -26 / ((param2 - 18) / 61);
-          if (!param1.b(-56)) {
+          if (!param1.ensureIndex(-56)) {
             return false;
           }
-          if (!param1.c("commonui", -128)) {
+          if (!param1.isGroupAvailableByName("commonui", -128)) {
             return false;
           }
-          if (param3.b(-37) &&
-            param3.c("commonui", -125)) {
-            if (param0.b(-46) &&
-              param0.c("button.gif", -124)) {
+          if (param3.ensureIndex(-37) &&
+            param3.isGroupAvailableByName("commonui", -125)) {
+            if (param0.ensureIndex(-46) &&
+              param0.isGroupAvailableByName("button.gif", -124)) {
               return true;
             }
             return false;

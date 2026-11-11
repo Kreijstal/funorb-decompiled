@@ -95,12 +95,12 @@ final class mpa extends ContentTransitionDialog {
         return (param2 & 1048832) != 0 ? true : false;
     }
 
-    final void a(int param0, UiWidget param1) {
+    final void transitionToContent(int param0, UiWidget param1) {
         try {
           if (param0 <= 67) {
             field_W = (int[]) null;
           }
-          super.a(75, param1);
+          super.transitionToContent(75, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mpa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

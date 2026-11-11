@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cq {
-    static jea field_e;
+    static UiComponent field_e;
     static TriangleMesh[] field_b;
     static GameClock field_a;
     static String field_c;

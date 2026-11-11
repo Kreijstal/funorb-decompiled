@@ -4,7 +4,7 @@
 final class cs {
     static MatchScreen field_c;
     static String field_b;
-    static jea field_a;
+    static UiComponent field_a;
 
     final static String a(byte param0) {
         int var1 = 126 % ((param0 + 60) / 52);

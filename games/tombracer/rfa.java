@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class rfa extends AppletGameShell implements ShellListener {
     static String field_B;
-    static jea field_C;
+    static UiComponent field_C;
 
     abstract boolean handleGamePacket(int param0, BitPacketBuffer param1, byte param2);
 
@@ -21,7 +21,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           C2SSubmitSettingsPacket.a(var2, (byte) 101);
           return;
         }
-        if (!av.field_e &&
+        if (!MazeSolver.field_e &&
           !TextWidgetPainter.a(109)) {
           ima.a(100.0f, WindZoneBehaviour.field_u, -75);
           C2SSubmitSettingsPacket.a(var2, (byte) 111);
@@ -212,7 +212,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
 
     public final boolean isModal(int param0) {
         if (param0 != -2) {
-          field_C = (jea) null;
+          field_C = (UiComponent) null;
           return true;
         }
         return true;
@@ -294,10 +294,10 @@ abstract class rfa extends AppletGameShell implements ShellListener {
             lla.field_b = true;
           }
         } else {
-          if (!av.field_e) {
+          if (!MazeSolver.field_e) {
             if (!TextWidgetPainter.a(84)) {
               if (dma.field_l.a(-127)) {
-                av.field_e = true;
+                MazeSolver.field_e = true;
                 this.onLoadingComplete(24230);
                 PlatformComponent.A(116);
               }

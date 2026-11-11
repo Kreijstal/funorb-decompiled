@@ -79,7 +79,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final void a(int param0, int param1, StatefulWidgetPainter param2, int param3, UiWidget param4) {
+    final void paint(int param0, int param1, StatefulWidgetPainter param2, int param3, UiWidget param4) {
         BitmapFont stackIn_20_0;
         String stackIn_20_1;
         int stackIn_20_2;
@@ -193,7 +193,7 @@ final class WidgetStyleLayer {
         RuntimeException var7 = null;
         try {
           if (this.field_g) {
-            param5.a(-49, param4, param0, param3, param1);
+            param5.paint(-49, param4, param0, param3, param1);
             param5.a(true);
           }
           if (null != this.field_i) {

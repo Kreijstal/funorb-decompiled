@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class waa {
-    private bua field_d;
+    private ModelAnimator field_d;
     static String field_b;
     private int field_c;
     private int field_a;
@@ -77,28 +77,28 @@ final class waa {
     final void a(int param0, int param1, int param2) {
         if (param1 == 6) {
           ura.a(param1 ^ -10991);
-          hp.a(1024, 4095 & this.field_a * this.field_c, 1996, this.field_d.b((byte) 74), -1918106173, param2 + this.field_c, this.field_a + param0);
+          hp.a(1024, 4095 & this.field_a * this.field_c, 1996, this.field_d.getModel((byte) 74), -1918106173, param2 + this.field_c, this.field_a + param0);
           RemovedFromGameMenu.f((byte) -6);
           return;
         }
         this.field_c = -128;
         ura.a(param1 ^ -10991);
-        hp.a(1024, 4095 & this.field_a * this.field_c, 1996, this.field_d.b((byte) 74), -1918106173, param2 + this.field_c, this.field_a + param0);
+        hp.a(1024, 4095 & this.field_a * this.field_c, 1996, this.field_d.getModel((byte) 74), -1918106173, param2 + this.field_c, this.field_a + param0);
         RemovedFromGameMenu.f((byte) -6);
     }
 
     final void b(int param0) {
         if (param0 == -9310) {
-          this.field_d.a(0);
+          this.field_d.tick(0);
           return;
         }
         ft var3 = (ft) null;
         waa.a((ft) null, 19);
-        this.field_d.a(0);
+        this.field_d.tick(0);
     }
 
     waa(int param0, int param1) {
-        this.field_d = new bua(6, 4, 1);
+        this.field_d = new ModelAnimator(6, 4, 1);
         this.field_d.a(1, true, (byte) -94, 6);
         this.field_a = (int)((double)param0 * Math.random());
         this.field_c = (int)(Math.random() * (double)param1);

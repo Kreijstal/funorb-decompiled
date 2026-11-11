@@ -115,7 +115,7 @@ final class EffectEvent extends GameEvent {
             param0.setRoomEffectSlot(this.effectSlot, param3, -121, param2);
             return;
           }
-          param0.a(this.effectSlot, param3, -85);
+          param0.setEffectSlot(this.effectSlot, param3, -85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

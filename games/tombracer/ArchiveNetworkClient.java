@@ -117,12 +117,12 @@ abstract class ArchiveNetworkClient {
               C2SActionPacket.a((byte) 107, pu.field_b, var2, wk.field_n, joa.field_a);
               var2.writeByte(15, 0);
               var2.writeInt(CourseLayout.field_a, (byte) 117);
-              jia.field_a.a(var2.payload, 0, 13, 106);
+              jia.field_a.write(var2.payload, 0, 13, 106);
               ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
               pm.field_n = 30000L + bva.currentTimeMillis((byte) -107);
             }
             if (ColourKeyOperator.field_m == 3) {
-              if (jia.field_a.c(0) <= 0) {
+              if (jia.field_a.available(0) <= 0) {
                 if (bva.currentTimeMillis((byte) -107) > pm.field_n) {
                   stackIn_31_0 = du.a(-2, (byte) 17);
                   return stackIn_31_0;

@@ -193,7 +193,7 @@ final class PlayPhase extends MatchPhase {
             var7_intLifetime1Lifetime1 = SwitchLinkList.b(0) / 2;
             PlayerViewport.drawTiledFrame(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -MatchStatistics.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
             if (this.field_q > 50) {
-              if (0 != this.matchState.field_K) {
+              if (0 != this.matchState.gameMode) {
                 MembersUpsellMenu.a(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
               } else {
                 MembersUpsellMenu.a(ConstrainToCircleLocomotor.field_z + " " + (1 + this.matchState.roundIndex), 16777215, eda.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
@@ -214,14 +214,14 @@ final class PlayPhase extends MatchPhase {
               var16 = this.screen.matchState.players[var3];
               var5 = var16.getRoom((byte) 87);
               var6Lifetime1Lifetime2 = var5.getId((byte) -82);
-              if (this.matchState.field_K != 3) {
-                if (this.matchState.i(0) != -1) {
-                  var7 = doa.b(var6Lifetime1Lifetime2, 0, this.matchState.i(0));
+              if (this.matchState.gameMode != 3) {
+                if (this.matchState.getCourseId(0) != -1) {
+                  var7 = doa.b(var6Lifetime1Lifetime2, 0, this.matchState.getCourseId(0));
                 } else {
                   if (var5.j(0)) {
                     var7 = mna.a(0, var6Lifetime1Lifetime2);
                   } else {
-                    var7 = kq.a(-111, var6Lifetime1Lifetime2);
+                    var7 = PlayerInputQueue.findRoomDefinition(-111, var6Lifetime1Lifetime2);
                   }
                 }
               } else {
@@ -246,9 +246,9 @@ final class PlayPhase extends MatchPhase {
                 }
               }
               RoomEffectTraps.a(0, -73, var9, var12Lifetime2, var8Lifetime1, kn.field_p, var11);
-              var12Lifetime3 = "Member Only: " + kq.a(-112, var5.getId((byte) -82)).field_d;
+              var12Lifetime3 = "Member Only: " + PlayerInputQueue.findRoomDefinition(-112, var5.getId((byte) -82)).field_d;
               RoomEffectTraps.a(0, -80, 16 + var9, var12Lifetime3, var8Lifetime1, kn.field_p, 16777215);
-              var13 = var16.L(2158);
+              var13 = var16.getExitTick(2158);
               if (var13 > 0) {
                 var11Lifetime1 = 16777215;
                 var18 = "Last room total: " + dea.a(var13, (byte) -8);
@@ -332,7 +332,7 @@ final class PlayPhase extends MatchPhase {
             }
           } else {
             if (param2 == 22) {
-              var6.player.a(1, (byte) 113);
+              var6.player.beginRoomExit(1, (byte) 113);
               this.screen.l((byte) -38);
             }
           }
@@ -440,7 +440,7 @@ final class PlayPhase extends MatchPhase {
           PlayPhase.a(-107, -110, (byte) -67, -77, -33, 57);
         }
         fpa.field_c = true;
-        oga.field_f = 15000L + bva.currentTimeMillis((byte) -107);
+        LegacyOpenGlPostProcessEffect.field_f = 15000L + bva.currentTimeMillis((byte) -107);
         return Transform3D.field_c == 11 ? true : false;
     }
 

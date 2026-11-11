@@ -7,7 +7,7 @@ final class PcmStreamMixer extends PcmStream {
     private int field_k;
     private int field_j;
 
-    private final void b(int param0) {
+    private final void skipSubstreams(int param0) {
         PcmStream var2 = (PcmStream) (this.field_l.first(-80));
         while (var2 != null) {
           var2.skip(param0);
@@ -58,16 +58,16 @@ final class PcmStreamMixer extends PcmStream {
         Object var6 = null;
         do {
           if (this.field_j < 0) {
-            this.c(param0, param1, param2);
+            this.mixSubstreams(param0, param1, param2);
             return;
           }
           if (this.field_k + param2 < this.field_j) {
             this.field_k = this.field_k + param2;
-            this.c(param0, param1, param2);
+            this.mixSubstreams(param0, param1, param2);
             return;
           }
           var4 = this.field_j - this.field_k;
-          this.c(param0, param1, var4);
+          this.mixSubstreams(param0, param1, var4);
           param1 = param1 + var4;
           param2 = param2 - var4;
           this.field_k = this.field_k + var4;
@@ -92,7 +92,7 @@ final class PcmStreamMixer extends PcmStream {
         return 0;
     }
 
-    private final void c(int[] param0, int param1, int param2) {
+    private final void mixSubstreams(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) (this.field_l.first(-80));
         while (var4 != null) {
           var4.fillOrSkip(param0, param1, param2);
@@ -100,7 +100,7 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void removeSubstream(PcmStream param0) {
         param0.unlink(80);
     }
 
@@ -112,16 +112,16 @@ final class PcmStreamMixer extends PcmStream {
         Object var4 = null;
         do {
           if (this.field_j < 0) {
-            this.b(param0);
+            this.skipSubstreams(param0);
             return;
           }
           if (this.field_k + param0 < this.field_j) {
             this.field_k = this.field_k + param0;
-            this.b(param0);
+            this.skipSubstreams(param0);
             return;
           }
           var2 = this.field_j - this.field_k;
-          this.b(var2);
+          this.skipSubstreams(var2);
           param0 = param0 - var2;
           this.field_k = this.field_k + var2;
           this.normalizeListenerFrameOffsets();

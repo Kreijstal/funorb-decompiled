@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ReportAbuseDialog extends jea {
-    private jea field_zb;
+final class ReportAbuseDialog extends UiComponent {
+    private UiComponent field_zb;
     private int field_Gb;
-    private jea[] field_yb;
-    private jea field_xb;
-    private jea field_Fb;
-    private jea field_Bb;
-    private jea field_tb;
+    private UiComponent[] field_yb;
+    private UiComponent field_xb;
+    private UiComponent field_Fb;
+    private UiComponent field_Bb;
+    private UiComponent field_tb;
     static ur field_Eb;
     long field_Db;
     static int field_ub;
-    private jea field_wb;
+    private UiComponent field_wb;
     private StringBuilder field_vb;
     private ta field_Ab;
     static volatile boolean field_Cb;
 
-    private final int a(int param0, int param1, jea param2, int param3, jea param4) {
+    private final int appendReasonButton(int param0, int param1, UiComponent param2, int param3, UiComponent param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
@@ -35,7 +35,7 @@ final class ReportAbuseDialog extends jea {
             return stackIn_2_0;
           }
           var6_int = param4.field_H.measureWrappedHeight(param4.field_r, -(2 * param4.field_x) + param3, param4.field_P);
-          param4.a(param3, var6_int, -23776, param0, 0);
+          param4.setBounds(param3, var6_int, -23776, param0, 0);
           param0 = param0 + (var6_int - 0);
           param2.b(-125, param4);
           stackIn_4_0 = param0;
@@ -72,10 +72,10 @@ final class ReportAbuseDialog extends jea {
         return this.field_vb.toString();
     }
 
-    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, jea param5, jea param6, jea param7, jea param8, ta param9, jea param10, String param11, long param12) {
+    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, ta param9, UiComponent param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$1 = null;
-        jea[] var15 = null;
+        UiComponent[] var15 = null;
         int var15_int = 0;
         int var16 = 0;
         int var17 = 0;
@@ -88,7 +88,7 @@ final class ReportAbuseDialog extends jea {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        jea[] var28 = null;
+        UiComponent[] var28 = null;
         Object stackIn_7_0;
         ta stackIn_7_1;
         ta stackIn_7_2;
@@ -98,7 +98,7 @@ final class ReportAbuseDialog extends jea {
         ta stackIn_8_1;
         ta stackIn_8_2;
         String stackIn_8_5;
-        jea stackIn_14_0 = null;
+        UiComponent stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -143,23 +143,23 @@ final class ReportAbuseDialog extends jea {
         this.field_Gb = -2;
         try {
           this.field_Db = param12;
-          this.field_zb = new jea(0L, param6, EffectEvent.field_m.toUpperCase());
+          this.field_zb = new UiComponent(0L, param6, EffectEvent.field_m.toUpperCase());
           this.field_zb.field_z = 1;
           this.b(-126, this.field_zb);
-          this.field_Fb = new jea(0L, param7);
+          this.field_Fb = new UiComponent(0L, param7);
           this.field_zb.b(-123, this.field_Fb);
-          this.field_wb = new jea(0L, (jea) null);
+          this.field_wb = new UiComponent(0L, (UiComponent) null);
           this.b(-127, this.field_wb);
           if (param11 != null) {
-            this.field_Bb = new jea(0L, param8, fpa.field_a);
+            this.field_Bb = new UiComponent(0L, param8, fpa.field_a);
             this.field_Bb.field_ib = 11184810;
             this.field_Bb.field_z = 1;
             this.field_wb.b(-122, this.field_Bb);
-            this.field_tb = new jea(0L, param8, nla.field_b);
+            this.field_tb = new UiComponent(0L, param8, nla.field_b);
             this.field_tb.field_ib = 11184810;
             this.field_tb.field_z = 1;
             this.field_wb.b(-122, this.field_tb);
-            this.field_xb = new jea(0L, param8);
+            this.field_xb = new UiComponent(0L, param8);
             this.field_xb.field_ib = 16764006;
             this.field_wb.b(-125, this.field_xb);
             this.field_xb.field_sb = "|";
@@ -191,18 +191,18 @@ final class ReportAbuseDialog extends jea {
               this.field_Ab = new ta(stackIn_7_3, stackIn_7_4, stackIn_8_5);
               this.field_wb.b(-125, this.field_Ab);
             }
-            var28 = new jea[3];
+            var28 = new UiComponent[3];
             var15 = var28;
-            var28[0] = new jea(0L, (jea) null);
+            var28[0] = new UiComponent(0L, (UiComponent) null);
             this.field_wb.b(-123, var28[0]);
-            var28[1] = new jea(0L, (jea) null);
+            var28[1] = new UiComponent(0L, (UiComponent) null);
             this.field_wb.b(-122, var28[1]);
-            var28[2] = new jea(0L, (jea) null);
+            var28[2] = new UiComponent(0L, (UiComponent) null);
             this.field_wb.b(-127, var28[2]);
-            this.field_yb = new jea[TouchSwitchBehaviour.field_n];
+            this.field_yb = new UiComponent[TouchSwitchBehaviour.field_n];
             for (var16 = 0; TouchSwitchBehaviour.field_n > var16; var16++) {
               if (null != aca.field_h[var16]) {
-                this.field_yb[var16] = new jea(0L, param10, aca.field_h[var16]);
+                this.field_yb[var16] = new UiComponent(0L, param10, aca.field_h[var16]);
                 this.field_yb[var16].field_z = 0;
                 stackIn_14_0 = this.field_yb[var16];
                 stackIn_15_1 = (param11 != null);
@@ -241,31 +241,31 @@ final class ReportAbuseDialog extends jea {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(param6, ai.field_c, var16Lifetime2, var18Lifetime3, 8421504, var28[0]);
-            var18Lifetime3 = this.a(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[6]);
-            var18Lifetime3 = this.a(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[9]);
-            var18Lifetime3 = this.a(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[5]);
-            var18Lifetime3 = this.a(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[7]);
-            var18Lifetime3 = this.a(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[15]);
-            var18Lifetime3 = this.a(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[4]);
+            var18Lifetime3 = this.appendReasonHeading(param6, ai.field_c, var16Lifetime2, var18Lifetime3, 8421504, var28[0]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[6]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[9]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[5]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[7]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[15]);
+            var18Lifetime3 = this.appendReasonButton(var18Lifetime3, 13, var28[0], var16Lifetime2, this.field_yb[4]);
             if (var18Lifetime3 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(param6, qba.field_b, var16Lifetime2, var18Lifetime4, 8421504, var28[1]);
-            var18Lifetime4 = this.a(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[16]);
-            var18Lifetime4 = this.a(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[17]);
-            var18Lifetime4 = this.a(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[18]);
-            var18Lifetime4 = this.a(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[19]);
-            var18Lifetime4 = this.a(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[20]);
+            var18Lifetime4 = this.appendReasonHeading(param6, qba.field_b, var16Lifetime2, var18Lifetime4, 8421504, var28[1]);
+            var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[16]);
+            var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[17]);
+            var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[18]);
+            var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[19]);
+            var18Lifetime4 = this.appendReasonButton(var18Lifetime4, 13, var28[1], var16Lifetime2, this.field_yb[20]);
             if (var18Lifetime4 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(param6, TeleportLocomotor.field_o, var16Lifetime2, var18Lifetime5, 8421504, var28[2]);
-            var18Lifetime5 = this.a(var18Lifetime5, 13, var28[2], var16Lifetime2, this.field_yb[13]);
-            var18Lifetime5 = this.a(var18Lifetime5, 13, var28[2], var16Lifetime2, this.field_yb[21]);
-            var18Lifetime5 = this.a(var18Lifetime5, 13, var28[2], var16Lifetime2, this.field_yb[11]);
+            var18Lifetime5 = this.appendReasonHeading(param6, TeleportLocomotor.field_o, var16Lifetime2, var18Lifetime5, 8421504, var28[2]);
+            var18Lifetime5 = this.appendReasonButton(var18Lifetime5, 13, var28[2], var16Lifetime2, this.field_yb[13]);
+            var18Lifetime5 = this.appendReasonButton(var18Lifetime5, 13, var28[2], var16Lifetime2, this.field_yb[21]);
+            var18Lifetime5 = this.appendReasonButton(var18Lifetime5, 13, var28[2], var16Lifetime2, this.field_yb[11]);
             if (var17Lifetime5 < var18Lifetime5) {
               var17Lifetime5 = var18Lifetime5;
             }
@@ -280,49 +280,49 @@ final class ReportAbuseDialog extends jea {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_zb.a(13 + (13 + var19), 24, -23776, 0, 0);
-            this.field_Fb.a(15, 15, -23776, 5, -20 + this.field_zb.field_G);
+            this.field_zb.setBounds(13 + (13 + var19), 24, -23776, 0, 0);
+            this.field_Fb.setBounds(15, 15, -23776, 5, -20 + this.field_zb.field_G);
             var21 = 10;
-            this.field_Bb.a(var19, 2 * di.field_a, -23776, var21, 13);
+            this.field_Bb.setBounds(var19, 2 * di.field_a, -23776, var21, 13);
             var21 = var21 + di.field_a * 2;
-            this.field_tb.a(var19, 2 * di.field_a, -23776, var21, 13);
+            this.field_tb.setBounds(var19, 2 * di.field_a, -23776, var21, 13);
             var21 = var21 + (10 + 2 * di.field_a);
-            this.field_xb.a(0, di.field_a, -23776, var21, 0);
+            this.field_xb.setBounds(0, di.field_a, -23776, var21, 0);
             var21 = var21 + (di.field_a + 10);
             if (null != this.field_Ab) {
               var20Lifetime3 = this.field_Ab.a((byte) 95, 4);
               this.field_Ab.a(var20Lifetime3, var21, (byte) -110, 4, di.field_a, 13 + (-var20Lifetime3 + var19) / 2);
               var21 = var21 + (10 + di.field_a);
             }
-            var28[0].a(var16Lifetime2, var17Lifetime5, -23776, var21, 13);
-            var28[1].a(var16Lifetime2, var17Lifetime5, -23776, var21, 13 + (13 + var16Lifetime2));
-            var28[2].a(var16Lifetime2, var17Lifetime5, -23776, var21, 26 + (2 * var16Lifetime2 + 13));
+            var28[0].setBounds(var16Lifetime2, var17Lifetime5, -23776, var21, 13);
+            var28[1].setBounds(var16Lifetime2, var17Lifetime5, -23776, var21, 13 + (13 + var16Lifetime2));
+            var28[2].setBounds(var16Lifetime2, var17Lifetime5, -23776, var21, 26 + (2 * var16Lifetime2 + 13));
             var22 = var21;
-            this.field_wb.a(var19 + 26, 10 + (var17Lifetime5 + var22), -23776, 24, 0);
+            this.field_wb.setBounds(var19 + 26, 10 + (var17Lifetime5 + var22), -23776, 24, 0);
             this.field_wb.field_w = Player.createScrollbarSprites(this.field_wb.field_t, 2105376, 3, 11579568, -125, 8421504);
             var23 = 13 + (13 + var19);
             var24 = 10 + var17Lifetime5 + (var22 + 24);
             var25 = bt.a((byte) -8, var23, param2, param0);
             var26 = hsa.a(param3, var24, param1, (byte) -99);
-            this.a(var23, var24, -23776, var26, var25);
+            this.setBounds(var23, var24, -23776, var26, var25);
             return;
           }
-          this.field_Bb = new jea(0L, param8, TouchSwitchBehaviour.field_r);
+          this.field_Bb = new UiComponent(0L, param8, TouchSwitchBehaviour.field_r);
           this.field_Bb.field_z = 1;
           this.field_Bb.field_ib = 11184810;
           this.field_wb.b(-126, this.field_Bb);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Bb.field_H.countWrappedLines(this.field_Bb.field_r, var15_int);
-          this.field_Bb.a(var15_int, di.field_a * var17Lifetime1, -23776, var16Lifetime1, 13);
+          this.field_Bb.setBounds(var15_int, di.field_a * var17Lifetime1, -23776, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * di.field_a;
-          this.field_wb.a(26 + var15_int, var16Lifetime1 + 10, -23776, 24, 0);
+          this.field_wb.setBounds(26 + var15_int, var16Lifetime1 + 10, -23776, 24, 0);
           this.field_wb.field_w = Player.createScrollbarSprites(this.field_wb.field_t, 2105376, 3, 11579568, -121, 8421504);
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = bt.a((byte) -8, var18Lifetime1, param2, param0);
           var21Lifetime1 = hsa.a(param3, var19Lifetime1, param1, (byte) 53);
-          this.a(var18Lifetime1, var19Lifetime1, -23776, var21Lifetime1, var20Lifetime1);
+          this.setBounds(var18Lifetime1, var19Lifetime1, -23776, var21Lifetime1, var20Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -377,14 +377,14 @@ final class ReportAbuseDialog extends jea {
     final boolean isMuteRequested(boolean param0) {
         boolean stackIn_6_0 = false;
         if (param0) {
-          this.b(false);
+          this.handleCancelKey(false);
         }
         stackIn_6_0 = (null != this.field_Ab) && (this.field_Ab.field_cb);
         return stackIn_6_0;
     }
 
-    private final int a(jea param0, String param1, int param2, int param3, int param4, jea param5) {
-        jea var7 = null;
+    private final int appendReasonHeading(UiComponent param0, String param1, int param2, int param3, int param4, UiComponent param5) {
+        UiComponent var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -401,7 +401,7 @@ final class ReportAbuseDialog extends jea {
             stackIn_2_0 = -60;
             return stackIn_2_0;
           }
-          var7 = new jea(0L, param0, 0, param3, param2, 24, param1);
+          var7 = new UiComponent(0L, param0, 0, param3, param2, 24, param1);
           param3 += 32;
           param5.b(param4 ^ -8421632, var7);
           stackIn_4_0 = param3;
@@ -432,7 +432,7 @@ final class ReportAbuseDialog extends jea {
         }
     }
 
-    final boolean b(boolean param0) {
+    final boolean handleCancelKey(boolean param0) {
         if (this.field_Gb != -2) {
           return false;
         }
@@ -449,7 +449,7 @@ final class ReportAbuseDialog extends jea {
         int var3 = 0;
         ta stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        jea stackIn_15_0 = null;
+        UiComponent stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;

@@ -116,7 +116,7 @@ final class PitSnake extends IntrusiveNode {
               if (this.field_s != 0 &&
                 lw.signum(this.field_s, (byte) -87) == lw.signum(-this.field_n + this.field_u, (byte) -87)) {
                 this.field_s = -this.field_s;
-                this.field_f = sw.a(this.field_f, 6);
+                this.field_f = EditableTextField.a(this.field_f, 6);
               }
               if (this.field_p != 0 &&
                 lw.signum(this.field_p, (byte) -95) == lw.signum(this.field_m - this.field_r, (byte) -93)) {
@@ -210,7 +210,7 @@ final class PitSnake extends IntrusiveNode {
         this.field_s = -this.field_s;
         this.field_n = -this.field_n;
         this.field_u = -this.field_u;
-        this.field_f = sw.a(this.field_f, 6);
+        this.field_f = EditableTextField.a(this.field_f, 6);
     }
 
     final void a(int param0, boolean param1, int param2, int param3, Player param4) {
@@ -231,7 +231,7 @@ final class PitSnake extends IntrusiveNode {
           if (param4.isDying(122)) {
             return;
           }
-          if (param4.k((byte) -127) <= 0) {
+          if (param4.getIdleTicks((byte) -127) <= 0) {
             this.field_w = this.field_w + 1;
             if (this.field_w > 20) {
               this.field_g = 0;

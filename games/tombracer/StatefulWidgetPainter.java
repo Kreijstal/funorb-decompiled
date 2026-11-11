@@ -224,7 +224,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
               var14.mergeIntoWorkingSkin(this, param0, 126, param3, param1, this.field_p);
             }
           }
-          this.field_p.a(-83, param1, this, param3, param0);
+          this.field_p.paint(-83, param1, this, param3, param0);
           pfa.a(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

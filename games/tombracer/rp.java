@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rp extends IntrusiveNode {
-    bua field_j;
+    ModelAnimator field_j;
     static ft field_g;
     static int field_h;
     static int field_i;
@@ -28,11 +28,11 @@ final class rp extends IntrusiveNode {
         if (param3 != 73) {
           return;
         }
-        hp.a(param1, 0, 0, this.field_j.b((byte) 74), -1918106173, param2, param0);
+        hp.a(param1, 0, 0, this.field_j.getModel((byte) 74), -1918106173, param2, param0);
     }
 
     rp(int param0) {
-        this.field_j = new bua(0, param0, 1);
+        this.field_j = new ModelAnimator(0, param0, 1);
         this.field_j.a(param0, false, 0, 0, true);
     }
 
@@ -47,10 +47,10 @@ final class rp extends IntrusiveNode {
     final void b(int param0) {
         if (param0 > -30) {
           field_h = 127;
-          this.field_j.a(0);
+          this.field_j.tick(0);
           return;
         }
-        this.field_j.a(0);
+        this.field_j.tick(0);
     }
 
     static {

@@ -8,7 +8,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
     static java.awt.Font field_y;
     private FocusableWidget[] field_z;
 
-    final void a(int param0, String[] param1) {
+    final void setSuggestions(int param0, String[] param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;

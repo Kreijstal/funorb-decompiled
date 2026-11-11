@@ -7,7 +7,7 @@ final class SimpleConditionBehaviour extends Behaviour {
     static int[] field_o;
     private int field_t;
     private SwitchState field_n;
-    static jea[] field_p;
+    static UiComponent[] field_p;
     static long field_r;
 
     final static tn a(ResourceArchive param0, int param1, int param2) {

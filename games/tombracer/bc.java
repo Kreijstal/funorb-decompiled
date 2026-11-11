@@ -3,7 +3,7 @@
  */
 final class bc {
     static String field_a;
-    static jea field_b;
+    static UiComponent field_b;
     private static String[] field_c;
 
     final static boolean a(boolean param0) {

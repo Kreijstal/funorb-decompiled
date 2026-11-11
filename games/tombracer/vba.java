@@ -258,7 +258,7 @@ final class vba extends we {
           kn.field_p.a(var7Lifetime1, false, MessageOverlay.field_p, var4, -14671840, -1);
         }
         var7Lifetime1 += 20;
-        discarded$0 = this.a(var12 + "<br><br>" + jn.field_r + sw.field_zb[var6] + "       " + DisplacementOperator.field_m + sw.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, param1 ^ -150, var7Lifetime1, 15);
+        discarded$0 = this.a(var12 + "<br><br>" + jn.field_r + EditableTextField.field_zb[var6] + "       " + DisplacementOperator.field_m + EditableTextField.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, param1 ^ -150, var7Lifetime1, 15);
         return;
     }
 

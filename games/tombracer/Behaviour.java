@@ -122,7 +122,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         this.stopped = true;
     }
 
-    void a(int param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3) {
+    void assignSwitchableIds(int param0, SwitchableIdAllocator param1, boolean param2, SwitchableIdAllocator param3) {
         try {
           if (param1 != null) {
             this.field_j = param1.allocate(84, param2);
@@ -217,7 +217,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     final Room getRoom(boolean param0) {
         if (!param0) {
-          this.a(-83, 93, false);
+          this.findSwitchable(-83, 93, false);
           return this.room;
         }
         return this.room;
@@ -422,10 +422,10 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     abstract void tick(int param0);
 
-    Switchable a(int param0, int param1, boolean param2) {
+    Switchable findSwitchable(int param0, int param1, boolean param2) {
         if (param0 != 0) {
           SwitchableIdAllocator var5 = (SwitchableIdAllocator) null;
-          this.a(-91, (SwitchableIdAllocator) null, true, (SwitchableIdAllocator) null);
+          this.assignSwitchableIds(-91, (SwitchableIdAllocator) null, true, (SwitchableIdAllocator) null);
           if (WhirlpoolDigest.matchesSwitchableId(param1, param2, -27201, (Switchable) (this))) {
             return (Switchable) (this);
           }
@@ -466,7 +466,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         this.locked = false;
         try {
           this.room = param0;
-          this.a(48, param0.getTrapIdAllocator(-38), param1, (SwitchableIdAllocator) null);
+          this.assignSwitchableIds(48, param0.getTrapIdAllocator(-38), param1, (SwitchableIdAllocator) null);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

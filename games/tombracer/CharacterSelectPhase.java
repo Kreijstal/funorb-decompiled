@@ -10,7 +10,7 @@ final class CharacterSelectPhase extends MatchPhase {
     static int field_q;
     private int field_p;
     private boolean field_y;
-    static jea field_s;
+    static UiComponent field_s;
     private rp[] field_t;
     private int field_u;
     private int field_v;
@@ -231,12 +231,12 @@ final class CharacterSelectPhase extends MatchPhase {
     final void a(int param0, int param1, int param2) {
         this.field_m.a((byte) -69, param2, param0);
         this.field_t[param0] = new rp(param2);
-        bua var4 = this.field_t[param0].field_j;
+        ModelAnimator var4 = this.field_t[param0].field_j;
         var4.a(param2, false, param1, 5, true);
         int var5 = var4.c((byte) 114);
-        var4.a(param1 + 107, var5, param2, 0, 0);
+        var4.queueAnimation(param1 + 107, var5, param2, 0, 0);
         FloatingMessage var6 = RewardChoicePhase.createTextMessage(param1 ^ -41, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, SpriteSampleOperator.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
-        iqa.field_c.a(0, var6);
+        iqa.field_c.addMessageNow(0, var6);
     }
 
     private final boolean i(int param0) {
@@ -301,7 +301,7 @@ final class CharacterSelectPhase extends MatchPhase {
     private final boolean a(int param0, byte param1) {
         boolean stackIn_16_0 = false;
         if (param1 >= -29) {
-          field_s = (jea) null;
+          field_s = (UiComponent) null;
         }
         if (!TextWidgetPainter.a(119) &&
           mq.field_e != null) {

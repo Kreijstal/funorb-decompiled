@@ -3,7 +3,7 @@
  */
 final class wl extends IntrusiveNode {
     static String field_h;
-    static dk[][] field_f;
+    static AnimationSequence[][] field_f;
     static int[] field_i;
     GraphicsToolkit field_g;
     ssa field_j;
@@ -11,7 +11,7 @@ final class wl extends IntrusiveNode {
     public static void releaseStatics(byte param0) {
         field_i = null;
         field_h = null;
-        field_f = (dk[][]) null;
+        field_f = (AnimationSequence[][]) null;
         if (param0 >= -35) {
           wl.releaseStatics((byte) -3);
         }

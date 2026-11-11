@@ -200,7 +200,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, HardwareSpecularEffect.field_f);
         var3 = var3 + (this.addFieldWithHelp(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
         var3 = var3 + this.addLabeledField(this.field_E, var3, 170, (byte) 59, rta.field_j);
-        var3 = var3 + (this.a(gea.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
+        var3 = var3 + (this.a(WaypointPath.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
         var3 = var3 + (this.a(CrusherBehaviour.field_r, za.field_f, this.field_G, -3, 170, var3) + 5);
         var3 = var3 + this.addValidatedField(this.field_I, var3, (byte) 99, iqa.field_g, 170);
         jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, BlendModeOperator.field_o, 11579568, OpenGlSprite.field_l);
@@ -209,8 +209,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         TextWidgetPainter var5 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
         this.field_A = new HotspotTextWidget(var2, var5);
         this.field_A.field_q = "";
-        this.field_A.setHotspotTooltip(sw.field_Fb, 0, 0);
-        this.field_A.setHotspotTooltip(sw.field_Fb, 1, 0);
+        this.field_A.setHotspotTooltip(EditableTextField.field_Fb, 0, 0);
+        this.field_A.setHotspotTooltip(EditableTextField.field_Fb, 1, 0);
         this.field_A.field_h = (WidgetListener) (this);
         this.field_A.a(var3, (byte) -120, -90 + this.field_m, 46);
         var3 = var3 + (this.field_A.field_p + 15);

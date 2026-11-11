@@ -7,7 +7,7 @@ final class PitModel extends TrapModel {
     static PcmStreamMixer field_n;
     static String field_r;
     private dpa[][] tiles;
-    static jea[] field_p;
+    static UiComponent[] field_p;
     static kea field_s;
     private int field_t;
     private int style;

@@ -46,17 +46,17 @@ final class ControllerLocomotor extends Locomotor {
         }
     }
 
-    final void a(boolean param0, byte param1, SwitchableIdAllocator param2, SwitchableIdAllocator param3) {
+    final void assignSwitchableIds(boolean param0, byte param1, SwitchableIdAllocator param2, SwitchableIdAllocator param3) {
         int var5_int = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
-        super.a(param0, (byte) -125, param2, param3);
+        super.assignSwitchableIds(param0, (byte) -125, param2, param3);
         if (param1 >= -106) {
           return;
         }
         try {
           if (this.field_u != null) {
             for (var5_int = 0; this.field_u.length > var5_int; var5_int++) {
-              this.field_u[var5_int].a(param0, (byte) -122, param2, param3);
+              this.field_u[var5_int].assignSwitchableIds(param0, (byte) -122, param2, param3);
             }
           }
         } catch (RuntimeException runtimeException) {

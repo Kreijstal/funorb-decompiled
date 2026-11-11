@@ -9,11 +9,11 @@ final class MatchState implements dv {
     int field_E;
     Player[] players;
     CharacterChoice[] characterChoices;
-    private int field_r;
+    private int courseId;
     private ScoringObserverFactory scoringFactory;
     static String field_N;
     int roundsToWin;
-    int field_K;
+    int gameMode;
     private int field_O;
     int roundIndex;
     ScoreStandings scoreStandings;
@@ -72,11 +72,11 @@ final class MatchState implements dv {
         }
     }
 
-    final int i(int param0) {
+    final int getCourseId(int param0) {
         if (param0 != 0) {
           this.declareWinner(68, (byte) -44);
         }
-        return this.field_r;
+        return this.courseId;
     }
 
     final boolean b(int param0, int param1) {
@@ -93,7 +93,7 @@ final class MatchState implements dv {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_N = null;
         field_p = null;
         if (param0 != 0) {
@@ -211,7 +211,7 @@ final class MatchState implements dv {
         if (param0 != -25319) {
           this.field_s = true;
         }
-        return this.field_K == 2 ? true : false;
+        return this.gameMode == 2 ? true : false;
     }
 
     final int getMatchWinner(byte param0) {
@@ -361,12 +361,12 @@ final class MatchState implements dv {
         return this.colouredPlayerNames[param0];
     }
 
-    final boolean j(int param0) {
+    final boolean isSinglePlayer(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -1878) {
           this.getPlayerCourseIndex(-41, -61);
         }
-        stackIn_6_0 = (this.playerCount == 1) && (this.field_K != 2);
+        stackIn_6_0 = (this.playerCount == 1) && (this.gameMode != 2);
         return stackIn_6_0;
     }
 
@@ -522,11 +522,11 @@ final class MatchState implements dv {
         return this.playerNames[param0];
     }
 
-    final int j(int param0, int param1) {
+    final int getRoomHashByte(int param0, int param1) {
         if (param0 != 0) {
           this.field_a = 20;
         }
-        return dna.lowByte(this.simulations[param1].a(true), 255);
+        return dna.lowByte(this.simulations[param1].getRoomStateHash(true), 255);
     }
 
     final PlayerSimulation getSimulation(int param0, int param1) {
@@ -589,7 +589,7 @@ final class MatchState implements dv {
           this.finishedRound[var2Lifetime2] = this.hasResigned((byte) -81, var2Lifetime2);
           var2Lifetime2++;
         }
-        if (0 == this.field_K) {
+        if (0 == this.gameMode) {
           this.rewardChoice = new CommonChooseReward(this);
           this.rewardChoice.rollRewards(param0 + 28713);
           this.field_E = 0;
@@ -608,7 +608,7 @@ final class MatchState implements dv {
         if (param0 < 57) {
           return true;
         }
-        stackIn_7_0 = (this.field_K == 0) || (this.field_K == 2);
+        stackIn_7_0 = (this.gameMode == 0) || (this.gameMode == 2);
         return stackIn_7_0;
     }
 
@@ -638,9 +638,9 @@ final class MatchState implements dv {
           this.roundsToWin = param4;
           this.scoringFactory = param9;
           this.playerNames = param0;
-          this.field_K = param5;
+          this.gameMode = param5;
           if (param10 != null) {
-            if (this.field_K != 0) {
+            if (this.gameMode != 0) {
               var12_int = 1;
             } else {
               var12_int = this.playerNames.length * (-1 + param4) + 1;
@@ -669,18 +669,18 @@ final class MatchState implements dv {
             this.players[var12_intLifetime2] = new Player(var12_intLifetime2);
             this.characterChoices[var12_intLifetime2] = new CharacterChoice(this.players[var12_intLifetime2]);
           }
-          var12_intLifetime3 = this.field_K;
+          var12_intLifetime3 = this.gameMode;
           if (var12_intLifetime3 == 0) {
-            this.field_r = -1;
+            this.courseId = -1;
           } else {
             if (var12_intLifetime3 == 1) {
-              this.field_r = param6;
+              this.courseId = param6;
             } else {
               if (3 == var12_intLifetime3) {
-                this.field_r = pl.a((byte) 64);
+                this.courseId = pl.a((byte) 64);
               } else {
                 if (2 == var12_intLifetime3) {
-                  this.field_r = -1;
+                  this.courseId = -1;
                 }
               }
             }
@@ -690,7 +690,7 @@ final class MatchState implements dv {
           this.roundWinner = -1;
           this.standings = new RaceStandings(this);
           this.scoreStandings = new ScoreStandings(this);
-          if (this.field_K == 0) {
+          if (this.gameMode == 0) {
             this.rewardChoice = new CommonChooseReward(this);
             this.rewardChoice.rollRewards(28624);
             this.field_E = 0;

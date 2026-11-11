@@ -47,7 +47,7 @@ final class CoinBagItemComponent extends ItemComponent {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, boolean param4) {
-        jea stackIn_20_0 = null;
+        UiComponent stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_36_0 = 0;
         int stackIn_36_1 = 0;
@@ -60,22 +60,22 @@ final class CoinBagItemComponent extends ItemComponent {
         int stackIn_80_0 = 0;
         boolean stackIn_127_0 = false;
         int stackIn_145_0 = 0;
-        jea stackIn_168_0 = null;
+        UiComponent stackIn_168_0 = null;
         int stackIn_168_1 = 0;
         boolean stackIn_169_2 = false;
-        jea stackIn_173_0 = null;
+        UiComponent stackIn_173_0 = null;
         int stackIn_173_1 = 0;
         boolean stackIn_174_2 = false;
-        jea stackIn_178_0 = null;
+        UiComponent stackIn_178_0 = null;
         int stackIn_178_1 = 0;
         boolean stackIn_179_2 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_73_0;
         boolean stackOut_126_0;
         RuntimeException var5 = null;
-        jea var6 = null;
-        jea var7 = null;
-        jea var8 = null;
+        UiComponent var6 = null;
+        UiComponent var7 = null;
+        UiComponent var8 = null;
         int var9 = 0;
         String var9_ref_String = null;
         String var10_ref_String = null;
@@ -97,11 +97,11 @@ final class CoinBagItemComponent extends ItemComponent {
         pha var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        jea var22 = null;
+        UiComponent var22 = null;
         int[] var23 = null;
         String var24 = null;
         int[] var25 = null;
-        jea var26 = null;
+        UiComponent var26 = null;
         int stackIn_54_0Lifetime1;
         int stackIn_54_1Lifetime1;
         int stackIn_62_0Lifetime1;
@@ -126,7 +126,7 @@ final class CoinBagItemComponent extends ItemComponent {
             if (ComponentMount.b(param1 + 8193)) {
               StatusEffect.field_g.field_r = una.field_d.toUpperCase();
               var9 = (2 + dka.field_b.field_G) / 2;
-              pk.field_z.a(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
+              pk.field_z.setBounds(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
               if (C2SChooseRewardPacket.field_a.field_Mb >= C2SChooseRewardPacket.field_a.field_Jb) {
                 pk.field_z.field_r = RandomAccessFileHandle.field_c.toUpperCase();
                 pk.field_z.field_X = false;
@@ -154,7 +154,7 @@ final class CoinBagItemComponent extends ItemComponent {
                 }
                 pk.field_z.field_r = pk.field_z.field_r + "<br>" + var10_ref_String;
               }
-              hw.field_a.a(dka.field_b.field_G - var9, 40, -23776, dka.field_b.field_t - 40, var9);
+              hw.field_a.setBounds(dka.field_b.field_G - var9, 40, -23776, dka.field_b.field_t - 40, var9);
               hw.field_a.field_r = PlantModel.field_p.toUpperCase();
               var8 = hw.field_a;
               stackIn_20_0 = hw.field_a;
@@ -436,15 +436,15 @@ final class CoinBagItemComponent extends ItemComponent {
               }
               if (var19 != 0) {
                 var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
-                StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
-                MessageOverlay.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
+                StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(113, UiComponent.field_nb, new String[]{var9_ref_String}).toUpperCase();
+                MessageOverlay.field_t.setBounds(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
                 MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
                 var8 = MessageOverlay.field_t;
               }
             } else {
               var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
-              StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
-              MessageOverlay.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
+              StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(113, UiComponent.field_nb, new String[]{var9_ref_String}).toUpperCase();
+              MessageOverlay.field_t.setBounds(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
               MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
               var8 = MessageOverlay.field_t;
             }
@@ -461,15 +461,15 @@ final class CoinBagItemComponent extends ItemComponent {
           stackIn_168_0 = nra.field_c;
           stackIn_168_1 = -98;
           stackIn_169_2 = (param4) && (!param0) && (!tla.field_e);
-          ((jea) (Object) stackIn_168_0).c(stackIn_168_1, stackIn_169_2);
+          ((UiComponent) (Object) stackIn_168_0).c(stackIn_168_1, stackIn_169_2);
           stackIn_173_0 = dka.field_b;
           stackIn_173_1 = 67;
           stackIn_174_2 = (param4) && (!param0) && (!tla.field_e);
-          ((jea) (Object) stackIn_173_0).c(stackIn_173_1, stackIn_174_2);
+          ((UiComponent) (Object) stackIn_173_0).c(stackIn_173_1, stackIn_174_2);
           stackIn_178_0 = PlayerModel.field_a;
           stackIn_178_1 = 36;
           stackIn_179_2 = (param4) && (!param0) && (tla.field_e);
-          ((jea) (Object) stackIn_178_0).c(stackIn_178_1, stackIn_179_2);
+          ((UiComponent) (Object) stackIn_178_0).c(stackIn_178_1, stackIn_179_2);
           rm.field_e.field_a.e((byte) -98);
           if (param1 != -1) {
             return;

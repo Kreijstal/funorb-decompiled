@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ItemModel extends TrapModel {
-    private bua field_s;
+    private ModelAnimator field_s;
     private int field_p;
     private int field_r;
     private int field_t;
@@ -27,7 +27,7 @@ final class ItemModel extends TrapModel {
           if (0 != this.field_t) {
             return;
           }
-          this.field_s = new bua(3, 0);
+          this.field_s = new ModelAnimator(3, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,12 +148,12 @@ final class ItemModel extends TrapModel {
             if (var6_int == 0) {
               stackIn_21_0 = PowerUpItemBehaviour.field_t[0];
             } else {
-              stackIn_21_0 = this.field_s.b((byte) 74);
+              stackIn_21_0 = this.field_s.getModel((byte) 74);
             }
             var7 = stackIn_21_0;
             if (var6_int != 0) {
               this.field_s.a(3, false, (byte) -84, 9);
-              var7 = this.field_s.b((byte) 74);
+              var7 = this.field_s.getModel((byte) 74);
             }
           } else {
             if (var8 != 1) {
@@ -273,7 +273,7 @@ final class ItemModel extends TrapModel {
           return;
         }
         if (null != this.field_s) {
-          this.field_s.a(0);
+          this.field_s.tick(0);
         }
         if (this.field_t == 1) {
           return;

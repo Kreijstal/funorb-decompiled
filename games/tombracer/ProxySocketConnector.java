@@ -85,7 +85,7 @@ final class ProxySocketConnector extends SocketConnector {
         lqa var1;
         int var2;
         var2 = TombRacer.field_G ? 1 : 0;
-        var1 = uv.b(false);
+        var1 = LegacyOpenGlBloomEffect.b(false);
         if (param0 > -90) {
           field_f = 50;
         }
@@ -113,7 +113,7 @@ final class ProxySocketConnector extends SocketConnector {
           baa.field_d.a(0, new ei[]{(ei) ((Object) DateInputWidget.field_z)});
         }
         System.gc();
-        if (!uv.b(false).field_c) {
+        if (!LegacyOpenGlBloomEffect.b(false).field_c) {
           ProxySocketConnector.c((byte) -127);
         }
     }

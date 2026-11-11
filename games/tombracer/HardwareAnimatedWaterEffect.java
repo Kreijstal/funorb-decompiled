@@ -89,7 +89,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
             this.owner.e(1, !param0 ? true : false);
             var3 = this.owner.C(0);
             var3.copyStateFrom(var2, 1);
-            var3.b(11403, 1.0f, 0.125f, 0.125f);
+            var3.scale(11403, 1.0f, 0.125f, 0.125f);
             var3.translate(0.0f, -120, 0.0f, this.field_e);
             this.owner.a(cva.field_b, false);
             this.owner.e(0, false);

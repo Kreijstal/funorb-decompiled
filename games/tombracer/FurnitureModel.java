@@ -3,7 +3,7 @@
  */
 final class FurnitureModel extends TrapModel {
     private int field_m;
-    private bua field_p;
+    private ModelAnimator field_p;
     static int field_n;
     static int field_o;
 
@@ -23,7 +23,7 @@ final class FurnitureModel extends TrapModel {
             return;
           }
           var7 = -80 / ((param4 + 38) / 47);
-          var9 = this.field_p.b((byte) 74);
+          var9 = this.field_p.getModel((byte) 74);
           if (var9 != null) {
             var8 = GameScreen.positiveModulo(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -40);
             gqa.a(var8, -83584144, param1, param2, var9, param3);
@@ -76,24 +76,24 @@ final class FurnitureModel extends TrapModel {
           var5 = 0;
           var7 = this.field_m;
           if (var7 == 1) {
-            this.field_p = new bua(1, 48);
+            this.field_p = new ModelAnimator(1, 48);
             this.field_p.a(3, true, (byte) -109, 1);
             var5Lifetime1 = var9.nextBounded(20, 0);
-            this.field_p.b(-125, var5Lifetime1);
+            this.field_p.setFrame(-125, var5Lifetime1);
             return;
           }
           if (2 == var7) {
-            this.field_p = new bua(1, 50);
+            this.field_p = new ModelAnimator(1, 50);
             this.field_p.a(3, true, (byte) 62, 2);
             var5Lifetime2 = var9.nextBounded(20, 0);
-            this.field_p.b(-83, var5Lifetime2);
+            this.field_p.setFrame(-83, var5Lifetime2);
             return;
           }
           if (0 == var7) {
-            this.field_p = new bua(1, 47);
+            this.field_p = new ModelAnimator(1, 47);
             this.field_p.a(3, true, (byte) -90, 0);
             var5Lifetime3 = var9.nextBounded(20, 0);
-            this.field_p.b(125, var5Lifetime3);
+            this.field_p.setFrame(125, var5Lifetime3);
             return;
           }
           if (var7 != 3) {
@@ -104,7 +104,7 @@ final class FurnitureModel extends TrapModel {
             var6Lifetime1 = 77;
           }
           var6Lifetime2 = (this.field_g >= 66) ? 79 : 78;
-          this.field_p = new bua(1, var6Lifetime2);
+          this.field_p = new ModelAnimator(1, var6Lifetime2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,7 +123,7 @@ final class FurnitureModel extends TrapModel {
     public final void updateAnimation(int param0) {
         super.updateAnimation(param0);
         if (this.field_p != null) {
-          this.field_p.a(0);
+          this.field_p.tick(0);
         }
     }
 

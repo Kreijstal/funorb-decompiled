@@ -21,7 +21,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         Player var11;
         var10 = TombRacer.field_G ? 1 : 0;
         var11 = this.trap.getPlayer(-123);
-        if (var11.u(-25561)) {
+        if (var11.isHiddenFromTrackers(-25561)) {
           return;
         }
         this.field_o.x = var11.getX(3);

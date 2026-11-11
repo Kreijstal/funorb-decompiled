@@ -3,7 +3,7 @@
  */
 final class RotateLocomotor extends Locomotor {
     private int field_p;
-    static jea field_o;
+    static UiComponent field_o;
 
     final int hashState(int param0, int param1) {
         if (param0 != 0) {

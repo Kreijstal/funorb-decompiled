@@ -3,7 +3,7 @@
  */
 final class Player implements Renderable, WorldBody, Collidable, CameraTarget, Teleportable {
     private PlayerAnimator animator;
-    private int field_c;
+    private int idleTicks;
     private int size;
     private int lifeState;
     private int velocityX;
@@ -26,13 +26,13 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
     private int field_h;
     private int field_t;
     private IntrusiveDeque collectedTreasures;
-    private boolean field_q;
+    private boolean pendingHidden;
     private int previousX;
     private boolean[] statusFlags;
     private int previousY;
-    private int field_m;
+    private int sortDepth;
     private boolean field_L;
-    private boolean field_l;
+    private boolean firedThisTick;
     private int field_Y;
     private boolean field_Z;
     static Sprite field_W;
@@ -51,7 +51,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
     private int field_T;
     private int chosenReward;
     private WorldBody field_eb;
-    private int field_F;
+    private int exitTick;
     private int score;
     private int respawnX;
     private int encodedDeathCount;
@@ -88,7 +88,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
     public final void updateAnimation(int param0) {
         try {
           if (param0 != -4366) {
-            this.b(103, (WorldBody) null);
+            this.faceAwayFrom(103, (WorldBody) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.N(" + param0 + ')');
@@ -143,20 +143,20 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void skipRoom(int param0, boolean param1) {
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1 &&
-            !this.s((byte) 91)) {
+            !this.isSkipAllowed((byte) 91)) {
             return;
           }
           this.getSimulation(-1).reportDeathPenalty(this, param0 - 16385);
           if (param0 != 16384) {
             return;
           }
-          this.k(false);
-          this.a(1, (byte) 124);
+          this.forfeitRoomTreasure(false);
+          this.beginRoomExit(1, (byte) 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,7 +170,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         RuntimeException var2 = null;
         try {
           if (param0 != 31027) {
-            this.b(-101, (WorldBody) null);
+            this.faceAwayFrom(-101, (WorldBody) null);
           }
           this.slowTicks = 25;
           return;
@@ -221,12 +221,12 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
               }
             }
             if (this.room.isPlayerNearTop((byte) 104)) {
-              this.a(60, (byte) 2);
+              this.beginRoomExit(60, (byte) 2);
             }
             return;
           }
           this.savePreviousPosition((byte) 120);
-          this.field_jb.a(86);
+          this.field_jb.update(86);
           if (param0 != 5) {
             return;
           }
@@ -264,15 +264,15 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
                     continue;
                   }
                 } else {
-                  stackIn_49_0 = this.field_q;
+                  stackIn_49_0 = this.pendingHidden;
                 }
                 break;
               }
               if (stackIn_49_0) {
                 this.statusFlags[5] = true;
-                this.field_q = false;
+                this.pendingHidden = false;
               }
-              this.field_l = false;
+              this.firedThisTick = false;
               if (this.field_Z) {
                 this.field_Z = false;
                 this.statusFlags[2] = true;
@@ -282,7 +282,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
                 this.field_L = false;
               }
               if (this.weapon != null) {
-                this.weapon.c(-28);
+                this.weapon.tick(-28);
               }
               var3_int = this.lifeState;
             }
@@ -336,7 +336,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
                 if (0 >= this.lifeStateTimer) {
                   this.velocityY = -393216;
                   this.lifeState = 0;
-                  this.field_c = 40;
+                  this.idleTicks = 40;
                 }
                 this.room.collisionGrid.pruneOutsideBounds((Collidable) (this), -46);
                 this.room.collisionGrid.insert((Collidable) (this), 7073);
@@ -406,7 +406,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         RuntimeException var3 = null;
         try {
           if (param0 < 16) {
-            this.L(-34);
+            this.getExitTick(-34);
           }
           this.total = param1;
           return;
@@ -492,7 +492,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.clearHeldItem(-3);
           }
           var8 = this.y;
-          this.a(param3, 127, param4, param2, 0);
+          this.moveWithCollision(param3, 127, param4, param2, 0);
           if (var7_int == this.x &&
             this.y == var8) {
             stackIn_23_0 = 1;
@@ -520,13 +520,13 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final boolean p(byte param0) {
+    final boolean hasFiredThisTick(byte param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -72) {
-            stackIn_4_0 = this.field_l;
+            stackIn_4_0 = this.firedThisTick;
             return stackIn_4_0;
           }
           return false;
@@ -580,14 +580,14 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final int i(byte param0) {
+    final int getSortDepth(byte param0) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
           var2_int = -54 / ((1 - param0) / 51);
-          stackIn_1_0 = this.field_m;
+          stackIn_1_0 = this.sortDepth;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -646,7 +646,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final void applyFriction(int param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -731,7 +731,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             stackIn_12_0 = 0;
             return stackIn_12_0;
           }
-          stackIn_14_0 = this.a(param0, -1);
+          stackIn_14_0 = this.reactToEffect(param0, -1);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -817,7 +817,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final boolean s(byte param0) {
+    final boolean isSkipAllowed(byte param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -851,7 +851,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void beginRoomExit(int param0, byte param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException decompiledCaughtException = null;
@@ -860,7 +860,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           if (this.lifeState != 3) {
             this.lifeState = 3;
             this.lifeStateTimer = param0;
-            this.field_F = this.room.getTick((byte) 18) + param0;
+            this.exitTick = this.room.getTick((byte) 18) + param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -961,7 +961,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.deathCause = param0;
             this.lifeState = 1;
             this.lifeStateTimer = DateFieldsWidget.field_C[param0];
-            this.k(false);
+            this.forfeitRoomTreasure(false);
             this.deathCountsByCause[param0] = this.deathCountsByCause[param0] + 1;
             var4_int = -81 % ((param1 + 64) / 41);
             this.encodedDeathCount = 18202625 ^ (18202625 ^ this.encodedDeathCount) + 1;
@@ -1000,26 +1000,26 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.y = 2097152 + (this.lifeStateTimer * 393216 + this.respawnY);
             this.setAnimationState(-5636, 4, true);
           }
-          this.field_q = false;
+          this.pendingHidden = false;
           this.velocityY = 0;
           var3_int = -16 / ((-55 - param0) / 44);
           this.slowTicks = 0;
           this.field_h = 0;
           this.field_t = 0;
-          this.field_c = 0;
+          this.idleTicks = 0;
           this.velocityX = 0;
           this.field_S = 0;
           this.field_V = false;
           this.facingX = 0;
-          this.field_l = false;
+          this.firedThisTick = false;
           this.facingY = -1;
           this.elevationVelocity = 0;
           this.field_Z = false;
           this.field_L = false;
           this.field_Y = 0;
-          this.v((byte) 74);
+          this.updateSortDepth((byte) 74);
           this.savePreviousPosition((byte) 116);
-          this.field_jb.b((byte) 93);
+          this.field_jb.reset((byte) 93);
           this.animationStateTimer = 0;
           this.field_eb = null;
           this.field_kb = 0;
@@ -1194,7 +1194,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             stackIn_6_0 = this;
             stackIn_6_4 = 0;
           }
-          this.a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0);
+          this.moveWithCollision(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1294,7 +1294,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void b(byte param0, int param1, int param2) {
+    private final void slideAroundCorner(byte param0, int param1, int param2) {
         int stackIn_16_0 = 0;
         int stackIn_30_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1315,20 +1315,20 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             if (param1 == 0) {
               stackIn_16_0 = (param2 <= 0) ? -1 : 1;
               var5 = stackIn_16_0;
-              if (this.a(-1, -1, 0, 0, var5, var4_int)) {
+              if (this.tryNudge(-1, -1, 0, 0, var5, var4_int)) {
                 return;
               }
-              if (this.a(param0 - 41, 1, 0, 0, var5, var4_int)) {
+              if (this.tryNudge(param0 - 41, 1, 0, 0, var5, var4_int)) {
                 return;
               }
             } else {
               if (param2 == 0) {
                 stackIn_30_0 = (0 >= param1) ? -1 : 1;
                 var5 = stackIn_30_0;
-                if (this.a(-1, 0, -1, var5, 0, var4_int)) {
+                if (this.tryNudge(-1, 0, -1, var5, 0, var4_int)) {
                   return;
                 }
-                if (this.a(param0 ^ -41, 0, 1, var5, 0, var4_int)) {
+                if (this.tryNudge(param0 ^ -41, 0, 1, var5, 0, var4_int)) {
                   return;
                 }
               }
@@ -1473,7 +1473,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void k(boolean param0) {
+    private final void forfeitRoomTreasure(boolean param0) {
         try {
           this.clearRoomTreasure(15876);
           if (param0) {
@@ -1620,7 +1620,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final boolean a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final boolean tryNudge(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -1633,7 +1633,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            this.b(24, (WorldBody) null);
+            this.faceAwayFrom(24, (WorldBody) null);
           }
           var7_int = param5 * 393216 * param1;
           var8 = param5 * (393216 * param2);
@@ -1649,8 +1649,8 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           if (this.room.isBoxBlocked((Collidable) (this), var14, param0 ^ -3, 1, var12, var11, false, (WorldBody) (this), var13)) {
             return false;
           }
-          this.a(131072 * param2, param0 + 128, 131072 * param1, 0, 0);
-          this.field_c = 0;
+          this.moveWithCollision(131072 * param2, param0 + 128, 131072 * param1, 0, 0);
+          this.idleTicks = 0;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1659,7 +1659,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final int L(int param0) {
+    final int getExitTick(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1667,7 +1667,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           if (param0 != 2158) {
             this.statusFlags = (boolean[]) null;
           }
-          stackIn_4_0 = this.field_F;
+          stackIn_4_0 = this.exitTick;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1702,7 +1702,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void c(int param0, int param1, int param2) {
+    private final void setFacingFromVector(int param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -1782,7 +1782,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             }
           }
           if (param1 != 3) {
-            this.c(-54, 121, 66);
+            this.setFacingFromVector(-54, 121, 66);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1818,7 +1818,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void b(int param0, WorldBody param1) {
+    private final void faceAwayFrom(int param0, WorldBody param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1830,13 +1830,13 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         RuntimeException var3 = null;
         try {
           if (param0 != 0) {
-            this.a((byte) 121, 43, -99);
+            this.pushCarried((byte) 121, 43, -99);
           }
           var3_int = param1.getX(3);
           var4 = param1.getY(9648);
           var5 = this.x - var3_int;
           var6 = -var4 + this.y;
-          this.c(var6, param0 ^ -58, var5);
+          this.setFacingFromVector(var6, param0 ^ -58, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1904,7 +1904,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void v(byte param0) {
+    private final void updateSortDepth(byte param0) {
         if (param0 != 74) {
           this.chosenReward = -19;
         }
@@ -1914,7 +1914,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         try {
           za.$cfr$intArgs$a$c604db63f465(0, 108, this.room.getWidth((byte) -86), this.x);
           this.room.o(param0 - 66);
-          this.field_m = za.$cfr$intArgs$a$c604db63f465(0, 73, this.room.getHeight(120), this.y) + this.room.n((byte) -51);
+          this.sortDepth = za.$cfr$intArgs$a$c604db63f465(0, 73, this.room.getHeight(120), this.y) + this.room.n((byte) -51);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.TB(" + param0 + ')');
         }
@@ -1929,7 +1929,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         try {
           this.collectedTreasure = true;
           if (param1) {
-            this.b(65, 76, -9, -128, -79, -56);
+            this.applyFriction(65, 76, -9, -128, -79, -56);
           }
           this.roomTreasure[param2] = this.roomTreasure[param2] + 1;
           if (null != param0 &&
@@ -2028,8 +2028,8 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           stackIn_37_0 = ((64 & param1) == 0) ? 0 : 1;
           var11 = stackIn_37_0;
           if (var10 != 0 &&
-            this.s((byte) 97)) {
-            this.b(16384, false);
+            this.isSkipAllowed((byte) 97)) {
+            this.skipRoom(16384, false);
             return;
           }
           this.a(var9 != 0, true);
@@ -2161,15 +2161,15 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           var24 = stackIn_141_0;
           while (0 <= var16) {
             if (4 != this.animationState) {
-              this.field_c = 0;
+              this.idleTicks = 0;
               if (var29 != 0) {
-                this.field_c = this.field_c + 1;
+                this.idleTicks = this.idleTicks + 1;
               }
             } else {
-              this.field_c = this.field_c + 1;
+              this.idleTicks = this.idleTicks + 1;
             }
             if (var24 == 0 && (this.animationState == 4 ||
-              9 == this.animationState) && this.field_c > 40) {
+              9 == this.animationState) && this.idleTicks > 40) {
               this.slowTicks = 5;
             }
             boolean decompiledSharedTail1 = !(this.slowTicks > 0);
@@ -2191,7 +2191,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
                 var25 = 20000;
                 var26 = 8000;
               }
-              this.b(gqa.a(var17, (byte) 24, var15), var21, var20, gqa.a(var25, (byte) 24, var15), var26, 127);
+              this.applyFriction(gqa.a(var17, (byte) 24, var15), var21, var20, gqa.a(var25, (byte) 24, var15), var26, 127);
               decompiledSharedTail1 = (var29 != 0);
             }
             if (decompiledSharedTail1) {
@@ -2208,7 +2208,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             var16--;
             boolean decompiledSharedTail0 = (null == this.carried);
             if (!decompiledSharedTail0) {
-              this.a((byte) 56, var21, var20);
+              this.pushCarried((byte) 56, var21, var20);
               decompiledSharedTail0 = (var29 != 0);
             }
             if (decompiledSharedTail0) {
@@ -2218,7 +2218,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
                 this.previousX == this.x &&
                 ~this.previousY == ~this.y &&
                 var24 != 0) {
-                this.b((byte) 40, var20, var21);
+                this.slideAroundCorner((byte) 40, var20, var21);
               }
             }
             if (var16 < 0) {
@@ -2235,7 +2235,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           }
           boolean decompiledFrameRemainder1 = true;
           if (this.isHoldingItem(117)) {
-            this.c(var21, -67, var20);
+            this.setFacingFromVector(var21, -67, var20);
             decompiledFrameRemainder1 = (var9 != 0 ||
               var7 != 0);
             if (decompiledFrameRemainder1) {
@@ -2247,7 +2247,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             null == this.carried)) {
             if (var7 != 0) {
             }
-            this.c(var21, -86, var20);
+            this.setFacingFromVector(var21, -86, var20);
             if (this.weapon != null &&
               var7 != 0 &&
               this.field_kb <= 0) {
@@ -2399,7 +2399,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.room.applyAreaEffect(-116, this.y, new Effect(4, 32), var28Lifetime1, var28Lifetime1, this.x);
           }
           if (this.room.isPlayerNearTop((byte) -67)) {
-            this.a(1, (byte) -25);
+            this.beginRoomExit(1, (byte) -25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2495,7 +2495,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            this.u(0);
+            this.isHiddenFromTrackers(0);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2547,8 +2547,8 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             return;
           }
           var2_int = PortalBehaviour.directionToAngle(this.facingY, this.facingX, param0 - 1);
-          this.field_l = this.weapon.a(var2_int, 1572864, (WorldBody) (this), this.x, this.y, this.getRoom((byte) 80), this.velocityX, this.velocityY, this.size / param0, false);
-          if (!this.field_l) {
+          this.firedThisTick = this.weapon.fire(var2_int, 1572864, (WorldBody) (this), this.x, this.y, this.getRoom((byte) 80), this.velocityX, this.velocityY, this.size / param0, false);
+          if (!this.firedThisTick) {
             return;
           }
           this.setAnimationState(-5636, 11, true);
@@ -2556,7 +2556,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.slowTicks > 0) {
             this.slowTicks = 0;
           }
-          if (!this.weapon.a(param0 ^ 12109)) {
+          if (!this.weapon.hasAmmo(param0 ^ 12109)) {
             this.clearWeapon((byte) 89, 25);
           }
           return;
@@ -2630,7 +2630,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           if (this.invulnerable) {
             this.respawnY = this.respawnY + 157286400;
           }
-          this.v((byte) 74);
+          this.updateSortDepth((byte) 74);
           if (!param3) {
             discarded$1 = this.canBeHitBy((WorldBody) null, 119, -93);
           }
@@ -2649,14 +2649,14 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final void l(byte param0) {
+    final void requestHidden(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 != 28) {
             this.mirrored = true;
           }
-          this.field_q = true;
+          this.pendingHidden = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3005,7 +3005,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final int a(Effect param0, int param1) {
+    private final int reactToEffect(Effect param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -3035,7 +3035,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             if (var4 != 0) {
               var5 = param0.e(-98);
               if (var5 == 14) {
-                this.b(~param1, param0.source);
+                this.faceAwayFrom(~param1, param0.source);
               }
               this.kill(var4, (byte) 89, var5);
             }
@@ -3281,14 +3281,14 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final int k(byte param0) {
+    final int getIdleTicks(byte param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -79) {
-            stackIn_4_0 = this.field_c;
+            stackIn_4_0 = this.idleTicks;
             return stackIn_4_0;
           }
           stackIn_2_0 = 90;
@@ -3351,7 +3351,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final boolean u(int param0) {
+    final boolean isHiddenFromTrackers(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3513,7 +3513,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void pushCarried(byte param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -3603,7 +3603,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void moveWithCollision(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -3715,7 +3715,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           if (this.y > (this.room.getHeight(-125) - this.size / 2)) {
             this.y = this.room.getHeight(-121) - this.size / 2;
           }
-          this.v((byte) 74);
+          this.updateSortDepth((byte) 74);
           this.field_t = za.$cfr$intArgs$a$c604db63f465(0, 36, 5, this.field_t);
           this.field_h = za.$cfr$intArgs$a$c604db63f465(0, 89, 5, this.field_h);
           if (param2 == 0 &&
@@ -3803,9 +3803,9 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             return stackIn_9_0;
           }
           if (param3 != 0) {
-            this.b((byte) -11, 86, 56);
+            this.slideAroundCorner((byte) -11, 86, 56);
           }
-          stackIn_14_0 = this.a(param0, -1);
+          stackIn_14_0 = this.reactToEffect(param0, -1);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3950,7 +3950,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.velocityX = this.velocityX + param1.getVelocityX(-71) / 8;
             this.velocityY = this.velocityY + param1.getVelocityY(false) / 8;
           }
-          stackIn_23_0 = this.a(param0, -1);
+          stackIn_23_0 = this.reactToEffect(param0, -1);
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4001,7 +4001,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         this.roomTreasure = new int[3];
         this.heldItemKind = -1;
         this.field_jb = new TeleportState();
-        this.field_F = -1;
+        this.exitTick = -1;
         this.collectedTreasure = false;
         this.field_cb = 0;
         this.elevation = 0;

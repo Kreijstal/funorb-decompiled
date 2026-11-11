@@ -32,7 +32,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void decode(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;

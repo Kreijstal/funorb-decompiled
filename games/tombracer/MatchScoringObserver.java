@@ -22,7 +22,7 @@ class MatchScoringObserver extends SimulationObserver {
           if (param1 <= 47) {
             this.field_c = (IntrusiveDeque) null;
           }
-          stackIn_6_0 = (!this.field_f.b(param2, 0)) && (kq.a(-44, param0.getId((byte) -82)).field_d);
+          stackIn_6_0 = (!this.field_f.b(param2, 0)) && (PlayerInputQueue.findRoomDefinition(-44, param0.getId((byte) -82)).field_d);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,11 +68,11 @@ class MatchScoringObserver extends SimulationObserver {
           }
           param1.addScore(param0 - 15, var8);
           this.field_f.statistics.recordPenalty(param5, param1.getPlayerIndex(0), param0 - 19);
-          if (this.field_f.j(-1878) &&
+          if (this.field_f.isSinglePlayer(-1878) &&
             !this.field_f.d(-67) &&
             var9_ref != null) {
             var10 = RewardChoicePhase.createTextMessage(-48, var9_ref);
-            iqa.field_c.a(3, param0 - 15, var10);
+            iqa.field_c.addMessage(3, param0 - 15, var10);
           }
           if (param0 != 15) {
             var11 = (Room) null;
@@ -238,7 +238,7 @@ class MatchScoringObserver extends SimulationObserver {
             param2.collisionGrid != null) {
             var4_int = param2.getPlayer(-2).getPlayerIndex(param0 + 2);
             if (param2.j(0) &&
-              !this.field_f.j(param0 - 1876)) {
+              !this.field_f.isSinglePlayer(param0 - 1876)) {
               ProxySocketConnector.a(var4_int, 5);
             } else {
               li.b(var4_int, (byte) 116);
@@ -313,7 +313,7 @@ class MatchScoringObserver extends SimulationObserver {
         int var9Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = kq.a(105, param1.getId((byte) -82)).field_h;
+          var4_int = PlayerInputQueue.findRoomDefinition(105, param1.getId((byte) -82)).field_h;
           var4_int = var4_int * 2;
           var5 = param1.getTick((byte) 83);
           if (param2) {
@@ -329,7 +329,7 @@ class MatchScoringObserver extends SimulationObserver {
           this.field_f.field_F[var8] = (long)var5;
           this.field_f.field_g[var8] = param1.getId((byte) -82);
           if (!this.field_f.k(-25319) &&
-            !this.field_f.j(-1878) &&
+            !this.field_f.isSinglePlayer(-1878) &&
             this.field_f.field_x != null &&
             !this.a(param1, (byte) 74, var8)) {
             var9 = ll.a(param1.getId((byte) -82), 0);
@@ -337,24 +337,24 @@ class MatchScoringObserver extends SimulationObserver {
               this.field_f.field_x[var8].set(var9);
             }
           }
-          if (this.field_f.j(-1878) &&
+          if (this.field_f.isSinglePlayer(-1878) &&
             !this.field_f.d(-127)) {
             if (0 != var7) {
               var9_ref_jha = RewardChoicePhase.createTextMessage(-89, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
             } else {
               var9_ref_jha = RewardChoicePhase.createTextMessage(-66, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(92, BevelOperator.field_q, new String[]{String.valueOf(var6)}));
             }
-            iqa.field_c.a(0, var9_ref_jha);
+            iqa.field_c.addMessageNow(0, var9_ref_jha);
             var10 = param0.getRoomTreasureScore(-7991);
             if (var10 > 0) {
               dupTemp$0 = RewardChoicePhase.createTextMessage(-96, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(82, VariantMask.field_c, new String[]{String.valueOf(var10)}));
               var12 = dupTemp$0;
               var9_ref_jhaLifetime1 = dupTemp$0;
-              iqa.field_c.a(3, 0, var12);
+              iqa.field_c.addMessage(3, 0, var12);
             }
             this.field_f.field_I[var8] = true;
           }
-          if (!this.field_f.j(-1878)) {
+          if (!this.field_f.isSinglePlayer(-1878)) {
             var13 = 0;
             var9Lifetime1 = var13;
             while (var13 < 3) {

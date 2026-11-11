@@ -78,7 +78,7 @@ final class RoundWinnerPhase extends MatchPhase {
         RuntimeException var3 = null;
         this.field_n = 200;
         try {
-          if (this.matchState.field_K == 1) {
+          if (this.matchState.gameMode == 1) {
             this.screen.addOverlay(new FinishOrderOverlay(this.screen), 680);
           } else {
             this.matchState.scoreStandings.update(false);

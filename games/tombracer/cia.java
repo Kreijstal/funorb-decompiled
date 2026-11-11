@@ -8,7 +8,7 @@ final class cia {
     static QuickChatMenu field_g;
     private int field_e;
     private int field_f;
-    private bua field_c;
+    private ModelAnimator field_c;
 
     final int a(int param0) {
         if (param0 != 617) {
@@ -28,7 +28,7 @@ final class cia {
 
     final void b(int param0, int param1, int param2) {
         ura.a(-10985);
-        hp.a(2048, this.field_f, 1900, this.field_c.b((byte) 74), -1918106173, (this.field_e >> 16) + param1, param0 + (this.field_b >> 16));
+        hp.a(2048, this.field_f, 1900, this.field_c.getModel((byte) 74), -1918106173, (this.field_e >> 16) + param1, param0 + (this.field_b >> 16));
         RemovedFromGameMenu.f((byte) -6);
         int var4 = -43 / ((param2 - 6) / 58);
     }
@@ -78,7 +78,7 @@ final class cia {
               this.field_f = (tia.a(var3 << 8, var2 << 8, -29543) >> 2) - 512;
             }
           }
-          this.field_c.a(0);
+          this.field_c.tick(0);
           return;
         }
         this.field_e = 123;
@@ -113,7 +113,7 @@ final class cia {
             this.field_f = (tia.a(var3Lifetime1 << 8, var2 << 8, -29543) >> 2) - 512;
           }
         }
-        this.field_c.a(0);
+        this.field_c.tick(0);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -125,7 +125,7 @@ final class cia {
     }
 
     cia() {
-        this.field_c = new bua(0, 0, 1);
+        this.field_c = new ModelAnimator(0, 0, 1);
         this.field_c.a(0, false, 0, 0, true);
         this.field_d = false;
     }

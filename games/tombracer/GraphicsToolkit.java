@@ -104,7 +104,7 @@ abstract class GraphicsToolkit {
             return stackIn_6_0;
           }
           if (param3 == 1) {
-            stackIn_10_0 = TeleportState.a(param6, param0, param5, (byte) -109);
+            stackIn_10_0 = TeleportState.createOpenGlToolkit(param6, param0, param5, (byte) -109);
             return stackIn_10_0;
           }
           if (5 == param3) {

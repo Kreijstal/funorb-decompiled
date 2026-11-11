@@ -14,7 +14,7 @@ final class FontMetrics {
     static kea field_f;
     static String field_i;
 
-    final static QuickChatMenu a(boolean param0, jea param1, jea param2, QuickChatCategory param3, jea param4) {
+    final static QuickChatMenu a(boolean param0, UiComponent param1, UiComponent param2, QuickChatCategory param3, UiComponent param4) {
         Object stackIn_5_0 = null;
         int stackIn_10_0 = 0;
         int stackIn_14_0 = 0;

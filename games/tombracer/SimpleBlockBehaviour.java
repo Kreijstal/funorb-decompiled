@@ -18,7 +18,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1, String param2, boolean param3) {
+    final static void openUrl(int param0, java.applet.Applet param1, String param2, boolean param3) {
         try {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;

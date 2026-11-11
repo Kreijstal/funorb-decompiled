@@ -7,7 +7,7 @@ final class faa implements Renderable {
     int field_b;
     BridgeModel field_c;
     int field_d;
-    bua field_f;
+    ModelAnimator field_f;
     int field_a;
 
     public final void updateAnimation(int param0) {
@@ -127,7 +127,7 @@ final class faa implements Renderable {
 
     public final void render(int param0, Camera param1) {
         if (param0 <= 103) {
-          this.field_f = (bua) null;
+          this.field_f = (ModelAnimator) null;
         }
         TrapPart var3 = this.field_c.getPart(-98);
         if (var3 != null &&
@@ -138,7 +138,7 @@ final class faa implements Renderable {
           return;
         }
         try {
-          gqa.a(this.field_e, -83584144, this.getRenderY((byte) 105), this.getRenderX((byte) -102), this.field_f.b((byte) 74), this.getRenderZ((byte) -98));
+          gqa.a(this.field_e, -83584144, this.getRenderY((byte) 105), this.getRenderX((byte) -102), this.field_f.getModel((byte) 74), this.getRenderZ((byte) -98));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

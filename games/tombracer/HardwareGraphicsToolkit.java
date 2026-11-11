@@ -1048,7 +1048,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         try {
           this.field_bb = (AffineTransform3D) (param0);
           this.field_Qb.copyStateFrom(this.field_bb, 1);
-          this.field_Qb.a((byte) 42);
+          this.field_Qb.negateYZ((byte) 42);
           this.field_rc.a((Transform3D) (this.field_Qb), (byte) 127);
           this.field_Y.a((Transform3D) (this.field_bb), (byte) -31);
           if (this.field_r.a(-38)) {
@@ -1065,7 +1065,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.a(pea.field_c, 0, -117);
         this.a(0, false, pea.field_c);
         this.setBlendMode(param5, 1);
-        this.field_q.a(1.0f, (float)param2, false, (float)param3);
+        this.field_q.setScale(1.0f, (float)param2, false, (float)param3);
         this.field_q.translate(param0, param1, 0);
         this.F(-1662);
         this.b(1, false);
@@ -1125,11 +1125,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_float = this.field_bb.a((float)param2, (float)param0, (byte) -105, (float)param1);
+          var6_float = this.field_bb.transformZ((float)param2, (float)param0, (byte) -105, (float)param1);
           if (!((float)this.field_D > var6_float) &&
             !(var6_float > (float)this.field_k)) {
-            var7 = (int)((float)this.field_Ic * this.field_bb.a(1, (float)param0, (float)param1, (float)param2) / (float)param3);
-            var8 = (int)((float)this.field_h * this.field_bb.a((float)param0, (float)param2, (float)param1, (byte) 123) / (float)param3);
+            var7 = (int)((float)this.field_Ic * this.field_bb.transformX(1, (float)param0, (float)param1, (float)param2) / (float)param3);
+            var8 = (int)((float)this.field_h * this.field_bb.transformY((float)param0, (float)param2, (float)param1, (byte) 123) / (float)param3);
             param4[1] = (int)((float)var8 - this.field_zc);
             param4[2] = (int)var6_float;
             param4[0] = (int)(-this.field_f + (float)var7);
@@ -1161,7 +1161,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.a(pea.field_c, 0, -71);
         this.a(0, false, pea.field_c);
         this.setBlendMode(param4, 1);
-        this.field_q.a(1.0f, (float)param2, false, (float)param2);
+        this.field_q.setScale(1.0f, (float)param2, false, (float)param2);
         this.field_q.translate(param0, param1, 0);
         this.F(-1662);
         this.b(1, false);
@@ -1217,7 +1217,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
               var11 = stackIn_16_0;
               var12 = 50 * var11;
               var13 = this.C(0);
-              var13.a((byte) 126, (float)(var10.field_o * (this.field_Dc % var12)) / (float)var12, 0.0f, (float)(var10.field_s * (this.field_Dc % var12)) / (float)var12);
+              var13.setTranslationFloat((byte) 126, (float)(var10.field_o * (this.field_Dc % var12)) / (float)var12, 0.0f, (float)(var10.field_s * (this.field_Dc % var12)) / (float)var12);
               this.a(pfa.field_i, false);
             }
             var6 = var10.field_q;
@@ -1450,14 +1450,14 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = this.field_bb.a((float)param2, (float)param0, (byte) -50, (float)param1);
+          var7 = this.field_bb.transformZ((float)param2, (float)param0, (byte) -50, (float)param1);
           if (!(var7 < -0.0078125f) &&
             !(0.0078125f < var7)) {
             var6 = this.field_kc;
             var5_int = this.field_Q;
           } else {
-            var5_int = (int)((float)this.field_Ic * this.field_bb.a(1, (float)param0, (float)param1, (float)param2) / var7);
-            var6 = (int)((float)this.field_h * this.field_bb.a((float)param0, (float)param2, (float)param1, (byte) 126) / var7);
+            var5_int = (int)((float)this.field_Ic * this.field_bb.transformX(1, (float)param0, (float)param1, (float)param2) / var7);
+            var6 = (int)((float)this.field_h * this.field_bb.transformY((float)param0, (float)param2, (float)param1, (byte) 126) / var7);
           }
           param3[0] = (int)((float)var5_int - this.field_f);
           param3[2] = (int)var7;
@@ -1682,7 +1682,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.a(pea.field_c, 0, -126);
         this.a(0, false, pea.field_c);
         this.setBlendMode(param5, 1);
-        this.field_q.a(1.0f, (float)(param2 - 1), false, (float)(param3 - 1));
+        this.field_q.setScale(1.0f, (float)(param2 - 1), false, (float)(param3 - 1));
         this.field_q.translate(-var7 + (float)param1, -39, (float)param0 - var7, 0.0f);
         this.F(-1662);
         this.b(1, false);
@@ -1707,7 +1707,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.a(pea.field_c, 0, -74);
         this.a(0, false, pea.field_c);
         this.setBlendMode(param4, 1);
-        this.field_q.a(1.0f, (float)param2, false, (float)param2);
+        this.field_q.setScale(1.0f, (float)param2, false, (float)param2);
         this.field_q.translate(param0, param1, 0);
         this.F(-1662);
         this.b(1, false);

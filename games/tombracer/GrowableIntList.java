@@ -83,7 +83,7 @@ final class GrowableIntList {
         return var3;
     }
 
-    final void a(int param0, int param1) {
+    final void removeAt(int param0, int param1) {
         if (param1 <= 25) {
           return;
         }

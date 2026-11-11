@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sw extends jea {
-    private int field_Ib;
+final class EditableTextField extends UiComponent {
+    private int maxLength;
     private boolean field_tb;
     private int field_Gb;
-    private int field_ub;
+    private int caret;
     private int field_yb;
     private AsyncRequest field_Db;
-    jea field_Cb;
-    private int field_Ab;
+    UiComponent field_Cb;
+    private int selectionAnchor;
     static String field_Fb;
     private PlatformTaskDispatcher field_Bb;
-    private jea field_Eb;
-    private StringBuilder field_wb;
+    private UiComponent field_Eb;
+    private StringBuilder text;
     private long field_Hb;
-    private jea field_xb;
+    private UiComponent field_xb;
     static int[] field_zb;
     private boolean field_vb;
 
@@ -31,27 +31,27 @@ final class sw extends jea {
         RuntimeException var3 = null;
         String var4 = null;
         try {
-          if (this.field_Ib != -1) {
-            var3_int = this.field_Ib - this.field_wb.length();
+          if (this.maxLength != -1) {
+            var3_int = this.maxLength - this.text.length();
             if (var3_int == 0) {
               return;
             }
             param0 = param0.substring(0, var3_int);
           }
-          if (this.field_ub != this.field_wb.length()) {
-            var4 = this.field_wb.toString().substring(this.field_ub, this.field_wb.length());
-            DarknessBehaviour.padTo(this.field_ub, ' ', -11, this.field_wb);
-            discarded$0 = this.field_wb.append(param0);
-            discarded$1 = this.field_wb.append(var4);
+          if (this.caret != this.text.length()) {
+            var4 = this.text.toString().substring(this.caret, this.text.length());
+            DarknessBehaviour.padTo(this.caret, ' ', -11, this.text);
+            discarded$0 = this.text.append(param0);
+            discarded$1 = this.text.append(var4);
           } else {
-            discarded$2 = this.field_wb.append(param0);
+            discarded$2 = this.text.append(param0);
           }
           if (!param1) {
             this.field_yb = -100;
           }
-          this.field_Cb.field_r = this.field_wb.toString();
-          this.field_ub = this.field_wb.length();
-          this.field_Ab = this.field_ub;
+          this.field_Cb.field_r = this.text.toString();
+          this.caret = this.text.length();
+          this.selectionAnchor = this.caret;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,10 +91,10 @@ final class sw extends jea {
                 this.field_tb) {
                 if (this.field_vb &&
                   this.field_yb > var2_int &&
-                  this.field_Ab < var2_int) {
+                  this.selectionAnchor < var2_int) {
                   var2_int = this.field_yb;
                 }
-                this.field_ub = var2_int;
+                this.caret = var2_int;
               } else {
                 this.field_tb = false;
               }
@@ -105,26 +105,26 @@ final class sw extends jea {
               stackIn_6_1 = !(-this.field_Hb + var3_long >= 250L);
               this.field_vb = stackIn_6_1;
               if (this.field_vb) {
-                this.field_Ab = this.j((byte) -69);
-                this.field_ub = this.g((byte) 24);
-                if (this.field_ub > 0 &&
-                  this.field_wb.charAt(this.field_ub - 1) == 32) {
-                  this.field_ub = this.field_ub - 1;
+                this.selectionAnchor = this.j((byte) -69);
+                this.caret = this.g((byte) 24);
+                if (this.caret > 0 &&
+                  this.text.charAt(this.caret - 1) == 32) {
+                  this.caret = this.caret - 1;
                 }
-                this.field_yb = this.field_ub;
+                this.field_yb = this.caret;
               }
               this.field_Hb = var3_long;
             }
             if (!this.field_L) {
-              dupTemp$0 = this.field_wb.length();
-              this.field_Ab = dupTemp$0;
-              this.field_ub = dupTemp$0;
+              dupTemp$0 = this.text.length();
+              this.selectionAnchor = dupTemp$0;
+              this.caret = dupTemp$0;
             }
-            this.field_Eb.field_qb = this.field_Cb.field_H.stringWidth(this.field_wb.toString().substring(0, this.field_ub));
-            if (this.field_Ab == this.field_ub) {
-              this.field_xb.a(0, this.field_Gb, -23776, 2, this.field_Eb.field_qb);
+            this.field_Eb.field_qb = this.field_Cb.field_H.stringWidth(this.text.toString().substring(0, this.caret));
+            if (this.selectionAnchor == this.caret) {
+              this.field_xb.setBounds(0, this.field_Gb, -23776, 2, this.field_Eb.field_qb);
             } else {
-              var3 = this.field_Cb.field_qb + this.field_Cb.field_H.stringWidth(this.field_wb.toString().substring(0, this.field_Ab));
+              var3 = this.field_Cb.field_qb + this.field_Cb.field_H.stringWidth(this.text.toString().substring(0, this.selectionAnchor));
               if (this.field_Eb.field_qb <= var3) {
                 stackIn_35_0 = this.field_Eb.field_qb;
               } else {
@@ -132,14 +132,14 @@ final class sw extends jea {
               }
               var4_int = stackIn_35_0;
               var5 = Math.abs(-this.field_Eb.field_qb + var3);
-              this.field_xb.a(var5, this.field_Gb, param0 ^ -23689, 2, this.field_Cb.field_S + var4_int);
+              this.field_xb.setBounds(var5, this.field_Gb, param0 ^ -23689, 2, this.field_Cb.field_S + var4_int);
             }
             if (null != this.field_Db &&
               0 != this.field_Db.field_b) {
               var7 = (java.awt.datatransfer.Transferable) (this.field_Db.field_f);
               try {
                 var8 = (String) (var7.getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-                this.i((byte) -126);
+                this.deleteSelection((byte) -126);
                 this.insertText(var8, true);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -150,7 +150,7 @@ final class sw extends jea {
             if (param0 == 87) {
               return;
             }
-            this.field_ub = 115;
+            this.caret = 115;
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -166,11 +166,11 @@ final class sw extends jea {
 
     final void c(int param0, int param1) {
         try {
-          this.field_Ab = param0;
+          this.selectionAnchor = param0;
           if (param1 != 1) {
             this.field_Db = (AsyncRequest) null;
           }
-          this.field_ub = param0;
+          this.caret = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sw.QA(" + param0 + ',' + param1 + ')');
         }
@@ -181,15 +181,15 @@ final class sw extends jea {
           return;
         }
         try {
-          this.f(82);
+          this.copySelection(82);
           int var2_int = -100 / ((param0 - 14) / 52);
-          this.i((byte) -125);
+          this.deleteSelection((byte) -125);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sw.E(" + param0 + ')');
         }
     }
 
-    sw(long param0, jea param1, jea param2, jea param3) {
+    EditableTextField(long param0, UiComponent param1, UiComponent param2, UiComponent param3) {
         this(param0, param1, param2, param3, -1);
     }
 
@@ -204,7 +204,7 @@ final class sw extends jea {
           if (param1 <= 65) {
             discarded$1 = this.b(-116, -81);
           }
-          var4_int = this.field_wb.length();
+          var4_int = this.text.length();
           if (param2 >= 0) {
             if (var4_int < param2) {
               param2 = var4_int;
@@ -219,8 +219,8 @@ final class sw extends jea {
           } else {
             param0 = 0;
           }
-          this.field_ub = param2;
-          this.field_Ab = param0;
+          this.caret = param2;
+          this.selectionAnchor = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -229,7 +229,7 @@ final class sw extends jea {
         }
     }
 
-    private final void i(byte param0) {
+    private final void deleteSelection(byte param0) {
         StringBuilder discarded$0 = null;
         int stackIn_7_0 = 0;
         int stackIn_11_0 = 0;
@@ -242,25 +242,25 @@ final class sw extends jea {
           if (param0 > -119) {
             this.j(-109);
           }
-          if (this.field_ub != this.field_Ab) {
-            if (this.field_Ab < this.field_ub) {
-              stackIn_7_0 = this.field_Ab;
+          if (this.caret != this.selectionAnchor) {
+            if (this.selectionAnchor < this.caret) {
+              stackIn_7_0 = this.selectionAnchor;
             } else {
-              stackIn_7_0 = this.field_ub;
+              stackIn_7_0 = this.caret;
             }
             var2_int = stackIn_7_0;
-            if (this.field_ub > this.field_Ab) {
-              stackIn_11_0 = this.field_ub;
+            if (this.caret > this.selectionAnchor) {
+              stackIn_11_0 = this.caret;
             } else {
-              stackIn_11_0 = this.field_Ab;
+              stackIn_11_0 = this.selectionAnchor;
             }
             var3 = stackIn_11_0;
-            this.field_Ab = var2_int;
-            this.field_ub = var2_int;
-            var4 = this.field_wb.toString().substring(var3, this.field_wb.length());
-            DarknessBehaviour.padTo(var2_int, ' ', -11, this.field_wb);
-            discarded$0 = this.field_wb.append(var4);
-            this.field_Cb.field_r = this.field_wb.toString();
+            this.selectionAnchor = var2_int;
+            this.caret = var2_int;
+            var4 = this.text.toString().substring(var3, this.text.length());
+            DarknessBehaviour.padTo(var2_int, ' ', -11, this.text);
+            discarded$0 = this.text.append(var4);
+            this.field_Cb.field_r = this.text.toString();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -275,10 +275,10 @@ final class sw extends jea {
           return;
         }
         try {
-          DarknessBehaviour.padTo(0, ' ', -11, this.field_wb);
-          this.field_Ab = 0;
-          this.field_ub = 0;
-          this.field_Cb.field_r = this.field_wb.toString();
+          DarknessBehaviour.padTo(0, ' ', -11, this.text);
+          this.selectionAnchor = 0;
+          this.caret = 0;
+          this.field_Cb.field_r = this.text.toString();
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sw.HA(" + param0 + ')');
         }
@@ -325,12 +325,12 @@ final class sw extends jea {
         int var3 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_ub == 0) {
-            stackIn_3_0 = this.field_ub;
+          if (this.caret == 0) {
+            stackIn_3_0 = this.caret;
             return stackIn_3_0;
           }
-          for (var2_int = this.field_ub - 1; var2_int > 0; var2_int--) {
-            if (!Effect.a(this.field_wb.charAt(var2_int - 1), true)) {
+          for (var2_int = this.caret - 1; var2_int > 0; var2_int--) {
+            if (!Effect.a(this.text.charAt(var2_int - 1), true)) {
               continue;
             }
             break;
@@ -384,7 +384,7 @@ final class sw extends jea {
         }
     }
 
-    private final void f(int param0) {
+    private final void copySelection(int param0) {
         try {
           java.awt.datatransfer.StringSelection var3 = null;
           if (this.field_Bb == null) {
@@ -397,7 +397,7 @@ final class sw extends jea {
           try {
             var3 = new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) -89));
             if (param0 != 82) {
-              this.field_wb = (StringBuilder) null;
+              this.text = (StringBuilder) null;
             }
             this.field_Bb.requestSetClipboard((byte) 84, (java.awt.datatransfer.Transferable) ((Object) var3));
           } catch (RuntimeException runtimeException) {
@@ -424,17 +424,17 @@ final class sw extends jea {
           if (param0 > -76) {
             discarded$1 = this.g((byte) 84);
           }
-          var2 = this.field_wb.toString();
-          if (this.field_Ab < this.field_ub) {
-            stackIn_6_0 = this.field_Ab;
+          var2 = this.text.toString();
+          if (this.selectionAnchor < this.caret) {
+            stackIn_6_0 = this.selectionAnchor;
           } else {
-            stackIn_6_0 = this.field_ub;
+            stackIn_6_0 = this.caret;
           }
           var3 = stackIn_6_0;
-          if (this.field_ub > this.field_Ab) {
-            stackIn_10_0 = this.field_ub;
+          if (this.caret > this.selectionAnchor) {
+            stackIn_10_0 = this.caret;
           } else {
-            stackIn_10_0 = this.field_Ab;
+            stackIn_10_0 = this.selectionAnchor;
           }
           var4 = stackIn_10_0;
           stackIn_11_0 = var2.substring(var3, var4);
@@ -453,7 +453,7 @@ final class sw extends jea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1320) {
-            stackIn_4_0 = this.field_ub;
+            stackIn_4_0 = this.caret;
             return stackIn_4_0;
           }
           stackIn_2_0 = 58;
@@ -477,7 +477,7 @@ final class sw extends jea {
         }
     }
 
-    private sw(long param0, jea param1, jea param2, jea param3, int param4) {
+    private EditableTextField(long param0, UiComponent param1, UiComponent param2, UiComponent param3, int param4) {
         super(param0, param1);
         StringBuilder stackIn_3_1 = null;
         StringBuilder stackIn_3_2 = null;
@@ -503,14 +503,14 @@ final class sw extends jea {
         this.field_Hb = 0L;
         this.field_vb = false;
         try {
-          this.field_Ib = param4;
-          this.field_xb = new jea(0L, param2);
-          this.field_Cb = new jea(0L, param3);
-          this.field_Eb = new jea(0L, param3);
+          this.maxLength = param4;
+          this.field_xb = new UiComponent(0L, param2);
+          this.field_Cb = new UiComponent(0L, param3);
+          this.field_Eb = new UiComponent(0L, param3);
           this.field_Z = true;
           stackIn_3_1 = null;
           stackIn_3_2 = null;
-          if (this.field_Ib == -1) {
+          if (this.maxLength == -1) {
             stackIn_4_0 = this;
             stackIn_4_1 = null;
             stackIn_4_2 = null;
@@ -519,10 +519,10 @@ final class sw extends jea {
             stackIn_4_0 = this;
             stackIn_4_1 = null;
             stackIn_4_2 = null;
-            stackIn_4_3 = this.field_Ib;
+            stackIn_4_3 = this.maxLength;
           }
-          this.field_wb = new StringBuilder(stackIn_4_3);
-          this.field_Cb.field_r = this.field_wb.toString();
+          this.text = new StringBuilder(stackIn_4_3);
+          this.field_Cb.field_r = this.text.toString();
           this.field_Eb.field_r = "";
           this.field_Eb.field_sb = "|";
           this.field_J = new IntrusiveDeque();
@@ -563,7 +563,7 @@ final class sw extends jea {
         }
     }
 
-    final void a(byte param0, String param1) {
+    final void setText(byte param0, String param1) {
         StringBuilder discarded$4 = null;
         int dupTemp$5 = 0;
         RuntimeException runtimeException = null;
@@ -573,20 +573,20 @@ final class sw extends jea {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_wb.setLength(0);
+          this.text.setLength(0);
           var3_int = param1.length();
-          if (this.field_Ib != -1 &&
-            var3_int > this.field_Ib) {
-            var3_int = this.field_Ib;
+          if (this.maxLength != -1 &&
+            var3_int > this.maxLength) {
+            var3_int = this.maxLength;
           }
           if (param0 < 0) {
-            this.field_Ib = 96;
+            this.maxLength = 96;
           }
-          discarded$4 = this.field_wb.append(param1.substring(0, var3_int));
-          dupTemp$5 = this.field_wb.length();
-          this.field_Ab = dupTemp$5;
-          this.field_ub = dupTemp$5;
-          this.field_Cb.field_r = this.field_wb.toString();
+          discarded$4 = this.text.append(param1.substring(0, var3_int));
+          dupTemp$5 = this.text.length();
+          this.selectionAnchor = dupTemp$5;
+          this.caret = dupTemp$5;
+          this.field_Cb.field_r = this.text.toString();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -602,7 +602,7 @@ final class sw extends jea {
         }
     }
 
-    final boolean a(int param0, int param1, char param2) {
+    final boolean handleKey(int param0, int param1, char param2) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -620,33 +620,33 @@ final class sw extends jea {
             param2 != 62) {
             if (param2 >= 32 &&
               param2 <= 126) {
-              if (this.field_Ab != this.field_ub) {
-                this.i((byte) -124);
+              if (this.selectionAnchor != this.caret) {
+                this.deleteSelection((byte) -124);
               }
-              if (this.field_Ib == -1 ||
-                !(this.field_wb.length() >= this.field_Ib)) {
-                if (this.field_ub == this.field_wb.length()) {
-                  discarded$0 = this.field_wb.append(param2);
+              if (this.maxLength == -1 ||
+                !(this.text.length() >= this.maxLength)) {
+                if (this.caret == this.text.length()) {
+                  discarded$0 = this.text.append(param2);
                 } else {
-                  var5 = this.field_wb.toString().substring(this.field_ub, this.field_wb.length());
-                  DarknessBehaviour.padTo(this.field_ub, ' ', -11, this.field_wb);
-                  discarded$1 = this.field_wb.append(param2);
-                  discarded$2 = this.field_wb.append(var5);
+                  var5 = this.text.toString().substring(this.caret, this.text.length());
+                  DarknessBehaviour.padTo(this.caret, ' ', -11, this.text);
+                  discarded$1 = this.text.append(param2);
+                  discarded$2 = this.text.append(var5);
                 }
-                this.field_Cb.field_r = this.field_wb.toString();
-                this.field_ub = this.field_ub + 1;
-                this.field_Ab = this.field_ub;
+                this.field_Cb.field_r = this.text.toString();
+                this.caret = this.caret + 1;
+                this.selectionAnchor = this.caret;
               }
               return true;
             }
             if (85 == param0) {
-              if (this.field_Ab != this.field_ub) {
-                this.i((byte) -120);
+              if (this.selectionAnchor != this.caret) {
+                this.deleteSelection((byte) -120);
                 return true;
               }
-              if (this.field_ub > 0) {
-                this.field_Ab = this.field_ub - 1;
-                this.i((byte) -125);
+              if (this.caret > 0) {
+                this.selectionAnchor = this.caret - 1;
+                this.deleteSelection((byte) -125);
                 return true;
               }
             } else {
@@ -657,11 +657,11 @@ final class sw extends jea {
                 }
                 if (96 != param0) {
                   if (param0 == 97) {
-                    if (this.field_ub >= this.field_wb.length()) {
+                    if (this.caret >= this.text.length()) {
                       return false;
                     }
                     if (!VerticalScrollbar.field_tb[82]) {
-                      stackIn_52_0 = this.field_ub + 1;
+                      stackIn_52_0 = this.caret + 1;
                     } else {
                       stackIn_52_0 = this.g((byte) 50);
                     }
@@ -674,7 +674,7 @@ final class sw extends jea {
                     return true;
                   }
                   if (param0 == 103) {
-                    this.d(param1 ^ -1070, this.field_wb.length());
+                    this.d(param1 ^ -1070, this.text.length());
                     return true;
                   }
                   if (VerticalScrollbar.field_tb[82] &&
@@ -684,7 +684,7 @@ final class sw extends jea {
                   }
                   if (VerticalScrollbar.field_tb[82] &&
                     param0 == 66) {
-                    this.f(82);
+                    this.copySelection(82);
                     return true;
                   }
                   if (VerticalScrollbar.field_tb[82] &&
@@ -693,11 +693,11 @@ final class sw extends jea {
                     return true;
                   }
                 } else {
-                  if (0 < this.field_ub) {
+                  if (0 < this.caret) {
                     if (VerticalScrollbar.field_tb[82]) {
                       stackIn_41_0 = this.j((byte) -92);
                     } else {
-                      stackIn_41_0 = -1 + this.field_ub;
+                      stackIn_41_0 = -1 + this.caret;
                     }
                     var4_int = stackIn_41_0;
                     this.d(18626, var4_int);
@@ -705,13 +705,13 @@ final class sw extends jea {
                   }
                 }
               } else {
-                if (this.field_Ab != this.field_ub) {
-                  this.i((byte) -124);
+                if (this.selectionAnchor != this.caret) {
+                  this.deleteSelection((byte) -124);
                   return true;
                 }
-                if (this.field_ub < this.field_wb.length()) {
-                  this.field_Ab = 1 + this.field_ub;
-                  this.i((byte) -124);
+                if (this.caret < this.text.length()) {
+                  this.selectionAnchor = 1 + this.caret;
+                  this.deleteSelection((byte) -124);
                   return true;
                 }
               }
@@ -783,14 +783,14 @@ final class sw extends jea {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_ub = param1;
+          this.caret = param1;
           if (param0 != 18626) {
             this.a(83, (byte) 112, 70);
           }
           if (VerticalScrollbar.field_tb[81]) {
             return;
           }
-          this.field_Ab = this.field_ub;
+          this.selectionAnchor = this.caret;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -832,13 +832,13 @@ final class sw extends jea {
           if (param0 <= 3) {
             this.field_tb = true;
           }
-          var2_int = this.field_wb.length();
-          if (this.field_ub == var2_int) {
-            stackIn_5_0 = this.field_ub;
+          var2_int = this.text.length();
+          if (this.caret == var2_int) {
+            stackIn_5_0 = this.caret;
             return stackIn_5_0;
           }
-          for (var3 = 1 + this.field_ub; var2_int > var3; var3++) {
-            if (!Effect.a(this.field_wb.charAt(var3 - 1), true)) {
+          for (var3 = 1 + this.caret; var2_int > var3; var3++) {
+            if (!Effect.a(this.text.charAt(var3 - 1), true)) {
               continue;
             }
             break;
@@ -854,12 +854,12 @@ final class sw extends jea {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         try {
-          this.a(param0, param3, -23776, param2, param4);
-          this.field_Cb.a(param0, param3, -23776, 0, 0);
-          this.field_Eb.a(param0, param3, -23776, 0, 0);
+          this.setBounds(param0, param3, -23776, param2, param4);
+          this.field_Cb.setBounds(param0, param3, -23776, 0, 0);
+          this.field_Eb.setBounds(param0, param3, -23776, 0, 0);
           this.field_Gb = param3 - 4;
           if (param1 < 101) {
-            this.e((byte) 103);
+            this.getText((byte) 103);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sw.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -882,12 +882,12 @@ final class sw extends jea {
           if (param0 != -2) {
             this.clear((byte) -86);
           }
-          var5 = this.field_wb.length();
+          var5 = this.text.length();
           while (var4 < param1) {
             if (var3_int < var5) {
               incrementValue$1 = var3_int;
               var3_int++;
-              var4 = var4 + this.field_Cb.field_H.charWidth(this.field_wb.charAt(incrementValue$1));
+              var4 = var4 + this.field_Cb.field_H.charWidth(this.text.charAt(incrementValue$1));
               continue;
             }
             break;
@@ -901,15 +901,15 @@ final class sw extends jea {
         }
     }
 
-    final String e(byte param0) {
+    final String getText(byte param0) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -99) {
-            this.field_ub = -43;
+            this.caret = -43;
           }
-          stackIn_3_0 = this.field_wb.toString();
+          stackIn_3_0 = this.text.toString();
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

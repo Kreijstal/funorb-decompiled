@@ -1,78 +1,78 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cra {
+final class SequencePlayer {
     private int field_j;
     private int field_g;
     private int field_c;
     private int field_l;
     private int field_d;
-    int field_f;
-    boolean field_o;
-    private dk[] field_h;
+    int frame;
+    boolean frameChanged;
+    private AnimationSequence[] field_h;
     private int[] field_e;
     static String field_a;
     private boolean field_n;
     private int field_i;
-    private int field_m;
-    private dk field_b;
+    private int loopsPlayed;
+    private AnimationSequence sequence;
     private int field_k;
 
-    final void a(int param0, byte param1) {
-        this.field_f = param0;
-        this.field_o = true;
-        this.field_g = this.field_b.field_l[this.field_f];
-        this.field_c = this.field_b.field_l[(1 + this.field_f) % this.b(param1)];
+    final void setFrame(int param0, byte param1) {
+        this.frame = param0;
+        this.frameChanged = true;
+        this.field_g = this.sequence.frameIds[this.frame];
+        this.field_c = this.sequence.frameIds[(1 + this.frame) % this.getFrameCount(param1)];
         this.field_d = 0;
     }
 
-    private final int b(byte param0) {
+    private final int getFrameCount(byte param0) {
         int var2 = 118 % ((param0 - 43) / 36);
-        return this.field_b.field_l.length;
+        return this.sequence.frameIds.length;
     }
 
-    private final boolean a(int param0) {
+    private final boolean advanceFrame(int param0) {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
-        this.field_o = true;
+        this.frameChanged = true;
         if (param0 >= -43) {
           this.field_i = 78;
         }
-        if (this.field_b.field_i) {
-          this.field_j = 1 + this.field_f;
-          if (this.field_b.field_l.length <= this.field_j) {
-            this.field_m = this.field_m + 1;
-            if (!this.field_b.field_f &&
-              this.field_b.field_j <= this.field_m) {
+        if (this.sequence.field_i) {
+          this.field_j = 1 + this.frame;
+          if (this.sequence.frameIds.length <= this.field_j) {
+            this.loopsPlayed = this.loopsPlayed + 1;
+            if (!this.sequence.field_f &&
+              this.sequence.field_j <= this.loopsPlayed) {
               return true;
             }
-            if (this.field_b.field_b >= 0 &&
-              this.field_b.field_b < this.b((byte) -76)) {
-              this.field_j = this.field_b.field_b;
+            if (this.sequence.field_b >= 0 &&
+              this.sequence.field_b < this.getFrameCount((byte) -76)) {
+              this.field_j = this.sequence.field_b;
             } else {
               this.field_j = 0;
             }
           }
-          this.field_c = this.field_b.field_l[this.field_j];
+          this.field_c = this.sequence.frameIds[this.field_j];
         }
-        this.field_f = this.field_f + 1;
-        if (this.field_b.field_l.length <= this.field_f) {
-          if (!this.field_b.field_i) {
-            this.field_m = this.field_m + 1;
+        this.frame = this.frame + 1;
+        if (this.sequence.frameIds.length <= this.frame) {
+          if (!this.sequence.field_i) {
+            this.loopsPlayed = this.loopsPlayed + 1;
           }
-          if (!this.field_b.field_f &&
-            this.field_m >= this.field_b.field_j) {
+          if (!this.sequence.field_f &&
+            this.loopsPlayed >= this.sequence.field_j) {
             return true;
           }
-          if (this.field_b.field_b >= 0 &&
-            this.field_b.field_b < this.field_b.field_l.length) {
-            this.field_f = this.field_b.field_b;
+          if (this.sequence.field_b >= 0 &&
+            this.sequence.field_b < this.sequence.frameIds.length) {
+            this.frame = this.sequence.field_b;
           } else {
-            this.field_f = 0;
+            this.frame = 0;
           }
         }
-        this.field_g = this.field_b.field_l[this.field_f];
-        int dupTemp$0 = this.field_b.field_e[this.field_f];
+        this.field_g = this.sequence.frameIds[this.frame];
+        int dupTemp$0 = this.sequence.frameDurations[this.frame];
         this.field_d = dupTemp$0;
         this.field_i = dupTemp$0;
         return false;
@@ -89,7 +89,7 @@ final class cra {
         try {
           if (param2 != 1) {
             ResourceArchive var6 = (ResourceArchive) null;
-            cra.a((ResourceArchive) null, (ResourceArchive) null, -57, true, (ResourceArchive) null);
+            SequencePlayer.a((ResourceArchive) null, (ResourceArchive) null, -57, true, (ResourceArchive) null);
           }
           DefaultRoomObjectRenderer.field_b = ai.a((byte) 121, "");
           DefaultRoomObjectRenderer.field_b.a(-71, false);
@@ -102,34 +102,34 @@ final class cra {
         }
     }
 
-    final void a(byte param0) {
-        this.field_m = 0;
+    final void reset(byte param0) {
+        this.loopsPlayed = 0;
         this.field_j = 0;
-        this.field_o = false;
+        this.frameChanged = false;
         this.field_d = 0;
         this.field_c = 0;
-        this.field_f = 0;
+        this.frame = 0;
         if (param0 > -63) {
-          this.field_m = 101;
+          this.loopsPlayed = 101;
         }
         this.field_g = 0;
         this.field_i = 1;
     }
 
-    final boolean b(int param0) {
+    final boolean tick(int param0) {
         int dupTemp$0 = 0;
         int var2 = 0;
         if (this.field_n) {
           return false;
         }
-        this.field_o = false;
+        this.frameChanged = false;
         if (null != this.field_h &&
           0 <= this.field_k) {
           dupTemp$0 = this.field_e[this.field_k];
           this.field_e[this.field_k] = dupTemp$0 - 1;
           if (0 > dupTemp$0) {
             var2 = this.field_k;
-            this.a(this.field_h[this.field_k], -30988);
+            this.play(this.field_h[this.field_k], -30988);
             this.field_k = var2;
             this.field_h[this.field_k] = null;
             this.field_k = this.field_k + 1;
@@ -144,12 +144,12 @@ final class cra {
         if (param0 < 6) {
           return true;
         }
-        if (this.field_b == null) {
+        if (this.sequence == null) {
           return true;
         }
         this.field_d = this.field_d - 1;
         if (this.field_d <= 0) {
-          return this.a(-99);
+          return this.advanceFrame(-99);
         }
         return false;
     }
@@ -161,7 +161,7 @@ final class cra {
         }
     }
 
-    final void a(int param0, ka param1) {
+    final void applyToModel(int param0, ka param1) {
         int var3_int = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -170,10 +170,10 @@ final class cra {
         RuntimeException var3 = null;
         try {
           var3_int = -103 / ((param0 + 36) / 51);
-          if (!this.field_b.field_i) {
-            param1.a(-121, hba.field_c, -1, this.field_g, 0, (ena) null, 0, this.field_b.field_h, 0);
+          if (!this.sequence.field_i) {
+            param1.a(-121, hba.field_c, -1, this.field_g, 0, (ena) null, 0, this.sequence.field_h, 0);
           } else {
-            param1.a(-124, hba.field_c, this.field_c, this.field_g, this.field_i - this.field_d, hba.field_c, this.field_i, this.field_b.field_h, 0);
+            param1.a(-124, hba.field_c, this.field_c, this.field_g, this.field_i - this.field_d, hba.field_c, this.field_i, this.sequence.field_h, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,14 +190,14 @@ final class cra {
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean isFinished(boolean param0) {
         boolean stackIn_8_0 = false;
         if (param0) {
           this.field_g = 93;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (null != this.field_b && (this.field_b.field_f ||
-          !(this.field_m >= this.field_b.field_j))) {
+        if (null != this.sequence && (this.sequence.field_f ||
+          !(this.loopsPlayed >= this.sequence.field_j))) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -207,24 +207,24 @@ final class cra {
         return stackIn_8_0;
     }
 
-    final void a(dk param0, int param1) {
+    final void play(AnimationSequence param0, int param1) {
         boolean discarded$0 = false;
         boolean discarded$1 = false;
         try {
-          this.a((byte) -91);
-          this.field_b = param0;
-          this.field_f = -1;
+          this.reset((byte) -91);
+          this.sequence = param0;
+          this.frame = -1;
           if (param1 != -30988) {
-            discarded$0 = this.a(102);
+            discarded$0 = this.advanceFrame(102);
           }
-          discarded$1 = this.a(-95);
+          discarded$1 = this.advanceFrame(-95);
           this.field_k = -1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cra.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(dk param0, int param1, int param2) {
+    final void queue(AnimationSequence param0, int param1, int param2) {
         boolean discarded$0 = false;
         try {
           if (this.field_h == null) {
@@ -232,7 +232,7 @@ final class cra {
           }
           this.field_h[this.field_l] = param0;
           if (param2 != 8198) {
-            discarded$0 = this.a(16);
+            discarded$0 = this.advanceFrame(16);
           }
           this.field_e[this.field_l] = param1;
           if (0 > this.field_k) {
@@ -242,22 +242,22 @@ final class cra {
           if (this.field_h.length == this.field_l) {
             this.field_l = 0;
           }
-          this.field_o = true;
+          this.frameChanged = true;
           this.field_i = 1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cra.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public cra() {
-        this.field_o = false;
+    public SequencePlayer() {
+        this.frameChanged = false;
     }
 
-    cra(int param0) {
-        this.field_o = false;
+    SequencePlayer(int param0) {
+        this.frameChanged = false;
         this.field_e = new int[param0];
         this.field_k = -1;
-        this.field_h = new dk[param0];
+        this.field_h = new AnimationSequence[param0];
     }
 
     static {

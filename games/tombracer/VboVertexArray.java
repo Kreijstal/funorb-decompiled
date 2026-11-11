@@ -3,7 +3,7 @@
  */
 final class VboVertexArray extends vo implements LegacyVertexArray {
     private int field_j;
-    static jea field_k;
+    static UiComponent field_k;
     static ft field_i;
 
     public static void releaseStatics(int param0) {
@@ -16,7 +16,7 @@ final class VboVertexArray extends vo implements LegacyVertexArray {
 
     public final int getBufferId(boolean param0) {
         if (!param0) {
-          field_k = (jea) null;
+          field_k = (UiComponent) null;
           return this.field_e;
         }
         return this.field_e;

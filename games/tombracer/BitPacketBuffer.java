@@ -234,7 +234,7 @@ final class BitPacketBuffer extends PacketBuffer {
         return;
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) {
+    final void readCipheredBytes(int param0, int param1, byte[] param2, int param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

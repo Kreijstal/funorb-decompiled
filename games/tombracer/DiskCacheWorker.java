@@ -160,7 +160,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final DiskArchiveRequest a(byte param0, int param1, SectorCacheStore param2) {
+    final DiskArchiveRequest queueRead(byte param0, int param1, SectorCacheStore param2) {
         DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -197,7 +197,7 @@ final class DiskCacheWorker implements Runnable {
     }
 
     final static boolean a(int param0) {
-        lqa var1 = uv.b(false);
+        lqa var1 = LegacyOpenGlBloomEffect.b(false);
         if (param0 < 122) {
           DiskCacheWorker.a((byte) -30, -8, 82);
           if (var1 == null) {
@@ -216,7 +216,7 @@ final class DiskCacheWorker implements Runnable {
           this.field_d.a(param1, (byte) -105);
           if (param0 >= -27) {
             SectorCacheStore var5 = (SectorCacheStore) null;
-            this.a((byte) -87, 82, (SectorCacheStore) null);
+            this.queueRead((byte) -87, 82, (SectorCacheStore) null);
           }
           this.field_b = this.field_b + 1;
           this.field_d.notifyAll();

@@ -3,7 +3,7 @@
  */
 final class dqa extends mna {
     ne[] field_f;
-    static jea field_e;
+    static UiComponent field_e;
 
     final static jua takeRegistrationResponse(int param0) {
         if (LegacyOpenGlTexture.field_a == fta.field_c) {
@@ -64,7 +64,7 @@ final class dqa extends mna {
         try {
           MatchPhase.field_l = (TextureProvider) ((Object) new sja(param1, param0, param3));
           if (param2 != 55) {
-            field_e = (jea) null;
+            field_e = (UiComponent) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dqa.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

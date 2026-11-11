@@ -8,7 +8,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
     private int field_k;
     private int field_f;
     static GameApplet field_j;
-    static jea field_i;
+    static UiComponent field_i;
 
     final int f(byte param0) {
         int var2 = -73 / ((param0 + 4) / 47);
@@ -116,7 +116,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
 
     public final int getRenderY(byte param0) {
         if (param0 <= 91) {
-          field_i = (jea) null;
+          field_i = (UiComponent) null;
           return this.field_g;
         }
         return this.field_g;

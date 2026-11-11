@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RopeBridgeComponent extends PrefabComponent {
-    static jea field_F;
+    static UiComponent field_F;
     private int field_H;
     static String field_I;
     static String field_G;

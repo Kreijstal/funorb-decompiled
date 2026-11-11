@@ -32,7 +32,7 @@ final class FollowCamera implements Camera {
 
     final static void a(boolean param0, boolean param1, boolean param2, String param3) {
         try {
-          oga.a(param2);
+          LegacyOpenGlPostProcessEffect.a(param2);
           ej.field_a.e(true);
           vn.field_b = new LoginForm(ScrollControlWidget.field_E, (String) null, LoadProfileCommand.field_r, param1, param0);
           um.field_l = new mpa(ej.field_a, vn.field_b);

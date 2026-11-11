@@ -163,7 +163,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         eca.field_c = null;
         ConstantEffectBehaviour.field_q = null;
         lh.field_b = null;
-        kq.field_a = null;
+        PlayerInputQueue.field_a = null;
         eu.field_a = null;
         tka.field_p = null;
         gca.field_a = null;

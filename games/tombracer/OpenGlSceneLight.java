@@ -4,7 +4,7 @@
 final class OpenGlSceneLight extends SceneLight {
     static ViewportManager field_o;
     static String[] field_q;
-    static jea[] field_p;
+    static UiComponent[] field_p;
 
     final void setColour(int param0, int param1) {
         this.colour = param1;

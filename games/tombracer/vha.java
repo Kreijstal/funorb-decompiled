@@ -17,7 +17,7 @@ final class vha {
           return;
         }
         rua.field_gb.c(-59, param2);
-        var4 = ItemModel.field_n.h(param1 ^ 95) ? 1 : 0;
+        var4 = ItemModel.field_n.hasPressedItem(param1 ^ 95) ? 1 : 0;
         boolean decompiledFrameRemainder0 = true;
         if (0 != PlayerModel.field_b) {
           if (var4 != 0) {

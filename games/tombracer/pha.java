@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pha extends jea {
+final class pha extends UiComponent {
     int field_Ab;
     static String field_Ib;
     int field_zb;
     boolean field_Hb;
     boolean field_tb;
     String field_wb;
-    jea field_Cb;
-    jea field_Nb;
-    jea field_Gb;
+    UiComponent field_Cb;
+    UiComponent field_Nb;
+    UiComponent field_Gb;
     long field_yb;
     String field_vb;
-    jea field_Db;
+    UiComponent field_Db;
     static SpriteData field_Bb;
     static int[] field_ub;
-    jea field_Kb;
+    UiComponent field_Kb;
     int field_xb;
     int field_Eb;
     long field_Mb;
@@ -87,7 +87,7 @@ final class pha extends jea {
     }
 
     pha(String param0, String param1, long param2) {
-        super(0L, (jea) null);
+        super(0L, (UiComponent) null);
         CharSequence var6 = null;
         try {
           this.field_yb = param2;

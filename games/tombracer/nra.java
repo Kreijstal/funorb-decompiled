@@ -10,8 +10,8 @@ final class nra implements GamePacket {
     private int field_m;
     private int field_i;
     private long field_b;
-    static jea field_c;
-    static jea field_a;
+    static UiComponent field_c;
+    static UiComponent field_a;
     private long field_n;
     private int field_d;
     private int field_h;

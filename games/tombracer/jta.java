@@ -226,8 +226,8 @@ final class jta extends SingleChildWidget {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.b(param3, -7768);
-          var6 = param2.a(true, param1, var5_int);
+          var5_int = param2.getGroupId(param3, -7768);
+          var6 = param2.getFileId(true, param1, var5_int);
           if (param0 < 110) {
             field_z = (int[]) null;
           }

@@ -3,7 +3,7 @@
  */
 final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, Renderable, WorldBody, Collidable, noa, qn, Teleportable {
     private IntrusiveDeque children;
-    static jea field_q;
+    static UiComponent field_q;
     static int field_m;
     private SwitchableId switchableId;
     private Trap parent;
@@ -145,7 +145,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           }
           var7 = (Locomotor) (this.locomotors.first(-80));
           while (var7 != null) {
-            var7.a(param1, (byte) -128, param2, param3);
+            var7.assignSwitchableIds(param1, (byte) -128, param2, param3);
             var7 = (Locomotor) (this.locomotors.next(116));
           }
           if (!param0) {
@@ -153,7 +153,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           }
           var8 = (Behaviour) (this.behaviours.first(-80));
           while (var8 != null) {
-            var8.a(-121, param2, param1, param3);
+            var8.assignSwitchableIds(-121, param2, param1, param3);
             var8 = (Behaviour) (this.behaviours.next(115));
           }
           var9 = (Trap) (this.children.first(-80));
@@ -510,7 +510,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (this.removed) {
           return;
         }
-        this.field_fb.a(86);
+        this.field_fb.update(86);
         if (this.pushedThisTick) {
           if (0 == this.pushedTicks) {
             this.pushedTicks = this.room.getRandom(-88).nextBounded(3, 0);
@@ -639,7 +639,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         int var3 = TombRacer.field_G ? 1 : 0;
         if (this.parent != null) {
           this.parentRotationSin = MouseInputHandler.sin2048((byte) 124, -this.parent.getFacingAngle(-25787) >> 2);
-          this.parentRotationCos = bua.cos2048(0, -this.parent.getFacingAngle(param0 - 25727) >> 2);
+          this.parentRotationCos = ModelAnimator.cos2048(0, -this.parent.getFacingAngle(param0 - 25727) >> 2);
         }
         if (param0 != -60) {
           this.parentRotationSin = -7;
@@ -810,7 +810,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
         var9 = (Locomotor) (this.locomotors.first(-80));
         while (var9 != null) {
-          var4 = var9.a(param0, 1, param1);
+          var4 = var9.findSwitchable(param0, 1, param1);
           if (var4 != null) {
             return var4;
           }
@@ -819,7 +819,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         var11 = new IntrusiveDequeCursor(this.behaviours);
         var8 = (Behaviour) (var11.first(true));
         while (var8 != null) {
-          var4Lifetime1 = var8.a(0, param1, param0);
+          var4Lifetime1 = var8.findSwitchable(0, param1, param0);
           if (var4Lifetime1 != null) {
             return var4Lifetime1;
           }
@@ -2913,7 +2913,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
 
     final void setTopLevel(byte param0, boolean param1) {
         if (param0 < 46) {
-          field_q = (jea) null;
+          field_q = (UiComponent) null;
         }
         this.isTopLevel = param1 ? true : false;
     }
@@ -2925,7 +2925,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           try {
             Thread.sleep(param1);
             if (param0 != 9) {
-              field_q = (jea) null;
+              field_q = (UiComponent) null;
             }
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

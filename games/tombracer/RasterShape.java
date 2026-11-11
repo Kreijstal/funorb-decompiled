@@ -4,7 +4,7 @@
 abstract class RasterShape {
     static IndexedSprite[] field_a;
     int outlineColour;
-    static jea field_e;
+    static UiComponent field_e;
     int outlineWidth;
     int fillColour;
 

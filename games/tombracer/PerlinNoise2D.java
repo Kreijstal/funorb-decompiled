@@ -12,7 +12,7 @@ final class PerlinNoise2D extends TextureOperator {
     static String field_o;
     static String field_v;
     static String field_y;
-    static jea field_t;
+    static UiComponent field_t;
     int field_x;
     int field_u;
     private short[] field_q;

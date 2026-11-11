@@ -7,7 +7,7 @@ final class RotaterMountComponent extends PrefabComponent {
     static IntrusiveDeque field_H;
     static int field_L;
     static fta field_G;
-    static jea field_K;
+    static UiComponent field_K;
     static int field_I;
 
     public static void B(int param0) {
@@ -58,7 +58,7 @@ final class RotaterMountComponent extends PrefabComponent {
 
     final boolean hasAngle(byte param0) {
         if (param0 != -122) {
-          field_K = (jea) null;
+          field_K = (UiComponent) null;
           return true;
         }
         return true;

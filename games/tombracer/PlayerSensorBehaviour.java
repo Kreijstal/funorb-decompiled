@@ -479,7 +479,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
         if (param0) {
           return false;
         }
-        return this.getPlayer((byte) 19).p((byte) -110);
+        return this.getPlayer((byte) 19).hasFiredThisTick((byte) -110);
     }
 
     static {

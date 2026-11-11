@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gea {
+final class WaypointPath {
     static String field_c;
-    private int[][] field_b;
+    private int[][] points;
     private boolean field_a;
 
-    final boolean a(int param0) {
+    final boolean isEmpty(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -4075) {
           return false;
         }
-        stackIn_7_0 = (this.field_b == null) || (this.field_b.length == 0);
+        stackIn_7_0 = (this.points == null) || (this.points.length == 0);
         return stackIn_7_0;
     }
 
@@ -25,8 +25,8 @@ final class gea {
     final void a(boolean param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
-        for (var2 = 0; var2 < this.field_b.length; var2++) {
-          this.field_b[var2][0] = -this.field_b[var2][0];
+        for (var2 = 0; var2 < this.points.length; var2++) {
+          this.points[var2][0] = -this.points[var2][0];
         }
         if (!param0) {
           field_c = (String) null;
@@ -54,7 +54,7 @@ final class gea {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           var3_int = ApproachPlayerLocomotor.field_t;
-          rua.field_gb = new jea(0L, (jea) null);
+          rua.field_gb = new UiComponent(0L, (UiComponent) null);
           if (param1 == null) {
             var10 = (Throwable) null;
             ssa.a("QC1", (byte) 123, (Throwable) null);
@@ -107,13 +107,13 @@ final class gea {
         }
     }
 
-    public gea() {
+    public WaypointPath() {
         this(new int[][]{});
     }
 
-    final int[][] c(int param0) {
+    final int[][] getPoints(int param0) {
         int var2 = 84 % ((param0 - 85) / 34);
-        return this.field_b;
+        return this.points;
     }
 
     final boolean a(byte param0) {
@@ -130,25 +130,25 @@ final class gea {
         }
     }
 
-    gea(int[][] param0) {
+    WaypointPath(int[][] param0) {
         IntPoint discarded$0 = new IntPoint();
         try {
-          this.field_b = param0;
+          this.points = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    gea(int param0, BitPacketBuffer param1) {
+    WaypointPath(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         IntPoint discarded$0 = new IntPoint();
         try {
           var3_int = param1.readBits((byte) 44, 4);
-          this.field_b = new int[var3_int][2];
+          this.points = new int[var3_int][2];
           for (var4 = 0; var3_int > var4; var4++) {
-            this.field_b[var4][0] = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12)) << 16;
-            this.field_b[var4][1] = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12)) << 16;
+            this.points[var4][0] = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12)) << 16;
+            this.points[var4][1] = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12)) << 16;
           }
           if (11 <= param0) {
             this.field_a = param1.readBits((byte) 44, 1) == 1 ? true : false;
@@ -158,14 +158,14 @@ final class gea {
         }
     }
 
-    final void a(BitPacketBuffer param0, int param1) {
+    final void encode(BitPacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param0.writeBits((byte) 20, this.field_b.length, 4);
-          for (var3_int = param1; var3_int < this.field_b.length; var3_int++) {
-            param0.writeBits((byte) -128, dqa.toOffsetBinary(true, this.field_b[var3_int][0] >> 16, 12), 12);
-            param0.writeBits((byte) -125, dqa.toOffsetBinary(true, this.field_b[var3_int][1] >> 16, 12), 12);
+          param0.writeBits((byte) 20, this.points.length, 4);
+          for (var3_int = param1; var3_int < this.points.length; var3_int++) {
+            param0.writeBits((byte) -128, dqa.toOffsetBinary(true, this.points[var3_int][0] >> 16, 12), 12);
+            param0.writeBits((byte) -125, dqa.toOffsetBinary(true, this.points[var3_int][1] >> 16, 12), 12);
           }
           param0.writeBits((byte) 74, !this.field_a ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {

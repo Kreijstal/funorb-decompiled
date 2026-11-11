@@ -119,7 +119,7 @@ final class vua extends SingleChildWidget {
             return true;
           }
           stackIn_20_0 = ((param1 & 55) == 0);
-          return stackIn_20_0 & (cra.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
+          return stackIn_20_0 & (SequencePlayer.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
         }
         field_A = (ToolkitSprite) null;
         stackIn_5_0 = o.hasAnyMask540800(-1, param1, param0);
@@ -128,7 +128,7 @@ final class vua extends SingleChildWidget {
           return true;
         }
         stackIn_10_0 = ((param1 & 55) == 0);
-        return stackIn_10_0 & (cra.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
+        return stackIn_10_0 & (SequencePlayer.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
     }
 
     vua(int param0, int param1, int param2, int param3, WidgetPainter param4, UiWidget param5) {

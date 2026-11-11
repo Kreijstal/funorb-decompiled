@@ -76,7 +76,7 @@ abstract class SceneLight extends IntrusiveNode {
           ega.field_e = su.createToolkitSprite(nm.field_i, param0, (byte) 126);
           tv.field_wb = su.createToolkitSprite(lt.field_a, param0, (byte) 127);
           GridWidgetContainer.field_y = LoadLevelCommand.a(param0, ina.field_c, -104);
-          kq.field_a = su.createToolkitSprite(FleeLocomotor.field_C, param0, (byte) 127);
+          PlayerInputQueue.field_a = su.createToolkitSprite(FleeLocomotor.field_C, param0, (byte) 127);
           id.field_h = LoadLevelCommand.a(param0, tba.field_f, -70);
           PerlinNoise2D.field_m = LoadLevelCommand.a(param0, WidgetStyleLayer.field_f, -77);
           su.createToolkitSprite(MatchStatistics.field_g, param0, (byte) 126);
@@ -127,8 +127,8 @@ abstract class SceneLight extends IntrusiveNode {
           haa.field_z = su.createToolkitSprite(re.field_a, param0, (byte) 126);
           aq.field_a = LoadLevelCommand.a(param0, mna.field_c, -55);
           MirrorBehaviour.field_r = su.createToolkitSprite(SoundEvent.field_h, param0, (byte) 127);
-          OpenGlEnvironmentWaterEffect.field_d = SweepRotateLocomotor.a(param0, (byte) -105, haa.field_A.field_f);
-          Room.field_j = SweepRotateLocomotor.a(param0, (byte) -104, du.field_c.field_f);
+          OpenGlEnvironmentWaterEffect.field_d = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -105, haa.field_A.field_f);
+          Room.field_j = SweepRotateLocomotor.createSpriteFromImage(param0, (byte) -104, du.field_c.field_f);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ob.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

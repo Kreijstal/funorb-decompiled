@@ -578,7 +578,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         if (DualLinkNode.field_h == this.field_v[this.field_Cc]) {
           jaggl.OpenGL.glLoadIdentity();
         } else {
-          jaggl.OpenGL.glLoadMatrixf(this.field_hc[this.field_Cc].a(AgeValidator.field_k, (byte) -37), 0);
+          jaggl.OpenGL.glLoadMatrixf(this.field_hc[this.field_Cc].writeColumnMajor4x4(AgeValidator.field_k, (byte) -37), 0);
         }
         jaggl.OpenGL.glMatrixMode(5888);
     }
@@ -756,29 +756,29 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         int stackIn_33_1 = 0;
         int var2;
         int var4;
-        al var5;
-        al var6;
-        al var7;
-        al var8;
-        al var9;
+        IntNode var5;
+        IntNode var6;
+        IntNode var7;
+        IntNode var8;
+        IntNode var9;
         IntrusiveNode var10;
         IntrusiveNode var11;
-        al var12;
-        al var9Lifetime1;
+        IntNode var12;
+        IntNode var9Lifetime1;
         IntrusiveNode var10Lifetime1;
         IntrusiveNode var11Lifetime1;
-        al var12Lifetime1;
-        al var9Lifetime2;
+        IntNode var12Lifetime1;
+        IntNode var9Lifetime2;
         IntrusiveNode var10Lifetime2;
         var4 = TombRacer.field_G ? 1 : 0;
         param0 = param0 & 2147483647;
         var2 = 0;
         while (!this.field_dd.isEmpty((byte) 14)) {
-          var5 = (al) (this.field_dd.removeFirst(61));
+          var5 = (IntNode) (this.field_dd.removeFirst(61));
           incrementValue$5 = var2;
           var2++;
           RoomComponent.field_i[incrementValue$5] = (int)var5.key;
-          this.field_X = this.field_X - var5.field_i;
+          this.field_X = this.field_X - var5.value;
           if (var2 != 1000) {
             continue;
           }
@@ -787,11 +787,11 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
         if (var2 <= 0) {
           while (!this.field_Rc.isEmpty((byte) 14)) {
-            var6 = (al) (this.field_Rc.removeFirst(-96));
+            var6 = (IntNode) (this.field_Rc.removeFirst(-96));
             incrementValue$1 = var2;
             var2++;
             RoomComponent.field_i[incrementValue$1] = (int)var6.key;
-            this.field_Xb = this.field_Xb - var6.field_i;
+            this.field_Xb = this.field_Xb - var6.value;
             if (var2 != 1000) {
               continue;
             }
@@ -802,11 +802,11 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glDeleteBuffersARB(var2, RoomComponent.field_i, 0);
           var2 = 0;
           while (!this.field_Rc.isEmpty((byte) 14)) {
-            var6 = (al) (this.field_Rc.removeFirst(-96));
+            var6 = (IntNode) (this.field_Rc.removeFirst(-96));
             incrementValue$0 = var2;
             var2++;
             RoomComponent.field_i[incrementValue$0] = (int)var6.key;
-            this.field_Xb = this.field_Xb - var6.field_i;
+            this.field_Xb = this.field_Xb - var6.value;
             if (var2 != 1000) {
               continue;
             }
@@ -821,10 +821,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glDeleteTextures(var2, RoomComponent.field_i, 0);
           var2 = 0;
           while (!this.field_Oc.isEmpty((byte) 14)) {
-            var7 = (al) (this.field_Oc.removeFirst(62));
+            var7 = (IntNode) (this.field_Oc.removeFirst(62));
             incrementValue$2 = var2;
             var2++;
-            RoomComponent.field_i[incrementValue$2] = var7.field_i;
+            RoomComponent.field_i[incrementValue$2] = var7.value;
             if (var2 != 1000) {
               continue;
             }
@@ -833,10 +833,10 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           }
         } else {
           if (!this.field_Oc.isEmpty((byte) 14)) {
-            var7 = (al) (this.field_Oc.removeFirst(62));
+            var7 = (IntNode) (this.field_Oc.removeFirst(62));
             incrementValue$3 = var2;
             var2++;
-            RoomComponent.field_i[incrementValue$3] = var7.field_i;
+            RoomComponent.field_i[incrementValue$3] = var7.value;
             if (var2 == 1000) {
               jaggl.OpenGL.glDeleteFramebuffersEXT(var2, RoomComponent.field_i, 0);
               var2 = 0;
@@ -844,8 +844,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             }
             else {
               while (!this.field_bd.isEmpty((byte) 14)) {
-                var9 = (al) (this.field_bd.removeFirst(-101));
-                jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_i);
+                var9 = (IntNode) (this.field_bd.removeFirst(-101));
+                jaggl.OpenGL.glDeleteLists((int)var9.key, var9.value);
               }
               while (!this.field_nd.isEmpty((byte) 14)) {
                 var10 = this.field_nd.removeFirst(-120);
@@ -856,8 +856,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                 jaggl.OpenGL.glDeleteObjectARB(var11.key);
               }
               while (!this.field_bd.isEmpty((byte) 14)) {
-                var12 = (al) (this.field_bd.removeFirst(-99));
-                jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_i);
+                var12 = (IntNode) (this.field_bd.removeFirst(-99));
+                jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
               }
               if ((!(this.Q(10) <= 100663296)) &&
                 (!(bva.currentTimeMillis((byte) -107) <= this.field_Xc + 60000L))) {
@@ -875,11 +875,11 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             var2 = 0;
           }
           while (!this.field_ad.isEmpty((byte) 14)) {
-            var8 = (al) (this.field_ad.removeFirst(30));
+            var8 = (IntNode) (this.field_ad.removeFirst(30));
             incrementValue$4 = var2;
             var2++;
             RoomComponent.field_i[incrementValue$4] = (int)var8.key;
-            this.field_Fb = this.field_Fb - var8.field_i;
+            this.field_Fb = this.field_Fb - var8.value;
             stackIn_33_0 = 1000;
             stackIn_33_1 = var2;
             if (stackIn_33_0 != stackIn_33_1) {
@@ -892,8 +892,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, RoomComponent.field_i, 0);
             var2 = 0;
             while (!this.field_bd.isEmpty((byte) 14)) {
-              var9Lifetime2 = (al) (this.field_bd.removeFirst(-101));
-              jaggl.OpenGL.glDeleteLists((int)var9Lifetime2.key, var9Lifetime2.field_i);
+              var9Lifetime2 = (IntNode) (this.field_bd.removeFirst(-101));
+              jaggl.OpenGL.glDeleteLists((int)var9Lifetime2.key, var9Lifetime2.value);
             }
             while (!this.field_nd.isEmpty((byte) 14)) {
               var10Lifetime2 = this.field_nd.removeFirst(-120);
@@ -905,8 +905,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         if ((decompiledFrameRemainder2) &&
           (decompiledFrameRemainder0)) {
           while (!this.field_bd.isEmpty((byte) 14)) {
-            var9Lifetime1 = (al) (this.field_bd.removeFirst(-101));
-            jaggl.OpenGL.glDeleteLists((int)var9Lifetime1.key, var9Lifetime1.field_i);
+            var9Lifetime1 = (IntNode) (this.field_bd.removeFirst(-101));
+            jaggl.OpenGL.glDeleteLists((int)var9Lifetime1.key, var9Lifetime1.value);
           }
           while (!this.field_nd.isEmpty((byte) 14)) {
             var10Lifetime1 = this.field_nd.removeFirst(-120);
@@ -919,8 +919,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDeleteObjectARB(var11Lifetime1.key);
           }
           while (!this.field_bd.isEmpty((byte) 14)) {
-            var12Lifetime1 = (al) (this.field_bd.removeFirst(-99));
-            jaggl.OpenGL.glDeleteLists((int)var12Lifetime1.key, var12Lifetime1.field_i);
+            var12Lifetime1 = (IntNode) (this.field_bd.removeFirst(-99));
+            jaggl.OpenGL.glDeleteLists((int)var12Lifetime1.key, var12Lifetime1.value);
           }
           if (!(this.Q(10) <= 100663296) &&
             !(bva.currentTimeMillis((byte) -107) <= this.field_Xc + 60000L)) {
@@ -1317,7 +1317,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException var3 = null;
         try {
           if (param0 != ItemModel.field_o) {
-            var3_int = dk.a(param0, 0);
+            var3_int = AnimationSequence.a(param0, 0);
             jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
             jaggl.OpenGL.glEnable(3168);
             jaggl.OpenGL.glTexGeni(8193, 9472, var3_int);
@@ -1661,7 +1661,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     }
 
     final synchronized void queueProgramDeletion(int param0, int param1, byte param2) {
-        al var4 = new al(param0);
+        IntNode var4 = new IntNode(param0);
         var4.key = (long)param1;
         if (param2 <= 41) {
           return;
@@ -1689,7 +1689,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
         if (this.field_r.a(-43)) {
           if (!this.field_Zc) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_Qb.a(AgeValidator.field_k, (byte) -37), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_Qb.writeColumnMajor4x4(AgeValidator.field_k, (byte) -37), 0);
             this.field_Zc = true;
             this.applyLightPositions(70);
             this.g((byte) 92);
@@ -1698,14 +1698,14 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             this.field_rd = false;
           } else {
             jaggl.OpenGL.glPushMatrix();
-            jaggl.OpenGL.glMultMatrixf(this.field_q.a(AgeValidator.field_k, (byte) -37), 0);
+            jaggl.OpenGL.glMultMatrixf(this.field_q.writeColumnMajor4x4(AgeValidator.field_k, (byte) -37), 0);
             this.field_rd = true;
           }
         } else {
           if (this.field_gb) {
             jaggl.OpenGL.glLoadIdentity();
           } else {
-            jaggl.OpenGL.glLoadMatrixf(this.field_q.a(AgeValidator.field_k, (byte) -37), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_q.writeColumnMajor4x4(AgeValidator.field_k, (byte) -37), 0);
           }
           this.field_rd = false;
         }
@@ -1811,7 +1811,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         if (param2 != 2) {
           return;
         }
-        al var4 = new al(param1);
+        IntNode var4 = new IntNode(param1);
         var4.key = (long)param0;
         this.field_Rc.addLast((byte) -67, var4);
     }

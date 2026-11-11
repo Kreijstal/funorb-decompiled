@@ -186,7 +186,7 @@ abstract class MenuScreen extends GameScreen {
               bv.d((byte) -55);
             }
             if (this.field_k.isRightPressed(97)) {
-              ila.a(true);
+              ChatOverlay.a(true);
             }
             return;
           }
@@ -455,7 +455,7 @@ abstract class MenuScreen extends GameScreen {
             if (3 == var7 &&
               var8 == 0) {
               if (!TextWidgetPainter.a(27)) {
-                uv.d(30785);
+                LegacyOpenGlBloomEffect.d(30785);
               } else {
                 ConstrainToRectangleLocomotor.a(param1, 11, (byte) 106);
                 PasswordValidator.field_n = -2;
@@ -533,7 +533,7 @@ abstract class MenuScreen extends GameScreen {
                 var8 == 0) {
                 var4_int = SecondaryNodeDequeIterator.field_a.m(-1);
                 var5 = SecondaryNodeDequeIterator.field_a.getCharacterChoice(0, 9);
-                var6 = SecondaryNodeDequeIterator.field_a.matchState.field_K;
+                var6 = SecondaryNodeDequeIterator.field_a.matchState.gameMode;
                 TextLayout.a(var4_int, (byte) 101, var6);
                 SecondaryNodeDequeIterator.field_a.setCharacterChoice(var5, 50, 0);
                 SecondaryNodeDequeIterator.field_a.initPlayers((byte) -49);

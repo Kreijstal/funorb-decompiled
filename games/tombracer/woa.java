@@ -23,7 +23,7 @@ final class woa extends DualLinkNode {
           return;
         }
         try {
-          dk.field_c = param2;
+          AnimationSequence.field_c = param2;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "woa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

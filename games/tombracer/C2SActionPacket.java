@@ -22,7 +22,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           }
           if (param0 != -33) {
             OpenGlToolkit var3 = (OpenGlToolkit) null;
-            C2SActionPacket.a(70, -25, (String) null, (OpenGlToolkit) null);
+            C2SActionPacket.compileAssemblyProgram(70, -25, (String) null, (OpenGlToolkit) null);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             bv.field_xb[var1_intLifetime1] = 0L;
@@ -47,7 +47,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         this.round = param0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 != 0) {
           field_j = -23;
@@ -56,7 +56,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         field_l = null;
     }
 
-    final void b(int param0, int param1) {
+    final void setRoom(int param0, int param1) {
         if (param0 != 8469) {
           this.setHash(-55, 80);
         }
@@ -81,7 +81,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
             param1.writeBits((byte) 3, IntrusiveDequeCursor.a(-113, this.orders[var3_int]), 7);
           }
           if (param0 != 200) {
-            C2SActionPacket.b(-52);
+            C2SActionPacket.releaseStatics(-52);
             param1.endBitWrite(-1826190686);
           } else {
             param1.endBitWrite(-1826190686);
@@ -135,7 +135,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         }
     }
 
-    final static pva a(int param0, int param1, String param2, OpenGlToolkit param3) {
+    final static pva compileAssemblyProgram(int param0, int param1, String param2, OpenGlToolkit param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         pva stackIn_2_0 = null;
@@ -222,7 +222,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setOrder(int param0, int param1, int param2) {
         this.orders[param1] = param2;
         if (param0 != 17) {
           BitPacketBuffer var5 = (BitPacketBuffer) null;

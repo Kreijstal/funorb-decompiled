@@ -28,7 +28,7 @@ final class CachedTextLayout extends TextLayout {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var5 = param4[param1];
-          RoomComponent.a(param0, 2097152, param1, param4);
+          RoomComponent.swapRoomDefinitions(param0, 2097152, param1, param4);
           var6 = param2;
           if (param3 != -65) {
             stackIn_3_0 = 30;
@@ -36,11 +36,11 @@ final class CachedTextLayout extends TextLayout {
           }
           for (var7 = param2; param0 > var7; var7++) {
             if (param4[var7].field_e.b((byte) -98) <= var5.field_e.b((byte) -105)) {
-              RoomComponent.a(var6, 2097152, var7, param4);
+              RoomComponent.swapRoomDefinitions(var6, 2097152, var7, param4);
               var6++;
             }
           }
-          RoomComponent.a(param0, param3 ^ -2097217, var6, param4);
+          RoomComponent.swapRoomDefinitions(param0, param3 ^ -2097217, var6, param4);
           stackIn_10_0 = var6;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,7 +57,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final void a(BitmapFont param0, byte param1, String param2, int param3, int param4, int param5, int param6, int param7) {
+    final void layoutParagraph(BitmapFont param0, byte param1, String param2, int param3, int param4, int param5, int param6, int param7) {
         kha stackIn_35_0;
         kha stackIn_35_1;
         int stackIn_35_2;

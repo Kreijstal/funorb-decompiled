@@ -81,7 +81,7 @@ final class gh extends ToolkitSprite {
         }
         var27.a(0.0f, 0.0f, (byte) 102, 0.0f, 0.0f, -param0 + param2, -param0 + param4, -param1 + param3, 1.0f, -param1 + param5);
         var27.translate(param1, -108, param0, 0.0f);
-        var12.a(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(62, (float)this.field_k));
+        var12.setScale(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(62, (float)this.field_k));
         this.field_c.a(pfa.field_i, false);
         this.field_c.F(-1662);
         this.field_c.y(2);
@@ -107,9 +107,9 @@ final class gh extends ToolkitSprite {
         this.field_c.a(pea.field_c, 1, -26);
         this.field_c.a(1, false, pea.field_c);
         this.field_c.g(3625, param3);
-        var8.a(0.0f, (float)this.field_l, false, (float)this.field_k);
+        var8.setScale(0.0f, (float)this.field_l, false, (float)this.field_k);
         var8.translate(param0, param1, 0);
-        var7.a(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(93, (float)this.field_k));
+        var7.setScale(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(93, (float)this.field_k));
         this.field_c.a(pfa.field_i, false);
         this.field_c.F(-1662);
         this.field_c.y(2);
@@ -214,14 +214,14 @@ final class gh extends ToolkitSprite {
         this.field_c.a(pea.field_c, 1, -74);
         this.field_c.a(1, false, pea.field_c);
         this.field_c.g(3625, param5);
-        var10.a(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(81, (float)this.field_k));
+        var10.setScale(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(81, (float)this.field_k));
         if (this.field_b) {
           param2 = this.field_l * param2 / this.paddedWidth();
           param3 = param3 * this.field_k / this.paddedHeight();
           param0 = param0 + param2 * this.field_g / this.field_l;
           param1 = param1 + param3 * this.field_j / this.field_k;
         }
-        var11.a(0.0f, (float)param2, false, (float)param3);
+        var11.setScale(0.0f, (float)param2, false, (float)param3);
         var11.translate(param0, param1, 0);
         this.field_c.a(pfa.field_i, false);
         this.field_c.F(-1662);

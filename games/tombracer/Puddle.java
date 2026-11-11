@@ -5,7 +5,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
     private int endSize;
     private Room room;
     private int field_n;
-    static jea field_v;
+    static UiComponent field_v;
     private int size;
     private int startSize;
     private int previousY;

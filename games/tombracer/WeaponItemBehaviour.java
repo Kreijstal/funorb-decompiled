@@ -6,7 +6,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
     static float field_s;
 
     final void g(byte param0) {
-        this.field_t = this.field_t.e(-1);
+        this.field_t = this.field_t.createCopy(-1);
         if (param0 != 3) {
           Weapon var3 = (Weapon) null;
           this.a((Weapon) null, 81);
@@ -58,7 +58,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
             field_s = 2.416393518447876f;
           }
           super.encode(param0, param1);
-          this.field_t.a(param1, (byte) 7);
+          this.field_t.encode(param1, (byte) 7);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ef.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

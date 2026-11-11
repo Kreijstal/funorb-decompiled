@@ -20,7 +20,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
             WhiteLightShooterComponent.a(106, (byte) 37, 71);
           }
           var5 = null;
-          var5_ref = kq.a(95, param0);
+          var5_ref = PlayerInputQueue.findRoomDefinition(95, param0);
           stackIn_3_0 = gba.a(param3, param1, var5_ref, 21789, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

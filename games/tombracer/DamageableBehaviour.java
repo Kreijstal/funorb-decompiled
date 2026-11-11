@@ -43,7 +43,7 @@ final class DamageableBehaviour extends Behaviour {
         var2Lifetime1.destroy(2, (byte) 9);
     }
 
-    private final int a(int param0, Effect param1) {
+    private final int reactToEffect(int param0, Effect param1) {
         int var3_int = 0;
         int stackIn_2_0 = 0;
         int stackIn_15_0 = 0;
@@ -164,7 +164,7 @@ final class DamageableBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           var7_int = -96 / ((param4 - 62) / 52);
-          stackIn_1_0 = this.a(94, param2);
+          stackIn_1_0 = this.reactToEffect(94, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -245,7 +245,7 @@ final class DamageableBehaviour extends Behaviour {
           if (param0 != 25940) {
             this.vulnerabilities = (FlagSet) null;
           }
-          stackIn_3_0 = this.a(76, param2);
+          stackIn_3_0 = this.reactToEffect(76, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -339,7 +339,7 @@ final class DamageableBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -85) {
-            stackIn_4_0 = this.a(127, param1);
+            stackIn_4_0 = this.reactToEffect(127, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = -55;

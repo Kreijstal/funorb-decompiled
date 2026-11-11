@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class HardwareSceneLight extends SceneLight {
-    static jea field_o;
+    static UiComponent field_o;
 
     final static void c(byte param0) {
         int var1 = -20 % ((64 - param0) / 44);
@@ -13,14 +13,14 @@ final class HardwareSceneLight extends SceneLight {
     final void setIntensity(byte param0, float param1) {
         this.intensity = param1;
         if (param0 <= 77) {
-          field_o = (jea) null;
+          field_o = (UiComponent) null;
         }
     }
 
     final void setRadius(byte param0, int param1) {
         this.radius = param1;
         if (param0 != 62) {
-          field_o = (jea) null;
+          field_o = (UiComponent) null;
         }
     }
 
@@ -89,7 +89,7 @@ final class HardwareSceneLight extends SceneLight {
     final void setColour(int param0, int param1) {
         this.colour = param1;
         if (param0 != 255) {
-          field_o = (jea) null;
+          field_o = (UiComponent) null;
         }
     }
 

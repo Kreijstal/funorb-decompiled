@@ -10,22 +10,22 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
     }
 
     final static void a(boolean param0, boolean param1, boolean param2, int param3) {
-        jea stackIn_7_0 = null;
+        UiComponent stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
-        jea stackIn_14_0 = null;
+        UiComponent stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         boolean stackIn_15_2 = false;
-        jea stackIn_19_0 = null;
+        UiComponent stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         boolean stackIn_20_2 = false;
-        jea stackIn_55_0 = null;
+        UiComponent stackIn_55_0 = null;
         int stackIn_55_1 = 0;
         boolean stackIn_56_2 = false;
-        jea stackIn_62_0 = null;
+        UiComponent stackIn_62_0 = null;
         int stackIn_62_1 = 0;
         boolean stackIn_63_2 = false;
-        jea stackIn_67_0 = null;
+        UiComponent stackIn_67_0 = null;
         int stackIn_67_1 = 0;
         boolean stackIn_68_2 = false;
         int var5;
@@ -35,30 +35,30 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           PerlinNoise2D.field_t.field_r = null;
           stackIn_55_0 = nra.field_a;
           stackIn_55_1 = 65;
-          stackIn_56_2 = (param0) && (!param2) && (!uv.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);
-          ((jea) (Object) stackIn_55_0).c(stackIn_55_1, stackIn_56_2);
+          stackIn_56_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);
+          ((UiComponent) (Object) stackIn_55_0).c(stackIn_55_1, stackIn_56_2);
           stackIn_62_0 = OpenGlToolkit.field_fd;
           stackIn_62_1 = -67;
-          stackIn_63_2 = (param0) && (!param2) && (!uv.field_o) && (null == C2SChooseRewardPacket.field_a) && (null == WaveformOperator.field_n);
-          ((jea) (Object) stackIn_62_0).c(stackIn_62_1, stackIn_63_2);
+          stackIn_63_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (null == WaveformOperator.field_n);
+          ((UiComponent) (Object) stackIn_62_0).c(stackIn_62_1, stackIn_63_2);
           stackIn_67_0 = VboVertexArray.field_k;
           stackIn_67_1 = -127;
-          stackIn_68_2 = (param0) && (!param2) && (uv.field_o);
-          ((jea) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
+          stackIn_68_2 = (param0) && (!param2) && (LegacyOpenGlBloomEffect.field_o);
+          ((UiComponent) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
         } else {
           PerlinNoise2D.field_t.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
           stackIn_7_0 = nra.field_a;
           stackIn_7_1 = 65;
-          stackIn_8_2 = (param0) && (!param2) && (!uv.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);
-          ((jea) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_8_2);
+          stackIn_8_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (WaveformOperator.field_n == null);
+          ((UiComponent) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_8_2);
           stackIn_14_0 = OpenGlToolkit.field_fd;
           stackIn_14_1 = -67;
-          stackIn_15_2 = (param0) && (!param2) && (!uv.field_o) && (null == C2SChooseRewardPacket.field_a) && (null == WaveformOperator.field_n);
-          ((jea) (Object) stackIn_14_0).c(stackIn_14_1, stackIn_15_2);
+          stackIn_15_2 = (param0) && (!param2) && (!LegacyOpenGlBloomEffect.field_o) && (null == C2SChooseRewardPacket.field_a) && (null == WaveformOperator.field_n);
+          ((UiComponent) (Object) stackIn_14_0).c(stackIn_14_1, stackIn_15_2);
           stackIn_19_0 = VboVertexArray.field_k;
           stackIn_19_1 = -127;
-          stackIn_20_2 = (param0) && (!param2) && (uv.field_o);
-          ((jea) (Object) stackIn_19_0).c(stackIn_19_1, stackIn_20_2);
+          stackIn_20_2 = (param0) && (!param2) && (LegacyOpenGlBloomEffect.field_o);
+          ((UiComponent) (Object) stackIn_19_0).c(stackIn_19_1, stackIn_20_2);
         }
         oca.field_b.field_a.e((byte) -111);
         if (!param1) {
@@ -94,7 +94,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           CharacterChoiceFactory.a(aca.field_i, true, 0, 17, eda.field_e, param3);
         }
         if (0 != BrickOperator.field_v.field_y) {
-          uv.field_o = false;
+          LegacyOpenGlBloomEffect.field_o = false;
         }
     }
 
@@ -258,7 +258,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param0);
               var3 = sda.appendSessionParameters(param1, -1, var3);
-              SimpleBlockBehaviour.a(1, param1, var3.toString(), true);
+              SimpleBlockBehaviour.openUrl(1, param1, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;

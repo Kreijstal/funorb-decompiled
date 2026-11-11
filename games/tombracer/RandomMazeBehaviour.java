@@ -302,7 +302,7 @@ final class RandomMazeBehaviour extends Behaviour {
         int var20;
         int var21;
         int var22;
-        av var23;
+        MazeSolver var23;
         int[][] var24;
         Room var25;
         BitPacketBuffer var26;
@@ -354,13 +354,13 @@ final class RandomMazeBehaviour extends Behaviour {
         var11 = null;
         while (var9 == 0) {
           var12_ref_loa = RidgedNoise3D.createMazeGenerator((byte) 27, var3, this.generatorType);
-          this.field_z = var12_ref_loa.a(var5, var6, var4, -122, var8);
+          this.field_z = var12_ref_loa.generateMaze(var5, var6, var4, -122, var8);
           this.field_z.setCell(1 + var7, 0, 0, var6);
           this.field_z.setCell(0, 0, 0, var6);
-          var23 = new av(this.field_z);
+          var23 = new MazeSolver(this.field_z);
           var11 = var23;
-          var23.a(var7 + 1, 0, var6, 124, var6);
-          var31 = var23.b((byte) 125);
+          var23.solve(var7 + 1, 0, var6, 124, var6);
+          var31 = var23.getPath((byte) 125);
           var24 = var31;
           var13_ref_int____ = var24;
           if (var13_ref_int____ != null) {
@@ -424,7 +424,7 @@ final class RandomMazeBehaviour extends Behaviour {
           }
         }
         if (this.itemCount > 0) {
-          var36 = ((av) (var11)).a((byte) -72);
+          var36 = ((MazeSolver) (var11)).findDeadEnds((byte) -72);
           var37 = new int[this.itemCount][2];
           for (var20 = 0; var20 < this.itemCount; var20++) {
             if (var36.length <= var20) {

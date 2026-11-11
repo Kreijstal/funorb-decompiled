@@ -53,14 +53,14 @@ abstract class PrefabComponent extends RoomComponent {
         Trap var13 = null;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!this.field_z.includes(param5, 14530)) {
+          if (!this.variantMask.includes(param5, 14530)) {
             return;
           }
           var13 = this.createTrap(param0, 3, param2);
           if (param6 != null) {
             var13.setAttachedToParent(true, 11468);
           }
-          var13.setVariantMask(this.field_z, (byte) 121);
+          var13.setVariantMask(this.variantMask, (byte) 121);
           var13.setLocalX(1, this.x);
           if (!param1) {
             this.field_A = (Trap) null;

@@ -15,7 +15,7 @@ final class RandomBrickOperator extends TextureOperator {
     private int field_m;
     private int field_n;
     private int field_o;
-    static jea field_r;
+    static UiComponent field_r;
     private int field_t;
 
     private final void a(int param0, int param1, int[][] param2, byte param3, int param4, int param5, Random param6) {

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta extends jea {
+final class ta extends UiComponent {
     static int[] field_vb;
     static ka[] field_ub;
-    private jea field_wb;
-    private jea field_tb;
+    private UiComponent field_wb;
+    private UiComponent field_tb;
 
-    ta(long param0, Sprite param1, Sprite param2, int param3, jea param4, String param5) {
-        this(param0, (jea) null, param4, param5);
+    ta(long param0, Sprite param1, Sprite param2, int param3, UiComponent param4, String param5) {
+        this(param0, (UiComponent) null, param4, param5);
         try {
           this.field_wb.field_bb = param3;
           this.field_wb.field_R = param2;
@@ -22,7 +22,7 @@ final class ta extends jea {
         if (param0 == 95) {
           return this.field_wb.b((byte) 69) - (-param1 - this.field_tb.b((byte) 69));
         }
-        this.field_tb = (jea) null;
+        this.field_tb = (UiComponent) null;
         return this.field_wb.b((byte) 69) - (-param1 - this.field_tb.b((byte) 69));
     }
 
@@ -34,22 +34,22 @@ final class ta extends jea {
         int var3 = 0;
         int var3Lifetime1;
         if (param0 > 109) {
-          this.field_wb.a(this.field_wb.b((byte) 69), this.field_t, -23776, 0, 0);
+          this.field_wb.setBounds(this.field_wb.b((byte) 69), this.field_t, -23776, 0, 0);
           var3 = param1 + this.field_wb.field_G;
-          this.field_tb.a(this.field_G - var3, this.field_t, -23776, 0, var3);
+          this.field_tb.setBounds(this.field_G - var3, this.field_t, -23776, 0, var3);
           return;
         }
         field_ub = (ka[]) null;
-        this.field_wb.a(this.field_wb.b((byte) 69), this.field_t, -23776, 0, 0);
+        this.field_wb.setBounds(this.field_wb.b((byte) 69), this.field_t, -23776, 0, 0);
         var3Lifetime1 = param1 + this.field_wb.field_G;
-        this.field_tb.a(this.field_G - var3Lifetime1, this.field_t, -23776, 0, var3Lifetime1);
+        this.field_tb.setBounds(this.field_G - var3Lifetime1, this.field_t, -23776, 0, var3Lifetime1);
     }
 
-    private ta(long param0, jea param1, jea param2, String param3) {
-        super(param0, (jea) null);
+    private ta(long param0, UiComponent param1, UiComponent param2, String param3) {
+        super(param0, (UiComponent) null);
         try {
-          this.field_wb = new jea(0L, param1);
-          this.field_tb = new jea(0L, param2);
+          this.field_wb = new UiComponent(0L, param1);
+          this.field_tb = new UiComponent(0L, param2);
           this.field_tb.field_r = param3;
           this.b(-124, this.field_wb);
           this.b(-124, this.field_tb);
@@ -103,7 +103,7 @@ final class ta extends jea {
         if (param2 > -85) {
           return;
         }
-        this.a(param0, param4, -23776, param1, param5);
+        this.setBounds(param0, param4, -23776, param1, param5);
         this.b((byte) 123, param3);
     }
 

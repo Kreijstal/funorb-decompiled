@@ -38,7 +38,7 @@ final class PrimMazeGenerator extends MazeGenerator {
               var5 = (oda) (this.field_d.next(param3 ^ 126));
               var7++;
             }
-            var19 = this.a(4, param3 - 2354);
+            var19 = this.randomPermutation(4, param3 - 2354);
             var9 = var5.field_g;
             var10 = var5.field_f;
             var11 = 0;
@@ -54,7 +54,7 @@ final class PrimMazeGenerator extends MazeGenerator {
               var14 = var10 + dma.field_k[var19[var12]][1] * 2;
               if (param0.isInBounds(var13, var14, (byte) -128) &&
                 0 == param0.getCell((byte) -5, var14, var13)) {
-                this.a(var10, (byte) -42, param0, var9, var14, var13);
+                this.carvePassage(var10, (byte) -42, param0, var9, var14, var13);
                 this.a(param3 + 0, param0, var9, var10);
                 var5.unlink(param3 ^ 30);
                 var11 = 1;

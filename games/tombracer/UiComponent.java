@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class jea extends um {
+class UiComponent extends um {
     int field_t;
     int field_ab;
     Sprite field_R;
@@ -68,13 +68,13 @@ class jea extends um {
         field_nb = null;
     }
 
-    final void b(int param0, jea param1) {
+    final void b(int param0, UiComponent param1) {
         try {
           if (null == this.field_J) {
             this.field_J = new IntrusiveDeque();
           }
           if (param0 >= -121) {
-            this.a(33, true, 32, -78, -54, -31);
+            this.updateTree(33, true, 32, -78, -54, -31);
           }
           this.field_J.addLast((byte) -115, param1);
         } catch (RuntimeException runtimeException) {
@@ -82,14 +82,14 @@ class jea extends um {
         }
     }
 
-    final void applyStyle(boolean param0, jea param1) {
+    final void applyStyle(boolean param0, UiComponent param1) {
         boolean stackIn_91_1 = false;
         RuntimeException stackIn_104_0 = null;
         StringBuilder stackIn_104_1 = null;
         String stackIn_105_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        jea var4 = null;
+        UiComponent var4 = null;
         try {
           if (param1 != null) {
             if (param1.field_lb != null) {
@@ -208,8 +208,8 @@ class jea extends um {
             }
           }
           if (param0) {
-            var4 = (jea) null;
-            this.a(-110, (jea) null);
+            var4 = (UiComponent) null;
+            this.a(-110, (UiComponent) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,15 +226,15 @@ class jea extends um {
         }
     }
 
-    final int a(int param0, boolean param1) {
-        jea var4 = null;
+    final int measureContentWidth(int param0, boolean param1) {
+        UiComponent var4 = null;
         int var5 = 0;
         int var4_int = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         int var4_intLifetime1;
         if (param1) {
-          jea var7 = (jea) null;
-          this.b(-22, (jea) null);
+          UiComponent var7 = (UiComponent) null;
+          this.b(-22, (UiComponent) null);
         }
         int var3 = 0;
         if (null != this.field_r &&
@@ -251,20 +251,20 @@ class jea extends um {
           }
         }
         if (this.field_J != null) {
-          var4 = (jea) (this.field_J.first(-80));
+          var4 = (UiComponent) (this.field_J.first(-80));
           while (var4 != null) {
             var5 = var4.field_G + var4.field_qb;
             if (var5 > var3) {
               var3 = var5;
             }
-            var4 = (jea) (this.field_J.next(115));
+            var4 = (UiComponent) (this.field_J.next(115));
           }
         }
         return var3;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
-        jea var11_ref_jea = null;
+    final void layoutVerticalContent(boolean param0, int param1, int param2, int param3) {
+        UiComponent var11_ref_jea = null;
         int var10 = 0;
         int var12 = TombRacer.field_G ? 1 : 0;
         int var5 = -87 / ((1 - param2) / 57);
@@ -275,11 +275,11 @@ class jea extends um {
         int var10Lifetime1;
         if (!param0) {
           var10 = 0;
-          var11_ref_jea = (jea) (this.field_J.first(-80));
+          var11_ref_jea = (UiComponent) (this.field_J.first(-80));
           while (var11_ref_jea != null) {
             var11_ref_jea.field_K = -var11_ref_jea.field_T + var10;
             var10 = var10 + (param1 + (var11_ref_jea.field_O + var11_ref_jea.field_t));
-            var11_ref_jea = (jea) (this.field_J.next(127));
+            var11_ref_jea = (UiComponent) (this.field_J.next(127));
           }
           var9 = var10 - param1;
         }
@@ -307,18 +307,18 @@ class jea extends um {
         FuseBehaviour.field_w = !param1 ? true : false;
         int var3 = -103 / ((-16 - param0) / 34);
         DrawOfferMenu.field_s = !param1 ? true : false;
-        this.a(-1, true, SoftwareRasterizer.height, SoftwareRasterizer.width, 0, 0);
+        this.updateTree(-1, true, SoftwareRasterizer.height, SoftwareRasterizer.width, 0, 0);
     }
 
     final void a(int param0) {
-        jea var4 = null;
+        UiComponent var4 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_J != null) {
-          var4 = (jea) (this.field_J.last(param0 ^ -10967));
+          var4 = (UiComponent) (this.field_J.last(param0 ^ -10967));
           while (var4 != null) {
             var4.field_Q = true;
             var4.a(-10966);
-            var4 = (jea) (this.field_J.previous(-1));
+            var4 = (UiComponent) (this.field_J.previous(-1));
           }
         }
         if (param0 != -10966) {
@@ -341,7 +341,7 @@ class jea extends um {
           var3.writeShort(param1 ^ -1477660827, param2.field_j);
           if (param1 != 1325) {
             var4 = (aca) null;
-            jea.a(-121, 50, (aca) null);
+            UiComponent.a(-121, 50, (aca) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -358,11 +358,11 @@ class jea extends um {
         }
     }
 
-    jea(long param0, jea param1) {
+    UiComponent(long param0, UiComponent param1) {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    private final void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    private final void updateTree(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         boolean stackIn_31_1 = false;
         boolean stackIn_38_1 = false;
         int var7;
@@ -371,7 +371,7 @@ class jea extends um {
         int var10;
         int var11;
         int var12;
-        jea var13;
+        UiComponent var13;
         int var14;
         int var7Lifetime1;
         int var7Lifetime2;
@@ -440,10 +440,10 @@ class jea extends um {
         stackIn_38_1 = (this.field_pb) && (this.field_E == RangeOperator.field_p) && (param1);
         this.field_o = stackIn_38_1;
         if (this.field_J != null) {
-          var13 = (jea) (this.field_J.last(3));
+          var13 = (UiComponent) (this.field_J.last(3));
           while (var13 != null) {
-            var13.a(-1, param1, this.field_t, this.field_G, this.field_q, this.field_A);
-            var13 = (jea) (this.field_J.previous(-1));
+            var13.updateTree(-1, param1, this.field_t, this.field_G, this.field_q, this.field_A);
+            var13 = (UiComponent) (this.field_J.previous(-1));
           }
         }
         if (this.field_pb) {
@@ -480,10 +480,10 @@ class jea extends um {
         if (param0 != 69) {
           return 93;
         }
-        return this.a(2147483647, false);
+        return this.measureContentWidth(2147483647, false);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         this.field_T = param3;
         this.field_K = 0;
         if (param2 == -23776) {
@@ -497,7 +497,7 @@ class jea extends um {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, int param7, int param8, boolean param9, int param10) {
+    private final void drawTree(boolean param0, int param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, int param7, int param8, boolean param9, int param10) {
         boolean stackIn_5_0 = false;
         int var12;
         int var13;
@@ -512,7 +512,7 @@ class jea extends um {
         int var22;
         int var23_int;
         String var23;
-        jea var23_ref;
+        UiComponent var23_ref;
         int var24;
         int var25;
         String var26;
@@ -668,21 +668,21 @@ class jea extends um {
           }
         }
         if (this.field_J != null) {
-          var23_ref = (jea) (this.field_J.first(-80));
+          var23_ref = (UiComponent) (this.field_J.first(-80));
           while (var23_ref != null) {
-            var23_ref.a(param0, 0, this.field_t, param3, param4, param5, param6, var19 + this.field_q, this.field_A + var20, this.field_L, this.field_G);
-            var23_ref = (jea) (this.field_J.next(108));
+            var23_ref.drawTree(param0, 0, this.field_t, param3, param4, param5, param6, var19 + this.field_q, this.field_A + var20, this.field_L, this.field_G);
+            var23_ref = (UiComponent) (this.field_J.next(108));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
-    jea(long param0, jea param1, String param2) {
+    UiComponent(long param0, UiComponent param1, String param2) {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
     final void b(int param0, boolean param1) {
-        this.a(false, 0, SoftwareRasterizer.height, param1, false, true, false, 0, 0, false, SoftwareRasterizer.width);
+        this.drawTree(false, 0, SoftwareRasterizer.height, param1, false, true, false, 0, 0, false, SoftwareRasterizer.width);
         if (param0 <= 34) {
           this.field_v = -101;
         }
@@ -726,9 +726,9 @@ class jea extends um {
         }
     }
 
-    final void a(int param0, jea param1) {
+    final void a(int param0, UiComponent param1) {
         IntrusiveDequeCursor var3 = null;
-        jea var4 = null;
+        UiComponent var4 = null;
         int var5 = 0;
         boolean stackIn_11_1 = false;
         RuntimeException stackIn_16_0 = null;
@@ -740,10 +740,10 @@ class jea extends um {
         try {
           if (null != this.field_J) {
             var3 = new IntrusiveDequeCursor(this.field_J);
-            var4 = (jea) (var3.first(true));
+            var4 = (UiComponent) (var3.first(true));
             while (var4 != null) {
               var4.a(-124, param1);
-              var4 = (jea) (var3.next(-1));
+              var4 = (UiComponent) (var3.next(-1));
             }
           }
           if (param0 > -64) {
@@ -769,7 +769,7 @@ class jea extends um {
         }
     }
 
-    final void a(int param0, jea param1, jea param2, byte param3) {
+    final void placeBelow(int param0, UiComponent param1, UiComponent param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -809,7 +809,7 @@ class jea extends um {
         }
     }
 
-    public jea() {
+    public UiComponent() {
         this.field_ab = -1;
         this.field_L = false;
         this.field_N = -1;
@@ -828,7 +828,7 @@ class jea extends um {
         this.field_W = -2147483648;
     }
 
-    jea(long param0, jea param1, int param2, int param3, int param4, int param5, String param6) {
+    UiComponent(long param0, UiComponent param1, int param2, int param3, int param4, int param5, String param6) {
         this.field_ab = -1;
         this.field_L = false;
         this.field_N = -1;

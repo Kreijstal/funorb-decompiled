@@ -13,7 +13,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
     private IntrusiveDeque models;
     private int width;
     private int height;
-    static jea field_s;
+    static UiComponent field_s;
     private VariantMask field_o;
     private boolean modelsBuilt;
 
@@ -120,7 +120,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
 
     public final int getPreviousX(int param0) {
         if (param0 <= 90) {
-          field_s = (jea) null;
+          field_s = (UiComponent) null;
         }
         return this.x;
     }
@@ -277,7 +277,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            field_s = (jea) null;
+            field_s = (UiComponent) null;
           }
           var5_int = SimulationObserver.a(this.width, 12, this.y, this.height, param3, this.x, 2);
           if (var5_int == -1) {

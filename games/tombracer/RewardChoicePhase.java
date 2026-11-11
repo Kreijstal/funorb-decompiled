@@ -6,11 +6,11 @@ final class RewardChoicePhase extends MatchPhase {
     private int field_r;
     private int field_v;
     private int field_s;
-    private int field_m;
+    private int selectedColumn;
     static String field_w;
     static int[] field_t;
     private CommonChooseReward rewardChoice;
-    private int field_u;
+    private int selectedRow;
     static sq field_n;
     private RewardChoiceSlot[][] field_p;
 
@@ -33,7 +33,7 @@ final class RewardChoicePhase extends MatchPhase {
             83 != param2) {
             return false;
           }
-          this.i(12721);
+          this.confirmSelection(12721);
           return true;
         }
         return false;
@@ -94,7 +94,7 @@ final class RewardChoicePhase extends MatchPhase {
               }
             }
           }
-          this.h(0);
+          this.selectColumn(0);
           TripBeamComponent.b(1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -170,8 +170,8 @@ final class RewardChoicePhase extends MatchPhase {
               var12_ref_fv = this.field_p[var10][var11_int];
               if (var12_ref_fv != null) {
                 if (this.isLocalPlayersTurn(true) &&
-                  var10 == this.field_u &&
-                  var11_int == this.field_m) {
+                  var10 == this.selectedRow &&
+                  var11_int == this.selectedColumn) {
                   tga.field_a.c(SoundEvent.a(false, wga.field_a[this.screen.localPlayerIndex]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
                 }
                 var12_ref_fv.a(1);
@@ -256,7 +256,7 @@ final class RewardChoicePhase extends MatchPhase {
         }
     }
 
-    private final boolean b(int param0, int param1, byte param2) {
+    private final boolean selectCell(int param0, int param1, byte param2) {
         RewardChoiceSlot var4;
         if (!this.isLocalPlayersTurn(true)) {
           return false;
@@ -269,7 +269,7 @@ final class RewardChoicePhase extends MatchPhase {
           }
           var4 = this.field_p[param1][param0];
           if (param2 < 78) {
-            this.a(32, 41, (byte) 103);
+            this.moveSelection(32, 41, (byte) 103);
           }
           if (var4 == null) {
             return false;
@@ -277,8 +277,8 @@ final class RewardChoicePhase extends MatchPhase {
           if (!this.rewardChoice.isRewardAvailable((byte) 119, var4.field_f)) {
             return false;
           }
-          this.field_m = param0;
-          this.field_u = param1;
+          this.selectedColumn = param0;
+          this.selectedRow = param1;
           return true;
         }
         return false;
@@ -291,21 +291,21 @@ final class RewardChoicePhase extends MatchPhase {
         return true;
     }
 
-    final void a(int param0, boolean param1, int param2) {
+    final void announceChoice(int param0, boolean param1, int param2) {
         int var4 = 0;
         FloatingMessage var5 = null;
         FloatingMessage var6 = null;
         if (this.rewardChoice.getCurrentPlayerId(-1) == param0) {
           if (param2 == -1) {
             var6 = RewardChoicePhase.createTextMessage(-9, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
-            iqa.field_c.a(0, var6);
+            iqa.field_c.addMessageNow(0, var6);
             this.rewardChoice.a(param2, (byte) 112);
           } else {
             var4 = this.rewardChoice.getReward(-108, param2);
             this.rewardChoice.a(param2, (byte) 119);
-            this.h(0);
+            this.selectColumn(0);
             var5 = RewardChoicePhase.createTextMessage(-58, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
-            iqa.field_c.a(0, var5);
+            iqa.field_c.addMessageNow(0, var5);
           }
         }
         if (!param1) {
@@ -313,29 +313,29 @@ final class RewardChoicePhase extends MatchPhase {
         }
     }
 
-    private final void g(int param0) {
+    private final void handleInput(int param0) {
         if (this.field_v == 0) {
           return;
         }
         if (ProceduralTextureProvider.field_c &&
-          this.a(GridWidgetContainer.field_B, 25006, AgeValidator.field_j) &&
+          this.selectAt(GridWidgetContainer.field_B, 25006, AgeValidator.field_j) &&
           PlayerModel.field_b == 1) {
-          this.i(12721);
+          this.confirmSelection(12721);
         }
         if (this.screen.isActionJustPressed(param0, 2)) {
-          this.a(0, -1, (byte) 56);
+          this.moveSelection(0, -1, (byte) 56);
         }
         if (this.screen.isActionJustPressed(0, 3)) {
-          this.a(0, 1, (byte) 80);
+          this.moveSelection(0, 1, (byte) 80);
         }
         if (this.screen.isActionJustPressed(0, 0)) {
-          this.a(-1, 0, (byte) 51);
+          this.moveSelection(-1, 0, (byte) 51);
         }
         if (this.screen.isActionJustPressed(0, 1)) {
-          this.a(1, 0, (byte) 73);
+          this.moveSelection(1, 0, (byte) 73);
         }
         if (this.screen.isActionJustPressed(0, 4)) {
-          this.i(12721);
+          this.confirmSelection(12721);
         }
     }
 
@@ -348,11 +348,11 @@ final class RewardChoicePhase extends MatchPhase {
         return stackIn_6_0;
     }
 
-    private final void i(int param0) {
+    private final void confirmSelection(int param0) {
         if (!this.isLocalPlayersTurn(true)) {
           return;
         }
-        int var2 = this.field_p[this.field_u][this.field_m].field_f;
+        int var2 = this.field_p[this.selectedRow][this.selectedColumn].field_f;
         if (!this.rewardChoice.isRewardAvailable((byte) 127, var2)) {
           return;
         }
@@ -374,7 +374,7 @@ final class RewardChoicePhase extends MatchPhase {
         this.rewardChoice.d((byte) -124);
         if (param1 &&
           this.isLocalPlayersTurn(true)) {
-          this.g(param0 - 80);
+          this.handleInput(param0 - 80);
         }
         if (param0 != 80) {
           this.allowsChat(-116);
@@ -393,9 +393,9 @@ final class RewardChoicePhase extends MatchPhase {
         }
     }
 
-    private final void h(int param0) {
-        this.field_m = param0;
-        this.field_u = 0;
+    private final void selectColumn(int param0) {
+        this.selectedColumn = param0;
+        this.selectedRow = 0;
     }
 
     final CommonChooseReward getRewardChoice(byte param0) {
@@ -403,21 +403,21 @@ final class RewardChoicePhase extends MatchPhase {
         return this.rewardChoice;
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean selectAt(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         RewardChoiceSlot var6;
         int var7;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param1 != 25006) {
-          this.h(-51);
+          this.selectColumn(-51);
         }
         for (var4 = 0; this.field_q > var4; var4++) {
           for (var5 = 0; this.field_s > var5; var5++) {
             var6 = this.field_p[var4][var5];
             if (var6 != null &&
               var6.a(param0, false, param2)) {
-              return this.b(var5, var4, (byte) 122);
+              return this.selectCell(var5, var4, (byte) 122);
             }
           }
         }
@@ -460,7 +460,7 @@ final class RewardChoicePhase extends MatchPhase {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void moveSelection(int param0, int param1, byte param2) {
         int var4;
         RewardChoiceSlot var5;
         int var6;
@@ -473,23 +473,23 @@ final class RewardChoicePhase extends MatchPhase {
           this.field_v = 58;
         }
         while (var4 == 0) {
-          this.field_m = this.field_m + param1;
-          this.field_u = this.field_u + param0;
-          if (this.field_m >= 0) {
-            if (this.field_s <= this.field_m) {
-              this.field_m = 0;
+          this.selectedColumn = this.selectedColumn + param1;
+          this.selectedRow = this.selectedRow + param0;
+          if (this.selectedColumn >= 0) {
+            if (this.field_s <= this.selectedColumn) {
+              this.selectedColumn = 0;
             }
           } else {
-            this.field_m = this.field_s - 1;
+            this.selectedColumn = this.field_s - 1;
           }
-          if (this.field_u >= 0) {
-            if (this.field_u >= this.field_q) {
-              this.field_u = 0;
+          if (this.selectedRow >= 0) {
+            if (this.selectedRow >= this.field_q) {
+              this.selectedRow = 0;
             }
           } else {
-            this.field_u = -1 + this.field_q;
+            this.selectedRow = -1 + this.field_q;
           }
-          var5 = this.field_p[this.field_u][this.field_m];
+          var5 = this.field_p[this.selectedRow][this.selectedColumn];
           if (var5 == null) {
             var4 = 0;
             continue;

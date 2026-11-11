@@ -201,7 +201,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
           if (!ni.field_c) {
             return;
           }
-          av.a(param4, 20, param7, -5327, param6, param5, param2, param2, param1);
+          MazeSolver.a(param4, 20, param7, -5327, param6, param5, param2, param2, param1);
           SimpleMoveLocomotor.field_s.c(-73, param0);
           if (!param0) {
             return;

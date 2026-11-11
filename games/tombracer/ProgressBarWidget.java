@@ -115,10 +115,10 @@ final class ProgressBarWidget extends UiWidget {
         }
         int var5 = param0 + this.field_i;
         int var6 = param1 + this.field_n;
-        this.a(var6, this.field_w[param2], var5, 93);
+        this.drawRoundedStripes(var6, this.field_w[param2], var5, 93);
         if (this.field_B < 65536) {
           tga.a(-21953, (this.field_B * this.field_m >> 16) + var5, this.field_m + var5, var6, var6 + this.field_p);
-          this.a(var6, this.field_w[1], var5, 115);
+          this.drawRoundedStripes(var6, this.field_w[1], var5, 115);
           pfa.a(param2 + 1);
         }
     }
@@ -180,7 +180,7 @@ final class ProgressBarWidget extends UiWidget {
         return var5;
     }
 
-    private final void a(int param0, Sprite param1, int param2, int param3) {
+    private final void drawRoundedStripes(int param0, Sprite param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

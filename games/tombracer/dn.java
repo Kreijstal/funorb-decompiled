@@ -3,7 +3,7 @@
  */
 final class dn {
     static hla field_b;
-    static jea field_a;
+    static UiComponent field_a;
     static ToolkitSprite[] field_d;
     private static String[] field_c;
 

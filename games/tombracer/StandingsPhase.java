@@ -220,7 +220,7 @@ final class StandingsPhase extends MatchPhase {
           var6 = 40;
           var7 = var3;
           var8 = var4 - 80;
-          kq.field_a.a(var7 - (kq.field_a.width() >> 1), var8 - (kq.field_a.height() >> 1));
+          PlayerInputQueue.field_a.a(var7 - (PlayerInputQueue.field_a.width() >> 1), var8 - (PlayerInputQueue.field_a.height() >> 1));
           var9 = this.screen.m(-1);
           stackIn_4_0 = (pl.a((byte) 64) != var9) ? 0 : 1;
           var11 = stackIn_4_0;

@@ -16,7 +16,7 @@ final class nk extends IntrusiveNode {
         if (param0 > -26) {
           field_k = (SpriteData[]) null;
         }
-        var1 = uv.b(false);
+        var1 = LegacyOpenGlBloomEffect.b(false);
         if (var1 == null) {
           return false;
         }

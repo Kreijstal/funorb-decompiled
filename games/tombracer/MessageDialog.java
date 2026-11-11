@@ -81,13 +81,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         if (param0) {
           var2 = new sr(this, this.field_ab, fua.field_e);
           var2.a(GameAssetLoader.field_i, 15, -127);
-          this.a(101, var2);
+          this.transitionToContent(101, var2);
           return;
         }
         this.field_Y = false;
         var2Lifetime1 = new sr(this, this.field_ab, fua.field_e);
         var2Lifetime1.a(GameAssetLoader.field_i, 15, -127);
-        this.a(101, var2Lifetime1);
+        this.transitionToContent(101, var2Lifetime1);
     }
 
     final static void j(byte param0) {
@@ -195,7 +195,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
             if (param0 != 4) {
               if (param0 != 6) {
                 if (param0 != 9) {
-                  this.a(95, var7);
+                  this.transitionToContent(95, var7);
                   return;
                 }
                 var7.a(epa.field_q, (byte) -102, (WidgetListener) (this));
@@ -206,7 +206,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
               var7.a(ApproachPlayerLocomotor.field_p, 8, -83);
             }
           }
-          this.a(95, var7);
+          this.transitionToContent(95, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

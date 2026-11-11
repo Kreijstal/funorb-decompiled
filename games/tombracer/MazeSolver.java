@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class av {
-    private MazeGrid field_f;
+final class MazeSolver {
+    private MazeGrid grid;
     static String field_b;
-    private int[][] field_a;
+    private int[][] path;
     private int field_c;
     private int field_d;
     static boolean field_e;
 
-    private final void a(boolean param0) {
+    private final void clearDistances(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int discarded$0 = 0;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        for (var2 = 0; var2 < this.field_f.width; var2++) {
-          for (var3 = 0; var3 < this.field_f.height; var3++) {
-            if (this.c(-124, this.field_f.getCell((byte) -5, var3, var2))) {
-              this.field_f.setCell(var3, 0, 0, var2);
+        for (var2 = 0; var2 < this.grid.width; var2++) {
+          for (var3 = 0; var3 < this.grid.height; var3++) {
+            if (this.isDistanceMark(-124, this.grid.getCell((byte) -5, var3, var2))) {
+              this.grid.setCell(var3, 0, 0, var2);
             }
           }
         }
         if (!param0) {
-          discarded$0 = this.b(47, 0);
+          discarded$0 = this.encodeDistance(47, 0);
         }
     }
 
@@ -38,23 +38,23 @@ final class av {
         }
         int var9_int = 495;
         int var10 = 5;
-        dh.field_e.a(var9_int - 10, param7, -23776, var10, 5);
-        CharacterChoiceFactory.field_g.a(dh.field_e.field_G - ComponentMount.field_b.field_G, param7, -23776, 0, 0);
+        dh.field_e.setBounds(var9_int - 10, param7, -23776, var10, 5);
+        CharacterChoiceFactory.field_g.setBounds(dh.field_e.field_G - ComponentMount.field_b.field_G, param7, -23776, 0, 0);
         if (param3 != -5327) {
           return;
         }
         try {
           var10 = var10 + (param7 + param5);
-          ComponentMount.field_b.a(ComponentMount.field_b.field_G, param7, -23776, 0, CharacterChoiceFactory.field_g.field_G);
-          ClientMemoryVertexArray.field_d.a(ClientMemoryVertexArray.field_d.b((byte) 69), param6, param3 - 18449, var10, 5);
+          ComponentMount.field_b.setBounds(ComponentMount.field_b.field_G, param7, -23776, 0, CharacterChoiceFactory.field_g.field_G);
+          ClientMemoryVertexArray.field_d.setBounds(ClientMemoryVertexArray.field_d.b((byte) 69), param6, param3 - 18449, var10, 5);
           var11 = qpa.field_b.b((byte) 69);
-          qpa.field_b.a(var11, param6, -23776, var10, var9_int - 5 - var11);
+          qpa.field_b.setBounds(var11, param6, -23776, var10, var9_int - 5 - var11);
           var12 = 5 + (param6 + var10);
-          ClientMemoryVertexArray.field_e.a(var9_int, param1, -23776, 0, 0);
-          Projectile.field_r.a(var9_int, var12, -23776, param1, 0);
+          ClientMemoryVertexArray.field_e.setBounds(var9_int, param1, -23776, 0, 0);
+          Projectile.field_r.setBounds(var9_int, var12, -23776, param1, 0);
           Projectile.field_r.field_w = Player.createScrollbarSprites(Projectile.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
           var12 = var12 + param1;
-          SimpleMoveLocomotor.field_s.a(var9_int, var12, -23776, -(var12 / 2) + param0, -(var9_int / 2) + param8);
+          SimpleMoveLocomotor.field_s.setBounds(var9_int, var12, -23776, -(var12 / 2) + param0, -(var9_int / 2) + param8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "av.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -79,18 +79,18 @@ final class av {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, int param3) {
+    private final void floodFill(boolean param0, int param1, int param2, int param3) {
         int var7 = 0;
-        if (!this.field_f.isInBounds(param1, param2, (byte) -128)) {
+        if (!this.grid.isInBounds(param1, param2, (byte) -128)) {
           return;
         }
-        int var5 = this.field_f.getCell((byte) -5, param2, param1);
+        int var5 = this.grid.getCell((byte) -5, param2, param1);
         int var6 = 0;
         if (var5 == 0) {
           var6 = 1;
         } else {
           if (var5 <= 0) {
-            var7 = this.a((byte) -121, var5);
+            var7 = this.decodeDistance((byte) -121, var5);
             if (var7 > param3) {
               var6 = 1;
             }
@@ -99,15 +99,15 @@ final class av {
         if (var6 == 0) {
           return;
         }
-        this.field_f.setCell(param2, this.b(param3, 8421504), 0, param1);
+        this.grid.setCell(param2, this.encodeDistance(param3, 8421504), 0, param1);
         param3++;
-        this.a(param0, -1 + param1, param2, param3);
-        this.a(true, 1 + param1, param2, param3);
-        this.a(true, param1, param2 - 1, param3);
-        this.a(param0, param1, param2 + 1, param3);
+        this.floodFill(param0, -1 + param1, param2, param3);
+        this.floodFill(true, 1 + param1, param2, param3);
+        this.floodFill(true, param1, param2 - 1, param3);
+        this.floodFill(param0, param1, param2 + 1, param3);
     }
 
-    private final void a(int param0) {
+    private final void tracePath(int param0) {
         int var6 = 0;
         int var2;
         int var3;
@@ -116,34 +116,34 @@ final class av {
         int var7;
         int var8;
         var8 = TombRacer.field_G ? 1 : 0;
-        if (this.field_f.getCell((byte) -5, this.field_c, this.field_d) > -100) {
+        if (this.grid.getCell((byte) -5, this.field_c, this.field_d) > -100) {
           return;
         }
-        var2 = this.a((byte) -111, this.field_f.getCell((byte) -5, this.field_c, this.field_d));
+        var2 = this.decodeDistance((byte) -111, this.grid.getCell((byte) -5, this.field_c, this.field_d));
         var3 = var2;
-        this.field_a = new int[var2][2];
+        this.path = new int[var2][2];
         if (param0 <= 57) {
-          this.a(93, 41, -21, -32, -119);
+          this.solve(93, 41, -21, -32, -119);
         }
         var4 = this.field_d;
         var5 = this.field_c;
-        for (var6 = 0; this.field_a.length > var6; var6++) {
-          var7 = -1 + (this.field_a.length - var6);
-          this.field_a[var7][0] = var4;
-          this.field_a[var7][1] = var5;
-          if (this.a(92, var5, -1 + var4) == var3 - 1) {
+        for (var6 = 0; this.path.length > var6; var6++) {
+          var7 = -1 + (this.path.length - var6);
+          this.path[var7][0] = var4;
+          this.path[var7][1] = var5;
+          if (this.distanceAt(92, var5, -1 + var4) == var3 - 1) {
             var3--;
             var4--;
           } else {
-            if (-1 + var3 == this.a(90, var5, var4 + 1)) {
+            if (-1 + var3 == this.distanceAt(90, var5, var4 + 1)) {
               var3--;
               var4++;
             } else {
-              if (var3 - 1 == this.a(-41, -1 + var5, var4)) {
+              if (var3 - 1 == this.distanceAt(-41, -1 + var5, var4)) {
                 var5--;
                 var3--;
               } else {
-                if (this.a(96, var5 + 1, var4) != -1 + var3) {
+                if (this.distanceAt(96, var5 + 1, var4) != -1 + var3) {
                   return;
                 }
                 var3--;
@@ -155,28 +155,28 @@ final class av {
         return;
     }
 
-    final int[][] b(byte param0) {
+    final int[][] getPath(byte param0) {
         if (param0 < 120) {
           this.field_c = 94;
         }
-        return this.field_a;
+        return this.path;
     }
 
-    private final int b(int param0, int param1) {
+    private final int encodeDistance(int param0, int param1) {
         if (param1 != 8421504) {
-          this.field_f = (MazeGrid) null;
+          this.grid = (MazeGrid) null;
         }
         return -param0 - 100;
     }
 
-    private final int a(byte param0, int param1) {
+    private final int decodeDistance(byte param0, int param1) {
         if (param0 >= -25) {
           return -100;
         }
         return -param1 - 100;
     }
 
-    final int[][] a(byte param0) {
+    final int[][] findDeadEnds(byte param0) {
         int var3_int = 0;
         int[][] var3;
         int var4;
@@ -190,20 +190,20 @@ final class av {
         int var4Lifetime1;
         var6 = TombRacer.field_G ? 1 : 0;
         var8 = new IntrusiveDeque();
-        for (var3_int = 0; this.field_f.width > var3_int; var3_int++) {
-          for (var4 = 0; this.field_f.height > var4; var4++) {
+        for (var3_int = 0; this.grid.width > var3_int; var3_int++) {
+          for (var4 = 0; this.grid.height > var4; var4++) {
             var5_int = 0;
-            if (this.b(var4, var3_int, -51)) {
-              if (this.b(var4, -1 + var3_int, 67)) {
+            if (this.isOpen(var4, var3_int, -51)) {
+              if (this.isOpen(var4, -1 + var3_int, 67)) {
                 var5_int++;
               }
-              if (this.b(var4, 1 + var3_int, 100)) {
+              if (this.isOpen(var4, 1 + var3_int, 100)) {
                 var5_int++;
               }
-              if (this.b(-1 + var4, var3_int, 124)) {
+              if (this.isOpen(-1 + var4, var3_int, 124)) {
                 var5_int++;
               }
-              if (this.b(1 + var4, var3_int, 126)) {
+              if (this.isOpen(1 + var4, var3_int, 126)) {
                 var5_int++;
               }
               if (var5_int == 1) {
@@ -230,62 +230,62 @@ final class av {
         return var3;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (param0) {
           field_e = false;
         }
     }
 
-    private final boolean c(int param0, int param1) {
+    private final boolean isDistanceMark(int param0, int param1) {
         if (param0 > -104) {
           return true;
         }
         return param1 <= -100 ? true : false;
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int distanceAt(int param0, int param1, int param2) {
         int var4 = 52 % ((26 - param0) / 61);
-        if (!this.field_f.isInBounds(param2, param1, (byte) -128)) {
+        if (!this.grid.isInBounds(param2, param1, (byte) -128)) {
           return 0;
         }
-        int var5 = this.field_f.getCell((byte) -5, param1, param2);
-        if (!this.c(-118, var5)) {
+        int var5 = this.grid.getCell((byte) -5, param1, param2);
+        if (!this.isDistanceMark(-118, var5)) {
           return 0;
         }
-        return this.a((byte) -36, var5);
+        return this.decodeDistance((byte) -36, var5);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void solve(int param0, int param1, int param2, int param3, int param4) {
         this.field_c = param1;
         this.field_d = param4;
         int var6 = 1;
-        this.a(true, param2, param0, var6);
+        this.floodFill(true, param2, param0, var6);
         if (param3 <= 79) {
           return;
         }
-        this.a(66);
-        this.a(true);
+        this.tracePath(66);
+        this.clearDistances(true);
     }
 
     final static ht a(int param0, int param1) {
         if (param1 != 0) {
-          av.a(96, 11);
+          MazeSolver.a(96, 11);
         }
         return null != WhiteLightSensorComponent.field_K ? (ht) (WhiteLightSensorComponent.field_K.get(-122, (long)param0)) : null;
     }
 
-    private final boolean b(int param0, int param1, int param2) {
-        if (!this.field_f.isInBounds(param1, param0, (byte) -128)) {
+    private final boolean isOpen(int param0, int param1, int param2) {
+        if (!this.grid.isInBounds(param1, param0, (byte) -128)) {
           return true;
         }
         int var4 = 6 / ((5 - param2) / 55);
-        return this.field_f.getCell((byte) -5, param0, param1) == 0 ? true : false;
+        return this.grid.getCell((byte) -5, param0, param1) == 0 ? true : false;
     }
 
-    av(MazeGrid param0) {
+    MazeSolver(MazeGrid param0) {
         try {
-          this.field_f = param0;
+          this.grid = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "av.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

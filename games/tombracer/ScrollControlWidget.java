@@ -190,7 +190,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         }
     }
 
-    final static void a(jea param0, int param1, jea param2, jea param3, jea param4) {
+    final static void a(UiComponent param0, int param1, UiComponent param2, UiComponent param3, UiComponent param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -227,17 +227,17 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           CharacterChoiceFactory.field_g.field_gb = ((16711423 & VortexBehaviour.field_t.field_gb) >> 1) + (RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711));
           rma.field_b = ComponentMount.field_b;
           RenderableNode.field_i = CharacterChoiceFactory.field_g;
-          SimpleMoveLocomotor.field_s = new jea((long)param1, param4);
-          ClientMemoryVertexArray.field_e = new jea(0L, param0);
-          Projectile.field_r = new jea(0L, (jea) null);
-          dh.field_e = new jea(0L, param3);
-          CharacterChoiceFactory.field_g = new jea(0L, param2);
+          SimpleMoveLocomotor.field_s = new UiComponent((long)param1, param4);
+          ClientMemoryVertexArray.field_e = new UiComponent(0L, param0);
+          Projectile.field_r = new UiComponent(0L, (UiComponent) null);
+          dh.field_e = new UiComponent(0L, param3);
+          CharacterChoiceFactory.field_g = new UiComponent(0L, param2);
           CharacterChoiceFactory.field_g.field_H = PlatformBehaviour.field_s;
           dh.field_e.b(-123, CharacterChoiceFactory.field_g);
-          ComponentMount.field_b = new jea(0L, rma.field_b);
+          ComponentMount.field_b = new UiComponent(0L, rma.field_b);
           dh.field_e.b(-128, ComponentMount.field_b);
-          ClientMemoryVertexArray.field_d = new jea(0L, VortexBehaviour.field_t, fw.field_a);
-          qpa.field_b = new jea(0L, VortexBehaviour.field_t);
+          ClientMemoryVertexArray.field_d = new UiComponent(0L, VortexBehaviour.field_t, fw.field_a);
+          qpa.field_b = new UiComponent(0L, VortexBehaviour.field_t);
           SimpleMoveLocomotor.field_s.b(param1 ^ -122, ClientMemoryVertexArray.field_e);
           SimpleMoveLocomotor.field_s.b(-123, Projectile.field_r);
           Projectile.field_r.b(-123, dh.field_e);

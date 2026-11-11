@@ -3,7 +3,7 @@
  */
 final class LoadProfileCommand extends ConsoleMethod {
     static String field_o;
-    static dk[] field_p;
+    static AnimationSequence[] field_p;
     static String field_s;
     static int field_q;
     static byte[] field_t;
@@ -51,7 +51,7 @@ final class LoadProfileCommand extends ConsoleMethod {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            field_p = (dk[]) null;
+            field_p = (AnimationSequence[]) null;
           }
           stackIn_3_0 = new ConsoleValue(GameAssetLoader.a((String) (param0[0].field_d), 85));
           return stackIn_3_0;

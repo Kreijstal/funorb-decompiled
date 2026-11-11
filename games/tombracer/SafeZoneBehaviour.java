@@ -120,7 +120,7 @@ final class SafeZoneBehaviour extends Behaviour {
             var2.i(true);
           }
           if (this.field_o) {
-            var2.l((byte) 28);
+            var2.requestHidden((byte) 28);
             if (this.field_v) {
               var2.n(21120);
               return;

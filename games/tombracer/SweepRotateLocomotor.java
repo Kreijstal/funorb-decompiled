@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SweepRotateLocomotor extends Locomotor {
-    private int field_r;
+    private int sweepSpeed;
     static int field_q;
-    private int field_p;
+    private int sweepRange;
     private int field_o;
 
     final static void a(int param0, byte param1) {
@@ -28,7 +28,7 @@ final class SweepRotateLocomotor extends Locomotor {
             ContextMenu.field_Eb = param0;
           }
           if (param1 != 29) {
-            SweepRotateLocomotor.a(10, -96, -65);
+            SweepRotateLocomotor.pow(10, -96, -65);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -195,11 +195,11 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void setSweepSpeed(byte param0, int param1) {
         try {
-          this.field_r = param1;
+          this.sweepSpeed = param1;
           if (param0 != -35) {
-            this.field_r = 106;
+            this.sweepSpeed = 106;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ri.FA(" + param0 + ',' + param1 + ')');
@@ -216,13 +216,13 @@ final class SweepRotateLocomotor extends Locomotor {
         int var3Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          var2_int = this.field_p / 2;
+          var2_int = this.sweepRange / 2;
           var4 = 18 / ((param0 + 69) / 42);
           var3 = 0;
-          if ((this.field_r <= 0 ||
-            this.field_o + this.field_r >= var2_int) && (this.field_r >= 0 ||
-            -var2_int >= -this.field_r + this.field_o)) {
-            if (this.field_r > 0) {
+          if ((this.sweepSpeed <= 0 ||
+            this.field_o + this.sweepSpeed >= var2_int) && (this.sweepSpeed >= 0 ||
+            -var2_int >= -this.sweepSpeed + this.field_o)) {
+            if (this.sweepSpeed > 0) {
               var3Lifetime1 = var2_int - this.field_o;
               if (var5 != 0) {
                 var3Lifetime1 = var2_int + this.field_o;
@@ -230,12 +230,12 @@ final class SweepRotateLocomotor extends Locomotor {
             } else {
               var3Lifetime1 = var2_int + this.field_o;
             }
-            this.field_r = -this.field_r;
+            this.sweepSpeed = -this.sweepSpeed;
             if (var5 != 0) {
-              var3Lifetime1 = this.field_r;
+              var3Lifetime1 = this.sweepSpeed;
             }
           } else {
-            var3Lifetime1 = this.field_r;
+            var3Lifetime1 = this.sweepSpeed;
           }
           this.field_o = this.field_o + var3Lifetime1;
           this.trap.rotateBy(false, var3Lifetime1);
@@ -267,8 +267,8 @@ final class SweepRotateLocomotor extends Locomotor {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_r = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12));
-          this.field_p = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+          this.sweepSpeed = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12));
+          this.sweepRange = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -290,7 +290,7 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int pow(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -355,11 +355,11 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void setSweepRange(boolean param0, int param1) {
         try {
-          this.field_p = param1;
+          this.sweepRange = param1;
           if (!param0) {
-            this.field_r = 121;
+            this.sweepSpeed = 121;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ri.DA(" + param0 + ',' + param1 + ')');
@@ -377,8 +377,8 @@ final class SweepRotateLocomotor extends Locomotor {
             return;
           }
           super.encode(param0, (byte) -101);
-          param0.writeBits((byte) -125, dqa.toOffsetBinary(true, this.field_r, 12), 12);
-          param0.writeBits((byte) 108, ResourceArchive.a((byte) -127, this.field_p, 8192, 8), 8);
+          param0.writeBits((byte) -125, dqa.toOffsetBinary(true, this.sweepSpeed, 12), 12);
+          param0.writeBits((byte) 108, ResourceArchive.a((byte) -127, this.sweepRange, 8192, 8), 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -394,7 +394,7 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final static void a(java.awt.Component param0, boolean param1) {
+    final static void attachMouseListeners(java.awt.Component param0, boolean param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -425,7 +425,7 @@ final class SweepRotateLocomotor extends Locomotor {
     final void mirror(byte param0) {
         try {
           super.mirror((byte) -121);
-          this.field_r = -this.field_r;
+          this.sweepSpeed = -this.sweepSpeed;
           this.field_o = -this.field_o;
           if (param0 >= -116) {
             this.encode((BitPacketBuffer) null, (byte) -85);
@@ -443,8 +443,8 @@ final class SweepRotateLocomotor extends Locomotor {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_r = 16;
-          this.field_p = cba.a((byte) -123, 90.0, 8192);
+          this.sweepSpeed = 16;
+          this.sweepRange = cba.a((byte) -123, 90.0, 8192);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -466,9 +466,9 @@ final class SweepRotateLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_r = 54;
+            this.sweepSpeed = 54;
           }
-          param1 = CurveOperator.mixHash((byte) 26, param1, this.field_r);
+          param1 = CurveOperator.mixHash((byte) 26, param1, this.sweepSpeed);
           stackIn_4_0 = param1;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -478,7 +478,7 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final static ToolkitSprite a(GraphicsToolkit param0, byte param1, byte[] param2) {
+    final static ToolkitSprite createSpriteFromImage(GraphicsToolkit param0, byte param1, byte[] param2) {
         java.awt.Canvas var3 = null;
         InterruptedException var3_ref = null;
         RuntimeException var3_ref2 = null;

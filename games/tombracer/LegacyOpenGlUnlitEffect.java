@@ -29,12 +29,12 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
         field_d = null;
     }
 
-    final static dk a(int param0, int param1, int param2, int param3) {
+    final static AnimationSequence a(int param0, int param1, int param2, int param3) {
         int var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 != -2) {
-          return (dk) null;
+          return (AnimationSequence) null;
         }
         var4 = param3;
         if (var4 == 0) {

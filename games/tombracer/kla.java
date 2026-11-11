@@ -76,8 +76,8 @@ final class kla {
           var1 = ooa.a((byte) -107);
           vn.field_b = new LoginForm(var1, (String) null, true, false, false);
           ej.field_a.c(um.field_l, 84);
-          um.field_l.a(68, vn.field_b);
-          um.field_l.c(true);
+          um.field_l.transitionToContent(68, vn.field_b);
+          um.field_l.finishTransition(true);
           return;
         }
         Object var2 = (Object) null;
@@ -88,8 +88,8 @@ final class kla {
         var1Lifetime1 = ooa.a((byte) -107);
         vn.field_b = new LoginForm(var1Lifetime1, (String) null, true, false, false);
         ej.field_a.c(um.field_l, 84);
-        um.field_l.a(68, vn.field_b);
-        um.field_l.c(true);
+        um.field_l.transitionToContent(68, vn.field_b);
+        um.field_l.finishTransition(true);
     }
 
     final static void b(int param0) {

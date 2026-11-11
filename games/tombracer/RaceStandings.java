@@ -31,7 +31,7 @@ final class RaceStandings {
           if (this.matchState.simulations[var3].isFinished(0)) {
             stackIn_5_2 = -999;
           } else {
-            stackIn_5_2 = this.matchState.simulations[var3].b(false) + this.matchState.players[var3].i((byte) -72);
+            stackIn_5_2 = this.matchState.simulations[var3].b(false) + this.matchState.players[var3].getSortDepth((byte) -72);
           }
           stackIn_4_0[stackIn_4_1] = stackIn_5_2;
           if (this.matchState.hasResigned((byte) -99, var3)) {

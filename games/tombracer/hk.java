@@ -8,7 +8,7 @@ final class hk {
     GpuTexture2D[] field_d;
     lv field_f;
     boolean field_g;
-    static jea field_e;
+    static UiComponent field_e;
     private HardwareGraphicsToolkit field_b;
     private GpuTexture2D[] field_a;
 
@@ -136,7 +136,7 @@ final class hk {
           var22 = null;
           var12 = TombRacer.field_G ? 1 : 0;
           try {
-            var13 = (aj) (al.field_g.first(-80));
+            var13 = (aj) (IntNode.field_g.first(-80));
             var18 = var13;
             if (var18 == null) {
               return;
@@ -294,7 +294,7 @@ final class hk {
 
     public static void releaseStatics(int param0) {
         if (param0 != 8) {
-          field_e = (jea) null;
+          field_e = (UiComponent) null;
         }
         field_e = null;
     }

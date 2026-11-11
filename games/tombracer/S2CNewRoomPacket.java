@@ -30,9 +30,9 @@ final class S2CNewRoomPacket implements GamePacket {
               var7.setTreasure(true, var5, this.treasure[var5]);
             }
             if (param2.localPlayerIndex == this.playerId) {
-              param0.f(10);
+              param0.resetForNextRound(10);
             } else {
-              param2.c(this.playerId, 51);
+              param2.clearPlayerInputs(this.playerId, 51);
               param0.a(this.disregard, (byte) 125, this.playerId);
             }
           }

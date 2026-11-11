@@ -6,8 +6,8 @@ final class qja extends IntrusiveNode {
     static String field_i;
     int field_h;
     static String field_k;
-    static dk[] field_f;
-    static jea field_j;
+    static AnimationSequence[] field_f;
+    static UiComponent field_j;
 
     public static void a(int param0) {
         field_f = null;

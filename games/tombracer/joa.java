@@ -7,7 +7,7 @@ import java.util.*;
 final class joa {
     static int field_a;
     static kn field_c;
-    static jea field_d;
+    static UiComponent field_d;
     private java.util.zip.Inflater field_b;
 
     final static FontMetrics a(String param0, ResourceArchive param1, String param2, byte param3) {
@@ -89,7 +89,7 @@ final class joa {
                 throw new RuntimeException("");
               }
               if (param0 != -34) {
-                field_d = (jea) null;
+                field_d = (UiComponent) null;
               }
               this.field_b.reset();
               return;

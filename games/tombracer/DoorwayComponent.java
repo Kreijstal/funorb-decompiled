@@ -86,10 +86,10 @@ final class DoorwayComponent extends PrefabComponent {
             var8 = new SimpleBlockBehaviour(param2, param0);
             var7_ref_fsa.addBehaviour((byte) 83, (Behaviour) (var8));
             var9 = new PathMoveLocomotor(param2, param0);
-            var9.a(param1 ^ 40, new gea(new int[][]{new int[]{0, 0}}));
+            var9.setPath(param1 ^ 40, new WaypointPath(new int[][]{new int[]{0, 0}}));
             var7_ref_fsa.addLocomotor(var9, 0);
             var10 = new PathMoveLocomotor(param2, param0);
-            var10.a(param1 ^ 14, new gea(new int[][]{new int[]{262144 + -this.width / 2, 0}}));
+            var10.setPath(param1 ^ 14, new WaypointPath(new int[][]{new int[]{262144 + -this.width / 2, 0}}));
             var10.setEnabled(true, false);
             var7_ref_fsa.addLocomotor(var10, 0);
             var11 = new Trap(param2, param0);
@@ -99,10 +99,10 @@ final class DoorwayComponent extends PrefabComponent {
             var12 = new SimpleBlockBehaviour(param2, param0);
             var11.addBehaviour((byte) 83, (Behaviour) (var12));
             var13 = new PathMoveLocomotor(param2, param0);
-            var13.a(87, new gea(new int[][]{new int[]{0, 0}}));
+            var13.setPath(87, new WaypointPath(new int[][]{new int[]{0, 0}}));
             var11.addLocomotor(var13, param1 ^ 3);
             var14 = new PathMoveLocomotor(param2, param0);
-            var14.a(66, new gea(new int[][]{new int[]{-262144 + this.width / 2, 0}}));
+            var14.setPath(66, new WaypointPath(new int[][]{new int[]{-262144 + this.width / 2, 0}}));
             var14.setEnabled(true, false);
             var11.addLocomotor(var14, 0);
             var20.addChild(-72, var7_ref_fsa);
@@ -223,9 +223,9 @@ final class DoorwayComponent extends PrefabComponent {
         return false;
     }
 
-    final static jea r(byte param0) {
+    final static UiComponent r(byte param0) {
         if (param0 != 107) {
-          return (jea) null;
+          return (UiComponent) null;
         }
         return tn.field_n.field_tb;
     }

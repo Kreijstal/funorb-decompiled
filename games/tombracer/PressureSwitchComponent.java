@@ -10,7 +10,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        jea var5 = null;
+        UiComponent var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;

@@ -17,7 +17,7 @@ final class fpa {
             field_c = false;
           }
           ProceduralTextureProvider.a((java.awt.Component) ((Object) param0), -71);
-          SweepRotateLocomotor.a((java.awt.Component) ((Object) param0), true);
+          SweepRotateLocomotor.attachMouseListeners((java.awt.Component) ((Object) param0), true);
           if (tja.field_q == null) {
             return;
           }

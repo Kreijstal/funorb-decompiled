@@ -55,7 +55,7 @@ final class tn extends IntrusiveNode {
                   if (0 != (var9 & 1)) {
                     var7 = param2.a((byte) -32, param3, var9 >> 2);
                   } else {
-                    var7 = param2.a(var9 >> 2, param3, 0);
+                    var7 = param2.getSoundEffectById(var9 >> 2, param3, 0);
                   }
                   if (var7 == null) {
                     var5_int = 0;
@@ -111,28 +111,28 @@ final class tn extends IntrusiveNode {
           return ObjectList.field_b;
         }
         if (InvisibleTouchSwitchComponent.field_J != null) {
-          if (!InvisibleTouchSwitchComponent.field_J.b(-60)) {
+          if (!InvisibleTouchSwitchComponent.field_J.ensureIndex(-60)) {
             return hra.field_c;
           }
           return CrossedSineBandsOperator.field_s;
         }
-        if (!tk.field_b.b(-97)) {
+        if (!tk.field_b.ensureIndex(-97)) {
           return SwitchModel.field_r;
         }
-        if (!tk.field_b.c("commonui", param0 ^ 10971)) {
+        if (!tk.field_b.isGroupAvailableByName("commonui", param0 ^ 10971)) {
           return q.field_o + " - " + tk.field_b.a("commonui", true) + "%";
         }
-        if (!OpenGlTexture2D.field_n.b(-99)) {
+        if (!OpenGlTexture2D.field_n.ensureIndex(-99)) {
           return MouseInputHandler.field_a;
         }
-        if (!OpenGlTexture2D.field_n.c("commonui", -128)) {
+        if (!OpenGlTexture2D.field_n.isGroupAvailableByName("commonui", -128)) {
           return TrapSpawner.field_b + " - " + OpenGlTexture2D.field_n.a("commonui", true) + "%";
         }
-        if (!WeaveOperator.field_p.b(param0 + 10827)) {
+        if (!WeaveOperator.field_p.ensureIndex(param0 + 10827)) {
           return wt.field_b;
         }
-        if (!WeaveOperator.field_p.a(0)) {
-          return WindZoneBehaviour.field_u + " - " + WeaveOperator.field_p.a(true) + "%";
+        if (!WeaveOperator.field_p.areAllGroupsAvailable(0)) {
+          return WindZoneBehaviour.field_u + " - " + WeaveOperator.field_p.getOverallProgress(true) + "%";
         }
         return PlayerSimulation.field_n;
     }

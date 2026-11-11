@@ -76,7 +76,7 @@ abstract class ShooterComponent extends PrefabComponent {
         super(param0, param1);
     }
 
-    final void a(Trap param0, int param1, Behaviour param2, int param3) {
+    final void addMuzzleLight(Trap param0, int param1, Behaviour param2, int param3) {
         ModelCodec var5 = null;
         LightSourceModel var6 = null;
         try {
@@ -125,7 +125,7 @@ abstract class ShooterComponent extends PrefabComponent {
               if (var6 != null) {
                 var7 = var6.a(true);
                 if (var7 > 0) {
-                  var6.b(var5.nextBounded(var7, 0), false);
+                  var6.setCooldown(var5.nextBounded(var7, 0), false);
                 }
               }
             }

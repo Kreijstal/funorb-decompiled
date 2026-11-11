@@ -31,12 +31,12 @@ final class ck {
         tv[] array$0 = null;
         tv[] array$1 = null;
         tv[] array$2 = null;
-        jea stackIn_8_0;
-        jea stackIn_8_1;
+        UiComponent stackIn_8_0;
+        UiComponent stackIn_8_1;
         long stackIn_8_2;
-        jea stackIn_8_3;
-        jea stackIn_9_0 = null;
-        jea stackIn_9_1 = null;
+        UiComponent stackIn_8_3;
+        UiComponent stackIn_9_0 = null;
+        UiComponent stackIn_9_1 = null;
         String stackIn_9_4 = null;
         Sprite stackIn_61_0 = null;
         String stackIn_68_0 = null;
@@ -69,9 +69,9 @@ final class ck {
         String stackIn_176_2 = null;
         RuntimeException decompiledCaughtException = null;
         tv stackOut_85_0;
-        jea var15 = null;
+        UiComponent var15 = null;
         RuntimeException var15_ref = null;
-        jea var16 = null;
+        UiComponent var16 = null;
         int var17_int = 0;
         Object var17 = null;
         int var18 = 0;
@@ -107,10 +107,10 @@ final class ck {
           SocketArchiveNetworkClient.field_w[3] = ObjectPool.field_d;
           SocketArchiveNetworkClient.field_w[4] = PacketBuffer.field_f;
           SocketArchiveNetworkClient.field_w[1] = RasterBuffer.field_b;
-          RasterShape.field_e = new jea(0L, (jea) null);
-          LightSource.field_h = new jea(0L, ooa.field_f, CanvasImageBuffer.field_i);
-          ShaderEffect.field_b = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
-          bsa.field_j = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
+          RasterShape.field_e = new UiComponent(0L, (UiComponent) null);
+          LightSource.field_h = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
+          ShaderEffect.field_b = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
+          bsa.field_j = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), rfa.field_C, DateFieldsWidget.field_F);
           RasterShape.field_e.b(-126, LightSource.field_h);
           if (UnlockOverlay.field_p) {
             RasterShape.field_e.b(param11 - 25575, ShaderEffect.field_b);
@@ -120,19 +120,19 @@ final class ck {
           var15 = bsa.field_j.field_vb;
           bsa.field_j.field_vb.field_bb = 1;
           var15.field_z = 1;
-          PerlinNoise2D.field_t = new jea(0L, Corpse.field_i);
+          PerlinNoise2D.field_t = new UiComponent(0L, Corpse.field_i);
           PerlinNoise2D.field_t.field_z = 1;
-          ImageProducerRasterBuffer.field_j = new jea(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
-          C2SChooseCharacterPacket.field_a = new jea(0L, CharacterSelectPhase.field_s, tha.field_B.toUpperCase());
-          Obstacle.field_s = new jea(0L, CommonChooseReward.field_c);
-          gta.field_b = new jea(0L, ooa.field_f, SnakePitModel.field_m);
-          RandomBrickOperator.field_r = new jea(0L, cs.field_a, TestModel.field_r);
-          RotateLocomotor.field_o = new jea(0L, cs.field_a, du.field_a);
-          MidiPcmStream.field_K = new jea(0L, cs.field_a, qo.field_i);
-          MirrorComponent.field_I = new jea(0L, cs.field_a, MatchState.field_N);
-          cq.field_e = new jea(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
-          nsa.field_i = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
-          TileRenderable.field_c = new jea(0L, hg.field_g, iw.field_b.toUpperCase());
+          ImageProducerRasterBuffer.field_j = new UiComponent(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
+          C2SChooseCharacterPacket.field_a = new UiComponent(0L, CharacterSelectPhase.field_s, tha.field_B.toUpperCase());
+          Obstacle.field_s = new UiComponent(0L, CommonChooseReward.field_c);
+          gta.field_b = new UiComponent(0L, ooa.field_f, SnakePitModel.field_m);
+          RandomBrickOperator.field_r = new UiComponent(0L, cs.field_a, TestModel.field_r);
+          RotateLocomotor.field_o = new UiComponent(0L, cs.field_a, du.field_a);
+          MidiPcmStream.field_K = new UiComponent(0L, cs.field_a, qo.field_i);
+          MirrorComponent.field_I = new UiComponent(0L, cs.field_a, MatchState.field_N);
+          cq.field_e = new UiComponent(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
+          nsa.field_i = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), rfa.field_C, DateFieldsWidget.field_F);
+          TileRenderable.field_c = new UiComponent(0L, hg.field_g, iw.field_b.toUpperCase());
           TileRenderable.field_c.field_X = UnlockOverlay.field_p;
           stackIn_8_0 = null;
           stackIn_8_1 = null;
@@ -145,10 +145,10 @@ final class ck {
           } else {
             stackIn_9_0 = null;
             stackIn_9_1 = null;
-            stackIn_9_4 = bua.field_c;
+            stackIn_9_4 = ModelAnimator.field_c;
           }
-          CharacterChoiceFactory.field_c = new jea(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
-          OpenGlToolkit.field_fd = new jea(0L, (jea) null);
+          CharacterChoiceFactory.field_c = new UiComponent(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
+          OpenGlToolkit.field_fd = new UiComponent(0L, (UiComponent) null);
           OpenGlToolkit.field_fd.b(-126, C2SChooseCharacterPacket.field_a);
           OpenGlToolkit.field_fd.b(param11 ^ -25371, Obstacle.field_s);
           Obstacle.field_s.b(-124, gta.field_b);
@@ -164,43 +164,43 @@ final class ck {
             OpenGlToolkit.field_fd.b(-124, TileRenderable.field_c);
           }
           OpenGlToolkit.field_fd.b(-124, CharacterChoiceFactory.field_c);
-          rv.field_c = new jea(0L, Corpse.field_i);
+          rv.field_c = new UiComponent(0L, Corpse.field_i);
           rv.field_c.field_bb = 0;
           rv.field_c.field_z = 1;
-          BrickOperator.field_v = new jea(0L, OpenGlEnvironmentWaterEffect.field_i, nf.field_j.toUpperCase());
-          VboVertexArray.field_k = new jea(0L, WallModel.field_r);
+          BrickOperator.field_v = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, nf.field_j.toUpperCase());
+          VboVertexArray.field_k = new UiComponent(0L, WallModel.field_r);
           VboVertexArray.field_k.b(param11 - 25572, rv.field_c);
           VboVertexArray.field_k.b(-122, BrickOperator.field_v);
-          HazardModel.field_t = new jea(0L, rfa.field_C);
+          HazardModel.field_t = new UiComponent(0L, rfa.field_C);
           HazardModel.field_t.applyStyle(false, Corpse.field_i);
           HazardModel.field_t.field_bb = 1;
           var16 = HazardModel.field_t;
           var16.field_z = 1;
-          RoomRegion.field_l = new jea(0L, (jea) null);
-          cea.field_a = new jea(0L, Corpse.field_i);
+          RoomRegion.field_l = new UiComponent(0L, (UiComponent) null);
+          cea.field_a = new UiComponent(0L, Corpse.field_i);
           cea.field_a.field_z = 1;
-          uaa.field_b = new jea(0L, ooa.field_f, CanvasImageBuffer.field_i);
-          RopeBridgeComponent.field_F = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
-          tn.field_n = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
+          uaa.field_b = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
+          RopeBridgeComponent.field_F = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
+          tn.field_n = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), rfa.field_C, DateFieldsWidget.field_F);
           RoomRegion.field_l.b(param11 ^ -25371, cea.field_a);
           RoomRegion.field_l.b(-124, uaa.field_b);
           if (UnlockOverlay.field_p) {
             RoomRegion.field_l.b(-122, RopeBridgeComponent.field_F);
           }
           RoomRegion.field_l.b(-124, tn.field_n);
-          bc.field_b = new jea(0L, ssa.field_g, OpenGlSprite.field_k.toUpperCase());
-          StatusEffect.field_g = new jea(0L, CharacterSelectPhase.field_s);
-          C2SSubmitSettingsPacket.field_g = new jea(0L, CommonChooseReward.field_c);
-          qna.field_b = new jea(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
-          SimpleConditionBehaviour.field_p = new jea[param0 + 4];
+          bc.field_b = new UiComponent(0L, ssa.field_g, OpenGlSprite.field_k.toUpperCase());
+          StatusEffect.field_g = new UiComponent(0L, CharacterSelectPhase.field_s);
+          C2SSubmitSettingsPacket.field_g = new UiComponent(0L, CommonChooseReward.field_c);
+          qna.field_b = new UiComponent(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
+          SimpleConditionBehaviour.field_p = new UiComponent[param0 + 4];
           bf.field_b = new tv[4 + param0][];
-          SimpleConditionBehaviour.field_p[0] = new jea(0L, una.field_j, RoomViewRenderer.field_a);
+          SimpleConditionBehaviour.field_p[0] = new UiComponent(0L, una.field_j, RoomViewRenderer.field_a);
           bf.field_b[0] = new tv[6];
           var17_int = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var17_int < 5) {
-              bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, SoundEventPlayer.field_f[var17_int], SocketArchiveNetworkClient.field_w[var17_int]);
+              bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, SoundEventPlayer.field_f[var17_int], SocketArchiveNetworkClient.field_w[var17_int]);
               var17_int++;
               if (var21 == 0) {
                 continue;
@@ -208,35 +208,35 @@ final class ck {
             } else {
               decompiledFrameRemainder0 = !(2 > SafeZoneBehaviour.field_u.length);
               if (decompiledFrameRemainder0) {
-                SimpleConditionBehaviour.field_p[1] = new jea(0L, una.field_j, ConsoleToken.field_j);
+                SimpleConditionBehaviour.field_p[1] = new UiComponent(0L, una.field_j, ConsoleToken.field_j);
                 array$0 = new tv[1 + SafeZoneBehaviour.field_u.length];
                 bf.field_b[1] = array$0;
-                bf.field_b[1][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
+                bf.field_b[1][0] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
               }
             }
             if (decompiledFrameRemainder0) {
               var17_int = 0;
               while (!(var17_int >= SafeZoneBehaviour.field_u.length)) {
-                bf.field_b[1][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, Integer.toString(SafeZoneBehaviour.field_u[var17_int]));
+                bf.field_b[1][1 + var17_int] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, Integer.toString(SafeZoneBehaviour.field_u[var17_int]));
                 var17_int++;
                 if (var21 != 0) {
                   break scanLoop1;
                 }
               }
             }
-            SimpleConditionBehaviour.field_p[2] = new jea(0L, una.field_j, nb.field_a);
-            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], WaveformOperator.field_s), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], LegacyOpenGlEnvironmentWaterEffect.field_g)};
+            SimpleConditionBehaviour.field_p[2] = new UiComponent(0L, una.field_j, nb.field_a);
+            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], WaveformOperator.field_s), new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], LegacyOpenGlEnvironmentWaterEffect.field_g)};
             break;
           }
           boolean decompiledFrameCompleted0 = true;
           if (MirrorMoverLocomotor.field_r > 1) {
-            SimpleConditionBehaviour.field_p[3] = new jea(0L, una.field_j, k.field_z);
+            SimpleConditionBehaviour.field_p[3] = new UiComponent(0L, una.field_j, k.field_z);
             array$1 = new tv[1 + MirrorMoverLocomotor.field_r];
             bf.field_b[3] = array$1;
-            bf.field_b[3][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
+            bf.field_b[3][0] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
             var17_int = 0;
             while (!(MirrorMoverLocomotor.field_r <= var17_int)) {
-              bf.field_b[3][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, RasterizerOperator.field_m[var17_int]);
+              bf.field_b[3][1 + var17_int] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, RasterizerOperator.field_m[var17_int]);
               var17_int++;
               if (var21 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -249,10 +249,10 @@ final class ck {
           }
           scanLoop2: while (true) {
             if (var17_int < param0) {
-              SimpleConditionBehaviour.field_p[var17_int + 4] = new jea(0L, una.field_j, DebouncedValidationSource.field_e[var17_int]);
+              SimpleConditionBehaviour.field_p[var17_int + 4] = new UiComponent(0L, una.field_j, DebouncedValidationSource.field_e[var17_int]);
               array$2 = new tv[1 + SnakePitBehaviour.bitwiseAnd((int) SnakePitModel.field_n[var17_int], 255)];
               bf.field_b[4 + var17_int] = array$2;
-              bf.field_b[var17_int + 4][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
+              bf.field_b[var17_int + 4][0] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
               stackIn_71_0 = 0;
               if (var21 == 0) {
                 var18 = stackIn_71_0;
@@ -278,7 +278,7 @@ final class ck {
                     stackIn_68_0 = null;
                   }
                   var20 = stackIn_68_0;
-                  bf.field_b[var17_int + 4][var18 + 1] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, var19_ref_iu, var20);
+                  bf.field_b[var17_int + 4][var18 + 1] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, var19_ref_iu, var20);
                   var18++;
                 }
                 var17_int++;
@@ -314,17 +314,17 @@ final class ck {
               }
               var17_int++;
             }
-            pk.field_z = new jea(0L, hg.field_g);
-            hw.field_a = new jea(0L, hg.field_g);
-            MessageOverlay.field_t = new jea(0L, tka.field_q);
+            pk.field_z = new UiComponent(0L, hg.field_g);
+            hw.field_a = new UiComponent(0L, hg.field_g);
+            MessageOverlay.field_t = new UiComponent(0L, tka.field_q);
             MessageOverlay.field_t.applyStyle(false, Corpse.field_i);
             MessageOverlay.field_t.field_bb = 1;
             break;
           }
           stackIn_98_0Lifetime1 = MessageOverlay.field_t;
           var17 = stackIn_98_0Lifetime1;
-          ((jea) (var17)).field_z = 1;
-          dka.field_b = new jea(0L, (jea) null);
+          ((UiComponent) (var17)).field_z = 1;
+          dka.field_b = new UiComponent(0L, (UiComponent) null);
           dka.field_b.b(param11 ^ -25373, StatusEffect.field_g);
           dka.field_b.b(-128, C2SSubmitSettingsPacket.field_g);
           C2SSubmitSettingsPacket.field_g.b(-122, qna.field_b);
@@ -352,8 +352,8 @@ final class ck {
           dka.field_b.b(-128, pk.field_z);
           dka.field_b.b(-125, hw.field_a);
           dka.field_b.b(-123, MessageOverlay.field_t);
-          S2CEventPacket.field_e = new jea(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());
-          Trap.field_q = new jea(0L, OpenGlEnvironmentWaterEffect.field_i, ej.field_b.toUpperCase());
+          S2CEventPacket.field_e = new UiComponent(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());
+          Trap.field_q = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, ej.field_b.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

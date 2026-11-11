@@ -3,7 +3,7 @@
  */
 abstract class ShaderEffect {
     static nl field_a;
-    static jea field_b;
+    static UiComponent field_b;
     HardwareGraphicsToolkit owner;
 
     abstract void enable(int param0, boolean param1);
@@ -95,7 +95,7 @@ abstract class ShaderEffect {
 
     void b(boolean param0) {
         if (!param0) {
-          field_b = (jea) null;
+          field_b = (UiComponent) null;
         }
     }
 

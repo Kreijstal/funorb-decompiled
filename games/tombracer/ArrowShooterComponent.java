@@ -100,7 +100,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           if (this.s((byte) 73)) {
             var7_int = var6.a(true);
             if (var7_int > 0) {
-              var6.b(param2.getRandom(122).nextBounded(var7_int, 0), false);
+              var6.setCooldown(param2.getRandom(122).nextBounded(var7_int, 0), false);
             }
           }
           var5.a(var6, (byte) 66);

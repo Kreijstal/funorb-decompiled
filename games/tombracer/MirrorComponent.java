@@ -3,7 +3,7 @@
  */
 final class MirrorComponent extends PrefabComponent {
     static SpriteData field_F;
-    static jea field_I;
+    static UiComponent field_I;
     static int[] field_H;
     static TextureFilter field_G;
 

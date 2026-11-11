@@ -6,10 +6,10 @@ final class lw {
     private int field_e;
     private boolean field_c;
     private int field_h;
-    static jea field_a;
+    static UiComponent field_a;
     boolean field_b;
     private int field_f;
-    private bua field_d;
+    private ModelAnimator field_d;
     static int[] field_g;
 
     final void a(int param0, int param1, int param2) {
@@ -46,7 +46,7 @@ final class lw {
             this.field_h = 0;
             this.field_b = false;
           }
-          this.field_d.a(param0 ^ param0);
+          this.field_d.tick(param0 ^ param0);
           return;
         }
         if (!this.field_c) {
@@ -109,7 +109,7 @@ final class lw {
         this.field_f = this.field_f + var3;
         this.field_e = this.field_e + var2;
         this.field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
-        this.field_d.a(param0 ^ param0);
+        this.field_d.tick(param0 ^ param0);
     }
 
     public static void releaseStatics(int param0) {
@@ -122,13 +122,13 @@ final class lw {
     final void a(byte param0, int param1, int param2) {
         if (param0 > 11) {
           ura.a(-10985);
-          hp.a(2048, this.field_h, 1900, this.field_d.b((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
+          hp.a(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
           RemovedFromGameMenu.f((byte) -6);
           return;
         }
         this.field_b = false;
         ura.a(-10985);
-        hp.a(2048, this.field_h, 1900, this.field_d.b((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
+        hp.a(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
         RemovedFromGameMenu.f((byte) -6);
     }
 
@@ -148,7 +148,7 @@ final class lw {
     }
 
     lw() {
-        this.field_d = new bua(0, 0, 1);
+        this.field_d = new ModelAnimator(0, 0, 1);
         this.field_d.a(0, false, 0, 0, true);
         this.field_b = false;
     }

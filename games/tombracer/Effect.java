@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Effect implements noa {
-    static jea field_a;
+    static UiComponent field_a;
     int type;
     private int preset;
     WorldBody field_g;

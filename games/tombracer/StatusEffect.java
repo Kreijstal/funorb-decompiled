@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class StatusEffect extends IntrusiveNode {
-    static jea field_g;
+    static UiComponent field_g;
     private int remaining;
     private int duration;
     private int kind;
@@ -18,7 +18,7 @@ final class StatusEffect extends IntrusiveNode {
     public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != 2907) {
-          field_g = (jea) null;
+          field_g = (UiComponent) null;
         }
     }
 
@@ -64,7 +64,7 @@ final class StatusEffect extends IntrusiveNode {
     final void tick(int param0) {
         this.remaining = this.remaining - 1;
         if (param0 != -9) {
-          field_g = (jea) null;
+          field_g = (UiComponent) null;
         }
     }
 

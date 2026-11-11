@@ -12,7 +12,7 @@ final class RoomRegion extends IntrusiveNode implements qn, Renderable, noa {
     private int type;
     private Room room;
     private int width;
-    static jea field_l;
+    static UiComponent field_l;
 
     private final boolean a(int param0) {
         if (param0 < 65) {

@@ -4,12 +4,12 @@
 final class PathMoveLocomotor extends Locomotor {
     private int field_v;
     static String field_q;
-    private int field_w;
+    private int waypointIndex;
     private boolean field_s;
-    private gea field_t;
+    private WaypointPath path;
     private boolean field_o;
     private boolean field_u;
-    private int field_r;
+    private int speed;
     static int field_p;
 
     final int getTypeId(int param0) {
@@ -28,7 +28,7 @@ final class PathMoveLocomotor extends Locomotor {
 
     PathMoveLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
-        gea stackIn_7_0 = null;
+        WaypointPath stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         boolean stackIn_13_1 = false;
         boolean stackIn_17_1 = false;
@@ -41,16 +41,16 @@ final class PathMoveLocomotor extends Locomotor {
         RuntimeException var4 = null;
         this.field_s = false;
         try {
-          this.field_t = new gea(param0.formatVersion, param1);
+          this.path = new WaypointPath(param0.formatVersion, param1);
           if (7 < param0.formatVersion) {
-            this.field_r = this.a(param1.readBits((byte) 44, 8), false);
+            this.speed = this.a(param1.readBits((byte) 44, 8), false);
           } else {
-            this.field_r = param1.readBits((byte) 44, 4) << 16;
+            this.speed = param1.readBits((byte) 44, 4) << 16;
           }
           if (param0.formatVersion < 11) {
-            stackIn_7_0 = this.field_t;
+            stackIn_7_0 = this.path;
             stackIn_8_1 = (1 == param1.readBits((byte) 44, 1));
-            ((gea) (Object) stackIn_7_0).a(stackIn_8_1, 1);
+            ((WaypointPath) (Object) stackIn_7_0).a(stackIn_8_1, 1);
           }
           if (param0.formatVersion >= 12) {
             stackIn_13_1 = (param1.readBits((byte) 44, 1) == 1);
@@ -140,42 +140,42 @@ final class PathMoveLocomotor extends Locomotor {
         int var14Lifetime7;
         int var14Lifetime8;
         int var14Lifetime9;
-        if (this.field_t.a(-4075)) {
+        if (this.path.isEmpty(-4075)) {
           return;
         }
-        int[][] var17 = this.field_t.c(-2);
+        int[][] var17 = this.path.getPoints(-2);
         int[][] var16 = var17;
         int[][] var15 = var16;
         int[][] var2 = var15;
         int var3 = 45 / ((-69 - param0) / 42);
-        if (var17.length > this.field_w) {
-          var4 = var15[this.field_w][0] + this.getTrapInitialLocalX((byte) -70);
-          var5 = var15[this.field_w][1] + this.getTrapInitialLocalY(false);
+        if (var17.length > this.waypointIndex) {
+          var4 = var15[this.waypointIndex][0] + this.getTrapInitialLocalX((byte) -70);
+          var5 = var15[this.waypointIndex][1] + this.getTrapInitialLocalY(false);
           var6 = -this.trap.getLocalX(25745) + var4;
           var7 = var5 - this.trap.getLocalY(false);
-          var8 = this.field_r >> 16;
+          var8 = this.speed >> 16;
           var8 = var8 * var8;
           var9 = (var6 >> 16) * (var6 >> 16) + (var7 >> 16) * (var7 >> 16);
           if (var9 <= var8) {
             this.trap.move((byte) -112, var6, var7);
             this.field_s = true;
-            this.field_w = this.field_w + 1;
+            this.waypointIndex = this.waypointIndex + 1;
             return;
           }
           var10 = qva.a((byte) -99, var7, var6);
           if (!this.field_o) {
             var11 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
-            var12 = bua.cos2048(0, var10 >> 2);
-            var13 = doa.a(2, this.field_r, var11);
-            var14 = doa.a(2, this.field_r, var12);
+            var12 = ModelAnimator.cos2048(0, var10 >> 2);
+            var13 = doa.a(2, this.speed, var11);
+            var14 = doa.a(2, this.speed, var12);
             this.trap.move((byte) -77, var13, var14);
             return;
           }
           if (!this.field_s) {
             var11Lifetime5 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
-            var12Lifetime5 = bua.cos2048(0, var10 >> 2);
-            var13Lifetime6 = doa.a(2, this.field_r, var11Lifetime5);
-            var14Lifetime6 = doa.a(2, this.field_r, var12Lifetime5);
+            var12Lifetime5 = ModelAnimator.cos2048(0, var10 >> 2);
+            var13Lifetime6 = doa.a(2, this.speed, var11Lifetime5);
+            var14Lifetime6 = doa.a(2, this.speed, var12Lifetime5);
             this.trap.move((byte) -77, var13Lifetime6, var14Lifetime6);
             return;
           }
@@ -185,9 +185,9 @@ final class PathMoveLocomotor extends Locomotor {
             this.trap.rotateBy(false, -var11Lifetime6);
             this.field_s = false;
             var11Lifetime6 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
-            var12Lifetime6 = bua.cos2048(0, var10 >> 2);
-            var13Lifetime7 = doa.a(2, this.field_r, var11Lifetime6);
-            var14Lifetime7 = doa.a(2, this.field_r, var12Lifetime6);
+            var12Lifetime6 = ModelAnimator.cos2048(0, var10 >> 2);
+            var13Lifetime7 = doa.a(2, this.speed, var11Lifetime6);
+            var14Lifetime7 = doa.a(2, this.speed, var12Lifetime6);
             this.trap.move((byte) -77, var13Lifetime7, var14Lifetime7);
             return;
           }
@@ -195,9 +195,9 @@ final class PathMoveLocomotor extends Locomotor {
             this.trap.rotateBy(false, -var11Lifetime6);
             this.field_s = false;
             var11Lifetime6 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
-            var12Lifetime6 = bua.cos2048(0, var10 >> 2);
-            var13Lifetime8 = doa.a(2, this.field_r, var11Lifetime6);
-            var14Lifetime8 = doa.a(2, this.field_r, var12Lifetime6);
+            var12Lifetime6 = ModelAnimator.cos2048(0, var10 >> 2);
+            var13Lifetime8 = doa.a(2, this.speed, var11Lifetime6);
+            var14Lifetime8 = doa.a(2, this.speed, var12Lifetime6);
             this.trap.move((byte) -77, var13Lifetime8, var14Lifetime8);
             return;
           }
@@ -206,44 +206,44 @@ final class PathMoveLocomotor extends Locomotor {
             return;
           }
           var11Lifetime7 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
-          var12Lifetime7 = bua.cos2048(0, var10 >> 2);
-          var13Lifetime9 = doa.a(2, this.field_r, var11Lifetime7);
-          var14Lifetime9 = doa.a(2, this.field_r, var12Lifetime7);
+          var12Lifetime7 = ModelAnimator.cos2048(0, var10 >> 2);
+          var13Lifetime9 = doa.a(2, this.speed, var11Lifetime7);
+          var14Lifetime9 = doa.a(2, this.speed, var12Lifetime7);
           this.trap.move((byte) -77, var13Lifetime9, var14Lifetime9);
           return;
         }
-        this.field_w = 0;
-        if (this.field_t.a((byte) 21)) {
+        this.waypointIndex = 0;
+        if (this.path.a((byte) 21)) {
           this.stopped = true;
           return;
         }
-        var4Lifetime1 = var15[this.field_w][0] + this.getTrapInitialLocalX((byte) -70);
-        var5Lifetime1 = var15[this.field_w][1] + this.getTrapInitialLocalY(false);
+        var4Lifetime1 = var15[this.waypointIndex][0] + this.getTrapInitialLocalX((byte) -70);
+        var5Lifetime1 = var15[this.waypointIndex][1] + this.getTrapInitialLocalY(false);
         var6Lifetime1 = -this.trap.getLocalX(25745) + var4Lifetime1;
         var7Lifetime1 = var5Lifetime1 - this.trap.getLocalY(false);
-        var8Lifetime1 = this.field_r >> 16;
+        var8Lifetime1 = this.speed >> 16;
         var8Lifetime1 = var8Lifetime1 * var8Lifetime1;
         var9Lifetime1 = (var6Lifetime1 >> 16) * (var6Lifetime1 >> 16) + (var7Lifetime1 >> 16) * (var7Lifetime1 >> 16);
         if (var9Lifetime1 <= var8Lifetime1) {
           this.trap.move((byte) -112, var6Lifetime1, var7Lifetime1);
           this.field_s = true;
-          this.field_w = this.field_w + 1;
+          this.waypointIndex = this.waypointIndex + 1;
           return;
         }
         var10Lifetime1 = qva.a((byte) -99, var7Lifetime1, var6Lifetime1);
         if (!this.field_o) {
           var11Lifetime1 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
-          var12Lifetime1 = bua.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime1 = doa.a(2, this.field_r, var11Lifetime1);
-          var14Lifetime1 = doa.a(2, this.field_r, var12Lifetime1);
+          var12Lifetime1 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
+          var13Lifetime1 = doa.a(2, this.speed, var11Lifetime1);
+          var14Lifetime1 = doa.a(2, this.speed, var12Lifetime1);
           this.trap.move((byte) -77, var13Lifetime1, var14Lifetime1);
           return;
         }
         if (!this.field_s) {
           var11Lifetime2 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
-          var12Lifetime2 = bua.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime2 = doa.a(2, this.field_r, var11Lifetime2);
-          var14Lifetime2 = doa.a(2, this.field_r, var12Lifetime2);
+          var12Lifetime2 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
+          var13Lifetime2 = doa.a(2, this.speed, var11Lifetime2);
+          var14Lifetime2 = doa.a(2, this.speed, var12Lifetime2);
           this.trap.move((byte) -77, var13Lifetime2, var14Lifetime2);
           return;
         }
@@ -253,9 +253,9 @@ final class PathMoveLocomotor extends Locomotor {
           this.trap.rotateBy(false, -var11Lifetime3);
           this.field_s = false;
           var11Lifetime3 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
-          var12Lifetime3 = bua.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime3 = doa.a(2, this.field_r, var11Lifetime3);
-          var14Lifetime3 = doa.a(2, this.field_r, var12Lifetime3);
+          var12Lifetime3 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
+          var13Lifetime3 = doa.a(2, this.speed, var11Lifetime3);
+          var14Lifetime3 = doa.a(2, this.speed, var12Lifetime3);
           this.trap.move((byte) -77, var13Lifetime3, var14Lifetime3);
           return;
         }
@@ -263,9 +263,9 @@ final class PathMoveLocomotor extends Locomotor {
           this.trap.rotateBy(false, -var11Lifetime3);
           this.field_s = false;
           var11Lifetime3 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
-          var12Lifetime3 = bua.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime4 = doa.a(2, this.field_r, var11Lifetime3);
-          var14Lifetime4 = doa.a(2, this.field_r, var12Lifetime3);
+          var12Lifetime3 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
+          var13Lifetime4 = doa.a(2, this.speed, var11Lifetime3);
+          var14Lifetime4 = doa.a(2, this.speed, var12Lifetime3);
           this.trap.move((byte) -77, var13Lifetime4, var14Lifetime4);
           return;
         }
@@ -274,9 +274,9 @@ final class PathMoveLocomotor extends Locomotor {
           return;
         }
         var11Lifetime4 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
-        var12Lifetime4 = bua.cos2048(0, var10Lifetime1 >> 2);
-        var13Lifetime5 = doa.a(2, this.field_r, var11Lifetime4);
-        var14Lifetime5 = doa.a(2, this.field_r, var12Lifetime4);
+        var12Lifetime4 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
+        var13Lifetime5 = doa.a(2, this.speed, var11Lifetime4);
+        var14Lifetime5 = doa.a(2, this.speed, var12Lifetime4);
         this.trap.move((byte) -77, var13Lifetime5, var14Lifetime5);
     }
 
@@ -287,13 +287,13 @@ final class PathMoveLocomotor extends Locomotor {
 
     final void applyConstraint(int param0) {
         if (param0 != 1) {
-          this.e(91);
+          this.getSpeed(91);
         }
     }
 
     final int hashState(int param0, int param1) {
-        param1 = CurveOperator.mixHash((byte) 98, param1, this.field_r);
-        param1 = CurveOperator.mixHash((byte) 26, param1, this.field_w);
+        param1 = CurveOperator.mixHash((byte) 98, param1, this.speed);
+        param1 = CurveOperator.mixHash((byte) 26, param1, this.waypointIndex);
         if (param0 == 0) {
           return param1;
         }
@@ -307,8 +307,8 @@ final class PathMoveLocomotor extends Locomotor {
           if (param1 >= -78) {
             this.field_o = true;
           }
-          this.field_t.a(param0, 0);
-          param0.writeBits((byte) 54, this.b(0, this.field_r), 8);
+          this.path.encode(param0, 0);
+          param0.writeBits((byte) 54, this.b(0, this.speed), 8);
           param0.writeBits((byte) -127, !this.field_o ? 0 : 1, 1);
           if (this.field_o) {
             param0.writeBits((byte) -126, this.field_u ? 1 : 0, 1);
@@ -319,9 +319,9 @@ final class PathMoveLocomotor extends Locomotor {
         }
     }
 
-    final void a(int param0, gea param1) {
+    final void setPath(int param0, WaypointPath param1) {
         try {
-          this.field_t = param1;
+          this.path = param1;
           if (param0 < 6) {
             field_q = (String) null;
           }
@@ -334,8 +334,8 @@ final class PathMoveLocomotor extends Locomotor {
         super(param0, param1);
         this.field_s = false;
         try {
-          this.field_t = new gea();
-          this.field_r = 131072;
+          this.path = new WaypointPath();
+          this.speed = 131072;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -375,12 +375,12 @@ final class PathMoveLocomotor extends Locomotor {
         }
     }
 
-    final int e(int param0) {
+    final int getSpeed(int param0) {
         if (param0 < 2) {
           field_q = (String) null;
-          return this.field_r;
+          return this.speed;
         }
-        return this.field_r;
+        return this.speed;
     }
 
     public static void f(int param0) {
@@ -394,25 +394,25 @@ final class PathMoveLocomotor extends Locomotor {
     final void mirror(byte param0) {
         if (param0 <= -116) {
           super.mirror((byte) -119);
-          this.field_t.a(true);
+          this.path.a(true);
           return;
         }
-        this.field_w = -124;
+        this.waypointIndex = -124;
         super.mirror((byte) -119);
-        this.field_t.a(true);
+        this.path.a(true);
     }
 
-    final void a(byte param0, int param1) {
-        this.field_r = param1;
+    final void setSpeed(byte param0, int param1) {
+        this.speed = param1;
         int var3 = 84 % ((-37 - param0) / 46);
     }
 
-    final int d(boolean param0) {
+    final int getWaypointIndex(boolean param0) {
         if (param0) {
-          this.field_r = -121;
-          return this.field_w;
+          this.speed = -121;
+          return this.waypointIndex;
         }
-        return this.field_w;
+        return this.waypointIndex;
     }
 
     static {

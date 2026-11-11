@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
-    static jea field_p;
+    static UiComponent field_p;
     private SwitchState field_n;
     static int field_r;
     private boolean field_q;
@@ -210,7 +210,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
           return true;
         }
         if (null != RoomViewRenderer.field_c &&
-          RoomViewRenderer.field_c.b(true)) {
+          RoomViewRenderer.field_c.handleCancelKey(true)) {
           RoomViewRenderer.field_c = null;
           wp.a(-1);
           return true;

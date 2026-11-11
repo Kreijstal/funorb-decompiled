@@ -5,7 +5,7 @@ final class nba {
     static int field_b;
     static int[] field_a;
 
-    final static void a(MatchState param0, Room param1, byte param2) {
+    final static void sendRoomDeathStat(MatchState param0, Room param1, byte param2) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_10_0 = null;

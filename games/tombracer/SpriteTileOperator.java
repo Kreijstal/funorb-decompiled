@@ -132,7 +132,7 @@ final class SpriteTileOperator extends SpriteSampleOperator {
     }
 
     final static boolean d(int param0) {
-        lqa var1 = uv.b(false);
+        lqa var1 = LegacyOpenGlBloomEffect.b(false);
         if (var1 != null) {
           int var2 = 74 % ((-14 - param0) / 45);
           return var1.field_d;

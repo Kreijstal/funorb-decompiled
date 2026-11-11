@@ -28,7 +28,7 @@ final class ava {
         boolean stackIn_44_6 = false;
         int stackIn_47_0 = 0;
         int stackIn_59_0 = 0;
-        jea stackIn_94_0 = null;
+        UiComponent stackIn_94_0 = null;
         int stackIn_95_1 = 0;
         RuntimeException stackIn_219_0 = null;
         StringBuilder stackIn_219_1 = null;
@@ -46,11 +46,11 @@ final class ava {
         Object var11 = null;
         pha var12 = null;
         int var13 = 0;
-        jea var14 = null;
-        jea var15 = null;
-        jea var16 = null;
-        jea var17 = null;
-        jea var18 = null;
+        UiComponent var14 = null;
+        UiComponent var15 = null;
+        UiComponent var16 = null;
+        UiComponent var17 = null;
+        UiComponent var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -144,19 +144,19 @@ final class ava {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_J == null) {
-              var12.field_Nb = new jea(0L, S2CStartRoundPacket.field_a);
+              var12.field_Nb = new UiComponent(0L, S2CStartRoundPacket.field_a);
               var12.b(-128, var12.field_Nb);
-              var12.field_Db = new jea(0L, iea.field_g);
+              var12.field_Db = new UiComponent(0L, iea.field_g);
               if (UnlockOverlay.field_p) {
                 var12.b(-123, var12.field_Db);
               }
               var12.field_Db.field_z = 2;
-              var12.field_Gb = new jea(0L, Corpse.field_i);
+              var12.field_Gb = new UiComponent(0L, Corpse.field_i);
               var12.b(-126, var12.field_Gb);
               var12.a(-10966);
-              var12.field_Kb = new jea(0L, bua.field_g);
+              var12.field_Kb = new UiComponent(0L, ModelAnimator.field_g);
               var12.b(param4 ^ -121, var12.field_Kb);
-              var12.field_Cb = new jea(0L, kv.field_b);
+              var12.field_Cb = new UiComponent(0L, kv.field_b);
               var12.b(-128, var12.field_Cb);
               var13 = 1;
             }
@@ -250,7 +250,7 @@ final class ava {
                 var12.field_yb != SimpleConditionBehaviour.field_r) {
                 if (var12.field_Kb.field_r != null) {
                   var26 = var12.field_Kb.b((byte) 69) + mna.field_d * 2;
-                  var12.field_Kb.a(var26, di.field_a, -23776, var19, var25_int);
+                  var12.field_Kb.setBounds(var26, di.field_a, -23776, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
                 if (var12.field_Cb.field_r != null) {
@@ -259,7 +259,7 @@ final class ava {
                   } else {
                     var26Lifetime2 = var12.field_Cb.b((byte) 69) + 2 * mna.field_d;
                   }
-                  var12.field_Cb.a(var26Lifetime2, di.field_a, -23776, var19, var25_int);
+                  var12.field_Cb.setBounds(var26Lifetime2, di.field_a, -23776, var19, var25_int);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -269,9 +269,9 @@ final class ava {
               } else {
                 stackIn_95_1 = 0;
               }
-              ((jea) (Object) stackIn_94_0).a(-stackIn_95_1 + var12.field_G - var25_int, di.field_a, param4 - 23778, var19, var25_int);
+              ((UiComponent) (Object) stackIn_94_0).setBounds(-stackIn_95_1 + var12.field_G - var25_int, di.field_a, param4 - 23778, var19, var25_int);
               var12.field_Db.field_r = Integer.toString(var12.field_Jb);
-              var12.field_Db.a(40, di.field_a, -23776, var19, var12.field_G - 40);
+              var12.field_Db.setBounds(40, di.field_a, -23776, var19, var12.field_G - 40);
               if (var12.field_Nb.field_o &&
                 var22 != 0) {
                 ArchiveNetworkClient.field_b = var12.field_wb;
@@ -297,14 +297,14 @@ final class ava {
               var24_intLifetime1 = var12.field_Gb.field_H.countWrappedLines(var23, -mna.field_d - mna.field_d + var12.field_G);
               var12.field_Gb.field_r = var23;
               var12.field_Gb.field_s = var12.field_xb * 256 / qsa.field_a;
-              var12.field_Gb.a(var12.field_G - 2 * mna.field_d, di.field_a * var24_intLifetime1, -23776, var19, mna.field_d);
+              var12.field_Gb.setBounds(var12.field_G - 2 * mna.field_d, di.field_a * var24_intLifetime1, -23776, var19, mna.field_d);
               var19 = var19 + di.field_a * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
               var12.field_O = var19 - var12.field_t;
             }
             if (var13 != 0) {
-              param0.field_tb.a(2, (jea) (var11), var12, (byte) -122);
+              param0.field_tb.placeBelow(2, (UiComponent) (var11), var12, (byte) -122);
             }
             if (var12.field_y != 0 &&
               !var12.f(162)) {

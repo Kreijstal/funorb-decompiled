@@ -169,7 +169,7 @@ final class di {
               var8_int = var7.field_b;
               if (var8_int != 0) {
                 if (var8_int == 5) {
-                  if (!HotspotTextWidget.field_B.b(-35)) {
+                  if (!HotspotTextWidget.field_B.ensureIndex(-35)) {
                     return;
                   }
                   var8_int = ScoreStandings.a("hw3d", 28893);
@@ -208,7 +208,7 @@ final class di {
                       if (var8_int != 2) {
                         throw new IllegalStateException("UT" + var7.field_b);
                       }
-                      if (!HotspotTextWidget.field_B.b(-63)) {
+                      if (!HotspotTextWidget.field_B.ensureIndex(-63)) {
                         return;
                       }
                       var8_int = ScoreStandings.a("jaclib", 28893);
@@ -232,7 +232,7 @@ final class di {
                         }
                       }
                     } else {
-                      if (!HotspotTextWidget.field_B.b(-63)) {
+                      if (!HotspotTextWidget.field_B.ensureIndex(-63)) {
                         return;
                       }
                       var8_int = ScoreStandings.a("jaclib", 28893);
@@ -267,7 +267,7 @@ final class di {
                       }
                     }
                   } else {
-                    if (!HotspotTextWidget.field_B.b(-53)) {
+                    if (!HotspotTextWidget.field_B.ensureIndex(-53)) {
                       return;
                     }
                     var8_int = ScoreStandings.a("jaclib", 28893);

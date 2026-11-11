@@ -101,10 +101,10 @@ final class DrawOfferMenu extends MenuScreen {
     final static void a(byte param0, String[] param1) {
         try {
           if (TeleportState.field_b != null) {
-            TeleportState.field_b.field_y.a(13597, param1);
+            TeleportState.field_b.field_y.setSuggestions(13597, param1);
           }
           if (PushableMountComponent.field_F != null) {
-            PushableMountComponent.field_F.field_x.a(13597, param1);
+            PushableMountComponent.field_F.field_x.setSuggestions(13597, param1);
           }
           int var2_int = -77 % ((-37 - param0) / 57);
         } catch (RuntimeException runtimeException) {
@@ -143,16 +143,16 @@ final class DrawOfferMenu extends MenuScreen {
         WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
     }
 
-    final static jea a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12) {
-        jea var13 = null;
+    final static UiComponent a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12) {
+        UiComponent var13 = null;
         RuntimeException var13_ref = null;
-        jea stackIn_3_0 = null;
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new jea(0L, (jea) null);
+          var13 = new UiComponent(0L, (UiComponent) null);
           var13.field_w = RoomLighting.a(param11, param2, 4);
           var13.field_C = RoomLighting.a(param1, param10, 4);
           var13.field_db = RoomLighting.a(param0, param5, 4);

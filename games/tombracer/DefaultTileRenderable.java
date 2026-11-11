@@ -19,11 +19,11 @@ final class DefaultTileRenderable extends TileRenderable {
         return this.cell.getCenterY(true);
     }
 
-    private final void h(byte param0) {
+    private final void chooseFloorSprite(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_k < 25) {
           this.field_m = 12;
-          this.field_m = this.field_m + (2 + this.h(16094)) % 4;
+          this.field_m = this.field_m + (2 + this.getCheckerIndex(16094)) % 4;
           if (param0 <= 125) {
             this.getRenderY((byte) -70);
             return;
@@ -33,7 +33,7 @@ final class DefaultTileRenderable extends TileRenderable {
         if (50 <= this.field_k) {
           if (this.field_k >= 75) {
             this.field_m = 0;
-            this.field_m = this.field_m + (2 + this.h(16094)) % 4;
+            this.field_m = this.field_m + (2 + this.getCheckerIndex(16094)) % 4;
             if (param0 <= 125) {
               this.getRenderY((byte) -70);
               return;
@@ -41,7 +41,7 @@ final class DefaultTileRenderable extends TileRenderable {
             return;
           }
           this.field_m = 4;
-          this.field_m = this.field_m + (2 + this.h(16094)) % 4;
+          this.field_m = this.field_m + (2 + this.getCheckerIndex(16094)) % 4;
           if (param0 > 125) {
             return;
           }
@@ -49,14 +49,14 @@ final class DefaultTileRenderable extends TileRenderable {
           return;
         }
         this.field_m = 8;
-        this.field_m = this.field_m + (2 + this.h(16094)) % 4;
+        this.field_m = this.field_m + (2 + this.getCheckerIndex(16094)) % 4;
         if (param0 > 125) {
           return;
         }
         this.getRenderY((byte) -70);
     }
 
-    final void g(byte param0) {
+    final void chooseSprite(byte param0) {
         int var2;
         int var3;
         TileRenderable var4;
@@ -64,23 +64,23 @@ final class DefaultTileRenderable extends TileRenderable {
         int var2Lifetime1;
         int var2Lifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
-        if (0 == this.h(16094)) {
+        if (0 == this.getCheckerIndex(16094)) {
           this.field_k = this.getRoom(10685).getSeededRandom(true).nextBounded(100, 0);
           this.field_m = -1;
           this.field_n = 0;
           this.field_i = -1;
           var2 = this.field_h;
           if (var2 == 0) {
-            this.f((byte) -84);
+            this.chooseSpriteForTileType((byte) -84);
           } else {
             if (var2 == 1) {
-              this.a((byte) -93);
+              this.chooseEdgeSprite((byte) -93);
             }
           }
           if (param0 <= -31) {
             return;
           }
-          this.g(97);
+          this.resetStyle(97);
           return;
         }
         var2Lifetime1 = this.cell.getColumn((byte) 106) / 2 * 2;
@@ -94,38 +94,38 @@ final class DefaultTileRenderable extends TileRenderable {
         this.field_i = -1;
         var2Lifetime2 = this.field_h;
         if (var2Lifetime2 == 0) {
-          this.f((byte) -84);
+          this.chooseSpriteForTileType((byte) -84);
         } else {
           if (var2Lifetime2 == 1) {
-            this.a((byte) -93);
+            this.chooseEdgeSprite((byte) -93);
           }
         }
         if (param0 <= -31) {
           return;
         }
-        this.g(97);
+        this.resetStyle(97);
         return;
     }
 
-    final void a(boolean param0) {
+    final void mirror(boolean param0) {
         if (param0) {
-          this.field_l = sw.a(this.field_l, 6);
-          this.g((byte) -49);
+          this.field_l = EditableTextField.a(this.field_l, 6);
+          this.chooseSprite((byte) -49);
           return;
         }
-        this.h((byte) -116);
-        this.field_l = sw.a(this.field_l, 6);
-        this.g((byte) -49);
+        this.chooseFloorSprite((byte) -116);
+        this.field_l = EditableTextField.a(this.field_l, 6);
+        this.chooseSprite((byte) -49);
     }
 
-    private final void f(byte param0) {
+    private final void chooseSpriteForTileType(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 != -84) {
           this.field_h = 93;
           var2 = this.cell.tileType;
           if (0 == var2) {
-            this.h((byte) 127);
+            this.chooseFloorSprite((byte) 127);
             return;
           }
           if (var2 == 1) {
@@ -136,7 +136,7 @@ final class DefaultTileRenderable extends TileRenderable {
         }
         var2Lifetime1 = this.cell.tileType;
         if (0 == var2Lifetime1) {
-          this.h((byte) 127);
+          this.chooseFloorSprite((byte) 127);
           return;
         }
         if (var2Lifetime1 == 1) {
@@ -152,7 +152,7 @@ final class DefaultTileRenderable extends TileRenderable {
         }
     }
 
-    private final int h(int param0) {
+    private final int getCheckerIndex(int param0) {
         if (param0 == 16094) {
           return this.cell.getColumn((byte) 102) % 2 + 2 * (this.cell.getRow(-77) % 2);
         }
@@ -270,14 +270,14 @@ final class DefaultTileRenderable extends TileRenderable {
         return this.cell.getCenterX((byte) -104);
     }
 
-    private final void a(byte param0) {
+    private final void chooseEdgeSprite(byte param0) {
         int var2;
         int var3;
         int var2Lifetime1;
         var3 = TombRacer.field_G ? 1 : 0;
-        this.h((byte) 126);
+        this.chooseFloorSprite((byte) 126);
         if (param0 > -83) {
-          this.c(-10);
+          this.isDusty(-10);
         }
         var2 = this.field_j;
         if (0 == var2) {
@@ -347,7 +347,7 @@ final class DefaultTileRenderable extends TileRenderable {
         lqa var1Lifetime1;
         if (param0 != -22766) {
           DefaultTileRenderable.e(85);
-          var1 = uv.b(false);
+          var1 = LegacyOpenGlBloomEffect.b(false);
           if (var1 == null) {
             return false;
           }
@@ -359,7 +359,7 @@ final class DefaultTileRenderable extends TileRenderable {
           }
           return false;
         }
-        var1Lifetime1 = uv.b(false);
+        var1Lifetime1 = LegacyOpenGlBloomEffect.b(false);
         if (var1Lifetime1 == null) {
           return false;
         }
@@ -372,10 +372,10 @@ final class DefaultTileRenderable extends TileRenderable {
         return false;
     }
 
-    final void g(int param0) {
+    final void resetStyle(int param0) {
         this.field_h = 0;
         if (param0 != -23801) {
-          this.a((byte) 74);
+          this.chooseEdgeSprite((byte) 74);
         }
     }
 
@@ -383,36 +383,36 @@ final class DefaultTileRenderable extends TileRenderable {
         if (this.field_k < 50) {
           this.field_m = 16;
           if (param0) {
-            this.h((byte) -45);
+            this.chooseFloorSprite((byte) -45);
             return;
           }
           return;
         }
         this.field_m = 17;
         if (param0) {
-          this.h((byte) -45);
+          this.chooseFloorSprite((byte) -45);
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void setEdgeStyle(int param0, int param1, int param2, byte param3) {
         if (param3 == 73) {
           this.field_h = param0;
           this.field_j = param2;
           this.field_l = param1;
           return;
         }
-        this.a((byte) -40);
+        this.chooseEdgeSprite((byte) -40);
         this.field_h = param0;
         this.field_j = param2;
         this.field_l = param1;
     }
 
-    final boolean c(int param0) {
+    final boolean isDusty(int param0) {
         if (param0 == -2) {
           return this.cell.tileType == 1 ? true : false;
         }
-        this.a((byte) -97);
+        this.chooseEdgeSprite((byte) -97);
         return this.cell.tileType == 1 ? true : false;
     }
 

@@ -57,9 +57,9 @@ final class tw {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.b(param2, -7768);
+          var4_int = param3.getGroupId(param2, -7768);
           var6 = 86 % ((param0 - 78) / 45);
-          var5 = param3.a(true, param1, var4_int);
+          var5 = param3.getFileId(true, param1, var4_int);
           stackIn_1_0 = CrusherBehaviour.a(param3, var4_int, var5, (byte) 42);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

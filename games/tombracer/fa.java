@@ -5,9 +5,9 @@ final class fa {
     static ToolkitSprite[] field_a;
     static int field_b;
 
-    final static jea b(byte param0) {
+    final static UiComponent b(byte param0) {
         RuntimeException var1 = null;
-        jea stackIn_4_0 = null;
+        UiComponent stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 113) {
@@ -92,13 +92,13 @@ final class fa {
               var10 != 0) {
               if (var6 == 0) {
                 if (C2SChooseRewardPacket.field_a == null &&
-                  kq.field_c) {
+                  PlayerInputQueue.field_c) {
                   var4 = "[" + cla.field_o + "] ";
                 }
                 if (null != C2SChooseRewardPacket.field_a) {
                   if (!kp.field_c ||
                     tla.field_f == null) {
-                    var4 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(110, jea.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
+                    var4 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(110, UiComponent.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + tla.field_f + "] ";
                     }

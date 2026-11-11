@@ -3,13 +3,13 @@
  */
 final class qpa implements GamePacket {
     private int field_a;
-    static jea field_b;
+    static UiComponent field_b;
     private int field_c;
 
     public static void releaseStatics(boolean param0) {
         field_b = null;
         if (param0) {
-          field_b = (jea) null;
+          field_b = (UiComponent) null;
         }
     }
 

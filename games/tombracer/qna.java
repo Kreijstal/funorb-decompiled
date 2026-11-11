@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qna {
-    static jea field_b;
+    static UiComponent field_b;
     static String field_a;
     static String field_c;
 

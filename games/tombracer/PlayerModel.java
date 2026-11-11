@@ -7,17 +7,17 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
     private boolean field_o;
     private int field_h;
     private int field_j;
-    private bua field_c;
+    private ModelAnimator field_c;
     static PacketBuffer field_d;
     private boolean field_m;
-    static jea field_a;
+    static UiComponent field_a;
     int field_k;
     private int field_g;
     private int field_f;
     private int field_i;
     static int field_b;
     private Player field_p;
-    private bua field_n;
+    private ModelAnimator field_n;
 
     public final void drawShadow(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = -66 / ((-33 - param1) / 61);
@@ -53,8 +53,8 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         if (null == this.field_c) {
           return;
         }
-        this.field_c.a(0);
-        this.field_n.a(0);
+        this.field_c.tick(0);
+        this.field_n.tick(0);
         this.field_h = GameScreen.positiveModulo(8 + this.field_h, 2048, 106);
         this.field_l.setPosition(this.field_p.getElevation((byte) 115) + 2097152, (byte) 101, this.field_p.getY(9648), this.field_p.getX(3));
         if (param0 != -4366) {
@@ -79,7 +79,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         if (param0 >= -107) {
           return true;
         }
-        return this.field_c.e(0);
+        return this.field_c.isFinished(0);
     }
 
     private final boolean b(boolean param0) {
@@ -203,12 +203,12 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         var10 = stackIn_34_0;
         stackIn_37_0 = (this.field_f != 35) ? 0 : 1;
         var11 = stackIn_37_0;
-        var12 = this.field_c.a(var11 != 0, -1, var10 != 0, (byte) 1);
+        var12 = this.field_c.buildModel(var11 != 0, -1, var10 != 0, (byte) 1);
         if (this.field_f != 10) {
           gqa.a(var5, -83584144, var8, var7, var12, param2);
         }
         if (this.field_f == 10) {
-          var13_ref_ka = this.field_n.b((byte) 74);
+          var13_ref_ka = this.field_n.getModel((byte) 74);
           gqa.a(var5, -83584144, var8, var7, var13_ref_ka, param2);
         }
         var13 = this.field_p.getHeldItemKind((byte) 126);
@@ -287,14 +287,14 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           boolean decompiledFrameRemainder0 = true;
           if (this.b(true)) {
             if (this.field_f != 24) {
-              if (this.field_c.b(param0 - 21463) != 1) {
-                stackIn_35_0 = (17 == this.field_c.b(0)) ? 1 : 0;
+              if (this.field_c.getFrame(param0 - 21463) != 1) {
+                stackIn_35_0 = (17 == this.field_c.getFrame(0)) ? 1 : 0;
               } else {
                 stackIn_35_0 = 1;
               }
             } else {
-              if (this.field_c.b(0) != 1 &&
-                this.field_c.b(0) != 9) {
+              if (this.field_c.getFrame(0) != 1 &&
+                this.field_c.getFrame(0) != 9) {
                 stackIn_35_0 = 0;
               } else {
                 stackIn_35_0 = 1;
@@ -302,7 +302,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             }
             var3_int = stackIn_35_0;
             if (var3_int != 0) {
-              stackIn_41_0 = (this.field_c.c(0)) ? 1 : 0;
+              stackIn_41_0 = (this.field_c.hasFrameChanged(0)) ? 1 : 0;
             } else {
               stackIn_41_0 = 0;
             }
@@ -361,7 +361,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         if (null == this.field_c) {
           return;
         }
-        ka var6 = this.field_c.b((byte) 74);
+        ka var6 = this.field_c.getModel((byte) 74);
         hp.a(param2, param3, 0, var6, -1918106173, param4, param1);
     }
 
@@ -371,10 +371,10 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           this.field_j = this.field_j % 13;
         }
         if (param0 >= 0) {
-          this.field_c = new bua(0, this.field_j, 1);
+          this.field_c = new ModelAnimator(0, this.field_j, 1);
           this.field_c.a(this.field_j, false, 0, 0, true);
-          this.field_c.a(false, 96);
-          this.field_n = new bua(6, 3);
+          this.field_c.setScale(false, 96);
+          this.field_n = new ModelAnimator(6, 3);
           this.field_n.a(param1, true, (byte) 58, 5);
           return;
         }
@@ -398,7 +398,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
 
     public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
-          this.field_n = (bua) null;
+          this.field_n = (ModelAnimator) null;
           return false;
         }
         return false;
@@ -467,8 +467,8 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
                 var4 = 17;
               }
               var6 = this.field_c.a(this.field_j, (byte) 66, 0, var11);
-              this.field_c.a(var11, 0, this.field_j, param2, 0, var5);
-              this.field_c.a(64, var6, this.field_j, var4, 0);
+              this.field_c.playAnimation(var11, 0, this.field_j, param2, 0, var5);
+              this.field_c.queueAnimation(64, var6, this.field_j, var4, 0);
               if (var12 == 0) {
                 break;
               }
@@ -498,8 +498,8 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
               var11 = 30;
             }
             var6 = this.field_c.a(this.field_j, (byte) 66, 0, var11);
-            this.field_c.a(var11, 0, this.field_j, param2, 0, var5);
-            this.field_c.a(126, var6, this.field_j, var4, 0);
+            this.field_c.playAnimation(var11, 0, this.field_j, param2, 0, var5);
+            this.field_c.queueAnimation(126, var6, this.field_j, var4, 0);
             if (var12 == 0) {
               break;
             }
@@ -546,8 +546,8 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
                 }
               }
             }
-            this.field_c.a(var10, param0 - 26, this.field_j, param2, 0, var5);
-            this.field_c.a(param0 ^ 69, var6, this.field_j, var4, 0);
+            this.field_c.playAnimation(var10, param0 - 26, this.field_j, param2, 0, var5);
+            this.field_c.queueAnimation(param0 ^ 69, var6, this.field_j, var4, 0);
             if (var12 == 0) {
               break;
             }
@@ -563,38 +563,38 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           case 5:
             var4 = 4;
             var6 = this.field_c.a(this.field_j, (byte) 66, 0, var4);
-            this.field_c.a(var4, 0, this.field_j, param2, 0, var5);
-            this.field_c.a(48, var6, this.field_j, 0, 0);
+            this.field_c.playAnimation(var4, 0, this.field_j, param2, 0, var5);
+            this.field_c.queueAnimation(48, var6, this.field_j, 0, 0);
             if (var12 == 0) {
               break;
             }
           case 6:
             var4 = 5;
             var6 = this.field_c.a(this.field_j, (byte) 66, 0, var4);
-            this.field_c.a(var4, 0, this.field_j, param2, 0, var5);
-            this.field_c.a(92, var6, this.field_j, 0, 0);
+            this.field_c.playAnimation(var4, 0, this.field_j, param2, 0, var5);
+            this.field_c.queueAnimation(92, var6, this.field_j, 0, 0);
             if (var12 == 0) {
               break;
             }
           case 18:
             var4 = 23;
             var6 = this.field_c.a(this.field_j, (byte) 66, 0, var4);
-            this.field_c.a(var4, param0 ^ 26, this.field_j, param2, 0, var5);
-            this.field_c.a(107, var6, this.field_j, 0, 0);
+            this.field_c.playAnimation(var4, param0 ^ 26, this.field_j, param2, 0, var5);
+            this.field_c.queueAnimation(107, var6, this.field_j, 0, 0);
             if (var12 == 0) {
               break;
             }
           case 23:
             var4 = 37;
             var6 = this.field_c.a(this.field_j, (byte) 66, 0, var4);
-            this.field_c.a(var4, 0, this.field_j, param2, 0, var5);
-            this.field_c.a(param0 + 79, var6, this.field_j, 0, 0);
+            this.field_c.playAnimation(var4, 0, this.field_j, param2, 0, var5);
+            this.field_c.queueAnimation(param0 + 79, var6, this.field_j, 0, 0);
             if (var12 == 0) {
               break;
             }
           case 7:
             var4 = 6;
-            this.field_c.a(var4, 0, this.field_j, param2, 0, var5);
+            this.field_c.playAnimation(var4, 0, this.field_j, param2, 0, var5);
             if (var12 == 0) {
               break;
             }
@@ -778,18 +778,18 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           case 11:
             var4 = 7;
             var6 = this.field_c.a(this.field_j, (byte) 66, 0, var4);
-            this.field_c.a(var4, 0, this.field_j, param2, 0, var5);
-            this.field_c.a(86, var6, this.field_j, 27, 0);
+            this.field_c.playAnimation(var4, 0, this.field_j, param2, 0, var5);
+            this.field_c.queueAnimation(86, var6, this.field_j, 27, 0);
             var6 = var6 + this.field_c.a(this.field_j, (byte) 66, 0, 27);
-            this.field_c.a(42, var6, this.field_j, 17, 0);
+            this.field_c.queueAnimation(42, var6, this.field_j, 17, 0);
             if (var12 == 0) {
               break;
             }
           case 15:
             var4 = 8;
             var6 = 75;
-            this.field_c.a(var4, 0, this.field_j, param2, 0, var5);
-            this.field_c.a(68, var6, this.field_j, 17, 0);
+            this.field_c.playAnimation(var4, 0, this.field_j, param2, 0, var5);
+            this.field_c.queueAnimation(68, var6, this.field_j, 17, 0);
           default:
             break;
         }
@@ -800,7 +800,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         if (var6 != 0) {
           return;
         }
-        this.field_c.a(var4, param0 ^ param0, this.field_j, param2, 0, var5);
+        this.field_c.playAnimation(var4, param0 ^ param0, this.field_j, param2, 0, var5);
         if (this.field_f == 10) {
           this.field_n.a(1, true, (byte) 49, 5);
         }

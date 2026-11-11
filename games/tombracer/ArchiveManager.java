@@ -216,7 +216,7 @@ final class ArchiveManager {
         }
         for (var2 = 0; this.field_i.length > var2; var2++) {
           if (null != this.field_i[var2]) {
-            this.field_i[var2].c(-28613);
+            this.field_i[var2].processQueuedGroups(-28613);
           }
         }
         var4 = 0;

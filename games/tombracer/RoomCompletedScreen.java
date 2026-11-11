@@ -68,7 +68,7 @@ final class RoomCompletedScreen extends MatchOverlay {
         if (param0 != 2) {
           return false;
         }
-        lqa var1 = uv.b(false);
+        lqa var1 = LegacyOpenGlBloomEffect.b(false);
         if (var1 == null) {
           return false;
         }

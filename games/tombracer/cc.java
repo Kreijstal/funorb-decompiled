@@ -177,7 +177,7 @@ final class cc extends IntrusiveNode {
               JavaScriptBridge.evaluateScript(param1, 19467, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
-            MatchProtocol.a((byte) 64, param1);
+            MatchProtocol.updatePageLinks((byte) 64, param1);
           } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) ((Object) runtimeException), "cc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

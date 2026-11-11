@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BoulderComponent extends PathMoverComponent {
-    static jea field_M;
+    static UiComponent field_M;
 
     final boolean C(int param0) {
         if (param0 != 1760) {
-          field_M = (jea) null;
+          field_M = (UiComponent) null;
           return true;
         }
         return true;
@@ -78,11 +78,11 @@ final class BoulderComponent extends PathMoverComponent {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.b(param1, -7768);
+          var4_int = param0.getGroupId(param1, -7768);
           if (param2 != 5) {
-            field_M = (jea) null;
+            field_M = (UiComponent) null;
           }
-          var5 = param0.a(true, param3, var4_int);
+          var5 = param0.getFileId(true, param3, var4_int);
           stackIn_3_0 = FocusableWidget.a(param0, var5, var4_int, (byte) -82);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -113,7 +113,7 @@ final class BoulderComponent extends PathMoverComponent {
 
     final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          field_M = (jea) null;
+          field_M = (UiComponent) null;
           return true;
         }
         return true;
@@ -194,7 +194,7 @@ final class BoulderComponent extends PathMoverComponent {
 
     final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
-          field_M = (jea) null;
+          field_M = (UiComponent) null;
           return false;
         }
         return false;
@@ -202,7 +202,7 @@ final class BoulderComponent extends PathMoverComponent {
 
     public static void releaseStatics(byte param0) {
         if (param0 <= 60) {
-          field_M = (jea) null;
+          field_M = (UiComponent) null;
           field_M = null;
           return;
         }
@@ -211,7 +211,7 @@ final class BoulderComponent extends PathMoverComponent {
 
     final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          field_M = (jea) null;
+          field_M = (UiComponent) null;
           return false;
         }
         return false;

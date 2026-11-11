@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hla extends jea {
-    jea field_yb;
-    jea field_tb;
-    jea field_wb;
+final class hla extends UiComponent {
+    UiComponent field_yb;
+    UiComponent field_tb;
+    UiComponent field_wb;
     ScrollPane field_vb;
     static int field_xb;
     static NodeHashTable field_ub;
@@ -48,13 +48,13 @@ final class hla extends jea {
         this.a(param1, param0, 0, param5);
     }
 
-    hla(long param0, jea param1, jea param2, VerticalScrollbar param3, jea param4, String param5, String param6) {
+    hla(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3, UiComponent param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_tb = new jea(0L, (jea) null);
+          this.field_tb = new UiComponent(0L, (UiComponent) null);
           this.field_vb = new ScrollPane(0L, this.field_tb, param2, param3);
-          this.field_yb = new jea(0L, param4);
-          this.field_wb = new jea(0L, param4);
+          this.field_yb = new UiComponent(0L, param4);
+          this.field_wb = new UiComponent(0L, param4);
           this.field_yb.field_r = param5;
           this.field_wb.field_r = param6;
           this.b(-124, this.field_vb);

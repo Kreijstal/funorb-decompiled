@@ -11,9 +11,9 @@ abstract class vo {
     private boolean field_c;
     static int field_f;
 
-    final static jea e(int param0) {
+    final static UiComponent e(int param0) {
         if (param0 != 35040) {
-          return (jea) null;
+          return (UiComponent) null;
         }
         return nsa.field_i.field_tb;
     }

@@ -307,12 +307,12 @@ final class PortalBehaviour extends Behaviour {
               var21 = var21 * 9 / 10;
               if (io.centredBoxesOverlap(var6, var19, (byte) -93, var7, var18, var5, var21, var20, var4)) {
                 var22 = var28.getTeleportState(false);
-                var22.a((byte) -44);
+                var22.markTouching((byte) -44);
                 if (ck.containsCentredBox(var18, var21, var4, var6, var7, var19, (byte) 66, var5, var20)) {
                   var23 = -var4 + var18 + var8;
                   var24 = var19 + (var9 - var5);
                   if (ck.containsCentredBox(var23, var21, var8, var10, var11, var24, (byte) 99, var9, var20) &&
-                    !var22.b(-59)) {
+                    !var22.isLocked(-59)) {
                     if (var16 instanceof WorldBody) {
                       var29 = (WorldBody) ((Object) var16);
                       if (!var12.isBoxBlocked(var16, var21, 2, 1, var24, var23, false, var29, var20)) {
@@ -320,14 +320,14 @@ final class PortalBehaviour extends Behaviour {
                         var12.getParticleEffects(false).spawnPortalSparkles(var19, var18, 0, -44);
                         var12.getParticleEffects(false).spawnPortalSparkles(var24, var23, 0, -40);
                         var28.moveTo(var24, var23, 2);
-                        var22.c(param0 ^ -5483);
+                        var22.markTeleported(param0 ^ -5483);
                       }
                     } else {
                       var12.queueSound(var19, var18, 8, 0, (byte) 6);
                       var12.getParticleEffects(false).spawnPortalSparkles(var19, var18, 0, -44);
                       var12.getParticleEffects(false).spawnPortalSparkles(var24, var23, 0, -40);
                       var28.moveTo(var24, var23, 2);
-                      var22.c(param0 ^ -5483);
+                      var22.markTeleported(param0 ^ -5483);
                     }
                   }
                 }

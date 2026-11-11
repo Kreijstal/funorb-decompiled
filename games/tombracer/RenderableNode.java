@@ -7,10 +7,10 @@ final class RenderableNode extends IntrusiveNode {
     static SpriteData field_j;
     static int field_f;
     static String field_g;
-    static jea field_i;
+    static UiComponent field_i;
 
     final static boolean a(int param0, int param1, byte param2) {
-        if ((0 != (65536 & param0) ? true : false) | cra.hasMask24OrAll544(param1, -31, param0)) {
+        if ((0 != (65536 & param0) ? true : false) | SequencePlayer.hasMask24OrAll544(param1, -31, param0)) {
           return true;
         }
         if (ooa.a(param1, param0, -68)) {
@@ -53,7 +53,7 @@ final class RenderableNode extends IntrusiveNode {
         if (param1 == -8543) {
           return;
         }
-        field_i = (jea) null;
+        field_i = (UiComponent) null;
     }
 
     public static void a(byte param0) {

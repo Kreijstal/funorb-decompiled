@@ -8,7 +8,7 @@ final class vs extends ofa {
     static iw field_T;
     private String field_M;
     private ProgressBarWidget field_L;
-    static jea field_R;
+    static UiComponent field_R;
     private String field_S;
     static int[] field_P;
 

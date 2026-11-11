@@ -23,11 +23,11 @@ final class qfa {
     final static void a(byte param0) {
         TeleportState.field_b = new AccountRegistrationPanel();
         if (param0 == 6) {
-          um.field_l.a(103, TeleportState.field_b);
+          um.field_l.transitionToContent(103, TeleportState.field_b);
           return;
         }
         qfa.a((byte) -122);
-        um.field_l.a(103, TeleportState.field_b);
+        um.field_l.transitionToContent(103, TeleportState.field_b);
     }
 
     final static void a(int param0, int param1) {

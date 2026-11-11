@@ -23,7 +23,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
     private boolean expandsOnImpact;
     private int z;
     static ToolkitSprite field_n;
-    static jea field_r;
+    static UiComponent field_r;
     private int endSize;
     private int size;
     private int bouncesLeft;
@@ -856,7 +856,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           this.size = this.baseSize;
           this.effect = null;
           this.bouncesLeft = 0;
-          this.teleportState.b((byte) 93);
+          this.teleportState.reset((byte) 93);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ep.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -1024,7 +1024,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         int var6Lifetime1;
         int var7Lifetime1;
         this.g((byte) -99);
-        this.teleportState.a(param0 + 87);
+        this.teleportState.update(param0 + 87);
         if (param1) {
           if (this.isFromPlayer((byte) -118)) {
             var3 = 1;
@@ -1212,7 +1212,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           if (param1 == 0) {
             return false;
           }
-          field_r = (jea) null;
+          field_r = (UiComponent) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

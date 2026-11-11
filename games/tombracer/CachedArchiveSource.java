@@ -14,7 +14,7 @@ final class CachedArchiveSource extends ArchiveSource {
     static int field_l;
     static ft field_g;
     private DiskCacheWorker field_i;
-    static jea field_d;
+    static UiComponent field_d;
     private SectorCacheStore field_s;
     private dla field_k;
     private int field_m;
@@ -56,7 +56,7 @@ final class CachedArchiveSource extends ArchiveSource {
         boolean decompiledFrameRemainder0 = true;
         var5 = TombRacer.field_G ? 1 : 0;
         if (null != this.field_f) {
-          if (this.a(true) == null) {
+          if (this.getIndex(true) == null) {
             return;
           }
           if (this.field_w) {
@@ -204,7 +204,7 @@ final class CachedArchiveSource extends ArchiveSource {
         return var3.getProgress((byte) -115);
     }
 
-    final void c(int param0) {
+    final void processQueuedGroups(int param0) {
         int var3 = 0;
         ArchiveRequest discarded$0 = null;
         ArchiveRequest discarded$1 = null;
@@ -212,7 +212,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if (this.field_f == null) {
           return;
         }
-        if (null == this.a(true)) {
+        if (null == this.getIndex(true)) {
           return;
         }
         IntrusiveNode var2 = this.field_b.first(-80);
@@ -267,7 +267,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
     }
 
-    final dla a(boolean param0) {
+    final dla getIndex(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -380,7 +380,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (this.field_h == null) {
                 throw new RuntimeException();
               }
-              var4 = this.field_i.a((byte) -50, param2, this.field_h);
+              var4 = this.field_i.queueRead((byte) -50, param2, this.field_h);
             } else {
               if (param0 != 2) {
                 throw new RuntimeException();

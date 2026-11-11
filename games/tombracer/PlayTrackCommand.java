@@ -12,7 +12,7 @@ final class PlayTrackCommand extends ConsoleMethod {
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6) {
         int var18_int = 0;
         int var22_int = 0;
-        jea dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -27,19 +27,19 @@ final class PlayTrackCommand extends ConsoleMethod {
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
         ht stackIn_12_0;
-        jea stackIn_12_1;
-        jea stackIn_12_2;
+        UiComponent stackIn_12_1;
+        UiComponent stackIn_12_2;
         long stackIn_12_3;
-        jea stackIn_13_1 = null;
-        jea stackIn_13_2 = null;
-        jea stackIn_13_4 = null;
+        UiComponent stackIn_13_1 = null;
+        UiComponent stackIn_13_2 = null;
+        UiComponent stackIn_13_4 = null;
         ht stackIn_31_0;
-        jea stackIn_31_1;
-        jea stackIn_31_2;
+        UiComponent stackIn_31_1;
+        UiComponent stackIn_31_2;
         long stackIn_31_3;
-        jea stackIn_32_1;
-        jea stackIn_32_2;
-        jea stackIn_32_4;
+        UiComponent stackIn_32_1;
+        UiComponent stackIn_32_2;
+        UiComponent stackIn_32_4;
         int stackIn_36_0 = 0;
         int stackIn_71_0 = 0;
         int stackIn_80_0 = 0;
@@ -59,19 +59,19 @@ final class PlayTrackCommand extends ConsoleMethod {
         ht var12 = null;
         int var13 = 0;
         int var14 = 0;
-        jea var18 = null;
-        jea var19 = null;
-        jea var20 = null;
-        jea var21 = null;
-        jea var22 = null;
-        jea var23 = null;
-        jea var24 = null;
-        jea var25 = null;
-        jea var26 = null;
-        jea var27 = null;
-        jea var28 = null;
-        jea var29 = null;
-        jea var30 = null;
+        UiComponent var18 = null;
+        UiComponent var19 = null;
+        UiComponent var20 = null;
+        UiComponent var21 = null;
+        UiComponent var22 = null;
+        UiComponent var23 = null;
+        UiComponent var24 = null;
+        UiComponent var25 = null;
+        UiComponent var26 = null;
+        UiComponent var27 = null;
+        UiComponent var28 = null;
+        UiComponent var29 = null;
+        UiComponent var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -88,13 +88,13 @@ final class PlayTrackCommand extends ConsoleMethod {
         int var40 = 0;
         int var41 = 0;
         Sprite var42 = null;
-        jea var43 = null;
-        jea var44 = null;
-        jea var45 = null;
-        jea var46 = null;
-        jea var47 = null;
-        jea var48 = null;
-        jea var49 = null;
+        UiComponent var43 = null;
+        UiComponent var44 = null;
+        UiComponent var45 = null;
+        UiComponent var46 = null;
+        UiComponent var47 = null;
+        UiComponent var48 = null;
+        UiComponent var49 = null;
         Object var50 = null;
         Sprite var50_ref = null;
         Object var51 = null;
@@ -137,21 +137,21 @@ final class PlayTrackCommand extends ConsoleMethod {
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_J) {
-              var12.field_Vb = new jea(0L, iea.field_g);
+              var12.field_Vb = new UiComponent(0L, iea.field_g);
               stackIn_10_0 = param4;
               stackIn_10_1 = param0;
               var14 = stackIn_10_0 | stackIn_10_1;
               var12.b(-122, var12.field_Vb);
               var12.field_Vb.field_z = 1;
-              var12.field_bc = new jea(0L, S2CStartRoundPacket.field_a);
+              var12.field_bc = new UiComponent(0L, S2CStartRoundPacket.field_a);
               var12.b(-124, var12.field_bc);
-              var12.field_Hb = new jea(0L, iea.field_g);
+              var12.field_Hb = new UiComponent(0L, iea.field_g);
               var12.b(-124, var12.field_Hb);
               var12.field_Hb.field_x = 0;
-              var12.field_wb = new jea(0L, iea.field_g);
+              var12.field_wb = new UiComponent(0L, iea.field_g);
               var12.b(-124, var12.field_wb);
               var12.field_wb.field_x = 0;
-              var12.field_Lb = new jea(0L, S2CStartRoundPacket.field_a);
+              var12.field_Lb = new UiComponent(0L, S2CStartRoundPacket.field_a);
               var12.b(-125, var12.field_Lb);
               var12.field_Lb.field_z = 2;
               stackIn_12_0 = var12;
@@ -167,22 +167,22 @@ final class PlayTrackCommand extends ConsoleMethod {
                 stackIn_13_2 = null;
                 stackIn_13_4 = iea.field_g;
               }
-              stackIn_12_0.field_Eb = new jea(stackIn_12_3, stackIn_13_4);
+              stackIn_12_0.field_Eb = new UiComponent(stackIn_12_3, stackIn_13_4);
               var12.b(-125, var12.field_Eb);
-              var12.field_Ub = new jea[ColourRowCache.field_b];
-              var12.field_xb = new jea(0L, (jea) null);
+              var12.field_Ub = new UiComponent[ColourRowCache.field_b];
+              var12.field_xb = new UiComponent(0L, (UiComponent) null);
               if ((1 << PowerUpItemBehaviour.field_w & var14) != 0) {
                 var12.field_Eb.b(-128, var12.field_xb);
               }
-              var12.field_vb = new jea(0L, (jea) null);
+              var12.field_vb = new UiComponent(0L, (UiComponent) null);
               if (0 != (var14 & 1 << una.field_c)) {
                 var12.field_Eb.b(-124, var12.field_vb);
               }
-              var12.field_Zb = new jea(0L, (jea) null);
+              var12.field_Zb = new UiComponent(0L, (UiComponent) null);
               if ((var14 & 1 << TrackingCrusherComponent.field_F) != 0) {
                 var12.field_Eb.b(param1 - 123, var12.field_Zb);
               }
-              var12.field_fc = new jea(0L, (jea) null);
+              var12.field_fc = new UiComponent(0L, (UiComponent) null);
               if ((1 << RoomEffectTraps.field_b & var14) != 0) {
                 var12.field_Eb.b(param1 ^ -124, var12.field_fc);
               }
@@ -194,7 +194,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               var44.field_bb = 1;
               var45.field_bb = 1;
               for (var18_int = 0; ColourRowCache.field_b > var18_int; var18_int++) {
-                var12.field_Ub[var18_int] = new jea(0L, (jea) null);
+                var12.field_Ub[var18_int] = new UiComponent(0L, (UiComponent) null);
                 if ((1 << var18_int + SoundEvent.field_m & var14) != 0) {
                   var12.field_Eb.b(-126, var12.field_Ub[var18_int]);
                 }
@@ -213,19 +213,19 @@ final class PlayTrackCommand extends ConsoleMethod {
                 stackIn_32_2 = null;
                 stackIn_32_4 = S2CStartRoundPacket.field_a;
               }
-              stackIn_31_0.field_ub = new jea(stackIn_31_3, stackIn_32_4);
+              stackIn_31_0.field_ub = new UiComponent(stackIn_31_3, stackIn_32_4);
               var12.b(-127, var12.field_ub);
               var12.field_ub.field_z = 2;
-              var12.field_Qb = new jea(0L, S2CStartRoundPacket.field_a);
+              var12.field_Qb = new UiComponent(0L, S2CStartRoundPacket.field_a);
               var12.b(param1 ^ -122, var12.field_Qb);
-              var12.field_hc = new jea(0L, PressureSwitchBehaviour.field_p);
+              var12.field_hc = new UiComponent(0L, PressureSwitchBehaviour.field_p);
               var12.b(-125, var12.field_hc);
-              var12.field_dc = new jea(0L, PressureSwitchBehaviour.field_p);
+              var12.field_dc = new UiComponent(0L, PressureSwitchBehaviour.field_p);
               var12.b(-122, var12.field_dc);
-              var12.field_Rb = new jea(0L, Corpse.field_i);
+              var12.field_Rb = new UiComponent(0L, Corpse.field_i);
               var12.b(param1 ^ -127, var12.field_Rb);
               var12.a(-10966);
-              var12.field_Nb = new jea(0L, bua.field_g);
+              var12.field_Nb = new UiComponent(0L, ModelAnimator.field_g);
               var12.b(-124, var12.field_Nb);
               var13 = 1;
             }
@@ -338,12 +338,12 @@ final class PlayTrackCommand extends ConsoleMethod {
                 }
               }
               if (null == var12.field_Nb.field_r) {
-                var12.field_Vb.a(68, di.field_a, -23776, var31, 0);
+                var12.field_Vb.setBounds(68, di.field_a, -23776, var31, 0);
               } else {
-                var12.field_Nb.a(68, di.field_a, -23776, var31, 0);
+                var12.field_Nb.setBounds(68, di.field_a, -23776, var31, 0);
               }
               var12.field_bc.field_r = BitmapFont.truncateWithEllipsis(var12.field_bc.field_H, var32, 78);
-              var12.field_bc.a(78, di.field_a, param1 ^ -23776, var31, 70);
+              var12.field_bc.setBounds(78, di.field_a, param1 ^ -23776, var31, 70);
               if (var12.field_bc.field_o &&
                 !var12.field_bc.field_r.equals(var32)) {
                 ArchiveNetworkClient.field_b = var32;
@@ -353,22 +353,22 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var12.field_Hb.field_z = 2;
                 var12.field_wb.field_r = "/" + var12.field_Jb;
                 var33_int = (348 - var12.field_wb.field_H.stringWidth("/")) / 2;
-                var12.field_Hb.a(var33_int - 150, di.field_a, -23776, var31, 150);
-                var12.field_wb.a(-var33_int + 198, di.field_a, -23776, var31, var33_int);
+                var12.field_Hb.setBounds(var33_int - 150, di.field_a, -23776, var31, 150);
+                var12.field_wb.setBounds(-var33_int + 198, di.field_a, -23776, var31, var33_int);
               } else {
                 var12.field_Hb.field_z = 1;
-                var12.field_Hb.a(48, di.field_a, -23776, var31, 150);
+                var12.field_Hb.setBounds(48, di.field_a, -23776, var31, 150);
               }
               var12.field_Lb.field_r = Integer.toString(var12.field_Wb);
-              var12.field_Lb.a(48, di.field_a, param1 ^ -23776, var31, 200);
+              var12.field_Lb.setBounds(48, di.field_a, param1 ^ -23776, var31, 200);
               stackIn_71_0 = (UnlockOverlay.field_p) ? 250 : 200;
               var33_intLifetime1 = stackIn_71_0;
-              var12.field_Eb.a(-2 + (-var33_intLifetime1 + 365), di.field_a, -23776, var31, var33_intLifetime1);
+              var12.field_Eb.setBounds(-2 + (-var33_intLifetime1 + 365), di.field_a, -23776, var31, var33_intLifetime1);
               var34_int = pda.field_c;
               if (0 != (var14Lifetime1 & 1 << PowerUpItemBehaviour.field_w)) {
                 var50_ref = SoundEventPlayer.field_f[var12.field_cc];
                 var12.field_xb.field_R = var50_ref;
-                var12.field_xb.a(var50_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
+                var12.field_xb.setBounds(var50_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
                 var34_int = var34_int + (var50_ref.field_n + pda.field_c);
               }
               if ((1 << una.field_c & var14Lifetime1) != 0) {
@@ -386,13 +386,13 @@ final class PlayTrackCommand extends ConsoleMethod {
                 }
                 var51_ref = stackIn_82_0[stackIn_83_1];
                 var12.field_vb.field_R = var51_ref;
-                var12.field_vb.a(var51_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
+                var12.field_vb.setBounds(var51_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
                 var34_int = var34_int + (var51_ref.field_n + pda.field_c);
               }
               if ((1 << TrackingCrusherComponent.field_F & var14Lifetime1) != 0) {
                 var52_ref = TileGridCell.field_k[-1 + var12.field_yb];
                 var12.field_Zb.field_R = var52_ref;
-                var12.field_Zb.a(var52_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
+                var12.field_Zb.setBounds(var52_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
                 var34_int = var34_int + (pda.field_c + var52_ref.field_n);
               }
               if ((var14Lifetime1 & 1 << RoomEffectTraps.field_b) != 0) {
@@ -404,7 +404,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                 }
                 var53_ref = stackIn_90_0[stackIn_91_1];
                 var12.field_fc.field_R = var53_ref;
-                var12.field_fc.a(var53_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
+                var12.field_fc.setBounds(var53_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
                 var34_int = var34_int + (pda.field_c + var53_ref.field_n);
               }
               if (pda.field_d != null) {
@@ -414,7 +414,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                     var42 = pda.field_d[var36Lifetime1][var12.field_ac[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_Ub[var36Lifetime1].field_R = var42;
-                    var12.field_Ub[var36Lifetime1].a(var54.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
+                    var12.field_Ub[var36Lifetime1].setBounds(var54.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
                     var34_int = var34_int + (var54.field_n + pda.field_c);
                   }
                 }
@@ -446,7 +446,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                   var12.field_ub.field_r = var39 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_ub.a(var12.field_G - 365, di.field_a, param1 ^ -23776, var31, 365);
+              var12.field_ub.setBounds(var12.field_G - 365, di.field_a, param1 ^ -23776, var31, 365);
               var31 = var31 + di.field_a;
               if (var12.field_Cb != null) {
                 var31 += 2;
@@ -460,17 +460,17 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var38 = var37.toString();
                 var12.field_Qb.field_r = var38;
                 var39Lifetime1 = var12.field_Qb.field_H.countWrappedLines(var38, var12.field_G - 2 * var12.field_Qb.field_x);
-                var12.field_Qb.a(var12.field_G, var39Lifetime1 * di.field_a, param1 ^ -23776, var31, 0);
+                var12.field_Qb.setBounds(var12.field_G, var39Lifetime1 * di.field_a, param1 ^ -23776, var31, 0);
                 var31 = var31 + di.field_a * var39Lifetime1;
               }
               if (var12.field_gc) {
                 var12.field_hc.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(123, LoadProfileCommand.field_o, new String[]{var32});
-                var12.field_hc.a(var12.field_G - 2 * mna.field_d, di.field_a, -23776, var31, mna.field_d);
+                var12.field_hc.setBounds(var12.field_G - 2 * mna.field_d, di.field_a, -23776, var31, mna.field_d);
                 var31 = var31 + di.field_a;
               }
               if (var12.field_Sb) {
                 var12.field_dc.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(121, SweeperMountComponent.field_I, new String[]{var32});
-                var12.field_dc.a(-(mna.field_d * 2) + var12.field_G, di.field_a, -23776, var31, mna.field_d);
+                var12.field_dc.setBounds(-(mna.field_d * 2) + var12.field_G, di.field_a, -23776, var31, mna.field_d);
                 var31 = var31 + di.field_a;
               }
             }
@@ -479,14 +479,14 @@ final class PlayTrackCommand extends ConsoleMethod {
               var34_intLifetime1 = var12.field_Rb.field_H.countWrappedLines(var33, var12.field_G - mna.field_d - mna.field_d);
               var12.field_Rb.field_r = var33;
               var12.field_Rb.field_s = var12.field_zb * 256 / qsa.field_a;
-              var12.field_Rb.a(-(mna.field_d * 2) + var12.field_G, di.field_a * var34_intLifetime1, param1 - 23776, var31, mna.field_d);
+              var12.field_Rb.setBounds(-(mna.field_d * 2) + var12.field_G, di.field_a * var34_intLifetime1, param1 - 23776, var31, mna.field_d);
               var31 = var31 + di.field_a * var34_intLifetime1;
             }
             if (var7_int == 0) {
               var12.field_O = var31 - var12.field_t;
             }
             if (var13 != 0) {
-              nsa.field_i.field_tb.a(2, (jea) (var11), var12, (byte) -122);
+              nsa.field_i.field_tb.placeBelow(2, (UiComponent) (var11), var12, (byte) -122);
             }
             for (var34_intLifetime2 = 0; ColourRowCache.field_b > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Ub[var34_intLifetime2].field_o) {

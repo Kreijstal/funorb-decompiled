@@ -14,7 +14,7 @@ final class UrlDownloadRequest implements Runnable {
     private java.net.URL field_b;
     private PlatformTaskDispatcher field_g;
 
-    final static void a(MatchState param0, Room param1, int param2) {
+    final static void sendRoomCompletedStat(MatchState param0, Room param1, int param2) {
         if (param2 <= 90) {
           UrlDownloadRequest.a(-49, -51, -30, 34, 111, -46);
         }

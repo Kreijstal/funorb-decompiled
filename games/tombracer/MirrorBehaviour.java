@@ -37,7 +37,7 @@ final class MirrorBehaviour extends Behaviour {
           var2 = GameScreen.positiveModulo(2048 + var2, 8192, -34);
           if (var2 != this.field_v) {
             this.field_t = MouseInputHandler.sin2048((byte) 99, var2 >> 2);
-            this.field_p = bua.cos2048(0, var2 >> 2);
+            this.field_p = ModelAnimator.cos2048(0, var2 >> 2);
             this.field_v = var2;
             return;
           }
@@ -48,7 +48,7 @@ final class MirrorBehaviour extends Behaviour {
           return;
         }
         this.field_t = MouseInputHandler.sin2048((byte) 99, var2 >> 2);
-        this.field_p = bua.cos2048(0, var2 >> 2);
+        this.field_p = ModelAnimator.cos2048(0, var2 >> 2);
         this.field_v = var2;
     }
 
@@ -119,7 +119,7 @@ final class MirrorBehaviour extends Behaviour {
           if (param1 != 1) {
             field_r = (ToolkitSprite) null;
           }
-          var5_int = al.a(param2, 12, 12, this.field_u);
+          var5_int = IntNode.a(param2, 12, 12, this.field_u);
           if (-1 == var5_int) {
             this.field_o = null;
             return false;
@@ -203,7 +203,7 @@ final class MirrorBehaviour extends Behaviour {
           var10 = S2CRoundResultPacket.a(8192, -16390, var8, var9);
           var11 = GameScreen.positiveModulo(2 * var10 + var8 + 4096, 8192, 126);
           var12 = MouseInputHandler.sin2048((byte) 99, var11 >> 2);
-          var13 = bua.cos2048(0, var11 >> 2);
+          var13 = ModelAnimator.cos2048(0, var11 >> 2);
           var14 = param2.field_b - gqa.a(param2.field_b, (byte) 24, this.field_w);
           var15 = var14 >> 8;
           var5.a(var6, (var12 >> 8) * var15 + var6, var7, (var13 >> 8) * var15 + var7, 44);
