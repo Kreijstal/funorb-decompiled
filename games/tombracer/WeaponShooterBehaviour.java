@@ -312,15 +312,15 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
     }
 
     final int hashState(int param0, int param1) {
-        param0 = upa.a(this.field_s, param0, (byte) -55);
+        param0 = upa.mixHashBoolean(this.field_s, param0, (byte) -55);
         if (param1 <= -48) {
-          param0 = upa.a(this.field_t, param0, (byte) -119);
+          param0 = upa.mixHashBoolean(this.field_t, param0, (byte) -119);
           param0 = CurveOperator.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
           return param0;
         }
         StringCursor var4 = (StringCursor) null;
         WeaponShooterBehaviour.readLiteralToken(-27, (StringCursor) null);
-        param0 = upa.a(this.field_t, param0, (byte) -119);
+        param0 = upa.mixHashBoolean(this.field_t, param0, (byte) -119);
         param0 = CurveOperator.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
         return param0;
     }

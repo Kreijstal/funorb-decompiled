@@ -126,12 +126,12 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
           stackIn_4_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_s = stackIn_4_1;
           if (this.field_s) {
-            this.field_u = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+            this.field_u = SnakePitModel.unscaleFromBits(8, 8192, 0, param1.readBits((byte) 44, 8));
           }
           stackIn_9_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_r = stackIn_9_1;
           if (this.field_r) {
-            this.field_o = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+            this.field_o = SnakePitModel.unscaleFromBits(8, 8192, 0, param1.readBits((byte) 44, 8));
           }
           stackIn_14_1 = (1 == param1.readBits((byte) 44, 1));
           this.field_q = stackIn_14_1;
@@ -458,11 +458,11 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
           super.encode(param0, param1);
           param1.writeBits((byte) -126, this.field_s ? 1 : 0, 1);
           if (this.field_s) {
-            param1.writeBits((byte) -126, ResourceArchive.a((byte) -120, this.field_u, 8192, 8), 8);
+            param1.writeBits((byte) -126, ResourceArchive.scaleToBits((byte) -120, this.field_u, 8192, 8), 8);
           }
           param1.writeBits((byte) 5, !this.field_r ? 0 : 1, 1);
           if (this.field_r) {
-            param1.writeBits((byte) -125, ResourceArchive.a((byte) 111, this.field_o, 8192, 8), 8);
+            param1.writeBits((byte) -125, ResourceArchive.scaleToBits((byte) 111, this.field_o, 8192, 8), 8);
           }
           param1.writeBits((byte) -127, !this.field_q ? 0 : 1, 1);
           if (this.field_q) {

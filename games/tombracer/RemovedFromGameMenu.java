@@ -6,7 +6,7 @@ final class RemovedFromGameMenu extends MenuScreen {
     static String field_r;
     static String field_q;
 
-    final static void f(byte param0) {
+    final static void resetDepthRange(byte param0) {
         tga.field_a.f(8, 16384);
         if (param0 != -6) {
           field_r = (String) null;
@@ -34,7 +34,7 @@ final class RemovedFromGameMenu extends MenuScreen {
         Room.field_j.draw(0, 0);
         gg.field_f.draw((aaa.a(false) - gg.field_f.paddedWidth()) / 2, (SwitchLinkList.b(0) - gg.field_f.paddedHeight()) / 2);
         MembersUpsellMenu.drawCentredTextWithShadow(ValidatedTextInputWidget.field_L.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, 60 + (SwitchLinkList.b(param0 + 28) - gg.field_f.paddedHeight()) / 2, aaa.a(false) / 2, -1);
-        SocketConnector.a(OpenGlBuffer.field_i, 1, kn.field_p, 2431750, 20, 200, 1, -100 + SwitchLinkList.b(param0 + 28) / 2, aaa.a(false) / 2 - 150, -1, (byte) 60, 300);
+        SocketConnector.drawWrappedText(OpenGlBuffer.field_i, 1, kn.field_p, 2431750, 20, 200, 1, -100 + SwitchLinkList.b(param0 + 28) / 2, aaa.a(false) / 2 - 150, -1, (byte) 60, 300);
         super.draw(param0, param1);
     }
 

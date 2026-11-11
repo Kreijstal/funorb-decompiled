@@ -200,12 +200,12 @@ final class StandingsPhase extends MatchPhase {
             if (!this.matchState.hasResigned((byte) -102, var22)) {
               var13 = 7829367;
               if (-2 != this.matchState.declaredWinner) {
-                SocketConnector.a(LegacyOpenGlFlowingWaterEffect.formatText(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.roundWins[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.roundWins[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               } else {
-                SocketConnector.a(DateInputWidget.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.drawWrappedText(DateInputWidget.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               }
               if (this.matchState.g(69, var22)) {
-                SocketConnector.a(SoundEventPlayer.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
+                SocketConnector.drawWrappedText(SoundEventPlayer.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
               }
             } else {
               MembersUpsellMenu.drawCentredTextWithShadow(id.field_i.toUpperCase(), 11141120, kn.field_p, -1, var10 - 190, var11, 0);
@@ -229,7 +229,7 @@ final class StandingsPhase extends MatchPhase {
           } else {
             var10_ref_String = SecondaryLinkQueue.worldNames[var9].toUpperCase();
           }
-          SocketConnector.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
+          SocketConnector.drawWrappedText(var10_ref_String, 1, eda.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
           MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(this.screen.localPlayerIndex, false).toUpperCase(), wga.field_a[this.screen.localPlayerIndex], eda.field_f, -1, -15 + var4, var3, -1);
           if (this.matchState.declaredWinner < 0) {
             MembersUpsellMenu.drawCentredTextWithShadow(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
@@ -295,12 +295,12 @@ final class StandingsPhase extends MatchPhase {
               }
               if (var18 != null) {
                 var16 = var14 - var17;
-                SocketConnector.a(LegacyOpenGlFlowingWaterEffect.formatText(121, PenaltyNotice.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + ByteStorage.formatSignedOffset(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
+                SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(121, PenaltyNotice.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + ByteStorage.formatSignedOffset(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
               }
             }
           }
         }
-        RemovedFromGameMenu.f((byte) -6);
+        RemovedFromGameMenu.resetDepthRange((byte) -6);
         for (var3 = 0; var3 < this.field_p.length; var3++) {
           stackIn_62_0 = this.field_p[var3];
           stackIn_62_1 = false;

@@ -52,7 +52,7 @@ final class SoundCache {
         field_d = null;
     }
 
-    private final u a(String param0, byte param1, int[] param2, String param3) {
+    private final u loadSoundByName(String param0, byte param1, int[] param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -229,7 +229,7 @@ final class SoundCache {
         }
     }
 
-    final u a(byte param0, int[] param1, int param2) {
+    final u getSoundById(byte param0, int[] param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         u stackIn_2_0 = null;
@@ -263,7 +263,7 @@ final class SoundCache {
         }
     }
 
-    final u a(String param0, int param1, String param2) {
+    final u getSoundByName(String param0, int param1, String param2) {
         RuntimeException var4 = null;
         u stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -276,7 +276,7 @@ final class SoundCache {
           if (param1 < 11) {
             field_d = (String) null;
           }
-          stackIn_3_0 = this.a(param0, (byte) -59, (int[]) null, param2);
+          stackIn_3_0 = this.loadSoundByName(param0, (byte) -59, (int[]) null, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

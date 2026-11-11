@@ -238,7 +238,7 @@ final class SnakePitModel extends TrapModel {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int unscaleFromBits(int param0, int param1, int param2, int param3) {
         if (param2 != 0) {
           field_m = (String) null;
         }
@@ -379,7 +379,7 @@ final class SnakePitModel extends TrapModel {
           MatchProtocol.field_i.setBounds(var6_int - 6, -6 + era.field_e.field_t, -23776, 3, 3);
           var7 = -5 + MatchProtocol.field_i.field_t;
           if (param1 != -104) {
-            SnakePitModel.a(-101, -90, 0, -88);
+            SnakePitModel.unscaleFromBits(-101, -90, 0, -88);
           }
           RotaterMountComponent.field_K.setBounds(2 + (485 + param2 + param3), param5, param1 - 23672, var7 - param5, 5);
           CharacterChoiceFactory.field_g.setBounds(-param2 + RotaterMountComponent.field_K.field_G - ComponentMount.field_b.field_G, param5, -23776, 0, param2);

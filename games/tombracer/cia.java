@@ -29,7 +29,7 @@ final class cia {
     final void b(int param0, int param1, int param2) {
         ura.a(-10985);
         hp.drawModelPreview(2048, this.field_f, 1900, this.field_c.getModel((byte) 74), -1918106173, (this.field_e >> 16) + param1, param0 + (this.field_b >> 16));
-        RemovedFromGameMenu.f((byte) -6);
+        RemovedFromGameMenu.resetDepthRange((byte) -6);
         int var4 = -43 / ((param2 - 6) / 58);
     }
 
@@ -55,7 +55,7 @@ final class cia {
           var3 = stackIn_32_0;
           if (var2 != 0) {
             if (!this.field_d) {
-              this.field_c.a(0, false, 0, 1, true);
+              this.field_c.play(0, false, 0, 1, true);
             }
             this.field_e = this.field_e + (var3 << 17);
             this.field_b = this.field_b + (var2 << 17);
@@ -64,13 +64,13 @@ final class cia {
           } else {
             if (var3 == 0) {
               if (this.field_d) {
-                this.field_c.a(0, false, 0, 0, true);
+                this.field_c.play(0, false, 0, 0, true);
                 this.field_d = false;
                 this.field_f = 0;
               }
             } else {
               if (!this.field_d) {
-                this.field_c.a(0, false, 0, 1, true);
+                this.field_c.play(0, false, 0, 1, true);
               }
               this.field_e = this.field_e + (var3 << 17);
               this.field_b = this.field_b + (var2 << 17);
@@ -90,7 +90,7 @@ final class cia {
         var3Lifetime1 = stackIn_11_0;
         if (var2 != 0) {
           if (!this.field_d) {
-            this.field_c.a(0, false, 0, 1, true);
+            this.field_c.play(0, false, 0, 1, true);
           }
           this.field_e = this.field_e + (var3Lifetime1 << 17);
           this.field_b = this.field_b + (var2 << 17);
@@ -99,13 +99,13 @@ final class cia {
         } else {
           if (var3Lifetime1 == 0) {
             if (this.field_d) {
-              this.field_c.a(0, false, 0, 0, true);
+              this.field_c.play(0, false, 0, 0, true);
               this.field_d = false;
               this.field_f = 0;
             }
           } else {
             if (!this.field_d) {
-              this.field_c.a(0, false, 0, 1, true);
+              this.field_c.play(0, false, 0, 1, true);
             }
             this.field_e = this.field_e + (var3Lifetime1 << 17);
             this.field_b = this.field_b + (var2 << 17);
@@ -126,7 +126,7 @@ final class cia {
 
     cia() {
         this.field_c = new ModelAnimator(0, 0, 1);
-        this.field_c.a(0, false, 0, 0, true);
+        this.field_c.play(0, false, 0, 0, true);
         this.field_d = false;
     }
 

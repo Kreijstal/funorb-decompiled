@@ -13,7 +13,7 @@ final class og extends OpenGlBuffer implements qm {
         if (param0 != -15730) {
           this.field_l = (byte) -118;
         }
-        return super.a(this.field_h.field_Tc, param1, 1);
+        return super.mapWith(this.field_h.field_Tc, param1, 1);
     }
 
     final static void exitFullscreen(int param0) {

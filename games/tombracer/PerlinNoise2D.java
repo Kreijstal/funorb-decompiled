@@ -150,13 +150,13 @@ final class PerlinNoise2D extends TextureOperator {
             if (!this.field_s) {
               for (var10 = 0; var10 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var10++) {
                 var4_int = LobbyGameWidget.textureColumnCoords[var10] * this.field_u;
-                var6 = this.a(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
+                var6 = this.noiseAt(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
                 param0[var10] = var9 * var6 >> 12;
               }
             } else {
               for (var10 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var10; var10++) {
                 var4_int = LobbyGameWidget.textureColumnCoords[var10] * this.field_u;
-                var6 = this.a(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
+                var6 = this.noiseAt(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
                 var6 = var6 * var9 >> 12;
                 param0[var10] = 2048 + (var6 >> 1);
               }
@@ -180,7 +180,7 @@ final class PerlinNoise2D extends TextureOperator {
               var14 = pba.field_b[var11];
               for (var10 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var10; var10++) {
                 var4_int = this.field_u * LobbyGameWidget.textureColumnCoords[var10];
-                var6 = this.a(var17, false, var14, var11, var8 * var4_int >> 12, var12, var18);
+                var6 = this.noiseAt(var17, false, var14, var11, var8 * var4_int >> 12, var12, var18);
                 param0[var10] = var6 * var9 >> 12;
               }
             }
@@ -205,14 +205,14 @@ final class PerlinNoise2D extends TextureOperator {
                   this.field_n - 1 == var7) {
                   for (var10 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var10; var10++) {
                     var4_int = this.field_u * LobbyGameWidget.textureColumnCoords[var10];
-                    var6 = this.a(var17, false, var14, var11, var8 * var4_int >> 12, var12, var18);
+                    var6 = this.noiseAt(var17, false, var14, var11, var8 * var4_int >> 12, var12, var18);
                     var6 = (var6 * var9 >> 12) + param0[var10];
                     param0[var10] = (var6 >> 1) + 2048;
                   }
                 } else {
                   for (var10 = 0; var10 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var10++) {
                     var4_int = this.field_u * LobbyGameWidget.textureColumnCoords[var10];
-                    var6 = this.a(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
+                    var6 = this.noiseAt(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
                     param0[var10] = param0[var10] + (var9 * var6 >> 12);
                   }
                 }
@@ -307,7 +307,7 @@ final class PerlinNoise2D extends TextureOperator {
         }
     }
 
-    private final int a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
+    private final int noiseAt(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;

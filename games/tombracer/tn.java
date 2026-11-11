@@ -53,7 +53,7 @@ final class tn extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if (0 != (var9 & 1)) {
-                    var7 = param2.a((byte) -32, param3, var9 >> 2);
+                    var7 = param2.getSoundById((byte) -32, param3, var9 >> 2);
                   } else {
                     var7 = param2.getSoundEffectById(var9 >> 2, param3, 0);
                   }

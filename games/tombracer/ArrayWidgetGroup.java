@@ -167,9 +167,9 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
             return false;
           }
           if (VerticalScrollbar.field_tb[81]) {
-            stackIn_20_0 = this.a(param1, 1);
+            stackIn_20_0 = this.focusPreviousFrom(param1, 1);
           } else {
-            stackIn_20_0 = this.a((byte) 43, param1);
+            stackIn_20_0 = this.focusNextFrom((byte) 43, param1);
           }
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -189,7 +189,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
           Class var2 = (Class) null;
-          ArrayWidgetGroup.a((Class) null, (byte) -126);
+          ArrayWidgetGroup.simpleTypeName((Class) null, (byte) -126);
         }
         field_u = null;
         field_v = null;
@@ -444,7 +444,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
         }
     }
 
-    final static String a(Class param0, byte param1) {
+    final static String simpleTypeName(Class param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -460,7 +460,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
             stackIn_6_0 = param0.getName().substring(1 + param0.getName().lastIndexOf("."));
             return stackIn_6_0;
           }
-          stackIn_4_0 = ArrayWidgetGroup.a(param0.getComponentType(), (byte) -57) + "[]";
+          stackIn_4_0 = ArrayWidgetGroup.simpleTypeName(param0.getComponentType(), (byte) -57) + "[]";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -476,7 +476,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusNextFrom(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -583,7 +583,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean focusPreviousFrom(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         boolean stackIn_3_0 = false;
@@ -680,7 +680,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
           }
           if (param0 < 70) {
             var12 = (UiWidget) null;
-            this.a((UiWidget) null, 84);
+            this.focusPreviousFrom((UiWidget) null, 84);
           }
           var13 = this.children;
           var8 = var13;

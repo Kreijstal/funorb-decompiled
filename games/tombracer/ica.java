@@ -340,7 +340,7 @@ final class ica {
         }
     }
 
-    final static void a(int param0) {
+    final static void renderLogoSprite(int param0) {
         Sprite var1 = null;
         Sprite var2 = null;
         int var3 = 0;

@@ -126,8 +126,8 @@ final class PlayTrackCommand extends ConsoleMethod {
           stackIn_5_1 = 2;
           stackIn_5_2 = param6;
           stackIn_5_3 = 107;
-          stackIn_5_4 = param3 * (2 + di.field_a) * 4;
-          stackIn_5_5 = 2 * (2 + di.field_a);
+          stackIn_5_4 = param3 * (2 + ToolkitSelector.field_a) * 4;
+          stackIn_5_5 = 2 * (2 + ToolkitSelector.field_a);
           stackIn_6_6 = (nsa.field_i == lu.field_b);
           var7_int = ((ScrollPane) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
           var8 = nsa.field_i.field_tb.field_J;
@@ -224,7 +224,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               var12.addChild(-122, var12.field_dc);
               var12.field_Rb = new UiComponent(0L, Corpse.field_i);
               var12.addChild(param1 ^ -127, var12.field_Rb);
-              var12.a(-10966);
+              var12.invalidateLayoutRecursive(-10966);
               var12.field_Nb = new UiComponent(0L, ModelAnimator.field_g);
               var12.addChild(-124, var12.field_Nb);
               var13 = 1;
@@ -338,12 +338,12 @@ final class PlayTrackCommand extends ConsoleMethod {
                 }
               }
               if (null == var12.field_Nb.field_r) {
-                var12.field_Vb.setBounds(68, di.field_a, -23776, var31, 0);
+                var12.field_Vb.setBounds(68, ToolkitSelector.field_a, -23776, var31, 0);
               } else {
-                var12.field_Nb.setBounds(68, di.field_a, -23776, var31, 0);
+                var12.field_Nb.setBounds(68, ToolkitSelector.field_a, -23776, var31, 0);
               }
               var12.field_bc.field_r = BitmapFont.truncateWithEllipsis(var12.field_bc.field_H, var32, 78);
-              var12.field_bc.setBounds(78, di.field_a, param1 ^ -23776, var31, 70);
+              var12.field_bc.setBounds(78, ToolkitSelector.field_a, param1 ^ -23776, var31, 70);
               if (var12.field_bc.field_o &&
                 !var12.field_bc.field_r.equals(var32)) {
                 ArchiveNetworkClient.field_b = var32;
@@ -353,17 +353,17 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var12.field_Hb.field_z = 2;
                 var12.field_wb.field_r = "/" + var12.field_Jb;
                 var33_int = (348 - var12.field_wb.field_H.stringWidth("/")) / 2;
-                var12.field_Hb.setBounds(var33_int - 150, di.field_a, -23776, var31, 150);
-                var12.field_wb.setBounds(-var33_int + 198, di.field_a, -23776, var31, var33_int);
+                var12.field_Hb.setBounds(var33_int - 150, ToolkitSelector.field_a, -23776, var31, 150);
+                var12.field_wb.setBounds(-var33_int + 198, ToolkitSelector.field_a, -23776, var31, var33_int);
               } else {
                 var12.field_Hb.field_z = 1;
-                var12.field_Hb.setBounds(48, di.field_a, -23776, var31, 150);
+                var12.field_Hb.setBounds(48, ToolkitSelector.field_a, -23776, var31, 150);
               }
               var12.field_Lb.field_r = Integer.toString(var12.field_Wb);
-              var12.field_Lb.setBounds(48, di.field_a, param1 ^ -23776, var31, 200);
+              var12.field_Lb.setBounds(48, ToolkitSelector.field_a, param1 ^ -23776, var31, 200);
               stackIn_71_0 = (UnlockOverlay.field_p) ? 250 : 200;
               var33_intLifetime1 = stackIn_71_0;
-              var12.field_Eb.setBounds(-2 + (-var33_intLifetime1 + 365), di.field_a, -23776, var31, var33_intLifetime1);
+              var12.field_Eb.setBounds(-2 + (-var33_intLifetime1 + 365), ToolkitSelector.field_a, -23776, var31, var33_intLifetime1);
               var34_int = pda.field_c;
               if (0 != (var14Lifetime1 & 1 << PowerUpItemBehaviour.field_w)) {
                 var50_ref = SoundEventPlayer.field_f[var12.field_cc];
@@ -446,8 +446,8 @@ final class PlayTrackCommand extends ConsoleMethod {
                   var12.field_ub.field_r = var39 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_ub.setBounds(var12.field_G - 365, di.field_a, param1 ^ -23776, var31, 365);
-              var31 = var31 + di.field_a;
+              var12.field_ub.setBounds(var12.field_G - 365, ToolkitSelector.field_a, param1 ^ -23776, var31, 365);
+              var31 = var31 + ToolkitSelector.field_a;
               if (var12.field_Cb != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
@@ -460,18 +460,18 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var38 = var37.toString();
                 var12.field_Qb.field_r = var38;
                 var39Lifetime1 = var12.field_Qb.field_H.countWrappedLines(var38, var12.field_G - 2 * var12.field_Qb.field_x);
-                var12.field_Qb.setBounds(var12.field_G, var39Lifetime1 * di.field_a, param1 ^ -23776, var31, 0);
-                var31 = var31 + di.field_a * var39Lifetime1;
+                var12.field_Qb.setBounds(var12.field_G, var39Lifetime1 * ToolkitSelector.field_a, param1 ^ -23776, var31, 0);
+                var31 = var31 + ToolkitSelector.field_a * var39Lifetime1;
               }
               if (var12.field_gc) {
                 var12.field_hc.field_r = LegacyOpenGlFlowingWaterEffect.formatText(123, LoadProfileCommand.field_o, new String[]{var32});
-                var12.field_hc.setBounds(var12.field_G - 2 * mna.field_d, di.field_a, -23776, var31, mna.field_d);
-                var31 = var31 + di.field_a;
+                var12.field_hc.setBounds(var12.field_G - 2 * mna.field_d, ToolkitSelector.field_a, -23776, var31, mna.field_d);
+                var31 = var31 + ToolkitSelector.field_a;
               }
               if (var12.field_Sb) {
                 var12.field_dc.field_r = LegacyOpenGlFlowingWaterEffect.formatText(121, SweeperMountComponent.field_I, new String[]{var32});
-                var12.field_dc.setBounds(-(mna.field_d * 2) + var12.field_G, di.field_a, -23776, var31, mna.field_d);
-                var31 = var31 + di.field_a;
+                var12.field_dc.setBounds(-(mna.field_d * 2) + var12.field_G, ToolkitSelector.field_a, -23776, var31, mna.field_d);
+                var31 = var31 + ToolkitSelector.field_a;
               }
             }
             var33 = ProxySocketConnector.formatLobbyPlayerStatus(var32, param1 + 8793, var12.field_Ib);
@@ -479,8 +479,8 @@ final class PlayTrackCommand extends ConsoleMethod {
               var34_intLifetime1 = var12.field_Rb.field_H.countWrappedLines(var33, var12.field_G - mna.field_d - mna.field_d);
               var12.field_Rb.field_r = var33;
               var12.field_Rb.field_s = var12.field_zb * 256 / qsa.field_a;
-              var12.field_Rb.setBounds(-(mna.field_d * 2) + var12.field_G, di.field_a * var34_intLifetime1, param1 - 23776, var31, mna.field_d);
-              var31 = var31 + di.field_a * var34_intLifetime1;
+              var12.field_Rb.setBounds(-(mna.field_d * 2) + var12.field_G, ToolkitSelector.field_a * var34_intLifetime1, param1 - 23776, var31, mna.field_d);
+              var31 = var31 + ToolkitSelector.field_a * var34_intLifetime1;
             }
             if (var7_int == 0) {
               var12.field_O = var31 - var12.field_t;

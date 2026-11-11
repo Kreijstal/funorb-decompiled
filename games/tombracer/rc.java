@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rc {
-    static ei[] field_a;
+    static ToolkitCandidate[] field_a;
     static SpriteData[] field_b;
 
     final static void a(int param0, int param1, pha param2, byte param3, int param4, int param5, ScrollPane param6) {
@@ -34,7 +34,7 @@ final class rc {
         field_a = null;
         field_b = null;
         if (!param0) {
-          field_a = (ei[]) null;
+          field_a = (ToolkitCandidate[]) null;
         }
     }
 

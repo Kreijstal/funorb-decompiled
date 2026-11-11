@@ -205,7 +205,7 @@ final class LaserShooterComponent extends ShooterComponent {
         if (null == baa.field_d) {
           return;
         }
-        if (baa.field_d.b(100663296)) {
+        if (baa.field_d.ensureToolkitForActiveCanvas(100663296)) {
           MaskBlendOperator.initToolkitResources(-25405);
           return;
         }

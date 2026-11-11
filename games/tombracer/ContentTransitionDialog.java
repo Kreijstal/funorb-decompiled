@@ -85,7 +85,7 @@ abstract class ContentTransitionDialog extends ofa {
               this.field_R = 0;
             }
           } else {
-            this.a(this.field_Q, this.field_T.field_m + 12, this.field_T.field_p + this.field_S + 12, (byte) -105);
+            this.animateResizeTo(this.field_Q, this.field_T.field_m + 12, this.field_T.field_p + this.field_S + 12, (byte) -105);
             this.field_R = 0;
           }
           if (param0 > 67) {
@@ -124,7 +124,7 @@ abstract class ContentTransitionDialog extends ofa {
               return super.updateFade(127);
             }
             this.field_M = AvailabilityQuery.field_e;
-            this.a(this.field_Q, this.field_T.field_m + 12, this.field_T.field_p + (this.field_S + 12), (byte) -103);
+            this.animateResizeTo(this.field_Q, this.field_T.field_m + 12, this.field_T.field_p + (this.field_S + 12), (byte) -103);
             this.field_R = 0;
             this.field_P.field_y = 0;
             if (param0 <= 126) {

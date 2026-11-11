@@ -169,7 +169,7 @@ final class fp {
         Effect.field_e[2] = SpriteData.loadSprite(param2, "", "reward_idol");
         ena.field_l = SpriteData.loadSprite(param2, "", "endround_flag");
         MirrorComponent.field_F = SpriteData.loadSprite(param2, "", "endround_divider_line");
-        rp.field_f = SpriteData.loadSprite(param2, "", "endround_smoke_trail");
+        CharacterPreview.field_f = SpriteData.loadSprite(param2, "", "endround_smoke_trail");
         StandingsPhase.field_o = SpriteData.loadSheet(param2, "", "endround_stage_lines");
         MenuInputState.field_j = SpriteData.loadSprite(param2, "", "podium");
         int incrementValue$7 = param1;

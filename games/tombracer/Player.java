@@ -806,7 +806,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           var2_int = -29 % ((param0 - 1) / 45);
           var3 = this.heldItemWeight + 2;
           if (this.weapon != null) {
-            var3 = var3 + this.weapon.d(70);
+            var3 = var3 + this.weapon.getWeight(70);
           }
           stackIn_5_0 = var3;
           return stackIn_5_0;

@@ -182,7 +182,7 @@ abstract class GameScreen {
         }
     }
 
-    final static void c(byte param0) {
+    final static void releaseInput(byte param0) {
         og.exitFullscreen(0);
         if (null != nma.field_l) {
           CharacterChoiceFactory.detachCanvasInput(nma.field_l, false);

@@ -329,7 +329,7 @@ final class QuickChatMenu extends UiComponent {
           this.setExpansionTicks(this.field_Cb, 77);
         }
         for (var7 = 0; this.field_Bb > var7; var7++) {
-          this.field_Gb[var7].a(this.field_Fb, 0, param0, this.field_wb, 0, param5, this.field_Gb[var7].field_T);
+          this.field_Gb[var7].setRowBounds(this.field_Fb, 0, param0, this.field_wb, 0, param5, this.field_Gb[var7].field_T);
         }
         if (param2 != -3269) {
           field_Ab = (String) null;

@@ -176,7 +176,7 @@ final class pia extends nqa implements GpuTexture2D {
         }
     }
 
-    final jagdx.IDirect3DBaseTexture c(int param0) {
+    final jagdx.IDirect3DBaseTexture getBaseTexture(int param0) {
         int var2 = 9 % ((48 - param0) / 45);
         return (jagdx.IDirect3DBaseTexture) ((Object) this.field_f);
     }

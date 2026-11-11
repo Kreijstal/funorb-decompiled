@@ -139,7 +139,7 @@ final class ComponentTargetList {
             }
           }
           if (var4_ref_csa != null) {
-            var5 = var4_ref_csa.u(-91);
+            var5 = var4_ref_csa.getSwitchable(-91);
             if (var5 != null ||
               var7 != 0) {
               var2++;
@@ -168,7 +168,7 @@ final class ComponentTargetList {
           if (var7 == 0) {
             var5_ref = stackIn_22_0[var4Lifetime1];
             if (var5_ref != null) {
-              var6 = var5_ref.u(param0 - 24);
+              var6 = var5_ref.getSwitchable(param0 - 24);
               if (var6 != null) {
                 var3Lifetime1[var2Lifetime1] = var6;
                 var2Lifetime1++;

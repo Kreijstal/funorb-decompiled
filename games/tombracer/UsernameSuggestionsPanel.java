@@ -78,7 +78,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
           }
           for (var6_int = 0; var6_int < this.field_A.length; var6_int++) {
             if (this.field_z[var6_int] == param2) {
-              this.field_w.a(this.field_A[var6_int], 38);
+              this.field_w.setNameFieldText(this.field_A[var6_int], 38);
             }
           }
           if (param2 == this.field_z[this.field_A.length]) {

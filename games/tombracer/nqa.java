@@ -16,7 +16,7 @@ abstract class nqa {
         }
     }
 
-    abstract jagdx.IDirect3DBaseTexture c(int param0);
+    abstract jagdx.IDirect3DBaseTexture getBaseTexture(int param0);
 
     nqa(Direct3DToolkit param0, ft param1, una param2, boolean param3, int param4) {
         this.field_a = MirrorComponent.field_G;

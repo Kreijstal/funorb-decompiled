@@ -438,12 +438,12 @@ abstract class ConsoleWindow implements ShellListener {
         }
         if (!this.open) {
           if (null != this.field_i) {
-            this.field_i.a(param0 ^ -125, (UiComponent) null);
+            this.field_i.propagateStyle(param0 ^ -125, (UiComponent) null);
           }
         } else {
           this.field_q = 15;
           if (null != this.field_i) {
-            this.field_i.a(param0 ^ -112, this.field_o);
+            this.field_i.propagateStyle(param0 ^ -112, this.field_o);
           }
         }
     }

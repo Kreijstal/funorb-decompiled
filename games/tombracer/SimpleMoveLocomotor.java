@@ -430,7 +430,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           if (param1 > -78) {
             this.applyConstraint(95);
           }
-          param0.writeBits((byte) -126, ResourceArchive.a((byte) 46, this.field_p, 8192, 4), 4);
+          param0.writeBits((byte) -126, ResourceArchive.scaleToBits((byte) 46, this.field_p, 8192, 4), 4);
           param0.writeBits((byte) 63, this.field_q ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "wi.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -455,11 +455,11 @@ final class SimpleMoveLocomotor extends Locomotor {
           }
           this.field_r = param1.readBits((byte) 44, 10) << 16;
           if (param0.formatVersion >= 10) {
-            this.field_p = SnakePitModel.a(4, 8192, 0, param1.readBits((byte) 44, 4));
+            this.field_p = SnakePitModel.unscaleFromBits(4, 8192, 0, param1.readBits((byte) 44, 4));
             stackIn_9_1 = (1 == param1.readBits((byte) 44, 1));
             this.field_q = stackIn_9_1;
           } else {
-            this.field_p = SnakePitModel.a(3, 8192, 0, param1.readBits((byte) 44, 3));
+            this.field_p = SnakePitModel.unscaleFromBits(3, 8192, 0, param1.readBits((byte) 44, 3));
             this.field_q = false;
           }
           return;

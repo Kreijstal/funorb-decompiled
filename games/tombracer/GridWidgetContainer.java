@@ -256,13 +256,13 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
             return stackIn_14_0;
           }
           if (96 == var5_int) {
-            stackIn_16_0 = this.a(param1, 1);
+            stackIn_16_0 = this.focusPreviousFrom(param1, 1);
             return stackIn_16_0;
           }
           if (var5_int != 97) {
             return false;
           }
-          stackIn_18_0 = this.a((byte) 43, param1);
+          stackIn_18_0 = this.focusNextFrom((byte) 43, param1);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

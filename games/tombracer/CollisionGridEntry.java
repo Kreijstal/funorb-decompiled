@@ -119,7 +119,7 @@ final class CollisionGridEntry extends ql {
         return stackIn_50_0;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final boolean intersectsBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != -98) {
           return true;
         }
@@ -138,7 +138,7 @@ final class CollisionGridEntry extends ql {
         return false;
     }
 
-    final boolean a(int param0, int param1, Collidable param2, int param3) {
+    final boolean matches(int param0, int param1, Collidable param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;

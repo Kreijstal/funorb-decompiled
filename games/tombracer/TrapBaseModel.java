@@ -138,7 +138,7 @@ final class TrapBaseModel extends MotionTrackingModel {
           if (var6 == null) {
             return;
           }
-          gqa.a(var7, -83584144, param1, param2, (ToolkitModel) (var6), param3);
+          gqa.drawModelAt(var7, -83584144, param1, param2, (ToolkitModel) (var6), param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -16,7 +16,7 @@ final class TutorialHints {
     private boolean field_k;
     private int field_e;
 
-    final void a(int param0) {
+    final void update(int param0) {
         int var7 = 0;
         Room var3;
         int var4;
@@ -32,7 +32,7 @@ final class TutorialHints {
         var3 = var10.getRoom((byte) -106);
         var4 = this.field_l.matchState.getPlayerCourseIndex(1, this.field_l.localPlayerIndex);
         if (param0 != 9981) {
-          this.a(77);
+          this.update(77);
         }
         if (var4 != this.field_g) {
           this.field_g = var4;
@@ -121,7 +121,7 @@ final class TutorialHints {
         MessageOverlay var5 = null;
         try {
           if (param3 > -56) {
-            this.b((byte) 111);
+            this.reset((byte) 111);
           }
           var5 = new MessageOverlay(this.field_l, param1);
           var5.setMessages(tea.field_a, param0, ColouriseOperator.field_n, (byte) 21);
@@ -148,11 +148,11 @@ final class TutorialHints {
           var2 = (mga) (this.field_c.next(108));
         }
         if (param0 != 44) {
-          this.a(1);
+          this.update(1);
         }
     }
 
-    final void b(byte param0) {
+    final void reset(byte param0) {
         if (param0 != -121) {
           this.field_a = -88;
         }

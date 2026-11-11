@@ -19,7 +19,7 @@ class FocusableWidget extends UiWidget {
         try {
           if (this.hasKeyboardFocus((byte) -34) && (param2 == 84 ||
             param2 == 83)) {
-            this.b(-1, 1, -1, -81);
+            this.activate(-1, 1, -1, -81);
             return true;
           }
           if (!param3) {
@@ -110,7 +110,7 @@ class FocusableWidget extends UiWidget {
             }
             if (this.containsPointer(AgeValidator.field_j, param0, param1 ^ -2097252, GridWidgetContainer.field_B, param3) &&
               RangeOperator.field_p == 0) {
-              this.b(GridWidgetContainer.field_B - param3, this.field_s, -param0 + AgeValidator.field_j, -86);
+              this.activate(GridWidgetContainer.field_B - param3, this.field_s, -param0 + AgeValidator.field_j, -86);
             }
             this.handlePointerRelease((byte) 59, param2, GridWidgetContainer.field_B, param0, param3, AgeValidator.field_j);
           }
@@ -305,8 +305,8 @@ class FocusableWidget extends UiWidget {
             this.requestKeyboardFocus(param5, false);
             this.field_s = param4;
             if (null != this.field_h &&
-              this.field_h instanceof om) {
-              ((om) (this.field_h)).a(param3, param6, this, 453, param2, param4, param1);
+              this.field_h instanceof PointerListener) {
+              ((PointerListener) (this.field_h)).onPointerPress(param3, param6, this, 453, param2, param4, param1);
             }
             return true;
           }
@@ -340,8 +340,8 @@ class FocusableWidget extends UiWidget {
     final void handlePointerRelease(byte param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         try {
           if (this.field_h != null &&
-            this.field_h instanceof om) {
-            ((om) (this.field_h)).a(param4, param3, 12728, param2, this, param5);
+            this.field_h instanceof PointerListener) {
+            ((PointerListener) (this.field_h)).onPointerRelease(param4, param3, 12728, param2, this, param5);
           }
           if (param0 != 59) {
             UiWidget var8 = (UiWidget) null;
@@ -353,7 +353,7 @@ class FocusableWidget extends UiWidget {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void activate(int param0, int param1, int param2, int param3) {
         this.field_x = param1;
         if (null == this.field_h) {
           if (param3 <= -40) {

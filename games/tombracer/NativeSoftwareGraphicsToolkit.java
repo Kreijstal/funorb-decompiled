@@ -38,7 +38,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
           if (!StringCursor.loadNativeLibrary("sw3d", 480)) {
             throw new RuntimeException("");
           }
-          ho.b(false);
+          NativeReleaseQueue.acquire(false);
           this.MA(this.field_c, 0, 0);
           CanvasImageBuffer.a(true, (byte) 98, false);
           this.field_h = true;
@@ -324,7 +324,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     protected final synchronized void finalize() {
         this.close(true);
         if (this.field_nativeid != 0L) {
-          ho.a(-1, (e) (this));
+          NativeReleaseQueue.queueRelease(-1, (e) (this));
         }
     }
 
@@ -373,7 +373,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     final native void drawCircle(int param0, int param1, int param2, int param3, int param4);
 
     final void updateTime(int param0) {
-        ho.a(true);
+        NativeReleaseQueue.flush(true);
         this.d(param0);
         ya var2 = (ya) (this.field_o.first(-80));
         while (var2 != null) {
@@ -396,7 +396,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.field_f = null;
         this.field_p = null;
         this.field_i = null;
-        this.field_r.e(-67);
+        this.field_r.clear(-67);
         ya var1 = (ya) (this.field_o.first(-80));
         while (var1 != null) {
           var1.ga();
@@ -409,7 +409,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
           this.field_h = false;
         }
         this.collectGarbage();
-        ho.a(-1);
+        NativeReleaseQueue.releaseReference(-1);
         this.field_s = true;
     }
 
@@ -431,7 +431,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     private final void collectGarbage() {
         System.gc();
         System.runFinalization();
-        ho.a(true);
+        NativeReleaseQueue.flush(true);
     }
 
     private final native void MA(TextureProvider param0, int param1, int param2);

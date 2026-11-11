@@ -64,7 +64,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     int field_Dc;
     int field_jb;
     private int field_nb;
-    private ni field_kb;
+    private DynamicGeometryBuffer field_kb;
     float field_Kb;
     int field_S;
     float field_H;
@@ -211,7 +211,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (this.field_r != S2CRewardChoicePacket.field_d) {
           var2 = this.field_r;
           this.field_r = S2CRewardChoicePacket.field_d;
-          if (var2.a(-101)) {
+          if (var2.isModelProjection(-101)) {
             this.modelViewChanged((byte) 94);
           }
           this.buildPixelProjection(0);
@@ -387,7 +387,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (this.field_r != RasterBuffer.field_d) {
           var2_ref_mla = this.field_r;
           this.field_r = RasterBuffer.field_d;
-          if (!var2_ref_mla.a(-114)) {
+          if (!var2_ref_mla.isModelProjection(-114)) {
             this.modelViewChanged((byte) 94);
           }
           this.buildOrthographicProjection((byte) 83);
@@ -487,7 +487,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (ListTracksCommand.field_p != this.field_r) {
           var2 = this.field_r;
           this.field_r = ListTracksCommand.field_p;
-          if (var2.a(-65)) {
+          if (var2.isModelProjection(-65)) {
             this.modelViewChanged((byte) 94);
           }
           this.field_rb = this.field_rb & -32;
@@ -832,7 +832,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.field_ib[var3_int] = param1[var3_int];
           }
           this.field_Bc = param0;
-          if (this.field_r.a(-89)) {
+          if (this.field_r.isModelProjection(-89)) {
             this.applyPointLights((byte) 92);
           }
           return;
@@ -883,7 +883,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (SpriteSampleOperator.field_s != this.field_r) {
           var2 = this.field_r;
           this.field_r = SpriteSampleOperator.field_s;
-          if (!var2.a(-109)) {
+          if (!var2.isModelProjection(-109)) {
             this.modelViewChanged((byte) 94);
           }
           this.buildPerspectiveProjection(7);
@@ -1051,7 +1051,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_Qb.negateYZ((byte) 42);
           this.field_rc.setTransposedFrom((Transform3D) (this.field_Qb), (byte) 127);
           this.field_Y.setTransposedFrom((Transform3D) (this.field_bb), (byte) -31);
-          if (this.field_r.a(-38)) {
+          if (this.field_r.isModelProjection(-38)) {
             this.modelViewChanged((byte) 94);
           }
         } catch (RuntimeException runtimeException) {
@@ -1167,7 +1167,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.setMultisampling(1, false);
         this.bindVertexBuffer(-125, 0, this.field_hb);
         this.bindVertexLayout(this.field_Z, -32);
-        this.drawPrimitives(256, di.field_d, 1, 0);
+        this.drawPrimitives(256, ToolkitSelector.field_d, 1, 0);
         this.setMultisampling(1, true);
         this.setAlphaCombineSource(0, false, ej.field_c);
         this.setColorCombineSource(ej.field_c, 0, -104);
@@ -1506,7 +1506,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.createDynamicGeometryBuffer(param0 ^ 138);
         this.createLineBuffer(true);
         this.createCircleBuffer((byte) 15);
-        this.field_kb.a(-120, this);
+        this.field_kb.allocate(-120, this);
     }
 
     private final void createDynamicGeometryBuffer(int param0) {
@@ -1686,7 +1686,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_q.translate(-var7 + (float)param1, -39, (float)param0 - var7, 0.0f);
         this.modelTransformChanged(-1662);
         this.setMultisampling(1, false);
-        this.drawGeometryBuffer(di.field_d, (byte) -32, 4);
+        this.drawGeometryBuffer(ToolkitSelector.field_d, (byte) -32, 4);
         this.setMultisampling(1, true);
         this.setAlphaCombineSource(0, false, ej.field_c);
         this.setColorCombineSource(ej.field_c, 0, -31);
@@ -1786,7 +1786,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_n = new HardwareModel(this, 0, 0, true, true);
         this.field_ec = new HardwareModel(this, 0, 0, false, false);
         this.field_tc = new HardwareModel(this, 0, 0, true, true);
-        this.field_kb = new ni(this);
+        this.field_kb = new DynamicGeometryBuffer(this);
         this.field_z = this.createIndexBuffer(26, true);
         this.rebuildDeviceResources((byte) 6);
         this.field_Mb = new hk(this);
@@ -2524,7 +2524,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_E.releaseBuffers((byte) 112);
         this.field_n.releaseBuffers((byte) 114);
         this.field_tc.releaseBuffers((byte) 122);
-        this.field_kb.a((byte) 86);
+        this.field_kb.release((byte) 86);
         this.field_z.close(param0 ^ 12568);
     }
 

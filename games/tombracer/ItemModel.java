@@ -152,7 +152,7 @@ final class ItemModel extends TrapModel {
             }
             var7 = stackIn_21_0;
             if (var6_int != 0) {
-              this.field_s.a(3, false, (byte) -84, 9);
+              this.field_s.play(3, false, (byte) -84, 9);
               var7 = this.field_s.getModel((byte) 74);
             }
           } else {
@@ -186,7 +186,7 @@ final class ItemModel extends TrapModel {
           }
           if (var7 != null) {
             var9 = GameScreen.positiveModulo(-this.body.getFacingAngle(-25787) + 4096 + this.field_m >> 2, 2048, -117);
-            gqa.a(var9, -83584144, param1, param2, (ToolkitModel) (var7), param3);
+            gqa.drawModelAt(var9, -83584144, param1, param2, (ToolkitModel) (var7), param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

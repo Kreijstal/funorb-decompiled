@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ei {
+class ToolkitCandidate {
     int field_b;
     int field_a;
     boolean field_c;
 
-    boolean a(ei param0, int param1) {
+    boolean isSameType(ToolkitCandidate param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -37,7 +37,7 @@ class ei {
         return super.toString();
     }
 
-    final boolean a(iqa param0, byte param1) {
+    final boolean accepts(iqa param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -69,7 +69,7 @@ class ei {
         return 0 != (55 & param1) ? true : false;
     }
 
-    ei(int param0, int param1) {
+    ToolkitCandidate(int param0, int param1) {
         this.field_c = true;
         this.field_b = param0;
         this.field_a = param1;

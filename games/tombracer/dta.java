@@ -21,7 +21,7 @@ final class dta {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, MatchScreen param4, int param5, int param6) {
+    final void draw(int param0, int param1, int param2, int param3, MatchScreen param4, int param5, int param6) {
         int var36_int = 0;
         int stackIn_12_0 = 0;
         int stackIn_72_0 = 0;
@@ -126,8 +126,8 @@ final class dta {
               if (var9.hasFinishedCourse((byte) 90, param2)) {
                 tga.field_a.setClip(param0, param5, param1, param6);
                 Room.field_j.draw(0, 0);
-                SocketConnector.a(CharacterChoiceTile.field_i.toUpperCase(), 1, SingleChildWidget.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
-                SocketConnector.a(DropAnimation.formatTime(var9.getSimulationTick((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
+                SocketConnector.drawWrappedText(CharacterChoiceTile.field_i.toUpperCase(), 1, SingleChildWidget.field_v, 10981495, 20, -param5 + param6, 1, param5, param0, 1, (byte) 60, -param0 + param1);
+                SocketConnector.drawWrappedText(DropAnimation.formatTime(var9.getSimulationTick((byte) 115, param2), (byte) -8), 1, eda.field_f, 10981495, 20, param6 - param5, 1, param5 + 30, param0, 1, (byte) 60, param1 - param0);
                 tga.field_a.la();
                 return;
               }
@@ -165,7 +165,7 @@ final class dta {
                 if (var23 != 0) {
                   ura.a(-10985);
                   hp.drawModelPreview(1024, 512, 0, this.field_c.getModel((byte) 74), -1918106173, 70 + var18Lifetime1, var17Lifetime1 + 55);
-                  RemovedFromGameMenu.f((byte) -6);
+                  RemovedFromGameMenu.resetDepthRange((byte) -6);
                 }
               }
               var17Lifetime2 = param1 - bd.field_i.width();
@@ -200,7 +200,7 @@ final class dta {
                   }
                   var28_double = 80.0;
                 }
-                qf.field_j.a((aa) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.height() - 32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
+                qf.field_j.drawWrapped((aa) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.height() - 32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
                 var30 = 30 + (-CachedTextLayout.field_l.height() + var18Lifetime2) + 80;
                 vua.field_A.draw(param1 - (CachedTextLayout.field_l.width() - var24), var18Lifetime2 - CachedTextLayout.field_l.height() + (-vua.field_A.height() + var25));
                 var31 = (int)(-var28_double + (double)var30);
@@ -335,20 +335,20 @@ final class dta {
                   var38 = 0;
                 }
                 if (var30Lifetime3 != 0) {
-                  var39 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), aca.field_g, (byte) 124, 48, 0, id.field_h, param0, 2);
+                  var39 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), aca.field_g, (byte) 124, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39;
                 }
                 if (var32Lifetime1 != 0) {
-                  var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), hda.field_h, (byte) 72, 48, 0, id.field_h, param0, 2);
+                  var39Lifetime1 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), hda.field_h, (byte) 72, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime1;
                 } else {
                   if (var31Lifetime2 != 0) {
-                    var39Lifetime1 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), qja.field_k, (byte) -106, 48, 0, id.field_h, param0, 2);
+                    var39Lifetime1 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), qja.field_k, (byte) -106, 48, 0, id.field_h, param0, 2);
                     param6 = param6 - var39Lifetime1 * var37Lifetime1;
                   }
                 }
                 if (var33 != 0) {
-                  var39Lifetime2 = var36.a((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), bb.field_l, (byte) 107, 48, 0, id.field_h, param0, 2);
+                  var39Lifetime2 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), bb.field_l, (byte) 107, 48, 0, id.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime2;
                 }
               }
@@ -393,7 +393,7 @@ final class dta {
         }
     }
 
-    final void a(byte param0) {
+    final void tick(byte param0) {
         this.field_c.tick(0);
         if (param0 != -21) {
           field_g = (boolean[]) null;

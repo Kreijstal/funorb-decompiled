@@ -38,7 +38,7 @@ final class ContextMenu extends UiComponent {
         }
         var6 = 0;
         for (var7 = 0; this.field_zb > var7; var7++) {
-          var8 = this.field_Db[var7].b(this.field_wb, 16474, this.field_vb);
+          var8 = this.field_Db[var7].measureRowWidth(this.field_wb, 16474, this.field_vb);
           if (var6 < var8) {
             var6 = var8;
           }
@@ -52,7 +52,7 @@ final class ContextMenu extends UiComponent {
         var9 = LegacyTextureCache.clampToScreenY(param1, var7Lifetime1, param0, (byte) -98);
         this.setBounds(var6, var7Lifetime1, -23776, var9, var8Lifetime1);
         for (var10 = 0; this.field_zb > var10; var10++) {
-          this.field_Db[var10].a(var6 - this.field_Hb * 2, this.field_Hb, this.field_vb, this.field_Gb, 0, this.field_wb, this.field_tb + var10 * this.field_Gb);
+          this.field_Db[var10].setRowBounds(var6 - this.field_Hb * 2, this.field_Hb, this.field_vb, this.field_Gb, 0, this.field_wb, this.field_tb + var10 * this.field_Gb);
         }
         return;
     }
@@ -173,7 +173,7 @@ final class ContextMenu extends UiComponent {
         }
     }
 
-    final static void a(int param0, ena param1) {
+    final static void setCharacterAnimations(int param0, ena param1) {
         try {
           hba.field_c = param1;
           if (param0 != 13) {

@@ -332,7 +332,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.x;
     }
 
-    abstract Switchable u(int param0);
+    abstract Switchable getSwitchable(int param0);
 
     final void setMounts(byte param0, ComponentMount[] param1) {
         int var3_int = 0;
@@ -450,7 +450,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
             }
           }
           if (this.hasAngle((byte) -122)) {
-            this.angle = SnakePitModel.a(4, 8192, 0, param2.readBits((byte) 44, 4));
+            this.angle = SnakePitModel.unscaleFromBits(4, 8192, 0, param2.readBits((byte) 44, 4));
           }
           if (20 <= param0.formatVersion &&
             this.storesInitialOnBit(6)) {
@@ -500,7 +500,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
     }
 
-    void a(int param0, boolean param1) {
+    void offsetPosition(int param0, boolean param1) {
         this.x = this.x + param0;
         if (!param1) {
           this.field_w = (SwitchableId) null;
@@ -668,7 +668,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.isSwitchable(-15254);
     }
 
-    final static void a(int param0, HuffmanCodec param1) {
+    final static void setHuffmanCodec(int param0, HuffmanCodec param1) {
         try {
           nma.field_m = param1;
           if (param0 != 1048576) {
@@ -798,7 +798,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
             param1.writeBits((byte) -127, this.height / 2097152, 6);
           }
           if (this.hasAngle((byte) -122)) {
-            param1.writeBits((byte) 8, ResourceArchive.a((byte) 103, this.angle, 8192, 4), 4);
+            param1.writeBits((byte) 8, ResourceArchive.scaleToBits((byte) 103, this.angle, 8192, 4), 4);
           }
           if (this.storesInitialOnBit(6)) {
             stackIn_12_0 = (BitPacketBuffer) (param1);

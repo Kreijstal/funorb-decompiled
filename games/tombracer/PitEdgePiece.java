@@ -70,7 +70,7 @@ final class PitEdgePiece implements SelectivelyLitRenderable {
           var5 = this.getRenderX((byte) 69);
           var6 = this.getRenderY((byte) 102);
           var7 = this.getRenderZ((byte) -114);
-          gqa.a(0, -83584144, var6, var5, var4, var7);
+          gqa.drawModelAt(0, -83584144, var6, var5, var4, var7);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "oia.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

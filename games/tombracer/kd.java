@@ -73,7 +73,7 @@ final class kd extends FocusableWidget {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getPoint(int param0, byte param1) {
         if (0 > param0 ||
           param0 >= this.field_D.size(param1 + 13)) {
           return -1;
@@ -84,14 +84,14 @@ final class kd extends FocusableWidget {
         return this.field_D.get(param1 ^ 13, param0);
     }
 
-    final int c(int param0) {
+    final int getPointCount(int param0) {
         if (param0 != -3) {
-          this.a(-86, (byte) 101);
+          this.getPoint(-86, (byte) 101);
         }
         return this.field_D.size(param0 ^ 2);
     }
 
-    final int b(int param0) {
+    final int getScale(int param0) {
         if (param0 != 24857) {
           this.field_D = (GrowableIntList) null;
         }

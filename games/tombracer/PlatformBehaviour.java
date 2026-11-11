@@ -35,13 +35,13 @@ final class PlatformBehaviour extends Behaviour {
         }
         int var7 = 0;
         if (param4 >= 79) {
-          return S2CRoundDeadlinePacket.a(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
+          return S2CRoundDeadlinePacket.overlapArea(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
         }
         this.collapseDelay = -65;
-        return S2CRoundDeadlinePacket.a(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
+        return S2CRoundDeadlinePacket.overlapArea(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
     }
 
-    final boolean g(byte param0) {
+    final boolean isCollapsed(byte param0) {
         if (param0 >= 63) {
           return this.collapseCountdown <= 0 ? true : false;
         }
@@ -118,7 +118,7 @@ final class PlatformBehaviour extends Behaviour {
         }
     }
 
-    final static float[] a(int param0, int param1, float[] param2) {
+    final static float[] truncateFloats(int param0, int param1, float[] param2) {
         float[] var3 = null;
         RuntimeException var3_ref = null;
         float[] var4 = null;
@@ -204,7 +204,7 @@ final class PlatformBehaviour extends Behaviour {
             return;
           }
           if (param1 < 18) {
-            this.g((byte) -126);
+            this.isCollapsed((byte) -126);
           }
           if (param3 != 2) {
             return;

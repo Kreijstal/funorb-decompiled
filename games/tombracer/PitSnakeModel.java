@@ -37,7 +37,7 @@ final class PitSnakeModel implements Renderable {
             PitSnakeModel.clampToScreenX((byte) 44, -55, -63, 37);
           }
           var5 = this.field_d.getModel((byte) 74);
-          gqa.a(var4, -83584144, this.getRenderY((byte) 120), this.getRenderX((byte) -89), var5, this.getRenderZ((byte) -95));
+          gqa.drawModelAt(var4, -83584144, this.getRenderY((byte) 120), this.getRenderX((byte) -89), var5, this.getRenderZ((byte) -95));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "bt.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -46,15 +46,15 @@ final class PitSnakeModel implements Renderable {
     public final void updateAnimation(int param0) {
         if (this.snake.isCoolingDown(180)) {
           if (!this.field_g) {
-            this.field_d.a(1, false, (byte) -85, 9);
-            this.field_d.a(6, this.field_d.getCurrentAnimationLength((byte) 50), 1, -1);
+            this.field_d.play(1, false, (byte) -85, 9);
+            this.field_d.queue(6, this.field_d.getCurrentAnimationLength((byte) 50), 1, -1);
           }
           this.field_f = false;
           this.field_g = true;
         } else {
           if (!this.field_f) {
-            this.field_d.a(1, false, (byte) 120, 8);
-            this.field_d.a(7, this.field_d.getCurrentAnimationLength((byte) -97), 1, -1);
+            this.field_d.play(1, false, (byte) 120, 8);
+            this.field_d.queue(7, this.field_d.getCurrentAnimationLength((byte) -97), 1, -1);
           }
           this.field_f = true;
           this.field_g = false;
@@ -100,7 +100,7 @@ final class PitSnakeModel implements Renderable {
 
     PitSnakeModel() {
         this.field_d = new ModelAnimator(6, 4, 1);
-        this.field_d.a(1, true, (byte) -102, 7);
+        this.field_d.play(1, true, (byte) -102, 7);
         this.field_f = true;
     }
 

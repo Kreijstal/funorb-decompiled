@@ -41,11 +41,11 @@ final class sla {
           if (param0 != 29585) {
             sla.b(-98);
             SimpleMoveLocomotor.field_s = null;
-            ni.field_c = true;
+            DynamicGeometryBuffer.field_c = true;
             return;
           }
           SimpleMoveLocomotor.field_s = null;
-          ni.field_c = true;
+          DynamicGeometryBuffer.field_c = true;
           return;
         }
         ClientMemoryVertexArray.field_d = null;
@@ -53,12 +53,12 @@ final class sla {
         ClientMemoryVertexArray.field_e = null;
         if (param0 == 29585) {
           SimpleMoveLocomotor.field_s = null;
-          ni.field_c = true;
+          DynamicGeometryBuffer.field_c = true;
           return;
         }
         sla.b(-98);
         SimpleMoveLocomotor.field_s = null;
-        ni.field_c = true;
+        DynamicGeometryBuffer.field_c = true;
     }
 
     public final String toString() {

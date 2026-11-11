@@ -369,7 +369,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -116, "join_request_xs_game");
                 if (var2 != null) {
-                  di.field_h = jaa.decodeText((byte) 86, var2);
+                  ToolkitSelector.field_h = jaa.decodeText((byte) 86, var2);
                 }
                 var2 = dn.loadFile((byte) 111, "join_withdraw_request_xs_game");
                 if (null != var2) {

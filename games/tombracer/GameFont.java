@@ -17,7 +17,7 @@ abstract class GameFont {
           return;
         }
         try {
-          this.a(false, param2 - this.field_a.a(param5, (byte) 107) / 2, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param5, 0, param4);
+          this.drawText(false, param2 - this.field_a.a(param5, (byte) 107) / 2, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param5, 0, param4);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -73,7 +73,7 @@ abstract class GameFont {
               }
             } else {
               var5 = (CharSequence) ((Object) param0.substring(4));
-              MatchProtocol.field_k = -16777216 & MatchProtocol.field_k | 16777215 & eba.a(var5, -105, 16);
+              MatchProtocol.field_k = -16777216 & MatchProtocol.field_k | 16777215 & eba.parseInt(var5, -105, 16);
             }
             if (!param0.startsWith("argb=")) {
               if (param0.equals("/argb")) {
@@ -88,7 +88,7 @@ abstract class GameFont {
                     } else {
                       if (param0.startsWith("u=")) {
                         var9 = (CharSequence) ((Object) param0.substring(2));
-                        moa.field_b = MatchProtocol.field_k & -16777216 | eba.a(var9, -65, 16);
+                        moa.field_b = MatchProtocol.field_k & -16777216 | eba.parseInt(var9, -65, 16);
                       } else {
                         if (param0.equals("u")) {
                           moa.field_b = -16777216 & MatchProtocol.field_k;
@@ -97,7 +97,7 @@ abstract class GameFont {
                             if (!param0.equalsIgnoreCase("shad=-1")) {
                               if (param0.startsWith("shad=")) {
                                 var8 = (CharSequence) ((Object) param0.substring(5));
-                                GasTrapComponent.field_G = MatchProtocol.field_k & -16777216 | eba.a(var8, -52, 16);
+                                GasTrapComponent.field_G = MatchProtocol.field_k & -16777216 | eba.parseInt(var8, -52, 16);
                               } else {
                                 if (param0.equals("shad")) {
                                   GasTrapComponent.field_G = -16777216 & MatchProtocol.field_k;
@@ -123,12 +123,12 @@ abstract class GameFont {
                   }
                 } else {
                   var7 = (CharSequence) ((Object) param0.substring(4));
-                  nt.field_b = MatchProtocol.field_k & -16777216 | eba.a(var7, -45, 16);
+                  nt.field_b = MatchProtocol.field_k & -16777216 | eba.parseInt(var7, -45, 16);
                 }
               }
             } else {
               var6 = (CharSequence) ((Object) param0.substring(5));
-              MatchProtocol.field_k = eba.a(var6, -63, 16);
+              MatchProtocol.field_k = eba.parseInt(var6, -63, 16);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,7 +152,7 @@ abstract class GameFont {
         }
     }
 
-    private final int a(int[] param0, int param1, String param2, int param3, int param4, aa param5, int param6, ToolkitSprite[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final int drawWrappedLines(int[] param0, int param1, String param2, int param3, int param4, aa param5, int param6, ToolkitSprite[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int stackIn_3_0 = 0;
         int stackIn_46_0 = 0;
         Object stackIn_49_0 = null;
@@ -225,19 +225,19 @@ abstract class GameFont {
           }
           for (var22Lifetime1 = 0; var22Lifetime1 < var19; var22Lifetime1++) {
             if (param4 == 0) {
-              this.a(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
+              this.drawText(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
             } else {
               if (param4 == 1) {
-                this.a(false, (param11 - this.field_a.a(WeaponShooterBehaviour.field_q[var22Lifetime1], (byte) -101)) / 2 + param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
+                this.drawText(false, (param11 - this.field_a.a(WeaponShooterBehaviour.field_q[var22Lifetime1], (byte) -101)) / 2 + param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
               } else {
                 if (param4 == 2) {
-                  this.a(false, -this.field_a.a(WeaponShooterBehaviour.field_q[var22Lifetime1], (byte) -116) + (param11 + param1), param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
+                  this.drawText(false, -this.field_a.a(WeaponShooterBehaviour.field_q[var22Lifetime1], (byte) -116) + (param11 + param1), param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
                 } else {
                   if (var19 - 1 == var22Lifetime1) {
-                    this.a(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
+                    this.drawText(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
                   } else {
                     this.computeJustification(true, param11, WeaponShooterBehaviour.field_q[var22Lifetime1]);
-                    this.a(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
+                    this.drawText(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
                     OpenGlToolkit.field_ab = 0;
                   }
                 }
@@ -330,7 +330,7 @@ abstract class GameFont {
         }
     }
 
-    private final void a(boolean param0, int param1, aa param2, int[] param3, int param4, ToolkitSprite[] param5, String param6, int param7, int param8) {
+    private final void drawText(boolean param0, int param1, aa param2, int[] param3, int param4, ToolkitSprite[] param5, String param6, int param7, int param8) {
         int var13 = 0;
         int stackIn_29_0 = 0;
         RuntimeException stackIn_65_0 = null;
@@ -506,7 +506,7 @@ abstract class GameFont {
         }
     }
 
-    final int a(aa param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, String param9, byte param10, int param11, int param12, ToolkitSprite[] param13, int param14, int param15) {
+    final int drawWrapped(aa param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, String param9, byte param10, int param11, int param12, ToolkitSprite[] param13, int param14, int param15) {
         int var17_int = 0;
         RuntimeException var17 = null;
         int stackIn_1_0 = 0;
@@ -522,7 +522,7 @@ abstract class GameFont {
         RuntimeException decompiledCaughtException = null;
         try {
           var17_int = -65 % ((24 - param10) / 47);
-          stackIn_1_0 = this.a(param6, param14, param9, param3, param7, param0, param15, param13, param12, param11, param4, param1, -71, param2, 0, param5, param8);
+          stackIn_1_0 = this.drawWrappedLines(param6, param14, param9, param3, param7, param0, param15, param13, param12, param11, param4, param1, -71, param2, 0, param5, param8);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -562,7 +562,7 @@ abstract class GameFont {
         }
         try {
           this.setColours(param4, param5, 125);
-          this.a(param1, param3, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param0);
+          this.drawText(param1, param3, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "da.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -577,7 +577,7 @@ abstract class GameFont {
             this.field_a = (FontMetrics) null;
           }
           this.setColours(param4, param3, 118);
-          this.a(false, -this.field_a.a(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
+          this.drawText(false, -this.field_a.a(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

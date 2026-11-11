@@ -269,10 +269,10 @@ class HotspotTextWidget extends FocusableWidget {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activate(int param0, int param1, int param2, int param3) {
         bm var7 = null;
         bm var7Lifetime1;
-        super.b(param0, param1, param2, -118);
+        super.activate(param0, param1, param2, -118);
         int var5 = param2 - this.field_i;
         int var6 = -this.field_n + param0;
         if (param3 > -40) {
@@ -431,7 +431,7 @@ class HotspotTextWidget extends FocusableWidget {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setBoundsToTextWidth(int param0, byte param1, int param2, int param3) {
         this.setBounds((byte) -31, param2, ((WidgetTextLayout) ((Object) this.field_r)).getTextWidth((byte) 105, (UiWidget) (this)), param3, param0);
         if (param1 != -120) {
           field_B = (ResourceArchive) null;

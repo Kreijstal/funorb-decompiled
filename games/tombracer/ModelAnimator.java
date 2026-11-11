@@ -177,7 +177,7 @@ final class ModelAnimator {
           return var5;
         }
         if (null != this.player) {
-          var7 = rga.a(var5, param3, 124);
+          var7 = rga.copyModel(var5, param3, 124);
           var6 = var7;
           if (param1 != -1) {
             field_c = (String) null;
@@ -194,7 +194,7 @@ final class ModelAnimator {
         if (this.scale == 128) {
           return var5;
         }
-        var8 = rga.a(var5, param3, 124);
+        var8 = rga.copyModel(var5, param3, 124);
         if (param1 != -1) {
           field_c = (String) null;
         }
@@ -281,7 +281,7 @@ final class ModelAnimator {
         this.field_j = -1;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, boolean param4) {
+    final void play(int param0, boolean param1, int param2, int param3, boolean param4) {
         this.playAnimation(param3, 0, param0, param4, param2, 1.0f);
         if (!param1) {
           return;
@@ -289,8 +289,8 @@ final class ModelAnimator {
         this.field_b = -21;
     }
 
-    final void a(int param0, boolean param1, byte param2, int param3) {
-        this.a(-1, false, param0, param3, param1);
+    final void play(int param0, boolean param1, byte param2, int param3) {
+        this.play(-1, false, param0, param3, param1);
         int var5 = 35 / ((param2 + 34) / 41);
     }
 
@@ -300,7 +300,7 @@ final class ModelAnimator {
         this.field_l = param2;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void queue(int param0, int param1, int param2, int param3) {
         this.queueAnimation(79, param1, param3, param0, param2);
     }
 

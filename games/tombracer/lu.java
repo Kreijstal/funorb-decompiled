@@ -85,7 +85,7 @@ abstract class lu {
         TextSpewerBehaviour.field_o = param0;
     }
 
-    abstract void a(PacketBuffer param0, boolean param1);
+    abstract void write(PacketBuffer param0, boolean param1);
 
     static {
         field_c = "<%0> has resigned.";

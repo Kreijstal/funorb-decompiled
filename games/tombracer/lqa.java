@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lqa extends ei {
+final class lqa extends ToolkitCandidate {
     boolean field_j;
     boolean field_h;
     boolean field_f;
@@ -17,7 +17,7 @@ final class lqa extends ei {
         return var2[this.field_b];
     }
 
-    final boolean a(ei param0, int param1) {
+    final boolean isSameType(ToolkitCandidate param0, int param1) {
         lqa var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_7_0 = 0;
@@ -33,7 +33,7 @@ final class lqa extends ei {
           }
           boolean decompiledFrameRemainder0 = true;
           var3 = (lqa) (param0);
-          if (super.a(param0, 55)) {
+          if (super.isSameType(param0, 55)) {
             stackIn_7_0 = (var3.field_j) ? 0 : 1;
             if (stackIn_7_0 != (this.field_j ? 1 : 0) &&
               this.field_a == var3.field_a) {

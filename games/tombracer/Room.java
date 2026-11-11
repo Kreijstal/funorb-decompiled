@@ -767,9 +767,9 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         this.getPlayer(-12).addToScene(25, this.scene);
         this.corpses.addToScene(this.scene, -28255);
-        this.projectilePool.a(this.scene, (byte) -89, true, 7);
-        this.particlePool.a(this.scene, (byte) 126, true, 7);
-        this.puddlePool.a(this.scene, (byte) -33, false, 6);
+        this.projectilePool.attachToScene(this.scene, (byte) -89, true, 7);
+        this.particlePool.attachToScene(this.scene, (byte) 126, true, 7);
+        this.puddlePool.attachToScene(this.scene, (byte) -33, false, 6);
         var5 = (Trap) (this.traps.first(-80));
         while (var5 != null) {
           var5.addToSceneRecursive(122, this.scene);
@@ -1423,7 +1423,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.entranceX = 15;
         }
         this.scene.getRenderTarget(0);
-        this.scene.b(1909106792);
+        this.scene.clampTargetToBounds(1909106792);
         this.scene.render(30057);
     }
 
@@ -1607,7 +1607,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         RoomComponent var7 = (RoomComponent) (this.components.first(param1 ^ 92));
         while (var7 != null) {
-          var7.a(var3, true);
+          var7.offsetPosition(var3, true);
           var7 = (RoomComponent) (this.components.next(param1 ^ -104));
         }
         Obstacle var8 = (Obstacle) (this.obstacles.first(-80));

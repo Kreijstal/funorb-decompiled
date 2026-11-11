@@ -18,7 +18,7 @@ final class ta extends UiComponent {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int measureRowWidth(byte param0, int param1) {
         if (param0 == 95) {
           return this.field_wb.measureNaturalWidth((byte) 69) - (-param1 - this.field_tb.measureNaturalWidth((byte) 69));
         }
@@ -30,7 +30,7 @@ final class ta extends UiComponent {
         this(param0, param1.field_wb, param1.field_tb, param2);
     }
 
-    private final void b(byte param0, int param1) {
+    private final void layoutRow(byte param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
         if (param0 > 109) {
@@ -53,7 +53,7 @@ final class ta extends UiComponent {
           this.field_tb.field_r = param3;
           this.addChild(-124, this.field_wb);
           this.addChild(-124, this.field_tb);
-          this.a(-10966);
+          this.invalidateLayoutRecursive(-10966);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ta.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -99,12 +99,12 @@ final class ta extends UiComponent {
         return null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
+    final void setRowBounds(int param0, int param1, byte param2, int param3, int param4, int param5) {
         if (param2 > -85) {
           return;
         }
         this.setBounds(param0, param4, -23776, param1, param5);
-        this.b((byte) 123, param3);
+        this.layoutRow((byte) 123, param3);
     }
 
     final static void a(Sprite[][] param0, String[][] param1, int[] param2, int param3, ResourceArchive param4, int param5, IndexedSprite[] param6, byte[] param7, byte[] param8, String[][] param9, String[] param10, ResourceArchive param11, byte param12, int[] param13, Sprite[][] param14, ResourceArchive param15, boolean param16) {

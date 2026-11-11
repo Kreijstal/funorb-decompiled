@@ -32,7 +32,7 @@ final class waa {
             stackIn_5_0 = 6408;
             return stackIn_5_0;
           }
-          if (rp.field_g == param0) {
+          if (CharacterPreview.field_g == param0) {
             stackIn_8_0 = 6406;
             return stackIn_8_0;
           }
@@ -78,13 +78,13 @@ final class waa {
         if (param1 == 6) {
           ura.a(param1 ^ -10991);
           hp.drawModelPreview(1024, 4095 & this.field_a * this.field_c, 1996, this.field_d.getModel((byte) 74), -1918106173, param2 + this.field_c, this.field_a + param0);
-          RemovedFromGameMenu.f((byte) -6);
+          RemovedFromGameMenu.resetDepthRange((byte) -6);
           return;
         }
         this.field_c = -128;
         ura.a(param1 ^ -10991);
         hp.drawModelPreview(1024, 4095 & this.field_a * this.field_c, 1996, this.field_d.getModel((byte) 74), -1918106173, param2 + this.field_c, this.field_a + param0);
-        RemovedFromGameMenu.f((byte) -6);
+        RemovedFromGameMenu.resetDepthRange((byte) -6);
     }
 
     final void b(int param0) {
@@ -99,7 +99,7 @@ final class waa {
 
     waa(int param0, int param1) {
         this.field_d = new ModelAnimator(6, 4, 1);
-        this.field_d.a(1, true, (byte) -94, 6);
+        this.field_d.play(1, true, (byte) -94, 6);
         this.field_a = (int)((double)param0 * Math.random());
         this.field_c = (int)(Math.random() * (double)param1);
         if (this.field_a < 20) {

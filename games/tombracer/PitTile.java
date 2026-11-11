@@ -74,7 +74,7 @@ final class PitTile implements Renderable {
           var6 = this.getRenderX((byte) -95);
           var7 = this.getRenderY((byte) 117);
           var8 = this.getRenderZ((byte) -106);
-          gqa.a(var5, -83584144, var7, var6, var4, var8);
+          gqa.drawModelAt(var5, -83584144, var7, var6, var4, var8);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "dpa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

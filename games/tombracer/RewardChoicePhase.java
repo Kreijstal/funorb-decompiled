@@ -156,14 +156,14 @@ final class RewardChoicePhase extends MatchPhase {
           var9 = (SwitchLinkList.b(0) >> 1) - (gg.field_f.height() >> 1);
           gg.field_f.draw(var8, var9);
           if (var3 == 0) {
-            SocketConnector.a(LegacyOpenGlFlowingWaterEffect.formatText(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.width());
+            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.width());
           } else {
-            SocketConnector.a(AvailabilityQuery.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.width());
+            SocketConnector.drawWrappedText(AvailabilityQuery.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.width());
             var10 = (-this.rewardChoice.getCurrentPlayerTicks(-1) + 750) / 50 + 1;
             if (var10 < 0) {
               var10 = 0;
             }
-            SocketConnector.a(LegacyOpenGlFlowingWaterEffect.formatText(108, OpenGlDisplayLists.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.width());
+            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(108, OpenGlDisplayLists.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.width());
           }
           for (var10 = 0; this.field_q > var10; var10++) {
             for (var11_int = 0; var11_int < this.field_s; var11_int++) {
@@ -187,7 +187,7 @@ final class RewardChoicePhase extends MatchPhase {
         while (this.matchState.players.length > var17) {
           var9Lifetime1 = -(this.matchState.players.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
           var10 = -200 + var7;
-          SocketConnector.a(this.screen.getPlayerName(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
+          SocketConnector.drawWrappedText(this.screen.getPlayerName(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           if (!this.matchState.hasFinishedCourse((byte) 90, var17)) {
             var11 = cs.field_b;
             var12 = 8947848;
@@ -213,10 +213,10 @@ final class RewardChoicePhase extends MatchPhase {
               var11 = sla.field_b[var13];
             }
           }
-          SocketConnector.a(var11.toUpperCase(), 1, kn.field_p, var12, 0, 32, 1, 32 + var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
+          SocketConnector.drawWrappedText(var11.toUpperCase(), 1, kn.field_p, var12, 0, 32, 1, 32 + var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           var17++;
         }
-        RemovedFromGameMenu.f((byte) -6);
+        RemovedFromGameMenu.resetDepthRange((byte) -6);
         this.drawMenuButton(-27142);
     }
 
@@ -231,7 +231,7 @@ final class RewardChoicePhase extends MatchPhase {
           if (param1 >= -4) {
             return false;
           }
-          if (!ni.field_c) {
+          if (!DynamicGeometryBuffer.field_c) {
             return false;
           }
           if (OpenGlUnderwaterEffect.field_q == 2 &&

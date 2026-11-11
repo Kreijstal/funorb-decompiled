@@ -2187,7 +2187,7 @@ final class pfa {
           boolean decompiledSharedTail0 = !(this.field_f.size((byte) -16) > 0);
           if (!decompiledSharedTail0) {
             if (!this.field_g) {
-              this.field_c.a(this.field_d, false, 0, 1, true);
+              this.field_c.play(this.field_d, false, 0, 1, true);
             }
             this.field_g = true;
             var2 = (wk) (this.field_f.first(-80));
@@ -2214,7 +2214,7 @@ final class pfa {
             stackIn_33_0 = this.field_c;
             stackIn_33_1 = this.field_d;
             stackIn_34_2 = !(param0);
-            ((ModelAnimator) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_34_2, 0, 0, true);
+            ((ModelAnimator) (Object) stackIn_33_0).play(stackIn_33_1, stackIn_34_2, 0, 0, true);
             this.field_h = 0;
             this.field_g = false;
           }
@@ -2334,7 +2334,7 @@ final class pfa {
         try {
           this.field_d = param0;
           this.field_c = new ModelAnimator(0, this.field_d, 1);
-          this.field_c.a(this.field_d, false, 0, 0, true);
+          this.field_c.play(this.field_d, false, 0, 0, true);
           this.field_j = LoginForm.field_z[param1] << 16;
           this.field_e = hq.field_b[param1] << 16;
           this.field_g = false;

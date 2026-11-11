@@ -56,7 +56,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           if (param1 != 2097152) {
             this.field_x = (UsernameSuggestionsPanel) null;
           }
-          this.field_A.field_y = this.b(false);
+          this.field_A.field_y = this.isFormValid(false);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "efa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -75,7 +75,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
             HardwareTurbulentWaterNoise.f(-804227775);
           } else {
             if (param2 == this.field_A) {
-              this.a((byte) 89);
+              this.submit((byte) 89);
             }
           }
           if (param4 > 44) {
@@ -137,7 +137,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         this.setBounds((byte) -31, 496, var4 + 55 + var3, 0, 0);
     }
 
-    public final void a(String param0, int param1) {
+    public final void setNameFieldText(String param0, int param1) {
         ValidatedTextInputWidget var3 = null;
         String var4 = null;
         try {
@@ -197,16 +197,16 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         }
     }
 
-    private final void a(byte param0) {
+    private final void submit(byte param0) {
         if (param0 < 10) {
           this.onMoreSuggestionsRequested(74);
-          if (this.b(false)) {
+          if (this.isFormValid(false)) {
             rka.a(this.field_z.field_o, false);
             return;
           }
           return;
         }
-        if (this.b(false)) {
+        if (this.isFormValid(false)) {
           rka.a(this.field_z.field_o, false);
           return;
         }
@@ -297,7 +297,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         }
     }
 
-    private final boolean b(boolean param0) {
+    private final boolean isFormValid(boolean param0) {
         if (!this.isFieldValid(-66, this.field_z)) {
           return false;
         }

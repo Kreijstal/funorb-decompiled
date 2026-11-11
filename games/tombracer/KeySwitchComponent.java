@@ -98,7 +98,7 @@ final class KeySwitchComponent extends SwitchComponent {
         return 3;
     }
 
-    final static void a(String param0, File param1, int param2) {
+    final static void registerFontFile(String param0, File param1, int param2) {
         try {
           if (param2 != 1) {
             KeySwitchComponent.releaseStatics((byte) -30);
@@ -158,7 +158,7 @@ final class KeySwitchComponent extends SwitchComponent {
           var7.drawLoadingProgress(incrementValue$0, (byte) 47, param1);
           if (param0 > -8) {
             File var6 = (File) null;
-            KeySwitchComponent.a((String) null, (File) null, -60);
+            KeySwitchComponent.registerFontFile((String) null, (File) null, -60);
           }
           cq.field_d = DialogStack.loadBinaryFont((byte) 112, "newfont_old", param3, "", param2);
           incrementValue$1 = param4;

@@ -247,7 +247,7 @@ final class PitBehaviour extends Behaviour {
           for (var15 = var11; var15 <= var13; var15++) {
             if (this.field_t.isInBounds(var14, var15, (byte) -128) &&
               this.field_t.getCell((byte) -5, var15, var14) != -1) {
-              var7 = var7 + S2CRoundDeadlinePacket.a(param1, param5, var15 * this.field_u + (this.field_u / 2 + var9), param2, this.field_u, (byte) 75, param0, this.field_u, 16, var8 - (-(this.field_u / 2) - this.field_u * var14));
+              var7 = var7 + S2CRoundDeadlinePacket.overlapArea(param1, param5, var15 * this.field_u + (this.field_u / 2 + var9), param2, this.field_u, (byte) 75, param0, this.field_u, 16, var8 - (-(this.field_u / 2) - this.field_u * var14));
             }
           }
         }

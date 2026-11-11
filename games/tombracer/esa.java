@@ -70,7 +70,7 @@ final class esa {
         }
     }
 
-    final void a(BitPacketBuffer param0, int param1, byte param2) {
+    final void decode(BitPacketBuffer param0, int param1, byte param2) {
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -146,7 +146,7 @@ final class esa {
         for (var2 = 0; aq.getMainRoomCount(-5640) > var2; var2++) {
           if (var1 < 30) {
             var3 = LoadLevelCommand.getMainRoomKey(var2, (byte) 37);
-            if (!AnimatedLight.a(false, var3).field_d) {
+            if (!AnimatedLight.findRoomDefinition(false, var3).field_d) {
               this.field_d.set(var2);
               var1++;
             }

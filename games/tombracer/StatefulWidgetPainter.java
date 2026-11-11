@@ -13,7 +13,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
         WidgetStyleLayer dupTemp$0 = new WidgetStyleLayer();
         this.field_o[0] = dupTemp$0;
         WidgetStyleLayer var1 = dupTemp$0;
-        var1.a(true);
+        var1.reset(true);
     }
 
     final static void checkAppletUsername(java.applet.Applet param0, byte param1) {
@@ -187,7 +187,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
             param4 = param4 & var10.field_y;
           }
           var7 = this.field_o[0];
-          this.field_p.a(true);
+          this.field_p.reset(true);
           if (param2 != 16777215) {
             this.field_o = (WidgetStyleLayer[]) null;
           }

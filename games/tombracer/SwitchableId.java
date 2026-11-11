@@ -9,7 +9,7 @@ final class SwitchableId {
 
     final static void a(int param0) {
         rg.a((byte) -114);
-        SnakePitModel.a(ColouriseOperator.field_m[0].field_n, (byte) -104, mna.field_d, io.field_a, wg.field_i, di.field_a);
+        SnakePitModel.a(ColouriseOperator.field_m[0].field_n, (byte) -104, mna.field_d, io.field_a, wg.field_i, ToolkitSelector.field_a);
         if (param0 < 50) {
           SwitchableId.a(76);
         }
@@ -37,7 +37,7 @@ final class SwitchableId {
         this.id = param0;
     }
 
-    final static ata a(int param0, PacketBuffer param1) {
+    final static ata decodeRasterShape(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         ata stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

@@ -97,7 +97,7 @@ final class FloatingMessage extends IntrusiveNode {
               this.field_q = this.field_h + ": " + this.field_n;
             }
             var4 = this.field_g - 8;
-            var5 = kv.field_a.a(this.field_q, var4, (ToolkitSprite[]) null, 51, 16);
+            var5 = kv.field_a.wrappedHeight(this.field_q, var4, (ToolkitSprite[]) null, 51, 16);
             this.field_k = 8 + var5;
           }
         } else {
@@ -108,7 +108,7 @@ final class FloatingMessage extends IntrusiveNode {
               if (null == this.field_h) {
                 this.field_q = this.field_n;
                 var4 = this.field_g - 8;
-                var5 = kv.field_a.a(this.field_q, var4, (ToolkitSprite[]) null, 51, 16);
+                var5 = kv.field_a.wrappedHeight(this.field_q, var4, (ToolkitSprite[]) null, 51, 16);
                 this.field_k = 8 + var5;
                 if (param0 < -36) {
                   return;
@@ -118,7 +118,7 @@ final class FloatingMessage extends IntrusiveNode {
               }
               this.field_q = this.field_h + ": " + this.field_n;
               var4 = this.field_g - 8;
-              var5 = kv.field_a.a(this.field_q, var4, (ToolkitSprite[]) null, 51, 16);
+              var5 = kv.field_a.wrappedHeight(this.field_q, var4, (ToolkitSprite[]) null, 51, 16);
               this.field_k = 8 + var5;
             }
           } else {
@@ -132,7 +132,7 @@ final class FloatingMessage extends IntrusiveNode {
                   this.field_q = this.field_h + ": " + this.field_n;
                 }
                 var4 = this.field_g - 8;
-                var5 = kv.field_a.a(this.field_q, var4, (ToolkitSprite[]) null, 51, 16);
+                var5 = kv.field_a.wrappedHeight(this.field_q, var4, (ToolkitSprite[]) null, 51, 16);
                 this.field_k = 8 + var5;
               }
             } else {
@@ -149,7 +149,7 @@ final class FloatingMessage extends IntrusiveNode {
                 this.field_q = this.field_h + ": " + this.field_n;
               }
               var4 = this.field_g - 8;
-              var5 = kv.field_a.a(this.field_q, var4, (ToolkitSprite[]) null, 51, 16);
+              var5 = kv.field_a.wrappedHeight(this.field_q, var4, (ToolkitSprite[]) null, 51, 16);
               this.field_k = 8 + var5;
             }
           }

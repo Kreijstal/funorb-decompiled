@@ -8,7 +8,7 @@ final class mla {
         throw new IllegalStateException();
     }
 
-    final boolean a(int param0) {
+    final boolean isModelProjection(int param0) {
         if (param0 < -22) {
           return ((SpriteSampleOperator.field_s == this ? 1 : 0) | (this == RasterBuffer.field_d ? 1 : 0)) != 0;
         }

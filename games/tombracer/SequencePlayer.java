@@ -94,7 +94,7 @@ final class SequencePlayer {
           DefaultRoomObjectRenderer.field_b = ai.createAvailabilityQuery((byte) 121, "");
           DefaultRoomObjectRenderer.field_b.complete(-71, false);
           fha.loadCommonUiSprites(true, param1, param0, param4);
-          CharacterChoiceFactory.b(117);
+          CharacterChoiceFactory.initializeDialogStack(117);
           LegacyOpenGlTexture.field_a = fta.field_c;
           wt.field_d = fta.field_c;
         } catch (RuntimeException runtimeException) {

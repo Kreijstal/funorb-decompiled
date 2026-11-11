@@ -83,8 +83,8 @@ abstract class za extends IntrusiveNode {
           var21 = var15 * (var7 - 1);
           if (gca.field_d <= param5 &&
             hc.field_h >= param5) {
-            var22 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + param2);
-            var23 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 - param2);
+            var22 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + param2);
+            var23 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 - param2);
             C2SRoomResultPacket.fillRange((byte) -55, param3, var22, vaa.field_a[param5], var23);
           }
           while (true) {
@@ -120,8 +120,8 @@ abstract class za extends IntrusiveNode {
             if (hc.field_h < var22Lifetime1) {
               continue;
             }
-            var24 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + var6_int);
-            var25 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var6_int + param0);
+            var24 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + var6_int);
+            var25 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var6_int + param0);
             if (var22Lifetime1 >= gca.field_d) {
               C2SRoomResultPacket.fillRange((byte) -55, param3, var24, vaa.field_a[var22Lifetime1], var25);
             }

@@ -101,7 +101,7 @@ final class ClipStack {
         } else {
           var2 = new iea();
         }
-        var2.a(this.field_a[3], this.field_a[2], this.field_a[1], this.field_a[0], this.field_c, this.field_e, param0 ^ -31170);
+        var2.set(this.field_a[3], this.field_a[2], this.field_a[1], this.field_a[0], this.field_c, this.field_e, param0 ^ -31170);
         this.field_c = var2;
     }
 

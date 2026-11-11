@@ -10,7 +10,7 @@ final class gg {
     static ToolkitSprite field_f;
     static IntrusiveDeque field_e;
 
-    final void a(int param0) {
+    final void release(int param0) {
         if (this.field_d != null) {
           this.field_d.close(12574);
         }

@@ -7,7 +7,7 @@ final class cba {
     static ModelData[] field_b;
     static String field_c;
 
-    final static int a(byte param0, double param1, int param2) {
+    final static int degreesToAngle(byte param0, double param1, int param2) {
         if (param0 != -123) {
           return -102;
         }
@@ -23,7 +23,7 @@ final class cba {
         }
     }
 
-    final static qo a(int param0, PacketBuffer param1) {
+    final static qo decodeRasterShape(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         qo stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

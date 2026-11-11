@@ -36,7 +36,7 @@ final class mp {
               }
               JavaScriptBridge.evaluateScript(param1, 19467, "document.cookie=\"" + var5 + "\"");
               if (param2 != -21407) {
-                mp.a(-2);
+                mp.releaseStatics(-2);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class mp {
         }
     }
 
-    final static int a(byte param0) {
+    final static int maxDialogWidth(byte param0) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -221,7 +221,7 @@ final class mp {
           CharacterChoiceFactory.field_g = new UiComponent(0L, param5);
           CharacterChoiceFactory.field_g.field_H = PlatformBehaviour.field_s;
           RotaterMountComponent.field_K.addChild(param6 - 124, CharacterChoiceFactory.field_g);
-          RotaterMountComponent.field_K.a(param6 ^ -10966);
+          RotaterMountComponent.field_K.invalidateLayoutRecursive(param6 ^ -10966);
           ComponentMount.field_b = new UiComponent(0L, (UiComponent) null);
           ComponentMount.field_b.field_w = var16;
           RotaterMountComponent.field_K.addChild(-125, ComponentMount.field_b);
@@ -263,7 +263,7 @@ final class mp {
                 OpenGlSceneLight.field_p[var18].addChild(-122, PitSnakeModel.field_c[var18]);
                 OpenGlSceneLight.field_p[var18].addChild(param6 - 125, MembersUpsellMenu.field_y[var18]);
                 OpenGlSceneLight.field_p[var18].addChild(-125, PitModel.field_p[var18]);
-                OpenGlSceneLight.field_p[var18].a(-10966);
+                OpenGlSceneLight.field_p[var18].invalidateLayoutRecursive(-10966);
                 era.field_e.addChild(-127, OpenGlSceneLight.field_p[var18]);
                 gka.field_g = gka.field_g + 1;
               }
@@ -352,13 +352,13 @@ final class mp {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           field_b = null;
           if (param0 != 9) {
-            mp.a(13);
+            mp.releaseStatics(13);
           }
           field_a = null;
           field_d = null;

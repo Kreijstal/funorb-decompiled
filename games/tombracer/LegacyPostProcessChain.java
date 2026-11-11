@@ -24,7 +24,7 @@ final class LegacyPostProcessChain {
     private int field_p;
     private boolean field_f;
 
-    private final boolean c(int param0) {
+    private final boolean createTargets(int param0) {
         LegacyOpenGlTexture2D[] stackIn_31_0 = null;
         int stackIn_31_1 = 0;
         LegacyOpenGlTexture2D stackIn_32_2 = null;
@@ -154,8 +154,8 @@ final class LegacyPostProcessChain {
           if (param1.isInitialized((byte) 99) ||
             param1.initialize((byte) 65)) {
             this.field_j.addLast((byte) -59, param1);
-            this.b(114);
-            if (this.c(-739)) {
+            this.updatePassRequirements(114);
+            if (this.createTargets(-739)) {
               if (-1 != this.field_k &&
                 this.field_g != -1) {
                 param1.resize(this.field_g, (byte) -71, this.field_k);
@@ -180,7 +180,7 @@ final class LegacyPostProcessChain {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4) {
+    final boolean setBounds(int param0, int param1, int param2, int param3, int param4) {
         IntrusiveNode var6 = null;
         boolean discarded$0 = false;
         int var7 = TombRacer.field_G ? 1 : 0;
@@ -203,7 +203,7 @@ final class LegacyPostProcessChain {
           this.field_c = true;
           this.field_f = true;
         }
-        if (this.c(-739)) {
+        if (this.createTargets(-739)) {
           this.field_q = param3;
           this.field_a = true;
           this.field_o = param1;
@@ -213,7 +213,7 @@ final class LegacyPostProcessChain {
           return true;
         }
         if (param4 != 0) {
-          discarded$0 = this.c(39);
+          discarded$0 = this.createTargets(39);
         }
         return false;
     }
@@ -223,13 +223,13 @@ final class LegacyPostProcessChain {
           param1.enabled = param0 ? true : false;
           param1.release((byte) -71);
           param1.unlink(72);
-          this.b(64);
+          this.updatePassRequirements(64);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "cw.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0) {
+    final void apply(byte param0) {
         int var7 = 0;
         int var2;
         int var3;
@@ -314,7 +314,7 @@ final class LegacyPostProcessChain {
         this.field_a = false;
     }
 
-    private final void b(int param0) {
+    private final void updatePassRequirements(int param0) {
         int stackIn_18_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_26_0 = 0;

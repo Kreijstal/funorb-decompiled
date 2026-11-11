@@ -38,7 +38,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!SoundEventQueue.a(var4, -3)) {
+          if (!SoundEventQueue.isDecimalNumber(var4, -3)) {
             stackIn_2_0 = fp.field_c;
             return stackIn_2_0;
           }

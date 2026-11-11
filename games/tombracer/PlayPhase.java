@@ -169,12 +169,12 @@ final class PlayPhase extends MatchPhase {
             var6Lifetime1 = 256;
             var7_intLifetime1 = 64;
             PlayerViewport.drawTiledFrame(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            SocketConnector.a(PitTile.field_c, 0, SingleChildWidget.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
-            SocketConnector.a(CrossedSineBandsOperator.field_q + ": " + this.screen.getColouredPlayerName(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
+            SocketConnector.drawWrappedText(PitTile.field_c, 0, SingleChildWidget.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
+            SocketConnector.drawWrappedText(CrossedSineBandsOperator.field_q + ": " + this.screen.getColouredPlayerName(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             PlayerViewport.drawTiledFrame(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
+            kn.field_p.drawWrapped((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
             return;
@@ -528,12 +528,12 @@ final class PlayPhase extends MatchPhase {
               ql.field_k.writeByte(18, 0);
               ql.field_k.position = ql.field_k.position + 2;
               var10 = ql.field_k.position;
-              var11_ref_StringLifetime4 = FontMetrics.readSettingsCookie(0, di.getApplet(62));
+              var11_ref_StringLifetime4 = FontMetrics.readSettingsCookie(0, ToolkitSelector.getApplet(62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
               ql.field_k.writeString(var11_ref_StringLifetime4, false);
-              bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
+              bna.writeEncryptedBlock(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
               ql.field_k.backpatchShortLength(ql.field_k.position - var10, (byte) -35);
             } else {
               jg.field_a.position = 0;
@@ -556,7 +556,7 @@ final class PlayPhase extends MatchPhase {
               ql.field_k.writeByte(16, 0);
               ql.field_k.position = ql.field_k.position + 1;
               var9 = ql.field_k.position;
-              bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
+              bna.writeEncryptedBlock(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
               ql.field_k.backpatchByteLength(ql.field_k.position - var9, (byte) -115);
             }
             bl.flushPacketBuffer(-1, -1);
@@ -572,7 +572,7 @@ final class PlayPhase extends MatchPhase {
               PressureSwitchBehaviour.field_s = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                pu.clearStatusCookie(di.getApplet(21), 255);
+                pu.clearStatusCookie(ToolkitSelector.getApplet(21), 255);
                 io.field_b = ArchiveNetworkClient.field_f;
                 DropAnimation.closeGameSocket(60);
                 PushableBlockMazeComponent.field_L = false;
@@ -581,7 +581,7 @@ final class PlayPhase extends MatchPhase {
               }
               if (99 == var9Lifetime1) {
                 LegacyRidgedWaterNoise.ensureGamePacketBytes(FleeLocomotor.f(1), -1);
-                kia.field_b = new Boolean(di.readBoolean(WeaveOperator.field_q, (byte) 107));
+                kia.field_b = new Boolean(ToolkitSelector.readBoolean(WeaveOperator.field_q, (byte) 107));
                 WeaveOperator.field_q.position = 0;
               } else {
                 MembersUpsellMenu.field_z = var9Lifetime1;
@@ -612,7 +612,7 @@ final class PlayPhase extends MatchPhase {
             if (MembersUpsellMenu.field_z == 255) {
               var9_ref_String = WeaveOperator.field_q.readNullableString(-28690);
               if (var9_ref_String != null) {
-                mp.writeSettingsCookie(var9_ref_String, di.getApplet(82), -21407);
+                mp.writeSettingsCookie(var9_ref_String, ToolkitSelector.getApplet(82), -21407);
               }
             } else {
               io.field_b = WeaveOperator.field_q.readString((byte) -76);

@@ -29,20 +29,20 @@ final class pra {
         int var16Lifetime2;
         var18 = TombRacer.field_G ? 1 : 0;
         try {
-          var12 = rp.clamp(hc.field_h, -16226, gca.field_d, param6);
-          var13 = rp.clamp(hc.field_h, -16226, gca.field_d, param5);
-          var14 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0);
-          var15 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param4);
-          var8_int = rp.clamp(hc.field_h, -16226, gca.field_d, param6 + param2);
-          var9 = rp.clamp(hc.field_h, -16226, gca.field_d, param5 - param2);
+          var12 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param6);
+          var13 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param5);
+          var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0);
+          var15 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param4);
+          var8_int = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param6 + param2);
+          var9 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param5 - param2);
           for (var16 = var12; var8_int > var16; var16++) {
             C2SRoomResultPacket.fillRange((byte) -55, param1, var15, vaa.field_a[var16], var14);
           }
           for (var16Lifetime1 = var13; var9 < var16Lifetime1; var16Lifetime1--) {
             C2SRoomResultPacket.fillRange((byte) -55, param1, var15, vaa.field_a[var16Lifetime1], var14);
           }
-          var10 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param2 + param0);
-          var11 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param2 + param4);
+          var10 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param2 + param0);
+          var11 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param2 + param4);
           for (var16Lifetime2 = var8_int; var16Lifetime2 <= var9; var16Lifetime2++) {
             var22 = vaa.field_a[var16Lifetime2];
             C2SRoomResultPacket.fillRange((byte) -55, param1, var10, var22, var14);

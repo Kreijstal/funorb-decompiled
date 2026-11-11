@@ -37,7 +37,7 @@ final class kaa implements WidgetPainter {
 
     final static void a(byte param0) {
         OpenGlUnderwaterEffect.field_q = 0;
-        ni.field_c = true;
+        DynamicGeometryBuffer.field_c = true;
         if (param0 <= 31) {
           byte[] var2 = (byte[]) null;
           kaa.copyByteRange(-119, (byte[]) null, -9);

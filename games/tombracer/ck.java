@@ -578,7 +578,7 @@ final class ck {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

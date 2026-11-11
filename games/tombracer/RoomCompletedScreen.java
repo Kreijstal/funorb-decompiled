@@ -97,9 +97,9 @@ final class RoomCompletedScreen extends MatchOverlay {
             return;
           }
           jg.field_a.writeInt(AllPlatformsMazeComponent.field_K[3], (byte) 104);
-          ni.writeMachineId(jg.field_a, (byte) 77);
+          DynamicGeometryBuffer.writeMachineId(jg.field_a, (byte) 77);
           jg.field_a.writeShort(-1477662136, param2);
-          param3.a(jg.field_a, false);
+          param3.write(jg.field_a, false);
           ql.field_k.position = 0;
           if (!param1) {
             ql.field_k.writeByte(16, 0);
@@ -124,7 +124,7 @@ final class RoomCompletedScreen extends MatchOverlay {
             var6 = var6 | 16;
           }
           ql.field_k.writeByte(var6, 0);
-          var7 = FontMetrics.readSettingsCookie(0, di.getApplet(46));
+          var7 = FontMetrics.readSettingsCookie(0, ToolkitSelector.getApplet(46));
           if (var7 == null) {
             var7 = "";
           }
@@ -132,7 +132,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           if (null != NodeHashTable.field_d) {
             ql.field_k.writeVersionedString(NodeHashTable.field_d, (byte) 0);
           }
-          bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
+          bna.writeEncryptedBlock(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
           ql.field_k.backpatchShortLength(ql.field_k.position - var5_int, (byte) 114);
           bl.flushPacketBuffer(-1, -1);
           return;

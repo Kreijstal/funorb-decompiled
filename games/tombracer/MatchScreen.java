@@ -549,7 +549,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
         }
         if (this.field_n != null) {
-          this.field_n.b((byte) -121);
+          this.field_n.reset((byte) -121);
         }
         var2Lifetime1 = -116 / ((param0 - 23) / 54);
     }
@@ -1386,7 +1386,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
         this.matchState.standings.update(16);
         if (this.field_n != null) {
-          this.field_n.a(9981);
+          this.field_n.update(9981);
         }
     }
 

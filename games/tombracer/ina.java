@@ -88,7 +88,7 @@ final class ina {
         }
     }
 
-    final void a(String param0, byte param1, String param2, ResourceArchive param3, String param4) {
+    final void addStage(String param0, byte param1, String param2, ResourceArchive param3, String param4) {
         try {
           this.addStage(param0, -1, param4, param2, param3, (byte) -108);
           if (param1 != -36) {
@@ -196,7 +196,7 @@ final class ina {
         }
     }
 
-    final void a(int param0, ResourceArchive param1, String param2, String param3) {
+    final void addStage(int param0, ResourceArchive param1, String param2, String param3) {
         try {
           this.addStage(param3, -1, param2, (String) null, param1, (byte) -108);
           if (param0 != 256) {

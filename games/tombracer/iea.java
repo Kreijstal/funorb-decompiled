@@ -19,7 +19,7 @@ final class iea {
         field_e = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, iea param4, ToolkitSprite param5, int param6) {
+    final void set(int param0, int param1, int param2, int param3, iea param4, ToolkitSprite param5, int param6) {
         try {
           this.field_c = param1;
           this.field_f = param0;
@@ -67,8 +67,8 @@ final class iea {
           stackIn_3_1 = 2;
           stackIn_3_2 = param0;
           stackIn_3_3 = param1 ^ -78;
-          stackIn_3_4 = param2 * 3 * (2 + di.field_a);
-          stackIn_3_5 = 2 + di.field_a;
+          stackIn_3_4 = param2 * 3 * (2 + ToolkitSelector.field_a);
+          stackIn_3_5 = 2 + ToolkitSelector.field_a;
           stackIn_4_6 = (OpenGlSprite.field_j.field_vb == lu.field_b);
           var3_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
           var4 = OpenGlSprite.field_j.field_tb.field_J;
@@ -94,16 +94,16 @@ final class iea {
               var6.field_zb = new UiComponent(0L, S2CStartRoundPacket.field_a);
               var6.addChild(param1 ^ 74, var6.field_zb);
               var7 = 1;
-              var6.a(-10966);
+              var6.invalidateLayoutRecursive(-10966);
             }
             var6.field_G = OpenGlSprite.field_j.field_tb.field_G;
-            var6.field_xb.setBounds(var6.field_G, di.field_a, -23776, 0, 0);
+            var6.field_xb.setBounds(var6.field_G, ToolkitSelector.field_a, -23776, 0, 0);
             var8 = 0;
             if (var6.field_vb != null &&
               !var6.field_vb.equals("")) {
               var6.field_zb.field_ab = 16737894;
               var6.field_zb.field_R = ConsoleValue.field_e;
-              var6.field_zb.setBounds(ConsoleValue.field_e.field_n + 3, di.field_a, -23776, 0, 0);
+              var6.field_zb.setBounds(ConsoleValue.field_e.field_n + 3, ToolkitSelector.field_a, -23776, 0, 0);
               var8 = 1;
             }
             var9 = 0;
@@ -121,9 +121,9 @@ final class iea {
             stackIn_22_0.field_r = stackIn_23_1;
             stackIn_26_0 = (var6.field_xb.field_r.equals(var6.field_tb)) ? 0 : 1;
             var11 = stackIn_26_0;
-            var6.field_xb.setBounds(var10, di.field_a, param1 ^ 23784, 0, var9);
+            var6.field_xb.setBounds(var10, ToolkitSelector.field_a, param1 ^ 23784, 0, var9);
             if (var3_int == 0) {
-              var6.field_O = di.field_a - var6.field_t;
+              var6.field_O = ToolkitSelector.field_a - var6.field_t;
             }
             if (var7 != 0) {
               OpenGlSprite.field_j.field_tb.placeBelow(2, (UiComponent) (var5), var6, (byte) -122);

@@ -58,28 +58,28 @@ final class GameAssetLoader implements LoadingStage {
         ina dupTemp$0 = new ina(55);
         RidgedNoise3D.field_r = dupTemp$0;
         ina var4 = dupTemp$0;
-        var4.a(256, this.field_k, RewardChoiceSlot.loadingQuipsAlternate[0], Player.loadingQuips[0]);
-        var4.a(256, this.field_l, RewardChoiceSlot.loadingQuipsAlternate[1], Player.loadingQuips[1]);
-        var4.a(256, this.field_o, RewardChoiceSlot.loadingQuipsAlternate[2], Player.loadingQuips[2]);
-        var4.a(256, this.field_b, RewardChoiceSlot.loadingQuipsAlternate[3], Player.loadingQuips[3]);
-        var4.a(256, this.field_h, RewardChoiceSlot.loadingQuipsAlternate[4], Player.loadingQuips[4]);
-        var4.a(param0 ^ -294, this.field_p, RewardChoiceSlot.loadingQuipsAlternate[5], Player.loadingQuips[5]);
-        var4.a(256, this.field_s, RewardChoiceSlot.loadingQuipsAlternate[6], Player.loadingQuips[6]);
-        var4.a(Player.loadingQuips[7], (byte) -36, "basic", var7, RewardChoiceSlot.loadingQuipsAlternate[7]);
-        var4.a(Player.loadingQuips[8], (byte) -36, "lobby", var7, RewardChoiceSlot.loadingQuipsAlternate[8]);
-        var4.a(Player.loadingQuips[9], (byte) -36, "lobby", var3, RewardChoiceSlot.loadingQuipsAlternate[9]);
-        var4.a(256, this.field_d, RewardChoiceSlot.loadingQuipsAlternate[10], Player.loadingQuips[10]);
-        var4.a(256, this.field_e, RewardChoiceSlot.loadingQuipsAlternate[11], Player.loadingQuips[11]);
-        var4.a(256, this.field_q, RewardChoiceSlot.loadingQuipsAlternate[12], Player.loadingQuips[12]);
-        var4.a(256, this.field_r, RewardChoiceSlot.loadingQuipsAlternate[13], Player.loadingQuips[13]);
-        var4.a(256, this.field_m, RewardChoiceSlot.loadingQuipsAlternate[14], Player.loadingQuips[14]);
-        var4.a(param0 + 294, this.field_j, RewardChoiceSlot.loadingQuipsAlternate[15], Player.loadingQuips[15]);
-        var4.a(256, this.field_f, RewardChoiceSlot.loadingQuipsAlternate[16], Player.loadingQuips[16]);
-        var4.a(param0 ^ -294, this.field_g, RewardChoiceSlot.loadingQuipsAlternate[17], Player.loadingQuips[17]);
-        var4.a(param0 ^ -294, this.field_a, RewardChoiceSlot.loadingQuipsAlternate[18], Player.loadingQuips[18]);
+        var4.addStage(256, this.field_k, RewardChoiceSlot.loadingQuipsAlternate[0], Player.loadingQuips[0]);
+        var4.addStage(256, this.field_l, RewardChoiceSlot.loadingQuipsAlternate[1], Player.loadingQuips[1]);
+        var4.addStage(256, this.field_o, RewardChoiceSlot.loadingQuipsAlternate[2], Player.loadingQuips[2]);
+        var4.addStage(256, this.field_b, RewardChoiceSlot.loadingQuipsAlternate[3], Player.loadingQuips[3]);
+        var4.addStage(256, this.field_h, RewardChoiceSlot.loadingQuipsAlternate[4], Player.loadingQuips[4]);
+        var4.addStage(param0 ^ -294, this.field_p, RewardChoiceSlot.loadingQuipsAlternate[5], Player.loadingQuips[5]);
+        var4.addStage(256, this.field_s, RewardChoiceSlot.loadingQuipsAlternate[6], Player.loadingQuips[6]);
+        var4.addStage(Player.loadingQuips[7], (byte) -36, "basic", var7, RewardChoiceSlot.loadingQuipsAlternate[7]);
+        var4.addStage(Player.loadingQuips[8], (byte) -36, "lobby", var7, RewardChoiceSlot.loadingQuipsAlternate[8]);
+        var4.addStage(Player.loadingQuips[9], (byte) -36, "lobby", var3, RewardChoiceSlot.loadingQuipsAlternate[9]);
+        var4.addStage(256, this.field_d, RewardChoiceSlot.loadingQuipsAlternate[10], Player.loadingQuips[10]);
+        var4.addStage(256, this.field_e, RewardChoiceSlot.loadingQuipsAlternate[11], Player.loadingQuips[11]);
+        var4.addStage(256, this.field_q, RewardChoiceSlot.loadingQuipsAlternate[12], Player.loadingQuips[12]);
+        var4.addStage(256, this.field_r, RewardChoiceSlot.loadingQuipsAlternate[13], Player.loadingQuips[13]);
+        var4.addStage(256, this.field_m, RewardChoiceSlot.loadingQuipsAlternate[14], Player.loadingQuips[14]);
+        var4.addStage(param0 + 294, this.field_j, RewardChoiceSlot.loadingQuipsAlternate[15], Player.loadingQuips[15]);
+        var4.addStage(256, this.field_f, RewardChoiceSlot.loadingQuipsAlternate[16], Player.loadingQuips[16]);
+        var4.addStage(param0 ^ -294, this.field_g, RewardChoiceSlot.loadingQuipsAlternate[17], Player.loadingQuips[17]);
+        var4.addStage(param0 ^ -294, this.field_a, RewardChoiceSlot.loadingQuipsAlternate[18], Player.loadingQuips[18]);
     }
 
-    final static String[][] a(byte param0, PacketBuffer param1) {
+    final static String[][] readStringTable(byte param0, PacketBuffer param1) {
         int var5 = 0;
         IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
@@ -95,7 +95,7 @@ final class GameAssetLoader implements LoadingStage {
         try {
           var2 = new IntrusiveDeque();
           while (param1.position < param1.payload.length) {
-            var2.addLast((byte) -72, new gba(pe.a(param1, (byte) 73)));
+            var2.addLast((byte) -72, new gba(pe.readStringList(param1, (byte) 73)));
           }
           var3 = new String[var2.size((byte) -16)][];
           var4 = -92 / ((param0 + 9) / 51);
@@ -138,7 +138,7 @@ final class GameAssetLoader implements LoadingStage {
         var4 = TombRacer.field_G ? 1 : 0;
         var2 = 5 / ((55 - param0) / 58);
         if (this.field_e != null) {
-          RoomComponent.a(1048576, new HuffmanCodec(this.field_e.getFileByName("", (byte) 113, "huffman")));
+          RoomComponent.setHuffmanCodec(1048576, new HuffmanCodec(this.field_e.getFileByName("", (byte) 113, "huffman")));
           this.field_e = null;
           C2SActionPacket.a(-33);
           return;
@@ -204,7 +204,7 @@ final class GameAssetLoader implements LoadingStage {
         if (baa.field_d == null) {
           this.drawLoadingProgress(95, (byte) 47, uba.loadingQuipsShort[9]);
           FleeLocomotor.e((byte) -33);
-          baa.field_d = new di(MatchPhase.field_l, rc.field_a);
+          baa.field_d = new ToolkitSelector(MatchPhase.field_l, rc.field_a);
         }
         LaserShooterComponent.D(17229);
         if (null == baa.field_d.field_i) {
@@ -286,7 +286,7 @@ final class GameAssetLoader implements LoadingStage {
             var7 = -101 % ((-14 - param1) / 49);
             var6 = var11.readUnsignedByte(255);
             dga.a(var11, 0);
-            var12.a(var11, var6, (byte) 39);
+            var12.decode(var11, var6, (byte) 39);
             mq.field_e = var12.getProfile(79);
             ComponentTargetList.field_e = var12.b((byte) -78);
             toa.field_j = true;
@@ -335,7 +335,7 @@ final class GameAssetLoader implements LoadingStage {
     }
 
     public final void finishLoading(byte param0) {
-        CoinItemComponent.a(cq.field_d, (byte) 52);
+        CoinItemComponent.createMenuScreens(cq.field_d, (byte) 52);
         hd.setFrameRate(50, param0 ^ -78);
         wm.field_a = null;
         SpriteTileOperator.field_t = (GameScreen) ((Object) nl.getMenuScreen(0, (byte) 50));

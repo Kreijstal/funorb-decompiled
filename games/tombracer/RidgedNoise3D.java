@@ -193,12 +193,12 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
           if (0 != RotaterMountComponent.field_K.field_y &&
             !fua.field_g) {
             if (!PowerDownItemBehaviour.field_s) {
-              ni.field_c = true;
+              DynamicGeometryBuffer.field_c = true;
             } else {
               ContextMenu.e((byte) 112);
             }
           }
-          if (!ni.field_c) {
+          if (!DynamicGeometryBuffer.field_c) {
             return;
           }
           MazeSolver.a(param4, 20, param7, -5327, param6, param5, param2, param2, param1);
@@ -207,13 +207,13 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
             return;
           }
           if (ClientMemoryVertexArray.field_d.field_y != 0) {
-            ni.field_c = false;
+            DynamicGeometryBuffer.field_c = false;
           }
           if (0 == qpa.field_b.field_y) {
             return;
           }
           PlayerProfile.clearChatInput(true);
-          ni.field_c = false;
+          DynamicGeometryBuffer.field_c = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -75,7 +75,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
           if (param1 > -78) {
             this.field_u = -70;
           }
-          param0.writeBits((byte) -3, ResourceArchive.a((byte) -104, this.field_u, 8192, 8), 8);
+          param0.writeBits((byte) -3, ResourceArchive.scaleToBits((byte) -104, this.field_u, 8192, 8), 8);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "oqa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -104,7 +104,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         super(param0, param1, param2);
         this.field_u = 1024;
         try {
-          this.field_u = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+          this.field_u = SnakePitModel.unscaleFromBits(8, 8192, 0, param1.readBits((byte) 44, 8));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "oqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

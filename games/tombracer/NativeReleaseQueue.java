@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ho {
+final class NativeReleaseQueue {
     private static boolean field_b;
     private static int field_c;
     private static IntrusiveDeque field_a;
 
-    final synchronized static void a(int param0) {
+    final synchronized static void releaseReference(int param0) {
         field_c = field_c - 1;
         if (~field_c == param0) {
-          ho.a(true);
+          NativeReleaseQueue.flush(true);
         }
     }
 
-    final synchronized static void b(boolean param0) {
+    final synchronized static void acquire(boolean param0) {
         if (param0) {
-          ho.a(76);
+          NativeReleaseQueue.releaseReference(76);
           field_c = field_c + 1;
           return;
         }
         field_c = field_c + 1;
     }
 
-    final synchronized static void a(int param0, e param1) {
+    final synchronized static void queueRelease(int param0, e param1) {
         rw var2 = null;
         if (!field_b) {
           if (param0 <= ~field_c) {
@@ -36,7 +36,7 @@ final class ho {
         }
     }
 
-    final synchronized static void a(boolean param0) {
+    final synchronized static void flush(boolean param0) {
         rw var1;
         RuntimeException var1_ref;
         while (true) {
@@ -51,7 +51,7 @@ final class ho {
         if (param0) {
           return;
         }
-        ho.a(-115);
+        NativeReleaseQueue.releaseReference(-115);
         return;
     }
 

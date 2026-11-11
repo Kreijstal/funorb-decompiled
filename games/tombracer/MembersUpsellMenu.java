@@ -178,13 +178,13 @@ final class MembersUpsellMenu extends MenuScreen {
         }
         ura.a(-10985);
         this.field_x.draw(this.field_r, 11327, this.field_t);
-        RemovedFromGameMenu.f((byte) -6);
+        RemovedFromGameMenu.resetDepthRange((byte) -6);
         var6 = aaa.a(false) >> 1;
         var5 = 40;
         var4Lifetime1 = 260;
         var7 = this.field_r - (100 - SwitchLinkList.b(param0 + 28));
         PlayerInputQueue.field_a.draw(var6 - (PlayerInputQueue.field_a.width() >> 1), -(PlayerInputQueue.field_a.height() >> 1) + var7);
-        SocketConnector.a(SecondaryLinkQueue.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
+        SocketConnector.drawWrappedText(SecondaryLinkQueue.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
         if (MultiplayerLoginMenu.b(false) && (TextWidgetPainter.a(62) ||
           mq.field_e.field_a ||
           var3 != 0)) {
@@ -204,7 +204,7 @@ final class MembersUpsellMenu extends MenuScreen {
               var8 = tc.field_f;
             }
           }
-          SocketConnector.a(var8, 1, kn.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
+          SocketConnector.drawWrappedText(var8, 1, kn.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
         }
         if (SimpleBlockBehaviour.c(0)) {
           MembersUpsellMenu.drawCentredTextWithShadow("Unlock: Key 2-9", 16777215, kn.field_p, -1, this.field_r + SwitchLinkList.b(param0 + 28) - 100, -100 + aaa.a(false), -1);

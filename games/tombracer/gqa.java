@@ -79,7 +79,7 @@ final class gqa {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, ToolkitModel param4, int param5) {
+    final static void drawModelAt(int param0, int param1, int param2, int param3, ToolkitModel param4, int param5) {
         try {
           via.drawModelRotated(param4, param0, 0, param5, param3, param2, 51, 0);
           if (param1 != -83584144) {

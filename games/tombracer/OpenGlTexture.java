@@ -114,7 +114,7 @@ abstract class OpenGlTexture implements GpuTexture {
         }
     }
 
-    private final void f(byte param0) {
+    private final void release(byte param0) {
         if (0 < this.field_c) {
           this.field_j.queueTextureDeletion(this.field_c, this.getMemorySize((byte) -120), 2);
           this.field_c = 0;
@@ -154,7 +154,7 @@ abstract class OpenGlTexture implements GpuTexture {
     }
 
     protected final void finalize() throws Throwable {
-        this.f((byte) 114);
+        this.release((byte) 114);
         super.finalize();
     }
 
@@ -183,7 +183,7 @@ abstract class OpenGlTexture implements GpuTexture {
           if (this.field_f == SwitchableId.field_a) {
             return 6408;
           }
-          if (rp.field_g == this.field_f) {
+          if (CharacterPreview.field_g == this.field_f) {
             return 6406;
           }
           if (SingleChildWidget.field_w == this.field_f) {
@@ -204,7 +204,7 @@ abstract class OpenGlTexture implements GpuTexture {
               if (this.field_f == SwitchableId.field_a) {
                 return 34836;
               }
-              if (rp.field_g == this.field_f) {
+              if (CharacterPreview.field_g == this.field_f) {
                 return 34838;
               }
               if (SingleChildWidget.field_w == this.field_f) {
@@ -224,7 +224,7 @@ abstract class OpenGlTexture implements GpuTexture {
             if (SwitchableId.field_a == this.field_f) {
               return 34842;
             }
-            if (rp.field_g == this.field_f) {
+            if (CharacterPreview.field_g == this.field_f) {
               return 34844;
             }
             if (this.field_f == SingleChildWidget.field_w) {
@@ -532,7 +532,7 @@ abstract class OpenGlTexture implements GpuTexture {
         MenuInputState.openDisplaySettings((byte) 57);
     }
 
-    private final void a(byte param0, int param1) {
+    private final void updateMemoryUsage(byte param0, int param1) {
         this.field_j.field_Xb = this.field_j.field_Xb - param1;
         this.field_j.field_Xb = this.field_j.field_Xb + this.getMemorySize((byte) -120);
         if (param0 > -88) {
@@ -552,7 +552,7 @@ abstract class OpenGlTexture implements GpuTexture {
           jaggl.OpenGL.glGenTextures(1, pra.field_a, 0);
           this.field_c = pra.field_a[0];
           this.applyFilter((byte) -97);
-          this.a((byte) -128, 0);
+          this.updateMemoryUsage((byte) -128, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "tfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

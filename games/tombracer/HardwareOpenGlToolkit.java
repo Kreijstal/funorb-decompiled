@@ -88,7 +88,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             var9 = param6 * 2;
             var8_int = 1;
           } else {
-            if (di.field_d == param4) {
+            if (ToolkitSelector.field_d == param4) {
               var8_int = 3;
               var9 = 1 + param6;
             } else {
@@ -114,7 +114,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           var10 = param0.getFormat(param1 ^ 13611);
           var11 = (OpenGlVertexBuffer) (param0);
           var11.bind(-3);
-          jaggl.OpenGL.glDrawElements(var8_int, var9, ClientException.glDataType(var10, 5126), var11.b(true) + (long)(param3 * var10.field_e));
+          jaggl.OpenGL.glDrawElements(var8_int, var9, ClientException.glDataType(var10, 5126), var11.getPointer(true) + (long)(param3 * var10.field_e));
           if (param1 != -19394) {
             this.applyTextureConstantColor(76);
           }
@@ -684,7 +684,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             var6 = param0 * 2;
             var5_int = 1;
           } else {
-            if (param1 != di.field_d) {
+            if (param1 != ToolkitSelector.field_d) {
               if (param1 != ArchiveManager.field_f) {
                 if (param1 == vs.field_T) {
                   var5_int = 6;
@@ -1116,7 +1116,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             var10 = this.field_id[var8];
             var11 = 0;
             var12 = var10.a((byte) -111);
-            var13 = var10.b(true);
+            var13 = var10.getPointer(true);
             var10.bind(-3);
             for (var15 = 0; var9.size((byte) -77) > var15; var15++) {
               var16 = var9.get(0, var15);
@@ -1550,7 +1550,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                       if (120 == var21.charAt(0) &&
                         3 <= var21.length()) {
                         var31 = (CharSequence) ((Object) var21.substring(1, 3));
-                        if (SoundEventQueue.a(var31, -3)) {
+                        if (SoundEventQueue.isDecimalNumber(var31, -3)) {
                           var13 = 1;
                           var16 = var21.substring(1);
                         }
@@ -1562,7 +1562,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                         }
                         if (var16.length() >= 4) {
                           var32 = (CharSequence) ((Object) var16.substring(0, 4));
-                          if (SoundEventQueue.a(var32, -3)) {
+                          if (SoundEventQueue.isDecimalNumber(var32, -3)) {
                             var33 = (CharSequence) ((Object) var16.substring(0, 4));
                             var11_int = WhiteLightSensorComponent.parseDecimalInt(var33, (byte) 70);
                             decompiledRegionSelector0 = 1;
@@ -1687,7 +1687,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         if (param0) {
           this.field_ld = true;
         }
-        if (this.field_r.a(-43)) {
+        if (this.field_r.isModelProjection(-43)) {
           if (!this.field_Zc) {
             jaggl.OpenGL.glLoadMatrixf(this.field_Qb.writeColumnMajor4x4(AgeValidator.field_k, (byte) -37), 0);
             this.field_Zc = true;

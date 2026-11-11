@@ -31,7 +31,7 @@ final class MessageOverlay extends MatchOverlay {
         int var9 = -(2 * this.field_l) + var4;
         int var10 = -(2 * this.field_l) + (var5 - 2 * var8);
         if (this.field_r != null) {
-          SocketConnector.a(this.field_r.toUpperCase(), 0, eda.field_f, 65793, 20, var10, 1, var2 + (-(var5 / 2) + this.field_u - (-this.field_l - var8)), this.field_l + (this.field_s - var4 / 2), -1, (byte) 60, var9);
+          SocketConnector.drawWrappedText(this.field_r.toUpperCase(), 0, eda.field_f, 65793, 20, var10, 1, var2 + (-(var5 / 2) + this.field_u - (-this.field_l - var8)), this.field_l + (this.field_s - var4 / 2), -1, (byte) 60, var9);
           if (this.field_j == null) {
             if (param0 < -13) {
               if (this.panel != null) {
@@ -39,20 +39,20 @@ final class MessageOverlay extends MatchOverlay {
               }
               if (this.field_k != null &&
                 this.field_n.isSettled(20)) {
-                kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+                kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
               }
               return;
             }
             return;
           }
-          kn.field_p.a((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
+          kn.field_p.drawWrapped((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
           if (param0 >= -13) {
             return;
           }
           if (this.panel == null) {
             if (this.field_k != null &&
               this.field_n.isSettled(20)) {
-              kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+              kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
             }
             return;
           }
@@ -63,11 +63,11 @@ final class MessageOverlay extends MatchOverlay {
           if (!this.field_n.isSettled(20)) {
             return;
           }
-          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
         if (this.field_j != null) {
-          kn.field_p.a((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
+          kn.field_p.drawWrapped((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
           if (param0 >= -13) {
             return;
           }
@@ -75,7 +75,7 @@ final class MessageOverlay extends MatchOverlay {
             this.panel.draw(var2 + this.field_u - this.panel.getWidth(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.panel.getHeight(false) / 2 - 10));
             if (this.field_k != null &&
               this.field_n.isSettled(20)) {
-              kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+              kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
             }
             return;
           }
@@ -85,7 +85,7 @@ final class MessageOverlay extends MatchOverlay {
           if (!this.field_n.isSettled(20)) {
             return;
           }
-          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
         if (param0 >= -13) {
@@ -99,14 +99,14 @@ final class MessageOverlay extends MatchOverlay {
           if (!this.field_n.isSettled(20)) {
             return;
           }
-          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
         if (this.field_k == null) {
           return;
         }
         if (this.field_n.isSettled(20)) {
-          kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
     }

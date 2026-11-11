@@ -38,7 +38,7 @@ final class HardwareSceneLight extends SceneLight {
         var2.backpatchByteLength(var2.position - var3, (byte) -102);
     }
 
-    final static LegacyOpenGlSpriteTexture a(byte[] param0, int param1, byte param2, int param3, OpenGlToolkit param4, int param5, boolean param6, int param7) {
+    final static LegacyOpenGlSpriteTexture createSpriteTexture(byte[] param0, int param1, byte param2, int param3, OpenGlToolkit param4, int param5, boolean param6, int param7) {
         RuntimeException var8 = null;
         OpenGlToolkit var9 = null;
         LegacyOpenGlSpriteTexture stackIn_8_0 = null;
@@ -53,7 +53,7 @@ final class HardwareSceneLight extends SceneLight {
         try {
           if (param2 <= 52) {
             var9 = (OpenGlToolkit) null;
-            HardwareSceneLight.a((byte[]) null, 99, (byte) 8, -3, (OpenGlToolkit) null, -12, false, 23);
+            HardwareSceneLight.createSpriteTexture((byte[]) null, 99, (byte) 8, -3, (OpenGlToolkit) null, -12, false, 23);
           }
           if (!param4.field_Gb && (!PbufferEntry.isPowerOfTwoOrZero(9181, param5) ||
             !PbufferEntry.isPowerOfTwoOrZero(9181, param7))) {

@@ -156,8 +156,8 @@ final class IntrusiveDeque {
           stackIn_7_1 = 2;
           stackIn_7_2 = param0;
           stackIn_7_3 = 71;
-          stackIn_7_4 = 3 * ((2 + di.field_a) * param1);
-          stackIn_7_5 = di.field_a + 2;
+          stackIn_7_4 = 3 * ((2 + ToolkitSelector.field_a) * param1);
+          stackIn_7_5 = ToolkitSelector.field_a + 2;
           stackIn_8_6 = (dn.field_b.field_vb == lu.field_b);
           boolean decompiledFrameRemainder1 = true;
           var3_int = ((ScrollPane) (Object) stackIn_7_0).updateContentLayout(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_8_6) ? 1 : 0;
@@ -197,7 +197,7 @@ final class IntrusiveDeque {
                     var7.addChild(-128, var7.field_zb);
                     var7.field_Ab.field_z = 2;
                     var8 = 1;
-                    var7.a(-10966);
+                    var7.invalidateLayoutRecursive(-10966);
                   }
                   var7.field_G = dn.field_b.field_tb.field_G;
                   var9 = 0;
@@ -219,7 +219,7 @@ final class IntrusiveDeque {
                     var7.field_zb.field_R = ConsoleValue.field_e;
                     var7.field_zb.field_ab = var11;
                     var12 = 1;
-                    var7.field_zb.setBounds(3 + ConsoleValue.field_e.field_n, di.field_a, -23776, var9, 0);
+                    var7.field_zb.setBounds(3 + ConsoleValue.field_e.field_n, ToolkitSelector.field_a, -23776, var9, 0);
                   }
                   var7.field_Ab.field_gb = var11;
                   var7.field_xb.field_gb = var11;
@@ -242,7 +242,7 @@ final class IntrusiveDeque {
                     stackIn_47_1 = BitmapFont.truncateWithEllipsis(var7.field_xb.field_H, var7.field_tb, var14);
                   }
                   stackIn_46_0.field_r = stackIn_47_1;
-                  var7.field_xb.setBounds(var14, di.field_a, -23776, var9, var13);
+                  var7.field_xb.setBounds(var14, ToolkitSelector.field_a, -23776, var9, var13);
                   stackIn_50_0 = var7.field_Ab;
                   if (var7.field_Cb == null) {
                     stackIn_51_1 = IdolItemComponent.field_K;
@@ -250,10 +250,10 @@ final class IntrusiveDeque {
                     stackIn_51_1 = var7.field_Cb;
                   }
                   stackIn_50_0.field_r = stackIn_51_1;
-                  var7.field_Ab.setBounds(80, di.field_a, -23776, var9, -80 + var7.field_G);
+                  var7.field_Ab.setBounds(80, ToolkitSelector.field_a, -23776, var9, -80 + var7.field_G);
                   stackIn_55_0 = (var7.field_xb.field_r.equals(var7.field_tb)) ? 0 : 1;
                   var15 = stackIn_55_0;
-                  var9 = var9 + di.field_a;
+                  var9 = var9 + ToolkitSelector.field_a;
                   if (var3_int == 0) {
                     var7.field_O = -var7.field_t + var9;
                   }

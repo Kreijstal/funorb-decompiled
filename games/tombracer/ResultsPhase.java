@@ -556,7 +556,7 @@ final class ResultsPhase extends MatchPhase {
             }
           }
         }
-        RemovedFromGameMenu.f((byte) -6);
+        RemovedFromGameMenu.resetDepthRange((byte) -6);
         this.drawMenuButton(-27142);
     }
 

@@ -11,7 +11,7 @@ abstract class ofa extends FadingDialog {
     private int field_E;
     static String field_D;
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void animateResizeTo(int param0, int param1, int param2, byte param3) {
         if (param0 <= 0) {
           this.setCentredSize(-11560, param2, param1);
           return;
@@ -199,7 +199,7 @@ abstract class ofa extends FadingDialog {
         }
     }
 
-    final static boolean a(int param0, int param1, byte param2) {
+    final static boolean hasMask384(int param0, int param1, byte param2) {
         if (param2 != -126) {
           long[] var4 = (long[]) null;
           ofa.a((int[]) null, (long[]) null, -16);

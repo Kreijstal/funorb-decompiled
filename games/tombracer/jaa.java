@@ -22,7 +22,7 @@ final class jaa implements noa {
           return var2;
         }
         BitPacketBuffer var3 = (BitPacketBuffer) null;
-        this.a(8, (BitPacketBuffer) null);
+        this.encode(8, (BitPacketBuffer) null);
         var2Lifetime1 = this.field_d | (this.field_g << 16 | this.field_f << 8);
         if (this.field_e) {
           var2Lifetime1 = this.field_h << 24 | var2Lifetime1;
@@ -30,7 +30,7 @@ final class jaa implements noa {
         return var2Lifetime1;
     }
 
-    private final void a(int param0, int param1, BitPacketBuffer param2) {
+    private final void decode(int param0, int param1, BitPacketBuffer param2) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -86,7 +86,7 @@ final class jaa implements noa {
         field_a = null;
     }
 
-    final void a(boolean param0, int param1) {
+    final void setColour(boolean param0, int param1) {
         this.field_g = param1 >> 16 ^ 255;
         this.field_d = 255 ^ param1;
         this.field_h = param1 >> 24 ^ 255;
@@ -101,7 +101,7 @@ final class jaa implements noa {
         this.field_e = param0 ? true : false;
     }
 
-    final void a(int param0, BitPacketBuffer param1) {
+    final void encode(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -167,7 +167,7 @@ final class jaa implements noa {
         try {
           this.field_e = param0 ? true : false;
           this.field_c = param1;
-          this.a(8, param2, param3);
+          this.decode(8, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "jaa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

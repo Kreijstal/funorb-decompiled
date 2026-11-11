@@ -38,7 +38,7 @@ final class gca {
         return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
     }
 
-    final void a(byte param0, gca param1) {
+    final void copyFrom(byte param0, gca param1) {
         try {
           this.field_b = param1.field_b;
           if (param0 >= -58) {

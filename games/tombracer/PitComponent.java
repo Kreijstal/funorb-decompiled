@@ -109,8 +109,8 @@ final class PitComponent extends PrefabComponent {
         return false;
     }
 
-    final void a(int param0, boolean param1) {
-        super.a(param0, param1);
+    final void offsetPosition(int param0, boolean param1) {
+        super.offsetPosition(param0, param1);
         int var3 = this.x;
         int var4 = this.y;
         int var5 = var3 - this.width / 2;

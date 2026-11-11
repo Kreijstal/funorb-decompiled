@@ -210,7 +210,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           if (null != RenderableNode.field_i) {
             return;
           }
-          ni.field_c = false;
+          DynamicGeometryBuffer.field_c = false;
           if (!fua.field_g) {
             if (PowerDownItemBehaviour.field_s) {
               var5 = ConstrainToLatticeLocomotor.field_z;

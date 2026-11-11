@@ -26,8 +26,8 @@ abstract class ItemBehaviour extends Behaviour {
     }
 
     final int hashState(int param0, int param1) {
-        param0 = upa.a(this.collected, param0, (byte) -53);
-        param0 = upa.a(this.waitingForPlayerToLeave, param0, (byte) -111);
+        param0 = upa.mixHashBoolean(this.collected, param0, (byte) -53);
+        param0 = upa.mixHashBoolean(this.waitingForPlayerToLeave, param0, (byte) -111);
         if (param1 < -48) {
           param0 = CurveOperator.mixHash((byte) 37, param0, this.respawnTimer);
           return param0;
@@ -327,7 +327,7 @@ abstract class ItemBehaviour extends Behaviour {
         var2Lifetime1.writeByte(3, 0);
     }
 
-    final static int a(int[] param0, int param1) {
+    final static int countSetBits(int[] param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -343,7 +343,7 @@ abstract class ItemBehaviour extends Behaviour {
           var2_int = 0;
           if (param1 != 2048) {
             var5 = (int[]) null;
-            ItemBehaviour.a((int[]) null, 49);
+            ItemBehaviour.countSetBits((int[]) null, 49);
           }
           for (var3 = 0; param0.length > var3; var3++) {
             var2_int = var2_int + tda.bitCount(param1 - 1922, param0[var3]);

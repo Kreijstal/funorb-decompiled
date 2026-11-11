@@ -68,7 +68,7 @@ final class NotLoggedInMenu extends MenuScreen {
           var10 = GameScreen.replaceCharacter('#', "<br>", var13, 0);
           var9 = var10;
           var9Lifetime3 = LegacyOpenGlFlowingWaterEffect.formatText(85, var10, new String[]{OpenGlSceneLight.field_q[32]});
-          SocketConnector.a(var9Lifetime3, 1, var6, 2431750, var7, var8, 1, gg.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
+          SocketConnector.drawWrappedText(var9Lifetime3, 1, var6, 2431750, var7, var8, 1, gg.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
           return;
         }
         this.h(-40, -77);
@@ -77,7 +77,7 @@ final class NotLoggedInMenu extends MenuScreen {
         var10Lifetime1 = GameScreen.replaceCharacter('#', "<br>", var12, 0);
         var9Lifetime1 = var10Lifetime1;
         var9Lifetime2 = LegacyOpenGlFlowingWaterEffect.formatText(85, var10Lifetime1, new String[]{OpenGlSceneLight.field_q[32]});
-        SocketConnector.a(var9Lifetime2, 1, var6, 2431750, var7, var8Lifetime1, 1, gg.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
+        SocketConnector.drawWrappedText(var9Lifetime2, 1, var6, 2431750, var7, var8Lifetime1, 1, gg.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
     }
 
     final void draw(byte param0, boolean param1) {

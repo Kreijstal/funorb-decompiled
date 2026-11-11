@@ -98,7 +98,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           var6 = TextureOperator.createFullWeapon(0, -1);
           var6.refillAmmo(91, true);
           if (this.hasRandomPhase((byte) 73)) {
-            var7_int = var6.a(true);
+            var7_int = var6.getFireCooldown(true);
             if (var7_int > 0) {
               var6.setCooldown(param2.getRandom(122).nextBounded(var7_int, 0), false);
             }

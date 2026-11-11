@@ -46,7 +46,7 @@ final class NodeHashTable {
         return this.nextWithKey(20806);
     }
 
-    final void e(int param0) {
+    final void clear(int param0) {
         int var2 = 0;
         IntrusiveNode var3_ref_vg = null;
         IntrusiveNode var4 = null;

@@ -18,7 +18,7 @@ final class FacePointLocomotor extends Locomotor {
         return param1;
     }
 
-    final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, byte param4) {
+    final static ResourceArchive openArchive(boolean param0, int param1, boolean param2, int param3, byte param4) {
         if (param4 > -75) {
           return (ResourceArchive) null;
         }
@@ -215,7 +215,7 @@ final class FacePointLocomotor extends Locomotor {
     final void attachToTrap(int param0, Trap param1) {
         try {
           if (param0 <= 35) {
-            FacePointLocomotor.a(true, 47, true, -59, (byte) -121);
+            FacePointLocomotor.openArchive(true, 47, true, -59, (byte) -121);
           }
           super.attachToTrap(110, param1);
         } catch (RuntimeException runtimeException) {

@@ -49,7 +49,7 @@ final class WallTile implements Renderable {
           var3_int = this.getRenderX((byte) -113);
           var4 = this.getRenderY((byte) 115);
           var5 = this.getRenderZ((byte) -108);
-          gqa.a(GameScreen.positiveModulo(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.getTileModel(this, (byte) 76), var5);
+          gqa.drawModelAt(GameScreen.positiveModulo(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.getTileModel(this, (byte) 76), var5);
           if (!nk.c(-115)) {
             return;
           }
@@ -66,54 +66,54 @@ final class WallTile implements Renderable {
           if (this.field_m) {
             if (!this.field_k) {
               if (!this.field_h) {
-                gqa.a(512, -83584144, var4 + 2097152, var3_int, var6, var9);
+                gqa.drawModelAt(512, -83584144, var4 + 2097152, var3_int, var6, var9);
               }
             } else {
-              gqa.a(1024, -83584144, 2097152 + var4, var3_int, var8, var9);
+              gqa.drawModelAt(1024, -83584144, 2097152 + var4, var3_int, var8, var9);
             }
           }
           if (this.field_c) {
             if (this.field_j) {
-              gqa.a(512, -83584144, var4, var3_int + 2097152, var8, var9);
+              gqa.drawModelAt(512, -83584144, var4, var3_int + 2097152, var8, var9);
             } else {
               if (!this.field_k) {
-                gqa.a(0, -83584144, var4, var3_int + 2097152, var6, var9);
+                gqa.drawModelAt(0, -83584144, var4, var3_int + 2097152, var6, var9);
               }
             }
           }
           if (this.field_e &&
             !this.field_q) {
             if (!this.field_h) {
-              gqa.a(1024, -83584144, var4, var3_int - 2097152, var6, var9);
+              gqa.drawModelAt(1024, -83584144, var4, var3_int - 2097152, var6, var9);
             } else {
-              gqa.a(-512, -83584144, var4, -2097152 + var3_int, var8, var9);
+              gqa.drawModelAt(-512, -83584144, var4, -2097152 + var3_int, var8, var9);
             }
           }
           if (this.field_n &&
             !this.field_j) {
             if (this.field_q) {
-              gqa.a(0, -83584144, -2097152 + var4, var3_int, var8, var9);
+              gqa.drawModelAt(0, -83584144, -2097152 + var4, var3_int, var8, var9);
             } else {
-              gqa.a(-512, -83584144, var4 - 2097152, var3_int, var6, var9);
+              gqa.drawModelAt(-512, -83584144, var4 - 2097152, var3_int, var6, var9);
             }
           }
           if (this.field_m &&
             this.field_c) {
-            gqa.a(0, -83584144, 2097152 + var4, var3_int + 2097152, var7, var9);
+            gqa.drawModelAt(0, -83584144, 2097152 + var4, var3_int + 2097152, var7, var9);
           }
           if (this.field_m &&
             this.field_e) {
-            gqa.a(512, -83584144, var4 + 2097152, -2097152 + var3_int, var7, var9);
+            gqa.drawModelAt(512, -83584144, var4 + 2097152, -2097152 + var3_int, var7, var9);
           }
           if (this.field_n &&
             this.field_c) {
-            gqa.a(-512, -83584144, -2097152 + var4, var3_int + 2097152, var7, var9);
+            gqa.drawModelAt(-512, -83584144, -2097152 + var4, var3_int + 2097152, var7, var9);
           }
           if (this.field_n) {
             if (!this.field_e) {
               return;
             }
-            gqa.a(1024, -83584144, var4 - 2097152, -2097152 + var3_int, var7, var9);
+            gqa.drawModelAt(1024, -83584144, var4 - 2097152, -2097152 + var3_int, var7, var9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

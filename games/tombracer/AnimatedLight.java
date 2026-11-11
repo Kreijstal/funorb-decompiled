@@ -201,7 +201,7 @@ final class AnimatedLight {
         return new nl[]{ShaderEffect.field_a, ObjectList.field_d, CollisionGrid.field_f};
     }
 
-    final static RoomDefinition a(boolean param0, int param1) {
+    final static RoomDefinition findRoomDefinition(boolean param0, int param1) {
         int var3 = 0;
         int var6 = 0;
         qg[] var2;

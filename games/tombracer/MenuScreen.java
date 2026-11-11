@@ -522,7 +522,7 @@ abstract class MenuScreen extends GameScreen {
                 return true;
               }
               if (var7 == 9) {
-                ArchiveRequest.openQuitPage(di.getApplet(94), (byte) -112);
+                ArchiveRequest.openQuitPage(ToolkitSelector.getApplet(94), (byte) -112);
                 return true;
               }
               if (var7 == 16) {
@@ -807,7 +807,7 @@ abstract class MenuScreen extends GameScreen {
           }
           if (RasterizerOperator.d(20125) &&
             39 == param0) {
-            CoinItemComponent.a(cq.field_d, (byte) -128);
+            CoinItemComponent.createMenuScreens(cq.field_d, (byte) -128);
           }
           this.activateItem(false, false, this.field_k.selectedIndex);
           return true;

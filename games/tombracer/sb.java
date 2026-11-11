@@ -32,7 +32,7 @@ final class sb {
         RuntimeException var2_ref = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var7 = new int[ItemBehaviour.a(param1, 2048)];
+          var7 = new int[ItemBehaviour.countSetBits(param1, 2048)];
           var2 = var7;
           var3 = 0;
           for (var4 = param0; param1.length > var4; var4++) {

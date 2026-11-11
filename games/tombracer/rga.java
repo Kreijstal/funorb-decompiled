@@ -107,7 +107,7 @@ final class rga {
         }
     }
 
-    final static ToolkitModel a(ToolkitModel param0, byte param1, int param2) {
+    final static ToolkitModel copyModel(ToolkitModel param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ToolkitModel stackIn_4_0 = null;
@@ -139,7 +139,7 @@ final class rga {
     final rga a(int param0, int param1) {
         if (param0 != 0) {
           ToolkitModel var4 = (ToolkitModel) null;
-          rga.a((ToolkitModel) null, (byte) 71, 47);
+          rga.copyModel((ToolkitModel) null, (byte) 71, 47);
         }
         return new rga(this.field_c, param1);
     }

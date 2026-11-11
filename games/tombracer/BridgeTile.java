@@ -75,7 +75,7 @@ final class BridgeTile implements Renderable {
         if (this.field_b == 0) {
           var3 = 0;
         } else {
-          var3 = this.bridge.o((byte) 122);
+          var3 = this.bridge.getOriginX((byte) 122);
         }
         return var3 + (this.bridge.getRenderX((byte) -86) + this.field_d);
     }
@@ -95,7 +95,7 @@ final class BridgeTile implements Renderable {
         if (this.field_b == 0) {
           var2 = 0;
         } else {
-          var2 = this.bridge.p((byte) 68);
+          var2 = this.bridge.getOriginY((byte) 68);
         }
         if (param0 >= 91) {
           return this.bridge.getRenderY((byte) 124) + this.field_a + var2;
@@ -138,7 +138,7 @@ final class BridgeTile implements Renderable {
           return;
         }
         try {
-          gqa.a(this.field_e, -83584144, this.getRenderY((byte) 105), this.getRenderX((byte) -102), this.field_f.getModel((byte) 74), this.getRenderZ((byte) -98));
+          gqa.drawModelAt(this.field_e, -83584144, this.getRenderY((byte) 105), this.getRenderX((byte) -102), this.field_f.getModel((byte) 74), this.getRenderZ((byte) -98));
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

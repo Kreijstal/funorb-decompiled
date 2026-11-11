@@ -454,7 +454,7 @@ final class cm implements GamePacket {
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   sda.field_f[var17_int] = false;
                 }
-                cja.findValidSettingCombination(125, var7, param1, 0, var9, -1, -1, param3);
+                MatchOverlayQueue.findValidSettingCombination(125, var7, param1, 0, var9, -1, -1, param3);
                 if (ld.field_e >= 2 &&
                   VerticalScrollbar.field_tb[12]) {
                   TouchSwitchBehaviour.field_s = true;

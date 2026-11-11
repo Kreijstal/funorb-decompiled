@@ -54,7 +54,7 @@ final class ObjectPool implements Renderable {
         return param0;
     }
 
-    final void a(RenderScene param0, byte param1, boolean param2, int param3) {
+    final void attachToScene(RenderScene param0, byte param1, boolean param2, int param3) {
         try {
           this.field_a = param2 ? true : false;
           if (!param2) {
@@ -115,7 +115,7 @@ final class ObjectPool implements Renderable {
           return;
         }
         RenderScene var4 = (RenderScene) null;
-        this.a((RenderScene) null, (byte) -42, false, 21);
+        this.attachToScene((RenderScene) null, (byte) -42, false, 21);
     }
 
     public final boolean isRenderExpired(byte param0) {

@@ -114,7 +114,7 @@ final class DoorwayModel extends TrapModel {
           var8Lifetime1 = -76 / ((-38 - param4) / 47);
           if (var7 != null) {
             var9 = GameScreen.positiveModulo(4096 + var6_int - this.body.getFacingAngle(-25787) >> 2, 2048, 102);
-            gqa.a(var9, -83584144, param1, param2, (ToolkitModel) (var7), param3);
+            gqa.drawModelAt(var9, -83584144, param1, param2, (ToolkitModel) (var7), param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

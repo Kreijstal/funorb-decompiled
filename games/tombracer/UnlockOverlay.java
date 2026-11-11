@@ -67,7 +67,7 @@ final class UnlockOverlay extends MatchOverlay {
         }
         if (this.field_o != null) {
           this.field_o.tick(0);
-          this.field_o.a(this.field_m.getIndex(-13939), false, 0, 37, false);
+          this.field_o.play(this.field_m.getIndex(-13939), false, 0, 37, false);
         }
     }
 
@@ -78,7 +78,7 @@ final class UnlockOverlay extends MatchOverlay {
           this.field_m = param1;
           if (0 == param1.getKind(16)) {
             this.field_o = new ModelAnimator(0, param1.getIndex(-13939), 1);
-            this.field_o.a(param1.getIndex(-13939), false, 0, 37, true);
+            this.field_o.play(param1.getIndex(-13939), false, 0, 37, true);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "rca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -107,7 +107,7 @@ final class UnlockOverlay extends MatchOverlay {
             MembersUpsellMenu.drawCentredTextWithShadow(var6.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
             ura.a(-10985);
             hp.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
-            RemovedFromGameMenu.f((byte) -6);
+            RemovedFromGameMenu.resetDepthRange((byte) -6);
             PlayerInputQueue.field_a.draw(var2, var3 + 85);
             MembersUpsellMenu.drawCentredTextWithShadow(var7.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
             return;
@@ -130,7 +130,7 @@ final class UnlockOverlay extends MatchOverlay {
           MembersUpsellMenu.drawCentredTextWithShadow(var8.toUpperCase(), 2431750, eda.field_f, -1, 100, 320, -1);
           ura.a(-10985);
           hp.drawModelPreview(1024, 0, 0, this.field_o.getModel((byte) 74), -1918106173, 300, 320);
-          RemovedFromGameMenu.f((byte) -6);
+          RemovedFromGameMenu.resetDepthRange((byte) -6);
           PlayerInputQueue.field_a.draw(var2Lifetime1, var3Lifetime1 + 85);
           MembersUpsellMenu.drawCentredTextWithShadow(var9.toUpperCase(), 65793, eda.field_f, -1, (SwitchLinkList.b(0) >> 1) + 92, aaa.a(false) >> 1, -1);
           return;

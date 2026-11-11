@@ -40,8 +40,8 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         if (param4 >= gca.field_d &&
           hc.field_h >= param4) {
-          param1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
-          param0 = rp.clamp(DiskCacheWorker.field_c, param2 ^ 16224, pka.field_b, param0);
+          param1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
+          param0 = CharacterPreview.clamp(DiskCacheWorker.field_c, param2 ^ 16224, pka.field_b, param0);
           BrazierComponent.a(param0, param3, param4, param1, false);
         }
         if (param2 != -2) {
@@ -69,7 +69,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         }
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, int param4) {
+    private final void layoutList(int param0, int param1, int param2, boolean param3, int param4) {
         super.setBounds((byte) -31, param4, param0, param2, param1);
         this.field_I.setBounds((byte) -31, param4 - 20, this.field_C, 0, 0);
         if (param3) {
@@ -94,7 +94,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         if (!this.isOpen((byte) -82)) {
           return;
         }
-        this.a(this.field_C, this.field_n, this.field_i, false, this.field_m);
+        this.layoutList(this.field_C, this.field_n, this.field_i, false, this.field_m);
         this.field_G = false;
         this.field_F.unlink(76);
         if (param0 < 82) {
@@ -206,7 +206,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
     }
 
     private final void openList(int param0) {
-        int var2 = this.field_z.c(23112);
+        int var2 = this.field_z.measureListHeight(23112);
         int var3 = var2;
         int var4 = 0;
         if (param0 != -21088) {
@@ -216,7 +216,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           var4 = 1;
           var3 = this.field_A;
         }
-        this.a(this.field_C + var3, this.field_n, this.field_i, false, this.field_m);
+        this.layoutList(this.field_C + var3, this.field_n, this.field_i, false, this.field_m);
         this.field_z.setBounds((byte) -31, this.field_m, var2, 0, 0);
         this.field_F = new ScrollContainer(0, 0, 0, 0, new pu(), this.field_z, (WidgetPainter) null);
         if (var4 != 0) {
@@ -256,7 +256,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         if (param0 != -31) {
           return;
         }
-        this.a(param2, param4, param3, false, param1);
+        this.layoutList(param2, param4, param3, false, param1);
     }
 
     final int getSelectedIndex(byte param0) {

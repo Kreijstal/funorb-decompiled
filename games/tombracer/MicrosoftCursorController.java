@@ -8,7 +8,7 @@ final class MicrosoftCursorController extends com.ms.dll.Callback {
     private volatile int field_a;
     private int field_e;
 
-    final void a(int param0, int param1, int param2) {
+    final void setCursorPosition(int param0, int param1, int param2) {
         if (param0 != 0) {
           this.field_a = -126;
           com.ms.win32.User32.SetCursorPos(param1, param2);

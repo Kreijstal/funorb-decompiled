@@ -23,7 +23,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
         field_A = (String) null;
     }
 
-    private final String c(int param0) {
+    private final String linkStart(int param0) {
         int var2 = 93 % ((21 - param0) / 40);
         return "<u=2164A2><col=2164A2>";
     }
@@ -41,17 +41,17 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
             field_y = -37;
           }
           if (0 == param1) {
-            DefaultRoomObjectRenderer.a("terms.ws", (byte) -88);
+            DefaultRoomObjectRenderer.openWebsitePage("terms.ws", (byte) -88);
             return;
           }
           if (1 == param1) {
-            DefaultRoomObjectRenderer.a("privacy.ws", (byte) -50);
+            DefaultRoomObjectRenderer.openWebsitePage("privacy.ws", (byte) -50);
             return;
           }
           if (param1 != 2) {
             return;
           }
-          DefaultRoomObjectRenderer.a("conduct.ws", (byte) -118);
+          DefaultRoomObjectRenderer.openWebsitePage("conduct.ws", (byte) -118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,7 +119,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           this.field_w = param0;
           this.field_B = new FocusableWidget(aua.field_d, (WidgetListener) null);
           this.field_B.field_r = (WidgetPainter) ((Object) new td());
-          var7 = LegacyOpenGlFlowingWaterEffect.formatText(108, SafeZoneBehaviour.field_q, new String[]{this.c(-58), this.d(-35)});
+          var7 = LegacyOpenGlFlowingWaterEffect.formatText(108, SafeZoneBehaviour.field_q, new String[]{this.linkStart(-58), this.linkEnd(-35)});
           var3 = 20;
           var4 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
           this.field_z = new HotspotTextWidget(var7, var4);
@@ -128,7 +128,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           this.field_z.setHotspotTooltip(EditableTextField.field_Fb, 1, 0);
           this.field_z.field_m = this.field_m - 40;
           this.field_z.field_h = (WidgetListener) (this);
-          this.field_z.a(var3, (byte) -120, this.field_m - 40, 26);
+          this.field_z.setBoundsToTextWidth(var3, (byte) -120, this.field_m - 40, 26);
           var3 = var3 + (this.field_z.field_p + 15);
           this.addChild(this.field_z, -1);
           var5 = 4;
@@ -142,10 +142,10 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
         }
     }
 
-    private final String d(int param0) {
+    private final String linkEnd(int param0) {
         String discarded$0 = null;
         if (param0 >= -12) {
-          discarded$0 = this.d(-20);
+          discarded$0 = this.linkEnd(-20);
           return "</col></u>";
         }
         return "</col></u>";

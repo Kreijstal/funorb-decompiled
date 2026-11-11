@@ -308,27 +308,27 @@ final class ChatOverlay {
               lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               ProceduralTexture.field_p = LegacyOpenGlTexture1D.field_n;
               if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
-                ShaderEffect.field_a.saveAsLastLoginMethod(di.getApplet(120), param2 ^ 55);
+                ShaderEffect.field_a.saveAsLastLoginMethod(ToolkitSelector.getApplet(120), param2 ^ 55);
               } else {
                 if (fd.field_d.a((byte) 113) == ViewportManager.field_f) {
-                  ObjectList.field_d.saveAsLastLoginMethod(di.getApplet(109), 5);
+                  ObjectList.field_d.saveAsLastLoginMethod(ToolkitSelector.getApplet(109), 5);
                 }
               }
               PushableBlockMazeComponent.field_L = false;
               if (var6 != null) {
-                mp.writeSettingsCookie(var6, di.getApplet(41), -21407);
+                mp.writeSettingsCookie(var6, ToolkitSelector.getApplet(41), -21407);
               }
               if (0 >= ReportAbuseDialog.field_ub &&
                 !ai.field_a) {
                 try {
-                  JavaScriptBridge.callWindowFunction(di.getApplet(26), 2864, "unzap");
+                  JavaScriptBridge.callWindowFunction(ToolkitSelector.getApplet(26), 2864, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", di.getApplet(param2 + 43), new Object[]{sv.decodeBase37Name((byte) -38, tr.field_g)});
+                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", ToolkitSelector.getApplet(param2 + 43), new Object[]{sv.decodeBase37Name((byte) -38, tr.field_g)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -537,7 +537,7 @@ final class ChatOverlay {
         if (param0 != -8832) {
           discarded$1 = this.getNewestChatMessage(-98);
         }
-        stackIn_6_0 = (this.panelOpen) && (ni.field_c);
+        stackIn_6_0 = (this.panelOpen) && (DynamicGeometryBuffer.field_c);
         return stackIn_6_0;
     }
 

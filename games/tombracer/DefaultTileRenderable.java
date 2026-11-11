@@ -196,11 +196,11 @@ final class DefaultTileRenderable extends TileRenderable {
           var9 = this.cell.getCenterY(true);
           if (!this.cell.hasWideOccupancy(false)) {
             if (-1 != this.field_m) {
-              gqa.a(0, -83584144, var9, var8, gca.field_g[this.field_m], 0);
+              gqa.drawModelAt(0, -83584144, var9, var8, gca.field_g[this.field_m], 0);
             }
             if (SpriteTileOperator.d(43) &&
               this.field_i != -1) {
-              gqa.a(this.field_n, -83584144, var9, var8, gca.field_g[this.field_i], 0);
+              gqa.drawModelAt(this.field_n, -83584144, var9, var8, gca.field_g[this.field_i], 0);
             }
           }
           if (!SpriteTileOperator.d(-81)) {
@@ -213,7 +213,7 @@ final class DefaultTileRenderable extends TileRenderable {
             if (var12 != null && (!this.cell.hasWideOccupancy(false) ||
               !var12.hasWideOccupancy(false))) {
               var11 = this.cell.getGrid(18641).getTileSize(-30551) / 2;
-              gqa.a(1024, -83584144, -var11 + var9, var8 - var11, gca.field_g[25], 65536);
+              gqa.drawModelAt(1024, -83584144, -var11 + var9, var8 - var11, gca.field_g[25], 65536);
             }
           }
           if (-1 + var7 == var4 &&
@@ -226,7 +226,7 @@ final class DefaultTileRenderable extends TileRenderable {
                 return;
               }
               var11Lifetime1 = this.cell.getGrid(18641).getTileSize(-30551) / 2;
-              gqa.a(0, -83584144, var9 - var11Lifetime1, -var11Lifetime1 + var8, gca.field_g[25], 65536);
+              gqa.drawModelAt(0, -83584144, var9 - var11Lifetime1, -var11Lifetime1 + var8, gca.field_g[25], 65536);
             }
           }
           return;

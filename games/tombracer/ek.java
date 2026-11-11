@@ -7,7 +7,7 @@ final class ek extends nqa implements lv {
     private int field_g;
     private int field_h;
 
-    final jagdx.IDirect3DBaseTexture c(int param0) {
+    final jagdx.IDirect3DBaseTexture getBaseTexture(int param0) {
         int var2 = 21 / ((param0 - 48) / 45);
         return (jagdx.IDirect3DBaseTexture) ((Object) this.field_f);
     }

@@ -8,10 +8,10 @@ final class C2SChooseRewardPacket implements GamePacket {
 
     final static boolean a(boolean param0, int param1, int param2) {
         if (param0) {
-          return (IntPoint.hasAnyMask33(param1, param2, (byte) -80) | cga.hasAnyMask34(param1, -54, param2) | TripBeamComponent.hasAnyMask52(param1, param2, 52)) & DiskCacheWorker.a((byte) 61, param2, param1);
+          return (IntPoint.hasAnyMask33(param1, param2, (byte) -80) | cga.hasAnyMask34(param1, -54, param2) | TripBeamComponent.hasAnyMask52(param1, param2, 52)) & DiskCacheWorker.hasFlag2048((byte) 61, param2, param1);
         }
         field_c = 33;
-        return (IntPoint.hasAnyMask33(param1, param2, (byte) -80) | cga.hasAnyMask34(param1, -54, param2) | TripBeamComponent.hasAnyMask52(param1, param2, 52)) & DiskCacheWorker.a((byte) 61, param2, param1);
+        return (IntPoint.hasAnyMask33(param1, param2, (byte) -80) | cga.hasAnyMask34(param1, -54, param2) | TripBeamComponent.hasAnyMask52(param1, param2, 52)) & DiskCacheWorker.hasFlag2048((byte) 61, param2, param1);
     }
 
     final static void writeEncryptedPayload(int param0, byte param1, byte[] param2, java.math.BigInteger param3, PacketBuffer param4, java.math.BigInteger param5, int param6) {
@@ -141,7 +141,7 @@ final class C2SChooseRewardPacket implements GamePacket {
             return;
           }
           try {
-            JavaScriptBridge.callWithArguments(-96, "resizing", di.getApplet(111), new Object[]{new Integer(param1)});
+            JavaScriptBridge.callWithArguments(-96, "resizing", ToolkitSelector.getApplet(111), new Object[]{new Integer(param1)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

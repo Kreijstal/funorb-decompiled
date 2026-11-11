@@ -66,7 +66,7 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         this.toolkit.setTextureCombineOperands(2, 0, 5890, 770);
         this.toolkit.setAlphaCombineArgument(34168, 3, 0, 770);
         this.toolkit.setActiveTextureUnit(0, true);
-        this.a((byte) -120);
+        this.applyViewParameters((byte) -120);
     }
 
     public static void releaseStatics(int param0) {
@@ -196,7 +196,7 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
         this.field_c = false;
     }
 
-    final void a(byte param0) {
+    final void applyViewParameters(byte param0) {
         OpenGlTransform3D var2 = this.toolkit.field_j;
         if (this.field_e) {
           jaggl.OpenGL.glBindProgramARB(34336, this.toolkit.field_N == 2147483647 ? this.field_d.field_a : this.field_k.field_a);

@@ -142,12 +142,12 @@ final class SimpleConditionBehaviour extends Behaviour {
 
     final int hashState(int param0, int param1) {
         if (param1 <= -48) {
-          param0 = upa.a(this.field_s, param0, (byte) -53);
+          param0 = upa.mixHashBoolean(this.field_s, param0, (byte) -53);
           return param0;
         }
         BitPacketBuffer var4 = (BitPacketBuffer) null;
         this.encode(false, (BitPacketBuffer) null);
-        param0 = upa.a(this.field_s, param0, (byte) -53);
+        param0 = upa.mixHashBoolean(this.field_s, param0, (byte) -53);
         return param0;
     }
 

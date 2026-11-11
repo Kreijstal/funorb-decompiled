@@ -249,7 +249,7 @@ final class LightSource extends IntrusiveNode {
         this.y = param2;
     }
 
-    final void b(int param0, int param1) {
+    final void setAnimationOffset(int param0, int param1) {
         if (param1 != 0) {
           this.setColour(-107, 111);
           this.field_n = param0;

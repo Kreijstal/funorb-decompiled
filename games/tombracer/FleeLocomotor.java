@@ -219,7 +219,7 @@ final class FleeLocomotor extends Locomotor {
             this.field_A = this.a(param1.readBits((byte) 44, 8), false);
             stackIn_6_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_r = stackIn_6_1;
-            this.field_u = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+            this.field_u = SnakePitModel.unscaleFromBits(8, 8192, 0, param1.readBits((byte) 44, 8));
             stackIn_9_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_w = stackIn_9_1;
           } else {
@@ -278,7 +278,7 @@ final class FleeLocomotor extends Locomotor {
     }
 
     final int hashState(int param0, int param1) {
-        param1 = upa.a(this.field_D, param1, (byte) -41);
+        param1 = upa.mixHashBoolean(this.field_D, param1, (byte) -41);
         param1 = CurveOperator.mixHash((byte) 37, param1, this.field_p);
         if (param0 == 0) {
           return param1;
@@ -333,7 +333,7 @@ final class FleeLocomotor extends Locomotor {
             stackIn_3_2 = 1;
           }
           ((BitPacketBuffer) (Object) stackIn_2_0).writeBits((byte) stackIn_2_1, stackIn_3_2, 1);
-          param0.writeBits((byte) -128, ResourceArchive.a((byte) -104, this.field_u, 8192, 8), 8);
+          param0.writeBits((byte) -128, ResourceArchive.scaleToBits((byte) -104, this.field_u, 8192, 8), 8);
           stackIn_5_0 = (BitPacketBuffer) (param0);
           stackIn_5_1 = -128;
           if (this.field_w) {
@@ -368,7 +368,7 @@ final class FleeLocomotor extends Locomotor {
           vea.field_c = new lqa(1, 1, true, false, false, true, true, true, true, false, true);
           UsernameSuggestionsPanel.field_x = new lqa(0, 1, true, false, false, false, false, false, false, true, false);
           CharacterSelection.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
-          rc.field_a = new ei[]{(ei) ((Object) HuffmanCodec.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) CharacterSelection.field_d)};
+          rc.field_a = new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a), (ToolkitCandidate) ((Object) DateInputWidget.field_z), (ToolkitCandidate) ((Object) ControllerLocomotor.field_t), (ToolkitCandidate) ((Object) vea.field_c), (ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x), (ToolkitCandidate) ((Object) CharacterSelection.field_d)};
           return;
         }
         field_B = (String) null;
@@ -376,7 +376,7 @@ final class FleeLocomotor extends Locomotor {
         vea.field_c = new lqa(1, 1, true, false, false, true, true, true, true, false, true);
         UsernameSuggestionsPanel.field_x = new lqa(0, 1, true, false, false, false, false, false, false, true, false);
         CharacterSelection.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
-        rc.field_a = new ei[]{(ei) ((Object) HuffmanCodec.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) CharacterSelection.field_d)};
+        rc.field_a = new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a), (ToolkitCandidate) ((Object) DateInputWidget.field_z), (ToolkitCandidate) ((Object) ControllerLocomotor.field_t), (ToolkitCandidate) ((Object) vea.field_c), (ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x), (ToolkitCandidate) ((Object) CharacterSelection.field_d)};
     }
 
     static {

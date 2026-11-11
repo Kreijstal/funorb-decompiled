@@ -196,7 +196,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 != 34842) {
           this.field_m = (cua) null;
           if (!this.toolkit.field_id) {
@@ -369,7 +369,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
         this.toolkit.bindTexture(true, (LegacyOpenGlTexture) null);
         this.toolkit.setActiveTextureUnit(0, true);
         if (param1 < 117) {
-          this.e(-29);
+          this.isSupported(-29);
         }
     }
 

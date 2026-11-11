@@ -275,7 +275,7 @@ final class ReportAbuseDialog extends UiComponent {
               var19 = var20;
             }
             if (null != this.field_Ab) {
-              var20Lifetime2 = this.field_Ab.a((byte) 95, 4);
+              var20Lifetime2 = this.field_Ab.measureRowWidth((byte) 95, 4);
               if (var20Lifetime2 > var19) {
                 var19 = var20Lifetime2;
               }
@@ -283,16 +283,16 @@ final class ReportAbuseDialog extends UiComponent {
             this.field_zb.setBounds(13 + (13 + var19), 24, -23776, 0, 0);
             this.field_Fb.setBounds(15, 15, -23776, 5, -20 + this.field_zb.field_G);
             var21 = 10;
-            this.field_Bb.setBounds(var19, 2 * di.field_a, -23776, var21, 13);
-            var21 = var21 + di.field_a * 2;
-            this.field_tb.setBounds(var19, 2 * di.field_a, -23776, var21, 13);
-            var21 = var21 + (10 + 2 * di.field_a);
-            this.field_xb.setBounds(0, di.field_a, -23776, var21, 0);
-            var21 = var21 + (di.field_a + 10);
+            this.field_Bb.setBounds(var19, 2 * ToolkitSelector.field_a, -23776, var21, 13);
+            var21 = var21 + ToolkitSelector.field_a * 2;
+            this.field_tb.setBounds(var19, 2 * ToolkitSelector.field_a, -23776, var21, 13);
+            var21 = var21 + (10 + 2 * ToolkitSelector.field_a);
+            this.field_xb.setBounds(0, ToolkitSelector.field_a, -23776, var21, 0);
+            var21 = var21 + (ToolkitSelector.field_a + 10);
             if (null != this.field_Ab) {
-              var20Lifetime3 = this.field_Ab.a((byte) 95, 4);
-              this.field_Ab.a(var20Lifetime3, var21, (byte) -110, 4, di.field_a, 13 + (-var20Lifetime3 + var19) / 2);
-              var21 = var21 + (10 + di.field_a);
+              var20Lifetime3 = this.field_Ab.measureRowWidth((byte) 95, 4);
+              this.field_Ab.setRowBounds(var20Lifetime3, var21, (byte) -110, 4, ToolkitSelector.field_a, 13 + (-var20Lifetime3 + var19) / 2);
+              var21 = var21 + (10 + ToolkitSelector.field_a);
             }
             var28[0].setBounds(var16Lifetime2, var17Lifetime5, -23776, var21, 13);
             var28[1].setBounds(var16Lifetime2, var17Lifetime5, -23776, var21, 13 + (13 + var16Lifetime2));
@@ -314,8 +314,8 @@ final class ReportAbuseDialog extends UiComponent {
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Bb.field_H.countWrappedLines(this.field_Bb.field_r, var15_int);
-          this.field_Bb.setBounds(var15_int, di.field_a * var17Lifetime1, -23776, var16Lifetime1, 13);
-          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * di.field_a;
+          this.field_Bb.setBounds(var15_int, ToolkitSelector.field_a * var17Lifetime1, -23776, var16Lifetime1, 13);
+          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * ToolkitSelector.field_a;
           this.field_wb.setBounds(26 + var15_int, var16Lifetime1 + 10, -23776, 24, 0);
           this.field_wb.field_w = Player.createScrollbarSprites(this.field_wb.field_t, 2105376, 3, 11579568, -121, 8421504);
           var18Lifetime1 = 13 + var15_int + 13;

@@ -386,7 +386,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         } else {
           ava.field_d = (-640 + SceneLight.field_i) / 2;
         }
-        di.advanceLobbyTransitions((byte) -98, param1);
+        ToolkitSelector.advanceLobbyTransitions((byte) -98, param1);
         if (mla.field_a > 0) {
           SimpleHoverMountComponent.a(param5, true, param1, param6);
         }

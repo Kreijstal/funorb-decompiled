@@ -60,7 +60,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         return null != dq.field_f ? (java.awt.Canvas) ((Object) dq.field_f) : nma.field_l;
     }
 
-    private final void a(byte param0) {
+    private final void buildDisplayLists(byte param0) {
         LegacyOpenGlTexture var3 = null;
         this.field_g = new OpenGlDisplayLists(this.toolkit, 2);
         this.field_g.beginList((byte) 6, 0);
@@ -104,7 +104,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         super(param0);
         try {
           this.field_c = param1;
-          this.a((byte) -122);
+          this.buildDisplayLists((byte) -122);
           this.field_d = new LegacyOpenGlTexture1D(this.toolkit, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
           this.field_d.setWrap(76, false);
         } catch (RuntimeException runtimeException) {

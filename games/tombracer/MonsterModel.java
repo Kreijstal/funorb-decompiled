@@ -20,7 +20,7 @@ final class MonsterModel extends MotionTrackingModel {
           int var6_int = 0 % ((-38 - param4) / 47);
           var7 = this.getModelHeading(-6874);
           var8 = this.field_C.buildModel(false, -1, false, (byte) 1);
-          gqa.a(var7, -83584144, param1, param2, var8, param3);
+          gqa.drawModelAt(var7, -83584144, param1, param2, var8, param3);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "aka.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -58,7 +58,7 @@ final class MonsterModel extends MotionTrackingModel {
           }
           this.field_C.setModelIds(6, -23308, 1);
           var3 = -1;
-          this.field_C.a(1, true, (byte) -101, 3);
+          this.field_C.play(1, true, (byte) -101, 3);
         }
         if (var3 != 0) {
           var5_intLifetime1 = this.getModelHeading(-6874);
@@ -113,7 +113,7 @@ final class MonsterModel extends MotionTrackingModel {
           var3_int = this.field_x;
           if (var3_int == 0) {
             this.field_C = new ModelAnimator(6, 0, 0);
-            this.field_C.a(1, true, (byte) -121, 1);
+            this.field_C.play(1, true, (byte) -121, 1);
             this.field_C.setScale(false, 176);
           }
           return;
@@ -184,7 +184,7 @@ final class MonsterModel extends MotionTrackingModel {
             var3 > 5) {
             var4 = 0;
           }
-          this.field_C.a(1, false, (byte) -114, var4);
+          this.field_C.play(1, false, (byte) -114, var4);
         }
         this.field_C.tick(param0 ^ param0);
         var5 = (SoundEventPlayer) (this.body.getRoom((byte) -79).soundQueue);

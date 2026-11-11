@@ -121,7 +121,7 @@ final class CircleMovementLocomotor extends Locomotor {
           super.encode(param0, (byte) -122);
           param0.writeBits((byte) -44, this.field_o >> 16, 10);
           param0.writeBits((byte) 90, dqa.toOffsetBinary(true, this.field_r, 12), 12);
-          param0.writeBits((byte) -126, ResourceArchive.a((byte) 74, this.field_q, 32768, 4), 4);
+          param0.writeBits((byte) -126, ResourceArchive.scaleToBits((byte) 74, this.field_q, 32768, 4), 4);
           stackIn_2_0 = (BitPacketBuffer) (param0);
           stackIn_2_1 = -128;
           if (!this.field_t) {
@@ -165,10 +165,10 @@ final class CircleMovementLocomotor extends Locomotor {
           this.field_o = param1.readBits((byte) 44, 10) << 16;
           this.field_r = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12));
           if (param0.formatVersion < 10) {
-            this.field_q = SnakePitModel.a(3, 32768, 0, param1.readBits((byte) 44, 3));
+            this.field_q = SnakePitModel.unscaleFromBits(3, 32768, 0, param1.readBits((byte) 44, 3));
             this.field_t = true;
           } else {
-            this.field_q = SnakePitModel.a(4, 32768, 0, param1.readBits((byte) 44, 4));
+            this.field_q = SnakePitModel.unscaleFromBits(4, 32768, 0, param1.readBits((byte) 44, 4));
             stackIn_5_1 = (1 == param1.readBits((byte) 44, 1));
             this.field_t = stackIn_5_1;
           }

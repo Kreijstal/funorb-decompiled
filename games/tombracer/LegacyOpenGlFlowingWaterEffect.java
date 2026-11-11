@@ -46,7 +46,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
                 break;
               }
               var7_ref_String = param1.substring(2 + var6_int, var5);
-              if (!SoundEventQueue.a((CharSequence) ((Object) var7_ref_String), -3)) {
+              if (!SoundEventQueue.isDecimalNumber((CharSequence) ((Object) var7_ref_String), -3)) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -83,7 +83,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
               break;
             }
             var9 = param1.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!SoundEventQueue.a((CharSequence) ((Object) var9), -3)) {
+            if (!SoundEventQueue.isDecimalNumber((CharSequence) ((Object) var9), -3)) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
@@ -299,7 +299,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
                 break;
               }
               var7_ref_String = param1.substring(2 + var6_int, var5);
-              if (!SoundEventQueue.a((CharSequence) ((Object) var7_ref_String), -3)) {
+              if (!SoundEventQueue.isDecimalNumber((CharSequence) ((Object) var7_ref_String), -3)) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -336,7 +336,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
               break;
             }
             var9 = param1.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!SoundEventQueue.a((CharSequence) ((Object) var9), -3)) {
+            if (!SoundEventQueue.isDecimalNumber((CharSequence) ((Object) var9), -3)) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {

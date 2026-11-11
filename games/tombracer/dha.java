@@ -13,7 +13,7 @@ final class dha {
         int stackIn_129_0 = 0;
         if (param2 == -107) {
           if (era.field_d == null) {
-            if (!ni.field_c) {
+            if (!DynamicGeometryBuffer.field_c) {
               if (vo.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
@@ -32,7 +32,7 @@ final class dha {
               if (!AppletGameShell.isFreeChatAllowed(-1)) {
                 return false;
               }
-              ni.field_c = true;
+              DynamicGeometryBuffer.field_c = true;
               return true;
             }
             if (!AppletGameShell.isFreeChatAllowed(-1)) {
@@ -45,7 +45,7 @@ final class dha {
               era.field_d = null;
               return true;
             }
-            if (!ni.field_c) {
+            if (!DynamicGeometryBuffer.field_c) {
               if (vo.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
@@ -64,7 +64,7 @@ final class dha {
               if (!AppletGameShell.isFreeChatAllowed(-1)) {
                 return false;
               }
-              ni.field_c = true;
+              DynamicGeometryBuffer.field_c = true;
               return true;
             }
             if (!AppletGameShell.isFreeChatAllowed(-1)) {
@@ -80,7 +80,7 @@ final class dha {
               era.field_d = null;
               return true;
             }
-            if (!ni.field_c) {
+            if (!DynamicGeometryBuffer.field_c) {
               if (vo.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
@@ -99,7 +99,7 @@ final class dha {
               if (!AppletGameShell.isFreeChatAllowed(-1)) {
                 return false;
               }
-              ni.field_c = true;
+              DynamicGeometryBuffer.field_c = true;
               return true;
             }
             if (!AppletGameShell.isFreeChatAllowed(-1)) {
@@ -108,7 +108,7 @@ final class dha {
             stackIn_61_0 = (!ChooseRewardFactory.a(param1, true, param0)) ? 0 : 1;
             var4 = stackIn_61_0;
           } else {
-            if (!ni.field_c) {
+            if (!DynamicGeometryBuffer.field_c) {
               if (vo.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
@@ -127,7 +127,7 @@ final class dha {
               if (!AppletGameShell.isFreeChatAllowed(-1)) {
                 return false;
               }
-              ni.field_c = true;
+              DynamicGeometryBuffer.field_c = true;
               return true;
             }
             if (!AppletGameShell.isFreeChatAllowed(-1)) {
@@ -139,17 +139,17 @@ final class dha {
         }
         if (MenuEntry.field_h == 80) {
           var4 = 1;
-          ni.field_c = false;
+          DynamicGeometryBuffer.field_c = false;
         } else {
           if (MenuEntry.field_h == 84) {
             var4 = 1;
-            ni.field_c = false;
+            DynamicGeometryBuffer.field_c = false;
           }
         }
         if (13 == MenuEntry.field_h) {
           PlayerProfile.clearChatInput(true);
           var4 = 1;
-          ni.field_c = false;
+          DynamicGeometryBuffer.field_c = false;
         }
         return var4 != 0;
     }

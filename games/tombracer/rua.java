@@ -108,7 +108,7 @@ final class rua extends MessageDialog implements ButtonListener {
               var4 = param2.field_b;
               if (param2.field_f == 248) {
                 if (!param1) {
-                  jp.a(false);
+                  jp.clearStatusCookie(false);
                 }
                 this.field_ib = true;
                 var4 = RatingsScreen.field_v;

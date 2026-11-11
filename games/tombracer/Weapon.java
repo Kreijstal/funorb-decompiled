@@ -36,7 +36,7 @@ final class Weapon {
         return this.cooldown;
     }
 
-    final int d(int param0) {
+    final int getWeight(int param0) {
         if (param0 <= 18) {
           this.field_k = -112;
           return this.field_d;
@@ -263,7 +263,7 @@ final class Weapon {
         this.field_l = 524288;
     }
 
-    final int a(boolean param0) {
+    final int getFireCooldown(boolean param0) {
         if (!param0) {
           this.getEffect((byte) -20);
           return this.field_h;

@@ -206,7 +206,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           var6 = var5 + 1;
           for (var14 = 0; var14 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var14++) {
             CachedArchiveSource.field_l = 2147483647;
-            rp.field_h = 2147483647;
+            CharacterPreview.field_h = 2147483647;
             CorpseList.field_b = 2147483647;
             TextFieldValidator.field_h = 2147483647;
             var15 = 2048 + LobbyGameWidget.textureColumnCoords[var14] * this.field_t;
@@ -299,22 +299,22 @@ final class VoronoiNoiseOperator extends TextureOperator {
                   var11 = var9 * var9 + var10 * var10 >> 12;
                 }
                 if (var11 < TextFieldValidator.field_h) {
-                  rp.field_h = CachedArchiveSource.field_l;
+                  CharacterPreview.field_h = CachedArchiveSource.field_l;
                   CachedArchiveSource.field_l = CorpseList.field_b;
                   CorpseList.field_b = TextFieldValidator.field_h;
                   TextFieldValidator.field_h = var11;
                 } else {
                   if (var11 < CorpseList.field_b) {
-                    rp.field_h = CachedArchiveSource.field_l;
+                    CharacterPreview.field_h = CachedArchiveSource.field_l;
                     CachedArchiveSource.field_l = CorpseList.field_b;
                     CorpseList.field_b = var11;
                   } else {
                     if (CachedArchiveSource.field_l <= var11) {
-                      if (rp.field_h > var11) {
-                        rp.field_h = var11;
+                      if (CharacterPreview.field_h > var11) {
+                        CharacterPreview.field_h = var11;
                       }
                     } else {
-                      rp.field_h = CachedArchiveSource.field_l;
+                      CharacterPreview.field_h = CachedArchiveSource.field_l;
                       CachedArchiveSource.field_l = var11;
                     }
                   }
@@ -334,7 +334,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
                       var3[var14] = CorpseList.field_b - TextFieldValidator.field_h;
                     }
                   } else {
-                    var3[var14] = rp.field_h;
+                    var3[var14] = CharacterPreview.field_h;
                   }
                 }
               } else {
@@ -405,7 +405,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
         }
     }
 
-    private final void c(int param0) {
+    private final void generatePermutation(int param0) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         Random var5 = new Random((long)this.field_n);
@@ -425,7 +425,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           return;
         }
         this.field_q = TileGridCell.getPermutationTable(this.field_n, (byte) 76);
-        this.c(-94);
+        this.generatePermutation(-94);
     }
 
     final static GraphicsToolkit createToolkit(int param0, int param1, TextureProvider param2, int param3, ResourceArchive param4, java.awt.Canvas param5) {

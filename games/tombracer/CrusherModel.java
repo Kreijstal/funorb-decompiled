@@ -734,7 +734,7 @@ final class CrusherModel extends TrapModel {
           } else {
             var9 = RevolverItemComponent.field_J[74];
           }
-          gqa.a(var8, -83584144, var7, var6_int, var9, param3);
+          gqa.drawModelAt(var8, -83584144, var7, var6_int, var9, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -109,7 +109,7 @@ final class mn extends TextFieldValidator {
         }
     }
 
-    final static String g(int param0) {
+    final static String getPendingUrl(int param0) {
         if (param0 > -40) {
           field_n = (String) null;
           return ofa.field_D;

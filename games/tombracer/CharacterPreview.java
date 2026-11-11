@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rp extends IntrusiveNode {
+final class CharacterPreview extends IntrusiveNode {
     ModelAnimator field_j;
     static ft field_g;
     static int field_h;
@@ -12,7 +12,7 @@ final class rp extends IntrusiveNode {
         field_g = null;
         field_f = null;
         if (!param0) {
-          rp.a(-58);
+          CharacterPreview.a(-58);
         }
     }
 
@@ -20,20 +20,20 @@ final class rp extends IntrusiveNode {
         if (param1 == -16226) {
           return param2 <= param3 ? param3 <= param0 ? param3 : param0 : param2;
         }
-        rp.a(false);
+        CharacterPreview.a(false);
         return param2 <= param3 ? param3 <= param0 ? param3 : param0 : param2;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void draw(int param0, int param1, int param2, byte param3) {
         if (param3 != 73) {
           return;
         }
         hp.drawModelPreview(param1, 0, 0, this.field_j.getModel((byte) 74), -1918106173, param2, param0);
     }
 
-    rp(int param0) {
+    CharacterPreview(int param0) {
         this.field_j = new ModelAnimator(0, param0, 1);
-        this.field_j.a(param0, false, 0, 0, true);
+        this.field_j.play(param0, false, 0, 0, true);
     }
 
     final static void a(int param0) {
@@ -44,7 +44,7 @@ final class rp extends IntrusiveNode {
         GasVentModel.i(0);
     }
 
-    final void b(int param0) {
+    final void tick(int param0) {
         if (param0 > -30) {
           field_h = 127;
           this.field_j.tick(0);

@@ -238,7 +238,7 @@ final class CollisionGrid {
                 param0.overlapsBox(32 << this.field_c, (WorldBody) null, 113, 32 << this.field_c, var8 * 32 + 16 << this.field_c, (Collidable) null, 32 * var7 + 16 << this.field_c, 0)) {
                 var9 = (CollisionGridEntry) (this.field_e.get(-121, (long)param0.getCollisionId(true)));
                 while (var9 != null) {
-                  if (var9.a(var8, var7, param0, 123)) {
+                  if (var9.matches(var8, var7, param0, 123)) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
@@ -317,7 +317,7 @@ final class CollisionGrid {
           var8 = (CollisionGridEntry) (this.field_e.get(-120, (long)param0.getCollisionId(true)));
           while (var8 != null) {
             if (var8.getCollidable((byte) -76) == param0 &&
-              !var8.a(var7, var6, var4, var3_int, -98)) {
+              !var8.intersectsBounds(var7, var6, var4, var3_int, -98)) {
               var8.unlink(104);
               var8.unlinkSecondary(-7975);
               ft.releaseGridEntry(var8, -201);

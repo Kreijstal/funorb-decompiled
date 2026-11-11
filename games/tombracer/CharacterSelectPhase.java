@@ -11,7 +11,7 @@ final class CharacterSelectPhase extends MatchPhase {
     private int field_p;
     private boolean field_y;
     static UiComponent field_s;
-    private rp[] field_t;
+    private CharacterPreview[] field_t;
     private int field_u;
     private int field_v;
     static int field_x;
@@ -71,10 +71,10 @@ final class CharacterSelectPhase extends MatchPhase {
         stackIn_3_0 = (this.canChoose(-1)) ? 0 : 1;
         var5 = stackIn_3_0;
         ik.field_h.draw(0, 0);
-        SocketConnector.a(gta.field_a.toUpperCase(), 1, SingleChildWidget.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
+        SocketConnector.drawWrappedText(gta.field_a.toUpperCase(), 1, SingleChildWidget.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
         if (-1 == this.field_u &&
           var5 != 0) {
-          SocketConnector.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, SwitchLinkList.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
+          SocketConnector.drawWrappedText(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, SwitchLinkList.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
         }
         var6_ref_ad = (CharacterChoiceTile) (this.field_n.first(-80));
         while (var6_ref_ad != null) {
@@ -94,14 +94,14 @@ final class CharacterSelectPhase extends MatchPhase {
           var8 = 64 - var6 * 64 + var3 + (var11 * 128 - 10);
           var9 = var4 + 80;
           if (this.field_t[var11] != null) {
-            this.field_t[var11].a(var8, 1400, var9 + 55, (byte) 73);
+            this.field_t[var11].draw(var8, 1400, var9 + 55, (byte) 73);
           } else {
             bsa.field_i.draw(-(bsa.field_i.width() >> 1) + var8, -(bsa.field_i.height() >> 1) + var9, 0, 1627389951, 1);
           }
-          SocketConnector.a(this.screen.getPlayerName(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
+          SocketConnector.drawWrappedText(this.screen.getPlayerName(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
           var11++;
         }
-        RemovedFromGameMenu.f((byte) -6);
+        RemovedFromGameMenu.resetDepthRange((byte) -6);
         this.drawMenuButton(-27142);
     }
 
@@ -115,7 +115,7 @@ final class CharacterSelectPhase extends MatchPhase {
         }
         for (var3 = 0; this.field_t.length > var3; var3++) {
           if (null != this.field_t[var3]) {
-            this.field_t[var3].b(-73);
+            this.field_t[var3].tick(-73);
           }
         }
         if (param1) {
@@ -205,7 +205,7 @@ final class CharacterSelectPhase extends MatchPhase {
             this.field_n.addLast((byte) -104, var8);
           }
           var3_intLifetime1 = param0.matchState.players.length;
-          this.field_t = new rp[var3_intLifetime1];
+          this.field_t = new CharacterPreview[var3_intLifetime1];
           this.field_y = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -230,9 +230,9 @@ final class CharacterSelectPhase extends MatchPhase {
 
     final void onCharacterChosen(int param0, int param1, int param2) {
         this.selection.chooseCharacter((byte) -69, param2, param0);
-        this.field_t[param0] = new rp(param2);
+        this.field_t[param0] = new CharacterPreview(param2);
         ModelAnimator var4 = this.field_t[param0].field_j;
-        var4.a(param2, false, param1, 5, true);
+        var4.play(param2, false, param1, 5, true);
         int var5 = var4.getCurrentAnimationLength((byte) 114);
         var4.queueAnimation(param1 + 107, var5, param2, 0, 0);
         FloatingMessage var6 = RewardChoicePhase.createTextMessage(param1 ^ -41, LegacyOpenGlFlowingWaterEffect.formatText(82, SpriteSampleOperator.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
@@ -306,7 +306,7 @@ final class CharacterSelectPhase extends MatchPhase {
         if (!TextWidgetPainter.a(119) &&
           mq.field_e != null) {
           boolean decompiledFrameRemainder0 = true;
-          if (!di.field_g[param0] && (!di.field_f[param0] &&
+          if (!ToolkitSelector.field_g[param0] && (!ToolkitSelector.field_f[param0] &&
             ReportAbuseDialog.field_ub <= 0 ||
             !mq.field_e.isCharacterUnlocked((byte) 4, param0)) && !SimpleBlockBehaviour.c(0)) {
             stackIn_16_0 = false;
@@ -317,7 +317,7 @@ final class CharacterSelectPhase extends MatchPhase {
           }
           return stackIn_16_0;
         }
-        return di.field_g[param0];
+        return ToolkitSelector.field_g[param0];
     }
 
     final boolean allowsChat(int param0) {

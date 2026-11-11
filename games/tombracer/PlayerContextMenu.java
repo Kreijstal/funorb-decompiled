@@ -94,10 +94,10 @@ final class PlayerContextMenu {
             if (!var5.field_Sb &&
               var5.field_Yb) {
               if (!var5.field_ec) {
-                this.field_f.addItem((byte) -125, 2, LegacyOpenGlFlowingWaterEffect.formatText(91, di.field_h, new String[]{var3}));
+                this.field_f.addItem((byte) -125, 2, LegacyOpenGlFlowingWaterEffect.formatText(91, ToolkitSelector.field_h, new String[]{var3}));
               } else {
                 if (var5.field_Bb) {
-                  this.field_f.addItem((byte) -125, 2, LegacyOpenGlFlowingWaterEffect.formatText(91, di.field_h, new String[]{var3}));
+                  this.field_f.addItem((byte) -125, 2, LegacyOpenGlFlowingWaterEffect.formatText(91, ToolkitSelector.field_h, new String[]{var3}));
                 }
               }
             }
@@ -214,7 +214,7 @@ final class PlayerContextMenu {
           PlayerContextMenu.releaseStatics((byte) 36);
         }
         if (param0 == 8) {
-          no.a(this.field_i, this.field_g, (byte) 120);
+          no.beginPrivateMessage(this.field_i, this.field_g, (byte) 120);
           return true;
         }
         if (param0 == 18) {

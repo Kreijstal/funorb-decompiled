@@ -5,7 +5,7 @@ final class bna extends IntrusiveNode {
     boolean field_g;
     int[] field_f;
 
-    final static void a(java.math.BigInteger param0, boolean param1, java.math.BigInteger param2, PacketBuffer param3, PacketBuffer param4) {
+    final static void writeEncryptedBlock(java.math.BigInteger param0, boolean param1, java.math.BigInteger param2, PacketBuffer param3, PacketBuffer param4) {
         try {
           C2SChooseRewardPacket.writeEncryptedPayload(param4.position, (byte) -81, param4.payload, param2, param3, param0, 0);
           if (param1) {

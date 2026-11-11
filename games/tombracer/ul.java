@@ -12,7 +12,7 @@ final class ul extends nqa implements na {
         }
     }
 
-    final jagdx.IDirect3DBaseTexture c(int param0) {
+    final jagdx.IDirect3DBaseTexture getBaseTexture(int param0) {
         int var2 = -22 % ((48 - param0) / 45);
         return (jagdx.IDirect3DBaseTexture) ((Object) this.field_g);
     }

@@ -31,7 +31,7 @@ final class TileOperator extends TextureOperator {
           bb.field_f = new ena(0);
           while (!bb.field_f.ensureLoaded((byte) 107)) {
           }
-          ContextMenu.a(13, bb.field_f);
+          ContextMenu.setCharacterAnimations(13, bb.field_f);
           wl.field_f = new AnimationSequence[13][38];
           var12 = "tr_character_01";
           wl.field_f[0][0] = PillarComponent.loadAnimationSequence("henryj_idle", -124, param5, var12);
@@ -293,8 +293,8 @@ final class TileOperator extends TextureOperator {
           var6 = param1;
           var7 = -param1;
           var8 = -1;
-          var9 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + param1);
-          var10 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - param1);
+          var9 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + param1);
+          var10 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - param1);
           C2SRoomResultPacket.fillRange((byte) -55, param2, var9, vaa.field_a[param4], var10);
           while (var6 > var5_int) {
             var8 += 2;
@@ -306,8 +306,8 @@ final class TileOperator extends TextureOperator {
               var12 = var6 + param4;
               if (var12 >= gca.field_d &&
                 var11 <= hc.field_h) {
-                var13 = rp.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, var5_int + param3);
-                var14 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var5_int);
+                var13 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, var5_int + param3);
+                var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var5_int);
                 if (var12 <= hc.field_h) {
                   C2SRoomResultPacket.fillRange((byte) -55, param2, var13, vaa.field_a[var12], var14);
                 }
@@ -325,8 +325,8 @@ final class TileOperator extends TextureOperator {
             if (var11Lifetime1 > hc.field_h) {
               continue;
             }
-            var13Lifetime1 = rp.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, param3 + var6);
-            var14Lifetime1 = rp.clamp(DiskCacheWorker.field_c, param0 - 16226, pka.field_b, param3 - var6);
+            var13Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, param3 + var6);
+            var14Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 - 16226, pka.field_b, param3 - var6);
             if (hc.field_h >= var12Lifetime1) {
               C2SRoomResultPacket.fillRange((byte) -55, param2, var13Lifetime1, vaa.field_a[var12Lifetime1], var14Lifetime1);
             }

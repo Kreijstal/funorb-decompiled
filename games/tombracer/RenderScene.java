@@ -89,7 +89,7 @@ final class RenderScene {
         field_a = null;
     }
 
-    final void b(int param0) {
+    final void clampTargetToBounds(int param0) {
         this.renderTarget.clampToBounds(false);
         if (param0 != 1909106792) {
           field_b = (String) null;

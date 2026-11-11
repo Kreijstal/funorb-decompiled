@@ -138,8 +138,8 @@ final class cj implements WidgetPainter {
           if (param2 != 16777215) {
             return;
           }
-          for (var10 = var12.c(-3) - 1; 0 <= var10; var10--) {
-            SoftwareRasterizer.fillCircle(var12.a(var10, (byte) -14) * var7 / var12.b(24857) + var8, var9, this.field_d, this.field_c);
+          for (var10 = var12.getPointCount(-3) - 1; 0 <= var10; var10--) {
+            SoftwareRasterizer.fillCircle(var12.getPoint(var10, (byte) -14) * var7 / var12.getScale(24857) + var8, var9, this.field_d, this.field_c);
           }
           if (this.field_b != null) {
             this.field_b.drawCenteredText(var12.field_o, var7 / 2 + var8, var12.field_C + var9 + this.field_b.field_m, this.field_g, this.field_h);

@@ -14,7 +14,7 @@ final class FontMetrics {
     static kea field_f;
     static String field_i;
 
-    final static QuickChatMenu a(boolean param0, UiComponent param1, UiComponent param2, QuickChatCategory param3, UiComponent param4) {
+    final static QuickChatMenu createQuickChatMenu(boolean param0, UiComponent param1, UiComponent param2, QuickChatCategory param3, UiComponent param4) {
         Object stackIn_5_0 = null;
         int stackIn_10_0 = 0;
         int stackIn_14_0 = 0;
@@ -78,7 +78,7 @@ final class FontMetrics {
               var13_ref_br = UnlockEntry.field_g.getCategory((byte) 98, param3.field_q[var12]);
               var8[var12] = var13_ref_br.field_n;
               var9[var12] = param3.field_k[var12];
-              var11[var12] = FontMetrics.a(param0, param1, param2, var13_ref_br, param4);
+              var11[var12] = FontMetrics.createQuickChatMenu(param0, param1, param2, var13_ref_br, param4);
               var12++;
               if (var17 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -993,7 +993,7 @@ final class FontMetrics {
         }
     }
 
-    final int a(String param0, int param1, ToolkitSprite[] param2, int param3, int param4) {
+    final int wrappedHeight(String param0, int param1, ToolkitSprite[] param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

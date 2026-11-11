@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class di {
+final class ToolkitSelector {
     private boolean field_e;
-    private ei[] field_b;
+    private ToolkitCandidate[] field_b;
     private TextureProvider field_c;
     static boolean[] field_f;
     iqa field_i;
@@ -12,7 +12,7 @@ final class di {
     static String field_h;
     static iw field_d;
 
-    final void a(int param0, ei[] param1) {
+    final void setCandidates(int param0, ToolkitCandidate[] param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -54,15 +54,15 @@ final class di {
         field_d = null;
     }
 
-    di(TextureProvider param0, ei[] param1) {
+    ToolkitSelector(TextureProvider param0, ToolkitCandidate[] param1) {
         this(tba.a((byte) 98), CommonChooseReward.e(-1), param0, dsa.field_c, param1);
     }
 
-    final boolean b(int param0) {
+    final boolean ensureToolkitForActiveCanvas(int param0) {
         if (param0 != 100663296) {
           return false;
         }
-        return this.a(-101, LegacyOpenGlRidgedWaterEffect.getActiveCanvas((byte) -97));
+        return this.ensureToolkit(-101, LegacyOpenGlRidgedWaterEffect.getActiveCanvas((byte) -97));
     }
 
     final static void advanceLobbyTransitions(byte param0, boolean param1) {
@@ -136,11 +136,11 @@ final class di {
           }
         }
         if (param0 != -98) {
-          di.getApplet(57);
+          ToolkitSelector.getApplet(57);
         }
     }
 
-    private final void a(java.awt.Canvas param0, byte param1) {
+    private final void selectToolkit(java.awt.Canvas param0, byte param1) {
         int var6 = 0;
         Object stackIn_113_0 = null;
         StringBuilder stackIn_113_1 = null;
@@ -148,8 +148,8 @@ final class di {
         RuntimeException decompiledCaughtException = null;
         Object var3 = null;
         int var4 = 0;
-        ei[] var5 = null;
-        ei var7 = null;
+        ToolkitCandidate[] var5 = null;
+        ToolkitCandidate var7 = null;
         int var8_int = 0;
         RuntimeException var8 = null;
         int var9_int = 0;
@@ -295,10 +295,10 @@ final class di {
               }
               if (decompiledFrameRemainder0) {
                 if (null != this.field_i) {
-                  if (this.field_i.field_b.a(var7, 55) &&
+                  if (this.field_i.field_b.isSameType(var7, 55) &&
                     null != this.field_i.field_d &&
                     this.field_i.field_a == param0 &&
-                    var7.a(this.field_i, (byte) -126)) {
+                    var7.accepts(this.field_i, (byte) -126)) {
                     this.field_e = true;
                     return;
                   }
@@ -313,7 +313,7 @@ final class di {
                   var12 = VoronoiNoiseOperator.createToolkit(var7.field_a, -29355, this.field_c, var7.field_b, ck.field_a, param0);
                   if (var12 != null) {
                     var9 = new iqa(var12, var7, param0);
-                    if (var7.a(var9, (byte) -126)) {
+                    if (var7.accepts(var9, (byte) -126)) {
                       if (this.field_i != null) {
                         if (var9.field_d == this.field_i.field_d &&
                           this.field_i.field_a == var9.field_a) {
@@ -361,7 +361,7 @@ final class di {
         }
     }
 
-    private final boolean a(int param0, java.awt.Canvas param1) {
+    private final boolean ensureToolkit(int param0, java.awt.Canvas param1) {
         iqa var3 = null;
         RuntimeException var3_ref = null;
         boolean stackIn_16_0 = false;
@@ -377,7 +377,7 @@ final class di {
           if (var3 == null ||
             !this.field_e ||
             var3.field_a != param1) {
-            this.a(param1, (byte) -70);
+            this.selectToolkit(param1, (byte) -70);
           }
           if (null != this.field_i) {
             this.field_i.field_d.updateTime((int)(bva.currentTimeMillis((byte) -107) - this.field_i.field_f));
@@ -406,14 +406,14 @@ final class di {
         }
     }
 
-    private di(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, PlatformTaskDispatcher param3, ei[] param4) {
+    private ToolkitSelector(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, PlatformTaskDispatcher param3, ToolkitCandidate[] param4) {
         this.field_e = false;
         try {
           this.field_c = param2;
           ck.field_a = param1;
           HotspotTextWidget.field_B = param0;
           BridgeModel.initNativeLibraries(param0, param3, -55);
-          this.a(0, param4);
+          this.setCandidates(0, param4);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

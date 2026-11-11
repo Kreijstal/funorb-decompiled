@@ -361,7 +361,7 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final int o(byte param0) {
+    final int getOriginX(byte param0) {
         int var2 = 68 / ((param0 - 56) / 43);
         return this.field_n;
     }
@@ -412,9 +412,9 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final int p(byte param0) {
+    final int getOriginY(byte param0) {
         if (param0 < 4) {
-          this.o((byte) 99);
+          this.getOriginX((byte) 99);
         }
         return this.field_s;
     }

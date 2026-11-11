@@ -428,7 +428,7 @@ final class PlatformModel extends TrapModel {
             this.offsetX = -131072 + uca.cosmeticRandom.nextBounded(262144, ~param0);
             this.offsetY = uca.cosmeticRandom.nextBounded(262144, param0 + 1) - 131072;
             var2_int = 1;
-            if (this.field_m.g((byte) 120)) {
+            if (this.field_m.isCollapsed((byte) 120)) {
               var2_int = 0;
               for (var4_int = 0; this.columns > var4_int; var4_int++) {
                 for (var5_int = 0; this.rows > var5_int; var5_int++) {

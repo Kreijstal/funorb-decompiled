@@ -869,7 +869,7 @@ final class HardwareModel extends ToolkitModel {
                 this.field_D = param1.groupVerticesByLabel(false, (byte) 64);
               }
               if (null != param1.field_m &&
-                ObjectList.a(this.field_h, param2, (byte) -122)) {
+                ObjectList.hasFlag1024(this.field_h, param2, (byte) -122)) {
                 this.field_mb = param1.b((byte) -124);
               }
               stackIn_351_0 = (ModelData) (param1);
@@ -881,7 +881,7 @@ final class HardwareModel extends ToolkitModel {
             stackIn_354_1 = this.field_h;
             break;
           }
-          if (ofa.a(stackIn_354_0, stackIn_354_1, (byte) -126)) {
+          if (ofa.hasMask384(stackIn_354_0, stackIn_354_1, (byte) -126)) {
             var16 = 0;
             var17 = new int[256];
             var18 = 0;
@@ -1542,7 +1542,7 @@ final class HardwareModel extends ToolkitModel {
           if (null == this.field_X &&
             this.field_s == null &&
             this.field_u == null &&
-            !ei.hasAnyMask55(this.field_h, this.field_Y, (byte) 27)) {
+            !ToolkitCandidate.hasAnyMask55(this.field_h, this.field_Y, (byte) 27)) {
             var2_int = 0;
             var3 = 0;
             var4 = 0;
@@ -1724,7 +1724,7 @@ final class HardwareModel extends ToolkitModel {
             }
           }
           if (null != this.field_q &&
-            !ofa.a(this.field_Y, this.field_h, (byte) -126)) {
+            !ofa.hasMask384(this.field_Y, this.field_h, (byte) -126)) {
             this.field_q = (int[][]) null;
             this.field_jb = null;
           }
@@ -1735,7 +1735,7 @@ final class HardwareModel extends ToolkitModel {
             this.field_hb = null;
           }
           if (this.field_mb != null &&
-            !ObjectList.a(this.field_h, this.field_Y, (byte) 21)) {
+            !ObjectList.hasFlag1024(this.field_h, this.field_Y, (byte) 21)) {
             this.field_mb = (int[][]) null;
           }
           if (this.field_U != null &&
@@ -2446,7 +2446,7 @@ final class HardwareModel extends ToolkitModel {
             stackIn_75_0 = C2SChooseRewardPacket.a(true, param4, this.field_h) ? 1 : 0;
           }
           if (stackIn_75_0 == 0) {
-            if (!DiskCacheWorker.a((byte) 114, this.field_h, param4)) {
+            if (!DiskCacheWorker.hasFlag2048((byte) 114, this.field_h, param4)) {
               param0.field_ib = null;
               if (var13 != 0) {
                 param0.field_ib = this.field_ib;
@@ -2851,7 +2851,7 @@ final class HardwareModel extends ToolkitModel {
               param0.field_nb = param2.field_nb;
               var11Lifetime6 = 0;
               while (var11Lifetime6 < this.field_L) {
-                param0.field_nb[var11Lifetime6].a((byte) -81, this.field_nb[var11Lifetime6]);
+                param0.field_nb[var11Lifetime6].copyFrom((byte) -81, this.field_nb[var11Lifetime6]);
                 var11Lifetime6++;
                 if (var13 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -3598,19 +3598,19 @@ final class HardwareModel extends ToolkitModel {
         RuntimeException var2 = null;
         try {
           if (this.field_ib != null) {
-            this.field_ib.c(-5941);
+            this.field_ib.release(-5941);
           }
           if (null != this.field_d) {
-            this.field_d.c(-5941);
+            this.field_d.release(-5941);
           }
           if (this.field_E != null) {
-            this.field_E.c(-5941);
+            this.field_E.release(-5941);
           }
           if (null != this.field_O) {
-            this.field_O.c(-5941);
+            this.field_O.release(-5941);
           }
           if (null != this.field_g) {
-            this.field_g.a(-17253);
+            this.field_g.release(-17253);
           }
           if (param0 < 109) {
             this.field_mb = (int[][]) null;
@@ -4874,7 +4874,7 @@ final class HardwareModel extends ToolkitModel {
           this.field_h = param2;
           this.field_Y = param1;
           if (param3 ||
-            DiskCacheWorker.a((byte) 112, this.field_h, this.field_Y)) {
+            DiskCacheWorker.hasFlag2048((byte) 112, this.field_h, this.field_Y)) {
             this.field_ib = new hg(C2SChooseRewardPacket.a(true, this.field_Y, this.field_h));
           }
           if (param3 ||

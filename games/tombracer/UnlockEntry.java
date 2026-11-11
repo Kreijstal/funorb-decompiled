@@ -84,7 +84,7 @@ final class UnlockEntry extends IntrusiveNode {
           return false;
         }
         stackIn_10_0 = ((this.field_h == 0 &&
-          !(di.field_f[this.field_f])) ||
+          !(ToolkitSelector.field_f[this.field_f])) ||
           (this.field_h == 1 &&
           !(wk.field_i[this.field_f])));
         return stackIn_10_0;

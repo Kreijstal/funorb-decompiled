@@ -18,13 +18,13 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException var6 = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          var6_int = rp.clamp(hc.field_h, param4 - 16236, gca.field_d, param2);
+          var6_int = CharacterPreview.clamp(hc.field_h, param4 - 16236, gca.field_d, param2);
           if (param4 != 10) {
             GameKeyHandler.a((byte) 101);
           }
-          var7 = rp.clamp(hc.field_h, param4 ^ -16236, gca.field_d, param5);
-          var8 = rp.clamp(DiskCacheWorker.field_c, param4 - 16236, pka.field_b, param1);
-          var9 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0);
+          var7 = CharacterPreview.clamp(hc.field_h, param4 ^ -16236, gca.field_d, param5);
+          var8 = CharacterPreview.clamp(DiskCacheWorker.field_c, param4 - 16236, pka.field_b, param1);
+          var9 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0);
           for (var10 = var6_int; var7 >= var10; var10++) {
             C2SRoomResultPacket.fillRange((byte) -55, param3, var9, vaa.field_a[var10], var8);
           }

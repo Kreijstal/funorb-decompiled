@@ -107,7 +107,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               if (var26 == 7 &&
                 var29 == 0) {
                 var25_ref_ka = SpawnerBehaviour.a(4, 12166, 7);
-                gqa.a(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, -81), -83584144, var6, var5, var25_ref_ka, -393216 + var7);
+                gqa.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, -81), -83584144, var6, var5, var25_ref_ka, -393216 + var7);
                 break regionExit1;
               } else if (var26 != 14 ||
                 var29 != 0) {
@@ -147,7 +147,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               } else {
                 var24_ref = SwitchLinkList.field_b[5];
               }
-              gqa.a(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 69), -83584144, var6, var5, var24_ref, var7);
+              gqa.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 69), -83584144, var6, var5, var24_ref, var7);
               break regionExit1;
             }
             if ((decompiledFrameRemainder5) &&
@@ -162,7 +162,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               var28 = SpawnerBehaviour.a(var27, param1 ^ -12189, 7).copy((byte) 1, 526343, true);
               var28.O(var26Lifetime2 >> 2, 128, var26Lifetime2 >> 2);
               var28.tintColours(-1, 10, 30, var26Lifetime2);
-              gqa.a(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
+              gqa.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -233,7 +233,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               }
             }
             var26_ref_ka = SpawnerBehaviour.a(3, 12166, 7);
-            gqa.a(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 92), param1 ^ 83584149, var6, var5, var26_ref_ka, -393216 + var7);
+            gqa.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 92), param1 ^ 83584149, var6, var5, var26_ref_ka, -393216 + var7);
           }
           if (var23 == null) {
             return;
@@ -364,19 +364,19 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               var13.O(var10 << 2, 512, var10 << 2);
               stackIn_36_0 = (Projectile) (param2);
               stackIn_37_1 = !(param1);
-              gqa.a(GameScreen.positiveModulo(-(((Projectile) (Object) stackIn_36_0).getAngle(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));
+              gqa.drawModelAt(GameScreen.positiveModulo(-(((Projectile) (Object) stackIn_36_0).getAngle(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));
               if (var15 == 0) {
                 return;
               }
             case 2:
-              gqa.a(param2.getAngle(true), -83584144, var6, var5, SpawnerBehaviour.a(0, 12166, 7), var7);
+              gqa.drawModelAt(param2.getAngle(true), -83584144, var6, var5, SpawnerBehaviour.a(0, 12166, 7), var7);
               if (var15 == 0) {
                 return;
               }
             case 0:
               stackIn_46_0 = (Projectile) (param2);
               stackIn_47_1 = !(param1);
-              gqa.a(GameScreen.positiveModulo(-(((Projectile) (Object) stackIn_46_0).getAngle(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, SpawnerBehaviour.a(1, 12166, 7), var7);
+              gqa.drawModelAt(GameScreen.positiveModulo(-(((Projectile) (Object) stackIn_46_0).getAngle(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, SpawnerBehaviour.a(1, 12166, 7), var7);
               if (var15 == 0) {
                 return;
               }
@@ -384,7 +384,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             default:
               break;
           }
-          gqa.a(GameScreen.positiveModulo(-(param2.getAngle(true) >> 2), 2048, 107), -83584144, var6, var5, SpawnerBehaviour.a(2, 12166, 7), var7);
+          gqa.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle(true) >> 2), 2048, 107), -83584144, var6, var5, SpawnerBehaviour.a(2, 12166, 7), var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -406,7 +406,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -662,7 +662,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void openWebsitePage(String param0, byte param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -672,7 +672,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           ofa.field_D = param0;
           jsa.a(false, 12);
           if (param1 >= -24) {
-            DefaultRoomObjectRenderer.a(-102);
+            DefaultRoomObjectRenderer.releaseStatics(-102);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -794,7 +794,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         int var7 = 0;
         try {
           if (param1 != 95) {
-            DefaultRoomObjectRenderer.a(-15);
+            DefaultRoomObjectRenderer.releaseStatics(-15);
           }
           var4_int = param0.getSize(1);
           var5 = param0.getKind(-77);

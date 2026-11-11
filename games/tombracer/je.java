@@ -106,7 +106,7 @@ final class je extends haa {
         }
     }
 
-    final int c(int param0) {
+    final int measureListHeight(int param0) {
         if (param0 != 23112) {
           this.field_I[10] = this.field_I[0];
         }
@@ -130,9 +130,9 @@ final class je extends haa {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activate(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        super.b(param0, param1, param2, -109);
+        super.activate(param0, param1, param2, -109);
         if (param3 > -40) {
           this.field_I[3] = this.field_I[1];
         }

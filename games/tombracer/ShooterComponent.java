@@ -123,7 +123,7 @@ abstract class ShooterComponent extends PrefabComponent {
               }
               var6 = ((WeaponShooterBehaviour) (param1)).getWeapon(-2);
               if (var6 != null) {
-                var7 = var6.a(true);
+                var7 = var6.getFireCooldown(true);
                 if (var7 > 0) {
                   var6.setCooldown(var5.nextBounded(var7, 0), false);
                 }

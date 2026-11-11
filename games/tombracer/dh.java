@@ -227,7 +227,7 @@ final class dh {
           if (param9 != 29870) {
             field_e = (UiComponent) null;
           }
-          stackIn_3_0 = param0.a((aa) null, param11, param3, 0, param7, jg.withAlpha(param1, (byte) -90, param8), (int[]) null, param2, jg.withAlpha(param1, (byte) -45, param6), param12, (byte) -118, param5, 0, (ToolkitSprite[]) null, param4, param10);
+          stackIn_3_0 = param0.drawWrapped((aa) null, param11, param3, 0, param7, jg.withAlpha(param1, (byte) -90, param8), (int[]) null, param2, jg.withAlpha(param1, (byte) -45, param6), param12, (byte) -118, param5, 0, (ToolkitSprite[]) null, param4, param10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

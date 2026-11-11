@@ -201,7 +201,7 @@ final class ResourceArchive {
         return var2 != 0;
     }
 
-    final static int a(byte param0, int param1, int param2, int param3) {
+    final static int scaleToBits(byte param0, int param1, int param2, int param3) {
         int var4 = 26 % ((-23 - param0) / 48);
         return param1 / (param2 / (1 << param3));
     }

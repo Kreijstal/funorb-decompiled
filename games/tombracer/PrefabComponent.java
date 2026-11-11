@@ -22,7 +22,7 @@ abstract class PrefabComponent extends RoomComponent {
         super(param0, param1, param2, param3);
     }
 
-    Switchable u(int param0) {
+    Switchable getSwitchable(int param0) {
         if (param0 >= -60) {
           this.usesBehaviourModels(-82);
           return (Switchable) ((Object) this.field_A);

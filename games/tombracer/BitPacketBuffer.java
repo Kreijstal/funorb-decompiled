@@ -291,27 +291,27 @@ final class BitPacketBuffer extends PacketBuffer {
           Room.field_k = param1;
           if (WeaponShooterBehaviour.field_r == Room.field_k) {
             if (FontMetrics.field_f == baa.field_e) {
-              baa.field_d.a(0, new ei[]{(ei) ((Object) HuffmanCodec.field_a)});
+              baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a)});
             } else {
               if (tia.field_d == FontMetrics.field_f) {
-                baa.field_d.a(0, new ei[]{(ei) ((Object) DateInputWidget.field_z)});
+                baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) DateInputWidget.field_z)});
               } else {
                 if (FontMetrics.field_f == PitModel.field_s) {
-                  baa.field_d.a(0, new ei[]{(ei) ((Object) UsernameSuggestionsPanel.field_x)});
+                  baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x)});
                 }
               }
             }
           } else {
             if (FontMetrics.field_f != baa.field_e) {
               if (FontMetrics.field_f == tia.field_d) {
-                baa.field_d.a(0, new ei[]{(ei) ((Object) vea.field_c)});
+                baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) vea.field_c)});
               } else {
                 if (FontMetrics.field_f == PitModel.field_s) {
-                  baa.field_d.a(0, new ei[]{(ei) ((Object) CharacterSelection.field_d)});
+                  baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) CharacterSelection.field_d)});
                 }
               }
             } else {
-              baa.field_d.a(0, new ei[]{(ei) ((Object) ControllerLocomotor.field_t)});
+              baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) ControllerLocomotor.field_t)});
             }
           }
           if (null != mq.field_e) {

@@ -32,17 +32,17 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
             this.onHotspotAction((HotspotTextWidget) null, -41, 57, 20);
           }
           if (param1 == 0) {
-            DefaultRoomObjectRenderer.a("terms.ws", (byte) -25);
+            DefaultRoomObjectRenderer.openWebsitePage("terms.ws", (byte) -25);
             return;
           }
           if (param1 == 1) {
-            DefaultRoomObjectRenderer.a("privacy.ws", (byte) -109);
+            DefaultRoomObjectRenderer.openWebsitePage("privacy.ws", (byte) -109);
             return;
           }
           if (param1 != 2) {
             return;
           }
-          DefaultRoomObjectRenderer.a("conduct.ws", (byte) -43);
+          DefaultRoomObjectRenderer.openWebsitePage("conduct.ws", (byte) -43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -212,7 +212,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_A.setHotspotTooltip(EditableTextField.field_Fb, 0, 0);
         this.field_A.setHotspotTooltip(EditableTextField.field_Fb, 1, 0);
         this.field_A.field_h = (WidgetListener) (this);
-        this.field_A.a(var3, (byte) -120, -90 + this.field_m, 46);
+        this.field_A.setBoundsToTextWidth(var3, (byte) -120, -90 + this.field_m, 46);
         var3 = var3 + (this.field_A.field_p + 15);
         this.addChild(this.field_A, -1);
         int var6 = 4;
@@ -408,7 +408,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void setNameFieldText(String param0, int param1) {
         ValidatedTextInputWidget var3 = null;
         String var4 = null;
         try {

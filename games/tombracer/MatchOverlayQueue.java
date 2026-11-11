@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cja {
+final class MatchOverlayQueue {
     private IntrusiveDeque field_a;
 
-    final void a(byte param0) {
+    final void drawCurrent(byte param0) {
         no var2 = (no) (this.field_a.first(-80));
         if (param0 >= -76) {
           int[] var3 = (int[]) null;
-          this.a((byte) -64, (int[]) null);
+          this.enqueue((byte) -64, (int[]) null);
         }
         if (var2 == null) {
           return;
@@ -167,7 +167,7 @@ final class cja {
                   } else {
                     param6 = var11;
                   }
-                  cja.findValidSettingCombination(24, param1, param2, param3, param4, param5 + 1, param6, param7);
+                  MatchOverlayQueue.findValidSettingCombination(24, param1, param2, param3, param4, param5 + 1, param6, param7);
                   if (TouchSwitchBehaviour.field_s) {
                     return;
                   }
@@ -205,7 +205,7 @@ final class cja {
                 }
               }
               if (var12 != 0) {
-                cja.findValidSettingCombination(127, param1, param2, param3, param4, 1 + param5, param6, param7);
+                MatchOverlayQueue.findValidSettingCombination(127, param1, param2, param3, param4, 1 + param5, param6, param7);
                 var10Lifetime1 = 1;
               }
               if (TouchSwitchBehaviour.field_s) {
@@ -231,7 +231,7 @@ final class cja {
 
     final static String a(int param0) {
         if (param0 != 0) {
-          cja.a(117);
+          MatchOverlayQueue.a(117);
         }
         if (gsa.field_y == LegacyOpenGlTexture.field_a) {
           return ConstraintLocomotor.field_p;
@@ -239,7 +239,7 @@ final class cja {
         return ConstrainToLatticeLocomotor.field_u;
     }
 
-    final void a(byte param0, int[] param1) {
+    final void enqueue(byte param0, int[] param1) {
         int var4 = 0;
         int[] var3 = null;
         int var5 = 0;
@@ -276,7 +276,7 @@ final class cja {
         }
     }
 
-    final void b(byte param0) {
+    final void updateCurrent(byte param0) {
         if (TextWidgetPainter.a(param0 ^ -48) ||
           !dma.field_l.isReadyToStart(param0 - 60)) {
           return;
@@ -295,7 +295,7 @@ final class cja {
         var3.update((byte) -109);
     }
 
-    cja() {
+    MatchOverlayQueue() {
         this.field_a = new IntrusiveDeque();
     }
 

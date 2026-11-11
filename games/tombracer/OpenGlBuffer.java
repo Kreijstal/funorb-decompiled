@@ -14,7 +14,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
     private int field_d;
     private boolean field_j;
 
-    final jaclib.memory.Buffer a(jaggl.MapBuffer param0, boolean param1, int param2) {
+    final jaclib.memory.Buffer mapWith(jaggl.MapBuffer param0, boolean param1, int param2) {
         RuntimeException var4 = null;
         jaggl.MapBuffer var5 = null;
         int stackIn_9_0;
@@ -204,10 +204,10 @@ abstract class OpenGlBuffer implements GpuBuffer {
           if (gca.field_d <= param2 &&
             hc.field_h >= param2) {
             var57 = vaa.field_a[param2];
-            var40 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param5 + param3);
-            var41 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param5 + param3);
-            var42 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var11);
-            var43 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var11);
+            var40 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param5 + param3);
+            var41 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param5 + param3);
+            var42 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var11);
+            var43 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var11);
             C2SRoomResultPacket.fillRange((byte) -55, param0, var42, var57, var40);
             C2SRoomResultPacket.fillRange((byte) -55, param1, var43, var57, var42);
             C2SRoomResultPacket.fillRange((byte) -55, param0, var41, var57, var43);
@@ -269,8 +269,8 @@ abstract class OpenGlBuffer implements GpuBuffer {
             if (hc.field_h < var40Lifetime1) {
               continue;
             }
-            var42Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var8_int + param3);
-            var43Lifetime1 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var8_int);
+            var42Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var8_int + param3);
+            var43Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var8_int);
             if (var39 == 0) {
               if (var40Lifetime1 >= gca.field_d) {
                 C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var40Lifetime1], var43Lifetime1);
@@ -281,8 +281,8 @@ abstract class OpenGlBuffer implements GpuBuffer {
               C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var41Lifetime1], var43Lifetime1);
               continue;
             }
-            var44 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var10);
-            var45 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var10);
+            var44 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var10);
+            var45 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var10);
             if (var40Lifetime1 >= gca.field_d) {
               var58 = vaa.field_a[var40Lifetime1];
               C2SRoomResultPacket.fillRange((byte) -55, param0, var45, var58, var43Lifetime1);
@@ -379,7 +379,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         }
     }
 
-    final long b(boolean param0) {
+    final long getPointer(boolean param0) {
         if (!param0) {
           return -36L;
         }

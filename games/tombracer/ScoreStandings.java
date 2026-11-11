@@ -134,7 +134,7 @@ final class ScoreStandings {
               stackIn_41_0 = -1;
               return stackIn_41_0;
             }
-            KeySwitchComponent.a(param0, var11, 1);
+            KeySwitchComponent.registerFontFile(param0, var11, 1);
             stackIn_43_0 = 100;
             return stackIn_43_0;
           }

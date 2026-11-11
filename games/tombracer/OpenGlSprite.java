@@ -36,7 +36,7 @@ final class OpenGlSprite extends ToolkitSprite {
         this.field_c.setTextureCombineOperands(1, 0, 34168, 768);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
+    private final void uploadPixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
         try {
           if (param2 != 0) {
             this.b(-64, -35);
@@ -47,7 +47,7 @@ final class OpenGlSprite extends ToolkitSprite {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void captureFramebuffer(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int[] var14 = null;
         int[] var12 = null;
         int[] var11 = null;
@@ -68,7 +68,7 @@ final class OpenGlSprite extends ToolkitSprite {
             for (var9 = 0; var9 < var14.length; var9++) {
               var11[var9] = WallTile.bitwiseOr(var14[var9], -16777216);
             }
-            this.a(param4, param1, 0, 0, var15, param4, param3, param0);
+            this.uploadPixels(param4, param1, 0, 0, var15, param4, param3, param0);
           }
         }
     }

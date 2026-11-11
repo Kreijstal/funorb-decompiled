@@ -176,7 +176,7 @@ final class ca extends GameFont {
               }
             }
           }
-          if (!param0.supportsTexture2D(false, una.field_g, rp.field_g)) {
+          if (!param0.supportsTexture2D(false, una.field_g, CharacterPreview.field_g)) {
             var36 = new int[var35.length];
             var28 = var36;
             var8_ref_int__ = var28;
@@ -185,7 +185,7 @@ final class ca extends GameFont {
             }
             this.field_f = param0.createIntTexture2D(true, var6Lifetime1, false, var6Lifetime1, var36);
           } else {
-            this.field_f = param0.createByteTexture2D(var6Lifetime1, var35, false, rp.field_g, -128, var6Lifetime1);
+            this.field_f = param0.createByteTexture2D(var6Lifetime1, var35, false, CharacterPreview.field_g, -128, var6Lifetime1);
           }
           this.field_e = true;
         }

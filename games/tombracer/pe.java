@@ -7,7 +7,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
     private int field_l;
     private int field_n;
 
-    final static String[] a(PacketBuffer param0, byte param1) {
+    final static String[] readStringList(PacketBuffer param0, byte param1) {
         int var4 = 0;
         int var5 = 0;
         IntrusiveDeque var6 = null;

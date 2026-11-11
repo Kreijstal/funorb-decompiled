@@ -31,14 +31,14 @@ final class jla extends FocusableWidget {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activate(int param0, int param1, int param2, int param3) {
         this.field_w = !this.field_w ? true : false;
         if (param3 <= -40) {
-          super.b(param0, param1, param2, -71);
+          super.activate(param0, param1, param2, -71);
           return;
         }
         field_B = (String) null;
-        super.b(param0, param1, param2, -71);
+        super.activate(param0, param1, param2, -71);
     }
 
     private jla(String param0, WidgetListener param1) {

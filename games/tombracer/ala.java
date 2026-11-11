@@ -273,7 +273,7 @@ final class ala extends GameScreen {
         SoftwareRasterizer.fillRectangleAlpha(var3, var5Lifetime2, -var3 + var4Lifetime2, -var5Lifetime2 + var6Lifetime2, 0, 128);
     }
 
-    final static void a(byte param0, String param1, boolean param2, float param3) {
+    final static void showProgress(byte param0, String param1, boolean param2, float param3) {
         if (null == ena.field_p) {
           ena.field_p = new vs(ej.field_a, SnakePitBehaviour.field_o);
           ej.field_a.pushDialog(ena.field_p, 89);

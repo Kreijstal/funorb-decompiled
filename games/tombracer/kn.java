@@ -279,7 +279,7 @@ final class kn {
           discarded$1 = new cj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
           var17.copyTo(var8, -107);
-          var8.createStateLayer(0, (byte) 65).setSprites(2, FadingDialog.createFrameSprites(15658734, 1, 7829367, 10066329)).withTextColour(1118481, -2147483648).a((byte) 7, -1);
+          var8.createStateLayer(0, (byte) 65).setSprites(2, FadingDialog.createFrameSprites(15658734, 1, 7829367, 10066329)).withTextColour(1118481, -2147483648).withShadowColour((byte) 7, -1);
           var8.createStateLayer(4, (byte) 87).a(-2, true).setSprites(2, var5);
           this.field_e = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];

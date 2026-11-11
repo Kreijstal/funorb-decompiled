@@ -1518,7 +1518,7 @@ final class OpenGlModel extends ToolkitModel {
             param4 = param4 << 4;
             param2 = param2 << 4;
             param3 = param3 << 4;
-            rp.field_i = 0;
+            CharacterPreview.field_i = 0;
             var10 = 0;
             ParticleEffects.field_b = 0;
             via.field_e = 0;
@@ -1536,7 +1536,7 @@ final class OpenGlModel extends ToolkitModel {
                     var15 = var13_ref_int__[var14_int];
                     if (null == this.field_db ||
                       (param6 & this.field_db[var15]) != 0) {
-                      rp.field_i = rp.field_i + this.field_P[var15];
+                      CharacterPreview.field_i = CharacterPreview.field_i + this.field_P[var15];
                       via.field_e = via.field_e + this.field_K[var15];
                       ParticleEffects.field_b = ParticleEffects.field_b + this.field_A[var15];
                       var10++;
@@ -1556,14 +1556,14 @@ final class OpenGlModel extends ToolkitModel {
             if (stackIn_27_0 <= stackIn_27_1) {
               via.field_e = param3;
               ParticleEffects.field_b = param4;
-              rp.field_i = param2;
+              CharacterPreview.field_i = param2;
               if (var47 == 0) {
                 return;
               }
             }
             via.field_e = param3 + via.field_e / var10;
             ParticleEffects.field_b = ParticleEffects.field_b / var10 + param4;
-            rp.field_i = param2 + rp.field_i / var10;
+            CharacterPreview.field_i = param2 + CharacterPreview.field_i / var10;
             vea.field_b = true;
             return;
           }
@@ -1626,13 +1626,13 @@ final class OpenGlModel extends ToolkitModel {
                       if (null == this.field_db ||
                         0 != (this.field_db[var14_int] & param6) ||
                         var47 != 0) {
-                        this.field_P[var14_int] = this.field_P[var14_int] - rp.field_i;
+                        this.field_P[var14_int] = this.field_P[var14_int] - CharacterPreview.field_i;
                         this.field_K[var14_int] = this.field_K[var14_int] - via.field_e;
                         this.field_A[var14_int] = this.field_A[var14_int] - ParticleEffects.field_b;
                         this.field_P[var14_int] = this.field_P[var14_int] * param2 >> 7;
                         this.field_K[var14_int] = this.field_K[var14_int] * param3 >> 7;
                         this.field_A[var14_int] = this.field_A[var14_int] * param4 >> 7;
-                        this.field_P[var14_int] = this.field_P[var14_int] + rp.field_i;
+                        this.field_P[var14_int] = this.field_P[var14_int] + CharacterPreview.field_i;
                         this.field_K[var14_int] = this.field_K[var14_int] + via.field_e;
                         this.field_A[var14_int] = this.field_A[var14_int] + ParticleEffects.field_b;
                       }
@@ -1652,13 +1652,13 @@ final class OpenGlModel extends ToolkitModel {
               var14_int = param7[13] << 4;
               var15 = param7[14] << 4;
               if (vea.field_b) {
-                var16 = 8192 + (param7[0] * rp.field_i + param7[3] * via.field_e + ParticleEffects.field_b * param7[6]) >> 14;
-                var17 = 8192 + (via.field_e * param7[4] + (param7[1] * rp.field_i + param7[7] * ParticleEffects.field_b)) >> 14;
-                var18 = 8192 + (via.field_e * param7[5] + rp.field_i * param7[2]) + ParticleEffects.field_b * param7[8] >> 14;
+                var16 = 8192 + (param7[0] * CharacterPreview.field_i + param7[3] * via.field_e + ParticleEffects.field_b * param7[6]) >> 14;
+                var17 = 8192 + (via.field_e * param7[4] + (param7[1] * CharacterPreview.field_i + param7[7] * ParticleEffects.field_b)) >> 14;
+                var18 = 8192 + (via.field_e * param7[5] + CharacterPreview.field_i * param7[2]) + ParticleEffects.field_b * param7[8] >> 14;
                 var17 = var17 + var14_int;
                 var16 = var16 + var13;
                 via.field_e = var17;
-                rp.field_i = var16;
+                CharacterPreview.field_i = var16;
                 var18 = var18 + var15;
                 vea.field_b = false;
                 ParticleEffects.field_b = var18;
@@ -1666,10 +1666,10 @@ final class OpenGlModel extends ToolkitModel {
               var16 = param2 << 15 >> 7;
               var17 = param3 << 15 >> 7;
               var18 = param4 << 15 >> 7;
-              var19 = 8192 + var16 * -rp.field_i >> 14;
+              var19 = 8192 + var16 * -CharacterPreview.field_i >> 14;
               var20 = var17 * -via.field_e + 8192 >> 14;
               var21 = 8192 + var18 * -ParticleEffects.field_b >> 14;
-              var22 = var19 + rp.field_i;
+              var22 = var19 + CharacterPreview.field_i;
               var23 = var20 + via.field_e;
               var24 = var21 + ParticleEffects.field_b;
               var25 = new int[9];
@@ -2016,7 +2016,7 @@ final class OpenGlModel extends ToolkitModel {
                       stackIn_112_1 = this.field_db;
                       if (stackIn_112_0 == stackIn_112_1 ||
                         (this.field_db[var14_int] & param6) != 0) {
-                        this.field_P[var14_int] = this.field_P[var14_int] - rp.field_i;
+                        this.field_P[var14_int] = this.field_P[var14_int] - CharacterPreview.field_i;
                         this.field_K[var14_int] = this.field_K[var14_int] - via.field_e;
                         this.field_A[var14_int] = this.field_A[var14_int] - ParticleEffects.field_b;
                         if (param4 != 0) {
@@ -2040,7 +2040,7 @@ final class OpenGlModel extends ToolkitModel {
                           this.field_A[var14_int] = 16383 + var16 * this.field_A[var14_int] - this.field_P[var14_int] * var15 >> 14;
                           this.field_P[var14_int] = var17;
                         }
-                        this.field_P[var14_int] = this.field_P[var14_int] + rp.field_i;
+                        this.field_P[var14_int] = this.field_P[var14_int] + CharacterPreview.field_i;
                         this.field_K[var14_int] = this.field_K[var14_int] + via.field_e;
                         this.field_A[var14_int] = this.field_A[var14_int] + ParticleEffects.field_b;
                       }
@@ -2143,14 +2143,14 @@ final class OpenGlModel extends ToolkitModel {
           var14_int = param7[13] << 4;
           var15 = param7[14] << 4;
           if (vea.field_b) {
-            var16 = 8192 + (ParticleEffects.field_b * param7[6] + via.field_e * param7[3] + param7[0] * rp.field_i) >> 14;
-            var17 = ParticleEffects.field_b * param7[7] + (param7[4] * via.field_e + rp.field_i * param7[1] + 8192) >> 14;
-            var18 = param7[2] * rp.field_i + (param7[5] * via.field_e + ParticleEffects.field_b * param7[8] + 8192) >> 14;
+            var16 = 8192 + (ParticleEffects.field_b * param7[6] + via.field_e * param7[3] + param7[0] * CharacterPreview.field_i) >> 14;
+            var17 = ParticleEffects.field_b * param7[7] + (param7[4] * via.field_e + CharacterPreview.field_i * param7[1] + 8192) >> 14;
+            var18 = param7[2] * CharacterPreview.field_i + (param7[5] * via.field_e + ParticleEffects.field_b * param7[8] + 8192) >> 14;
             var16 = var16 + var13;
             var17 = var17 + var14_int;
             via.field_e = var17;
             var18 = var18 + var15;
-            rp.field_i = var16;
+            CharacterPreview.field_i = var16;
             vea.field_b = false;
             ParticleEffects.field_b = var18;
           }
@@ -2172,10 +2172,10 @@ final class OpenGlModel extends ToolkitModel {
           var16_ref_int__[8] = var19 * var17 + 8192 >> 14;
           var16_ref_int__[1] = var20 * var23 + -var19 * var22 + 8192 >> 14;
           var16_ref_int__[2] = var17 * var20 + 8192 >> 14;
-          var25_int = 8192 + (var16_ref_int__[2] * -ParticleEffects.field_b + -rp.field_i * var16_ref_int__[0] + var16_ref_int__[1] * -via.field_e) >> 14;
-          var26 = 8192 + var16_ref_int__[5] * -ParticleEffects.field_b + (-rp.field_i * var16_ref_int__[3] + -via.field_e * var16_ref_int__[4]) >> 14;
-          var27 = -ParticleEffects.field_b * var16_ref_int__[8] + (-via.field_e * var16_ref_int__[7] + var16_ref_int__[6] * -rp.field_i + 8192) >> 14;
-          var28 = var25_int + rp.field_i;
+          var25_int = 8192 + (var16_ref_int__[2] * -ParticleEffects.field_b + -CharacterPreview.field_i * var16_ref_int__[0] + var16_ref_int__[1] * -via.field_e) >> 14;
+          var26 = 8192 + var16_ref_int__[5] * -ParticleEffects.field_b + (-CharacterPreview.field_i * var16_ref_int__[3] + -via.field_e * var16_ref_int__[4]) >> 14;
+          var27 = -ParticleEffects.field_b * var16_ref_int__[8] + (-via.field_e * var16_ref_int__[7] + var16_ref_int__[6] * -CharacterPreview.field_i + 8192) >> 14;
+          var28 = var25_int + CharacterPreview.field_i;
           var29_int = via.field_e + var26;
           var30 = var27 + ParticleEffects.field_b;
           var31_ref_int__ = new int[9];
@@ -2582,7 +2582,7 @@ final class OpenGlModel extends ToolkitModel {
           var1_int = 0;
           do {
             if (this.field_N <= var1_int) {
-              rp.field_i = 0;
+              CharacterPreview.field_i = 0;
               ParticleEffects.field_b = 0;
               via.field_e = 0;
               break;
@@ -3412,7 +3412,7 @@ final class OpenGlModel extends ToolkitModel {
             param2 = param2 << 4;
             var9 = 0;
             ParticleEffects.field_b = 0;
-            rp.field_i = 0;
+            CharacterPreview.field_i = 0;
             via.field_e = 0;
             var10 = 0;
             boolean decompiledNaturalLoopExit0 = false;
@@ -3426,7 +3426,7 @@ final class OpenGlModel extends ToolkitModel {
                   var13_int = 0;
                   while (var13_int < var12_ref_int__.length) {
                     var14 = var12_ref_int__[var13_int];
-                    rp.field_i = rp.field_i + this.field_P[var14];
+                    CharacterPreview.field_i = CharacterPreview.field_i + this.field_P[var14];
                     via.field_e = via.field_e + this.field_K[var14];
                     var9++;
                     ParticleEffects.field_b = ParticleEffects.field_b + this.field_A[var14];
@@ -3443,14 +3443,14 @@ final class OpenGlModel extends ToolkitModel {
               stackIn_18_1 = -1;
             }
             if (stackIn_18_0 >= stackIn_18_1) {
-              rp.field_i = param2;
+              CharacterPreview.field_i = param2;
               ParticleEffects.field_b = param4;
               via.field_e = param3;
               if (var21 == 0) {
                 return;
               }
             }
-            rp.field_i = param2 + rp.field_i / var9;
+            CharacterPreview.field_i = param2 + CharacterPreview.field_i / var9;
             via.field_e = param3 + via.field_e / var9;
             ParticleEffects.field_b = ParticleEffects.field_b / var9 + param4;
             return;
@@ -3499,13 +3499,13 @@ final class OpenGlModel extends ToolkitModel {
                   var12 = 0;
                   while (var11.length > var12) {
                     var13_int = var11[var12];
-                    this.field_P[var13_int] = this.field_P[var13_int] - rp.field_i;
+                    this.field_P[var13_int] = this.field_P[var13_int] - CharacterPreview.field_i;
                     this.field_K[var13_int] = this.field_K[var13_int] - via.field_e;
                     this.field_A[var13_int] = this.field_A[var13_int] - ParticleEffects.field_b;
                     this.field_P[var13_int] = param2 * this.field_P[var13_int] >> 7;
                     this.field_K[var13_int] = this.field_K[var13_int] * param3 >> 7;
                     this.field_A[var13_int] = param4 * this.field_A[var13_int] >> 7;
-                    this.field_P[var13_int] = this.field_P[var13_int] + rp.field_i;
+                    this.field_P[var13_int] = this.field_P[var13_int] + CharacterPreview.field_i;
                     this.field_K[var13_int] = this.field_K[var13_int] + via.field_e;
                     this.field_A[var13_int] = this.field_A[var13_int] + ParticleEffects.field_b;
                     var12++;
@@ -3795,7 +3795,7 @@ final class OpenGlModel extends ToolkitModel {
                     var12 = 0;
                     while (var11.length > var12) {
                       var13_int = var11[var12];
-                      this.field_P[var13_int] = this.field_P[var13_int] - rp.field_i;
+                      this.field_P[var13_int] = this.field_P[var13_int] - CharacterPreview.field_i;
                       this.field_K[var13_int] = this.field_K[var13_int] - via.field_e;
                       this.field_A[var13_int] = this.field_A[var13_int] - ParticleEffects.field_b;
                       stackIn_45_0 = ~param2;
@@ -3821,7 +3821,7 @@ final class OpenGlModel extends ToolkitModel {
                         this.field_A[var13_int] = 16383 + var15 * this.field_A[var13_int] - var14 * this.field_P[var13_int] >> 14;
                         this.field_P[var13_int] = var16;
                       }
-                      this.field_P[var13_int] = this.field_P[var13_int] + rp.field_i;
+                      this.field_P[var13_int] = this.field_P[var13_int] + CharacterPreview.field_i;
                       this.field_K[var13_int] = this.field_K[var13_int] + via.field_e;
                       this.field_A[var13_int] = this.field_A[var13_int] + ParticleEffects.field_b;
                       var12++;
@@ -3830,7 +3830,7 @@ final class OpenGlModel extends ToolkitModel {
                     var12 = 0;
                     while (var11.length > var12) {
                       var13_int = var11[var12];
-                      this.field_P[var13_int] = this.field_P[var13_int] - rp.field_i;
+                      this.field_P[var13_int] = this.field_P[var13_int] - CharacterPreview.field_i;
                       this.field_K[var13_int] = this.field_K[var13_int] - via.field_e;
                       this.field_A[var13_int] = this.field_A[var13_int] - ParticleEffects.field_b;
                       stackIn_45_0 = 0;
@@ -3856,7 +3856,7 @@ final class OpenGlModel extends ToolkitModel {
                         this.field_A[var13_int] = -(var14 * this.field_P[var13_int]) + (this.field_A[var13_int] * var15 + 16383) >> 14;
                         this.field_P[var13_int] = var16;
                       }
-                      this.field_P[var13_int] = this.field_P[var13_int] + rp.field_i;
+                      this.field_P[var13_int] = this.field_P[var13_int] + CharacterPreview.field_i;
                       this.field_K[var13_int] = this.field_K[var13_int] + via.field_e;
                       this.field_A[var13_int] = this.field_A[var13_int] + ParticleEffects.field_b;
                       var12++;
@@ -5062,8 +5062,8 @@ final class OpenGlModel extends ToolkitModel {
                 this.field_Y = ListChannelsCommand.copyShorts(this.field_Y, true, this.field_L);
                 this.field_cb = ListChannelsCommand.copyShorts(this.field_cb, true, this.field_L);
                 this.field_O = FacePlayerLocomotor.copyOf(this.field_O, this.field_L, 4096);
-                this.field_n = PlatformBehaviour.a(this.field_L, 50, this.field_n);
-                this.field_y = PlatformBehaviour.a(this.field_L, 50, this.field_y);
+                this.field_n = PlatformBehaviour.truncateFloats(this.field_L, 50, this.field_n);
+                this.field_y = PlatformBehaviour.truncateFloats(this.field_L, 50, this.field_y);
                 if (null != param1.field_l &&
                   HardwareOpenGlToolkit.hasFlag32(param2, 104, this.field_u)) {
                   this.field_d = param1.groupVerticesByLabel(false, (byte) 64);

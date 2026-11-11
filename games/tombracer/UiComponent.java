@@ -209,7 +209,7 @@ class UiComponent extends um {
           }
           if (param0) {
             var4 = (UiComponent) null;
-            this.a(-110, (UiComponent) null);
+            this.propagateStyle(-110, (UiComponent) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -310,14 +310,14 @@ class UiComponent extends um {
         this.updateTree(-1, true, SoftwareRasterizer.height, SoftwareRasterizer.width, 0, 0);
     }
 
-    final void a(int param0) {
+    final void invalidateLayoutRecursive(int param0) {
         UiComponent var4 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (this.field_J != null) {
           var4 = (UiComponent) (this.field_J.last(param0 ^ -10967));
           while (var4 != null) {
             var4.field_Q = true;
-            var4.a(-10966);
+            var4.invalidateLayoutRecursive(-10966);
             var4 = (UiComponent) (this.field_J.previous(-1));
           }
         }
@@ -726,7 +726,7 @@ class UiComponent extends um {
         }
     }
 
-    final void a(int param0, UiComponent param1) {
+    final void propagateStyle(int param0, UiComponent param1) {
         IntrusiveDequeCursor var3 = null;
         UiComponent var4 = null;
         int var5 = 0;
@@ -742,7 +742,7 @@ class UiComponent extends um {
             var3 = new IntrusiveDequeCursor(this.field_J);
             var4 = (UiComponent) (var3.first(true));
             while (var4 != null) {
-              var4.a(-124, param1);
+              var4.propagateStyle(-124, param1);
               var4 = (UiComponent) (var3.next(-1));
             }
           }
@@ -786,7 +786,7 @@ class UiComponent extends um {
             param2.field_K = 0;
           }
           if (param3 != -122) {
-            this.a(-65);
+            this.invalidateLayoutRecursive(-65);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

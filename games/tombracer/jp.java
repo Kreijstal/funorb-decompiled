@@ -26,13 +26,13 @@ abstract class jp extends ota {
         }
     }
 
-    abstract LegacyOpenGlCubeTexture b(int param0);
+    abstract LegacyOpenGlCubeTexture getCubeTexture(int param0);
 
-    final static void a(boolean param0) {
+    final static void clearStatusCookie(boolean param0) {
         if (param0) {
           return;
         }
-        pu.clearStatusCookie(di.getApplet(111), 255);
+        pu.clearStatusCookie(ToolkitSelector.getApplet(111), 255);
     }
 
     private jp() throws Throwable {

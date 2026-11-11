@@ -862,7 +862,7 @@ final class SwitchModel extends TrapModel {
                   var10 = -2048;
                   if (var7 != 0) {
                     var11 = this.field_s.getModel((byte) 74);
-                    this.field_s.a(3, false, (byte) -101, 6);
+                    this.field_s.play(3, false, (byte) -101, 6);
                   }
                 }
               } else {
@@ -905,16 +905,16 @@ final class SwitchModel extends TrapModel {
           }
           if (var11 != null) {
             var14Lifetime1 = GameScreen.positiveModulo(var10 + (2048 - this.body.getFacingAngle(-25787)) >> 2, 2048, -38);
-            gqa.a(var14Lifetime1, -83584144, param1, param2, (ToolkitModel) (var11), param3);
+            gqa.drawModelAt(var14Lifetime1, -83584144, param1, param2, (ToolkitModel) (var11), param3);
           }
           if (this.field_q == 1) {
             if (var7 == 0) {
               return;
             }
             var16 = this.field_s.getModel((byte) 74);
-            this.field_s.a(3, false, (byte) 79, 7);
+            this.field_s.play(3, false, (byte) 79, 7);
             var14Lifetime2 = GameScreen.positiveModulo(-this.body.getFacingAngle(-25787) + var10 + 2048 >> 2, 2048, -69);
-            gqa.a(var14Lifetime2, -83584144, param1, param2 + 65536, var16, param3 + 2228224);
+            gqa.drawModelAt(var14Lifetime2, -83584144, param1, param2 + 65536, var16, param3 + 2228224);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

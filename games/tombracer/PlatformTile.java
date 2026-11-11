@@ -28,12 +28,12 @@ final class PlatformTile implements Renderable {
         this.field_g = new ModelAnimator(1, this.field_f);
         if (this.platform.getStyle((byte) 87) == 4) {
           if (this.field_b < 33) {
-            this.field_g.a(3, false, (byte) -96, 10);
+            this.field_g.play(3, false, (byte) -96, 10);
           } else {
             if (66 <= this.field_b) {
-              this.field_g.a(3, false, (byte) -98, 12);
+              this.field_g.play(3, false, (byte) -98, 12);
             } else {
-              this.field_g.a(3, false, (byte) 24, 11);
+              this.field_g.play(3, false, (byte) 24, 11);
             }
           }
           return;
@@ -42,7 +42,7 @@ final class PlatformTile implements Renderable {
           return;
         }
         if (this.field_b < 33) {
-          this.field_g.a(3, false, (byte) 94, 3);
+          this.field_g.play(3, false, (byte) 94, 3);
           if (param0 > 27) {
             return;
           }
@@ -51,7 +51,7 @@ final class PlatformTile implements Renderable {
           return;
         }
         if (this.field_b >= 66) {
-          this.field_g.a(3, false, (byte) 48, 5);
+          this.field_g.play(3, false, (byte) 48, 5);
           if (param0 > 27) {
             return;
           }
@@ -59,7 +59,7 @@ final class PlatformTile implements Renderable {
           this.render(-82, (Camera) null);
           return;
         }
-        this.field_g.a(3, false, (byte) 34, 4);
+        this.field_g.play(3, false, (byte) 34, 4);
         if (param0 > 27) {
           return;
         }
@@ -75,7 +75,7 @@ final class PlatformTile implements Renderable {
 
     public final void render(int param0, Camera param1) {
         try {
-          gqa.a(this.field_a, -83584144, this.getRenderY((byte) 123), this.getRenderX((byte) 122), this.field_g.getModel((byte) 74), this.getRenderZ((byte) -88));
+          gqa.drawModelAt(this.field_a, -83584144, this.getRenderY((byte) 123), this.getRenderX((byte) 122), this.field_g.getModel((byte) 74), this.getRenderZ((byte) -88));
           if (param0 < 103) {
             this.updateAnimation(-75);
           }

@@ -133,8 +133,8 @@ final class ava {
           stackIn_43_1 = 2;
           stackIn_43_2 = param3;
           stackIn_43_3 = 92;
-          stackIn_43_4 = param2 * (8 + di.field_a * 4);
-          stackIn_43_5 = 2 * (di.field_a + param4);
+          stackIn_43_4 = param2 * (8 + ToolkitSelector.field_a * 4);
+          stackIn_43_5 = 2 * (ToolkitSelector.field_a + param4);
           stackIn_44_6 = (lu.field_b == param0);
           stackIn_47_0 = (!((ScrollPane) (Object) stackIn_43_0).updateContentLayout(stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_43_5, stackIn_44_6)) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
@@ -153,7 +153,7 @@ final class ava {
               var12.field_Db.field_z = 2;
               var12.field_Gb = new UiComponent(0L, Corpse.field_i);
               var12.addChild(-126, var12.field_Gb);
-              var12.a(-10966);
+              var12.invalidateLayoutRecursive(-10966);
               var12.field_Kb = new UiComponent(0L, ModelAnimator.field_g);
               var12.addChild(param4 ^ -121, var12.field_Kb);
               var12.field_Cb = new UiComponent(0L, kv.field_b);
@@ -250,7 +250,7 @@ final class ava {
                 var12.field_yb != SimpleConditionBehaviour.field_r) {
                 if (var12.field_Kb.field_r != null) {
                   var26 = var12.field_Kb.measureNaturalWidth((byte) 69) + mna.field_d * 2;
-                  var12.field_Kb.setBounds(var26, di.field_a, -23776, var19, var25_int);
+                  var12.field_Kb.setBounds(var26, ToolkitSelector.field_a, -23776, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
                 if (var12.field_Cb.field_r != null) {
@@ -259,7 +259,7 @@ final class ava {
                   } else {
                     var26Lifetime2 = var12.field_Cb.measureNaturalWidth((byte) 69) + 2 * mna.field_d;
                   }
-                  var12.field_Cb.setBounds(var26Lifetime2, di.field_a, -23776, var19, var25_int);
+                  var12.field_Cb.setBounds(var26Lifetime2, ToolkitSelector.field_a, -23776, var19, var25_int);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -269,9 +269,9 @@ final class ava {
               } else {
                 stackIn_95_1 = 0;
               }
-              ((UiComponent) (Object) stackIn_94_0).setBounds(-stackIn_95_1 + var12.field_G - var25_int, di.field_a, param4 - 23778, var19, var25_int);
+              ((UiComponent) (Object) stackIn_94_0).setBounds(-stackIn_95_1 + var12.field_G - var25_int, ToolkitSelector.field_a, param4 - 23778, var19, var25_int);
               var12.field_Db.field_r = Integer.toString(var12.field_Jb);
-              var12.field_Db.setBounds(40, di.field_a, -23776, var19, var12.field_G - 40);
+              var12.field_Db.setBounds(40, ToolkitSelector.field_a, -23776, var19, var12.field_G - 40);
               if (var12.field_Nb.field_o &&
                 var22 != 0) {
                 ArchiveNetworkClient.field_b = var12.field_wb;
@@ -286,7 +286,7 @@ final class ava {
                   ArchiveNetworkClient.field_b = ql.field_m[var12.field_Ab];
                 }
               }
-              var19 = var19 + di.field_a;
+              var19 = var19 + ToolkitSelector.field_a;
             }
             var23 = S2CNextRoundPacket.describeGameJoinStatus(var12.field_Lb, var20, -65);
             var24 = var23;
@@ -297,8 +297,8 @@ final class ava {
               var24_intLifetime1 = var12.field_Gb.field_H.countWrappedLines(var23, -mna.field_d - mna.field_d + var12.field_G);
               var12.field_Gb.field_r = var23;
               var12.field_Gb.field_s = var12.field_xb * 256 / qsa.field_a;
-              var12.field_Gb.setBounds(var12.field_G - 2 * mna.field_d, di.field_a * var24_intLifetime1, -23776, var19, mna.field_d);
-              var19 = var19 + di.field_a * var24_intLifetime1;
+              var12.field_Gb.setBounds(var12.field_G - 2 * mna.field_d, ToolkitSelector.field_a * var24_intLifetime1, -23776, var19, mna.field_d);
+              var19 = var19 + ToolkitSelector.field_a * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
               var12.field_O = var19 - var12.field_t;

@@ -28,10 +28,10 @@ final class OpenGlVertexBuffer extends OpenGlBuffer implements VertexBuffer {
 
     public final jaclib.memory.Buffer map(boolean param0, byte param1) {
         if (param1 < -9) {
-          return super.a(this.field_h.field_Qc, param0, 1);
+          return super.mapWith(this.field_h.field_Qc, param0, 1);
         }
         this.unmap((byte) 69);
-        return super.a(this.field_h.field_Qc, param0, 1);
+        return super.mapWith(this.field_h.field_Qc, param0, 1);
     }
 
     OpenGlVertexBuffer(HardwareOpenGlToolkit param0, una param1, boolean param2) {

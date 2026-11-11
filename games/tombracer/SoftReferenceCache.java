@@ -165,7 +165,7 @@ final class SoftReferenceCache {
         if (param0 < 59) {
           return;
         }
-        var3 = (pb) (this.field_f.c(100));
+        var3 = (pb) (this.field_f.first(100));
         while (var3 != null) {
           if (!var3.a(14646)) {
             fieldTemp$0 = var3.secondaryKey + 1L;
@@ -179,14 +179,14 @@ final class SoftReferenceCache {
             }
           } else {
             if (var3.getValue(29243) != null) {
-              var3 = (pb) (this.field_f.a(-122));
+              var3 = (pb) (this.field_f.next(-122));
               continue;
             }
             var3.unlink(120);
             var3.unlinkSecondary(-7975);
             this.field_e = this.field_e + var3.field_m;
           }
-          var3 = (pb) (this.field_f.a(-122));
+          var3 = (pb) (this.field_f.next(-122));
         }
         return;
     }

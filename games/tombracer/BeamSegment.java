@@ -114,7 +114,7 @@ final class BeamSegment {
             if (param3[var6].field_a) {
               discarded$1 = var8.append(jd.getPrimitiveType(param3[var6].field_d, 0).toString());
             } else {
-              discarded$2 = var8.append(ArrayWidgetGroup.a(param3[var6].field_d.getClass(), (byte) -88));
+              discarded$2 = var8.append(ArrayWidgetGroup.simpleTypeName(param3[var6].field_d.getClass(), (byte) -88));
             }
             if (-1 + param3.length > var6) {
               discarded$3 = var8.append(',');

@@ -10,7 +10,7 @@ final class CoinItemComponent extends ItemComponent {
         super(param0, param1);
     }
 
-    final static void a(BinaryBitmapFont param0, byte param1) {
+    final static void createMenuScreens(BinaryBitmapFont param0, byte param1) {
         int[] var4 = null;
         try {
           var4 = new int[]{22, 1, 3, 4, 12, 14, 13, 8, 9};
@@ -36,7 +36,7 @@ final class CoinItemComponent extends ItemComponent {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_I = 114L;
           field_H = null;

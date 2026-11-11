@@ -72,7 +72,7 @@ final class S2CRoundDeadlinePacket implements GamePacket {
         this.deadlineTick = -1;
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9) {
+    final static int overlapArea(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9) {
         if (param5 != 75) {
           return 73;
         }

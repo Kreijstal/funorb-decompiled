@@ -92,7 +92,7 @@ abstract class mna {
           PlatformModel.field_B = false;
         }
         ne.field_d.field_tb.field_O = var7Lifetime1 - ne.field_d.field_tb.field_t;
-        if (ni.field_c &&
+        if (DynamicGeometryBuffer.field_c &&
           null != SimpleMoveLocomotor.field_s) {
           CrossedSineBandsOperator.field_v = true;
         }

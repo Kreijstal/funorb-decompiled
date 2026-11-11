@@ -35,12 +35,12 @@ final class jia implements MessagePanel {
         LegacyOpenGlSpriteTexture.a(stackIn_8_0, tga.field_a, param0, param1 ^ 20688, this.getWidth(-8660), 20 + this.getHeight(false), 16, -10 + param2);
         if (!VerticalScrollbar.field_tb[hra.field_b] &&
           this.field_b.field_b) {
-          SingleChildWidget.field_v.a((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, pg.field_A, (byte) -122, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, pg.field_A, (byte) -122, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         } else if (VerticalScrollbar.field_tb[hra.field_b] &&
           this.field_b.field_b) {
-          SingleChildWidget.field_v.a((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, gka.field_f, (byte) 93, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, gka.field_f, (byte) 93, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         } else {
-          SingleChildWidget.field_v.a((aa) null, this.getHeight(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, NetworkArchiveRequest.field_p, (byte) -38, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, NetworkArchiveRequest.field_p, (byte) -38, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         }
         if (param1 != 20726) {
           this.field_c = (waa[]) null;

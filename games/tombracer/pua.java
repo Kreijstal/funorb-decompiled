@@ -31,20 +31,20 @@ final class pua extends hq {
         int var15Lifetime2;
         var17 = TombRacer.field_G ? 1 : 0;
         try {
-          var11 = rp.clamp(hc.field_h, -16226, gca.field_d, param2);
-          var12 = rp.clamp(hc.field_h, -16226, gca.field_d, param3);
-          var13 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
-          var14 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6);
-          var7_int = rp.clamp(hc.field_h, -16226, gca.field_d, param4 + param2);
-          var8 = rp.clamp(hc.field_h, -16226, gca.field_d, param3 - param4);
+          var11 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param2);
+          var12 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param3);
+          var13 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
+          var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6);
+          var7_int = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param4 + param2);
+          var8 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param3 - param4);
           for (var15 = var11; var7_int > var15; var15++) {
             C2SRoomResultPacket.fillRange((byte) -55, param5, var14, vaa.field_a[var15], var13);
           }
           for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
             C2SRoomResultPacket.fillRange((byte) -55, param5, var14, vaa.field_a[var15Lifetime1], var13);
           }
-          var9 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param4 + param1);
-          var10 = rp.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param4 + param6);
+          var9 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param4 + param1);
+          var10 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param4 + param6);
           if (param0 >= -11) {
             pua.releaseStatics((byte) -34);
           }

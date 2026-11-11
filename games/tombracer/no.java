@@ -204,7 +204,7 @@ final class no extends MatchOverlay {
             var2 = var2 + var4;
           }
           PlayerViewport.drawTiledFrame(var3, var2, (byte) 70, var6, aq.field_a, var7);
-          SocketConnector.a(var18, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13);
+          SocketConnector.drawWrappedText(var18, 1, eda.field_f, 16777215, 30, var12, 1, var10 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13);
           PerlinNoise2D.field_m[this.field_n].drawScaled(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
           return;
         }
@@ -222,7 +222,7 @@ final class no extends MatchOverlay {
           var2 = var2 + var4;
         }
         PlayerViewport.drawTiledFrame(var3, var2, (byte) 70, var6, aq.field_a, var7);
-        SocketConnector.a(var17, 1, eda.field_f, 16777215, 30, var12Lifetime1, 1, var10Lifetime1 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13Lifetime1);
+        SocketConnector.drawWrappedText(var17, 1, eda.field_f, 16777215, 30, var12Lifetime1, 1, var10Lifetime1 + var7, var6 + 30 + 2 * var8, -1, (byte) 60, var13Lifetime1);
         PerlinNoise2D.field_m[this.field_n].drawScaled(var8 + var6, var7 + (-32 + var3) / 2, 32, 32);
     }
 
@@ -236,7 +236,7 @@ final class no extends MatchOverlay {
         return (((8192 & param1) != 0 ? true : false) | kaa.hasMask24OrAll544(param0, param1, false) | rg.hasFlag65536(param0, param2 ^ -36949, param1)) & (0 == (55 & param0) ? true : false);
     }
 
-    final static void a(String param0, long param1, byte param2) {
+    final static void beginPrivateMessage(String param0, long param1, byte param2) {
         CharSequence var5 = null;
         try {
           wp.field_a = param0;
@@ -244,7 +244,7 @@ final class no extends MatchOverlay {
           var5 = (CharSequence) ((Object) param0);
           mn.field_n = jd.normalizeDisplayName(1, var5);
           ica.field_b = param1;
-          ni.field_c = true;
+          DynamicGeometryBuffer.field_c = true;
           if (param2 <= 108) {
             no.b(true);
           }

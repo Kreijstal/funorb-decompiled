@@ -292,7 +292,7 @@ abstract class MazeComponent extends PrefabComponent {
           }
           dga.a(stackIn_4_0, 199);
           rm.field_e.a(0, 0, param1 + 18, C2SRoomResultPacket.field_c.field_G, -2 + C2SRoomResultPacket.field_c.field_t - 40);
-          cea.field_a.setBounds(RoomRegion.field_l.field_G, di.field_a, param1 ^ -23774, 0, 0);
+          cea.field_a.setBounds(RoomRegion.field_l.field_G, ToolkitSelector.field_a, param1 ^ -23774, 0, 0);
           stackIn_6_0 = uaa.field_b;
           stackIn_6_1 = RoomRegion.field_l.field_G;
           if (!UnlockOverlay.field_p) {
@@ -300,9 +300,9 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_7_2 = 2 + (io.field_a + 40) + 2;
           }
-          ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 18, -23776, param1 + di.field_a, 0);
-          RopeBridgeComponent.field_F.setBounds(42 + io.field_a, 18, param1 - 23778, 2 + di.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
-          tn.field_n.setPaneBounds(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (di.field_a + 22), 20 + (2 + di.field_a));
+          ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 18, -23776, param1 + ToolkitSelector.field_a, 0);
+          RopeBridgeComponent.field_F.setBounds(42 + io.field_a, 18, param1 - 23778, 2 + ToolkitSelector.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
+          tn.field_n.setPaneBounds(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (ToolkitSelector.field_a + 22), 20 + (2 + ToolkitSelector.field_a));
           bc.field_b.setBounds(C2SRoomResultPacket.field_c.field_G, 40, -23776, -40 + C2SRoomResultPacket.field_c.field_t, 0);
           StatusEffect.field_g.setBounds(dka.field_b.field_G, 30, -23776, 0, 0);
           C2SSubmitSettingsPacket.field_g.setBounds(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
@@ -383,7 +383,7 @@ abstract class MazeComponent extends PrefabComponent {
                   SimpleConditionBehaviour.field_p[var6].setBounds(103, var3, -23776, var5, 5);
                   var8 = 110;
                   if (param0) {
-                    bf.field_b[var6][0].a(38, var8, pda.field_c, var3, 0, 2, var5);
+                    bf.field_b[var6][0].setRowBounds(38, var8, pda.field_c, var3, 0, 2, var5);
                     var8 += 40;
                   } else {
                     if (bf.field_b[var6][0] != null) {
@@ -396,7 +396,7 @@ abstract class MazeComponent extends PrefabComponent {
                   var10 = bf.field_b[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9 / var10;
-                    bf.field_b[var6][var11 + 1].a(var9 * (1 + var11) / var10 - 2 - var12, var8 + var12, pda.field_c, var3, param1 ^ 2, 2, var5);
+                    bf.field_b[var6][var11 + 1].setRowBounds(var9 * (1 + var11) / var10 - 2 - var12, var8 + var12, pda.field_c, var3, param1 ^ 2, 2, var5);
                   }
                   var5 = var5 + (2 + var3);
                 }

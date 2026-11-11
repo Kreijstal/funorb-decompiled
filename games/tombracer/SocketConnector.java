@@ -15,7 +15,7 @@ abstract class SocketConnector {
         return new java.net.Socket(this.host, this.port);
     }
 
-    final static int a(String param0, int param1, GameFont param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, byte param10, int param11) {
+    final static int drawWrappedText(String param0, int param1, GameFont param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, byte param10, int param11) {
         RuntimeException var12 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -28,7 +28,7 @@ abstract class SocketConnector {
           if (param10 != 60) {
             field_c = 5;
           }
-          stackIn_3_0 = param2.a((aa) null, param11, param4, 0, param7, SoundEvent.withFullAlpha(false, param9), (int[]) null, param6, SoundEvent.withFullAlpha(false, param3), param0, (byte) 88, param5, 0, (ToolkitSprite[]) null, param8, param1);
+          stackIn_3_0 = param2.drawWrapped((aa) null, param11, param4, 0, param7, SoundEvent.withFullAlpha(false, param9), (int[]) null, param6, SoundEvent.withFullAlpha(false, param3), param0, (byte) 88, param5, 0, (ToolkitSprite[]) null, param8, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -42,7 +42,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         }
     }
 
-    final void a(LoadingStage param0, int param1) {
+    final void beginLoading(LoadingStage param0, int param1) {
         try {
           dma.field_l = param0;
           this.enableDefaultMessageGroups((byte) 106, true);
@@ -92,7 +92,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
 
     abstract void pollMessageGroups(int param0, int param1);
 
-    private final void b(boolean param0) {
+    private final void tickScreen(boolean param0) {
         boolean stackIn_3_0 = false;
         int stackIn_46_1 = 0;
         boolean stackIn_47_2 = false;
@@ -123,7 +123,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                   og.exitFullscreen(0);
                 }
                 if (2 == var3) {
-                  ArchiveRequest.openQuitPage(di.getApplet(110), (byte) -95);
+                  ArchiveRequest.openQuitPage(ToolkitSelector.getApplet(110), (byte) -95);
                 }
                 this.updateScreen(true, false);
               }
@@ -302,10 +302,10 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                 PlatformComponent.A(116);
               }
             } else {
-              this.b(true);
+              this.tickScreen(true);
             }
           } else {
-            this.b(true);
+            this.tickScreen(true);
           }
         }
         if (!TextWidgetPainter.a(66)) {

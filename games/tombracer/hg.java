@@ -11,7 +11,7 @@ final class hg {
     static int field_f;
     qm field_a;
 
-    final void c(int param0) {
+    final void release(int param0) {
         if (null != this.field_a) {
           this.field_a.close(12574);
           this.field_h = false;

@@ -270,7 +270,7 @@ final class PlantModel extends TrapModel {
             return;
           }
           var8Lifetime1 = GameScreen.positiveModulo(-this.body.getFacingAngle(-25787) + 4096 >> 2, 2048, -111);
-          gqa.a(var8Lifetime1, -83584144, param1, param2, (ToolkitModel) (var6), param3);
+          gqa.drawModelAt(var8Lifetime1, -83584144, param1, param2, (ToolkitModel) (var6), param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

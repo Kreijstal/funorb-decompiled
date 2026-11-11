@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gua {
+final class DirectXSwapChain {
     private jagdx.IDirect3DSurface field_a;
     private jagdx.IDirect3DSurface field_c;
     private jagdx.IDirect3DSwapChain field_b;
 
-    final boolean a(byte param0) {
+    final boolean hasSwapChain(byte param0) {
         if (param0 == 75) {
           return this.field_b != null ? true : false;
         }
@@ -14,7 +14,7 @@ final class gua {
         return this.field_b != null ? true : false;
     }
 
-    final void a(byte param0, jagdx.IDirect3DSwapChain param1, jagdx.IDirect3DSurface param2) {
+    final void setSwapChain(byte param0, jagdx.IDirect3DSwapChain param1, jagdx.IDirect3DSurface param2) {
         this.field_a = param2;
         if (param0 > -6) {
           return;
@@ -23,7 +23,7 @@ final class gua {
         this.field_c = this.field_b.getBackBuffer(0, 0);
     }
 
-    final void a(boolean param0) {
+    final void release(boolean param0) {
         jagdx.IDirect3DSurface stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
         jagdx.IDirect3DSwapChain stackIn_13_0 = null;
@@ -62,14 +62,14 @@ final class gua {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int present(int param0, int param1) {
         if (param1 != 0) {
           return 83;
         }
         return this.field_b.Present(param0);
     }
 
-    gua(jagdx.IDirect3DSwapChain param0, jagdx.IDirect3DSurface param1) {
-        this.a((byte) -14, param0, param1);
+    DirectXSwapChain(jagdx.IDirect3DSwapChain param0, jagdx.IDirect3DSurface param1) {
+        this.setSwapChain((byte) -14, param0, param1);
     }
 }

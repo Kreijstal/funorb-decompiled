@@ -159,7 +159,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                   sda.field_f[var13] = false;
                   var13++;
                 }
-                cja.findValidSettingCombination(param0 + 108, ColourRowCache.field_b, WaveformOperator.field_n, 0, -1, -1, -1, true);
+                MatchOverlayQueue.findValidSettingCombination(param0 + 108, ColourRowCache.field_b, WaveformOperator.field_n, 0, -1, -1, -1, true);
                 if (!(ld.field_e < 2) &&
                   VerticalScrollbar.field_tb[12]) {
                   TouchSwitchBehaviour.field_s = true;

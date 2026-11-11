@@ -130,7 +130,7 @@ final class upa extends IntrusiveNode {
         return hh.a(param2, (byte) 5, param0) & ModelFactory.a(-17, param0, param2);
     }
 
-    final static int a(boolean param0, int param1, byte param2) {
+    final static int mixHashBoolean(boolean param0, int param1, byte param2) {
         if (param2 <= -36) {
           return (!param0 ? 6029 : 0) + param1 * 7459;
         }

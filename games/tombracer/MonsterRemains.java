@@ -61,7 +61,7 @@ final class MonsterRemains implements Renderable {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = this.field_f.getModel((byte) 74);
-          gqa.a(this.field_c, -83584144, this.getRenderY((byte) 106), this.getRenderX((byte) 90), var3, this.getRenderZ((byte) -106));
+          gqa.drawModelAt(this.field_c, -83584144, this.getRenderY((byte) 106), this.getRenderX((byte) 90), var3, this.getRenderZ((byte) -106));
           if (param0 >= 103) {
             return;
           }

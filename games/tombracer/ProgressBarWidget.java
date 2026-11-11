@@ -239,7 +239,7 @@ final class ProgressBarWidget extends UiWidget {
         if (param0 <= 83) {
           return;
         }
-        wj.a(param3, di.field_a, wg.field_i, 2, mna.field_d, param2, param1);
+        wj.a(param3, ToolkitSelector.field_a, wg.field_i, 2, mna.field_d, param2, param1);
     }
 
     private ProgressBarWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

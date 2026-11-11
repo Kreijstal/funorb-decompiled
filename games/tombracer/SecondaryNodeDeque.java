@@ -11,13 +11,13 @@ final class SecondaryNodeDeque implements Iterable {
     private DualLinkNode field_c;
     static UiComponent field_b;
 
-    final DualLinkNode c(int param0) {
+    final DualLinkNode first(int param0) {
         if (param0 > 89) {
-          return this.a((byte) 121, (DualLinkNode) null);
+          return this.firstFrom((byte) 121, (DualLinkNode) null);
         }
         DualLinkNode var3 = (DualLinkNode) null;
         this.addLast((DualLinkNode) null, -48);
-        return this.a((byte) 121, (DualLinkNode) null);
+        return this.firstFrom((byte) 121, (DualLinkNode) null);
     }
 
     public final Iterator iterator() {
@@ -56,7 +56,7 @@ final class SecondaryNodeDeque implements Iterable {
         return null;
     }
 
-    private final DualLinkNode a(byte param0, DualLinkNode param1) {
+    private final DualLinkNode firstFrom(byte param0, DualLinkNode param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         DualLinkNode var4 = null;
@@ -118,7 +118,7 @@ final class SecondaryNodeDeque implements Iterable {
         this.sentinel.secondaryPrevious = this.sentinel;
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode next(int param0) {
         DualLinkNode var2 = this.field_c;
         if (var2 == this.sentinel) {
           this.field_c = null;

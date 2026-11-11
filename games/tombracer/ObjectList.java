@@ -64,7 +64,7 @@ final class ObjectList {
         }
     }
 
-    private final void a(int param0, Object[] param1) {
+    private final void initialize(int param0, Object[] param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -172,7 +172,7 @@ final class ObjectList {
         this(new Object[param0], param1);
     }
 
-    final static boolean a(int param0, int param1, byte param2) {
+    final static boolean hasFlag1024(int param0, int param1, byte param2) {
         int var3 = -40 % ((-25 - param2) / 37);
         return 0 != (param1 & 1024) ? true : false;
     }
@@ -195,7 +195,7 @@ final class ObjectList {
     private ObjectList(Object[] param0) {
         this.growth = 1;
         try {
-          this.a(0, param0);
+          this.initialize(0, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

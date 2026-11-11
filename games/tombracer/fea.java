@@ -4,28 +4,28 @@
 final class fea {
     final static void loadSoundEffect(boolean param0, int param1) {
         if (param1 == 0) {
-          CauldronComponent.field_J[0] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_ceramic_knock_01", 121, "");
+          CauldronComponent.field_J[0] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_ceramic_knock_01", 121, "");
         }
         if (1 == param1) {
-          CauldronComponent.field_J[1] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_ceramic_knock_02", 92, "");
+          CauldronComponent.field_J[1] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_ceramic_knock_02", 92, "");
         }
         if (2 == param1) {
-          CauldronComponent.field_J[2] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_ceramic_knock_03", 63, "");
+          CauldronComponent.field_J[2] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_ceramic_knock_03", 63, "");
         }
         if (param1 == 3) {
-          CauldronComponent.field_J[3] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_ceramic_knock_04", 94, "");
+          CauldronComponent.field_J[3] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_ceramic_knock_04", 94, "");
         }
         if (4 == param1) {
-          CauldronComponent.field_J[4] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_ceramic_knock_05", 13, "");
+          CauldronComponent.field_J[4] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_ceramic_knock_05", 13, "");
         }
         if (param1 == 5) {
-          CauldronComponent.field_J[5] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_ceramic_knock_06", 71, "");
+          CauldronComponent.field_J[5] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_ceramic_knock_06", 71, "");
         }
         if (param1 == 6) {
-          CauldronComponent.field_J[6] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_ceramic_knock_07", 111, "");
+          CauldronComponent.field_J[6] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_ceramic_knock_07", 111, "");
         }
         if (7 == param1) {
-          CauldronComponent.field_J[7] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_menu_noise_01", 65, "");
+          CauldronComponent.field_J[7] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_menu_noise_01", 65, "");
         }
         if (param1 == 8) {
           CauldronComponent.field_J[8] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_large_block_drag_loop");
@@ -70,13 +70,13 @@ final class fea {
           CauldronComponent.field_J[21] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_large_object_fall_01");
         }
         if (param1 == 22) {
-          CauldronComponent.field_J[22] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_object_fell_into_lava_01", 29, "");
+          CauldronComponent.field_J[22] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_object_fell_into_lava_01", 29, "");
         }
         if (param1 == 23) {
-          CauldronComponent.field_J[23] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_object_fell_into_lava_02", 45, "");
+          CauldronComponent.field_J[23] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_object_fell_into_lava_02", 45, "");
         }
         if (param1 == 24) {
-          CauldronComponent.field_J[24] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_object_fell_into_lava_03", 35, "");
+          CauldronComponent.field_J[24] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_object_fell_into_lava_03", 35, "");
         }
         if (param1 == 25) {
           CauldronComponent.field_J[25] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_teleport_hum_loop");
@@ -136,10 +136,10 @@ final class fea {
           CauldronComponent.field_J[43] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_blade_ricochet_06");
         }
         if (param1 == 44) {
-          CauldronComponent.field_J[44] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_large_blade_cut_01", 61, "");
+          CauldronComponent.field_J[44] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_large_blade_cut_01", 61, "");
         }
         if (param1 == 45) {
-          CauldronComponent.field_J[45] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_small_blade_cut_01", 84, "");
+          CauldronComponent.field_J[45] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_small_blade_cut_01", 84, "");
         }
         if (param1 == 46) {
           CauldronComponent.field_J[46] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_blade_spin_loop_01");
@@ -223,22 +223,22 @@ final class fea {
           CauldronComponent.field_J[72] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_moving_wall_click_01");
         }
         if (param1 == 73) {
-          CauldronComponent.field_J[73] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_platform_change_direction_01", 125, "");
+          CauldronComponent.field_J[73] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_platform_change_direction_01", 125, "");
         }
         if (param1 == 74) {
-          CauldronComponent.field_J[74] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_platform_change_direction_02", 28, "");
+          CauldronComponent.field_J[74] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_platform_change_direction_02", 28, "");
         }
         if (param1 == 75) {
-          CauldronComponent.field_J[75] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_platform_change_direction_03", 122, "");
+          CauldronComponent.field_J[75] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_platform_change_direction_03", 122, "");
         }
         if (param1 == 76) {
           CauldronComponent.field_J[76] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_platform_shake_loop");
         }
         if (param1 == 77) {
-          CauldronComponent.field_J[77] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sliding_stone_01", 46, "");
+          CauldronComponent.field_J[77] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sliding_stone_01", 46, "");
         }
         if (param1 == 78) {
-          CauldronComponent.field_J[78] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sliding_stone_fast_01", 18, "");
+          CauldronComponent.field_J[78] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sliding_stone_fast_01", 18, "");
         }
         if (param1 == 79) {
           CauldronComponent.field_J[79] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_snake_01");
@@ -274,19 +274,19 @@ final class fea {
           CauldronComponent.field_J[89] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_arrow_fire_03");
         }
         if (param1 == 90) {
-          CauldronComponent.field_J[90] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_pistol_01", 30, "");
+          CauldronComponent.field_J[90] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_pistol_01", 30, "");
         }
         if (param1 == 91) {
-          CauldronComponent.field_J[91] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_pistol_02", 118, "");
+          CauldronComponent.field_J[91] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_pistol_02", 118, "");
         }
         if (param1 == 92) {
-          CauldronComponent.field_J[92] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_pistol_casing_01", 127, "");
+          CauldronComponent.field_J[92] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_pistol_casing_01", 127, "");
         }
         if (param1 == 93) {
-          CauldronComponent.field_J[93] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_pistol_casing_02", 121, "");
+          CauldronComponent.field_J[93] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_pistol_casing_02", 121, "");
         }
         if (param1 == 94) {
-          CauldronComponent.field_J[94] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_bullet_hit_stone_01", 24, "");
+          CauldronComponent.field_J[94] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_bullet_hit_stone_01", 24, "");
         }
         if (param1 == 95) {
           CauldronComponent.field_J[95] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_lazer_loop_01");
@@ -385,49 +385,49 @@ final class fea {
           CauldronComponent.field_J[125] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_door_move_loop");
         }
         if (param1 == 126) {
-          CauldronComponent.field_J[126] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_crane_move_start", 38, "");
+          CauldronComponent.field_J[126] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_crane_move_start", 38, "");
         }
         if (param1 == 127) {
-          CauldronComponent.field_J[127] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_crane_move_loop", 64, "");
+          CauldronComponent.field_J[127] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_crane_move_loop", 64, "");
         }
         if (param1 == 128) {
-          CauldronComponent.field_J[128] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_crane_move_stop", 50, "");
+          CauldronComponent.field_J[128] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_crane_move_stop", 50, "");
         }
         if (param1 == 129) {
-          CauldronComponent.field_J[129] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_crane_shudder", 46, "");
+          CauldronComponent.field_J[129] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_crane_shudder", 46, "");
         }
         if (param1 == 130) {
-          CauldronComponent.field_J[130] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_crane_drop", 104, "");
+          CauldronComponent.field_J[130] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_crane_drop", 104, "");
         }
         if (131 == param1) {
           CauldronComponent.field_J[131] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_time_out_ticker");
         }
         if (132 == param1) {
-          CauldronComponent.field_J[132] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_wobble_01", 47, "");
+          CauldronComponent.field_J[132] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_wobble_01", 47, "");
         }
         if (param1 == 133) {
-          CauldronComponent.field_J[133] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_wobble_02", 12, "");
+          CauldronComponent.field_J[133] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_wobble_02", 12, "");
         }
         if (134 == param1) {
-          CauldronComponent.field_J[134] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_wobble_03", 12, "");
+          CauldronComponent.field_J[134] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_wobble_03", 12, "");
         }
         if (param1 == 135) {
-          CauldronComponent.field_J[135] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_wobble_01", 42, "");
+          CauldronComponent.field_J[135] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_wobble_01", 42, "");
         }
         if (param1 == 136) {
-          CauldronComponent.field_J[136] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_wobble_02", 30, "");
+          CauldronComponent.field_J[136] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_wobble_02", 30, "");
         }
         if (param1 == 137) {
-          CauldronComponent.field_J[137] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_wobble_03", 52, "");
+          CauldronComponent.field_J[137] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_wobble_03", 52, "");
         }
         if (param1 == 138) {
-          CauldronComponent.field_J[138] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sand_footstep_01", 46, "");
+          CauldronComponent.field_J[138] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sand_footstep_01", 46, "");
         }
         if (param1 == 139) {
-          CauldronComponent.field_J[139] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sand_footstep_02", 110, "");
+          CauldronComponent.field_J[139] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sand_footstep_02", 110, "");
         }
         if (param1 == 140) {
-          CauldronComponent.field_J[140] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sand_footstep_03", 74, "");
+          CauldronComponent.field_J[140] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sand_footstep_03", 74, "");
         }
         if (param1 == 141) {
           CauldronComponent.field_J[141] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_wood_step_01");
@@ -436,97 +436,97 @@ final class fea {
           CauldronComponent.field_J[142] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_wood_step_02");
         }
         if (param1 == 143) {
-          CauldronComponent.field_J[143] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_invisible_path_footstep_01", 23, "");
+          CauldronComponent.field_J[143] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_invisible_path_footstep_01", 23, "");
         }
         if (param1 == 144) {
-          CauldronComponent.field_J[144] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_invisible_path_footstep_02", 101, "");
+          CauldronComponent.field_J[144] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_invisible_path_footstep_02", 101, "");
         }
         if (param1 == 145) {
-          CauldronComponent.field_J[145] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_invisible_path_footstep_03", 98, "");
+          CauldronComponent.field_J[145] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_invisible_path_footstep_03", 98, "");
         }
         if (param1 == 146) {
-          CauldronComponent.field_J[146] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_push_01", 76, "");
+          CauldronComponent.field_J[146] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_push_01", 76, "");
         }
         if (param1 == 147) {
-          CauldronComponent.field_J[147] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_push_02", 12, "");
+          CauldronComponent.field_J[147] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_push_02", 12, "");
         }
         if (148 == param1) {
-          CauldronComponent.field_J[148] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_push_03", 76, "");
+          CauldronComponent.field_J[148] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_push_03", 76, "");
         }
         if (param1 == 149) {
-          CauldronComponent.field_J[149] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_push_04", 20, "");
+          CauldronComponent.field_J[149] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_push_04", 20, "");
         }
         if (param1 == 150) {
-          CauldronComponent.field_J[150] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_push_01", 116, "");
+          CauldronComponent.field_J[150] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_push_01", 116, "");
         }
         if (param1 == 151) {
-          CauldronComponent.field_J[151] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_push_02", 29, "");
+          CauldronComponent.field_J[151] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_push_02", 29, "");
         }
         if (param1 == 152) {
-          CauldronComponent.field_J[152] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_push_03", 48, "");
+          CauldronComponent.field_J[152] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_push_03", 48, "");
         }
         if (param1 == 153) {
-          CauldronComponent.field_J[153] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_push_04", 117, "");
+          CauldronComponent.field_J[153] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_push_04", 117, "");
         }
         if (param1 == 154) {
-          CauldronComponent.field_J[154] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_fall_01", 121, "");
+          CauldronComponent.field_J[154] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_fall_01", 121, "");
         }
         if (155 == param1) {
-          CauldronComponent.field_J[155] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_fall_02", 103, "");
+          CauldronComponent.field_J[155] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_fall_02", 103, "");
         }
         if (param1 == 156) {
-          CauldronComponent.field_J[156] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_fall_03", 56, "");
+          CauldronComponent.field_J[156] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_fall_03", 56, "");
         }
         if (157 == param1) {
-          CauldronComponent.field_J[157] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_fall_04", 50, "");
+          CauldronComponent.field_J[157] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_fall_04", 50, "");
         }
         if (param1 == 158) {
-          CauldronComponent.field_J[158] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_fall_05", 49, "");
+          CauldronComponent.field_J[158] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_fall_05", 49, "");
         }
         if (param1 == 159) {
-          CauldronComponent.field_J[159] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_fall_01", 80, "");
+          CauldronComponent.field_J[159] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_fall_01", 80, "");
         }
         if (param1 == 160) {
-          CauldronComponent.field_J[160] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_fall_02", 48, "");
+          CauldronComponent.field_J[160] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_fall_02", 48, "");
         }
         if (161 == param1) {
-          CauldronComponent.field_J[161] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_fall_03", 44, "");
+          CauldronComponent.field_J[161] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_fall_03", 44, "");
         }
         if (param1 == 162) {
-          CauldronComponent.field_J[162] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_fall_04", 79, "");
+          CauldronComponent.field_J[162] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_fall_04", 79, "");
         }
         if (param1 == 163) {
-          CauldronComponent.field_J[163] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_fall_05", 107, "");
+          CauldronComponent.field_J[163] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_fall_05", 107, "");
         }
         if (param1 == 164) {
-          CauldronComponent.field_J[164] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_pain_01", 51, "");
+          CauldronComponent.field_J[164] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_pain_01", 51, "");
         }
         if (param1 == 165) {
-          CauldronComponent.field_J[165] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_pain_02", 101, "");
+          CauldronComponent.field_J[165] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_pain_02", 101, "");
         }
         if (166 == param1) {
-          CauldronComponent.field_J[166] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_pain_03", 17, "");
+          CauldronComponent.field_J[166] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_pain_03", 17, "");
         }
         if (167 == param1) {
-          CauldronComponent.field_J[167] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_pain_04", 107, "");
+          CauldronComponent.field_J[167] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_pain_04", 107, "");
         }
         if (168 == param1) {
-          CauldronComponent.field_J[168] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_male_pain_05", 35, "");
+          CauldronComponent.field_J[168] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_male_pain_05", 35, "");
         }
         if (param1 == 169) {
-          CauldronComponent.field_J[169] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_pain_01", 27, "");
+          CauldronComponent.field_J[169] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_pain_01", 27, "");
         }
         if (param1 == 170) {
-          CauldronComponent.field_J[170] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_pain_02", 62, "");
+          CauldronComponent.field_J[170] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_pain_02", 62, "");
         }
         if (param1 == 171) {
-          CauldronComponent.field_J[171] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_pain_03", 113, "");
+          CauldronComponent.field_J[171] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_pain_03", 113, "");
         }
         if (param1 == 172) {
-          CauldronComponent.field_J[172] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_pain_04", 105, "");
+          CauldronComponent.field_J[172] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_pain_04", 105, "");
         }
         if (param1 == 173) {
-          CauldronComponent.field_J[173] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_female_pain_05", 116, "");
+          CauldronComponent.field_J[173] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_female_pain_05", 116, "");
         }
         if (174 == param1) {
           CauldronComponent.field_J[174] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_playerfall_01");
@@ -541,40 +541,40 @@ final class fea {
           CauldronComponent.field_J[177] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_playerfall_04");
         }
         if (param1 == 178) {
-          CauldronComponent.field_J[178] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_player_squash_01", 63, "");
+          CauldronComponent.field_J[178] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_player_squash_01", 63, "");
         }
         if (179 == param1) {
-          CauldronComponent.field_J[179] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_player_squash_02", 46, "");
+          CauldronComponent.field_J[179] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_player_squash_02", 46, "");
         }
         if (param1 == 180) {
-          CauldronComponent.field_J[180] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_player_squash_03", 61, "");
+          CauldronComponent.field_J[180] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_player_squash_03", 61, "");
         }
         if (param1 == 181) {
-          CauldronComponent.field_J[181] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_laser_burn_player_01", 34, "");
+          CauldronComponent.field_J[181] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_laser_burn_player_01", 34, "");
         }
         if (param1 == 182) {
-          CauldronComponent.field_J[182] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_snake_bite_01", 20, "");
+          CauldronComponent.field_J[182] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_snake_bite_01", 20, "");
         }
         if (param1 == 183) {
-          CauldronComponent.field_J[183] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_snake_bite_02", 73, "");
+          CauldronComponent.field_J[183] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_snake_bite_02", 73, "");
         }
         if (param1 == 184) {
-          CauldronComponent.field_J[184] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_arrow_hit_player_01", 72, "");
+          CauldronComponent.field_J[184] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_arrow_hit_player_01", 72, "");
         }
         if (param1 == 185) {
-          CauldronComponent.field_J[185] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_arrow_hit_player_02", 53, "");
+          CauldronComponent.field_J[185] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_arrow_hit_player_02", 53, "");
         }
         if (186 == param1) {
-          CauldronComponent.field_J[186] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_arrow_hit_player_03", 91, "");
+          CauldronComponent.field_J[186] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_arrow_hit_player_03", 91, "");
         }
         if (param1 == 187) {
-          CauldronComponent.field_J[187] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_arrow_hit_player_04", 116, "");
+          CauldronComponent.field_J[187] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_arrow_hit_player_04", 116, "");
         }
         if (param1 == 188) {
-          CauldronComponent.field_J[188] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_player_splat_gory_01", 123, "");
+          CauldronComponent.field_J[188] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_player_splat_gory_01", 123, "");
         }
         if (param1 == 189) {
-          CauldronComponent.field_J[189] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_player_splat_gory_02", 66, "");
+          CauldronComponent.field_J[189] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_player_splat_gory_02", 66, "");
         }
         if (param1 == 190) {
           CauldronComponent.field_J[190] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_lava_haze_01_loop");
@@ -595,7 +595,7 @@ final class fea {
           CauldronComponent.field_J[195] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_key_pickup");
         }
         if (196 == param1) {
-          CauldronComponent.field_J[196] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_door_unlock_02", 16, "");
+          CauldronComponent.field_J[196] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_door_unlock_02", 16, "");
         }
         if (param1 == 197) {
           CauldronComponent.field_J[197] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_key_putdown");
@@ -637,37 +637,37 @@ final class fea {
           CauldronComponent.field_J[209] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_loot_pickup_02");
         }
         if (210 == param1) {
-          CauldronComponent.field_J[210] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_idol_pickup_01", 50, "");
+          CauldronComponent.field_J[210] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_idol_pickup_01", 50, "");
         }
         if (param1 == 211) {
-          CauldronComponent.field_J[211] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_speed_boost_01", 54, "");
+          CauldronComponent.field_J[211] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_speed_boost_01", 54, "");
         }
         if (param1 == 212) {
-          CauldronComponent.field_J[212] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sk_foot_01", 78, "");
+          CauldronComponent.field_J[212] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sk_foot_01", 78, "");
         }
         if (param1 == 213) {
-          CauldronComponent.field_J[213] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sk_foot_02", 92, "");
+          CauldronComponent.field_J[213] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sk_foot_02", 92, "");
         }
         if (param1 == 214) {
-          CauldronComponent.field_J[214] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sk_foot_03", 49, "");
+          CauldronComponent.field_J[214] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sk_foot_03", 49, "");
         }
         if (param1 == 215) {
-          CauldronComponent.field_J[215] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sk_foot_04", 89, "");
+          CauldronComponent.field_J[215] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sk_foot_04", 89, "");
         }
         if (216 == param1) {
-          CauldronComponent.field_J[216] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sk_foot_05", 86, "");
+          CauldronComponent.field_J[216] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sk_foot_05", 86, "");
         }
         if (param1 == 217) {
-          CauldronComponent.field_J[217] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sk_foot_06", 55, "");
+          CauldronComponent.field_J[217] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sk_foot_06", 55, "");
         }
         if (param1 == 218) {
-          CauldronComponent.field_J[218] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sk_foot_07", 127, "");
+          CauldronComponent.field_J[218] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sk_foot_07", 127, "");
         }
         if (param1 == 219) {
-          CauldronComponent.field_J[219] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_sk_foot_08", 34, "");
+          CauldronComponent.field_J[219] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_sk_foot_08", 34, "");
         }
         if (220 == param1) {
-          CauldronComponent.field_J[220] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_skeleton_eat_player_01", 64, "");
+          CauldronComponent.field_J[220] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_skeleton_eat_player_01", 64, "");
         }
         if (param1 == 221) {
           CauldronComponent.field_J[221] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_generic_unlock_01");
@@ -688,34 +688,34 @@ final class fea {
           CauldronComponent.field_J[226] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundEffectByName("", (byte) 52, "tr_spooky_unlock_05");
         }
         if (param1 == 227) {
-          CauldronComponent.field_J[227] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_death_jingle_01", 46, "");
+          CauldronComponent.field_J[227] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_death_jingle_01", 46, "");
         }
         if (228 == param1) {
-          CauldronComponent.field_J[228] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_death_jingle_02", 22, "");
+          CauldronComponent.field_J[228] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_death_jingle_02", 22, "");
         }
         if (param1 == 229) {
-          CauldronComponent.field_J[229] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_death_jingle_03", 93, "");
+          CauldronComponent.field_J[229] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_death_jingle_03", 93, "");
         }
         if (230 == param1) {
-          CauldronComponent.field_J[230] = LegacyOpenGlTurbulentTextureEffect.field_j.a("tr_death_jingle_04", 19, "");
+          CauldronComponent.field_J[230] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("tr_death_jingle_04", 19, "");
         }
         if (param1 == 231) {
-          CauldronComponent.field_J[231] = LegacyOpenGlTurbulentTextureEffect.field_j.a("TR_count_loop_01_LQ", 29, "");
+          CauldronComponent.field_J[231] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("TR_count_loop_01_LQ", 29, "");
         }
         if (param1 == 232) {
-          CauldronComponent.field_J[232] = LegacyOpenGlTurbulentTextureEffect.field_j.a("TR_count_loop_02_LQ", 119, "");
+          CauldronComponent.field_J[232] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("TR_count_loop_02_LQ", 119, "");
         }
         if (param1 == 233) {
-          CauldronComponent.field_J[233] = LegacyOpenGlTurbulentTextureEffect.field_j.a("TR_count_loop_03_LQ", 72, "");
+          CauldronComponent.field_J[233] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("TR_count_loop_03_LQ", 72, "");
         }
         if (param1 == 234) {
-          CauldronComponent.field_J[234] = LegacyOpenGlTurbulentTextureEffect.field_j.a("TR_count_loop_04_LQ", 39, "");
+          CauldronComponent.field_J[234] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("TR_count_loop_04_LQ", 39, "");
         }
         if (param1 == 235) {
-          CauldronComponent.field_J[235] = LegacyOpenGlTurbulentTextureEffect.field_j.a("TR_achievement_jingle_01_mono", 33, "");
+          CauldronComponent.field_J[235] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("TR_achievement_jingle_01_mono", 33, "");
         }
         if (param1 == 236) {
-          CauldronComponent.field_J[236] = LegacyOpenGlTurbulentTextureEffect.field_j.a("TR_achievement_jingle_02_mono", 43, "");
+          CauldronComponent.field_J[236] = LegacyOpenGlTurbulentTextureEffect.field_j.getSoundByName("TR_achievement_jingle_02_mono", 43, "");
         }
     }
 

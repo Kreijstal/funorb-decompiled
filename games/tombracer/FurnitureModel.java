@@ -26,14 +26,14 @@ final class FurnitureModel extends TrapModel {
           var9 = this.field_p.getModel((byte) 74);
           if (var9 != null) {
             var8 = GameScreen.positiveModulo(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -40);
-            gqa.a(var8, -83584144, param1, param2, var9, param3);
+            gqa.drawModelAt(var8, -83584144, param1, param2, var9, param3);
           }
           if (this.field_m != 1) {
             return;
           }
           var10 = SpawnerBehaviour.a(49, 12166, 1);
           var8Lifetime1 = GameScreen.positiveModulo(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, 86);
-          gqa.a(var8Lifetime1, -83584144, param1, param2, var10, param3);
+          gqa.drawModelAt(var8Lifetime1, -83584144, param1, param2, var10, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,21 +77,21 @@ final class FurnitureModel extends TrapModel {
           var7 = this.field_m;
           if (var7 == 1) {
             this.field_p = new ModelAnimator(1, 48);
-            this.field_p.a(3, true, (byte) -109, 1);
+            this.field_p.play(3, true, (byte) -109, 1);
             var5Lifetime1 = var9.nextBounded(20, 0);
             this.field_p.setFrame(-125, var5Lifetime1);
             return;
           }
           if (2 == var7) {
             this.field_p = new ModelAnimator(1, 50);
-            this.field_p.a(3, true, (byte) 62, 2);
+            this.field_p.play(3, true, (byte) 62, 2);
             var5Lifetime2 = var9.nextBounded(20, 0);
             this.field_p.setFrame(-83, var5Lifetime2);
             return;
           }
           if (0 == var7) {
             this.field_p = new ModelAnimator(1, 47);
-            this.field_p.a(3, true, (byte) -90, 0);
+            this.field_p.play(3, true, (byte) -90, 0);
             var5Lifetime3 = var9.nextBounded(20, 0);
             this.field_p.setFrame(125, var5Lifetime3);
             return;

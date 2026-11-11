@@ -64,7 +64,7 @@ final class MonochromeFillOperator extends TextureOperator {
     }
 
     final static boolean c(int param0) {
-        if (!ni.field_c) {
+        if (!DynamicGeometryBuffer.field_c) {
           return false;
         }
         if (OpenGlUnderwaterEffect.field_q != param0) {

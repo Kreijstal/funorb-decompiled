@@ -157,7 +157,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = var8.field_e;
                           var4 = var8.field_d;
                           if (this.field_p) {
-                            this.field_g.a(0, var3_int, var4);
+                            this.field_g.setCursorPosition(0, var3_int, var4);
                           } else {
                             Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_t, new Object[]{new Integer(var3_int), new Integer(var4)});
                           }

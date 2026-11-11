@@ -158,10 +158,10 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           var13 = param3 - param0 * (var11_int - 1) / 2;
           var14 = param0 * var11_int + var13;
           var15 = param10;
-          gqa.a(param5, -83584144, var15, -param0 + var13, param9, param6);
-          gqa.a(param1, -83584144, var15, var14, param9, param6);
+          gqa.drawModelAt(param5, -83584144, var15, -param0 + var13, param9, param6);
+          gqa.drawModelAt(param1, -83584144, var15, var14, param9, param6);
           for (var16 = 0; var16 < var11_int; var16++) {
-            gqa.a(GameScreen.positiveModulo(param8, 2048, 104), -83584144, var15, var13 + param0 * var16, param7, param6);
+            gqa.drawModelAt(GameScreen.positiveModulo(param8, 2048, 104), -83584144, var15, var13 + param0 * var16, param7, param6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

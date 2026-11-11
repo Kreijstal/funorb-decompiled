@@ -36,7 +36,7 @@ final class n extends GameFont implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          ho.a(-1, (e) (this));
+          NativeReleaseQueue.queueRelease(-1, (e) (this));
         }
     }
 }

@@ -151,7 +151,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
           }
           var10 = !this.isEmpty(-64) ? Room.field_m[this.field_f] : "";
           var4 = var10;
-          SocketConnector.a(var10.toUpperCase(), 1, qf.field_j, var3, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
+          SocketConnector.drawWrappedText(var10.toUpperCase(), 1, qf.field_j, var3, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
           return;
         }
         fa.field_a[this.field_f].draw(this.field_k, this.field_g);
@@ -162,7 +162,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
         }
         String var9 = !this.isEmpty(-64) ? Room.field_m[this.field_f] : "";
         var4Lifetime1 = var9;
-        SocketConnector.a(var9.toUpperCase(), 1, qf.field_j, var3Lifetime1, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
+        SocketConnector.drawWrappedText(var9.toUpperCase(), 1, qf.field_j, var3Lifetime1, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
     }
 
     CharacterChoiceTile(int param0, int param1) {

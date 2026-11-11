@@ -20,7 +20,7 @@ final class eba extends pb {
         return true;
     }
 
-    final static int a(CharSequence param0, int param1, int param2) {
+    final static int parseInt(CharSequence param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

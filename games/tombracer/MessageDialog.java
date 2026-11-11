@@ -23,7 +23,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
             this.field_cb = (ProgressBarWidget) null;
           }
           if (!this.field_Y) {
-            SimpleHoverMountComponent.openRelativeUrl("tochangedisplayname.ws", di.getApplet(72), (byte) -68);
+            SimpleHoverMountComponent.openRelativeUrl("tochangedisplayname.ws", ToolkitSelector.getApplet(72), (byte) -68);
             return;
           }
           jsa.a(false, 3);

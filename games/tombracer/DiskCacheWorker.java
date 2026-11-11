@@ -99,11 +99,11 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static boolean a(byte param0, int param1, int param2) {
+    final static boolean hasFlag2048(byte param0, int param1, int param2) {
         if (param0 > 4) {
           return (param2 & 2048) != 0 ? true : false;
         }
-        DiskCacheWorker.a((byte) -46, 11, 42);
+        DiskCacheWorker.hasFlag2048((byte) -46, 11, 42);
         return (param2 & 2048) != 0 ? true : false;
     }
 
@@ -199,7 +199,7 @@ final class DiskCacheWorker implements Runnable {
     final static boolean a(int param0) {
         lqa var1 = LegacyOpenGlBloomEffect.b(false);
         if (param0 < 122) {
-          DiskCacheWorker.a((byte) -30, -8, 82);
+          DiskCacheWorker.hasFlag2048((byte) -30, -8, 82);
           if (var1 == null) {
             return false;
           }

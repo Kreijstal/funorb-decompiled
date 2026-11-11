@@ -4,5 +4,5 @@
 interface mia {
     public abstract void onMoreSuggestionsRequested(int param0);
 
-    public abstract void a(String param0, int param1);
+    public abstract void setNameFieldText(String param0, int param1);
 }

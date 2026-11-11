@@ -13,7 +13,7 @@ final class WallCrusherComponent extends PrefabComponent {
     private int field_M;
     private boolean field_N;
 
-    final Switchable u(int param0) {
+    final Switchable getSwitchable(int param0) {
         if (param0 > -60) {
           this.field_M = -115;
           return (Switchable) ((Object) this.field_G);

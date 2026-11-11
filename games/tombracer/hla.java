@@ -18,7 +18,7 @@ final class hla extends UiComponent {
         field_ub = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void layoutChildren(int param0, int param1, int param2, int param3) {
         int var5 = (param3 + this.field_G) / 2;
         int var6 = this.field_t - param0;
         this.field_vb.setPaneBounds(this.field_G, param3, (byte) 127, 0, param1, -param3 + var6, 0);
@@ -32,20 +32,20 @@ final class hla extends UiComponent {
         this.field_wb.field_G = this.field_G - var5;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setPanelBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.field_T = param4;
         if (param2 < -122) {
           this.field_t = param6;
           this.field_qb = param3;
           this.field_G = param7;
-          this.a(param1, param0, 0, param5);
+          this.layoutChildren(param1, param0, 0, param5);
           return;
         }
         hla.releaseStatics(-42);
         this.field_t = param6;
         this.field_qb = param3;
         this.field_G = param7;
-        this.a(param1, param0, 0, param5);
+        this.layoutChildren(param1, param0, 0, param5);
     }
 
     hla(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3, UiComponent param4, String param5, String param6) {

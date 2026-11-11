@@ -277,7 +277,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           if (!this.field_Yc) {
             throw new RuntimeException("");
           }
-          this.field_Mb.b(this.field_I, 0, 0, 0, this.field_Y, 8448, 0);
+          this.field_Mb.captureFramebuffer(this.field_I, 0, 0, 0, this.field_Y, 8448, 0);
           this.field_l.setSurface(this.field_n);
         }
         this.field_I = this.field_C;
@@ -1828,7 +1828,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                     if (var13.charAt(0) == 120 &&
                       var13.length() >= 3) {
                       var21 = (CharSequence) ((Object) var13.substring(1, 3));
-                      if (SoundEventQueue.a(var21, -3)) {
+                      if (SoundEventQueue.isDecimalNumber(var21, -3)) {
                         var10 = var13.substring(1);
                         var7 = 1;
                       }
@@ -1842,7 +1842,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                       }
                       if (var10.length() >= 4) {
                         var22 = (CharSequence) ((Object) var10.substring(0, 4));
-                        if (SoundEventQueue.a(var22, -3)) {
+                        if (SoundEventQueue.isDecimalNumber(var22, -3)) {
                           var23 = (CharSequence) ((Object) var10.substring(0, 4));
                           var5_int = WhiteLightSensorComponent.parseDecimalInt(var23, (byte) 70);
                           decompiledRegionSelector0 = 1;
@@ -1905,7 +1905,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             this.field_L = new LegacyPostProcessChain(this);
             if (this.field_L.hasFramebuffer((byte) -43)) {
               this.field_T = new LegacyOpenGlBloomEffect(this);
-              if (!this.field_T.e(34842)) {
+              if (!this.field_T.isSupported(34842)) {
                 this.field_T.release((byte) -60);
                 this.field_T = null;
               }
@@ -2584,7 +2584,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void setPostProcessBounds(int param0, int param1, int param2, int param3) {
-        this.field_L.a(param2, param0, param3, param1, 0);
+        this.field_L.setBounds(param2, param0, param3, param1, 0);
     }
 
     final void setTextureCombineOperations(int param0, int param1, int param2) {
@@ -2872,7 +2872,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         jaggl.OpenGL.glMultMatrixf(this.field_j.affineMatrix(-112), 0);
         if (this.field_hb) {
-          this.field_Hb.field_h.a((byte) -120);
+          this.field_Hb.field_h.applyViewParameters((byte) -120);
         }
         this.applyDirectionalLightPositions(0);
         this.applyPointLights(-1);
@@ -2942,7 +2942,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void applyPostProcessing() {
-        this.field_L.a((byte) -112);
+        this.field_L.apply((byte) -112);
     }
 
     final void za(int param0, int param1, int param2, int param3, int param4) {
@@ -3220,7 +3220,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         if (this.field_Sc == null) {
           return null;
         }
-        return this.field_Sc.b(5995);
+        return this.field_Sc.getCubeTexture(5995);
     }
 
     private final int glTypeSize(byte param0, int param1) {

@@ -33,7 +33,7 @@ final class fga implements ShellListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 78 % ((-55 - param0) / 60);
-          stackIn_7_0 = (MultiplayerLoginMenu.b(false)) && (AnimatedLight.a(false, param1).field_d);
+          stackIn_7_0 = (MultiplayerLoginMenu.b(false)) && (AnimatedLight.findRoomDefinition(false, param1).field_d);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -276,7 +276,7 @@ final class fga implements ShellListener {
                   MembersUpsellMenu.drawCentredTextWithShadow((String) (var9), 16777215, kn.field_p, -1, this.field_b[var5Lifetime1] + 15, 20 + this.field_d[var5Lifetime1], 0);
                 }
                 var9Lifetime1 = null;
-                if (AnimatedLight.a(false, var6_intLifetime1).field_d) {
+                if (AnimatedLight.findRoomDefinition(false, var6_intLifetime1).field_d) {
                   var9Lifetime1 = "M";
                 }
                 if (null != var9Lifetime1) {
@@ -365,7 +365,7 @@ final class fga implements ShellListener {
                 }
                 if (stackIn_45_0 < 10) {
                   var6 = LoadLevelCommand.getMainRoomKey(var5, (byte) 125);
-                  if (AnimatedLight.a(false, var6).field_d) {
+                  if (AnimatedLight.findRoomDefinition(false, var6).field_d) {
                     this.a((byte) 110, true, var5);
                     var4_int++;
                   }
@@ -396,7 +396,7 @@ final class fga implements ShellListener {
               }
               if (stackIn_32_0 > var4_int) {
                 var6Lifetime1 = LoadLevelCommand.getMainRoomKey(var5Lifetime1, (byte) 111);
-                if (!AnimatedLight.a(false, var6Lifetime1).field_d ||
+                if (!AnimatedLight.findRoomDefinition(false, var6Lifetime1).field_d ||
                   var7 != 0) {
                   this.a((byte) 46, true, var5Lifetime1);
                   var4_int++;

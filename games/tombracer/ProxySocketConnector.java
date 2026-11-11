@@ -92,25 +92,25 @@ final class ProxySocketConnector extends SocketConnector {
         if (HuffmanCodec.field_a != var1) {
           if (var1 != DateInputWidget.field_z) {
             if (ControllerLocomotor.field_t == var1) {
-              baa.field_d.a(0, new ei[]{(ei) ((Object) vea.field_c)});
+              baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) vea.field_c)});
             } else {
               if (vea.field_c == var1) {
-                baa.field_d.a(0, new ei[]{(ei) ((Object) UsernameSuggestionsPanel.field_x)});
+                baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x)});
               } else {
                 if (UsernameSuggestionsPanel.field_x != var1) {
                   if (var1 == CharacterSelection.field_d) {
-                    baa.field_d.a(0, new ei[]{(ei) ((Object) HuffmanCodec.field_a)});
+                    baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a)});
                   }
                 } else {
-                  baa.field_d.a(0, new ei[]{(ei) ((Object) CharacterSelection.field_d)});
+                  baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) CharacterSelection.field_d)});
                 }
               }
             }
           } else {
-            baa.field_d.a(0, new ei[]{(ei) ((Object) ControllerLocomotor.field_t)});
+            baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) ControllerLocomotor.field_t)});
           }
         } else {
-          baa.field_d.a(0, new ei[]{(ei) ((Object) DateInputWidget.field_z)});
+          baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) DateInputWidget.field_z)});
         }
         System.gc();
         if (!LegacyOpenGlBloomEffect.b(false).field_c) {
@@ -421,7 +421,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9) {
+    final static int segmentsIntersect(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9) {
         int var10;
         int var10Lifetime1;
         if (Math.max(param6, param0) >= Math.min(param7, param5) &&

@@ -388,7 +388,7 @@ final class RoomEffectTraps {
               }
               var5.setPosition(1434528720, var13, var12);
               var5.instantiate(true, true, this.room, 0, 0, -1, (Trap) null);
-              this.skeletonTraps[var10] = (Trap) (var5.u(kha.bitwiseXor((int) param0, -24)));
+              this.skeletonTraps[var10] = (Trap) (var5.getSwitchable(kha.bitwiseXor((int) param0, -24)));
               continue;
             }
             break;

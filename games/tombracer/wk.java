@@ -60,7 +60,7 @@ final class wk extends IntrusiveNode {
             wk.initLogoAssets((PcmStreamMixer) null, 0, -42, (ResourceArchive) null);
           }
           mf.a(85);
-          ica.a(16777215);
+          ica.renderLogoSprite(16777215);
           TimeSwitchBehaviour.field_r = 0 - SwitchableId.field_b;
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "wk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

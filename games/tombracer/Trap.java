@@ -962,9 +962,9 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           this.removeWhenBehavioursDone = stackIn_9_1;
           this.lifetime = param2.readBits((byte) 44, 6) * 50;
           if (param0.formatVersion >= 10) {
-            this.angle = SnakePitModel.a(4, 8192, 0, param2.readBits((byte) 44, 4));
+            this.angle = SnakePitModel.unscaleFromBits(4, 8192, 0, param2.readBits((byte) 44, 4));
           } else {
-            this.angle = SnakePitModel.a(3, 8192, 0, param2.readBits((byte) 44, 3));
+            this.angle = SnakePitModel.unscaleFromBits(3, 8192, 0, param2.readBits((byte) 44, 3));
           }
           if (10 >= param0.formatVersion) {
             this.weight = param2.readBits((byte) 44, 8) / 5;
@@ -1288,7 +1288,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           ((BitPacketBuffer) (Object) stackIn_6_0).writeBits((byte) stackIn_6_1, stackIn_7_2, 1);
           param0.writeBits((byte) -125, this.lifetime / 50, 6);
           var3_int = -112 / ((param1 + 58) / 39);
-          param0.writeBits((byte) -125, ResourceArchive.a((byte) 59, this.angle, 8192, 4), 4);
+          param0.writeBits((byte) -125, ResourceArchive.scaleToBits((byte) 59, this.angle, 8192, 4), 4);
           param0.writeBits((byte) -127, this.weight, 8);
           param0.writeBits((byte) -128, this.crushThreshold, 8);
           stackIn_9_0 = (BitPacketBuffer) (param0);

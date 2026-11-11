@@ -32,9 +32,9 @@ final class tv extends UiComponent {
           if (param5 != null) {
             this.field_vb = new UiComponent(0L, param3, param5);
             this.addChild(-125, this.field_vb);
-            this.a(-10966);
+            this.invalidateLayoutRecursive(-10966);
           } else {
-            this.a(-10966);
+            this.invalidateLayoutRecursive(-10966);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -75,7 +75,7 @@ final class tv extends UiComponent {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void layoutColumns(int param0, int param1, byte param2) {
         int var4;
         int var5;
         int var6;
@@ -165,15 +165,15 @@ final class tv extends UiComponent {
         field_ub = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setRowBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.setBounds(param0, param3, param4 - 23776, param6, param1);
-        this.a(param2, param5, (byte) -112);
+        this.layoutColumns(param2, param5, (byte) -112);
         if (param4 != 0) {
-          this.a(107, -86, 59, 7, 1, 125, 35);
+          this.setRowBounds(107, -86, 59, 7, 1, 125, 35);
         }
     }
 
-    final int b(int param0, int param1, int param2) {
+    final int measureRowWidth(int param0, int param1, int param2) {
         int var4 = -param2;
         int var5 = -param2;
         if (this.field_tb != null) {

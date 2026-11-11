@@ -203,7 +203,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           }
           pda.field_c = 2;
           LegacyTextureCache.field_a = 11;
-          di.field_a = 15;
+          ToolkitSelector.field_a = 15;
           wg.field_i = 2;
           mna.field_d = 4;
           var7 = DialogStack.loadBinaryFont((byte) 123, "largefont", param4, "lobby", param3);
@@ -213,14 +213,14 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           PenaltyNotice.field_f.setInlineSprites(var5, var24);
           LegacyOpenGlRidgedWaterEffect.field_e.setInlineSprites(var5, var24);
           var8 = new UiComponent(0L, (UiComponent) null);
-          var8.field_P = di.field_a;
+          var8.field_P = ToolkitSelector.field_a;
           var8.field_ib = 16777215;
           var8.field_H = (BitmapFont) ((Object) var7);
           var8.field_bb = 1;
           var9 = var8;
           var9.field_z = 1;
           var10 = new UiComponent(0L, (UiComponent) null);
-          var10.field_P = di.field_a;
+          var10.field_P = ToolkitSelector.field_a;
           var10.field_ib = 16777215;
           var10.field_H = (BitmapFont) ((Object) PenaltyNotice.field_f);
           var11 = var10;
@@ -255,7 +255,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           SecondaryNodeDeque.field_b.field_w = tba.createGradientPanelSprites(-104, true, 30, 3815994, 2039583, false);
           Corpse.field_i = new UiComponent(0L, (UiComponent) null);
           Corpse.field_i.field_ib = 13421772;
-          Corpse.field_i.field_P = di.field_a;
+          Corpse.field_i.field_P = ToolkitSelector.field_a;
           Corpse.field_i.field_H = (BitmapFont) ((Object) PenaltyNotice.field_f);
           Corpse.field_i.field_bb = 1;
           PressureSwitchBehaviour.field_p = new UiComponent(0L, Corpse.field_i);
@@ -267,7 +267,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           var15 = new UiComponent(0L, PressureSwitchBehaviour.field_p);
           var15.field_ib = 16777215;
           var15.field_H = (BitmapFont) ((Object) var7);
-          var15.field_P = di.field_a;
+          var15.field_P = ToolkitSelector.field_a;
           tka.field_q = new UiComponent(0L, Corpse.field_i);
           tka.field_q.field_w = tba.createGradientPanelSprites(-103, param0, 16, 2236962, 2236962, false);
           tka.field_q.field_x = 2;
@@ -279,7 +279,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           S2CStartRoundPacket.field_a = new UiComponent(0L, una.field_j);
           S2CStartRoundPacket.field_a.applyStyle(param0, PressureSwitchBehaviour.field_p);
           var16 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button_mouseover");
-          SimpleBlockBehaviour.field_n = new ContextMenu(lw.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, di.field_a);
+          SimpleBlockBehaviour.field_n = new ContextMenu(lw.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, ToolkitSelector.field_a);
           AllPlatformsMazeComponent.field_M = new UiComponent(0L, PressureSwitchBehaviour.field_p);
           AllPlatformsMazeComponent.field_M.field_fb = 1;
           AllPlatformsMazeComponent.field_M.field_ob = 1;

@@ -76,7 +76,7 @@ final class HazardModel extends TrapModel {
             via.drawModelRotated(RevolverItemComponent.field_J[17], this.field_m, this.field_q, param3 + 1572864, param2, param1, 111, 0);
           } else {
             if (this.field_u == 1) {
-              gqa.a(this.field_m, -83584144, param1, param2, RevolverItemComponent.field_J[76], param3);
+              gqa.drawModelAt(this.field_m, -83584144, param1, param2, RevolverItemComponent.field_J[76], param3);
             }
           }
           var6_int = 67 % ((param4 + 38) / 47);

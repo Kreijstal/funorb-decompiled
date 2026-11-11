@@ -5,7 +5,7 @@ abstract class SoundEventQueue {
     static String field_a;
     IntrusiveDeque events;
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean isDecimalNumber(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;

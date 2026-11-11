@@ -27,7 +27,7 @@ final class WidgetStyleLayer {
         field_k = null;
     }
 
-    final void a(boolean param0) {
+    final void reset(boolean param0) {
         this.field_c = null;
         this.field_j = 0;
         this.field_d = 0;
@@ -70,7 +70,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final WidgetStyleLayer a(byte param0, int param1) {
+    final WidgetStyleLayer withShadowColour(byte param0, int param1) {
         this.field_l = param1;
         if (param0 != 7) {
           this.a(50, false);
@@ -194,7 +194,7 @@ final class WidgetStyleLayer {
         try {
           if (this.field_g) {
             param5.paint(-49, param4, param0, param3, param1);
-            param5.a(true);
+            param5.reset(true);
           }
           if (null != this.field_i) {
             param5.field_i = this.field_i;

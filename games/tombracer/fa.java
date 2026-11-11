@@ -146,7 +146,7 @@ final class fa {
               }
             }
             dqa.a(var4 + BitmapFont.escapeMarkup(WeaveOperator.field_n.toString()), var7, var5, pm.field_a[var6], 125);
-            if (!ni.field_c) {
+            if (!DynamicGeometryBuffer.field_c) {
               ComponentMount.field_b.field_o = false;
             }
             if (ComponentMount.field_b.field_o) {

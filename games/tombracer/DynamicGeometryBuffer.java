@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class ni {
+final class DynamicGeometryBuffer {
     static boolean field_c;
     private qm field_a;
     private qm field_d;
     private VertexBuffer field_b;
 
-    final void a(byte param0) {
+    final void release(byte param0) {
         this.field_a.close(12574);
         if (param0 < 22) {
           this.field_d = (qm) null;
@@ -78,7 +78,7 @@ final class ni {
         }
     }
 
-    ni(HardwareGraphicsToolkit param0) {
+    DynamicGeometryBuffer(HardwareGraphicsToolkit param0) {
         int var4_int = 0;
         int var5 = 0;
         jaclib.memory.Buffer var7 = null;
@@ -177,7 +177,7 @@ final class ni {
         }
     }
 
-    final void a(int param0, HardwareGraphicsToolkit param1) {
+    final void allocate(int param0, HardwareGraphicsToolkit param1) {
         try {
           this.field_a.allocate(786336, 24, true);
           int var3_int = -61 / ((param0 + 55) / 41);

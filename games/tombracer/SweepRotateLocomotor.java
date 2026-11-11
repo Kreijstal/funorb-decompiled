@@ -268,7 +268,7 @@ final class SweepRotateLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         try {
           this.sweepSpeed = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12));
-          this.sweepRange = SnakePitModel.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+          this.sweepRange = SnakePitModel.unscaleFromBits(8, 8192, 0, param1.readBits((byte) 44, 8));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -378,7 +378,7 @@ final class SweepRotateLocomotor extends Locomotor {
           }
           super.encode(param0, (byte) -101);
           param0.writeBits((byte) -125, dqa.toOffsetBinary(true, this.sweepSpeed, 12), 12);
-          param0.writeBits((byte) 108, ResourceArchive.a((byte) -127, this.sweepRange, 8192, 8), 8);
+          param0.writeBits((byte) 108, ResourceArchive.scaleToBits((byte) -127, this.sweepRange, 8192, 8), 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -444,7 +444,7 @@ final class SweepRotateLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         try {
           this.sweepSpeed = 16;
-          this.sweepRange = cba.a((byte) -123, 90.0, 8192);
+          this.sweepRange = cba.degreesToAngle((byte) -123, 90.0, 8192);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
