@@ -47,7 +47,7 @@ final class ClipStack {
               }
               var3 = var3 + param0;
             }
-            upa.printError(var3, (byte) -24);
+            RatingTable.printError(var3, (byte) -24);
             var7 = FloatPacketBuffer.replaceAllOccurrences(966747152, "%3a", ":", var3);
             var8 = FloatPacketBuffer.replaceAllOccurrences(966747152, "%40", "@", var7);
             var9 = FloatPacketBuffer.replaceAllOccurrences(966747152, "%26", "&", var8);

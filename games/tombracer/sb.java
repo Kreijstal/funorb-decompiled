@@ -4,7 +4,7 @@
 final class sb {
     static boolean field_b;
     static int field_d;
-    static upa field_a;
+    static RatingTable field_a;
     static String field_c;
 
     public static void releaseStatics(int param0) {

@@ -58,7 +58,7 @@ final class LoadLevelCommand extends ConsoleMethod {
             field_p = (int[]) null;
           }
           for (var4 = 0; var6.length > var4; var4++) {
-            var6[var4] = su.createToolkitSprite(param1[var4], param0, (byte) 2);
+            var6[var4] = QuickChatParamType.createToolkitSprite(param1[var4], param0, (byte) 2);
           }
           stackIn_10_0 = var3;
           return stackIn_10_0;

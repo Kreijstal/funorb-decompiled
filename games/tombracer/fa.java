@@ -121,12 +121,12 @@ final class fa {
                   var4 = "<col=999999>" + var4 + PerlinNoise2D.field_o + "</col>";
                   if (var10 != 0) {
                     var5 = "";
-                    var4 = "<col=999999>" + var4 + kia.field_a + "</col>";
+                    var4 = "<col=999999>" + var4 + RendererMode.field_a + "</col>";
                   }
                 }
               } else {
                 var5 = "";
-                var4 = "<col=999999>" + var4 + kia.field_a + "</col>";
+                var4 = "<col=999999>" + var4 + RendererMode.field_a + "</col>";
               }
               var9 = PlatformBehaviour.field_s.stringWidth(var4);
               if (!RoomComponentFactory.a(27)) {

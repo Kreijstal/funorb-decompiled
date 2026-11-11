@@ -131,8 +131,8 @@ final class VoronoiNoiseOperator extends TextureOperator {
     }
 
     final static Boolean e(byte param0) {
-        Boolean var1 = kia.field_b;
-        kia.field_b = null;
+        Boolean var1 = RendererMode.field_b;
+        RendererMode.field_b = null;
         if (param0 <= 57) {
           return (Boolean) null;
         }

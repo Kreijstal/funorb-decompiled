@@ -18,20 +18,20 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
     private int field_m;
     private int field_w;
 
-    final static void b(int param0, byte param1) {
+    final static void resendRatingTableRequests(int param0, byte param1) {
         int var3 = 0;
-        upa var4 = null;
+        RatingTable var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 > -101) {
-            Puddle.b(-10, (byte) -8);
+            Puddle.resendRatingTableRequests(-10, (byte) -8);
           }
-          var4 = (upa) (LoadingStepList.field_d.first(-80));
+          var4 = (RatingTable) (LoadingStepList.field_d.first(-80));
           while (var4 != null) {
-            GameClock.a(var4, param0, 2147);
-            var4 = (upa) (LoadingStepList.field_d.next(121));
+            GameClock.sendRatingTableRequest(var4, param0, 2147);
+            var4 = (RatingTable) (LoadingStepList.field_d.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -121,7 +121,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         try {
           this.x = param0.mirrorX(this.x, (byte) 71);
           if (param1 >= -16) {
-            Puddle.b(-115, (byte) 124, 61, -21);
+            Puddle.routeKeyInput(-115, (byte) 124, 61, -21);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mda.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -340,7 +340,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         this.x = param0;
     }
 
-    final static boolean b(int param0, byte param1, int param2, int param3) {
+    final static boolean routeKeyInput(int param0, byte param1, int param2, int param3) {
         if (fua.field_g) {
           return apa.field_c.dispatchKeyInput((byte) -121, MenuEntry.field_h, HardwareOpenGlToolkit.field_td);
         }
@@ -354,10 +354,10 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           return false;
         }
         if (param1 == -44) {
-          return ChooseRewardFactory.a(param2, true, param0);
+          return ChooseRewardFactory.handleChatInputKey(param2, true, param0);
         }
         Puddle.releaseStatics((byte) -121);
-        return ChooseRewardFactory.a(param2, true, param0);
+        return ChooseRewardFactory.handleChatInputKey(param2, true, param0);
     }
 
     public final int getY(int param0) {
@@ -461,7 +461,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
 
     public static void releaseStatics(byte param0) {
         if (param0 != 87) {
-          Puddle.b(-56, (byte) 104, -90, 106);
+          Puddle.routeKeyInput(-56, (byte) 104, -90, 106);
           field_v = null;
           return;
         }
@@ -527,7 +527,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
 
     public final int getPreviousX(int param0) {
         if (param0 <= 90) {
-          Puddle.b(122, (byte) -32, 39, 92);
+          Puddle.routeKeyInput(122, (byte) -32, 39, 92);
           return this.previousX;
         }
         return this.previousX;

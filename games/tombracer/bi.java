@@ -4,7 +4,7 @@
 final class bi {
     static fta field_a;
     static int field_c;
-    static su field_d;
+    static QuickChatParamType field_d;
     static String[] field_b;
 
     public static void releaseStatics(boolean param0) {
@@ -35,7 +35,7 @@ final class bi {
 
     static {
         field_a = new fta();
-        field_d = new su(7, 0, 1, 1);
+        field_d = new QuickChatParamType(7, 0, 1, 1);
         field_b = new String[]{"All scores", "My scores", "Best each"};
     }
 }

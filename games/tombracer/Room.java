@@ -9,7 +9,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     private int field_e;
     private int width;
     static String[] field_m;
-    static kia field_k;
+    static RendererMode field_k;
     private int field_C;
     private int courseIndex;
     private IntrusiveDeque obstacles;
@@ -1488,7 +1488,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final PlayerSimulation getSimulation(int param0) {
         if (param0 != -1553494544) {
-          field_k = (kia) null;
+          field_k = (RendererMode) null;
         }
         return this.simulation;
     }

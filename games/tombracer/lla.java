@@ -12,7 +12,7 @@ final class lla {
         is.field_yb.setBounds(dqa.field_e.field_G, ToolkitSelector.field_a, param2 - 23796, 0, 0);
         MatchScreen.field_F.setBounds(-82 + (-io.field_a + (dqa.field_e.field_G - 2)), 18, param2 ^ -23756, 2 + ToolkitSelector.field_a, 0);
         Puddle.field_v.setBounds(82 + io.field_a, 18, -23776, 2 + ToolkitSelector.field_a, -80 + (dqa.field_e.field_G - io.field_a - 2));
-        dn.field_b.setPanelBounds(io.field_a, 20, -128, 0, ToolkitSelector.field_a + 2 + 20, 2, -20 + (-2 + (dqa.field_e.field_t - ToolkitSelector.field_a)), dqa.field_e.field_G);
+        TextureCoordinateGeneration.field_b.setPanelBounds(io.field_a, 20, -128, 0, ToolkitSelector.field_a + 2 + 20, 2, -20 + (-2 + (dqa.field_e.field_t - ToolkitSelector.field_a)), dqa.field_e.field_G);
         OpenGlSprite.field_j.layoutChildren(param2, io.field_a, 0, 2);
     }
 

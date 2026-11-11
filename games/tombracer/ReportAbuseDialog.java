@@ -9,7 +9,7 @@ final class ReportAbuseDialog extends UiComponent {
     private UiComponent field_Fb;
     private UiComponent field_Bb;
     private UiComponent field_tb;
-    static ur field_Eb;
+    static ArchiveId field_Eb;
     long field_Db;
     static int field_ub;
     private UiComponent field_wb;
@@ -179,14 +179,14 @@ final class ReportAbuseDialog extends UiComponent {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
-                    stackIn_8_5 = pl.field_c;
+                    stackIn_8_5 = ChatChannelType.field_c;
                     break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;
                 stackIn_8_1Lifetime1 = null;
                 stackIn_8_2Lifetime1 = null;
-                stackIn_8_5 = ur.field_b;
+                stackIn_8_5 = ArchiveId.field_b;
               }
               this.field_Ab = new LabelledRow(stackIn_7_3, stackIn_7_4, stackIn_8_5);
               this.field_wb.addChild(-125, this.field_Ab);
@@ -488,7 +488,7 @@ final class ReportAbuseDialog extends UiComponent {
     }
 
     static {
-        field_Eb = new ur(2);
+        field_Eb = new ArchiveId(2);
         field_Cb = false;
     }
 }

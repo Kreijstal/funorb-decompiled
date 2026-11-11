@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EffectEvent extends GameEvent {
-    static ur field_l;
+    static ArchiveId field_l;
     private int effectSlot;
     private int value;
     static Sprite field_j;
@@ -145,7 +145,7 @@ final class EffectEvent extends GameEvent {
     }
 
     static {
-        field_l = new ur(3);
+        field_l = new ArchiveId(3);
         field_i = "This is <%0>'s RuneScape clan if they have one.";
         field_m = "Report abuse";
     }

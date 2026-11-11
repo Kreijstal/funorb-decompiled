@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MovingSawComponent extends PathMoverComponent {
-    static su field_M;
+    static QuickChatParamType field_M;
     static char[] field_O;
     static int field_N;
 
@@ -45,7 +45,7 @@ final class MovingSawComponent extends PathMoverComponent {
 
     final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          field_M = (su) null;
+          field_M = (QuickChatParamType) null;
           return 7;
         }
         return 7;
@@ -178,6 +178,6 @@ final class MovingSawComponent extends PathMoverComponent {
 
     static {
         field_O = new char[128];
-        field_M = new su(0, 2, 2, 1);
+        field_M = new QuickChatParamType(0, 2, 2, 1);
     }
 }

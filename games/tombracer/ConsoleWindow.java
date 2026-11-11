@@ -491,7 +491,7 @@ abstract class ConsoleWindow implements ShellListener {
         this.field_o.handleMouseSelection((byte) 87);
     }
 
-    final static HiscoreTable a(int param0, int param1, int param2, int param3, int param4) {
+    final static HiscoreTable getOrRequestHiscoreTable(int param0, int param1, int param2, int param3, int param4) {
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param2 != 0) {
           field_f = (String[]) null;
@@ -508,7 +508,7 @@ abstract class ConsoleWindow implements ShellListener {
         var5.field_i = param4;
         var5.field_n = param1;
         TimingPattern.field_b.addLast((byte) -48, var5);
-        BeamSegment.a(false, param0, var5);
+        BeamSegment.sendHiscoreTableRequest(false, param0, var5);
         return var5;
     }
 

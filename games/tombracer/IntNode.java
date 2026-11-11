@@ -6,7 +6,7 @@ final class IntNode extends IntrusiveNode {
     static double field_h;
     int value;
     static IntrusiveDeque field_g;
-    static su field_f;
+    static QuickChatParamType field_f;
 
     public static void releaseStatics(byte param0) {
         field_f = null;
@@ -70,6 +70,6 @@ final class IntNode extends IntrusiveNode {
     static {
         field_h = 0.0;
         field_g = new IntrusiveDeque();
-        field_f = new su(12, 0, 1, 0);
+        field_f = new QuickChatParamType(12, 0, 1, 0);
     }
 }

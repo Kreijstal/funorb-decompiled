@@ -7,7 +7,7 @@ final class ViewportManager {
     int field_p;
     private int field_d;
     private int field_c;
-    static pl field_f;
+    static ChatChannelType field_f;
     private int field_e;
     private int field_n;
     private int field_o;
@@ -372,7 +372,7 @@ final class ViewportManager {
     }
 
     static {
-        field_f = new pl(2);
+        field_f = new ChatChannelType(2);
         field_a = "Hey you! Get out of the way of these boulders of doom.";
     }
 }

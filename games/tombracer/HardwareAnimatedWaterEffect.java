@@ -60,7 +60,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
     final void disable(int param0) {
         if (param0 <= -4) {
           this.owner.setActiveTextureUnit(1, false);
-          this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+          this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
           this.owner.setColorCombineSource(ej.field_c, 0, -55);
           this.owner.setAlphaCombineSource(0, false, ej.field_c);
           this.owner.setTextureCoordinateIndex(1, (byte) 58);
@@ -71,7 +71,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         }
         field_f = (int[]) null;
         this.owner.setActiveTextureUnit(1, false);
-        this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+        this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
         this.owner.setColorCombineSource(ej.field_c, 0, -55);
         this.owner.setAlphaCombineSource(0, false, ej.field_c);
         this.owner.setTextureCoordinateIndex(1, (byte) 58);
@@ -107,11 +107,11 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
 
     final void refreshState(boolean param0, int param1) {
         if (param1 == 5744) {
-          this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PrimitiveType.field_c);
+          this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, GpuPrimitiveType.field_c);
           return;
         }
         this.field_e = 1.964166283607483f;
-        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PrimitiveType.field_c);
+        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, GpuPrimitiveType.field_c);
     }
 
     final void bindTexture(int param0, GpuTexture param1, int param2) {

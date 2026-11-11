@@ -43,7 +43,7 @@ final class VertexAttribute {
         UiComponent var7 = null;
         try {
           ConsoleValue.field_e = MaskBlendOperator.loadSpriteByName(param0, "basic", "display_name_changed", 121);
-          dn.field_b = new hla(0L, LegacyOpenGlWaterTextures.field_d, kea.field_a, ai.field_d);
+          TextureCoordinateGeneration.field_b = new hla(0L, LegacyOpenGlWaterTextures.field_d, GraphicsQuality.field_a, ai.field_d);
           OpenGlSprite.field_j = new hla(0L, LegacyOpenGlWaterTextures.field_d, ParticleEffects.field_a, uma.field_a);
           dqa.field_e = new UiComponent(0L, (UiComponent) null);
           is.field_yb = new UiComponent(0L, Corpse.field_i);
@@ -58,13 +58,13 @@ final class VertexAttribute {
             VertexAttribute.loadBasicSprites((ResourceArchive) null, true);
           }
           dqa.field_e.addChild(-123, Puddle.field_v);
-          dqa.field_e.addChild(-123, dn.field_b);
+          dqa.field_e.addChild(-123, TextureCoordinateGeneration.field_b);
           dqa.field_e.addChild(-125, SoftwareDepthBuffer.field_c);
-          stackIn_4_0 = dn.field_b.field_vb.field_vb;
+          stackIn_4_0 = TextureCoordinateGeneration.field_b.field_vb.field_vb;
           stackIn_5_1 = !(param1);
           ((UiComponent) (Object) stackIn_4_0).applyStyle(stackIn_5_1, Corpse.field_i);
-          dn.field_b.field_vb.field_vb.field_bb = 1;
-          var6 = dn.field_b.field_vb.field_vb;
+          TextureCoordinateGeneration.field_b.field_vb.field_vb.field_bb = 1;
+          var6 = TextureCoordinateGeneration.field_b.field_vb.field_vb;
           var7 = var6;
           var7.field_z = 1;
           stackIn_7_0 = OpenGlSprite.field_j.field_vb.field_vb;

@@ -9,7 +9,7 @@ final class FuseBehaviour extends Behaviour {
     private FlagSet field_x;
     private int field_o;
     static boolean field_w;
-    static su field_v;
+    static QuickChatParamType field_v;
     private int field_n;
     private FlagSet field_q;
     private int field_u;
@@ -313,6 +313,6 @@ final class FuseBehaviour extends Behaviour {
 
     static {
         field_t = "One Player Puzzle";
-        field_v = new su(1, 2, 2, 0);
+        field_v = new QuickChatParamType(1, 2, 2, 0);
     }
 }

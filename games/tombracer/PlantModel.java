@@ -221,7 +221,7 @@ final class PlantModel extends TrapModel {
           }
           var5 = (HiscoreTable) (TimingPattern.field_b.first(-80));
           while (var5 != null) {
-            BeamSegment.a(param0, param1, var5);
+            BeamSegment.sendHiscoreTableRequest(param0, param1, var5);
             var5 = (HiscoreTable) (TimingPattern.field_b.next(122));
           }
           return;

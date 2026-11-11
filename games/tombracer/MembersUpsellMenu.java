@@ -157,9 +157,9 @@ final class MembersUpsellMenu extends MenuScreen {
             if (MultiplayerLoginMenu.b(false) &&
               !dta.field_g[var4]) {
               var3 = 1;
-              FloatPacketBuffer.field_k[var4].draw(pha.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
+              FloatPacketBuffer.field_k[var4].draw(LobbyPlayerEntry.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
             } else {
-              OpenGlFramebuffer.field_i[var4].draw(pha.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
+              OpenGlFramebuffer.field_i[var4].draw(LobbyPlayerEntry.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
               var5_ref_nh = ConsoleWindow.field_d;
               if (null != mq.field_e) {
                 if (mq.field_e.worldMedals[var4] == 3) {

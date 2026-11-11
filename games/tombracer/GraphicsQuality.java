@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kea {
+final class GraphicsQuality {
     static String field_b;
-    static su field_c;
+    static QuickChatParamType field_c;
     static String field_a;
 
     final static void openDisplaySettingsDialog(int param0) {
@@ -20,7 +20,7 @@ final class kea {
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -7646) {
-          kea.releaseStatics(104);
+          GraphicsQuality.releaseStatics(104);
           field_c = null;
           field_a = null;
           return;
@@ -36,6 +36,6 @@ final class kea {
     static {
         field_b = "Bottomless pits";
         field_a = "Add friend";
-        field_c = new su(13, 0, 1, 0);
+        field_c = new QuickChatParamType(13, 0, 1, 0);
     }
 }

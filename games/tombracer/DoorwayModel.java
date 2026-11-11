@@ -7,7 +7,7 @@ final class DoorwayModel extends TrapModel {
     private int field_r;
     static String field_m;
     private int field_q;
-    static su field_o;
+    static QuickChatParamType field_o;
     static String field_n;
 
     final void decode(int param0, Room param1, BitPacketBuffer param2) {
@@ -148,7 +148,7 @@ final class DoorwayModel extends TrapModel {
           field_n = null;
           return;
         }
-        field_o = (su) null;
+        field_o = (QuickChatParamType) null;
         field_o = null;
         field_m = null;
         field_n = null;
@@ -256,7 +256,7 @@ final class DoorwayModel extends TrapModel {
 
     static {
         field_m = "Coins";
-        field_o = new su(14, 0, 4, 1);
+        field_o = new QuickChatParamType(14, 0, 4, 1);
         field_n = "<%0> has dropped out.";
     }
 }

@@ -40,7 +40,7 @@ abstract class dna extends PrefabComponent {
         return 7;
     }
 
-    final static kea A(int param0) {
+    final static GraphicsQuality getGraphicsQuality(int param0) {
         int var1 = -98 % ((81 - param0) / 34);
         return FontMetrics.field_f;
     }

@@ -279,7 +279,7 @@ final class HardwareFont extends GameFont {
           !param4) {
           this.field_g.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
         } else {
-          this.field_g.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PlatformComponent.field_F);
+          this.field_g.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, PlatformComponent.field_F);
           this.field_g.setColorCombineSource(LruNodeCache.field_c, 0, -121);
           this.field_g.setTextureConstantColor(3625, param3);
         }

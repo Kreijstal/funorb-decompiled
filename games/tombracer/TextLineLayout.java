@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TextLine {
+final class TextLineLayout {
     static String field_a;
     int field_d;
     int[] field_c;
@@ -136,7 +136,7 @@ final class TextLine {
         return param0 ^ param1;
     }
 
-    TextLine(int param0, int param1, int param2) {
+    TextLineLayout(int param0, int param1, int param2) {
         this.field_b = param1;
         this.field_d = param0;
         this.field_c = new int[param2 + 1];

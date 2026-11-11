@@ -189,7 +189,7 @@ abstract class ota {
             null != var4.field_Cb) {
             return true;
           }
-          stackIn_11_0 = (null != C2SChooseRewardPacket.field_a) && (null != AchievementsScreen.a((byte) -40, param0));
+          stackIn_11_0 = (null != C2SChooseRewardPacket.field_a) && (null != AchievementsScreen.findLobbyPlayer((byte) -40, param0));
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

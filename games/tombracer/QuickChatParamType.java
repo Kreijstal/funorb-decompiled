@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class su {
+final class QuickChatParamType {
     int field_b;
     int field_a;
 
@@ -15,7 +15,7 @@ final class su {
           mca.writeScoreSubmission(param0, param1 ^ -108, param2);
           if (param1 != -108) {
             ScoreSubmission var4 = (ScoreSubmission) null;
-            su.queueScoreSubmission((ScoreSubmission) null, (byte) 124, 15);
+            QuickChatParamType.queueScoreSubmission((ScoreSubmission) null, (byte) 124, 15);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "su.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -59,7 +59,7 @@ final class su {
         }
     }
 
-    su(int param0, int param1, int param2, int param3) {
+    QuickChatParamType(int param0, int param1, int param2, int param3) {
         this.field_a = param0;
         this.field_b = param3;
     }

@@ -164,11 +164,11 @@ final class LoginMethod {
         field_f = null;
     }
 
-    final static pha a(boolean param0, long param1) {
+    final static LobbyPlayerEntry a(boolean param0, long param1) {
         if (!param0) {
           LoginMethod.a(false, 56L);
         }
-        return (pha) (fua.field_a.get(-126, param1));
+        return (LobbyPlayerEntry) (fua.field_a.get(-126, param1));
     }
 
     static {

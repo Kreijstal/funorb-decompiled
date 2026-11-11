@@ -8,7 +8,7 @@ final class ItemModel extends TrapModel {
     private int field_t;
     private int field_m;
     static String field_q;
-    static dn field_o;
+    static TextureCoordinateGeneration field_o;
     static QuickChatMenu field_n;
 
     final void attach(TrapPart param0, WorldBody param1, byte param2) {
@@ -346,6 +346,6 @@ final class ItemModel extends TrapModel {
 
     static {
         field_q = "Bouncy Fireballs";
-        field_o = new dn();
+        field_o = new TextureCoordinateGeneration();
     }
 }

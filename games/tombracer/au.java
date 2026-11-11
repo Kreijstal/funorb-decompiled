@@ -16,7 +16,7 @@ final class au extends aa {
           if (vb.field_i == ObjectList.field_c) {
             if (!TextWidgetPainter.a(23)) {
               if (MandelbrotOperator.field_o != null) {
-                su.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
+                QuickChatParamType.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
               }
               qfa.a(-116);
               if (FlagSet.field_c) {

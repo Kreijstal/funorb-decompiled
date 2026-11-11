@@ -829,7 +829,7 @@ final class OpenGlModel extends ToolkitModel {
             }
           }
           if (decompiledFrameCompleted4) {
-            if (!upa.a(this.field_u, 0, param1)) {
+            if (!RatingTable.a(this.field_u, 0, param1)) {
               if (!ModelFactory.hasFlag2048(-17, this.field_u, param1)) {
                 param5.field_ab = null;
                 decompiledFrameRemainder0 = (var13 != 0);

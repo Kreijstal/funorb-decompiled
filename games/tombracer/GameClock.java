@@ -22,7 +22,7 @@ abstract class GameClock {
 
     abstract void resetTiming(int param0);
 
-    final static void a(upa param0, int param1, int param2) {
+    final static void sendRatingTableRequest(RatingTable param0, int param1, int param2) {
         BitPacketBuffer var3 = null;
         try {
           var3 = ql.field_k;

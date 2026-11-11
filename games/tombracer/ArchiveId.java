@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ur {
+final class ArchiveId {
     static TextWidgetPainter field_a;
     int field_c;
     static String field_b;
@@ -10,7 +10,7 @@ final class ur {
         throw new IllegalStateException();
     }
 
-    ur(int param0) {
+    ArchiveId(int param0) {
         this.field_c = param0;
     }
 

@@ -76,7 +76,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        su var7 = null;
+        QuickChatParamType var7 = null;
         int var9 = 0;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
@@ -96,7 +96,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               this.field_k = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
                 var6 = param0.readUnsignedShort(122);
-                var7 = li.a(var6, (byte) 126);
+                var7 = li.forId(var6, (byte) 126);
                 if (var7 != null) {
                   this.field_k[var5] = var6;
                   array$0 = new int[var7.field_b];

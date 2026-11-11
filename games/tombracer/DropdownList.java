@@ -302,10 +302,10 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           this.field_B = true;
           this.field_w = "";
           if (this.field_h != null) {
-            if (!(this.field_h instanceof FocusListener)) {
+            if (!(this.field_h instanceof FocusChangeListener)) {
               return true;
             }
-            ((FocusListener) (this.field_h)).onFocusChanged((UiWidget) (this), (byte) -75, this.field_B);
+            ((FocusChangeListener) (this.field_h)).onFocusChanged((UiWidget) (this), (byte) -75, this.field_B);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

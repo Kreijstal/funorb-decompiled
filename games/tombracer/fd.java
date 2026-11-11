@@ -9,7 +9,7 @@ final class fd {
     int field_g;
     int field_b;
     int field_a;
-    static lu field_d;
+    static ChatTarget field_d;
 
     final fd copy(byte param0) {
         if (param0 == 78) {
@@ -25,7 +25,7 @@ final class fd {
           this.field_h = param1.field_h;
           this.field_b = param1.field_b;
           if (param0 != 167) {
-            field_d = (lu) null;
+            field_d = (ChatTarget) null;
           }
           this.field_g = param1.field_g;
           this.field_a = param1.field_a;
@@ -37,7 +37,7 @@ final class fd {
     public static void releaseStatics(byte param0) {
         field_d = null;
         if (param0 >= -103) {
-          field_d = (lu) null;
+          field_d = (ChatTarget) null;
         }
     }
 

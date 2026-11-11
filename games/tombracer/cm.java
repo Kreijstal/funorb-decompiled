@@ -250,7 +250,7 @@ final class cm implements GamePacket {
                         CourseLayoutFactory.field_b[var9] = (byte) 0;
                       }
                     } else {
-                      CourseLayoutFactory.field_b[var7 / 8] = (byte)TextLine.bitwiseXor((int) CourseLayoutFactory.field_b[var7 / 8], 1 << SnakePitBehaviour.bitwiseAnd(var7, 7));
+                      CourseLayoutFactory.field_b[var7 / 8] = (byte)TextLineLayout.bitwiseXor((int) CourseLayoutFactory.field_b[var7 / 8], 1 << SnakePitBehaviour.bitwiseAnd(var7, 7));
                     }
                   }
                 }
@@ -478,7 +478,7 @@ final class cm implements GamePacket {
                       TileGrid.field_e[var18 / 8] = (byte)SnakePitBehaviour.bitwiseAnd((int) TileGrid.field_e[var18 / 8], ~(1 << SnakePitBehaviour.bitwiseAnd(var18, 7)));
                     }
                   } else {
-                    TileGrid.field_e[(var6Lifetime4 + var9) / 8] = (byte)TextLine.bitwiseXor((int) TileGrid.field_e[(var6Lifetime4 + var9) / 8], 1 << SnakePitBehaviour.bitwiseAnd(7, var9 + var6Lifetime4));
+                    TileGrid.field_e[(var6Lifetime4 + var9) / 8] = (byte)TextLineLayout.bitwiseXor((int) TileGrid.field_e[(var6Lifetime4 + var9) / 8], 1 << SnakePitBehaviour.bitwiseAnd(7, var9 + var6Lifetime4));
                   }
                 }
               }

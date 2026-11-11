@@ -7,7 +7,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
     private int graphicsMode;
     static UiComponent field_g;
     static int field_a;
-    static ur field_d;
+    static ArchiveId field_d;
     static String field_c;
     static int[] field_b;
 
@@ -126,7 +126,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
     static {
         field_a = 2097152;
         field_c = "<%0> might change the options - wait and see.";
-        field_d = new ur(1);
+        field_d = new ArchiveId(1);
         field_b = new int[]{67, 56, 192, 49, 176, 241, 88, 161, 83};
     }
 }

@@ -148,7 +148,7 @@ final class SpawnerBehaviour extends Behaviour {
         this.field_p = 0;
         try {
           this.field_o = new TimingPattern(param0.formatVersion, param1);
-          this.field_q = pha.readSpawner(param1, param0, 162);
+          this.field_q = LobbyPlayerEntry.readSpawner(param1, param0, 162);
           this.field_p = param1.readBits((byte) 44, 12);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

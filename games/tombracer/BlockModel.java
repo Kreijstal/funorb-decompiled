@@ -3,7 +3,7 @@
  */
 final class BlockModel extends TrapModel {
     private int field_m;
-    static pl field_s;
+    static ChatChannelType field_s;
     static long field_t;
     private PlayingSound field_w;
     private int field_v;
@@ -485,7 +485,7 @@ final class BlockModel extends TrapModel {
     static {
         field_t = 0L;
         field_y = new float[4];
-        field_s = new pl(3);
+        field_s = new ChatChannelType(3);
         field_o = 0;
     }
 }

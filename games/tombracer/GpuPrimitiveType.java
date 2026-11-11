@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PrimitiveType {
+final class GpuPrimitiveType {
     static String field_a;
     static String field_b;
     static TextureCombineOperation field_c;
@@ -38,7 +38,7 @@ final class PrimitiveType {
           MazeComponent.c(param1, param0 ^ -62);
           return;
         }
-        PrimitiveType.a((byte) 33, false);
+        GpuPrimitiveType.a((byte) 33, false);
         ProgressDialog.field_R = new UiComponent(0L, (UiComponent) null);
         PlayerModel.field_a.addChild(param0 - 64, S2CEventPacket.field_e);
         PlayerModel.field_a.addChild(-122, ProgressDialog.field_R);

@@ -84,7 +84,7 @@ final class wp {
         String var2Lifetime1;
         if (null != hka.field_b) {
           if (null == hka.field_b.field_h) {
-            lu.field_b = null;
+            ChatTarget.field_b = null;
             if (param0 != -1) {
               var2 = (String) null;
               wp.a(-23, (String) null);
@@ -96,7 +96,7 @@ final class wp {
           }
           hka.field_b.field_h.field_cb = false;
         }
-        lu.field_b = null;
+        ChatTarget.field_b = null;
         if (param0 == -1) {
           hka.field_b = null;
           return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn {
+final class TextureCoordinateGeneration {
     static hla field_b;
     static UiComponent field_a;
     static ToolkitSprite[] field_d;

@@ -18,23 +18,23 @@ final class HardwareSpecularEffect extends ShaderEffect {
           this.owner.applyTexCoordGeneration(ItemModel.field_o, (byte) 0);
           this.owner.resetTextureTransform((byte) 127);
           if (!this.field_d) {
-            this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+            this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
             this.owner.setColorCombineSource(ej.field_c, 0, -90);
             this.owner.setActiveTextureUnit(2, false);
-            this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+            this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
             this.owner.setColorCombineSource(ej.field_c, 0, -108);
             this.owner.setColorCombineSource(PlayerContextMenu.field_j, 1, -15);
             this.owner.setAlphaCombineSource(0, false, ej.field_c);
             this.owner.bindTexture(true, (GpuTexture) null);
           } else {
-            this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+            this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
             this.owner.setColorCombineSource(ej.field_c, 0, -94);
             this.owner.setAlphaCombineSource(0, false, ej.field_c);
           }
           this.owner.setActiveTextureUnit(0, false);
           this.field_g = false;
         }
-        this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+        this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
         if (param0 > -4) {
           this.setParameters((byte) 55, -114, 112);
         }
@@ -174,7 +174,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
           var4.setRotationX(-94, 1024);
           this.owner.setTextureTransformMode(cva.field_b, false);
           if (!this.field_d) {
-            this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PlatformComponent.field_F);
+            this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, PlatformComponent.field_F);
             this.owner.setColorCombineSource(PlayerContextMenu.field_j, 0, -34);
             this.owner.setActiveTextureUnit(2, false);
             this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
@@ -198,7 +198,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
         if (param1 != 5744) {
           return;
         }
-        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PrimitiveType.field_c);
+        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, GpuPrimitiveType.field_c);
     }
 
     final boolean isSupported(int param0) {

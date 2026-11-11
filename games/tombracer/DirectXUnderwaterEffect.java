@@ -165,7 +165,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
     final void disable(int param0) {
         this.owner.setActiveTextureUnit(1, false);
         this.owner.bindTexture(true, (GpuTexture) null);
-        this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+        this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
         this.owner.setColorCombineSource(ej.field_c, 0, -58);
         this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -122);
         this.owner.setAlphaCombineSource(0, false, ej.field_c);

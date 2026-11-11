@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tia {
-    static kea field_d;
+    static GraphicsQuality field_d;
     static int field_a;
     static String[] fallDeathMessages;
     static String field_b;
@@ -21,7 +21,7 @@ final class tia {
     public static void releaseStatics(byte param0) {
         field_d = null;
         if (param0 >= -91) {
-          field_d = (kea) null;
+          field_d = (GraphicsQuality) null;
           fallDeathMessages = null;
           field_b = null;
           return;
@@ -102,6 +102,6 @@ final class tia {
 
     static {
         fallDeathMessages = new String[]{"<%0> took a tumble", "<%0> slipped and fell", "<%0> fought with gravity and lost", "<%0> fought with Newton's law and the law won", "<%0>'s attempt was pitiful", "<%0> became the fall-guy", "<%0>'s velocity was definitely terminal", "<%0> has fallen and cannot get up"};
-        field_d = new kea();
+        field_d = new GraphicsQuality();
     }
 }

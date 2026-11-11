@@ -335,11 +335,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                   this.setTextureCombineOperations(FunOrbConsole.field_w, (byte) -110, FunOrbConsole.field_w);
                 }
               } else {
-                this.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, NormalMapOperator.field_m);
+                this.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, NormalMapOperator.field_m);
               }
             }
           } else {
-            this.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+            this.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
           }
         } else {
           this.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
@@ -683,7 +683,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void applyColorCombineOperation(int param0);
 
-    abstract void applyTexCoordGeneration(dn param0, byte param1);
+    abstract void applyTexCoordGeneration(TextureCoordinateGeneration param0, byte param1);
 
     abstract void releaseSurface(Object param0, boolean param1, java.awt.Canvas param2);
 
@@ -1622,12 +1622,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, PrimitiveType param4, int param5, int param6);
+    abstract void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, GpuPrimitiveType param4, int param5, int param6);
 
     private final boolean p(int param0) {
         if (param0 > -41) {
-          PrimitiveType var3 = (PrimitiveType) null;
-          this.drawPrimitives(-55, (PrimitiveType) null, 17, -88);
+          GpuPrimitiveType var3 = (GpuPrimitiveType) null;
+          this.drawPrimitives(-55, (GpuPrimitiveType) null, 17, -88);
         }
         return this.field_sb[3].isSupported(1185);
     }
@@ -1660,7 +1660,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_rc;
     }
 
-    private final void drawGeometryBuffer(PrimitiveType param0, byte param1, int param2) {
+    private final void drawGeometryBuffer(GpuPrimitiveType param0, byte param1, int param2) {
         try {
           this.bindVertexBuffer(-128, 0, this.field_xb);
           this.bindVertexLayout(this.field_ub, -32);
@@ -1763,8 +1763,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_zb = false;
         }
         while (var2 < this.field_Vb) {
-          this.field_db[var2] = PrimitiveType.field_c;
-          this.field_mc[var2] = PrimitiveType.field_c;
+          this.field_db[var2] = GpuPrimitiveType.field_c;
+          this.field_mc[var2] = GpuPrimitiveType.field_c;
           this.field_v[var2] = DualLinkNode.field_h;
           this.field_hc[var2] = new AffineTransform3D();
           var2++;
@@ -2370,7 +2370,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract void drawPrimitives(int param0, PrimitiveType param1, int param2, int param3);
+    abstract void drawPrimitives(int param0, GpuPrimitiveType param1, int param2, int param3);
 
     final int i() {
         return this.field_D;

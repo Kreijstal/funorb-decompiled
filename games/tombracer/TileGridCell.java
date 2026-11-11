@@ -351,7 +351,7 @@ final class TileGridCell {
     }
 
     final static void a(int param0, int param1, int param2) {
-        lu.a(param0, (double)param2, param1 + 26108, param0, (double)param2);
+        ChatTarget.a(param0, (double)param2, param1 + 26108, param0, (double)param2);
         if (param1 != -26109) {
           TileGridCell.releaseStatics(99);
         }

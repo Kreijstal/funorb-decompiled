@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kia {
+final class RendererMode {
     static String field_a;
     static Boolean field_b;
 

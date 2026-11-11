@@ -6,7 +6,7 @@ import java.util.*;
 final class FunOrbConsole extends ConsoleWindow {
     private ConsoleMethod[] methods;
     static TextureCombineOperation field_w;
-    static dn field_u;
+    static TextureCoordinateGeneration field_u;
 
     final void autocomplete(int param0) {
         StringBuilder discarded$0 = null;
@@ -152,7 +152,7 @@ final class FunOrbConsole extends ConsoleWindow {
           var3 = new SecondaryLinkQueue();
           var4 = 0;
           if (param0) {
-            field_u = (dn) null;
+            field_u = (TextureCoordinateGeneration) null;
           }
           while (var4 < this.methods.length) {
             if (this.methods[var4].field_l.startsWith(param1)) {
@@ -596,6 +596,6 @@ final class FunOrbConsole extends ConsoleWindow {
 
     static {
         field_w = new TextureCombineOperation();
-        field_u = new dn();
+        field_u = new TextureCoordinateGeneration();
     }
 }

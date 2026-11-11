@@ -69,7 +69,7 @@ final class ClipFrame {
           stackIn_3_3 = param1 ^ -78;
           stackIn_3_4 = param2 * 3 * (2 + ToolkitSelector.field_a);
           stackIn_3_5 = 2 + ToolkitSelector.field_a;
-          stackIn_4_6 = (OpenGlSprite.field_j.field_vb == lu.field_b);
+          stackIn_4_6 = (OpenGlSprite.field_j.field_vb == ChatTarget.field_b);
           var3_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
           var4 = OpenGlSprite.field_j.field_tb.field_J;
           if (param1 != -56) {
@@ -169,7 +169,7 @@ final class ClipFrame {
 
     final static void a(boolean param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         try {
-          mp.buildChatPanelComponents(GzipInflater.field_d, tka.field_q, param0, GpuDataType.field_j, DateFieldsWidget.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, HardwareSceneLight.field_o, NodeHashTable.field_g, dn.field_a, LegacyOpenGlRidgedWaterEffect.field_e);
+          mp.buildChatPanelComponents(GzipInflater.field_d, tka.field_q, param0, GpuDataType.field_j, DateFieldsWidget.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, HardwareSceneLight.field_o, NodeHashTable.field_g, TextureCoordinateGeneration.field_a, LegacyOpenGlRidgedWaterEffect.field_e);
           ColouriseOperator.field_m = BoulderComponent.loadSpritesByName(param1, "lobby", 5, "chatfilter");
           StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
           StripedMazeGenerator.field_c[param2] = OpenGlTexture2D.field_m;

@@ -269,7 +269,7 @@ final class BitPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static void a(boolean param0, kia param1, kea param2) {
+    final static void setGraphicsSettings(boolean param0, RendererMode param1, GraphicsQuality param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;

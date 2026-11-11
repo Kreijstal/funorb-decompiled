@@ -677,7 +677,7 @@ final class MatchState implements dv {
               this.courseId = param6;
             } else {
               if (3 == var12_intLifetime3) {
-                this.courseId = pl.a((byte) 64);
+                this.courseId = ChatChannelType.a((byte) 64);
               } else {
                 if (2 == var12_intLifetime3) {
                   this.courseId = -1;

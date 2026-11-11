@@ -218,7 +218,7 @@ final class ChatOverlay {
               }
               ql.field_k.position = 0;
               ql.field_k.writeByte(14, 0);
-              ql.field_k.writeByte(fd.field_d.a((byte) 113).field_d, 0);
+              ql.field_k.writeByte(fd.field_d.getChannelType((byte) 113).field_d, 0);
               bl.flushPacketBuffer(-1, -1);
               ProceduralTexture.field_p = bva.field_b;
             }
@@ -307,10 +307,10 @@ final class ChatOverlay {
               tia.field_b = OpenGlTexture3D.normalizeDisplayName(1, var11);
               lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               ProceduralTexture.field_p = LegacyOpenGlTexture1D.field_n;
-              if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
+              if (fd.field_d.getChannelType((byte) 113) == BlockModel.field_s) {
                 ShaderEffect.field_a.saveAsLastLoginMethod(ToolkitSelector.getApplet(120), param2 ^ 55);
               } else {
-                if (fd.field_d.a((byte) 113) == ViewportManager.field_f) {
+                if (fd.field_d.getChannelType((byte) 113) == ViewportManager.field_f) {
                   ObjectList.field_d.saveAsLastLoginMethod(ToolkitSelector.getApplet(109), 5);
                 }
               }

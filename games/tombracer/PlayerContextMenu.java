@@ -369,12 +369,12 @@ final class PlayerContextMenu {
     }
 
     final void populateItems(byte param0, boolean param1) {
-        pha var4;
+        LobbyPlayerEntry var4;
         String var5;
         int var6;
-        pha var13;
-        pha var14;
-        pha var4Lifetime1;
+        LobbyPlayerEntry var13;
+        LobbyPlayerEntry var14;
+        LobbyPlayerEntry var4Lifetime1;
         var6 = TombRacer.field_G ? 1 : 0;
         if (param0 != -22) {
           field_c = false;
@@ -387,7 +387,7 @@ final class PlayerContextMenu {
               return;
             }
             var14 = LoginMethod.a(true, this.field_g);
-            var4 = AchievementsScreen.a((byte) -40, this.field_g);
+            var4 = AchievementsScreen.findLobbyPlayer((byte) -40, this.field_g);
             var5 = this.getDisplayName(-13);
             if (var4 != null) {
               if (!C2SChooseRewardPacket.field_a.field_ec) {
@@ -432,7 +432,7 @@ final class PlayerContextMenu {
           return;
         }
         var13 = LoginMethod.a(true, this.field_g);
-        var4Lifetime1 = AchievementsScreen.a((byte) -40, this.field_g);
+        var4Lifetime1 = AchievementsScreen.findLobbyPlayer((byte) -40, this.field_g);
         var5 = this.getDisplayName(-13);
         if (var4Lifetime1 != null) {
           if (C2SChooseRewardPacket.field_a.field_ec &&

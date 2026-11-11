@@ -134,10 +134,10 @@ class FocusableWidget extends UiWidget {
               this.field_v = true;
             }
             if (null != this.field_h) {
-              if (!(this.field_h instanceof FocusListener)) {
+              if (!(this.field_h instanceof FocusChangeListener)) {
                 return true;
               }
-              ((FocusListener) (this.field_h)).onFocusChanged((UiWidget) (this), (byte) 90, this.field_u);
+              ((FocusChangeListener) (this.field_h)).onFocusChanged((UiWidget) (this), (byte) 90, this.field_u);
             }
             return true;
           }
@@ -170,8 +170,8 @@ class FocusableWidget extends UiWidget {
           var2Lifetime1 = 101 / ((param0 + 38) / 60);
           return;
         }
-        if (this.field_h instanceof FocusListener) {
-          ((FocusListener) (this.field_h)).onFocusChanged((UiWidget) (this), (byte) -74, this.field_u);
+        if (this.field_h instanceof FocusChangeListener) {
+          ((FocusChangeListener) (this.field_h)).onFocusChanged((UiWidget) (this), (byte) -74, this.field_u);
           var2Lifetime2 = 101 / ((param0 + 38) / 60);
           return;
         }

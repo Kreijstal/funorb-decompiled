@@ -225,7 +225,7 @@ final class PlayPhase extends MatchPhase {
                   }
                 }
               } else {
-                var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, pl.a((byte) 64));
+                var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, ChatChannelType.a((byte) 64));
               }
               var8Lifetime1 = 64;
               var9 = -64 + SwitchLinkList.getCanvasHeight(0);
@@ -509,7 +509,7 @@ final class PlayPhase extends MatchPhase {
           }
           if (ProceduralTexture.field_p == RotaterMountComponent.field_G) {
             ql.field_k.position = 0;
-            kia.field_b = null;
+            RendererMode.field_b = null;
             if (param1 != null) {
               var9 = 0;
               jg.field_a.position = 0;
@@ -581,7 +581,7 @@ final class PlayPhase extends MatchPhase {
               }
               if (99 == var9Lifetime1) {
                 LegacyRidgedWaterNoise.ensureGamePacketBytes(FleeLocomotor.f(1), -1);
-                kia.field_b = new Boolean(ToolkitSelector.readBoolean(WeaveOperator.field_q, (byte) 107));
+                RendererMode.field_b = new Boolean(ToolkitSelector.readBoolean(WeaveOperator.field_q, (byte) 107));
                 WeaveOperator.field_q.position = 0;
               } else {
                 MembersUpsellMenu.field_z = var9Lifetime1;

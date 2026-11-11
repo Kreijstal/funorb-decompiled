@@ -132,7 +132,7 @@ final class ck {
           MirrorComponent.field_I = new UiComponent(0L, cs.field_a, MatchState.field_N);
           cq.field_e = new UiComponent(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
           nsa.field_i = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
-          TileRenderable.field_c = new UiComponent(0L, HardwareModelVertexStream.field_g, PrimitiveType.field_b.toUpperCase());
+          TileRenderable.field_c = new UiComponent(0L, HardwareModelVertexStream.field_g, GpuPrimitiveType.field_b.toUpperCase());
           TileRenderable.field_c.field_X = UnlockOverlay.field_p;
           stackIn_8_0 = null;
           stackIn_8_1 = null;

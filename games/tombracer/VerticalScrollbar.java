@@ -270,7 +270,7 @@ final class VerticalScrollbar extends UiComponent {
             stackIn_5_0 = 7681;
             return stackIn_5_0;
           }
-          if (PrimitiveType.field_c == param1) {
+          if (GpuPrimitiveType.field_c == param1) {
             stackIn_8_0 = 8448;
             return stackIn_8_0;
           }

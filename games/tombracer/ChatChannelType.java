@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pl {
+final class ChatChannelType {
     static String field_c;
     static float field_a;
     int field_d;
@@ -18,7 +18,7 @@ final class pl {
         var2 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 64) {
-            pl.releaseStatics(-48);
+            ChatChannelType.releaseStatics(-48);
           }
           if (cm.field_a == null) {
             stackIn_6_0 = -1;
@@ -49,7 +49,7 @@ final class pl {
         throw new IllegalStateException();
     }
 
-    pl(int param0) {
+    ChatChannelType(int param0) {
         this.field_d = param0;
     }
 

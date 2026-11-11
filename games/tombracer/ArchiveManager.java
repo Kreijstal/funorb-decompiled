@@ -6,7 +6,7 @@ final class ArchiveManager {
     private java.math.BigInteger field_a;
     static String field_d;
     private java.math.BigInteger field_e;
-    static PrimitiveType field_f;
+    static GpuPrimitiveType field_f;
     private DiskCacheWorker field_c;
     private ArchiveNetworkClient field_h;
     private PacketBuffer field_g;
@@ -293,6 +293,6 @@ final class ArchiveManager {
 
     static {
         field_d = "1st";
-        field_f = new PrimitiveType();
+        field_f = new GpuPrimitiveType();
     }
 }

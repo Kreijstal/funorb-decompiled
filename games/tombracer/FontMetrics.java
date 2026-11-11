@@ -11,7 +11,7 @@ final class FontMetrics {
     int field_g;
     private byte[][] field_c;
     static Calendar field_b;
-    static kea field_f;
+    static GraphicsQuality field_f;
     static String field_i;
 
     final static QuickChatMenu createQuickChatMenu(boolean param0, UiComponent param1, UiComponent param2, QuickChatCategory param3, UiComponent param4) {
@@ -94,7 +94,7 @@ final class FontMetrics {
             while (!(var14 >= param3.field_l.length)) {
               var15 = param3.field_l[var14];
               if (var15 == -1) {
-                var8[var14 + var12Lifetime1] = PrimitiveType.field_a;
+                var8[var14 + var12Lifetime1] = GpuPrimitiveType.field_a;
                 var9[var14 + var12Lifetime1] = param3.field_o[var14];
                 var10[var14 + var12Lifetime1] = param3.field_l[var14];
               }

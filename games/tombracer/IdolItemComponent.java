@@ -4,7 +4,7 @@
 final class IdolItemComponent extends ItemComponent {
     static String field_G;
     static String field_J;
-    static dn field_H;
+    static TextureCoordinateGeneration field_H;
     static String field_I;
     static int field_L;
     static String field_K;
@@ -69,7 +69,7 @@ final class IdolItemComponent extends ItemComponent {
         field_G = "Unfortunately your configuration doesn't support fullscreen mode.";
         field_J = "Show players in <%0>'s game";
         field_I = "Try changing the '<%0>' setting.";
-        field_H = new dn();
+        field_H = new TextureCoordinateGeneration();
         field_K = "Offline";
     }
 }

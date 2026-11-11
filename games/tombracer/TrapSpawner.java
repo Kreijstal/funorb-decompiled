@@ -58,9 +58,9 @@ final class TrapSpawner extends Spawner {
         }
     }
 
-    final static kia b(int param0) {
+    final static RendererMode getRendererMode(int param0) {
         if (param0 != 30000) {
-          return (kia) null;
+          return (RendererMode) null;
         }
         return Room.field_k;
     }

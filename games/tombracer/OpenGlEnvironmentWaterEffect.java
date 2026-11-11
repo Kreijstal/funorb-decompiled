@@ -9,7 +9,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     static wm field_j;
     static ToolkitSprite field_d;
     static UiComponent field_i;
-    static su field_g;
+    static QuickChatParamType field_g;
 
     OpenGlEnvironmentWaterEffect(HardwareOpenGlToolkit param0, ResourceArchive param1, HardwareWaterTextures param2) {
         super(param0);
@@ -192,7 +192,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
 
     final void refreshState(boolean param0, int param1) {
         if (param1 != 5744) {
-          field_g = (su) null;
+          field_g = (QuickChatParamType) null;
         }
     }
 
@@ -218,6 +218,6 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
 
     static {
         field_j = new wm();
-        field_g = new su(8, 0, 4, 1);
+        field_g = new QuickChatParamType(8, 0, 4, 1);
     }
 }

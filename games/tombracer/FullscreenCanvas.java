@@ -8,12 +8,12 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
     static int field_e;
     volatile boolean field_b;
 
-    final static lu a(String param0, int param1, boolean param2, String param3) {
+    final static ChatTarget a(String param0, int param1, boolean param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        lu stackIn_4_0 = null;
+        ChatTarget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

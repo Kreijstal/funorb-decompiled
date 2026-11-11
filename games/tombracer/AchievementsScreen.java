@@ -187,11 +187,11 @@ final class AchievementsScreen extends DropInMenuScreen {
         return vaa.isBitSet(SimpleConditionBehaviour.field_o, param1, -101);
     }
 
-    final static pha a(byte param0, long param1) {
+    final static LobbyPlayerEntry findLobbyPlayer(byte param0, long param1) {
         if (param0 != -40) {
           field_v = -0.5121414661407471f;
         }
-        return (pha) (tc.field_d.get(param0 ^ 88, param1));
+        return (LobbyPlayerEntry) (tc.field_d.get(param0 ^ 88, param1));
     }
 
     private final boolean isAchievementListed(int param0, int param1) {

@@ -3,7 +3,7 @@
  */
 final class MultiplayerLoginMenu extends MenuScreen {
     private DropAnimation field_q;
-    static ur field_r;
+    static ArchiveId field_r;
 
     public static void releaseStatics(int param0) {
         if (param0 > -126) {
@@ -21,7 +21,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
         if (param1 == -48) {
           return this.getItemX((byte) 122, param0) + this.items[param0].getWidth(-163);
         }
-        field_r = (ur) null;
+        field_r = (ArchiveId) null;
         return this.getItemX((byte) 122, param0) + this.items[param0].getWidth(-163);
     }
 
@@ -35,7 +35,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
 
     final static boolean b(boolean param0) {
         if (param0) {
-          field_r = (ur) null;
+          field_r = (ArchiveId) null;
           if (!TextWidgetPainter.a(47)) {
             return ReportAbuseDialog.field_ub <= 0 ? true : false;
           }
@@ -98,6 +98,6 @@ final class MultiplayerLoginMenu extends MenuScreen {
     }
 
     static {
-        field_r = new ur(6);
+        field_r = new ArchiveId(6);
     }
 }

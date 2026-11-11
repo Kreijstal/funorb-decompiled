@@ -611,24 +611,24 @@ abstract class MenuScreen extends GameScreen {
                 return true;
               }
               if (var7 == 36) {
-                Trap.a(0, baa.field_e);
+                Trap.setGraphicsQuality(0, baa.field_e);
                 return true;
               }
               if (37 == var7) {
-                Trap.a(0, tia.field_d);
+                Trap.setGraphicsQuality(0, tia.field_d);
                 return true;
               }
               if (var7 == 38) {
-                Trap.a(0, PitModel.field_s);
+                Trap.setGraphicsQuality(0, PitModel.field_s);
                 return true;
               }
               if (var7 == 39 &&
                 var8 == 0) {
-                RangeOperator.a(true, WeaponShooterBehaviour.field_r);
+                RangeOperator.setRendererMode(true, WeaponShooterBehaviour.field_r);
                 return true;
               }
               if (var7 == 40) {
-                RangeOperator.a(true, CourseLayoutFactory.field_d);
+                RangeOperator.setRendererMode(true, CourseLayoutFactory.field_d);
                 return true;
               }
               if (var7 == 29) {

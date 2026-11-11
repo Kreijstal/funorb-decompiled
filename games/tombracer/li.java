@@ -32,14 +32,14 @@ final class li {
         MatchProtocol.fadeMusicChannelIn(uca.cosmeticRandom.nextBounded(6, 0) + 3, 0);
     }
 
-    final static su a(int param0, byte param1) {
-        su[] var2;
+    final static QuickChatParamType forId(int param0, byte param1) {
+        QuickChatParamType[] var2;
         int var3;
         int var4;
-        su[] var5;
+        QuickChatParamType[] var5;
         int var3Lifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
-        var5 = ColourKeyOperator.c(126);
+        var5 = ColourKeyOperator.values(126);
         var2 = var5;
         if (param1 > 125) {
           for (var3 = 0; var5.length > var3; var3++) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tc extends lu {
+class tc extends ChatTarget {
     private String field_e;
     private long field_g;
     static SecondaryNodeHashTable field_d;
@@ -111,9 +111,9 @@ class tc extends lu {
         }
     }
 
-    pl a(byte param0) {
+    ChatChannelType getChannelType(byte param0) {
         if (param0 != 113) {
-          return (pl) null;
+          return (ChatChannelType) null;
         }
         return ViewportManager.field_f;
     }

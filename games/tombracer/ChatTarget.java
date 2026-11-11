@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lu {
+abstract class ChatTarget {
     static int field_a;
     static String field_c;
     static ScrollPane field_b;
 
-    abstract pl a(byte param0);
+    abstract ChatChannelType getChannelType(byte param0);
 
     public static void releaseStatics(int param0) {
         field_c = null;

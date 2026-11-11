@@ -16,7 +16,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
     static int field_g;
     Room room;
     private SwitchableId field_w;
-    static su field_y;
+    static QuickChatParamType field_y;
     int y;
     private int field_f;
     private SwitchableId field_s;
@@ -67,7 +67,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           }
         }
         if (!param0) {
-          field_y = (su) null;
+          field_y = (QuickChatParamType) null;
         }
     }
 
@@ -874,7 +874,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
     }
 
     static {
-        field_y = new su(2, 4, 4, 0);
+        field_y = new QuickChatParamType(2, 4, 4, 0);
         field_i = new int[1000];
     }
 }

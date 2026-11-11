@@ -54,12 +54,12 @@ final class BeamSegment {
         this.field_e = this.field_d + ChatMessage.multiplyFixed(param0, (byte) 24, var3);
         if (param1 != 47) {
           HiscoreTable var5 = (HiscoreTable) null;
-          BeamSegment.a(false, -126, (HiscoreTable) null);
+          BeamSegment.sendHiscoreTableRequest(false, -126, (HiscoreTable) null);
         }
         this.field_a = this.field_k + ChatMessage.multiplyFixed(param0, (byte) 24, var4);
     }
 
-    final static void a(boolean param0, int param1, HiscoreTable param2) {
+    final static void sendHiscoreTableRequest(boolean param0, int param1, HiscoreTable param2) {
         BitPacketBuffer var3 = null;
         try {
           var3 = ql.field_k;

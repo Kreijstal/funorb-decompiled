@@ -3,7 +3,7 @@
  */
 final class baa {
     static String field_f;
-    static kea field_e;
+    static GraphicsQuality field_e;
     static ToolkitSelector field_d;
     static SpriteData field_g;
     static int[] field_b;
@@ -28,7 +28,7 @@ final class baa {
     static {
         field_z = "baa.A(";
         field_f = "The following settings need to be changed:  ";
-        field_e = new kea();
+        field_e = new GraphicsQuality();
         field_a = "Snake pits";
     }
 }

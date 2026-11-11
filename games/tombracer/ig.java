@@ -3,7 +3,7 @@
  */
 final class ig {
     final static void clearLobbyState(int param0) {
-        pha var3 = null;
+        LobbyPlayerEntry var3 = null;
         int var2 = TombRacer.field_G ? 1 : 0;
         PlayerViewport.field_o = false;
         C2SChooseRewardPacket.field_a = null;
@@ -28,10 +28,10 @@ final class ig {
           }
           tc.field_d = null;
           if (fua.field_a != null) {
-            var3 = (pha) (fua.field_a.startTraversal(-91));
+            var3 = (LobbyPlayerEntry) (fua.field_a.startTraversal(-91));
             while (var3 != null) {
               var3.unlinkSecondary(-7975);
-              var3 = (pha) (fua.field_a.nextInTraversal((byte) -112));
+              var3 = (LobbyPlayerEntry) (fua.field_a.nextInTraversal((byte) -112));
             }
             fua.field_a = null;
           }

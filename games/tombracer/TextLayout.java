@@ -6,7 +6,7 @@ import java.util.*;
 abstract class TextLayout {
     static String field_d;
     static ResourceArchive field_a;
-    TextLine[] field_c;
+    TextLineLayout[] field_c;
     static float field_b;
 
     final static void startSinglePlayerMatch(int param0, byte param1, int param2) {
@@ -38,7 +38,7 @@ abstract class TextLayout {
 
     final int findLineIndex(int param0, int param1) {
         int var3 = 0;
-        TextLine var4 = null;
+        TextLineLayout var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
         for (var3 = param1; this.field_c.length > var3; var3++) {
           var4 = this.field_c[var3];
@@ -107,8 +107,8 @@ abstract class TextLayout {
     final int getMaxLineWidth(int param0) {
         int var4 = 0;
         int var2;
-        TextLine[] var3;
-        TextLine var5;
+        TextLineLayout[] var3;
+        TextLineLayout var5;
         int var7;
         int var6;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -176,7 +176,7 @@ abstract class TextLayout {
 
     final int characterIndexAt(int param0, int param1, int param2) {
         int var5 = 0;
-        TextLine var6 = null;
+        TextLineLayout var6 = null;
         int var7 = 0;
         int var8 = TombRacer.field_G ? 1 : 0;
         if (this.field_c == null ||
@@ -221,13 +221,13 @@ abstract class TextLayout {
 
     final int getCaretX(byte param0, int param1) {
         int var4 = 0;
-        TextLine var5 = null;
+        TextLineLayout var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param0 != -59) {
           return 84;
         }
-        TextLine[] var7 = this.field_c;
-        TextLine[] var3 = var7;
+        TextLineLayout[] var7 = this.field_c;
+        TextLineLayout[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
           if (param1 < var5.field_c.length) {

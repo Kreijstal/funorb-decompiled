@@ -5,7 +5,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
     private boolean field_t;
     private TimingPattern field_n;
     private boolean field_o;
-    static kia field_r;
+    static RendererMode field_r;
     private boolean field_p;
     private Weapon field_u;
     private boolean field_s;
@@ -40,7 +40,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != -45) {
-            field_r = (kia) null;
+            field_r = (RendererMode) null;
           }
           fieldTemp$2 = param1.position - 1;
           param1.position = param1.position - 1;
@@ -244,7 +244,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
               this.field_u.tick(param0 - 5515);
               this.field_t = false;
               if (param0 != 5418) {
-                field_r = (kia) null;
+                field_r = (RendererMode) null;
               }
               if (this.field_s) {
                 this.field_t = this.field_u.fire(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
@@ -260,7 +260,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           this.field_u.tick(param0 - 5515);
           this.field_t = false;
           if (param0 != 5418) {
-            field_r = (kia) null;
+            field_r = (RendererMode) null;
             if (this.field_s) {
               this.field_t = this.field_u.fire(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
               if (!this.field_u.hasAmmo(12111)) {
@@ -277,7 +277,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
               this.field_u.tick(param0 - 5515);
               this.field_t = false;
               if (param0 != 5418) {
-                field_r = (kia) null;
+                field_r = (RendererMode) null;
                 if (this.field_s) {
                   this.field_t = this.field_u.fire(this.trap.getFacingAngle(-25787), this.trap.getTopElevation(param0 - 5418) << 16, this.getRoot(param0 - 5412), this.trap.getX(3), this.trap.getY(param0 + 4230), this.getRoom(true), 0, 0, MidiVoiceMixer.min(this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -5478), 123) / 2, false);
                   if (!this.field_u.hasAmmo(12111)) {
@@ -297,7 +297,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
             this.field_u.tick(param0 - 5515);
             this.field_t = false;
             if (param0 != 5418) {
-              field_r = (kia) null;
+              field_r = (RendererMode) null;
             }
           }
         }
@@ -312,21 +312,21 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
     }
 
     final int hashState(int param0, int param1) {
-        param0 = upa.mixHashBoolean(this.field_s, param0, (byte) -55);
+        param0 = RatingTable.mixHashBoolean(this.field_s, param0, (byte) -55);
         if (param1 <= -48) {
-          param0 = upa.mixHashBoolean(this.field_t, param0, (byte) -119);
+          param0 = RatingTable.mixHashBoolean(this.field_t, param0, (byte) -119);
           param0 = CurveOperator.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
           return param0;
         }
         StringCursor var4 = (StringCursor) null;
         WeaponShooterBehaviour.readLiteralToken(-27, (StringCursor) null);
-        param0 = upa.mixHashBoolean(this.field_t, param0, (byte) -119);
+        param0 = RatingTable.mixHashBoolean(this.field_t, param0, (byte) -119);
         param0 = CurveOperator.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
         return param0;
     }
 
     static {
-        field_r = new kia();
+        field_r = new RendererMode();
         field_q = new String[100];
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pha extends UiComponent {
+final class LobbyPlayerEntry extends UiComponent {
     int field_Ab;
     static String field_Ib;
     int field_zb;
@@ -32,13 +32,13 @@ final class pha extends UiComponent {
           return;
         }
         Room var2 = (Room) null;
-        pha.readSpawner((BitPacketBuffer) null, (Room) null, 16);
+        LobbyPlayerEntry.readSpawner((BitPacketBuffer) null, (Room) null, 16);
         field_ub = null;
     }
 
-    final boolean a(byte param0, pha param1) {
+    final boolean a(byte param0, LobbyPlayerEntry param1) {
         RuntimeException var3 = null;
-        pha var4 = null;
+        LobbyPlayerEntry var4 = null;
         int stackIn_3_0 = 0;
         boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
@@ -55,8 +55,8 @@ final class pha extends UiComponent {
             return stackIn_5_0;
           }
           if (param0 <= 106) {
-            var4 = (pha) null;
-            this.a((byte) 29, (pha) null);
+            var4 = (LobbyPlayerEntry) null;
+            this.a((byte) 29, (LobbyPlayerEntry) null);
           }
           stackIn_11_0 = (this.field_Hb) ? 0 : 1;
           if (stackIn_11_0 == (param1.field_Hb ? 1 : 0)) {
@@ -86,7 +86,7 @@ final class pha extends UiComponent {
         return !this.isSecondaryLinked(0) ? true : false;
     }
 
-    pha(String param0, String param1, long param2) {
+    LobbyPlayerEntry(String param0, String param1, long param2) {
         super(0L, (UiComponent) null);
         CharSequence var6 = null;
         try {
@@ -105,7 +105,7 @@ final class pha extends UiComponent {
         try {
           this.field_vb = param2;
           if (param1 <= 23) {
-            pha.releaseStatics((byte) 68);
+            LobbyPlayerEntry.releaseStatics((byte) 68);
           }
           this.field_wb = param0;
           var5 = (CharSequence) ((Object) this.field_vb);

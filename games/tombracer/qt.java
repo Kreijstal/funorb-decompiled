@@ -42,9 +42,9 @@ final class qt {
 
     final static void a(int param0) {
         int stackIn_12_0 = 0;
-        pha stackIn_19_0 = null;
+        LobbyPlayerEntry stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
-        pha stackIn_61_0 = null;
+        LobbyPlayerEntry stackIn_61_0 = null;
         boolean stackIn_62_1 = false;
         RuntimeException decompiledCaughtException = null;
         BitPacketBuffer var1 = null;
@@ -52,19 +52,19 @@ final class qt {
         int var2 = 0;
         long var3_long = 0L;
         int var3 = 0;
-        pha var3_ref_pha = null;
+        LobbyPlayerEntry var3_ref_pha = null;
         LobbyGameWidget var4 = null;
         int var4_int = 0;
         int var5 = 0;
         LobbyGameWidget var6 = null;
-        pha var7 = null;
+        LobbyPlayerEntry var7 = null;
         int var8 = 0;
-        pha var8_ref_pha = null;
+        LobbyPlayerEntry var8_ref_pha = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         LobbyGameWidget var14 = null;
-        pha var15 = null;
+        LobbyPlayerEntry var15 = null;
         Object var16 = null;
         Object var17 = null;
         LobbyGameWidget var17_ref = null;
@@ -72,21 +72,21 @@ final class qt {
         Object var19 = null;
         LobbyGameWidget var19_ref = null;
         String var20 = null;
-        pha var21 = null;
+        LobbyPlayerEntry var21 = null;
         String var22 = null;
         String var23 = null;
         Object var24 = null;
         LobbyGameWidget var25 = null;
         String var26 = null;
         String var27 = null;
-        pha var28 = null;
-        pha var29 = null;
-        pha var30 = null;
-        pha var31 = null;
-        pha var32 = null;
+        LobbyPlayerEntry var28 = null;
+        LobbyPlayerEntry var29 = null;
+        LobbyPlayerEntry var30 = null;
+        LobbyPlayerEntry var31 = null;
+        LobbyPlayerEntry var32 = null;
         LobbyGameWidget var33 = null;
         LobbyGameWidget var34 = null;
-        pha var3_ref_phaLifetime1;
+        LobbyPlayerEntry var3_ref_phaLifetime1;
         long var3_longLifetime1;
         long var3_longLifetime2;
         int var3Lifetime1;
@@ -126,7 +126,7 @@ final class qt {
               stackIn_12_0 = (var20.equals("")) ? 0 : 1;
               var9 = stackIn_12_0;
               if (var21 == null) {
-                var8_ref_pha = new pha(var23, var22, var3_long);
+                var8_ref_pha = new LobbyPlayerEntry(var23, var22, var3_long);
                 fua.field_a.put(-1, var8_ref_pha, var3_long);
               } else {
                 if (var9 != 0) {
@@ -166,11 +166,11 @@ final class qt {
               return;
             }
             if (var2 == 7) {
-              var32 = (pha) (uma.field_b.first(-80));
+              var32 = (LobbyPlayerEntry) (uma.field_b.first(-80));
               while (var32 != null) {
                 var32.unlink(70);
                 var32.unlinkSecondary(-7975);
-                var32 = (pha) (uma.field_b.next(118));
+                var32 = (LobbyPlayerEntry) (uma.field_b.next(118));
               }
               ValidatedTextInputWidget.field_K = 0;
               return;
@@ -237,9 +237,9 @@ final class qt {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
                     var26 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
                     var27 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
-                    var7 = AchievementsScreen.a((byte) -40, var3_longLifetime2);
+                    var7 = AchievementsScreen.findLobbyPlayer((byte) -40, var3_longLifetime2);
                     if (var7 == null) {
-                      var7 = new pha(var26, var27, var3_longLifetime2);
+                      var7 = new LobbyPlayerEntry(var26, var27, var3_longLifetime2);
                       tc.field_d.put(-1, var7, var3_longLifetime2);
                       C2SChooseRewardPacket.field_a.field_Mb = C2SChooseRewardPacket.field_a.field_Mb + 1;
                     }
@@ -257,7 +257,7 @@ final class qt {
                   if (var2 == 19) {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                    var15 = AchievementsScreen.a((byte) -40, var3_longLifetime2);
+                    var15 = AchievementsScreen.findLobbyPlayer((byte) -40, var3_longLifetime2);
                     var28 = var15;
                     if (var15 == null) {
                       return;
@@ -349,13 +349,13 @@ final class qt {
             cua.insertSorted(var25, (byte) -97);
             return;
           }
-          var3_ref_pha = (pha) (DemoCourseGenerator.field_g.first(-80));
+          var3_ref_pha = (LobbyPlayerEntry) (DemoCourseGenerator.field_g.first(-80));
           while (var3_ref_pha != null) {
             var3_ref_pha.unlink(63);
             var3_ref_pha.unlinkSecondary(-7975);
-            var3_ref_pha = (pha) (DemoCourseGenerator.field_g.next(117));
+            var3_ref_pha = (LobbyPlayerEntry) (DemoCourseGenerator.field_g.next(117));
           }
-          var3_ref_phaLifetime1 = (pha) (fua.field_a.startTraversal(-119));
+          var3_ref_phaLifetime1 = (LobbyPlayerEntry) (fua.field_a.startTraversal(-119));
           while (var3_ref_phaLifetime1 != null) {
             if (var3_ref_phaLifetime1.field_Hb ||
               var3_ref_phaLifetime1.field_Fb) {
@@ -366,7 +366,7 @@ final class qt {
               }
               ql.a(114, var3_ref_phaLifetime1);
             }
-            var3_ref_phaLifetime1 = (pha) (fua.field_a.nextInTraversal((byte) -112));
+            var3_ref_phaLifetime1 = (LobbyPlayerEntry) (fua.field_a.nextInTraversal((byte) -112));
           }
           if (var2 == 1 &&
             C2SChooseRewardPacket.field_a != null) {

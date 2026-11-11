@@ -215,7 +215,7 @@ final class dla {
                   } else {
                     var14Lifetime1 = this.field_n[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_m[var11Lifetime1][var14Lifetime1] = var17.readInt(TextLine.bitwiseXor(param0, 23927));
+                  this.field_m[var11Lifetime1][var14Lifetime1] = var17.readInt(TextLineLayout.bitwiseXor(param0, 23927));
                 }
                 this.field_e[var11Lifetime1] = new IntIntHashTable(this.field_m[var11Lifetime1]);
               }

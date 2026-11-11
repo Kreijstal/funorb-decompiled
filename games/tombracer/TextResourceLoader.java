@@ -31,2985 +31,2985 @@ final class TextResourceLoader extends eta {
             }
             void runChunk0() throws java.lang.RuntimeException {
                 RevolverItemComponent.field_H = param1;
-                var2 = dn.loadFile((byte) 120, "loginm3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 120, "loginm3");
                 if (var2 != null) {
                   SpriteTileOperator.field_u = jaa.decodeText((byte) 126, var2);
                 }
-                var2 = dn.loadFile((byte) -43, "loginm2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -43, "loginm2");
                 if (null != var2) {
                   MusicPlayer.field_x = jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "loginm1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "loginm1");
                 if (null != var2) {
                   jaa.decodeText((byte) 46, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "idlemessage20min");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "idlemessage20min");
                 if (var2 != null) {
                   WindZoneBehaviour.field_n = jaa.decodeText((byte) 28, var2);
                 }
-                var2 = dn.loadFile((byte) -98, "error_js5crc");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -98, "error_js5crc");
                 if (var2 != null) {
                   MatchingTextValidator.field_l = jaa.decodeText((byte) 63, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "error_js5io");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "error_js5io");
                 if (var2 != null) {
                   ConsoleWindow.field_e = jaa.decodeText((byte) 115, var2);
                 }
-                var2 = dn.loadFile((byte) 108, "error_js5connect_full");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 108, "error_js5connect_full");
                 if (var2 != null) {
                   NativeSceneLight.field_r = jaa.decodeText((byte) 67, var2);
                 }
-                var2 = dn.loadFile((byte) -66, "error_js5connect");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -66, "error_js5connect");
                 if (var2 != null) {
                   GasTrapComponent.field_H = jaa.decodeText((byte) 97, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "login_gameupdated");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "login_gameupdated");
                 if (var2 != null) {
                   wq.field_a = jaa.decodeText((byte) 44, var2);
                 }
-                var2 = dn.loadFile((byte) -19, "create_unable");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -19, "create_unable");
                 if (null != var2) {
                   ArchiveNetworkClient.field_f = jaa.decodeText((byte) 98, var2);
                 }
-                var2 = dn.loadFile((byte) -52, "create_ineligible");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -52, "create_ineligible");
                 if (null != var2) {
                   RatingsScreen.field_v = jaa.decodeText((byte) 111, var2);
                 }
-                var2 = dn.loadFile((byte) -35, "usernameprompt");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -35, "usernameprompt");
                 if (null != var2) {
                   jaa.decodeText((byte) 96, var2);
                 }
-                var2 = dn.loadFile((byte) -81, "passwordprompt");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -81, "passwordprompt");
                 if (var2 != null) {
                   jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "andagainprompt");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "andagainprompt");
                 if (var2 != null) {
                   jaa.decodeText((byte) 51, var2);
                 }
-                var2 = dn.loadFile((byte) -88, "ticketing_read");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -88, "ticketing_read");
                 if (var2 != null) {
                   jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) -8, "ticketing_ignore");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -8, "ticketing_ignore");
                 if (var2 != null) {
                   jaa.decodeText((byte) 89, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "ticketing_oneunread");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "ticketing_oneunread");
                 if (var2 != null) {
                   AnimatedLight.field_a = jaa.decodeText((byte) 80, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "ticketing_xunread");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "ticketing_xunread");
                 if (null != var2) {
                   VoronoiNoiseOperator.field_s = jaa.decodeText((byte) 121, var2);
                 }
-                var2 = dn.loadFile((byte) -30, "ticketing_gotowebsite");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -30, "ticketing_gotowebsite");
                 if (var2 != null) {
                   LegacyOpenGlEnvironmentWaterEffect.field_j = jaa.decodeText((byte) 71, var2);
                 }
-                var2 = dn.loadFile((byte) -96, "ticketing_waitingformessages");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -96, "ticketing_waitingformessages");
                 if (var2 != null) {
                   jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) -102, "mu_chat_on");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -102, "mu_chat_on");
                 if (null != var2) {
                   SecondaryNodeDequeIterator.field_b = jaa.decodeText((byte) 64, var2);
                 }
-                var2 = dn.loadFile((byte) -78, "mu_chat_friends");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -78, "mu_chat_friends");
                 if (null != var2) {
                   MonochromeFillOperator.field_o = jaa.decodeText((byte) 46, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "mu_chat_off");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "mu_chat_off");
                 if (var2 != null) {
                   OpenGlTexture2D.field_m = jaa.decodeText((byte) 81, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "mu_chat_lobby");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "mu_chat_lobby");
                 if (null != var2) {
                   PbufferEntry.field_o = jaa.decodeText((byte) 123, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "mu_chat_public");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "mu_chat_public");
                 if (var2 != null) {
                   wra.field_a = jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) -47, "mu_chat_ignore");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -47, "mu_chat_ignore");
                 if (null != var2) {
                   of.field_a = jaa.decodeText((byte) 103, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "mu_chat_tips");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "mu_chat_tips");
                 if (null != var2) {
                   WheeledMountComponent.field_O = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) -120, "mu_chat_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -120, "mu_chat_game");
                 if (var2 != null) {
                   BitPacketBuffer.field_p = jaa.decodeText((byte) 77, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "mu_chat_private");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "mu_chat_private");
                 if (var2 != null) {
                   dna.field_H = jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "mu_x_entered_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "mu_x_entered_game");
                 if (null != var2) {
                   MatchScoringObserver.field_e = jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) -116, "mu_x_joined_your_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -116, "mu_x_joined_your_game");
                 if (null != var2) {
                   S2CRoundResultPacket.field_f = jaa.decodeText((byte) 126, var2);
                 }
-                var2 = dn.loadFile((byte) -46, "mu_x_entered_other_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -46, "mu_x_entered_other_game");
                 if (var2 != null) {
                   OpenGlModel.field_V = jaa.decodeText((byte) 109, var2);
                 }
-                var2 = dn.loadFile((byte) -17, "mu_x_left_lobby");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -17, "mu_x_left_lobby");
                 if (null != var2) {
                   TouchSwitchBehaviour.field_o = jaa.decodeText((byte) 123, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "mu_x_lost_con");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "mu_x_lost_con");
                 if (var2 != null) {
                   TextureSampleOperator.field_o = jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) -118, "mu_x_cannot_join_full");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -118, "mu_x_cannot_join_full");
                 if (var2 != null) {
                   PrefabComponent.field_C = jaa.decodeText((byte) 65, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "mu_x_cannot_join_inprogress");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "mu_x_cannot_join_inprogress");
                 if (null != var2) {
                   TrackMountComponent.field_H = jaa.decodeText((byte) 28, var2);
                 }
-                var2 = dn.loadFile((byte) -82, "mu_x_declined_invite");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -82, "mu_x_declined_invite");
                 if (null != var2) {
                   Locomotor.field_m = jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) -17, "mu_x_withdrew_request");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -17, "mu_x_withdrew_request");
                 if (var2 != null) {
                   LegacySwitchModel.field_m = jaa.decodeText((byte) 101, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "mu_x_removed");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "mu_x_removed");
                 if (null != var2) {
                   TestModel.field_p = jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) -114, "mu_x_dropped_out");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -114, "mu_x_dropped_out");
                 if (var2 != null) {
                   DoorwayModel.field_n = jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "mu_entered_other_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "mu_entered_other_game");
                 if (null != var2) {
                   MazeGrid.field_e = jaa.decodeText((byte) 126, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "mu_game_is_full");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "mu_game_is_full");
                 if (var2 != null) {
                   era.field_f = jaa.decodeText((byte) 117, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "mu_game_has_started");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "mu_game_has_started");
                 if (var2 != null) {
                   OpenGlDisplayLists.field_j = jaa.decodeText((byte) 82, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "mu_you_declined_invite");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "mu_you_declined_invite");
                 if (null != var2) {
                   WheeledMountComponent.field_N = jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) -19, "mu_invite_withdrawn");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -19, "mu_invite_withdrawn");
                 if (var2 != null) {
                   MonsterRemains.field_e = jaa.decodeText((byte) 59, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "mu_request_declined");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "mu_request_declined");
                 if (null != var2) {
                   RasterBuffer.field_c = jaa.decodeText((byte) 81, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "mu_request_withdrawn");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "mu_request_withdrawn");
                 if (null != var2) {
                   esa.field_a = jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) -27, "mu_all_players_have_left");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -27, "mu_all_players_have_left");
                 if (null != var2) {
                   IntPoint.field_e = jaa.decodeText((byte) 122, var2);
                 }
-                var2 = dn.loadFile((byte) -125, "mu_lobby_name");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -125, "mu_lobby_name");
                 if (var2 != null) {
                   CanvasImageBuffer.field_i = jaa.decodeText((byte) 71, var2);
                 }
-                var2 = dn.loadFile((byte) -127, "mu_lobby_rating");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -127, "mu_lobby_rating");
                 if (var2 != null) {
                   MessageOverlay.field_m = jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "mu_lobby_friend_add");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "mu_lobby_friend_add");
                 if (var2 != null) {
-                  kea.field_a = jaa.decodeText((byte) 90, var2);
+                  GraphicsQuality.field_a = jaa.decodeText((byte) 90, var2);
                 }
-                var2 = dn.loadFile((byte) -123, "mu_lobby_friend_rm");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -123, "mu_lobby_friend_rm");
                 if (null != var2) {
                   ai.field_d = jaa.decodeText((byte) 64, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "mu_lobby_name_add");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "mu_lobby_name_add");
                 if (null != var2) {
                   ParticleEffects.field_a = jaa.decodeText((byte) 52, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "mu_lobby_name_rm");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "mu_lobby_name_rm");
                 if (null != var2) {
                   uma.field_a = jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "mu_lobby_location");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "mu_lobby_location");
                 if (null != var2) {
                   C2SChooseCharacterPacket.field_c = jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) -74, "mu_gamelist_all_games");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -74, "mu_gamelist_all_games");
                 if (var2 != null) {
                   tha.field_B = jaa.decodeText((byte) 98, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "mu_gamelist_status");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "mu_gamelist_status");
                 if (null != var2) {
                   SnakePitModel.field_m = jaa.decodeText((byte) 123, var2);
                 }
-                var2 = dn.loadFile((byte) -10, "mu_gamelist_owner");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -10, "mu_gamelist_owner");
                 if (var2 != null) {
                   TestModel.field_r = jaa.decodeText((byte) 25, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "mu_gamelist_players");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "mu_gamelist_players");
                 if (var2 != null) {
                   du.field_a = jaa.decodeText((byte) 48, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "mu_gamelist_avg_rating");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "mu_gamelist_avg_rating");
                 if (null != var2) {
                   EllipseShape.field_i = jaa.decodeText((byte) 70, var2);
                 }
-                var2 = dn.loadFile((byte) -104, "mu_gamelist_options");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -104, "mu_gamelist_options");
                 if (null != var2) {
                   MatchState.field_N = jaa.decodeText((byte) 35, var2);
                 }
-                var2 = dn.loadFile((byte) -100, "mu_gamelist_elapsed_time");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -100, "mu_gamelist_elapsed_time");
                 if (null != var2) {
                   PathMoverComponent.field_G = jaa.decodeText((byte) 110, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "mu_play_rated");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "mu_play_rated");
                 if (var2 != null) {
-                  PrimitiveType.field_b = jaa.decodeText((byte) 50, var2);
+                  GpuPrimitiveType.field_b = jaa.decodeText((byte) 50, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "mu_create_unrated");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "mu_create_unrated");
                 if (null != var2) {
                   SwitchState.field_h = jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "mu_options");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "mu_options");
                 if (null != var2) {
                   DoorwayComponent.field_G = jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "mu_options_whocanjoin");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "mu_options_whocanjoin");
                 if (var2 != null) {
                   RoomViewRenderer.field_a = jaa.decodeText((byte) 101, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "mu_options_players");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "mu_options_players");
                 if (null != var2) {
                   ConsoleToken.field_j = jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) -60, "mu_options_dontmind");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -60, "mu_options_dontmind");
                 if (var2 != null) {
                   aa.field_b = jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) -93, "mu_options_allow_spectate");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -93, "mu_options_allow_spectate");
                 if (null != var2) {
                   nb.field_a = jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "mu_options_ratedgametype");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "mu_options_ratedgametype");
                 if (null != var2) {
                   k.field_z = jaa.decodeText((byte) 52, var2);
                 }
-                var2 = dn.loadFile((byte) -106, "yes");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -106, "yes");
                 if (var2 != null) {
                   LegacyOpenGlEnvironmentWaterEffect.field_g = jaa.decodeText((byte) 55, var2);
                 }
-                var2 = dn.loadFile((byte) -13, "no");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -13, "no");
                 if (var2 != null) {
                   WaveformOperator.field_s = jaa.decodeText((byte) 72, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "mu_invite_players");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "mu_invite_players");
                 if (null != var2) {
                   eu.field_b = jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "close");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "close");
                 if (null != var2) {
                   ej.field_b = jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "add_x_to_friends");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "add_x_to_friends");
                 if (null != var2) {
                   DirectRenderModel.field_m = jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "add_x_to_ignore");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "add_x_to_ignore");
                 if (null != var2) {
                   mp.field_b = jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) -119, "rm_x_from_friends");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -119, "rm_x_from_friends");
                 if (null != var2) {
                   LegacyTurbulentWaterNoise.field_q = jaa.decodeText((byte) 25, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "rm_x_from_ignore");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "rm_x_from_ignore");
                 if (var2 != null) {
                   HardwareUnlitEffect.field_f = jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "send_pm_to_x");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "send_pm_to_x");
                 if (null != var2) {
                   RoomViewRenderer.field_b = jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "send_qc_to_x");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "send_qc_to_x");
                 if (var2 != null) {
                   SceneLight.field_f = jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "send_pm");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "send_pm");
                 if (var2 != null) {
                   jaa.field_a = jaa.decodeText((byte) 81, var2);
                 }
-                var2 = dn.loadFile((byte) -102, "invite_accept_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -102, "invite_accept_xs_game");
                 if (null != var2) {
                   pba.field_d = jaa.decodeText((byte) 46, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "invite_decline_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "invite_decline_xs_game");
                 if (null != var2) {
                   NativeGraphicsHeap.field_i = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) -49, "join_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -49, "join_xs_game");
                 if (null != var2) {
                   mna.field_b = jaa.decodeText((byte) 115, var2);
                 }
-                var2 = dn.loadFile((byte) -116, "join_request_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -116, "join_request_xs_game");
                 if (var2 != null) {
                   ToolkitSelector.field_h = jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "join_withdraw_request_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "join_withdraw_request_xs_game");
                 if (null != var2) {
                   PrefabComponent.field_B = jaa.decodeText((byte) 84, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "mu_gameopt_kick_x_from_this_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "mu_gameopt_kick_x_from_this_game");
                 if (null != var2) {
                   S2CMatchResultPacket.field_a = jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "mu_gameopt_withdraw_invite_to_x");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "mu_gameopt_withdraw_invite_to_x");
                 if (null != var2) {
                   RenderableNode.field_g = jaa.decodeText((byte) 25, var2);
                 }
-                var2 = dn.loadFile((byte) -106, "mu_gameopt_accept_x_into_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -106, "mu_gameopt_accept_x_into_game");
                 if (var2 != null) {
                   sb.field_c = jaa.decodeText((byte) 27, var2);
                 }
-                var2 = dn.loadFile((byte) -16, "mu_gameopt_reject_x_from_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -16, "mu_gameopt_reject_x_from_game");
                 if (null != var2) {
                   CoinBagItemComponent.field_G = jaa.decodeText((byte) 106, var2);
                 }
-                var2 = dn.loadFile((byte) -86, "mu_gameopt_invite_x_to_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -86, "mu_gameopt_invite_x_to_game");
                 if (var2 != null) {
                   LightSource.field_i = jaa.decodeText((byte) 73, var2);
                 }
-                var2 = dn.loadFile((byte) -122, "report_x_for_abuse");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -122, "report_x_for_abuse");
                 if (null != var2) {
                   SecondaryLinkQueue.field_c = jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) -97, "unable_to_send_message_password_a");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -97, "unable_to_send_message_password_a");
                 if (var2 != null) {
                   InvertOperator.field_m = jaa.decodeText((byte) 75, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "unable_to_send_message_password_b");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "unable_to_send_message_password_b");
                 if (var2 != null) {
                   mm.field_f = jaa.decodeText((byte) 90, var2);
                 }
-                var2 = dn.loadFile((byte) -88, "mu_chat_lobby_show_all");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -88, "mu_chat_lobby_show_all");
                 if (var2 != null) {
                   TileRenderable.field_f = jaa.decodeText((byte) 31, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "mu_chat_lobby_friends_only");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "mu_chat_lobby_friends_only");
                 if (var2 != null) {
                   LegacyOpenGlEffect.field_b = jaa.decodeText((byte) 42, var2);
                 }
-                var2 = dn.loadFile((byte) -35, "mu_chat_lobby_friends");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -35, "mu_chat_lobby_friends");
                 if (var2 != null) {
                   ImageProducerCanvasImageBuffer.field_k = jaa.decodeText((byte) 111, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "mu_chat_lobby_hide");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "mu_chat_lobby_hide");
                 if (var2 != null) {
                   LruNodeCache.field_f = jaa.decodeText((byte) 32, var2);
                 }
-                var2 = dn.loadFile((byte) -32, "mu_chat_game_show_all");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -32, "mu_chat_game_show_all");
                 if (var2 != null) {
                   pda.field_a = jaa.decodeText((byte) 85, var2);
                 }
-                var2 = dn.loadFile((byte) -120, "mu_chat_game_friends_only");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -120, "mu_chat_game_friends_only");
                 if (var2 != null) {
                   jl.field_a = jaa.decodeText((byte) 114, var2);
                 }
-                var2 = dn.loadFile((byte) -27, "mu_chat_game_friends");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -27, "mu_chat_game_friends");
                 if (var2 != null) {
                   ContextMenuRow.field_xb = jaa.decodeText((byte) 126, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "mu_chat_game_hide");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "mu_chat_game_hide");
                 if (null != var2) {
                   HardwareRidgedWaterNoise.field_w = jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) -90, "mu_chat_pm_show_all");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -90, "mu_chat_pm_show_all");
                 if (null != var2) {
                   jsa.field_z = jaa.decodeText((byte) 50, var2);
                 }
-                var2 = dn.loadFile((byte) -62, "mu_chat_pm_friends_only");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -62, "mu_chat_pm_friends_only");
                 if (null != var2) {
                   cva.field_e = jaa.decodeText((byte) 67, var2);
                 }
-                var2 = dn.loadFile((byte) -38, "mu_chat_pm_friends");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -38, "mu_chat_pm_friends");
                 if (null != var2) {
                   ConstrainToFacingArcLocomotor.field_t = jaa.decodeText((byte) 92, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "mu_chat_invisible_and_silent_mode");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
                   LegacyOpenGlUnlitEffect.field_c = jaa.decodeText((byte) 103, var2);
                 }
-                var2 = dn.loadFile((byte) -97, "you_have_been_removed_from_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -97, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
                   mu.field_Bb = jaa.decodeText((byte) 81, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "your_rating_is_x");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "your_rating_is_x");
                 if (var2 != null) {
                   OpenGlDisplayLists.field_d = jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) -14, "you_are_on_x_server");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -14, "you_are_on_x_server");
                 if (var2 != null) {
                   uba.field_h = jaa.decodeText((byte) 54, var2);
                 }
-                var2 = dn.loadFile((byte) -84, "rated_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -84, "rated_game");
                 if (null != var2) {
                   dka.field_a = jaa.decodeText((byte) 92, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "unrated_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "unrated_game");
                 if (null != var2) {
                   sda.field_i = jaa.decodeText((byte) 76, var2);
                 }
-                var2 = dn.loadFile((byte) -88, "rated_game_tips");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -88, "rated_game_tips");
                 if (null != var2) {
                   ThresholdOperator.field_n = jaa.decodeText((byte) 93, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "searching_for_opponent_singular");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "searching_for_opponent_singular");
                 if (null != var2) {
                   ChatMessage.field_k = jaa.decodeText((byte) 37, var2);
                 }
-                var2 = dn.loadFile((byte) -91, "searching_for_opponents_plural");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -91, "searching_for_opponents_plural");
                 if (var2 != null) {
                   HardwareGraphicsHeap.field_l = jaa.decodeText((byte) 80, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "find_opponent_singular");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "find_opponent_singular");
                 if (null != var2) {
                   rf.field_b = jaa.decodeText((byte) 43, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "find_opponents_plural");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "find_opponents_plural");
                 if (null != var2) {
                   kk.field_a = jaa.decodeText((byte) 83, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "rated_game_tips_setup_singular");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "rated_game_tips_setup_singular");
                 if (var2 != null) {
                   TombRacer.field_F = jaa.decodeText((byte) 65, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "rated_game_tips_setup_plural");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "rated_game_tips_setup_plural");
                 if (null != var2) {
                   ResourceArchive.field_c = jaa.decodeText((byte) 71, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "waiting_to_start_hint");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "waiting_to_start_hint");
                 if (var2 != null) {
                   RenderLayer.field_h = jaa.decodeText((byte) 88, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "your_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "your_game");
                 if (null != var2) {
                   GpuDataType.field_d = jaa.decodeText((byte) 45, var2);
                 }
-                var2 = dn.loadFile((byte) -111, "game_full");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -111, "game_full");
                 if (null != var2) {
                   RandomAccessFileHandle.field_c = jaa.decodeText((byte) 69, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "join_requests_one");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "join_requests_one");
                 if (var2 != null) {
                   sj.field_a = jaa.decodeText((byte) 111, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "join_requests_many");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "join_requests_many");
                 if (var2 != null) {
                   ld.field_f = jaa.decodeText((byte) 65, var2);
                 }
-                var2 = dn.loadFile((byte) -120, "xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -120, "xs_game");
                 if (null != var2) {
                   UiComponent.field_nb = jaa.decodeText((byte) 73, var2);
                 }
-                var2 = dn.loadFile((byte) -98, "waiting_for_x_to_start_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -98, "waiting_for_x_to_start_game");
                 if (var2 != null) {
                   TextLayout.field_d = jaa.decodeText((byte) 61, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "game_options_changed");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "game_options_changed");
                 if (var2 != null) {
                   DelegatingCanvas.field_b = jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) -47, "players_x_of_y");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -47, "players_x_of_y");
                 if (var2 != null) {
                   TextInputWidget.field_A = jaa.decodeText((byte) 96, var2);
                 }
-                var2 = dn.loadFile((byte) -57, "message_lobby");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -57, "message_lobby");
                 if (var2 != null) {
                   cga.field_i = jaa.decodeText((byte) 43, var2);
                 }
-                var2 = dn.loadFile((byte) -106, "quickchat_lobby");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -106, "quickchat_lobby");
                 if (var2 != null) {
                   TextureFilter.field_d = jaa.decodeText((byte) 39, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "message_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "message_game");
                 if (var2 != null) {
                   lw.field_i = jaa.decodeText((byte) 62, var2);
                 }
-                var2 = dn.loadFile(param0, "message_team");
+                var2 = TextureCoordinateGeneration.loadFile(param0, "message_team");
                 if (var2 != null) {
                   jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) -120, "quickchat_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -120, "quickchat_game");
                 if (var2 != null) {
                   SafeZoneBehaviour.field_s = jaa.decodeText((byte) 42, var2);
                 }
-                var2 = dn.loadFile((byte) -58, "kick");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -58, "kick");
                 if (null != var2) {
                   WeaveOperator.field_o = jaa.decodeText((byte) 118, var2);
                 }
-                var2 = dn.loadFile((byte) -101, "inviting_x");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -101, "inviting_x");
                 if (var2 != null) {
                   TextureFilter.field_b = jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "x_wants_to_join");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "x_wants_to_join");
                 if (var2 != null) {
                   uaa.field_c = jaa.decodeText((byte) 87, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "accept");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "accept");
                 if (var2 != null) {
                   r.field_l = jaa.decodeText((byte) 47, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "reject");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "reject");
                 if (var2 != null) {
                   sv.field_q = jaa.decodeText((byte) 89, var2);
                 }
-                var2 = dn.loadFile((byte) -15, "invite");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -15, "invite");
                 if (var2 != null) {
                   FallbackShaderEffect.field_e = jaa.decodeText((byte) 43, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "status_concluded");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "status_concluded");
                 if (var2 != null) {
                   Locomotor.field_l = jaa.decodeText((byte) 85, var2);
                 }
-                var2 = dn.loadFile((byte) -97, "status_spectate");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -97, "status_spectate");
                 if (null != var2) {
                   vua.field_z = jaa.decodeText((byte) 54, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "status_playing");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "status_playing");
                 if (null != var2) {
                   FlipOperator.field_q = jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) 108, "status_join");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 108, "status_join");
                 if (var2 != null) {
                   MazeGrid.field_b = jaa.decodeText((byte) 57, var2);
                 }
-                var2 = dn.loadFile((byte) -11, "status_private");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -11, "status_private");
                 if (null != var2) {
                   QuickChatPhraseDefinition.field_p = jaa.decodeText((byte) 82, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "status_full");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "status_full");
                 if (null != var2) {
                   PlainScoringObserverFactory.field_c = jaa.decodeText((byte) 72, var2);
                 }
-                var2 = dn.loadFile((byte) -45, "players_in_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -45, "players_in_game");
                 if (null != var2) {
                   MatchStatistics.field_l = jaa.decodeText((byte) 98, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "you_are_invited_to_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "you_are_invited_to_xs_game");
                 if (null != var2) {
                   LoadProfileCommand.field_o = jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) -10, "asking_to_join_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -10, "asking_to_join_xs_game");
                 if (null != var2) {
                   SweeperMountComponent.field_I = jaa.decodeText((byte) 80, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "who_can_join");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "who_can_join");
                 if (var2 != null) {
                   RoomCompletedScreen.field_k = jaa.decodeText((byte) 97, var2);
                 }
-                var2 = dn.loadFile((byte) -69, "you_can_join");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -69, "you_can_join");
                 if (null != var2) {
                   OpenGlRenderbuffer.field_k = jaa.decodeText((byte) 103, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "you_can_ask_to_join");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "you_can_ask_to_join");
                 if (null != var2) {
                   S2CRoundResultPacket.field_c = jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "you_cannot_join_in_progress");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "you_cannot_join_in_progress");
                 if (var2 != null) {
                   PerlinNoise2D.field_v = jaa.decodeText((byte) 72, var2);
                 }
-                var2 = dn.loadFile((byte) -65, "you_can_spectate");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -65, "you_can_spectate");
                 if (null != var2) {
                   FleeLocomotor.field_y = jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "you_can_not_spectate");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "you_can_not_spectate");
                 if (null != var2) {
                   ega.field_d = jaa.decodeText((byte) 112, var2);
                 }
-                var2 = dn.loadFile((byte) -126, "spectate_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -126, "spectate_xs_game");
                 if (null != var2) {
                   ColourFillOperator.field_o = jaa.decodeText((byte) 106, var2);
                 }
-                var2 = dn.loadFile((byte) -90, "hide_players_in_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -90, "hide_players_in_xs_game");
                 if (var2 != null) {
                   dka.field_d = jaa.decodeText((byte) 72, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "show_players_in_xs_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "show_players_in_xs_game");
                 if (var2 != null) {
                   IdolItemComponent.field_J = jaa.decodeText((byte) 105, var2);
                 }
-                var2 = dn.loadFile((byte) -20, "connecting_to_friend_server_twoline");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -20, "connecting_to_friend_server_twoline");
                 if (var2 != null) {
                   DivisionMazeGenerator.field_b = jaa.decodeText((byte) 105, var2);
                 }
-                var2 = dn.loadFile((byte) -12, "loading");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -12, "loading");
                 if (null != var2) {
                   LoginMethod.field_c = jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) -43, "offline");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -43, "offline");
                 if (var2 != null) {
                   IdolItemComponent.field_K = jaa.decodeText((byte) 107, var2);
                 }
-                var2 = dn.loadFile((byte) -11, "multiconst_invite_only");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -11, "multiconst_invite_only");
                 if (var2 != null) {
                   HardwareOpenGlToolkit.field_cd = jaa.decodeText((byte) 95, var2);
                 }
-                var2 = dn.loadFile((byte) -62, "multiconst_clan");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -62, "multiconst_clan");
                 if (null != var2) {
                   RasterBuffer.field_b = jaa.decodeText((byte) 79, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "multiconst_friends");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "multiconst_friends");
                 if (var2 != null) {
                   EmbossOperator.field_q = jaa.decodeText((byte) 74, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "multiconst_similar_rating");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "multiconst_similar_rating");
                 if (null != var2) {
                   ObjectPool.field_d = jaa.decodeText((byte) 120, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "multiconst_open");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "multiconst_open");
                 if (var2 != null) {
                   PacketBuffer.field_f = jaa.decodeText((byte) 78, var2);
                 }
-                var2 = dn.loadFile((byte) -34, "no_options_available");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -34, "no_options_available");
                 if (null != var2) {
                   LegacyOpenGlTurbulentTextureEffect.field_c = jaa.decodeText((byte) 94, var2);
                 }
-                var2 = dn.loadFile((byte) -59, "reportabuse");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -59, "reportabuse");
                 if (var2 != null) {
                   ShooterComponent.field_G = jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "presstabtochat");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "presstabtochat");
                 if (var2 != null) {
                   SimpleActionBehaviour.field_n = jaa.decodeText((byte) 68, var2);
                 }
-                var2 = dn.loadFile((byte) -21, "pressf10toquickchat");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -21, "pressf10toquickchat");
                 if (var2 != null) {
                   ConstrainToLatticeLocomotor.field_z = jaa.decodeText((byte) 31, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "dob_chatdisabled");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "dob_chatdisabled");
                 if (null != var2) {
-                  kia.field_a = jaa.decodeText((byte) 96, var2);
+                  RendererMode.field_a = jaa.decodeText((byte) 96, var2);
                 }
-                var2 = dn.loadFile((byte) -123, "dob_enterforchat");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -123, "dob_enterforchat");
                 if (null != var2) {
                   mca.field_d = jaa.decodeText((byte) 115, var2);
                 }
-                var2 = dn.loadFile((byte) -103, "tab_hidechattemporarily");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -103, "tab_hidechattemporarily");
                 if (null != var2) {
                   fw.field_a = jaa.decodeText((byte) 51, var2);
                 }
-                var2 = dn.loadFile((byte) -119, "esc_cancelprivatemessage");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -119, "esc_cancelprivatemessage");
                 if (null != var2) {
                   VertexAttribute.field_a = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "esc_cancelthisline");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "esc_cancelthisline");
                 if (var2 != null) {
                   ValidationMessageWidget.field_J = jaa.decodeText((byte) 84, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "privatequickchat_from_x");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "privatequickchat_from_x");
                 if (var2 != null) {
                   li.field_a = jaa.decodeText((byte) 80, var2);
                 }
-                var2 = dn.loadFile((byte) -18, "privatequickchat_to_x");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -18, "privatequickchat_to_x");
                 if (null != var2) {
                   TrackMountComponent.field_G = jaa.decodeText((byte) 59, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "privatechat_blankarea_explanation");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "privatechat_blankarea_explanation");
                 if (var2 != null) {
                   RenderLayer.field_c = jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "publicchat_unavailable_ratedgame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "publicchat_unavailable_ratedgame");
                 if (var2 != null) {
                   sla.field_e = jaa.decodeText((byte) 96, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "privatechat_friend_offline");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "privatechat_friend_offline");
                 if (var2 != null) {
                   ConsoleToken.field_n = jaa.decodeText((byte) 28, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "privatechat_friend_notlisted");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "privatechat_friend_notlisted");
                 if (null != var2) {
                   pba.field_a = jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) -121, "chatviewscrolledup");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -121, "chatviewscrolledup");
                 if (null != var2) {
                   LegacyOpenGlTexture2D.field_p = jaa.decodeText((byte) 43, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "thisisrunescapeclan");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "thisisrunescapeclan");
                 if (var2 != null) {
                   jsa.field_y = jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) -126, "thisisrunescapeclan_notowner");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -126, "thisisrunescapeclan_notowner");
                 if (null != var2) {
                   EffectEvent.field_i = jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "runescapeclan");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "runescapeclan");
                 if (var2 != null) {
                   ala.field_f = jaa.decodeText((byte) 47, var2);
                 }
-                var2 = dn.loadFile((byte) -67, "rated_membersonly");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -67, "rated_membersonly");
                 if (var2 != null) {
                   jk.field_i = jaa.decodeText((byte) 75, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "gameopt_membersonly");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "gameopt_membersonly");
                 if (null != var2) {
                   ai.field_b = jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "gameopt_1moreratedgame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "gameopt_1moreratedgame");
                 if (null != var2) {
                   rm.field_b = jaa.decodeText((byte) 42, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "gameopt_moreratedgames");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "gameopt_moreratedgames");
                 if (var2 != null) {
                   vn.field_c = jaa.decodeText((byte) 89, var2);
                 }
-                var2 = dn.loadFile((byte) -68, "gameopt_needrating");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -68, "gameopt_needrating");
                 if (null != var2) {
                   HardwareTextureCache.field_f = jaa.decodeText((byte) 72, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "gameopt_unratedonly");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "gameopt_unratedonly");
                 if (var2 != null) {
                   WhiteLightShooterComponent.field_L = jaa.decodeText((byte) 90, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "gameopt_notunlocked");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "gameopt_notunlocked");
                 if (null != var2) {
                   RoomCompletedScreen.field_j = jaa.decodeText((byte) 28, var2);
                 }
-                var2 = dn.loadFile((byte) -27, "gameopt_cannotbecombined1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -27, "gameopt_cannotbecombined1");
                 if (null != var2) {
                   cna.field_d = jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "gameopt_cannotbecombined2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "gameopt_cannotbecombined2");
                 if (null != var2) {
                   GridWidgetContainer.field_G = jaa.decodeText((byte) 66, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "gameopt_playernotmember");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "gameopt_playernotmember");
                 if (var2 != null) {
                   MatchPhase.field_g = jaa.decodeText((byte) 63, var2);
                 }
-                var2 = dn.loadFile((byte) -15, "gameopt_younotmember");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -15, "gameopt_younotmember");
                 if (null != var2) {
                   ProgressBarWidget.field_F = jaa.decodeText((byte) 98, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "gameopt_playerneedsrating");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "gameopt_playerneedsrating");
                 if (null != var2) {
                   SocketArchiveNetworkClient.field_r = jaa.decodeText((byte) 79, var2);
                 }
-                var2 = dn.loadFile((byte) -71, "gameopt_youneedrating");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -71, "gameopt_youneedrating");
                 if (null != var2) {
                   TileGrid.field_k = jaa.decodeText((byte) 122, var2);
                 }
-                var2 = dn.loadFile((byte) -63, "gameopt_playerneedsratedgames");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -63, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
                   td.field_q = jaa.decodeText((byte) 110, var2);
                 }
-                var2 = dn.loadFile((byte) -99, "gameopt_youneedratedgames");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -99, "gameopt_youneedratedgames");
                 if (null != var2) {
                   WaveformOperator.field_r = jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "gameopt_playerneeds1ratedgame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
                   FlagSet.field_d = jaa.decodeText((byte) 39, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "gameopt_youneed1ratedgame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "gameopt_youneed1ratedgame");
                 if (null != var2) {
                   LegacyOpenGlEnvironmentWaterEffect.field_c = jaa.decodeText((byte) 74, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "gameopt_playerhasntunlocked");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "gameopt_playerhasntunlocked");
                 if (var2 != null) {
                   TrackMountComponent.field_I = jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) -102, "gameopt_youhaventunlocked");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -102, "gameopt_youhaventunlocked");
                 if (var2 != null) {
                   HardwareSprite.field_f = jaa.decodeText((byte) 25, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "gameopt_trychanging1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "gameopt_trychanging1");
                 if (var2 != null) {
                   IdolItemComponent.field_I = jaa.decodeText((byte) 107, var2);
                 }
-                var2 = dn.loadFile((byte) -98, "gameopt_trychanging2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -98, "gameopt_trychanging2");
                 if (var2 != null) {
                   ArchiveNetworkClient.field_l = jaa.decodeText((byte) 120, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "gameopt_needchanging1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "gameopt_needchanging1");
                 if (null != var2) {
                   FlameShooterComponent.field_K = jaa.decodeText((byte) 115, var2);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
-                var2 = dn.loadFile((byte) 113, "gameopt_needchanging2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "gameopt_needchanging2");
                 if (var2 != null) {
                   baa.field_f = jaa.decodeText((byte) 27, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "gameopt_mightchange");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "gameopt_mightchange");
                 if (var2 != null) {
                   C2SSubmitSettingsPacket.field_c = jaa.decodeText((byte) 61, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "gameopt_playersdontqualify");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "gameopt_playersdontqualify");
                 if (var2 != null) {
                   BitPacketBuffer.field_o = jaa.decodeText((byte) 46, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "gameopt_playersdontqualify_selectgametab");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
                   GridWidgetContainer.field_A = jaa.decodeText((byte) 63, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "gameopt_unselectedoptions");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "gameopt_unselectedoptions");
                 if (null != var2) {
                   GasTrapComponent.field_J = jaa.decodeText((byte) 109, var2);
                 }
-                var2 = dn.loadFile((byte) -39, "gameopt_pleaseselectoption1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -39, "gameopt_pleaseselectoption1");
                 if (null != var2) {
                   CoinBagItemComponent.field_I = jaa.decodeText((byte) 124, var2);
                 }
-                var2 = dn.loadFile((byte) 108, "gameopt_pleaseselectoption2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 108, "gameopt_pleaseselectoption2");
                 if (null != var2) {
                   MatchProtocol.field_j = jaa.decodeText((byte) 54, var2);
                 }
-                var2 = dn.loadFile((byte) -28, "gameopt_badnumplayers");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -28, "gameopt_badnumplayers");
                 if (var2 != null) {
                   LegacyOpenGlTexture3D.field_m = jaa.decodeText((byte) 87, var2);
                 }
-                var2 = dn.loadFile((byte) -28, "gameopt_inviteplayers_or_trychanging1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -28, "gameopt_inviteplayers_or_trychanging1");
                 if (var2 != null) {
                   bl.field_b = jaa.decodeText((byte) 69, var2);
                 }
-                var2 = dn.loadFile((byte) -29, "gameopt_inviteplayers_or_trychanging2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -29, "gameopt_inviteplayers_or_trychanging2");
                 if (null != var2) {
                   CharacterSelectPhase.field_w = jaa.decodeText((byte) 37, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "gameopt_novalidcombos");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "gameopt_novalidcombos");
                 if (null != var2) {
                   SequencePlayer.field_a = jaa.decodeText((byte) 79, var2);
                 }
-                var2 = dn.loadFile((byte) -47, "gameopt_pleasetrychanging");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -47, "gameopt_pleasetrychanging");
                 if (null != var2) {
                   WhiteLightSensorComponent.field_J = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) -47, "ra_title");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -47, "ra_title");
                 if (var2 != null) {
                   EffectEvent.field_m = jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) -22, "ra_mutethisplayer");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -22, "ra_mutethisplayer");
                 if (null != var2) {
-                  ur.field_b = jaa.decodeText((byte) 46, var2);
+                  ArchiveId.field_b = jaa.decodeText((byte) 46, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "ra_suggestmute");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "ra_suggestmute");
                 if (null != var2) {
-                  pl.field_c = jaa.decodeText((byte) 76, var2);
+                  ChatChannelType.field_c = jaa.decodeText((byte) 76, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "ra_intro");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "ra_intro");
                 if (null != var2) {
                   fpa.field_a = jaa.decodeText((byte) 117, var2);
                 }
-                var2 = dn.loadFile((byte) -109, "ra_intro_no_name");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -109, "ra_intro_no_name");
                 if (var2 != null) {
                   TouchSwitchBehaviour.field_r = jaa.decodeText((byte) 65, var2);
                 }
-                var2 = dn.loadFile((byte) -33, "ra_explanation");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -33, "ra_explanation");
                 if (null != var2) {
                   nla.field_b = jaa.decodeText((byte) 75, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "rule_pillar_0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "rule_pillar_0");
                 if (var2 != null) {
                   ai.field_c = jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "rule_0_0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "rule_0_0");
                 if (var2 != null) {
                   nt.field_c = jaa.decodeText((byte) 115, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "rule_0_1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "rule_0_1");
                 if (null != var2) {
                   MotionTrackingModel.field_u = jaa.decodeText((byte) 35, var2);
                 }
-                var2 = dn.loadFile((byte) -96, "rule_0_2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -96, "rule_0_2");
                 if (null != var2) {
                   SoftwareRenderContext.field_g = jaa.decodeText((byte) 35, var2);
                 }
-                var2 = dn.loadFile((byte) -101, "rule_0_3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -101, "rule_0_3");
                 if (null != var2) {
                   FadingDialog.field_A = jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) -8, "rule_0_4");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -8, "rule_0_4");
                 if (null != var2) {
                   MazeFrontierCell.field_h = jaa.decodeText((byte) 99, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "rule_0_5");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "rule_0_5");
                 if (var2 != null) {
                   ScoreStandings.field_d = jaa.decodeText((byte) 91, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "rule_pillar_1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "rule_pillar_1");
                 if (null != var2) {
                   qba.field_b = jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) -58, "rule_1_0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -58, "rule_1_0");
                 if (var2 != null) {
                   BlendModeOperator.field_n = jaa.decodeText((byte) 59, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "rule_1_1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "rule_1_1");
                 if (null != var2) {
                   CharacterChoiceFactory.field_d = jaa.decodeText((byte) 99, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "rule_1_2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "rule_1_2");
                 if (var2 != null) {
                   RemovedFromGameMenu.field_q = jaa.decodeText((byte) 52, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "rule_1_3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "rule_1_3");
                 if (null != var2) {
                   GrowableIntList.field_b = jaa.decodeText((byte) 43, var2);
                 }
-                var2 = dn.loadFile((byte) -51, "rule_1_4");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -51, "rule_1_4");
                 if (null != var2) {
                   afa.field_b = jaa.decodeText((byte) 65, var2);
                 }
-                var2 = dn.loadFile((byte) -63, "rule_pillar_2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -63, "rule_pillar_2");
                 if (null != var2) {
                   TeleportLocomotor.field_o = jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "rule_2_0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "rule_2_0");
                 if (var2 != null) {
                   CourseLayout.field_c = jaa.decodeText((byte) 26, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "rule_2_1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "rule_2_1");
                 if (var2 != null) {
                   rua.field_jb = jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) -116, "rule_2_2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -116, "rule_2_2");
                 if (var2 != null) {
                   aqa.field_b = jaa.decodeText((byte) 39, var2);
                 }
-                var2 = dn.loadFile((byte) -93, "createafreeaccount");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -93, "createafreeaccount");
                 if (var2 != null) {
                   jaa.decodeText((byte) 93, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "cancel");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "cancel");
                 if (var2 != null) {
                   mq.field_d = jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "pleaselogintoplay");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "pleaselogintoplay");
                 if (var2 != null) {
                   jaa.decodeText((byte) 95, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "pleaselogin");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "pleaselogin");
                 if (null != var2) {
                   TextureTransformMode.field_a = jaa.decodeText((byte) 95, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "pleaselogin_member");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "pleaselogin_member");
                 if (null != var2) {
                   ck.field_b = jaa.decodeText((byte) 74, var2);
                 }
-                var2 = dn.loadFile((byte) -53, "invaliduserorpass");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -53, "invaliduserorpass");
                 if (var2 != null) {
                   TestModel.field_n = jaa.decodeText((byte) 43, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "pleasetryagain");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "pleasetryagain");
                 if (var2 != null) {
                   KeySwitchComponent.field_K = jaa.decodeText((byte) 85, var2);
                 }
-                var2 = dn.loadFile((byte) 120, "pleasereenterpass");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 120, "pleasereenterpass");
                 if (null != var2) {
                   jaa.decodeText((byte) 127, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "playfreeversion");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "playfreeversion");
                 if (null != var2) {
                   ApproachPlayerLocomotor.field_p = jaa.decodeText((byte) 123, var2);
                 }
-                var2 = dn.loadFile((byte) -100, "reloadgame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -100, "reloadgame");
                 if (var2 != null) {
                   InvertOperator.field_n = jaa.decodeText((byte) 94, var2);
                 }
-                var2 = dn.loadFile((byte) -115, "toserverlist");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -115, "toserverlist");
                 if (null != var2) {
                   MovingWallComponent.field_M = jaa.decodeText((byte) 124, var2);
                 }
-                var2 = dn.loadFile((byte) -70, "tocustomersupport");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -70, "tocustomersupport");
                 if (null != var2) {
                   RenderLayer.field_a = jaa.decodeText((byte) 74, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "changedisplayname");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "changedisplayname");
                 if (var2 != null) {
                   epa.field_q = jaa.decodeText((byte) 82, var2);
                 }
-                var2 = dn.loadFile((byte) -9, "returntohomepage");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -9, "returntohomepage");
                 if (null != var2) {
                   jaa.decodeText((byte) 57, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "justplay");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "justplay");
                 if (var2 != null) {
                   fca.field_d = jaa.decodeText((byte) 64, var2);
                 }
-                var2 = dn.loadFile((byte) -117, "justplay_excl");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -117, "justplay_excl");
                 if (null != var2) {
                   jaa.decodeText((byte) 78, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "login");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "login");
                 if (var2 != null) {
                   goa.field_c = jaa.decodeText((byte) 94, var2);
                 }
-                var2 = dn.loadFile((byte) -42, "goback");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -42, "goback");
                 if (null != var2) {
                   HardwareOpenGlToolkit.field_gd = jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) -36, "otheroptions");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -36, "otheroptions");
                 if (null != var2) {
                   jaa.decodeText((byte) 96, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "proceed");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "proceed");
                 if (var2 != null) {
                   jaa.decodeText((byte) 59, var2);
                 }
-                var2 = dn.loadFile((byte) -72, "connectingtoserver");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -72, "connectingtoserver");
                 if (null != var2) {
                   jaa.decodeText((byte) 116, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "pleasewait");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "pleasewait");
                 if (null != var2) {
                   jaa.decodeText((byte) 114, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "logging_in");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "logging_in");
                 if (null != var2) {
                   HardwareModel.field_bb = jaa.decodeText((byte) 81, var2);
                 }
-                var2 = dn.loadFile((byte) -96, "reconnect");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -96, "reconnect");
                 if (null != var2) {
                   jaa.decodeText((byte) 83, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "backtoerror");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "backtoerror");
                 if (null != var2) {
                   jaa.decodeText((byte) 39, var2);
                 }
-                var2 = dn.loadFile((byte) -123, "pleasecheckinternet");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -123, "pleasecheckinternet");
                 if (null != var2) {
                   jaa.decodeText((byte) 63, var2);
                 }
-                var2 = dn.loadFile((byte) -36, "attemptingtoreconnect");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -36, "attemptingtoreconnect");
                 if (var2 != null) {
                   jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) -42, "connectionlost_reconnecting");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -42, "connectionlost_reconnecting");
                 if (null != var2) {
                   KeySwitchComponent.field_M = jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) -116, "connectionlost_withreason");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -116, "connectionlost_withreason");
                 if (var2 != null) {
                   nka.field_a = jaa.decodeText((byte) 103, var2);
                 }
-                var2 = dn.loadFile((byte) -36, "passwordverificationrequired");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -36, "passwordverificationrequired");
                 if (null != var2) {
                   jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) -22, "invalidpass");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -22, "invalidpass");
                 if (null != var2) {
                   SoundCache.field_d = jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "retry");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "retry");
                 if (null != var2) {
                   MonochromeFillOperator.field_q = jaa.decodeText((byte) 44, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "back");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "back");
                 if (var2 != null) {
                   KeyLockBehaviour.field_o = jaa.decodeText((byte) 69, var2);
                 }
-                var2 = dn.loadFile((byte) -96, "exitfullscreenmode");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -96, "exitfullscreenmode");
                 if (var2 != null) {
                   jaa.decodeText((byte) 105, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "quittowebsite");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "quittowebsite");
                 if (null != var2) {
                   ControllerLocomotor.field_q = jaa.decodeText((byte) 69, var2);
                 }
-                var2 = dn.loadFile((byte) -104, "connectionrestored");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -104, "connectionrestored");
                 if (null != var2) {
                   fua.field_e = jaa.decodeText((byte) 110, var2);
                 }
-                var2 = dn.loadFile((byte) -60, "warning_ifyouquit");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -60, "warning_ifyouquit");
                 if (var2 != null) {
                   SwitchLinkList.field_c = jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) -116, "warning_ifyouquitorleavepage");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -116, "warning_ifyouquitorleavepage");
                 if (var2 != null) {
                   jaa.decodeText((byte) 111, var2);
                 }
-                var2 = dn.loadFile((byte) -66, "resubscribe_withoutlosing_fs");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -66, "resubscribe_withoutlosing_fs");
                 if (null != var2) {
                   jaa.decodeText((byte) 124, var2);
                 }
-                var2 = dn.loadFile((byte) -108, "resubscribe_withoutlosing");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -108, "resubscribe_withoutlosing");
                 if (null != var2) {
                   jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) 120, "customersupport_withoutlosing_fs");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 120, "customersupport_withoutlosing_fs");
                 if (var2 != null) {
                   jaa.decodeText((byte) 26, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "customersupport_withoutlosing");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "customersupport_withoutlosing");
                 if (null != var2) {
                   jaa.decodeText((byte) 80, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "js5help_withoutlosing_fs");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "js5help_withoutlosing_fs");
                 if (null != var2) {
                   jaa.decodeText((byte) 70, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "js5help_withoutlosing");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "js5help_withoutlosing");
                 if (var2 != null) {
                   jaa.decodeText((byte) 51, var2);
                 }
-                var2 = dn.loadFile((byte) -82, "checkinternet_withoutlosing_fs");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -82, "checkinternet_withoutlosing_fs");
                 if (null != var2) {
                   jaa.decodeText((byte) 127, var2);
                 }
-                var2 = dn.loadFile((byte) -8, "checkinternet_withoutlosing");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -8, "checkinternet_withoutlosing");
                 if (var2 != null) {
                   jaa.decodeText((byte) 27, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "create_intro");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "create_intro");
                 if (null != var2) {
                   jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) -60, "create_sameaccounttip_unnamed");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -60, "create_sameaccounttip_unnamed");
                 if (null != var2) {
                   jaa.decodeText((byte) 119, var2);
                 }
-                var2 = dn.loadFile((byte) -103, "dateofbirthprompt");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -103, "dateofbirthprompt");
                 if (var2 != null) {
                   jaa.decodeText((byte) 84, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "fetchingcountrylist");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "fetchingcountrylist");
                 if (null != var2) {
                   jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) -98, "countryprompt");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -98, "countryprompt");
                 if (null != var2) {
                   jaa.decodeText((byte) 95, var2);
                 }
-                var2 = dn.loadFile((byte) -126, "countrylisterror");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -126, "countrylisterror");
                 if (var2 != null) {
                   jaa.decodeText((byte) 53, var2);
                 }
-                var2 = dn.loadFile((byte) -52, "theonlypersonalquestions");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -52, "theonlypersonalquestions");
                 if (var2 != null) {
                   jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) -26, "create_submittingdata");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -26, "create_submittingdata");
                 if (null != var2) {
                   jaa.decodeText((byte) 66, var2);
                 }
-                var2 = dn.loadFile((byte) -93, "check");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -93, "check");
                 if (null != var2) {
                   jaa.decodeText((byte) 75, var2);
                 }
-                var2 = dn.loadFile((byte) -79, "create_pleasechooseausername");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -79, "create_pleasechooseausername");
                 if (var2 != null) {
                   jaa.decodeText((byte) 95, var2);
                 }
-                var2 = dn.loadFile((byte) -45, "create_usernameblurb");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -45, "create_usernameblurb");
                 if (null != var2) {
                   jaa.decodeText((byte) 112, var2);
                 }
-                var2 = dn.loadFile((byte) -11, "checkingavailability");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -11, "checkingavailability");
                 if (null != var2) {
                   jaa.decodeText((byte) 120, var2);
                 }
-                var2 = dn.loadFile((byte) -85, "checking");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -85, "checking");
                 if (var2 != null) {
                   MenuInputState.field_g = jaa.decodeText((byte) 46, var2);
                 }
-                var2 = dn.loadFile((byte) -54, "create_namealreadytaken");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -54, "create_namealreadytaken");
                 if (null != var2) {
                   jaa.decodeText((byte) 105, var2);
                 }
-                var2 = dn.loadFile((byte) -120, "create_sameaccounttip_named");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -120, "create_sameaccounttip_named");
                 if (var2 != null) {
                   jaa.decodeText((byte) 78, var2);
                 }
-                var2 = dn.loadFile((byte) -121, "create_nosuggestions");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -121, "create_nosuggestions");
                 if (null != var2) {
                   jaa.decodeText((byte) 121, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "create_alternativelygoback");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "create_alternativelygoback");
                 if (var2 != null) {
                   jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) -87, "create_available");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -87, "create_available");
                 if (null != var2) {
                   jaa.decodeText((byte) 44, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "create_willnowshowtermsandconditions");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "create_willnowshowtermsandconditions");
                 if (var2 != null) {
                   jaa.decodeText((byte) 40, var2);
                 }
-                var2 = dn.loadFile((byte) -103, "fetchingterms");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -103, "fetchingterms");
                 if (null != var2) {
                   jaa.decodeText((byte) 105, var2);
                 }
-                var2 = dn.loadFile((byte) -84, "termserror");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -84, "termserror");
                 if (var2 != null) {
                   jaa.decodeText((byte) 42, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "create_iagree");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "create_iagree");
                 if (var2 != null) {
                   jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) -79, "create_idisagree");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -79, "create_idisagree");
                 if (var2 != null) {
                   jaa.decodeText((byte) 119, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "create_pleasescrolldowntoaccept");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "create_pleasescrolldowntoaccept");
                 if (var2 != null) {
                   jaa.decodeText((byte) 115, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "create_linkaddress");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "create_linkaddress");
                 if (var2 != null) {
                   jaa.decodeText((byte) 107, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "openinpopupwindow");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "openinpopupwindow");
                 if (null != var2) {
                   EditableTextField.field_Fb = jaa.decodeText((byte) 37, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "create");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "create");
                 if (null != var2) {
                   sla.field_c = jaa.decodeText((byte) 95, var2);
                 }
-                var2 = dn.loadFile((byte) -90, "create_pleasechooseapassword");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -90, "create_pleasechooseapassword");
                 if (null != var2) {
                   jaa.decodeText((byte) 30, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "create_passwordblurb");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "create_passwordblurb");
                 if (null != var2) {
                   jaa.decodeText((byte) 58, var2);
                 }
-                var2 = dn.loadFile((byte) -55, "create_nevergivepassword");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -55, "create_nevergivepassword");
                 if (var2 != null) {
                   jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) -66, "creatingyouraccount");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -66, "creatingyouraccount");
                 if (null != var2) {
                   dsa.field_d = jaa.decodeText((byte) 63, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "create_youmustaccept");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "create_youmustaccept");
                 if (null != var2) {
                   jaa.decodeText((byte) 79, var2);
                 }
-                var2 = dn.loadFile((byte) -57, "create_passwordsdifferent");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -57, "create_passwordsdifferent");
                 if (var2 != null) {
                   jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) -11, "create_success");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -11, "create_success");
                 if (null != var2) {
                   jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) -29, "day");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -29, "day");
                 if (var2 != null) {
                   MazeFrontierCell.field_i = jaa.decodeText((byte) 89, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "month");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "month");
                 if (var2 != null) {
                   HardwareTextureCache.field_d = jaa.decodeText((byte) 103, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "year");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "year");
                 if (var2 != null) {
                   DropdownList.field_y = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "monthnames,0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "monthnames,0");
                 if (null != var2) {
                   LineNoiseOperator.monthNames[0] = jaa.decodeText((byte) 55, var2);
                 }
-                var2 = dn.loadFile((byte) -17, "monthnames,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -17, "monthnames,1");
                 if (null != var2) {
                   LineNoiseOperator.monthNames[1] = jaa.decodeText((byte) 32, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "monthnames,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "monthnames,2");
                 if (null != var2) {
                   LineNoiseOperator.monthNames[2] = jaa.decodeText((byte) 58, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "monthnames,3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "monthnames,3");
                 if (var2 != null) {
                   LineNoiseOperator.monthNames[3] = jaa.decodeText((byte) 116, var2);
                 }
-                var2 = dn.loadFile((byte) -60, "monthnames,4");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -60, "monthnames,4");
                 if (var2 != null) {
                   LineNoiseOperator.monthNames[4] = jaa.decodeText((byte) 91, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "monthnames,5");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "monthnames,5");
                 if (null != var2) {
                   LineNoiseOperator.monthNames[5] = jaa.decodeText((byte) 103, var2);
                 }
-                var2 = dn.loadFile((byte) -28, "monthnames,6");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -28, "monthnames,6");
                 if (null != var2) {
                   LineNoiseOperator.monthNames[6] = jaa.decodeText((byte) 26, var2);
                 }
-                var2 = dn.loadFile((byte) -64, "monthnames,7");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -64, "monthnames,7");
                 if (null != var2) {
                   LineNoiseOperator.monthNames[7] = jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) -124, "monthnames,8");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -124, "monthnames,8");
                 if (var2 != null) {
                   LineNoiseOperator.monthNames[8] = jaa.decodeText((byte) 117, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "monthnames,9");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "monthnames,9");
                 if (var2 != null) {
                   LineNoiseOperator.monthNames[9] = jaa.decodeText((byte) 124, var2);
                 }
-                var2 = dn.loadFile((byte) -26, "monthnames,10");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -26, "monthnames,10");
                 if (var2 != null) {
                   LineNoiseOperator.monthNames[10] = jaa.decodeText((byte) 99, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "monthnames,11");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "monthnames,11");
                 if (null != var2) {
                   LineNoiseOperator.monthNames[11] = jaa.decodeText((byte) 51, var2);
                 }
-                var2 = dn.loadFile((byte) -77, "create_welcome");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -77, "create_welcome");
                 if (var2 != null) {
                   HiscoreTable.field_q = jaa.decodeText((byte) 98, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "create_u13_welcome");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "create_u13_welcome");
                 if (null != var2) {
                   jaa.decodeText((byte) 72, var2);
                 }
-                var2 = dn.loadFile((byte) -52, "create_createanaccount");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -52, "create_createanaccount");
                 if (var2 != null) {
                   S2CRoundDeadlinePacket.field_a = jaa.decodeText((byte) 122, var2);
                 }
-                var2 = dn.loadFile((byte) -63, "create_username");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -63, "create_username");
                 if (null != var2) {
                   jaa.decodeText((byte) 64, var2);
                 }
-                var2 = dn.loadFile((byte) -126, "create_displayname");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -126, "create_displayname");
                 if (var2 != null) {
                   CrusherBehaviour.field_r = jaa.decodeText((byte) 83, var2);
                 }
-                var2 = dn.loadFile((byte) -74, "create_password");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -74, "create_password");
                 if (null != var2) {
                   MidiVoice.field_j = jaa.decodeText((byte) 50, var2);
                 }
-                var2 = dn.loadFile((byte) -48, "create_password_confirm");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -48, "create_password_confirm");
                 if (null != var2) {
                   WaypointPath.field_c = jaa.decodeText((byte) 111, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "create_email");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "create_email");
                 if (var2 != null) {
                   HardwareSpecularEffect.field_f = jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) -77, "create_email_confirm");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -77, "create_email_confirm");
                 if (var2 != null) {
                   ct.field_d = jaa.decodeText((byte) 106, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "create_age");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "create_age");
                 if (null != var2) {
                   ToolkitInstance.field_g = jaa.decodeText((byte) 87, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "create_u13_email");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "create_u13_email");
                 if (null != var2) {
                   jaa.decodeText((byte) 121, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "create_u13_email_confirm");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "create_u13_email_confirm");
                 if (null != var2) {
                   jaa.decodeText((byte) 92, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "create_dob");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "create_dob");
                 if (var2 != null) {
                   jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) -50, "create_country");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -50, "create_country");
                 if (var2 != null) {
                   jaa.decodeText((byte) 74, var2);
                 }
-                var2 = dn.loadFile((byte) -89, "create_alternatives_header");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -89, "create_alternatives_header");
                 if (var2 != null) {
                   jaa.decodeText((byte) 32, var2);
                 }
-                var2 = dn.loadFile((byte) -39, "create_alternatives_select");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -39, "create_alternatives_select");
                 if (null != var2) {
                   jaa.decodeText((byte) 51, var2);
                 }
-                var2 = dn.loadFile((byte) -81, "create_suggestions");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -81, "create_suggestions");
                 if (var2 != null) {
                   AudioOutputThread.field_e = jaa.decodeText((byte) 65, var2);
                 }
-                var2 = dn.loadFile((byte) -102, "create_more_suggestions");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -102, "create_more_suggestions");
                 if (null != var2) {
                   ll.field_h = jaa.decodeText((byte) 53, var2);
                 }
-                var2 = dn.loadFile((byte) -114, "create_select_alternative");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -114, "create_select_alternative");
                 if (var2 != null) {
                   FontMetrics.field_i = jaa.decodeText((byte) 126, var2);
                 }
-                var2 = dn.loadFile((byte) -54, "create_optin_news");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -54, "create_optin_news");
                 if (var2 != null) {
                   OpenGlSprite.field_l = jaa.decodeText((byte) 37, var2);
                 }
-                var2 = dn.loadFile((byte) -111, "create_agreeterms");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -111, "create_agreeterms");
                 if (var2 != null) {
                   ConstrainToCircleLocomotor.field_y = jaa.decodeText((byte) 87, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "create_u13terms");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "create_u13terms");
                 if (null != var2) {
                   SafeZoneBehaviour.field_q = jaa.decodeText((byte) 44, var2);
                 }
-                var2 = dn.loadFile((byte) -70, "login_username_email");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -70, "login_username_email");
                 if (null != var2) {
                   PooledObject.field_h = jaa.decodeText((byte) 54, var2);
                 }
-                var2 = dn.loadFile((byte) -51, "login_username");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -51, "login_username");
                 if (var2 != null) {
                   SectorCacheStore.field_a = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "login_email");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "login_email");
                 if (var2 != null) {
                   CharacterSelection.field_c = jaa.decodeText((byte) 43, var2);
                 }
-                var2 = dn.loadFile((byte) -76, "login_username_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -76, "login_username_tooltip");
                 if (var2 != null) {
                   DebouncedValidationSource.field_a = jaa.decodeText((byte) 96, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "login_password_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "login_password_tooltip");
                 if (var2 != null) {
                   jaa.decodeText((byte) 30, var2);
                 }
-                var2 = dn.loadFile((byte) -100, "login_login_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -100, "login_login_tooltip");
                 if (null != var2) {
                   jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) -32, "login_create_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -32, "login_create_tooltip");
                 if (null != var2) {
                   hga.field_n = jaa.decodeText((byte) 28, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "login_justplay_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "login_justplay_tooltip");
                 if (null != var2) {
                   tg.field_a = jaa.decodeText((byte) 99, var2);
                 }
-                var2 = dn.loadFile((byte) -14, "login_back_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -14, "login_back_tooltip");
                 if (var2 != null) {
                   jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) -88, "login_no_displayname");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -88, "login_no_displayname");
                 if (null != var2) {
                   cj.field_e = jaa.decodeText((byte) 124, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "create_username_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "create_username_tooltip");
                 if (null != var2) {
                   jaa.decodeText((byte) 53, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "create_username_hint");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "create_username_hint");
                 if (null != var2) {
                   jaa.decodeText((byte) 42, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "create_displayname_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "create_displayname_tooltip");
                 if (var2 != null) {
                   rma.field_a = jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) -46, "create_displayname_hint");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -46, "create_displayname_hint");
                 if (var2 != null) {
                   GraphicsHeap.field_f = jaa.decodeText((byte) 70, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "create_password_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "create_password_tooltip");
                 if (null != var2) {
                   MatchOverlay.field_f = jaa.decodeText((byte) 71, var2);
                 }
-                var2 = dn.loadFile((byte) 120, "create_password_hint");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 120, "create_password_hint");
                 if (null != var2) {
                   GameKeyHandler.field_d = jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "create_password_confirm_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "create_password_confirm_tooltip");
                 if (null != var2) {
                   RevolverItemComponent.field_G = jaa.decodeText((byte) 84, var2);
                 }
-                var2 = dn.loadFile((byte) -88, "create_email_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -88, "create_email_tooltip");
                 if (var2 != null) {
                   ema.field_a = jaa.decodeText((byte) 124, var2);
                 }
-                var2 = dn.loadFile((byte) -54, "create_email_confirm_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -54, "create_email_confirm_tooltip");
                 if (var2 != null) {
                   ju.field_a = jaa.decodeText((byte) 121, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "create_age_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "create_age_tooltip");
                 if (null != var2) {
                   dta.field_e = jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) -44, "create_optin_news_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -44, "create_optin_news_tooltip");
                 if (var2 != null) {
                   RenderLayer.field_e = jaa.decodeText((byte) 53, var2);
                 }
-                var2 = dn.loadFile((byte) -27, "create_u13_email_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -27, "create_u13_email_tooltip");
                 if (var2 != null) {
                   jaa.decodeText((byte) 45, var2);
                 }
-                var2 = dn.loadFile((byte) -71, "create_u13_email_confirm_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -71, "create_u13_email_confirm_tooltip");
                 if (var2 != null) {
                   jaa.decodeText((byte) 53, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "create_dob_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "create_dob_tooltip");
                 if (null != var2) {
                   jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "create_country_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "create_country_tooltip");
                 if (null != var2) {
                   jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) -41, "create_optin_tooltip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -41, "create_optin_tooltip");
                 if (null != var2) {
                   jaa.decodeText((byte) 62, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "create_continue");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "create_continue");
                 if (null != var2) {
                   jaa.decodeText((byte) 74, var2);
                 }
-                var2 = dn.loadFile((byte) -66, "create_username_unavailable");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -66, "create_username_unavailable");
                 if (var2 != null) {
                   ProceduralTextureProvider.field_f = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "create_username_available");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "create_username_available");
                 if (null != var2) {
                   jla.field_B = jaa.decodeText((byte) 122, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "create_alert_namelength");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "create_alert_namelength");
                 if (var2 != null) {
                   ClipStack.field_d = jaa.decodeText((byte) 42, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "create_alert_namechars");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "create_alert_namechars");
                 if (null != var2) {
                   StripedMazeGenerator.field_b = jaa.decodeText((byte) 46, var2);
                 }
-                var2 = dn.loadFile((byte) -124, "create_alert_nameleadingspace");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -124, "create_alert_nameleadingspace");
                 if (var2 != null) {
                   gta.field_e = jaa.decodeText((byte) 121, var2);
                 }
-                var2 = dn.loadFile((byte) -21, "create_alert_doublespace");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -21, "create_alert_doublespace");
                 if (null != var2) {
                   GasVentModel.field_r = jaa.decodeText((byte) 59, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "create_alert_passchars");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "create_alert_passchars");
                 if (null != var2) {
                   NetworkArchiveRequest.field_o = jaa.decodeText((byte) 72, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "create_alert_passrepeated");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "create_alert_passrepeated");
                 if (var2 != null) {
                   PlayerModel.field_e = jaa.decodeText((byte) 45, var2);
                 }
-                var2 = dn.loadFile((byte) -12, "create_alert_passlength");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -12, "create_alert_passlength");
                 if (null != var2) {
                   dva.field_a = jaa.decodeText((byte) 54, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "create_alert_passcontainsname");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "create_alert_passcontainsname");
                 if (var2 != null) {
                   LegacyOpenGlTexture.field_j = jaa.decodeText((byte) 91, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "create_alert_passcontainsemail");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "create_alert_passcontainsemail");
                 if (null != var2) {
                   waa.field_e = jaa.decodeText((byte) 95, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "create_alert_passcontainsname_partial");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "create_alert_passcontainsname_partial");
                 if (null != var2) {
                   ClipStackEntry.field_h = jaa.decodeText((byte) 91, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "create_alert_checkname");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "create_alert_checkname");
                 if (null != var2) {
                   jaa.decodeText((byte) 59, var2);
                 }
-                var2 = dn.loadFile((byte) -109, "create_alert_invalidemail");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -109, "create_alert_invalidemail");
                 if (null != var2) {
                   IntIntHashTable.field_b = jaa.decodeText((byte) 106, var2);
                 }
-                var2 = dn.loadFile((byte) -117, "create_alert_email_unavailable");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -117, "create_alert_email_unavailable");
                 if (var2 != null) {
                   woa.field_l = jaa.decodeText((byte) 100, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "create_alert_invaliddate");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "create_alert_invaliddate");
                 if (var2 != null) {
                   MaskBlendOperator.field_m = jaa.decodeText((byte) 77, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "create_alert_invalidage");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "create_alert_invalidage");
                 if (null != var2) {
                   SoundEvent.field_l = jaa.decodeText((byte) 101, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "create_alert_yearrange");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "create_alert_yearrange");
                 if (null != var2) {
                   era.field_b = jaa.decodeText((byte) 70, var2);
                 }
-                var2 = dn.loadFile((byte) -113, "create_alert_mismatch");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -113, "create_alert_mismatch");
                 if (var2 != null) {
                   FleeLocomotor.field_q = jaa.decodeText((byte) 107, var2);
                 }
-                var2 = dn.loadFile((byte) -36, "create_passwordvalid");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -36, "create_passwordvalid");
                 if (var2 != null) {
                   FlipOperator.field_m = jaa.decodeText((byte) 26, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "create_emailvalid");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "create_emailvalid");
                 if (null != var2) {
                   dua.field_j = jaa.decodeText((byte) 50, var2);
                 }
-                var2 = dn.loadFile((byte) -24, "create_account_success");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -24, "create_account_success");
                 if (null != var2) {
                   ScrollControlWidget.field_K = jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) -104, "invalid_name");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -104, "invalid_name");
                 if (null != var2) {
                   HiscoresScreen.field_v = jaa.decodeText((byte) 96, var2);
                 }
-                var2 = dn.loadFile((byte) -37, "cannot_add_yourself");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -37, "cannot_add_yourself");
                 if (null != var2) {
                   RandomBrickOperator.field_q = jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) -35, "unable_to_add_friend");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -35, "unable_to_add_friend");
                 if (null != var2) {
                   Obstacle.field_j = jaa.decodeText((byte) 54, var2);
                 }
-                var2 = dn.loadFile((byte) -127, "unable_to_add_ignore");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -127, "unable_to_add_ignore");
                 if (var2 != null) {
                   EffectSwitchBehaviour.field_o = jaa.decodeText((byte) 84, var2);
                 }
-                var2 = dn.loadFile((byte) -14, "unable_to_delete_friend");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -14, "unable_to_delete_friend");
                 if (var2 != null) {
                   dga.field_b = jaa.decodeText((byte) 39, var2);
                 }
-                var2 = dn.loadFile((byte) -11, "unable_to_delete_ignore");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -11, "unable_to_delete_ignore");
                 if (var2 != null) {
                   LegacyOpenGlTexture2D.field_n = jaa.decodeText((byte) 99, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "friendlistfull");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "friendlistfull");
                 if (null != var2) {
                   bq.field_b = jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "friendlistdupe");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "friendlistdupe");
                 if (var2 != null) {
                   PlatformModel.field_w = jaa.decodeText((byte) 107, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "friendnotfound");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "friendnotfound");
                 if (var2 != null) {
                   LegacyOpenGlCubeTexture.field_m = jaa.decodeText((byte) 76, var2);
                 }
-                var2 = dn.loadFile((byte) -112, "ignorelistfull");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -112, "ignorelistfull");
                 if (null != var2) {
                   GameEvent.field_h = jaa.decodeText((byte) 88, var2);
                 }
-                var2 = dn.loadFile((byte) -43, "ignorelistdupe");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -43, "ignorelistdupe");
                 if (var2 != null) {
                   bva.field_a = jaa.decodeText((byte) 122, var2);
                 }
-                var2 = dn.loadFile((byte) -125, "ignorenotfound");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -125, "ignorenotfound");
                 if (null != var2) {
                   ConstrainToCircleLocomotor.field_A = jaa.decodeText((byte) 30, var2);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
-                var2 = dn.loadFile((byte) -11, "removeignorefirst");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -11, "removeignorefirst");
                 if (var2 != null) {
                   S2CCharacterChoicePacket.field_c = jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) -18, "removefriendfirst");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -18, "removefriendfirst");
                 if (null != var2) {
                   FleeLocomotor.field_o = jaa.decodeText((byte) 43, var2);
                 }
-                var2 = dn.loadFile((byte) -119, "enterfriend_add");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -119, "enterfriend_add");
                 if (var2 != null) {
                   QuickChatPhraseSource.field_c = jaa.decodeText((byte) 72, var2);
                 }
-                var2 = dn.loadFile((byte) -60, "enterfriend_del");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -60, "enterfriend_del");
                 if (var2 != null) {
                   PathMoveLocomotor.field_q = jaa.decodeText((byte) 33, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "enterignore_add");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "enterignore_add");
                 if (var2 != null) {
                   pe.field_k = jaa.decodeText((byte) 121, var2);
                 }
-                var2 = dn.loadFile((byte) -69, "enterignore_del");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -69, "enterignore_del");
                 if (null != var2) {
                   MazeSolver.field_b = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) -30, "text_removed_from_game");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -30, "text_removed_from_game");
                 if (var2 != null) {
                   BufferedCacheFile.field_k = jaa.decodeText((byte) 77, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "text_lobby_pleaselogin_free");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "text_lobby_pleaselogin_free");
                 if (var2 != null) {
                   LegacyOpenGlWaterTextures.field_e = jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "opengl");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "opengl");
                 if (null != var2) {
                   jaa.decodeText((byte) 78, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "sse");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "sse");
                 if (null != var2) {
                   jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) -22, "purejava");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -22, "purejava");
                 if (var2 != null) {
                   jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) -124, "waitingfor_graphics");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -124, "waitingfor_graphics");
                 if (null != var2) {
                   SwitchModel.field_r = jaa.decodeText((byte) 118, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "waitingfor_models");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "waitingfor_models");
                 if (var2 != null) {
                   jaa.decodeText((byte) 53, var2);
                 }
-                var2 = dn.loadFile((byte) -51, "waitingfor_fonts");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -51, "waitingfor_fonts");
                 if (var2 != null) {
                   MouseInputHandler.field_a = jaa.decodeText((byte) 83, var2);
                 }
-                var2 = dn.loadFile((byte) -109, "waitingfor_soundeffects");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -109, "waitingfor_soundeffects");
                 if (var2 != null) {
                   jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "waitingfor_music");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "waitingfor_music");
                 if (null != var2) {
                   jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) -116, "waitingfor_instruments");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -116, "waitingfor_instruments");
                 if (var2 != null) {
                   jaa.decodeText((byte) 121, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "waitingfor_levels");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "waitingfor_levels");
                 if (var2 != null) {
                   jaa.decodeText((byte) 52, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "waitingfor_extradata");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "waitingfor_extradata");
                 if (var2 != null) {
                   wt.field_b = jaa.decodeText((byte) 31, var2);
                 }
-                var2 = dn.loadFile((byte) -127, "waitingfor_languages");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -127, "waitingfor_languages");
                 if (null != var2) {
                   jaa.decodeText((byte) 109, var2);
                 }
-                var2 = dn.loadFile((byte) -59, "waitingfor_textures");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -59, "waitingfor_textures");
                 if (var2 != null) {
                   jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) -70, "waitingfor_animations");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -70, "waitingfor_animations");
                 if (var2 != null) {
                   jaa.decodeText((byte) 78, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "loading_graphics");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "loading_graphics");
                 if (null != var2) {
                   CollisionGridEntry.field_o = jaa.decodeText((byte) 114, var2);
                 }
-                var2 = dn.loadFile((byte) -9, "loading_models");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -9, "loading_models");
                 if (var2 != null) {
                   jaa.decodeText((byte) 87, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "loading_fonts");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "loading_fonts");
                 if (null != var2) {
                   TrapSpawner.field_b = jaa.decodeText((byte) 83, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "loading_soundeffects");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "loading_soundeffects");
                 if (null != var2) {
                   jaa.decodeText((byte) 79, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "loading_music");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "loading_music");
                 if (var2 != null) {
                   jaa.decodeText((byte) 33, var2);
                 }
-                var2 = dn.loadFile((byte) 108, "loading_instruments");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 108, "loading_instruments");
                 if (null != var2) {
                   jaa.decodeText((byte) 95, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "loading_levels");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "loading_levels");
                 if (var2 != null) {
                   jaa.decodeText((byte) 114, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "loading_extradata");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "loading_extradata");
                 if (null != var2) {
                   WindZoneBehaviour.field_u = jaa.decodeText((byte) 98, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "loading_languages");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "loading_languages");
                 if (null != var2) {
                   jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "loading_textures");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "loading_textures");
                 if (var2 != null) {
                   jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) -125, "loading_animations");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -125, "loading_animations");
                 if (var2 != null) {
                   jaa.decodeText((byte) 107, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "unpacking_graphics");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "unpacking_graphics");
                 if (null != var2) {
                   jaa.decodeText((byte) 43, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "unpacking_models");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "unpacking_models");
                 if (var2 != null) {
                   jaa.decodeText((byte) 50, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "unpacking_soundeffects");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "unpacking_soundeffects");
                 if (null != var2) {
                   jaa.decodeText((byte) 96, var2);
                 }
-                var2 = dn.loadFile((byte) -116, "unpacking_music");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -116, "unpacking_music");
                 if (null != var2) {
                   jaa.decodeText((byte) 107, var2);
                 }
-                var2 = dn.loadFile((byte) -86, "unpacking_levels");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -86, "unpacking_levels");
                 if (null != var2) {
                   jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) -60, "unpacking_languages");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -60, "unpacking_languages");
                 if (null != var2) {
                   jaa.decodeText((byte) 57, var2);
                 }
-                var2 = dn.loadFile((byte) -42, "unpacking_animations");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -42, "unpacking_animations");
                 if (var2 != null) {
                   jaa.decodeText((byte) 39, var2);
                 }
-                var2 = dn.loadFile((byte) -14, "unpacking_toolkit");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -14, "unpacking_toolkit");
                 if (null != var2) {
                   jaa.decodeText((byte) 120, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "instructions");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "instructions");
                 if (var2 != null) {
-                  pl.field_b = jaa.decodeText((byte) 73, var2);
+                  ChatChannelType.field_b = jaa.decodeText((byte) 73, var2);
                 }
-                var2 = dn.loadFile((byte) -67, "tutorial");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -67, "tutorial");
                 if (null != var2) {
                   SinglePlayerCourseGenerator.field_k = jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "playtutorial");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "playtutorial");
                 if (null != var2) {
                   jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) -62, "sound_colon");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -62, "sound_colon");
                 if (var2 != null) {
                   FloatPacketBuffer.field_l = jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) -66, "music_colon");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -66, "music_colon");
                 if (null != var2) {
                   DamageableBehaviour.field_x = jaa.decodeText((byte) 51, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "fullscreen");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "fullscreen");
                 if (var2 != null) {
                   s.field_a = jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "screensize");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "screensize");
                 if (null != var2) {
                   jaa.decodeText((byte) 97, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "highscores");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "highscores");
                 if (null != var2) {
                   vea.field_a = jaa.decodeText((byte) 52, var2);
                 }
-                var2 = dn.loadFile((byte) -24, "rankings");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -24, "rankings");
                 if (null != var2) {
                   WidgetContainer.field_v = jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "achievements");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "achievements");
                 if (null != var2) {
                   MazeSearchNode.field_i = jaa.decodeText((byte) 106, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "achievementsthisgame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "achievementsthisgame");
                 if (var2 != null) {
                   jaa.decodeText((byte) 101, var2);
                 }
-                var2 = dn.loadFile((byte) -56, "achievementsthissession");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -56, "achievementsthissession");
                 if (var2 != null) {
                   jaa.decodeText((byte) 112, var2);
                 }
-                var2 = dn.loadFile((byte) -36, "watchintroduction");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -36, "watchintroduction");
                 if (var2 != null) {
                   jaa.decodeText((byte) 44, var2);
                 }
-                var2 = dn.loadFile((byte) -35, "quit");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -35, "quit");
                 if (var2 != null) {
                   VortexBehaviour.field_u = jaa.decodeText((byte) 83, var2);
                 }
-                var2 = dn.loadFile((byte) -25, "login_createaccount");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -25, "login_createaccount");
                 if (var2 != null) {
                   jaa.decodeText((byte) 75, var2);
                 }
-                var2 = dn.loadFile((byte) -106, "tohighscores");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -106, "tohighscores");
                 if (null != var2) {
                   jaa.decodeText((byte) 59, var2);
                 }
-                var2 = dn.loadFile((byte) -113, "returntomainmenu");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -113, "returntomainmenu");
                 if (var2 != null) {
                   S2CActionPacket.field_g = jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "returntopausemenu");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "returntopausemenu");
                 if (var2 != null) {
                   jaa.decodeText((byte) 40, var2);
                 }
-                var2 = dn.loadFile((byte) -86, "returntooptionsmenu_notpaused");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -86, "returntooptionsmenu_notpaused");
                 if (null != var2) {
                   jaa.decodeText((byte) 109, var2);
                 }
-                var2 = dn.loadFile((byte) -61, "mainmenu");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -61, "mainmenu");
                 if (var2 != null) {
                   jaa.decodeText((byte) 79, var2);
                 }
-                var2 = dn.loadFile((byte) -85, "pausemenu");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -85, "pausemenu");
                 if (var2 != null) {
                   jaa.decodeText((byte) 110, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "optionsmenu_notpaused");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "optionsmenu_notpaused");
                 if (var2 != null) {
                   jaa.decodeText((byte) 68, var2);
                 }
-                var2 = dn.loadFile((byte) -96, "menu");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -96, "menu");
                 if (null != var2) {
                   fga.field_a = jaa.decodeText((byte) 74, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "selectlevel");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "selectlevel");
                 if (null != var2) {
                   jaa.decodeText((byte) 77, var2);
                 }
-                var2 = dn.loadFile((byte) -104, "nextlevel");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -104, "nextlevel");
                 if (null != var2) {
                   jaa.decodeText((byte) 68, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "startgame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "startgame");
                 if (null != var2) {
                   PlantModel.field_p = jaa.decodeText((byte) 122, var2);
                 }
-                var2 = dn.loadFile((byte) -111, "newgame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -111, "newgame");
                 if (var2 != null) {
                   ModelAnimator.field_c = jaa.decodeText((byte) 109, var2);
                 }
-                var2 = dn.loadFile((byte) -80, "resumegame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -80, "resumegame");
                 if (var2 != null) {
                   jaa.decodeText((byte) 105, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "resumetutorial");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "resumetutorial");
                 if (null != var2) {
                   jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) -8, "skip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -8, "skip");
                 if (null != var2) {
                   jaa.decodeText((byte) 90, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "skiptutorial");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "skiptutorial");
                 if (var2 != null) {
                   jaa.decodeText((byte) 42, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "skipending");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "skipending");
                 if (var2 != null) {
                   jaa.decodeText((byte) 123, var2);
                 }
-                var2 = dn.loadFile((byte) -96, "restartlevel");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -96, "restartlevel");
                 if (var2 != null) {
                   jaa.decodeText((byte) 44, var2);
                 }
-                var2 = dn.loadFile((byte) -100, "endtest");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -100, "endtest");
                 if (var2 != null) {
                   jaa.decodeText((byte) 106, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "endgame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "endgame");
                 if (null != var2) {
                   ResourceArchive.field_e = jaa.decodeText((byte) 45, var2);
                 }
-                var2 = dn.loadFile((byte) -102, "endtutorial");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -102, "endtutorial");
                 if (var2 != null) {
                   jaa.decodeText((byte) 55, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "ok");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "ok");
                 if (null != var2) {
                   GridLineWalker.field_j = jaa.decodeText((byte) 94, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "on");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "on");
                 if (var2 != null) {
                   Behaviour.field_h = jaa.decodeText((byte) 106, var2);
                 }
-                var2 = dn.loadFile((byte) -31, "off");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -31, "off");
                 if (var2 != null) {
                   PathMoverComponent.field_H = jaa.decodeText((byte) 50, var2);
                 }
-                var2 = dn.loadFile((byte) -36, "previous");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -36, "previous");
                 if (var2 != null) {
                   jaa.decodeText((byte) 96, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "prev");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "prev");
                 if (var2 != null) {
                   pfa.field_a = jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) -70, "next");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -70, "next");
                 if (null != var2) {
                   PitEdgePiece.field_e = jaa.decodeText((byte) 74, var2);
                 }
-                var2 = dn.loadFile((byte) -126, "graphics_colon");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -126, "graphics_colon");
                 if (var2 != null) {
                   jaa.decodeText((byte) 67, var2);
                 }
-                var2 = dn.loadFile((byte) -73, "hotseatmultiplayer");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -73, "hotseatmultiplayer");
                 if (var2 != null) {
                   jaa.decodeText((byte) 91, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "entermultiplayerlobby");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "entermultiplayerlobby");
                 if (null != var2) {
                   jaa.decodeText((byte) 65, var2);
                 }
-                var2 = dn.loadFile((byte) -92, "singleplayergame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -92, "singleplayergame");
                 if (null != var2) {
                   jaa.decodeText((byte) 42, var2);
                 }
-                var2 = dn.loadFile((byte) -39, "returntogame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -39, "returntogame");
                 if (var2 != null) {
                   GameAssetLoader.field_i = jaa.decodeText((byte) 57, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "endgameresign");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "endgameresign");
                 if (null != var2) {
                   jaa.decodeText((byte) 89, var2);
                 }
-                var2 = dn.loadFile((byte) -121, "offerdraw");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -121, "offerdraw");
                 if (null != var2) {
                   RopeBridgeComponent.field_I = jaa.decodeText((byte) 92, var2);
                 }
-                var2 = dn.loadFile((byte) -95, "canceldraw");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -95, "canceldraw");
                 if (var2 != null) {
                   BeamSegment.field_g = jaa.decodeText((byte) 120, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "acceptdraw");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "acceptdraw");
                 if (var2 != null) {
                   LoadProfileCommand.field_s = jaa.decodeText((byte) 64, var2);
                 }
-                var2 = dn.loadFile((byte) -71, "resign");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -71, "resign");
                 if (var2 != null) {
                   jaa.decodeText((byte) 90, var2);
                 }
-                var2 = dn.loadFile((byte) -95, "returntolobby");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -95, "returntolobby");
                 if (null != var2) {
                   OpenGlSprite.field_k = jaa.decodeText((byte) 62, var2);
                 }
-                var2 = dn.loadFile((byte) -54, "cont");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -54, "cont");
                 if (var2 != null) {
                   PlainScoringObserverFactory.field_d = jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "continue_spectating");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "continue_spectating");
                 if (null != var2) {
                   jaa.decodeText((byte) 114, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "messages");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "messages");
                 if (null != var2) {
                   jaa.decodeText((byte) 99, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "graphics_fastest");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "graphics_fastest");
                 if (null != var2) {
                   jaa.decodeText((byte) 103, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "graphics_medium");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "graphics_medium");
                 if (var2 != null) {
                   jaa.decodeText((byte) 100, var2);
                 }
-                var2 = dn.loadFile((byte) -94, "graphics_best");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -94, "graphics_best");
                 if (var2 != null) {
                   jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "graphics_directx");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "graphics_directx");
                 if (var2 != null) {
                   PlayerInputQueue.field_b = jaa.decodeText((byte) 119, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "graphics_opengl");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "graphics_opengl");
                 if (null != var2) {
                   um.field_k = jaa.decodeText((byte) 27, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "graphics_java");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "graphics_java");
                 if (null != var2) {
                   RangeOperator.field_n = jaa.decodeText((byte) 112, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "graphics_quality_high");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "graphics_quality_high");
                 if (var2 != null) {
                   PlayerInputQueue.field_d = jaa.decodeText((byte) 25, var2);
                 }
-                var2 = dn.loadFile((byte) -93, "graphics_quality_low");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -93, "graphics_quality_low");
                 if (var2 != null) {
                   ResourceArchive.field_f = jaa.decodeText((byte) 69, var2);
                 }
-                var2 = dn.loadFile((byte) -97, "graphics_mode");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -97, "graphics_mode");
                 if (var2 != null) {
                   jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "graphics_quality");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "graphics_quality");
                 if (null != var2) {
                   jaa.decodeText((byte) 117, var2);
                 }
-                var2 = dn.loadFile((byte) -44, "mode");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -44, "mode");
                 if (var2 != null) {
                   jaa.decodeText((byte) 111, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "quality");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "quality");
                 if (var2 != null) {
                   jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "keys");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "keys");
                 if (null != var2) {
                   jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) -33, "objective");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -33, "objective");
                 if (null != var2) {
                   jaa.decodeText((byte) 59, var2);
                 }
-                var2 = dn.loadFile((byte) -10, "currentobjective");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -10, "currentobjective");
                 if (var2 != null) {
                   jaa.decodeText((byte) 67, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "pressescforpausemenu");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "pressescforpausemenu");
                 if (null != var2) {
                   jaa.decodeText((byte) 54, var2);
                 }
-                var2 = dn.loadFile((byte) -66, "pressescforpausemenuortoskiptutorial");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -66, "pressescforpausemenuortoskiptutorial");
                 if (null != var2) {
                   jaa.decodeText((byte) 73, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "pressescforoptionsmenu_doesntpause");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "pressescforoptionsmenu_doesntpause");
                 if (var2 != null) {
                   jaa.decodeText((byte) 51, var2);
                 }
-                var2 = dn.loadFile((byte) -117, "pressescforoptionsmenu_doesntpause_short");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -117, "pressescforoptionsmenu_doesntpause_short");
                 if (var2 != null) {
                   jaa.decodeText((byte) 75, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "powerups");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "powerups");
                 if (null != var2) {
                   jaa.decodeText((byte) 115, var2);
                 }
-                var2 = dn.loadFile((byte) -87, "latestlevel_suffix");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -87, "latestlevel_suffix");
                 if (null != var2) {
                   jaa.decodeText((byte) 116, var2);
                 }
-                var2 = dn.loadFile((byte) -40, "unreachedlevel_name");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -40, "unreachedlevel_name");
                 if (var2 != null) {
                   jaa.decodeText((byte) 66, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "unreachedlevel_cannotplayreason");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "unreachedlevel_cannotplayreason");
                 if (var2 != null) {
                   jaa.decodeText((byte) 126, var2);
                 }
-                var2 = dn.loadFile((byte) -126, "unreachedlevel_cannotplayreason_shorter");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -126, "unreachedlevel_cannotplayreason_shorter");
                 if (var2 != null) {
                   jaa.decodeText((byte) 122, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "unreachedworld_cannotplayreason");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "unreachedworld_cannotplayreason");
                 if (var2 != null) {
                   jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "memberslevel_name");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "memberslevel_name");
                 if (null != var2) {
                   jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "memberslevel_cannotplayreason");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "memberslevel_cannotplayreason");
                 if (null != var2) {
                   jaa.decodeText((byte) 28, var2);
                 }
-                var2 = dn.loadFile((byte) -27, "membersworld_cannotplayreason");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -27, "membersworld_cannotplayreason");
                 if (null != var2) {
                   jaa.decodeText((byte) 122, var2);
                 }
-                var2 = dn.loadFile((byte) -72, "unreachedlevel_createtip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -72, "unreachedlevel_createtip");
                 if (var2 != null) {
                   jaa.decodeText((byte) 51, var2);
                 }
-                var2 = dn.loadFile((byte) -76, "unreachedlevel_createtip_line1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -76, "unreachedlevel_createtip_line1");
                 if (null != var2) {
                   jaa.decodeText((byte) 79, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "unreachedlevel_createtip_line2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "unreachedlevel_createtip_line2");
                 if (var2 != null) {
                   jaa.decodeText((byte) 85, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "unreachedlevel_logintip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "unreachedlevel_logintip");
                 if (null != var2) {
                   jaa.decodeText((byte) 126, var2);
                 }
-                var2 = dn.loadFile((byte) -66, "memberslevel_logintip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -66, "memberslevel_logintip");
                 if (null != var2) {
                   jaa.decodeText((byte) 42, var2);
                 }
-                var2 = dn.loadFile((byte) -89, "displayname_none");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -89, "displayname_none");
                 if (var2 != null) {
                   jaa.decodeText((byte) 84, var2);
                 }
-                var2 = dn.loadFile((byte) -41, "levelxofy1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -41, "levelxofy1");
                 if (null != var2) {
                   jaa.decodeText((byte) 109, var2);
                 }
-                var2 = dn.loadFile((byte) -84, "levelxofy2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -84, "levelxofy2");
                 if (var2 != null) {
                   jaa.decodeText((byte) 66, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "levelxofy");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "levelxofy");
                 if (var2 != null) {
                   jaa.decodeText((byte) 52, var2);
                 }
-                var2 = dn.loadFile((byte) -124, "ingame_level");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -124, "ingame_level");
                 if (var2 != null) {
                   jaa.decodeText((byte) 68, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "mouseoveranicon");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "mouseoveranicon");
                 if (var2 != null) {
                   jaa.decodeText((byte) 45, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "notyetachieved");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "notyetachieved");
                 if (var2 != null) {
                   pg.field_x = jaa.decodeText((byte) 97, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "achieved");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "achieved");
                 if (null != var2) {
                   MessageOverlay.field_p = jaa.decodeText((byte) 81, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "orbpoints");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "orbpoints");
                 if (var2 != null) {
                   jaa.decodeText((byte) 68, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "orbcoins");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "orbcoins");
                 if (null != var2) {
                   DisplacementOperator.field_m = jaa.decodeText((byte) 58, var2);
                 }
-                var2 = dn.loadFile((byte) 108, "orbpoints_colon");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 108, "orbpoints_colon");
                 if (null != var2) {
                   InstructionsScreen.field_r = jaa.decodeText((byte) 85, var2);
                 }
-                var2 = dn.loadFile((byte) -123, "orbcoins_colon");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -123, "orbcoins_colon");
                 if (var2 != null) {
                   jaa.decodeText((byte) 88, var2);
                 }
-                var2 = dn.loadFile((byte) -27, "achieved_colon_description");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -27, "achieved_colon_description");
                 if (var2 != null) {
                   jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) -58, "secretachievement");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -58, "secretachievement");
                 if (var2 != null) {
                   jaa.decodeText((byte) 115, var2);
                 }
-                var2 = dn.loadFile((byte) -51, "no_highscores");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -51, "no_highscores");
                 if (var2 != null) {
                   OpenGlIndexArray.field_j = jaa.decodeText((byte) 80, var2);
                 }
-                var2 = dn.loadFile((byte) -39, "hs_name");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -39, "hs_name");
                 if (null != var2) {
                   ObjectPool.field_g = jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) -65, "hs_level");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -65, "hs_level");
                 if (var2 != null) {
                   jaa.decodeText((byte) 101, var2);
                 }
-                var2 = dn.loadFile((byte) -42, "hs_fromlevel");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -42, "hs_fromlevel");
                 if (var2 != null) {
                   jaa.decodeText((byte) 55, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "hs_tolevel");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "hs_tolevel");
                 if (var2 != null) {
                   jaa.decodeText((byte) 28, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "hs_score");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "hs_score");
                 if (null != var2) {
                   ContentTransitionDialog.field_L = jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "hs_end");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "hs_end");
                 if (var2 != null) {
                   jaa.decodeText((byte) 65, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "ingame_score");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "ingame_score");
                 if (var2 != null) {
                   jaa.decodeText((byte) 115, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "score_colon");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "score_colon");
                 if (var2 != null) {
                   jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "mp_leavegame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "mp_leavegame");
                 if (var2 != null) {
                   jaa.decodeText((byte) 32, var2);
                 }
-                var2 = dn.loadFile((byte) -15, "mp_offerrematch");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -15, "mp_offerrematch");
                 if (var2 != null) {
                   PrefabComponent.field_E = jaa.decodeText((byte) 58, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "mp_offerrematch_unrated");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "mp_offerrematch_unrated");
                 if (var2 != null) {
                   jaa.decodeText((byte) 127, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "mp_acceptrematch");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "mp_acceptrematch");
                 if (null != var2) {
                   HardwareRidgedWaterNoise.field_t = jaa.decodeText((byte) 115, var2);
                 }
-                var2 = dn.loadFile((byte) -55, "mp_acceptrematch_unrated");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -55, "mp_acceptrematch_unrated");
                 if (var2 != null) {
                   jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) -18, "mp_cancelrematch");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -18, "mp_cancelrematch");
                 if (var2 != null) {
                   RevolverItemComponent.field_I = jaa.decodeText((byte) 120, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "mp_cancelrematch_unrated");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "mp_cancelrematch_unrated");
                 if (null != var2) {
                   jaa.decodeText((byte) 75, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "mp_rematchnewgame");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "mp_rematchnewgame");
                 if (null != var2) {
                   HardwareReflectionEffect.field_g = jaa.decodeText((byte) 117, var2);
                 }
-                var2 = dn.loadFile((byte) -12, "mp_rematchnewgame_unrated");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -12, "mp_rematchnewgame_unrated");
                 if (null != var2) {
                   jaa.decodeText((byte) 115, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "mp_x_wantstodraw");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "mp_x_wantstodraw");
                 if (null != var2) {
                   CharacterChoiceTile.field_h = jaa.decodeText((byte) 88, var2);
                 }
-                var2 = dn.loadFile((byte) -65, "mp_x_offersrematch");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -65, "mp_x_offersrematch");
                 if (null != var2) {
                   jaa.decodeText((byte) 116, var2);
                 }
-                var2 = dn.loadFile((byte) -23, "mp_x_offersrematch_unrated");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -23, "mp_x_offersrematch_unrated");
                 if (null != var2) {
                   jaa.decodeText((byte) 32, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "mp_youofferrematch");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "mp_youofferrematch");
                 if (null != var2) {
                   jaa.decodeText((byte) 62, var2);
                 }
-                var2 = dn.loadFile((byte) -54, "mp_youofferrematch_unrated");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -54, "mp_youofferrematch_unrated");
                 if (null != var2) {
                   jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) -58, "mp_youofferdraw");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -58, "mp_youofferdraw");
                 if (var2 != null) {
                   jaa.decodeText((byte) 121, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "mp_youresigned");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "mp_youresigned");
                 if (var2 != null) {
                   jaa.decodeText((byte) 122, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "mp_youresigned_rematch");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "mp_youresigned_rematch");
                 if (var2 != null) {
                   jaa.decodeText((byte) 50, var2);
                 }
-                var2 = dn.loadFile((byte) -82, "mp_x_hasresignedandleft");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -82, "mp_x_hasresignedandleft");
                 if (var2 != null) {
                   jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) -26, "mp_x_hasresigned_rematch");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -26, "mp_x_hasresigned_rematch");
                 if (var2 != null) {
                   jaa.decodeText((byte) 34, var2);
                 }
-                var2 = dn.loadFile((byte) -127, "mp_x_hasresigned");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -127, "mp_x_hasresigned");
                 if (null != var2) {
-                  lu.field_c = jaa.decodeText((byte) 26, var2);
+                  ChatTarget.field_c = jaa.decodeText((byte) 26, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "mp_x_hasleft");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "mp_x_hasleft");
                 if (var2 != null) {
                   RemovedFromGameMenu.field_r = jaa.decodeText((byte) 88, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "mp_x_haswon");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "mp_x_haswon");
                 if (null != var2) {
                   jaa.decodeText((byte) 44, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "mp_youhavewon");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "mp_youhavewon");
                 if (var2 != null) {
                   jaa.decodeText((byte) 127, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "mp_gamedrawn");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "mp_gamedrawn");
                 if (null != var2) {
                   DateInputWidget.field_y = jaa.decodeText((byte) 88, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "mp_timeremaining");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "mp_timeremaining");
                 if (var2 != null) {
                   jaa.decodeText((byte) 61, var2);
                 }
-                var2 = dn.loadFile((byte) -34, "mp_x_turn");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -34, "mp_x_turn");
                 if (var2 != null) {
                   jaa.decodeText((byte) 69, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "mp_yourturn");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "mp_yourturn");
                 if (var2 != null) {
                   jaa.decodeText((byte) 78, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "gameover");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "gameover");
                 if (null != var2) {
                   jaa.decodeText((byte) 34, var2);
                 }
-                var2 = dn.loadFile((byte) 119, "mp_hidechat");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 119, "mp_hidechat");
                 if (null != var2) {
                   jaa.decodeText((byte) 95, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "mp_showchat_nounread");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "mp_showchat_nounread");
                 if (var2 != null) {
                   jaa.decodeText((byte) 25, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "mp_showchat_unread1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "mp_showchat_unread1");
                 if (var2 != null) {
                   jaa.decodeText((byte) 112, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "mp_showchat_unread2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "mp_showchat_unread2");
                 if (null != var2) {
                   jaa.decodeText((byte) 117, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "click_to_quickchat");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "click_to_quickchat");
                 if (null != var2) {
                   PerlinNoise2D.field_o = jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) -118, "autorespond");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -118, "autorespond");
                 if (var2 != null) {
                   HardwareModel.field_k = jaa.decodeText((byte) 112, var2);
                 }
-                var2 = dn.loadFile((byte) -102, "quickchat_help");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -102, "quickchat_help");
                 if (var2 != null) {
-                  PrimitiveType.field_a = jaa.decodeText((byte) 35, var2);
+                  GpuPrimitiveType.field_a = jaa.decodeText((byte) 35, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "quickchat_help_title");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "quickchat_help_title");
                 if (var2 != null) {
                   FlagSet.field_b = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "quickchat_shortcut_help,0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "quickchat_shortcut_help,0");
                 if (var2 != null) {
                   PlayerProfile.field_q[0] = jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "quickchat_shortcut_help,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "quickchat_shortcut_help,1");
                 if (null != var2) {
                   PlayerProfile.field_q[1] = jaa.decodeText((byte) 30, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "quickchat_shortcut_help,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "quickchat_shortcut_help,2");
                 if (var2 != null) {
                   PlayerProfile.field_q[2] = jaa.decodeText((byte) 120, var2);
                 }
-                var2 = dn.loadFile((byte) -112, "quickchat_shortcut_help,3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -112, "quickchat_shortcut_help,3");
                 if (null != var2) {
                   PlayerProfile.field_q[3] = jaa.decodeText((byte) 62, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "quickchat_shortcut_help,4");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "quickchat_shortcut_help,4");
                 if (var2 != null) {
                   PlayerProfile.field_q[4] = jaa.decodeText((byte) 69, var2);
                 }
-                var2 = dn.loadFile((byte) -53, "quickchat_shortcut_help,5");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -53, "quickchat_shortcut_help,5");
                 if (null != var2) {
                   PlayerProfile.field_q[5] = jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "quickchat_shortcut_keys,0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
                   s.field_b[0] = jaa.decodeText((byte) 26, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "quickchat_shortcut_keys,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "quickchat_shortcut_keys,1");
                 if (var2 != null) {
                   s.field_b[1] = jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) -120, "quickchat_shortcut_keys,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -120, "quickchat_shortcut_keys,2");
                 if (null != var2) {
                   s.field_b[2] = jaa.decodeText((byte) 55, var2);
                 }
-                var2 = dn.loadFile((byte) -37, "quickchat_shortcut_keys,3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -37, "quickchat_shortcut_keys,3");
                 if (var2 != null) {
                   s.field_b[3] = jaa.decodeText((byte) 70, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "quickchat_shortcut_keys,4");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "quickchat_shortcut_keys,4");
                 if (var2 != null) {
                   s.field_b[4] = jaa.decodeText((byte) 124, var2);
                 }
-                var2 = dn.loadFile((byte) -118, "quickchat_shortcut_keys,5");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -118, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
                   s.field_b[5] = jaa.decodeText((byte) 83, var2);
                 }
-                var2 = dn.loadFile((byte) -112, "keychar_the_character_under_questionmark");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -112, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
                   TileGrid.field_o = ArrowShooterComponent.decodeSingleByteCharacter((byte) 11, var2[0]);
                 }
-                var2 = dn.loadFile((byte) -95, "rating_noratings");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -95, "rating_noratings");
                 if (var2 != null) {
                   jaa.decodeText((byte) 55, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "rating_rating");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "rating_rating");
                 if (null != var2) {
                   ControllerLocomotor.field_o = jaa.decodeText((byte) 76, var2);
                 }
-                var2 = dn.loadFile((byte) -118, "rating_played");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -118, "rating_played");
                 if (var2 != null) {
                   SimpleConditionBehaviour.field_q = jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "rating_won");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "rating_won");
                 if (null != var2) {
                   PlayerProfile.field_u = jaa.decodeText((byte) 48, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "rating_lost");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "rating_lost");
                 if (var2 != null) {
                   ida.field_a = jaa.decodeText((byte) 55, var2);
                 }
-                var2 = dn.loadFile((byte) -28, "rating_drawn");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -28, "rating_drawn");
                 if (var2 != null) {
                   jaa.decodeText((byte) 59, var2);
                 }
-                var2 = dn.loadFile((byte) -29, "benefits_fullscreen");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -29, "benefits_fullscreen");
                 if (var2 != null) {
                   jaa.decodeText((byte) 52, var2);
                 }
-                var2 = dn.loadFile((byte) -53, "benefits_noadverts");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -53, "benefits_noadverts");
                 if (null != var2) {
                   jaa.decodeText((byte) 95, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "benefits_price");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "benefits_price");
                 if (null != var2) {
                   jaa.decodeText((byte) 110, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "members_expansion_benefits,0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "members_expansion_benefits,0");
                 if (var2 != null) {
                   MembersUpsellMenu.field_A[0] = jaa.decodeText((byte) 57, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "members_expansion_benefits,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "members_expansion_benefits,1");
                 if (var2 != null) {
                   MembersUpsellMenu.field_A[1] = jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) -54, "members_expansion_benefits,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -54, "members_expansion_benefits,2");
                 if (var2 != null) {
                   MembersUpsellMenu.field_A[2] = jaa.decodeText((byte) 84, var2);
                 }
-                var2 = dn.loadFile((byte) -12, "members_expansion_price_top");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -12, "members_expansion_price_top");
                 if (var2 != null) {
                   jaa.decodeText((byte) 75, var2);
                 }
-                var2 = dn.loadFile((byte) -30, "members_expansion_price_bottom");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -30, "members_expansion_price_bottom");
                 if (null != var2) {
                   jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) -19, "reconnect_lost_seq,0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -19, "reconnect_lost_seq,0");
                 if (null != var2) {
                   MonochromeRowCacheEntry.reconnectingMessages[0] = jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "reconnect_lost_seq,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "reconnect_lost_seq,1");
                 if (var2 != null) {
                   MonochromeRowCacheEntry.reconnectingMessages[1] = jaa.decodeText((byte) 54, var2);
                 }
-                var2 = dn.loadFile((byte) -74, "reconnect_lost_seq,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -74, "reconnect_lost_seq,2");
                 if (null != var2) {
                   MonochromeRowCacheEntry.reconnectingMessages[2] = jaa.decodeText((byte) 63, var2);
                 }
-                var2 = dn.loadFile((byte) -106, "reconnect_lost_seq,3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -106, "reconnect_lost_seq,3");
                 if (null != var2) {
                   MonochromeRowCacheEntry.reconnectingMessages[3] = jaa.decodeText((byte) 96, var2);
                 }
-                var2 = dn.loadFile((byte) 120, "reconnect_lost");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 120, "reconnect_lost");
                 if (null != var2) {
                   jaa.decodeText((byte) 91, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "reconnect_restored");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "reconnect_restored");
                 if (null != var2) {
                   jaa.decodeText((byte) 63, var2);
                 }
-                var2 = dn.loadFile((byte) 116, "reconnect_please_check");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 116, "reconnect_please_check");
                 if (var2 != null) {
                   jaa.decodeText((byte) 110, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "reconnect_wait");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "reconnect_wait");
                 if (null != var2) {
                   jaa.decodeText((byte) 107, var2);
                 }
             }
             void runChunk3() throws java.lang.RuntimeException {
-                var2 = dn.loadFile((byte) 114, "reconnect_retry");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "reconnect_retry");
                 if (var2 != null) {
                   jaa.decodeText((byte) 51, var2);
                 }
-                var2 = dn.loadFile((byte) -51, "reconnect_resume");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -51, "reconnect_resume");
                 if (null != var2) {
                   jaa.decodeText((byte) 59, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "reconnect_or");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "reconnect_or");
                 if (null != var2) {
                   jaa.decodeText((byte) 61, var2);
                 }
-                var2 = dn.loadFile((byte) 127, "reconnect_exitfs");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 127, "reconnect_exitfs");
                 if (var2 != null) {
                   jaa.decodeText((byte) 31, var2);
                 }
-                var2 = dn.loadFile((byte) -25, "reconnect_exitfs_quit");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -25, "reconnect_exitfs_quit");
                 if (var2 != null) {
                   jaa.decodeText((byte) 73, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "reconnect_quit");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "reconnect_quit");
                 if (null != var2) {
                   jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) -120, "reconnect_check_fs");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -120, "reconnect_check_fs");
                 if (null != var2) {
                   jaa.decodeText((byte) 107, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "reconnect_check_nonfs");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "reconnect_check_nonfs");
                 if (var2 != null) {
                   jaa.decodeText((byte) 34, var2);
                 }
-                var2 = dn.loadFile((byte) -74, "fs_accept_beforeaccept");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -74, "fs_accept_beforeaccept");
                 if (null != var2) {
                   FleeLocomotor.field_B = jaa.decodeText((byte) 110, var2);
                 }
-                var2 = dn.loadFile((byte) -47, "fs_button_accept");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -47, "fs_button_accept");
                 if (null != var2) {
                   WeaveOperator.field_s = jaa.decodeText((byte) 55, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "fs_accept_afteraccept");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "fs_accept_afteraccept");
                 if (var2 != null) {
                   cq.field_c = jaa.decodeText((byte) 97, var2);
                 }
-                var2 = dn.loadFile((byte) 121, "fs_button_cancel");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 121, "fs_button_cancel");
                 if (var2 != null) {
                   mha.field_F = jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) -72, "fs_accept_aftercancel");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -72, "fs_accept_aftercancel");
                 if (null != var2) {
                   NativeSceneLight.field_p = jaa.decodeText((byte) 68, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "fs_accept_countdown_sing");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "fs_accept_countdown_sing");
                 if (var2 != null) {
                   rr.field_G = jaa.decodeText((byte) 25, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "fs_accept_countdown_pl");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "fs_accept_countdown_pl");
                 if (var2 != null) {
                   RendererOption.field_g = jaa.decodeText((byte) 33, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "fs_nonmember");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "fs_nonmember");
                 if (var2 != null) {
                   AgeValidator.field_l = jaa.decodeText((byte) 81, var2);
                 }
-                var2 = dn.loadFile((byte) -56, "fs_button_close");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -56, "fs_button_close");
                 if (var2 != null) {
                   BitPacketBuffer.field_j = jaa.decodeText((byte) 112, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "fs_button_members");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "fs_button_members");
                 if (null != var2) {
                   UiWidget.field_k = jaa.decodeText((byte) 36, var2);
                 }
-                var2 = dn.loadFile((byte) -53, "fs_unavailable");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -53, "fs_unavailable");
                 if (null != var2) {
                   IdolItemComponent.field_G = jaa.decodeText((byte) 127, var2);
                 }
-                var2 = dn.loadFile((byte) 108, "fs_unavailable_try_signed_applet");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 108, "fs_unavailable_try_signed_applet");
                 if (var2 != null) {
                   SwitchState.field_o = jaa.decodeText((byte) 113, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "fs_focus");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "fs_focus");
                 if (null != var2) {
                   S2CEventPacket.field_b = jaa.decodeText((byte) 121, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "fs_focus_or_resolution");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "fs_focus_or_resolution");
                 if (var2 != null) {
                   VertexArrayPointer.field_h = jaa.decodeText((byte) 122, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "fs_timeout");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "fs_timeout");
                 if (null != var2) {
                   WindZoneBehaviour.field_s = jaa.decodeText((byte) 31, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "fs_button_tryagain");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "fs_button_tryagain");
                 if (null != var2) {
                   SoundEventQueue.field_a = jaa.decodeText((byte) 99, var2);
                 }
-                var2 = dn.loadFile((byte) -110, "graphics_ui_fs_countdown");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -110, "graphics_ui_fs_countdown");
                 if (null != var2) {
                   StatReportingScoringObserver.field_k = jaa.decodeText((byte) 71, var2);
                 }
-                var2 = dn.loadFile((byte) 110, "mb_caption_title");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 110, "mb_caption_title");
                 if (null != var2) {
                   jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) -83, "mb_including_gamename");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -83, "mb_including_gamename");
                 if (null != var2) {
                   jaa.decodeText((byte) 38, var2);
                 }
-                var2 = dn.loadFile((byte) -101, "mb_full_access_1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -101, "mb_full_access_1");
                 if (var2 != null) {
                   jaa.decodeText((byte) 72, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "mb_full_access_2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "mb_full_access_2");
                 if (var2 != null) {
                   jaa.decodeText((byte) 85, var2);
                 }
-                var2 = dn.loadFile((byte) -28, "mb_achievement_count_1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -28, "mb_achievement_count_1");
                 if (var2 != null) {
                   jaa.decodeText((byte) 91, var2);
                 }
-                var2 = dn.loadFile((byte) -63, "mb_achievement_count_2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -63, "mb_achievement_count_2");
                 if (var2 != null) {
                   jaa.decodeText((byte) 46, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "mb_exclusive_1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "mb_exclusive_1");
                 if (var2 != null) {
                   jaa.decodeText((byte) 99, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "mb_exclusive_2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "mb_exclusive_2");
                 if (var2 != null) {
                   jaa.decodeText((byte) 35, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "me_extra_benefits");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "me_extra_benefits");
                 if (var2 != null) {
                   jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) -114, "hs_friend_tip");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -114, "hs_friend_tip");
                 if (var2 != null) {
                   jaa.decodeText((byte) 108, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "hs_friend_tip_multi");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "hs_friend_tip_multi");
                 if (null != var2) {
                   LegacyOpenGlEnvironmentWaterEffect.field_f = jaa.decodeText((byte) 53, var2);
                 }
-                var2 = dn.loadFile((byte) -54, "hs_mode_name,0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -54, "hs_mode_name,0");
                 if (var2 != null) {
                   bi.field_b[0] = jaa.decodeText((byte) 60, var2);
                 }
-                var2 = dn.loadFile((byte) -119, "hs_mode_name,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -119, "hs_mode_name,1");
                 if (null != var2) {
                   bi.field_b[1] = jaa.decodeText((byte) 93, var2);
                 }
-                var2 = dn.loadFile((byte) -32, "hs_mode_name,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -32, "hs_mode_name,2");
                 if (null != var2) {
                   bi.field_b[2] = jaa.decodeText((byte) 40, var2);
                 }
-                var2 = dn.loadFile((byte) -123, "rating_mode_name,0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -123, "rating_mode_name,0");
                 if (null != var2) {
                   StatReportingScoringObserver.field_m[0] = jaa.decodeText((byte) 99, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "rating_mode_name,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "rating_mode_name,1");
                 if (null != var2) {
                   StatReportingScoringObserver.field_m[1] = jaa.decodeText((byte) 31, var2);
                 }
-                var2 = dn.loadFile((byte) 120, "rating_mode_long_name,0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 120, "rating_mode_long_name,0");
                 if (var2 != null) {
                   IntrusiveNode.field_c[0] = jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) -18, "rating_mode_long_name,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -18, "rating_mode_long_name,1");
                 if (null != var2) {
                   IntrusiveNode.field_c[1] = jaa.decodeText((byte) 102, var2);
                 }
-                var2 = dn.loadFile((byte) -46, "graphics_config_fixed_size");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -46, "graphics_config_fixed_size");
                 if (null != var2) {
                   ke.field_a = jaa.decodeText((byte) 47, var2);
                 }
-                var2 = dn.loadFile((byte) -40, "graphics_config_resizable");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -40, "graphics_config_resizable");
                 if (null != var2) {
                   NativeSceneLight.field_o = jaa.decodeText((byte) 25, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "graphics_config_fullscreen");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "graphics_config_fullscreen");
                 if (null != var2) {
                   pa.field_c = jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) -102, "graphics_config_done");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -102, "graphics_config_done");
                 if (var2 != null) {
                   CachedTextLayout.field_i = jaa.decodeText((byte) 33, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "graphics_config_apply");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "graphics_config_apply");
                 if (var2 != null) {
                   wm.field_b = jaa.decodeText((byte) 31, var2);
                 }
-                var2 = dn.loadFile((byte) 115, "graphics_config_title");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 115, "graphics_config_title");
                 if (var2 != null) {
                   jaa.decodeText((byte) 26, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "graphics_config_instruction");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "graphics_config_instruction");
                 if (var2 != null) {
                   RewardChoicePhase.field_w = jaa.decodeText((byte) 101, var2);
                 }
-                var2 = dn.loadFile((byte) -115, "graphics_config_need_memory");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -115, "graphics_config_need_memory");
                 if (null != var2) {
                   OpenGlDisplayLists.field_a = jaa.decodeText((byte) 73, var2);
                 }
-                var2 = dn.loadFile((byte) 120, "pleasewait_dotdotdot");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 120, "pleasewait_dotdotdot");
                 if (var2 != null) {
                   PlayerSimulation.field_n = jaa.decodeText((byte) 27, var2);
                 }
-                var2 = dn.loadFile((byte) -40, "serviceunavailable");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -40, "serviceunavailable");
                 if (null != var2) {
                   FacePlayerMountComponent.field_H = jaa.decodeText((byte) 63, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "createtouse");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "createtouse");
                 if (null != var2) {
                   ooa.field_h = jaa.decodeText((byte) 25, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "achievementsoffline");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "achievementsoffline");
                 if (var2 != null) {
                   jaa.decodeText((byte) 46, var2);
                 }
-                var2 = dn.loadFile((byte) 112, "warning");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 112, "warning");
                 if (null != var2) {
                   jaa.decodeText((byte) 85, var2);
                 }
-                var2 = dn.loadFile((byte) -48, "DEFAULT_PLAYER_NAME");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -48, "DEFAULT_PLAYER_NAME");
                 if (var2 != null) {
                   RenderScene.field_a = jaa.decodeText((byte) 82, var2);
                 }
-                var2 = dn.loadFile((byte) -52, "mustlogin1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -52, "mustlogin1");
                 if (var2 != null) {
                   PitSnake.field_v = jaa.decodeText((byte) 57, var2);
                 }
-                var2 = dn.loadFile((byte) 124, "mustlogin2,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 124, "mustlogin2,1");
                 if (null != var2) {
                   KeySwitchComponent.field_L[1] = jaa.decodeText((byte) 81, var2);
                 }
-                var2 = dn.loadFile((byte) -14, "mustlogin2,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -14, "mustlogin2,2");
                 if (null != var2) {
                   KeySwitchComponent.field_L[2] = jaa.decodeText((byte) 83, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "mustlogin2,3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "mustlogin2,3");
                 if (var2 != null) {
                   KeySwitchComponent.field_L[3] = jaa.decodeText((byte) 34, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "mustlogin2,4");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "mustlogin2,4");
                 if (var2 != null) {
                   KeySwitchComponent.field_L[4] = jaa.decodeText((byte) 120, var2);
                 }
-                var2 = dn.loadFile((byte) -100, "mustlogin2,5");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -100, "mustlogin2,5");
                 if (null != var2) {
                   KeySwitchComponent.field_L[5] = jaa.decodeText((byte) 93, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "mustlogin2,6");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "mustlogin2,6");
                 if (null != var2) {
                   KeySwitchComponent.field_L[6] = jaa.decodeText((byte) 125, var2);
                 }
-                var2 = dn.loadFile((byte) -63, "mustlogin2,7");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -63, "mustlogin2,7");
                 if (null != var2) {
                   KeySwitchComponent.field_L[7] = jaa.decodeText((byte) 127, var2);
                 }
-                var2 = dn.loadFile((byte) -9, "mustlogin3,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -9, "mustlogin3,1");
                 if (var2 != null) {
                   ota.field_a[1] = jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) 120, "mustlogin3,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 120, "mustlogin3,2");
                 if (var2 != null) {
                   ota.field_a[2] = jaa.decodeText((byte) 68, var2);
                 }
-                var2 = dn.loadFile((byte) 118, "mustlogin3,3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 118, "mustlogin3,3");
                 if (null != var2) {
                   ota.field_a[3] = jaa.decodeText((byte) 51, var2);
                 }
-                var2 = dn.loadFile((byte) 125, "mustlogin3,4");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 125, "mustlogin3,4");
                 if (null != var2) {
                   ota.field_a[4] = jaa.decodeText((byte) 56, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "mustlogin3,5");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "mustlogin3,5");
                 if (var2 != null) {
                   ota.field_a[5] = jaa.decodeText((byte) 90, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "mustlogin3,6");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "mustlogin3,6");
                 if (null != var2) {
                   ota.field_a[6] = jaa.decodeText((byte) 77, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "mustlogin3,7");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "mustlogin3,7");
                 if (null != var2) {
                   ota.field_a[7] = jaa.decodeText((byte) 91, var2);
                 }
-                var2 = dn.loadFile((byte) -40, "discard");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -40, "discard");
                 if (null != var2) {
                   pka.field_a = jaa.decodeText((byte) 120, var2);
                 }
-                var2 = dn.loadFile((byte) 122, "mustlogin4,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 122, "mustlogin4,1");
                 if (null != var2) {
                   HardwareReflectionEffect.field_h[1] = jaa.decodeText((byte) 66, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "mustlogin4,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "mustlogin4,2");
                 if (var2 != null) {
                   HardwareReflectionEffect.field_h[2] = jaa.decodeText((byte) 112, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "mustlogin4,3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "mustlogin4,3");
                 if (null != var2) {
                   HardwareReflectionEffect.field_h[3] = jaa.decodeText((byte) 79, var2);
                 }
-                var2 = dn.loadFile((byte) 113, "mustlogin4,4");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 113, "mustlogin4,4");
                 if (var2 != null) {
                   HardwareReflectionEffect.field_h[4] = jaa.decodeText((byte) 48, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "mustlogin4,5");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "mustlogin4,5");
                 if (null != var2) {
                   HardwareReflectionEffect.field_h[5] = jaa.decodeText((byte) 105, var2);
                 }
-                var2 = dn.loadFile((byte) 123, "mustlogin4,6");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 123, "mustlogin4,6");
                 if (null != var2) {
                   HardwareReflectionEffect.field_h[6] = jaa.decodeText((byte) 116, var2);
                 }
-                var2 = dn.loadFile((byte) 114, "mustlogin4,7");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 114, "mustlogin4,7");
                 if (var2 != null) {
                   HardwareReflectionEffect.field_h[7] = jaa.decodeText((byte) 28, var2);
                 }
-                var2 = dn.loadFile((byte) 126, "mustlogin_notloggedin");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 126, "mustlogin_notloggedin");
                 if (null != var2) {
                   jaa.decodeText((byte) 31, var2);
                 }
-                var2 = dn.loadFile((byte) -76, "mustlogin_alternate,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -76, "mustlogin_alternate,1");
                 if (var2 != null) {
                   cua.field_b[1] = jaa.decodeText((byte) 124, var2);
                 }
-                var2 = dn.loadFile((byte) -99, "mustlogin_alternate,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -99, "mustlogin_alternate,2");
                 if (var2 != null) {
                   cua.field_b[2] = jaa.decodeText((byte) 126, var2);
                 }
-                var2 = dn.loadFile((byte) 111, "mustlogin_alternate,3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 111, "mustlogin_alternate,3");
                 if (var2 != null) {
                   cua.field_b[3] = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) -121, "mustlogin_alternate,4");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -121, "mustlogin_alternate,4");
                 if (var2 != null) {
                   cua.field_b[4] = jaa.decodeText((byte) 41, var2);
                 }
-                var2 = dn.loadFile((byte) -48, "mustlogin_alternate,5");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -48, "mustlogin_alternate,5");
                 if (null != var2) {
                   cua.field_b[5] = jaa.decodeText((byte) 107, var2);
                 }
-                var2 = dn.loadFile((byte) 105, "mustlogin_alternate,6");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 105, "mustlogin_alternate,6");
                 if (null != var2) {
                   cua.field_b[6] = jaa.decodeText((byte) 118, var2);
                 }
-                var2 = dn.loadFile((byte) -63, "mustlogin_alternate,7");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -63, "mustlogin_alternate,7");
                 if (var2 != null) {
                   cua.field_b[7] = jaa.decodeText((byte) 104, var2);
                 }
-                var2 = dn.loadFile((byte) -85, "subscription_cost_monthly,0");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -85, "subscription_cost_monthly,0");
                 if (var2 != null) {
                   fha.field_a[0] = jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) 104, "subscription_cost_monthly,1");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 104, "subscription_cost_monthly,1");
                 if (null != var2) {
                   fha.field_a[1] = jaa.decodeText((byte) 37, var2);
                 }
-                var2 = dn.loadFile((byte) -40, "subscription_cost_monthly,2");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -40, "subscription_cost_monthly,2");
                 if (var2 != null) {
                   fha.field_a[2] = jaa.decodeText((byte) 43, var2);
                 }
-                var2 = dn.loadFile((byte) -73, "subscription_cost_monthly,3");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -73, "subscription_cost_monthly,3");
                 if (null != var2) {
                   fha.field_a[3] = jaa.decodeText((byte) 29, var2);
                 }
-                var2 = dn.loadFile((byte) -122, "subscription_cost_monthly,4");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -122, "subscription_cost_monthly,4");
                 if (null != var2) {
                   fha.field_a[4] = jaa.decodeText((byte) 68, var2);
                 }
-                var2 = dn.loadFile((byte) -69, "subscription_cost_monthly,5");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -69, "subscription_cost_monthly,5");
                 if (var2 != null) {
                   fha.field_a[5] = jaa.decodeText((byte) 107, var2);
                 }
-                var2 = dn.loadFile((byte) -60, "subscription_cost_monthly,6");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -60, "subscription_cost_monthly,6");
                 if (null != var2) {
                   fha.field_a[6] = jaa.decodeText((byte) 49, var2);
                 }
-                var2 = dn.loadFile((byte) 109, "subscription_cost_monthly,7");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 109, "subscription_cost_monthly,7");
                 if (var2 != null) {
                   fha.field_a[7] = jaa.decodeText((byte) 93, var2);
                 }
-                var2 = dn.loadFile((byte) 117, "subscription_cost_monthly,8");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 117, "subscription_cost_monthly,8");
                 if (var2 != null) {
                   fha.field_a[8] = jaa.decodeText((byte) 46, var2);
                 }
-                var2 = dn.loadFile((byte) 120, "subscription_cost_monthly,9");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 120, "subscription_cost_monthly,9");
                 if (null != var2) {
                   fha.field_a[9] = jaa.decodeText((byte) 105, var2);
                 }
-                var2 = dn.loadFile((byte) 107, "subscription_cost_monthly,10");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 107, "subscription_cost_monthly,10");
                 if (var2 != null) {
                   fha.field_a[10] = jaa.decodeText((byte) 121, var2);
                 }
-                var2 = dn.loadFile((byte) -59, "subscription_cost_monthly,11");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -59, "subscription_cost_monthly,11");
                 if (var2 != null) {
                   fha.field_a[11] = jaa.decodeText((byte) 86, var2);
                 }
-                var2 = dn.loadFile((byte) -28, "subscription_cost_monthly,12");
+                var2 = TextureCoordinateGeneration.loadFile((byte) -28, "subscription_cost_monthly,12");
                 if (var2 != null) {
                   fha.field_a[12] = jaa.decodeText((byte) 52, var2);
                 }
-                var2 = dn.loadFile((byte) 106, "sentence_separator");
+                var2 = TextureCoordinateGeneration.loadFile((byte) 106, "sentence_separator");
                 if (var2 != null) {
                   jaa.decodeText((byte) 64, var2);
                 }

@@ -184,7 +184,7 @@ final class WhirlpoolDigest {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        upa var3 = null;
+        RatingTable var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -205,10 +205,10 @@ final class WhirlpoolDigest {
         try {
           var14 = WeaveOperator.field_q;
           var2 = var14.readUnsignedByte(255);
-          var3 = (upa) (LoadingStepList.field_d.first(param0 ^ 100));
+          var3 = (RatingTable) (LoadingStepList.field_d.first(param0 ^ 100));
           while (var3 != null) {
             if (var3.field_n != var2) {
-              var3 = (upa) (LoadingStepList.field_d.next(117));
+              var3 = (RatingTable) (LoadingStepList.field_d.next(117));
               continue;
             }
             break;

@@ -221,7 +221,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
         if (bc.a(true)) {
           return true;
         }
-        if (Puddle.b(param3, (byte) -44, param1, param0)) {
+        if (Puddle.routeKeyInput(param3, (byte) -44, param1, param0)) {
           return true;
         }
         return false;

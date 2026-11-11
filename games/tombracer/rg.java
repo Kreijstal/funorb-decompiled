@@ -42,14 +42,14 @@ final class rg extends SingleChildWidget {
         OpenGlSceneLight.field_q[3] = ol.field_a;
         OpenGlSceneLight.field_q[6] = DamageableBehaviour.field_x;
         OpenGlSceneLight.field_q[14] = MazeSearchNode.field_i;
-        OpenGlSceneLight.field_q[4] = pl.field_b;
+        OpenGlSceneLight.field_q[4] = ChatChannelType.field_b;
         OpenGlSceneLight.field_q[22] = SinglePlayerCourseGenerator.field_k;
         OpenGlSceneLight.field_q[8] = vea.field_a;
         OpenGlSceneLight.field_q[7] = s.field_a;
         OpenGlSceneLight.field_q[17] = fga.field_a;
         OpenGlSceneLight.field_q[15] = GameAssetLoader.field_i;
         OpenGlSceneLight.field_q[13] = WidgetContainer.field_v;
-        OpenGlSceneLight.field_q[18] = pl.field_b;
+        OpenGlSceneLight.field_q[18] = ChatChannelType.field_b;
         OpenGlSceneLight.field_q[0] = fga.field_a;
         OpenGlSceneLight.field_q[19] = PrimMazeGenerator.field_b;
         OpenGlSceneLight.field_q[2] = FuseBehaviour.field_t;
@@ -115,7 +115,7 @@ final class rg extends SingleChildWidget {
         sla.field_b[2] = ValidatedTextInputWidget.field_J;
         sla.field_b[3] = HardCacheEntry.field_p;
         Room.field_m[1] = HardwareSprite.field_e;
-        Room.field_m[10] = pha.field_Ib;
+        Room.field_m[10] = LobbyPlayerEntry.field_Ib;
         Room.field_m[9] = rha.field_h;
         Room.field_m[8] = sda.field_k;
         Room.field_m[4] = DebouncedValidationSource.field_d;
@@ -165,7 +165,7 @@ final class rg extends SingleChildWidget {
           Effect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, LegacyTextureCache.field_c};
           IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, dka.field_c};
           Effect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, VertexStreamLayout.field_e};
-          IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, AnimationSequence.field_a};
+          IntrusiveDeque.field_d[2] = new String[]{GraphicsQuality.field_b, baa.field_a, AnimationSequence.field_a};
           Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
           IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
           IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};
@@ -217,7 +217,7 @@ final class rg extends SingleChildWidget {
         Effect.field_h[0] = new String[]{CharacterSelection.field_f, LegacySwitchModel.field_o, AccountRegistrationPanel.field_H, PushableBlockMazeComponent.field_K, pba.field_c, LegacyTextureCache.field_c};
         IntrusiveDeque.field_d[1] = new String[]{ct.field_c, HardwareTurbulentWaterNoise.field_o, dka.field_c};
         Effect.field_h[1] = new String[]{AnimationSequence.field_k, BitPacketBuffer.field_m, VertexStreamLayout.field_e};
-        IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, AnimationSequence.field_a};
+        IntrusiveDeque.field_d[2] = new String[]{GraphicsQuality.field_b, baa.field_a, AnimationSequence.field_a};
         Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
         IntrusiveDeque.field_d[3] = new String[]{QuickChatMenu.field_Ab, rua.field_hb, Player.field_s};
         IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, RewardChoiceSlot.field_b, RopeBridgeComponent.field_G};

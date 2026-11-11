@@ -4,7 +4,7 @@
 final class hda extends tc {
     static String field_h;
 
-    final pl a(byte param0) {
+    final ChatChannelType getChannelType(byte param0) {
         if (param0 != 113) {
           hda.releaseStatics((byte) -6);
           return RoomHeader.field_c;

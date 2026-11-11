@@ -55,7 +55,7 @@ final class HiscoresScreen extends DropInMenuScreen {
         }
         var5 = FacePlayerLocomotor.field_p;
         if (var5 == null) {
-          FacePlayerLocomotor.field_p = ConsoleWindow.a(3, this.field_u, 0, 10, 1);
+          FacePlayerLocomotor.field_p = ConsoleWindow.getOrRequestHiscoreTable(3, this.field_u, 0, 10, 1);
           this.field_E = 0;
         } else {
           if (!var5.field_h) {

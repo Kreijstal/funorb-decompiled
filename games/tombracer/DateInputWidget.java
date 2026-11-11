@@ -14,7 +14,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           return;
         }
         try {
-          lu.field_b = param0;
+          ChatTarget.field_b = param0;
           hka.field_b = new PlayerContextMenu(param6, param3, param2, param8, param1, param7, param5);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "paa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');

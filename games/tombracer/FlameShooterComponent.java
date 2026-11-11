@@ -29,7 +29,7 @@ final class FlameShooterComponent extends ShooterComponent {
         super(param0, param1, param2, param3);
     }
 
-    final static void a(int param0, String param1, BitmapFont param2, TextLine param3, int param4) {
+    final static void a(int param0, String param1, BitmapFont param2, TextLineLayout param3, int param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;

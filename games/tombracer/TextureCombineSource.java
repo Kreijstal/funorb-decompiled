@@ -134,7 +134,7 @@ final class TextureCombineSource {
         WidgetStyleLayer.field_f = SpriteData.loadSheet(param2, "", "achievements");
         MatchStatistics.field_g = SpriteData.loadSprite(PitComponent.field_G, "basic", "unachieved");
         aa.field_a = SpriteData.loadSprite(param2, "", "map_routedot");
-        pha.field_Bb = SpriteData.loadSprite(param2, "", "map_coin_gold");
+        LobbyPlayerEntry.field_Bb = SpriteData.loadSprite(param2, "", "map_coin_gold");
         ConstrainToRectangleLocomotor.field_t = SpriteData.loadSprite(param2, "", "map_coin_silver");
         MatchScreen.field_q = SpriteData.loadSprite(param2, "", "map_coin_bronze");
         TimeSwitchBehaviour.field_n = SpriteData.loadSprite(param2, "", "map_locationdot");

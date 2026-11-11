@@ -3,7 +3,7 @@
  */
 final class IntrusiveDeque {
     static ToolkitSprite field_c;
-    static su field_a;
+    static QuickChatParamType field_a;
     static String[][] field_d;
     IntrusiveNode sentinel;
     private IntrusiveNode cursor;
@@ -152,35 +152,35 @@ final class IntrusiveDeque {
           if (param2 > -114) {
             IntrusiveDeque.a(false, -16, -77);
           }
-          stackIn_7_0 = dn.field_b.field_vb;
+          stackIn_7_0 = TextureCoordinateGeneration.field_b.field_vb;
           stackIn_7_1 = 2;
           stackIn_7_2 = param0;
           stackIn_7_3 = 71;
           stackIn_7_4 = 3 * ((2 + ToolkitSelector.field_a) * param1);
           stackIn_7_5 = ToolkitSelector.field_a + 2;
-          stackIn_8_6 = (dn.field_b.field_vb == lu.field_b);
+          stackIn_8_6 = (TextureCoordinateGeneration.field_b.field_vb == ChatTarget.field_b);
           boolean decompiledFrameRemainder1 = true;
           var3_int = ((ScrollPane) (Object) stackIn_7_0).updateContentLayout(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_8_6) ? 1 : 0;
-          var4 = dn.field_b.field_tb.field_J;
+          var4 = TextureCoordinateGeneration.field_b.field_tb.field_J;
           var5 = null;
           if (UiWidget.field_g != 2) {
             is.field_yb.field_r = PlayerSimulation.field_n;
             dqa.field_e.field_X = false;
             if (UiWidget.field_g != 1) {
-              dn.field_b.field_vb.field_vb.field_r = LoginMethod.field_c;
+              TextureCoordinateGeneration.field_b.field_vb.field_vb.field_r = LoginMethod.field_c;
               if (var19 != 0) {
-                dn.field_b.field_vb.field_vb.field_r = DivisionMazeGenerator.field_b;
+                TextureCoordinateGeneration.field_b.field_vb.field_vb.field_r = DivisionMazeGenerator.field_b;
               }
             } else {
-              dn.field_b.field_vb.field_vb.field_r = DivisionMazeGenerator.field_b;
+              TextureCoordinateGeneration.field_b.field_vb.field_vb.field_r = DivisionMazeGenerator.field_b;
             }
-            BridgeModel.a(-106, dn.field_b.field_tb);
+            BridgeModel.a(-106, TextureCoordinateGeneration.field_b.field_tb);
             decompiledFrameRemainder1 = (var19 != 0);
           }
           if (decompiledFrameRemainder1) {
             dqa.field_e.field_X = true;
             is.field_yb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(99, uba.field_h, new String[]{ol.field_b});
-            dn.field_b.field_vb.field_vb.field_r = null;
+            TextureCoordinateGeneration.field_b.field_vb.field_vb.field_r = null;
             var6 = null;
             var7 = (mu) (var4.first(-80));
             while (true) {
@@ -199,7 +199,7 @@ final class IntrusiveDeque {
                     var8 = 1;
                     var7.invalidateLayoutRecursive(-10966);
                   }
-                  var7.field_G = dn.field_b.field_tb.field_G;
+                  var7.field_G = TextureCoordinateGeneration.field_b.field_tb.field_G;
                   var9 = 0;
                   if (var7.field_Cb != null) {
                     if (var7.field_Cb != ol.field_b) {
@@ -258,14 +258,14 @@ final class IntrusiveDeque {
                     var7.field_O = -var7.field_t + var9;
                   }
                   if (var8 != 0) {
-                    dn.field_b.field_tb.placeBelow(2, (UiComponent) (var6), var7, (byte) -122);
+                    TextureCoordinateGeneration.field_b.field_tb.placeBelow(2, (UiComponent) (var6), var7, (byte) -122);
                   }
                   var6 = var7;
                   if (var7.field_zb == null ||
                     !var7.field_zb.field_o) {
                     if (var7.field_y != 0) {
                       var16 = var7.field_tb;
-                      DateInputWidget.openPlayerContextMenu(dn.field_b.field_vb, -1, var16, 0L, -11635, (int[]) null, var7, -1, (String) null);
+                      DateInputWidget.openPlayerContextMenu(TextureCoordinateGeneration.field_b.field_vb, -1, var16, 0L, -11635, (int[]) null, var7, -1, (String) null);
                       if (var7.field_Cb != null &&
                         !RewardChoicePhase.isPrivateChatTarget(hka.field_b.field_i, (byte) -13) &&
                         !fua.field_g) {
@@ -290,18 +290,18 @@ final class IntrusiveDeque {
                   continue;
                 }
               } else {
-                decompiledFrameRemainder0 = (dn.field_b.field_yb.field_y != 0);
+                decompiledFrameRemainder0 = (TextureCoordinateGeneration.field_b.field_yb.field_y != 0);
                 if (decompiledFrameRemainder0) {
-                  bl.field_a = new is(dn.field_b.field_yb.field_q, dn.field_b.field_yb.field_A, dn.field_b.field_yb.field_G, dn.field_b.field_yb.field_t, QuickChatPhraseSource.field_c, lw.field_a, Corpse.field_i, Corpse.field_i);
+                  bl.field_a = new is(TextureCoordinateGeneration.field_b.field_yb.field_q, TextureCoordinateGeneration.field_b.field_yb.field_A, TextureCoordinateGeneration.field_b.field_yb.field_G, TextureCoordinateGeneration.field_b.field_yb.field_t, QuickChatPhraseSource.field_c, lw.field_a, Corpse.field_i, Corpse.field_i);
                 }
               }
               if (decompiledFrameRemainder0) {
                 ResourceArchive.field_k = 0;
               }
-              if (0 == dn.field_b.field_wb.field_y) {
+              if (0 == TextureCoordinateGeneration.field_b.field_wb.field_y) {
                 break;
               }
-              bl.field_a = new is(dn.field_b.field_wb.field_q, dn.field_b.field_wb.field_A, dn.field_b.field_wb.field_G, dn.field_b.field_wb.field_t, PathMoveLocomotor.field_q, lw.field_a, Corpse.field_i, Corpse.field_i);
+              bl.field_a = new is(TextureCoordinateGeneration.field_b.field_wb.field_q, TextureCoordinateGeneration.field_b.field_wb.field_A, TextureCoordinateGeneration.field_b.field_wb.field_G, TextureCoordinateGeneration.field_b.field_wb.field_t, PathMoveLocomotor.field_q, lw.field_a, Corpse.field_i, Corpse.field_i);
               ResourceArchive.field_k = 1;
               break;
             }
@@ -382,7 +382,7 @@ final class IntrusiveDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 14) {
-            field_a = (su) null;
+            field_a = (QuickChatParamType) null;
           }
           stackIn_7_0 = (this.sentinel == this.sentinel.next);
           return stackIn_7_0;
@@ -591,6 +591,6 @@ final class IntrusiveDeque {
 
     static {
         field_d = new String[11][];
-        field_a = new su(10, 2, 2, 0);
+        field_a = new QuickChatParamType(10, 2, 2, 0);
     }
 }

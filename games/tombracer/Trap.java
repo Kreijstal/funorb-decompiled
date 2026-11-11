@@ -322,12 +322,12 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.models.clear(8);
     }
 
-    final static void a(int param0, kea param1) {
+    final static void setGraphicsQuality(int param0, GraphicsQuality param1) {
         if (param0 != 0) {
           return;
         }
         try {
-          BitPacketBuffer.a(true, Room.field_k, param1);
+          BitPacketBuffer.setGraphicsSettings(true, Room.field_k, param1);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fsa.AF(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1631,8 +1631,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     final void setPushMode(int param0, int param1) {
         this.pushMode = param1;
         if (param0 < 99) {
-          kea var4 = (kea) null;
-          Trap.a(-31, (kea) null);
+          GraphicsQuality var4 = (GraphicsQuality) null;
+          Trap.setGraphicsQuality(-31, (GraphicsQuality) null);
         }
     }
 

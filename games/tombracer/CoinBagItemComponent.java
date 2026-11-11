@@ -94,7 +94,7 @@ final class CoinBagItemComponent extends ItemComponent {
         IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
-        pha var18_ref = null;
+        LobbyPlayerEntry var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
         UiComponent var22 = null;
@@ -366,7 +366,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   var16 = 0;
                 }
                 var17 = MidiPatch.field_n.field_tb.field_J;
-                var18_ref = (pha) (var17.first(param1 - 79));
+                var18_ref = (LobbyPlayerEntry) (var17.first(param1 - 79));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
@@ -409,7 +409,7 @@ final class CoinBagItemComponent extends ItemComponent {
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      var18_ref = (pha) (var17.next(120));
+                      var18_ref = (LobbyPlayerEntry) (var17.next(120));
                       continue;
                     }
                   }

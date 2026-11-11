@@ -100,7 +100,7 @@ final class DemoCourseGenerator extends CourseGenerator {
         if (GasTrapComponent.isDialogOpen((byte) -73)) {
           param1 = false;
         }
-        upa.a(param1, param0);
+        RatingTable.a(param1, param0);
         if (!GameEvent.field_g) {
           C2SActionPacket.a(param1, -16838);
           return;

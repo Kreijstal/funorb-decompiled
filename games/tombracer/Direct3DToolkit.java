@@ -35,7 +35,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return null;
     }
 
-    final void applyTexCoordGeneration(dn param0, byte param1) {
+    final void applyTexCoordGeneration(TextureCoordinateGeneration param0, byte param1) {
         int var3;
         var3 = 0;
         if (IdolItemComponent.field_H == param0) {
@@ -60,7 +60,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         this.field_Pc = false;
     }
 
-    private final static int d3dPrimitiveType(int param0, PrimitiveType param1) {
+    private final static int d3dPrimitiveType(int param0, GpuPrimitiveType param1) {
         if (param0 < 105) {
           field_fd = (int[]) null;
         }
@@ -258,7 +258,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (PlatformComponent.field_F == param0) {
           return 2;
         }
-        if (PrimitiveType.field_c == param0) {
+        if (GpuPrimitiveType.field_c == param0) {
           return 4;
         }
         if (r.field_m == param0) {
@@ -321,7 +321,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         this.field_jd.SetTransform(2, field_hd);
     }
 
-    final void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, PrimitiveType param4, int param5, int param6) {
+    final void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, GpuPrimitiveType param4, int param5, int param6) {
         this.field_jd.SetIndices(((DirectXIndexBuffer) (param0)).field_d);
         this.field_jd.DrawIndexedPrimitive(Direct3DToolkit.d3dPrimitiveType(109, param4), 0, param2, param5, param3, param6);
         if (param1 != -19394) {
@@ -345,8 +345,8 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
     final void applyProjectionMatrix(byte param0) {
         this.field_jd.SetTransform(3, this.field_T);
         if (param0 <= 26) {
-          dn var3 = (dn) null;
-          this.applyTexCoordGeneration((dn) null, (byte) -5);
+          TextureCoordinateGeneration var3 = (TextureCoordinateGeneration) null;
+          this.applyTexCoordGeneration((TextureCoordinateGeneration) null, (byte) -5);
         }
     }
 
@@ -980,7 +980,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return (CubeTexture) ((Object) new DirectXCubeTexture(this, param3, param2, param1));
     }
 
-    final void drawPrimitives(int param0, PrimitiveType param1, int param2, int param3) {
+    final void drawPrimitives(int param0, GpuPrimitiveType param1, int param2, int param3) {
         if (param3 != 0) {
           return;
         }

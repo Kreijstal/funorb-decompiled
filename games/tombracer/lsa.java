@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lsa {
-    static dn field_c;
+    static TextureCoordinateGeneration field_c;
     static int field_b;
     static int field_a;
     private static String field_z;
@@ -18,6 +18,6 @@ final class lsa {
 
     static {
         field_z = "lsa.A(";
-        field_c = new dn();
+        field_c = new TextureCoordinateGeneration();
     }
 }

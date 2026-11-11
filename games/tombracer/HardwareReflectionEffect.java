@@ -19,7 +19,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
     }
 
     final void refreshState(boolean param0, int param1) {
-        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PrimitiveType.field_c);
+        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, GpuPrimitiveType.field_c);
         if (param1 != 5744) {
           field_g = (String) null;
         }
@@ -42,7 +42,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
         } else {
           this.owner.setActiveTextureUnit(1, false);
           this.owner.applyTexCoordGeneration(ItemModel.field_o, (byte) 0);
-          this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+          this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
           this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -21);
           this.owner.setAlphaCombineSource(0, false, ej.field_c);
           this.owner.resetTextureTransform((byte) -87);
@@ -50,7 +50,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
           this.owner.setActiveTextureUnit(0, false);
           this.field_f = false;
         }
-        this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+        this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
     }
 
     HardwareReflectionEffect(HardwareGraphicsToolkit param0) {

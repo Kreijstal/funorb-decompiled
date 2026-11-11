@@ -4,7 +4,7 @@
 final class DiskArchiveRequest extends ArchiveRequest {
     byte[] field_p;
     int field_q;
-    static su field_n;
+    static QuickChatParamType field_n;
     SectorCacheStore field_o;
 
     final int getProgress(byte param0) {
@@ -39,6 +39,6 @@ final class DiskArchiveRequest extends ArchiveRequest {
     }
 
     static {
-        field_n = new su(6, 0, 4, 2);
+        field_n = new QuickChatParamType(6, 0, 4, 2);
     }
 }

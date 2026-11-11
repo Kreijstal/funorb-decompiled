@@ -319,8 +319,8 @@ public final class TombRacer extends TombRacerShell implements ls {
         Player.releaseStatics(-1);
         goa.releaseStatics(0);
         kv.releaseStatics(-31014);
-        pl.releaseStatics(0);
-        lu.releaseStatics(-12);
+        ChatChannelType.releaseStatics(0);
+        ChatTarget.releaseStatics(-12);
         Room.releaseStatics(-128);
         S2CActionPacket.releaseStatics(4);
         IntrusiveNode.releaseStatics(param0 ^ -3621);
@@ -334,7 +334,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         hla.releaseStatics(23613);
         PlayerContextMenu.releaseStatics((byte) 67);
         ReportAbuseDialog.releaseStatics(true);
-        pha.releaseStatics((byte) -68);
+        LobbyPlayerEntry.releaseStatics((byte) -68);
         LobbyGameWidget.releaseStatics((byte) -113);
         SecondaryNodeHashTable.releaseStatics(123);
         re.releaseStatics((byte) -33);
@@ -716,9 +716,9 @@ public final class TombRacer extends TombRacerShell implements ls {
         HardwareModel.g(3);
         TextureFormat.releaseStatics((byte) 102);
         TextureCombineSource.releaseStatics(29325);
-        dn.releaseStatics(0);
+        TextureCoordinateGeneration.releaseStatics(0);
         VertexStreamLayout.releaseStatics(15);
-        PrimitiveType.releaseStatics(false);
+        GpuPrimitiveType.releaseStatics(false);
         HardwareOpenGlToolkit.releaseStatics(32885);
         GrowableIntList.releaseStatics(0);
         CachedTextLayout.releaseStatics(false);
@@ -883,13 +883,13 @@ public final class TombRacer extends TombRacerShell implements ls {
         HiscoreTable.releaseStatics(false);
         ScoreSubmission.releaseStatics(param0 ^ 3618);
         RendererOption.releaseStatics((byte) 102);
-        kea.releaseStatics(-7646);
-        kia.releaseStatics((byte) 107);
+        GraphicsQuality.releaseStatics(-7646);
+        RendererMode.releaseStatics((byte) 107);
         pfa.releaseStatics(param0 + 3670);
         CourseMapPath.releaseStatics(0);
         MapWaypoint.releaseStatics((byte) -54);
         CourseDefinition.releaseStatics(param0 ^ 2973);
-        ur.releaseStatics(-17614);
+        ArchiveId.releaseStatics(-17614);
         td.releaseStatics(-113);
         hga.releaseStatics((byte) 126);
         poa.releaseStatics((byte) 112);
@@ -932,7 +932,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         ListTracksCommand.releaseStatics((byte) -125);
         LoadProfileCommand.releaseStatics((byte) 2);
         WidgetStyleLayer.releaseStatics((byte) 46);
-        TextLine.releaseStatics(param0 + 3665);
+        TextLineLayout.releaseStatics(param0 + 3665);
         ema.releaseStatics(48);
         pu.releaseStatics((byte) -53);
         fua.releaseStatics(param0 + 3540);
@@ -1533,7 +1533,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         PlantModel.resendPendingSubmissions(false, 3);
         S2CNextRoundPacket.b(4, 2);
         PlantComponent.b(-104, 6);
-        Puddle.b(7, (byte) -120);
+        Puddle.resendRatingTableRequests(7, (byte) -120);
         if (param0 != 1) {
           if (RandomMazeBehaviour.field_n) {
             era.field_c = true;

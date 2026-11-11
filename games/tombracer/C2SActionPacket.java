@@ -9,7 +9,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
     private int hash;
     private int round;
     static ModelData[] field_l;
-    static ur field_i;
+    static ArchiveId field_i;
 
     final static void a(int param0) {
         int var1_int = 0;
@@ -236,6 +236,6 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
 
     static {
         field_j = -1;
-        field_i = new ur(5);
+        field_i = new ArchiveId(5);
     }
 }

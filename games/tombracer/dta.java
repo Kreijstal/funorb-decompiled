@@ -207,7 +207,7 @@ final class dta {
                 lh.field_b.draw(-lh.field_b.width() + (param1 - 1) + var24, var18Lifetime2 - lh.field_b.height() - CachedTextLayout.field_l.height());
                 tga.field_a.setClip(param1 - 28 + var24, 0, var24 - 20 + param1, 10 + var31);
                 if (var28_double < 80.0) {
-                  dn.field_d[(var14 >> 2) % 4 + 3].draw(-48 + (param1 - CachedTextLayout.field_l.width()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.height() + vua.field_A.height())));
+                  TextureCoordinateGeneration.field_d[(var14 >> 2) % 4 + 3].draw(-48 + (param1 - CachedTextLayout.field_l.width()), 36 + (var18Lifetime2 - (CachedTextLayout.field_l.height() + vua.field_A.height())));
                 }
                 tga.field_a.la();
                 tga.field_a.setClip(param1 - (30 - var24), var31, -20 + param1 + var24, var30);

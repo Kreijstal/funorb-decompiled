@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc extends lu {
+final class wc extends ChatTarget {
     private String field_g;
     private String field_f;
     static String field_d;
-    static su field_e;
+    static QuickChatParamType field_e;
 
     public static void releaseStatics(byte param0) {
         if (param0 != -78) {
@@ -18,9 +18,9 @@ final class wc extends lu {
         field_e = null;
     }
 
-    final pl a(byte param0) {
+    final ChatChannelType getChannelType(byte param0) {
         if (param0 != 113) {
-          return (pl) null;
+          return (ChatChannelType) null;
         }
         return BlockModel.field_s;
     }
@@ -48,6 +48,6 @@ final class wc extends lu {
 
     static {
         field_d = "Options";
-        field_e = new su(9, 0, 4, 1);
+        field_e = new QuickChatParamType(9, 0, 4, 1);
     }
 }

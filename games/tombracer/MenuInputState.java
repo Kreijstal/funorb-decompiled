@@ -328,10 +328,10 @@ final class MenuInputState {
         ModelFactory.field_a = new DialogStack();
         if (param0 < 10) {
           MenuInputState.openDisplaySettings((byte) -39);
-          kea.openDisplaySettingsDialog(-114);
+          GraphicsQuality.openDisplaySettingsDialog(-114);
           return;
         }
-        kea.openDisplaySettingsDialog(-114);
+        GraphicsQuality.openDisplaySettingsDialog(-114);
     }
 
     final void handleVerticalNavigation(int param0) {

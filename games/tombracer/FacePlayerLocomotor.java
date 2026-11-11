@@ -31,7 +31,7 @@ final class FacePlayerLocomotor extends Locomotor {
         if (param0 == 1) {
           return;
         }
-        FacePlayerLocomotor.a(-81, 90, 108, 113);
+        FacePlayerLocomotor.getOrRequestRatingTable(-81, 90, 108, 113);
     }
 
     final int getTypeId(int param0) {
@@ -176,52 +176,52 @@ final class FacePlayerLocomotor extends Locomotor {
           super.encode(param0, (byte) -124);
           param0.writeBits((byte) 37, dqa.toOffsetBinary(true, this.field_o, 12), 12);
           if (param1 > -78) {
-            FacePlayerLocomotor.a(-12, 90, -68, 66);
+            FacePlayerLocomotor.getOrRequestRatingTable(-12, 90, -68, 66);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pt.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static upa a(int param0, int param1, int param2, int param3) {
+    final static RatingTable getOrRequestRatingTable(int param0, int param1, int param2, int param3) {
         Object var4;
-        upa var4_ref;
+        RatingTable var4_ref;
         int var5;
-        upa var6;
-        upa var7;
-        upa var4_refLifetime1;
-        upa var4_refLifetime2;
+        RatingTable var6;
+        RatingTable var7;
+        RatingTable var4_refLifetime1;
+        RatingTable var4_refLifetime2;
         var4 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 == 22578) {
-          var4_ref = (upa) (LoadingStepList.field_d.first(-80));
+          var4_ref = (RatingTable) (LoadingStepList.field_d.first(-80));
           while (var4_ref != null) {
             if (param3 == var4_ref.field_n) {
               return var4_ref;
             }
-            var4_ref = (upa) (LoadingStepList.field_d.next(param0 - 22454));
+            var4_ref = (RatingTable) (LoadingStepList.field_d.next(param0 - 22454));
           }
-          var6 = new upa();
+          var6 = new RatingTable();
           var6.field_n = param3;
           var6.field_k = param2;
           LoadingStepList.field_d.addLast((byte) -49, var6);
-          GameClock.a(var6, param1, 2147);
+          GameClock.sendRatingTableRequest(var6, param1, 2147);
           return var6;
         }
         field_p = (HiscoreTable) null;
-        var4_refLifetime1 = (upa) (LoadingStepList.field_d.first(-80));
+        var4_refLifetime1 = (RatingTable) (LoadingStepList.field_d.first(-80));
         while (var4_refLifetime1 != null) {
           if (param3 == var4_refLifetime1.field_n) {
             return var4_refLifetime1;
           }
-          var4_refLifetime1 = (upa) (LoadingStepList.field_d.next(param0 - 22454));
+          var4_refLifetime1 = (RatingTable) (LoadingStepList.field_d.next(param0 - 22454));
         }
-        var7 = new upa();
+        var7 = new RatingTable();
         var4_refLifetime2 = var7;
         var7.field_n = param3;
         var7.field_k = param2;
         LoadingStepList.field_d.addLast((byte) -49, var7);
-        GameClock.a(var7, param1, 2147);
+        GameClock.sendRatingTableRequest(var7, param1, 2147);
         return var7;
     }
 

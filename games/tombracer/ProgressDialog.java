@@ -5,7 +5,7 @@ final class ProgressDialog extends ResizingDialog {
     private boolean field_Q;
     static float field_O;
     private boolean field_N;
-    static PrimitiveType field_T;
+    static GpuPrimitiveType field_T;
     private String field_M;
     private ProgressBarWidget field_L;
     static UiComponent field_R;
@@ -87,7 +87,7 @@ final class ProgressDialog extends ResizingDialog {
     }
 
     static {
-        field_T = new PrimitiveType();
+        field_T = new GpuPrimitiveType();
         field_P = new int[12];
     }
 }

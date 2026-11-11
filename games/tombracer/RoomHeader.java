@@ -6,7 +6,7 @@ final class RoomHeader {
     static int field_g;
     private int field_b;
     private int field_f;
-    static pl field_c;
+    static ChatChannelType field_c;
     private boolean field_a;
     static MidiPcmStream field_e;
 
@@ -151,6 +151,6 @@ final class RoomHeader {
     }
 
     static {
-        field_c = new pl(0);
+        field_c = new ChatChannelType(0);
     }
 }

@@ -15,7 +15,7 @@ final class PitBehaviour extends Behaviour {
         if (param0 > -31) {
           PitBehaviour.b(47);
         }
-        return dn.field_b.field_tb;
+        return TextureCoordinateGeneration.field_b.field_tb;
     }
 
     final int hashState(int param0, int param1) {

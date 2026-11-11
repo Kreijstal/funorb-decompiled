@@ -4,7 +4,7 @@
 final class ll {
     int field_b;
     short field_l;
-    static su field_d;
+    static QuickChatParamType field_d;
     byte field_f;
     static int[] field_g;
     int field_m;
@@ -72,7 +72,7 @@ final class ll {
 
     static {
         field_g = new int[]{36, 37, 38, 39, 40, 7, 5, 6, 0};
-        field_d = new su(4, 1, 1, 1);
+        field_d = new QuickChatParamType(4, 1, 1, 1);
         field_h = "More suggestions";
     }
 }

@@ -57,7 +57,7 @@ final class RatingsScreen extends DropInMenuScreen {
             return;
           }
           if (500 <= var10_int) {
-            stackIn_7_0 = TextLine.field_a;
+            stackIn_7_0 = TextLineLayout.field_a;
           } else {
             stackIn_7_0 = Integer.toString(var10_int);
           }
@@ -146,7 +146,7 @@ final class RatingsScreen extends DropInMenuScreen {
     private final boolean drawTable(byte param0, int param1, int param2) {
         String[] var4;
         int[] var5;
-        upa var6;
+        RatingTable var6;
         int var7;
         int var8;
         int var9;
@@ -288,9 +288,9 @@ final class RatingsScreen extends DropInMenuScreen {
     final void update(boolean param0, boolean param1, int param2) {
         int var5;
         String var6;
-        upa var7;
-        upa var8;
-        upa var9;
+        RatingTable var7;
+        RatingTable var8;
+        RatingTable var9;
         var5 = TombRacer.field_G ? 1 : 0;
         super.update(param0, param1, param2 + 0);
         if (param2 == 15283) {
@@ -303,7 +303,7 @@ final class RatingsScreen extends DropInMenuScreen {
           }
           var9 = sb.field_a;
           if (var9 == null) {
-            sb.field_a = FacePlayerLocomotor.a(22578, 7, 10, 0);
+            sb.field_a = FacePlayerLocomotor.getOrRequestRatingTable(22578, 7, 10, 0);
             this.field_w = 0;
           } else {
             if (!var9.field_i) {
@@ -332,7 +332,7 @@ final class RatingsScreen extends DropInMenuScreen {
         var8 = sb.field_a;
         var7 = var8;
         if (var8 == null) {
-          sb.field_a = FacePlayerLocomotor.a(22578, 7, 10, 0);
+          sb.field_a = FacePlayerLocomotor.getOrRequestRatingTable(22578, 7, 10, 0);
           this.field_w = 0;
         } else {
           if (!var8.field_i) {

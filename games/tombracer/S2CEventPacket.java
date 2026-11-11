@@ -5,12 +5,12 @@ final class S2CEventPacket implements GamePacket {
     private PendingEvent event;
     static int[] field_c;
     static UiComponent field_e;
-    static ur field_d;
+    static ArchiveId field_d;
     static String field_b;
 
     final PendingEvent getEvent(byte param0) {
         if (param0 <= 71) {
-          field_d = (ur) null;
+          field_d = (ArchiveId) null;
           return this.event;
         }
         return this.event;
@@ -102,6 +102,6 @@ final class S2CEventPacket implements GamePacket {
     static {
         field_c = new int[256];
         field_b = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
-        field_d = new ur(0);
+        field_d = new ArchiveId(0);
     }
 }

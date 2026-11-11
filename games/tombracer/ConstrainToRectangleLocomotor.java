@@ -296,7 +296,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             pg.field_C[var4Lifetime1] = var17.readUnsignedShort(127);
           }
           for (var4Lifetime2 = 0; fa.field_b > var4Lifetime2; var4Lifetime2++) {
-            mq.field_b[var4Lifetime2] = var17.readUnsignedShort(TextLine.bitwiseXor(param0, 122));
+            mq.field_b[var4Lifetime2] = var17.readUnsignedShort(TextLineLayout.bitwiseXor(param0, 122));
           }
           for (var4Lifetime3 = 0; fa.field_b > var4Lifetime3; var4Lifetime3++) {
             ImageProducerCanvasImageBuffer.field_m[var4Lifetime3] = var17.readUnsignedShort(122);

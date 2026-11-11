@@ -317,7 +317,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           kv.field_b = new UiComponent(0L, jk.field_g);
           ClipStack.field_g = new UiComponent(0L, HardwareModelVertexStream.field_g);
           HardwareSceneLight.field_o = new UiComponent(0L, jk.field_g);
-          dn.field_a = new UiComponent(0L, jk.field_g);
+          TextureCoordinateGeneration.field_a = new UiComponent(0L, jk.field_g);
           MazeSearchNode.field_j = new UiComponent(0L, jk.field_g);
           jk.field_g.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton"), 124);
           jk.field_g.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton_mouseover"), 127);
@@ -353,11 +353,11 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           dupTemp$2 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatbutton_active"), 119);
           HardwareSceneLight.field_o.field_n = dupTemp$2;
           HardwareSceneLight.field_o.field_db = dupTemp$2;
-          dn.field_a.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton"), 112);
-          dn.field_a.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
+          TextureCoordinateGeneration.field_a.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton"), 112);
+          TextureCoordinateGeneration.field_a.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
           dupTemp$3 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton_active"), 118);
-          dn.field_a.field_n = dupTemp$3;
-          dn.field_a.field_db = dupTemp$3;
+          TextureCoordinateGeneration.field_a.field_n = dupTemp$3;
+          TextureCoordinateGeneration.field_a.field_db = dupTemp$3;
           var17 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "checkbox");
           FacePlayerMountComponent.field_F = new LabelledRow(0L, var17[1], var17[0], 1, PressureSwitchBehaviour.field_p, (String) null);
           ClientException.field_b = new UiComponent(0L, (UiComponent) null);

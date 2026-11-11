@@ -26,8 +26,8 @@ abstract class ItemBehaviour extends Behaviour {
     }
 
     final int hashState(int param0, int param1) {
-        param0 = upa.mixHashBoolean(this.collected, param0, (byte) -53);
-        param0 = upa.mixHashBoolean(this.waitingForPlayerToLeave, param0, (byte) -111);
+        param0 = RatingTable.mixHashBoolean(this.collected, param0, (byte) -53);
+        param0 = RatingTable.mixHashBoolean(this.waitingForPlayerToLeave, param0, (byte) -111);
         if (param1 < -48) {
           param0 = CurveOperator.mixHash((byte) 37, param0, this.respawnTimer);
           return param0;

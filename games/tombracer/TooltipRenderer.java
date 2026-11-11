@@ -7,7 +7,7 @@ final class TooltipRenderer {
     WidgetPainter field_u;
     int field_b;
     static GameFont field_p;
-    static ur field_j;
+    static ArchiveId field_j;
     int field_a;
     int field_l;
     WidgetPainter field_k;
@@ -319,6 +319,6 @@ final class TooltipRenderer {
     }
 
     static {
-        field_j = new ur(4);
+        field_j = new ArchiveId(4);
     }
 }

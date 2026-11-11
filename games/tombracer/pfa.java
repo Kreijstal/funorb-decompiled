@@ -607,7 +607,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleBottomlessPits", (byte) 127);
                 if (var2 != null) {
-                  kea.field_b = jaa.decodeText((byte) 51, var2);
+                  GraphicsQuality.field_b = jaa.decodeText((byte) 51, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextBottomlessPits", (byte) 109);
                 if (null != var2) {
@@ -1185,7 +1185,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("fivehunderedplus", (byte) 118);
                 if (null != var2) {
-                  TextLine.field_a = jaa.decodeText((byte) 105, var2);
+                  TextLineLayout.field_a = jaa.decodeText((byte) 105, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("graphicsmode", (byte) 101);
                 if (null != var2) {
@@ -1469,7 +1469,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_piles", (byte) 119);
                 if (var2 != null) {
-                  pha.field_Ib = jaa.decodeText((byte) 106, var2);
+                  LobbyPlayerEntry.field_Ib = jaa.decodeText((byte) 106, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_scarlett", (byte) 117);
                 if (null != var2) {

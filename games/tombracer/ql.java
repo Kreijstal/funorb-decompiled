@@ -66,8 +66,8 @@ class ql extends DualLinkNode {
         field_m = null;
     }
 
-    final static void a(int param0, pha param1) {
-        pha var2 = null;
+    final static void a(int param0, LobbyPlayerEntry param1) {
+        LobbyPlayerEntry var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -79,10 +79,10 @@ class ql extends DualLinkNode {
         try {
           var3 = -66 / ((param0 - 45) / 59);
           param1.unlink(118);
-          var2 = (pha) (uma.field_b.first(-80));
+          var2 = (LobbyPlayerEntry) (uma.field_b.first(-80));
           while (var2 != null) {
             if (var2.a((byte) 123, param1)) {
-              var2 = (pha) (uma.field_b.next(121));
+              var2 = (LobbyPlayerEntry) (uma.field_b.next(121));
               continue;
             }
             break;

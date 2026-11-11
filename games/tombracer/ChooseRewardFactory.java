@@ -4,7 +4,7 @@
 final class ChooseRewardFactory implements BitDecodableFactory {
     static float field_a;
 
-    final static boolean a(int param0, boolean param1, int param2) {
+    final static boolean handleChatInputKey(int param0, boolean param1, int param2) {
         StringBuilder discarded$0 = null;
         int var3;
         int var4;

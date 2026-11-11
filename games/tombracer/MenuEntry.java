@@ -101,7 +101,7 @@ final class MenuEntry {
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_19_0 = 0;
-        kia stackIn_51_0 = null;
+        RendererMode stackIn_51_0 = null;
         int stackIn_78_0 = 0;
         ToolkitSprite stackIn_89_0 = null;
         int var5;
@@ -119,19 +119,19 @@ final class MenuEntry {
         int var17;
         int var18;
         int var19;
-        kia var20_ref_kia;
-        kea var20_ref_kea;
+        RendererMode var20_ref_kia;
+        GraphicsQuality var20_ref_kea;
         int var20;
         int var21_int;
         String var21;
-        kea var21_ref;
+        GraphicsQuality var21_ref;
         ToolkitSprite var21_ref2;
         int var22_int;
         String var22;
         int var24;
         ToolkitSprite[] var25;
         GraphicsToolkit var26;
-        kia var27;
+        RendererMode var27;
         ToolkitSprite[] var28;
         GraphicsToolkit var29;
         ToolkitSprite var30;
@@ -254,13 +254,13 @@ final class MenuEntry {
             }
             var27 = stackIn_51_0;
             var20_ref_kia = var27;
-            if (TrapSpawner.b(30000) == var27) {
+            if (TrapSpawner.getRendererMode(30000) == var27) {
               var15 = 2236962;
               var5 = 10827264;
               MembersUpsellMenu.drawCentredTextWithShadow("X", var5, var6, -1, -8 + (var9 - 1), this.field_b, var15);
             }
             var21 = this.field_e;
-            if (!WheeledMountComponent.a(dna.A(param2 + 124), true, var27)) {
+            if (!WheeledMountComponent.isGraphicsSettingAvailable(dna.getGraphicsQuality(param2 + 124), true, var27)) {
               var5 = 2431750;
               var21 = "<str=010101>" + this.field_e + "</str>";
               var15 = -1;
@@ -294,14 +294,14 @@ final class MenuEntry {
             var15 = 2236962;
             var5 = 10309393;
           }
-          var21_ref = dna.A(36);
+          var21_ref = dna.getGraphicsQuality(36);
           if (var20_ref_kea == var21_ref) {
             var15 = 2236962;
             var5 = 10827264;
             MembersUpsellMenu.drawCentredTextWithShadow("X", var5, var6, param2 - 2, -8 + var9 - 1, this.field_b, var15);
           }
           var22 = this.field_e;
-          if (!WheeledMountComponent.a(var20_ref_kea, true, TrapSpawner.b(30000))) {
+          if (!WheeledMountComponent.isGraphicsSettingAvailable(var20_ref_kea, true, TrapSpawner.getRendererMode(30000))) {
             var15 = -1;
             var5 = 2431750;
             var22 = "<str=010101>" + this.field_e + "</str>";

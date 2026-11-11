@@ -8,7 +8,7 @@ final class HslAdjustOperator extends TextureOperator {
     private int field_t;
     private int field_o;
     private int field_r;
-    static su field_v;
+    static QuickChatParamType field_v;
     private int field_s;
     private int field_p;
     private int field_q;
@@ -160,7 +160,7 @@ final class HslAdjustOperator extends TextureOperator {
 
     public static void releaseStatics(int param0) {
         if (param0 >= -27) {
-          field_v = (su) null;
+          field_v = (QuickChatParamType) null;
         }
         field_v = null;
     }
@@ -323,6 +323,6 @@ final class HslAdjustOperator extends TextureOperator {
     }
 
     static {
-        field_v = new su(11, 0, 1, 2);
+        field_v = new QuickChatParamType(11, 0, 1, 2);
     }
 }

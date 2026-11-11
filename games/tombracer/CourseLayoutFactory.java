@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CourseLayoutFactory implements BitDecodableFactory {
-    static kia field_d;
+    static RendererMode field_d;
     static ModelData[] field_e;
     static String field_a;
     static String[] boulderDeathMessages;
@@ -89,7 +89,7 @@ final class CourseLayoutFactory implements BitDecodableFactory {
         field_d = null;
         field_e = null;
         if (param0 != 0) {
-          field_d = (kia) null;
+          field_d = (RendererMode) null;
         }
     }
 
@@ -112,6 +112,6 @@ final class CourseLayoutFactory implements BitDecodableFactory {
     static {
         field_a = "These aren't just common or garden Lindemann totems. Hold <img=8><img=9> to shove them around like heavy rock flamethrowers.";
         boulderDeathMessages = new String[]{"<%0> forgot to dodge the boulder", "<%0> rolled with it", "<%0> was bowled over", "<%0> was smeared", "<%0> developed a serious crush", "<%0>'s interests include hard rock", "<%0> made a poor speedbump"};
-        field_d = new kia();
+        field_d = new RendererMode();
     }
 }

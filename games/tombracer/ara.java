@@ -155,7 +155,7 @@ final class ara extends UiComponent {
         UiComponent var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new UiComponent(0L, param1, PrimitiveType.field_a.toUpperCase());
+          var17 = new UiComponent(0L, param1, GpuPrimitiveType.field_a.toUpperCase());
           var17.field_z = 1;
           this.field_tb = new UiComponent(0L, param2);
           var8 = new UiComponent(0L, param3);

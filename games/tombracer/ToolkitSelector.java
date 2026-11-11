@@ -10,7 +10,7 @@ final class ToolkitSelector {
     static int field_a;
     static boolean[] field_g;
     static String field_h;
-    static PrimitiveType field_d;
+    static GpuPrimitiveType field_d;
 
     final void setCandidates(int param0, ToolkitCandidate[] param1) {
         RuntimeException stackIn_10_0 = null;
@@ -109,7 +109,7 @@ final class ToolkitSelector {
                 if (TextureCombineSource.field_e <= 0) {
                   if (SoftwareTransform3D.field_q > GameKeyHandler.field_a) {
                     if (GameKeyHandler.field_a == 0) {
-                      PrimitiveType.a((byte) -64, true);
+                      GpuPrimitiveType.a((byte) -64, true);
                     }
                     GameKeyHandler.field_a = GameKeyHandler.field_a + 1;
                   }
@@ -127,7 +127,7 @@ final class ToolkitSelector {
               } else {
                 if (TextureCombineSource.field_e < SoftwareTransform3D.field_q) {
                   if (0 == TextureCombineSource.field_e) {
-                    PrimitiveType.a((byte) -64, false);
+                    GpuPrimitiveType.a((byte) -64, false);
                   }
                   TextureCombineSource.field_e = TextureCombineSource.field_e + 1;
                 }
@@ -454,7 +454,7 @@ final class ToolkitSelector {
 
     final static java.applet.Applet getApplet(int param0) {
         if (param0 <= 16) {
-          field_d = (PrimitiveType) null;
+          field_d = (GpuPrimitiveType) null;
         }
         if (cba.field_a != null) {
           return cba.field_a;
@@ -474,6 +474,6 @@ final class ToolkitSelector {
         field_f[12] = true;
         field_f[4] = true;
         field_f[10] = true;
-        field_d = new PrimitiveType();
+        field_d = new GpuPrimitiveType();
     }
 }

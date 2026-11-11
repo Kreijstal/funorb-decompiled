@@ -5,7 +5,7 @@ final class rm {
     static ModelCodec field_a;
     static lla field_e;
     static ToolkitSprite field_c;
-    static ur field_d;
+    static ArchiveId field_d;
     static String field_b;
     private static String field_z;
 
@@ -23,6 +23,6 @@ final class rm {
     static {
         field_z = "rm.A(";
         field_b = "You need to play 1 more rated game to unlock this option.";
-        field_d = new ur(7);
+        field_d = new ArchiveId(7);
     }
 }

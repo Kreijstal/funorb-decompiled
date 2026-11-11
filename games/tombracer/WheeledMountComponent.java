@@ -71,7 +71,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         return true;
     }
 
-    final static boolean a(kea param0, boolean param1, kia param2) {
+    final static boolean isGraphicsSettingAvailable(GraphicsQuality param0, boolean param1, RendererMode param2) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;

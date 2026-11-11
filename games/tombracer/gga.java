@@ -4,7 +4,7 @@
 final class gga extends ResizingDialog implements ButtonListener {
     private FocusableWidget field_N;
     static SpriteData[] field_O;
-    static ur field_M;
+    static ArchiveId field_M;
     static String field_L;
 
     public static void releaseStatics(int param0) {
@@ -223,7 +223,7 @@ final class gga extends ResizingDialog implements ButtonListener {
     }
 
     static {
-        field_M = new ur(8);
+        field_M = new ArchiveId(8);
         field_L = "Perpetually spinning discs";
     }
 }

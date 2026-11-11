@@ -44,7 +44,7 @@ final class ava {
         IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
-        pha var12 = null;
+        LobbyPlayerEntry var12 = null;
         int var13 = 0;
         UiComponent var14 = null;
         UiComponent var15 = null;
@@ -135,12 +135,12 @@ final class ava {
           stackIn_43_3 = 92;
           stackIn_43_4 = param2 * (8 + ToolkitSelector.field_a * 4);
           stackIn_43_5 = 2 * (ToolkitSelector.field_a + param4);
-          stackIn_44_6 = (lu.field_b == param0);
+          stackIn_44_6 = (ChatTarget.field_b == param0);
           stackIn_47_0 = (!((ScrollPane) (Object) stackIn_43_0).updateContentLayout(stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_43_5, stackIn_44_6)) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
           var10 = param0.field_tb.field_J;
           var11 = null;
-          var12 = (pha) (var10.first(-80));
+          var12 = (LobbyPlayerEntry) (var10.first(-80));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_J == null) {
@@ -468,7 +468,7 @@ final class ava {
               }
             }
             var11 = var12;
-            var12 = (pha) (var10.next(124));
+            var12 = (LobbyPlayerEntry) (var10.next(124));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

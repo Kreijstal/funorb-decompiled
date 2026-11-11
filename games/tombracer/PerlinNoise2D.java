@@ -254,7 +254,7 @@ final class PerlinNoise2D extends TextureOperator {
         if (param1 != -21) {
           field_v = (String) null;
         }
-        stackIn_7_0 = (hh.a(param0, (byte) 5, param2)) || (upa.a(param2, 0, param0));
+        stackIn_7_0 = (hh.a(param0, (byte) 5, param2)) || (RatingTable.a(param2, 0, param0));
         return stackIn_7_0;
     }
 

@@ -35,10 +35,10 @@ final class AnimationFrameBase extends IntrusiveNode {
         if (param0 != -21819) {
           return (TextWidgetPainter) null;
         }
-        if (ur.field_a == null) {
-          ur.field_a = new TextWidgetPainter(BlendModeOperator.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, BlendModeOperator.field_o.field_w, -1, 2147483647, true);
+        if (ArchiveId.field_a == null) {
+          ArchiveId.field_a = new TextWidgetPainter(BlendModeOperator.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, BlendModeOperator.field_o.field_w, -1, 2147483647, true);
         }
-        return ur.field_a;
+        return ArchiveId.field_a;
     }
 
     final static float fade(byte param0, float param1) {

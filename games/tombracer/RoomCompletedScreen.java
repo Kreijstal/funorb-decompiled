@@ -48,8 +48,8 @@ final class RoomCompletedScreen extends MatchOverlay {
 
     final void update(byte param0) {
         if (param0 > -107) {
-          lu var3 = (lu) null;
-          RoomCompletedScreen.writeLoginPacket((byte) 21, true, 36, (lu) null, true);
+          ChatTarget var3 = (ChatTarget) null;
+          RoomCompletedScreen.writeLoginPacket((byte) 21, true, 36, (ChatTarget) null, true);
         }
     }
 
@@ -75,7 +75,7 @@ final class RoomCompletedScreen extends MatchOverlay {
         return var1.field_f;
     }
 
-    final static void writeLoginPacket(byte param0, boolean param1, int param2, lu param3, boolean param4) {
+    final static void writeLoginPacket(byte param0, boolean param1, int param2, ChatTarget param3, boolean param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;

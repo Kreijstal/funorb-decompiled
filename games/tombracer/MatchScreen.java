@@ -392,7 +392,7 @@ final class MatchScreen extends GameScreen implements rqa {
           ListTracksCommand.field_o = 617;
           Transform3D.field_b = 9170;
           ti.field_b = 8768;
-          lu.field_a = 5180;
+          ChatTarget.field_a = 5180;
           CommonChooseReward.field_b = 1180282300L;
           MidiVoiceMixer.field_j = 17219L;
           PlayerViewport.field_b = 1727002282;
@@ -768,7 +768,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!this.matchState.hasResigned((byte) -93, var3) &&
             (param1 & 1 << var3) > 0) {
             this.matchState.markResigned(param0 ^ 4, var3);
-            var4 = BannerCommand.createBannerMessage(LegacyOpenGlFlowingWaterEffect.formatText(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
+            var4 = BannerCommand.createBannerMessage(LegacyOpenGlFlowingWaterEffect.formatText(84, ChatTarget.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
             ToolkitInstance.field_c.addMessageNow(0, var4);
           }
           var3++;
@@ -1218,38 +1218,38 @@ final class MatchScreen extends GameScreen implements rqa {
                 if (var5 != 2) {
                   if (var5 == 3) {
                     ti.field_b = ti.field_b - Transform3D.field_b;
-                    lu.field_a = lu.field_a + 1;
+                    ChatTarget.field_a = ChatTarget.field_a + 1;
                   } else {
                     if (var5 != 4) {
                       if (var5 == 5) {
-                        lu.field_a = lu.field_a + 1;
+                        ChatTarget.field_a = ChatTarget.field_a + 1;
                         ListTracksCommand.field_o = ListTracksCommand.field_o + Transform3D.field_b;
                       } else {
                         if (var5 != 6) {
                           if (7 == var5) {
                             ListTracksCommand.field_o = ListTracksCommand.field_o - Transform3D.field_b;
-                            lu.field_a = lu.field_a - 1;
+                            ChatTarget.field_a = ChatTarget.field_a - 1;
                           }
                         } else {
-                          ListTracksCommand.field_o = ListTracksCommand.field_o - lu.field_a;
+                          ListTracksCommand.field_o = ListTracksCommand.field_o - ChatTarget.field_a;
                           Transform3D.field_b = Transform3D.field_b - 1;
                         }
                       }
                     } else {
                       Transform3D.field_b = Transform3D.field_b + 1;
-                      ListTracksCommand.field_o = ListTracksCommand.field_o + lu.field_a;
+                      ListTracksCommand.field_o = ListTracksCommand.field_o + ChatTarget.field_a;
                     }
                   }
                 } else {
                   Transform3D.field_b = Transform3D.field_b + 1;
-                  ti.field_b = ti.field_b - lu.field_a;
+                  ti.field_b = ti.field_b - ChatTarget.field_a;
                 }
               } else {
-                lu.field_a = lu.field_a - 1;
+                ChatTarget.field_a = ChatTarget.field_a - 1;
                 ti.field_b = ti.field_b + Transform3D.field_b;
               }
             } else {
-              ti.field_b = ti.field_b + lu.field_a;
+              ti.field_b = ti.field_b + ChatTarget.field_a;
               Transform3D.field_b = Transform3D.field_b - 1;
             }
           }
@@ -1461,9 +1461,9 @@ final class MatchScreen extends GameScreen implements rqa {
           this.field_j > 0 &&
           !this.isScoreInvalidated((byte) 62) && this.field_E >= 0) {
           var2 = this.field_E;
-          MandelbrotOperator.field_o = new ScoreSubmission(var2, var2 ^ 65535, ti.field_b, ListTracksCommand.field_o, lu.field_a, Transform3D.field_b, new int[]{this.field_j});
+          MandelbrotOperator.field_o = new ScoreSubmission(var2, var2 ^ 65535, ti.field_b, ListTracksCommand.field_o, ChatTarget.field_a, Transform3D.field_b, new int[]{this.field_j});
           if (!TextWidgetPainter.a(66)) {
-            su.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
+            QuickChatParamType.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
           }
         }
     }
@@ -1517,38 +1517,38 @@ final class MatchScreen extends GameScreen implements rqa {
                 if (var4 != 2) {
                   if (var4 != 3) {
                     if (var4 == 4) {
-                      ListTracksCommand.field_o = ListTracksCommand.field_o + lu.field_a;
+                      ListTracksCommand.field_o = ListTracksCommand.field_o + ChatTarget.field_a;
                       Transform3D.field_b = Transform3D.field_b + 1;
                     } else {
                       if (5 == var4) {
                         ListTracksCommand.field_o = ListTracksCommand.field_o + Transform3D.field_b;
-                        lu.field_a = lu.field_a + 1;
+                        ChatTarget.field_a = ChatTarget.field_a + 1;
                       } else {
                         if (var4 != 6) {
                           if (var4 == 7) {
-                            lu.field_a = lu.field_a - 1;
+                            ChatTarget.field_a = ChatTarget.field_a - 1;
                             ListTracksCommand.field_o = ListTracksCommand.field_o - Transform3D.field_b;
                           }
                         } else {
-                          ListTracksCommand.field_o = ListTracksCommand.field_o - lu.field_a;
+                          ListTracksCommand.field_o = ListTracksCommand.field_o - ChatTarget.field_a;
                           Transform3D.field_b = Transform3D.field_b - 1;
                         }
                       }
                     }
                   } else {
-                    lu.field_a = lu.field_a + 1;
+                    ChatTarget.field_a = ChatTarget.field_a + 1;
                     ti.field_b = ti.field_b - Transform3D.field_b;
                   }
                 } else {
-                  ti.field_b = ti.field_b - lu.field_a;
+                  ti.field_b = ti.field_b - ChatTarget.field_a;
                   Transform3D.field_b = Transform3D.field_b + 1;
                 }
               } else {
                 ti.field_b = ti.field_b + Transform3D.field_b;
-                lu.field_a = lu.field_a - 1;
+                ChatTarget.field_a = ChatTarget.field_a - 1;
               }
             } else {
-              ti.field_b = ti.field_b + lu.field_a;
+              ti.field_b = ti.field_b + ChatTarget.field_a;
               Transform3D.field_b = Transform3D.field_b - 1;
             }
           }

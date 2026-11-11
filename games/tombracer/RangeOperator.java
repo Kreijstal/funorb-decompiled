@@ -22,9 +22,9 @@ final class RangeOperator extends TextureOperator {
         }
     }
 
-    final static void a(boolean param0, kia param1) {
+    final static void setRendererMode(boolean param0, RendererMode param1) {
         try {
-          BitPacketBuffer.a(param0, param1, FontMetrics.field_f);
+          BitPacketBuffer.setGraphicsSettings(param0, param1, FontMetrics.field_f);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ksa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -126,8 +126,8 @@ final class RangeOperator extends TextureOperator {
           }
         }
         if (param1 != -1) {
-          kia var13 = (kia) null;
-          RangeOperator.a(true, (kia) null);
+          RendererMode var13 = (RendererMode) null;
+          RangeOperator.setRendererMode(true, (RendererMode) null);
         }
         return var3;
     }

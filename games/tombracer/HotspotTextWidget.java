@@ -152,7 +152,7 @@ class HotspotTextWidget extends FocusableWidget {
         WidgetTextLayout var17_ref;
         String var21;
         TextLayout var22;
-        TextLine var23;
+        TextLineLayout var23;
         bm var24;
         Object var25;
         int stackIn_10_0 = 0;
@@ -161,7 +161,7 @@ class HotspotTextWidget extends FocusableWidget {
         int stackIn_32_0 = 0;
         String var26;
         TextLayout var27;
-        TextLine var28;
+        TextLineLayout var28;
         bm var29;
         WidgetTextLayout var30;
         int var2Lifetime1;

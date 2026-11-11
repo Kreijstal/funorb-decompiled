@@ -38,7 +38,7 @@ final class dha {
             if (!AppletGameShell.isFreeChatAllowed(-1)) {
               return false;
             }
-            stackIn_129_0 = (!ChooseRewardFactory.a(param1, true, param0)) ? 0 : 1;
+            stackIn_129_0 = (!ChooseRewardFactory.handleChatInputKey(param1, true, param0)) ? 0 : 1;
             var4 = stackIn_129_0;
           } else {
             if (13 == MenuEntry.field_h) {
@@ -70,7 +70,7 @@ final class dha {
             if (!AppletGameShell.isFreeChatAllowed(-1)) {
               return false;
             }
-            stackIn_97_0 = (!ChooseRewardFactory.a(param1, true, param0)) ? 0 : 1;
+            stackIn_97_0 = (!ChooseRewardFactory.handleChatInputKey(param1, true, param0)) ? 0 : 1;
             var4 = stackIn_97_0;
           }
         } else {
@@ -105,7 +105,7 @@ final class dha {
             if (!AppletGameShell.isFreeChatAllowed(-1)) {
               return false;
             }
-            stackIn_61_0 = (!ChooseRewardFactory.a(param1, true, param0)) ? 0 : 1;
+            stackIn_61_0 = (!ChooseRewardFactory.handleChatInputKey(param1, true, param0)) ? 0 : 1;
             var4 = stackIn_61_0;
           } else {
             if (!DynamicGeometryBuffer.field_c) {
@@ -133,7 +133,7 @@ final class dha {
             if (!AppletGameShell.isFreeChatAllowed(-1)) {
               return false;
             }
-            stackIn_23_0 = (!ChooseRewardFactory.a(param1, true, param0)) ? 0 : 1;
+            stackIn_23_0 = (!ChooseRewardFactory.handleChatInputKey(param1, true, param0)) ? 0 : 1;
             var4 = stackIn_23_0;
           }
         }

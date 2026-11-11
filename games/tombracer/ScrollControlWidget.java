@@ -218,7 +218,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
               var5 = SimpleActionBehaviour.field_n;
             }
           } else {
-            var5 = kia.field_a;
+            var5 = RendererMode.field_a;
           }
           var7 = (String) null;
           dqa.a(var5, 0, (String) null, RoomLighting.field_d, 127);

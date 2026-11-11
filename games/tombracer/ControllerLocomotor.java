@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ControllerLocomotor extends Locomotor {
     static RendererOption field_t;
-    static PrimitiveType field_r;
+    static GpuPrimitiveType field_r;
     static String field_q;
     private Locomotor[] field_u;
     private int field_s;
@@ -101,7 +101,7 @@ final class ControllerLocomotor extends Locomotor {
     public static void releaseStatics(byte param0) {
         field_v = null;
         if (param0 >= -30) {
-          field_r = (PrimitiveType) null;
+          field_r = (GpuPrimitiveType) null;
         }
         field_q = null;
         field_p = null;
@@ -116,7 +116,7 @@ final class ControllerLocomotor extends Locomotor {
         int var5 = TombRacer.field_G ? 1 : 0;
         super.mirror((byte) -121);
         if (param0 >= -116) {
-          field_r = (PrimitiveType) null;
+          field_r = (GpuPrimitiveType) null;
         }
         Locomotor[] var6 = this.field_u;
         Locomotor[] var2 = var6;
@@ -206,7 +206,7 @@ final class ControllerLocomotor extends Locomotor {
 
     static {
         field_q = "Quit to website";
-        field_r = new PrimitiveType();
+        field_r = new GpuPrimitiveType();
         field_o = "Rating";
     }
 }

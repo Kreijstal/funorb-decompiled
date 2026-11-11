@@ -39,7 +39,7 @@ abstract class AppletGameShell extends GameApplet {
             PlantComponent.b(param0 ^ -109, 6);
           }
           if (hd.field_a[6]) {
-            Puddle.b(7, (byte) -105);
+            Puddle.resendRatingTableRequests(7, (byte) -105);
           }
           if (hd.field_a[8]) {
             GridLineWalker.a((byte) 5);

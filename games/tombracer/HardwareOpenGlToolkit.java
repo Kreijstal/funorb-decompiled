@@ -69,7 +69,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return false;
     }
 
-    final void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, PrimitiveType param4, int param5, int param6) {
+    final void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, GpuPrimitiveType param4, int param5, int param6) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -669,7 +669,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.field_Mc.swapBuffers();
     }
 
-    final void drawPrimitives(int param0, PrimitiveType param1, int param2, int param3) {
+    final void drawPrimitives(int param0, GpuPrimitiveType param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1308,7 +1308,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void applyTexCoordGeneration(dn param0, byte param1) {
+    final void applyTexCoordGeneration(TextureCoordinateGeneration param0, byte param1) {
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -1317,7 +1317,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException var3 = null;
         try {
           if (param0 != ItemModel.field_o) {
-            var3_int = AnimationSequence.a(param0, 0);
+            var3_int = AnimationSequence.glTexGenMode(param0, 0);
             jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
             jaggl.OpenGL.glEnable(3168);
             jaggl.OpenGL.glTexGeni(8193, 9472, var3_int);
@@ -1385,11 +1385,11 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     final ShaderEffect createShaderEffect(int param0, int param1) {
         int var3;
         int var4;
-        dn var5;
+        TextureCoordinateGeneration var5;
         var4 = TombRacer.field_G ? 1 : 0;
         if (param1 < 37) {
-          var5 = (dn) null;
-          this.applyTexCoordGeneration((dn) null, (byte) 83);
+          var5 = (TextureCoordinateGeneration) null;
+          this.applyTexCoordGeneration((TextureCoordinateGeneration) null, (byte) 83);
         }
         var3 = param0;
         if (var3 == 3) {

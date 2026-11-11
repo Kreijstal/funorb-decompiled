@@ -26,7 +26,7 @@ final class AnimationSequence {
     private final void decode(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
-        dn var5 = null;
+        TextureCoordinateGeneration var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -43,8 +43,8 @@ final class AnimationSequence {
             break;
           }
           if (param0 >= -89) {
-            var5 = (dn) null;
-            AnimationSequence.a((dn) null, -51);
+            var5 = (TextureCoordinateGeneration) null;
+            AnimationSequence.glTexGenMode((TextureCoordinateGeneration) null, -51);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,7 +226,7 @@ final class AnimationSequence {
         }
     }
 
-    final static int a(dn param0, int param1) {
+    final static int glTexGenMode(TextureCoordinateGeneration param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;

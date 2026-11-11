@@ -18,14 +18,14 @@ final class bna extends IntrusiveNode {
 
     final static void a(byte param0) {
         RuntimeException decompiledCaughtException = null;
-        pha var1 = null;
+        LobbyPlayerEntry var1 = null;
         LobbyGameWidget var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
-        pha var1Lifetime1;
+        LobbyPlayerEntry var1Lifetime1;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
-          var1 = (pha) (uma.field_b.first(-80));
+          var1 = (LobbyPlayerEntry) (uma.field_b.first(-80));
           while (var1 != null) {
             if (var1.field_xb > 0) {
               var1.field_xb = var1.field_xb - 1;
@@ -36,7 +36,7 @@ final class bna extends IntrusiveNode {
                 }
               }
             }
-            var1 = (pha) (uma.field_b.next(122));
+            var1 = (LobbyPlayerEntry) (uma.field_b.next(122));
           }
           if (param0 != 10) {
             return;
@@ -54,12 +54,12 @@ final class bna extends IntrusiveNode {
             }
             var1_ref = (LobbyGameWidget) (AffineTransform3D.field_j.next(120));
           }
-          var1Lifetime1 = (pha) (DemoCourseGenerator.field_g.first(param0 ^ -70));
+          var1Lifetime1 = (LobbyPlayerEntry) (DemoCourseGenerator.field_g.first(param0 ^ -70));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_xb > 0) {
               var1Lifetime1.field_xb = var1Lifetime1.field_xb - 1;
               if (var1Lifetime1.field_xb != 0) {
-                var1Lifetime1 = (pha) (DemoCourseGenerator.field_g.next(param0 + 101));
+                var1Lifetime1 = (LobbyPlayerEntry) (DemoCourseGenerator.field_g.next(param0 + 101));
                 continue;
               }
               var1Lifetime1.field_Lb = 0;
@@ -67,7 +67,7 @@ final class bna extends IntrusiveNode {
                 var1Lifetime1.unlink(72);
               }
             }
-            var1Lifetime1 = (pha) (DemoCourseGenerator.field_g.next(param0 + 101));
+            var1Lifetime1 = (LobbyPlayerEntry) (DemoCourseGenerator.field_g.next(param0 + 101));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

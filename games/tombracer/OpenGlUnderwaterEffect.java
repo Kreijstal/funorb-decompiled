@@ -171,7 +171,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.owner.setActiveTextureUnit(1, false);
         if (param0 < -4) {
           this.owner.bindTexture(true, (GpuTexture) null);
-          this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+          this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
           this.owner.setColorCombineSource(ej.field_c, 0, -49);
           this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -53);
           this.owner.setAlphaCombineSource(0, false, ej.field_c);
@@ -191,7 +191,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
         this.disable(73);
         this.owner.bindTexture(true, (GpuTexture) null);
-        this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
+        this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, GpuPrimitiveType.field_c);
         this.owner.setColorCombineSource(ej.field_c, 0, -49);
         this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -53);
         this.owner.setAlphaCombineSource(0, false, ej.field_c);

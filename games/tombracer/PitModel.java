@@ -8,7 +8,7 @@ final class PitModel extends TrapModel {
     static String field_r;
     private PitTile[][] tiles;
     static UiComponent[] field_p;
-    static kea field_s;
+    static GraphicsQuality field_s;
     private int field_t;
     private int style;
     private int field_o;
@@ -601,7 +601,7 @@ final class PitModel extends TrapModel {
             }
           }
           if (param2 <= 40) {
-            field_s = (kea) null;
+            field_s = (GraphicsQuality) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -840,6 +840,6 @@ final class PitModel extends TrapModel {
 
     static {
         field_r = "Wandering walls";
-        field_s = new kea();
+        field_s = new GraphicsQuality();
     }
 }

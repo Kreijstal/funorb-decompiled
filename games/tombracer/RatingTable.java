@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class upa extends IntrusiveNode {
+final class RatingTable extends IntrusiveNode {
     int[][] field_m;
     int field_j;
     int field_g;
@@ -16,7 +16,7 @@ final class upa extends IntrusiveNode {
         System.out.println("Error: " + FloatPacketBuffer.replaceAllOccurrences(966747152, "\n", "%0a", param0));
         if (param1 != -24) {
           String var3 = (String) null;
-          upa.printError((String) null, (byte) 67);
+          RatingTable.printError((String) null, (byte) 67);
         }
     }
 
@@ -135,11 +135,11 @@ final class upa extends IntrusiveNode {
           return (!param0 ? 6029 : 0) + param1 * 7459;
         }
         String var4 = (String) null;
-        upa.printError((String) null, (byte) -14);
+        RatingTable.printError((String) null, (byte) -14);
         return (!param0 ? 6029 : 0) + param1 * 7459;
     }
 
-    upa() {
+    RatingTable() {
     }
 
     static {
