@@ -75,7 +75,7 @@ final class pha extends UiComponent {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -94,9 +94,9 @@ final class pha extends UiComponent {
           this.field_vb = param0;
           this.field_wb = param1;
           var6 = (CharSequence) ((Object) this.field_vb);
-          jd.normalizeDisplayName(1, var6);
+          OpenGlTexture3D.normalizeDisplayName(1, var6);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -109,9 +109,9 @@ final class pha extends UiComponent {
           }
           this.field_wb = param0;
           var5 = (CharSequence) ((Object) this.field_vb);
-          jd.normalizeDisplayName(1, var5);
+          OpenGlTexture3D.normalizeDisplayName(1, var5);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class pha extends UiComponent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 

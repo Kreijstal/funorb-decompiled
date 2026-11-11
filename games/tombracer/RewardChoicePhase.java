@@ -68,9 +68,9 @@ final class RewardChoicePhase extends MatchPhase {
           this.field_s = 1;
           this.field_p = new RewardChoiceSlot[this.field_q][this.field_s];
           var4 = 0;
-          var5 = aaa.a(false) - this.field_q * 100 + (100 - (this.field_q - 1) * 20);
+          var5 = LegacyOpenGlWaterTextures.getCanvasWidth(false) - this.field_q * 100 + (100 - (this.field_q - 1) * 20);
           var5 = var5 / 2 + 0;
-          var6 = -50 + (SwitchLinkList.b(0) + 100) + (-(this.field_s * 100) - 16 * (this.field_s - 1));
+          var6 = -50 + (SwitchLinkList.getCanvasHeight(0) + 100) + (-(this.field_s * 100) - 16 * (this.field_s - 1));
           var6 = var6 / 2 + 16;
           for (var7 = 0; var7 < this.field_q; var7++) {
             for (var8 = 0; var8 < this.field_s; var8++) {
@@ -113,7 +113,7 @@ final class RewardChoicePhase extends MatchPhase {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -147,23 +147,23 @@ final class RewardChoicePhase extends MatchPhase {
           var3 = 1;
         }
         var5 = 160;
-        var6 = aaa.a(false) / 2;
-        var7 = SwitchLinkList.b(0) / 2;
-        ura.a(-10985);
+        var6 = LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2;
+        var7 = SwitchLinkList.getCanvasHeight(0) / 2;
+        TextureTransformMode.a(-10985);
         var5Lifetime1 = 128;
         if (var4 >= 0) {
-          var8 = (aaa.a(false) >> 1) - (gg.field_f.width() >> 1);
-          var9 = (SwitchLinkList.b(0) >> 1) - (gg.field_f.height() >> 1);
-          gg.field_f.draw(var8, var9);
+          var8 = (LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - (HardwareModelIndexData.field_f.width() >> 1);
+          var9 = (SwitchLinkList.getCanvasHeight(0) >> 1) - (HardwareModelIndexData.field_f.height() >> 1);
+          HardwareModelIndexData.field_f.draw(var8, var9);
           if (var3 == 0) {
-            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.width());
+            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(83, cba.field_c, new String[]{this.screen.getColouredPlayerName(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
           } else {
-            SocketConnector.drawWrappedText(AvailabilityQuery.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.width());
+            SocketConnector.drawWrappedText(AvailabilityQuery.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
             var10 = (-this.rewardChoice.getCurrentPlayerTicks(-1) + 750) / 50 + 1;
             if (var10 < 0) {
               var10 = 0;
             }
-            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(108, OpenGlDisplayLists.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, gg.field_f.width());
+            SocketConnector.drawWrappedText(LegacyOpenGlFlowingWaterEffect.formatText(108, OpenGlDisplayLists.field_h, new String[]{Integer.toString(var10)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 200, var8, 1, (byte) 60, HardwareModelIndexData.field_f.width());
           }
           for (var10 = 0; this.field_q > var10; var10++) {
             for (var11_int = 0; var11_int < this.field_s; var11_int++) {
@@ -187,7 +187,7 @@ final class RewardChoicePhase extends MatchPhase {
         while (this.matchState.players.length > var17) {
           var9Lifetime1 = -(this.matchState.players.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
           var10 = -200 + var7;
-          SocketConnector.drawWrappedText(this.screen.getPlayerName(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
+          SocketConnector.drawWrappedText(this.screen.getPlayerName(var17, false).toUpperCase(), 1, TooltipRenderer.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           if (!this.matchState.hasFinishedCourse((byte) 90, var17)) {
             var11 = cs.field_b;
             var12 = 8947848;
@@ -213,7 +213,7 @@ final class RewardChoicePhase extends MatchPhase {
               var11 = sla.field_b[var13];
             }
           }
-          SocketConnector.drawWrappedText(var11.toUpperCase(), 1, kn.field_p, var12, 0, 32, 1, 32 + var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
+          SocketConnector.drawWrappedText(var11.toUpperCase(), 1, TooltipRenderer.field_p, var12, 0, 32, 1, 32 + var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
           var17++;
         }
         RemovedFromGameMenu.resetDepthRange((byte) -6);
@@ -237,7 +237,7 @@ final class RewardChoicePhase extends MatchPhase {
           if (OpenGlUnderwaterEffect.field_q == 2 &&
             null != mn.field_n) {
             var3 = (CharSequence) ((Object) param0);
-            if (mn.field_n.equals(jd.normalizeDisplayName(1, var3))) {
+            if (mn.field_n.equals(OpenGlTexture3D.normalizeDisplayName(1, var3))) {
               return true;
             }
           }
@@ -252,7 +252,7 @@ final class RewardChoicePhase extends MatchPhase {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -298,14 +298,14 @@ final class RewardChoicePhase extends MatchPhase {
         if (this.rewardChoice.getCurrentPlayerId(-1) == param0) {
           if (param2 == -1) {
             var6 = RewardChoicePhase.createTextMessage(-9, LegacyOpenGlFlowingWaterEffect.formatText(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
-            iqa.field_c.addMessageNow(0, var6);
+            ToolkitInstance.field_c.addMessageNow(0, var6);
             this.rewardChoice.takeReward(param2, (byte) 112);
           } else {
             var4 = this.rewardChoice.getReward(-108, param2);
             this.rewardChoice.takeReward(param2, (byte) 119);
             this.selectColumn(0);
             var5 = RewardChoicePhase.createTextMessage(-58, LegacyOpenGlFlowingWaterEffect.formatText(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
-            iqa.field_c.addMessageNow(0, var5);
+            ToolkitInstance.field_c.addMessageNow(0, var5);
           }
         }
         if (!param1) {
@@ -456,7 +456,7 @@ final class RewardChoicePhase extends MatchPhase {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

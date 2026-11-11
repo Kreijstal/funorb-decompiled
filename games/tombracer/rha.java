@@ -20,7 +20,7 @@ final class rha extends IntrusiveNode {
           this.field_f = param0;
           this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rha.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rha.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -89,7 +89,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) (stackIn_61_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) (stackIn_61_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

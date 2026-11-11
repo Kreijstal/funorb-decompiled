@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bra extends ofa implements ButtonListener {
+final class bra extends ResizingDialog implements ButtonListener {
     static String[] field_M;
     private FocusableWidget field_N;
     private FocusableWidget field_L;
@@ -57,7 +57,7 @@ final class bra extends ofa implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class bra extends ofa implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class bra extends ofa implements ButtonListener {
           }
           this.field_N = this.appendDialogButton(BitPacketBuffer.field_j, (byte) 54, (WidgetListener) (this));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bra.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bra.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class bra extends ofa implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

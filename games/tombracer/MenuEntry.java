@@ -22,7 +22,7 @@ final class MenuEntry {
         }
     }
 
-    final static void a(int param0, int param1, ik param2) {
+    final static void a(int param0, int param1, IntArrayRequest param2) {
         BitPacketBuffer var3 = null;
         try {
           if (param1 != -23814) {
@@ -34,7 +34,7 @@ final class MenuEntry {
           var3.writeByte(0, 0);
           var3.writeByte(param2.field_g, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fna.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fna.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -397,7 +397,7 @@ final class MenuEntry {
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(var2_int + 1);
             var6 = 77 % ((param0 + 25) / 63);
-            var5 = bd.validateEmailLocalPart(-1, var3);
+            var5 = RasterStateFrame.validateEmailLocalPart(-1, var3);
             if (var5 == null) {
               return SimpleActionBehaviour.validateEmailDomain(76, var4);
             }
@@ -416,7 +416,7 @@ final class MenuEntry {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -486,7 +486,7 @@ final class MenuEntry {
           this.field_f = param2;
           this.field_e = param1.toUpperCase();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fna.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fna.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

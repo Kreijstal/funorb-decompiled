@@ -29,7 +29,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         try {
           NodeHashTable.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wta.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wta.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -51,14 +51,14 @@ final class TrackingCrusherComponent extends PrefabComponent {
         aca.field_h[6] = nt.field_c;
         aca.field_h[7] = FadingDialog.field_A;
         if (param0 == 12) {
-          aca.field_h[15] = oda.field_h;
+          aca.field_h[15] = MazeFrontierCell.field_h;
           aca.field_h[16] = BlendModeOperator.field_n;
           aca.field_h[18] = RemovedFromGameMenu.field_q;
           aca.field_h[13] = CourseLayout.field_c;
           return;
         }
         field_G = true;
-        aca.field_h[15] = oda.field_h;
+        aca.field_h[15] = MazeFrontierCell.field_h;
         aca.field_h[16] = BlendModeOperator.field_n;
         aca.field_h[18] = RemovedFromGameMenu.field_q;
         aca.field_h[13] = CourseLayout.field_c;
@@ -117,7 +117,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
             field_F = 80;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wta.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wta.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

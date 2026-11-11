@@ -21,7 +21,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         try {
           this.field_r = new Effect(1, 50);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         try {
           this.field_r = CharacterChoiceTile.decodeEffect((byte) 87, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class ConstantEffectBehaviour extends Behaviour {
             field_q = (ToolkitSprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fra.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fra.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class ConstantEffectBehaviour extends Behaviour {
           super.encode(param0, param1);
           this.field_r.encode(param1, (byte) 125);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fra.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fra.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class ConstantEffectBehaviour extends Behaviour {
           this.field_r.setSource(this.getRoot(6), 2348);
           param1.b((byte) -103, 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fra.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fra.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

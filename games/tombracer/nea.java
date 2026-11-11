@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nea {
-    static tba field_a;
+    static MonochromeRowCacheEntry field_a;
     static PlatformTaskDispatcher field_c;
     static String field_b;
     private static String field_z;
@@ -19,6 +19,6 @@ final class nea {
     static {
         field_z = "nea.A(";
         field_b = "Disc of death vending machines";
-        field_a = new tba(0, 0);
+        field_a = new MonochromeRowCacheEntry(0, 0);
     }
 }

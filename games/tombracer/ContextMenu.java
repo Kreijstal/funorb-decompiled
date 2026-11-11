@@ -4,7 +4,7 @@
 final class ContextMenu extends UiComponent {
     static int field_Eb;
     private int field_tb;
-    private tv[] field_Db;
+    private ContextMenuRow[] field_Db;
     static fta field_yb;
     private int[] field_Fb;
     private int field_Gb;
@@ -30,7 +30,7 @@ final class ContextMenu extends UiComponent {
         int var8Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
         if (this.field_zb == 0) {
-          this.field_Db[this.field_zb] = new tv(0L, (UiComponent) null, (UiComponent) null, this.field_ub, (Sprite) null, LegacyOpenGlTurbulentTextureEffect.field_c);
+          this.field_Db[this.field_zb] = new ContextMenuRow(0L, (UiComponent) null, (UiComponent) null, this.field_ub, (Sprite) null, LegacyOpenGlTurbulentTextureEffect.field_c);
           this.field_Db[this.field_zb].field_bb = 1;
           this.addChild(-128, this.field_Db[this.field_zb]);
           this.field_Fb[this.field_zb] = -1;
@@ -70,7 +70,7 @@ final class ContextMenu extends UiComponent {
 
     ContextMenu(UiComponent param0, Sprite[] param1, UiComponent param2, UiComponent param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
-        this.field_Db = new tv[256];
+        this.field_Db = new ContextMenuRow[256];
         this.field_Fb = new int[256];
         this.field_xb = -2;
         try {
@@ -83,13 +83,13 @@ final class ContextMenu extends UiComponent {
           this.field_Gb = param8;
           this.field_wb = param5;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ola.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ola.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final static void e(byte param0) {
         OpenGlUnderwaterEffect.field_q = 0;
-        bb.a(-21844);
+        HiscoreTable.openQuickChatMenu(-21844);
         if (param0 <= 95) {
           field_Eb = -113;
         }
@@ -140,7 +140,7 @@ final class ContextMenu extends UiComponent {
     }
 
     final void addItem(byte param0, int param1, String param2) {
-        this.field_Db[this.field_zb] = new tv(0L, (UiComponent) null, (UiComponent) null, this.field_Ab, (Sprite) null, param2);
+        this.field_Db[this.field_zb] = new ContextMenuRow(0L, (UiComponent) null, (UiComponent) null, this.field_Ab, (Sprite) null, param2);
         this.field_Db[this.field_zb].field_C = this.field_Cb;
         if (param0 > -63) {
           return;
@@ -152,13 +152,13 @@ final class ContextMenu extends UiComponent {
           this.field_Fb[this.field_zb] = param1;
           this.field_zb = this.field_zb + 1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ola.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ola.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void addIconItem(Sprite param0, int param1, String param2, boolean param3) {
         try {
-          this.field_Db[this.field_zb] = new tv(0L, (UiComponent) null, (UiComponent) null, this.field_Ab, param0, param2);
+          this.field_Db[this.field_zb] = new ContextMenuRow(0L, (UiComponent) null, (UiComponent) null, this.field_Ab, param0, param2);
           this.field_Db[this.field_zb].field_C = this.field_Cb;
           if (param3) {
             this.field_Cb = (Sprite[]) null;
@@ -169,18 +169,18 @@ final class ContextMenu extends UiComponent {
           this.field_Fb[this.field_zb] = param1;
           this.field_zb = this.field_zb + 1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ola.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ola.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static void setCharacterAnimations(int param0, ena param1) {
+    final static void setCharacterAnimations(int param0, AnimationFrameSet param1) {
         try {
           hba.field_c = param1;
           if (param0 != 13) {
             field_Eb = -36;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ola.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ola.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

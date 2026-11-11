@@ -92,7 +92,7 @@ final class dua extends MatchOverlay {
           var23 = this.field_g.getSimulation(0, 0);
           var6 = 0;
           var7 = var23.getRoomCount(-7);
-          var8 = SwitchLinkList.b(0) >> 1;
+          var8 = SwitchLinkList.getCanvasHeight(0) >> 1;
           if (var7 % 2 == 0) {
             stackIn_49_0 = var4;
           } else {
@@ -122,7 +122,7 @@ final class dua extends MatchOverlay {
                 } else {
                   var17 = String.valueOf(1 + var12);
                 }
-                dh.a(kn.field_p, 192, 1, 0, -8 + var13, var3, 16777215, -1 + var16, 0, 29870, 1, 16 + var14, var17);
+                dh.a(TooltipRenderer.field_p, 192, 1, 0, -8 + var13, var3, 16777215, -1 + var16, 0, 29870, 1, 16 + var14, var17);
               }
             }
           }
@@ -157,7 +157,7 @@ final class dua extends MatchOverlay {
         var20 = this.field_g.getSimulation(0, 0);
         var6Lifetime1 = 0;
         var7Lifetime1 = var20.getRoomCount(-7);
-        var8Lifetime1 = SwitchLinkList.b(0) >> 1;
+        var8Lifetime1 = SwitchLinkList.getCanvasHeight(0) >> 1;
         if (var7Lifetime1 % 2 == 0) {
           stackIn_9_0 = var4Lifetime1;
         } else {
@@ -187,7 +187,7 @@ final class dua extends MatchOverlay {
               } else {
                 var17Lifetime1 = String.valueOf(1 + var12Lifetime1);
               }
-              dh.a(kn.field_p, 192, 1, 0, -8 + var13Lifetime1, var3Lifetime1, 16777215, -1 + var16Lifetime1, 0, 29870, 1, 16 + var14Lifetime1, var17Lifetime1);
+              dh.a(TooltipRenderer.field_p, 192, 1, 0, -8 + var13Lifetime1, var3Lifetime1, 16777215, -1 + var16Lifetime1, 0, 29870, 1, 16 + var14Lifetime1, var17Lifetime1);
             }
           }
         }

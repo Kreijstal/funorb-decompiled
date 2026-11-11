@@ -98,14 +98,14 @@ final class RoomEffectTraps {
         this.skeletonTraps = null;
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, GameFont param5, int param6) {
+    final static void drawLeftTextWithShadow(int param0, int param1, int param2, String param3, int param4, GameFont param5, int param6) {
         try {
           if (param1 >= -11) {
             field_b = -58;
           }
           param5.drawLeft(param2, false, param3, param4, SoundEvent.withFullAlpha(false, param6), SoundEvent.withFullAlpha(false, param0));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ts.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ts.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class RoomEffectTraps {
           ObjectList.field_c = nla.field_a;
           SoftReferenceCache.field_a = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ts.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ts.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -388,7 +388,7 @@ final class RoomEffectTraps {
               }
               var5.setPosition(1434528720, var13, var12);
               var5.instantiate(true, true, this.room, 0, 0, -1, (Trap) null);
-              this.skeletonTraps[var10] = (Trap) (var5.getSwitchable(kha.bitwiseXor((int) param0, -24)));
+              this.skeletonTraps[var10] = (Trap) (var5.getSwitchable(TextLine.bitwiseXor((int) param0, -24)));
               continue;
             }
             break;
@@ -511,7 +511,7 @@ final class RoomEffectTraps {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -519,7 +519,7 @@ final class RoomEffectTraps {
         try {
           this.room = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ts.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ts.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

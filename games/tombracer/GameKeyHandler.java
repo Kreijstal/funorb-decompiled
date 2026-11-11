@@ -18,11 +18,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException var6 = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          var6_int = CharacterPreview.clamp(hc.field_h, param4 - 16236, gca.field_d, param2);
+          var6_int = CharacterPreview.clamp(LineShape.field_h, param4 - 16236, gca.field_d, param2);
           if (param4 != 10) {
             GameKeyHandler.a((byte) 101);
           }
-          var7 = CharacterPreview.clamp(hc.field_h, param4 ^ -16236, gca.field_d, param5);
+          var7 = CharacterPreview.clamp(LineShape.field_h, param4 ^ -16236, gca.field_d, param5);
           var8 = CharacterPreview.clamp(DiskCacheWorker.field_c, param4 - 16236, pka.field_b, param1);
           var9 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0);
           for (var10 = var6_int; var7 >= var10; var10++) {
@@ -32,7 +32,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var6), "gt.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var6), "gt.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -42,17 +42,17 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (WheeledMountComponent.field_P != null) {
           WheeledMountComponent.field_P.shutdown();
           var1 = 1 % ((-17 - param0) / 60);
-          if (null != gg.field_b) {
-            gg.field_b.shutdown();
+          if (null != HardwareModelIndexData.field_b) {
+            HardwareModelIndexData.field_b.shutdown();
             return;
           }
           return;
         }
         var1Lifetime1 = 1 % ((-17 - param0) / 60);
-        if (null == gg.field_b) {
+        if (null == HardwareModelIndexData.field_b) {
           return;
         }
-        gg.field_b.shutdown();
+        HardwareModelIndexData.field_b.shutdown();
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {
@@ -82,12 +82,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             var2_int = -1;
           }
-          if (ita.field_f >= 0 &&
+          if (SoftwareDepthBuffer.field_f >= 0 &&
             var2_int >= 0) {
-            cna.field_c[ita.field_f] = var2_int;
-            ita.field_f = 127 & 1 + ita.field_f;
-            if (ita.field_f == hka.field_a) {
-              ita.field_f = -1;
+            cna.field_c[SoftwareDepthBuffer.field_f] = var2_int;
+            SoftwareDepthBuffer.field_f = 127 & 1 + SoftwareDepthBuffer.field_f;
+            if (SoftwareDepthBuffer.field_f == hka.field_a) {
+              SoftwareDepthBuffer.field_f = -1;
             }
           }
           if (var2_int >= 0) {
@@ -116,7 +116,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (TileOperator.field_n == null) {
             return;
           }
-          ita.field_f = -1;
+          SoftwareDepthBuffer.field_f = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,7 +142,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -163,12 +163,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (0 <= ita.field_f &&
+            if (0 <= SoftwareDepthBuffer.field_f &&
               0 <= var2_int) {
-              cna.field_c[ita.field_f] = ~var2_int;
-              ita.field_f = 127 & 1 + ita.field_f;
-              if (ita.field_f == hka.field_a) {
-                ita.field_f = -1;
+              cna.field_c[SoftwareDepthBuffer.field_f] = ~var2_int;
+              SoftwareDepthBuffer.field_f = 127 & 1 + SoftwareDepthBuffer.field_f;
+              if (SoftwareDepthBuffer.field_f == hka.field_a) {
+                SoftwareDepthBuffer.field_f = -1;
               }
             }
           }
@@ -184,7 +184,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gt.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gt.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

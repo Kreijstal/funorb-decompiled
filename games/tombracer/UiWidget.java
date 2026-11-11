@@ -91,7 +91,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -297,7 +297,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -360,7 +360,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -389,8 +389,8 @@ class UiWidget extends IntrusiveNode {
             stackIn_13_1 = (var5_int != 0);
             this.field_f = stackIn_13_1;
             if (this.field_h != null &&
-              this.field_h instanceof ar) {
-              ((ar) (this.field_h)).a(var5_int != 0, (byte) 113, this);
+              this.field_h instanceof HoverListener) {
+              ((HoverListener) (this.field_h)).onHoverChanged(var5_int != 0, (byte) 113, this);
               return;
             }
           }
@@ -405,7 +405,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -445,7 +445,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -485,7 +485,7 @@ class UiWidget extends IntrusiveNode {
           }
           this.field_s = 0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ae.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ae.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -523,10 +523,10 @@ class UiWidget extends IntrusiveNode {
                   this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
                   var8 = ava.field_f;
                   if (var8 != null) {
-                    if (!(var8.field_h instanceof kja)) {
+                    if (!(var8.field_h instanceof DragReleaseListener)) {
                       ava.field_f = null;
                     } else {
-                      ((kja) (var8.field_h)).a(var8, (byte) 59, (k) null);
+                      ((DragReleaseListener) (var8.field_h)).onDragReleased(var8, (byte) 59, (k) null);
                       ava.field_f = null;
                     }
                   }
@@ -556,8 +556,8 @@ class UiWidget extends IntrusiveNode {
             this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
             var9 = ava.field_f;
             if (var9 != null) {
-              if (var9.field_h instanceof kja) {
-                ((kja) (var9.field_h)).a(var9, (byte) 59, (k) null);
+              if (var9.field_h instanceof DragReleaseListener) {
+                ((DragReleaseListener) (var9.field_h)).onDragReleased(var9, (byte) 59, (k) null);
               }
               ava.field_f = null;
             }
@@ -589,10 +589,10 @@ class UiWidget extends IntrusiveNode {
                 this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
                 var10 = ava.field_f;
                 if (var10 != null) {
-                  if (!(var10.field_h instanceof kja)) {
+                  if (!(var10.field_h instanceof DragReleaseListener)) {
                     ava.field_f = null;
                   } else {
-                    ((kja) (var10.field_h)).a(var10, (byte) 59, (k) null);
+                    ((DragReleaseListener) (var10.field_h)).onDragReleased(var10, (byte) 59, (k) null);
                     ava.field_f = null;
                   }
                 }
@@ -616,8 +616,8 @@ class UiWidget extends IntrusiveNode {
             this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
             var11 = ava.field_f;
             if (var11 != null) {
-              if (var11.field_h instanceof kja) {
-                ((kja) (var11.field_h)).a(var11, (byte) 59, (k) null);
+              if (var11.field_h instanceof DragReleaseListener) {
+                ((DragReleaseListener) (var11.field_h)).onDragReleased(var11, (byte) 59, (k) null);
               }
               ava.field_f = null;
             }
@@ -673,8 +673,8 @@ class UiWidget extends IntrusiveNode {
         this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, AgeValidator.field_j);
         var13 = ava.field_f;
         if (var13 != null) {
-          if (var13.field_h instanceof kja) {
-            ((kja) (var13.field_h)).a(var13, (byte) 59, (k) null);
+          if (var13.field_h instanceof DragReleaseListener) {
+            ((DragReleaseListener) (var13.field_h)).onDragReleased(var13, (byte) 59, (k) null);
           }
           ava.field_f = null;
         }
@@ -746,7 +746,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -761,7 +761,7 @@ class UiWidget extends IntrusiveNode {
           this.field_m = param2;
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ae.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ae.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

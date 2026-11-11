@@ -4,7 +4,7 @@
 final class io {
     static String field_b;
     static int field_a;
-    static iw field_c;
+    static PrimitiveType field_c;
     static IntrusiveDeque field_d;
 
     final static byte charToCp1252(int param0, char param1) {
@@ -373,7 +373,7 @@ final class io {
     public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 != -57) {
-          field_c = (iw) null;
+          field_c = (PrimitiveType) null;
           field_c = null;
           field_d = null;
           return;
@@ -384,7 +384,7 @@ final class io {
 
     static {
         field_a = 15;
-        field_c = new iw();
+        field_c = new PrimitiveType();
         field_d = new IntrusiveDeque();
     }
 }

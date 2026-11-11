@@ -20,9 +20,9 @@ final class MonsterModel extends MotionTrackingModel {
           int var6_int = 0 % ((-38 - param4) / 47);
           var7 = this.getModelHeading(-6874);
           var8 = this.field_C.buildModel(false, -1, false, (byte) 1);
-          gqa.drawModelAt(var7, -83584144, param1, param2, var8, param3);
+          ChatMessage.drawModelAt(var7, -83584144, param1, param2, var8, param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aka.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aka.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class MonsterModel extends MotionTrackingModel {
           super.decode(123, param1, param2);
           this.field_x = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aka.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aka.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class MonsterModel extends MotionTrackingModel {
           super.removeFromScene(param0, 93);
           this.field_C = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aka.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aka.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class MonsterModel extends MotionTrackingModel {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -135,14 +135,14 @@ final class MonsterModel extends MotionTrackingModel {
         if (param0 != 28191) {
           return;
         }
-        ScrollControlWidget.a(OpenGlTransform3D.field_f, 0, Corpse.field_i, rfa.field_C, WallModel.field_r);
+        ScrollControlWidget.a(OpenGlTransform3D.field_f, 0, Corpse.field_i, TombRacerShell.field_C, WallModel.field_r);
     }
 
     final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
           super.attach(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aka.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aka.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -344,7 +344,7 @@ final class MonsterModel extends MotionTrackingModel {
           param1.writeBits((byte) -5, this.field_x, 4);
           int var3_int = 102 % ((param0 + 8) / 40);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

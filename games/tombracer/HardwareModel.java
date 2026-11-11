@@ -16,13 +16,13 @@ final class HardwareModel extends ToolkitModel {
     private short[] field_lb;
     private int[] field_j;
     private int field_v;
-    private hg field_d;
+    private HardwareModelVertexStream field_d;
     private int[] field_R;
     private short[] field_M;
     private int field_Q;
     private float[] field_eb;
     private int field_L;
-    private hg field_E;
+    private HardwareModelVertexStream field_E;
     private int[] field_r;
     private boolean field_F;
     private int[] field_U;
@@ -35,9 +35,9 @@ final class HardwareModel extends ToolkitModel {
     private int[] field_J;
     private rga[] field_s;
     private float[] field_t;
-    private hg field_ib;
+    private HardwareModelVertexStream field_ib;
     private int field_h;
-    private gg field_g;
+    private HardwareModelIndexData field_g;
     private int field_K;
     private short[] field_G;
     private short[] field_p;
@@ -54,7 +54,7 @@ final class HardwareModel extends ToolkitModel {
     private int field_fb;
     private int field_y;
     private int field_o;
-    private hg field_O;
+    private HardwareModelVertexStream field_O;
     private boolean field_A;
     private short field_ab;
     private int field_Y;
@@ -322,7 +322,7 @@ final class HardwareModel extends ToolkitModel {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            ofa.a(var8, var9, 67);
+            ResizingDialog.sortIndicesByKeys(var8, var9, 67);
             this.field_hb = param1.field_y;
             this.field_W = param1.field_L;
             this.field_r = param1.field_I;
@@ -881,7 +881,7 @@ final class HardwareModel extends ToolkitModel {
             stackIn_354_1 = this.field_h;
             break;
           }
-          if (ofa.hasMask384(stackIn_354_0, stackIn_354_1, (byte) -126)) {
+          if (ResizingDialog.hasMask384(stackIn_354_0, stackIn_354_1, (byte) -126)) {
             var16 = 0;
             var17 = new int[256];
             var18 = 0;
@@ -967,7 +967,7 @@ final class HardwareModel extends ToolkitModel {
           } else {
             stackIn_397_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_392_0), ((StringBuilder) (Object) stackIn_396_1).append(stackIn_397_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_392_0), ((StringBuilder) (Object) stackIn_396_1).append(stackIn_397_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -984,9 +984,9 @@ final class HardwareModel extends ToolkitModel {
           var1_int = 0;
           do {
             if (var1_int >= this.field_y) {
-              pb.field_k = 0;
+              CacheEntry.field_k = 0;
               C2SChooseRewardPacket.field_c = 0;
-              ina.field_a = 0;
+              LoadingStepList.field_a = 0;
               break;
             }
             this.field_Z[var1_int] = this.field_Z[var1_int] << 4;
@@ -998,7 +998,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "gja.NA()");
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "gja.NA()");
         }
     }
 
@@ -1024,7 +1024,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.R(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gja.R(" + param0 + ')');
         }
     }
 
@@ -1104,7 +1104,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var5), "gja.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var5), "gja.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1149,9 +1149,9 @@ final class HardwareModel extends ToolkitModel {
             this.computeBounds(-913);
           }
           MatchPhase.field_d = var5.field_o * var6.field_q + var6.field_l * var5.field_p + var6.field_o * var5.field_h;
-          gj.field_h = var6.field_e * var5.field_p + var5.field_o * var6.field_n + var6.field_i * var5.field_h + var5.field_i;
-          var7 = MatchPhase.field_d * (float)this.field_o + gj.field_h;
-          var8 = gj.field_h + MatchPhase.field_d * (float)this.field_n;
+          VertexAttribute.field_h = var6.field_e * var5.field_p + var5.field_o * var6.field_n + var6.field_i * var5.field_h + var5.field_i;
+          var7 = MatchPhase.field_d * (float)this.field_o + VertexAttribute.field_h;
+          var8 = VertexAttribute.field_h + MatchPhase.field_d * (float)this.field_n;
           if (!(var8 < var7)) {
             var9 = var7 - (float)this.field_H;
             var10 = var8 + (float)this.field_H;
@@ -1207,7 +1207,7 @@ final class HardwareModel extends ToolkitModel {
           }
           if (null != param1 ||
             null != this.field_u) {
-            vs.field_O = var5.field_k * var6.field_g + var6.field_k * var5.field_q + var5.field_m * var6.field_p;
+            ProgressDialog.field_O = var5.field_k * var6.field_g + var6.field_k * var5.field_q + var5.field_m * var6.field_p;
             wka.field_b = var5.field_f * var6.field_h + (var6.field_f * var5.field_g + var5.field_l * var6.field_m);
             pl.field_a = var6.field_g * var5.field_p + var5.field_o * var6.field_k + var6.field_p * var5.field_h;
             baa.field_c = var5.field_f * var6.field_p + (var6.field_k * var5.field_l + var5.field_g * var6.field_g);
@@ -1217,8 +1217,8 @@ final class HardwareModel extends ToolkitModel {
           if (param1 != null) {
             var19 = this.field_K + this.field_i >> 1;
             var20 = this.field_Q + this.field_cb >> 1;
-            var21 = (int)(TextureFilter.field_c * (float)var20 + (gj.field_h + pl.field_a * (float)var19 + MatchPhase.field_d * (float)this.field_o));
-            var22 = (int)((float)this.field_n * MatchPhase.field_d + (gj.field_h + (float)var19 * pl.field_a) + TextureFilter.field_c * (float)var20);
+            var21 = (int)(TextureFilter.field_c * (float)var20 + (VertexAttribute.field_h + pl.field_a * (float)var19 + MatchPhase.field_d * (float)this.field_o));
+            var22 = (int)((float)this.field_n * MatchPhase.field_d + (VertexAttribute.field_h + (float)var19 * pl.field_a) + TextureFilter.field_c * (float)var20);
             if (var21 < this.field_S.field_D &&
               var22 < this.field_S.field_D) {
             }
@@ -1245,7 +1245,7 @@ final class HardwareModel extends ToolkitModel {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1302,7 +1302,7 @@ final class HardwareModel extends ToolkitModel {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1397,7 +1397,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "gja.IA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "gja.IA(" + param0 + ')');
         }
     }
 
@@ -1439,7 +1439,7 @@ final class HardwareModel extends ToolkitModel {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1521,7 +1521,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "gja.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "gja.B(" + param0 + ')');
         }
     }
 
@@ -1724,7 +1724,7 @@ final class HardwareModel extends ToolkitModel {
             }
           }
           if (null != this.field_q &&
-            !ofa.hasMask384(this.field_Y, this.field_h, (byte) -126)) {
+            !ResizingDialog.hasMask384(this.field_Y, this.field_h, (byte) -126)) {
             this.field_q = (int[][]) null;
             this.field_jb = null;
           }
@@ -1749,7 +1749,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "gja.GA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "gja.GA(" + param0 + ')');
         }
     }
 
@@ -1767,7 +1767,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "gja.P(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "gja.P(" + param0 + ')');
         }
     }
 
@@ -1827,7 +1827,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "gja.T(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "gja.T(" + param0 + ')');
         }
     }
 
@@ -1860,7 +1860,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gja.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1887,7 +1887,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.wa()");
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gja.wa()");
         }
     }
 
@@ -1907,16 +1907,16 @@ final class HardwareModel extends ToolkitModel {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        qm var7 = null;
+        VertexStreamBuffer var7 = null;
         jaclib.memory.Buffer var8 = null;
         short[] var9 = null;
         short[] var10 = null;
         short[] var11 = null;
         byte[] var12 = null;
         int var13 = 0;
-        qm var7Lifetime1;
-        qm var7Lifetime2;
-        qm var7Lifetime3;
+        VertexStreamBuffer var7Lifetime1;
+        VertexStreamBuffer var7Lifetime2;
+        VertexStreamBuffer var7Lifetime3;
         jaclib.memory.Buffer var8Lifetime1;
         jaclib.memory.Buffer var8Lifetime2;
         jaclib.memory.Buffer var8Lifetime3;
@@ -2113,7 +2113,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "gja.L(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "gja.L(" + param0 + ')');
         }
     }
 
@@ -2158,8 +2158,8 @@ final class HardwareModel extends ToolkitModel {
                   var8 = 0.3333333134651184f * (float)(this.field_r[var5.field_k] + (this.field_r[var5.field_i] + this.field_r[var5.field_c]));
                   var9 = (float)(this.field_l[var5.field_k] + this.field_l[var5.field_c] + this.field_l[var5.field_i]) * 0.3333333134651184f;
                   var10 = var9 * wka.field_b + (HardwareUnlitEffect.field_e * var8 + baa.field_c * var7) + fba.field_a;
-                  var11 = var9 * ct.field_b + (ScoreSubmission.field_p * var8 + var7 * vs.field_O) + MatchScoringObserver.field_g;
-                  var12 = gj.field_h + (var9 * TextureFilter.field_c + (var7 * pl.field_a + MatchPhase.field_d * var8));
+                  var11 = var9 * ct.field_b + (ScoreSubmission.field_p * var8 + var7 * ProgressDialog.field_O) + MatchScoringObserver.field_g;
+                  var12 = VertexAttribute.field_h + (var9 * TextureFilter.field_c + (var7 * pl.field_a + MatchPhase.field_d * var8));
                   var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + var10 * var10)))) * (float)var5.field_b;
                   var3 = this.field_S.getModelTransform((byte) -77);
                   var3.a(var10 + (float)var6.field_e - var10 * var13, var6.field_m * var5.field_j >> 7, var5.field_a * var6.field_k >> 7, var6.field_c, 2, var12 - var12 * var13, var11 + (float)var6.field_b - var13 * var11);
@@ -2187,7 +2187,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.D(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gja.D(" + param0 + ')');
         }
     }
 
@@ -2205,7 +2205,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "gja.HA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "gja.HA(" + param0 + ')');
         }
     }
 
@@ -2238,7 +2238,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gja.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2270,7 +2270,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.FA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gja.FA(" + param0 + ')');
         }
     }
 
@@ -2840,7 +2840,7 @@ final class HardwareModel extends ToolkitModel {
           boolean decompiledFrameCompleted0 = true;
           regionExit2: {
             boolean decompiledFrameCompleted1 = true;
-            if (!hk.hasAnyMask50560(param4, this.field_h, -93)) {
+            if (!HardwareWaterTextures.hasAnyMask50560(param4, this.field_h, -93)) {
               param0.field_nb = this.field_nb;
               if (var13 == 0) {
                 break regionExit2;
@@ -2932,7 +2932,7 @@ final class HardwareModel extends ToolkitModel {
           } else {
             stackIn_319_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_314_0), ((StringBuilder) (Object) stackIn_318_1).append(stackIn_319_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_314_0), ((StringBuilder) (Object) stackIn_318_1).append(stackIn_319_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -3009,8 +3009,8 @@ final class HardwareModel extends ToolkitModel {
             param3 = param3 << 4;
             param2 = param2 << 4;
             param4 = param4 << 4;
-            ina.field_a = 0;
-            pb.field_k = 0;
+            LoadingStepList.field_a = 0;
+            CacheEntry.field_k = 0;
             C2SChooseRewardPacket.field_c = 0;
             var9 = 0;
             var10 = 0;
@@ -3025,8 +3025,8 @@ final class HardwareModel extends ToolkitModel {
                   var13_int = 0;
                   while (var13_int < var12_ref_int__.length) {
                     var14 = var12_ref_int__[var13_int];
-                    ina.field_a = ina.field_a + this.field_Z[var14];
-                    pb.field_k = pb.field_k + this.field_r[var14];
+                    LoadingStepList.field_a = LoadingStepList.field_a + this.field_Z[var14];
+                    CacheEntry.field_k = CacheEntry.field_k + this.field_r[var14];
                     var9++;
                     C2SChooseRewardPacket.field_c = C2SChooseRewardPacket.field_c + this.field_l[var14];
                     var13_int++;
@@ -3042,16 +3042,16 @@ final class HardwareModel extends ToolkitModel {
               stackIn_17_1 = var9;
             }
             if (stackIn_17_0 >= stackIn_17_1) {
-              ina.field_a = param2;
-              pb.field_k = param3;
+              LoadingStepList.field_a = param2;
+              CacheEntry.field_k = param3;
               C2SChooseRewardPacket.field_c = param4;
               if (var21 == 0) {
                 return;
               }
             }
             C2SChooseRewardPacket.field_c = C2SChooseRewardPacket.field_c / var9 + param4;
-            ina.field_a = ina.field_a / var9 + param2;
-            pb.field_k = param3 + pb.field_k / var9;
+            LoadingStepList.field_a = LoadingStepList.field_a / var9 + param2;
+            CacheEntry.field_k = param3 + CacheEntry.field_k / var9;
             return;
           }
           if (param0 == 1) {
@@ -3098,14 +3098,14 @@ final class HardwareModel extends ToolkitModel {
                   var12 = 0;
                   while (var12 < var11.length) {
                     var13_int = var11[var12];
-                    this.field_Z[var13_int] = this.field_Z[var13_int] - ina.field_a;
-                    this.field_r[var13_int] = this.field_r[var13_int] - pb.field_k;
+                    this.field_Z[var13_int] = this.field_Z[var13_int] - LoadingStepList.field_a;
+                    this.field_r[var13_int] = this.field_r[var13_int] - CacheEntry.field_k;
                     this.field_l[var13_int] = this.field_l[var13_int] - C2SChooseRewardPacket.field_c;
                     this.field_Z[var13_int] = param2 * this.field_Z[var13_int] >> 7;
                     this.field_r[var13_int] = param3 * this.field_r[var13_int] >> 7;
                     this.field_l[var13_int] = this.field_l[var13_int] * param4 >> 7;
-                    this.field_Z[var13_int] = this.field_Z[var13_int] + ina.field_a;
-                    this.field_r[var13_int] = this.field_r[var13_int] + pb.field_k;
+                    this.field_Z[var13_int] = this.field_Z[var13_int] + LoadingStepList.field_a;
+                    this.field_r[var13_int] = this.field_r[var13_int] + CacheEntry.field_k;
                     this.field_l[var13_int] = this.field_l[var13_int] + C2SChooseRewardPacket.field_c;
                     var12++;
                     if (var21 != 0) {
@@ -3417,8 +3417,8 @@ final class HardwareModel extends ToolkitModel {
                         var12 = 0;
                         while (var12 < var11.length) {
                           var13_int = var11[var12];
-                          this.field_Z[var13_int] = this.field_Z[var13_int] - ina.field_a;
-                          this.field_r[var13_int] = this.field_r[var13_int] - pb.field_k;
+                          this.field_Z[var13_int] = this.field_Z[var13_int] - LoadingStepList.field_a;
+                          this.field_r[var13_int] = this.field_r[var13_int] - CacheEntry.field_k;
                           this.field_l[var13_int] = this.field_l[var13_int] - C2SChooseRewardPacket.field_c;
                           stackIn_44_0 = param2;
                           if (stackIn_44_0 != 0) {
@@ -3442,8 +3442,8 @@ final class HardwareModel extends ToolkitModel {
                             this.field_l[var13_int] = this.field_l[var13_int] * var15 - (this.field_Z[var13_int] * var14 - 16383) >> 14;
                             this.field_Z[var13_int] = var16;
                           }
-                          this.field_Z[var13_int] = this.field_Z[var13_int] + ina.field_a;
-                          this.field_r[var13_int] = this.field_r[var13_int] + pb.field_k;
+                          this.field_Z[var13_int] = this.field_Z[var13_int] + LoadingStepList.field_a;
+                          this.field_r[var13_int] = this.field_r[var13_int] + CacheEntry.field_k;
                           this.field_l[var13_int] = this.field_l[var13_int] + C2SChooseRewardPacket.field_c;
                           var12++;
                         }
@@ -3451,8 +3451,8 @@ final class HardwareModel extends ToolkitModel {
                         var12 = 0;
                         while (var11.length > var12) {
                           var13_int = var11[var12];
-                          this.field_Z[var13_int] = this.field_Z[var13_int] - ina.field_a;
-                          this.field_r[var13_int] = this.field_r[var13_int] - pb.field_k;
+                          this.field_Z[var13_int] = this.field_Z[var13_int] - LoadingStepList.field_a;
+                          this.field_r[var13_int] = this.field_r[var13_int] - CacheEntry.field_k;
                           this.field_l[var13_int] = this.field_l[var13_int] - C2SChooseRewardPacket.field_c;
                           stackIn_45_0 = -1;
                           stackIn_45_1 = ~param4;
@@ -3477,8 +3477,8 @@ final class HardwareModel extends ToolkitModel {
                             this.field_l[var13_int] = this.field_l[var13_int] * var15 + (-(this.field_Z[var13_int] * var14) + 16383) >> 14;
                             this.field_Z[var13_int] = var16;
                           }
-                          this.field_Z[var13_int] = this.field_Z[var13_int] + ina.field_a;
-                          this.field_r[var13_int] = this.field_r[var13_int] + pb.field_k;
+                          this.field_Z[var13_int] = this.field_Z[var13_int] + LoadingStepList.field_a;
+                          this.field_r[var13_int] = this.field_r[var13_int] + CacheEntry.field_k;
                           this.field_l[var13_int] = this.field_l[var13_int] + C2SChooseRewardPacket.field_c;
                           var12++;
                         }
@@ -3572,7 +3572,7 @@ final class HardwareModel extends ToolkitModel {
           } else {
             stackIn_293_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_292_0), ((StringBuilder) (Object) stackIn_292_1).append(stackIn_293_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_292_0), ((StringBuilder) (Object) stackIn_292_1).append(stackIn_293_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -3589,7 +3589,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gja.J(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gja.J(" + param0 + ')');
         }
     }
 
@@ -3619,7 +3619,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "gja.F(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "gja.F(" + param0 + ')');
         }
     }
 
@@ -3728,8 +3728,8 @@ final class HardwareModel extends ToolkitModel {
             param4 = param4 << 4;
             param2 = param2 << 4;
             var10 = 0;
-            pb.field_k = 0;
-            ina.field_a = 0;
+            CacheEntry.field_k = 0;
+            LoadingStepList.field_a = 0;
             C2SChooseRewardPacket.field_c = 0;
             var11 = 0;
             boolean decompiledNaturalLoopExit0 = false;
@@ -3745,8 +3745,8 @@ final class HardwareModel extends ToolkitModel {
                     var15 = var13_ref_int__[var14_int];
                     if (null == this.field_hb ||
                       (param6 & this.field_hb[var15]) != 0) {
-                      ina.field_a = ina.field_a + this.field_Z[var15];
-                      pb.field_k = pb.field_k + this.field_r[var15];
+                      LoadingStepList.field_a = LoadingStepList.field_a + this.field_Z[var15];
+                      CacheEntry.field_k = CacheEntry.field_k + this.field_r[var15];
                       C2SChooseRewardPacket.field_c = C2SChooseRewardPacket.field_c + this.field_l[var15];
                       var10++;
                     }
@@ -3761,19 +3761,19 @@ final class HardwareModel extends ToolkitModel {
             if (decompiledNaturalLoopExit0) {
               if (var10 <= 0) {
                 C2SChooseRewardPacket.field_c = param4;
-                pb.field_k = param3;
-                ina.field_a = param2;
+                CacheEntry.field_k = param3;
+                LoadingStepList.field_a = param2;
                 if (var47 == 0) {
                   return;
                 }
               }
               SetFakeLagCommand.field_o = true;
               C2SChooseRewardPacket.field_c = param4 + C2SChooseRewardPacket.field_c / var10;
-              ina.field_a = ina.field_a / var10 + param2;
+              LoadingStepList.field_a = LoadingStepList.field_a / var10 + param2;
               stackIn_32_0 = param3;
-              stackIn_32_1 = pb.field_k / var10;
+              stackIn_32_1 = CacheEntry.field_k / var10;
             }
-            pb.field_k = stackIn_32_0 + stackIn_32_1;
+            CacheEntry.field_k = stackIn_32_0 + stackIn_32_1;
             return;
           }
           if (param0 == 1) {
@@ -3845,8 +3845,8 @@ final class HardwareModel extends ToolkitModel {
                         var14_int = var12[var13];
                         if (null == this.field_hb ||
                           (this.field_hb[var14_int] & param6) != 0) {
-                          this.field_Z[var14_int] = this.field_Z[var14_int] - ina.field_a;
-                          this.field_r[var14_int] = this.field_r[var14_int] - pb.field_k;
+                          this.field_Z[var14_int] = this.field_Z[var14_int] - LoadingStepList.field_a;
+                          this.field_r[var14_int] = this.field_r[var14_int] - CacheEntry.field_k;
                           this.field_l[var14_int] = this.field_l[var14_int] - C2SChooseRewardPacket.field_c;
                           if (0 != param4) {
                             var15 = ByteStorage.field_b[param4];
@@ -3869,8 +3869,8 @@ final class HardwareModel extends ToolkitModel {
                             this.field_l[var14_int] = 16383 + var16 * this.field_l[var14_int] - var15 * this.field_Z[var14_int] >> 14;
                             this.field_Z[var14_int] = var17;
                           }
-                          this.field_Z[var14_int] = this.field_Z[var14_int] + ina.field_a;
-                          this.field_r[var14_int] = this.field_r[var14_int] + pb.field_k;
+                          this.field_Z[var14_int] = this.field_Z[var14_int] + LoadingStepList.field_a;
+                          this.field_r[var14_int] = this.field_r[var14_int] + CacheEntry.field_k;
                           this.field_l[var14_int] = this.field_l[var14_int] + C2SChooseRewardPacket.field_c;
                         }
                         var13++;
@@ -3962,13 +3962,13 @@ final class HardwareModel extends ToolkitModel {
             var14_int = param7[13] << 4;
             var15 = param7[14] << 4;
             if (SetFakeLagCommand.field_o) {
-              var16 = 8192 + ina.field_a * param7[0] + (param7[3] * pb.field_k + param7[6] * C2SChooseRewardPacket.field_c) >> 14;
-              var17 = 8192 + ina.field_a * param7[1] + param7[4] * pb.field_k + C2SChooseRewardPacket.field_c * param7[7] >> 14;
-              var18 = param7[8] * C2SChooseRewardPacket.field_c + param7[5] * pb.field_k + param7[2] * ina.field_a + 8192 >> 14;
+              var16 = 8192 + LoadingStepList.field_a * param7[0] + (param7[3] * CacheEntry.field_k + param7[6] * C2SChooseRewardPacket.field_c) >> 14;
+              var17 = 8192 + LoadingStepList.field_a * param7[1] + param7[4] * CacheEntry.field_k + C2SChooseRewardPacket.field_c * param7[7] >> 14;
+              var18 = param7[8] * C2SChooseRewardPacket.field_c + param7[5] * CacheEntry.field_k + param7[2] * LoadingStepList.field_a + 8192 >> 14;
               var16 = var16 + var13;
               var17 = var17 + var14_int;
-              ina.field_a = var16;
-              pb.field_k = var17;
+              LoadingStepList.field_a = var16;
+              CacheEntry.field_k = var17;
               var18 = var18 + var15;
               SetFakeLagCommand.field_o = false;
               C2SChooseRewardPacket.field_c = var18;
@@ -3991,11 +3991,11 @@ final class HardwareModel extends ToolkitModel {
             var16_ref_int__[2] = var17 * var20 + 8192 >> 14;
             var16_ref_int__[4] = var17 * var21 + 8192 >> 14;
             var16_ref_int__[0] = 8192 + (var21 * var19 + var20 * var24) >> 14;
-            var25_int = 8192 + (var16_ref_int__[2] * -C2SChooseRewardPacket.field_c + -ina.field_a * var16_ref_int__[0]) + var16_ref_int__[1] * -pb.field_k >> 14;
-            var26 = 8192 + (var16_ref_int__[3] * -ina.field_a - (-(var16_ref_int__[4] * -pb.field_k) - -C2SChooseRewardPacket.field_c * var16_ref_int__[5])) >> 14;
-            var27 = 8192 + var16_ref_int__[8] * -C2SChooseRewardPacket.field_c + (-pb.field_k * var16_ref_int__[7] + var16_ref_int__[6] * -ina.field_a) >> 14;
-            var28 = var25_int + ina.field_a;
-            var29_int = pb.field_k + var26;
+            var25_int = 8192 + (var16_ref_int__[2] * -C2SChooseRewardPacket.field_c + -LoadingStepList.field_a * var16_ref_int__[0]) + var16_ref_int__[1] * -CacheEntry.field_k >> 14;
+            var26 = 8192 + (var16_ref_int__[3] * -LoadingStepList.field_a - (-(var16_ref_int__[4] * -CacheEntry.field_k) - -C2SChooseRewardPacket.field_c * var16_ref_int__[5])) >> 14;
+            var27 = 8192 + var16_ref_int__[8] * -C2SChooseRewardPacket.field_c + (-CacheEntry.field_k * var16_ref_int__[7] + var16_ref_int__[6] * -LoadingStepList.field_a) >> 14;
+            var28 = var25_int + LoadingStepList.field_a;
+            var29_int = CacheEntry.field_k + var26;
             var30 = var27 + C2SChooseRewardPacket.field_c;
             var31_ref_int__ = new int[9];
             var32 = 0;
@@ -4119,14 +4119,14 @@ final class HardwareModel extends ToolkitModel {
                       var14_int = var12[var13];
                       if (this.field_hb == null ||
                         (param6 & this.field_hb[var14_int]) != 0) {
-                        this.field_Z[var14_int] = this.field_Z[var14_int] - ina.field_a;
-                        this.field_r[var14_int] = this.field_r[var14_int] - pb.field_k;
+                        this.field_Z[var14_int] = this.field_Z[var14_int] - LoadingStepList.field_a;
+                        this.field_r[var14_int] = this.field_r[var14_int] - CacheEntry.field_k;
                         this.field_l[var14_int] = this.field_l[var14_int] - C2SChooseRewardPacket.field_c;
                         this.field_Z[var14_int] = param2 * this.field_Z[var14_int] >> 7;
                         this.field_r[var14_int] = this.field_r[var14_int] * param3 >> 7;
                         this.field_l[var14_int] = this.field_l[var14_int] * param4 >> 7;
-                        this.field_Z[var14_int] = this.field_Z[var14_int] + ina.field_a;
-                        this.field_r[var14_int] = this.field_r[var14_int] + pb.field_k;
+                        this.field_Z[var14_int] = this.field_Z[var14_int] + LoadingStepList.field_a;
+                        this.field_r[var14_int] = this.field_r[var14_int] + CacheEntry.field_k;
                         this.field_l[var14_int] = this.field_l[var14_int] + C2SChooseRewardPacket.field_c;
                       }
                       var13++;
@@ -4147,25 +4147,25 @@ final class HardwareModel extends ToolkitModel {
             var14_int = param7[13] << 4;
             var15 = param7[14] << 4;
             if (SetFakeLagCommand.field_o) {
-              var16 = 8192 + ina.field_a * param7[0] + (pb.field_k * param7[3] + param7[6] * C2SChooseRewardPacket.field_c) >> 14;
-              var17 = 8192 + (param7[1] * ina.field_a - (-(pb.field_k * param7[4]) - C2SChooseRewardPacket.field_c * param7[7])) >> 14;
-              var18 = C2SChooseRewardPacket.field_c * param7[8] + (param7[2] * ina.field_a + param7[5] * pb.field_k + 8192) >> 14;
+              var16 = 8192 + LoadingStepList.field_a * param7[0] + (CacheEntry.field_k * param7[3] + param7[6] * C2SChooseRewardPacket.field_c) >> 14;
+              var17 = 8192 + (param7[1] * LoadingStepList.field_a - (-(CacheEntry.field_k * param7[4]) - C2SChooseRewardPacket.field_c * param7[7])) >> 14;
+              var18 = C2SChooseRewardPacket.field_c * param7[8] + (param7[2] * LoadingStepList.field_a + param7[5] * CacheEntry.field_k + 8192) >> 14;
               var16 = var16 + var13;
               var17 = var17 + var14_int;
               var18 = var18 + var15;
-              ina.field_a = var16;
-              pb.field_k = var17;
+              LoadingStepList.field_a = var16;
+              CacheEntry.field_k = var17;
               SetFakeLagCommand.field_o = false;
               C2SChooseRewardPacket.field_c = var18;
             }
             var16 = param2 << 15 >> 7;
             var17 = param3 << 15 >> 7;
             var18 = param4 << 15 >> 7;
-            var19 = 8192 + var16 * -ina.field_a >> 14;
-            var20 = 8192 + -pb.field_k * var17 >> 14;
+            var19 = 8192 + var16 * -LoadingStepList.field_a >> 14;
+            var20 = 8192 + -CacheEntry.field_k * var17 >> 14;
             var21 = 8192 + var18 * -C2SChooseRewardPacket.field_c >> 14;
-            var22 = ina.field_a + var19;
-            var23 = pb.field_k + var20;
+            var22 = LoadingStepList.field_a + var19;
+            var23 = CacheEntry.field_k + var20;
             var24 = C2SChooseRewardPacket.field_c + var21;
             var25 = new int[9];
             var25[2] = var16 * param7[6] + 8192 >> 14;
@@ -4535,7 +4535,7 @@ final class HardwareModel extends ToolkitModel {
           } else {
             stackIn_426_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_421_0), ((StringBuilder) (Object) stackIn_425_1).append(stackIn_426_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_421_0), ((StringBuilder) (Object) stackIn_425_1).append(stackIn_426_2).append(')').toString());
         }
     }
 
@@ -4607,7 +4607,7 @@ final class HardwareModel extends ToolkitModel {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -4692,7 +4692,7 @@ final class HardwareModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4_ref), "gja.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4_ref), "gja.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4736,9 +4736,9 @@ final class HardwareModel extends ToolkitModel {
             this.computeBounds(-913);
           }
           MatchPhase.field_d = var5.field_o * var4.field_h + (var4.field_o * var5.field_q + var4.field_p * var5.field_l);
-          gj.field_h = var5.field_n * var4.field_o + var5.field_e * var4.field_p + var4.field_h * var5.field_i + var4.field_i;
-          var6 = gj.field_h + MatchPhase.field_d * (float)this.field_o;
-          var7 = gj.field_h + (float)this.field_n * MatchPhase.field_d;
+          VertexAttribute.field_h = var5.field_n * var4.field_o + var5.field_e * var4.field_p + var4.field_h * var5.field_i + var4.field_i;
+          var6 = VertexAttribute.field_h + MatchPhase.field_d * (float)this.field_o;
+          var7 = VertexAttribute.field_h + (float)this.field_n * MatchPhase.field_d;
           if (!(var7 < var6)) {
             var8 = var6 - (float)this.field_H;
             var9 = (float)this.field_H + var7;
@@ -4794,7 +4794,7 @@ final class HardwareModel extends ToolkitModel {
           }
           if (null != param1 ||
             this.field_u != null) {
-            vs.field_O = var4.field_m * var5.field_p + (var5.field_k * var4.field_q + var5.field_g * var4.field_k);
+            ProgressDialog.field_O = var4.field_m * var5.field_p + (var5.field_k * var4.field_q + var5.field_g * var4.field_k);
             wka.field_b = var4.field_f * var5.field_h + (var5.field_f * var4.field_g + var5.field_m * var4.field_l);
             ct.field_b = var5.field_m * var4.field_q + var5.field_f * var4.field_k + var5.field_h * var4.field_m;
             TextureFilter.field_c = var4.field_o * var5.field_m + var4.field_p * var5.field_f + var4.field_h * var5.field_h;
@@ -4806,11 +4806,11 @@ final class HardwareModel extends ToolkitModel {
             var19 = 1;
             var20 = this.field_K + this.field_i >> 1;
             var21 = this.field_cb + this.field_Q >> 1;
-            var22 = (int)(TextureFilter.field_c * (float)var21 + ((float)this.field_o * MatchPhase.field_d + (gj.field_h + (float)var20 * pl.field_a)));
+            var22 = (int)(TextureFilter.field_c * (float)var21 + ((float)this.field_o * MatchPhase.field_d + (VertexAttribute.field_h + (float)var20 * pl.field_a)));
             if (var22 < this.field_S.field_D) {
               var18 = 1;
             }
-            var23 = (int)(gj.field_h + pl.field_a * (float)var20 + MatchPhase.field_d * (float)this.field_n + TextureFilter.field_c * (float)var21);
+            var23 = (int)(VertexAttribute.field_h + pl.field_a * (float)var20 + MatchPhase.field_d * (float)this.field_n + TextureFilter.field_c * (float)var21);
             if (this.field_S.field_D > var23) {
               var18 = 1;
             }
@@ -4849,7 +4849,7 @@ final class HardwareModel extends ToolkitModel {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -4875,25 +4875,25 @@ final class HardwareModel extends ToolkitModel {
           this.field_Y = param1;
           if (param3 ||
             DiskCacheWorker.hasFlag2048((byte) 112, this.field_h, this.field_Y)) {
-            this.field_ib = new hg(C2SChooseRewardPacket.a(true, this.field_Y, this.field_h));
+            this.field_ib = new HardwareModelVertexStream(C2SChooseRewardPacket.a(true, this.field_Y, this.field_h));
           }
           if (param3 ||
             S2CRoundDeadlinePacket.hasFlag2048(this.field_Y, this.field_h, 0)) {
-            this.field_d = new hg(pr.a(this.field_Y, -23611, this.field_h));
+            this.field_d = new HardwareModelVertexStream(pr.a(this.field_Y, -23611, this.field_h));
           }
           if (param3 ||
             S2CMatchResultPacket.hasFlag2048(this.field_h, this.field_Y, 128)) {
-            this.field_E = new hg(no.a(this.field_h, this.field_Y, 36864));
+            this.field_E = new HardwareModelVertexStream(no.a(this.field_h, this.field_Y, 36864));
           }
           if (param3 ||
             HardwareUnlitEffect.a(this.field_h, this.field_Y, 2048)) {
-            this.field_O = new hg(OpenGlTransform3D.c(this.field_Y, this.field_h, -19531));
+            this.field_O = new HardwareModelVertexStream(OpenGlTransform3D.c(this.field_Y, this.field_h, -19531));
           }
           if (!param3 &&
             !FollowCamera.hasFlag2048(-1, this.field_Y, this.field_h)) {
             return;
           }
-          this.field_g = new gg(C2SChooseRewardPacket.a(this.field_Y, this.field_h, (byte) -111));
+          this.field_g = new HardwareModelIndexData(C2SChooseRewardPacket.a(this.field_Y, this.field_h, (byte) -111));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4905,7 +4905,7 @@ final class HardwareModel extends ToolkitModel {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

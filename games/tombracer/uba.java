@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uba extends DebouncedValidationSource implements TextInputListener, eaa {
+final class uba extends DebouncedValidationSource implements TextInputListener, DropdownListener {
     static int field_f;
     DateInputWidget field_i;
     static String[] loadingQuipsShort;
@@ -62,7 +62,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
             this.onTextChanged((TextInputWidget) null, -90);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -82,33 +82,33 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
           var4 = this.field_i.getDay((byte) 110);
           var5 = ResourceArchive.currentYear((byte) 125);
           if (~var4 > param0) {
-            stackIn_3_0 = fp.field_c;
+            stackIn_3_0 = TextureCombineSource.field_c;
             return stackIn_3_0;
           }
           if (var4 > -3 + var5) {
-            stackIn_6_0 = fp.field_c;
+            stackIn_6_0 = TextureCombineSource.field_c;
             return stackIn_6_0;
           }
           if (!fa.isValidDate(var3, var2_int, true, var4)) {
-            stackIn_10_0 = fp.field_c;
+            stackIn_10_0 = TextureCombineSource.field_c;
             return stackIn_10_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return fp.field_c;
+          return TextureCombineSource.field_c;
         }
         return LightSource.field_k;
     }
 
-    public final void a(int param0, DropdownList param1) {
+    public final void onSelectionChanged(int param0, DropdownList param1) {
         if (param0 != -3) {
           return;
         }
         try {
           this.markEdited(-81);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uba.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uba.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class uba extends DebouncedValidationSource implements TextInputListener, 
             field_f = -61;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uba.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uba.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

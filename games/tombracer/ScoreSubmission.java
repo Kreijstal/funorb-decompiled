@@ -29,7 +29,7 @@ final class ScoreSubmission extends IntrusiveNode {
           return RevolverItemComponent.field_J[param0];
         }
         if (var5 == 2) {
-          return ta.field_ub[param0];
+          return LabelledRow.field_ub[param0];
         }
         if (var5 == 3) {
           return PowerUpItemBehaviour.field_t[param0];
@@ -91,7 +91,7 @@ final class ScoreSubmission extends IntrusiveNode {
           this.scores = param6;
           this.courseId = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

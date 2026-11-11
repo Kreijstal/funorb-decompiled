@@ -31,9 +31,9 @@ final class ol {
         if (var13 <= 64.0) {
           var15 = 255;
         }
-        var15 = za.clampValue(0, 48, var6, var15);
+        var15 = GraphicsHeap.clampValue(0, 48, var6, var15);
         if (param2 == -91) {
-          var15 = var15 * to.field_n[param1] / var6;
+          var15 = var15 * HardwareGraphicsHeap.field_n[param1] / var6;
           return var15;
         }
         return 56;
@@ -86,7 +86,7 @@ final class ol {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

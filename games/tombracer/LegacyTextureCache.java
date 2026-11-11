@@ -17,7 +17,7 @@ final class LegacyTextureCache {
         this.field_d.demoteOldEntries(104, 5);
     }
 
-    final LegacyOpenGlTexture2D a(int param0, int param1) {
+    final LegacyOpenGlTexture2D getTexture(int param0, int param1) {
         Object var3;
         TextureMetadata var5;
         int var6;
@@ -396,7 +396,7 @@ final class LegacyTextureCache {
           this.field_b = param1;
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hsa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hsa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

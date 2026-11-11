@@ -788,7 +788,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_p = eba.parseInt(var7, -39, 16);
+                                field_p = SoftCacheEntry.parseInt(var7, -39, 16);
                               }
                             } else {
                               field_q = -1;
@@ -798,7 +798,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_q = eba.parseInt(var6, -97, 16);
+                          field_q = SoftCacheEntry.parseInt(var6, -97, 16);
                         }
                       } else {
                         field_o = -1;
@@ -808,7 +808,7 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_o = eba.parseInt(var5, -69, 16);
+                    field_o = SoftCacheEntry.parseInt(var5, -69, 16);
                   }
                 } else {
                   field_v = field_r;
@@ -822,7 +822,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_x = eba.parseInt(var3, -94, 16);
+            field_x = SoftCacheEntry.parseInt(var3, -94, 16);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

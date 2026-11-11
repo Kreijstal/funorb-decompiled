@@ -37,7 +37,7 @@ final class PlayPhase extends MatchPhase {
           if (!this.viewports[var4].isDismissed(1727002282) &&
             this.matchState.hasResigned((byte) -127, var4)) {
             this.viewports[var4].setDismissed(60, true);
-            this.viewports[var4].scrollBy(0, (byte) 108, 2 * aaa.a(false));
+            this.viewports[var4].scrollBy(0, (byte) 108, 2 * LegacyOpenGlWaterTextures.getCanvasWidth(false));
           }
         }
         if (this.screen.isSpectating((byte) 95)) {
@@ -174,7 +174,7 @@ final class PlayPhase extends MatchPhase {
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             PlayerViewport.drawTiledFrame(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
-            kn.field_p.drawWrapped((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
+            TooltipRenderer.field_p.drawWrapped((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, SinglePlayerCourseGenerator.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
             return;
@@ -188,9 +188,9 @@ final class PlayPhase extends MatchPhase {
             } else {
               var4 = MouseInputHandler.field_b.toUpperCase();
             }
-            var5_intLifetime1Lifetime1 = 40 + MatchStatistics.field_n.a(var4, (byte) 41);
-            var6Lifetime1Lifetime1 = aaa.a(false) / 2;
-            var7_intLifetime1Lifetime1 = SwitchLinkList.b(0) / 2;
+            var5_intLifetime1Lifetime1 = 40 + MatchStatistics.field_n.stringWidth(var4, (byte) 41);
+            var6Lifetime1Lifetime1 = LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2;
+            var7_intLifetime1Lifetime1 = SwitchLinkList.getCanvasHeight(0) / 2;
             PlayerViewport.drawTiledFrame(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -MatchStatistics.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
             if (this.field_q > 50) {
               if (0 != this.matchState.gameMode) {
@@ -204,8 +204,8 @@ final class PlayPhase extends MatchPhase {
             }
           }
           if (this.field_p) {
-            S2CNextRoundPacket.a(4, kn.field_p, "Debug", 565, 0, 48, 16777215);
-            S2CNextRoundPacket.a(4, kn.field_p, "FPS: " + RenderableNode.field_f, 565, 0, 64, 16777215);
+            S2CNextRoundPacket.drawRightTextWithShadow(4, TooltipRenderer.field_p, "Debug", 565, 0, 48, 16777215);
+            S2CNextRoundPacket.drawRightTextWithShadow(4, TooltipRenderer.field_p, "FPS: " + RenderableNode.field_f, 565, 0, 64, 16777215);
             if (this.screen.field_D) {
               this.protocol.drawDebugInfo(16);
             }
@@ -228,10 +228,10 @@ final class PlayPhase extends MatchPhase {
                 var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, pl.a((byte) 64));
               }
               var8Lifetime1 = 64;
-              var9 = -64 + SwitchLinkList.b(0);
+              var9 = -64 + SwitchLinkList.getCanvasHeight(0);
               var10 = var5.getTick((byte) 69);
               var11 = 16777215;
-              RoomEffectTraps.a(0, -34, -16 + var9, "Par Time: " + DropAnimation.formatTime(var7.field_h, (byte) -8), var8Lifetime1, kn.field_p, 16777215);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -34, -16 + var9, "Par Time: " + DropAnimation.formatTime(var7.field_h, (byte) -8), var8Lifetime1, TooltipRenderer.field_p, 16777215);
               var17 = "Room total: " + DropAnimation.formatTime(var10, (byte) -8);
               var12 = var17;
               var12Lifetime1 = var17;
@@ -245,9 +245,9 @@ final class PlayPhase extends MatchPhase {
                   var11 = 16776960;
                 }
               }
-              RoomEffectTraps.a(0, -73, var9, var12Lifetime2, var8Lifetime1, kn.field_p, var11);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -73, var9, var12Lifetime2, var8Lifetime1, TooltipRenderer.field_p, var11);
               var12Lifetime3 = "Member Only: " + PlayerInputQueue.findRoomDefinition(-112, var5.getId((byte) -82)).field_d;
-              RoomEffectTraps.a(0, -80, 16 + var9, var12Lifetime3, var8Lifetime1, kn.field_p, 16777215);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -80, 16 + var9, var12Lifetime3, var8Lifetime1, TooltipRenderer.field_p, 16777215);
               var13 = var16.getExitTick(2158);
               if (var13 > 0) {
                 var11Lifetime1 = 16777215;
@@ -264,10 +264,10 @@ final class PlayPhase extends MatchPhase {
                   var12Lifetime4Lifetime2 = var18 + " !!! :(";
                   var11Lifetime1 = 16711680;
                 }
-                RoomEffectTraps.a(0, -62, var9 + 32, var12Lifetime4Lifetime2, var8Lifetime1, kn.field_p, var11Lifetime1);
+                RoomEffectTraps.drawLeftTextWithShadow(0, -62, var9 + 32, var12Lifetime4Lifetime2, var8Lifetime1, TooltipRenderer.field_p, var11Lifetime1);
               }
-              RoomEffectTraps.a(0, -96, var9 + 46, "Room: " + var7.field_b + " (multi " + var7.field_a + ") (single  " + var6Lifetime1Lifetime2 + ")", var8Lifetime1, kn.field_p, 16777215);
-              RoomEffectTraps.a(0, -33, var9 + 62, "Group: " + var7.field_g, var8Lifetime1, kn.field_p, 16777215);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -96, var9 + 46, "Room: " + var7.field_b + " (multi " + var7.field_a + ") (single  " + var6Lifetime1Lifetime2 + ")", var8Lifetime1, TooltipRenderer.field_p, 16777215);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -33, var9 + 62, "Group: " + var7.field_g, var8Lifetime1, TooltipRenderer.field_p, 16777215);
             }
           }
           return;
@@ -281,33 +281,33 @@ final class PlayPhase extends MatchPhase {
         PlayerSimulation var6;
         if (RasterizerOperator.d(20125)) {
           if (param2 == 28) {
-            this.a(-1, (byte) -109);
-            ica.field_a = true;
+            this.setZoomOverride(-1, (byte) -109);
+            TextureCombineOperation.field_a = true;
             return true;
           }
           if (param2 == 16) {
-            this.a(0, (byte) -109);
+            this.setZoomOverride(0, (byte) -109);
             return true;
           }
           if (param2 == 17) {
-            this.a(1, (byte) -109);
+            this.setZoomOverride(1, (byte) -109);
             return true;
           }
           if (18 == param2) {
-            this.a(2, (byte) -109);
+            this.setZoomOverride(2, (byte) -109);
             return true;
           }
           if (19 == param2) {
-            this.a(3, (byte) -109);
+            this.setZoomOverride(3, (byte) -109);
             return true;
           }
           if (param2 == 20) {
-            this.a(4, (byte) -109);
+            this.setZoomOverride(4, (byte) -109);
             return true;
           }
           if (param2 == 21) {
-            stackIn_14_0 = !(ica.field_a);
-            ica.field_a = stackIn_14_0;
+            stackIn_14_0 = !(TextureCombineOperation.field_a);
+            TextureCombineOperation.field_a = stackIn_14_0;
             return true;
           }
           if (param2 == 40) {
@@ -417,7 +417,7 @@ final class PlayPhase extends MatchPhase {
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void setZoomOverride(int param0, byte param1) {
         int var3 = 0;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -427,7 +427,7 @@ final class PlayPhase extends MatchPhase {
         for (var3 = 0; var3 < this.viewports.length; var3++) {
           if (~this.screen.getViewedPlayerIndex(112) == ~var3 ||
             this.screen.isSpectating((byte) 102)) {
-            this.viewports[var3].a((byte) -115, param0);
+            this.viewports[var3].setZoomOverride((byte) -115, param0);
           }
         }
         if (param1 != -109) {
@@ -503,7 +503,7 @@ final class PlayPhase extends MatchPhase {
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (OpenGlTransform3D.field_e == null &&
-            !joa.pollGameSocketConnection(false, (byte) -58)) {
+            !GzipInflater.pollGameSocketConnection(false, (byte) -58)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
@@ -568,7 +568,7 @@ final class PlayPhase extends MatchPhase {
             WeaveOperator.field_q.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              ProceduralTexture.field_p = ne.field_c;
+              ProceduralTexture.field_p = VertexStreamLayout.field_c;
               PressureSwitchBehaviour.field_s = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
@@ -590,7 +590,7 @@ final class PlayPhase extends MatchPhase {
               }
             }
           }
-          if (ProceduralTexture.field_p == ne.field_c) {
+          if (ProceduralTexture.field_p == VertexStreamLayout.field_c) {
             var9Lifetime2 = 2;
             if (LegacyRidgedWaterNoise.ensureGamePacketBytes(var9Lifetime2, -1)) {
               var10Lifetime1 = WeaveOperator.field_q.readUnsignedShort(124);
@@ -662,7 +662,7 @@ final class PlayPhase extends MatchPhase {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -707,7 +707,7 @@ final class PlayPhase extends MatchPhase {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -736,7 +736,7 @@ final class PlayPhase extends MatchPhase {
           this.screen.roundDeadlineTick = -1;
           this.applyViewportLayout((byte) 122);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

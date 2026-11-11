@@ -44,7 +44,7 @@ final class kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "kc.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "kc.B(" + param0 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class kc {
           }
           var7.unlink(105);
           var7.unlinkSecondary(-7975);
-          tba.field_k = tba.field_k - 1;
+          MonochromeRowCacheEntry.field_k = MonochromeRowCacheEntry.field_k - 1;
           var5 = ql.field_k;
           var5.writeCipheredOpcode(param1, -2988);
           var5.position = var5.position + 1;
@@ -109,7 +109,7 @@ final class kc {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

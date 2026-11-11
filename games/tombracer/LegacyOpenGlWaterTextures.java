@@ -1,0 +1,102 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LegacyOpenGlWaterTextures {
+    LegacyOpenGlTexture3D field_c;
+    LegacyOpenGlTexture2D[] field_i;
+    LegacyOpenGlTexture3D field_h;
+    LegacyOpenGlTexture2D[] field_f;
+    static hla field_d;
+    LegacyOpenGlTexture3D field_a;
+    static int field_b;
+    static String field_e;
+    boolean field_g;
+
+    public static void releaseStatics(byte param0) {
+        int var1 = 84 % ((83 - param0) / 35);
+        field_d = null;
+        field_e = null;
+    }
+
+    final static int getCanvasWidth(boolean param0) {
+        if (param0) {
+          field_d = (hla) null;
+          return mma.field_a;
+        }
+        return mma.field_a;
+    }
+
+    LegacyOpenGlWaterTextures(OpenGlToolkit param0) {
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        LegacyOpenGlTexture3D var4 = null;
+        mq var10 = null;
+        byte[] var20 = null;
+        byte[] var21 = null;
+        byte[] var22 = null;
+        byte[] var23 = null;
+        byte[] var24 = null;
+        int var2_intLifetime1;
+        this.field_i = null;
+        this.field_h = null;
+        this.field_f = null;
+        this.field_c = null;
+        this.field_a = null;
+        try {
+          this.field_g = param0.field_V;
+          ItemModel.ensureWaterNoiseTextures(param0, 121);
+          if (!this.field_g) {
+            this.field_f = new LegacyOpenGlTexture2D[16];
+            for (var2_int = 0; 16 > var2_int; var2_int++) {
+              var23 = S2CNextRoundPacket.copyBytesFrom(hna.field_e, 32768, 32768 * var2_int, false);
+              this.field_f[var2_int] = new LegacyOpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
+            }
+            this.field_i = new LegacyOpenGlTexture2D[16];
+            for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
+              var24 = S2CNextRoundPacket.copyBytesFrom(TreasureValuesOverlay.field_l, 32768, var2_intLifetime1 * 32768, false);
+              this.field_i[var2_intLifetime1] = new LegacyOpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
+            }
+            return;
+          }
+          var20 = IntPoint.unwrapByteStorage(hna.field_e, 13588, false);
+          this.field_h = new LegacyOpenGlTexture3D(param0, 6410, 128, 128, 16, var20, 6410);
+          var21 = IntPoint.unwrapByteStorage(TreasureValuesOverlay.field_l, 13588, false);
+          this.field_a = new LegacyOpenGlTexture3D(param0, 6410, 128, 128, 16, var21, 6410);
+          var10 = param0.field_zc;
+          if (var10.ensureShader((byte) 11)) {
+            var22 = IntPoint.unwrapByteStorage(LegacyOpenGlTexture1D.field_m, 13588, false);
+            this.field_c = new LegacyOpenGlTexture3D(param0, 6408, 128, 128, 16);
+            var4 = new LegacyOpenGlTexture3D(param0, 6409, 128, 128, 16, var22, 6409);
+            if (var10.a(-112, 2.0f, var4, this.field_c)) {
+              this.field_c.generateMipmaps(9729);
+              var4.close(0);
+              return;
+            }
+            this.field_c.close(0);
+            this.field_c = null;
+            var4.close(0);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_17_0 = var2;
+          stackIn_17_1 = new StringBuilder().append("aaa.<init>(");
+          if (param0 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_e = "To play a multiplayer game, please log in or create a free account.";
+    }
+}

@@ -9,9 +9,9 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
     static int textureWidth;
     private float[] field_e;
     private int field_h;
-    private aaa field_m;
+    private LegacyOpenGlWaterTextures field_m;
     static SoundCache field_j;
-    private pva field_k;
+    private ArbProgramHandle field_k;
     static boolean field_f;
 
     public static void releaseStatics(int param0) {
@@ -53,7 +53,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
         }
     }
 
-    LegacyOpenGlTurbulentTextureEffect(OpenGlToolkit param0, aaa param1) {
+    LegacyOpenGlTurbulentTextureEffect(OpenGlToolkit param0, LegacyOpenGlWaterTextures param1) {
         super(param0);
         int var6 = 0;
         int var9 = 0;
@@ -101,7 +101,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
                 this.field_e[incrementValue$1] = (float)var25[var9] / 4096.0f;
               }
             }
-            this.a((byte) 44);
+            this.buildDisplayLists((byte) 44);
             return;
           }
           return;
@@ -121,7 +121,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -189,11 +189,11 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
             field_j = (SoundCache) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ns.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ns.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(byte param0) {
+    private final void buildDisplayLists(byte param0) {
         this.field_i = new OpenGlDisplayLists(this.toolkit, 2);
         this.field_i.beginList((byte) 6, 0);
         this.toolkit.setActiveTextureUnit(1, true);
@@ -221,7 +221,7 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
 
     final boolean isSupported(int param0) {
         if (param0 != -11921) {
-          this.field_k = (pva) null;
+          this.field_k = (ArbProgramHandle) null;
           return true;
         }
         return true;

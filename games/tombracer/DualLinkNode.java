@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class DualLinkNode extends IntrusiveNode {
-    static ura field_h;
+    static TextureTransformMode field_h;
     static int field_i;
     DualLinkNode secondaryPrevious;
     DualLinkNode secondaryNext;
@@ -23,7 +23,7 @@ class DualLinkNode extends IntrusiveNode {
         }
         if (param0 != 0) {
           PacketBuffer var3 = (PacketBuffer) null;
-          DualLinkNode.a(-117, (PacketBuffer) null);
+          DualLinkNode.decodeRasterShape(-117, (PacketBuffer) null);
           return true;
         }
         return true;
@@ -58,20 +58,20 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final static hc a(int param0, PacketBuffer param1) {
+    final static LineShape decodeRasterShape(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        hc stackIn_2_0 = null;
-        hc stackIn_4_0 = null;
+        LineShape stackIn_2_0 = null;
+        LineShape stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = new hc(param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readUnsignedMedium(-32768), param1.readUnsignedByte(255));
+            stackIn_4_0 = new LineShape(param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readUnsignedMedium(-32768), param1.readUnsignedByte(255));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (hc) null;
+          stackIn_2_0 = (LineShape) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     static {
-        field_h = new ura();
+        field_h = new TextureTransformMode();
         field_i = 0;
     }
 }

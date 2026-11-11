@@ -17,7 +17,7 @@ final class uaa {
         field_d = null;
     }
 
-    final static int a(byte param0, gqa param1) {
+    final static int a(byte param0, ChatMessage param1) {
         int var2_int = 0;
         int var4 = 0;
         int stackIn_14_0 = 0;
@@ -66,7 +66,7 @@ final class uaa {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

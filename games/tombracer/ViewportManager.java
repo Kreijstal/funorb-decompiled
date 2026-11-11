@@ -20,7 +20,7 @@ final class ViewportManager {
     private float field_r;
     private int field_k;
     private int field_t;
-    private sh field_l;
+    private ViewportSizeListener field_l;
     private int field_b;
 
     final boolean canResizeViewport(byte param0) {
@@ -77,10 +77,10 @@ final class ViewportManager {
               this.field_k = -11;
             }
             if (mma.field_a != var2) {
-              this.field_l.a(var2, -117, var3);
+              this.field_l.onViewportResized(var2, -117, var3);
             } else {
-              if (var3 != qf.field_i) {
-                this.field_l.a(var2, -117, var3);
+              if (var3 != FloatPacketBuffer.field_i) {
+                this.field_l.onViewportResized(var2, -117, var3);
               }
             }
             if (this.field_d > 0) {
@@ -93,8 +93,8 @@ final class ViewportManager {
               this.field_k = -11;
             }
             if (mma.field_a != var2 ||
-              var3 != qf.field_i) {
-              this.field_l.a(var2, -117, var3);
+              var3 != FloatPacketBuffer.field_i) {
+              this.field_l.onViewportResized(var2, -117, var3);
             }
             if (this.field_d <= 0) {
               return;
@@ -106,23 +106,23 @@ final class ViewportManager {
         }
         if (param0 <= -31) {
           if (mma.field_a != var2) {
-            this.field_l.a(var2, -117, var3);
+            this.field_l.onViewportResized(var2, -117, var3);
           } else {
-            if (var3 != qf.field_i) {
-              this.field_l.a(var2, -117, var3);
+            if (var3 != FloatPacketBuffer.field_i) {
+              this.field_l.onViewportResized(var2, -117, var3);
             }
           }
         } else {
           this.field_k = -11;
           if (mma.field_a != var2) {
-            this.field_l.a(var2, -117, var3);
+            this.field_l.onViewportResized(var2, -117, var3);
             if (this.field_d > 0) {
               lp.field_g = (this.field_d - mma.field_a) / 2;
             }
             return;
           }
-          if (var3 != qf.field_i) {
-            this.field_l.a(var2, -117, var3);
+          if (var3 != FloatPacketBuffer.field_i) {
+            this.field_l.onViewportResized(var2, -117, var3);
           }
         }
         if (this.field_d <= 0) {
@@ -144,7 +144,7 @@ final class ViewportManager {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         if (!param0) {
-          if (null != dq.field_f) {
+          if (null != ColourRowCacheEntry.field_f) {
             return;
           }
           if (ReportAbuseDialog.field_ub <= 0) {
@@ -172,16 +172,16 @@ final class ViewportManager {
             }
           }
           if (this.field_b != mma.field_a) {
-            this.field_l.a(this.field_b, -124, this.field_g);
+            this.field_l.onViewportResized(this.field_b, -124, this.field_g);
           } else {
-            if (this.field_g != qf.field_i) {
-              this.field_l.a(this.field_b, -124, this.field_g);
+            if (this.field_g != FloatPacketBuffer.field_i) {
+              this.field_l.onViewportResized(this.field_b, -124, this.field_g);
             }
           }
           return;
         }
         this.update(true);
-        if (null != dq.field_f) {
+        if (null != ColourRowCacheEntry.field_f) {
           return;
         }
         if (ReportAbuseDialog.field_ub > 0) {
@@ -207,10 +207,10 @@ final class ViewportManager {
             }
           }
           if (this.field_b != mma.field_a) {
-            this.field_l.a(this.field_b, -124, this.field_g);
+            this.field_l.onViewportResized(this.field_b, -124, this.field_g);
           } else {
-            if (this.field_g != qf.field_i) {
-              this.field_l.a(this.field_b, -124, this.field_g);
+            if (this.field_g != FloatPacketBuffer.field_i) {
+              this.field_l.onViewportResized(this.field_b, -124, this.field_g);
             }
           }
           return;
@@ -235,10 +235,10 @@ final class ViewportManager {
         } else {
           if (this.field_d <= 0) {
             if (this.field_b != mma.field_a) {
-              this.field_l.a(this.field_b, -124, this.field_g);
+              this.field_l.onViewportResized(this.field_b, -124, this.field_g);
             } else {
-              if (this.field_g != qf.field_i) {
-                this.field_l.a(this.field_b, -124, this.field_g);
+              if (this.field_g != FloatPacketBuffer.field_i) {
+                this.field_l.onViewportResized(this.field_b, -124, this.field_g);
               }
             }
             return;
@@ -246,14 +246,14 @@ final class ViewportManager {
           lp.field_g = 0;
         }
         if (this.field_b == mma.field_a &&
-          this.field_g == qf.field_i) {
+          this.field_g == FloatPacketBuffer.field_i) {
           return;
         }
-        this.field_l.a(this.field_b, -124, this.field_g);
+        this.field_l.onViewportResized(this.field_b, -124, this.field_g);
     }
 
-    final void a(int param0) {
-        this.field_l.a(this.field_c, -122, this.field_j);
+    final void restoreWindowSize(int param0) {
+        this.field_l.onViewportResized(this.field_c, -122, this.field_j);
         if (param0 < 51) {
           this.field_o = 114;
         }
@@ -267,30 +267,30 @@ final class ViewportManager {
         }
     }
 
-    final via enterFullscreen(int param0) {
-        via var2 = null;
-        via var2Lifetime1;
-        this.field_j = qf.field_i;
+    final FullscreenCanvas enterFullscreen(int param0) {
+        FullscreenCanvas var2 = null;
+        FullscreenCanvas var2Lifetime1;
+        this.field_j = FloatPacketBuffer.field_i;
         if (param0 != 27013) {
           this.field_s = -44;
           this.field_c = mma.field_a;
-          this.field_l.a(this.field_s, -123, this.field_p);
+          this.field_l.onViewportResized(this.field_s, -123, this.field_p);
           ReportAbuseDialog.field_Cb = false;
           var2 = r.createFullscreenCanvas(this.field_p, 0, param0 - 7720, dsa.field_c, this.field_s, 0);
           if (var2 == null) {
-            this.a(53);
+            this.restoreWindowSize(53);
             return var2;
           }
           return var2;
         }
         this.field_c = mma.field_a;
-        this.field_l.a(this.field_s, -123, this.field_p);
+        this.field_l.onViewportResized(this.field_s, -123, this.field_p);
         ReportAbuseDialog.field_Cb = false;
         var2Lifetime1 = r.createFullscreenCanvas(this.field_p, 0, param0 - 7720, dsa.field_c, this.field_s, 0);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }
-        this.a(53);
+        this.restoreWindowSize(53);
         return var2Lifetime1;
     }
 

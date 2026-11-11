@@ -3,7 +3,7 @@
  */
 final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     private boolean field_e;
-    private hk field_f;
+    private HardwareWaterTextures field_f;
     private qca field_k;
     private boolean field_h;
     static wm field_j;
@@ -11,7 +11,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     static UiComponent field_i;
     static su field_g;
 
-    OpenGlEnvironmentWaterEffect(HardwareOpenGlToolkit param0, ResourceArchive param1, hk param2) {
+    OpenGlEnvironmentWaterEffect(HardwareOpenGlToolkit param0, ResourceArchive param1, HardwareWaterTextures param2) {
         super(param0);
         pr var4 = null;
         RuntimeException var4_ref = null;
@@ -69,7 +69,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
     final void enable(int param0, boolean param1) {
         long var5 = 0L;
         int var4 = -72 % ((41 - param0) / 62);
-        na var3 = this.owner.environmentCubeTexture(11);
+        CubeTexture var3 = this.owner.environmentCubeTexture(11);
         if (this.field_e &&
           var3 != null) {
           this.owner.setActiveTextureUnit(1, false);
@@ -186,7 +186,7 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

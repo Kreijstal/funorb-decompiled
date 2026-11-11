@@ -38,10 +38,10 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
         }
         var4 = param3;
         if (var4 == 0) {
-          return wl.field_f[param2][param1];
+          return ClipStackEntry.field_f[param2][param1];
         }
         if (var4 == 1) {
-          return qja.field_f[param1];
+          return MazeSearchNode.field_f[param1];
         }
         if (3 != var4) {
           throw new IllegalArgumentException("Animation category not recognised");
@@ -72,7 +72,7 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
           this.toolkit.bindTexture(true, param2);
           this.toolkit.setTextureCombineMode(1, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tva.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tva.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

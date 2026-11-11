@@ -81,7 +81,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
           var37 = var30;
           var38 = var29 * (var12 - 1);
           if (gca.field_d <= param2 &&
-            hc.field_h >= param2) {
+            LineShape.field_h >= param2) {
             var57 = vaa.field_a[param2];
             var40 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param5 + param3);
             var41 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param5 + param3);
@@ -266,7 +266,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
             if (gca.field_d > var41Lifetime1) {
               continue;
             }
-            if (hc.field_h < var40Lifetime1) {
+            if (LineShape.field_h < var40Lifetime1) {
               continue;
             }
             var42Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var8_int + param3);
@@ -275,7 +275,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
               if (var40Lifetime1 >= gca.field_d) {
                 C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var40Lifetime1], var43Lifetime1);
               }
-              if (var41Lifetime1 > hc.field_h) {
+              if (var41Lifetime1 > LineShape.field_h) {
                 continue;
               }
               C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var41Lifetime1], var43Lifetime1);
@@ -289,7 +289,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
               C2SRoomResultPacket.fillRange((byte) -55, param1, var44, var58, var45);
               C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, var58, var44);
             }
-            if (var41Lifetime1 > hc.field_h) {
+            if (var41Lifetime1 > LineShape.field_h) {
               continue;
             }
             var59 = vaa.field_a[var41Lifetime1];
@@ -300,7 +300,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var8), "hl.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var8), "hl.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -375,7 +375,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -394,7 +394,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
           this.field_j = param2 ? true : false;
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

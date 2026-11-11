@@ -14,7 +14,7 @@ final class ReportAbuseDialog extends UiComponent {
     static int field_ub;
     private UiComponent field_wb;
     private StringBuilder field_vb;
-    private ta field_Ab;
+    private LabelledRow field_Ab;
     static volatile boolean field_Cb;
 
     private final int appendReasonButton(int param0, int param1, UiComponent param2, int param3, UiComponent param4) {
@@ -56,11 +56,11 @@ final class ReportAbuseDialog extends UiComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_Eb = null;
         if (!param0) {
           field_Cb = true;
@@ -72,7 +72,7 @@ final class ReportAbuseDialog extends UiComponent {
         return this.field_vb.toString();
     }
 
-    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, ta param9, UiComponent param10, String param11, long param12) {
+    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, LabelledRow param9, UiComponent param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$1 = null;
         UiComponent[] var15 = null;
@@ -90,13 +90,13 @@ final class ReportAbuseDialog extends UiComponent {
         int var26 = 0;
         UiComponent[] var28 = null;
         Object stackIn_7_0;
-        ta stackIn_7_1;
-        ta stackIn_7_2;
+        LabelledRow stackIn_7_1;
+        LabelledRow stackIn_7_2;
         long stackIn_7_3;
-        ta stackIn_7_4;
+        LabelledRow stackIn_7_4;
         Object stackIn_8_0;
-        ta stackIn_8_1;
-        ta stackIn_8_2;
+        LabelledRow stackIn_8_1;
+        LabelledRow stackIn_8_2;
         String stackIn_8_5;
         UiComponent stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
@@ -118,11 +118,11 @@ final class ReportAbuseDialog extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15_ref = null;
         Object stackIn_7_0Lifetime1;
-        ta stackIn_7_1Lifetime1;
-        ta stackIn_7_2Lifetime1;
+        LabelledRow stackIn_7_1Lifetime1;
+        LabelledRow stackIn_7_2Lifetime1;
         Object stackIn_8_0Lifetime1;
-        ta stackIn_8_1Lifetime1;
-        ta stackIn_8_2Lifetime1;
+        LabelledRow stackIn_8_1Lifetime1;
+        LabelledRow stackIn_8_2Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
@@ -170,7 +170,7 @@ final class ReportAbuseDialog extends UiComponent {
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
                 stackIn_7_3 = 0L;
-                stackIn_7_4 = (ta) (param9);
+                stackIn_7_4 = (LabelledRow) (param9);
                 if (PrimMazeGenerator.field_e < 7) {
                   stackIn_7_0Lifetime1 = this;
                   stackIn_7_1Lifetime1 = null;
@@ -188,7 +188,7 @@ final class ReportAbuseDialog extends UiComponent {
                 stackIn_8_2Lifetime1 = null;
                 stackIn_8_5 = ur.field_b;
               }
-              this.field_Ab = new ta(stackIn_7_3, stackIn_7_4, stackIn_8_5);
+              this.field_Ab = new LabelledRow(stackIn_7_3, stackIn_7_4, stackIn_8_5);
               this.field_wb.addChild(-125, this.field_Ab);
             }
             var28 = new UiComponent[3];
@@ -370,7 +370,7 @@ final class ReportAbuseDialog extends UiComponent {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -428,7 +428,7 @@ final class ReportAbuseDialog extends UiComponent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -447,7 +447,7 @@ final class ReportAbuseDialog extends UiComponent {
 
     final int updateAndPollReason(int param0, boolean param1) {
         int var3 = 0;
-        ta stackIn_6_0 = null;
+        LabelledRow stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
         UiComponent stackIn_15_0 = null;
         boolean stackIn_16_1 = false;

@@ -39,11 +39,11 @@ final class CurveOperator extends TextureOperator {
           int var4_int = 93 / ((param0 + 33) / 53);
           OpenGlUnderwaterEffect.field_q = 2;
           var5 = (CharSequence) ((Object) param2);
-          mn.field_n = jd.normalizeDisplayName(1, var5);
-          ica.field_b = param1;
-          bb.a(-21844);
+          mn.field_n = OpenGlTexture3D.normalizeDisplayName(1, var5);
+          TextureCombineOperation.field_b = param1;
+          HiscoreTable.openQuickChatMenu(-21844);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fs.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fs.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class CurveOperator extends TextureOperator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class CurveOperator extends TextureOperator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

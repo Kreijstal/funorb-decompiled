@@ -24,7 +24,7 @@ final class dga {
           DivisionMazeGenerator.field_f = (1 & var2_int) << 16;
           DivisionMazeGenerator.field_f = DivisionMazeGenerator.field_f + param0.readUnsignedShort(127);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "dga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class dga {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 

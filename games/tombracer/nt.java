@@ -57,7 +57,7 @@ final class nt {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         if (!param0) {
           field_a = -25;
@@ -86,7 +86,7 @@ final class nt {
               var3 = var2.indexOf('?');
               var4Lifetime2 = "reload.ws";
               if (param1 != -1978) {
-                nt.a(true);
+                nt.releaseStatics(true);
               }
               if (var3 >= 0) {
                 var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
@@ -110,7 +110,7 @@ final class nt {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

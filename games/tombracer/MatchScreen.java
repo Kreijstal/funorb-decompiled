@@ -89,7 +89,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
           this.phase = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qh.GB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qh.GB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -246,7 +246,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (param0 <= 11) {
           return;
         }
-        iqa.field_c.disableWithPanel(114);
+        ToolkitInstance.field_c.disableWithPanel(114);
         this.matchState.characterChoices[this.localPlayerIndex].setCharacter(0, (byte) 37);
         this.startRound(106);
     }
@@ -269,16 +269,16 @@ final class MatchScreen extends GameScreen implements rqa {
         var4 = var9;
         if (param0 &&
           param1 &&
-          !iqa.field_c.isPanelActive(-8832) && (BeamShooterBehaviour.isScreenActive(-67, -1) ||
+          !ToolkitInstance.field_c.isPanelActive(-8832) && (BeamShooterBehaviour.isScreenActive(-67, -1) ||
           this.c(false))) {
           this.actionStates[0][0] = var9[HardwareOpenGlToolkit.field_hd];
           this.actionStates[0][1] = var9[mf.field_a];
           this.actionStates[0][2] = var9[ConsoleToken.field_k];
-          this.actionStates[0][3] = var9[fp.field_a];
+          this.actionStates[0][3] = var9[TextureCombineSource.field_a];
           this.actionStates[0][4] = var9[gsa.field_j];
           this.actionStates[0][7] = var9[MonochromeRowCache.field_i];
           this.actionStates[0][5] = var9[PlantModel.field_o];
-          this.actionStates[0][8] = var9[rta.field_g];
+          this.actionStates[0][8] = var9[MidiVoice.field_g];
           this.actionStates[0][6] = var9[hra.field_b];
           this.actionStates[1][1] = var9[97];
           this.actionStates[1][0] = var9[96];
@@ -357,9 +357,9 @@ final class MatchScreen extends GameScreen implements rqa {
           this.pingTimes = new int[var14_int];
           if (MatchState.h(1)) {
             if (!this.field_D) {
-              var15 = new ic();
+              var15 = new StatReportingObserverFactory();
             } else {
-              var15 = new aua();
+              var15 = new PlainScoringObserverFactory();
             }
             this.matchState = new MatchState(param2, param1, param5, param6, param7, param8, this.field_E, param10, param11, (ScoringObserverFactory) (var15), param12);
             if (!param0) {
@@ -438,7 +438,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -493,7 +493,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -522,7 +522,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -622,7 +622,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -643,8 +643,8 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!this.matchState.hasLeft(param1 ^ -28, var3) &&
             (1 << var3 & param0) > 0) {
             this.matchState.markLeft((byte) -95, var3);
-            var4 = BannerCommand.a(LegacyOpenGlFlowingWaterEffect.formatText(87, RemovedFromGameMenu.field_r, new String[]{this.getPlayerName(var3, false)}), (byte) -72);
-            iqa.field_c.addMessageNow(param1 + 23, var4);
+            var4 = BannerCommand.createBannerMessage(LegacyOpenGlFlowingWaterEffect.formatText(87, RemovedFromGameMenu.field_r, new String[]{this.getPlayerName(var3, false)}), (byte) -72);
+            ToolkitInstance.field_c.addMessageNow(param1 + 23, var4);
           }
         }
         if (param1 != -23) {
@@ -768,8 +768,8 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!this.matchState.hasResigned((byte) -93, var3) &&
             (param1 & 1 << var3) > 0) {
             this.matchState.markResigned(param0 ^ 4, var3);
-            var4 = BannerCommand.a(LegacyOpenGlFlowingWaterEffect.formatText(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
-            iqa.field_c.addMessageNow(0, var4);
+            var4 = BannerCommand.createBannerMessage(LegacyOpenGlFlowingWaterEffect.formatText(84, lu.field_c, new String[]{this.getPlayerName(var3, false)}), (byte) -124);
+            ToolkitInstance.field_c.addMessageNow(0, var4);
           }
           var3++;
         }
@@ -931,7 +931,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -960,7 +960,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1017,7 +1017,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -1083,7 +1083,7 @@ final class MatchScreen extends GameScreen implements rqa {
             var3 = RewardChoicePhase.createTextMessage(-108, LegacyOpenGlFlowingWaterEffect.formatText(99, DisplaySettingsDialog.field_Q, new String[]{this.getColouredPlayerName(param1, 9)}));
           }
         }
-        iqa.field_c.addMessageNow(0, var3);
+        ToolkitInstance.field_c.addMessageNow(0, var3);
     }
 
     private final void sendInputMask(boolean param0, int param1) {
@@ -1154,7 +1154,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
           this.setPhase(6, new ResultsPhase(this, this.protocol, param0));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1194,7 +1194,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -1321,7 +1321,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1369,10 +1369,10 @@ final class MatchScreen extends GameScreen implements rqa {
             var5 = (MatchScoringObserver) (this.matchState.simulations[var2].getObserver(9262));
             var6 = var5.pollPenaltyNotice((byte) 121);
             while (var6 != null) {
-              if (iqa.field_c.isEnabled(4782)) {
+              if (ToolkitInstance.field_c.isEnabled(4782)) {
                 var7 = this.formatDeathMessage(var6.getPlayer(-14065), (byte) -9, var6.getKind(74));
                 var8 = RewardChoicePhase.createTextMessage(-23, var7);
-                iqa.field_c.addMessageNow(0, var8);
+                ToolkitInstance.field_c.addMessageNow(0, var8);
               }
               var6 = var5.pollPenaltyNotice((byte) -57);
             }
@@ -1381,7 +1381,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (this.roundDeadlineTick != -1 &&
             var2Lifetime1 <= 500 &&
             var2Lifetime1 % 50 == 0) {
-            it.a(255, 131);
+            it.playMenuSound(255, 131);
           }
         }
         this.matchState.standings.update(16);
@@ -1418,7 +1418,7 @@ final class MatchScreen extends GameScreen implements rqa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

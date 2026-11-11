@@ -13,7 +13,7 @@ final class PlatformMazeComponent extends MazeComponent {
           super.encode(param0, param1);
           param1.writeBits((byte) -125, this.field_K, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class PlatformMazeComponent extends MazeComponent {
             param9 == param5 &&
             param3 == param1 &&
             param6 == param4) {
-            ik.a(param3, param2, 111, param7, param4, param5);
+            IntArrayRequest.a(param3, param2, 111, param7, param4, param5);
             return;
           }
           var11 = param2;
@@ -82,7 +82,7 @@ final class PlatformMazeComponent extends MazeComponent {
             var33 = var24 * var25;
             var34 = (var30 + (var28 + var32) >> 12) + param2;
             var35 = (var29 + var31 + var33 >> 12) + param5;
-            ik.a(var34, var11, -21, param7, var35, var12);
+            IntArrayRequest.a(var34, var11, -21, param7, var35, var12);
             var12 = var35;
             var11 = var34;
           }
@@ -90,7 +90,7 @@ final class PlatformMazeComponent extends MazeComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var10), "aea.WB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var10), "aea.WB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class PlatformMazeComponent extends MazeComponent {
         try {
           this.field_K = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class PlatformMazeComponent extends MazeComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class PlatformMazeComponent extends MazeComponent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class nb {
     static java.awt.Frame field_d;
-    static iw field_b;
+    static PrimitiveType field_b;
     static long field_c;
     static String field_a;
     private static String field_z;
@@ -12,7 +12,7 @@ final class nb {
         field_b = null;
         field_d = null;
         if (param0 != -95) {
-          field_b = (iw) null;
+          field_b = (PrimitiveType) null;
           field_a = null;
           return;
         }
@@ -23,6 +23,6 @@ final class nb {
         field_z = "nb.A(";
         field_c = 22238L;
         field_a = "Allow spectators?";
-        field_b = new iw();
+        field_b = new PrimitiveType();
     }
 }

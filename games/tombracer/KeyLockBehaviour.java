@@ -100,7 +100,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         try {
           super.attachToTrap(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sm.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sm.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         try {
           this.field_q = new SwitchState(15);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
           this.field_q = new SwitchState(15, param0, param1);
           this.field_s = 1 == param1.readBits((byte) 44, 1) ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
           this.field_q.encode(this.getScope((byte) 111), (byte) 108, param1);
           param1.writeBits((byte) -127, this.field_s ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

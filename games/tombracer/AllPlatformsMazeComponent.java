@@ -33,7 +33,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qi.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qi.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
             }
             var4 = null;
             if (var4 == null) {
-              var4 = (File) (gj.field_d.get(param1));
+              var4 = (File) (VertexAttribute.field_d.get(param1));
             }
             if (var4 == null) {
               return false;
@@ -112,7 +112,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
             } else {
               stackIn_25_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -158,7 +158,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -356,7 +356,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

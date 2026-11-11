@@ -192,7 +192,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -452,16 +452,16 @@ final class LegacyOpenGlBloomEffect extends LegacyOpenGlPostProcessEffect {
         return true;
     }
 
-    final static lqa b(boolean param0) {
-        iqa var1 = null;
-        iqa var1Lifetime1;
+    final static RendererOption getCurrentRendererOption(boolean param0) {
+        ToolkitInstance var1 = null;
+        ToolkitInstance var1Lifetime1;
         if (!param0) {
           var1 = baa.field_d.field_i;
-          return var1 == null ? null : (lqa) (var1.field_b);
+          return var1 == null ? null : (RendererOption) (var1.field_b);
         }
         LegacyOpenGlBloomEffect.d(-89);
         var1Lifetime1 = baa.field_d.field_i;
-        return var1Lifetime1 == null ? null : (lqa) (var1Lifetime1.field_b);
+        return var1Lifetime1 == null ? null : (RendererOption) (var1Lifetime1.field_b);
     }
 
     final void release(byte param0) {

@@ -18,7 +18,7 @@ abstract class DropInMenuScreen extends MenuScreen {
 
     final void draw(byte param0, boolean param1) {
         int var3 = this.field_q.getPosition(-82);
-        ik.field_h.draw(0, var3);
+        IntArrayRequest.field_h.draw(0, var3);
         this.drawPanelContent(param1, var3, (byte) -104);
         super.draw(param0, param1);
     }

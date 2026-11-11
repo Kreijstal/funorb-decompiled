@@ -41,7 +41,7 @@ final class wq implements MessagePanel {
         if (this.field_c) {
         }
         if (!this.field_c) {
-          this.field_b.c(param0 ^ -7104);
+          this.field_b.update(param0 ^ -7104);
         }
         var2 = this.field_b.getY((byte) 25);
         var3 = this.field_b.getX(param0 + 7726);
@@ -84,10 +84,10 @@ final class wq implements MessagePanel {
         if (this.field_c) {
           if (!this.field_c) {
             SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-            SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+            SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
             SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
-            this.field_b.b(param2, param0, -82);
+            this.field_b.draw(param2, param0, -82);
           }
           return;
         }
@@ -102,16 +102,16 @@ final class wq implements MessagePanel {
             RasterBuffer.a(-40 + (param2 + this.getHeight(false)), 2, tga.field_a, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
             RasterBuffer.a(-40 + this.getHeight(false) + param2, param1 ^ 20724, tga.field_a, 4, -20 + param0 + this.getWidth(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
           }
-          if (VerticalScrollbar.field_tb[fp.field_a]) {
+          if (VerticalScrollbar.field_tb[TextureCombineSource.field_a]) {
             RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
             RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, tga.field_a, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
           }
           if (!this.field_c) {
             SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-            SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+            SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
             SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
-            this.field_b.b(param2, param0, -82);
+            this.field_b.draw(param2, param0, -82);
           }
           return;
         }
@@ -122,34 +122,34 @@ final class wq implements MessagePanel {
         if (VerticalScrollbar.field_tb[mf.field_a]) {
           RasterBuffer.a(-40 + (param2 + this.getHeight(false)), 2, tga.field_a, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
           RasterBuffer.a(-40 + this.getHeight(false) + param2, param1 ^ 20724, tga.field_a, 4, -20 + param0 + this.getWidth(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
-          if (VerticalScrollbar.field_tb[fp.field_a]) {
+          if (VerticalScrollbar.field_tb[TextureCombineSource.field_a]) {
             RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
             RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, tga.field_a, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
             if (!this.field_c) {
               SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-              SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+              SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
               SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
               SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
-              this.field_b.b(param2, param0, -82);
+              this.field_b.draw(param2, param0, -82);
             }
             return;
           }
           if (!this.field_c) {
             SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-            SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+            SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
             SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
-            this.field_b.b(param2, param0, -82);
+            this.field_b.draw(param2, param0, -82);
           }
           return;
         }
-        if (!VerticalScrollbar.field_tb[fp.field_a]) {
+        if (!VerticalScrollbar.field_tb[TextureCombineSource.field_a]) {
           if (!this.field_c) {
             SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-            SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+            SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
             SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
             SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
-            this.field_b.b(param2, param0, -82);
+            this.field_b.draw(param2, param0, -82);
           }
           return;
         }
@@ -157,10 +157,10 @@ final class wq implements MessagePanel {
         RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, tga.field_a, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
         if (!this.field_c) {
           SingleChildWidget.field_v.drawCentred(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-          SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+          SingleChildWidget.field_v.drawCentred(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[TextureCombineSource.field_a]);
           SingleChildWidget.field_v.drawCentred(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
           SingleChildWidget.field_v.drawCentred(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
-          this.field_b.b(param2, param0, -82);
+          this.field_b.draw(param2, param0, -82);
         }
     }
 
@@ -181,7 +181,7 @@ final class wq implements MessagePanel {
           var5 = (CharSequence) ((Object) param0);
           var4 = AvailabilityQuery.encodeCp1252(var5, false);
           param1.writeUnsignedSmart(var4.length, (byte) 111);
-          param1.position = param1.position + nma.field_m.encode((byte) -109, param1.payload, param2, param1.position, var4.length, var4);
+          param1.position = param1.position + CurveShape.field_m.encode((byte) -109, param1.payload, param2, param1.position, var4.length, var4);
           stackIn_1_0 = param1.position - var3_int;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -200,7 +200,7 @@ final class wq implements MessagePanel {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class wq implements MessagePanel {
         this.field_b.setPosition(this.getHeight(false) / 2, 15 + this.getWidth(-8660) / 2, 1823844912);
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean hasFlag65536(int param0, int param1, int param2) {
         if (param2 == 8000) {
           return (param1 & 65536) != 0 ? true : false;
         }

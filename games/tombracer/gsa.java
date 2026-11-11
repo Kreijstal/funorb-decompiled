@@ -59,7 +59,7 @@ final class gsa {
             this.field_x = this.field_x + this.field_u;
           }
         } else if (MonsterRemains.field_d <= param1 &&
-          param1 < og.field_m) {
+          param1 < HardwareOpenGlVertexBuffer.field_m) {
           if (!this.field_d &&
             MonsterRemains.field_d + param2 * 50 <= param1) {
             this.field_x = this.field_x + this.field_n;
@@ -144,8 +144,8 @@ final class gsa {
           }
           this.field_q = this.field_q + this.field_i * var7;
         }
-        if (og.field_m <= param1) {
-          var7Lifetime1 = (double)(param1 - og.field_m);
+        if (HardwareOpenGlVertexBuffer.field_m <= param1) {
+          var7Lifetime1 = (double)(param1 - HardwareOpenGlVertexBuffer.field_m);
           if (100.0 < var7Lifetime1) {
             var7Lifetime1 = 100.0;
           }
@@ -206,13 +206,13 @@ final class gsa {
           var3_int = param0.getChosenReward(-96);
           if (var3_int != -1) {
             if (OpenGlUnderwaterEffect.field_n[var3_int] == 0) {
-              this.field_u = this.field_u + param0.j(false);
+              this.field_u = this.field_u + param0.getRoundScore(false);
             }
             if (1 == OpenGlUnderwaterEffect.field_n[var3_int]) {
-              this.field_z = this.field_z + param0.j(false);
+              this.field_z = this.field_z + param0.getRoundScore(false);
             }
             if (2 == OpenGlUnderwaterEffect.field_n[var3_int]) {
-              this.field_f = this.field_f + param0.j(false);
+              this.field_f = this.field_f + param0.getRoundScore(false);
             }
           }
           return;
@@ -232,7 +232,7 @@ final class gsa {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

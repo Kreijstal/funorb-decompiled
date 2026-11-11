@@ -20,7 +20,7 @@ final class HazardModel extends TrapModel {
           }
           this.field_u = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fu.H(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fu.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class HazardModel extends TrapModel {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -73,10 +73,10 @@ final class HazardModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_u == 0) {
-            via.drawModelRotated(RevolverItemComponent.field_J[17], this.field_m, this.field_q, param3 + 1572864, param2, param1, 111, 0);
+            FullscreenCanvas.drawModelRotated(RevolverItemComponent.field_J[17], this.field_m, this.field_q, param3 + 1572864, param2, param1, 111, 0);
           } else {
             if (this.field_u == 1) {
-              gqa.drawModelAt(this.field_m, -83584144, param1, param2, RevolverItemComponent.field_J[76], param3);
+              ChatMessage.drawModelAt(this.field_m, -83584144, param1, param2, RevolverItemComponent.field_J[76], param3);
             }
           }
           var6_int = 67 % ((param4 + 38) / 47);
@@ -91,7 +91,7 @@ final class HazardModel extends TrapModel {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class HazardModel extends TrapModel {
                 !bl.field_a.field_r.equals("")) {
                 if (bl.field_a.field_r.charAt(0) != 91) {
                   var7 = (CharSequence) ((Object) bl.field_a.field_r);
-                  var4 = jd.normalizeDisplayName(1, var7);
+                  var4 = OpenGlTexture3D.normalizeDisplayName(1, var7);
                 } else {
                   var4 = bl.field_a.field_r;
                 }
@@ -145,7 +145,7 @@ final class HazardModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "fu.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "fu.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class HazardModel extends TrapModel {
             stackIn_14_0 = stackIn_9_0;
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class HazardModel extends TrapModel {
             field_t = (UiComponent) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fu.F(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fu.F(" + param0 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ final class HazardModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "fu.K(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "fu.K(" + param0 + ')');
         }
     }
 

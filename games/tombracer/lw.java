@@ -20,7 +20,7 @@ final class lw {
         this.field_f = param1 << 16;
     }
 
-    final void c(int param0) {
+    final void update(int param0) {
         int var2;
         int var3;
         int var4;
@@ -34,7 +34,7 @@ final class lw {
         }
         var2 = stackIn_5_0;
         if (!VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
-          stackIn_10_0 = (!VerticalScrollbar.field_tb[fp.field_a]) ? 0 : 1;
+          stackIn_10_0 = (!VerticalScrollbar.field_tb[TextureCombineSource.field_a]) ? 0 : 1;
         } else {
           stackIn_10_0 = -1;
         }
@@ -119,22 +119,22 @@ final class lw {
         field_g = null;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void draw(byte param0, int param1, int param2) {
         if (param0 > 11) {
-          ura.a(-10985);
+          TextureTransformMode.a(-10985);
           hp.drawModelPreview(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
           RemovedFromGameMenu.resetDepthRange((byte) -6);
           return;
         }
         this.field_b = false;
-        ura.a(-10985);
+        TextureTransformMode.a(-10985);
         hp.drawModelPreview(2048, this.field_h, 1900, this.field_d.getModel((byte) 74), -1918106173, (this.field_f >> 16) + param1, param2 + (this.field_e >> 16));
         RemovedFromGameMenu.resetDepthRange((byte) -6);
     }
 
     final int getX(int param0) {
         if (param0 < 68) {
-          this.c(-38);
+          this.update(-38);
           return this.field_f >> 16;
         }
         return this.field_f >> 16;

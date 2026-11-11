@@ -60,7 +60,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         this.field_Pc = false;
     }
 
-    private final static int d3dPrimitiveType(int param0, iw param1) {
+    private final static int d3dPrimitiveType(int param0, PrimitiveType param1) {
         if (param0 < 105) {
           field_fd = (int[]) null;
         }
@@ -76,7 +76,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (param1 == ArchiveManager.field_f) {
           return 4;
         }
-        if (vs.field_T == param1) {
+        if (ProgressDialog.field_T == param1) {
           return 6;
         }
         if (nb.field_b != param1) {
@@ -150,11 +150,11 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final static int d3dFormat(ft param0, int param1, una param2) {
+    final static int d3dFormat(TextureFormat param0, int param1, GpuDataType param2) {
         if (param1 >= -127) {
           field_md = (int[]) null;
         }
-        if (param2 == una.field_g) {
+        if (param2 == GpuDataType.field_g) {
           if (it.field_b == param0) {
             return 22;
           }
@@ -180,13 +180,13 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
     final void setPostProcessBounds(int param0, int param1, int param2, int param3) {
     }
 
-    final boolean supportsTexture2D(boolean param0, una param1, ft param2) {
+    final boolean supportsTexture2D(boolean param0, GpuDataType param1, TextureFormat param2) {
         jagdx.D3DDISPLAYMODE var4;
-        ft var5;
+        TextureFormat var5;
         boolean stackIn_6_0 = false;
         if (param0) {
-          var5 = (ft) null;
-          this.supportsTexture2D(true, (una) null, (ft) null);
+          var5 = (TextureFormat) null;
+          this.supportsTexture2D(true, (GpuDataType) null, (TextureFormat) null);
         }
         var4 = new jagdx.D3DDISPLAYMODE();
         stackIn_6_0 = (jagdx.ah.a(this.field_dd.getAdapterDisplayMode(this.field_Xc, var4), (byte) -82)) && (jagdx.ah.a(this.field_dd.CheckDeviceFormat(this.field_Xc, this.field_id, var4.Format, 0, 3, Direct3DToolkit.d3dFormat(param2, -128, param1)), (byte) -103));
@@ -254,11 +254,11 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    private final static int d3dCombineOperation(ica param0, int param1) {
+    private final static int d3dCombineOperation(TextureCombineOperation param0, int param1) {
         if (PlatformComponent.field_F == param0) {
           return 2;
         }
-        if (iw.field_c == param0) {
+        if (PrimitiveType.field_c == param0) {
           return 4;
         }
         if (r.field_m == param0) {
@@ -321,8 +321,8 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         this.field_jd.SetTransform(2, field_hd);
     }
 
-    final void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, iw param4, int param5, int param6) {
-        this.field_jd.SetIndices(((dm) (param0)).field_d);
+    final void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, PrimitiveType param4, int param5, int param6) {
+        this.field_jd.SetIndices(((DirectXIndexBuffer) (param0)).field_d);
         this.field_jd.DrawIndexedPrimitive(Direct3DToolkit.d3dPrimitiveType(109, param4), 0, param2, param5, param3, param6);
         if (param1 != -19394) {
           this.field_jd = (jagdx.IDirect3DDevice) null;
@@ -350,7 +350,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final boolean supportsTexture3D(una param0, int param1, ft param2) {
+    final boolean supportsTexture3D(GpuDataType param0, int param1, TextureFormat param2) {
         jagdx.D3DDISPLAYMODE var4;
         boolean stackIn_6_0 = false;
         if (param1 != -1) {
@@ -361,8 +361,8 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return stackIn_6_0;
     }
 
-    final void bindTexture3D(byte param0, ek param1) {
-        this.bindDirectXTexture((byte) -126, (nqa) (param1));
+    final void bindTexture3D(byte param0, DirectXTexture3D param1) {
+        this.bindDirectXTexture((byte) -126, (DirectXTexture) (param1));
         if (!this.field_bd[this.field_Cc]) {
           this.field_jd.SetSamplerState(this.field_Cc, 1, 1);
           this.field_bd[this.field_Cc] = true;
@@ -420,7 +420,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return false;
     }
 
-    final GpuTexture2D createFloatTexture2D(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7) {
+    final GpuTexture2D createFloatTexture2D(TextureFormat param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7) {
         if (param2 == 0) {
           return null;
         }
@@ -443,11 +443,11 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         this.uploadDirectionalLights((byte) -78);
     }
 
-    final GpuTexture2D createByteTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
+    final GpuTexture2D createByteTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, TextureFormat param6, int param7) {
         if (param4 != 1) {
           return (GpuTexture2D) null;
         }
-        return (GpuTexture2D) ((Object) new pia(this, param6, param7, param3, param0, param1, param2, param5));
+        return (GpuTexture2D) ((Object) new DirectXTexture2D(this, param6, param7, param3, param0, param1, param2, param5));
     }
 
     final boolean isBloomEnabled() {
@@ -527,7 +527,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
 
     final GpuTexture2D createIntTexture2D(int[] param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var8 = -36 / ((param6 - 13) / 46);
-        return (GpuTexture2D) ((Object) new pia(this, param3, param5, param2, param0, param1, param4));
+        return (GpuTexture2D) ((Object) new DirectXTexture2D(this, param3, param5, param2, param0, param1, param4));
     }
 
     final ShaderEffect createShaderEffect(int param0, int param1) {
@@ -548,7 +548,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return super.createShaderEffect(param0, 106);
     }
 
-    final void setAlphaCombineSource(fp param0, int param1, boolean param2, int param3) {
+    final void setAlphaCombineSource(TextureCombineSource param0, int param1, boolean param2, int param3) {
         int var7;
         int var5;
         int var6;
@@ -576,10 +576,10 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (param0 != 26) {
           this.field_kd = (DirectXSwapChain) null;
         }
-        return (VertexBuffer) ((Object) new dm(this, una.field_f, param1));
+        return (VertexBuffer) ((Object) new DirectXIndexBuffer(this, GpuDataType.field_f, param1));
     }
 
-    final void setColorCombineSource(fp param0, int param1, int param2, boolean param3, boolean param4) {
+    final void setColorCombineSource(TextureCombineSource param0, int param1, int param2, boolean param3, boolean param4) {
         int var6;
         int var8;
         int var7;
@@ -789,18 +789,18 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         this.field_jd.SetRenderState(34, this.field_g);
     }
 
-    final qm createVertexBuffer(int param0, boolean param1) {
+    final VertexStreamBuffer createVertexBuffer(int param0, boolean param1) {
         if (param0 != 6) {
           field_hd = (float[]) null;
         }
-        return (qm) ((Object) new lia(this, param1));
+        return (VertexStreamBuffer) ((Object) new DirectXVertexBuffer(this, param1));
     }
 
     final void setBloomParameters(float param0, float param1, float param2) {
     }
 
-    private final static int textureTransformFlags(int param0, ura param1) {
-        ura var3;
+    private final static int textureTransformFlags(int param0, TextureTransformMode param1) {
+        TextureTransformMode var3;
         if (param1 == OpenGlSprite.field_d) {
           return 1;
         }
@@ -819,8 +819,8 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (param0 <= -46) {
           return 0;
         }
-        var3 = (ura) null;
-        Direct3DToolkit.textureTransformFlags(22, (ura) null);
+        var3 = (TextureTransformMode) null;
+        Direct3DToolkit.textureTransformFlags(22, (TextureTransformMode) null);
         return 0;
     }
 
@@ -860,7 +860,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void bindDirectXTexture2D(pia param0, boolean param1) {
+    final void bindDirectXTexture2D(DirectXTexture2D param0, boolean param1) {
         this.bindDirectXTexture((byte) -127, param0);
         if (param0.field_g != this.field_bd[this.field_Cc]) {
           this.field_jd.SetSamplerState(this.field_Cc, 1, !param0.field_g ? 3 : 1);
@@ -958,36 +958,36 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         super.dispose();
     }
 
-    final lv createTexture3D(byte[] param0, ft param1, byte param2, int param3, int param4, int param5) {
+    final Texture3D createTexture3D(byte[] param0, TextureFormat param1, byte param2, int param3, int param4, int param5) {
         if (param2 >= -1) {
           jagdx.IDirect3DPixelShader var8 = (jagdx.IDirect3DPixelShader) null;
           this.bindPixelShader(-23, (jagdx.IDirect3DPixelShader) null);
         }
-        return (lv) ((Object) new ek(this, param1, param4, param3, param5, param0));
+        return (Texture3D) ((Object) new DirectXTexture3D(this, param1, param4, param3, param5, param0));
     }
 
-    final mna createVertexLayout(ne[] param0, int param1) {
+    final mna createVertexLayout(VertexStreamLayout[] param0, int param1) {
         if (param1 != 0) {
           this.field_dd = (jagdx.IDirect3D) null;
         }
         return (mna) ((Object) new dxVertexLayout(this, param0));
     }
 
-    final na createCubeTexture(byte param0, int[][] param1, boolean param2, int param3) {
+    final CubeTexture createCubeTexture(byte param0, int[][] param1, boolean param2, int param3) {
         if (param0 <= 7) {
           this.field_Uc = (boolean[]) null;
         }
-        return (na) ((Object) new ul(this, param3, param2, param1));
+        return (CubeTexture) ((Object) new DirectXCubeTexture(this, param3, param2, param1));
     }
 
-    final void drawPrimitives(int param0, iw param1, int param2, int param3) {
+    final void drawPrimitives(int param0, PrimitiveType param1, int param2, int param3) {
         if (param3 != 0) {
           return;
         }
         this.field_jd.DrawPrimitive(Direct3DToolkit.d3dPrimitiveType(113, param1), param2, param0);
     }
 
-    final void bindDirectXTexture(byte param0, nqa param1) {
+    final void bindDirectXTexture(byte param0, DirectXTexture param1) {
         int stackIn_4_0 = 0;
         int stackIn_7_1 = 0;
         jagdx.IDirect3DDevice stackIn_11_0 = null;
@@ -1075,7 +1075,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
 
     final void applyTextureMatrix(int param0) {
         int var2;
-        ica var3;
+        TextureCombineOperation var3;
         if (null == this.field_Vc &&
           DualLinkNode.field_h != this.field_v[this.field_Cc]) {
           if (pfa.field_i == this.field_v[this.field_Cc]) {
@@ -1093,17 +1093,17 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
           this.field_gd[this.field_Cc] = 0;
         }
         if (param0 != 0) {
-          var3 = (ica) null;
-          Direct3DToolkit.d3dCombineOperation((ica) null, -59);
+          var3 = (TextureCombineOperation) null;
+          Direct3DToolkit.d3dCombineOperation((TextureCombineOperation) null, -59);
         }
     }
 
-    final GpuTexture2D createTexture2D(int param0, int param1, ft param2, byte param3, una param4) {
+    final GpuTexture2D createTexture2D(int param0, int param1, TextureFormat param2, byte param3, GpuDataType param4) {
         if (param3 != -63) {
           jagdx.IDirect3DVertexShader var7 = (jagdx.IDirect3DVertexShader) null;
           this.bindVertexShader((jagdx.IDirect3DVertexShader) null, 105);
         }
-        return (GpuTexture2D) ((Object) new pia(this, param2, param4, param0, param1));
+        return (GpuTexture2D) ((Object) new DirectXTexture2D(this, param2, param4, param0, param1));
     }
 
     final void bindVertexShader(jagdx.IDirect3DVertexShader param0, int param1) {
@@ -1170,7 +1170,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return (Object) null;
     }
 
-    private final static int d3dCombineSource(fp param0, int param1) {
+    private final static int d3dCombineSource(TextureCombineSource param0, int param1) {
         if (param1 < 112) {
           return 109;
         }
@@ -1193,16 +1193,16 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         this.field_jd.setRenderStateBoolean(15, this.field_m);
         if (param0 > -30) {
           float[] var3 = (float[]) null;
-          this.createFloatTexture2D((ft) null, -49, -36, false, 110, -64, (float[]) null, -7);
+          this.createFloatTexture2D((TextureFormat) null, -49, -36, false, 110, -64, (float[]) null, -7);
         }
     }
 
-    final void bindVertexBuffer(int param0, int param1, qm param2) {
-        lia var4 = (lia) (param2);
+    final void bindVertexBuffer(int param0, int param1, VertexStreamBuffer param2) {
+        DirectXVertexBuffer var4 = (DirectXVertexBuffer) (param2);
         if (param0 > -124) {
           this.field_ld = (jagdx.D3DCAPS) null;
         }
-        this.field_jd.SetStreamSource(param1, var4.field_e, 0, var4.b(-7339));
+        this.field_jd.SetStreamSource(param1, var4.field_e, 0, var4.getStride(-7339));
     }
 
     static {

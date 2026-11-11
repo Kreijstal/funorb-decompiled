@@ -90,8 +90,8 @@ final class VortexBehaviour extends Behaviour {
               if (var25 <= var11 &&
                 var25 != 0) {
                 var6 = (var25 << 16) / var11;
-                var6 = -gqa.multiplyFixed(var6, (byte) 24, var8 - var7) + var8;
-                var6 = za.clampValue(var7, 74, var8, var6);
+                var6 = -ChatMessage.multiplyFixed(var6, (byte) 24, var8 - var7) + var8;
+                var6 = GraphicsHeap.clampValue(var7, 74, var8, var6);
                 if (this.field_q) {
                   var6 = -var6;
                 }
@@ -146,7 +146,7 @@ final class VortexBehaviour extends Behaviour {
           param1.writeBits((byte) 32, this.field_r, 4);
           param1.writeBits((byte) -127, this.field_p, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class VortexBehaviour extends Behaviour {
           this.field_r = param1.readBits((byte) 44, 4);
           this.field_p = param1.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

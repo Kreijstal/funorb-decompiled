@@ -44,7 +44,7 @@ final class mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "mf.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "mf.B(" + param0 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class mf {
           this.field_b = param2;
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

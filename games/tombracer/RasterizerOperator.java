@@ -31,7 +31,7 @@ final class RasterizerOperator extends TextureOperator {
               var5 = param1.readUnsignedByte(255);
               var6 = var5;
               if (0 == var6) {
-                this.field_p[var4_int] = (RasterShape) ((Object) DualLinkNode.a(0, param1));
+                this.field_p[var4_int] = (RasterShape) ((Object) DualLinkNode.decodeRasterShape(0, param1));
               } else {
                 if (var6 == 1) {
                   this.field_p[var4_int] = (RasterShape) ((Object) HotspotTextWidget.a(param1, (byte) -88));
@@ -63,7 +63,7 @@ final class RasterizerOperator extends TextureOperator {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class RasterizerOperator extends TextureOperator {
           }
           var4 = ArchiveNetworkClient.textureHeight;
           TileOperator.setTargetRows(param1, param0 ^ -8901);
-          MazeGenerator.setFillClip(una.textureWidthMask, false, 0, 0, hba.textureHeightMask);
+          MazeGenerator.setFillClip(GpuDataType.textureWidthMask, false, 0, 0, hba.textureHeightMask);
           if (null != this.field_p) {
             for (var5 = 0; var5 < this.field_p.length; var5++) {
               var6 = this.field_p[var5];
@@ -119,7 +119,7 @@ final class RasterizerOperator extends TextureOperator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -138,8 +138,8 @@ final class RasterizerOperator extends TextureOperator {
         try {
           int var1_int = 0;
           int var3 = TombRacer.field_G ? 1 : 0;
-          if (null != wg.field_l) {
-            wg.field_l.closeSocket(param0 - 21);
+          if (null != StatReportingScoringObserver.field_l) {
+            StatReportingScoringObserver.field_l.closeSocket(param0 - 21);
           }
           if (param0 != 0) {
             return;
@@ -165,7 +165,7 @@ final class RasterizerOperator extends TextureOperator {
               }
             }
           } catch (RuntimeException runtimeException) {
-            throw tba.wrapException((Throwable) ((Object) runtimeException), "rda.C(" + param0 + ')');
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rda.C(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

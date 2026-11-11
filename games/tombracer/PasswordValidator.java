@@ -55,18 +55,18 @@ final class PasswordValidator extends TextFieldValidator {
             field_l = 12;
           }
           jaggl.OpenGL.glLinkProgramARB(var3_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, gba.field_f, 0);
-          if (0 == gba.field_f[0]) {
-            if (0 == gba.field_f[0]) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, StringListNode.field_f, 0);
+          if (0 == StringListNode.field_f[0]) {
+            if (0 == StringListNode.field_f[0]) {
               System.out.println("Shader linking failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, gba.field_f, 1);
-            if (gba.field_f[1] > 1) {
-              var11 = new byte[gba.field_f[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var3_long, gba.field_f[1], gba.field_f, 0, var11, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, StringListNode.field_f, 1);
+            if (StringListNode.field_f[1] > 1) {
+              var11 = new byte[StringListNode.field_f[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var3_long, StringListNode.field_f[1], StringListNode.field_f, 0, var11, 0);
               System.out.println(new String(var11));
             }
-            if (0 == gba.field_f[0]) {
+            if (0 == StringListNode.field_f[0]) {
               var7 = 0;
               var5Lifetime1 = var7;
               while (var7 < param0.length) {
@@ -96,7 +96,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = NetworkArchiveRequest.field_o;
             return stackIn_8_0;
           }
-          if (eba.hasUniformCharacters(var5, 6912)) {
+          if (SoftCacheEntry.hasUniformCharacters(var5, 6912)) {
             stackIn_11_0 = PlayerModel.field_e;
             return stackIn_11_0;
           }
@@ -256,12 +256,12 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_18_0 = FlipOperator.field_m;
             return stackIn_18_0;
           }
-          if (ne.containsTextOrReverse(true, var5, var6)) {
+          if (VertexStreamLayout.containsTextOrReverse(true, var5, var6)) {
             stackIn_21_0 = LegacyOpenGlTexture.field_j;
             return stackIn_21_0;
           }
           if (kv.a((byte) 55, var5, var6)) {
-            stackIn_25_0 = wl.field_h;
+            stackIn_25_0 = ClipStackEntry.field_h;
             return stackIn_25_0;
           }
           if (!UiComponent.containsForwardOrReversed(true, var5, var6)) {
@@ -279,7 +279,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -289,7 +289,7 @@ final class PasswordValidator extends TextFieldValidator {
           this.field_o = param1;
           this.field_j = param2;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -320,17 +320,17 @@ final class PasswordValidator extends TextFieldValidator {
           var3 = this.field_o.field_o.toLowerCase();
           var4 = param1.toLowerCase();
           if (0 == var4.length()) {
-            stackIn_6_0 = fp.field_c;
+            stackIn_6_0 = TextureCombineSource.field_c;
             return stackIn_6_0;
           }
           if (!jg.isPasswordAcceptable(-102, var3, var4)) {
-            stackIn_10_0 = fp.field_c;
+            stackIn_10_0 = TextureCombineSource.field_c;
             return stackIn_10_0;
           }
           if (!this.passwordContainsEmailPart(param0 - 123, param1)) {
             return LightSource.field_k;
           }
-          stackIn_14_0 = fp.field_c;
+          stackIn_14_0 = TextureCombineSource.field_c;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -342,7 +342,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

@@ -23,10 +23,10 @@ final class aca extends IntrusiveNode {
           HuffmanCodec.field_c.insertElementAt(param0, 0);
           if (param1 != 19711) {
             ResourceArchive var3 = (ResourceArchive) null;
-            aca.a((ResourceArchive) null, 32, (ResourceArchive) null, (byte) -47, 55);
+            aca.loadBinaryFont((ResourceArchive) null, 32, (ResourceArchive) null, (byte) -47, 55);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aca.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aca.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class aca extends IntrusiveNode {
         return (param0 & 32768) != 0 ? true : false;
     }
 
-    final static BinaryBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, byte param3, int param4) {
+    final static BinaryBitmapFont loadBinaryFont(ResourceArchive param0, int param1, ResourceArchive param2, byte param3, int param4) {
         RuntimeException var5 = null;
         BinaryBitmapFont stackIn_2_0 = null;
         BinaryBitmapFont stackIn_7_0 = null;
@@ -73,7 +73,7 @@ final class aca extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

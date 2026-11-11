@@ -338,7 +338,7 @@ final class GridLineWalker {
             if (gca.field_d > -param0 + param1) {
               BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
             } else {
-              if (param1 + param0 <= hc.field_h) {
+              if (param1 + param0 <= LineShape.field_h) {
                 BridgeModel.a(param1, param0, 0, param5, param2, param4, param3);
               } else {
                 BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);

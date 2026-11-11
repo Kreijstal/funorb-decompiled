@@ -3,8 +3,8 @@
  */
 final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonListener {
     private String[] field_A;
-    static lqa field_x;
-    private mia field_w;
+    static RendererOption field_x;
+    private SuggestionsHost field_w;
     static java.awt.Font field_y;
     private FocusableWidget[] field_z;
 
@@ -30,7 +30,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
             var3_int = param1.length;
             this.field_A = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_A[var4_int] = wt.normalizeBase37Name(kha.bitwiseXor(param0, 17404), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+              this.field_A[var4_int] = wt.normalizeBase37Name(TextLine.bitwiseXor(param0, 17404), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new kaa(KeySwitchComponent.field_J, 0, 1);
             this.field_z = new FocusableWidget[1 + var3_int];
@@ -59,7 +59,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
         }
         BitmapFont var5 = KeySwitchComponent.field_J;
         if (null != this.field_A) {
-          var5.drawParagraph(ch.field_e, param0 + this.field_i, param1 + this.field_n, this.field_m, 20, 16777215, -1, 0, 0, var5.field_k + var5.field_w);
+          var5.drawParagraph(AudioOutputThread.field_e, param0 + this.field_i, param1 + this.field_n, this.field_m, 20, 16777215, -1, 0, 0, var5.field_k + var5.field_w);
         }
     }
 
@@ -254,16 +254,16 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    UsernameSuggestionsPanel(mia param0) {
+    UsernameSuggestionsPanel(SuggestionsHost param0) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_w = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "laa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "laa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -298,7 +298,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

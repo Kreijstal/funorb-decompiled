@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EmailSyntaxValidator extends TextFieldValidator {
-    static ura field_j;
+    static TextureTransformMode field_j;
 
     final it validateText(byte param0, String param1) {
         int var3_int = 0;
@@ -24,7 +24,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           if (var3_int != 0) {
             return LightSource.field_k;
           }
-          stackIn_8_0 = fp.field_c;
+          stackIn_8_0 = TextureCombineSource.field_c;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -36,7 +36,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -49,12 +49,12 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validateText((byte) 14, param1) == fp.field_c) {
+          if (this.validateText((byte) 14, param1) == TextureCombineSource.field_c) {
             stackIn_3_0 = IntIntHashTable.field_b;
             return stackIn_3_0;
           }
           if (param0 != -1) {
-            field_j = (ura) null;
+            field_j = (TextureTransformMode) null;
           }
           stackIn_7_0 = dua.field_j;
           return stackIn_7_0;
@@ -68,13 +68,13 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != -1852) {
-          field_j = (ura) null;
+          field_j = (TextureTransformMode) null;
           field_j = null;
           return;
         }
@@ -86,6 +86,6 @@ final class EmailSyntaxValidator extends TextFieldValidator {
     }
 
     static {
-        field_j = new ura();
+        field_j = new TextureTransformMode();
     }
 }

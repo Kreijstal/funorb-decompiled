@@ -57,7 +57,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -115,8 +115,8 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final static ClipStack a(byte param0, GraphicsToolkit param1) {
-        wl var2 = null;
+    final static ClipStack getClipStack(byte param0, GraphicsToolkit param1) {
+        ClipStackEntry var2 = null;
         RuntimeException var2_ref = null;
         ClipStack var3 = null;
         GraphicsToolkit var4 = null;
@@ -131,7 +131,7 @@ final class IntrusiveDequeCursor {
             stackIn_3_0 = sda.field_g;
             return stackIn_3_0;
           }
-          var2 = (wl) (hla.field_ub.get((byte) -96, (long)param1.field_a));
+          var2 = (ClipStackEntry) (hla.field_ub.get((byte) -96, (long)param1.field_a));
           if (var2 != null &&
             var2.field_g == param1) {
             var3 = var2.field_j;
@@ -140,11 +140,11 @@ final class IntrusiveDequeCursor {
               var2.unlink(68);
             }
             var3 = new ClipStack(param1);
-            hla.field_ub.put((long)param1.field_a, 109, new wl(param1, var3));
+            hla.field_ub.put((long)param1.field_a, 109, new ClipStackEntry(param1, var3));
           }
           if (param0 != 65) {
             var4 = (GraphicsToolkit) null;
-            IntrusiveDequeCursor.a((byte) -102, (GraphicsToolkit) null);
+            IntrusiveDequeCursor.getClipStack((byte) -102, (GraphicsToolkit) null);
           }
           DelegatingCanvas.field_c = param1;
           sda.field_g = var3;
@@ -160,11 +160,11 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int encodeOrder(int param0, int param1) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -402,7 +402,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ final class IntrusiveDequeCursor {
         try {
           this.deque = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

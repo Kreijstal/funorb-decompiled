@@ -54,8 +54,8 @@ final class SimpleMoveLocomotor extends Locomotor {
           var3 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
           var6 = -112 % ((param0 + 69) / 42);
           var4 = ModelAnimator.cos2048(0, var2 >> 2);
-          var5 = doa.a(2, this.field_t, var3);
-          var7 = doa.a(2, this.field_t, var4);
+          var5 = doa.multiplyFixedCoarse(2, this.field_t, var3);
+          var7 = doa.multiplyFixedCoarse(2, this.field_t, var4);
           if (var7 == 0) {
             var5 = lw.signum(var5, (byte) -52) * this.field_t;
             var8 = this.trap.getLocalX(25745);
@@ -153,8 +153,8 @@ final class SimpleMoveLocomotor extends Locomotor {
           var3Lifetime1 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
           var6Lifetime1 = -112 % ((param0 + 69) / 42);
           var4Lifetime1 = ModelAnimator.cos2048(0, var2 >> 2);
-          var5Lifetime1 = doa.a(2, this.field_t, var3Lifetime1);
-          var7Lifetime1 = doa.a(2, this.field_t, var4Lifetime1);
+          var5Lifetime1 = doa.multiplyFixedCoarse(2, this.field_t, var3Lifetime1);
+          var7Lifetime1 = doa.multiplyFixedCoarse(2, this.field_t, var4Lifetime1);
           if (var7Lifetime1 == 0) {
             var5Lifetime1 = lw.signum(var5Lifetime1, (byte) -52) * this.field_t;
             var8Lifetime1 = this.trap.getLocalX(25745);
@@ -252,8 +252,8 @@ final class SimpleMoveLocomotor extends Locomotor {
         var3Lifetime2 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
         var6Lifetime2 = -112 % ((param0 + 69) / 42);
         var4Lifetime2 = ModelAnimator.cos2048(0, var2 >> 2);
-        var5Lifetime2 = doa.a(2, this.field_t, var3Lifetime2);
-        var7Lifetime2 = doa.a(2, this.field_t, var4Lifetime2);
+        var5Lifetime2 = doa.multiplyFixedCoarse(2, this.field_t, var3Lifetime2);
+        var7Lifetime2 = doa.multiplyFixedCoarse(2, this.field_t, var4Lifetime2);
         if (var7Lifetime2 != 0) {
           if (var5Lifetime2 != 0) {
             var8Lifetime2 = this.trap.getLocalX(25745);
@@ -379,7 +379,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           this.field_t = param1;
           this.field_r = param3;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -425,7 +425,7 @@ final class SimpleMoveLocomotor extends Locomotor {
     final void encode(BitPacketBuffer param0, byte param1) {
         try {
           super.encode(param0, (byte) -117);
-          param0.writeBits((byte) 75, this.b(0, this.field_t), 8);
+          param0.writeBits((byte) 75, this.encodeFixed16(0, this.field_t), 8);
           param0.writeBits((byte) -127, this.field_r >> 16, 10);
           if (param1 > -78) {
             this.applyConstraint(95);
@@ -433,7 +433,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           param0.writeBits((byte) -126, ResourceArchive.scaleToBits((byte) 46, this.field_p, 8192, 4), 4);
           param0.writeBits((byte) 63, this.field_q ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wi.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wi.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -449,7 +449,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         RuntimeException var4 = null;
         try {
           if (param0.formatVersion > 7) {
-            this.field_t = this.a(param1.readBits((byte) 44, 8), false);
+            this.field_t = this.decodeFixed16(param1.readBits((byte) 44, 8), false);
           } else {
             this.field_t = param1.readBits((byte) 44, 4) << 16;
           }
@@ -479,7 +479,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -29,7 +29,7 @@ final class FlameShooterComponent extends ShooterComponent {
         super(param0, param1, param2, param3);
     }
 
-    final static void a(int param0, String param1, BitmapFont param2, kha param3, int param4) {
+    final static void a(int param0, String param1, BitmapFont param2, TextLine param3, int param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -93,7 +93,7 @@ final class FlameShooterComponent extends ShooterComponent {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class FlameShooterComponent extends ShooterComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class FlameShooterComponent extends ShooterComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jh.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jh.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

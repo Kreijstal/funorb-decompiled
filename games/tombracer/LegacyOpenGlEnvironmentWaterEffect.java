@@ -10,7 +10,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
     static String field_g;
     static String field_f;
     static String field_c;
-    private aaa field_i;
+    private LegacyOpenGlWaterTextures field_i;
 
     final boolean isSupported(int param0) {
         if (param0 != -11921) {
@@ -51,7 +51,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
         }
     }
 
-    LegacyOpenGlEnvironmentWaterEffect(OpenGlToolkit param0, aaa param1) {
+    LegacyOpenGlEnvironmentWaterEffect(OpenGlToolkit param0, LegacyOpenGlWaterTextures param1) {
         super(param0);
         fca var5 = null;
         fca var4 = null;
@@ -69,7 +69,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
             this.field_k = this.field_e != null ? true : false;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rpa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rpa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -124,8 +124,8 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
           }
           return;
         }
-        wk.field_m = wk.field_m - 1;
-        if (wk.field_m != 0) {
+        MapWaypoint.field_m = MapWaypoint.field_m - 1;
+        if (MapWaypoint.field_m != 0) {
           if (!param2) {
             return;
           }

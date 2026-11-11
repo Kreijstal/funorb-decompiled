@@ -5,7 +5,7 @@ class SpriteSampleOperator extends TextureOperator {
     private int field_o;
     int field_m;
     int[] field_p;
-    static mla field_s;
+    static ProjectionMode field_s;
     static String field_n;
     int field_r;
     static int[] field_q;
@@ -34,7 +34,7 @@ class SpriteSampleOperator extends TextureOperator {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ class SpriteSampleOperator extends TextureOperator {
         int var2 = 0;
         int var0;
         field_n = "<%0> chose character: <%1>";
-        field_s = new mla();
+        field_s = new ProjectionMode();
         field_q = new int[256];
         for (var1 = 0; var1 < 256; var1++) {
           var0 = var1;

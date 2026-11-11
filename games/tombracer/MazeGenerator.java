@@ -13,7 +13,7 @@ abstract class MazeGenerator {
             this.random = (IsaacCipher) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "loa.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "loa.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ abstract class MazeGenerator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ abstract class MazeGenerator {
     abstract void generate(int param0, int param1, MazeGrid param2, int param3);
 
     final static void releaseStatics(byte param0) {
-        mga.field_g = null;
+        QueuedHint.field_g = null;
         mq.field_b = null;
         LoadLevelCommand.field_p = null;
         ImageProducerCanvasImageBuffer.field_m = null;
@@ -188,7 +188,7 @@ abstract class MazeGenerator {
 
     final static void setFillClip(int param0, boolean param1, int param2, int param3, int param4) {
         DiskCacheWorker.field_c = param0;
-        hc.field_h = param4;
+        LineShape.field_h = param4;
         if (param1) {
           return;
         }
@@ -200,7 +200,7 @@ abstract class MazeGenerator {
         try {
           this.random = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "loa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "loa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

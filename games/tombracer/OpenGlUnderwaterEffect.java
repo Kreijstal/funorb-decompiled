@@ -128,7 +128,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.owner.setActiveTextureUnit(1, false);
         if (param0 < -4) {
           this.owner.bindTexture(true, (GpuTexture) null);
-          this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+          this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
           this.owner.setColorCombineSource(ej.field_c, 0, -49);
           this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -53);
           this.owner.setAlphaCombineSource(0, false, ej.field_c);
@@ -191,7 +191,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         }
         this.disable(73);
         this.owner.bindTexture(true, (GpuTexture) null);
-        this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+        this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
         this.owner.setColorCombineSource(ej.field_c, 0, -49);
         this.owner.setColorCombineSource(LruNodeCache.field_c, 2, -53);
         this.owner.setAlphaCombineSource(0, false, ej.field_c);
@@ -248,7 +248,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

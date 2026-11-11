@@ -196,11 +196,11 @@ final class DefaultTileRenderable extends TileRenderable {
           var9 = this.cell.getCenterY(true);
           if (!this.cell.hasWideOccupancy(false)) {
             if (-1 != this.field_m) {
-              gqa.drawModelAt(0, -83584144, var9, var8, gca.field_g[this.field_m], 0);
+              ChatMessage.drawModelAt(0, -83584144, var9, var8, gca.field_g[this.field_m], 0);
             }
             if (SpriteTileOperator.d(43) &&
               this.field_i != -1) {
-              gqa.drawModelAt(this.field_n, -83584144, var9, var8, gca.field_g[this.field_i], 0);
+              ChatMessage.drawModelAt(this.field_n, -83584144, var9, var8, gca.field_g[this.field_i], 0);
             }
           }
           if (!SpriteTileOperator.d(-81)) {
@@ -213,7 +213,7 @@ final class DefaultTileRenderable extends TileRenderable {
             if (var12 != null && (!this.cell.hasWideOccupancy(false) ||
               !var12.hasWideOccupancy(false))) {
               var11 = this.cell.getGrid(18641).getTileSize(-30551) / 2;
-              gqa.drawModelAt(1024, -83584144, -var11 + var9, var8 - var11, gca.field_g[25], 65536);
+              ChatMessage.drawModelAt(1024, -83584144, -var11 + var9, var8 - var11, gca.field_g[25], 65536);
             }
           }
           if (-1 + var7 == var4 &&
@@ -226,7 +226,7 @@ final class DefaultTileRenderable extends TileRenderable {
                 return;
               }
               var11Lifetime1 = this.cell.getGrid(18641).getTileSize(-30551) / 2;
-              gqa.drawModelAt(0, -83584144, var9 - var11Lifetime1, -var11Lifetime1 + var8, gca.field_g[25], 65536);
+              ChatMessage.drawModelAt(0, -83584144, var9 - var11Lifetime1, -var11Lifetime1 + var8, gca.field_g[25], 65536);
             }
           }
           return;
@@ -240,7 +240,7 @@ final class DefaultTileRenderable extends TileRenderable {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -343,11 +343,11 @@ final class DefaultTileRenderable extends TileRenderable {
     }
 
     final static boolean e(int param0) {
-        lqa var1 = null;
-        lqa var1Lifetime1;
+        RendererOption var1 = null;
+        RendererOption var1Lifetime1;
         if (param0 != -22766) {
           DefaultTileRenderable.e(85);
-          var1 = LegacyOpenGlBloomEffect.b(false);
+          var1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
           if (var1 == null) {
             return false;
           }
@@ -359,7 +359,7 @@ final class DefaultTileRenderable extends TileRenderable {
           }
           return false;
         }
-        var1Lifetime1 = LegacyOpenGlBloomEffect.b(false);
+        var1Lifetime1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
         if (var1Lifetime1 == null) {
           return false;
         }

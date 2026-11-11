@@ -28,7 +28,7 @@ final class DateFieldsWidget extends DateInputWidget {
         try {
           this.setBounds((byte) -31, param4, param5, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class DateFieldsWidget extends DateInputWidget {
           }
           this.addChild(this.field_D, -1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class DateFieldsWidget extends DateInputWidget {
         if (param3 == 0) {
           param1 = param1 + this.field_n;
           param0 = param0 + this.field_i;
-          this.drawFieldLabel(-44, param0, this.field_B, param1, oda.field_i);
+          this.drawFieldLabel(-44, param0, this.field_B, param1, MazeFrontierCell.field_i);
           this.drawFieldLabel(-121, param0, this.field_E, param1, HardwareTextureCache.field_d);
           this.drawFieldLabel(param2 - 62, param0, this.field_D, param1, DropdownList.field_y);
           return;
@@ -117,7 +117,7 @@ final class DateFieldsWidget extends DateInputWidget {
           }
           BlendModeOperator.field_o.drawCenteredText(param4, (param2.field_m >> 1) + (param2.field_i + param1), param3 + param2.field_n - 5, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fe.LA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fe.LA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class DateFieldsWidget extends DateInputWidget {
           this.field_E.field_h = (WidgetListener) ((Object) param1);
           this.field_D.field_h = (WidgetListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fe.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fe.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

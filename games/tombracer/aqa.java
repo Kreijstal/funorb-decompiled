@@ -32,7 +32,7 @@ final class aqa {
         if (param0 != 1188664449) {
           return 92;
         }
-        return (int)(1000000000L / mga.nanosPerFrame);
+        return (int)(1000000000L / QueuedHint.nanosPerFrame);
     }
 
     static {

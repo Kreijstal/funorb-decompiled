@@ -17,7 +17,7 @@ final class MatchOverlayQueue {
     }
 
     final static void findValidSettingCombination(int param0, int param1, LobbyGameWidget param2, int param3, int param4, int param5, int param6, boolean param7) {
-        tv[][] stackIn_32_0 = null;
+        ContextMenuRow[][] stackIn_32_0 = null;
         int stackIn_33_1 = 0;
         int stackIn_52_0 = 0;
         int stackIn_67_0 = 0;
@@ -26,7 +26,7 @@ final class MatchOverlayQueue {
         StringBuilder stackIn_98_1 = null;
         String stackIn_99_2 = null;
         RuntimeException decompiledCaughtException = null;
-        tv[] var8 = null;
+        ContextMenuRow[] var8 = null;
         int var8_int = 0;
         RuntimeException var8_ref = null;
         int var9 = 0;
@@ -34,13 +34,13 @@ final class MatchOverlayQueue {
         int[] var10_ref_int__ = null;
         int var11 = 0;
         int var12 = 0;
-        tv var13 = null;
+        ContextMenuRow var13 = null;
         int var13_int = 0;
         int var14 = 0;
         int var15 = 0;
-        tv[] var16 = null;
+        ContextMenuRow[] var16 = null;
         int[] var17 = null;
-        tv[] var18 = null;
+        ContextMenuRow[] var18 = null;
         int[] var19 = null;
         int var10Lifetime1;
         int var13_intLifetime1;
@@ -100,7 +100,7 @@ final class MatchOverlayQueue {
                     if (var13_intLifetime1 >= param5) {
                       break scanLoop1;
                     }
-                    if (var14 != (tba.field_m[var13_intLifetime1] & 255)) {
+                    if (var14 != (MonochromeRowCacheEntry.field_m[var13_intLifetime1] & 255)) {
                       break scanLoop1;
                     }
                   }
@@ -114,7 +114,7 @@ final class MatchOverlayQueue {
           }
           if ((decompiledFrameCompleted2) &&
             (decompiledFrameCompleted1)) {
-            stackIn_32_0 = bf.field_b;
+            stackIn_32_0 = SoftwareRenderTarget.field_b;
             if (param5 == -1) {
               stackIn_33_1 = 1;
             } else {
@@ -163,7 +163,7 @@ final class MatchOverlayQueue {
                 }
                 for (var11 = 0; var11 < -1 + var18.length; var11++) {
                   if (param5 != -1) {
-                    tba.field_m[param5] = (byte)var11;
+                    MonochromeRowCacheEntry.field_m[param5] = (byte)var11;
                   } else {
                     param6 = var11;
                   }
@@ -177,7 +177,7 @@ final class MatchOverlayQueue {
               if (param5 == -1) {
                 param6 = var11;
               } else {
-                tba.field_m[param5] = (byte)var11;
+                MonochromeRowCacheEntry.field_m[param5] = (byte)var11;
               }
               if (-1 == param5 &&
                 1 == SafeZoneBehaviour.field_u.length) {
@@ -225,7 +225,7 @@ final class MatchOverlayQueue {
           } else {
             stackIn_99_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -272,13 +272,13 @@ final class MatchOverlayQueue {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final void updateCurrent(byte param0) {
         if (TextWidgetPainter.a(param0 ^ -48) ||
-          !dma.field_l.isReadyToStart(param0 - 60)) {
+          !OpenGlCubeTexture.field_l.isReadyToStart(param0 - 60)) {
           return;
         }
         MatchScreen var2 = SecondaryNodeDequeIterator.field_a;

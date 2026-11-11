@@ -37,8 +37,8 @@ final class ConveyorBehaviour extends Behaviour {
     private final void updateBeltVelocity(int param0) {
         int var2 = MouseInputHandler.sin2048((byte) 111, this.trap.getFacingAngle(-25787) >> 2);
         int var3 = ModelAnimator.cos2048(param0, this.trap.getFacingAngle(-25787) >> 2);
-        this.field_n = -gqa.multiplyFixed(this.field_r, (byte) 24, var2) + gqa.multiplyFixed(this.field_s, (byte) 24, var3);
-        this.field_o = -gqa.multiplyFixed(this.field_s, (byte) 24, var2) + gqa.multiplyFixed(this.field_r, (byte) 24, var3);
+        this.field_n = -ChatMessage.multiplyFixed(this.field_r, (byte) 24, var2) + ChatMessage.multiplyFixed(this.field_s, (byte) 24, var3);
+        this.field_o = -ChatMessage.multiplyFixed(this.field_s, (byte) 24, var2) + ChatMessage.multiplyFixed(this.field_r, (byte) 24, var3);
     }
 
     final int hashState(int param0, int param1) {
@@ -143,7 +143,7 @@ final class ConveyorBehaviour extends Behaviour {
           this.field_s = CoinItemComponent.fromOffsetBinary(true, 4, param1.readBits((byte) 44, 4)) << 16;
           this.field_r = CoinItemComponent.fromOffsetBinary(true, 4, param1.readBits((byte) 44, 4)) << 16;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class ConveyorBehaviour extends Behaviour {
           param1.b((byte) 60, 3);
           this.updateBeltVelocity(0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hi.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hi.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class ConveyorBehaviour extends Behaviour {
           param1.writeBits((byte) -125, dqa.toOffsetBinary(true, this.field_s >> 16, 4), 4);
           param1.writeBits((byte) -127, dqa.toOffsetBinary(true, this.field_r >> 16, 4), 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

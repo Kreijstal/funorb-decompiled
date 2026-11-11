@@ -8,7 +8,7 @@ final class waa {
     private int field_a;
     static String field_e;
 
-    final static int toGlFormat(ft param0, int param1) {
+    final static int toGlFormat(TextureFormat param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
@@ -59,7 +59,7 @@ final class waa {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -74,26 +74,26 @@ final class waa {
         field_e = null;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void draw(int param0, int param1, int param2) {
         if (param1 == 6) {
-          ura.a(param1 ^ -10991);
+          TextureTransformMode.a(param1 ^ -10991);
           hp.drawModelPreview(1024, 4095 & this.field_a * this.field_c, 1996, this.field_d.getModel((byte) 74), -1918106173, param2 + this.field_c, this.field_a + param0);
           RemovedFromGameMenu.resetDepthRange((byte) -6);
           return;
         }
         this.field_c = -128;
-        ura.a(param1 ^ -10991);
+        TextureTransformMode.a(param1 ^ -10991);
         hp.drawModelPreview(1024, 4095 & this.field_a * this.field_c, 1996, this.field_d.getModel((byte) 74), -1918106173, param2 + this.field_c, this.field_a + param0);
         RemovedFromGameMenu.resetDepthRange((byte) -6);
     }
 
-    final void b(int param0) {
+    final void tick(int param0) {
         if (param0 == -9310) {
           this.field_d.tick(0);
           return;
         }
-        ft var3 = (ft) null;
-        waa.toGlFormat((ft) null, 19);
+        TextureFormat var3 = (TextureFormat) null;
+        waa.toGlFormat((TextureFormat) null, 19);
         this.field_d.tick(0);
     }
 

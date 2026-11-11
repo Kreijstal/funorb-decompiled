@@ -22,9 +22,9 @@ final class ig {
             AffineTransform3D.field_j = null;
           }
           WhiteLightSensorComponent.field_K = null;
-          if (null != qha.field_g) {
-            qha.field_g.clear(8);
-            qha.field_g = null;
+          if (null != DemoCourseGenerator.field_g) {
+            DemoCourseGenerator.field_g.clear(8);
+            DemoCourseGenerator.field_g = null;
           }
           tc.field_d = null;
           if (fua.field_a != null) {
@@ -36,7 +36,7 @@ final class ig {
             fua.field_a = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class ig {
           param1.secondaryPrevious.secondaryNext = param1;
           param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

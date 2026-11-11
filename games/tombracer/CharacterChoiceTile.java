@@ -91,7 +91,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
         }
         stackIn_6_0 = VariantMask.field_a;
         try {
@@ -125,7 +125,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
           }
           var10 = !this.isEmpty(-64) ? Room.field_m[this.field_f] : "";
           var4 = var10;
-          SocketConnector.drawWrappedText(var10.toUpperCase(), 1, qf.field_j, var3, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
+          SocketConnector.drawWrappedText(var10.toUpperCase(), 1, FloatPacketBuffer.field_j, var3, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
           return;
         }
         fa.field_a[this.field_f].draw(this.field_k, this.field_g);
@@ -162,7 +162,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
         }
         String var9 = !this.isEmpty(-64) ? Room.field_m[this.field_f] : "";
         var4Lifetime1 = var9;
-        SocketConnector.drawWrappedText(var9.toUpperCase(), 1, qf.field_j, var3Lifetime1, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
+        SocketConnector.drawWrappedText(var9.toUpperCase(), 1, FloatPacketBuffer.field_j, var3Lifetime1, 0, 64, 1, 40 + this.field_g, -10 + this.field_k, -1, (byte) 60, 84);
     }
 
     CharacterChoiceTile(int param0, int param1) {

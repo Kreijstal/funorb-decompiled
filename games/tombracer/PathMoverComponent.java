@@ -15,7 +15,7 @@ abstract class PathMoverComponent extends PrefabComponent {
           super.mirror(param0, param1);
           this.field_K.mirror(true);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ra.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ra.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ abstract class PathMoverComponent extends PrefabComponent {
           if (this.A(-127)) {
             stackIn_3_0 = this.field_K;
             stackIn_4_1 = !(this.field_I);
-            ((WaypointPath) (Object) stackIn_3_0).a(stackIn_4_1, 1);
+            ((WaypointPath) (Object) stackIn_3_0).setStopsAtEnd(stackIn_4_1, 1);
           }
           if (this.storesSpeed(1760)) {
             var4.setSpeed((byte) -99, this.field_J);
@@ -74,7 +74,7 @@ abstract class PathMoverComponent extends PrefabComponent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ abstract class PathMoverComponent extends PrefabComponent {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ abstract class PathMoverComponent extends PrefabComponent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

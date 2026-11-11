@@ -39,7 +39,7 @@ final class SafeZoneBehaviour extends Behaviour {
           this.field_v = param1.readBits((byte) 44, 1) != 1 ? false : true;
           this.field_o = param1.readBits((byte) 44, 1) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class SafeZoneBehaviour extends Behaviour {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class SafeZoneBehaviour extends Behaviour {
           param1.writeBits((byte) 12, !this.field_v ? 0 : 1, 1);
           param1.writeBits((byte) -125, this.field_o ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

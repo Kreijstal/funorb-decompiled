@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class OpenGlTransparentWaterEffect extends ShaderEffect {
-    private hk field_f;
+    private HardwareWaterTextures field_f;
     private HardwareOpenGlToolkit field_e;
     private mf field_d;
 
@@ -19,7 +19,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
             this.field_d = (mf) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pja.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pja.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           jaggl.OpenGL.glDisable(34336);
           return;
         }
-        this.field_f = (hk) null;
+        this.field_f = (HardwareWaterTextures) null;
         jaggl.OpenGL.glDisable(34336);
     }
 
@@ -68,7 +68,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         this.enable(11, true);
     }
 
-    OpenGlTransparentWaterEffect(HardwareOpenGlToolkit param0, ResourceArchive param1, hk param2) {
+    OpenGlTransparentWaterEffect(HardwareOpenGlToolkit param0, ResourceArchive param1, HardwareWaterTextures param2) {
         super(param0);
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;
@@ -112,7 +112,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

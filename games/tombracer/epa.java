@@ -53,7 +53,7 @@ final class epa extends MenuScreen {
           if (param1 != -84) {
             field_q = (String) null;
           }
-          gj.field_r = false;
+          VertexAttribute.field_r = false;
           TileOperator.field_p = false;
           if (TextureOperator.field_l != null &&
             TextureOperator.field_l.field_B) {
@@ -65,14 +65,14 @@ final class epa extends MenuScreen {
                 param2 = SoundCache.field_d;
               }
               param0 = 2;
-              vn.field_b.a(ScrollControlWidget.field_E, 123);
+              vn.field_b.setFieldText(ScrollControlWidget.field_E, 123);
             }
             if (param0 == 10) {
               ToolkitModel.a((byte) -33);
               var3_int = 0;
             }
             if (var3_int != 0) {
-              if (gj.field_r) {
+              if (VertexAttribute.field_r) {
                 param2 = LegacyOpenGlFlowingWaterEffect.formatText(94, nka.field_a, new String[]{param2});
               }
               if (S2CProfileUpdatePacket.field_d) {
@@ -91,7 +91,7 @@ final class epa extends MenuScreen {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "epa.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "epa.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

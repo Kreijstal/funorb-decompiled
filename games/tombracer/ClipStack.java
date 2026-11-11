@@ -4,12 +4,12 @@
 import java.io.*;
 
 final class ClipStack {
-    private iea field_c;
+    private ClipFrame field_c;
     private int[] field_a;
     private GraphicsToolkit field_b;
     static String field_d;
     static UiComponent field_g;
-    private iea field_f;
+    private ClipFrame field_f;
     private ToolkitSprite field_e;
 
     final static void reportClientError(String param0, byte param1, Throwable param2) {
@@ -48,10 +48,10 @@ final class ClipStack {
               var3 = var3 + param0;
             }
             upa.printError(var3, (byte) -24);
-            var7 = qf.replaceAllOccurrences(966747152, "%3a", ":", var3);
-            var8 = qf.replaceAllOccurrences(966747152, "%40", "@", var7);
-            var9 = qf.replaceAllOccurrences(966747152, "%26", "&", var8);
-            var10 = qf.replaceAllOccurrences(966747152, "%23", "#", var9);
+            var7 = FloatPacketBuffer.replaceAllOccurrences(966747152, "%3a", ":", var3);
+            var8 = FloatPacketBuffer.replaceAllOccurrences(966747152, "%40", "@", var7);
+            var9 = FloatPacketBuffer.replaceAllOccurrences(966747152, "%26", "&", var8);
+            var10 = FloatPacketBuffer.replaceAllOccurrences(966747152, "%23", "#", var9);
             if (GameScreen.field_e == null) {
               return;
             }
@@ -67,7 +67,7 @@ final class ClipStack {
             } else {
               stackIn_17_1 = null;
               stackIn_17_2 = null;
-              stackIn_17_5 = "" + ic.field_b;
+              stackIn_17_5 = "" + StatReportingObserverFactory.field_b;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).requestUrlStream(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var10).toString()), 122);
             while (var4.field_b == 0) {
@@ -90,7 +90,7 @@ final class ClipStack {
     }
 
     private final void pushClip(int param0) {
-        iea var2 = null;
+        ClipFrame var2 = null;
         this.field_b.getClip(this.field_a);
         if (param0 != -31138) {
           return;
@@ -99,7 +99,7 @@ final class ClipStack {
           var2 = this.field_f;
           this.field_f = this.field_f.field_b;
         } else {
-          var2 = new iea();
+          var2 = new ClipFrame();
         }
         var2.set(this.field_a[3], this.field_a[2], this.field_a[1], this.field_a[0], this.field_c, this.field_e, param0 ^ -31170);
         this.field_c = var2;
@@ -123,7 +123,7 @@ final class ClipStack {
         }
         this.field_b.setClip(this.field_c.field_d, this.field_c.field_h, this.field_c.field_c, this.field_c.field_f);
         int var2 = -7 / ((param0 - 36) / 59);
-        iea var3 = this.field_c;
+        ClipFrame var3 = this.field_c;
         this.field_c = this.field_c.field_b;
         var3.field_b = this.field_f;
         var3.field_a = null;
@@ -259,7 +259,7 @@ final class ClipStack {
             throw ClipStack.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: data overrun: start=" + var5 + " length=" + var3_int + " end=" + var6 + " overranto=" + param0.position));
           }
           if (param2) {
-            System.out.println("Loading funorbprofile local: achievements=" + wg.arrayToString(0, var28));
+            System.out.println("Loading funorbprofile local: achievements=" + StatReportingScoringObserver.arrayToString(0, var28));
           }
           stackIn_47_0 = var10;
           return (byte[]) (stackIn_47_0);
@@ -273,7 +273,7 @@ final class ClipStack {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class ClipStack {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ssa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ssa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -315,7 +315,7 @@ final class ClipStack {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1_ref), "ssa.E(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1_ref), "ssa.E(" + param0 + ')');
         }
     }
 

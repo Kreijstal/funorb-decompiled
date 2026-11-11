@@ -45,7 +45,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.field_F = this.field_F + 1;
           super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             var10 = var54.textTop(param1, (UiWidget) (this), (byte) -89) + (var54.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
             if (BevelOperator.field_p != var6 &&
               var6 != tea.field_b) {
-              if (fp.field_c == var6) {
+              if (TextureCombineSource.field_c == var6) {
                 var19 = CharacterChoiceFactory.field_b[2];
                 var19.drawAdditive(var9, -(var19.field_q >> 1) + var10, 256);
                 return;
@@ -229,7 +229,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime5 = var55.textTop(param1, (UiWidget) (this), (byte) -89) + (var55.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (BevelOperator.field_p != var6 &&
             var6 != tea.field_b) {
-            if (fp.field_c == var6) {
+            if (TextureCombineSource.field_c == var6) {
               var23 = CharacterChoiceFactory.field_b[2];
               var23.drawAdditive(var9Lifetime5, -(var23.field_q >> 1) + var10Lifetime5, 256);
               return;
@@ -278,7 +278,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             var10Lifetime1 = var56.textTop(param1, (UiWidget) (this), (byte) -89) + (var56.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
             if (BevelOperator.field_p != var6 &&
               var6 != tea.field_b) {
-              if (fp.field_c == var6) {
+              if (TextureCombineSource.field_c == var6) {
                 var28 = CharacterChoiceFactory.field_b[2];
                 var28.drawAdditive(var9Lifetime1, -(var28.field_q >> 1) + var10Lifetime1, 256);
                 return;
@@ -314,7 +314,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime1Lifetime1 = var57.textTop(param1, (UiWidget) (this), (byte) -89) + (var57.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (BevelOperator.field_p != var6 &&
             var6 != tea.field_b) {
-            if (fp.field_c == var6) {
+            if (TextureCombineSource.field_c == var6) {
               var32 = CharacterChoiceFactory.field_b[2];
               var32.drawAdditive(var9Lifetime1Lifetime1, -(var32.field_q >> 1) + var10Lifetime1Lifetime1, 256);
               return;
@@ -361,7 +361,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             var10Lifetime2 = var61.textTop(param1, (UiWidget) (this), (byte) -89) + (var61.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
             if (BevelOperator.field_p != var6Lifetime1 &&
               var6Lifetime1 != tea.field_b) {
-              if (fp.field_c == var6Lifetime1) {
+              if (TextureCombineSource.field_c == var6Lifetime1) {
                 var51 = CharacterChoiceFactory.field_b[2];
                 var51.drawAdditive(var9Lifetime2, -(var51.field_q >> 1) + var10Lifetime2, 256);
                 return;
@@ -399,7 +399,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime2Lifetime1 = var60.textTop(param1, (UiWidget) (this), (byte) -89) + (var60.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (BevelOperator.field_p != var6Lifetime1Lifetime1 &&
             var6Lifetime1Lifetime1 != tea.field_b) {
-            if (fp.field_c == var6Lifetime1Lifetime1) {
+            if (TextureCombineSource.field_c == var6Lifetime1Lifetime1) {
               var45 = CharacterChoiceFactory.field_b[2];
               var45.drawAdditive(var9Lifetime2Lifetime1, -(var45.field_q >> 1) + var10Lifetime2Lifetime1, 256);
               return;
@@ -449,7 +449,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime3 = var58.textTop(param1, (UiWidget) (this), (byte) -89) + (var58.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
           if (BevelOperator.field_p != var6Lifetime2 &&
             var6Lifetime2 != tea.field_b) {
-            if (fp.field_c == var6Lifetime2) {
+            if (TextureCombineSource.field_c == var6Lifetime2) {
               var37 = CharacterChoiceFactory.field_b[2];
               var37.drawAdditive(var9Lifetime3, -(var37.field_q >> 1) + var10Lifetime3, 256);
               return;
@@ -485,7 +485,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var10Lifetime4 = var59.textTop(param1, (UiWidget) (this), (byte) -89) + (var59.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
         if (BevelOperator.field_p != var6Lifetime3 &&
           var6Lifetime3 != tea.field_b) {
-          if (fp.field_c == var6Lifetime3) {
+          if (TextureCombineSource.field_c == var6Lifetime3) {
             var41 = CharacterChoiceFactory.field_b[2];
             var41.drawAdditive(var9Lifetime4, -(var41.field_q >> 1) + var10Lifetime4, 256);
             return;
@@ -524,13 +524,13 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     ValidationMessageWidget(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, nk.getDefaultTextPainter(-21819));
+        super(param1, AnimationFrameBase.getDefaultTextPainter(-21819));
         try {
           this.field_I = param0;
           this.field_E = param1;
           this.setBounds((byte) -31, param4, param5, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

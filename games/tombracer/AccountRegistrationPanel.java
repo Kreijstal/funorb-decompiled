@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements HotspotListener, ButtonListener, mia {
+final class AccountRegistrationPanel extends WidgetContainer implements HotspotListener, ButtonListener, SuggestionsHost {
     private ValidatedTextInputWidget field_E;
     private jla field_D;
     private ValidatedTextInputWidget field_I;
@@ -54,7 +54,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_C.field_q = RevolverItemComponent.field_G;
         this.field_I.field_q = dta.field_e;
         this.field_D.field_q = RenderLayer.field_e;
-        this.field_G.setValidationSource(-13861, new tf(this.field_G));
+        this.field_G.setValidationSource(-13861, new NameFieldValidator(this.field_G));
         this.field_z.setValidationSource(-13861, new EmailSyntaxValidator(this.field_z));
         this.field_J.setValidationSource(-13861, new mn(this.field_J, this.field_z));
         this.field_E.setValidationSource(-13861, new PasswordValidator(this.field_E, this.field_G, this.field_z));
@@ -199,10 +199,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, HardwareSpecularEffect.field_f);
         var3 = var3 + (this.addFieldWithHelp(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
-        var3 = var3 + this.addLabeledField(this.field_E, var3, 170, (byte) 59, rta.field_j);
+        var3 = var3 + this.addLabeledField(this.field_E, var3, 170, (byte) 59, MidiVoice.field_j);
         var3 = var3 + (this.a(WaypointPath.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
-        var3 = var3 + (this.a(CrusherBehaviour.field_r, za.field_f, this.field_G, -3, 170, var3) + 5);
-        var3 = var3 + this.addValidatedField(this.field_I, var3, (byte) 99, iqa.field_g, 170);
+        var3 = var3 + (this.a(CrusherBehaviour.field_r, GraphicsHeap.field_f, this.field_G, -3, 170, var3) + 5);
+        var3 = var3 + this.addValidatedField(this.field_I, var3, (byte) 99, ToolkitInstance.field_g, 170);
         jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, BlendModeOperator.field_o, 11579568, OpenGlSprite.field_l);
         this.addChild(var4, -1);
         var3 = var3 + var4.field_p;
@@ -223,14 +223,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_F.field_h = (WidgetListener) (this);
         this.addChild(this.field_F, -1);
         this.addChild(this.field_B, -1);
-        this.field_y = new UsernameSuggestionsPanel((mia) (this));
+        this.field_y = new UsernameSuggestionsPanel((SuggestionsHost) (this));
         this.field_y.setBounds((byte) -31, -60 - this.field_G.field_m - this.field_G.field_i + this.field_m, 150, 60 + (this.field_G.field_m + this.field_G.field_i), this.field_G.field_n + 20);
         this.addChild(this.field_y, -1);
         this.setBounds((byte) -31, 496, var6 + 55 + var3, 0, 0);
     }
 
     public final void onMoreSuggestionsRequested(int param0) {
-        ((tf) (this.field_G.getValidationSource((byte) 69))).b((byte) -69);
+        ((NameFieldValidator) (this.field_G.getValidationSource((byte) 69))).b((byte) -69);
         if (param0 != 10000536) {
           this.field_E = (ValidatedTextInputWidget) null;
         }
@@ -284,7 +284,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -319,7 +319,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -375,7 +375,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
             return true;
           }
           var4 = var3.getState(param0 ^ 4656);
-          if (var4 == fp.field_c) {
+          if (var4 == TextureCombineSource.field_c) {
             return false;
           }
           if (BevelOperator.field_p == var4) {
@@ -395,7 +395,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -404,7 +404,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           super.updatePointerState(param0, param1, param2, param3);
           this.field_F.field_y = this.areAllInputsValid(param1 - 2095275);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           }
           ((TextInputWidget) ((Object) var3)).setText(false, -16719, var4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mr.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mr.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -482,7 +482,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -528,7 +528,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_B == param2) {
-            gqa.a((byte) 70);
+            ChatMessage.a((byte) 70);
           } else {
             if (param2 == this.field_F) {
               discarded$1 = this.submitRegistration(-1);
@@ -549,7 +549,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -591,7 +591,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 

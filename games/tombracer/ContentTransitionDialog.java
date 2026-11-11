@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ContentTransitionDialog extends ofa {
+abstract class ContentTransitionDialog extends ResizingDialog {
     private sla field_M;
     static int[] field_N;
     private int field_R;
@@ -13,7 +13,7 @@ abstract class ContentTransitionDialog extends ofa {
     private UiWidget field_T;
     private int field_U;
 
-    private final void a(boolean param0, UiWidget param1) {
+    private final void setContent(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         RuntimeException stackIn_11_0 = null;
@@ -48,7 +48,7 @@ abstract class ContentTransitionDialog extends ofa {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ abstract class ContentTransitionDialog extends ofa {
         }
         if (this.field_M != S2CRewardChoicePacket.field_a) {
           this.setCentredSize(-11560, this.field_T.field_p + (this.field_S + 12), 12 + this.field_T.field_m);
-          this.a(false, this.field_T);
+          this.setContent(false, this.field_T);
         } else {
           this.field_P.field_y = 256;
           this.field_M = null;
@@ -103,7 +103,7 @@ abstract class ContentTransitionDialog extends ofa {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -182,14 +182,14 @@ abstract class ContentTransitionDialog extends ofa {
         this.field_M = S2CRewardChoicePacket.field_a;
         if (param0 <= -20) {
           this.field_R = 0;
-          this.a(false, this.field_T);
+          this.setContent(false, this.field_T);
           this.field_P.field_y = 0;
           this.field_T = null;
           return;
         }
         this.field_R = 19;
         this.field_R = 0;
-        this.a(false, this.field_T);
+        this.setContent(false, this.field_T);
         this.field_P.field_y = 0;
         this.field_T = null;
     }
@@ -224,7 +224,7 @@ abstract class ContentTransitionDialog extends ofa {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -235,9 +235,9 @@ abstract class ContentTransitionDialog extends ofa {
           this.field_O = param3;
           this.field_Q = param4;
           this.field_S = param2;
-          this.a(false, param1);
+          this.setContent(false, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

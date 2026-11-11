@@ -49,7 +49,7 @@ final class GasTrapComponent extends PrefabComponent {
         if (null != RoomViewRenderer.field_c) {
           return true;
         }
-        if (!eba.a(true)) {
+        if (!SoftCacheEntry.a(true)) {
           return false;
         }
         return true;
@@ -68,7 +68,7 @@ final class GasTrapComponent extends PrefabComponent {
           super.encode(param0, param1);
           param1.writeBits((byte) 15, SpawnerBehaviour.fixed16ToBits((byte) 8, 2, this.field_I), 6);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wqa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wqa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class GasTrapComponent extends PrefabComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class GasTrapComponent extends PrefabComponent {
         try {
           this.field_I = NodeHashTable.bitsToFixed16(param2.readBits((byte) 44, 6), 87, 2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DirectXEnvironmentWaterEffect extends ShaderEffect {
-    private hk field_f;
+    private HardwareWaterTextures field_f;
     private jagdx.IDirect3DPixelShader field_g;
     private static float[] field_h;
     private boolean field_d;
@@ -37,7 +37,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         }
     }
 
-    DirectXEnvironmentWaterEffect(Direct3DToolkit param0, ResourceArchive param1, hk param2) {
+    DirectXEnvironmentWaterEffect(Direct3DToolkit param0, ResourceArchive param1, HardwareWaterTextures param2) {
         super(param0);
         boolean stackIn_9_1 = false;
         this.field_f = param2;
@@ -102,7 +102,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
     final void enable(int param0, boolean param1) {
         jagdx.IDirect3DDevice var5 = null;
         int var4 = 11 % ((param0 - 41) / 62);
-        na var3 = this.owner.environmentCubeTexture(33);
+        CubeTexture var3 = this.owner.environmentCubeTexture(33);
         if (!this.field_d) {
           return;
         }
@@ -146,7 +146,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (param0 == 55) {
           return;
         }
-        this.field_f = (hk) null;
+        this.field_f = (HardwareWaterTextures) null;
     }
 
     final void onProjectionChanged(int param0) {

@@ -80,15 +80,15 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
     }
 
     final static void buildMainScreenRoots(boolean param0) {
-        hk.field_e = new UiComponent(0L, (UiComponent) null);
+        HardwareWaterTextures.field_e = new UiComponent(0L, (UiComponent) null);
         if (UnlockOverlay.field_p) {
-          hk.field_e.addChild(-127, PerlinNoise2D.field_t);
+          HardwareWaterTextures.field_e.addChild(-127, PerlinNoise2D.field_t);
         }
         if (param0) {
           field_n = -21;
         }
-        hk.field_e.addChild(-127, RasterShape.field_e);
-        oca.field_b = new lla(PbufferEntry.field_o, hk.field_e);
+        HardwareWaterTextures.field_e.addChild(-127, RasterShape.field_e);
+        oca.field_b = new lla(PbufferEntry.field_o, HardwareWaterTextures.field_e);
         C2SRoomResultPacket.field_a = new UiComponent(0L, (UiComponent) null);
         C2SRoomResultPacket.field_a.addChild(-122, oca.field_b.field_a);
         C2SRoomResultPacket.field_a.addChild(-128, ImageProducerRasterBuffer.field_j);
@@ -207,7 +207,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -257,7 +257,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.field_v = !this.field_v ? true : false;
           this.mirrorMounts((byte) -24);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "csa.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "csa.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -362,7 +362,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -496,7 +496,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -529,7 +529,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           param3[param2] = param3[param0];
           param3[param0] = var5;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "csa.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "csa.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -541,7 +541,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           }
           this.parent = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "csa.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "csa.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -569,7 +569,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -597,7 +597,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
             this.angle = -82;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "csa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "csa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -670,12 +670,12 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     final static void setHuffmanCodec(int param0, HuffmanCodec param1) {
         try {
-          nma.field_m = param1;
+          CurveShape.field_m = param1;
           if (param0 != 1048576) {
             RoomComponent.buildMainScreenRoots(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "csa.QA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "csa.QA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -844,7 +844,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -869,7 +869,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.applyDefaults((byte) -128);
           this.updateRotation(true);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "csa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "csa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

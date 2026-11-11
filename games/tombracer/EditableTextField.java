@@ -63,7 +63,7 @@ final class EditableTextField extends UiComponent {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class EditableTextField extends UiComponent {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw tba.wrapException((Throwable) ((Object) var2), "sw.JA(" + param0 + ')');
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "sw.JA(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -172,7 +172,7 @@ final class EditableTextField extends UiComponent {
           }
           this.caret = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sw.QA(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sw.QA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -185,7 +185,7 @@ final class EditableTextField extends UiComponent {
           int var2_int = -100 / ((param0 - 14) / 52);
           this.deleteSelection((byte) -125);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sw.E(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sw.E(" + param0 + ')');
         }
     }
 
@@ -225,7 +225,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sw.IA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sw.IA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -266,7 +266,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "sw.H(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "sw.H(" + param0 + ')');
         }
     }
 
@@ -280,7 +280,7 @@ final class EditableTextField extends UiComponent {
           this.caret = 0;
           this.field_Cb.field_r = this.text.toString();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sw.HA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sw.HA(" + param0 + ')');
         }
     }
 
@@ -290,10 +290,10 @@ final class EditableTextField extends UiComponent {
         RuntimeException var1 = null;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!SnakePitTile.a(false)) {
-            if (dq.field_f != null &&
-              dq.field_f.field_b) {
-              og.exitFullscreen(0);
+          if (!SnakePitTile.hasVisibleDialog(false)) {
+            if (ColourRowCacheEntry.field_f != null &&
+              ColourRowCacheEntry.field_f.field_b) {
+              HardwareOpenGlVertexBuffer.exitFullscreen(0);
               ModelFactory.field_a.pushDialog(new gga(ModelFactory.field_a, TurbulenceNoise3D.field_j), 122);
             }
             return;
@@ -311,7 +311,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "sw.K(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "sw.K(" + param0 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class EditableTextField extends UiComponent {
             return stackIn_3_0;
           }
           for (var2_int = this.caret - 1; var2_int > 0; var2_int--) {
-            if (!Effect.a(this.text.charAt(var2_int - 1), true)) {
+            if (!Effect.isWordBoundary(this.text.charAt(var2_int - 1), true)) {
               continue;
             }
             break;
@@ -341,7 +341,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "sw.RA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "sw.RA(" + param0 + ')');
         }
     }
 
@@ -366,7 +366,7 @@ final class EditableTextField extends UiComponent {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -380,7 +380,7 @@ final class EditableTextField extends UiComponent {
         try {
           this.field_Db = this.field_Bb.requestClipboardContents(param0 + 25);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sw.D(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sw.D(" + param0 + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class EditableTextField extends UiComponent {
             }
             this.field_Bb.requestSetClipboard((byte) 84, (java.awt.datatransfer.Transferable) ((Object) var3));
           } catch (RuntimeException runtimeException) {
-            throw tba.wrapException((Throwable) ((Object) runtimeException), "sw.OA(" + param0 + ')');
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sw.OA(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -442,7 +442,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "sw.TA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "sw.TA(" + param0 + ')');
         }
     }
 
@@ -461,7 +461,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "sw.NA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "sw.NA(" + param0 + ')');
         }
     }
 
@@ -473,7 +473,7 @@ final class EditableTextField extends UiComponent {
         try {
           field_zb = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sw.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sw.B(" + param0 + ')');
         }
     }
 
@@ -559,7 +559,7 @@ final class EditableTextField extends UiComponent {
             stackIn_18_0 = stackIn_14_0;
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -598,7 +598,7 @@ final class EditableTextField extends UiComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -722,7 +722,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "sw.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "sw.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -775,7 +775,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "sw.A(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "sw.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -795,13 +795,13 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "sw.J(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "sw.J(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void k(byte param0) {
         try {
-          ta.field_ub = null;
+          LabelledRow.field_ub = null;
           gca.field_g = null;
           mma.field_b = null;
           PowerUpItemBehaviour.field_t = null;
@@ -815,7 +815,7 @@ final class EditableTextField extends UiComponent {
           AllPlatformsMazeComponent.field_O = null;
           System.gc();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sw.SA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sw.SA(" + param0 + ')');
         }
     }
 
@@ -838,7 +838,7 @@ final class EditableTextField extends UiComponent {
             return stackIn_5_0;
           }
           for (var3 = 1 + this.caret; var2_int > var3; var3++) {
-            if (!Effect.a(this.text.charAt(var3 - 1), true)) {
+            if (!Effect.isWordBoundary(this.text.charAt(var3 - 1), true)) {
               continue;
             }
             break;
@@ -848,7 +848,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "sw.PA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "sw.PA(" + param0 + ')');
         }
     }
 
@@ -862,7 +862,7 @@ final class EditableTextField extends UiComponent {
             this.getText((byte) 103);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sw.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sw.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -897,7 +897,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "sw.LA(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "sw.LA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -914,7 +914,7 @@ final class EditableTextField extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "sw.F(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "sw.F(" + param0 + ')');
         }
     }
 

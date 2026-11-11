@@ -4,7 +4,7 @@
 public class dxVertexLayout extends mna {
     jagdx.IDirect3DVertexDeclaration field_e;
 
-    dxVertexLayout(Direct3DToolkit param0, ne[] param1) {
+    dxVertexLayout(Direct3DToolkit param0, VertexStreamLayout[] param1) {
         int var5 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -13,8 +13,8 @@ public class dxVertexLayout extends mna {
         int incrementValue$3 = 0;
         int var4;
         int var6;
-        ne var7;
-        gj var9;
+        VertexStreamLayout var7;
+        VertexAttribute var9;
         jagdx.VertexElementCollection var10;
         var10 = new jagdx.VertexElementCollection(param0.field_Mc);
         var4 = 0;
@@ -23,27 +23,27 @@ public class dxVertexLayout extends mna {
           var7 = param1[var5];
           for (var8 = 0; var7.size((byte) 56) > var8; var8++) {
             var9 = var7.get(0, var8);
-            if (var9 == gj.field_p) {
+            if (var9 == VertexAttribute.field_p) {
               var10.addElement(var5, 2, 0, 0, 0, var6);
             } else {
-              if (var9 == gj.field_e) {
+              if (var9 == VertexAttribute.field_e) {
                 var10.addElement(var5, 2, 0, 3, 0, var6);
               } else {
-                if (gj.field_b == var9) {
+                if (VertexAttribute.field_b == var9) {
                   var10.addElement(var5, 4, 0, 10, 0, var6);
                 } else {
-                  if (gj.field_m == var9) {
+                  if (VertexAttribute.field_m == var9) {
                     incrementValue$0 = var4;
                     var4++;
                     var10.addElement(var5, 0, 0, 5, incrementValue$0, var6);
                   } else {
-                    if (var9 == gj.field_n) {
+                    if (var9 == VertexAttribute.field_n) {
                       incrementValue$1 = var4;
                       var4++;
                       var10.addElement(var5, 1, 0, 5, incrementValue$1, var6);
                     } else {
-                      if (gj.field_k != var9) {
-                        if (var9 == gj.field_j) {
+                      if (VertexAttribute.field_k != var9) {
+                        if (var9 == VertexAttribute.field_j) {
                           incrementValue$2 = var4;
                           var4++;
                           var10.addElement(var5, 3, 0, 5, incrementValue$2, var6);

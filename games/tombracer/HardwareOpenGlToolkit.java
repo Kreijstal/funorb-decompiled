@@ -18,7 +18,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     private boolean field_rd;
     private boolean field_ld;
     jaggl.MapBuffer field_Qc;
-    private og[] field_id;
+    private HardwareOpenGlVertexBuffer[] field_id;
     private boolean field_Vc;
     private long field_Xc;
     private int field_ed;
@@ -37,14 +37,14 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     private String field_jd;
     private int field_md;
 
-    final void bindVertexBuffer(int param0, int param1, qm param2) {
+    final void bindVertexBuffer(int param0, int param1, VertexStreamBuffer param2) {
         try {
-          this.field_id[param1] = (og) (param2);
+          this.field_id[param1] = (HardwareOpenGlVertexBuffer) (param2);
           if (param0 >= -124) {
             this.field_Xc = 121L;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "kda.QD(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kda.QD(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return false;
     }
 
-    final void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, iw param4, int param5, int param6) {
+    final void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, PrimitiveType param4, int param5, int param6) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -79,7 +79,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         int var8_int = 0;
         RuntimeException var8 = null;
         int var9 = 0;
-        una var10 = null;
+        GpuDataType var10 = null;
         OpenGlVertexBuffer var11 = null;
         int var12 = 0;
         var12 = TombRacer.field_G ? 1 : 0;
@@ -93,7 +93,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
               var9 = 1 + param6;
             } else {
               if (ArchiveManager.field_f != param4) {
-                if (param4 != vs.field_T) {
+                if (param4 != ProgressDialog.field_T) {
                   if (param4 == nb.field_b) {
                     var9 = param6 + 2;
                     var8_int = 5;
@@ -135,7 +135,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
               stackIn_8_0 = new pe(this, param3, param5, param0, param1, param4);
               return (GpuTexture2D) ((Object) stackIn_8_0);
             }
-            var9 = new OpenGlTexture2D(this, SwitchableId.field_a, una.field_g, lla.nextPowerOfTwo(false, param3), lla.nextPowerOfTwo(false, param5));
+            var9 = new OpenGlTexture2D(this, SwitchableId.field_a, GpuDataType.field_g, lla.nextPowerOfTwo(false, param3), lla.nextPowerOfTwo(false, param5));
             var9.uploadIntRegion(param1, param5, param4, 113, 0, param0, param3, 0);
             stackIn_6_0 = var9;
             return (GpuTexture2D) ((Object) stackIn_6_0);
@@ -175,18 +175,18 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final qm createVertexBuffer(int param0, boolean param1) {
+    final VertexStreamBuffer createVertexBuffer(int param0, boolean param1) {
         if (param0 != 6) {
           this.field_dd = (IntrusiveDeque) null;
         }
-        return (qm) ((Object) new og(this, param1));
+        return (VertexStreamBuffer) ((Object) new HardwareOpenGlVertexBuffer(this, param1));
     }
 
-    final mna createVertexLayout(ne[] param0, int param1) {
+    final mna createVertexLayout(VertexStreamLayout[] param0, int param1) {
         RuntimeException var3 = null;
         dqa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -209,7 +209,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -266,9 +266,9 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glFogfv(2918, HelloCommand.field_r, 0);
     }
 
-    final na createCubeTexture(byte param0, int[][] param1, boolean param2, int param3) {
+    final CubeTexture createCubeTexture(byte param0, int[][] param1, boolean param2, int param3) {
         RuntimeException var5 = null;
-        dma stackIn_3_0 = null;
+        OpenGlCubeTexture stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -277,8 +277,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (param0 < 7) {
             field_hd = 36;
           }
-          stackIn_3_0 = new dma(this, param3, param2, param1);
-          return (na) ((Object) stackIn_3_0);
+          stackIn_3_0 = new OpenGlCubeTexture(this, param3, param2, param1);
+          return (CubeTexture) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -289,7 +289,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -329,7 +329,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
 
     final void applyViewport(byte param0) {
         if (param0 != -116) {
-          this.field_id = (og[]) null;
+          this.field_id = (HardwareOpenGlVertexBuffer[]) null;
         }
         jaggl.OpenGL.glViewport(this.field_i, this.field_Kc, this.field_Hb, this.field_jc);
     }
@@ -338,7 +338,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         if (param0 != 26) {
           this.field_rd = true;
         }
-        return (VertexBuffer) ((Object) new OpenGlVertexBuffer(this, una.field_f, param1));
+        return (VertexBuffer) ((Object) new OpenGlVertexBuffer(this, GpuDataType.field_f, param1));
     }
 
     final void applyPointLights(byte param0) {
@@ -402,7 +402,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return false;
     }
 
-    final GpuTexture2D createTexture2D(int param0, int param1, ft param2, byte param3, una param4) {
+    final GpuTexture2D createTexture2D(int param0, int param1, TextureFormat param2, byte param3, GpuDataType param4) {
         RuntimeException var6 = null;
         pe stackIn_8_0 = null;
         OpenGlTexture2D stackIn_10_0 = null;
@@ -460,7 +460,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -488,7 +488,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glDepthMask(stackIn_4_0);
     }
 
-    final boolean supportsTexture2D(boolean param0, una param1, ft param2) {
+    final boolean supportsTexture2D(boolean param0, GpuDataType param1, TextureFormat param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -517,11 +517,11 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final GpuTexture2D createByteTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7) {
+    final GpuTexture2D createByteTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, TextureFormat param6, int param7) {
         RuntimeException var9 = null;
         OpenGlTexture2D var10 = null;
         OpenGlTexture2D stackIn_7_0 = null;
@@ -535,7 +535,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 1) {
-            this.field_id = (og[]) null;
+            this.field_id = (HardwareOpenGlVertexBuffer[]) null;
           }
           if (!this.field_Wc && (!PbufferEntry.isPowerOfTwoOrZero(9181, param7) ||
             !PbufferEntry.isPowerOfTwoOrZero(9181, param3))) {
@@ -543,7 +543,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
               stackIn_10_0 = new pe(this, param6, param7, param3, param1, param2, param5);
               return (GpuTexture2D) ((Object) stackIn_10_0);
             }
-            var10 = new OpenGlTexture2D(this, param6, una.field_g, lla.nextPowerOfTwo(false, param7), lla.nextPowerOfTwo(false, param3));
+            var10 = new OpenGlTexture2D(this, param6, GpuDataType.field_g, lla.nextPowerOfTwo(false, param7), lla.nextPowerOfTwo(false, param3));
             var10.uploadByteRegion(0, (byte) -124, param3, param1, param5, param2, param6, param7, 0);
             stackIn_12_0 = var10;
             return (GpuTexture2D) ((Object) stackIn_12_0);
@@ -566,7 +566,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param7).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -669,7 +669,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.field_Mc.swapBuffers();
     }
 
-    final void drawPrimitives(int param0, iw param1, int param2, int param3) {
+    final void drawPrimitives(int param0, PrimitiveType param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -686,7 +686,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             if (param1 != ToolkitSelector.field_d) {
               if (param1 != ArchiveManager.field_f) {
-                if (param1 == vs.field_T) {
+                if (param1 == ProgressDialog.field_T) {
                   var5_int = 6;
                   var6 = param0 + 2;
                 } else {
@@ -722,7 +722,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -741,7 +741,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glRasterPos2i(0, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "kda.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kda.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -984,7 +984,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         return 0.0f;
     }
 
-    final boolean supportsTexture3D(una param0, int param1, ft param2) {
+    final boolean supportsTexture3D(GpuDataType param0, int param1, TextureFormat param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -1013,11 +1013,11 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final GpuTexture2D createFloatTexture2D(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7) {
+    final GpuTexture2D createFloatTexture2D(TextureFormat param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7) {
         RuntimeException var9 = null;
         OpenGlTexture2D var10 = null;
         GpuTexture2D stackIn_2_0 = null;
@@ -1041,7 +1041,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
               stackIn_11_0 = new pe(this, param0, param4, param7, param6, param5, param1);
               return (GpuTexture2D) ((Object) stackIn_11_0);
             }
-            var10 = new OpenGlTexture2D(this, param0, una.field_h, lla.nextPowerOfTwo(false, param4), lla.nextPowerOfTwo(false, param7));
+            var10 = new OpenGlTexture2D(this, param0, GpuDataType.field_h, lla.nextPowerOfTwo(false, param4), lla.nextPowerOfTwo(false, param7));
             var10.uploadFloatRegion(0, param6, 0, param4, param7, param5, param1, param0, true);
             stackIn_9_0 = var10;
             return (GpuTexture2D) ((Object) stackIn_9_0);
@@ -1064,7 +1064,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param7).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -1092,14 +1092,14 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ne var9 = null;
-        og var10 = null;
+        VertexStreamLayout var9 = null;
+        HardwareOpenGlVertexBuffer var10 = null;
         int var11 = 0;
         int var12 = 0;
         long var13 = 0L;
-        gj var16 = null;
+        VertexAttribute var16 = null;
         int var17 = 0;
-        ne[] var18 = null;
+        VertexStreamLayout[] var18 = null;
         int var8Lifetime1;
         var17 = TombRacer.field_G ? 1 : 0;
         try {
@@ -1107,7 +1107,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           var4 = 0;
           var5 = 0;
           if (param1 != -32) {
-            this.field_id = (og[]) null;
+            this.field_id = (HardwareOpenGlVertexBuffer[]) null;
           }
           var6 = 0;
           var7 = 0;
@@ -1115,34 +1115,34 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             var9 = var18[var8];
             var10 = this.field_id[var8];
             var11 = 0;
-            var12 = var10.a((byte) -111);
+            var12 = var10.getStride((byte) -111);
             var13 = var10.getPointer(true);
             var10.bind(-3);
             for (var15 = 0; var9.size((byte) -77) > var15; var15++) {
               var16 = var9.get(0, var15);
-              if (var16 == gj.field_p) {
+              if (var16 == VertexAttribute.field_p) {
                 jaggl.OpenGL.glVertexPointer(3, 5126, var12, var13 + (long)var11);
                 var7 = 1;
               } else {
-                if (gj.field_e == var16) {
+                if (VertexAttribute.field_e == var16) {
                   jaggl.OpenGL.glNormalPointer(5126, var12, (long)var11 + var13);
                   var6 = 1;
                 } else {
-                  if (var16 != gj.field_b) {
-                    if (var16 != gj.field_m) {
-                      if (var16 == gj.field_n) {
+                  if (var16 != VertexAttribute.field_b) {
+                    if (var16 != VertexAttribute.field_m) {
+                      if (var16 == VertexAttribute.field_n) {
                         incrementValue$0 = var4;
                         var4++;
                         jaggl.OpenGL.glClientActiveTexture(incrementValue$0 + 33984);
                         jaggl.OpenGL.glTexCoordPointer(2, 5126, var12, (long)var11 + var13);
                       } else {
-                        if (gj.field_k == var16) {
+                        if (VertexAttribute.field_k == var16) {
                           incrementValue$1 = var4;
                           var4++;
                           jaggl.OpenGL.glClientActiveTexture(33984 + incrementValue$1);
                           jaggl.OpenGL.glTexCoordPointer(3, 5126, var12, var13 + (long)var11);
                         } else {
-                          if (gj.field_j == var16) {
+                          if (VertexAttribute.field_j == var16) {
                             incrementValue$2 = var4;
                             var4++;
                             jaggl.OpenGL.glClientActiveTexture(33984 + incrementValue$2);
@@ -1232,7 +1232,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1304,7 +1304,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -1343,13 +1343,13 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final lv createTexture3D(byte[] param0, ft param1, byte param2, int param3, int param4, int param5) {
+    final Texture3D createTexture3D(byte[] param0, TextureFormat param1, byte param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
-        jd stackIn_3_0 = null;
+        OpenGlTexture3D stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -1360,8 +1360,8 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (param2 > -1) {
             this.loadModelViewMatrix(true);
           }
-          stackIn_3_0 = new jd(this, param1, param4, param3, param5, param0);
-          return (lv) ((Object) stackIn_3_0);
+          stackIn_3_0 = new OpenGlTexture3D(this, param1, param4, param3, param5, param0);
+          return (Texture3D) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -1378,7 +1378,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1413,7 +1413,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glEnable(16385);
         }
         if (param0 != -21) {
-          this.field_id = (og[]) null;
+          this.field_id = (HardwareOpenGlVertexBuffer[]) null;
         }
     }
 
@@ -1475,7 +1475,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.field_ad = new IntrusiveDeque();
         this.field_nd = new IntrusiveDeque();
         this.field_kd = new IntrusiveDeque();
-        this.field_id = new og[16];
+        this.field_id = new HardwareOpenGlVertexBuffer[16];
         this.field_Qc = new jaggl.MapBuffer();
         this.field_Tc = new jaggl.MapBuffer();
         try {
@@ -1649,7 +1649,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1724,7 +1724,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void setColorCombineSource(fp param0, int param1, int param2, boolean param3, boolean param4) {
+    final void setColorCombineSource(TextureCombineSource param0, int param1, int param2, boolean param3, boolean param4) {
         int stackIn_5_0 = 0;
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
@@ -1771,7 +1771,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1786,7 +1786,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void setAlphaCombineSource(fp param0, int param1, boolean param2, int param3) {
+    final void setAlphaCombineSource(TextureCombineSource param0, int param1, boolean param2, int param3) {
         try {
           if (param1 != 15802) {
             this.applyTextureConstantColor(120);
@@ -1794,7 +1794,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, BrickOperator.glCombineSource(param0, true));
           jaggl.OpenGL.glTexEnvi(8960, 34200 + param3, !param2 ? 770 : 771);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "kda.AC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kda.AC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1848,7 +1848,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

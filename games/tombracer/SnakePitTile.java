@@ -44,7 +44,7 @@ final class SnakePitTile implements Renderable {
         return this.snakePit.getRenderX((byte) -79) + this.field_b;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean hasVisibleDialog(boolean param0) {
         if (param0) {
           SnakePitTile.releaseStatics(-63);
           if (null == ModelFactory.field_a) {
@@ -74,9 +74,9 @@ final class SnakePitTile implements Renderable {
           return;
         }
         try {
-          gqa.drawModelAt(GameScreen.positiveModulo(this.field_e, 2048, -108), -83584144, this.getRenderY((byte) 97), this.getRenderX((byte) -92), this.snakePit.getTileModel(false, this), this.getRenderZ((byte) -110));
+          ChatMessage.drawModelAt(GameScreen.positiveModulo(this.field_e, 2048, -108), -83584144, this.getRenderY((byte) 97), this.getRenderX((byte) -92), this.snakePit.getTileModel(false, this), this.getRenderZ((byte) -110));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "lca.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lca.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

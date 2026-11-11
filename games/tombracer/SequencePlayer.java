@@ -98,7 +98,7 @@ final class SequencePlayer {
           LegacyOpenGlTexture.field_a = fta.field_c;
           wt.field_d = fta.field_c;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cra.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cra.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class SequencePlayer {
         try {
           var3_int = -103 / ((param0 + 36) / 51);
           if (!this.sequence.field_i) {
-            param1.animate(-121, hba.field_c, -1, this.field_g, 0, (ena) null, 0, this.sequence.field_h, 0);
+            param1.animate(-121, hba.field_c, -1, this.field_g, 0, (AnimationFrameSet) null, 0, this.sequence.field_h, 0);
           } else {
             param1.animate(-124, hba.field_c, this.field_c, this.field_g, this.field_i - this.field_d, hba.field_c, this.field_i, this.sequence.field_h, 0);
           }
@@ -186,7 +186,7 @@ final class SequencePlayer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class SequencePlayer {
           discarded$1 = this.advanceFrame(-95);
           this.field_k = -1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cra.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cra.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class SequencePlayer {
           this.frameChanged = true;
           this.field_i = 1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cra.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cra.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -786,7 +786,7 @@ final class fea {
           }
           SimpleBlockBehaviour.field_r = -1;
           if (HardwareOpenGlToolkit.field_pd) {
-            if (qha.field_f != fr.field_c) {
+            if (DemoCourseGenerator.field_f != fr.field_c) {
               return;
             }
             HardwareOpenGlToolkit.field_pd = false;
@@ -803,7 +803,7 @@ final class fea {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 

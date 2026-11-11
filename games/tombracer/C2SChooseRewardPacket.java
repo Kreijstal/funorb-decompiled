@@ -37,8 +37,8 @@ final class C2SChooseRewardPacket implements GamePacket {
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           var7_int = ScoringObserverFactory.alignTo8(param0, 0);
-          if (pb.field_n == null) {
-            pb.field_n = new java.security.SecureRandom();
+          if (CacheEntry.field_n == null) {
+            CacheEntry.field_n = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
@@ -47,7 +47,7 @@ final class C2SChooseRewardPacket implements GamePacket {
             C2SChooseRewardPacket.releaseStatics(25);
           }
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = pb.field_n.nextInt();
+            var8[var9] = CacheEntry.field_n.nextInt();
           }
           if (null == PlayerModel.field_d ||
             !(PlayerModel.field_d.payload.length >= var7_int)) {
@@ -102,7 +102,7 @@ final class C2SChooseRewardPacket implements GamePacket {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class C2SChooseRewardPacket implements GamePacket {
           this.field_b = param0.readBits((byte) 44, 2);
           param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uu.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uu.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class C2SChooseRewardPacket implements GamePacket {
           param1.writeBits((byte) -125, this.field_b, 2);
           param1.endBitWrite(param0 ^ -1826190742);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uu.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uu.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class C2SChooseRewardPacket implements GamePacket {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

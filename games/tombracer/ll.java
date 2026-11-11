@@ -39,7 +39,7 @@ final class ll {
         RuntimeException decompiledCaughtException = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          var6 = qg.field_a;
+          var6 = CourseDefinition.field_a;
           var2 = var6;
           for (var3 = param1; var6.length > var3; var3++) {
             var4 = var6[var3];
@@ -53,7 +53,7 @@ final class ll {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "ll.B(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "ll.B(" + param0 + ',' + param1 + ')');
         }
     }
 

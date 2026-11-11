@@ -13,7 +13,7 @@ final class upa extends IntrusiveNode {
     boolean field_i;
 
     final static void printError(String param0, byte param1) {
-        System.out.println("Error: " + qf.replaceAllOccurrences(966747152, "\n", "%0a", param0));
+        System.out.println("Error: " + FloatPacketBuffer.replaceAllOccurrences(966747152, "\n", "%0a", param0));
         if (param1 != -24) {
           String var3 = (String) null;
           upa.printError((String) null, (byte) 67);
@@ -52,7 +52,7 @@ final class upa extends IntrusiveNode {
         int stackIn_64_1 = 0;
         boolean stackIn_65_2 = false;
         tga.intersectClip(-21953, -640 + SoftwareRasterizer.width >> 1, 640 + SoftwareRasterizer.width >> 1, 0, SoftwareRasterizer.height);
-        if (mla.field_a <= 0) {
+        if (ProjectionMode.field_a <= 0) {
           if (GameKeyHandler.field_a > param1) {
             if (null != fta.field_b) {
               fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
@@ -66,7 +66,7 @@ final class upa extends IntrusiveNode {
             stackIn_51_2 = (param0) && (!OpenGlDisplayLists.field_e);
             ((UiComponent) (Object) stackIn_50_0).drawFullScreen(stackIn_50_1, stackIn_51_2);
           } else {
-            if (0 < fp.field_e) {
+            if (0 < TextureCombineSource.field_e) {
               if (null != fta.field_b) {
                 fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
               }
@@ -105,7 +105,7 @@ final class upa extends IntrusiveNode {
             stackIn_37_2 = (param0) && (!OpenGlDisplayLists.field_e);
             ((UiComponent) (Object) stackIn_36_0).drawFullScreen(stackIn_36_1, stackIn_37_2);
           } else {
-            if (0 < fp.field_e) {
+            if (0 < TextureCombineSource.field_e) {
               if (null != fta.field_b) {
                 fta.field_b.drawOpaque(C2SRoomResultPacket.field_c.field_qb, 0);
               }
@@ -127,7 +127,7 @@ final class upa extends IntrusiveNode {
         if (param1 != 0) {
           return false;
         }
-        return hh.a(param2, (byte) 5, param0) & ModelFactory.a(-17, param0, param2);
+        return hh.a(param2, (byte) 5, param0) & ModelFactory.hasFlag2048(-17, param0, param2);
     }
 
     final static int mixHashBoolean(boolean param0, int param1, byte param2) {

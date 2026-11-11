@@ -10,7 +10,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
     static GameApplet field_j;
     static UiComponent field_i;
 
-    final int f(byte param0) {
+    final int getRenderLayer(byte param0) {
         int var2 = -73 / ((param0 + 4) / 47);
         int var3 = this.field_k;
         if (var3 != 4) {
@@ -24,7 +24,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
           int var3_int = -11 % ((param1 - 39) / 46);
           this.field_l = param0.mirrorX(this.field_l, (byte) 71);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "kua.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kua.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
         try {
           this.field_h.getAnimator((byte) -66).drawShadow(this.field_k, (byte) -101, this.field_f, this.field_g, this.field_l);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "kua.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kua.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
           this.field_h = param0;
           this.field_k = param4;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "kua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 

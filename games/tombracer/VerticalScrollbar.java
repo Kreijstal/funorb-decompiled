@@ -249,7 +249,7 @@ final class VerticalScrollbar extends UiComponent {
         field_tb = null;
     }
 
-    final static int toGlTextureEnvMode(byte param0, ica param1) {
+    final static int toGlTextureEnvMode(byte param0, TextureCombineOperation param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -270,7 +270,7 @@ final class VerticalScrollbar extends UiComponent {
             stackIn_5_0 = 7681;
             return stackIn_5_0;
           }
-          if (iw.field_c == param1) {
+          if (PrimitiveType.field_c == param1) {
             stackIn_8_0 = 8448;
             return stackIn_8_0;
           }
@@ -297,7 +297,7 @@ final class VerticalScrollbar extends UiComponent {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -322,7 +322,7 @@ final class VerticalScrollbar extends UiComponent {
         return false;
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
+    final void setScrollbarBounds(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
         this.field_t = param5;
         this.field_T = param7;
         if (param3) {
@@ -395,7 +395,7 @@ final class VerticalScrollbar extends UiComponent {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

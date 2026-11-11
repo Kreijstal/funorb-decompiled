@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ObjectList {
-    static nl field_d;
+    static LoginMethod field_d;
     private int size;
     private static String[] field_g;
     private Object[] elements;
@@ -34,7 +34,7 @@ final class ObjectList {
           }
           this.elements[param0] = param2;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ub.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ub.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class ObjectList {
         try {
           ol.field_b = null;
           ii.field_a = 0;
-          tba.field_k = param0;
+          MonochromeRowCacheEntry.field_k = param0;
           PlayingSound.field_f.clear(8);
           MenuScreen.field_l.clear(8);
           var1 = TrackPlayerLocomotor.field_s.startTraversal(16);
@@ -60,7 +60,7 @@ final class ObjectList {
           }
           UiWidget.field_g = 0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ub.G(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ub.G(" + param0 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class ObjectList {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class ObjectList {
         try {
           this.growth = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class ObjectList {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ final class ObjectList {
             this.elements = (Object[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ub.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ub.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -197,12 +197,12 @@ final class ObjectList {
         try {
           this.initialize(0, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_d = new nl("usename");
+        field_d = new LoginMethod("usename");
         field_g = new String[4];
         field_g[2] = "Spitting Torch";
         field_g[0] = "Brazier";

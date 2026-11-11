@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
-    private pva field_g;
-    private pva field_k;
+    private ArbProgramHandle field_g;
+    private ArbProgramHandle field_k;
     private LegacyOpenGlTexture2D field_l;
     private boolean field_e;
     private boolean field_f;
-    private pva field_d;
+    private ArbProgramHandle field_d;
     static int[] field_j;
     private boolean field_i;
     private boolean field_c;
-    private pva field_h;
+    private ArbProgramHandle field_h;
 
     final void bindTexture(int param0, int param1, LegacyOpenGlTexture param2) {
         RuntimeException var4 = null;
@@ -52,7 +52,7 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

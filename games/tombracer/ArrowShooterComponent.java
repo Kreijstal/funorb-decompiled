@@ -7,15 +7,15 @@ final class ArrowShooterComponent extends ShooterComponent {
 
     final static void createFonts(GraphicsToolkit param0, int param1) {
         try {
-          kn.field_p = param0.createFont(kv.field_a, rc.field_b, true);
+          TooltipRenderer.field_p = param0.createFont(kv.field_a, rc.field_b, true);
           eda.field_f = param0.createFont(MatchStatistics.field_n, MatchState.field_j, true);
           if (param1 > -66) {
             field_K = (String) null;
           }
           SingleChildWidget.field_v = param0.createFont(wb.field_a, MovingPlatformComponent.field_O, true);
-          qf.field_j = param0.createFont(RatingsScreen.field_r, gga.field_O, true);
+          FloatPacketBuffer.field_j = param0.createFont(RatingsScreen.field_r, gga.field_O, true);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wpa.WB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wpa.WB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class ArrowShooterComponent extends ShooterComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wpa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wpa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

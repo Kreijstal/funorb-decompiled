@@ -13,7 +13,7 @@ abstract class GameEvent extends IntrusiveNode {
             field_f = (float[][]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bs.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bs.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

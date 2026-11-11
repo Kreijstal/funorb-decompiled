@@ -24,7 +24,7 @@ final class MatchProtocol {
           this.decodePacket(var4, 112, param1);
           var4.apply(param2, true, this);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class MatchProtocol {
           this.decodePacket(var4, 124, param1);
           var4.apply(param0, 0, this);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class MatchProtocol {
           var4.a(4545315, this, param2);
           int var5 = -6 / ((param0 + 78) / 34);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,12 +86,12 @@ final class MatchProtocol {
         if (param1 == var2) {
           var2 = 1;
         }
-        ((psa) (RewardChoicePhase.field_n.field_n)).rampChannelVolume(param0, AchievementsScreen.field_x[param0], (byte) -4, var2);
+        ((FadingMidiPcmStream) (RewardChoicePhase.field_n.field_n)).rampChannelVolume(param0, AchievementsScreen.field_x[param0], (byte) -4, var2);
     }
 
     final boolean isSendWindowFull(int param0) {
         if (param0 != 1) {
-          MatchProtocol.a(-38, (byte) 20, -69, 62, 48, -77);
+          MatchProtocol.playSoundEffect(-38, (byte) 20, -69, 62, 48, -77);
         }
         return this.sendWindowFull;
     }
@@ -117,7 +117,7 @@ final class MatchProtocol {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class MatchProtocol {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -254,7 +254,7 @@ final class MatchProtocol {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class MatchProtocol {
           this.decodePacket(var4, param0 - 82, param2);
           var4.apply((byte) -78, param1, this);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class MatchProtocol {
           int var4_int = -28 / ((param1 - 61) / 43);
           param0.decode(param2, (byte) -19);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class MatchProtocol {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -330,16 +330,16 @@ final class MatchProtocol {
           this.decodePacket(var4, -53, param1);
           var4.apply(this, 0, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void drawDebugInfo(int param0) {
         int var2 = 32;
         int var2Lifetime1;
-        RoomEffectTraps.a(0, -121, var2 + 10, "unack: " + this.unacknowledged.size((byte) -16), 16, kn.field_p, 16777215);
+        RoomEffectTraps.drawLeftTextWithShadow(0, -121, var2 + 10, "unack: " + this.unacknowledged.size((byte) -16), 16, TooltipRenderer.field_p, 16777215);
         var2Lifetime1 = 48;
-        RoomEffectTraps.a(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.size((byte) 107), param0, kn.field_p, 16777215);
+        RoomEffectTraps.drawLeftTextWithShadow(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.size((byte) 107), param0, TooltipRenderer.field_p, 16777215);
     }
 
     final boolean handleServerPacket(byte param0, MatchScreen param1, BitPacketBuffer param2, int param3) {
@@ -419,7 +419,7 @@ final class MatchProtocol {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ final class MatchProtocol {
           }
           int var3_int = 110 % ((param1 - 27) / 62);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -447,7 +447,7 @@ final class MatchProtocol {
           this.decodePacket(var4, 117, param1);
           var4.apply(param0, this, (byte) 119);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.CA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.CA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -461,7 +461,7 @@ final class MatchProtocol {
           this.decodePacket(var4, param0 - 129, param2);
           var4.apply(2, this, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -521,7 +521,7 @@ final class MatchProtocol {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -540,7 +540,7 @@ final class MatchProtocol {
           this.decodePacket(var4, -4, param1);
           param0.matchState.deliverPendingEvent((byte) 121, var4.getEvent((byte) 118));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "v.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "v.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -562,14 +562,14 @@ final class MatchProtocol {
         field_j = null;
     }
 
-    final static vb a(int param0, byte param1, int param2, int param3, int param4, int param5) {
+    final static vb playSoundEffect(int param0, byte param1, int param2, int param3, int param4, int param5) {
         if (null == CauldronComponent.field_J) {
           return null;
         }
         if (param1 > -24) {
           field_g = (String[]) null;
         }
-        u var6 = CauldronComponent.field_J[param3];
+        PcmSample var6 = CauldronComponent.field_J[param3];
         if (var6 == null) {
           fea.loadSoundEffect(false, param3);
           var6 = CauldronComponent.field_J[param3];
@@ -585,7 +585,7 @@ final class MatchProtocol {
           return;
         }
         if (param0 != 6418) {
-          MatchProtocol.a(125, (byte) 41, 101, 81, 77, 14);
+          MatchProtocol.playSoundEffect(125, (byte) 41, 101, 81, 77, 14);
         }
         ql.field_k.writeCipheredOpcode(81, -2988);
     }
@@ -623,7 +623,7 @@ final class MatchProtocol {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 

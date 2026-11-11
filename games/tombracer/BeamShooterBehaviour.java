@@ -25,7 +25,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.field_u = -49;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ov.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -78,9 +78,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         var4 = MouseInputHandler.sin2048((byte) 111, var3);
         var5 = ModelAnimator.cos2048(0, var3);
         var6 = 131072 + RandomBrickOperator.max(this.trap.getWidth(param0 - 5467), this.trap.getHeight((byte) 55), param0 ^ 5416) / 2;
-        var7 = this.trap.getX(3) + gqa.multiplyFixed(var4, (byte) 24, var6);
-        var8 = this.trap.getY(9648) + gqa.multiplyFixed(var5, (byte) 24, var6);
-        this.field_s.setEndpoints(var7, gqa.multiplyFixed(var4, (byte) 24, this.field_o) + var7, var8, gqa.multiplyFixed(var5, (byte) 24, this.field_o) + var8, 44);
+        var7 = this.trap.getX(3) + ChatMessage.multiplyFixed(var4, (byte) 24, var6);
+        var8 = this.trap.getY(9648) + ChatMessage.multiplyFixed(var5, (byte) 24, var6);
+        this.field_s.setEndpoints(var7, ChatMessage.multiplyFixed(var4, (byte) 24, this.field_o) + var7, var8, ChatMessage.multiplyFixed(var5, (byte) 24, this.field_o) + var8, 44);
         this.field_s.field_b = this.field_o;
         this.field_s.field_i = this.trap.getTopElevation(param0 ^ param0) << 16;
         var9_int = this.field_r.type;
@@ -170,7 +170,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "ov.R(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "ov.R(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           param1.writeBits((byte) 85, !this.field_q ? 0 : 1, 1);
           param1.writeBits((byte) 45, this.field_u >> 16, 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ov.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             return;
           }
           if (param2 >= gca.field_d &&
-            param2 <= hc.field_h) {
+            param2 <= LineShape.field_h) {
             var39 = vaa.field_a[param2];
             var16 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 - param1);
             var17 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + param1);
@@ -282,11 +282,11 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
               var15 = param2 - var9;
               var16Lifetime1 = param2 + var9;
               if (var16Lifetime1 >= gca.field_d &&
-                hc.field_h >= var15) {
+                LineShape.field_h >= var15) {
                 if (var8 <= var9) {
                   var17Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var7_int);
                   var18Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var7_int + param6);
-                  if (var16Lifetime1 <= hc.field_h) {
+                  if (var16Lifetime1 <= LineShape.field_h) {
                     C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1, vaa.field_a[var16Lifetime1], var18Lifetime1);
                   }
                   if (gca.field_d <= var15) {
@@ -298,7 +298,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
                   var19Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var7_int + param6);
                   var20 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var17Lifetime1 + param6);
                   var21 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var17Lifetime1 + param6);
-                  if (var16Lifetime1 <= hc.field_h) {
+                  if (var16Lifetime1 <= LineShape.field_h) {
                     var40 = vaa.field_a[var16Lifetime1];
                     C2SRoomResultPacket.fillRange((byte) -55, param4, var21, var40, var19Lifetime1);
                     C2SRoomResultPacket.fillRange((byte) -55, param5, var20, var40, var21);
@@ -318,7 +318,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             if (var16Lifetime1Lifetime1 < gca.field_d) {
               continue;
             }
-            if (hc.field_h < var15Lifetime1) {
+            if (LineShape.field_h < var15Lifetime1) {
               continue;
             }
             var17Lifetime1Lifetime1 = var9 + param6;
@@ -332,7 +332,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             var17Lifetime1Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var17Lifetime1Lifetime1);
             var18Lifetime1Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var18Lifetime1Lifetime1);
             if (var8 <= var7_int) {
-              if (hc.field_h >= var16Lifetime1Lifetime1) {
+              if (LineShape.field_h >= var16Lifetime1Lifetime1) {
                 C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var16Lifetime1Lifetime1], var18Lifetime1Lifetime1);
               }
               if (gca.field_d > var15Lifetime1) {
@@ -349,7 +349,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             var19Lifetime1Lifetime1 = stackIn_41_0;
             var20Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var19Lifetime1Lifetime1);
             var21Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var19Lifetime1Lifetime1 + param6);
-            if (var16Lifetime1Lifetime1 <= hc.field_h) {
+            if (var16Lifetime1Lifetime1 <= LineShape.field_h) {
               var42 = vaa.field_a[var16Lifetime1Lifetime1];
               C2SRoomResultPacket.fillRange((byte) -55, param4, var21Lifetime1, var42, var18Lifetime1Lifetime1);
               C2SRoomResultPacket.fillRange((byte) -55, param5, var20Lifetime1, var42, var21Lifetime1);
@@ -366,7 +366,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var7), "ov.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var7), "ov.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -410,7 +410,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -458,7 +458,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.freezesInTimeStop((byte) -109);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ov.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -470,7 +470,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.field_q = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ov.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -493,7 +493,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           this.field_w = 0;
           this.field_u = 0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ov.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -504,7 +504,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.getTypeId(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ov.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ov.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

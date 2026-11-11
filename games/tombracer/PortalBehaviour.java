@@ -6,7 +6,7 @@ final class PortalBehaviour extends Behaviour {
     static int[] field_o;
     private SwitchLinkList field_p;
 
-    final static void a(int param0, boolean param1, MusicTrack param2, int param3) {
+    final static void playMusicTrack(int param0, boolean param1, MusicTrack param2, int param3) {
         RuntimeException var4 = null;
         MusicTrack var5 = null;
         MusicPlayer stackIn_2_0;
@@ -31,7 +31,7 @@ final class PortalBehaviour extends Behaviour {
             return;
           }
           var5 = (MusicTrack) null;
-          PortalBehaviour.a(70, false, (MusicTrack) null, -114);
+          PortalBehaviour.playMusicTrack(70, false, (MusicTrack) null, -114);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ final class PortalBehaviour extends Behaviour {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -52,7 +52,7 @@ final class PortalBehaviour extends Behaviour {
         try {
           this.field_p = new SwitchLinkList(1, 1, param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class PortalBehaviour extends Behaviour {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class PortalBehaviour extends Behaviour {
         try {
           this.field_p = new SwitchLinkList(1, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -138,14 +138,14 @@ final class PortalBehaviour extends Behaviour {
           super.attachToTrap(param0, param1);
           param1.b((byte) -126, 3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "im.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "im.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final int hashState(int param0, int param1) {
         if (param1 > -48) {
           MusicTrack var4 = (MusicTrack) null;
-          PortalBehaviour.a(89, false, (MusicTrack) null, -34);
+          PortalBehaviour.playMusicTrack(89, false, (MusicTrack) null, -34);
           return param0;
         }
         return param0;
@@ -174,7 +174,7 @@ final class PortalBehaviour extends Behaviour {
           super.encode(param0, param1);
           this.field_p.encode(30489, this.getScope((byte) 122), param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "im.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "im.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

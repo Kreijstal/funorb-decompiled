@@ -118,9 +118,9 @@ final class RandomBrickOperator extends TextureOperator {
                 var19 = -var17 + param0 - 1;
                 if (var14 <= var19) {
                   for (var20 = 0; var13 > var20; var20++) {
-                    dupTemp$0 = SnakePitBehaviour.bitwiseAnd(una.textureWidthMask, -var20 + param4 + param1 - 1);
+                    dupTemp$0 = SnakePitBehaviour.bitwiseAnd(GpuDataType.textureWidthMask, -var20 + param4 + param1 - 1);
                     var18[dupTemp$0] = var8_int * var20 / var13;
-                    var18[SnakePitBehaviour.bitwiseAnd(una.textureWidthMask, param1 + var20)] = var8_int * var20 / var13;
+                    var18[SnakePitBehaviour.bitwiseAnd(GpuDataType.textureWidthMask, param1 + var20)] = var8_int * var20 / var13;
                   }
                   if (var16 + var15 <= LegacyOpenGlTurbulentTextureEffect.textureWidth) {
                     ArrayUtils.fill(var18, var15, var16, var8_int);
@@ -136,17 +136,17 @@ final class RandomBrickOperator extends TextureOperator {
                   if (this.field_t == 0) {
                     for (var21 = 0; var21 < var13; var21++) {
                       var22 = var21 * var8_int / var13;
-                      dupTemp$1 = SnakePitBehaviour.bitwiseAnd(una.textureWidthMask, -1 + param4 + param1 - var21);
+                      dupTemp$1 = SnakePitBehaviour.bitwiseAnd(GpuDataType.textureWidthMask, -1 + param4 + param1 - var21);
                       var18[dupTemp$1] = var20 * var22 >> 12;
-                      var18[SnakePitBehaviour.bitwiseAnd(var21 + param1, una.textureWidthMask)] = var20 * var22 >> 12;
+                      var18[SnakePitBehaviour.bitwiseAnd(var21 + param1, GpuDataType.textureWidthMask)] = var20 * var22 >> 12;
                     }
                   } else {
                     for (var21 = 0; var13 > var21; var21++) {
                       var22 = var8_int * var21 / var13;
                       stackIn_52_0 = var18;
-                      stackIn_52_1 = SnakePitBehaviour.bitwiseAnd(param1 + var21, una.textureWidthMask);
+                      stackIn_52_1 = SnakePitBehaviour.bitwiseAnd(param1 + var21, GpuDataType.textureWidthMask);
                       stackIn_52_2 = var18;
-                      stackIn_52_3 = SnakePitBehaviour.bitwiseAnd(-1 - var21 + param1 + param4, una.textureWidthMask);
+                      stackIn_52_3 = SnakePitBehaviour.bitwiseAnd(-1 - var21 + param1 + param4, GpuDataType.textureWidthMask);
                       if (var22 < var20) {
                         stackIn_53_4 = var22;
                       } else {
@@ -169,17 +169,17 @@ final class RandomBrickOperator extends TextureOperator {
                 if (this.field_t == 0) {
                   for (var20 = 0; var13 > var20; var20++) {
                     var21 = var8_int * var20 / var13;
-                    dupTemp$2 = SnakePitBehaviour.bitwiseAnd(-var20 + (param4 + (param1 - 1)), una.textureWidthMask);
+                    dupTemp$2 = SnakePitBehaviour.bitwiseAnd(-var20 + (param4 + (param1 - 1)), GpuDataType.textureWidthMask);
                     var18[dupTemp$2] = var21 * var19 >> 12;
-                    var18[SnakePitBehaviour.bitwiseAnd(var20 + param1, una.textureWidthMask)] = var21 * var19 >> 12;
+                    var18[SnakePitBehaviour.bitwiseAnd(var20 + param1, GpuDataType.textureWidthMask)] = var21 * var19 >> 12;
                   }
                 } else {
                   for (var20 = 0; var20 < var13; var20++) {
                     var21 = var8_int * var20 / var13;
                     stackIn_41_0 = var18;
-                    stackIn_41_1 = SnakePitBehaviour.bitwiseAnd(var20 + param1, una.textureWidthMask);
+                    stackIn_41_1 = SnakePitBehaviour.bitwiseAnd(var20 + param1, GpuDataType.textureWidthMask);
                     stackIn_41_2 = var18;
-                    stackIn_41_3 = SnakePitBehaviour.bitwiseAnd(-var20 + (param1 + param4 - 1), una.textureWidthMask);
+                    stackIn_41_3 = SnakePitBehaviour.bitwiseAnd(-var20 + (param1 + param4 - 1), GpuDataType.textureWidthMask);
                     if (var21 < var19) {
                       stackIn_42_4 = var21;
                     } else {
@@ -217,7 +217,7 @@ final class RandomBrickOperator extends TextureOperator {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class RandomBrickOperator extends TextureOperator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "iia.E(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "iia.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -313,7 +313,7 @@ final class RandomBrickOperator extends TextureOperator {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 

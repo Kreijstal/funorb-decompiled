@@ -1,0 +1,122 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AnimationFrameSet extends DualLinkNode {
+    private byte[][] field_m;
+    private int field_k;
+    static ProgressDialog field_p;
+    static SpriteData field_l;
+    AnimationFrame[] field_o;
+    static volatile int field_n;
+
+    final boolean ensureLoaded(byte param0) {
+        int var4 = 0;
+        Throwable decompiledCaughtException = null;
+        Object var2_ref_Object = null;
+        int var2 = 0;
+        int var3 = 0;
+        Object var5_ref_Object = null;
+        int var5 = 0;
+        int var6 = 0;
+        Object var7 = null;
+        int var8 = 0;
+        Object var9 = null;
+        AnimationFrameBase var10 = null;
+        Object var10_ref = null;
+        int var12 = 0;
+        PacketBuffer var15 = null;
+        PacketBuffer var18 = null;
+        IntrusiveDeque var19 = null;
+        int[] var28 = null;
+        byte[] var29 = null;
+        int[] var30 = null;
+        byte[] var31 = null;
+        var12 = TombRacer.field_G ? 1 : 0;
+        if (null != this.field_o) {
+          return true;
+        }
+        if (null == this.field_m) {
+          var2_ref_Object = AnimationSequence.field_c;
+          synchronized (var2_ref_Object) {
+            if (!AnimationSequence.field_c.ensureGroupLoaded(this.field_k, param0 ^ -107)) {
+              return false;
+            }
+            var28 = AnimationSequence.field_c.fileIds(param0 - 216, this.field_k);
+            this.field_m = new byte[var28.length][];
+            for (var4 = 0; var28.length > var4; var4++) {
+              this.field_m[var4] = AnimationSequence.field_c.getFile(false, this.field_k, var28[var4]);
+            }
+          }
+        }
+        if (param0 != 107) {
+          this.field_k = 87;
+        }
+        var2 = 1;
+        var3 = 0;
+        while (var3 < this.field_m.length) {
+          var29 = this.field_m[var3];
+          var15 = new PacketBuffer(var29);
+          var15.position = 1;
+          var6 = var15.readUnsignedShort(124);
+          var7 = SwitchState.field_j;
+          synchronized (var7) {
+            var2 = var2 != 0 & SwitchState.field_j.ensureFileReadyById(param0 ^ -15228, var6) ? 1 : 0;
+            var3++;
+          }
+        }
+        if (var2 == 0) {
+          return false;
+        }
+        var19 = new IntrusiveDeque();
+        var5_ref_Object = AnimationSequence.field_c;
+        synchronized (var5_ref_Object) {
+          var6 = AnimationSequence.field_c.getFileCount((byte) -117, this.field_k);
+          this.field_o = new AnimationFrame[var6];
+          var30 = AnimationSequence.field_c.fileIds(-79, this.field_k);
+          var5 = 0;
+        }
+        while (var30.length > var5) {
+          var31 = this.field_m[var5];
+          var18 = new PacketBuffer(var31);
+          var18.position = 1;
+          var8 = var18.readUnsignedShort(param0 + 18);
+          var9 = null;
+          var10 = (AnimationFrameBase) (var19.first(-80));
+          while (var10 != null) {
+            if (~var10.field_l != ~var8) {
+              var10 = (AnimationFrameBase) (var19.next(param0 + 4));
+              continue;
+            }
+            var9 = var10;
+            break;
+          }
+          if (var9 == null) {
+            var10_ref = SwitchState.field_j;
+            synchronized (var10_ref) {
+              var9 = new AnimationFrameBase(var8, SwitchState.field_j.getFileById(var8, -93));
+            }
+            var19.addLast((byte) -124, (IntrusiveNode) (var9));
+          }
+          this.field_o[var30[var5]] = new AnimationFrame(var31, (AnimationFrameBase) (var9));
+          var5++;
+        }
+        this.field_m = (byte[][]) null;
+        return true;
+    }
+
+    public static void releaseStatics(boolean param0) {
+        field_p = null;
+        field_l = null;
+        if (!param0) {
+          AnimationFrameSet.releaseStatics(false);
+        }
+    }
+
+    AnimationFrameSet(int param0) {
+        this.field_k = param0;
+    }
+
+    static {
+        field_n = -1;
+    }
+}

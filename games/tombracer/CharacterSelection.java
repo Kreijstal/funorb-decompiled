@@ -3,7 +3,7 @@
  */
 final class CharacterSelection {
     static String field_f;
-    static lqa field_d;
+    static RendererOption field_d;
     private MatchState matchState;
     static String field_c;
     SoundEventPlayer field_b;
@@ -63,7 +63,7 @@ final class CharacterSelection {
         try {
           this.matchState = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "daa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "daa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

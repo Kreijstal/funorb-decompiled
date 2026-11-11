@@ -138,7 +138,7 @@ final class AnimatedLight {
             AnimatedLight.a(-83);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aga.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aga.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -194,22 +194,22 @@ final class AnimatedLight {
         field_a = null;
     }
 
-    final static nl[] a(int param0) {
+    final static LoginMethod[] a(int param0) {
         if (param0 != -1025) {
           field_a = (String) null;
         }
-        return new nl[]{ShaderEffect.field_a, ObjectList.field_d, CollisionGrid.field_f};
+        return new LoginMethod[]{ShaderEffect.field_a, ObjectList.field_d, CollisionGrid.field_f};
     }
 
     final static RoomDefinition findRoomDefinition(boolean param0, int param1) {
         int var3 = 0;
         int var6 = 0;
-        qg[] var2;
-        qg var4;
+        CourseDefinition[] var2;
+        CourseDefinition var4;
         RoomDefinition[] var5;
         RoomDefinition var7;
         int var8;
-        qg[] var9;
+        CourseDefinition[] var9;
         var8 = TombRacer.field_G ? 1 : 0;
         if (param0) {
           return (RoomDefinition) null;
@@ -252,7 +252,7 @@ final class AnimatedLight {
           }
           this.setMode(param7, (byte) -42);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

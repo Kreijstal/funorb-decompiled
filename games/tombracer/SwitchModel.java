@@ -29,7 +29,7 @@ final class SwitchModel extends TrapModel {
             this.tick(72);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cv.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cv.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class SwitchModel extends TrapModel {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class SwitchModel extends TrapModel {
           param1.writeBits((byte) 59, this.field_q, 4);
           int var3_int = 26 % ((-8 - param0) / 40);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cv.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cv.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class SwitchModel extends TrapModel {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -854,7 +854,7 @@ final class SwitchModel extends TrapModel {
                     return;
                   }
                   if (var14 == 5) {
-                    gba.drawModelRow(2, param2, 2097152, var12, -512, var13, param1, 512, 512, this.body.getHeight((byte) 55), param3);
+                    StringListNode.drawModelRow(2, param2, 2097152, var12, -512, var13, param1, 512, 512, this.body.getHeight((byte) 55), param3);
                     return;
                   }
                 } else {
@@ -905,7 +905,7 @@ final class SwitchModel extends TrapModel {
           }
           if (var11 != null) {
             var14Lifetime1 = GameScreen.positiveModulo(var10 + (2048 - this.body.getFacingAngle(-25787)) >> 2, 2048, -38);
-            gqa.drawModelAt(var14Lifetime1, -83584144, param1, param2, (ToolkitModel) (var11), param3);
+            ChatMessage.drawModelAt(var14Lifetime1, -83584144, param1, param2, (ToolkitModel) (var11), param3);
           }
           if (this.field_q == 1) {
             if (var7 == 0) {
@@ -914,7 +914,7 @@ final class SwitchModel extends TrapModel {
             var16 = this.field_s.getModel((byte) 74);
             this.field_s.play(3, false, (byte) 79, 7);
             var14Lifetime2 = GameScreen.positiveModulo(-this.body.getFacingAngle(-25787) + var10 + 2048 >> 2, 2048, -69);
-            gqa.drawModelAt(var14Lifetime2, -83584144, param1, param2 + 65536, var16, param3 + 2228224);
+            ChatMessage.drawModelAt(var14Lifetime2, -83584144, param1, param2 + 65536, var16, param3 + 2228224);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -927,7 +927,7 @@ final class SwitchModel extends TrapModel {
           } else {
             stackIn_95_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_94_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_94_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

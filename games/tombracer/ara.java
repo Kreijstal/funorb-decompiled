@@ -124,7 +124,7 @@ final class ara extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var6), "ara.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var6), "ara.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class ara extends UiComponent {
         UiComponent var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new UiComponent(0L, param1, iw.field_a.toUpperCase());
+          var17 = new UiComponent(0L, param1, PrimitiveType.field_a.toUpperCase());
           var17.field_z = 1;
           this.field_tb = new UiComponent(0L, param2);
           var8 = new UiComponent(0L, param3);
@@ -230,7 +230,7 @@ final class ara extends UiComponent {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

@@ -8,7 +8,7 @@ abstract class RasterBuffer {
     static String field_c;
     int field_e;
     int field_f;
-    static mla field_d;
+    static ProjectionMode field_d;
     int[] field_g;
 
     public static void releaseStatics(boolean param0) {
@@ -68,7 +68,7 @@ abstract class RasterBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ abstract class RasterBuffer {
           param2.fillRectangle(-param3 + (param0 + param5), param3 + param4, param3, -(param1 * param3) + param8, param6, param7);
           param2.fillRectangle(param0 + param3, param4 + param3, param5 - 2 * param3, param8 - param3 * 2, param6, param7);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cha.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cha.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -101,6 +101,6 @@ abstract class RasterBuffer {
         field_b = "Clan";
         field_c = "Your request to join has been declined.";
         field_h = "Round Winner";
-        field_d = new mla();
+        field_d = new ProjectionMode();
     }
 }

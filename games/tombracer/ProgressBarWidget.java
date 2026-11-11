@@ -63,7 +63,7 @@ final class ProgressBarWidget extends UiWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class ProgressBarWidget extends UiWidget {
 
     final static boolean a(int param0, boolean param1, byte param2, int param3, int param4, int param5, int param6) {
         if (GasTrapComponent.isDialogOpen((byte) -118)) {
-          iqa.a(-109, param3, param5, param1);
+          ToolkitInstance.a(-109, param3, param5, param1);
           if (hka.field_b != null &&
             hka.field_b.handleMenuAction(param1, param6, param0, param2 ^ -107, param3)) {
             wp.closeContextMenu(-1);
@@ -231,7 +231,7 @@ final class ProgressBarWidget extends UiWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class ProgressBarWidget extends UiWidget {
         if (param0 <= 83) {
           return;
         }
-        wj.a(param3, ToolkitSelector.field_a, wg.field_i, 2, mna.field_d, param2, param1);
+        wj.a(param3, ToolkitSelector.field_a, StatReportingScoringObserver.field_i, 2, mna.field_d, param2, param1);
     }
 
     private ProgressBarWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

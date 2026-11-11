@@ -3,7 +3,7 @@
  */
 final class FacePlayerLocomotor extends Locomotor {
     private int field_o;
-    static bb field_p;
+    static HiscoreTable field_p;
     static String field_q;
 
     final void attachToTrap(int param0, Trap param1) {
@@ -13,7 +13,7 @@ final class FacePlayerLocomotor extends Locomotor {
           }
           super.attachToTrap(89, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pt.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pt.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -22,7 +22,7 @@ final class FacePlayerLocomotor extends Locomotor {
           param1 = CurveOperator.mixHash((byte) 61, param1, this.field_o);
           return param1;
         }
-        field_p = (bb) null;
+        field_p = (HiscoreTable) null;
         param1 = CurveOperator.mixHash((byte) 61, param1, this.field_o);
         return param1;
     }
@@ -99,7 +99,7 @@ final class FacePlayerLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 4096) {
-            field_p = (bb) null;
+            field_p = (HiscoreTable) null;
           }
           var4 = new byte[param1];
           var3 = var4;
@@ -116,7 +116,7 @@ final class FacePlayerLocomotor extends Locomotor {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -134,19 +134,19 @@ final class FacePlayerLocomotor extends Locomotor {
         if (param1 == 65) {
           ObjectList.field_b = GameAssetLoader.connectingTranslations[param0];
           hra.field_c = TrackMountComponent.waitingForTextTranslations[param0];
-          CrossedSineBandsOperator.field_s = nl.loadingTextTranslations[param0];
+          CrossedSineBandsOperator.field_s = LoginMethod.loadingTextTranslations[param0];
           return;
         }
         FacePlayerLocomotor.a(-7, 14, 68);
         ObjectList.field_b = GameAssetLoader.connectingTranslations[param0];
         hra.field_c = TrackMountComponent.waitingForTextTranslations[param0];
-        CrossedSineBandsOperator.field_s = nl.loadingTextTranslations[param0];
+        CrossedSineBandsOperator.field_s = LoginMethod.loadingTextTranslations[param0];
     }
 
     public static void releaseStatics(int param0) {
         field_q = null;
         if (param0 != 0) {
-          field_p = (bb) null;
+          field_p = (HiscoreTable) null;
           field_p = null;
           return;
         }
@@ -158,7 +158,7 @@ final class FacePlayerLocomotor extends Locomotor {
         try {
           this.field_o = 16;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class FacePlayerLocomotor extends Locomotor {
         try {
           this.field_o = CoinItemComponent.fromOffsetBinary(true, 12, param1.readBits((byte) 44, 12));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class FacePlayerLocomotor extends Locomotor {
             FacePlayerLocomotor.a(-12, 90, -68, 66);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pt.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pt.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -194,33 +194,33 @@ final class FacePlayerLocomotor extends Locomotor {
         var4 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 == 22578) {
-          var4_ref = (upa) (ina.field_d.first(-80));
+          var4_ref = (upa) (LoadingStepList.field_d.first(-80));
           while (var4_ref != null) {
             if (param3 == var4_ref.field_n) {
               return var4_ref;
             }
-            var4_ref = (upa) (ina.field_d.next(param0 - 22454));
+            var4_ref = (upa) (LoadingStepList.field_d.next(param0 - 22454));
           }
           var6 = new upa();
           var6.field_n = param3;
           var6.field_k = param2;
-          ina.field_d.addLast((byte) -49, var6);
+          LoadingStepList.field_d.addLast((byte) -49, var6);
           GameClock.a(var6, param1, 2147);
           return var6;
         }
-        field_p = (bb) null;
-        var4_refLifetime1 = (upa) (ina.field_d.first(-80));
+        field_p = (HiscoreTable) null;
+        var4_refLifetime1 = (upa) (LoadingStepList.field_d.first(-80));
         while (var4_refLifetime1 != null) {
           if (param3 == var4_refLifetime1.field_n) {
             return var4_refLifetime1;
           }
-          var4_refLifetime1 = (upa) (ina.field_d.next(param0 - 22454));
+          var4_refLifetime1 = (upa) (LoadingStepList.field_d.next(param0 - 22454));
         }
         var7 = new upa();
         var4_refLifetime2 = var7;
         var7.field_n = param3;
         var7.field_k = param2;
-        ina.field_d.addLast((byte) -49, var7);
+        LoadingStepList.field_d.addLast((byte) -49, var7);
         GameClock.a(var7, param1, 2147);
         return var7;
     }

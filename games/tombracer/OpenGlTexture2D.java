@@ -14,7 +14,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         return param0 / (float)this.width;
     }
 
-    OpenGlTexture2D(HardwareOpenGlToolkit param0, ft param1, una param2, int param3, int param4) {
+    OpenGlTexture2D(HardwareOpenGlToolkit param0, TextureFormat param1, GpuDataType param2, int param3, int param4) {
         super(param0, 3553, param1, param2, param4 * param3, false);
         try {
           this.width = param3;
@@ -22,18 +22,18 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.getGlFormat(108), param3, param4, 0, waa.toGlFormat(this.field_f, 1383), ClientException.glDataType(this.field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void uploadFloatRegion(int param0, float[] param1, int param2, int param3, int param4, int param5, int param6, ft param7, boolean param8) {
+    final void uploadFloatRegion(int param0, float[] param1, int param2, int param3, int param4, int param5, int param6, TextureFormat param7, boolean param8) {
         try {
           this.field_j.bindTexture(param8, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3314, param6);
           jaggl.OpenGL.glTexSubImage2Df(this.field_i, 0, param0, param2, param3, param4, waa.toGlFormat(param7, 1383), 5121, param1, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hm.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -56,13 +56,13 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         if (param0 < 0) {
           return this.height;
         }
-        ft var3 = (ft) null;
-        this.uploadByteRegion(-26, (byte) -121, -51, (byte[]) null, 52, 85, (ft) null, -93, 99);
+        TextureFormat var3 = (TextureFormat) null;
+        this.uploadByteRegion(-26, (byte) -121, -51, (byte[]) null, 52, 85, (TextureFormat) null, -93, 99);
         return this.height;
     }
 
-    OpenGlTexture2D(HardwareOpenGlToolkit param0, ft param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
-        super(param0, 3553, param1, una.field_g, param3 * param2, param4);
+    OpenGlTexture2D(HardwareOpenGlToolkit param0, TextureFormat param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+        super(param0, 3553, param1, GpuDataType.field_g, param3 * param2, param4);
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -110,7 +110,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
     }
 
     final static void h(byte param0) {
-        gg.field_f = null;
+        HardwareModelIndexData.field_f = null;
         CharacterSelectPhase.field_r = null;
         LegacyOpenGlEffectManager.field_a = null;
         OpenGlIndexArray.field_l = null;
@@ -131,7 +131,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         MirrorBehaviour.field_r = null;
         OpenGlFramebuffer.field_i = null;
         OpenGlEnvironmentWaterEffect.field_d = null;
-        tv.field_wb = null;
+        ContextMenuRow.field_wb = null;
         GridWidgetContainer.field_y = null;
         bm.field_f = null;
         IntrusiveDeque.field_c = null;
@@ -140,12 +140,12 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         ColourFillOperator.field_m = null;
         CachedTextLayout.field_l = null;
         CharacterChoiceFactory.field_a = null;
-        ik.field_h = null;
-        bd.field_i = null;
+        IntArrayRequest.field_h = null;
+        RasterStateFrame.field_i = null;
         ConsoleWindow.field_d = null;
         WidgetStyleLayer.field_b = null;
         HardwareSpecularEffect.field_h = null;
-        qf.field_k = null;
+        FloatPacketBuffer.field_k = null;
         Room.field_p = (ToolkitSprite[][]) null;
         dn.field_d = null;
         WidgetStyleLayer.field_k = null;
@@ -158,7 +158,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         PerlinNoise2D.field_m = null;
         WhiteLightShooterComponent.field_K = null;
         aq.field_a = null;
-        je.field_E = null;
+        DropdownPopupList.field_E = null;
         haa.field_z = null;
         eca.field_c = null;
         ConstantEffectBehaviour.field_q = null;
@@ -173,7 +173,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
     }
 
     OpenGlTexture2D(HardwareOpenGlToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
-        super(param0, 3553, SwitchableId.field_a, una.field_g, param1 * param2, param3);
+        super(param0, 3553, SwitchableId.field_a, GpuDataType.field_g, param1 * param2, param3);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -211,7 +211,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -222,12 +222,12 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         if (param0 <= -60) {
           return;
         }
-        ft var5 = (ft) null;
-        this.uploadByteRegion(-2, (byte) 55, 95, (byte[]) null, -118, 102, (ft) null, -23, 82);
+        TextureFormat var5 = (TextureFormat) null;
+        this.uploadByteRegion(-2, (byte) 55, 95, (byte[]) null, -118, 102, (TextureFormat) null, -23, 82);
     }
 
-    OpenGlTexture2D(HardwareOpenGlToolkit param0, ft param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
-        super(param0, 3553, param1, una.field_h, param2 * param3, param4);
+    OpenGlTexture2D(HardwareOpenGlToolkit param0, TextureFormat param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
+        super(param0, 3553, param1, GpuDataType.field_h, param2 * param3, param4);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -273,7 +273,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -1223,7 +1223,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           jaggl.OpenGL.glTexSubImage2Di(this.field_i, 0, param7, param4, param6, param1, 32993, this.field_j.field_od, param5, param0);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hm.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -1235,7 +1235,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         return param1 / (float)this.height;
     }
 
-    final void uploadByteRegion(int param0, byte param1, int param2, byte[] param3, int param4, int param5, ft param6, int param7, int param8) {
+    final void uploadByteRegion(int param0, byte param1, int param2, byte[] param3, int param4, int param5, TextureFormat param6, int param7, int param8) {
         try {
           this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
@@ -1245,7 +1245,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
           jaggl.OpenGL.glPixelStorei(3317, 4);
           int var10_int = -48 % ((-62 - param1) / 60);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hm.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -1253,7 +1253,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         try {
           super.setFilter(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -4092,7 +4092,7 @@ final class Model extends ToolkitModel {
             this.field_ab = true;
           }
         }
-        ofa.a(var74, var68, 89);
+        ResizingDialog.sortIndicesByKeys(var74, var68, 89);
         if (param1.field_m != null) {
           this.field_m = param1.field_m.length;
           this.field_e = new hna[this.field_m];

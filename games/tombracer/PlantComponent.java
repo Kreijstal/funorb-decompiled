@@ -28,7 +28,7 @@ final class PlantComponent extends PrefabComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class PlantComponent extends PrefabComponent {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class PlantComponent extends PrefabComponent {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class PlantComponent extends PrefabComponent {
         if (param0 != -1) {
           PlantComponent.A(33);
         }
-        if (SnakePitTile.a(false) &&
+        if (SnakePitTile.hasVisibleDialog(false) &&
           ModelFactory.field_a.getTopVisibleDialog((byte) 70) != null) {
           return ModelFactory.field_a.getTopVisibleDialog((byte) 101).field_n;
         }
@@ -267,7 +267,7 @@ final class PlantComponent extends PrefabComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "gw.TB(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "gw.TB(" + param0 + ',' + param1 + ')');
         }
     }
 

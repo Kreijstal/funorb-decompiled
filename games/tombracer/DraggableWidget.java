@@ -56,7 +56,7 @@ final class DraggableWidget extends SingleChildWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class DraggableWidget extends SingleChildWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class DraggableWidget extends SingleChildWidget {
           super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           this.field_s = 0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vp.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vp.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -133,8 +133,8 @@ final class DraggableWidget extends SingleChildWidget {
               var6 != this.field_n) {
               this.field_i = var5_int;
               this.field_n = var6;
-              if (this.field_h instanceof jka) {
-                ((jka) (this.field_h)).a(param0, this, (byte) -49, param3);
+              if (this.field_h instanceof DragListener) {
+                ((DragListener) (this.field_h)).onDragged(param0, this, (byte) -49, param3);
               }
             }
           } else {
@@ -181,7 +181,7 @@ final class DraggableWidget extends SingleChildWidget {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class DraggableWidget extends SingleChildWidget {
           param1.field_l = new int[]{param0};
           param1.field_o = new char[]{(char)63};
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vp.MA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vp.MA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class DraggableWidget extends SingleChildWidget {
           this.field_z = param8 ? true : false;
           this.field_C = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vp.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vp.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class DraggableWidget extends SingleChildWidget {
         this.field_y = this.field_i;
     }
 
-    final static int a(int param0, int param1) {
+    final static int decodeOrder(int param0, int param1) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;

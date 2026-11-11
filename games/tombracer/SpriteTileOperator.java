@@ -54,7 +54,7 @@ final class SpriteTileOperator extends SpriteSampleOperator {
             break;
           }
           if (34 != var4) {
-            stackIn_13_0 = nl.field_d;
+            stackIn_13_0 = LoginMethod.field_d;
           } else {
             stackIn_13_0 = LegacyOpenGlReflectionEffect.field_e;
           }
@@ -71,7 +71,7 @@ final class SpriteTileOperator extends SpriteSampleOperator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class SpriteTileOperator extends SpriteSampleOperator {
     }
 
     final static boolean d(int param0) {
-        lqa var1 = LegacyOpenGlBloomEffect.b(false);
+        RendererOption var1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
         if (var1 != null) {
           int var2 = 74 % ((-14 - param0) / 45);
           return var1.field_d;

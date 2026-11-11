@@ -28,8 +28,8 @@ final class eca {
           wp.field_a = param4;
           OpenGlUnderwaterEffect.field_q = param1;
           var8 = (CharSequence) ((Object) param4);
-          mn.field_n = jd.normalizeDisplayName(1, var8);
-          ica.field_b = param2;
+          mn.field_n = OpenGlTexture3D.normalizeDisplayName(1, var8);
+          TextureCombineOperation.field_b = param2;
           var7 = FacePointLocomotor.buildQuickChatPhraseMenu(MembersUpsellMenu.field_w, BoulderComponent.field_M, tg.field_c, param3, false);
           AffineTransform3D.showQuickChatMenu(-124, var7);
           return true;
@@ -49,7 +49,7 @@ final class eca {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

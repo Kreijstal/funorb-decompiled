@@ -4,8 +4,8 @@
 import java.io.*;
 
 final class ControllerLocomotor extends Locomotor {
-    static lqa field_t;
-    static iw field_r;
+    static RendererOption field_t;
+    static PrimitiveType field_r;
     static String field_q;
     private Locomotor[] field_u;
     private int field_s;
@@ -60,7 +60,7 @@ final class ControllerLocomotor extends Locomotor {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nj.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nj.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class ControllerLocomotor extends Locomotor {
           }
           this.field_s = param1.readBits((byte) 44, 2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class ControllerLocomotor extends Locomotor {
     public static void releaseStatics(byte param0) {
         field_v = null;
         if (param0 >= -30) {
-          field_r = (iw) null;
+          field_r = (PrimitiveType) null;
         }
         field_q = null;
         field_p = null;
@@ -116,7 +116,7 @@ final class ControllerLocomotor extends Locomotor {
         int var5 = TombRacer.field_G ? 1 : 0;
         super.mirror((byte) -121);
         if (param0 >= -116) {
-          field_r = (iw) null;
+          field_r = (PrimitiveType) null;
         }
         Locomotor[] var6 = this.field_u;
         Locomotor[] var2 = var6;
@@ -140,7 +140,7 @@ final class ControllerLocomotor extends Locomotor {
           }
           param0.writeBits((byte) -128, this.field_s, 2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nj.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nj.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class ControllerLocomotor extends Locomotor {
           var4.close();
           int var5 = 59 % ((-16 - param1) / 50);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nj.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nj.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -200,13 +200,13 @@ final class ControllerLocomotor extends Locomotor {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     static {
         field_q = "Quit to website";
-        field_r = new iw();
+        field_r = new PrimitiveType();
         field_o = "Rating";
     }
 }

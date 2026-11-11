@@ -4,7 +4,7 @@
 final class ModelFactory implements ModelCodec {
     static DialogStack field_a;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasFlag2048(int param0, int param1, int param2) {
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -17,7 +17,7 @@ final class ModelFactory implements ModelCodec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wu.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wu.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class ModelFactory implements ModelCodec {
             stackIn_88_0 = stackIn_83_0;
             stackIn_88_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class ModelFactory implements ModelCodec {
             stackIn_12_0 = stackIn_7_0;
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -316,7 +316,7 @@ final class ModelFactory implements ModelCodec {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wu.C(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wu.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class ModelFactory implements ModelCodec {
           }
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wu.D(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wu.D(" + param0 + ')');
         }
     }
 
@@ -336,35 +336,35 @@ final class ModelFactory implements ModelCodec {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          bb.modelCategoryNames = new String[21];
+          HiscoreTable.modelCategoryNames = new String[21];
           for (var1_int = 0; var1_int < 21; var1_int++) {
-            bb.modelCategoryNames[var1_int] = "(unused, placeholder)";
+            HiscoreTable.modelCategoryNames[var1_int] = "(unused, placeholder)";
           }
-          bb.modelCategoryNames[8] = "Hazard";
-          bb.modelCategoryNames[9] = "Switch";
-          bb.modelCategoryNames[19] = "Bridge";
-          bb.modelCategoryNames[13] = "SnakePit";
-          bb.modelCategoryNames[18] = "Monster";
-          bb.modelCategoryNames[0] = "OLD directrender";
-          bb.modelCategoryNames[17] = "Platform";
-          bb.modelCategoryNames[15] = "Wall";
-          bb.modelCategoryNames[3] = "OLD switch";
-          bb.modelCategoryNames[6] = "Doorway";
-          bb.modelCategoryNames[14] = "Plant";
-          bb.modelCategoryNames[12] = "Item";
-          bb.modelCategoryNames[4] = "Furniture";
-          bb.modelCategoryNames[5] = "Light Source";
-          bb.modelCategoryNames[16] = "Trap Base";
-          bb.modelCategoryNames[1] = "TEMP model test";
-          bb.modelCategoryNames[7] = "Block";
-          bb.modelCategoryNames[10] = "Pit";
-          bb.modelCategoryNames[11] = "Crusher";
-          bb.modelCategoryNames[20] = "Gas Vent";
+          HiscoreTable.modelCategoryNames[8] = "Hazard";
+          HiscoreTable.modelCategoryNames[9] = "Switch";
+          HiscoreTable.modelCategoryNames[19] = "Bridge";
+          HiscoreTable.modelCategoryNames[13] = "SnakePit";
+          HiscoreTable.modelCategoryNames[18] = "Monster";
+          HiscoreTable.modelCategoryNames[0] = "OLD directrender";
+          HiscoreTable.modelCategoryNames[17] = "Platform";
+          HiscoreTable.modelCategoryNames[15] = "Wall";
+          HiscoreTable.modelCategoryNames[3] = "OLD switch";
+          HiscoreTable.modelCategoryNames[6] = "Doorway";
+          HiscoreTable.modelCategoryNames[14] = "Plant";
+          HiscoreTable.modelCategoryNames[12] = "Item";
+          HiscoreTable.modelCategoryNames[4] = "Furniture";
+          HiscoreTable.modelCategoryNames[5] = "Light Source";
+          HiscoreTable.modelCategoryNames[16] = "Trap Base";
+          HiscoreTable.modelCategoryNames[1] = "TEMP model test";
+          HiscoreTable.modelCategoryNames[7] = "Block";
+          HiscoreTable.modelCategoryNames[10] = "Pit";
+          HiscoreTable.modelCategoryNames[11] = "Crusher";
+          HiscoreTable.modelCategoryNames[20] = "Gas Vent";
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "wu.<init>()");
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "wu.<init>()");
         }
     }
 
@@ -464,7 +464,7 @@ final class ModelFactory implements ModelCodec {
             stackIn_42_0 = stackIn_37_0;
             stackIn_42_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
         }
     }
 

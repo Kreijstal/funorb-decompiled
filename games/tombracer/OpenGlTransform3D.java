@@ -77,7 +77,7 @@ final class OpenGlTransform3D extends Transform3D {
           this.field_p = -(var5.field_m * this.field_i + var5.field_p * this.field_r + var5.field_o * this.field_g);
           this.field_o = -(var5.field_m * this.field_j + this.field_h * var5.field_p + this.field_q * var5.field_o);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oba.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oba.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class OpenGlTransform3D extends Transform3D {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ final class OpenGlTransform3D extends Transform3D {
           this.field_s = var3.field_s;
           this.field_o = var3.field_o;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oba.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oba.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

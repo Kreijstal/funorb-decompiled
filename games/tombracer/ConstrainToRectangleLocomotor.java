@@ -158,7 +158,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               RaceStandings.releaseAllSounds(18916);
               if ((!(wka.field_d) ||
                 cs.field_c == null)) {
-                fp.startMenuBackgroundDemo(48);
+                TextureCombineSource.startMenuBackgroundDemo(48);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -179,7 +179,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           if (null != wm.field_a) {
             wm.field_a.onDeactivated(-123);
             if (wm.field_a.field_c == 1) {
-              fp.startMenuBackgroundDemo(108);
+              TextureCombineSource.startMenuBackgroundDemo(108);
             }
             if (null != mq.field_e && (wm.field_a.field_c == 12 ||
               wm.field_a.field_c == 4)) {
@@ -232,7 +232,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3_ref), "ira.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3_ref), "ira.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -283,7 +283,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           LoadLevelCommand.field_p = new int[fa.field_b];
           ImageProducerCanvasImageBuffer.field_m = new int[fa.field_b];
           mq.field_b = new int[fa.field_b];
-          pb.field_l = new byte[fa.field_b][];
+          CacheEntry.field_l = new byte[fa.field_b][];
           NetworkArchiveRequest.field_n = new boolean[fa.field_b];
           var17.position = -7 + param1.length - fa.field_b * 8;
           ika.field_a = var17.readUnsignedShort(126);
@@ -296,17 +296,17 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             pg.field_C[var4Lifetime1] = var17.readUnsignedShort(127);
           }
           for (var4Lifetime2 = 0; fa.field_b > var4Lifetime2; var4Lifetime2++) {
-            mq.field_b[var4Lifetime2] = var17.readUnsignedShort(kha.bitwiseXor(param0, 122));
+            mq.field_b[var4Lifetime2] = var17.readUnsignedShort(TextLine.bitwiseXor(param0, 122));
           }
           for (var4Lifetime3 = 0; fa.field_b > var4Lifetime3; var4Lifetime3++) {
             ImageProducerCanvasImageBuffer.field_m[var4Lifetime3] = var17.readUnsignedShort(122);
           }
           var17.position = -(var3 * 3) + 3 + (-(8 * fa.field_b) + (-7 + param1.length));
-          mga.field_g = new int[var3];
+          QueuedHint.field_g = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            mga.field_g[var4Lifetime4] = var17.readUnsignedMedium(-32768);
-            if (mga.field_g[var4Lifetime4] == 0) {
-              mga.field_g[var4Lifetime4] = 1;
+            QueuedHint.field_g[var4Lifetime4] = var17.readUnsignedMedium(-32768);
+            if (QueuedHint.field_g[var4Lifetime4] == 0) {
+              QueuedHint.field_g[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;
@@ -321,7 +321,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            pb.field_l[var4Lifetime5] = var21;
+            CacheEntry.field_l[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte(param0 + 255);
             if ((var11 & 1) == 0) {
@@ -378,7 +378,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 
@@ -411,7 +411,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           this.field_u = param1.readBits((byte) 44, 10) << 16;
           this.field_s = param1.readBits((byte) 44, 10) << 16;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ira.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ira.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -444,7 +444,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           }
           param0.writeBits((byte) 16, this.field_s >> 16, 10);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ira.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ira.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -456,7 +456,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           }
           super.attachToTrap(112, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ira.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ira.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

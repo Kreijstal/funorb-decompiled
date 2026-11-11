@@ -199,11 +199,11 @@ final class vb extends IntrusiveNode {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void setVolumeAndPan(int param0, int param1, byte param2) {
         param0 = param0 << 6;
         param1 = param1 << 6;
         if (param2 != -21) {
@@ -220,7 +220,7 @@ final class vb extends IntrusiveNode {
           this.field_h = param1;
           this.field_f.setVolume(128 + HardwareRidgedWaterNoise.field_v * this.field_g >> 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

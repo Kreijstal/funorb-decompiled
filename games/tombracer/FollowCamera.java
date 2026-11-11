@@ -38,7 +38,7 @@ final class FollowCamera implements Camera {
           um.field_l = new mpa(ej.field_a, vn.field_b);
           ej.field_a.pushDialog(um.field_l, 114);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ag.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ag.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class FollowCamera implements Camera {
             discarded$0 = this.clampAxis(-111, 10, 84, 17, 71);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ag.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ag.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class FollowCamera implements Camera {
             var7 = param1[1].field_n;
             param1[0].drawTransparent(param3, param0);
             param1[2].drawTransparent(-var6 + param4 + param3, param0);
-            SoftwareRasterizer.saveClip(ic.field_d);
+            SoftwareRasterizer.saveClip(StatReportingObserverFactory.field_d);
             SoftwareRasterizer.intersectClip(param3 + var5_int, param0, -var6 + (param3 + param4), param0 + param1[1].field_k);
             var8 = param3 + var5_int;
             var9 = -var6 + (param3 + param4);
@@ -177,7 +177,7 @@ final class FollowCamera implements Camera {
               param1[1].drawTransparent(param3, param0);
               param3 = param3 + var7;
             }
-            SoftwareRasterizer.restoreClip(ic.field_d);
+            SoftwareRasterizer.restoreClip(StatReportingObserverFactory.field_d);
             return;
           }
           return;
@@ -191,7 +191,7 @@ final class FollowCamera implements Camera {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class FollowCamera implements Camera {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

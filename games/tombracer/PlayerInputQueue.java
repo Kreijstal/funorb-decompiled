@@ -70,14 +70,14 @@ final class PlayerInputQueue {
           String var15 = null;
           String var16 = null;
           int var17 = 0;
-          aj var18 = null;
+          ReflectionCheck var18 = null;
           byte[][] var19 = null;
           String var20 = null;
           byte[][] var21 = null;
           int var13Lifetime1;
           var14 = TombRacer.field_G ? 1 : 0;
           try {
-            var18 = new aj();
+            var18 = new ReflectionCheck();
             var18.field_f = param3.readUnsignedByte(255);
             var18.field_n = param3.readInt(-12);
             var18.field_i = new int[var18.field_f];
@@ -181,7 +181,7 @@ final class PlayerInputQueue {
             } else {
               stackIn_42_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -192,13 +192,13 @@ final class PlayerInputQueue {
 
     final static RoomDefinition findRoomDefinition(int param0, int param1) {
         int var3 = 0;
-        qg var4_ref_qg = null;
+        CourseDefinition var4_ref_qg = null;
         RoomDefinition[] var5 = null;
         int var6 = 0;
         RoomDefinition var7 = null;
         int var8 = TombRacer.field_G ? 1 : 0;
-        qg[] var9 = cm.field_a;
-        qg[] var2 = var9;
+        CourseDefinition[] var9 = cm.field_a;
+        CourseDefinition[] var2 = var9;
         for (var3 = 0; var3 < var9.length; var3++) {
           var4_ref_qg = var9[var3];
           var5 = var4_ref_qg.field_c;

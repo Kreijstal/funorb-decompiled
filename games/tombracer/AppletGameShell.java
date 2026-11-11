@@ -53,7 +53,7 @@ abstract class AppletGameShell extends GameApplet {
           this.field_v = 64;
         }
         String var2 = LegacyTurbulentWaterNoise.readIncomingString(12);
-        cc.writeSessionCookie(55, ToolkitSelector.getApplet(78), var2);
+        CourseMapPath.writeSessionCookie(55, ToolkitSelector.getApplet(78), var2);
     }
 
     private final void readServerTextMessage(byte param0) {
@@ -115,7 +115,7 @@ abstract class AppletGameShell extends GameApplet {
           if (var4 == 2) {
             var5Lifetime1 = pe.a(CourseLayoutFactory.b(69), toa.a(false), ArchiveRequest.a(false), this.field_u, cs.a((byte) 105), MatchOverlayQueue.a(0), (byte) 53);
             if (var5Lifetime1 != -1) {
-              ura.a(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, io.field_b);
+              TextureTransformMode.a(var5Lifetime1, PressureSwitchBehaviour.field_s, (byte) -103, io.field_b);
               PressureSwitchBehaviour.field_s = null;
               io.field_b = null;
             }
@@ -132,7 +132,7 @@ abstract class AppletGameShell extends GameApplet {
               var5Lifetime2 = ChatOverlay.a(this.field_q, MatchOverlayQueue.a(0), 50, this.field_u, cs.a((byte) 81), false);
               if (var5Lifetime2 != -1) {
                 if (var5Lifetime2 == 0) {
-                  ic.field_b = tr.field_g;
+                  StatReportingObserverFactory.field_b = QuickChatPhraseSource.field_g;
                   LoadLevelCommand.g(0);
                   Transform3D.field_c = 10;
                   HorizontalGradientOperator.field_m = false;
@@ -144,7 +144,7 @@ abstract class AppletGameShell extends GameApplet {
             }
           }
           if (var4 == 4) {
-            if (!ft.field_a) {
+            if (!TextureFormat.field_a) {
               HorizontalGradientOperator.field_m = true;
               Transform3D.field_c = 10;
             } else {
@@ -159,7 +159,7 @@ abstract class AppletGameShell extends GameApplet {
             Transform3D.field_c = 10;
           }
           if (var4 == 7) {
-            ft.openServerList(89, ToolkitSelector.getApplet(113));
+            TextureFormat.openServerList(89, ToolkitSelector.getApplet(113));
           }
           if (8 == var4) {
             cua.clearSessionAndReload((byte) -65, ToolkitSelector.getApplet(37));
@@ -230,7 +230,7 @@ abstract class AppletGameShell extends GameApplet {
         int stackIn_24_0 = 0;
         boolean stackIn_25_1 = false;
         int var2;
-        gqa var3;
+        ChatMessage var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         var2 = MembersUpsellMenu.field_z;
@@ -418,11 +418,11 @@ abstract class AppletGameShell extends GameApplet {
         IsaacCipher.configureClientConnection(this.field_s, this.field_v, dsa.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, ApproachPlayerLocomotor.field_t, param5, this.field_w);
         MazeSolver.initializeArchiveServices(ApproachPlayerLocomotor.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
         wka.patchJavaKeyCodeMap(520);
-        tja.field_q = dka.createMouseWheelInput((byte) -86);
-        fpa.attachCanvasInput(nma.field_l, (byte) 75);
+        HardCacheEntry.field_q = dka.createMouseWheelInput((byte) -86);
+        fpa.attachCanvasInput(CurveShape.field_l, (byte) 75);
         bi.field_c = param2;
         MonochromeFillOperator.field_p = param3;
-        tj.field_c = param6;
+        VertexArrayPointer.field_c = param6;
         RoomHeader.field_g = param1;
         SoundEvent.field_j = param0;
         this.initializePacketLengths(16);
@@ -501,7 +501,7 @@ abstract class AppletGameShell extends GameApplet {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -524,7 +524,7 @@ abstract class AppletGameShell extends GameApplet {
           AppletGameShell.resetConnectionStatics(-80);
         }
         if (QuickChatPhraseDefinition.c((byte) 49)) {
-          discarded$1 = this.pollLoginResponse((byte) -72, false, null != dq.field_f ? true : false);
+          discarded$1 = this.pollLoginResponse((byte) -72, false, null != ColourRowCacheEntry.field_f ? true : false);
         } else {
           if (cga.field_f < 10) {
           } else {
@@ -555,8 +555,8 @@ abstract class AppletGameShell extends GameApplet {
         int var3Lifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
         if (null != OpenGlSceneLight.field_o) {
-          if (null == dq.field_f) {
-            var6 = tj.getTopContainer(25128);
+          if (null == ColourRowCacheEntry.field_f) {
+            var6 = VertexArrayPointer.getTopContainer(25128);
             var4_ref_java_awt_Dimension = var6.getSize();
             OpenGlSceneLight.field_o.setRequestedSize(var4_ref_java_awt_Dimension.width, false, var4_ref_java_awt_Dimension.height);
           }
@@ -568,8 +568,8 @@ abstract class AppletGameShell extends GameApplet {
           Transform3D.field_c != 11) {
           EditableTextField.h(100);
         }
-        if (null != tja.field_q) {
-          pg.field_y = tja.field_q.pollWheelRotation(65);
+        if (null != HardCacheEntry.field_q) {
+          pg.field_y = HardCacheEntry.field_q.pollWheelRotation(65);
         }
         if (HeapIndexArray.e(540800)) {
           var3 = aqa.getFrameRate(1188664449) * 1200;
@@ -694,16 +694,16 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (cga.field_f == 3 &&
           esa.areCommonUiArchivesReady(WeaveOperator.field_p, tk.field_b, -128, OpenGlTexture2D.field_n) &&
-          S2CActionPacket.a(WeaveOperator.field_p, (byte) -53)) {
+          S2CActionPacket.isArchiveComplete(WeaveOperator.field_p, (byte) -53)) {
           ee.releaseStatics(-1);
           SimulationObserver.composeAgreementText((byte) -27);
-          ura.field_b = nl.field_c;
+          TextureTransformMode.field_b = LoginMethod.field_c;
           GameAssetLoader.field_t = false;
-          SequencePlayer.a(tk.field_b, OpenGlTexture2D.field_n, 1, ft.field_a, WeaveOperator.field_p);
-          if (ofa.field_I ||
+          SequencePlayer.a(tk.field_b, OpenGlTexture2D.field_n, 1, TextureFormat.field_a, WeaveOperator.field_p);
+          if (ResizingDialog.field_I ||
             null != BrickOperator.field_s) {
-            stackIn_101_0 = !(ofa.field_I);
-            stackIn_104_1 = !(ofa.field_I);
+            stackIn_101_0 = !(ResizingDialog.field_I);
+            stackIn_104_1 = !(ResizingDialog.field_I);
             FollowCamera.openLoginForm(stackIn_101_0, stackIn_104_1, false, BrickOperator.field_s);
           }
           if (NotLoggedInMenu.field_r) {
@@ -713,7 +713,7 @@ abstract class AppletGameShell extends GameApplet {
             ScoreStandings.field_c = epa.d((byte) -91);
             TextureOperator.field_k = fta.c(-93);
           }
-          wk.initLogoAssets(ScoreStandings.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
+          MapWaypoint.initLogoAssets(ScoreStandings.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
           OpenGlTexture2D.field_n = null;
           tk.field_b = null;
           WeaveOperator.field_p = null;
@@ -723,7 +723,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (10 == cga.field_f) {
           if (ApproachPlayerLocomotor.field_t != 0) {
-            ConstrainToFacingArcLocomotor.field_v = SoftReferenceCache.openArchive(tj.field_c, 1);
+            ConstrainToFacingArcLocomotor.field_v = SoftReferenceCache.openArchive(VertexArrayPointer.field_c, 1);
           }
           cga.field_f = 11;
         }
@@ -757,9 +757,9 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (!param1 &&
           ReportAbuseDialog.field_Cb) {
-          CharacterChoiceFactory.detachCanvasInput(nma.field_l, false);
+          CharacterChoiceFactory.detachCanvasInput(CurveShape.field_l, false);
           this.recreateCanvas((byte) 14);
-          fpa.attachCanvasInput(nma.field_l, (byte) 75);
+          fpa.attachCanvasInput(CurveShape.field_l, (byte) 75);
         }
         if (hd.field_a[8]) {
           dra.sendReflectionCheckResponses(true);

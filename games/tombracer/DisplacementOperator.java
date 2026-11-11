@@ -45,7 +45,7 @@ final class DisplacementOperator extends TextureOperator {
             var11 = this.field_n * var31[var9] >> 12;
             var12 = ColourFillOperator.field_r[var10] * var11 >> 12;
             var13 = CourseGenerator.field_e[var10] * var11 >> 12;
-            var14 = (var12 >> 12) + var9 & una.textureWidthMask;
+            var14 = (var12 >> 12) + var9 & GpuDataType.textureWidthMask;
             var15 = hba.textureHeightMask & (var13 >> 12) + param0;
             var32 = this.getInputColourRow(var15, 0, -1);
             var6[var9] = var32[0][var14];
@@ -87,7 +87,7 @@ final class DisplacementOperator extends TextureOperator {
             var8 = this.field_n * var27[var6] >> 12;
             var9 = ColourFillOperator.field_r[var7] * var8 >> 12;
             var10 = CourseGenerator.field_e[var7] * var8 >> 12;
-            var11 = var6 + (var9 >> 12) & una.textureWidthMask;
+            var11 = var6 + (var9 >> 12) & GpuDataType.textureWidthMask;
             var12 = hba.textureHeightMask & (var10 >> 12) + param1;
             var28 = this.getInputMonochromeRow(0, -27, var12);
             var16[var6] = var28[var11];
@@ -128,7 +128,7 @@ final class DisplacementOperator extends TextureOperator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 

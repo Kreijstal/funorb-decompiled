@@ -249,7 +249,7 @@ final class CommonChooseReward implements dv {
           this.finished = CircleMovementLocomotor.readBitFlag(5907, param0);
           this.takenCount = param0.readBits((byte) 44, 2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -269,7 +269,7 @@ final class CommonChooseReward implements dv {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,0 +1,27 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ConsoleHistoryEntry extends IntrusiveNode {
+    static int field_g;
+    static String field_f;
+    String field_h;
+
+    public static void releaseStatics(byte param0) {
+        if (param0 > -111) {
+          return;
+        }
+        field_f = null;
+    }
+
+    ConsoleHistoryEntry(String param0) {
+        try {
+          this.field_h = param0;
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_f = "Great!";
+    }
+}

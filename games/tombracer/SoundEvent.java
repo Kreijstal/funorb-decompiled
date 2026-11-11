@@ -52,25 +52,25 @@ final class SoundEvent extends IntrusiveNode {
                         if (gca.field_d > param5) {
                           PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                         } else {
-                          if (param5 > hc.field_h) {
+                          if (param5 > LineShape.field_h) {
                             PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                           } else {
                             if (param9 < gca.field_d) {
                               PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                             } else {
-                              if (param9 > hc.field_h) {
+                              if (param9 > LineShape.field_h) {
                                 PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                               } else {
                                 if (gca.field_d > param3) {
                                   PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                 } else {
-                                  if (param3 > hc.field_h) {
+                                  if (param3 > LineShape.field_h) {
                                     PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                   } else {
                                     if (param6 < gca.field_d) {
                                       PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                     } else {
-                                      if (param6 > hc.field_h) {
+                                      if (param6 > LineShape.field_h) {
                                         PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                       } else {
                                         RoomDefinition.a(param7, param1, param0, param3, -93, param6, param2, param9, param4, param5);

@@ -231,7 +231,7 @@ final class DialogStack extends SingleChildWidget {
           if (param0 < 110) {
             field_z = (int[]) null;
           }
-          stackIn_3_0 = aca.a(param4, var5_int, param2, (byte) -110, var6);
+          stackIn_3_0 = aca.loadBinaryFont(param4, var5_int, param2, (byte) -110, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -261,7 +261,7 @@ final class DialogStack extends SingleChildWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class DialogStack extends SingleChildWidget {
           var3.field_B = true;
           var3.requestKeyboardFocus((UiWidget) (this), false);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jta.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jta.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -320,7 +320,7 @@ final class DialogStack extends SingleChildWidget {
     }
 
     public DialogStack() {
-        super(0, 0, bb.field_m, qba.field_a, (WidgetPainter) null, (WidgetListener) null);
+        super(0, 0, HiscoreTable.field_m, qba.field_a, (WidgetPainter) null, (WidgetListener) null);
         this.field_y = new IntrusiveDeque();
     }
 

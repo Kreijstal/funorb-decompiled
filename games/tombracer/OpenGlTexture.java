@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class OpenGlTexture implements GpuTexture {
-    una field_a;
+    GpuDataType field_a;
     static int[][] field_e;
     private TextureFilter filter;
     private boolean field_b;
     HardwareOpenGlToolkit field_j;
     private int field_h;
     private int field_c;
-    ft field_f;
+    TextureFormat field_f;
     static int[] field_d;
     int field_i;
 
@@ -110,7 +110,7 @@ abstract class OpenGlTexture implements GpuTexture {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ abstract class OpenGlTexture implements GpuTexture {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ abstract class OpenGlTexture implements GpuTexture {
     }
 
     final int getGlFormat(int param0) {
-        if (una.field_g == this.field_a) {
+        if (GpuDataType.field_g == this.field_a) {
           if (it.field_b == this.field_f) {
             return 6407;
           }
@@ -196,8 +196,8 @@ abstract class OpenGlTexture implements GpuTexture {
             return 6145;
           }
         } else {
-          if (una.field_l != this.field_a) {
-            if (this.field_a == una.field_h) {
+          if (GpuDataType.field_l != this.field_a) {
+            if (this.field_a == GpuDataType.field_h) {
               if (this.field_f == it.field_b) {
                 return 34837;
               }
@@ -285,7 +285,7 @@ abstract class OpenGlTexture implements GpuTexture {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -408,7 +408,7 @@ abstract class OpenGlTexture implements GpuTexture {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -521,11 +521,11 @@ abstract class OpenGlTexture implements GpuTexture {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void e(byte param0) {
+    final static void openDisplaySettings(byte param0) {
         if (param0 > -113) {
           return;
         }
@@ -540,7 +540,7 @@ abstract class OpenGlTexture implements GpuTexture {
         }
     }
 
-    OpenGlTexture(HardwareOpenGlToolkit param0, int param1, ft param2, una param3, int param4, boolean param5) {
+    OpenGlTexture(HardwareOpenGlToolkit param0, int param1, TextureFormat param2, GpuDataType param3, int param4, boolean param5) {
         this.filter = MirrorComponent.field_G;
         try {
           this.field_a = param3;
@@ -554,7 +554,7 @@ abstract class OpenGlTexture implements GpuTexture {
           this.applyFilter((byte) -97);
           this.updateMemoryUsage((byte) -128, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

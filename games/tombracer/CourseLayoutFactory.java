@@ -45,7 +45,7 @@ final class CourseLayoutFactory implements BitDecodableFactory {
             stackIn_10_0 = 95;
             return stackIn_10_0;
           }
-          FacePointLocomotor.field_r.updatePointer(wg.a(1541709953, PasswordValidator.field_m, RidgedNoise3D.field_p), 73, wg.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
+          FacePointLocomotor.field_r.updatePointer(StatReportingScoringObserver.a(1541709953, PasswordValidator.field_m, RidgedNoise3D.field_p), 73, StatReportingScoringObserver.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
           if (FacePointLocomotor.field_r.isActivated(false)) {
             var1_int = 1;
           }
@@ -78,7 +78,7 @@ final class CourseLayoutFactory implements BitDecodableFactory {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "vk.D(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "vk.D(" + param0 + ')');
         }
     }
 

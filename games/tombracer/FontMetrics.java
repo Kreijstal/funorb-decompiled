@@ -94,7 +94,7 @@ final class FontMetrics {
             while (!(var14 >= param3.field_l.length)) {
               var15 = param3.field_l[var14];
               if (var15 == -1) {
-                var8[var14 + var12Lifetime1] = iw.field_a;
+                var8[var14 + var12Lifetime1] = PrimitiveType.field_a;
                 var9[var14 + var12Lifetime1] = param3.field_o[var14];
                 var10[var14 + var12Lifetime1] = param3.field_l[var14];
               }
@@ -146,7 +146,7 @@ final class FontMetrics {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class FontMetrics {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class FontMetrics {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "qla.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "qla.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -387,7 +387,7 @@ final class FontMetrics {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -404,7 +404,7 @@ final class FontMetrics {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "qla.I(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "qla.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -693,11 +693,11 @@ final class FontMetrics {
           } else {
             stackIn_185_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_172_0), ((StringBuilder) (Object) stackIn_184_1).append(stackIn_185_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_172_0), ((StringBuilder) (Object) stackIn_184_1).append(stackIn_185_2).append(')').toString());
         }
     }
 
-    final int a(String param0, byte param1) {
+    final int stringWidth(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -719,7 +719,7 @@ final class FontMetrics {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -872,7 +872,7 @@ final class FontMetrics {
             stackIn_80_0 = param0 ? 1 : 0;
           }
           if (stackIn_80_0 != 0) {
-            this.a((String) null, (byte) -79);
+            this.stringWidth((String) null, (byte) -79);
           }
           stackIn_84_0 = (String) (param2);
           return stackIn_84_0;
@@ -892,7 +892,7 @@ final class FontMetrics {
           } else {
             stackIn_93_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -955,7 +955,7 @@ final class FontMetrics {
             } else {
               stackIn_26_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -989,7 +989,7 @@ final class FontMetrics {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1030,7 +1030,7 @@ final class FontMetrics {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1198,7 +1198,7 @@ final class FontMetrics {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
         }
     }
 
@@ -1211,7 +1211,7 @@ final class FontMetrics {
             FontMetrics.a(true, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qla.F(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qla.F(" + param0 + ')');
         }
     }
 

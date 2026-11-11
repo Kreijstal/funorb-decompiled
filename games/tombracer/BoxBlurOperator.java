@@ -54,15 +54,15 @@ final class BoxBlurOperator extends TextureOperator {
             var11_ref_int__ = var16;
             var12 = 0;
             for (var13 = -this.field_n; var13 <= this.field_n; var13++) {
-              var12 = var12 + var10_ref_int__[var13 & una.textureWidthMask];
+              var12 = var12 + var10_ref_int__[var13 & GpuDataType.textureWidthMask];
             }
             var15 = 0;
             var13Lifetime1 = var15;
             while (var15 < LegacyOpenGlTurbulentTextureEffect.textureWidth) {
               var11_ref_int__[var15] = var7 * var12 >> 16;
-              var12 = var12 - var10_ref_int__[una.textureWidthMask & -this.field_n + var15];
+              var12 = var12 - var10_ref_int__[GpuDataType.textureWidthMask & -this.field_n + var15];
               var15++;
-              var12 = var12 + var10_ref_int__[var15 + this.field_n & una.textureWidthMask];
+              var12 = var12 + var10_ref_int__[var15 + this.field_n & GpuDataType.textureWidthMask];
             }
             var8[-param1 + (var9 + this.field_m)] = var18;
           }
@@ -136,7 +136,7 @@ final class BoxBlurOperator extends TextureOperator {
             var47 = var46[1];
             var48 = var46[2];
             for (var18_int = -this.field_n; var18_int <= this.field_n; var18_int++) {
-              var19_int = var18_int & una.textureWidthMask;
+              var19_int = var18_int & GpuDataType.textureWidthMask;
               var13 = var13 + var47[var19_int];
               var14 = var14 + var48[var19_int];
               var12 = var12 + var49[var19_int];
@@ -149,12 +149,12 @@ final class BoxBlurOperator extends TextureOperator {
               var18[var21] = var12 * var7 >> 16;
               var19[var21] = var13 * var7 >> 16;
               var20[var21] = var7 * var14 >> 16;
-              var22 = var21 - this.field_n & una.textureWidthMask;
+              var22 = var21 - this.field_n & GpuDataType.textureWidthMask;
               var13 = var13 - var47[var22];
               var21++;
               var12 = var12 - var49[var22];
               var14 = var14 - var48[var22];
-              var22Lifetime1 = this.field_n + var21 & una.textureWidthMask;
+              var22Lifetime1 = this.field_n + var21 & GpuDataType.textureWidthMask;
               var12 = var12 + var49[var22Lifetime1];
               var13 = var13 + var47[var22Lifetime1];
               var14 = var14 + var48[var22Lifetime1];
@@ -220,7 +220,7 @@ final class BoxBlurOperator extends TextureOperator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -234,17 +234,17 @@ final class BoxBlurOperator extends TextureOperator {
           if (jk.field_h[param2] < jk.field_h[param3]) {
             return false;
           }
-          if (ic.field_c[param3] < ic.field_c[param2]) {
+          if (StatReportingObserverFactory.field_c[param3] < StatReportingObserverFactory.field_c[param2]) {
             return true;
           }
-          if (ic.field_c[param3] > ic.field_c[param2]) {
+          if (StatReportingObserverFactory.field_c[param3] > StatReportingObserverFactory.field_c[param2]) {
             return false;
           }
         } else {
-          if (ic.field_c[param3] < ic.field_c[param2]) {
+          if (StatReportingObserverFactory.field_c[param3] < StatReportingObserverFactory.field_c[param2]) {
             return true;
           }
-          if (ic.field_c[param2] < ic.field_c[param3]) {
+          if (StatReportingObserverFactory.field_c[param2] < StatReportingObserverFactory.field_c[param3]) {
             return false;
           }
           if (jk.field_h[param2] > jk.field_h[param3]) {

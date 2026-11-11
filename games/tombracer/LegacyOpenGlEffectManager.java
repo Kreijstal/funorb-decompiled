@@ -4,7 +4,7 @@
 final class LegacyOpenGlEffectManager {
     LegacyOpenGlUnderwaterEffect field_h;
     private OpenGlToolkit toolkit;
-    private aaa field_d;
+    private LegacyOpenGlWaterTextures field_d;
     private LegacyOpenGlEffect[] effects;
     private int parameters1;
     private int activeEffect;
@@ -267,7 +267,7 @@ final class LegacyOpenGlEffectManager {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class LegacyOpenGlEffectManager {
         this.parameters0 = 0;
         try {
           this.toolkit = param0;
-          this.field_d = new aaa(param0);
+          this.field_d = new LegacyOpenGlWaterTextures(param0);
           this.effects = new LegacyOpenGlEffect[10];
           this.effects[1] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlSpecularEffect(param0));
           this.effects[2] = (LegacyOpenGlEffect) ((Object) new LegacyOpenGlTurbulentTextureEffect(param0, this.field_d));
@@ -318,7 +318,7 @@ final class LegacyOpenGlEffectManager {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

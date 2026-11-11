@@ -533,7 +533,7 @@ final class BlendModeOperator extends TextureOperator {
         if (var2 == -2) {
           return (GameScreen) ((Object) ConstrainToFacingArcLocomotor.field_s);
         }
-        return (GameScreen) ((Object) nl.getMenuScreen(param0, (byte) 50));
+        return (GameScreen) ((Object) LoginMethod.getMenuScreen(param0, (byte) 50));
     }
 
     final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
@@ -570,7 +570,7 @@ final class BlendModeOperator extends TextureOperator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 

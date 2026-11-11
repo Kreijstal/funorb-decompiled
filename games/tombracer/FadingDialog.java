@@ -86,20 +86,20 @@ abstract class FadingDialog extends WidgetContainer {
 
     final static Sprite[] createFrameSprites(int param0, int param1, int param2, int param3) {
         if (param1 == 1) {
-          return ura.createBeveledFrameSprites(param2, param0, false, 1, param3);
+          return TextureTransformMode.createBeveledFrameSprites(param2, param0, false, 1, param3);
         }
         FadingDialog.releaseStatics(91);
-        return ura.createBeveledFrameSprites(param2, param0, false, 1, param3);
+        return TextureTransformMode.createBeveledFrameSprites(param2, param0, false, 1, param3);
     }
 
     FadingDialog(DialogStack param0, int param1, int param2) {
-        super(bb.field_m - param1 >> 1, -param2 + qba.field_a >> 1, param1, param2, (WidgetPainter) null);
+        super(HiscoreTable.field_m - param1 >> 1, -param2 + qba.field_a >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_x = 0;
           this.field_z = param0;
           this.field_B = false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -157,11 +157,11 @@ abstract class FadingDialog extends WidgetContainer {
 
     final void setCentredSize(int param0, int param1, int param2) {
         if (param0 == -11560) {
-          this.setBounds((byte) -31, param2, param1, -param2 + bb.field_m >> 1, qba.field_a - param1 >> 1);
+          this.setBounds((byte) -31, param2, param1, -param2 + HiscoreTable.field_m >> 1, qba.field_a - param1 >> 1);
           return;
         }
         this.field_B = false;
-        this.setBounds((byte) -31, param2, param1, -param2 + bb.field_m >> 1, qba.field_a - param1 >> 1);
+        this.setBounds((byte) -31, param2, param1, -param2 + HiscoreTable.field_m >> 1, qba.field_a - param1 >> 1);
     }
 
     static {

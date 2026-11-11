@@ -22,7 +22,7 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
           this.field_t = param2;
           this.field_s = param3;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
           }
           this.field_t = param3;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
           this.field_v = (float)param3 / (float)param5;
           this.setWrap(false, false, -3554);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
           this.field_v = (float)param2 / (float)param4;
           this.setWrap(false, false, -3554);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,25 +86,25 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
           }
           RasterBuffer.a(param7, 2, param1, param6, param2, param5, param0, 1, param4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qk.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qk.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    final static kn getTooltipStyle(int param0) {
+    final static TooltipRenderer getTooltipStyle(int param0) {
         int var1 = 119 % ((63 - param0) / 41);
-        if (joa.field_c == null) {
-          joa.field_c = new kn();
-          joa.field_c.initializeRenderers(KeySwitchComponent.field_J, true);
-          joa.field_c.field_b = 4;
-          joa.field_c.field_o = 14;
-          joa.field_c.field_c = 2763306;
-          joa.field_c.field_f = 5;
-          joa.field_c.field_q = BlendModeOperator.field_o;
-          joa.field_c.field_i = 6;
-          joa.field_c.field_a = 7697781;
-          joa.field_c.field_t = 0;
+        if (GzipInflater.field_c == null) {
+          GzipInflater.field_c = new TooltipRenderer();
+          GzipInflater.field_c.initializeRenderers(KeySwitchComponent.field_J, true);
+          GzipInflater.field_c.field_b = 4;
+          GzipInflater.field_c.field_o = 14;
+          GzipInflater.field_c.field_c = 2763306;
+          GzipInflater.field_c.field_f = 5;
+          GzipInflater.field_c.field_q = BlendModeOperator.field_o;
+          GzipInflater.field_c.field_i = 6;
+          GzipInflater.field_c.field_a = 7697781;
+          GzipInflater.field_c.field_t = 0;
         }
-        return joa.field_c;
+        return GzipInflater.field_c;
     }
 
     final static boolean i(int param0) {

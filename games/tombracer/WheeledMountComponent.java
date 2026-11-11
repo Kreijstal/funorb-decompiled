@@ -47,20 +47,20 @@ final class WheeledMountComponent extends PathMoverComponent {
         try {
           ValidatedTextInputWidget.pumpAudio(-16310);
           var1_int = -106 / ((-7 - param0) / 37);
-          var2 = (PlayingSound) (nl.field_f.first(-80));
+          var2 = (PlayingSound) (LoginMethod.field_f.first(-80));
           while (var2 != null) {
             var2.fadeOutStep(-97);
             if (var2.field_h <= 0) {
               VariantMask.removeSoundStream(var2.field_i, (byte) -42);
               var2.unlink(25);
             }
-            var2 = (PlayingSound) (nl.field_f.next(107));
+            var2 = (PlayingSound) (LoginMethod.field_f.next(107));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "ipa.UB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "ipa.UB(" + param0 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         try {
           this.field_Q = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ipa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ipa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -200,7 +200,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           super.encode(param0, param1);
           param1.writeBits((byte) -19, this.field_Q, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ipa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ipa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

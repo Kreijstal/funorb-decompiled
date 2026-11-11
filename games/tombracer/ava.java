@@ -146,7 +146,7 @@ final class ava {
             if (var12.field_J == null) {
               var12.field_Nb = new UiComponent(0L, S2CStartRoundPacket.field_a);
               var12.addChild(-128, var12.field_Nb);
-              var12.field_Db = new UiComponent(0L, iea.field_g);
+              var12.field_Db = new UiComponent(0L, ClipFrame.field_g);
               if (UnlockOverlay.field_p) {
                 var12.addChild(-123, var12.field_Db);
               }
@@ -226,7 +226,7 @@ final class ava {
               var12.field_Kb.field_gb = var24_int;
               var12.field_Kb.field_N = var24_int;
               var12.field_Kb.field_ab = var24_int;
-              if (param0 != tn.field_n) {
+              if (param0 != MidiPatch.field_n) {
                 if (var12.field_Hb) {
                   var12.field_Nb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(90, TextureFilter.field_b, new String[]{var20});
                   var12.field_Cb.field_r = mq.field_d;
@@ -254,7 +254,7 @@ final class ava {
                   var25_int = var25_int + var26;
                 }
                 if (var12.field_Cb.field_r != null) {
-                  if (param0 == tn.field_n) {
+                  if (param0 == MidiPatch.field_n) {
                     var26Lifetime2 = 40;
                   } else {
                     var26Lifetime2 = var12.field_Cb.measureNaturalWidth((byte) 69) + 2 * mna.field_d;
@@ -341,7 +341,7 @@ final class ava {
                     if (var6 <= var12.field_Jb) {
                       if (0 != (~var12.field_Eb & var8)) {
                         var25_int = WidgetContainer.highestOneBit(~var12.field_Eb & var8, (byte) -107);
-                        var24Lifetime2 = gh.field_f;
+                        var24Lifetime2 = HardwareSprite.field_f;
                         if (0 < var25_int &&
                           null != BitPacketBuffer.field_l &&
                           BitPacketBuffer.field_l.length >= var25_int &&
@@ -445,7 +445,7 @@ final class ava {
                     }
                   }
                 }
-                if (tn.field_n == param0 &&
+                if (MidiPatch.field_n == param0 &&
                   ComponentMount.b(param4 ^ 8194)) {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + LegacyOpenGlFlowingWaterEffect.formatText(114, IdolItemComponent.field_I, new String[]{(String) (var25)});
@@ -459,7 +459,7 @@ final class ava {
                     var24Lifetime2 = var34 + "<br>" + LegacyOpenGlFlowingWaterEffect.formatText(125, FlameShooterComponent.field_K, new String[]{(String) (var25)});
                   }
                 }
-                if (tn.field_n == param0 &&
+                if (MidiPatch.field_n == param0 &&
                   !ComponentMount.b(8192)) {
                   var27 = C2SChooseRewardPacket.field_a.field_tb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + LegacyOpenGlFlowingWaterEffect.formatText(102, C2SSubmitSettingsPacket.field_c, new String[]{var27});
@@ -481,7 +481,7 @@ final class ava {
           } else {
             stackIn_220_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_219_0), ((StringBuilder) (Object) stackIn_219_1).append(stackIn_220_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_219_0), ((StringBuilder) (Object) stackIn_219_1).append(stackIn_220_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

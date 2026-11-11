@@ -15,7 +15,7 @@ final class PlantModel extends TrapModel {
           }
           this.field_m = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,7 +25,7 @@ final class PlantModel extends TrapModel {
           int var3_int = 44 / ((param0 + 8) / 40);
           param1.writeBits((byte) -125, this.field_m, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ki.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ki.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,9 +41,9 @@ final class PlantModel extends TrapModel {
             PlantModel.detachKeyboardHandler(-126, (java.awt.Component) null);
           }
           param1.removeFocusListener(TileOperator.field_n);
-          ita.field_f = -1;
+          SoftwareDepthBuffer.field_f = -1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ki.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ki.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -170,7 +170,7 @@ final class PlantModel extends TrapModel {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class PlantModel extends TrapModel {
         try {
           super.attach(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ki.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ki.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class PlantModel extends TrapModel {
     final static void resendPendingSubmissions(boolean param0, int param1) {
         int var3 = 0;
         ScoreSubmission var4 = null;
-        bb var5 = null;
+        HiscoreTable var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
@@ -219,16 +219,16 @@ final class PlantModel extends TrapModel {
           if (param0) {
             PlantModel.resendPendingSubmissions(true, -117);
           }
-          var5 = (bb) (TimingPattern.field_b.first(-80));
+          var5 = (HiscoreTable) (TimingPattern.field_b.first(-80));
           while (var5 != null) {
             BeamSegment.a(param0, param1, var5);
-            var5 = (bb) (TimingPattern.field_b.next(122));
+            var5 = (HiscoreTable) (TimingPattern.field_b.next(122));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "ki.H(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "ki.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -270,7 +270,7 @@ final class PlantModel extends TrapModel {
             return;
           }
           var8Lifetime1 = GameScreen.positiveModulo(-this.body.getFacingAngle(-25787) + 4096 >> 2, 2048, -111);
-          gqa.drawModelAt(var8Lifetime1, -83584144, param1, param2, (ToolkitModel) (var6), param3);
+          ChatMessage.drawModelAt(var8Lifetime1, -83584144, param1, param2, (ToolkitModel) (var6), param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -282,7 +282,7 @@ final class PlantModel extends TrapModel {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) (stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) (stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

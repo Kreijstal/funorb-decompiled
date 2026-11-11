@@ -54,7 +54,7 @@ final class jk extends IntrusiveNode {
         try {
           var3_int = 0;
           var4 = -1;
-          var5 = qg.field_a;
+          var5 = CourseDefinition.field_a;
           var6 = 0;
           if (param0 != 22) {
             stackIn_3_0 = -122;
@@ -90,7 +90,7 @@ final class jk extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class jk extends IntrusiveNode {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class jk extends IntrusiveNode {
         try {
           var3_int = 0;
           var4 = -1;
-          var5 = qg.field_a;
+          var5 = CourseDefinition.field_a;
           var6 = 0;
           if (param0 != 22) {
             stackIn_3_0 = -122;
@@ -170,7 +170,7 @@ final class jk extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 }

@@ -7,7 +7,7 @@ final class jt {
     int field_c;
     int field_a;
 
-    final jt a(int param0, int param1) {
+    final jt withVertexOffset(int param0, int param1) {
         if (param0 != 9677) {
           return (jt) null;
         }

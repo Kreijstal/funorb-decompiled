@@ -21,7 +21,7 @@ final class MonsterRemains implements Renderable {
           param1.addToLayer((byte) -100, 2, (Renderable) (this));
           int var4_int = 5 / ((-52 - param0) / 57);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nta.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nta.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class MonsterRemains implements Renderable {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = this.field_f.getModel((byte) 74);
-          gqa.drawModelAt(this.field_c, -83584144, this.getRenderY((byte) 106), this.getRenderX((byte) 90), var3, this.getRenderZ((byte) -106));
+          ChatMessage.drawModelAt(this.field_c, -83584144, this.getRenderY((byte) 106), this.getRenderX((byte) 90), var3, this.getRenderZ((byte) -106));
           if (param0 >= 103) {
             return;
           }
@@ -77,7 +77,7 @@ final class MonsterRemains implements Renderable {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class MonsterRemains implements Renderable {
           this.field_g = param2;
           this.field_f = param3;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

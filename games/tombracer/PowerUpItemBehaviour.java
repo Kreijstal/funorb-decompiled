@@ -14,7 +14,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         try {
           this.field_x = new StatusEffect(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           super.encode(param0, param1);
           this.field_x.encode(-29928, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -75,8 +75,8 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           while (NanoTickClock.pollKeyEvent(true)) {
             ej.field_a.dispatchKeyInput((byte) 116, MenuEntry.field_h, HardwareOpenGlToolkit.field_td);
           }
-          if (bf.field_a != -1) {
-            var1_int = bf.field_a;
+          if (SoftwareRenderTarget.field_a != -1) {
+            var1_int = SoftwareRenderTarget.field_a;
             jsa.a(false, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
@@ -105,7 +105,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "rl.U(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "rl.U(" + param0 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

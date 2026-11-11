@@ -14,14 +14,14 @@ final class PressureSwitchComponent extends SwitchComponent {
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        gqa var9 = null;
+        ChatMessage var9 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (HiscoresScreen.field_r < SoftwareTransform3D.field_q) {
             HiscoresScreen.field_r = HiscoresScreen.field_r + 1;
           }
           if (mha.field_E != FadingDialog.field_C.field_e) {
-            tj.field_b = tj.field_b + (FadingDialog.field_C.field_e - mha.field_E);
+            VertexArrayPointer.field_b = VertexArrayPointer.field_b + (FadingDialog.field_C.field_e - mha.field_E);
             mha.field_E = FadingDialog.field_C.field_e;
           }
           if (HiscoresScreen.field_r <= 0) {
@@ -65,7 +65,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "pw.VB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "pw.VB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         try {
           this.field_L = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           super.encode(param0, param1);
           param1.writeBits((byte) -125, this.field_L, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pw.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pw.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -30,7 +30,7 @@ final class KeySwitchComponent extends SwitchComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mj.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mj.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class KeySwitchComponent extends SwitchComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -103,9 +103,9 @@ final class KeySwitchComponent extends SwitchComponent {
           if (param2 != 1) {
             KeySwitchComponent.releaseStatics((byte) -30);
           }
-          gj.field_d.put(param0, param1);
+          VertexAttribute.field_d.put(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mj.FC(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mj.FC(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class KeySwitchComponent extends SwitchComponent {
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
         try {
-          var7 = (GameAssetLoader) (dma.field_l);
+          var7 = (GameAssetLoader) (OpenGlCubeTexture.field_l);
           var7.drawLoadingProgress(param4, (byte) 47, param1);
           HeapIndexArray.field_d = DialogStack.loadBinaryFont((byte) 120, "b12_old", param3, "", param2);
           incrementValue$0 = param4;
@@ -164,19 +164,19 @@ final class KeySwitchComponent extends SwitchComponent {
           incrementValue$1 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$1, (byte) 47, param1);
-          kv.field_a = joa.loadFontMetrics("b12", param2, "", (byte) 76);
+          kv.field_a = GzipInflater.loadFontMetrics("b12", param2, "", (byte) 76);
           incrementValue$2 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$2, (byte) 47, param1);
-          MatchStatistics.field_n = joa.loadFontMetrics("newfont", param2, "", (byte) -111);
+          MatchStatistics.field_n = GzipInflater.loadFontMetrics("newfont", param2, "", (byte) -111);
           incrementValue$3 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$3, (byte) 47, param1);
-          wb.field_a = joa.loadFontMetrics("newfont_lrg", param2, "", (byte) -92);
+          wb.field_a = GzipInflater.loadFontMetrics("newfont_lrg", param2, "", (byte) -92);
           incrementValue$4 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$4, (byte) 47, param1);
-          RatingsScreen.field_r = joa.loadFontMetrics("newfont_sml", param2, "", (byte) 126);
+          RatingsScreen.field_r = GzipInflater.loadFontMetrics("newfont_sml", param2, "", (byte) 126);
           incrementValue$5 = param4;
           param4++;
           var7.drawLoadingProgress(incrementValue$5, (byte) 47, param1);
@@ -194,7 +194,7 @@ final class KeySwitchComponent extends SwitchComponent {
           var7.drawLoadingProgress(incrementValue$8, (byte) 47, param1);
           MovingPlatformComponent.field_O = SpriteData.loadSheet(param3, "", "font_large");
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mj.VB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mj.VB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

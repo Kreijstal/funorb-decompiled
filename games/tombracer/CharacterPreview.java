@@ -3,12 +3,12 @@
  */
 final class CharacterPreview extends IntrusiveNode {
     ModelAnimator field_j;
-    static ft field_g;
+    static TextureFormat field_g;
     static int field_h;
     static int field_i;
     static SpriteData field_f;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_f = null;
         if (!param0) {
@@ -20,7 +20,7 @@ final class CharacterPreview extends IntrusiveNode {
         if (param1 == -16226) {
           return param2 <= param3 ? param3 <= param0 ? param3 : param0 : param2;
         }
-        CharacterPreview.a(false);
+        CharacterPreview.releaseStatics(false);
         return param2 <= param3 ? param3 <= param0 ? param3 : param0 : param2;
     }
 
@@ -54,6 +54,6 @@ final class CharacterPreview extends IntrusiveNode {
     }
 
     static {
-        field_g = new ft(1);
+        field_g = new TextureFormat(1);
     }
 }

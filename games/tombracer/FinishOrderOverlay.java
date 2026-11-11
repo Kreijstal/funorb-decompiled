@@ -35,11 +35,11 @@ final class FinishOrderOverlay extends MatchOverlay {
         int var14;
         int var13;
         var14 = TombRacer.field_G ? 1 : 0;
-        var2 = (aaa.a(false) - SwitchLinkList.b(0) / 2) / 2;
+        var2 = (LegacyOpenGlWaterTextures.getCanvasWidth(false) - SwitchLinkList.getCanvasHeight(0) / 2) / 2;
         if (param0 >= -13) {
           return;
         }
-        var3 = (SwitchLinkList.b(0) + 130) / 2;
+        var3 = (SwitchLinkList.getCanvasHeight(0) + 130) / 2;
         var4 = this.field_i.getViewedPlayerIndex(93);
         var5 = 10309393;
         var6 = 11184810;
@@ -48,7 +48,7 @@ final class FinishOrderOverlay extends MatchOverlay {
         var9 = var3;
         var10 = 40 + var9;
         PlayerViewport.drawTiledFrame(var8, 300, (byte) 65, -150 + var2, aq.field_a, var9 - 16);
-        MembersUpsellMenu.drawCentredTextWithShadow(PowerUpItemBehaviour.field_v.toUpperCase(), 16777215, qf.field_j, -1, 4 + var9, var2, 0);
+        MembersUpsellMenu.drawCentredTextWithShadow(PowerUpItemBehaviour.field_v.toUpperCase(), 16777215, FloatPacketBuffer.field_j, -1, 4 + var9, var2, 0);
         for (var11 = 0; this.field_g.standings.order.length > var11; var11++) {
           var12 = this.field_g.standings.order[var11];
           if (var12 != -1) {
@@ -58,14 +58,14 @@ final class FinishOrderOverlay extends MatchOverlay {
               var13 = var6;
             }
             if (this.field_g.simulations[var12].isFinished(0)) {
-              MembersUpsellMenu.drawCentredTextWithShadow((dta.field_b[var11] + "  " + this.field_i.getPlayerName(var12, false) + "  " + DropAnimation.formatTime(this.field_g.simulations[var12].tick, (byte) -8)).toUpperCase(), var13, qf.field_j, -1, var7 * var11 + var10, var2, 0);
+              MembersUpsellMenu.drawCentredTextWithShadow((dta.field_b[var11] + "  " + this.field_i.getPlayerName(var12, false) + "  " + DropAnimation.formatTime(this.field_g.simulations[var12].tick, (byte) -8)).toUpperCase(), var13, FloatPacketBuffer.field_j, -1, var7 * var11 + var10, var2, 0);
             } else {
               if (!this.field_g.simulations[var12].hasTimedOut(-31170) &&
                 this.field_i.matchState.getRoundWinner(2) < 0) {
-                MembersUpsellMenu.drawCentredTextWithShadow((dta.field_b[var11] + "  ...").toUpperCase(), 16777215, qf.field_j, -1, var11 * var7 + var10, var2, 0);
+                MembersUpsellMenu.drawCentredTextWithShadow((dta.field_b[var11] + "  ...").toUpperCase(), 16777215, FloatPacketBuffer.field_j, -1, var11 * var7 + var10, var2, 0);
                 return;
               }
-              MembersUpsellMenu.drawCentredTextWithShadow((re.field_b + "  " + this.field_i.getPlayerName(var12, false)).toUpperCase(), var13, qf.field_j, -1, var10 + var11 * var7, var2, 0);
+              MembersUpsellMenu.drawCentredTextWithShadow((re.field_b + "  " + this.field_i.getPlayerName(var12, false)).toUpperCase(), var13, FloatPacketBuffer.field_j, -1, var10 + var11 * var7, var2, 0);
             }
           }
         }

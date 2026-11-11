@@ -103,7 +103,7 @@ final class ConsoleExpressionParser {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -122,13 +122,13 @@ final class ConsoleExpressionParser {
         try {
           var4 = param0.next((byte) -127);
           if (var4.kind != LegacyOpenGlReflectionEffect.field_e &&
-            nl.field_d != var4.kind &&
+            LoginMethod.field_d != var4.kind &&
             CrusherModel.field_o != var4.kind &&
             var4.kind != PressureSwitchBehaviour.field_r) {
             if (param1 != -31733) {
               field_a = -1.1603987584850415;
             }
-            if (var4.kind != tr.field_f) {
+            if (var4.kind != QuickChatPhraseSource.field_f) {
               throw new ConsoleParseException(var4.field_h);
             }
             if (param0.isAtEnd((byte) 100)) {
@@ -174,7 +174,7 @@ final class ConsoleExpressionParser {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
         }
     }
 

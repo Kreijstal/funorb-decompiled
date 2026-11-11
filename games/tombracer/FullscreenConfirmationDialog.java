@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
+final class FullscreenConfirmationDialog extends ResizingDialog implements ButtonListener {
     private UiWidget field_L;
     private FocusableWidget field_N;
     static SpriteData field_O;
@@ -42,7 +42,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           }
           var17 = (int[]) null;
           var16 = (IndexedSprite[]) null;
-          ta.a(param14, param10, (int[]) null, param6, param0, param9, (IndexedSprite[]) null, param3, param12, param5, param13, param11, (byte) 116, param2, param7, param4, param8);
+          LabelledRow.a(param14, param10, (int[]) null, param6, param0, param9, (IndexedSprite[]) null, param3, param12, param5, param13, param11, (byte) 116, param2, param7, param4, param8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,7 +114,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -123,24 +123,24 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
         UiWidget var3 = null;
         try {
           this.field_P = bva.currentTimeMillis((byte) -107);
-          var3 = new UiWidget(rfa.field_B, (WidgetListener) null);
+          var3 = new UiWidget(TombRacerShell.field_B, (WidgetListener) null);
           var3.field_m = this.field_m;
           var3.field_p = 100;
           var3.field_n = 50;
           var3.field_i = 0;
           var3.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(BlendModeOperator.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var3, -1);
-          this.field_L = new UiWidget(rfa.field_B, (WidgetListener) null);
+          this.field_L = new UiWidget(TombRacerShell.field_B, (WidgetListener) null);
           this.field_L.field_i = 0;
           this.field_L.field_n = 20 + var3.field_n + var3.field_p;
           this.field_L.field_m = this.field_m;
           this.field_L.field_p = 80;
-          this.field_L.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(ft.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_L.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(TextureFormat.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(this.field_L, -1);
           this.field_N = this.addButton((WidgetListener) (this), 77, WeaveOperator.field_s);
           this.field_M = this.addButton((WidgetListener) (this), 71, mha.field_F);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "op.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "op.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           if (param2 != this.field_M) {
             return;
           }
-          og.exitFullscreen(0);
+          HardwareOpenGlVertexBuffer.exitFullscreen(0);
           this.i((byte) 109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,7 +184,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -299,7 +299,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -319,19 +319,19 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           var5_long = -this.field_P + bva.currentTimeMillis((byte) -107);
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (0 >= var7) {
-            og.exitFullscreen(0);
+            HardwareOpenGlVertexBuffer.exitFullscreen(0);
             this.i((byte) 109);
             this.field_z.pushDialog(new gga(this.field_z, TileRenderable.field_b), 120);
           } else {
             this.field_L.field_o = "" + var7;
           }
           if (this.field_B &&
-            null == dq.field_f) {
+            null == ColourRowCacheEntry.field_f) {
             this.i((byte) 109);
             this.field_z.pushDialog(new gga(this.field_z, TurbulenceNoise3D.field_j), 102);
           }
-          if (null != dq.field_f &&
-            dq.field_f.field_b) {
+          if (null != ColourRowCacheEntry.field_f &&
+            ColourRowCacheEntry.field_f.field_b) {
             this.i((byte) 109);
             this.field_z.pushDialog(new gga(this.field_z, TurbulenceNoise3D.field_j), 85);
             return;
@@ -347,7 +347,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 

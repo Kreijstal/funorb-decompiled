@@ -376,7 +376,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -391,7 +391,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           this.field_q = 16777216;
           this.field_v = true;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -411,7 +411,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           }
           this.field_t = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wh.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wh.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -425,7 +425,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           param1.writeBits((byte) 110, !this.field_D ? 0 : 1, 1);
           param1.writeBits((byte) -125, this.field_n >> 16, 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -447,7 +447,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             this.field_u = (BeamSegment) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wh.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wh.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -465,9 +465,9 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
     }
 
     private final void updateBeamSegment(byte param0) {
-        int var2 = this.trap.getX(3) + gqa.multiplyFixed(this.field_E, (byte) 24, this.trap.getWidth(-31) / 2);
-        int var3 = this.trap.getY(param0 + 9556) + gqa.multiplyFixed(this.field_o, (byte) 24, this.trap.getWidth(-64) / 2);
-        this.field_u.setEndpoints(var2, var2 + gqa.multiplyFixed(this.field_E, (byte) 24, this.field_s), var3, gqa.multiplyFixed(this.field_o, (byte) 24, this.field_s) + var3, 44);
+        int var2 = this.trap.getX(3) + ChatMessage.multiplyFixed(this.field_E, (byte) 24, this.trap.getWidth(-31) / 2);
+        int var3 = this.trap.getY(param0 + 9556) + ChatMessage.multiplyFixed(this.field_o, (byte) 24, this.trap.getWidth(-64) / 2);
+        this.field_u.setEndpoints(var2, var2 + ChatMessage.multiplyFixed(this.field_E, (byte) 24, this.field_s), var3, ChatMessage.multiplyFixed(this.field_o, (byte) 24, this.field_s) + var3, 44);
         this.field_u.field_b = this.field_s;
         this.field_u.field_i = this.trap.getTopElevation(param0 ^ 92) << 16;
         if (param0 == 92) {
@@ -496,7 +496,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           this.field_D = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_n = param1.readBits((byte) 44, 8) << 16;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

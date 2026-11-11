@@ -81,7 +81,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.BA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.BA(" + param0 + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.faceAwayFrom(103, (WorldBody) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.N(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.N(" + param0 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.IB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.IB(" + param0 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.EA(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.EA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.BD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.BD(" + param0 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.FB(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.FB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -361,7 +361,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3_ref2), "hca.DA(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3_ref2), "hca.DA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.NA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.NA(" + param0 + ')');
         }
     }
 
@@ -397,7 +397,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.S(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.S(" + param0 + ')');
         }
     }
 
@@ -413,7 +413,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.EE(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.EE(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -424,7 +424,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           int var5_int = 25 % ((-9 - param1) / 55);
           this.heldItemWeight = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.NE(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.NE(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -451,7 +451,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.JA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.JA(" + param0 + ')');
         }
     }
 
@@ -468,7 +468,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.A(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.A(" + param0 + ')');
         }
     }
 
@@ -516,7 +516,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var7), "hca.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var7), "hca.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -533,7 +533,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.BB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.BB(" + param0 + ')');
         }
     }
 
@@ -542,7 +542,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           this.room.queueSound(this.y, this.x, param0, 0, (byte) 6);
           int var3_int = 35 % ((57 - param1) / 47);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.W(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.W(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -576,7 +576,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -592,7 +592,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.JC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.JC(" + param0 + ')');
         }
     }
 
@@ -609,7 +609,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.AB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.AB(" + param0 + ')');
         }
     }
 
@@ -623,7 +623,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "hca.toString()");
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "hca.toString()");
         }
     }
 
@@ -642,7 +642,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.AD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.AD(" + param0 + ')');
         }
     }
 
@@ -693,16 +693,16 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
               }
             }
           }
-          this.velocityX = this.velocityX + gqa.multiplyFixed(param3, (byte) 24, param2);
-          this.velocityX = za.clampValue(-param0, 108, param0, this.velocityX);
-          this.velocityY = this.velocityY + gqa.multiplyFixed(param3, (byte) 24, param1);
-          this.velocityY = za.clampValue(-param0, 84, param0, this.velocityY);
+          this.velocityX = this.velocityX + ChatMessage.multiplyFixed(param3, (byte) 24, param2);
+          this.velocityX = GraphicsHeap.clampValue(-param0, 108, param0, this.velocityX);
+          this.velocityY = this.velocityY + ChatMessage.multiplyFixed(param3, (byte) 24, param1);
+          this.velocityY = GraphicsHeap.clampValue(-param0, 84, param0, this.velocityY);
           var7_int = -47 % ((75 - param5) / 43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var7), "hca.WA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var7), "hca.WA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -749,7 +749,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -766,7 +766,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.VD(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.VD(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -792,7 +792,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -813,7 +813,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.HA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.HA(" + param0 + ')');
         }
     }
 
@@ -828,7 +828,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.CA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.CA(" + param0 + ')');
         }
     }
 
@@ -847,7 +847,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.DC(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.DC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -866,7 +866,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.WB(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.WB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -972,7 +972,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4_ref), "hca.QC(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4_ref), "hca.QC(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1035,7 +1035,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.CE(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.CE(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1051,7 +1051,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.M(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.M(" + param0 + ')');
         }
     }
 
@@ -1068,7 +1068,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.GE(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.GE(" + param0 + ')');
         }
     }
 
@@ -1096,7 +1096,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.GD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.GD(" + param0 + ')');
         }
     }
 
@@ -1149,7 +1149,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var6_ref), "hca.QE(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var6_ref), "hca.QE(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1166,7 +1166,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var6), "hca.EB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var6), "hca.EB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1199,7 +1199,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "hca.SE(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "hca.SE(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1216,7 +1216,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.U(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.U(" + param0 + ')');
         }
     }
 
@@ -1265,7 +1265,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "hca.CC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "hca.CC(" + param0 + ')');
         }
     }
 
@@ -1280,7 +1280,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             Player.releaseStatics(-63);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.TA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.TA(" + param0 + ')');
         }
     }
 
@@ -1290,7 +1290,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           this.previousY = this.y;
           int var2_int = 103 % ((-7 - param0) / 44);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.JE(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.JE(" + param0 + ')');
         }
     }
 
@@ -1339,7 +1339,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "hca.HB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "hca.HB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1350,7 +1350,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.field_kb = 32;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.RD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.RD(" + param0 + ')');
         }
     }
 
@@ -1371,7 +1371,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.MD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.MD(" + param0 + ')');
         }
     }
 
@@ -1388,11 +1388,11 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.QA(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.QA(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final int j(boolean param0) {
+    final int getRoundScore(boolean param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -1407,7 +1407,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.AC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.AC(" + param0 + ')');
         }
     }
 
@@ -1469,7 +1469,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.MC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.MC(" + param0 + ')');
         }
     }
 
@@ -1480,7 +1480,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.chosenReward = 21;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.NC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.NC(" + param0 + ')');
         }
     }
 
@@ -1616,7 +1616,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.OC(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.OC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1655,7 +1655,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var7), "hca.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var7), "hca.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1672,7 +1672,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.SC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.SC(" + param0 + ')');
         }
     }
 
@@ -1698,7 +1698,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var6), "hca.TC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var6), "hca.TC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1759,7 +1759,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "hca.LE(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "hca.LE(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1795,7 +1795,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1814,7 +1814,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.WD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.WD(" + param0 + ')');
         }
     }
 
@@ -1848,7 +1848,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1867,7 +1867,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.AA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.AA(" + param0 + ')');
         }
     }
 
@@ -1883,7 +1883,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.HC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.HC(" + param0 + ')');
         }
     }
 
@@ -1900,7 +1900,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.KA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.KA(" + param0 + ')');
         }
     }
 
@@ -1912,11 +1912,11 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           return;
         }
         try {
-          za.clampValue(0, 108, this.room.getWidth((byte) -86), this.x);
+          GraphicsHeap.clampValue(0, 108, this.room.getWidth((byte) -86), this.x);
           this.room.o(param0 - 66);
-          this.sortDepth = za.clampValue(0, 73, this.room.getHeight(120), this.y) + this.room.n((byte) -51);
+          this.sortDepth = GraphicsHeap.clampValue(0, 73, this.room.getHeight(120), this.y) + this.room.n((byte) -51);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.TB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.TB(" + param0 + ')');
         }
     }
 
@@ -1934,7 +1934,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           this.roomTreasure[param2] = this.roomTreasure[param2] + 1;
           if (null != param0 &&
             param2 != 0) {
-            this.collectedTreasures.addLast((byte) -118, new vl(param2, param0));
+            this.collectedTreasures.addLast((byte) -118, new CollectedTreasure(param2, param0));
           }
           this.getSimulation(-1).getObserver(9262).onTreasureCollected(param2, 15818, this, param0);
           return;
@@ -1948,7 +1948,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2191,11 +2191,11 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
                 var25 = 20000;
                 var26 = 8000;
               }
-              this.applyFriction(gqa.multiplyFixed(var17, (byte) 24, var15), var21, var20, gqa.multiplyFixed(var25, (byte) 24, var15), var26, 127);
+              this.applyFriction(ChatMessage.multiplyFixed(var17, (byte) 24, var15), var21, var20, ChatMessage.multiplyFixed(var25, (byte) 24, var15), var26, 127);
               decompiledSharedTail1 = (var29 != 0);
             }
             if (decompiledSharedTail1) {
-              this.setVelocityFromInput(var20, 89, gqa.multiplyFixed(var17, (byte) 24, var15), var21);
+              this.setVelocityFromInput(var20, 89, ChatMessage.multiplyFixed(var17, (byte) 24, var15), var21);
             }
             if (var14 == 0 &&
               0 == var16 &&
@@ -2405,7 +2405,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.LC(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.LC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2424,7 +2424,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.LA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.LA(" + param0 + ')');
         }
     }
 
@@ -2441,7 +2441,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.AE(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.AE(" + param0 + ')');
         }
     }
 
@@ -2463,7 +2463,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.K(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.K(" + param0 + ')');
         }
     }
 
@@ -2471,7 +2471,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         try {
           this.pendingTimeFreeze = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.JD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.JD(" + param0 + ')');
         }
     }
 
@@ -2486,7 +2486,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.LB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.LB(" + param0 + ')');
         }
     }
 
@@ -2501,18 +2501,18 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.E(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.E(" + param0 + ')');
         }
     }
 
-    final void f(int param0, int param1) {
+    final void setRoundScore(int param0, int param1) {
         if (param1 != -25915) {
           return;
         }
         try {
           this.field_cb = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.VB(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.VB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2527,7 +2527,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.IA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.IA(" + param0 + ')');
         }
     }
 
@@ -2563,7 +2563,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.JB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.JB(" + param0 + ')');
         }
     }
 
@@ -2584,7 +2584,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.UA(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.UA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2598,7 +2598,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.UD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.UD(" + param0 + ')');
         }
     }
 
@@ -2612,7 +2612,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           this.savePreviousPosition((byte) -116);
           this.room.collisionGrid.insert((Collidable) (this), 7073);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.DD(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.DD(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2645,7 +2645,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2661,7 +2661,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.PC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.PC(" + param0 + ')');
         }
     }
 
@@ -2678,7 +2678,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.GC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.GC(" + param0 + ')');
         }
     }
 
@@ -2695,7 +2695,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.P(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.P(" + param0 + ')');
         }
     }
 
@@ -2714,7 +2714,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.BE(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.BE(" + param0 + ')');
         }
     }
 
@@ -2731,7 +2731,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.O(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.O(" + param0 + ')');
         }
     }
 
@@ -2747,7 +2747,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.MB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.MB(" + param0 + ')');
         }
     }
 
@@ -2786,7 +2786,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -2812,7 +2812,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -2828,7 +2828,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.KC(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.KC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2872,7 +2872,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -2936,7 +2936,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "hca.VC(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "hca.VC(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2952,7 +2952,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.ND(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.ND(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2969,7 +2969,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.ME(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.ME(" + param0 + ')');
         }
     }
 
@@ -2984,7 +2984,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.DE(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.DE(" + param0 + ')');
         }
     }
 
@@ -3001,7 +3001,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var7), "hca.KD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var7), "hca.KD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -3053,7 +3053,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3069,7 +3069,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.OE(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.OE(" + param0 + ')');
         }
     }
 
@@ -3098,7 +3098,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -3123,7 +3123,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3142,7 +3142,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.L(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.L(" + param0 + ')');
         }
     }
 
@@ -3157,7 +3157,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "hca.RB(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "hca.RB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3185,7 +3185,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.HD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.HD(" + param0 + ')');
         }
     }
 
@@ -3214,7 +3214,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.TD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.TD(" + param0 + ')');
         }
     }
 
@@ -3225,7 +3225,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.applySlow(118);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.V(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.V(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3242,7 +3242,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.D(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.D(" + param0 + ')');
         }
     }
 
@@ -3261,7 +3261,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.G(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.G(" + param0 + ')');
         }
     }
 
@@ -3277,7 +3277,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.SA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.SA(" + param0 + ')');
         }
     }
 
@@ -3296,7 +3296,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.ID(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.ID(" + param0 + ')');
         }
     }
 
@@ -3313,7 +3313,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.RE(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.RE(" + param0 + ')');
         }
     }
 
@@ -3330,7 +3330,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.CB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.CB(" + param0 + ')');
         }
     }
 
@@ -3347,7 +3347,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.J(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.J(" + param0 + ')');
         }
     }
 
@@ -3364,7 +3364,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.QD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.QD(" + param0 + ')');
         }
     }
 
@@ -3390,7 +3390,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -3407,7 +3407,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "hca.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "hca.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3424,7 +3424,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.IE(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.IE(" + param0 + ')');
         }
     }
 
@@ -3441,7 +3441,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.RC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.RC(" + param0 + ')');
         }
     }
 
@@ -3458,7 +3458,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.UC(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.UC(" + param0 + ')');
         }
     }
 
@@ -3477,7 +3477,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.R(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.R(" + param0 + ')');
         }
     }
 
@@ -3509,7 +3509,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3541,7 +3541,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "hca.KB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "hca.KB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3556,7 +3556,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.PA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.PA(" + param0 + ')');
         }
     }
 
@@ -3572,7 +3572,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.PE(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.PE(" + param0 + ')');
         }
     }
 
@@ -3580,7 +3580,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         try {
           this.setHeldItem(param0, (byte) -103, 65536, -1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.GB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.GB(" + param0 + ')');
         }
     }
 
@@ -3599,7 +3599,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.FD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.FD(" + param0 + ')');
         }
     }
 
@@ -3716,8 +3716,8 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.y = this.room.getHeight(-121) - this.size / 2;
           }
           this.updateSortDepth((byte) 74);
-          this.field_t = za.clampValue(0, 36, 5, this.field_t);
-          this.field_h = za.clampValue(0, 89, 5, this.field_h);
+          this.field_t = GraphicsHeap.clampValue(0, 36, 5, this.field_t);
+          this.field_h = GraphicsHeap.clampValue(0, 89, 5, this.field_h);
           if (param2 == 0 &&
             param0 == 0) {
             this.field_Y = 5;
@@ -3735,7 +3735,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var6), "hca.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var6), "hca.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -3761,7 +3761,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_4_3 = 2;
           }
-          var5_int = za.clampValue(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3 + 2 * this.field_Y);
+          var5_int = GraphicsHeap.clampValue(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3 + 2 * this.field_Y);
           if (param1 <= 85) {
             this.pendingTimeFreeze = false;
           }
@@ -3773,14 +3773,14 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_11_3 = 0;
           }
-          var6 = za.clampValue(stackIn_10_0, stackIn_10_1, stackIn_10_2, stackIn_11_3 + 2 * this.field_Y);
-          this.velocityX = gqa.multiplyFixed(param0, (byte) 24, param2) / var5_int;
-          this.velocityY = gqa.multiplyFixed(param3, (byte) 24, param2) / var6;
+          var6 = GraphicsHeap.clampValue(stackIn_10_0, stackIn_10_1, stackIn_10_2, stackIn_11_3 + 2 * this.field_Y);
+          this.velocityX = ChatMessage.multiplyFixed(param0, (byte) 24, param2) / var5_int;
+          this.velocityY = ChatMessage.multiplyFixed(param3, (byte) 24, param2) / var6;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var5), "hca.FE(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var5), "hca.FE(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3817,7 +3817,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -3834,7 +3834,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.RA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.RA(" + param0 + ')');
         }
     }
 
@@ -3853,7 +3853,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.CD(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.CD(" + param0 + ')');
         }
     }
 
@@ -3872,7 +3872,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.OB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.OB(" + param0 + ')');
         }
     }
 
@@ -3900,7 +3900,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -3911,7 +3911,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.animationStateTicks = 119;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.HE(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.HE(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3968,7 +3968,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3987,7 +3987,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hca.SB(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hca.SB(" + param0 + ')');
         }
     }
 
@@ -4013,7 +4013,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           this.playerIndex = param0;
           this.respawn(-101, true);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.<init>(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hca.<init>(" + param0 + ')');
         }
     }
 

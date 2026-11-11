@@ -36,7 +36,7 @@ final class TreasureValuesOverlay extends MatchOverlay {
         var8 = var7 + 40;
         SecondaryNodeDequeIterator.a(192, var6, 3145728, this.field_n, (byte) 47, var7 - 16, this.field_m - this.field_n / 2);
         WhiteLightShooterComponent.a(-(this.field_n / 2) + this.field_m, (byte) -85, var7 - 16, 5242880, 2, var6, this.field_n);
-        MembersUpsellMenu.drawCentredTextWithShadow(wj.field_b, 16777215, kn.field_p, -1, var7 + 4, this.field_m, 0);
+        MembersUpsellMenu.drawCentredTextWithShadow(wj.field_b, 16777215, TooltipRenderer.field_p, -1, var7 + 4, this.field_m, 0);
         for (var9 = 0; var9 < this.field_g.players.length; var9++) {
           var10 = this.field_g.scoreStandings.order[var9];
           if (var10 != -1) {
@@ -46,9 +46,9 @@ final class TreasureValuesOverlay extends MatchOverlay {
               var11 = var4;
             }
             var12 = this.field_g.players[var10].getTotal(false);
-            var13 = this.field_g.players[var10].j(false);
+            var13 = this.field_g.players[var10].getRoundScore(false);
             var14 = var13 + var12;
-            MembersUpsellMenu.drawCentredTextWithShadow(rka.toOrdinal(1 + var9, 114) + "  " + this.field_i.getPlayerName(var10, false) + "  " + PrimMazeGenerator.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, kn.field_p, -1, var8 + var9 * var5, this.field_m, 0);
+            MembersUpsellMenu.drawCentredTextWithShadow(rka.toOrdinal(1 + var9, 114) + "  " + this.field_i.getPlayerName(var10, false) + "  " + PrimMazeGenerator.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, TooltipRenderer.field_p, -1, var8 + var9 * var5, this.field_m, 0);
           }
         }
     }
@@ -193,16 +193,16 @@ final class TreasureValuesOverlay extends MatchOverlay {
     }
 
     final static void addChatMessage(int param0, boolean param1, String param2, String param3, String param4, int param5) {
-        gqa var6 = null;
+        ChatMessage var6 = null;
         try {
           if (!param1) {
             String var7 = (String) null;
             TreasureValuesOverlay.addChatMessage(-67, true, (String) null, (String) null, (String) null, 15);
           }
-          var6 = new gqa(param5, param2, param0, param4, param3);
+          var6 = new ChatMessage(param5, param2, param0, param4, param3);
           DivisionMazeGenerator.appendChatHistory(16599, var6);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gu.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gu.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

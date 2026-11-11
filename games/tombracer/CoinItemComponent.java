@@ -29,10 +29,10 @@ final class CoinItemComponent extends ItemComponent {
           qpa.a(335, mna.field_a, 9, 40, 440, 126, 200);
           qpa.a(400, gca.field_f, 10, 40, 440, 124, 200);
           qpa.a(400, hd.field_b, 11, 40, 440, 125, 200);
-          param0.stringWidth(qf.field_l);
+          param0.stringWidth(FloatPacketBuffer.field_l);
           param0.stringWidth(DamageableBehaviour.field_x);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bla.SB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bla.SB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class CoinItemComponent extends ItemComponent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

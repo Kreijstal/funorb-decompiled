@@ -60,7 +60,7 @@ final class mp {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -128,7 +128,7 @@ final class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mp.E(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mp.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "mp.A(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "mp.A(" + param0 + ')');
         }
     }
 
@@ -214,8 +214,8 @@ final class mp {
           era.field_e.addChild(-128, MatchProtocol.field_i);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.field_J = new IntrusiveDeque();
-          ne.field_d = new ScrollPane(0L, var17, param3, param4);
-          MatchProtocol.field_i.addChild(-126, ne.field_d);
+          VertexStreamLayout.field_d = new ScrollPane(0L, var17, param3, param4);
+          MatchProtocol.field_i.addChild(-126, VertexStreamLayout.field_d);
           RotaterMountComponent.field_K = new UiComponent(0L, param1);
           MatchProtocol.field_i.addChild(-124, RotaterMountComponent.field_K);
           CharacterChoiceFactory.field_g = new UiComponent(0L, param5);
@@ -265,7 +265,7 @@ final class mp {
                 OpenGlSceneLight.field_p[var18].addChild(-125, PitModel.field_p[var18]);
                 OpenGlSceneLight.field_p[var18].invalidateLayoutRecursive(-10966);
                 era.field_e.addChild(-127, OpenGlSceneLight.field_p[var18]);
-                gka.field_g = gka.field_g + 1;
+                ConsoleHistoryEntry.field_g = ConsoleHistoryEntry.field_g + 1;
               }
               var18++;
               continue;
@@ -348,7 +348,7 @@ final class mp {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class mp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "mp.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "mp.B(" + param0 + ')');
         }
     }
 

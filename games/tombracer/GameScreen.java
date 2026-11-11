@@ -15,7 +15,7 @@ abstract class GameScreen {
         String var4Lifetime2;
         String var4Lifetime3;
         if (MenuEntry.field_h == 9) {
-          if (!SoundEventQueue.a(uba.field_f, 110, fp.field_d, tba.field_g, CoinItemComponent.field_I)) {
+          if (!SoundEventQueue.a(uba.field_f, 110, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g, CoinItemComponent.field_I)) {
             if (MenuEntry.field_h == 10) {
               if (var3 != 0) {
                 return false;
@@ -85,7 +85,7 @@ abstract class GameScreen {
             var3 != 0) {
             return false;
           }
-          return eca.a((byte) -121, uba.field_f, CoinItemComponent.field_I, fp.field_d, tba.field_g);
+          return eca.a((byte) -121, uba.field_f, CoinItemComponent.field_I, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g);
         }
         if (MenuEntry.field_h == 10) {
           if (var3 != 0) {
@@ -178,14 +178,14 @@ abstract class GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var5), "dfa.FC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var5), "dfa.FC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void releaseInput(byte param0) {
-        og.exitFullscreen(0);
-        if (null != nma.field_l) {
-          CharacterChoiceFactory.detachCanvasInput(nma.field_l, false);
+        HardwareOpenGlVertexBuffer.exitFullscreen(0);
+        if (null != CurveShape.field_l) {
+          CharacterChoiceFactory.detachCanvasInput(CurveShape.field_l, false);
         }
         ContextMenu.releaseKeyboardHandler((byte) 101);
         BeamSegment.releaseMouseHandler(5);
@@ -294,7 +294,7 @@ abstract class GameScreen {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 

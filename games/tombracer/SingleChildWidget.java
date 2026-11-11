@@ -7,7 +7,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
     UiWidget child;
     static GameFont field_v;
     static String[] sawDeathMessages;
-    static ft field_w;
+    static TextureFormat field_w;
 
     final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
@@ -48,7 +48,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -204,7 +204,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           pda.field_c = 2;
           LegacyTextureCache.field_a = 11;
           ToolkitSelector.field_a = 15;
-          wg.field_i = 2;
+          StatReportingScoringObserver.field_i = 2;
           mna.field_d = 4;
           var7 = DialogStack.loadBinaryFont((byte) 123, "largefont", param4, "lobby", param3);
           PenaltyNotice.field_f = DialogStack.loadBinaryFont((byte) 118, "generalfont", param4, "lobby", param3);
@@ -227,32 +227,32 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           var10.field_bb = 1;
           var11.field_z = 1;
           CharacterSelectPhase.field_s = new UiComponent(0L, var8);
-          CharacterSelectPhase.field_s.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "heading"), 126);
-          joa.field_d = new UiComponent(0L, (UiComponent) null);
-          joa.field_d.field_w = tba.createGradientPanelSprites(-74, false, 120, 8421504, 4210752, false);
+          CharacterSelectPhase.field_s.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "heading"), 126);
+          GzipInflater.field_d = new UiComponent(0L, (UiComponent) null);
+          GzipInflater.field_d.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-74, false, 120, 8421504, 4210752, false);
           NodeHashTable.field_g = new UiComponent(0L, (UiComponent) null);
           NodeHashTable.field_g.field_w = Player.createScrollbarSprites(114, 1, 3, 6316128, -111, 6316128);
           lw.field_a = new UiComponent(0L, (UiComponent) null);
-          lw.field_a.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "popup"), 113);
-          var12 = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "popup_mouseover"), 122);
+          lw.field_a.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "popup"), 113);
+          var12 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "popup_mouseover"), 122);
           var13 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button");
-          var14 = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_active"), 113);
+          var14 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_active"), 113);
           OpenGlTransform3D.field_f = new UiComponent(0L, var8);
           OpenGlTransform3D.field_f.field_w = var14;
           cga.field_g = new UiComponent(0L, (UiComponent) null);
           cga.field_g.field_R = MaskBlendOperator.loadSpriteByName(param4, "lobby", "closebutton", 125);
           cga.field_g.field_rb = MaskBlendOperator.loadSpriteByName(param4, "lobby", "closebutton_mouseover", -112);
           KeyLockBehaviour.field_r = new UiComponent(0L, var8);
-          KeyLockBehaviour.field_r.field_w = tba.createGradientPanelSprites(-67, true, 40, 3815994, 2039583, true);
+          KeyLockBehaviour.field_r.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-67, true, 40, 3815994, 2039583, true);
           ooa.field_f = new UiComponent(0L, var10);
           ooa.field_f.field_x = 2;
-          ooa.field_f.field_w = tba.createGradientPanelSprites(-75, false, 30, 3815994, 2039583, true);
+          ooa.field_f.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-75, false, 30, 3815994, 2039583, true);
           cs.field_a = new UiComponent(0L, var10);
           cs.field_a.field_x = 2;
-          cs.field_a.field_w = tba.createGradientPanelSprites(-116, false, 30, 3815994, 2039583, false);
+          cs.field_a.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-116, false, 30, 3815994, 2039583, false);
           SecondaryNodeDeque.field_b = new UiComponent(0L, var10);
           SecondaryNodeDeque.field_b.field_x = 2;
-          SecondaryNodeDeque.field_b.field_w = tba.createGradientPanelSprites(-104, true, 30, 3815994, 2039583, false);
+          SecondaryNodeDeque.field_b.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-104, true, 30, 3815994, 2039583, false);
           Corpse.field_i = new UiComponent(0L, (UiComponent) null);
           Corpse.field_i.field_ib = 13421772;
           Corpse.field_i.field_P = ToolkitSelector.field_a;
@@ -269,14 +269,14 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           var15.field_H = (BitmapFont) ((Object) var7);
           var15.field_P = ToolkitSelector.field_a;
           tka.field_q = new UiComponent(0L, Corpse.field_i);
-          tka.field_q.field_w = tba.createGradientPanelSprites(-103, param0, 16, 2236962, 2236962, false);
+          tka.field_q.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-103, param0, 16, 2236962, 2236962, false);
           tka.field_q.field_x = 2;
-          una.field_j = new UiComponent(0L, Corpse.field_i);
-          una.field_j.field_w = tba.createGradientPanelSprites(-73, false, 16, 1513239, 1513239, false);
-          una.field_j.field_x = 2;
-          iea.field_g = new UiComponent(0L, tka.field_q);
-          iea.field_g.applyStyle(false, PressureSwitchBehaviour.field_p);
-          S2CStartRoundPacket.field_a = new UiComponent(0L, una.field_j);
+          GpuDataType.field_j = new UiComponent(0L, Corpse.field_i);
+          GpuDataType.field_j.field_w = MonochromeRowCacheEntry.createGradientPanelSprites(-73, false, 16, 1513239, 1513239, false);
+          GpuDataType.field_j.field_x = 2;
+          ClipFrame.field_g = new UiComponent(0L, tka.field_q);
+          ClipFrame.field_g.applyStyle(false, PressureSwitchBehaviour.field_p);
+          S2CStartRoundPacket.field_a = new UiComponent(0L, GpuDataType.field_j);
           S2CStartRoundPacket.field_a.applyStyle(param0, PressureSwitchBehaviour.field_p);
           var16 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button_mouseover");
           SimpleBlockBehaviour.field_n = new ContextMenu(lw.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, ToolkitSelector.field_a);
@@ -293,20 +293,20 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           AllPlatformsMazeComponent.field_M.field_z = 1;
           Effect.field_a = new UiComponent(0L, PressureSwitchBehaviour.field_p);
           Effect.field_a.field_z = 1;
-          Effect.field_a.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_inactive"), 113);
-          Effect.field_a.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_mouseover"), 113);
+          Effect.field_a.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_inactive"), 113);
+          Effect.field_a.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_mouseover"), 113);
           Effect.field_a.field_n = var14;
           CachedArchiveSource.field_d = new UiComponent(0L, (UiComponent) null);
           CachedArchiveSource.field_d.field_w = Player.createScrollbarSprites(206, -1, 3, 1856141, -113, 1127256);
           CommonChooseReward.field_c = new UiComponent(0L, (UiComponent) null);
           CommonChooseReward.field_c.field_w = Player.createScrollbarSprites(290, -1, 3, 11579568, -120, 6052956);
-          hg.field_g = new UiComponent(0L, var15);
-          hg.field_g.field_W = 1;
-          hg.field_g.field_v = 1;
-          hg.field_g.field_fb = 1;
-          hg.field_g.field_ob = 1;
-          hg.field_g.field_z = 1;
-          OpenGlEnvironmentWaterEffect.field_i = new UiComponent(0L, hg.field_g);
+          HardwareModelVertexStream.field_g = new UiComponent(0L, var15);
+          HardwareModelVertexStream.field_g.field_W = 1;
+          HardwareModelVertexStream.field_g.field_v = 1;
+          HardwareModelVertexStream.field_g.field_fb = 1;
+          HardwareModelVertexStream.field_g.field_ob = 1;
+          HardwareModelVertexStream.field_g.field_z = 1;
+          OpenGlEnvironmentWaterEffect.field_i = new UiComponent(0L, HardwareModelVertexStream.field_g);
           jk.field_g = new UiComponent(0L, PressureSwitchBehaviour.field_p);
           jk.field_g.field_W = 1;
           jk.field_g.field_v = 1;
@@ -315,61 +315,61 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           jk.field_g.field_z = 1;
           ModelAnimator.field_g = new UiComponent(0L, jk.field_g);
           kv.field_b = new UiComponent(0L, jk.field_g);
-          ClipStack.field_g = new UiComponent(0L, hg.field_g);
+          ClipStack.field_g = new UiComponent(0L, HardwareModelVertexStream.field_g);
           HardwareSceneLight.field_o = new UiComponent(0L, jk.field_g);
           dn.field_a = new UiComponent(0L, jk.field_g);
-          qja.field_j = new UiComponent(0L, jk.field_g);
-          jk.field_g.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton"), 124);
-          jk.field_g.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton_mouseover"), 127);
-          dupTemp$0 = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton_active"), 114);
+          MazeSearchNode.field_j = new UiComponent(0L, jk.field_g);
+          jk.field_g.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton"), 124);
+          jk.field_g.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton_mouseover"), 127);
+          dupTemp$0 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton_active"), 114);
           jk.field_g.field_n = dupTemp$0;
           jk.field_g.field_db = dupTemp$0;
-          jk.field_g.field_M = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton_disabled"), 127);
-          OpenGlEnvironmentWaterEffect.field_i.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "mediumbutton"), 125);
-          OpenGlEnvironmentWaterEffect.field_i.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "mediumbutton_mouseover"), 115);
-          OpenGlEnvironmentWaterEffect.field_i.field_db = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "mediumbutton_mouseheld"), 114);
-          hg.field_g.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton"), 127);
-          hg.field_g.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton_mouseover"), 118);
-          hg.field_g.field_db = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton_mouseheld"), 122);
-          hg.field_g.field_M = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton_disabled"), 124);
-          ModelAnimator.field_g.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton"), 124);
-          ModelAnimator.field_g.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton_mouseover"), 116);
-          ModelAnimator.field_g.field_db = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton_mouseheld"), 123);
-          kv.field_b.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton"), 113);
-          kv.field_b.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton_mouseover"), 123);
-          kv.field_b.field_db = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton_mouseheld"), 116);
-          ClipStack.field_g.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton"), 125);
-          ClipStack.field_g.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_mouseover"), 117);
-          ClipStack.field_g.field_db = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_mouseheld"), 123);
-          ClipStack.field_g.field_M = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_disabled"), 116);
-          qja.field_j.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton"), 118);
-          qja.field_j.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton_mouseover"), 113);
-          dupTemp$1 = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton_active"), 118);
-          qja.field_j.field_n = dupTemp$1;
-          qja.field_j.field_db = dupTemp$1;
-          qja.field_j.field_M = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton_disabled"), 125);
-          HardwareSceneLight.field_o.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatbutton"), 116);
-          HardwareSceneLight.field_o.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatbutton_mouseover"), 119);
-          dupTemp$2 = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatbutton_active"), 119);
+          jk.field_g.field_M = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "smallbutton_disabled"), 127);
+          OpenGlEnvironmentWaterEffect.field_i.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "mediumbutton"), 125);
+          OpenGlEnvironmentWaterEffect.field_i.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "mediumbutton_mouseover"), 115);
+          OpenGlEnvironmentWaterEffect.field_i.field_db = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "mediumbutton_mouseheld"), 114);
+          HardwareModelVertexStream.field_g.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton"), 127);
+          HardwareModelVertexStream.field_g.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton_mouseover"), 118);
+          HardwareModelVertexStream.field_g.field_db = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton_mouseheld"), 122);
+          HardwareModelVertexStream.field_g.field_M = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "bigbutton_disabled"), 124);
+          ModelAnimator.field_g.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton"), 124);
+          ModelAnimator.field_g.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton_mouseover"), 116);
+          ModelAnimator.field_g.field_db = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "greenbutton_mouseheld"), 123);
+          kv.field_b.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton"), 113);
+          kv.field_b.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton_mouseover"), 123);
+          kv.field_b.field_db = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "redbutton_mouseheld"), 116);
+          ClipStack.field_g.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton"), 125);
+          ClipStack.field_g.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_mouseover"), 117);
+          ClipStack.field_g.field_db = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_mouseheld"), 123);
+          ClipStack.field_g.field_M = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "backbutton_disabled"), 116);
+          MazeSearchNode.field_j.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton"), 118);
+          MazeSearchNode.field_j.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton_mouseover"), 113);
+          dupTemp$1 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton_active"), 118);
+          MazeSearchNode.field_j.field_n = dupTemp$1;
+          MazeSearchNode.field_j.field_db = dupTemp$1;
+          MazeSearchNode.field_j.field_M = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "gameoptionbutton_disabled"), 125);
+          HardwareSceneLight.field_o.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatbutton"), 116);
+          HardwareSceneLight.field_o.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatbutton_mouseover"), 119);
+          dupTemp$2 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatbutton_active"), 119);
           HardwareSceneLight.field_o.field_n = dupTemp$2;
           HardwareSceneLight.field_o.field_db = dupTemp$2;
-          dn.field_a.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton"), 112);
-          dn.field_a.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
-          dupTemp$3 = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton_active"), 118);
+          dn.field_a.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton"), 112);
+          dn.field_a.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
+          dupTemp$3 = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "chatfilterbutton_active"), 118);
           dn.field_a.field_n = dupTemp$3;
           dn.field_a.field_db = dupTemp$3;
           var17 = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "checkbox");
-          FacePlayerMountComponent.field_F = new ta(0L, var17[1], var17[0], 1, PressureSwitchBehaviour.field_p, (String) null);
+          FacePlayerMountComponent.field_F = new LabelledRow(0L, var17[1], var17[0], 1, PressureSwitchBehaviour.field_p, (String) null);
           ClientException.field_b = new UiComponent(0L, (UiComponent) null);
           ClientException.field_b.field_w = ArrowShooterComponent.createCentreOnlyFrame((byte) -118, MaskBlendOperator.loadSpriteByName(param4, "lobby", "slideregion", 115));
           ClientException.field_b.field_C = ArrowShooterComponent.createCentreOnlyFrame((byte) -60, MaskBlendOperator.loadSpriteByName(param4, "lobby", "slideregion_mouseover", 75));
           ClientException.field_b.field_db = ArrowShooterComponent.createCentreOnlyFrame((byte) -118, MaskBlendOperator.loadSpriteByName(param4, "lobby", "slideregion_mouseheld", 123));
           ClientException.field_b.field_M = ArrowShooterComponent.createCentreOnlyFrame((byte) -87, MaskBlendOperator.loadSpriteByName(param4, "lobby", "slideregion_disabled", 106));
           DirectByteStorage.field_h = new UiComponent(0L, (UiComponent) null);
-          DirectByteStorage.field_h.field_w = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar"), 122);
-          DirectByteStorage.field_h.field_C = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_mouseover"), 121);
-          DirectByteStorage.field_h.field_db = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_mouseheld"), 113);
-          DirectByteStorage.field_h.field_M = rfa.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_disabled"), 116);
+          DirectByteStorage.field_h.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar"), 122);
+          DirectByteStorage.field_h.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_mouseover"), 121);
+          DirectByteStorage.field_h.field_db = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_mouseheld"), 113);
+          DirectByteStorage.field_h.field_M = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "dragbar_disabled"), 116);
           HiscoresScreen.field_s = new UiComponent(0L, (UiComponent) null);
           HiscoresScreen.field_s.field_R = MaskBlendOperator.loadSpriteByName(param4, "lobby", "upbutton", -121);
           HiscoresScreen.field_s.field_rb = MaskBlendOperator.loadSpriteByName(param4, "lobby", "upbutton_mouseover", -87);
@@ -381,7 +381,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           BufferedSocket.field_b.field_U = MaskBlendOperator.loadSpriteByName(param4, "lobby", "downbutton_mouseheld", 56);
           BufferedSocket.field_b.field_B = MaskBlendOperator.loadSpriteByName(param4, "lobby", "downbutton_disabled", 113);
           DateFieldsWidget.field_F = new VerticalScrollbar(0L, HiscoresScreen.field_s, BufferedSocket.field_b, ClientException.field_b, DirectByteStorage.field_h);
-          aaa.field_d = new hla(0L, (UiComponent) null, rfa.field_C, DateFieldsWidget.field_F, jk.field_g, (String) null, (String) null);
+          LegacyOpenGlWaterTextures.field_d = new hla(0L, (UiComponent) null, TombRacerShell.field_C, DateFieldsWidget.field_F, jk.field_g, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -411,7 +411,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -438,7 +438,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -470,7 +470,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
 
     final static void d(int param0) {
         if (param0 != -7694) {
-          field_w = (ft) null;
+          field_w = (TextureFormat) null;
         }
         rma.a(true, BridgeTile.field_g, ConstraintLocomotor.field_p, (byte) 119);
         S2CProfileUpdatePacket.field_d = true;
@@ -508,7 +508,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -535,7 +535,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -596,7 +596,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -633,7 +633,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -681,7 +681,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -712,7 +712,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -745,6 +745,6 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
 
     static {
         sawDeathMessages = new String[]{"<%0> was sliced", "<%0> was diced", "<%0> was chopped", "<%0> was buzzed by a saw", "<%0> was hacked by a saw", "<%0> didn't see the saw", "<%0> was cut down to size", "<%0> failed the first trial"};
-        field_w = new ft(1);
+        field_w = new TextureFormat(1);
     }
 }

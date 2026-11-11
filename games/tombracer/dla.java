@@ -215,7 +215,7 @@ final class dla {
                   } else {
                     var14Lifetime1 = this.field_n[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_m[var11Lifetime1][var14Lifetime1] = var17.readInt(kha.bitwiseXor(param0, 23927));
+                  this.field_m[var11Lifetime1][var14Lifetime1] = var17.readInt(TextLine.bitwiseXor(param0, 23927));
                 }
                 this.field_e[var11Lifetime1] = new IntIntHashTable(this.field_m[var11Lifetime1]);
               }
@@ -234,7 +234,7 @@ final class dla {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
         }
     }
 
@@ -328,7 +328,7 @@ final class dla {
           }
           this.decodeIndex(-23918, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "dla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

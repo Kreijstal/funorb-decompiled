@@ -12,7 +12,7 @@ final class bna extends IntrusiveNode {
             bna.a((byte) 109);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bna.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bna.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,12 +54,12 @@ final class bna extends IntrusiveNode {
             }
             var1_ref = (LobbyGameWidget) (AffineTransform3D.field_j.next(120));
           }
-          var1Lifetime1 = (pha) (qha.field_g.first(param0 ^ -70));
+          var1Lifetime1 = (pha) (DemoCourseGenerator.field_g.first(param0 ^ -70));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_xb > 0) {
               var1Lifetime1.field_xb = var1Lifetime1.field_xb - 1;
               if (var1Lifetime1.field_xb != 0) {
-                var1Lifetime1 = (pha) (qha.field_g.next(param0 + 101));
+                var1Lifetime1 = (pha) (DemoCourseGenerator.field_g.next(param0 + 101));
                 continue;
               }
               var1Lifetime1.field_Lb = 0;
@@ -67,13 +67,13 @@ final class bna extends IntrusiveNode {
                 var1Lifetime1.unlink(72);
               }
             }
-            var1Lifetime1 = (pha) (qha.field_g.next(param0 + 101));
+            var1Lifetime1 = (pha) (DemoCourseGenerator.field_g.next(param0 + 101));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1_ref2), "bna.A(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1_ref2), "bna.A(" + param0 + ')');
         }
     }
 

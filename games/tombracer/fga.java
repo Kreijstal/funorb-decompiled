@@ -10,7 +10,7 @@ final class fga implements ShellListener {
     private int[] field_d;
     private int[] field_b;
 
-    private final void d(int param0) {
+    private final void sendClosed(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -22,11 +22,11 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "fga.G(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "fga.G(" + param0 + ')');
         }
     }
 
-    private final boolean a(byte param0, int param1) {
+    private final boolean isRoomAvailable(byte param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
@@ -38,7 +38,7 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "fga.I(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "fga.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class fga implements ShellListener {
                     var4 = LoadLevelCommand.getMainRoomKey(var3_int, (byte) 56);
                     stackIn_32_1 = 74;
                     stackIn_33_2 = !(ComponentTargetList.field_e.get(var4));
-                    this.a((byte) stackIn_32_1, stackIn_33_2, var4);
+                    this.sendLevelSelection((byte) stackIn_32_1, stackIn_33_2, var4);
                   }
                   var3_int++;
                   continue;
@@ -95,7 +95,7 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3_ref), "fga.D(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3_ref), "fga.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -112,11 +112,11 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "fga.A(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "fga.A(" + param0 + ')');
         }
     }
 
-    private final void a(byte param0, boolean param1, int param2) {
+    private final void sendLevelSelection(byte param0, boolean param1, int param2) {
         int var4_int = 0;
         BitPacketBuffer stackIn_3_0 = null;
         int stackIn_4_1 = 0;
@@ -133,12 +133,12 @@ final class fga implements ShellListener {
           }
           ((BitPacketBuffer) (Object) stackIn_3_0).writeByte(stackIn_4_1, 0);
           var4_int = -5 % ((param0 + 45) / 58);
-          this.d(32415);
+          this.sendClosed(32415);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "fga.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "fga.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class fga implements ShellListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class fga implements ShellListener {
             var5Lifetime1 = 0;
             while (true) {
               if (var5Lifetime1 >= var2_int) {
-                var5Lifetime1 = una.a(ComponentTargetList.field_e, 20297);
+                var5Lifetime1 = GpuDataType.a(ComponentTargetList.field_e, 20297);
                 stackIn_61_0 = 0;
                 break;
               }
@@ -257,13 +257,13 @@ final class fga implements ShellListener {
               if (var10 == 0) {
                 if (stackIn_61_0 == 0) {
                   if (var5Lifetime1 < var4Lifetime1 &&
-                    !this.a((byte) -122, var6_intLifetime1)) {
+                    !this.isRoomAvailable((byte) -122, var6_intLifetime1)) {
                     var8 = -7829453;
-                  } else if (this.a((byte) -120, var6_intLifetime1)) {
+                  } else if (this.isRoomAvailable((byte) -120, var6_intLifetime1)) {
                     var8 = -2004318072;
                   }
                 } else {
-                  stackIn_47_0 = (!this.a((byte) -121, var6_intLifetime1)) ? -13391309 : -2013231104;
+                  stackIn_47_0 = (!this.isRoomAvailable((byte) -121, var6_intLifetime1)) ? -13391309 : -2013231104;
                   var8 = stackIn_47_0;
                 }
                 var3.fillRectangleAlpha(var8, this.field_d[var5Lifetime1], 40, this.field_b[var5Lifetime1], -22971, 30);
@@ -273,21 +273,21 @@ final class fga implements ShellListener {
                   var9 = Integer.toString(var6_intLifetime1);
                 }
                 if (var9 != null) {
-                  MembersUpsellMenu.drawCentredTextWithShadow((String) (var9), 16777215, kn.field_p, -1, this.field_b[var5Lifetime1] + 15, 20 + this.field_d[var5Lifetime1], 0);
+                  MembersUpsellMenu.drawCentredTextWithShadow((String) (var9), 16777215, TooltipRenderer.field_p, -1, this.field_b[var5Lifetime1] + 15, 20 + this.field_d[var5Lifetime1], 0);
                 }
                 var9Lifetime1 = null;
                 if (AnimatedLight.findRoomDefinition(false, var6_intLifetime1).field_d) {
                   var9Lifetime1 = "M";
                 }
                 if (null != var9Lifetime1) {
-                  MembersUpsellMenu.drawCentredTextWithShadow((String) (var9Lifetime1), 16777215, kn.field_p, -1, 26 + this.field_b[var5Lifetime1], this.field_d[var5Lifetime1] + 20, 0);
+                  MembersUpsellMenu.drawCentredTextWithShadow((String) (var9Lifetime1), 16777215, TooltipRenderer.field_p, -1, 26 + this.field_b[var5Lifetime1], this.field_d[var5Lifetime1] + 20, 0);
                 }
                 var5Lifetime1++;
                 continue;
               }
               break;
             }
-            RoomEffectTraps.a(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + RandomAccessFileHandle.getConnectorRoomCount(param0 + 86), 10, kn.field_p, 16777215);
+            RoomEffectTraps.drawLeftTextWithShadow(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + RandomAccessFileHandle.getConnectorRoomCount(param0 + 86), 10, TooltipRenderer.field_p, 16777215);
             try {
               var3.presentFrame(param0 - 1);
             } catch (qva decompiledCaughtParameter0) {
@@ -299,7 +299,7 @@ final class fga implements ShellListener {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw tba.wrapException((Throwable) ((Object) var2), "fga.B(" + param0 + ')');
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "fga.B(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -308,7 +308,7 @@ final class fga implements ShellListener {
         }
     }
 
-    final void c(int param0) {
+    final void close(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -320,12 +320,12 @@ final class fga implements ShellListener {
           }
           this.field_c = true;
           this.field_d = null;
-          this.d(32415);
+          this.sendClosed(32415);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "fga.F(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "fga.F(" + param0 + ')');
         }
     }
 
@@ -366,7 +366,7 @@ final class fga implements ShellListener {
                 if (stackIn_45_0 < 10) {
                   var6 = LoadLevelCommand.getMainRoomKey(var5, (byte) 125);
                   if (AnimatedLight.findRoomDefinition(false, var6).field_d) {
-                    this.a((byte) 110, true, var5);
+                    this.sendLevelSelection((byte) 110, true, var5);
                     var4_int++;
                   }
                   var5++;
@@ -384,7 +384,7 @@ final class fga implements ShellListener {
               var4_int = 0;
               break;
             }
-            this.a((byte) -128, false, var4_int);
+            this.sendLevelSelection((byte) -128, false, var4_int);
             var4_int++;
           } while (var7 == 0);
           var5Lifetime1 = 0;
@@ -398,7 +398,7 @@ final class fga implements ShellListener {
                 var6Lifetime1 = LoadLevelCommand.getMainRoomKey(var5Lifetime1, (byte) 111);
                 if (!AnimatedLight.findRoomDefinition(false, var6Lifetime1).field_d ||
                   var7 != 0) {
-                  this.a((byte) 46, true, var5Lifetime1);
+                  this.sendLevelSelection((byte) 46, true, var5Lifetime1);
                   var4_int++;
                 }
                 var5Lifetime1++;
@@ -412,7 +412,7 @@ final class fga implements ShellListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "fga.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "fga.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -421,7 +421,7 @@ final class fga implements ShellListener {
           int var1_int = 78 / ((63 - param0) / 40);
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fga.J(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fga.J(" + param0 + ')');
         }
     }
 

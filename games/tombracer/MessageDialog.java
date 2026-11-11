@@ -39,7 +39,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -70,22 +70,22 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void f(boolean param0) {
-        sr var2 = null;
-        sr var2Lifetime1;
+        MessagePage var2 = null;
+        MessagePage var2Lifetime1;
         this.field_cb.setColors(param0, 4210752, 2121792);
         if (param0) {
-          var2 = new sr(this, this.field_ab, fua.field_e);
+          var2 = new MessagePage(this, this.field_ab, fua.field_e);
           var2.addAction(GameAssetLoader.field_i, 15, -127);
           this.transitionToContent(101, var2);
           return;
         }
         this.field_Y = false;
-        var2Lifetime1 = new sr(this, this.field_ab, fua.field_e);
+        var2Lifetime1 = new MessagePage(this, this.field_ab, fua.field_e);
         var2Lifetime1.addAction(GameAssetLoader.field_i, 15, -127);
         this.transitionToContent(101, var2Lifetime1);
     }
@@ -93,8 +93,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
     final static void j(byte param0) {
         if (ej.field_a != null) {
           ej.field_a.pruneHiddenDialogs(-1);
-          if (null != ena.field_p) {
-            ena.field_p.f(12936);
+          if (null != AnimationFrameSet.field_p) {
+            AnimationFrameSet.field_p.f(12936);
           }
           if (param0 < -97) {
             jr.b((byte) -106);
@@ -102,8 +102,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           }
           return;
         }
-        if (null != ena.field_p) {
-          ena.field_p.f(12936);
+        if (null != AnimationFrameSet.field_p) {
+          AnimationFrameSet.field_p.f(12936);
         }
         if (param0 < -97) {
           jr.b((byte) -106);
@@ -130,7 +130,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
     }
 
     MessageDialog(DialogStack param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new sr((MessageDialog) null, param1, param2), 77, 10, 10);
+        super(param0, new MessagePage((MessageDialog) null, param1, param2), 77, 10, 10);
         try {
           this.field_ab = param1;
           this.field_bb = param4 ? true : false;
@@ -141,23 +141,23 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           this.field_cb.field_D = true;
           this.addChild(this.field_cb, -1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ij.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void showResultMessage(int param0, byte param1, String param2) {
         boolean stackIn_9_1 = false;
-        sr stackIn_13_0 = null;
+        MessagePage stackIn_13_0 = null;
         String stackIn_14_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sr var4 = null;
+        MessagePage var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         UiWidget var6 = null;
-        sr var7 = null;
+        MessagePage var7 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.field_W) {
@@ -171,7 +171,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           stackIn_9_1 = (param0 == 256);
           this.field_Y = stackIn_9_1;
           this.field_cb.setColors(true, 4210752, 8405024);
-          var7 = new sr(this, this.field_ab, param2);
+          var7 = new MessagePage(this, this.field_ab, param2);
           var4 = var7;
           if (param0 == 5) {
             var7.addAction(InvertOperator.field_n, 11, 61);
@@ -186,7 +186,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
               } else {
                 stackIn_14_1 = KeyLockBehaviour.field_o;
               }
-              ((sr) (Object) stackIn_13_0).addAction(stackIn_14_1, -1, 78);
+              ((MessagePage) (Object) stackIn_13_0).addAction(stackIn_14_1, -1, 78);
             }
           }
           if (3 == param0) {
@@ -218,7 +218,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 

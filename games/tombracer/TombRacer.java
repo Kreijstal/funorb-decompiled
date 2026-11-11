@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class TombRacer extends rfa implements ls {
+public final class TombRacer extends TombRacerShell implements ls {
     static String field_F;
     private int field_E;
     private MatchOverlayQueue field_H;
@@ -76,7 +76,7 @@ public final class TombRacer extends rfa implements ls {
             return true;
           }
         }
-        if (iqa.field_c.a(param2, param0 ^ 71, param1)) {
+        if (ToolkitInstance.field_c.handleKey(param2, param0 ^ 71, param1)) {
           return true;
         }
         if (this.field_D != null) {
@@ -134,7 +134,7 @@ public final class TombRacer extends rfa implements ls {
                 var4_int = stackIn_19_0;
                 if (var4_int != 0) {
                   wm.field_a.draw((byte) -28, false);
-                  tga.field_a.SA(0, 0, aaa.a(false), SwitchLinkList.b(param2 ^ 17), SoftwareRasterizer.pixels, 0, aaa.a(false));
+                  tga.field_a.SA(0, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), SwitchLinkList.getCanvasHeight(param2 ^ 17), SoftwareRasterizer.pixels, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false));
                 }
               }
             }
@@ -150,8 +150,8 @@ public final class TombRacer extends rfa implements ls {
             }
           }
           if (param0) {
-            iqa.field_c.drawMessages(true);
-            if (iqa.field_c.isPanelActive(-8832)) {
+            ToolkitInstance.field_c.drawMessages(true);
+            if (ToolkitInstance.field_c.isPanelActive(-8832)) {
               SoftwareRasterizer.clear();
               stackIn_33_0 = ((this.field_E & 8) == 0);
               SpawnerBehaviour.a(stackIn_33_0, 0);
@@ -165,16 +165,16 @@ public final class TombRacer extends rfa implements ls {
           if (param2 != 17) {
             field_F = (String) null;
           }
-          if (SnakePitTile.a(false)) {
+          if (SnakePitTile.hasVisibleDialog(false)) {
             var4_intLifetime1 = 1;
             IntQueue.a((byte) 126);
           }
           if (PlayPhase.beginReconnectGracePeriod(param2 ^ 110) &&
-            !SnakePitTile.a(false)) {
-            tga.field_a.fillRectangleAlpha(-1073741824, 0, aaa.a(false), 0, param2 ^ -22956, SwitchLinkList.b(0));
-            var5_ref_ssa = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
-            var5_ref_ssa.pushIntersectClip(aaa.a(false) + mp.maxDialogWidth((byte) -112) >> 1, SwitchLinkList.b(0) - MatchPhase.a(96) >> 1, (byte) -12, SwitchLinkList.b(0) + MatchPhase.a(96) >> 1, aaa.a(false) - mp.maxDialogWidth((byte) -125) >> 1);
-            if (dq.field_f == null) {
+            !SnakePitTile.hasVisibleDialog(false)) {
+            tga.field_a.fillRectangleAlpha(-1073741824, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), 0, param2 ^ -22956, SwitchLinkList.getCanvasHeight(0));
+            var5_ref_ssa = IntrusiveDequeCursor.getClipStack((byte) 65, tga.field_a);
+            var5_ref_ssa.pushIntersectClip(LegacyOpenGlWaterTextures.getCanvasWidth(false) + mp.maxDialogWidth((byte) -112) >> 1, SwitchLinkList.getCanvasHeight(0) - MatchPhase.maxDialogHeight(96) >> 1, (byte) -12, SwitchLinkList.getCanvasHeight(0) + MatchPhase.maxDialogHeight(96) >> 1, LegacyOpenGlWaterTextures.getCanvasWidth(false) - mp.maxDialogWidth((byte) -125) >> 1);
+            if (ColourRowCacheEntry.field_f == null) {
               stackIn_47_0 = VortexBehaviour.field_n;
             } else {
               stackIn_47_0 = true;
@@ -184,15 +184,15 @@ public final class TombRacer extends rfa implements ls {
             var5_ref_ssa.popClip(param2 + 84);
           }
           if (var4_intLifetime1 != 0) {
-            if (!SnakePitTile.a(false)) {
+            if (!SnakePitTile.hasVisibleDialog(false)) {
               tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             } else {
-              tga.field_a.fillRectangleAlpha(-1073741824, 0, aaa.a(false), 0, -22971, SwitchLinkList.b(0));
+              tga.field_a.fillRectangleAlpha(-1073741824, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), 0, -22971, SwitchLinkList.getCanvasHeight(0));
               var5 = ComponentTargetList.a(false);
               var6 = PlantComponent.A(-1);
               var7 = PillarComponent.A(param2 - 7128);
               var8 = rs.a((byte) 124);
-              var9 = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
+              var9 = IntrusiveDequeCursor.getClipStack((byte) 65, tga.field_a);
               var9.pushIntersectClip(var5 + var7, var6, (byte) -12, var6 + var8, var5);
               tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
               var9.popClip(99);
@@ -212,7 +212,7 @@ public final class TombRacer extends rfa implements ls {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ public final class TombRacer extends rfa implements ls {
         cq.releaseStatics(-90);
         GameKeyHandler.releaseStatics(127);
         pba.releaseStatics(4096);
-        IntrusiveDeque.b((byte) 91);
+        IntrusiveDeque.releaseStatics((byte) 91);
         SoftwareRasterizer.releaseStatics();
         Transform3D.releaseStatics(27316);
         ClipStack.releaseStatics(-98);
@@ -244,18 +244,18 @@ public final class TombRacer extends rfa implements ls {
         PlayerProfile.releaseStatics(param0 ^ -3638);
         UnlockEntry.releaseStatics((byte) 9);
         fw.releaseStatics(0);
-        qha.releaseStatics((byte) -122);
+        DemoCourseGenerator.releaseStatics((byte) -122);
         CourseGenerator.releaseStatics(113);
         rm.releaseStatics(param0 + 12213);
         kla.releaseStatics(param0 ^ 11134);
-        id.releaseStatics(param0 ^ -3666);
+        SinglePlayerCourseGenerator.releaseStatics(param0 ^ -3666);
         MatchProtocol.releaseStatics(param0 ^ -3666);
         S2CProfileUpdatePacket.releaseStatics(200);
         S2CPlayerProfilePacket.releaseStatics((byte) 63);
         eca.releaseStatics(30152);
         IsaacCipher.releaseStatics(-3);
         rc.releaseStatics(true);
-        rfa.releaseStatics(125);
+        TombRacerShell.releaseStatics(125);
         AppletGameShell.releaseStatics(param0 ^ 3665);
         ClientException.releaseStatics(false);
         GameApplet.releaseAppletResources((byte) -88);
@@ -268,25 +268,25 @@ public final class TombRacer extends rfa implements ls {
         oi.releaseStatics(false);
         sj.releaseStatics(true);
         msa.releaseStatics(param0 ^ -3666);
-        gqa.releaseStatics(95);
+        ChatMessage.releaseStatics(95);
         qd.releaseStatics(22442);
         GameClock.releaseStatics(-59);
         RasterBuffer.releaseStatics(true);
-        ina.releaseStatics(53);
-        via.releaseStatics(64);
+        LoadingStepList.releaseStatics(53);
+        FullscreenCanvas.releaseStatics(64);
         ViewportManager.releaseStatics(param0 ^ -27015);
         tia.releaseStatics((byte) -125);
         GameScreen.releaseStatics((byte) -104);
         ala.releaseStatics(0);
         MatchScreen.releaseStatics(false);
-        FunOrbConsole.f(39);
+        FunOrbConsole.releaseConsoleStatics(39);
         ej.releaseStatics(-1);
         uaa.releaseStatics(5193);
         iaa.releaseStatics(-124);
         nb.releaseStatics((byte) -95);
         eu.releaseStatics(114);
         vn.releaseStatics((byte) 0);
-        no.b(true);
+        no.releaseStatics(true);
         GameAssetLoader.releaseStatics((byte) -35);
         kk.releaseStatics((byte) 120);
         HuffmanCodec.releaseStatics(param0 ^ 1916);
@@ -326,14 +326,14 @@ public final class TombRacer extends rfa implements ls {
         IntrusiveNode.releaseStatics(param0 ^ -3621);
         hw.releaseStatics(-75);
         fr.releaseStatics((byte) 1);
-        ta.releaseStatics((byte) -17);
+        LabelledRow.releaseStatics((byte) -17);
         VerticalScrollbar.releaseStatics(false);
         um.releaseStatics((byte) 18);
         UiComponent.releaseStatics((byte) -107);
         ContextMenu.releaseStatics((byte) -39);
         hla.releaseStatics(23613);
         PlayerContextMenu.releaseStatics((byte) 67);
-        ReportAbuseDialog.a(true);
+        ReportAbuseDialog.releaseStatics(true);
         pha.releaseStatics((byte) -68);
         LobbyGameWidget.releaseStatics((byte) -113);
         SecondaryNodeHashTable.releaseStatics(123);
@@ -348,13 +348,13 @@ public final class TombRacer extends rfa implements ls {
         pra.releaseStatics(param0 + 3548);
         tea.releaseStatics((byte) -124);
         ida.releaseStatics((byte) 122);
-        tv.releaseStatics(119);
-        bv.releaseStatics(0);
+        ContextMenuRow.releaseStatics(119);
+        TabbedPanel.releaseStatics(0);
         is.releaseStatics(2);
         AudioOutput.releaseStatics();
         MidiPcmStream.releaseStatics(0);
         qt.releaseStatics(-25809);
-        iqa.releaseStatics(126);
+        ToolkitInstance.releaseStatics(126);
         fga.releaseStatics((byte) -29);
         ck.releaseStatics(false);
         ModelFactory.releaseStatics((byte) 91);
@@ -371,25 +371,25 @@ public final class TombRacer extends rfa implements ls {
         ModelAnimator.releaseStatics((byte) 97);
         uma.releaseStatics(-1);
         hu.releaseStatics((byte) 119);
-        za.releaseStatics((byte) 86);
+        GraphicsHeap.releaseStatics((byte) 86);
         FontMetrics.releaseStatics(-63);
         ModelData.releaseStatics((byte) -71);
         ToolkitModel.releaseStatics(-11);
         SceneLight.releaseStatics(false);
         SecondaryLinkQueue.releaseStatics(param0 + 3556);
         ConsoleWindow.releaseStatics(0);
-        gka.releaseStatics((byte) -124);
+        ConsoleHistoryEntry.releaseStatics((byte) -124);
         lh.releaseStatics((byte) 117);
         EditableTextField.releaseStatics(-53);
         ara.releaseStatics(false);
         wj.releaseStatics((byte) 41);
         DialogStack.releaseStatics(false);
         gga.releaseStatics(param0 + 3666);
-        kn.releaseStatics(-3);
+        TooltipRenderer.releaseStatics(-3);
         dsa.releaseStatics((byte) -126);
         fb.releaseStatics(true);
         rua.releaseStatics(false);
-        vs.releaseStatics((byte) -77);
+        ProgressDialog.releaseStatics((byte) -77);
         mpa.releaseStatics(param0 ^ -3666);
         MessageDialog.releaseStatics(7707);
         AccountRegistrationPanel.releaseStatics(0);
@@ -414,22 +414,22 @@ public final class TombRacer extends rfa implements ls {
         DisplaySettingsDialog.releaseStatics((byte) -102);
         dh.releaseStatics((byte) -6);
         bw.releaseStatics(115);
-        ofa.releaseStatics(0);
+        ResizingDialog.releaseStatics(0);
         DropdownList.releaseStatics(true);
         GridWidgetContainer.releaseStatics((byte) -124);
         WidgetContainer.releaseStatics((byte) 122);
         ArrayWidgetGroup.releaseStatics(0);
-        joa.a(false);
+        GzipInflater.releaseStatics(false);
         ArchiveSource.releaseStatics(115);
         sb.releaseStatics(0);
         qba.releaseStatics(false);
         li.releaseStatics(3);
-        ch.releaseStatics((byte) -35);
-        rta.releaseStatics(-89);
+        AudioOutputThread.releaseStatics((byte) -35);
+        MidiVoice.releaseStatics(-89);
         MidiFileReader.releaseStatics();
         sv.releaseStatics(-48);
         DropAnimation.releaseStatics(true);
-        jn.releaseStatics(param0 ^ -3610);
+        InstructionsScreen.releaseStatics(param0 ^ -3610);
         HiscoresScreen.releaseStatics(true);
         ai.releaseStatics((byte) 41);
         epa.releaseStatics(2);
@@ -461,7 +461,7 @@ public final class TombRacer extends rfa implements ls {
         Puddle.releaseStatics((byte) 87);
         SequencePlayer.releaseStatics(-63);
         AnimationSequence.releaseStatics((byte) 104);
-        ena.releaseStatics(true);
+        AnimationFrameSet.releaseStatics(true);
         IntNode.releaseStatics((byte) 66);
         C2SActionPacket.releaseStatics(0);
         S2CEventPacket.releaseStatics(param0 ^ -3922);
@@ -486,7 +486,7 @@ public final class TombRacer extends rfa implements ls {
         cea.releaseStatics(-118);
         QuickChatMenu.releaseStatics(58);
         nc.releaseStatics(122);
-        tr.releaseStatics((byte) -125);
+        QuickChatPhraseSource.releaseStatics((byte) -125);
         wt.releaseStatics(112);
         apa.releaseStatics((byte) 7);
         wp.releaseStatics((byte) 97);
@@ -506,7 +506,7 @@ public final class TombRacer extends rfa implements ls {
         IntIntHashTable.releaseStatics(-1);
         ByteStorage.releaseStatics(72);
         Bzip2Decompressor.releaseStatics();
-        aj.releaseStatics(-11061);
+        ReflectionCheck.releaseStatics(-11061);
         SpriteState.releaseStatics(0);
         VorbisFloor1.releaseStatics();
         aqa.releaseStatics((byte) -59);
@@ -527,7 +527,7 @@ public final class TombRacer extends rfa implements ls {
         GameEvent.releaseStatics(param0 ^ -3601);
         AnimatedLight.releaseStatics((byte) -113);
         TileGridCell.releaseStatics(param0 + 3674);
-        baa.a(param0 + 3786);
+        baa.releaseStatics(param0 + 3786);
         LightSource.releaseStatics(0);
         RenderLayer.releaseStatics(-55);
         CharacterSelectPhase.releaseStatics(115);
@@ -559,7 +559,7 @@ public final class TombRacer extends rfa implements ls {
         aa.releaseStatics(true);
         PerlinNoise2D.releaseStatics((byte) -123);
         TileRenderable.releaseStatics(param0 + 3747);
-        wg.releaseStatics(true);
+        StatReportingScoringObserver.releaseStatics(true);
         Behaviour.releaseStatics(18416);
         Locomotor.releaseStatics(param0 + 15738);
         VariantMask.releaseStatics(3);
@@ -572,7 +572,7 @@ public final class TombRacer extends rfa implements ls {
         WindZoneBehaviour.releaseStatics((byte) 91);
         ComponentMount.releaseStatics((byte) -111);
         tg.releaseStatics((byte) 23);
-        tn.releaseStatics((byte) 94);
+        MidiPatch.releaseStatics((byte) 94);
         bq.releaseStatics((byte) 25);
         TextureMetadata.releaseStatics((byte) 101);
         TestModel.releaseStatics(-30362);
@@ -606,8 +606,8 @@ public final class TombRacer extends rfa implements ls {
         TouchSwitchBehaviour.releaseStatics(15);
         PressureSwitchBehaviour.releaseStatics(1);
         TripBeamBehaviour.releaseStatics(-127);
-        nk.releaseStatics(20);
-        rq.releaseStatics();
+        AnimationFrameBase.releaseStatics(20);
+        AnimationFrame.releaseStatics();
         BlockComponent.releaseStatics(118);
         PrefabComponent.releaseStatics(0);
         DamageableBehaviour.releaseStatics(-1);
@@ -686,7 +686,7 @@ public final class TombRacer extends rfa implements ls {
         esa.releaseStatics((byte) 102);
         TextureOperator.releaseStatics((byte) -79);
         CanvasImageBuffer.releaseStatics((byte) 97);
-        bf.releaseStatics(true);
+        SoftwareRenderTarget.releaseStatics(true);
         SoftwareTransform3D.releaseStatics(110);
         SoftwareRenderContext.releaseStatics(122);
         OpenGlToolkit.releaseStatics(7312);
@@ -700,25 +700,25 @@ public final class TombRacer extends rfa implements ls {
         LegacyOpenGlTexture.releaseStatics(1956);
         LegacyOpenGlTexture2D.releaseStatics(-1);
         OpenGlModel.releaseStatics(0);
-        tj.releaseStatics(360);
-        qf.releaseStatics((byte) -93);
+        VertexArrayPointer.releaseStatics(360);
+        FloatPacketBuffer.releaseStatics((byte) -93);
         LegacyOpenGlCubeTexture.releaseStatics(34067);
         HardwareGraphicsToolkit.releaseStatics((byte) 3);
-        gj.releaseStatics(-119);
-        una.releaseStatics(true);
-        hk.releaseStatics(param0 + 3674);
+        VertexAttribute.releaseStatics(-119);
+        GpuDataType.releaseStatics(true);
+        HardwareWaterTextures.releaseStatics(param0 + 3674);
         AffineTransform3D.releaseStatics(14);
-        ura.releaseStatics(false);
+        TextureTransformMode.releaseStatics(false);
         HardwareTextureCache.releaseStatics(false);
         ShaderEffect.releaseStatics((byte) 101);
         ld.releaseStatics((byte) -126);
         mna.releaseStatics(false);
         HardwareModel.g(3);
-        ft.releaseStatics((byte) 102);
-        fp.releaseStatics(29325);
+        TextureFormat.releaseStatics((byte) 102);
+        TextureCombineSource.releaseStatics(29325);
         dn.releaseStatics(0);
-        ne.releaseStatics(15);
-        iw.releaseStatics(false);
+        VertexStreamLayout.releaseStatics(15);
+        PrimitiveType.releaseStatics(false);
         HardwareOpenGlToolkit.releaseStatics(32885);
         GrowableIntList.releaseStatics(0);
         CachedTextLayout.releaseStatics(false);
@@ -733,9 +733,9 @@ public final class TombRacer extends rfa implements ls {
         iha.releaseStatics();
         IterableNodeHashTable.releaseStatics(33);
         SecondaryNodeDeque.releaseStatics(param0 + 11858);
-        pb.releaseStatics((byte) 98);
+        CacheEntry.releaseStatics((byte) 98);
         DirectByteStorage.releaseStatics(-13170);
-        tja.releaseStatics(false);
+        HardCacheEntry.releaseStatics(false);
         ProxySocketConnector.releaseStatics((byte) 90);
         DateInputWidget.releaseStatics((byte) 77);
         ColourRowCache.releaseStatics(-116);
@@ -798,7 +798,7 @@ public final class TombRacer extends rfa implements ls {
         RandomBrickOperator.releaseStatics(-1);
         RasterizerOperator.releaseStatics(-118);
         RangeOperator.releaseStatics(param0 ^ 17000);
-        MandelbrotOperator.a(true);
+        MandelbrotOperator.releaseStatics(true);
         EmbossOperator.releaseStatics(true);
         NormalMapOperator.releaseStatics(param0 ^ 12863);
         EdgeDetectOperator.releaseStatics((byte) -105);
@@ -806,7 +806,7 @@ public final class TombRacer extends rfa implements ls {
         LineNoiseOperator.releaseStatics((byte) 101);
         cna.releaseStatics(param0 ^ 3646);
         ScrollingTexturePixels.releaseStatics();
-        ita.releaseStatics((byte) 48);
+        SoftwareDepthBuffer.releaseStatics((byte) 48);
         lp.releaseStatics((byte) 34);
         hna.releaseStatics(121);
         nsa.releaseStatics(false);
@@ -818,11 +818,11 @@ public final class TombRacer extends rfa implements ls {
         LegacyOpenGlTexture3D.releaseStatics((byte) 91);
         OpenGlRenderbuffer.releaseStatics((byte) -48);
         LegacyOpenGlEffect.releaseStatics(-18318);
-        aaa.releaseStatics((byte) -75);
+        LegacyOpenGlWaterTextures.releaseStatics((byte) -75);
         LegacyOpenGlUnderwaterEffect.releaseStatics(120);
         pm.releaseStatics((byte) 79);
         fd.releaseStatics((byte) -124);
-        cp.releaseStatics(-197);
+        NativeGraphicsHeap.releaseStatics(-197);
         LegacyOpenGlSpriteTexture.releaseStatics(param0 + 3771);
         PbufferEntry.releaseStatics(param0 ^ -3666);
         OpenGlDisplayLists.releaseStatics((byte) 124);
@@ -841,12 +841,12 @@ public final class TombRacer extends rfa implements ls {
         fca.releaseStatics(-1);
         oca.releaseStatics(false);
         TextureFilter.releaseStatics(32768);
-        to.releaseStatics(-114);
+        HardwareGraphicsHeap.releaseStatics(-114);
         ll.releaseStatics((byte) 83);
         gca.releaseStatics(4);
         hka.releaseStatics(false);
         tda.releaseStatics((byte) 103);
-        gh.releaseStatics(param0 + 3657);
+        HardwareSprite.releaseStatics(param0 + 3657);
         HardwareSceneLight.releaseStatics((byte) -112);
         HardwareUnlitEffect.releaseStatics(36070);
         HardwareSpecularEffect.releaseStatics(0);
@@ -860,8 +860,8 @@ public final class TombRacer extends rfa implements ls {
         OpenGlTexture2D.releaseStatics((byte) 4);
         OpenGlTexture.releaseStatics(0);
         pe.releaseStatics(0);
-        dma.releaseStatics(-31784);
-        jd.releaseStatics(32242);
+        OpenGlCubeTexture.releaseStatics(-31784);
+        OpenGlTexture3D.releaseStatics(32242);
         OpenGlUnderwaterEffect.releaseStatics(false);
         mf.releaseStatics(false);
         OpenGlEnvironmentWaterEffect.releaseStatics(13936);
@@ -878,17 +878,17 @@ public final class TombRacer extends rfa implements ls {
         hq.releaseStatics(-6682);
         pr.releaseStatics(28122);
         vt.releaseStatics((byte) 117);
-        wl.releaseStatics((byte) -66);
-        iea.releaseStatics(-1);
-        bb.releaseStatics(false);
+        ClipStackEntry.releaseStatics((byte) -66);
+        ClipFrame.releaseStatics(-1);
+        HiscoreTable.releaseStatics(false);
         ScoreSubmission.releaseStatics(param0 ^ 3618);
-        lqa.releaseStatics((byte) 102);
+        RendererOption.releaseStatics((byte) 102);
         kea.releaseStatics(-7646);
         kia.releaseStatics((byte) 107);
         pfa.releaseStatics(param0 + 3670);
-        cc.releaseStatics(0);
-        wk.releaseStatics((byte) -54);
-        qg.releaseStatics(param0 ^ 2973);
+        CourseMapPath.releaseStatics(0);
+        MapWaypoint.releaseStatics((byte) -54);
+        CourseDefinition.releaseStatics(param0 ^ 2973);
         ur.releaseStatics(-17614);
         td.releaseStatics(-113);
         hga.releaseStatics((byte) 126);
@@ -896,12 +896,12 @@ public final class TombRacer extends rfa implements ls {
         rg.releaseStatics((byte) -127);
         tka.releaseStatics((byte) -55);
         mu.releaseStatics((byte) 101);
-        lt.releaseStatics(param0 ^ 3690);
-        cga.a(true);
+        LoadingStep.releaseStatics(param0 ^ 3690);
+        cga.releaseStatics(true);
         ConsoleToken.releaseStatics((byte) 101);
         ConsoleValue.releaseStatics(17049);
         ConsoleMethod.releaseStatics(126);
-        rv.releaseStatics(-31950);
+        ConsoleEvaluationException.releaseStatics(-31950);
         StringCursor.releaseStatics(true);
         ConsoleTokenStream.releaseStatics((byte) -128);
         AvailabilityQuery.releaseStatics(-1);
@@ -909,21 +909,21 @@ public final class TombRacer extends rfa implements ls {
         rha.releaseStatics(-29867);
         aca.releaseStatics(false);
         mp.releaseStatics(9);
-        aua.releaseStatics(true);
-        ic.releaseStatics(true);
-        mga.releaseStatics(param0 ^ -35493);
-        nl.releaseStatics((byte) -117);
+        PlainScoringObserverFactory.releaseStatics(true);
+        StatReportingObserverFactory.releaseStatics(true);
+        QueuedHint.releaseStatics(param0 ^ -35493);
+        LoginMethod.releaseStatics((byte) -117);
         tc.releaseStatics(17129);
         hda.releaseStatics((byte) -128);
         wc.releaseStatics((byte) -78);
-        gba.releaseStatics(true);
+        StringListNode.releaseStatics(true);
         CourseLayoutFactory.releaseStatics(param0 ^ -3666);
         mm.releaseStatics((byte) -44);
         sda.releaseStatics(-1);
-        bd.releaseStatics(119);
+        RasterStateFrame.releaseStatics(119);
         CharacterChoiceFactory.releaseStatics(0);
         sja.releaseStatics((byte) -126);
-        nt.a(true);
+        nt.releaseStatics(true);
         fpa.releaseStatics(1451);
         LoadLevelCommand.releaseStatics(-50);
         HelloCommand.releaseStatics(true);
@@ -932,19 +932,19 @@ public final class TombRacer extends rfa implements ls {
         ListTracksCommand.releaseStatics((byte) -125);
         LoadProfileCommand.releaseStatics((byte) 2);
         WidgetStyleLayer.releaseStatics((byte) 46);
-        kha.releaseStatics(param0 + 3665);
+        TextLine.releaseStatics(param0 + 3665);
         ema.releaseStatics(48);
         pu.releaseStatics((byte) -53);
         fua.releaseStatics(param0 + 3540);
         haa.releaseStatics(121);
-        je.releaseStatics((byte) -119);
-        ik.releaseStatics((byte) -104);
+        DropdownPopupList.releaseStatics((byte) -119);
+        IntArrayRequest.releaseStatics((byte) -104);
         toa.releaseStatics(3402);
         cia.releaseStatics(-1);
         lw.releaseStatics(70);
         waa.releaseStatics(param0 ^ -7488);
         RenderableNode.releaseStatics((byte) -49);
-        CharacterPreview.a(true);
+        CharacterPreview.releaseStatics(true);
         CharacterChoiceTile.releaseStatics(-10);
         wm.releaseStatics((byte) 115);
         RewardChoiceSlot.releaseStatics((byte) -101);
@@ -971,20 +971,20 @@ public final class TombRacer extends rfa implements ls {
         aba.releaseStatics(true);
         HardwareRidgedWaterNoise.releaseStatics((byte) -86);
         HardwareTurbulentWaterNoise.releaseStatics(-93);
-        hg.releaseStatics(param0 ^ -15106);
-        gg.releaseStatics((byte) -107);
+        HardwareModelVertexStream.releaseStatics(param0 ^ -15106);
+        HardwareModelIndexData.releaseStatics((byte) -107);
         gta.releaseStatics(false);
         eda.releaseStatics(45);
         mca.releaseStatics(0);
-        dq.releaseStatics(8148);
-        tba.releaseStatics(0);
+        ColourRowCacheEntry.releaseStatics(8148);
+        MonochromeRowCacheEntry.releaseStatics(0);
         woa.releaseStatics(-20476);
-        qja.releaseStatics(param0 ^ 3694);
-        oda.releaseStatics(true);
+        MazeSearchNode.releaseStatics(param0 ^ 3694);
+        MazeFrontierCell.releaseStatics(true);
         hra.releaseStatics(false);
         RasterShape.releaseStatics(false);
-        nma.releaseStatics(false);
-        qo.releaseStatics(true);
+        CurveShape.releaseStatics(false);
+        EllipseShape.releaseStatics(true);
         LegacyTurbulentWaterNoise.releaseStatics(param0 + 3668);
         this.field_x = null;
         this.field_H = null;
@@ -992,8 +992,8 @@ public final class TombRacer extends rfa implements ls {
     }
 
     private final void beginFrame(int param0) {
-        int var2 = aaa.a(false);
-        int var3 = SwitchLinkList.b(0);
+        int var2 = LegacyOpenGlWaterTextures.getCanvasWidth(false);
+        int var3 = SwitchLinkList.getCanvasHeight(0);
         if (DefaultTileRenderable.e(-22766)) {
           tga.field_a.enableBloom();
           tga.field_a.setBloomParameters(0.8999999761581421f, 1.0f, 1.0f);
@@ -1069,7 +1069,7 @@ public final class TombRacer extends rfa implements ls {
             this.field_D = new UnlockOverlay(SecondaryNodeDequeIterator.field_a, var4);
           }
         }
-        stackIn_17_0 = iqa.field_c;
+        stackIn_17_0 = ToolkitInstance.field_c;
         stackIn_17_1 = -91;
         stackIn_18_2 = (null != SecondaryNodeDequeIterator.field_a) && (SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a);
         ((ChatOverlay) (Object) stackIn_17_0).update((byte) stackIn_17_1, stackIn_18_2, false);
@@ -1173,10 +1173,10 @@ public final class TombRacer extends rfa implements ls {
         int var16 = 0;
         int[] var17 = null;
         int[] var18 = null;
-        gqa var19 = null;
+        ChatMessage var19 = null;
         String var20 = null;
         FloatingMessage var21 = null;
-        gqa var22 = null;
+        ChatMessage var22 = null;
         String var23 = null;
         FloatingMessage var24 = null;
         boolean[] var25 = null;
@@ -1222,10 +1222,10 @@ public final class TombRacer extends rfa implements ls {
           if (15 == param0) {
             if (RandomMazeBehaviour.field_n) {
               SwitchModel.o((byte) -108);
-              ik.clearChatHistory(5);
+              IntArrayRequest.clearChatHistory(5);
               era.field_c = true;
               RandomMazeBehaviour.field_n = false;
-              iqa.field_c.closePanel(88);
+              ToolkitInstance.field_c.closePanel(88);
               ConstrainToRectangleLocomotor.showMenuScreen(false, 0, (byte) 111);
             }
             LegacyOpenGlEnvironmentWaterEffect.field_d = false;
@@ -1246,7 +1246,7 @@ public final class TombRacer extends rfa implements ls {
               }
               var20 = var19.field_g;
               var21 = PortalBehaviour.createChatMessage(var19.field_d, var19.field_f, 100, SecondaryNodeDequeIterator.field_a.findPlayerIndex(false, var20), var20);
-              iqa.field_c.addMessageNow(0, var21);
+              ToolkitInstance.field_c.addMessageNow(0, var21);
             }
             return true;
           }
@@ -1260,7 +1260,7 @@ public final class TombRacer extends rfa implements ls {
               !var22.field_m) {
               var23 = var22.field_g;
               var24 = PortalBehaviour.createChatMessage(var22.field_d, var22.field_f, -87, SecondaryNodeDequeIterator.field_a.findPlayerIndex(false, var23), var23);
-              iqa.field_c.addMessageNow(0, var24);
+              ToolkitInstance.field_c.addMessageNow(0, var24);
             }
             return true;
           }
@@ -1277,7 +1277,7 @@ public final class TombRacer extends rfa implements ls {
               if (SecondaryNodeDequeIterator.field_a != null) {
                 SecondaryNodeDequeIterator.field_a.endMatch(false, true, 0);
                 ConstrainToRectangleLocomotor.showMenuScreen(false, -2, (byte) -33);
-                iqa.field_c.disableWithPanel(96);
+                ToolkitInstance.field_c.disableWithPanel(96);
               }
               ColouriseOperator.field_q = false;
               return true;
@@ -1313,7 +1313,7 @@ public final class TombRacer extends rfa implements ls {
               return true;
             }
             if (87 == param0) {
-              gh.a(param1, (byte) -79);
+              HardwareSprite.a(param1, (byte) -79);
               return true;
             }
             if (88 == param0) {
@@ -1380,7 +1380,7 @@ public final class TombRacer extends rfa implements ls {
           SecondaryNodeDequeIterator.field_a = new MatchScreen(true, var4_intLifetime2, var9, var10, var5_intLifetime1 != 0, var6, -1 + var6, var7Lifetime1, var8Lifetime1, 0, var11, var32, (CourseGenerator) null);
           SecondaryNodeDequeIterator.field_a.decodeInitialState(120, param1);
           SecondaryNodeDequeIterator.field_a.initPlayers((byte) -121);
-          iqa.field_c.enableWithPanel(-68);
+          ToolkitInstance.field_c.enableWithPanel(-68);
           ConstrainToRectangleLocomotor.showMenuScreen(false, -1, (byte) 83);
           ColouriseOperator.field_q = false;
           return true;
@@ -1394,7 +1394,7 @@ public final class TombRacer extends rfa implements ls {
           } else {
             stackIn_120_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_119_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_119_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1408,8 +1408,8 @@ public final class TombRacer extends rfa implements ls {
         }
         PasswordValidator.releaseGraphicsToolkit((byte) 122);
         NodeHashTableIterator.a((byte) 55);
-        if (dq.field_f != null) {
-          og.exitFullscreen(0);
+        if (ColourRowCacheEntry.field_f != null) {
+          HardwareOpenGlVertexBuffer.exitFullscreen(0);
         }
         GameScreen.releaseInput((byte) 62);
     }
@@ -1482,7 +1482,7 @@ public final class TombRacer extends rfa implements ls {
                 1 == var6) {
                 var8 = SecondaryNodeDequeIterator.field_a.matchState.getPlayerName(var5, 0);
                 var9 = PortalBehaviour.createChatMessage(1, LegacyOpenGlFlowingWaterEffect.formatText(107, CharacterChoiceTile.field_h, new String[]{var8}), 111, var5, var8);
-                iqa.field_c.addMessageNow(0, var9);
+                ToolkitInstance.field_c.addMessageNow(0, var9);
               }
             }
             SecondaryNodeDequeIterator.field_a.matchState.field_b = var4_intLifetime1;
@@ -1519,7 +1519,7 @@ public final class TombRacer extends rfa implements ls {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1545,12 +1545,12 @@ public final class TombRacer extends rfa implements ls {
             } else {
               wm.field_a = null;
               SecondaryNodeDequeIterator.field_a = null;
-              fp.startMenuBackgroundDemo(-82);
+              TextureCombineSource.startMenuBackgroundDemo(-82);
               ConstrainToRectangleLocomotor.showMenuScreen(false, 0, (byte) 124);
             }
             ((MenuScreen) (SpriteTileOperator.field_t)).onShow(0, 0, false);
             RandomMazeBehaviour.field_n = false;
-            iqa.field_c.closePanel(-89);
+            ToolkitInstance.field_c.closePanel(-89);
           }
           ColouriseOperator.field_q = false;
           LegacyOpenGlEnvironmentWaterEffect.field_d = false;

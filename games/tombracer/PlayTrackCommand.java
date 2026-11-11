@@ -137,7 +137,7 @@ final class PlayTrackCommand extends ConsoleMethod {
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_J) {
-              var12.field_Vb = new UiComponent(0L, iea.field_g);
+              var12.field_Vb = new UiComponent(0L, ClipFrame.field_g);
               stackIn_10_0 = param4;
               stackIn_10_1 = param0;
               var14 = stackIn_10_0 | stackIn_10_1;
@@ -145,10 +145,10 @@ final class PlayTrackCommand extends ConsoleMethod {
               var12.field_Vb.field_z = 1;
               var12.field_bc = new UiComponent(0L, S2CStartRoundPacket.field_a);
               var12.addChild(-124, var12.field_bc);
-              var12.field_Hb = new UiComponent(0L, iea.field_g);
+              var12.field_Hb = new UiComponent(0L, ClipFrame.field_g);
               var12.addChild(-124, var12.field_Hb);
               var12.field_Hb.field_x = 0;
-              var12.field_wb = new UiComponent(0L, iea.field_g);
+              var12.field_wb = new UiComponent(0L, ClipFrame.field_g);
               var12.addChild(-124, var12.field_wb);
               var12.field_wb.field_x = 0;
               var12.field_Lb = new UiComponent(0L, S2CStartRoundPacket.field_a);
@@ -165,7 +165,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = iea.field_g;
+                stackIn_13_4 = ClipFrame.field_g;
               }
               stackIn_12_0.field_Eb = new UiComponent(stackIn_12_3, stackIn_13_4);
               var12.addChild(-125, var12.field_Eb);
@@ -175,7 +175,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var12.field_Eb.addChild(-128, var12.field_xb);
               }
               var12.field_vb = new UiComponent(0L, (UiComponent) null);
-              if (0 != (var14 & 1 << una.field_c)) {
+              if (0 != (var14 & 1 << GpuDataType.field_c)) {
                 var12.field_Eb.addChild(-124, var12.field_vb);
               }
               var12.field_Zb = new UiComponent(0L, (UiComponent) null);
@@ -207,7 +207,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               if (!UnlockOverlay.field_p) {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
-                stackIn_32_4 = iea.field_g;
+                stackIn_32_4 = ClipFrame.field_g;
               } else {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
@@ -329,7 +329,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                   if (!var12.field_Tb) {
                     var12.field_Vb.field_r = QuickChatPhraseDefinition.field_p;
                   } else {
-                    var12.field_Vb.field_r = aua.field_c;
+                    var12.field_Vb.field_r = PlainScoringObserverFactory.field_c;
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -371,7 +371,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var12.field_xb.setBounds(var50_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
                 var34_int = var34_int + (var50_ref.field_n + pda.field_c);
               }
-              if ((1 << una.field_c & var14Lifetime1) != 0) {
+              if ((1 << GpuDataType.field_c & var14Lifetime1) != 0) {
                 if (!var12.field_Bb) {
                   stackIn_80_0 = (var12.field_gc) ? 1 : 0;
                 } else {
@@ -566,7 +566,7 @@ final class PlayTrackCommand extends ConsoleMethod {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var7), "bh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var7), "bh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -595,7 +595,7 @@ final class PlayTrackCommand extends ConsoleMethod {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

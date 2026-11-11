@@ -3,7 +3,7 @@
  */
 final class lla {
     static boolean field_b;
-    bv field_a;
+    TabbedPanel field_a;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 24;
@@ -22,9 +22,9 @@ final class lla {
         try {
           var3 = new String[]{param0, MonochromeFillOperator.field_o, of.field_a};
           var4 = new UiComponent[]{param1, dqa.field_e, (UiComponent) ((Object) OpenGlSprite.field_j)};
-          this.field_a = new bv(0L, Effect.field_a, var3, CachedArchiveSource.field_d, var4, 0);
+          this.field_a = new TabbedPanel(0L, Effect.field_a, var3, CachedArchiveSource.field_d, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "lla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

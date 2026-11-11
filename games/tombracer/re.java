@@ -18,9 +18,9 @@ final class re {
         SceneLight.field_i = SoftwareRasterizer.width;
         NodeHashTable.a(16);
         oca.field_b.a(0, 0, 20, C2SRoomResultPacket.field_a.field_G, -2 + (-40 + C2SRoomResultPacket.field_a.field_t));
-        PerlinNoise2D.field_t.setBounds(hk.field_e.field_G, ToolkitSelector.field_a, param0 + 5264, 0, 0);
+        PerlinNoise2D.field_t.setBounds(HardwareWaterTextures.field_e.field_G, ToolkitSelector.field_a, param0 + 5264, 0, 0);
         int var1 = 2 + ToolkitSelector.field_a;
-        RasterShape.field_e.setBounds(hk.field_e.field_G, hk.field_e.field_t - (UnlockOverlay.field_p ? var1 : 0), -23776, !UnlockOverlay.field_p ? 0 : var1, 0);
+        RasterShape.field_e.setBounds(HardwareWaterTextures.field_e.field_G, HardwareWaterTextures.field_e.field_t - (UnlockOverlay.field_p ? var1 : 0), -23776, !UnlockOverlay.field_p ? 0 : var1, 0);
         GameFont.a(false);
         ImageProducerRasterBuffer.field_j.setBounds(C2SRoomResultPacket.field_a.field_G, 40, -23776, C2SRoomResultPacket.field_a.field_t - 40, 0);
         C2SChooseCharacterPacket.field_a.setBounds(OpenGlToolkit.field_fd.field_G, 30, -23776, 0, 0);

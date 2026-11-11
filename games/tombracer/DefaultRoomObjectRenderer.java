@@ -106,8 +106,8 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               var29 != 0))) {
               if (var26 == 7 &&
                 var29 == 0) {
-                var25_ref_ka = SpawnerBehaviour.a(4, 12166, 7);
-                gqa.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, -81), -83584144, var6, var5, var25_ref_ka, -393216 + var7);
+                var25_ref_ka = SpawnerBehaviour.getCategoryModel(4, 12166, 7);
+                ChatMessage.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, -81), -83584144, var6, var5, var25_ref_ka, -393216 + var7);
                 break regionExit1;
               } else if (var26 != 14 ||
                 var29 != 0) {
@@ -147,7 +147,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               } else {
                 var24_ref = SwitchLinkList.field_b[5];
               }
-              gqa.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 69), -83584144, var6, var5, var24_ref, var7);
+              ChatMessage.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 69), -83584144, var6, var5, var24_ref, var7);
               break regionExit1;
             }
             if ((decompiledFrameRemainder5) &&
@@ -159,10 +159,10 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               var26Lifetime2 = param2.getAge(0) * 255 / param2.getLifetime(true);
               stackIn_85_0 = (RoomCompletedScreen.c(param1 ^ -25)) ? 15 : 14;
               var27 = stackIn_85_0;
-              var28 = SpawnerBehaviour.a(var27, param1 ^ -12189, 7).copy((byte) 1, 526343, true);
+              var28 = SpawnerBehaviour.getCategoryModel(var27, param1 ^ -12189, 7).copy((byte) 1, 526343, true);
               var28.O(var26Lifetime2 >> 2, 128, var26Lifetime2 >> 2);
               var28.tintColours(-1, 10, 30, var26Lifetime2);
-              gqa.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
+              ChatMessage.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -232,14 +232,14 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
                 break regionExit1;
               }
             }
-            var26_ref_ka = SpawnerBehaviour.a(3, 12166, 7);
-            gqa.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 92), param1 ^ 83584149, var6, var5, var26_ref_ka, -393216 + var7);
+            var26_ref_ka = SpawnerBehaviour.getCategoryModel(3, 12166, 7);
+            ChatMessage.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 92), param1 ^ 83584149, var6, var5, var26_ref_ka, -393216 + var7);
           }
           if (var23 == null) {
             return;
           }
           var16 = (int)((float)var16 * (float)var12 / (float)var10);
-          var25 = za.clampValue(0, 92, java.lang.reflect.Array.getLength(var23) - 1, java.lang.reflect.Array.getLength(var23) - (int)(var13 * (float)(-1 + java.lang.reflect.Array.getLength(var23))));
+          var25 = GraphicsHeap.clampValue(0, 92, java.lang.reflect.Array.getLength(var23) - 1, java.lang.reflect.Array.getLength(var23) - (int)(var13 * (float)(-1 + java.lang.reflect.Array.getLength(var23))));
           var26Lifetime1 = Math.min(var25, java.lang.reflect.Array.getLength(var23) - 1);
           PlayPhase.a(var8, ((int[]) (var23))[var26Lifetime1], (byte) 123, 128, var16, var9);
           return;
@@ -259,7 +259,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_141_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_136_0), ((StringBuilder) (Object) stackIn_140_1).append(stackIn_141_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_136_0), ((StringBuilder) (Object) stackIn_140_1).append(stackIn_141_2).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -324,7 +324,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        lqa var12 = null;
+        RendererOption var12 = null;
         ToolkitModel var13 = null;
         int var14 = 0;
         int var15 = 0;
@@ -355,28 +355,28 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             case 3:
               var11 = 16;
               var10 = param2.getAge(-1) * 255 / param2.getLifetime(false);
-              var12 = LegacyOpenGlBloomEffect.b(param1);
+              var12 = LegacyOpenGlBloomEffect.getCurrentRendererOption(param1);
               if (null != var12 &&
                 var12.field_f) {
                 var11 = 15;
               }
-              var13 = SpawnerBehaviour.a(var11, 12166, 7).copy((byte) 1, 526343, true);
+              var13 = SpawnerBehaviour.getCategoryModel(var11, 12166, 7).copy((byte) 1, 526343, true);
               var13.O(var10 << 2, 512, var10 << 2);
               stackIn_36_0 = (Projectile) (param2);
               stackIn_37_1 = !(param1);
-              gqa.drawModelAt(GameScreen.positiveModulo(-(((Projectile) (Object) stackIn_36_0).getAngle(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));
+              ChatMessage.drawModelAt(GameScreen.positiveModulo(-(((Projectile) (Object) stackIn_36_0).getAngle(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));
               if (var15 == 0) {
                 return;
               }
             case 2:
-              gqa.drawModelAt(param2.getAngle(true), -83584144, var6, var5, SpawnerBehaviour.a(0, 12166, 7), var7);
+              ChatMessage.drawModelAt(param2.getAngle(true), -83584144, var6, var5, SpawnerBehaviour.getCategoryModel(0, 12166, 7), var7);
               if (var15 == 0) {
                 return;
               }
             case 0:
               stackIn_46_0 = (Projectile) (param2);
               stackIn_47_1 = !(param1);
-              gqa.drawModelAt(GameScreen.positiveModulo(-(((Projectile) (Object) stackIn_46_0).getAngle(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, SpawnerBehaviour.a(1, 12166, 7), var7);
+              ChatMessage.drawModelAt(GameScreen.positiveModulo(-(((Projectile) (Object) stackIn_46_0).getAngle(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, SpawnerBehaviour.getCategoryModel(1, 12166, 7), var7);
               if (var15 == 0) {
                 return;
               }
@@ -384,7 +384,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             default:
               break;
           }
-          gqa.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle(true) >> 2), 2048, 107), -83584144, var6, var5, SpawnerBehaviour.a(2, 12166, 7), var7);
+          ChatMessage.drawModelAt(GameScreen.positiveModulo(-(param2.getAngle(true) >> 2), 2048, 107), -83584144, var6, var5, SpawnerBehaviour.getCategoryModel(2, 12166, 7), var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -402,7 +402,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "gva.J(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "gva.J(" + param0 + ')');
         }
     }
 
@@ -610,7 +610,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_129_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_120_0), ((StringBuilder) (Object) stackIn_128_1).append(stackIn_129_2).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_120_0), ((StringBuilder) (Object) stackIn_128_1).append(stackIn_129_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -658,7 +658,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -669,7 +669,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ofa.field_D = param0;
+          ResizingDialog.field_D = param0;
           jsa.a(false, 12);
           if (param1 >= -24) {
             DefaultRoomObjectRenderer.releaseStatics(-102);
@@ -685,7 +685,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -714,7 +714,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -753,7 +753,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             var12 = 8 + era.field_g.getWrappedWidth(var10, var11);
             var13 = 8 + era.field_g.measureWrappedHeight(var10, var11, 0);
             SecondaryNodeDequeIterator.a(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 - var12 / 2);
-            dh.a(kn.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
+            dh.a(TooltipRenderer.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -772,7 +772,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -826,7 +826,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -884,7 +884,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

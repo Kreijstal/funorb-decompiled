@@ -219,7 +219,7 @@ final class ModelData {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -517,7 +517,7 @@ final class ModelData {
             var51 = this.field_b[var54];
             var52 = this.field_I[var54];
             if (1 == var19) {
-              this.field_l[var54] = var7.readUnsignedByte(kha.bitwiseXor(param1, 255));
+              this.field_l[var54] = var7.readUnsignedByte(TextLine.bitwiseXor(param1, 255));
             }
           }
           var66.position = var39;
@@ -542,7 +542,7 @@ final class ModelData {
               this.field_D[var54Lifetime1] = var7.readUnsignedByte(255);
             }
             if (var18 == 1) {
-              this.field_r[var54Lifetime1] = (short)(var8.readUnsignedShort(kha.bitwiseXor(param1, 127)) - 1);
+              this.field_r[var54Lifetime1] = (short)(var8.readUnsignedShort(TextLine.bitwiseXor(param1, 127)) - 1);
             }
             if (this.field_g != null) {
               if (this.field_r[var54Lifetime1] != -1) {
@@ -645,7 +645,7 @@ final class ModelData {
                 } else {
                   this.field_f[var58Lifetime2] = var5.readUnsignedMedium(-32768);
                 }
-                this.field_x[var58Lifetime2] = var5.readUnsignedShort(kha.bitwiseXor(param1, 125));
+                this.field_x[var58Lifetime2] = var5.readUnsignedShort(TextLine.bitwiseXor(param1, 125));
               } else {
                 this.field_j[var58Lifetime2] = var5.readUnsignedMedium(-32768);
                 this.field_f[var58Lifetime2] = var5.readUnsignedMedium(-32768);
@@ -691,8 +691,8 @@ final class ModelData {
                 }
                 this.field_x[var58Lifetime2] = var5.readUnsignedShort(123);
               } else {
-                this.field_j[var58Lifetime2] = var5.readUnsignedMedium(kha.bitwiseXor(param1, -32768));
-                this.field_f[var58Lifetime2] = var5.readUnsignedMedium(kha.bitwiseXor(param1, -32768));
+                this.field_j[var58Lifetime2] = var5.readUnsignedMedium(TextLine.bitwiseXor(param1, -32768));
+                this.field_f[var58Lifetime2] = var5.readUnsignedMedium(TextLine.bitwiseXor(param1, -32768));
                 this.field_x[var58Lifetime2] = var5.readUnsignedMedium(param1 - 32768);
               }
               this.field_i[var58Lifetime2] = var6.readByte((byte) 31);
@@ -751,7 +751,7 @@ final class ModelData {
           } else {
             stackIn_188_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_187_0), ((StringBuilder) (Object) stackIn_187_1).append(stackIn_188_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_187_0), ((StringBuilder) (Object) stackIn_187_1).append(stackIn_188_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1111,9 +1111,9 @@ final class ModelData {
           }
           while (this.field_F > var40Lifetime2) {
             this.field_u[var40Lifetime2] = (byte) 0;
-            this.field_s[var40Lifetime2] = (short)var5.readUnsignedShort(kha.bitwiseXor(param0, 5407));
+            this.field_s[var40Lifetime2] = (short)var5.readUnsignedShort(TextLine.bitwiseXor(param0, 5407));
             this.field_q[var40Lifetime2] = (short)var5.readUnsignedShort(126);
-            this.field_K[var40Lifetime2] = (short)var5.readUnsignedShort(kha.bitwiseXor(param0, 5407));
+            this.field_K[var40Lifetime2] = (short)var5.readUnsignedShort(TextLine.bitwiseXor(param0, 5407));
             var40Lifetime2++;
           }
           if (null != this.field_g) {
@@ -1154,7 +1154,7 @@ final class ModelData {
           } else {
             stackIn_116_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_115_1).append(stackIn_116_2).append(')').toString());
         }
     }
 
@@ -1188,7 +1188,7 @@ final class ModelData {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1395,7 +1395,7 @@ final class ModelData {
                   var16_ref_jt = var14_ref_oc.field_m[var15_int];
                   incrementValue$2 = var5Lifetime1;
                   var5Lifetime1++;
-                  this.field_m[incrementValue$2] = var16_ref_jt.a(9677, var16_ref_jt.field_a + this.field_o);
+                  this.field_m[incrementValue$2] = var16_ref_jt.withVertexOffset(9677, var16_ref_jt.field_a + this.field_o);
                 }
               }
               for (var15_intLifetime1 = 0; var14_ref_oc.field_o > var15_intLifetime1; var15_intLifetime1++) {
@@ -1514,7 +1514,7 @@ final class ModelData {
           } else {
             stackIn_117_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_116_0), ((StringBuilder) (Object) stackIn_116_1).append(stackIn_117_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_116_0), ((StringBuilder) (Object) stackIn_116_1).append(stackIn_117_2).append(',').append(param1).append(')').toString());
         }
     }
 

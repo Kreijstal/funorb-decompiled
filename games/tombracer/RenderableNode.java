@@ -78,7 +78,7 @@ final class RenderableNode extends IntrusiveNode {
         try {
           this.renderable = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

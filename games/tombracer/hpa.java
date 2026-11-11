@@ -7,7 +7,7 @@ final class hpa extends aa {
     int[] field_d;
     int[] field_e;
 
-    final static void a(int param0, gqa param1) {
+    final static void a(int param0, ChatMessage param1) {
         Object stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -63,7 +63,7 @@ final class hpa extends aa {
           hka.field_b.addLobbyGameActions((byte) -19);
           hka.field_b.populateItems((byte) -22, false);
           hka.field_b.addSocialActions(param1.field_h, param1.field_d, 19);
-          hka.field_b.c(0);
+          hka.field_b.addMessageActions(0);
           hka.field_b.addChatFilterActions(param1, 13);
           var13 = hka.field_b;
           var3 = PasswordValidator.field_m;
@@ -83,7 +83,7 @@ final class hpa extends aa {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

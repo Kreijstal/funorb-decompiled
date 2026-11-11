@@ -61,7 +61,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     public final native void w(boolean param0);
 
-    private final native void va(za param0);
+    private final native void va(GraphicsHeap param0);
 
     final void setTransform(Transform3D param0) {
         this.field_j = param0;
@@ -206,7 +206,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     }
 
     final RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1) {
-        return (RenderTarget) ((Object) new wa(this, (j) (param0), (xa) (param1)));
+        return (RenderTarget) ((Object) new NativeRenderTarget(this, (j) (param0), (xa) (param1)));
     }
 
     private final native void t(NativeCanvasSurface param0);
@@ -274,7 +274,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
           } else {
             if (var4.field_i != param1 ||
               var4.field_h != param2) {
-              var4.a(param0, param1, param2);
+              var4.attachCanvas(param0, param1, param2);
             }
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -357,10 +357,10 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         this.wa(param0, param1, param2, param3, param4, param5);
     }
 
-    final za createHeap(int param0) {
+    final GraphicsHeap createHeap(int param0) {
         ya var2 = new ya(this, param0);
         this.field_o.addLast((byte) -97, var2);
-        return (za) ((Object) var2);
+        return (GraphicsHeap) ((Object) var2);
     }
 
     final void present(int param0, int param1) throws qva {
@@ -414,7 +414,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     }
 
     final void bindRenderTarget(RenderTarget param0) {
-        wa var2 = (wa) (param0);
+        NativeRenderTarget var2 = (NativeRenderTarget) (param0);
         this.n(var2.field_b.field_nativeid, var2.field_a.field_nativeid);
     }
 
@@ -449,7 +449,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         return false;
     }
 
-    final void useHeap(za param0) {
+    final void useHeap(GraphicsHeap param0) {
         this.field_p = (ya) (param0);
         this.va(param0);
     }

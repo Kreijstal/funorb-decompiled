@@ -29,12 +29,12 @@ final class pra {
         int var16Lifetime2;
         var18 = TombRacer.field_G ? 1 : 0;
         try {
-          var12 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param6);
-          var13 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param5);
+          var12 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param6);
+          var13 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param5);
           var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0);
           var15 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param4);
-          var8_int = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param6 + param2);
-          var9 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param5 - param2);
+          var8_int = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param6 + param2);
+          var9 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param5 - param2);
           for (var16 = var12; var8_int > var16; var16++) {
             C2SRoomResultPacket.fillRange((byte) -55, param1, var15, vaa.field_a[var16], var14);
           }
@@ -56,13 +56,13 @@ final class pra {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var8), "pra.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var8), "pra.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static void b(int param0) {
         if (FadingDialog.field_C.field_e != mha.field_E) {
-          tj.field_b = tj.field_b + (-mha.field_E + FadingDialog.field_C.field_e);
+          VertexArrayPointer.field_b = VertexArrayPointer.field_b + (-mha.field_E + FadingDialog.field_C.field_e);
           mha.field_E = FadingDialog.field_C.field_e;
         }
         if (HiscoresScreen.field_r > 0) {

@@ -1,0 +1,146 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StatReportingScoringObserver extends MatchScoringObserver {
+    static String[] field_j;
+    static ArchiveNetworkClient field_l;
+    static String[] field_m;
+    static String field_k;
+    static int field_i;
+
+    final void onPenalty(int param0, Player param1, int param2, Room param3, int param4, int param5) {
+        try {
+          nba.sendRoomDeathStat(this.field_f, param3, (byte) 108);
+          if (param0 != 15) {
+            Room var8 = (Room) null;
+            this.onRoomCompleted((Player) null, (Room) null, true);
+          }
+          super.onPenalty(param0 + 0, param1, param2, param3, param4, param5);
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    final static String arrayToString(int param0, int[] param1) {
+        int var3 = 0;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        StringBuilder var2 = null;
+        RuntimeException var2_ref = null;
+        int var4 = 0;
+        StringBuilder var5 = null;
+        String stackIn_8_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var4 = TombRacer.field_G ? 1 : 0;
+        try {
+          var5 = new StringBuilder("[");
+          var2 = var5;
+          for (var3 = param0; var3 < param1.length; var3++) {
+            if (var3 != 0) {
+              discarded$2 = var2.append(',');
+            }
+            discarded$3 = var5.append("0x").append(Integer.toHexString(param1[var3]));
+          }
+          stackIn_8_0 = var2.append(']').toString();
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_11_0 = var2_ref;
+          stackIn_11_1 = new StringBuilder().append("wg.R(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+        }
+    }
+
+    final void onRoomEntered(int param0, Player param1, Room param2) {
+        try {
+          MatchPhase.sendRoomEnteredStat(param2, 100, this.field_f);
+          super.onRoomEntered(param0, param1, param2);
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wg.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void releaseStatics(boolean param0) {
+        field_k = null;
+        field_j = null;
+        field_m = null;
+        if (!param0) {
+          return;
+        }
+        field_l = null;
+    }
+
+    StatReportingScoringObserver(MatchState param0) {
+        super(param0);
+    }
+
+    final void onRoomCompleted(Player param0, Room param1, boolean param2) {
+        try {
+          if (param2) {
+            Room var5 = (Room) null;
+            this.onRoomCompleted((Player) null, (Room) null, false);
+          }
+          UrlDownloadRequest.sendRoomCompletedStat(this.field_f, param1, 108);
+          super.onRoomCompleted(param0, param1, param2);
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wg.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    final static int a(int param0, int param1, int param2) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var8 = TombRacer.field_G ? 1 : 0;
+        try {
+          if (param0 != 1541709953) {
+            StatReportingScoringObserver.releaseStatics(true);
+          }
+          var3_int = 0;
+          var4 = jua.field_d;
+          while (DefaultTileRenderable.field_g.length > var3_int) {
+            var5 = CoinItemComponent.field_H[var3_int];
+            if (var5 >= 0) {
+              var6 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, DefaultTileRenderable.field_g[var3_int], true);
+              var4 = var4 + mha.field_C;
+              var7 = -(var6 >> 1) + ega.field_c;
+              if (CrusherBehaviour.rectContainsPoint(param2, var6 + (InvisibleTouchSwitchComponent.field_L << 1), -InvisibleTouchSwitchComponent.field_L + var7, param1, (GasVentModel.field_p << 1) + nt.field_d, false, var4)) {
+                stackIn_9_0 = var5;
+                return stackIn_9_0;
+              }
+              var4 = var4 + ((GasVentModel.field_p << 1) + mha.field_C + nt.field_d);
+            } else {
+              var4 = var4 + ComponentTargetList.field_b;
+            }
+            var3_int++;
+          }
+          stackIn_13_0 = -1;
+          return stackIn_13_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wg.T(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    static {
+        field_m = new String[]{"By rating", "By win percentage"};
+        field_k = "If you do nothing the game will revert to normal view once the timer reaches 0.";
+    }
+}

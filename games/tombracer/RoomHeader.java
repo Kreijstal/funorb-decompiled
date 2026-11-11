@@ -54,7 +54,7 @@ final class RoomHeader {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -63,13 +63,13 @@ final class RoomHeader {
         MenuEntry.field_k = WeaveOperator.field_q.readString((byte) -76);
         if (param0 == -68) {
           var4 = (CharSequence) ((Object) MenuEntry.field_k);
-          tia.field_b = jd.normalizeDisplayName(1, var4);
+          tia.field_b = OpenGlTexture3D.normalizeDisplayName(1, var4);
           return;
         }
         byte[] var2 = (byte[]) null;
         RoomHeader.decodeBinaryFont((byte[]) null, (byte) 68);
         CharSequence var3 = (CharSequence) ((Object) MenuEntry.field_k);
-        tia.field_b = jd.normalizeDisplayName(1, var3);
+        tia.field_b = OpenGlTexture3D.normalizeDisplayName(1, var3);
     }
 
     final void encode(BitPacketBuffer param0, int param1) {
@@ -82,7 +82,7 @@ final class RoomHeader {
           param0.writeBits((byte) -128, this.field_b, 8);
           param0.writeBits((byte) 64, this.field_f, 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class RoomHeader {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

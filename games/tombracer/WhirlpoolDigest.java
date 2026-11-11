@@ -174,7 +174,7 @@ final class WhirlpoolDigest {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -205,10 +205,10 @@ final class WhirlpoolDigest {
         try {
           var14 = WeaveOperator.field_q;
           var2 = var14.readUnsignedByte(255);
-          var3 = (upa) (ina.field_d.first(param0 ^ 100));
+          var3 = (upa) (LoadingStepList.field_d.first(param0 ^ 100));
           while (var3 != null) {
             if (var3.field_n != var2) {
-              var3 = (upa) (ina.field_d.next(117));
+              var3 = (upa) (LoadingStepList.field_d.next(117));
               continue;
             }
             break;
@@ -290,7 +290,7 @@ final class WhirlpoolDigest {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "vh.D(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "vh.D(" + param0 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class WhirlpoolDigest {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -411,7 +411,7 @@ final class WhirlpoolDigest {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

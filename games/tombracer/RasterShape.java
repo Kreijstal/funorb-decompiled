@@ -14,14 +14,14 @@ abstract class RasterShape {
         }
         if (0 <= param1) {
           if (param1 > 65536) {
-            return -wl.field_i[134217728 / param1] + 2048;
+            return -ClipStackEntry.field_i[134217728 / param1] + 2048;
           }
-          return wl.field_i[param1 >> 5];
+          return ClipStackEntry.field_i[param1 >> 5];
         }
         if (param1 >= -65536) {
-          return -wl.field_i[-param1 >> 5];
+          return -ClipStackEntry.field_i[-param1 >> 5];
         }
-        return wl.field_i[134217728 / -param1] - 2048;
+        return ClipStackEntry.field_i[134217728 / -param1] - 2048;
     }
 
     abstract void drawFilled(int param0, int param1, int param2);
@@ -197,7 +197,7 @@ abstract class RasterShape {
           OpenGlBuffer.a(param6, param1, param2, param0, true, param5, param7, param3);
           return;
         }
-        if (hc.field_h >= param3 + param2) {
+        if (LineShape.field_h >= param3 + param2) {
           ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
           return;
         }

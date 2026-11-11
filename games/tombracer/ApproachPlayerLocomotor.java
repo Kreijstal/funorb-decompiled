@@ -98,8 +98,8 @@ final class ApproachPlayerLocomotor extends Locomotor {
           var8Lifetime2 = qva.headingFromVector((byte) -73, var5, var4);
           var9Lifetime2 = MouseInputHandler.sin2048((byte) 107, var8Lifetime2 >> 2);
           var10Lifetime2 = ModelAnimator.cos2048(0, var8Lifetime2 >> 2);
-          var11Lifetime2 = doa.a(2, this.field_v, var9Lifetime2);
-          var12 = doa.a(2, this.field_v, var10Lifetime2);
+          var11Lifetime2 = doa.multiplyFixedCoarse(2, this.field_v, var9Lifetime2);
+          var12 = doa.multiplyFixedCoarse(2, this.field_v, var10Lifetime2);
           this.trap.move((byte) -113, var11Lifetime2, var12);
           return;
         }
@@ -176,8 +176,8 @@ final class ApproachPlayerLocomotor extends Locomotor {
           var8Lifetime1 = qva.headingFromVector((byte) -73, var5, var4);
           var9Lifetime1 = MouseInputHandler.sin2048((byte) 107, var8Lifetime1 >> 2);
           var10Lifetime1 = ModelAnimator.cos2048(0, var8Lifetime1 >> 2);
-          var11Lifetime1 = doa.a(2, this.field_v, var9Lifetime1);
-          var12Lifetime1 = doa.a(2, this.field_v, var10Lifetime1);
+          var11Lifetime1 = doa.multiplyFixedCoarse(2, this.field_v, var9Lifetime1);
+          var12Lifetime1 = doa.multiplyFixedCoarse(2, this.field_v, var10Lifetime1);
           this.trap.move((byte) -113, var11Lifetime1, var12Lifetime1);
         }
         return;
@@ -195,10 +195,10 @@ final class ApproachPlayerLocomotor extends Locomotor {
         try {
           super.encode(param0, (byte) -83);
           param0.writeBits((byte) -128, this.field_q >> 16, 10);
-          param0.writeBits((byte) -25, this.b(0, this.field_v), 8);
+          param0.writeBits((byte) -25, this.encodeFixed16(0, this.field_v), 8);
           param0.writeBits((byte) -128, this.field_u ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bg.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bg.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
           this.field_q = 1048576;
           this.field_v = 131072;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         try {
           this.field_q = param1.readBits((byte) 44, 10) << 16;
           if (7 < param0.formatVersion) {
-            this.field_v = this.a(param1.readBits((byte) 44, 8), false);
+            this.field_v = this.decodeFixed16(param1.readBits((byte) 44, 8), false);
           } else {
             this.field_v = param1.readBits((byte) 44, 4) << 16;
           }
@@ -256,7 +256,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -297,7 +297,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
             this.setStopDistance(65, 104);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

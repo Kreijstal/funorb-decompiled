@@ -47,7 +47,7 @@ abstract class MatchPhase {
           ql.field_k.writeCipheredOpcode(96, -2988);
           ql.field_k.writeShort(-1477662136, param0.getId((byte) -82));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qra.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qra.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -55,7 +55,7 @@ abstract class MatchPhase {
 
     abstract boolean handleKey(char param0, int param1, int param2);
 
-    final static int a(int param0) {
+    final static int maxDialogHeight(int param0) {
         if (param0 != 96) {
           return 112;
         }
@@ -66,14 +66,14 @@ abstract class MatchPhase {
         this.field_k = new MenuEntry(0, OpenGlSceneLight.field_q[0], 0, false);
         if (param0 == -78) {
           this.field_k.field_b = this.field_k.getWidth(-163) / 2 + 10;
-          this.field_k.field_i = -25 + SwitchLinkList.b(0);
+          this.field_k.field_i = -25 + SwitchLinkList.getCanvasHeight(0);
           this.field_k.finishDropAnimation(false);
           this.field_a = new MenuInputState(1);
           return;
         }
         this.createMenuButton((byte) 97);
         this.field_k.field_b = this.field_k.getWidth(-163) / 2 + 10;
-        this.field_k.field_i = -25 + SwitchLinkList.b(0);
+        this.field_k.field_i = -25 + SwitchLinkList.getCanvasHeight(0);
         this.field_k.finishDropAnimation(false);
         this.field_a = new MenuInputState(1);
     }
@@ -237,7 +237,7 @@ abstract class MatchPhase {
           this.screen = param0;
           this.createMenuButton((byte) -78);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

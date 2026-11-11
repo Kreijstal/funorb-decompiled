@@ -17,7 +17,7 @@ abstract class jg {
           if (ArchiveNetworkClient.containsNonAlphanumeric((byte) -72, param2)) {
             return false;
           }
-          if (eba.hasUniformCharacters(param2, 6912)) {
+          if (SoftCacheEntry.hasUniformCharacters(param2, 6912)) {
             return false;
           }
           if (ld.isPasswordLengthInvalid(false, param2)) {
@@ -26,7 +26,7 @@ abstract class jg {
           if (param1.length() == 0) {
             return true;
           }
-          if (ne.containsTextOrReverse(true, param2, param1)) {
+          if (VertexStreamLayout.containsTextOrReverse(true, param2, param1)) {
             return false;
           }
           if (kv.a((byte) 36, param2, param1)) {
@@ -57,7 +57,7 @@ abstract class jg {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

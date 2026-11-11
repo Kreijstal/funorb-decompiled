@@ -58,7 +58,7 @@ final class sb {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -69,11 +69,11 @@ final class sb {
           S2CNextRoundPacket.field_a = param2;
           ControllerLocomotor.field_v = param3;
           LegacyOpenGlTurbulentTextureEffect.field_j = new SoundCache(qoa.field_b, ControllerLocomotor.field_v);
-          CauldronComponent.field_J = new u[237];
+          CauldronComponent.field_J = new PcmSample[237];
           int var5_int = -51 % ((param0 - 32) / 59);
           MenuEntry.field_j = new MusicTrack[4];
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

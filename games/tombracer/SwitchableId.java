@@ -4,12 +4,12 @@
 final class SwitchableId {
     static int field_b;
     private boolean dud;
-    static ft field_a;
+    static TextureFormat field_a;
     int id;
 
     final static void a(int param0) {
         rg.a((byte) -114);
-        SnakePitModel.a(ColouriseOperator.field_m[0].field_n, (byte) -104, mna.field_d, io.field_a, wg.field_i, ToolkitSelector.field_a);
+        SnakePitModel.a(ColouriseOperator.field_m[0].field_n, (byte) -104, mna.field_d, io.field_a, StatReportingScoringObserver.field_i, ToolkitSelector.field_a);
         if (param0 < 50) {
           SwitchableId.a(76);
         }
@@ -25,7 +25,7 @@ final class SwitchableId {
     public static void releaseStatics(boolean param0) {
         field_a = null;
         if (param0) {
-          field_a = (ft) null;
+          field_a = (TextureFormat) null;
         }
     }
 
@@ -37,9 +37,9 @@ final class SwitchableId {
         this.id = param0;
     }
 
-    final static ata decodeRasterShape(int param0, PacketBuffer param1) {
+    final static RectangleShape decodeRasterShape(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        ata stackIn_3_0 = null;
+        RectangleShape stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -48,7 +48,7 @@ final class SwitchableId {
           if (param0 != 4) {
             SwitchableId.releaseStatics(true);
           }
-          stackIn_3_0 = new ata(param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readUnsignedMedium(param0 - 32772), param1.readUnsignedMedium(-32768), param1.readUnsignedByte(255));
+          stackIn_3_0 = new RectangleShape(param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readUnsignedMedium(param0 - 32772), param1.readUnsignedMedium(-32768), param1.readUnsignedByte(255));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -60,7 +60,7 @@ final class SwitchableId {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class SwitchableId {
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -130,6 +130,6 @@ final class SwitchableId {
     }
 
     static {
-        field_a = new ft(4);
+        field_a = new TextureFormat(4);
     }
 }

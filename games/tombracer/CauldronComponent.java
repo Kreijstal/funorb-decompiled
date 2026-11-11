@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CauldronComponent extends SwitchComponent {
-    static u[] field_J;
+    static PcmSample[] field_J;
 
     final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
@@ -51,13 +51,13 @@ final class CauldronComponent extends SwitchComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
     final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
-          field_J = (u[]) null;
+          field_J = (PcmSample[]) null;
           return false;
         }
         return false;
@@ -119,7 +119,7 @@ final class CauldronComponent extends SwitchComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bia.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bia.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -142,13 +142,13 @@ final class CauldronComponent extends SwitchComponent {
     public static void releaseStatics(int param0) {
         field_J = null;
         if (param0 != 4194304) {
-          field_J = (u[]) null;
+          field_J = (PcmSample[]) null;
         }
     }
 
     final boolean hasInitialState(byte param0) {
         if (param0 != 93) {
-          field_J = (u[]) null;
+          field_J = (PcmSample[]) null;
           return true;
         }
         return true;

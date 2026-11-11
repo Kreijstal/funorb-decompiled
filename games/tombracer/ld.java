@@ -19,7 +19,7 @@ abstract class ld extends ota {
             ld.isPasswordLengthInvalid(true, (String) null);
           }
           if (param1 != null &&
-            param1.length() >= ik.field_f) {
+            param1.length() >= IntArrayRequest.field_f) {
             if (param1.length() > PortalBehaviour.field_n) {
               return true;
             }
@@ -36,11 +36,11 @@ abstract class ld extends ota {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    abstract na b(int param0);
+    abstract CubeTexture getCubeTexture(int param0);
 
     private ld() throws Throwable {
         throw new Error();

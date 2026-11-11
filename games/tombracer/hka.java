@@ -6,7 +6,7 @@ final class hka {
     static PlayerContextMenu field_b;
     static int field_a;
 
-    final static UnlockEntry a(int param0, PacketBuffer param1) {
+    final static UnlockEntry decodeUnlockEntry(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -19,7 +19,7 @@ final class hka {
         try {
           if (param0 != 0) {
             var4 = (PacketBuffer) null;
-            hka.a(62, (PacketBuffer) null);
+            hka.decodeUnlockEntry(62, (PacketBuffer) null);
           }
           var2_int = param1.readUnsignedByte(255);
           var3 = param1.readUnsignedByte(255);
@@ -35,7 +35,7 @@ final class hka {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ShaderEffect {
-    static nl field_a;
+    static LoginMethod field_a;
     static UiComponent field_b;
     HardwareGraphicsToolkit owner;
 
@@ -10,7 +10,7 @@ abstract class ShaderEffect {
 
     void onTextureMatrixChanged(boolean param0) {
         if (!param0) {
-          field_a = (nl) null;
+          field_a = (LoginMethod) null;
         }
     }
 
@@ -59,7 +59,7 @@ abstract class ShaderEffect {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ abstract class ShaderEffect {
         try {
           this.owner = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,6 +102,6 @@ abstract class ShaderEffect {
     abstract boolean isSupported(int param0);
 
     static {
-        field_a = new nl("email");
+        field_a = new LoginMethod("email");
     }
 }

@@ -23,7 +23,7 @@ final class S2CProfileUpdatePacket implements GamePacket {
         try {
           param0.queueUpdate(8, this.field_a);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bga.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bga.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -34,18 +34,18 @@ final class S2CProfileUpdatePacket implements GamePacket {
         try {
           this.field_a.write(param1, param0 ^ 32582);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bga.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bga.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
-          this.field_a = hka.a(0, param0);
+          this.field_a = hka.decodeUnlockEntry(0, param0);
           if (param1 != -19) {
             field_d = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

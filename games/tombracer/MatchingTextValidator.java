@@ -11,7 +11,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         try {
           this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             var3 = ((ValidationProvider) ((Object) this.field_k)).getValidationSource((byte) 89);
             if (var3 != null &&
               var3.getState(param0 ^ -4664) != LightSource.field_k) {
-              stackIn_5_0 = fp.field_c;
+              stackIn_5_0 = TextureCombineSource.field_c;
               return stackIn_5_0;
             }
           }
@@ -94,7 +94,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             this.validationMessageForText(63, (String) null);
           }
           if (!param1.equals(this.field_k.field_o)) {
-            stackIn_11_0 = fp.field_c;
+            stackIn_11_0 = TextureCombineSource.field_c;
           } else {
             stackIn_11_0 = LightSource.field_k;
           }
@@ -109,7 +109,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

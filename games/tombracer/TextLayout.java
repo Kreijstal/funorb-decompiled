@@ -6,7 +6,7 @@ import java.util.*;
 abstract class TextLayout {
     static String field_d;
     static ResourceArchive field_a;
-    kha[] field_c;
+    TextLine[] field_c;
     static float field_b;
 
     final static void startSinglePlayerMatch(int param0, byte param1, int param2) {
@@ -19,12 +19,12 @@ abstract class TextLayout {
         var4[0] = var3;
         int var5 = BufferedSocket.randomBelow(2147483647, new Random(), -76);
         wka.field_d = false;
-        id var6 = new id(param0, var5);
+        SinglePlayerCourseGenerator var6 = new SinglePlayerCourseGenerator(param0, var5);
         SecondaryNodeDequeIterator.field_a = new MatchScreen(false, var5, var4, 0, false, rga.getCourseRoomCount(26499, param0), 0, 1, param2, param0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, var6);
         SecondaryNodeDequeIterator.field_a.initPlayers((byte) -64);
         SecondaryNodeDequeIterator.field_a.showCharacterSelect((byte) -52);
         int var7 = -125 / ((param1 - 57) / 38);
-        iqa.field_c.enable(0);
+        ToolkitInstance.field_c.enable(0);
         ConstrainToRectangleLocomotor.showMenuScreen(false, -1, (byte) 92);
     }
 
@@ -38,7 +38,7 @@ abstract class TextLayout {
 
     final int findLineIndex(int param0, int param1) {
         int var3 = 0;
-        kha var4 = null;
+        TextLine var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
         for (var3 = param1; this.field_c.length > var3; var3++) {
           var4 = this.field_c[var3];
@@ -100,15 +100,15 @@ abstract class TextLayout {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final int getMaxLineWidth(int param0) {
         int var4 = 0;
         int var2;
-        kha[] var3;
-        kha var5;
+        TextLine[] var3;
+        TextLine var5;
         int var7;
         int var6;
         var7 = TombRacer.field_G ? 1 : 0;
@@ -142,7 +142,7 @@ abstract class TextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          var4 = (GameAssetLoader) (dma.field_l);
+          var4 = (GameAssetLoader) (OpenGlCubeTexture.field_l);
           var4.drawLoadingProgress(param2, (byte) 47, param3);
           haa.field_A = new SpriteData();
           haa.field_A.field_f = param1.getFileByName("", (byte) 127, "map.png");
@@ -170,13 +170,13 @@ abstract class TextLayout {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final int characterIndexAt(int param0, int param1, int param2) {
         int var5 = 0;
-        kha var6 = null;
+        TextLine var6 = null;
         int var7 = 0;
         int var8 = TombRacer.field_G ? 1 : 0;
         if (this.field_c == null ||
@@ -221,13 +221,13 @@ abstract class TextLayout {
 
     final int getCaretX(byte param0, int param1) {
         int var4 = 0;
-        kha var5 = null;
+        TextLine var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param0 != -59) {
           return 84;
         }
-        kha[] var7 = this.field_c;
-        kha[] var3 = var7;
+        TextLine[] var7 = this.field_c;
+        TextLine[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
           if (param1 < var5.field_c.length) {

@@ -79,7 +79,7 @@ final class LineNoiseOperator extends TextureOperator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class LineNoiseOperator extends TextureOperator {
               }
               for (var23 = var9; var23 < var11; var23++) {
                 var24 = var21 + 1024 + (var23 - var9) * var20;
-                var25 = var23 & una.textureWidthMask;
+                var25 = var23 & GpuDataType.textureWidthMask;
                 var26 = var16Lifetime2 & hba.textureHeightMask;
                 if (var15 != 0) {
                   var31[var26][var25] = var24;

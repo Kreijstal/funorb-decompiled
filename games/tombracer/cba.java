@@ -23,9 +23,9 @@ final class cba {
         }
     }
 
-    final static qo decodeRasterShape(int param0, PacketBuffer param1) {
+    final static EllipseShape decodeRasterShape(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        qo stackIn_3_0 = null;
+        EllipseShape stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -34,7 +34,7 @@ final class cba {
           if (param0 != 64) {
             field_a = (java.applet.Applet) null;
           }
-          stackIn_3_0 = new qo(param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readUnsignedMedium(param0 - 32832), param1.readUnsignedMedium(-32768), param1.readUnsignedByte(param0 ^ 191));
+          stackIn_3_0 = new EllipseShape(param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readShort(false), param1.readUnsignedMedium(param0 - 32832), param1.readUnsignedMedium(-32768), param1.readUnsignedByte(param0 ^ 191));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,7 +46,7 @@ final class cba {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

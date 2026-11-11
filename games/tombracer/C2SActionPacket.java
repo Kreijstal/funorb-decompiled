@@ -25,11 +25,11 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
             C2SActionPacket.compileAssemblyProgram(70, -25, (String) null, (OpenGlToolkit) null);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            bv.field_xb[var1_intLifetime1] = 0L;
+            TabbedPanel.field_xb[var1_intLifetime1] = 0L;
           }
           ScoringObserverFactory.field_a = 0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ea.C(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ea.C(" + param0 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           param1.writeBits((byte) -128, this.hash, 8);
           param1.writeBits((byte) 30, this.field_h, 8);
           for (var3_int = 0; this.orders.length > var3_int; var3_int++) {
-            param1.writeBits((byte) 3, IntrusiveDequeCursor.a(-113, this.orders[var3_int]), 7);
+            param1.writeBits((byte) 3, IntrusiveDequeCursor.encodeOrder(-113, this.orders[var3_int]), 7);
           }
           if (param0 != 200) {
             C2SActionPacket.releaseStatics(-52);
@@ -97,7 +97,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           int var5_int = 33 % ((-57 - param0) / 48);
           param2.writeByte(param1, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ea.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ea.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -135,12 +135,12 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         }
     }
 
-    final static pva compileAssemblyProgram(int param0, int param1, String param2, OpenGlToolkit param3) {
+    final static ArbProgramHandle compileAssemblyProgram(int param0, int param1, String param2, OpenGlToolkit param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        pva stackIn_2_0 = null;
+        ArbProgramHandle stackIn_2_0 = null;
         Object stackIn_6_0 = null;
-        pva stackIn_8_0 = null;
+        ArbProgramHandle stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -149,7 +149,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 17) {
-            stackIn_2_0 = (pva) null;
+            stackIn_2_0 = (ArbProgramHandle) null;
             return stackIn_2_0;
           }
           var4_int = jaggl.OpenGL.glGenProgramARB();
@@ -159,10 +159,10 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           if (-1 != RenderLayer.field_b[0]) {
             jaggl.OpenGL.glBindProgramARB(param1, 0);
             stackIn_6_0 = null;
-            return (pva) (stackIn_6_0);
+            return (ArbProgramHandle) (stackIn_6_0);
           }
           jaggl.OpenGL.glBindProgramARB(param1, 0);
-          stackIn_8_0 = new pva(param3, param1, var4_int);
+          stackIn_8_0 = new ArbProgramHandle(param3, param1, var4_int);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -180,7 +180,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           this.hash = param0.readBits((byte) 44, 8);
           this.field_h = param0.readBits((byte) 44, 8);
           for (var3_int = 0; this.orders.length > var3_int; var3_int++) {
-            this.orders[var3_int] = DraggableWidget.a(param0.readBits((byte) 44, 7), -6487);
+            this.orders[var3_int] = DraggableWidget.decodeOrder(param0.readBits((byte) 44, 7), -6487);
           }
           if (param1 != -19) {
             field_l = (ModelData[]) null;
@@ -218,7 +218,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

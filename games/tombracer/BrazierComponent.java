@@ -61,7 +61,7 @@ final class BrazierComponent extends PrefabComponent {
           var4 = new uca[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!CircleMovementLocomotor.readBitFlag(5907, param0)) {
-              var6 = param0.readBits((byte) 44, nma.signedBitLength(false, var5 - 1));
+              var6 = param0.readBits((byte) 44, CurveShape.signedBitLength(false, var5 - 1));
               var4[var5] = var4[var6];
             } else {
               var6_ref_uca = new uca();
@@ -88,7 +88,7 @@ final class BrazierComponent extends PrefabComponent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class BrazierComponent extends PrefabComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class BrazierComponent extends PrefabComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

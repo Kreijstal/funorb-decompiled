@@ -39,23 +39,23 @@ final class no extends MatchOverlay {
           var3 = 60;
           var3 = var2 * (var3 / var2);
           if (this.field_t < 20) {
-            this.field_l = SwitchLinkList.b(0) - 10 - this.field_t * (var3 / 2) / 20;
-            if (this.field_l > SwitchLinkList.b(0) + 10) {
+            this.field_l = SwitchLinkList.getCanvasHeight(0) - 10 - this.field_t * (var3 / 2) / 20;
+            if (this.field_l > SwitchLinkList.getCanvasHeight(0) + 10) {
               this.finished = true;
               this.unlink(94);
             }
             return;
           }
           if (this.field_t < 100) {
-            this.field_l = -10 + (SwitchLinkList.b(0) - var3 / 2);
-            if (this.field_l > SwitchLinkList.b(0) + 10) {
+            this.field_l = -10 + (SwitchLinkList.getCanvasHeight(0) - var3 / 2);
+            if (this.field_l > SwitchLinkList.getCanvasHeight(0) + 10) {
               this.finished = true;
               this.unlink(94);
             }
             return;
           }
           this.field_l = this.field_l + 10;
-          if (this.field_l > SwitchLinkList.b(0) + 10) {
+          if (this.field_l > SwitchLinkList.getCanvasHeight(0) + 10) {
             this.finished = true;
             this.unlink(94);
           }
@@ -70,23 +70,23 @@ final class no extends MatchOverlay {
           var3Lifetime1 = 60;
           var3Lifetime1 = var2Lifetime1 * (var3Lifetime1 / var2Lifetime1);
           if (this.field_t < 20) {
-            this.field_l = SwitchLinkList.b(0) - 10 - this.field_t * (var3Lifetime1 / 2) / 20;
-            if (this.field_l > SwitchLinkList.b(0) + 10) {
+            this.field_l = SwitchLinkList.getCanvasHeight(0) - 10 - this.field_t * (var3Lifetime1 / 2) / 20;
+            if (this.field_l > SwitchLinkList.getCanvasHeight(0) + 10) {
               this.finished = true;
               this.unlink(94);
             }
             return;
           }
           if (this.field_t < 100) {
-            this.field_l = -10 + (SwitchLinkList.b(0) - var3Lifetime1 / 2);
-            if (this.field_l > SwitchLinkList.b(0) + 10) {
+            this.field_l = -10 + (SwitchLinkList.getCanvasHeight(0) - var3Lifetime1 / 2);
+            if (this.field_l > SwitchLinkList.getCanvasHeight(0) + 10) {
               this.finished = true;
               this.unlink(94);
             }
             return;
           }
           this.field_l = this.field_l + 10;
-          if (this.field_l > SwitchLinkList.b(0) + 10) {
+          if (this.field_l > SwitchLinkList.getCanvasHeight(0) + 10) {
             this.finished = true;
             this.unlink(94);
           }
@@ -102,8 +102,8 @@ final class no extends MatchOverlay {
           var3Lifetime2 = 60;
           var3Lifetime2 = var2Lifetime2 * (var3Lifetime2 / var2Lifetime2);
           if (this.field_t < 20) {
-            this.field_l = SwitchLinkList.b(0) - 10 - this.field_t * (var3Lifetime2 / 2) / 20;
-            if (this.field_l > SwitchLinkList.b(0) + 10) {
+            this.field_l = SwitchLinkList.getCanvasHeight(0) - 10 - this.field_t * (var3Lifetime2 / 2) / 20;
+            if (this.field_l > SwitchLinkList.getCanvasHeight(0) + 10) {
               this.finished = true;
               this.unlink(94);
             }
@@ -112,14 +112,14 @@ final class no extends MatchOverlay {
           if (this.field_t >= 100) {
             this.field_l = this.field_l + 10;
           } else {
-            this.field_l = -10 + (SwitchLinkList.b(0) - var3Lifetime2 / 2);
-            if (this.field_l > SwitchLinkList.b(0) + 10) {
+            this.field_l = -10 + (SwitchLinkList.getCanvasHeight(0) - var3Lifetime2 / 2);
+            if (this.field_l > SwitchLinkList.getCanvasHeight(0) + 10) {
               this.finished = true;
               this.unlink(94);
             }
             return;
           }
-          if (this.field_l <= SwitchLinkList.b(0) + 10) {
+          if (this.field_l <= SwitchLinkList.getCanvasHeight(0) + 10) {
             return;
           }
           this.finished = true;
@@ -136,23 +136,23 @@ final class no extends MatchOverlay {
         if (this.field_t >= 20) {
           if (this.field_t >= 100) {
             this.field_l = this.field_l + 10;
-            if (this.field_l <= SwitchLinkList.b(0) + 10) {
+            if (this.field_l <= SwitchLinkList.getCanvasHeight(0) + 10) {
               return;
             }
             this.finished = true;
             this.unlink(94);
             return;
           }
-          this.field_l = -10 + (SwitchLinkList.b(0) - var3Lifetime3 / 2);
-          if (this.field_l <= SwitchLinkList.b(0) + 10) {
+          this.field_l = -10 + (SwitchLinkList.getCanvasHeight(0) - var3Lifetime3 / 2);
+          if (this.field_l <= SwitchLinkList.getCanvasHeight(0) + 10) {
             return;
           }
           this.finished = true;
           this.unlink(94);
           return;
         }
-        this.field_l = SwitchLinkList.b(0) - 10 - this.field_t * (var3Lifetime3 / 2) / 20;
-        if (this.field_l > SwitchLinkList.b(0) + 10) {
+        this.field_l = SwitchLinkList.getCanvasHeight(0) - 10 - this.field_t * (var3Lifetime3 / 2) / 20;
+        if (this.field_l > SwitchLinkList.getCanvasHeight(0) + 10) {
           this.finished = true;
           this.unlink(94);
           return;
@@ -197,7 +197,7 @@ final class no extends MatchOverlay {
           var12 = var3 - var10 * 2;
           var13 = -var8 + (-var9 - 24 + var11);
           var18 = ShowLevelSetCommand.achievementNames[this.field_n].toUpperCase();
-          var15 = MatchStatistics.field_n.a(var18, (byte) -117);
+          var15 = MatchStatistics.field_n.stringWidth(var18, (byte) -117);
           while (var15 > var13) {
             var13 = var13 + var4;
             var11 = var11 + var4;
@@ -215,7 +215,7 @@ final class no extends MatchOverlay {
         var12Lifetime1 = var3 - var10Lifetime1 * 2;
         var13Lifetime1 = -var8 + (-var9Lifetime1 - 24 + var11Lifetime1);
         String var17 = ShowLevelSetCommand.achievementNames[this.field_n].toUpperCase();
-        var15Lifetime1 = MatchStatistics.field_n.a(var17, (byte) -117);
+        var15Lifetime1 = MatchStatistics.field_n.stringWidth(var17, (byte) -117);
         while (var15Lifetime1 > var13Lifetime1) {
           var13Lifetime1 = var13Lifetime1 + var4;
           var11Lifetime1 = var11Lifetime1 + var4;
@@ -242,18 +242,18 @@ final class no extends MatchOverlay {
           wp.field_a = param0;
           OpenGlUnderwaterEffect.field_q = 2;
           var5 = (CharSequence) ((Object) param0);
-          mn.field_n = jd.normalizeDisplayName(1, var5);
-          ica.field_b = param1;
+          mn.field_n = OpenGlTexture3D.normalizeDisplayName(1, var5);
+          TextureCombineOperation.field_b = param1;
           DynamicGeometryBuffer.field_c = true;
           if (param2 <= 108) {
-            no.b(true);
+            no.releaseStatics(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "no.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "no.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_o = (String[][]) null;
         field_r = (int[][]) null;
         field_u = (int[][]) null;
@@ -273,9 +273,9 @@ final class no extends MatchOverlay {
         try {
           this.field_j = 10;
           this.field_n = param1;
-          this.field_l = SwitchLinkList.b(0);
+          this.field_l = SwitchLinkList.getCanvasHeight(0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

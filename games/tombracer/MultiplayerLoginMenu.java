@@ -52,17 +52,17 @@ final class MultiplayerLoginMenu extends MenuScreen {
 
     final void draw(byte param0, boolean param1) {
         int var3 = this.field_q.getPosition(param0 + 111);
-        gg.field_f.draw(aaa.a(false) - gg.field_f.width() >> 1, var3 + gg.field_f.height() / 2);
+        HardwareModelIndexData.field_f.draw(LegacyOpenGlWaterTextures.getCanvasWidth(false) - HardwareModelIndexData.field_f.width() >> 1, var3 + HardwareModelIndexData.field_f.height() / 2);
         this.h(var3, 3);
         super.draw(param0, param1);
     }
 
     final int getItemX(byte param0, int param1) {
         if (param0 >= 111) {
-          return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].getWidth(-163) / 2) + param1 * this.items[param1].getWidth(-163));
+          return LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2 + (-(this.items.length * this.items[param1].getWidth(-163) / 2) + param1 * this.items[param1].getWidth(-163));
         }
         this.field_q = (DropAnimation) null;
-        return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].getWidth(-163) / 2) + param1 * this.items[param1].getWidth(-163));
+        return LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2 + (-(this.items.length * this.items[param1].getWidth(-163) / 2) + param1 * this.items[param1].getWidth(-163));
     }
 
     private final void h(int param0, int param1) {
@@ -75,14 +75,14 @@ final class MultiplayerLoginMenu extends MenuScreen {
         String var9 = null;
         if (param1 == 3) {
           var3 = 500;
-          var4 = aaa.a(false) / 2 - var3 / 2;
+          var4 = LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2 - var3 / 2;
           var5 = param0 + 100;
-          MembersUpsellMenu.drawCentredTextWithShadow(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, -30 + gg.field_f.height() / 2 + var5, aaa.a(false) / 2, -1);
-          var6 = kn.field_p;
+          MembersUpsellMenu.drawCentredTextWithShadow(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, -30 + HardwareModelIndexData.field_f.height() / 2 + var5, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -1);
+          var6 = TooltipRenderer.field_p;
           var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
           var8 = 3 * var7;
-          var9 = aaa.field_e;
-          SocketConnector.drawWrappedText(var9, 1, var6, 2431750, var7, var8, 1, gg.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
+          var9 = LegacyOpenGlWaterTextures.field_e;
+          SocketConnector.drawWrappedText(var9, 1, var6, 2431750, var7, var8, 1, HardwareModelIndexData.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
           return;
         }
     }
@@ -93,7 +93,7 @@ final class MultiplayerLoginMenu extends MenuScreen {
         try {
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

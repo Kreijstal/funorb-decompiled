@@ -74,7 +74,7 @@ final class dh {
             var60 = var44.field_q;
             C2SChooseRewardPacket.scatterFacesByPriority(0, 2507, var60, 0, DrawOfferMenu.field_q);
           } else {
-            ne.a((byte) -124);
+            VertexStreamLayout.a((byte) -124);
           }
           var54 = new int[param3.field_A];
           var49 = var54;
@@ -203,7 +203,7 @@ final class dh {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class dh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

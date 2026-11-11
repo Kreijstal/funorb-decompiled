@@ -3,7 +3,7 @@
  */
 final class PlatformComponent extends PrefabComponent {
     private int field_G;
-    static ica field_F;
+    static TextureCombineOperation field_F;
     static long field_H;
 
     public static void releaseStatics(int param0) {
@@ -18,7 +18,7 @@ final class PlatformComponent extends PrefabComponent {
           super.encode(param0, param1);
           param1.writeBits((byte) -128, this.field_G, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ln.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ln.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class PlatformComponent extends PrefabComponent {
           param1.previous.next = param1;
           param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ln.VB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ln.VB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class PlatformComponent extends PrefabComponent {
         try {
           this.field_G = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class PlatformComponent extends PrefabComponent {
 
     final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
-          field_F = (ica) null;
+          field_F = (TextureCombineOperation) null;
           return false;
         }
         return false;
@@ -153,7 +153,7 @@ final class PlatformComponent extends PrefabComponent {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -177,6 +177,6 @@ final class PlatformComponent extends PrefabComponent {
     }
 
     static {
-        field_F = new ica();
+        field_F = new TextureCombineOperation();
     }
 }

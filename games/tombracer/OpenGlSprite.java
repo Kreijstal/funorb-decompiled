@@ -4,7 +4,7 @@
 final class OpenGlSprite extends ToolkitSprite {
     private int field_i;
     LegacyOpenGlSpriteTexture field_a;
-    static ura field_d;
+    static TextureTransformMode field_d;
     private int field_h;
     private int field_e;
     private boolean field_b;
@@ -43,7 +43,7 @@ final class OpenGlSprite extends ToolkitSprite {
           }
           this.field_a.uploadInts(param3, param5, param7, param0, param6, param4, (byte) -111, true, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jja.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jja.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -331,14 +331,14 @@ final class OpenGlSprite extends ToolkitSprite {
         this.field_b = false;
         try {
           this.field_c = param0;
-          this.field_a = mga.a(param2, param1, param3, param5, true, param4, false, param0);
+          this.field_a = QueuedHint.createIntSpriteTexture(param2, param1, param3, param5, true, param4, false, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        field_d = new ura();
+        field_d = new TextureTransformMode();
         field_l = "Please send me news and updates (I can unsubscribe at any time)";
         field_k = "Return to lobby";
     }

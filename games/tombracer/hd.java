@@ -49,12 +49,12 @@ final class hd {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     final static void setFrameRate(int param0, int param1) {
-        mga.nanosPerFrame = 1000000000L / (long)param0;
+        QueuedHint.nanosPerFrame = 1000000000L / (long)param0;
         if (param1 <= 97) {
           field_a = (boolean[]) null;
         }

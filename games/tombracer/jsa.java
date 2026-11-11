@@ -94,7 +94,7 @@ final class jsa extends SingleChildWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class jsa extends SingleChildWidget {
         if (param0) {
           return;
         }
-        bf.field_a = param1;
+        SoftwareRenderTarget.field_a = param1;
     }
 
     public static void releaseStatics(int param0) {

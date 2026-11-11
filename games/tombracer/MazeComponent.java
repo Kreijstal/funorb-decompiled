@@ -69,7 +69,7 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -233,7 +233,7 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ abstract class MazeComponent extends PrefabComponent {
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
         Object stackIn_33_0 = null;
-        tv stackIn_33_1 = null;
+        ContextMenuRow stackIn_33_1 = null;
         int stackIn_57_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -275,10 +275,10 @@ abstract class MazeComponent extends PrefabComponent {
         int var7 = 0;
         int var8 = 0;
         UiComponent var8_ref_jea = null;
-        tv var9_ref_tv = null;
+        ContextMenuRow var9_ref_tv = null;
         int var9 = 0;
         int var10 = 0;
-        tv var10_ref_tv = null;
+        ContextMenuRow var10_ref_tv = null;
         int var12 = 0;
         int var13 = 0;
         var13 = TombRacer.field_G ? 1 : 0;
@@ -288,7 +288,7 @@ abstract class MazeComponent extends PrefabComponent {
           if (param0) {
             stackIn_4_0 = GameKeyHandler.field_a;
           } else {
-            stackIn_4_0 = fp.field_e;
+            stackIn_4_0 = TextureCombineSource.field_e;
           }
           dga.a(stackIn_4_0, 199);
           rm.field_e.a(0, 0, param1 + 18, C2SRoomResultPacket.field_c.field_G, -2 + C2SRoomResultPacket.field_c.field_t - 40);
@@ -302,7 +302,7 @@ abstract class MazeComponent extends PrefabComponent {
           }
           ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 18, -23776, param1 + ToolkitSelector.field_a, 0);
           RopeBridgeComponent.field_F.setBounds(42 + io.field_a, 18, param1 - 23778, 2 + ToolkitSelector.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
-          tn.field_n.setPaneBounds(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (ToolkitSelector.field_a + 22), 20 + (2 + ToolkitSelector.field_a));
+          MidiPatch.field_n.setPaneBounds(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (ToolkitSelector.field_a + 22), 20 + (2 + ToolkitSelector.field_a));
           bc.field_b.setBounds(C2SRoomResultPacket.field_c.field_G, 40, -23776, -40 + C2SRoomResultPacket.field_c.field_t, 0);
           StatusEffect.field_g.setBounds(dka.field_b.field_G, 30, -23776, 0, 0);
           C2SSubmitSettingsPacket.field_g.setBounds(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
@@ -332,12 +332,12 @@ abstract class MazeComponent extends PrefabComponent {
                 var7_ref_jea = SimpleConditionBehaviour.field_p[var6];
                 SimpleConditionBehaviour.field_p[var6].field_t = 0;
                 var7_ref_jea.field_G = 0;
-                for (var8 = 0; var8 < bf.field_b[var6].length; var8++) {
+                for (var8 = 0; var8 < SoftwareRenderTarget.field_b[var6].length; var8++) {
                   stackIn_33_0 = null;
-                  stackIn_33_1 = bf.field_b[var6][var8];
+                  stackIn_33_1 = SoftwareRenderTarget.field_b[var6][var8];
                   if (stackIn_33_0 != stackIn_33_1) {
-                    var9_ref_tv = bf.field_b[var6][var8];
-                    bf.field_b[var6][var8].field_t = 0;
+                    var9_ref_tv = SoftwareRenderTarget.field_b[var6][var8];
+                    SoftwareRenderTarget.field_b[var6][var8].field_t = 0;
                     var9_ref_tv.field_G = 0;
                   }
                 }
@@ -346,10 +346,10 @@ abstract class MazeComponent extends PrefabComponent {
                 var7_ref_jea = SimpleConditionBehaviour.field_p[var6];
                 SimpleConditionBehaviour.field_p[var6].field_t = 0;
                 var7_ref_jea.field_G = 0;
-                for (var8 = 0; var8 < bf.field_b[var6].length; var8++) {
-                  if (null != bf.field_b[var6][var8]) {
-                    var9_ref_tv = bf.field_b[var6][var8];
-                    bf.field_b[var6][var8].field_t = 0;
+                for (var8 = 0; var8 < SoftwareRenderTarget.field_b[var6].length; var8++) {
+                  if (null != SoftwareRenderTarget.field_b[var6][var8]) {
+                    var9_ref_tv = SoftwareRenderTarget.field_b[var6][var8];
+                    SoftwareRenderTarget.field_b[var6][var8].field_t = 0;
                     var9_ref_tv.field_G = 0;
                   }
                 }
@@ -372,10 +372,10 @@ abstract class MazeComponent extends PrefabComponent {
                   var8_ref_jea = SimpleConditionBehaviour.field_p[var6];
                   SimpleConditionBehaviour.field_p[var6].field_t = 0;
                   var8_ref_jea.field_G = 0;
-                  for (var9 = 0; var9 < bf.field_b[var6].length; var9++) {
-                    if (bf.field_b[var6][var9] != null) {
-                      var10_ref_tv = bf.field_b[var6][var9];
-                      bf.field_b[var6][var9].field_t = 0;
+                  for (var9 = 0; var9 < SoftwareRenderTarget.field_b[var6].length; var9++) {
+                    if (SoftwareRenderTarget.field_b[var6][var9] != null) {
+                      var10_ref_tv = SoftwareRenderTarget.field_b[var6][var9];
+                      SoftwareRenderTarget.field_b[var6][var9].field_t = 0;
                       var10_ref_tv.field_G = 0;
                     }
                   }
@@ -383,20 +383,20 @@ abstract class MazeComponent extends PrefabComponent {
                   SimpleConditionBehaviour.field_p[var6].setBounds(103, var3, -23776, var5, 5);
                   var8 = 110;
                   if (param0) {
-                    bf.field_b[var6][0].setRowBounds(38, var8, pda.field_c, var3, 0, 2, var5);
+                    SoftwareRenderTarget.field_b[var6][0].setRowBounds(38, var8, pda.field_c, var3, 0, 2, var5);
                     var8 += 40;
                   } else {
-                    if (bf.field_b[var6][0] != null) {
-                      var9_ref_tv = bf.field_b[var6][0];
-                      bf.field_b[var6][0].field_t = 0;
+                    if (SoftwareRenderTarget.field_b[var6][0] != null) {
+                      var9_ref_tv = SoftwareRenderTarget.field_b[var6][0];
+                      SoftwareRenderTarget.field_b[var6][0].field_t = 0;
                       var9_ref_tv.field_G = 0;
                     }
                   }
                   var9 = -5 + dka.field_b.field_G - (var8 - 2);
-                  var10 = bf.field_b[var6].length - 1;
+                  var10 = SoftwareRenderTarget.field_b[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9 / var10;
-                    bf.field_b[var6][var11 + 1].setRowBounds(var9 * (1 + var11) / var10 - 2 - var12, var8 + var12, pda.field_c, var3, param1 ^ 2, 2, var5);
+                    SoftwareRenderTarget.field_b[var6][var11 + 1].setRowBounds(var9 * (1 + var11) / var10 - 2 - var12, var8 + var12, pda.field_c, var3, param1 ^ 2, 2, var5);
                   }
                   var5 = var5 + (2 + var3);
                 }
@@ -405,16 +405,16 @@ abstract class MazeComponent extends PrefabComponent {
           }
           PlayerModel.field_a.setBounds(360, -134 + (SoftwareRasterizer.height - 10), -23776, 10, SoftwareRasterizer.width - 360 >> 1);
           S2CEventPacket.field_e.setBounds(PlayerModel.field_a.field_G, 24, -23776, 0, 0);
-          vs.field_R.setBounds(PlayerModel.field_a.field_G, -24 + PlayerModel.field_a.field_t, -23776, 24, 0);
-          vs.field_R.field_w = Player.createScrollbarSprites(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
-          RasterShape.field_e.setBounds(-10 + vs.field_R.field_G, -24 + vs.field_R.field_t - 12, -23776, 5, 5);
-          Trap.field_q.setBounds(80, 24, -23776, -5 + (vs.field_R.field_t - 24), (-80 + vs.field_R.field_G) / 2);
+          ProgressDialog.field_R.setBounds(PlayerModel.field_a.field_G, -24 + PlayerModel.field_a.field_t, -23776, 24, 0);
+          ProgressDialog.field_R.field_w = Player.createScrollbarSprites(ProgressDialog.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
+          RasterShape.field_e.setBounds(-10 + ProgressDialog.field_R.field_G, -24 + ProgressDialog.field_R.field_t - 12, -23776, 5, 5);
+          Trap.field_q.setBounds(80, 24, -23776, -5 + (ProgressDialog.field_R.field_t - 24), (-80 + ProgressDialog.field_R.field_G) / 2);
           GameFont.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "hn.CC(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "hn.CC(" + param0 + ',' + param1 + ')');
         }
     }
 

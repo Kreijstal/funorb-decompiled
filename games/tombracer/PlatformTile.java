@@ -75,12 +75,12 @@ final class PlatformTile implements Renderable {
 
     public final void render(int param0, Camera param1) {
         try {
-          gqa.drawModelAt(this.field_a, -83584144, this.getRenderY((byte) 123), this.getRenderX((byte) 122), this.field_g.getModel((byte) 74), this.getRenderZ((byte) -88));
+          ChatMessage.drawModelAt(this.field_a, -83584144, this.getRenderY((byte) 123), this.getRenderX((byte) 122), this.field_g.getModel((byte) 74), this.getRenderZ((byte) -88));
           if (param0 < 103) {
             this.updateAnimation(-75);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "eh.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "eh.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

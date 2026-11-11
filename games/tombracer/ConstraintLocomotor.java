@@ -62,7 +62,7 @@ abstract class ConstraintLocomotor extends Locomotor {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ abstract class ConstraintLocomotor extends Locomotor {
           param0.writeBits((byte) -39, dqa.toOffsetBinary(true, this.field_o >> 16, 12), 12);
           param0.writeBits((byte) 45, dqa.toOffsetBinary(true, this.field_q >> 16, 12), 12);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "osa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "osa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

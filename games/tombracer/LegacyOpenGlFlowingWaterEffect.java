@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
-    private aaa field_c;
+    private LegacyOpenGlWaterTextures field_c;
     private OpenGlDisplayLists field_d;
 
     final static String formatText(byte param0, String param1, String[] param2) {
@@ -114,7 +114,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -131,10 +131,10 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           this.toolkit.bindTexture(true, param2);
           this.toolkit.setTextureCombineMode(1, param0);
           if (param1 != 32221) {
-            this.field_c = (aaa) null;
+            this.field_c = (LegacyOpenGlWaterTextures) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -149,7 +149,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
 
     final void refreshState(boolean param0, int param1) {
         if (param1 <= 77) {
-          this.field_c = (aaa) null;
+          this.field_c = (LegacyOpenGlWaterTextures) null;
         }
     }
 
@@ -213,7 +213,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
         this.toolkit.setActiveTextureUnit(0, !param0 ? true : false);
     }
 
-    LegacyOpenGlFlowingWaterEffect(OpenGlToolkit param0, aaa param1) {
+    LegacyOpenGlFlowingWaterEffect(OpenGlToolkit param0, LegacyOpenGlWaterTextures param1) {
         super(param0);
         try {
           this.field_c = param1;
@@ -240,7 +240,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           this.toolkit.setActiveTextureUnit(0, true);
           this.field_d.endList((byte) 10);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -367,7 +367,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 }

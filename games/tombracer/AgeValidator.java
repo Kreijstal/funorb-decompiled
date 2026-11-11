@@ -6,7 +6,7 @@ final class AgeValidator extends TextFieldValidator {
     static String field_l;
     static int field_j;
 
-    final static int a(int param0, boolean param1, int param2) {
+    final static int computePan(int param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var3Lifetime1;
@@ -14,13 +14,13 @@ final class AgeValidator extends TextFieldValidator {
         if (param1) {
           var3 = param2 - param0 >> 16;
           var4 = 128 + 128 * var3 / 256;
-          var4 = za.clampValue(0, 40, 255, var4);
+          var4 = GraphicsHeap.clampValue(0, 40, 255, var4);
           return var4;
         }
         field_j = -65;
         var3Lifetime1 = param2 - param0 >> 16;
         var4Lifetime1 = 128 + 128 * var3Lifetime1 / 256;
-        var4Lifetime1 = za.clampValue(0, 40, 255, var4Lifetime1);
+        var4Lifetime1 = GraphicsHeap.clampValue(0, 40, 255, var4Lifetime1);
         return var4Lifetime1;
     }
 
@@ -39,7 +39,7 @@ final class AgeValidator extends TextFieldValidator {
         try {
           var4 = (CharSequence) ((Object) param1);
           if (!SoundEventQueue.isDecimalNumber(var4, -3)) {
-            stackIn_2_0 = fp.field_c;
+            stackIn_2_0 = TextureCombineSource.field_c;
             return stackIn_2_0;
           }
           if (param0 != 14) {
@@ -52,7 +52,7 @@ final class AgeValidator extends TextFieldValidator {
             130 >= var3_int) {
             return LightSource.field_k;
           }
-          stackIn_10_0 = fp.field_c;
+          stackIn_10_0 = TextureCombineSource.field_c;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,7 +64,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class AgeValidator extends TextFieldValidator {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validateText((byte) 14, param1) == fp.field_c) {
+          if (this.validateText((byte) 14, param1) == TextureCombineSource.field_c) {
             stackIn_2_0 = SoundEvent.field_l;
             return stackIn_2_0;
           }
@@ -101,7 +101,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

@@ -48,7 +48,7 @@ abstract class ArchiveNetworkClient {
     final static void resendQueuedListRequests(int param0, int param1) {
         int var3 = 0;
         toa var4 = null;
-        ik var5 = null;
+        IntArrayRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
@@ -61,16 +61,16 @@ abstract class ArchiveNetworkClient {
             uca.a(param0, var4, (byte) 93);
             var4 = (toa) (BridgeModel.field_m.next(113));
           }
-          var5 = (ik) (Player.field_I.first(param1 ^ 91));
+          var5 = (IntArrayRequest) (Player.field_I.first(param1 ^ 91));
           while (var5 != null) {
             MenuEntry.a(param0, -23814, var5);
-            var5 = (ik) (Player.field_I.next(121));
+            var5 = (IntArrayRequest) (Player.field_I.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "qda.B(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "qda.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -85,11 +85,11 @@ abstract class ArchiveNetworkClient {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (4 <= wg.field_l.field_a) {
-            if (wg.field_l.field_n == -1) {
+          if (4 <= StatReportingScoringObserver.field_l.field_a) {
+            if (StatReportingScoringObserver.field_l.field_n == -1) {
               return 3;
             }
-            if (wg.field_l.field_n != -2) {
+            if (StatReportingScoringObserver.field_l.field_n != -2) {
               return 1;
             }
             return 4;
@@ -114,7 +114,7 @@ abstract class ArchiveNetworkClient {
             if (ColourKeyOperator.field_m == 2) {
               jia.field_a = new BufferedSocket((java.net.Socket) (S2CProfileUpdatePacket.field_c.field_f), oi.field_a);
               var2 = new PacketBuffer(13);
-              C2SActionPacket.a((byte) 107, pu.field_b, var2, wk.field_n, joa.field_a);
+              C2SActionPacket.a((byte) 107, pu.field_b, var2, MapWaypoint.field_n, GzipInflater.field_a);
               var2.writeByte(15, 0);
               var2.writeInt(CourseLayout.field_a, (byte) 117);
               jia.field_a.write(var2.payload, 0, 13, 106);
@@ -140,7 +140,7 @@ abstract class ArchiveNetworkClient {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
-            wg.field_l.attachConnection(jia.field_a, (byte) 54, StatefulWidgetPainter.field_q);
+            StatReportingScoringObserver.field_l.attachConnection(jia.field_a, (byte) 54, StatefulWidgetPainter.field_q);
             ColourKeyOperator.field_m = 0;
             jia.field_a = null;
             S2CProfileUpdatePacket.field_c = null;
@@ -206,7 +206,7 @@ abstract class ArchiveNetworkClient {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ abstract class ArchiveNetworkClient {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

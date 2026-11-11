@@ -189,7 +189,7 @@ final class OpenGlFont extends GameFont {
               }
             }
           }
-          this.field_d = mga.a(var6Lifetime1, var6Lifetime1, var33, 0, true, 0, false, param0);
+          this.field_d = QueuedHint.createIntSpriteTexture(var6Lifetime1, var6Lifetime1, var33, 0, true, 0, false, param0);
           this.field_g = false;
         } else {
           var30 = new byte[var6Lifetime1 * var6Lifetime1];

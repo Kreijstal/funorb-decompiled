@@ -83,7 +83,7 @@ final class MirrorBehaviour extends Behaviour {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class MirrorBehaviour extends Behaviour {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class MirrorBehaviour extends Behaviour {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -204,7 +204,7 @@ final class MirrorBehaviour extends Behaviour {
           var11 = GameScreen.positiveModulo(2 * var10 + var8 + 4096, 8192, 126);
           var12 = MouseInputHandler.sin2048((byte) 99, var11 >> 2);
           var13 = ModelAnimator.cos2048(0, var11 >> 2);
-          var14 = param2.field_b - gqa.multiplyFixed(param2.field_b, (byte) 24, this.field_w);
+          var14 = param2.field_b - ChatMessage.multiplyFixed(param2.field_b, (byte) 24, this.field_w);
           var15 = var14 >> 8;
           var5.setEndpoints(var6, (var12 >> 8) * var15 + var6, var7, (var13 >> 8) * var15 + var7, 44);
           var5.field_b = var14;
@@ -228,7 +228,7 @@ final class MirrorBehaviour extends Behaviour {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class MirrorBehaviour extends Behaviour {
           this.updateMirrorDirection(1659280738);
           this.updateMirrorSegment((byte) 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mc.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mc.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

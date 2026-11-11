@@ -49,7 +49,7 @@ final class SwitchableIdAllocator {
         var19 = null;
         var18 = TombRacer.field_G ? 1 : 0;
         try {
-          var19_ref = (GameAssetLoader) (dma.field_l);
+          var19_ref = (GameAssetLoader) (OpenGlCubeTexture.field_l);
           var19_ref.drawLoadingProgress(param2, (byte) 47, param1);
           SoftReferenceCache.field_b = new ModelData[13];
           var5 = gha.loadModelData("", "characters/models/deaths/gibs", 33, param0);
@@ -240,15 +240,15 @@ final class SwitchableIdAllocator {
           incrementValue$14 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$14, (byte) 47, param1);
-          dq.field_h = new ModelData[8];
-          dq.field_h[0] = gha.loadModelData("", "objects/coin/coin", -110, param0);
-          dq.field_h[1] = gha.loadModelData("", "objects/bagoloot/bagoloot", -126, param0);
-          dq.field_h[2] = gha.loadModelData("", "objects/jadeidol/static_jade_idol", 94, param0);
-          dq.field_h[3] = gha.loadModelData("", "objects/lantern/lantern", -115, param0);
-          dq.field_h[4] = gha.loadModelData("", "objects/key/static_key", -121, param0);
-          dq.field_h[5] = gha.loadModelData("", "objects/gun/static_gun", -116, param0);
-          dq.field_h[6] = gha.loadModelData("", "objects/ripmarker/ripmarker", -118, param0);
-          dq.field_h[7] = gha.loadModelData("", "objects/speedboost/speedboost", -114, param0);
+          ColourRowCacheEntry.field_h = new ModelData[8];
+          ColourRowCacheEntry.field_h[0] = gha.loadModelData("", "objects/coin/coin", -110, param0);
+          ColourRowCacheEntry.field_h[1] = gha.loadModelData("", "objects/bagoloot/bagoloot", -126, param0);
+          ColourRowCacheEntry.field_h[2] = gha.loadModelData("", "objects/jadeidol/static_jade_idol", 94, param0);
+          ColourRowCacheEntry.field_h[3] = gha.loadModelData("", "objects/lantern/lantern", -115, param0);
+          ColourRowCacheEntry.field_h[4] = gha.loadModelData("", "objects/key/static_key", -121, param0);
+          ColourRowCacheEntry.field_h[5] = gha.loadModelData("", "objects/gun/static_gun", -116, param0);
+          ColourRowCacheEntry.field_h[6] = gha.loadModelData("", "objects/ripmarker/ripmarker", -118, param0);
+          ColourRowCacheEntry.field_h[7] = gha.loadModelData("", "objects/speedboost/speedboost", -114, param0);
           incrementValue$15 = param2;
           param2++;
           var19_ref.drawLoadingProgress(incrementValue$15, (byte) 47, param1);
@@ -318,13 +318,13 @@ final class SwitchableIdAllocator {
           ControllerLocomotor.field_p[11] = gha.loadModelData("", "objects/youarehere/youarehere_blue", -119, param0);
           ControllerLocomotor.field_p[12] = gha.loadModelData("", "objects/youarehere/youarehere_red", 110, param0);
           ControllerLocomotor.field_p[13] = gha.loadModelData("", "objects/youarehere/youarehere_yellow", 91, param0);
-          tba.field_l = gha.loadModelData("", "test/javatextures", -117, param0);
+          MonochromeRowCacheEntry.field_l = gha.loadModelData("", "test/javatextures", -117, param0);
           if (param3 > -48) {
             SwitchableIdAllocator.releaseStatics(57);
           }
-          VariantMask.field_a = new int[tba.field_l.field_r.length];
-          for (var17 = 0; tba.field_l.field_r.length > var17; var17++) {
-            VariantMask.field_a[var17] = tba.field_l.field_r[var17];
+          VariantMask.field_a = new int[MonochromeRowCacheEntry.field_l.field_r.length];
+          for (var17 = 0; MonochromeRowCacheEntry.field_l.field_r.length > var17; var17++) {
+            VariantMask.field_a[var17] = MonochromeRowCacheEntry.field_l.field_r[var17];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -343,7 +343,7 @@ final class SwitchableIdAllocator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -351,8 +351,8 @@ final class SwitchableIdAllocator {
         int var5 = -116 / ((param1 + 4) / 43);
         if (pka.field_b <= param3 &&
           !(param3 > DiskCacheWorker.field_c)) {
-          param0 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param0);
-          param4 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param4);
+          param0 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param0);
+          param4 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param4);
           GameScreen.a(param3, param4, param0, param2, 0);
         }
     }

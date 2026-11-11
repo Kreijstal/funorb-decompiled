@@ -6,7 +6,7 @@ final class ArchiveManager {
     private java.math.BigInteger field_a;
     static String field_d;
     private java.math.BigInteger field_e;
-    static iw field_f;
+    static PrimitiveType field_f;
     private DiskCacheWorker field_c;
     private ArchiveNetworkClient field_h;
     private PacketBuffer field_g;
@@ -201,7 +201,7 @@ final class ArchiveManager {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -287,12 +287,12 @@ final class ArchiveManager {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
     static {
         field_d = "1st";
-        field_f = new iw();
+        field_f = new PrimitiveType();
     }
 }

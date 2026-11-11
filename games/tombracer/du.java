@@ -23,25 +23,25 @@ final class du {
         var3 = field_d;
         field_d = MenuInputState.field_d;
         if (param0 == 51) {
-          wg.field_l.field_n = 2;
+          StatReportingScoringObserver.field_l.field_n = 2;
         } else {
           if (param0 == 50) {
-            wg.field_l.field_n = 5;
+            StatReportingScoringObserver.field_l.field_n = 5;
           } else {
-            wg.field_l.field_n = 1;
+            StatReportingScoringObserver.field_l.field_n = 1;
           }
         }
         MenuInputState.field_d = var3;
-        wg.field_l.field_a = wg.field_l.field_a + 1;
-        if (wg.field_l.field_a >= 2 &&
+        StatReportingScoringObserver.field_l.field_a = StatReportingScoringObserver.field_l.field_a + 1;
+        if (StatReportingScoringObserver.field_l.field_a >= 2 &&
           51 == param0) {
           return 2;
         }
-        if (wg.field_l.field_a >= 2 &&
+        if (StatReportingScoringObserver.field_l.field_a >= 2 &&
           param0 == 50) {
           return 5;
         }
-        if (wg.field_l.field_a >= 4) {
+        if (StatReportingScoringObserver.field_l.field_a >= 4) {
           return 1;
         }
         return -1;

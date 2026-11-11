@@ -147,7 +147,7 @@ final class MaskBlendOperator extends TextureOperator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class MaskBlendOperator extends TextureOperator {
     final static void initToolkitResources(int param0) {
         tga.field_a = baa.field_d.field_i.field_d;
         tga.field_a.setModelBufferSize(8192);
-        ImageProducerCanvasImageBuffer.field_o = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
+        ImageProducerCanvasImageBuffer.field_o = IntrusiveDequeCursor.getClipStack((byte) 65, tga.field_a);
         EditableTextField.k((byte) 94);
         OpenGlTexture2D.h((byte) 45);
         if (param0 != -25405) {
@@ -166,7 +166,7 @@ final class MaskBlendOperator extends TextureOperator {
           MaskBlendOperator.loadSpriteByName((ResourceArchive) null, (String) null, (String) null, 78);
         }
         rka.a(false);
-        ina.createGameModels(tga.field_a, 0);
+        LoadingStepList.createGameModels(tga.field_a, 0);
         SceneLight.createGameToolkitSprites(tga.field_a, 17186);
         ArrowShooterComponent.createFonts(tga.field_a, -90);
     }
@@ -226,7 +226,7 @@ final class MaskBlendOperator extends TextureOperator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class MaskBlendOperator extends TextureOperator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 

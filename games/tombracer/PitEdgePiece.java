@@ -37,7 +37,7 @@ final class PitEdgePiece implements SelectivelyLitRenderable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -70,9 +70,9 @@ final class PitEdgePiece implements SelectivelyLitRenderable {
           var5 = this.getRenderX((byte) 69);
           var6 = this.getRenderY((byte) 102);
           var7 = this.getRenderZ((byte) -114);
-          gqa.drawModelAt(0, -83584144, var6, var5, var4, var7);
+          ChatMessage.drawModelAt(0, -83584144, var6, var5, var4, var7);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oia.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oia.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class PitEdgePiece implements SelectivelyLitRenderable {
           param1.field_l = var6.readInt(115);
           var6.backpatchByteLength(-var4 + var6.position, (byte) -110);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

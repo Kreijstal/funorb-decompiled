@@ -58,7 +58,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_c = this.field_d.sentinel.secondaryNext;
           this.field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

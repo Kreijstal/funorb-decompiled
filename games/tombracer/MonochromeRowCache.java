@@ -6,7 +6,7 @@ final class MonochromeRowCache {
     private int lastRow;
     private int capacity;
     private IntrusiveDeque lru;
-    private tba[] field_f;
+    private MonochromeRowCacheEntry[] field_f;
     static int field_i;
     private int usedCount;
     private int[][] rows;
@@ -16,11 +16,11 @@ final class MonochromeRowCache {
         boolean stackIn_4_1 = false;
         boolean stackIn_9_1 = false;
         int var3;
-        tba var4;
-        tba var5;
+        MonochromeRowCacheEntry var4;
+        MonochromeRowCacheEntry var5;
         int var6;
-        tba var5Lifetime1;
-        tba var5Lifetime2;
+        MonochromeRowCacheEntry var5Lifetime1;
+        MonochromeRowCacheEntry var5Lifetime2;
         var6 = TombRacer.field_G ? 1 : 0;
         var3 = 8 % ((param0 + 43) / 59);
         if (this.capacity == this.height) {
@@ -41,11 +41,11 @@ final class MonochromeRowCache {
         if (var4 == null) {
           this.rowMissed = true;
           if (this.usedCount < this.capacity) {
-            var4 = new tba(param1, this.usedCount);
+            var4 = new MonochromeRowCacheEntry(param1, this.usedCount);
             this.usedCount = this.usedCount + 1;
           } else {
-            var5Lifetime2 = (tba) (this.lru.last(3));
-            var4 = new tba(param1, var5Lifetime2.field_j);
+            var5Lifetime2 = (MonochromeRowCacheEntry) (this.lru.last(3));
+            var4 = new MonochromeRowCacheEntry(param1, var5Lifetime2.field_j);
             this.field_f[var5Lifetime2.field_h] = null;
             var5Lifetime2.unlink(69);
           }
@@ -92,7 +92,7 @@ final class MonochromeRowCache {
         this.capacity = param0;
         this.height = param1;
         this.rows = new int[this.capacity][param2];
-        this.field_f = new tba[this.height];
+        this.field_f = new MonochromeRowCacheEntry[this.height];
     }
 
     static {

@@ -31,12 +31,12 @@ final class pua extends hq {
         int var15Lifetime2;
         var17 = TombRacer.field_G ? 1 : 0;
         try {
-          var11 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param2);
-          var12 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param3);
+          var11 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param2);
+          var12 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param3);
           var13 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
           var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6);
-          var7_int = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param4 + param2);
-          var8 = CharacterPreview.clamp(hc.field_h, -16226, gca.field_d, param3 - param4);
+          var7_int = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param4 + param2);
+          var8 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param3 - param4);
           for (var15 = var11; var7_int > var15; var15++) {
             C2SRoomResultPacket.fillRange((byte) -55, param5, var14, vaa.field_a[var15], var13);
           }
@@ -57,7 +57,7 @@ final class pua extends hq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var7), "pua.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var7), "pua.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

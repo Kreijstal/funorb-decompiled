@@ -48,7 +48,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           this.field_s.encode(this.getScope((byte) 123), (byte) 76, param1);
           this.field_o.encode(15637, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
         try {
           this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tl.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tl.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
             pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
             return;
           }
-          if (param4 <= hc.field_h) {
+          if (param4 <= LineShape.field_h) {
             rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
             return;
           }
@@ -128,7 +128,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }
-        if (param4 <= hc.field_h) {
+        if (param4 <= LineShape.field_h) {
           rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
           return;
         }
@@ -146,7 +146,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           this.field_s = new SwitchState(15);
           this.field_o = new TimingPattern();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           this.field_s = new SwitchState(15, param0, param1);
           this.field_o = new TimingPattern(param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

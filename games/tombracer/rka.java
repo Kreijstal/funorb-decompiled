@@ -16,17 +16,17 @@ abstract class rka {
           TrackingCrusherComponent.a(param0, (byte) -55);
           vn.showMessageDialog(100, HardwareModel.field_bb, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(boolean param0) {
-        kn.field_p = null;
+        TooltipRenderer.field_p = null;
         if (param0) {
           return;
         }
         eda.field_f = null;
-        qf.field_j = null;
+        FloatPacketBuffer.field_j = null;
         SingleChildWidget.field_v = null;
         System.gc();
     }

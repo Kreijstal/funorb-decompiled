@@ -57,20 +57,20 @@ final class sv extends MenuScreen {
         if (param0 < 111) {
           this.getItemY(19, -86);
           if (param1 == -1 + this.items.length) {
-            return aaa.a(false) - this.items[param1].getWidth(-163);
+            return LegacyOpenGlWaterTextures.getCanvasWidth(false) - this.items[param1].getWidth(-163);
           }
           if (param1 < 3) {
-            return 30 + (20 + aaa.a(false) / 2) - this.items[param1].getWidth(-163);
+            return 30 + (20 + LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2) - this.items[param1].getWidth(-163);
           }
-          return aaa.a(false) / 2 + 30;
+          return LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2 + 30;
         }
         if (param1 == -1 + this.items.length) {
-          return aaa.a(false) - this.items[param1].getWidth(-163);
+          return LegacyOpenGlWaterTextures.getCanvasWidth(false) - this.items[param1].getWidth(-163);
         }
         if (param1 < 3) {
-          return 30 + (20 + aaa.a(false) / 2) - this.items[param1].getWidth(-163);
+          return 30 + (20 + LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2) - this.items[param1].getWidth(-163);
         }
-        return aaa.a(false) / 2 + 30;
+        return LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2 + 30;
     }
 
     final void onShow(int param0, int param1, boolean param2) {
@@ -81,7 +81,7 @@ final class sv extends MenuScreen {
     final void draw(byte param0, boolean param1) {
         super.draw(param0, param1);
         int var3 = this.items[1].field_i - 70 + this.field_r.getPosition(47) - 150;
-        WhiteLightShooterComponent.field_K.draw((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
+        WhiteLightShooterComponent.field_K.draw((LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
     }
 
     public static void releaseStatics(int param0) {
@@ -178,7 +178,7 @@ final class sv extends MenuScreen {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

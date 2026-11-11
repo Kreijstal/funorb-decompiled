@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class DateInputWidget extends WidgetContainer implements ValidationProvider {
-    static lqa field_z;
+    static RendererOption field_z;
     static String field_y;
     static int[] field_x;
     private uba field_w;
@@ -17,15 +17,15 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           lu.field_b = param0;
           hka.field_b = new PlayerContextMenu(param6, param3, param2, param8, param1, param7, param5);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "paa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "paa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract int getDay(byte param0);
 
     final static RoomDefinition getCourseRoom(int param0, int param1, int param2) {
-        qg var5 = cm.field_a[param0];
-        qg var3 = var5;
+        CourseDefinition var5 = cm.field_a[param0];
+        CourseDefinition var3 = var5;
         int var4 = 70 / ((param1 - 5) / 61);
         return var5.field_c[param2];
     }
@@ -55,7 +55,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           this.field_w = param1;
           this.field_w.field_i = this;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "paa.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "paa.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,7 +86,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "paa.F(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "paa.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -94,11 +94,11 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract int year(int param0);
 
-    final static vb c(int param0) {
+    final static vb playLandingSound(int param0) {
         if (param0 != 141) {
           return (vb) null;
         }
-        return it.a(255, 141 + uca.cosmeticRandom.nextBounded(2, param0 ^ 141));
+        return it.playMenuSound(255, 141 + uca.cosmeticRandom.nextBounded(2, param0 ^ 141));
     }
 
     DateInputWidget(int param0, int param1, int param2, int param3, WidgetPainter param4) {

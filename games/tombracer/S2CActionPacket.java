@@ -28,7 +28,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
             stackIn_5_0[stackIn_5_1] = stackIn_6_2;
             if (this.hasPlayerOrders[var3_int]) {
               for (var4 = 0; var4 < this.playerOrders[var3_int].length; var4++) {
-                this.playerOrders[var3_int][var4] = DraggableWidget.a(param0.readBits((byte) 44, 7), param1 - 6468);
+                this.playerOrders[var3_int][var4] = DraggableWidget.decodeOrder(param0.readBits((byte) 44, 7), param1 - 6468);
               }
             }
           }
@@ -49,7 +49,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
           return Transform3D.createDefaultWeapon(true);
         }
         if (var2 == 1) {
-          return ik.createBladeWeaponPreset(-17698);
+          return IntArrayRequest.createBladeWeaponPreset(-17698);
         }
         if (2 == var2) {
           return AccountRegistrationPanel.createFireWeaponPreset((byte) 125);
@@ -100,26 +100,26 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
             param1.writeBits((byte) 71, this.hasPlayerOrders[var3_int] ? 1 : 0, 1);
             if (this.hasPlayerOrders[var3_int]) {
               for (var4 = 0; var4 < this.playerOrders[var3_int].length; var4++) {
-                param1.writeBits((byte) -23, IntrusiveDequeCursor.a(-47, this.playerOrders[var3_int][var4]), 7);
+                param1.writeBits((byte) -23, IntrusiveDequeCursor.encodeOrder(-47, this.playerOrders[var3_int][var4]), 7);
               }
             }
             var3_int++;
           }
           param1.endBitWrite(param0 - 1826190886);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tt.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tt.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != 4) {
           ResourceArchive var2 = (ResourceArchive) null;
-          S2CActionPacket.a((ResourceArchive) null, (byte) -100);
+          S2CActionPacket.isArchiveComplete((ResourceArchive) null, (byte) -100);
         }
         field_g = null;
     }
 
-    final static boolean a(ResourceArchive param0, byte param1) {
+    final static boolean isArchiveComplete(ResourceArchive param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
@@ -141,7 +141,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ final class S2CActionPacket extends IntrusiveNode implements GamePacket {
     final int getOrder(boolean param0, int param1, int param2) {
         if (param0) {
           ResourceArchive var5 = (ResourceArchive) null;
-          S2CActionPacket.a((ResourceArchive) null, (byte) 42);
+          S2CActionPacket.isArchiveComplete((ResourceArchive) null, (byte) 42);
         }
         return this.playerOrders[param1][param2];
     }

@@ -66,7 +66,7 @@ final class MenuInputState {
           if (this.pointerButton != 0 &&
             RangeOperator.field_p != 0) {
             if (0 >= this.field_a) {
-              this.field_a = aua.field_b;
+              this.field_a = PlainScoringObserverFactory.field_b;
             }
             this.field_a = this.field_a - 1;
           }
@@ -209,7 +209,7 @@ final class MenuInputState {
           }
           return;
         }
-        this.field_a = aua.field_b;
+        this.field_a = PlainScoringObserverFactory.field_b;
         this.field_a = this.field_a - 1;
         if (PlayerModel.field_b == 0) {
           if (0 != RangeOperator.field_p) {

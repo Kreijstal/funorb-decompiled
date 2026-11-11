@@ -34,7 +34,7 @@ final class MazeSolver {
         if (2 != OpenGlUnderwaterEffect.field_q) {
           qpa.field_b.field_r = ValidationMessageWidget.field_J;
         } else {
-          qpa.field_b.field_r = gj.field_a;
+          qpa.field_b.field_r = VertexAttribute.field_a;
         }
         int var9_int = 495;
         int var10 = 5;
@@ -56,7 +56,7 @@ final class MazeSolver {
           var12 = var12 + param1;
           SimpleMoveLocomotor.field_s.setBounds(var9_int, var12, -23776, -(var12 / 2) + param0, -(var9_int / 2) + param8);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "av.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "av.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -65,17 +65,17 @@ final class MazeSolver {
           CourseLayout.field_a = param4;
           int var9_int = -25 / ((44 - param2) / 33);
           pu.field_b = param0;
-          wk.field_n = param5;
+          MapWaypoint.field_n = param5;
           TileGridCell.field_a = param3;
           oi.field_a = param1;
-          joa.field_a = param7;
+          GzipInflater.field_a = param7;
           MenuInputState.field_d = param8;
           du.field_d = param6;
-          wg.field_l = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
+          StatReportingScoringObserver.field_l = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           Projectile.field_k = new DiskCacheWorker(param1);
-          IntrusiveDequeCursor.field_a = new ArchiveManager(wg.field_l, Projectile.field_k);
+          IntrusiveDequeCursor.field_a = new ArchiveManager(StatReportingScoringObserver.field_l, Projectile.field_k);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "av.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "av.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ final class MazeSolver {
         int var3_int = 0;
         int[][] var3;
         int var4;
-        qja var5;
+        MazeSearchNode var5;
         int var5_int;
         int var6;
         int var7;
@@ -207,7 +207,7 @@ final class MazeSolver {
                 var5_int++;
               }
               if (var5_int == 1) {
-                var8.addLast((byte) -80, new qja(var3_int, var4));
+                var8.addLast((byte) -80, new MazeSearchNode(var3_int, var4));
               }
             }
           }
@@ -220,12 +220,12 @@ final class MazeSolver {
         }
         var7 = 0;
         var4Lifetime1 = var7;
-        var5 = (qja) (var8.first(-80));
+        var5 = (MazeSearchNode) (var8.first(-80));
         while (var5 != null) {
           var10[var7][0] = var5.field_h;
           var10[var7][1] = var5.field_g;
           var7++;
-          var5 = (qja) (var8.next(125));
+          var5 = (MazeSearchNode) (var8.next(125));
         }
         return var3;
     }
@@ -287,7 +287,7 @@ final class MazeSolver {
         try {
           this.grid = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "av.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "av.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

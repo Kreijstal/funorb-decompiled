@@ -103,7 +103,7 @@ final class tda extends jg {
           var18 = var15 - (float)var16;
           var19 = -var18 + (float)param6;
           var17 = var17 & var14;
-          var20 = nk.fade((byte) 14, var18);
+          var20 = AnimationFrameBase.fade((byte) 14, var18);
           var16 = var16 & var14;
           var21 = this.field_c[var16];
           var22 = this.field_c[var17];
@@ -113,7 +113,7 @@ final class tda extends jg {
             var26 = 1 + var25;
             var27 = var24 - (float)var25;
             var28 = -var27 + 1.0f;
-            var29 = nk.fade((byte) 14, var27);
+            var29 = AnimationFrameBase.fade((byte) 14, var27);
             var26 = var26 & var13;
             var25 = var25 & var13;
             var30 = this.field_c[var21 + var25];
@@ -127,11 +127,11 @@ final class tda extends jg {
               var38 = var35 - (float)var36;
               var39 = -var38 + 1.0f;
               var37 = var37 & var12_int;
-              var40 = nk.fade((byte) 14, var38);
+              var40 = AnimationFrameBase.fade((byte) 14, var38);
               var36 = var36 & var12_int;
               incrementValue$1 = param7;
               param7++;
-              param4[incrementValue$1] = ClientException.lerp(var20, 5122, ClientException.lerp(var29, 5122, ClientException.lerp(var40, 5122, hp.a(var18, var27, (byte) 26, var38, SnakePitBehaviour.bitwiseAnd(this.field_c[var33 + var37], 7)), hp.a(var18, var27, (byte) 26, var39, SnakePitBehaviour.bitwiseAnd(this.field_c[var33 + var36], 7))), ClientException.lerp(var40, kha.bitwiseXor(param6, 5123), hp.a(var18, var28, (byte) 26, var38, SnakePitBehaviour.bitwiseAnd(this.field_c[var37 + var32], 7)), hp.a(var18, var28, (byte) 26, var39, SnakePitBehaviour.bitwiseAnd(7, this.field_c[var32 + var36])))), ClientException.lerp(var29, 5122, ClientException.lerp(var40, 5122, hp.a(var19, var27, (byte) 26, var38, SnakePitBehaviour.bitwiseAnd(this.field_c[var31 + var37], 7)), hp.a(var19, var27, (byte) 26, var39, SnakePitBehaviour.bitwiseAnd(7, this.field_c[var31 + var36]))), ClientException.lerp(var40, 5122, hp.a(var19, var28, (byte) 26, var38, SnakePitBehaviour.bitwiseAnd(this.field_c[var37 + var30], 7)), hp.a(var19, var28, (byte) 26, var39, SnakePitBehaviour.bitwiseAnd(this.field_c[var30 + var36], 7))))) * param0;
+              param4[incrementValue$1] = ClientException.lerp(var20, 5122, ClientException.lerp(var29, 5122, ClientException.lerp(var40, 5122, hp.a(var18, var27, (byte) 26, var38, SnakePitBehaviour.bitwiseAnd(this.field_c[var33 + var37], 7)), hp.a(var18, var27, (byte) 26, var39, SnakePitBehaviour.bitwiseAnd(this.field_c[var33 + var36], 7))), ClientException.lerp(var40, TextLine.bitwiseXor(param6, 5123), hp.a(var18, var28, (byte) 26, var38, SnakePitBehaviour.bitwiseAnd(this.field_c[var37 + var32], 7)), hp.a(var18, var28, (byte) 26, var39, SnakePitBehaviour.bitwiseAnd(7, this.field_c[var32 + var36])))), ClientException.lerp(var29, 5122, ClientException.lerp(var40, 5122, hp.a(var19, var27, (byte) 26, var38, SnakePitBehaviour.bitwiseAnd(this.field_c[var31 + var37], 7)), hp.a(var19, var27, (byte) 26, var39, SnakePitBehaviour.bitwiseAnd(7, this.field_c[var31 + var36]))), ClientException.lerp(var40, 5122, hp.a(var19, var28, (byte) 26, var38, SnakePitBehaviour.bitwiseAnd(this.field_c[var37 + var30], 7)), hp.a(var19, var28, (byte) 26, var39, SnakePitBehaviour.bitwiseAnd(this.field_c[var30 + var36], 7))))) * param0;
             }
           }
           return;
@@ -145,7 +145,7 @@ final class tda extends jg {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class tda extends jg {
           return;
         }
         ValidationMessageWidget.field_K = param0;
-        CourseLayout.field_d = new gqa[param0 * 15];
+        CourseLayout.field_d = new ChatMessage[param0 * 15];
         baa.field_b = new int[3];
     }
 

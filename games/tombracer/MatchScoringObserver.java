@@ -34,7 +34,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -72,7 +72,7 @@ class MatchScoringObserver extends SimulationObserver {
             !this.field_f.d(-67) &&
             var9_ref != null) {
             var10 = RewardChoicePhase.createTextMessage(-48, var9_ref);
-            iqa.field_c.addMessage(3, param0 - 15, var10);
+            ToolkitInstance.field_c.addMessage(3, param0 - 15, var10);
           }
           if (param0 != 15) {
             var11 = (Room) null;
@@ -95,7 +95,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ class MatchScoringObserver extends SimulationObserver {
         try {
           this.field_f.copyCorpsesToRoom(true, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tu.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tu.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -212,7 +212,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -344,13 +344,13 @@ class MatchScoringObserver extends SimulationObserver {
             } else {
               var9_ref_jha = RewardChoicePhase.createTextMessage(-66, LegacyOpenGlFlowingWaterEffect.formatText(92, BevelOperator.field_q, new String[]{String.valueOf(var6)}));
             }
-            iqa.field_c.addMessageNow(0, var9_ref_jha);
+            ToolkitInstance.field_c.addMessageNow(0, var9_ref_jha);
             var10 = param0.getRoomTreasureScore(-7991);
             if (var10 > 0) {
               dupTemp$0 = RewardChoicePhase.createTextMessage(-96, LegacyOpenGlFlowingWaterEffect.formatText(82, VariantMask.field_c, new String[]{String.valueOf(var10)}));
               var12 = dupTemp$0;
               var9_ref_jhaLifetime1 = dupTemp$0;
-              iqa.field_c.addMessage(3, 0, var12);
+              ToolkitInstance.field_c.addMessage(3, 0, var12);
             }
             this.field_f.field_I[var8] = true;
           }
@@ -380,7 +380,7 @@ class MatchScoringObserver extends SimulationObserver {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -389,7 +389,7 @@ class MatchScoringObserver extends SimulationObserver {
           this.field_f = param0;
           this.field_c = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

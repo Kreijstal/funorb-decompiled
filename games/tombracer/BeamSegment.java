@@ -51,15 +51,15 @@ final class BeamSegment {
     final void shortenTo(int param0, byte param1) {
         int var3 = this.field_e - this.field_d;
         int var4 = this.field_a - this.field_k;
-        this.field_e = this.field_d + gqa.multiplyFixed(param0, (byte) 24, var3);
+        this.field_e = this.field_d + ChatMessage.multiplyFixed(param0, (byte) 24, var3);
         if (param1 != 47) {
-          bb var5 = (bb) null;
-          BeamSegment.a(false, -126, (bb) null);
+          HiscoreTable var5 = (HiscoreTable) null;
+          BeamSegment.a(false, -126, (HiscoreTable) null);
         }
-        this.field_a = this.field_k + gqa.multiplyFixed(param0, (byte) 24, var4);
+        this.field_a = this.field_k + ChatMessage.multiplyFixed(param0, (byte) 24, var4);
     }
 
-    final static void a(boolean param0, int param1, bb param2) {
+    final static void a(boolean param0, int param1, HiscoreTable param2) {
         BitPacketBuffer var3 = null;
         try {
           var3 = ql.field_k;
@@ -73,11 +73,11 @@ final class BeamSegment {
           var3.writeByte(param2.field_j, 0);
           var3.writeByte(param2.field_i, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pc.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pc.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static ConsoleValue invokeConsoleMethod(ConsoleMethod[] param0, int param1, String param2, ConsoleValue[] param3) throws rv {
+    final static ConsoleValue invokeConsoleMethod(ConsoleMethod[] param0, int param1, String param2, ConsoleValue[] param3) throws ConsoleEvaluationException {
         int var6 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -112,7 +112,7 @@ final class BeamSegment {
           var5 = 33 % ((param1 + 53) / 54);
           for (var6 = 0; var6 < param3.length; var6++) {
             if (param3[var6].field_a) {
-              discarded$1 = var8.append(jd.getPrimitiveType(param3[var6].field_d, 0).toString());
+              discarded$1 = var8.append(OpenGlTexture3D.getPrimitiveType(param3[var6].field_d, 0).toString());
             } else {
               discarded$2 = var8.append(ArrayWidgetGroup.simpleTypeName(param3[var6].field_d.getClass(), (byte) -88));
             }
@@ -121,7 +121,7 @@ final class BeamSegment {
             }
           }
           discarded$0 = var8.append(") is undefined.");
-          throw new rv(var8.toString());
+          throw new ConsoleEvaluationException(var8.toString());
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -144,7 +144,7 @@ final class BeamSegment {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

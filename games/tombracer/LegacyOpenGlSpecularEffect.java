@@ -15,11 +15,11 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
             this.field_f = (OpenGlDisplayLists) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cpa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cpa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(byte param0) {
+    private final void buildDisplayLists(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         this.field_f = new OpenGlDisplayLists(this.toolkit, 2);
         this.field_f.beginList((byte) 6, 0);
@@ -101,7 +101,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           this.toolkit.setActiveTextureUnit(0, true);
         }
         if (param2 <= 117) {
-          this.a((byte) -84);
+          this.buildDisplayLists((byte) -84);
         }
     }
 
@@ -161,7 +161,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
             this.field_d[0] = new LegacyOpenGlCubeTexture(this.toolkit, 6406, 64, false, var27, 6406);
             this.field_d[1] = new LegacyOpenGlCubeTexture(this.toolkit, 6406, 64, false, var28, 6406);
             this.field_d[2] = new LegacyOpenGlCubeTexture(this.toolkit, 6406, 64, false, var29, 6406);
-            this.a((byte) -75);
+            this.buildDisplayLists((byte) -75);
             return;
           }
           return;
@@ -297,7 +297,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 

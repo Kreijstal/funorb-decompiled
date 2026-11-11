@@ -58,7 +58,7 @@ final class EdgeDetectOperator extends TextureOperator {
           var25 = this.getInputMonochromeRow(0, -47, param1 + 1 & hba.textureHeightMask);
           for (var7 = 0; var7 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var7++) {
             var8 = (-var24[var7] + var25[var7]) * this.field_n;
-            var9 = this.field_n * (-var5[una.textureWidthMask & var7 - 1] + var5[1 + var7 & una.textureWidthMask]);
+            var9 = this.field_n * (-var5[GpuDataType.textureWidthMask & var7 - 1] + var5[1 + var7 & GpuDataType.textureWidthMask]);
             var10 = var9 >> 12;
             var11 = var8 >> 12;
             var12 = var10 * var10 >> 12;
@@ -90,7 +90,7 @@ final class EdgeDetectOperator extends TextureOperator {
             this.field_n = param1.readUnsignedShort(124);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "go.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "go.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

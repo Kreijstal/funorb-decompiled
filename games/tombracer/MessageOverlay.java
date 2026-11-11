@@ -18,7 +18,7 @@ final class MessageOverlay extends MatchOverlay {
 
     final void draw(byte param0) {
         int var2 = this.field_n.getPosition(-115);
-        ToolkitSprite var3 = gg.field_f;
+        ToolkitSprite var3 = HardwareModelIndexData.field_f;
         int var4 = var3.paddedWidth();
         int var5 = var3.paddedHeight();
         var3.draw(-(var4 / 2) + this.field_s, var2 + (this.field_u - var5 / 2));
@@ -39,20 +39,20 @@ final class MessageOverlay extends MatchOverlay {
               }
               if (this.field_k != null &&
                 this.field_n.isSettled(20)) {
-                kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+                TooltipRenderer.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, SinglePlayerCourseGenerator.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
               }
               return;
             }
             return;
           }
-          kn.field_p.drawWrapped((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
+          TooltipRenderer.field_p.drawWrapped((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), this.field_j, (byte) 71, var10, 0, SinglePlayerCourseGenerator.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
           if (param0 >= -13) {
             return;
           }
           if (this.panel == null) {
             if (this.field_k != null &&
               this.field_n.isSettled(20)) {
-              kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+              TooltipRenderer.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, SinglePlayerCourseGenerator.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
             }
             return;
           }
@@ -63,11 +63,11 @@ final class MessageOverlay extends MatchOverlay {
           if (!this.field_n.isSettled(20)) {
             return;
           }
-          kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          TooltipRenderer.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, SinglePlayerCourseGenerator.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
         if (this.field_j != null) {
-          kn.field_p.drawWrapped((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), this.field_j, (byte) 71, var10, 0, id.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
+          TooltipRenderer.field_p.drawWrapped((aa) null, var9 - (var7 + var6), 20, 0, var2 + var8 + (this.field_l + (-(var5 / 2) + this.field_u)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 0, SoundEvent.withFullAlpha(false, 65793), this.field_j, (byte) 71, var10, 0, SinglePlayerCourseGenerator.field_h, var6 + (this.field_l - var4 / 2 + this.field_s), 1);
           if (param0 >= -13) {
             return;
           }
@@ -75,7 +75,7 @@ final class MessageOverlay extends MatchOverlay {
             this.panel.draw(var2 + this.field_u - this.panel.getWidth(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.panel.getHeight(false) / 2 - 10));
             if (this.field_k != null &&
               this.field_n.isSettled(20)) {
-              kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+              TooltipRenderer.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, SinglePlayerCourseGenerator.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
             }
             return;
           }
@@ -85,7 +85,7 @@ final class MessageOverlay extends MatchOverlay {
           if (!this.field_n.isSettled(20)) {
             return;
           }
-          kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          TooltipRenderer.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, SinglePlayerCourseGenerator.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
         if (param0 >= -13) {
@@ -99,14 +99,14 @@ final class MessageOverlay extends MatchOverlay {
           if (!this.field_n.isSettled(20)) {
             return;
           }
-          kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          TooltipRenderer.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, SinglePlayerCourseGenerator.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
         if (this.field_k == null) {
           return;
         }
         if (this.field_n.isSettled(20)) {
-          kn.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
+          TooltipRenderer.field_p.drawWrapped((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), SoundEvent.withFullAlpha(false, -1), SpriteState.field_l, 1, SoundEvent.withFullAlpha(false, 65793), this.field_k, (byte) -85, var10, 0, SinglePlayerCourseGenerator.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
           return;
         }
     }
@@ -118,7 +118,7 @@ final class MessageOverlay extends MatchOverlay {
           this.field_j = param1;
           this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "dl.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dl.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -127,11 +127,11 @@ final class MessageOverlay extends MatchOverlay {
         this.field_n = new DropAnimation();
         this.field_l = 20;
         try {
-          this.field_s = aaa.a(false) / 2;
-          this.field_u = SwitchLinkList.b(0) / 2;
+          this.field_s = LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2;
+          this.field_u = SwitchLinkList.getCanvasHeight(0) / 2;
           this.panel = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class MessageOverlay extends MatchOverlay {
     final void update(byte param0) {
         if (this.field_v) {
           this.field_u = this.field_u - 32;
-          if (this.field_u < -gg.field_f.height()) {
+          if (this.field_u < -HardwareModelIndexData.field_f.height()) {
             super.finish(-10968);
             this.field_n.updateFall((byte) -113, true, false);
             if (null != this.panel) {
@@ -232,7 +232,7 @@ final class MessageOverlay extends MatchOverlay {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + nma.field_m.decode(param0.position, (byte) 121, var3_int, param0.payload, 0, var4);
+            param0.position = param0.position + CurveShape.field_m.decode(param0.position, (byte) 121, var3_int, param0.payload, 0, var4);
             var5 = MaskBlendOperator.decodeCp1252(var4, 0, var3_int, 255);
             if (param2 < -18) {
               stackIn_7_0 = var5;
@@ -256,7 +256,7 @@ final class MessageOverlay extends MatchOverlay {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

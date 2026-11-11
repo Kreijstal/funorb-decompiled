@@ -49,8 +49,8 @@ final class WallTile implements Renderable {
           var3_int = this.getRenderX((byte) -113);
           var4 = this.getRenderY((byte) 115);
           var5 = this.getRenderZ((byte) -108);
-          gqa.drawModelAt(GameScreen.positiveModulo(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.getTileModel(this, (byte) 76), var5);
-          if (!nk.c(-115)) {
+          ChatMessage.drawModelAt(GameScreen.positiveModulo(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.getTileModel(this, (byte) 76), var5);
+          if (!AnimationFrameBase.c(-115)) {
             return;
           }
           if (param0 < 103) {
@@ -66,54 +66,54 @@ final class WallTile implements Renderable {
           if (this.field_m) {
             if (!this.field_k) {
               if (!this.field_h) {
-                gqa.drawModelAt(512, -83584144, var4 + 2097152, var3_int, var6, var9);
+                ChatMessage.drawModelAt(512, -83584144, var4 + 2097152, var3_int, var6, var9);
               }
             } else {
-              gqa.drawModelAt(1024, -83584144, 2097152 + var4, var3_int, var8, var9);
+              ChatMessage.drawModelAt(1024, -83584144, 2097152 + var4, var3_int, var8, var9);
             }
           }
           if (this.field_c) {
             if (this.field_j) {
-              gqa.drawModelAt(512, -83584144, var4, var3_int + 2097152, var8, var9);
+              ChatMessage.drawModelAt(512, -83584144, var4, var3_int + 2097152, var8, var9);
             } else {
               if (!this.field_k) {
-                gqa.drawModelAt(0, -83584144, var4, var3_int + 2097152, var6, var9);
+                ChatMessage.drawModelAt(0, -83584144, var4, var3_int + 2097152, var6, var9);
               }
             }
           }
           if (this.field_e &&
             !this.field_q) {
             if (!this.field_h) {
-              gqa.drawModelAt(1024, -83584144, var4, var3_int - 2097152, var6, var9);
+              ChatMessage.drawModelAt(1024, -83584144, var4, var3_int - 2097152, var6, var9);
             } else {
-              gqa.drawModelAt(-512, -83584144, var4, -2097152 + var3_int, var8, var9);
+              ChatMessage.drawModelAt(-512, -83584144, var4, -2097152 + var3_int, var8, var9);
             }
           }
           if (this.field_n &&
             !this.field_j) {
             if (this.field_q) {
-              gqa.drawModelAt(0, -83584144, -2097152 + var4, var3_int, var8, var9);
+              ChatMessage.drawModelAt(0, -83584144, -2097152 + var4, var3_int, var8, var9);
             } else {
-              gqa.drawModelAt(-512, -83584144, var4 - 2097152, var3_int, var6, var9);
+              ChatMessage.drawModelAt(-512, -83584144, var4 - 2097152, var3_int, var6, var9);
             }
           }
           if (this.field_m &&
             this.field_c) {
-            gqa.drawModelAt(0, -83584144, 2097152 + var4, var3_int + 2097152, var7, var9);
+            ChatMessage.drawModelAt(0, -83584144, 2097152 + var4, var3_int + 2097152, var7, var9);
           }
           if (this.field_m &&
             this.field_e) {
-            gqa.drawModelAt(512, -83584144, var4 + 2097152, -2097152 + var3_int, var7, var9);
+            ChatMessage.drawModelAt(512, -83584144, var4 + 2097152, -2097152 + var3_int, var7, var9);
           }
           if (this.field_n &&
             this.field_c) {
-            gqa.drawModelAt(-512, -83584144, -2097152 + var4, var3_int + 2097152, var7, var9);
+            ChatMessage.drawModelAt(-512, -83584144, -2097152 + var4, var3_int + 2097152, var7, var9);
           }
           if (this.field_n) {
             if (!this.field_e) {
               return;
             }
-            gqa.drawModelAt(1024, -83584144, var4 - 2097152, -2097152 + var3_int, var7, var9);
+            ChatMessage.drawModelAt(1024, -83584144, var4 - 2097152, -2097152 + var3_int, var7, var9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -126,7 +126,7 @@ final class WallTile implements Renderable {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -582,7 +582,7 @@ final class WallTile implements Renderable {
               bsa.field_k = false;
               var3_int = 1;
             }
-            MidiVoiceMixer.drawAwtLoadingBar((byte) 108, tn.loadingMessage(-10918), OpenGlUnderwaterEffect.field_i, dla.getLoadingPercent(7), var3_int != 0);
+            MidiVoiceMixer.drawAwtLoadingBar((byte) 108, MidiPatch.loadingMessage(-10918), OpenGlUnderwaterEffect.field_i, dla.getLoadingPercent(7), var3_int != 0);
           } else {
             if (!LegacyOpenGlSpriteTexture.i(250)) {
               SoftwareRasterizer.clear();
@@ -592,7 +592,7 @@ final class WallTile implements Renderable {
               if (0 != Transform3D.field_c) {
                 C2SSubmitSettingsPacket.a(param1, (byte) 94);
               } else {
-                qja.a(false, param0, param2 ^ -128);
+                MazeSearchNode.a(false, param0, param2 ^ -128);
                 fga.drawFramebufferToCanvas(0, false, 0, param1);
               }
             }
@@ -611,7 +611,7 @@ final class WallTile implements Renderable {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -624,8 +624,8 @@ final class WallTile implements Renderable {
     }
 
     WallTile() {
-        int fieldTemp$0 = ita.field_g;
-        ita.field_g = ita.field_g + 1;
+        int fieldTemp$0 = SoftwareDepthBuffer.field_g;
+        SoftwareDepthBuffer.field_g = SoftwareDepthBuffer.field_g + 1;
         this.field_b = fieldTemp$0;
     }
 

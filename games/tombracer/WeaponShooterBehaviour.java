@@ -18,7 +18,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           }
           super.attachToTrap(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ska.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ska.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
             !var5.equals("false")) {
             if (45 != var5.charAt(0) &&
               !Character.isDigit(var5.charAt(0))) {
-              var4Lifetime1 = tr.field_f;
+              var4Lifetime1 = QuickChatPhraseSource.field_f;
             } else {
               var4Lifetime1 = CrusherModel.field_o;
             }
@@ -82,7 +82,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           }
           this.field_u = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ska.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ska.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           }
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ska.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ska.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           this.field_n = new TimingPattern();
           this.field_u = TextureOperator.createFullWeapon(0, -1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           param1.writeBits((byte) -128, this.field_o ? 1 : 0, 1);
           param1.writeBits((byte) -128, this.field_p ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ska.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ska.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
             this.field_p = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

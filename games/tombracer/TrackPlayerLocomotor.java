@@ -92,10 +92,10 @@ final class TrackPlayerLocomotor extends Locomotor {
         try {
           this.field_t = 1 != param1.readBits((byte) 44, 1) ? false : true;
           this.field_r = 1 == param1.readBits((byte) 44, 1) ? true : false;
-          this.field_q = this.a(param1.readBits((byte) 44, 8), false);
+          this.field_q = this.decodeFixed16(param1.readBits((byte) 44, 8), false);
           this.field_p = param1.readBits((byte) 44, 10) << 16;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           }
           Corpse.field_i.field_H.drawParagraph(param1, var7 + 3, -Corpse.field_i.field_H.field_w + (LegacyTextureCache.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, ToolkitSelector.field_a);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hia.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hia.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -174,10 +174,10 @@ final class TrackPlayerLocomotor extends Locomotor {
           if (param1 > -78) {
             this.b(-8, false);
           }
-          param0.writeBits((byte) -125, this.b(0, this.field_q), 8);
+          param0.writeBits((byte) -125, this.encodeFixed16(0, this.field_q), 8);
           param0.writeBits((byte) -128, this.field_p >> 16, 10);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hia.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hia.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

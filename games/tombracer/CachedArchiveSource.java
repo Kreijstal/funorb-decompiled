@@ -12,7 +12,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private int field_j;
     private byte[] field_o;
     static int field_l;
-    static ft field_g;
+    static TextureFormat field_g;
     private DiskCacheWorker field_i;
     static UiComponent field_d;
     private SectorCacheStore field_s;
@@ -189,7 +189,7 @@ final class CachedArchiveSource extends ArchiveSource {
             ConsoleExpressionParser.field_a = param0;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "js.G(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "js.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class CachedArchiveSource extends ArchiveSource {
         field_g = null;
         field_d = null;
         if (param0 != -50) {
-          field_g = (ft) null;
+          field_g = (TextureFormat) null;
         }
     }
 
@@ -597,11 +597,11 @@ final class CachedArchiveSource extends ArchiveSource {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
     static {
-        field_g = new ft(1);
+        field_g = new TextureFormat(1);
     }
 }

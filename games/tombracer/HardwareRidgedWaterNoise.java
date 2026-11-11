@@ -56,7 +56,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
             return null;
           }
           if (param3) {
-            stackIn_7_0 = je.buildFirstDecodedSprite((byte) 69);
+            stackIn_7_0 = DropdownPopupList.buildFirstDecodedSprite((byte) 69);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;
@@ -71,7 +71,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -44,7 +44,7 @@ final class IsaacCipher {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -280,7 +280,7 @@ final class IsaacCipher {
               return;
             }
             TileRenderable.field_a = param5;
-            ft.field_a = param10;
+            TextureFormat.field_a = param10;
             if (RaceStandings.field_a.field_x != null) {
               try {
                 fua.field_b = new BufferedCacheFile(RaceStandings.field_a.field_x, 64, 0);
@@ -307,7 +307,7 @@ final class IsaacCipher {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -326,7 +326,7 @@ final class IsaacCipher {
           }
           this.initializeState(true);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

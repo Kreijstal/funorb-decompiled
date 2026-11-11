@@ -3,7 +3,7 @@
  */
 class AudioOutput {
     private long field_n;
-    private static ch field_p;
+    private static AudioOutputThread field_p;
     static boolean field_h;
     private int field_l;
     private boolean field_g;
@@ -189,7 +189,7 @@ class AudioOutput {
               ((AudioOutput) ((Object) var4)).openDevice(((AudioOutput) ((Object) var4)).field_s);
               if (field_q > 0 &&
                 field_p == null) {
-                field_p = new ch();
+                field_p = new AudioOutputThread();
                 field_p.field_d = param0;
                 param0.startThread((Runnable) ((Object) field_p), 425, field_q);
               }

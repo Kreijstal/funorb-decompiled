@@ -34,7 +34,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.CA(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ri.CA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class SweepRotateLocomotor extends Locomotor {
           if (var2 == 0) {
             if (null == CoinItemComponent.field_G) {
               CoinItemComponent.field_G = new SecondaryNodeHashTable(128);
-              tba.field_k = 0;
+              MonochromeRowCacheEntry.field_k = 0;
             }
             stackIn_11_0 = (var1.readUnsignedByte(255) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
@@ -82,7 +82,7 @@ final class SweepRotateLocomotor extends Locomotor {
             }
             var6 = LightSource.a(var4_ref_String, param0 ^ -14105);
             var7_ref = var1.readString((byte) -76);
-            var8 = jd.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_String));
+            var8 = OpenGlTexture3D.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
             }
@@ -95,8 +95,8 @@ final class SweepRotateLocomotor extends Locomotor {
             if (null == var6) {
               var6 = new mu();
               CoinItemComponent.field_G.put(param0 ^ -14181, var6, (long)var8.hashCode());
-              fieldTemp$1 = tba.field_k;
-              tba.field_k = tba.field_k + 1;
+              fieldTemp$1 = MonochromeRowCacheEntry.field_k;
+              MonochromeRowCacheEntry.field_k = MonochromeRowCacheEntry.field_k + 1;
               var6.field_Db = fieldTemp$1;
               MenuScreen.field_l.addLast((byte) -116, var6);
             }
@@ -147,12 +147,12 @@ final class SweepRotateLocomotor extends Locomotor {
           if (null == var6Lifetime1) {
             var6Lifetime1 = wp.a(param0 ^ 14095, var5Lifetime1);
             if (var6Lifetime1 != null) {
-              TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)jd.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)OpenGlTexture3D.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new mu();
-            TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)jd.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)OpenGlTexture3D.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$0 = ii.field_a;
             ii.field_a = ii.field_a + 1;
             var6Lifetime1.field_Db = fieldTemp$0;
@@ -191,7 +191,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1_ref), "ri.N(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1_ref), "ri.N(" + param0 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class SweepRotateLocomotor extends Locomotor {
             this.sweepSpeed = 106;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.FA(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ri.FA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.H(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ri.H(" + param0 + ')');
         }
     }
 
@@ -253,7 +253,7 @@ final class SweepRotateLocomotor extends Locomotor {
             field_q = 91;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.V(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ri.V(" + param0 + ')');
         }
     }
 
@@ -286,7 +286,7 @@ final class SweepRotateLocomotor extends Locomotor {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -334,7 +334,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "ri.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "ri.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -351,7 +351,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "ri.P(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "ri.P(" + param0 + ')');
         }
     }
 
@@ -362,7 +362,7 @@ final class SweepRotateLocomotor extends Locomotor {
             this.sweepSpeed = 121;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.DA(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ri.DA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -390,7 +390,7 @@ final class SweepRotateLocomotor extends Locomotor {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ final class SweepRotateLocomotor extends Locomotor {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -431,7 +431,7 @@ final class SweepRotateLocomotor extends Locomotor {
             this.encode((BitPacketBuffer) null, (byte) -85);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ri.L(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ri.L(" + param0 + ')');
         }
     }
 
@@ -456,7 +456,7 @@ final class SweepRotateLocomotor extends Locomotor {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -474,7 +474,7 @@ final class SweepRotateLocomotor extends Locomotor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "ri.Q(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "ri.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -499,13 +499,13 @@ final class SweepRotateLocomotor extends Locomotor {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3 = nma.field_l;
+            var3 = CurveShape.field_l;
             if (param1 >= -59) {
               stackIn_2_0 = (ToolkitSprite) null;
               return stackIn_2_0;
             }
             var4 = java.awt.Toolkit.getDefaultToolkit().createImage(param2);
-            var5 = new java.awt.MediaTracker((java.awt.Component) ((Object) nma.field_l));
+            var5 = new java.awt.MediaTracker((java.awt.Component) ((Object) CurveShape.field_l));
             var5.addImage(var4, 0);
             var5.waitForAll();
             var6 = var4.getWidth((java.awt.image.ImageObserver) ((Object) var3));
@@ -537,7 +537,7 @@ final class SweepRotateLocomotor extends Locomotor {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

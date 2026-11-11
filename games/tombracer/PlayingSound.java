@@ -23,7 +23,7 @@ final class PlayingSound extends IntrusiveNode {
           this.unlink(25);
           rs.queueSoundRelease(this, -110);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fla.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fla.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class PlayingSound extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -88,25 +88,25 @@ final class PlayingSound extends IntrusiveNode {
         int var2 = -91 % ((param0 + 18) / 36);
         if (0 <= this.field_g) {
           this.field_h = this.field_g >> 8;
-          this.field_i.a(this.field_m, this.field_h, (byte) -21);
+          this.field_i.setVolumeAndPan(this.field_m, this.field_h, (byte) -21);
           return;
         }
         this.field_g = 0;
         this.field_h = this.field_g >> 8;
-        this.field_i.a(this.field_m, this.field_h, (byte) -21);
+        this.field_i.setVolumeAndPan(this.field_m, this.field_h, (byte) -21);
     }
 
     final void updateVolumeAndPan(int param0, int param1, int param2, int param3, int param4) {
         this.field_h = ol.computeDistanceVolume(param0, this.field_l, (byte) -91, param3, param4, param1);
         if (param2 <= -127) {
-          this.field_m = AgeValidator.a(param3, true, param0);
-          this.field_i.a(this.field_m, this.field_h, (byte) -21);
+          this.field_m = AgeValidator.computePan(param3, true, param0);
+          this.field_i.setVolumeAndPan(this.field_m, this.field_h, (byte) -21);
           return;
         }
         SoundEventPlayer var7 = (SoundEventPlayer) null;
         this.update(-1, (SoundEventPlayer) null, false);
-        this.field_m = AgeValidator.a(param3, true, param0);
-        this.field_i.a(this.field_m, this.field_h, (byte) -21);
+        this.field_m = AgeValidator.computePan(param3, true, param0);
+        this.field_i.setVolumeAndPan(this.field_m, this.field_h, (byte) -21);
     }
 
     final void release(int param0, SoundEventPlayer param1) {
@@ -118,7 +118,7 @@ final class PlayingSound extends IntrusiveNode {
           this.unlink(18);
           rs.queueSoundRelease(this, -77);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fla.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fla.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class PlayingSound extends IntrusiveNode {
         try {
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class PlayingSound extends IntrusiveNode {
           this.field_k = 50;
           this.field_n = this.field_g / this.field_k;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -152,12 +152,12 @@ final class PlayingSound extends IntrusiveNode {
         }
         if (param0 == 4216) {
           this.field_h = this.field_g >> 8;
-          this.field_i.a(this.field_m, this.field_h, (byte) -21);
+          this.field_i.setVolumeAndPan(this.field_m, this.field_h, (byte) -21);
           return;
         }
         this.fadeInStep(22);
         this.field_h = this.field_g >> 8;
-        this.field_i.a(this.field_m, this.field_h, (byte) -21);
+        this.field_i.setVolumeAndPan(this.field_m, this.field_h, (byte) -21);
     }
 
     static {

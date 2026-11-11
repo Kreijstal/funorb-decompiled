@@ -38,7 +38,7 @@ abstract class ConsoleMethod extends DualLinkNode {
           }
           for (var4_int = 0; this.field_n.length > var4_int; var4_int++) {
             if (param2[var4_int].field_a) {
-              var5 = jd.getPrimitiveType(param2[var4_int].field_d, 0);
+              var5 = OpenGlTexture3D.getPrimitiveType(param2[var4_int].field_d, 0);
               if (Boolean.TYPE == var5 &&
                 this.field_n[var4_int] != Boolean.TYPE) {
                 return false;
@@ -79,7 +79,7 @@ abstract class ConsoleMethod extends DualLinkNode {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ abstract class ConsoleMethod extends DualLinkNode {
           }
           this.field_k = var8.toString();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ela.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ela.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

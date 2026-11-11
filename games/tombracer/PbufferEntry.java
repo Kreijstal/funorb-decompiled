@@ -55,7 +55,7 @@ final class PbufferEntry extends DualLinkNode {
           this.field_p = param2 * param1;
           this.field_k = this.field_l.field_l.createPbuffer(param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class PbufferEntry extends DualLinkNode {
     final static void initConsole(int param0) {
         TripBeamComponent.playMusicTrack(1, param0);
         SoftwareRasterizer.clear();
-        fp.startMenuBackgroundDemo(122);
+        TextureCombineSource.startMenuBackgroundDemo(122);
         if (!(ld.field_e < 2)) {
           HelloCommand.field_o = new FunOrbConsole(jk.createConsoleMethods((byte) 122), HeapIndexArray.field_d, dsa.field_c);
           aca.addShellListenerFirst(HelloCommand.field_o, 19711);

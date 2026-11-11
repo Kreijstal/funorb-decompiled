@@ -63,7 +63,7 @@ final class WaypointPath {
           param1.field_j = 0;
           param1.field_g = false;
           UnlockEntry.field_g = new nc(var3_int, param1, param1);
-          ByteStorage.field_a = new tr(var3_int, param1, param1, new gha());
+          ByteStorage.field_a = new QuickChatPhraseSource(var3_int, param1, param1, new gha());
           var4 = BlendModeOperator.findRootQuickChatCategory((byte) 86);
           if (var4 == null) {
             var11 = (Throwable) null;
@@ -103,7 +103,7 @@ final class WaypointPath {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -116,14 +116,14 @@ final class WaypointPath {
         return this.points;
     }
 
-    final boolean a(byte param0) {
+    final boolean stopsAtEnd(byte param0) {
         if (param0 != 21) {
-          this.a(false, -22);
+          this.setStopsAtEnd(false, -22);
         }
         return this.field_a;
     }
 
-    final void a(boolean param0, int param1) {
+    final void setStopsAtEnd(boolean param0, int param1) {
         this.field_a = param0 ? true : false;
         if (param1 != 1) {
           this.field_a = true;
@@ -135,7 +135,7 @@ final class WaypointPath {
         try {
           this.points = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class WaypointPath {
             this.field_a = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gea.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gea.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class WaypointPath {
           }
           param0.writeBits((byte) 74, !this.field_a ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

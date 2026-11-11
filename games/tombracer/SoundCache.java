@@ -8,10 +8,10 @@ final class SoundCache {
     private NodeHashTable field_e;
     private NodeHashTable field_a;
 
-    final u getSoundEffectByName(String param0, byte param1, String param2) {
+    final PcmSample getSoundEffectByName(String param0, byte param1, String param2) {
         RuntimeException var4 = null;
-        u stackIn_2_0 = null;
-        u stackIn_4_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -23,7 +23,7 @@ final class SoundCache {
             stackIn_4_0 = this.getSampleByName(false, param2, param0, (int[]) null);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (u) null;
+          stackIn_2_0 = (PcmSample) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -41,7 +41,7 @@ final class SoundCache {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -52,14 +52,14 @@ final class SoundCache {
         field_d = null;
     }
 
-    private final u loadSoundByName(String param0, byte param1, int[] param2, String param3) {
+    private final PcmSample loadSoundByName(String param0, byte param1, int[] param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        u stackIn_2_0 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_8_0 = null;
-        u stackIn_10_0 = null;
+        PcmSample stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -70,13 +70,13 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -59) {
-            stackIn_2_0 = (u) null;
+            stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
           var5_int = this.field_c.getGroupId(param3, -7768);
           if (var5_int < 0) {
             stackIn_5_0 = null;
-            return (u) (stackIn_5_0);
+            return (PcmSample) (stackIn_5_0);
           }
           var6 = this.field_c.getFileId(true, param0, var5_int);
           if (var6 >= 0) {
@@ -84,7 +84,7 @@ final class SoundCache {
             return stackIn_10_0;
           }
           stackIn_8_0 = null;
-          return (u) (stackIn_8_0);
+          return (PcmSample) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -107,17 +107,17 @@ final class SoundCache {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    private final u getSampleByName(boolean param0, String param1, String param2, int[] param3) {
+    private final PcmSample getSampleByName(boolean param0, String param1, String param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         Object stackIn_2_0 = null;
-        u stackIn_5_0 = null;
-        u stackIn_10_0 = null;
+        PcmSample stackIn_5_0 = null;
+        PcmSample stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -130,10 +130,10 @@ final class SoundCache {
           var5_int = this.field_b.getGroupId(param2, -7768);
           if (var5_int < 0) {
             stackIn_2_0 = null;
-            return (u) (stackIn_2_0);
+            return (PcmSample) (stackIn_2_0);
           }
           if (param0) {
-            stackIn_5_0 = (u) null;
+            stackIn_5_0 = (PcmSample) null;
             return stackIn_5_0;
           }
           var6 = this.field_b.getFileId(true, param1, var5_int);
@@ -164,29 +164,29 @@ final class SoundCache {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    private final u getVorbisSample(int param0, int[] param1, byte param2, int param3) {
+    private final PcmSample getVorbisSample(int param0, int[] param1, byte param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        u var8 = null;
+        PcmSample var8 = null;
         VorbisSample var9 = null;
-        u stackIn_2_0 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_11_0 = null;
-        u stackIn_19_0 = null;
+        PcmSample stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        u var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param0 ^ (param3 >>> 12 | 65528 & param3 << 4);
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (u) (this.field_a.get((byte) -127, var6));
+          var8 = (PcmSample) (this.field_a.get((byte) -127, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -200,7 +200,7 @@ final class SoundCache {
             var9 = VorbisSample.load(this.field_c, param3, param0);
             if (var9 == null) {
               stackIn_11_0 = null;
-              return (u) (stackIn_11_0);
+              return (PcmSample) (stackIn_11_0);
             }
             this.field_e.put(var6, 124, var9);
           }
@@ -225,15 +225,15 @@ final class SoundCache {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final u getSoundById(byte param0, int[] param1, int param2) {
+    final PcmSample getSoundById(byte param0, int[] param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        u stackIn_2_0 = null;
-        u stackIn_5_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_5_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -259,13 +259,13 @@ final class SoundCache {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final u getSoundByName(String param0, int param1, String param2) {
+    final PcmSample getSoundByName(String param0, int param1, String param2) {
         RuntimeException var4 = null;
-        u stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -294,15 +294,15 @@ final class SoundCache {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final u getSoundEffectById(int param0, int[] param1, int param2) {
+    final PcmSample getSoundEffectById(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
-        u stackIn_2_0 = null;
-        u stackIn_6_0 = null;
-        u stackIn_9_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_6_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -319,7 +319,7 @@ final class SoundCache {
           if (param2 == 0) {
             throw new RuntimeException();
           }
-          stackIn_9_0 = (u) null;
+          stackIn_9_0 = (PcmSample) null;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -331,26 +331,26 @@ final class SoundCache {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final u loadSoundEffect(int param0, int param1, int param2, int[] param3) {
+    private final PcmSample loadSoundEffect(int param0, int param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        u var8 = null;
+        PcmSample var8 = null;
         SoundEffect var9 = null;
-        u var10 = null;
-        u stackIn_4_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_4_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_11_0 = null;
-        u stackIn_16_0 = null;
+        PcmSample stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        u var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param1 >>> 12 | (-805302273 & param1) << 4) ^ param2;
           var5_int = var5_int | param1 << 16;
@@ -358,7 +358,7 @@ final class SoundCache {
             this.field_e = (NodeHashTable) null;
           }
           var6 = (long)var5_int;
-          var8 = (u) (this.field_a.get((byte) -110, var6));
+          var8 = (PcmSample) (this.field_a.get((byte) -110, var6));
           if (var8 != null) {
             stackIn_4_0 = var8;
             return stackIn_4_0;
@@ -366,12 +366,12 @@ final class SoundCache {
           if (param3 != null &&
             param3[0] <= 0) {
             stackIn_8_0 = null;
-            return (u) (stackIn_8_0);
+            return (PcmSample) (stackIn_8_0);
           }
           var9 = SoundEffect.loadFromArchive(this.field_b, param1, param2);
           if (var9 == null) {
             stackIn_11_0 = null;
-            return (u) (stackIn_11_0);
+            return (PcmSample) (stackIn_11_0);
           }
           var10 = var9.toPcmSample();
           var8Lifetime1 = var10;
@@ -391,7 +391,7 @@ final class SoundCache {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class SoundCache {
           this.field_c = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

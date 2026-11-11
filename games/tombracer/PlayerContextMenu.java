@@ -9,7 +9,7 @@ final class PlayerContextMenu {
     ContextMenu field_f;
     UiComponent field_h;
     int field_k;
-    static fp field_j;
+    static TextureCombineSource field_j;
     static volatile boolean field_c;
     String field_i;
     static String field_a;
@@ -22,8 +22,8 @@ final class PlayerContextMenu {
 
     final boolean handleEscape(int param0) {
         if (param0 != 13) {
-          gqa var3 = (gqa) null;
-          this.addChatFilterActions((gqa) null, -72);
+          ChatMessage var3 = (ChatMessage) null;
+          this.addChatFilterActions((ChatMessage) null, -72);
           if (this.field_f == null) {
             return false;
           }
@@ -86,7 +86,7 @@ final class PlayerContextMenu {
         var3 = var5.field_tb;
         if (var5.field_gc) {
           this.field_f.addItem((byte) -102, 2, LegacyOpenGlFlowingWaterEffect.formatText(114, pba.field_d, new String[]{var3}));
-          this.field_f.addItem((byte) -104, 3, LegacyOpenGlFlowingWaterEffect.formatText(123, cp.field_i, new String[]{var3}));
+          this.field_f.addItem((byte) -104, 3, LegacyOpenGlFlowingWaterEffect.formatText(123, NativeGraphicsHeap.field_i, new String[]{var3}));
         } else {
           if (var5.field_Bb) {
             this.field_f.addItem((byte) -76, 2, LegacyOpenGlFlowingWaterEffect.formatText(106, mna.field_b, new String[]{var3}));
@@ -203,7 +203,7 @@ final class PlayerContextMenu {
         if (param0 == -18) {
           return true;
         }
-        field_j = (fp) null;
+        field_j = (TextureCombineSource) null;
         return true;
     }
 
@@ -315,11 +315,11 @@ final class PlayerContextMenu {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void addChatFilterActions(gqa param0, int param1) {
+    final void addChatFilterActions(ChatMessage param0, int param1) {
         String discarded$1 = null;
         RuntimeException var3 = null;
         RuntimeException stackIn_20_0 = null;
@@ -364,7 +364,7 @@ final class PlayerContextMenu {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -386,7 +386,7 @@ final class PlayerContextMenu {
             if (!ComponentMount.b(8192)) {
               return;
             }
-            var14 = nl.a(true, this.field_g);
+            var14 = LoginMethod.a(true, this.field_g);
             var4 = AchievementsScreen.a((byte) -40, this.field_g);
             var5 = this.getDisplayName(-13);
             if (var4 != null) {
@@ -431,7 +431,7 @@ final class PlayerContextMenu {
         if (!ComponentMount.b(8192)) {
           return;
         }
-        var13 = nl.a(true, this.field_g);
+        var13 = LoginMethod.a(true, this.field_g);
         var4Lifetime1 = AchievementsScreen.a((byte) -40, this.field_g);
         var5 = this.getDisplayName(-13);
         if (var4Lifetime1 != null) {
@@ -463,7 +463,7 @@ final class PlayerContextMenu {
         return;
     }
 
-    final void c(int param0) {
+    final void addMessageActions(int param0) {
         String var4 = null;
         if (this.field_i != null &&
           this.field_g != SimpleConditionBehaviour.field_r) {
@@ -474,8 +474,8 @@ final class PlayerContextMenu {
         if (param0 == 0) {
           return;
         }
-        gqa var3 = (gqa) null;
-        this.addChatFilterActions((gqa) null, -104);
+        ChatMessage var3 = (ChatMessage) null;
+        this.addChatFilterActions((ChatMessage) null, -104);
     }
 
     private final boolean openReportAbuse(int param0, int param1, int param2) {
@@ -506,13 +506,13 @@ final class PlayerContextMenu {
           this.field_k = param4;
           this.field_d = param3;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "lja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_c = false;
-        field_j = new fp();
+        field_j = new TextureCombineSource();
         field_a = "That treasure's valuable, but heavy, so it'll slow you down. Drop it using <img=8><img=9> if you need to.";
     }
 }

@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class HuffmanCodec {
-    static lqa field_a;
+    static RendererOption field_a;
     static Vector field_c;
     private int[] field_b;
     private int[] field_d;
@@ -116,7 +116,7 @@ final class HuffmanCodec {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class HuffmanCodec {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -426,7 +426,7 @@ final class HuffmanCodec {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 

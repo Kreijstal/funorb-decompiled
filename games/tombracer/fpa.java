@@ -18,10 +18,10 @@ final class fpa {
           }
           ProceduralTextureProvider.attachKeyListener((java.awt.Component) ((Object) param0), -71);
           SweepRotateLocomotor.attachMouseListeners((java.awt.Component) ((Object) param0), true);
-          if (tja.field_q == null) {
+          if (HardCacheEntry.field_q == null) {
             return;
           }
-          tja.field_q.attachWheelListener(param1 ^ -59, (java.awt.Component) ((Object) param0));
+          HardCacheEntry.field_q.attachWheelListener(param1 ^ -59, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -33,7 +33,7 @@ final class fpa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

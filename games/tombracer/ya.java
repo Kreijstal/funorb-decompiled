@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ya extends za implements e {
+final class ya extends GraphicsHeap implements e {
     long field_nativeid;
 
     protected final void finalize() {

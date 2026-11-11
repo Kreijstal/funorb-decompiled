@@ -10,7 +10,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     static fta field_w;
     long field_peer;
     int field_jc;
-    hk field_Mb;
+    HardwareWaterTextures field_Mb;
     jaclib.memory.heap.NativeHeapBuffer field_o;
     private jaclib.memory.heap.NativeHeap field_t;
     jagex3.graphics2.hw.NativeInterface field_P;
@@ -51,11 +51,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     boolean field_qc;
     gb field_lb;
     int field_i;
-    mla field_r;
+    ProjectionMode field_r;
     private int field_ac;
     private float[] field_Lb;
     private int field_F;
-    ica[] field_db;
+    TextureCombineOperation[] field_db;
     int field_Ac;
     float field_yb;
     float field_zc;
@@ -69,14 +69,14 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     int field_S;
     float field_H;
     private boolean field_L;
-    ura[] field_v;
+    TextureTransformMode[] field_v;
     int field_k;
     private int field_Lc;
     boolean field_Zb;
     private float field_G;
     private float[] field_vc;
     int field_Bc;
-    ica[] field_mc;
+    TextureCombineOperation[] field_mc;
     boolean field_l;
     private GpuTexture[] field_N;
     private int field_rb;
@@ -126,7 +126,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private AffineTransform3D field_Ab;
     HardwareModel field_n;
     HardwareModel field_ec;
-    private qm field_cb;
+    private VertexStreamBuffer field_cb;
     mna field_Db;
     HardwareModel field_E;
     HardwareModel field_gc;
@@ -135,13 +135,13 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     HardwareModel field_O;
     mna field_nc;
     mna field_ob;
-    private qm field_hb;
+    private VertexStreamBuffer field_hb;
     private mna field_mb;
     HardwareModel field_fb;
     HardwareModel field_cc;
     HardwareModel field_tc;
     HardwareModel field_tb;
-    private qm field_xb;
+    private VertexStreamBuffer field_xb;
     private mna field_Z;
     boolean field_Wb;
 
@@ -188,7 +188,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.uploadDirectionalLights((byte) -78);
     }
 
-    abstract void setAlphaCombineSource(fp param0, int param1, boolean param2, int param3);
+    abstract void setAlphaCombineSource(TextureCombineSource param0, int param1, boolean param2, int param3);
 
     abstract void applyViewMatrix(boolean param0);
 
@@ -207,7 +207,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void usePixelProjection(int param0) {
-        mla var2 = null;
+        ProjectionMode var2 = null;
         if (this.field_r != S2CRewardChoicePacket.field_d) {
           var2 = this.field_r;
           this.field_r = S2CRewardChoicePacket.field_d;
@@ -224,10 +224,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final za createHeap(int param0) {
-        to var2 = new to(param0);
+    final GraphicsHeap createHeap(int param0) {
+        HardwareGraphicsHeap var2 = new HardwareGraphicsHeap(param0);
         this.field_ic.addLast((byte) -68, var2);
-        return (za) ((Object) var2);
+        return (GraphicsHeap) ((Object) var2);
     }
 
     final void setBlendMode(int param0, int param1) {
@@ -284,11 +284,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void setAlphaCombineSource(int param0, boolean param1, fp param2) {
+    final void setAlphaCombineSource(int param0, boolean param1, TextureCombineSource param2) {
         try {
           this.setAlphaCombineSource(param2, 15802, param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "eo.QH(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "eo.QH(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -300,7 +300,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (!this.field_Fc) {
           var1 = this.field_ic.first(-80);
           while (var1 != null) {
-            ((to) (var1)).b((byte) 30);
+            ((HardwareGraphicsHeap) (var1)).b((byte) 30);
             var1 = this.field_ic.next(110);
           }
           var1_ref = this.field_oc.keys();
@@ -335,11 +335,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                   this.setTextureCombineOperations(FunOrbConsole.field_w, (byte) -110, FunOrbConsole.field_w);
                 }
               } else {
-                this.setTextureCombineOperations(iw.field_c, (byte) -110, NormalMapOperator.field_m);
+                this.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, NormalMapOperator.field_m);
               }
             }
           } else {
-            this.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+            this.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
           }
         } else {
           this.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PlatformComponent.field_F);
@@ -348,7 +348,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void applyFogParameters(int param0);
 
-    abstract boolean supportsTexture3D(una param0, int param1, ft param2);
+    abstract boolean supportsTexture3D(GpuDataType param0, int param1, TextureFormat param2);
 
     final void prepareGlyphRendering(int param0) {
         if (4 != this.field_rb) {
@@ -369,7 +369,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final void a(float param0, int param1) {
         if (param1 != -229) {
-          this.field_cb = (qm) null;
+          this.field_cb = (VertexStreamBuffer) null;
         }
         if (param0 != this.field_Pb) {
           this.field_Pb = param0;
@@ -383,7 +383,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     private final void useOrthographicProjection(int param0) {
-        mla var2_ref_mla = null;
+        ProjectionMode var2_ref_mla = null;
         if (this.field_r != RasterBuffer.field_d) {
           var2_ref_mla = this.field_r;
           this.field_r = RasterBuffer.field_d;
@@ -457,13 +457,13 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
-        gh stackIn_1_0 = null;
+        HardwareSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new gh(this, param3, param4, param0, param1, param2);
+          stackIn_1_0 = new HardwareSprite(this, param3, param4, param0, param1, param2);
           return (ToolkitSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -475,12 +475,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final void useIdentityProjection(int param0) {
-        mla var2 = null;
+        ProjectionMode var2 = null;
         if (param0 != 256) {
           this.updateProjectionDepthTerms(-116);
         }
@@ -639,7 +639,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -650,12 +650,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_Qb;
     }
 
-    final na environmentCubeTexture(int param0) {
+    final CubeTexture environmentCubeTexture(int param0) {
         int var2 = -92 / ((-33 - param0) / 36);
         if (this.field_eb == null) {
           return null;
         }
-        return this.field_eb.b(68);
+        return this.field_eb.getCubeTexture(68);
     }
 
     final void xa(float param0) {
@@ -846,7 +846,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -876,7 +876,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     private final void usePerspectiveProjection(byte param0) {
-        mla var2 = null;
+        ProjectionMode var2 = null;
         if (param0 != -74) {
           this.field_T = (float[]) null;
         }
@@ -935,7 +935,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           param0[2] = this.field_C;
           param0[0] = this.field_A;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "eo.K(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "eo.K(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -980,7 +980,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1009,7 +1009,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void applyModelMatrix(byte param0);
 
-    abstract qm createVertexBuffer(int param0, boolean param1);
+    abstract VertexStreamBuffer createVertexBuffer(int param0, boolean param1);
 
     private final void invalidateOrthographicProjection(int param0) {
         if (param0 != 0) {
@@ -1026,21 +1026,21 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_s = false;
         this.buildPerspectiveProjection(7);
         if (param0 != -19320) {
-          this.field_Mb = (hk) null;
+          this.field_Mb = (HardwareWaterTextures) null;
         }
         if (this.field_r == SpriteSampleOperator.field_s) {
           this.projectionChanged((byte) 26);
         }
     }
 
-    final void setColorCombineSource(fp param0, int param1, int param2) {
+    final void setColorCombineSource(TextureCombineSource param0, int param1, int param2) {
         try {
           this.setColorCombineSource(param0, param1, -6219, false, false);
           if (param2 >= -13) {
             this.field_qb = 22;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "eo.GF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "eo.GF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1055,7 +1055,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.modelViewChanged((byte) 94);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "eo.W(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "eo.W(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1078,7 +1078,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private final void createLineBuffer(boolean param0) {
         this.field_cb = this.createVertexBuffer(6, param0);
         this.field_cb.allocate(24, 12, param0);
-        this.field_mb = this.createVertexLayout(new ne[]{new ne(gj.field_p)}, 0);
+        this.field_mb = this.createVertexLayout(new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_p)}, 0);
     }
 
     final void setDepthWriteAllowed(boolean param0, int param1) {
@@ -1092,7 +1092,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     abstract void applyBlendEnabled(int param0);
 
     final void drawUnitQuad(int param0) {
-        this.drawGeometryBuffer(vs.field_T, (byte) -32, param0);
+        this.drawGeometryBuffer(ProgressDialog.field_T, (byte) -32, param0);
     }
 
     final int estimatedResourceBytes(int param0) {
@@ -1151,7 +1151,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -1275,7 +1275,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -1288,7 +1288,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           int var3_int = 127 % ((param1 - 23) / 33);
           this.applyModelTransform(16);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "eo.IG(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "eo.IG(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1356,15 +1356,15 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract lv createTexture3D(byte[] param0, ft param1, byte param2, int param3, int param4, int param5);
+    abstract Texture3D createTexture3D(byte[] param0, TextureFormat param1, byte param2, int param3, int param4, int param5);
 
     abstract void applyTextureConstantColor(int param0);
 
     abstract void applyBlendFactors(boolean param0);
 
-    final GpuTexture2D createFloatTexture2D(float[] param0, ft param1, boolean param2, boolean param3, int param4, int param5) {
+    final GpuTexture2D createFloatTexture2D(float[] param0, TextureFormat param1, boolean param2, boolean param3, int param4, int param5) {
         RuntimeException var7 = null;
-        ft var8 = null;
+        TextureFormat var8 = null;
         GpuTexture2D stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1374,8 +1374,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            var8 = (ft) null;
-            this.createFloatTexture2D((float[]) null, (ft) null, false, false, 69, -89);
+            var8 = (TextureFormat) null;
+            this.createFloatTexture2D((float[]) null, (TextureFormat) null, false, false, 69, -89);
           }
           stackIn_3_0 = this.createFloatTexture2D(param1, 0, 0, param3, param4, 0, param0, param5);
           return stackIn_3_0;
@@ -1395,7 +1395,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1473,7 +1473,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1606,7 +1606,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           }
           break;
         }
-        this.field_ub = this.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_n, gj.field_n})}, 0);
+        this.field_ub = this.createVertexLayout(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_p, VertexAttribute.field_n, VertexAttribute.field_n})}, 0);
         return;
     }
 
@@ -1622,12 +1622,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, iw param4, int param5, int param6);
+    abstract void drawIndexedPrimitives(VertexBuffer param0, int param1, int param2, int param3, PrimitiveType param4, int param5, int param6);
 
     private final boolean p(int param0) {
         if (param0 > -41) {
-          iw var3 = (iw) null;
-          this.drawPrimitives(-55, (iw) null, 17, -88);
+          PrimitiveType var3 = (PrimitiveType) null;
+          this.drawPrimitives(-55, (PrimitiveType) null, 17, -88);
         }
         return this.field_sb[3].isSupported(1185);
     }
@@ -1660,7 +1660,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_rc;
     }
 
-    private final void drawGeometryBuffer(iw param0, byte param1, int param2) {
+    private final void drawGeometryBuffer(PrimitiveType param0, byte param1, int param2) {
         try {
           this.bindVertexBuffer(-128, 0, this.field_xb);
           this.bindVertexLayout(this.field_ub, -32);
@@ -1669,11 +1669,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.textureTransformChanged(-14);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "eo.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "eo.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    abstract GpuTexture2D createTexture2D(int param0, int param1, ft param2, byte param3, una param4);
+    abstract GpuTexture2D createTexture2D(int param0, int param1, TextureFormat param2, byte param3, GpuDataType param4);
 
     final void drawRectOutline(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7 = this.pixelCenterOffset((byte) -76);
@@ -1699,7 +1699,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_hc[this.field_Cc];
     }
 
-    abstract na createCubeTexture(byte param0, int[][] param1, boolean param2, int param3);
+    abstract CubeTexture createCubeTexture(byte param0, int[][] param1, boolean param2, int param3);
 
     final void za(int param0, int param1, int param2, int param3, int param4) {
         this.prepareSolidRendering(118);
@@ -1713,7 +1713,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.setMultisampling(1, false);
         this.bindVertexBuffer(-125, 0, this.field_hb);
         this.bindVertexLayout(this.field_Z, -32);
-        this.drawPrimitives(256, vs.field_T, 0, 0);
+        this.drawPrimitives(256, ProgressDialog.field_T, 0, 0);
         this.setMultisampling(1, true);
         this.setAlphaCombineSource(0, false, ej.field_c);
         this.setColorCombineSource(ej.field_c, 0, -93);
@@ -1745,7 +1745,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract boolean supportsTexture2D(boolean param0, una param1, ft param2);
+    abstract boolean supportsTexture2D(boolean param0, GpuDataType param1, TextureFormat param2);
 
     abstract void applyDirectionalLightsEnabled(byte param0);
 
@@ -1755,27 +1755,27 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int var3 = TombRacer.field_G ? 1 : 0;
         this.field_N = new GpuTexture[this.field_Vb];
         this.field_hc = new AffineTransform3D[this.field_Vb];
-        this.field_db = new ica[this.field_Vb];
-        this.field_v = new ura[this.field_Vb];
-        this.field_mc = new ica[this.field_Vb];
+        this.field_db = new TextureCombineOperation[this.field_Vb];
+        this.field_v = new TextureTransformMode[this.field_Vb];
+        this.field_mc = new TextureCombineOperation[this.field_Vb];
         int var2 = 0;
         if (param0 > -70) {
           this.field_zb = false;
         }
         while (var2 < this.field_Vb) {
-          this.field_db[var2] = iw.field_c;
-          this.field_mc[var2] = iw.field_c;
+          this.field_db[var2] = PrimitiveType.field_c;
+          this.field_mc[var2] = PrimitiveType.field_c;
           this.field_v[var2] = DualLinkNode.field_h;
           this.field_hc[var2] = new AffineTransform3D();
           var2++;
         }
         this.field_ib = new SceneLight[-2 + this.field_e];
-        this.field_Jb = (GpuTexture) ((Object) this.createTexture2D(1, 1, SwitchableId.field_a, (byte) -63, una.field_g));
-        this.useHeap(new to(262144));
-        this.field_Db = this.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_n})}, 0);
-        this.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b})}, 0);
-        this.field_nc = this.createVertexLayout(new ne[]{new ne(gj.field_p), new ne(gj.field_b), new ne(gj.field_n), new ne(gj.field_e)}, 0);
-        this.field_ob = this.createVertexLayout(new ne[]{new ne(gj.field_p), new ne(gj.field_b), new ne(gj.field_n)}, 0);
+        this.field_Jb = (GpuTexture) ((Object) this.createTexture2D(1, 1, SwitchableId.field_a, (byte) -63, GpuDataType.field_g));
+        this.useHeap(new HardwareGraphicsHeap(262144));
+        this.field_Db = this.createVertexLayout(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_p, VertexAttribute.field_n})}, 0);
+        this.createVertexLayout(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_p, VertexAttribute.field_b})}, 0);
+        this.field_nc = this.createVertexLayout(new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_p), new VertexStreamLayout(VertexAttribute.field_b), new VertexStreamLayout(VertexAttribute.field_n), new VertexStreamLayout(VertexAttribute.field_e)}, 0);
+        this.field_ob = this.createVertexLayout(new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_p), new VertexStreamLayout(VertexAttribute.field_b), new VertexStreamLayout(VertexAttribute.field_n)}, 0);
         this.field_cc = new HardwareModel(this, 0, 0, false, false);
         this.field_tb = new HardwareModel(this, 0, 0, true, true);
         this.field_gc = new HardwareModel(this, 0, 0, false, false);
@@ -1789,7 +1789,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_kb = new DynamicGeometryBuffer(this);
         this.field_z = this.createIndexBuffer(26, true);
         this.rebuildDeviceResources((byte) 6);
-        this.field_Mb = new hk(this);
+        this.field_Mb = new HardwareWaterTextures(this);
         this.field_sb[1] = this.createShaderEffect(1, 56);
         this.field_sb[2] = this.createShaderEffect(2, 48);
         this.field_sb[4] = this.createShaderEffect(4, 46);
@@ -1816,7 +1816,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.copyFrontToBack();
     }
 
-    abstract void setColorCombineSource(fp param0, int param1, int param2, boolean param3, boolean param4);
+    abstract void setColorCombineSource(TextureCombineSource param0, int param1, int param2, boolean param3, boolean param4);
 
     private final void createCircleBuffer(byte param0) {
         int var5 = 0;
@@ -1866,7 +1866,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           }
           break;
         }
-        this.field_Z = this.createVertexLayout(new ne[]{new ne(gj.field_p)}, 0);
+        this.field_Z = this.createVertexLayout(new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_p)}, 0);
         return;
     }
 
@@ -2068,11 +2068,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final void setTextureTransformMode(ura param0, boolean param1) {
+    final void setTextureTransformMode(TextureTransformMode param0, boolean param1) {
         try {
           if (param1) {
             this.field_Zb = false;
@@ -2080,7 +2080,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.field_v[this.field_Cc] = param0;
           this.textureTransformChanged(0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "eo.SG(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "eo.SG(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -2119,7 +2119,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract mna createVertexLayout(ne[] param0, int param1);
+    abstract mna createVertexLayout(VertexStreamLayout[] param0, int param1);
 
     private final void buildPerspectiveProjection(int param0) {
         float[] var2;
@@ -2183,7 +2183,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract GpuTexture2D createByteTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, ft param6, int param7);
+    abstract GpuTexture2D createByteTexture2D(boolean param0, byte[] param1, int param2, int param3, int param4, int param5, TextureFormat param6, int param7);
 
     final void la() {
         this.field_K = 0;
@@ -2266,7 +2266,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final GameFont createFont(FontMetrics param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
-        ca stackIn_1_0 = null;
+        HardwareFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -2274,7 +2274,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new ca(this, param0, param1, param2);
+          stackIn_1_0 = new HardwareFont(this, param0, param1, param2);
           return (GameFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2292,7 +2292,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2366,11 +2366,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    abstract void drawPrimitives(int param0, iw param1, int param2, int param3);
+    abstract void drawPrimitives(int param0, PrimitiveType param1, int param2, int param3);
 
     final int i() {
         return this.field_D;
@@ -2396,7 +2396,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -2424,7 +2424,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.setColorCombineSource(ej.field_c, 0, -85);
     }
 
-    final void setTextureCombineOperations(ica param0, byte param1, ica param2) {
+    final void setTextureCombineOperations(TextureCombineOperation param0, byte param1, TextureCombineOperation param2) {
         int var4_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -2468,7 +2468,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -2494,7 +2494,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_u;
     }
 
-    abstract GpuTexture2D createFloatTexture2D(ft param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7);
+    abstract GpuTexture2D createFloatTexture2D(TextureFormat param0, int param1, int param2, boolean param3, int param4, int param5, float[] param6, int param7);
 
     private final void textureTransformChanged(int param0) {
         this.applyTextureMatrix(param0);
@@ -2528,7 +2528,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_z.close(param0 ^ 12568);
     }
 
-    final GpuTexture2D createByteTexture2D(int param0, byte[] param1, boolean param2, ft param3, int param4, int param5) {
+    final GpuTexture2D createByteTexture2D(int param0, byte[] param1, boolean param2, TextureFormat param3, int param4, int param5) {
         RuntimeException var7 = null;
         GpuTexture2D stackIn_2_0 = null;
         GpuTexture2D stackIn_4_0 = null;
@@ -2561,7 +2561,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -2642,16 +2642,16 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void useHeap(za param0) {
+    final void useHeap(GraphicsHeap param0) {
         try {
-          this.field_t = ((to) (param0)).field_h;
+          this.field_t = ((HardwareGraphicsHeap) (param0)).field_h;
           this.field_o = this.field_t.a(32768, false);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "eo.FB(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "eo.FB(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2661,7 +2661,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_k;
     }
 
-    abstract void bindVertexBuffer(int param0, int param1, qm param2);
+    abstract void bindVertexBuffer(int param0, int param1, VertexStreamBuffer param2);
 
     static {
         field_w = new fta();

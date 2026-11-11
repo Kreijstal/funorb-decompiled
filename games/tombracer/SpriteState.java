@@ -51,7 +51,7 @@ abstract class SpriteState extends DualLinkNode {
             var8 = param1[1].field_n;
             param1[0].drawRecoloured(param4, param2, param0);
             param1[2].drawRecoloured(param4 - (-param5 + var7), param2, param0);
-            SoftwareRasterizer.saveClip(ic.field_d);
+            SoftwareRasterizer.saveClip(StatReportingObserverFactory.field_d);
             SoftwareRasterizer.intersectClip(var6_int + param4, param2, -var7 + param4 + param5, param2 + param1[1].field_k);
             var9 = param4 + var6_int;
             var10 = -var7 + param4 + param5;
@@ -61,7 +61,7 @@ abstract class SpriteState extends DualLinkNode {
             if (param3 != 20278) {
               field_l = (int[]) null;
             }
-            SoftwareRasterizer.restoreClip(ic.field_d);
+            SoftwareRasterizer.restoreClip(StatReportingObserverFactory.field_d);
             return;
           }
           return;
@@ -75,7 +75,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

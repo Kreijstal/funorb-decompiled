@@ -32,14 +32,14 @@ final class PitSnakeModel implements Renderable {
         ToolkitModel var5 = null;
         try {
           var3_int = this.snake.getDirection(2);
-          var4 = GameScreen.positiveModulo(-(PortalBehaviour.directionToAngle(ne.field_f[var3_int][1], ne.field_f[var3_int][0], 1) >> 2) + 512, 2048, 73);
+          var4 = GameScreen.positiveModulo(-(PortalBehaviour.directionToAngle(VertexStreamLayout.field_f[var3_int][1], VertexStreamLayout.field_f[var3_int][0], 1) >> 2) + 512, 2048, 73);
           if (param0 < 103) {
             PitSnakeModel.clampToScreenX((byte) 44, -55, -63, 37);
           }
           var5 = this.field_d.getModel((byte) 74);
-          gqa.drawModelAt(var4, -83584144, this.getRenderY((byte) 120), this.getRenderX((byte) -89), var5, this.getRenderZ((byte) -95));
+          ChatMessage.drawModelAt(var4, -83584144, this.getRenderY((byte) 120), this.getRenderX((byte) -89), var5, this.getRenderZ((byte) -95));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bt.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bt.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

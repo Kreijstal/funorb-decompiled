@@ -6,7 +6,7 @@ import java.io.*;
 final class VorbisSample extends IntrusiveNode {
     private static float[] field_x;
     private static float[] field_y;
-    private static tm[] field_M;
+    private static VorbisMapping[] field_M;
     private int field_L;
     private static float[] field_I;
     private int field_J;
@@ -33,7 +33,7 @@ final class VorbisSample extends IntrusiveNode {
     private static float[] field_u;
     private byte[] field_k;
     private static int field_w;
-    private static aha[] field_h;
+    private static VorbisResidue[] field_h;
     private boolean field_A;
     private static float[] field_v;
     private int field_s;
@@ -62,7 +62,7 @@ final class VorbisSample extends IntrusiveNode {
         return var1;
     }
 
-    final u decodeAll() {
+    final PcmSample decodeAll() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -94,10 +94,10 @@ final class VorbisSample extends IntrusiveNode {
           }
         }
         this.field_l = null;
-        return new u(this.field_s, var1, this.field_J, this.field_f, this.field_A);
+        return new PcmSample(this.field_s, var1, this.field_J, this.field_f, this.field_A);
     }
 
-    final u decodeToPcm(int[] param0) {
+    final PcmSample decodeToPcm(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -147,7 +147,7 @@ final class VorbisSample extends IntrusiveNode {
         this.field_l = null;
         var12 = this.field_k;
         this.field_k = null;
-        return new u(this.field_s, var12, this.field_J, this.field_f, this.field_A);
+        return new PcmSample(this.field_s, var12, this.field_J, this.field_f, this.field_A);
     }
 
     final static VorbisSample load(ResourceArchive param0, String param1, String param2) {
@@ -317,14 +317,14 @@ final class VorbisSample extends IntrusiveNode {
           field_K[var3Lifetime2] = new VorbisFloor1();
         }
         var3Lifetime3 = VorbisSample.readBits(6) + 1;
-        field_h = new aha[var3Lifetime3];
+        field_h = new VorbisResidue[var3Lifetime3];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
-          field_h[var4Lifetime1] = new aha();
+          field_h[var4Lifetime1] = new VorbisResidue();
         }
         var4Lifetime2 = VorbisSample.readBits(6) + 1;
-        field_M = new tm[var4Lifetime2];
+        field_M = new VorbisMapping[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
-          field_M[var5Lifetime1] = new tm();
+          field_M[var5Lifetime1] = new VorbisMapping();
         }
         var5Lifetime2 = VorbisSample.readBits(6) + 1;
         field_g = new boolean[var5Lifetime2];
@@ -425,7 +425,7 @@ final class VorbisSample extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        tm var14;
+        VorbisMapping var14;
         int var15;
         int var16;
         int var17_int;
@@ -464,7 +464,7 @@ final class VorbisSample extends IntrusiveNode {
         float var39;
         float[] var40;
         int var41;
-        aha var42;
+        VorbisResidue var42;
         int[] var44;
         float[] var45;
         float[] var46;

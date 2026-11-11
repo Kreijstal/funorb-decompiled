@@ -66,15 +66,15 @@ final class CharacterSelectPhase extends MatchPhase {
         int var7Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
         Room.field_j.draw(0, 0);
-        var3 = aaa.a(false) / 2;
-        var4 = SwitchLinkList.b(0) / 2;
+        var3 = LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2;
+        var4 = SwitchLinkList.getCanvasHeight(0) / 2;
         stackIn_3_0 = (this.canChoose(-1)) ? 0 : 1;
         var5 = stackIn_3_0;
-        ik.field_h.draw(0, 0);
+        IntArrayRequest.field_h.draw(0, 0);
         SocketConnector.drawWrappedText(gta.field_a.toUpperCase(), 1, SingleChildWidget.field_v, 2431750, 0, 48, 1, -222 + var4, var3 - 360, -1, (byte) 60, 512);
         if (-1 == this.field_u &&
           var5 != 0) {
-          SocketConnector.drawWrappedText(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, SwitchLinkList.b(0) - 48, var3 - 256, -1, (byte) 60, 512);
+          SocketConnector.drawWrappedText(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, SwitchLinkList.getCanvasHeight(0) - 48, var3 - 256, -1, (byte) 60, 512);
         }
         var6_ref_ad = (CharacterChoiceTile) (this.field_n.first(-80));
         while (var6_ref_ad != null) {
@@ -86,7 +86,7 @@ final class CharacterSelectPhase extends MatchPhase {
         if (param0 >= -50) {
           this.update(33, true);
         }
-        ura.a(-10985);
+        TextureTransformMode.a(-10985);
         var6 = this.field_t.length;
         var11 = 0;
         var7Lifetime1 = var11;
@@ -98,7 +98,7 @@ final class CharacterSelectPhase extends MatchPhase {
           } else {
             bsa.field_i.draw(-(bsa.field_i.width() >> 1) + var8, -(bsa.field_i.height() >> 1) + var9, 0, 1627389951, 1);
           }
-          SocketConnector.drawWrappedText(this.screen.getPlayerName(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
+          SocketConnector.drawWrappedText(this.screen.getPlayerName(var11, false).toUpperCase(), 1, FloatPacketBuffer.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
           var11++;
         }
         RemovedFromGameMenu.resetDepthRange((byte) -6);
@@ -185,8 +185,8 @@ final class CharacterSelectPhase extends MatchPhase {
           this.selection.field_b = new SoundEventPlayer();
           this.field_n = new IntrusiveDeque();
           for (var3_int = 0; var3_int < 13; var3_int++) {
-            var4 = aaa.a(false);
-            var5 = SwitchLinkList.b(0);
+            var4 = LegacyOpenGlWaterTextures.getCanvasWidth(false);
+            var5 = SwitchLinkList.getCanvasHeight(0);
             var6 = var3_int % 7 * (0 + (-90 + var4) / 7) + 45;
             stackIn_5_0 = -90;
             if (var3_int >= 7) {
@@ -224,7 +224,7 @@ final class CharacterSelectPhase extends MatchPhase {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class CharacterSelectPhase extends MatchPhase {
         int var5 = var4.getCurrentAnimationLength((byte) 114);
         var4.queueAnimation(param1 + 107, var5, param2, 0, 0);
         FloatingMessage var6 = RewardChoicePhase.createTextMessage(param1 ^ -41, LegacyOpenGlFlowingWaterEffect.formatText(82, SpriteSampleOperator.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
-        iqa.field_c.addMessageNow(0, var6);
+        ToolkitInstance.field_c.addMessageNow(0, var6);
     }
 
     private final boolean canChoose(int param0) {

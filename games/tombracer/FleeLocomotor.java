@@ -86,8 +86,8 @@ final class FleeLocomotor extends Locomotor {
               }
               var9 = MouseInputHandler.sin2048((byte) 95, var8 >> 2);
               var10 = ModelAnimator.cos2048(0, var8 >> 2);
-              var11 = doa.a(2, this.field_A, var9);
-              var12 = doa.a(2, this.field_A, var10);
+              var11 = doa.multiplyFixedCoarse(2, this.field_A, var9);
+              var12 = doa.multiplyFixedCoarse(2, this.field_A, var10);
               this.trap.move((byte) -110, var11, var12);
               if (this.field_w) {
                 this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8);
@@ -103,8 +103,8 @@ final class FleeLocomotor extends Locomotor {
           }
           var9Lifetime4 = MouseInputHandler.sin2048((byte) 95, var8Lifetime4 >> 2);
           var10Lifetime4 = ModelAnimator.cos2048(0, var8Lifetime4 >> 2);
-          var11Lifetime4 = doa.a(2, this.field_A, var9Lifetime4);
-          var12Lifetime4 = doa.a(2, this.field_A, var10Lifetime4);
+          var11Lifetime4 = doa.multiplyFixedCoarse(2, this.field_A, var9Lifetime4);
+          var12Lifetime4 = doa.multiplyFixedCoarse(2, this.field_A, var10Lifetime4);
           this.trap.move((byte) -110, var11Lifetime4, var12Lifetime4);
           if (!this.field_w) {
             return;
@@ -139,8 +139,8 @@ final class FleeLocomotor extends Locomotor {
                 }
                 var9Lifetime1 = MouseInputHandler.sin2048((byte) 95, var8Lifetime1 >> 2);
                 var10Lifetime1 = ModelAnimator.cos2048(0, var8Lifetime1 >> 2);
-                var11Lifetime1 = doa.a(2, this.field_A, var9Lifetime1);
-                var12Lifetime1 = doa.a(2, this.field_A, var10Lifetime1);
+                var11Lifetime1 = doa.multiplyFixedCoarse(2, this.field_A, var9Lifetime1);
+                var12Lifetime1 = doa.multiplyFixedCoarse(2, this.field_A, var10Lifetime1);
                 this.trap.move((byte) -110, var11Lifetime1, var12Lifetime1);
                 if (this.field_w) {
                   this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8Lifetime1);
@@ -172,8 +172,8 @@ final class FleeLocomotor extends Locomotor {
             }
             var9Lifetime2 = MouseInputHandler.sin2048((byte) 95, var8Lifetime2 >> 2);
             var10Lifetime2 = ModelAnimator.cos2048(0, var8Lifetime2 >> 2);
-            var11Lifetime2 = doa.a(2, this.field_A, var9Lifetime2);
-            var12Lifetime2 = doa.a(2, this.field_A, var10Lifetime2);
+            var11Lifetime2 = doa.multiplyFixedCoarse(2, this.field_A, var9Lifetime2);
+            var12Lifetime2 = doa.multiplyFixedCoarse(2, this.field_A, var10Lifetime2);
             this.trap.move((byte) -110, var11Lifetime2, var12Lifetime2);
             if (this.field_w) {
               this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8Lifetime2);
@@ -189,8 +189,8 @@ final class FleeLocomotor extends Locomotor {
         }
         var9Lifetime3 = MouseInputHandler.sin2048((byte) 95, var8Lifetime3 >> 2);
         var10Lifetime3 = ModelAnimator.cos2048(0, var8Lifetime3 >> 2);
-        var11Lifetime3 = doa.a(2, this.field_A, var9Lifetime3);
-        var12Lifetime3 = doa.a(2, this.field_A, var10Lifetime3);
+        var11Lifetime3 = doa.multiplyFixedCoarse(2, this.field_A, var9Lifetime3);
+        var12Lifetime3 = doa.multiplyFixedCoarse(2, this.field_A, var10Lifetime3);
         this.trap.move((byte) -110, var11Lifetime3, var12Lifetime3);
         if (!this.field_w) {
           return;
@@ -216,7 +216,7 @@ final class FleeLocomotor extends Locomotor {
           this.field_t = param1.readBits((byte) 44, 10) << 16;
           if (7 < param0.formatVersion) {
             this.field_v = param1.readBits((byte) 44, 10) << 16;
-            this.field_A = this.a(param1.readBits((byte) 44, 8), false);
+            this.field_A = this.decodeFixed16(param1.readBits((byte) 44, 8), false);
             stackIn_6_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_r = stackIn_6_1;
             this.field_u = SnakePitModel.unscaleFromBits(8, 8192, 0, param1.readBits((byte) 44, 8));
@@ -246,7 +246,7 @@ final class FleeLocomotor extends Locomotor {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ final class FleeLocomotor extends Locomotor {
         try {
           super.attachToTrap(96, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bha.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bha.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -324,7 +324,7 @@ final class FleeLocomotor extends Locomotor {
           super.encode(param0, (byte) -108);
           param0.writeBits((byte) -34, this.field_t >> 16, 10);
           param0.writeBits((byte) -128, this.field_v >> 16, 10);
-          param0.writeBits((byte) -128, this.b(0, this.field_A), 8);
+          param0.writeBits((byte) -128, this.encodeFixed16(0, this.field_A), 8);
           stackIn_2_0 = (BitPacketBuffer) (param0);
           stackIn_2_1 = 111;
           if (!this.field_r) {
@@ -356,26 +356,26 @@ final class FleeLocomotor extends Locomotor {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void e(byte param0) {
-        HuffmanCodec.field_a = new lqa(3, 4, true, true, true, true, true, true, true, false, true);
-        ControllerLocomotor.field_t = new lqa(3, 1, true, false, false, true, true, true, true, false, true);
+        HuffmanCodec.field_a = new RendererOption(3, 4, true, true, true, true, true, true, true, false, true);
+        ControllerLocomotor.field_t = new RendererOption(3, 1, true, false, false, true, true, true, true, false, true);
         if (param0 == -33) {
-          DateInputWidget.field_z = new lqa(1, 4, true, true, true, true, true, true, true, false, true);
-          vea.field_c = new lqa(1, 1, true, false, false, true, true, true, true, false, true);
-          UsernameSuggestionsPanel.field_x = new lqa(0, 1, true, false, false, false, false, false, false, true, false);
-          CharacterSelection.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
+          DateInputWidget.field_z = new RendererOption(1, 4, true, true, true, true, true, true, true, false, true);
+          vea.field_c = new RendererOption(1, 1, true, false, false, true, true, true, true, false, true);
+          UsernameSuggestionsPanel.field_x = new RendererOption(0, 1, true, false, false, false, false, false, false, true, false);
+          CharacterSelection.field_d = new RendererOption(0, 1, false, false, false, false, false, false, false, true, false);
           rc.field_a = new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a), (ToolkitCandidate) ((Object) DateInputWidget.field_z), (ToolkitCandidate) ((Object) ControllerLocomotor.field_t), (ToolkitCandidate) ((Object) vea.field_c), (ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x), (ToolkitCandidate) ((Object) CharacterSelection.field_d)};
           return;
         }
         field_B = (String) null;
-        DateInputWidget.field_z = new lqa(1, 4, true, true, true, true, true, true, true, false, true);
-        vea.field_c = new lqa(1, 1, true, false, false, true, true, true, true, false, true);
-        UsernameSuggestionsPanel.field_x = new lqa(0, 1, true, false, false, false, false, false, false, true, false);
-        CharacterSelection.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
+        DateInputWidget.field_z = new RendererOption(1, 4, true, true, true, true, true, true, true, false, true);
+        vea.field_c = new RendererOption(1, 1, true, false, false, true, true, true, true, false, true);
+        UsernameSuggestionsPanel.field_x = new RendererOption(0, 1, true, false, false, false, false, false, false, true, false);
+        CharacterSelection.field_d = new RendererOption(0, 1, false, false, false, false, false, false, false, true, false);
         rc.field_a = new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a), (ToolkitCandidate) ((Object) DateInputWidget.field_z), (ToolkitCandidate) ((Object) ControllerLocomotor.field_t), (ToolkitCandidate) ((Object) vea.field_c), (ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x), (ToolkitCandidate) ((Object) CharacterSelection.field_d)};
     }
 

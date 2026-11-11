@@ -31,7 +31,7 @@ class tc extends lu {
             field_f = (String) null;
           }
           for (var4 = 0; var6.length > var4; var4++) {
-            var6[var4] = gb.a(param0[var4], param1 + 8957, param2);
+            var6[var4] = gb.createModel(param0[var4], param1 + 8957, param2);
           }
           stackIn_10_0 = var3;
           return stackIn_10_0;
@@ -51,7 +51,7 @@ class tc extends lu {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ class tc extends lu {
           param0.writeLong(1736565456, this.field_g);
           param0.writeBase38Name(this.field_e, -124);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -107,7 +107,7 @@ class tc extends lu {
           this.field_e = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

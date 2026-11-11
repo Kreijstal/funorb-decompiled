@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LruNodeCache {
-    static fp field_c;
+    static TextureCombineSource field_c;
     static String field_f;
     private DualLinkNode field_d;
     private NodeHashTable field_e;
@@ -60,7 +60,7 @@ final class LruNodeCache {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class LruNodeCache {
           this.field_e.put(param2, 126, param0);
           this.field_a.addLast(param0, (byte) -77);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -101,6 +101,6 @@ final class LruNodeCache {
 
     static {
         field_f = "Hide lobby chat";
-        field_c = new fp();
+        field_c = new TextureCombineSource();
     }
 }

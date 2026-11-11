@@ -41,7 +41,7 @@ final class WindZoneBehaviour extends Behaviour {
           this.field_r = param1.readBits((byte) 44, 4);
           this.field_p = param1.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -111,8 +111,8 @@ final class WindZoneBehaviour extends Behaviour {
         if (param0 != 5418) {
           this.field_q = 90;
         }
-        var6 = dma.field_k[this.field_q][0] << 16;
-        var7 = dma.field_k[this.field_q][1] << 16;
+        var6 = OpenGlCubeTexture.field_k[this.field_q][0] << 16;
+        var7 = OpenGlCubeTexture.field_k[this.field_q][1] << 16;
         var9 = this.field_p << 16;
         var10 = this.field_r << 16;
         var11 = 0;
@@ -202,8 +202,8 @@ final class WindZoneBehaviour extends Behaviour {
               if (!(var22 > 262144) ||
                 !this.getRoom(true).traceBeamSegment(1, this.field_v, this.getRoot(param0 ^ 5420), (byte) 60)) {
                 var8 = GameEvent.divideFixed16(var12, param0 ^ -25604, var22);
-                var8 = -gqa.multiplyFixed(var8, (byte) 24, -var9 + var10) + var10;
-                var8 = za.clampValue(var9, 113, var10, var8);
+                var8 = -ChatMessage.multiplyFixed(var8, (byte) 24, -var9 + var10) + var10;
+                var8 = GraphicsHeap.clampValue(var9, 113, var10, var8);
                 stackIn_56_0 = var18;
                 stackIn_56_1 = 120;
                 stackIn_56_2 = false;
@@ -212,7 +212,7 @@ final class WindZoneBehaviour extends Behaviour {
                 } else {
                   stackIn_57_3 = 1;
                 }
-                ((Collidable) (Object) stackIn_56_0).tryPush(stackIn_56_1, stackIn_56_2, stackIn_57_3, gqa.multiplyFixed(var7, (byte) 24, var8), gqa.multiplyFixed(var6, (byte) 24, var8), 0);
+                ((Collidable) (Object) stackIn_56_0).tryPush(stackIn_56_1, stackIn_56_2, stackIn_57_3, ChatMessage.multiplyFixed(var7, (byte) 24, var8), ChatMessage.multiplyFixed(var6, (byte) 24, var8), 0);
               }}
           }
         }
@@ -241,7 +241,7 @@ final class WindZoneBehaviour extends Behaviour {
           param1.writeBits((byte) 44, this.field_r, 4);
           param1.writeBits((byte) -128, this.field_p, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "th.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "th.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

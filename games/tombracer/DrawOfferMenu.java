@@ -108,7 +108,7 @@ final class DrawOfferMenu extends MenuScreen {
           }
           int var2_int = -77 % ((-37 - param0) / 57);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ow.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ow.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class DrawOfferMenu extends MenuScreen {
     final void draw(byte param0, boolean param1) {
         super.draw(param0, param1);
         int var3 = this.items[1].field_i - 70 + this.field_r.getPosition(93) - 150;
-        WhiteLightShooterComponent.field_K.draw((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
+        WhiteLightShooterComponent.field_K.draw((LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
     }
 
     final static UiComponent a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12) {
@@ -175,7 +175,7 @@ final class DrawOfferMenu extends MenuScreen {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 

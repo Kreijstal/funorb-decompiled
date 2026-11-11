@@ -3,7 +3,7 @@
  */
 final class S2CRewardChoicePacket implements GamePacket {
     private int field_b;
-    static mla field_d;
+    static ProjectionMode field_d;
     private int field_c;
     static sla field_a;
 
@@ -39,7 +39,7 @@ final class S2CRewardChoicePacket implements GamePacket {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class S2CRewardChoicePacket implements GamePacket {
           }
           param1.endBitWrite(param0 - 1826190886);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nr.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nr.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -79,12 +79,12 @@ final class S2CRewardChoicePacket implements GamePacket {
             S2CRewardChoicePacket.releaseStatics(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nr.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nr.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_d = new mla();
+        field_d = new ProjectionMode();
         field_a = new sla();
     }
 }

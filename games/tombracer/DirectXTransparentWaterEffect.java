@@ -4,7 +4,7 @@
 final class DirectXTransparentWaterEffect extends ShaderEffect {
     private jagdx.IDirect3DVertexShader field_f;
     private static float[] field_d;
-    private hk field_g;
+    private HardwareWaterTextures field_g;
     private Direct3DToolkit field_e;
 
     final void disable(int param0) {
@@ -177,7 +177,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         }
     }
 
-    DirectXTransparentWaterEffect(Direct3DToolkit param0, ResourceArchive param1, hk param2) {
+    DirectXTransparentWaterEffect(Direct3DToolkit param0, ResourceArchive param1, HardwareWaterTextures param2) {
         super(param0);
         this.field_g = param2;
         this.field_e = param0;

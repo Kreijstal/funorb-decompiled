@@ -18,7 +18,7 @@ final class rc {
           if (param3 != -93) {
             field_b = (SpriteData[]) null;
           }
-          hka.field_b.c(0);
+          hka.field_b.addMessageActions(0);
           var12 = hka.field_b;
           var8 = param0;
           var9 = param1;
@@ -26,7 +26,7 @@ final class rc {
           var11 = param4;
           var12.field_f.openAt(var9, var11, -80, var10, var8);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

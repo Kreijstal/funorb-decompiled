@@ -70,7 +70,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -158,8 +158,8 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         if (param0 != 13328) {
           return;
         }
-        if (this.field_h instanceof tua) {
-          ((tua) (this.field_h)).a(9776, this, this.field_C, this.field_O);
+        if (this.field_h instanceof ScrollListener) {
+          ((ScrollListener) (this.field_h)).onScrollChanged(9776, this, this.field_C, this.field_O);
         }
     }
 
@@ -185,8 +185,8 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         if (param1 >= -90) {
           this.field_A = 107;
         }
-        if (this.field_h instanceof tua) {
-          ((tua) (this.field_h)).a(9776, this, this.field_O, this.field_O);
+        if (this.field_h instanceof ScrollListener) {
+          ((ScrollListener) (this.field_h)).onScrollChanged(9776, this, this.field_O, this.field_O);
         }
     }
 
@@ -272,7 +272,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -298,8 +298,8 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
               var5_int = this.field_C;
               this.updateVerticalFractionFromThumb(-66);
               if (this.field_C != var5_int &&
-                this.field_h instanceof tua) {
-                ((tua) (this.field_h)).a(this.field_C, this, true, this.field_C);
+                this.field_h instanceof ScrollListener) {
+                ((ScrollListener) (this.field_h)).onScrollDragged(this.field_C, this, true, this.field_C);
               }
             }
             if (!this.field_P) {
@@ -308,8 +308,8 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
               var5_intLifetime2 = this.field_O;
               this.updateHorizontalFractionFromThumb(param1 - 2031616);
               if (this.field_O != var5_intLifetime2 &&
-                this.field_h instanceof tua) {
-                ((tua) (this.field_h)).a(this.field_C, this, true, this.field_O);
+                this.field_h instanceof ScrollListener) {
+                ((ScrollListener) (this.field_h)).onScrollDragged(this.field_C, this, true, this.field_O);
               }
             }
           }
@@ -363,7 +363,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -431,7 +431,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -534,7 +534,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -664,7 +664,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -772,7 +772,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 

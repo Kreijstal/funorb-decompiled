@@ -77,15 +77,15 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void c(byte param0) {
-        lqa var1;
+        RendererOption var1;
         int var2;
         var2 = TombRacer.field_G ? 1 : 0;
-        var1 = LegacyOpenGlBloomEffect.b(false);
+        var1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
         if (param0 > -90) {
           field_f = 50;
         }
@@ -113,7 +113,7 @@ final class ProxySocketConnector extends SocketConnector {
           baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) DateInputWidget.field_z)});
         }
         System.gc();
-        if (!LegacyOpenGlBloomEffect.b(false).field_c) {
+        if (!LegacyOpenGlBloomEffect.getCurrentRendererOption(false).field_c) {
           ProxySocketConnector.c((byte) -127);
         }
     }
@@ -320,7 +320,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

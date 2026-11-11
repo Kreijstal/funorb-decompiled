@@ -4,7 +4,7 @@
 final class VboVertexArray extends vo implements LegacyVertexArray {
     private int field_j;
     static UiComponent field_k;
-    static ft field_i;
+    static TextureFormat field_i;
 
     public static void releaseStatics(int param0) {
         field_k = null;
@@ -27,7 +27,7 @@ final class VboVertexArray extends vo implements LegacyVertexArray {
         try {
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class VboVertexArray extends vo implements LegacyVertexArray {
           }
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wo.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wo.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,6 +65,6 @@ final class VboVertexArray extends vo implements LegacyVertexArray {
     }
 
     static {
-        field_i = new ft(2);
+        field_i = new TextureFormat(2);
     }
 }

@@ -9,11 +9,11 @@ final class SwitchLinkList {
     private dha[] pendingTargetIds;
     static String field_c;
 
-    final static int b(int param0) {
+    final static int getCanvasHeight(int param0) {
         if (param0 != 0) {
           field_d = (String) null;
         }
-        return qf.field_i;
+        return FloatPacketBuffer.field_i;
     }
 
     private final void pruneDudTargets(byte param0) {
@@ -62,7 +62,7 @@ final class SwitchLinkList {
           }
           this.targets = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "koa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "koa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class SwitchLinkList {
             this.pendingTargetIds = (dha[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "koa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "koa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class SwitchLinkList {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ final class SwitchLinkList {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class SwitchLinkList {
         field_d = null;
         field_c = null;
         if (param0 > -71) {
-          SwitchLinkList.b(50);
+          SwitchLinkList.getCanvasHeight(50);
         }
     }
 

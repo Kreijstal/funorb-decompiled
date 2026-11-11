@@ -125,17 +125,17 @@ final class TutorialHints {
           }
           var5 = new MessageOverlay(this.field_l, param1);
           var5.setMessages(tea.field_a, param0, ColouriseOperator.field_n, (byte) 21);
-          this.field_c.addLast((byte) -125, new mga(var5, param2));
+          this.field_c.addLast((byte) -125, new QueuedHint(var5, param2));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sna.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sna.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void showQueuedHints(byte param0) {
-        mga var2;
+        QueuedHint var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
-        var2 = (mga) (this.field_c.first(-80));
+        var2 = (QueuedHint) (this.field_c.first(-80));
         while (var2 != null) {
           if (var2.field_k > 0) {
             var2.field_k = var2.field_k - 1;
@@ -145,7 +145,7 @@ final class TutorialHints {
               var2.unlink(param0 ^ 18);
             }
           }
-          var2 = (mga) (this.field_c.next(108));
+          var2 = (QueuedHint) (this.field_c.next(108));
         }
         if (param0 != 44) {
           this.update(1);
@@ -174,7 +174,7 @@ final class TutorialHints {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sna.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sna.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

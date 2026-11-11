@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NormalMapOperator extends TextureOperator {
-    static ica field_m;
+    static TextureCombineOperation field_m;
     private int field_o;
     private boolean field_n;
 
@@ -54,7 +54,7 @@ final class NormalMapOperator extends TextureOperator {
           var44 = var29[2];
           for (var10 = 0; LegacyOpenGlTurbulentTextureEffect.textureWidth > var10; var10++) {
             var14 = (var40[var10] - var41[var10]) * this.field_o;
-            var15 = this.field_o * (-var5[una.textureWidthMask & -1 + var10] + var5[una.textureWidthMask & 1 + var10]);
+            var15 = this.field_o * (-var5[GpuDataType.textureWidthMask & -1 + var10] + var5[GpuDataType.textureWidthMask & 1 + var10]);
             var16 = var15 >> 12;
             var17 = var14 >> 12;
             var18 = var16 * var16 >> 12;
@@ -121,7 +121,7 @@ final class NormalMapOperator extends TextureOperator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -133,6 +133,6 @@ final class NormalMapOperator extends TextureOperator {
     }
 
     static {
-        field_m = new ica();
+        field_m = new TextureCombineOperation();
     }
 }

@@ -63,10 +63,10 @@ final class gha implements pp {
                     var9.decode(var10, false);
                     break;
                   case 2:
-                    ((qs) (var9)).b(var10, true);
+                    ((qs) (var9)).decodeElement(var10, true);
                     break;
                   case 3:
-                    ((fc) (var9)).a(99, var10);
+                    ((fc) (var9)).decode(99, var10);
                     break;
                   default:
                     break;
@@ -105,7 +105,7 @@ final class gha implements pp {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class gha implements pp {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

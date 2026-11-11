@@ -12,7 +12,7 @@ final class S2CPlayerProfilePacket implements GamePacket {
         try {
           this.profile.encode(-2016804080, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aoa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aoa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class S2CPlayerProfilePacket implements GamePacket {
         if (var2 == 0) {
           var2 = 1;
         }
-        ((psa) (RewardChoicePhase.field_n.field_n)).rampChannelVolumeSamples(-30515, 0, var2, param1);
+        ((FadingMidiPcmStream) (RewardChoicePhase.field_n.field_n)).rampChannelVolumeSamples(-30515, 0, var2, param1);
     }
 
     final static void b(boolean param0) {
@@ -59,7 +59,7 @@ final class S2CPlayerProfilePacket implements GamePacket {
             field_b = (apa) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "aoa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aoa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

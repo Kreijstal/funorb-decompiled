@@ -77,7 +77,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
           }
           param0.writeBits((byte) -3, ResourceArchive.scaleToBits((byte) -104, this.field_u, 8192, 8), 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oqa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oqa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
         try {
           this.field_u = SnakePitModel.unscaleFromBits(8, 8192, 0, param1.readBits((byte) 44, 8));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

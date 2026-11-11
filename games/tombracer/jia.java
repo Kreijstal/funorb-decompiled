@@ -25,7 +25,7 @@ final class jia implements MessagePanel {
         var4 = var8;
         for (var5 = 0; var5 < var8.length; var5++) {
           var6 = var8[var5];
-          var6.a(param2, 6, param0);
+          var6.draw(param2, 6, param0);
         }
         if (!this.field_b.field_b) {
           stackIn_8_0 = 1348493408;
@@ -38,14 +38,14 @@ final class jia implements MessagePanel {
           SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, pg.field_A, (byte) -122, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         } else if (VerticalScrollbar.field_tb[hra.field_b] &&
           this.field_b.field_b) {
-          SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, gka.field_f, (byte) 93, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, ConsoleHistoryEntry.field_f, (byte) 93, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         } else {
           SingleChildWidget.field_v.drawWrapped((aa) null, this.getHeight(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, NetworkArchiveRequest.field_p, (byte) -38, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         }
         if (param1 != 20726) {
           this.field_c = (waa[]) null;
         }
-        this.field_b.a((byte) 74, param0, param2);
+        this.field_b.draw((byte) 74, param0, param2);
     }
 
     public final boolean handleKey(int param0, int param1, char param2) {
@@ -79,9 +79,9 @@ final class jia implements MessagePanel {
         var2_ref_waa__ = var6;
         for (var3 = 0; var6.length > var3; var3++) {
           var4_ref_waa = var6[var3];
-          var4_ref_waa.b(-9310);
+          var4_ref_waa.tick(-9310);
         }
-        this.field_b.c(param0 + 4637);
+        this.field_b.update(param0 + 4637);
         var2 = this.field_b.getY((byte) -120);
         var3Lifetime1 = this.field_b.getX(param0 ^ -7082);
         var4 = 0;
@@ -112,7 +112,7 @@ final class jia implements MessagePanel {
         if (param5 < 15) {
           jia.releaseStatics((byte) -91);
         }
-        if (ica.field_a) {
+        if (TextureCombineOperation.field_a) {
           tga.field_a.v(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, jg.withAlpha(param1, (byte) -60, param3), 1);
         } else {
           tga.field_a.ea(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, 2048, jg.withAlpha(param1, (byte) -107, param3), 1);

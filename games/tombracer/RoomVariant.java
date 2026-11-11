@@ -64,12 +64,12 @@ final class RoomVariant {
         RuntimeException var20 = null;
         try {
           SingleChildWidget.loadLobbySprites(false, param16, param18, param11, param14);
-          gj.loadBasicSprites(param14, true);
+          VertexAttribute.loadBasicSprites(param14, true);
           if (param6 <= 15) {
             return;
           }
           ck.a(param3, param19, param17, param8, param1, args, param4, param5, param10, param7, param14, 25447, param12, param15, param9);
-          iea.a(param2, param14, 2, param13);
+          ClipFrame.a(param2, param14, 2, param13);
           TrackingCrusherComponent.A(12);
           RoomComponent.buildMainScreenRoots(false);
           SwitchableId.a(83);
@@ -168,7 +168,7 @@ final class RoomVariant {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class RoomVariant {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

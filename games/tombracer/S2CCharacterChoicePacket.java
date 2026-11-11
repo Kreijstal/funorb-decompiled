@@ -24,7 +24,7 @@ final class S2CCharacterChoicePacket implements GamePacket {
             S2CCharacterChoicePacket.releaseStatics(79);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vra.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vra.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class S2CCharacterChoicePacket implements GamePacket {
           }
           param0.onCharacterChoice(this.field_d, 112, this.field_b);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class S2CCharacterChoicePacket implements GamePacket {
           this.field_d = param0.readBits((byte) 44, 4);
           param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vra.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vra.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

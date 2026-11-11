@@ -51,13 +51,13 @@ final class GameAssetLoader implements LoadingStage {
         if (param0 != -38) {
           return;
         }
-        this.field_e = SoftReferenceCache.openArchive(kn.field_j.field_c, param0 ^ -37);
+        this.field_e = SoftReferenceCache.openArchive(TooltipRenderer.field_j.field_c, param0 ^ -37);
         ResourceArchive var6 = PitComponent.field_G;
         ResourceArchive var7 = var6;
         ResourceArchive var3 = ota.field_b;
-        ina dupTemp$0 = new ina(55);
+        LoadingStepList dupTemp$0 = new LoadingStepList(55);
         RidgedNoise3D.field_r = dupTemp$0;
-        ina var4 = dupTemp$0;
+        LoadingStepList var4 = dupTemp$0;
         var4.addStage(256, this.field_k, RewardChoiceSlot.loadingQuipsAlternate[0], Player.loadingQuips[0]);
         var4.addStage(256, this.field_l, RewardChoiceSlot.loadingQuipsAlternate[1], Player.loadingQuips[1]);
         var4.addStage(256, this.field_o, RewardChoiceSlot.loadingQuipsAlternate[2], Player.loadingQuips[2]);
@@ -95,12 +95,12 @@ final class GameAssetLoader implements LoadingStage {
         try {
           var2 = new IntrusiveDeque();
           while (param1.position < param1.payload.length) {
-            var2.addLast((byte) -72, new gba(pe.readStringList(param1, (byte) 73)));
+            var2.addLast((byte) -72, new StringListNode(pe.readStringList(param1, (byte) 73)));
           }
           var3 = new String[var2.size((byte) -16)][];
           var4 = -92 / ((param0 + 9) / 51);
           for (var5 = 0; var3.length > var5; var5++) {
-            var3[var5] = ((gba) (var2.removeFirst(44))).field_g;
+            var3[var5] = ((StringListNode) (var2.removeFirst(44))).field_g;
           }
           stackIn_8_0 = var3;
           return stackIn_8_0;
@@ -114,7 +114,7 @@ final class GameAssetLoader implements LoadingStage {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class GameAssetLoader implements LoadingStage {
           ima.a((float)param0, param2, -106);
           CharacterChoiceTile.field_j.draw(0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sra.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sra.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class GameAssetLoader implements LoadingStage {
         }
         if (this.field_h != null &&
           null != this.field_p) {
-          fp.loadTitleSprites(uba.loadingQuipsShort[1], 40, this.field_h, (byte) 17);
+          TextureCombineSource.loadTitleSprites(uba.loadingQuipsShort[1], 40, this.field_h, (byte) 17);
           TextLayout.loadMenuBackgrounds((byte) -105, this.field_p, 50, uba.loadingQuipsShort[2]);
           this.field_p = null;
           KeySwitchComponent.loadFonts((byte) -86, uba.loadingQuipsShort[3], this.field_q, this.field_h, 60);
@@ -302,7 +302,7 @@ final class GameAssetLoader implements LoadingStage {
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -338,7 +338,7 @@ final class GameAssetLoader implements LoadingStage {
         CoinItemComponent.createMenuScreens(cq.field_d, (byte) 52);
         hd.setFrameRate(50, param0 ^ -78);
         wm.field_a = null;
-        SpriteTileOperator.field_t = (GameScreen) ((Object) nl.getMenuScreen(0, (byte) 50));
+        SpriteTileOperator.field_t = (GameScreen) ((Object) LoginMethod.getMenuScreen(0, (byte) 50));
         ima.a(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);
         CharacterChoiceTile.field_j.draw(param0 ^ -49);
         FadingDialog.field_C.makeTarget(-19216);
@@ -374,7 +374,7 @@ final class GameAssetLoader implements LoadingStage {
         }
         if (!dna.field_G) {
           DropAnimation.field_c = false;
-          FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, LoadProfileCommand.field_t, mga.field_f, var2);
+          FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, FullscreenCanvas.field_c, ota.field_b, LoadProfileCommand.field_t, QueuedHint.field_f, var2);
           cq.field_d = PenaltyNotice.field_f;
           tda.initializeChatHistory(200, (byte) -71);
           fta.field_b = MatchState.field_p;

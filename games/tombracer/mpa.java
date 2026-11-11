@@ -40,7 +40,7 @@ final class mpa extends ContentTransitionDialog {
           var3_int = param2.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = jd.normalizeDisplayName(1, param2);
+            var4 = OpenGlTexture3D.normalizeDisplayName(1, param2);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!PlayerModel.isNameSeparator(-85, var4.charAt(0)) &&
@@ -83,7 +83,7 @@ final class mpa extends ContentTransitionDialog {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class mpa extends ContentTransitionDialog {
           }
           super.transitionToContent(75, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mpa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mpa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

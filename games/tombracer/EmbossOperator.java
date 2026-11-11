@@ -36,7 +36,7 @@ final class EmbossOperator extends TextureOperator {
           var25 = this.getInputMonochromeRow(0, -116, param1 + 1 & hba.textureHeightMask);
           for (var11 = 0; var11 < LegacyOpenGlTurbulentTextureEffect.textureWidth; var11++) {
             var12 = (var25[var11] - var26[var11]) * var7 >> 12;
-            var13 = var7 * (var9[-1 + var11 & una.textureWidthMask] - var9[una.textureWidthMask & var11 + 1]) >> 12;
+            var13 = var7 * (var9[-1 + var11 & GpuDataType.textureWidthMask] - var9[GpuDataType.textureWidthMask & var11 + 1]) >> 12;
             var14 = var13 >> 4;
             var15 = var12 >> 4;
             if (var14 < 0) {
@@ -108,7 +108,7 @@ final class EmbossOperator extends TextureOperator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

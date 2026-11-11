@@ -63,7 +63,7 @@ final class SnakePitModel extends TrapModel {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class SnakePitModel extends TrapModel {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class SnakePitModel extends TrapModel {
           }
           super.addToScene(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oo.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oo.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class SnakePitModel extends TrapModel {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -329,7 +329,7 @@ final class SnakePitModel extends TrapModel {
         try {
           int var6_int = 23 % ((param4 + 38) / 47);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oo.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oo.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -385,9 +385,9 @@ final class SnakePitModel extends TrapModel {
           CharacterChoiceFactory.field_g.setBounds(-param2 + RotaterMountComponent.field_K.field_G - ComponentMount.field_b.field_G, param5, -23776, 0, param2);
           var7 = var7 - (2 + param5);
           ComponentMount.field_b.setBounds(ComponentMount.field_b.field_G, param5, -23776, 0, param2 + CharacterChoiceFactory.field_g.field_G);
-          ne.field_d.setPaneBounds(param3 + (2 + param2) + 485, 2, (byte) 127, 5, param3, -5 + var7, 5);
+          VertexStreamLayout.field_d.setPaneBounds(param3 + (2 + param2) + 485, 2, (byte) 127, 5, param3, -5 + var7, 5);
           if (apa.field_c != null) {
-            apa.field_c.setBounds((byte) -31, ne.field_d.field_G, ne.field_d.field_t, ne.field_d.field_qb, ne.field_d.field_T);
+            apa.field_c.setBounds((byte) -31, VertexStreamLayout.field_d.field_G, VertexStreamLayout.field_d.field_t, VertexStreamLayout.field_d.field_qb, VertexStreamLayout.field_d.field_T);
           }
           var8 = era.field_e.field_G - (param2 + var6_int);
           var9 = var8 / 2;
@@ -396,9 +396,9 @@ final class SnakePitModel extends TrapModel {
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != OpenGlSceneLight.field_p[var12]) {
-              var13 = 3 + var11 * (era.field_e.field_t - 6 + 2) / (gka.field_g + 1);
+              var13 = 3 + var11 * (era.field_e.field_t - 6 + 2) / (ConsoleHistoryEntry.field_g + 1);
               var11++;
-              var7Lifetime1 = -2 + (3 + var11 * (era.field_e.field_t - 6 + 2) / (1 + gka.field_g)) - var13;
+              var7Lifetime1 = -2 + (3 + var11 * (era.field_e.field_t - 6 + 2) / (1 + ConsoleHistoryEntry.field_g)) - var13;
               if (var12 >= 5) {
                 ara.field_ub.setBounds(var8, var7Lifetime1, -23776, var13, var6_int);
               } else {
@@ -413,7 +413,7 @@ final class SnakePitModel extends TrapModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var6), "oo.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var6), "oo.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -533,7 +533,7 @@ final class SnakePitModel extends TrapModel {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -551,7 +551,7 @@ final class SnakePitModel extends TrapModel {
           this.field_r = (SnakePitTile[][]) null;
           this.field_s = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oo.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oo.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -562,7 +562,7 @@ final class SnakePitModel extends TrapModel {
             this.field_p = (SnakePitBehaviour) (param0);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oo.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oo.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

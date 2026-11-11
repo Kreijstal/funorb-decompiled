@@ -69,7 +69,7 @@ final class Bzip2State {
             stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.formatText(125, bva.field_a, new String[]{param1});
             return stackIn_13_0;
           }
-          if (100 <= tba.field_k) {
+          if (100 <= MonochromeRowCacheEntry.field_k) {
             stackIn_17_0 = GameEvent.field_h;
             return stackIn_17_0;
           }
@@ -96,7 +96,7 @@ final class Bzip2State {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 

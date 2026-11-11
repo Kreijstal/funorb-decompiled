@@ -12,7 +12,7 @@ final class PrimMazeGenerator extends MazeGenerator {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        oda var5 = null;
+        MazeFrontierCell var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
@@ -33,9 +33,9 @@ final class PrimMazeGenerator extends MazeGenerator {
             }
             var6 = this.random.nextBounded(this.field_d.size((byte) -16), 0);
             var7 = 0;
-            var5 = (oda) (this.field_d.first(-80));
+            var5 = (MazeFrontierCell) (this.field_d.first(-80));
             while (var6 != var7) {
-              var5 = (oda) (this.field_d.next(param3 ^ 126));
+              var5 = (MazeFrontierCell) (this.field_d.next(param3 ^ 126));
               var7++;
             }
             var19 = this.randomPermutation(4, param3 - 2354);
@@ -50,8 +50,8 @@ final class PrimMazeGenerator extends MazeGenerator {
               if (var12 >= 4) {
                 break;
               }
-              var13 = 2 * dma.field_k[var19[var12]][0] + var9;
-              var14 = var10 + dma.field_k[var19[var12]][1] * 2;
+              var13 = 2 * OpenGlCubeTexture.field_k[var19[var12]][0] + var9;
+              var14 = var10 + OpenGlCubeTexture.field_k[var19[var12]][1] * 2;
               if (param0.isInBounds(var13, var14, (byte) -128) &&
                 0 == param0.getCell((byte) -5, var14, var13)) {
                 this.carvePassage(var10, (byte) -42, param0, var9, var14, var13);
@@ -72,7 +72,7 @@ final class PrimMazeGenerator extends MazeGenerator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class PrimMazeGenerator extends MazeGenerator {
           if (param2.isInBounds(param0, param1, (byte) -128) &&
             0 < param2.getCell((byte) -5, param1, param0)) {
             param2.setCell(param1, -1, 0, param0);
-            this.field_d.addLast((byte) -76, new oda(param0, param1));
+            this.field_d.addLast((byte) -76, new MazeFrontierCell(param0, param1));
           }
           if (param3 >= 93) {
             return;
@@ -103,7 +103,7 @@ final class PrimMazeGenerator extends MazeGenerator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class PrimMazeGenerator extends MazeGenerator {
           this.addFrontierCell(param2 - 2, param3, param1, (byte) 109);
           this.addFrontierCell(param2 + param0, param3, param1, (byte) 95);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rja.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rja.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class PrimMazeGenerator extends MazeGenerator {
         try {
           this.carveFrom(param2, param0, param3, 2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rja.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rja.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

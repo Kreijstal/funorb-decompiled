@@ -31,16 +31,16 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           stackIn_6_0 = (PacketBuffer) (param0);
           while (stackIn_6_0.position < param0.payload.length) {
             var3_int = SoundEventPlayer.a(param0, -58, var6);
-            if (!NetworkArchiveRequest.a(param0, mga.field_j, var3_int, true)) {
+            if (!NetworkArchiveRequest.a(param0, QueuedHint.field_j, var3_int, true)) {
               stackIn_6_0 = (PacketBuffer) (param0);
               continue;
             }
-            param0.position = param0.position + (mga.field_j.length - 1);
+            param0.position = param0.position + (QueuedHint.field_j.length - 1);
             break;
           }
           var3 = new String[var6.size((byte) -16)];
           for (var4 = 0; var3.length > var4; var4++) {
-            var3[var4] = ((gka) (var6.removeFirst(-103))).field_h;
+            var3[var4] = ((ConsoleHistoryEntry) (var6.removeFirst(-103))).field_h;
           }
           stackIn_13_0 = var3;
           return stackIn_13_0;
@@ -54,11 +54,11 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    pe(HardwareOpenGlToolkit param0, ft param1, una param2, int param3, int param4) {
+    pe(HardwareOpenGlToolkit param0, TextureFormat param1, GpuDataType param2, int param3, int param4) {
         super(param0, 34037, param1, param2, param3 * param4, false);
         try {
           this.field_l = param3;
@@ -66,7 +66,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           this.field_j.bindTexture(true, (GpuTexture) (this));
           jaggl.OpenGL.glTexImage2Dub(this.field_i, 0, this.getGlFormat(78), param3, param4, 0, waa.toGlFormat(this.field_f, 1383), ClientException.glDataType(this.field_a, 5126), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
         try {
           super.setFilter(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,8 +133,8 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
         return this.field_l;
     }
 
-    pe(HardwareOpenGlToolkit param0, ft param1, int param2, int param3, byte[] param4, int param5, int param6) {
-        super(param0, 34037, param1, una.field_g, param2 * param3, false);
+    pe(HardwareOpenGlToolkit param0, TextureFormat param1, int param2, int param3, byte[] param4, int param5, int param6) {
+        super(param0, 34037, param1, GpuDataType.field_g, param2 * param3, false);
         try {
           this.field_n = param3;
           this.field_l = param2;
@@ -145,7 +145,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
     }
 
     pe(HardwareOpenGlToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
-        super(param0, 34037, SwitchableId.field_a, una.field_g, param1 * param2, false);
+        super(param0, 34037, SwitchableId.field_a, GpuDataType.field_g, param1 * param2, false);
         try {
           this.field_l = param1;
           this.field_n = param2;
@@ -166,7 +166,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           jaggl.OpenGL.glTexImage2Di(this.field_i, 0, 6408, this.field_l, this.field_n, 0, 32993, this.field_j.field_od, param3, param4 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -202,8 +202,8 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
         field_m = (fta) null;
     }
 
-    pe(HardwareOpenGlToolkit param0, ft param1, int param2, int param3, float[] param4, int param5, int param6) {
-        super(param0, 34037, param1, una.field_h, param2 * param3, false);
+    pe(HardwareOpenGlToolkit param0, TextureFormat param1, int param2, int param3, float[] param4, int param5, int param6) {
+        super(param0, 34037, param1, GpuDataType.field_h, param2 * param3, false);
         try {
           this.field_n = param3;
           this.field_l = param2;
@@ -212,7 +212,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           jaggl.OpenGL.glTexImage2Df(this.field_i, 0, this.getGlFormat(75), param2, param3, 0, waa.toGlFormat(this.field_f, 1383), 5126, param4, 4 * param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 

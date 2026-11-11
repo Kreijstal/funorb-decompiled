@@ -25,7 +25,7 @@ final class NativeCanvasSurface extends IntrusiveNode implements e {
         this.field_f.repaint();
     }
 
-    final void a(java.awt.Canvas param0, int param1, int param2) {
+    final void attachCanvas(java.awt.Canvas param0, int param1, int param2) {
         this.field_i = param1;
         this.field_h = param2;
         this.oa(param0, param1, param2);

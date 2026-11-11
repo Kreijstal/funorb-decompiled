@@ -6,7 +6,7 @@ final class QuickChatMenu extends UiComponent {
     private int field_vb;
     private int field_Fb;
     private char[] field_xb;
-    private tv[] field_Gb;
+    private ContextMenuRow[] field_Gb;
     private int field_Db;
     private QuickChatMenu[] field_zb;
     private int field_Bb;
@@ -26,10 +26,10 @@ final class QuickChatMenu extends UiComponent {
 
     final void resetSelection(boolean param0) {
         int var3 = 0;
-        tv var4 = null;
+        ContextMenuRow var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        tv[] var6 = this.field_Gb;
-        tv[] var2 = var6;
+        ContextMenuRow[] var6 = this.field_Gb;
+        ContextMenuRow[] var2 = var6;
         if (!param0) {
           this.a(33, (byte) -9, 44);
         }
@@ -56,10 +56,10 @@ final class QuickChatMenu extends UiComponent {
 
     final boolean hasPressedItem(int param0) {
         int var4 = 0;
-        tv var5 = null;
+        ContextMenuRow var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         int var2 = 0;
-        tv[] var3 = this.field_Gb;
+        ContextMenuRow[] var3 = this.field_Gb;
         for (var4 = param0; var3.length > var4; var4++) {
           var5 = var3[var4];
           var2 = var2 | (0 != var5.field_y ? 1 : 0);
@@ -122,7 +122,7 @@ final class QuickChatMenu extends UiComponent {
           var17 = param3.field_H;
           var18 = var17;
           this.field_wb = var18.field_k + (var18.field_w + 2);
-          this.field_Gb = new tv[this.field_Bb];
+          this.field_Gb = new ContextMenuRow[this.field_Bb];
           this.field_vb = 0;
           this.field_yb = this.field_Bb * this.field_wb;
           var11 = "<col=999999>";
@@ -136,7 +136,7 @@ final class QuickChatMenu extends UiComponent {
               -1 == this.field_ub[var13]) {
               var14 = EffectEvent.field_j;
             }
-            this.field_Gb[var13] = new tv(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
+            this.field_Gb[var13] = new ContextMenuRow(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
             this.addChild(-123, this.field_Gb[var13]);
             var15 = var17.stringWidth(param6[var13]);
             if (this.field_vb < var15) {
@@ -192,7 +192,7 @@ final class QuickChatMenu extends UiComponent {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class QuickChatMenu extends UiComponent {
             this.setExpansionTicks(0, 60);
             this.field_tb = param2;
             this.field_Eb = this.field_zb[this.field_tb];
-            MazeGrid.a(this.field_Eb, (byte) 122);
+            MazeGrid.attachQuickChatMenu(this.field_Eb, (byte) 122);
             this.field_Eb.setExpansionTicks(12, 116);
           } else {
             if (this.field_ub[param2] != -1) {
@@ -226,7 +226,7 @@ final class QuickChatMenu extends UiComponent {
               }
               var8 = (String) null;
               ResultsPhase.writeChatMessage(OpenGlUnderwaterEffect.field_q, (String) null, param1, 32371, wp.field_a, var5);
-              oi.a(ica.field_b, var5, 4, wp.field_a, OpenGlUnderwaterEffect.field_q);
+              oi.a(TextureCombineOperation.field_b, var5, 4, wp.field_a, OpenGlUnderwaterEffect.field_q);
               ComponentTargetList.b(param3 - 48);
               HardwareSceneLight.resetChatRateLimit((byte) -25);
             } else {
@@ -285,9 +285,9 @@ final class QuickChatMenu extends UiComponent {
 
     final void processPressedItems(int param0, int param1, byte param2) {
         int var4_int = 0;
-        tv var5;
+        ContextMenuRow var5;
         int var6;
-        tv stackIn_7_0 = null;
+        ContextMenuRow stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         QuickChatMenu var4;
         QuickChatMenu var7;

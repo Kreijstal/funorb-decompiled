@@ -46,28 +46,28 @@ abstract class SocketConnector {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
         if (param3 == param4) {
-          iqa.a(30237, param5, param1, param0, param4);
+          ToolkitInstance.a(30237, param5, param1, param0, param4);
           return;
         }
         if (-param4 + param0 < pka.field_b) {
-          za.a(param0, param3, param4, param1, (byte) 115, param5);
+          GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
         } else {
           if (param0 + param4 > DiskCacheWorker.field_c) {
-            za.a(param0, param3, param4, param1, (byte) 115, param5);
+            GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
           } else {
             if (param5 - param3 < gca.field_d) {
-              za.a(param0, param3, param4, param1, (byte) 115, param5);
+              GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
             } else {
-              if (param3 + param5 > hc.field_h) {
-                za.a(param0, param3, param4, param1, (byte) 115, param5);
+              if (param3 + param5 > LineShape.field_h) {
+                GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
               } else {
-                iea.fillEllipse(param0, param4, param1, param5, 110, param3);
+                ClipFrame.fillEllipse(param0, param4, param1, param5, 110, param3);
               }
             }
           }

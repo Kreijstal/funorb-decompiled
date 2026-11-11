@@ -26,14 +26,14 @@ final class cia {
         return this.field_b >> 16;
     }
 
-    final void b(int param0, int param1, int param2) {
-        ura.a(-10985);
+    final void draw(int param0, int param1, int param2) {
+        TextureTransformMode.a(-10985);
         hp.drawModelPreview(2048, this.field_f, 1900, this.field_c.getModel((byte) 74), -1918106173, (this.field_e >> 16) + param1, param0 + (this.field_b >> 16));
         RemovedFromGameMenu.resetDepthRange((byte) -6);
         int var4 = -43 / ((param2 - 6) / 58);
     }
 
-    final void c(int param0) {
+    final void update(int param0) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_32_0 = 0;
@@ -48,7 +48,7 @@ final class cia {
         var2 = stackIn_5_0;
         if (param0 >= 120) {
           if (!VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
-            stackIn_32_0 = (!VerticalScrollbar.field_tb[fp.field_a]) ? 0 : 1;
+            stackIn_32_0 = (!VerticalScrollbar.field_tb[TextureCombineSource.field_a]) ? 0 : 1;
           } else {
             stackIn_32_0 = -1;
           }
@@ -83,7 +83,7 @@ final class cia {
         }
         this.field_e = 123;
         if (!VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
-          stackIn_11_0 = (!VerticalScrollbar.field_tb[fp.field_a]) ? 0 : 1;
+          stackIn_11_0 = (!VerticalScrollbar.field_tb[TextureCombineSource.field_a]) ? 0 : 1;
         } else {
           stackIn_11_0 = -1;
         }
@@ -120,7 +120,7 @@ final class cia {
         this.field_e = param1 << 16;
         this.field_b = param0 << 16;
         if (param2 != 1823844912) {
-          this.b(127, 90, 24);
+          this.draw(127, 90, 24);
         }
     }
 

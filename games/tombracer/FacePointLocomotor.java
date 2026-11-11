@@ -108,7 +108,7 @@ final class FacePointLocomotor extends Locomotor {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class FacePointLocomotor extends Locomotor {
     }
 
     final static void a(boolean param0, byte param1) {
-        if (mla.field_a > 0 &&
+        if (ProjectionMode.field_a > 0 &&
           LegacyOpenGlBloomEffect.field_o) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, era.field_e.field_A);
           VboVertexArray.field_k.drawFullScreen(108, param0);
@@ -129,7 +129,7 @@ final class FacePointLocomotor extends Locomotor {
           int[] var3 = (int[]) null;
           FacePointLocomotor.buildQuickChatPhraseMenu((UiComponent) null, (UiComponent) null, (UiComponent) null, (int[]) null, true);
         }
-        if ((GameKeyHandler.field_a > 0 || fp.field_e > 0) &&
+        if ((GameKeyHandler.field_a > 0 || TextureCombineSource.field_e > 0) &&
           OpenGlDisplayLists.field_e) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, era.field_e.field_A);
           PlayerModel.field_a.drawFullScreen(85, param0);
@@ -147,7 +147,7 @@ final class FacePointLocomotor extends Locomotor {
           param0.writeBits((byte) 79, this.field_o ? 1 : 0, 1);
           param0.writeBits((byte) 56, dqa.toOffsetBinary(true, this.field_s, 12), 12);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class FacePointLocomotor extends Locomotor {
           }
           super.attachToTrap(110, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -261,7 +261,7 @@ final class FacePointLocomotor extends Locomotor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 

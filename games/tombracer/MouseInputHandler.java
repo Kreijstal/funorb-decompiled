@@ -11,7 +11,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             param0.consume();
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hua.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hua.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -21,7 +21,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             tka.field_n = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hua.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hua.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,12 +36,12 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != ColourGradientOperator.field_n) {
             MatchScoringObserver.field_h = 0;
-            ena.field_n = param0.getX();
+            AnimationFrameSet.field_n = param0.getX();
             ee.field_a = param0.getY();
             PlayerContextMenu.field_c = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hua.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hua.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           MatchScoringObserver.field_h = 0;
-          ena.field_n = -1;
+          AnimationFrameSet.field_n = -1;
           ee.field_a = -1;
           PlayerContextMenu.field_c = true;
           return;
@@ -107,7 +107,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return;
           }
           MatchScoringObserver.field_h = 0;
-          ena.field_n = param0.getX();
+          AnimationFrameSet.field_n = param0.getX();
           ee.field_a = param0.getY();
           PlayerContextMenu.field_c = true;
           return;
@@ -136,7 +136,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -239,12 +239,12 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (ColourGradientOperator.field_n != null) {
             MatchScoringObserver.field_h = 0;
-            ena.field_n = param0.getX();
+            AnimationFrameSet.field_n = param0.getX();
             ee.field_a = param0.getY();
             PlayerContextMenu.field_c = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hua.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hua.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

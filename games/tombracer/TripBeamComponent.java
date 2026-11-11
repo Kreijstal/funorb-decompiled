@@ -35,7 +35,7 @@ final class TripBeamComponent extends SwitchComponent {
             param1 == 3) {
             var3 = var3 << 2;
           }
-          PortalBehaviour.a(9, true, var2, var3);
+          PortalBehaviour.playMusicTrack(9, true, var2, var3);
           if (param0 != 1) {
             return;
           }
@@ -60,7 +60,7 @@ final class TripBeamComponent extends SwitchComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "er.TB(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "er.TB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class TripBeamComponent extends SwitchComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class TripBeamComponent extends SwitchComponent {
           }
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "er.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "er.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

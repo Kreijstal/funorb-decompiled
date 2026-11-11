@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ada extends ArrayWidgetGroup implements ButtonListener {
-    static ura field_z;
+    static TextureTransformMode field_z;
     private DateFieldsWidget field_x;
     static int[] field_y;
     private FocusableWidget field_B;
 
     public static void releaseStatics(int param0) {
         if (param0 >= -122) {
-          field_z = (ura) null;
+          field_z = (TextureTransformMode) null;
           field_y = null;
           field_z = null;
           return;
@@ -29,7 +29,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
         try {
           kv.a(this.field_x.getYear(22829), this.field_x.year(109), 95, this.field_x.getDay((byte) 110));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ada.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ada.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
         super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_x = new DateFieldsWidget(new hga(10000536), GraphicsToolkit.field_b, 0, 0, 140, 25);
         this.field_x.setValidator((byte) 111, new uba());
-        this.field_B = new FocusableWidget(aua.field_d, (WidgetListener) (this));
+        this.field_B = new FocusableWidget(PlainScoringObserverFactory.field_d, (WidgetListener) (this));
         this.children = new UiWidget[]{(UiWidget) ((Object) this.field_x), (UiWidget) ((Object) this.field_B)};
         this.field_B.field_r = (WidgetPainter) ((Object) new td());
         this.refreshLayout((byte) 127);
@@ -53,7 +53,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
           super.updatePointerState(param0, param1, param2, param3);
           this.field_B.field_y = this.field_x.getValidationSource((byte) 47).getState(-4666) == LightSource.field_k ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ada.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ada.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
     }
 
     static {
-        field_z = new ura();
+        field_z = new TextureTransformMode();
         field_y = new int[8192];
     }
 }

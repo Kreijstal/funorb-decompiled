@@ -31,7 +31,7 @@ final class HiscoresScreen extends DropInMenuScreen {
     final void update(boolean param0, boolean param1, int param2) {
         int var5_int = 0;
         int var4;
-        bb var5;
+        HiscoreTable var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         super.update(param0, param1, param2);
@@ -96,7 +96,7 @@ final class HiscoresScreen extends DropInMenuScreen {
         if (param1 != 30) {
           this.getItemY(-68, -86);
         }
-        return SwitchLinkList.b(0) - 30;
+        return SwitchLinkList.getCanvasHeight(0) - 30;
     }
 
     private final void drawRow(int param0, int param1, int param2, int param3, int param4, String param5) {
@@ -105,7 +105,7 @@ final class HiscoresScreen extends DropInMenuScreen {
         String var8 = null;
         String var10 = null;
         try {
-          var11 = kn.field_p;
+          var11 = TooltipRenderer.field_p;
           var12 = var11;
           int var9 = 44 % ((param4 + 34) / 41);
           var8 = param1 >= 10 ? Integer.toString(param1) : "0" + (char)(48 + param1);
@@ -117,7 +117,7 @@ final class HiscoresScreen extends DropInMenuScreen {
           var11.drawLeft(param0, false, param5, RewardChoicePhase.field_t[1], param3 | -16777216, -1);
           var12.drawRight(12199, param0, var10, -1, param3 | -16777216, RewardChoicePhase.field_t[2]);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pk.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pk.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class HiscoresScreen extends DropInMenuScreen {
             var5Lifetime2 = OpenGlFramebuffer.field_i[var4];
           } else {
             var6 = var6 >> 1;
-            var5Lifetime2 = qf.field_k[var4];
+            var5Lifetime2 = FloatPacketBuffer.field_k[var4];
           }
           ((ToolkitSprite) (var5Lifetime2)).drawScaled(this.field_A[var4] - (this.field_D[var4] >> 1), -(this.field_t[var4] >> 1) + (this.field_B[var4] + param1), this.field_D[var4], this.field_t[var4], 0, 16777215 | var6 << 24, 1);
         }
@@ -243,11 +243,11 @@ final class HiscoresScreen extends DropInMenuScreen {
           }
         }
         if (var5Lifetime1 != null) {
-          MembersUpsellMenu.drawCentredTextWithShadow(((String) (var5Lifetime1)).toUpperCase(), 65793, eda.field_f, -1, 240 + param1, aaa.a(false) / 2, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(((String) (var5Lifetime1)).toUpperCase(), 65793, eda.field_f, -1, 240 + param1, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -1);
         } else {
           discarded$0 = this.drawTable(this.field_x, (byte) -91, 50 + param1);
         }
-        kn.field_p.drawCentred(-1, -1, aaa.a(false) / 2, -14345466, param1 + 405, LegacyOpenGlEnvironmentWaterEffect.field_f);
+        TooltipRenderer.field_p.drawCentred(-1, -1, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -14345466, param1 + 405, LegacyOpenGlEnvironmentWaterEffect.field_f);
         return;
     }
 
@@ -292,7 +292,7 @@ final class HiscoresScreen extends DropInMenuScreen {
           for (var8 = 0; var7_int > var8; var8++) {
             var9 = OpenGlFramebuffer.field_i[var8].width();
             var10 = OpenGlFramebuffer.field_i[var8].height();
-            this.field_A[var8] = (aaa.a(false) >> 1) - 32 * (-1 + OpenGlFramebuffer.field_i.length) + var8 * 65;
+            this.field_A[var8] = (LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - 32 * (-1 + OpenGlFramebuffer.field_i.length) + var8 * 65;
             this.field_B[var8] = 110;
             this.field_D[var8] = 3 * var9 / 4;
             this.field_t[var8] = 3 * var10 / 4;
@@ -328,7 +328,7 @@ final class HiscoresScreen extends DropInMenuScreen {
           }
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

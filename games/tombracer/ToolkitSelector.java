@@ -6,11 +6,11 @@ final class ToolkitSelector {
     private ToolkitCandidate[] field_b;
     private TextureProvider field_c;
     static boolean[] field_f;
-    iqa field_i;
+    ToolkitInstance field_i;
     static int field_a;
     static boolean[] field_g;
     static String field_h;
-    static iw field_d;
+    static PrimitiveType field_d;
 
     final void setCandidates(int param0, ToolkitCandidate[] param1) {
         RuntimeException stackIn_10_0 = null;
@@ -40,7 +40,7 @@ final class ToolkitSelector {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class ToolkitSelector {
     }
 
     ToolkitSelector(TextureProvider param0, ToolkitCandidate[] param1) {
-        this(tba.a((byte) 98), CommonChooseReward.e(-1), param0, dsa.field_c, param1);
+        this(MonochromeRowCacheEntry.a((byte) 98), CommonChooseReward.e(-1), param0, dsa.field_c, param1);
     }
 
     final boolean ensureToolkitForActiveCanvas(int param0) {
@@ -73,14 +73,14 @@ final class ToolkitSelector {
           OpenGlDisplayLists.field_e = false;
         }
         if (param1) {
-          if (mla.field_a > 0) {
-            mla.field_a = mla.field_a - 1;
+          if (ProjectionMode.field_a > 0) {
+            ProjectionMode.field_a = ProjectionMode.field_a - 1;
           } else {
             if (GameKeyHandler.field_a > 0) {
               GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
             } else {
-              if (fp.field_e > 0) {
-                fp.field_e = fp.field_e - 1;
+              if (TextureCombineSource.field_e > 0) {
+                TextureCombineSource.field_e = TextureCombineSource.field_e - 1;
               }
             }
           }
@@ -91,45 +91,45 @@ final class ToolkitSelector {
               if (0 < GameKeyHandler.field_a) {
                 GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
               } else {
-                if (0 < fp.field_e) {
-                  fp.field_e = fp.field_e - 1;
+                if (0 < TextureCombineSource.field_e) {
+                  TextureCombineSource.field_e = TextureCombineSource.field_e - 1;
                 } else {
-                  if (mla.field_a < SoftwareTransform3D.field_q) {
-                    if (mla.field_a == 0) {
+                  if (ProjectionMode.field_a < SoftwareTransform3D.field_q) {
+                    if (ProjectionMode.field_a == 0) {
                       RoomComponent.buildMainScreenRoots(false);
                     }
-                    mla.field_a = mla.field_a + 1;
+                    ProjectionMode.field_a = ProjectionMode.field_a + 1;
                   }
                 }
               }
             } else {
-              if (mla.field_a > 0) {
-                mla.field_a = mla.field_a - 1;
+              if (ProjectionMode.field_a > 0) {
+                ProjectionMode.field_a = ProjectionMode.field_a - 1;
               } else {
-                if (fp.field_e <= 0) {
+                if (TextureCombineSource.field_e <= 0) {
                   if (SoftwareTransform3D.field_q > GameKeyHandler.field_a) {
                     if (GameKeyHandler.field_a == 0) {
-                      iw.a((byte) -64, true);
+                      PrimitiveType.a((byte) -64, true);
                     }
                     GameKeyHandler.field_a = GameKeyHandler.field_a + 1;
                   }
                 } else {
-                  fp.field_e = fp.field_e - 1;
+                  TextureCombineSource.field_e = TextureCombineSource.field_e - 1;
                 }
               }
             }
           } else {
-            if (0 < mla.field_a) {
-              mla.field_a = mla.field_a - 1;
+            if (0 < ProjectionMode.field_a) {
+              ProjectionMode.field_a = ProjectionMode.field_a - 1;
             } else {
               if (GameKeyHandler.field_a > 0) {
                 GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
               } else {
-                if (fp.field_e < SoftwareTransform3D.field_q) {
-                  if (0 == fp.field_e) {
-                    iw.a((byte) -64, false);
+                if (TextureCombineSource.field_e < SoftwareTransform3D.field_q) {
+                  if (0 == TextureCombineSource.field_e) {
+                    PrimitiveType.a((byte) -64, false);
                   }
-                  fp.field_e = fp.field_e + 1;
+                  TextureCombineSource.field_e = TextureCombineSource.field_e + 1;
                 }
               }
             }
@@ -153,7 +153,7 @@ final class ToolkitSelector {
         int var8_int = 0;
         RuntimeException var8 = null;
         int var9_int = 0;
-        iqa var9 = null;
+        ToolkitInstance var9 = null;
         int var10 = 0;
         int var11 = 0;
         GraphicsToolkit var12 = null;
@@ -312,7 +312,7 @@ final class ToolkitSelector {
                 try {
                   var12 = VoronoiNoiseOperator.createToolkit(var7.field_a, -29355, this.field_c, var7.field_b, ck.field_a, param0);
                   if (var12 != null) {
-                    var9 = new iqa(var12, var7, param0);
+                    var9 = new ToolkitInstance(var12, var7, param0);
                     if (var7.accepts(var9, (byte) -126)) {
                       if (this.field_i != null) {
                         if (var9.field_d == this.field_i.field_d &&
@@ -330,7 +330,7 @@ final class ToolkitSelector {
                       if (var3 == null) {
                         var9.field_f = bva.currentTimeMillis((byte) -107);
                       } else {
-                        ((soa) (var3)).restore((byte) -77, var9);
+                        ((ToolkitState) (var3)).restore((byte) -77, var9);
                       }
                       this.field_e = true;
                       this.field_i = var9;
@@ -357,12 +357,12 @@ final class ToolkitSelector {
           } else {
             stackIn_114_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) (stackIn_113_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) (stackIn_113_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final boolean ensureToolkit(int param0, java.awt.Canvas param1) {
-        iqa var3 = null;
+        ToolkitInstance var3 = null;
         RuntimeException var3_ref = null;
         boolean stackIn_16_0 = false;
         RuntimeException stackIn_19_0 = null;
@@ -402,7 +402,7 @@ final class ToolkitSelector {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -415,7 +415,7 @@ final class ToolkitSelector {
           BridgeModel.initNativeLibraries(param0, param3, -55);
           this.setCandidates(0, param4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -448,13 +448,13 @@ final class ToolkitSelector {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static java.applet.Applet getApplet(int param0) {
         if (param0 <= 16) {
-          field_d = (iw) null;
+          field_d = (PrimitiveType) null;
         }
         if (cba.field_a != null) {
           return cba.field_a;
@@ -474,6 +474,6 @@ final class ToolkitSelector {
         field_f[12] = true;
         field_f[4] = true;
         field_f[10] = true;
-        field_d = new iw();
+        field_d = new PrimitiveType();
     }
 }

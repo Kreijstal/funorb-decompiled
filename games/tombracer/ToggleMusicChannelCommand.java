@@ -17,7 +17,7 @@ final class ToggleMusicChannelCommand extends ConsoleMethod {
             var4 = (ConsoleValue[]) null;
             this.invoke((ConsoleValue[]) null, -90);
           }
-          stackIn_3_0 = new ConsoleValue(joa.playMusicTrackByName(param0[1].booleanValue(false), (byte) 77, (String) (param0[0].field_d)));
+          stackIn_3_0 = new ConsoleValue(GzipInflater.playMusicTrackByName(param0[1].booleanValue(false), (byte) 77, (String) (param0[0].field_d)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -29,7 +29,7 @@ final class ToggleMusicChannelCommand extends ConsoleMethod {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

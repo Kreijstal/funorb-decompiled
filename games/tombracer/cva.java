@@ -4,7 +4,7 @@
 final class cva {
     int field_d;
     boolean field_a;
-    static ura field_b;
+    static TextureTransformMode field_b;
     static String field_e;
     static AnimationSequence[] field_c;
 
@@ -33,7 +33,7 @@ final class cva {
     }
 
     static {
-        field_b = new ura();
+        field_b = new TextureTransformMode();
         field_e = "Only show private chat from my friends and opponents";
     }
 }

@@ -18,7 +18,7 @@ final class cga extends IntrusiveNode {
         return 0 != (param0 & 34) ? true : false;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         field_l = null;
         if (!param0) {

@@ -22,16 +22,16 @@ final class rua extends MessageDialog implements ButtonListener {
           SingleChildWidget.d(-7694);
           this.dismiss((byte) 13);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rua.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rua.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     rua(DialogStack param0, AccountRegistrationPanel param1) {
-        super(param0, ft.field_c, dsa.field_d, false, false);
+        super(param0, TextureFormat.field_c, dsa.field_d, false, false);
         try {
           this.field_fb = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class rua extends MessageDialog implements ButtonListener {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class rua extends MessageDialog implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        sr var5 = null;
+        MessagePage var5 = null;
         int var6 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
@@ -122,7 +122,7 @@ final class rua extends MessageDialog implements ButtonListener {
           } else {
             var4 = ScrollControlWidget.field_K;
           }
-          var5 = new sr((MessageDialog) (this), ft.field_c, var4);
+          var5 = new MessagePage((MessageDialog) (this), TextureFormat.field_c, var4);
           if (param0 != 7) {
             return;
           }
@@ -131,7 +131,7 @@ final class rua extends MessageDialog implements ButtonListener {
               this.transitionToContent(param0 ^ 86, new pg(this));
               return;
             }
-            var5.appendButton(aua.field_d, (byte) -102, (WidgetListener) (this));
+            var5.appendButton(PlainScoringObserverFactory.field_d, (byte) -102, (WidgetListener) (this));
           } else {
             if (!this.field_ib) {
               if (param2.field_f != 5) {
@@ -141,7 +141,7 @@ final class rua extends MessageDialog implements ButtonListener {
                 var5.addAction(ControllerLocomotor.field_q, 17, 59);
               }
             } else {
-              var5.appendButton(aua.field_d, (byte) -102, (WidgetListener) (this));
+              var5.appendButton(PlainScoringObserverFactory.field_d, (byte) -102, (WidgetListener) (this));
             }
             if (param2.field_f != 3) {
               if (param2.field_f == 6) {
@@ -163,7 +163,7 @@ final class rua extends MessageDialog implements ButtonListener {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class rua extends MessageDialog implements ButtonListener {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -82,7 +82,7 @@ final class DropAnimation {
         float var4;
         float var4Lifetime1;
         if (param0 <= -109) {
-          var4 = (float)SwitchLinkList.b(0) / 500.0f;
+          var4 = (float)SwitchLinkList.getCanvasHeight(0) / 500.0f;
           this.field_d = this.field_d + var4 * var4;
           this.field_b = this.field_b + this.field_d;
           if (param1 &&
@@ -97,7 +97,7 @@ final class DropAnimation {
             return;
           }
           if (!this.field_f) {
-            DateInputWidget.c(141);
+            DateInputWidget.playLandingSound(141);
             this.field_f = true;
           }
           this.field_d = -this.field_d / 8.0f;
@@ -105,7 +105,7 @@ final class DropAnimation {
           return;
         }
         this.startDrop(-29);
-        var4Lifetime1 = (float)SwitchLinkList.b(0) / 500.0f;
+        var4Lifetime1 = (float)SwitchLinkList.getCanvasHeight(0) / 500.0f;
         this.field_d = this.field_d + var4Lifetime1 * var4Lifetime1;
         this.field_b = this.field_b + this.field_d;
         if (param1 &&
@@ -120,7 +120,7 @@ final class DropAnimation {
           return;
         }
         if (!this.field_f) {
-          DateInputWidget.c(141);
+          DateInputWidget.playLandingSound(141);
           this.field_f = true;
         }
         this.field_d = -this.field_d / 8.0f;
@@ -131,7 +131,7 @@ final class DropAnimation {
         this.field_f = false;
         this.field_d = 0.0f;
         if (param0 <= -47) {
-          this.field_b = this.field_e - (float)SwitchLinkList.b(0) - (float)Math.abs((int)(Math.random() * (double)SwitchLinkList.b(0)));
+          this.field_b = this.field_e - (float)SwitchLinkList.getCanvasHeight(0) - (float)Math.abs((int)(Math.random() * (double)SwitchLinkList.getCanvasHeight(0)));
           return;
         }
     }

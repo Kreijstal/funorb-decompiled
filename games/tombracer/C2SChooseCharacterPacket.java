@@ -23,7 +23,7 @@ final class C2SChooseCharacterPacket implements GamePacket {
             this.field_b = -114;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ap.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ap.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class C2SChooseCharacterPacket implements GamePacket {
           param1.writeBits((byte) -125, this.field_b, 4);
           param1.endBitWrite(-1826190686);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ap.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ap.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -132,10 +132,10 @@ final class dta {
                 return;
               }
               if (var15 < 0) {
-                RoomEffectTraps.a(0, -34, param6 - 26, ik.field_j, param0 + var8_int, eda.field_f, 16777215);
+                RoomEffectTraps.drawLeftTextWithShadow(0, -34, param6 - 26, IntArrayRequest.field_j, param0 + var8_int, eda.field_f, 16777215);
               } else {
-                RoomEffectTraps.a(0, -50, param6 - 13, Integer.toString(1 + var15), param0 + var8_int, SingleChildWidget.field_v, wga.field_a[param2]);
-                RoomEffectTraps.a(0, -70, param6 - 12, param4.getPlayerName(param2, false).toUpperCase(), 25 + (param0 + var8_int), eda.field_f, wga.field_a[param2]);
+                RoomEffectTraps.drawLeftTextWithShadow(0, -50, param6 - 13, Integer.toString(1 + var15), param0 + var8_int, SingleChildWidget.field_v, wga.field_a[param2]);
+                RoomEffectTraps.drawLeftTextWithShadow(0, -70, param6 - 12, param4.getPlayerName(param2, false).toUpperCase(), 25 + (param0 + var8_int), eda.field_f, wga.field_a[param2]);
               }
             }
             if (param4.isSpectating((byte) 118)) {
@@ -146,8 +146,8 @@ final class dta {
               ColourFillOperator.field_m.draw(var17, 0);
               var18 = 0;
               var19 = DropAnimation.formatTime(var14, (byte) -8);
-              RoomEffectTraps.a(0, -106, var18 + (param5 + 34), var19.substring(0, -3 + var19.length()), 12 + param0 + var17, SingleChildWidget.field_v, 11903361);
-              RoomEffectTraps.a(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), eda.field_f, 11903361);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -106, var18 + (param5 + 34), var19.substring(0, -3 + var19.length()), 12 + param0 + var17, SingleChildWidget.field_v, 11903361);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), eda.field_f, 11903361);
               var20 = 1 + var12.getCourseIndex(-104);
               var21 = var12.getSimulation(-1).getRoomArrayLength(122);
               if (var12.getSimulation(-1).hasConnectorRooms(28091)) {
@@ -163,13 +163,13 @@ final class dta {
                 LegacyOpenGlEffectManager.field_a.draw(var17Lifetime1 + 20, var18Lifetime1 + 5);
               } else {
                 if (var23 != 0) {
-                  ura.a(-10985);
+                  TextureTransformMode.a(-10985);
                   hp.drawModelPreview(1024, 512, 0, this.field_c.getModel((byte) 74), -1918106173, 70 + var18Lifetime1, var17Lifetime1 + 55);
                   RemovedFromGameMenu.resetDepthRange((byte) -6);
                 }
               }
-              var17Lifetime2 = param1 - bd.field_i.width();
-              var18Lifetime2 = -20 + SwitchLinkList.b(0);
+              var17Lifetime2 = param1 - RasterStateFrame.field_i.width();
+              var18Lifetime2 = -20 + SwitchLinkList.getCanvasHeight(0);
               var24 = 0;
               var25 = 16;
               if (!param4.field_D &&
@@ -200,7 +200,7 @@ final class dta {
                   }
                   var28_double = 80.0;
                 }
-                qf.field_j.drawWrapped((aa) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.height() - 32), -16777216, (int[]) null, 1, -5599403, bd.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
+                FloatPacketBuffer.field_j.drawWrapped((aa) null, 12, 0, 0, var18Lifetime2 - (CachedTextLayout.field_l.height() - 32), -16777216, (int[]) null, 1, -5599403, RasterStateFrame.field_j.toUpperCase(), (byte) -66, 300, 0, (ToolkitSprite[]) null, -14 + (param1 + var24), 0);
                 var30 = 30 + (-CachedTextLayout.field_l.height() + var18Lifetime2) + 80;
                 vua.field_A.draw(param1 - (CachedTextLayout.field_l.width() - var24), var18Lifetime2 - CachedTextLayout.field_l.height() + (-vua.field_A.height() + var25));
                 var31 = (int)(-var28_double + (double)var30);
@@ -221,7 +221,7 @@ final class dta {
               var18Lifetime3 = 0;
               var17Lifetime3 = var24 + (param1 - 60);
               var26Lifetime1 = var17Lifetime3;
-              tv.field_wb.draw(26 + (var17Lifetime3 + (-var24 - (tv.field_wb.width() >> 1))), -42 + param6);
+              ContextMenuRow.field_wb.draw(26 + (var17Lifetime3 + (-var24 - (ContextMenuRow.field_wb.width() >> 1))), -42 + param6);
               for (var27_intLifetime1 = 0; var27_intLifetime1 < 3; var27_intLifetime1++) {
                 var28_int = -68 + param6;
                 var29 = var12.getRoomTreasure(393216, var27_intLifetime1);
@@ -236,10 +236,10 @@ final class dta {
               var41 = Integer.toString(var12.getRoomTreasureScore(-7991));
               var27Lifetime1 = var41;
               var27Lifetime2 = var41;
-              S2CNextRoundPacket.a(4, var28, var41.toUpperCase(), 34 + (var17Lifetime3 + (10 - var24)), 0, -16 + param6, 11903361);
+              S2CNextRoundPacket.drawRightTextWithShadow(4, var28, var41.toUpperCase(), 34 + (var17Lifetime3 + (10 - var24)), 0, -16 + param6, 11903361);
               var18Lifetime4 = 0;
               var17Lifetime4 = param1 - var8_int - 140;
-              bd.field_i.draw(var17Lifetime4, var18Lifetime4);
+              RasterStateFrame.field_i.draw(var17Lifetime4, var18Lifetime4);
               var27Lifetime3 = "";
               var28Lifetime1 = eda.field_f;
               if (!param4.field_D &&
@@ -252,7 +252,7 @@ final class dta {
                 var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 2) * gp.field_i[2];
                 var27Lifetime4 = Integer.toString(var29Lifetime1);
               }
-              S2CNextRoundPacket.a(4, var28Lifetime1, var27Lifetime4.toUpperCase(), var17Lifetime4 + 130, 0, 26 + var18Lifetime4, 11903361);
+              S2CNextRoundPacket.drawRightTextWithShadow(4, var28Lifetime1, var27Lifetime4.toUpperCase(), var17Lifetime4 + 130, 0, 26 + var18Lifetime4, 11903361);
               var18Lifetime5 = param5 + 25;
               var17Lifetime5 = param1 - 36;
               var29Lifetime2 = var18Lifetime5;
@@ -265,7 +265,7 @@ final class dta {
                 var31Lifetime1 = -stackIn_72_0 + var29Lifetime2 + 26;
                 var32 = var12.getTreasure(196608, var30Lifetime2);
                 PlayerProfile.field_r[var30Lifetime2].draw(var17Lifetime5, var29Lifetime2);
-                MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var32), 11903361, qf.field_j, -1, var31Lifetime1, var17Lifetime5 - 19, 1);
+                MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var32), 11903361, FloatPacketBuffer.field_j, -1, var31Lifetime1, var17Lifetime5 - 19, 1);
                 if (var32 != this.field_a[var30Lifetime2]) {
                   this.field_h[var30Lifetime2] = Integer.toString(-this.field_a[var30Lifetime2] + var32) + "+";
                   this.field_a[var30Lifetime2] = var32;
@@ -277,7 +277,7 @@ final class dta {
                   var34_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].width() * var33_float);
                   var35_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].height() * var33_float);
                   PlayerProfile.field_r[var30Lifetime2].drawScaled(var17Lifetime5 + (-var34_int + PlayerProfile.field_r[var30Lifetime2].width()) / 2, (PlayerProfile.field_r[var30Lifetime2].height() - var35_int) / 2 + var29Lifetime2, var34_int, var35_int, 1, -1, 1);
-                  MembersUpsellMenu.drawCentredTextWithShadow(this.field_h[var30Lifetime2], 14142651, qf.field_j, -1, var31Lifetime1, -49 + var17Lifetime5, 1);
+                  MembersUpsellMenu.drawCentredTextWithShadow(this.field_h[var30Lifetime2], 14142651, FloatPacketBuffer.field_j, -1, var31Lifetime1, -49 + var17Lifetime5, 1);
                 }
                 var31Lifetime1 += 23;
                 var29Lifetime2 += 24;
@@ -335,20 +335,20 @@ final class dta {
                   var38 = 0;
                 }
                 if (var30Lifetime3 != 0) {
-                  var39 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), aca.field_g, (byte) 124, 48, 0, id.field_h, param0, 2);
+                  var39 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), aca.field_g, (byte) 124, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39;
                 }
                 if (var32Lifetime1 != 0) {
-                  var39Lifetime1 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), hda.field_h, (byte) 72, 48, 0, id.field_h, param0, 2);
+                  var39Lifetime1 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), hda.field_h, (byte) 72, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime1;
                 } else {
                   if (var31Lifetime2 != 0) {
-                    var39Lifetime1 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), qja.field_k, (byte) -106, 48, 0, id.field_h, param0, 2);
+                    var39Lifetime1 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), MazeSearchNode.field_k, (byte) -106, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
                     param6 = param6 - var39Lifetime1 * var37Lifetime1;
                   }
                 }
                 if (var33 != 0) {
-                  var39Lifetime2 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), bb.field_l, (byte) 107, 48, 0, id.field_h, param0, 2);
+                  var39Lifetime2 = var36.drawWrapped((aa) null, param1, var37Lifetime1, 0, param6 - 28, SoundEvent.withFullAlpha(false, 0), SpriteState.field_l, var38, SoundEvent.withFullAlpha(false, 11903361), HiscoreTable.field_l, (byte) 107, 48, 0, SinglePlayerCourseGenerator.field_h, param0, 2);
                   param6 = param6 - var37Lifetime1 * var39Lifetime2;
                 }
               }
@@ -357,14 +357,14 @@ final class dta {
               }
               var42 = TextureMetadata.field_j;
               var31Lifetime3 = (int)(128.0 - Math.sin((double)bva.currentTimeMillis((byte) -107) / 512.0) * 128.0);
-              NotLoggedInMenu.a(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.b(0) >> 1) + (SwitchLinkList.b(0) >> 2), 11903361, param1 + param0 >> 1);
+              NotLoggedInMenu.drawCentredTextAlpha(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.getCanvasHeight(0) >> 1) + (SwitchLinkList.getCanvasHeight(0) >> 2), 11903361, param1 + param0 >> 1);
               var32Lifetime2 = param4.roundDeadlineTick - param4.matchState.getSimulationTick((byte) 115, param2);
               if (var32Lifetime2 >= 250) {
                 return;
               }
               var43 = Integer.toString(var32Lifetime2 / 50 + 1);
               var31Lifetime4 = 255 - (var32Lifetime2 % 50 << 2) % 255;
-              NotLoggedInMenu.a(var31Lifetime4, (byte) -80, var31Lifetime4, 1, SingleChildWidget.field_v, var43.toUpperCase(), SwitchLinkList.b(0) >> 1, 11903361, param1 + param0 >> 1);
+              NotLoggedInMenu.drawCentredTextAlpha(var31Lifetime4, (byte) -80, var31Lifetime4, 1, SingleChildWidget.field_v, var43.toUpperCase(), SwitchLinkList.getCanvasHeight(0) >> 1, 11903361, param1 + param0 >> 1);
               return;
             }
             return;
@@ -389,7 +389,7 @@ final class dta {
           } else {
             stackIn_134_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_133_0), ((StringBuilder) (Object) stackIn_133_1).append(stackIn_134_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_133_0), ((StringBuilder) (Object) stackIn_133_1).append(stackIn_134_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -23,12 +23,12 @@ final class NativeReleaseQueue {
     }
 
     final synchronized static void queueRelease(int param0, e param1) {
-        rw var2 = null;
+        NativeReleaseNode var2 = null;
         if (!field_b) {
           if (param0 <= ~field_c) {
             param1.w(false);
           } else {
-            var2 = new rw();
+            var2 = new NativeReleaseNode();
             var2.field_f = param1;
             field_a.addLast((byte) -118, var2);
           }
@@ -37,10 +37,10 @@ final class NativeReleaseQueue {
     }
 
     final synchronized static void flush(boolean param0) {
-        rw var1;
+        NativeReleaseNode var1;
         RuntimeException var1_ref;
         while (true) {
-          var1 = (rw) (field_a.removeFirst(-113));
+          var1 = (NativeReleaseNode) (field_a.removeFirst(-113));
           if (var1 != null) {
             var1.field_f.w(true);
             var1.unlink(120);

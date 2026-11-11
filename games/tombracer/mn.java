@@ -19,7 +19,7 @@ final class mn extends TextFieldValidator {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_j.validateText((byte) 14, param1) == fp.field_c) {
+          if (this.field_j.validateText((byte) 14, param1) == TextureCombineSource.field_c) {
             stackIn_2_0 = this.field_j.validationMessageForText(param0 + 0, param1);
             return stackIn_2_0;
           }
@@ -27,7 +27,7 @@ final class mn extends TextFieldValidator {
             stackIn_5_0 = (String) null;
             return stackIn_5_0;
           }
-          if (this.validateText((byte) 14, param1) != fp.field_c) {
+          if (this.validateText((byte) 14, param1) != TextureCombineSource.field_c) {
             stackIn_10_0 = dua.field_j;
             return stackIn_10_0;
           }
@@ -43,7 +43,7 @@ final class mn extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -58,8 +58,8 @@ final class mn extends TextFieldValidator {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_j.validateText(param0, param1) == fp.field_c) {
-            stackIn_3_0 = fp.field_c;
+          if (this.field_j.validateText(param0, param1) == TextureCombineSource.field_c) {
+            stackIn_3_0 = TextureCombineSource.field_c;
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_m)) {
@@ -74,7 +74,7 @@ final class mn extends TextFieldValidator {
           if (this.field_l) {
             stackIn_13_0 = LightSource.field_k;
           } else {
-            stackIn_13_0 = fp.field_c;
+            stackIn_13_0 = TextureCombineSource.field_c;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,7 +87,7 @@ final class mn extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -98,12 +98,12 @@ final class mn extends TextFieldValidator {
         try {
           this.field_j = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void h(int param0) {
-        oq.getSharedShellListener((byte) 124).c(76);
+        oq.getSharedShellListener((byte) 124).close(76);
         if (param0 != 30001) {
           field_n = (String) null;
         }
@@ -112,9 +112,9 @@ final class mn extends TextFieldValidator {
     final static String getPendingUrl(int param0) {
         if (param0 > -40) {
           field_n = (String) null;
-          return ofa.field_D;
+          return ResizingDialog.field_D;
         }
-        return ofa.field_D;
+        return ResizingDialog.field_D;
     }
 
     public static void releaseStatics(int param0) {

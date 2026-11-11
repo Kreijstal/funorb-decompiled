@@ -66,7 +66,7 @@ final class TeleportLocomotor extends Locomotor {
           return;
         }
         this.field_r = 0;
-        if (!this.field_q.a((byte) 21)) {
+        if (!this.field_q.stopsAtEnd((byte) 21)) {
           this.field_s.tick(0);
           if (!this.field_s.hasToggled(0)) {
             return;
@@ -164,7 +164,7 @@ final class TeleportLocomotor extends Locomotor {
         try {
           this.field_q = new WaypointPath(param0.formatVersion, param1);
           if (param0.formatVersion < 11) {
-            this.field_q.a(1 == param1.readBits((byte) 44, 1) ? true : false, 1);
+            this.field_q.setStopsAtEnd(1 == param1.readBits((byte) 44, 1) ? true : false, 1);
           }
           this.field_s = new TimingPattern(param0.formatVersion, param1);
           if (11 <= param0.formatVersion) {
@@ -172,7 +172,7 @@ final class TeleportLocomotor extends Locomotor {
             this.field_u = param1.readBits((byte) 44, 8);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class TeleportLocomotor extends Locomotor {
           param0.writeBits((byte) -126, this.field_p ? 1 : 0, 1);
           param0.writeBits((byte) -127, this.field_u, 8);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "lo.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lo.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class TeleportLocomotor extends Locomotor {
         var8 = TombRacer.field_G ? 1 : 0;
         if (pka.field_b > param3) {
           if (1 == param1) {
-            nl.a(param6, param3, param4, param2, param0, 14375);
+            LoginMethod.a(param6, param3, param4, param2, param0, 14375);
           } else {
             pua.a(-78, param3, param4, param2, param1, param6, param0);
           }
@@ -221,21 +221,21 @@ final class TeleportLocomotor extends Locomotor {
           if (1 != param1) {
             pua.a(-78, param3, param4, param2, param1, param6, param0);
           } else {
-            nl.a(param6, param3, param4, param2, param0, 14375);
+            LoginMethod.a(param6, param3, param4, param2, param0, 14375);
           }
         } else {
           if (param4 < gca.field_d) {
             if (1 != param1) {
               pua.a(-78, param3, param4, param2, param1, param6, param0);
             } else {
-              nl.a(param6, param3, param4, param2, param0, 14375);
+              LoginMethod.a(param6, param3, param4, param2, param0, 14375);
             }
           } else {
-            if (hc.field_h < param2) {
+            if (LineShape.field_h < param2) {
               if (1 != param1) {
                 pua.a(-78, param3, param4, param2, param1, param6, param0);
               } else {
-                nl.a(param6, param3, param4, param2, param0, 14375);
+                LoginMethod.a(param6, param3, param4, param2, param0, 14375);
               }
             } else {
               if (1 == param1) {

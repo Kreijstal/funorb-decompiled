@@ -75,7 +75,7 @@ final class KaleidoscopeOperator extends TextureOperator {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class KaleidoscopeOperator extends TextureOperator {
           }
         }
         RewardChoiceSlot.field_e = RewardChoiceSlot.field_e & hba.textureHeightMask;
-        BlockModel.field_o = BlockModel.field_o & una.textureWidthMask;
+        BlockModel.field_o = BlockModel.field_o & GpuDataType.textureWidthMask;
     }
 
     final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
@@ -156,7 +156,7 @@ final class KaleidoscopeOperator extends TextureOperator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

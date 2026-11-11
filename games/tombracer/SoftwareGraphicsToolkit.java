@@ -12,7 +12,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private boolean field_z;
     private boolean field_e;
     int field_g;
-    private bf field_D;
+    private SoftwareRenderTarget field_D;
     int field_d;
     int field_p;
     private int field_s;
@@ -381,7 +381,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         this.drawLine(this.field_L + (int)((float)this.field_Q * var11 / var9), this.field_w + (int)((float)this.field_C * var12 / var9), this.field_L + (int)((float)this.field_Q * var13 / var10), this.field_w + (int)((float)this.field_C * var14 / var10), param6, param7);
     }
 
-    final void useHeap(za param0) {
+    final void useHeap(GraphicsHeap param0) {
     }
 
     final boolean j(int param0) {
@@ -1062,7 +1062,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final RenderTarget createRenderTarget(RenderSurface param0, RenderBuffer param1) {
-        return (RenderTarget) ((Object) new bf(this, (ToolkitSprite) (param0), (ita) (param1)));
+        return (RenderTarget) ((Object) new SoftwareRenderTarget(this, (ToolkitSprite) (param0), (SoftwareDepthBuffer) (param1)));
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -1154,7 +1154,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final RenderBuffer createRenderBuffer(int param0, int param1) {
-        return (RenderBuffer) ((Object) new ita(param0, param1));
+        return (RenderBuffer) ((Object) new SoftwareDepthBuffer(param0, param1));
     }
 
     final void la() {
@@ -1178,7 +1178,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void bindRenderTarget(RenderTarget param0) {
-        bf var2 = (bf) (param0);
+        SoftwareRenderTarget var2 = (SoftwareRenderTarget) (param0);
         this.field_K = var2.field_c;
         this.field_h = var2.field_d;
         this.field_r = var2.field_g;
@@ -1219,7 +1219,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final za createHeap(int param0) {
+    final GraphicsHeap createHeap(int param0) {
         return null;
     }
 

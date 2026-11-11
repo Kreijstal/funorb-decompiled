@@ -31,7 +31,7 @@ final class mha extends FocusableWidget {
           this.field_A = this.field_A + 1;
           super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mha.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mha.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class mha extends FocusableWidget {
         try {
           this.field_z = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,73 +63,73 @@ final class mha extends FocusableWidget {
           var15 = CharacterChoiceFactory.field_b[0];
           var9 = var15.field_n << 1;
           var10 = var15.field_k << 1;
-          if (null == aj.field_l) {
-            aj.field_l = new Sprite(var9, var10);
-            OpenGlIndexArray.setRasterTarget(aj.field_l, (byte) 108);
+          if (null == ReflectionCheck.field_l) {
+            ReflectionCheck.field_l = new Sprite(var9, var10);
+            OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.popRasterState(1);
-            aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
+            ReflectionCheck.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
-          if (aj.field_l.field_m < var9) {
-            aj.field_l = new Sprite(var9, var10);
-            OpenGlIndexArray.setRasterTarget(aj.field_l, (byte) 108);
+          if (ReflectionCheck.field_l.field_m < var9) {
+            ReflectionCheck.field_l = new Sprite(var9, var10);
+            OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.popRasterState(1);
-            aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
+            ReflectionCheck.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
-          if (var10 > aj.field_l.field_q) {
-            aj.field_l = new Sprite(var9, var10);
-            OpenGlIndexArray.setRasterTarget(aj.field_l, (byte) 108);
+          if (var10 > ReflectionCheck.field_l.field_q) {
+            ReflectionCheck.field_l = new Sprite(var9, var10);
+            OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
             pfa.popRasterState(1);
-            aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
+            ReflectionCheck.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
             return;
           }
-          OpenGlIndexArray.setRasterTarget(aj.field_l, (byte) 95);
+          OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 95);
           SoftwareRasterizer.clear();
           var15.drawRotatedScaled(112, 144, var15.field_n << 4, var15.field_k << 4, -this.field_A << 10, 4096);
           pfa.popRasterState(1);
-          aj.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
+          ReflectionCheck.field_l.drawAdditive(-var15.field_n + var5, var6 - var15.field_k, 256);
           return;
         }
         if (tea.field_b == var8) {
           var16 = CharacterChoiceFactory.field_b[0];
           var9Lifetime1 = var16.field_n << 1;
           var10Lifetime1 = var16.field_k << 1;
-          if (null == aj.field_l) {
-            aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
-            OpenGlIndexArray.setRasterTarget(aj.field_l, (byte) 108);
+          if (null == ReflectionCheck.field_l) {
+            ReflectionCheck.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
+            OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.popRasterState(1);
-            aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
+            ReflectionCheck.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
-          if (aj.field_l.field_m < var9Lifetime1) {
-            aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
-            OpenGlIndexArray.setRasterTarget(aj.field_l, (byte) 108);
+          if (ReflectionCheck.field_l.field_m < var9Lifetime1) {
+            ReflectionCheck.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
+            OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.popRasterState(1);
-            aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
+            ReflectionCheck.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
-          if (var10Lifetime1 > aj.field_l.field_q) {
-            aj.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
-            OpenGlIndexArray.setRasterTarget(aj.field_l, (byte) 108);
+          if (var10Lifetime1 > ReflectionCheck.field_l.field_q) {
+            ReflectionCheck.field_l = new Sprite(var9Lifetime1, var10Lifetime1);
+            OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 108);
             var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
             pfa.popRasterState(1);
-            aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
+            ReflectionCheck.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
             return;
           }
-          OpenGlIndexArray.setRasterTarget(aj.field_l, (byte) 95);
+          OpenGlIndexArray.setRasterTarget(ReflectionCheck.field_l, (byte) 95);
           SoftwareRasterizer.clear();
           var16.drawRotatedScaled(112, 144, var16.field_n << 4, var16.field_k << 4, -this.field_A << 10, 4096);
           pfa.popRasterState(1);
-          aj.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
+          ReflectionCheck.field_l.drawAdditive(-var16.field_n + var5, var6 - var16.field_k, 256);
           return;
         }
-        if (fp.field_c == var8) {
+        if (TextureCombineSource.field_c == var8) {
           var13 = CharacterChoiceFactory.field_b[2];
           var13.drawAdditive(var5 - (var13.field_m >> 1), var6 - (var13.field_q >> 1), 256);
           return;
@@ -162,7 +162,7 @@ final class mha extends FocusableWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

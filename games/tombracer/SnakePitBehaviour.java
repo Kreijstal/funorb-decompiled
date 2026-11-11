@@ -47,7 +47,7 @@ final class SnakePitBehaviour extends Behaviour {
             var14 = SimulationObserver.clipBeamToBox(var11.getSize(0), 12, var13, var11.getSize(0), param2, var12, 2);
             if (var14 > 0) {
               var15 = wm.a(4096, var14, 15);
-              this.applyEffectToSnake(var8 + gqa.multiplyFixed(-var8 + var9, (byte) 24, var15), var6 + gqa.multiplyFixed(var7 - var6, (byte) 24, var15), var11, (byte) -102, param1);
+              this.applyEffectToSnake(var8 + ChatMessage.multiplyFixed(-var8 + var9, (byte) 24, var15), var6 + ChatMessage.multiplyFixed(var7 - var6, (byte) 24, var15), var11, (byte) -102, param1);
             }
           }
           stackIn_10_0 = 0;
@@ -68,7 +68,7 @@ final class SnakePitBehaviour extends Behaviour {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class SnakePitBehaviour extends Behaviour {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class SnakePitBehaviour extends Behaviour {
           this.spawnSnakes(param0);
           param1.setHandlesEffectType(26492, true, 3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sea.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sea.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -183,14 +183,14 @@ final class SnakePitBehaviour extends Behaviour {
 
     final static boolean isFirstReflectionCheckReady(int param0) {
         int var2 = 0;
-        aj var1 = null;
+        ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
-        aj var4 = null;
+        ReflectionCheck var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = (aj) (IntNode.field_g.first(-80));
+          var4 = (ReflectionCheck) (IntNode.field_g.first(-80));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -212,7 +212,7 @@ final class SnakePitBehaviour extends Behaviour {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1_ref), "sea.P(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1_ref), "sea.P(" + param0 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ final class SnakePitBehaviour extends Behaviour {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -308,7 +308,7 @@ final class SnakePitBehaviour extends Behaviour {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -408,7 +408,7 @@ final class SnakePitBehaviour extends Behaviour {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

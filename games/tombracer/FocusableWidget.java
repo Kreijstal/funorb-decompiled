@@ -36,7 +36,7 @@ class FocusableWidget extends UiWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ class FocusableWidget extends UiWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ class FocusableWidget extends UiWidget {
             this.handlePointerRelease((byte) 59, param2, GridWidgetContainer.field_B, param0, param3, AgeValidator.field_j);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -134,10 +134,10 @@ class FocusableWidget extends UiWidget {
               this.field_v = true;
             }
             if (null != this.field_h) {
-              if (!(this.field_h instanceof vfa)) {
+              if (!(this.field_h instanceof FocusListener)) {
                 return true;
               }
-              ((vfa) (this.field_h)).a((UiWidget) (this), (byte) 90, this.field_u);
+              ((FocusListener) (this.field_h)).onFocusChanged((UiWidget) (this), (byte) 90, this.field_u);
             }
             return true;
           }
@@ -152,7 +152,7 @@ class FocusableWidget extends UiWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -170,8 +170,8 @@ class FocusableWidget extends UiWidget {
           var2Lifetime1 = 101 / ((param0 + 38) / 60);
           return;
         }
-        if (this.field_h instanceof vfa) {
-          ((vfa) (this.field_h)).a((UiWidget) (this), (byte) -74, this.field_u);
+        if (this.field_h instanceof FocusListener) {
+          ((FocusListener) (this.field_h)).onFocusChanged((UiWidget) (this), (byte) -74, this.field_u);
           var2Lifetime2 = 101 / ((param0 + 38) / 60);
           return;
         }
@@ -251,7 +251,7 @@ class FocusableWidget extends UiWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "rj.TA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "rj.TA(" + param0 + ')');
         }
     }
 
@@ -289,7 +289,7 @@ class FocusableWidget extends UiWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ class FocusableWidget extends UiWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -349,7 +349,7 @@ class FocusableWidget extends UiWidget {
           }
           this.field_s = 0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

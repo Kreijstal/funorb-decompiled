@@ -17,9 +17,9 @@ abstract class GameFont {
           return;
         }
         try {
-          this.drawText(false, param2 - this.field_a.a(param5, (byte) 107) / 2, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param5, 0, param4);
+          this.drawText(false, param2 - this.field_a.stringWidth(param5, (byte) 107) / 2, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param5, 0, param4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "da.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -73,7 +73,7 @@ abstract class GameFont {
               }
             } else {
               var5 = (CharSequence) ((Object) param0.substring(4));
-              MatchProtocol.field_k = -16777216 & MatchProtocol.field_k | 16777215 & eba.parseInt(var5, -105, 16);
+              MatchProtocol.field_k = -16777216 & MatchProtocol.field_k | 16777215 & SoftCacheEntry.parseInt(var5, -105, 16);
             }
             if (!param0.startsWith("argb=")) {
               if (param0.equals("/argb")) {
@@ -88,7 +88,7 @@ abstract class GameFont {
                     } else {
                       if (param0.startsWith("u=")) {
                         var9 = (CharSequence) ((Object) param0.substring(2));
-                        moa.field_b = MatchProtocol.field_k & -16777216 | eba.parseInt(var9, -65, 16);
+                        moa.field_b = MatchProtocol.field_k & -16777216 | SoftCacheEntry.parseInt(var9, -65, 16);
                       } else {
                         if (param0.equals("u")) {
                           moa.field_b = -16777216 & MatchProtocol.field_k;
@@ -97,7 +97,7 @@ abstract class GameFont {
                             if (!param0.equalsIgnoreCase("shad=-1")) {
                               if (param0.startsWith("shad=")) {
                                 var8 = (CharSequence) ((Object) param0.substring(5));
-                                GasTrapComponent.field_G = MatchProtocol.field_k & -16777216 | eba.parseInt(var8, -52, 16);
+                                GasTrapComponent.field_G = MatchProtocol.field_k & -16777216 | SoftCacheEntry.parseInt(var8, -52, 16);
                               } else {
                                 if (param0.equals("shad")) {
                                   GasTrapComponent.field_G = -16777216 & MatchProtocol.field_k;
@@ -123,12 +123,12 @@ abstract class GameFont {
                   }
                 } else {
                   var7 = (CharSequence) ((Object) param0.substring(4));
-                  nt.field_b = MatchProtocol.field_k & -16777216 | eba.parseInt(var7, -45, 16);
+                  nt.field_b = MatchProtocol.field_k & -16777216 | SoftCacheEntry.parseInt(var7, -45, 16);
                 }
               }
             } else {
               var6 = (CharSequence) ((Object) param0.substring(5));
-              MatchProtocol.field_k = eba.parseInt(var6, -63, 16);
+              MatchProtocol.field_k = SoftCacheEntry.parseInt(var6, -63, 16);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,7 +148,7 @@ abstract class GameFont {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -228,10 +228,10 @@ abstract class GameFont {
               this.drawText(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
             } else {
               if (param4 == 1) {
-                this.drawText(false, (param11 - this.field_a.a(WeaponShooterBehaviour.field_q[var22Lifetime1], (byte) -101)) / 2 + param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
+                this.drawText(false, (param11 - this.field_a.stringWidth(WeaponShooterBehaviour.field_q[var22Lifetime1], (byte) -101)) / 2 + param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
               } else {
                 if (param4 == 2) {
-                  this.drawText(false, -this.field_a.a(WeaponShooterBehaviour.field_q[var22Lifetime1], (byte) -116) + (param11 + param1), param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
+                  this.drawText(false, -this.field_a.stringWidth(WeaponShooterBehaviour.field_q[var22Lifetime1], (byte) -116) + (param11 + param1), param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
                 } else {
                   if (var19 - 1 == var22Lifetime1) {
                     this.drawText(false, param1, param5, param0, param3, param7, WeaponShooterBehaviour.field_q[var22Lifetime1], param8, var20);
@@ -275,7 +275,7 @@ abstract class GameFont {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -310,7 +310,7 @@ abstract class GameFont {
             }
           }
           if (var4_int > 0) {
-            OpenGlToolkit.field_ab = (param1 - this.field_a.a(param2, (byte) -121) << 8) / var4_int;
+            OpenGlToolkit.field_ab = (param1 - this.field_a.stringWidth(param2, (byte) -121) << 8) / var4_int;
           }
           if (!param0) {
             this.field_a = (FontMetrics) null;
@@ -326,7 +326,7 @@ abstract class GameFont {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -502,7 +502,7 @@ abstract class GameFont {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -552,7 +552,7 @@ abstract class GameFont {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param14).append(',').append(param15).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param14).append(',').append(param15).append(')').toString());
         }
     }
 
@@ -564,7 +564,7 @@ abstract class GameFont {
           this.setColours(param4, param5, 125);
           this.drawText(param1, param3, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "da.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "da.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -577,9 +577,9 @@ abstract class GameFont {
             this.field_a = (FontMetrics) null;
           }
           this.setColours(param4, param3, 118);
-          this.drawText(false, -this.field_a.a(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
+          this.drawText(false, -this.field_a.stringWidth(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -588,7 +588,7 @@ abstract class GameFont {
           this.field_a = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -104,7 +104,7 @@ final class ColourGradientOperator extends TextureOperator {
               this.field_o = new int[param1.readUnsignedByte(255)][4];
               for (var5 = 0; this.field_o.length > var5; var5++) {
                 this.field_o[var5][0] = param1.readUnsignedShort(127);
-                this.field_o[var5][1] = param1.readUnsignedByte(kha.bitwiseXor((int) param0, 148)) << 4;
+                this.field_o[var5][1] = param1.readUnsignedByte(TextLine.bitwiseXor((int) param0, 148)) << 4;
                 this.field_o[var5][2] = param1.readUnsignedByte(255) << 4;
                 this.field_o[var5][3] = param1.readUnsignedByte(255) << 4;
               }
@@ -127,7 +127,7 @@ final class ColourGradientOperator extends TextureOperator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 

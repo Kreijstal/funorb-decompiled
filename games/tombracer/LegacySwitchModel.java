@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacySwitchModel extends TrapModel {
-    static dq field_n;
+    static ColourRowCacheEntry field_n;
     static String field_m;
     private SwitchSource field_p;
     static String field_o;
@@ -38,7 +38,7 @@ final class LegacySwitchModel extends TrapModel {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class LegacySwitchModel extends TrapModel {
           int var10 = 86 % ((param4 + 38) / 47);
           oq.a(-var8 + param2, -var9 + param1, param3, 255, param2 + var8, var6_int, param1 + var9, true);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ioa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ioa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class LegacySwitchModel extends TrapModel {
     }
 
     static {
-        field_n = new dq(0, 0);
+        field_n = new ColourRowCacheEntry(0, 0);
         field_m = "<%0> has withdrawn the request to join.";
         field_o = "Run using the arrow keys or W, A, S and D.";
     }

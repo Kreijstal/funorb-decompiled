@@ -24,7 +24,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           super.updatePointerState(param0, param1, param2, param3);
           this.field_M = -param0 + AgeValidator.field_j - this.field_i;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "so.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "so.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
             field_K = -19;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "so.BB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "so.BB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           if (param0 != -16310) {
             ValidatedTextInputWidget.pumpAudio(117);
           }
-          gg.field_b.serviceOutput();
+          HardwareModelIndexData.field_b.serviceOutput();
           S2CProfileUpdatePacket.field_b = S2CProfileUpdatePacket.field_b - 1;
           if (0 == S2CProfileUpdatePacket.field_b) {
             S2CProfileUpdatePacket.field_b = 200;
@@ -80,7 +80,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1_ref), "so.VA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1_ref), "so.VA(" + param0 + ')');
         }
     }
 

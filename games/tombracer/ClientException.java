@@ -8,7 +8,7 @@ final class ClientException extends RuntimeException {
     static String field_e;
     static int field_c;
 
-    final static int glDataType(una param0, int param1) {
+    final static int glDataType(GpuDataType param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -24,35 +24,35 @@ final class ClientException extends RuntimeException {
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == una.field_a) {
+          if (param0 == GpuDataType.field_a) {
             stackIn_23_0 = 5120;
             return stackIn_23_0;
           }
-          if (param0 == una.field_k) {
+          if (param0 == GpuDataType.field_k) {
             stackIn_3_0 = 5122;
             return stackIn_3_0;
           }
-          if (param0 == una.field_m) {
+          if (param0 == GpuDataType.field_m) {
             stackIn_6_0 = 5124;
             return stackIn_6_0;
           }
-          if (una.field_g == param0) {
+          if (GpuDataType.field_g == param0) {
             stackIn_9_0 = 5121;
             return stackIn_9_0;
           }
-          if (una.field_f == param0) {
+          if (GpuDataType.field_f == param0) {
             stackIn_21_0 = 5123;
             return stackIn_21_0;
           }
-          if (param0 == una.field_i) {
+          if (param0 == GpuDataType.field_i) {
             stackIn_19_0 = 5125;
             return stackIn_19_0;
           }
-          if (param0 == una.field_l) {
+          if (param0 == GpuDataType.field_l) {
             stackIn_14_0 = 5131;
             return stackIn_14_0;
           }
-          if (param0 == una.field_h) {
+          if (param0 == GpuDataType.field_h) {
             stackIn_17_0 = 5126;
             return stackIn_17_0;
           }
@@ -71,7 +71,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -92,8 +92,8 @@ final class ClientException extends RuntimeException {
         field_e = null;
         field_b = null;
         if (param0) {
-          una var2 = (una) null;
-          ClientException.glDataType((una) null, 48);
+          GpuDataType var2 = (GpuDataType) null;
+          ClientException.glDataType((GpuDataType) null, 48);
         }
     }
 

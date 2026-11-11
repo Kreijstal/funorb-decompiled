@@ -37,7 +37,7 @@ final class BoulderComponent extends PathMoverComponent {
             var6 = RidgedNoise3D.field_p;
             var4Lifetime2.field_f.openAt(var6, 0, -100, 0, var5);
           }
-          iea.a(param2, (byte) -56, param0);
+          ClipFrame.a(param2, (byte) -56, param0);
           return;
         }
         String var7 = (String) null;
@@ -53,14 +53,14 @@ final class BoulderComponent extends PathMoverComponent {
           var6Lifetime1 = RidgedNoise3D.field_p;
           var4Lifetime1Lifetime1.field_f.openAt(var6Lifetime1, 0, -100, 0, var5Lifetime1);
         }
-        iea.a(param2, (byte) -56, param0);
+        ClipFrame.a(param2, (byte) -56, param0);
     }
 
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uka.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uka.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class BoulderComponent extends PathMoverComponent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class BoulderComponent extends PathMoverComponent {
           }
           MatchScoringObserver.field_h = MatchScoringObserver.field_h + 1;
           RangeOperator.field_p = tka.field_n;
-          AgeValidator.field_j = ena.field_n;
+          AgeValidator.field_j = AnimationFrameSet.field_n;
           GridWidgetContainer.field_B = ee.field_a;
           ProceduralTextureProvider.field_c = PlayerContextMenu.field_c;
           PlayerContextMenu.field_c = false;
@@ -188,7 +188,7 @@ final class BoulderComponent extends PathMoverComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

@@ -48,7 +48,7 @@ final class SectorCacheStore {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class SectorCacheStore {
           var3_ref = this.field_c;
           synchronized (var3_ref) {
             try {
-              if (this.field_b.b(true) < (long)(6 + 6 * param0)) {
+              if (this.field_b.length(true) < (long)(6 + 6 * param0)) {
                 stackIn_3_0 = null;
                 return (byte[]) (stackIn_3_0);
               }
@@ -110,7 +110,7 @@ final class SectorCacheStore {
               if (var5 <= 0) {
                 return null;
               }
-              if ((long)var5 > this.field_c.b(true) / 520L) {
+              if ((long)var5 > this.field_c.length(true) / 520L) {
                 stackIn_15_0 = null;
                 return (byte[]) (stackIn_15_0);
               }
@@ -158,7 +158,7 @@ final class SectorCacheStore {
                 if (var13 < 0) {
                   return null;
                 }
-                if ((this.field_c.b(true) / 520L) < (long)var13) {
+                if ((this.field_c.length(true) / 520L) < (long)var13) {
                   stackIn_43_0 = null;
                   return (byte[]) (stackIn_43_0);
                 }
@@ -213,18 +213,18 @@ final class SectorCacheStore {
             synchronized (var6) {
               try {
                 if (param0) {
-                  if (this.field_b.b(true) < (long)(6 * param4 + 6)) {
+                  if (this.field_b.length(true) < (long)(6 * param4 + 6)) {
                     return false;
                   }
                   this.field_b.seek((byte) -124, (long)(6 * param4));
                   this.field_b.readFully(StaticCrusherComponent.field_F, 6, 0, (byte) -34);
                   var7_int = (StaticCrusherComponent.field_F[3] << 16 & 16711680) + ((255 & StaticCrusherComponent.field_F[4]) << 8) + (255 & StaticCrusherComponent.field_F[5]);
                   if (var7_int <= 0 ||
-                    !((long)var7_int <= this.field_c.b(true) / 520L)) {
+                    !((long)var7_int <= this.field_c.length(true) / 520L)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((519L + this.field_c.b(true)) / 520L);
+                  var7_int = (int)((519L + this.field_c.length(true)) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
@@ -285,7 +285,7 @@ final class SectorCacheStore {
                         var9 == var12 &&
                         this.field_d == var13) &&
                         (decompiledFrameRemainder0 = (!(0 <= var10) ||
-                        !((long)var10 <= this.field_c.b(true) / 520L)))) {
+                        !((long)var10 <= this.field_c.length(true) / 520L)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -293,7 +293,7 @@ final class SectorCacheStore {
                       }
                     }
                     if (var10 == 0) {
-                      var10 = (int)((this.field_c.b(true) + 519L) / 520L);
+                      var10 = (int)((this.field_c.length(true) + 519L) / 520L);
                       param0 = false;
                       if (0 == var10) {
                         var10++;
@@ -365,7 +365,7 @@ final class SectorCacheStore {
             } else {
               stackIn_71_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -388,7 +388,7 @@ final class SectorCacheStore {
           ql.field_k.writeShort(-1477662136, param0.getTicksSinceReset((byte) 107));
           int var3_int = 79 / ((param1 - 9) / 53);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ppa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ppa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -406,7 +406,7 @@ final class SectorCacheStore {
           this.field_b = param2;
           this.field_e = param3;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ppa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ppa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

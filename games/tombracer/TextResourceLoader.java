@@ -269,7 +269,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 118, "mu_gamelist_avg_rating");
                 if (null != var2) {
-                  qo.field_i = jaa.decodeText((byte) 70, var2);
+                  EllipseShape.field_i = jaa.decodeText((byte) 70, var2);
                 }
                 var2 = dn.loadFile((byte) -104, "mu_gamelist_options");
                 if (null != var2) {
@@ -281,7 +281,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 110, "mu_play_rated");
                 if (var2 != null) {
-                  iw.field_b = jaa.decodeText((byte) 50, var2);
+                  PrimitiveType.field_b = jaa.decodeText((byte) 50, var2);
                 }
                 var2 = dn.loadFile((byte) 118, "mu_create_unrated");
                 if (null != var2) {
@@ -361,7 +361,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 109, "invite_decline_xs_game");
                 if (null != var2) {
-                  cp.field_i = jaa.decodeText((byte) 49, var2);
+                  NativeGraphicsHeap.field_i = jaa.decodeText((byte) 49, var2);
                 }
                 var2 = dn.loadFile((byte) -49, "join_xs_game");
                 if (null != var2) {
@@ -433,7 +433,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -27, "mu_chat_game_friends");
                 if (var2 != null) {
-                  tv.field_xb = jaa.decodeText((byte) 126, var2);
+                  ContextMenuRow.field_xb = jaa.decodeText((byte) 126, var2);
                 }
                 var2 = dn.loadFile((byte) 119, "mu_chat_game_hide");
                 if (null != var2) {
@@ -481,11 +481,11 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 112, "searching_for_opponent_singular");
                 if (null != var2) {
-                  gqa.field_k = jaa.decodeText((byte) 37, var2);
+                  ChatMessage.field_k = jaa.decodeText((byte) 37, var2);
                 }
                 var2 = dn.loadFile((byte) -91, "searching_for_opponents_plural");
                 if (var2 != null) {
-                  to.field_l = jaa.decodeText((byte) 80, var2);
+                  HardwareGraphicsHeap.field_l = jaa.decodeText((byte) 80, var2);
                 }
                 var2 = dn.loadFile((byte) 113, "find_opponent_singular");
                 if (null != var2) {
@@ -509,7 +509,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 110, "your_game");
                 if (null != var2) {
-                  una.field_d = jaa.decodeText((byte) 45, var2);
+                  GpuDataType.field_d = jaa.decodeText((byte) 45, var2);
                 }
                 var2 = dn.loadFile((byte) -111, "game_full");
                 if (null != var2) {
@@ -605,7 +605,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 127, "status_full");
                 if (null != var2) {
-                  aua.field_c = jaa.decodeText((byte) 72, var2);
+                  PlainScoringObserverFactory.field_c = jaa.decodeText((byte) 72, var2);
                 }
                 var2 = dn.loadFile((byte) -45, "players_in_game");
                 if (null != var2) {
@@ -661,7 +661,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -12, "loading");
                 if (null != var2) {
-                  nl.field_c = jaa.decodeText((byte) 113, var2);
+                  LoginMethod.field_c = jaa.decodeText((byte) 113, var2);
                 }
                 var2 = dn.loadFile((byte) -43, "offline");
                 if (var2 != null) {
@@ -717,7 +717,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -119, "esc_cancelprivatemessage");
                 if (null != var2) {
-                  gj.field_a = jaa.decodeText((byte) 49, var2);
+                  VertexAttribute.field_a = jaa.decodeText((byte) 49, var2);
                 }
                 var2 = dn.loadFile((byte) 111, "esc_cancelthisline");
                 if (var2 != null) {
@@ -837,7 +837,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -102, "gameopt_youhaventunlocked");
                 if (var2 != null) {
-                  gh.field_f = jaa.decodeText((byte) 25, var2);
+                  HardwareSprite.field_f = jaa.decodeText((byte) 25, var2);
                 }
                 var2 = dn.loadFile((byte) 114, "gameopt_trychanging1");
                 if (var2 != null) {
@@ -947,7 +947,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -8, "rule_0_4");
                 if (null != var2) {
-                  oda.field_h = jaa.decodeText((byte) 99, var2);
+                  MazeFrontierCell.field_h = jaa.decodeText((byte) 99, var2);
                 }
                 var2 = dn.loadFile((byte) 110, "rule_0_5");
                 if (var2 != null) {
@@ -1007,7 +1007,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 124, "pleaselogin");
                 if (null != var2) {
-                  ura.field_a = jaa.decodeText((byte) 95, var2);
+                  TextureTransformMode.field_a = jaa.decodeText((byte) 95, var2);
                 }
                 var2 = dn.loadFile((byte) 119, "pleaselogin_member");
                 if (null != var2) {
@@ -1315,7 +1315,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -29, "day");
                 if (var2 != null) {
-                  oda.field_i = jaa.decodeText((byte) 89, var2);
+                  MazeFrontierCell.field_i = jaa.decodeText((byte) 89, var2);
                 }
                 var2 = dn.loadFile((byte) 126, "month");
                 if (var2 != null) {
@@ -1375,7 +1375,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -77, "create_welcome");
                 if (var2 != null) {
-                  bb.field_q = jaa.decodeText((byte) 98, var2);
+                  HiscoreTable.field_q = jaa.decodeText((byte) 98, var2);
                 }
                 var2 = dn.loadFile((byte) 111, "create_u13_welcome");
                 if (null != var2) {
@@ -1395,7 +1395,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -74, "create_password");
                 if (null != var2) {
-                  rta.field_j = jaa.decodeText((byte) 50, var2);
+                  MidiVoice.field_j = jaa.decodeText((byte) 50, var2);
                 }
                 var2 = dn.loadFile((byte) -48, "create_password_confirm");
                 if (null != var2) {
@@ -1411,7 +1411,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 111, "create_age");
                 if (null != var2) {
-                  iqa.field_g = jaa.decodeText((byte) 87, var2);
+                  ToolkitInstance.field_g = jaa.decodeText((byte) 87, var2);
                 }
                 var2 = dn.loadFile((byte) 107, "create_u13_email");
                 if (null != var2) {
@@ -1439,7 +1439,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -81, "create_suggestions");
                 if (var2 != null) {
-                  ch.field_e = jaa.decodeText((byte) 65, var2);
+                  AudioOutputThread.field_e = jaa.decodeText((byte) 65, var2);
                 }
                 var2 = dn.loadFile((byte) -102, "create_more_suggestions");
                 if (null != var2) {
@@ -1515,7 +1515,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -46, "create_displayname_hint");
                 if (var2 != null) {
-                  za.field_f = jaa.decodeText((byte) 70, var2);
+                  GraphicsHeap.field_f = jaa.decodeText((byte) 70, var2);
                 }
                 var2 = dn.loadFile((byte) 125, "create_password_tooltip");
                 if (null != var2) {
@@ -1615,7 +1615,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 121, "create_alert_passcontainsname_partial");
                 if (null != var2) {
-                  wl.field_h = jaa.decodeText((byte) 91, var2);
+                  ClipStackEntry.field_h = jaa.decodeText((byte) 91, var2);
                 }
                 var2 = dn.loadFile((byte) 121, "create_alert_checkname");
                 if (null != var2) {
@@ -1717,7 +1717,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -119, "enterfriend_add");
                 if (var2 != null) {
-                  tr.field_c = jaa.decodeText((byte) 72, var2);
+                  QuickChatPhraseSource.field_c = jaa.decodeText((byte) 72, var2);
                 }
                 var2 = dn.loadFile((byte) -60, "enterfriend_del");
                 if (var2 != null) {
@@ -1737,7 +1737,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 115, "text_lobby_pleaselogin_free");
                 if (var2 != null) {
-                  aaa.field_e = jaa.decodeText((byte) 104, var2);
+                  LegacyOpenGlWaterTextures.field_e = jaa.decodeText((byte) 104, var2);
                 }
                 var2 = dn.loadFile((byte) 123, "opengl");
                 if (null != var2) {
@@ -1877,7 +1877,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -67, "tutorial");
                 if (null != var2) {
-                  id.field_k = jaa.decodeText((byte) 41, var2);
+                  SinglePlayerCourseGenerator.field_k = jaa.decodeText((byte) 41, var2);
                 }
                 var2 = dn.loadFile((byte) 106, "playtutorial");
                 if (null != var2) {
@@ -1885,7 +1885,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -62, "sound_colon");
                 if (var2 != null) {
-                  qf.field_l = jaa.decodeText((byte) 38, var2);
+                  FloatPacketBuffer.field_l = jaa.decodeText((byte) 38, var2);
                 }
                 var2 = dn.loadFile((byte) -66, "music_colon");
                 if (null != var2) {
@@ -1909,7 +1909,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 113, "achievements");
                 if (null != var2) {
-                  qja.field_i = jaa.decodeText((byte) 106, var2);
+                  MazeSearchNode.field_i = jaa.decodeText((byte) 106, var2);
                 }
                 var2 = dn.loadFile((byte) 126, "achievementsthisgame");
                 if (var2 != null) {
@@ -2085,7 +2085,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -54, "cont");
                 if (var2 != null) {
-                  aua.field_d = jaa.decodeText((byte) 104, var2);
+                  PlainScoringObserverFactory.field_d = jaa.decodeText((byte) 104, var2);
                 }
                 var2 = dn.loadFile((byte) 107, "continue_spectating");
                 if (null != var2) {
@@ -2269,7 +2269,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 108, "orbpoints_colon");
                 if (null != var2) {
-                  jn.field_r = jaa.decodeText((byte) 85, var2);
+                  InstructionsScreen.field_r = jaa.decodeText((byte) 85, var2);
                 }
                 var2 = dn.loadFile((byte) -123, "orbcoins_colon");
                 if (var2 != null) {
@@ -2457,7 +2457,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -102, "quickchat_help");
                 if (var2 != null) {
-                  iw.field_a = jaa.decodeText((byte) 35, var2);
+                  PrimitiveType.field_a = jaa.decodeText((byte) 35, var2);
                 }
                 var2 = dn.loadFile((byte) 123, "quickchat_help_title");
                 if (var2 != null) {
@@ -2573,19 +2573,19 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -19, "reconnect_lost_seq,0");
                 if (null != var2) {
-                  tba.reconnectingMessages[0] = jaa.decodeText((byte) 102, var2);
+                  MonochromeRowCacheEntry.reconnectingMessages[0] = jaa.decodeText((byte) 102, var2);
                 }
                 var2 = dn.loadFile((byte) 121, "reconnect_lost_seq,1");
                 if (var2 != null) {
-                  tba.reconnectingMessages[1] = jaa.decodeText((byte) 54, var2);
+                  MonochromeRowCacheEntry.reconnectingMessages[1] = jaa.decodeText((byte) 54, var2);
                 }
                 var2 = dn.loadFile((byte) -74, "reconnect_lost_seq,2");
                 if (null != var2) {
-                  tba.reconnectingMessages[2] = jaa.decodeText((byte) 63, var2);
+                  MonochromeRowCacheEntry.reconnectingMessages[2] = jaa.decodeText((byte) 63, var2);
                 }
                 var2 = dn.loadFile((byte) -106, "reconnect_lost_seq,3");
                 if (null != var2) {
-                  tba.reconnectingMessages[3] = jaa.decodeText((byte) 96, var2);
+                  MonochromeRowCacheEntry.reconnectingMessages[3] = jaa.decodeText((byte) 96, var2);
                 }
                 var2 = dn.loadFile((byte) 120, "reconnect_lost");
                 if (null != var2) {
@@ -2663,7 +2663,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 122, "fs_accept_countdown_pl");
                 if (var2 != null) {
-                  lqa.field_g = jaa.decodeText((byte) 33, var2);
+                  RendererOption.field_g = jaa.decodeText((byte) 33, var2);
                 }
                 var2 = dn.loadFile((byte) 107, "fs_nonmember");
                 if (var2 != null) {
@@ -2691,7 +2691,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) 105, "fs_focus_or_resolution");
                 if (var2 != null) {
-                  tj.field_h = jaa.decodeText((byte) 122, var2);
+                  VertexArrayPointer.field_h = jaa.decodeText((byte) 122, var2);
                 }
                 var2 = dn.loadFile((byte) 107, "fs_timeout");
                 if (null != var2) {
@@ -2703,7 +2703,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -110, "graphics_ui_fs_countdown");
                 if (null != var2) {
-                  wg.field_k = jaa.decodeText((byte) 71, var2);
+                  StatReportingScoringObserver.field_k = jaa.decodeText((byte) 71, var2);
                 }
                 var2 = dn.loadFile((byte) 110, "mb_caption_title");
                 if (null != var2) {
@@ -2763,11 +2763,11 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.loadFile((byte) -123, "rating_mode_name,0");
                 if (null != var2) {
-                  wg.field_m[0] = jaa.decodeText((byte) 99, var2);
+                  StatReportingScoringObserver.field_m[0] = jaa.decodeText((byte) 99, var2);
                 }
                 var2 = dn.loadFile((byte) 106, "rating_mode_name,1");
                 if (null != var2) {
-                  wg.field_m[1] = jaa.decodeText((byte) 31, var2);
+                  StatReportingScoringObserver.field_m[1] = jaa.decodeText((byte) 31, var2);
                 }
                 var2 = dn.loadFile((byte) 120, "rating_mode_long_name,0");
                 if (var2 != null) {
@@ -3036,7 +3036,7 @@ final class TextResourceLoader extends eta {
                   } else {
                     stackIn_2621_2 = "{...}";
                   }
-                  throw tba.wrapException((Throwable) ((Object) stackIn_2620_0), ((StringBuilder) (Object) stackIn_2620_1).append(stackIn_2621_2).append(')').toString());
+                  throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_2620_0), ((StringBuilder) (Object) stackIn_2620_1).append(stackIn_2621_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2629_0 = (!GameApplet.field_m);
@@ -3053,7 +3053,7 @@ final class TextResourceLoader extends eta {
           jsa.a(false, 4);
           int var1_int = 74 / ((param0 + 31) / 39);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jga.C(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jga.C(" + param0 + ')');
         }
     }
 
@@ -3064,7 +3064,7 @@ final class TextResourceLoader extends eta {
         try {
           field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jga.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jga.B(" + param0 + ')');
         }
     }
 

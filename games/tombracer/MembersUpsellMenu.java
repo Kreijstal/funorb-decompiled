@@ -116,9 +116,9 @@ final class MembersUpsellMenu extends MenuScreen {
         }
         if (param1 == 1 &&
           this.items.length == 3) {
-          return aaa.a(false) - this.items[param1].getWidth(-163) >> 1;
+          return LegacyOpenGlWaterTextures.getCanvasWidth(false) - this.items[param1].getWidth(-163) >> 1;
         }
-        return aaa.a(false) - this.items[param1].getWidth(-163) - 10;
+        return LegacyOpenGlWaterTextures.getCanvasWidth(false) - this.items[param1].getWidth(-163) - 10;
     }
 
     final void draw(byte param0, boolean param1) {
@@ -130,7 +130,7 @@ final class MembersUpsellMenu extends MenuScreen {
         int var7;
         String var8;
         int var9;
-        cc var10;
+        CourseMapPath var10;
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;
@@ -140,12 +140,12 @@ final class MembersUpsellMenu extends MenuScreen {
         if (SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
           return;
         }
-        ik.field_h.draw(this.field_t, this.field_r);
+        IntArrayRequest.field_h.draw(this.field_t, this.field_r);
         OpenGlEnvironmentWaterEffect.field_d.draw(this.field_t, this.field_r);
-        var10 = (cc) (this.field_q.first(-80));
+        var10 = (CourseMapPath) (this.field_q.first(-80));
         while (var10 != null) {
-          var10.a(99, this.field_t, this.field_r);
-          var10 = (cc) (this.field_q.next(121));
+          var10.draw(99, this.field_t, this.field_r);
+          var10 = (CourseMapPath) (this.field_q.next(121));
         }
         if (mq.field_e == null &&
           !TextWidgetPainter.a(param0 + 119)) {
@@ -157,13 +157,13 @@ final class MembersUpsellMenu extends MenuScreen {
             if (MultiplayerLoginMenu.b(false) &&
               !dta.field_g[var4]) {
               var3 = 1;
-              qf.field_k[var4].draw(pha.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
+              FloatPacketBuffer.field_k[var4].draw(pha.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
             } else {
               OpenGlFramebuffer.field_i[var4].draw(pha.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
               var5_ref_nh = ConsoleWindow.field_d;
               if (null != mq.field_e) {
                 if (mq.field_e.worldMedals[var4] == 3) {
-                  var5_ref_nh = je.field_E;
+                  var5_ref_nh = DropdownPopupList.field_E;
                 }
                 if (mq.field_e.worldMedals[var4] == 2) {
                   var5_ref_nh = eu.field_a;
@@ -176,19 +176,19 @@ final class MembersUpsellMenu extends MenuScreen {
             }
           }
         }
-        ura.a(-10985);
+        TextureTransformMode.a(-10985);
         this.field_x.draw(this.field_r, 11327, this.field_t);
         RemovedFromGameMenu.resetDepthRange((byte) -6);
-        var6 = aaa.a(false) >> 1;
+        var6 = LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1;
         var5 = 40;
         var4Lifetime1 = 260;
-        var7 = this.field_r - (100 - SwitchLinkList.b(param0 + 28));
+        var7 = this.field_r - (100 - SwitchLinkList.getCanvasHeight(param0 + 28));
         PlayerInputQueue.field_a.draw(var6 - (PlayerInputQueue.field_a.width() >> 1), -(PlayerInputQueue.field_a.height() >> 1) + var7);
         SocketConnector.drawWrappedText(SecondaryLinkQueue.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + HeapIndexArray.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
         if (MultiplayerLoginMenu.b(false) && (TextWidgetPainter.a(62) ||
           mq.field_e.field_a ||
           var3 != 0)) {
-          var7Lifetime1 = SwitchLinkList.b(0) / 2 + this.field_r;
+          var7Lifetime1 = SwitchLinkList.getCanvasHeight(0) / 2 + this.field_r;
           var4Lifetime2 = 350;
           var5Lifetime1 = 100;
           tga.field_a.fillRectangleAlpha(-1442774783, var6 - (var4Lifetime2 >> 1), var4Lifetime2, -(var5Lifetime1 >> 1) + var7Lifetime1, -22971, var5Lifetime1);
@@ -204,11 +204,11 @@ final class MembersUpsellMenu extends MenuScreen {
               var8 = tc.field_f;
             }
           }
-          SocketConnector.drawWrappedText(var8, 1, kn.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
+          SocketConnector.drawWrappedText(var8, 1, TooltipRenderer.field_p, 16777215, 16, var5Lifetime1, 1, var7Lifetime1 - (var5Lifetime1 >> 1), 10 + (var6 - (var4Lifetime2 >> 1)), -1, (byte) 60, -20 + var4Lifetime2);
         }
         if (SimpleBlockBehaviour.c(0)) {
-          MembersUpsellMenu.drawCentredTextWithShadow("Unlock: Key 2-9", 16777215, kn.field_p, -1, this.field_r + SwitchLinkList.b(param0 + 28) - 100, -100 + aaa.a(false), -1);
-          MembersUpsellMenu.drawCentredTextWithShadow("Play All: Insert", 16777215, kn.field_p, -1, -80 + (this.field_r + SwitchLinkList.b(0)), aaa.a(false) - 100, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow("Unlock: Key 2-9", 16777215, TooltipRenderer.field_p, -1, this.field_r + SwitchLinkList.getCanvasHeight(param0 + 28) - 100, -100 + LegacyOpenGlWaterTextures.getCanvasWidth(false), -1);
+          MembersUpsellMenu.drawCentredTextWithShadow("Play All: Insert", 16777215, TooltipRenderer.field_p, -1, -80 + (this.field_r + SwitchLinkList.getCanvasHeight(0)), LegacyOpenGlWaterTextures.getCanvasWidth(false) - 100, -1);
         }
         return;
     }
@@ -227,21 +227,21 @@ final class MembersUpsellMenu extends MenuScreen {
         this.field_r = this.computeDropOffset(-18796);
         this.field_x = new pfa(0, this.field_v);
         this.field_q = new IntrusiveDeque();
-        this.field_q.addLast((byte) -118, new cc(0, 1, 2));
-        this.field_q.addLast((byte) -54, new cc(0, 2, 6));
-        this.field_q.addLast((byte) -115, new cc(1, 3, 4));
-        this.field_q.addLast((byte) -70, new cc(1, 4, ta.field_vb[0], EdgeDetectOperator.field_m[0], 4, 2));
-        this.field_q.addLast((byte) -97, new cc(2, 4, 4));
-        this.field_q.addLast((byte) -80, new cc(4, 3, ta.field_vb[1], EdgeDetectOperator.field_m[1], 2, 3));
-        this.field_q.addLast((byte) -119, new cc(4, 5, ta.field_vb[5], EdgeDetectOperator.field_m[5], 3, 2));
-        this.field_q.addLast((byte) -88, new cc(3, 6, 4));
-        this.field_q.addLast((byte) -92, new cc(5, 7, ta.field_vb[2], EdgeDetectOperator.field_m[2], 3, 3));
-        this.field_q.addLast((byte) -96, new cc(6, 8, 4));
+        this.field_q.addLast((byte) -118, new CourseMapPath(0, 1, 2));
+        this.field_q.addLast((byte) -54, new CourseMapPath(0, 2, 6));
+        this.field_q.addLast((byte) -115, new CourseMapPath(1, 3, 4));
+        this.field_q.addLast((byte) -70, new CourseMapPath(1, 4, LabelledRow.field_vb[0], EdgeDetectOperator.field_m[0], 4, 2));
+        this.field_q.addLast((byte) -97, new CourseMapPath(2, 4, 4));
+        this.field_q.addLast((byte) -80, new CourseMapPath(4, 3, LabelledRow.field_vb[1], EdgeDetectOperator.field_m[1], 2, 3));
+        this.field_q.addLast((byte) -119, new CourseMapPath(4, 5, LabelledRow.field_vb[5], EdgeDetectOperator.field_m[5], 3, 2));
+        this.field_q.addLast((byte) -88, new CourseMapPath(3, 6, 4));
+        this.field_q.addLast((byte) -92, new CourseMapPath(5, 7, LabelledRow.field_vb[2], EdgeDetectOperator.field_m[2], 3, 3));
+        this.field_q.addLast((byte) -96, new CourseMapPath(6, 8, 4));
         if (param0 <= 78) {
           this.activateItem(true, false, 48);
         }
-        this.field_q.addLast((byte) -107, new cc(6, 7, ta.field_vb[3], EdgeDetectOperator.field_m[3], 3, 3));
-        this.field_q.addLast((byte) -51, new cc(7, 8, ta.field_vb[4], EdgeDetectOperator.field_m[4], 1, 2));
+        this.field_q.addLast((byte) -107, new CourseMapPath(6, 7, LabelledRow.field_vb[3], EdgeDetectOperator.field_m[3], 3, 3));
+        this.field_q.addLast((byte) -51, new CourseMapPath(7, 8, LabelledRow.field_vb[4], EdgeDetectOperator.field_m[4], 1, 2));
     }
 
     private final void startSinglePlayer(boolean param0) {
@@ -255,14 +255,14 @@ final class MembersUpsellMenu extends MenuScreen {
         if (param1 != 30) {
           this.field_s = 3;
         }
-        return SwitchLinkList.b(0) - 25;
+        return SwitchLinkList.getCanvasHeight(0) - 25;
     }
 
     final static void drawCentredTextWithShadow(String param0, int param1, GameFont param2, int param3, int param4, int param5, int param6) {
         try {
           param2.drawCentred(SoundEvent.withFullAlpha(false, param6), param3, param5, SoundEvent.withFullAlpha(false, param1), param4, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oka.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oka.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -272,7 +272,7 @@ final class MembersUpsellMenu extends MenuScreen {
         try {
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "oka.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "oka.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -319,7 +319,7 @@ final class MembersUpsellMenu extends MenuScreen {
         int var6;
         int var7;
         int var8;
-        cc var9;
+        CourseMapPath var9;
         int var10;
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
@@ -345,7 +345,7 @@ final class MembersUpsellMenu extends MenuScreen {
         }
         var6 = stackIn_20_0;
         if (99 != param0) {
-          stackIn_26_0 = (param0 == fp.field_a) ? 1 : 0;
+          stackIn_26_0 = (param0 == TextureCombineSource.field_a) ? 1 : 0;
         } else {
           stackIn_26_0 = 1;
         }
@@ -354,14 +354,14 @@ final class MembersUpsellMenu extends MenuScreen {
           var5 == 0 &&
           var6 == 0 &&
           var7 == 0 &&
-          fp.field_a != param0 &&
+          TextureCombineSource.field_a != param0 &&
           gsa.field_j != param0 &&
           param0 != 84) {
           return true;
         }
         if (!this.field_x.field_g) {
           var8 = this.field_v;
-          var9 = (cc) (this.field_q.first(-80));
+          var9 = (CourseMapPath) (this.field_q.first(-80));
           while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var9 != null) {
@@ -374,7 +374,7 @@ final class MembersUpsellMenu extends MenuScreen {
                 var10 = stackIn_43_0;
                 if (mca.isCourseAvailable((byte) 6, var10) &&
                   BrickOperator.isCourseAccessible(96, var10)) {
-                  if (var9.b(true)) {
+                  if (var9.hasBend(true)) {
                     this.field_x.queueWaypoint(-28562, var9.field_k << 16, var9.field_j << 16);
                   }
                   var8 = var10;
@@ -382,7 +382,7 @@ final class MembersUpsellMenu extends MenuScreen {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var9 = (cc) (this.field_q.next(param2 + 115));
+                var9 = (CourseMapPath) (this.field_q.next(param2 + 115));
                 continue;
               }
             }
@@ -403,7 +403,7 @@ final class MembersUpsellMenu extends MenuScreen {
 
     private final int computeDropOffset(int param0) {
         int var3 = 0;
-        int var2 = SwitchLinkList.b(0);
+        int var2 = SwitchLinkList.getCanvasHeight(0);
         int var3Lifetime1;
         if (param0 != -18796) {
           this.field_r = -91;

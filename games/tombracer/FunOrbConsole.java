@@ -5,7 +5,7 @@ import java.util.*;
 
 final class FunOrbConsole extends ConsoleWindow {
     private ConsoleMethod[] methods;
-    static ica field_w;
+    static TextureCombineOperation field_w;
     static dn field_u;
 
     final void autocomplete(int param0) {
@@ -49,7 +49,7 @@ final class FunOrbConsole extends ConsoleWindow {
           if (var5 >= 0) {
             var7 = var4[var5];
             var8_int = var3 - var7.field_h;
-            if (tr.field_f == var7.kind &&
+            if (QuickChatPhraseSource.field_f == var7.kind &&
               0 < var8_int &&
               var7.text.length() >= var8_int) {
               var6 = var7.text.substring(0, var8_int);
@@ -113,7 +113,7 @@ final class FunOrbConsole extends ConsoleWindow {
             break;
           }
           if (stackIn_43_0 != stackIn_43_1) {
-            field_w = (ica) null;
+            field_w = (TextureCombineOperation) null;
           }
           var12Lifetime1 = var3 + var8.length();
           stackIn_47_0Lifetime1 = ~(var6.length() + var8.length());
@@ -133,7 +133,7 @@ final class FunOrbConsole extends ConsoleWindow {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "gq.I(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "gq.I(" + param0 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class FunOrbConsole extends ConsoleWindow {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ final class FunOrbConsole extends ConsoleWindow {
           StringBuilder stackIn_12_1 = null;
           String stackIn_13_2 = null;
           Throwable decompiledCaughtException = null;
-          rv var3_ref3 = null;
+          ConsoleEvaluationException var3_ref3 = null;
           try {
             try {
               if (false) throw (ConsoleParseException) null;
@@ -213,9 +213,9 @@ final class FunOrbConsole extends ConsoleWindow {
               param0 = "<col=55ff55>" + param0.substring(0, var3_ref.field_a) + "</col>" + param0.substring(var3_ref.field_a);
               var4_ref = (UiComponent) (this.field_a.field_tb.field_J.last(3));
               var4_ref.field_r = this.field_t + param0;
-            } catch (rv decompiledCaughtParameter1) {
+            } catch (ConsoleEvaluationException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              var3_ref3 = (rv) (Object) decompiledCaughtException;
+              var3_ref3 = (ConsoleEvaluationException) (Object) decompiledCaughtException;
               this.printLine(123, var3_ref3.field_b);
             }
             return false;
@@ -229,7 +229,7 @@ final class FunOrbConsole extends ConsoleWindow {
             } else {
               stackIn_13_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -238,20 +238,20 @@ final class FunOrbConsole extends ConsoleWindow {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseConsoleStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           field_u = null;
           if (param0 != 39) {
-            FunOrbConsole.f(51);
+            FunOrbConsole.releaseConsoleStatics(51);
           }
           field_w = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "gq.F(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "gq.F(" + param0 + ')');
         }
     }
 
@@ -308,7 +308,7 @@ final class FunOrbConsole extends ConsoleWindow {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -348,7 +348,7 @@ final class FunOrbConsole extends ConsoleWindow {
           if (var5 >= 0) {
             var7 = var4[var5];
             var8_int = -var7.field_h + var3;
-            if (~var7.kind == ~tr.field_f &&
+            if (~var7.kind == ~QuickChatPhraseSource.field_f &&
               var8_int > 0) {
               var6 = var7.text.substring(0, Math.min(var7.text.length(), var8_int));
               this.field_p.field_qb = this.field_m.stringWidth(var2.substring(0, var7.field_h));
@@ -384,7 +384,7 @@ final class FunOrbConsole extends ConsoleWindow {
                 if (stackIn_31_0 >= stackIn_31_1) {
                   break;
                 }
-                if (~tr.field_f != ~var4[var9 - 1].kind) {
+                if (~QuickChatPhraseSource.field_f != ~var4[var9 - 1].kind) {
                   break;
                 }
                 var6 = var4[var9 - 1].text;
@@ -416,7 +416,7 @@ final class FunOrbConsole extends ConsoleWindow {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "gq.E(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "gq.E(" + param0 + ')');
         }
     }
 
@@ -578,7 +578,7 @@ final class FunOrbConsole extends ConsoleWindow {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4_ref), "gq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4_ref), "gq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -590,12 +590,12 @@ final class FunOrbConsole extends ConsoleWindow {
           super.drawOverlay(param0);
           this.field_o.field_Cb.field_r = var2;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gq.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gq.B(" + param0 + ')');
         }
     }
 
     static {
-        field_w = new ica();
+        field_w = new TextureCombineOperation();
         field_u = new dn();
     }
 }

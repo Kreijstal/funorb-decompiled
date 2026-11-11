@@ -62,7 +62,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wv.I(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wv.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ abstract class MenuScreen extends GameScreen {
             var4_int = this.items[param2].field_g;
             var5 = this.field_k.isActivated(param0) ? 1 : 0;
             if (var5 != 0) {
-              dsa.a(-80);
+              dsa.createRandomClickSound(-80);
               discarded$0 = this.performAction(var4_int, param1, (byte) 119);
             }
             var8 = var4_int;
@@ -111,7 +111,7 @@ abstract class MenuScreen extends GameScreen {
                 qfa.applyMusicVolume(CircleMovementLocomotor.e((byte) 126), 20815);
               }
               if (this.field_k.isPointerHeld((byte) -128)) {
-                var8 = -24 + (aaa.a(false) >> 1);
+                var8 = -24 + (LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1);
                 var9 = -var8 + AgeValidator.field_j;
                 var10 = var9 << 1;
                 if (var10 > 0) {
@@ -131,7 +131,7 @@ abstract class MenuScreen extends GameScreen {
               if (this.field_k.isLeftPressed(96) &&
                 0 < tk.a(-22636)) {
                 var6 = 1;
-                to.lowerMusicVolume(11);
+                HardwareGraphicsHeap.lowerMusicVolume(11);
               }
               if (this.field_k.isRightPressed(94) &&
                 tk.a(-22636) < CircleMovementLocomotor.e((byte) 87)) {
@@ -145,7 +145,7 @@ abstract class MenuScreen extends GameScreen {
                 AgeValidator.field_j % 5 != 0) {
                 return;
               }
-              it.a(255, 198);
+              it.playMenuSound(255, 198);
               if (var11 == 0) {
                 return;
               }
@@ -158,7 +158,7 @@ abstract class MenuScreen extends GameScreen {
               mqa.a(var7, (byte) 124);
             }
             if (this.field_k.isPointerHeld((byte) -128)) {
-              var8Lifetime1 = -24 + (aaa.a(false) >> 1);
+              var8Lifetime1 = -24 + (LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1);
               var9Lifetime1 = -var8Lifetime1 + AgeValidator.field_j;
               var10Lifetime1 = var9Lifetime1 << 1;
               if (var10Lifetime1 <= 0) {
@@ -183,7 +183,7 @@ abstract class MenuScreen extends GameScreen {
               }
             }
             if (this.field_k.isLeftPressed(96)) {
-              bv.d((byte) -55);
+              TabbedPanel.d((byte) -55);
             }
             if (this.field_k.isRightPressed(97)) {
               ChatOverlay.a(true);
@@ -194,7 +194,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "wv.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "wv.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -215,7 +215,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wv.T(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wv.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -247,7 +247,7 @@ abstract class MenuScreen extends GameScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wv.F(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wv.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -279,7 +279,7 @@ abstract class MenuScreen extends GameScreen {
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (SnakePitTile.a(false)) {
+          if (SnakePitTile.hasVisibleDialog(false)) {
             return;
           }
           var4_int = 0;
@@ -335,7 +335,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4_ref), "wv.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4_ref), "wv.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -352,7 +352,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wv.O(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wv.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -367,7 +367,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "wv.L(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "wv.L(" + param0 + ')');
         }
     }
 
@@ -390,7 +390,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wv.U(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wv.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -417,7 +417,7 @@ abstract class MenuScreen extends GameScreen {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -518,7 +518,7 @@ abstract class MenuScreen extends GameScreen {
             if (var7 != 5 &&
               var7 != 6) {
               if (var7 == 7) {
-                OpenGlTexture.e((byte) -122);
+                OpenGlTexture.openDisplaySettings((byte) -122);
                 return true;
               }
               if (var7 == 9) {
@@ -601,7 +601,7 @@ abstract class MenuScreen extends GameScreen {
                     }
                   }
                 }
-                RoomEffectTraps.a((byte) -63, ura.field_a, true);
+                RoomEffectTraps.a((byte) -63, TextureTransformMode.field_a, true);
                 return true;
               }
               if (var7 == 32 &&
@@ -671,7 +671,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "wv.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "wv.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -724,7 +724,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wv.M(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wv.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -749,7 +749,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wv.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wv.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -759,7 +759,7 @@ abstract class MenuScreen extends GameScreen {
             this.firstItemY = 36;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wv.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wv.B(" + param0 + ')');
         }
     }
 
@@ -776,7 +776,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "wv.S(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "wv.S(" + param0 + ')');
         }
     }
 
@@ -814,7 +814,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "wv.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "wv.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -897,7 +897,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3_ref), "wv.G(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3_ref), "wv.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -914,7 +914,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wv.P(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wv.P(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -929,7 +929,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wv.E(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wv.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -939,7 +939,7 @@ abstract class MenuScreen extends GameScreen {
             field_h = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wv.Q(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wv.Q(" + param0 + ')');
         }
     }
 
@@ -961,7 +961,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wv.N(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wv.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -978,7 +978,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "wv.D(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "wv.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -994,7 +994,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "wv.K(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "wv.K(" + param0 + ')');
         }
     }
 
@@ -1045,7 +1045,7 @@ abstract class MenuScreen extends GameScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "wv.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "wv.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1180,7 +1180,7 @@ abstract class MenuScreen extends GameScreen {
           } else {
             stackIn_67_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(')').toString());
         }
     }
 

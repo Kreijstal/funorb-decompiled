@@ -6,7 +6,7 @@ final class ChatOverlay {
     private boolean enabled;
     private boolean panelOpen;
     private IntrusiveDeque field_b;
-    private gqa lastShownMessage;
+    private ChatMessage lastShownMessage;
 
     final void drawMessages(boolean param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
@@ -14,7 +14,7 @@ final class ChatOverlay {
           return;
         }
         if (!param0) {
-          this.lastShownMessage = (gqa) null;
+          this.lastShownMessage = (ChatMessage) null;
         }
         FloatingMessage var4 = (FloatingMessage) (this.visibleMessages.first(-80));
         while (var4 != null) {
@@ -30,7 +30,7 @@ final class ChatOverlay {
         return this.enabled;
     }
 
-    private final gqa getNewestChatMessage(int param0) {
+    private final ChatMessage getNewestChatMessage(int param0) {
         if (param0 != 1366884705) {
           this.disableWithPanel(-116);
         }
@@ -44,15 +44,15 @@ final class ChatOverlay {
         int var8 = 0;
         int stackIn_52_0 = 0;
         boolean stackIn_52_1 = false;
-        gqa var4;
+        ChatMessage var4;
         int var5;
         int var6;
         String[] var7;
         FloatingMessage var7_ref;
-        gqa var8_ref_gqa;
+        ChatMessage var8_ref_gqa;
         int var9;
         String[] var10;
-        gqa var11;
+        ChatMessage var11;
         int var6Lifetime1;
         FloatingMessage var7_refLifetime1;
         String[] var10Lifetime1;
@@ -94,7 +94,7 @@ final class ChatOverlay {
           for (var8 = 9; var8 >= 0; var8--) {
             if (null != var10Lifetime1[var8] &&
               "" != var10Lifetime1[var8]) {
-              this.addMessageNow(0, BannerCommand.a(var10Lifetime1[var8], (byte) -62));
+              this.addMessageNow(0, BannerCommand.createBannerMessage(var10Lifetime1[var8], (byte) -62));
             }
           }
           this.lastShownMessage = var11;
@@ -111,7 +111,7 @@ final class ChatOverlay {
           }
           var7_refLifetime1 = (FloatingMessage) (this.visibleMessages.first(-80));
           while (var7_refLifetime1 != null) {
-            var7_refLifetime1.setPosition(var6Lifetime1, 4, aaa.a(false) - var7_refLifetime1.getWidth((byte) -96));
+            var7_refLifetime1.setPosition(var6Lifetime1, 4, LegacyOpenGlWaterTextures.getCanvasWidth(false) - var7_refLifetime1.getWidth((byte) -96));
             var7_refLifetime1.tick(-43);
             if (var7_refLifetime1.c(-1)) {
               var6Lifetime1 = var6Lifetime1 + var7_refLifetime1.getHeight(true);
@@ -125,7 +125,7 @@ final class ChatOverlay {
         if (this.panelOpen) {
           stackIn_52_0 = 108;
           stackIn_52_1 = param1;
-          ProgressBarWidget.b(stackIn_52_0, stackIn_52_1, aaa.a(false) >> 1, SwitchLinkList.b(0) >> 1);
+          ProgressBarWidget.b(stackIn_52_0, stackIn_52_1, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, SwitchLinkList.getCanvasHeight(0) >> 1);
           fa.a((byte) -127);
         }
     }
@@ -149,9 +149,9 @@ final class ChatOverlay {
             this.enabled = true;
           }
           param2.setTiming(false, 25, 12, 150);
-          param2.setWidth(1, aaa.a(false) / 3);
+          param2.setWidth(1, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ila.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ila.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class ChatOverlay {
         MonsterModel.j(28191);
         int var2 = 4;
         int var3 = 16;
-        MazeSolver.a(SwitchLinkList.b(0) >> 1, 20, var2, -5327, "", var2, var3, var3, aaa.a(param0) >> 1);
+        MazeSolver.a(SwitchLinkList.getCanvasHeight(0) >> 1, 20, var2, -5327, "", var2, var3, var3, LegacyOpenGlWaterTextures.getCanvasWidth(param0) >> 1);
         this.panelOpen = true;
     }
 
@@ -201,7 +201,7 @@ final class ChatOverlay {
           var9 = TombRacer.field_G ? 1 : 0;
           try {
             if (OpenGlTransform3D.field_e == null &&
-              !joa.pollGameSocketConnection(param5, (byte) 121)) {
+              !GzipInflater.pollGameSocketConnection(param5, (byte) 121)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -211,10 +211,10 @@ final class ChatOverlay {
             }
             if (RotaterMountComponent.field_G == ProceduralTexture.field_p) {
               if (!param5) {
-                fd.field_d = via.a(param1, 64, false, param4);
+                fd.field_d = FullscreenCanvas.a(param1, 64, false, param4);
               } else {
                 var10 = (String) null;
-                fd.field_d = WidgetContainer.a(param1, 0, (String) null, false, tr.field_g);
+                fd.field_d = WidgetContainer.a(param1, 0, (String) null, false, QuickChatPhraseSource.field_g);
               }
               ql.field_k.position = 0;
               ql.field_k.writeByte(14, 0);
@@ -269,8 +269,8 @@ final class ChatOverlay {
             }
             if (HardwareGraphicsToolkit.field_w == ProceduralTexture.field_p &&
               PbufferEntry.ensurePacketPayload(0)) {
-              tr.field_g = WeaveOperator.field_q.readLong(param2 + 290646830);
-              gj.field_q = param1;
+              QuickChatPhraseSource.field_g = WeaveOperator.field_q.readLong(param2 + 290646830);
+              VertexAttribute.field_q = param1;
               ld.field_e = WeaveOperator.field_q.readUnsignedByte(param2 ^ 205);
               PrimMazeGenerator.field_e = WeaveOperator.field_q.readUnsignedByte(255);
               ReportAbuseDialog.field_ub = WeaveOperator.field_q.readUnsignedShort(124);
@@ -304,7 +304,7 @@ final class ChatOverlay {
               }
               MenuEntry.field_k = WeaveOperator.field_q.readString((byte) -76);
               var11 = (CharSequence) ((Object) MenuEntry.field_k);
-              tia.field_b = jd.normalizeDisplayName(1, var11);
+              tia.field_b = OpenGlTexture3D.normalizeDisplayName(1, var11);
               lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               ProceduralTexture.field_p = LegacyOpenGlTexture1D.field_n;
               if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
@@ -328,14 +328,14 @@ final class ChatOverlay {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", ToolkitSelector.getApplet(param2 + 43), new Object[]{sv.decodeBase37Name((byte) -38, tr.field_g)});
+                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", ToolkitSelector.getApplet(param2 + 43), new Object[]{sv.decodeBase37Name((byte) -38, QuickChatPhraseSource.field_g)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
               if (0 < ReportAbuseDialog.field_ub) {
-                ft.field_a = true;
+                TextureFormat.field_a = true;
               }
               ql.field_k.initializeCipher(-26185, AllPlatformsMazeComponent.field_K);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
@@ -396,7 +396,7 @@ final class ChatOverlay {
             } else {
               stackIn_111_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(',').append(param5).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_107_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -405,7 +405,7 @@ final class ChatOverlay {
         }
     }
 
-    final boolean a(int param0, int param1, char param2) {
+    final boolean handleKey(int param0, int param1, char param2) {
         if (param1 != -1) {
           ChatOverlay.a(false);
         }
@@ -424,7 +424,7 @@ final class ChatOverlay {
         this.enabled = true;
         this.visibleMessages.clear(8);
         if (param0 != 0) {
-          this.lastShownMessage = (gqa) null;
+          this.lastShownMessage = (ChatMessage) null;
         }
     }
 
@@ -436,7 +436,7 @@ final class ChatOverlay {
         PenaltyNotice.a(256);
     }
 
-    final static gqa readChatMessage(int param0, boolean param1) {
+    final static ChatMessage readChatMessage(int param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_21_0 = null;
@@ -504,14 +504,14 @@ final class ChatOverlay {
         if (param0 != -18787) {
           ChatOverlay.a(true);
         }
-        return new gqa(param1);
+        return new ChatMessage(param1);
     }
 
     final void addMessageNow(int param0, FloatingMessage param1) {
         try {
           this.addMessage(param0, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ila.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ila.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -532,7 +532,7 @@ final class ChatOverlay {
     }
 
     final boolean isPanelActive(int param0) {
-        gqa discarded$1 = null;
+        ChatMessage discarded$1 = null;
         boolean stackIn_6_0 = false;
         if (param0 != -8832) {
           discarded$1 = this.getNewestChatMessage(-98);

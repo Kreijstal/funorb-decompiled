@@ -51,7 +51,7 @@ final class ComponentTargetList {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -524,7 +524,7 @@ final class ComponentTargetList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "f.F(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "f.F(" + param0 + ')');
         }
     }
 
@@ -539,7 +539,7 @@ final class ComponentTargetList {
     final static int a(boolean param0) {
         if (param0) {
           ComponentTargetList.b((byte) -68);
-          if (!SnakePitTile.a(param0)) {
+          if (!SnakePitTile.hasVisibleDialog(param0)) {
             return -1;
           }
           if (null != ModelFactory.field_a.getTopVisibleDialog((byte) 127)) {
@@ -547,7 +547,7 @@ final class ComponentTargetList {
           }
           return -1;
         }
-        if (!SnakePitTile.a(param0)) {
+        if (!SnakePitTile.hasVisibleDialog(param0)) {
           return -1;
         }
         if (null != ModelFactory.field_a.getTopVisibleDialog((byte) 127)) {
@@ -615,7 +615,7 @@ final class ComponentTargetList {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -667,7 +667,7 @@ final class ComponentTargetList {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

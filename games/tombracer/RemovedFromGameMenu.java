@@ -32,9 +32,9 @@ final class RemovedFromGameMenu extends MenuScreen {
           return;
         }
         Room.field_j.draw(0, 0);
-        gg.field_f.draw((aaa.a(false) - gg.field_f.paddedWidth()) / 2, (SwitchLinkList.b(0) - gg.field_f.paddedHeight()) / 2);
-        MembersUpsellMenu.drawCentredTextWithShadow(ValidatedTextInputWidget.field_L.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, 60 + (SwitchLinkList.b(param0 + 28) - gg.field_f.paddedHeight()) / 2, aaa.a(false) / 2, -1);
-        SocketConnector.drawWrappedText(OpenGlBuffer.field_i, 1, kn.field_p, 2431750, 20, 200, 1, -100 + SwitchLinkList.b(param0 + 28) / 2, aaa.a(false) / 2 - 150, -1, (byte) 60, 300);
+        HardwareModelIndexData.field_f.draw((LegacyOpenGlWaterTextures.getCanvasWidth(false) - HardwareModelIndexData.field_f.paddedWidth()) / 2, (SwitchLinkList.getCanvasHeight(0) - HardwareModelIndexData.field_f.paddedHeight()) / 2);
+        MembersUpsellMenu.drawCentredTextWithShadow(ValidatedTextInputWidget.field_L.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, 60 + (SwitchLinkList.getCanvasHeight(param0 + 28) - HardwareModelIndexData.field_f.paddedHeight()) / 2, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -1);
+        SocketConnector.drawWrappedText(OpenGlBuffer.field_i, 1, TooltipRenderer.field_p, 2431750, 20, 200, 1, -100 + SwitchLinkList.getCanvasHeight(param0 + 28) / 2, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2 - 150, -1, (byte) 60, 300);
         super.draw(param0, param1);
     }
 
@@ -55,10 +55,10 @@ final class RemovedFromGameMenu extends MenuScreen {
 
     final int getItemX(byte param0, int param1) {
         if (param0 > 111) {
-          return aaa.a(false) - this.items[param1].getWidth(-163) >> 1;
+          return LegacyOpenGlWaterTextures.getCanvasWidth(false) - this.items[param1].getWidth(-163) >> 1;
         }
         field_r = (String) null;
-        return aaa.a(false) - this.items[param1].getWidth(-163) >> 1;
+        return LegacyOpenGlWaterTextures.getCanvasWidth(false) - this.items[param1].getWidth(-163) >> 1;
     }
 
     RemovedFromGameMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {

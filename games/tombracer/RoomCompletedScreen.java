@@ -31,9 +31,9 @@ final class RoomCompletedScreen extends MatchOverlay {
           var4 = 240;
           var5 = this.field_g.simulations[0].rooms[0];
           var4 += 20;
-          MembersUpsellMenu.drawCentredTextWithShadow("Total Time: " + DropAnimation.formatTime(this.field_g.simulations[0].tick, (byte) -8), var2, kn.field_p, -1, var4, 320, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow("Total Time: " + DropAnimation.formatTime(this.field_g.simulations[0].tick, (byte) -8), var2, TooltipRenderer.field_p, -1, var4, 320, 0);
           var4 += 20;
-          MembersUpsellMenu.drawCentredTextWithShadow("Deaths: " + var5.getDeathCount(0), var2, kn.field_p, -1, var4, 320, 0);
+          MembersUpsellMenu.drawCentredTextWithShadow("Deaths: " + var5.getDeathCount(0), var2, TooltipRenderer.field_p, -1, var4, 320, 0);
           return;
         }
     }
@@ -68,7 +68,7 @@ final class RoomCompletedScreen extends MatchOverlay {
         if (param0 != 2) {
           return false;
         }
-        lqa var1 = LegacyOpenGlBloomEffect.b(false);
+        RendererOption var1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
         if (var1 == null) {
           return false;
         }
@@ -111,7 +111,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           ql.field_k.writeInt(ClientException.field_c, (byte) 125);
           ql.field_k.writeLong(1736565456, du.field_h);
           var6 = 0;
-          if (ft.field_a) {
+          if (TextureFormat.field_a) {
             var6 = var6 | 1;
           }
           if (CollisionGridEntry.field_r) {
@@ -146,7 +146,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 

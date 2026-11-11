@@ -19,7 +19,7 @@ class hga extends TextWidgetPainter {
           }
           super.paintWidget(param0, param1, param2 + 0, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ class hga extends TextWidgetPainter {
               var12++;
             }
           }
-          cm.field_a = new qg[var12];
+          cm.field_a = new CourseDefinition[var12];
           RasterizerOperator.field_n = new int[var12];
           if (!param0) {
             return;
@@ -194,7 +194,7 @@ class hga extends TextWidgetPainter {
                 var31[var18][var7].equalsIgnoreCase("Corridor");
               }
             }
-            cm.field_a[var13Lifetime1] = new qg(var15, var16Lifetime1 != 0);
+            cm.field_a[var13Lifetime1] = new CourseDefinition(var15, var16Lifetime1 != 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -207,7 +207,7 @@ class hga extends TextWidgetPainter {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(')').toString());
         }
     }
 

@@ -12,7 +12,7 @@ final class tha extends WidgetContainer implements ButtonListener {
     final void renderLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.field_i + param0;
         int var6 = param1 + this.field_n;
-        KeySwitchComponent.field_J.drawParagraph(bb.field_q, var5 + 20, 20 + var6, -40 + this.field_m, -50 + this.field_p, 16777215, -1, 1, param2, KeySwitchComponent.field_J.field_w);
+        KeySwitchComponent.field_J.drawParagraph(HiscoreTable.field_q, var5 + 20, 20 + var6, -40 + this.field_m, -50 + this.field_p, 16777215, -1, 1, param2, KeySwitchComponent.field_J.field_w);
         super.renderLayer(param0, param1, 0, param3);
     }
 
@@ -134,7 +134,7 @@ final class tha extends WidgetContainer implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "tha.D(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "tha.D(" + param0 + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class tha extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class tha extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

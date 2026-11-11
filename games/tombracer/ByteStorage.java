@@ -5,7 +5,7 @@ abstract class ByteStorage {
     static int[] field_b;
     static int[] field_d;
     static wm field_e;
-    static tr field_a;
+    static QuickChatPhraseSource field_a;
     static String field_c;
 
     abstract byte[] getBytes(byte param0, int param1, int param2);

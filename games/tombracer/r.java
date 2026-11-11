@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class r extends DualLinkNode {
-    static ica field_m;
+    static TextureCombineOperation field_m;
     static String field_l;
     static String field_k;
 
@@ -29,25 +29,25 @@ abstract class r extends DualLinkNode {
         ColouriseOperator.field_q = true;
     }
 
-    final static via createFullscreenCanvas(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
+    final static FullscreenCanvas createFullscreenCanvas(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        via var7 = null;
+        FullscreenCanvas var7 = null;
         java.awt.Frame var8 = null;
         Object stackIn_2_0 = null;
-        via stackIn_6_0 = null;
+        FullscreenCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = kha.openFullscreenFrame(param3, param1, param0, 10, param5, param4);
+          var8 = TextLine.openFullscreenFrame(param3, param1, param0, 10, param5, param4);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
-            return (via) (stackIn_2_0);
+            return (FullscreenCanvas) (stackIn_2_0);
           }
-          var7 = new via();
+          var7 = new FullscreenCanvas();
           var7.field_d = var8;
           var7.field_d.add((java.awt.Component) ((Object) var7));
           if (param2 != 19293) {
@@ -68,7 +68,7 @@ abstract class r extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -98,6 +98,6 @@ abstract class r extends DualLinkNode {
     static {
         field_k = "You unlocked a Tomb!";
         field_l = "Accept";
-        field_m = new ica();
+        field_m = new TextureCombineOperation();
     }
 }

@@ -46,18 +46,18 @@ abstract class ToolkitModel {
           jaggl.OpenGL.glShaderSourceRawARB(var4_long, param1);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
           var6 = 35 / ((param0 + 29) / 46);
-          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, ita.field_a, 0);
-          if (ita.field_a[0] == 0) {
-            if (ita.field_a[0] == 0) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, SoftwareDepthBuffer.field_a, 0);
+          if (SoftwareDepthBuffer.field_a[0] == 0) {
+            if (SoftwareDepthBuffer.field_a[0] == 0) {
               System.out.println("Shader compile failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, ita.field_a, 1);
-            if (ita.field_a[1] > 1) {
-              var11 = new byte[ita.field_a[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var4_long, ita.field_a[1], ita.field_a, 0, var11, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, SoftwareDepthBuffer.field_a, 1);
+            if (SoftwareDepthBuffer.field_a[1] > 1) {
+              var11 = new byte[SoftwareDepthBuffer.field_a[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var4_long, SoftwareDepthBuffer.field_a[1], SoftwareDepthBuffer.field_a, 0, var11, 0);
               System.out.println(new String(var11));
             }
-            if (ita.field_a[0] == 0) {
+            if (SoftwareDepthBuffer.field_a[0] == 0) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_14_0 = null;
               return (pr) (stackIn_14_0);
@@ -81,7 +81,7 @@ abstract class ToolkitModel {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -193,11 +193,11 @@ abstract class ToolkitModel {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
-    private final void applyAnimationFrames(int param0, boolean param1, boolean param2, rq param3, int param4, int[] param5, int param6, nk param7, rq param8, int param9, boolean[] param10, boolean param11) {
+    private final void applyAnimationFrames(int param0, boolean param1, boolean param2, AnimationFrame param3, int param4, int[] param5, int param6, AnimationFrameBase param7, AnimationFrame param8, int param9, boolean[] param10, boolean param11) {
         int stackIn_10_0 = 0;
         int stackIn_13_1 = 0;
         int stackIn_39_0 = 0;
@@ -441,7 +441,7 @@ abstract class ToolkitModel {
           } else {
             stackIn_108_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param11).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param11).append(')').toString());
         }
     }
 
@@ -449,11 +449,11 @@ abstract class ToolkitModel {
 
     abstract void H(int param0, int param1, int param2);
 
-    final void animate(int param0, ena param1, int param2, int param3, int param4, ena param5, int param6, boolean param7, int param8) {
-        rq var14 = null;
-        nk var11 = null;
+    final void animate(int param0, AnimationFrameSet param1, int param2, int param3, int param4, AnimationFrameSet param5, int param6, boolean param7, int param8) {
+        AnimationFrame var14 = null;
+        AnimationFrameBase var11 = null;
         Object var12 = null;
-        rq var15 = null;
+        AnimationFrame var15 = null;
         if (-1 == param3) {
           return;
         }
@@ -474,11 +474,11 @@ abstract class ToolkitModel {
             }
           }
           int var13 = -124 / ((-85 - param0) / 35);
-          this.applyAnimationFrames(param4, false, param7, var14, param8, (int[]) null, 65535, var11, (rq) (var12), param6, (boolean[]) null, false);
+          this.applyAnimationFrames(param4, false, param7, var14, param8, (int[]) null, 65535, var11, (AnimationFrame) (var12), param6, (boolean[]) null, false);
           this.wa();
           this.unlockForUpdate();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ka.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ka.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

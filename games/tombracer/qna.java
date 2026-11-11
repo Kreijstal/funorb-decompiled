@@ -175,7 +175,7 @@ final class qna {
             ToggleMusicChannelCommand.field_o = new String[-var4 + var3_int - 1];
             ArrayUtils.copy(ClientMemoryVertexArray.field_c, var4 + 1, ToggleMusicChannelCommand.field_o, 0, -1 + (-var4 + var3_int));
             var4 = -1;
-            var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.formatText(89, lqa.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, ClientMemoryVertexArray.field_c);
+            var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.formatText(89, RendererOption.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, ClientMemoryVertexArray.field_c);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ClientMemoryVertexArray.field_c[var5])) {
                 continue;
@@ -273,19 +273,19 @@ final class qna {
               }
             }
           }
-          hg.field_f = FacePointLocomotor.field_r.itemCount * (mha.field_C + GasVentModel.field_p << 1);
+          HardwareModelVertexStream.field_f = FacePointLocomotor.field_r.itemCount * (mha.field_C + GasVentModel.field_p << 1);
           FurnitureModel.field_o = ega.field_c - (var3_intLifetime1 >> 1);
           tia.field_a = var3_intLifetime1 + (ega.field_c - (var3_intLifetime1 >> 1));
           for (var4Lifetime2 = 0; var4Lifetime2 < DefaultTileRenderable.field_g.length; var4Lifetime2++) {
-            stackIn_110_0 = hg.field_f;
+            stackIn_110_0 = HardwareModelVertexStream.field_f;
             if (CoinItemComponent.field_H[var4Lifetime2] >= 0) {
               stackIn_111_1 = nt.field_d;
             } else {
               stackIn_111_1 = ComponentTargetList.field_b;
             }
-            hg.field_f = stackIn_110_0 + stackIn_111_1;
+            HardwareModelVertexStream.field_f = stackIn_110_0 + stackIn_111_1;
           }
-          jua.field_d = -(hg.field_f >> 1) + IdolItemComponent.field_L;
+          jua.field_d = -(HardwareModelVertexStream.field_f >> 1) + IdolItemComponent.field_L;
           TripBeamComponent.field_K = new int[DefaultTileRenderable.field_g.length][];
           var4Lifetime3 = 0;
           if (param0 != 1) {
@@ -312,13 +312,13 @@ final class qna {
           if (2 == mq.field_a) {
             FacePointLocomotor.field_r.initializeSelection(param1, 29954, -1, -1);
           } else {
-            FacePointLocomotor.field_r.initializeSelection(param1, param0 + 29953, 0, wg.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
+            FacePointLocomotor.field_r.initializeSelection(param1, param0 + 29953, 0, StatReportingScoringObserver.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "qna.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "qna.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

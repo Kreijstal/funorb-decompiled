@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplaySettingsDialog extends ofa implements ButtonListener {
+final class DisplaySettingsDialog extends ResizingDialog implements ButtonListener {
     static volatile int field_X;
     private GridWidgetContainer field_T;
     private FocusableWidget field_Z;
@@ -35,16 +35,16 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             }
             MotionTrackingModel.field_p = MotionTrackingModel.field_p + 1;
             vha.field_b = nt.field_a;
-            if (0 > ita.field_f) {
+            if (0 > SoftwareDepthBuffer.field_f) {
               var5 = 0;
               var2 = var5;
               while (112 > var5) {
                 VerticalScrollbar.field_tb[var5] = false;
                 var5++;
               }
-              ita.field_f = hka.field_a;
+              SoftwareDepthBuffer.field_f = hka.field_a;
             } else {
-              while (hka.field_a != ita.field_f) {
+              while (hka.field_a != SoftwareDepthBuffer.field_f) {
                 var2 = cna.field_c[hka.field_a];
                 hka.field_a = 127 & hka.field_a + 1;
                 if (var2 < 0) {
@@ -60,7 +60,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1_ref), "at.J(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1_ref), "at.J(" + param0 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           if (var2_intLifetime1 != 0) {
             this.field_N = this.addIconButton(-87, RasterShape.field_a, NativeSceneLight.field_o, (WidgetListener) (this));
           }
-          this.field_V = this.addIconButton(-94, ita.field_e, pa.field_c, (WidgetListener) (this));
+          this.field_V = this.addIconButton(-94, SoftwareDepthBuffer.field_e, pa.field_c, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
@@ -211,7 +211,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             var6_int = -1 + var5_ref_String__.length;
             for (var7_int = 0; this.field_P.length > var7_int; var7_int++) {
               var8 = this.field_P[var7_int];
-              if (dq.field_f != null &&
+              if (ColourRowCacheEntry.field_f != null &&
                 OpenGlSceneLight.field_o.field_s == var8.field_a &&
                 OpenGlSceneLight.field_o.field_p == var8.field_c) {
                 var6_int = var7_int;
@@ -263,7 +263,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_97_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) (stackIn_96_0), ((StringBuilder) (Object) stackIn_96_1).append(stackIn_97_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) (stackIn_96_0), ((StringBuilder) (Object) stackIn_96_1).append(stackIn_97_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -456,7 +456,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                         this.field_z.pushDialog(new bra(this.field_z), 84);
                       }
                     } else {
-                      this.field_z.pushDialog(new gga(this.field_z, gj.field_o), 95);
+                      this.field_z.pushDialog(new gga(this.field_z, VertexAttribute.field_o), 95);
                     }
                   }
                 } else {
@@ -481,7 +481,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -551,7 +551,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -559,7 +559,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         if (param0 != 24316) {
           field_Q = (String) null;
         }
-        return ota.isPlayerReachable(ica.field_b, (byte) 13, mn.field_n);
+        return ota.isPlayerReachable(TextureCombineOperation.field_b, (byte) 13, mn.field_n);
     }
 
     private final FocusableWidget addButton(WidgetListener param0, String param1, int param2) {
@@ -602,12 +602,12 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
     private final FocusableWidget currentModeButton(int param0) {
-        if (dq.field_f != null) {
+        if (ColourRowCacheEntry.field_f != null) {
           return this.field_V;
         }
         if (param0 != -46) {
@@ -632,11 +632,11 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_W == this.field_S) {
-          og.exitFullscreen(param0 + 1);
+          HardwareOpenGlVertexBuffer.exitFullscreen(param0 + 1);
           kla.b(0);
         } else {
           if (this.field_S == this.field_N) {
-            og.exitFullscreen(0);
+            HardwareOpenGlVertexBuffer.exitFullscreen(0);
             cva.a(-117);
           } else {
             if (this.field_S != this.field_V) {
@@ -740,7 +740,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -792,7 +792,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

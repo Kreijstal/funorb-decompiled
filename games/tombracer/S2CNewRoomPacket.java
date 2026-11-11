@@ -38,7 +38,7 @@ final class S2CNewRoomPacket implements GamePacket {
           }
           param2.roundDeadlineTick = this.field_i;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bqa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bqa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class S2CNewRoomPacket implements GamePacket {
           param1.writeBits((byte) -126, 1 + this.field_i, 32);
           param1.endBitWrite(-1826190686);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bqa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bqa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class S2CNewRoomPacket implements GamePacket {
           this.field_i = -1 + param0.readBits((byte) 44, 32);
           param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bqa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bqa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class S2CNewRoomPacket implements GamePacket {
         try {
           param0.resyncPlayerToRoom(this.roomId, this.playerId, 1, this.courseTicks, this.roomTicks);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bqa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bqa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class S2CNewRoomPacket implements GamePacket {
     }
 
     final static void a(boolean param0, int param1) {
-        qja.a(true, param0, -127);
+        MazeSearchNode.a(true, param0, -127);
         if (param1 < 103) {
           field_g = (String) null;
         }

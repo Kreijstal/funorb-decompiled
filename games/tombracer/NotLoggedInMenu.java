@@ -8,10 +8,10 @@ final class NotLoggedInMenu extends MenuScreen {
 
     final int getItemX(byte param0, int param1) {
         if (param0 > 111) {
-          return aaa.a(false) / 2 - this.items.length * this.items[param1].getWidth(-163) / 2 + this.items[param1].getWidth(-163) * param1;
+          return LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2 - this.items.length * this.items[param1].getWidth(-163) / 2 + this.items[param1].getWidth(-163) * param1;
         }
         this.getItemY(16, -28);
-        return aaa.a(false) / 2 - this.items.length * this.items[param1].getWidth(-163) / 2 + this.items[param1].getWidth(-163) * param1;
+        return LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2 - this.items.length * this.items[param1].getWidth(-163) / 2 + this.items[param1].getWidth(-163) * param1;
     }
 
     NotLoggedInMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -20,7 +20,7 @@ final class NotLoggedInMenu extends MenuScreen {
         try {
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vv.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vv.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,12 +37,12 @@ final class NotLoggedInMenu extends MenuScreen {
         return this.firstItemY;
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, GameFont param4, String param5, int param6, int param7, int param8) {
+    final static void drawCentredTextAlpha(int param0, byte param1, int param2, int param3, GameFont param4, String param5, int param6, int param7, int param8) {
         try {
           param4.drawCentred(jg.withAlpha(param2, (byte) -76, param3), -1, param8, jg.withAlpha(param0, (byte) -121, param7), param6, param5);
           int var9_int = -7 % ((66 - param1) / 47);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vv.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vv.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -52,15 +52,15 @@ final class NotLoggedInMenu extends MenuScreen {
         String var10 = null;
         String var9 = null;
         int var3 = 500;
-        int var4 = -(var3 / 2) + aaa.a(false) / 2;
+        int var4 = -(var3 / 2) + LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2;
         int var5 = param1 + 100;
         String var10Lifetime1;
         String var9Lifetime1;
         String var9Lifetime2;
         String var9Lifetime3;
         int var8Lifetime1;
-        MembersUpsellMenu.drawCentredTextWithShadow(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, gg.field_f.height() / 2 + var5 - 30, aaa.a(false) / 2, -1);
-        GameFont var6 = kn.field_p;
+        MembersUpsellMenu.drawCentredTextWithShadow(ClampOperator.field_o.toUpperCase(), 2497287, SingleChildWidget.field_v, -1, HardwareModelIndexData.field_f.height() / 2 + var5 - 30, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -1);
+        GameFont var6 = TooltipRenderer.field_p;
         int var7 = kv.field_a.field_h + (kv.field_a.field_g + 4);
         if (param0 < -116) {
           var8 = var7 * 3;
@@ -68,7 +68,7 @@ final class NotLoggedInMenu extends MenuScreen {
           var10 = GameScreen.replaceCharacter('#', "<br>", var13, 0);
           var9 = var10;
           var9Lifetime3 = LegacyOpenGlFlowingWaterEffect.formatText(85, var10, new String[]{OpenGlSceneLight.field_q[32]});
-          SocketConnector.drawWrappedText(var9Lifetime3, 1, var6, 2431750, var7, var8, 1, gg.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
+          SocketConnector.drawWrappedText(var9Lifetime3, 1, var6, 2431750, var7, var8, 1, HardwareModelIndexData.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
           return;
         }
         this.h(-40, -77);
@@ -77,12 +77,12 @@ final class NotLoggedInMenu extends MenuScreen {
         var10Lifetime1 = GameScreen.replaceCharacter('#', "<br>", var12, 0);
         var9Lifetime1 = var10Lifetime1;
         var9Lifetime2 = LegacyOpenGlFlowingWaterEffect.formatText(85, var10Lifetime1, new String[]{OpenGlSceneLight.field_q[32]});
-        SocketConnector.drawWrappedText(var9Lifetime2, 1, var6, 2431750, var7, var8Lifetime1, 1, gg.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
+        SocketConnector.drawWrappedText(var9Lifetime2, 1, var6, 2431750, var7, var8Lifetime1, 1, HardwareModelIndexData.field_f.height() / 2 + var5, var4, -1, (byte) 60, var3);
     }
 
     final void draw(byte param0, boolean param1) {
         int var3 = this.field_s.getPosition(param0 ^ 103);
-        gg.field_f.draw(aaa.a(false) - gg.field_f.width() >> 1, var3 + gg.field_f.height() / 2);
+        HardwareModelIndexData.field_f.draw(LegacyOpenGlWaterTextures.getCanvasWidth(false) - HardwareModelIndexData.field_f.width() >> 1, var3 + HardwareModelIndexData.field_f.height() / 2);
         this.h(-127, var3);
         super.draw(param0, param1);
     }

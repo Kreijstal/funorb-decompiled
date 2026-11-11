@@ -12,9 +12,9 @@ final class aq {
     final static int getMainRoomCount(int param0) {
         if (param0 != -5640) {
           aq.getMainRoomCount(-88);
-          return qg.field_a.length;
+          return CourseDefinition.field_a.length;
         }
-        return qg.field_a.length;
+        return CourseDefinition.field_a.length;
     }
 
     static {

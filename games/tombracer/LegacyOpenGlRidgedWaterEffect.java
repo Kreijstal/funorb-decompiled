@@ -5,7 +5,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
     private OpenGlDisplayLists field_g;
     static BinaryBitmapFont field_e;
     private LegacyOpenGlTexture1D field_d;
-    private aaa field_c;
+    private LegacyOpenGlWaterTextures field_c;
     private static String[] field_f;
 
     final void setParameters(int param0, int param1, int param2) {
@@ -54,10 +54,10 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
 
     final static java.awt.Canvas getActiveCanvas(byte param0) {
         if (param0 == -97) {
-          return null != dq.field_f ? (java.awt.Canvas) ((Object) dq.field_f) : nma.field_l;
+          return null != ColourRowCacheEntry.field_f ? (java.awt.Canvas) ((Object) ColourRowCacheEntry.field_f) : CurveShape.field_l;
         }
         LegacyOpenGlRidgedWaterEffect.a(76, true, 70);
-        return null != dq.field_f ? (java.awt.Canvas) ((Object) dq.field_f) : nma.field_l;
+        return null != ColourRowCacheEntry.field_f ? (java.awt.Canvas) ((Object) ColourRowCacheEntry.field_f) : CurveShape.field_l;
     }
 
     private final void buildDisplayLists(byte param0) {
@@ -100,7 +100,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         this.field_g.endList((byte) 89);
     }
 
-    LegacyOpenGlRidgedWaterEffect(OpenGlToolkit param0, aaa param1) {
+    LegacyOpenGlRidgedWaterEffect(OpenGlToolkit param0, LegacyOpenGlWaterTextures param1) {
         super(param0);
         try {
           this.field_c = param1;
@@ -108,7 +108,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
           this.field_d = new LegacyOpenGlTexture1D(this.toolkit, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
           this.field_d.setWrap(76, false);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
             this.disable(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "kw.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kw.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

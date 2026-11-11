@@ -10,19 +10,19 @@ final class SimpleConditionBehaviour extends Behaviour {
     static UiComponent[] field_p;
     static long field_r;
 
-    final static tn loadInstrumentPatch(ResourceArchive param0, int param1, int param2) {
+    final static MidiPatch loadInstrumentPatch(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        tn stackIn_2_0 = null;
-        tn stackIn_7_0 = null;
+        MidiPatch stackIn_2_0 = null;
+        MidiPatch stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 15) {
-            stackIn_2_0 = (tn) null;
+            stackIn_2_0 = (MidiPatch) null;
             return stackIn_2_0;
           }
           var4 = param0.getFileById(param1, 105);
@@ -30,7 +30,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           if (var4 == null) {
             return null;
           }
-          stackIn_7_0 = new tn(var4);
+          stackIn_7_0 = new MidiPatch(var4);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -42,7 +42,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -60,7 +60,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           this.field_t = param1.readBits((byte) 44, 4);
           this.field_n = new SwitchState(15, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class SimpleConditionBehaviour extends Behaviour {
           param1.writeBits((byte) -127, this.field_t, 4);
           this.field_n.encode(this.getScope((byte) 119), (byte) 88, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

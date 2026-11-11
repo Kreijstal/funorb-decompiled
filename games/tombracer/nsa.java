@@ -43,7 +43,7 @@ final class nsa {
           this.field_a = param0.field_a;
           this.field_b = param0.field_b;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nsa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nsa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

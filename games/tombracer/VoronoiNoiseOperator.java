@@ -96,7 +96,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
             var23 = ColouriseOperator.field_m[1];
             var29Lifetime1Lifetime2 = var23;
             var29Lifetime1Lifetime3 = var23;
-            var24 = tv.field_xb;
+            var24 = ContextMenuRow.field_xb;
             var22.field_f.addIconItem(var23, 12, var24, param0);
             var25 = hka.field_b;
             var26 = ColouriseOperator.field_m[2];
@@ -126,7 +126,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           var7 = param2.field_t;
           var37.field_f.openAt(var5, var7, -67, var6, var4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nw.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nw.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -401,7 +401,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -479,7 +479,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

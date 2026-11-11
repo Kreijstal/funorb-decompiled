@@ -10,7 +10,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
     boolean field_G;
     String field_w;
     static java.awt.Frame field_x;
-    je field_z;
+    DropdownPopupList field_z;
     private int field_C;
     private int field_A;
     BitmapFont field_H;
@@ -33,13 +33,13 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           this.scrollToSelection(101);
           this.field_w = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rla.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rla.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         if (param4 >= gca.field_d &&
-          hc.field_h >= param4) {
+          LineShape.field_h >= param4) {
           param1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param1);
           param0 = CharacterPreview.clamp(DiskCacheWorker.field_c, param2 ^ 16224, pka.field_b, param0);
           BrazierComponent.a(param0, param3, param4, param1, false);
@@ -54,7 +54,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         this.field_H = KeySwitchComponent.field_J;
         this.field_w = "";
         try {
-          this.field_z = new je(this, this.field_H, param0, param1);
+          this.field_z = new DropdownPopupList(this, this.field_H, param0, param1);
           this.field_z.field_h = (WidgetListener) (this);
           this.field_G = false;
           this.field_A = param2;
@@ -65,7 +65,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           this.addChild(this.field_I, -1);
           this.addChild(this.field_E, -1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         try {
           super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "rla.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rla.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -243,8 +243,8 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
     }
 
     final void notifySelectionChanged(int param0) {
-        if (this.field_h instanceof eaa) {
-          ((eaa) ((Object) this.field_h)).a(-3, this);
+        if (this.field_h instanceof DropdownListener) {
+          ((DropdownListener) ((Object) this.field_h)).onSelectionChanged(-3, this);
         }
         if (param0 != 99) {
           this.hasKeyboardFocus((byte) -17);
@@ -302,10 +302,10 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           this.field_B = true;
           this.field_w = "";
           if (this.field_h != null) {
-            if (!(this.field_h instanceof vfa)) {
+            if (!(this.field_h instanceof FocusListener)) {
               return true;
             }
-            ((vfa) (this.field_h)).a((UiWidget) (this), (byte) -75, this.field_B);
+            ((FocusListener) (this.field_h)).onFocusChanged((UiWidget) (this), (byte) -75, this.field_B);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -318,7 +318,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -428,7 +428,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -477,7 +477,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

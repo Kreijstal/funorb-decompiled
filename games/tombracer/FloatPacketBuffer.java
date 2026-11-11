@@ -1,0 +1,103 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FloatPacketBuffer extends PacketBuffer {
+    static GameFont field_j;
+    static String field_l;
+    static ToolkitSprite[] field_k;
+    static int field_i;
+
+    final void writeFloatLittleEndian(byte param0, float param1) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)var3;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(var3 >> 8);
+        if (param0 == 114) {
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(var3 >> 16);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)(var3 >> 24);
+          return;
+        }
+        field_k = (ToolkitSprite[]) null;
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(var3 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(var3 >> 24);
+    }
+
+    final static String replaceAllOccurrences(int param0, String param1, String param2, String param3) {
+        int var5 = TombRacer.field_G ? 1 : 0;
+        int var4 = param3.indexOf(param2);
+        while (var4 != -1) {
+          param3 = param3.substring(0, var4) + param1 + param3.substring(var4 + param2.length());
+          var4 = param3.indexOf(param2, param1.length() + var4);
+        }
+        if (param0 == 966747152) {
+          return param3;
+        }
+        field_k = (ToolkitSprite[]) null;
+        return param3;
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_j = null;
+        if (param0 != -93) {
+          FloatPacketBuffer.releaseStatics((byte) -23);
+          field_k = null;
+          field_l = null;
+          return;
+        }
+        field_k = null;
+        field_l = null;
+    }
+
+    FloatPacketBuffer(int param0) {
+        super(param0);
+    }
+
+    final void writeFloat(int param0, float param1) {
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(var3 >> 24);
+        if (param0 == 17133) {
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(var3 >> 16);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(var3 >> 8);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)var3;
+          return;
+        }
+        field_l = (String) null;
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(var3 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(var3 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)var3;
+    }
+
+    static {
+        field_l = "Sound: ";
+    }
+}

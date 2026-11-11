@@ -64,7 +64,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
             return true;
           }
           var4_ref_String = WeaveOperator.field_n.toString();
-          if (lt.containsFilterText(var4_ref_String, -1)) {
+          if (LoadingStep.containsFilterText(var4_ref_String, -1)) {
             var13 = (String) null;
             var12 = (String) null;
             TreasureValuesOverlay.addChatMessage(0, param1, (String) null, InvertOperator.field_m, (String) null, 2);

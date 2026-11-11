@@ -32,7 +32,7 @@ final class ParticleEffects {
           this.spawnBurst(param0.field_a, (byte) -101, param0.field_j, param0.field_i, 1, qva.headingFromVector((byte) -120, -param0.field_k + param0.field_f, param0.field_c - param0.field_d) - 4096, 8, 393216, param0.field_e, 4, 8);
           this.spawnBurst(param0.field_a, (byte) -110, param0.field_j, param0.field_i, 1, 0, 5, 0, param0.field_e, 6, 12);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "dj.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dj.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -66,8 +66,8 @@ final class ParticleEffects {
           var12 = param5 - 512 + this.randomBelow((byte) -33, 1024);
           var13 = MouseInputHandler.sin2048((byte) 125, var12 >> 2);
           var14 = ModelAnimator.cos2048(0, var12 >> 2);
-          var17 = gqa.multiplyFixed(var13, (byte) 24, param7);
-          var18 = gqa.multiplyFixed(var14, (byte) 24, param7);
+          var17 = ChatMessage.multiplyFixed(var13, (byte) 24, param7);
+          var18 = ChatMessage.multiplyFixed(var14, (byte) 24, param7);
           var15 = this.room.spawnParticle(param8, param0, (byte) 100, param3);
           var15.configure(false, param9, param2, param10, param6);
           var15.setMotion(var18, -var18 / 32, var17, -var17 / 32, 0, 0, (byte) -20);
@@ -158,7 +158,7 @@ final class ParticleEffects {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class ParticleEffects {
         try {
           this.room = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -248,8 +248,8 @@ final class ParticleEffects {
           var9 = ModelAnimator.cos2048(0, var7 >> 2);
           var10 = this.room.spawnParticle(param1, param0, (byte) 100, param2);
           var11 = var5 + this.randomBelow((byte) -33, var5);
-          var12 = gqa.multiplyFixed(var8, (byte) 24, var11);
-          var13 = gqa.multiplyFixed(var9, (byte) 24, var11);
+          var12 = ChatMessage.multiplyFixed(var8, (byte) 24, var11);
+          var13 = ChatMessage.multiplyFixed(var9, (byte) 24, var11);
           var10.configure(false, 2, 13, 16, 10);
           var10.setPlanarVelocity(70, var13, var12);
           var6++;
@@ -276,8 +276,8 @@ final class ParticleEffects {
           var9 = ModelAnimator.cos2048(0, var7 >> 2);
           var10 = this.room.spawnParticle(param2, param3, (byte) 100, param1);
           var11 = this.randomBelow((byte) -33, var5) + var5;
-          var12 = gqa.multiplyFixed(var8, (byte) 24, var11);
-          var13 = gqa.multiplyFixed(var9, (byte) 24, var11);
+          var12 = ChatMessage.multiplyFixed(var8, (byte) 24, var11);
+          var13 = ChatMessage.multiplyFixed(var9, (byte) 24, var11);
           var10.configure(false, 2, 4, 16, 10);
           var10.setPlanarVelocity(50, var13, var12);
         }
@@ -301,7 +301,7 @@ final class ParticleEffects {
           var10 = this.room.spawnParticle(param3, param2, (byte) 100, param1);
           var11 = 262144 + this.randomBelow((byte) -33, 262144);
           var10.configure(false, 2, 4, 16, 10);
-          var10.setPlanarVelocity(69, gqa.multiplyFixed(var9, (byte) 24, var11), gqa.multiplyFixed(var8, (byte) 24, var11));
+          var10.setPlanarVelocity(69, ChatMessage.multiplyFixed(var9, (byte) 24, var11), ChatMessage.multiplyFixed(var8, (byte) 24, var11));
         }
     }
 

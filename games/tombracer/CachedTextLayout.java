@@ -53,22 +53,22 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final void layoutParagraph(BitmapFont param0, byte param1, String param2, int param3, int param4, int param5, int param6, int param7) {
-        kha stackIn_35_0;
-        kha stackIn_35_1;
+        TextLine stackIn_35_0;
+        TextLine stackIn_35_1;
         int stackIn_35_2;
         int stackIn_35_3;
-        kha stackIn_36_0 = null;
-        kha stackIn_36_1 = null;
+        TextLine stackIn_36_0 = null;
+        TextLine stackIn_36_1 = null;
         int stackIn_36_4 = 0;
         int stackIn_39_0;
         String stackIn_39_1;
         BitmapFont stackIn_39_2;
-        kha stackIn_39_3;
+        TextLine stackIn_39_3;
         int stackIn_40_4;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
@@ -81,7 +81,7 @@ final class CachedTextLayout extends TextLayout {
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
-        kha var14 = null;
+        TextLine var14 = null;
         int var15 = 0;
         String var16 = null;
         String[] var17 = null;
@@ -140,7 +140,7 @@ final class CachedTextLayout extends TextLayout {
           } else {
             var11 = param0.field_w;
           }
-          this.field_c = new kha[var10];
+          this.field_c = new TextLine[var10];
           for (var12Lifetime1 = 0; var12Lifetime1 < var10; var12Lifetime1++) {
             var13 = var17[var12Lifetime1];
             stackIn_35_0 = null;
@@ -156,7 +156,7 @@ final class CachedTextLayout extends TextLayout {
               stackIn_36_1 = null;
               stackIn_36_4 = var13.length();
             }
-            var14 = new kha(stackIn_35_2, stackIn_35_3, stackIn_36_4);
+            var14 = new TextLine(stackIn_35_2, stackIn_35_3, stackIn_36_4);
             var14.field_c[0] = 0;
             if (var13 != null) {
               var14.field_c[var13.length()] = param0.stringWidth(var13);
@@ -195,13 +195,13 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
     final void layoutRightAlignedLine(int param0, BitmapFont param1, int param2, String param3, int param4) {
-        kha var8 = null;
-        kha var9 = null;
+        TextLine var8 = null;
+        TextLine var9 = null;
         if (param3 == null) {
           this.field_c = null;
           return;
@@ -224,16 +224,16 @@ final class CachedTextLayout extends TextLayout {
           var9.field_c[param3.length()] = param4;
           FlameShooterComponent.a(2097152, param3, param1, var9, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "po.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "po.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    private final kha createSingleLine(BitmapFont param0, int param1, String param2, int param3) {
-        kha var5 = null;
+    private final TextLine createSingleLine(BitmapFont param0, int param1, String param2, int param3) {
+        TextLine var5 = null;
         RuntimeException var5_ref = null;
         String var6 = null;
-        kha var7 = null;
-        kha stackIn_3_0 = null;
+        TextLine var7 = null;
+        TextLine stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -245,9 +245,9 @@ final class CachedTextLayout extends TextLayout {
             var6 = (String) null;
             this.layoutLeftAlignedLine(114, -55, (BitmapFont) null, (String) null, -39);
           }
-          var7 = new kha(param3 - param0.field_w, param0.field_k + param3, param2.length());
+          var7 = new TextLine(param3 - param0.field_w, param0.field_k + param3, param2.length());
           var5 = var7;
-          this.field_c = new kha[]{var7};
+          this.field_c = new TextLine[]{var7};
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -266,12 +266,12 @@ final class CachedTextLayout extends TextLayout {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void layoutCenteredLine(int param0, int param1, BitmapFont param2, String param3, byte param4) {
-        kha var7 = null;
+        TextLine var7 = null;
         int var8 = 0;
         int var6_int = 38 / ((param4 - 5) / 54);
         if (param3 == null) {
@@ -295,7 +295,7 @@ final class CachedTextLayout extends TextLayout {
           var7.field_c[param3.length()] = (var8 >> 1) + param1;
           FlameShooterComponent.a(2097152, param3, param2, var7, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "po.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "po.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -312,8 +312,8 @@ final class CachedTextLayout extends TextLayout {
         this.field_h = true;
         this.field_k = param3;
         this.field_m = 0;
-        kha var7 = this.createSingleLine(param2, 0, param3, param1);
-        kha var8 = var7;
+        TextLine var7 = this.createSingleLine(param2, 0, param3, param1);
+        TextLine var8 = var7;
         var7.field_c[0] = param4;
         var8.field_c[param3.length()] = param2.stringWidth(param3) + param4;
         if (param0 != 16512) {
@@ -322,7 +322,7 @@ final class CachedTextLayout extends TextLayout {
         try {
           FlameShooterComponent.a(param0 ^ 2113664, param3, param2, var8, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "po.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "po.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class afa {
-    static kn field_c;
+    static TooltipRenderer field_c;
     static String field_b;
     IndexArray field_a;
     private static String field_z;

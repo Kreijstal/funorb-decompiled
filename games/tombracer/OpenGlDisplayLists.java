@@ -7,7 +7,7 @@ final class OpenGlDisplayLists {
     static String field_d;
     static boolean field_e;
     static String field_j;
-    static fp field_c;
+    static TextureCombineSource field_c;
     static String field_f;
     private int field_i;
     static String field_h;
@@ -36,7 +36,7 @@ final class OpenGlDisplayLists {
         try {
           this.field_i = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -67,6 +67,6 @@ final class OpenGlDisplayLists {
         field_d = "Your rating is <%0>";
         field_h = "You have <%0> second(s) left...";
         field_a = "More memory is required to run in different resolutions. Try updating your version of Java or changing your Java settings.";
-        field_c = new fp();
+        field_c = new TextureCombineSource();
     }
 }

@@ -30,7 +30,7 @@ abstract class GraphicsToolkit {
         try {
           this.bindRenderTarget(this.createRenderTarget(param0, !param1 ? null : this.createRenderBuffer(param0.width(), param0.height())));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ha.AE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ha.AE(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ abstract class GraphicsToolkit {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param7).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -186,13 +186,13 @@ abstract class GraphicsToolkit {
         this.drawLine(param2, param0, param5, param3, param1, param4);
     }
 
-    abstract void useHeap(za param0);
+    abstract void useHeap(GraphicsHeap param0);
 
     abstract void da(int param0, int param1, int param2, int[] param3);
 
     abstract void setClip(int param0, int param1, int param2, int param3);
 
-    abstract za createHeap(int param0);
+    abstract GraphicsHeap createHeap(int param0);
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = 30 / ((88 - param1) / 33);
@@ -217,7 +217,7 @@ abstract class GraphicsToolkit {
           }
           this.field_a = var2_int;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -260,7 +260,7 @@ abstract class GraphicsToolkit {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

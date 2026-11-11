@@ -38,7 +38,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
           param0.setColorModel(this.field_j);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "iga.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "iga.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
             this.field_n = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "iga.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "iga.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
           this.pushAllPixels(param2 - 11329);
           this.field_p.prepareImage(this.field_l, (java.awt.image.ImageObserver) ((Object) this.field_p));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "iga.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "iga.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
           param6.drawImage(this.field_l, param5 - param2, -param4 + param1, (java.awt.image.ImageObserver) ((Object) this.field_p));
           param6.setClip(var9);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "iga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "iga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements 
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "iga.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "iga.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

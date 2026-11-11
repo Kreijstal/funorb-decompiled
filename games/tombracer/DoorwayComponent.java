@@ -146,7 +146,7 @@ final class DoorwayComponent extends PrefabComponent {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class DoorwayComponent extends PrefabComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mh.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mh.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class DoorwayComponent extends PrefabComponent {
         if (param0 != 107) {
           return (UiComponent) null;
         }
-        return tn.field_n.field_tb;
+        return MidiPatch.field_n.field_tb;
     }
 
     static {

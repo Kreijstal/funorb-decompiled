@@ -163,7 +163,7 @@ final class LobbyGameWidget extends UiComponent {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param1).append(')').toString());
         }
     }
 

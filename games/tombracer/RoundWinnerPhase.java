@@ -42,7 +42,7 @@ final class RoundWinnerPhase extends MatchPhase {
         var8 = var4 + 20 + 8;
         MembersUpsellMenu.drawCentredTextWithShadow(LegacyOpenGlFlowingWaterEffect.formatText(113, ru.field_a, new String[]{this.screen.getPlayerName(this.matchState.getRoundWinner(2), false)}).toUpperCase(), 16777215, eda.field_f, -1, var8, 320, 0);
         var8 += 40;
-        MembersUpsellMenu.drawCentredTextWithShadow(nsa.field_f + ":", 16777215, kn.field_p, -1, var8, 320, 0);
+        MembersUpsellMenu.drawCentredTextWithShadow(nsa.field_f + ":", 16777215, TooltipRenderer.field_p, -1, var8, 320, 0);
         var8 += 20;
         for (var9 = 0; var9 < this.matchState.players.length; var9++) {
           if (this.matchState.players[var9] != null) {
@@ -51,7 +51,7 @@ final class RoundWinnerPhase extends MatchPhase {
             } else {
               var10 = var7;
             }
-            MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(var9, false).toUpperCase() + ": " + this.matchState.roundWins[var9], var10, kn.field_p, -1, var8, 320, 0);
+            MembersUpsellMenu.drawCentredTextWithShadow(this.screen.getPlayerName(var9, false).toUpperCase() + ": " + this.matchState.roundWins[var9], var10, TooltipRenderer.field_p, -1, var8, 320, 0);
             var8 += 20;
           }
         }
@@ -101,7 +101,7 @@ final class RoundWinnerPhase extends MatchPhase {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

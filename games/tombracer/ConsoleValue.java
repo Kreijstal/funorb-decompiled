@@ -73,7 +73,7 @@ final class ConsoleValue {
 
     public final String toString() {
         if (this.field_a) {
-          return jd.getPrimitiveType(this.field_d, 0) + "{" + this.field_d + "}";
+          return OpenGlTexture3D.getPrimitiveType(this.field_d, 0) + "{" + this.field_d + "}";
         }
         if (null == this.field_d) {
           return "null";
@@ -116,7 +116,7 @@ final class ConsoleValue {
           this.field_a = false;
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "bfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

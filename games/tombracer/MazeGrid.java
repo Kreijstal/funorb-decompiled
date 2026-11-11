@@ -85,14 +85,14 @@ final class MazeGrid {
         }
     }
 
-    final static void a(QuickChatMenu param0, byte param1) {
+    final static void attachQuickChatMenu(QuickChatMenu param0, byte param1) {
         try {
           if (param1 < 120) {
             field_d = (String[]) null;
           }
           rua.field_gb.addChild(-127, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -35,7 +35,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
-        nl var9 = null;
+        LoginMethod var9 = null;
         jsa var12 = null;
         jsa var13 = null;
         try {
@@ -104,7 +104,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_n = this.field_n + (var7.measureWrappedHeight(this.field_F, this.field_m - 40, var7.field_w) + 5);
           }
           var8 = PooledObject.field_h;
-          var9 = cc.readLastLoginMethod((byte) 122, ToolkitSelector.getApplet(28));
+          var9 = CourseMapPath.readLastLoginMethod((byte) 122, ToolkitSelector.getApplet(28));
           if (ShaderEffect.field_a != var9) {
             if (var9 == ObjectList.field_d) {
               var8 = SectorCacheStore.field_a;
@@ -116,7 +116,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           var12 = dupTemp$0;
           this.addChild(dupTemp$0, -1);
           this.field_n = this.field_n + (((UiWidget) ((Object) var12)).field_p + 5);
-          dupTemp$1 = new jsa(10, this.field_n, -20 + this.field_m, 25, this.field_C, false, 80, 3, var7, 16777215, rta.field_j);
+          dupTemp$1 = new jsa(10, this.field_n, -20 + this.field_m, 25, this.field_C, false, 80, 3, var7, 16777215, MidiVoice.field_j);
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, -1);
           this.field_n = this.field_n + (((UiWidget) ((Object) var13)).field_p + 5);
@@ -173,7 +173,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                   if (!this.field_w) {
                     TextResourceLoader.b(50);
                   } else {
-                    gqa.a((byte) 62);
+                    ChatMessage.a((byte) 62);
                   }
                 }
               }
@@ -213,7 +213,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           if (param4 <= 44) {
             var8 = (String) null;
-            this.a((String) null, -88);
+            this.setFieldText((String) null, -88);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,7 +226,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -236,11 +236,11 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             field_z = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jw.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jw.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(String param0, int param1) {
+    final void setFieldText(String param0, int param1) {
         TextInputWidget var3 = null;
         String var4 = null;
         try {
@@ -252,7 +252,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           this.field_C.clearText(-10);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jw.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jw.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -347,7 +347,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

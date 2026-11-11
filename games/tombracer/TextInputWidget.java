@@ -40,7 +40,7 @@ class TextInputWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var5_ref), "tra.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var5_ref), "tra.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -180,7 +180,7 @@ class TextInputWidget extends FocusableWidget {
           } else {
             stackIn_121_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_120_0), ((StringBuilder) (Object) stackIn_120_1).append(stackIn_121_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_120_0), ((StringBuilder) (Object) stackIn_120_1).append(stackIn_121_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ class TextInputWidget extends FocusableWidget {
         int var25Lifetime4;
         var27 = TombRacer.field_G ? 1 : 0;
         try {
-          var10 = IntrusiveDequeCursor.a((byte) 65, param4);
+          var10 = IntrusiveDequeCursor.getClipStack((byte) 65, param4);
           if (param1 == null) {
             return;
           }
@@ -405,7 +405,7 @@ class TextInputWidget extends FocusableWidget {
           } else {
             stackIn_123_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_118_0), ((StringBuilder) (Object) stackIn_122_1).append(stackIn_123_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_118_0), ((StringBuilder) (Object) stackIn_122_1).append(stackIn_123_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -426,7 +426,7 @@ class TextInputWidget extends FocusableWidget {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             runtimeException = decompiledCaughtException;
-            throw tba.wrapException((Throwable) ((Object) runtimeException), "tra.O(" + param0 + ')');
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tra.O(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -451,16 +451,16 @@ class TextInputWidget extends FocusableWidget {
           if (param0 != 12890) {
             return;
           }
-          if (lt.field_f == null) {
+          if (LoadingStep.field_f == null) {
             var1 = new HardwareTurbulentWaterNoise();
             var2Lifetime1 = var1.generate(128, 0, 16, 128);
-            lt.field_f = bw.wrapByteStorage(270, var2Lifetime1, false);
+            LoadingStep.field_f = bw.wrapByteStorage(270, var2Lifetime1, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tra.V(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tra.V(" + param0 + ')');
         }
     }
 
@@ -521,7 +521,7 @@ class TextInputWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "tra.LA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "tra.LA(" + param0 + ')');
         }
     }
 
@@ -558,7 +558,7 @@ class TextInputWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "tra.NA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "tra.NA(" + param0 + ')');
         }
     }
 
@@ -576,7 +576,7 @@ class TextInputWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tra.OA(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tra.OA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -617,7 +617,7 @@ class TextInputWidget extends FocusableWidget {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -672,7 +672,7 @@ class TextInputWidget extends FocusableWidget {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -689,7 +689,7 @@ class TextInputWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tra.SA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tra.SA(" + param0 + ')');
         }
     }
 
@@ -714,7 +714,7 @@ class TextInputWidget extends FocusableWidget {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw tba.wrapException((Throwable) ((Object) var2_ref2), "tra.H(" + param0 + ')');
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref2), "tra.H(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -767,7 +767,7 @@ class TextInputWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "tra.F(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "tra.F(" + param0 + ')');
         }
     }
 
@@ -785,7 +785,7 @@ class TextInputWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "tra.M(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "tra.M(" + param0 + ')');
         }
     }
 
@@ -829,7 +829,7 @@ class TextInputWidget extends FocusableWidget {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -838,7 +838,7 @@ class TextInputWidget extends FocusableWidget {
           this.copySelectedTextToClipboard(0);
           this.deleteSelection(param0 ^ param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tra.QA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tra.QA(" + param0 + ')');
         }
     }
 
@@ -880,7 +880,7 @@ class TextInputWidget extends FocusableWidget {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -908,7 +908,7 @@ class TextInputWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "tra.RA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "tra.RA(" + param0 + ')');
         }
     }
 
@@ -920,7 +920,7 @@ class TextInputWidget extends FocusableWidget {
           this.selectionAnchor = 0;
           this.notifySubmitted(200);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tra.KA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tra.KA(" + param0 + ')');
         }
     }
 
@@ -930,7 +930,7 @@ class TextInputWidget extends FocusableWidget {
           field_A = null;
           int var1_int = 88 / ((-30 - param0) / 62);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "tra.N(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "tra.N(" + param0 + ')');
         }
     }
 
@@ -969,7 +969,7 @@ class TextInputWidget extends FocusableWidget {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1009,7 +1009,7 @@ class TextInputWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "tra.PA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "tra.PA(" + param0 + ')');
         }
     }
 
@@ -1041,7 +1041,7 @@ class TextInputWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "tra.U(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "tra.U(" + param0 + ')');
         }
     }
 

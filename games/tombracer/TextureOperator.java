@@ -39,7 +39,7 @@ abstract class TextureOperator extends IntrusiveNode {
             this.getMonochromeRow(1, -94);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ abstract class TextureOperator extends IntrusiveNode {
             stackIn_2_0 = null;
             return (AntialiasedBitmapFont) (stackIn_2_0);
           }
-          var2 = new AntialiasedBitmapFont(param0, LoadLevelCommand.field_p, pg.field_C, mq.field_b, ImageProducerCanvasImageBuffer.field_m, mga.field_g, ck.field_c);
+          var2 = new AntialiasedBitmapFont(param0, LoadLevelCommand.field_p, pg.field_C, mq.field_b, ImageProducerCanvasImageBuffer.field_m, QueuedHint.field_g, ck.field_c);
           MazeGenerator.releaseStatics((byte) -70);
           var3 = -23 % ((-28 - param1) / 37);
           stackIn_4_0 = var2;
@@ -156,7 +156,7 @@ abstract class TextureOperator extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -18,9 +18,9 @@ final class RatingsScreen extends DropInMenuScreen {
     final int getItemY(int param0, int param1) {
         if (param1 != 30) {
           field_v = (String) null;
-          return SwitchLinkList.b(0) - 30;
+          return SwitchLinkList.getCanvasHeight(0) - 30;
         }
-        return SwitchLinkList.b(0) - 30;
+        return SwitchLinkList.getCanvasHeight(0) - 30;
     }
 
     final String getActionLabel(int param0, byte param1) {
@@ -57,14 +57,14 @@ final class RatingsScreen extends DropInMenuScreen {
             return;
           }
           if (500 <= var10_int) {
-            stackIn_7_0 = kha.field_a;
+            stackIn_7_0 = TextLine.field_a;
           } else {
             stackIn_7_0 = Integer.toString(var10_int);
           }
           var11 = stackIn_7_0;
           var13 = var11;
           var13Lifetime1 = var11;
-          var12 = kn.field_p;
+          var12 = TooltipRenderer.field_p;
           if (param0 < 10) {
             stackIn_10_0 = "0" + (char)(48 + param0);
           } else {
@@ -91,7 +91,7 @@ final class RatingsScreen extends DropInMenuScreen {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class RatingsScreen extends DropInMenuScreen {
 
     final int getItemX(byte param0, int param1) {
         if (param0 > 111) {
-          return -80 + (aaa.a(false) >> 1) - ((this.items[0].getWidth(-163) >> 1) * this.items.length - param1 * this.items[0].getWidth(-163));
+          return -80 + (LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - ((this.items[0].getWidth(-163) >> 1) * this.items.length - param1 * this.items[0].getWidth(-163));
         }
         return 100;
     }
@@ -139,7 +139,7 @@ final class RatingsScreen extends DropInMenuScreen {
         try {
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qp.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qp.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -241,7 +241,7 @@ final class RatingsScreen extends DropInMenuScreen {
         if (param2 > -9) {
           this.drawPanelContent(false, -74, (byte) 102);
         }
-        SingleChildWidget.field_v.drawLeft(param1 + 63, false, WidgetContainer.field_v.toUpperCase() + " - " + wg.field_m[this.field_x].toUpperCase(), 65, -14279929, -1);
+        SingleChildWidget.field_v.drawLeft(param1 + 63, false, WidgetContainer.field_v.toUpperCase() + " - " + StatReportingScoringObserver.field_m[this.field_x].toUpperCase(), 65, -14279929, -1);
         var4 = 120 + param1;
         eda.field_f.drawCentred(-1, -1, NanoTickClock.field_h[0], -14671840, var4, OpenGlBuffer.field_a);
         eda.field_f.drawLeft(var4, false, ObjectPool.field_g.toUpperCase(), NanoTickClock.field_h[1], -14671840, -1);
@@ -254,7 +254,7 @@ final class RatingsScreen extends DropInMenuScreen {
         if (0 == var6) {
           var7 = PlayerSimulation.field_n;
           if (var7 != null) {
-            MembersUpsellMenu.drawCentredTextWithShadow(var7.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(var7.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
             return;
           }
           discarded$3 = this.drawTable((byte) 106, this.field_x, param1);
@@ -262,7 +262,7 @@ final class RatingsScreen extends DropInMenuScreen {
         }
         if (var6 != 1) {
           if (var5 != null) {
-            MembersUpsellMenu.drawCentredTextWithShadow(((String) (var5)).toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
+            MembersUpsellMenu.drawCentredTextWithShadow(((String) (var5)).toUpperCase(), 65793, eda.field_f, -1, param1 + 240, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
             return;
           }
           discarded$5 = this.drawTable((byte) 106, this.field_x, param1);
@@ -270,7 +270,7 @@ final class RatingsScreen extends DropInMenuScreen {
         }
         var8 = FacePlayerMountComponent.field_H;
         if (var8 != null) {
-          MembersUpsellMenu.drawCentredTextWithShadow(var8.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(var8.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1, -1);
           return;
         }
         discarded$4 = this.drawTable((byte) 106, this.field_x, param1);

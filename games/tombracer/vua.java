@@ -32,7 +32,7 @@ final class vua extends SingleChildWidget {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class vua extends SingleChildWidget {
             return true;
           }
           stackIn_20_0 = ((param1 & 55) == 0);
-          return stackIn_20_0 & (SequencePlayer.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
+          return stackIn_20_0 & (SequencePlayer.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.hasFlag65536(param1, param0, 8000));
         }
         field_A = (ToolkitSprite) null;
         stackIn_5_0 = HeapIndexArray.hasAnyMask540800(-1, param1, param0);
@@ -128,7 +128,7 @@ final class vua extends SingleChildWidget {
           return true;
         }
         stackIn_10_0 = ((param1 & 55) == 0);
-        return stackIn_10_0 & (SequencePlayer.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
+        return stackIn_10_0 & (SequencePlayer.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.hasFlag65536(param1, param0, 8000));
     }
 
     vua(int param0, int param1, int param2, int param3, WidgetPainter param4, UiWidget param5) {
@@ -136,7 +136,7 @@ final class vua extends SingleChildWidget {
         try {
           this.child = param5;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vua.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vua.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

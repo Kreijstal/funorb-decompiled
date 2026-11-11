@@ -53,7 +53,7 @@ class HotspotTextWidget extends FocusableWidget {
         try {
           this.field_r = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "lga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ class HotspotTextWidget extends FocusableWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ class HotspotTextWidget extends FocusableWidget {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ class HotspotTextWidget extends FocusableWidget {
         WidgetTextLayout var17_ref;
         String var21;
         TextLayout var22;
-        kha var23;
+        TextLine var23;
         bm var24;
         Object var25;
         int stackIn_10_0 = 0;
@@ -161,7 +161,7 @@ class HotspotTextWidget extends FocusableWidget {
         int stackIn_32_0 = 0;
         String var26;
         TextLayout var27;
-        kha var28;
+        TextLine var28;
         bm var29;
         WidgetTextLayout var30;
         int var2Lifetime1;
@@ -318,20 +318,20 @@ class HotspotTextWidget extends FocusableWidget {
         }
     }
 
-    final static nma a(PacketBuffer param0, byte param1) {
+    final static CurveShape a(PacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
-        nma stackIn_2_0 = null;
-        nma stackIn_4_0 = null;
+        CurveShape stackIn_2_0 = null;
+        CurveShape stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -86) {
-            stackIn_4_0 = new nma(param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readUnsignedMedium(-32768), param0.readUnsignedByte(255));
+            stackIn_4_0 = new CurveShape(param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readShort(false), param0.readUnsignedMedium(-32768), param0.readUnsignedByte(255));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (nma) null;
+          stackIn_2_0 = (CurveShape) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -343,7 +343,7 @@ class HotspotTextWidget extends FocusableWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ class HotspotTextWidget extends FocusableWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -427,7 +427,7 @@ class HotspotTextWidget extends FocusableWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -501,7 +501,7 @@ class HotspotTextWidget extends FocusableWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1_ref), "lga.M(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1_ref), "lga.M(" + param0 + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class hba {
     static int textureHeightMask;
-    static ena field_c;
+    static AnimationFrameSet field_c;
     static float[] field_a;
 
     public static void releaseStatics(int param0) {

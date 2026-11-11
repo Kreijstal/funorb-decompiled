@@ -12,5 +12,5 @@ interface Framebuffer {
 
     public abstract void unbindReadFramebuffer(byte param0);
 
-    public abstract void b(int param0);
+    public abstract void bind(int param0);
 }

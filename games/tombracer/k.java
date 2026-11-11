@@ -13,19 +13,19 @@ final class k extends SingleChildWidget {
           var7 = ava.field_f;
           if (var7 != null &&
             this.containsPointer(param5, param3, 17, param2, param4)) {
-            if (this.field_h instanceof kja) {
-              ((kja) (this.field_h)).a(var7, (byte) 59, this);
+            if (this.field_h instanceof DragReleaseListener) {
+              ((DragReleaseListener) (this.field_h)).onDragReleased(var7, (byte) 59, this);
               ava.field_f = null;
               return;
             }
-            if (!(var7.field_h instanceof kja)) {
+            if (!(var7.field_h instanceof DragReleaseListener)) {
               return;
             }
-            ((kja) (var7.field_h)).a(var7, (byte) 59, this);
+            ((DragReleaseListener) (var7.field_h)).onDragReleased(var7, (byte) 59, this);
             ava.field_f = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "k.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "k.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -34,14 +34,14 @@ final class k extends SingleChildWidget {
         try {
           this.child = param6;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "k.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "k.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(byte param0, gqa param1) {
+    final static void a(byte param0, ChatMessage param1) {
         int var2_int = 0;
         RuntimeException runtimeException = null;
-        gqa var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -64,8 +64,8 @@ final class k extends SingleChildWidget {
             }
           }
           if (null != param1.field_h) {
-            tba.field_g = param1.field_j;
-            fp.field_d = param1.field_h;
+            MonochromeRowCacheEntry.field_g = param1.field_j;
+            TextureCombineSource.field_d = param1.field_h;
             uba.field_f = param1.field_d;
             CoinItemComponent.field_I = param1.field_i;
           }
@@ -84,15 +84,15 @@ final class k extends SingleChildWidget {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
     public static void releaseStatics(int param0) {
         field_z = null;
         if (param0 != 0) {
-          gqa var2 = (gqa) null;
-          k.a((byte) -103, (gqa) null);
+          ChatMessage var2 = (ChatMessage) null;
+          k.a((byte) -103, (ChatMessage) null);
           field_y = null;
           return;
         }

@@ -158,10 +158,10 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           var13 = param3 - param0 * (var11_int - 1) / 2;
           var14 = param0 * var11_int + var13;
           var15 = param10;
-          gqa.drawModelAt(param5, -83584144, var15, -param0 + var13, param9, param6);
-          gqa.drawModelAt(param1, -83584144, var15, var14, param9, param6);
+          ChatMessage.drawModelAt(param5, -83584144, var15, -param0 + var13, param9, param6);
+          ChatMessage.drawModelAt(param1, -83584144, var15, var14, param9, param6);
           for (var16 = 0; var16 < var11_int; var16++) {
-            gqa.drawModelAt(GameScreen.positiveModulo(param8, 2048, 104), -83584144, var15, var13 + param0 * var16, param7, param6);
+            ChatMessage.drawModelAt(GameScreen.positiveModulo(param8, 2048, 104), -83584144, var15, var13 + param0 * var16, param7, param6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -180,7 +180,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param10).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -325,7 +325,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         try {
           super.encode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

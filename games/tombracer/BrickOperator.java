@@ -97,7 +97,7 @@ final class BrickOperator extends TextureOperator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class BrickOperator extends TextureOperator {
         this.field_x = 1024;
     }
 
-    final static int glCombineSource(fp param0, boolean param1) {
+    final static int glCombineSource(TextureCombineSource param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
@@ -236,7 +236,7 @@ final class BrickOperator extends TextureOperator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 

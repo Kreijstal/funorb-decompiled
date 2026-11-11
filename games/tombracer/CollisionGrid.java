@@ -4,7 +4,7 @@
 final class CollisionGrid {
     private int field_i;
     private boolean field_g;
-    static nl field_f;
+    static LoginMethod field_f;
     private NodeHashTable field_h;
     private SecondaryNodeHashTable field_e;
     private int field_c;
@@ -34,7 +34,7 @@ final class CollisionGrid {
             if (param0 == var5.getCollidable((byte) -128)) {
               var5.unlink(100);
               var5.unlinkSecondary(-7975);
-              ft.releaseGridEntry(var5, -201);
+              TextureFormat.releaseGridEntry(var5, -201);
             }
             var5 = (CollisionGridEntry) (this.field_e.nextWithSameKey((byte) 27));
           }
@@ -49,7 +49,7 @@ final class CollisionGrid {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class CollisionGrid {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class CollisionGrid {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ final class CollisionGrid {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ final class CollisionGrid {
               !var8.intersectsBounds(var7, var6, var4, var3_int, -98)) {
               var8.unlink(104);
               var8.unlinkSecondary(-7975);
-              ft.releaseGridEntry(var8, -201);
+              TextureFormat.releaseGridEntry(var8, -201);
             }
             var8 = (CollisionGridEntry) (this.field_e.nextWithSameKey((byte) 119));
           }
@@ -335,7 +335,7 @@ final class CollisionGrid {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -357,6 +357,6 @@ final class CollisionGrid {
     }
 
     static {
-        field_f = new nl("");
+        field_f = new LoginMethod("");
     }
 }

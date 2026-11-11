@@ -5,7 +5,7 @@ final class moa {
     static int field_b;
     static int field_a;
 
-    final static String formatChatPrefix(gqa param0, int param1) {
+    final static String formatChatPrefix(ChatMessage param0, int param1) {
         String stackIn_33_0 = null;
         String stackIn_35_0 = null;
         Object stackIn_38_0 = null;
@@ -76,7 +76,7 @@ final class moa {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) (stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) (stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
         }
     }
 

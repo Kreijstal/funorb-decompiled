@@ -7,13 +7,13 @@ final class dsa {
     static PlatformTaskDispatcher field_c;
     static String[] componentTypeNames;
 
-    final static vb a(int param0) {
+    final static vb createRandomClickSound(int param0) {
         int var1 = uca.cosmeticRandom.nextBounded(6, 0);
         if (param0 > -11) {
           field_b = 76;
-          return it.a(255, var1);
+          return it.playMenuSound(255, var1);
         }
-        return it.a(255, var1);
+        return it.playMenuSound(255, var1);
     }
 
     public static void releaseStatics(byte param0) {

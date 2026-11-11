@@ -47,7 +47,7 @@ final class OpenGlFramebuffer implements Framebuffer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class OpenGlFramebuffer implements Framebuffer {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class OpenGlFramebuffer implements Framebuffer {
             OpenGlFramebuffer.releaseStatics(-3);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class OpenGlFramebuffer implements Framebuffer {
         return 36008;
     }
 
-    public final void b(int param0) {
+    public final void bind(int param0) {
         jaggl.OpenGL.glBindFramebufferEXT(36160, this.field_b);
         this.field_d = this.field_d | 4;
         this.field_a = this.getBindTarget(param0 ^ param0);
@@ -242,7 +242,7 @@ final class OpenGlFramebuffer implements Framebuffer {
           jaggl.OpenGL.glGenFramebuffersEXT(1, tg.field_b, 0);
           this.field_b = tg.field_b[0];
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "cb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "cb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -7,7 +7,7 @@ abstract class mna {
     static int[] field_a;
     static int field_d;
 
-    final static gqa a(byte param0, int param1, int param2, int param3) {
+    final static ChatMessage a(byte param0, int param1, int param2, int param3) {
         boolean stackIn_44_0 = false;
         Object var4;
         int var5;
@@ -21,13 +21,13 @@ abstract class mna {
         String var12;
         int var13;
         int var14;
-        gqa var15;
-        gqa var16;
+        ChatMessage var15;
+        ChatMessage var16;
         int var7Lifetime1;
         int var8Lifetime1;
         int var8Lifetime2;
         var14 = TombRacer.field_G ? 1 : 0;
-        ne.field_d.field_tb.field_J.clear(8);
+        VertexStreamLayout.field_d.field_tb.field_J.clear(8);
         var4 = null;
         var5 = 0;
         var6 = 0;
@@ -71,7 +71,7 @@ abstract class mna {
         for (var8Lifetime1 = 0; var8Lifetime1 < ara.field_xb; var8Lifetime1++) {
           var16 = CourseLayout.field_d[var8Lifetime1];
           if (null != var16.field_l) {
-            ne.field_d.field_tb.addChild(-125, var16.field_l);
+            VertexStreamLayout.field_d.field_tb.addChild(-125, var16.field_l);
             var16.field_l.setBounds(var16.field_l.measureNaturalWidth((byte) 69), param2, -23776, var7Lifetime1, param3);
             if (var16.field_l.field_y != 0) {
               var4 = var16;
@@ -79,31 +79,31 @@ abstract class mna {
             var7Lifetime1 = var7Lifetime1 + param2;
           }
         }
-        var8Lifetime2 = ne.field_d.field_tb.field_t + (ne.field_d.field_tb.field_O + (-var7Lifetime1 + var6));
-        ne.field_d.field_tb.field_t = ne.field_d.field_tb.field_t - var8Lifetime2;
-        ne.field_d.field_tb.field_T = ne.field_d.field_tb.field_T + var8Lifetime2;
+        var8Lifetime2 = VertexStreamLayout.field_d.field_tb.field_t + (VertexStreamLayout.field_d.field_tb.field_O + (-var7Lifetime1 + var6));
+        VertexStreamLayout.field_d.field_tb.field_t = VertexStreamLayout.field_d.field_tb.field_t - var8Lifetime2;
+        VertexStreamLayout.field_d.field_tb.field_T = VertexStreamLayout.field_d.field_tb.field_T + var8Lifetime2;
         if (PlatformModel.field_B) {
-          ne.field_d.field_tb.field_t = var7Lifetime1;
+          VertexStreamLayout.field_d.field_tb.field_t = var7Lifetime1;
         }
         if (PlatformModel.field_B) {
           CrossedSineBandsOperator.field_v = true;
-          ne.field_d.field_tb.field_T = -ne.field_d.field_tb.field_t + ne.field_d.field_vb.field_t;
-          ne.field_d.field_tb.field_K = 0;
+          VertexStreamLayout.field_d.field_tb.field_T = -VertexStreamLayout.field_d.field_tb.field_t + VertexStreamLayout.field_d.field_vb.field_t;
+          VertexStreamLayout.field_d.field_tb.field_K = 0;
           PlatformModel.field_B = false;
         }
-        ne.field_d.field_tb.field_O = var7Lifetime1 - ne.field_d.field_tb.field_t;
+        VertexStreamLayout.field_d.field_tb.field_O = var7Lifetime1 - VertexStreamLayout.field_d.field_tb.field_t;
         if (DynamicGeometryBuffer.field_c &&
           null != SimpleMoveLocomotor.field_s) {
           CrossedSineBandsOperator.field_v = true;
         }
-        var9 = -ne.field_d.field_tb.field_O - (ne.field_d.field_tb.field_t - ne.field_d.field_vb.field_t);
+        var9 = -VertexStreamLayout.field_d.field_tb.field_O - (VertexStreamLayout.field_d.field_tb.field_t - VertexStreamLayout.field_d.field_vb.field_t);
         if (CrossedSineBandsOperator.field_v) {
-          ne.field_d.field_tb.field_K = -ne.field_d.field_tb.field_T + var9;
+          VertexStreamLayout.field_d.field_tb.field_K = -VertexStreamLayout.field_d.field_tb.field_T + var9;
         }
-        ne.field_d.updateScroll(true, 0, param1 * param2 * 2, param2);
-        stackIn_44_0 = (var9 == ne.field_d.field_tb.field_K + ne.field_d.field_tb.field_T);
+        VertexStreamLayout.field_d.updateScroll(true, 0, param1 * param2 * 2, param2);
+        stackIn_44_0 = (var9 == VertexStreamLayout.field_d.field_tb.field_K + VertexStreamLayout.field_d.field_tb.field_T);
         CrossedSineBandsOperator.field_v = stackIn_44_0;
-        return (gqa) (var4);
+        return (ChatMessage) (var4);
     }
 
     final static RoomDefinition findRoomDefinitionFrom(int param0, int param1) {

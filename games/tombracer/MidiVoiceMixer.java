@@ -8,9 +8,9 @@ final class MidiVoiceMixer extends PcmStream {
     static long field_j;
 
     final PcmStream nextSubStream() {
-        rta var1_ref = null;
+        MidiVoice var1_ref = null;
         do {
-          var1_ref = (rta) (this.field_l.next(112));
+          var1_ref = (MidiVoice) (this.field_l.next(112));
           if (var1_ref == null) {
             return null;
           }
@@ -20,11 +20,11 @@ final class MidiVoiceMixer extends PcmStream {
 
     final void skip(int param0) {
         int var2;
-        rta var3;
+        MidiVoice var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         this.field_m.skip(param0);
-        var3 = (rta) (this.field_l.first(-80));
+        var3 = (MidiVoice) (this.field_l.first(-80));
         while (var3 != null) {
           if (!this.field_k.discardInactiveVoice(15, var3)) {
             var2 = param0;
@@ -38,7 +38,7 @@ final class MidiVoiceMixer extends PcmStream {
               var2 = var2 - var3.field_B;
             } while (!this.field_k.updateNote(var3, (int[]) null, 0, (byte) 6, var2));
           }
-          var3 = (rta) (this.field_l.next(125));
+          var3 = (MidiVoice) (this.field_l.next(125));
         }
     }
 
@@ -53,7 +53,7 @@ final class MidiVoiceMixer extends PcmStream {
     final static void a(boolean param0) {
         LegacyOpenGlPostProcessEffect.a(!param0 ? true : false);
         LoadProfileCommand.field_r = param0 ? true : false;
-        gj.field_r = true;
+        VertexAttribute.field_r = true;
         ej.field_a.hideAllDialogs(true);
         vn.showMessageDialog(86, KeySwitchComponent.field_M, false);
     }
@@ -74,20 +74,20 @@ final class MidiVoiceMixer extends PcmStream {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = nma.field_l.getGraphics();
+            var9 = CurveShape.field_l.getGraphics();
             if (UsernameSuggestionsPanel.field_y == null) {
               UsernameSuggestionsPanel.field_y = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param4) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, mma.field_a, qf.field_i);
+              var9.fillRect(0, 0, mma.field_a, FloatPacketBuffer.field_i);
             }
             if (param2 == null) {
               param2 = new java.awt.Color(140, 17, 17);
             }
             try {
               if (OpenGlModel.field_x == null) {
-                OpenGlModel.field_x = nma.field_l.createImage(304, 34);
+                OpenGlModel.field_x = CurveShape.field_l.createImage(304, 34);
               }
               var10 = OpenGlModel.field_x.getGraphics();
               var10.setColor(param2);
@@ -99,12 +99,12 @@ final class MidiVoiceMixer extends PcmStream {
               var10.setFont(UsernameSuggestionsPanel.field_y);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param1, (-(6 * param1.length()) + 304) / 2, 22);
-              var9.drawImage(OpenGlModel.field_x, -152 + mma.field_a / 2, qf.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(OpenGlModel.field_x, -152 + mma.field_a / 2, FloatPacketBuffer.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = -152 + mma.field_a / 2;
-              var8 = -18 + qf.field_i / 2;
+              var8 = -18 + FloatPacketBuffer.field_i / 2;
               var9.setColor(param2);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(2 + var7, var8 + 2, param3 * 3, 30);
@@ -118,12 +118,12 @@ final class MidiVoiceMixer extends PcmStream {
             if (SecondaryNodeDeque.field_e != null) {
               var9.setFont(UsernameSuggestionsPanel.field_y);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(SecondaryNodeDeque.field_e, mma.field_a / 2 - 6 * SecondaryNodeDeque.field_e.length() / 2, qf.field_i / 2 - 26);
+              var9.drawString(SecondaryNodeDeque.field_e, mma.field_a / 2 - 6 * SecondaryNodeDeque.field_e.length() / 2, FloatPacketBuffer.field_i / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            nma.field_l.repaint();
+            CurveShape.field_l.repaint();
           }
           if (param0 >= 0) {
             return;
@@ -146,14 +146,14 @@ final class MidiVoiceMixer extends PcmStream {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, rta param2) {
+    private final void a(int param0, int param1, MidiVoice param2) {
         MidiPcmStream stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        rta stackIn_8_2 = null;
+        MidiVoice stackIn_8_2 = null;
         boolean stackIn_9_3;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -173,7 +173,7 @@ final class MidiVoiceMixer extends PcmStream {
                 param2.field_x = PcmSampleStream.create(param2.field_n, param2.field_x.getStepMagnitude(), 0, param2.field_x.getPan());
                 stackIn_8_0 = this.field_k;
                 stackIn_8_1 = -111;
-                stackIn_8_2 = (rta) (param2);
+                stackIn_8_2 = (MidiVoice) (param2);
                 stackIn_9_3 = !(0 <= param2.field_y.field_g[param2.field_m]);
                 ((MidiPcmStream) (Object) stackIn_8_0).applyNoteSampleOffset((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
               } else {
@@ -200,14 +200,14 @@ final class MidiVoiceMixer extends PcmStream {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    private final void mixVoice(int param0, int param1, int[] param2, rta param3, int param4, boolean param5) {
+    private final void mixVoice(int param0, int param1, int[] param2, MidiVoice param3, int param4, boolean param5) {
         MidiPcmStream stackIn_12_0 = null;
         int stackIn_12_1 = 0;
-        rta stackIn_12_2 = null;
+        MidiVoice stackIn_12_2 = null;
         boolean stackIn_13_3;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -247,7 +247,7 @@ final class MidiVoiceMixer extends PcmStream {
                 param3.field_x = PcmSampleStream.create(param3.field_n, var11.getStepMagnitude(), 0, var11.getPan());
                 stackIn_12_0 = this.field_k;
                 stackIn_12_1 = -35;
-                stackIn_12_2 = (rta) (param3);
+                stackIn_12_2 = (MidiVoice) (param3);
                 stackIn_13_3 = !(param3.field_y.field_g[param3.field_m] >= 0);
                 ((MidiPcmStream) (Object) stackIn_12_0).applyNoteSampleOffset((byte) stackIn_12_1, stackIn_12_2, stackIn_13_3);
                 param3.field_x.rampVolumeKeepPan(var9, var11.getVolume());
@@ -286,7 +286,7 @@ final class MidiVoiceMixer extends PcmStream {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -298,12 +298,12 @@ final class MidiVoiceMixer extends PcmStream {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        rta var6 = null;
+        MidiVoice var6 = null;
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           this.field_m.fill(param0, param1, param2);
-          var6 = (rta) (this.field_l.first(-80));
+          var6 = (MidiVoice) (this.field_l.first(-80));
           while (var6 != null) {
             if (!this.field_k.discardInactiveVoice(15, var6)) {
               var4_int = param1;
@@ -319,7 +319,7 @@ final class MidiVoiceMixer extends PcmStream {
                 var5 = var5 - var6.field_B;
               } while (!this.field_k.updateNote(var6, param0, var4_int, (byte) 6, var5));
             }
-            var6 = (rta) (this.field_l.next(121));
+            var6 = (MidiVoice) (this.field_l.next(121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -332,7 +332,7 @@ final class MidiVoiceMixer extends PcmStream {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class MidiVoiceMixer extends PcmStream {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "et.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "et.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -359,7 +359,7 @@ final class MidiVoiceMixer extends PcmStream {
     }
 
     final PcmStream firstSubStream() {
-        rta var1 = (rta) (this.field_l.first(-80));
+        MidiVoice var1 = (MidiVoice) (this.field_l.first(-80));
         if (var1 == null) {
           return null;
         }

@@ -14,7 +14,7 @@ final class UnlockEntry extends IntrusiveNode {
           param0.writeByte(this.field_h, 0);
           param0.writeByte(this.field_f, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "taa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "taa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -34,32 +34,32 @@ final class UnlockEntry extends IntrusiveNode {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 == 10) {
-            param3 = param3 - (id.field_h[0].width() * 2 + id.field_h[0].width() / 2);
+            param3 = param3 - (SinglePlayerCourseGenerator.field_h[0].width() * 2 + SinglePlayerCourseGenerator.field_h[0].width() / 2);
             for (var4_int = 0; var4_int < 4; var4_int++) {
               var5 = var4_int + 12;
-              id.field_h[var5].draw(param3, param1 - (id.field_h[var5].height() >> 1));
-              param3 = param3 + id.field_h[var5].width();
+              SinglePlayerCourseGenerator.field_h[var5].draw(param3, param1 - (SinglePlayerCourseGenerator.field_h[var5].height() >> 1));
+              param3 = param3 + SinglePlayerCourseGenerator.field_h[var5].width();
             }
           } else if (param2 == 9) {
-            param3 = param3 - (id.field_h[0].width() + id.field_h[0].width() / 2);
+            param3 = param3 - (SinglePlayerCourseGenerator.field_h[0].width() + SinglePlayerCourseGenerator.field_h[0].width() / 2);
             for (var4_int = 0; var4_int < 2; var4_int++) {
               var5 = var4_int + 10;
-              id.field_h[var5].draw(param3, -(id.field_h[var5].height() >> 1) + param1);
-              param3 = param3 + id.field_h[var5].width();
+              SinglePlayerCourseGenerator.field_h[var5].draw(param3, -(SinglePlayerCourseGenerator.field_h[var5].height() >> 1) + param1);
+              param3 = param3 + SinglePlayerCourseGenerator.field_h[var5].width();
             }
           } else if (param2 == 8) {
-            param3 = param3 - (id.field_h[0].width() + id.field_h[0].width() / 2);
+            param3 = param3 - (SinglePlayerCourseGenerator.field_h[0].width() + SinglePlayerCourseGenerator.field_h[0].width() / 2);
             for (var4_int = 0; var4_int < 2; var4_int++) {
               var5 = var4_int + 8;
-              id.field_h[var5].draw(param3, -(id.field_h[var5].height() >> 1) + param1);
-              param3 = param3 + id.field_h[var5].width();
+              SinglePlayerCourseGenerator.field_h[var5].draw(param3, -(SinglePlayerCourseGenerator.field_h[var5].height() >> 1) + param1);
+              param3 = param3 + SinglePlayerCourseGenerator.field_h[var5].width();
             }
           } else if (param2 >= 0 &&
             7 >= param2) {
-            id.field_h[param2].draw(-(id.field_h[param2].width() >> 1) + param3, -(id.field_h[param2].height() >> 1) + param1);
+            SinglePlayerCourseGenerator.field_h[param2].draw(-(SinglePlayerCourseGenerator.field_h[param2].width() >> 1) + param3, -(SinglePlayerCourseGenerator.field_h[param2].height() >> 1) + param1);
           } else {
             if (param2 == 11) {
-              id.field_h[16].draw(-(id.field_h[16].width() >> 1) + param3, -(id.field_h[16].height() >> 1) + param1);
+              SinglePlayerCourseGenerator.field_h[16].draw(-(SinglePlayerCourseGenerator.field_h[16].width() >> 1) + param3, -(SinglePlayerCourseGenerator.field_h[16].height() >> 1) + param1);
             }
           }
           if (param0 >= -106) {
@@ -69,7 +69,7 @@ final class UnlockEntry extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "taa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "taa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class UnlockEntry extends IntrusiveNode {
         stackIn_10_0 = ((this.field_h == 0 &&
           !(ToolkitSelector.field_f[this.field_f])) ||
           (this.field_h == 1 &&
-          !(wk.field_i[this.field_f])));
+          !(MapWaypoint.field_i[this.field_f])));
         return stackIn_10_0;
     }
 

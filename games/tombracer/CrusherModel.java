@@ -22,7 +22,7 @@ final class CrusherModel extends TrapModel {
             this.drawAt((Camera) null, 87, -34, 68, (byte) 5);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "dc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class CrusherModel extends TrapModel {
           int var3_int = -96 / ((param0 + 8) / 40);
           param1.writeBits((byte) -125, this.field_q, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "dc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,9 +66,9 @@ final class CrusherModel extends TrapModel {
               !(param0 <= PortalBehaviour.field_o.length)) {
               PortalBehaviour.field_o = new int[param0 * 2];
             }
-            if (ic.field_c == null ||
-              !(param0 <= ic.field_c.length)) {
-              ic.field_c = new int[param0 * 2];
+            if (StatReportingObserverFactory.field_c == null ||
+              !(param0 <= StatReportingObserverFactory.field_c.length)) {
+              StatReportingObserverFactory.field_c = new int[param0 * 2];
             }
             if (BlockModel.field_n == null ||
               !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -85,9 +85,9 @@ final class CrusherModel extends TrapModel {
                 !(param0 <= PortalBehaviour.field_o.length)) {
                 PortalBehaviour.field_o = new int[param0 * 2];
               }
-              if (ic.field_c == null ||
-                !(param0 <= ic.field_c.length)) {
-                ic.field_c = new int[param0 * 2];
+              if (StatReportingObserverFactory.field_c == null ||
+                !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                StatReportingObserverFactory.field_c = new int[param0 * 2];
               }
               if (BlockModel.field_n == null ||
                 !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -100,9 +100,9 @@ final class CrusherModel extends TrapModel {
             } else {
               if (PortalBehaviour.field_o == null) {
                 PortalBehaviour.field_o = new int[param0 * 2];
-                if (ic.field_c == null ||
-                  !(param0 <= ic.field_c.length)) {
-                  ic.field_c = new int[param0 * 2];
+                if (StatReportingObserverFactory.field_c == null ||
+                  !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                  StatReportingObserverFactory.field_c = new int[param0 * 2];
                 }
                 if (BlockModel.field_n == null ||
                   !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -115,9 +115,9 @@ final class CrusherModel extends TrapModel {
               } else {
                 if (param0 > PortalBehaviour.field_o.length) {
                   PortalBehaviour.field_o = new int[param0 * 2];
-                  if (ic.field_c == null ||
-                    !(param0 <= ic.field_c.length)) {
-                    ic.field_c = new int[param0 * 2];
+                  if (StatReportingObserverFactory.field_c == null ||
+                    !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                    StatReportingObserverFactory.field_c = new int[param0 * 2];
                   }
                   if (BlockModel.field_n == null ||
                     !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -128,9 +128,9 @@ final class CrusherModel extends TrapModel {
                     HardwareModel.field_B = new boolean[2 * param0];
                   }
                 } else {
-                  if (ic.field_c == null ||
-                    !(param0 <= ic.field_c.length)) {
-                    ic.field_c = new int[param0 * 2];
+                  if (StatReportingObserverFactory.field_c == null ||
+                    !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                    StatReportingObserverFactory.field_c = new int[param0 * 2];
                   }
                   if (BlockModel.field_n == null ||
                     !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -155,9 +155,9 @@ final class CrusherModel extends TrapModel {
                 !(param0 <= PortalBehaviour.field_o.length)) {
                 PortalBehaviour.field_o = new int[param0 * 2];
               }
-              if (ic.field_c == null ||
-                !(param0 <= ic.field_c.length)) {
-                ic.field_c = new int[param0 * 2];
+              if (StatReportingObserverFactory.field_c == null ||
+                !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                StatReportingObserverFactory.field_c = new int[param0 * 2];
               }
               if (BlockModel.field_n == null ||
                 !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -174,9 +174,9 @@ final class CrusherModel extends TrapModel {
                   !(param0 <= PortalBehaviour.field_o.length)) {
                   PortalBehaviour.field_o = new int[param0 * 2];
                 }
-                if (ic.field_c == null ||
-                  !(param0 <= ic.field_c.length)) {
-                  ic.field_c = new int[param0 * 2];
+                if (StatReportingObserverFactory.field_c == null ||
+                  !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                  StatReportingObserverFactory.field_c = new int[param0 * 2];
                 }
                 if (BlockModel.field_n == null ||
                   !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -189,9 +189,9 @@ final class CrusherModel extends TrapModel {
               } else {
                 if (PortalBehaviour.field_o == null) {
                   PortalBehaviour.field_o = new int[param0 * 2];
-                  if (ic.field_c == null ||
-                    !(param0 <= ic.field_c.length)) {
-                    ic.field_c = new int[param0 * 2];
+                  if (StatReportingObserverFactory.field_c == null ||
+                    !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                    StatReportingObserverFactory.field_c = new int[param0 * 2];
                   }
                   if (BlockModel.field_n == null ||
                     !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -204,9 +204,9 @@ final class CrusherModel extends TrapModel {
                 } else {
                   if (param0 > PortalBehaviour.field_o.length) {
                     PortalBehaviour.field_o = new int[param0 * 2];
-                    if (ic.field_c == null ||
-                      !(param0 <= ic.field_c.length)) {
-                      ic.field_c = new int[param0 * 2];
+                    if (StatReportingObserverFactory.field_c == null ||
+                      !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                      StatReportingObserverFactory.field_c = new int[param0 * 2];
                     }
                     if (BlockModel.field_n == null ||
                       !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -217,9 +217,9 @@ final class CrusherModel extends TrapModel {
                       HardwareModel.field_B = new boolean[2 * param0];
                     }
                   } else {
-                    if (ic.field_c == null ||
-                      !(param0 <= ic.field_c.length)) {
-                      ic.field_c = new int[param0 * 2];
+                    if (StatReportingObserverFactory.field_c == null ||
+                      !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                      StatReportingObserverFactory.field_c = new int[param0 * 2];
                     }
                     if (BlockModel.field_n == null ||
                       !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -244,9 +244,9 @@ final class CrusherModel extends TrapModel {
                 !(param0 <= PortalBehaviour.field_o.length)) {
                 PortalBehaviour.field_o = new int[param0 * 2];
               }
-              if (ic.field_c == null ||
-                !(param0 <= ic.field_c.length)) {
-                ic.field_c = new int[param0 * 2];
+              if (StatReportingObserverFactory.field_c == null ||
+                !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                StatReportingObserverFactory.field_c = new int[param0 * 2];
               }
               if (BlockModel.field_n == null ||
                 !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -266,9 +266,9 @@ final class CrusherModel extends TrapModel {
                   !(param0 <= PortalBehaviour.field_o.length)) {
                   PortalBehaviour.field_o = new int[param0 * 2];
                 }
-                if (ic.field_c == null ||
-                  !(param0 <= ic.field_c.length)) {
-                  ic.field_c = new int[param0 * 2];
+                if (StatReportingObserverFactory.field_c == null ||
+                  !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                  StatReportingObserverFactory.field_c = new int[param0 * 2];
                 }
                 if (BlockModel.field_n == null ||
                   !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -281,9 +281,9 @@ final class CrusherModel extends TrapModel {
               } else {
                 if (PortalBehaviour.field_o == null) {
                   PortalBehaviour.field_o = new int[param0 * 2];
-                  if (ic.field_c == null ||
-                    !(param0 <= ic.field_c.length)) {
-                    ic.field_c = new int[param0 * 2];
+                  if (StatReportingObserverFactory.field_c == null ||
+                    !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                    StatReportingObserverFactory.field_c = new int[param0 * 2];
                   }
                   if (BlockModel.field_n == null ||
                     !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -291,9 +291,9 @@ final class CrusherModel extends TrapModel {
                   }
                 } else {
                   if (param0 <= PortalBehaviour.field_o.length) {
-                    if (ic.field_c == null ||
-                      !(param0 <= ic.field_c.length)) {
-                      ic.field_c = new int[param0 * 2];
+                    if (StatReportingObserverFactory.field_c == null ||
+                      !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                      StatReportingObserverFactory.field_c = new int[param0 * 2];
                     }
                     if (BlockModel.field_n == null ||
                       !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -301,9 +301,9 @@ final class CrusherModel extends TrapModel {
                     }
                   } else {
                     PortalBehaviour.field_o = new int[param0 * 2];
-                    if (ic.field_c == null ||
-                      !(param0 <= ic.field_c.length)) {
-                      ic.field_c = new int[param0 * 2];
+                    if (StatReportingObserverFactory.field_c == null ||
+                      !(param0 <= StatReportingObserverFactory.field_c.length)) {
+                      StatReportingObserverFactory.field_c = new int[param0 * 2];
                     }
                     if (BlockModel.field_n == null ||
                       !(param1 + param0 <= BlockModel.field_n.length)) {
@@ -734,7 +734,7 @@ final class CrusherModel extends TrapModel {
           } else {
             var9 = RevolverItemComponent.field_J[74];
           }
-          gqa.drawModelAt(var8, -83584144, var7, var6_int, var9, param3);
+          ChatMessage.drawModelAt(var8, -83584144, var7, var6_int, var9, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -746,7 +746,7 @@ final class CrusherModel extends TrapModel {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -780,7 +780,7 @@ final class CrusherModel extends TrapModel {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 

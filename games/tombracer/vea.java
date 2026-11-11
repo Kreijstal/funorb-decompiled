@@ -4,7 +4,7 @@
 final class vea {
     static boolean field_b;
     static String field_a;
-    static lqa field_c;
+    static RendererOption field_c;
     private static String field_z;
 
     public static void releaseStatics(int param0) {

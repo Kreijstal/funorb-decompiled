@@ -7,12 +7,12 @@ final class OpenGlModel extends ToolkitModel {
     private fd[] field_f;
     private short field_U;
     private short field_M;
-    private tj field_g;
+    private VertexArrayPointer field_g;
     private int field_L;
     private int[] field_K;
     private int field_N;
     private short[] field_X;
-    private tj field_ab;
+    private VertexArrayPointer field_ab;
     private aba field_i;
     private LegacyVertexArray field_Q;
     private short[] field_z;
@@ -20,7 +20,7 @@ final class OpenGlModel extends ToolkitModel {
     private IndexArray field_jb;
     private boolean field_l;
     private short field_T;
-    private tj field_F;
+    private VertexArrayPointer field_F;
     private boolean field_s;
     private int[] field_p;
     private int field_G;
@@ -43,7 +43,7 @@ final class OpenGlModel extends ToolkitModel {
     static byte[] field_J;
     private short field_k;
     private short field_h;
-    private tj field_kb;
+    private VertexArrayPointer field_kb;
     private int field_W;
     private float[] field_n;
     private short[] field_q;
@@ -154,7 +154,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "np.S(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "np.S(" + param0 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "np.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "np.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var6), "np.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var6), "np.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "np.FA(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "np.FA(" + param0 + ')');
         }
     }
 
@@ -382,7 +382,7 @@ final class OpenGlModel extends ToolkitModel {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param9).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -830,7 +830,7 @@ final class OpenGlModel extends ToolkitModel {
           }
           if (decompiledFrameCompleted4) {
             if (!upa.a(this.field_u, 0, param1)) {
-              if (!ModelFactory.a(-17, this.field_u, param1)) {
+              if (!ModelFactory.hasFlag2048(-17, this.field_u, param1)) {
                 param5.field_ab = null;
                 decompiledFrameRemainder0 = (var13 != 0);
               }
@@ -1043,13 +1043,13 @@ final class OpenGlModel extends ToolkitModel {
           } else {
             stackIn_335_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_330_0), ((StringBuilder) (Object) stackIn_334_1).append(stackIn_335_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_330_0), ((StringBuilder) (Object) stackIn_334_1).append(stackIn_335_2).append(')').toString());
         }
     }
 
     private final void a(byte param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
-        qf var3 = null;
+        FloatPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -1059,10 +1059,10 @@ final class OpenGlModel extends ToolkitModel {
           if ((this.field_ib * 6) <= this.field_R.field_cb.payload.length) {
             this.field_R.field_cb.position = 0;
             if (var5 != 0) {
-              this.field_R.field_cb = new qf((this.field_ib + 100) * 6);
+              this.field_R.field_cb = new FloatPacketBuffer((this.field_ib + 100) * 6);
             }
           } else {
-            this.field_R.field_cb = new qf((this.field_ib + 100) * 6);
+            this.field_R.field_cb = new FloatPacketBuffer((this.field_ib + 100) * 6);
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
@@ -1124,7 +1124,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3_ref), "np.D(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3_ref), "np.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1206,7 +1206,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var5), "np.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var5), "np.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1287,7 +1287,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4_ref), "np.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4_ref), "np.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1426,7 +1426,7 @@ final class OpenGlModel extends ToolkitModel {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1521,7 +1521,7 @@ final class OpenGlModel extends ToolkitModel {
             CharacterPreview.field_i = 0;
             var10 = 0;
             ParticleEffects.field_b = 0;
-            via.field_e = 0;
+            FullscreenCanvas.field_e = 0;
             var11 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var9_int <= var11))) {
@@ -1537,7 +1537,7 @@ final class OpenGlModel extends ToolkitModel {
                     if (null == this.field_db ||
                       (param6 & this.field_db[var15]) != 0) {
                       CharacterPreview.field_i = CharacterPreview.field_i + this.field_P[var15];
-                      via.field_e = via.field_e + this.field_K[var15];
+                      FullscreenCanvas.field_e = FullscreenCanvas.field_e + this.field_K[var15];
                       ParticleEffects.field_b = ParticleEffects.field_b + this.field_A[var15];
                       var10++;
                     }
@@ -1554,14 +1554,14 @@ final class OpenGlModel extends ToolkitModel {
               stackIn_27_1 = ~var10;
             }
             if (stackIn_27_0 <= stackIn_27_1) {
-              via.field_e = param3;
+              FullscreenCanvas.field_e = param3;
               ParticleEffects.field_b = param4;
               CharacterPreview.field_i = param2;
               if (var47 == 0) {
                 return;
               }
             }
-            via.field_e = param3 + via.field_e / var10;
+            FullscreenCanvas.field_e = param3 + FullscreenCanvas.field_e / var10;
             ParticleEffects.field_b = ParticleEffects.field_b / var10 + param4;
             CharacterPreview.field_i = param2 + CharacterPreview.field_i / var10;
             vea.field_b = true;
@@ -1627,13 +1627,13 @@ final class OpenGlModel extends ToolkitModel {
                         0 != (this.field_db[var14_int] & param6) ||
                         var47 != 0) {
                         this.field_P[var14_int] = this.field_P[var14_int] - CharacterPreview.field_i;
-                        this.field_K[var14_int] = this.field_K[var14_int] - via.field_e;
+                        this.field_K[var14_int] = this.field_K[var14_int] - FullscreenCanvas.field_e;
                         this.field_A[var14_int] = this.field_A[var14_int] - ParticleEffects.field_b;
                         this.field_P[var14_int] = this.field_P[var14_int] * param2 >> 7;
                         this.field_K[var14_int] = this.field_K[var14_int] * param3 >> 7;
                         this.field_A[var14_int] = this.field_A[var14_int] * param4 >> 7;
                         this.field_P[var14_int] = this.field_P[var14_int] + CharacterPreview.field_i;
-                        this.field_K[var14_int] = this.field_K[var14_int] + via.field_e;
+                        this.field_K[var14_int] = this.field_K[var14_int] + FullscreenCanvas.field_e;
                         this.field_A[var14_int] = this.field_A[var14_int] + ParticleEffects.field_b;
                       }
                       var13++;
@@ -1652,12 +1652,12 @@ final class OpenGlModel extends ToolkitModel {
               var14_int = param7[13] << 4;
               var15 = param7[14] << 4;
               if (vea.field_b) {
-                var16 = 8192 + (param7[0] * CharacterPreview.field_i + param7[3] * via.field_e + ParticleEffects.field_b * param7[6]) >> 14;
-                var17 = 8192 + (via.field_e * param7[4] + (param7[1] * CharacterPreview.field_i + param7[7] * ParticleEffects.field_b)) >> 14;
-                var18 = 8192 + (via.field_e * param7[5] + CharacterPreview.field_i * param7[2]) + ParticleEffects.field_b * param7[8] >> 14;
+                var16 = 8192 + (param7[0] * CharacterPreview.field_i + param7[3] * FullscreenCanvas.field_e + ParticleEffects.field_b * param7[6]) >> 14;
+                var17 = 8192 + (FullscreenCanvas.field_e * param7[4] + (param7[1] * CharacterPreview.field_i + param7[7] * ParticleEffects.field_b)) >> 14;
+                var18 = 8192 + (FullscreenCanvas.field_e * param7[5] + CharacterPreview.field_i * param7[2]) + ParticleEffects.field_b * param7[8] >> 14;
                 var17 = var17 + var14_int;
                 var16 = var16 + var13;
-                via.field_e = var17;
+                FullscreenCanvas.field_e = var17;
                 CharacterPreview.field_i = var16;
                 var18 = var18 + var15;
                 vea.field_b = false;
@@ -1667,10 +1667,10 @@ final class OpenGlModel extends ToolkitModel {
               var17 = param3 << 15 >> 7;
               var18 = param4 << 15 >> 7;
               var19 = 8192 + var16 * -CharacterPreview.field_i >> 14;
-              var20 = var17 * -via.field_e + 8192 >> 14;
+              var20 = var17 * -FullscreenCanvas.field_e + 8192 >> 14;
               var21 = 8192 + var18 * -ParticleEffects.field_b >> 14;
               var22 = var19 + CharacterPreview.field_i;
-              var23 = var20 + via.field_e;
+              var23 = var20 + FullscreenCanvas.field_e;
               var24 = var21 + ParticleEffects.field_b;
               var25 = new int[9];
               var25[0] = var16 * param7[0] + 8192 >> 14;
@@ -2017,7 +2017,7 @@ final class OpenGlModel extends ToolkitModel {
                       if (stackIn_112_0 == stackIn_112_1 ||
                         (this.field_db[var14_int] & param6) != 0) {
                         this.field_P[var14_int] = this.field_P[var14_int] - CharacterPreview.field_i;
-                        this.field_K[var14_int] = this.field_K[var14_int] - via.field_e;
+                        this.field_K[var14_int] = this.field_K[var14_int] - FullscreenCanvas.field_e;
                         this.field_A[var14_int] = this.field_A[var14_int] - ParticleEffects.field_b;
                         if (param4 != 0) {
                           var15 = ByteStorage.field_b[param4];
@@ -2041,7 +2041,7 @@ final class OpenGlModel extends ToolkitModel {
                           this.field_P[var14_int] = var17;
                         }
                         this.field_P[var14_int] = this.field_P[var14_int] + CharacterPreview.field_i;
-                        this.field_K[var14_int] = this.field_K[var14_int] + via.field_e;
+                        this.field_K[var14_int] = this.field_K[var14_int] + FullscreenCanvas.field_e;
                         this.field_A[var14_int] = this.field_A[var14_int] + ParticleEffects.field_b;
                       }
                       var13++;
@@ -2143,12 +2143,12 @@ final class OpenGlModel extends ToolkitModel {
           var14_int = param7[13] << 4;
           var15 = param7[14] << 4;
           if (vea.field_b) {
-            var16 = 8192 + (ParticleEffects.field_b * param7[6] + via.field_e * param7[3] + param7[0] * CharacterPreview.field_i) >> 14;
-            var17 = ParticleEffects.field_b * param7[7] + (param7[4] * via.field_e + CharacterPreview.field_i * param7[1] + 8192) >> 14;
-            var18 = param7[2] * CharacterPreview.field_i + (param7[5] * via.field_e + ParticleEffects.field_b * param7[8] + 8192) >> 14;
+            var16 = 8192 + (ParticleEffects.field_b * param7[6] + FullscreenCanvas.field_e * param7[3] + param7[0] * CharacterPreview.field_i) >> 14;
+            var17 = ParticleEffects.field_b * param7[7] + (param7[4] * FullscreenCanvas.field_e + CharacterPreview.field_i * param7[1] + 8192) >> 14;
+            var18 = param7[2] * CharacterPreview.field_i + (param7[5] * FullscreenCanvas.field_e + ParticleEffects.field_b * param7[8] + 8192) >> 14;
             var16 = var16 + var13;
             var17 = var17 + var14_int;
-            via.field_e = var17;
+            FullscreenCanvas.field_e = var17;
             var18 = var18 + var15;
             CharacterPreview.field_i = var16;
             vea.field_b = false;
@@ -2172,11 +2172,11 @@ final class OpenGlModel extends ToolkitModel {
           var16_ref_int__[8] = var19 * var17 + 8192 >> 14;
           var16_ref_int__[1] = var20 * var23 + -var19 * var22 + 8192 >> 14;
           var16_ref_int__[2] = var17 * var20 + 8192 >> 14;
-          var25_int = 8192 + (var16_ref_int__[2] * -ParticleEffects.field_b + -CharacterPreview.field_i * var16_ref_int__[0] + var16_ref_int__[1] * -via.field_e) >> 14;
-          var26 = 8192 + var16_ref_int__[5] * -ParticleEffects.field_b + (-CharacterPreview.field_i * var16_ref_int__[3] + -via.field_e * var16_ref_int__[4]) >> 14;
-          var27 = -ParticleEffects.field_b * var16_ref_int__[8] + (-via.field_e * var16_ref_int__[7] + var16_ref_int__[6] * -CharacterPreview.field_i + 8192) >> 14;
+          var25_int = 8192 + (var16_ref_int__[2] * -ParticleEffects.field_b + -CharacterPreview.field_i * var16_ref_int__[0] + var16_ref_int__[1] * -FullscreenCanvas.field_e) >> 14;
+          var26 = 8192 + var16_ref_int__[5] * -ParticleEffects.field_b + (-CharacterPreview.field_i * var16_ref_int__[3] + -FullscreenCanvas.field_e * var16_ref_int__[4]) >> 14;
+          var27 = -ParticleEffects.field_b * var16_ref_int__[8] + (-FullscreenCanvas.field_e * var16_ref_int__[7] + var16_ref_int__[6] * -CharacterPreview.field_i + 8192) >> 14;
           var28 = var25_int + CharacterPreview.field_i;
-          var29_int = via.field_e + var26;
+          var29_int = FullscreenCanvas.field_e + var26;
           var30 = var27 + ParticleEffects.field_b;
           var31_ref_int__ = new int[9];
           var32 = 0;
@@ -2301,7 +2301,7 @@ final class OpenGlModel extends ToolkitModel {
           } else {
             stackIn_440_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_435_0), ((StringBuilder) (Object) stackIn_439_1).append(stackIn_440_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_435_0), ((StringBuilder) (Object) stackIn_439_1).append(stackIn_440_2).append(')').toString());
         }
     }
 
@@ -2315,14 +2315,14 @@ final class OpenGlModel extends ToolkitModel {
             field_m = (ResourceArchive) null;
           }
           var1_int = NormalMapOperator.d(-77);
-          var2 = za.a(18998);
+          var2 = GraphicsHeap.a(18998);
           S2CPlayerProfilePacket.field_b.drawFrame((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
           ConsoleToken.a(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "np.P(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "np.P(" + param0 + ')');
         }
     }
 
@@ -2357,7 +2357,7 @@ final class OpenGlModel extends ToolkitModel {
             stackIn_8_1 = !(this.field_s);
             ((OpenGlToolkit) (Object) stackIn_7_0).setDepthWriteAllowed(stackIn_8_1, false);
             this.field_R.setLightingEnabled(param0 ^ -35, false);
-            this.field_R.bindVertexArrays((tj) null, this.field_R.field_Rb, (tj) null, -114, this.field_R.field_Bc);
+            this.field_R.bindVertexArrays((VertexArrayPointer) null, this.field_R.field_Rb, (VertexArrayPointer) null, -114, this.field_R.field_Bc);
             var3 = 0;
             while (var3 < this.field_G) {
               var4 = this.field_r[var3];
@@ -2403,7 +2403,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "np.F(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "np.F(" + param0 + ')');
         }
     }
 
@@ -2562,7 +2562,7 @@ final class OpenGlModel extends ToolkitModel {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2584,7 +2584,7 @@ final class OpenGlModel extends ToolkitModel {
             if (this.field_N <= var1_int) {
               CharacterPreview.field_i = 0;
               ParticleEffects.field_b = 0;
-              via.field_e = 0;
+              FullscreenCanvas.field_e = 0;
               break;
             }
             this.field_P[var1_int] = this.field_P[var1_int] << 4;
@@ -2596,7 +2596,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "np.NA()");
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "np.NA()");
         }
     }
 
@@ -2636,7 +2636,7 @@ final class OpenGlModel extends ToolkitModel {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        qf var12 = null;
+        FloatPacketBuffer var12 = null;
         int var13_int = 0;
         short[] var13 = null;
         LegacyVertexArray var13_ref = null;
@@ -2797,7 +2797,7 @@ final class OpenGlModel extends ToolkitModel {
             return;
           }
           if (this.field_R.field_cb.payload.length < (this.field_L * var7)) {
-            this.field_R.field_cb = new qf((this.field_L + 100) * var7);
+            this.field_R.field_cb = new FloatPacketBuffer((this.field_L + 100) * var7);
             if (var35 != 0) {
               this.field_R.field_cb.position = 0;
             }
@@ -3234,7 +3234,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "np.T(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "np.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3305,7 +3305,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "np.L(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "np.L(" + param0 + ')');
         }
     }
 
@@ -3344,7 +3344,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "np.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "np.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3413,7 +3413,7 @@ final class OpenGlModel extends ToolkitModel {
             var9 = 0;
             ParticleEffects.field_b = 0;
             CharacterPreview.field_i = 0;
-            via.field_e = 0;
+            FullscreenCanvas.field_e = 0;
             var10 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var8_int <= var10))) {
@@ -3427,7 +3427,7 @@ final class OpenGlModel extends ToolkitModel {
                   while (var13_int < var12_ref_int__.length) {
                     var14 = var12_ref_int__[var13_int];
                     CharacterPreview.field_i = CharacterPreview.field_i + this.field_P[var14];
-                    via.field_e = via.field_e + this.field_K[var14];
+                    FullscreenCanvas.field_e = FullscreenCanvas.field_e + this.field_K[var14];
                     var9++;
                     ParticleEffects.field_b = ParticleEffects.field_b + this.field_A[var14];
                     var13_int++;
@@ -3445,13 +3445,13 @@ final class OpenGlModel extends ToolkitModel {
             if (stackIn_18_0 >= stackIn_18_1) {
               CharacterPreview.field_i = param2;
               ParticleEffects.field_b = param4;
-              via.field_e = param3;
+              FullscreenCanvas.field_e = param3;
               if (var21 == 0) {
                 return;
               }
             }
             CharacterPreview.field_i = param2 + CharacterPreview.field_i / var9;
-            via.field_e = param3 + via.field_e / var9;
+            FullscreenCanvas.field_e = param3 + FullscreenCanvas.field_e / var9;
             ParticleEffects.field_b = ParticleEffects.field_b / var9 + param4;
             return;
           }
@@ -3500,13 +3500,13 @@ final class OpenGlModel extends ToolkitModel {
                   while (var11.length > var12) {
                     var13_int = var11[var12];
                     this.field_P[var13_int] = this.field_P[var13_int] - CharacterPreview.field_i;
-                    this.field_K[var13_int] = this.field_K[var13_int] - via.field_e;
+                    this.field_K[var13_int] = this.field_K[var13_int] - FullscreenCanvas.field_e;
                     this.field_A[var13_int] = this.field_A[var13_int] - ParticleEffects.field_b;
                     this.field_P[var13_int] = param2 * this.field_P[var13_int] >> 7;
                     this.field_K[var13_int] = this.field_K[var13_int] * param3 >> 7;
                     this.field_A[var13_int] = param4 * this.field_A[var13_int] >> 7;
                     this.field_P[var13_int] = this.field_P[var13_int] + CharacterPreview.field_i;
-                    this.field_K[var13_int] = this.field_K[var13_int] + via.field_e;
+                    this.field_K[var13_int] = this.field_K[var13_int] + FullscreenCanvas.field_e;
                     this.field_A[var13_int] = this.field_A[var13_int] + ParticleEffects.field_b;
                     var12++;
                     if (var21 != 0) {
@@ -3796,7 +3796,7 @@ final class OpenGlModel extends ToolkitModel {
                     while (var11.length > var12) {
                       var13_int = var11[var12];
                       this.field_P[var13_int] = this.field_P[var13_int] - CharacterPreview.field_i;
-                      this.field_K[var13_int] = this.field_K[var13_int] - via.field_e;
+                      this.field_K[var13_int] = this.field_K[var13_int] - FullscreenCanvas.field_e;
                       this.field_A[var13_int] = this.field_A[var13_int] - ParticleEffects.field_b;
                       stackIn_45_0 = ~param2;
                       stackIn_45_1 = -1;
@@ -3822,7 +3822,7 @@ final class OpenGlModel extends ToolkitModel {
                         this.field_P[var13_int] = var16;
                       }
                       this.field_P[var13_int] = this.field_P[var13_int] + CharacterPreview.field_i;
-                      this.field_K[var13_int] = this.field_K[var13_int] + via.field_e;
+                      this.field_K[var13_int] = this.field_K[var13_int] + FullscreenCanvas.field_e;
                       this.field_A[var13_int] = this.field_A[var13_int] + ParticleEffects.field_b;
                       var12++;
                     }
@@ -3831,7 +3831,7 @@ final class OpenGlModel extends ToolkitModel {
                     while (var11.length > var12) {
                       var13_int = var11[var12];
                       this.field_P[var13_int] = this.field_P[var13_int] - CharacterPreview.field_i;
-                      this.field_K[var13_int] = this.field_K[var13_int] - via.field_e;
+                      this.field_K[var13_int] = this.field_K[var13_int] - FullscreenCanvas.field_e;
                       this.field_A[var13_int] = this.field_A[var13_int] - ParticleEffects.field_b;
                       stackIn_45_0 = 0;
                       stackIn_45_1 = param4;
@@ -3857,7 +3857,7 @@ final class OpenGlModel extends ToolkitModel {
                         this.field_P[var13_int] = var16;
                       }
                       this.field_P[var13_int] = this.field_P[var13_int] + CharacterPreview.field_i;
-                      this.field_K[var13_int] = this.field_K[var13_int] + via.field_e;
+                      this.field_K[var13_int] = this.field_K[var13_int] + FullscreenCanvas.field_e;
                       this.field_A[var13_int] = this.field_A[var13_int] + ParticleEffects.field_b;
                       var12++;
                     }
@@ -3957,7 +3957,7 @@ final class OpenGlModel extends ToolkitModel {
           } else {
             stackIn_285_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_284_0), ((StringBuilder) (Object) stackIn_284_1).append(stackIn_285_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_284_0), ((StringBuilder) (Object) stackIn_284_1).append(stackIn_285_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -3969,7 +3969,7 @@ final class OpenGlModel extends ToolkitModel {
           field_m = null;
           field_x = null;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "np.M(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "np.M(" + param0 + ')');
         }
     }
 
@@ -4003,7 +4003,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "np.wa()");
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "np.wa()");
         }
     }
 
@@ -4223,7 +4223,7 @@ final class OpenGlModel extends ToolkitModel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2), "np.J(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2), "np.J(" + param0 + ')');
         }
     }
 
@@ -4243,10 +4243,10 @@ final class OpenGlModel extends ToolkitModel {
         this.field_lb = 0;
         try {
           this.field_R = param0;
-          this.field_g = new tj((LegacyVertexArray) null, 5126, 3, 0);
-          this.field_ab = new tj((LegacyVertexArray) null, 5126, 2, 0);
-          this.field_F = new tj((LegacyVertexArray) null, 5126, 3, 0);
-          this.field_kb = new tj((LegacyVertexArray) null, 5121, 4, 0);
+          this.field_g = new VertexArrayPointer((LegacyVertexArray) null, 5126, 3, 0);
+          this.field_ab = new VertexArrayPointer((LegacyVertexArray) null, 5126, 2, 0);
+          this.field_F = new VertexArrayPointer((LegacyVertexArray) null, 5126, 3, 0);
+          this.field_kb = new VertexArrayPointer((LegacyVertexArray) null, 5121, 4, 0);
           this.field_w = new afa();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4259,7 +4259,7 @@ final class OpenGlModel extends ToolkitModel {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -4408,16 +4408,16 @@ final class OpenGlModel extends ToolkitModel {
           this.field_R = param0;
           this.field_u = param5;
           if (ArchiveRequest.hasFlag2048(param5, 0, param2)) {
-            this.field_g = new tj((LegacyVertexArray) null, 5126, 3, 0);
+            this.field_g = new VertexArrayPointer((LegacyVertexArray) null, 5126, 3, 0);
           }
-          if (ModelFactory.a(-17, param5, param2)) {
-            this.field_ab = new tj((LegacyVertexArray) null, 5126, 2, 0);
+          if (ModelFactory.hasFlag2048(-17, param5, param2)) {
+            this.field_ab = new VertexArrayPointer((LegacyVertexArray) null, 5126, 2, 0);
           }
           if (ScoreSubmission.a(param5, param2, (byte) 17)) {
-            this.field_F = new tj((LegacyVertexArray) null, 5126, 3, 0);
+            this.field_F = new VertexArrayPointer((LegacyVertexArray) null, 5126, 3, 0);
           }
           if (DropInMenuScreen.hasFlag2048(param2, param5, 2048)) {
-            this.field_kb = new tj((LegacyVertexArray) null, 5121, 4, 0);
+            this.field_kb = new VertexArrayPointer((LegacyVertexArray) null, 5121, 4, 0);
           }
           if (mm.hasFlag2048(-122, param2, param5)) {
             this.field_w = new afa();
@@ -4547,7 +4547,7 @@ final class OpenGlModel extends ToolkitModel {
                 continue;
               }
             } else {
-              ofa.a(var8, var9, 93);
+              ResizingDialog.sortIndicesByKeys(var8, var9, 93);
               this.field_P = param1.field_b;
               this.field_A = param1.field_p;
               this.field_N = param1.field_E;
@@ -5151,7 +5151,7 @@ final class OpenGlModel extends ToolkitModel {
           } else {
             stackIn_396_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_391_0), ((StringBuilder) (Object) stackIn_395_1).append(stackIn_396_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_391_0), ((StringBuilder) (Object) stackIn_395_1).append(stackIn_396_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

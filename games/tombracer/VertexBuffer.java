@@ -6,7 +6,7 @@ interface VertexBuffer extends GpuBuffer {
 
     public abstract void close(int param0);
 
-    public abstract una getFormat(int param0);
+    public abstract GpuDataType getFormat(int param0);
 
     public abstract void allocate(int param0, int param1);
 

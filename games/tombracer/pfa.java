@@ -5,7 +5,7 @@ final class pfa {
     private IntrusiveDeque field_f;
     private int field_h;
     private ModelAnimator field_c;
-    static ura field_i;
+    static TextureTransformMode field_i;
     int field_e;
     int field_j;
     static String field_a;
@@ -471,7 +471,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1down", (byte) 112);
                 if (null != var2) {
-                  fp.field_a = var2[0] & 255;
+                  TextureCombineSource.field_a = var2[0] & 255;
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1fire", (byte) 108);
                 if (null != var2) {
@@ -487,7 +487,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1skiproom", (byte) 114);
                 if (null != var2) {
-                  rta.field_g = var2[0] & 255;
+                  MidiVoice.field_g = var2[0] & 255;
                 }
                 var2 = ScoringObserverFactory.readTextEntry("keycode_player1sneak", (byte) 123);
                 if (null != var2) {
@@ -603,7 +603,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextIcons", (byte) 105);
                 if (var2 != null) {
-                  ne.field_e = jaa.decodeText((byte) 84, var2);
+                  VertexStreamLayout.field_e = jaa.decodeText((byte) 84, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleBottomlessPits", (byte) 127);
                 if (var2 != null) {
@@ -671,7 +671,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMobileMirrors", (byte) 126);
                 if (var2 != null) {
-                  jd.field_m = jaa.decodeText((byte) 63, var2);
+                  OpenGlTexture3D.field_m = jaa.decodeText((byte) 63, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMobileMirrors", (byte) 119);
                 if (var2 != null) {
@@ -739,7 +739,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMovingPlatforms", (byte) 102);
                 if (var2 != null) {
-                  tr.field_d = jaa.decodeText((byte) 107, var2);
+                  QuickChatPhraseSource.field_d = jaa.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitlePressurePads", (byte) 101);
                 if (var2 != null) {
@@ -1057,7 +1057,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_drag", (byte) 115);
                 if (null != var2) {
-                  qja.field_k = jaa.decodeText((byte) 26, var2);
+                  MazeSearchNode.field_k = jaa.decodeText((byte) 26, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_drop", (byte) 112);
                 if (null != var2) {
@@ -1069,7 +1069,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("hint_fire", (byte) 108);
                 if (null != var2) {
-                  bb.field_l = jaa.decodeText((byte) 66, var2);
+                  HiscoreTable.field_l = jaa.decodeText((byte) 66, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("item_keys", (byte) 107);
                 if (var2 != null) {
@@ -1097,7 +1097,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_shotgun", (byte) 125);
                 if (var2 != null) {
-                  gqa.field_a = jaa.decodeText((byte) 62, var2);
+                  ChatMessage.field_a = jaa.decodeText((byte) 62, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_flaregun", (byte) 117);
                 if (null != var2) {
@@ -1113,11 +1113,11 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_flamerblue", (byte) 113);
                 if (var2 != null) {
-                  tv.field_ub = jaa.decodeText((byte) 96, var2);
+                  ContextMenuRow.field_ub = jaa.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_waterspray", (byte) 101);
                 if (null != var2) {
-                  bf.field_f = jaa.decodeText((byte) 96, var2);
+                  SoftwareRenderTarget.field_f = jaa.decodeText((byte) 96, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_bladelauncher", (byte) 116);
                 if (null != var2) {
@@ -1125,7 +1125,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_fireball", (byte) 112);
                 if (var2 != null) {
-                  hg.field_d = jaa.decodeText((byte) 72, var2);
+                  HardwareModelVertexStream.field_d = jaa.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_bouncingfireball", (byte) 124);
                 if (var2 != null) {
@@ -1133,7 +1133,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_freezer", (byte) 114);
                 if (null != var2) {
-                  fp.field_b = jaa.decodeText((byte) 89, var2);
+                  TextureCombineSource.field_b = jaa.decodeText((byte) 89, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("weapon_revolver", (byte) 127);
                 if (var2 != null) {
@@ -1157,7 +1157,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_resigned", (byte) 116);
                 if (null != var2) {
-                  ik.field_j = jaa.decodeText((byte) 46, var2);
+                  IntArrayRequest.field_j = jaa.decodeText((byte) 46, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("pos_completed", (byte) 117);
                 if (var2 != null) {
@@ -1169,7 +1169,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("resigned", (byte) 106);
                 if (null != var2) {
-                  id.field_i = jaa.decodeText((byte) 102, var2);
+                  SinglePlayerCourseGenerator.field_i = jaa.decodeText((byte) 102, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("won_x_rounds", (byte) 112);
                 if (var2 != null) {
@@ -1185,7 +1185,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("fivehunderedplus", (byte) 118);
                 if (null != var2) {
-                  kha.field_a = jaa.decodeText((byte) 105, var2);
+                  TextLine.field_a = jaa.decodeText((byte) 105, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("graphicsmode", (byte) 101);
                 if (null != var2) {
@@ -1201,7 +1201,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("slowmovegood", (byte) 119);
                 if (var2 != null) {
-                  gka.field_f = jaa.decodeText((byte) 32, var2);
+                  ConsoleHistoryEntry.field_f = jaa.decodeText((byte) 32, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("slowmovemove", (byte) 127);
                 if (null != var2) {
@@ -1225,7 +1225,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("finish_time_colon", (byte) 104);
                 if (var2 != null) {
-                  cc.field_l = jaa.decodeText((byte) 107, var2);
+                  CourseMapPath.field_l = jaa.decodeText((byte) 107, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("msg_finished", (byte) 119);
                 if (null != var2) {
@@ -1381,7 +1381,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_bag2", (byte) 103);
                 if (null != var2) {
-                  tja.field_p = jaa.decodeText((byte) 72, var2);
+                  HardCacheEntry.field_p = jaa.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("reward_bagx2", (byte) 124);
                 if (null != var2) {
@@ -1429,7 +1429,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_ace", (byte) 124);
                 if (null != var2) {
-                  gh.field_e = jaa.decodeText((byte) 126, var2);
+                  HardwareSprite.field_e = jaa.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_angelio", (byte) 103);
                 if (null != var2) {
@@ -1457,7 +1457,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_henryj", (byte) 124);
                 if (null != var2) {
-                  iea.field_e = jaa.decodeText((byte) 126, var2);
+                  ClipFrame.field_e = jaa.decodeText((byte) 126, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_jamille", (byte) 113);
                 if (var2 != null) {
@@ -1477,7 +1477,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_wilbur", (byte) 119);
                 if (null != var2) {
-                  tr.field_e = jaa.decodeText((byte) 98, var2);
+                  QuickChatPhraseSource.field_e = jaa.decodeText((byte) 98, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_unknown,0", (byte) 102);
                 if (var2 != null) {
@@ -1731,27 +1731,27 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,0", (byte) 127);
                 if (null != var2) {
-                  hg.bladeDeathMessages[0] = jaa.decodeText((byte) 104, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[0] = jaa.decodeText((byte) 104, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,1", (byte) 123);
                 if (var2 != null) {
-                  hg.bladeDeathMessages[1] = jaa.decodeText((byte) 53, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[1] = jaa.decodeText((byte) 53, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,2", (byte) 110);
                 if (null != var2) {
-                  hg.bladeDeathMessages[2] = jaa.decodeText((byte) 108, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[2] = jaa.decodeText((byte) 108, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,3", (byte) 126);
                 if (var2 != null) {
-                  hg.bladeDeathMessages[3] = jaa.decodeText((byte) 54, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[3] = jaa.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,4", (byte) 110);
                 if (null != var2) {
-                  hg.bladeDeathMessages[4] = jaa.decodeText((byte) 117, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[4] = jaa.decodeText((byte) 117, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_littlesaw,5", (byte) 114);
                 if (var2 != null) {
-                  hg.bladeDeathMessages[5] = jaa.decodeText((byte) 120, var2);
+                  HardwareModelVertexStream.bladeDeathMessages[5] = jaa.decodeText((byte) 120, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_bullet,0", (byte) 109);
                 if (var2 != null) {
@@ -1827,27 +1827,27 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,0", (byte) 117);
                 if (var2 != null) {
-                  id.laserDeathMessages[0] = jaa.decodeText((byte) 47, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[0] = jaa.decodeText((byte) 47, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,1", (byte) 109);
                 if (null != var2) {
-                  id.laserDeathMessages[1] = jaa.decodeText((byte) 55, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[1] = jaa.decodeText((byte) 55, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,2", (byte) 108);
                 if (var2 != null) {
-                  id.laserDeathMessages[2] = jaa.decodeText((byte) 95, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[2] = jaa.decodeText((byte) 95, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,3", (byte) 124);
                 if (null != var2) {
-                  id.laserDeathMessages[3] = jaa.decodeText((byte) 111, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[3] = jaa.decodeText((byte) 111, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,4", (byte) 114);
                 if (null != var2) {
-                  id.laserDeathMessages[4] = jaa.decodeText((byte) 81, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[4] = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_laser,5", (byte) 119);
                 if (null != var2) {
-                  id.laserDeathMessages[5] = jaa.decodeText((byte) 54, var2);
+                  SinglePlayerCourseGenerator.laserDeathMessages[5] = jaa.decodeText((byte) 54, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_boulder,0", (byte) 111);
                 if (var2 != null) {
@@ -1951,35 +1951,35 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptlabels,0", (byte) 122);
                 if (var2 != null) {
-                  mga.field_f[0] = jaa.decodeText((byte) 101, var2);
+                  QueuedHint.field_f[0] = jaa.decodeText((byte) 101, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptlabels,1", (byte) 103);
                 if (var2 != null) {
-                  mga.field_f[1] = jaa.decodeText((byte) 44, var2);
+                  QueuedHint.field_f[1] = jaa.decodeText((byte) 44, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,0,0", (byte) 109);
                 if (null != var2) {
-                  via.field_c[0][0] = jaa.decodeText((byte) 78, var2);
+                  FullscreenCanvas.field_c[0][0] = jaa.decodeText((byte) 78, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,0,1", (byte) 118);
                 if (var2 != null) {
-                  via.field_c[0][1] = jaa.decodeText((byte) 83, var2);
+                  FullscreenCanvas.field_c[0][1] = jaa.decodeText((byte) 83, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,0,2", (byte) 102);
                 if (null != var2) {
-                  via.field_c[0][2] = jaa.decodeText((byte) 88, var2);
+                  FullscreenCanvas.field_c[0][2] = jaa.decodeText((byte) 88, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,0,3", (byte) 109);
                 if (null != var2) {
-                  via.field_c[0][3] = jaa.decodeText((byte) 81, var2);
+                  FullscreenCanvas.field_c[0][3] = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,1,0", (byte) 122);
                 if (null != var2) {
-                  via.field_c[1][0] = jaa.decodeText((byte) 117, var2);
+                  FullscreenCanvas.field_c[1][0] = jaa.decodeText((byte) 117, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameoptnames,1,1", (byte) 120);
                 if (null != var2) {
-                  via.field_c[1][1] = jaa.decodeText((byte) 41, var2);
+                  FullscreenCanvas.field_c[1][1] = jaa.decodeText((byte) 41, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("gameopttooltips,0,0", (byte) 110);
                 if (null != var2) {
@@ -2055,7 +2055,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("bonus", (byte) 102);
                 if (var2 != null) {
-                  bd.field_j = jaa.decodeText((byte) 71, var2);
+                  RasterStateFrame.field_j = jaa.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("no_medal", (byte) 116);
                 if (null != var2) {
@@ -2150,7 +2150,7 @@ final class pfa {
                   } else {
                     stackIn_1832_2 = "{...}";
                   }
-                  throw tba.wrapException((Throwable) ((Object) stackIn_1831_0), ((StringBuilder) (Object) stackIn_1831_1).append(stackIn_1832_2).append(',').append(param1).append(')').toString());
+                  throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_1831_0), ((StringBuilder) (Object) stackIn_1831_1).append(stackIn_1832_2).append(',').append(param1).append(')').toString());
                 }
                 if (GameApplet.field_m) {
                   TombRacer.field_G = (var4 == 0);
@@ -2168,7 +2168,7 @@ final class pfa {
         try {
           this.queueWaypoint(-28562, hq.field_b[param1] << 16, LoginForm.field_z[param1] << 16);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.F(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pfa.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2177,7 +2177,7 @@ final class pfa {
         int stackIn_33_1 = 0;
         boolean stackIn_34_2 = false;
         RuntimeException decompiledCaughtException = null;
-        wk var2 = null;
+        MapWaypoint var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         try {
@@ -2190,9 +2190,9 @@ final class pfa {
               this.field_c.play(this.field_d, false, 0, 1, true);
             }
             this.field_g = true;
-            var2 = (wk) (this.field_f.first(-80));
+            var2 = (MapWaypoint) (this.field_f.first(-80));
             if (!var2.field_j) {
-              var2.a(0, this.field_j, this.field_e);
+              var2.aimFrom(0, this.field_j, this.field_e);
               var2.field_j = true;
             }
             this.field_j = this.field_j + var2.field_l;
@@ -2223,16 +2223,16 @@ final class pfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var2_ref), "pfa.C(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var2_ref), "pfa.C(" + param0 + ')');
         }
     }
 
     final void queueWaypoint(int param0, int param1, int param2) {
         RuntimeException runtimeException = null;
-        wk var4 = null;
+        MapWaypoint var4 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new wk();
+          var4 = new MapWaypoint();
           var4.field_g = param2;
           var4.field_k = param1;
           if (param0 != -28562) {
@@ -2243,7 +2243,7 @@ final class pfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pfa.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2256,7 +2256,7 @@ final class pfa {
             pfa.loadLocalizedText((ResourceArchive) null, 68);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.A(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pfa.A(" + param0 + ')');
         }
     }
 
@@ -2273,7 +2273,7 @@ final class pfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "pfa.H(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "pfa.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2284,7 +2284,7 @@ final class pfa {
             this.placeAtCourse(73, (byte) 91);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pfa.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2302,16 +2302,16 @@ final class pfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "pfa.D(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "pfa.D(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void popRasterState(int param0) {
         RuntimeException runtimeException = null;
-        bd var1 = null;
+        RasterStateFrame var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var1 = (bd) (gg.field_e.pollLast((byte) 22));
+          var1 = (RasterStateFrame) (HardwareModelIndexData.field_e.pollLast((byte) 22));
           if (param0 != 1) {
             field_a = (String) null;
           }
@@ -2326,7 +2326,7 @@ final class pfa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.G(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pfa.G(" + param0 + ')');
         }
     }
 
@@ -2340,12 +2340,12 @@ final class pfa {
           this.field_g = false;
           this.field_f = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pfa.<init>(" + param0 + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pfa.<init>(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
         field_a = "Prev";
-        field_i = new ura();
+        field_i = new TextureTransformMode();
     }
 }

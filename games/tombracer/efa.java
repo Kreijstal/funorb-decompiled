@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class efa extends WidgetContainer implements mia, ButtonListener {
+final class efa extends WidgetContainer implements SuggestionsHost, ButtonListener {
     private ValidatedTextInputWidget field_z;
     static Sprite[][] field_w;
     static int field_y;
@@ -39,12 +39,12 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     public final void onMoreSuggestionsRequested(int param0) {
-        ((tf) (this.field_z.getValidationSource((byte) 93))).b((byte) -69);
+        ((NameFieldValidator) (this.field_z.getValidationSource((byte) 93))).b((byte) -69);
         if (param0 != 10000536) {
           field_y = -98;
         }
@@ -58,7 +58,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           }
           this.field_A.field_y = this.isFormValid(false);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "efa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "efa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         this.field_A = new FocusableWidget(GridLineWalker.field_j, (WidgetListener) null);
         this.field_B = new FocusableWidget(mq.field_d, (WidgetListener) null);
         this.field_z.field_q = rma.field_a;
-        this.field_z.setValidationSource(-13861, new tf(this.field_z));
+        this.field_z.setValidationSource(-13861, new NameFieldValidator(this.field_z));
         this.field_A.field_y = false;
         this.field_A.field_r = (WidgetPainter) ((Object) new td());
         this.field_B.field_r = (WidgetPainter) ((Object) new kaa());
@@ -124,14 +124,14 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         var2.setBounds((byte) -31, 270, 50, 20, var3);
         this.addChild(var2, -1);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, CrusherBehaviour.field_r, za.field_f, this.field_z, -2239, 170));
+        var3 = var3 + (5 + this.a(var3, CrusherBehaviour.field_r, GraphicsHeap.field_f, this.field_z, -2239, 170));
         this.field_A.setBounds((byte) -31, var5, 40, -var5 + 496 >> 1, var3);
         this.field_B.setBounds((byte) -31, 60, 40, var4 + 3, var3 + 15);
         this.field_B.field_h = (WidgetListener) (this);
         this.field_A.field_h = (WidgetListener) (this);
         this.addChild(this.field_A, -1);
         this.addChild(this.field_B, -1);
-        this.field_x = new UsernameSuggestionsPanel((mia) (this));
+        this.field_x = new UsernameSuggestionsPanel((SuggestionsHost) (this));
         this.field_x.setBounds((byte) -31, this.field_m - this.field_z.field_i - (this.field_z.field_m + 60), 150, this.field_z.field_i - (-this.field_z.field_m - 60), 20);
         this.addChild(this.field_x, -1);
         this.setBounds((byte) -31, 496, var4 + 55 + var3, 0, 0);
@@ -148,7 +148,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           }
           ((TextInputWidget) ((Object) var3)).setText(false, -16719, var4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "efa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "efa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ColourRowCache {
-    private dq[] field_k;
+    private ColourRowCacheEntry[] field_k;
     static it field_d;
     private int field_g;
     private int field_c;
@@ -31,11 +31,11 @@ final class ColourRowCache {
         boolean stackIn_4_1 = false;
         boolean stackIn_9_1 = false;
         int var3;
-        dq var4;
-        dq var5;
+        ColourRowCacheEntry var4;
+        ColourRowCacheEntry var5;
         int var6;
-        dq var5Lifetime1;
-        dq var5Lifetime2;
+        ColourRowCacheEntry var5Lifetime1;
+        ColourRowCacheEntry var5Lifetime2;
         var6 = TombRacer.field_G ? 1 : 0;
         var3 = 89 / ((param1 - 61) / 38);
         if (this.field_c == this.field_e) {
@@ -56,11 +56,11 @@ final class ColourRowCache {
         if (var4 == null) {
           this.field_f = true;
           if (this.field_g < this.field_e) {
-            var4 = new dq(param0, this.field_g);
+            var4 = new ColourRowCacheEntry(param0, this.field_g);
             this.field_g = this.field_g + 1;
           } else {
-            var5Lifetime2 = (dq) (this.field_h.last(3));
-            var4 = new dq(param0, var5Lifetime2.field_g);
+            var5Lifetime2 = (ColourRowCacheEntry) (this.field_h.last(3));
+            var4 = new ColourRowCacheEntry(param0, var5Lifetime2.field_g);
             this.field_k[var5Lifetime2.field_i] = null;
             var5Lifetime2.unlink(63);
           }
@@ -111,7 +111,7 @@ final class ColourRowCache {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var3), "fk.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var3), "fk.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class ColourRowCache {
         this.field_c = param1;
         this.field_e = param0;
         this.field_a = new int[this.field_e][3][param2];
-        this.field_k = new dq[this.field_c];
+        this.field_k = new ColourRowCacheEntry[this.field_c];
     }
 
     static {

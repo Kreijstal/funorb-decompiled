@@ -17,7 +17,7 @@ final class ala extends GameScreen {
     }
 
     final void onActivated(byte param0) {
-        iqa.field_c.closePanel(104);
+        ToolkitInstance.field_c.closePanel(104);
         if (param0 < 78) {
           this.isFullScreen(-93);
         }
@@ -274,11 +274,11 @@ final class ala extends GameScreen {
     }
 
     final static void showProgress(byte param0, String param1, boolean param2, float param3) {
-        if (null == ena.field_p) {
-          ena.field_p = new vs(ej.field_a, SnakePitBehaviour.field_o);
-          ej.field_a.pushDialog(ena.field_p, 89);
+        if (null == AnimationFrameSet.field_p) {
+          AnimationFrameSet.field_p = new ProgressDialog(ej.field_a, SnakePitBehaviour.field_o);
+          ej.field_a.pushDialog(AnimationFrameSet.field_p, 89);
         }
-        ena.field_p.setProgress(param3, param1, param2, (byte) 110);
+        AnimationFrameSet.field_p.setProgress(param3, param1, param2, (byte) 110);
         SoftwareRasterizer.clear();
         if (param0 != -30) {
           return;
@@ -286,7 +286,7 @@ final class ala extends GameScreen {
         try {
           TileGrid.a(true, (byte) 99);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ala.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ala.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -21,7 +21,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
 
     public final void drawShadow(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = -66 / ((-33 - param1) / 61);
-        gqa.drawModelAt(0, -83584144, param3, param4, PowerUpItemBehaviour.field_t[6], param2);
+        ChatMessage.drawModelAt(0, -83584144, param3, param4, PowerUpItemBehaviour.field_t[6], param2);
     }
 
     private final boolean b(int param0) {
@@ -187,8 +187,8 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           return;
         }
         var8 = param3;
-        var9 = SpawnerBehaviour.a(this.field_i + 10, 12166, 7);
-        gqa.drawModelAt(var5, -83584144, var8, var7, var9, 131072 + param2);
+        var9 = SpawnerBehaviour.getCategoryModel(this.field_i + 10, 12166, 7);
+        ChatMessage.drawModelAt(var5, -83584144, var8, var7, var9, 131072 + param2);
         if (0 != var6) {
           var10 = this.field_p.getFacingX(-25763);
           var11 = this.field_p.getFacingY((byte) 123);
@@ -205,11 +205,11 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         var11 = stackIn_37_0;
         var12 = this.field_c.buildModel(var11 != 0, -1, var10 != 0, (byte) 1);
         if (this.field_f != 10) {
-          gqa.drawModelAt(var5, -83584144, var8, var7, var12, param2);
+          ChatMessage.drawModelAt(var5, -83584144, var8, var7, var12, param2);
         }
         if (this.field_f == 10) {
           var13_ref_ka = this.field_n.getModel((byte) 74);
-          gqa.drawModelAt(var5, -83584144, var8, var7, var13_ref_ka, param2);
+          ChatMessage.drawModelAt(var5, -83584144, var8, var7, var13_ref_ka, param2);
         }
         var13 = this.field_p.getHeldItemKind((byte) 126);
         if (var13 != -1) {
@@ -233,7 +233,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
             var14 = AllPlatformsMazeComponent.field_O;
           }
           if (var14 != null) {
-            gqa.drawModelAt(this.field_h, -83584144, param3, param1, (ToolkitModel) (var14), param2 + 3670016);
+            ChatMessage.drawModelAt(this.field_h, -83584144, param3, param1, (ToolkitModel) (var14), param2 + 3670016);
           }
         }
         return;
@@ -817,7 +817,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         try {
           this.a(125, this.getRenderX((byte) -122), this.getRenderZ((byte) -114), this.getRenderY((byte) 95));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hf.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hf.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -867,7 +867,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -893,7 +893,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           var3 = new AnimatedLight(tga.field_a, 0, 0, 0, 0, 0, 0, 0);
           this.field_l = new LightSource(var3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -917,7 +917,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           var5 = (RoomLighting) (var4);
           var5.addLightSource((byte) 45, this.field_l);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "hf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

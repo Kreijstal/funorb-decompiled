@@ -18,7 +18,7 @@ final class FallbackShaderEffect extends ShaderEffect {
           }
           this.owner.setTextureCombineMode((byte) -108, param0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vu.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vu.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -148,8 +148,8 @@ final class FallbackShaderEffect extends ShaderEffect {
               TouchSwitchBehaviour.field_s = true;
               if (null != PlatformModel.field_A) {
                 TouchSwitchBehaviour.field_s = false;
-                if (null == tba.field_m) {
-                  tba.field_m = new byte[ColourRowCache.field_b];
+                if (null == MonochromeRowCacheEntry.field_m) {
+                  MonochromeRowCacheEntry.field_m = new byte[ColourRowCache.field_b];
                   sda.field_f = new boolean[ColourRowCache.field_b];
                 }
                 mm.field_g = false;
@@ -195,9 +195,9 @@ final class FallbackShaderEffect extends ShaderEffect {
               bc.field_b.field_X = false;
               HazardModel.field_t.field_r = ThresholdOperator.field_n;
               if (var8 != 0) {
-                stackIn_23_0 = to.field_l;
+                stackIn_23_0 = HardwareGraphicsHeap.field_l;
               } else {
-                stackIn_23_0 = gqa.field_k;
+                stackIn_23_0 = ChatMessage.field_k;
               }
               var16 = stackIn_23_0;
               var9 = var16;
@@ -252,7 +252,7 @@ final class FallbackShaderEffect extends ShaderEffect {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var4), "vu.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var4), "vu.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

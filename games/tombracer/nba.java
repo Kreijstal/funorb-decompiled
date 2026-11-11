@@ -43,7 +43,7 @@ final class nba {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -52,15 +52,15 @@ final class nba {
           AudioOutput.configure(param3, param7, 10);
           WheeledMountComponent.field_P = AudioOutput.createOutput(param0, param5, 0, param4);
           int var8_int = 22 % ((50 - param6) / 54);
-          gg.field_b = AudioOutput.createOutput(param0, param5, 1, param2);
+          HardwareModelIndexData.field_b = AudioOutput.createOutput(param0, param5, 1, param2);
           PitModel.field_n = new PcmStreamMixer();
           BeamShooterBehaviour.field_p = param2;
-          gg.field_b.setStream(PitModel.field_n);
+          HardwareModelIndexData.field_b.setStream(PitModel.field_n);
           LegacyOpenGlUnlitEffect.field_d = param1;
           LegacyOpenGlUnlitEffect.field_d.setVolume((byte) 100, MatchState.field_w);
           WheeledMountComponent.field_P.setStream(LegacyOpenGlUnlitEffect.field_d);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "nba.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "nba.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 

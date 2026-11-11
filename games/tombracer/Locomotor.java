@@ -40,7 +40,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
           param0.writeBits((byte) -126, !this.enabled ? 0 : 1, 1);
           param0.writeBits((byte) 107, !this.locked ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wda.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wda.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         }
     }
 
-    final int b(int param0, int param1) {
+    final int encodeFixed16(int param0, int param1) {
         if (param0 != 0) {
           this.enabled = false;
           return SpawnerBehaviour.fixed16ToBits((byte) 8, 4, param1);
@@ -119,7 +119,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
 
     final int getTrapInitialLocalX(byte param0) {
         if (param0 >= -43) {
-          this.a(-18, true);
+          this.decodeFixed16(-18, true);
           return this.trap.getInitialLocalX(80);
         }
         return this.trap.getInitialLocalX(80);
@@ -145,7 +145,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
         }
     }
 
-    final int a(int param0, boolean param1) {
+    final int decodeFixed16(int param0, boolean param1) {
         if (param1) {
           this.room = (Room) null;
           return NodeHashTable.bitsToFixed16(param0, 122, 4);
@@ -189,7 +189,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
             this.getLocalId((byte) 25);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wda.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wda.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -277,7 +277,7 @@ abstract class Locomotor extends IntrusiveNode implements Switchable, noa, TrapP
           this.room = param0;
           this.assignSwitchableIds(param1, (byte) -119, param0.getTrapIdAllocator(116), (SwitchableIdAllocator) null);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "wda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "wda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

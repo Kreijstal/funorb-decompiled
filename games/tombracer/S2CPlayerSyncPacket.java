@@ -31,7 +31,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
           }
           param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
         int var3 = TombRacer.field_G ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[fa.field_b];
         for (var2 = param0; fa.field_b > var2; var2++) {
-          var1[var2] = new IndexedSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], ck.field_c[var2], mga.field_g);
+          var1[var2] = new IndexedSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], ck.field_c[var2], QueuedHint.field_g);
         }
         MazeGenerator.releaseStatics((byte) 106);
         return var1;
@@ -177,7 +177,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

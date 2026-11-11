@@ -13,21 +13,21 @@ final class GasVentModel extends TrapModel {
         int var2;
         var2 = TombRacer.field_G ? 1 : 0;
         boolean decompiledFrameRemainder0 = true;
-        if (mla.field_a > 0) {
-          mla.field_a = mla.field_a - 1;
-          if (param0 >= mla.field_a) {
+        if (ProjectionMode.field_a > 0) {
+          ProjectionMode.field_a = ProjectionMode.field_a - 1;
+          if (param0 >= ProjectionMode.field_a) {
             if (GameKeyHandler.field_a > 0) {
               dga.a(GameKeyHandler.field_a, 199);
             }
-            if (fp.field_e > 0) {
-              dga.a(fp.field_e, 199);
+            if (TextureCombineSource.field_e > 0) {
+              dga.a(TextureCombineSource.field_e, 199);
             }
             return;
           }
           NodeHashTable.a(16);
           if (GameKeyHandler.field_a <= 0) {
-            if (fp.field_e > 0) {
-              dga.a(fp.field_e, 199);
+            if (TextureCombineSource.field_e > 0) {
+              dga.a(TextureCombineSource.field_e, 199);
             }
             return;
           }
@@ -35,7 +35,7 @@ final class GasVentModel extends TrapModel {
         } else {
           if (0 < GameKeyHandler.field_a) {
             GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
-            if (param0 >= mla.field_a) {
+            if (param0 >= ProjectionMode.field_a) {
               if (GameKeyHandler.field_a > 0) {
                 dga.a(GameKeyHandler.field_a, 199);
               }
@@ -46,18 +46,18 @@ final class GasVentModel extends TrapModel {
               decompiledFrameRemainder0 = !(GameKeyHandler.field_a <= 0);
               if (decompiledFrameRemainder0) {
                 dga.a(GameKeyHandler.field_a, 199);
-                if (fp.field_e > 0) {
-                  dga.a(fp.field_e, 199);
+                if (TextureCombineSource.field_e > 0) {
+                  dga.a(TextureCombineSource.field_e, 199);
                 }
                 return;
               }
             }
           }
           if (decompiledFrameRemainder0) {
-            if (0 < fp.field_e) {
-              fp.field_e = fp.field_e - 1;
+            if (0 < TextureCombineSource.field_e) {
+              TextureCombineSource.field_e = TextureCombineSource.field_e - 1;
             }
-            if (param0 < mla.field_a) {
+            if (param0 < ProjectionMode.field_a) {
               NodeHashTable.a(16);
             }
             if (GameKeyHandler.field_a > 0) {
@@ -65,17 +65,17 @@ final class GasVentModel extends TrapModel {
             }
           }
         }
-        if (fp.field_e <= 0) {
+        if (TextureCombineSource.field_e <= 0) {
           return;
         }
-        dga.a(fp.field_e, 199);
+        dga.a(TextureCombineSource.field_e, 199);
     }
 
     final void configureFor(WorldBody param0, int param1, TrapPart param2) {
         try {
           super.configureFor(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pqa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pqa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -243,7 +243,7 @@ final class GasVentModel extends TrapModel {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ final class GasVentModel extends TrapModel {
           int var3_int = -121 / ((param0 + 8) / 40);
           super.encode((byte) -64, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pqa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pqa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class GasVentModel extends TrapModel {
             field_r = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pqa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pqa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -272,9 +272,9 @@ final class GasVentModel extends TrapModel {
         try {
           int var6_int = 92 % ((param4 + 38) / 47);
           var7 = GameScreen.positiveModulo(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -74);
-          gqa.drawModelAt(var7, -83584144, param1, param2, RevolverItemComponent.field_J[6], param3);
+          ChatMessage.drawModelAt(var7, -83584144, param1, param2, RevolverItemComponent.field_J[6], param3);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pqa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pqa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

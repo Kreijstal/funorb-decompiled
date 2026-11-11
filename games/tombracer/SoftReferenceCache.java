@@ -11,14 +11,14 @@ final class SoftReferenceCache {
     static int[] field_d;
 
     final Object nextValue(byte param0) {
-        pb var2;
+        CacheEntry var2;
         Object var3;
         int var5;
-        pb var6;
-        pb var7;
+        CacheEntry var6;
+        CacheEntry var7;
         Object var3Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
-        var2 = (pb) (this.field_c.next((byte) 55));
+        var2 = (CacheEntry) (this.field_c.next((byte) 55));
         if (param0 == 60) {
           while (var2 != null) {
             var3 = var2.getValue(29243);
@@ -26,7 +26,7 @@ final class SoftReferenceCache {
               return var3;
             }
             var6 = var2;
-            var2 = (pb) (this.field_c.next((byte) 55));
+            var2 = (CacheEntry) (this.field_c.next((byte) 55));
             var6.unlink(param0 ^ 21);
             var6.unlinkSecondary(-7975);
             this.field_e = this.field_e + var6.field_m;
@@ -43,7 +43,7 @@ final class SoftReferenceCache {
             return var3Lifetime1;
           }
           var7 = var2;
-          var2 = (pb) (this.field_c.next((byte) 55));
+          var2 = (CacheEntry) (this.field_c.next((byte) 55));
           var7.unlink(param0 ^ 21);
           var7.unlinkSecondary(-7975);
           this.field_e = this.field_e + var7.field_m;
@@ -52,9 +52,9 @@ final class SoftReferenceCache {
 
     final Object get(byte param0, long param1) {
         Object var8 = null;
-        tja var6 = null;
-        pb var7 = (pb) (this.field_c.get(param1, false));
-        tja var6Lifetime1;
+        HardCacheEntry var6 = null;
+        CacheEntry var7 = (CacheEntry) (this.field_c.get(param1, false));
+        HardCacheEntry var6Lifetime1;
         if (var7 == null) {
           return null;
         }
@@ -62,14 +62,14 @@ final class SoftReferenceCache {
           field_d = (int[]) null;
           var8 = var7.getValue(29243);
           if (var8 != null) {
-            if (!var7.a(14646)) {
+            if (!var7.isSoftReference(14646)) {
               this.field_f.addLast(var7, -11396);
               var7.secondaryKey = 0L;
             } else {
-              var6 = new tja(var8, var7.field_m);
+              var6 = new HardCacheEntry(var8, var7.field_m);
               this.field_c.put(var6, (byte) 125, var7.key);
               this.field_f.addLast(var6, -11396);
-              ((pb) ((Object) var6)).secondaryKey = 0L;
+              ((CacheEntry) ((Object) var6)).secondaryKey = 0L;
               var7.unlink(118);
               var7.unlinkSecondary(-7975);
             }
@@ -82,14 +82,14 @@ final class SoftReferenceCache {
         }
         Object var9 = var7.getValue(29243);
         if (var9 != null) {
-          if (!var7.a(14646)) {
+          if (!var7.isSoftReference(14646)) {
             this.field_f.addLast(var7, -11396);
             var7.secondaryKey = 0L;
           } else {
-            var6Lifetime1 = new tja(var9, var7.field_m);
+            var6Lifetime1 = new HardCacheEntry(var9, var7.field_m);
             this.field_c.put(var6Lifetime1, (byte) 125, var7.key);
             this.field_f.addLast(var6Lifetime1, -11396);
-            ((pb) ((Object) var6Lifetime1)).secondaryKey = 0L;
+            ((CacheEntry) ((Object) var6Lifetime1)).secondaryKey = 0L;
             var7.unlink(118);
             var7.unlinkSecondary(-7975);
           }
@@ -115,23 +115,23 @@ final class SoftReferenceCache {
     }
 
     final Object firstValue(byte param0) {
-        pb var2;
+        CacheEntry var2;
         Object var3;
         int var5;
-        pb var6;
-        pb var7;
-        pb var2Lifetime1;
+        CacheEntry var6;
+        CacheEntry var7;
+        CacheEntry var2Lifetime1;
         Object var3Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 > 83) {
-          var2 = (pb) (this.field_c.first((byte) 35));
+          var2 = (CacheEntry) (this.field_c.first((byte) 35));
           while (var2 != null) {
             var3 = var2.getValue(29243);
             if (var3 != null) {
               return var3;
             }
             var6 = var2;
-            var2 = (pb) (this.field_c.next((byte) 55));
+            var2 = (CacheEntry) (this.field_c.next((byte) 55));
             var6.unlink(121);
             var6.unlinkSecondary(-7975);
             this.field_e = this.field_e + var6.field_m;
@@ -139,7 +139,7 @@ final class SoftReferenceCache {
           return null;
         }
         field_d = (int[]) null;
-        var2Lifetime1 = (pb) (this.field_c.first((byte) 35));
+        var2Lifetime1 = (CacheEntry) (this.field_c.first((byte) 35));
         while (true) {
           if (var2Lifetime1 == null) {
             return null;
@@ -149,7 +149,7 @@ final class SoftReferenceCache {
             return var3Lifetime1;
           }
           var7 = var2Lifetime1;
-          var2Lifetime1 = (pb) (this.field_c.next((byte) 55));
+          var2Lifetime1 = (CacheEntry) (this.field_c.next((byte) 55));
           var7.unlink(121);
           var7.unlinkSecondary(-7975);
           this.field_e = this.field_e + var7.field_m;
@@ -158,20 +158,20 @@ final class SoftReferenceCache {
 
     final void demoteOldEntries(int param0, int param1) {
         long fieldTemp$0 = 0L;
-        pb var3;
-        eba var4;
+        CacheEntry var3;
+        SoftCacheEntry var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 < 59) {
           return;
         }
-        var3 = (pb) (this.field_f.first(100));
+        var3 = (CacheEntry) (this.field_f.first(100));
         while (var3 != null) {
-          if (!var3.a(14646)) {
+          if (!var3.isSoftReference(14646)) {
             fieldTemp$0 = var3.secondaryKey + 1L;
             var3.secondaryKey = var3.secondaryKey + 1L;
             if ((long)param1 < fieldTemp$0) {
-              var4 = new eba(var3.getValue(29243), var3.field_m);
+              var4 = new SoftCacheEntry(var3.getValue(29243), var3.field_m);
               this.field_c.put(var4, (byte) 124, var3.key);
               ig.insertSecondaryAfter(31, var4, var3);
               var3.unlink(126);
@@ -179,14 +179,14 @@ final class SoftReferenceCache {
             }
           } else {
             if (var3.getValue(29243) != null) {
-              var3 = (pb) (this.field_f.next(-122));
+              var3 = (CacheEntry) (this.field_f.next(-122));
               continue;
             }
             var3.unlink(120);
             var3.unlinkSecondary(-7975);
             this.field_e = this.field_e + var3.field_m;
           }
-          var3 = (pb) (this.field_f.next(-122));
+          var3 = (CacheEntry) (this.field_f.next(-122));
         }
         return;
     }
@@ -198,7 +198,7 @@ final class SoftReferenceCache {
         try {
           this.putWeighted(-1, param1, 1, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class SoftReferenceCache {
         field_d = null;
     }
 
-    private final void removeEntry(int param0, pb param1) {
+    private final void removeEntry(int param0, CacheEntry param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -245,15 +245,15 @@ final class SoftReferenceCache {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     private final void putWeighted(int param0, Object param1, int param2, long param3) {
-        tja var6 = null;
+        HardCacheEntry var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
-        pb var8 = null;
+        CacheEntry var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -266,13 +266,13 @@ final class SoftReferenceCache {
           this.remove(param3, 1);
           this.field_e = this.field_e - param2;
           while (this.field_e < 0) {
-            var8 = (pb) (this.field_f.poll((byte) 60));
+            var8 = (CacheEntry) (this.field_f.poll((byte) 60));
             this.removeEntry(param0 ^ -2, var8);
           }
-          var6 = new tja(param1, param2);
+          var6 = new HardCacheEntry(param1, param2);
           this.field_c.put(var6, (byte) 114, param3);
           this.field_f.addLast(var6, -11396);
-          ((pb) ((Object) var6)).secondaryKey = 0L;
+          ((CacheEntry) ((Object) var6)).secondaryKey = 0L;
           if (param0 == -1) {
             return;
           }
@@ -288,7 +288,7 @@ final class SoftReferenceCache {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -318,7 +318,7 @@ final class SoftReferenceCache {
     }
 
     private final void remove(long param0, int param1) {
-        pb var4 = (pb) (this.field_c.get(param0, false));
+        CacheEntry var4 = (CacheEntry) (this.field_c.get(param0, false));
         this.removeEntry(param1, var4);
     }
 

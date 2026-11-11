@@ -63,7 +63,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
         int var6 = 0;
         try {
           this.field_w = param0;
-          this.field_B = new FocusableWidget(aua.field_d, (WidgetListener) null);
+          this.field_B = new FocusableWidget(PlainScoringObserverFactory.field_d, (WidgetListener) null);
           this.field_B.field_r = (WidgetPainter) ((Object) new td());
           var7 = LegacyOpenGlFlowingWaterEffect.formatText(108, SafeZoneBehaviour.field_q, new String[]{this.linkStart(-58), this.linkEnd(-35)});
           var3 = 20;
@@ -138,7 +138,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           this.addChild(this.field_B, -1);
           this.setBounds((byte) -31, 300, var5 + (55 + var3), 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

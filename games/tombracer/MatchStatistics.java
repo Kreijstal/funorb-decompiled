@@ -83,7 +83,7 @@ final class MatchStatistics {
 
     final static void a(byte param0, boolean param1) {
         int var2 = 105 % ((param0 + 9) / 56);
-        if (SnakePitTile.a(false)) {
+        if (SnakePitTile.hasVisibleDialog(false)) {
           if (param1) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           }

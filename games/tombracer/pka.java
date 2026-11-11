@@ -24,12 +24,12 @@ final class pka {
         int var2Lifetime4;
         int var2Lifetime1Lifetime1;
         int var2Lifetime1Lifetime2;
-        if (SnakePitTile.a(false)) {
+        if (SnakePitTile.hasVisibleDialog(false)) {
           IntQueue.a((byte) -125);
           var1 = 1;
           if (PlayPhase.beginReconnectGracePeriod(89)) {
-            if (una.a((byte) -87)) {
-              if (sr.a(125)) {
+            if (GpuDataType.a((byte) -87)) {
+              if (MessagePage.a(125)) {
                 var2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
                 if (0 < var2) {
                   var1 = 1;
@@ -39,10 +39,10 @@ final class pka {
               }
               return var1 != 0;
             }
-            S2CNewRoomPacket.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
+            S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
             var1 = 1;
           }
-          if (sr.a(125)) {
+          if (MessagePage.a(125)) {
             var2Lifetime4 = (-1 + PlatformBehaviour.field_o << 8) / 16;
             if (0 < var2Lifetime4) {
               var1 = 1;
@@ -52,11 +52,11 @@ final class pka {
           }
           return var1 != 0;
         }
-        if (!una.a((byte) -115)) {
-          if (!ofa.d(true)) {
+        if (!GpuDataType.a((byte) -115)) {
+          if (!ResizingDialog.d(true)) {
             if (PlayPhase.beginReconnectGracePeriod(89)) {
-              if (una.a((byte) -87)) {
-                if (!sr.a(125)) {
+              if (GpuDataType.a((byte) -87)) {
+                if (!MessagePage.a(125)) {
                   return var1 != 0;
                 }
                 var2Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -66,10 +66,10 @@ final class pka {
                 }
                 return var1 != 0;
               }
-              S2CNewRoomPacket.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
+              S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
               var1 = 1;
             }
-            if (!sr.a(125)) {
+            if (!MessagePage.a(125)) {
               return var1 != 0;
             }
             var2Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -83,8 +83,8 @@ final class pka {
           var1 = 1;
           OpenGlModel.b(-69);
           if (PlayPhase.beginReconnectGracePeriod(89)) {
-            if (una.a((byte) -87)) {
-              if (!sr.a(125)) {
+            if (GpuDataType.a((byte) -87)) {
+              if (!MessagePage.a(125)) {
                 return var1 != 0;
               }
               var2Lifetime1Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -94,10 +94,10 @@ final class pka {
               }
               return var1 != 0;
             }
-            S2CNewRoomPacket.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
+            S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
             var1 = 1;
           }
-          if (!sr.a(125)) {
+          if (!MessagePage.a(125)) {
             return var1 != 0;
           }
           var2Lifetime1Lifetime2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -110,8 +110,8 @@ final class pka {
         var1 = 1;
         TurbulenceNoise3D.d(-1226152383);
         if (PlayPhase.beginReconnectGracePeriod(89)) {
-          if (una.a((byte) -87)) {
-            if (!sr.a(125)) {
+          if (GpuDataType.a((byte) -87)) {
+            if (!MessagePage.a(125)) {
               return var1 != 0;
             }
             var2Lifetime2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -121,10 +121,10 @@ final class pka {
             }
             return var1 != 0;
           }
-          S2CNewRoomPacket.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
+          S2CNewRoomPacket.a(ColourRowCacheEntry.field_f == null ? VortexBehaviour.field_n : true, 113);
           var1 = 1;
         }
-        if (!sr.a(125)) {
+        if (!MessagePage.a(125)) {
           return var1 != 0;
         }
         var2Lifetime3 = (-1 + PlatformBehaviour.field_o << 8) / 16;

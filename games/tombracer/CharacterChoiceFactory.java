@@ -44,7 +44,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
           var10.writeBytes(0, param0, param0.length, 91);
           var10.backpatchByteLength(-var7 + var10.position, (byte) -1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "pq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "pq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -72,10 +72,10 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
           if (param1) {
             return;
           }
-          if (tja.field_q == null) {
+          if (HardCacheEntry.field_q == null) {
             return;
           }
-          tja.field_q.detachWheelListener(116, (java.awt.Component) ((Object) param0));
+          HardCacheEntry.field_q.detachWheelListener(116, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

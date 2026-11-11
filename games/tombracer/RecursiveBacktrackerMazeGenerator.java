@@ -20,7 +20,7 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
           }
           this.carveFrom(param2, param3, param0, 21619);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fva.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fva.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -94,8 +94,8 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
           var5 = var12;
           for (var6 = 0; var6 < 4; var6++) {
             var7 = var14[var6];
-            var8 = param1 + 2 * dma.field_k[var7][0];
-            var9 = dma.field_k[var7][1] * 2 + param2;
+            var8 = param1 + 2 * OpenGlCubeTexture.field_k[var7][0];
+            var9 = OpenGlCubeTexture.field_k[var7][1] * 2 + param2;
             if (this.isUnvisitedCell(var9, param0, var8, -74)) {
               this.carvePassage(param2, (byte) -42, param0, param1, var9, var8);
               this.carveFrom(param0, var8, var9, 21619);
@@ -112,7 +112,7 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

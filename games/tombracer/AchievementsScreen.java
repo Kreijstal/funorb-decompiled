@@ -21,7 +21,7 @@ final class AchievementsScreen extends DropInMenuScreen {
           }
           this.field_o = false;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vba.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vba.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,8 +114,8 @@ final class AchievementsScreen extends DropInMenuScreen {
             var5++;
             stackIn_38_0 = (var4 >= 9) ? 9 : var4;
             var10 = stackIn_38_0;
-            var7 = (40 * (9 - var10) >> 1) + ((-360 + (-188 + (aaa.a(false) - 80)) >> 1) + 40);
-            var8 = 44 * var5 + ((-540 + (-80 + aaa.a(false) - 8) >> 1) + 80);
+            var7 = (40 * (9 - var10) >> 1) + ((-360 + (-188 + (LegacyOpenGlWaterTextures.getCanvasWidth(false) - 80)) >> 1) + 40);
+            var8 = 44 * var5 + ((-540 + (-80 + LegacyOpenGlWaterTextures.getCanvasWidth(false) - 8) >> 1) + 80);
           }
           if (this.isAchievementListed(var9, 38)) {
             if (param1 >= var7 &&
@@ -162,8 +162,8 @@ final class AchievementsScreen extends DropInMenuScreen {
             var4++;
             stackIn_10_0 = (var3 < 9) ? var3 : 9;
             var9_int = stackIn_10_0;
-            var6 = (40 * (-var9_int + 9) >> 1) + (-540 + (-80 + aaa.a(false) - 8) >> 1) + 40;
-            var7 = (-8 + (aaa.a(false) - 80) - 540 >> 1) + param1 + 80 + 44 * var4;
+            var6 = (40 * (-var9_int + 9) >> 1) + (-540 + (-80 + LegacyOpenGlWaterTextures.getCanvasWidth(false) - 8) >> 1) + 40;
+            var7 = (-8 + (LegacyOpenGlWaterTextures.getCanvasWidth(false) - 80) - 540 >> 1) + param1 + 80 + 44 * var4;
           }
           if (this.isAchievementListed(var8, 94)) {
             var9 = this.getAchievementIcon(var8, 0);
@@ -205,7 +205,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         if (param0 <= 111) {
           return 68;
         }
-        return aaa.a(false) / 2 - (-15 + this.items[param1].getWidth(-163) / 2 * this.items.length) + this.items[param1].getWidth(-163) * param1;
+        return LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2 - (-15 + this.items[param1].getWidth(-163) / 2 * this.items.length) + this.items[param1].getWidth(-163) * param1;
     }
 
     private final void drawAchievementDetails(int param0, byte param1) {
@@ -224,7 +224,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         String var12;
         int var7Lifetime1;
         var3 = 26;
-        var4 = -180 + aaa.a(false) - 40;
+        var4 = -180 + LegacyOpenGlWaterTextures.getCanvasWidth(false) - 40;
         var5 = 9 + (80 + param0);
         var6_ref_ha = tga.field_a;
         if (param1 != -22) {
@@ -253,12 +253,12 @@ final class AchievementsScreen extends DropInMenuScreen {
         var10 = this.drawWrappedText(var8, MatchStatistics.field_n, -6671872, 180, var4, eda.field_f, 128, var7Lifetime1, 15);
         var7Lifetime1 = var7Lifetime1 + (5 + 15 * var10);
         if (!this.isAchievementEarned(false, var6)) {
-          kn.field_p.drawLeft(var7Lifetime1, false, pg.field_x, var4, -6671872, -1);
+          TooltipRenderer.field_p.drawLeft(var7Lifetime1, false, pg.field_x, var4, -6671872, -1);
         } else {
-          kn.field_p.drawLeft(var7Lifetime1, false, MessageOverlay.field_p, var4, -14671840, -1);
+          TooltipRenderer.field_p.drawLeft(var7Lifetime1, false, MessageOverlay.field_p, var4, -14671840, -1);
         }
         var7Lifetime1 += 20;
-        discarded$0 = this.drawWrappedText(var12 + "<br><br>" + jn.field_r + EditableTextField.field_zb[var6] + "       " + DisplacementOperator.field_m + EditableTextField.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, param1 ^ -150, var7Lifetime1, 15);
+        discarded$0 = this.drawWrappedText(var12 + "<br><br>" + InstructionsScreen.field_r + EditableTextField.field_zb[var6] + "       " + DisplacementOperator.field_m + EditableTextField.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, TooltipRenderer.field_p, param1 ^ -150, var7Lifetime1, 15);
         return;
     }
 
@@ -266,7 +266,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         if (param1 != 30) {
           this.field_r = (int[]) null;
         }
-        return -30 + SwitchLinkList.b(param1 ^ 30);
+        return -30 + SwitchLinkList.getCanvasHeight(param1 ^ 30);
     }
 
     private final int drawWrappedText(String param0, FontMetrics param1, int param2, int param3, int param4, GameFont param5, int param6, int param7, int param8) {
@@ -322,7 +322,7 @@ final class AchievementsScreen extends DropInMenuScreen {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -337,11 +337,11 @@ final class AchievementsScreen extends DropInMenuScreen {
     }
 
     final void drawPanelContent(boolean param0, int param1, byte param2) {
-        SingleChildWidget.field_v.drawLeft(63 + param1, false, qja.field_i.toUpperCase(), 65, -14279929, -1);
+        SingleChildWidget.field_v.drawLeft(63 + param1, false, MazeSearchNode.field_i.toUpperCase(), 65, -14279929, -1);
         this.drawAchievementGrid(-119, param1);
         this.drawAchievementDetails(param1, (byte) -22);
         if (TextWidgetPainter.a(7)) {
-          kn.field_p.drawCentred(-1, -1, aaa.a(false) / 2, -14345466, 405 + param1, ooa.field_h);
+          TooltipRenderer.field_p.drawCentred(-1, -1, LegacyOpenGlWaterTextures.getCanvasWidth(false) / 2, -14345466, 405 + param1, ooa.field_h);
         }
         if (param2 >= -9) {
           this.field_r = (int[]) null;

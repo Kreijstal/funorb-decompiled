@@ -1,0 +1,89 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SoftwareRenderTarget implements RenderTarget {
+    int[] field_g;
+    static ContextMenuRow[][] field_b;
+    float[] field_e;
+    static String field_f;
+    int field_c;
+    static int field_a;
+    private SoftwareDepthBuffer field_h;
+    int field_d;
+
+    public static void releaseStatics(boolean param0) {
+        field_f = null;
+        if (!param0) {
+          return;
+        }
+        field_b = (ContextMenuRow[][]) null;
+    }
+
+    SoftwareRenderTarget(SoftwareGraphicsToolkit param0, ToolkitSprite param1, SoftwareDepthBuffer param2) {
+        RuntimeException runtimeException = null;
+        SoftwareArgbSprite var5 = null;
+        SoftwareRgbSprite var6 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 instanceof SoftwareRgbSprite) {
+            var6 = (SoftwareRgbSprite) (param1);
+            this.field_g = var6.field_E;
+            this.field_d = var6.height;
+            this.field_c = var6.width;
+          } else {
+            if (!(param1 instanceof SoftwareArgbSprite)) {
+              throw new RuntimeException();
+            }
+            var5 = (SoftwareArgbSprite) (param1);
+            this.field_c = var5.width;
+            this.field_d = var5.height;
+            this.field_g = var5.field_E;
+          }
+          if (param2 != null) {
+            this.field_h = param2;
+            if (this.field_c == this.field_h.field_d &&
+              this.field_d == this.field_h.field_b) {
+              this.field_e = this.field_h.field_h;
+              return;
+            }
+            throw new RuntimeException();
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_14_0 = runtimeException;
+          stackIn_14_1 = new StringBuilder().append("bf.<init>(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
+          if (param2 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_a = -1;
+        field_f = "Water Spray";
+    }
+}

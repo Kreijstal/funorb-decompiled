@@ -45,7 +45,7 @@ class ProceduralTextureProvider implements TextureProvider {
         try {
           param0.addFocusListener(TileOperator.field_n);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qma.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qma.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -275,7 +275,7 @@ class ProceduralTextureProvider implements TextureProvider {
           } else {
             stackIn_135_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_128_0), ((StringBuilder) (Object) stackIn_134_1).append(stackIn_135_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_128_0), ((StringBuilder) (Object) stackIn_134_1).append(stackIn_135_2).append(')').toString());
         }
     }
 

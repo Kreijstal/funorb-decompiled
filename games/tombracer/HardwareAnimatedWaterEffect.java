@@ -4,7 +4,7 @@
 final class HardwareAnimatedWaterEffect extends ShaderEffect {
     static int[] field_f;
     private float field_e;
-    private hk field_d;
+    private HardwareWaterTextures field_d;
 
     final static void a(int param0, long param1, int param2) {
         BitPacketBuffer var4 = ql.field_k;
@@ -17,13 +17,13 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         var4.backpatchByteLength(var4.position - var5, (byte) 11);
     }
 
-    HardwareAnimatedWaterEffect(HardwareGraphicsToolkit param0, hk param1) {
+    HardwareAnimatedWaterEffect(HardwareGraphicsToolkit param0, HardwareWaterTextures param1) {
         super(param0);
         this.field_e = 0.0f;
         try {
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
     final void disable(int param0) {
         if (param0 <= -4) {
           this.owner.setActiveTextureUnit(1, false);
-          this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+          this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
           this.owner.setColorCombineSource(ej.field_c, 0, -55);
           this.owner.setAlphaCombineSource(0, false, ej.field_c);
           this.owner.setTextureCoordinateIndex(1, (byte) 58);
@@ -71,7 +71,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         }
         field_f = (int[]) null;
         this.owner.setActiveTextureUnit(1, false);
-        this.owner.setTextureCombineOperations(iw.field_c, (byte) -110, iw.field_c);
+        this.owner.setTextureCombineOperations(PrimitiveType.field_c, (byte) -110, PrimitiveType.field_c);
         this.owner.setColorCombineSource(ej.field_c, 0, -55);
         this.owner.setAlphaCombineSource(0, false, ej.field_c);
         this.owner.setTextureCoordinateIndex(1, (byte) 58);
@@ -107,11 +107,11 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
 
     final void refreshState(boolean param0, int param1) {
         if (param1 == 5744) {
-          this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, iw.field_c);
+          this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PrimitiveType.field_c);
           return;
         }
         this.field_e = 1.964166283607483f;
-        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, iw.field_c);
+        this.owner.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, PrimitiveType.field_c);
     }
 
     final void bindTexture(int param0, GpuTexture param1, int param2) {
@@ -121,7 +121,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
             this.field_e = -1.8459935188293457f;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "fn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

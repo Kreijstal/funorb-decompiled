@@ -76,7 +76,7 @@ final class uo {
               }
             }
           }
-          qg.field_a = new RoomDefinition[var2];
+          CourseDefinition.field_a = new RoomDefinition[var2];
           sja.field_i = new RoomDefinition[var3];
           if (param0 > -54) {
             return;
@@ -89,7 +89,7 @@ final class uo {
             if (!var17.field_e.isConnector(-25584)) {
               incrementValue$0 = var4Lifetime1;
               var4Lifetime1++;
-              qg.field_a[incrementValue$0] = var17;
+              CourseDefinition.field_a[incrementValue$0] = var17;
             } else {
               incrementValue$1 = var5Lifetime1;
               var5Lifetime1++;
@@ -100,7 +100,7 @@ final class uo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "uo.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "uo.B(" + param0 + ')');
         }
     }
 

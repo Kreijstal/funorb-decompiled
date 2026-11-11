@@ -20,11 +20,11 @@ final class StringCursor {
             }
           } else {
             if (OpenGlSceneLight.field_o == null) {
-              dq.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
-              if (dq.field_f == null) {
+              ColourRowCacheEntry.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
+              if (ColourRowCacheEntry.field_f == null) {
                 var2 = 3;
               } else {
-                fpa.attachCanvasInput(dq.field_f, (byte) 75);
+                fpa.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
                 var2 = 2;
               }
               if (OpenGlSceneLight.field_o == null &&
@@ -33,12 +33,12 @@ final class StringCursor {
               }
               return;
             }
-            dq.field_f = OpenGlSceneLight.field_o.enterFullscreen(27013);
+            ColourRowCacheEntry.field_f = OpenGlSceneLight.field_o.enterFullscreen(27013);
             C2SChooseRewardPacket.notifyPageResizing(param0 ^ -18237, 2);
-            if (dq.field_f == null) {
+            if (ColourRowCacheEntry.field_f == null) {
               var2 = 3;
             } else {
-              fpa.attachCanvasInput(dq.field_f, (byte) 75);
+              fpa.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
               var2 = 2;
             }
           }
@@ -63,8 +63,8 @@ final class StringCursor {
             return;
           }
           if (OpenGlSceneLight.field_o == null) {
-            dq.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
-            if (dq.field_f == null) {
+            ColourRowCacheEntry.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
+            if (ColourRowCacheEntry.field_f == null) {
               var2 = 3;
               if (OpenGlSceneLight.field_o == null &&
                 S2CRoundDeadlinePacket.field_b) {
@@ -73,15 +73,15 @@ final class StringCursor {
               }
               return;
             }
-            fpa.attachCanvasInput(dq.field_f, (byte) 75);
+            fpa.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
             var2 = 2;
           } else {
-            dq.field_f = OpenGlSceneLight.field_o.enterFullscreen(27013);
+            ColourRowCacheEntry.field_f = OpenGlSceneLight.field_o.enterFullscreen(27013);
             C2SChooseRewardPacket.notifyPageResizing(param0 ^ -18237, 2);
-            if (dq.field_f == null) {
+            if (ColourRowCacheEntry.field_f == null) {
               var2 = 3;
             } else {
-              fpa.attachCanvasInput(dq.field_f, (byte) 75);
+              fpa.attachCanvasInput(ColourRowCacheEntry.field_f, (byte) 75);
               var2 = 2;
             }
           }
@@ -127,7 +127,7 @@ final class StringCursor {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class StringCursor {
           this.text = param0;
           this.length = this.text.length();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "in.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "in.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

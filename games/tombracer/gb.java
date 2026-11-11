@@ -5,32 +5,32 @@ final class gb {
     static int field_a;
 
     final static void pushRasterState(int param0) {
-        bd var1 = null;
-        bd var1Lifetime1;
+        RasterStateFrame var1 = null;
+        RasterStateFrame var1Lifetime1;
         if (param0 == -29711) {
-          var1 = (bd) (vt.field_a.pollLast((byte) 22));
+          var1 = (RasterStateFrame) (vt.field_a.pollLast((byte) 22));
           if (var1 == null) {
-            var1 = new bd();
+            var1 = new RasterStateFrame();
           }
           var1.capture(SoftwareRasterizer.width, SoftwareRasterizer.pixels, 116, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.clipBottom);
-          gg.field_e.addLast((byte) -111, var1);
+          HardwareModelIndexData.field_e.addLast((byte) -111, var1);
           return;
         }
         GraphicsToolkit var2 = (GraphicsToolkit) null;
-        gb.a((ModelData) null, -85, (GraphicsToolkit) null);
-        var1Lifetime1 = (bd) (vt.field_a.pollLast((byte) 22));
+        gb.createModel((ModelData) null, -85, (GraphicsToolkit) null);
+        var1Lifetime1 = (RasterStateFrame) (vt.field_a.pollLast((byte) 22));
         if (var1Lifetime1 == null) {
-          var1Lifetime1 = new bd();
+          var1Lifetime1 = new RasterStateFrame();
         }
         var1Lifetime1.capture(SoftwareRasterizer.width, SoftwareRasterizer.pixels, 116, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.height, SoftwareRasterizer.clipBottom);
-        gg.field_e.addLast((byte) -111, var1Lifetime1);
+        HardwareModelIndexData.field_e.addLast((byte) -111, var1Lifetime1);
     }
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
-    final static ToolkitModel a(ModelData param0, int param1, GraphicsToolkit param2) {
+    final static ToolkitModel createModel(ModelData param0, int param1, GraphicsToolkit param2) {
         RuntimeException var3 = null;
         ToolkitModel stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -64,7 +64,7 @@ final class gb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

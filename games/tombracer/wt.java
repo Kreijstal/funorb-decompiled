@@ -44,7 +44,7 @@ final class wt {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -52,13 +52,13 @@ final class wt {
         int var1 = 0;
         int var1Lifetime1;
         ej.field_a.hideAllDialogs(true);
-        if (null != ena.field_p) {
-          ej.field_a.pushDialog(ena.field_p, 87);
+        if (null != AnimationFrameSet.field_p) {
+          ej.field_a.pushDialog(AnimationFrameSet.field_p, 87);
           var1 = 44 % ((param0 + 68) / 49);
           return;
         }
-        ena.field_p = new vs(ej.field_a, SnakePitBehaviour.field_o);
-        ej.field_a.pushDialog(ena.field_p, 87);
+        AnimationFrameSet.field_p = new ProgressDialog(ej.field_a, SnakePitBehaviour.field_o);
+        ej.field_a.pushDialog(AnimationFrameSet.field_p, 87);
         var1Lifetime1 = 44 % ((param0 + 68) / 49);
     }
 

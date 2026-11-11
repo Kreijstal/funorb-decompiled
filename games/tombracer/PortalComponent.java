@@ -55,7 +55,7 @@ final class PortalComponent extends PrefabComponent {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class PortalComponent extends PrefabComponent {
         try {
           this.field_G.encode(param1, 120, this.getRoot((byte) -123));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vka.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vka.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class PortalComponent extends PrefabComponent {
         if (param0 <= 57) {
           field_I = (long[][]) null;
         }
-        return dq.field_f != null ? true : VortexBehaviour.field_n;
+        return ColourRowCacheEntry.field_f != null ? true : VortexBehaviour.field_n;
     }
 
     final int getRenderLayer(int param0) {
@@ -135,7 +135,7 @@ final class PortalComponent extends PrefabComponent {
         try {
           this.field_G = new ComponentTargetList(1, 1, param0.formatVersion, param2);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "vka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "vka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

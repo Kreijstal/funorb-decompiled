@@ -42,7 +42,7 @@ final class FloatingMessage extends IntrusiveNode {
         int var2 = 255 - (this.field_o * 255 >> 16);
         SecondaryNodeDequeIterator.a(var2 / 2, this.field_k, 1, this.field_g, (byte) 99, this.field_s, this.field_t);
         int var4 = HardwareAnimatedWaterEffect.field_f[this.field_r];
-        dh.a(kn.field_p, var2, 0, 16, 4 + this.field_t, this.field_k - 8, var4, this.field_s + 4, 1, 29870, 1, -8 + this.field_g, this.field_q);
+        dh.a(TooltipRenderer.field_p, var2, 0, 16, 4 + this.field_t, this.field_k - 8, var4, this.field_s + 4, 1, 29870, 1, -8 + this.field_g, this.field_q);
     }
 
     final int getHeight(boolean param0) {
@@ -232,7 +232,7 @@ final class FloatingMessage extends IntrusiveNode {
           this.field_r = param0;
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "jha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "jha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

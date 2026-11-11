@@ -1,0 +1,81 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class OpenGlCubeTexture extends OpenGlTexture implements CubeTexture {
+    static int[][] field_k;
+    static LoadingStage field_l;
+
+    public final void bind(byte param0) {
+        if (param0 <= 32) {
+          return;
+        }
+        super.bind((byte) 121);
+    }
+
+    public final void setFilter(int param0, TextureFilter param1) {
+        try {
+          super.setFilter(param0, param1);
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    OpenGlCubeTexture(HardwareOpenGlToolkit param0, int param1, boolean param2, int[][] param3) {
+        super(param0, 34067, SwitchableId.field_a, GpuDataType.field_g, param1 * (param1 * 6), param2);
+        int var5_int = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        int var7 = 0;
+        int var5_intLifetime1;
+        try {
+          this.field_j.bindTexture(true, (GpuTexture) (this));
+          if (param2) {
+            for (var5_int = 0; var5_int < 6; var5_int++) {
+              this.uploadIntMipmaps((byte) 99, var5_int + 34069, param1, param3[var5_int], param1);
+            }
+            return;
+          }
+          var7 = 0;
+          var5_intLifetime1 = var7;
+          while (6 > var7) {
+            jaggl.OpenGL.glTexImage2Di(34069 + var7, 0, this.getGlFormat(92), param1, param1, 0, waa.toGlFormat(this.field_f, 1383), this.field_j.field_od, param3[var7], 0);
+            var7++;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_11_0 = var5;
+          stackIn_11_1 = new StringBuilder().append("dma.<init>(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_k = (int[][]) null;
+        field_l = null;
+        if (param0 != -31784) {
+          field_l = (LoadingStage) null;
+        }
+    }
+
+    static {
+        field_k = new int[][]{new int[]{0, -1}, new int[]{1, 0}, new int[]{0, 1}, new int[]{-1, 0}};
+    }
+}

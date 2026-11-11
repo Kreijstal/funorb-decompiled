@@ -40,9 +40,9 @@ abstract class Transform3D {
     abstract void translate(int param0, int param1, int param2);
 
     final static void loadRoomDefinitions(ResourceArchive param0, int param1) {
-        qg[] var10 = null;
+        CourseDefinition[] var10 = null;
         int var3 = 0;
-        qg var4 = null;
+        CourseDefinition var4 = null;
         RoomDefinition[] var5 = null;
         int var6 = 0;
         RoomDefinition var7 = null;
@@ -70,7 +70,7 @@ abstract class Transform3D {
           }
           du.field_e = true;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "gda.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "gda.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

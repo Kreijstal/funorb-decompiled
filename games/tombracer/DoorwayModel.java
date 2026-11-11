@@ -21,7 +21,7 @@ final class DoorwayModel extends TrapModel {
         try {
           this.field_q = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "lfa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lfa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,30 +91,30 @@ final class DoorwayModel extends TrapModel {
           if (var8 != 0) {
             if (var8 != 1) {
               if (var8 == 2) {
-                var7 = ta.field_ub[22];
+                var7 = LabelledRow.field_ub[22];
               } else {
                 if (var8 != 3) {
                   if (4 != var8) {
                     if (5 == var8) {
-                      var7 = ta.field_ub[25];
+                      var7 = LabelledRow.field_ub[25];
                     }
                   } else {
-                    var7 = ta.field_ub[24];
+                    var7 = LabelledRow.field_ub[24];
                   }
                 } else {
-                  var7 = ta.field_ub[23];
+                  var7 = LabelledRow.field_ub[23];
                 }
               }
             } else {
-              var7 = ta.field_ub[21];
+              var7 = LabelledRow.field_ub[21];
             }
           } else {
-            var7 = ta.field_ub[20];
+            var7 = LabelledRow.field_ub[20];
           }
           var8Lifetime1 = -76 / ((-38 - param4) / 47);
           if (var7 != null) {
             var9 = GameScreen.positiveModulo(4096 + var6_int - this.body.getFacingAngle(-25787) >> 2, 2048, 102);
-            gqa.drawModelAt(var9, -83584144, param1, param2, (ToolkitModel) (var7), param3);
+            ChatMessage.drawModelAt(var9, -83584144, param1, param2, (ToolkitModel) (var7), param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,7 +127,7 @@ final class DoorwayModel extends TrapModel {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class DoorwayModel extends TrapModel {
           this.field_r = param1.getX(param2 - 33);
           this.field_p = param1.getY(param2 + 9612);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "lfa.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lfa.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -238,7 +238,7 @@ final class DoorwayModel extends TrapModel {
           super.encode((byte) -88, param1);
           param1.writeBits((byte) -125, this.field_q, 4);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "lfa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lfa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ScoreStandings {
     static String field_d;
-    static joa field_e;
+    static GzipInflater field_e;
     int[] order;
     static PcmStreamMixer field_c;
     private int[] positions;
@@ -71,11 +71,11 @@ final class ScoreStandings {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (gj.field_d.containsKey(param0)) {
+          if (VertexAttribute.field_d.containsKey(param0)) {
             stackIn_9_0 = 100;
             return stackIn_9_0;
           }
-          var10 = eba.nativeLibraryFileName((byte) 38, param0);
+          var10 = SoftCacheEntry.nativeLibraryFileName((byte) 38, param0);
           if (var10 == null) {
             stackIn_12_0 = -1;
             return stackIn_12_0;
@@ -86,7 +86,7 @@ final class ScoreStandings {
             return stackIn_15_0;
           }
           if (!SecondaryNodeHashTable.field_b.isGroupAvailableByName(var3, -122)) {
-            stackIn_18_0 = SecondaryNodeHashTable.field_b.a(var3, true);
+            stackIn_18_0 = SecondaryNodeHashTable.field_b.getGroupProgressByName(var3, true);
             return stackIn_18_0;
           }
           var15 = SecondaryNodeHashTable.field_b.getFileByName(var3, (byte) 117, "");
@@ -150,7 +150,7 @@ final class ScoreStandings {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class ScoreStandings {
             var7 = var5[var6];
             if (!this.matchState.hasResigned((byte) -83, var7.getPlayerIndex(0)) &&
               -1 == this.positions[var7.getPlayerIndex(0)]) {
-              var8 = var7.getTotal(false) + var7.j(false);
+              var8 = var7.getTotal(false) + var7.getRoundScore(false);
               if (var3 == -1 ||
                 var4 < var8 ||
                 var4 == var8 &&
@@ -204,12 +204,12 @@ final class ScoreStandings {
           this.matchState = param0;
           this.resetForRemainingPlayers((byte) -54);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "sma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_d = "Exploiting a bug";
-        field_e = new joa();
+        field_e = new GzipInflater();
     }
 }

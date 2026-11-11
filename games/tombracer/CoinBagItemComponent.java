@@ -38,7 +38,7 @@ final class CoinBagItemComponent extends ItemComponent {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class CoinBagItemComponent extends ItemComponent {
         var18 = null;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          dga.a(fp.field_e, 199);
+          dga.a(TextureCombineSource.field_e, 199);
           if (null != C2SChooseRewardPacket.field_a) {
             bc.field_b.field_X = true;
             var22 = HiscoresScreen.field_z;
@@ -124,7 +124,7 @@ final class CoinBagItemComponent extends ItemComponent {
             MessageOverlay.field_t.field_t = 0;
             var7.field_G = 0;
             if (ComponentMount.b(param1 + 8193)) {
-              StatusEffect.field_g.field_r = una.field_d.toUpperCase();
+              StatusEffect.field_g.field_r = GpuDataType.field_d.toUpperCase();
               var9 = (2 + dka.field_b.field_G) / 2;
               HiscoresScreen.field_z.setBounds(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
               if (C2SChooseRewardPacket.field_a.field_Mb >= C2SChooseRewardPacket.field_a.field_Jb) {
@@ -138,7 +138,7 @@ final class CoinBagItemComponent extends ItemComponent {
                 HiscoresScreen.field_z.field_r = eu.field_b.toUpperCase();
                 HiscoresScreen.field_z.field_X = true;
               }
-              HiscoresScreen.field_z.field_w = hg.field_g.field_w;
+              HiscoresScreen.field_z.field_w = HardwareModelVertexStream.field_g.field_w;
               if (ValidatedTextInputWidget.field_K > 0) {
                 boolean decompiledSharedTail0 = (1 != ValidatedTextInputWidget.field_K);
                 if (!decompiledSharedTail0) {
@@ -150,7 +150,7 @@ final class CoinBagItemComponent extends ItemComponent {
                 }
                 if ((lh.field_a & 16) == 0 &&
                   !OpenGlDisplayLists.field_e) {
-                  HiscoresScreen.field_z.field_w = hg.field_g.field_C;
+                  HiscoresScreen.field_z.field_w = HardwareModelVertexStream.field_g.field_C;
                 }
                 HiscoresScreen.field_z.field_r = HiscoresScreen.field_z.field_r + "<br>" + var10_ref_String;
               }
@@ -162,8 +162,8 @@ final class CoinBagItemComponent extends ItemComponent {
               stackIn_20_0.field_X = stackIn_21_1;
               var10 = 2;
               if (null != PlatformModel.field_A) {
-                if (tba.field_m == null) {
-                  tba.field_m = new byte[ColourRowCache.field_b];
+                if (MonochromeRowCacheEntry.field_m == null) {
+                  MonochromeRowCacheEntry.field_m = new byte[ColourRowCache.field_b];
                   sda.field_f = new boolean[ColourRowCache.field_b];
                 }
                 var11 = 0;
@@ -365,7 +365,7 @@ final class CoinBagItemComponent extends ItemComponent {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = tn.field_n.field_tb.field_J;
+                var17 = MidiPatch.field_n.field_tb.field_J;
                 var18_ref = (pha) (var17.first(param1 - 79));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
@@ -493,7 +493,7 @@ final class CoinBagItemComponent extends ItemComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var5), "aja.SB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var5), "aja.SB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

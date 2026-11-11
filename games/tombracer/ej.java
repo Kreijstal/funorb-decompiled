@@ -3,7 +3,7 @@
  */
 final class ej {
     static DialogStack field_a;
-    static fp field_c;
+    static TextureCombineSource field_c;
     static String field_b;
     static uca[] field_d;
 
@@ -46,7 +46,7 @@ final class ej {
             if (param0) {
               ej.releaseStatics(-107);
             }
-            var4 = jd.normalizeDisplayName(1, param2);
+            var4 = OpenGlTexture3D.normalizeDisplayName(1, param2);
             if (var4 == null) {
               return false;
             }
@@ -86,12 +86,12 @@ final class ej {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
     static {
         field_b = "Close";
-        field_c = new fp();
+        field_c = new TextureCombineSource();
     }
 }

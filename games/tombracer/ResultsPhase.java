@@ -32,7 +32,7 @@ final class ResultsPhase extends MatchPhase {
           }
           var8.backpatchByteLength(-var7 + var8.position, (byte) 10);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "opa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "opa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class ResultsPhase extends MatchPhase {
             for (var11 = param1; param2 > var11; var11++) {
               var12 = BlockModel.field_n[var11];
               if (!param6) {
-                stackIn_22_0 = ic.field_c[var12];
+                stackIn_22_0 = StatReportingObserverFactory.field_c[var12];
               } else {
                 stackIn_22_0 = jk.field_h[var12];
               }
@@ -122,7 +122,7 @@ final class ResultsPhase extends MatchPhase {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var7), "opa.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var7), "opa.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -242,11 +242,11 @@ final class ResultsPhase extends MatchPhase {
         if (param0 >= -50) {
           this.field_s = false;
         }
-        ura.a(-10985);
+        TextureTransformMode.a(-10985);
         Room.field_j.draw(0, 0);
-        ik.field_h.draw(0, 0);
+        IntArrayRequest.field_h.draw(0, 0);
         WidgetStyleLayer.field_b[1].draw(50, -10);
-        var3 = -250 + aaa.a(false);
+        var3 = -250 + LegacyOpenGlWaterTextures.getCanvasWidth(false);
         var4 = -10 + WidgetStyleLayer.field_b[1].height() - 70;
         WidgetStyleLayer.field_b[1].draw(var3, -10);
         OpenGlIndexArray.field_l.draw(var3, 0);
@@ -296,7 +296,7 @@ final class ResultsPhase extends MatchPhase {
             var20_ref_StringLifetime2 = var16_ref_String;
             var20_ref_StringLifetime2Lifetime1 = var16_ref_String;
           }
-          RoomEffectTraps.a(-1, -73, 20 + var11, var16_ref_String.toUpperCase(), 24 + var9Lifetime1, eda.field_f, 2431750);
+          RoomEffectTraps.drawLeftTextWithShadow(-1, -73, 20 + var11, var16_ref_String.toUpperCase(), 24 + var9Lifetime1, eda.field_f, 2431750);
           if (var14_ref_gsa.field_d) {
             stackIn_22_0 = var14_ref_gsa.field_r;
           } else {
@@ -312,7 +312,7 @@ final class ResultsPhase extends MatchPhase {
             var20_ref_StringLifetime5 = var18_ref_String;
             var20_ref_StringLifetime5Lifetime1 = var18_ref_String;
           }
-          RoomEffectTraps.a(-1, -28, var12 + 17, var18_ref_String.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
+          RoomEffectTraps.drawLeftTextWithShadow(-1, -28, var12 + 17, var18_ref_String.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
           if (var14_ref_gsa.field_k) {
             stackIn_28_0 = var14_ref_gsa.field_p;
           } else {
@@ -326,7 +326,7 @@ final class ResultsPhase extends MatchPhase {
           if (var19 < 10) {
             var20_ref_StringLifetime8 = "0" + var30;
           }
-          RoomEffectTraps.a(-1, -29, var13 + 14, var20_ref_StringLifetime8.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
+          RoomEffectTraps.drawLeftTextWithShadow(-1, -29, var13 + 14, var20_ref_StringLifetime8.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
           var21_int = this.matchState.players[var8Lifetime2].getChosenReward(-104);
           var22 = 0;
           if (var21_int >= 0 &&
@@ -364,8 +364,8 @@ final class ResultsPhase extends MatchPhase {
           var23Lifetime1 = 80 + var9Lifetime1;
           var24Lifetime1 = 32 + var10;
           var32 = String.valueOf(this.field_r[var8Lifetime2].field_m);
-          RoomEffectTraps.a(-1, -59, var24Lifetime1, "$", var23Lifetime1, SingleChildWidget.field_v, 2431750);
-          RoomEffectTraps.a(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime2]);
+          RoomEffectTraps.drawLeftTextWithShadow(-1, -59, var24Lifetime1, "$", var23Lifetime1, SingleChildWidget.field_v, 2431750);
+          RoomEffectTraps.drawLeftTextWithShadow(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime2]);
           var26 = this.matchState.roundWins[var8Lifetime2];
           if (var8Lifetime2 == this.matchState.getRoundWinner(2) &&
             var7Lifetime2 < -100 + fd.field_e) {
@@ -406,7 +406,7 @@ final class ResultsPhase extends MatchPhase {
           gca.field_a.draw(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
           tga.field_a.la();
           this.matchState.players[var8Lifetime3].getAnimator((byte) -42).drawPortrait(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
-          MembersUpsellMenu.drawCentredTextWithShadow(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
+          MembersUpsellMenu.drawCentredTextWithShadow(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, TooltipRenderer.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
           if (!this.field_p &&
             var7Lifetime2 >= var8Lifetime3 * 50 + efa.field_y &&
             var7Lifetime2 < 50 + efa.field_y + this.matchState.playerCount * 50) {
@@ -432,7 +432,7 @@ final class ResultsPhase extends MatchPhase {
             }
             var15Lifetime1 = stackIn_162_0;
             stackIn_165_0 = (var15Lifetime1 == 0) ? 0 : 20;
-            var16 = stackIn_165_0 + Math.max(95 + wb.field_a.a("x" + var39, (byte) -103), wb.field_a.a("+" + var40, (byte) 87) + 70);
+            var16 = stackIn_165_0 + Math.max(95 + wb.field_a.stringWidth("x" + var39, (byte) -103), wb.field_a.stringWidth("+" + var40, (byte) 87) + 70);
             stackIn_167_0 = 40;
             stackIn_167_1 = (int)this.field_r[var8Lifetime3].field_q;
             if ((double)(-var16 + var3) <= this.field_r[var8Lifetime3].field_q) {
@@ -443,12 +443,12 @@ final class ResultsPhase extends MatchPhase {
             var17Lifetime1 = stackIn_167_0 + (stackIn_167_1 - stackIn_168_2);
             var18 = var9Lifetime2 - 70;
             eca.field_c[0].drawScaled(var17Lifetime1, -5 + var18, eca.field_c[0].width() >> 1, eca.field_c[0].height() >> 1);
-            RoomEffectTraps.a(0, -123, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.a(0, -51, 17 + var18, var39, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.a(0, -103, var18 + 55, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.a(0, -65, var18 + 55, var40, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -123, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -51, 17 + var18, var39, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -103, var18 + 55, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -65, var18 + 55, var40, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             if (var15Lifetime1 != 0) {
-              var19Lifetime1 = 25 + wb.field_a.a("x" + var39, (byte) 31) + var17Lifetime1;
+              var19Lifetime1 = 25 + wb.field_a.stringWidth("x" + var39, (byte) 31) + var17Lifetime1;
               var20 = -11 + var18;
               var41 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
               var21 = var41;
@@ -478,7 +478,7 @@ final class ResultsPhase extends MatchPhase {
               stackIn_137_0 = 0;
             }
             var15Lifetime1 = stackIn_137_0;
-            stackIn_139_0 = Math.max(95 + wb.field_a.a("x" + var36, (byte) 49), 70 + wb.field_a.a("+" + var37, (byte) 99));
+            stackIn_139_0 = Math.max(95 + wb.field_a.stringWidth("x" + var36, (byte) 49), 70 + wb.field_a.stringWidth("+" + var37, (byte) 99));
             if (var15Lifetime1 != 0) {
               stackIn_140_1 = 20;
             } else {
@@ -494,12 +494,12 @@ final class ResultsPhase extends MatchPhase {
             var17Lifetime1 = stackIn_142_0 - stackIn_143_1;
             var18 = var9Lifetime2 - 70;
             eca.field_c[1].drawScaled(var17Lifetime1, -5 + var18, eca.field_c[1].width() >> 2, eca.field_c[1].height() >> 2);
-            RoomEffectTraps.a(0, -42, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.a(0, -124, var18 + 17, var36, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.a(0, -92, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            RoomEffectTraps.a(0, -119, 55 + var18, var37, var17Lifetime1 + 25, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -42, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -124, var18 + 17, var36, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -92, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.drawLeftTextWithShadow(0, -119, 55 + var18, var37, var17Lifetime1 + 25, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             if (var15Lifetime1 != 0) {
-              var19Lifetime1 = var17Lifetime1 + (wb.field_a.a("x" + var36, (byte) -122) + 25);
+              var19Lifetime1 = var17Lifetime1 + (wb.field_a.stringWidth("x" + var36, (byte) -122) + 25);
               var20 = var18 - 11;
               var38 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
               var21 = var38;
@@ -531,7 +531,7 @@ final class ResultsPhase extends MatchPhase {
               }
               var15Lifetime1 = stackIn_112_0;
               stackIn_115_0 = (var15Lifetime1 == 0) ? 0 : 20;
-              var16 = stackIn_115_0 + Math.max(95 + wb.field_a.a("x" + var33, (byte) 45), 70 + wb.field_a.a("+" + var34, (byte) 98));
+              var16 = stackIn_115_0 + Math.max(95 + wb.field_a.stringWidth("x" + var33, (byte) 45), 70 + wb.field_a.stringWidth("+" + var34, (byte) 98));
               stackIn_117_0 = 40;
               stackIn_117_1 = (int)this.field_r[var8Lifetime3].field_q;
               if (!((double)(-var16 + var3) <= this.field_r[var8Lifetime3].field_q)) {
@@ -542,12 +542,12 @@ final class ResultsPhase extends MatchPhase {
               var17Lifetime1 = stackIn_117_0 + (stackIn_117_1 - stackIn_118_2);
               var18 = -70 + var9Lifetime2;
               eca.field_c[2].drawScaled(var17Lifetime1, var18 - 5, eca.field_c[2].width() >> 2, eca.field_c[2].height() >> 2);
-              RoomEffectTraps.a(0, -30, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-              RoomEffectTraps.a(0, -100, var18 + 17, var33, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-              RoomEffectTraps.a(0, -126, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-              RoomEffectTraps.a(0, -24, 55 + var18, var34, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -30, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -100, var18 + 17, var33, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -126, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              RoomEffectTraps.drawLeftTextWithShadow(0, -24, 55 + var18, var34, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
               if (var15Lifetime1 != 0) {
-                var19Lifetime1 = var17Lifetime1 + wb.field_a.a("x" + var33, (byte) 36) + 25;
+                var19Lifetime1 = var17Lifetime1 + wb.field_a.stringWidth("x" + var33, (byte) 36) + 25;
                 var20 = -11 + var18;
                 var35 = GridWidgetContainer.field_y[OpenGlUnderwaterEffect.field_f[var14]];
                 var21 = var35;
@@ -603,10 +603,10 @@ final class ResultsPhase extends MatchPhase {
             if (var6.kind == LegacyOpenGlReflectionEffect.field_e) {
               discarded$0 = var3.append("<col=66ffff>").append(var9).append("</col>");
             } else {
-              if (nl.field_d == var6.kind) {
+              if (LoginMethod.field_d == var6.kind) {
                 discarded$1 = var3.append("<col=33bbff>").append(var9).append("</col>");
               } else {
-                if (var6.kind != tr.field_f) {
+                if (var6.kind != QuickChatPhraseSource.field_f) {
                   if (CrusherModel.field_o != var6.kind) {
                     if (var6.kind != PressureSwitchBehaviour.field_r) {
                       discarded$2 = var3.append(var9);
@@ -634,7 +634,7 @@ final class ResultsPhase extends MatchPhase {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -713,7 +713,7 @@ final class ResultsPhase extends MatchPhase {
               var11 = (double)var17;
             }
           }
-          var13 = (double)(aaa.a(false) - 250);
+          var13 = (double)(LegacyOpenGlWaterTextures.getCanvasWidth(false) - 250);
           var15 = -50.0 + var13;
           for (var17Lifetime1 = 0; this.field_r.length > var17Lifetime1; var17Lifetime1++) {
             var18_ref_gsaLifetime1 = this.field_r[var17Lifetime1];
@@ -759,7 +759,7 @@ final class ResultsPhase extends MatchPhase {
           if (var9 > 0.0) {
             MonsterRemains.field_d = var17Lifetime2;
             var17Lifetime2 = 50 + var4_int * 50 + var17Lifetime2;
-            og.field_m = var17Lifetime2;
+            HardwareOpenGlVertexBuffer.field_m = var17Lifetime2;
             var17Lifetime2 += 100;
             var17Lifetime2 += 50;
           } else {
@@ -806,7 +806,7 @@ final class ResultsPhase extends MatchPhase {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 

@@ -13,11 +13,11 @@ final class woa extends DualLinkNode {
           aba.field_a.addLast((byte) -86, param1);
           wj.a(param1, param0, -118);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "woa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "woa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, int param3) {
+    final static void setAnimationArchives(int param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         SwitchState.field_j = param1;
         if (param0 > -52) {
           return;
@@ -25,7 +25,7 @@ final class woa extends DualLinkNode {
         try {
           AnimationSequence.field_c = param2;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "woa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "woa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ final class woa extends DualLinkNode {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "woa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "woa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

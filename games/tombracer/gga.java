@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gga extends ofa implements ButtonListener {
+final class gga extends ResizingDialog implements ButtonListener {
     private FocusableWidget field_N;
     static SpriteData[] field_O;
     static ur field_M;
@@ -56,7 +56,7 @@ final class gga extends ofa implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class gga extends ofa implements ButtonListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -163,14 +163,14 @@ final class gga extends ofa implements ButtonListener {
         UiWidget var4 = null;
         try {
           var3 = null;
-          if (gj.field_o == param1) {
+          if (VertexAttribute.field_o == param1) {
             var3 = SwitchState.field_o;
           } else {
             if (TurbulenceNoise3D.field_j == param1) {
               this.field_p = this.field_p + 10;
               var3 = S2CEventPacket.field_b;
               if (GridWidgetContainer.canResizeViewport((byte) 97)) {
-                var3 = tj.field_h;
+                var3 = VertexArrayPointer.field_h;
                 this.field_p = this.field_p + 20;
               }
             } else {
@@ -205,7 +205,7 @@ final class gga extends ofa implements ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

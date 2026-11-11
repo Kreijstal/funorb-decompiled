@@ -43,14 +43,14 @@ final class PathMoveLocomotor extends Locomotor {
         try {
           this.path = new WaypointPath(param0.formatVersion, param1);
           if (7 < param0.formatVersion) {
-            this.speed = this.a(param1.readBits((byte) 44, 8), false);
+            this.speed = this.decodeFixed16(param1.readBits((byte) 44, 8), false);
           } else {
             this.speed = param1.readBits((byte) 44, 4) << 16;
           }
           if (param0.formatVersion < 11) {
             stackIn_7_0 = this.path;
             stackIn_8_1 = (1 == param1.readBits((byte) 44, 1));
-            ((WaypointPath) (Object) stackIn_7_0).a(stackIn_8_1, 1);
+            ((WaypointPath) (Object) stackIn_7_0).setStopsAtEnd(stackIn_8_1, 1);
           }
           if (param0.formatVersion >= 12) {
             stackIn_13_1 = (param1.readBits((byte) 44, 1) == 1);
@@ -78,7 +78,7 @@ final class PathMoveLocomotor extends Locomotor {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -166,16 +166,16 @@ final class PathMoveLocomotor extends Locomotor {
           if (!this.turnsToFaceWaypoint) {
             var11 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
             var12 = ModelAnimator.cos2048(0, var10 >> 2);
-            var13 = doa.a(2, this.speed, var11);
-            var14 = doa.a(2, this.speed, var12);
+            var13 = doa.multiplyFixedCoarse(2, this.speed, var11);
+            var14 = doa.multiplyFixedCoarse(2, this.speed, var12);
             this.trap.move((byte) -77, var13, var14);
             return;
           }
           if (!this.field_s) {
             var11Lifetime5 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
             var12Lifetime5 = ModelAnimator.cos2048(0, var10 >> 2);
-            var13Lifetime6 = doa.a(2, this.speed, var11Lifetime5);
-            var14Lifetime6 = doa.a(2, this.speed, var12Lifetime5);
+            var13Lifetime6 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime5);
+            var14Lifetime6 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime5);
             this.trap.move((byte) -77, var13Lifetime6, var14Lifetime6);
             return;
           }
@@ -186,8 +186,8 @@ final class PathMoveLocomotor extends Locomotor {
             this.field_s = false;
             var11Lifetime6 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
             var12Lifetime6 = ModelAnimator.cos2048(0, var10 >> 2);
-            var13Lifetime7 = doa.a(2, this.speed, var11Lifetime6);
-            var14Lifetime7 = doa.a(2, this.speed, var12Lifetime6);
+            var13Lifetime7 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime6);
+            var14Lifetime7 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime6);
             this.trap.move((byte) -77, var13Lifetime7, var14Lifetime7);
             return;
           }
@@ -196,8 +196,8 @@ final class PathMoveLocomotor extends Locomotor {
             this.field_s = false;
             var11Lifetime6 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
             var12Lifetime6 = ModelAnimator.cos2048(0, var10 >> 2);
-            var13Lifetime8 = doa.a(2, this.speed, var11Lifetime6);
-            var14Lifetime8 = doa.a(2, this.speed, var12Lifetime6);
+            var13Lifetime8 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime6);
+            var14Lifetime8 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime6);
             this.trap.move((byte) -77, var13Lifetime8, var14Lifetime8);
             return;
           }
@@ -207,13 +207,13 @@ final class PathMoveLocomotor extends Locomotor {
           }
           var11Lifetime7 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
           var12Lifetime7 = ModelAnimator.cos2048(0, var10 >> 2);
-          var13Lifetime9 = doa.a(2, this.speed, var11Lifetime7);
-          var14Lifetime9 = doa.a(2, this.speed, var12Lifetime7);
+          var13Lifetime9 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime7);
+          var14Lifetime9 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime7);
           this.trap.move((byte) -77, var13Lifetime9, var14Lifetime9);
           return;
         }
         this.waypointIndex = 0;
-        if (this.path.a((byte) 21)) {
+        if (this.path.stopsAtEnd((byte) 21)) {
           this.stopped = true;
           return;
         }
@@ -234,16 +234,16 @@ final class PathMoveLocomotor extends Locomotor {
         if (!this.turnsToFaceWaypoint) {
           var11Lifetime1 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime1 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime1 = doa.a(2, this.speed, var11Lifetime1);
-          var14Lifetime1 = doa.a(2, this.speed, var12Lifetime1);
+          var13Lifetime1 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime1);
+          var14Lifetime1 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime1);
           this.trap.move((byte) -77, var13Lifetime1, var14Lifetime1);
           return;
         }
         if (!this.field_s) {
           var11Lifetime2 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime2 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime2 = doa.a(2, this.speed, var11Lifetime2);
-          var14Lifetime2 = doa.a(2, this.speed, var12Lifetime2);
+          var13Lifetime2 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime2);
+          var14Lifetime2 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime2);
           this.trap.move((byte) -77, var13Lifetime2, var14Lifetime2);
           return;
         }
@@ -254,8 +254,8 @@ final class PathMoveLocomotor extends Locomotor {
           this.field_s = false;
           var11Lifetime3 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime3 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime3 = doa.a(2, this.speed, var11Lifetime3);
-          var14Lifetime3 = doa.a(2, this.speed, var12Lifetime3);
+          var13Lifetime3 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime3);
+          var14Lifetime3 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime3);
           this.trap.move((byte) -77, var13Lifetime3, var14Lifetime3);
           return;
         }
@@ -264,8 +264,8 @@ final class PathMoveLocomotor extends Locomotor {
           this.field_s = false;
           var11Lifetime3 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime3 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime4 = doa.a(2, this.speed, var11Lifetime3);
-          var14Lifetime4 = doa.a(2, this.speed, var12Lifetime3);
+          var13Lifetime4 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime3);
+          var14Lifetime4 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime3);
           this.trap.move((byte) -77, var13Lifetime4, var14Lifetime4);
           return;
         }
@@ -275,8 +275,8 @@ final class PathMoveLocomotor extends Locomotor {
         }
         var11Lifetime4 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
         var12Lifetime4 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
-        var13Lifetime5 = doa.a(2, this.speed, var11Lifetime4);
-        var14Lifetime5 = doa.a(2, this.speed, var12Lifetime4);
+        var13Lifetime5 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime4);
+        var14Lifetime5 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime4);
         this.trap.move((byte) -77, var13Lifetime5, var14Lifetime5);
     }
 
@@ -308,14 +308,14 @@ final class PathMoveLocomotor extends Locomotor {
             this.turnsToFaceWaypoint = true;
           }
           this.path.encode(param0, 0);
-          param0.writeBits((byte) 54, this.b(0, this.speed), 8);
+          param0.writeBits((byte) 54, this.encodeFixed16(0, this.speed), 8);
           param0.writeBits((byte) -127, !this.turnsToFaceWaypoint ? 0 : 1, 1);
           if (this.turnsToFaceWaypoint) {
             param0.writeBits((byte) -126, this.stopsWhileTurning ? 1 : 0, 1);
             param0.writeBits((byte) -128, this.turnSpeed, 12);
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ro.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ro.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -326,7 +326,7 @@ final class PathMoveLocomotor extends Locomotor {
             field_q = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ro.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ro.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class PathMoveLocomotor extends Locomotor {
           this.path = new WaypointPath();
           this.speed = 131072;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -371,7 +371,7 @@ final class PathMoveLocomotor extends Locomotor {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -450,7 +450,7 @@ final class PathMoveLocomotor extends Locomotor {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 }

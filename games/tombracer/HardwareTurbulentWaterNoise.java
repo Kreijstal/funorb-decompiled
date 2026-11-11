@@ -74,11 +74,11 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
-              var10[var6] = mga.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var21[var6])];
+              var10[var6] = QueuedHint.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var21[var6])];
             }
             var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], var22);
           } else {
-            var15 = pb.field_l[var2];
+            var15 = CacheEntry.field_l[var2];
             var11 = var15;
             var9 = var11;
             var5 = var9;
@@ -86,7 +86,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = WallTile.bitwiseOr(SnakePitBehaviour.bitwiseAnd(-16777216, var15[var7] << 24), mga.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var21[var7])]);
+              var6_ref_int__[var7] = WallTile.bitwiseOr(SnakePitBehaviour.bitwiseAnd(-16777216, var15[var7] << 24), QueuedHint.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var21[var7])]);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], var17));
           }

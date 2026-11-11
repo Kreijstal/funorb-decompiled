@@ -31,14 +31,14 @@ final class dra {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            hk.writeReflectionCheckResponse(true, var1);
+            HardwareWaterTextures.writeReflectionCheckResponse(true, var1);
             ql.field_k.backpatchByteLength(var1.position - var2, (byte) -17);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1_ref), "dra.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1_ref), "dra.B(" + param0 + ')');
         }
     }
 

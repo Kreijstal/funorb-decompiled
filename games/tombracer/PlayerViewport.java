@@ -66,7 +66,7 @@ final class PlayerViewport {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -153,24 +153,24 @@ final class PlayerViewport {
           if (param2 != -20186) {
             return;
           }
-          var4_int = aaa.a(false) - SwitchLinkList.b(0) / 2;
-          var5 = SwitchLinkList.b(0) / 2;
+          var4_int = LegacyOpenGlWaterTextures.getCanvasWidth(false) - SwitchLinkList.getCanvasHeight(0) / 2;
+          var5 = SwitchLinkList.getCanvasHeight(0) / 2;
           if (mf.field_d == param1) {
-            this.setEdges(0, 0, 8, aaa.a(false), SwitchLinkList.b(0));
+            this.setEdges(0, 0, 8, LegacyOpenGlWaterTextures.getCanvasWidth(false), SwitchLinkList.getCanvasHeight(0));
             return;
           }
           if (param1 == OpenGlEnvironmentWaterEffect.field_j) {
-            this.setEdges(0, 0, param2 + 20194, var4_int, SwitchLinkList.b(param2 ^ -20186));
+            this.setEdges(0, 0, param2 + 20194, var4_int, SwitchLinkList.getCanvasHeight(param2 ^ -20186));
             return;
           }
           if (ByteStorage.field_e == param1) {
-            this.setEdges(var4_int, 0, 8, aaa.a(false), var5 << 1);
+            this.setEdges(var4_int, 0, 8, LegacyOpenGlWaterTextures.getCanvasWidth(false), var5 << 1);
             return;
           }
           if (param1 != mma.field_c) {
             return;
           }
-          this.setEdges(var4_int, param0 * var5, 8, aaa.a(false), (param0 + 1) * var5);
+          this.setEdges(var4_int, param0 * var5, 8, LegacyOpenGlWaterTextures.getCanvasWidth(false), (param0 + 1) * var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,7 +182,7 @@ final class PlayerViewport {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -248,10 +248,10 @@ final class PlayerViewport {
 
     private final boolean isOnScreen(int param0) {
         if (param0 == 0) {
-          return this.intersectsArea(aaa.a(false), (byte) 59, SwitchLinkList.b(param0 ^ 0), 0, 0);
+          return this.intersectsArea(LegacyOpenGlWaterTextures.getCanvasWidth(false), (byte) 59, SwitchLinkList.getCanvasHeight(param0 ^ 0), 0, 0);
         }
         this.targetTop = 126;
-        return this.intersectsArea(aaa.a(false), (byte) 59, SwitchLinkList.b(param0 ^ 0), 0, 0);
+        return this.intersectsArea(LegacyOpenGlWaterTextures.getCanvasWidth(false), (byte) 59, SwitchLinkList.getCanvasHeight(param0 ^ 0), 0, 0);
     }
 
     private final void setEdges(int param0, int param1, int param2, int param3, int param4) {
@@ -266,9 +266,9 @@ final class PlayerViewport {
         this.bottom = param4;
     }
 
-    final void a(byte param0, int param1) {
+    final void setZoomOverride(byte param0, int param1) {
         int var3 = 81 % ((-76 - param0) / 39);
-        this.field_n.a(0, param1);
+        this.field_n.setZoomOverride(0, param1);
     }
 
     final static void drawTiledFrame(int param0, int param1, byte param2, int param3, ToolkitSprite[] param4, int param5) {
@@ -324,7 +324,7 @@ final class PlayerViewport {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param5).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -337,7 +337,7 @@ final class PlayerViewport {
           this.field_n = new RoomViewRenderer();
           this.field_d = new dta();
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

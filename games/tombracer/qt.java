@@ -27,7 +27,7 @@ final class qt {
         PortalBehaviour.field_o[ContextMenu.field_Eb] = param2;
         int var6 = param2 + (param1 + param0);
         int var7 = var6 == 0 ? 0 : 1000 * param0 / var6;
-        ic.field_c[ContextMenu.field_Eb] = var7;
+        StatReportingObserverFactory.field_c[ContextMenu.field_Eb] = var7;
         ContextMenu.field_Eb = ContextMenu.field_Eb + 1;
         if (LegacyOpenGlReflectionEffect.field_g < var7) {
           LegacyOpenGlReflectionEffect.field_g = var7;
@@ -121,7 +121,7 @@ final class qt {
               var23 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
               var20 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
               var22 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
-              var21 = nl.a(true, var3_long);
+              var21 = LoginMethod.a(true, var3_long);
               var8_ref_pha = var21;
               stackIn_12_0 = (var20.equals("")) ? 0 : 1;
               var9 = stackIn_12_0;
@@ -148,7 +148,7 @@ final class qt {
             if (var2 == 6) {
               var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-              var31 = nl.a(true, var3_longLifetime1);
+              var31 = LoginMethod.a(true, var3_longLifetime1);
               if (var31 == null) {
                 return;
               }
@@ -251,7 +251,7 @@ final class qt {
                     var7.field_zb = var8 >> 1;
                     var7.field_Ab = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                     var7.field_Eb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                    qha.field_g.addLast((byte) -54, var7);
+                    DemoCourseGenerator.field_g.addLast((byte) -54, var7);
                     return;
                   }
                   if (var2 == 19) {
@@ -300,7 +300,7 @@ final class qt {
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
                 var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                var29 = nl.a(true, var3_longLifetime2);
+                var29 = LoginMethod.a(true, var3_longLifetime2);
                 if (var29 == null) {
                   return;
                 }
@@ -320,7 +320,7 @@ final class qt {
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
-              var30 = nl.a(true, var3_longLifetime2Lifetime1);
+              var30 = LoginMethod.a(true, var3_longLifetime2Lifetime1);
               if (var30 == null) {
                 return;
               }
@@ -349,11 +349,11 @@ final class qt {
             cua.insertSorted(var25, (byte) -97);
             return;
           }
-          var3_ref_pha = (pha) (qha.field_g.first(-80));
+          var3_ref_pha = (pha) (DemoCourseGenerator.field_g.first(-80));
           while (var3_ref_pha != null) {
             var3_ref_pha.unlink(63);
             var3_ref_pha.unlinkSecondary(-7975);
-            var3_ref_pha = (pha) (qha.field_g.next(117));
+            var3_ref_pha = (pha) (DemoCourseGenerator.field_g.next(117));
           }
           var3_ref_phaLifetime1 = (pha) (fua.field_a.startTraversal(-119));
           while (var3_ref_phaLifetime1 != null) {
@@ -406,7 +406,7 @@ final class qt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1_ref), "qt.D(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1_ref), "qt.D(" + param0 + ')');
         }
     }
 
@@ -472,7 +472,7 @@ final class qt {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
         }
     }
 

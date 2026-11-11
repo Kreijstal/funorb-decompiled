@@ -105,7 +105,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (wra) null;
-                      var8.field_f = hg.createProxyConnector((String) (var8.field_c), var8.field_e, false).connect(25927);
+                      var8.field_f = HardwareModelVertexStream.createProxyConnector((String) (var8.field_c), var8.field_e, false).connect(25927);
                     } catch (wra decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (wra) (Object) decompiledCaughtException;

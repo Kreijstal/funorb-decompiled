@@ -81,12 +81,12 @@ final class ConsoleToken extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "mi.A(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "mi.A(" + param0 + ')');
         }
     }
 
     public final String toString() {
-        if (tr.field_f == this.kind) {
+        if (QuickChatPhraseSource.field_f == this.kind) {
           return "Method{" + this.text + "}";
         }
         if (this.kind == CrusherModel.field_o) {
@@ -95,7 +95,7 @@ final class ConsoleToken extends IntrusiveNode {
         if (PressureSwitchBehaviour.field_r == this.kind) {
           return "Boolean{" + this.text + "}";
         }
-        if (nl.field_d == this.kind) {
+        if (LoginMethod.field_d == this.kind) {
           return "Char{" + this.text + "}";
         }
         if (LegacyOpenGlReflectionEffect.field_e == this.kind) {
@@ -136,11 +136,11 @@ final class ConsoleToken extends IntrusiveNode {
           this.text = param2;
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final ConsoleValue evaluate(int param0, ConsoleMethod[] param1) throws rv, ConsoleParseException {
+    final ConsoleValue evaluate(int param0, ConsoleMethod[] param1) throws ConsoleEvaluationException, ConsoleParseException {
         int incrementValue$0 = 0;
         ConsoleValue stackIn_9_0 = null;
         ConsoleValue stackIn_13_0 = null;
@@ -169,7 +169,7 @@ final class ConsoleToken extends IntrusiveNode {
             this.text = (String) null;
           }
           try {
-            if (tr.field_f == this.kind) {
+            if (QuickChatPhraseSource.field_f == this.kind) {
               var7 = new ConsoleValue[this.field_i.size((byte) -16)];
               var8 = var7;
               var4 = 0;
@@ -204,10 +204,10 @@ final class ConsoleToken extends IntrusiveNode {
               stackIn_26_0 = new ConsoleValue(this.text.equals("true"));
               return stackIn_26_0;
             }
-            if (this.kind == nl.field_d) {
+            if (this.kind == LoginMethod.field_d) {
               var9 = this.text.substring(1, this.text.length() - 1);
               if (var9.length() != 1) {
-                throw new rv("Invalid char value: " + var9);
+                throw new ConsoleEvaluationException("Invalid char value: " + var9);
               }
               stackIn_33_0 = new ConsoleValue(var9.charAt(0));
               return stackIn_33_0;
@@ -219,7 +219,7 @@ final class ConsoleToken extends IntrusiveNode {
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = (NumberFormatException) (Object) decompiledCaughtException;
-            throw new rv("NumberFormatException on: " + this.text);
+            throw new ConsoleEvaluationException("NumberFormatException on: " + this.text);
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -232,7 +232,7 @@ final class ConsoleToken extends IntrusiveNode {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 

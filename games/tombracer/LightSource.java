@@ -90,7 +90,7 @@ final class LightSource extends IntrusiveNode {
             return null;
           }
           var7 = (CharSequence) ((Object) param0);
-          var2 = jd.normalizeDisplayName(1, var7);
+          var2 = OpenGlTexture3D.normalizeDisplayName(1, var7);
           if (var2 == null) {
             var2 = param0;
           }
@@ -98,7 +98,7 @@ final class LightSource extends IntrusiveNode {
           var4 = -95 / ((param1 + 46) / 54);
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_tb);
-            var5 = jd.normalizeDisplayName(1, var8);
+            var5 = OpenGlTexture3D.normalizeDisplayName(1, var8);
             if (var5 == null) {
               var5 = var3.field_tb;
             }
@@ -119,7 +119,7 @@ final class LightSource extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class LightSource extends IntrusiveNode {
     }
 
     final static boolean a(byte param0) {
-        lqa var1 = LegacyOpenGlBloomEffect.b(false);
+        RendererOption var1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
         if (var1 == null) {
           return false;
         }
@@ -265,7 +265,7 @@ final class LightSource extends IntrusiveNode {
         try {
           this.animatedLight = param0;
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

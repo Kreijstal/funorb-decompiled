@@ -13,7 +13,7 @@ final class ScrollPane extends UiComponent {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ik var4 = null;
+        IntArrayRequest var4 = null;
         int var4_int = 0;
         int var5 = 0;
         toa var5_ref_toa = null;
@@ -28,7 +28,7 @@ final class ScrollPane extends UiComponent {
           var2 = var10.readUnsignedByte(255);
           var3 = var10.readUnsignedByte(param0 + 255);
           if (var2 == param0) {
-            var4 = (ik) (Player.field_I.first(param0 ^ -80));
+            var4 = (IntArrayRequest) (Player.field_I.first(param0 ^ -80));
             if (var4 == null) {
               DropAnimation.closeGameSocket(60);
               return;
@@ -70,7 +70,7 @@ final class ScrollPane extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "iv.F(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "iv.F(" + param0 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class ScrollPane extends UiComponent {
         this.field_vb.field_t = this.field_t;
         this.field_tb.field_G = -param1 + this.field_G - param0;
         int var4 = 127 % ((84 - param2) / 41);
-        this.field_wb.a(this.field_tb.field_t, -this.field_tb.field_T, param0, false, this.field_G - param0, this.field_t, this.field_vb.field_t, 0);
+        this.field_wb.setScrollbarBounds(this.field_tb.field_t, -this.field_tb.field_T, param0, false, this.field_G - param0, this.field_t, this.field_vb.field_t, 0);
     }
 
     ScrollPane(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3) {
@@ -93,7 +93,7 @@ final class ScrollPane extends UiComponent {
           this.field_tb = param1;
           this.field_vb.addChild(-122, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "iv.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "iv.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

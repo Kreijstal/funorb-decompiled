@@ -16,7 +16,7 @@ final class RoomViewRenderer {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setZoomOverride(int param0, int param1) {
         if (param0 != 0) {
           RoomViewRenderer.takeDecodedOpaqueSprites(17);
         }
@@ -91,7 +91,7 @@ final class RoomViewRenderer {
           var18 = var17 * 2048 / 512;
           var16_ref.setViewportScale(var18, (byte) -88);
           tga.field_a.ya();
-          if (ica.field_a) {
+          if (TextureCombineOperation.field_a) {
             tga.field_a.DA(var13, var14, var17, var17);
           } else {
             tga.field_a.DA(var13, var14, 10 * var17 / 8, var17 * 10 / 8);
@@ -101,7 +101,7 @@ final class RoomViewRenderer {
           if (this.field_d != -1) {
             var20 = this.field_d;
           } else {
-            var21 = var10.a(false);
+            var21 = var10.getDefaultZoom(false);
             if (var21 == 0) {
               var20 = 1;
             } else {
@@ -220,7 +220,7 @@ final class RoomViewRenderer {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param6).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class RoomViewRenderer {
           var4 = ck.field_c[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = mga.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var4[var6])];
+            var5[var6] = QueuedHint.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var4[var6])];
           }
           var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], var5);
         }

@@ -97,7 +97,7 @@ final class RaceStandings {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1_ref), "kqa.D(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1_ref), "kqa.D(" + param0 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class RaceStandings {
           this.matchState = param0;
           this.reset(false);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "kqa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "kqa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

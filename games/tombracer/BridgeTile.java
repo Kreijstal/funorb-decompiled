@@ -34,9 +34,9 @@ final class BridgeTile implements Renderable {
             BridgeTile.releaseStatics(true);
           }
           var5 = (CharSequence) ((Object) param0);
-          var3 = jd.normalizeDisplayName(1, var5);
+          var3 = OpenGlTexture3D.normalizeDisplayName(1, var5);
           var6 = (CharSequence) ((Object) param2);
-          var4 = jd.normalizeDisplayName(1, var6);
+          var4 = OpenGlTexture3D.normalizeDisplayName(1, var6);
           if (var3 == null &&
             var4 == null) {
             return true;
@@ -65,7 +65,7 @@ final class BridgeTile implements Renderable {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -138,9 +138,9 @@ final class BridgeTile implements Renderable {
           return;
         }
         try {
-          gqa.drawModelAt(this.field_e, -83584144, this.getRenderY((byte) 105), this.getRenderX((byte) -102), this.field_f.getModel((byte) 74), this.getRenderZ((byte) -98));
+          ChatMessage.drawModelAt(this.field_e, -83584144, this.getRenderY((byte) 105), this.getRenderX((byte) -102), this.field_f.getModel((byte) 74), this.getRenderZ((byte) -98));
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

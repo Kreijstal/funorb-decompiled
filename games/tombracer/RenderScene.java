@@ -37,7 +37,7 @@ final class RenderScene {
             this.renderTarget = (Camera) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uw.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uw.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class RenderScene {
         try {
           this.layers[param0].remove((byte) 64, param1);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uw.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uw.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class RenderScene {
             this.layers = (RenderLayer[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uw.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uw.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class RenderScene {
           this.layers[param1].add(param2, (byte) -61);
           int var4_int = -46 % ((param0 + 45) / 37);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "uw.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "uw.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class RenderScene {
         int var13Lifetime1;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          vs.field_P = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          ProgressDialog.field_P = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = cq.field_b.length;
           var21 = new int[var1_int];
           var20 = var21;
@@ -205,17 +205,17 @@ final class RenderScene {
             var5 = var4_ref_an.field_i + var4_ref_an.field_z >> 1;
             var6 = var4_ref_an.field_m + var4_ref_an.field_b >> 1;
             var7 = var4_ref_an.field_p + var4_ref_an.field_a >> 1;
-            var8 = vs.field_P[9] >> 2;
-            var9 = vs.field_P[10] >> 2;
-            var10_int = vs.field_P[11] >> 2;
+            var8 = ProgressDialog.field_P[9] >> 2;
+            var9 = ProgressDialog.field_P[10] >> 2;
+            var10_int = ProgressDialog.field_P[11] >> 2;
             var11 = nba.field_a[5] * var10_int + (nba.field_a[4] * var9 + var8 * nba.field_a[3]) >> 14;
             var12 = nba.field_a[8] * var10_int + (var8 * nba.field_a[6] + nba.field_a[7] * var9) >> 14;
             var13 = var10_int * nba.field_a[11] + var8 * nba.field_a[9] + var9 * nba.field_a[10] >> 14;
             var2[var3] = var5 * var11 - (-(var6 * var12) - var7 * var13) >> 16;
           }
-          var3Lifetime1 = vs.field_P[9] >> 8;
-          var4 = vs.field_P[10] >> 8;
-          var5Lifetime1 = vs.field_P[11] >> 8;
+          var3Lifetime1 = ProgressDialog.field_P[9] >> 8;
+          var4 = ProgressDialog.field_P[10] >> 8;
+          var5Lifetime1 = ProgressDialog.field_P[11] >> 8;
           var6Lifetime1 = TimeSwitchBehaviour.field_r << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = ConsoleTokenStream.sin8192(true, var6Lifetime1) >> 8;
@@ -253,14 +253,14 @@ final class RenderScene {
             for (var18 = 0; var18 < 3; var18++) {
               nba.field_a[var18] = nba.field_a[var18] + OpenGlTexture.field_e[var15][var18];
             }
-            ft.projectMeshAndQueueFaces(var17, 1251086882, nba.field_a, vs.field_P, true, false, false);
+            TextureFormat.projectMeshAndQueueFaces(var17, 1251086882, nba.field_a, ProgressDialog.field_P, true, false, false);
             dh.drawMeshFaces(var9Lifetime1, var8Lifetime1, var13Lifetime1, var17, var7Lifetime1, var14, var12Lifetime1, (byte) -23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "uw.B(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "uw.B(" + param0 + ')');
         }
     }
 

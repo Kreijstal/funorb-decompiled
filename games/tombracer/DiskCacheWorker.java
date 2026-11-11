@@ -156,7 +156,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -192,12 +192,12 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static boolean a(int param0) {
-        lqa var1 = LegacyOpenGlBloomEffect.b(false);
+        RendererOption var1 = LegacyOpenGlBloomEffect.getCurrentRendererOption(false);
         if (param0 < 122) {
           DiskCacheWorker.hasFlag2048((byte) -30, -8, 82);
           if (var1 == null) {
@@ -263,7 +263,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class DiskCacheWorker implements Runnable {
           }
           this.field_a = (Thread) (var2.field_f);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ss.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ss.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

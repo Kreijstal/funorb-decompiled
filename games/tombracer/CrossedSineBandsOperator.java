@@ -172,7 +172,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        bb var4 = null;
+        HiscoreTable var4 = null;
         long var4_long = 0L;
         int var5 = 0;
         int var6 = 0;
@@ -225,10 +225,10 @@ final class CrossedSineBandsOperator extends TextureOperator {
           var2 = var28.readUnsignedByte(255);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort(122);
-            var4 = (bb) (TimingPattern.field_b.first(-80));
+            var4 = (HiscoreTable) (TimingPattern.field_b.first(-80));
             while (var4 != null) {
               if (var4.field_n != var3) {
-                var4 = (bb) (TimingPattern.field_b.next(124));
+                var4 = (HiscoreTable) (TimingPattern.field_b.next(124));
                 continue;
               }
               break;
@@ -346,7 +346,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "voa.E(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "voa.E(" + param0 + ')');
         }
     }
 
@@ -387,7 +387,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
           ava.field_d = (-640 + SceneLight.field_i) / 2;
         }
         ToolkitSelector.advanceLobbyTransitions((byte) -98, param1);
-        if (mla.field_a > 0) {
+        if (ProjectionMode.field_a > 0) {
           SimpleHoverMountComponent.a(param5, true, param1, param6);
         }
         MessageOverlay.field_t.field_x = tka.field_q.field_x;
@@ -395,7 +395,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         if (0 < GameKeyHandler.field_a) {
           FallbackShaderEffect.updateOpponentSearchControls((byte) 1, param5, param1, param6);
         }
-        if (0 < fp.field_e) {
+        if (0 < TextureCombineSource.field_e) {
           CoinBagItemComponent.updateLobbyGameControls(param1, -1, param6, param8, param5);
         }
         if (OpenGlDisplayLists.field_e &&
@@ -412,7 +412,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         if (param2 != 4096) {
           return;
         }
-        ava.updateLobbyPlayerRows(tn.field_n, param6, param0, param9, 2);
+        ava.updateLobbyPlayerRows(MidiPatch.field_n, param6, param0, param9, 2);
         lh.field_a = lh.field_a + 1;
     }
 

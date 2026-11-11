@@ -98,7 +98,7 @@ final class sja extends ProceduralTextureProvider {
     public final boolean isTextureReady(int param0, byte param1) {
         if (param1 < 10) {
           field_i = (RoomDefinition[]) null;
-          if (((lqa) (baa.field_d.field_i.field_b)).field_j) {
+          if (((RendererOption) (baa.field_d.field_i.field_b)).field_j) {
             return super.isTextureReady(param0, (byte) 79);
           }
           if (CharacterChoiceTile.a(-13545, param0)) {
@@ -106,7 +106,7 @@ final class sja extends ProceduralTextureProvider {
           }
           return false;
         }
-        if (((lqa) (baa.field_d.field_i.field_b)).field_j) {
+        if (((RendererOption) (baa.field_d.field_i.field_b)).field_j) {
           return super.isTextureReady(param0, (byte) 79);
         }
         if (CharacterChoiceTile.a(-13545, param0)) {

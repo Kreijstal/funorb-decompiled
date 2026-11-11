@@ -123,7 +123,7 @@ final class NodeHashTable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class NodeHashTable {
     final static void a(int param0) {
         int var1 = (-640 + SceneLight.field_i) / 2;
         int var2 = SoftwareTransform3D.field_q * SoftwareTransform3D.field_q;
-        int var3 = -(mla.field_a * mla.field_a) + var2;
+        int var3 = -(ProjectionMode.field_a * ProjectionMode.field_a) + var2;
         C2SRoomResultPacket.field_a.setBounds(199, -214 + SoftwareRasterizer.height, -23776, 90, -(199 * var3 / var2) + var1);
         if (param0 != 16) {
           return;

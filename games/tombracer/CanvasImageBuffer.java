@@ -12,7 +12,7 @@ abstract class CanvasImageBuffer extends IntrusiveNode {
     final static void a(boolean param0, byte param1, boolean param2) {
         if (param1 > 79) {
           if (param2) {
-            wk.field_m = wk.field_m + 1;
+            MapWaypoint.field_m = MapWaypoint.field_m + 1;
             ComponentTargetList.b((byte) 58);
           }
           if (param0) {
@@ -23,7 +23,7 @@ abstract class CanvasImageBuffer extends IntrusiveNode {
         }
         CanvasImageBuffer.a(false, (byte) 60, false);
         if (param2) {
-          wk.field_m = wk.field_m + 1;
+          MapWaypoint.field_m = MapWaypoint.field_m + 1;
           ComponentTargetList.b((byte) 58);
         }
         if (param0) {

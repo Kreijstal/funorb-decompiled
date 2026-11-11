@@ -5,14 +5,14 @@ import java.io.*;
 
 final class DynamicGeometryBuffer {
     static boolean field_c;
-    private qm field_a;
-    private qm field_d;
+    private VertexStreamBuffer field_a;
+    private VertexStreamBuffer field_d;
     private VertexBuffer field_b;
 
     final void release(byte param0) {
         this.field_a.close(12574);
         if (param0 < 22) {
-          this.field_d = (qm) null;
+          this.field_d = (VertexStreamBuffer) null;
         }
     }
 
@@ -69,7 +69,7 @@ final class DynamicGeometryBuffer {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw tba.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+            throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -92,7 +92,7 @@ final class DynamicGeometryBuffer {
         jaclib.memory.Buffer var9 = null;
         int var5Lifetime1;
         try {
-          param0.createVertexLayout(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b, gj.field_n}), new ne(gj.field_e)}, 0);
+          param0.createVertexLayout(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_p, VertexAttribute.field_b, VertexAttribute.field_n}), new VertexStreamLayout(VertexAttribute.field_e)}, 0);
           this.field_a = param0.createVertexBuffer(6, true);
           this.field_d = param0.createVertexBuffer(6, false);
           this.field_d.allocate(393168, 12, true);
@@ -173,7 +173,7 @@ final class DynamicGeometryBuffer {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class DynamicGeometryBuffer {
           this.field_a.allocate(786336, 24, true);
           int var3_int = -61 / ((param0 + 55) / 41);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ni.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ni.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

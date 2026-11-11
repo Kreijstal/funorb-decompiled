@@ -131,11 +131,11 @@ final class MandelbrotOperator extends TextureOperator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_o = null;
         if (!param0) {
           MandelbrotOperator.generatePerlinGrid(false, 72, -128, 0.8583102226257324f, -87, (byte) 7, -60, -76, -111);

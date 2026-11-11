@@ -23,14 +23,14 @@ final class ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var9), "ck.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var9), "ck.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final static void a(int param0, String[][] param1, int param2, Sprite[][] param3, String[] param4, String[] param5, byte[] param6, String[] param7, String[][] param8, int param9, ResourceArchive param10, int param11, byte[] param12, Sprite[][] param13, int[] param14) {
-        tv[] array$0 = null;
-        tv[] array$1 = null;
-        tv[] array$2 = null;
+        ContextMenuRow[] array$0 = null;
+        ContextMenuRow[] array$1 = null;
+        ContextMenuRow[] array$2 = null;
         UiComponent stackIn_8_0;
         UiComponent stackIn_8_1;
         long stackIn_8_2;
@@ -42,7 +42,7 @@ final class ck {
         String stackIn_68_0 = null;
         int stackIn_71_0 = 0;
         Object stackIn_78_0 = null;
-        tv stackIn_86_0 = null;
+        ContextMenuRow stackIn_86_0 = null;
         Object stackIn_98_0 = null;
         RuntimeException stackIn_135_0 = null;
         StringBuilder stackIn_135_1 = null;
@@ -68,7 +68,7 @@ final class ck {
         StringBuilder stackIn_175_1 = null;
         String stackIn_176_2 = null;
         RuntimeException decompiledCaughtException = null;
-        tv stackOut_85_0;
+        ContextMenuRow stackOut_85_0;
         UiComponent var15 = null;
         RuntimeException var15_ref = null;
         UiComponent var16 = null;
@@ -110,7 +110,7 @@ final class ck {
           RasterShape.field_e = new UiComponent(0L, (UiComponent) null);
           LightSource.field_h = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
           ShaderEffect.field_b = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
-          bsa.field_j = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), rfa.field_C, DateFieldsWidget.field_F);
+          bsa.field_j = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
           RasterShape.field_e.addChild(-126, LightSource.field_h);
           if (UnlockOverlay.field_p) {
             RasterShape.field_e.addChild(param11 - 25575, ShaderEffect.field_b);
@@ -128,16 +128,16 @@ final class ck {
           gta.field_b = new UiComponent(0L, ooa.field_f, SnakePitModel.field_m);
           RandomBrickOperator.field_r = new UiComponent(0L, cs.field_a, TestModel.field_r);
           RotateLocomotor.field_o = new UiComponent(0L, cs.field_a, du.field_a);
-          MidiPcmStream.field_K = new UiComponent(0L, cs.field_a, qo.field_i);
+          MidiPcmStream.field_K = new UiComponent(0L, cs.field_a, EllipseShape.field_i);
           MirrorComponent.field_I = new UiComponent(0L, cs.field_a, MatchState.field_N);
           cq.field_e = new UiComponent(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
-          nsa.field_i = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), rfa.field_C, DateFieldsWidget.field_F);
-          TileRenderable.field_c = new UiComponent(0L, hg.field_g, iw.field_b.toUpperCase());
+          nsa.field_i = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
+          TileRenderable.field_c = new UiComponent(0L, HardwareModelVertexStream.field_g, PrimitiveType.field_b.toUpperCase());
           TileRenderable.field_c.field_X = UnlockOverlay.field_p;
           stackIn_8_0 = null;
           stackIn_8_1 = null;
           stackIn_8_2 = 0L;
-          stackIn_8_3 = hg.field_g;
+          stackIn_8_3 = HardwareModelVertexStream.field_g;
           if (UnlockOverlay.field_p) {
             stackIn_9_0 = null;
             stackIn_9_1 = null;
@@ -164,14 +164,14 @@ final class ck {
             OpenGlToolkit.field_fd.addChild(-124, TileRenderable.field_c);
           }
           OpenGlToolkit.field_fd.addChild(-124, CharacterChoiceFactory.field_c);
-          rv.field_c = new UiComponent(0L, Corpse.field_i);
-          rv.field_c.field_bb = 0;
-          rv.field_c.field_z = 1;
+          ConsoleEvaluationException.field_c = new UiComponent(0L, Corpse.field_i);
+          ConsoleEvaluationException.field_c.field_bb = 0;
+          ConsoleEvaluationException.field_c.field_z = 1;
           BrickOperator.field_v = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, GridLineWalker.field_j.toUpperCase());
           VboVertexArray.field_k = new UiComponent(0L, WallModel.field_r);
-          VboVertexArray.field_k.addChild(param11 - 25572, rv.field_c);
+          VboVertexArray.field_k.addChild(param11 - 25572, ConsoleEvaluationException.field_c);
           VboVertexArray.field_k.addChild(-122, BrickOperator.field_v);
-          HazardModel.field_t = new UiComponent(0L, rfa.field_C);
+          HazardModel.field_t = new UiComponent(0L, TombRacerShell.field_C);
           HazardModel.field_t.applyStyle(false, Corpse.field_i);
           HazardModel.field_t.field_bb = 1;
           var16 = HazardModel.field_t;
@@ -181,26 +181,26 @@ final class ck {
           cea.field_a.field_z = 1;
           uaa.field_b = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
           RopeBridgeComponent.field_F = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
-          tn.field_n = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), rfa.field_C, DateFieldsWidget.field_F);
+          MidiPatch.field_n = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
           RoomRegion.field_l.addChild(param11 ^ -25371, cea.field_a);
           RoomRegion.field_l.addChild(-124, uaa.field_b);
           if (UnlockOverlay.field_p) {
             RoomRegion.field_l.addChild(-122, RopeBridgeComponent.field_F);
           }
-          RoomRegion.field_l.addChild(-124, tn.field_n);
+          RoomRegion.field_l.addChild(-124, MidiPatch.field_n);
           bc.field_b = new UiComponent(0L, ClipStack.field_g, OpenGlSprite.field_k.toUpperCase());
           StatusEffect.field_g = new UiComponent(0L, CharacterSelectPhase.field_s);
           C2SSubmitSettingsPacket.field_g = new UiComponent(0L, CommonChooseReward.field_c);
           qna.field_b = new UiComponent(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
           SimpleConditionBehaviour.field_p = new UiComponent[param0 + 4];
-          bf.field_b = new tv[4 + param0][];
-          SimpleConditionBehaviour.field_p[0] = new UiComponent(0L, una.field_j, RoomViewRenderer.field_a);
-          bf.field_b[0] = new tv[6];
+          SoftwareRenderTarget.field_b = new ContextMenuRow[4 + param0][];
+          SimpleConditionBehaviour.field_p[0] = new UiComponent(0L, GpuDataType.field_j, RoomViewRenderer.field_a);
+          SoftwareRenderTarget.field_b[0] = new ContextMenuRow[6];
           var17_int = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var17_int < 5) {
-              bf.field_b[0][1 + var17_int] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, SoundEventPlayer.field_f[var17_int], SocketArchiveNetworkClient.field_w[var17_int]);
+              SoftwareRenderTarget.field_b[0][1 + var17_int] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, SoundEventPlayer.field_f[var17_int], SocketArchiveNetworkClient.field_w[var17_int]);
               var17_int++;
               if (var21 == 0) {
                 continue;
@@ -208,35 +208,35 @@ final class ck {
             } else {
               decompiledFrameRemainder0 = !(2 > SafeZoneBehaviour.field_u.length);
               if (decompiledFrameRemainder0) {
-                SimpleConditionBehaviour.field_p[1] = new UiComponent(0L, una.field_j, ConsoleToken.field_j);
-                array$0 = new tv[1 + SafeZoneBehaviour.field_u.length];
-                bf.field_b[1] = array$0;
-                bf.field_b[1][0] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
+                SimpleConditionBehaviour.field_p[1] = new UiComponent(0L, GpuDataType.field_j, ConsoleToken.field_j);
+                array$0 = new ContextMenuRow[1 + SafeZoneBehaviour.field_u.length];
+                SoftwareRenderTarget.field_b[1] = array$0;
+                SoftwareRenderTarget.field_b[1][0] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
               }
             }
             if (decompiledFrameRemainder0) {
               var17_int = 0;
               while (!(var17_int >= SafeZoneBehaviour.field_u.length)) {
-                bf.field_b[1][1 + var17_int] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, Integer.toString(SafeZoneBehaviour.field_u[var17_int]));
+                SoftwareRenderTarget.field_b[1][1 + var17_int] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, Integer.toString(SafeZoneBehaviour.field_u[var17_int]));
                 var17_int++;
                 if (var21 != 0) {
                   break scanLoop1;
                 }
               }
             }
-            SimpleConditionBehaviour.field_p[2] = new UiComponent(0L, una.field_j, nb.field_a);
-            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], WaveformOperator.field_s), new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], LegacyOpenGlEnvironmentWaterEffect.field_g)};
+            SimpleConditionBehaviour.field_p[2] = new UiComponent(0L, GpuDataType.field_j, nb.field_a);
+            SoftwareRenderTarget.field_b[2] = new ContextMenuRow[]{new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], WaveformOperator.field_s), new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], LegacyOpenGlEnvironmentWaterEffect.field_g)};
             break;
           }
           boolean decompiledFrameCompleted0 = true;
           if (MirrorMoverLocomotor.field_r > 1) {
-            SimpleConditionBehaviour.field_p[3] = new UiComponent(0L, una.field_j, k.field_z);
-            array$1 = new tv[1 + MirrorMoverLocomotor.field_r];
-            bf.field_b[3] = array$1;
-            bf.field_b[3][0] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
+            SimpleConditionBehaviour.field_p[3] = new UiComponent(0L, GpuDataType.field_j, k.field_z);
+            array$1 = new ContextMenuRow[1 + MirrorMoverLocomotor.field_r];
+            SoftwareRenderTarget.field_b[3] = array$1;
+            SoftwareRenderTarget.field_b[3][0] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
             var17_int = 0;
             while (!(MirrorMoverLocomotor.field_r <= var17_int)) {
-              bf.field_b[3][1 + var17_int] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, RasterizerOperator.field_m[var17_int]);
+              SoftwareRenderTarget.field_b[3][1 + var17_int] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, RasterizerOperator.field_m[var17_int]);
               var17_int++;
               if (var21 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -249,10 +249,10 @@ final class ck {
           }
           scanLoop2: while (true) {
             if (var17_int < param0) {
-              SimpleConditionBehaviour.field_p[var17_int + 4] = new UiComponent(0L, una.field_j, DebouncedValidationSource.field_e[var17_int]);
-              array$2 = new tv[1 + SnakePitBehaviour.bitwiseAnd((int) SnakePitModel.field_n[var17_int], 255)];
-              bf.field_b[4 + var17_int] = array$2;
-              bf.field_b[var17_int + 4][0] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
+              SimpleConditionBehaviour.field_p[var17_int + 4] = new UiComponent(0L, GpuDataType.field_j, DebouncedValidationSource.field_e[var17_int]);
+              array$2 = new ContextMenuRow[1 + SnakePitBehaviour.bitwiseAnd((int) SnakePitModel.field_n[var17_int], 255)];
+              SoftwareRenderTarget.field_b[4 + var17_int] = array$2;
+              SoftwareRenderTarget.field_b[var17_int + 4][0] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
               stackIn_71_0 = 0;
               if (var21 == 0) {
                 var18 = stackIn_71_0;
@@ -278,7 +278,7 @@ final class ck {
                     stackIn_68_0 = null;
                   }
                   var20 = stackIn_68_0;
-                  bf.field_b[var17_int + 4][var18 + 1] = new tv(0L, qja.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, var19_ref_iu, var20);
+                  SoftwareRenderTarget.field_b[var17_int + 4][var18 + 1] = new ContextMenuRow(0L, MazeSearchNode.field_j, (UiComponent) null, PressureSwitchBehaviour.field_p, var19_ref_iu, var20);
                   var18++;
                 }
                 var17_int++;
@@ -299,23 +299,23 @@ final class ck {
               if (stackIn_78_0Lifetime1 != SimpleConditionBehaviour.field_p[var17_int]) {
                 SimpleConditionBehaviour.field_p[var17_int].field_P = 11;
               }
-              if (null != bf.field_b[var17_int]) {
+              if (null != SoftwareRenderTarget.field_b[var17_int]) {
                 var18Lifetime2 = 0;
-                while (!(bf.field_b[var17_int].length <= var18Lifetime2)) {
-                  stackOut_85_0 = bf.field_b[var17_int][var18Lifetime2];
+                while (!(SoftwareRenderTarget.field_b[var17_int].length <= var18Lifetime2)) {
+                  stackOut_85_0 = SoftwareRenderTarget.field_b[var17_int][var18Lifetime2];
                   stackIn_98_0 = stackOut_85_0;
                   stackIn_86_0 = stackOut_85_0;
                   if (stackIn_86_0 != null &&
-                    bf.field_b[var17_int][var18Lifetime2].field_vb != null) {
-                    bf.field_b[var17_int][var18Lifetime2].field_vb.field_P = 11;
+                    SoftwareRenderTarget.field_b[var17_int][var18Lifetime2].field_vb != null) {
+                    SoftwareRenderTarget.field_b[var17_int][var18Lifetime2].field_vb.field_P = 11;
                   }
                   var18Lifetime2++;
                 }
               }
               var17_int++;
             }
-            HiscoresScreen.field_z = new UiComponent(0L, hg.field_g);
-            hw.field_a = new UiComponent(0L, hg.field_g);
+            HiscoresScreen.field_z = new UiComponent(0L, HardwareModelVertexStream.field_g);
+            hw.field_a = new UiComponent(0L, HardwareModelVertexStream.field_g);
             MessageOverlay.field_t = new UiComponent(0L, tka.field_q);
             MessageOverlay.field_t.applyStyle(false, Corpse.field_i);
             MessageOverlay.field_t.field_bb = 1;
@@ -340,9 +340,9 @@ final class ck {
               var21 != 0)) {
               C2SSubmitSettingsPacket.field_g.addChild(-123, SimpleConditionBehaviour.field_p[var18Lifetime1]);
               var19 = 0;
-              while (!(var19 >= bf.field_b[var18Lifetime1].length)) {
-                if (null != bf.field_b[var18Lifetime1][var19]) {
-                  C2SSubmitSettingsPacket.field_g.addChild(-124, bf.field_b[var18Lifetime1][var19]);
+              while (!(var19 >= SoftwareRenderTarget.field_b[var18Lifetime1].length)) {
+                if (null != SoftwareRenderTarget.field_b[var18Lifetime1][var19]) {
+                  C2SSubmitSettingsPacket.field_g.addChild(-124, SoftwareRenderTarget.field_b[var18Lifetime1][var19]);
                 }
                 var19++;
               }
@@ -425,7 +425,7 @@ final class ck {
           } else {
             stackIn_176_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_135_0), ((StringBuilder) (Object) stackIn_175_1).append(stackIn_176_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_135_0), ((StringBuilder) (Object) stackIn_175_1).append(stackIn_176_2).append(')').toString());
         }
     }
 
@@ -574,7 +574,7 @@ final class ck {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -592,7 +592,7 @@ final class ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.wrapException((Throwable) ((Object) var1), "ck.C(" + param0 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) var1), "ck.C(" + param0 + ')');
         }
     }
 

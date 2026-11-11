@@ -26,7 +26,7 @@ final class BufferedCacheFile {
         int var7;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param0 != -16) {
-          this.b(false);
+          this.length(false);
         }
         if (this.field_l != -1L) {
           if (this.field_j != this.field_l) {
@@ -109,11 +109,11 @@ final class BufferedCacheFile {
         try {
           this.readFully(param0, param0.length, param1, (byte) -112);
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ph.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ph.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final long b(boolean param0) {
+    final long length(boolean param0) {
         if (!param0) {
           return -88L;
         }
@@ -235,7 +235,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class BufferedCacheFile {
               return;
             }
             if (param3 > -22) {
-              this.b(true);
+              this.length(true);
             }
             var5_long = this.field_g;
             var7 = param2;
@@ -384,7 +384,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class BufferedCacheFile {
           this.field_e = new byte[param2];
           this.field_h = new byte[param1];
         } catch (RuntimeException runtimeException) {
-          throw tba.wrapException((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

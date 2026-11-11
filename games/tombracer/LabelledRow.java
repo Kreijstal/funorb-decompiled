@@ -1,0 +1,236 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LabelledRow extends UiComponent {
+    static int[] field_vb;
+    static ToolkitModel[] field_ub;
+    private UiComponent field_wb;
+    private UiComponent field_tb;
+
+    LabelledRow(long param0, Sprite param1, Sprite param2, int param3, UiComponent param4, String param5) {
+        this(param0, (UiComponent) null, param4, param5);
+        try {
+          this.field_wb.field_bb = param3;
+          this.field_wb.field_R = param2;
+          this.field_wb.field_lb = param1;
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ta.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final int measureRowWidth(byte param0, int param1) {
+        if (param0 == 95) {
+          return this.field_wb.measureNaturalWidth((byte) 69) - (-param1 - this.field_tb.measureNaturalWidth((byte) 69));
+        }
+        this.field_tb = (UiComponent) null;
+        return this.field_wb.measureNaturalWidth((byte) 69) - (-param1 - this.field_tb.measureNaturalWidth((byte) 69));
+    }
+
+    LabelledRow(long param0, LabelledRow param1, String param2) {
+        this(param0, param1.field_wb, param1.field_tb, param2);
+    }
+
+    private final void layoutRow(byte param0, int param1) {
+        int var3 = 0;
+        int var3Lifetime1;
+        if (param0 > 109) {
+          this.field_wb.setBounds(this.field_wb.measureNaturalWidth((byte) 69), this.field_t, -23776, 0, 0);
+          var3 = param1 + this.field_wb.field_G;
+          this.field_tb.setBounds(this.field_G - var3, this.field_t, -23776, 0, var3);
+          return;
+        }
+        field_ub = (ToolkitModel[]) null;
+        this.field_wb.setBounds(this.field_wb.measureNaturalWidth((byte) 69), this.field_t, -23776, 0, 0);
+        var3Lifetime1 = param1 + this.field_wb.field_G;
+        this.field_tb.setBounds(this.field_G - var3Lifetime1, this.field_t, -23776, 0, var3Lifetime1);
+    }
+
+    private LabelledRow(long param0, UiComponent param1, UiComponent param2, String param3) {
+        super(param0, (UiComponent) null);
+        try {
+          this.field_wb = new UiComponent(0L, param1);
+          this.field_tb = new UiComponent(0L, param2);
+          this.field_tb.field_r = param3;
+          this.addChild(-124, this.field_wb);
+          this.addChild(-124, this.field_tb);
+          this.invalidateLayoutRecursive(-10966);
+        } catch (RuntimeException runtimeException) {
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ta.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_vb = null;
+        if (param0 != -17) {
+          field_ub = (ToolkitModel[]) null;
+          field_ub = null;
+          return;
+        }
+        field_ub = null;
+    }
+
+    final static RoomDefinition findMainRoomByKey(int param0, boolean param1) {
+        RoomDefinition[] var2;
+        int var3;
+        RoomDefinition var4;
+        int var5;
+        RoomDefinition[] var6;
+        int var3Lifetime1;
+        RoomDefinition var4Lifetime1;
+        var5 = TombRacer.field_G ? 1 : 0;
+        var6 = CourseDefinition.field_a;
+        var2 = var6;
+        if (!param1) {
+          for (var3 = 0; var6.length > var3; var3++) {
+            var4 = var6[var3];
+            if (param0 == var4.field_a) {
+              return var4;
+            }
+          }
+          return null;
+        }
+        LabelledRow.findMainRoomByKey(32, false);
+        for (var3Lifetime1 = 0; var6.length > var3Lifetime1; var3Lifetime1++) {
+          var4Lifetime1 = var6[var3Lifetime1];
+          if (param0 == var4Lifetime1.field_a) {
+            return var4Lifetime1;
+          }
+        }
+        return null;
+    }
+
+    final void setRowBounds(int param0, int param1, byte param2, int param3, int param4, int param5) {
+        if (param2 > -85) {
+          return;
+        }
+        this.setBounds(param0, param4, -23776, param1, param5);
+        this.layoutRow((byte) 123, param3);
+    }
+
+    final static void a(Sprite[][] param0, String[][] param1, int[] param2, int param3, ResourceArchive param4, int param5, IndexedSprite[] param6, byte[] param7, byte[] param8, String[][] param9, String[] param10, ResourceArchive param11, byte param12, int[] param13, Sprite[][] param14, ResourceArchive param15, boolean param16) {
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_23_2 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_32_2 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_35_2 = null;
+        StringBuilder stackIn_37_1 = null;
+        String stackIn_38_2 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_41_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var17_int = 0;
+        RuntimeException var17 = null;
+        String[] var18 = null;
+        try {
+          var18 = (String[]) null;
+          RidgedNoise3D.a(param5, 1, param4, param16, param0, param13, param1, param11, param2, param10, param6, param9, (String[]) null, param14, param15, param3, 1, param7, param8);
+          var17_int = -112 / ((66 - param12) / 41);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var17 = decompiledCaughtException;
+          stackIn_4_0 = var17;
+          stackIn_4_1 = new StringBuilder().append("ta.B(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',');
+          if (param6 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
+          if (param7 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
+          if (param8 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
+          }
+          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
+          if (param9 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',');
+          if (param10 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',');
+          if (param11 == null) {
+            stackIn_32_2 = "null";
+          } else {
+            stackIn_32_2 = "{...}";
+          }
+          stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param12).append(',');
+          if (param13 == null) {
+            stackIn_35_2 = "null";
+          } else {
+            stackIn_35_2 = "{...}";
+          }
+          stackIn_37_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',');
+          if (param14 == null) {
+            stackIn_38_2 = "null";
+          } else {
+            stackIn_38_2 = "{...}";
+          }
+          stackIn_40_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',');
+          if (param15 == null) {
+            stackIn_41_2 = "null";
+          } else {
+            stackIn_41_2 = "{...}";
+          }
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param16).append(')').toString());
+        }
+    }
+
+    static {
+        field_vb = new int[]{190, 280, 400, 440, 490, 246};
+    }
+}

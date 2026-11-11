@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ListTracksCommand extends ConsoleMethod {
-    static mla field_p;
+    static ProjectionMode field_p;
     static int field_o;
 
     public static void releaseStatics(byte param0) {
@@ -25,9 +25,9 @@ final class ListTracksCommand extends ConsoleMethod {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            field_p = (mla) null;
+            field_p = (ProjectionMode) null;
           }
-          stackIn_3_0 = new ConsoleValue(ata.b(-32));
+          stackIn_3_0 = new ConsoleValue(RectangleShape.listTrackNames(-32));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -39,11 +39,11 @@ final class ListTracksCommand extends ConsoleMethod {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
-        field_p = new mla();
+        field_p = new ProjectionMode();
     }
 }

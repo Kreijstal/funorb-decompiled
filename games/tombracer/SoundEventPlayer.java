@@ -79,7 +79,7 @@ final class SoundEventPlayer extends SoundEventQueue {
               var5 = param0.readUnsignedByte(255);
               if ((~var5 != ~HelloCommand.field_q ||
                 var4 != 0) &&
-                (!NetworkArchiveRequest.a(param0, mga.field_j, var5, true) ||
+                (!NetworkArchiveRequest.a(param0, QueuedHint.field_j, var5, true) ||
                 var4 != 0)) {
                 if (ConstrainToCircleLocomotor.field_w != var5) {
                   discarded$2 = var8.append((char)var5);
@@ -91,7 +91,7 @@ final class SoundEventPlayer extends SoundEventQueue {
                     throw new RuntimeException("Unterminated quote!");
                   }
                   var6 = param0.readByte((byte) 52);
-                  if (!NetworkArchiveRequest.a(param0, mga.field_j, var6, true) &&
+                  if (!NetworkArchiveRequest.a(param0, QueuedHint.field_j, var6, true) &&
                     HelloCommand.field_q != var6) {
                     if (ConstrainToCircleLocomotor.field_w == var6) {
                       discarded$0 = var8.append((char)var6);
@@ -112,7 +112,7 @@ final class SoundEventPlayer extends SoundEventQueue {
             }
             break;
           }
-          param2.addLast((byte) -59, new gka(var8.toString()));
+          param2.addLast((byte) -59, new ConsoleHistoryEntry(var8.toString()));
           if (param1 != -58) {
             field_d = (String) null;
           }
@@ -134,7 +134,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -181,12 +181,12 @@ final class SoundEventPlayer extends SoundEventQueue {
           if (this.triggersFollowUpSound(-123, var3_int)) {
             this.enqueue(param1 ^ 86, new SoundEvent(89, param0.getX(param1 + 105), param0.getY(-121), param0.getParameter(param1 ^ -62)));
           }
-          var4 = to.field_j[var3_int];
+          var4 = HardwareGraphicsHeap.field_j[var3_int];
           if (var4 == -1) {
             stackIn_20_0 = null;
             return (PlayingSound) (stackIn_20_0);
           }
-          var5 = to.field_i[var3_int];
+          var5 = HardwareGraphicsHeap.field_i[var3_int];
           if (0 < var5) {
             var4 = var4 + uca.cosmeticRandom.nextBounded(var5, 0);
           }
@@ -200,15 +200,15 @@ final class SoundEventPlayer extends SoundEventQueue {
           if (var3_int == 89) {
             var6 = 300;
           }
-          var7 = to.field_m[var3_int] ? 1 : 0;
-          var8 = to.field_k[var3_int] ? 1 : 0;
+          var7 = HardwareGraphicsHeap.field_m[var3_int] ? 1 : 0;
+          var8 = HardwareGraphicsHeap.field_k[var3_int] ? 1 : 0;
           var9 = -1;
-          var10 = to.field_n[var3_int];
+          var10 = HardwareGraphicsHeap.field_n[var3_int];
           if (var8 == 0) {
-            var9 = AgeValidator.a(this.listenerX, true, param0.getX(param1 - 52));
+            var9 = AgeValidator.computePan(this.listenerX, true, param0.getX(param1 - 52));
             var10 = ol.computeDistanceVolume(param0.getX(-118), var3_int, (byte) -91, this.listenerX, param0.getY(-121), this.listenerY);
           }
-          var11 = MatchProtocol.a(100, (byte) -58, var9, var4, var6, var10);
+          var11 = MatchProtocol.playSoundEffect(100, (byte) -58, var9, var4, var6, var10);
           if (var7 != 0) {
             var11.field_f.setLoopCount(-1);
           }
@@ -227,7 +227,7 @@ final class SoundEventPlayer extends SoundEventQueue {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw tba.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
+          throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
         }
     }
 
