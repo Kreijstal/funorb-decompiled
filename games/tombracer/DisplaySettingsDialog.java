@@ -144,7 +144,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                 this.field_P[incrementValue$0] = var3_ref_dh__[var5];
               }
             }
-            ag.a(-95, this.field_P);
+            FollowCamera.a(-95, this.field_P);
           }
           stackIn_31_1 = !(this.field_P.length <= 0);
           this.field_M = stackIn_31_1;

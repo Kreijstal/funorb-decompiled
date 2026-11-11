@@ -154,9 +154,9 @@ final class TextSpewerBehaviour extends Behaviour {
                 }
               }
               var10 = this.getRoom(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.getTopElevation(0));
-              var10.a(false, 8388608, 0, 8388608, this.field_s);
+              var10.configure(false, 8388608, 0, 8388608, this.field_s);
               var10.setText(0, 16777215, this.field_n[var7]);
-              var10.a(65536, 0, -101, 0);
+              var10.setVelocity(65536, 0, -101, 0);
               this.field_r = this.field_p;
             }
             return;
@@ -172,9 +172,9 @@ final class TextSpewerBehaviour extends Behaviour {
           if (this.field_q) {
             var7Lifetime4 = this.getRandom((byte) 46).nextBounded(this.field_n.length, 0);
             var12 = this.getRoom(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.getTopElevation(0));
-            var12.a(false, 8388608, 0, 8388608, this.field_s);
+            var12.configure(false, 8388608, 0, 8388608, this.field_s);
             var12.setText(0, 16777215, this.field_n[var7Lifetime4]);
-            var12.a(65536, 0, -101, 0);
+            var12.setVelocity(65536, 0, -101, 0);
             this.field_r = this.field_p;
             return;
           }
@@ -183,16 +183,16 @@ final class TextSpewerBehaviour extends Behaviour {
           if (this.field_n.length <= this.field_u) {
             this.field_u = 0;
             var14 = this.getRoom(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.getTopElevation(0));
-            var14.a(false, 8388608, 0, 8388608, this.field_s);
+            var14.configure(false, 8388608, 0, 8388608, this.field_s);
             var14.setText(0, 16777215, this.field_n[var7Lifetime5]);
-            var14.a(65536, 0, -101, 0);
+            var14.setVelocity(65536, 0, -101, 0);
             this.field_r = this.field_p;
             return;
           }
           var13 = this.getRoom(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.getTopElevation(0));
-          var13.a(false, 8388608, 0, 8388608, this.field_s);
+          var13.configure(false, 8388608, 0, 8388608, this.field_s);
           var13.setText(0, 16777215, this.field_n[var7Lifetime5]);
-          var13.a(65536, 0, -101, 0);
+          var13.setVelocity(65536, 0, -101, 0);
           this.field_r = this.field_p;
           return;
         }
@@ -214,9 +214,9 @@ final class TextSpewerBehaviour extends Behaviour {
           if (this.field_q) {
             var7Lifetime1 = this.getRandom((byte) 46).nextBounded(this.field_n.length, 0);
             var16 = this.getRoom(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.getTopElevation(0));
-            var16.a(false, 8388608, 0, 8388608, this.field_s);
+            var16.configure(false, 8388608, 0, 8388608, this.field_s);
             var16.setText(0, 16777215, this.field_n[var7Lifetime1]);
-            var16.a(65536, 0, -101, 0);
+            var16.setVelocity(65536, 0, -101, 0);
             this.field_r = this.field_p;
             return;
           }
@@ -225,16 +225,16 @@ final class TextSpewerBehaviour extends Behaviour {
           if (this.field_n.length <= this.field_u) {
             this.field_u = 0;
             var20 = this.getRoom(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.getTopElevation(0));
-            var20.a(false, 8388608, 0, 8388608, this.field_s);
+            var20.configure(false, 8388608, 0, 8388608, this.field_s);
             var20.setText(0, 16777215, this.field_n[var7Lifetime1Lifetime1]);
-            var20.a(65536, 0, -101, 0);
+            var20.setVelocity(65536, 0, -101, 0);
             this.field_r = this.field_p;
             return;
           }
           var18 = this.getRoom(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.getTopElevation(0));
-          var18.a(false, 8388608, 0, 8388608, this.field_s);
+          var18.configure(false, 8388608, 0, 8388608, this.field_s);
           var18.setText(0, 16777215, this.field_n[var7Lifetime1Lifetime1]);
-          var18.a(65536, 0, -101, 0);
+          var18.setVelocity(65536, 0, -101, 0);
           this.field_r = this.field_p;
           return;
         }
@@ -249,9 +249,9 @@ final class TextSpewerBehaviour extends Behaviour {
         if (this.field_q) {
           var7Lifetime2 = this.getRandom((byte) 46).nextBounded(this.field_n.length, 0);
           var22 = this.getRoom(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.getTopElevation(0));
-          var22.a(false, 8388608, 0, 8388608, this.field_s);
+          var22.configure(false, 8388608, 0, 8388608, this.field_s);
           var22.setText(0, 16777215, this.field_n[var7Lifetime2]);
-          var22.a(65536, 0, -101, 0);
+          var22.setVelocity(65536, 0, -101, 0);
           this.field_r = this.field_p;
           return;
         }
@@ -260,16 +260,16 @@ final class TextSpewerBehaviour extends Behaviour {
         if (this.field_n.length <= this.field_u) {
           this.field_u = 0;
           var24 = this.getRoom(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.getTopElevation(0));
-          var24.a(false, 8388608, 0, 8388608, this.field_s);
+          var24.configure(false, 8388608, 0, 8388608, this.field_s);
           var24.setText(0, 16777215, this.field_n[var7Lifetime3]);
-          var24.a(65536, 0, -101, 0);
+          var24.setVelocity(65536, 0, -101, 0);
           this.field_r = this.field_p;
           return;
         }
         Particle var23 = this.getRoom(true).spawnParticle(this.trap.getX(3), this.trap.getY(param0 ^ 12442), (byte) 100, this.trap.getTopElevation(0));
-        var23.a(false, 8388608, 0, 8388608, this.field_s);
+        var23.configure(false, 8388608, 0, 8388608, this.field_s);
         var23.setText(0, 16777215, this.field_n[var7Lifetime3]);
-        var23.a(65536, 0, -101, 0);
+        var23.setVelocity(65536, 0, -101, 0);
         this.field_r = this.field_p;
     }
 

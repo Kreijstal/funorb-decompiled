@@ -21,12 +21,12 @@ final class eh implements Renderable {
 
     final void a(int param0) {
         int var3;
-        iq var4;
-        iq var4Lifetime1;
-        iq var4Lifetime2;
+        Camera var4;
+        Camera var4Lifetime1;
+        Camera var4Lifetime2;
         var3 = TombRacer.field_G ? 1 : 0;
         this.field_g = new bua(1, this.field_f);
-        if (this.field_e.n((byte) 87) == 4) {
+        if (this.field_e.getStyle((byte) 87) == 4) {
           if (this.field_b < 33) {
             this.field_g.a(3, false, (byte) -96, 10);
           } else {
@@ -38,7 +38,7 @@ final class eh implements Renderable {
           }
           return;
         }
-        if (this.field_e.n((byte) 87) != 0) {
+        if (this.field_e.getStyle((byte) 87) != 0) {
           return;
         }
         if (this.field_b < 33) {
@@ -46,8 +46,8 @@ final class eh implements Renderable {
           if (param0 > 27) {
             return;
           }
-          var4 = (iq) null;
-          this.render(-82, (iq) null);
+          var4 = (Camera) null;
+          this.render(-82, (Camera) null);
           return;
         }
         if (this.field_b >= 66) {
@@ -55,16 +55,16 @@ final class eh implements Renderable {
           if (param0 > 27) {
             return;
           }
-          var4Lifetime1 = (iq) null;
-          this.render(-82, (iq) null);
+          var4Lifetime1 = (Camera) null;
+          this.render(-82, (Camera) null);
           return;
         }
         this.field_g.a(3, false, (byte) 34, 4);
         if (param0 > 27) {
           return;
         }
-        var4Lifetime2 = (iq) null;
-        this.render(-82, (iq) null);
+        var4Lifetime2 = (Camera) null;
+        this.render(-82, (Camera) null);
         return;
     }
 
@@ -73,7 +73,7 @@ final class eh implements Renderable {
         field_i = (byte[][]) null;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         try {
           gqa.a(this.field_a, -83584144, this.getRenderY((byte) 123), this.getRenderX((byte) 122), this.field_g.b((byte) 74), this.getRenderZ((byte) -88));
           if (param0 < 103) {
@@ -86,29 +86,29 @@ final class eh implements Renderable {
 
     public final int getRenderY(byte param0) {
         if (param0 >= 91) {
-          return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.i(1024);
+          return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.getOffsetY(1024);
         }
         this.isRenderExpired((byte) 85);
-        return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.i(1024);
+        return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.getOffsetY(1024);
     }
 
     public final void updateAnimation(int param0) {
         if (param0 != -4366) {
-          iq var3 = (iq) null;
-          this.render(-33, (iq) null);
+          Camera var3 = (Camera) null;
+          this.render(-33, (Camera) null);
         }
     }
 
     public final int getRenderX(byte param0) {
         int var2 = 116 % ((-23 - param0) / 53);
-        return this.field_e.getRenderX((byte) -89) + this.field_d + this.field_e.k(-13019);
+        return this.field_e.getRenderX((byte) -89) + this.field_d + this.field_e.getOffsetX(-13019);
     }
 
     public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           return 121;
         }
-        if (this.field_e.n((byte) 87) != 1) {
+        if (this.field_e.getStyle((byte) 87) != 1) {
           return this.field_e.getRenderZ((byte) -88) - 655360;
         }
         return this.field_e.getRenderZ((byte) -121);

@@ -45,17 +45,17 @@ abstract class rfa extends AppletGameShell implements ShellListener {
     final void a(LoadingStage param0, int param1) {
         try {
           dma.field_l = param0;
-          this.b((byte) 106, true);
+          this.enableDefaultMessageGroups((byte) 106, true);
           if (param1 <= 34) {
             return;
           }
           try {
-            this.s(-1);
-            this.j(-13);
-            this.o(9822);
-            this.g((byte) -126);
-            this.p(22);
-            this.d((byte) 87);
+            this.enableMessageGroup1(-1);
+            this.enableMessageGroup2(-13);
+            this.enableMessageGroup5(9822);
+            this.enableMessageGroup4((byte) -126);
+            this.enableMessageGroup6(22);
+            this.enableMessageGroups11To13((byte) 87);
             S2CEventPacket.field_c[9] = -1;
             S2CEventPacket.field_c[10] = -1;
             kra.field_c = new Vector();
@@ -114,7 +114,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
             if (PlayPhase.beginReconnectGracePeriod(105)) {
               stackIn_46_1 = -85;
               stackIn_47_2 = (null != dq.field_f);
-              var3 = this.a(stackIn_46_1, stackIn_47_2);
+              var3 = this.pollLogin(stackIn_46_1, stackIn_47_2);
               if (var3 != 1 &&
                 var3 != 2) {
                 this.updateScreen(true, false);
@@ -320,7 +320,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         dra.a(param0);
         BridgeModel.c((byte) 120, 0);
         if (uma.b(-1)) {
-          var2 = this.t(8);
+          var2 = this.updateConnection(8);
           if (0 == var2 ||
             var2 == 1) {
             this.b(var2, 120);

@@ -3,11 +3,11 @@
  */
 final class RandomMazeBehaviour extends Behaviour {
     static int field_p;
-    private Trap field_r;
-    private int field_v;
-    private Trap field_A;
-    private int field_s;
-    private Trap field_o;
+    private Trap filledCellTemplate;
+    private int itemCount;
+    private Trap openCellTemplate;
+    private int generatorType;
+    private Trap itemTemplate;
     private int field_q;
     private int field_y;
     private boolean field_u;
@@ -143,21 +143,21 @@ final class RandomMazeBehaviour extends Behaviour {
         return var2;
     }
 
-    final void a(Trap param0, byte param1) {
+    final void setFilledCellTemplate(Trap param0, byte param1) {
         try {
-          this.field_r = param0;
+          this.filledCellTemplate = param0;
           int var3_int = -100 % ((param1 + 10) / 56);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vd.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(Trap param0, int param1) {
+    final void setItemTemplate(Trap param0, int param1) {
         if (param1 != 2) {
           return;
         }
         try {
-          this.field_o = param0;
+          this.itemTemplate = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vd.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -272,14 +272,14 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    final void b(boolean param0, int param1) {
+    final void setItemCount(boolean param0, int param1) {
         if (!param0) {
           this.field_x = 97;
         }
-        this.field_v = param1;
+        this.itemCount = param1;
     }
 
-    private final void c(int param0) {
+    private final void generateMaze(int param0) {
         int var18 = 0;
         int var19 = 0;
         IsaacCipher var3;
@@ -353,7 +353,7 @@ final class RandomMazeBehaviour extends Behaviour {
         var10 = 0;
         var11 = null;
         while (var9 == 0) {
-          var12_ref_loa = RidgedNoise3D.createMazeGenerator((byte) 27, var3, this.field_s);
+          var12_ref_loa = RidgedNoise3D.createMazeGenerator((byte) 27, var3, this.generatorType);
           this.field_z = var12_ref_loa.a(var5, var6, var4, -122, var8);
           this.field_z.setCell(1 + var7, 0, 0, var6);
           this.field_z.setCell(0, 0, 0, var6);
@@ -390,43 +390,43 @@ final class RandomMazeBehaviour extends Behaviour {
         var15 = null;
         var16 = null;
         var17 = null;
-        if (this.field_r != null &&
-          !this.field_r.isEmpty(90)) {
+        if (this.filledCellTemplate != null &&
+          !this.filledCellTemplate.isEmpty(90)) {
           var26 = new BitPacketBuffer(30000);
           var15 = var26;
           var26.beginBitWrite(8);
-          this.field_r.encode(var26, 125);
+          this.filledCellTemplate.encode(var26, 125);
           var26.endBitWrite(-1826190686);
         }
-        if (null != this.field_A &&
-          !this.field_A.isEmpty(51)) {
+        if (null != this.openCellTemplate &&
+          !this.openCellTemplate.isEmpty(51)) {
           var27 = new BitPacketBuffer(30000);
           var16 = var27;
           var27.beginBitWrite(8);
-          this.field_A.encode(var27, 84);
+          this.openCellTemplate.encode(var27, 84);
           var27.endBitWrite(-1826190686);
         }
-        if (null != this.field_o &&
-          !this.field_o.isEmpty(73)) {
+        if (null != this.itemTemplate &&
+          !this.itemTemplate.isEmpty(73)) {
           var28 = new BitPacketBuffer(30000);
           var17 = var28;
           var28.beginBitWrite(8);
-          this.field_o.encode(var28, -112);
+          this.itemTemplate.encode(var28, -112);
           var28.endBitWrite(-1826190686);
         }
         for (var18 = 0; this.field_z.width > var18; var18++) {
           for (var19 = 0; this.field_z.height > var19; var19++) {
             if (this.field_z.getCell((byte) -5, var19, var18) > 0) {
-              this.a(var18, var13, var19, -58, (BitPacketBuffer) (var15), var12);
+              this.spawnCellTrap(var18, var13, var19, -58, (BitPacketBuffer) (var15), var12);
             } else {
-              this.a(var18, var13, var19, -44, (BitPacketBuffer) (var16), var12);
+              this.spawnCellTrap(var18, var13, var19, -44, (BitPacketBuffer) (var16), var12);
             }
           }
         }
-        if (this.field_v > 0) {
+        if (this.itemCount > 0) {
           var36 = ((av) (var11)).a((byte) -72);
-          var37 = new int[this.field_v][2];
-          for (var20 = 0; var20 < this.field_v; var20++) {
+          var37 = new int[this.itemCount][2];
+          for (var20 = 0; var20 < this.itemCount; var20++) {
             if (var36.length <= var20) {
               while (0 != this.field_z.getCell((byte) -5, var37[var20][1], var37[var20][0])) {
                 var37[var20][0] = 1 + var3.nextBounded(-2 + this.field_z.width, 0);
@@ -446,8 +446,8 @@ final class RandomMazeBehaviour extends Behaviour {
               var36[var21][0] = -1;
             }
           }
-          for (var20Lifetime1 = 0; this.field_v > var20Lifetime1; var20Lifetime1++) {
-            this.a(var37[var20Lifetime1][0], var13, var37[var20Lifetime1][1], -113, (BitPacketBuffer) (var17), var12);
+          for (var20Lifetime1 = 0; this.itemCount > var20Lifetime1; var20Lifetime1++) {
+            this.spawnCellTrap(var37[var20Lifetime1][0], var13, var37[var20Lifetime1][1], -113, (BitPacketBuffer) (var17), var12);
           }
         }
         var25.formatVersion = var14;
@@ -459,12 +459,12 @@ final class RandomMazeBehaviour extends Behaviour {
         this.field_u = false;
         this.field_t = 2097152;
         try {
-          this.field_r = new Trap(param0, false);
-          CharacterChoice.a((byte) -98, 1, true, param0, this.field_r, false);
-          this.field_r.setAttachedToParent(false, 11468);
-          this.field_A = new Trap(param0, false);
-          this.field_o = new Trap(param0, false);
-          this.d(true);
+          this.filledCellTemplate = new Trap(param0, false);
+          CharacterChoice.a((byte) -98, 1, true, param0, this.filledCellTemplate, false);
+          this.filledCellTemplate.setAttachedToParent(false, 11468);
+          this.openCellTemplate = new Trap(param0, false);
+          this.itemTemplate = new Trap(param0, false);
+          this.initTemplates(true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -541,7 +541,7 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, BitPacketBuffer param4, int param5) {
+    private final void spawnCellTrap(int param0, int param1, int param2, int param3, BitPacketBuffer param4, int param5) {
         Trap var8 = null;
         if (param4 == null) {
           return;
@@ -577,7 +577,7 @@ final class RandomMazeBehaviour extends Behaviour {
         this.field_u = false;
         this.field_t = 2097152;
         try {
-          this.field_s = param1.readBits((byte) 44, 2);
+          this.generatorType = param1.readBits((byte) 44, 2);
           if (param0.formatVersion >= 4) {
             this.field_t = param1.readBits((byte) 44, 10) << 16;
             stackIn_6_1 = (1 == param1.readBits((byte) 44, 1));
@@ -589,27 +589,27 @@ final class RandomMazeBehaviour extends Behaviour {
           if (param0.formatVersion >= 11) {
             this.field_x = param1.readBits((byte) 44, 7);
             this.field_q = param1.readBits((byte) 44, 7);
-            this.field_v = param1.readBits((byte) 44, 3);
+            this.itemCount = param1.readBits((byte) 44, 3);
           }
-          this.field_o = null;
+          this.itemTemplate = null;
           if (this.field_u) {
-            this.field_r = new Trap(param0, false);
-            CharacterChoice.a((byte) -120, 1, true, param0, this.field_r, false);
-            this.field_A = new Trap(param0, false);
+            this.filledCellTemplate = new Trap(param0, false);
+            CharacterChoice.a((byte) -120, 1, true, param0, this.filledCellTemplate, false);
+            this.openCellTemplate = new Trap(param0, false);
           } else {
-            this.field_r = new Trap(param0, param1, false);
-            this.field_A = new Trap(param0, param1, false);
-            if (this.field_v > 0 &&
+            this.filledCellTemplate = new Trap(param0, param1, false);
+            this.openCellTemplate = new Trap(param0, param1, false);
+            if (this.itemCount > 0 &&
               14 <= param0.formatVersion) {
-              this.field_o = new Trap(param0, param1, false);
+              this.itemTemplate = new Trap(param0, param1, false);
             }
           }
-          if (this.field_o == null) {
-            this.field_o = new Trap(param0, false);
-            CharacterChoice.a((byte) -93, 7, true, param0, this.field_o, false);
-            this.d(true);
+          if (this.itemTemplate == null) {
+            this.itemTemplate = new Trap(param0, false);
+            CharacterChoice.a((byte) -93, 7, true, param0, this.itemTemplate, false);
+            this.initTemplates(true);
           } else {
-            this.d(true);
+            this.initTemplates(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -632,32 +632,32 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    private final void d(boolean param0) {
+    private final void initTemplates(boolean param0) {
         if (1048576 > this.field_t) {
           this.field_t = 1048576;
         }
-        this.field_r.setTopLevel((byte) 77, false);
-        this.field_r.setSize((byte) -11, this.field_t, this.field_t);
-        this.field_A.setTopLevel((byte) 59, false);
-        this.field_A.setSize((byte) -11, this.field_t, this.field_t);
+        this.filledCellTemplate.setTopLevel((byte) 77, false);
+        this.filledCellTemplate.setSize((byte) -11, this.field_t, this.field_t);
+        this.openCellTemplate.setTopLevel((byte) 59, false);
+        this.openCellTemplate.setSize((byte) -11, this.field_t, this.field_t);
         if (!param0) {
-          this.field_o = (Trap) null;
+          this.itemTemplate = (Trap) null;
         }
     }
 
-    final void a(byte param0, Trap param1) {
+    final void setOpenCellTemplate(byte param0, Trap param1) {
         if (param0 > -115) {
           return;
         }
         try {
-          this.field_A = param1;
+          this.openCellTemplate = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vd.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, int param1) {
-        this.field_s = param1;
+    final void setGeneratorType(boolean param0, int param1) {
+        this.generatorType = param1;
         if (param0) {
           this.onTrapLoaded((byte) 51);
         }
@@ -678,7 +678,7 @@ final class RandomMazeBehaviour extends Behaviour {
         RuntimeException var3 = null;
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -41, this.field_s, 2);
+          param1.writeBits((byte) -41, this.generatorType, 2);
           param1.writeBits((byte) 42, this.field_t >> 16, 10);
           stackIn_2_0 = (BitPacketBuffer) (param1);
           stackIn_2_1 = 125;
@@ -690,12 +690,12 @@ final class RandomMazeBehaviour extends Behaviour {
           ((BitPacketBuffer) (Object) stackIn_2_0).writeBits((byte) stackIn_2_1, stackIn_3_2, 1);
           param1.writeBits((byte) -128, this.field_x, 7);
           param1.writeBits((byte) 113, this.field_q, 7);
-          param1.writeBits((byte) -127, this.field_v, 3);
+          param1.writeBits((byte) -127, this.itemCount, 3);
           if (!this.field_u) {
-            this.field_r.encode(param1, 85);
-            this.field_A.encode(param1, 126);
-            if (this.field_v > 0) {
-              this.field_o.encode(param1, -10);
+            this.filledCellTemplate.encode(param1, 85);
+            this.openCellTemplate.encode(param1, 126);
+            if (this.itemCount > 0) {
+              this.itemTemplate.encode(param1, -10);
               return;
             }
           }
@@ -717,7 +717,7 @@ final class RandomMazeBehaviour extends Behaviour {
     final void b(byte param0, boolean param1) {
         this.field_u = param1 ? true : false;
         if (param0 < 60) {
-          this.field_A = (Trap) null;
+          this.openCellTemplate = (Trap) null;
         }
     }
 
@@ -738,16 +738,16 @@ final class RandomMazeBehaviour extends Behaviour {
 
     final int hashState(int param0, int param1) {
         if (param1 >= -48) {
-          this.field_A = (Trap) null;
+          this.openCellTemplate = (Trap) null;
         }
         return param0;
     }
 
     final void onTrapLoaded(byte param0) {
         super.onTrapLoaded((byte) 105);
-        this.c(127);
+        this.generateMaze(127);
         if (param0 <= 68) {
-          this.field_r = (Trap) null;
+          this.filledCellTemplate = (Trap) null;
         }
     }
 

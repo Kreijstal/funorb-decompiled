@@ -5,7 +5,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
     private int[] field_a;
     static us field_b;
 
-    public final void drawParticle(iq param0, byte param1, Particle param2) {
+    public final void drawParticle(Camera param0, byte param1, Particle param2) {
         int stackIn_85_0 = 0;
         RuntimeException stackIn_136_0 = null;
         StringBuilder stackIn_136_1 = null;
@@ -21,7 +21,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ag var11 = null;
+        FollowCamera var11 = null;
         int var12 = 0;
         float var13 = 0.0f;
         int var14 = 0;
@@ -70,11 +70,11 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           }
           var8 = var8 + RenderScene.field_e;
           var9 = var9 + MovingPlatformComponent.field_N;
-          var11 = (ag) (param0);
+          var11 = (FollowCamera) (param0);
           var12 = var11.a(-862393232);
           var13 = (float)param2.getAge(0) / (float)param2.getLifetime(true);
-          var14 = param2.c(param1 - 88);
-          var15 = param2.b(-6782);
+          var14 = param2.getStartSize(param1 - 88);
+          var15 = param2.getEndSize(-6782);
           var16 = (int)(var13 * (float)(var15 - var14) + (float)var14);
           var17 = 0 | (int)(255.0f * (-var13 + 1.0f)) << 24;
           var18 = (int)((1.0f - var13) * 255.0f) << 24 | 16777215;
@@ -89,10 +89,10 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             boolean decompiledFrameRemainder2 = true;
             boolean decompiledFrameRemainder1 = true;
             boolean decompiledFrameRemainder0 = true;
-            var22 = param2.a(0);
+            var22 = param2.getSeed(0);
             var23 = null;
             var24 = null;
-            var26 = param2.a((byte) -114);
+            var26 = param2.getKind((byte) -114);
             if ((var26 != 4 && (var26 != 1 ||
               var29 != 0)) &&
               (decompiledFrameRemainder0 = (var26 != 2 ||
@@ -107,7 +107,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               if (var26 == 7 &&
                 var29 == 0) {
                 var25_ref_ka = SpawnerBehaviour.a(4, 12166, 7);
-                gqa.a(GameScreen.positiveModulo(-(param2.f((byte) -127) >> 2), 2048, -81), -83584144, var6, var5, var25_ref_ka, -393216 + var7);
+                gqa.a(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, -81), -83584144, var6, var5, var25_ref_ka, -393216 + var7);
                 break regionExit1;
               } else if (var26 != 14 ||
                 var29 != 0) {
@@ -126,7 +126,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
                         }
                         var19 = PlayerProfile.field_r[1];
                         var20 = var16 * 512 * var12 / (var19.paddedWidth() * var10);
-                        var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, -61), 0, var18, 1);
+                        var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.getAngle((byte) -127) << var21, 2048 << var21, -61), 0, var18, 1);
                         if (var29 == 0) {
                           break regionExit1;
                         }
@@ -147,7 +147,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               } else {
                 var24_ref = SwitchLinkList.field_b[5];
               }
-              gqa.a(GameScreen.positiveModulo(-(param2.f((byte) -127) >> 2), 2048, 69), -83584144, var6, var5, var24_ref, var7);
+              gqa.a(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 69), -83584144, var6, var5, var24_ref, var7);
               break regionExit1;
             }
             if ((decompiledFrameRemainder5) &&
@@ -162,7 +162,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               var28 = SpawnerBehaviour.a(var27, param1 ^ -12189, 7).a((byte) 1, 526343, true);
               var28.O(var26Lifetime2 >> 2, 128, var26Lifetime2 >> 2);
               var28.a(-1, 10, 30, var26Lifetime2);
-              gqa.a(GameScreen.positiveModulo(-(param2.f((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
+              gqa.a(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -177,7 +177,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               }
               var19 = Room.field_p[1][0];
               var20 = var16 * 8192 * var12 / (var19.paddedWidth() * var10);
-              var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 76), 0, var18, 1);
+              var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.getAngle((byte) -127) << var21, 2048 << var21, 76), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -191,7 +191,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               }
               var19 = Room.field_p[2][0];
               var20 = var16 * (8192 * var12) / (var19.paddedWidth() * var10);
-              var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 83), 0, var18, 1);
+              var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.getAngle((byte) -127) << var21, 2048 << var21, 83), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -204,7 +204,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               }
               var19 = Room.field_p[3][0];
               var20 = var12 * 8192 * var16 / (var10 * var19.paddedWidth());
-              var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, -97), 0, var18, 1);
+              var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.getAngle((byte) -127) << var21, 2048 << var21, -97), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -216,7 +216,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               }
               var19Lifetime2 = Room.field_p[4][0];
               var20Lifetime2 = var12 * 8192 * var16 / (var19Lifetime2.paddedWidth() * var10);
-              var19Lifetime2.drawRotated((float)var8, (float)var9, var20Lifetime2, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 126), 2, var17, 2);
+              var19Lifetime2.drawRotated((float)var8, (float)var9, var20Lifetime2, GameScreen.positiveModulo(param2.getAngle((byte) -127) << var21, 2048 << var21, 126), 2, var17, 2);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -227,13 +227,13 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               }
               var19Lifetime1 = Room.field_p[5][0];
               var20Lifetime1 = var16 * (8192 * var12) / (var10 * var19Lifetime1.paddedWidth());
-              var19Lifetime1.drawRotated((float)var8, (float)var9, var20Lifetime1, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 95), 0, var18, 1);
+              var19Lifetime1.drawRotated((float)var8, (float)var9, var20Lifetime1, GameScreen.positiveModulo(param2.getAngle((byte) -127) << var21, 2048 << var21, 95), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
             }
             var26_ref_ka = SpawnerBehaviour.a(3, 12166, 7);
-            gqa.a(GameScreen.positiveModulo(-(param2.f((byte) -127) >> 2), 2048, 92), param1 ^ 83584149, var6, var5, var26_ref_ka, -393216 + var7);
+            gqa.a(GameScreen.positiveModulo(-(param2.getAngle((byte) -127) >> 2), 2048, 92), param1 ^ 83584149, var6, var5, var26_ref_ka, -393216 + var7);
           }
           if (var23 == null) {
             return;
@@ -263,7 +263,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         }
     }
 
-    public final void a(iq param0, int param1, lk param2) {
+    public final void drawRegion(Camera param0, int param1, RoomRegion param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -277,11 +277,11 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a((byte) -98);
-          var5 = param2.g((byte) -97);
-          var6 = param2.b(52);
+          var4_int = param2.getX((byte) -98);
+          var5 = param2.getY((byte) -97);
+          var6 = param2.getWidth(52);
           var8 = -126 % ((param1 + 50) / 56);
-          var7 = param2.b(false);
+          var7 = param2.getHeight(false);
           oq.a(-(var6 / 2) + var4_int, var5 - var7 / 2, 0, 64, var6 / 2 + var4_int, 8965375, var7 / 2 + var5, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -304,7 +304,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         }
     }
 
-    public final void drawProjectile(iq param0, boolean param1, Projectile param2) {
+    public final void drawProjectile(Camera param0, boolean param1, Projectile param2) {
         Projectile stackIn_36_0 = null;
         boolean stackIn_37_1 = false;
         Projectile stackIn_46_0 = null;
@@ -330,7 +330,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         int var15 = 0;
         var15 = TombRacer.field_G ? 1 : 0;
         try {
-          if (param2.e(param1) <= 0) {
+          if (param2.getLifetime(param1) <= 0) {
             return;
           }
           var4 = this.field_a;
@@ -346,7 +346,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           }
           var8 = var8 + RenderScene.field_e;
           var9 = var9 + MovingPlatformComponent.field_N;
-          var14 = param2.l(5);
+          var14 = param2.getStyle(5);
           switch ((var15 == 0
             || var14 == 0
             || var14 == 1
@@ -354,7 +354,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             ) ? var14 : -1) {
             case 3:
               var11 = 16;
-              var10 = param2.g(-1) * 255 / param2.e(false);
+              var10 = param2.getAge(-1) * 255 / param2.getLifetime(false);
               var12 = uv.b(param1);
               if (null != var12 &&
                 var12.field_f) {
@@ -585,7 +585,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           }
           param2.g((byte) -94);
           if (param0 != 17767) {
-            this.a((iq) null, -59, (lk) null);
+            this.drawRegion((Camera) null, -59, (RoomRegion) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -718,7 +718,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         }
     }
 
-    private final void a(int param0, iq param1, Particle param2) {
+    private final void a(int param0, Camera param1, Particle param2) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -740,7 +740,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           if (param0 != -14066) {
             return;
           }
-          var4_int = param2.c(-71);
+          var4_int = param2.getStartSize(-71);
           var5 = this.field_a;
           cr.a(var5, param2.getZ(true), param2.getX(true), param2.getY(0), (byte) 35);
           var6 = var5[0];
@@ -780,7 +780,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         this.field_a = new int[3];
     }
 
-    public final void drawPuddle(Puddle param0, int param1, iq param2) {
+    public final void drawPuddle(Puddle param0, int param1, Camera param2) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;

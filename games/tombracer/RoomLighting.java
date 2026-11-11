@@ -14,7 +14,7 @@ final class RoomLighting implements RenderListener {
         this.lightSources.clear(8);
     }
 
-    public final void beforeScene(iq param0, int param1) {
+    public final void beforeScene(Camera param0, int param1) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -31,7 +31,7 @@ final class RoomLighting implements RenderListener {
         int var11 = 0;
         LightSource var12 = null;
         int var13 = 0;
-        iq var14 = null;
+        Camera var14 = null;
         int var10Lifetime1;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
@@ -82,8 +82,8 @@ final class RoomLighting implements RenderListener {
             tga.field_a.setLights(0, (SceneLight[]) null);
           }
           if (param1 != -15530) {
-            var14 = (iq) null;
-            this.beforeRenderable(92, (Renderable) null, (iq) null);
+            var14 = (Camera) null;
+            this.beforeRenderable(92, (Renderable) null, (Camera) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,7 +100,7 @@ final class RoomLighting implements RenderListener {
         }
     }
 
-    public final void afterScene(int param0, iq param1) {
+    public final void afterScene(int param0, Camera param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -144,7 +144,7 @@ final class RoomLighting implements RenderListener {
         }
     }
 
-    public final void afterLayer(RenderLayer param0, int param1, iq param2, boolean param3) {
+    public final void afterLayer(RenderLayer param0, int param1, Camera param2, boolean param3) {
         try {
           if (!param3) {
             RoomLighting.a(112, -118, 127);
@@ -154,7 +154,7 @@ final class RoomLighting implements RenderListener {
         }
     }
 
-    public final void beforeLayer(int param0, RenderLayer param1, iq param2, int param3) {
+    public final void beforeLayer(int param0, RenderLayer param1, Camera param2, int param3) {
         try {
           if (param3 != 11180543) {
             field_d = -52;
@@ -164,7 +164,7 @@ final class RoomLighting implements RenderListener {
         }
     }
 
-    public final void beforeRenderable(int param0, Renderable param1, iq param2) {
+    public final void beforeRenderable(int param0, Renderable param1, Camera param2) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -181,7 +181,7 @@ final class RoomLighting implements RenderListener {
         Object var10 = null;
         LightSource var11 = null;
         int var12 = 0;
-        iq var13 = null;
+        Camera var13 = null;
         Object var10Lifetime1;
         LightSource var11Lifetime1;
         int var8Lifetime1;
@@ -189,8 +189,8 @@ final class RoomLighting implements RenderListener {
         var12 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 0) {
-            var13 = (iq) null;
-            this.afterRenderable(true, (Renderable) null, (iq) null);
+            var13 = (Camera) null;
+            this.afterRenderable(true, (Renderable) null, (Camera) null);
           }
           if (LightSource.a((byte) -7)) {
             var4_int = param1 instanceof Particle ? 1 : 0;
@@ -263,11 +263,11 @@ final class RoomLighting implements RenderListener {
         }
     }
 
-    public final void afterRenderable(boolean param0, Renderable param1, iq param2) {
+    public final void afterRenderable(boolean param0, Renderable param1, Camera param2) {
         try {
           if (param0) {
-            iq var5 = (iq) null;
-            this.afterScene(3, (iq) null);
+            Camera var5 = (Camera) null;
+            this.afterScene(3, (Camera) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sva.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -442,7 +442,7 @@ final class ModelFactory implements ModelCodec {
             return stackIn_31_0;
           }
           var5 = this.createModel(var4_int, 118);
-          var5.a(param1, -2159, param0);
+          var5.configureFor(param1, -2159, param0);
           stackIn_33_0 = var5;
           return stackIn_33_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

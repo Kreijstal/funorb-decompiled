@@ -64,7 +64,7 @@ final class lca implements Renderable {
         return false;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         if (param0 <= 103) {
           return;
         }

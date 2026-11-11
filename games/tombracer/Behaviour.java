@@ -368,7 +368,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    void b(int param0, iq param1) {
+    void b(int param0, Camera param1) {
         try {
           if (param0 < 112) {
             this.onTrapLoaded((byte) -120);
@@ -389,8 +389,8 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         if (param0 == 6) {
           return this.trap.getRoot(param0 ^ 6);
         }
-        iq var3 = (iq) null;
-        this.render(-63, (iq) null);
+        Camera var3 = (Camera) null;
+        this.render(-63, (Camera) null);
         return this.trap.getRoot(param0 ^ 6);
     }
 
@@ -437,7 +437,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         return null;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         try {
           if (param0 < 103) {
             this.getTrap((byte) -97);

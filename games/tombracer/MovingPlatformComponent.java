@@ -100,7 +100,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
           var4.addLocomotor(var6, 0);
           var7 = rm.field_a;
           var8 = (PlatformModel) (var7.createModel(17, 88));
-          var8.b(2, (byte) 23);
+          var8.setStyle(2, (byte) 23);
           var4.addModel(var5, (byte) 124, var8);
           stackIn_4_0 = var4;
           return stackIn_4_0;

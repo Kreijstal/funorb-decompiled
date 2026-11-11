@@ -182,7 +182,7 @@ final class Weapon {
               var21 = param6 + gqa.a(var18, (byte) 24, var20);
               var22 = param7 + gqa.a(var19, (byte) 24, var20);
               var23 = param5.spawnProjectile(var14, var13, 127, param1);
-              var23.a(this.field_a, param5, this.field_l, 66, this.field_b, this.field_k);
+              var23.init(this.field_a, param5, this.field_l, 66, this.field_b, this.field_k);
               var23.setVelocity(var21, var22, (byte) -92);
               var24 = var15.nextBounded(8192, 0);
               if (3 == this.field_b) {
@@ -198,7 +198,7 @@ final class Weapon {
                 var23.a(this.field_i, -38);
               }
               if (this.field_x) {
-                var23.b(true, 101);
+                var23.setHighCollision(true, 101);
               }
               if (this.field_c) {
                 stackIn_31_0 = var23;
@@ -206,10 +206,10 @@ final class Weapon {
                 ((Projectile) (Object) stackIn_31_0).a(stackIn_32_1, true);
               }
               if (this.field_j) {
-                var23.c(true, true);
+                var23.setExpandsOnImpact(true, true);
               }
               if (this.field_y) {
-                var23.b(-1, true);
+                var23.setPushesObjects(-1, true);
               }
               var23.field_m = this.field_t;
             }

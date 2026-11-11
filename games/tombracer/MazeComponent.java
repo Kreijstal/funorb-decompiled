@@ -94,11 +94,11 @@ abstract class MazeComponent extends PrefabComponent {
           var6.setFloating((byte) 17, true);
           var5 = new RandomMazeBehaviour(param2, param0);
           var5.b((byte) 105, false);
-          var5.a((byte) -128, this.a(param2, false, false));
-          var5.a(this.a(5, false, param2), (byte) -94);
-          var5.a(this.a(false, param2, (byte) -114), 2);
-          var5.b(true, this.A(-1));
-          var5.a(false, this.B(123));
+          var5.setOpenCellTemplate((byte) -128, this.createOpenCellTrap(param2, false, false));
+          var5.setFilledCellTemplate(this.createFilledCellTrap(5, false, param2), (byte) -94);
+          var5.setItemTemplate(this.createItemTemplate(false, param2, (byte) -114), 2);
+          var5.setItemCount(true, this.getItemCount(-1));
+          var5.setGeneratorType(false, this.getGeneratorType(123));
           var6.addBehaviour((byte) 83, (Behaviour) (var5));
           stackIn_4_0 = var6;
           return stackIn_4_0;
@@ -116,7 +116,7 @@ abstract class MazeComponent extends PrefabComponent {
         }
     }
 
-    abstract Trap a(Room param0, boolean param1, boolean param2);
+    abstract Trap createOpenCellTrap(Room param0, boolean param1, boolean param2);
 
     MazeComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
@@ -182,7 +182,7 @@ abstract class MazeComponent extends PrefabComponent {
         return 7;
     }
 
-    private final Trap a(boolean param0, Room param1, byte param2) {
+    private final Trap createItemTemplate(boolean param0, Room param1, byte param2) {
         int var5 = 0;
         MiscItemBehaviour var6 = null;
         int var7 = 0;
@@ -246,9 +246,9 @@ abstract class MazeComponent extends PrefabComponent {
         return sja.field_i[param1];
     }
 
-    abstract Trap a(int param0, boolean param1, Room param2);
+    abstract Trap createFilledCellTrap(int param0, boolean param1, Room param2);
 
-    private final int B(int param0) {
+    private final int getGeneratorType(int param0) {
         if (param0 <= 92) {
           return 85;
         }
@@ -292,17 +292,17 @@ abstract class MazeComponent extends PrefabComponent {
           }
           dga.a(stackIn_4_0, 199);
           rm.field_e.a(0, 0, param1 + 18, nra.field_c.field_G, -2 + nra.field_c.field_t - 40);
-          cea.field_a.a(lk.field_l.field_G, di.field_a, param1 ^ -23774, 0, 0);
+          cea.field_a.a(RoomRegion.field_l.field_G, di.field_a, param1 ^ -23774, 0, 0);
           stackIn_6_0 = uaa.field_b;
-          stackIn_6_1 = lk.field_l.field_G;
+          stackIn_6_1 = RoomRegion.field_l.field_G;
           if (!UnlockOverlay.field_p) {
             stackIn_7_2 = 0;
           } else {
             stackIn_7_2 = 2 + (io.field_a + 40) + 2;
           }
           ((jea) (Object) stackIn_6_0).a(stackIn_6_1 - stackIn_7_2, 18, -23776, param1 + di.field_a, 0);
-          RopeBridgeComponent.field_F.a(42 + io.field_a, 18, param1 - 23778, 2 + di.field_a, -io.field_a + lk.field_l.field_G - 42);
-          tn.field_n.a(lk.field_l.field_G, 2, (byte) 127, 0, io.field_a, lk.field_l.field_t - (di.field_a + 22), 20 + (2 + di.field_a));
+          RopeBridgeComponent.field_F.a(42 + io.field_a, 18, param1 - 23778, 2 + di.field_a, -io.field_a + RoomRegion.field_l.field_G - 42);
+          tn.field_n.a(RoomRegion.field_l.field_G, 2, (byte) 127, 0, io.field_a, RoomRegion.field_l.field_t - (di.field_a + 22), 20 + (2 + di.field_a));
           bc.field_b.a(nra.field_c.field_G, 40, -23776, -40 + nra.field_c.field_t, 0);
           StatusEffect.field_g.a(dka.field_b.field_G, 30, -23776, 0, 0);
           C2SSubmitSettingsPacket.field_g.a(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
@@ -422,14 +422,14 @@ abstract class MazeComponent extends PrefabComponent {
         super(param0, param1);
     }
 
-    private final int A(int param0) {
+    private final int getItemCount(int param0) {
         if (param0 != -1) {
           field_F = (String) null;
         }
         return this.field_I;
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_G = null;
         field_F = null;
         if (param0) {

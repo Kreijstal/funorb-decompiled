@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ag implements iq {
+final class FollowCamera implements Camera {
     private int field_c;
     private int field_j;
-    private int field_d;
-    private int field_a;
+    private int x;
+    private int stillFrames;
     private int field_b;
-    private int field_m;
-    private int field_l;
-    private jfa field_g;
-    private int field_h;
-    private int field_f;
+    private int maxY;
+    private int minY;
+    private CameraTarget target;
+    private int y;
+    private int maxX;
     private int field_k;
-    private int field_i;
+    private int minX;
     private int field_e;
 
     final int a(int param0) {
@@ -23,11 +23,11 @@ final class ag implements iq {
         return this.field_e;
     }
 
-    final int c(int param0) {
+    final int getX(int param0) {
         if (param0 != -30661) {
-          this.field_f = -50;
+          this.maxX = -50;
         }
-        return this.field_d;
+        return this.x;
     }
 
     final static void a(boolean param0, boolean param1, boolean param2, String param3) {
@@ -42,19 +42,19 @@ final class ag implements iq {
         }
     }
 
-    final void a(jfa param0, int param1) {
+    final void setTarget(CameraTarget param0, int param1) {
         int discarded$0 = 0;
         try {
-          this.field_g = param0;
+          this.target = param0;
           if (param1 != -1) {
-            discarded$0 = this.b(-111, 10, 84, 17, 71);
+            discarded$0 = this.clampAxis(-111, 10, 84, 17, 71);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ag.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(byte param0) {
+    public final void update(byte param0) {
         float var2;
         float var3;
         float var4;
@@ -63,54 +63,54 @@ final class ag implements iq {
         float var7;
         int var8;
         var8 = TombRacer.field_G ? 1 : 0;
-        if (this.field_g == null) {
-          this.b(12052);
+        if (this.target == null) {
+          this.applyBounds(12052);
           return;
         }
-        var2 = (float)((this.field_g.getRenderX((byte) -103) >> 16) - this.field_d);
+        var2 = (float)((this.target.getRenderX((byte) -103) >> 16) - this.x);
         if (param0 < 84) {
           this.field_b = -28;
         }
-        var3 = (float)((this.field_g.getRenderY((byte) 124) >> 16) - this.field_h);
+        var3 = (float)((this.target.getRenderY((byte) 124) >> 16) - this.y);
         var4 = var3 * var3 + var2 * var2;
         if (!(var4 > 576.0f)) {
-          this.field_a = this.field_a + 1;
-          if (50.0f < (float)this.field_a) {
+          this.stillFrames = this.stillFrames + 1;
+          if (50.0f < (float)this.stillFrames) {
             if (!(4.0f < var4)) {
-              this.field_a = 0;
+              this.stillFrames = 0;
             } else {
               var5 = 2.0f / (float)Math.sqrt((double)(var3 * var3 + var2 * var2));
-              this.field_h = this.field_h + (int)(var5 * var3);
-              this.field_d = this.field_d + (int)(var5 * var2);
+              this.y = this.y + (int)(var5 * var3);
+              this.x = this.x + (int)(var5 * var2);
             }
           }
         } else {
           var5 = 24.0f / (float)Math.sqrt((double)(var3 * var3 + var2 * var2));
           var6 = var2 * var5;
           var7 = var5 * var3;
-          this.field_d = this.field_d + (int)(var2 - var6);
-          this.field_h = this.field_h + (int)(-var7 + var3);
-          this.field_a = 0;
+          this.x = this.x + (int)(var2 - var6);
+          this.y = this.y + (int)(-var7 + var3);
+          this.stillFrames = 0;
         }
-        this.b(12052);
+        this.applyBounds(12052);
         return;
     }
 
-    public final void a(boolean param0) {
+    public final void clampToBounds(boolean param0) {
         if (param0) {
-          this.field_m = 75;
+          this.maxY = 75;
         }
-        this.b(12052);
+        this.applyBounds(12052);
     }
 
-    public final void a(int param0, byte param1, int param2, int param3, int param4) {
-        this.field_l = param0;
-        this.field_i = param3;
+    public final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        this.minY = param0;
+        this.minX = param3;
         if (param1 != -3) {
           return;
         }
-        this.field_m = param2;
-        this.field_f = param4;
+        this.maxY = param2;
+        this.maxX = param4;
     }
 
     final static boolean hasFlag2048(int param0, int param1, int param2) {
@@ -122,11 +122,11 @@ final class ag implements iq {
 
     final void a(int param0, int param1, int param2) {
         if (param0 != -30023) {
-          this.a(46, (byte) 61, 4, -69, -91);
+          this.setBounds(46, (byte) 61, 4, -69, -91);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setViewport(int param0, int param1, int param2, int param3, int param4) {
         this.field_c = param2;
         this.field_j = param4;
         this.field_b = param1;
@@ -136,11 +136,11 @@ final class ag implements iq {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3) {
-        this.field_d = this.field_d + param2;
-        this.field_h = this.field_h + param0;
+    public final void nudge(int param0, int param1, int param2, int param3) {
+        this.x = this.x + param2;
+        this.y = this.y + param0;
         if (param3 != 26768) {
-          this.field_f = -105;
+          this.maxX = -105;
         }
     }
 
@@ -195,32 +195,32 @@ final class ag implements iq {
         }
     }
 
-    final int b(byte param0) {
+    final int getY(byte param0) {
         int var2 = -96 % ((param0 - 3) / 58);
-        return this.field_h;
+        return this.y;
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
         if (param0) {
-          this.a(-41, -19, 59, 15);
+          this.nudge(-41, -19, 59, 15);
         }
     }
 
     final void a(int param0, byte param1) {
         this.field_e = param0;
         if (param1 != -88) {
-          this.field_f = 40;
+          this.maxX = 40;
         }
     }
 
-    private final void b(int param0) {
+    private final void applyBounds(int param0) {
         int var2 = this.field_b - this.field_c;
         int var3 = this.field_j - this.field_k;
-        this.field_d = this.b(this.field_i, this.field_f, var2, this.field_d, param0 ^ 12052);
-        this.field_h = this.b(this.field_l, this.field_m, var3, this.field_h, param0 ^ param0);
+        this.x = this.clampAxis(this.minX, this.maxX, var2, this.x, param0 ^ 12052);
+        this.y = this.clampAxis(this.minY, this.maxY, var3, this.y, param0 ^ param0);
     }
 
-    private final int b(int param0, int param1, int param2, int param3, int param4) {
+    private final int clampAxis(int param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
         int var8;
@@ -230,7 +230,7 @@ final class ag implements iq {
           return param3;
         }
         if (param4 != 0) {
-          this.field_h = -110;
+          this.y = -110;
         }
         var7 = param3;
         if (param2 <= var6) {

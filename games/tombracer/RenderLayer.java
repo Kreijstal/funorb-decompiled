@@ -95,7 +95,7 @@ final class RenderLayer {
         }
     }
 
-    final void removeExpired(iq param0, int param1) {
+    final void removeExpired(Camera param0, int param1) {
         RenderableNode var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -176,12 +176,12 @@ final class RenderLayer {
         }
     }
 
-    final void render(boolean param0, iq param1) {
+    final void render(boolean param0, Camera param1) {
         RenderListener var3 = null;
         RenderableNode var4 = null;
         Renderable var5 = null;
         int var6 = 0;
-        iq var7 = null;
+        Camera var7 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -192,8 +192,8 @@ final class RenderLayer {
           var3 = this.field_i.getListener((byte) 59);
           var4 = (RenderableNode) (this.nodes.first(-80));
           if (param0) {
-            var7 = (iq) null;
-            this.render(false, (iq) null);
+            var7 = (Camera) null;
+            this.render(false, (Camera) null);
           }
           while (var4 != null) {
             var5 = var4.renderable;

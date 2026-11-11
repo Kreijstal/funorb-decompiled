@@ -160,7 +160,7 @@ final class DefaultTileRenderable extends TileRenderable {
         return this.cell.getColumn((byte) 102) % 2 + 2 * (this.cell.getRow(-77) % 2);
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;

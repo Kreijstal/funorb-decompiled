@@ -7,7 +7,7 @@ final class FurnitureModel extends TrapModel {
     static int field_n;
     static int field_o;
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;

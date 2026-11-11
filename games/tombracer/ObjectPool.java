@@ -166,7 +166,7 @@ final class ObjectPool implements Renderable {
         }
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         int var4 = 0;
         PooledObject var5 = null;
         RuntimeException stackIn_8_0 = null;

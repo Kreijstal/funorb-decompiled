@@ -68,10 +68,10 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
 
     public final int getLevel(byte param0) {
         if (param0 == -108) {
-          return !this.field_C.b((byte) 88) ? 0 : 1;
+          return !this.field_C.isActive((byte) 88) ? 0 : 1;
         }
         field_y = (ToolkitSprite) null;
-        return !this.field_C.b((byte) 88) ? 0 : 1;
+        return !this.field_C.isActive((byte) 88) ? 0 : 1;
     }
 
     final void tick(int param0) {
@@ -191,7 +191,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         stackIn_38_1 = (var5 != var4);
         this.field_r = stackIn_38_1;
         if (!this.field_r) {
-          if (this.field_C.b((byte) 83)) {
+          if (this.field_C.isActive((byte) 83)) {
             var7 = 1;
             if (var7 != 0) {
               this.field_u.field_j = 9;

@@ -50,7 +50,7 @@ final class dpa implements Renderable {
         field_c = null;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;

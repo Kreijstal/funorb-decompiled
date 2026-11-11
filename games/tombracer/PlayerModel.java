@@ -807,7 +807,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         return;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         if (this.field_p.isInvulnerable(false)) {
           return;
         }

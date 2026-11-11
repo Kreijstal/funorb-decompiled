@@ -2,74 +2,74 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SwitchState implements noa {
-    private int field_l;
-    private int field_i;
+    private int releaseDelay;
+    private int pressDelay;
     static ka[] field_a;
-    private boolean field_m;
-    private int field_c;
-    private int field_e;
+    private boolean firesOnActivate;
+    private int usesLeft;
+    private int activateDelay;
     static String field_o;
     private boolean on;
     static ResourceArchive field_j;
-    private int field_f;
-    private int field_n;
-    private boolean field_g;
+    private int rearmDelay;
+    private int phase;
+    private boolean locked;
     private SwitchLinkList links;
-    private int field_k;
+    private int deactivateDelay;
     static String field_h;
-    private int field_b;
+    private int phaseTimer;
 
     final void encode(SwitchableScope param0, byte param1, BitPacketBuffer param2) {
         try {
           this.links.encode(30489, param0, param2);
-          param2.writeBits((byte) -127, this.field_e, 8);
-          param2.writeBits((byte) -45, this.field_k, 8);
-          param2.writeBits((byte) -125, this.field_i, 8);
+          param2.writeBits((byte) -127, this.activateDelay, 8);
+          param2.writeBits((byte) -45, this.deactivateDelay, 8);
+          param2.writeBits((byte) -125, this.pressDelay, 8);
           if (param1 <= 65) {
             BitPacketBuffer var5 = (BitPacketBuffer) null;
             this.encode((SwitchableScope) null, (byte) 97, (BitPacketBuffer) null);
           }
-          param2.writeBits((byte) -126, this.field_l, 8);
-          param2.writeBits((byte) -45, this.field_f, 8);
-          param2.writeBits((byte) 77, this.field_m ? 1 : 0, 1);
+          param2.writeBits((byte) -126, this.releaseDelay, 8);
+          param2.writeBits((byte) -45, this.rearmDelay, 8);
+          param2.writeBits((byte) 77, this.firesOnActivate ? 1 : 0, 1);
           param2.writeBits((byte) -127, this.on ? 1 : 0, 1);
-          param2.writeBits((byte) -126, this.field_c, 4);
+          param2.writeBits((byte) -126, this.usesLeft, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jma.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c(byte param0) {
+    private final void cancelRelease(byte param0) {
         if (param0 >= -63) {
           return;
         }
-        this.field_n = 3;
+        this.phase = 3;
     }
 
-    final void b(int param0, int param1) {
+    final void setUses(int param0, int param1) {
         if (param1 < 50) {
           return;
         }
-        this.field_c = param0;
+        this.usesLeft = param0;
     }
 
-    private final void e(byte param0) {
+    private final void beginRelease(byte param0) {
         if (param0 != -102) {
-          this.a(-19, 46, -116, 50, -114, 44);
-          if (this.field_l > 0) {
-            this.field_n = 4;
-            this.field_b = this.field_l;
+          this.setDelays(-19, 46, -116, 50, -114, 44);
+          if (this.releaseDelay > 0) {
+            this.phase = 4;
+            this.phaseTimer = this.releaseDelay;
             return;
           }
-          this.a(8);
+          this.beginDeactivate(8);
           return;
         }
-        if (this.field_l > 0) {
-          this.field_n = 4;
-          this.field_b = this.field_l;
+        if (this.releaseDelay > 0) {
+          this.phase = 4;
+          this.phaseTimer = this.releaseDelay;
           return;
         }
-        this.a(8);
+        this.beginDeactivate(8);
     }
 
     public static void releaseStatics(int param0) {
@@ -82,24 +82,24 @@ final class SwitchState implements noa {
         field_j = null;
     }
 
-    final boolean b(int param0) {
+    final boolean isEngaged(int param0) {
         if (param0 != 4) {
           field_j = (ResourceArchive) null;
-          if (this.field_n == 1) {
+          if (this.phase == 1) {
             return true;
           }
-          if (this.field_n != 2) {
-            return this.field_n == 3 ? true : false;
+          if (this.phase != 2) {
+            return this.phase == 3 ? true : false;
           }
           return true;
         }
-        if (this.field_n == 1) {
+        if (this.phase == 1) {
           return true;
         }
-        if (this.field_n == 2) {
+        if (this.phase == 2) {
           return true;
         }
-        if (this.field_n != 3) {
+        if (this.phase != 3) {
           return false;
         }
         return true;
@@ -109,42 +109,42 @@ final class SwitchState implements noa {
         this(param0, new Switchable[]{});
     }
 
-    private final void a(int param0) {
+    private final void beginDeactivate(int param0) {
         if (param0 != 8) {
-          this.e((byte) 60);
-          if (this.field_k <= 0) {
-            this.a((byte) 63);
+          this.beginRelease((byte) 60);
+          if (this.deactivateDelay <= 0) {
+            this.deactivate((byte) 63);
             return;
           }
-          this.field_b = this.field_k;
-          this.field_n = 5;
+          this.phaseTimer = this.deactivateDelay;
+          this.phase = 5;
           return;
         }
-        if (this.field_k <= 0) {
-          this.a((byte) 63);
+        if (this.deactivateDelay <= 0) {
+          this.deactivate((byte) 63);
           return;
         }
-        this.field_b = this.field_k;
-        this.field_n = 5;
+        this.phaseTimer = this.deactivateDelay;
+        this.phase = 5;
     }
 
-    private final void g(int param0) {
-        this.field_n = 3;
-        if (this.field_m) {
-          this.d((byte) -70);
+    private final void activate(int param0) {
+        this.phase = 3;
+        if (this.firesOnActivate) {
+          this.fireTargets((byte) -70);
         }
         if (param0 <= 49) {
-          this.f(95);
+          this.beginPress(95);
           return;
         }
     }
 
-    private final void a(byte param0) {
-        this.field_n = 0;
-        this.field_b = this.field_f;
+    private final void deactivate(byte param0) {
+        this.phase = 0;
+        this.phaseTimer = this.rearmDelay;
         int var2 = 101 % ((param0 + 2) / 52);
         if (this.on) {
-          this.d((byte) -70);
+          this.fireTargets((byte) -70);
         }
     }
 
@@ -161,42 +161,42 @@ final class SwitchState implements noa {
 
     final SwitchLinkList getLinks(int param0) {
         if (param0 != 1) {
-          this.e((byte) -23);
+          this.beginRelease((byte) -23);
           return this.links;
         }
         return this.links;
     }
 
-    private final boolean b(boolean param0) {
-        if (this.field_b <= 0) {
+    private final boolean tickPhaseTimer(boolean param0) {
+        if (this.phaseTimer <= 0) {
           return true;
         }
-        this.field_b = this.field_b - 1;
+        this.phaseTimer = this.phaseTimer - 1;
         if (param0) {
           return false;
         }
-        this.field_b = 15;
+        this.phaseTimer = 15;
         return false;
     }
 
-    final boolean b(byte param0) {
+    final boolean isActive(byte param0) {
         if (param0 < 70) {
           field_h = (String) null;
-          if (this.field_n == 3) {
+          if (this.phase == 3) {
             return true;
           }
-          if (this.field_n != 4) {
-            return 5 == this.field_n ? true : false;
+          if (this.phase != 4) {
+            return 5 == this.phase ? true : false;
           }
           return true;
         }
-        if (this.field_n == 3) {
+        if (this.phase == 3) {
           return true;
         }
-        if (this.field_n == 4) {
+        if (this.phase == 4) {
           return true;
         }
-        if (5 != this.field_n) {
+        if (5 != this.phase) {
           return false;
         }
         return true;
@@ -206,72 +206,72 @@ final class SwitchState implements noa {
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (this.field_g) {
+        if (this.locked) {
           return;
         }
         if (param0 != -14) {
           return;
         }
-        var3 = this.field_n;
+        var3 = this.phase;
         if (var3 == 0) {
-          if (!this.b(true)) {
+          if (!this.tickPhaseTimer(true)) {
             return;
           }
           if (!param1) {
             return;
           }
-          this.f(param0 - 86);
+          this.beginPress(param0 - 86);
           return;
         }
         if (1 == var3) {
           if (!param1) {
-            this.c(param0 ^ 8182);
+            this.cancelPress(param0 ^ 8182);
             return;
           }
-          if (!this.b(true)) {
+          if (!this.tickPhaseTimer(true)) {
             return;
           }
-          this.d(-121);
+          this.beginActivate(-121);
           return;
         }
         if (var3 == 2) {
-          if (!this.b(true)) {
+          if (!this.tickPhaseTimer(true)) {
             return;
           }
-          this.g(103);
+          this.activate(103);
           return;
         }
         if (var3 == 3) {
           if (param1) {
             return;
           }
-          this.e((byte) -102);
+          this.beginRelease((byte) -102);
           return;
         }
         if (4 != var3) {
           if (5 != var3) {
             return;
           }
-          if (!this.b(true)) {
+          if (!this.tickPhaseTimer(true)) {
             return;
           }
-          this.a((byte) 122);
+          this.deactivate((byte) 122);
           return;
         }
         if (param1) {
-          this.c((byte) -69);
+          this.cancelRelease((byte) -69);
           return;
         }
-        if (!this.b(true)) {
+        if (!this.tickPhaseTimer(true)) {
           return;
         }
-        this.a(8);
+        this.beginDeactivate(8);
         return;
     }
 
     final boolean isOn(boolean param0) {
         if (!param0) {
-          this.field_g = true;
+          this.locked = true;
           return this.on;
         }
         return this.on;
@@ -284,20 +284,20 @@ final class SwitchState implements noa {
         return false;
     }
 
-    private final void f(int param0) {
+    private final void beginPress(int param0) {
         int var2 = 0;
         int var2Lifetime1;
-        if (this.field_i > 0) {
-          this.field_n = 1;
-          this.field_b = this.field_i;
+        if (this.pressDelay > 0) {
+          this.phase = 1;
+          this.phaseTimer = this.pressDelay;
           var2 = 109 % ((param0 + 20) / 61);
           return;
         }
-        this.d(-125);
+        this.beginActivate(-125);
         var2Lifetime1 = 109 % ((param0 + 20) / 61);
     }
 
-    private final void d(byte param0) {
+    private final void fireTargets(byte param0) {
         Switchable[] var3;
         int var4;
         int var6;
@@ -318,9 +318,9 @@ final class SwitchState implements noa {
         Switchable[] var7Lifetime2;
         Switchable[] var7Lifetime3;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (this.field_c > 0) {
-          this.field_c = this.field_c - 1;
-          if (this.field_c != 0) {
+        if (this.usesLeft > 0) {
+          this.usesLeft = this.usesLeft - 1;
+          if (this.usesLeft != 0) {
             if (param0 == -70) {
               if (null == this.links) {
                 return;
@@ -351,7 +351,7 @@ final class SwitchState implements noa {
             }
             return;
           }
-          this.field_g = true;
+          this.locked = true;
         }
         if (param0 == -70) {
           if (null == this.links) {
@@ -382,51 +382,51 @@ final class SwitchState implements noa {
         return;
     }
 
-    private final void c(int param0) {
+    private final void cancelPress(int param0) {
         if (param0 != -8188) {
           return;
         }
-        this.field_n = 0;
+        this.phase = 0;
     }
 
-    private final void d(int param0) {
+    private final void beginActivate(int param0) {
         if (param0 > -119) {
-          this.field_b = -37;
-          if (this.field_e <= 0) {
-            this.g(69);
+          this.phaseTimer = -37;
+          if (this.activateDelay <= 0) {
+            this.activate(69);
             return;
           }
-          this.field_b = this.field_e;
-          this.field_n = 2;
+          this.phaseTimer = this.activateDelay;
+          this.phase = 2;
           return;
         }
-        if (this.field_e <= 0) {
-          this.g(69);
+        if (this.activateDelay <= 0) {
+          this.activate(69);
           return;
         }
-        this.field_b = this.field_e;
-        this.field_n = 2;
+        this.phaseTimer = this.activateDelay;
+        this.phase = 2;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.field_l = param1;
+    final void setDelays(int param0, int param1, int param2, int param3, int param4, int param5) {
+        this.releaseDelay = param1;
         if (param4 == 5) {
-          this.field_f = param2;
-          this.field_k = param3;
-          this.field_i = param0;
-          this.field_e = param5;
+          this.rearmDelay = param2;
+          this.deactivateDelay = param3;
+          this.pressDelay = param0;
+          this.activateDelay = param5;
           return;
         }
-        this.d((byte) -52);
-        this.field_f = param2;
-        this.field_k = param3;
-        this.field_i = param0;
-        this.field_e = param5;
+        this.fireTargets((byte) -52);
+        this.rearmDelay = param2;
+        this.deactivateDelay = param3;
+        this.pressDelay = param0;
+        this.activateDelay = param5;
     }
 
     private SwitchState(int param0, Switchable[] param1) {
         this.on = false;
-        this.field_m = true;
+        this.firesOnActivate = true;
         try {
           this.links = new SwitchLinkList(param0, 0);
           this.links.setTargets(9, param1);
@@ -436,13 +436,13 @@ final class SwitchState implements noa {
     }
 
     final int hashState(int param0, int param1) {
-        param1 = CurveOperator.mixHash((byte) 85, param1, this.field_n);
+        param1 = CurveOperator.mixHash((byte) 85, param1, this.phase);
         if (param0 > 59) {
-          param1 = CurveOperator.mixHash((byte) 93, param1, this.field_b);
+          param1 = CurveOperator.mixHash((byte) 93, param1, this.phaseTimer);
           return param1;
         }
-        this.field_c = 32;
-        param1 = CurveOperator.mixHash((byte) 93, param1, this.field_b);
+        this.usesLeft = 32;
+        param1 = CurveOperator.mixHash((byte) 93, param1, this.phaseTimer);
         return param1;
     }
 
@@ -457,24 +457,24 @@ final class SwitchState implements noa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         this.on = false;
-        this.field_m = true;
+        this.firesOnActivate = true;
         try {
           this.links = new SwitchLinkList(param0, 0, param1.formatVersion, param2);
           if (param1.formatVersion > 9) {
-            this.field_e = param2.readBits((byte) 44, 8);
-            this.field_k = param2.readBits((byte) 44, 8);
-            this.field_i = param2.readBits((byte) 44, 8);
-            this.field_l = param2.readBits((byte) 44, 8);
-            this.field_f = param2.readBits((byte) 44, 8);
+            this.activateDelay = param2.readBits((byte) 44, 8);
+            this.deactivateDelay = param2.readBits((byte) 44, 8);
+            this.pressDelay = param2.readBits((byte) 44, 8);
+            this.releaseDelay = param2.readBits((byte) 44, 8);
+            this.rearmDelay = param2.readBits((byte) 44, 8);
           } else {
-            this.field_e = param2.readBits((byte) 44, 8);
-            this.field_k = param2.readBits((byte) 44, 8);
+            this.activateDelay = param2.readBits((byte) 44, 8);
+            this.deactivateDelay = param2.readBits((byte) 44, 8);
           }
           stackIn_7_1 = (1 == param2.readBits((byte) 44, 1));
-          this.field_m = stackIn_7_1;
+          this.firesOnActivate = stackIn_7_1;
           stackIn_10_1 = (param2.readBits((byte) 44, 1) == 1);
           this.on = stackIn_10_1;
-          this.field_c = param2.readBits((byte) 44, 4);
+          this.usesLeft = param2.readBits((byte) 44, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -501,7 +501,7 @@ final class SwitchState implements noa {
           this.on = param1 ? true : false;
           return;
         }
-        boolean discarded$3 = this.b(true);
+        boolean discarded$3 = this.tickPhaseTimer(true);
         this.on = param1 ? true : false;
     }
 

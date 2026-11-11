@@ -5,12 +5,12 @@ final class RenderScene {
     static String field_a;
     static int field_e;
     private RenderListener listener;
-    private iq renderTarget;
+    private Camera renderTarget;
     static String field_b;
     static MenuScreen[] field_g;
     private RenderLayer[] layers;
 
-    final iq getRenderTarget(int param0) {
+    final Camera getRenderTarget(int param0) {
         if (param0 != 0) {
           this.clear(101);
         }
@@ -21,7 +21,7 @@ final class RenderScene {
         int var3 = 0;
         RenderLayer var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        this.renderTarget.a((byte) 119);
+        this.renderTarget.update((byte) 119);
         RenderLayer[] var6 = this.layers;
         RenderLayer[] var2 = var6;
         for (var3 = param0; var6.length > var3; var3++) {
@@ -30,11 +30,11 @@ final class RenderScene {
         }
     }
 
-    final void setRenderTarget(int param0, iq param1) {
+    final void setRenderTarget(int param0, Camera param1) {
         try {
           this.renderTarget = param1;
           if (param0 != -24343) {
-            this.renderTarget = (iq) null;
+            this.renderTarget = (Camera) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uw.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -90,7 +90,7 @@ final class RenderScene {
     }
 
     final void b(int param0) {
-        this.renderTarget.a(false);
+        this.renderTarget.clampToBounds(false);
         if (param0 != 1909106792) {
           field_b = (String) null;
         }
@@ -135,7 +135,7 @@ final class RenderScene {
         }
         var2 = 0;
         if (param0 != 30057) {
-          this.renderTarget = (iq) null;
+          this.renderTarget = (Camera) null;
         }
         var3 = this.layers;
         for (var4 = 0; var3.length > var4; var4++) {

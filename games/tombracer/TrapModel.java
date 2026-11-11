@@ -10,7 +10,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     WorldBody body;
     private int elevationOffset;
 
-    void a(WorldBody param0, int param1, TrapPart param2) {
+    void configureFor(WorldBody param0, int param1, TrapPart param2) {
         try {
           if (param1 != -2159) {
             this.mirror(80);
@@ -554,7 +554,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
 
     final int getCategory(byte param0) {
         if (param0 <= 1) {
-          this.a((byte) -62, -88);
+          this.onRemoved((byte) -62, -88);
           return this.category;
         }
         return this.category;
@@ -571,8 +571,8 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         try {
           this.part = param0;
           if (param2 != 36) {
-            iq var5 = (iq) null;
-            this.render(-31, (iq) null);
+            Camera var5 = (Camera) null;
+            this.render(-31, (Camera) null);
           }
           this.body = param1;
         } catch (RuntimeException runtimeException) {
@@ -591,7 +591,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         this.body = null;
     }
 
-    abstract void a(iq param0, int param1, int param2, int param3, byte param4);
+    abstract void drawAt(Camera param0, int param1, int param2, int param3, byte param4);
 
     private final boolean g(byte param0) {
         int var2;
@@ -622,7 +622,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         return false;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         Object var3 = null;
         int var4 = 0;
         Object stackIn_13_0 = null;
@@ -639,7 +639,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
               var3 = (Trap) (this.body);
             }
             var4 = (this.elevationOffset << 16) + this.body.getElevation((byte) 115);
-            this.a(param1, this.body.getY(9648), this.body.getX(3), var4, (byte) 46);
+            this.drawAt(param1, this.body.getY(9648), this.body.getX(3), var4, (byte) 46);
             if (var3 != null) {
               ((Trap) (var3)).a(param1, -10425);
             }
@@ -671,7 +671,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         this.updateTileOccupancy(-12663);
     }
 
-    void a(byte param0, int param1) {
+    void onRemoved(byte param0, int param1) {
         int var3 = -51 % ((param0 - 7) / 36);
     }
 
@@ -729,7 +729,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     void removeFromLayer(int param0, RenderScene param1, byte param2) {
         try {
           if (param2 < 40) {
-            this.a((byte) -28, 26);
+            this.onRemoved((byte) -28, 26);
           }
           param1.removeFromLayer(param0, (Renderable) (this), (byte) -33);
         } catch (RuntimeException runtimeException) {

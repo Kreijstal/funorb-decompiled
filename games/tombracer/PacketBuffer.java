@@ -715,7 +715,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int appendCrc32(int param0, int param1) {
-        int var3 = PitSnake.a(this.payload, this.position, 80, param0);
+        int var3 = PitSnake.computeCrc32(this.payload, this.position, 80, param0);
         this.writeInt(var3, (byte) -60);
         if (param1 != 64) {
           field_f = (String) null;
@@ -737,7 +737,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyCrc32(byte param0) {
         this.position = this.position - 4;
-        int var2 = PitSnake.a(this.payload, this.position, param0 ^ -27, 0);
+        int var2 = PitSnake.computeCrc32(this.payload, this.position, param0 ^ -27, 0);
         int var3 = this.readInt(-56);
         if (param0 != 114) {
           this.readNullableString(20);

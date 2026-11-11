@@ -99,7 +99,7 @@ final class TileGrid implements Renderable {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        lk var6 = null;
+        RoomRegion var6 = null;
         int var7 = 0;
         int var4_intLifetime1;
         int var5Lifetime1;
@@ -122,7 +122,7 @@ final class TileGrid implements Renderable {
             if (10 <= param2.formatVersion) {
               var4_intLifetime1 = param1.readBits((byte) 44, 8);
               for (var5Lifetime1 = 0; var5Lifetime1 < var4_intLifetime1; var5Lifetime1++) {
-                var6 = new lk(param2, param1);
+                var6 = new RoomRegion(param2, param1);
                 this.field_p.addLast((byte) -77, var6);
               }
               return;
@@ -174,10 +174,10 @@ final class TileGrid implements Renderable {
             var5.e(param0 - 64);
           }
         }
-        lk var7 = (lk) (this.field_p.first(param0 ^ -16));
+        RoomRegion var7 = (RoomRegion) (this.field_p.first(param0 ^ -16));
         while (var7 != null) {
-          var7.a(this.room, (byte) 104);
-          var7 = (lk) (this.field_p.next(107));
+          var7.mirror(this.room, (byte) 104);
+          var7 = (RoomRegion) (this.field_p.next(107));
         }
     }
 
@@ -205,11 +205,11 @@ final class TileGrid implements Renderable {
         return false;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        lk var6 = null;
+        RoomRegion var6 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -225,10 +225,10 @@ final class TileGrid implements Renderable {
               this.getCell(-118, var3_int, var4).render((byte) 117, param1);
             }
           }
-          var6 = (lk) (this.field_p.first(-80));
+          var6 = (RoomRegion) (this.field_p.first(-80));
           while (var6 != null) {
             var6.render(119, param1);
-            var6 = (lk) (this.field_p.next(107));
+            var6 = (RoomRegion) (this.field_p.next(107));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -396,11 +396,11 @@ final class TileGrid implements Renderable {
             this.getCell(param1 - 115, var9_int, var10).copyTileType(var4[var12 * var5 + var11], 21324);
           }
         }
-        lk var9 = (lk) (this.field_p.first(-80));
+        RoomRegion var9 = (RoomRegion) (this.field_p.first(-80));
         while (var9 != null) {
-          var9.a(-6492, var9.a((byte) 124) + param2);
-          var9.b(param1 ^ 2, param2 + var9.g((byte) -121));
-          var9 = (lk) (this.field_p.next(118));
+          var9.setX(-6492, var9.getX((byte) 124) + param2);
+          var9.setY(param1 ^ 2, param2 + var9.getY((byte) -121));
+          var9 = (RoomRegion) (this.field_p.next(118));
         }
     }
 
@@ -478,12 +478,12 @@ final class TileGrid implements Renderable {
 
     final void removeObjectsOutsideVariant(int param0, byte param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        lk var5 = (lk) (this.field_p.first(-80));
+        RoomRegion var5 = (RoomRegion) (this.field_p.first(-80));
         while (var5 != null) {
-          if (!var5.a(param0, false)) {
+          if (!var5.isInVariant(param0, false)) {
             var5.unlink(56);
           }
-          var5 = (lk) (this.field_p.next(126));
+          var5 = (RoomRegion) (this.field_p.next(126));
         }
         if (param1 > -11) {
           this.endRow = 14;
@@ -494,7 +494,7 @@ final class TileGrid implements Renderable {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        lk var6 = null;
+        RoomRegion var6 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -508,10 +508,10 @@ final class TileGrid implements Renderable {
             }
           }
           param1.writeBits((byte) -128, this.field_p.size((byte) -16), param0);
-          var6 = (lk) (this.field_p.first(-80));
+          var6 = (RoomRegion) (this.field_p.first(-80));
           while (var6 != null) {
-            var6.a((byte) -128, param1);
-            var6 = (lk) (this.field_p.next(123));
+            var6.encode((byte) -128, param1);
+            var6 = (RoomRegion) (this.field_p.next(123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

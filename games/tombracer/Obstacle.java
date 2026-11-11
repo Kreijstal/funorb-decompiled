@@ -125,7 +125,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         return this.x;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         try {
           if (param0 < 103) {
             this.getHeight((byte) -57);

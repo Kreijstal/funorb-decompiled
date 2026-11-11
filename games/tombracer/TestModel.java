@@ -43,7 +43,7 @@ final class TestModel extends TrapModel {
         return 7;
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         RuntimeException stackIn_4_0 = null;

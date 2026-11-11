@@ -130,7 +130,7 @@ final class C2SChooseRewardPacket implements GamePacket {
         if (param2 >= -56) {
           return false;
         }
-        return TileGridCell.hasFlag16(param1, 113, param0) & ag.hasFlag2048(-1, param0, param1);
+        return TileGridCell.hasFlag16(param1, 113, param0) & FollowCamera.hasFlag2048(-1, param0, param1);
     }
 
     final static void b(int param0, int param1) {

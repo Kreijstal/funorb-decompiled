@@ -3,31 +3,31 @@
  */
 final class PlatformModel extends TrapModel {
     static String field_w;
-    private int field_s;
+    private int rows;
     private PlatformBehaviour field_m;
-    private int field_q;
+    private int style;
     private boolean field_p;
     private static String[] locomotorTypeNames;
-    private int field_x;
+    private int offsetY;
     private fla field_t;
     static boolean field_B;
     static int[][] field_A;
-    private eh[][] field_r;
+    private eh[][] tiles;
     private fla field_v;
-    private int field_u;
+    private int offsetX;
     private fla field_o;
     private int field_y;
-    private int field_z;
+    private int columns;
 
-    final int k(int param0) {
+    final int getOffsetX(int param0) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -13019) {
-            PlatformModel.l(-70);
+            PlatformModel.releaseStatics(-70);
           }
-          stackIn_3_0 = this.field_u;
+          stackIn_3_0 = this.offsetX;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,14 +47,14 @@ final class PlatformModel extends TrapModel {
         RuntimeException var3 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_r == null) {
-            this.a(true);
+          if (this.tiles == null) {
+            this.buildTiles(true);
           }
           super.addToScene(param0, param1);
-          if (this.field_r != null) {
-            for (var3_int = 0; this.field_z > var3_int; var3_int++) {
-              for (var4 = 0; var4 < this.field_s; var4++) {
-                this.field_r[var3_int][var4].a(55);
+          if (this.tiles != null) {
+            for (var3_int = 0; this.columns > var3_int; var3_int++) {
+              for (var4 = 0; var4 < this.rows; var4++) {
+                this.tiles[var3_int][var4].a(55);
               }
             }
             return;
@@ -74,14 +74,14 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final int n(byte param0) {
+    final int getStyle(byte param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 87) {
-            stackIn_4_0 = this.field_q;
+            stackIn_4_0 = this.style;
             return stackIn_4_0;
           }
           stackIn_2_0 = -127;
@@ -132,7 +132,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void a(WorldBody param0, int param1, TrapPart param2) {
+    final void configureFor(WorldBody param0, int param1, TrapPart param2) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -143,12 +143,12 @@ final class PlatformModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          super.a(param0, param1, param2);
+          super.configureFor(param0, param1, param2);
           if (param2 instanceof PortalBehaviour) {
-            this.field_q = 1;
+            this.style = 1;
           }
           if (param0.isMobile(true)) {
-            this.field_q = 3;
+            this.style = 3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -174,7 +174,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_w = null;
           locomotorTypeNames = null;
@@ -195,7 +195,7 @@ final class PlatformModel extends TrapModel {
         this.field_v = null;
     }
 
-    private final void a(boolean param0) {
+    private final void buildTiles(boolean param0) {
         int var6 = 0;
         int var8 = 0;
         int stackIn_25_0 = 0;
@@ -222,35 +222,35 @@ final class PlatformModel extends TrapModel {
           var17 = this.getRoom(18);
           var3 = this.body.getX(3);
           var4 = this.body.getY(9648);
-          this.field_z = this.body.getWidth(-84) / 2097152;
-          this.field_s = this.body.getHeight((byte) 55) / 2097152;
-          if ((1 >= this.field_z ||
-            this.field_s <= 1) && this.field_q == 2) {
-            this.field_q = 0;
+          this.columns = this.body.getWidth(-84) / 2097152;
+          this.rows = this.body.getHeight((byte) 55) / 2097152;
+          if ((1 >= this.columns ||
+            this.rows <= 1) && this.style == 2) {
+            this.style = 0;
           }
-          if (!this.p((byte) 77)) {
-            this.o((byte) 95);
+          if (!this.isTiled((byte) 77)) {
+            this.buildSingleTile((byte) 95);
             return;
           }
-          this.field_r = new eh[this.field_z][this.field_s];
+          this.tiles = new eh[this.columns][this.rows];
           var5 = 1048576 + (-(this.body.getHeight((byte) 55) / 2) + var4);
           if (!param0) {
             this.field_o = (fla) null;
           }
-          for (var6 = 0; this.field_s > var6; var6++) {
+          for (var6 = 0; this.rows > var6; var6++) {
             var7 = -(this.body.getWidth(-117) / 2) + (var3 + 1048576);
-            for (var8 = 0; this.field_z > var8; var8++) {
+            for (var8 = 0; this.columns > var8; var8++) {
               boolean decompiledFrameRemainder0 = true;
               var9 = new eh();
-              this.field_r[var8][var6] = var9;
-              if (0 != this.field_q) {
+              this.tiles[var8][var6] = var9;
+              if (0 != this.style) {
                 stackIn_25_0 = (var8 > 0) ? 1 : 0;
                 var10 = stackIn_25_0;
-                stackIn_29_0 = (var8 >= -1 + this.field_z) ? 0 : 1;
+                stackIn_29_0 = (var8 >= -1 + this.columns) ? 0 : 1;
                 var11 = stackIn_29_0;
                 stackIn_33_0 = (var6 <= 0) ? 0 : 1;
                 var12 = stackIn_33_0;
-                stackIn_37_0 = (this.field_s - 1 <= var6) ? 0 : 1;
+                stackIn_37_0 = (this.rows - 1 <= var6) ? 0 : 1;
                 var13 = stackIn_37_0;
                 var14 = 0;
                 if (var10 != 0) {
@@ -291,7 +291,7 @@ final class PlatformModel extends TrapModel {
                                 var9.field_b = var17.getSeededRandom(true).nextBounded(100, 0);
                                 var9.field_c = var5 - var4;
                                 var9.field_d = -var3 + var7;
-                                var9.field_f = this.a(var9, 2);
+                                var9.field_f = this.pickTileSprite(var9, 2);
                                 var7 = var7 + 2097152;
                                 decompiledFrameRemainder0 = false;
                               }
@@ -329,7 +329,7 @@ final class PlatformModel extends TrapModel {
                 var9.field_b = var17.getSeededRandom(true).nextBounded(100, 0);
                 var9.field_c = var5 - var4;
                 var9.field_d = -var3 + var7;
-                var9.field_f = this.a(var9, 2);
+                var9.field_f = this.pickTileSprite(var9, 2);
                 var7 = var7 + 2097152;
               }
             }
@@ -343,14 +343,14 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final int i(int param0) {
+    final int getOffsetY(int param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 1024) {
-            stackIn_4_0 = this.field_x;
+            stackIn_4_0 = this.offsetY;
             return stackIn_4_0;
           }
           stackIn_2_0 = 21;
@@ -362,13 +362,13 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void onRemoved(byte param0, int param1) {
         SoundEventPlayer var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          super.a((byte) 92, param1);
+          super.onRemoved((byte) 92, param1);
           var3 = (SoundEventPlayer) (this.getRoom(29).soundQueue);
           var4 = -57 % ((7 - param0) / 36);
           if (var3 == null) {
@@ -425,14 +425,14 @@ final class PlatformModel extends TrapModel {
           var3 = 0;
           if (this.field_m != null &&
             this.field_m.d(false)) {
-            this.field_u = -131072 + uca.cosmeticRandom.nextBounded(262144, ~param0);
-            this.field_x = uca.cosmeticRandom.nextBounded(262144, param0 + 1) - 131072;
+            this.offsetX = -131072 + uca.cosmeticRandom.nextBounded(262144, ~param0);
+            this.offsetY = uca.cosmeticRandom.nextBounded(262144, param0 + 1) - 131072;
             var2_int = 1;
             if (this.field_m.g((byte) 120)) {
               var2_int = 0;
-              for (var4_int = 0; this.field_z > var4_int; var4_int++) {
-                for (var5_int = 0; this.field_s > var5_int; var5_int++) {
-                  this.field_r[var4_int][var5_int].field_g.a(0);
+              for (var4_int = 0; this.columns > var4_int; var4_int++) {
+                for (var5_int = 0; this.rows > var5_int; var5_int++) {
+                  this.tiles[var4_int][var5_int].field_g.a(0);
                 }
               }
               var3 = 1;
@@ -455,7 +455,7 @@ final class PlatformModel extends TrapModel {
           if (768.0 <= var13) {
             var6 = 0;
           }
-          if (1 != this.field_q) {
+          if (1 != this.style) {
             if (var2_int != 0 &&
               this.field_t == null) {
               this.field_t = var4_ref.play(new SoundEvent(19, this.getRenderX((byte) 84), this.getRenderY((byte) 123), this.getRenderZ((byte) -118)), param0 ^ 57);
@@ -537,7 +537,7 @@ final class PlatformModel extends TrapModel {
         try {
           super.encode((byte) -58, param1);
           var3_int = -7 % ((param0 + 8) / 40);
-          param1.writeBits((byte) -16, this.field_q, 4);
+          param1.writeBits((byte) -16, this.style, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -564,15 +564,15 @@ final class PlatformModel extends TrapModel {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           super.mirror(119);
-          if (this.field_r == null) {
+          if (this.tiles == null) {
             return;
           }
           if (param0 <= 0) {
             return;
           }
-          for (var2_int = 0; this.field_z > var2_int; var2_int++) {
-            for (var3 = 0; this.field_s > var3; var3++) {
-              var4 = this.field_r[var2_int][var3];
+          for (var2_int = 0; this.columns > var2_int; var2_int++) {
+            for (var3 = 0; this.rows > var3; var3++) {
+              var4 = this.tiles[var2_int][var3];
               var5 = mpa.field_W[var4.field_h];
               var4.field_a = GameScreen.positiveModulo(-var4.field_a + var5, 2048, 65);
               var4.field_d = -var4.field_d;
@@ -586,12 +586,12 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void b(int param0, byte param1) {
+    final void setStyle(int param0, byte param1) {
         try {
           if (param1 != 23) {
             field_B = false;
           }
-          this.field_q = param0;
+          this.style = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ce.Q(" + param0 + ',' + param1 + ')');
         }
@@ -608,7 +608,7 @@ final class PlatformModel extends TrapModel {
             this.addToScene(-71, (RenderScene) null);
           }
           super.removeFromScene(param0, 105);
-          this.field_r = (eh[][]) null;
+          this.tiles = (eh[][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -638,10 +638,10 @@ final class PlatformModel extends TrapModel {
           if (param2 <= 40) {
             this.field_v = (fla) null;
           }
-          if (null != this.field_r) {
-            for (var4_int = 0; this.field_z > var4_int; var4_int++) {
-              for (var5 = 0; this.field_s > var5; var5++) {
-                param1.removeFromLayer(param0, this.field_r[var4_int][var5], (byte) -33);
+          if (null != this.tiles) {
+            for (var4_int = 0; this.columns > var4_int; var4_int++) {
+              for (var5 = 0; this.rows > var5; var5++) {
+                param1.removeFromLayer(param0, this.tiles[var4_int][var5], (byte) -33);
               }
             }
             return;
@@ -661,15 +661,15 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    private final void o(byte param0) {
+    private final void buildSingleTile(byte param0) {
         eh var3 = null;
         eh var2 = null;
         try {
-          this.field_s = 1;
-          this.field_z = 1;
-          this.field_r = new eh[1][1];
+          this.rows = 1;
+          this.columns = 1;
+          this.tiles = new eh[1][1];
           if (param0 < 74) {
-            this.a((byte) 41, 36);
+            this.onRemoved((byte) 41, 36);
           }
           var3 = new eh();
           var2 = var3;
@@ -679,8 +679,8 @@ final class PlatformModel extends TrapModel {
           var2.field_h = 0;
           var2.field_e = this;
           var2.field_b = this.getRoom(53).getSeededRandom(true).nextBounded(100, 0);
-          var2.field_f = this.a(var3, 2);
-          this.field_r[0][0] = var3;
+          var2.field_f = this.pickTileSprite(var3, 2);
+          this.tiles[0][0] = var3;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ce.B(" + param0 + ')');
         }
@@ -700,9 +700,9 @@ final class PlatformModel extends TrapModel {
             return stackIn_4_0;
           }
           if (param0 != -99) {
-            this.field_r = (eh[][]) null;
+            this.tiles = (eh[][]) null;
           }
-          var2_int = this.field_q;
+          var2_int = this.style;
           if (var2_int == 2) {
             stackIn_14_0 = 2;
             return stackIn_14_0;
@@ -740,12 +740,12 @@ final class PlatformModel extends TrapModel {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 <= 50) {
-            this.n((byte) 0);
+            this.getStyle((byte) 0);
           }
-          if (null != this.field_r) {
-            for (var4_int = 0; this.field_z > var4_int; var4_int++) {
-              for (var5 = 0; var5 < this.field_s; var5++) {
-                param2.addToLayer((byte) -111, param1, this.field_r[var4_int][var5]);
+          if (null != this.tiles) {
+            for (var4_int = 0; this.columns > var4_int; var4_int++) {
+              for (var5 = 0; var5 < this.rows; var5++) {
+                param2.addToLayer((byte) -111, param1, this.tiles[var4_int][var5]);
               }
             }
             return;
@@ -777,9 +777,9 @@ final class PlatformModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         try {
           super.decode(127, param1, param2);
-          this.field_q = param2.readBits((byte) 44, 4);
+          this.style = param2.readBits((byte) 44, 4);
           if (param0 <= 119) {
-            this.field_s = -69;
+            this.rows = -69;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -814,7 +814,7 @@ final class PlatformModel extends TrapModel {
           var1.d(128, 9, param0 + 6);
           var2.d(128, 9, 32460);
           if (param0 != 32454) {
-            PlatformModel.l(-98);
+            PlatformModel.releaseStatics(-98);
           }
           RewardChoicePhase.field_n = new sq(var1, var2);
           CourseLayout.a(22050, 1024, RewardChoicePhase.field_n, true, (java.awt.Component) ((Object) nma.field_l), dsa.field_c);
@@ -824,7 +824,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    private final int a(eh param0, int param1) {
+    private final int pickTileSprite(eh param0, int param1) {
         int stackIn_3_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_19_0 = 0;
@@ -854,7 +854,7 @@ final class PlatformModel extends TrapModel {
             stackIn_3_0 = -64;
             return stackIn_3_0;
           }
-          var3_int = this.field_q;
+          var3_int = this.style;
           if (var3_int != 0) {
             if (var3_int == 1) {
               stackIn_23_0 = 26;
@@ -932,7 +932,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -956,7 +956,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    private final boolean p(byte param0) {
+    private final boolean isTiled(byte param0) {
         boolean stackIn_6_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -964,7 +964,7 @@ final class PlatformModel extends TrapModel {
           if (param0 < 7) {
             this.addToScene(-54, (RenderScene) null);
           }
-          stackIn_6_0 = (this.field_q != 1);
+          stackIn_6_0 = (this.style != 1);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

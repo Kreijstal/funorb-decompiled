@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lk extends IntrusiveNode implements qn, Renderable, noa {
-    private int field_o;
-    private int field_p;
-    private VariantMask field_m;
+final class RoomRegion extends IntrusiveNode implements qn, Renderable, noa {
+    private int height;
+    private int y;
+    private VariantMask variantMask;
     static boolean[] field_h;
-    private boolean field_g;
-    private int field_n;
+    private boolean flipped;
+    private int x;
     private boolean field_f;
-    private int field_j;
-    private Room field_i;
-    private int field_k;
+    private int type;
+    private Room room;
+    private int width;
     static jea field_l;
 
     private final boolean a(int param0) {
@@ -21,15 +21,15 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         return false;
     }
 
-    final boolean a(int param0, boolean param1) {
+    final boolean isInVariant(int param0, boolean param1) {
         if (param1) {
           this.getRenderY((byte) -27);
         }
-        return this.field_m.includes(param0, 14530);
+        return this.variantMask.includes(param0, 14530);
     }
 
-    final void a(Room param0, byte param1) {
-        iq var4 = null;
+    final void mirror(Room param0, byte param1) {
+        Camera var4 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -37,12 +37,12 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_n = param0.mirrorX(this.field_n, (byte) 71);
-          stackIn_3_1 = !(this.field_g);
-          this.field_g = stackIn_3_1;
+          this.x = param0.mirrorX(this.x, (byte) 71);
+          stackIn_3_1 = !(this.flipped);
+          this.flipped = stackIn_3_1;
           if (param1 != 104) {
-            var4 = (iq) null;
-            this.render(-36, (iq) null);
+            var4 = (Camera) null;
+            this.render(-36, (Camera) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,34 +59,34 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         }
     }
 
-    private final boolean f(byte param0) {
+    private final boolean isOutsideActiveVariant(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -1) {
           return false;
         }
-        stackIn_6_0 = (this.field_i.hasActiveVariant((byte) -82)) && (!this.a(this.field_i.getActiveVariant(6029), false));
+        stackIn_6_0 = (this.room.hasActiveVariant((byte) -82)) && (!this.isInVariant(this.room.getActiveVariant(6029), false));
         return stackIn_6_0;
     }
 
-    final void a(int param0, int param1) {
-        this.field_n = param1;
+    final void setX(int param0, int param1) {
+        this.x = param1;
         if (param0 != -6492) {
           this.getRenderX((byte) 30);
         }
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (!this.f((byte) -1)) {
-            dea.roomObjectRenderer.a(param1, 15, this);
+          if (!this.isOutsideActiveVariant((byte) -1)) {
+            dea.roomObjectRenderer.drawRegion(param1, 15, this);
           }
           if (param0 <= 103) {
-            this.field_g = false;
+            this.flipped = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,28 +105,28 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
 
     public final int getRenderX(byte param0) {
         int var2 = -17 % ((-23 - param0) / 53);
-        return this.field_n;
+        return this.x;
     }
 
     public final void updateAnimation(int param0) {
         if (param0 != -4366) {
-          this.field_i = (Room) null;
+          this.room = (Room) null;
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
           if (param0 >= -125) {
-            this.field_n = -37;
+            this.x = -37;
           }
-          param1.writeBits((byte) 20, this.field_j, 8);
-          param1.writeBits((byte) -127, this.field_n >> 16, 12);
-          param1.writeBits((byte) -43, this.field_p >> 16, 12);
-          param1.writeBits((byte) -125, this.field_k >> 16, 10);
-          param1.writeBits((byte) -128, this.field_o >> 16, 10);
-          param1.writeBits((byte) -127, this.field_g ? 1 : 0, 1);
+          param1.writeBits((byte) 20, this.type, 8);
+          param1.writeBits((byte) -127, this.x >> 16, 12);
+          param1.writeBits((byte) -43, this.y >> 16, 12);
+          param1.writeBits((byte) -125, this.width >> 16, 10);
+          param1.writeBits((byte) -128, this.height >> 16, 10);
+          param1.writeBits((byte) -127, this.flipped ? 1 : 0, 1);
           param1.writeBits((byte) 86, !this.field_f ? 0 : 1, 1);
-          this.field_m.encode((byte) -86, param1);
+          this.variantMask.encode((byte) -86, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lk.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -143,31 +143,31 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         if (param0 < 91) {
           return -46;
         }
-        return this.field_p;
+        return this.y;
     }
 
     public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
-          this.field_k = -73;
+          this.width = -73;
           return 0;
         }
         return 0;
     }
 
-    final int a(byte param0) {
+    final int getX(byte param0) {
         int var2 = -101 % ((56 - param0) / 62);
-        return this.field_n;
+        return this.x;
     }
 
-    final int b(int param0) {
+    final int getWidth(int param0) {
         if (param0 < 36) {
           return -117;
         }
-        return this.field_k;
+        return this.width;
     }
 
-    final void b(int param0, int param1) {
-        this.field_p = param1;
+    final void setY(int param0, int param1) {
+        this.y = param1;
         if (param0 != 0) {
           this.isRenderExpired((byte) 90);
         }
@@ -181,31 +181,31 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         }
     }
 
-    final int b(boolean param0) {
+    final int getHeight(boolean param0) {
         if (param0) {
           field_h = (boolean[]) null;
         }
-        return this.field_o;
+        return this.height;
     }
 
-    final int g(byte param0) {
+    final int getY(byte param0) {
         if (param0 >= -58) {
           return -85;
         }
-        return this.field_p;
+        return this.y;
     }
 
-    lk(Room param0, BitPacketBuffer param1) {
+    RoomRegion(Room param0, BitPacketBuffer param1) {
         try {
-          this.field_i = param0;
-          this.field_j = param1.readBits((byte) 44, 8);
-          this.field_n = param1.readBits((byte) 44, 12) << 16;
-          this.field_p = param1.readBits((byte) 44, 12) << 16;
-          this.field_k = param1.readBits((byte) 44, 10) << 16;
-          this.field_o = param1.readBits((byte) 44, 10) << 16;
-          this.field_g = param1.readBits((byte) 44, 1) == 1 ? true : false;
+          this.room = param0;
+          this.type = param1.readBits((byte) 44, 8);
+          this.x = param1.readBits((byte) 44, 12) << 16;
+          this.y = param1.readBits((byte) 44, 12) << 16;
+          this.width = param1.readBits((byte) 44, 10) << 16;
+          this.height = param1.readBits((byte) 44, 10) << 16;
+          this.flipped = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_f = param1.readBits((byte) 44, 1) == 1 ? true : false;
-          this.field_m = new VariantMask(param0.formatVersion, param1);
+          this.variantMask = new VariantMask(param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

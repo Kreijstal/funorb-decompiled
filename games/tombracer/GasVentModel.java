@@ -71,9 +71,9 @@ final class GasVentModel extends TrapModel {
         dga.a(fp.field_e, 199);
     }
 
-    final void a(WorldBody param0, int param1, TrapPart param2) {
+    final void configureFor(WorldBody param0, int param1, TrapPart param2) {
         try {
-          super.a(param0, param1, param2);
+          super.configureFor(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pqa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -126,15 +126,15 @@ final class GasVentModel extends TrapModel {
         }
         int var2 = this.field_n.getMaxLevel(-113);
         int var3 = this.field_n.getLevel((byte) -108);
-        if (this.field_n.getSwitchState((byte) -74).b((byte) 120)) {
+        if (this.field_n.getSwitchState((byte) -74).isActive((byte) 120)) {
           this.field_q = var2;
           var11 = this.getRoom(param0 + 44);
           Room var4 = var11;
           var5 = var11.spawnParticle(this.getRenderX((byte) 42), this.getRenderY((byte) 118) + 2097152, (byte) 100, this.getRenderZ((byte) -92) + 8 << 16);
-          var5.a(false, 32, 12, 4, 10 + uca.cosmeticRandom.nextBounded(10, param0 + 1));
+          var5.configure(false, 32, 12, 4, 10 + uca.cosmeticRandom.nextBounded(10, param0 + 1));
           var6 = 262144 + uca.cosmeticRandom.nextBounded(262144, 0);
-          var5.a(var6, -var6 / 32, 0, 0, 0, 0, (byte) -20);
-          var5.a(uca.cosmeticRandom.nextBounded(2048, param0 ^ param0), -16 + uca.cosmeticRandom.nextBounded(32, 0), param0 ^ 118);
+          var5.setMotion(var6, -var6 / 32, 0, 0, 0, 0, (byte) -20);
+          var5.setRotation(uca.cosmeticRandom.nextBounded(2048, param0 ^ param0), -16 + uca.cosmeticRandom.nextBounded(32, 0), param0 ^ 118);
           if (this.field_q <= 10) {
             return;
           }
@@ -144,9 +144,9 @@ final class GasVentModel extends TrapModel {
             var7 = 1;
             if (var7 != 0) {
               var12 = var11.spawnParticle(uca.cosmeticRandom.nextBounded(var11.getWidth((byte) -86), 0), uca.cosmeticRandom.nextBounded(var11.getHeight(-125), 0), (byte) 100, 1048576);
-              var12.a(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
-              var12.a(65536, 0, param0 ^ 118, 0);
-              var12.a(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
+              var12.configure(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
+              var12.setVelocity(65536, 0, param0 ^ 118, 0);
+              var12.setRotation(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
             }
             return;
           }
@@ -154,9 +154,9 @@ final class GasVentModel extends TrapModel {
             this.field_o = this.field_o - 1;
             if (var7 != 0) {
               var16 = var11.spawnParticle(uca.cosmeticRandom.nextBounded(var11.getWidth((byte) -86), 0), uca.cosmeticRandom.nextBounded(var11.getHeight(-125), 0), (byte) 100, 1048576);
-              var16.a(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
-              var16.a(65536, 0, param0 ^ 118, 0);
-              var16.a(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
+              var16.configure(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
+              var16.setVelocity(65536, 0, param0 ^ 118, 0);
+              var16.setRotation(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
             }
             return;
           }
@@ -164,19 +164,19 @@ final class GasVentModel extends TrapModel {
           var7Lifetime3 = 1;
           if (var7Lifetime3 != 0) {
             var14 = var11.spawnParticle(uca.cosmeticRandom.nextBounded(var11.getWidth((byte) -86), 0), uca.cosmeticRandom.nextBounded(var11.getHeight(-125), 0), (byte) 100, 1048576);
-            var14.a(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
-            var14.a(65536, 0, param0 ^ 118, 0);
-            var14.a(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
+            var14.configure(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
+            var14.setVelocity(65536, 0, param0 ^ 118, 0);
+            var14.setRotation(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
           }
           return;
         }
         this.field_q = var3;
         Room var18 = this.getRoom(param0 + 44);
         var5Lifetime1 = var18.spawnParticle(this.getRenderX((byte) 42), this.getRenderY((byte) 118) + 2097152, (byte) 100, this.getRenderZ((byte) -92) + 8 << 16);
-        var5Lifetime1.a(false, 32, 12, 4, 10 + uca.cosmeticRandom.nextBounded(10, param0 + 1));
+        var5Lifetime1.configure(false, 32, 12, 4, 10 + uca.cosmeticRandom.nextBounded(10, param0 + 1));
         var6Lifetime1 = 262144 + uca.cosmeticRandom.nextBounded(262144, 0);
-        var5Lifetime1.a(var6Lifetime1, -var6Lifetime1 / 32, 0, 0, 0, 0, (byte) -20);
-        var5Lifetime1.a(uca.cosmeticRandom.nextBounded(2048, param0 ^ param0), -16 + uca.cosmeticRandom.nextBounded(32, 0), param0 ^ 118);
+        var5Lifetime1.setMotion(var6Lifetime1, -var6Lifetime1 / 32, 0, 0, 0, 0, (byte) -20);
+        var5Lifetime1.setRotation(uca.cosmeticRandom.nextBounded(2048, param0 ^ param0), -16 + uca.cosmeticRandom.nextBounded(32, 0), param0 ^ 118);
         if (this.field_q <= 10) {
           return;
         }
@@ -186,9 +186,9 @@ final class GasVentModel extends TrapModel {
           var7Lifetime1 = 1;
           if (var7Lifetime1 != 0) {
             var19 = var18.spawnParticle(uca.cosmeticRandom.nextBounded(var18.getWidth((byte) -86), 0), uca.cosmeticRandom.nextBounded(var18.getHeight(-125), 0), (byte) 100, 1048576);
-            var19.a(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
-            var19.a(65536, 0, param0 ^ 118, 0);
-            var19.a(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
+            var19.configure(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
+            var19.setVelocity(65536, 0, param0 ^ 118, 0);
+            var19.setRotation(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
           }
           return;
         }
@@ -196,9 +196,9 @@ final class GasVentModel extends TrapModel {
           this.field_o = this.field_o - 1;
           if (var7Lifetime1 != 0) {
             var21 = var18.spawnParticle(uca.cosmeticRandom.nextBounded(var18.getWidth((byte) -86), 0), uca.cosmeticRandom.nextBounded(var18.getHeight(-125), 0), (byte) 100, 1048576);
-            var21.a(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
-            var21.a(65536, 0, param0 ^ 118, 0);
-            var21.a(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
+            var21.configure(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
+            var21.setVelocity(65536, 0, param0 ^ 118, 0);
+            var21.setRotation(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
           }
           return;
         }
@@ -206,9 +206,9 @@ final class GasVentModel extends TrapModel {
         var7Lifetime2 = 1;
         if (var7Lifetime2 != 0) {
           var20 = var18.spawnParticle(uca.cosmeticRandom.nextBounded(var18.getWidth((byte) -86), 0), uca.cosmeticRandom.nextBounded(var18.getHeight(-125), 0), (byte) 100, 1048576);
-          var20.a(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
-          var20.a(65536, 0, param0 ^ 118, 0);
-          var20.a(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
+          var20.configure(false, 64, 12, 8, uca.cosmeticRandom.nextBounded(25, 0) + 25);
+          var20.setVelocity(65536, 0, param0 ^ 118, 0);
+          var20.setRotation(uca.cosmeticRandom.nextBounded(2048, 0), -16 + uca.cosmeticRandom.nextBounded(32, 0), -96);
         }
     }
 
@@ -267,7 +267,7 @@ final class GasVentModel extends TrapModel {
         }
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         int var7 = 0;
         try {
           int var6_int = 92 % ((param4 + 38) / 47);

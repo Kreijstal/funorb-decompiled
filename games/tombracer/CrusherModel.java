@@ -18,8 +18,8 @@ final class CrusherModel extends TrapModel {
           super.decode(120, param1, param2);
           this.field_q = param2.readBits((byte) 44, 4);
           if (param0 <= 119) {
-            iq var5 = (iq) null;
-            this.a((iq) null, 87, -34, 68, (byte) 5);
+            Camera var5 = (Camera) null;
+            this.drawAt((Camera) null, 87, -34, 68, (byte) 5);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -709,7 +709,7 @@ final class CrusherModel extends TrapModel {
         this.field_n = 160;
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

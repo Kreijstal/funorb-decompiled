@@ -69,7 +69,7 @@ final class KeySwitchComponent extends SwitchComponent {
           var5.b(0, 1);
           this.a(var5, (byte) -101);
           var6 = var5.getSwitchState((byte) -98);
-          var6.b(1, 106);
+          var6.setUses(1, 106);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;
           var8 = (SwitchModel) (var7.createModel(9, param1 + 103));

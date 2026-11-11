@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PitSnake extends IntrusiveNode {
-    private int field_i;
+    private int scaredTicks;
     private int field_w;
     private int field_g;
     private int field_u;
@@ -18,13 +18,13 @@ final class PitSnake extends IntrusiveNode {
     private int field_h;
     private int field_p;
     private int field_q;
-    private int field_k;
+    private int cooldownTicks;
     private int field_o;
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        this.field_i = 0;
+    final void calm(int param0, int param1, int param2, byte param3) {
+        this.scaredTicks = 0;
         int var5 = -52 % ((param3 - 44) / 36);
-        this.field_k = 0;
+        this.cooldownTicks = 0;
     }
 
     final int f(int param0) {
@@ -34,7 +34,7 @@ final class PitSnake extends IntrusiveNode {
         return this.field_r;
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4, Trap param5, Room param6) {
+    final void tick(int param0, int param1, int param2, int param3, byte param4, Trap param5, Room param6) {
         RuntimeException stackIn_79_0 = null;
         StringBuilder stackIn_79_1 = null;
         String stackIn_80_2 = null;
@@ -56,15 +56,15 @@ final class PitSnake extends IntrusiveNode {
         int var13Lifetime1;
         var16 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_k > 0) {
-            this.field_k = this.field_k - 1;
+          if (this.cooldownTicks > 0) {
+            this.cooldownTicks = this.cooldownTicks - 1;
             return;
           }
           var17 = param6.getRandom(57);
           if (param6.getSimulation(-1553494544).isEffectActive(8, 10915)) {
             this.field_o = 100 + var17.nextBounded(50, 0);
           }
-          var9 = this.a(0) ? 1 : 0;
+          var9 = this.isScared(0) ? 1 : 0;
           var10 = this.h(21302) ? 1 : 0;
           if (param4 > -55) {
             this.g(-9);
@@ -79,9 +79,9 @@ final class PitSnake extends IntrusiveNode {
             this.field_h = this.field_h - 1;
             if (this.field_h == 0) {
               var11 = 1;
-              if (0 < this.field_i) {
-                this.field_o = this.field_i;
-                this.field_i = 0;
+              if (0 < this.scaredTicks) {
+                this.field_o = this.scaredTicks;
+                this.scaredTicks = 0;
               }
             }
           }
@@ -91,7 +91,7 @@ final class PitSnake extends IntrusiveNode {
             this.field_s = 0;
             if (var10 == 0 &&
               var9 == 0) {
-              this.a(param6, -92);
+              this.startCooldown(param6, -92);
             }
             return;
           }
@@ -112,7 +112,7 @@ final class PitSnake extends IntrusiveNode {
             this.field_f = var13;
             this.field_s = var12Lifetime1 * ne.field_f[this.field_f][0];
             this.field_p = ne.field_f[this.field_f][1] * var12Lifetime1;
-            if (0 < this.field_i) {
+            if (0 < this.scaredTicks) {
               if (this.field_s != 0 &&
                 lw.signum(this.field_s, (byte) -87) == lw.signum(-this.field_n + this.field_u, (byte) -87)) {
                 this.field_s = -this.field_s;
@@ -131,8 +131,8 @@ final class PitSnake extends IntrusiveNode {
             }
             this.field_h = var17.nextBounded(75, 0) + 25;
           }
-          if (0 < this.field_i) {
-            this.field_i = this.field_i - 1;
+          if (0 < this.scaredTicks) {
+            this.scaredTicks = this.scaredTicks - 1;
           }
           var12Lifetime2 = this.field_n;
           this.field_n = this.field_n + this.field_s;
@@ -245,14 +245,14 @@ final class PitSnake extends IntrusiveNode {
           if (param1) {
             stackIn_13_0 = (15 > this.field_g) ? 0 : 1;
             var7 = stackIn_13_0;
-            if (this.a(-196609, param4, param2, param3) &&
+            if (this.overlapsPlayer(-196609, param4, param2, param3) &&
               var6_int != 0 &&
               var7 != 0) {
               param4.kill(2, (byte) 97, 7);
             }
           }
           this.field_l = false;
-          if (!this.a(0) &&
+          if (!this.isScared(0) &&
             !this.h(21302) &&
             var6_int != 0 &&
             param1 &&
@@ -304,7 +304,7 @@ final class PitSnake extends IntrusiveNode {
         }
         if (param0 != 5) {
           byte[] var2 = (byte[]) null;
-          PitSnake.a((byte[]) null, 116, 108, 51);
+          PitSnake.computeCrc32((byte[]) null, 116, 108, 51);
         }
         if (daa.field_d != baa.field_d.field_i.field_b) {
           return -1;
@@ -326,17 +326,17 @@ final class PitSnake extends IntrusiveNode {
         return 20 < this.field_o ? true : false;
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
+    final void scareFrom(int param0, int param1, int param2, boolean param3) {
         if (!param3) {
           Room var6 = (Room) null;
-          this.a(-51, -111, -16, -86, (byte) -10, (Trap) null, (Room) null);
+          this.tick(-51, -111, -16, -86, (byte) -10, (Trap) null, (Room) null);
         }
         this.field_p = 0;
-        if (0 == this.field_i) {
+        if (0 == this.scaredTicks) {
           this.field_s = 0;
         }
-        this.field_i = 200;
-        this.field_k = 0;
+        this.scaredTicks = 200;
+        this.cooldownTicks = 0;
         this.field_u = param0;
         this.field_m = param2;
     }
@@ -355,7 +355,7 @@ final class PitSnake extends IntrusiveNode {
         return this.field_f;
     }
 
-    final static int a(byte[] param0, int param1, int param2, int param3) {
+    final static int computeCrc32(byte[] param0, int param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -390,7 +390,7 @@ final class PitSnake extends IntrusiveNode {
         }
     }
 
-    private final boolean a(int param0, Player param1, int param2, int param3) {
+    private final boolean overlapsPlayer(int param0, Player param1, int param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -417,30 +417,30 @@ final class PitSnake extends IntrusiveNode {
         }
     }
 
-    private final void a(Room param0, int param1) {
+    private final void startCooldown(Room param0, int param1) {
         try {
           if (param1 > -72) {
             this.g(-8);
           }
-          this.field_k = 50 + param0.getRandom(-120).nextBounded(50, 0);
+          this.cooldownTicks = 50 + param0.getRandom(-120).nextBounded(50, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean a(int param0) {
+    final boolean isScared(int param0) {
         if (param0 != 0) {
           this.g(-80);
         }
-        return 0 < this.field_i ? true : false;
+        return 0 < this.scaredTicks ? true : false;
     }
 
-    final boolean b(int param0) {
+    final boolean isCoolingDown(int param0) {
         if (param0 != 180) {
           Player var3 = (Player) null;
           this.a(79, false, 55, 0, (Player) null);
         }
-        return 0 < this.field_k ? true : false;
+        return 0 < this.cooldownTicks ? true : false;
     }
 
     PitSnake(int param0, int param1, int param2) {

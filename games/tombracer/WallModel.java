@@ -30,7 +30,7 @@ final class WallModel extends TrapModel {
         if (param0 > -63) {
           this.field_q = 91;
         }
-        if (this.k(10)) {
+        if (this.isDynamic(10)) {
           return -1;
         }
         return 0;
@@ -118,14 +118,14 @@ final class WallModel extends TrapModel {
     }
 
     final int getWideOccupancyMode(byte param0) {
-        if (this.k(10)) {
+        if (this.isDynamic(10)) {
           return -1;
         }
         int var2 = 116 % ((param0 - 15) / 45);
         return 0;
     }
 
-    final ka a(WallTile param0, byte param1) {
+    final ka getTileModel(WallTile param0, byte param1) {
         int discarded$0 = 0;
         ka stackIn_44_0 = null;
         RuntimeException stackIn_47_0 = null;
@@ -210,7 +210,7 @@ final class WallModel extends TrapModel {
         try {
           super.removeFromScene(param0, 115);
           if (param1 <= 82) {
-            this.o((byte) 33);
+            this.isOnTrap((byte) 33);
           }
           this.tiles = (WallTile[][]) null;
         } catch (RuntimeException runtimeException) {
@@ -218,7 +218,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    private final int a(int param0, int param1, int param2, WallTile param3) {
+    private final int checkerParity(int param0, int param1, int param2, WallTile param3) {
         RuntimeException var5 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -362,7 +362,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    private final boolean k(int param0) {
+    private final boolean isDynamic(int param0) {
         if (this.body.isMobile(true)) {
           return true;
         }
@@ -375,7 +375,7 @@ final class WallModel extends TrapModel {
         return false;
     }
 
-    private final void j(int param0) {
+    private final void buildTiles(int param0) {
         int var11 = 0;
         int var13 = 0;
         int stackIn_7_0 = 0;
@@ -457,7 +457,7 @@ final class WallModel extends TrapModel {
         this.field_A = this.field_v + var5;
         this.field_u = this.body.getY(9648) - var6 / 2;
         this.field_m = var6 + this.field_u;
-        var7 = this.k(10) ? 1 : 0;
+        var7 = this.isDynamic(10) ? 1 : 0;
         var8 = this.body.getX(3);
         var9 = this.body.getY(9648);
         this.field_w = (-this.field_u + this.field_m) / 2097152;
@@ -807,7 +807,7 @@ final class WallModel extends TrapModel {
             var14.field_l = var12 - var8;
             var14.field_g = this;
             if (this.field_y == 0) {
-              var14.field_p = this.a(var10, var12, param0 - 2097153, var14);
+              var14.field_p = this.checkerParity(var10, var12, param0 - 2097153, var14);
               var14.field_d = this.b(var14, (byte) -94);
             }
             if (var7 == 0) {
@@ -895,7 +895,7 @@ final class WallModel extends TrapModel {
     final void addToScene(int param0, RenderScene param1) {
         try {
           if (null == this.tiles) {
-            this.j(2097152);
+            this.buildTiles(2097152);
             if (SpriteTileOperator.d(67)) {
               this.l(32166);
             }
@@ -932,7 +932,7 @@ final class WallModel extends TrapModel {
         if (param0 != 32166) {
           this.l(-80);
         }
-        var2 = this.k(param0 ^ 32172) ? 1 : 0;
+        var2 = this.isDynamic(param0 ^ 32172) ? 1 : 0;
         var3 = this.getRoom(param0 - 32121);
         var4 = 4194304;
         var5 = this.body.getX(3);
@@ -1094,7 +1094,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final boolean o(byte param0) {
+    final boolean isOnTrap(byte param0) {
         int var2 = 66 % ((25 - param0) / 57);
         if (!(this.body instanceof Trap)) {
           return false;
@@ -1111,7 +1111,7 @@ final class WallModel extends TrapModel {
         int var1 = -22 % ((param0 - 6) / 42);
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         try {
           int var6_int = 89 % ((-38 - param4) / 47);
         } catch (RuntimeException runtimeException) {

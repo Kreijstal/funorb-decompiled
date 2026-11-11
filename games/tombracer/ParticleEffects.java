@@ -17,9 +17,9 @@ final class ParticleEffects {
           var9 = param2 / 8 + (-(var7 / 2) + this.randomBelow((byte) -33, var7));
           var10 = -(var7 / 2) + (this.randomBelow((byte) -33, var7) + param5 / 8);
           var11 = this.room.spawnParticle(param1, param0, (byte) 100, param3);
-          var11.a(false, 32, 10, 16, 20 + this.randomBelow((byte) -33, 15));
-          var11.a(var10, -var10 / 64, var9, -var9 / 64, 131072, -8192, (byte) -20);
-          var11.a(this.randomBelow((byte) -33, 2048), this.randomBelow((byte) -33, 32) - 16, -77);
+          var11.configure(false, 32, 10, 16, 20 + this.randomBelow((byte) -33, 15));
+          var11.setMotion(var10, -var10 / 64, var9, -var9 / 64, 131072, -8192, (byte) -20);
+          var11.setRotation(this.randomBelow((byte) -33, 2048), this.randomBelow((byte) -33, 32) - 16, -77);
         }
     }
 
@@ -69,9 +69,9 @@ final class ParticleEffects {
           var17 = gqa.a(var13, (byte) 24, param7);
           var18 = gqa.a(var14, (byte) 24, param7);
           var15 = this.room.spawnParticle(param8, param0, (byte) 100, param3);
-          var15.a(false, param9, param2, param10, param6);
-          var15.a(var18, -var18 / 32, var17, -var17 / 32, 0, 0, (byte) -20);
-          var15.a(this.randomBelow((byte) -33, 2048), this.randomBelow((byte) -33, 128) - 64, -125);
+          var15.configure(false, param9, param2, param10, param6);
+          var15.setMotion(var18, -var18 / 32, var17, -var17 / 32, 0, 0, (byte) -20);
+          var15.setRotation(this.randomBelow((byte) -33, 2048), this.randomBelow((byte) -33, 128) - 64, -125);
         }
     }
 
@@ -126,10 +126,10 @@ final class ParticleEffects {
           var13 = param1.field_k;
           for (var14 = 0; var10 > var14; var14++) {
             var15 = this.room.spawnParticle(var12, var13, (byte) 100, param1.field_i);
-            var15.a(false, 12, param1.field_j, 6, var11);
+            var15.configure(false, 12, param1.field_j, 6, var11);
             var13 = var13 + var9;
             var12 = var12 + var8;
-            var15.a(-121, var6);
+            var15.setAngle(-121, var6);
             if (var12 >= 0 &&
               var13 >= 0 &&
               var12 <= this.room.getWidth((byte) -86) &&
@@ -173,9 +173,9 @@ final class ParticleEffects {
           var9 = param3 / 8 - var7 / 2 + this.randomBelow((byte) -33, var7);
           var10 = param0 / 8 + (-(var7 / 2) + this.randomBelow((byte) -33, var7));
           var11 = this.room.spawnParticle(param5, param1, (byte) 100, param2);
-          var11.a(false, 64, 11, 16, this.randomBelow((byte) -33, 15) + 20);
-          var11.a(var10, -var10 / 64, var9, -var9 / 64, 0, 0, (byte) -20);
-          var11.a(this.randomBelow((byte) -33, 2048), -8 + this.randomBelow((byte) -33, 16), -112);
+          var11.configure(false, 64, 11, 16, this.randomBelow((byte) -33, 15) + 20);
+          var11.setMotion(var10, -var10 / 64, var9, -var9 / 64, 0, 0, (byte) -20);
+          var11.setRotation(this.randomBelow((byte) -33, 2048), -8 + this.randomBelow((byte) -33, 16), -112);
         }
     }
 
@@ -190,9 +190,9 @@ final class ParticleEffects {
           var7 = -(var5 / 2) + this.randomBelow((byte) -33, var5);
           var8 = this.randomBelow((byte) -33, var5) - var5 / 2;
           var9 = this.room.spawnParticle(param3, param0, (byte) 100, param1);
-          var9.a(false, 16, 14, 16, 25 + uca.cosmeticRandom.nextBounded(25, param2 ^ 46));
-          var9.a(var8, -var8 / 64, var7, -var7 / 64, 131072 + uca.cosmeticRandom.nextBounded(131072, 0), -8192, (byte) -20);
-          var9.a(this.randomBelow((byte) -33, 2048), this.randomBelow((byte) -33, 32) - 16, -110);
+          var9.configure(false, 16, 14, 16, 25 + uca.cosmeticRandom.nextBounded(25, param2 ^ 46));
+          var9.setMotion(var8, -var8 / 64, var7, -var7 / 64, 131072 + uca.cosmeticRandom.nextBounded(131072, 0), -8192, (byte) -20);
+          var9.setRotation(this.randomBelow((byte) -33, 2048), this.randomBelow((byte) -33, 32) - 16, -110);
         }
         if (param2 != 46) {
           this.room = (Room) null;
@@ -213,9 +213,9 @@ final class ParticleEffects {
           var9 = -(var7 / 2) + this.randomBelow((byte) -33, var7) + param4;
           var10 = param2 - var7 / 2 + this.randomBelow((byte) -33, var7);
           var11 = this.room.spawnParticle(param0, param5, (byte) 100, param3);
-          var11.a(false, 32, 2, 16, this.randomBelow((byte) -33, 4) + 8);
-          var11.b(98, var10, var9);
-          var11.a(this.randomBelow((byte) -33, 2048), -64 + this.randomBelow((byte) -33, 128), -113);
+          var11.configure(false, 32, 2, 16, this.randomBelow((byte) -33, 4) + 8);
+          var11.setPlanarVelocity(98, var10, var9);
+          var11.setRotation(this.randomBelow((byte) -33, 2048), -64 + this.randomBelow((byte) -33, 128), -113);
           var8++;
         }
     }
@@ -250,8 +250,8 @@ final class ParticleEffects {
           var11 = var5 + this.randomBelow((byte) -33, var5);
           var12 = gqa.a(var8, (byte) 24, var11);
           var13 = gqa.a(var9, (byte) 24, var11);
-          var10.a(false, 2, 13, 16, 10);
-          var10.b(70, var13, var12);
+          var10.configure(false, 2, 13, 16, 10);
+          var10.setPlanarVelocity(70, var13, var12);
           var6++;
         }
     }
@@ -278,8 +278,8 @@ final class ParticleEffects {
           var11 = this.randomBelow((byte) -33, var5) + var5;
           var12 = gqa.a(var8, (byte) 24, var11);
           var13 = gqa.a(var9, (byte) 24, var11);
-          var10.a(false, 2, 4, 16, 10);
-          var10.b(50, var13, var12);
+          var10.configure(false, 2, 4, 16, 10);
+          var10.setPlanarVelocity(50, var13, var12);
         }
     }
 
@@ -300,8 +300,8 @@ final class ParticleEffects {
           var9 = bua.cos2048(0, var7 >> 2);
           var10 = this.room.spawnParticle(param3, param2, (byte) 100, param1);
           var11 = 262144 + this.randomBelow((byte) -33, 262144);
-          var10.a(false, 2, 4, 16, 10);
-          var10.b(69, gqa.a(var9, (byte) 24, var11), gqa.a(var8, (byte) 24, var11));
+          var10.configure(false, 2, 4, 16, 10);
+          var10.setPlanarVelocity(69, gqa.a(var9, (byte) 24, var11), gqa.a(var8, (byte) 24, var11));
         }
     }
 

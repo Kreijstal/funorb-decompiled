@@ -26,7 +26,7 @@ final class bt implements Renderable {
         field_c = null;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         ka var5 = null;
@@ -44,7 +44,7 @@ final class bt implements Renderable {
     }
 
     public final void updateAnimation(int param0) {
-        if (this.field_e.b(180)) {
+        if (this.field_e.isCoolingDown(180)) {
           if (!this.field_g) {
             this.field_d.a(1, false, (byte) -85, 9);
             this.field_d.a(6, this.field_d.c((byte) 50), 1, -1);

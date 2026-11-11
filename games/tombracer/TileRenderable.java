@@ -31,7 +31,7 @@ abstract class TileRenderable implements Renderable {
         }
     }
 
-    public abstract void render(int param0, iq param1);
+    public abstract void render(int param0, Camera param1);
 
     final Room getRoom(int param0) {
         if (param0 != 10685) {

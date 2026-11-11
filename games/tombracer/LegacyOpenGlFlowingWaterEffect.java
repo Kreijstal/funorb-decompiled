@@ -140,7 +140,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         String var5 = (String) null;
-        ag.a(param0, param1, false, (String) null);
+        FollowCamera.a(param0, param1, false, (String) null);
         if (param2 < 87) {
           String[] var4 = (String[]) null;
           LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(-98, (String) null, (String[]) null);

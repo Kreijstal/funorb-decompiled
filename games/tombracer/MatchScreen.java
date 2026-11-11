@@ -37,7 +37,7 @@ final class MatchScreen extends GameScreen implements rqa {
         int var7 = 0;
         int var2;
         Player var4;
-        ag var5;
+        FollowCamera var5;
         SoundEventPlayer var6;
         Room var8;
         int var9;
@@ -52,8 +52,8 @@ final class MatchScreen extends GameScreen implements rqa {
           if (var4 != null) {
             var4.setAnimator(-27496, new PlayerModel(var4, var3));
             this.matchState.characterChoices[var3].setPlayer(11008, var4);
-            var5 = new ag();
-            var5.a(var4, -1);
+            var5 = new FollowCamera();
+            var5.setTarget(var4, -1);
             this.matchState.simulations[var3].a(var5, -1);
             var6 = new SoundEventPlayer();
             this.soundPlayers[var3] = var6;

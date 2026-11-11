@@ -497,7 +497,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final void b(int param0, iq param1) {
+    final void b(int param0, Camera param1) {
         try {
           super.b(117, param1);
           if (param0 < 112) {

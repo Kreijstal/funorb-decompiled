@@ -12,7 +12,7 @@ final class DirectRenderModel extends TrapModel {
         super(param0);
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         int var6_int = 0;
         int var7 = 0;
         if (this.body == null) {

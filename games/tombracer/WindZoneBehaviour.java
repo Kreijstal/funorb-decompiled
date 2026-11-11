@@ -141,7 +141,7 @@ final class WindZoneBehaviour extends Behaviour {
         if (this.field_q != 0 &&
           this.field_q != 2) {
           var25 = this.getRoom(true).spawnParticle(var11, this.trap.getTop(2) + this.getRandom((byte) 46).nextBounded(var5, 0), (byte) 100, var14);
-          var25.a(false, 2, 3, 8, 10);
+          var25.configure(false, 2, 3, 8, 10);
           stackIn_22_0 = var25;
           stackIn_22_1 = 72;
           stackIn_22_2 = 0;
@@ -150,10 +150,10 @@ final class WindZoneBehaviour extends Behaviour {
           } else {
             stackIn_23_3 = var10;
           }
-          ((Particle) (Object) stackIn_22_0).b(stackIn_22_1, stackIn_22_2, stackIn_23_3);
+          ((Particle) (Object) stackIn_22_0).setPlanarVelocity(stackIn_22_1, stackIn_22_2, stackIn_23_3);
         } else {
           var24 = this.getRoom(true).spawnParticle(this.trap.getLeft((byte) -95) + this.getRandom((byte) 46).nextBounded(var4, 0), var11, (byte) 100, var14);
-          var24.a(false, 2, 3, 8, 10);
+          var24.configure(false, 2, 3, 8, 10);
           stackIn_18_0 = var24;
           stackIn_18_1 = 79;
           if (this.field_q != 0) {
@@ -161,7 +161,7 @@ final class WindZoneBehaviour extends Behaviour {
           } else {
             stackIn_19_2 = -var10;
           }
-          ((Particle) (Object) stackIn_18_0).b(stackIn_18_1, stackIn_19_2, 0);
+          ((Particle) (Object) stackIn_18_0).setPlanarVelocity(stackIn_18_1, stackIn_19_2, 0);
         }
         var15 = this.getRoom(true).collisionGrid.b(var3, -1, var2, var4, var5);
         var16 = var15;

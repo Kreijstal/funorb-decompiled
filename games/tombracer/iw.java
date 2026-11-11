@@ -24,7 +24,7 @@ final class iw {
     }
 
     final static void a(byte param0, boolean param1) {
-        rm.field_e = !param1 ? new lla(BitPacketBuffer.field_p, lk.field_l) : new lla(WheeledMountComponent.field_O, HazardModel.field_t);
+        rm.field_e = !param1 ? new lla(BitPacketBuffer.field_p, RoomRegion.field_l) : new lla(WheeledMountComponent.field_O, HazardModel.field_t);
         nra.field_c = new jea(0L, (jea) null);
         nra.field_c.b(param0 ^ 65, rm.field_e.field_a);
         nra.field_c.b(param0 ^ 68, bc.field_b);

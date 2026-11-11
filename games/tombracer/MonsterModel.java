@@ -10,7 +10,7 @@ final class MonsterModel extends MotionTrackingModel {
     static float field_B;
     private boolean field_y;
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         int var7 = 0;
         ka var8 = null;
         if (this.field_C == null) {
@@ -38,14 +38,14 @@ final class MonsterModel extends MotionTrackingModel {
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void onRemoved(byte param0, int param1) {
         int var3;
         int var4;
         int var5_int;
         SoundEventPlayer var5;
         nta var6;
         int var5_intLifetime1;
-        super.a((byte) 51, param1);
+        super.onRemoved((byte) 51, param1);
         if (null == this.field_C) {
           return;
         }

@@ -469,7 +469,7 @@ final class LightSourceModel extends TrapModel {
         }
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         try {
           int var6_int = -34 / ((param4 + 38) / 47);
         } catch (RuntimeException runtimeException) {

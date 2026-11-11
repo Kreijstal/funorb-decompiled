@@ -317,7 +317,7 @@ final class sq extends PcmStream {
             var4 = (byte[]) null;
             sq.a(59, (byte[]) null, (byte) -100);
           }
-          stackIn_3_0 = PitSnake.a(param1, param0, 71, 0);
+          stackIn_3_0 = PitSnake.computeCrc32(param1, param0, 71, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

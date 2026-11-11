@@ -71,7 +71,7 @@ final class DoorwayModel extends TrapModel {
         this.decode(-98, (Room) null, (BitPacketBuffer) null);
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -249,8 +249,8 @@ final class DoorwayModel extends TrapModel {
     final void a(int param0, boolean param1) {
         this.field_q = param0;
         if (!param1) {
-          iq var4 = (iq) null;
-          this.a((iq) null, 94, 28, 90, (byte) -49);
+          Camera var4 = (Camera) null;
+          this.drawAt((Camera) null, 94, 28, 90, (byte) -49);
         }
     }
 

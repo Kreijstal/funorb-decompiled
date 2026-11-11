@@ -631,7 +631,7 @@ final class PitModel extends TrapModel {
         field_r = null;
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         try {
           int var6_int = -76 / ((param4 + 38) / 47);
         } catch (RuntimeException runtimeException) {

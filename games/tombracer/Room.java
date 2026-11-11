@@ -218,7 +218,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           return false;
         }
         var12 = this.allocatePuddle(94, param3, 0, param4);
-        var12.a(this, param4, 99, param3, param2, param1);
+        var12.spawn(this, param4, 99, param3, param2, param1);
         this.collisionGrid.remove((Collidable) (var12), (byte) 124);
         return true;
     }
@@ -228,7 +228,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.isTimeFrozen((byte) 119);
         }
         Particle var5 = (Particle) (this.particlePool.spawn(-2698, param1, param3, this.scene, param0));
-        var5.a(true, uca.cosmeticRandom.nextBounded(100, 0));
+        var5.setSeed(true, uca.cosmeticRandom.nextBounded(100, 0));
         return var5;
     }
 
@@ -682,7 +682,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         return this.effectSlots[param1];
     }
 
-    final void createScene(iq param0, int param1) {
+    final void createScene(Camera param0, int param1) {
         try {
           this.scene = new RenderScene(10);
           this.scene.setRenderTarget(-24343, param0);
@@ -744,7 +744,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     }
 
     private final void rebuildScene(int param0) {
-        iq var2;
+        Camera var2;
         int var3;
         int var4;
         Trap var5;
@@ -760,10 +760,10 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.field_C = 71;
         }
         if (this.hasActiveVariant((byte) -82)) {
-          var2.a(-128, (byte) -3, (this.height >> 16) + 128, -128, (this.width >> 16) + 128);
+          var2.setBounds(-128, (byte) -3, (this.height >> 16) + 128, -128, (this.width >> 16) + 128);
         } else {
           var3 = 192;
-          var2.a(var3, (byte) -3, (this.height >> 16) - var3, var3, -var3 + (this.width >> 16));
+          var2.setBounds(var3, (byte) -3, (this.height >> 16) - var3, var3, -var3 + (this.width >> 16));
         }
         this.getPlayer(-12).addToScene(25, this.scene);
         this.corpses.a(this.scene, -28255);
@@ -803,7 +803,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         try {
           if (param0 <= 103) {
             this.hasActiveVariant((byte) 66);
@@ -1543,7 +1543,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (this.scene != null) {
           this.scene.updateAnimations(0);
           if (this.simulation.isEffectActive(8, param1 + 10915)) {
-            this.scene.getRenderTarget(0).a(uca.cosmeticRandom.nextBounded(9, 0) - 4, 0, -4 + uca.cosmeticRandom.nextBounded(9, 0), 26768);
+            this.scene.getRenderTarget(0).nudge(uca.cosmeticRandom.nextBounded(9, 0) - 4, 0, -4 + uca.cosmeticRandom.nextBounded(9, 0), 26768);
           }
         }
         if (null != this.soundQueue) {

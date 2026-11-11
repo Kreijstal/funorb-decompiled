@@ -56,7 +56,7 @@ final class LegacySwitchModel extends TrapModel {
         return 2;
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         int var8 = 0;
         int var9 = 0;
         int var6_int = 0;
@@ -66,7 +66,7 @@ final class LegacySwitchModel extends TrapModel {
           if (null == this.field_p) {
             var6_int = 6684672;
           } else {
-            if (!this.field_p.getSwitchState((byte) -120).b(4)) {
+            if (!this.field_p.getSwitchState((byte) -120).isEngaged(4)) {
               var6_int = this.field_p.getDimColour(17832);
             } else {
               var6_int = this.field_p.getLitColour((byte) -108);

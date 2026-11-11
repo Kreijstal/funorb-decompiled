@@ -316,7 +316,7 @@ final class PlayerSimulation {
         return;
     }
 
-    final void a(iq param0, int param1) {
+    final void a(Camera param0, int param1) {
         int discarded$1 = 0;
         int var4 = 0;
         Room[] var3 = null;
@@ -428,8 +428,8 @@ final class PlayerSimulation {
 
     final void setRoomEffectSlot(int param0, int param1, int param2, int param3) {
         if (param2 >= -86) {
-          iq var6 = (iq) null;
-          this.a((iq) null, 103);
+          Camera var6 = (Camera) null;
+          this.a((Camera) null, 103);
           this.rooms[param3].setEffectSlot(false, param1, param0);
           return;
         }

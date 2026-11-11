@@ -232,7 +232,7 @@ final class PlantModel extends TrapModel {
         }
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         Object var6 = null;
         int var7 = 0;
         int var8 = 0;

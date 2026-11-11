@@ -176,18 +176,18 @@ final class ck {
           HazardModel.field_t.field_bb = 1;
           var16 = HazardModel.field_t;
           var16.field_z = 1;
-          lk.field_l = new jea(0L, (jea) null);
+          RoomRegion.field_l = new jea(0L, (jea) null);
           cea.field_a = new jea(0L, Corpse.field_i);
           cea.field_a.field_z = 1;
           uaa.field_b = new jea(0L, ooa.field_f, CanvasImageBuffer.field_i);
           RopeBridgeComponent.field_F = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           tn.field_n = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
-          lk.field_l.b(param11 ^ -25371, cea.field_a);
-          lk.field_l.b(-124, uaa.field_b);
+          RoomRegion.field_l.b(param11 ^ -25371, cea.field_a);
+          RoomRegion.field_l.b(-124, uaa.field_b);
           if (UnlockOverlay.field_p) {
-            lk.field_l.b(-122, RopeBridgeComponent.field_F);
+            RoomRegion.field_l.b(-122, RopeBridgeComponent.field_F);
           }
-          lk.field_l.b(-124, tn.field_n);
+          RoomRegion.field_l.b(-124, tn.field_n);
           bc.field_b = new jea(0L, ssa.field_g, OpenGlSprite.field_k.toUpperCase());
           StatusEffect.field_g = new jea(0L, CharacterSelectPhase.field_s);
           C2SSubmitSettingsPacket.field_g = new jea(0L, CommonChooseReward.field_c);

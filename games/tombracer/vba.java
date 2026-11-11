@@ -198,7 +198,7 @@ final class vba extends we {
         if (param1 <= 30) {
           this.a(false, 72, (byte) -87);
         }
-        return lk.field_h[param0];
+        return RoomRegion.field_h[param0];
     }
 
     final int getItemX(byte param0, int param1) {

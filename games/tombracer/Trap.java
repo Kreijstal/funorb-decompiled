@@ -229,7 +229,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         boolean discarded$2 = false;
         if (this.removed) {
           return;
@@ -1669,8 +1669,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     final void setLocalX(int param0, int param1) {
         this.localX = param1;
         if (param0 != 1) {
-          iq var4 = (iq) null;
-          this.render(120, (iq) null);
+          Camera var4 = (Camera) null;
+          this.render(120, (Camera) null);
         }
     }
 
@@ -2013,7 +2013,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         int var3 = 18 / ((-5 - param0) / 36);
     }
 
-    final void a(iq param0, int param1) {
+    final void a(Camera param0, int param1) {
         boolean discarded$1 = false;
         int var4 = 0;
         Behaviour var5 = null;
@@ -2261,7 +2261,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.spawnDestroyParticles(param1 ^ 2097161);
         TrapModel var5 = (TrapModel) (this.models.first(param1 - 89));
         while (var5 != null) {
-          var5.a((byte) -91, param0);
+          var5.onRemoved((byte) -91, param0);
           var5 = (TrapModel) (this.models.next(118));
         }
         this.remove((byte) 109);

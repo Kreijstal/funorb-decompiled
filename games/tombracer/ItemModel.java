@@ -22,7 +22,7 @@ final class ItemModel extends TrapModel {
         try {
           super.attach(param0, param1, param2);
           if (this.getRoom(127).formatVersion < 20) {
-            this.a(param1, -2159, param0);
+            this.configureFor(param1, -2159, param0);
           }
           if (0 != this.field_t) {
             return;
@@ -49,7 +49,7 @@ final class ItemModel extends TrapModel {
         }
     }
 
-    final void a(WorldBody param0, int param1, TrapPart param2) {
+    final void configureFor(WorldBody param0, int param1, TrapPart param2) {
         int var5 = 0;
         int var6 = 0;
         MiscItemBehaviour var7 = null;
@@ -62,7 +62,7 @@ final class ItemModel extends TrapModel {
         RuntimeException var4 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a(param0, param1, param2);
+          super.configureFor(param0, param1, param2);
           if (!(param2 instanceof MiscItemBehaviour)) {
             if (param2 instanceof PowerUpItemBehaviour) {
               this.field_t = 5;
@@ -117,7 +117,7 @@ final class ItemModel extends TrapModel {
         }
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         int stackIn_9_0 = 0;
         ka stackIn_21_0 = null;
         RuntimeException stackIn_39_0 = null;

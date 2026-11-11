@@ -8,7 +8,7 @@ final class BridgeModel extends TrapModel {
     private int field_r;
     private int field_s;
     private int field_n;
-    private int field_t;
+    private int style;
     private PlatformBehaviour field_o;
 
     final int getSceneLayer(byte param0) {
@@ -18,7 +18,7 @@ final class BridgeModel extends TrapModel {
         if (this.body.isFallingIntoPit(param0 + 98)) {
           return 2;
         }
-        int var2 = this.field_t;
+        int var2 = this.style;
         if (var2 != 0) {
         }
         return 3;
@@ -160,8 +160,8 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final void b(byte param0, int param1) {
-        this.field_t = param1;
+    final void setStyle(byte param0, int param1) {
+        this.style = param1;
         if (param0 != 80) {
           RenderScene var4 = (RenderScene) null;
           this.removeFromScene((RenderScene) null, 105);
@@ -213,7 +213,7 @@ final class BridgeModel extends TrapModel {
         int var3_intLifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = this.field_t;
+          var3_int = this.style;
           if (var3_int != 0) {
           }
           var3_intLifetime1 = param1.field_b;
@@ -225,7 +225,7 @@ final class BridgeModel extends TrapModel {
             param1.field_f = new bua(1, 62);
           }
           if (!param0) {
-            this.n((byte) -52);
+            this.buildTiles((byte) -52);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -269,7 +269,7 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final static void a(ResourceArchive param0, PlatformTaskDispatcher param1, int param2) {
+    final static void initNativeLibraries(ResourceArchive param0, PlatformTaskDispatcher param1, int param2) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -341,7 +341,7 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         try {
           int var6_int = 29 / ((param4 + 38) / 47);
         } catch (RuntimeException runtimeException) {
@@ -352,9 +352,9 @@ final class BridgeModel extends TrapModel {
     final void decode(int param0, Room param1, BitPacketBuffer param2) {
         try {
           super.decode(120, param1, param2);
-          this.field_t = param2.readBits((byte) 44, 4);
+          this.style = param2.readBits((byte) 44, 4);
           if (param0 < 119) {
-            this.field_t = -32;
+            this.style = -32;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vsa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -395,7 +395,7 @@ final class BridgeModel extends TrapModel {
         try {
           super.encode((byte) -59, param1);
           int var3_int = -50 / ((param0 + 8) / 40);
-          param1.writeBits((byte) 18, this.field_t, 4);
+          param1.writeBits((byte) 18, this.style, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vsa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -404,7 +404,7 @@ final class BridgeModel extends TrapModel {
     final void addToScene(int param0, RenderScene param1) {
         try {
           if (this.field_q == null) {
-            this.n((byte) -128);
+            this.buildTiles((byte) -128);
           }
           super.addToScene(param0 ^ param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -439,7 +439,7 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    private final void n(byte param0) {
+    private final void buildTiles(byte param0) {
         int var8 = 0;
         int var11 = 0;
         int stackIn_10_0 = 0;

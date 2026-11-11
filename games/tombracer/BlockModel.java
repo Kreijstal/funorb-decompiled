@@ -28,8 +28,8 @@ final class BlockModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, int param1) {
-        super.a((byte) 97, param1);
+    final void onRemoved(byte param0, int param1) {
+        super.onRemoved((byte) 97, param1);
         this.getRoom(28).getParticleEffects(false).a(this.body.getY(9648), this.body.getElevation((byte) 115), (byte) 46, this.body.getX(3));
         SoundEventPlayer var5 = (SoundEventPlayer) (this.getRoom(30).soundQueue);
         if (var5 == null) {
@@ -98,7 +98,7 @@ final class BlockModel extends TrapModel {
         }
     }
 
-    final void a(WorldBody param0, int param1, TrapPart param2) {
+    final void configureFor(WorldBody param0, int param1, TrapPart param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -107,7 +107,7 @@ final class BlockModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          super.a(param0, param1, param2);
+          super.configureFor(param0, param1, param2);
           if (param2 instanceof mra) {
             this.field_v = 8;
           } else {
@@ -379,7 +379,7 @@ final class BlockModel extends TrapModel {
         }
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;

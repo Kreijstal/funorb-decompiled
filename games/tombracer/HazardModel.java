@@ -64,7 +64,7 @@ final class HazardModel extends TrapModel {
         this.field_r = null;
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         RuntimeException stackIn_11_0 = null;
@@ -150,7 +150,7 @@ final class HazardModel extends TrapModel {
     }
 
     final void decode(int param0, Room param1, BitPacketBuffer param2) {
-        iq var5 = null;
+        Camera var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -163,8 +163,8 @@ final class HazardModel extends TrapModel {
         try {
           super.decode(120, param1, param2);
           if (param0 <= 119) {
-            var5 = (iq) null;
-            this.a((iq) null, -12, 26, 100, (byte) -44);
+            var5 = (Camera) null;
+            this.drawAt((Camera) null, -12, 26, 100, (byte) -44);
           }
           if (param1.formatVersion >= 16) {
             this.field_u = param2.readBits((byte) 44, 4);

@@ -37,7 +37,7 @@ final class RoomViewRenderer {
         int var14 = 0;
         RenderScene var15 = null;
         Object var16 = null;
-        ag var16_ref = null;
+        FollowCamera var16_ref = null;
         int var17 = 0;
         int var18 = 0;
         Transform3D var19 = null;
@@ -86,7 +86,7 @@ final class RoomViewRenderer {
           if (var15 == null) {
             return;
           }
-          var16_ref = (ag) (var15.getRenderTarget(0));
+          var16_ref = (FollowCamera) (var15.getRenderTarget(0));
           var17 = (var12 + var11) / 2;
           var18 = var17 * 2048 / 512;
           var16_ref.a(var18, (byte) -88);
@@ -127,10 +127,10 @@ final class RoomViewRenderer {
           if (var11 < var12) {
             var26 = var11;
           }
-          var16_ref.a(43, param1 + var26, param1, param3, var27 + (param3 - 64 * var20));
+          var16_ref.setViewport(43, param1 + var26, param1, param3, var27 + (param3 - 64 * var20));
           var16_ref.a(-30023, param1 + var26 / 2, param3 + var27 / 2);
-          var28 = var16_ref.c(-30661);
-          var29 = var16_ref.b((byte) 70);
+          var28 = var16_ref.getX(-30661);
+          var29 = var16_ref.getY((byte) 70);
           param5.soundPlayers[param0].a(var29 << 16, 50, var28 << 16);
           param5.soundPlayers[param0].b(var9.getY(9648), var9.getX(3), 89);
           var22 = var28 << 2;

@@ -33,7 +33,7 @@ final class CauldronComponent extends SwitchComponent {
           this.a(var5, (byte) -118);
           var6 = var5.getSwitchState((byte) -101);
           var7 = 25;
-          var6.a(var7, 0, 0, 0, 5, 0);
+          var6.setDelays(var7, 0, 0, 0, 5, 0);
           var10.addBehaviour((byte) 83, (Behaviour) (var5));
           var8 = rm.field_a;
           var9 = (SwitchModel) (var8.createModel(9, 123));

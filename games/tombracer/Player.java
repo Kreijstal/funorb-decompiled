@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportable {
+final class Player implements Renderable, WorldBody, Collidable, CameraTarget, Teleportable {
     private PlayerAnimator animator;
     private int field_c;
     private int size;
@@ -95,7 +95,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -307,9 +307,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
                   if (this.elevation <= -17825792) {
                     if (this.field_T == 6) {
                       var3_ref = this.room.spawnParticle(this.x, this.y, (byte) 100, -17825792);
-                      var3_ref.a(false, 32, 4, 16, 5 + uca.cosmeticRandom.nextBounded(5, 0));
-                      var3_ref.b(param0 + 99, 0, 0);
-                      var3_ref.a(uca.cosmeticRandom.nextBounded(8192, param0 ^ 5), -32 + uca.cosmeticRandom.nextBounded(64, param0 - 5), -125);
+                      var3_ref.configure(false, 32, 4, 16, 5 + uca.cosmeticRandom.nextBounded(5, 0));
+                      var3_ref.setPlanarVelocity(param0 + 99, 0, 0);
+                      var3_ref.setRotation(uca.cosmeticRandom.nextBounded(8192, param0 ^ 5), -32 + uca.cosmeticRandom.nextBounded(64, param0 - 5), -125);
                     }
                     this.elevation = -17825793;
                   }

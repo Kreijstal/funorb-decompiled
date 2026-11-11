@@ -591,7 +591,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         this.field_x = !this.field_x ? true : false;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         try {
           if (param0 <= 103) {
             this.angle = -82;

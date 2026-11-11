@@ -458,7 +458,7 @@ public final class TombRacer extends rfa implements ls {
         BeamSegment.releaseStatics(true);
         Effect.releaseStatics((byte) 2);
         Projectile.releaseStatics(114);
-        Puddle.j((byte) 87);
+        Puddle.releaseStatics((byte) 87);
         cra.releaseStatics(-63);
         dk.releaseStatics((byte) 104);
         ena.releaseStatics(true);
@@ -550,7 +550,7 @@ public final class TombRacer extends rfa implements ls {
         AllPlatformsMazeComponent.f(true);
         PushableBlockMazeComponent.releaseStatics(7);
         jl.releaseStatics(param0 ^ -1088533378);
-        lk.releaseStatics(false);
+        RoomRegion.releaseStatics(false);
         DefaultTileRenderable.releaseStatics(-1);
         PooledObject.releaseStatics(72);
         WhirlpoolDigest.releaseStatics(param0 + 3560);
@@ -595,7 +595,7 @@ public final class TombRacer extends rfa implements ls {
         PlantModel.releaseStatics(false);
         WallModel.releaseStatics((byte) -123);
         MotionTrackingModel.n((byte) 112);
-        PlatformModel.l(30389);
+        PlatformModel.releaseStatics(30389);
         PlatformBehaviour.releaseStatics(1);
         PortalBehaviour.j((byte) 124);
         MonsterModel.releaseStatics((byte) 120);
@@ -656,7 +656,7 @@ public final class TombRacer extends rfa implements ls {
         StaticCrusherComponent.releaseStatics((byte) -123);
         RopeBridgeComponent.releaseStatics((byte) -90);
         RevolverItemComponent.releaseStatics((byte) -18);
-        MazeComponent.e(false);
+        MazeComponent.releaseStatics(false);
         WhiteLightShooterComponent.releaseStatics((byte) 75);
         WhiteLightSensorComponent.releaseStatics((byte) -66);
         InvisibleTouchSwitchComponent.f(false);
@@ -1103,7 +1103,7 @@ public final class TombRacer extends rfa implements ls {
     }
 
     final void initializeGame(int param0) {
-        this.a(82, 81);
+        this.initializeDefaultServices(82, 81);
         this.a(new GameAssetLoader(), 119);
         if (param0 > -15) {
           this.beginFrame(125);

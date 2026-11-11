@@ -54,14 +54,14 @@ final class CourseLayoutFactory implements BitDecodableFactory {
             FacePointLocomotor.field_r.field_h >= 0) {
             var3 = SpriteTileOperator.field_w[FacePointLocomotor.field_r.field_h];
             if (var3 == 2) {
-              AppletGameShell.n(-18);
+              AppletGameShell.resetConnectionStatics(-18);
             } else if (var3 == 5) {
-              AppletGameShell.n(-18);
+              AppletGameShell.resetConnectionStatics(-18);
             }
           } else {
             if (var2 != 0 &&
               2 != mq.field_a) {
-              AppletGameShell.n(-18);
+              AppletGameShell.resetConnectionStatics(-18);
             }
           }
           if (var3 == 0 &&

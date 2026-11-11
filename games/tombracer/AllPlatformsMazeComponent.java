@@ -121,7 +121,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
         }
     }
 
-    final Trap a(int param0, boolean param1, Room param2) {
+    final Trap createFilledCellTrap(int param0, boolean param1, Room param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PlatformBehaviour var5 = null;
@@ -144,7 +144,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (PlatformModel) (var6.createModel(17, 81));
-          var7.b(4, (byte) 23);
+          var7.setStyle(4, (byte) 23);
           var4.addModel(var5, (byte) 124, var7);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -317,13 +317,13 @@ final class AllPlatformsMazeComponent extends MazeComponent {
 
     final boolean C(int param0) {
         if (param0 != 1) {
-          this.a(99, false, (Room) null);
+          this.createFilledCellTrap(99, false, (Room) null);
           return true;
         }
         return true;
     }
 
-    final Trap a(Room param0, boolean param1, boolean param2) {
+    final Trap createOpenCellTrap(Room param0, boolean param1, boolean param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PlatformBehaviour var5 = null;
@@ -342,7 +342,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (PlatformModel) (var6.createModel(17, 87));
-          var7.b(4, (byte) 23);
+          var7.setStyle(4, (byte) 23);
           var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;

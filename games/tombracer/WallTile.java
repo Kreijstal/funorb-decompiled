@@ -30,7 +30,7 @@ final class WallTile implements Renderable {
         }
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         String stackIn_52_2 = null;
@@ -49,7 +49,7 @@ final class WallTile implements Renderable {
           var3_int = this.getRenderX((byte) -113);
           var4 = this.getRenderY((byte) 115);
           var5 = this.getRenderZ((byte) -108);
-          gqa.a(GameScreen.positiveModulo(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.a(this, (byte) 76), var5);
+          gqa.a(GameScreen.positiveModulo(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.getTileModel(this, (byte) 76), var5);
           if (!nk.c(-115)) {
             return;
           }
@@ -60,7 +60,7 @@ final class WallTile implements Renderable {
           var7 = gca.field_g[23];
           var8 = gca.field_g[22];
           var9 = 0;
-          if (this.field_g.o((byte) 111)) {
+          if (this.field_g.isOnTrap((byte) 111)) {
             var9 = var9 + 4 * this.field_b % 32;
           }
           if (this.field_m) {

@@ -15,12 +15,12 @@ abstract class AppletGameShell extends GameApplet {
     private int field_p;
     private int field_v;
 
-    final int t(int param0) {
+    final int updateConnection(int param0) {
         int var2;
         if (param0 != 8) {
           return 102;
         }
-        var2 = this.e((byte) -46);
+        var2 = this.attemptReconnect((byte) -46);
         if (var2 == 0 ||
           var2 == 1) {
           if (hd.field_a[1]) {
@@ -48,7 +48,7 @@ abstract class AppletGameShell extends GameApplet {
         return var2;
     }
 
-    private final void k(int param0) {
+    private final void storeSessionCookie(int param0) {
         if (param0 <= 95) {
           this.field_v = 64;
         }
@@ -56,12 +56,12 @@ abstract class AppletGameShell extends GameApplet {
         cc.a(55, di.a(78), var2);
     }
 
-    private final void f(byte param0) {
+    private final void readServerTextMessage(byte param0) {
         int var2 = WeaveOperator.field_q.readUnsignedByte(255);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = uca.field_d - 1;
         if (param0 != -15) {
-          AppletGameShell.n(39);
+          AppletGameShell.resetConnectionStatics(39);
         }
         byte[] var5 = new byte[var4];
         WeaveOperator.field_q.a(0, param0 - 103, var5, var4);
@@ -75,12 +75,12 @@ abstract class AppletGameShell extends GameApplet {
         return !PowerDownItemBehaviour.field_s ? true : false;
     }
 
-    final void p(int param0) {
+    final void enableMessageGroup6(int param0) {
         int var2 = -114 / ((param0 - 66) / 34);
         hd.field_a[6] = true;
     }
 
-    private final int a(byte param0, boolean param1, boolean param2) {
+    private final int pollLoginResponse(byte param0, boolean param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -219,7 +219,7 @@ abstract class AppletGameShell extends GameApplet {
         }
     }
 
-    private final void a(byte param0, int param1, boolean param2) {
+    private final void initializeServices(byte param0, int param1, boolean param2) {
         this.initializeSharedServices(MultiplayerLoginMenu.field_r.field_c, ReportAbuseDialog.field_Eb.field_c, EffectEvent.field_l.field_c, C2SSubmitSettingsPacket.field_d.field_c, 5000, param1, rm.field_d.field_c, param2);
         if (param0 >= -25) {
           this.field_w = 116L;
@@ -270,7 +270,7 @@ abstract class AppletGameShell extends GameApplet {
                                 return;
                               }
                               if (var2 == 17) {
-                                this.f((byte) -15);
+                                this.readServerTextMessage((byte) -15);
                                 return;
                               }
                               if (var2 == 18) {
@@ -290,7 +290,7 @@ abstract class AppletGameShell extends GameApplet {
                           }
                         }
                       } else {
-                        this.k(116);
+                        this.storeSessionCookie(116);
                       }
                     }
                   } else {
@@ -306,7 +306,7 @@ abstract class AppletGameShell extends GameApplet {
         dea.a(60);
     }
 
-    private final int e(byte param0) {
+    private final int attemptReconnect(byte param0) {
         if (this.field_b) {
           return -1;
         }
@@ -347,29 +347,29 @@ abstract class AppletGameShell extends GameApplet {
         return var2;
     }
 
-    final int a(int param0, boolean param1) {
+    final int pollLogin(int param0, boolean param1) {
         if (param0 > -26) {
           return 16;
         }
-        return this.a((byte) 73, true, param1);
+        return this.pollLoginResponse((byte) 73, true, param1);
     }
 
-    final void o(int param0) {
+    final void enableMessageGroup5(int param0) {
         hd.field_a[5] = true;
         if (param0 != 9822) {
           this.field_A = false;
         }
     }
 
-    final void j(int param0) {
+    final void enableMessageGroup2(int param0) {
         hd.field_a[2] = true;
         if (param0 != -13) {
           this.field_t = -50;
         }
     }
 
-    final void a(int param0, int param1) {
-        this.a((byte) -86, param1, false);
+    final void initializeDefaultServices(int param0, int param1) {
+        this.initializeServices((byte) -86, param1, false);
         int var3 = 53 % ((param0 - 38) / 36);
     }
 
@@ -399,7 +399,7 @@ abstract class AppletGameShell extends GameApplet {
         S2CEventPacket.field_c[13] = -1;
     }
 
-    final void d(byte param0) {
+    final void enableMessageGroups11To13(byte param0) {
         hd.field_a[11] = true;
         hd.field_a[13] = true;
         hd.field_a[12] = true;
@@ -429,10 +429,10 @@ abstract class AppletGameShell extends GameApplet {
         MirrorMoverLocomotor.f(29320);
     }
 
-    final void g(byte param0) {
+    final void enableMessageGroup4(byte param0) {
         hd.field_a[4] = true;
         if (param0 >= -45) {
-          this.s(120);
+          this.enableMessageGroup1(120);
         }
     }
 
@@ -457,7 +457,7 @@ abstract class AppletGameShell extends GameApplet {
             this.field_x = this.getCodeBase().getHost();
             var6 = this.field_x.toLowerCase();
             if (param4 != 20575) {
-              this.s(118);
+              this.enableMessageGroup1(118);
             }
             stackIn_10_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
             this.field_q = stackIn_10_1;
@@ -505,7 +505,7 @@ abstract class AppletGameShell extends GameApplet {
         }
     }
 
-    final static void n(int param0) {
+    final static void resetConnectionStatics(int param0) {
         qoa.field_a = false;
         if (param0 != -18) {
           return;
@@ -521,10 +521,10 @@ abstract class AppletGameShell extends GameApplet {
         int discarded$3 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 <= 89) {
-          AppletGameShell.n(-80);
+          AppletGameShell.resetConnectionStatics(-80);
         }
         if (QuickChatPhraseDefinition.c((byte) 49)) {
-          discarded$1 = this.a((byte) -72, false, null != dq.field_f ? true : false);
+          discarded$1 = this.pollLoginResponse((byte) -72, false, null != dq.field_f ? true : false);
         } else {
           if (cga.field_f < 10) {
           } else {
@@ -532,7 +532,7 @@ abstract class AppletGameShell extends GameApplet {
               PressureSwitchComponent.C(-5);
             } else {
               if (0 == Transform3D.field_c) {
-                discarded$3 = this.a((byte) -111, false, false);
+                discarded$3 = this.pollLoginResponse((byte) -111, false, false);
               } else {
                 tc.a(pg.field_y, -2886);
               }
@@ -704,7 +704,7 @@ abstract class AppletGameShell extends GameApplet {
             null != BrickOperator.field_s) {
             stackIn_101_0 = !(ofa.field_I);
             stackIn_104_1 = !(ofa.field_I);
-            ag.a(stackIn_101_0, stackIn_104_1, false, BrickOperator.field_s);
+            FollowCamera.a(stackIn_101_0, stackIn_104_1, false, BrickOperator.field_s);
           }
           if (NotLoggedInMenu.field_r) {
             S2CPlayerProfilePacket.b(true);
@@ -766,10 +766,10 @@ abstract class AppletGameShell extends GameApplet {
         }
     }
 
-    final void b(byte param0, boolean param1) {
+    final void enableDefaultMessageGroups(byte param0, boolean param1) {
         hd.field_a[3] = true;
         if (param0 < 101) {
-          this.d((byte) 96);
+          this.enableMessageGroups11To13((byte) 96);
         }
         hd.field_a[8] = param1;
         hd.field_a[7] = true;
@@ -782,7 +782,7 @@ abstract class AppletGameShell extends GameApplet {
     AppletGameShell() {
     }
 
-    final void s(int param0) {
+    final void enableMessageGroup1(int param0) {
         hd.field_a[1] = true;
         if (param0 != -1) {
           this.field_t = -30;

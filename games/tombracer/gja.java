@@ -2780,7 +2780,7 @@ final class gja extends ka {
             param0.field_M = this.field_M;
           }
           if (!C2SChooseRewardPacket.a(param4, this.field_h, (byte) -116)) {
-            if (!ag.hasFlag2048(-1, param4, this.field_h)) {
+            if (!FollowCamera.hasFlag2048(-1, param4, this.field_h)) {
               param0.field_g = null;
               if (var13 != 0) {
                 param0.field_g = this.field_g;
@@ -4890,7 +4890,7 @@ final class gja extends ka {
             this.field_O = new hg(OpenGlTransform3D.c(this.field_Y, this.field_h, -19531));
           }
           if (!param3 &&
-            !ag.hasFlag2048(-1, this.field_Y, this.field_h)) {
+            !FollowCamera.hasFlag2048(-1, this.field_Y, this.field_h)) {
             return;
           }
           this.field_g = new gg(C2SChooseRewardPacket.a(this.field_Y, this.field_h, (byte) -111));

@@ -97,7 +97,7 @@ final class PlatformMazeComponent extends MazeComponent {
     final boolean D(int param0) {
         if (param0 != 0) {
           Room var3 = (Room) null;
-          this.a((Room) null, false, false);
+          this.createOpenCellTrap((Room) null, false, false);
           return true;
         }
         return true;
@@ -120,7 +120,7 @@ final class PlatformMazeComponent extends MazeComponent {
         }
     }
 
-    final Trap a(Room param0, boolean param1, boolean param2) {
+    final Trap createOpenCellTrap(Room param0, boolean param1, boolean param2) {
         Trap var4 = null;
         RuntimeException var4_ref = null;
         PlatformBehaviour var5 = null;
@@ -139,7 +139,7 @@ final class PlatformMazeComponent extends MazeComponent {
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           var7 = (PlatformModel) (var6.createModel(17, 102));
-          var7.b(0, (byte) 23);
+          var7.setStyle(0, (byte) 23);
           var4.addModel(var5, (byte) 124, var7);
           stackIn_1_0 = var4;
           return stackIn_1_0;
@@ -157,7 +157,7 @@ final class PlatformMazeComponent extends MazeComponent {
         }
     }
 
-    final Trap a(int param0, boolean param1, Room param2) {
+    final Trap createFilledCellTrap(int param0, boolean param1, Room param2) {
         RuntimeException var4 = null;
         Trap stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;

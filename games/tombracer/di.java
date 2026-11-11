@@ -412,7 +412,7 @@ final class di {
           this.field_c = param2;
           ck.field_a = param1;
           HotspotTextWidget.field_B = param0;
-          BridgeModel.a(param0, param3, -55);
+          BridgeModel.initNativeLibraries(param0, param3, -55);
           this.a(0, param4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

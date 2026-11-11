@@ -48,7 +48,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return this.expired;
     }
 
-    private final void a(int param0, int param1, int param2, Room param3, int param4, int param5) {
+    private final void init(int param0, int param1, int param2, Room param3, int param4, int param5) {
         try {
           this.expired = false;
           this.room = param3;
@@ -59,13 +59,13 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           this.endSize = RandomBrickOperator.max(param1 * param5, 786432, 2);
           this.field_t = 0;
           this.size = this.startSize;
-          this.s(0);
+          this.savePreviousPosition(0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mda.R(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    private final int a(int param0, int param1, int param2, int param3, int param4) {
+    private final int resolveMove(int param0, int param1, int param2, int param3, int param4) {
         if (this.kind == 1) {
           int var6 = 80 / ((-23 - param1) / 56);
           return this.room.resolveMove((Collidable) (this), (WorldBody) (this), 1, this.size, param3, 12, this.size, this.x, param4, param0, this.y, param2, true);
@@ -169,7 +169,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          stackIn_5_0 = this.a(param0, -6);
+          stackIn_5_0 = this.reactToEffect(param0, -6);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -244,7 +244,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         }
     }
 
-    private final boolean a(WorldBody param0, byte param1) {
+    private final boolean isSolidFor(WorldBody param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -356,7 +356,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         if (param1 == -44) {
           return ChooseRewardFactory.a(param2, true, param0);
         }
-        Puddle.j((byte) -121);
+        Puddle.releaseStatics((byte) -121);
         return ChooseRewardFactory.a(param2, true, param0);
     }
 
@@ -385,7 +385,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return 0;
     }
 
-    private final int a(Effect param0, int param1) {
+    private final int reactToEffect(Effect param0, int param1) {
         int stackIn_3_0 = 0;
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -459,7 +459,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return 11 * (1 + this.field_w);
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 87) {
           Puddle.b(-56, (byte) 104, -90, 106);
           field_v = null;
@@ -478,8 +478,8 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
             return false;
           }
           if (param4 != 0) {
-            this.s(0);
-            this.a(param3, (byte) -36, param2, param4, param5);
+            this.savePreviousPosition(0);
+            this.moveBy(param3, (byte) -36, param2, param4, param5);
             if (this.previousX + param4 != this.x) {
               return false;
             }
@@ -491,8 +491,8 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           if (param3 == 0) {
             return true;
           }
-          this.s(0);
-          this.a(param3, (byte) -36, param2, param4, param5);
+          this.savePreviousPosition(0);
+          this.moveBy(param3, (byte) -36, param2, param4, param5);
           if (this.previousX + param4 != this.x) {
             return false;
           }
@@ -503,16 +503,16 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           return false;
         }
         if (param4 != 0) {
-          this.s(0);
-          this.a(param3, (byte) -36, param2, param4, param5);
+          this.savePreviousPosition(0);
+          this.moveBy(param3, (byte) -36, param2, param4, param5);
           stackIn_27_0 = (this.previousX + param4 == this.x) && (this.y == this.previousY + param3);
           return stackIn_27_0;
         }
         if (param3 == 0) {
           return true;
         }
-        this.s(0);
-        this.a(param3, (byte) -36, param2, param4, param5);
+        this.savePreviousPosition(0);
+        this.moveBy(param3, (byte) -36, param2, param4, param5);
         stackIn_34_0 = (this.previousX + param4 == this.x) && (this.y == this.previousY + param3);
         return stackIn_34_0;
     }
@@ -540,7 +540,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return false;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         try {
           if (param0 <= 103) {
             this.getWeight(-91);
@@ -551,13 +551,13 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int param3, int param4) {
+    private final void moveBy(int param0, byte param1, int param2, int param3, int param4) {
         int var6;
         int var6Lifetime1;
         if (1 != this.kind) {
           return;
         }
-        this.s(0);
+        this.savePreviousPosition(0);
         var6 = 0;
         if (param1 > -11) {
           return;
@@ -567,7 +567,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           this.x = this.x + param3;
         }
         if (var6 != 0 &&
-          2 == this.a(this.x - this.previousX, -104, param4, 0, param2)) {
+          2 == this.resolveMove(this.x - this.previousX, -104, param4, 0, param2)) {
           this.x = this.previousX;
         }
         var6Lifetime1 = 0;
@@ -576,7 +576,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           var6Lifetime1 = 1;
         }
         if (var6Lifetime1 != 0 &&
-          this.a(0, -103, param4, this.getY(9648) - this.previousY, param2) == 2) {
+          this.resolveMove(0, -103, param4, this.getY(9648) - this.previousY, param2) == 2) {
           this.y = this.previousY;
         }
         if (this.y == this.previousY &&
@@ -600,7 +600,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return this.size;
     }
 
-    private final void s(int param0) {
+    private final void savePreviousPosition(int param0) {
         this.previousX = this.x;
         if (param0 == 0) {
           this.previousY = this.y;
@@ -615,7 +615,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return this.room;
     }
 
-    final void a(Room param0, int param1, int param2, int param3, int param4, int param5) {
+    final void spawn(Room param0, int param1, int param2, int param3, int param4, int param5) {
         IsaacCipher var7 = null;
         int var8 = 0;
         try {
@@ -628,7 +628,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           if (param2 <= 36) {
             this.field_t = -51;
           }
-          this.a(param4, 1, var8, param0, param5, 2);
+          this.init(param4, 1, var8, param0, param5, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mda.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -766,7 +766,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           if (param1 != 0) {
             this.room = (Room) null;
           }
-          stackIn_3_0 = this.a(param0, (byte) 61);
+          stackIn_3_0 = this.isSolidFor(param0, (byte) 61);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -789,7 +789,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a(param1, (byte) 61)) {
+          if (!this.isSolidFor(param1, (byte) 61)) {
             return false;
           }
           if (param0 > -77) {
@@ -841,7 +841,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           if (param3 != 0) {
             this.room = (Room) null;
           }
-          stackIn_6_0 = this.a(param0, -6);
+          stackIn_6_0 = this.reactToEffect(param0, -6);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

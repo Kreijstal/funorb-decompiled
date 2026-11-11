@@ -114,7 +114,7 @@ abstract class SwitchComponent extends PrefabComponent {
             return;
           }
           if (this.initiallyOn) {
-            this.switchState.b(1, 52);
+            this.switchState.setUses(1, 52);
             return;
           }
           this.switchState.setOn(-2, true);

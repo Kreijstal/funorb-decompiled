@@ -325,7 +325,7 @@ final class SnakePitModel extends TrapModel {
         field_t = null;
     }
 
-    final void a(iq param0, int param1, int param2, int param3, byte param4) {
+    final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {
         try {
           int var6_int = 23 % ((param4 + 38) / 47);
         } catch (RuntimeException runtimeException) {
@@ -463,7 +463,7 @@ final class SnakePitModel extends TrapModel {
         } else {
           this.field_u = uca.cosmeticRandom.nextBounded(100, 0) + 50;
           var3_int = uca.cosmeticRandom.nextBounded(this.field_s.length, ~param0);
-          if (this.field_s[var3_int].field_e.a(0)) {
+          if (this.field_s[var3_int].field_e.isScared(0)) {
             var2.play(new SoundEvent(24, this.field_s[var3_int].getRenderX((byte) -123), this.field_s[var3_int].getRenderY((byte) 94), this.field_s[var3_int].getRenderZ((byte) -112)), param0 - 57);
           } else {
             var7.play(new SoundEvent(23, this.field_s[var3_int].getRenderX((byte) -83), this.field_s[var3_int].getRenderY((byte) 122), this.field_s[var3_int].getRenderZ((byte) -107)), param0 - 57);

@@ -23,7 +23,7 @@ final class TileGridCell {
         return this.grid;
     }
 
-    final void render(byte param0, iq param1) {
+    final void render(byte param0, Camera param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

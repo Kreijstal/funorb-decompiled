@@ -29,7 +29,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
         return true;
     }
 
-    final Trap a(Room param0, boolean param1, boolean param2) {
+    final Trap createOpenCellTrap(Room param0, boolean param1, boolean param2) {
         RuntimeException var4 = null;
         Trap stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -56,7 +56,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
         }
     }
 
-    final Trap a(int param0, boolean param1, Room param2) {
+    final Trap createFilledCellTrap(int param0, boolean param1, Room param2) {
         RuntimeException var4 = null;
         SimpleBlockBehaviour var5 = null;
         DamageableBehaviour var6 = null;

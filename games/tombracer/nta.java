@@ -52,7 +52,7 @@ final class nta implements Renderable {
         field_d = -24;
     }
 
-    public final void render(int param0, iq param1) {
+    public final void render(int param0, Camera param1) {
         ka var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
