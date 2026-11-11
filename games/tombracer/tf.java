@@ -31,7 +31,7 @@ final class tf extends TextFieldValidator {
             return stackIn_4_0;
           }
           if (!param1.equals(this.field_j)) {
-            var3 = hd.a(param0 ^ 112, param1);
+            var3 = hd.requestOrReuseUsernameQuery(param0 ^ 112, param1);
             if (var3 != null &&
               var3.field_b == null) {
               this.field_j = param1;
@@ -82,7 +82,7 @@ final class tf extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_j)) {
-            var4 = hd.a(120, param1);
+            var4 = hd.requestOrReuseUsernameQuery(120, param1);
             if (var4 == null) {
               return null;
             }

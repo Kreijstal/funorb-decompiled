@@ -26,7 +26,7 @@ final class tr {
         QuickChatPhraseDefinition var3;
         byte[] var4;
         QuickChatPhraseDefinition var3Lifetime1;
-        var3 = (QuickChatPhraseDefinition) (this.field_b.a((byte) 74, (long)param1));
+        var3 = (QuickChatPhraseDefinition) (this.field_b.get((byte) 74, (long)param1));
         if (var3 != null) {
           return var3;
         }

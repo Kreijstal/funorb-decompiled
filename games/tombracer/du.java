@@ -11,7 +11,7 @@ final class du {
     static boolean field_g;
     static long field_h;
 
-    final static int a(int param0, byte param1) {
+    final static int recordArchiveConnectionFailure(int param0, byte param1) {
         int var2;
         int var3;
         int var4;

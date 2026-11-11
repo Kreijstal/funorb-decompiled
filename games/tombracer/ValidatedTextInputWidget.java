@@ -28,7 +28,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         }
     }
 
-    final void a(int param0, ValidationSource param1) {
+    final void setValidationSource(int param0, ValidationSource param1) {
         try {
           this.field_N = param1;
           if (param0 != -13861) {

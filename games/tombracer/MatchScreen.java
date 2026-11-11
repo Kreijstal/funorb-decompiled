@@ -58,7 +58,7 @@ final class MatchScreen extends GameScreen implements rqa {
             var6 = new SoundEventPlayer();
             this.soundPlayers[var3] = var6;
             if (var3 != this.getViewedPlayerIndex(103) ||
-              this.f((byte) 33)) {
+              this.isMenuBackgroundDemo((byte) 33)) {
               var6.setMuted(true, 0);
             }
             for (var7 = 0; this.matchState.simulations[var3].rooms.length > var7; var7++) {
@@ -111,7 +111,7 @@ final class MatchScreen extends GameScreen implements rqa {
           this.matchState.hasResigned((byte) -90, this.getViewedPlayerIndex(94))) {
           this.cycleViewedPlayer(1, 17219);
         }
-        if (!this.f((byte) 33) &&
+        if (!this.isMenuBackgroundDemo((byte) 33) &&
           !this.field_D) {
           if (!param1) {
             return;
@@ -146,12 +146,12 @@ final class MatchScreen extends GameScreen implements rqa {
         if (null != this.field_n) {
           this.field_n.a((byte) 44);
         }
-        if (this.f((byte) 33)) {
+        if (this.isMenuBackgroundDemo((byte) 33)) {
           return;
         }
         if (!this.field_D) {
-          this.b(this.matchState.players[0].getScore(param2 - 15179), param2 + 7821);
-          this.a(this.matchState.field_g[0], 5, this.matchState.field_F[0]);
+          this.setTrackedScore(this.matchState.players[0].getScore(param2 - 15179), param2 + 7821);
+          this.setTrackedRoomResult(this.matchState.field_g[0], 5, this.matchState.field_F[0]);
           var4 = uca.cosmeticRandom.nextBounded(7, param2 - 15283);
           PlayerViewport.field_b = PlayerViewport.field_b + var4;
           MonsterRemains.field_h = MonsterRemains.field_h + var4;
@@ -193,7 +193,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void concludeMatch(boolean param0, byte param1) {
         int var4;
         boolean stackIn_8_0 = false;
         boolean decompiledFrameRemainder0 = true;
@@ -201,12 +201,12 @@ final class MatchScreen extends GameScreen implements rqa {
         if (this.field_D) {
           if (!this.isSpectating((byte) 69) &&
             !this.matchState.matchOver) {
-            this.j(1);
+            this.sendLeaveMatch(1);
           }
         } else {
           if (TextWidgetPainter.a(80)) {
             GameClock.field_b = qca.hasNonZeroEntry((byte) 13, CharacterChoiceFactory.field_e);
-            stackIn_8_0 = !(this.n((byte) 19) <= 0);
+            stackIn_8_0 = !(this.getTrackedScore((byte) 19) <= 0);
             uma.field_c = stackIn_8_0;
             SoftwareTransform3D.field_p = stackIn_8_0;
             if (this.matchState.gameMode != 3 && (GameClock.field_b ||
@@ -222,7 +222,7 @@ final class MatchScreen extends GameScreen implements rqa {
             if (this.matchState.gameMode == 3) {
               ConstrainToRectangleLocomotor.a(param0, 0, (byte) 82);
             } else {
-              this.o(-18570);
+              this.submitScore(-18570);
               ConstrainToRectangleLocomotor.a(param0, 9, (byte) -62);
             }
           }
@@ -405,7 +405,7 @@ final class MatchScreen extends GameScreen implements rqa {
             3 != param8 &&
             this.field_E >= 0 &&
             10 > this.field_E &&
-            !this.f((byte) 33)) {
+            !this.isMenuBackgroundDemo((byte) 33)) {
             aqa.a(this.field_E, (byte) 120);
             return;
           }
@@ -449,14 +449,14 @@ final class MatchScreen extends GameScreen implements rqa {
         this.inputQueues[param1].push(79, param0);
     }
 
-    private final void j(int param0) {
+    private final void sendLeaveMatch(int param0) {
         if (param0 != 1) {
-          this.b(-31, 0);
+          this.setTrackedScore(-31, 0);
         }
         ql.field_k.writeCipheredOpcode(66, param0 ^ -2987);
     }
 
-    final void k(byte param0) {
+    final void startMenuBackgroundDemo(byte param0) {
         Player var2 = this.matchState.players[0];
         if (param0 != -25) {
           this.pausedByOverlay = true;
@@ -554,7 +554,7 @@ final class MatchScreen extends GameScreen implements rqa {
         var2Lifetime1 = -116 / ((param0 - 23) / 54);
     }
 
-    private final boolean o(byte param0) {
+    private final boolean isScoreInvalidated(byte param0) {
         if (param0 < 40) {
           return false;
         }
@@ -586,7 +586,7 @@ final class MatchScreen extends GameScreen implements rqa {
           this.matchState.decode(param1, false);
           param1.endBitAccess((byte) 98);
           this.initPlayers((byte) -115);
-          if (!this.matchState.g(0)) {
+          if (!this.matchState.isAwaitingFirstTick(0)) {
             this.protocol.a((byte) 126);
           }
           if (param0 < 92) {
@@ -680,7 +680,7 @@ final class MatchScreen extends GameScreen implements rqa {
         if (!param1) {
           this.setPhase(6, new StandingsPhase(this, this.protocol));
         } else {
-          this.a(param0, (byte) -89);
+          this.concludeMatch(param0, (byte) -89);
         }
     }
 
@@ -775,7 +775,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    private final void a(int param0, int param1, long param2) {
+    private final void setTrackedRoomResult(int param0, int param1, long param2) {
         int var5;
         long var6;
         int var8_int;
@@ -832,7 +832,7 @@ final class MatchScreen extends GameScreen implements rqa {
         PendingEvent var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
-        this.matchState.b(true, param2, param1);
+        this.matchState.stepPlayerSimulation(true, param2, param1);
         if (param0) {
           this.protocol = (MatchProtocol) null;
         }
@@ -860,12 +860,12 @@ final class MatchScreen extends GameScreen implements rqa {
         return false;
     }
 
-    final boolean f(byte param0) {
+    final boolean isMenuBackgroundDemo(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 33) {
           this.announceResignedPlayers(94, 57);
         }
-        stackIn_6_0 = (this.matchState != null) && (this.matchState.k(param0 ^ -25288));
+        stackIn_6_0 = (this.matchState != null) && (this.matchState.isMenuBackgroundDemo(param0 ^ -25288));
         return stackIn_6_0;
     }
 
@@ -882,12 +882,12 @@ final class MatchScreen extends GameScreen implements rqa {
         if (null != this.phase) {
           this.phase.draw(param0 ^ 97, param1);
         }
-        if (!this.f((byte) 33)) {
+        if (!this.isMenuBackgroundDemo((byte) 33)) {
           if (this.field_A) {
             return;
           }
           if (param0 != -28) {
-            discarded$0 = this.o((byte) 26);
+            discarded$0 = this.isScoreInvalidated((byte) 26);
           }
           var5 = (MatchOverlay) (this.overlays.first(param0 ^ 84));
           while (var5 != null) {
@@ -964,7 +964,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final boolean g(int param0) {
+    final boolean isEnded(int param0) {
         if (param0 <= 124) {
           return true;
         }
@@ -1035,7 +1035,7 @@ final class MatchScreen extends GameScreen implements rqa {
         int var4 = -88 / ((49 - param0) / 53);
     }
 
-    final int m(int param0) {
+    final int getCourseId(int param0) {
         if (this.field_D) {
           return -1;
         }
@@ -1061,7 +1061,7 @@ final class MatchScreen extends GameScreen implements rqa {
         this.setPhase(6, new StandingsPhase(this, this.protocol));
     }
 
-    final void l(byte param0) {
+    final void invalidateScore(byte param0) {
         ConsoleToken.field_o = true;
         if (param0 != -38) {
           this.protocol = (MatchProtocol) null;
@@ -1210,7 +1210,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!wka.field_d &&
             var4 == 0 &&
             SecondaryNodeDequeIterator.field_a != null &&
-            !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
+            !SecondaryNodeDequeIterator.field_a.isMenuBackgroundDemo((byte) 33) &&
             SecondaryNodeDequeIterator.field_a == SpriteTileOperator.field_t) {
             var5 = uca.cosmeticRandom.nextBounded(8, 0);
             if (0 != var5) {
@@ -1439,14 +1439,14 @@ final class MatchScreen extends GameScreen implements rqa {
         int var4 = 25 % ((param1 - 54) / 49);
     }
 
-    private final int n(byte param0) {
+    private final int getTrackedScore(byte param0) {
         if (param0 != 19) {
           field_q = (SpriteData) null;
         }
         return this.field_j;
     }
 
-    final void o(int param0) {
+    final void submitScore(int param0) {
         int var2;
         if (this.matchState.gameMode == 3) {
           return;
@@ -1459,11 +1459,11 @@ final class MatchScreen extends GameScreen implements rqa {
         }
         if (MandelbrotOperator.field_o == null &&
           this.field_j > 0 &&
-          !this.o((byte) 62) && this.field_E >= 0) {
+          !this.isScoreInvalidated((byte) 62) && this.field_E >= 0) {
           var2 = this.field_E;
-          MandelbrotOperator.field_o = new kb(var2, var2 ^ 65535, ti.field_b, ListTracksCommand.field_o, lu.field_a, Transform3D.field_b, new int[]{this.field_j});
+          MandelbrotOperator.field_o = new ScoreSubmission(var2, var2 ^ 65535, ti.field_b, ListTracksCommand.field_o, lu.field_a, Transform3D.field_b, new int[]{this.field_j});
           if (!TextWidgetPainter.a(66)) {
-            su.a(MandelbrotOperator.field_o, (byte) -108, 3);
+            su.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
           }
         }
     }
@@ -1475,7 +1475,7 @@ final class MatchScreen extends GameScreen implements rqa {
         return this.matchState.d(-108);
     }
 
-    private final void b(int param0, int param1) {
+    private final void setTrackedScore(int param0, int param1) {
         int stackIn_4_0 = 0;
         int var3;
         int var4;
@@ -1488,7 +1488,7 @@ final class MatchScreen extends GameScreen implements rqa {
             null != SecondaryNodeDequeIterator.field_a &&
             SecondaryNodeDequeIterator.field_a.localPlayerIndex >= 0 &&
             !SecondaryNodeDequeIterator.field_a.field_D &&
-            !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
+            !SecondaryNodeDequeIterator.field_a.isMenuBackgroundDemo((byte) 33) &&
             SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
             var4 = uca.cosmeticRandom.nextBounded(3, 0);
             if (0 != var4) {
@@ -1509,7 +1509,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (!wka.field_d &&
             var3 == 0 &&
             SecondaryNodeDequeIterator.field_a != null &&
-            !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
+            !SecondaryNodeDequeIterator.field_a.isMenuBackgroundDemo((byte) 33) &&
             SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
             var4 = uca.cosmeticRandom.nextBounded(8, 0);
             if (0 != var4) {

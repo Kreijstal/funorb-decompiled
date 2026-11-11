@@ -99,7 +99,7 @@ final class GasTrapComponent extends PrefabComponent {
           var5 = new SimpleBlockBehaviour(param2, param0);
           var13.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new TimeSwitchBehaviour(param2, param0);
-          var6.a(new TimingPattern(50 * this.field_I >> 16), (byte) -105);
+          var6.setTimingPattern(new TimingPattern(50 * this.field_I >> 16), (byte) -105);
           var6.getSwitchState((byte) -91).setUses(1, 97);
           var13.addBehaviour((byte) 83, (Behaviour) (var6));
           var7 = new Trap(param2, true);

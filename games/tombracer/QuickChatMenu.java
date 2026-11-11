@@ -137,7 +137,7 @@ final class QuickChatMenu extends UiComponent {
               var14 = EffectEvent.field_j;
             }
             this.field_Gb[var13] = new tv(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
-            this.b(-123, this.field_Gb[var13]);
+            this.addChild(-123, this.field_Gb[var13]);
             var15 = var17.stringWidth(param6[var13]);
             if (this.field_vb < var15) {
               this.field_vb = var15;
@@ -230,7 +230,7 @@ final class QuickChatMenu extends UiComponent {
               ComponentTargetList.b(param3 - 48);
               HardwareSceneLight.resetChatRateLimit((byte) -25);
             } else {
-              kra.a(false);
+              HuffmanCodec.a(false);
               ComponentTargetList.b(param3 + 7);
             }
           }

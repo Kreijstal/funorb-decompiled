@@ -130,7 +130,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean ensureGamePacketBytes(int param0, int param1) {
         try {
           int var2_int = 0;
           IOException var2 = null;

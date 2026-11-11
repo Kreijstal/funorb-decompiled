@@ -725,7 +725,7 @@ final class RandomMazeBehaviour extends Behaviour {
         if (!una.a((byte) 105)) {
           return;
         }
-        qna.a(param0, false, 4);
+        qna.buildFullscreenDialog(param0, false, 4);
     }
 
     final void tick(int param0) {

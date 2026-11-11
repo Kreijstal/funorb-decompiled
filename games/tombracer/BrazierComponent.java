@@ -34,7 +34,7 @@ final class BrazierComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
     }
 
-    final static uca[] a(BitPacketBuffer param0, byte param1) {
+    final static uca[] readLogoMaterials(BitPacketBuffer param0, byte param1) {
         int var5 = 0;
         Object stackIn_3_0 = null;
         uca[] stackIn_12_0 = null;

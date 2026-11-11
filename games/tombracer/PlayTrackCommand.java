@@ -9,7 +9,7 @@ final class PlayTrackCommand extends ConsoleMethod {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6) {
+    final static void updateLobbyGameList(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6) {
         int var18_int = 0;
         int var22_int = 0;
         UiComponent dupTemp$0 = null;
@@ -141,18 +141,18 @@ final class PlayTrackCommand extends ConsoleMethod {
               stackIn_10_0 = param4;
               stackIn_10_1 = param0;
               var14 = stackIn_10_0 | stackIn_10_1;
-              var12.b(-122, var12.field_Vb);
+              var12.addChild(-122, var12.field_Vb);
               var12.field_Vb.field_z = 1;
               var12.field_bc = new UiComponent(0L, S2CStartRoundPacket.field_a);
-              var12.b(-124, var12.field_bc);
+              var12.addChild(-124, var12.field_bc);
               var12.field_Hb = new UiComponent(0L, iea.field_g);
-              var12.b(-124, var12.field_Hb);
+              var12.addChild(-124, var12.field_Hb);
               var12.field_Hb.field_x = 0;
               var12.field_wb = new UiComponent(0L, iea.field_g);
-              var12.b(-124, var12.field_wb);
+              var12.addChild(-124, var12.field_wb);
               var12.field_wb.field_x = 0;
               var12.field_Lb = new UiComponent(0L, S2CStartRoundPacket.field_a);
-              var12.b(-125, var12.field_Lb);
+              var12.addChild(-125, var12.field_Lb);
               var12.field_Lb.field_z = 2;
               stackIn_12_0 = var12;
               stackIn_12_1 = null;
@@ -168,23 +168,23 @@ final class PlayTrackCommand extends ConsoleMethod {
                 stackIn_13_4 = iea.field_g;
               }
               stackIn_12_0.field_Eb = new UiComponent(stackIn_12_3, stackIn_13_4);
-              var12.b(-125, var12.field_Eb);
+              var12.addChild(-125, var12.field_Eb);
               var12.field_Ub = new UiComponent[ColourRowCache.field_b];
               var12.field_xb = new UiComponent(0L, (UiComponent) null);
               if ((1 << PowerUpItemBehaviour.field_w & var14) != 0) {
-                var12.field_Eb.b(-128, var12.field_xb);
+                var12.field_Eb.addChild(-128, var12.field_xb);
               }
               var12.field_vb = new UiComponent(0L, (UiComponent) null);
               if (0 != (var14 & 1 << una.field_c)) {
-                var12.field_Eb.b(-124, var12.field_vb);
+                var12.field_Eb.addChild(-124, var12.field_vb);
               }
               var12.field_Zb = new UiComponent(0L, (UiComponent) null);
               if ((var14 & 1 << TrackingCrusherComponent.field_F) != 0) {
-                var12.field_Eb.b(param1 - 123, var12.field_Zb);
+                var12.field_Eb.addChild(param1 - 123, var12.field_Zb);
               }
               var12.field_fc = new UiComponent(0L, (UiComponent) null);
               if ((1 << RoomEffectTraps.field_b & var14) != 0) {
-                var12.field_Eb.b(param1 ^ -124, var12.field_fc);
+                var12.field_Eb.addChild(param1 ^ -124, var12.field_fc);
               }
               var45 = var12.field_xb;
               var44 = var12.field_fc;
@@ -196,7 +196,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               for (var18_int = 0; ColourRowCache.field_b > var18_int; var18_int++) {
                 var12.field_Ub[var18_int] = new UiComponent(0L, (UiComponent) null);
                 if ((1 << var18_int + SoundEvent.field_m & var14) != 0) {
-                  var12.field_Eb.b(-126, var12.field_Ub[var18_int]);
+                  var12.field_Eb.addChild(-126, var12.field_Ub[var18_int]);
                 }
                 var12.field_Ub[var18_int].field_bb = 1;
               }
@@ -214,19 +214,19 @@ final class PlayTrackCommand extends ConsoleMethod {
                 stackIn_32_4 = S2CStartRoundPacket.field_a;
               }
               stackIn_31_0.field_ub = new UiComponent(stackIn_31_3, stackIn_32_4);
-              var12.b(-127, var12.field_ub);
+              var12.addChild(-127, var12.field_ub);
               var12.field_ub.field_z = 2;
               var12.field_Qb = new UiComponent(0L, S2CStartRoundPacket.field_a);
-              var12.b(param1 ^ -122, var12.field_Qb);
+              var12.addChild(param1 ^ -122, var12.field_Qb);
               var12.field_hc = new UiComponent(0L, PressureSwitchBehaviour.field_p);
-              var12.b(-125, var12.field_hc);
+              var12.addChild(-125, var12.field_hc);
               var12.field_dc = new UiComponent(0L, PressureSwitchBehaviour.field_p);
-              var12.b(-122, var12.field_dc);
+              var12.addChild(-122, var12.field_dc);
               var12.field_Rb = new UiComponent(0L, Corpse.field_i);
-              var12.b(param1 ^ -127, var12.field_Rb);
+              var12.addChild(param1 ^ -127, var12.field_Rb);
               var12.a(-10966);
               var12.field_Nb = new UiComponent(0L, ModelAnimator.field_g);
-              var12.b(-124, var12.field_Nb);
+              var12.addChild(-124, var12.field_Nb);
               var13 = 1;
             }
             var12.field_Vb.field_r = null;

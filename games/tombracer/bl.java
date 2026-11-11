@@ -10,7 +10,7 @@ final class bl {
 
     final static boolean b(int param0) {
         if (param0 != 0) {
-          bl.a(-92, 118);
+          bl.flushPacketBuffer(-92, 118);
           if (null == OpenGlTransform3D.field_e) {
             return false;
           }
@@ -75,7 +75,7 @@ final class bl {
         field_b = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void flushPacketBuffer(int param0, int param1) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;

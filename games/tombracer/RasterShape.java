@@ -26,7 +26,7 @@ abstract class RasterShape {
 
     abstract void drawFilled(int param0, int param1, int param2);
 
-    final static void a(int param0) {
+    final static void persistSessionSeedBytes(int param0) {
         try {
           int var1 = 0;
           Exception var2 = null;

@@ -60,11 +60,11 @@ final class upa extends IntrusiveNode {
             stackIn_46_0 = nra.field_c;
             stackIn_46_1 = param1 + 118;
             stackIn_47_2 = (param0) && (!tla.field_e);
-            ((UiComponent) (Object) stackIn_46_0).b(stackIn_46_1, stackIn_47_2);
+            ((UiComponent) (Object) stackIn_46_0).drawFullScreen(stackIn_46_1, stackIn_47_2);
             stackIn_50_0 = dka.field_b;
             stackIn_50_1 = 67;
             stackIn_51_2 = (param0) && (!tla.field_e);
-            ((UiComponent) (Object) stackIn_50_0).b(stackIn_50_1, stackIn_51_2);
+            ((UiComponent) (Object) stackIn_50_0).drawFullScreen(stackIn_50_1, stackIn_51_2);
           } else {
             if (0 < fp.field_e) {
               if (null != fta.field_b) {
@@ -73,11 +73,11 @@ final class upa extends IntrusiveNode {
               stackIn_60_0 = nra.field_c;
               stackIn_60_1 = param1 + 118;
               stackIn_61_2 = (param0) && (!tla.field_e);
-              ((UiComponent) (Object) stackIn_60_0).b(stackIn_60_1, stackIn_61_2);
+              ((UiComponent) (Object) stackIn_60_0).drawFullScreen(stackIn_60_1, stackIn_61_2);
               stackIn_64_0 = dka.field_b;
               stackIn_64_1 = 67;
               stackIn_65_2 = (param0) && (!tla.field_e);
-              ((UiComponent) (Object) stackIn_64_0).b(stackIn_64_1, stackIn_65_2);
+              ((UiComponent) (Object) stackIn_64_0).drawFullScreen(stackIn_64_1, stackIn_65_2);
             }
           }
         } else {
@@ -87,11 +87,11 @@ final class upa extends IntrusiveNode {
           stackIn_6_0 = nra.field_a;
           stackIn_6_1 = param1 + 80;
           stackIn_7_2 = (param0) && (!LegacyOpenGlBloomEffect.field_o);
-          ((UiComponent) (Object) stackIn_6_0).b(stackIn_6_1, stackIn_7_2);
+          ((UiComponent) (Object) stackIn_6_0).drawFullScreen(stackIn_6_1, stackIn_7_2);
           stackIn_10_0 = OpenGlToolkit.field_fd;
           stackIn_10_1 = 72;
           stackIn_11_2 = (param0) && (!LegacyOpenGlBloomEffect.field_o);
-          ((UiComponent) (Object) stackIn_10_0).b(stackIn_10_1, stackIn_11_2);
+          ((UiComponent) (Object) stackIn_10_0).drawFullScreen(stackIn_10_1, stackIn_11_2);
           if (GameKeyHandler.field_a > param1) {
             if (null != fta.field_b) {
               fta.field_b.drawOpaque(nra.field_c.field_qb, 0);
@@ -99,11 +99,11 @@ final class upa extends IntrusiveNode {
             stackIn_32_0 = nra.field_c;
             stackIn_32_1 = param1 + 118;
             stackIn_33_2 = (param0) && (!tla.field_e);
-            ((UiComponent) (Object) stackIn_32_0).b(stackIn_32_1, stackIn_33_2);
+            ((UiComponent) (Object) stackIn_32_0).drawFullScreen(stackIn_32_1, stackIn_33_2);
             stackIn_36_0 = dka.field_b;
             stackIn_36_1 = 67;
             stackIn_37_2 = (param0) && (!tla.field_e);
-            ((UiComponent) (Object) stackIn_36_0).b(stackIn_36_1, stackIn_37_2);
+            ((UiComponent) (Object) stackIn_36_0).drawFullScreen(stackIn_36_1, stackIn_37_2);
           } else {
             if (0 < fp.field_e) {
               if (null != fta.field_b) {
@@ -112,11 +112,11 @@ final class upa extends IntrusiveNode {
               stackIn_19_0 = nra.field_c;
               stackIn_19_1 = param1 + 118;
               stackIn_20_2 = (param0) && (!tla.field_e);
-              ((UiComponent) (Object) stackIn_19_0).b(stackIn_19_1, stackIn_20_2);
+              ((UiComponent) (Object) stackIn_19_0).drawFullScreen(stackIn_19_1, stackIn_20_2);
               stackIn_23_0 = dka.field_b;
               stackIn_23_1 = 67;
               stackIn_24_2 = (param0) && (!tla.field_e);
-              ((UiComponent) (Object) stackIn_23_0).b(stackIn_23_1, stackIn_24_2);
+              ((UiComponent) (Object) stackIn_23_0).drawFullScreen(stackIn_23_1, stackIn_24_2);
             }
           }
         }

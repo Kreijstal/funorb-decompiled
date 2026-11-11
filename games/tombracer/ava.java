@@ -17,7 +17,7 @@ final class ava {
         return new ava(this.field_g, param3, param1, param2, this.field_e);
     }
 
-    final static void a(ScrollPane param0, int param1, int param2, boolean param3, int param4) {
+    final static void updateLobbyPlayerRows(ScrollPane param0, int param1, int param2, boolean param3, int param4) {
         int var27_int = 0;
         ScrollPane stackIn_43_0;
         int stackIn_43_1;
@@ -145,19 +145,19 @@ final class ava {
             var13 = 0;
             if (var12.field_J == null) {
               var12.field_Nb = new UiComponent(0L, S2CStartRoundPacket.field_a);
-              var12.b(-128, var12.field_Nb);
+              var12.addChild(-128, var12.field_Nb);
               var12.field_Db = new UiComponent(0L, iea.field_g);
               if (UnlockOverlay.field_p) {
-                var12.b(-123, var12.field_Db);
+                var12.addChild(-123, var12.field_Db);
               }
               var12.field_Db.field_z = 2;
               var12.field_Gb = new UiComponent(0L, Corpse.field_i);
-              var12.b(-126, var12.field_Gb);
+              var12.addChild(-126, var12.field_Gb);
               var12.a(-10966);
               var12.field_Kb = new UiComponent(0L, ModelAnimator.field_g);
-              var12.b(param4 ^ -121, var12.field_Kb);
+              var12.addChild(param4 ^ -121, var12.field_Kb);
               var12.field_Cb = new UiComponent(0L, kv.field_b);
-              var12.b(-128, var12.field_Cb);
+              var12.addChild(-128, var12.field_Cb);
               var13 = 1;
             }
             var12.field_Nb.field_r = null;
@@ -249,7 +249,7 @@ final class ava {
                 ComponentMount.b(8192) &&
                 var12.field_yb != SimpleConditionBehaviour.field_r) {
                 if (var12.field_Kb.field_r != null) {
-                  var26 = var12.field_Kb.b((byte) 69) + mna.field_d * 2;
+                  var26 = var12.field_Kb.measureNaturalWidth((byte) 69) + mna.field_d * 2;
                   var12.field_Kb.setBounds(var26, di.field_a, -23776, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
@@ -257,7 +257,7 @@ final class ava {
                   if (param0 == tn.field_n) {
                     var26Lifetime2 = 40;
                   } else {
-                    var26Lifetime2 = var12.field_Cb.b((byte) 69) + 2 * mna.field_d;
+                    var26Lifetime2 = var12.field_Cb.measureNaturalWidth((byte) 69) + 2 * mna.field_d;
                   }
                   var12.field_Cb.setBounds(var26Lifetime2, di.field_a, -23776, var19, var25_int);
                   var25_int = var25_int + var26Lifetime2;

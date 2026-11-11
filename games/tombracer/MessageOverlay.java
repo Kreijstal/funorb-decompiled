@@ -232,7 +232,7 @@ final class MessageOverlay extends MatchOverlay {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + nma.field_m.a(param0.position, (byte) 121, var3_int, param0.payload, 0, var4);
+            param0.position = param0.position + nma.field_m.decode(param0.position, (byte) 121, var3_int, param0.payload, 0, var4);
             var5 = MaskBlendOperator.decodeCp1252(var4, 0, var3_int, 255);
             if (param2 < -18) {
               stackIn_7_0 = var5;

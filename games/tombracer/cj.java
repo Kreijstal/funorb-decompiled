@@ -18,7 +18,7 @@ final class cj implements WidgetPainter {
         field_e = null;
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean readNextGamePacket(int[] param0, int param1) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -61,7 +61,7 @@ final class cj implements WidgetPainter {
           while (true) {
             if (GameKeyHandler.field_b < 0) {
               WeaveOperator.field_q.position = 0;
-              if (!LegacyRidgedWaterNoise.a(1, -1)) {
+              if (!LegacyRidgedWaterNoise.ensureGamePacketBytes(1, -1)) {
                 return false;
               }
               GameKeyHandler.field_b = WeaveOperator.field_q.readCipheredOpcode(-83);

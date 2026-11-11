@@ -90,7 +90,7 @@ final class MazeGrid {
           if (param1 < 120) {
             field_d = (String[]) null;
           }
-          rua.field_gb.b(-127, param0);
+          rua.field_gb.addChild(-127, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "hj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

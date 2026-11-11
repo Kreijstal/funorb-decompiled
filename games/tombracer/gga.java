@@ -16,7 +16,7 @@ final class gga extends ofa implements ButtonListener {
         }
     }
 
-    private final FocusableWidget a(String param0, WidgetListener param1, int param2) {
+    private final FocusableWidget appendDialogButton(String param0, WidgetListener param1, int param2) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -187,7 +187,7 @@ final class gga extends ofa implements ButtonListener {
           var4.field_i = 0;
           var4.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(BlendModeOperator.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, -1);
-          this.field_N = this.a(BitPacketBuffer.field_j, (WidgetListener) (this), -93);
+          this.field_N = this.appendDialogButton(BitPacketBuffer.field_j, (WidgetListener) (this), -93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

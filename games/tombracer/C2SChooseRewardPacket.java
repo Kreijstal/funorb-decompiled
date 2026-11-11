@@ -14,7 +14,7 @@ final class C2SChooseRewardPacket implements GamePacket {
         return (IntPoint.hasAnyMask33(param1, param2, (byte) -80) | cga.hasAnyMask34(param1, -54, param2) | TripBeamComponent.hasAnyMask52(param1, param2, 52)) & DiskCacheWorker.a((byte) 61, param2, param1);
     }
 
-    final static void a(int param0, byte param1, byte[] param2, java.math.BigInteger param3, PacketBuffer param4, java.math.BigInteger param5, int param6) {
+    final static void writeEncryptedPayload(int param0, byte param1, byte[] param2, java.math.BigInteger param3, PacketBuffer param4, java.math.BigInteger param5, int param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;

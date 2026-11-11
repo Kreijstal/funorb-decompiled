@@ -99,7 +99,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     }
 
     private final boolean submitRegistration(int param0) {
-        if (!this.g(param0 ^ -1878)) {
+        if (!this.areAllInputsValid(param0 ^ -1878)) {
           return false;
         }
         int var2 = param0;
@@ -107,7 +107,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           var2 = Integer.parseInt(this.field_I.field_o);
         } catch (NumberFormatException numberFormatException) {
         }
-        return qt.a(this.field_G.field_o, true, var2, this.field_z.field_o, this.field_E.field_o, this, this.field_D.field_w);
+        return qt.startAccountCreation(this.field_G.field_o, true, var2, this.field_z.field_o, this.field_E.field_o, this, this.field_D.field_w);
     }
 
     final static int a(float param0, float param1, boolean param2, float param3) {
@@ -177,12 +177,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_C.field_q = RevolverItemComponent.field_G;
         this.field_I.field_q = dta.field_e;
         this.field_D.field_q = RenderLayer.field_e;
-        this.field_G.a(-13861, new tf(this.field_G));
-        this.field_z.a(-13861, new EmailSyntaxValidator(this.field_z));
-        this.field_J.a(-13861, new mn(this.field_J, this.field_z));
-        this.field_E.a(-13861, new PasswordValidator(this.field_E, this.field_G, this.field_z));
-        this.field_C.a(-13861, new MatchingTextValidator(this.field_C, this.field_E));
-        this.field_I.a(-13861, new AgeValidator(this.field_I));
+        this.field_G.setValidationSource(-13861, new tf(this.field_G));
+        this.field_z.setValidationSource(-13861, new EmailSyntaxValidator(this.field_z));
+        this.field_J.setValidationSource(-13861, new mn(this.field_J, this.field_z));
+        this.field_E.setValidationSource(-13861, new PasswordValidator(this.field_E, this.field_G, this.field_z));
+        this.field_C.setValidationSource(-13861, new MatchingTextValidator(this.field_C, this.field_E));
+        this.field_I.setValidationSource(-13861, new AgeValidator(this.field_I));
         this.field_F.field_y = false;
         this.field_F.field_r = (WidgetPainter) ((Object) new td());
         this.field_B.field_r = (WidgetPainter) ((Object) new kaa());
@@ -332,7 +332,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final boolean g(int param0) {
+    private final boolean areAllInputsValid(int param0) {
         if (!this.validateField((byte) -10, this.field_G)) {
           return false;
         }
@@ -402,7 +402,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     final void updatePointerState(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.field_F.field_y = this.g(param1 - 2095275);
+          this.field_F.field_y = this.areAllInputsValid(param1 - 2095275);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "mr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

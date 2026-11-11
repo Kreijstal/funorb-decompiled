@@ -42,9 +42,9 @@ final class SnakePitBehaviour extends Behaviour {
           var9 = -var5 + param2.field_a;
           for (var10 = 0; var10 < this.snakes.length; var10++) {
             var11 = this.snakes[var10];
-            var12 = var4_int + var11.a((byte) 110);
-            var13 = var5 + var11.f(0);
-            var14 = SimulationObserver.a(var11.g(0), 12, var13, var11.g(0), param2, var12, 2);
+            var12 = var4_int + var11.getOffsetX((byte) 110);
+            var13 = var5 + var11.getOffsetY(0);
+            var14 = SimulationObserver.a(var11.getSize(0), 12, var13, var11.getSize(0), param2, var12, 2);
             if (var14 > 0) {
               var15 = wm.a(4096, var14, 15);
               this.a(var8 + gqa.multiplyFixed(-var8 + var9, (byte) 24, var15), var6 + gqa.multiplyFixed(var7 - var6, (byte) 24, var15), var11, (byte) -102, param1);
@@ -170,7 +170,7 @@ final class SnakePitBehaviour extends Behaviour {
         }
         var4Lifetime1 = this.isTouchingPlayer(8031) ? 1 : 0;
         for (var5 = 0; var5 < this.snakes.length; var5++) {
-          this.snakes[var5].a(111, var4Lifetime1 != 0, var3, var2, this.getPlayer((byte) 19));
+          this.snakes[var5].updateAgainstPlayer(111, var4Lifetime1 != 0, var3, var2, this.getPlayer((byte) 19));
         }
     }
 
@@ -181,7 +181,7 @@ final class SnakePitBehaviour extends Behaviour {
         return 15;
     }
 
-    final static boolean l(int param0) {
+    final static boolean isFirstReflectionCheckReady(int param0) {
         int var2 = 0;
         aj var1 = null;
         RuntimeException var1_ref = null;
@@ -196,7 +196,7 @@ final class SnakePitBehaviour extends Behaviour {
             return false;
           }
           if (param0 != 10371) {
-            SnakePitBehaviour.l(41);
+            SnakePitBehaviour.isFirstReflectionCheckReady(41);
           }
           for (var2 = 0; var1.field_f > var2; var2++) {
             if (null != var4.field_j[var2] &&
@@ -289,9 +289,9 @@ final class SnakePitBehaviour extends Behaviour {
           var8 = this.trap.getY(9648);
           for (var9 = 0; this.snakes.length > var9; var9++) {
             var10_ref_aia = this.snakes[var9];
-            var11 = var10_ref_aia.a((byte) 91) + var7_int;
-            var12 = var8 + var10_ref_aia.f(0);
-            if (io.centredBoxesOverlap(param1, var12, (byte) -61, param0, var11, param5, var10_ref_aia.g(0), var10_ref_aia.g(0), param3)) {
+            var11 = var10_ref_aia.getOffsetX((byte) 91) + var7_int;
+            var12 = var8 + var10_ref_aia.getOffsetY(0);
+            if (io.centredBoxesOverlap(param1, var12, (byte) -61, param0, var11, param5, var10_ref_aia.getSize(0), var10_ref_aia.getSize(0), param3)) {
               this.a(-this.trap.getY(9648) + param5, -this.trap.getX(3) + param3, var10_ref_aia, (byte) -115, param2);
             }
           }

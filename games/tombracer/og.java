@@ -20,7 +20,7 @@ final class og extends OpenGlBuffer implements qm {
         if (null == dq.field_f) {
           return;
         }
-        CharacterChoiceFactory.a(dq.field_f, false);
+        CharacterChoiceFactory.detachCanvasInput(dq.field_f, false);
         dq.field_f.a((byte) -34, dsa.field_c);
         dq.field_f = null;
         if (null != OpenGlSceneLight.field_o) {

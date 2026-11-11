@@ -68,7 +68,7 @@ class UiComponent extends um {
         field_nb = null;
     }
 
-    final void b(int param0, UiComponent param1) {
+    final void addChild(int param0, UiComponent param1) {
         try {
           if (null == this.field_J) {
             this.field_J = new IntrusiveDeque();
@@ -234,7 +234,7 @@ class UiComponent extends um {
         int var4_intLifetime1;
         if (param1) {
           UiComponent var7 = (UiComponent) null;
-          this.b(-22, (UiComponent) null);
+          this.addChild(-22, (UiComponent) null);
         }
         int var3 = 0;
         if (null != this.field_r &&
@@ -476,7 +476,7 @@ class UiComponent extends um {
         }
     }
 
-    final int b(byte param0) {
+    final int measureNaturalWidth(byte param0) {
         if (param0 != 69) {
           return 93;
         }
@@ -681,7 +681,7 @@ class UiComponent extends um {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
-    final void b(int param0, boolean param1) {
+    final void drawFullScreen(int param0, boolean param1) {
         this.drawTree(false, 0, SoftwareRasterizer.height, param1, false, true, false, 0, 0, false, SoftwareRasterizer.width);
         if (param0 <= 34) {
           this.field_v = -101;

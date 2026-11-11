@@ -71,8 +71,8 @@ abstract class mna {
         for (var8Lifetime1 = 0; var8Lifetime1 < ara.field_xb; var8Lifetime1++) {
           var16 = CourseLayout.field_d[var8Lifetime1];
           if (null != var16.field_l) {
-            ne.field_d.field_tb.b(-125, var16.field_l);
-            var16.field_l.setBounds(var16.field_l.b((byte) 69), param2, -23776, var7Lifetime1, param3);
+            ne.field_d.field_tb.addChild(-125, var16.field_l);
+            var16.field_l.setBounds(var16.field_l.measureNaturalWidth((byte) 69), param2, -23776, var7Lifetime1, param3);
             if (var16.field_l.field_y != 0) {
               var4 = var16;
             }

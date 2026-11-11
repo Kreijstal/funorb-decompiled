@@ -8,11 +8,11 @@ final class qt {
         field_a = null;
         if (param0 != -25809) {
           AccountRegistrationPanel var2 = (AccountRegistrationPanel) null;
-          qt.a((String) null, true, 14, (String) null, (String) null, (AccountRegistrationPanel) null, true);
+          qt.startAccountCreation((String) null, true, 14, (String) null, (String) null, (AccountRegistrationPanel) null, true);
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
+    final static void appendRankingRecord(int param0, int param1, int param2, int param3, int param4, byte param5) {
         ItemBehaviour.field_p[ContextMenu.field_Eb] = param3;
         BlockModel.field_n[ContextMenu.field_Eb] = ContextMenu.field_Eb;
         jk.field_h[ContextMenu.field_Eb] = param4;
@@ -182,7 +182,7 @@ final class qt {
                 var4 = new ht(ColourRowCache.field_b);
                 WhiteLightSensorComponent.field_K.put(-1, var4, (long)var3);
               }
-              ed.a(32, var4, true, var1);
+              ed.decodeLobbyGame(32, var4, true, var1);
               cua.insertSorted(var4, (byte) 80);
               return;
             }
@@ -273,7 +273,7 @@ final class qt {
                     return;
                   }
                   if (var2 == 20) {
-                    ed.a(32, C2SChooseRewardPacket.field_a, false, var1);
+                    ed.decodeLobbyGame(32, C2SChooseRewardPacket.field_a, false, var1);
                     return;
                   }
                   if (21 == var2) {
@@ -294,7 +294,7 @@ final class qt {
                     SimpleConditionBehaviour.field_r = ((PacketBuffer) ((Object) var1)).readLong(290646880);
                     return;
                   }
-                  ssa.a("L1: " + kk.a(32), (byte) 118, (Throwable) null);
+                  ssa.reportClientError("L1: " + kk.formatPacketDump(32), (byte) 118, (Throwable) null);
                   dea.a(60);
                   return;
                 }
@@ -366,7 +366,7 @@ final class qt {
               }
               ql.a(114, var3_ref_phaLifetime1);
             }
-            var3_ref_phaLifetime1 = (pha) (fua.field_a.a((byte) -112));
+            var3_ref_phaLifetime1 = (pha) (fua.field_a.nextInTraversal((byte) -112));
           }
           if (var2 == 1 &&
             C2SChooseRewardPacket.field_a != null) {
@@ -378,7 +378,7 @@ final class qt {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(125);
             C2SChooseRewardPacket.field_a = new ht(ColourRowCache.field_b);
             C2SChooseRewardPacket.field_a.setSecondaryKey(false, (long)var3Lifetime1);
-            ed.a(32, C2SChooseRewardPacket.field_a, false, var1);
+            ed.decodeLobbyGame(32, C2SChooseRewardPacket.field_a, false, var1);
             TileRenderable.field_d = 0L;
           }
           if (var2 != 2 &&
@@ -410,7 +410,7 @@ final class qt {
         }
     }
 
-    final static boolean a(String param0, boolean param1, int param2, String param3, String param4, AccountRegistrationPanel param5, boolean param6) {
+    final static boolean startAccountCreation(String param0, boolean param1, int param2, String param3, String param4, AccountRegistrationPanel param5, boolean param6) {
         RuntimeException var7 = null;
         rua var8 = null;
         RuntimeException stackIn_15_0 = null;

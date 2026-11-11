@@ -184,7 +184,7 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    final static void a(int param0, ToolkitSprite[] param1, byte param2, int param3, GraphicsToolkit param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void paintNineSliceFrame(int param0, ToolkitSprite[] param1, byte param2, int param3, GraphicsToolkit param4, int param5, int param6, int param7, int param8, int param9) {
         int stackIn_14_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_22_0 = 0;

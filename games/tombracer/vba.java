@@ -233,7 +233,7 @@ final class vba extends we {
         var7 = var4;
         var8_int = var5;
         var11 = ArchiveSource.field_a;
-        TextInputWidget.a(1, var11, (byte) -89, var7, var6_ref_ha, 180, 1, 180, var8_int, 0);
+        TextInputWidget.paintNineSliceFrame(1, var11, (byte) -89, var7, var6_ref_ha, 180, 1, 180, var8_int, 0);
         if (this.field_t != -1) {
           stackIn_5_0 = this.field_t;
         } else {

@@ -9,7 +9,7 @@ final class nl {
     static String[] loadingTextTranslations;
     static boolean field_b;
 
-    final boolean a(String param0, int param1) {
+    final boolean matchesMethodName(String param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -148,7 +148,7 @@ final class nl {
           LegacyOpenGlTexture3D.writeCookie(this.field_a, "jagex-last-login-method", (byte) 121, 31536000L, param0);
           if (param1 != 5) {
             String var4 = (String) null;
-            this.a((String) null, -66);
+            this.matchesMethodName((String) null, -66);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "nl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

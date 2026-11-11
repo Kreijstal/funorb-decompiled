@@ -29,7 +29,7 @@ final class PlatformComponent extends PrefabComponent {
         return false;
     }
 
-    final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
+    final static void insertBefore(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (null != param1.previous) {
             param1.unlink(63);

@@ -399,7 +399,7 @@ final class CachedArchiveSource extends ArchiveSource {
           } else {
             if (null != this.field_h &&
               this.field_n[param2] != -1) {
-              var4 = this.field_i.a(15871, this.field_h, param2);
+              var4 = this.field_i.readSynchronously(15871, this.field_h, param2);
             } else {
               if (this.field_u.isUrgentQueueFull(-21)) {
                 return null;
@@ -560,7 +560,7 @@ final class CachedArchiveSource extends ArchiveSource {
           this.field_u = param3;
           this.field_o = param6;
           if (this.field_s != null) {
-            this.field_q = (ArchiveRequest) ((Object) this.field_i.a(15871, this.field_s, this.field_j));
+            this.field_q = (ArchiveRequest) ((Object) this.field_i.readSynchronously(15871, this.field_s, this.field_j));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

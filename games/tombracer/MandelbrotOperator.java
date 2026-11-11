@@ -7,7 +7,7 @@ final class MandelbrotOperator extends TextureOperator {
     private int field_p;
     private int field_r;
     static int field_m;
-    static kb field_o;
+    static ScoreSubmission field_o;
 
     final int[] getMonochromeRow(int param0, int param1) {
         int var4 = 0;

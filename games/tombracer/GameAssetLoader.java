@@ -138,7 +138,7 @@ final class GameAssetLoader implements LoadingStage {
         var4 = TombRacer.field_G ? 1 : 0;
         var2 = 5 / ((55 - param0) / 58);
         if (this.field_e != null) {
-          RoomComponent.a(1048576, new kra(this.field_e.getFileByName("", (byte) 113, "huffman")));
+          RoomComponent.a(1048576, new HuffmanCodec(this.field_e.getFileByName("", (byte) 113, "huffman")));
           this.field_e = null;
           C2SActionPacket.a(-33);
           return;

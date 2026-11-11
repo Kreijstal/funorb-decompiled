@@ -20,7 +20,7 @@ abstract class jg {
           if (eba.hasUniformCharacters(param2, 6912)) {
             return false;
           }
-          if (ld.a(false, param2)) {
+          if (ld.isPasswordLengthInvalid(false, param2)) {
             return false;
           }
           if (param1.length() == 0) {

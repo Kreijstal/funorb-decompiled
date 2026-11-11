@@ -294,7 +294,7 @@ final class ala extends GameScreen {
         if (param2 != 1) {
           return true;
         }
-        return PressureSwitchBehaviour.a(15, 12, (byte) -106, 13);
+        return PressureSwitchBehaviour.dispatchCancelKey(15, 12, (byte) -106, 13);
     }
 
     final void draw(byte param0, boolean param1) {

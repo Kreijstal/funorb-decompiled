@@ -351,21 +351,21 @@ final class VerticalScrollbar extends UiComponent {
         try {
           this.upButton = new UiComponent(0L, param1);
           this.downButton = new UiComponent(0L, param2);
-          this.b(-123, this.upButton);
-          this.b(-124, this.downButton);
+          this.addChild(-123, this.upButton);
+          this.addChild(-124, this.downButton);
           this.field_ub = new UiComponent(0L, (UiComponent) null);
-          this.b(-128, this.field_ub);
+          this.addChild(-128, this.field_ub);
           this.trackAbove = new UiComponent(0L, param3);
           this.trackBelow = new UiComponent(0L, param3);
           var9 = this.trackAbove;
           var10 = var9;
           this.trackBelow.field_eb = true;
           var10.field_eb = true;
-          this.field_ub.b(-124, this.trackAbove);
-          this.field_ub.b(-122, this.trackBelow);
+          this.field_ub.addChild(-124, this.trackAbove);
+          this.field_ub.addChild(-122, this.trackBelow);
           this.thumb = new UiComponent(0L, param4);
           this.thumb.field_F = true;
-          this.field_ub.b(-123, this.thumb);
+          this.field_ub.addChild(-123, this.thumb);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

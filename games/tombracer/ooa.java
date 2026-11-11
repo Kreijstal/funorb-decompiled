@@ -7,7 +7,7 @@ final class ooa extends wka {
     static int field_g;
     static UiComponent field_f;
 
-    final static String a(byte param0) {
+    final static String getAccountNameOrFallback(byte param0) {
         String var1 = "";
         if (param0 < -46) {
           if (null != vn.field_b) {
@@ -21,7 +21,7 @@ final class ooa extends wka {
           }
           return var1;
         }
-        ooa.a((byte) -83);
+        ooa.getAccountNameOrFallback((byte) -83);
         if (null != vn.field_b) {
           var1 = vn.field_b.a(39);
         }
@@ -43,7 +43,7 @@ final class ooa extends wka {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param2 <= -42) {
-          return (((param1 & 8192) != 0 ? true : false) | SequencePlayer.hasMask24OrAll544(param0, -57, param1) | wq.b(param0, param1, 8000)) & kb.a(param0, param1, (byte) 17);
+          return (((param1 & 8192) != 0 ? true : false) | SequencePlayer.hasMask24OrAll544(param0, -57, param1) | wq.b(param0, param1, 8000)) & ScoreSubmission.a(param0, param1, (byte) 17);
         }
         return true;
     }

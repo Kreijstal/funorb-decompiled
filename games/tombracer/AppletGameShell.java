@@ -27,7 +27,7 @@ abstract class AppletGameShell extends GameApplet {
             ql.a(2, -28521);
           }
           if (hd.field_a[2]) {
-            PlantModel.b(false, 3);
+            PlantModel.resendPendingSubmissions(false, 3);
           }
           if (hd.field_a[3]) {
             S2CNextRoundPacket.b(4, 2);
@@ -109,7 +109,7 @@ abstract class AppletGameShell extends GameApplet {
             }
             var12 = VoronoiNoiseOperator.e((byte) 78);
             if (var12 != null) {
-              kb.a(2753, var12.booleanValue());
+              ScoreSubmission.a(2753, var12.booleanValue());
             }
           }
           if (var4 == 2) {
@@ -196,7 +196,7 @@ abstract class AppletGameShell extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              ssa.a("S1", (byte) 121, (Throwable) ((Object) var6));
+              ssa.reportClientError("S1", (byte) 121, (Throwable) ((Object) var6));
               var11 = (String) null;
               NodeHashTableIterator.a((String) null, -1);
               DarknessBehaviour.field_o = null;
@@ -246,7 +246,7 @@ abstract class AppletGameShell extends GameApplet {
             BrickOperator.d((byte) 82);
           } else {
             if (var2 == 2) {
-              CrossedSineBandsOperator.d(-95);
+              CrossedSineBandsOperator.handleHighscoreResponse(-95);
             } else {
               if (var2 == 3) {
                 au.a(3);
@@ -256,11 +256,11 @@ abstract class AppletGameShell extends GameApplet {
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
-                      WhirlpoolDigest.a((byte) -44);
+                      WhirlpoolDigest.handleRankingsResponse((byte) -44);
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
-                          PlayerInputQueue.a(uca.field_d, dsa.field_c, (byte) 72, WeaveOperator.field_q);
+                          PlayerInputQueue.readReflectionCheckRequest(uca.field_d, dsa.field_c, (byte) 72, WeaveOperator.field_q);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -277,7 +277,7 @@ abstract class AppletGameShell extends GameApplet {
                                 HardwareUnlitEffect.c((byte) 101);
                                 return;
                               }
-                              ssa.a("MGS1: " + kk.a(32), (byte) 123, (Throwable) null);
+                              ssa.reportClientError("MGS1: " + kk.formatPacketDump(32), (byte) 123, (Throwable) null);
                               dea.a(60);
                               return;
                             }
@@ -302,7 +302,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           return;
         }
-        ssa.a("MGS2: " + kk.a(32), (byte) 120, (Throwable) null);
+        ssa.reportClientError("MGS2: " + kk.formatPacketDump(32), (byte) 120, (Throwable) null);
         dea.a(60);
     }
 
@@ -416,7 +416,7 @@ abstract class AppletGameShell extends GameApplet {
         ApproachPlayerLocomotor.field_t = this.field_z;
         FacePlayerLocomotor.applyLanguage(ApproachPlayerLocomotor.field_t, (byte) 65);
         IsaacCipher.configureClientConnection(this.field_s, this.field_v, dsa.field_c, this.field_p, this.field_x, this.field_t, 5000, param4, -1367135824, param7, this.field_A, ApproachPlayerLocomotor.field_t, param5, this.field_w);
-        MazeSolver.a(ApproachPlayerLocomotor.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
+        MazeSolver.initializeArchiveServices(ApproachPlayerLocomotor.field_t, dsa.field_c, 103, this.field_x, this.field_v, param5, this.field_p, this.field_s, this.field_t);
         wka.patchJavaKeyCodeMap(520);
         tja.field_q = dka.createMouseWheelInput((byte) -86);
         fpa.a(nma.field_l, (byte) 75);
@@ -487,7 +487,7 @@ abstract class AppletGameShell extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            ssa.a((String) null, (byte) 126, (Throwable) ((Object) var6_ref));
+            ssa.reportClientError((String) null, (byte) 126, (Throwable) ((Object) var6_ref));
             this.reportError(-6738, "crash");
           }
           return;
@@ -541,7 +541,7 @@ abstract class AppletGameShell extends GameApplet {
         }
     }
 
-    final void c(byte param0, boolean param1) {
+    final void serviceFramework(byte param0, boolean param1) {
         int stackIn_26_0 = 0;
         boolean stackIn_101_0 = false;
         boolean stackIn_104_1 = false;
@@ -562,9 +562,9 @@ abstract class AppletGameShell extends GameApplet {
           }
           OpenGlSceneLight.field_o.update(false);
         }
-        DisplaySettingsDialog.j(3321);
+        DisplaySettingsDialog.updateKeyboardStateForFrame(3321);
         BoulderComponent.snapshotMouseInput((byte) -44);
-        if (!ColourGradientOperator.c(-112) &&
+        if (!ColourGradientOperator.isLoginFlowIncomplete(-112) &&
           Transform3D.field_c != 11) {
           EditableTextField.h(100);
         }
@@ -757,7 +757,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (!param1 &&
           ReportAbuseDialog.field_Cb) {
-          CharacterChoiceFactory.a(nma.field_l, false);
+          CharacterChoiceFactory.detachCanvasInput(nma.field_l, false);
           this.recreateCanvas((byte) 14);
           fpa.a(nma.field_l, (byte) 75);
         }

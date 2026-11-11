@@ -19,7 +19,7 @@ final class pr {
         super.finalize();
     }
 
-    final static void a(int param0, String param1, String param2) {
+    final static void showLoginForm(int param0, String param1, String param2) {
         try {
           if (TextureOperator.field_l != null) {
             TextureOperator.field_l.i((byte) 20);

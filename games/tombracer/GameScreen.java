@@ -185,15 +185,15 @@ abstract class GameScreen {
     final static void c(byte param0) {
         og.b(0);
         if (null != nma.field_l) {
-          CharacterChoiceFactory.a(nma.field_l, false);
+          CharacterChoiceFactory.detachCanvasInput(nma.field_l, false);
         }
         ContextMenu.f((byte) 101);
-        BeamSegment.a(5);
+        BeamSegment.releaseMouseHandler(5);
         if (param0 == 62) {
           RasterizerOperator.closeNetworkAndCacheResources(0);
           if (bl.b(param0 - 62)) {
             ql.field_k.writeCipheredOpcode(1, -2988);
-            bl.a(0, -1);
+            bl.flushPacketBuffer(0, -1);
           }
           dea.a(60);
           return;
@@ -202,7 +202,7 @@ abstract class GameScreen {
         RasterizerOperator.closeNetworkAndCacheResources(0);
         if (bl.b(param0 - 62)) {
           ql.field_k.writeCipheredOpcode(1, -2988);
-          bl.a(0, -1);
+          bl.flushPacketBuffer(0, -1);
         }
         dea.a(60);
     }

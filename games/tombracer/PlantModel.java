@@ -203,21 +203,21 @@ final class PlantModel extends TrapModel {
         field_p = null;
     }
 
-    final static void b(boolean param0, int param1) {
+    final static void resendPendingSubmissions(boolean param0, int param1) {
         int var3 = 0;
-        kb var4 = null;
+        ScoreSubmission var4 = null;
         bb var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          var4 = (kb) (nn.field_a.first(-80));
+          var4 = (ScoreSubmission) (nn.field_a.first(-80));
           while (var4 != null) {
-            mca.a(var4, 0, param1);
-            var4 = (kb) (nn.field_a.next(111));
+            mca.writeScoreSubmission(var4, 0, param1);
+            var4 = (ScoreSubmission) (nn.field_a.next(111));
           }
           if (param0) {
-            PlantModel.b(true, -117);
+            PlantModel.resendPendingSubmissions(true, -117);
           }
           var5 = (bb) (TimingPattern.field_b.first(-80));
           while (var5 != null) {

@@ -7,7 +7,7 @@ final class tia {
     static String[] fallDeathMessages;
     static String field_b;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseHandler(int param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(ColourGradientOperator.field_n);
           param1.removeMouseMotionListener(ColourGradientOperator.field_n);

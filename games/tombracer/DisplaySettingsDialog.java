@@ -19,7 +19,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
     private boolean field_Y;
     private FocusableWidget field_S;
 
-    final static void j(int param0) {
+    final static void updateKeyboardStateForFrame(int param0) {
         int var2 = 0;
         int var4 = 0;
         Throwable decompiledCaughtException = null;

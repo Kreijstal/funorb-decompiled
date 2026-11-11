@@ -71,7 +71,7 @@ final class bba {
           ck.a(param3, param19, param17, param8, param1, args, param4, param5, param10, param7, param14, 25447, param12, param15, param9);
           iea.a(param2, param14, 2, param13);
           TrackingCrusherComponent.A(12);
-          RoomComponent.a(false);
+          RoomComponent.buildMainScreenRoots(false);
           SwitchableId.a(83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

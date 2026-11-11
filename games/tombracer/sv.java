@@ -5,7 +5,7 @@ final class sv extends MenuScreen {
     static String field_q;
     private dea field_r;
 
-    final static String a(byte param0, long param1) {
+    final static String decodeBase37Name(byte param0, long param1) {
         StringBuilder discarded$0 = null;
         int var3;
         long var4;

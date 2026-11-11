@@ -282,13 +282,13 @@ final class is extends UiComponent {
         this.field_ub = 0;
         try {
           this.field_zb = new UiComponent(0L, param6, param4);
-          this.b(-125, this.field_zb);
+          this.addChild(-125, this.field_zb);
           this.field_tb = new UiComponent(0L, param7);
           this.field_tb.field_ib = 16764006;
-          this.b(-128, this.field_tb);
+          this.addChild(-128, this.field_tb);
           this.field_tb.field_sb = "|";
           this.field_vb = new StringBuilder(12);
-          var9_int = this.field_zb.b((byte) 69);
+          var9_int = this.field_zb.measureNaturalWidth((byte) 69);
           this.field_zb.setBounds(var9_int, di.field_a, -23776, 3, 5);
           this.field_tb.setBounds(var9_int, di.field_a, -23776, 3 + di.field_a, 5);
           var10 = 5 + (var9_int + 5);

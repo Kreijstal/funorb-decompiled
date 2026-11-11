@@ -219,11 +219,11 @@ final class ChatOverlay {
               ql.field_k.position = 0;
               ql.field_k.writeByte(14, 0);
               ql.field_k.writeByte(fd.field_d.a((byte) 113).field_d, 0);
-              bl.a(-1, -1);
+              bl.flushPacketBuffer(-1, -1);
               ProceduralTexture.field_p = bva.field_b;
             }
             if (ProceduralTexture.field_p == bva.field_b &&
-              LegacyRidgedWaterNoise.a(1, -1)) {
+              LegacyRidgedWaterNoise.ensureGamePacketBytes(1, -1)) {
               var6_int = WeaveOperator.field_q.readUnsignedByte(255);
               if (var6_int == 0) {
                 ProceduralTexture.field_p = ContextMenu.field_yb;
@@ -235,15 +235,15 @@ final class ChatOverlay {
               WeaveOperator.field_q.position = 0;
             }
             if (ContextMenu.field_yb == ProceduralTexture.field_p &&
-              LegacyRidgedWaterNoise.a(8, -1)) {
+              LegacyRidgedWaterNoise.ensureGamePacketBytes(8, -1)) {
               PathMoverComponent.field_L = WeaveOperator.field_q.readLong(290646880);
               WeaveOperator.field_q.position = 0;
-              RoomCompletedScreen.a((byte) 121, param5, param3, fd.field_d, param0);
+              RoomCompletedScreen.writeLoginPacket((byte) 121, param5, param3, fd.field_d, param0);
               ProceduralTexture.field_p = TestModel.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ProceduralTexture.field_p == TestModel.field_o &&
-              LegacyRidgedWaterNoise.a(1, param2 - 51)) {
+              LegacyRidgedWaterNoise.ensureGamePacketBytes(1, param2 - 51)) {
               var6_intLifetime1 = WeaveOperator.field_q.readUnsignedByte(param2 + 205);
               WeaveOperator.field_q.position = 0;
               MembersUpsellMenu.field_z = var6_intLifetime1;
@@ -277,7 +277,7 @@ final class ChatOverlay {
               var6 = WeaveOperator.field_q.readNullableString(param2 - 28740);
               var7 = WeaveOperator.field_q.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
-                RasterShape.a(84);
+                RasterShape.persistSessionSeedBytes(84);
               }
               if (!param5) {
                 stackIn_43_0 = (0 != (var7 & 4));
@@ -328,7 +328,7 @@ final class ChatOverlay {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", di.a(param2 + 43), new Object[]{sv.a((byte) -38, tr.field_g)});
+                  JavaScriptBridge.callWithArguments(param2 ^ -114, "zap", di.a(param2 + 43), new Object[]{sv.decodeBase37Name((byte) -38, tr.field_g)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -496,7 +496,7 @@ final class ChatOverlay {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            ssa.a("CC1", (byte) 115, (Throwable) ((Object) var6));
+            ssa.reportClientError("CC1", (byte) 115, (Throwable) ((Object) var6));
             ConveyorBehaviour.field_p = null;
             MatchPhase.field_e = null;
           }

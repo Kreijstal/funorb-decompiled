@@ -71,7 +71,7 @@ final class SwitchableId {
         return this.id;
     }
 
-    final static boolean a(byte param0, java.applet.Applet param1) {
+    final static boolean hasTuhstatbutCookie(byte param0, java.applet.Applet param1) {
         try {
           int var6 = 0;
           String var2 = null;

@@ -57,10 +57,10 @@ final class PlayerContextMenu {
     final void a(boolean param0, boolean param1) {
         if (!param0) {
           this.field_g = -102L;
-          this.field_f.b(44, param1);
+          this.field_f.drawFullScreen(44, param1);
           return;
         }
-        this.field_f.b(44, param1);
+        this.field_f.drawFullScreen(44, param1);
     }
 
     final void addLobbyGameActions(byte param0) {

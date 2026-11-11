@@ -70,7 +70,7 @@ final class CourseLayoutFactory implements BitDecodableFactory {
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
-              qna.a(1, true, 5);
+              qna.buildFullscreenDialog(1, true, 5);
             }
           }
           stackIn_31_0 = var3;

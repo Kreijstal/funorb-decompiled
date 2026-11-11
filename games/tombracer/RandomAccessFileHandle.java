@@ -41,7 +41,7 @@ final class RandomAccessFileHandle {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         if (param1 != 0) {
           return;
         }

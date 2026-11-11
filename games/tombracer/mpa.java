@@ -10,7 +10,7 @@ final class mpa extends ContentTransitionDialog {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static String a(int param0, boolean param1, CharSequence param2) {
+    final static String validateNameLengthAndSeparators(int param0, boolean param1, CharSequence param2) {
         int var6 = 0;
         String stackIn_3_0 = null;
         String stackIn_10_0 = null;

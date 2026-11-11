@@ -6,7 +6,7 @@ abstract class ld extends ota {
     static int field_e;
     static String field_f;
 
-    final static boolean a(boolean param0, String param1) {
+    final static boolean isPasswordLengthInvalid(boolean param0, String param1) {
         RuntimeException var2 = null;
         String var3 = null;
         RuntimeException stackIn_12_0 = null;
@@ -16,7 +16,7 @@ abstract class ld extends ota {
         try {
           if (param0) {
             var3 = (String) null;
-            ld.a(true, (String) null);
+            ld.isPasswordLengthInvalid(true, (String) null);
           }
           if (param1 != null &&
             param1.length() >= ik.field_f) {

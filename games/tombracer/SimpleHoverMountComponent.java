@@ -60,7 +60,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           stackIn_20_2 = (param0) && (!param2) && (LegacyOpenGlBloomEffect.field_o);
           ((UiComponent) (Object) stackIn_19_0).c(stackIn_19_1, stackIn_20_2);
         }
-        oca.field_b.field_a.e((byte) -111);
+        oca.field_b.field_a.processTabPresses((byte) -111);
         if (!param1) {
           SimpleHoverMountComponent.a(true, true, false, 75);
         }

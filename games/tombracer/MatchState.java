@@ -30,12 +30,12 @@ final class MatchState implements dv {
     private String[] colouredPlayerNames;
     static SpriteData[] field_j;
     int[] field_g;
-    private boolean field_s;
+    private boolean awaitingFirstTick;
     int playersRemaining;
     long[] field_F;
     private int matchSeed;
     CommonChooseReward rewardChoice;
-    private boolean[] field_n;
+    private boolean[] playerIsMember;
     private boolean[] finishedRound;
     static int field_w;
     private int resignedMask;
@@ -60,8 +60,8 @@ final class MatchState implements dv {
         }
     }
 
-    final void b(boolean param0, int param1, int param2) {
-        this.field_s = false;
+    final void stepPlayerSimulation(boolean param0, int param1, int param2) {
+        this.awaitingFirstTick = false;
         PlayerSimulation var4 = this.simulations[param2];
         if (!param0) {
           return;
@@ -79,17 +79,17 @@ final class MatchState implements dv {
         return this.courseId;
     }
 
-    final boolean b(int param0, int param1) {
+    final boolean isPlayerMember(int param0, int param1) {
         if (param1 != 0) {
-          this.field_n = (boolean[]) null;
+          this.playerIsMember = (boolean[]) null;
         }
-        return this.field_n[param0];
+        return this.playerIsMember[param0];
     }
 
-    private final void c(int param0) {
+    private final void startRoundAfterDecode(int param0) {
         this.startRound((byte) -89);
         if (param0 != 22640) {
-          this.c(96);
+          this.startRoundAfterDecode(96);
         }
     }
 
@@ -102,7 +102,7 @@ final class MatchState implements dv {
         field_j = null;
     }
 
-    final boolean a(boolean param0, int param1, int param2) {
+    final boolean isOutOfStepWithRoom(boolean param0, int param1, int param2) {
         Player var4 = this.players[param1];
         if (param0) {
           return false;
@@ -207,9 +207,9 @@ final class MatchState implements dv {
         }
     }
 
-    final boolean k(int param0) {
+    final boolean isMenuBackgroundDemo(int param0) {
         if (param0 != -25319) {
-          this.field_s = true;
+          this.awaitingFirstTick = true;
         }
         return this.gameMode == 2 ? true : false;
     }
@@ -222,7 +222,7 @@ final class MatchState implements dv {
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         if (param0 <= 54) {
-          this.field_n = (boolean[]) null;
+          this.playerIsMember = (boolean[]) null;
         }
         var2 = -1;
         var3 = -1;
@@ -295,7 +295,7 @@ final class MatchState implements dv {
           this.roundWinner = uma.readSignedBits(32, param0, -26803);
           this.finishedRound = PooledObject.readBitFlags(8, this.finishedRound, (byte) 93, param0);
           this.playersRemaining = param0.readBits((byte) 44, 32);
-          this.field_s = CircleMovementLocomotor.readBitFlag(5907, param0);
+          this.awaitingFirstTick = CircleMovementLocomotor.readBitFlag(5907, param0);
           if (!CircleMovementLocomotor.readBitFlag(5907, param0)) {
             this.rewardChoice = null;
           } else {
@@ -309,7 +309,7 @@ final class MatchState implements dv {
           if (param1) {
             return;
           }
-          this.c(22640);
+          this.startRoundAfterDecode(22640);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -395,7 +395,7 @@ final class MatchState implements dv {
         }
         int var2 = -128 % ((80 - param0) / 37);
         this.roundWinner = -1;
-        this.field_s = true;
+        this.awaitingFirstTick = true;
     }
 
     final boolean g(int param0, int param1) {
@@ -405,11 +405,11 @@ final class MatchState implements dv {
         return (1 << param1 & this.field_t) > 0 ? true : false;
     }
 
-    final boolean g(int param0) {
+    final boolean isAwaitingFirstTick(int param0) {
         if (param0 != 0) {
-          this.k(37);
+          this.isMenuBackgroundDemo(37);
         }
-        return this.field_s;
+        return this.awaitingFirstTick;
     }
 
     final QueuedPlayerEvent pollQueuedEvent(boolean param0, int param1) {
@@ -631,7 +631,7 @@ final class MatchState implements dv {
         int var12_intLifetime1;
         int var12_intLifetime2;
         int var12_intLifetime3;
-        this.field_s = true;
+        this.awaitingFirstTick = true;
         this.declaredWinner = -1;
         this.field_E = -1;
         try {
@@ -657,7 +657,7 @@ final class MatchState implements dv {
           this.playerCount = param0.length;
           this.field_a = param3;
           this.field_O = param2;
-          this.field_n = param8;
+          this.playerIsMember = param8;
           this.matchSeed = param1;
           this.field_x = param7;
           this.roundSeed = this.matchSeed;

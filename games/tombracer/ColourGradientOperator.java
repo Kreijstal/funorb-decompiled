@@ -133,7 +133,7 @@ final class ColourGradientOperator extends TextureOperator {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -109) {
-          ColourGradientOperator.c(103);
+          ColourGradientOperator.isLoginFlowIncomplete(103);
           field_n = null;
           return;
         }
@@ -363,7 +363,7 @@ final class ColourGradientOperator extends TextureOperator {
         field_n = (MouseInputHandler) null;
     }
 
-    final static boolean c(int param0) {
+    final static boolean isLoginFlowIncomplete(int param0) {
         if (param0 > -111) {
           ColourGradientOperator.releaseStatics((byte) -62);
           if (cga.field_f < 20) {

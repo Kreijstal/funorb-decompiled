@@ -316,7 +316,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (null == var4) {
             return false;
           }
-          ConstrainToRectangleLocomotor.a(0, var4);
+          ConstrainToRectangleLocomotor.decodeSpriteSheet(0, var4);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -558,7 +558,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              ssa.a((String) null, (byte) 127, (Throwable) (var1));
+              ssa.reportClientError((String) null, (byte) 127, (Throwable) (var1));
               this.reportError(-6738, "crash");
             }
             this.shutdown((byte) 109, true);
@@ -780,7 +780,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              ssa.a((String) null, (byte) 118, var8_ref);
+              ssa.reportClientError((String) null, (byte) 118, var8_ref);
               this.reportError(-6738, "crash");
             }
             return;

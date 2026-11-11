@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class kra {
+final class HuffmanCodec {
     static lqa field_a;
     static Vector field_c;
     private int[] field_b;
@@ -25,7 +25,7 @@ final class kra {
         field_a = null;
     }
 
-    final int a(byte param0, byte[] param1, int param2, int param3, int param4, byte[] param5) {
+    final int encode(byte param0, byte[] param1, int param2, int param3, int param4, byte[] param5) {
         int dupTemp$0 = 0;
         int stackIn_15_0 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -51,7 +51,7 @@ final class kra {
           var8 = param3 << 3;
           if (param0 > -66) {
             var16 = (byte[]) null;
-            this.a(103, (byte) -26, -127, (byte[]) null, 31, (byte[]) null);
+            this.decode(103, (byte) -26, -127, (byte[]) null, 31, (byte[]) null);
           }
           param4 = param4 + param2;
           while (true) {
@@ -120,7 +120,7 @@ final class kra {
         }
     }
 
-    kra(byte[] param0) {
+    HuffmanCodec(byte[] param0) {
         int var5 = 0;
         int var14 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -224,7 +224,7 @@ final class kra {
         }
     }
 
-    final int a(int param0, byte param1, int param2, byte[] param3, int param4, byte[] param5) {
+    final int decode(int param0, byte param1, int param2, byte[] param3, int param4, byte[] param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;

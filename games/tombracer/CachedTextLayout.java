@@ -176,7 +176,7 @@ final class CachedTextLayout extends TextLayout {
           }
           if (param1 != -49) {
             var16 = (String) null;
-            this.a(58, (BitmapFont) null, 24, (String) null, -110);
+            this.layoutRightAlignedLine(58, (BitmapFont) null, 24, (String) null, -110);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,7 +199,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final void a(int param0, BitmapFont param1, int param2, String param3, int param4) {
+    final void layoutRightAlignedLine(int param0, BitmapFont param1, int param2, String param3, int param4) {
         kha var8 = null;
         kha var9 = null;
         if (param3 == null) {
@@ -243,7 +243,7 @@ final class CachedTextLayout extends TextLayout {
         try {
           if (param1 != 0) {
             var6 = (String) null;
-            this.a(114, -55, (BitmapFont) null, (String) null, -39);
+            this.layoutLeftAlignedLine(114, -55, (BitmapFont) null, (String) null, -39);
           }
           var7 = new kha(param3 - param0.field_w, param0.field_k + param3, param2.length());
           var5 = var7;
@@ -270,7 +270,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final void a(int param0, int param1, BitmapFont param2, String param3, byte param4) {
+    final void layoutCenteredLine(int param0, int param1, BitmapFont param2, String param3, byte param4) {
         kha var7 = null;
         int var8 = 0;
         int var6_int = 38 / ((param4 - 5) / 54);
@@ -299,7 +299,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final void a(int param0, int param1, BitmapFont param2, String param3, int param4) {
+    final void layoutLeftAlignedLine(int param0, int param1, BitmapFont param2, String param3, int param4) {
         if (param3 == null) {
           this.field_c = null;
           return;

@@ -15,11 +15,11 @@ final class tn extends IntrusiveNode {
     final void a(boolean param0) {
         this.field_k = null;
         if (param0) {
-          tn.a(-65);
+          tn.loadingMessage(-65);
         }
     }
 
-    final boolean a(int param0, byte[] param1, SoundCache param2, int[] param3) {
+    final boolean loadSamples(int param0, byte[] param1, SoundCache param2, int[] param3) {
         int var8 = 0;
         int stackIn_22_0 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -103,9 +103,9 @@ final class tn extends IntrusiveNode {
         }
     }
 
-    final static String a(int param0) {
+    final static String loadingMessage(int param0) {
         if (param0 != -10918) {
-          tn.a(120);
+          tn.loadingMessage(120);
         }
         if (cga.field_f < 2) {
           return ObjectList.field_b;

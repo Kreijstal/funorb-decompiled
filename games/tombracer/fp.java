@@ -333,19 +333,19 @@ final class fp {
         }
     }
 
-    final static void a(int param0) {
+    final static void startMenuBackgroundDemo(int param0) {
         if (dna.field_G) {
           return;
         }
         int var1 = 71 % ((-30 - param0) / 44);
         if (null != cs.field_c &&
-          !cs.field_c.g(126)) {
+          !cs.field_c.isEnded(126)) {
           return;
         }
         int var2 = aq.a(-5640);
         int var3 = BufferedSocket.randomBelow(2147483647, new Random(), 45);
         cs.field_c = new MatchScreen(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, new qha(var3));
-        cs.field_c.k((byte) -25);
+        cs.field_c.startMenuBackgroundDemo((byte) -25);
         wka.field_d = true;
     }
 

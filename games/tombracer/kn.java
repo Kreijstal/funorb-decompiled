@@ -215,7 +215,7 @@ final class kn {
         SoftwareRasterizer.drawLine(param3, param0, param4, param5, param1);
     }
 
-    final void a(BitmapFont param0, boolean param1) {
+    final void initializeRenderers(BitmapFont param0, boolean param1) {
         TextWidgetPainter var17 = null;
         StatefulWidgetPainter var4 = null;
         Sprite[] var5 = null;

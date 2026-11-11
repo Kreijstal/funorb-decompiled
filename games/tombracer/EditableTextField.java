@@ -526,9 +526,9 @@ final class EditableTextField extends UiComponent {
           this.field_Eb.field_r = "";
           this.field_Eb.field_sb = "|";
           this.field_J = new IntrusiveDeque();
-          this.b(-122, this.field_xb);
-          this.b(-122, this.field_Cb);
-          this.b(-123, this.field_Eb);
+          this.addChild(-122, this.field_xb);
+          this.addChild(-122, this.field_Cb);
+          this.addChild(-123, this.field_Eb);
           this.field_L = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

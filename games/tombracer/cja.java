@@ -16,7 +16,7 @@ final class cja {
         var2.draw((byte) -38);
     }
 
-    final static void a(int param0, int param1, ht param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final static void findValidSettingCombination(int param0, int param1, ht param2, int param3, int param4, int param5, int param6, boolean param7) {
         tv[][] stackIn_32_0 = null;
         int stackIn_33_1 = 0;
         int stackIn_52_0 = 0;
@@ -167,7 +167,7 @@ final class cja {
                   } else {
                     param6 = var11;
                   }
-                  cja.a(24, param1, param2, param3, param4, param5 + 1, param6, param7);
+                  cja.findValidSettingCombination(24, param1, param2, param3, param4, param5 + 1, param6, param7);
                   if (TouchSwitchBehaviour.field_s) {
                     return;
                   }
@@ -205,7 +205,7 @@ final class cja {
                 }
               }
               if (var12 != 0) {
-                cja.a(127, param1, param2, param3, param4, 1 + param5, param6, param7);
+                cja.findValidSettingCombination(127, param1, param2, param3, param4, 1 + param5, param6, param7);
                 var10Lifetime1 = 1;
               }
               if (TouchSwitchBehaviour.field_s) {

@@ -22,7 +22,7 @@ class MatchScoringObserver extends SimulationObserver {
           if (param1 <= 47) {
             this.field_c = (IntrusiveDeque) null;
           }
-          stackIn_6_0 = (!this.field_f.b(param2, 0)) && (PlayerInputQueue.findRoomDefinition(-44, param0.getId((byte) -82)).field_d);
+          stackIn_6_0 = (!this.field_f.isPlayerMember(param2, 0)) && (PlayerInputQueue.findRoomDefinition(-44, param0.getId((byte) -82)).field_d);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -233,7 +233,7 @@ class MatchScoringObserver extends SimulationObserver {
         Room var10 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!this.field_f.k(-25319) &&
+          if (!this.field_f.isMenuBackgroundDemo(-25319) &&
             param2 != null &&
             param2.collisionGrid != null) {
             var4_int = param2.getPlayer(-2).getPlayerIndex(param0 + 2);
@@ -328,7 +328,7 @@ class MatchScoringObserver extends SimulationObserver {
           var8 = param0.getPlayerIndex(0);
           this.field_f.field_F[var8] = (long)var5;
           this.field_f.field_g[var8] = param1.getId((byte) -82);
-          if (!this.field_f.k(-25319) &&
+          if (!this.field_f.isMenuBackgroundDemo(-25319) &&
             !this.field_f.isSinglePlayer(-1878) &&
             this.field_f.field_x != null &&
             !this.a(param1, (byte) 74, var8)) {

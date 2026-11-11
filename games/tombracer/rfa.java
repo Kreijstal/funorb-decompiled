@@ -13,7 +13,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         java.awt.Canvas var2 = LegacyOpenGlRidgedWaterEffect.b((byte) -97);
-        if (ColourGradientOperator.c(-127)) {
+        if (ColourGradientOperator.isLoginFlowIncomplete(-127)) {
           WallTile.a(PortalComponent.A(90), var2, param0 ^ 0);
           return;
         }
@@ -31,14 +31,14 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         if (param0 != 0) {
           return;
         }
-        for (var3 = -1 + kra.field_c.size(); var3 >= 0; var3--) {
-          ((ShellListener) (kra.field_c.elementAt(var3))).drawOverlay(param0 + 1);
+        for (var3 = -1 + HuffmanCodec.field_c.size(); var3 >= 0; var3--) {
+          ((ShellListener) (HuffmanCodec.field_c.elementAt(var3))).drawOverlay(param0 + 1);
         }
         if (!cna.field_a) {
           this.c(true);
         } else {
           pka.a(false);
-          fga.a(0, false, 0, var2);
+          fga.drawFramebufferToCanvas(0, false, 0, var2);
         }
     }
 
@@ -58,7 +58,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
             this.enableMessageGroups11To13((byte) 87);
             S2CEventPacket.field_c[9] = -1;
             S2CEventPacket.field_c[10] = -1;
-            kra.field_c = new Vector();
+            HuffmanCodec.field_c = new Vector();
             aca.addShellListenerFirst((ShellListener) (this), 19711);
           } catch (RuntimeException runtimeException) {
             throw tba.wrapException((Throwable) ((Object) runtimeException), "rfa.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -85,7 +85,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         field_C = null;
         if (param0 < 105) {
           Sprite[] var2 = (Sprite[]) null;
-          rfa.a((Sprite[]) null, 100);
+          rfa.useFullSpriteBounds((Sprite[]) null, 100);
         }
         field_B = null;
     }
@@ -156,8 +156,8 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                       }
                     }
                     var4 = 0;
-                    while (kra.field_c.size() > var4) {
-                      if (((ShellListener) (kra.field_c.elementAt(var4))).handleKey((byte) -72, HardwareOpenGlToolkit.field_td, MenuEntry.field_h)) {
+                    while (HuffmanCodec.field_c.size() > var4) {
+                      if (((ShellListener) (HuffmanCodec.field_c.elementAt(var4))).handleKey((byte) -72, HardwareOpenGlToolkit.field_td, MenuEntry.field_h)) {
                         break;
                       }
                       var4++;
@@ -195,8 +195,8 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         if (!param0) {
           return;
         }
-        for (var3Lifetime1 = 0; kra.field_c.size() > var3Lifetime1; var3Lifetime1++) {
-          var6 = (ShellListener) (kra.field_c.elementAt(var3Lifetime1));
+        for (var3Lifetime1 = 0; HuffmanCodec.field_c.size() > var3Lifetime1; var3Lifetime1++) {
+          var6 = (ShellListener) (HuffmanCodec.field_c.elementAt(var3Lifetime1));
           var6.updateScreen(true, var2 != 0);
           stackIn_63_0 = var2;
           if (var6.isModal(-2)) {
@@ -218,7 +218,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         return true;
     }
 
-    final static Sprite[] a(Sprite[] param0, int param1) {
+    final static Sprite[] useFullSpriteBounds(Sprite[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Sprite var3 = null;
@@ -275,14 +275,14 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         }
         stackIn_5_1 = -127;
         stackIn_6_2 = (dq.field_f != null);
-        this.c((byte) stackIn_5_1, stackIn_6_2);
+        this.serviceFramework((byte) stackIn_5_1, stackIn_6_2);
         if (PlatformBehaviour.field_w) {
           dma.field_l.openArchives((byte) -38);
           PlatformBehaviour.field_w = false;
         }
-        if (ColourGradientOperator.c(-128)) {
+        if (ColourGradientOperator.isLoginFlowIncomplete(-128)) {
           this.r(114);
-          if (ColourGradientOperator.c(-112)) {
+          if (ColourGradientOperator.isLoginFlowIncomplete(-112)) {
             return;
           }
         }
@@ -318,7 +318,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           }
         }
         dra.a(param0);
-        BridgeModel.c((byte) 120, 0);
+        BridgeModel.flushGamePackets((byte) 120, 0);
         if (uma.b(-1)) {
           var2 = this.updateConnection(8);
           if (0 == var2 ||
@@ -348,7 +348,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         var2 = 68 % ((param0 - 52) / 40);
-        while (cj.a(S2CEventPacket.field_c, 0)) {
+        while (cj.readNextGamePacket(S2CEventPacket.field_c, 0)) {
           if (this.handleGamePacket(MembersUpsellMenu.field_z, WeaveOperator.field_q, (byte) 105)) {
             continue;
           }

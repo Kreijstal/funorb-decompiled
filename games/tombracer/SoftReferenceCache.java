@@ -10,7 +10,7 @@ final class SoftReferenceCache {
     private int field_g;
     static int[] field_d;
 
-    final Object a(byte param0) {
+    final Object nextValue(byte param0) {
         pb var2;
         Object var3;
         int var5;
@@ -33,7 +33,7 @@ final class SoftReferenceCache {
           }
           return null;
         }
-        this.a(43, (Object) null, -32, 102L);
+        this.putWeighted(43, (Object) null, -32, 102L);
         while (true) {
           if (var2 == null) {
             return null;
@@ -50,7 +50,7 @@ final class SoftReferenceCache {
         }
     }
 
-    final Object a(byte param0, long param1) {
+    final Object get(byte param0, long param1) {
         Object var8 = null;
         tja var6 = null;
         pb var7 = (pb) (this.field_c.get(param1, false));
@@ -114,7 +114,7 @@ final class SoftReferenceCache {
         this.field_e = this.field_g;
     }
 
-    final Object b(byte param0) {
+    final Object firstValue(byte param0) {
         pb var2;
         Object var3;
         int var5;
@@ -196,7 +196,7 @@ final class SoftReferenceCache {
           return;
         }
         try {
-          this.a(-1, param1, 1, param2);
+          this.putWeighted(-1, param1, 1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -249,7 +249,7 @@ final class SoftReferenceCache {
         }
     }
 
-    private final void a(int param0, Object param1, int param2, long param3) {
+    private final void putWeighted(int param0, Object param1, int param2, long param3) {
         tja var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -263,7 +263,7 @@ final class SoftReferenceCache {
           if (param2 > this.field_g) {
             throw new IllegalStateException();
           }
-          this.a(param3, 1);
+          this.remove(param3, 1);
           this.field_e = this.field_e - param2;
           while (this.field_e < 0) {
             var8 = (pb) (this.field_f.poll((byte) 60));
@@ -276,7 +276,7 @@ final class SoftReferenceCache {
           if (param0 == -1) {
             return;
           }
-          this.a(6, (Object) null, 106, 15L);
+          this.putWeighted(6, (Object) null, 106, 15L);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -317,7 +317,7 @@ final class SoftReferenceCache {
         return;
     }
 
-    private final void a(long param0, int param1) {
+    private final void remove(long param0, int param1) {
         pb var4 = (pb) (this.field_c.get(param0, false));
         this.removeEntry(param1, var4);
     }

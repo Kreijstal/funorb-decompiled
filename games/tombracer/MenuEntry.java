@@ -242,7 +242,7 @@ final class MenuEntry {
             var21_int = this.field_b - 8;
             var22_int = var9 - 8 - 16;
             var25 = ArchiveSource.field_a;
-            TextInputWidget.a(1, var25, (byte) -68, var21_int, var26, 16, 1, 16, var22_int, 0);
+            TextInputWidget.paintNineSliceFrame(1, var25, (byte) -68, var21_int, var26, 16, 1, 16, var22_int, 0);
             if (param3) {
               var15 = 2236962;
               var5 = 10309393;
@@ -280,7 +280,7 @@ final class MenuEntry {
           var21_intLifetime1 = this.field_b - 8;
           var22_intLifetime1 = var9 - 8 - 16;
           var28 = ArchiveSource.field_a;
-          TextInputWidget.a(1, var28, (byte) -109, var21_intLifetime1, var29, 16, 1, 16, var22_intLifetime1, 0);
+          TextInputWidget.paintNineSliceFrame(1, var28, (byte) -109, var21_intLifetime1, var29, 16, 1, 16, var22_intLifetime1, 0);
           if (this.field_g == 36) {
             var20_ref_kea = baa.field_e;
           } else {

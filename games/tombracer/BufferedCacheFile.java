@@ -33,7 +33,7 @@ final class BufferedCacheFile {
             this.field_b.seek(param0 ^ -16, this.field_l);
             this.field_j = this.field_l;
           }
-          this.field_b.a(0, 0, this.field_f, this.field_e);
+          this.field_b.write(0, 0, this.field_f, this.field_e);
           this.field_j = this.field_j + (long)this.field_f;
           if (this.field_j > this.field_i) {
             this.field_i = this.field_j;
@@ -187,7 +187,7 @@ final class BufferedCacheFile {
               this.field_b.seek(0, this.field_g);
               this.field_j = this.field_g;
             }
-            this.field_b.a(param1, 0, param3, param0);
+            this.field_b.write(param1, 0, param3, param0);
             this.field_j = this.field_j + (long)param3;
             if (this.field_i < this.field_j) {
               this.field_i = this.field_j;

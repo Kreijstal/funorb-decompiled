@@ -30,7 +30,7 @@ class IntrusiveNode {
     }
 
     final static void q(int param0) {
-        pr.a(param0 - 30497, BridgeTile.field_g, (String) null);
+        pr.showLoginForm(param0 - 30497, BridgeTile.field_g, (String) null);
         if (param0 != 30497) {
           field_c = (String[]) null;
         }

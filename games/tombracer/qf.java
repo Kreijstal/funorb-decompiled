@@ -65,7 +65,7 @@ final class qf extends PacketBuffer {
         super(param0);
     }
 
-    final void a(int param0, float param1) {
+    final void writeFloat(int param0, float param1) {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;

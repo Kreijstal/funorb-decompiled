@@ -33,7 +33,7 @@ final class RevolverItemComponent extends ItemComponent {
         try {
           var4 = super.createTrap(param0, 3, param2);
           var5 = new WeaponItemBehaviour(param2, param0);
-          var5.a(TextureOperator.a(4, -1), 5);
+          var5.setWeapon(TextureOperator.a(4, -1), 5);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var4.setStatCategory(param1, 146366800);
           var6 = rm.field_a;

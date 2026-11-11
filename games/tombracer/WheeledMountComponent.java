@@ -51,7 +51,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           while (var2 != null) {
             var2.c(-97);
             if (var2.field_h <= 0) {
-              VariantMask.a(var2.field_i, (byte) -42);
+              VariantMask.removeSoundStream(var2.field_i, (byte) -42);
               var2.unlink(25);
             }
             var2 = (fla) (nl.field_f.next(107));
@@ -91,7 +91,7 @@ final class WheeledMountComponent extends PathMoverComponent {
           }
           if (param2 == WeaponShooterBehaviour.field_r) {
             if (param0 == baa.field_e) {
-              stackIn_6_0 = kra.field_a.field_c;
+              stackIn_6_0 = HuffmanCodec.field_a.field_c;
               return stackIn_6_0;
             }
             if (tia.field_d != param0) {

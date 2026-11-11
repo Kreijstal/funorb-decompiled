@@ -73,7 +73,7 @@ final class kla {
           if (null != TextureOperator.field_l) {
             TextureOperator.field_l.i((byte) -108);
           }
-          var1 = ooa.a((byte) -107);
+          var1 = ooa.getAccountNameOrFallback((byte) -107);
           vn.field_b = new LoginForm(var1, (String) null, true, false, false);
           ej.field_a.c(um.field_l, 84);
           um.field_l.transitionToContent(68, vn.field_b);
@@ -85,7 +85,7 @@ final class kla {
         if (null != TextureOperator.field_l) {
           TextureOperator.field_l.i((byte) -108);
         }
-        var1Lifetime1 = ooa.a((byte) -107);
+        var1Lifetime1 = ooa.getAccountNameOrFallback((byte) -107);
         vn.field_b = new LoginForm(var1Lifetime1, (String) null, true, false, false);
         ej.field_a.c(um.field_l, 84);
         um.field_l.transitionToContent(68, vn.field_b);

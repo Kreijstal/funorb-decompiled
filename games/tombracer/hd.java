@@ -13,7 +13,7 @@ final class hd {
         field_b = null;
     }
 
-    final static jua a(int param0, String param1) {
+    final static jua requestOrReuseUsernameQuery(int param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_9_0 = null;
         jua stackIn_11_0 = null;

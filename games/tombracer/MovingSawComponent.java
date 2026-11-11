@@ -78,7 +78,7 @@ final class MovingSawComponent extends PathMoverComponent {
           var6 = new ConstantEffectBehaviour(param2, param0);
           var7 = new Effect(0, 10);
           var7.setDeathMessageIndex(1, 15);
-          var6.a(true, var7);
+          var6.setEffect(true, var7);
           var6.setLocked((byte) -24, true);
           var12.addBehaviour((byte) 83, (Behaviour) (var6));
           var8 = new Trap(param2, param0);

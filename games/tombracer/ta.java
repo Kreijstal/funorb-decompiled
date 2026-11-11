@@ -20,10 +20,10 @@ final class ta extends UiComponent {
 
     final int a(byte param0, int param1) {
         if (param0 == 95) {
-          return this.field_wb.b((byte) 69) - (-param1 - this.field_tb.b((byte) 69));
+          return this.field_wb.measureNaturalWidth((byte) 69) - (-param1 - this.field_tb.measureNaturalWidth((byte) 69));
         }
         this.field_tb = (UiComponent) null;
-        return this.field_wb.b((byte) 69) - (-param1 - this.field_tb.b((byte) 69));
+        return this.field_wb.measureNaturalWidth((byte) 69) - (-param1 - this.field_tb.measureNaturalWidth((byte) 69));
     }
 
     ta(long param0, ta param1, String param2) {
@@ -34,13 +34,13 @@ final class ta extends UiComponent {
         int var3 = 0;
         int var3Lifetime1;
         if (param0 > 109) {
-          this.field_wb.setBounds(this.field_wb.b((byte) 69), this.field_t, -23776, 0, 0);
+          this.field_wb.setBounds(this.field_wb.measureNaturalWidth((byte) 69), this.field_t, -23776, 0, 0);
           var3 = param1 + this.field_wb.field_G;
           this.field_tb.setBounds(this.field_G - var3, this.field_t, -23776, 0, var3);
           return;
         }
         field_ub = (ka[]) null;
-        this.field_wb.setBounds(this.field_wb.b((byte) 69), this.field_t, -23776, 0, 0);
+        this.field_wb.setBounds(this.field_wb.measureNaturalWidth((byte) 69), this.field_t, -23776, 0, 0);
         var3Lifetime1 = param1 + this.field_wb.field_G;
         this.field_tb.setBounds(this.field_G - var3Lifetime1, this.field_t, -23776, 0, var3Lifetime1);
     }
@@ -51,8 +51,8 @@ final class ta extends UiComponent {
           this.field_wb = new UiComponent(0L, param1);
           this.field_tb = new UiComponent(0L, param2);
           this.field_tb.field_r = param3;
-          this.b(-124, this.field_wb);
-          this.b(-124, this.field_tb);
+          this.addChild(-124, this.field_wb);
+          this.addChild(-124, this.field_tb);
           this.a(-10966);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "ta.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -87,7 +87,7 @@ final class hk {
         return null != this.field_f ? true : false;
     }
 
-    final static void a(boolean param0, BitPacketBuffer param1) {
+    final static void writeReflectionCheckResponse(boolean param0, BitPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;

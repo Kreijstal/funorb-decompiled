@@ -158,7 +158,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               RaceStandings.b(18916);
               if ((!(wka.field_d) ||
                 cs.field_c == null)) {
-                fp.a(48);
+                fp.startMenuBackgroundDemo(48);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -179,7 +179,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           if (null != wm.field_a) {
             wm.field_a.onDeactivated(-123);
             if (wm.field_a.field_c == 1) {
-              fp.a(108);
+              fp.startMenuBackgroundDemo(108);
             }
             if (null != mq.field_e && (wm.field_a.field_c == 12 ||
               wm.field_a.field_c == 4)) {
@@ -218,7 +218,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           }
           if (era.field_c) {
             SwitchModel.o((byte) -119);
-            ig.a(-125);
+            ig.clearLobbyState(-125);
             ObjectList.b(0);
             era.field_c = false;
           }
@@ -236,7 +236,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         }
     }
 
-    final static void a(int param0, byte[] param1) {
+    final static void decodeSpriteSheet(int param0, byte[] param1) {
         byte dupTemp$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_31_0 = 0;
@@ -452,7 +452,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         try {
           if (param0 <= 35) {
             byte[] var4 = (byte[]) null;
-            ConstrainToRectangleLocomotor.a(63, (byte[]) null);
+            ConstrainToRectangleLocomotor.decodeSpriteSheet(63, (byte[]) null);
           }
           super.attachToTrap(112, param1);
         } catch (RuntimeException runtimeException) {

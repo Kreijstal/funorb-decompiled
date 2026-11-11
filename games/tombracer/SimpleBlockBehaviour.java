@@ -42,7 +42,7 @@ final class SimpleBlockBehaviour extends Behaviour {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              ssa.a("MGR1: " + param2, (byte) 125, (Throwable) null);
+              ssa.reportClientError("MGR1: " + param2, (byte) 125, (Throwable) null);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

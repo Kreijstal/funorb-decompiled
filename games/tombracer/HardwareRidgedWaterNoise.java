@@ -26,7 +26,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
           return this.field_u;
         }
         ResourceArchive var6 = (ResourceArchive) null;
-        HardwareRidgedWaterNoise.a(13, 72, (ResourceArchive) null, false);
+        HardwareRidgedWaterNoise.loadRgbSprite(13, 72, (ResourceArchive) null, false);
         return this.field_u;
     }
 
@@ -43,7 +43,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
         HardwareRidgedWaterNoise.releaseStatics((byte) 20);
     }
 
-    final static Sprite a(int param0, int param1, ResourceArchive param2, boolean param3) {
+    final static Sprite loadRgbSprite(int param0, int param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         Sprite stackIn_5_0 = null;
         Sprite stackIn_7_0 = null;

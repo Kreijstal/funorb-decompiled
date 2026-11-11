@@ -90,9 +90,9 @@ final class iea {
             var7 = 0;
             if (var6.field_J == null) {
               var6.field_xb = new UiComponent(0L, S2CStartRoundPacket.field_a);
-              var6.b(-127, var6.field_xb);
+              var6.addChild(-127, var6.field_xb);
               var6.field_zb = new UiComponent(0L, S2CStartRoundPacket.field_a);
-              var6.b(param1 ^ 74, var6.field_zb);
+              var6.addChild(param1 ^ 74, var6.field_zb);
               var7 = 1;
               var6.a(-10966);
             }
@@ -169,7 +169,7 @@ final class iea {
 
     final static void a(boolean param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         try {
-          mp.a(joa.field_d, tka.field_q, param0, una.field_j, DateFieldsWidget.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, HardwareSceneLight.field_o, NodeHashTable.field_g, dn.field_a, LegacyOpenGlRidgedWaterEffect.field_e);
+          mp.buildChatPanelComponents(joa.field_d, tka.field_q, param0, una.field_j, DateFieldsWidget.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, HardwareSceneLight.field_o, NodeHashTable.field_g, dn.field_a, LegacyOpenGlRidgedWaterEffect.field_e);
           ColouriseOperator.field_m = BoulderComponent.loadSpritesByName(param1, "lobby", 5, "chatfilter");
           StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
           StripedMazeGenerator.field_c[param2] = OpenGlTexture2D.field_m;

@@ -148,7 +148,7 @@ final class mp {
         }
     }
 
-    final static void a(UiComponent param0, UiComponent param1, boolean param2, UiComponent param3, VerticalScrollbar param4, UiComponent param5, int param6, UiComponent param7, UiComponent param8, UiComponent param9, UiComponent param10, BitmapFont param11) {
+    final static void buildChatPanelComponents(UiComponent param0, UiComponent param1, boolean param2, UiComponent param3, VerticalScrollbar param4, UiComponent param5, int param6, UiComponent param7, UiComponent param8, UiComponent param9, UiComponent param10, BitmapFont param11) {
         String stackIn_27_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_42_0 = null;
@@ -211,20 +211,20 @@ final class mp {
           var16[4] = var12;
           era.field_e = new UiComponent(0L, param0);
           MatchProtocol.field_i = new UiComponent(0L, param9);
-          era.field_e.b(-128, MatchProtocol.field_i);
+          era.field_e.addChild(-128, MatchProtocol.field_i);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.field_J = new IntrusiveDeque();
           ne.field_d = new ScrollPane(0L, var17, param3, param4);
-          MatchProtocol.field_i.b(-126, ne.field_d);
+          MatchProtocol.field_i.addChild(-126, ne.field_d);
           RotaterMountComponent.field_K = new UiComponent(0L, param1);
-          MatchProtocol.field_i.b(-124, RotaterMountComponent.field_K);
+          MatchProtocol.field_i.addChild(-124, RotaterMountComponent.field_K);
           CharacterChoiceFactory.field_g = new UiComponent(0L, param5);
           CharacterChoiceFactory.field_g.field_H = PlatformBehaviour.field_s;
-          RotaterMountComponent.field_K.b(param6 - 124, CharacterChoiceFactory.field_g);
+          RotaterMountComponent.field_K.addChild(param6 - 124, CharacterChoiceFactory.field_g);
           RotaterMountComponent.field_K.a(param6 ^ -10966);
           ComponentMount.field_b = new UiComponent(0L, (UiComponent) null);
           ComponentMount.field_b.field_w = var16;
-          RotaterMountComponent.field_K.b(-125, ComponentMount.field_b);
+          RotaterMountComponent.field_K.addChild(-125, ComponentMount.field_b);
           PitSnakeModel.field_c = new UiComponent[5];
           PitModel.field_p = new UiComponent[5];
           MembersUpsellMenu.field_y = new UiComponent[5];
@@ -260,11 +260,11 @@ final class mp {
                 MembersUpsellMenu.field_y[var18].field_bb = 1;
                 PitModel.field_p[var18] = new UiComponent(0L, VortexBehaviour.field_t);
                 PitModel.field_p[var18].field_bb = 1;
-                OpenGlSceneLight.field_p[var18].b(-122, PitSnakeModel.field_c[var18]);
-                OpenGlSceneLight.field_p[var18].b(param6 - 125, MembersUpsellMenu.field_y[var18]);
-                OpenGlSceneLight.field_p[var18].b(-125, PitModel.field_p[var18]);
+                OpenGlSceneLight.field_p[var18].addChild(-122, PitSnakeModel.field_c[var18]);
+                OpenGlSceneLight.field_p[var18].addChild(param6 - 125, MembersUpsellMenu.field_y[var18]);
+                OpenGlSceneLight.field_p[var18].addChild(-125, PitModel.field_p[var18]);
                 OpenGlSceneLight.field_p[var18].a(-10966);
-                era.field_e.b(-127, OpenGlSceneLight.field_p[var18]);
+                era.field_e.addChild(-127, OpenGlSceneLight.field_p[var18]);
                 gka.field_g = gka.field_g + 1;
               }
               var18++;
@@ -275,7 +275,7 @@ final class mp {
           if (decompiledNaturalLoopExit0) {
             ara.field_ub = new UiComponent(0L, param8);
             ara.field_ub.field_r = ShooterComponent.field_G;
-            era.field_e.b(-128, ara.field_ub);
+            era.field_e.addChild(-128, ara.field_ub);
             stackIn_31_0 = o.e(540800) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&

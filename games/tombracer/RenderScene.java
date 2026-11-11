@@ -253,8 +253,8 @@ final class RenderScene {
             for (var18 = 0; var18 < 3; var18++) {
               nba.field_a[var18] = nba.field_a[var18] + OpenGlTexture.field_e[var15][var18];
             }
-            ft.a(var17, 1251086882, nba.field_a, vs.field_P, true, false, false);
-            dh.a(var9Lifetime1, var8Lifetime1, var13Lifetime1, var17, var7Lifetime1, var14, var12Lifetime1, (byte) -23);
+            ft.projectMeshAndQueueFaces(var17, 1251086882, nba.field_a, vs.field_P, true, false, false);
+            dh.drawMeshFaces(var9Lifetime1, var8Lifetime1, var13Lifetime1, var17, var7Lifetime1, var14, var12Lifetime1, (byte) -23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

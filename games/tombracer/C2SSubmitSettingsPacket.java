@@ -46,7 +46,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
             field_c = (String) null;
           }
           ala.a((byte) -30, ura.field_b, UnlockOverlay.field_l, OpenGlToolkit.field_jc);
-          fga.a(0, false, 0, param0);
+          fga.drawFramebufferToCanvas(0, false, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "dba.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -15,7 +15,7 @@ final class PitSnakeModel implements Renderable {
         if (param0 <= 91) {
           return 125;
         }
-        return this.snakePit.getRenderY((byte) 112) + this.snake.f(0);
+        return this.snakePit.getRenderY((byte) 112) + this.snake.getOffsetY(0);
     }
 
     public static void releaseStatics(int param0) {
@@ -31,7 +31,7 @@ final class PitSnakeModel implements Renderable {
         int var4 = 0;
         ka var5 = null;
         try {
-          var3_int = this.snake.d(2);
+          var3_int = this.snake.getDirection(2);
           var4 = GameScreen.positiveModulo(-(PortalBehaviour.directionToAngle(ne.field_f[var3_int][1], ne.field_f[var3_int][0], 1) >> 2) + 512, 2048, 73);
           if (param0 < 103) {
             PitSnakeModel.a((byte) 44, -55, -63, 37);
@@ -70,7 +70,7 @@ final class PitSnakeModel implements Renderable {
 
     public final int getRenderX(byte param0) {
         int var2 = -13 / ((-23 - param0) / 53);
-        return this.snakePit.getRenderX((byte) 101) + this.snake.a((byte) 84);
+        return this.snakePit.getRenderX((byte) 101) + this.snake.getOffsetX((byte) 84);
     }
 
     final static int a(byte param0, int param1, int param2, int param3) {

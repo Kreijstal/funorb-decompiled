@@ -172,9 +172,9 @@ final class ara extends UiComponent {
             }
             var13.setBounds(65, 15, -23776, var10, 20);
             var14.setBounds(640, 15, -23776, var10, 90);
-            var8.b(-127, var13);
+            var8.addChild(-127, var13);
             var10 += 30;
-            var8.b(-126, var14);
+            var8.addChild(-126, var14);
           }
           var17.setBounds(20 + var11 + 90, 24, -23776, 0, 0);
           var10 += 15;
@@ -183,10 +183,10 @@ final class ara extends UiComponent {
           var8.setBounds(this.field_G, this.field_t - var17.field_t, -23776, var17.field_t, 0);
           var9.setBounds(this.field_G, 15, -23776, 20, 0);
           var8.field_w = Player.createScrollbarSprites(var8.field_t, 2105376, 3, 11579568, -125, 8421504);
-          var17.b(-125, this.field_tb);
-          var8.b(-128, var9);
-          this.b(-123, var17);
-          this.b(-128, var8);
+          var17.addChild(-125, this.field_tb);
+          var8.addChild(-128, var9);
+          this.addChild(-123, var17);
+          this.addChild(-128, var8);
           var10Lifetime1 = -(this.field_t >> 1) + 240;
           this.field_qb = -(this.field_G >> 1) + 320;
           return;

@@ -60,7 +60,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
         }
     }
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void detachCanvasInput(java.awt.Canvas param0, boolean param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -68,7 +68,7 @@ final class CharacterChoiceFactory implements BitDecodableFactory {
         RuntimeException decompiledCaughtException = null;
         try {
           PlantModel.a(-18520, (java.awt.Component) ((Object) param0));
-          tia.a(0, (java.awt.Component) ((Object) param0));
+          tia.detachMouseHandler(0, (java.awt.Component) ((Object) param0));
           if (param1) {
             return;
           }

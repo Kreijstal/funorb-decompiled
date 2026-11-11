@@ -61,7 +61,7 @@ final class IntPoint {
             stackIn_10_0 = var3;
             return stackIn_10_0;
           }
-          stackIn_8_0 = lh.a(var3, 6711);
+          stackIn_8_0 = lh.copyBytes(var3, 6711);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -38,7 +38,7 @@ final class ch implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var6 = (String) null;
-            ssa.a((String) null, (byte) 121, (Throwable) ((Object) var1));
+            ssa.reportClientError((String) null, (byte) 121, (Throwable) ((Object) var1));
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

@@ -1134,7 +1134,7 @@ class MidiPcmStream extends PcmStream {
                   }
                 }
                 if ((decompiledFrameRemainder0) &&
-                  (!var10.a(param4 - 5853, var8.field_f, param3, (int[]) (var7)))) {
+                  (!var10.loadSamples(param4 - 5853, var8.field_f, param3, (int[]) (var7)))) {
                   var6_int = 0;
                 }
                 var8 = (jk) (param1.field_f.nextWithKey(param4 ^ 20806));

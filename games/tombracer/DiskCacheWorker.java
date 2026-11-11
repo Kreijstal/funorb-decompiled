@@ -62,7 +62,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              ssa.a((String) null, (byte) 125, (Throwable) ((Object) var2_ref));
+              ssa.reportClientError((String) null, (byte) 125, (Throwable) ((Object) var2_ref));
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {
@@ -107,7 +107,7 @@ final class DiskCacheWorker implements Runnable {
         return (param2 & 2048) != 0 ? true : false;
     }
 
-    final DiskArchiveRequest a(int param0, SectorCacheStore param1, int param2) {
+    final DiskArchiveRequest readSynchronously(int param0, SectorCacheStore param1, int param2) {
         DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;

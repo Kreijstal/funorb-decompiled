@@ -89,7 +89,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (param0 > -90) {
           field_f = 50;
         }
-        if (kra.field_a != var1) {
+        if (HuffmanCodec.field_a != var1) {
           if (var1 != DateInputWidget.field_z) {
             if (ControllerLocomotor.field_t == var1) {
               baa.field_d.a(0, new ei[]{(ei) ((Object) vea.field_c)});
@@ -99,7 +99,7 @@ final class ProxySocketConnector extends SocketConnector {
               } else {
                 if (UsernameSuggestionsPanel.field_x != var1) {
                   if (var1 == CharacterSelection.field_d) {
-                    baa.field_d.a(0, new ei[]{(ei) ((Object) kra.field_a)});
+                    baa.field_d.a(0, new ei[]{(ei) ((Object) HuffmanCodec.field_a)});
                   }
                 } else {
                   baa.field_d.a(0, new ei[]{(ei) ((Object) CharacterSelection.field_d)});

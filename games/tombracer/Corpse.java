@@ -28,7 +28,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
         }
     }
 
-    final static IndexedSprite a(int param0, int[] param1, IndexedSprite param2) {
+    final static IndexedSprite copyWithPalette(int param0, int[] param1, IndexedSprite param2) {
         IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
         IndexedSprite stackIn_3_0 = null;

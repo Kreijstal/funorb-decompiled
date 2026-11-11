@@ -22,8 +22,8 @@ final class S2CNewRoomPacket implements GamePacket {
         try {
           if (this.force ||
             !param0.a(this.playerId, 54) ||
-            param2.matchState.a(false, this.playerId, this.roomId)) {
-            this.a(param2.matchState, (byte) -98);
+            param2.matchState.isOutOfStepWithRoom(false, this.playerId, this.roomId)) {
+            this.resyncPlayer(param2.matchState, (byte) -98);
             var7 = param2.matchState.players[this.playerId];
             Player var4 = var7;
             for (var5 = 0; 3 > var5; var5++) {
@@ -101,7 +101,7 @@ final class S2CNewRoomPacket implements GamePacket {
         return 0 != (param1 & 540800) ? true : false;
     }
 
-    private final void a(MatchState param0, byte param1) {
+    private final void resyncPlayer(MatchState param0, byte param1) {
         if (param1 >= -75) {
           return;
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ig {
-    final static void a(int param0) {
+    final static void clearLobbyState(int param0) {
         pha var3 = null;
         int var2 = TombRacer.field_G ? 1 : 0;
         PlayerViewport.field_o = false;
@@ -31,7 +31,7 @@ final class ig {
             var3 = (pha) (fua.field_a.startTraversal(-91));
             while (var3 != null) {
               var3.unlinkSecondary(-7975);
-              var3 = (pha) (fua.field_a.a((byte) -112));
+              var3 = (pha) (fua.field_a.nextInTraversal((byte) -112));
             }
             fua.field_a = null;
           }

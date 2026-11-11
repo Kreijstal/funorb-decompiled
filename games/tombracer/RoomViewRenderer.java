@@ -163,7 +163,7 @@ final class RoomViewRenderer {
               var24 = 1880;
               break;
           }
-          if (param5.f((byte) 33)) {
+          if (param5.isMenuBackgroundDemo((byte) 33)) {
             var23 = var9.getY(9648) >> 16;
             var24 = 1600;
             var25 = 4096;
@@ -176,7 +176,7 @@ final class RoomViewRenderer {
           RenderScene.field_e = param1;
           ImageProducerCanvasImageBuffer.field_o.a(param2, param3, (byte) -12, param4, param1);
           var10.renderScene(false);
-          if (param5.f((byte) 33)) {
+          if (param5.isMenuBackgroundDemo((byte) 33)) {
             var31 = 0;
             var32 = 256;
             var33 = 1600;

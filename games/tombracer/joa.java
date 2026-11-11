@@ -152,7 +152,7 @@ final class joa {
               hla.field_xb = stackIn_10_0;
               PlayerProfile.field_c = stackIn_10_0;
               C2SActionPacket.a((byte) -125, RoomComponent.field_g, ql.field_k, WhirlpoolDigest.field_g, SocketConnector.field_c);
-              bl.a(-1, -1);
+              bl.flushPacketBuffer(-1, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;

@@ -5,7 +5,7 @@ final class fw {
     static String field_a;
 
     final static lp a(int param0, boolean param1) {
-        lp var2 = (lp) (TrackMountComponent.field_J.a((byte) 61, (long)param0));
+        lp var2 = (lp) (TrackMountComponent.field_J.get((byte) 61, (long)param0));
         if (var2 != null) {
           return var2;
         }

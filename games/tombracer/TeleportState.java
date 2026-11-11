@@ -102,7 +102,7 @@ final class TeleportState {
         RuntimeException var3_ref = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          var3 = mpa.a(-73, param2, param0);
+          var3 = mpa.validateNameLengthAndSeparators(-73, param2, param0);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;

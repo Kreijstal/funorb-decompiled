@@ -531,7 +531,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (41 == var7 &&
                 var8 == 0) {
-                var4_int = SecondaryNodeDequeIterator.field_a.m(-1);
+                var4_int = SecondaryNodeDequeIterator.field_a.getCourseId(-1);
                 var5 = SecondaryNodeDequeIterator.field_a.getCharacterChoice(0, 9);
                 var6 = SecondaryNodeDequeIterator.field_a.matchState.gameMode;
                 TextLayout.a(var4_int, (byte) 101, var6);

@@ -36,7 +36,7 @@ final class bw {
             stackIn_14_0 = (byte[]) (param1);
             return stackIn_14_0;
           }
-          stackIn_12_0 = lh.a(param1, 6711);
+          stackIn_12_0 = lh.copyBytes(param1, 6711);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -29,7 +29,7 @@ final class StringCursor {
               }
               if (OpenGlSceneLight.field_o == null &&
                 S2CRoundDeadlinePacket.field_b) {
-                qna.a(1, param1, var2);
+                qna.buildFullscreenDialog(1, param1, var2);
               }
               return;
             }
@@ -49,7 +49,7 @@ final class StringCursor {
               var2 = 0;
               if (OpenGlSceneLight.field_o == null &&
                 S2CRoundDeadlinePacket.field_b) {
-                qna.a(1, param1, var2);
+                qna.buildFullscreenDialog(1, param1, var2);
                 return;
               }
               return;
@@ -57,7 +57,7 @@ final class StringCursor {
             var2 = 1;
             if (OpenGlSceneLight.field_o == null &&
               S2CRoundDeadlinePacket.field_b) {
-              qna.a(1, param1, var2);
+              qna.buildFullscreenDialog(1, param1, var2);
               return;
             }
             return;
@@ -68,7 +68,7 @@ final class StringCursor {
               var2 = 3;
               if (OpenGlSceneLight.field_o == null &&
                 S2CRoundDeadlinePacket.field_b) {
-                qna.a(1, param1, var2);
+                qna.buildFullscreenDialog(1, param1, var2);
                 return;
               }
               return;
@@ -92,7 +92,7 @@ final class StringCursor {
         if (!S2CRoundDeadlinePacket.field_b) {
           return;
         }
-        qna.a(1, param1, var2);
+        qna.buildFullscreenDialog(1, param1, var2);
     }
 
     public static void releaseStatics(boolean param0) {

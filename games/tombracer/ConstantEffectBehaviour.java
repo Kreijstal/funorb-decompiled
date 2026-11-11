@@ -35,7 +35,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, Effect param1) {
+    final void setEffect(boolean param0, Effect param1) {
         try {
           this.field_r = param1;
           if (!param0) {

@@ -31,7 +31,7 @@ final class bb extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        AffineTransform3D.a(param0 ^ 21810, cia.field_g);
+        AffineTransform3D.showQuickChatMenu(param0 ^ 21810, cia.field_g);
         if (param0 != -21844) {
           field_l = (String) null;
         }

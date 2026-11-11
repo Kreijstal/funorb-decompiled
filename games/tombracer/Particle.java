@@ -136,7 +136,7 @@ final class Particle extends PooledObject implements Renderable {
           }
           var4_int = param1.getGroupId(param2, -7768);
           var5 = param1.getFileId(true, param0, var4_int);
-          stackIn_3_0 = ScrollContainer.a(var5, param1, -97, var4_int);
+          stackIn_3_0 = ScrollContainer.loadRgbSprites(var5, param1, -97, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

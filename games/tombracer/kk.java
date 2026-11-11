@@ -7,11 +7,11 @@ final class kk {
     public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 120) {
-          kk.a(26);
+          kk.formatPacketDump(26);
         }
     }
 
-    final static String a(int param0) {
+    final static String formatPacketDump(int param0) {
         int var2 = 0;
         String var1;
         int var3;

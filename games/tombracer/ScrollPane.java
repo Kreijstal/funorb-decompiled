@@ -64,7 +64,7 @@ final class ScrollPane extends UiComponent {
             dea.a(60);
             return;
           }
-          ssa.a("LR1: " + kk.a(32), (byte) 122, (Throwable) null);
+          ssa.reportClientError("LR1: " + kk.formatPacketDump(32), (byte) 122, (Throwable) null);
           dea.a(60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,10 +88,10 @@ final class ScrollPane extends UiComponent {
         try {
           this.field_vb = new UiComponent(0L, param2);
           this.field_wb = new VerticalScrollbar(0L, param3);
-          this.b(-123, this.field_vb);
-          this.b(-128, this.field_wb);
+          this.addChild(-123, this.field_vb);
+          this.addChild(-128, this.field_wb);
           this.field_tb = param1;
-          this.field_vb.b(-122, param1);
+          this.field_vb.addChild(-122, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "iv.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

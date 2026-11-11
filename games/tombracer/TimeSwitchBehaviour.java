@@ -9,7 +9,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
     static long[] field_q;
     static SpriteData field_n;
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4) {
+    final static void blendHalfRgbSpan(int param0, int param1, int param2, int param3, int[] param4) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -83,7 +83,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
         this.field_s.resolveLinks((byte) 48, this.getScope((byte) 119));
     }
 
-    final void a(TimingPattern param0, byte param1) {
+    final void setTimingPattern(TimingPattern param0, byte param1) {
         if (param1 >= -60) {
           return;
         }

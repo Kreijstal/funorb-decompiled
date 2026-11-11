@@ -644,14 +644,14 @@ final class AffineTransform3D extends Transform3D {
         field_j = null;
     }
 
-    final static void a(int param0, QuickChatMenu param1) {
+    final static void showQuickChatMenu(int param0, QuickChatMenu param1) {
         if (param1 == null) {
           return;
         }
         try {
           ItemModel.field_n = param1;
           rua.field_gb.field_J.clear(8);
-          rua.field_gb.b(-125, ItemModel.field_n);
+          rua.field_gb.addChild(-125, ItemModel.field_n);
           if (param0 >= -20) {
             field_j = (IntrusiveDeque) null;
           }

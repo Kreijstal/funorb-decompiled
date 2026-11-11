@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends IntrusiveNode {
+final class ScoreSubmission extends IntrusiveNode {
     int field_j;
-    int field_l;
-    long field_h;
-    int[] field_o;
+    int submissionId;
+    long serverResult;
+    int[] scores;
     private static String[] field_m;
     static float field_p;
-    int field_f;
+    int courseId;
     int field_k;
-    int field_n;
+    int courseIdComplement;
     int field_i;
     int field_g;
 
@@ -19,7 +19,7 @@ final class kb extends IntrusiveNode {
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         if (param3 != 2) {
-          kb.a(-126, -35, (byte) 96);
+          ScoreSubmission.a(-126, -35, (byte) 96);
         }
         var5 = param4;
         if (0 == var5) {
@@ -77,19 +77,19 @@ final class kb extends IntrusiveNode {
         int var1 = -64 % ((param0 + 32) / 32);
     }
 
-    kb(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ScoreSubmission(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int fieldTemp$0 = 0;
         try {
           this.field_j = param5;
-          this.field_n = param1;
+          this.courseIdComplement = param1;
           this.field_k = param4;
           this.field_i = param2;
           this.field_g = param3;
           fieldTemp$0 = MovingSawComponent.field_N;
           MovingSawComponent.field_N = MovingSawComponent.field_N + 1;
-          this.field_l = 65535 & fieldTemp$0;
-          this.field_o = param6;
-          this.field_f = param0;
+          this.submissionId = 65535 & fieldTemp$0;
+          this.scores = param6;
+          this.courseId = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

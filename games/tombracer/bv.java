@@ -24,7 +24,7 @@ final class bv extends UiComponent {
         int var1 = -34 % ((10 - param0) / 47);
     }
 
-    final void e(byte param0) {
+    final void processTabPresses(byte param0) {
         UiComponent dupTemp$0 = null;
         UiComponent dupTemp$1 = null;
         int var2;
@@ -114,13 +114,13 @@ final class bv extends UiComponent {
             var9 = new UiComponent(0L, param1);
             var9.field_r = param2[var8_int];
             this.field_ub[var8_int] = var9;
-            this.b(-124, var9);
+            this.addChild(-124, var9);
           }
-          this.b(-128, this.field_tb);
+          this.addChild(-128, this.field_tb);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (param4.length > var11) {
-            this.field_tb.b(-122, param4[var11]);
+            this.field_tb.addChild(-122, param4[var11]);
             var11++;
           }
           this.field_wb = param5;

@@ -251,13 +251,13 @@ abstract class ConsoleWindow implements ShellListener {
             SoftwareRasterizer.drawHorizontalLineAlpha(0, var3, mma.field_a, 0, var4 << 5);
             var3--;
           }
-          this.field_i.b(100, (this.field_h & 8) == 0 ? true : false);
+          this.field_i.drawFullScreen(100, (this.field_h & 8) == 0 ? true : false);
         }
         if (this.field_b != null &&
           this.open) {
           var2Lifetime1 = this.field_i.field_t + this.field_i.field_T;
           this.field_p.field_T = var2Lifetime1;
-          this.field_p.b(74, false);
+          this.field_p.drawFullScreen(74, false);
           var2Lifetime1 = var2Lifetime1 + (5 + this.field_k);
           for (var3Lifetime1 = 0; this.field_b.length > var3Lifetime1; var3Lifetime1++) {
             this.field_m.drawText(this.field_b[var3Lifetime1], this.field_p.field_q + 10, var2Lifetime1, 13421772, -1);
@@ -517,7 +517,7 @@ abstract class ConsoleWindow implements ShellListener {
         UiComponent var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_a.field_tb.b(param2 ^ -155, this.createLineWidget(param0, 16733525, param1));
+          this.field_a.field_tb.addChild(param2 ^ -155, this.createLineWidget(param0, 16733525, param1));
           if (this.field_a.field_tb.field_J.size((byte) -16) > 256) {
             this.field_a.field_tb.field_J.removeFirst(-106);
           }
@@ -579,7 +579,7 @@ abstract class ConsoleWindow implements ShellListener {
           this.field_a = new ScrollPane(0L, var14, var6, var13);
           this.field_a.field_tb.field_J = new IntrusiveDeque();
           this.field_a.a(this.field_i.field_G - 10, 0, (byte) 127, 5, 15, -var3_int + 185, 5);
-          this.field_i.b(-128, this.field_a);
+          this.field_i.addChild(-128, this.field_a);
           var15 = new UiComponent();
           var15.field_H = this.field_m;
           var15.field_ib = 13421772;
@@ -588,7 +588,7 @@ abstract class ConsoleWindow implements ShellListener {
           this.field_o = new EditableTextField(0L, var7, var11, var15);
           this.field_o.b(this.field_a.field_G, 127, this.field_a.field_T + this.field_a.field_t + 5, var3_int, this.field_a.field_qb);
           this.field_o.a(param1, (byte) -127);
-          this.field_i.b(-126, this.field_o);
+          this.field_i.addChild(-126, this.field_o);
           this.field_p = new UiComponent(0L, var12);
           this.field_p.field_qb = 0;
         } catch (RuntimeException runtimeException) {

@@ -760,7 +760,7 @@ final class np extends ka {
             }
           }
           if (!ooa.a(this.field_u, param1, -100)) {
-            if (kb.a(this.field_u, param1, (byte) 17)) {
+            if (ScoreSubmission.a(this.field_u, param1, (byte) 17)) {
               param5.field_F = this.field_F;
               if (var13 != 0) {
                 param5.field_F = null;
@@ -3139,13 +3139,13 @@ final class np extends ka {
                   }
                   if (stackIn_244_0 != -1) {
                     var21Lifetime1Lifetime1 = var17 / (float)var20Lifetime1Lifetime1;
-                    var12.a(17133, var21Lifetime1Lifetime1 * (float)var13Lifetime1[var19Lifetime1Lifetime1]);
-                    var12.a(17133, (float)var14Lifetime1[var19Lifetime1Lifetime1] * var21Lifetime1Lifetime1);
-                    var12.a(param0 + 17133, var21Lifetime1Lifetime1 * (float)var15Lifetime1[var19Lifetime1Lifetime1]);
+                    var12.writeFloat(17133, var21Lifetime1Lifetime1 * (float)var13Lifetime1[var19Lifetime1Lifetime1]);
+                    var12.writeFloat(17133, (float)var14Lifetime1[var19Lifetime1Lifetime1] * var21Lifetime1Lifetime1);
+                    var12.writeFloat(param0 + 17133, var21Lifetime1Lifetime1 * (float)var15Lifetime1[var19Lifetime1Lifetime1]);
                   } else {
-                    var12.a(17133, (float)var13Lifetime1[var19Lifetime1Lifetime1] * var18Lifetime1);
-                    var12.a(17133, (float)var14Lifetime1[var19Lifetime1Lifetime1] * var18Lifetime1);
-                    var12.a(17133, (float)var15Lifetime1[var19Lifetime1Lifetime1] * var18Lifetime1);
+                    var12.writeFloat(17133, (float)var13Lifetime1[var19Lifetime1Lifetime1] * var18Lifetime1);
+                    var12.writeFloat(17133, (float)var14Lifetime1[var19Lifetime1Lifetime1] * var18Lifetime1);
+                    var12.writeFloat(17133, (float)var15Lifetime1[var19Lifetime1Lifetime1] * var18Lifetime1);
                   }
                   var12.position = var12.position + (-12 + var7);
                   var19Lifetime1Lifetime1++;
@@ -3165,8 +3165,8 @@ final class np extends ka {
             if (this.field_R.field_O) {
               var13_intLifetime2 = 0;
               while (this.field_L > var13_intLifetime2) {
-                var12.a(17133, this.field_n[var13_intLifetime2]);
-                var12.a(17133, this.field_y[var13_intLifetime2]);
+                var12.writeFloat(17133, this.field_n[var13_intLifetime2]);
+                var12.writeFloat(17133, this.field_y[var13_intLifetime2]);
                 var12.position = var12.position + (var7 - 8);
                 var13_intLifetime2++;
                 if (var35 != 0) {
@@ -4413,7 +4413,7 @@ final class np extends ka {
           if (ModelFactory.a(-17, param5, param2)) {
             this.field_ab = new tj((LegacyVertexArray) null, 5126, 2, 0);
           }
-          if (kb.a(param5, param2, (byte) 17)) {
+          if (ScoreSubmission.a(param5, param2, (byte) 17)) {
             this.field_F = new tj((LegacyVertexArray) null, 5126, 3, 0);
           }
           if (we.b(param2, param5, 2048)) {

@@ -9,13 +9,13 @@ final class su {
         throw new IllegalStateException();
     }
 
-    final static void a(kb param0, byte param1, int param2) {
+    final static void queueScoreSubmission(ScoreSubmission param0, byte param1, int param2) {
         try {
           nn.field_a.addLast((byte) -99, param0);
-          mca.a(param0, param1 ^ -108, param2);
+          mca.writeScoreSubmission(param0, param1 ^ -108, param2);
           if (param1 != -108) {
-            kb var4 = (kb) null;
-            su.a((kb) null, (byte) 124, 15);
+            ScoreSubmission var4 = (ScoreSubmission) null;
+            su.queueScoreSubmission((ScoreSubmission) null, (byte) 124, 15);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "su.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

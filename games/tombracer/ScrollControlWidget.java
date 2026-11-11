@@ -233,16 +233,16 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           dh.field_e = new UiComponent(0L, param3);
           CharacterChoiceFactory.field_g = new UiComponent(0L, param2);
           CharacterChoiceFactory.field_g.field_H = PlatformBehaviour.field_s;
-          dh.field_e.b(-123, CharacterChoiceFactory.field_g);
+          dh.field_e.addChild(-123, CharacterChoiceFactory.field_g);
           ComponentMount.field_b = new UiComponent(0L, rma.field_b);
-          dh.field_e.b(-128, ComponentMount.field_b);
+          dh.field_e.addChild(-128, ComponentMount.field_b);
           ClientMemoryVertexArray.field_d = new UiComponent(0L, VortexBehaviour.field_t, fw.field_a);
           qpa.field_b = new UiComponent(0L, VortexBehaviour.field_t);
-          SimpleMoveLocomotor.field_s.b(param1 ^ -122, ClientMemoryVertexArray.field_e);
-          SimpleMoveLocomotor.field_s.b(-123, Projectile.field_r);
-          Projectile.field_r.b(-123, dh.field_e);
-          Projectile.field_r.b(-126, ClientMemoryVertexArray.field_d);
-          Projectile.field_r.b(-125, qpa.field_b);
+          SimpleMoveLocomotor.field_s.addChild(param1 ^ -122, ClientMemoryVertexArray.field_e);
+          SimpleMoveLocomotor.field_s.addChild(-123, Projectile.field_r);
+          Projectile.field_r.addChild(-123, dh.field_e);
+          Projectile.field_r.addChild(-126, ClientMemoryVertexArray.field_d);
+          Projectile.field_r.addChild(-125, qpa.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

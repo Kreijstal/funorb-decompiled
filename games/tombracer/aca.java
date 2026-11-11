@@ -20,7 +20,7 @@ final class aca extends IntrusiveNode {
 
     final static void addShellListenerFirst(ShellListener param0, int param1) {
         try {
-          kra.field_c.insertElementAt(param0, 0);
+          HuffmanCodec.field_c.insertElementAt(param0, 0);
           if (param1 != 19711) {
             ResourceArchive var3 = (ResourceArchive) null;
             aca.a((ResourceArchive) null, 32, (ResourceArchive) null, (byte) -47, 55);

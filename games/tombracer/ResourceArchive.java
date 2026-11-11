@@ -821,7 +821,7 @@ final class ResourceArchive {
         return false;
     }
 
-    private final synchronized byte[] a(int param0, boolean param1, int[] param2, int param3) {
+    private final synchronized byte[] takeFile(int param0, boolean param1, int[] param2, int param3) {
         byte[] stackIn_2_0 = null;
         Object stackIn_13_0 = null;
         Object stackIn_30_0 = null;
@@ -951,7 +951,7 @@ final class ResourceArchive {
         if (param0) {
           discarded$0 = this.isGroupValid(((int[]) (this.field_a[11]))[23], 94);
         }
-        return this.a(param2, true, (int[]) null, param1);
+        return this.takeFile(param2, true, (int[]) null, param1);
     }
 
     ResourceArchive(ArchiveSource param0, boolean param1, int param2) {

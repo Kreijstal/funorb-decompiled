@@ -361,14 +361,14 @@ final class FleeLocomotor extends Locomotor {
     }
 
     final static void e(byte param0) {
-        kra.field_a = new lqa(3, 4, true, true, true, true, true, true, true, false, true);
+        HuffmanCodec.field_a = new lqa(3, 4, true, true, true, true, true, true, true, false, true);
         ControllerLocomotor.field_t = new lqa(3, 1, true, false, false, true, true, true, true, false, true);
         if (param0 == -33) {
           DateInputWidget.field_z = new lqa(1, 4, true, true, true, true, true, true, true, false, true);
           vea.field_c = new lqa(1, 1, true, false, false, true, true, true, true, false, true);
           UsernameSuggestionsPanel.field_x = new lqa(0, 1, true, false, false, false, false, false, false, true, false);
           CharacterSelection.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
-          rc.field_a = new ei[]{(ei) ((Object) kra.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) CharacterSelection.field_d)};
+          rc.field_a = new ei[]{(ei) ((Object) HuffmanCodec.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) CharacterSelection.field_d)};
           return;
         }
         field_B = (String) null;
@@ -376,7 +376,7 @@ final class FleeLocomotor extends Locomotor {
         vea.field_c = new lqa(1, 1, true, false, false, true, true, true, true, false, true);
         UsernameSuggestionsPanel.field_x = new lqa(0, 1, true, false, false, false, false, false, false, true, false);
         CharacterSelection.field_d = new lqa(0, 1, false, false, false, false, false, false, false, true, false);
-        rc.field_a = new ei[]{(ei) ((Object) kra.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) CharacterSelection.field_d)};
+        rc.field_a = new ei[]{(ei) ((Object) HuffmanCodec.field_a), (ei) ((Object) DateInputWidget.field_z), (ei) ((Object) ControllerLocomotor.field_t), (ei) ((Object) vea.field_c), (ei) ((Object) UsernameSuggestionsPanel.field_x), (ei) ((Object) CharacterSelection.field_d)};
     }
 
     static {

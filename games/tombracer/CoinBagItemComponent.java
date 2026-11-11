@@ -46,7 +46,7 @@ final class CoinBagItemComponent extends ItemComponent {
         super(param0, param1, param2, param3);
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, boolean param4) {
+    final static void updateLobbyGameControls(boolean param0, int param1, int param2, boolean param3, boolean param4) {
         UiComponent stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_36_0 = 0;
@@ -470,7 +470,7 @@ final class CoinBagItemComponent extends ItemComponent {
           stackIn_178_1 = 36;
           stackIn_179_2 = (param4) && (!param0) && (tla.field_e);
           ((UiComponent) (Object) stackIn_178_0).c(stackIn_178_1, stackIn_179_2);
-          rm.field_e.field_a.e((byte) -98);
+          rm.field_e.field_a.processTabPresses((byte) -98);
           if (param1 != -1) {
             return;
           }
@@ -487,7 +487,7 @@ final class CoinBagItemComponent extends ItemComponent {
             if (Trap.field_q.field_y != 0) {
               tla.field_e = false;
             }
-            cm.a(param2, C2SChooseRewardPacket.field_a, param1 ^ 21289, false);
+            cm.updateLobbyGameOptionControls(param2, C2SChooseRewardPacket.field_a, param1 ^ 21289, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -500,7 +500,7 @@ final class CoinBagItemComponent extends ItemComponent {
     public static void releaseStatics(int param0) {
         field_I = null;
         if (param0 != 32076) {
-          CoinBagItemComponent.a(false, 126, -63, false, true);
+          CoinBagItemComponent.updateLobbyGameControls(false, 126, -63, false, true);
         }
         field_G = null;
     }

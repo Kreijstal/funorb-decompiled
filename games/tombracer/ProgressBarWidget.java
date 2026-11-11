@@ -43,7 +43,7 @@ final class ProgressBarWidget extends UiWidget {
         RuntimeException var5 = null;
         try {
           if (param1 != 2097152) {
-            discarded$1 = this.a((byte) 6);
+            discarded$1 = this.buildEndMask((byte) 6);
           }
           if (this.field_D) {
             this.field_y = this.field_y + 1;
@@ -67,7 +67,7 @@ final class ProgressBarWidget extends UiWidget {
         }
     }
 
-    private final Sprite a(byte param0) {
+    private final Sprite buildEndMask(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -100,11 +100,11 @@ final class ProgressBarWidget extends UiWidget {
     }
 
     private final void rebuildSprites(byte param0) {
-        this.field_w = new Sprite[]{this.c(-69, this.field_C, this.field_x), this.c(91, this.field_v, this.field_G)};
+        this.field_w = new Sprite[]{this.buildStripeSprite(-69, this.field_C, this.field_x), this.buildStripeSprite(91, this.field_v, this.field_G)};
         if (param0 != 12) {
           this.field_y = 10;
         }
-        this.field_A = this.a((byte) 78);
+        this.field_A = this.buildEndMask((byte) 78);
         this.field_z = this.field_A.createMirroredCopy();
         this.field_E = new Sprite(this.field_p >> 1, this.field_p);
     }
@@ -145,7 +145,7 @@ final class ProgressBarWidget extends UiWidget {
         return param1;
     }
 
-    private final Sprite c(int param0, int param1, int param2) {
+    private final Sprite buildStripeSprite(int param0, int param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;

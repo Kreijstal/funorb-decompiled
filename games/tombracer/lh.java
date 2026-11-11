@@ -8,14 +8,14 @@ final class lh {
     public static void releaseStatics(byte param0) {
         if (param0 < 82) {
           byte[] var2 = (byte[]) null;
-          lh.a((byte[]) null, 101);
+          lh.copyBytes((byte[]) null, 101);
           field_b = null;
           return;
         }
         field_b = null;
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] copyBytes(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

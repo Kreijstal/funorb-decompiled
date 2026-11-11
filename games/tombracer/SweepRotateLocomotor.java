@@ -7,18 +7,18 @@ final class SweepRotateLocomotor extends Locomotor {
     private int sweepRange;
     private int field_o;
 
-    final static void a(int param0, byte param1) {
+    final static void sortRankedListIndices(int param0, byte param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          ResultsPhase.a(C2SChooseCharacterPacket.field_d, 0, ContextMenu.field_Eb, param0, (byte) -100, ota.field_c, true);
+          ResultsPhase.sortRankedEntryRange(C2SChooseCharacterPacket.field_d, 0, ContextMenu.field_Eb, param0, (byte) -100, ota.field_c, true);
           var2_int = 0;
           do {
             if (!(ContextMenu.field_Eb > var2_int)) {
-              ResultsPhase.a(LegacyOpenGlReflectionEffect.field_g, param0, ContextMenu.field_Eb + param0, param0 + param0, (byte) -100, kc.field_a, false);
+              ResultsPhase.sortRankedEntryRange(LegacyOpenGlReflectionEffect.field_g, param0, ContextMenu.field_Eb + param0, param0 + param0, (byte) -100, kc.field_a, false);
               break;
             }
             BlockModel.field_n[var2_int + param0] = var2_int;
@@ -119,7 +119,7 @@ final class SweepRotateLocomotor extends Locomotor {
               return;
             }
             if (var2 != 4) {
-              ssa.a("F1: " + kk.a(32), (byte) 116, (Throwable) null);
+              ssa.reportClientError("F1: " + kk.formatPacketDump(32), (byte) 116, (Throwable) null);
               if (param0 != 14180) {
                 field_q = 74;
               }
@@ -186,7 +186,7 @@ final class SweepRotateLocomotor extends Locomotor {
               return;
             }
           }
-          PlatformComponent.a(var7, var6Lifetime1, (byte) 120);
+          PlatformComponent.insertBefore(var7, var6Lifetime1, (byte) 120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

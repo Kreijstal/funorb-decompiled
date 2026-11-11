@@ -11,7 +11,7 @@ final class td extends TextWidgetPainter {
     static String field_q;
     static String field_u;
 
-    final static void b(byte param0) {
+    final static void clearFaceDepthBuckets(byte param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -81,7 +81,7 @@ final class td extends TextWidgetPainter {
           if (param2 != 16777215) {
             return;
           }
-          SpriteState.a(var7, this.field_o, (param0.field_p - this.field_o[0].field_k >> 1) + (param0.field_n + param3), 20278, param1 + param0.field_i, param0.field_m);
+          SpriteState.drawRecolouredThreeSlice(var7, this.field_o, (param0.field_p - this.field_o[0].field_k >> 1) + (param0.field_n + param3), 20278, param1 + param0.field_i, param0.field_m);
           stackIn_18_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
           this.field_e.drawParagraph(param0.field_o, param0.field_i + param1, param0.field_n + (param3 - 2), param0.field_m, param0.field_p, var8, -1, 1, 1, this.field_e.field_w);

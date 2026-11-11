@@ -15,7 +15,7 @@ final class qna {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void buildFullscreenDialog(int param0, boolean param1, int param2) {
         int stackIn_58_0 = 0;
         int stackIn_61_0 = 0;
         String[] stackIn_68_0 = null;
@@ -289,7 +289,7 @@ final class qna {
           TripBeamComponent.field_K = new int[DefaultTileRenderable.field_g.length][];
           var4Lifetime3 = 0;
           if (param0 != 1) {
-            qna.a(-17, true, 122);
+            qna.buildFullscreenDialog(-17, true, 122);
           }
           var5Lifetime3 = jua.field_d;
           while (var4Lifetime3 < DefaultTileRenderable.field_g.length) {

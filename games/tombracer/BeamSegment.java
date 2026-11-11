@@ -15,11 +15,11 @@ final class BeamSegment {
     int field_k;
     int field_f;
 
-    final static void a(int param0) {
+    final static void releaseMouseHandler(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (param0 != 5) {
-          BeamSegment.a(-47);
+          BeamSegment.releaseMouseHandler(-47);
         }
         if (ColourGradientOperator.field_n != null) {
           var1 = ColourGradientOperator.field_n;

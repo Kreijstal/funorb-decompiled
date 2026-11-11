@@ -229,7 +229,7 @@ class FocusableWidget extends UiWidget {
             return;
           }
           if (var2 != 1) {
-            ssa.a("A1: " + kk.a(32), (byte) 117, (Throwable) null);
+            ssa.reportClientError("A1: " + kk.formatPacketDump(32), (byte) 117, (Throwable) null);
             dea.a(60);
             return;
           }

@@ -7,7 +7,7 @@ final class bna extends IntrusiveNode {
 
     final static void a(java.math.BigInteger param0, boolean param1, java.math.BigInteger param2, PacketBuffer param3, PacketBuffer param4) {
         try {
-          C2SChooseRewardPacket.a(param4.position, (byte) -81, param4.payload, param2, param3, param0, 0);
+          C2SChooseRewardPacket.writeEncryptedPayload(param4.position, (byte) -81, param4.payload, param2, param3, param0, 0);
           if (param1) {
             bna.a((byte) 109);
           }

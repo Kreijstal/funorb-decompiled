@@ -58,8 +58,8 @@ final class vs extends ofa {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
-        super.a(param0, param1, param2);
+    final void drawDialogFrame(int param0, byte param1, int param2) {
+        super.drawDialogFrame(param0, param1, param2);
         ft.field_c.drawCenteredText(this.field_S, param2 + (this.field_m >> 1), param0 + 103, 16777215, -1);
         if (null != this.field_M) {
           SoftwareRasterizer.drawHorizontalLine(20 + param2, param0 + 120 - 7, 260, 8421504);

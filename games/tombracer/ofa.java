@@ -41,7 +41,7 @@ abstract class ofa extends gn {
         return super.a((byte) -92);
     }
 
-    void a(int param0, byte param1, int param2) {
+    void drawDialogFrame(int param0, byte param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -141,8 +141,8 @@ abstract class ofa extends gn {
           return;
         }
         ApproachPlayerLocomotor.field_s.drawTransparent(-90 + param2 + this.field_m, 10 + param0);
-        FollowCamera.a(35 + param0, uca.field_f, -59, param2 + 5, -10 + this.field_m);
-        FollowCamera.a(param0 + (this.field_p - 22), fua.field_f, param1 - 29, param2, this.field_m);
+        FollowCamera.drawHorizontalThreeSlice(35 + param0, uca.field_f, -59, param2 + 5, -10 + this.field_m);
+        FollowCamera.drawHorizontalThreeSlice(param0 + (this.field_p - 22), fua.field_f, param1 - 29, param2, this.field_m);
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
         var4Lifetime2 = this.field_p - 79;

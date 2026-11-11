@@ -40,7 +40,7 @@ final class PlayerInputQueue {
         field_a = null;
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, byte param2, PacketBuffer param3) {
+    final static void readReflectionCheckRequest(int param0, PlatformTaskDispatcher param1, byte param2, PacketBuffer param3) {
         try {
           int var11_int = 0;
           int var12_int = 0;

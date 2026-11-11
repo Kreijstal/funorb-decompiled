@@ -131,7 +131,7 @@ final class pk extends we {
         int stackIn_21_4;
         String stackIn_29_0 = null;
         String[] var4;
-        kb var7;
+        ScoreSubmission var7;
         int var8;
         int var9;
         int var10;
@@ -163,8 +163,8 @@ final class pk extends we {
             var14 = var24[var11];
             var15 = 0;
             if (var9 == 0 &&
-              var25[var11] == var7.field_h &&
-              var7.field_o[0] == var14 &&
+              var25[var11] == var7.serverResult &&
+              var7.scores[0] == var14 &&
               MiscItemBehaviour.a(var13, 0)) {
               var9 = 1;
               var15 = 1;
@@ -188,9 +188,9 @@ final class pk extends we {
           var12 += 20;
         }
         if (var9 == 0 &&
-          this.field_u == var7.field_f) {
+          this.field_u == var7.courseId) {
           var8 = 1;
-          this.a(var10 + 20, -1, var7.field_o[0], -5818367, -91, MenuEntry.field_k);
+          this.a(var10 + 20, -1, var7.scores[0], -5818367, -91, MenuEntry.field_k);
         }
         if (param1 >= -85) {
           stackIn_29_0 = (String) null;

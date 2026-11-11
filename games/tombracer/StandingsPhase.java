@@ -86,7 +86,7 @@ final class StandingsPhase extends MatchPhase {
           if (!this.screen.field_D &&
             !TextWidgetPainter.a(43)) {
             this.field_p[0].field_e = aua.field_d.toUpperCase();
-            FacePlayerLocomotor.field_p = ConsoleWindow.a(3, this.screen.m(-1), 0, 10, 1);
+            FacePlayerLocomotor.field_p = ConsoleWindow.a(3, this.screen.getCourseId(-1), 0, 10, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -221,7 +221,7 @@ final class StandingsPhase extends MatchPhase {
           var7 = var3;
           var8 = var4 - 80;
           PlayerInputQueue.field_a.a(var7 - (PlayerInputQueue.field_a.width() >> 1), var8 - (PlayerInputQueue.field_a.height() >> 1));
-          var9 = this.screen.m(-1);
+          var9 = this.screen.getCourseId(-1);
           stackIn_4_0 = (pl.a((byte) 64) != var9) ? 0 : 1;
           var11 = stackIn_4_0;
           if (var11 != 0) {

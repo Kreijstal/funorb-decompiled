@@ -31,7 +31,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListener(IntrusiveNode param0, jva param1) {
         while (true) {
           if (param0 == this.field_m.sentinel) {
-            PlatformComponent.a(param0, param1, (byte) -102);
+            PlatformComponent.insertBefore(param0, param1, (byte) -102);
             this.field_j = ((jva) (this.field_m.sentinel.next)).field_f;
             return;
           }
@@ -41,7 +41,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        PlatformComponent.a(param0, param1, (byte) -102);
+        PlatformComponent.insertBefore(param0, param1, (byte) -102);
         this.field_j = ((jva) (this.field_m.sentinel.next)).field_f;
         return;
     }

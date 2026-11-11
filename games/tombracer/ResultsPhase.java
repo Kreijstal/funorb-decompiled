@@ -51,7 +51,7 @@ final class ResultsPhase extends MatchPhase {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, boolean param6) {
+    final static void sortRankedEntryRange(int param0, int param1, int param2, int param3, byte param4, int param5, boolean param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_22_0 = 0;
@@ -104,8 +104,8 @@ final class ResultsPhase extends MatchPhase {
                 }
               }
             }
-            ResultsPhase.a(param0, param1, var8, param3, (byte) -100, var9, param6);
-            ResultsPhase.a(var10, var8, param2, param3, param4, param5, param6);
+            ResultsPhase.sortRankedEntryRange(param0, param1, var8, param3, (byte) -100, var9, param6);
+            ResultsPhase.sortRankedEntryRange(var10, var8, param2, param3, param4, param5, param6);
             return;
           }
           for (var7_intLifetime1 = param2 - 1; var7_intLifetime1 > param1; var7_intLifetime1--) {

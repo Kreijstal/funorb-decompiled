@@ -9,7 +9,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
         this.field_t = this.field_t.createCopy(-1);
         if (param0 != 3) {
           Weapon var3 = (Weapon) null;
-          this.a((Weapon) null, 81);
+          this.setWeapon((Weapon) null, 81);
         }
     }
 
@@ -72,7 +72,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
         return 5;
     }
 
-    final void a(Weapon param0, int param1) {
+    final void setWeapon(Weapon param0, int param1) {
         if (param1 != 5) {
           return;
         }

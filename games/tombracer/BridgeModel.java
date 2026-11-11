@@ -595,7 +595,7 @@ final class BridgeModel extends TrapModel {
         super(param0);
     }
 
-    final static void c(byte param0, int param1) {
+    final static void flushGamePackets(byte param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
@@ -651,7 +651,7 @@ final class BridgeModel extends TrapModel {
               ql.field_k.position = var13.field_i;
             }
           }
-          bl.a(param1, -1);
+          bl.flushPacketBuffer(param1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

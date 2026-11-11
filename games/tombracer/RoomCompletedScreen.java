@@ -49,7 +49,7 @@ final class RoomCompletedScreen extends MatchOverlay {
     final void update(byte param0) {
         if (param0 > -107) {
           lu var3 = (lu) null;
-          RoomCompletedScreen.a((byte) 21, true, 36, (lu) null, true);
+          RoomCompletedScreen.writeLoginPacket((byte) 21, true, 36, (lu) null, true);
         }
     }
 
@@ -75,7 +75,7 @@ final class RoomCompletedScreen extends MatchOverlay {
         return var1.field_f;
     }
 
-    final static void a(byte param0, boolean param1, int param2, lu param3, boolean param4) {
+    final static void writeLoginPacket(byte param0, boolean param1, int param2, lu param3, boolean param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -97,7 +97,7 @@ final class RoomCompletedScreen extends MatchOverlay {
             return;
           }
           jg.field_a.writeInt(AllPlatformsMazeComponent.field_K[3], (byte) 104);
-          ni.a(jg.field_a, (byte) 77);
+          ni.writeMachineId(jg.field_a, (byte) 77);
           jg.field_a.writeShort(-1477662136, param2);
           param3.a(jg.field_a, false);
           ql.field_k.position = 0;
@@ -134,7 +134,7 @@ final class RoomCompletedScreen extends MatchOverlay {
           }
           bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
           ql.field_k.backpatchShortLength(ql.field_k.position - var5_int, (byte) 114);
-          bl.a(-1, -1);
+          bl.flushPacketBuffer(-1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -26,12 +26,12 @@ final class dra {
             musicTrackNames = (String[]) null;
           }
           var1 = ql.field_k;
-          while (SnakePitBehaviour.l(10371)) {
+          while (SnakePitBehaviour.isFirstReflectionCheckReady(10371)) {
             var1.writeCipheredOpcode(8, -2988);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            hk.a(true, var1);
+            hk.writeReflectionCheckResponse(true, var1);
             ql.field_k.backpatchByteLength(var1.position - var2, (byte) -17);
           }
           return;

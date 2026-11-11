@@ -70,7 +70,7 @@ final class cm implements GamePacket {
         }
     }
 
-    final static void a(int param0, ht param1, int param2, boolean param3) {
+    final static void updateLobbyGameOptionControls(int param0, ht param1, int param2, boolean param3) {
         tv dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;
@@ -454,7 +454,7 @@ final class cm implements GamePacket {
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   sda.field_f[var17_int] = false;
                 }
-                cja.a(125, var7, param1, 0, var9, -1, -1, param3);
+                cja.findValidSettingCombination(125, var7, param1, 0, var9, -1, -1, param3);
                 if (ld.field_e >= 2 &&
                   VerticalScrollbar.field_tb[12]) {
                   TouchSwitchBehaviour.field_s = true;

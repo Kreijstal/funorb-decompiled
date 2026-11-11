@@ -1187,9 +1187,9 @@ final class gja extends ka {
             return;
           }
           MatchScoringObserver.field_g = var5.field_k * var6.field_e + var6.field_n * var5.field_q + var6.field_i * var5.field_m + var5.field_n;
-          kb.field_p = var6.field_l * var5.field_k + var6.field_q * var5.field_q + var5.field_m * var6.field_o;
-          var15 = MatchScoringObserver.field_g + (float)this.field_o * kb.field_p;
-          var16 = MatchScoringObserver.field_g + (float)this.field_n * kb.field_p;
+          ScoreSubmission.field_p = var6.field_l * var5.field_k + var6.field_q * var5.field_q + var5.field_m * var6.field_o;
+          var15 = MatchScoringObserver.field_g + (float)this.field_o * ScoreSubmission.field_p;
+          var16 = MatchScoringObserver.field_g + (float)this.field_n * ScoreSubmission.field_p;
           if (!(var15 > var16)) {
             var18 = (float)this.field_S.field_h * (var16 + (float)this.field_H);
             var17 = ((float)(-this.field_H) + var15) * (float)this.field_S.field_h;
@@ -1249,7 +1249,7 @@ final class gja extends ka {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadLogoMeshes(ResourceArchive param0, int param1) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -1266,7 +1266,7 @@ final class gja extends ka {
           var2 = new BitPacketBuffer(param0.getFileByName("logo.fo3d", (byte) 126, ""));
           var3 = var2.readUnsignedByte(255);
           var2.beginBitAccess((byte) 119);
-          ej.field_d = BrazierComponent.a(var2, (byte) 8);
+          ej.field_d = BrazierComponent.readLogoMaterials(var2, (byte) 8);
           OpenGlTexture.field_e = new int[var3][];
           cq.field_b = new TriangleMesh[var3];
           var4 = 0;
@@ -2158,7 +2158,7 @@ final class gja extends ka {
                   var8 = 0.3333333134651184f * (float)(this.field_r[var5.field_k] + (this.field_r[var5.field_i] + this.field_r[var5.field_c]));
                   var9 = (float)(this.field_l[var5.field_k] + this.field_l[var5.field_c] + this.field_l[var5.field_i]) * 0.3333333134651184f;
                   var10 = var9 * wka.field_b + (HardwareUnlitEffect.field_e * var8 + baa.field_c * var7) + fba.field_a;
-                  var11 = var9 * ct.field_b + (kb.field_p * var8 + var7 * vs.field_O) + MatchScoringObserver.field_g;
+                  var11 = var9 * ct.field_b + (ScoreSubmission.field_p * var8 + var7 * vs.field_O) + MatchScoringObserver.field_g;
                   var12 = gj.field_h + (var9 * TextureFilter.field_c + (var7 * pl.field_a + MatchPhase.field_d * var8));
                   var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + var10 * var10)))) * (float)var5.field_b;
                   var3 = this.field_S.y((byte) -77);
@@ -4774,9 +4774,9 @@ final class gja extends ka {
             return;
           }
           MatchScoringObserver.field_g = var5.field_i * var4.field_m + (var5.field_e * var4.field_k + var4.field_q * var5.field_n) + var4.field_n;
-          kb.field_p = var4.field_m * var5.field_o + (var4.field_q * var5.field_q + var4.field_k * var5.field_l);
-          var14 = MatchScoringObserver.field_g + (float)this.field_o * kb.field_p;
-          var15 = MatchScoringObserver.field_g + kb.field_p * (float)this.field_n;
+          ScoreSubmission.field_p = var4.field_m * var5.field_o + (var4.field_q * var5.field_q + var4.field_k * var5.field_l);
+          var14 = MatchScoringObserver.field_g + (float)this.field_o * ScoreSubmission.field_p;
+          var15 = MatchScoringObserver.field_g + ScoreSubmission.field_p * (float)this.field_n;
           if (var15 < var14) {
             var17 = ((float)this.field_H + var14) * (float)this.field_S.field_h;
             var16 = ((float)(-this.field_H) + var15) * (float)this.field_S.field_h;

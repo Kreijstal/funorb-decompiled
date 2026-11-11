@@ -113,7 +113,7 @@ final class PlayerViewport {
         if (param0 != 23479) {
           ConsoleToken[] var3 = (ConsoleToken[]) null;
           PlayerViewport.a(true, (ConsoleToken[]) null, 44);
-          if (this.field_a.f((byte) 33)) {
+          if (this.field_a.isMenuBackgroundDemo((byte) 33)) {
             return;
           }
           if (this.field_a.field_A) {
@@ -121,12 +121,12 @@ final class PlayerViewport {
           }
           this.field_d.a(this.left, this.right, this.field_e, -88, this.field_a, this.top, this.bottom);
           if (this.field_a.field_D) {
-            TextInputWidget.a(0, bm.field_f, (byte) -72, this.left, tga.field_a, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
+            TextInputWidget.paintNineSliceFrame(0, bm.field_f, (byte) -72, this.left, tga.field_a, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
             return;
           }
           return;
         }
-        if (this.field_a.f((byte) 33)) {
+        if (this.field_a.isMenuBackgroundDemo((byte) 33)) {
           return;
         }
         if (this.field_a.field_A) {
@@ -136,7 +136,7 @@ final class PlayerViewport {
         if (!this.field_a.field_D) {
           return;
         }
-        TextInputWidget.a(0, bm.field_f, (byte) -72, this.left, tga.field_a, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
+        TextInputWidget.paintNineSliceFrame(0, bm.field_f, (byte) -72, this.left, tga.field_a, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
     }
 
     final void applyLayout(int param0, wm param1, int param2) {

@@ -109,7 +109,7 @@ abstract class gn extends WidgetContainer {
         }
         if (this.field_x >= 256) {
           if (param3 == 0) {
-            this.a(param1 + this.field_n, (byte) -67, this.field_i + param0);
+            this.drawDialogFrame(param1 + this.field_n, (byte) -67, this.field_i + param0);
             super.renderLayer(param0, param1, 0, param3);
             return;
           }
@@ -119,7 +119,7 @@ abstract class gn extends WidgetContainer {
           fta.field_a = new Sprite(this.field_m, this.field_p);
           nm.setRasterTarget(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
-          this.a(0, (byte) -67, 0);
+          this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
           fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
@@ -129,7 +129,7 @@ abstract class gn extends WidgetContainer {
           fta.field_a = new Sprite(this.field_m, this.field_p);
           nm.setRasterTarget(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
-          this.a(0, (byte) -67, 0);
+          this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
           fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
@@ -138,7 +138,7 @@ abstract class gn extends WidgetContainer {
         if (fta.field_a.field_q >= this.field_p) {
           nm.setRasterTarget(fta.field_a, (byte) 118);
           SoftwareRasterizer.clear();
-          this.a(0, (byte) -67, 0);
+          this.drawDialogFrame(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
           fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
@@ -147,13 +147,13 @@ abstract class gn extends WidgetContainer {
         fta.field_a = new Sprite(this.field_m, this.field_p);
         nm.setRasterTarget(fta.field_a, (byte) 118);
         SoftwareRasterizer.clear();
-        this.a(0, (byte) -67, 0);
+        this.drawDialogFrame(0, (byte) -67, 0);
         super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
         pfa.a(param2 ^ 1);
         fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
     }
 
-    abstract void a(int param0, byte param1, int param2);
+    abstract void drawDialogFrame(int param0, byte param1, int param2);
 
     final void c(int param0, int param1, int param2) {
         if (param0 == -11560) {

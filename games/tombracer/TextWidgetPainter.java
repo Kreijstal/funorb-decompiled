@@ -399,7 +399,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               if (!(param1.field_l instanceof CachedTextLayout)) {
                 return;
               }
-              ((CachedTextLayout) (param1.field_l)).a(var5, var3_int >> 1, this.field_e, this.getDisplayText(-4, param1), (byte) -80);
+              ((CachedTextLayout) (param1.field_l)).layoutCenteredLine(var5, var3_int >> 1, this.field_e, this.getDisplayText(-4, param1), (byte) -80);
               return;
             }
             if (var6Lifetime1 != 2) {
@@ -408,11 +408,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (!(param1.field_l instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) (param1.field_l)).a(0, this.field_e, var5, this.getDisplayText(-4, param1), var3_int);
+            ((CachedTextLayout) (param1.field_l)).layoutRightAlignedLine(0, this.field_e, var5, this.getDisplayText(-4, param1), var3_int);
             return;
           }
           if (param1.field_l instanceof CachedTextLayout) {
-            ((CachedTextLayout) (param1.field_l)).a(16512, var5, this.field_e, this.getDisplayText(-4, param1), 0);
+            ((CachedTextLayout) (param1.field_l)).layoutLeftAlignedLine(16512, var5, this.field_e, this.getDisplayText(-4, param1), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

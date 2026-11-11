@@ -516,7 +516,7 @@ final class BlendModeOperator extends TextureOperator {
           }
         }
         if (param1 != -1) {
-          BlendModeOperator.d((byte) 83);
+          BlendModeOperator.findRootQuickChatCategory((byte) 83);
         }
         return var3;
     }
@@ -574,7 +574,7 @@ final class BlendModeOperator extends TextureOperator {
         }
     }
 
-    final static QuickChatCategory d(byte param0) {
+    final static QuickChatCategory findRootQuickChatCategory(byte param0) {
         int var1_int = 0;
         QuickChatCategory var2 = null;
         int var3 = 0;

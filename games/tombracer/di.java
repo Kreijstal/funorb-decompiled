@@ -65,7 +65,7 @@ final class di {
         return this.a(-101, LegacyOpenGlRidgedWaterEffect.b((byte) -97));
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void advanceLobbyTransitions(byte param0, boolean param1) {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param1 ||
@@ -96,7 +96,7 @@ final class di {
                 } else {
                   if (mla.field_a < SoftwareTransform3D.field_q) {
                     if (mla.field_a == 0) {
-                      RoomComponent.a(false);
+                      RoomComponent.buildMainScreenRoots(false);
                     }
                     mla.field_a = mla.field_a + 1;
                   }

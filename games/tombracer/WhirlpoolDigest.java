@@ -86,7 +86,7 @@ final class WhirlpoolDigest {
         }
     }
 
-    final void a(byte[] param0, long param1, byte param2) {
+    final void updateBits(byte[] param0, long param1, byte param2) {
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -178,7 +178,7 @@ final class WhirlpoolDigest {
         }
     }
 
-    final static void a(byte param0) {
+    final static void handleRankingsResponse(byte param0) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -219,7 +219,7 @@ final class WhirlpoolDigest {
           }
           var4 = var14.readUnsignedByte(255);
           if (param0 != -44) {
-            WhirlpoolDigest.a((byte) 81);
+            WhirlpoolDigest.handleRankingsResponse((byte) 81);
           }
           if (var4 != 0) {
             bra.field_M[0] = MenuEntry.field_k;
@@ -231,16 +231,16 @@ final class WhirlpoolDigest {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               dga.a(var14, 0);
               if (var6_intLifetime1 != 0) {
-                qt.a(kc.field_b, RandomMazeBehaviour.field_p, IntPoint.field_a, var6_intLifetime1, DivisionMazeGenerator.field_f, (byte) -90);
+                qt.appendRankingRecord(kc.field_b, RandomMazeBehaviour.field_p, IntPoint.field_a, var6_intLifetime1, DivisionMazeGenerator.field_f, (byte) -90);
               } else {
                 var3.field_g = IntPoint.field_a;
                 var3.field_f = kc.field_b;
                 var3.field_l = DivisionMazeGenerator.field_f;
                 var3.field_j = RandomMazeBehaviour.field_p;
-                qt.a(kc.field_b, RandomMazeBehaviour.field_p, IntPoint.field_a, var6_intLifetime1, DivisionMazeGenerator.field_f, (byte) -97);
+                qt.appendRankingRecord(kc.field_b, RandomMazeBehaviour.field_p, IntPoint.field_a, var6_intLifetime1, DivisionMazeGenerator.field_f, (byte) -97);
               }
             }
-            SweepRotateLocomotor.a(var5, (byte) 29);
+            SweepRotateLocomotor.sortRankedListIndices(var5, (byte) 29);
             dupTemp$0 = new String[2][var5];
             var3.field_h = dupTemp$0;
             var6 = dupTemp$0;

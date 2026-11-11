@@ -166,7 +166,7 @@ final class BoulderComponent extends PathMoverComponent {
           var5 = new ConstantEffectBehaviour(param2, param0);
           var6 = new Effect(0, 10);
           var6.setDeathMessageIndex(1, 14);
-          var5.a(true, var6);
+          var5.setEffect(true, var6);
           var11.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = new SimpleBlockBehaviour(param2, param0);
           var11.addBehaviour((byte) 83, (Behaviour) (var7));

@@ -87,16 +87,16 @@ final class vb extends IntrusiveNode {
                     if (0 == var18) {
                       if (var17 >= 0 &&
                         var17 < TriangleRasterizer.viewportWidth) {
-                        TimeSwitchBehaviour.a(var16Lifetime2 + var17, var18, param2, 1535993377, param8);
+                        TimeSwitchBehaviour.blendHalfRgbSpan(var16Lifetime2 + var17, var18, param2, 1535993377, param8);
                       }
                     } else {
                       if (TriangleRasterizer.viewportWidth <= var17 + var18) {
                         var18 = -var17 + (TriangleRasterizer.viewportWidth - 1);
                       }
                       if (var17 >= 0) {
-                        TimeSwitchBehaviour.a(var16Lifetime2 + var17, var18, param2, 1535993377, param8);
+                        TimeSwitchBehaviour.blendHalfRgbSpan(var16Lifetime2 + var17, var18, param2, 1535993377, param8);
                       } else {
-                        TimeSwitchBehaviour.a(var16Lifetime2, var18 + var17, param2, 1535993377, param8);
+                        TimeSwitchBehaviour.blendHalfRgbSpan(var16Lifetime2, var18 + var17, param2, 1535993377, param8);
                       }
                     }
                   }
@@ -165,16 +165,16 @@ final class vb extends IntrusiveNode {
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < TriangleRasterizer.viewportWidth) {
-                    TimeSwitchBehaviour.a(var15Lifetime1 + var16Lifetime1, var17Lifetime1, param2, 1535993377, param8);
+                    TimeSwitchBehaviour.blendHalfRgbSpan(var15Lifetime1 + var16Lifetime1, var17Lifetime1, param2, 1535993377, param8);
                   }
                 } else {
                   if (TriangleRasterizer.viewportWidth <= var16Lifetime1 + var17Lifetime1) {
                     var17Lifetime1 = -1 + (-var16Lifetime1 + TriangleRasterizer.viewportWidth);
                   }
                   if (var16Lifetime1 < 0) {
-                    TimeSwitchBehaviour.a(var15Lifetime1, var17Lifetime1 + var16Lifetime1, param2, 1535993377, param8);
+                    TimeSwitchBehaviour.blendHalfRgbSpan(var15Lifetime1, var17Lifetime1 + var16Lifetime1, param2, 1535993377, param8);
                   } else {
-                    TimeSwitchBehaviour.a(var15Lifetime1 + var16Lifetime1, var17Lifetime1, param2, 1535993377, param8);
+                    TimeSwitchBehaviour.blendHalfRgbSpan(var15Lifetime1 + var16Lifetime1, var17Lifetime1, param2, 1535993377, param8);
                   }
                 }
               }

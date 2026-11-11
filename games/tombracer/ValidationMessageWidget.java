@@ -10,7 +10,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     static int field_G;
     private String field_E;
 
-    final static int a(char param0, byte param1, CharSequence param2) {
+    final static int countCharacterOccurrences(char param0, byte param1, CharSequence param2) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -61,7 +61,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             return false;
           }
           var4 = (CharSequence) null;
-          ValidationMessageWidget.a('+', (byte) -127, (CharSequence) null);
+          ValidationMessageWidget.countCharacterOccurrences('+', (byte) -127, (CharSequence) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

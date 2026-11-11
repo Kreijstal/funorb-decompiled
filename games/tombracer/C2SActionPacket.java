@@ -128,7 +128,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         if (param1 != -16838) {
           return;
         }
-        era.field_e.b(param1 ^ -16792, param0);
+        era.field_e.drawFullScreen(param1 ^ -16792, param0);
         ada var2 = apa.field_c;
         if (var2 != null) {
           var2.renderWithTooltip(-31, era.field_e.field_A, era.field_e.field_q);

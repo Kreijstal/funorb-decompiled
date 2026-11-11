@@ -19,7 +19,7 @@ final class UrlDownloadRequest implements Runnable {
           UrlDownloadRequest.a(-49, -51, -30, 34, 111, -46);
         }
         if (TextWidgetPainter.a(54) ||
-          param0.k(-25319)) {
+          param0.isMenuBackgroundDemo(-25319)) {
           return;
         }
         if (!(0 <= param1.getId((byte) -82))) {

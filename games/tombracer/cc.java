@@ -281,7 +281,7 @@ final class cc extends IntrusiveNode {
               return stackIn_12_0;
             }
             var6 = var4[var5];
-            if (!var6.a(var3, 5)) {
+            if (!var6.matchesMethodName(var3, 5)) {
               var5++;
               continue;
             }

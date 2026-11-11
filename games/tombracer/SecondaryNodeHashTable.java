@@ -100,7 +100,7 @@ final class SecondaryNodeHashTable {
         field_b = null;
     }
 
-    final DualLinkNode a(byte param0) {
+    final DualLinkNode nextInTraversal(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
@@ -175,7 +175,7 @@ final class SecondaryNodeHashTable {
     final DualLinkNode startTraversal(int param0) {
         int var2 = -55 % ((-40 - param0) / 47);
         this.field_f = 0;
-        return this.a((byte) -112);
+        return this.nextInTraversal((byte) -112);
     }
 
     final DualLinkNode get(int param0, long param1) {

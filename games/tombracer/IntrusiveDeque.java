@@ -190,11 +190,11 @@ final class IntrusiveDeque {
                 if (var19 == 0) {
                   if (null == var7.field_J) {
                     var7.field_xb = new UiComponent(0L, S2CStartRoundPacket.field_a);
-                    var7.b(-128, var7.field_xb);
+                    var7.addChild(-128, var7.field_xb);
                     var7.field_Ab = new UiComponent(0L, iea.field_g);
-                    var7.b(-123, var7.field_Ab);
+                    var7.addChild(-123, var7.field_Ab);
                     var7.field_zb = new UiComponent(0L, S2CStartRoundPacket.field_a);
-                    var7.b(-128, var7.field_zb);
+                    var7.addChild(-128, var7.field_zb);
                     var7.field_Ab.field_z = 2;
                     var8 = 1;
                     var7.a(-10966);

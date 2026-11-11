@@ -83,8 +83,8 @@ final class PushableBlockMazeComponent extends MazeComponent {
           var10.addBehaviour((byte) 83, (Behaviour) (var5));
           var10.setCrushThreshold(25, -1);
           var6 = new DamageableBehaviour(param2, param1);
-          var6.b((byte) 0, true);
-          var6.b(1, 50, param0 - 5);
+          var6.setTargetsOwnTrap((byte) 0, true);
+          var6.setHealthParameters(1, 50, param0 - 5);
           var7 = var6.getVulnerabilities((byte) -112);
           var7.setAll(false, 67);
           var7.set(0, -17075, true);

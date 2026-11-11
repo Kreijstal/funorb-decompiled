@@ -33,7 +33,7 @@ final class kp {
         int[] var7 = null;
         GpuTexture2D var21 = null;
         int var8 = TombRacer.field_G ? 1 : 0;
-        Object var3 = this.field_b.a((byte) 64, (long)param0);
+        Object var3 = this.field_b.get((byte) 64, (long)param0);
         int[] var7Lifetime1;
         int[] var7Lifetime2;
         int[] var7Lifetime3;

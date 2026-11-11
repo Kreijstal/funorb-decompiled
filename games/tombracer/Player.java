@@ -31,10 +31,10 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
     private boolean[] statusFlags;
     private int previousY;
     private int sortDepth;
-    private boolean field_L;
+    private boolean pendingTimeFreeze;
     private boolean firedThisTick;
     private int field_Y;
-    private boolean field_Z;
+    private boolean pendingSafeZone;
     static Sprite field_W;
     private int[] roomTreasure;
     private int field_N;
@@ -273,13 +273,13 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
                 this.pendingHidden = false;
               }
               this.firedThisTick = false;
-              if (this.field_Z) {
-                this.field_Z = false;
+              if (this.pendingSafeZone) {
+                this.pendingSafeZone = false;
                 this.statusFlags[2] = true;
               }
-              if (this.field_L) {
+              if (this.pendingTimeFreeze) {
                 this.statusFlags[3] = true;
-                this.field_L = false;
+                this.pendingTimeFreeze = false;
               }
               if (this.weapon != null) {
                 this.weapon.tick(-28);
@@ -437,7 +437,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         try {
           this.getSimulation(-1);
           if (param0 != 3) {
-            this.field_L = false;
+            this.pendingTimeFreeze = false;
           }
           var2_int = 0;
           while (3 > var2_int) {
@@ -1014,8 +1014,8 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           this.firedThisTick = false;
           this.facingY = -1;
           this.elevationVelocity = 0;
-          this.field_Z = false;
-          this.field_L = false;
+          this.pendingSafeZone = false;
+          this.pendingTimeFreeze = false;
           this.field_Y = 0;
           this.updateSortDepth((byte) 74);
           this.savePreviousPosition((byte) 116);
@@ -1170,7 +1170,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void moveByVelocity(int param0, int param1, byte param2) {
         Object stackIn_5_0;
         int stackIn_5_1;
         int stackIn_5_2;
@@ -1343,9 +1343,9 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final void n(int param0) {
+    final void requestSafeZone(int param0) {
         try {
-          this.field_Z = true;
+          this.pendingSafeZone = true;
           if (param0 != 21120) {
             this.field_kb = 32;
           }
@@ -1484,7 +1484,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void a(boolean param0, boolean param1) {
+    private final void tryGrabInFront(boolean param0, boolean param1) {
         int stackIn_31_0 = 0;
         boolean stackIn_36_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -2032,7 +2032,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
             this.skipRoom(16384, false);
             return;
           }
-          this.a(var9 != 0, true);
+          this.tryGrabInFront(var9 != 0, true);
           if (this.getSimulation(-1).isEffectActive(1, 10915)) {
             var12 = var3_int;
             var3_int = var4;
@@ -2195,7 +2195,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
               decompiledSharedTail1 = (var29 != 0);
             }
             if (decompiledSharedTail1) {
-              this.a(var20, 89, gqa.multiplyFixed(var17, (byte) 24, var15), var21);
+              this.setVelocityFromInput(var20, 89, gqa.multiplyFixed(var17, (byte) 24, var15), var21);
             }
             if (var14 == 0 &&
               0 == var16 &&
@@ -2212,7 +2212,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
               decompiledSharedTail0 = (var29 != 0);
             }
             if (decompiledSharedTail0) {
-              this.a(this.velocityY, this.velocityX, (byte) -103);
+              this.moveByVelocity(this.velocityY, this.velocityX, (byte) -103);
               if (this.field_eb == null &&
                 this.field_kb == 0 &&
                 this.previousX == this.x &&
@@ -2467,9 +2467,9 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    final void i(boolean param0) {
+    final void setPendingTimeFreeze(boolean param0) {
         try {
-          this.field_L = param0;
+          this.pendingTimeFreeze = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "hca.JD(" + param0 + ')');
         }
@@ -3491,7 +3491,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         try {
           var3_int = param0.getItemType((byte) -106);
           if (param1 < 69) {
-            this.field_L = false;
+            this.pendingTimeFreeze = false;
           }
           if ((var3_int == 0 ||
             var3_int == 3) &&
@@ -3535,7 +3535,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           this.carried.tryPush(80, false, var4_int, this.velocityY, this.velocityX, 0);
           if (this.x == this.previousX &&
             ~this.y == ~this.previousY) {
-            this.a(this.velocityY, this.velocityX, (byte) -103);
+            this.moveByVelocity(this.velocityY, this.velocityX, (byte) -103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3739,7 +3739,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void setVelocityFromInput(int param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int stackIn_3_0 = 0;
@@ -3763,7 +3763,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           }
           var5_int = za.clampValue(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3 + 2 * this.field_Y);
           if (param1 <= 85) {
-            this.field_L = false;
+            this.pendingTimeFreeze = false;
           }
           stackIn_10_0 = 1;
           stackIn_10_1 = 74;

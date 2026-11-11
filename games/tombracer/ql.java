@@ -91,7 +91,7 @@ class ql extends DualLinkNode {
             uma.field_b.addLast((byte) -108, param1);
             return;
           }
-          PlatformComponent.a(var2, param1, (byte) 24);
+          PlatformComponent.insertBefore(var2, param1, (byte) 24);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

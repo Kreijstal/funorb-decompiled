@@ -176,7 +176,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         }
     }
 
-    final static void d(int param0) {
+    final static void handleHighscoreResponse(int param0) {
         int var8_int = 0;
         String[][] dupTemp$0 = null;
         long[][] dupTemp$1 = null;
@@ -193,7 +193,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
         long var4_long = 0L;
         int var5 = 0;
         int var6 = 0;
-        kb var6_ref_kb = null;
+        ScoreSubmission var6_ref_kb = null;
         int var7 = 0;
         String[][] var8 = null;
         String[][] var9 = null;
@@ -324,10 +324,10 @@ final class CrossedSineBandsOperator extends TextureOperator {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort(125);
             var4_long = var28.readLong(290646880);
-            var6_ref_kb = (kb) (nn.field_a.first(-80));
+            var6_ref_kb = (ScoreSubmission) (nn.field_a.first(-80));
             while (var6_ref_kb != null) {
-              if (var6_ref_kb.field_l != var3Lifetime1) {
-                var6_ref_kb = (kb) (nn.field_a.next(122));
+              if (var6_ref_kb.submissionId != var3Lifetime1) {
+                var6_ref_kb = (ScoreSubmission) (nn.field_a.next(122));
                 continue;
               }
               break;
@@ -336,11 +336,11 @@ final class CrossedSineBandsOperator extends TextureOperator {
               dea.a(60);
               return;
             }
-            var6_ref_kb.field_h = var4_long;
+            var6_ref_kb.serverResult = var4_long;
             var6_ref_kb.unlink(39);
             return;
           }
-          ssa.a("HS1: " + kk.a(32), (byte) 121, (Throwable) null);
+          ssa.reportClientError("HS1: " + kk.formatPacketDump(32), (byte) 121, (Throwable) null);
           dea.a(60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -386,17 +386,17 @@ final class CrossedSineBandsOperator extends TextureOperator {
         } else {
           ava.field_d = (-640 + SceneLight.field_i) / 2;
         }
-        di.a((byte) -98, param1);
+        di.advanceLobbyTransitions((byte) -98, param1);
         if (mla.field_a > 0) {
           SimpleHoverMountComponent.a(param5, true, param1, param6);
         }
         MessageOverlay.field_t.field_x = tka.field_q.field_x;
         MessageOverlay.field_t.field_z = 1;
         if (0 < GameKeyHandler.field_a) {
-          FallbackShaderEffect.a((byte) 1, param5, param1, param6);
+          FallbackShaderEffect.updateOpponentSearchControls((byte) 1, param5, param1, param6);
         }
         if (0 < fp.field_e) {
-          CoinBagItemComponent.a(param1, -1, param6, param8, param5);
+          CoinBagItemComponent.updateLobbyGameControls(param1, -1, param6, param8, param5);
         }
         if (tla.field_e &&
           C2SChooseRewardPacket.field_a.field_Mb >= C2SChooseRewardPacket.field_a.field_Jb) {
@@ -406,13 +406,13 @@ final class CrossedSineBandsOperator extends TextureOperator {
         } else {
           RasterShape.field_e.field_X = true;
           bsa.field_j.field_vb.field_r = null;
-          ava.a(bsa.field_j, param6, param0, param9, 2);
+          ava.updateLobbyPlayerRows(bsa.field_j, param6, param0, param9, 2);
         }
-        PlayTrackCommand.a(param7, 0, param3, param0, param4, param6, param9);
+        PlayTrackCommand.updateLobbyGameList(param7, 0, param3, param0, param4, param6, param9);
         if (param2 != 4096) {
           return;
         }
-        ava.a(tn.field_n, param6, param0, param9, 2);
+        ava.updateLobbyPlayerRows(tn.field_n, param6, param0, param9, 2);
         lh.field_a = lh.field_a + 1;
     }
 

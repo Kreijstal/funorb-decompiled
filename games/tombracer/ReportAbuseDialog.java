@@ -37,7 +37,7 @@ final class ReportAbuseDialog extends UiComponent {
           var6_int = param4.field_H.measureWrappedHeight(param4.field_r, -(2 * param4.field_x) + param3, param4.field_P);
           param4.setBounds(param3, var6_int, -23776, param0, 0);
           param0 = param0 + (var6_int - 0);
-          param2.b(-125, param4);
+          param2.addChild(-125, param4);
           stackIn_4_0 = param0;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,23 +145,23 @@ final class ReportAbuseDialog extends UiComponent {
           this.field_Db = param12;
           this.field_zb = new UiComponent(0L, param6, EffectEvent.field_m.toUpperCase());
           this.field_zb.field_z = 1;
-          this.b(-126, this.field_zb);
+          this.addChild(-126, this.field_zb);
           this.field_Fb = new UiComponent(0L, param7);
-          this.field_zb.b(-123, this.field_Fb);
+          this.field_zb.addChild(-123, this.field_Fb);
           this.field_wb = new UiComponent(0L, (UiComponent) null);
-          this.b(-127, this.field_wb);
+          this.addChild(-127, this.field_wb);
           if (param11 != null) {
             this.field_Bb = new UiComponent(0L, param8, fpa.field_a);
             this.field_Bb.field_ib = 11184810;
             this.field_Bb.field_z = 1;
-            this.field_wb.b(-122, this.field_Bb);
+            this.field_wb.addChild(-122, this.field_Bb);
             this.field_tb = new UiComponent(0L, param8, nla.field_b);
             this.field_tb.field_ib = 11184810;
             this.field_tb.field_z = 1;
-            this.field_wb.b(-122, this.field_tb);
+            this.field_wb.addChild(-122, this.field_tb);
             this.field_xb = new UiComponent(0L, param8);
             this.field_xb.field_ib = 16764006;
-            this.field_wb.b(-125, this.field_xb);
+            this.field_wb.addChild(-125, this.field_xb);
             this.field_xb.field_sb = "|";
             if (!(PrimMazeGenerator.field_e < 5) ||
               !(ld.field_e < 2)) {
@@ -189,16 +189,16 @@ final class ReportAbuseDialog extends UiComponent {
                 stackIn_8_5 = ur.field_b;
               }
               this.field_Ab = new ta(stackIn_7_3, stackIn_7_4, stackIn_8_5);
-              this.field_wb.b(-125, this.field_Ab);
+              this.field_wb.addChild(-125, this.field_Ab);
             }
             var28 = new UiComponent[3];
             var15 = var28;
             var28[0] = new UiComponent(0L, (UiComponent) null);
-            this.field_wb.b(-123, var28[0]);
+            this.field_wb.addChild(-123, var28[0]);
             var28[1] = new UiComponent(0L, (UiComponent) null);
-            this.field_wb.b(-122, var28[1]);
+            this.field_wb.addChild(-122, var28[1]);
             var28[2] = new UiComponent(0L, (UiComponent) null);
-            this.field_wb.b(-127, var28[2]);
+            this.field_wb.addChild(-127, var28[2]);
             this.field_yb = new UiComponent[TouchSwitchBehaviour.field_n];
             for (var16 = 0; TouchSwitchBehaviour.field_n > var16; var16++) {
               if (null != aca.field_h[var16]) {
@@ -207,7 +207,7 @@ final class ReportAbuseDialog extends UiComponent {
                 stackIn_14_0 = this.field_yb[var16];
                 stackIn_15_1 = (param11 != null);
                 stackIn_14_0.field_X = stackIn_15_1;
-                this.field_wb.b(-128, this.field_yb[var16]);
+                this.field_wb.addChild(-128, this.field_yb[var16]);
               }
             }
             this.field_vb = new StringBuilder(12);
@@ -229,7 +229,7 @@ final class ReportAbuseDialog extends UiComponent {
             }
             for (var17Lifetime4 = 0; var17Lifetime4 < TouchSwitchBehaviour.field_n; var17Lifetime4++) {
               if (this.field_yb[var17Lifetime4] != null) {
-                var18 = this.field_yb[var17Lifetime4].b((byte) 69);
+                var18 = this.field_yb[var17Lifetime4].measureNaturalWidth((byte) 69);
                 if (var18 > var16Lifetime2) {
                   var16Lifetime2 = var18;
                 }
@@ -270,7 +270,7 @@ final class ReportAbuseDialog extends UiComponent {
               var17Lifetime5 = var18Lifetime5;
             }
             var19 = 26 + 3 * var16Lifetime2;
-            var20 = this.field_zb.b((byte) 69);
+            var20 = this.field_zb.measureNaturalWidth((byte) 69);
             if (var19 < var20) {
               var19 = var20;
             }
@@ -310,7 +310,7 @@ final class ReportAbuseDialog extends UiComponent {
           this.field_Bb = new UiComponent(0L, param8, TouchSwitchBehaviour.field_r);
           this.field_Bb.field_z = 1;
           this.field_Bb.field_ib = 11184810;
-          this.field_wb.b(-126, this.field_Bb);
+          this.field_wb.addChild(-126, this.field_Bb);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Bb.field_H.countWrappedLines(this.field_Bb.field_r, var15_int);
@@ -403,7 +403,7 @@ final class ReportAbuseDialog extends UiComponent {
           }
           var7 = new UiComponent(0L, param0, 0, param3, param2, 24, param1);
           param3 += 32;
-          param5.b(param4 ^ -8421632, var7);
+          param5.addChild(param4 ^ -8421632, var7);
           stackIn_4_0 = param3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

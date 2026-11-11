@@ -90,7 +90,7 @@ class tc extends lu {
         }
         jl.a((byte) -128, param0);
         if (null != RoomViewRenderer.field_c) {
-          RoomViewRenderer.field_c.b(param1 + 74, param0);
+          RoomViewRenderer.field_c.drawFullScreen(param1 + 74, param0);
         }
         TextureFilter.a(param0, (byte) -91);
     }

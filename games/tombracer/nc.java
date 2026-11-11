@@ -21,7 +21,7 @@ final class nc {
     final QuickChatCategory a(byte param0, int param1) {
         byte[] var4 = null;
         int var5 = 0;
-        QuickChatCategory var3 = (QuickChatCategory) (this.field_c.a((byte) 114, (long)param1));
+        QuickChatCategory var3 = (QuickChatCategory) (this.field_c.get((byte) 114, (long)param1));
         int var5Lifetime1;
         if (var3 != null) {
           return var3;

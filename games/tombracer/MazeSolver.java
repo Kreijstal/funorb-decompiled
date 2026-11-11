@@ -46,8 +46,8 @@ final class MazeSolver {
         try {
           var10 = var10 + (param7 + param5);
           ComponentMount.field_b.setBounds(ComponentMount.field_b.field_G, param7, -23776, 0, CharacterChoiceFactory.field_g.field_G);
-          ClientMemoryVertexArray.field_d.setBounds(ClientMemoryVertexArray.field_d.b((byte) 69), param6, param3 - 18449, var10, 5);
-          var11 = qpa.field_b.b((byte) 69);
+          ClientMemoryVertexArray.field_d.setBounds(ClientMemoryVertexArray.field_d.measureNaturalWidth((byte) 69), param6, param3 - 18449, var10, 5);
+          var11 = qpa.field_b.measureNaturalWidth((byte) 69);
           qpa.field_b.setBounds(var11, param6, -23776, var10, var9_int - 5 - var11);
           var12 = 5 + (param6 + var10);
           ClientMemoryVertexArray.field_e.setBounds(var9_int, param1, -23776, 0, 0);
@@ -60,7 +60,7 @@ final class MazeSolver {
         }
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void initializeArchiveServices(int param0, PlatformTaskDispatcher param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           CourseLayout.field_a = param4;
           int var9_int = -25 / ((44 - param2) / 33);

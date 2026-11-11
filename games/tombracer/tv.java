@@ -27,11 +27,11 @@ final class tv extends UiComponent {
           if (param4 != null) {
             this.field_tb = new UiComponent(0L, param2);
             this.field_tb.field_R = param4;
-            this.b(-124, this.field_tb);
+            this.addChild(-124, this.field_tb);
           }
           if (param5 != null) {
             this.field_vb = new UiComponent(0L, param3, param5);
-            this.b(-125, this.field_vb);
+            this.addChild(-125, this.field_vb);
             this.a(-10966);
           } else {
             this.a(-10966);
@@ -86,7 +86,7 @@ final class tv extends UiComponent {
           var4 = -param0;
           var5 = -param0;
           if (this.field_tb != null) {
-            var4 = this.field_tb.b((byte) 69);
+            var4 = this.field_tb.measureNaturalWidth((byte) 69);
           }
           if (null != this.field_vb) {
             var5 = this.field_vb.measureContentWidth(-param1 + (-var4 + (-param1 + this.field_G)) - param0, false);
@@ -122,7 +122,7 @@ final class tv extends UiComponent {
         var4Lifetime1 = -param0;
         var5Lifetime1 = -param0;
         if (this.field_tb != null) {
-          var4Lifetime1 = this.field_tb.b((byte) 69);
+          var4Lifetime1 = this.field_tb.measureNaturalWidth((byte) 69);
         }
         if (null != this.field_vb) {
           var5Lifetime1 = this.field_vb.measureContentWidth(-param1 + (-var4Lifetime1 + (-param1 + this.field_G)) - param0, false);
@@ -177,17 +177,17 @@ final class tv extends UiComponent {
         int var4 = -param2;
         int var5 = -param2;
         if (this.field_tb != null) {
-          var4 = this.field_tb.b((byte) 69);
+          var4 = this.field_tb.measureNaturalWidth((byte) 69);
         }
         if (param1 == 16474) {
           if (this.field_vb != null) {
-            var5 = this.field_vb.b((byte) 69);
+            var5 = this.field_vb.measureNaturalWidth((byte) 69);
           }
           return var4 + (param0 + param2 + var5 + param0);
         }
         tv.releaseStatics(-53);
         if (this.field_vb != null) {
-          var5 = this.field_vb.b((byte) 69);
+          var5 = this.field_vb.measureNaturalWidth((byte) 69);
         }
         return var4 + (param0 + param2 + var5 + param0);
     }

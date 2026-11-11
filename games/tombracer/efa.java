@@ -9,7 +9,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
     private FocusableWidget field_B;
     private FocusableWidget field_A;
 
-    private final boolean a(int param0, ValidationProvider param1) {
+    private final boolean isFieldValid(int param0, ValidationProvider param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         it var4 = null;
@@ -82,7 +82,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
             return;
           }
           var7 = (ValidationProvider) null;
-          discarded$0 = this.a(-113, (ValidationProvider) null);
+          discarded$0 = this.isFieldValid(-113, (ValidationProvider) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,7 +113,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         this.field_A = new FocusableWidget(nf.field_j, (WidgetListener) null);
         this.field_B = new FocusableWidget(mq.field_d, (WidgetListener) null);
         this.field_z.field_q = rma.field_a;
-        this.field_z.a(-13861, new tf(this.field_z));
+        this.field_z.setValidationSource(-13861, new tf(this.field_z));
         this.field_A.field_y = false;
         this.field_A.field_r = (WidgetPainter) ((Object) new td());
         this.field_B.field_r = (WidgetPainter) ((Object) new kaa());
@@ -298,7 +298,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
     }
 
     private final boolean b(boolean param0) {
-        if (!this.a(-66, this.field_z)) {
+        if (!this.isFieldValid(-66, this.field_z)) {
           return false;
         }
         if (!param0) {

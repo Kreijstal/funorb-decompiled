@@ -10,7 +10,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
           HardwareTurbulentWaterNoise.createDecodedSprites(-62);
         }
         String var2 = (String) null;
-        pr.a(0, "", (String) null);
+        pr.showLoginForm(0, "", (String) null);
     }
 
     final void writeVoxel(int param0, boolean param1, byte param2) {

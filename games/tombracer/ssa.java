@@ -12,7 +12,7 @@ final class ssa {
     private iea field_f;
     private ToolkitSprite field_e;
 
-    final static void a(String param0, byte param1, Throwable param2) {
+    final static void reportClientError(String param0, byte param1, Throwable param2) {
         try {
           PlatformTaskDispatcher stackIn_16_0;
           java.net.URL stackIn_16_1;
@@ -287,7 +287,7 @@ final class ssa {
         }
     }
 
-    final static void b(int param0) {
+    final static void clearMeshDepthBucketCounts(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;

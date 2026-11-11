@@ -9,7 +9,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
     private boolean field_B;
     static long field_z;
 
-    final static Sprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static Sprite[] loadRgbSprites(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite[] stackIn_6_0 = null;
@@ -785,7 +785,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
           return;
         }
         var7 = (ResourceArchive) null;
-        ScrollContainer.a(-19, (ResourceArchive) null, 56, -52);
+        ScrollContainer.loadRgbSprites(-19, (ResourceArchive) null, 56, -52);
     }
 
     final boolean handleMouseWheel(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {

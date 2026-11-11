@@ -291,7 +291,7 @@ final class BitPacketBuffer extends PacketBuffer {
           Room.field_k = param1;
           if (WeaponShooterBehaviour.field_r == Room.field_k) {
             if (FontMetrics.field_f == baa.field_e) {
-              baa.field_d.a(0, new ei[]{(ei) ((Object) kra.field_a)});
+              baa.field_d.a(0, new ei[]{(ei) ((Object) HuffmanCodec.field_a)});
             } else {
               if (tia.field_d == FontMetrics.field_f) {
                 baa.field_d.a(0, new ei[]{(ei) ((Object) DateInputWidget.field_z)});

@@ -65,7 +65,7 @@ final class cua {
           if (var2 == null) {
             AffineTransform3D.field_j.addLast((byte) -59, param0);
           } else {
-            PlatformComponent.a(var2, param0, (byte) -120);
+            PlatformComponent.insertBefore(var2, param0, (byte) -120);
           }
           var3 = 27 % ((-29 - param1) / 55);
           return;

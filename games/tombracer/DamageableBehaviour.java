@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DamageableBehaviour extends Behaviour {
-    private int field_r;
+    private int maxStunPoints;
     private FlagSet vulnerabilities;
     private int health;
     private int field_u;
-    private FlagSet field_A;
-    private boolean field_n;
+    private FlagSet healingEffectTypes;
+    private boolean targetsOwnTrap;
     static String field_x;
-    private int field_t;
+    private int stunTicks;
     private int field_p;
-    private int field_z;
+    private int maxHealth;
     private int field_q;
     private int field_y;
-    private int field_v;
+    private int stunPoints;
     static int[] field_o;
 
     final FlagSet getVulnerabilities(byte param0) {
@@ -24,7 +24,7 @@ final class DamageableBehaviour extends Behaviour {
 
     private final Trap getTargetTrap(int param0) {
         int var2 = -100 / ((48 - param0) / 57);
-        if (this.field_n) {
+        if (this.targetsOwnTrap) {
           return this.trap;
         }
         return this.getRoot(6);
@@ -66,11 +66,11 @@ final class DamageableBehaviour extends Behaviour {
             if (this.health <= 0) {
               this.destroyTarget((byte) 121);
             } else {
-              if (this.field_v > 0 &&
+              if (this.stunPoints > 0 &&
                 !this.getTargetTrap(-106).isFrozen((byte) -99)) {
-                this.field_v = this.field_v - param1.size;
-                if (0 >= this.field_v) {
-                  this.d(true);
+                this.stunPoints = this.stunPoints - param1.size;
+                if (0 >= this.stunPoints) {
+                  this.stunTarget(true);
                 }
               }
             }
@@ -78,10 +78,10 @@ final class DamageableBehaviour extends Behaviour {
             return stackIn_15_0;
           }
           if (0 < this.health &&
-            this.a((byte) -94, var3_int)) {
+            this.isHealedBy((byte) -94, var3_int)) {
             this.health = this.health + param1.size;
-            if (this.health > this.field_z) {
-              this.health = this.field_z;
+            if (this.health > this.maxHealth) {
+              this.health = this.maxHealth;
             }
             stackIn_22_0 = param1.size;
             return stackIn_22_0;
@@ -109,14 +109,14 @@ final class DamageableBehaviour extends Behaviour {
           super.attachToTrap(param0, param1);
           for (var3_int = 0; var3_int < 6; var3_int++) {
             if (this.vulnerabilities.get(0, var3_int) ||
-              this.field_A.get(0, var3_int)) {
+              this.healingEffectTypes.get(0, var3_int)) {
               param1.setHandlesEffectType(26492, true, var3_int);
             }
           }
           this.field_p = this.field_y;
-          this.field_v = this.field_r;
+          this.stunPoints = this.maxStunPoints;
           this.field_q = this.field_u;
-          this.health = this.field_z;
+          this.health = this.maxHealth;
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "cu.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -131,27 +131,27 @@ final class DamageableBehaviour extends Behaviour {
 
     private final boolean isVulnerableTo(int param0, byte param1) {
         if (param1 != 10) {
-          this.field_v = 0;
+          this.stunPoints = 0;
           return this.vulnerabilities.get(0, param0);
         }
         return this.vulnerabilities.get(0, param0);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        this.field_r = param0;
+    final void setStunParameters(int param0, int param1, int param2, int param3) {
+        this.maxStunPoints = param0;
         this.field_y = param1;
         if (param2 < 29) {
           return;
         }
-        this.field_t = param3;
+        this.stunTicks = param3;
     }
 
-    private final void d(boolean param0) {
+    private final void stunTarget(boolean param0) {
         if (!param0) {
           return;
         }
-        this.field_v = this.field_r;
-        this.getTargetTrap(110).setFreezeTicks(this.field_t, -127);
+        this.stunPoints = this.maxStunPoints;
+        this.getTargetTrap(110).setFreezeTicks(this.stunTicks, -127);
     }
 
     final int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
@@ -209,10 +209,10 @@ final class DamageableBehaviour extends Behaviour {
         if (this.field_p > 0) {
           this.field_p = this.field_p - 1;
           if (this.field_p == 0) {
-            this.field_v = this.field_v + 1;
+            this.stunPoints = this.stunPoints + 1;
             this.field_p = this.field_y;
-            if (this.field_r < this.field_v) {
-              this.field_v = this.field_r;
+            if (this.maxStunPoints < this.stunPoints) {
+              this.stunPoints = this.maxStunPoints;
             }
           }
         }
@@ -221,8 +221,8 @@ final class DamageableBehaviour extends Behaviour {
           if (this.field_q == 0) {
             this.health = this.health + 1;
             this.field_q = this.field_u;
-            if (this.health > this.field_z) {
-              this.health = this.field_z;
+            if (this.health > this.maxHealth) {
+              this.health = this.maxHealth;
             }
           }
         }
@@ -270,14 +270,14 @@ final class DamageableBehaviour extends Behaviour {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -127, !this.field_n ? 0 : 1, 1);
-          param1.writeBits((byte) -29, this.field_r, 8);
-          param1.writeBits((byte) -127, this.field_z, 8);
+          param1.writeBits((byte) -127, !this.targetsOwnTrap ? 0 : 1, 1);
+          param1.writeBits((byte) -29, this.maxStunPoints, 8);
+          param1.writeBits((byte) -127, this.maxHealth, 8);
           param1.writeBits((byte) -128, this.field_u, 4);
           param1.writeBits((byte) -126, this.field_y, 4);
-          param1.writeBits((byte) 107, this.field_t, 8);
+          param1.writeBits((byte) 107, this.stunTicks, 8);
           this.vulnerabilities.encode(param1, (byte) -120);
-          this.field_A.encode(param1, (byte) -120);
+          this.healingEffectTypes.encode(param1, (byte) -120);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "cu.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -287,15 +287,15 @@ final class DamageableBehaviour extends Behaviour {
         super(param0, param1);
         try {
           this.field_u = 0;
-          this.field_r = 25;
-          this.field_t = 25;
-          this.field_z = 50;
+          this.maxStunPoints = 25;
+          this.stunTicks = 25;
+          this.maxHealth = 50;
           this.field_y = 10;
-          this.field_n = false;
+          this.targetsOwnTrap = false;
           this.vulnerabilities = new FlagSet(6);
           this.vulnerabilities.set(3, -17075, true);
           this.vulnerabilities.set(0, -17075, true);
-          this.field_A = new FlagSet(6);
+          this.healingEffectTypes = new FlagSet(6);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "cu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -367,47 +367,47 @@ final class DamageableBehaviour extends Behaviour {
     DamageableBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_n = param1.readBits((byte) 44, 1) == 1 ? true : false;
-          this.field_r = param1.readBits((byte) 44, 8);
-          this.field_z = param1.readBits((byte) 44, 8);
+          this.targetsOwnTrap = param1.readBits((byte) 44, 1) == 1 ? true : false;
+          this.maxStunPoints = param1.readBits((byte) 44, 8);
+          this.maxHealth = param1.readBits((byte) 44, 8);
           this.field_u = param1.readBits((byte) 44, 4);
           this.field_y = param1.readBits((byte) 44, 4);
-          this.field_t = param1.readBits((byte) 44, 8);
+          this.stunTicks = param1.readBits((byte) 44, 8);
           this.vulnerabilities = new FlagSet(6, param0.formatVersion, param1);
-          this.field_A = new FlagSet(6, param0.formatVersion, param1);
+          this.healingEffectTypes = new FlagSet(6, param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "cu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    private final boolean a(byte param0, int param1) {
+    private final boolean isHealedBy(byte param0, int param1) {
         int var3 = -126 / ((19 - param0) / 56);
-        return this.field_A.get(0, param1);
+        return this.healingEffectTypes.get(0, param1);
     }
 
     final int hashState(int param0, int param1) {
         param0 = CurveOperator.mixHash((byte) 27, param0, this.health);
         if (param1 < -48) {
-          param0 = CurveOperator.mixHash((byte) 59, param0, this.field_v);
+          param0 = CurveOperator.mixHash((byte) 59, param0, this.stunPoints);
           return param0;
         }
         return 119;
     }
 
-    final void b(byte param0, boolean param1) {
+    final void setTargetsOwnTrap(byte param0, boolean param1) {
         if (param0 == 0) {
-          this.field_n = param1 ? true : false;
+          this.targetsOwnTrap = param1 ? true : false;
           return;
         }
         this.destroyTarget((byte) -127);
-        this.field_n = param1 ? true : false;
+        this.targetsOwnTrap = param1 ? true : false;
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setHealthParameters(int param0, int param1, int param2) {
         if (param2 != 0) {
           return;
         }
-        this.field_z = param1;
+        this.maxHealth = param1;
         this.field_u = param0;
     }
 

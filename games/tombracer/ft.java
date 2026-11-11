@@ -46,7 +46,7 @@ final class ft {
         }
     }
 
-    final static void a(TriangleMesh param0, int param1, int[] param2, int[] param3, boolean param4, boolean param5, boolean param6) {
+    final static void projectMeshAndQueueFaces(TriangleMesh param0, int param1, int[] param2, int[] param3, boolean param4, boolean param5, boolean param6) {
         int stackIn_69_0 = 0;
         int stackIn_69_1 = 0;
         RuntimeException stackIn_74_0 = null;
@@ -230,7 +230,7 @@ final class ft {
             }
             break;
           }
-          ck.a(stackIn_69_0, stackIn_69_1 != 0, param0, param1 ^ -1251095052, var8);
+          ck.sortMeshFaces(stackIn_69_0, stackIn_69_1 != 0, param0, param1 ^ -1251095052, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

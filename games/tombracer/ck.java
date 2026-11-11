@@ -111,11 +111,11 @@ final class ck {
           LightSource.field_h = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
           ShaderEffect.field_b = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           bsa.field_j = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), rfa.field_C, DateFieldsWidget.field_F);
-          RasterShape.field_e.b(-126, LightSource.field_h);
+          RasterShape.field_e.addChild(-126, LightSource.field_h);
           if (UnlockOverlay.field_p) {
-            RasterShape.field_e.b(param11 - 25575, ShaderEffect.field_b);
+            RasterShape.field_e.addChild(param11 - 25575, ShaderEffect.field_b);
           }
-          RasterShape.field_e.b(-127, bsa.field_j);
+          RasterShape.field_e.addChild(-127, bsa.field_j);
           bsa.field_j.field_vb.applyStyle(false, Corpse.field_i);
           var15 = bsa.field_j.field_vb;
           bsa.field_j.field_vb.field_bb = 1;
@@ -149,28 +149,28 @@ final class ck {
           }
           CharacterChoiceFactory.field_c = new UiComponent(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
           OpenGlToolkit.field_fd = new UiComponent(0L, (UiComponent) null);
-          OpenGlToolkit.field_fd.b(-126, C2SChooseCharacterPacket.field_a);
-          OpenGlToolkit.field_fd.b(param11 ^ -25371, Obstacle.field_s);
-          Obstacle.field_s.b(-124, gta.field_b);
-          Obstacle.field_s.b(-126, RandomBrickOperator.field_r);
-          Obstacle.field_s.b(-127, RotateLocomotor.field_o);
+          OpenGlToolkit.field_fd.addChild(-126, C2SChooseCharacterPacket.field_a);
+          OpenGlToolkit.field_fd.addChild(param11 ^ -25371, Obstacle.field_s);
+          Obstacle.field_s.addChild(-124, gta.field_b);
+          Obstacle.field_s.addChild(-126, RandomBrickOperator.field_r);
+          Obstacle.field_s.addChild(-127, RotateLocomotor.field_o);
           if (UnlockOverlay.field_p) {
-            Obstacle.field_s.b(-128, MidiPcmStream.field_K);
+            Obstacle.field_s.addChild(-128, MidiPcmStream.field_K);
           }
-          Obstacle.field_s.b(-123, MirrorComponent.field_I);
-          Obstacle.field_s.b(-128, cq.field_e);
-          Obstacle.field_s.b(-122, nsa.field_i);
+          Obstacle.field_s.addChild(-123, MirrorComponent.field_I);
+          Obstacle.field_s.addChild(-128, cq.field_e);
+          Obstacle.field_s.addChild(-122, nsa.field_i);
           if (UnlockOverlay.field_p) {
-            OpenGlToolkit.field_fd.b(-124, TileRenderable.field_c);
+            OpenGlToolkit.field_fd.addChild(-124, TileRenderable.field_c);
           }
-          OpenGlToolkit.field_fd.b(-124, CharacterChoiceFactory.field_c);
+          OpenGlToolkit.field_fd.addChild(-124, CharacterChoiceFactory.field_c);
           rv.field_c = new UiComponent(0L, Corpse.field_i);
           rv.field_c.field_bb = 0;
           rv.field_c.field_z = 1;
           BrickOperator.field_v = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, nf.field_j.toUpperCase());
           VboVertexArray.field_k = new UiComponent(0L, WallModel.field_r);
-          VboVertexArray.field_k.b(param11 - 25572, rv.field_c);
-          VboVertexArray.field_k.b(-122, BrickOperator.field_v);
+          VboVertexArray.field_k.addChild(param11 - 25572, rv.field_c);
+          VboVertexArray.field_k.addChild(-122, BrickOperator.field_v);
           HazardModel.field_t = new UiComponent(0L, rfa.field_C);
           HazardModel.field_t.applyStyle(false, Corpse.field_i);
           HazardModel.field_t.field_bb = 1;
@@ -182,12 +182,12 @@ final class ck {
           uaa.field_b = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
           RopeBridgeComponent.field_F = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           tn.field_n = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), rfa.field_C, DateFieldsWidget.field_F);
-          RoomRegion.field_l.b(param11 ^ -25371, cea.field_a);
-          RoomRegion.field_l.b(-124, uaa.field_b);
+          RoomRegion.field_l.addChild(param11 ^ -25371, cea.field_a);
+          RoomRegion.field_l.addChild(-124, uaa.field_b);
           if (UnlockOverlay.field_p) {
-            RoomRegion.field_l.b(-122, RopeBridgeComponent.field_F);
+            RoomRegion.field_l.addChild(-122, RopeBridgeComponent.field_F);
           }
-          RoomRegion.field_l.b(-124, tn.field_n);
+          RoomRegion.field_l.addChild(-124, tn.field_n);
           bc.field_b = new UiComponent(0L, ssa.field_g, OpenGlSprite.field_k.toUpperCase());
           StatusEffect.field_g = new UiComponent(0L, CharacterSelectPhase.field_s);
           C2SSubmitSettingsPacket.field_g = new UiComponent(0L, CommonChooseReward.field_c);
@@ -325,9 +325,9 @@ final class ck {
           var17 = stackIn_98_0Lifetime1;
           ((UiComponent) (var17)).field_z = 1;
           dka.field_b = new UiComponent(0L, (UiComponent) null);
-          dka.field_b.b(param11 ^ -25373, StatusEffect.field_g);
-          dka.field_b.b(-128, C2SSubmitSettingsPacket.field_g);
-          C2SSubmitSettingsPacket.field_g.b(-122, qna.field_b);
+          dka.field_b.addChild(param11 ^ -25373, StatusEffect.field_g);
+          dka.field_b.addChild(-128, C2SSubmitSettingsPacket.field_g);
+          C2SSubmitSettingsPacket.field_g.addChild(-122, qna.field_b);
           var18Lifetime1 = 0;
           while (var18Lifetime1 < 4 + param0) {
             if (var21 != 0) {
@@ -338,20 +338,20 @@ final class ck {
               var21 != 0) && (var18Lifetime1 != 3 ||
               !(MirrorMoverLocomotor.field_r <= 1) ||
               var21 != 0)) {
-              C2SSubmitSettingsPacket.field_g.b(-123, SimpleConditionBehaviour.field_p[var18Lifetime1]);
+              C2SSubmitSettingsPacket.field_g.addChild(-123, SimpleConditionBehaviour.field_p[var18Lifetime1]);
               var19 = 0;
               while (!(var19 >= bf.field_b[var18Lifetime1].length)) {
                 if (null != bf.field_b[var18Lifetime1][var19]) {
-                  C2SSubmitSettingsPacket.field_g.b(-124, bf.field_b[var18Lifetime1][var19]);
+                  C2SSubmitSettingsPacket.field_g.addChild(-124, bf.field_b[var18Lifetime1][var19]);
                 }
                 var19++;
               }
             }
             var18Lifetime1++;
           }
-          dka.field_b.b(-128, pk.field_z);
-          dka.field_b.b(-125, hw.field_a);
-          dka.field_b.b(-123, MessageOverlay.field_t);
+          dka.field_b.addChild(-128, pk.field_z);
+          dka.field_b.addChild(-125, hw.field_a);
+          dka.field_b.addChild(-123, MessageOverlay.field_t);
           S2CEventPacket.field_e = new UiComponent(0L, OpenGlTransform3D.field_f, eu.field_b.toUpperCase());
           Trap.field_q = new UiComponent(0L, OpenGlEnvironmentWaterEffect.field_i, ej.field_b.toUpperCase());
           return;
@@ -429,7 +429,7 @@ final class ck {
         }
     }
 
-    final static void a(int param0, boolean param1, TriangleMesh param2, int param3, int param4) {
+    final static void sortMeshFaces(int param0, boolean param1, TriangleMesh param2, int param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_22_0 = 0;
@@ -469,10 +469,10 @@ final class ck {
           var5_int = CauldronComponent.bitLength((byte) 93, 3 * (param4 - param0));
           var6 = 3 * param0;
           var7 = -10 + var5_int;
-          td.b((byte) -62);
+          td.clearFaceDepthBuckets((byte) -62);
           if (param2.field_K > 0 &&
             param2.field_q != null) {
-            ssa.b(0);
+            ssa.clearMeshDepthBucketCounts(0);
           }
           CharacterChoiceFactory.field_f = 0;
           var8 = 0;

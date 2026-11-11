@@ -139,7 +139,7 @@ final class RasterizerOperator extends TextureOperator {
           int var1_int = 0;
           int var3 = TombRacer.field_G ? 1 : 0;
           if (null != wg.field_l) {
-            wg.field_l.a(param0 - 21);
+            wg.field_l.closeSocket(param0 - 21);
           }
           if (param0 != 0) {
             return;

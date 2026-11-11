@@ -32,7 +32,7 @@ final class ContextMenu extends UiComponent {
         if (this.field_zb == 0) {
           this.field_Db[this.field_zb] = new tv(0L, (UiComponent) null, (UiComponent) null, this.field_ub, (Sprite) null, LegacyOpenGlTurbulentTextureEffect.field_c);
           this.field_Db[this.field_zb].field_bb = 1;
-          this.b(-128, this.field_Db[this.field_zb]);
+          this.addChild(-128, this.field_Db[this.field_zb]);
           this.field_Fb[this.field_zb] = -1;
           this.field_zb = this.field_zb + 1;
         }
@@ -148,7 +148,7 @@ final class ContextMenu extends UiComponent {
         try {
           this.field_Db[this.field_zb].field_eb = true;
           this.field_Db[this.field_zb].field_bb = 1;
-          this.b(-125, this.field_Db[this.field_zb]);
+          this.addChild(-125, this.field_Db[this.field_zb]);
           this.field_Fb[this.field_zb] = param1;
           this.field_zb = this.field_zb + 1;
         } catch (RuntimeException runtimeException) {
@@ -165,7 +165,7 @@ final class ContextMenu extends UiComponent {
           }
           this.field_Db[this.field_zb].field_eb = true;
           this.field_Db[this.field_zb].field_bb = 1;
-          this.b(-128, this.field_Db[this.field_zb]);
+          this.addChild(-128, this.field_Db[this.field_zb]);
           this.field_Fb[this.field_zb] = param1;
           this.field_zb = this.field_zb + 1;
         } catch (RuntimeException runtimeException) {

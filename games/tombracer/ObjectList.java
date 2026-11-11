@@ -51,12 +51,12 @@ final class ObjectList {
           var1 = TrackPlayerLocomotor.field_s.startTraversal(16);
           while (var1 != null) {
             var1.unlinkSecondary(-7975);
-            var1 = TrackPlayerLocomotor.field_s.a((byte) -112);
+            var1 = TrackPlayerLocomotor.field_s.nextInTraversal((byte) -112);
           }
           var1Lifetime1 = CoinItemComponent.field_G.startTraversal(param0 - 120);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary(-7975);
-            var1Lifetime1 = CoinItemComponent.field_G.a((byte) -112);
+            var1Lifetime1 = CoinItemComponent.field_G.nextInTraversal((byte) -112);
           }
           UiWidget.field_g = 0;
         } catch (RuntimeException runtimeException) {

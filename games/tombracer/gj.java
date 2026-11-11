@@ -51,15 +51,15 @@ final class gj {
           MatchScreen.field_F = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
           Puddle.field_v = new UiComponent(0L, SecondaryNodeDeque.field_b, C2SChooseCharacterPacket.field_c);
           ita.field_c = new UiComponent(0L, PressureSwitchBehaviour.field_p);
-          dqa.field_e.b(-122, is.field_yb);
-          dqa.field_e.b(-126, MatchScreen.field_F);
+          dqa.field_e.addChild(-122, is.field_yb);
+          dqa.field_e.addChild(-126, MatchScreen.field_F);
           if (!param1) {
             var4 = (ResourceArchive) null;
             gj.loadBasicSprites((ResourceArchive) null, true);
           }
-          dqa.field_e.b(-123, Puddle.field_v);
-          dqa.field_e.b(-123, dn.field_b);
-          dqa.field_e.b(-125, ita.field_c);
+          dqa.field_e.addChild(-123, Puddle.field_v);
+          dqa.field_e.addChild(-123, dn.field_b);
+          dqa.field_e.addChild(-125, ita.field_c);
           stackIn_4_0 = dn.field_b.field_vb.field_vb;
           stackIn_5_1 = !(param1);
           ((UiComponent) (Object) stackIn_4_0).applyStyle(stackIn_5_1, Corpse.field_i);

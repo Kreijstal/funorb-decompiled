@@ -39,7 +39,7 @@ final class nt {
               var9 = (java.applet.Applet) null;
               nt.reloadPage((java.applet.Applet) null, 34);
             }
-            var8 = IntrusiveDequeCursor.field_a.a((SectorCacheStore) (var7), param0, (SectorCacheStore) (var6), param4, param2 ^ 5167);
+            var8 = IntrusiveDequeCursor.field_a.getArchiveSource((SectorCacheStore) (var7), param0, (SectorCacheStore) (var6), param4, param2 ^ 5167);
             if (param3) {
               var8.a((byte) 115);
             }

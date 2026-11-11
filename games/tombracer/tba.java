@@ -11,7 +11,7 @@ final class tba extends IntrusiveNode {
     int field_h;
     static String field_g;
 
-    final static Sprite[] a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
+    final static Sprite[] createGradientPanelSprites(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
         Sprite var20 = null;
         Sprite var21 = null;
         Sprite var22 = null;

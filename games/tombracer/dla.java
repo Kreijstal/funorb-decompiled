@@ -19,7 +19,7 @@ final class dla {
     int field_a;
     byte[][] field_h;
 
-    private final void a(int param0, byte[] param1) {
+    private final void decodeIndex(int param0, byte[] param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int[] array$2 = null;
@@ -301,7 +301,7 @@ final class dla {
     final static void b(int param0) {
         if (vo.field_b) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
-          rua.field_gb.b(36, false);
+          rua.field_gb.drawFullScreen(36, false);
         }
         if (param0 != 23713) {
           dla.getLoadingPercent(120);
@@ -326,7 +326,7 @@ final class dla {
               }
             }
           }
-          this.a(-23918, param0);
+          this.decodeIndex(-23918, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "dla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

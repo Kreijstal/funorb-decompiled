@@ -20,7 +20,7 @@ final class PlayPhase extends MatchPhase {
         }
         var3 = this.screen.getViewedPlayerIndex(115);
         if (this.field_o &&
-          this.matchState.g(0)) {
+          this.matchState.isAwaitingFirstTick(0)) {
           this.g(param0 - 208);
         }
         if (this.field_q > 0) {
@@ -114,7 +114,7 @@ final class PlayPhase extends MatchPhase {
         var14 = TombRacer.field_G ? 1 : 0;
         var3 = this.screen.getViewedPlayerIndex(81);
         this.viewports[var3].b(23479);
-        if (!this.screen.f((byte) 33)) {
+        if (!this.screen.isMenuBackgroundDemo((byte) 33)) {
           var4_int = 0;
           for (var5_int = 0; this.matchState.standings.order.length > var5_int; var5_int++) {
             if (this.matchState.standings.order[var5_int] == var3) {
@@ -161,7 +161,7 @@ final class PlayPhase extends MatchPhase {
             }
           }
         }
-        if (!this.screen.f((byte) 33) &&
+        if (!this.screen.isMenuBackgroundDemo((byte) 33) &&
           !this.screen.field_A) {
           if (this.screen.isSpectating((byte) 78)) {
             var4_intLifetime1 = 16;
@@ -333,7 +333,7 @@ final class PlayPhase extends MatchPhase {
           } else {
             if (param2 == 22) {
               var6.player.beginRoomExit(1, (byte) 113);
-              this.screen.l((byte) -38);
+              this.screen.invalidateScore((byte) -38);
             }
           }
           if (param2 == 41) {
@@ -559,11 +559,11 @@ final class PlayPhase extends MatchPhase {
               bna.a(oca.field_a, false, PooledObject.field_f, ql.field_k, jg.field_a);
               ql.field_k.backpatchByteLength(ql.field_k.position - var9, (byte) -115);
             }
-            bl.a(-1, -1);
+            bl.flushPacketBuffer(-1, -1);
             ProceduralTexture.field_p = Player.field_p;
           }
           if (Player.field_p == ProceduralTexture.field_p &&
-            LegacyRidgedWaterNoise.a(1, -1)) {
+            LegacyRidgedWaterNoise.ensureGamePacketBytes(1, -1)) {
             var9Lifetime1 = WeaveOperator.field_q.readUnsignedByte(255);
             WeaveOperator.field_q.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -580,7 +580,7 @@ final class PlayPhase extends MatchPhase {
                 return stackIn_33_0;
               }
               if (99 == var9Lifetime1) {
-                LegacyRidgedWaterNoise.a(FleeLocomotor.f(1), -1);
+                LegacyRidgedWaterNoise.ensureGamePacketBytes(FleeLocomotor.f(1), -1);
                 kia.field_b = new Boolean(di.readBoolean(WeaveOperator.field_q, (byte) 107));
                 WeaveOperator.field_q.position = 0;
               } else {
@@ -592,10 +592,10 @@ final class PlayPhase extends MatchPhase {
           }
           if (ProceduralTexture.field_p == ne.field_c) {
             var9Lifetime2 = 2;
-            if (LegacyRidgedWaterNoise.a(var9Lifetime2, -1)) {
+            if (LegacyRidgedWaterNoise.ensureGamePacketBytes(var9Lifetime2, -1)) {
               var10Lifetime1 = WeaveOperator.field_q.readUnsignedShort(124);
               WeaveOperator.field_q.position = 0;
-              if (LegacyRidgedWaterNoise.a(var10Lifetime1, -1)) {
+              if (LegacyRidgedWaterNoise.ensureGamePacketBytes(var10Lifetime1, -1)) {
                 var11 = PressureSwitchBehaviour.field_s.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   PressureSwitchBehaviour.field_s[var12] = WeaveOperator.field_q.readVersionedString(121);
@@ -692,7 +692,7 @@ final class PlayPhase extends MatchPhase {
           }
           var5 = new WhirlpoolDigest();
           var5.b((byte) -6);
-          var5.a(var4, (long)(param3 * param0), (byte) -59);
+          var5.updateBits(var4, (long)(param3 * param0), (byte) -59);
           var6 = new byte[64];
           var5.finishDigest(0, param3 ^ 40, var6);
           stackIn_7_0 = var6;
@@ -724,7 +724,7 @@ final class PlayPhase extends MatchPhase {
           for (var4 = 0; var4 < var3_int; var4++) {
             this.viewports[var4] = new PlayerViewport(this.screen, var4);
           }
-          if (!this.screen.f((byte) 33)) {
+          if (!this.screen.isMenuBackgroundDemo((byte) 33)) {
             if (this.screen.c(false)) {
               this.f(16);
             }

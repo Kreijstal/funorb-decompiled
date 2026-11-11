@@ -181,7 +181,7 @@ final class wq implements MessagePanel {
           var5 = (CharSequence) ((Object) param0);
           var4 = us.encodeCp1252(var5, false);
           param1.writeUnsignedSmart(var4.length, (byte) 111);
-          param1.position = param1.position + nma.field_m.a((byte) -109, param1.payload, param2, param1.position, var4.length, var4);
+          param1.position = param1.position + nma.field_m.encode((byte) -109, param1.payload, param2, param1.position, var4.length, var4);
           stackIn_1_0 = param1.position - var3_int;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

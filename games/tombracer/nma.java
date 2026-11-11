@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nma extends RasterShape {
-    static kra field_m;
+    static HuffmanCodec field_m;
     private int field_g;
     private int field_h;
     private int field_k;
@@ -66,7 +66,7 @@ final class nma extends RasterShape {
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
-          field_m = (kra) null;
+          field_m = (HuffmanCodec) null;
           field_l = null;
           field_m = null;
           return;
@@ -130,7 +130,7 @@ final class nma extends RasterShape {
           }
           return var2Lifetime1;
         }
-        field_m = (kra) null;
+        field_m = (HuffmanCodec) null;
         var2Lifetime2 = 2;
         if (param1 < -65536) {
           var2Lifetime2 += 16;

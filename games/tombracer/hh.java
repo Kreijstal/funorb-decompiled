@@ -16,10 +16,10 @@ final class hh {
     final static void a(int param0, boolean param1) {
         if (param0 != 40) {
           field_a = (String[]) null;
-          SimpleMoveLocomotor.field_s.b(108, param1);
+          SimpleMoveLocomotor.field_s.drawFullScreen(108, param1);
           return;
         }
-        SimpleMoveLocomotor.field_s.b(108, param1);
+        SimpleMoveLocomotor.field_s.drawFullScreen(108, param1);
     }
 
     public static void releaseStatics(boolean param0) {

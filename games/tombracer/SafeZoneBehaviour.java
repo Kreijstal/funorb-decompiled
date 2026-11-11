@@ -117,18 +117,18 @@ final class SafeZoneBehaviour extends Behaviour {
           this.field_r = true;
           var2 = this.getPlayer((byte) 19);
           if (this.field_t) {
-            var2.i(true);
+            var2.setPendingTimeFreeze(true);
           }
           if (this.field_o) {
             var2.requestHidden((byte) 28);
             if (this.field_v) {
-              var2.n(21120);
+              var2.requestSafeZone(21120);
               return;
             }
             return;
           }
           if (this.field_v) {
-            var2.n(21120);
+            var2.requestSafeZone(21120);
             return;
           }
           return;

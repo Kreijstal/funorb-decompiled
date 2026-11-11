@@ -376,7 +376,7 @@ final class SectorCacheStore {
 
     final static void sendRoomAbandonedStat(Room param0, int param1, MatchState param2) {
         if (TextWidgetPainter.a(112) ||
-          param2.k(-25319)) {
+          param2.isMenuBackgroundDemo(-25319)) {
           return;
         }
         if (!(param0.getId((byte) -82) >= 0)) {

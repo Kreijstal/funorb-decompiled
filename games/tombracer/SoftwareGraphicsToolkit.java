@@ -221,7 +221,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         int var5 = 0;
         TextureMetadata var6 = null;
         int var2 = param0 - this.field_j;
-        Object var3 = this.field_F.b((byte) 85);
+        Object var3 = this.field_F.firstValue((byte) 85);
         while (var3 != null) {
           var4 = (ScrollingTexturePixels) (var3);
           if (var4.field_g) {
@@ -234,7 +234,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             }
             var4.field_g = false;
           }
-          var3 = this.field_F.a((byte) 60);
+          var3 = this.field_F.nextValue((byte) 60);
         }
         this.field_j = param0;
         this.field_X.demoteOldEntries(72, 5);
@@ -444,7 +444,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         int var5 = 0;
         var3 = this.field_F;
         synchronized (var3) {
-          var2 = (ScrollingTexturePixels) (this.field_F.a((byte) 92, (long)param0 | -9223372036854775808L));
+          var2 = (ScrollingTexturePixels) (this.field_F.get((byte) 92, (long)param0 | -9223372036854775808L));
           if (var2 == null) {
             if (!this.field_c.isTextureReady(param0, (byte) 41)) {
               stackIn_4_0 = null;
@@ -1082,7 +1082,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         if (param6 != 65535 &&
           !this.field_c.metadata((byte) -7, param6).field_p) {
           if (this.field_v != param6) {
-            var11 = (ToolkitSprite) (this.field_X.a((byte) 75, (long)param6));
+            var11 = (ToolkitSprite) (this.field_X.get((byte) 75, (long)param6));
             if (var11 == null) {
               var16 = this.h(param6);
               var14 = var16;
@@ -1126,7 +1126,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         if (param6 != 65535 &&
           !this.field_c.metadata((byte) 5, param6).field_p) {
           if (this.field_v != param6) {
-            var11 = (ToolkitSprite) (this.field_X.a((byte) 55, (long)param6));
+            var11 = (ToolkitSprite) (this.field_X.get((byte) 55, (long)param6));
             if (var11 == null) {
               var16 = this.h(param6);
               var14 = var16;

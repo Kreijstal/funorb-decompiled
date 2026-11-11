@@ -161,7 +161,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean b(int param0, String param1) {
+    private final boolean passwordContainsEmailPart(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -236,7 +236,7 @@ final class PasswordValidator extends TextFieldValidator {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (ld.a(false, var5)) {
+          if (ld.isPasswordLengthInvalid(false, var5)) {
             stackIn_5_0 = dva.field_a;
             return stackIn_5_0;
           }
@@ -248,7 +248,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_11_0 = PlayerModel.field_e;
             return stackIn_11_0;
           }
-          if (this.b(-37, param1)) {
+          if (this.passwordContainsEmailPart(-37, param1)) {
             stackIn_15_0 = waa.field_e;
             return stackIn_15_0;
           }
@@ -327,7 +327,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_10_0 = fp.field_c;
             return stackIn_10_0;
           }
-          if (!this.b(param0 - 123, param1)) {
+          if (!this.passwordContainsEmailPart(param0 - 123, param1)) {
             return LightSource.field_k;
           }
           stackIn_14_0 = fp.field_c;

@@ -11,13 +11,13 @@ final class PitSnake extends IntrusiveNode {
     static String field_v;
     private boolean field_l;
     static int[] field_t;
-    private int field_r;
+    private int offsetY;
     private int field_s;
-    private int field_n;
-    private int field_f;
+    private int offsetX;
+    private int direction;
     private int field_h;
     private int field_p;
-    private int field_q;
+    private int size;
     private int cooldownTicks;
     private int field_o;
 
@@ -27,11 +27,11 @@ final class PitSnake extends IntrusiveNode {
         this.cooldownTicks = 0;
     }
 
-    final int f(int param0) {
+    final int getOffsetY(int param0) {
         if (param0 != 0) {
           this.field_l = true;
         }
-        return this.field_r;
+        return this.offsetY;
     }
 
     final void tick(int param0, int param1, int param2, int param3, byte param4, Trap param5, Room param6) {
@@ -67,7 +67,7 @@ final class PitSnake extends IntrusiveNode {
           var9 = this.isScared(0) ? 1 : 0;
           var10 = this.h(21302) ? 1 : 0;
           if (param4 > -55) {
-            this.g(-9);
+            this.getSize(-9);
           }
           var11 = 0;
           if (var9 == 0 &&
@@ -97,8 +97,8 @@ final class PitSnake extends IntrusiveNode {
           }
           if (this.field_l) {
             var12 = 65536;
-            this.field_s = var12 * ne.field_f[this.field_f][0];
-            this.field_p = var12 * ne.field_f[this.field_f][1];
+            this.field_s = var12 * ne.field_f[this.direction][0];
+            this.field_p = var12 * ne.field_f[this.direction][1];
           }
           if (0 == this.field_s &&
             0 == this.field_p) {
@@ -109,19 +109,19 @@ final class PitSnake extends IntrusiveNode {
               var12Lifetime1 = 196608;
               var13 = var17.nextBounded(8, 0);
             }
-            this.field_f = var13;
-            this.field_s = var12Lifetime1 * ne.field_f[this.field_f][0];
-            this.field_p = ne.field_f[this.field_f][1] * var12Lifetime1;
+            this.direction = var13;
+            this.field_s = var12Lifetime1 * ne.field_f[this.direction][0];
+            this.field_p = ne.field_f[this.direction][1] * var12Lifetime1;
             if (0 < this.scaredTicks) {
               if (this.field_s != 0 &&
-                lw.signum(this.field_s, (byte) -87) == lw.signum(-this.field_n + this.field_u, (byte) -87)) {
+                lw.signum(this.field_s, (byte) -87) == lw.signum(-this.offsetX + this.field_u, (byte) -87)) {
                 this.field_s = -this.field_s;
-                this.field_f = EditableTextField.a(this.field_f, 6);
+                this.direction = EditableTextField.a(this.direction, 6);
               }
               if (this.field_p != 0 &&
-                lw.signum(this.field_p, (byte) -95) == lw.signum(this.field_m - this.field_r, (byte) -93)) {
+                lw.signum(this.field_p, (byte) -95) == lw.signum(this.field_m - this.offsetY, (byte) -93)) {
                 this.field_p = -this.field_p;
-                this.field_f = SweeperMountComponent.b(0, this.field_f);
+                this.direction = SweeperMountComponent.b(0, this.direction);
               }
             }
             if (0 != this.field_s &&
@@ -134,42 +134,42 @@ final class PitSnake extends IntrusiveNode {
           if (0 < this.scaredTicks) {
             this.scaredTicks = this.scaredTicks - 1;
           }
-          var12Lifetime2 = this.field_n;
-          this.field_n = this.field_n + this.field_s;
-          var13Lifetime1 = this.field_r;
-          this.field_r = this.field_r + this.field_p;
-          var14 = (-this.field_q + param1) / 2;
-          if (-var14 > this.field_n) {
-            this.field_n = -var14;
+          var12Lifetime2 = this.offsetX;
+          this.offsetX = this.offsetX + this.field_s;
+          var13Lifetime1 = this.offsetY;
+          this.offsetY = this.offsetY + this.field_p;
+          var14 = (-this.size + param1) / 2;
+          if (-var14 > this.offsetX) {
+            this.offsetX = -var14;
             this.field_h = 1;
           }
-          var15 = (-this.field_q + param2) / 2;
-          if (var14 < this.field_n) {
+          var15 = (-this.size + param2) / 2;
+          if (var14 < this.offsetX) {
             this.field_h = 1;
-            this.field_n = var14;
+            this.offsetX = var14;
           }
-          if (-var15 > this.field_r) {
-            this.field_r = -var15;
+          if (-var15 > this.offsetY) {
+            this.offsetY = -var15;
             this.field_h = 1;
           }
-          if (this.field_r > var15) {
+          if (this.offsetY > var15) {
             this.field_h = 1;
-            this.field_r = var15;
+            this.offsetY = var15;
           }
-          if (var12Lifetime2 == this.field_n &&
-            this.field_r == var13Lifetime1) {
+          if (var12Lifetime2 == this.offsetX &&
+            this.offsetY == var13Lifetime1) {
             return;
           }
-          if (param6.isBoxBlocked((Collidable) null, this.field_q, 2, 1, param3 + this.field_r, param0 + this.field_n, false, param5, this.field_q)) {
+          if (param6.isBoxBlocked((Collidable) null, this.size, 2, 1, param3 + this.offsetY, param0 + this.offsetX, false, param5, this.size)) {
             this.field_o = this.field_o + 2;
             this.field_o = MidiVoiceMixer.min(75, this.field_o, 125);
             if (this.h(21302)) {
-              this.field_n = (this.field_n - var12Lifetime2) / 4 + var12Lifetime2;
-              this.field_r = var13Lifetime1 + (-var13Lifetime1 + this.field_r) / 4;
+              this.offsetX = (this.offsetX - var12Lifetime2) / 4 + var12Lifetime2;
+              this.offsetY = var13Lifetime1 + (-var13Lifetime1 + this.offsetY) / 4;
             } else {
               this.field_p = 0;
-              this.field_n = var12Lifetime2;
-              this.field_r = var13Lifetime1;
+              this.offsetX = var12Lifetime2;
+              this.offsetY = var13Lifetime1;
               this.field_s = 0;
             }
           } else {
@@ -198,22 +198,22 @@ final class PitSnake extends IntrusiveNode {
         }
     }
 
-    final int g(int param0) {
+    final int getSize(int param0) {
         if (param0 != 0) {
           return -7;
         }
-        return this.field_q;
+        return this.size;
     }
 
     final void mirror(int param0) {
         int var2 = -1 / ((param0 - 75) / 51);
         this.field_s = -this.field_s;
-        this.field_n = -this.field_n;
+        this.offsetX = -this.offsetX;
         this.field_u = -this.field_u;
-        this.field_f = EditableTextField.a(this.field_f, 6);
+        this.direction = EditableTextField.a(this.direction, 6);
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, Player param4) {
+    final void updateAgainstPlayer(int param0, boolean param1, int param2, int param3, Player param4) {
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_29_0 = null;
@@ -257,15 +257,15 @@ final class PitSnake extends IntrusiveNode {
             var6_int != 0 &&
             param1 &&
             0 < this.field_g) {
-            var7Lifetime1 = param3 + this.field_n;
-            var8 = this.field_r + param2;
+            var7Lifetime1 = param3 + this.offsetX;
+            var8 = this.offsetY + param2;
             var9 = -var7Lifetime1 + param4.getX(3);
             var10 = -var8 + param4.getY(9648);
-            this.field_f = ConstrainToCircleLocomotor.toDirection8(var9, var10, -111);
+            this.direction = ConstrainToCircleLocomotor.toDirection8(var9, var10, -111);
             this.field_l = true;
           }
           if (param0 <= 98) {
-            this.d(5);
+            this.getDirection(5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -287,7 +287,7 @@ final class PitSnake extends IntrusiveNode {
           BitPacketBuffer.a(true, WeaponShooterBehaviour.field_r, PitModel.field_s);
           return 4;
         }
-        if (kra.field_a == baa.field_d.field_i.field_b) {
+        if (HuffmanCodec.field_a == baa.field_d.field_i.field_b) {
           return 0;
         }
         if (ControllerLocomotor.field_t == baa.field_d.field_i.field_b) {
@@ -312,11 +312,11 @@ final class PitSnake extends IntrusiveNode {
         return 5;
     }
 
-    final int a(byte param0) {
+    final int getOffsetX(byte param0) {
         if (param0 < 32) {
-          this.field_q = 85;
+          this.size = 85;
         }
-        return this.field_n;
+        return this.offsetX;
     }
 
     private final boolean h(int param0) {
@@ -348,11 +348,11 @@ final class PitSnake extends IntrusiveNode {
         field_j = null;
     }
 
-    final int d(int param0) {
+    final int getDirection(int param0) {
         if (param0 != 2) {
           this.field_u = 118;
         }
-        return this.field_f;
+        return this.direction;
     }
 
     final static int computeCrc32(byte[] param0, int param1, int param2, int param3) {
@@ -399,9 +399,9 @@ final class PitSnake extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -196609) {
-            this.field_r = 31;
+            this.offsetY = 31;
           }
-          stackIn_3_0 = io.centredBoxesOverlap(param1.getWidth(-28) / 2, this.field_r + param2, (byte) -63, param1.getHeight((byte) 55) / 2, this.field_n + param3, param1.getY(9648), this.field_q / 2, this.field_q / 2, param1.getX(3));
+          stackIn_3_0 = io.centredBoxesOverlap(param1.getWidth(-28) / 2, this.offsetY + param2, (byte) -63, param1.getHeight((byte) 55) / 2, this.offsetX + param3, param1.getY(9648), this.size / 2, this.size / 2, param1.getX(3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -420,7 +420,7 @@ final class PitSnake extends IntrusiveNode {
     private final void startCooldown(Room param0, int param1) {
         try {
           if (param1 > -72) {
-            this.g(-8);
+            this.getSize(-8);
           }
           this.cooldownTicks = 50 + param0.getRandom(-120).nextBounded(50, 0);
         } catch (RuntimeException runtimeException) {
@@ -430,7 +430,7 @@ final class PitSnake extends IntrusiveNode {
 
     final boolean isScared(int param0) {
         if (param0 != 0) {
-          this.g(-80);
+          this.getSize(-80);
         }
         return 0 < this.scaredTicks ? true : false;
     }
@@ -438,15 +438,15 @@ final class PitSnake extends IntrusiveNode {
     final boolean isCoolingDown(int param0) {
         if (param0 != 180) {
           Player var3 = (Player) null;
-          this.a(79, false, 55, 0, (Player) null);
+          this.updateAgainstPlayer(79, false, 55, 0, (Player) null);
         }
         return 0 < this.cooldownTicks ? true : false;
     }
 
     PitSnake(int param0, int param1, int param2) {
-        this.field_n = param0;
-        this.field_q = param2;
-        this.field_r = param1;
+        this.offsetX = param0;
+        this.size = param2;
+        this.offsetY = param1;
     }
 
     static {

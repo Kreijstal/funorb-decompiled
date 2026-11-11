@@ -57,9 +57,9 @@ final class hla extends UiComponent {
           this.field_wb = new UiComponent(0L, param4);
           this.field_yb.field_r = param5;
           this.field_wb.field_r = param6;
-          this.b(-124, this.field_vb);
-          this.b(-124, this.field_yb);
-          this.b(-126, this.field_wb);
+          this.addChild(-124, this.field_vb);
+          this.addChild(-124, this.field_yb);
+          this.addChild(-126, this.field_wb);
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "hla.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

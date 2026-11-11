@@ -4,7 +4,7 @@
 final class ed {
     static double field_a;
 
-    final static void a(int param0, ht param1, boolean param2, PacketBuffer param3) {
+    final static void decodeLobbyGame(int param0, ht param1, boolean param2, PacketBuffer param3) {
         int var8 = 0;
         ht stackIn_6_0 = null;
         boolean stackIn_7_1 = false;

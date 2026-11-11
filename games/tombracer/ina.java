@@ -163,7 +163,7 @@ final class ina {
         }
     }
 
-    private final void a(lt param0, int param1, int param2) {
+    private final void setLoadingProgress(lt param0, int param1, int param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -216,24 +216,24 @@ final class ina {
           var4 = this.field_h[this.field_g];
           var2 = var4;
           if (!var4.field_h.ensureIndex(-100)) {
-            this.a(var4, 22774, 0);
+            this.setLoadingProgress(var4, 22774, 0);
             return false;
           }
           if (var4.field_d >= 0 &&
             !var4.field_h.ensureGroupLoaded(var4.field_d, -2)) {
-            this.a(var2, param0 ^ 22739, var4.field_h.getGroupProgress(var4.field_d, (byte) 114));
+            this.setLoadingProgress(var2, param0 ^ 22739, var4.field_h.getGroupProgress(var4.field_d, (byte) 114));
             return false;
           }
           if (var4.field_g != null &&
             !var4.field_h.isGroupAvailableByName(var4.field_g, -125)) {
-            this.a(var2, 22774, var4.field_h.a(var4.field_g, true));
+            this.setLoadingProgress(var2, 22774, var4.field_h.a(var4.field_g, true));
             return false;
           }
           if (0 > var4.field_d &&
             null == var4.field_g &&
             var4.field_c != null &&
             !var4.field_h.areAllGroupsAvailable(0)) {
-            this.a(var2, 22774, var4.field_h.getOverallProgress(true));
+            this.setLoadingProgress(var2, 22774, var4.field_h.getOverallProgress(true));
             return false;
           }
           this.field_g = this.field_g + 1;

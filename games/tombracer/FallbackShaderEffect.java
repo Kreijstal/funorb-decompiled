@@ -42,7 +42,7 @@ final class FallbackShaderEffect extends ShaderEffect {
         field_e = null;
     }
 
-    final static void a(byte param0, boolean param1, boolean param2, int param3) {
+    final static void updateOpponentSearchControls(byte param0, boolean param1, boolean param2, int param3) {
         int stackIn_10_0 = 0;
         String stackIn_23_0 = null;
         UiComponent stackIn_34_0 = null;
@@ -159,7 +159,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                   sda.field_f[var13] = false;
                   var13++;
                 }
-                cja.a(param0 + 108, ColourRowCache.field_b, WaveformOperator.field_n, 0, -1, -1, -1, true);
+                cja.findValidSettingCombination(param0 + 108, ColourRowCache.field_b, WaveformOperator.field_n, 0, -1, -1, -1, true);
                 if (!(ld.field_e < 2) &&
                   VerticalScrollbar.field_tb[12]) {
                   TouchSwitchBehaviour.field_s = true;
@@ -231,7 +231,7 @@ final class FallbackShaderEffect extends ShaderEffect {
           stackIn_77_1 = -113;
           stackIn_78_2 = (param1) && (!param2) && (tla.field_e);
           ((UiComponent) (Object) stackIn_77_0).c(stackIn_77_1, stackIn_78_2);
-          rm.field_e.field_a.e((byte) -99);
+          rm.field_e.field_a.processTabPresses((byte) -99);
           if (param0 != 1) {
             FallbackShaderEffect.releaseStatics(-121);
           }
@@ -246,7 +246,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 HardwareSceneLight.a(param3, (byte) -128);
               }
             }
-            cm.a(param3, WaveformOperator.field_n, -21290, true);
+            cm.updateLobbyGameOptionControls(param3, WaveformOperator.field_n, -21290, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -130,7 +130,7 @@ final class hsa {
         float[] var11Lifetime1;
         int[] var7Lifetime2;
         var8 = TombRacer.field_G ? 1 : 0;
-        var3 = this.field_d.a((byte) 56, (long)param0);
+        var3 = this.field_d.get((byte) 56, (long)param0);
         if (param1 == 0) {
           if (var3 != null) {
             return (LegacyOpenGlTexture2D) (var3);

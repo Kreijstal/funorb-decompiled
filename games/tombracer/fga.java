@@ -142,7 +142,7 @@ final class fga implements ShellListener {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, java.awt.Canvas param3) {
+    final static void drawFramebufferToCanvas(int param0, boolean param1, int param2, java.awt.Canvas param3) {
         java.awt.Graphics var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -153,7 +153,7 @@ final class fga implements ShellListener {
         try {
           try {
             if (param1) {
-              fga.a(-59, false, -121, (java.awt.Canvas) null);
+              fga.drawFramebufferToCanvas(-59, false, -121, (java.awt.Canvas) null);
             }
             var4 = param3.getGraphics();
             gn.field_C.drawImage(param2, param0, var4, 2);

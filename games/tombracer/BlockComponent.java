@@ -53,7 +53,7 @@ final class BlockComponent extends PrefabComponent {
           var15.addBehaviour((byte) 83, (Behaviour) (var9));
           var15.setCrushThreshold(var6, -1);
           var10 = new DamageableBehaviour(param2, param0);
-          var10.b(1, var8, param1 - 3);
+          var10.setHealthParameters(1, var8, param1 - 3);
           var11 = var10.getVulnerabilities((byte) -106);
           var11.setAll(false, 67);
           var11.set(0, -17075, true);
@@ -136,13 +136,13 @@ final class BlockComponent extends PrefabComponent {
         if (param0 <= 12) {
           BlockComponent.A(-47);
           IntrusiveDequeCursor.field_a.processSources(-121);
-          if (wg.field_l.c(81)) {
+          if (wg.field_l.processNetwork(81)) {
             return 0;
           }
           return ArchiveNetworkClient.b((byte) -66);
         }
         IntrusiveDequeCursor.field_a.processSources(-121);
-        if (wg.field_l.c(81)) {
+        if (wg.field_l.processNetwork(81)) {
           return 0;
         }
         return ArchiveNetworkClient.b((byte) -66);

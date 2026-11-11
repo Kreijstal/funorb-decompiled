@@ -26,7 +26,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         field_w = null;
     }
 
-    final void a(int param0) {
+    final void closeSocket(int param0) {
         if (null != this.field_t) {
           this.field_t.close((byte) 105);
         }
@@ -203,7 +203,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         return param4;
     }
 
-    final boolean c(int param0) {
+    final boolean processNetwork(int param0) {
         try {
           int var2_int = 0;
           int stackIn_59_0 = 0;
@@ -443,7 +443,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           }
           try {
             if (param0 > -48) {
-              this.c(21);
+              this.processNetwork(21);
             }
             this.field_o.position = 0;
             this.field_o.writeByte(6, 0);

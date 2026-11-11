@@ -262,7 +262,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            ssa.a((String) null, (byte) 122, (Throwable) ((Object) var1_ref));
+            ssa.reportClientError((String) null, (byte) 122, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

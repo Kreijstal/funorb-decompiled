@@ -79,19 +79,19 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.mounts[param0];
     }
 
-    final static void a(boolean param0) {
+    final static void buildMainScreenRoots(boolean param0) {
         hk.field_e = new UiComponent(0L, (UiComponent) null);
         if (UnlockOverlay.field_p) {
-          hk.field_e.b(-127, PerlinNoise2D.field_t);
+          hk.field_e.addChild(-127, PerlinNoise2D.field_t);
         }
         if (param0) {
           field_n = -21;
         }
-        hk.field_e.b(-127, RasterShape.field_e);
+        hk.field_e.addChild(-127, RasterShape.field_e);
         oca.field_b = new lla(cla.field_o, hk.field_e);
         nra.field_a = new UiComponent(0L, (UiComponent) null);
-        nra.field_a.b(-122, oca.field_b.field_a);
-        nra.field_a.b(-128, ImageProducerRasterBuffer.field_j);
+        nra.field_a.addChild(-122, oca.field_b.field_a);
+        nra.field_a.addChild(-128, ImageProducerRasterBuffer.field_j);
         re.a(-29040);
     }
 
@@ -668,11 +668,11 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.isSwitchable(-15254);
     }
 
-    final static void a(int param0, kra param1) {
+    final static void a(int param0, HuffmanCodec param1) {
         try {
           nma.field_m = param1;
           if (param0 != 1048576) {
-            RoomComponent.a(true);
+            RoomComponent.buildMainScreenRoots(true);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.wrapException((Throwable) ((Object) runtimeException), "csa.QA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

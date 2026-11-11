@@ -16,7 +16,7 @@ final class au extends aa {
           if (vb.field_i == ObjectList.field_c) {
             if (!TextWidgetPainter.a(23)) {
               if (MandelbrotOperator.field_o != null) {
-                su.a(MandelbrotOperator.field_o, (byte) -108, 3);
+                su.queueScoreSubmission(MandelbrotOperator.field_o, (byte) -108, 3);
               }
               qfa.a(-116);
               if (FlagSet.field_c) {
@@ -100,7 +100,7 @@ final class au extends aa {
               var13.unlink(35);
             } else {
               if (var2 != 2) {
-                ssa.a("A1: " + kk.a(32), (byte) 116, (Throwable) null);
+                ssa.reportClientError("A1: " + kk.formatPacketDump(32), (byte) 116, (Throwable) null);
                 dea.a(param0 ^ 63);
               } else {
                 var15 = (bna) (MovingWallComponent.field_N.first(-80));

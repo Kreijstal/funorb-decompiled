@@ -37,7 +37,7 @@ final class jl {
         if (param0 > -46) {
           jl.createPitchYawRotation(-79, 78, -90);
           if (bl.field_a != null) {
-            bl.field_a.b(40, param1);
+            bl.field_a.drawFullScreen(40, param1);
             return;
           }
           return;
@@ -45,7 +45,7 @@ final class jl {
         if (bl.field_a == null) {
           return;
         }
-        bl.field_a.b(40, param1);
+        bl.field_a.drawFullScreen(40, param1);
     }
 
     final static Weapon decodeWeapon(Room param0, boolean param1, BitPacketBuffer param2) {

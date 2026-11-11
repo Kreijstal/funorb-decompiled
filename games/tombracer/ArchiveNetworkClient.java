@@ -104,7 +104,7 @@ abstract class ArchiveNetworkClient {
             }
             if (ColourKeyOperator.field_m == 1) {
               if (2 == S2CProfileUpdatePacket.field_c.field_b) {
-                stackIn_16_0 = du.a(-1, (byte) 122);
+                stackIn_16_0 = du.recordArchiveConnectionFailure(-1, (byte) 122);
                 return stackIn_16_0;
               }
               if (S2CProfileUpdatePacket.field_c.field_b == 1) {
@@ -124,13 +124,13 @@ abstract class ArchiveNetworkClient {
             if (ColourKeyOperator.field_m == 3) {
               if (jia.field_a.available(0) <= 0) {
                 if (bva.currentTimeMillis((byte) -107) > pm.field_n) {
-                  stackIn_31_0 = du.a(-2, (byte) 17);
+                  stackIn_31_0 = du.recordArchiveConnectionFailure(-2, (byte) 17);
                   return stackIn_31_0;
                 }
               } else {
                 var1_int = jia.field_a.d(-2147483648);
                 if (var1_int != 0) {
-                  stackIn_26_0 = du.a(var1_int, (byte) -26);
+                  stackIn_26_0 = du.recordArchiveConnectionFailure(var1_int, (byte) -26);
                   return stackIn_26_0;
                 }
                 ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
@@ -149,7 +149,7 @@ abstract class ArchiveNetworkClient {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return du.a(-3, (byte) -93);
+            return du.recordArchiveConnectionFailure(-3, (byte) -93);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -158,11 +158,11 @@ abstract class ArchiveNetworkClient {
         }
     }
 
-    abstract void a(int param0);
+    abstract void closeSocket(int param0);
 
     abstract void invalidateConnection(int param0);
 
-    abstract boolean c(int param0);
+    abstract boolean processNetwork(int param0);
 
     abstract void attachConnection(Object param0, byte param1, boolean param2);
 

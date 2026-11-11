@@ -82,7 +82,7 @@ final class WallCrusherComponent extends PrefabComponent {
             var6.toggle(-24);
             var7.toggle(-70);
           }
-          this.field_G.a(var9, (byte) -120);
+          this.field_G.setTimingPattern(var9, (byte) -120);
           var11 = this.field_G.getSwitchState((byte) -91);
           var11.setUses(0, 55);
           var11.getLinks(param1 - 2).setTargets(9, new Switchable[]{(Switchable) ((Object) var6), (Switchable) ((Object) var7)});
