@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kaa implements WidgetPainter {
+final class LinkPainter implements WidgetPainter {
     private BitmapFont field_c;
     private int field_a;
     private int field_b;
@@ -40,7 +40,7 @@ final class kaa implements WidgetPainter {
         DynamicGeometryBuffer.field_c = true;
         if (param0 <= 31) {
           byte[] var2 = (byte[]) null;
-          kaa.copyByteRange(-119, (byte[]) null, -9);
+          LinkPainter.copyByteRange(-119, (byte[]) null, -9);
         }
     }
 
@@ -76,7 +76,7 @@ final class kaa implements WidgetPainter {
           var6_int = stackIn_6_0;
           if (param2 != 16777215) {
             var12 = (byte[]) null;
-            kaa.copyByteRange(91, (byte[]) null, 83);
+            LinkPainter.copyByteRange(91, (byte[]) null, 83);
           }
           this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6_int, -1, this.field_a, this.field_b, this.field_c.field_k + this.field_c.field_w);
           if (!param0.hasKeyboardFocus((byte) -34)) {
@@ -116,13 +116,13 @@ final class kaa implements WidgetPainter {
         }
     }
 
-    public kaa() {
+    public LinkPainter() {
         this.field_b = 1;
         this.field_a = 1;
         this.field_c = KeySwitchComponent.field_J;
     }
 
-    kaa(BitmapFont param0, int param1, int param2) {
+    LinkPainter(BitmapFont param0, int param1, int param2) {
         try {
           this.field_c = param0;
           this.field_a = param1;

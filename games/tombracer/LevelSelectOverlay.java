@@ -193,7 +193,7 @@ final class LevelSelectOverlay implements ShellListener {
           int var4 = 0;
           int var5 = 0;
           int var6_int = 0;
-          qva var6 = null;
+          DeviceLostException var6 = null;
           int var7 = 0;
           int var8 = 0;
           Object var9 = null;
@@ -290,9 +290,9 @@ final class LevelSelectOverlay implements ShellListener {
             RoomEffectTraps.drawLeftTextWithShadow(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + RandomAccessFileHandle.getConnectorRoomCount(param0 + 86), 10, TooltipRenderer.field_p, 16777215);
             try {
               var3.presentFrame(param0 - 1);
-            } catch (qva decompiledCaughtParameter0) {
+            } catch (DeviceLostException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (qva) (Object) decompiledCaughtException;
+              var6 = (DeviceLostException) (Object) decompiledCaughtException;
               System.out.println(var6);
             }
             return;

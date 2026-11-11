@@ -17,7 +17,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        kaa var4 = null;
+        LinkPainter var4 = null;
         int var6 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
@@ -32,7 +32,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_A[var4_int] = wt.normalizeBase37Name(TextLineLayout.bitwiseXor(param0, 17404), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
-            var4 = new kaa(KeySwitchComponent.field_J, 0, 1);
+            var4 = new LinkPainter(KeySwitchComponent.field_J, 0, 1);
             this.field_z = new FocusableWidget[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_z[var5] = new FocusableWidget(this.field_A[var5], (WidgetListener) (this));

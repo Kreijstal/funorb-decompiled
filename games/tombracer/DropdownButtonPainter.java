@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fua implements WidgetPainter {
+final class DropdownButtonPainter implements WidgetPainter {
     static BufferedCacheFile field_b;
     static int[] field_h;
     private static String[] behaviourTypeNames;
@@ -83,7 +83,7 @@ final class fua implements WidgetPainter {
         }
     }
 
-    fua(DropdownList param0) {
+    DropdownButtonPainter(DropdownList param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

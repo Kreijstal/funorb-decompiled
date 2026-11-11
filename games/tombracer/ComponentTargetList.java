@@ -392,7 +392,7 @@ final class ComponentTargetList {
     }
 
     final static void closeQuickChatMenu(int param0) {
-        vo.field_b = false;
+        OpenGlBufferObject.field_b = false;
         if (ItemModel.field_n != null) {
           ItemModel.field_n.resetSelection(true);
         }

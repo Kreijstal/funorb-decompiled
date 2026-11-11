@@ -100,7 +100,7 @@ final class NameFieldValidator extends TextFieldValidator {
           if (param0 != -1) {
             this.field_k = false;
           }
-          stackIn_17_0 = jla.field_B;
+          stackIn_17_0 = CheckboxWidget.field_B;
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

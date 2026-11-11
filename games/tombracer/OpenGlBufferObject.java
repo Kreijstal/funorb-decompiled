@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vo {
+abstract class OpenGlBufferObject {
     private boolean field_a;
     private int field_g;
     static boolean field_b;
@@ -44,7 +44,7 @@ abstract class vo {
 
     abstract void bind(int param0);
 
-    vo(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
+    OpenGlBufferObject(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
         this.field_c = false;
         try {
           this.field_h = param0;

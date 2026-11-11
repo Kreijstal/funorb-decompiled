@@ -198,7 +198,7 @@ final class MirrorBehaviour extends Behaviour {
           var5.field_j = param2.field_j;
           var7 = param2.field_a;
           var5.field_i = param2.field_i;
-          var8 = qva.headingFromVector((byte) -99, -param2.field_k + var7, var6 - param2.field_d);
+          var8 = DeviceLostException.headingFromVector((byte) -99, -param2.field_k + var7, var6 - param2.field_d);
           var9 = GameScreen.positiveModulo(this.field_v + 2048, 8192, -71);
           var10 = S2CRoundResultPacket.wrapDelta(8192, -16390, var8, var9);
           var11 = GameScreen.positiveModulo(2 * var10 + var8 + 4096, 8192, 126);

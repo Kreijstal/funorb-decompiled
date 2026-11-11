@@ -13,7 +13,7 @@ final class vha {
         if (param1 != 95) {
           return;
         }
-        if (!vo.field_b) {
+        if (!OpenGlBufferObject.field_b) {
           return;
         }
         AccountCreationDialog.field_gb.layoutFullScreen(-59, param2);

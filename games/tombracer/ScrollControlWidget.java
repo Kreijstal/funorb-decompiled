@@ -211,7 +211,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
             return;
           }
           DynamicGeometryBuffer.field_c = false;
-          if (!fua.field_g) {
+          if (!DropdownButtonPainter.field_g) {
             if (PowerDownItemBehaviour.field_s) {
               var5 = ConstrainToLatticeLocomotor.field_z;
             } else {
@@ -221,7 +221,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
             var5 = RendererMode.field_a;
           }
           var7 = (String) null;
-          dqa.a(var5, 0, (String) null, RoomLighting.field_d, 127);
+          OpenGlVertexLayout.a(var5, 0, (String) null, RoomLighting.field_d, 127);
           CharacterChoiceFactory.field_g.field_N = RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711) + ((VortexBehaviour.field_t.field_N & 16711422) >> 1);
           CharacterChoiceFactory.field_g.field_ab = (8355711 & VortexBehaviour.field_t.field_ab >> 1) + (-((RoomLighting.field_d & 16711423) >> 1) + RoomLighting.field_d);
           CharacterChoiceFactory.field_g.field_gb = ((16711423 & VortexBehaviour.field_t.field_gb) >> 1) + (RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711));

@@ -19,7 +19,7 @@ final class RotateLocomotor extends Locomotor {
           if (param1 >= -78) {
             this.applyConstraint(-41);
           }
-          param0.writeBits((byte) -128, dqa.toOffsetBinary(true, this.field_p, 12), 12);
+          param0.writeBits((byte) -128, OpenGlVertexLayout.toOffsetBinary(true, this.field_p, 12), 12);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "spa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

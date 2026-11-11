@@ -138,14 +138,14 @@ final class FacePointLocomotor extends Locomotor {
 
     final void encode(BitPacketBuffer param0, byte param1) {
         super.encode(param0, (byte) -85);
-        param0.writeBits((byte) 2, dqa.toOffsetBinary(true, this.field_p >> 16, 12), 12);
-        param0.writeBits((byte) -126, dqa.toOffsetBinary(true, this.field_q >> 16, 12), 12);
+        param0.writeBits((byte) 2, OpenGlVertexLayout.toOffsetBinary(true, this.field_p >> 16, 12), 12);
+        param0.writeBits((byte) -126, OpenGlVertexLayout.toOffsetBinary(true, this.field_q >> 16, 12), 12);
         if (param1 > -78) {
           return;
         }
         try {
           param0.writeBits((byte) 79, this.field_o ? 1 : 0, 1);
-          param0.writeBits((byte) 56, dqa.toOffsetBinary(true, this.field_s, 12), 12);
+          param0.writeBits((byte) 56, OpenGlVertexLayout.toOffsetBinary(true, this.field_s, 12), 12);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

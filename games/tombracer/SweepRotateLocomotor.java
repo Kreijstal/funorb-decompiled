@@ -377,7 +377,7 @@ final class SweepRotateLocomotor extends Locomotor {
             return;
           }
           super.encode(param0, (byte) -101);
-          param0.writeBits((byte) -125, dqa.toOffsetBinary(true, this.sweepSpeed, 12), 12);
+          param0.writeBits((byte) -125, OpenGlVertexLayout.toOffsetBinary(true, this.sweepSpeed, 12), 12);
           param0.writeBits((byte) 108, ResourceArchive.scaleToBits((byte) -127, this.sweepRange, 8192, 8), 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

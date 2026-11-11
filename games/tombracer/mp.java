@@ -247,7 +247,7 @@ final class mp {
                 }
               } else {
                 if (!PlayerInputQueue.field_c) {
-                  stackIn_27_0 = wra.field_a;
+                  stackIn_27_0 = ProxyResponseException.field_a;
                 } else {
                   stackIn_27_0 = PbufferEntry.field_o;
                 }
@@ -279,7 +279,7 @@ final class mp {
             stackIn_31_0 = HeapIndexArray.e(540800) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&
-            !fua.field_g) {
+            !DropdownButtonPainter.field_g) {
             return;
           }
           apa.field_c = new DateOfBirthPanel(0, 0, 0, 0);

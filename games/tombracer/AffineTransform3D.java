@@ -655,7 +655,7 @@ final class AffineTransform3D extends Transform3D {
           if (param0 >= -20) {
             field_j = (IntrusiveDeque) null;
           }
-          vo.field_b = true;
+          OpenGlBufferObject.field_b = true;
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "asa.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

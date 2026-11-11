@@ -164,8 +164,8 @@ final class WaypointPath {
         try {
           param0.writeBits((byte) 20, this.points.length, 4);
           for (var3_int = param1; var3_int < this.points.length; var3_int++) {
-            param0.writeBits((byte) -128, dqa.toOffsetBinary(true, this.points[var3_int][0] >> 16, 12), 12);
-            param0.writeBits((byte) -125, dqa.toOffsetBinary(true, this.points[var3_int][1] >> 16, 12), 12);
+            param0.writeBits((byte) -128, OpenGlVertexLayout.toOffsetBinary(true, this.points[var3_int][0] >> 16, 12), 12);
+            param0.writeBits((byte) -125, OpenGlVertexLayout.toOffsetBinary(true, this.points[var3_int][1] >> 16, 12), 12);
           }
           param0.writeBits((byte) 74, !this.field_a ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {

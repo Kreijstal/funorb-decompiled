@@ -111,7 +111,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
     }
 
     final static void c(byte param0) {
-        fua.field_g = false;
+        DropdownButtonPainter.field_g = false;
         if (param0 < 52) {
           field_f = (String) null;
         }

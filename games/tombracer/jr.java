@@ -27,17 +27,17 @@ final class jr implements WidgetPainter {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        jla var11 = null;
+        CheckboxWidget var11 = null;
         try {
           if (param2 != 16777215) {
             this.field_d = -62;
           }
-          if (!(param0 instanceof jla)) {
+          if (!(param0 instanceof CheckboxWidget)) {
             stackIn_5_0 = null;
           } else {
             stackIn_5_0 = (UiWidget) (param0);
           }
-          var11 = (jla) (stackIn_5_0);
+          var11 = (CheckboxWidget) (stackIn_5_0);
           if (var11 != null) {
             param4 = param4 & var11.field_y;
           }

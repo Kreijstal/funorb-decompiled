@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hga extends TextWidgetPainter {
+class InputFieldPainter extends TextWidgetPainter {
     static String field_n;
     private static String[] field_o;
 
-    hga(int param0) {
+    InputFieldPainter(int param0) {
         this(KeySwitchComponent.field_J, param0);
     }
 
@@ -29,7 +29,7 @@ class hga extends TextWidgetPainter {
         int var1 = 71 % ((param0 - 38) / 42);
     }
 
-    hga(BitmapFont param0, int param1) {
+    InputFieldPainter(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_w, -1, 2147483647, false);
     }
 

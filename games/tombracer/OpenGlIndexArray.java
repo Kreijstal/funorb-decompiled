@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class OpenGlIndexArray extends vo implements IndexArray {
+final class OpenGlIndexArray extends OpenGlBufferObject implements IndexArray {
     static ToolkitSprite field_l;
     private int field_k;
     static SpriteData field_i;

@@ -1266,8 +1266,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         TrapModel var8 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          param0.writeBits((byte) 0, dqa.toOffsetBinary(true, this.localX >> 16, 12), 12);
-          param0.writeBits((byte) -126, dqa.toOffsetBinary(true, this.localY >> 16, 12), 12);
+          param0.writeBits((byte) 0, OpenGlVertexLayout.toOffsetBinary(true, this.localX >> 16, 12), 12);
+          param0.writeBits((byte) -126, OpenGlVertexLayout.toOffsetBinary(true, this.localY >> 16, 12), 12);
           param0.writeBits((byte) -127, this.width >> 16, 10);
           param0.writeBits((byte) 72, this.height >> 16, 10);
           stackIn_3_0 = (BitPacketBuffer) (param0);

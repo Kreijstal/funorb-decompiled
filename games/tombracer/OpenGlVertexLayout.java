@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dqa extends mna {
+final class OpenGlVertexLayout extends mna {
     VertexStreamLayout[] field_f;
     static UiComponent field_e;
 
@@ -29,7 +29,7 @@ final class dqa extends mna {
           ComponentMount.field_b.field_G = param1;
           if (param4 < 118) {
             ResourceArchive var6 = (ResourceArchive) null;
-            dqa.createTextureProvider((ResourceArchive) null, (ResourceArchive) null, (byte) 102, (ResourceArchive) null);
+            OpenGlVertexLayout.createTextureProvider((ResourceArchive) null, (ResourceArchive) null, (byte) 102, (ResourceArchive) null);
           }
           CharacterChoiceFactory.field_g.field_G = CharacterChoiceFactory.field_g.field_G - ComponentMount.field_b.field_G;
           ComponentMount.field_b.field_qb = ComponentMount.field_b.field_qb - ComponentMount.field_b.field_G;
@@ -38,7 +38,7 @@ final class dqa extends mna {
         }
     }
 
-    dqa(VertexStreamLayout[] param0) {
+    OpenGlVertexLayout(VertexStreamLayout[] param0) {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {

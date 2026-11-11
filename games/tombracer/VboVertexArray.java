@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class VboVertexArray extends vo implements LegacyVertexArray {
+final class VboVertexArray extends OpenGlBufferObject implements LegacyVertexArray {
     private int field_j;
     static UiComponent field_k;
     static TextureFormat field_i;

@@ -74,8 +74,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               this.field_E = new FocusableWidget(S2CRoundDeadlinePacket.field_a, (WidgetListener) (this));
             }
           }
-          this.field_A.field_r = (WidgetPainter) ((Object) new hga(10000536));
-          this.field_C.field_r = (WidgetPainter) ((Object) new poa(10000536));
+          this.field_A.field_r = (WidgetPainter) ((Object) new InputFieldPainter(10000536));
+          this.field_C.field_r = (WidgetPainter) ((Object) new PasswordInputPainter(10000536));
           var6 = new DialogButtonPainter();
           this.field_B.field_r = (WidgetPainter) ((Object) var6);
           if (this.field_y != null) {
@@ -86,14 +86,14 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_E.field_r = (WidgetPainter) ((Object) var6);
           }
           if (null != this.field_E) {
-            this.field_E.field_q = hga.field_n;
+            this.field_E.field_q = InputFieldPainter.field_n;
           }
           if (!this.field_x) {
             if (!this.field_w) {
-              this.field_y.field_r = (WidgetPainter) ((Object) new kaa());
+              this.field_y.field_r = (WidgetPainter) ((Object) new LinkPainter());
             } else {
               this.field_y.field_q = tg.field_a;
-              this.field_y.field_r = (WidgetPainter) ((Object) new kaa());
+              this.field_y.field_r = (WidgetPainter) ((Object) new LinkPainter());
             }
           } else {
             this.field_y.field_q = SwitchLinkList.field_c;

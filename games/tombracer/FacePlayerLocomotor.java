@@ -68,7 +68,7 @@ final class FacePlayerLocomotor extends Locomotor {
         }
         var4 = var3.getX(3) - this.trap.getX(3);
         var5 = var3.getY(9648) - this.trap.getY(9648);
-        var6 = qva.headingFromVector((byte) -118, var5, var4);
+        var6 = DeviceLostException.headingFromVector((byte) -118, var5, var4);
         var7 = -this.trap.getFacingAngle(-25787) + var6;
         if (0 < this.field_o) {
           while (var7 < -4096) {
@@ -174,7 +174,7 @@ final class FacePlayerLocomotor extends Locomotor {
     final void encode(BitPacketBuffer param0, byte param1) {
         try {
           super.encode(param0, (byte) -124);
-          param0.writeBits((byte) 37, dqa.toOffsetBinary(true, this.field_o, 12), 12);
+          param0.writeBits((byte) 37, OpenGlVertexLayout.toOffsetBinary(true, this.field_o, 12), 12);
           if (param1 > -78) {
             FacePlayerLocomotor.getOrRequestRatingTable(-12, 90, -68, 66);
           }

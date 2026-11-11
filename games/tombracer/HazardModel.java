@@ -245,7 +245,7 @@ final class HazardModel extends TrapModel {
             this.field_o = var4;
             if (var2_int != 0 ||
               var3_int != 0) {
-              this.field_m = GameScreen.positiveModulo(qva.headingFromVector((byte) -103, -var3_int, var2_int) >> 2, 2048, 125);
+              this.field_m = GameScreen.positiveModulo(DeviceLostException.headingFromVector((byte) -103, -var3_int, var2_int) >> 2, 2048, 125);
               this.field_q = GameScreen.positiveModulo(this.field_q - (S2CNextRoundPacket.abs(var2_int >> 13, -113) + S2CNextRoundPacket.abs(var3_int >> 13, 67)), 2048, -100);
               if (!(65536 >= S2CNextRoundPacket.abs(var2_int, param0 + 93)) ||
                 !(S2CNextRoundPacket.abs(var3_int, param0 ^ -85) <= 65536)) {

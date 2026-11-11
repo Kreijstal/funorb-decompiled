@@ -174,7 +174,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private boolean field_Yc;
     private float[] field_Pb;
 
-    final void present(int param0, int param1) throws qva {
+    final void present(int param0, int param1) throws DeviceLostException {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
         try {

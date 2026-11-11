@@ -127,7 +127,7 @@ final class qt {
               var9 = stackIn_12_0;
               if (var21 == null) {
                 var8_ref_pha = new LobbyPlayerEntry(var23, var22, var3_long);
-                fua.field_a.put(-1, var8_ref_pha, var3_long);
+                DropdownButtonPainter.field_a.put(-1, var8_ref_pha, var3_long);
               } else {
                 if (var9 != 0) {
                   var21.updateNames(var22, 75, var23);
@@ -355,7 +355,7 @@ final class qt {
             var3_ref_pha.unlinkSecondary(-7975);
             var3_ref_pha = (LobbyPlayerEntry) (DemoCourseGenerator.field_g.next(117));
           }
-          var3_ref_phaLifetime1 = (LobbyPlayerEntry) (fua.field_a.startTraversal(-119));
+          var3_ref_phaLifetime1 = (LobbyPlayerEntry) (DropdownButtonPainter.field_a.startTraversal(-119));
           while (var3_ref_phaLifetime1 != null) {
             if (var3_ref_phaLifetime1.field_Hb ||
               var3_ref_phaLifetime1.field_Fb) {
@@ -366,11 +366,11 @@ final class qt {
               }
               ql.insertLobbyPlayerSorted(114, var3_ref_phaLifetime1);
             }
-            var3_ref_phaLifetime1 = (LobbyPlayerEntry) (fua.field_a.nextInTraversal((byte) -112));
+            var3_ref_phaLifetime1 = (LobbyPlayerEntry) (DropdownButtonPainter.field_a.nextInTraversal((byte) -112));
           }
           if (var2 == 1 &&
             C2SChooseRewardPacket.field_a != null) {
-            wra.field_b = C2SChooseRewardPacket.field_a.field_tb;
+            ProxyResponseException.field_b = C2SChooseRewardPacket.field_a.field_tb;
           }
           if (var2 != 4) {
             C2SChooseRewardPacket.field_a = null;

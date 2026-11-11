@@ -72,8 +72,8 @@ abstract class ConstraintLocomotor extends Locomotor {
           if (param1 >= -78) {
             ConstraintLocomotor.releaseStatics(2);
           }
-          param0.writeBits((byte) -39, dqa.toOffsetBinary(true, this.field_o >> 16, 12), 12);
-          param0.writeBits((byte) 45, dqa.toOffsetBinary(true, this.field_q >> 16, 12), 12);
+          param0.writeBits((byte) -39, OpenGlVertexLayout.toOffsetBinary(true, this.field_o >> 16, 12), 12);
+          param0.writeBits((byte) 45, OpenGlVertexLayout.toOffsetBinary(true, this.field_q >> 16, 12), 12);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "osa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

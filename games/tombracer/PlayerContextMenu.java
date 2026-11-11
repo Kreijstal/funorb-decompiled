@@ -234,7 +234,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 14) {
-          kaa.a((byte) 118);
+          LinkPainter.a((byte) 118);
           return true;
         }
         if (param0 == 20) {
@@ -280,14 +280,14 @@ final class PlayerContextMenu {
               this.field_f.addItem((byte) -70, 6, LegacyOpenGlFlowingWaterEffect.formatText(127, mp.field_b, new String[]{var7}));
               if (param0 != null &&
                 2 != param1 &&
-                !fua.field_g) {
+                !DropdownButtonPainter.field_g) {
                 this.field_e = param0;
                 this.field_f.addItem((byte) -90, 19, LegacyOpenGlFlowingWaterEffect.formatText(119, HardwareModel.field_k, new String[]{var7}));
               }
             }
             if (var5 != null) {
               if (!RewardChoicePhase.isPrivateChatTarget(this.field_i, (byte) -50) &&
-                !fua.field_g) {
+                !DropdownButtonPainter.field_g) {
                 if (!PowerDownItemBehaviour.field_s) {
                   this.field_f.addItem((byte) -77, 8, LegacyOpenGlFlowingWaterEffect.formatText(114, RoomViewRenderer.field_b, new String[]{var7}));
                 }

@@ -124,7 +124,7 @@ final class rg extends SingleChildWidget {
         Room.field_m[7] = FacePlayerLocomotor.field_q;
         Room.field_m[2] = ValidationOutcome.field_a;
         Room.field_m[11] = msa.field_b;
-        Room.field_m[3] = poa.field_p;
+        Room.field_m[3] = PasswordInputPainter.field_p;
         Room.field_m[12] = QuickChatPhraseSource.field_e;
         Room.field_m[6] = IntrusiveNode.field_b;
         FadingDialog.field_w = new String[13];

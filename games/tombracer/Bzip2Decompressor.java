@@ -97,7 +97,7 @@ final class Bzip2Decompressor {
         var3 = param0.field_x;
         var4 = param0.field_E;
         var5 = param0.field_z;
-        var15 = fua.field_h;
+        var15 = DropdownButtonPainter.field_h;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_u;
@@ -199,7 +199,7 @@ final class Bzip2Decompressor {
         param0.field_x = var3;
         param0.field_E = var4;
         param0.field_z = var5;
-        fua.field_h = var6;
+        DropdownButtonPainter.field_h = var6;
         param0.field_u = var7;
         param0.field_l = var8;
         param0.field_A = var9;
@@ -299,8 +299,8 @@ final class Bzip2Decompressor {
         var24 = null;
         var25 = null;
         param0.field_i = 1;
-        if (fua.field_h == null) {
-          fua.field_h = new int[param0.field_i * 100000];
+        if (DropdownButtonPainter.field_h == null) {
+          DropdownButtonPainter.field_h = new int[param0.field_i * 100000];
         }
         var26 = 1;
         while (true) {
@@ -471,14 +471,14 @@ final class Bzip2Decompressor {
                 param0.field_a[var4] = param0.field_a[var4] + param0.field_a[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(fua.field_h[var4] & 255);
+                var1 = (byte)(DropdownButtonPainter.field_h[var4] & 255);
                 dupTemp$1 = param0.field_a[var1 & 255];
-                fua.field_h[dupTemp$1] = fua.field_h[dupTemp$1] | var4 << 8;
+                DropdownButtonPainter.field_h[dupTemp$1] = DropdownButtonPainter.field_h[dupTemp$1] | var4 << 8;
                 param0.field_a[var1 & 255] = param0.field_a[var1 & 255] + 1;
               }
-              param0.field_u = fua.field_h[param0.field_h] >> 8;
+              param0.field_u = DropdownButtonPainter.field_h[param0.field_h] >> 8;
               param0.field_E = 0;
-              param0.field_u = fua.field_h[param0.field_u];
+              param0.field_u = DropdownButtonPainter.field_h[param0.field_u];
               param0.field_z = (byte)(param0.field_u & 255);
               param0.field_u = param0.field_u >> 8;
               param0.field_E = param0.field_E + 1;
@@ -542,7 +542,7 @@ final class Bzip2Decompressor {
               }
               dupTemp$0 = param0.field_m[var1 & 255] & 255;
               param0.field_q[dupTemp$0] = param0.field_q[dupTemp$0] + 1;
-              fua.field_h[var14] = param0.field_m[var1 & 255] & 255;
+              DropdownButtonPainter.field_h[var14] = param0.field_m[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -599,7 +599,7 @@ final class Bzip2Decompressor {
             var1 = param0.field_m[param0.field_g[param0.field_w[0]] & 255];
             param0.field_q[var1 & 255] = param0.field_q[var1 & 255] + var15;
             while (var15 > 0) {
-              fua.field_h[var14] = var1 & 255;
+              DropdownButtonPainter.field_h[var14] = var1 & 255;
               var14++;
               var15--;
             }

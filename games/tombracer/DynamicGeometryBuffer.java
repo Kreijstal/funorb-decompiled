@@ -33,10 +33,10 @@ final class DynamicGeometryBuffer {
           try {
             var6 = new byte[24];
             var2 = var6;
-            if (null != fua.field_b) {
+            if (null != DropdownButtonPainter.field_b) {
               try {
-                fua.field_b.seek((byte) 2, 0L);
-                fua.field_b.readFully(var6, 0);
+                DropdownButtonPainter.field_b.seek((byte) 2, 0L);
+                DropdownButtonPainter.field_b.readFully(var6, 0);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

@@ -16,7 +16,7 @@ final class ig {
             uma.field_b.clear(8);
             uma.field_b = null;
           }
-          fua.field_a = null;
+          DropdownButtonPainter.field_a = null;
           if (AffineTransform3D.field_j != null) {
             AffineTransform3D.field_j.clear(8);
             AffineTransform3D.field_j = null;
@@ -27,13 +27,13 @@ final class ig {
             DemoCourseGenerator.field_g = null;
           }
           IdChatTarget.field_d = null;
-          if (fua.field_a != null) {
-            var3 = (LobbyPlayerEntry) (fua.field_a.startTraversal(-91));
+          if (DropdownButtonPainter.field_a != null) {
+            var3 = (LobbyPlayerEntry) (DropdownButtonPainter.field_a.startTraversal(-91));
             while (var3 != null) {
               var3.unlinkSecondary(-7975);
-              var3 = (LobbyPlayerEntry) (fua.field_a.nextInTraversal((byte) -112));
+              var3 = (LobbyPlayerEntry) (DropdownButtonPainter.field_a.nextInTraversal((byte) -112));
             }
-            fua.field_a = null;
+            DropdownButtonPainter.field_a = null;
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ')');

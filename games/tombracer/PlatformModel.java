@@ -818,7 +818,7 @@ final class PlatformModel extends TrapModel {
           }
           RewardChoicePhase.field_n = new MusicPlayer(var1, var2);
           CourseLayout.initAudioOutputs(22050, 1024, RewardChoicePhase.field_n, true, (java.awt.Component) ((Object) CurveShape.field_l), dsa.field_c);
-          wra.a(0);
+          ProxyResponseException.a(0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ce.R(" + param0 + ')');
         }

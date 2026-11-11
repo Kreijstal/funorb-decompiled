@@ -165,7 +165,7 @@ final class IntrusiveDeque {
           var5 = null;
           if (UiWidget.field_g != 2) {
             NameEntryPopup.field_yb.field_r = PlayerSimulation.field_n;
-            dqa.field_e.field_X = false;
+            OpenGlVertexLayout.field_e.field_X = false;
             if (UiWidget.field_g != 1) {
               TextureCoordinateGeneration.field_b.field_vb.field_vb.field_r = LoginMethod.field_c;
               if (var19 != 0) {
@@ -178,7 +178,7 @@ final class IntrusiveDeque {
             decompiledFrameRemainder1 = (var19 != 0);
           }
           if (decompiledFrameRemainder1) {
-            dqa.field_e.field_X = true;
+            OpenGlVertexLayout.field_e.field_X = true;
             NameEntryPopup.field_yb.field_r = LegacyOpenGlFlowingWaterEffect.formatText(99, DateValidationSource.field_h, new String[]{ol.field_b});
             TextureCoordinateGeneration.field_b.field_vb.field_vb.field_r = null;
             var6 = null;
@@ -268,7 +268,7 @@ final class IntrusiveDeque {
                       DateInputWidget.openPlayerContextMenu(TextureCoordinateGeneration.field_b.field_vb, -1, var16, 0L, -11635, (int[]) null, var7, -1, (String) null);
                       if (var7.field_Cb != null &&
                         !RewardChoicePhase.isPrivateChatTarget(hka.field_b.field_i, (byte) -13) &&
-                        !fua.field_g) {
+                        !DropdownButtonPainter.field_g) {
                         if (!PowerDownItemBehaviour.field_s) {
                           var17 = hka.field_b;
                           var18 = LegacyOpenGlFlowingWaterEffect.formatText(114, RoomViewRenderer.field_b, new String[]{var16});

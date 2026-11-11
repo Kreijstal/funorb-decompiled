@@ -188,7 +188,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
 
     final mna createVertexLayout(VertexStreamLayout[] param0, int param1) {
         RuntimeException var3 = null;
-        dqa stackIn_3_0 = null;
+        OpenGlVertexLayout stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -197,7 +197,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           if (param1 != 0) {
             this.queueTextureDeletion(-57, 53, 67);
           }
-          stackIn_3_0 = new dqa(param0);
+          stackIn_3_0 = new OpenGlVertexLayout(param0);
           return (mna) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -665,7 +665,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void present(int param0, int param1) throws qva {
+    final void present(int param0, int param1) throws DeviceLostException {
         this.field_Mc.swapBuffers();
     }
 
@@ -1103,7 +1103,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         int var8Lifetime1;
         var17 = TombRacer.field_G ? 1 : 0;
         try {
-          var18 = ((dqa) (param0)).field_f;
+          var18 = ((OpenGlVertexLayout) (param0)).field_f;
           var4 = 0;
           var5 = 0;
           if (param1 != -32) {

@@ -394,7 +394,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return true;
     }
 
-    final void present(int param0, int param1) throws qva {
+    final void present(int param0, int param1) throws DeviceLostException {
         java.awt.Graphics var3 = null;
         if (this.field_t == null ||
           this.field_T == null) {

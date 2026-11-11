@@ -168,8 +168,8 @@ final class ConveyorBehaviour extends Behaviour {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -125, dqa.toOffsetBinary(true, this.field_s >> 16, 4), 4);
-          param1.writeBits((byte) -127, dqa.toOffsetBinary(true, this.field_r >> 16, 4), 4);
+          param1.writeBits((byte) -125, OpenGlVertexLayout.toOffsetBinary(true, this.field_s >> 16, 4), 4);
+          param1.writeBits((byte) -127, OpenGlVertexLayout.toOffsetBinary(true, this.field_r >> 16, 4), 4);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "hi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

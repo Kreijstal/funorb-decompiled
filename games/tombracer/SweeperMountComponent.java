@@ -121,7 +121,7 @@ final class SweeperMountComponent extends PrefabComponent {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -126, dqa.toOffsetBinary(true, this.field_G, 5), 5);
+          param1.writeBits((byte) -126, OpenGlVertexLayout.toOffsetBinary(true, this.field_G, 5), 5);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ona.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -46,7 +46,7 @@ final class PlatformTaskDispatcher implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          wra var3_ref = null;
+          ProxyResponseException var3_ref = null;
           RandomAccessFileHandle var3_ref2 = null;
           int var3_int = 0;
           Exception var3_ref3 = null;
@@ -104,11 +104,11 @@ final class PlatformTaskDispatcher implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (wra) null;
+                      if (false) throw (ProxyResponseException) null;
                       var8.field_f = HardwareModelVertexStream.createProxyConnector((String) (var8.field_c), var8.field_e, false).connect(25927);
-                    } catch (wra decompiledCaughtParameter1) {
+                    } catch (ProxyResponseException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
-                      var3_ref = (wra) (Object) decompiledCaughtException;
+                      var3_ref = (ProxyResponseException) (Object) decompiledCaughtException;
                       var8.field_f = var3_ref.getMessage();
                       throw var3_ref;
                     }

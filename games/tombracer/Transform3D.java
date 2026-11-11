@@ -49,7 +49,7 @@ abstract class Transform3D {
         byte[] var14 = null;
         int var9 = TombRacer.field_G ? 1 : 0;
         try {
-          hga.parseRoomData(true, param0.getFileByName("", (byte) 124, "roomdata.csv"));
+          InputFieldPainter.parseRoomData(true, param0.getFileByName("", (byte) 124, "roomdata.csv"));
           var10 = cm.field_a;
           for (var3 = 0; var3 < var10.length; var3++) {
             var4 = var10[var3];

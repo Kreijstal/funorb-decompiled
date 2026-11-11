@@ -58,7 +58,7 @@ final class fa {
             } else {
               var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, pba.field_a, new String[]{wp.field_a});
             }
-            if (vo.field_b) {
+            if (OpenGlBufferObject.field_b) {
               TreasureValuesOverlay.addChatMessage(0, true, (String) null, (String) (var2), (String) null, 2);
               Room.l(2097152);
             }
@@ -70,7 +70,7 @@ final class fa {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
-            dqa.a((String) (var2), 0, (String) null, RoomLighting.field_d, 122);
+            OpenGlVertexLayout.a((String) (var2), 0, (String) null, RoomLighting.field_d, 122);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -115,7 +115,7 @@ final class fa {
               }
               var8Lifetime1 = stackIn_67_0;
               var4 = var4 + var3 + var8Lifetime1;
-              if (!fua.field_g) {
+              if (!DropdownButtonPainter.field_g) {
                 if (PowerDownItemBehaviour.field_s) {
                   var5 = "";
                   var4 = "<col=999999>" + var4 + PerlinNoise2D.field_o + "</col>";
@@ -132,7 +132,7 @@ final class fa {
               if (!RoomComponentFactory.a(27)) {
                 if (CharacterChoiceFactory.field_g.field_o &&
                   var9 > AgeValidator.field_j - CharacterChoiceFactory.field_g.field_q) {
-                  if (fua.field_g) {
+                  if (DropdownButtonPainter.field_g) {
                     var1 = "Broken!";
                   } else {
                     var1 = PerlinNoise2D.field_o;
@@ -140,12 +140,12 @@ final class fa {
                 }
                 if (CharacterChoiceFactory.field_g.field_y != 0 &&
                   CharacterChoiceFactory.field_g.field_p < var9 &&
-                  !fua.field_g) {
+                  !DropdownButtonPainter.field_g) {
                   ContextMenu.openQuickChat((byte) 117);
                 }
               }
             }
-            dqa.a(var4 + BitmapFont.escapeMarkup(WeaveOperator.field_n.toString()), var7, var5, pm.field_a[var6], 125);
+            OpenGlVertexLayout.a(var4 + BitmapFont.escapeMarkup(WeaveOperator.field_n.toString()), var7, var5, pm.field_a[var6], 125);
             if (!DynamicGeometryBuffer.field_c) {
               ComponentMount.field_b.field_o = false;
             }

@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class wra extends IOException {
+final class ProxyResponseException extends IOException {
     static String field_b;
     static String field_a;
 
-    wra(String param0) {
+    ProxyResponseException(String param0) {
         super(param0);
     }
 

@@ -95,7 +95,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
           if (var5 == 0) {
             var5 = 1;
           }
-          var8Lifetime2 = qva.headingFromVector((byte) -73, var5, var4);
+          var8Lifetime2 = DeviceLostException.headingFromVector((byte) -73, var5, var4);
           var9Lifetime2 = MouseInputHandler.sin2048((byte) 107, var8Lifetime2 >> 2);
           var10Lifetime2 = ModelAnimator.cos2048(0, var8Lifetime2 >> 2);
           var11Lifetime2 = doa.multiplyFixedCoarse(2, this.field_v, var9Lifetime2);
@@ -173,7 +173,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
           var11Lifetime1 = var5;
           this.trap.move((byte) -120, var10Lifetime1, var11Lifetime1);
         } else {
-          var8Lifetime1 = qva.headingFromVector((byte) -73, var5, var4);
+          var8Lifetime1 = DeviceLostException.headingFromVector((byte) -73, var5, var4);
           var9Lifetime1 = MouseInputHandler.sin2048((byte) 107, var8Lifetime1 >> 2);
           var10Lifetime1 = ModelAnimator.cos2048(0, var8Lifetime1 >> 2);
           var11Lifetime1 = doa.multiplyFixedCoarse(2, this.field_v, var9Lifetime1);

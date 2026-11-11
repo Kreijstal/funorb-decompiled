@@ -695,7 +695,7 @@ abstract class AppletGameShell extends GameApplet {
         if (cga.field_f == 3 &&
           esa.areCommonUiArchivesReady(WeaveOperator.field_p, tk.field_b, -128, OpenGlTexture2D.field_n) &&
           S2CActionPacket.isArchiveComplete(WeaveOperator.field_p, (byte) -53)) {
-          ee.releaseStatics(-1);
+          CheckboxPainter.releaseStatics(-1);
           SimulationObserver.composeAgreementText((byte) -27);
           TextureTransformMode.field_b = LoginMethod.field_c;
           GameAssetLoader.field_t = false;

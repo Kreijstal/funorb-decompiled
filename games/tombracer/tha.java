@@ -155,7 +155,7 @@ final class tha extends WidgetContainer implements ButtonListener {
         this.field_z.setBounds((byte) -31, var3, 30, this.field_m - var3 >> 1, this.field_p + (-78 - var2 * 2));
         this.field_w.field_h = (WidgetListener) (this);
         this.field_z.field_h = (WidgetListener) (this);
-        this.field_z.field_q = hga.field_n;
+        this.field_z.field_q = InputFieldPainter.field_n;
         this.field_x.field_h = (WidgetListener) (this);
         this.field_x.field_q = tg.field_a;
         this.addChild(this.field_w, -1);

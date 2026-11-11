@@ -1639,7 +1639,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     }
 
     final static void l(int param0) {
-        if (vo.field_b) {
+        if (OpenGlBufferObject.field_b) {
           ComponentTargetList.closeQuickChatMenu(120);
         }
         if (param0 != 2097152) {

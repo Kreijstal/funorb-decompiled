@@ -14,7 +14,7 @@ final class dha {
         if (param2 == -107) {
           if (era.field_d == null) {
             if (!DynamicGeometryBuffer.field_c) {
-              if (vo.field_b) {
+              if (OpenGlBufferObject.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 9) {
@@ -46,7 +46,7 @@ final class dha {
               return true;
             }
             if (!DynamicGeometryBuffer.field_c) {
-              if (vo.field_b) {
+              if (OpenGlBufferObject.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 9) {
@@ -81,7 +81,7 @@ final class dha {
               return true;
             }
             if (!DynamicGeometryBuffer.field_c) {
-              if (vo.field_b) {
+              if (OpenGlBufferObject.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 9) {
@@ -109,7 +109,7 @@ final class dha {
             var4 = stackIn_61_0;
           } else {
             if (!DynamicGeometryBuffer.field_c) {
-              if (vo.field_b) {
+              if (OpenGlBufferObject.field_b) {
                 return KeySwitchComponent.c(2097152, param0, param3);
               }
               if (MenuEntry.field_h == 9) {

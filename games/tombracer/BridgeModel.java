@@ -634,10 +634,10 @@ final class BridgeModel extends TrapModel {
                 var8[var6] = ql.field_k.payload[var6];
               }
               var6_ref_rha = new rha(var2_long + (long)var4, ql.field_k.position, var17);
-              jla.field_z.addLast((byte) -71, var6_ref_rha);
+              CheckboxWidget.field_z.addLast((byte) -71, var6_ref_rha);
               ql.field_k.position = 0;
             }
-            var9 = (rha) (jla.field_z.first(-80));
+            var9 = (rha) (CheckboxWidget.field_z.first(-80));
             var13 = var9;
             if (var13 != null &&
               var13.field_f < var2_long) {

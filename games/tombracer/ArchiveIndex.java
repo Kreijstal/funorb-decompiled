@@ -299,7 +299,7 @@ final class ArchiveIndex {
     }
 
     final static void drawDimmedOverlay(int param0) {
-        if (vo.field_b) {
+        if (OpenGlBufferObject.field_b) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
           AccountCreationDialog.field_gb.drawFullScreen(36, false);
         }

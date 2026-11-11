@@ -37,7 +37,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != ColourGradientOperator.field_n) {
             MatchScoringObserver.field_h = 0;
             AnimationFrameSet.field_n = param0.getX();
-            ee.field_a = param0.getY();
+            CheckboxPainter.field_a = param0.getY();
             PlayerContextMenu.field_c = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -94,7 +94,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           MatchScoringObserver.field_h = 0;
           AnimationFrameSet.field_n = -1;
-          ee.field_a = -1;
+          CheckboxPainter.field_a = -1;
           PlayerContextMenu.field_c = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,7 +123,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           MatchScoringObserver.field_h = 0;
           AnimationFrameSet.field_n = param0.getX();
-          ee.field_a = param0.getY();
+          CheckboxPainter.field_a = param0.getY();
           PlayerContextMenu.field_c = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -240,7 +240,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (ColourGradientOperator.field_n != null) {
             MatchScoringObserver.field_h = 0;
             AnimationFrameSet.field_n = param0.getX();
-            ee.field_a = param0.getY();
+            CheckboxPainter.field_a = param0.getY();
             PlayerContextMenu.field_c = true;
           }
         } catch (RuntimeException runtimeException) {

@@ -30,7 +30,7 @@ final class PressureSwitchComponent extends SwitchComponent {
           rg.a((byte) -53);
           era.field_e.layoutFullScreen(37, param0);
           if (null != apa.field_c) {
-            if (!fua.field_g) {
+            if (!DropdownButtonPainter.field_g) {
               apa.field_c = null;
             } else {
               apa.field_c.processPointerFrame(era.field_e.field_A, param0, era.field_e.field_q, -90);

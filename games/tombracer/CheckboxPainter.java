@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee implements WidgetPainter {
+final class CheckboxPainter implements WidgetPainter {
     static volatile int field_a;
 
     public final void paintWidget(UiWidget param0, int param1, int param2, int param3, boolean param4) {
@@ -23,7 +23,7 @@ final class ee implements WidgetPainter {
             var8.drawAdditive(1 + var6_int + (-var8.field_n + param0.field_m >> 1), var7 + 1 + (-var8.field_k + param0.field_p >> 1), 256);
           }
           if (param2 != 16777215) {
-            ee.releaseStatics(55);
+            CheckboxPainter.releaseStatics(55);
           }
           if (!param0.hasKeyboardFocus((byte) -34)) {
             return;

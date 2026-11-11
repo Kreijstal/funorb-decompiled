@@ -159,7 +159,7 @@ final class GameAssetLoader implements LoadingStage {
           this.field_p = null;
           KeySwitchComponent.loadFonts((byte) -86, DateValidationSource.loadingQuipsShort[3], this.field_q, this.field_h, 60);
           this.drawLoadingProgress(65, (byte) 47, DateValidationSource.loadingQuipsShort[4]);
-          dqa.createTextureProvider(this.field_r, this.field_m, (byte) 55, this.field_h);
+          OpenGlVertexLayout.createTextureProvider(this.field_r, this.field_m, (byte) 55, this.field_h);
           this.drawLoadingProgress(70, (byte) 47, DateValidationSource.loadingQuipsShort[5]);
           this.d(-10242);
           this.drawLoadingProgress(75, (byte) 47, DateValidationSource.loadingQuipsShort[6]);

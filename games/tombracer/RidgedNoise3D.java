@@ -191,7 +191,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
             field_p = -69;
           }
           if (0 != RotaterMountComponent.field_K.field_y &&
-            !fua.field_g) {
+            !DropdownButtonPainter.field_g) {
             if (!PowerDownItemBehaviour.field_s) {
               DynamicGeometryBuffer.field_c = true;
             } else {

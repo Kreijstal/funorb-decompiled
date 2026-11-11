@@ -50,7 +50,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
               var5 == 0) {
               var5 = 1;
             }
-            var8 = qva.headingFromVector((byte) -41, var5 << 16, var4 << 16);
+            var8 = DeviceLostException.headingFromVector((byte) -41, var5 << 16, var4 << 16);
             var9 = MouseInputHandler.sin2048((byte) 110, var8 >> 2);
             var10 = ModelAnimator.cos2048(0, var8 >> 2);
             var11 = ChatMessage.multiplyFixed(var9, (byte) 24, this.field_u >> 8) << 8;
@@ -65,7 +65,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
             var5 == 0) {
             var5 = 1;
           }
-          var8Lifetime3 = qva.headingFromVector((byte) -41, var5 << 16, var4 << 16);
+          var8Lifetime3 = DeviceLostException.headingFromVector((byte) -41, var5 << 16, var4 << 16);
           var9Lifetime3 = MouseInputHandler.sin2048((byte) 110, var8Lifetime3 >> 2);
           var10Lifetime3 = ModelAnimator.cos2048(0, var8Lifetime3 >> 2);
           var11Lifetime3 = ChatMessage.multiplyFixed(var9Lifetime3, (byte) 24, this.field_u >> 8) << 8;
@@ -80,7 +80,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
             var5 == 0) {
             var5 = 1;
           }
-          var8Lifetime1 = qva.headingFromVector((byte) -41, var5 << 16, var4 << 16);
+          var8Lifetime1 = DeviceLostException.headingFromVector((byte) -41, var5 << 16, var4 << 16);
           var9Lifetime1 = MouseInputHandler.sin2048((byte) 110, var8Lifetime1 >> 2);
           var10Lifetime1 = ModelAnimator.cos2048(0, var8Lifetime1 >> 2);
           var11Lifetime1 = ChatMessage.multiplyFixed(var9Lifetime1, (byte) 24, this.field_u >> 8) << 8;
@@ -95,7 +95,7 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
           var5 == 0) {
           var5 = 1;
         }
-        var8Lifetime2 = qva.headingFromVector((byte) -41, var5 << 16, var4 << 16);
+        var8Lifetime2 = DeviceLostException.headingFromVector((byte) -41, var5 << 16, var4 << 16);
         var9Lifetime2 = MouseInputHandler.sin2048((byte) 110, var8Lifetime2 >> 2);
         var10Lifetime2 = ModelAnimator.cos2048(0, var8Lifetime2 >> 2);
         var11Lifetime2 = ChatMessage.multiplyFixed(var9Lifetime2, (byte) 24, this.field_u >> 8) << 8;

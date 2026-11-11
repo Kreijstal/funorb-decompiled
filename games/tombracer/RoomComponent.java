@@ -790,8 +790,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.parent == null) {
-            param1.writeBits((byte) -128, dqa.toOffsetBinary(true, this.x / 1048576, 8), 8);
-            param1.writeBits((byte) -125, dqa.toOffsetBinary(true, this.y / 1048576, 8), 8);
+            param1.writeBits((byte) -128, OpenGlVertexLayout.toOffsetBinary(true, this.x / 1048576, 8), 8);
+            param1.writeBits((byte) -125, OpenGlVertexLayout.toOffsetBinary(true, this.y / 1048576, 8), 8);
           }
           if (this.hasSize(555277520)) {
             param1.writeBits((byte) 80, this.width / 2097152, 6);

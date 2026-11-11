@@ -79,13 +79,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         MessagePage var2Lifetime1;
         this.field_cb.setColors(param0, 4210752, 2121792);
         if (param0) {
-          var2 = new MessagePage(this, this.field_ab, fua.field_e);
+          var2 = new MessagePage(this, this.field_ab, DropdownButtonPainter.field_e);
           var2.addAction(GameAssetLoader.field_i, 15, -127);
           this.transitionToContent(101, var2);
           return;
         }
         this.field_Y = false;
-        var2Lifetime1 = new MessagePage(this, this.field_ab, fua.field_e);
+        var2Lifetime1 = new MessagePage(this, this.field_ab, DropdownButtonPainter.field_e);
         var2Lifetime1.addAction(GameAssetLoader.field_i, 15, -127);
         this.transitionToContent(101, var2Lifetime1);
     }

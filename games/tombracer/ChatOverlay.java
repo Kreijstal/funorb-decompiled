@@ -285,8 +285,8 @@ final class ChatOverlay {
                 stackIn_46_0 = ((2 & var7) != 0);
                 PowerDownItemBehaviour.field_s = stackIn_46_0;
                 stackIn_49_0 = ((8 & var7) != 0);
-                fua.field_g = stackIn_49_0;
-                if (fua.field_g) {
+                DropdownButtonPainter.field_g = stackIn_49_0;
+                if (DropdownButtonPainter.field_g) {
                   PowerDownItemBehaviour.field_s = true;
                 }
               }

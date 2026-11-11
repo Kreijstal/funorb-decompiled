@@ -168,7 +168,7 @@ final class LoginMethod {
         if (!param0) {
           LoginMethod.findLobbyPlayer(false, 56L);
         }
-        return (LobbyPlayerEntry) (fua.field_a.get(-126, param1));
+        return (LobbyPlayerEntry) (DropdownButtonPainter.field_a.get(-126, param1));
     }
 
     static {

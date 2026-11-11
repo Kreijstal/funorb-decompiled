@@ -40,7 +40,7 @@ final class DateOfBirthPanel extends ArrayWidgetGroup implements ButtonListener 
 
     DateOfBirthPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
-        this.field_x = new DateFieldsWidget(new hga(10000536), GraphicsToolkit.field_b, 0, 0, 140, 25);
+        this.field_x = new DateFieldsWidget(new InputFieldPainter(10000536), GraphicsToolkit.field_b, 0, 0, 140, 25);
         this.field_x.setValidator((byte) 111, new DateValidationSource());
         this.field_B = new FocusableWidget(PlainScoringObserverFactory.field_d, (WidgetListener) (this));
         this.children = new UiWidget[]{(UiWidget) ((Object) this.field_x), (UiWidget) ((Object) this.field_B)};

@@ -116,8 +116,8 @@ final class DisplayNameForm extends WidgetContainer implements SuggestionsHost, 
         this.field_z.setValidationSource(-13861, new NameFieldValidator(this.field_z));
         this.field_A.field_y = false;
         this.field_A.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
-        this.field_B.field_r = (WidgetPainter) ((Object) new kaa());
-        this.field_z.field_r = (WidgetPainter) ((Object) new hga(10000536));
+        this.field_B.field_r = (WidgetPainter) ((Object) new LinkPainter());
+        this.field_z.field_r = (WidgetPainter) ((Object) new InputFieldPainter(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;

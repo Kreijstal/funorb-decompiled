@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jla extends FocusableWidget {
+final class CheckboxWidget extends FocusableWidget {
     static IntrusiveDeque field_z;
     static String field_B;
 
-    jla(String param0, WidgetListener param1, boolean param2) {
+    CheckboxWidget(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_w = param2 ? true : false;
@@ -14,7 +14,7 @@ final class jla extends FocusableWidget {
         }
     }
 
-    private jla(String param0, WidgetPainter param1, WidgetListener param2) {
+    private CheckboxWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
           this.field_r = afa.field_c.field_d;
@@ -41,7 +41,7 @@ final class jla extends FocusableWidget {
         super.activate(param0, param1, param2, -71);
     }
 
-    private jla(String param0, WidgetListener param1) {
+    private CheckboxWidget(String param0, WidgetListener param1) {
         this(param0, afa.field_c.field_u, param1);
         try {
           this.field_r = afa.field_c.field_d;

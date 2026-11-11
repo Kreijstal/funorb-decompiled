@@ -24,10 +24,10 @@ abstract class ChatTarget {
             IntNode.field_h = param1;
             if (TextSpewerBehaviour.field_o == 0 &&
               0 < param0) {
-              jla.field_z = new IntrusiveDeque();
+              CheckboxWidget.field_z = new IntrusiveDeque();
             } else {
               if (param0 == 0) {
-                jla.field_z = null;
+                CheckboxWidget.field_z = null;
               }
             }
           } else {
@@ -35,14 +35,14 @@ abstract class ChatTarget {
             IntNode.field_h = param1;
             if (TextSpewerBehaviour.field_o != 0) {
               if (param0 == 0) {
-                jla.field_z = null;
+                CheckboxWidget.field_z = null;
               }
             } else {
               if (0 < param0) {
-                jla.field_z = new IntrusiveDeque();
+                CheckboxWidget.field_z = new IntrusiveDeque();
               } else {
                 if (param0 == 0) {
-                  jla.field_z = null;
+                  CheckboxWidget.field_z = null;
                 }
               }
             }
@@ -54,10 +54,10 @@ abstract class ChatTarget {
             IntNode.field_h = param1;
             if (TextSpewerBehaviour.field_o == 0 &&
               0 < param0) {
-              jla.field_z = new IntrusiveDeque();
+              CheckboxWidget.field_z = new IntrusiveDeque();
             } else {
               if (param0 == 0) {
-                jla.field_z = null;
+                CheckboxWidget.field_z = null;
               }
             }
           } else {
@@ -68,14 +68,14 @@ abstract class ChatTarget {
             IntNode.field_h = param1;
             if (TextSpewerBehaviour.field_o != 0) {
               if (param0 == 0) {
-                jla.field_z = null;
+                CheckboxWidget.field_z = null;
               }
             } else {
               if (0 < param0) {
-                jla.field_z = new IntrusiveDeque();
+                CheckboxWidget.field_z = new IntrusiveDeque();
               } else {
                 if (param0 == 0) {
-                  jla.field_z = null;
+                  CheckboxWidget.field_z = null;
                 }
               }
             }

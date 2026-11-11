@@ -861,7 +861,7 @@ final class HardwareModel extends ToolkitModel {
               this.field_lb = FullscreenConfirmationDialog.copyOf(this.field_lb, 114, this.field_fb);
               this.field_m = FullscreenConfirmationDialog.copyOf(this.field_m, 114, this.field_fb);
               this.field_p = FullscreenConfirmationDialog.copyOf(this.field_p, 123, this.field_fb);
-              this.field_w = kaa.copyByteRange(0, this.field_w, this.field_fb);
+              this.field_w = LinkPainter.copyByteRange(0, this.field_w, this.field_fb);
               this.field_eb = fba.copyFloats(1, this.field_eb, this.field_fb);
               this.field_t = fba.copyFloats(1, this.field_t, this.field_fb);
               if (null != param1.field_l &&
@@ -2555,7 +2555,7 @@ final class HardwareModel extends ToolkitModel {
               param0.field_E = null;
             }
           }
-          if (kaa.hasMask24OrAll544(this.field_h, param4, param1)) {
+          if (LinkPainter.hasMask24OrAll544(this.field_h, param4, param1)) {
             if (null == param2.field_lb ||
               !(this.field_fb <= param2.field_lb.length)) {
               var11Lifetime2 = this.field_fb;
@@ -2805,7 +2805,7 @@ final class HardwareModel extends ToolkitModel {
             param0.field_g.field_c = this.field_g.field_c;
           }
           boolean decompiledFrameCompleted2 = true;
-          if (fua.hasFlag32768(98, param4, this.field_h)) {
+          if (DropdownButtonPainter.hasFlag32768(98, param4, this.field_h)) {
             if (param2.field_gb != null &&
               param2.field_gb.length >= this.field_I) {
               param0.field_gb = param2.field_gb;

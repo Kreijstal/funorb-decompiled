@@ -162,7 +162,7 @@ final class PathMoveLocomotor extends Locomotor {
             this.waypointIndex = this.waypointIndex + 1;
             return;
           }
-          var10 = qva.headingFromVector((byte) -99, var7, var6);
+          var10 = DeviceLostException.headingFromVector((byte) -99, var7, var6);
           if (!this.turnsToFaceWaypoint) {
             var11 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
             var12 = ModelAnimator.cos2048(0, var10 >> 2);
@@ -230,7 +230,7 @@ final class PathMoveLocomotor extends Locomotor {
           this.waypointIndex = this.waypointIndex + 1;
           return;
         }
-        var10Lifetime1 = qva.headingFromVector((byte) -99, var7Lifetime1, var6Lifetime1);
+        var10Lifetime1 = DeviceLostException.headingFromVector((byte) -99, var7Lifetime1, var6Lifetime1);
         if (!this.turnsToFaceWaypoint) {
           var11Lifetime1 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime1 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);

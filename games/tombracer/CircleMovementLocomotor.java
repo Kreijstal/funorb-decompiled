@@ -120,7 +120,7 @@ final class CircleMovementLocomotor extends Locomotor {
         try {
           super.encode(param0, (byte) -122);
           param0.writeBits((byte) -44, this.field_o >> 16, 10);
-          param0.writeBits((byte) 90, dqa.toOffsetBinary(true, this.field_r, 12), 12);
+          param0.writeBits((byte) 90, OpenGlVertexLayout.toOffsetBinary(true, this.field_r, 12), 12);
           param0.writeBits((byte) -126, ResourceArchive.scaleToBits((byte) 74, this.field_q, 32768, 4), 4);
           stackIn_2_0 = (BitPacketBuffer) (param0);
           stackIn_2_1 = -128;
@@ -232,7 +232,7 @@ final class CircleMovementLocomotor extends Locomotor {
           }
           uma.field_b = param8.field_J;
           uma.field_b.clear(param2 ^ -59);
-          fua.field_a = new SecondaryNodeHashTable(param4);
+          DropdownButtonPainter.field_a = new SecondaryNodeHashTable(param4);
           RasterizerOperator.field_o = 0;
           ValidatedTextInputWidget.field_K = 0;
           FleeLocomotor.field_z = -1;

@@ -746,7 +746,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return false;
     }
 
-    final void present(int param0, int param1) throws qva {
+    final void present(int param0, int param1) throws DeviceLostException {
         int fieldTemp$1 = 0;
         boolean discarded$2 = false;
         boolean discarded$3 = false;
@@ -755,7 +755,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
           fieldTemp$1 = this.field_ed + 1;
           this.field_ed = this.field_ed + 1;
           if (fieldTemp$1 > 50) {
-            throw new qva();
+            throw new DeviceLostException();
           }
           discarded$2 = this.resetDevice(-2005530519);
         } else {

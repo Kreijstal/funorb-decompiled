@@ -36,7 +36,7 @@ abstract class mna {
         while (var7 >= 0) {
           var15 = CourseLayout.field_d[var7];
           var10 = 0;
-          if (!fua.field_g &&
+          if (!DropdownButtonPainter.field_g &&
             var5 < ValidationMessageWidget.field_K) {
             var11_int = Transform3D.getChatSetting(var15.field_d, -20011);
             if (var15.a(false) >= var11_int && (var15.field_m ||

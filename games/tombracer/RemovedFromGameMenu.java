@@ -15,11 +15,11 @@ final class RemovedFromGameMenu extends MenuScreen {
 
     final static void d(byte param0) {
         String var2 = null;
-        if (null != wra.field_b) {
-          var2 = wra.field_b;
+        if (null != ProxyResponseException.field_b) {
+          var2 = ProxyResponseException.field_b;
           String var1 = var2;
           ClampOperator.showCentredMessage(LegacyOpenGlFlowingWaterEffect.formatText(86, ContactListEntry.field_Bb, new String[]{var2}), param0 + 15047);
-          wra.field_b = null;
+          ProxyResponseException.field_b = null;
         }
         if (param0 == 118) {
           return;

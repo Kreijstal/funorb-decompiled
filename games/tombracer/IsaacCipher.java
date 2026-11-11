@@ -283,7 +283,7 @@ final class IsaacCipher {
             TextureFormat.field_a = param10;
             if (RaceStandings.field_a.field_x != null) {
               try {
-                fua.field_b = new BufferedCacheFile(RaceStandings.field_a.field_x, 64, 0);
+                DropdownButtonPainter.field_b = new BufferedCacheFile(RaceStandings.field_a.field_x, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

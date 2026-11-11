@@ -3,7 +3,7 @@
  */
 final class AccountRegistrationPanel extends WidgetContainer implements HotspotListener, ButtonListener, SuggestionsHost {
     private ValidatedTextInputWidget field_E;
-    private jla field_D;
+    private CheckboxWidget field_D;
     private ValidatedTextInputWidget field_I;
     private FocusableWidget field_B;
     private FocusableWidget field_F;
@@ -167,7 +167,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_C = new ValidatedTextInputWidget("", (WidgetListener) null, 20);
         this.field_I = new ValidatedTextInputWidget("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_D = new jla("", (WidgetListener) null, var1 != 0);
+        this.field_D = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
         this.field_F = new FocusableWidget(sla.field_c, (WidgetListener) null);
         this.field_B = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (WidgetListener) null);
         this.field_G.field_q = rma.field_a;
@@ -185,14 +185,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_I.setValidationSource(-13861, new AgeValidator(this.field_I));
         this.field_F.field_y = false;
         this.field_F.field_r = (WidgetPainter) ((Object) new DialogButtonPainter());
-        this.field_B.field_r = (WidgetPainter) ((Object) new kaa());
-        this.field_G.field_r = (WidgetPainter) ((Object) new hga(10000536));
-        hga dupTemp$0 = new hga(10000536);
+        this.field_B.field_r = (WidgetPainter) ((Object) new LinkPainter());
+        this.field_G.field_r = (WidgetPainter) ((Object) new InputFieldPainter(10000536));
+        InputFieldPainter dupTemp$0 = new InputFieldPainter(10000536);
         this.field_J.field_r = (WidgetPainter) ((Object) dupTemp$0);
         this.field_z.field_r = (WidgetPainter) ((Object) dupTemp$0);
-        this.field_I.field_r = (WidgetPainter) ((Object) new hga(10000536));
-        this.field_D.field_r = (WidgetPainter) ((Object) new ee());
-        poa dupTemp$1 = new poa(10000536);
+        this.field_I.field_r = (WidgetPainter) ((Object) new InputFieldPainter(10000536));
+        this.field_D.field_r = (WidgetPainter) ((Object) new CheckboxPainter());
+        PasswordInputPainter dupTemp$1 = new PasswordInputPainter(10000536);
         this.field_C.field_r = (WidgetPainter) ((Object) dupTemp$1);
         this.field_E.field_r = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = LegacyOpenGlFlowingWaterEffect.formatText(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.linkEnd(127)});

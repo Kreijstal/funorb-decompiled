@@ -512,7 +512,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         aqa.releaseStatics((byte) -59);
         QuickChatPhraseDefinition.releaseStatics((byte) -36);
         SoftReferenceCache.releaseStatics(8476);
-        wra.releaseStatics(true);
+        ProxyResponseException.releaseStatics(true);
         NanoTickClock.releaseStatics(param0 + 3571);
         ImageProducerRasterBuffer.releaseStatics(param0 + 3668);
         DateOfBirthPanel.releaseStatics(param0 ^ 3628);
@@ -668,7 +668,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         LruNodeCache.releaseStatics((byte) -100);
         ProceduralTexture.releaseStatics(-98);
         nka.releaseStatics((byte) -75);
-        jla.releaseStatics(-23884);
+        CheckboxWidget.releaseStatics(-23884);
         rr.releaseStatics(param0 + 3666);
         kd.releaseStatics((byte) -121);
         FormFieldRow.releaseStatics(2);
@@ -866,7 +866,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         mf.releaseStatics(false);
         OpenGlEnvironmentWaterEffect.releaseStatics(13936);
         OpenGlBuffer.releaseStatics(-127);
-        dqa.releaseStatics((byte) 11);
+        OpenGlVertexLayout.releaseStatics((byte) 11);
         SecondaryNodeDequeIterator.releaseStatics((byte) -92);
         pda.releaseStatics((byte) -114);
         TrapSpawner.releaseStatics(30000);
@@ -891,8 +891,8 @@ public final class TombRacer extends TombRacerShell implements ls {
         CourseDefinition.releaseStatics(param0 ^ 2973);
         ArchiveId.releaseStatics(-17614);
         DialogButtonPainter.releaseStatics(-113);
-        hga.releaseStatics((byte) 126);
-        poa.releaseStatics((byte) 112);
+        InputFieldPainter.releaseStatics((byte) 126);
+        PasswordInputPainter.releaseStatics((byte) 112);
         rg.releaseStatics((byte) -127);
         tka.releaseStatics((byte) -55);
         ContactListEntry.releaseStatics((byte) 101);
@@ -935,7 +935,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         TextLineLayout.releaseStatics(param0 + 3665);
         ema.releaseStatics(48);
         pu.releaseStatics((byte) -53);
-        fua.releaseStatics(param0 + 3540);
+        DropdownButtonPainter.releaseStatics(param0 + 3540);
         haa.releaseStatics(121);
         DropdownPopupList.releaseStatics((byte) -119);
         IntArrayRequest.releaseStatics((byte) -104);
@@ -1212,7 +1212,7 @@ public final class TombRacer extends TombRacerShell implements ls {
             return true;
           }
           if (param0 == 14) {
-            CircleMovementLocomotor.initializeLobbyCollections(DoorwayComponent.r((byte) 107), lla.nextPowerOfTwo(false, 4), (byte) -51, vo.e(35040), lla.nextPowerOfTwo(false, 2000), MirrorMoverLocomotor.field_o.length, LoadProfileCommand.field_t, 1024, TextSpewerBehaviour.b(19845), 150);
+            CircleMovementLocomotor.initializeLobbyCollections(DoorwayComponent.r((byte) 107), lla.nextPowerOfTwo(false, 4), (byte) -51, OpenGlBufferObject.e(35040), lla.nextPowerOfTwo(false, 2000), MirrorMoverLocomotor.field_o.length, LoadProfileCommand.field_t, 1024, TextSpewerBehaviour.b(19845), 150);
             AvailabilityQuery.a(-8250, PitBehaviour.b(-80), fa.b((byte) 123));
             RandomMazeBehaviour.field_n = true;
             LegacyOpenGlEnvironmentWaterEffect.field_d = false;
@@ -1416,7 +1416,7 @@ public final class TombRacer extends TombRacerShell implements ls {
 
     private final void finishFrame(int param0) {
         try {
-          qva qva = null;
+          DeviceLostException qva = null;
           Throwable decompiledCaughtException = null;
           if (DefaultTileRenderable.e(-22766) &&
             tga.field_a.isBloomEnabled()) {
@@ -1432,9 +1432,9 @@ public final class TombRacer extends TombRacerShell implements ls {
           }
           try {
             tga.field_a.presentFrame(param0 + 28581);
-          } catch (qva decompiledCaughtParameter0) {
+          } catch (DeviceLostException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            qva = (qva) (Object) decompiledCaughtException;
+            qva = (DeviceLostException) (Object) decompiledCaughtException;
             System.out.println(qva);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

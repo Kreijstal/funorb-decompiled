@@ -363,7 +363,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         return (GraphicsHeap) ((Object) var2);
     }
 
-    final void present(int param0, int param1) throws qva {
+    final void present(int param0, int param1) throws DeviceLostException {
         if (this.field_f == null) {
           throw new IllegalStateException("off");
         }

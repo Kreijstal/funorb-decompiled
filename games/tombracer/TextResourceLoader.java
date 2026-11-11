@@ -129,7 +129,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 122, "mu_chat_public");
                 if (var2 != null) {
-                  wra.field_a = jaa.decodeText((byte) 41, var2);
+                  ProxyResponseException.field_a = jaa.decodeText((byte) 41, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -47, "mu_chat_ignore");
                 if (null != var2) {
@@ -1135,7 +1135,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -104, "connectionrestored");
                 if (null != var2) {
-                  fua.field_e = jaa.decodeText((byte) 110, var2);
+                  DropdownButtonPainter.field_e = jaa.decodeText((byte) 110, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -60, "warning_ifyouquit");
                 if (var2 != null) {
@@ -1487,7 +1487,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -32, "login_create_tooltip");
                 if (null != var2) {
-                  hga.field_n = jaa.decodeText((byte) 28, var2);
+                  InputFieldPainter.field_n = jaa.decodeText((byte) 28, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 117, "login_justplay_tooltip");
                 if (null != var2) {
@@ -1575,7 +1575,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 111, "create_username_available");
                 if (null != var2) {
-                  jla.field_B = jaa.decodeText((byte) 122, var2);
+                  CheckboxWidget.field_B = jaa.decodeText((byte) 122, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 112, "create_alert_namelength");
                 if (var2 != null) {

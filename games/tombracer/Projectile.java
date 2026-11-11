@@ -377,7 +377,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           }
           if (var3 != 3) {
             if (var3 == 0) {
-              var2 = qva.headingFromVector((byte) -35, this.velocityY, this.velocityX) + 4096;
+              var2 = DeviceLostException.headingFromVector((byte) -35, this.velocityY, this.velocityX) + 4096;
               this.room.getParticleEffects(false).spawnBurst(this.y, (byte) -83, 5, this.z, 3, var2, 10, 262144, this.x, 16, 8);
               return;
             }
@@ -397,7 +397,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           if (var3Lifetime1 != 0) {
             return;
           }
-          var2Lifetime1 = qva.headingFromVector((byte) -35, this.velocityY, this.velocityX) + 4096;
+          var2Lifetime1 = DeviceLostException.headingFromVector((byte) -35, this.velocityY, this.velocityX) + 4096;
           this.room.getParticleEffects(false).spawnBurst(this.y, (byte) -83, 5, this.z, 3, var2Lifetime1, 10, 262144, this.x, 16, 8);
           return;
         }
@@ -811,7 +811,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         this.velocityX = param0;
         this.velocityY = param1;
         int var4 = 118 / ((-51 - param2) / 40);
-        this.angle = qva.headingFromVector((byte) -29, param1, param0);
+        this.angle = DeviceLostException.headingFromVector((byte) -29, param1, param0);
     }
 
     final void setPushesObjects(int param0, boolean param1) {

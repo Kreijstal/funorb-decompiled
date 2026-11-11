@@ -163,7 +163,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        wra var12_ref = null;
+        ProxyResponseException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = TombRacer.field_G ? 1 : 0;
@@ -214,15 +214,15 @@ final class ProxySocketConnector extends SocketConnector {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (wra) null;
+            if (false) throw (ProxyResponseException) null;
             var12 = this.connectViaProxy(var11, 443);
             if (var12 != null) {
               stackIn_22_0 = var12;
               return stackIn_22_0;
             }
-          } catch (wra decompiledCaughtParameter1) {
+          } catch (ProxyResponseException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (wra) (Object) decompiledCaughtException;
+            var12_ref = (ProxyResponseException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -385,11 +385,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var11 != -1) {
                     var8 = var14.substring(0, var11);
                   }
-                  throw new wra(var8);
+                  throw new ProxyResponseException(var8);
                 }
                 break;
               }
-              throw new wra("");
+              throw new ProxyResponseException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_12_0 = var13;

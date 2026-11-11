@@ -32,7 +32,7 @@ final class fha {
           return;
         }
         try {
-          fua.field_f = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "frame_bottom");
+          DropdownButtonPainter.field_f = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "frame_bottom");
           ApproachPlayerLocomotor.field_s = MaskBlendOperator.loadSpriteByName(param2, "commonui", "jagex_logo_grey", -101);
           MonochromeFillOperator.field_n = BoulderComponent.loadSpritesByName(param2, "commonui", 5, "button");
           CharacterChoiceFactory.field_b = Particle.loadSpritesByName("validation", param2, "commonui", -57);

@@ -38,7 +38,7 @@ abstract class GraphicsToolkit {
         this.close(true);
     }
 
-    abstract void present(int param0, int param1) throws qva;
+    abstract void present(int param0, int param1) throws DeviceLostException;
 
     abstract void setBloomParameters(float param0, float param1, float param2);
 
@@ -172,7 +172,7 @@ abstract class GraphicsToolkit {
 
     abstract void restoreCanvasTarget();
 
-    final void presentFrame(int param0) throws qva {
+    final void presentFrame(int param0) throws DeviceLostException {
         this.present(param0, 0);
     }
 

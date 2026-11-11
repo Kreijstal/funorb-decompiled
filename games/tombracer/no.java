@@ -233,7 +233,7 @@ final class no extends MatchOverlay {
         if (S2CNewRoomPacket.hasAnyMask540800(540800, param1, param0) | ((param1 & param2) != 0 ? true : false) | EdgeDetectOperator.hasFlag256(param0, param1, 26205)) {
           return true;
         }
-        return (((8192 & param1) != 0 ? true : false) | kaa.hasMask24OrAll544(param0, param1, false) | rg.hasFlag65536(param0, param2 ^ -36949, param1)) & (0 == (55 & param0) ? true : false);
+        return (((8192 & param1) != 0 ? true : false) | LinkPainter.hasMask24OrAll544(param0, param1, false) | rg.hasFlag65536(param0, param2 ^ -36949, param1)) & (0 == (55 & param0) ? true : false);
     }
 
     final static void beginPrivateMessage(String param0, long param1, byte param2) {

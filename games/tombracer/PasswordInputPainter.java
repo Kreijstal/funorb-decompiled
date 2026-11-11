@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class poa extends hga {
+final class PasswordInputPainter extends InputFieldPainter {
     static String field_p;
 
     public static void releaseStatics(byte param0) {
         if (param0 != 112) {
-          poa.releaseStatics((byte) -30);
+          PasswordInputPainter.releaseStatics((byte) -30);
           field_p = null;
           return;
         }
         field_p = null;
     }
 
-    poa(int param0) {
+    PasswordInputPainter(int param0) {
         this(KeySwitchComponent.field_J, param0);
     }
 
@@ -46,7 +46,7 @@ final class poa extends hga {
         }
     }
 
-    private poa(BitmapFont param0, int param1) {
+    private PasswordInputPainter(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

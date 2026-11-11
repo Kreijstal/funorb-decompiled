@@ -139,7 +139,7 @@ final class SoftCacheEntry extends CacheEntry {
         if (era.field_d != null) {
           stackIn_7_0 = true;
         } else {
-          if (vo.field_b) {
+          if (OpenGlBufferObject.field_b) {
             return true;
           }
           stackIn_7_0 = false;

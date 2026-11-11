@@ -1437,7 +1437,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_baroness", (byte) 109);
                 if (var2 != null) {
-                  poa.field_p = jaa.decodeText((byte) 52, var2);
+                  PasswordInputPainter.field_p = jaa.decodeText((byte) 52, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_borees", (byte) 125);
                 if (var2 != null) {

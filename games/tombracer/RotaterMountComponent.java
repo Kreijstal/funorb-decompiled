@@ -67,7 +67,7 @@ final class RotaterMountComponent extends PrefabComponent {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) -38, dqa.toOffsetBinary(!param0 ? true : false, this.field_F, 5), 5);
+          param1.writeBits((byte) -38, OpenGlVertexLayout.toOffsetBinary(!param0 ? true : false, this.field_F, 5), 5);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sua.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
