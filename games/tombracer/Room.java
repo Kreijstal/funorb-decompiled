@@ -503,7 +503,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final boolean isOnFloorAt(boolean param0, int param1, WorldBody param2, int param3) {
         RuntimeException var5 = null;
-        Effect var6 = null;
+        HazardEffect var6 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -511,8 +511,8 @@ final class Room implements SwitchableScope, Renderable, noa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            var6 = (Effect) null;
-            this.applyProjectileEffect((Projectile) null, -25, (Effect) null);
+            var6 = (HazardEffect) null;
+            this.applyProjectileEffect((Projectile) null, -25, (HazardEffect) null);
           }
           stackIn_5_0 = (1 == this.classifySupportAt(131072, 131072, param2, param3, param1, (byte) -128));
           return stackIn_5_0;
@@ -549,7 +549,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
     }
 
-    private final int applyBeamEffectToAll(boolean param0, BeamSegment param1, Effect param2) {
+    private final int applyBeamEffectToAll(boolean param0, BeamSegment param1, HazardEffect param2) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -1154,7 +1154,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         return;
     }
 
-    final boolean castBeamSegment(int param0, WorldBody param1, int param2, BeamSegment param3, WorldBody param4, Effect param5) {
+    final boolean castBeamSegment(int param0, WorldBody param1, int param2, BeamSegment param3, WorldBody param4, HazardEffect param5) {
         int discarded$3 = 0;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -1445,7 +1445,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         return stackIn_4_0;
     }
 
-    final int applyAreaEffect(int param0, int param1, Effect param2, int param3, int param4, int param5) {
+    final int applyAreaEffect(int param0, int param1, HazardEffect param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -1640,7 +1640,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final static void l(int param0) {
         if (vo.field_b) {
-          ComponentTargetList.b(120);
+          ComponentTargetList.closeQuickChatMenu(120);
         }
         if (param0 != 2097152) {
           Room.l(104);
@@ -1789,7 +1789,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         return this.trapIdAllocator;
     }
 
-    final int applyProjectileEffect(Projectile param0, int param1, Effect param2) {
+    final int applyProjectileEffect(Projectile param0, int param1, HazardEffect param2) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

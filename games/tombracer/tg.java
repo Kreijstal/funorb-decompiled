@@ -6,7 +6,7 @@ final class tg {
     static int[] field_b;
     static UiComponent field_c;
 
-    final static short a(byte param0, int param1) {
+    final static short hslToHsv(byte param0, int param1) {
         int var6 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -33,7 +33,7 @@ final class tg {
           var7 = var5;
           return (short)(var7 | (var2 << 10 | var6 >> 4 << 7));
         }
-        tg.a((byte) 57, -105);
+        tg.hslToHsv((byte) 57, -105);
         var2Lifetime1 = (param1 & 65427) >> 10;
         var3Lifetime1 = 112 & param1 >> 3;
         var4Lifetime1 = 127 & param1;

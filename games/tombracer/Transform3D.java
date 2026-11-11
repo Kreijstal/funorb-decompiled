@@ -18,13 +18,13 @@ abstract class Transform3D {
 
     abstract void setCamera(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    final static int a(int param0, int param1) {
+    final static int getChatSetting(int param0, int param1) {
         int var2 = 0;
         if (param0 == 0) {
           var2 = k.field_A;
         }
         if (param1 != -20011) {
-          Transform3D.a(-61, -111);
+          Transform3D.getChatSetting(-61, -111);
         }
         if (param0 == 1) {
           var2 = nba.field_b;
@@ -92,7 +92,7 @@ abstract class Transform3D {
 
     final static Weapon createDefaultWeapon(boolean param0) {
         Weapon var1 = new Weapon();
-        var1.effect = new Effect(0, 5);
+        var1.effect = new HazardEffect(0, 5);
         if (!param0) {
           return (Weapon) null;
         }

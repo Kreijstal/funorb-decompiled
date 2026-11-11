@@ -78,10 +78,10 @@ final class gsa {
             this.field_h = true;
           }
         } else {
-          if (ScrollPane.field_ub <= param1 &&
+          if (ScrollPanel.field_ub <= param1 &&
             ema.field_b > param1) {
             if (!this.field_l &&
-              param1 >= ScrollPane.field_ub + 50 * param2) {
+              param1 >= ScrollPanel.field_ub + 50 * param2) {
               this.field_l = true;
               if (this.field_a > 0) {
                 var4 = 65;
@@ -89,7 +89,7 @@ final class gsa {
               this.field_x = this.field_x + this.field_a;
             }
             if (!this.field_o &&
-              param2 * 50 + ScrollPane.field_ub + 25 <= param1) {
+              param2 * 50 + ScrollPanel.field_ub + 25 <= param1) {
               this.field_o = true;
               if (this.field_f > 0 &&
                 this.field_a == 0) {

@@ -82,7 +82,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         return true;
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawThickRectOutline(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -90,7 +90,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           for (var7_int = 0; var7_int < param4; var7_int++) {
-            PathMoverComponent.a(param6 - 2 * var7_int, param3, param2 + var7_int, -(var7_int * 2) + param5, false, var7_int + param0);
+            PathMoverComponent.drawRectOutline(param6 - 2 * var7_int, param3, param2 + var7_int, -(var7_int * 2) + param5, false, var7_int + param0);
           }
           if (param1 != -85) {
             field_L = (String) null;
@@ -162,7 +162,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
           var4.setObstructionLevel(param1, 0);
           var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new BeamShooterBehaviour(param2, param0);
-          var5.setEffect(new Effect(6, 10), true);
+          var5.setEffect(new HazardEffect(6, 10), true);
           this.applyTimingPattern((byte) 43, var5, param2);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class TextLayout {
+abstract class TextBlockLayout {
     static String field_d;
     static ResourceArchive field_a;
     TextLineLayout[] field_c;
@@ -151,7 +151,7 @@ abstract class TextLayout {
           du.field_c.field_f = param1.getFileByName("", (byte) 117, "wall_bg.jpg");
           if (param0 > -100) {
             var5 = (String) null;
-            TextLayout.loadMenuBackgrounds((byte) -1, (ResourceArchive) null, 32, (String) null);
+            TextBlockLayout.loadMenuBackgrounds((byte) -1, (ResourceArchive) null, 32, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

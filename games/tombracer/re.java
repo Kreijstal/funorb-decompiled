@@ -11,7 +11,7 @@ final class re {
         field_b = null;
     }
 
-    final static void a(int param0) {
+    final static void layoutMainScreen(int param0) {
         int var2 = 0;
         int var3 = 0;
         BufferedSocket.field_g = SoftwareRasterizer.height;

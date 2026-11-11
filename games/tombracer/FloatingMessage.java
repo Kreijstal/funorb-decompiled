@@ -40,9 +40,9 @@ final class FloatingMessage extends IntrusiveNode {
     final void draw(byte param0) {
         int var3 = -52 % ((param0 + 59) / 45);
         int var2 = 255 - (this.field_o * 255 >> 16);
-        SecondaryNodeDequeIterator.a(var2 / 2, this.field_k, 1, this.field_g, (byte) 99, this.field_s, this.field_t);
+        SecondaryNodeDequeIterator.fillAlphaRect(var2 / 2, this.field_k, 1, this.field_g, (byte) 99, this.field_s, this.field_t);
         int var4 = HardwareAnimatedWaterEffect.field_f[this.field_r];
-        dh.a(TooltipRenderer.field_p, var2, 0, 16, 4 + this.field_t, this.field_k - 8, var4, this.field_s + 4, 1, 29870, 1, -8 + this.field_g, this.field_q);
+        dh.drawWrappedTextWithAlpha(TooltipRenderer.field_p, var2, 0, 16, 4 + this.field_t, this.field_k - 8, var4, this.field_s + 4, 1, 29870, 1, -8 + this.field_g, this.field_q);
     }
 
     final int getHeight(boolean param0) {

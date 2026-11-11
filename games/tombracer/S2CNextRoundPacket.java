@@ -185,7 +185,7 @@ final class S2CNextRoundPacket implements GamePacket {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void resendQueuedRequests(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         cga var4 = null;
@@ -195,7 +195,7 @@ final class S2CNextRoundPacket implements GamePacket {
         try {
           var4 = (cga) (aba.field_a.first(-80));
           while (var4 != null) {
-            wj.a(var4, param0, -121);
+            wj.writeQueuedRequest(var4, param0, -121);
             var4 = (cga) (aba.field_a.next(114));
           }
           if (param1 != 2) {

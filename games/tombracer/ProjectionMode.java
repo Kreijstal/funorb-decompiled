@@ -15,7 +15,7 @@ final class ProjectionMode {
         return false;
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendLobbyGameOptions(int param0, int param1) {
         BitPacketBuffer var6 = null;
         int var3 = 0;
         int var4 = 0;
@@ -34,7 +34,7 @@ final class ProjectionMode {
           var6.backpatchByteLength(var6.position - var3, (byte) -97);
           return;
         }
-        ProjectionMode.a(-5, 33);
+        ProjectionMode.sendLobbyGameOptions(-5, 33);
         BitPacketBuffer var5 = ql.field_k;
         var5.writeCipheredOpcode(param0, -2988);
         var5.position = var5.position + 1;

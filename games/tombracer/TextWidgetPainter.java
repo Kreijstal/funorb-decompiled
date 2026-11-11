@@ -267,8 +267,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        TextLayout var17 = null;
-        TextLayout var18 = null;
+        TextBlockLayout var17 = null;
+        TextBlockLayout var18 = null;
         var16 = TombRacer.field_G ? 1 : 0;
         try {
           if (param4 == param5) {
@@ -372,7 +372,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1.field_l == null) {
-            param1.field_l = (TextLayout) ((Object) new CachedTextLayout());
+            param1.field_l = (TextBlockLayout) ((Object) new CachedTextLayout());
           }
           var3_int = this.getAvailableTextWidth((byte) -83, param1);
           if (param0 <= 65) {
@@ -556,16 +556,16 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final TextLayout ensureTextLayout(UiWidget param0, int param1) {
+    public final TextBlockLayout ensureTextLayout(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        TextLayout stackIn_9_0 = null;
+        TextBlockLayout stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.field_l == null) {
-            param0.field_l = (TextLayout) ((Object) new CachedTextLayout());
+            param0.field_l = (TextBlockLayout) ((Object) new CachedTextLayout());
           }
           if (param1 != 14157) {
             this.field_e = (BitmapFont) null;
@@ -592,8 +592,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     }
 
     public final void drawCaret(int param0, int param1, int param2, int param3, UiWidget param4) {
-        TextLayout var13 = null;
-        TextLayout var14 = null;
+        TextBlockLayout var13 = null;
+        TextBlockLayout var14 = null;
         int var7 = 0;
         TextLineLayout var8 = null;
         int var9 = 0;

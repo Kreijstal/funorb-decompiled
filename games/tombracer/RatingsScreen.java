@@ -8,7 +8,7 @@ final class RatingsScreen extends DropInMenuScreen {
     private String[][] field_t;
     private int field_x;
     private int field_w;
-    static FontMetrics field_r;
+    static GameFontMetrics field_r;
 
     final static boolean hasFlag16(int param0, byte param1, int param2) {
         int var3 = -13 / ((24 - param1) / 57);
@@ -187,7 +187,7 @@ final class RatingsScreen extends DropInMenuScreen {
             0 != var12.length()) {
             var13 = 0;
             if (var8 == 0 &&
-              MiscItemBehaviour.a(var12, 0)) {
+              MiscItemBehaviour.isLocalPlayerName(var12, 0)) {
               var8 = 1;
               var13 = 1;
             }

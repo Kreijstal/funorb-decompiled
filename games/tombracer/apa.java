@@ -27,7 +27,7 @@ final class apa {
         throw new Error();
     }
 
-    final static int a(byte param0, boolean param1, String param2) {
+    final static int measureStringWidth(byte param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;

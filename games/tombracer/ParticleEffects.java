@@ -26,8 +26,8 @@ final class ParticleEffects {
     final void spawnBeamHitParticles(BeamSegment param0, WorldBody param1, byte param2) {
         try {
           if (param2 >= -99) {
-            Effect var5 = (Effect) null;
-            this.spawnBeamParticles((byte) 23, (BeamSegment) null, (Effect) null);
+            HazardEffect var5 = (HazardEffect) null;
+            this.spawnBeamParticles((byte) 23, (BeamSegment) null, (HazardEffect) null);
           }
           this.spawnBurst(param0.field_a, (byte) -101, param0.field_j, param0.field_i, 1, qva.headingFromVector((byte) -120, -param0.field_k + param0.field_f, param0.field_c - param0.field_d) - 4096, 8, 393216, param0.field_e, 4, 8);
           this.spawnBurst(param0.field_a, (byte) -110, param0.field_j, param0.field_i, 1, 0, 5, 0, param0.field_e, 6, 12);
@@ -75,7 +75,7 @@ final class ParticleEffects {
         }
     }
 
-    final void spawnBeamParticles(byte param0, BeamSegment param1, Effect param2) {
+    final void spawnBeamParticles(byte param0, BeamSegment param1, HazardEffect param2) {
         int var14 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;

@@ -30,7 +30,7 @@ final class ChatMessage {
             return 1;
           }
           if (UiWidget.field_g == 2 &&
-            QueuedPlayerEvent.a(false, this.field_j)) {
+            QueuedPlayerEvent.isFriend(false, this.field_j)) {
             return 1;
           }
           if (!param0) {
@@ -42,7 +42,7 @@ final class ChatMessage {
           return 1;
         }
         if (UiWidget.field_g == 2 &&
-          QueuedPlayerEvent.a(false, this.field_j)) {
+          QueuedPlayerEvent.isFriend(false, this.field_j)) {
           return 1;
         }
         if (!param0) {

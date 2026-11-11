@@ -288,7 +288,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
                     var12++;
                   }
                   if (var21 != null &&
-                    MiscItemBehaviour.a(var21, 0)) {
+                    MiscItemBehaviour.isLocalPlayerName(var21, 0)) {
                     var8[1][var13] = MenuEntry.field_k;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
@@ -375,7 +375,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
             MazeComponent.c(false, 2);
           } else {
             if (null == WaveformOperator.field_n) {
-              re.a(-29040);
+              re.layoutMainScreen(-29040);
             } else {
               MazeComponent.c(true, 2);
             }
@@ -402,7 +402,7 @@ final class CrossedSineBandsOperator extends TextureOperator {
           C2SChooseRewardPacket.field_a.field_Mb >= C2SChooseRewardPacket.field_a.field_Jb) {
           RasterShape.field_e.field_X = false;
           bsa.field_j.field_vb.field_r = RandomAccessFileHandle.field_c;
-          BridgeModel.a(-116, bsa.field_j.field_tb);
+          BridgeModel.resetLayoutOffsets(-116, bsa.field_j.field_tb);
         } else {
           RasterShape.field_e.field_X = true;
           bsa.field_j.field_vb.field_r = null;

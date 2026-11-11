@@ -5,7 +5,7 @@ final class rma {
     static UiComponent field_b;
     static String field_a;
 
-    final static void a(boolean param0, String param1, String param2, byte param3) {
+    final static void startLoginAttempt(boolean param0, String param1, String param2, byte param3) {
         ConstrainToLatticeLocomotor.field_u = param2;
         if (param3 < 66) {
           return;
@@ -20,7 +20,7 @@ final class rma {
 
     final static String readFreeLevelBanner(int param0) {
         int var1 = 9 / ((param0 - 74) / 41);
-        return FontMetrics.a(true, "\\\\contentfs\\mgcontent_v4\\WIP\\tombracer\\src\\freelevels\\banner.trlev");
+        return GameFontMetrics.loadLevelFile(true, "\\\\contentfs\\mgcontent_v4\\WIP\\tombracer\\src\\freelevels\\banner.trlev");
     }
 
     public static void releaseStatics(int param0) {

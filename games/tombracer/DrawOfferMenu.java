@@ -143,7 +143,7 @@ final class DrawOfferMenu extends MenuScreen {
         WhiteLightShooterComponent.field_K.draw((LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1) - (WhiteLightShooterComponent.field_K.width() >> 1), var3);
     }
 
-    final static UiComponent a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12) {
+    final static UiComponent createStyledComponent(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12) {
         UiComponent var13 = null;
         RuntimeException var13_ref = null;
         UiComponent stackIn_3_0 = null;

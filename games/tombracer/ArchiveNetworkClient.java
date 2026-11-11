@@ -58,7 +58,7 @@ abstract class ArchiveNetworkClient {
           }
           var4 = (toa) (BridgeModel.field_m.first(-80));
           while (var4 != null) {
-            uca.a(param0, var4, (byte) 93);
+            uca.writeQueuedListRequest(param0, var4, (byte) 93);
             var4 = (toa) (BridgeModel.field_m.next(113));
           }
           var5 = (IntArrayRequest) (Player.field_I.first(param1 ^ 91));
@@ -114,7 +114,7 @@ abstract class ArchiveNetworkClient {
             if (ColourKeyOperator.field_m == 2) {
               jia.field_a = new BufferedSocket((java.net.Socket) (S2CProfileUpdatePacket.field_c.field_f), oi.field_a);
               var2 = new PacketBuffer(13);
-              C2SActionPacket.a((byte) 107, pu.field_b, var2, MapWaypoint.field_n, GzipInflater.field_a);
+              C2SActionPacket.writeSessionHeader((byte) 107, pu.field_b, var2, MapWaypoint.field_n, GzipInflater.field_a);
               var2.writeByte(15, 0);
               var2.writeInt(CourseLayout.field_a, (byte) 117);
               jia.field_a.write(var2.payload, 0, 13, 106);

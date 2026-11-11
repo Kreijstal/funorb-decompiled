@@ -5,7 +5,7 @@ final class wm {
     static String field_b;
     static GameScreen field_a;
 
-    final static int a(int param0, int param1, int param2) {
+    final static int clampedFixedRatio(int param0, int param1, int param2) {
         int var3 = 19 / ((param2 - 70) / 33);
         if (param1 < 0) {
           return 0;

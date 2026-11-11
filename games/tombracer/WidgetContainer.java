@@ -213,7 +213,7 @@ class WidgetContainer extends UiWidget implements WidgetParent {
         }
     }
 
-    final static ChatTarget a(String param0, int param1, String param2, boolean param3, long param4) {
+    final static ChatTarget createChatTarget(String param0, int param1, String param2, boolean param3, long param4) {
         RuntimeException var6 = null;
         hda stackIn_6_0 = null;
         wc stackIn_8_0 = null;

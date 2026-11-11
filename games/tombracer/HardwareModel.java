@@ -678,7 +678,7 @@ final class HardwareModel extends ToolkitModel {
                           var55 = (var38[2] * (float)var51 + (var38[0] * (float)var49 + var38[1] * (float)var50)) / var52;
                           var56 = (var38[4] * (float)var50 + var38[3] * (float)var49 + (float)var51 * var38[5]) / var53;
                           var57 = ((float)var51 * var38[8] + (var38[6] * (float)var49 + var38[7] * (float)var50)) / var54;
-                          var30 = AccountRegistrationPanel.a(var57, var56, false, var55);
+                          var30 = AccountRegistrationPanel.dominantAxis(var57, var56, false, var55);
                           LegacyOpenGlShoreWaveWaterEffect.a(var36, RoomComponentFactory.field_a, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -102, var40, var39, var38);
                           var22_float = RoomComponentFactory.field_a[0];
                           var23 = RoomComponentFactory.field_a[1];
@@ -1753,7 +1753,7 @@ final class HardwareModel extends ToolkitModel {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

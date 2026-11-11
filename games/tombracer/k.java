@@ -38,7 +38,7 @@ final class k extends SingleChildWidget {
         }
     }
 
-    final static void a(byte param0, ChatMessage param1) {
+    final static void handleIncomingChatMessage(byte param0, ChatMessage param1) {
         int var2_int = 0;
         RuntimeException runtimeException = null;
         ChatMessage var3 = null;
@@ -92,7 +92,7 @@ final class k extends SingleChildWidget {
         field_z = null;
         if (param0 != 0) {
           ChatMessage var2 = (ChatMessage) null;
-          k.a((byte) -103, (ChatMessage) null);
+          k.handleIncomingChatMessage((byte) -103, (ChatMessage) null);
           field_y = null;
           return;
         }

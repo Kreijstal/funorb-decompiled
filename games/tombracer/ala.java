@@ -77,7 +77,7 @@ final class ala extends GameScreen {
         boolean stackIn_86_6;
         int var4;
         HiscoresScreen.field_C = HiscoresScreen.field_C + 1;
-        bna.a((byte) 10);
+        bna.tickLobbyRemovalTimers((byte) 10);
         if (null == C2SChooseRewardPacket.field_a) {
           var4 = 0;
           if (param2 == 15283) {
@@ -92,7 +92,7 @@ final class ala extends GameScreen {
               vha.a(stackIn_5_0, stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6, -1, 15, var4 != 0, 11, param1);
             }
           } else {
-            this.a(false, 9);
+            this.drawFadeOverlay(false, 9);
             if (param1) {
               stackIn_20_0 = true;
               stackIn_20_1 = 14;
@@ -119,7 +119,7 @@ final class ala extends GameScreen {
                 vha.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, stackIn_70_4, stackIn_70_5, stackIn_71_6, -1, 15, var4 != 0, 11, param1);
               }
             } else {
-              this.a(false, 9);
+              this.drawFadeOverlay(false, 9);
               if (param1) {
                 stackIn_85_0 = true;
                 stackIn_85_1 = 14;
@@ -140,7 +140,7 @@ final class ala extends GameScreen {
               du.field_g = false;
             }
             if (RatingsScreen.field_s) {
-              ClampOperator.a(jk.field_i, 15165);
+              ClampOperator.showCentredMessage(jk.field_i, 15165);
               RatingsScreen.field_s = false;
             }
             return;
@@ -158,7 +158,7 @@ final class ala extends GameScreen {
               vha.a(stackIn_38_0, stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_38_5, stackIn_39_6, -1, 15, var4 != 0, 11, param1);
             }
           } else {
-            this.a(false, 9);
+            this.drawFadeOverlay(false, 9);
             if (param1) {
               stackIn_53_0 = true;
               stackIn_53_1 = 14;
@@ -180,12 +180,12 @@ final class ala extends GameScreen {
           du.field_g = false;
         }
         if (RatingsScreen.field_s) {
-          ClampOperator.a(jk.field_i, 15165);
+          ClampOperator.showCentredMessage(jk.field_i, 15165);
           RatingsScreen.field_s = false;
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void drawFadeOverlay(boolean param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -298,7 +298,7 @@ final class ala extends GameScreen {
     }
 
     final void draw(byte param0, boolean param1) {
-        this.a(true, 68);
+        this.drawFadeOverlay(true, 68);
         fca.a(SingleChildWidget.a(0), 7);
         if (param0 != -28) {
           this.onActivated((byte) 98);

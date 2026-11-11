@@ -6,7 +6,7 @@ final class BrazierComponent extends PrefabComponent {
         super(param0, param1);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static void drawHorizontalSpan(int param0, int param1, int param2, int param3, boolean param4) {
         if (param3 > param0) {
           C2SRoomResultPacket.fillRange((byte) -55, param1, param3, vaa.field_a[param2], param0);
           return;
@@ -157,7 +157,7 @@ final class BrazierComponent extends PrefabComponent {
           var9.addModel((TrapPart) null, (byte) 124, var7);
           var8 = (LightSourceModel) (var6.createModel(5, 74));
           var8.setElevationOffset(64, 122);
-          var8.a(true, 16633231);
+          var8.setLightColour(true, 16633231);
           var8.b(1, 128);
           var8.a(0, param1, 1, true);
           var9.addModel((TrapPart) null, (byte) 124, var8);

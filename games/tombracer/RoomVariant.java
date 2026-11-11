@@ -68,8 +68,8 @@ final class RoomVariant {
           if (param6 <= 15) {
             return;
           }
-          ck.a(param3, param19, param17, param8, param1, args, param4, param5, param10, param7, param14, 25447, param12, param15, param9);
-          ClipFrame.a(param2, param14, 2, param13);
+          ck.storeSharedResources(param3, param19, param17, param8, param1, args, param4, param5, param10, param7, param14, 25447, param12, param15, param9);
+          ClipFrame.loadLobbyInterface(param2, param14, 2, param13);
           TrackingCrusherComponent.A(12);
           RoomComponent.buildMainScreenRoots(false);
           SwitchableId.a(83);

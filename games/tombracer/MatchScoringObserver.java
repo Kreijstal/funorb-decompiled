@@ -241,7 +241,7 @@ class MatchScoringObserver extends SimulationObserver {
               !this.field_f.isSinglePlayer(param0 - 1876)) {
               ProxySocketConnector.a(var4_int, 5);
             } else {
-              li.b(var4_int, (byte) 116);
+              li.updateRoomMusic(var4_int, (byte) 116);
             }
             MatchState.d(param0 ^ -2, var4_int);
             var5 = param2.getAllTraps(16);
@@ -252,7 +252,7 @@ class MatchScoringObserver extends SimulationObserver {
                 PenaltyNotice.a((byte) -32, var4_int);
               }
               if (2 == var8.getStatCategory((byte) 3)) {
-                ComponentMount.a(13, var4_int);
+                ComponentMount.fadeInMusicForViewedPlayer(13, var4_int);
               }
             }
           }

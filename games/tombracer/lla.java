@@ -8,7 +8,7 @@ final class lla {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 24;
         int var7 = 5;
-        this.field_a.a(var6, var7, param3, param0, -25436, param4, param1);
+        this.field_a.setBoundsAndLayoutTabs(var6, var7, param3, param0, -25436, param4, param1);
         is.field_yb.setBounds(dqa.field_e.field_G, ToolkitSelector.field_a, param2 - 23796, 0, 0);
         MatchScreen.field_F.setBounds(-82 + (-io.field_a + (dqa.field_e.field_G - 2)), 18, param2 ^ -23756, 2 + ToolkitSelector.field_a, 0);
         Puddle.field_v.setBounds(82 + io.field_a, 18, -23776, 2 + ToolkitSelector.field_a, -80 + (dqa.field_e.field_G - io.field_a - 2));
@@ -22,7 +22,7 @@ final class lla {
         try {
           var3 = new String[]{param0, MonochromeFillOperator.field_o, of.field_a};
           var4 = new UiComponent[]{param1, dqa.field_e, (UiComponent) ((Object) OpenGlSprite.field_j)};
-          this.field_a = new TabbedPanel(0L, Effect.field_a, var3, CachedArchiveSource.field_d, var4, 0);
+          this.field_a = new TabbedPanel(0L, HazardEffect.field_a, var3, CachedArchiveSource.field_d, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "lla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

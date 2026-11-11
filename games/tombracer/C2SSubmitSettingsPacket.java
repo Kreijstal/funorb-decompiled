@@ -37,7 +37,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         }
     }
 
-    final static void a(java.awt.Canvas param0, byte param1) {
+    final static void drawLoadingFrame(java.awt.Canvas param0, byte param1) {
         try {
           if (Transform3D.field_c == 11) {
             ClampOperator.d((byte) 96);
@@ -97,7 +97,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
           param1.endBitWrite(-1826190686);
           if (param0 != 200) {
             java.awt.Canvas var4 = (java.awt.Canvas) null;
-            C2SSubmitSettingsPacket.a((java.awt.Canvas) null, (byte) 16);
+            C2SSubmitSettingsPacket.drawLoadingFrame((java.awt.Canvas) null, (byte) 16);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "dba.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

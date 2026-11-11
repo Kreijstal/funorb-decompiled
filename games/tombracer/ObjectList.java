@@ -38,7 +38,7 @@ final class ObjectList {
         }
     }
 
-    final static void b(int param0) {
+    final static void clearLobbyLists(int param0) {
         DualLinkNode var1 = null;
         int var2 = TombRacer.field_G ? 1 : 0;
         DualLinkNode var1Lifetime1;

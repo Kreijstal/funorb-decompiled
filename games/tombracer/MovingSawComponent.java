@@ -55,7 +55,7 @@ final class MovingSawComponent extends PathMoverComponent {
         RuntimeException var4 = null;
         PathMoveLocomotor var5 = null;
         ConstantEffectBehaviour var6 = null;
-        Effect var7 = null;
+        HazardEffect var7 = null;
         Trap var8 = null;
         SimpleBlockBehaviour var9 = null;
         ModelCodec var10 = null;
@@ -76,7 +76,7 @@ final class MovingSawComponent extends PathMoverComponent {
           var5 = this.createPathMove((byte) 125, param2, param0);
           var12.addLocomotor(var5, 0);
           var6 = new ConstantEffectBehaviour(param2, param0);
-          var7 = new Effect(0, 10);
+          var7 = new HazardEffect(0, 10);
           var7.setDeathMessageIndex(1, 15);
           var6.setEffect(true, var7);
           var6.setLocked((byte) -24, true);
@@ -141,7 +141,7 @@ final class MovingSawComponent extends PathMoverComponent {
         }
     }
 
-    final boolean A(int param0) {
+    final boolean storesLoopFlag(int param0) {
         int var2 = 16 % ((0 - param0) / 60);
         return true;
     }
@@ -157,7 +157,7 @@ final class MovingSawComponent extends PathMoverComponent {
 
     final boolean hasAngle(byte param0) {
         if (param0 != -122) {
-          this.A(-19);
+          this.storesLoopFlag(-19);
           return false;
         }
         return false;

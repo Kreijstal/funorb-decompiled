@@ -5,7 +5,7 @@ final class rc {
     static ToolkitCandidate[] field_a;
     static SpriteData[] field_b;
 
-    final static void a(int param0, int param1, LobbyPlayerEntry param2, byte param3, int param4, int param5, ScrollPane param6) {
+    final static void openLobbyPlayerContextMenu(int param0, int param1, LobbyPlayerEntry param2, byte param3, int param4, int param5, ScrollPanel param6) {
         PlayerContextMenu var12 = null;
         int var8 = 0;
         int var9 = 0;

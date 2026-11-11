@@ -9,7 +9,7 @@ final class eda {
     int field_c;
     int field_d;
 
-    final static void a(int param0, boolean param1) {
+    final static void applyGraphicsMode(int param0, boolean param1) {
         GraphicsQuality var3 = null;
         RendererMode var2 = null;
         int var4 = TombRacer.field_G ? 1 : 0;

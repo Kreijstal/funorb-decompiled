@@ -905,7 +905,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final static Weapon createGunWeaponPreset(byte param0) {
         Weapon var1 = new Weapon();
-        var1.effect = new Effect(0, 5);
+        var1.effect = new HazardEffect(0, 5);
         var1.effect.setDeathMessageIndex(1, 11);
         var1.field_c = true;
         var1.field_d = 0;
@@ -2264,7 +2264,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_ac;
     }
 
-    final GameFont createFont(FontMetrics param0, SpriteData[] param1, boolean param2) {
+    final GameFont createFont(GameFontMetrics param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
         HardwareFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;

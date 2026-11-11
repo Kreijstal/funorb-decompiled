@@ -16,7 +16,7 @@ final class cm implements GamePacket {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setValue(int param0, int param1) {
         this.field_b = param0;
         if (param1 != 0) {
           field_a = (CourseDefinition[]) null;
@@ -178,7 +178,7 @@ final class cm implements GamePacket {
             stackIn_12_0 = (PlayerViewport.field_o) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (ComponentMount.b(8192)) {
+            if (ComponentMount.isLocalPlayerHost(8192)) {
               stackIn_8_0 = (!param1.field_ec) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -206,7 +206,7 @@ final class cm implements GamePacket {
               stackIn_29_0.field_cb = stackIn_30_1;
             }
             if (SoftwareRenderTarget.field_b[0][2].field_pb) {
-              if (ComponentMount.b(8192)) {
+              if (ComponentMount.isLocalPlayerHost(8192)) {
                 ArchiveNetworkClient.field_b = jsa.field_y;
               } else {
                 ArchiveNetworkClient.field_b = LegacyOpenGlFlowingWaterEffect.formatText(101, EffectEvent.field_i, new String[]{C2SChooseRewardPacket.field_a.field_tb});
@@ -647,7 +647,7 @@ final class cm implements GamePacket {
             if (param3) {
               return;
             }
-            ProjectionMode.a(param0, -94);
+            ProjectionMode.sendLobbyGameOptions(param0, -94);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

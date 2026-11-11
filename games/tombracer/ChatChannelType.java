@@ -7,7 +7,7 @@ final class ChatChannelType {
     int field_d;
     static String field_b;
 
-    final static int a(byte param0) {
+    final static int getSelectedCourseIndex(byte param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

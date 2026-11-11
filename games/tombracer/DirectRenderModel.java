@@ -22,7 +22,7 @@ final class DirectRenderModel extends TrapModel {
           var6_int = this.body.getWidth(-53) / 2;
           int var8 = -77 / ((param4 + 38) / 47);
           var7 = this.body.getHeight((byte) 55) / 2;
-          oq.a(-var6_int + param2, -var7 + param1, param3, 160, var6_int + param2, 16777215, var7 + param1, true);
+          oq.drawRectangleOutline3D(-var6_int + param2, -var7 + param1, param3, 160, var6_int + param2, 16777215, var7 + param1, true);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ao.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

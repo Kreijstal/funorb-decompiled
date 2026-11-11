@@ -19,7 +19,7 @@ abstract class PathMoverComponent extends PrefabComponent {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
+    final static void drawRectOutline(int param0, int param1, int param2, int param3, boolean param4, int param5) {
         tga.field_a.drawRectOutlineAlpha(param2, param5, param3, param0, SoundEvent.withFullAlpha(param4, param1), (byte) -128);
     }
 
@@ -53,7 +53,7 @@ abstract class PathMoverComponent extends PrefabComponent {
         try {
           var4 = new PathMoveLocomotor(param1, param2);
           var5 = 3 / ((param0 - 57) / 63);
-          if (this.A(-127)) {
+          if (this.storesLoopFlag(-127)) {
             stackIn_3_0 = this.field_K;
             stackIn_4_1 = !(this.field_I);
             ((WaypointPath) (Object) stackIn_3_0).setStopsAtEnd(stackIn_4_1, 1);
@@ -78,7 +78,7 @@ abstract class PathMoverComponent extends PrefabComponent {
         }
     }
 
-    abstract boolean A(int param0);
+    abstract boolean storesLoopFlag(int param0);
 
     PathMoverComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
@@ -97,7 +97,7 @@ abstract class PathMoverComponent extends PrefabComponent {
         this.field_I = true;
         try {
           this.field_K = new WaypointPath(param0.formatVersion, param2);
-          if (this.A(-97)) {
+          if (this.storesLoopFlag(-97)) {
             stackIn_5_1 = (param2.readBits((byte) 44, 1) == 1);
             this.field_I = stackIn_5_1;
           }
@@ -152,7 +152,7 @@ abstract class PathMoverComponent extends PrefabComponent {
         try {
           super.encode(param0, param1);
           this.field_K.encode(param1, 0);
-          if (this.A(64)) {
+          if (this.storesLoopFlag(64)) {
             stackIn_3_0 = (BitPacketBuffer) (param1);
             stackIn_3_1 = 118;
             if (this.field_I) {

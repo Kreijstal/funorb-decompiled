@@ -132,9 +132,9 @@ final class BlockComponent extends PrefabComponent {
         super(param0, param1);
     }
 
-    final static int A(int param0) {
+    final static int pollArchiveNetwork(int param0) {
         if (param0 <= 12) {
-          BlockComponent.A(-47);
+          BlockComponent.pollArchiveNetwork(-47);
           IntrusiveDequeCursor.field_a.processSources(-121);
           if (StatReportingScoringObserver.field_l.processNetwork(81)) {
             return 0;

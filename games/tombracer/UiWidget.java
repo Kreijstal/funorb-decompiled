@@ -4,7 +4,7 @@
 import java.util.*;
 
 class UiWidget extends IntrusiveNode {
-    TextLayout field_l;
+    TextBlockLayout field_l;
     int field_p;
     boolean field_f;
     int field_m;
@@ -132,14 +132,14 @@ class UiWidget extends IntrusiveNode {
         while (true) {
           if (var4 < var5) {
             if (param0 < -23) {
-              var11 = of.a(1);
+              var11 = of.getVisibleTooltipText(1);
               if (var11 != null) {
                 afa.field_c.drawTooltip(var11, RenderLayer.field_f, true, ConsoleToken.field_f);
               }
               return;
             }
             this.field_m = -42;
-            var10 = of.a(1);
+            var10 = of.getVisibleTooltipText(1);
             if (var10 != null) {
               afa.field_c.drawTooltip(var10, RenderLayer.field_f, true, ConsoleToken.field_f);
             }
@@ -148,7 +148,7 @@ class UiWidget extends IntrusiveNode {
           this.renderLayer(param2, param1, 0, var5);
           var5++;
           if (var6 != 0) {
-            var7 = of.a(1);
+            var7 = of.getVisibleTooltipText(1);
             if (var7 != null) {
               afa.field_c.drawTooltip(var7, RenderLayer.field_f, true, ConsoleToken.field_f);
             }
@@ -507,7 +507,7 @@ class UiWidget extends IntrusiveNode {
             this.clearKeyboardFocus((byte) 119);
           }
           TextFieldValidator.field_f = RangeOperator.field_p;
-          fea.a((byte) -33, this.getHoverText((byte) 68));
+          fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
@@ -537,7 +537,7 @@ class UiWidget extends IntrusiveNode {
                   }
                 }
                 TextFieldValidator.field_f = RangeOperator.field_p;
-                fea.a((byte) -33, this.getHoverText((byte) 68));
+                fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
                 if (param3 > -86) {
                   this.refreshLayout((byte) -121);
                 }
@@ -567,14 +567,14 @@ class UiWidget extends IntrusiveNode {
               this.clearKeyboardFocus((byte) 119);
             }
             TextFieldValidator.field_f = RangeOperator.field_p;
-            fea.a((byte) -33, this.getHoverText((byte) 68));
+            fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
             if (param3 > -86) {
               this.refreshLayout((byte) -121);
             }
             return param1;
           }
           TextFieldValidator.field_f = RangeOperator.field_p;
-          fea.a((byte) -33, this.getHoverText((byte) 68));
+          fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
@@ -603,7 +603,7 @@ class UiWidget extends IntrusiveNode {
                 }
               }
               TextFieldValidator.field_f = RangeOperator.field_p;
-              fea.a((byte) -33, this.getHoverText((byte) 68));
+              fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
               if (param3 > -86) {
                 this.refreshLayout((byte) -121);
               }
@@ -627,14 +627,14 @@ class UiWidget extends IntrusiveNode {
               this.clearKeyboardFocus((byte) 119);
             }
             TextFieldValidator.field_f = RangeOperator.field_p;
-            fea.a((byte) -33, this.getHoverText((byte) 68));
+            fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
             if (param3 > -86) {
               this.refreshLayout((byte) -121);
             }
             return param1;
           }
           TextFieldValidator.field_f = RangeOperator.field_p;
-          fea.a((byte) -33, this.getHoverText((byte) 68));
+          fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
@@ -654,7 +654,7 @@ class UiWidget extends IntrusiveNode {
         }
         if (RangeOperator.field_p != 0) {
           TextFieldValidator.field_f = RangeOperator.field_p;
-          fea.a((byte) -33, this.getHoverText((byte) 68));
+          fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
@@ -663,7 +663,7 @@ class UiWidget extends IntrusiveNode {
         }
         if (TextFieldValidator.field_f == 0) {
           TextFieldValidator.field_f = RangeOperator.field_p;
-          fea.a((byte) -33, this.getHoverText((byte) 68));
+          fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
           if (param3 <= -86) {
             return param1;
           }
@@ -684,7 +684,7 @@ class UiWidget extends IntrusiveNode {
           this.clearKeyboardFocus((byte) 119);
         }
         TextFieldValidator.field_f = RangeOperator.field_p;
-        fea.a((byte) -33, this.getHoverText((byte) 68));
+        fea.updateHoverTooltip((byte) -33, this.getHoverText((byte) 68));
         if (param3 <= -86) {
           return param1;
         }

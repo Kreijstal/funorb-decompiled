@@ -243,7 +243,7 @@ final class PlantComponent extends PrefabComponent {
         return false;
     }
 
-    final static void b(int param0, int param1) {
+    final static void resendPendingRequests(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         int var4 = 0;

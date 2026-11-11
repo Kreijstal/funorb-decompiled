@@ -5,13 +5,13 @@ final class woa extends DualLinkNode {
     byte[] field_k;
     static String field_l;
 
-    final static void a(int param0, cga param1, boolean param2) {
+    final static void queueRequest(int param0, cga param1, boolean param2) {
         try {
           if (param2) {
             woa.releaseStatics(-60);
           }
           aba.field_a.addLast((byte) -86, param1);
-          wj.a(param1, param0, -118);
+          wj.writeQueuedRequest(param1, param0, -118);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "woa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

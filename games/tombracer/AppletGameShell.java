@@ -30,13 +30,13 @@ abstract class AppletGameShell extends GameApplet {
             PlantModel.resendPendingSubmissions(false, 3);
           }
           if (hd.field_a[3]) {
-            S2CNextRoundPacket.b(4, 2);
+            S2CNextRoundPacket.resendQueuedRequests(4, 2);
           }
           if (hd.field_a[4]) {
             ArchiveNetworkClient.resendQueuedListRequests(5, -21);
           }
           if (hd.field_a[5]) {
-            PlantComponent.b(param0 ^ -109, 6);
+            PlantComponent.resendPendingRequests(param0 ^ -109, 6);
           }
           if (hd.field_a[6]) {
             Puddle.resendRatingTableRequests(7, (byte) -105);
@@ -137,7 +137,7 @@ abstract class AppletGameShell extends GameApplet {
                   Transform3D.field_c = 10;
                   HorizontalGradientOperator.field_m = false;
                 } else {
-                  epa.a(var5Lifetime2, (byte) -84, io.field_b);
+                  epa.handleLoginResponseCode(var5Lifetime2, (byte) -84, io.field_b);
                   io.field_b = null;
                 }
               }
@@ -252,7 +252,7 @@ abstract class AppletGameShell extends GameApplet {
                 au.a(3);
               } else {
                 if (var2 == 4) {
-                  ScrollPane.handlePendingRequestReply(0);
+                  ScrollPanel.handlePendingRequestReply(0);
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
@@ -266,7 +266,7 @@ abstract class AppletGameShell extends GameApplet {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                SweepRotateLocomotor.e(14180);
+                                SweepRotateLocomotor.handleIgnoreListPacket(14180);
                                 return;
                               }
                               if (var2 == 17) {
@@ -284,9 +284,9 @@ abstract class AppletGameShell extends GameApplet {
                             stackIn_24_0 = -18787;
                             stackIn_25_1 = (var2 == 12);
                             var3 = ChatOverlay.readChatMessage(stackIn_24_0, stackIn_25_1);
-                            k.a((byte) 113, var3);
+                            k.handleIncomingChatMessage((byte) 113, var3);
                           } else {
-                            RoomHeader.a((byte) -68);
+                            RoomHeader.readLocalPlayerName((byte) -68);
                           }
                         }
                       } else {
@@ -334,7 +334,7 @@ abstract class AppletGameShell extends GameApplet {
               this.reportError(-6738, "reconnect");
             }
             TextureMetadata.b(param0);
-            epa.a(var2, (byte) -84, io.field_b);
+            epa.handleLoginResponseCode(var2, (byte) -84, io.field_b);
             TrackingCrusherComponent.field_G = true;
             LegacyOpenGlPostProcessEffect.field_f = bva.currentTimeMillis((byte) -107) + 15000L;
             return var2;
@@ -579,7 +579,7 @@ abstract class AppletGameShell extends GameApplet {
             this.field_y = false;
             DropAnimation.closeGameSocket(60);
             TextureMetadata.b((byte) -84);
-            epa.a(2, (byte) -84, WindZoneBehaviour.field_n);
+            epa.handleLoginResponseCode(2, (byte) -84, WindZoneBehaviour.field_n);
             LineNoiseOperator.c(9033);
             TrackingCrusherComponent.field_G = true;
             LegacyOpenGlPostProcessEffect.field_f = 15000L + bva.currentTimeMillis((byte) -107);
@@ -589,7 +589,7 @@ abstract class AppletGameShell extends GameApplet {
           0 == Trap.field_m) {
           stackIn_26_0 = (Trap.field_m != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_26_0;
-          Trap.field_m = BlockComponent.A(61);
+          Trap.field_m = BlockComponent.pollArchiveNetwork(61);
           if (var3Lifetime1 != 0 &&
             Trap.field_m == 0 &&
             Transform3D.field_c == 11 &&
@@ -628,18 +628,18 @@ abstract class AppletGameShell extends GameApplet {
                 if (Trap.field_m != 4) {
                   if (Trap.field_m != 2) {
                     if (Trap.field_m != 5) {
-                      epa.a(256, (byte) -84, GasTrapComponent.field_H);
+                      epa.handleLoginResponseCode(256, (byte) -84, GasTrapComponent.field_H);
                     } else {
-                      epa.a(5, (byte) -84, wq.field_a);
+                      epa.handleLoginResponseCode(5, (byte) -84, wq.field_a);
                     }
                   } else {
-                    epa.a(256, (byte) -84, NativeSceneLight.field_r);
+                    epa.handleLoginResponseCode(256, (byte) -84, NativeSceneLight.field_r);
                   }
                 } else {
-                  epa.a(256, (byte) -84, ConsoleWindow.field_e);
+                  epa.handleLoginResponseCode(256, (byte) -84, ConsoleWindow.field_e);
                 }
               } else {
-                epa.a(256, (byte) -84, MatchingTextValidator.field_l);
+                epa.handleLoginResponseCode(256, (byte) -84, MatchingTextValidator.field_l);
               }
               TrackingCrusherComponent.field_G = true;
             }
@@ -682,7 +682,7 @@ abstract class AppletGameShell extends GameApplet {
               if (InvisibleTouchSwitchComponent.field_J.isGroupAvailableByName("", -127)) {
                 TextResourceLoader.loadStrings((byte) -45, InvisibleTouchSwitchComponent.field_J);
                 InvisibleTouchSwitchComponent.field_J = null;
-                C2SActionPacket.a(-33);
+                C2SActionPacket.resetFrameTiming(-33);
               }
             } else {
               InvisibleTouchSwitchComponent.field_J = null;
@@ -710,7 +710,7 @@ abstract class AppletGameShell extends GameApplet {
             S2CPlayerProfilePacket.b(true);
           }
           if (null == ScoreStandings.field_c) {
-            ScoreStandings.field_c = epa.d((byte) -91);
+            ScoreStandings.field_c = epa.getPcmStreamMixer((byte) -91);
             TextureOperator.field_k = fta.c(-93);
           }
           MapWaypoint.initLogoAssets(ScoreStandings.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
@@ -718,7 +718,7 @@ abstract class AppletGameShell extends GameApplet {
           tk.field_b = null;
           WeaveOperator.field_p = null;
           StatefulWidgetPainter.checkAppletUsername((java.applet.Applet) (this), (byte) -128);
-          C2SActionPacket.a(-33);
+          C2SActionPacket.resetFrameTiming(-33);
           cga.field_f = 10;
         }
         if (10 == cga.field_f) {
@@ -732,7 +732,7 @@ abstract class AppletGameShell extends GameApplet {
         if (cga.field_f == 11) {
           if (ConstrainToFacingArcLocomotor.field_v != null && (!ConstrainToFacingArcLocomotor.field_v.ensureIndex(-100) ||
             !ConstrainToFacingArcLocomotor.field_v.areAllGroupsAvailable(0))) {
-            ima.a(0.0f, S2CEventPacket.formatLoadingProgress(CrossedSineBandsOperator.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
+            ima.setLoadingProgress(0.0f, S2CEventPacket.formatLoadingProgress(CrossedSineBandsOperator.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -749,7 +749,7 @@ abstract class AppletGameShell extends GameApplet {
           if (null != RidgedNoise3D.field_r) {
             stackIn_133_0 = (!RidgedNoise3D.field_r.pollLoaded((byte) 37)) ? 0 : 1;
             var4 = stackIn_133_0;
-            ima.a(RidgedNoise3D.field_r.field_i, RidgedNoise3D.field_r.field_b, -65);
+            ima.setLoadingProgress(RidgedNoise3D.field_r.field_i, RidgedNoise3D.field_r.field_b, -65);
           }
           if (var4 != 0) {
             cga.field_f = 20;

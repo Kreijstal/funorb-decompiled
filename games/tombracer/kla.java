@@ -63,7 +63,7 @@ final class kla {
         }
     }
 
-    final static void a(byte param0) {
+    final static void showLoginForm(byte param0) {
         String var1 = null;
         String var1Lifetime1;
         if (!LoadProfileCommand.field_r) {

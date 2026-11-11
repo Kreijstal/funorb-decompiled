@@ -159,13 +159,13 @@ final class MaskBlendOperator extends TextureOperator {
         tga.field_a = baa.field_d.field_i.field_d;
         tga.field_a.setModelBufferSize(8192);
         ImageProducerCanvasImageBuffer.field_o = IntrusiveDequeCursor.getClipStack((byte) 65, tga.field_a);
-        EditableTextField.k((byte) 94);
-        OpenGlTexture2D.h((byte) 45);
+        EditableTextField.releaseToolkitResources((byte) 94);
+        OpenGlTexture2D.releaseToolkitResources((byte) 45);
         if (param0 != -25405) {
           String var2 = (String) null;
           MaskBlendOperator.loadSpriteByName((ResourceArchive) null, (String) null, (String) null, 78);
         }
-        rka.a(false);
+        rka.releaseCachedFonts(false);
         LoadingStepList.createGameModels(tga.field_a, 0);
         SceneLight.createGameToolkitSprites(tga.field_a, 17186);
         ArrowShooterComponent.createFonts(tga.field_a, -90);

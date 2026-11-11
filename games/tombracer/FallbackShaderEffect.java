@@ -81,7 +81,7 @@ final class FallbackShaderEffect extends ShaderEffect {
         int var10Lifetime1;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          dga.a(GameKeyHandler.field_a, 199);
+          dga.layoutBottomPanels(GameKeyHandler.field_a, 199);
           if (null != WaveformOperator.field_n) {
             HiscoresScreen.field_z.field_t = 0;
             var15 = HiscoresScreen.field_z;

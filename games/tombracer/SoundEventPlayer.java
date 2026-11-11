@@ -79,7 +79,7 @@ final class SoundEventPlayer extends SoundEventQueue {
               var5 = param0.readUnsignedByte(255);
               if ((~var5 != ~HelloCommand.field_q ||
                 var4 != 0) &&
-                (!NetworkArchiveRequest.a(param0, QueuedHint.field_j, var5, true) ||
+                (!NetworkArchiveRequest.matchesCharSequence(param0, QueuedHint.field_j, var5, true) ||
                 var4 != 0)) {
                 if (ConstrainToCircleLocomotor.field_w != var5) {
                   discarded$2 = var8.append((char)var5);
@@ -91,7 +91,7 @@ final class SoundEventPlayer extends SoundEventQueue {
                     throw new RuntimeException("Unterminated quote!");
                   }
                   var6 = param0.readByte((byte) 52);
-                  if (!NetworkArchiveRequest.a(param0, QueuedHint.field_j, var6, true) &&
+                  if (!NetworkArchiveRequest.matchesCharSequence(param0, QueuedHint.field_j, var6, true) &&
                     HelloCommand.field_q != var6) {
                     if (ConstrainToCircleLocomotor.field_w == var6) {
                       discarded$0 = var8.append((char)var6);

@@ -31,7 +31,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         return -52;
     }
 
-    final static boolean a(PacketBuffer param0, char[] param1, int param2, boolean param3) {
+    final static boolean matchesCharSequence(PacketBuffer param0, char[] param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -110,7 +110,7 @@ final class CoinBagItemComponent extends ItemComponent {
         var18 = null;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          dga.a(TextureCombineSource.field_e, 199);
+          dga.layoutBottomPanels(TextureCombineSource.field_e, 199);
           if (null != C2SChooseRewardPacket.field_a) {
             bc.field_b.field_X = true;
             var22 = HiscoresScreen.field_z;
@@ -123,7 +123,7 @@ final class CoinBagItemComponent extends ItemComponent {
             var7 = MessageOverlay.field_t;
             MessageOverlay.field_t.field_t = 0;
             var7.field_G = 0;
-            if (ComponentMount.b(param1 + 8193)) {
+            if (ComponentMount.isLocalPlayerHost(param1 + 8193)) {
               StatusEffect.field_g.field_r = GpuDataType.field_d.toUpperCase();
               var9 = (2 + dka.field_b.field_G) / 2;
               HiscoresScreen.field_z.setBounds(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
@@ -438,14 +438,14 @@ final class CoinBagItemComponent extends ItemComponent {
                 var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
                 StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.formatText(113, UiComponent.field_nb, new String[]{var9_ref_String}).toUpperCase();
                 MessageOverlay.field_t.setBounds(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
-                MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(107, TextLayout.field_d, new String[]{var9_ref_String});
+                MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(107, TextBlockLayout.field_d, new String[]{var9_ref_String});
                 var8 = MessageOverlay.field_t;
               }
             } else {
               var9_ref_String = C2SChooseRewardPacket.field_a.field_tb;
               StatusEffect.field_g.field_r = LegacyOpenGlFlowingWaterEffect.formatText(113, UiComponent.field_nb, new String[]{var9_ref_String}).toUpperCase();
               MessageOverlay.field_t.setBounds(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
-              MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(107, TextLayout.field_d, new String[]{var9_ref_String});
+              MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.formatText(107, TextBlockLayout.field_d, new String[]{var9_ref_String});
               var8 = MessageOverlay.field_t;
             }
             if (TileRenderable.field_d != 0L) {

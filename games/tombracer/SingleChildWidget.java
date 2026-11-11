@@ -291,11 +291,11 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           AllPlatformsMazeComponent.field_M.field_n = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button_active");
           AllPlatformsMazeComponent.field_M.field_M = BoulderComponent.loadSpritesByName(param4, "lobby", 5, "button_disabled");
           AllPlatformsMazeComponent.field_M.field_z = 1;
-          Effect.field_a = new UiComponent(0L, PressureSwitchBehaviour.field_p);
-          Effect.field_a.field_z = 1;
-          Effect.field_a.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_inactive"), 113);
-          Effect.field_a.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_mouseover"), 113);
-          Effect.field_a.field_n = var14;
+          HazardEffect.field_a = new UiComponent(0L, PressureSwitchBehaviour.field_p);
+          HazardEffect.field_a.field_z = 1;
+          HazardEffect.field_a.field_w = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_inactive"), 113);
+          HazardEffect.field_a.field_C = TombRacerShell.useFullSpriteBounds(BoulderComponent.loadSpritesByName(param4, "lobby", 5, "tab_mouseover"), 113);
+          HazardEffect.field_a.field_n = var14;
           CachedArchiveSource.field_d = new UiComponent(0L, (UiComponent) null);
           CachedArchiveSource.field_d.field_w = Player.createScrollbarSprites(206, -1, 3, 1856141, -113, 1127256);
           CommonChooseReward.field_c = new UiComponent(0L, (UiComponent) null);
@@ -472,7 +472,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         if (param0 != -7694) {
           field_w = (TextureFormat) null;
         }
-        rma.a(true, BridgeTile.field_g, ConstraintLocomotor.field_p, (byte) 119);
+        rma.startLoginAttempt(true, BridgeTile.field_g, ConstraintLocomotor.field_p, (byte) 119);
         S2CProfileUpdatePacket.field_d = true;
     }
 

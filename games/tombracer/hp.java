@@ -7,11 +7,11 @@ final class hp {
     public static void releaseStatics(int param0) {
         field_a = (int[][]) null;
         if (param0 != 32) {
-          hp.a(-1.4429486989974976f, -0.21872800588607788f, (byte) 122, 0.9918611645698547f, 90);
+          hp.dotWithRow(-1.4429486989974976f, -0.21872800588607788f, (byte) 122, 0.9918611645698547f, 90);
         }
     }
 
-    final static float a(float param0, float param1, byte param2, float param3, int param4) {
+    final static float dotWithRow(float param0, float param1, byte param2, float param3, int param4) {
         float[] var6 = GameEvent.field_f[param4];
         float[] var5 = var6;
         if (param2 == 26) {

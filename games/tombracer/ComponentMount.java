@@ -62,7 +62,7 @@ final class ComponentMount {
         return this.offset;
     }
 
-    final static boolean b(int param0) {
+    final static boolean isLocalPlayerHost(int param0) {
         if (param0 == 8192) {
           return C2SChooseRewardPacket.field_a.field_Ab == SimpleConditionBehaviour.field_r ? true : false;
         }
@@ -70,7 +70,7 @@ final class ComponentMount {
         return C2SChooseRewardPacket.field_a.field_Ab == SimpleConditionBehaviour.field_r ? true : false;
     }
 
-    final static void a(int param0, int param1) {
+    final static void fadeInMusicForViewedPlayer(int param0, int param1) {
         if (~param1 != ~msa.field_a) {
           return;
         }

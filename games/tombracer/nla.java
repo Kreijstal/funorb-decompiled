@@ -12,7 +12,7 @@ final class nla {
         field_b = null;
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static int segmentIntersectionParameter(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int localTemp$0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;

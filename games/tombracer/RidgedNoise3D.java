@@ -195,7 +195,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
             if (!PowerDownItemBehaviour.field_s) {
               DynamicGeometryBuffer.field_c = true;
             } else {
-              ContextMenu.e((byte) 112);
+              ContextMenu.openQuickChat((byte) 112);
             }
           }
           if (!DynamicGeometryBuffer.field_c) {

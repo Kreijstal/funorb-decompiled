@@ -169,7 +169,7 @@ final class MatchScreen extends GameScreen implements rqa {
               if (this.field_p) {
                 return;
               }
-              PlayerInputQueue.a(this.matchState.players[this.localPlayerIndex].getDeathCount((byte) -125), this.field_E, (byte) 114);
+              PlayerInputQueue.sendDeathCountMessage(this.matchState.players[this.localPlayerIndex].getDeathCount((byte) -125), this.field_E, (byte) 114);
               this.field_p = true;
             }
           }
@@ -406,7 +406,7 @@ final class MatchScreen extends GameScreen implements rqa {
             this.field_E >= 0 &&
             10 > this.field_E &&
             !this.isMenuBackgroundDemo((byte) 33)) {
-            aqa.a(this.field_E, (byte) 120);
+            aqa.sendByteGameMessage(this.field_E, (byte) 120);
             return;
           }
           return;

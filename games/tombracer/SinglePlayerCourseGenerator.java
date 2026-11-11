@@ -12,7 +12,7 @@ final class SinglePlayerCourseGenerator extends CourseGenerator {
     SinglePlayerCourseGenerator(int param0, int param1) {
         super(rga.getCourseRoomCount(26499, param0), param1);
         this.field_f = param0;
-        this.field_j = this.field_f == ChatChannelType.a((byte) 64) ? true : false;
+        this.field_j = this.field_f == ChatChannelType.getSelectedCourseIndex((byte) 64) ? true : false;
     }
 
     final CourseLayout generateLayout(byte param0) {

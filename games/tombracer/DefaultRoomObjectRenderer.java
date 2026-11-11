@@ -60,7 +60,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var5 = param2.getX(true);
           var6 = param2.getY(0);
           var7 = param2.getZ(true);
-          ConsoleTokenStream.a(var4, var7, var5, var6, (byte) 35);
+          ConsoleTokenStream.projectPoint(var4, var7, var5, var6, (byte) 35);
           var8 = var4[0];
           var9 = var4[1];
           var10 = var4[2];
@@ -241,7 +241,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var16 = (int)((float)var16 * (float)var12 / (float)var10);
           var25 = GraphicsHeap.clampValue(0, 92, java.lang.reflect.Array.getLength(var23) - 1, java.lang.reflect.Array.getLength(var23) - (int)(var13 * (float)(-1 + java.lang.reflect.Array.getLength(var23))));
           var26Lifetime1 = Math.min(var25, java.lang.reflect.Array.getLength(var23) - 1);
-          PlayPhase.a(var8, ((int[]) (var23))[var26Lifetime1], (byte) 123, 128, var16, var9);
+          PlayPhase.fillRectAlpha(var8, ((int[]) (var23))[var26Lifetime1], (byte) 123, 128, var16, var9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -282,7 +282,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var6 = param2.getWidth(52);
           var8 = -126 % ((param1 + 50) / 56);
           var7 = param2.getHeight(false);
-          oq.a(-(var6 / 2) + var4_int, var5 - var7 / 2, 0, 64, var6 / 2 + var4_int, 8965375, var7 / 2 + var5, true);
+          oq.drawRectangleOutline3D(-(var6 / 2) + var4_int, var5 - var7 / 2, 0, 64, var6 / 2 + var4_int, 8965375, var7 / 2 + var5, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -337,7 +337,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var5 = param2.getRenderX((byte) 57);
           var6 = param2.getRenderY((byte) 93);
           var7 = param2.getRenderZ((byte) -98);
-          ConsoleTokenStream.a(var4, var7, var5, var6, (byte) 35);
+          ConsoleTokenStream.projectPoint(var4, var7, var5, var6, (byte) 35);
           var8 = var4[0];
           var9 = var4[1];
           if (var8 == -1 &&
@@ -742,7 +742,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           }
           var4_int = param2.getStartSize(-71);
           var5 = this.field_a;
-          ConsoleTokenStream.a(var5, param2.getZ(true), param2.getX(true), param2.getY(0), (byte) 35);
+          ConsoleTokenStream.projectPoint(var5, param2.getZ(true), param2.getX(true), param2.getY(0), (byte) 35);
           var6 = var5[0];
           var7 = var5[1];
           var8 = (float)param2.getAge(param0 + 14066) / (float)param2.getLifetime(true);
@@ -752,8 +752,8 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             var11 = var4_int >> 16;
             var12 = 8 + era.field_g.getWrappedWidth(var10, var11);
             var13 = 8 + era.field_g.measureWrappedHeight(var10, var11, 0);
-            SecondaryNodeDequeIterator.a(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 - var12 / 2);
-            dh.a(TooltipRenderer.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
+            SecondaryNodeDequeIterator.fillAlphaRect(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 - var12 / 2);
+            dh.drawWrappedTextWithAlpha(TooltipRenderer.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -801,13 +801,13 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
           var6 = param0.getX(3);
           var7 = param0.getY(param1 + 9553);
           if (var5 == 0) {
-            oq.a(-(var4_int / 2) + var6, var7 - var4_int / 2, 0, 128, var4_int / 2 + var6, 14544639, var7 + var4_int / 2, true);
+            oq.drawRectangleOutline3D(-(var4_int / 2) + var6, var7 - var4_int / 2, 0, 128, var4_int / 2 + var6, 14544639, var7 + var4_int / 2, true);
             if (!TombRacer.field_G) {
               return;
             }
           }
           if (var5 == 1) {
-            oq.a(-(var4_int / 2) + var6, -(var4_int / 2) + var7, 0, 192, var6 + var4_int / 2, 5623039, var4_int / 2 + var7, true);
+            oq.drawRectangleOutline3D(-(var4_int / 2) + var6, -(var4_int / 2) + var7, 0, 192, var6 + var4_int / 2, 5623039, var4_int / 2 + var7, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

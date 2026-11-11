@@ -110,7 +110,7 @@ final class CharacterSelectPhase extends MatchPhase {
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (!this.field_y) {
-          li.b(this.screen.getViewedPlayerIndex(param0 + 41), (byte) 107);
+          li.updateRoomMusic(this.screen.getViewedPlayerIndex(param0 + 41), (byte) 107);
           this.field_y = true;
         }
         for (var3 = 0; this.field_t.length > var3; var3++) {

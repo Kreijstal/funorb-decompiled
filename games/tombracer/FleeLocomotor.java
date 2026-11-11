@@ -295,7 +295,7 @@ final class FleeLocomotor extends Locomotor {
 
     final static int f(int param0) {
         if (param0 != 1) {
-          FleeLocomotor.e((byte) 123);
+          FleeLocomotor.createRendererOptions((byte) 123);
           return 1;
         }
         return 1;
@@ -360,7 +360,7 @@ final class FleeLocomotor extends Locomotor {
         }
     }
 
-    final static void e(byte param0) {
+    final static void createRendererOptions(byte param0) {
         HuffmanCodec.field_a = new RendererOption(3, 4, true, true, true, true, true, true, true, false, true);
         ControllerLocomotor.field_t = new RendererOption(3, 1, true, false, false, true, true, true, true, false, true);
         if (param0 == -33) {

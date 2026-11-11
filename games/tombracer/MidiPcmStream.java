@@ -15,7 +15,7 @@ class MidiPcmStream extends PcmStream {
     private MidiVoice[][] field_n;
     private int[] field_F;
     private int[] field_m;
-    private MidiFileReader field_w;
+    private MidiTrackReader field_w;
     private int[] field_o;
     private int masterVolume;
     private int[] field_y;
@@ -1529,7 +1529,7 @@ class MidiPcmStream extends PcmStream {
         this.field_O = new int[16];
         this.field_H = 1000000;
         this.field_L = new int[16];
-        this.field_w = new MidiFileReader();
+        this.field_w = new MidiTrackReader();
         this.field_v = new MidiVoiceMixer(this);
         this.field_r = new NodeHashTable(128);
         this.setChannelVolumeScale((byte) -105, 256, -1);
@@ -1557,7 +1557,7 @@ class MidiPcmStream extends PcmStream {
         this.field_O = new int[16];
         this.field_H = 1000000;
         this.field_L = new int[16];
-        this.field_w = new MidiFileReader();
+        this.field_w = new MidiTrackReader();
         this.field_v = new MidiVoiceMixer(this);
         try {
           this.field_r = param0.field_r;

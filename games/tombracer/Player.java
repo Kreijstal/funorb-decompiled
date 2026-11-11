@@ -706,7 +706,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    public final int applyBeamEffect(Effect param0, int param1, BeamSegment param2) {
+    public final int applyBeamEffect(HazardEffect param0, int param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
@@ -2396,7 +2396,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           }
           if (this.statusFlags[0]) {
             var28Lifetime1 = this.room.getRandom(-96).nextBounded(32, 0) + 256 << 16;
-            this.room.applyAreaEffect(-116, this.y, new Effect(4, 32), var28Lifetime1, var28Lifetime1, this.x);
+            this.room.applyAreaEffect(-116, this.y, new HazardEffect(4, 32), var28Lifetime1, var28Lifetime1, this.x);
           }
           if (this.room.isPlayerNearTop((byte) -67)) {
             this.beginRoomExit(1, (byte) -25);
@@ -2853,7 +2853,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           if (-1 == var5_int) {
             return false;
           }
-          var6 = wm.a(4096, var5_int, -110);
+          var6 = wm.clampedFixedRatio(4096, var5_int, -110);
           param3.shortenTo(var6, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3005,7 +3005,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    private final int reactToEffect(Effect param0, int param1) {
+    private final int reactToEffect(HazardEffect param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -3235,7 +3235,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            this.applyAreaEffect((Effect) null, 58, -120, 50, 126, -106);
+            this.applyAreaEffect((HazardEffect) null, 58, -120, 50, 126, -106);
           }
           stackIn_10_0 = (1 == this.lifeState) && (this.deathCause == 4);
           return stackIn_10_0;
@@ -3784,7 +3784,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    public final int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int applyAreaEffect(HazardEffect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -3915,7 +3915,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
         }
     }
 
-    public final int applyProjectileEffect(Effect param0, Projectile param1, int param2) {
+    public final int applyProjectileEffect(HazardEffect param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_7_0 = 0;

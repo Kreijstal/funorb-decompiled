@@ -165,7 +165,7 @@ final class HiscoresScreen extends DropInMenuScreen {
             if (var9 == 0 &&
               var25[var11] == var7.serverResult &&
               var7.scores[0] == var14 &&
-              MiscItemBehaviour.a(var13, 0)) {
+              MiscItemBehaviour.isLocalPlayerName(var13, 0)) {
               var9 = 1;
               var15 = 1;
             }

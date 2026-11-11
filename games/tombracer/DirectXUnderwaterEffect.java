@@ -21,7 +21,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
     }
 
-    private final void e(int param0) {
+    private final void uploadShaderConstants(int param0) {
         AffineTransform3D var4 = null;
         jagdx.IDirect3DDevice var3 = null;
         if (this.field_j != null &&
@@ -53,7 +53,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.owner.setColorCombineSource(ej.field_c, 2, -6219, true, false);
         this.owner.setAlphaCombineSource(0, false, PlayerContextMenu.field_j);
         this.owner.setActiveTextureUnit(0, false);
-        this.d(122);
+        this.bindVertexShader(122);
     }
 
     final void refreshState(boolean param0, int param1) {
@@ -231,7 +231,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
     }
 
-    private final void d(int param0) {
+    private final void bindVertexShader(int param0) {
         jagdx.IDirect3DDevice var6 = null;
         jagdx.IDirect3DVertexShader var2 = null;
         int var4 = 0;
@@ -256,7 +256,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           }
           this.field_j = var2;
           this.field_i.bindVertexShader(var2, -1);
-          this.e(1);
+          this.uploadShaderConstants(1);
           this.onProjectionChanged(125);
           this.onTextureMatrixChanged(true);
           this.onViewMatrixChanged((byte) 107);
@@ -281,7 +281,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
         this.field_j = var2Lifetime1;
         this.field_i.bindVertexShader(var2Lifetime1, -1);
-        this.e(1);
+        this.uploadShaderConstants(1);
         this.onProjectionChanged(125);
         this.onTextureMatrixChanged(true);
         this.onViewMatrixChanged((byte) 107);

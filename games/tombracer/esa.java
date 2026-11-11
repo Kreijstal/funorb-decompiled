@@ -123,7 +123,7 @@ final class esa {
         }
     }
 
-    final BitSet b(byte param0) {
+    final BitSet getFlagBits(byte param0) {
         int var2 = 126 / ((param0 - 61) / 41);
         return this.field_d;
     }

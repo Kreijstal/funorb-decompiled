@@ -7,7 +7,7 @@ final class SnakePitBehaviour extends Behaviour {
     private PitSnake[] snakes;
     static String field_p;
 
-    final int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
+    final int onBeamEffect(int param0, HazardEffect param1, BeamSegment param2) {
         int var10 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -46,7 +46,7 @@ final class SnakePitBehaviour extends Behaviour {
             var13 = var5 + var11.getOffsetY(0);
             var14 = SimulationObserver.clipBeamToBox(var11.getSize(0), 12, var13, var11.getSize(0), param2, var12, 2);
             if (var14 > 0) {
-              var15 = wm.a(4096, var14, 15);
+              var15 = wm.clampedFixedRatio(4096, var14, 15);
               this.applyEffectToSnake(var8 + ChatMessage.multiplyFixed(-var8 + var9, (byte) 24, var15), var6 + ChatMessage.multiplyFixed(var7 - var6, (byte) 24, var15), var11, (byte) -102, param1);
             }
           }
@@ -72,7 +72,7 @@ final class SnakePitBehaviour extends Behaviour {
         }
     }
 
-    final int onProjectileEffect(int param0, Projectile param1, Effect param2) {
+    final int onProjectileEffect(int param0, Projectile param1, HazardEffect param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
@@ -220,7 +220,7 @@ final class SnakePitBehaviour extends Behaviour {
         super(param0, param1);
     }
 
-    private final void applyEffectToSnake(int param0, int param1, PitSnake param2, byte param3, Effect param4) {
+    private final void applyEffectToSnake(int param0, int param1, PitSnake param2, byte param3, HazardEffect param4) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -262,13 +262,13 @@ final class SnakePitBehaviour extends Behaviour {
 
     final int getSnakeCount(int param0) {
         if (param0 != 3) {
-          Effect var3 = (Effect) null;
-          this.onProjectileEffect(-115, (Projectile) null, (Effect) null);
+          HazardEffect var3 = (HazardEffect) null;
+          this.onProjectileEffect(-115, (Projectile) null, (HazardEffect) null);
         }
         return this.snakes.length;
     }
 
-    final int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
+    final int onAreaEffect(int param0, int param1, HazardEffect param2, int param3, byte param4, int param5) {
         int var9 = 0;
         int var7_int = 0;
         RuntimeException var7 = null;

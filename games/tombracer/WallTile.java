@@ -586,11 +586,11 @@ final class WallTile implements Renderable {
           } else {
             if (!LegacyOpenGlSpriteTexture.i(250)) {
               SoftwareRasterizer.clear();
-              gga.b(320, 240, (byte) 113);
+              gga.drawLoadingAnimation(320, 240, (byte) 113);
               fga.drawFramebufferToCanvas(0, false, 0, param1);
             } else {
               if (0 != Transform3D.field_c) {
-                C2SSubmitSettingsPacket.a(param1, (byte) 94);
+                C2SSubmitSettingsPacket.drawLoadingFrame(param1, (byte) 94);
               } else {
                 MazeSearchNode.a(false, param0, param2 ^ -128);
                 fga.drawFramebufferToCanvas(0, false, 0, param1);

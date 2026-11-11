@@ -7,7 +7,7 @@ final class hpa extends aa {
     int[] field_d;
     int[] field_e;
 
-    final static void a(int param0, ChatMessage param1) {
+    final static void openChatMessageContextMenu(int param0, ChatMessage param1) {
         Object stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -33,7 +33,7 @@ final class hpa extends aa {
           } else {
             stackIn_3_1 = param1.field_e;
           }
-          DateInputWidget.openPlayerContextMenu((ScrollPane) (stackIn_2_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
+          DateInputWidget.openPlayerContextMenu((ScrollPanel) (stackIn_2_0), stackIn_3_1, param1.field_j, param1.field_i, -11635, (int[]) null, param1.field_l, param1.field_d, param1.field_g);
           if (0 == param1.field_d &&
             !MonochromeFillOperator.c(param0 + 2) &&
             null == C2SChooseRewardPacket.field_a &&

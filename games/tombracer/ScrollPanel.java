@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ScrollPane extends UiComponent {
+final class ScrollPanel extends UiComponent {
     static int field_ub;
     UiComponent field_tb;
     UiComponent field_vb;
@@ -83,7 +83,7 @@ final class ScrollPane extends UiComponent {
         this.field_wb.setScrollbarBounds(this.field_tb.field_t, -this.field_tb.field_T, param0, false, this.field_G - param0, this.field_t, this.field_vb.field_t, 0);
     }
 
-    ScrollPane(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3) {
+    ScrollPanel(long param0, UiComponent param1, UiComponent param2, VerticalScrollbar param3) {
         super(param0, (UiComponent) null);
         try {
           this.field_vb = new UiComponent(0L, param2);

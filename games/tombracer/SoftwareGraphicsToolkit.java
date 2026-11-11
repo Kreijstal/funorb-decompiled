@@ -1537,7 +1537,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final GameFont createFont(FontMetrics param0, SpriteData[] param1, boolean param2) {
+    final GameFont createFont(GameFontMetrics param0, SpriteData[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;

@@ -166,9 +166,9 @@ final class CommonChooseReward implements dv {
     final static ResourceArchive e(int param0) {
         if (param0 != -1) {
           CommonChooseReward.e(11);
-          return of.a(false, gga.field_M.field_c);
+          return of.getOrOpenArchive(false, gga.field_M.field_c);
         }
-        return of.a(false, gga.field_M.field_c);
+        return of.getOrOpenArchive(false, gga.field_M.field_c);
     }
 
     public final String toString() {

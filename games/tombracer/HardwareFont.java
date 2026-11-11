@@ -7,7 +7,7 @@ final class HardwareFont extends GameFont {
     private VertexStreamBuffer field_d;
     private boolean field_e;
 
-    HardwareFont(HardwareGraphicsToolkit param0, FontMetrics param1, SpriteData[] param2, boolean param3) {
+    HardwareFont(HardwareGraphicsToolkit param0, GameFontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

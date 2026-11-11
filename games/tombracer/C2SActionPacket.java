@@ -11,7 +11,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
     static ModelData[] field_l;
     static ArchiveId field_i;
 
-    final static void a(int param0) {
+    final static void resetFrameTiming(int param0) {
         int var1_int = 0;
         int var2 = TombRacer.field_G ? 1 : 0;
         int var1_intLifetime1;
@@ -101,7 +101,7 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
         }
     }
 
-    final static void a(byte param0, int param1, PacketBuffer param2, int param3, int param4) {
+    final static void writeSessionHeader(byte param0, int param1, PacketBuffer param2, int param3, int param4) {
         try {
           param2.writeByte(12, 0);
           param2.writeShort(-1477662136, 17);

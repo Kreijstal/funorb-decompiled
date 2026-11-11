@@ -10,12 +10,12 @@ final class GzipInflater {
     static UiComponent field_d;
     private java.util.zip.Inflater field_b;
 
-    final static FontMetrics loadFontMetrics(String param0, ResourceArchive param1, String param2, byte param3) {
+    final static GameFontMetrics loadFontMetrics(String param0, ResourceArchive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         byte[] var5 = null;
         Object stackIn_2_0 = null;
-        FontMetrics stackIn_4_0 = null;
+        GameFontMetrics stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -28,11 +28,11 @@ final class GzipInflater {
           var4_int = 52 % ((param3 - 12) / 56);
           var5 = param1.getFileByName(param2, (byte) 126, param0);
           if (var5 != null) {
-            stackIn_4_0 = new FontMetrics(var5);
+            stackIn_4_0 = new GameFontMetrics(var5);
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (FontMetrics) (stackIn_2_0);
+          return (GameFontMetrics) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -151,7 +151,7 @@ final class GzipInflater {
               vua.field_B = stackIn_10_0;
               hla.field_xb = stackIn_10_0;
               PlayerProfile.field_c = stackIn_10_0;
-              C2SActionPacket.a((byte) -125, RoomComponent.field_g, ql.field_k, WhirlpoolDigest.field_g, SocketConnector.field_c);
+              C2SActionPacket.writeSessionHeader((byte) -125, RoomComponent.field_g, ql.field_k, WhirlpoolDigest.field_g, SocketConnector.field_c);
               bl.flushPacketBuffer(-1, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

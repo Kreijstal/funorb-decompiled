@@ -12,7 +12,7 @@ final class wt {
         field_d = null;
         field_b = null;
         if (param0 <= 105) {
-          wt.a((byte) -46);
+          wt.showProgressDialog((byte) -46);
         }
     }
 
@@ -48,7 +48,7 @@ final class wt {
         }
     }
 
-    final static void a(byte param0) {
+    final static void showProgressDialog(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
         ej.field_a.hideAllDialogs(true);

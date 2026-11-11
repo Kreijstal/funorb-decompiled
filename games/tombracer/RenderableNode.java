@@ -26,27 +26,27 @@ final class RenderableNode extends IntrusiveNode {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void fillTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9;
         var9 = TombRacer.field_G ? 1 : 0;
         if (param0 > param3) {
           if (param4 > param0) {
-            vb.a(-922437200, param7, param6, param3, param2, param5, param0, param4, SoftwareRasterizer.pixels);
+            vb.rasterizeTriangle(-922437200, param7, param6, param3, param2, param5, param0, param4, SoftwareRasterizer.pixels);
           } else {
             if (param3 >= param4) {
-              vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, SoftwareRasterizer.pixels);
+              vb.rasterizeTriangle(-922437200, param5, param6, param4, param7, param2, param3, param0, SoftwareRasterizer.pixels);
             } else {
-              vb.a(-922437200, param2, param6, param3, param7, param5, param4, param0, SoftwareRasterizer.pixels);
+              vb.rasterizeTriangle(-922437200, param2, param6, param3, param7, param5, param4, param0, SoftwareRasterizer.pixels);
             }
           }
         } else {
           if (param3 < param4) {
-            vb.a(-922437200, param5, param6, param0, param2, param7, param3, param4, SoftwareRasterizer.pixels);
+            vb.rasterizeTriangle(-922437200, param5, param6, param0, param2, param7, param3, param4, SoftwareRasterizer.pixels);
           } else {
             if (param4 > param0) {
-              vb.a(-922437200, param2, param6, param0, param5, param7, param4, param3, SoftwareRasterizer.pixels);
+              vb.rasterizeTriangle(-922437200, param2, param6, param0, param5, param7, param4, param3, SoftwareRasterizer.pixels);
             } else {
-              vb.a(-922437200, param7, param6, param4, param5, param2, param0, param3, SoftwareRasterizer.pixels);
+              vb.rasterizeTriangle(-922437200, param7, param6, param4, param5, param2, param0, param3, SoftwareRasterizer.pixels);
             }
           }
         }
@@ -61,7 +61,7 @@ final class RenderableNode extends IntrusiveNode {
         field_g = null;
         field_j = null;
         if (param0 != -49) {
-          RenderableNode.a(80, -20, -71, 70, -11, -46, 20, 64);
+          RenderableNode.fillTriangle(80, -20, -71, 70, -11, -46, 20, 64);
         }
     }
 

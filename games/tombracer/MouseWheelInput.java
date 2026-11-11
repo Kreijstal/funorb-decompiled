@@ -15,7 +15,7 @@ abstract class MouseWheelInput {
 
     abstract int pollWheelRotation(int param0);
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isIgnored(int param0, String param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -26,7 +26,7 @@ abstract class MouseWheelInput {
           if (param0 != 2180) {
             field_a = (String[][]) null;
           }
-          stackIn_5_0 = (null != LightSource.a(param1, -116));
+          stackIn_5_0 = (null != LightSource.findIgnoredByName(param1, -116));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -7,13 +7,13 @@ final class aqa {
     static String field_c;
     static int field_a;
 
-    final static void a(int param0, byte param1) {
+    final static void sendByteGameMessage(int param0, byte param1) {
         int var2 = -101 % ((param1 - 40) / 34);
         if (null == ql.field_k) {
           return;
         }
         cm var3 = new cm();
-        var3.a(param0, 0);
+        var3.setValue(param0, 0);
         hw.sendGamePacket((byte) -111, 1, 78, var3);
     }
 

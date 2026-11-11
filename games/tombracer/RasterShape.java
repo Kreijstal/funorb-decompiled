@@ -198,7 +198,7 @@ abstract class RasterShape {
           return;
         }
         if (LineShape.field_h >= param3 + param2) {
-          ota.a(param7, param3, param5, param6, param0, -1923382751, param1, param2);
+          ota.rasterizeEllipse(param7, param3, param5, param6, param0, -1923382751, param1, param2);
           return;
         }
         OpenGlBuffer.a(param6, param1, param2, param0, true, param5, param7, param3);

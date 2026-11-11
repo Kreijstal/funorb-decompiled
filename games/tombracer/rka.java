@@ -20,7 +20,7 @@ abstract class rka {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void releaseCachedFonts(boolean param0) {
         TooltipRenderer.field_p = null;
         if (param0) {
           return;

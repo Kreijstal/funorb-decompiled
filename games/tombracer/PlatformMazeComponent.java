@@ -54,7 +54,7 @@ final class PlatformMazeComponent extends MazeComponent {
             param9 == param5 &&
             param3 == param1 &&
             param6 == param4) {
-            IntArrayRequest.a(param3, param2, 111, param7, param4, param5);
+            IntArrayRequest.drawLine(param3, param2, 111, param7, param4, param5);
             return;
           }
           var11 = param2;
@@ -82,7 +82,7 @@ final class PlatformMazeComponent extends MazeComponent {
             var33 = var24 * var25;
             var34 = (var30 + (var28 + var32) >> 12) + param2;
             var35 = (var29 + var31 + var33 >> 12) + param5;
-            IntArrayRequest.a(var34, var11, -21, param7, var35, var12);
+            IntArrayRequest.drawLine(var34, var11, -21, param7, var35, var12);
             var12 = var35;
             var11 = var34;
           }
@@ -103,7 +103,7 @@ final class PlatformMazeComponent extends MazeComponent {
         return true;
     }
 
-    final boolean C(int param0) {
+    final boolean hasExtraBits(int param0) {
         if (param0 != 1) {
           this.field_K = -86;
           return true;

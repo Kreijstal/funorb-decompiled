@@ -346,7 +346,7 @@ final class WallModel extends TrapModel {
             var5 = bl.field_c[var4.field_a];
             var4.field_o = GameScreen.positiveModulo(-var4.field_o + var5, 2048, -73);
             var4.field_l = -var4.field_l;
-            var4.field_i = EditableTextField.a(var4.field_i, 6);
+            var4.field_i = EditableTextField.mirrorDirection(var4.field_i, 6);
             if (var4.field_a == 11) {
               var4.field_a = 12;
             } else {

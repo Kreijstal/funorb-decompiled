@@ -5,7 +5,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
     static String field_o;
     private byte[] field_p;
 
-    final static void f(int param0) {
+    final static void showBlankLoginForm(int param0) {
         if (param0 != -804227775) {
           HardwareTurbulentWaterNoise.createDecodedSprites(-62);
         }

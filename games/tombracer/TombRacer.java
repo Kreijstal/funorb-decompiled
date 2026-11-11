@@ -155,7 +155,7 @@ public final class TombRacer extends TombRacerShell implements ls {
               SoftwareRasterizer.clear();
               stackIn_33_0 = ((this.field_E & 8) == 0);
               SpawnerBehaviour.a(stackIn_33_0, 0);
-              bi.a(tga.field_a, param2 ^ 17);
+              bi.blitSoftwareRasterRegion(tga.field_a, param2 ^ 17);
             }
           }
           if (this.field_D != null) {
@@ -188,10 +188,10 @@ public final class TombRacer extends TombRacerShell implements ls {
               tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             } else {
               tga.field_a.fillRectangleAlpha(-1073741824, 0, LegacyOpenGlWaterTextures.getCanvasWidth(false), 0, -22971, SwitchLinkList.getCanvasHeight(0));
-              var5 = ComponentTargetList.a(false);
+              var5 = ComponentTargetList.getTopDialogId(false);
               var6 = PlantComponent.A(-1);
-              var7 = PillarComponent.A(param2 - 7128);
-              var8 = rs.a((byte) 124);
+              var7 = PillarComponent.getTopDialogWidth(param2 - 7128);
+              var8 = rs.getTopDialogHeight((byte) 124);
               var9 = IntrusiveDequeCursor.getClipStack((byte) 65, tga.field_a);
               var9.pushIntersectClip(var5 + var7, var6, (byte) -12, var6 + var8, var5);
               tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
@@ -226,7 +226,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         Transform3D.releaseStatics(27316);
         ClipStack.releaseStatics(-98);
         nba.releaseStatics(false);
-        fa.a(-23172);
+        fa.releaseStatics(-23172);
         BitPacketBuffer.releaseStatics((byte) 0);
         mua.releaseStatics(0);
         bpa.releaseStatics((byte) -57);
@@ -372,7 +372,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         uma.releaseStatics(-1);
         hu.releaseStatics((byte) 119);
         GraphicsHeap.releaseStatics((byte) 86);
-        FontMetrics.releaseStatics(-63);
+        GameFontMetrics.releaseStatics(-63);
         ModelData.releaseStatics((byte) -71);
         ToolkitModel.releaseStatics(-11);
         SceneLight.releaseStatics(false);
@@ -410,7 +410,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         UiWidget.releaseStatics((byte) -28);
         SingleChildWidget.releaseStatics(param0 ^ -3666);
         FadingDialog.releaseStatics(0);
-        TextLayout.releaseStatics(127);
+        TextBlockLayout.releaseStatics(127);
         DisplaySettingsDialog.releaseStatics((byte) -102);
         dh.releaseStatics((byte) -6);
         bw.releaseStatics(115);
@@ -426,7 +426,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         li.releaseStatics(3);
         AudioOutputThread.releaseStatics((byte) -35);
         MidiVoice.releaseStatics(-89);
-        MidiFileReader.releaseStatics();
+        MidiTrackReader.releaseStatics();
         sv.releaseStatics(-48);
         DropAnimation.releaseStatics(true);
         InstructionsScreen.releaseStatics(param0 ^ -3610);
@@ -456,7 +456,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         Obstacle.releaseStatics((byte) -117);
         Corpse.releaseStatics((byte) -113);
         BeamSegment.releaseStatics(true);
-        Effect.releaseStatics((byte) 2);
+        HazardEffect.releaseStatics((byte) 2);
         Projectile.releaseStatics(114);
         Puddle.releaseStatics((byte) 87);
         SequencePlayer.releaseStatics(-63);
@@ -713,7 +713,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         ShaderEffect.releaseStatics((byte) 101);
         ld.releaseStatics((byte) -126);
         mna.releaseStatics(false);
-        HardwareModel.g(3);
+        HardwareModel.releaseStatics(3);
         TextureFormat.releaseStatics((byte) 102);
         TextureCombineSource.releaseStatics(29325);
         TextureCoordinateGeneration.releaseStatics(0);
@@ -1027,7 +1027,7 @@ public final class TombRacer extends TombRacerShell implements ls {
     }
 
     final void onLoadingComplete(int param0) {
-        ItemModel.i(98);
+        ItemModel.createLateMenuScreens(98);
         if (param0 != 24230) {
           this.initializeGame(-10);
         }
@@ -1221,7 +1221,7 @@ public final class TombRacer extends TombRacerShell implements ls {
           }
           if (15 == param0) {
             if (RandomMazeBehaviour.field_n) {
-              SwitchModel.o((byte) -108);
+              SwitchModel.closeLobbyOverlays((byte) -108);
               IntArrayRequest.clearChatHistory(5);
               era.field_c = true;
               RandomMazeBehaviour.field_n = false;
@@ -1239,7 +1239,7 @@ public final class TombRacer extends TombRacerShell implements ls {
           }
           if (param0 == 11) {
             var19 = ChatOverlay.readChatMessage(-18787, false);
-            k.a((byte) 124, var19);
+            k.handleIncomingChatMessage((byte) 124, var19);
             if (null != SecondaryNodeDequeIterator.field_a) {
               if (var19.field_m) {
                 return true;
@@ -1255,7 +1255,7 @@ public final class TombRacer extends TombRacerShell implements ls {
           }
           if (12 == param0) {
             var22 = ChatOverlay.readChatMessage(-18787, true);
-            k.a((byte) 114, var22);
+            k.handleIncomingChatMessage((byte) 114, var22);
             if (SecondaryNodeDequeIterator.field_a != null &&
               !var22.field_m) {
               var23 = var22.field_g;
@@ -1294,7 +1294,7 @@ public final class TombRacer extends TombRacerShell implements ls {
               S2CRoundResultPacket.setSoundVolume(mq.field_e.field_k, -114);
               if (null != baa.field_d &&
                 baa.field_d.field_i != null) {
-                eda.a(mq.field_e.field_g, true);
+                eda.applyGraphicsMode(mq.field_e.field_g, true);
               }
               if (wka.field_d &&
                 !mq.field_e.field_l &&
@@ -1531,8 +1531,8 @@ public final class TombRacer extends TombRacerShell implements ls {
           this.field_D = (UnlockOverlay) null;
         }
         PlantModel.resendPendingSubmissions(false, 3);
-        S2CNextRoundPacket.b(4, 2);
-        PlantComponent.b(-104, 6);
+        S2CNextRoundPacket.resendQueuedRequests(4, 2);
+        PlantComponent.resendPendingRequests(-104, 6);
         Puddle.resendRatingTableRequests(7, (byte) -120);
         if (param0 != 1) {
           if (RandomMazeBehaviour.field_n) {
@@ -1565,7 +1565,7 @@ public final class TombRacer extends TombRacerShell implements ls {
           rqa var3 = (rqa) null;
           this.drawFrame(false, (rqa) null, (byte) 51);
         }
-        LaserShooterComponent.D(17229);
+        LaserShooterComponent.ensureToolkitResources(17229);
         cna.field_a = false;
         if (oq.getSharedShellListener((byte) 124).isModal(~param0)) {
           return;

@@ -4,7 +4,7 @@
 final class SimpleHoverMountComponent extends PathMoverComponent {
     static boolean field_M;
 
-    final boolean A(int param0) {
+    final boolean storesLoopFlag(int param0) {
         int var2 = -50 % ((param0 - 0) / 60);
         return true;
     }

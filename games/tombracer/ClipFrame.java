@@ -34,7 +34,7 @@ final class ClipFrame {
     }
 
     final static void a(boolean param0, byte param1, int param2) {
-        ScrollPane stackIn_3_0;
+        ScrollPanel stackIn_3_0;
         int stackIn_3_1;
         boolean stackIn_3_2;
         int stackIn_3_3;
@@ -70,7 +70,7 @@ final class ClipFrame {
           stackIn_3_4 = param2 * 3 * (2 + ToolkitSelector.field_a);
           stackIn_3_5 = 2 + ToolkitSelector.field_a;
           stackIn_4_6 = (OpenGlSprite.field_j.field_vb == ChatTarget.field_b);
-          var3_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
+          var3_int = ((ScrollPanel) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
           var4 = OpenGlSprite.field_j.field_tb.field_J;
           if (param1 != -56) {
             return;
@@ -79,7 +79,7 @@ final class ClipFrame {
             UiWidget.field_g != 1) {
             OpenGlSprite.field_j.field_X = false;
             OpenGlSprite.field_j.field_vb.field_vb.field_r = LoginMethod.field_c;
-            BridgeModel.a(-93, OpenGlSprite.field_j.field_tb);
+            BridgeModel.resetLayoutOffsets(-93, OpenGlSprite.field_j.field_tb);
             return;
           }
           OpenGlSprite.field_j.field_X = true;
@@ -167,14 +167,14 @@ final class ClipFrame {
         }
     }
 
-    final static void a(boolean param0, ResourceArchive param1, int param2, ResourceArchive param3) {
+    final static void loadLobbyInterface(boolean param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         try {
           mp.buildChatPanelComponents(GzipInflater.field_d, tka.field_q, param0, GpuDataType.field_j, DateFieldsWidget.field_F, Corpse.field_i, 0, PressureSwitchBehaviour.field_p, HardwareSceneLight.field_o, NodeHashTable.field_g, TextureCoordinateGeneration.field_a, LegacyOpenGlRidgedWaterEffect.field_e);
           ColouriseOperator.field_m = BoulderComponent.loadSpritesByName(param1, "lobby", 5, "chatfilter");
           StripedMazeGenerator.field_c[0] = SecondaryNodeDequeIterator.field_b;
           StripedMazeGenerator.field_c[param2] = OpenGlTexture2D.field_m;
           StripedMazeGenerator.field_c[1] = MonochromeFillOperator.field_o;
-          WaypointPath.a(0, param3, PenaltyNotice.field_f);
+          WaypointPath.loadQuickChatInterface(0, param3, PenaltyNotice.field_f);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "iea.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

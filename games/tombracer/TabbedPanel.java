@@ -8,7 +8,7 @@ final class TabbedPanel extends UiComponent {
     private UiComponent[] field_ub;
     int field_wb;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayoutTabs(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_t = param5;
         if (param4 != -25436) {
           TabbedPanel.d((byte) 19);

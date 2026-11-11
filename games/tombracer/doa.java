@@ -65,7 +65,7 @@ final class doa {
         CauldronComponent.bitLength((byte) 93, 1600);
     }
 
-    final void a(int param0, OpenGlToolkit param1) {
+    final void createVertexBuffer(int param0, OpenGlToolkit param1) {
         VertexArrayPointer discarded$0 = null;
         VertexArrayPointer discarded$3 = null;
         VertexArrayPointer discarded$4 = null;
@@ -75,7 +75,7 @@ final class doa {
           discarded$3 = new VertexArrayPointer(this.field_a, 5126, 3, 8);
           if (param0 != 22091) {
             OpenGlToolkit var4 = (OpenGlToolkit) null;
-            this.a(19, (OpenGlToolkit) null);
+            this.createVertexBuffer(19, (OpenGlToolkit) null);
           }
           discarded$4 = new VertexArrayPointer(this.field_a, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {

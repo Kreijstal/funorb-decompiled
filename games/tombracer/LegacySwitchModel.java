@@ -75,7 +75,7 @@ final class LegacySwitchModel extends TrapModel {
           var8 = this.body.getWidth(-29) / 2;
           var9 = this.body.getHeight((byte) 55) / 2;
           int var10 = 86 % ((param4 + 38) / 47);
-          oq.a(-var8 + param2, -var9 + param1, param3, 255, param2 + var8, var6_int, param1 + var9, true);
+          oq.drawRectangleOutline3D(-var8 + param2, -var9 + param1, param3, 255, param2 + var8, var6_int, param1 + var9, true);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ioa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

@@ -161,7 +161,7 @@ final class BrickOperator extends TextureOperator {
         int var2;
         boolean stackIn_7_0 = false;
         var2 = 76 / ((-20 - param0) / 40);
-        stackIn_7_0 = (param1 == 0) || (param1 == ChatChannelType.a((byte) 64)) || (dta.field_g[param1]) || !(MultiplayerLoginMenu.b(false));
+        stackIn_7_0 = (param1 == 0) || (param1 == ChatChannelType.getSelectedCourseIndex((byte) 64)) || (dta.field_g[param1]) || !(MultiplayerLoginMenu.b(false));
         return stackIn_7_0;
     }
 

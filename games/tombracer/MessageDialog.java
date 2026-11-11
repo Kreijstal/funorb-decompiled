@@ -97,7 +97,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
             AnimationFrameSet.field_p.f(12936);
           }
           if (param0 < -97) {
-            jr.b((byte) -106);
+            jr.resetHoverTooltip((byte) -106);
             return;
           }
           return;
@@ -106,7 +106,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
           AnimationFrameSet.field_p.f(12936);
         }
         if (param0 < -97) {
-          jr.b((byte) -106);
+          jr.resetHoverTooltip((byte) -106);
           return;
         }
     }
@@ -229,11 +229,11 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         int var2 = -25 / ((-69 - param0) / 37);
         this.field_B = false;
         if (this.field_V) {
-          kla.a((byte) -72);
+          kla.showLoginForm((byte) -72);
           return;
         }
         if (this.field_bb) {
-          IntrusiveNode.q(30497);
+          IntrusiveNode.reopenLoginForm(30497);
           return;
         }
     }

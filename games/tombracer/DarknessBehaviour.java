@@ -38,7 +38,7 @@ final class DarknessBehaviour extends Behaviour {
         return param0;
     }
 
-    final int onProjectileEffect(int param0, Projectile param1, Effect param2) {
+    final int onProjectileEffect(int param0, Projectile param1, HazardEffect param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -137,7 +137,7 @@ final class DarknessBehaviour extends Behaviour {
                 var14 != var19) {
                 var7 = var7 + var16;
               } else {
-                var20 = BufferedSocket.a(var9 >> 16, 1, 8 * var17, var17 * 8 + 8, var11 >> 16, 0, 8 * var19, var10 >> 16, 8 + var19 * 8, var8 >> 16);
+                var20 = BufferedSocket.rectangleOverlapArea(var9 >> 16, 1, 8 * var17, var17 * 8 + 8, var11 >> 16, 0, 8 * var19, var10 >> 16, 8 + var19 * 8, var8 >> 16);
                 var7 = var7 + var20;
               }
             }
@@ -251,7 +251,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
+    final int onAreaEffect(int param0, int param1, HazardEffect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
@@ -324,7 +324,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
+    final int onBeamEffect(int param0, HazardEffect param1, BeamSegment param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -343,7 +343,7 @@ final class DarknessBehaviour extends Behaviour {
         try {
           if (param0 > -85) {
             var10 = (BeamSegment) null;
-            this.onBeamEffect(26, (Effect) null, (BeamSegment) null);
+            this.onBeamEffect(26, (HazardEffect) null, (BeamSegment) null);
           }
           var4_int = param2.field_d - this.trap.getX(3) + this.trap.getWidth(-67) / 2;
           var5 = param2.field_e - (this.trap.getX(3) - this.trap.getWidth(-63) / 2);

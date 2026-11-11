@@ -696,12 +696,12 @@ final class SwitchModel extends TrapModel {
         return 0;
     }
 
-    final static void o(byte param0) {
+    final static void closeLobbyOverlays(byte param0) {
         wp.closeContextMenu(-1);
         RasterizerOperator.clearStatics((byte) -128);
         RoomViewRenderer.field_c = null;
         int var1 = 43 / ((param0 + 55) / 48);
-        ComponentTargetList.b(-68);
+        ComponentTargetList.closeQuickChatMenu(-68);
     }
 
     final void drawAt(Camera param0, int param1, int param2, int param3, byte param4) {

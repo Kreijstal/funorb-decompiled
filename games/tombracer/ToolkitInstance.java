@@ -46,7 +46,7 @@ final class ToolkitInstance {
               if (param1 + param4 > LineShape.field_h) {
                 TileOperator.fillClippedCircle(0, param4, param2, param3, param1);
               } else {
-                bq.a(param1, param3, param2, (byte) -13, param4);
+                bq.fillCircle(param1, param3, param2, (byte) -13, param4);
               }
             }
           }

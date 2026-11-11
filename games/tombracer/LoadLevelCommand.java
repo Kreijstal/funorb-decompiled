@@ -16,7 +16,7 @@ final class LoadLevelCommand extends ConsoleMethod {
           if (param1 != 0) {
             field_o = (Object) null;
           }
-          stackIn_3_0 = new ConsoleValue(FontMetrics.a(true, (String) (param0[0].field_d)));
+          stackIn_3_0 = new ConsoleValue(GameFontMetrics.loadLevelFile(true, (String) (param0[0].field_d)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -115,7 +115,7 @@ final class LoadLevelCommand extends ConsoleMethod {
             SnakePitBehaviour.field_o = S2CPlayerSyncPacket.joinAll((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.field_j)});
           }
           TextureOperator.field_l.dismiss((byte) 101);
-          wt.a((byte) -117);
+          wt.showProgressDialog((byte) -117);
           return;
         }
         field_o = (Object) null;
@@ -133,7 +133,7 @@ final class LoadLevelCommand extends ConsoleMethod {
             SnakePitBehaviour.field_o = S2CPlayerSyncPacket.joinAll((byte) 121, new CharSequence[]{(CharSequence) ((Object) SnakePitBehaviour.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.field_j)});
           }
           TextureOperator.field_l.dismiss((byte) 101);
-          wt.a((byte) -117);
+          wt.showProgressDialog((byte) -117);
         }
     }
 

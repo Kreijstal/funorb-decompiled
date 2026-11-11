@@ -52,7 +52,7 @@ final class fua implements WidgetPainter {
           }
           var6_int = param1 + param0.field_i;
           var7 = param0.field_n + param3;
-          bl.a(param0.field_m, var7, param0.field_p, var6_int, 1);
+          bl.drawGradientBar(param0.field_m, var7, param0.field_p, var6_int, 1);
           if (param0.hasKeyboardFocus((byte) -34)) {
             nn.a(var6_int + 2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
           }

@@ -57,7 +57,7 @@ final class Bzip2State {
             stackIn_2_0 = HiscoresScreen.field_v;
             return stackIn_2_0;
           }
-          if (MiscItemBehaviour.a(param1, 0)) {
+          if (MiscItemBehaviour.isLocalPlayerName(param1, 0)) {
             stackIn_6_0 = RandomBrickOperator.field_q;
             return stackIn_6_0;
           }
@@ -65,7 +65,7 @@ final class Bzip2State {
             stackIn_9_0 = EffectSwitchBehaviour.field_o;
             return stackIn_9_0;
           }
-          if (MouseWheelInput.a(2180, param1)) {
+          if (MouseWheelInput.isIgnored(2180, param1)) {
             stackIn_13_0 = LegacyOpenGlFlowingWaterEffect.formatText(125, bva.field_a, new String[]{param1});
             return stackIn_13_0;
           }
@@ -73,7 +73,7 @@ final class Bzip2State {
             stackIn_17_0 = GameEvent.field_h;
             return stackIn_17_0;
           }
-          if (QueuedPlayerEvent.a(false, param1)) {
+          if (QueuedPlayerEvent.isFriend(false, param1)) {
             stackIn_20_0 = LegacyOpenGlFlowingWaterEffect.formatText(94, FleeLocomotor.field_o, new String[]{param1});
             return stackIn_20_0;
           }

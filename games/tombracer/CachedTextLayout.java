@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class CachedTextLayout extends TextLayout {
+final class CachedTextLayout extends TextBlockLayout {
     static String field_i;
     private int field_f;
     private boolean field_h;

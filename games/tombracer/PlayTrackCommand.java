@@ -17,7 +17,7 @@ final class PlayTrackCommand extends ConsoleMethod {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        ScrollPane stackIn_5_0;
+        ScrollPanel stackIn_5_0;
         int stackIn_5_1;
         boolean stackIn_5_2;
         int stackIn_5_3;
@@ -129,7 +129,7 @@ final class PlayTrackCommand extends ConsoleMethod {
           stackIn_5_4 = param3 * (2 + ToolkitSelector.field_a) * 4;
           stackIn_5_5 = 2 * (2 + ToolkitSelector.field_a);
           stackIn_6_6 = (nsa.field_i == ChatTarget.field_b);
-          var7_int = ((ScrollPane) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
+          var7_int = ((ScrollPanel) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
           var8 = nsa.field_i.field_tb.field_J;
           var9 = bva.currentTimeMillis((byte) -107);
           var11 = null;
@@ -547,7 +547,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             if (var12.field_y != 0 &&
               !var12.g(param1 + 0)) {
               if (var12.field_Nb.field_y == 0) {
-                ImageProducerRasterBuffer.a((byte) -62, var12, param2, var32);
+                ImageProducerRasterBuffer.openLobbyGameContextMenu((byte) -62, var12, param2, var32);
               } else {
                 if (var12.field_ec && (!var12.field_Yb ||
                   !var12.field_Bb &&
@@ -580,7 +580,7 @@ final class PlayTrackCommand extends ConsoleMethod {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = new ConsoleValue(rua.a((String) (param0[0].field_d), -62));
+            stackIn_4_0 = new ConsoleValue(rua.playTrackByName((String) (param0[0].field_d), -62));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

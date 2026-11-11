@@ -60,7 +60,7 @@ final class gca {
         this.field_h = param0;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setTooltipAnchor(int param0, int param1, int param2) {
         SimpleBlockBehaviour.field_r = param1;
         TileGrid.field_g = param2;
         if (param0 != 2533) {

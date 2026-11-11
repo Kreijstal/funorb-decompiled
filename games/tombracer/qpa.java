@@ -42,7 +42,7 @@ final class qpa implements GamePacket {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setDeathCount(int param0, int param1) {
         if (param0 != 7) {
           BitPacketBuffer var4 = (BitPacketBuffer) null;
           this.decode((BitPacketBuffer) null, (byte) -41);
@@ -52,7 +52,7 @@ final class qpa implements GamePacket {
         this.field_c = param1;
     }
 
-    final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void createMenuScreen(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;

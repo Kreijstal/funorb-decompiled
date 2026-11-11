@@ -22,7 +22,7 @@ final class IntQueue {
 
     final static void a(byte param0) {
         int var1 = -1 / ((param0 + 58) / 37);
-        MatchStatistics.a((byte) 57, true);
+        MatchStatistics.drawDialogOverlay((byte) 57, true);
     }
 
     final int poll(int param0) {

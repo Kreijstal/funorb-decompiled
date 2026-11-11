@@ -105,7 +105,7 @@ final class StaticCrusherComponent extends PrefabComponent {
         }
     }
 
-    final static boolean a(boolean param0, int param1, BitPacketBuffer param2) {
+    final static boolean writeBitFlag(boolean param0, int param1, BitPacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         BitPacketBuffer stackIn_2_0 = null;

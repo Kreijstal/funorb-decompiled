@@ -341,7 +341,7 @@ final class PathMoveLocomotor extends Locomotor {
         }
     }
 
-    final static int a(byte param0, String param1, boolean param2) {
+    final static int measureStringWidth(byte param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;

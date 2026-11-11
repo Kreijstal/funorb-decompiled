@@ -529,7 +529,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -98, "waiting_for_x_to_start_game");
                 if (var2 != null) {
-                  TextLayout.field_d = jaa.decodeText((byte) 61, var2);
+                  TextBlockLayout.field_d = jaa.decodeText((byte) 61, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 112, "game_options_changed");
                 if (var2 != null) {
@@ -1447,7 +1447,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -114, "create_select_alternative");
                 if (var2 != null) {
-                  FontMetrics.field_i = jaa.decodeText((byte) 126, var2);
+                  GameFontMetrics.field_i = jaa.decodeText((byte) 126, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -54, "create_optin_news");
                 if (var2 != null) {

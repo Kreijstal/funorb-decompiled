@@ -121,7 +121,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements GpuTexture2D {
         return true;
     }
 
-    final static void h(byte param0) {
+    final static void releaseToolkitResources(byte param0) {
         HardwareModelIndexData.field_f = null;
         CharacterSelectPhase.field_r = null;
         LegacyOpenGlEffectManager.field_a = null;

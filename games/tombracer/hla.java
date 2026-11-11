@@ -5,7 +5,7 @@ final class hla extends UiComponent {
     UiComponent field_yb;
     UiComponent field_tb;
     UiComponent field_wb;
-    ScrollPane field_vb;
+    ScrollPanel field_vb;
     static int field_xb;
     static NodeHashTable field_ub;
 
@@ -52,7 +52,7 @@ final class hla extends UiComponent {
         super(param0, param1);
         try {
           this.field_tb = new UiComponent(0L, (UiComponent) null);
-          this.field_vb = new ScrollPane(0L, this.field_tb, param2, param3);
+          this.field_vb = new ScrollPanel(0L, this.field_tb, param2, param3);
           this.field_yb = new UiComponent(0L, param4);
           this.field_wb = new UiComponent(0L, param4);
           this.field_yb.field_r = param5;

@@ -1621,27 +1621,27 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,0", (byte) 100);
                 if (var2 != null) {
-                  Effect.lavaDeathMessages[0] = jaa.decodeText((byte) 51, var2);
+                  HazardEffect.lavaDeathMessages[0] = jaa.decodeText((byte) 51, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,1", (byte) 124);
                 if (null != var2) {
-                  Effect.lavaDeathMessages[1] = jaa.decodeText((byte) 81, var2);
+                  HazardEffect.lavaDeathMessages[1] = jaa.decodeText((byte) 81, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,2", (byte) 110);
                 if (null != var2) {
-                  Effect.lavaDeathMessages[2] = jaa.decodeText((byte) 74, var2);
+                  HazardEffect.lavaDeathMessages[2] = jaa.decodeText((byte) 74, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,3", (byte) 121);
                 if (var2 != null) {
-                  Effect.lavaDeathMessages[3] = jaa.decodeText((byte) 115, var2);
+                  HazardEffect.lavaDeathMessages[3] = jaa.decodeText((byte) 115, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,4", (byte) 123);
                 if (null != var2) {
-                  Effect.lavaDeathMessages[4] = jaa.decodeText((byte) 51, var2);
+                  HazardEffect.lavaDeathMessages[4] = jaa.decodeText((byte) 51, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_lava,5", (byte) 113);
                 if (var2 != null) {
-                  Effect.lavaDeathMessages[5] = jaa.decodeText((byte) 110, var2);
+                  HazardEffect.lavaDeathMessages[5] = jaa.decodeText((byte) 110, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_snake,0", (byte) 101);
                 if (var2 != null) {

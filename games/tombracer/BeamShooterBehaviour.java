@@ -3,7 +3,7 @@
  */
 final class BeamShooterBehaviour extends Behaviour implements mra {
     private BeamSegment field_s;
-    private Effect field_r;
+    private HazardEffect field_r;
     private TimingPattern timingPattern;
     private int field_u;
     private boolean field_q;
@@ -18,7 +18,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         return this.field_t;
     }
 
-    final void setEffect(Effect param0, boolean param1) {
+    final void setEffect(HazardEffect param0, boolean param1) {
         try {
           this.field_r = param0;
           if (!param1) {
@@ -488,7 +488,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         this.field_o = 0;
         try {
           this.timingPattern = new TimingPattern();
-          this.field_r = new Effect(1, 10);
+          this.field_r = new HazardEffect(1, 10);
           this.field_r.setDeathMessageIndex(1, 13);
           this.field_w = 0;
           this.field_u = 0;

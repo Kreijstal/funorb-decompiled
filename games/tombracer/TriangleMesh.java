@@ -51,7 +51,7 @@ final class TriangleMesh {
           this.field_h[var6] = (short)(this.field_h[var6] * param2 / param4);
           this.field_t[var6] = (short)(this.field_t[var6] * param0 / param4);
         }
-        this.a(param3);
+        this.invalidateBounds(param3);
     }
 
     public static void releaseStatics(int param0) {
@@ -61,7 +61,7 @@ final class TriangleMesh {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void invalidateBounds(boolean param0) {
         if (!param0) {
           TriangleMesh.releaseStatics(-106);
         }
@@ -136,7 +136,7 @@ final class TriangleMesh {
           this.field_h[var5] = (short)(this.field_h[var5] + param3);
           this.field_t[var5] = (short)(this.field_t[var5] + param0);
         }
-        this.a(true);
+        this.invalidateBounds(true);
     }
 
     TriangleMesh() {

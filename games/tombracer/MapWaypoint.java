@@ -59,7 +59,7 @@ final class MapWaypoint extends IntrusiveNode {
             ResourceArchive var5 = (ResourceArchive) null;
             MapWaypoint.initLogoAssets((PcmStreamMixer) null, 0, -42, (ResourceArchive) null);
           }
-          mf.a(85);
+          mf.buildPowerCurveTable(85);
           TextureCombineOperation.renderLogoSprite(16777215);
           TimeSwitchBehaviour.field_r = 0 - SwitchableId.field_b;
         } catch (RuntimeException runtimeException) {

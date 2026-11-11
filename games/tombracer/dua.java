@@ -122,7 +122,7 @@ final class dua extends MatchOverlay {
                 } else {
                   var17 = String.valueOf(1 + var12);
                 }
-                dh.a(TooltipRenderer.field_p, 192, 1, 0, -8 + var13, var3, 16777215, -1 + var16, 0, 29870, 1, 16 + var14, var17);
+                dh.drawWrappedTextWithAlpha(TooltipRenderer.field_p, 192, 1, 0, -8 + var13, var3, 16777215, -1 + var16, 0, 29870, 1, 16 + var14, var17);
               }
             }
           }
@@ -187,7 +187,7 @@ final class dua extends MatchOverlay {
               } else {
                 var17Lifetime1 = String.valueOf(1 + var12Lifetime1);
               }
-              dh.a(TooltipRenderer.field_p, 192, 1, 0, -8 + var13Lifetime1, var3Lifetime1, 16777215, -1 + var16Lifetime1, 0, 29870, 1, 16 + var14Lifetime1, var17Lifetime1);
+              dh.drawWrappedTextWithAlpha(TooltipRenderer.field_p, 192, 1, 0, -8 + var13Lifetime1, var3Lifetime1, 16777215, -1 + var16Lifetime1, 0, 29870, 1, 16 + var14Lifetime1, var17Lifetime1);
             }
           }
         }

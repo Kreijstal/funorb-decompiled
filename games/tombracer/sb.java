@@ -64,7 +64,7 @@ final class sb {
 
     final static void initAudioArchives(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         try {
-          TextLayout.field_a = param4;
+          TextBlockLayout.field_a = param4;
           qoa.field_b = param1;
           S2CNextRoundPacket.field_a = param2;
           ControllerLocomotor.field_v = param3;

@@ -468,7 +468,7 @@ class TextInputWidget extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         WidgetTextLayout var2 = null;
         RuntimeException var2_ref = null;
-        TextLayout var3 = null;
+        TextBlockLayout var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

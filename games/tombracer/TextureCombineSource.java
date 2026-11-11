@@ -163,10 +163,10 @@ final class TextureCombineSource {
         int incrementValue$6 = param1;
         param1++;
         var16_ref.drawLoadingProgress(incrementValue$6, (byte) 47, param0);
-        Effect.field_e = new SpriteData[7];
-        Effect.field_e[0] = SpriteData.loadSprite(param2, "", "reward_coin");
-        Effect.field_e[1] = SpriteData.loadSprite(param2, "", "reward_moneybag");
-        Effect.field_e[2] = SpriteData.loadSprite(param2, "", "reward_idol");
+        HazardEffect.field_e = new SpriteData[7];
+        HazardEffect.field_e[0] = SpriteData.loadSprite(param2, "", "reward_coin");
+        HazardEffect.field_e[1] = SpriteData.loadSprite(param2, "", "reward_moneybag");
+        HazardEffect.field_e[2] = SpriteData.loadSprite(param2, "", "reward_idol");
         AnimationFrameSet.field_l = SpriteData.loadSprite(param2, "", "endround_flag");
         MirrorComponent.field_F = SpriteData.loadSprite(param2, "", "endround_divider_line");
         CharacterPreview.field_f = SpriteData.loadSprite(param2, "", "endround_smoke_trail");

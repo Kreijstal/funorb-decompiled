@@ -16,7 +16,7 @@ final class ShowLevelSetCommand extends ConsoleMethod {
           if (param1 != 0) {
             ShowLevelSetCommand.releaseStatics(10);
           }
-          mn.h(30001);
+          mn.closeShellListener(30001);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

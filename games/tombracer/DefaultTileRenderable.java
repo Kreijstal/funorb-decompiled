@@ -109,12 +109,12 @@ final class DefaultTileRenderable extends TileRenderable {
 
     final void mirror(boolean param0) {
         if (param0) {
-          this.field_l = EditableTextField.a(this.field_l, 6);
+          this.field_l = EditableTextField.mirrorDirection(this.field_l, 6);
           this.chooseSprite((byte) -49);
           return;
         }
         this.chooseFloorSprite((byte) -116);
-        this.field_l = EditableTextField.a(this.field_l, 6);
+        this.field_l = EditableTextField.mirrorDirection(this.field_l, 6);
         this.chooseSprite((byte) -49);
     }
 

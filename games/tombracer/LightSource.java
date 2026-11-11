@@ -70,7 +70,7 @@ final class LightSource extends IntrusiveNode {
         return this.animatedLight;
     }
 
-    final static mu a(String param0, int param1) {
+    final static mu findIgnoredByName(String param0, int param1) {
         String var2 = null;
         mu var3 = null;
         int var4 = 0;

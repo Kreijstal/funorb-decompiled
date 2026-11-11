@@ -54,12 +54,12 @@ final class ara extends UiComponent {
           var7 = -param2 + param3;
           if (var7 == 0) {
             if (0 != var6_int) {
-              GameScreen.a(param2, param5, param4, param1, param0 + 0);
+              GameScreen.drawVerticalSpan(param2, param5, param4, param1, param0 + 0);
             }
             return;
           }
           if (var6_int == 0) {
-            BrazierComponent.a(param3, param1, param4, param2, false);
+            BrazierComponent.drawHorizontalSpan(param3, param1, param4, param2, false);
             return;
           }
           if (var6_int < 0) {

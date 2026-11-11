@@ -622,7 +622,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           param1 = false;
         }
         FacePointLocomotor.a(param1, (byte) 88);
-        dla.b(23713);
+        dla.drawDimmedOverlay(23713);
         if (!param0) {
           ScrollControlWidget.releaseStatics((byte) 92);
         }

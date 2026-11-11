@@ -6,7 +6,7 @@ final class ClampOperator extends TextureOperator {
     private int field_n;
     static String field_o;
 
-    final static void a(String param0, int param1) {
+    final static void showCentredMessage(String param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         ConsoleEvaluationException.field_c.field_r = param0;

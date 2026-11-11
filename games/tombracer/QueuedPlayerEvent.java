@@ -28,7 +28,7 @@ final class QueuedPlayerEvent extends IntrusiveNode {
         }
     }
 
-    final static boolean a(boolean param0, String param1) {
+    final static boolean isFriend(boolean param0, String param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -39,7 +39,7 @@ final class QueuedPlayerEvent extends IntrusiveNode {
           if (param0) {
             field_f = (int[]) null;
           }
-          stackIn_5_0 = (wp.a(119, param1) != null);
+          stackIn_5_0 = (wp.findFriendByName(119, param1) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

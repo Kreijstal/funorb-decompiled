@@ -338,7 +338,7 @@ final class AvailabilityQuery {
         }
         try {
           PlayingSound.field_f = param1.field_J;
-          ObjectList.b(0);
+          ObjectList.clearLobbyLists(0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "us.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

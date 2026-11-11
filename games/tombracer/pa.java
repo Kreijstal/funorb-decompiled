@@ -23,7 +23,7 @@ final class pa {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static void drawAlphaCircle(int param0, int param1, int param2, int param3, boolean param4) {
         tga.field_a.drawCircleAlpha(param1, -11185, param0, SoundEvent.withFullAlpha(param4, param2), param3);
     }
 

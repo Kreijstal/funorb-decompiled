@@ -5,7 +5,7 @@ final class sj {
     static int[] textureRowCoords;
     static String field_a;
 
-    final static String a(byte param0) {
+    final static String hello(byte param0) {
         if (param0 != 120) {
           jg var2 = (jg) null;
           sj.a((byte) 105, 20, 6, -92, 0.43005454540252686f, 0.0913710817694664f, (byte[]) null, 0.566550612449646f, 1.7519813776016235f, (jg) null, 105, 0.6303681135177612f, -47, 32);

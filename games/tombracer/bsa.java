@@ -8,7 +8,7 @@ final class bsa implements WidgetPainter {
     static volatile boolean field_k;
     private int field_d;
     private int field_c;
-    static ScrollPane field_j;
+    static ScrollPanel field_j;
     static ToolkitSprite field_i;
     private int field_h;
     private BitmapFont field_a;

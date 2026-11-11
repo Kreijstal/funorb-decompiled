@@ -25,8 +25,8 @@ final class RoomCompletedScreen extends MatchOverlay {
         int var2 = 16777215;
         if (param0 < -13) {
           var3 = 160;
-          SecondaryNodeDequeIterator.a(192, 160, 3145728, 240, (byte) 22, var3, 200);
-          WhiteLightShooterComponent.a(200, (byte) -85, var3, 5242880, 2, 160, 240);
+          SecondaryNodeDequeIterator.fillAlphaRect(192, 160, 3145728, 240, (byte) 22, var3, 200);
+          WhiteLightShooterComponent.drawThickRectOutline(200, (byte) -85, var3, 5242880, 2, 160, 240);
           MembersUpsellMenu.drawCentredTextWithShadow("Room Completed", var2, eda.field_f, -1, var3 + 40, 320, 0);
           var4 = 240;
           var5 = this.field_g.simulations[0].rooms[0];
@@ -124,7 +124,7 @@ final class RoomCompletedScreen extends MatchOverlay {
             var6 = var6 | 16;
           }
           ql.field_k.writeByte(var6, 0);
-          var7 = FontMetrics.readSettingsCookie(0, ToolkitSelector.getApplet(46));
+          var7 = GameFontMetrics.readSettingsCookie(0, ToolkitSelector.getApplet(46));
           if (var7 == null) {
             var7 = "";
           }

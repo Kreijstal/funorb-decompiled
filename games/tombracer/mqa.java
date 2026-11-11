@@ -4,7 +4,7 @@
 final class mqa {
     private static String field_z;
 
-    final static void a(int param0, byte param1) {
+    final static void setSoundVolume(int param0, byte param1) {
         int var2 = 84 % ((param1 - 20) / 57);
         S2CRoundResultPacket.setSoundVolume(param0, -101);
     }

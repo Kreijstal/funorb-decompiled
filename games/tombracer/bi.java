@@ -12,14 +12,14 @@ final class bi {
         field_b = null;
         if (param0) {
           GraphicsToolkit var2 = (GraphicsToolkit) null;
-          bi.a((GraphicsToolkit) null, 112);
+          bi.blitSoftwareRasterRegion((GraphicsToolkit) null, 112);
           field_d = null;
           return;
         }
         field_d = null;
     }
 
-    final static void a(GraphicsToolkit param0, int param1) {
+    final static void blitSoftwareRasterRegion(GraphicsToolkit param0, int param1) {
         ClipStack var2 = null;
         UiComponent var3 = null;
         try {

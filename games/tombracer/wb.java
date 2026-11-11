@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wb {
-    static FontMetrics field_a;
+    static GameFontMetrics field_a;
     private static String field_z;
 
     public static void releaseStatics(byte param0) {

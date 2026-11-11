@@ -719,7 +719,7 @@ final class fea {
         }
     }
 
-    final static void a(byte param0, String param1) {
+    final static void updateHoverTooltip(byte param0, String param1) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;

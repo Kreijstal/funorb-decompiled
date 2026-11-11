@@ -353,7 +353,7 @@ final class SwitchableIdAllocator {
           !(param3 > DiskCacheWorker.field_c)) {
           param0 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param0);
           param4 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param4);
-          GameScreen.a(param3, param4, param0, param2, 0);
+          GameScreen.drawVerticalSpan(param3, param4, param0, param2, 0);
         }
     }
 

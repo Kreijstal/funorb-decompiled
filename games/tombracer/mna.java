@@ -38,9 +38,9 @@ abstract class mna {
           var10 = 0;
           if (!fua.field_g &&
             var5 < ValidationMessageWidget.field_K) {
-            var11_int = Transform3D.a(var15.field_d, -20011);
+            var11_int = Transform3D.getChatSetting(var15.field_d, -20011);
             if (var15.a(false) >= var11_int && (var15.field_m ||
-              !MouseWheelInput.a(2180, var15.field_j))) {
+              !MouseWheelInput.isIgnored(2180, var15.field_j))) {
               var10 = 1;
             }
           }
@@ -55,7 +55,7 @@ abstract class mna {
               }
               var11 = moa.formatChatPrefix(var15, 94);
               var12 = var11 + BitmapFont.escapeMarkup(var15.field_f);
-              var13 = uaa.a((byte) -116, var15);
+              var13 = uaa.getChatMessageColour((byte) -116, var15);
               var15.field_l = new UiComponent(0L, VortexBehaviour.field_t, var12);
               var6 = var6 + param2;
               var15.field_l.field_ab = ((VortexBehaviour.field_t.field_ab & 16711422) >> 1) + var13 - (8355711 & var13 >> 1);

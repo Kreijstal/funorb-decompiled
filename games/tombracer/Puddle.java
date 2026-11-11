@@ -94,7 +94,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           if (var5_int == -1) {
             return false;
           }
-          var6 = wm.a(4096, var5_int, 108);
+          var6 = wm.clampedFixedRatio(4096, var5_int, 108);
           param3.shortenTo(var6, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -154,7 +154,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         }
     }
 
-    public final int applyBeamEffect(Effect param0, int param1, BeamSegment param2) {
+    public final int applyBeamEffect(HazardEffect param0, int param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         int stackIn_5_0 = 0;
@@ -271,7 +271,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         }
     }
 
-    public final int applyProjectileEffect(Effect param0, Projectile param1, int param2) {
+    public final int applyProjectileEffect(HazardEffect param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -335,7 +335,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
           return;
         }
         Projectile var6 = (Projectile) null;
-        this.applyProjectileEffect((Effect) null, (Projectile) null, -22);
+        this.applyProjectileEffect((HazardEffect) null, (Projectile) null, -22);
         this.y = param2;
         this.x = param0;
     }
@@ -385,7 +385,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return 0;
     }
 
-    private final int reactToEffect(Effect param0, int param1) {
+    private final int reactToEffect(HazardEffect param0, int param1) {
         int stackIn_3_0 = 0;
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -825,7 +825,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return this.previousY;
     }
 
-    public final int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int applyAreaEffect(HazardEffect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;

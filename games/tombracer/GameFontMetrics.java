@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class FontMetrics {
+final class GameFontMetrics {
     int field_h;
     int field_a;
     private byte[] field_e;
@@ -78,7 +78,7 @@ final class FontMetrics {
               var13_ref_br = UnlockEntry.field_g.getCategory((byte) 98, param3.field_q[var12]);
               var8[var12] = var13_ref_br.field_n;
               var9[var12] = param3.field_k[var12];
-              var11[var12] = FontMetrics.createQuickChatMenu(param0, param1, param2, var13_ref_br, param4);
+              var11[var12] = GameFontMetrics.createQuickChatMenu(param0, param1, param2, var13_ref_br, param4);
               var12++;
               if (var17 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -964,7 +964,7 @@ final class FontMetrics {
         }
     }
 
-    final static String a(boolean param0, String param1) {
+    final static String loadLevelFile(boolean param0, String param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -1034,7 +1034,7 @@ final class FontMetrics {
         }
     }
 
-    FontMetrics(byte[] param0) {
+    GameFontMetrics(byte[] param0) {
         byte[] array$0 = null;
         byte[] array$1 = null;
         int stackIn_8_0 = 0;
@@ -1167,7 +1167,7 @@ final class FontMetrics {
                     stackIn_50_1 = var10Lifetime2;
                     if (stackIn_50_0 != stackIn_50_1 && (160 != var10Lifetime2 ||
                       var12 != 0)) {
-                      this.field_c[var9Lifetime2][var10Lifetime2] = (byte)pu.a(var9Lifetime2, var10Lifetime2, true, var7, var5, this.field_e, var8, var6);
+                      this.field_c[var9Lifetime2][var10Lifetime2] = (byte)pu.computeKerning(var9Lifetime2, var10Lifetime2, true, var7, var5, this.field_e, var8, var6);
                     }
                     var10Lifetime2++;
                   }
@@ -1208,7 +1208,7 @@ final class FontMetrics {
           field_b = null;
           field_i = null;
           if (param0 != -63) {
-            FontMetrics.a(true, (String) null);
+            GameFontMetrics.loadLevelFile(true, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "qla.F(" + param0 + ')');

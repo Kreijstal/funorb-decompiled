@@ -76,7 +76,7 @@ final class kc {
             stackIn_9_0 = LegacyOpenGlTexture2D.field_n;
             return stackIn_9_0;
           }
-          var7 = LightSource.a(param3, 115);
+          var7 = LightSource.findIgnoredByName(param3, 115);
           if (var7 == null) {
             stackIn_12_0 = LegacyOpenGlFlowingWaterEffect.formatText(119, ConstrainToCircleLocomotor.field_A, new String[]{param3});
             return stackIn_12_0;

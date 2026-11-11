@@ -36,7 +36,7 @@ final class uca {
             stackIn_6_0 = dga.field_b;
             return stackIn_6_0;
           }
-          var8 = wp.a(94, param0);
+          var8 = wp.findFriendByName(94, param0);
           if (var8 == null) {
             stackIn_10_0 = LegacyOpenGlFlowingWaterEffect.formatText(88, LegacyOpenGlCubeTexture.field_m, new String[]{param0});
             return stackIn_10_0;
@@ -85,7 +85,7 @@ final class uca {
         cosmeticRandom = null;
     }
 
-    final static void a(int param0, toa param1, byte param2) {
+    final static void writeQueuedListRequest(int param0, toa param1, byte param2) {
         BitPacketBuffer var5 = null;
         int var4 = 0;
         try {

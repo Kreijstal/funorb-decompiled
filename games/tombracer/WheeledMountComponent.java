@@ -226,7 +226,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         this.field_Q = 4;
     }
 
-    final boolean A(int param0) {
+    final boolean storesLoopFlag(int param0) {
         int var2 = 21 / ((0 - param0) / 60);
         return true;
     }

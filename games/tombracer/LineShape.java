@@ -31,7 +31,7 @@ final class LineShape extends RasterShape {
         int var5 = this.field_f * param0 >> 12;
         int var6 = param1 * this.field_g >> 12;
         int var7 = param1 * this.field_j >> 12;
-        IntArrayRequest.a(var5, var4, -49, this.outlineColour, var7, var6);
+        IntArrayRequest.drawLine(var5, var4, -49, this.outlineColour, var7, var6);
         if (param2) {
           return;
         }

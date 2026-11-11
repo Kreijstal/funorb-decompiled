@@ -167,7 +167,7 @@ final class dh {
               var32 = 65280 & var30;
               var33 = (var32 * var28 & 16711789) >>> 8 | (var28 * var31 & -16711744) >>> 8;
               var33 = var33 + var29 * 65793;
-              RenderableNode.a(var25, -8543, var26, var23, var27, var22, (var33 & 16711422) >> 1, var24);
+              RenderableNode.fillTriangle(var25, -8543, var26, var23, var27, var22, (var33 & 16711422) >> 1, var24);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];
@@ -214,7 +214,7 @@ final class dh {
         field_e = null;
     }
 
-    final static int a(GameFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, String param12) {
+    final static int drawWrappedTextWithAlpha(GameFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, String param12) {
         RuntimeException var13 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

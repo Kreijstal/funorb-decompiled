@@ -116,7 +116,7 @@ final class PitSnake extends IntrusiveNode {
               if (this.field_s != 0 &&
                 lw.signum(this.field_s, (byte) -87) == lw.signum(-this.offsetX + this.field_u, (byte) -87)) {
                 this.field_s = -this.field_s;
-                this.direction = EditableTextField.a(this.direction, 6);
+                this.direction = EditableTextField.mirrorDirection(this.direction, 6);
               }
               if (this.field_p != 0 &&
                 lw.signum(this.field_p, (byte) -95) == lw.signum(this.field_m - this.offsetY, (byte) -93)) {
@@ -210,7 +210,7 @@ final class PitSnake extends IntrusiveNode {
         this.field_s = -this.field_s;
         this.offsetX = -this.offsetX;
         this.field_u = -this.field_u;
-        this.direction = EditableTextField.a(this.direction, 6);
+        this.direction = EditableTextField.mirrorDirection(this.direction, 6);
     }
 
     final void updateAgainstPlayer(int param0, boolean param1, int param2, int param3, Player param4) {
@@ -282,7 +282,7 @@ final class PitSnake extends IntrusiveNode {
         }
     }
 
-    final static int e(int param0) {
+    final static int getCurrentGraphicsMode(int param0) {
         if (null == baa.field_d.field_i) {
           BitPacketBuffer.setGraphicsSettings(true, WeaponShooterBehaviour.field_r, PitModel.field_s);
           return 4;

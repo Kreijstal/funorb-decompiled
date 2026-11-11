@@ -57,7 +57,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
         if (var4 != -2) {
           if (var4 != -1) {
             var5 = RoomViewRenderer.field_c.isMuteRequested(false) ? 1 : 0;
-            PowerDownItemBehaviour.a(var4, param2, (byte) 87, var5 != 0, RoomViewRenderer.field_c.field_Db, RoomViewRenderer.field_c.f(80));
+            PowerDownItemBehaviour.sendAbuseReport(var4, param2, (byte) 87, var5 != 0, RoomViewRenderer.field_c.field_Db, RoomViewRenderer.field_c.getEnteredText(80));
           }
           RoomViewRenderer.field_c = null;
           wp.closeContextMenu(-1);

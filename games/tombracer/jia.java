@@ -108,7 +108,7 @@ final class jia implements MessagePanel {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawLine3D(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param5 < 15) {
           jia.releaseStatics((byte) -91);
         }

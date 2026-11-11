@@ -8,7 +8,7 @@ final class IntArrayRequest extends IntrusiveNode {
     int[] field_i;
     int field_g;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6;
         int var7;
         int var8;
@@ -30,7 +30,7 @@ final class IntArrayRequest extends IntrusiveNode {
           return;
         }
         if (var8 == 0) {
-          DropdownList.a(param0, param1, (byte) -2, param3, param5);
+          DropdownList.drawClippedHorizontalLine(param0, param1, (byte) -2, param3, param5);
           return;
         }
         var13 = (var8 << 12) / var6;
@@ -89,7 +89,7 @@ final class IntArrayRequest extends IntrusiveNode {
 
     final static Weapon createBladeWeaponPreset(int param0) {
         Weapon var1 = new Weapon();
-        var1.effect = new Effect(0, 5);
+        var1.effect = new HazardEffect(0, 5);
         var1.effect.setDeathMessageIndex(param0 ^ -17697, 10);
         var1.field_t = 14;
         var1.field_k = 150;
@@ -101,7 +101,7 @@ final class IntArrayRequest extends IntrusiveNode {
         var1.field_m = true;
         var1.field_b = 2;
         if (param0 != -17698) {
-          IntArrayRequest.a(108, -3, 45, 83, 83, -49);
+          IntArrayRequest.drawLine(108, -3, 45, 83, 83, -49);
         }
         var1.field_c = true;
         var1.field_l = 524288;

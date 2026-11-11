@@ -69,7 +69,7 @@ final class PillarComponent extends PrefabComponent {
         return true;
     }
 
-    final static int A(int param0) {
+    final static int getTopDialogWidth(int param0) {
         if (!SnakePitTile.hasVisibleDialog(false)) {
           return -1;
         }

@@ -60,7 +60,7 @@ final class MirrorBehaviour extends Behaviour {
         return param0;
     }
 
-    private final int a(boolean param0, BeamSegment param1) {
+    private final int beamSegmentLength(boolean param0, BeamSegment param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -124,10 +124,10 @@ final class MirrorBehaviour extends Behaviour {
             this.field_o = null;
             return false;
           }
-          var6 = wm.a(4096, var5_int, -61);
+          var6 = wm.clampedFixedRatio(4096, var5_int, -61);
           param2.shortenTo(var6, (byte) 47);
           this.field_o = param2;
-          this.field_s = this.a(true, param2);
+          this.field_s = this.beamSegmentLength(true, param2);
           this.field_q = param0;
           this.field_w = var6;
           return true;
@@ -150,7 +150,7 @@ final class MirrorBehaviour extends Behaviour {
         int var1 = -15 / ((-36 - param0) / 62);
     }
 
-    final int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
+    final int onBeamEffect(int param0, HazardEffect param1, BeamSegment param2) {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -180,7 +180,7 @@ final class MirrorBehaviour extends Behaviour {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          var4_int = this.a(true, param2);
+          var4_int = this.beamSegmentLength(true, param2);
           if (this.field_s != var4_int) {
             stackIn_7_0 = 0;
             return stackIn_7_0;

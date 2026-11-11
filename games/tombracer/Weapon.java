@@ -6,7 +6,7 @@ final class Weapon {
     private int field_i;
     int field_t;
     boolean field_c;
-    Effect effect;
+    HazardEffect effect;
     int field_h;
     static float field_u;
     int maxAmmo;
@@ -63,7 +63,7 @@ final class Weapon {
         this.cooldown = param0;
     }
 
-    final Effect getEffect(byte param0) {
+    final HazardEffect getEffect(byte param0) {
         if (param0 != -16) {
           this.refillAmmo(6, true);
           return this.effect;
@@ -95,7 +95,7 @@ final class Weapon {
 
     final void setCooldown(int param0, boolean param1) {
         if (param1) {
-          this.effect = (Effect) null;
+          this.effect = (HazardEffect) null;
           this.cooldown = param0;
           return;
         }
@@ -104,7 +104,7 @@ final class Weapon {
 
     final boolean hasAmmo(int param0) {
         if (param0 != 12111) {
-          this.effect = (Effect) null;
+          this.effect = (HazardEffect) null;
           if (!this.hasUnlimitedAmmo((byte) 125)) {
             return this.ammo > 0 ? true : false;
           }
@@ -193,7 +193,7 @@ final class Weapon {
                   var23.setSpinAndAngle(7, 128, var24);
                 }
               }
-              var23.setEffect(-126, new Effect(param2, this.effect));
+              var23.setEffect(-126, new HazardEffect(param2, this.effect));
               if (this.field_i != -1) {
                 var23.setTrailParticle(this.field_i, -38);
               }

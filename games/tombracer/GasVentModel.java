@@ -17,27 +17,27 @@ final class GasVentModel extends TrapModel {
           ProjectionMode.field_a = ProjectionMode.field_a - 1;
           if (param0 >= ProjectionMode.field_a) {
             if (GameKeyHandler.field_a > 0) {
-              dga.a(GameKeyHandler.field_a, 199);
+              dga.layoutBottomPanels(GameKeyHandler.field_a, 199);
             }
             if (TextureCombineSource.field_e > 0) {
-              dga.a(TextureCombineSource.field_e, 199);
+              dga.layoutBottomPanels(TextureCombineSource.field_e, 199);
             }
             return;
           }
           NodeHashTable.a(16);
           if (GameKeyHandler.field_a <= 0) {
             if (TextureCombineSource.field_e > 0) {
-              dga.a(TextureCombineSource.field_e, 199);
+              dga.layoutBottomPanels(TextureCombineSource.field_e, 199);
             }
             return;
           }
-          dga.a(GameKeyHandler.field_a, 199);
+          dga.layoutBottomPanels(GameKeyHandler.field_a, 199);
         } else {
           if (0 < GameKeyHandler.field_a) {
             GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
             if (param0 >= ProjectionMode.field_a) {
               if (GameKeyHandler.field_a > 0) {
-                dga.a(GameKeyHandler.field_a, 199);
+                dga.layoutBottomPanels(GameKeyHandler.field_a, 199);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -45,9 +45,9 @@ final class GasVentModel extends TrapModel {
               NodeHashTable.a(16);
               decompiledFrameRemainder0 = !(GameKeyHandler.field_a <= 0);
               if (decompiledFrameRemainder0) {
-                dga.a(GameKeyHandler.field_a, 199);
+                dga.layoutBottomPanels(GameKeyHandler.field_a, 199);
                 if (TextureCombineSource.field_e > 0) {
-                  dga.a(TextureCombineSource.field_e, 199);
+                  dga.layoutBottomPanels(TextureCombineSource.field_e, 199);
                 }
                 return;
               }
@@ -61,14 +61,14 @@ final class GasVentModel extends TrapModel {
               NodeHashTable.a(16);
             }
             if (GameKeyHandler.field_a > 0) {
-              dga.a(GameKeyHandler.field_a, 199);
+              dga.layoutBottomPanels(GameKeyHandler.field_a, 199);
             }
           }
         }
         if (TextureCombineSource.field_e <= 0) {
           return;
         }
-        dga.a(TextureCombineSource.field_e, 199);
+        dga.layoutBottomPanels(TextureCombineSource.field_e, 199);
     }
 
     final void configureFor(WorldBody param0, int param1, TrapPart param2) {

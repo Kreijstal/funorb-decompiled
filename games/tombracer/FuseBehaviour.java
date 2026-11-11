@@ -5,7 +5,7 @@ final class FuseBehaviour extends Behaviour {
     static String field_t;
     private int field_s;
     private int field_r;
-    private Effect field_p;
+    private HazardEffect field_p;
     private FlagSet field_x;
     private int field_o;
     static boolean field_w;
@@ -14,7 +14,7 @@ final class FuseBehaviour extends Behaviour {
     private FlagSet field_q;
     private int field_u;
 
-    final int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
+    final int onBeamEffect(int param0, HazardEffect param1, BeamSegment param2) {
         RuntimeException var4 = null;
         BeamSegment var5 = null;
         int stackIn_3_0 = 0;
@@ -27,7 +27,7 @@ final class FuseBehaviour extends Behaviour {
         try {
           if (param0 > -85) {
             var5 = (BeamSegment) null;
-            this.onBeamEffect(102, (Effect) null, (BeamSegment) null);
+            this.onBeamEffect(102, (HazardEffect) null, (BeamSegment) null);
           }
           stackIn_3_0 = this.reactToEffect(param1, (byte) -115);
           return stackIn_3_0;
@@ -64,7 +64,7 @@ final class FuseBehaviour extends Behaviour {
         return false;
     }
 
-    final int onProjectileEffect(int param0, Projectile param1, Effect param2) {
+    final int onProjectileEffect(int param0, Projectile param1, HazardEffect param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -110,7 +110,7 @@ final class FuseBehaviour extends Behaviour {
     final int getTypeId(boolean param0) {
         if (param0) {
           BeamSegment var3 = (BeamSegment) null;
-          this.onBeamEffect(-90, (Effect) null, (BeamSegment) null);
+          this.onBeamEffect(-90, (HazardEffect) null, (BeamSegment) null);
         }
         return 31;
     }
@@ -175,7 +175,7 @@ final class FuseBehaviour extends Behaviour {
     }
 
     private final void explode(byte param0) {
-        Effect var2 = new Effect(this.getRoot(6), this.field_p);
+        HazardEffect var2 = new HazardEffect(this.getRoot(6), this.field_p);
         if (param0 != -67) {
           this.field_q = (FlagSet) null;
         }
@@ -206,13 +206,13 @@ final class FuseBehaviour extends Behaviour {
           return false;
         }
         if (!param0) {
-          this.field_p = (Effect) null;
+          this.field_p = (HazardEffect) null;
           return true;
         }
         return true;
     }
 
-    private final int reactToEffect(Effect param0, byte param1) {
+    private final int reactToEffect(HazardEffect param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -265,8 +265,8 @@ final class FuseBehaviour extends Behaviour {
     final void tick(int param0) {
         int discarded$0 = 0;
         if (param0 != 5418) {
-          Effect var3 = (Effect) null;
-          discarded$0 = this.reactToEffect((Effect) null, (byte) -1);
+          HazardEffect var3 = (HazardEffect) null;
+          discarded$0 = this.reactToEffect((HazardEffect) null, (byte) -1);
         }
         if (this.field_s > 0) {
           this.field_s = this.field_s - 1;
@@ -279,13 +279,13 @@ final class FuseBehaviour extends Behaviour {
     private final boolean isBurning(int param0) {
         int discarded$0 = 0;
         if (param0 != 8) {
-          Effect var3 = (Effect) null;
-          discarded$0 = this.reactToEffect((Effect) null, (byte) -80);
+          HazardEffect var3 = (HazardEffect) null;
+          discarded$0 = this.reactToEffect((HazardEffect) null, (byte) -80);
         }
         return 0 != this.field_s ? true : false;
     }
 
-    final int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
+    final int onAreaEffect(int param0, int param1, HazardEffect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;

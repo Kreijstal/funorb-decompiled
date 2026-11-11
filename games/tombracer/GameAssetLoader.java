@@ -31,7 +31,7 @@ final class GameAssetLoader implements LoadingStage {
         if (null != ConstrainToFacingArcLocomotor.field_v) {
           pfa.loadLocalizedText(ConstrainToFacingArcLocomotor.field_v, param0 + 157);
           ConstrainToFacingArcLocomotor.field_v = null;
-          C2SActionPacket.a(-33);
+          C2SActionPacket.resetFrameTiming(-33);
         }
         this.field_h = SoftReferenceCache.openArchive(16, param0 ^ -37);
         this.field_q = SoftReferenceCache.openArchive(17, param0 ^ -37);
@@ -123,7 +123,7 @@ final class GameAssetLoader implements LoadingStage {
           if (param1 != 47) {
             this.field_e = (ResourceArchive) null;
           }
-          ima.a((float)param0, param2, -106);
+          ima.setLoadingProgress((float)param0, param2, -106);
           CharacterChoiceTile.field_j.draw(0);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "sra.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -140,7 +140,7 @@ final class GameAssetLoader implements LoadingStage {
         if (this.field_e != null) {
           RoomComponent.setHuffmanCodec(1048576, new HuffmanCodec(this.field_e.getFileByName("", (byte) 113, "huffman")));
           this.field_e = null;
-          C2SActionPacket.a(-33);
+          C2SActionPacket.resetFrameTiming(-33);
           return;
         }
         if (this.field_d != null) {
@@ -149,13 +149,13 @@ final class GameAssetLoader implements LoadingStage {
           Transform3D.loadRoomDefinitions(this.field_d, 17572);
           uo.b((byte) -125);
           this.field_d = null;
-          C2SActionPacket.a(-33);
+          C2SActionPacket.resetFrameTiming(-33);
           return;
         }
         if (this.field_h != null &&
           null != this.field_p) {
           TextureCombineSource.loadTitleSprites(uba.loadingQuipsShort[1], 40, this.field_h, (byte) 17);
-          TextLayout.loadMenuBackgrounds((byte) -105, this.field_p, 50, uba.loadingQuipsShort[2]);
+          TextBlockLayout.loadMenuBackgrounds((byte) -105, this.field_p, 50, uba.loadingQuipsShort[2]);
           this.field_p = null;
           KeySwitchComponent.loadFonts((byte) -86, uba.loadingQuipsShort[3], this.field_q, this.field_h, 60);
           this.drawLoadingProgress(65, (byte) 47, uba.loadingQuipsShort[4]);
@@ -166,13 +166,13 @@ final class GameAssetLoader implements LoadingStage {
           this.field_r = null;
           this.field_m = null;
           this.field_h = null;
-          C2SActionPacket.a(-33);
+          C2SActionPacket.resetFrameTiming(-33);
           return;
         }
         if (this.field_j != null) {
           SwitchableIdAllocator.a(this.field_j, uba.loadingQuipsShort[7], 80, -79);
           this.field_j = null;
-          C2SActionPacket.a(-33);
+          C2SActionPacket.resetFrameTiming(-33);
           return;
         }
         if (null != this.field_f) {
@@ -180,7 +180,7 @@ final class GameAssetLoader implements LoadingStage {
           this.field_g = null;
           this.field_a = null;
           this.field_f = null;
-          C2SActionPacket.a(-33);
+          C2SActionPacket.resetFrameTiming(-33);
           return;
         }
         if (this.field_k != null &&
@@ -203,10 +203,10 @@ final class GameAssetLoader implements LoadingStage {
         }
         if (baa.field_d == null) {
           this.drawLoadingProgress(95, (byte) 47, uba.loadingQuipsShort[9]);
-          FleeLocomotor.e((byte) -33);
+          FleeLocomotor.createRendererOptions((byte) -33);
           baa.field_d = new ToolkitSelector(MatchPhase.field_l, rc.field_a);
         }
-        LaserShooterComponent.D(17229);
+        LaserShooterComponent.ensureToolkitResources(17229);
         if (null == baa.field_d.field_i) {
           return;
         }
@@ -224,7 +224,7 @@ final class GameAssetLoader implements LoadingStage {
         return this.field_n;
     }
 
-    final static String a(String param0, int param1) {
+    final static String loadProfileFromHex(String param0, int param1) {
         try {
           int var4_int = 0;
           int var3 = 0;
@@ -273,7 +273,7 @@ final class GameAssetLoader implements LoadingStage {
             var9.position = 0;
             var4_ref = null;
             try {
-              var15 = ClipStack.a(var9, -26, true);
+              var15 = ClipStack.decodeLocalProfile(var9, -26, true);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var5 = (Exception) (Object) decompiledCaughtException;
@@ -288,7 +288,7 @@ final class GameAssetLoader implements LoadingStage {
             dga.a(var11, 0);
             var12.decode(var11, var6, (byte) 39);
             mq.field_e = var12.getProfile(79);
-            ComponentTargetList.field_e = var12.b((byte) -78);
+            ComponentTargetList.field_e = var12.getFlagBits((byte) -78);
             toa.field_j = true;
             stackIn_18_0 = "profile loaded";
             return stackIn_18_0;
@@ -318,7 +318,7 @@ final class GameAssetLoader implements LoadingStage {
           this.loadNextAsset(124);
           return false;
         }
-        C2SActionPacket.a(-33);
+        C2SActionPacket.resetFrameTiming(-33);
         if (param0 != -4171) {
           return true;
         }
@@ -339,16 +339,16 @@ final class GameAssetLoader implements LoadingStage {
         hd.setFrameRate(50, param0 ^ -78);
         wm.field_a = null;
         SpriteTileOperator.field_t = (GameScreen) ((Object) LoginMethod.getMenuScreen(0, (byte) 50));
-        ima.a(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);
+        ima.setLoadingProgress(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);
         CharacterChoiceTile.field_j.draw(param0 ^ -49);
         FadingDialog.field_C.makeTarget(-19216);
         if (param0 != -49) {
           this.loadNextAsset(-107);
         }
         PbufferEntry.initConsole(0);
-        C2SActionPacket.a(param0 + 16);
+        C2SActionPacket.resetFrameTiming(param0 + 16);
         if (null != mq.field_e) {
-          eda.a(mq.field_e.field_g, true);
+          eda.applyGraphicsMode(mq.field_e.field_g, true);
         }
     }
 

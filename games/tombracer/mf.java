@@ -14,12 +14,12 @@ final class mf {
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
-          mf.a(-23);
+          mf.buildPowerCurveTable(-23);
         }
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void buildPowerCurveTable(int param0) {
         int var2 = 0;
         int var1_int = 0;
         double var2_double = 0.0;

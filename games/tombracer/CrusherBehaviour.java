@@ -12,13 +12,13 @@ final class CrusherBehaviour extends Behaviour {
     private int phaseTicks;
     static String field_r;
     private int retractTicks;
-    private Effect crushEffect;
+    private HazardEffect crushEffect;
 
     final boolean isRetracting(int param0) {
         if (param0 == -5) {
           return this.phase == 4 ? true : false;
         }
-        this.crushEffect = (Effect) null;
+        this.crushEffect = (HazardEffect) null;
         return this.phase == 4 ? true : false;
     }
 
@@ -91,7 +91,7 @@ final class CrusherBehaviour extends Behaviour {
           this.retractTicks = 50;
           this.waitTicks = 50;
           this.windUpTicks = 25;
-          this.crushEffect = new Effect(0, 100);
+          this.crushEffect = new HazardEffect(0, 100);
           this.crushEffect.setDeathMessageIndex(1, 4);
           this.clampPhaseTicks((byte) -106);
         } catch (RuntimeException runtimeException) {
@@ -196,7 +196,7 @@ final class CrusherBehaviour extends Behaviour {
           if (16 <= param0.formatVersion) {
             this.crushEffect = CharacterChoiceTile.decodeEffect((byte) 87, param1);
           } else {
-            this.crushEffect = new Effect(0, 100);
+            this.crushEffect = new HazardEffect(0, 100);
           }
           this.clampPhaseTicks((byte) -101);
           return;

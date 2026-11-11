@@ -1329,9 +1329,9 @@ final class OpenGlModel extends ToolkitModel {
           }
           var6 = (OpenGlTransform3D) (param0);
           it.field_a = var6.field_h * var5.field_q + (var5.field_j * var6.field_k + var5.field_h * var6.field_r);
-          TextLayout.field_b = var5.field_o + (var6.field_o * var5.field_q + (var6.field_p * var5.field_h + var5.field_j * var6.field_m));
-          var7 = TextLayout.field_b + it.field_a * (float)this.field_eb;
-          var8 = TextLayout.field_b + it.field_a * (float)this.field_v;
+          TextBlockLayout.field_b = var5.field_o + (var6.field_o * var5.field_q + (var6.field_p * var5.field_h + var5.field_j * var6.field_m));
+          var7 = TextBlockLayout.field_b + it.field_a * (float)this.field_eb;
+          var8 = TextBlockLayout.field_b + it.field_a * (float)this.field_v;
           if (!(var7 > var8)) {
             var10 = var8 + (float)this.field_M;
             var9 = (float)(-this.field_M) + var7;
@@ -1397,8 +1397,8 @@ final class OpenGlModel extends ToolkitModel {
           if (null != param1) {
             var19 = this.field_U + this.field_T >> 1;
             var20 = this.field_k + this.field_S >> 1;
-            var21 = (int)(it.field_a * (float)this.field_eb + (Weapon.field_u * (float)var19 + TextLayout.field_b) + NativeSceneLight.field_q * (float)var20);
-            var22 = (int)((float)var20 * NativeSceneLight.field_q + (it.field_a * (float)this.field_v + (Weapon.field_u * (float)var19 + TextLayout.field_b)));
+            var21 = (int)(it.field_a * (float)this.field_eb + (Weapon.field_u * (float)var19 + TextBlockLayout.field_b) + NativeSceneLight.field_q * (float)var20);
+            var22 = (int)((float)var20 * NativeSceneLight.field_q + (it.field_a * (float)this.field_v + (Weapon.field_u * (float)var19 + TextBlockLayout.field_b)));
             if (var21 < this.field_R.field_Gc &&
               this.field_R.field_Gc <= var22) {
             }
@@ -2376,7 +2376,7 @@ final class OpenGlModel extends ToolkitModel {
                 var8 = (float)(this.field_A[var4.field_k] + this.field_A[var4.field_m] + this.field_A[var4.field_b]) * 0.3333333134651184f;
                 var9 = MonsterModel.field_B + (var8 * mu.field_ub + (ChooseRewardFactory.field_a * var7 + var6 * is.field_Ab));
                 var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + VoronoiNoiseOperator.field_u * var7 + bva.field_c * var8);
-                var11 = TextLayout.field_b + (NativeSceneLight.field_q * var8 + (var7 * it.field_a + var6 * Weapon.field_u));
+                var11 = TextBlockLayout.field_b + (NativeSceneLight.field_q * var8 + (var7 * it.field_a + var6 * Weapon.field_u));
                 var12 = (float)(1.0 / Math.sqrt((double)(var11 * var11 + (var10 * var10 + var9 * var9)))) * (float)var4.field_j;
                 var2.a(var5.field_g, var12 * var11 + -var11, var9 + (float)var5.field_h - var9 * var12, var4.field_e * var5.field_f >> 7, (byte) -60, var4.field_i * var5.field_b >> 7, var12 * var10 + (-var10 + (float)var5.field_a));
                 this.field_R.loadTransformMatrix(var2, 0);
@@ -2446,10 +2446,10 @@ final class OpenGlModel extends ToolkitModel {
           if (!this.field_l) {
             this.computeBounds(2709);
           }
-          TextLayout.field_b = var4.field_o + (var4.field_j * var5.field_m + var4.field_h * var5.field_p + var4.field_q * var5.field_o);
+          TextBlockLayout.field_b = var4.field_o + (var4.field_j * var5.field_m + var4.field_h * var5.field_p + var4.field_q * var5.field_o);
           it.field_a = var5.field_k * var4.field_j + var4.field_h * var5.field_r + var4.field_q * var5.field_h;
-          var6 = TextLayout.field_b + (float)this.field_eb * it.field_a;
-          var7 = TextLayout.field_b + it.field_a * (float)this.field_v;
+          var6 = TextBlockLayout.field_b + (float)this.field_eb * it.field_a;
+          var7 = TextBlockLayout.field_b + it.field_a * (float)this.field_v;
           if (var7 < var6) {
             var8 = var7 - (float)this.field_M;
             var9 = (float)this.field_M + var6;
@@ -2517,11 +2517,11 @@ final class OpenGlModel extends ToolkitModel {
             var19 = 1;
             var20 = this.field_U + this.field_T >> 1;
             var21 = this.field_k + this.field_S >> 1;
-            var22 = (int)((float)var21 * NativeSceneLight.field_q + (it.field_a * (float)this.field_eb + ((float)var20 * Weapon.field_u + TextLayout.field_b)));
+            var22 = (int)((float)var21 * NativeSceneLight.field_q + (it.field_a * (float)this.field_eb + ((float)var20 * Weapon.field_u + TextBlockLayout.field_b)));
             if (this.field_R.field_Gc > var22) {
               var18 = 1;
             }
-            var23 = (int)(TextLayout.field_b + Weapon.field_u * (float)var20 + it.field_a * (float)this.field_v + (float)var21 * NativeSceneLight.field_q);
+            var23 = (int)(TextBlockLayout.field_b + Weapon.field_u * (float)var20 + it.field_a * (float)this.field_v + (float)var21 * NativeSceneLight.field_q);
             if (var23 < this.field_R.field_Gc) {
               var18 = 1;
             }
@@ -4854,7 +4854,7 @@ final class OpenGlModel extends ToolkitModel {
                             var55 = (var38_ref_float__[2] * (float)var51_int + (var38_ref_float__[0] * (float)var49_int + (float)var50_int * var38_ref_float__[1])) / var52;
                             var56 = (var38_ref_float__[4] * (float)var50_int + (float)var49_int * var38_ref_float__[3] + var38_ref_float__[5] * (float)var51_int) / var53;
                             var57 = (var38_ref_float__[8] * (float)var51_int + ((float)var50_int * var38_ref_float__[7] + var38_ref_float__[6] * (float)var49_int)) / var54;
-                            var30 = AccountRegistrationPanel.a(var57, var56, false, var55);
+                            var30 = AccountRegistrationPanel.dominantAxis(var57, var56, false, var55);
                             LegacyOpenGlShoreWaveWaterEffect.a(var36, HelloCommand.field_p, param1.field_I[var32_int], var35, var42, var37_int, var41, param1.field_b[var32_int], var30, param1.field_p[var32_int], -101, var40, var39_int, var38_ref_float__);
                             var22 = HelloCommand.field_p[0];
                             var23 = HelloCommand.field_p[1];

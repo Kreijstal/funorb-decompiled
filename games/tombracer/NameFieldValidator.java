@@ -116,10 +116,10 @@ final class NameFieldValidator extends TextFieldValidator {
         }
     }
 
-    final void b(byte param0) {
+    final void clearSuggestions(byte param0) {
         this.field_j = null;
         if (param0 != -69) {
-          this.b((byte) -119);
+          this.clearSuggestions((byte) -119);
         }
     }
 

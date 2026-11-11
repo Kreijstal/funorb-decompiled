@@ -164,9 +164,9 @@ final class LoginMethod {
         field_f = null;
     }
 
-    final static LobbyPlayerEntry a(boolean param0, long param1) {
+    final static LobbyPlayerEntry findLobbyPlayer(boolean param0, long param1) {
         if (!param0) {
-          LoginMethod.a(false, 56L);
+          LoginMethod.findLobbyPlayer(false, 56L);
         }
         return (LobbyPlayerEntry) (fua.field_a.get(-126, param1));
     }

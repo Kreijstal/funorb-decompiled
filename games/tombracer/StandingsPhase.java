@@ -222,7 +222,7 @@ final class StandingsPhase extends MatchPhase {
           var8 = var4 - 80;
           PlayerInputQueue.field_a.draw(var7 - (PlayerInputQueue.field_a.width() >> 1), var8 - (PlayerInputQueue.field_a.height() >> 1));
           var9 = this.screen.getCourseId(-1);
-          stackIn_4_0 = (ChatChannelType.a((byte) 64) != var9) ? 0 : 1;
+          stackIn_4_0 = (ChatChannelType.getSelectedCourseIndex((byte) 64) != var9) ? 0 : 1;
           var11 = stackIn_4_0;
           if (var11 != 0) {
             var10_ref_String = SinglePlayerCourseGenerator.field_k.toUpperCase();
@@ -286,7 +286,7 @@ final class StandingsPhase extends MatchPhase {
               var18 = null;
               for (var19 = 0; FacePlayerLocomotor.field_p.field_k[2].length > var19; var19++) {
                 var20 = FacePlayerLocomotor.field_p.field_k[2][var19];
-                if (MiscItemBehaviour.a(var20, 0)) {
+                if (MiscItemBehaviour.isLocalPlayerName(var20, 0)) {
                   continue;
                 }
                 var17 = FacePlayerLocomotor.field_p.field_p[2][var19];

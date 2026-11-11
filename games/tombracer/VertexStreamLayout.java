@@ -4,7 +4,7 @@
 final class VertexStreamLayout {
     private int field_b;
     static int[][] field_f;
-    static ScrollPane field_d;
+    static ScrollPanel field_d;
     private long field_a;
     static fta field_c;
     static String field_e;
@@ -86,7 +86,7 @@ final class VertexStreamLayout {
         field_d = null;
         field_c = null;
         if (param0 != 15) {
-          field_d = (ScrollPane) null;
+          field_d = (ScrollPanel) null;
           field_f = (int[][]) null;
           return;
         }

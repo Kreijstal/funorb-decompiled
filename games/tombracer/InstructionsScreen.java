@@ -94,7 +94,7 @@ final class InstructionsScreen extends DropInMenuScreen {
         S2CNextRoundPacket.drawRightTextWithShadow(4, SingleChildWidget.field_v, rka.formatPageNumber(td.field_r, true), 600, -1, param1 + 72, 11288327);
         var16 = IntrusiveDeque.field_d[td.field_r];
         var4 = var16;
-        var5 = Effect.field_h[td.field_r];
+        var5 = HazardEffect.field_h[td.field_r];
         TextureTransformMode.a(-10985);
         var6 = Math.max(var5.length, var16.length);
         var7 = 80 + param1;

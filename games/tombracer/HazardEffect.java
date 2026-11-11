@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Effect implements noa {
+final class HazardEffect implements noa {
     static UiComponent field_a;
     int type;
     private int preset;
@@ -192,7 +192,7 @@ final class Effect implements noa {
         return true;
     }
 
-    Effect(int param0, int param1) {
+    HazardEffect(int param0, int param1) {
         this((WorldBody) null, param0, param1);
     }
 
@@ -203,7 +203,7 @@ final class Effect implements noa {
         }
     }
 
-    Effect(WorldBody param0, Effect param1) {
+    HazardEffect(WorldBody param0, HazardEffect param1) {
         this(param0, param1.preset, param1.size);
         try {
           this.deathMessageIndex = param1.deathMessageIndex;
@@ -212,7 +212,7 @@ final class Effect implements noa {
         }
     }
 
-    Effect(WorldBody param0, int param1, int param2) {
+    HazardEffect(WorldBody param0, int param1, int param2) {
         try {
           this.preset = param1;
           this.size = param2;

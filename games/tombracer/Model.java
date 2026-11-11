@@ -1135,7 +1135,7 @@ final class Model extends ToolkitModel {
             for (var9Lifetime5Lifetime1 = 0; var9Lifetime5Lifetime1 < this.field_m; var9Lifetime5Lifetime1++) {
               var27 = this.field_e[var9Lifetime5Lifetime1];
               var26 = this.field_db[var9Lifetime5Lifetime1];
-              var26.field_k = var26.field_k & -16777216 | PitSnakeModel.field_h[tg.a((byte) -123, this.field_ob[var27.field_j] & 65535) & 65535] & 16777215;
+              var26.field_k = var26.field_k & -16777216 | PitSnakeModel.field_h[tg.hslToHsv((byte) -123, this.field_ob[var27.field_j] & 65535) & 65535] & 16777215;
             }
             return;
           }
@@ -1396,7 +1396,7 @@ final class Model extends ToolkitModel {
           while (var10 < this.field_m) {
             var6 = this.field_e[var10];
             var7 = this.field_db[var10];
-            var7.field_k = var7.field_k & -16777216 | PitSnakeModel.field_h[tg.a((byte) -120, this.field_ob[var6.field_j] & 65535)] & 16777215;
+            var7.field_k = var7.field_k & -16777216 | PitSnakeModel.field_h[tg.hslToHsv((byte) -120, this.field_ob[var6.field_j] & 65535)] & 16777215;
             var10++;
           }
         }
@@ -2412,7 +2412,7 @@ final class Model extends ToolkitModel {
             for (var10Lifetime5Lifetime1 = 0; var10Lifetime5Lifetime1 < this.field_m; var10Lifetime5Lifetime1++) {
               var62 = this.field_e[var10Lifetime5Lifetime1];
               var61 = this.field_db[var10Lifetime5Lifetime1];
-              var61.field_k = var61.field_k & -16777216 | PitSnakeModel.field_h[tg.a((byte) -114, this.field_ob[var62.field_j] & 65535) & 65535] & 16777215;
+              var61.field_k = var61.field_k & -16777216 | PitSnakeModel.field_h[tg.hslToHsv((byte) -114, this.field_ob[var62.field_j] & 65535) & 65535] & 16777215;
             }
             return;
           }
@@ -2498,7 +2498,7 @@ final class Model extends ToolkitModel {
           if (var4 == -1) {
             var1 = this.field_ob[var5] & 65535;
             var2 = (var1 & 127) * this.field_Db >> 7;
-            var1 = tg.a((byte) -117, var1 & -128 | var2);
+            var1 = tg.hslToHsv((byte) -117, var1 & -128 | var2);
             if (this.field_Fb[var5] != -1) {
               if (this.field_Fb[var5] != -2) {
                 var3 = this.field_t[var5] & -131072;
@@ -3675,7 +3675,7 @@ final class Model extends ToolkitModel {
                 case 0:
                   var12 = this.field_ob[var8] & 65535;
                   var13_int = (var12 & 127) * this.field_Db >> 7;
-                  var14 = tg.a((byte) -128, var12 & -128 | var13_int);
+                  var14 = tg.hslToHsv((byte) -128, var12 & -128 | var13_int);
                   if (this.field_D != null &&
                     this.field_D[this.field_M[var8]] != null) {
                     var15_ref_oha = this.field_D[this.field_M[var8]];
@@ -3713,7 +3713,7 @@ final class Model extends ToolkitModel {
                 case 1:
                   var12 = this.field_ob[var8] & 65535;
                   var13_int = (var12 & 127) * this.field_Db >> 7;
-                  var14 = tg.a((byte) -105, var12 & -128 | var13_int);
+                  var14 = tg.hslToHsv((byte) -105, var12 & -128 | var13_int);
                   var19 = this.field_I[var8];
                   var16 = var2 * var19.field_a + var3 * var19.field_c + var4 * var19.field_b >> 16;
                   stackIn_55_0 = (var16 <= 256) ? var7 : var6;
@@ -4226,7 +4226,7 @@ final class Model extends ToolkitModel {
                     var46 = ((float)var40 * var76[0] + (float)var41 * var76[1] + (float)var42 * var76[2]) / var43;
                     var47 = ((float)var40 * var76[3] + (float)var41 * var76[4] + (float)var42 * var76[5]) / var44;
                     var48 = ((float)var40 * var76[6] + (float)var41 * var76[7] + (float)var42 * var76[8]) / var45;
-                    var21Lifetime1 = AccountRegistrationPanel.a(var48, var47, false, var46);
+                    var21Lifetime1 = AccountRegistrationPanel.dominantAxis(var48, var47, false, var46);
                     LegacyOpenGlShoreWaveWaterEffect.a(var27, var75, this.field_rb[var23], var26, var33, var28, var32, this.field_xb[var23], var21Lifetime1, this.field_T[var23], -94, var31, var30, var76);
                     var19[0] = var75[0];
                     var20[0] = var75[1];

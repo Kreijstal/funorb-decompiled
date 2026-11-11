@@ -8,7 +8,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
     static int field_e;
     volatile boolean field_b;
 
-    final static ChatTarget a(String param0, int param1, boolean param2, String param3) {
+    final static ChatTarget parseChatTarget(String param0, int param1, boolean param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -29,7 +29,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
             var7 = (CharSequence) ((Object) param3);
             var4_long = PasswordValidator.encodeBase37(var7, 117);
           }
-          stackIn_4_0 = WidgetContainer.a(param0, 0, (String) (var6), param2, var4_long);
+          stackIn_4_0 = WidgetContainer.createChatTarget(param0, 0, (String) (var6), param2, var4_long);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -127,7 +127,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
               return;
             }
             var10 = (String) null;
-            FullscreenCanvas.a((String) null, 40, false, (String) null);
+            FullscreenCanvas.parseChatTarget((String) null, 40, false, (String) null);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -37,7 +37,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_z[var5] = new FocusableWidget(this.field_A[var5], (WidgetListener) (this));
               this.field_z[var5].field_r = (WidgetPainter) ((Object) var4);
-              this.field_z[var5].field_q = FontMetrics.field_i;
+              this.field_z[var5].field_q = GameFontMetrics.field_i;
               this.field_z[var5].setBounds((byte) -31, 80, 15, 0, 20 + 16 * var5);
               this.addChild(this.field_z[var5], param0 ^ -13598);
             }

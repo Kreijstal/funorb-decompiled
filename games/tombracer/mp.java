@@ -214,7 +214,7 @@ final class mp {
           era.field_e.addChild(-128, MatchProtocol.field_i);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.field_J = new IntrusiveDeque();
-          VertexStreamLayout.field_d = new ScrollPane(0L, var17, param3, param4);
+          VertexStreamLayout.field_d = new ScrollPanel(0L, var17, param3, param4);
           MatchProtocol.field_i.addChild(-126, VertexStreamLayout.field_d);
           RotaterMountComponent.field_K = new UiComponent(0L, param1);
           MatchProtocol.field_i.addChild(-124, RotaterMountComponent.field_K);

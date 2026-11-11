@@ -63,7 +63,7 @@ final class ConsoleTokenStream {
         return true;
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, byte param4) {
+    final static void projectPoint(int[] param0, int param1, int param2, int param3, byte param4) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

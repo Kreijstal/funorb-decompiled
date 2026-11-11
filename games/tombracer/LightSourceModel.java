@@ -421,7 +421,7 @@ final class LightSourceModel extends TrapModel {
         }
     }
 
-    final static byte[] a(float param0, float param1, int param2, jg param3, int param4, int param5, float param6, int param7, int param8, float param9, float param10) {
+    final static byte[] generateNoiseTexture(float param0, float param1, int param2, jg param3, int param4, int param5, float param6, int param7, int param8, float param9, float param10) {
         byte[] var11 = null;
         RuntimeException var11_ref = null;
         byte[] var12 = null;
@@ -462,7 +462,7 @@ final class LightSourceModel extends TrapModel {
         this.field_m = 128;
     }
 
-    final void a(boolean param0, int param1) {
+    final void setLightColour(boolean param0, int param1) {
         this.field_n.setColour(false, param1);
         if (!param0) {
           this.createLight(8);

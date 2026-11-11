@@ -77,7 +77,7 @@ final class S2CRoundDeadlinePacket implements GamePacket {
           return 73;
         }
         if (io.centredBoxesOverlap(param4, param3, (byte) -122, param7, param1, param2, param0, param6, param9)) {
-          return BufferedSocket.a(-(param7 / 2) + param2, 1, -(param0 / 2) + param3, param3 + (1 + param0) / 2, param2 + (param7 + 1) / 2, param8, param1 - param6 / 2, (param4 + 1) / 2 + param9, (1 + param6) / 2 + param1, param9 - param4 / 2);
+          return BufferedSocket.rectangleOverlapArea(-(param7 / 2) + param2, 1, -(param0 / 2) + param3, param3 + (1 + param0) / 2, param2 + (param7 + 1) / 2, param8, param1 - param6 / 2, (param4 + 1) / 2 + param9, (1 + param6) / 2 + param1, param9 - param4 / 2);
         }
         return 0;
     }

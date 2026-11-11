@@ -4,7 +4,7 @@
 final class li {
     static String field_a;
 
-    final static void b(int param0, byte param1) {
+    final static void updateRoomMusic(int param0, byte param1) {
         if (param0 != msa.field_a) {
           return;
         }
@@ -49,7 +49,7 @@ final class li {
           }
           return null;
         }
-        li.b(-46, (byte) -102);
+        li.updateRoomMusic(-46, (byte) -102);
         for (var3Lifetime1 = 0; var5.length > var3Lifetime1; var3Lifetime1++) {
           if (var5[var3Lifetime1].field_a == param0) {
             return var5[var3Lifetime1];

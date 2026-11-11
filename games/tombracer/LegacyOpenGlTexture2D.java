@@ -18,13 +18,13 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
         }
     }
 
-    final static void a(boolean param0, String param1, String param2) {
+    final static void submitLogin(boolean param0, String param1, String param2) {
         try {
           if (!param0) {
             String var4 = (String) null;
-            LegacyOpenGlTexture2D.a(true, (String) null, (String) null);
+            LegacyOpenGlTexture2D.submitLogin(true, (String) null, (String) null);
           }
-          rma.a(false, param1, param2, (byte) 100);
+          rma.startLoginAttempt(false, param1, param2, (byte) 100);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "rt.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

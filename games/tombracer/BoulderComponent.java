@@ -143,7 +143,7 @@ final class BoulderComponent extends PathMoverComponent {
     final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         ConstantEffectBehaviour var5 = null;
-        Effect var6 = null;
+        HazardEffect var6 = null;
         SimpleBlockBehaviour var7 = null;
         PathMoveLocomotor var8 = null;
         ModelCodec var9 = null;
@@ -164,7 +164,7 @@ final class BoulderComponent extends PathMoverComponent {
           var11.setPushMode(108, 2);
           var11.setStatCategory(2, 146366800);
           var5 = new ConstantEffectBehaviour(param2, param0);
-          var6 = new Effect(0, 10);
+          var6 = new HazardEffect(0, 10);
           var6.setDeathMessageIndex(1, 14);
           var5.setEffect(true, var6);
           var11.addBehaviour((byte) 83, (Behaviour) (var5));
@@ -245,7 +245,7 @@ final class BoulderComponent extends PathMoverComponent {
         this.setSize(-110, 4194304, 4194304);
     }
 
-    final boolean A(int param0) {
+    final boolean storesLoopFlag(int param0) {
         int var2 = -18 / ((param0 - 0) / 60);
         return true;
     }

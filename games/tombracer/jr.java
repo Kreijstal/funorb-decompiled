@@ -81,7 +81,7 @@ final class jr implements WidgetPainter {
         }
     }
 
-    final static void b(byte param0) {
+    final static void resetHoverTooltip(byte param0) {
         HardwareOpenGlToolkit.field_pd = false;
         fr.field_c = 0;
         ConsoleToken.field_f = -1;
@@ -90,7 +90,7 @@ final class jr implements WidgetPainter {
           MazeComponent.field_F = null;
           return;
         }
-        jr.b((byte) 79);
+        jr.resetHoverTooltip((byte) 79);
         RenderLayer.field_f = -1;
         MazeComponent.field_F = null;
     }

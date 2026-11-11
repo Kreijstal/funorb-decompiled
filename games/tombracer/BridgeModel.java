@@ -660,7 +660,7 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final static void a(int param0, UiComponent param1) {
+    final static void resetLayoutOffsets(int param0, UiComponent param1) {
         UiComponent var4 = null;
         UiComponent var2 = null;
         int var3 = TombRacer.field_G ? 1 : 0;

@@ -20,7 +20,7 @@ abstract class GameScreen {
               if (var3 != 0) {
                 return false;
               }
-              ContextMenu.e((byte) 113);
+              ContextMenu.openQuickChat((byte) 113);
               return true;
             }
             if (!param1) {
@@ -85,13 +85,13 @@ abstract class GameScreen {
             var3 != 0) {
             return false;
           }
-          return eca.a((byte) -121, uba.field_f, CoinItemComponent.field_I, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g);
+          return eca.openQuickChatForPlayer((byte) -121, uba.field_f, CoinItemComponent.field_I, TextureCombineSource.field_d, MonochromeRowCacheEntry.field_g);
         }
         if (MenuEntry.field_h == 10) {
           if (var3 != 0) {
             return false;
           }
-          ContextMenu.e((byte) 113);
+          ContextMenu.openQuickChat((byte) 113);
           return true;
         }
         if (param1) {
@@ -148,7 +148,7 @@ abstract class GameScreen {
         return param0 % param1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawVerticalSpan(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;

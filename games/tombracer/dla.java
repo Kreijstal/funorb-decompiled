@@ -298,7 +298,7 @@ final class dla {
         return 91;
     }
 
-    final static void b(int param0) {
+    final static void drawDimmedOverlay(int param0) {
         if (vo.field_b) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
           rua.field_gb.drawFullScreen(36, false);

@@ -110,7 +110,7 @@ final class dga {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void layoutBottomPanels(int param0, int param1) {
         int var2 = (SceneLight.field_i - 640) / 2;
         int var3 = SoftwareTransform3D.field_q * SoftwareTransform3D.field_q;
         int var4 = var3 - param0 * param0;

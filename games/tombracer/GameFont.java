@@ -3,7 +3,7 @@
  */
 abstract class GameFont {
     static boolean field_c;
-    private FontMetrics field_a;
+    private GameFontMetrics field_a;
     private GraphicsToolkit field_b;
 
     abstract void drawGlyph(char param0, int param1, int param2, int param3, boolean param4);
@@ -28,7 +28,7 @@ abstract class GameFont {
     private final void setColours(int param0, int param1, int param2) {
         nt.field_b = -1;
         if (param2 < 106) {
-          this.field_a = (FontMetrics) null;
+          this.field_a = (GameFontMetrics) null;
         }
         OpenGlToolkit.field_ab = 0;
         ClientMemoryVertexArray.field_g = param0;
@@ -135,7 +135,7 @@ abstract class GameFont {
             var3 = (Exception) (Object) decompiledCaughtException;
           }
           if (param1 <= 108) {
-            this.field_a = (FontMetrics) null;
+            this.field_a = (GameFontMetrics) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -313,7 +313,7 @@ abstract class GameFont {
             OpenGlToolkit.field_ab = (param1 - this.field_a.stringWidth(param2, (byte) -121) << 8) / var4_int;
           }
           if (!param0) {
-            this.field_a = (FontMetrics) null;
+            this.field_a = (GameFontMetrics) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -574,7 +574,7 @@ abstract class GameFont {
         }
         try {
           if (param0 != 12199) {
-            this.field_a = (FontMetrics) null;
+            this.field_a = (GameFontMetrics) null;
           }
           this.setColours(param4, param3, 118);
           this.drawText(false, -this.field_a.stringWidth(param2, (byte) -102) + param5, (aa) null, (int[]) null, 0, (ToolkitSprite[]) null, param2, 0, param1);
@@ -583,7 +583,7 @@ abstract class GameFont {
         }
     }
 
-    GameFont(GraphicsToolkit param0, FontMetrics param1) {
+    GameFont(GraphicsToolkit param0, GameFontMetrics param1) {
         try {
           this.field_a = param1;
           this.field_b = param0;

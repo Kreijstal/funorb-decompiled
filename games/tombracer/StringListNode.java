@@ -106,7 +106,7 @@ final class StringListNode extends IntrusiveNode {
         }
     }
 
-    final static ResourceArchive a(int param0, int param1) {
+    final static ResourceArchive getOrOpenArchive(int param0, int param1) {
         if (param0 >= -83) {
           return (ResourceArchive) null;
         }

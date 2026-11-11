@@ -5,7 +5,7 @@ final class WindZoneBehaviour extends Behaviour {
     private boolean field_t;
     private int field_r;
     private int field_q;
-    static Effect field_o;
+    static HazardEffect field_o;
     static String field_u;
     static String field_s;
     private BeamSegment field_v;
@@ -269,7 +269,7 @@ final class WindZoneBehaviour extends Behaviour {
     static {
         field_u = "Loading extra data";
         field_s = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
-        field_o = new Effect(4, 50);
+        field_o = new HazardEffect(4, 50);
         field_n = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
     }
 }

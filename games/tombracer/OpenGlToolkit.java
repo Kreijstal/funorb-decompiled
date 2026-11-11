@@ -877,7 +877,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             this.field_X = this.createVertexBuffer(var3.position, var3.payload, 20, false, (byte) 108);
             this.field_Bc = new VertexArrayPointer(this.field_X, 5126, 3, 0);
             this.field_Rb = new VertexArrayPointer(this.field_X, 5126, 2, 12);
-            this.field_Ec.a(22091, this);
+            this.field_Ec.createVertexBuffer(22091, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1410,7 +1410,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final GameFont createFont(FontMetrics param0, SpriteData[] param1, boolean param2) {
+    final GameFont createFont(GameFontMetrics param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
         OpenGlFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;

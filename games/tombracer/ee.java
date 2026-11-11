@@ -16,7 +16,7 @@ final class ee implements WidgetPainter {
         try {
           var6_int = param0.field_i + param1;
           var7 = param3 + param0.field_n;
-          bl.a(param0.field_m, var7, param0.field_p, var6_int, 1);
+          bl.drawGradientBar(param0.field_m, var7, param0.field_p, var6_int, 1);
           var8 = CharacterChoiceFactory.field_b[1];
           if (param0 instanceof FocusableWidget &&
             ((FocusableWidget) (param0)).field_w) {

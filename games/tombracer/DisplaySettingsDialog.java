@@ -555,7 +555,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         }
     }
 
-    final static boolean f(int param0) {
+    final static boolean isQuickChatTargetReachable(int param0) {
         if (param0 != 24316) {
           field_Q = (String) null;
         }

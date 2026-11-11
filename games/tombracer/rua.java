@@ -39,7 +39,7 @@ final class rua extends MessageDialog implements ButtonListener {
         this.a(7, param0, doa.a(RatingsScreen.field_v, 248, (byte) 114));
     }
 
-    final static String a(String param0, int param1) {
+    final static String playTrackByName(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

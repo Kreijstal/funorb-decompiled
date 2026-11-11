@@ -17,20 +17,20 @@ abstract class MazeGenerator {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3) {
+    final static void setChatSetting(int param0, int param1, byte param2, int param3) {
         if (param0 == 0) {
           if (k.field_A == param3) {
             if (param0 == 1 &&
               param3 != nba.field_b) {
               PlatformModel.field_B = true;
               nba.field_b = param3;
-              wga.a(true, param1);
+              wga.sendChatSettings(true, param1);
             }
             if (param0 == 2 &&
               UrlDownloadRequest.field_i != param3) {
               PlatformModel.field_B = true;
               UrlDownloadRequest.field_i = param3;
-              wga.a(true, param1);
+              wga.sendChatSettings(true, param1);
             }
             if (param2 != 108) {
             }
@@ -38,7 +38,7 @@ abstract class MazeGenerator {
           }
           k.field_A = param3;
           PlatformModel.field_B = true;
-          wga.a(true, param1);
+          wga.sendChatSettings(true, param1);
         }
         if (param0 == 1) {
           if (param3 == nba.field_b) {
@@ -52,7 +52,7 @@ abstract class MazeGenerator {
               } else {
                 PlatformModel.field_B = true;
                 UrlDownloadRequest.field_i = param3;
-                wga.a(true, param1);
+                wga.sendChatSettings(true, param1);
                 if (param2 == 108) {
                 }
               }
@@ -61,13 +61,13 @@ abstract class MazeGenerator {
           }
           PlatformModel.field_B = true;
           nba.field_b = param3;
-          wga.a(true, param1);
+          wga.sendChatSettings(true, param1);
         }
         if (param0 == 2 &&
           UrlDownloadRequest.field_i != param3) {
           PlatformModel.field_B = true;
           UrlDownloadRequest.field_i = param3;
-          wga.a(true, param1);
+          wga.sendChatSettings(true, param1);
         }
         if (param2 == 108) {
         }

@@ -17,9 +17,9 @@ final class ava {
         return new ava(this.field_g, param3, param1, param2, this.field_e);
     }
 
-    final static void updateLobbyPlayerRows(ScrollPane param0, int param1, int param2, boolean param3, int param4) {
+    final static void updateLobbyPlayerRows(ScrollPanel param0, int param1, int param2, boolean param3, int param4) {
         int var27_int = 0;
-        ScrollPane stackIn_43_0;
+        ScrollPanel stackIn_43_0;
         int stackIn_43_1;
         boolean stackIn_43_2;
         int stackIn_43_3;
@@ -129,14 +129,14 @@ final class ava {
               }
             }
           }
-          stackIn_43_0 = (ScrollPane) (param0);
+          stackIn_43_0 = (ScrollPanel) (param0);
           stackIn_43_1 = 2;
           stackIn_43_2 = param3;
           stackIn_43_3 = 92;
           stackIn_43_4 = param2 * (8 + ToolkitSelector.field_a * 4);
           stackIn_43_5 = 2 * (ToolkitSelector.field_a + param4);
           stackIn_44_6 = (ChatTarget.field_b == param0);
-          stackIn_47_0 = (!((ScrollPane) (Object) stackIn_43_0).updateContentLayout(stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_43_5, stackIn_44_6)) ? 0 : 1;
+          stackIn_47_0 = (!((ScrollPanel) (Object) stackIn_43_0).updateContentLayout(stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_43_5, stackIn_44_6)) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
           var10 = param0.field_tb.field_J;
           var11 = null;
@@ -246,7 +246,7 @@ final class ava {
               }
               var25_int = 0;
               if (null != C2SChooseRewardPacket.field_a &&
-                ComponentMount.b(8192) &&
+                ComponentMount.isLocalPlayerHost(8192) &&
                 var12.field_yb != SimpleConditionBehaviour.field_r) {
                 if (var12.field_Kb.field_r != null) {
                   var26 = var12.field_Kb.measureNaturalWidth((byte) 69) + mna.field_d * 2;
@@ -312,7 +312,7 @@ final class ava {
                 RewardChoiceSlot.a((byte) 92, param1, var12.field_yb);
               } else {
                 if (0 == var12.field_Cb.field_y) {
-                  rc.a(PasswordValidator.field_m, RidgedNoise3D.field_p, var12, (byte) -93, 0, 0, param0);
+                  rc.openLobbyPlayerContextMenu(PasswordValidator.field_m, RidgedNoise3D.field_p, var12, (byte) -93, 0, 0, param0);
                 } else {
                   HardwareAnimatedWaterEffect.a(param1, var12.field_yb, -118);
                 }
@@ -446,7 +446,7 @@ final class ava {
                   }
                 }
                 if (MidiPatch.field_n == param0 &&
-                  ComponentMount.b(param4 ^ 8194)) {
+                  ComponentMount.isLocalPlayerHost(param4 ^ 8194)) {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + LegacyOpenGlFlowingWaterEffect.formatText(114, IdolItemComponent.field_I, new String[]{(String) (var25)});
                   } else {
@@ -460,7 +460,7 @@ final class ava {
                   }
                 }
                 if (MidiPatch.field_n == param0 &&
-                  !ComponentMount.b(8192)) {
+                  !ComponentMount.isLocalPlayerHost(8192)) {
                   var27 = C2SChooseRewardPacket.field_a.field_tb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + LegacyOpenGlFlowingWaterEffect.formatText(102, C2SSubmitSettingsPacket.field_c, new String[]{var27});
                 }

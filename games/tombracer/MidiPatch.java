@@ -7,7 +7,7 @@ final class MidiPatch extends IntrusiveNode {
     int field_i;
     short[] field_g;
     bq[] field_m;
-    static ScrollPane field_n;
+    static ScrollPanel field_n;
     PcmSample[] field_h;
     private int[] field_k;
     byte[] field_f;
@@ -99,7 +99,7 @@ final class MidiPatch extends IntrusiveNode {
     public static void releaseStatics(byte param0) {
         field_n = null;
         if (param0 != 94) {
-          field_n = (ScrollPane) null;
+          field_n = (ScrollPanel) null;
         }
     }
 

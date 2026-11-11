@@ -100,7 +100,7 @@ final class CircleMovementLocomotor extends Locomotor {
         this.field_r = -this.field_r;
     }
 
-    final static int e(byte param0) {
+    final static int getMaxVolume(byte param0) {
         if (param0 < 47) {
           field_s = (String) null;
         }

@@ -27,7 +27,7 @@ final class ema implements WidgetPainter {
             SoftwareRasterizer.drawHorizontalLine(param0.field_i + param1, param0.field_n + (param3 + var6_int), param0.field_m, var8);
           }
           if (param2 != 16777215) {
-            ema.a(false, 4, -88, -72, -24);
+            ema.isSpritePixelOpaque(false, 4, -88, -72, -24);
           }
           for (var6_intLifetime1 = 1; var6_intLifetime1 <= 5; var6_intLifetime1++) {
             var7Lifetime1 = param0.field_m + param0.field_i + (param1 - (param0.field_m >> 1) - 5) + var6_intLifetime1;
@@ -59,7 +59,7 @@ final class ema implements WidgetPainter {
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2, int param3, int param4) {
+    final static boolean isSpritePixelOpaque(boolean param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
         SpriteData var8;
@@ -98,7 +98,7 @@ final class ema implements WidgetPainter {
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 48) {
-          ema.a(false, 111, 21, -70, 126);
+          ema.isSpritePixelOpaque(false, 111, 21, -70, 126);
         }
     }
 

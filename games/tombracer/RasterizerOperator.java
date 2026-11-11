@@ -34,7 +34,7 @@ final class RasterizerOperator extends TextureOperator {
                 this.field_p[var4_int] = (RasterShape) ((Object) DualLinkNode.decodeRasterShape(0, param1));
               } else {
                 if (var6 == 1) {
-                  this.field_p[var4_int] = (RasterShape) ((Object) HotspotTextWidget.a(param1, (byte) -88));
+                  this.field_p[var4_int] = (RasterShape) ((Object) HotspotTextWidget.decodeCurveShape(param1, (byte) -88));
                 } else {
                   if (var6 == 2) {
                     this.field_p[var4_int] = (RasterShape) ((Object) SwitchableId.decodeRasterShape(4, param1));

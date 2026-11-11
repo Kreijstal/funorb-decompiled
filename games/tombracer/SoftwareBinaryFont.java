@@ -361,7 +361,7 @@ final class SoftwareBinaryFont extends GameFont {
         }
     }
 
-    SoftwareBinaryFont(SoftwareGraphicsToolkit param0, FontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
+    SoftwareBinaryFont(SoftwareGraphicsToolkit param0, GameFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_g = param0;

@@ -23,7 +23,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         return io.centredBoxesOverlap(var2Lifetime1.getWidth(-47), this.trap.getY(9648), (byte) -57, var2Lifetime1.getHeight((byte) 55), this.trap.getX(3), var2Lifetime1.getY(9648), this.trap.getHeight((byte) 55), this.trap.getWidth(param0 ^ -8057), var2Lifetime1.getX(3));
     }
 
-    int onProjectileEffect(int param0, Projectile param1, Effect param2) {
+    int onProjectileEffect(int param0, Projectile param1, HazardEffect param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -144,7 +144,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         return this.trap.getPlayer(param0 ^ -108);
     }
 
-    int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
+    int onBeamEffect(int param0, HazardEffect param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -287,7 +287,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
         }
     }
 
-    int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
+    int onAreaEffect(int param0, int param1, HazardEffect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -406,8 +406,8 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     public final void updateAnimation(int param0) {
         if (param0 != -4366) {
-          Effect var3 = (Effect) null;
-          this.onAreaEffect(18, -54, (Effect) null, 115, (byte) 119, -22);
+          HazardEffect var3 = (HazardEffect) null;
+          this.onAreaEffect(18, -54, (HazardEffect) null, 115, (byte) 119, -22);
         }
     }
 

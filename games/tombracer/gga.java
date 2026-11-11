@@ -60,7 +60,7 @@ final class gga extends ResizingDialog implements ButtonListener {
         }
     }
 
-    final static void b(int param0, int param1, byte param2) {
+    final static void drawLoadingAnimation(int param0, int param1, byte param2) {
         int var3;
         int var4;
         int var5;

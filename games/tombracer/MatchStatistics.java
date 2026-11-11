@@ -10,7 +10,7 @@ final class MatchStatistics {
     private boolean[] penalised;
     static int[] field_f;
     private int[] snakeDeaths;
-    static FontMetrics field_n;
+    static GameFontMetrics field_n;
     private int[] bladeDeaths;
     private int[] treasureScore;
     private int[] crushDeaths;
@@ -81,7 +81,7 @@ final class MatchStatistics {
         this.charactersFaced[param0] = WallTile.bitwiseOr(this.charactersFaced[param0], 1 << param1);
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawDialogOverlay(byte param0, boolean param1) {
         int var2 = 105 % ((param0 + 9) / 56);
         if (SnakePitTile.hasVisibleDialog(false)) {
           if (param1) {
@@ -157,7 +157,7 @@ final class MatchStatistics {
     final static int scaleLightness(int param0, int param1, int param2) {
         param2 = (127 & param1) * param2 >> 7;
         if (param0 != -127) {
-          field_n = (FontMetrics) null;
+          field_n = (GameFontMetrics) null;
           if (2 > param2) {
             param2 = 2;
             return (param1 & 65408) + param2;

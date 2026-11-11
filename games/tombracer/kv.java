@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kv {
-    static FontMetrics field_a;
+    static GameFontMetrics field_a;
     static UiComponent field_b;
     static String[] achievementDescriptions;
 
-    final static boolean a(byte param0, String param1, String param2) {
+    final static boolean containsNameOrReverse(byte param0, String param1, String param2) {
         String var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -51,13 +51,13 @@ final class kv {
           field_b = null;
           return;
         }
-        field_a = (FontMetrics) null;
+        field_a = (GameFontMetrics) null;
         achievementDescriptions = null;
         field_a = null;
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void submitDateOfBirth(int param0, int param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         int var4 = 0;
         if (param2 == 95) {

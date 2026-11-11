@@ -50,12 +50,12 @@ final class rf {
             stackIn_7_0 = Obstacle.field_j;
             return stackIn_7_0;
           }
-          if (MiscItemBehaviour.a(param1, 0)) {
+          if (MiscItemBehaviour.isLocalPlayerName(param1, 0)) {
             stackIn_10_0 = RandomBrickOperator.field_q;
             return stackIn_10_0;
           }
           stackIn_14_0 = !param0;
-          if (QueuedPlayerEvent.a(stackIn_14_0, param1)) {
+          if (QueuedPlayerEvent.isFriend(stackIn_14_0, param1)) {
             stackIn_17_0 = LegacyOpenGlFlowingWaterEffect.formatText(119, PlatformModel.field_w, new String[]{param1});
             return stackIn_17_0;
           }
@@ -68,7 +68,7 @@ final class rf {
             stackIn_24_0 = bq.field_b;
             return stackIn_24_0;
           }
-          if (MouseWheelInput.a(2180, param1)) {
+          if (MouseWheelInput.isIgnored(2180, param1)) {
             stackIn_28_0 = LegacyOpenGlFlowingWaterEffect.formatText(119, S2CCharacterChoicePacket.field_c, new String[]{param1});
             return stackIn_28_0;
           }

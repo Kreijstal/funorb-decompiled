@@ -46,7 +46,7 @@ final class HelloCommand extends ConsoleMethod {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = new ConsoleValue(sj.a((byte) 120));
+            stackIn_4_0 = new ConsoleValue(sj.hello((byte) 120));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

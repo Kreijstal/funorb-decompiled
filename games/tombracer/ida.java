@@ -22,20 +22,20 @@ final class ida {
         int var9 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
-        FontMetrics.field_b.setTime(new Date(param0));
-        int var3 = FontMetrics.field_b.get(7);
-        int var4 = FontMetrics.field_b.get(5);
-        int var5 = FontMetrics.field_b.get(2);
-        int var6 = FontMetrics.field_b.get(1);
-        int var7 = FontMetrics.field_b.get(11);
+        GameFontMetrics.field_b.setTime(new Date(param0));
+        int var3 = GameFontMetrics.field_b.get(7);
+        int var4 = GameFontMetrics.field_b.get(5);
+        int var5 = GameFontMetrics.field_b.get(2);
+        int var6 = GameFontMetrics.field_b.get(1);
+        int var7 = GameFontMetrics.field_b.get(11);
         if (param1 == -1) {
-          var8 = FontMetrics.field_b.get(12);
-          var9 = FontMetrics.field_b.get(13);
+          var8 = GameFontMetrics.field_b.get(12);
+          var9 = GameFontMetrics.field_b.get(13);
           return AccountRegistrationPanel.dayNames[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + FlipOperator.shortMonthNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         field_a = (String) null;
-        var8Lifetime1 = FontMetrics.field_b.get(12);
-        var9Lifetime1 = FontMetrics.field_b.get(13);
+        var8Lifetime1 = GameFontMetrics.field_b.get(12);
+        var9Lifetime1 = GameFontMetrics.field_b.get(13);
         return AccountRegistrationPanel.dayNames[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + FlipOperator.shortMonthNames[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 

@@ -8,7 +8,7 @@ abstract class ConsoleWindow implements ShellListener {
     static String field_n;
     String field_t;
     private int field_k;
-    ScrollPane field_a;
+    ScrollPanel field_a;
     UiComponent field_p;
     EditableTextField field_o;
     static ToolkitSprite field_d;
@@ -212,7 +212,7 @@ abstract class ConsoleWindow implements ShellListener {
     private final UiComponent createSelectionStyle(int param0, int param1) {
         int var4 = -128 / ((-18 - param0) / 61);
         UiComponent var3 = new UiComponent(0L, (UiComponent) null);
-        var3.field_w = eca.a(4, param1);
+        var3.field_w = eca.createSolidNineSlice(4, param1);
         return var3;
     }
 
@@ -576,7 +576,7 @@ abstract class ConsoleWindow implements ShellListener {
           var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
           var14 = new UiComponent();
           var14.field_J = new IntrusiveDeque();
-          this.field_a = new ScrollPane(0L, var14, var6, var13);
+          this.field_a = new ScrollPanel(0L, var14, var6, var13);
           this.field_a.field_tb.field_J = new IntrusiveDeque();
           this.field_a.setPaneBounds(this.field_i.field_G - 10, 0, (byte) 127, 5, 15, -var3_int + 185, 5);
           this.field_i.addChild(-128, this.field_a);

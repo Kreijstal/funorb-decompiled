@@ -449,7 +449,7 @@ final class ProxySocketConnector extends SocketConnector {
             param3 = param3 >> var10Lifetime1;
             param2 = param2 >> var10Lifetime1;
           }
-          return nla.a(2749, param2, param1, param3, param6, param8, param0, param5);
+          return nla.segmentIntersectionParameter(2749, param2, param1, param3, param6, param8, param0, param5);
         }
         return -1;
     }

@@ -217,9 +217,9 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             GameClock.field_b = false;
           }
           if (era.field_c) {
-            SwitchModel.o((byte) -119);
+            SwitchModel.closeLobbyOverlays((byte) -119);
             ig.clearLobbyState(-125);
-            ObjectList.b(0);
+            ObjectList.clearLobbyLists(0);
             era.field_c = false;
           }
           if (SpriteTileOperator.field_t instanceof MenuScreen &&

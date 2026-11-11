@@ -44,7 +44,7 @@ final class efa extends WidgetContainer implements SuggestionsHost, ButtonListen
     }
 
     public final void onMoreSuggestionsRequested(int param0) {
-        ((NameFieldValidator) (this.field_z.getValidationSource((byte) 93))).b((byte) -69);
+        ((NameFieldValidator) (this.field_z.getValidationSource((byte) 93))).clearSuggestions((byte) -69);
         if (param0 != 10000536) {
           field_y = -98;
         }
@@ -72,7 +72,7 @@ final class efa extends WidgetContainer implements SuggestionsHost, ButtonListen
         ValidationProvider var7 = null;
         try {
           if (this.field_B == param2) {
-            HardwareTurbulentWaterNoise.f(-804227775);
+            HardwareTurbulentWaterNoise.showBlankLoginForm(-804227775);
           } else {
             if (param2 == this.field_A) {
               this.submit((byte) 89);
@@ -124,7 +124,7 @@ final class efa extends WidgetContainer implements SuggestionsHost, ButtonListen
         var2.setBounds((byte) -31, 270, 50, 20, var3);
         this.addChild(var2, -1);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, CrusherBehaviour.field_r, GraphicsHeap.field_f, this.field_z, -2239, 170));
+        var3 = var3 + (5 + this.addValidationRow(var3, CrusherBehaviour.field_r, GraphicsHeap.field_f, this.field_z, -2239, 170));
         this.field_A.setBounds((byte) -31, var5, 40, -var5 + 496 >> 1, var3);
         this.field_B.setBounds((byte) -31, 60, 40, var4 + 3, var3 + 15);
         this.field_B.field_h = (WidgetListener) (this);
@@ -152,7 +152,7 @@ final class efa extends WidgetContainer implements SuggestionsHost, ButtonListen
         }
     }
 
-    private final int a(int param0, String param1, String param2, UiWidget param3, int param4, int param5) {
+    private final int addValidationRow(int param0, String param1, String param2, UiWidget param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

@@ -4,7 +4,7 @@
 abstract class ChatTarget {
     static int field_a;
     static String field_c;
-    static ScrollPane field_b;
+    static ScrollPanel field_b;
 
     abstract ChatChannelType getChannelType(byte param0);
 

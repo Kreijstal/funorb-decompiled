@@ -9,7 +9,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract boolean isEmpty(byte param0);
 
-    final static void openPlayerContextMenu(ScrollPane param0, int param1, String param2, long param3, int param4, int[] param5, UiComponent param6, int param7, String param8) {
+    final static void openPlayerContextMenu(ScrollPanel param0, int param1, String param2, long param3, int param4, int[] param5, UiComponent param6, int param7, String param8) {
         if (param4 != -11635) {
           return;
         }
@@ -66,19 +66,19 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           if (0 == param1) {
-            MenuEntry.field_j[0] = MusicTrack.load(TextLayout.field_a, "", "TR_theme");
+            MenuEntry.field_j[0] = MusicTrack.load(TextBlockLayout.field_a, "", "TR_theme");
           }
           if (1 == param1) {
-            MenuEntry.field_j[1] = MusicTrack.load(TextLayout.field_a, "", "TR_temple_music");
+            MenuEntry.field_j[1] = MusicTrack.load(TextBlockLayout.field_a, "", "TR_temple_music");
           }
           if (param1 == 2) {
-            MenuEntry.field_j[2] = MusicTrack.load(TextLayout.field_a, "", "TR_win_jingle_long");
+            MenuEntry.field_j[2] = MusicTrack.load(TextBlockLayout.field_a, "", "TR_win_jingle_long");
           }
           if (param0) {
             return;
           }
           if (3 == param1) {
-            MenuEntry.field_j[3] = MusicTrack.load(TextLayout.field_a, "", "TR_lose_jingle_long");
+            MenuEntry.field_j[3] = MusicTrack.load(TextBlockLayout.field_a, "", "TR_lose_jingle_long");
           }
           while (!RewardChoicePhase.field_n.field_y.prepareTrack(176400, MenuEntry.field_j[param1], S2CNextRoundPacket.field_a, LegacyOpenGlTurbulentTextureEffect.field_j, 0)) {
           }

@@ -17,7 +17,7 @@ final class uaa {
         field_d = null;
     }
 
-    final static int a(byte param0, ChatMessage param1) {
+    final static int getChatMessageColour(byte param0, ChatMessage param1) {
         int var2_int = 0;
         int var4 = 0;
         int stackIn_14_0 = 0;

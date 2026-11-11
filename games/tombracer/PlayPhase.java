@@ -16,7 +16,7 @@ final class PlayPhase extends MatchPhase {
         int var4Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 != 80) {
-          PlayPhase.a(59, 38, (byte) -62, 36, 61, 1);
+          PlayPhase.fillRectAlpha(59, 38, (byte) -62, 36, 61, 1);
         }
         var3 = this.screen.getViewedPlayerIndex(115);
         if (this.field_o &&
@@ -225,7 +225,7 @@ final class PlayPhase extends MatchPhase {
                   }
                 }
               } else {
-                var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, ChatChannelType.a((byte) 64));
+                var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, ChatChannelType.getSelectedCourseIndex((byte) 64));
               }
               var8Lifetime1 = 64;
               var9 = -64 + SwitchLinkList.getCanvasHeight(0);
@@ -437,14 +437,14 @@ final class PlayPhase extends MatchPhase {
 
     final static boolean beginReconnectGracePeriod(int param0) {
         if (param0 <= 83) {
-          PlayPhase.a(-107, -110, (byte) -67, -77, -33, 57);
+          PlayPhase.fillRectAlpha(-107, -110, (byte) -67, -77, -33, 57);
         }
         fpa.field_c = true;
         LegacyOpenGlPostProcessEffect.field_f = 15000L + bva.currentTimeMillis((byte) -107);
         return Transform3D.field_c == 11 ? true : false;
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
+    final static void fillRectAlpha(int param0, int param1, byte param2, int param3, int param4, int param5) {
         if (param2 < 122) {
           return;
         }
@@ -528,7 +528,7 @@ final class PlayPhase extends MatchPhase {
               ql.field_k.writeByte(18, 0);
               ql.field_k.position = ql.field_k.position + 2;
               var10 = ql.field_k.position;
-              var11_ref_StringLifetime4 = FontMetrics.readSettingsCookie(0, ToolkitSelector.getApplet(62));
+              var11_ref_StringLifetime4 = GameFontMetrics.readSettingsCookie(0, ToolkitSelector.getApplet(62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }

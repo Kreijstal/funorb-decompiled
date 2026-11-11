@@ -9,14 +9,14 @@ final class bna extends IntrusiveNode {
         try {
           C2SChooseRewardPacket.writeEncryptedPayload(param4.position, (byte) -81, param4.payload, param2, param3, param0, 0);
           if (param1) {
-            bna.a((byte) 109);
+            bna.tickLobbyRemovalTimers((byte) 109);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "bna.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(byte param0) {
+    final static void tickLobbyRemovalTimers(byte param0) {
         RuntimeException decompiledCaughtException = null;
         LobbyPlayerEntry var1 = null;
         LobbyGameWidget var1_ref = null;

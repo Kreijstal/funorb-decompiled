@@ -132,7 +132,7 @@ final class RoomLighting implements RenderListener {
         if (param2 != 4) {
           RoomLighting.a(17, 31, 46);
         }
-        return CollectedTreasure.a((byte) 125, param0, param1, 1);
+        return CollectedTreasure.createSolidBorderNineSlice((byte) 125, param0, param1, 1);
     }
 
     final void removeLightSource(byte param0, LightSource param1) {

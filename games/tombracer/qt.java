@@ -121,7 +121,7 @@ final class qt {
               var23 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
               var20 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
               var22 = ((PacketBuffer) ((Object) var1)).readString((byte) -76);
-              var21 = LoginMethod.a(true, var3_long);
+              var21 = LoginMethod.findLobbyPlayer(true, var3_long);
               var8_ref_pha = var21;
               stackIn_12_0 = (var20.equals("")) ? 0 : 1;
               var9 = stackIn_12_0;
@@ -142,13 +142,13 @@ final class qt {
               var8_ref_pha.field_zb = var10 >> 1;
               var8_ref_pha.field_Ab = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
               var8_ref_pha.field_Eb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-              ql.a(110, var8_ref_pha);
+              ql.insertLobbyPlayerSorted(110, var8_ref_pha);
               return;
             }
             if (var2 == 6) {
               var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-              var31 = LoginMethod.a(true, var3_longLifetime1);
+              var31 = LoginMethod.findLobbyPlayer(true, var3_longLifetime1);
               if (var31 == null) {
                 return;
               }
@@ -300,7 +300,7 @@ final class qt {
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
                 var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                var29 = LoginMethod.a(true, var3_longLifetime2);
+                var29 = LoginMethod.findLobbyPlayer(true, var3_longLifetime2);
                 if (var29 == null) {
                   return;
                 }
@@ -316,11 +316,11 @@ final class qt {
                     var29.field_Fb = false;
                   }
                 }
-                ql.a(-42, var29);
+                ql.insertLobbyPlayerSorted(-42, var29);
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(290646880);
-              var30 = LoginMethod.a(true, var3_longLifetime2Lifetime1);
+              var30 = LoginMethod.findLobbyPlayer(true, var3_longLifetime2Lifetime1);
               if (var30 == null) {
                 return;
               }
@@ -332,7 +332,7 @@ final class qt {
                   var30.field_Fb = true;
                 }
               }
-              ql.a(112, var30);
+              ql.insertLobbyPlayerSorted(112, var30);
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(123);
@@ -364,7 +364,7 @@ final class qt {
                 ValidatedTextInputWidget.field_K = ValidatedTextInputWidget.field_K - 1;
                 var3_ref_phaLifetime1.field_Fb = false;
               }
-              ql.a(114, var3_ref_phaLifetime1);
+              ql.insertLobbyPlayerSorted(114, var3_ref_phaLifetime1);
             }
             var3_ref_phaLifetime1 = (LobbyPlayerEntry) (fua.field_a.nextInTraversal((byte) -112));
           }

@@ -14,7 +14,7 @@ final class wp {
         }
     }
 
-    final static mu a(int param0, String param1) {
+    final static mu findFriendByName(int param0, String param1) {
         String var2 = null;
         mu var3 = null;
         String var4 = null;
@@ -87,7 +87,7 @@ final class wp {
             ChatTarget.field_b = null;
             if (param0 != -1) {
               var2 = (String) null;
-              wp.a(-23, (String) null);
+              wp.findFriendByName(-23, (String) null);
               hka.field_b = null;
               return;
             }
@@ -102,7 +102,7 @@ final class wp {
           return;
         }
         var2Lifetime1 = (String) null;
-        wp.a(-23, (String) null);
+        wp.findFriendByName(-23, (String) null);
         hka.field_b = null;
     }
 

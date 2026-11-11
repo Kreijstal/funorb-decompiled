@@ -60,13 +60,13 @@ final class CharacterChoiceTile extends IntrusiveNode {
         return this.field_f == -1 ? true : false;
     }
 
-    final static Effect decodeEffect(byte param0, BitPacketBuffer param1) {
+    final static HazardEffect decodeEffect(byte param0, BitPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        Effect var4 = null;
+        HazardEffect var4 = null;
         BitPacketBuffer var5 = null;
-        Effect stackIn_3_0 = null;
+        HazardEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -78,7 +78,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
             CharacterChoiceTile.decodeEffect((byte) -125, (BitPacketBuffer) null);
           }
           var3 = param1.readBits((byte) 44, 10);
-          var4 = new Effect(var2_int, var3);
+          var4 = new HazardEffect(var2_int, var3);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,7 +95,7 @@ final class CharacterChoiceTile extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean containsId(int param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int[] stackIn_6_0 = null;

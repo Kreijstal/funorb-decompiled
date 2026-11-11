@@ -18,13 +18,13 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
           return;
         }
         if (!lla.field_b) {
-          C2SSubmitSettingsPacket.a(var2, (byte) 101);
+          C2SSubmitSettingsPacket.drawLoadingFrame(var2, (byte) 101);
           return;
         }
         if (!MazeSolver.field_e &&
           !TextWidgetPainter.a(109)) {
-          ima.a(100.0f, WindZoneBehaviour.field_u, -75);
-          C2SSubmitSettingsPacket.a(var2, (byte) 111);
+          ima.setLoadingProgress(100.0f, WindZoneBehaviour.field_u, -75);
+          C2SSubmitSettingsPacket.drawLoadingFrame(var2, (byte) 111);
           return;
         }
         cna.field_a = true;
@@ -314,7 +314,7 @@ abstract class TombRacerShell extends AppletGameShell implements ShellListener {
             if (var5 == null) {
               break;
             }
-            woa.a(4, var5, false);
+            woa.queueRequest(4, var5, false);
           }
         }
         dra.sendReflectionCheckResponses(param0);

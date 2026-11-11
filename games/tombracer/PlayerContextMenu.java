@@ -119,13 +119,13 @@ final class PlayerContextMenu {
           return false;
         }
         boolean discarded$0 = this.a(param3 - 16, var6, param2);
-        boolean discarded$1 = this.b(var6, (byte) -121, param4);
-        boolean discarded$2 = this.a(var6, (byte) -39, param4);
+        boolean discarded$1 = this.handleContactAction(var6, (byte) -121, param4);
+        boolean discarded$2 = this.handleMessageAction(var6, (byte) -39, param4);
         boolean discarded$3 = this.openReportAbuse(param1, var6, 114);
         return true;
     }
 
-    private final boolean b(int param0, byte param1, int param2) {
+    private final boolean handleContactAction(int param0, byte param1, int param2) {
         Object var4;
         String var4_ref;
         String var5;
@@ -207,7 +207,7 @@ final class PlayerContextMenu {
         return true;
     }
 
-    private final boolean a(int param0, byte param1, int param2) {
+    private final boolean handleMessageAction(int param0, byte param1, int param2) {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param1 != -39) {
@@ -218,19 +218,19 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 18) {
-          CurveOperator.a((byte) 123, this.field_g, this.field_i);
+          CurveOperator.openPrivateQuickChat((byte) 123, this.field_g, this.field_i);
           return true;
         }
         if (param0 == 11) {
-          MazeGenerator.a(this.field_b, param2, (byte) 108, 0);
+          MazeGenerator.setChatSetting(this.field_b, param2, (byte) 108, 0);
           return true;
         }
         if (param0 == 12) {
-          MazeGenerator.a(this.field_b, param2, (byte) 108, 1);
+          MazeGenerator.setChatSetting(this.field_b, param2, (byte) 108, 1);
           return true;
         }
         if (param0 == 13) {
-          MazeGenerator.a(this.field_b, param2, (byte) 108, 2);
+          MazeGenerator.setChatSetting(this.field_b, param2, (byte) 108, 2);
           return true;
         }
         if (param0 == 14) {
@@ -238,13 +238,13 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 20) {
-          ContextMenu.e((byte) 123);
+          ContextMenu.openQuickChat((byte) 123);
           return true;
         }
         if (19 != param0) {
           return false;
         }
-        eca.a((byte) 84, this.field_b, this.field_g, this.field_e, this.field_i);
+        eca.openQuickChatForPlayer((byte) 84, this.field_b, this.field_g, this.field_e, this.field_i);
         return true;
     }
 
@@ -272,8 +272,8 @@ final class PlayerContextMenu {
             }
             var7 = this.getDisplayName(-13);
             var4 = var7;
-            var5 = wp.a(127, this.field_i);
-            var6 = MouseWheelInput.a(2180, this.field_i) ? 1 : 0;
+            var5 = wp.findFriendByName(127, this.field_i);
+            var6 = MouseWheelInput.isIgnored(2180, this.field_i) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_f.addItem((byte) -64, 4, LegacyOpenGlFlowingWaterEffect.formatText(92, DirectRenderModel.field_m, new String[]{var7}));
@@ -383,10 +383,10 @@ final class PlayerContextMenu {
           }
           if (this.field_g != SimpleConditionBehaviour.field_r &&
             null != C2SChooseRewardPacket.field_a) {
-            if (!ComponentMount.b(8192)) {
+            if (!ComponentMount.isLocalPlayerHost(8192)) {
               return;
             }
-            var14 = LoginMethod.a(true, this.field_g);
+            var14 = LoginMethod.findLobbyPlayer(true, this.field_g);
             var4 = AchievementsScreen.findLobbyPlayer((byte) -40, this.field_g);
             var5 = this.getDisplayName(-13);
             if (var4 != null) {
@@ -428,10 +428,10 @@ final class PlayerContextMenu {
         if (null == C2SChooseRewardPacket.field_a) {
           return;
         }
-        if (!ComponentMount.b(8192)) {
+        if (!ComponentMount.isLocalPlayerHost(8192)) {
           return;
         }
-        var13 = LoginMethod.a(true, this.field_g);
+        var13 = LoginMethod.findLobbyPlayer(true, this.field_g);
         var4Lifetime1 = AchievementsScreen.findLobbyPlayer((byte) -40, this.field_g);
         var5 = this.getDisplayName(-13);
         if (var4Lifetime1 != null) {

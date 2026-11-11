@@ -31,7 +31,7 @@ final class S2CPlayerProfilePacket implements GamePacket {
     }
 
     final static void b(boolean param0) {
-        wt.a((byte) 126);
+        wt.showProgressDialog((byte) 126);
         jsa.a(false, 4);
         if (!param0) {
           S2CPlayerProfilePacket.b(false);

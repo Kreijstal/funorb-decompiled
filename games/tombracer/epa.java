@@ -47,7 +47,7 @@ final class epa extends MenuScreen {
         return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.firstItemY + (-2 + param0) * this.itemSpacing);
     }
 
-    final static void a(int param0, byte param1, String param2) {
+    final static void handleLoginResponseCode(int param0, byte param1, String param2) {
         int var3_int = 0;
         try {
           if (param1 != -84) {
@@ -95,7 +95,7 @@ final class epa extends MenuScreen {
         }
     }
 
-    final static PcmStreamMixer d(byte param0) {
+    final static PcmStreamMixer getPcmStreamMixer(byte param0) {
         if (param0 != -91) {
           epa.releaseStatics(15);
           return PitModel.field_n;

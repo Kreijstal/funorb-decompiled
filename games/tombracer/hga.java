@@ -15,7 +15,7 @@ class hga extends TextWidgetPainter {
         }
         try {
           if (param4) {
-            bl.a(param0.field_m, param3 + param0.field_n, param0.field_p, param1 + param0.field_i, 1);
+            bl.drawGradientBar(param0.field_m, param3 + param0.field_n, param0.field_p, param1 + param0.field_i, 1);
           }
           super.paintWidget(param0, param1, param2 + 0, param3, param4);
         } catch (RuntimeException runtimeException) {

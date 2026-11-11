@@ -11,7 +11,7 @@ final class ck {
         RuntimeException var9 = null;
         try {
           if (param6 <= 65) {
-            ck.a(-121, (String[][]) null, -66, (Sprite[][]) null, (String[]) null, (String[]) null, (byte[]) null, (String[]) null, (String[][]) null, -31, (ResourceArchive) null, 29, (byte[]) null, (Sprite[][]) null, (int[]) null);
+            ck.storeSharedResources(-121, (String[][]) null, -66, (Sprite[][]) null, (String[]) null, (String[]) null, (byte[]) null, (String[]) null, (String[][]) null, -31, (ResourceArchive) null, 29, (byte[]) null, (Sprite[][]) null, (int[]) null);
           }
           if ((-(param8 / 2) + param0) >= (-(param3 / 2) + param2) &&
             param0 + (param8 + 1) / 2 <= (param3 + 1) / 2 + param2 &&
@@ -27,7 +27,7 @@ final class ck {
         }
     }
 
-    final static void a(int param0, String[][] param1, int param2, Sprite[][] param3, String[] param4, String[] param5, byte[] param6, String[] param7, String[][] param8, int param9, ResourceArchive param10, int param11, byte[] param12, Sprite[][] param13, int[] param14) {
+    final static void storeSharedResources(int param0, String[][] param1, int param2, Sprite[][] param3, String[] param4, String[] param5, byte[] param6, String[] param7, String[][] param8, int param9, ResourceArchive param10, int param11, byte[] param12, Sprite[][] param13, int[] param14) {
         ContextMenuRow[] array$0 = null;
         ContextMenuRow[] array$1 = null;
         ContextMenuRow[] array$2 = null;
@@ -110,7 +110,7 @@ final class ck {
           RasterShape.field_e = new UiComponent(0L, (UiComponent) null);
           LightSource.field_h = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
           ShaderEffect.field_b = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
-          bsa.field_j = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
+          bsa.field_j = new ScrollPanel(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
           RasterShape.field_e.addChild(-126, LightSource.field_h);
           if (UnlockOverlay.field_p) {
             RasterShape.field_e.addChild(param11 - 25575, ShaderEffect.field_b);
@@ -131,7 +131,7 @@ final class ck {
           MidiPcmStream.field_K = new UiComponent(0L, cs.field_a, EllipseShape.field_i);
           MirrorComponent.field_I = new UiComponent(0L, cs.field_a, MatchState.field_N);
           cq.field_e = new UiComponent(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
-          nsa.field_i = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
+          nsa.field_i = new ScrollPanel(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
           TileRenderable.field_c = new UiComponent(0L, HardwareModelVertexStream.field_g, GpuPrimitiveType.field_b.toUpperCase());
           TileRenderable.field_c.field_X = UnlockOverlay.field_p;
           stackIn_8_0 = null;
@@ -181,7 +181,7 @@ final class ck {
           cea.field_a.field_z = 1;
           uaa.field_b = new UiComponent(0L, ooa.field_f, CanvasImageBuffer.field_i);
           RopeBridgeComponent.field_F = new UiComponent(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
-          MidiPatch.field_n = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
+          MidiPatch.field_n = new ScrollPanel(0L, new UiComponent(0L, (UiComponent) null), TombRacerShell.field_C, DateFieldsWidget.field_F);
           RoomRegion.field_l.addChild(param11 ^ -25371, cea.field_a);
           RoomRegion.field_l.addChild(-124, uaa.field_b);
           if (UnlockOverlay.field_p) {

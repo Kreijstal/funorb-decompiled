@@ -49,8 +49,8 @@ final class fa {
             var2 = sla.field_e;
           }
           if (OpenGlUnderwaterEffect.field_q == 2 &&
-            !DisplaySettingsDialog.f(24316)) {
-            if (QueuedPlayerEvent.a(false, mn.field_n)) {
+            !DisplaySettingsDialog.isQuickChatTargetReachable(24316)) {
+            if (QueuedPlayerEvent.isFriend(false, mn.field_n)) {
               var2 = LegacyOpenGlFlowingWaterEffect.formatText(87, ConsoleToken.field_n, new String[]{wp.field_a});
               if (var10 != 0) {
                 var2 = LegacyOpenGlFlowingWaterEffect.formatText(83, pba.field_a, new String[]{wp.field_a});
@@ -141,7 +141,7 @@ final class fa {
                 if (CharacterChoiceFactory.field_g.field_y != 0 &&
                   CharacterChoiceFactory.field_g.field_p < var9 &&
                   !fua.field_g) {
-                  ContextMenu.e((byte) 117);
+                  ContextMenu.openQuickChat((byte) 117);
                 }
               }
             }
@@ -162,7 +162,7 @@ final class fa {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {

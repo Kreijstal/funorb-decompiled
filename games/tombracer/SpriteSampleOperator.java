@@ -83,7 +83,7 @@ class SpriteSampleOperator extends TextureOperator {
           return (int[][]) null;
         }
         if (this.colourCache.field_f &&
-          this.a(false)) {
+          this.ensureSpriteLoaded(false)) {
           var4 = var14[0];
           var5 = var14[1];
           var6 = var14[2];
@@ -116,7 +116,7 @@ class SpriteSampleOperator extends TextureOperator {
         return var3;
     }
 
-    final boolean a(boolean param0) {
+    final boolean ensureSpriteLoaded(boolean param0) {
         if (null != this.field_p) {
           return true;
         }

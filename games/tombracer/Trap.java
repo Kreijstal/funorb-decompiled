@@ -850,7 +850,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         boolean stackIn_10_0 = false;
         if (param0 != 0) {
           var3 = (Projectile) null;
-          this.applyProjectileEffect((Effect) null, (Projectile) null, -25);
+          this.applyProjectileEffect((HazardEffect) null, (Projectile) null, -25);
         }
         stackIn_10_0 = ((null != this.parent &&
           this.parent.isOutsideActiveVariant(0)) ||
@@ -1691,7 +1691,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return stackIn_8_0;
     }
 
-    public final int applyProjectileEffect(Effect param0, Projectile param1, int param2) {
+    public final int applyProjectileEffect(HazardEffect param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1771,7 +1771,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return var2;
     }
 
-    public final int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int applyAreaEffect(HazardEffect param0, int param1, int param2, int param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         IntrusiveDequeCursor var8 = null;
@@ -2720,7 +2720,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return this.blockedX;
     }
 
-    public final int applyBeamEffect(Effect param0, int param1, BeamSegment param2) {
+    public final int applyBeamEffect(HazardEffect param0, int param1, BeamSegment param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -3102,7 +3102,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           if (param0 == var5_int) {
             return false;
           }
-          var6 = wm.a(4096, var5_int, param0 + 125);
+          var6 = wm.clampedFixedRatio(4096, var5_int, param0 + 125);
           var7 = 0;
           var8 = (Behaviour) (this.behaviours.first(-80));
           while (var8 != null) {

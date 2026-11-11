@@ -23,7 +23,7 @@ final class pu implements WidgetPainter {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2, byte[][] param3, int[] param4, byte[] param5, byte[][] param6, int[] param7) {
+    final static int computeKerning(int param0, int param1, boolean param2, byte[][] param3, int[] param4, byte[] param5, byte[][] param6, int[] param7) {
         int var19 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

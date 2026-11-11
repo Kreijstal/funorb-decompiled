@@ -16,7 +16,7 @@ final class wga implements GamePacket {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void sendChatSettings(boolean param0, int param1) {
         BitPacketBuffer var2 = ql.field_k;
         if (param0) {
           var2.writeCipheredOpcode(param1, -2988);

@@ -112,7 +112,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
         }
     }
 
-    final boolean C(int param0) {
+    final boolean hasExtraBits(int param0) {
         if (param0 != 1) {
           PushableBlockMazeComponent.releaseStatics(94);
           return true;

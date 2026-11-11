@@ -38,7 +38,7 @@ final class SweepRotateLocomotor extends Locomotor {
         }
     }
 
-    final static void e(int param0) {
+    final static void handleIgnoreListPacket(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int stackIn_11_0 = 0;
@@ -80,14 +80,14 @@ final class SweepRotateLocomotor extends Locomotor {
               var9 != 0) {
               var5 = var1.readString((byte) -76);
             }
-            var6 = LightSource.a(var4_ref_String, param0 ^ -14105);
+            var6 = LightSource.findIgnoredByName(var4_ref_String, param0 ^ -14105);
             var7_ref = var1.readString((byte) -76);
             var8 = OpenGlTexture3D.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
             }
             if (null == var6) {
-              var6 = LightSource.a(var7_ref, param0 - 14132);
+              var6 = LightSource.findIgnoredByName(var7_ref, param0 - 14132);
               if (null != var6) {
                 CoinItemComponent.field_G.put(-1, var6, (long)var8.hashCode());
               }
@@ -143,9 +143,9 @@ final class SweepRotateLocomotor extends Locomotor {
           }
           var4_ref_StringLifetime1 = var1.readString((byte) -76);
           var5Lifetime1 = var1.readString((byte) -76);
-          var6Lifetime1 = wp.a(121, var4_ref_StringLifetime1);
+          var6Lifetime1 = wp.findFriendByName(121, var4_ref_StringLifetime1);
           if (null == var6Lifetime1) {
-            var6Lifetime1 = wp.a(param0 ^ 14095, var5Lifetime1);
+            var6Lifetime1 = wp.findFriendByName(param0 ^ 14095, var5Lifetime1);
             if (var6Lifetime1 != null) {
               TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)OpenGlTexture3D.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }

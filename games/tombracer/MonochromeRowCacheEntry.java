@@ -103,7 +103,7 @@ final class MonochromeRowCacheEntry extends IntrusiveNode {
 
     final static ResourceArchive a(byte param0) {
         int var1 = 79 / ((param0 - 7) / 37);
-        return StringListNode.a(-94, S2CEventPacket.field_d.field_c);
+        return StringListNode.getOrOpenArchive(-94, S2CEventPacket.field_d.field_c);
     }
 
     public static void releaseStatics(int param0) {

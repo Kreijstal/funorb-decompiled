@@ -57,7 +57,7 @@ class tc extends ChatTarget {
 
     public static void releaseStatics(int param0) {
         if (param0 != 17129) {
-          tc.a(false, 119);
+          tc.drawUiOverlays(false, 119);
           field_d = null;
           field_f = null;
           return;
@@ -78,7 +78,7 @@ class tc extends ChatTarget {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawUiOverlays(boolean param0, int param1) {
         if (null != ArchiveNetworkClient.field_b) {
           TrackPlayerLocomotor.drawTooltip(-107, ArchiveNetworkClient.field_b);
         }

@@ -102,7 +102,7 @@ final class mn extends TextFieldValidator {
         }
     }
 
-    final static void h(int param0) {
+    final static void closeShellListener(int param0) {
         oq.getSharedShellListener((byte) 124).close(76);
         if (param0 != 30001) {
           field_n = (String) null;
@@ -120,7 +120,7 @@ final class mn extends TextFieldValidator {
     public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 >= -15) {
-          mn.h(-88);
+          mn.closeShellListener(-88);
         }
     }
 

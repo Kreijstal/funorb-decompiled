@@ -146,7 +146,7 @@ final class UrlDownloadRequest implements Runnable {
 
     final static void startTutorial(byte param0) {
         PlayTrackCommand.field_p = true;
-        TextLayout.startSinglePlayerMatch(ChatChannelType.a((byte) 64), (byte) 126, 3);
+        TextBlockLayout.startSinglePlayerMatch(ChatChannelType.getSelectedCourseIndex((byte) 64), (byte) 126, 3);
         int var1 = 72 / ((param0 - 55) / 46);
         SecondaryNodeDequeIterator.field_a.startTutorial((byte) 106);
     }

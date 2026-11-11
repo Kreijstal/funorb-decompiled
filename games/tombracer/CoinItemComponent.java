@@ -15,20 +15,20 @@ final class CoinItemComponent extends ItemComponent {
         try {
           var4 = new int[]{22, 1, 3, 4, 12, 14, 13, 8, 9};
           RenderScene.field_g = new MenuScreen[13];
-          qpa.a(245, var4, 0, 40, 440, 126, 200);
-          qpa.a(440, MirrorComponent.field_H, 1, 40, 440, 125, 290);
-          qpa.a(275, S2CPlayerSyncPacket.field_d, 3, 40, 440, 126, 200);
-          qpa.a(275, PathMoverComponent.field_F, 5, 40, 440, 124, 200);
-          qpa.a(275, SecondaryLinkQueue.field_a, 6, 40, 440, 125, 200);
-          qpa.a(480, MatchingTextValidator.field_j, 2, 40, 440, 124, 200);
-          qpa.a(185, ll.field_g, 4, 40, 440, 126, 200);
-          qpa.a(185, hh.field_c, 12, 40, 440, 124, 200);
+          qpa.createMenuScreen(245, var4, 0, 40, 440, 126, 200);
+          qpa.createMenuScreen(440, MirrorComponent.field_H, 1, 40, 440, 125, 290);
+          qpa.createMenuScreen(275, S2CPlayerSyncPacket.field_d, 3, 40, 440, 126, 200);
+          qpa.createMenuScreen(275, PathMoverComponent.field_F, 5, 40, 440, 124, 200);
+          qpa.createMenuScreen(275, SecondaryLinkQueue.field_a, 6, 40, 440, 125, 200);
+          qpa.createMenuScreen(480, MatchingTextValidator.field_j, 2, 40, 440, 124, 200);
+          qpa.createMenuScreen(185, ll.field_g, 4, 40, 440, 126, 200);
+          qpa.createMenuScreen(185, hh.field_c, 12, 40, 440, 124, 200);
           int var3 = -120 % ((param1 + 61) / 53);
-          qpa.a(205, LegacyOpenGlReflectionEffect.field_f, 7, 35, 440, 125, 200);
-          qpa.a(480, DateInputWidget.field_x, 8, 40, 440, 126, 200);
-          qpa.a(335, mna.field_a, 9, 40, 440, 126, 200);
-          qpa.a(400, gca.field_f, 10, 40, 440, 124, 200);
-          qpa.a(400, hd.field_b, 11, 40, 440, 125, 200);
+          qpa.createMenuScreen(205, LegacyOpenGlReflectionEffect.field_f, 7, 35, 440, 125, 200);
+          qpa.createMenuScreen(480, DateInputWidget.field_x, 8, 40, 440, 126, 200);
+          qpa.createMenuScreen(335, mna.field_a, 9, 40, 440, 126, 200);
+          qpa.createMenuScreen(400, gca.field_f, 10, 40, 440, 124, 200);
+          qpa.createMenuScreen(400, hd.field_b, 11, 40, 440, 125, 200);
           param0.stringWidth(FloatPacketBuffer.field_l);
           param0.stringWidth(DamageableBehaviour.field_x);
         } catch (RuntimeException runtimeException) {

@@ -67,7 +67,7 @@ final class ReportAbuseDialog extends UiComponent {
         }
     }
 
-    final String f(int param0) {
+    final String getEnteredText(int param0) {
         int var2 = -32 / ((-45 - param0) / 61);
         return this.field_vb.toString();
     }

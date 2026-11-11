@@ -175,7 +175,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
+    final int onAreaEffect(int param0, int param1, HazardEffect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -201,7 +201,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final int onProjectileEffect(int param0, Projectile param1, Effect param2) {
+    final int onProjectileEffect(int param0, Projectile param1, HazardEffect param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -236,7 +236,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    private final int reactToEffect(byte param0, Effect param1) {
+    private final int reactToEffect(byte param0, HazardEffect param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -290,8 +290,8 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
 
     public final int getLevel(byte param0) {
         if (param0 != -108) {
-          Effect var3 = (Effect) null;
-          this.onProjectileEffect(-122, (Projectile) null, (Effect) null);
+          HazardEffect var3 = (HazardEffect) null;
+          this.onProjectileEffect(-122, (Projectile) null, (HazardEffect) null);
         }
         return this.field_s;
     }
@@ -314,8 +314,8 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         int discarded$0 = 0;
         this.field_t.set(param1, -17075, param0);
         if (param2 > -32) {
-          Effect var5 = (Effect) null;
-          discarded$0 = this.reactToEffect((byte) -27, (Effect) null);
+          HazardEffect var5 = (HazardEffect) null;
+          discarded$0 = this.reactToEffect((byte) -27, (HazardEffect) null);
         }
     }
 
@@ -394,7 +394,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         }
     }
 
-    final int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
+    final int onBeamEffect(int param0, HazardEffect param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

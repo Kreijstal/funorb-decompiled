@@ -315,7 +315,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean C(int param0) {
+    final boolean hasExtraBits(int param0) {
         if (param0 != 1) {
           this.createFilledCellTrap(99, false, (Room) null);
           return true;

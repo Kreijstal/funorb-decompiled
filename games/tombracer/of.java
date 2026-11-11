@@ -4,7 +4,7 @@
 class of {
     static String field_a;
 
-    final static ResourceArchive a(boolean param0, int param1) {
+    final static ResourceArchive getOrOpenArchive(boolean param0, int param1) {
         if (param0) {
           return (ResourceArchive) null;
         }
@@ -22,17 +22,17 @@ class of {
         int var1 = 27 % ((34 - param0) / 50);
     }
 
-    final static String a(int param0) {
+    final static String getVisibleTooltipText(int param0) {
         if (HardwareOpenGlToolkit.field_pd) {
           if (param0 != 1) {
-            of.a(97);
+            of.getVisibleTooltipText(97);
             return null;
           }
           return null;
         }
         if (WhiteNoiseOperator.field_m > fr.field_c) {
           if (param0 != 1) {
-            of.a(97);
+            of.getVisibleTooltipText(97);
             return null;
           }
           return null;
@@ -41,7 +41,7 @@ class of {
           return MazeComponent.field_F;
         }
         if (param0 != 1) {
-          of.a(97);
+          of.getVisibleTooltipText(97);
           return null;
         }
         return null;

@@ -8,7 +8,7 @@ final class MusicTrack extends IntrusiveNode {
     final void buildPatchUsage() {
         int[] var1;
         int[] var2;
-        MidiFileReader var4;
+        MidiTrackReader var4;
         int var5;
         int var6;
         int var7;
@@ -44,7 +44,7 @@ final class MusicTrack extends IntrusiveNode {
         var23 = var1;
         var19[9] = 128;
         var23[9] = 128;
-        var4 = new MidiFileReader(this.field_g);
+        var4 = new MidiTrackReader(this.field_g);
         var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
           var4.seekTrack(var6);

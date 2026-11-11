@@ -20,5 +20,5 @@ interface WidgetTextLayout {
 
     public abstract void drawSelection(int param0, UiWidget param1, int param2, int param3, int param4, int param5);
 
-    public abstract TextLayout ensureTextLayout(UiWidget param0, int param1);
+    public abstract TextBlockLayout ensureTextLayout(UiWidget param0, int param1);
 }

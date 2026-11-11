@@ -113,7 +113,7 @@ final class IntrusiveDeque {
     }
 
     final static mu a(boolean param0, int param1, int param2) {
-        ScrollPane stackIn_7_0;
+        ScrollPanel stackIn_7_0;
         int stackIn_7_1;
         boolean stackIn_7_2;
         int stackIn_7_3;
@@ -160,7 +160,7 @@ final class IntrusiveDeque {
           stackIn_7_5 = ToolkitSelector.field_a + 2;
           stackIn_8_6 = (TextureCoordinateGeneration.field_b.field_vb == ChatTarget.field_b);
           boolean decompiledFrameRemainder1 = true;
-          var3_int = ((ScrollPane) (Object) stackIn_7_0).updateContentLayout(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_8_6) ? 1 : 0;
+          var3_int = ((ScrollPanel) (Object) stackIn_7_0).updateContentLayout(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_8_6) ? 1 : 0;
           var4 = TextureCoordinateGeneration.field_b.field_tb.field_J;
           var5 = null;
           if (UiWidget.field_g != 2) {
@@ -174,7 +174,7 @@ final class IntrusiveDeque {
             } else {
               TextureCoordinateGeneration.field_b.field_vb.field_vb.field_r = DivisionMazeGenerator.field_b;
             }
-            BridgeModel.a(-106, TextureCoordinateGeneration.field_b.field_tb);
+            BridgeModel.resetLayoutOffsets(-106, TextureCoordinateGeneration.field_b.field_tb);
             decompiledFrameRemainder1 = (var19 != 0);
           }
           if (decompiledFrameRemainder1) {

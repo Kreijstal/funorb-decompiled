@@ -64,7 +64,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             if (param1 != 54) {
               field_w = (String[]) null;
             }
-            this.a((byte) 117, param2);
+            this.sendLoginState((byte) 117, param2);
             this.field_h.position = 0;
             this.field_g = null;
             while (true) {
@@ -126,7 +126,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    private final void a(byte param0, boolean param1) {
+    private final void sendLoginState(byte param0, boolean param1) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_4_0 = null;

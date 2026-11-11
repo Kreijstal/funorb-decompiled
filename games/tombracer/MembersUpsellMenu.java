@@ -245,7 +245,7 @@ final class MembersUpsellMenu extends MenuScreen {
     }
 
     private final void startSinglePlayer(boolean param0) {
-        TextLayout.startSinglePlayerMatch(this.field_v, (byte) -102, 1);
+        TextBlockLayout.startSinglePlayerMatch(this.field_v, (byte) -102, 1);
         if (param0) {
           this.handleKey(-11, '￘', 77);
         }

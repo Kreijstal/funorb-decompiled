@@ -13,7 +13,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
     private int field_x;
     private mma field_p;
     private int field_s;
-    private Effect field_z;
+    private HazardEffect field_z;
     private int field_E;
     private boolean field_A;
     static String[][] field_w;
@@ -37,7 +37,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             this.field_z = null;
             return;
           }
-          this.field_z = new Effect(this.getRoot(6), 4, 128);
+          this.field_z = new HazardEffect(this.getRoot(6), 4, 128);
           return;
         }
         this.updateBeamSegment((byte) 92);
@@ -45,7 +45,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           this.field_z = null;
           return;
         }
-        this.field_z = new Effect(this.getRoot(6), 4, 128);
+        this.field_z = new HazardEffect(this.getRoot(6), 4, 128);
     }
 
     final void resolveSwitchLinks(int param0) {

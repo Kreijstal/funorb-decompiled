@@ -13,7 +13,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isLocalPlayerName(String param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         CharSequence var4 = null;
@@ -25,7 +25,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
         try {
           if (param1 != 0) {
             var3 = (String) null;
-            MiscItemBehaviour.a((String) null, -83);
+            MiscItemBehaviour.isLocalPlayerName((String) null, -83);
           }
           var4 = (CharSequence) ((Object) param0);
           stackIn_3_0 = tia.field_b.equals(OpenGlTexture3D.normalizeDisplayName(1, var4));

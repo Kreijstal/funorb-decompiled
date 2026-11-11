@@ -58,7 +58,7 @@ final class RoomHeader {
         }
     }
 
-    final static void a(byte param0) {
+    final static void readLocalPlayerName(byte param0) {
         CharSequence var4 = null;
         MenuEntry.field_k = WeaveOperator.field_q.readString((byte) -76);
         if (param0 == -68) {

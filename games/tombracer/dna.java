@@ -42,7 +42,7 @@ abstract class dna extends PrefabComponent {
 
     final static GraphicsQuality getGraphicsQuality(int param0) {
         int var1 = -98 % ((81 - param0) / 34);
-        return FontMetrics.field_f;
+        return GameFontMetrics.field_f;
     }
 
     dna(Room param0, int param1) {

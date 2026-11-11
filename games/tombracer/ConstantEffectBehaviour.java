@@ -5,7 +5,7 @@ final class ConstantEffectBehaviour extends Behaviour {
     static ToolkitSprite field_q;
     static float field_p;
     static char[] field_n;
-    private Effect field_r;
+    private HazardEffect field_r;
     int field_o;
 
     final void tick(int param0) {
@@ -19,7 +19,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         super(param0, param1);
         this.field_o = 0;
         try {
-          this.field_r = new Effect(1, 50);
+          this.field_r = new HazardEffect(1, 50);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -35,7 +35,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         }
     }
 
-    final void setEffect(boolean param0, Effect param1) {
+    final void setEffect(boolean param0, HazardEffect param1) {
         try {
           this.field_r = param1;
           if (!param0) {

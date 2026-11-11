@@ -188,7 +188,7 @@ final class RandomMazeBehaviour extends Behaviour {
           if (var8 <= 0) {
             return false;
           }
-          var9 = wm.a(1 << var7_int, var8, -75);
+          var9 = wm.clampedFixedRatio(1 << var7_int, var8, -75);
           param4.shortenTo(var9, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,7 +250,7 @@ final class RandomMazeBehaviour extends Behaviour {
               var14 = this.field_t * var11;
               var15 = OpenGlTexture2D.intersectSegmentWithBox(var8, (byte) -15, var13, this.field_t + var13, var14 + this.field_t, var12, var6, var7, var5, var14);
               if (var15 > 0) {
-                var16 = wm.a(1 << var12, var15, -51);
+                var16 = wm.clampedFixedRatio(1 << var12, var15, -51);
                 param0.shortenTo(var16, (byte) 47);
                 return true;
               }

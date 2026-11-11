@@ -6,7 +6,7 @@ abstract class ota {
     static String[] field_a;
     static int field_c;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void rasterizeEllipse(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -182,9 +182,9 @@ abstract class ota {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 13) {
-            ota.a(-17, -67, 51, -71, -111, -94, -55, 8);
+            ota.rasterizeEllipse(-17, -67, 51, -71, -111, -94, -55, 8);
           }
-          var4 = wp.a(126, param2);
+          var4 = wp.findFriendByName(126, param2);
           if (var4 != null &&
             null != var4.field_Cb) {
             return true;

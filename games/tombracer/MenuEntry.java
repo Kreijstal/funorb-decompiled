@@ -457,7 +457,7 @@ final class MenuEntry {
           if (!RewardChoicePhase.isPointInRect(this.field_i - var6 / 2, param1, this.field_i + var6 / 2, param2, this.field_b + var5 / 2, this.field_b - var5 / 2, 105)) {
             return false;
           }
-          var9 = ema.a(this.field_l, 0, var7, this.field_f, var8) ? 1 : 0;
+          var9 = ema.isSpritePixelOpaque(this.field_l, 0, var7, this.field_f, var8) ? 1 : 0;
           return var9 != 0;
         }
         var4 = this.getWidth(-163);

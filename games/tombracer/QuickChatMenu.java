@@ -221,17 +221,17 @@ final class QuickChatMenu extends UiComponent {
                 C2SChooseRewardPacket.field_a != null) {
                 var6 = 1;
               }
-              if (Transform3D.a(var6, -20011) == 2) {
-                MazeGenerator.a(var6, param0, (byte) 108, 1);
+              if (Transform3D.getChatSetting(var6, -20011) == 2) {
+                MazeGenerator.setChatSetting(var6, param0, (byte) 108, 1);
               }
               var8 = (String) null;
               ResultsPhase.writeChatMessage(OpenGlUnderwaterEffect.field_q, (String) null, param1, 32371, wp.field_a, var5);
-              oi.a(TextureCombineOperation.field_b, var5, 4, wp.field_a, OpenGlUnderwaterEffect.field_q);
-              ComponentTargetList.b(param3 - 48);
+              oi.queueQuickChatMessage(TextureCombineOperation.field_b, var5, 4, wp.field_a, OpenGlUnderwaterEffect.field_q);
+              ComponentTargetList.closeQuickChatMenu(param3 - 48);
               HardwareSceneLight.resetChatRateLimit((byte) -25);
             } else {
               HuffmanCodec.a(false);
-              ComponentTargetList.b(param3 + 7);
+              ComponentTargetList.closeQuickChatMenu(param3 + 7);
             }
           }
         } else {
@@ -261,7 +261,7 @@ final class QuickChatMenu extends UiComponent {
         if (null == this.field_Eb &&
           this == ItemModel.field_n &&
           var4 != 0) {
-          ComponentTargetList.b(param1 ^ 48);
+          ComponentTargetList.closeQuickChatMenu(param1 ^ 48);
           return true;
         }
         var5 = HardwareOpenGlToolkit.field_td;

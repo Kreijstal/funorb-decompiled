@@ -211,10 +211,10 @@ final class ChatOverlay {
             }
             if (RotaterMountComponent.field_G == ProceduralTexture.field_p) {
               if (!param5) {
-                fd.field_d = FullscreenCanvas.a(param1, 64, false, param4);
+                fd.field_d = FullscreenCanvas.parseChatTarget(param1, 64, false, param4);
               } else {
                 var10 = (String) null;
-                fd.field_d = WidgetContainer.a(param1, 0, (String) null, false, QuickChatPhraseSource.field_g);
+                fd.field_d = WidgetContainer.createChatTarget(param1, 0, (String) null, false, QuickChatPhraseSource.field_g);
               }
               ql.field_k.position = 0;
               ql.field_k.writeByte(14, 0);

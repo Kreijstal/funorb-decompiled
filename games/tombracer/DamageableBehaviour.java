@@ -43,7 +43,7 @@ final class DamageableBehaviour extends Behaviour {
         var2Lifetime1.destroy(2, (byte) 9);
     }
 
-    private final int reactToEffect(int param0, Effect param1) {
+    private final int reactToEffect(int param0, HazardEffect param1) {
         int var3_int = 0;
         int stackIn_2_0 = 0;
         int stackIn_15_0 = 0;
@@ -154,7 +154,7 @@ final class DamageableBehaviour extends Behaviour {
         this.getTargetTrap(110).setFreezeTicks(this.stunTicks, -127);
     }
 
-    final int onAreaEffect(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
+    final int onAreaEffect(int param0, int param1, HazardEffect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -232,7 +232,7 @@ final class DamageableBehaviour extends Behaviour {
         this.field_q = -100;
     }
 
-    final int onProjectileEffect(int param0, Projectile param1, Effect param2) {
+    final int onProjectileEffect(int param0, Projectile param1, HazardEffect param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -327,7 +327,7 @@ final class DamageableBehaviour extends Behaviour {
         return true;
     }
 
-    final int onBeamEffect(int param0, Effect param1, BeamSegment param2) {
+    final int onBeamEffect(int param0, HazardEffect param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

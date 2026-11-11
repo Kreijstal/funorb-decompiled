@@ -206,7 +206,7 @@ final class RoomViewRenderer {
               ImageProducerCanvasImageBuffer.field_o.popClip(109);
               return;
             }
-            SecondaryNodeDequeIterator.a(var31 * 255 >> 8, param4, 0, param2, (byte) 25, param3, param1);
+            SecondaryNodeDequeIterator.fillAlphaRect(var31 * 255 >> 8, param4, 0, param2, (byte) 25, param3, param1);
           }
           ImageProducerCanvasImageBuffer.field_o.popClip(109);
           return;

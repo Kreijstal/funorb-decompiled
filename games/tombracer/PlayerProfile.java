@@ -176,17 +176,17 @@ final class PlayerProfile {
         try {
           param1.writeByte(16, 0);
           param1.beginBitWrite(8);
-          StaticCrusherComponent.a(this.field_l, 126, param1);
+          StaticCrusherComponent.writeBitFlag(this.field_l, 126, param1);
           var3_int = -1 + this.roomsComplete.size();
           param1.writeBits((byte) -4, var3_int, 8);
           for (var4 = 0; var4 < var3_int; var4++) {
-            StaticCrusherComponent.a(this.roomsComplete.get(var4), -52, param1);
+            StaticCrusherComponent.writeBitFlag(this.roomsComplete.get(var4), -52, param1);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < 13; var4Lifetime1++) {
-            StaticCrusherComponent.a(this.charactersUnlocked.get(var4Lifetime1), param0 + 2016803960, param1);
+            StaticCrusherComponent.writeBitFlag(this.charactersUnlocked.get(var4Lifetime1), param0 + 2016803960, param1);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < 9; var4Lifetime2++) {
-            StaticCrusherComponent.a(this.coursesUnlocked.get(var4Lifetime2), param0 ^ -2016803978, param1);
+            StaticCrusherComponent.writeBitFlag(this.coursesUnlocked.get(var4Lifetime2), param0 ^ -2016803978, param1);
           }
           if (param0 != -2016804080) {
             field_e = (int[]) null;

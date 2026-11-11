@@ -138,7 +138,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
     public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           Projectile var3 = (Projectile) null;
-          this.applyProjectileEffect((Effect) null, (Projectile) null, 117);
+          this.applyProjectileEffect((HazardEffect) null, (Projectile) null, 117);
         }
     }
 
@@ -220,7 +220,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         }
     }
 
-    public final int applyProjectileEffect(Effect param0, Projectile param1, int param2) {
+    public final int applyProjectileEffect(HazardEffect param0, Projectile param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -283,7 +283,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           if (var5_int == -1) {
             return false;
           }
-          var6 = wm.a(4096, var5_int, param0 - 59);
+          var6 = wm.clampedFixedRatio(4096, var5_int, param0 - 59);
           param3.shortenTo(var6, (byte) 47);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -431,7 +431,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         return 0;
     }
 
-    public final int applyBeamEffect(Effect param0, int param1, BeamSegment param2) {
+    public final int applyBeamEffect(HazardEffect param0, int param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -625,7 +625,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         return false;
     }
 
-    public final int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int applyAreaEffect(HazardEffect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

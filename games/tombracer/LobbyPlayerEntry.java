@@ -36,7 +36,7 @@ final class LobbyPlayerEntry extends UiComponent {
         field_ub = null;
     }
 
-    final boolean a(byte param0, LobbyPlayerEntry param1) {
+    final boolean sortsBefore(byte param0, LobbyPlayerEntry param1) {
         RuntimeException var3 = null;
         LobbyPlayerEntry var4 = null;
         int stackIn_3_0 = 0;
@@ -56,7 +56,7 @@ final class LobbyPlayerEntry extends UiComponent {
           }
           if (param0 <= 106) {
             var4 = (LobbyPlayerEntry) null;
-            this.a((byte) 29, (LobbyPlayerEntry) null);
+            this.sortsBefore((byte) 29, (LobbyPlayerEntry) null);
           }
           stackIn_11_0 = (this.field_Hb) ? 0 : 1;
           if (stackIn_11_0 == (param1.field_Hb ? 1 : 0)) {

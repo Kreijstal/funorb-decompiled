@@ -24,7 +24,7 @@ final class RangeOperator extends TextureOperator {
 
     final static void setRendererMode(boolean param0, RendererMode param1) {
         try {
-          BitPacketBuffer.setGraphicsSettings(param0, param1, FontMetrics.field_f);
+          BitPacketBuffer.setGraphicsSettings(param0, param1, GameFontMetrics.field_f);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ksa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

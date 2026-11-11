@@ -48,7 +48,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
           var3 = 0;
         }
         if (OpenGlUnderwaterEffect.field_q == 2 &&
-          !DisplaySettingsDialog.f(24316)) {
+          !DisplaySettingsDialog.isQuickChatTargetReachable(24316)) {
           var3 = 0;
         }
         if (MenuEntry.field_h == 84) {
@@ -79,8 +79,8 @@ final class ChooseRewardFactory implements BitDecodableFactory {
             null != C2SChooseRewardPacket.field_a) {
             var5 = 1;
           }
-          if (Transform3D.a(var5, -20011) == 2) {
-            MazeGenerator.a(var5, param2, (byte) 108, 1);
+          if (Transform3D.getChatSetting(var5, -20011) == 2) {
+            MazeGenerator.setChatSetting(var5, param2, (byte) 108, 1);
           }
           ResultsPhase.writeChatMessage(OpenGlUnderwaterEffect.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
           PlayerProfile.clearChatInput(true);

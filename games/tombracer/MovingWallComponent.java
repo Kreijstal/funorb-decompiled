@@ -73,7 +73,7 @@ final class MovingWallComponent extends PathMoverComponent {
         return 7;
     }
 
-    final boolean A(int param0) {
+    final boolean storesLoopFlag(int param0) {
         int var2 = 103 % ((param0 - 0) / 60);
         return true;
     }

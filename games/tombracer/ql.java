@@ -66,7 +66,7 @@ class ql extends DualLinkNode {
         field_m = null;
     }
 
-    final static void a(int param0, LobbyPlayerEntry param1) {
+    final static void insertLobbyPlayerSorted(int param0, LobbyPlayerEntry param1) {
         LobbyPlayerEntry var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -81,7 +81,7 @@ class ql extends DualLinkNode {
           param1.unlink(118);
           var2 = (LobbyPlayerEntry) (uma.field_b.first(-80));
           while (var2 != null) {
-            if (var2.a((byte) 123, param1)) {
+            if (var2.sortsBefore((byte) 123, param1)) {
               var2 = (LobbyPlayerEntry) (uma.field_b.next(121));
               continue;
             }

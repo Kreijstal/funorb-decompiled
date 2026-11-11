@@ -5,7 +5,7 @@ final class wj {
     static SpriteData field_a;
     static String field_b;
 
-    final static void a(cga param0, int param1, int param2) {
+    final static void writeQueuedRequest(cga param0, int param1, int param2) {
         BitPacketBuffer var5 = null;
         int var4 = 0;
         try {

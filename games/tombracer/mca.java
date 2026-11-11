@@ -13,7 +13,7 @@ final class mca {
         if (0 == param1) {
           return true;
         }
-        if (ChatChannelType.a((byte) 64) == param1) {
+        if (ChatChannelType.getSelectedCourseIndex((byte) 64) == param1) {
           return true;
         }
         if (param0 != 6) {

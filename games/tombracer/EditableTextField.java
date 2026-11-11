@@ -330,7 +330,7 @@ final class EditableTextField extends UiComponent {
             return stackIn_3_0;
           }
           for (var2_int = this.caret - 1; var2_int > 0; var2_int--) {
-            if (!Effect.isWordBoundary(this.text.charAt(var2_int - 1), true)) {
+            if (!HazardEffect.isWordBoundary(this.text.charAt(var2_int - 1), true)) {
               continue;
             }
             break;
@@ -726,7 +726,7 @@ final class EditableTextField extends UiComponent {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int mirrorDirection(int param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_3_0 = 0;
@@ -799,7 +799,7 @@ final class EditableTextField extends UiComponent {
         }
     }
 
-    final static void k(byte param0) {
+    final static void releaseToolkitResources(byte param0) {
         try {
           LabelledRow.field_ub = null;
           gca.field_g = null;
@@ -838,7 +838,7 @@ final class EditableTextField extends UiComponent {
             return stackIn_5_0;
           }
           for (var3 = 1 + this.caret; var2_int > var3; var3++) {
-            if (!Effect.isWordBoundary(this.text.charAt(var3 - 1), true)) {
+            if (!HazardEffect.isWordBoundary(this.text.charAt(var3 - 1), true)) {
               continue;
             }
             break;

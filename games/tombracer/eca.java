@@ -6,7 +6,7 @@ final class eca {
     static int field_a;
     static ToolkitSprite[] field_c;
 
-    final static boolean a(byte param0, int param1, long param2, int[] param3, String param4) {
+    final static boolean openQuickChatForPlayer(byte param0, int param1, long param2, int[] param3, String param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         QuickChatMenu var7 = null;
@@ -60,12 +60,12 @@ final class eca {
           return;
         }
         String var2 = (String) null;
-        eca.a((byte) -86, 99, 60L, (int[]) null, (String) null);
+        eca.openQuickChatForPlayer((byte) -86, 99, 60L, (int[]) null, (String) null);
         field_b = (String[][]) null;
         field_c = null;
     }
 
-    final static Sprite[] a(int param0, int param1) {
+    final static Sprite[] createSolidNineSlice(int param0, int param1) {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
         var3[param0] = LoadProfileCommand.createSolidSprite(param1, 124, 64);

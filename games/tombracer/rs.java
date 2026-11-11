@@ -13,7 +13,7 @@ final class rs {
         }
     }
 
-    final static int a(byte param0) {
+    final static int getTopDialogHeight(byte param0) {
         if (param0 != 124) {
           PlayingSound var2 = (PlayingSound) null;
           rs.queueSoundRelease((PlayingSound) null, -74);

@@ -33,7 +33,7 @@ final class WaypointPath {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1, BitmapFont param2) {
+    final static void loadQuickChatInterface(int param0, ResourceArchive param1, BitmapFont param2) {
         int var8 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -72,9 +72,9 @@ final class WaypointPath {
           }
           DraggableWidget.a(-1, var4);
           var12 = (BitmapFont) null;
-          MembersUpsellMenu.field_w = DrawOfferMenu.a(1127256, 1513239, 1513239, 0, (BitmapFont) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
-          BoulderComponent.field_M = DrawOfferMenu.a(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);
-          tg.field_c = DrawOfferMenu.a(0, 0, 0, 16777215, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -123);
+          MembersUpsellMenu.field_w = DrawOfferMenu.createStyledComponent(1127256, 1513239, 1513239, 0, (BitmapFont) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
+          BoulderComponent.field_M = DrawOfferMenu.createStyledComponent(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);
+          tg.field_c = DrawOfferMenu.createStyledComponent(0, 0, 0, 16777215, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -123);
           var5 = SoftwareRasterizer.width;
           var6 = SoftwareRasterizer.height;
           var16 = SoftwareRasterizer.pixels;
@@ -84,7 +84,7 @@ final class WaypointPath {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          cia.field_g = FontMetrics.createQuickChatMenu(true, BoulderComponent.field_M, MembersUpsellMenu.field_w, var4, tg.field_c);
+          cia.field_g = GameFontMetrics.createQuickChatMenu(true, BoulderComponent.field_M, MembersUpsellMenu.field_w, var4, tg.field_c);
           rua.field_gb.field_J = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -106,7 +106,7 @@ final class SpriteTileOperator extends SpriteSampleOperator {
           }
           return var3;
         }
-        if (!this.a(false)) {
+        if (!this.ensureSpriteLoaded(false)) {
           if (param1 != -1) {
             SpriteTileOperator.d(113);
             return var3;

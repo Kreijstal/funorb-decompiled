@@ -17,7 +17,7 @@ abstract class MazeComponent extends PrefabComponent {
         return true;
     }
 
-    abstract boolean C(int param0);
+    abstract boolean hasExtraBits(int param0);
 
     final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
@@ -55,7 +55,7 @@ abstract class MazeComponent extends PrefabComponent {
               param1.writeBits((byte) -128, this.itemType, 2);
             }
           }
-          if (this.C(1)) {
+          if (this.hasExtraBits(1)) {
             param1.writeBits((byte) 100, this.field_J, 2);
           }
           return;
@@ -136,7 +136,7 @@ abstract class MazeComponent extends PrefabComponent {
               this.itemType = param2.readBits((byte) 44, 2);
             }
           }
-          if (this.C(1)) {
+          if (this.hasExtraBits(1)) {
             this.field_J = param2.readBits((byte) 44, 2);
           }
           return;
@@ -290,7 +290,7 @@ abstract class MazeComponent extends PrefabComponent {
           } else {
             stackIn_4_0 = TextureCombineSource.field_e;
           }
-          dga.a(stackIn_4_0, 199);
+          dga.layoutBottomPanels(stackIn_4_0, 199);
           rm.field_e.a(0, 0, param1 + 18, C2SRoomResultPacket.field_c.field_G, -2 + C2SRoomResultPacket.field_c.field_t - 40);
           cea.field_a.setBounds(RoomRegion.field_l.field_G, ToolkitSelector.field_a, param1 ^ -23774, 0, 0);
           stackIn_6_0 = uaa.field_b;

@@ -43,7 +43,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
           PlayerModel.isNameSeparator(2, 'ﾇ');
         }
         LegacyOpenGlEnvironmentWaterEffect.a(3, true, param2, 192, wga.field_a[this.field_i], param0);
-        pa.a(3, param0, wga.field_a[this.field_i], param2, false);
+        pa.drawAlphaCircle(3, param0, wga.field_a[this.field_i], param2, false);
     }
 
     public final void updateAnimation(int param0) {

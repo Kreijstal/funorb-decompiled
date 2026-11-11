@@ -17,7 +17,7 @@ final class bq {
     int field_j;
     static String field_a;
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
+    final static void fillCircle(int param0, int param1, int param2, byte param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -40,7 +40,7 @@ final class bq {
           var7 = -param4;
           var8 = -1;
           if (param3 != -13) {
-            bq.a(61, -28, 117, (byte) -18, -123);
+            bq.fillCircle(61, -28, 117, (byte) -18, -123);
           }
           C2SRoomResultPacket.fillRange((byte) -55, param2, param4 + param1, vaa.field_a[param0], -param4 + param1);
           while (var6 > var5_int) {

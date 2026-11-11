@@ -106,17 +106,17 @@ abstract class MenuScreen extends GameScreen {
                 var6 = 1;
               }
               if (this.field_k.isEndPressed(75) &&
-                tk.a(-22636) < CircleMovementLocomotor.e((byte) 71)) {
+                tk.a(-22636) < CircleMovementLocomotor.getMaxVolume((byte) 71)) {
                 var6 = 1;
-                qfa.applyMusicVolume(CircleMovementLocomotor.e((byte) 126), 20815);
+                qfa.applyMusicVolume(CircleMovementLocomotor.getMaxVolume((byte) 126), 20815);
               }
               if (this.field_k.isPointerHeld((byte) -128)) {
                 var8 = -24 + (LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1);
                 var9 = -var8 + AgeValidator.field_j;
                 var10 = var9 << 1;
                 if (var10 > 0) {
-                  if (!(CircleMovementLocomotor.e((byte) 68) > var10)) {
-                    var10 = CircleMovementLocomotor.e((byte) 61);
+                  if (!(CircleMovementLocomotor.getMaxVolume((byte) 68) > var10)) {
+                    var10 = CircleMovementLocomotor.getMaxVolume((byte) 61);
                     if (var11 != 0) {
                       var10 = 0;
                     }
@@ -134,7 +134,7 @@ abstract class MenuScreen extends GameScreen {
                 HardwareGraphicsHeap.lowerMusicVolume(11);
               }
               if (this.field_k.isRightPressed(94) &&
-                tk.a(-22636) < CircleMovementLocomotor.e((byte) 87)) {
+                tk.a(-22636) < CircleMovementLocomotor.getMaxVolume((byte) 87)) {
                 var6 = 1;
                 EventFactory.a((byte) -117);
               }
@@ -150,35 +150,35 @@ abstract class MenuScreen extends GameScreen {
                 return;
               }
             }
-            var7 = CircleMovementLocomotor.e((byte) 124);
+            var7 = CircleMovementLocomotor.getMaxVolume((byte) 124);
             if (this.field_k.isHomePressed(0)) {
-              mqa.a(0, (byte) -118);
+              mqa.setSoundVolume(0, (byte) -118);
             }
             if (this.field_k.isEndPressed(-6)) {
-              mqa.a(var7, (byte) 124);
+              mqa.setSoundVolume(var7, (byte) 124);
             }
             if (this.field_k.isPointerHeld((byte) -128)) {
               var8Lifetime1 = -24 + (LegacyOpenGlWaterTextures.getCanvasWidth(false) >> 1);
               var9Lifetime1 = -var8Lifetime1 + AgeValidator.field_j;
               var10Lifetime1 = var9Lifetime1 << 1;
               if (var10Lifetime1 <= 0) {
-                mqa.a(0, (byte) 121);
+                mqa.setSoundVolume(0, (byte) 121);
                 if (var11 != 0) {
                   if (var10Lifetime1 < var7) {
-                    mqa.a(var10Lifetime1, (byte) -48);
-                    mqa.a(var7, (byte) 85);
+                    mqa.setSoundVolume(var10Lifetime1, (byte) -48);
+                    mqa.setSoundVolume(var7, (byte) 85);
                   } else {
-                    mqa.a(var7, (byte) 85);
+                    mqa.setSoundVolume(var7, (byte) 85);
                   }
                 }
               } else {
                 if (var10Lifetime1 < var7) {
-                  mqa.a(var10Lifetime1, (byte) -48);
+                  mqa.setSoundVolume(var10Lifetime1, (byte) -48);
                   if (var11 != 0) {
-                    mqa.a(var7, (byte) 85);
+                    mqa.setSoundVolume(var7, (byte) 85);
                   }
                 } else {
-                  mqa.a(var7, (byte) 85);
+                  mqa.setSoundVolume(var7, (byte) 85);
                 }
               }
             }
@@ -534,7 +534,7 @@ abstract class MenuScreen extends GameScreen {
                 var4_int = SecondaryNodeDequeIterator.field_a.getCourseId(-1);
                 var5 = SecondaryNodeDequeIterator.field_a.getCharacterChoice(0, 9);
                 var6 = SecondaryNodeDequeIterator.field_a.matchState.gameMode;
-                TextLayout.startSinglePlayerMatch(var4_int, (byte) 101, var6);
+                TextBlockLayout.startSinglePlayerMatch(var4_int, (byte) 101, var6);
                 SecondaryNodeDequeIterator.field_a.setCharacterChoice(var5, 50, 0);
                 SecondaryNodeDequeIterator.field_a.initPlayers((byte) -49);
                 SecondaryNodeDequeIterator.field_a.startRound(125);

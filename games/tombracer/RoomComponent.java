@@ -92,7 +92,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         C2SRoomResultPacket.field_a = new UiComponent(0L, (UiComponent) null);
         C2SRoomResultPacket.field_a.addChild(-122, oca.field_b.field_a);
         C2SRoomResultPacket.field_a.addChild(-128, ImageProducerRasterBuffer.field_j);
-        re.a(-29040);
+        re.layoutMainScreen(-29040);
     }
 
     public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {

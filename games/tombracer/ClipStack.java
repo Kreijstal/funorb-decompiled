@@ -130,7 +130,7 @@ final class ClipStack {
         this.field_f = var3;
     }
 
-    final static byte[] a(PacketBuffer param0, int param1, boolean param2) throws Exception {
+    final static byte[] decodeLocalProfile(PacketBuffer param0, int param1, boolean param2) throws Exception {
         int var10_int = 0;
         int[] array$0 = null;
         Object stackIn_5_0 = null;

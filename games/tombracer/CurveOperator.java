@@ -32,7 +32,7 @@ final class CurveOperator extends TextureOperator {
         this.field_m = new short[257];
     }
 
-    final static void a(byte param0, long param1, String param2) {
+    final static void openPrivateQuickChat(byte param0, long param1, String param2) {
         CharSequence var5 = null;
         try {
           wp.field_a = param2;

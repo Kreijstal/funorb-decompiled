@@ -30,7 +30,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
         return true;
     }
 
-    final boolean A(int param0) {
+    final boolean storesLoopFlag(int param0) {
         int var2 = 88 % ((0 - param0) / 60);
         return true;
     }
@@ -54,7 +54,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
 
     final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          this.A(105);
+          this.storesLoopFlag(105);
           return true;
         }
         return true;

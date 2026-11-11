@@ -182,7 +182,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         int discarded$0 = 0;
         if (param0) {
           GameFont var4 = (GameFont) null;
-          discarded$0 = this.drawWrappedText((String) null, (FontMetrics) null, -5, -61, -30, (GameFont) null, 39, -50, -125);
+          discarded$0 = this.drawWrappedText((String) null, (GameFontMetrics) null, -5, -61, -30, (GameFont) null, 39, -50, -125);
         }
         return vaa.isBitSet(SimpleConditionBehaviour.field_o, param1, -101);
     }
@@ -269,7 +269,7 @@ final class AchievementsScreen extends DropInMenuScreen {
         return -30 + SwitchLinkList.getCanvasHeight(param1 ^ 30);
     }
 
-    private final int drawWrappedText(String param0, FontMetrics param1, int param2, int param3, int param4, GameFont param5, int param6, int param7, int param8) {
+    private final int drawWrappedText(String param0, GameFontMetrics param1, int param2, int param3, int param4, GameFont param5, int param6, int param7, int param8) {
         int var12 = 0;
         String[] var10 = null;
         RuntimeException var10_ref = null;

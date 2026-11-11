@@ -138,7 +138,7 @@ class HotspotTextWidget extends FocusableWidget {
     final void rebuildHotspots(int param0) {
         int var2;
         WidgetTextLayout var3;
-        TextLayout var4;
+        TextBlockLayout var4;
         int var5;
         int var7;
         int var8;
@@ -151,7 +151,7 @@ class HotspotTextWidget extends FocusableWidget {
         Object var17;
         WidgetTextLayout var17_ref;
         String var21;
-        TextLayout var22;
+        TextBlockLayout var22;
         TextLineLayout var23;
         bm var24;
         Object var25;
@@ -160,7 +160,7 @@ class HotspotTextWidget extends FocusableWidget {
         int stackIn_27_0 = 0;
         int stackIn_32_0 = 0;
         String var26;
-        TextLayout var27;
+        TextBlockLayout var27;
         TextLineLayout var28;
         bm var29;
         WidgetTextLayout var30;
@@ -318,7 +318,7 @@ class HotspotTextWidget extends FocusableWidget {
         }
     }
 
-    final static CurveShape a(PacketBuffer param0, byte param1) {
+    final static CurveShape decodeCurveShape(PacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         CurveShape stackIn_2_0 = null;
         CurveShape stackIn_4_0 = null;
@@ -468,11 +468,11 @@ class HotspotTextWidget extends FocusableWidget {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (null == DropdownList.field_D) {
-            DropdownList.field_D = cna.a(4, 128);
+            DropdownList.field_D = cna.newPendingRequest(4, 128);
           }
           if (param0) {
             var5 = (PacketBuffer) null;
-            HotspotTextWidget.a((PacketBuffer) null, (byte) 82);
+            HotspotTextWidget.decodeCurveShape((PacketBuffer) null, (byte) 82);
           }
           if (!DropdownList.field_D.field_g) {
             return false;

@@ -135,7 +135,7 @@ final class AnimatedLight {
         try {
           this.light = param2.createLight(param5, param1, param0, param3, param6, 1.0f);
           if (param4 != 512) {
-            AnimatedLight.a(-83);
+            AnimatedLight.getLoginMethods(-83);
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aga.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
@@ -189,12 +189,12 @@ final class AnimatedLight {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -113) {
-          AnimatedLight.a(111);
+          AnimatedLight.getLoginMethods(111);
         }
         field_a = null;
     }
 
-    final static LoginMethod[] a(int param0) {
+    final static LoginMethod[] getLoginMethods(int param0) {
         if (param0 != -1025) {
           field_a = (String) null;
         }

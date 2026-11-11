@@ -44,11 +44,11 @@ final class ima {
         }
     }
 
-    final static void a(float param0, String param1, int param2) {
+    final static void setLoadingProgress(float param0, String param1, int param2) {
         try {
           if (param2 > -39) {
             String var4 = (String) null;
-            ima.a(0.6509141325950623f, (String) null, 54);
+            ima.setLoadingProgress(0.6509141325950623f, (String) null, 54);
           }
           OpenGlToolkit.field_jc = param0;
           TextureTransformMode.field_b = param1;

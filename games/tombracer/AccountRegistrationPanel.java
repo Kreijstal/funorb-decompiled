@@ -110,7 +110,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         return qt.startAccountCreation(this.field_G.field_o, true, var2, this.field_z.field_o, this.field_E.field_o, this, this.field_D.field_w);
     }
 
-    final static int a(float param0, float param1, boolean param2, float param3) {
+    final static int dominantAxis(float param0, float param1, boolean param2, float param3) {
         float stackIn_3_0 = 0.0f;
         float stackIn_8_0 = 0.0f;
         float stackIn_11_0 = 0.0f;
@@ -200,8 +200,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, HardwareSpecularEffect.field_f);
         var3 = var3 + (this.addFieldWithHelp(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
         var3 = var3 + this.addLabeledField(this.field_E, var3, 170, (byte) 59, MidiVoice.field_j);
-        var3 = var3 + (this.a(WaypointPath.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
-        var3 = var3 + (this.a(CrusherBehaviour.field_r, GraphicsHeap.field_f, this.field_G, -3, 170, var3) + 5);
+        var3 = var3 + (this.addHelpField(WaypointPath.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
+        var3 = var3 + (this.addHelpField(CrusherBehaviour.field_r, GraphicsHeap.field_f, this.field_G, -3, 170, var3) + 5);
         var3 = var3 + this.addValidatedField(this.field_I, var3, (byte) 99, ToolkitInstance.field_g, 170);
         jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, BlendModeOperator.field_o, 11579568, OpenGlSprite.field_l);
         this.addChild(var4, -1);
@@ -230,7 +230,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     }
 
     public final void onMoreSuggestionsRequested(int param0) {
-        ((NameFieldValidator) (this.field_G.getValidationSource((byte) 69))).b((byte) -69);
+        ((NameFieldValidator) (this.field_G.getValidationSource((byte) 69))).clearSuggestions((byte) -69);
         if (param0 != 10000536) {
           this.field_E = (ValidatedTextInputWidget) null;
         }
@@ -441,7 +441,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         return "</col></u>";
     }
 
-    private final int a(String param0, String param1, UiWidget param2, int param3, int param4, int param5) {
+    private final int addHelpField(String param0, String param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         HotspotTextWidget var8 = null;
         int stackIn_3_0 = 0;
@@ -489,7 +489,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     final static Weapon createFireWeaponPreset(byte param0) {
         Weapon var1 = new Weapon();
         if (param0 > 123) {
-          var1.effect = new Effect(1, 3);
+          var1.effect = new HazardEffect(1, 3);
           var1.effect.setDeathMessageIndex(1, 12);
           var1.field_n = 655360;
           var1.maxAmmo = 250;
@@ -503,8 +503,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           var1.field_l = 2097152;
           return var1;
         }
-        AccountRegistrationPanel.a(-0.43077895045280457f, 0.6055110096931458f, true, 1.4660576581954956f);
-        var1.effect = new Effect(1, 3);
+        AccountRegistrationPanel.dominantAxis(-0.43077895045280457f, 0.6055110096931458f, true, 1.4660576581954956f);
+        var1.effect = new HazardEffect(1, 3);
         var1.effect.setDeathMessageIndex(1, 12);
         var1.field_n = 655360;
         var1.maxAmmo = 250;

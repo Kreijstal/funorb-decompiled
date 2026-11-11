@@ -280,33 +280,33 @@ final class BitPacketBuffer extends PacketBuffer {
         int var4 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          if (param2 == FontMetrics.field_f &&
+          if (param2 == GameFontMetrics.field_f &&
             Room.field_k == param1) {
             return;
           }
           if (!param0) {
             return;
           }
-          FontMetrics.field_f = param2;
+          GameFontMetrics.field_f = param2;
           Room.field_k = param1;
           if (WeaponShooterBehaviour.field_r == Room.field_k) {
-            if (FontMetrics.field_f == baa.field_e) {
+            if (GameFontMetrics.field_f == baa.field_e) {
               baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) HuffmanCodec.field_a)});
             } else {
-              if (tia.field_d == FontMetrics.field_f) {
+              if (tia.field_d == GameFontMetrics.field_f) {
                 baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) DateInputWidget.field_z)});
               } else {
-                if (FontMetrics.field_f == PitModel.field_s) {
+                if (GameFontMetrics.field_f == PitModel.field_s) {
                   baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) UsernameSuggestionsPanel.field_x)});
                 }
               }
             }
           } else {
-            if (FontMetrics.field_f != baa.field_e) {
-              if (FontMetrics.field_f == tia.field_d) {
+            if (GameFontMetrics.field_f != baa.field_e) {
+              if (GameFontMetrics.field_f == tia.field_d) {
                 baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) vea.field_c)});
               } else {
-                if (FontMetrics.field_f == PitModel.field_s) {
+                if (GameFontMetrics.field_f == PitModel.field_s) {
                   baa.field_d.setCandidates(0, new ToolkitCandidate[]{(ToolkitCandidate) ((Object) CharacterSelection.field_d)});
                 }
               }
@@ -315,7 +315,7 @@ final class BitPacketBuffer extends PacketBuffer {
             }
           }
           if (null != mq.field_e) {
-            mq.field_e.field_g = PitSnake.e(5);
+            mq.field_e.field_g = PitSnake.getCurrentGraphicsMode(5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -213,7 +213,7 @@ final class PlayerInputQueue {
         return null;
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void sendDeathCountMessage(int param0, int param1, byte param2) {
         if (ql.field_k == null) {
           return;
         }
@@ -222,7 +222,7 @@ final class PlayerInputQueue {
         }
         qpa var3 = new qpa();
         var3.b(param1, -123);
-        var3.a(7, param0);
+        var3.setDeathCount(7, param0);
         hw.sendGamePacket((byte) -111, 1, 79, var3);
     }
 

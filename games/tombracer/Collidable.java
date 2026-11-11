@@ -14,7 +14,7 @@ interface Collidable {
 
     public abstract int getWidth(int param0);
 
-    public abstract int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5);
+    public abstract int applyAreaEffect(HazardEffect param0, int param1, int param2, int param3, int param4, int param5);
 
     public abstract boolean canBeCrushedBy(WorldBody param0, int param1);
 
@@ -22,13 +22,13 @@ interface Collidable {
 
     public abstract boolean restsOnFloor(int param0);
 
-    public abstract int applyProjectileEffect(Effect param0, Projectile param1, int param2);
+    public abstract int applyProjectileEffect(HazardEffect param0, Projectile param1, int param2);
 
     public abstract int getSurfaceCoverage(boolean param0, int param1, int param2, int param3, int param4, int param5);
 
     public abstract int getHeight(byte param0);
 
-    public abstract int applyBeamEffect(Effect param0, int param1, BeamSegment param2);
+    public abstract int applyBeamEffect(HazardEffect param0, int param1, BeamSegment param2);
 
     public abstract int getWeight(int param0);
 

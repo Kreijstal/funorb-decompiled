@@ -12,7 +12,7 @@ final class iha {
     private static int field_c;
     private static int[] field_b;
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void rasterizeGlowingLine(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
         int var14;
@@ -111,7 +111,7 @@ final class iha {
         field_g = (var11 - param0) * var7;
         field_c = (var11 - param0) * var8;
         field_b = param6;
-        iha.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.pixels, var12 * SoftwareRasterizer.width + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.width - (var13 - var11));
+        iha.rasterizeGlowingLine(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.pixels, var12 * SoftwareRasterizer.width + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.width - (var13 - var11));
     }
 
     public static void releaseStatics() {

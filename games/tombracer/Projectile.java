@@ -19,7 +19,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
     private Room room;
     private int angle;
     private int y;
-    private Effect effect;
+    private HazardEffect effect;
     private boolean expandsOnImpact;
     private int z;
     static ToolkitSprite field_n;
@@ -209,11 +209,11 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         int var7;
         int var8;
         int var9;
-        Effect var10;
+        HazardEffect var10;
         int var6Lifetime1;
         int var6Lifetime2;
-        Effect var10Lifetime1;
-        Effect var10Lifetime2;
+        HazardEffect var10Lifetime1;
+        HazardEffect var10Lifetime2;
         var9 = TombRacer.field_G ? 1 : 0;
         var5 = 0;
         if (param3) {
@@ -246,8 +246,8 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
               var6Lifetime2 = 1;
               if (var6Lifetime2 == 0) {
                 if (param1 >= -51) {
-                  var10 = (Effect) null;
-                  this.setEffect(81, (Effect) null);
+                  var10 = (HazardEffect) null;
+                  this.setEffect(81, (HazardEffect) null);
                 }
                 if (var5 != 0) {
                   return;
@@ -290,8 +290,8 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                 this.onImpact(true, true);
                 return;
               }
-              var10 = (Effect) null;
-              this.setEffect(81, (Effect) null);
+              var10 = (HazardEffect) null;
+              this.setEffect(81, (HazardEffect) null);
               if (var5 != 0) {
                 return;
               }
@@ -313,8 +313,8 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           if (var6Lifetime2 != 0) {
             if (!this.isMoveBlocked(param2, 0, 111)) {
               if (param1 >= -51) {
-                var10Lifetime2 = (Effect) null;
-                this.setEffect(81, (Effect) null);
+                var10Lifetime2 = (HazardEffect) null;
+                this.setEffect(81, (HazardEffect) null);
               }
               if (var5 != 0) {
                 return;
@@ -340,8 +340,8 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           }
         }
         if (param1 >= -51) {
-          var10Lifetime1 = (Effect) null;
-          this.setEffect(81, (Effect) null);
+          var10Lifetime1 = (HazardEffect) null;
+          this.setEffect(81, (HazardEffect) null);
         }
         if (var5 != 0) {
           return;
@@ -404,7 +404,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         this.room.getParticleEffects(false).spawnBurst(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.size >> 18, this.size >> 17);
     }
 
-    private final int reactToEffect(int param0, Effect param1) {
+    private final int reactToEffect(int param0, HazardEffect param1) {
         int stackIn_2_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_26_0 = 0;
@@ -870,7 +870,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         return this.velocityY;
     }
 
-    final void setEffect(int param0, Effect param1) {
+    final void setEffect(int param0, HazardEffect param1) {
         try {
           this.effect = param1;
           if (param0 > -122) {
@@ -1116,7 +1116,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
               }
             }
             if (param0 != -1) {
-              this.effect = (Effect) null;
+              this.effect = (HazardEffect) null;
             }
             return;
           }
@@ -1160,7 +1160,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
               if (!(this.y < this.room.getHeight(-121))) {
                 this.expired = true;
                 if (param0 != -1) {
-                  this.effect = (Effect) null;
+                  this.effect = (HazardEffect) null;
                 }
                 return;
               }
@@ -1199,7 +1199,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         if (param0 == -1) {
           return;
         }
-        this.effect = (Effect) null;
+        this.effect = (HazardEffect) null;
     }
 
     public final boolean canBeCrushedBy(WorldBody param0, int param1) {
@@ -1236,7 +1236,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         return this.y;
     }
 
-    public final int applyAreaEffect(Effect param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int applyAreaEffect(HazardEffect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -1273,7 +1273,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         }
     }
 
-    public final int applyProjectileEffect(Effect param0, Projectile param1, int param2) {
+    public final int applyProjectileEffect(HazardEffect param0, Projectile param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -1320,7 +1320,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         }
     }
 
-    public final int applyBeamEffect(Effect param0, int param1, BeamSegment param2) {
+    public final int applyBeamEffect(HazardEffect param0, int param1, BeamSegment param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -1384,8 +1384,8 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         if (param0) {
           return 7 + 7 * this.serial;
         }
-        Effect var3 = (Effect) null;
-        this.setEffect(-80, (Effect) null);
+        HazardEffect var3 = (HazardEffect) null;
+        this.setEffect(-80, (HazardEffect) null);
         return 7 + 7 * this.serial;
     }
 

@@ -5,7 +5,7 @@ final class LaserShooterComponent extends ShooterComponent {
     final Trap createTrap(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         BeamShooterBehaviour var5 = null;
-        Effect var6 = null;
+        HazardEffect var6 = null;
         ModelCodec var7 = null;
         BlockModel var8 = null;
         Trap var9 = null;
@@ -20,7 +20,7 @@ final class LaserShooterComponent extends ShooterComponent {
           var9.setObstructionLevel(param1, 0);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new BeamShooterBehaviour(param2, param0);
-          var6 = new Effect(1, 10);
+          var6 = new HazardEffect(1, 10);
           var6.setDeathMessageIndex(1, 13);
           var5.setEffect(var6, true);
           this.applyTimingPattern((byte) 43, var5, param2);
@@ -81,7 +81,7 @@ final class LaserShooterComponent extends ShooterComponent {
             return false;
           }
           if (!param1) {
-            LaserShooterComponent.D(97);
+            LaserShooterComponent.ensureToolkitResources(97);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,7 +198,7 @@ final class LaserShooterComponent extends ShooterComponent {
         return true;
     }
 
-    final static void D(int param0) {
+    final static void ensureToolkitResources(int param0) {
         if (param0 != 17229) {
           return;
         }

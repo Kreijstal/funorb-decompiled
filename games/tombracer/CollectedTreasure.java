@@ -21,14 +21,14 @@ final class CollectedTreasure extends IntrusiveNode {
         return "PlayerItem(" + this.field_f + "," + this.field_g + "," + this.field_h + ")";
     }
 
-    final static Sprite[] a(byte param0, int param1, int param2, int param3) {
+    final static Sprite[] createSolidBorderNineSlice(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
         var7[0] = LoadProfileCommand.createSolidSprite(param1, 121, param3);
         if (param0 <= 111) {
-          CollectedTreasure.a((byte) 34, 94, 33, 36);
+          CollectedTreasure.createSolidBorderNineSlice((byte) 34, 94, 33, 36);
         }
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];

@@ -5,11 +5,11 @@ final class oi {
     static PlatformTaskDispatcher field_a;
     static int field_b;
 
-    final static void a(long param0, int param1, int param2, String param3, int param4) {
+    final static void queueQuickChatMessage(long param0, int param1, int param2, String param3, int param4) {
         try {
           if (param2 <= 1) {
             String var7 = (String) null;
-            oi.a(-68L, 54, 86, (String) null, 2);
+            oi.queueQuickChatMessage(-68L, 54, 86, (String) null, 2);
           }
           VerticalGradientOperator.field_n = param4;
           apa.field_a = param0;

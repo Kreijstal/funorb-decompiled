@@ -260,7 +260,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_21_0 = LegacyOpenGlTexture.field_j;
             return stackIn_21_0;
           }
-          if (kv.a((byte) 55, var5, var6)) {
+          if (kv.containsNameOrReverse((byte) 55, var5, var6)) {
             stackIn_25_0 = ClipStackEntry.field_h;
             return stackIn_25_0;
           }

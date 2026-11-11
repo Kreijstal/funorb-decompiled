@@ -87,7 +87,7 @@ final class ContextMenu extends UiComponent {
         }
     }
 
-    final static void e(byte param0) {
+    final static void openQuickChat(byte param0) {
         OpenGlUnderwaterEffect.field_q = 0;
         HiscoreTable.openQuickChatMenu(-21844);
         if (param0 <= 95) {
