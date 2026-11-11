@@ -120,7 +120,7 @@ abstract class SceneLight extends IntrusiveNode {
           su.createToolkitSprite(MirrorComponent.field_F, param0, (byte) -2);
           gca.field_a = su.createToolkitSprite(rp.field_f, param0, (byte) 126);
           WidgetStyleLayer.field_b = LoadLevelCommand.a(param0, StandingsPhase.field_o, param1 - 17309);
-          IntrusiveDeque.field_c = su.createToolkitSprite(ko.field_j, param0, (byte) -95);
+          IntrusiveDeque.field_c = su.createToolkitSprite(MenuInputState.field_j, param0, (byte) -95);
           tka.field_p = su.createToolkitSprite(ht.field_Db, param0, (byte) 27);
           Projectile.field_n = su.createToolkitSprite(RenderableNode.field_j, param0, (byte) -37);
           TripBeamBehaviour.field_y = su.createToolkitSprite(ResourceArchive.field_h, param0, (byte) 127);

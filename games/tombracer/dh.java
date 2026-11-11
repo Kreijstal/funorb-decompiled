@@ -148,11 +148,11 @@ final class dh {
             }
             var21 = stackIn_39_0;
             var22 = MatchStatistics.field_f[var15Lifetime1];
-            var23 = mg.field_e[var15Lifetime1];
+            var23 = TimingPattern.field_e[var15Lifetime1];
             var24 = MatchStatistics.field_f[var16];
-            var25 = mg.field_e[var16];
+            var25 = TimingPattern.field_e[var16];
             var26 = MatchStatistics.field_f[var17];
-            var27 = mg.field_e[var17];
+            var27 = TimingPattern.field_e[var17];
             if (var19 == var18 &&
               var19 == var20) {
               var28 = var54[var18];

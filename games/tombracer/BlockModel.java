@@ -30,7 +30,7 @@ final class BlockModel extends TrapModel {
 
     final void onRemoved(byte param0, int param1) {
         super.onRemoved((byte) 97, param1);
-        this.getRoom(28).getParticleEffects(false).a(this.body.getY(9648), this.body.getElevation((byte) 115), (byte) 46, this.body.getX(3));
+        this.getRoom(28).getParticleEffects(false).spawnBlockDebris(this.body.getY(9648), this.body.getElevation((byte) 115), (byte) 46, this.body.getX(3));
         SoundEventPlayer var5 = (SoundEventPlayer) (this.getRoom(30).soundQueue);
         if (var5 == null) {
           return;
@@ -251,9 +251,9 @@ final class BlockModel extends TrapModel {
           var7 = (Behaviour) (var15.first(true));
           while (var7 != null) {
             if (var7 instanceof BeamShooterBehaviour) {
-              if (((BeamShooterBehaviour) (var7)).b(-98)) {
+              if (((BeamShooterBehaviour) (var7)).isFiring(-98)) {
                 var8 = 1;
-                var9 = ((BeamShooterBehaviour) (var7)).c(param0 ^ -105);
+                var9 = ((BeamShooterBehaviour) (var7)).getBeam(param0 ^ -105);
                 while (var9.nextSegment != null) {
                   if (4 > var8) {
                     var9 = var9.nextSegment;
@@ -298,7 +298,7 @@ final class BlockModel extends TrapModel {
               var7 = (Behaviour) (var17.next(-1));
               continue;
             }
-            if (!((BeamShooterBehaviour) (var7)).b(-19)) {
+            if (!((BeamShooterBehaviour) (var7)).isFiring(-19)) {
               if (this.field_u == null) {
                 var7 = (Behaviour) (var17.next(-1));
                 continue;
@@ -309,7 +309,7 @@ final class BlockModel extends TrapModel {
               continue;
             }
             var8Lifetime1 = 1;
-            var9Lifetime1 = ((BeamShooterBehaviour) (var7)).c(param0 ^ -110);
+            var9Lifetime1 = ((BeamShooterBehaviour) (var7)).getBeam(param0 ^ -110);
             while (var9Lifetime1.nextSegment != null) {
               if (var8Lifetime1 < 4) {
                 var9Lifetime1 = var9Lifetime1.nextSegment;

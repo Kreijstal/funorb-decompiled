@@ -13,7 +13,7 @@ abstract class MatchPhase {
     static int field_j;
     private MenuEntry field_k;
     MatchProtocol protocol;
-    private ko field_a;
+    private MenuInputState field_a;
 
     public static void releaseStatics(int param0) {
         if (param0 == 96) {
@@ -65,23 +65,23 @@ abstract class MatchPhase {
     private final void a(byte param0) {
         this.field_k = new MenuEntry(0, OpenGlSceneLight.field_q[0], 0, false);
         if (param0 == -78) {
-          this.field_k.field_b = this.field_k.e(-163) / 2 + 10;
+          this.field_k.field_b = this.field_k.getWidth(-163) / 2 + 10;
           this.field_k.field_i = -25 + SwitchLinkList.b(0);
           this.field_k.a(false);
-          this.field_a = new ko(1);
+          this.field_a = new MenuInputState(1);
           return;
         }
         this.a((byte) 97);
-        this.field_k.field_b = this.field_k.e(-163) / 2 + 10;
+        this.field_k.field_b = this.field_k.getWidth(-163) / 2 + 10;
         this.field_k.field_i = -25 + SwitchLinkList.b(0);
         this.field_k.a(false);
-        this.field_a = new ko(1);
+        this.field_a = new MenuInputState(1);
     }
 
     final void c(int param0) {
         boolean stackIn_4_1 = false;
         int stackIn_14_0 = 0;
-        ko stackIn_16_0 = null;
+        MenuInputState stackIn_16_0 = null;
         int stackIn_17_1 = 0;
         int stackIn_19_2 = 0;
         int stackIn_20_3 = 0;
@@ -89,7 +89,7 @@ abstract class MatchPhase {
         int stackIn_28_1 = 0;
         boolean stackIn_35_1 = false;
         int stackIn_45_0 = 0;
-        ko stackIn_47_0 = null;
+        MenuInputState stackIn_47_0 = null;
         int stackIn_48_1 = 0;
         int stackIn_50_2 = 0;
         int stackIn_51_3 = 0;
@@ -98,7 +98,7 @@ abstract class MatchPhase {
         int stackIn_67_0 = 0;
         boolean stackIn_70_1 = false;
         int stackIn_79_0 = 0;
-        ko stackIn_81_0 = null;
+        MenuInputState stackIn_81_0 = null;
         int stackIn_82_1 = 0;
         int stackIn_84_2 = 0;
         int stackIn_85_3 = 0;
@@ -133,8 +133,8 @@ abstract class MatchPhase {
           stackIn_17_1 = (var3 != 0) ? 0 : -1;
           stackIn_19_2 = 85;
           stackIn_20_3 = (var2 != 0) ? 0 : -1;
-          ((ko) (Object) stackIn_16_0).a(stackIn_17_1, stackIn_19_2, stackIn_20_3);
-          this.field_k.a(true, this.field_b, true, 6);
+          ((MenuInputState) (Object) stackIn_16_0).updatePointer(stackIn_17_1, stackIn_19_2, stackIn_20_3);
+          this.field_k.update(true, this.field_b, true, 6);
           if (param0 != 7) {
             return;
           }
@@ -171,8 +171,8 @@ abstract class MatchPhase {
           stackIn_48_1 = (var3Lifetime1 != 0) ? 0 : -1;
           stackIn_50_2 = 85;
           stackIn_51_3 = (var2Lifetime1 != 0) ? 0 : -1;
-          ((ko) (Object) stackIn_47_0).a(stackIn_48_1, stackIn_50_2, stackIn_51_3);
-          this.field_k.a(true, this.field_b, true, 6);
+          ((MenuInputState) (Object) stackIn_47_0).updatePointer(stackIn_48_1, stackIn_50_2, stackIn_51_3);
+          this.field_k.update(true, this.field_b, true, 6);
           if (param0 != 7) {
             return;
           }
@@ -213,8 +213,8 @@ abstract class MatchPhase {
         stackIn_82_1 = (var3Lifetime2 != 0) ? 0 : -1;
         stackIn_84_2 = 85;
         stackIn_85_3 = (var2Lifetime2 != 0) ? 0 : -1;
-        ((ko) (Object) stackIn_81_0).a(stackIn_82_1, stackIn_84_2, stackIn_85_3);
-        this.field_k.a(true, this.field_b, true, 6);
+        ((MenuInputState) (Object) stackIn_81_0).updatePointer(stackIn_82_1, stackIn_84_2, stackIn_85_3);
+        this.field_k.update(true, this.field_b, true, 6);
         if (param0 != 7) {
           return;
         }
@@ -245,7 +245,7 @@ abstract class MatchPhase {
         if (param0 != -27142) {
           return;
         }
-        this.field_k.a(false, this.field_i, param0 + 27143, this.field_b);
+        this.field_k.draw(false, this.field_i, param0 + 27143, this.field_b);
     }
 
     static {

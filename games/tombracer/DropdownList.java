@@ -24,7 +24,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         if (this.field_z.field_I == null) {
           return;
         }
-        int var3_int = this.a((byte) 126, param0.toLowerCase());
+        int var3_int = this.findItemStartingWith((byte) 126, param0.toLowerCase());
         if (var3_int == -1) {
           return;
         }
@@ -145,7 +145,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         RuntimeException var6 = null;
         try {
           if (!this.j((byte) -73)) {
-            this.d(-21088);
+            this.openList(-21088);
           } else {
             this.a((byte) 119);
           }
@@ -205,7 +205,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         }
     }
 
-    private final void d(int param0) {
+    private final void openList(int param0) {
         int var2 = this.field_z.c(23112);
         int var3 = var2;
         int var4 = 0;
@@ -353,7 +353,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
                   if (this.field_G) {
                     this.a((byte) 122);
                   } else {
-                    this.d(-21088);
+                    this.openList(-21088);
                   }
                   return true;
                 }
@@ -375,7 +375,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
               }
               if (decompiledFrameRemainder0) {
                 if (!this.j((byte) 88)) {
-                  this.d(-21088);
+                  this.openList(-21088);
                 }
                 var6_intLifetime1 = this.field_F.field_A.field_p / this.field_z.field_K;
                 if (105 == param2) {
@@ -395,7 +395,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
             }
             if (decompiledFrameRemainder0) {
               if (!this.j((byte) 101)) {
-                this.d(-21088);
+                this.openList(-21088);
               }
               if (param2 == 99) {
                 this.field_z.field_G = this.field_z.field_G + 1;
@@ -432,7 +432,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         }
     }
 
-    private final int a(byte param0, String param1) {
+    private final int findItemStartingWith(byte param0, String param1) {
         int discarded$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -450,7 +450,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
           param1 = param1.toLowerCase();
           if (param0 < 116) {
             var6 = (String) null;
-            discarded$1 = this.a((byte) 25, (String) null);
+            discarded$1 = this.findItemStartingWith((byte) 25, (String) null);
           }
           var3_int = 0;
           while (true) {

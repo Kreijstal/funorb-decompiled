@@ -448,7 +448,7 @@ final class np extends ka {
           param5.field_L = this.field_L;
           param5.field_lb = this.field_lb;
           var7_int = jj.hasAnyMask33(this.field_u, param1, -32842) ? 1 : 0;
-          var8 = mg.hasAnyMask34((byte) -53, this.field_u, param1) ? 1 : 0;
+          var8 = TimingPattern.hasAnyMask34((byte) -53, this.field_u, param1) ? 1 : 0;
           var9 = gha.hasAnyMask52(this.field_u, param1, param3 ^ -22830) ? 1 : 0;
           var10 = var8 | var7_int | var9;
           if (param3 != -22857) {

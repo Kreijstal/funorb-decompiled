@@ -21,7 +21,7 @@ final class du {
         jia.field_a = null;
         ColourKeyOperator.field_m = 0;
         var3 = field_d;
-        field_d = ko.field_d;
+        field_d = MenuInputState.field_d;
         if (param0 == 51) {
           wg.field_l.field_n = 2;
         } else {
@@ -31,7 +31,7 @@ final class du {
             wg.field_l.field_n = 1;
           }
         }
-        ko.field_d = var3;
+        MenuInputState.field_d = var3;
         wg.field_l.field_a = wg.field_l.field_a + 1;
         if (wg.field_l.field_a >= 2 &&
           51 == param0) {

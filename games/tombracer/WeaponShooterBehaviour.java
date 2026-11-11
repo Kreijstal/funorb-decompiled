@@ -3,7 +3,7 @@
  */
 final class WeaponShooterBehaviour extends Behaviour implements mra {
     private boolean field_t;
-    private mg field_n;
+    private TimingPattern field_n;
     private boolean field_o;
     static kia field_r;
     private boolean field_p;
@@ -97,7 +97,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    public final void a(int param0, mg param1) {
+    public final void setTimingPattern(int param0, TimingPattern param1) {
         try {
           if (param0 < 81) {
             this.l(-69);
@@ -112,7 +112,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         super(param0, param1);
         this.field_o = true;
         try {
-          this.field_n = new mg();
+          this.field_n = new TimingPattern();
           this.field_u = TextureOperator.a(0, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -122,7 +122,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_n.a(15637, param1);
+          this.field_n.encode(15637, param1);
           this.field_u.a(param1, (byte) 84);
           param1.writeBits((byte) -128, this.field_o ? 1 : 0, 1);
           param1.writeBits((byte) -128, this.field_p ? 1 : 0, 1);
@@ -139,7 +139,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         field_q = null;
     }
 
-    public final boolean b(int param0) {
+    public final boolean isFiring(int param0) {
         int var2 = -86 / ((param0 - 37) / 45);
         if (!this.field_t) {
           return false;
@@ -176,7 +176,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
 
     final boolean g(byte param0) {
         if (param0 != -68) {
-          this.field_n = (mg) null;
+          this.field_n = (TimingPattern) null;
           if (!this.field_s) {
             return false;
           }
@@ -219,7 +219,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         super(param0, param1, param2);
         this.field_o = true;
         try {
-          this.field_n = new mg(param0.formatVersion, param1);
+          this.field_n = new TimingPattern(param0.formatVersion, param1);
           this.field_u = jl.a(param0, true, param1);
           this.field_o = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_u.refillAmmo(90, this.field_o);
@@ -239,8 +239,8 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
             return;
           }
           if (null != this.field_n) {
-            this.field_n.d(0);
-            if (!this.field_n.c(0)) {
+            this.field_n.tick(0);
+            if (!this.field_n.hasToggled(0)) {
               this.field_u.c(param0 - 5515);
               this.field_t = false;
               if (param0 != 5418) {
@@ -272,8 +272,8 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         } else {
           boolean decompiledFrameRemainder0 = true;
           if (null != this.field_n) {
-            this.field_n.d(0);
-            if (!this.field_n.c(0)) {
+            this.field_n.tick(0);
+            if (!this.field_n.hasToggled(0)) {
               this.field_u.c(param0 - 5515);
               this.field_t = false;
               if (param0 != 5418) {

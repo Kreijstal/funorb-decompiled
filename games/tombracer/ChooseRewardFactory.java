@@ -93,7 +93,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
           if (WeaveOperator.field_n.length() <= 0) {
             return true;
           }
-          DarknessBehaviour.a(-1 + WeaveOperator.field_n.length(), ' ', -11, WeaveOperator.field_n);
+          DarknessBehaviour.padTo(-1 + WeaveOperator.field_n.length(), ' ', -11, WeaveOperator.field_n);
           return true;
         }
         var4 = HardwareOpenGlToolkit.field_td;
@@ -125,7 +125,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
                     if (var5Lifetime1 >= PlatformBehaviour.field_s.stringWidth(WeaveOperator.field_n.toString())) {
                       return true;
                     }
-                    DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
+                    DarknessBehaviour.padTo(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                     return true;
                   }
                   var7 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
@@ -135,7 +135,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
                 if (var5Lifetime1 >= PlatformBehaviour.field_s.stringWidth(WeaveOperator.field_n.toString())) {
                   return true;
                 }
-                DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
+                DarknessBehaviour.padTo(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                 return true;
               }
               var7 = "[" + cla.field_o + "] ";
@@ -149,7 +149,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
                 if (var5Lifetime1 >= PlatformBehaviour.field_s.stringWidth(WeaveOperator.field_n.toString())) {
                   return true;
                 }
-                DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
+                DarknessBehaviour.padTo(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                 return true;
               }
               var7 = "[" + LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{C2SChooseRewardPacket.field_a.field_tb}) + "] ";
@@ -172,7 +172,7 @@ final class ChooseRewardFactory implements BitDecodableFactory {
         if (var5Lifetime1 >= PlatformBehaviour.field_s.stringWidth(WeaveOperator.field_n.toString())) {
           return true;
         }
-        DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
+        DarknessBehaviour.padTo(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
         return true;
     }
 

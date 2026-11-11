@@ -4,11 +4,11 @@
 final class DarknessBehaviour extends Behaviour {
     static UrlDownloadRequest field_o;
     private int field_n;
-    private Sprite field_r;
+    private Sprite mask;
     private int field_q;
     private int field_p;
 
-    private final int b(int param0, int param1) {
+    private final int toMaskCoordinate(int param0, int param1) {
         if (param0 >= -20) {
           return 49;
         }
@@ -23,10 +23,10 @@ final class DarknessBehaviour extends Behaviour {
         super.toggle(82);
         var2 = -79 % ((28 - param0) / 49);
         if (!this.enabled) {
-          this.e(false);
+          this.clearMask(false);
         } else {
           if (this.getRoom(true).hasActiveVariant((byte) -82)) {
-            this.a((byte) -115, this.field_p);
+            this.fillMask((byte) -115, this.field_p);
           }
         }
     }
@@ -78,7 +78,7 @@ final class DarknessBehaviour extends Behaviour {
     final void attachToTrap(boolean param0, Trap param1) {
         try {
           super.attachToTrap(param0, param1);
-          this.b(0);
+          this.createMask(0);
           param1.setHandlesEffectType(26492, true, 1);
           param1.setAlwaysBlocksBeams(param0, 35);
           param1.b((byte) 112, 8);
@@ -106,27 +106,27 @@ final class DarknessBehaviour extends Behaviour {
         int var21;
         var21 = TombRacer.field_G ? 1 : 0;
         if (param4 <= 79) {
-          this.field_r = (Sprite) null;
+          this.mask = (Sprite) null;
         }
         if (2 != param3) {
           return 0;
         }
-        if (null == this.field_r) {
+        if (null == this.mask) {
           return 0;
         }
-        nm.a(this.field_r, (byte) 89);
+        nm.a(this.mask, (byte) 89);
         var7 = 0;
         var8 = param5 - (param0 / 2 + this.trap.getX(3) - this.trap.getWidth(-15) / 2);
         var9 = -this.trap.getY(9648) + this.trap.getHeight((byte) 55) / 2 + (param2 - param1 / 2);
         var10 = param0 + var8;
         var11 = var9 + param1;
-        var12 = this.b(-105, var8);
-        var13 = this.b(-127, var9);
-        var14 = this.b(-68, 7 + var10);
-        var15 = this.b(-73, 8 + (var11 - 1));
+        var12 = this.toMaskCoordinate(-105, var8);
+        var13 = this.toMaskCoordinate(-127, var9);
+        var14 = this.toMaskCoordinate(-68, 7 + var10);
+        var15 = this.toMaskCoordinate(-73, 8 + (var11 - 1));
         var16 = 64;
         for (var17 = var13; var17 <= var15; var17++) {
-          var18 = this.field_r.field_m * var17 + var12;
+          var18 = this.mask.field_m * var17 + var12;
           for (var19 = var12; var14 >= var19; var19++) {
             if (var18 >= 0 &&
               var18 < SoftwareRasterizer.pixels.length &&
@@ -192,7 +192,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final static StringBuilder a(int param0, char param1, int param2, StringBuilder param3) {
+    final static StringBuilder padTo(int param0, char param1, int param2, StringBuilder param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -209,7 +209,7 @@ final class DarknessBehaviour extends Behaviour {
           param3.setLength(param0);
           if (param2 != -11) {
             var7 = (StringBuilder) null;
-            DarknessBehaviour.a(101, 'ﾘ', -14, (StringBuilder) null);
+            DarknessBehaviour.padTo(101, 'ﾘ', -14, (StringBuilder) null);
           }
           for (var5 = var4_int; param0 > var5; var5++) {
             param3.setCharAt(var5, param1);
@@ -230,11 +230,11 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_o = null;
         if (!param0) {
           StringBuilder var2 = (StringBuilder) null;
-          DarknessBehaviour.a(101, 'ﾥ', 42, (StringBuilder) null);
+          DarknessBehaviour.padTo(101, 'ﾥ', 42, (StringBuilder) null);
         }
     }
 
@@ -294,13 +294,13 @@ final class DarknessBehaviour extends Behaviour {
         int[] var6Lifetime1;
         int[] var6Lifetime1Lifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (this.field_r == null) {
+        if (this.mask == null) {
           return;
         }
         if (!this.enabled) {
           return;
         }
-        var8 = this.field_r.pixels;
+        var8 = this.mask.pixels;
         var7 = var8;
         var6 = var7;
         var2 = var6;
@@ -354,7 +354,7 @@ final class DarknessBehaviour extends Behaviour {
             var8 = 9;
           }
           var9 = var8 * HardwareReflectionEffect.field_e.length / 10;
-          nm.a(this.field_r, (byte) 110);
+          nm.a(this.mask, (byte) 110);
           iha.drawGlowingLine(var4_int / 8 >> 16, var6 / 8 >> 16, var5 / 8 >> 16, var7 / 8 >> 16, 2, var9, HardwareReflectionEffect.field_e);
           pfa.a(1);
           stackIn_6_0 = 0;
@@ -379,14 +379,14 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final void e(boolean param0) {
+    final void clearMask(boolean param0) {
         if (param0) {
           return;
         }
-        this.a((byte) -125, 0);
+        this.fillMask((byte) -125, 0);
     }
 
-    private final void b(int param0) {
+    private final void createMask(int param0) {
         int var2;
         int var3;
         int stackIn_12_1 = 0;
@@ -401,18 +401,18 @@ final class DarknessBehaviour extends Behaviour {
         } else {
           this.field_p = 255;
         }
-        this.field_r = null;
+        this.mask = null;
         if (var2 >= 32 &&
           var3 >= 32 &&
           var2 < 1024 && var3 < 1024) {
-          this.field_r = new Sprite(var2 / 8, var3 / 8);
+          this.mask = new Sprite(var2 / 8, var3 / 8);
           stackIn_12_1 = -117;
           if (!this.enabled) {
             stackIn_13_2 = 0;
           } else {
             stackIn_13_2 = 255;
           }
-          this.a((byte) stackIn_12_1, stackIn_13_2);
+          this.fillMask((byte) stackIn_12_1, stackIn_13_2);
         }
     }
 
@@ -423,15 +423,15 @@ final class DarknessBehaviour extends Behaviour {
         this.field_p = 255;
     }
 
-    private final void a(byte param0, int param1) {
+    private final void fillMask(byte param0, int param1) {
         int var5 = TombRacer.field_G ? 1 : 0;
-        if (null == this.field_r) {
+        if (null == this.mask) {
           return;
         }
         if (this.getRoom(true).hasActiveVariant((byte) -82)) {
           param1 = param1 / 2;
         }
-        int[] var6 = this.field_r.pixels;
+        int[] var6 = this.mask.pixels;
         int[] var3 = var6;
         int var4 = -1 + var6.length;
         if (param0 >= -93) {
@@ -445,7 +445,7 @@ final class DarknessBehaviour extends Behaviour {
 
     private final void a(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = -106 % ((-24 - param1) / 60);
-        if (null == this.field_r) {
+        if (null == this.mask) {
           return;
         }
     }

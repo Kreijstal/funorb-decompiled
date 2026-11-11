@@ -209,9 +209,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           var7 = jta.a((byte) 123, "largefont", param4, "lobby", param3);
           PenaltyNotice.field_f = jta.a((byte) 118, "generalfont", param4, "lobby", param3);
           LegacyOpenGlRidgedWaterEffect.field_e = jta.a((byte) 127, "chatfont", param4, "lobby", param3);
-          var7.a(var5, var24);
-          PenaltyNotice.field_f.a(var5, var24);
-          LegacyOpenGlRidgedWaterEffect.field_e.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          PenaltyNotice.field_f.setInlineSprites(var5, var24);
+          LegacyOpenGlRidgedWaterEffect.field_e.setInlineSprites(var5, var24);
           var8 = new jea(0L, (jea) null);
           var8.field_P = di.field_a;
           var8.field_ib = 16777215;

@@ -378,12 +378,12 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           if (var3 != 3) {
             if (var3 == 0) {
               var2 = qva.a((byte) -35, this.velocityY, this.velocityX) + 4096;
-              this.room.getParticleEffects(false).a(this.y, (byte) -83, 5, this.z, 3, var2, 10, 262144, this.x, 16, 8);
+              this.room.getParticleEffects(false).spawnBurst(this.y, (byte) -83, 5, this.z, 3, var2, 10, 262144, this.x, 16, 8);
               return;
             }
             return;
           }
-          this.room.getParticleEffects(false).a(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.size >> 18, this.size >> 17);
+          this.room.getParticleEffects(false).spawnBurst(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.size >> 18, this.size >> 17);
           return;
         }
         var3Lifetime1 = this.effect.type;
@@ -398,10 +398,10 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
             return;
           }
           var2Lifetime1 = qva.a((byte) -35, this.velocityY, this.velocityX) + 4096;
-          this.room.getParticleEffects(false).a(this.y, (byte) -83, 5, this.z, 3, var2Lifetime1, 10, 262144, this.x, 16, 8);
+          this.room.getParticleEffects(false).spawnBurst(this.y, (byte) -83, 5, this.z, 3, var2Lifetime1, 10, 262144, this.x, 16, 8);
           return;
         }
-        this.room.getParticleEffects(false).a(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.size >> 18, this.size >> 17);
+        this.room.getParticleEffects(false).spawnBurst(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.size >> 18, this.size >> 17);
     }
 
     private final int reactToEffect(int param0, Effect param1) {
@@ -432,7 +432,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           if (this.effect.type == 3 && (param1.type == 4 ||
             param1.type == 5)) {
             this.destroy(false, 0);
-            this.room.getParticleEffects(false).c(this.x, 93, this.velocityY, this.z, this.velocityX, this.y);
+            this.room.getParticleEffects(false).spawnSteam(this.x, 93, this.velocityY, this.z, this.velocityX, this.y);
             if (5 == param1.type) {
               this.room.spawnPuddle(30097, 1048576, 0, this.y, this.x);
             }

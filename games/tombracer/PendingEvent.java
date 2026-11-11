@@ -10,13 +10,13 @@ final class PendingEvent extends IntrusiveNode {
     private int start;
     private int course;
 
-    final boolean a(int param0, int param1) {
-        if (this.b(120)) {
+    final boolean isStale(int param0, int param1) {
+        if (this.isRoomScoped(120)) {
           if (param0 > this.room) {
             return true;
           }
           if (param1 != 3) {
-            this.b(-6, -25);
+            this.ticksSinceStart(-6, -25);
             return false;
           }
           return false;
@@ -24,16 +24,16 @@ final class PendingEvent extends IntrusiveNode {
         if (param1 == 3) {
           return false;
         }
-        this.b(-6, -25);
+        this.ticksSinceStart(-6, -25);
         return false;
     }
 
-    final boolean a(int param0, int param1, int param2) {
-        if (this.a(param2, 3)) {
+    final boolean isFinished(int param0, int param1, int param2) {
+        if (this.isStale(param2, 3)) {
           return true;
         }
         if (param1 != -1) {
-          this.a(-125, -75, 17);
+          this.isFinished(-125, -75, 17);
           if (this.duration <= 0) {
             return false;
           }
@@ -53,7 +53,7 @@ final class PendingEvent extends IntrusiveNode {
 
     private final int getStart(boolean param0) {
         if (param0) {
-          this.c(40, 38);
+          this.isActiveAt(40, 38);
           return this.start;
         }
         return this.start;
@@ -68,7 +68,7 @@ final class PendingEvent extends IntrusiveNode {
         }
     }
 
-    final boolean a(PendingEvent param0, int param1) {
+    final boolean isDuplicateOf(PendingEvent param0, int param1) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -81,13 +81,13 @@ final class PendingEvent extends IntrusiveNode {
         int var7 = 0;
         int var8 = 0;
         try {
-          if (!this.event.a(false, param0.event)) {
+          if (!this.event.isEquivalentTo(false, param0.event)) {
             return false;
           }
           if (this.course != param0.course) {
             return false;
           }
-          if (this.b(120) &&
+          if (this.isRoomScoped(120) &&
             param0.room != this.room) {
             return false;
           }
@@ -136,7 +136,7 @@ final class PendingEvent extends IntrusiveNode {
         }
     }
 
-    final boolean c(int param0, int param1) {
+    final boolean isActiveAt(int param0, int param1) {
         if (param1 < 95) {
           return false;
         }
@@ -152,24 +152,24 @@ final class PendingEvent extends IntrusiveNode {
         return true;
     }
 
-    final void a(PlayerSimulation param0, int param1) {
+    final void finish(PlayerSimulation param0, int param1) {
         int discarded$0 = 0;
         try {
           if (param1 > -52) {
             discarded$0 = this.getEnd(22);
           }
-          this.event.a(this.room, (byte) 102, param0);
+          this.event.finish(this.room, (byte) 102, param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(PlayerSimulation param0, int param1, int param2) {
+    final void applyTick(PlayerSimulation param0, int param1, int param2) {
         try {
           if (param2 != 0) {
             this.toString();
           }
-          this.event.a(param0, 113, this.room, param1);
+          this.event.applyTick(param0, 113, this.room, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -186,7 +186,7 @@ final class PendingEvent extends IntrusiveNode {
         try {
           param0.beginBitAccess((byte) 112);
           if (param1 > -108) {
-            this.a(3, -70, 47);
+            this.isFinished(3, -70, 47);
           }
           this.event = EventFactory.readEvent(-90, param0, 26);
           this.instigator = param0.readBits((byte) 44, 3);
@@ -194,7 +194,7 @@ final class PendingEvent extends IntrusiveNode {
           this.start = param0.readBits((byte) 44, 32);
           this.duration = param0.readBits((byte) 44, 8);
           this.end = this.start + 50 * this.duration;
-          if (this.b(122)) {
+          if (this.isRoomScoped(122)) {
             this.room = param0.readBits((byte) 44, 5);
           }
           param0.endBitAccess((byte) 98);
@@ -203,19 +203,19 @@ final class PendingEvent extends IntrusiveNode {
         }
     }
 
-    private final boolean b(int param0) {
+    private final boolean isRoomScoped(int param0) {
         if (param0 <= 118) {
           return true;
         }
         return this.event.isRoomScoped(false);
     }
 
-    final int b(int param0, int param1) {
+    final int ticksSinceStart(int param0, int param1) {
         if (param1 <= -15) {
           return param0 - this.start;
         }
         PlayerSimulation var4 = (PlayerSimulation) null;
-        this.a((PlayerSimulation) null, -69);
+        this.finish((PlayerSimulation) null, -69);
         return param0 - this.start;
     }
 
@@ -229,7 +229,7 @@ final class PendingEvent extends IntrusiveNode {
     public final String toString() {
         String var1 = "PendingEvent";
         var1 = var1 + "(instigator: " + this.instigator + ", course:" + this.course;
-        if (this.b(121)) {
+        if (this.isRoomScoped(121)) {
           var1 = var1 + ", room:" + this.room;
         }
         var1 = var1 + ", start:" + this.start + ", duration:" + this.duration + ")";
@@ -266,14 +266,14 @@ final class PendingEvent extends IntrusiveNode {
         try {
           param0.beginBitWrite(8);
           if (param1 != -19733) {
-            this.c(123, -124);
+            this.isActiveAt(123, -124);
           }
           this.event.encode(param0, -5);
           param0.writeBits((byte) -32, this.instigator, 3);
           param0.writeBits((byte) -2, this.course, 3);
           param0.writeBits((byte) -128, this.start, 32);
           param0.writeBits((byte) 95, this.duration, 8);
-          if (this.b(122)) {
+          if (this.isRoomScoped(122)) {
             param0.writeBits((byte) -125, this.room, 5);
             param0.endBitWrite(-1826190686);
           } else {

@@ -111,7 +111,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_db = null;
         field_Z = null;
         field_X = null;

@@ -146,7 +146,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           if (param1 < 18) {
             efa.releaseStatics(false);
           }
-          ((TextInputWidget) ((Object) var3)).a(false, -16719, var4);
+          ((TextInputWidget) ((Object) var3)).setText(false, -16719, var4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "efa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -19,7 +19,7 @@ final class ContextMenu extends jea {
     static ka[] field_Ib;
     private int field_xb;
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void openAt(int param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
         int var6;
         int var7;
@@ -99,7 +99,7 @@ final class ContextMenu extends jea {
         this(param0, param0.field_Cb, param0.field_ub, param0.field_Ab, param0.field_Hb, param0.field_wb, param0.field_vb, param0.field_tb, param0.field_Gb);
     }
 
-    final int d(int param0, boolean param1) {
+    final int updateAndPollAction(int param0, boolean param1) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         this.c(-102, param1);

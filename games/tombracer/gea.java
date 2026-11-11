@@ -79,7 +79,7 @@ final class gea {
           var6 = SoftwareRasterizer.height;
           var16 = SoftwareRasterizer.pixels;
           EffectEvent.field_j = new Sprite(10, 14);
-          EffectEvent.field_j.c();
+          EffectEvent.field_j.makeRasterTarget();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }

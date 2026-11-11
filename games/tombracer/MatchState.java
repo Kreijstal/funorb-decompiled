@@ -163,7 +163,7 @@ final class MatchState implements dv {
 
     final void setRoundWinner(int param0, int param1) {
         this.roundWinner = param0;
-        this.statistics.a(this.roundWinner, false);
+        this.statistics.markRoundLosers(this.roundWinner, false);
         this.statistics.a((byte) 74);
         if (~this.roundWinner <= param1) {
           this.roundWins[this.roundWinner] = this.roundWins[this.roundWinner] + 1;
@@ -543,7 +543,7 @@ final class MatchState implements dv {
             this.getMatchWinner((byte) -115);
           }
           var3 = this.simulations[param1.getCourse(3)];
-          var3.getObserver(9262).a(var3, param1, false);
+          var3.getObserver(9262).queueEvent(var3, param1, false);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ff.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

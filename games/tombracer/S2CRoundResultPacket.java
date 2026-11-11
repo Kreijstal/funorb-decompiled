@@ -142,7 +142,7 @@ final class S2CRoundResultPacket implements GamePacket {
         }
         MatchState.field_w = param0;
         if (null != RoomHeader.field_e) {
-          RoomHeader.field_e.a(param0, -83);
+          RoomHeader.field_e.setMasterVolume(param0, -83);
         }
         if (null != LegacyOpenGlUnlitEffect.field_d) {
           LegacyOpenGlUnlitEffect.field_d.a((byte) 91, param0);

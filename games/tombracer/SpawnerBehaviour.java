@@ -6,7 +6,7 @@ final class SpawnerBehaviour extends Behaviour {
     private int field_r;
     private int field_p;
     static IntrusiveDeque field_n;
-    private mg field_o;
+    private TimingPattern field_o;
 
     final static ka a(int param0, int param1, int param2) {
         if (param1 == 12166) {
@@ -42,7 +42,7 @@ final class SpawnerBehaviour extends Behaviour {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_o.a(15637, param1);
+          this.field_o.encode(15637, param1);
           this.field_q.encode(param1, (byte) 52);
           param1.writeBits((byte) 121, this.field_p, 12);
         } catch (RuntimeException runtimeException) {
@@ -97,8 +97,8 @@ final class SpawnerBehaviour extends Behaviour {
           if (this.field_o == null) {
             return;
           }
-          this.field_o.d(0);
-          if (!this.field_o.c(0)) {
+          this.field_o.tick(0);
+          if (!this.field_o.hasToggled(0)) {
             return;
           }
           var2 = this.trap.getFacingAngle(-25787);
@@ -120,8 +120,8 @@ final class SpawnerBehaviour extends Behaviour {
         if (this.field_o == null) {
           return;
         }
-        this.field_o.d(0);
-        if (!this.field_o.c(0)) {
+        this.field_o.tick(0);
+        if (!this.field_o.hasToggled(0)) {
           return;
         }
         var2Lifetime1 = this.trap.getFacingAngle(-25787);
@@ -147,7 +147,7 @@ final class SpawnerBehaviour extends Behaviour {
         super(param0, param1, param2);
         this.field_p = 0;
         try {
-          this.field_o = new mg(param0.formatVersion, param1);
+          this.field_o = new TimingPattern(param0.formatVersion, param1);
           this.field_q = pha.readSpawner(param1, param0, 162);
           this.field_p = param1.readBits((byte) 44, 12);
         } catch (RuntimeException runtimeException) {

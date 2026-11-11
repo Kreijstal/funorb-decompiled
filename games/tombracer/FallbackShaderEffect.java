@@ -203,7 +203,7 @@ final class FallbackShaderEffect extends ShaderEffect {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = MessageOverlay.field_t.field_H.stringWidth(var16) + 3 * MessageOverlay.field_t.field_H.a('.');
+              var10Lifetime1 = MessageOverlay.field_t.field_H.stringWidth(var16) + 3 * MessageOverlay.field_t.field_H.charWidth('.');
               if ((lh.field_a & 48) == 16) {
                 var9 = var16 + ".";
               }

@@ -136,7 +136,7 @@ final class PlatformTaskDispatcher implements Runnable {
                   case 16:
                   default:
                     if (!this.field_c) {
-                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 5:
@@ -181,21 +181,21 @@ final class PlatformTaskDispatcher implements Runnable {
                           Class.forName("CursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_t, new Object[]{var13[0], var13[1], new Integer(var8.field_e), new Integer(var8.field_d), var13[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_j.startsWith("win")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var14 = (String) (var8.field_c);
                             if (!var14.startsWith("http://") &&
                               !var14.startsWith("https://")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var14.length(); var5++) {
                               if (var4_ref_String.indexOf((int) var14.charAt(var5)) == -1) {
-                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var14 + "\"");
@@ -204,7 +204,7 @@ final class PlatformTaskDispatcher implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter2;
                             var3_ref3 = (Exception) (Object) decompiledCaughtException;
                             var8.field_f = var3_ref3;
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref3);
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(var3_ref3);
                           }
                         }
                         break;
@@ -688,7 +688,7 @@ final class PlatformTaskDispatcher implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

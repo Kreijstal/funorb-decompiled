@@ -61,7 +61,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
 
     final static void d(int param0) {
         int var1 = qd.a((byte) 82);
-        int var2 = mg.a(-62);
+        int var2 = TimingPattern.a(-62);
         NetworkArchiveRequest.field_t.a((byte) 57, var1 + (PathMoveLocomotor.field_p << 1), -lsa.field_b + jua.field_d, FurnitureModel.field_o - PathMoveLocomotor.field_p, (lsa.field_b << 1) + var2);
         if (param0 == -1226152383) {
           fp.a((byte) -83);

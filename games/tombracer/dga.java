@@ -65,18 +65,18 @@ final class dga {
             jaggl.OpenGL.glAttachObjectARB(var3_long, param2[var5].field_a);
           }
           jaggl.OpenGL.glLinkProgramARB(var3_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, mg.field_g, 0);
-          if (mg.field_g[0] == 0) {
-            if (mg.field_g[0] == 0) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, TimingPattern.field_g, 0);
+          if (TimingPattern.field_g[0] == 0) {
+            if (TimingPattern.field_g[0] == 0) {
               System.out.println("Shader linking failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, mg.field_g, 1);
-            if (mg.field_g[1] > 1) {
-              var11 = new byte[mg.field_g[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var3_long, mg.field_g[1], mg.field_g, 0, var11, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, TimingPattern.field_g, 1);
+            if (TimingPattern.field_g[1] > 1) {
+              var11 = new byte[TimingPattern.field_g[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var3_long, TimingPattern.field_g[1], TimingPattern.field_g, 0, var11, 0);
               System.out.println(new String(var11));
             }
-            if (0 == mg.field_g[0]) {
+            if (0 == TimingPattern.field_g[0]) {
               var7 = 0;
               var5Lifetime1 = var7;
               while (param2.length > var7) {

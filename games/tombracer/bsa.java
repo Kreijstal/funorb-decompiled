@@ -57,7 +57,7 @@ final class bsa implements WidgetPainter {
           SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_a != null) {
             var13 = var14.field_F + (var14.field_E + this.field_h);
-            this.field_a.a(param0.field_o, param1 + param0.field_i + var13, this.field_b + (param3 + param0.field_n), -this.field_h - (var13 - param0.field_m), param0.field_p - (this.field_h << 1), this.field_g, this.field_c, 1, 1, 0);
+            this.field_a.drawParagraph(param0.field_o, param1 + param0.field_i + var13, this.field_b + (param3 + param0.field_n), -this.field_h - (var13 - param0.field_m), param0.field_p - (this.field_h << 1), this.field_g, this.field_c, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bsa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

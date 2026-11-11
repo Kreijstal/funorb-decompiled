@@ -19,10 +19,10 @@ final class MultiplayerLoginMenu extends MenuScreen {
 
     final int getItemRight(int param0, byte param1) {
         if (param1 == -48) {
-          return this.getItemX((byte) 122, param0) + this.items[param0].e(-163);
+          return this.getItemX((byte) 122, param0) + this.items[param0].getWidth(-163);
         }
         field_r = (ur) null;
-        return this.getItemX((byte) 122, param0) + this.items[param0].e(-163);
+        return this.getItemX((byte) 122, param0) + this.items[param0].getWidth(-163);
     }
 
     final int getItemY(int param0, int param1) {
@@ -59,10 +59,10 @@ final class MultiplayerLoginMenu extends MenuScreen {
 
     final int getItemX(byte param0, int param1) {
         if (param0 >= 111) {
-          return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].e(-163) / 2) + param1 * this.items[param1].e(-163));
+          return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].getWidth(-163) / 2) + param1 * this.items[param1].getWidth(-163));
         }
         this.field_q = (dea) null;
-        return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].e(-163) / 2) + param1 * this.items[param1].e(-163));
+        return aaa.a(false) / 2 + (-(this.items.length * this.items[param1].getWidth(-163) / 2) + param1 * this.items[param1].getWidth(-163));
     }
 
     private final void h(int param0, int param1) {

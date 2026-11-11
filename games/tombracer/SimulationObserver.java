@@ -73,7 +73,7 @@ abstract class SimulationObserver {
           if (!param0.isRacing(126)) {
             return;
           }
-          this.a((byte) -27, param0);
+          this.updatePendingEvents((byte) -27, param0);
           param0.step(-1, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -102,7 +102,7 @@ abstract class SimulationObserver {
 
     abstract void onRoomEntered(int param0, Player param1, Room param2);
 
-    final void a(PlayerSimulation param0, PendingEvent param1, boolean param2) {
+    final void queueEvent(PlayerSimulation param0, PendingEvent param1, boolean param2) {
         int var5 = 0;
         Trap var6 = null;
         PendingEvent var7 = null;
@@ -119,12 +119,12 @@ abstract class SimulationObserver {
             var6 = (Trap) null;
             this.onTreasureCollected(-16, -102, (Player) null, (Trap) null);
           }
-          if (param1.a(param0.player.getCourseIndex(-108), 3)) {
+          if (param1.isStale(param0.player.getCourseIndex(-108), 3)) {
             return;
           }
           var7 = (PendingEvent) (this.field_a.first(-80));
           while (var7 != null) {
-            if (var7.a(param1, 0)) {
+            if (var7.isDuplicateOf(param1, 0)) {
               return;
             }
             var7 = (PendingEvent) (this.field_a.next(107));
@@ -174,7 +174,7 @@ abstract class SimulationObserver {
         this.field_a = new IntrusiveDeque();
     }
 
-    private final void a(byte param0, PlayerSimulation param1) {
+    private final void updatePendingEvents(byte param0, PlayerSimulation param1) {
         int var3_int = 0;
         int var4 = 0;
         PendingEvent var5 = null;
@@ -195,12 +195,12 @@ abstract class SimulationObserver {
           }
           var5 = (PendingEvent) (this.field_a.first(param0 - 53));
           while (var5 != null) {
-            if (!var5.a(var3_int, -1, var4)) {
-              if (var5.c(var3_int, 113)) {
-                var5.a(param1, var5.b(var3_int, -87), param0 + 27);
+            if (!var5.isFinished(var3_int, -1, var4)) {
+              if (var5.isActiveAt(var3_int, 113)) {
+                var5.applyTick(param1, var5.ticksSinceStart(var3_int, -87), param0 + 27);
               }
             } else {
-              var5.a(param1, -102);
+              var5.finish(param1, -102);
               var5.unlink(40);
             }
             var5 = (PendingEvent) (this.field_a.next(122));

@@ -33,7 +33,7 @@ final class psa extends MidiPcmStream {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           var4_int = this.b((byte) 125);
-          this.a(this.field_S * var4_int >> 8, -81);
+          this.setMasterVolume(this.field_S * var4_int >> 8, -81);
           super.fill(param0, param1, param2);
           if (!this.field_P) {
             var5 = 1;
@@ -60,11 +60,11 @@ final class psa extends MidiPcmStream {
             if (var5 != 0) {
               this.field_P = true;
             } else {
-              this.a(var4_int, 118);
+              this.setMasterVolume(var4_int, 118);
               return;
             }
           }
-          this.a(var4_int, 118);
+          this.setMasterVolume(var4_int, 118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

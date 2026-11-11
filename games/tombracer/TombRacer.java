@@ -126,7 +126,7 @@ public final class TombRacer extends rfa implements ls {
             param1.draw((byte) -28, false);
           }
           if (null != wm.field_a) {
-            if (!wm.field_a.b(31923)) {
+            if (!wm.field_a.isFullScreen(31923)) {
               wm.field_a.draw((byte) -28, false);
             } else {
               if (param1 == null) {
@@ -141,7 +141,7 @@ public final class TombRacer extends rfa implements ls {
           }
           var4_intLifetime1 = 0;
           if (SpriteTileOperator.field_t != null) {
-            if (SpriteTileOperator.field_t.b(31923)) {
+            if (SpriteTileOperator.field_t.isFullScreen(31923)) {
               SoftwareRasterizer.clear();
               var4_intLifetime1 = 1;
               SpriteTileOperator.field_t.draw((byte) -28, true);
@@ -238,7 +238,7 @@ public final class TombRacer extends rfa implements ls {
         bi.a(false);
         dga.releaseStatics(-29262);
         ke.releaseStatics(3712);
-        MenuScreen.a(false);
+        MenuScreen.releaseStatics(false);
         RemovedFromGameMenu.releaseStatics((byte) 126);
         MembersUpsellMenu.releaseStatics(-120);
         PlayerProfile.releaseStatics(param0 ^ -3638);
@@ -304,7 +304,7 @@ public final class TombRacer extends rfa implements ls {
         dra.releaseStatics(-109);
         SoundEventPlayer.releaseStatics(-101);
         MenuEntry.releaseStatics(1);
-        ko.b(-100);
+        MenuInputState.releaseStatics(-100);
         QueuedPlayerEvent.releaseStatics(30967);
         vha.a(640);
         MatchOverlay.releaseStatics(17355);
@@ -391,7 +391,7 @@ public final class TombRacer extends rfa implements ls {
         rua.releaseStatics(false);
         vs.releaseStatics((byte) -77);
         mpa.releaseStatics(param0 ^ -3666);
-        MessageDialog.f(7707);
+        MessageDialog.releaseStatics(7707);
         AccountRegistrationPanel.f(0);
         tha.releaseStatics(99);
         LoginForm.releaseStatics(91);
@@ -568,7 +568,7 @@ public final class TombRacer extends rfa implements ls {
         nf.a(param0 - 22136);
         ItemBehaviour.releaseStatics(59);
         pka.releaseStatics(-1);
-        DarknessBehaviour.d(true);
+        DarknessBehaviour.releaseStatics(true);
         WindZoneBehaviour.releaseStatics((byte) 91);
         ComponentMount.releaseStatics((byte) -111);
         tg.releaseStatics((byte) 23);
@@ -622,7 +622,7 @@ public final class TombRacer extends rfa implements ls {
         gea.releaseStatics(param0 + 3666);
         GasTrapComponent.releaseStatics(true);
         TimeSwitchBehaviour.releaseStatics(16711422);
-        mg.releaseStatics(9980);
+        TimingPattern.releaseStatics(9980);
         CoinItemComponent.e(true);
         ItemComponent.releaseStatics((byte) -72);
         CoinBagItemComponent.A(32076);
@@ -673,7 +673,7 @@ public final class TombRacer extends rfa implements ls {
         kd.releaseStatics((byte) -121);
         jsa.releaseStatics(2);
         ValidatedTextInputWidget.m(param0 + 3866);
-        TextInputWidget.j(68);
+        TextInputWidget.releaseStatics(68);
         ContentTransitionDialog.releaseStatics(false);
         ProgressBarWidget.releaseStatics(30548);
         UsernameSuggestionsPanel.releaseStatics(param0 ^ -19478);

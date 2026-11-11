@@ -31,9 +31,9 @@ final class daa {
           for (var5 = 0; var5 < this.field_a.players.length; var5++) {
             for (var6 = 0; var6 < this.field_a.players.length; var6++) {
               if (~var5 == ~var6) {
-                this.field_a.statistics.a(var5, (byte) -52, this.field_a.characterChoices[var5].getCharacter(80));
+                this.field_a.statistics.markCharacterPlayed(var5, (byte) -52, this.field_a.characterChoices[var5].getCharacter(80));
               } else {
-                this.field_a.statistics.a(var5, this.field_a.characterChoices[var6].getCharacter(71), true);
+                this.field_a.statistics.markCharacterFaced(var5, this.field_a.characterChoices[var6].getCharacter(71), true);
               }
             }
           }

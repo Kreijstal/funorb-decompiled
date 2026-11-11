@@ -215,7 +215,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         int var2 = this.getX(3);
         int var3 = this.getY(param0 - 2087504);
         int var4 = this.getElevation((byte) 115);
-        this.room.getParticleEffects(false).a((byte) 101, param0 + var4, var2, var3);
+        this.room.getParticleEffects(false).spawnDeathBurst((byte) 101, param0 + var4, var2, var3);
     }
 
     final void setObstructionLevel(int param0, int param1) {

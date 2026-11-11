@@ -135,7 +135,7 @@ final class sr extends WidgetContainer implements ButtonListener {
 
     final void renderLayer(int param0, int param1, int param2, int param3) {
         super.renderLayer(param0, param1, param2, param3);
-        this.field_B.a(this.field_C, 14 + (param0 + this.field_i), 10 + this.field_n + param1, -28 + this.field_m, this.field_p, 16777215, -1, 0, 0, this.field_B.field_w);
+        this.field_B.drawParagraph(this.field_C, 14 + (param0 + this.field_i), 10 + this.field_n + param1, -28 + this.field_m, this.field_p, 16777215, -1, 0, 0, this.field_B.field_w);
     }
 
     static {

@@ -69,7 +69,7 @@ final class av {
           TileGridCell.field_a = param3;
           oi.field_a = param1;
           joa.field_a = param7;
-          ko.field_d = param8;
+          MenuInputState.field_d = param8;
           du.field_d = param6;
           wg.field_l = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           Projectile.field_k = new DiskCacheWorker(param1);

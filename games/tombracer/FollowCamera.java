@@ -163,8 +163,8 @@ final class FollowCamera implements Camera {
             var5_int = param1[0].field_n;
             var6 = param1[2].field_n;
             var7 = param1[1].field_n;
-            param1[0].b(param3, param0);
-            param1[2].b(-var6 + param4 + param3, param0);
+            param1[0].drawTransparent(param3, param0);
+            param1[2].drawTransparent(-var6 + param4 + param3, param0);
             SoftwareRasterizer.saveClip(ic.field_d);
             SoftwareRasterizer.intersectClip(param3 + var5_int, param0, -var6 + (param3 + param4), param0 + param1[1].field_k);
             var8 = param3 + var5_int;
@@ -174,7 +174,7 @@ final class FollowCamera implements Camera {
               return;
             }
             while (param3 < var9) {
-              param1[1].b(param3, param0);
+              param1[1].drawTransparent(param3, param0);
               param3 = param3 + var7;
             }
             SoftwareRasterizer.restoreClip(ic.field_d);

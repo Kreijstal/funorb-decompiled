@@ -198,26 +198,26 @@ final class ProgressBarWidget extends UiWidget {
             this.setColors(true, -45, -128);
           }
           for (var6 = param2 - this.field_y; var5_int > var6; var6 = var6 + param1.field_m) {
-            param1.b(var6, param0);
+            param1.drawTransparent(var6, param0);
           }
           pfa.a(1);
           if (SoftwareRasterizer.clipLeft <= this.field_A.field_m + param2) {
             nm.a(this.field_E, (byte) 116);
-            param1.b(-this.field_y, 0);
-            param1.b(2 * this.field_u - this.field_y, 0);
-            this.field_z.a(0, 0);
+            param1.drawTransparent(-this.field_y, 0);
+            param1.drawTransparent(2 * this.field_u - this.field_y, 0);
+            this.field_z.drawMultiply(0, 0);
             pfa.a(1);
-            this.field_E.b(param2, param0);
+            this.field_E.drawTransparent(param2, param0);
           }
           if (SoftwareRasterizer.clipRight >= -this.field_A.field_m + var5_int) {
             nm.a(this.field_E, (byte) 91);
             for (var7 = this.field_y + this.field_m - this.field_A.field_m; 2 * this.field_u < var7; var7 = var7 - 2 * this.field_u) {
             }
-            param1.b(-var7, 0);
-            param1.b(-var7 + this.field_u * 2, 0);
-            this.field_A.a(0, 0);
+            param1.drawTransparent(-var7, 0);
+            param1.drawTransparent(-var7 + this.field_u * 2, 0);
+            this.field_A.drawMultiply(0, 0);
             pfa.a(1);
-            this.field_E.b(-this.field_A.field_m + var5_int, param0);
+            this.field_E.drawTransparent(-this.field_A.field_m + var5_int, param0);
             return;
           }
           return;

@@ -124,8 +124,8 @@ final class pg extends WidgetContainer implements HotspotListener, ButtonListene
           var4 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
           this.field_z = new HotspotTextWidget(var7, var4);
           this.field_z.field_q = "";
-          this.field_z.a(sw.field_Fb, 0, 0);
-          this.field_z.a(sw.field_Fb, 1, 0);
+          this.field_z.setHotspotTooltip(sw.field_Fb, 0, 0);
+          this.field_z.setHotspotTooltip(sw.field_Fb, 1, 0);
           this.field_z.field_m = this.field_m - 40;
           this.field_z.field_h = (WidgetListener) (this);
           this.field_z.a(var3, (byte) -120, this.field_m - 40, 26);

@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg {
-    private int field_c;
+final class TimingPattern {
+    private int phaseOffset;
     static int[] field_h;
-    private int field_f;
-    private int[] field_i;
-    private int field_l;
-    private boolean field_j;
+    private int ticksLeft;
+    private int[] durations;
+    private int stepIndex;
+    private boolean constant;
     static String field_k;
     private boolean field_d;
     static IntrusiveDeque field_b;
     static int[] field_g;
-    private boolean field_a;
+    private boolean toggled;
     static int[] field_e;
 
     final static int a(int param0) {
@@ -22,37 +22,37 @@ final class mg {
         return hg.field_f;
     }
 
-    private mg(int param0, int param1) {
+    private TimingPattern(int param0, int param1) {
         this(new int[]{param0, param0}, param1);
-        this.field_c = param1;
+        this.phaseOffset = param1;
     }
 
-    final void a(int param0, BitPacketBuffer param1) {
+    final void encode(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.writeBits((byte) 86, this.field_i.length, 4);
-          for (var3_int = 0; this.field_i.length > var3_int; var3_int++) {
-            param1.writeBits((byte) -25, this.field_i[var3_int], 12);
+          param1.writeBits((byte) 86, this.durations.length, 4);
+          for (var3_int = 0; this.durations.length > var3_int; var3_int++) {
+            param1.writeBits((byte) -25, this.durations[var3_int], 12);
           }
           if (param0 != 15637) {
             BitPacketBuffer var5 = (BitPacketBuffer) null;
-            this.a(-109, (BitPacketBuffer) null);
+            this.encode(-109, (BitPacketBuffer) null);
           }
-          param1.writeBits((byte) -36, this.field_c, 12);
+          param1.writeBits((byte) -36, this.phaseOffset, 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean c(int param0) {
+    final boolean hasToggled(int param0) {
         if (param0 != 0) {
           field_e = (int[]) null;
         }
-        return this.field_a;
+        return this.toggled;
     }
 
-    mg(int[] param0) {
+    TimingPattern(int[] param0) {
         this(param0, 0);
     }
 
@@ -67,76 +67,76 @@ final class mg {
         field_e = null;
     }
 
-    public mg() {
+    public TimingPattern() {
         this(50);
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        this.field_a = false;
+        this.toggled = false;
         if (param0 != 0) {
-          mg.a(-118);
+          TimingPattern.a(-118);
         }
         if (this.field_d) {
           this.field_d = false;
-          this.field_a = true;
+          this.toggled = true;
         }
-        if (this.field_j) {
-          if (this.field_f == -1) {
-            this.field_a = true;
-            this.field_f = 0;
+        if (this.constant) {
+          if (this.ticksLeft == -1) {
+            this.toggled = true;
+            this.ticksLeft = 0;
             return;
           }
-          this.field_a = false;
+          this.toggled = false;
           return;
         }
-        if (-1 == this.field_f) {
-          this.field_f = this.field_i[0];
+        if (-1 == this.ticksLeft) {
+          this.ticksLeft = this.durations[0];
         }
-        this.field_f = this.field_f - 1;
-        if (this.field_f > 0) {
+        this.ticksLeft = this.ticksLeft - 1;
+        if (this.ticksLeft > 0) {
           return;
         }
         do {
-          this.field_l = this.field_l + 1;
-          if (this.field_i.length <= this.field_l) {
-            this.field_l = 0;
+          this.stepIndex = this.stepIndex + 1;
+          if (this.durations.length <= this.stepIndex) {
+            this.stepIndex = 0;
           }
-          this.field_f = this.field_i[this.field_l];
-          this.field_a = !this.field_a ? true : false;
-        } while (this.field_f == 0);
+          this.ticksLeft = this.durations[this.stepIndex];
+          this.toggled = !this.toggled ? true : false;
+        } while (this.ticksLeft == 0);
     }
 
-    final int a(byte param0) {
-        if (null == this.field_i) {
+    final int getTotalDuration(byte param0) {
+        if (null == this.durations) {
           return 0;
         }
         if (param0 != -94) {
-          mg.a(44);
+          TimingPattern.a(44);
         }
-        return GameApplet.a(param0 + 104, this.field_i);
+        return GameApplet.a(param0 + 104, this.durations);
     }
 
-    final void a(boolean param0, int param1) {
+    final void setPhaseOffset(boolean param0, int param1) {
         int var3;
         int var4;
         int stackIn_13_0 = 0;
         boolean stackIn_17_1 = false;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (this.field_j) {
+        if (this.constant) {
           return;
         }
-        this.field_c = param1;
+        this.phaseOffset = param1;
         if (param0) {
-          this.field_l = 38;
+          this.stepIndex = 38;
         }
         if (param1 > 0) {
-          param1 = param1 % GameApplet.a(10, this.field_i);
+          param1 = param1 % GameApplet.a(10, this.durations);
           var3 = 0;
           while (param1 > 0) {
-            this.d(0);
+            this.tick(0);
             param1--;
-            if (!this.field_a) {
+            if (!this.toggled) {
               continue;
             }
             stackIn_13_0 = (var3 != 0) ? 0 : 1;
@@ -147,15 +147,15 @@ final class mg {
         }
     }
 
-    final int a(boolean param0) {
+    final int getCurrentDuration(boolean param0) {
         if (param0) {
           return 7;
         }
-        if (null == this.field_i) {
+        if (null == this.durations) {
           return 0;
         }
-        if (0 < this.field_i.length) {
-          return this.field_i[this.field_l];
+        if (0 < this.durations.length) {
+          return this.durations[this.stepIndex];
         }
         return 0;
     }
@@ -167,50 +167,50 @@ final class mg {
         return (param2 & 34) != 0 ? true : false;
     }
 
-    final int b(int param0) {
+    final int getTicksLeft(int param0) {
         if (param0 != 12) {
-          mg.releaseStatics(6);
+          TimingPattern.releaseStatics(6);
         }
-        return this.field_f;
+        return this.ticksLeft;
     }
 
-    private mg(int[] param0, int param1) {
-        this.field_f = -1;
+    private TimingPattern(int[] param0, int param1) {
+        this.ticksLeft = -1;
         try {
-          this.field_c = param1;
-          this.field_i = param0;
-          this.field_j = 0 == this.a((byte) -94) ? true : false;
-          this.a(false, param1);
+          this.phaseOffset = param1;
+          this.durations = param0;
+          this.constant = 0 == this.getTotalDuration((byte) -94) ? true : false;
+          this.setPhaseOffset(false, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    mg(int param0, BitPacketBuffer param1) {
+    TimingPattern(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
-        this.field_f = -1;
+        this.ticksLeft = -1;
         try {
           var3_int = param1.readBits((byte) 44, 4);
-          this.field_i = new int[var3_int];
+          this.durations = new int[var3_int];
           if (param0 <= 9) {
             for (var4 = 0; var3_int > var4; var4++) {
-              this.field_i[var4] = param1.readBits((byte) 44, 8);
+              this.durations[var4] = param1.readBits((byte) 44, 8);
             }
-            this.field_c = param1.readBits((byte) 44, 8);
+            this.phaseOffset = param1.readBits((byte) 44, 8);
           } else {
             for (var4 = 0; var4 < var3_int; var4++) {
-              this.field_i[var4] = param1.readBits((byte) 44, 12);
+              this.durations[var4] = param1.readBits((byte) 44, 12);
             }
-            this.field_c = param1.readBits((byte) 44, 12);
+            this.phaseOffset = param1.readBits((byte) 44, 12);
           }
-          this.a(false, this.field_c);
+          this.setPhaseOffset(false, this.phaseOffset);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    mg(int param0) {
+    TimingPattern(int param0) {
         this(param0, 0);
     }
 

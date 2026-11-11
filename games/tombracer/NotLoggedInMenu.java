@@ -8,10 +8,10 @@ final class NotLoggedInMenu extends MenuScreen {
 
     final int getItemX(byte param0, int param1) {
         if (param0 > 111) {
-          return aaa.a(false) / 2 - this.items.length * this.items[param1].e(-163) / 2 + this.items[param1].e(-163) * param1;
+          return aaa.a(false) / 2 - this.items.length * this.items[param1].getWidth(-163) / 2 + this.items[param1].getWidth(-163) * param1;
         }
         this.getItemY(16, -28);
-        return aaa.a(false) / 2 - this.items.length * this.items[param1].e(-163) / 2 + this.items[param1].e(-163) * param1;
+        return aaa.a(false) / 2 - this.items.length * this.items[param1].getWidth(-163) / 2 + this.items[param1].getWidth(-163) * param1;
     }
 
     NotLoggedInMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -94,10 +94,10 @@ final class NotLoggedInMenu extends MenuScreen {
 
     final int getItemRight(int param0, byte param1) {
         if (param1 == -48) {
-          return this.getItemX((byte) 114, param0) + this.items[param0].e(param1 ^ 141);
+          return this.getItemX((byte) 114, param0) + this.items[param0].getWidth(param1 ^ 141);
         }
         field_r = true;
-        return this.getItemX((byte) 114, param0) + this.items[param0].e(param1 ^ 141);
+        return this.getItemX((byte) 114, param0) + this.items[param0].getWidth(param1 ^ 141);
     }
 
     static {

@@ -313,7 +313,7 @@ final class ReportAbuseDialog extends jea {
           this.field_wb.b(-126, this.field_Bb);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Bb.field_H.a(this.field_Bb.field_r, var15_int);
+          var17Lifetime1 = this.field_Bb.field_H.countWrappedLines(this.field_Bb.field_r, var15_int);
           this.field_Bb.a(var15_int, di.field_a * var17Lifetime1, -23776, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * di.field_a;
           this.field_wb.a(26 + var15_int, var16Lifetime1 + 10, -23776, 24, 0);

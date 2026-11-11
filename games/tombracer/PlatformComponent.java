@@ -49,7 +49,7 @@ final class PlatformComponent extends PrefabComponent {
         int var1 = -6 / ((-10 - param0) / 45);
     }
 
-    final static mg b(int param0, int param1) {
+    final static TimingPattern b(int param0, int param1) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
@@ -58,33 +58,33 @@ final class PlatformComponent extends PrefabComponent {
         }
         var2 = param0;
         if (var2 == 0) {
-          return new mg(new int[]{});
+          return new TimingPattern(new int[]{});
         }
         if (1 == var2) {
-          return new mg(new int[]{60, 60});
+          return new TimingPattern(new int[]{60, 60});
         }
         if (var2 == 2) {
-          return new mg(new int[]{30, 30});
+          return new TimingPattern(new int[]{30, 30});
         }
         if (3 == var2) {
-          return new mg(new int[]{15, 15});
+          return new TimingPattern(new int[]{15, 15});
         }
         if (var2 == 4) {
-          return new mg(new int[]{40, 40, 20, 20});
+          return new TimingPattern(new int[]{40, 40, 20, 20});
         }
         if (var2 == 5) {
-          return new mg(new int[]{40, 40, 20, 20, 20, 20});
+          return new TimingPattern(new int[]{40, 40, 20, 20, 20, 20});
         }
         if (var2 == 6) {
-          return new mg(new int[]{40, 40, 20, 40, 20, 20});
+          return new TimingPattern(new int[]{40, 40, 20, 40, 20, 20});
         }
         if (var2 == 7) {
-          return new mg(new int[]{5, 10, 10, 15, 5, 15, 10, 5, 10, 5, 20, 5});
+          return new TimingPattern(new int[]{5, 10, 10, 15, 5, 15, 10, 5, 10, 5, 20, 5});
         }
         if (var2 != 8) {
-          return new mg(new int[]{});
+          return new TimingPattern(new int[]{});
         }
-        return new mg(new int[]{15, 10, 10, 15, 10, 5, 10, 5, 15, 5, 10, 10});
+        return new TimingPattern(new int[]{15, 10, 10, 15, 10, 5, 10, 5, 15, 5, 10, 10});
     }
 
     PlatformComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {

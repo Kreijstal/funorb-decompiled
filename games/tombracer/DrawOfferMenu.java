@@ -6,10 +6,10 @@ final class DrawOfferMenu extends MenuScreen {
     private dea field_r;
     static int[] field_q;
 
-    final void a(byte param0) {
+    final void onActivated(byte param0) {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
-        super.a((byte) 89);
+        super.onActivated((byte) 89);
         if (param0 <= 78) {
           this.field_r = (dea) null;
         }
@@ -77,7 +77,7 @@ final class DrawOfferMenu extends MenuScreen {
           var5 = stackIn_11_0;
           stackIn_13_0 = var3;
           if (var5 != 0) {
-            stackIn_14_1 = this.items[var4].d(11919) / 2;
+            stackIn_14_1 = this.items[var4].getHeight(11919) / 2;
           } else {
             stackIn_14_1 = this.itemSpacing;
           }

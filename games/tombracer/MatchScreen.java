@@ -235,7 +235,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final void a(int param0) {
+    final void onDeactivated(int param0) {
         if (param0 > -102) {
           this.c(false);
         }
@@ -269,7 +269,7 @@ final class MatchScreen extends GameScreen implements rqa {
         var4 = var9;
         if (param0 &&
           param1 &&
-          !iqa.field_c.e(-8832) && (BeamShooterBehaviour.b(-67, -1) ||
+          !iqa.field_c.e(-8832) && (BeamShooterBehaviour.isScreenActive(-67, -1) ||
           this.c(false))) {
           this.actionStates[0][0] = var9[HardwareOpenGlToolkit.field_hd];
           this.actionStates[0][1] = var9[mf.field_a];
@@ -675,7 +675,7 @@ final class MatchScreen extends GameScreen implements rqa {
           }
         }
         if (param2 != 0) {
-          this.a(115);
+          this.onDeactivated(115);
         }
         if (!param1) {
           this.setPhase(6, new StandingsPhase(this, this.protocol));
@@ -853,7 +853,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isFullScreen(int param0) {
         if (param0 != 31923) {
           return true;
         }
@@ -869,7 +869,7 @@ final class MatchScreen extends GameScreen implements rqa {
         return stackIn_6_0;
     }
 
-    final void a(byte param0) {
+    final void onActivated(byte param0) {
         if (param0 <= 78) {
           this.field_E = -119;
         }

@@ -4,18 +4,18 @@
 import java.io.*;
 
 final class VerticalScrollbar extends jea {
-    private int field_yb;
+    private int repeatDelay;
     static String field_zb;
-    private jea field_Bb;
-    private jea field_wb;
+    private jea downButton;
+    private jea thumb;
     static String field_vb;
-    private jea field_Ab;
+    private jea trackAbove;
     private jea field_ub;
-    private jea field_xb;
-    private jea field_Cb;
+    private jea trackBelow;
+    private jea upButton;
     static boolean[] field_tb;
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void layoutThumb(int param0, int param1, byte param2, int param3) {
         jea stackIn_15_0 = null;
         jea stackIn_15_1 = null;
         jea stackIn_15_2 = null;
@@ -62,12 +62,12 @@ final class VerticalScrollbar extends jea {
           var11 = (param3 * var10 + var9 / 2) / var9;
         }
         var12 = var11 + var8 / 2;
-        var14 = this.field_Cb;
+        var14 = this.upButton;
         var14.field_t = var5;
         var14.field_T = 0;
         var14.field_G = this.field_G;
         var14.field_qb = 0;
-        var15 = this.field_Bb;
+        var15 = this.downButton;
         var15.field_G = this.field_G;
         var15.field_T = var6;
         var15.field_t = this.field_t - var6;
@@ -77,21 +77,21 @@ final class VerticalScrollbar extends jea {
         var16.field_t = var7;
         var16.field_T = var5;
         var16.field_qb = 0;
-        var17 = this.field_Ab;
+        var17 = this.trackAbove;
         var17.field_t = var12;
         var17.field_qb = 0;
         var17.field_G = this.field_G;
         var17.field_T = 0;
-        var18 = this.field_xb;
+        var18 = this.trackBelow;
         var18.field_t = var7 - var12;
         var18.field_T = var12;
         var18.field_G = this.field_G;
         var18.field_qb = 0;
-        var19 = this.field_wb;
+        var19 = this.thumb;
         var19.field_G = this.field_G;
         var19.field_qb = 0;
-        stackIn_15_0 = this.field_Cb;
-        stackIn_15_1 = this.field_Bb;
+        stackIn_15_0 = this.upButton;
+        stackIn_15_1 = this.downButton;
         stackIn_15_2 = this.field_ub;
         stackIn_16_3 = (param1 <= param0) ? false : true;
         stackIn_15_2.field_X = stackIn_16_3;
@@ -101,7 +101,7 @@ final class VerticalScrollbar extends jea {
         var19.field_t = var8;
     }
 
-    final static boolean i(int param0) {
+    final static boolean isRetryAllowed(int param0) {
         long var1;
         long var3;
         int var5;
@@ -139,12 +139,12 @@ final class VerticalScrollbar extends jea {
 
     final boolean isThumbHeld(int param0) {
         if (param0 != -1) {
-          VerticalScrollbar.i(3);
+          VerticalScrollbar.isRetryAllowed(3);
         }
-        return this.field_wb.field_E != 0 ? true : false;
+        return this.thumb.field_E != 0 ? true : false;
     }
 
-    final int a(boolean param0, byte param1, int param2, int param3) {
+    final int getDraggedScrollOffset(boolean param0, byte param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -152,9 +152,9 @@ final class VerticalScrollbar extends jea {
         int var9;
         var5 = 0;
         var7 = 87 / ((param1 + 53) / 38);
-        var6 = this.field_ub.field_t - this.field_wb.field_t;
+        var6 = this.field_ub.field_t - this.thumb.field_t;
         if (0 < var6) {
-          var8 = this.field_wb.field_T;
+          var8 = this.thumb.field_T;
           var9 = param3 - param2;
           var5 = (var8 * var9 + var6 / 2) / var6;
         }
@@ -177,64 +177,64 @@ final class VerticalScrollbar extends jea {
     }
 
     VerticalScrollbar(long param0, VerticalScrollbar param1) {
-        this(param0, param1.field_Cb, param1.field_Bb, param1.field_Ab, param1.field_wb);
+        this(param0, param1.upButton, param1.downButton, param1.trackAbove, param1.thumb);
     }
 
-    final boolean f(int param0) {
-        if (0 != this.field_Ab.field_y) {
-          this.field_yb = 20;
+    final boolean pollPageUp(int param0) {
+        if (0 != this.trackAbove.field_y) {
+          this.repeatDelay = 20;
           return true;
         }
-        if (~this.field_Ab.field_E != param0) {
-          if (0 < this.field_yb) {
-            this.field_yb = this.field_yb - 1;
+        if (~this.trackAbove.field_E != param0) {
+          if (0 < this.repeatDelay) {
+            this.repeatDelay = this.repeatDelay - 1;
           }
-          if (this.field_yb == 0 &&
-            GridWidgetContainer.field_B < this.field_wb.field_K + this.field_wb.field_A) {
-            this.field_yb = 3;
+          if (this.repeatDelay == 0 &&
+            GridWidgetContainer.field_B < this.thumb.field_K + this.thumb.field_A) {
+            this.repeatDelay = 3;
             return true;
           }
         }
         return false;
     }
 
-    final boolean e(byte param0) {
-        if (this.field_Cb.field_y != 0) {
-          this.field_yb = 20;
+    final boolean pollLineUp(byte param0) {
+        if (this.upButton.field_y != 0) {
+          this.repeatDelay = 20;
           return true;
         }
-        if (this.field_Cb.field_E != 0) {
-          if (0 < this.field_yb) {
-            this.field_yb = this.field_yb - 1;
+        if (this.upButton.field_E != 0) {
+          if (0 < this.repeatDelay) {
+            this.repeatDelay = this.repeatDelay - 1;
           }
-          if (this.field_yb == 0) {
-            this.field_yb = 3;
+          if (this.repeatDelay == 0) {
+            this.repeatDelay = 3;
             return true;
           }
         }
         if (param0 >= -75) {
-          VerticalScrollbar.i(98);
+          VerticalScrollbar.isRetryAllowed(98);
           return false;
         }
         return false;
     }
 
-    final boolean d(byte param0) {
+    final boolean pollLineDown(byte param0) {
         if (param0 != 40) {
           return true;
         }
-        if (0 != this.field_Bb.field_y) {
-          this.field_yb = 20;
+        if (0 != this.downButton.field_y) {
+          this.repeatDelay = 20;
           return true;
         }
-        if (this.field_Bb.field_E == 0) {
+        if (this.downButton.field_E == 0) {
           return false;
         }
-        if (this.field_yb > 0) {
-          this.field_yb = this.field_yb - 1;
+        if (this.repeatDelay > 0) {
+          this.repeatDelay = this.repeatDelay - 1;
         }
-        if (this.field_yb == 0) {
-          this.field_yb = 3;
+        if (this.repeatDelay == 0) {
+          this.repeatDelay = 3;
           return true;
         }
         return false;
@@ -249,7 +249,7 @@ final class VerticalScrollbar extends jea {
         field_tb = null;
     }
 
-    final static int a(byte param0, ica param1) {
+    final static int toGlTextureEnvMode(byte param0, ica param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -301,21 +301,21 @@ final class VerticalScrollbar extends jea {
         }
     }
 
-    final boolean g(int param0) {
+    final boolean pollPageDown(int param0) {
         int var2 = 6 / ((1 - param0) / 41);
-        if (this.field_xb.field_y != 0) {
-          this.field_yb = 20;
+        if (this.trackBelow.field_y != 0) {
+          this.repeatDelay = 20;
           return true;
         }
-        if (this.field_xb.field_E != 0) {
-          if (this.field_yb > 0) {
-            this.field_yb = this.field_yb - 1;
+        if (this.trackBelow.field_E != 0) {
+          if (this.repeatDelay > 0) {
+            this.repeatDelay = this.repeatDelay - 1;
           }
-          if (this.field_yb == 0) {
-            if (GridWidgetContainer.field_B < this.field_wb.field_A + this.field_wb.field_K - (-this.field_wb.field_t - this.field_wb.field_O)) {
+          if (this.repeatDelay == 0) {
+            if (GridWidgetContainer.field_B < this.thumb.field_A + this.thumb.field_K - (-this.thumb.field_t - this.thumb.field_O)) {
               return false;
             }
-            this.field_yb = 3;
+            this.repeatDelay = 3;
             return true;
           }
         }
@@ -330,7 +330,7 @@ final class VerticalScrollbar extends jea {
         }
         this.field_qb = param4;
         this.field_G = param2;
-        this.a(param6, param0, (byte) -87, param1);
+        this.layoutThumb(param6, param0, (byte) -87, param1);
     }
 
     VerticalScrollbar(long param0, jea param1, jea param2, jea param3, jea param4) {
@@ -349,23 +349,23 @@ final class VerticalScrollbar extends jea {
         jea var9 = null;
         jea var10 = null;
         try {
-          this.field_Cb = new jea(0L, param1);
-          this.field_Bb = new jea(0L, param2);
-          this.b(-123, this.field_Cb);
-          this.b(-124, this.field_Bb);
+          this.upButton = new jea(0L, param1);
+          this.downButton = new jea(0L, param2);
+          this.b(-123, this.upButton);
+          this.b(-124, this.downButton);
           this.field_ub = new jea(0L, (jea) null);
           this.b(-128, this.field_ub);
-          this.field_Ab = new jea(0L, param3);
-          this.field_xb = new jea(0L, param3);
-          var9 = this.field_Ab;
+          this.trackAbove = new jea(0L, param3);
+          this.trackBelow = new jea(0L, param3);
+          var9 = this.trackAbove;
           var10 = var9;
-          this.field_xb.field_eb = true;
+          this.trackBelow.field_eb = true;
           var10.field_eb = true;
-          this.field_ub.b(-124, this.field_Ab);
-          this.field_ub.b(-122, this.field_xb);
-          this.field_wb = new jea(0L, param4);
-          this.field_wb.field_F = true;
-          this.field_ub.b(-123, this.field_wb);
+          this.field_ub.b(-124, this.trackAbove);
+          this.field_ub.b(-122, this.trackBelow);
+          this.thumb = new jea(0L, param4);
+          this.thumb.field_F = true;
+          this.field_ub.b(-123, this.thumb);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

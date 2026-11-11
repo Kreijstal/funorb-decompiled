@@ -84,7 +84,7 @@ final class td extends TextWidgetPainter {
           SpriteState.a(var7, this.field_o, (param0.field_p - this.field_o[0].field_k >> 1) + (param0.field_n + param3), 20278, param1 + param0.field_i, param0.field_m);
           stackIn_18_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
-          this.field_e.a(param0.field_o, param0.field_i + param1, param0.field_n + (param3 - 2), param0.field_m, param0.field_p, var8, -1, 1, 1, this.field_e.field_w);
+          this.field_e.drawParagraph(param0.field_o, param0.field_i + param1, param0.field_n + (param3 - 2), param0.field_m, param0.field_p, var8, -1, 1, 1, this.field_e.field_w);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

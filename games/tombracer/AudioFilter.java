@@ -39,11 +39,11 @@ final class AudioFilter {
         if (this.field_a[param0] == 0) {
           return 0;
         }
-        var3Lifetime1 = this.b(param0, 0, param1);
+        var3Lifetime1 = this.interpolateMagnitude(param0, 0, param1);
         field_h[param0][0] = -2.0f * var3Lifetime1 * (float)Math.cos((double)this.interpolateFrequency(param0, 0, param1));
         field_h[param0][1] = var3Lifetime1 * var3Lifetime1;
         for (var4 = 1; var4 < this.field_a[param0]; var4++) {
-          var3Lifetime2 = this.b(param0, var4, param1);
+          var3Lifetime2 = this.interpolateMagnitude(param0, var4, param1);
           var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.interpolateFrequency(param0, var4, param1));
           var6 = var3Lifetime2 * var3Lifetime2;
           field_h[param0][var4 * 2 + 1] = field_h[param0][var4 * 2 - 1] * var6;
@@ -127,7 +127,7 @@ final class AudioFilter {
         return var1 * 3.1415927410125732f / 11025.0f;
     }
 
-    private final float b(int param0, int param1, float param2) {
+    private final float interpolateMagnitude(int param0, int param1, float param2) {
         float var4 = (float)this.field_c[param0][0][param1] + param2 * (float)(this.field_c[param0][1][param1] - this.field_c[param0][0][param1]);
         var4 = var4 * 0.00152587890625f;
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));

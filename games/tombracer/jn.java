@@ -13,9 +13,9 @@ final class jn extends we {
 
     private final int h(int param0, int param1) {
         if (param1 != 1) {
-          this.b(true, true, 29);
+          this.activateItem(true, true, 29);
         }
-        return this.items[param0].e(param1 ^ -164);
+        return this.items[param0].getWidth(param1 ^ -164);
     }
 
     public static void releaseStatics(int param0) {
@@ -32,7 +32,7 @@ final class jn extends we {
         return this.getItemX((byte) 112, param0) + this.h(param0, 1);
     }
 
-    final void b(boolean param0, boolean param1, int param2) {
+    final void activateItem(boolean param0, boolean param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -46,16 +46,16 @@ final class jn extends we {
         if (!this.isActionEnabled(param2, -30487)) {
           return;
         }
-        super.b(param0, param1, param2);
+        super.activateItem(param0, param1, param2);
         var4 = this.items[param2].field_g;
         var5 = var4;
         if (var5 != 10) {
           if (11 == var5 &&
-            this.field_k.a(false)) {
+            this.field_k.isActivated(false)) {
             this.b(-103, param1);
           }
         } else {
-          if (this.field_k.a(param0)) {
+          if (this.field_k.isActivated(param0)) {
             this.a(1, param1);
           }
         }
@@ -188,7 +188,7 @@ final class jn extends we {
         if (param1 != 30) {
           field_r = (String) null;
         }
-        return this.firstItemY - this.items[param0].d(11919) / 2;
+        return this.firstItemY - this.items[param0].getHeight(11919) / 2;
     }
 
     private final void a(int param0, boolean param1) {
@@ -201,7 +201,7 @@ final class jn extends we {
           td.field_r == 0) {
           var3 = MenuEntry.field_h;
           MenuEntry.field_h = 97;
-          this.field_k.a(1, 63);
+          this.field_k.handleHorizontalNavigation(1, 63);
           MenuEntry.field_h = var3;
         }
     }
@@ -218,27 +218,27 @@ final class jn extends we {
         stackIn_6_0 = (this.isItemEnabled(2, 0)) ? 2 : 1;
         var5 = stackIn_6_0;
         if (13 != param0) {
-          if (!this.field_k.a((byte) -127)) {
+          if (!this.field_k.isPointerHeld((byte) -127)) {
             do {
               if (param0 == 97) {
-                if (var4 < this.field_k.field_h) {
-                  this.field_k.b(this.field_k.field_h - 1, -115);
+                if (var4 < this.field_k.selectedIndex) {
+                  this.field_k.selectIndex(this.field_k.selectedIndex - 1, -115);
                 } else {
-                  this.field_k.b(var5, 89);
+                  this.field_k.selectIndex(var5, 89);
                 }
               }
               if (param0 == 96) {
-                if (this.field_k.field_h >= 0 &&
-                  var5 > this.field_k.field_h) {
-                  this.field_k.b(1 + this.field_k.field_h, 80);
+                if (this.field_k.selectedIndex >= 0 &&
+                  var5 > this.field_k.selectedIndex) {
+                  this.field_k.selectIndex(1 + this.field_k.selectedIndex, 80);
                 } else {
-                  this.field_k.b(var4, param2 + 94);
+                  this.field_k.selectIndex(var4, param2 + 94);
                 }
               }
-            } while (!this.isActionEnabled(this.field_k.field_h, -30487));
+            } while (!this.isActionEnabled(this.field_k.selectedIndex, -30487));
           }
-          this.field_k.b((byte) -50);
-          this.b(false, false, this.field_k.field_h);
+          this.field_k.captureKey((byte) -50);
+          this.activateItem(false, false, this.field_k.selectedIndex);
         } else {
           this.c(-6);
         }
@@ -274,7 +274,7 @@ final class jn extends we {
           10 == td.field_r) {
           var3 = MenuEntry.field_h;
           MenuEntry.field_h = 96;
-          this.field_k.a(1, 95);
+          this.field_k.handleHorizontalNavigation(1, 95);
           MenuEntry.field_h = var3;
         }
     }

@@ -118,7 +118,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         try {
           var2_int = AgeValidator.field_j;
           var3 = GridWidgetContainer.field_B;
-          var4 = Corpse.field_i.field_H.a(param1, 500);
+          var4 = Corpse.field_i.field_H.countWrappedLines(param1, 500);
           var5 = 6 + Corpse.field_i.field_H.getWrappedWidth(param1, 500);
           var6 = di.field_a * var4 + 2;
           var7 = bt.a((byte) -8, var5, 12, var2_int);
@@ -128,7 +128,7 @@ final class TrackPlayerLocomotor extends Locomotor {
           if (param0 > -63) {
             field_s = (SecondaryNodeHashTable) null;
           }
-          Corpse.field_i.field_H.a(param1, var7 + 3, -Corpse.field_i.field_H.field_w + (hsa.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
+          Corpse.field_i.field_H.drawParagraph(param1, var7 + 3, -Corpse.field_i.field_H.field_w + (hsa.field_a + 1) + var8, 500, 1000, 0, -1, 0, 0, di.field_a);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hia.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

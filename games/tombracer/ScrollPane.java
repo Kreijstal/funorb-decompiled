@@ -97,18 +97,18 @@ final class ScrollPane extends jea {
         }
     }
 
-    private final void a(int param0, boolean param1, int param2, int param3, byte param4) {
+    private final void applyScrollInput(int param0, boolean param1, int param2, int param3, byte param4) {
         int var6;
-        if (this.field_wb.e((byte) -115)) {
+        if (this.field_wb.pollLineUp((byte) -115)) {
           this.field_tb.field_K = this.field_tb.field_K + param3;
         }
-        if (this.field_wb.d((byte) 40)) {
+        if (this.field_wb.pollLineDown((byte) 40)) {
           this.field_tb.field_K = this.field_tb.field_K - param3;
         }
-        if (this.field_wb.f(-1)) {
+        if (this.field_wb.pollPageUp(-1)) {
           this.field_tb.field_K = this.field_tb.field_K + param2;
         }
-        if (this.field_wb.g(-101)) {
+        if (this.field_wb.pollPageDown(-101)) {
           this.field_tb.field_K = this.field_tb.field_K - param2;
         }
         var6 = -87 / ((67 - param4) / 45);
@@ -131,10 +131,10 @@ final class ScrollPane extends jea {
           }
         }
         if (this.field_wb.isThumbHeld(-1)) {
-          this.field_tb.field_T = -this.field_wb.a(param1, (byte) 108, this.field_vb.field_t, this.field_tb.field_t);
+          this.field_tb.field_T = -this.field_wb.getDraggedScrollOffset(param1, (byte) 108, this.field_vb.field_t, this.field_tb.field_t);
           this.field_tb.field_K = 0;
         }
-        this.field_wb.a(this.field_vb.field_t, this.field_tb.field_t, (byte) -74, -this.field_tb.field_T);
+        this.field_wb.layoutThumb(this.field_vb.field_t, this.field_tb.field_t, (byte) -74, -this.field_tb.field_T);
     }
 
     private final boolean a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6) {
@@ -143,7 +143,7 @@ final class ScrollPane extends jea {
         if (param0) {
           var8 = 1;
           this.field_tb.a(var8 != 0, param2, 120, this.field_vb.field_t);
-          this.a(param1, false, param3, param4, (byte) 114);
+          this.applyScrollInput(param1, false, param3, param4, (byte) 114);
           if (!param6) {
             return false;
           }
@@ -159,7 +159,7 @@ final class ScrollPane extends jea {
           }
         }
         this.field_tb.a(var8Lifetime1 != 0, param2, 120, this.field_vb.field_t);
-        this.a(param1, false, param3, param4, (byte) 114);
+        this.applyScrollInput(param1, false, param3, param4, (byte) 114);
         if (!param6) {
           return false;
         }
@@ -192,7 +192,7 @@ final class ScrollPane extends jea {
 
     final void b(boolean param0, int param1, int param2, int param3) {
         boolean discarded$0 = false;
-        this.a(param2, param0, this.field_vb.field_t, param3, (byte) 117);
+        this.applyScrollInput(param2, param0, this.field_vb.field_t, param3, (byte) 117);
         if (param1 != 0) {
           discarded$0 = this.a(false, -87, -125, 47, 100, false, true);
         }

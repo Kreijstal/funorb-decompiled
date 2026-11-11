@@ -5,7 +5,7 @@ final class ala extends GameScreen {
     private int field_g;
     static String field_f;
 
-    final void a(int param0) {
+    final void onDeactivated(int param0) {
         if (param0 > -102) {
           ala.releaseStatics(88);
         }
@@ -16,10 +16,10 @@ final class ala extends GameScreen {
         this.field_g = 0;
     }
 
-    final void a(byte param0) {
+    final void onActivated(byte param0) {
         iqa.field_c.c(104);
         if (param0 < 78) {
-          this.b(-93);
+          this.isFullScreen(-93);
         }
     }
 
@@ -301,11 +301,11 @@ final class ala extends GameScreen {
         this.a(true, 68);
         fca.a(SingleChildWidget.a(0), 7);
         if (param0 != -28) {
-          this.a((byte) 98);
+          this.onActivated((byte) 98);
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isFullScreen(int param0) {
         if (param0 != 31923) {
           return false;
         }

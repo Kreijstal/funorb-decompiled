@@ -62,7 +62,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
           this.a((Object) null, false, (java.awt.Canvas) null);
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34161, VerticalScrollbar.a((byte) 126, this.field_mc[this.field_Cc]));
+        jaggl.OpenGL.glTexEnvi(8960, 34161, VerticalScrollbar.toGlTextureEnvMode((byte) 126, this.field_mc[this.field_Cc]));
     }
 
     final boolean f() {
@@ -959,7 +959,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         if (param0 != -23) {
           this.f(47);
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34162, VerticalScrollbar.a((byte) 101, this.field_db[this.field_Cc]));
+        jaggl.OpenGL.glTexEnvi(8960, 34162, VerticalScrollbar.toGlTextureEnvMode((byte) 101, this.field_db[this.field_Cc]));
     }
 
     final RenderBuffer b(int param0, int param1) {

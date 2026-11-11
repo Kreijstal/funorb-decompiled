@@ -29,7 +29,7 @@ final class jsa extends SingleChildWidget {
           return;
         }
         int var7 = this.field_E ? this.field_m - this.field_D - this.field_G * 2 : 0;
-        this.field_B.a(this.field_C, this.field_G + var5 + var7, this.field_G + var6, this.field_D - this.field_G, -(this.field_G * 2) + this.field_p, this.field_A, -1, !this.field_E ? 2 : 0, 1, this.field_B.field_w);
+        this.field_B.drawParagraph(this.field_C, this.field_G + var5 + var7, this.field_G + var6, this.field_D - this.field_G, -(this.field_G * 2) + this.field_p, this.field_A, -1, !this.field_E ? 2 : 0, 1, this.field_B.field_w);
     }
 
     jsa(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {

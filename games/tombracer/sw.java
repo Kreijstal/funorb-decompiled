@@ -40,7 +40,7 @@ final class sw extends jea {
           }
           if (this.field_ub != this.field_wb.length()) {
             var4 = this.field_wb.toString().substring(this.field_ub, this.field_wb.length());
-            DarknessBehaviour.a(this.field_ub, ' ', -11, this.field_wb);
+            DarknessBehaviour.padTo(this.field_ub, ' ', -11, this.field_wb);
             discarded$0 = this.field_wb.append(param0);
             discarded$1 = this.field_wb.append(var4);
           } else {
@@ -258,7 +258,7 @@ final class sw extends jea {
             this.field_Ab = var2_int;
             this.field_ub = var2_int;
             var4 = this.field_wb.toString().substring(var3, this.field_wb.length());
-            DarknessBehaviour.a(var2_int, ' ', -11, this.field_wb);
+            DarknessBehaviour.padTo(var2_int, ' ', -11, this.field_wb);
             discarded$0 = this.field_wb.append(var4);
             this.field_Cb.field_r = this.field_wb.toString();
           }
@@ -275,7 +275,7 @@ final class sw extends jea {
           return;
         }
         try {
-          DarknessBehaviour.a(0, ' ', -11, this.field_wb);
+          DarknessBehaviour.padTo(0, ' ', -11, this.field_wb);
           this.field_Ab = 0;
           this.field_ub = 0;
           this.field_Cb.field_r = this.field_wb.toString();
@@ -629,7 +629,7 @@ final class sw extends jea {
                   discarded$0 = this.field_wb.append(param2);
                 } else {
                   var5 = this.field_wb.toString().substring(this.field_ub, this.field_wb.length());
-                  DarknessBehaviour.a(this.field_ub, ' ', -11, this.field_wb);
+                  DarknessBehaviour.padTo(this.field_ub, ' ', -11, this.field_wb);
                   discarded$1 = this.field_wb.append(param2);
                   discarded$2 = this.field_wb.append(var5);
                 }
@@ -887,7 +887,7 @@ final class sw extends jea {
             if (var3_int < var5) {
               incrementValue$1 = var3_int;
               var3_int++;
-              var4 = var4 + this.field_Cb.field_H.a(this.field_wb.charAt(incrementValue$1));
+              var4 = var4 + this.field_Cb.field_H.charWidth(this.field_wb.charAt(incrementValue$1));
               continue;
             }
             break;

@@ -317,15 +317,15 @@ final class PortalBehaviour extends Behaviour {
                       var29 = (WorldBody) ((Object) var16);
                       if (!var12.isBoxBlocked(var16, var21, 2, 1, var24, var23, false, var29, var20)) {
                         var12.queueSound(var19, var18, 8, 0, (byte) 6);
-                        var12.getParticleEffects(false).a(var19, var18, 0, -44);
-                        var12.getParticleEffects(false).a(var24, var23, 0, -40);
+                        var12.getParticleEffects(false).spawnPortalSparkles(var19, var18, 0, -44);
+                        var12.getParticleEffects(false).spawnPortalSparkles(var24, var23, 0, -40);
                         var28.moveTo(var24, var23, 2);
                         var22.c(param0 ^ -5483);
                       }
                     } else {
                       var12.queueSound(var19, var18, 8, 0, (byte) 6);
-                      var12.getParticleEffects(false).a(var19, var18, 0, -44);
-                      var12.getParticleEffects(false).a(var24, var23, 0, -40);
+                      var12.getParticleEffects(false).spawnPortalSparkles(var19, var18, 0, -44);
+                      var12.getParticleEffects(false).spawnPortalSparkles(var24, var23, 0, -40);
                       var28.moveTo(var24, var23, 2);
                       var22.c(param0 ^ -5483);
                     }

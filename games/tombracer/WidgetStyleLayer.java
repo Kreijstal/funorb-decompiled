@@ -12,7 +12,7 @@ final class WidgetStyleLayer {
     static ToolkitSprite[] field_k;
     private boolean field_g;
     static String field_e;
-    private int field_h;
+    private int textColour;
     static SpriteData[] field_f;
 
     public static void releaseStatics(byte param0) {
@@ -34,19 +34,19 @@ final class WidgetStyleLayer {
         this.field_i = null;
         this.field_a = 256;
         this.field_l = -1;
-        this.field_h = 0;
+        this.textColour = 0;
         if (!param0) {
           field_f = (SpriteData[]) null;
         }
     }
 
-    final WidgetStyleLayer b(int param0, int param1) {
+    final WidgetStyleLayer withTextColour(int param0, int param1) {
         if (param1 != -2147483648) {
-          this.b(119, -53);
-          this.field_h = param0;
+          this.withTextColour(119, -53);
+          this.textColour = param0;
           return this;
         }
-        this.field_h = param0;
+        this.textColour = param0;
         return this;
     }
 
@@ -121,7 +121,7 @@ final class WidgetStyleLayer {
             if (param2.field_a == 2) {
               var7 = var7 + (param4.field_p - this.field_c.field_k);
             }
-            this.field_c.b(var6_int, var7);
+            this.field_c.drawTransparent(var6_int, var7);
           }
           if (param0 > -31) {
             field_b = (ToolkitSprite[]) null;
@@ -129,7 +129,7 @@ final class WidgetStyleLayer {
           var6 = param2.getDisplayText(-4, param4);
           if (var6 != null &&
             null != param2.field_e) {
-            if (this.field_h < 0) {
+            if (this.textColour < 0) {
               return;
             }
             stackIn_20_0 = param2.field_e;
@@ -151,7 +151,7 @@ final class WidgetStyleLayer {
             stackIn_26_3 = stackIn_24_3 + (param2.field_g + param3 + param4.field_n);
             stackIn_26_4 = param4.field_m - (param2.field_h + param2.field_c);
             stackIn_26_5 = -param2.field_i + (param4.field_p - param2.field_g);
-            stackIn_26_6 = this.field_h;
+            stackIn_26_6 = this.textColour;
             stackIn_26_7 = this.field_l;
             if (this.field_a != -2147483648) {
               stackIn_27_8 = this.field_a;
@@ -208,14 +208,14 @@ final class WidgetStyleLayer {
           if (this.field_a != -2147483648) {
             param5.field_a = this.field_a;
           }
-          if (this.field_h >= -1) {
-            param5.field_h = this.field_h;
+          if (this.textColour >= -1) {
+            param5.textColour = this.textColour;
           }
           if (null != this.field_c) {
             param5.field_c = this.field_c;
           }
           if (param2 <= 122) {
-            this.field_h = 119;
+            this.textColour = 119;
           }
           if (this.field_j == -2147483648) {
             return;
@@ -290,7 +290,7 @@ final class WidgetStyleLayer {
     final void copyTo(boolean param0, WidgetStyleLayer param1) {
         param1.field_i = this.field_i;
         param1.field_c = this.field_c;
-        param1.field_h = this.field_h;
+        param1.textColour = this.textColour;
         param1.field_g = this.field_g;
         param1.field_j = this.field_j;
         param1.field_d = this.field_d;
@@ -312,7 +312,7 @@ final class WidgetStyleLayer {
         this.field_a = -2147483648;
         this.field_g = false;
         this.field_j = -2147483648;
-        this.field_h = -2;
+        this.textColour = -2;
         this.field_d = -2147483648;
     }
 

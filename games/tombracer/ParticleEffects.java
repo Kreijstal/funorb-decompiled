@@ -6,7 +6,7 @@ final class ParticleEffects {
     private Room room;
     static String field_a;
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void spawnDust(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -23,14 +23,14 @@ final class ParticleEffects {
         }
     }
 
-    final void a(BeamSegment param0, WorldBody param1, byte param2) {
+    final void spawnBeamHitParticles(BeamSegment param0, WorldBody param1, byte param2) {
         try {
           if (param2 >= -99) {
             Effect var5 = (Effect) null;
-            this.a((byte) 23, (BeamSegment) null, (Effect) null);
+            this.spawnBeamParticles((byte) 23, (BeamSegment) null, (Effect) null);
           }
-          this.a(param0.field_a, (byte) -101, param0.field_j, param0.field_i, 1, qva.a((byte) -120, -param0.field_k + param0.field_f, param0.field_c - param0.field_d) - 4096, 8, 393216, param0.field_e, 4, 8);
-          this.a(param0.field_a, (byte) -110, param0.field_j, param0.field_i, 1, 0, 5, 0, param0.field_e, 6, 12);
+          this.spawnBurst(param0.field_a, (byte) -101, param0.field_j, param0.field_i, 1, qva.a((byte) -120, -param0.field_k + param0.field_f, param0.field_c - param0.field_d) - 4096, 8, 393216, param0.field_e, 4, 8);
+          this.spawnBurst(param0.field_a, (byte) -110, param0.field_j, param0.field_i, 1, 0, 5, 0, param0.field_e, 6, 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dj.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -50,7 +50,7 @@ final class ParticleEffects {
         field_a = null;
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final void spawnBurst(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var16 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -75,7 +75,7 @@ final class ParticleEffects {
         }
     }
 
-    final void a(byte param0, BeamSegment param1, Effect param2) {
+    final void spawnBeamParticles(byte param0, BeamSegment param1, Effect param2) {
         int var14 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -139,7 +139,7 @@ final class ParticleEffects {
             break;
           }
           if (param1.nextSegment != null) {
-            this.a((byte) 118, param1.nextSegment, param2);
+            this.spawnBeamParticles((byte) 118, param1.nextSegment, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class ParticleEffects {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void spawnCrusherDust(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -179,7 +179,7 @@ final class ParticleEffects {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void spawnBlockDebris(int param0, int param1, byte param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -199,7 +199,7 @@ final class ParticleEffects {
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void spawnSteam(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var9 = 0;
         int var10 = 0;
         Particle var11 = null;
@@ -228,7 +228,7 @@ final class ParticleEffects {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void spawnPortalSparkles(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -256,7 +256,7 @@ final class ParticleEffects {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void spawnDeathBurst(byte param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -283,7 +283,7 @@ final class ParticleEffects {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
+    final void spawnMuzzleFlash(byte param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;

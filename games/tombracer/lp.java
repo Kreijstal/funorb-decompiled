@@ -9,7 +9,7 @@ final class lp {
     int field_c;
     boolean field_i;
     int field_f;
-    static ko field_h;
+    static MenuInputState field_h;
     static int field_g;
 
     final void decode(int param0, int param1, PacketBuffer param2) {
@@ -60,7 +60,7 @@ final class lp {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 48) {
-            field_h = (ko) null;
+            field_h = (MenuInputState) null;
           }
           var2 = new IntrusiveDeque();
           var3 = new StringCursor(param1);
@@ -183,7 +183,7 @@ final class lp {
     }
 
     static {
-        field_h = new ko(1);
+        field_h = new MenuInputState(1);
         field_g = 0;
     }
 }

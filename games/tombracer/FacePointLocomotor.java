@@ -6,7 +6,7 @@ final class FacePointLocomotor extends Locomotor {
     private int field_p;
     private int field_q;
     private int field_s;
-    static ko field_r;
+    static MenuInputState field_r;
 
     final int hashState(int param0, int param1) {
         param1 = CurveOperator.mixHash((byte) 75, param1, this.field_p);
@@ -153,7 +153,7 @@ final class FacePointLocomotor extends Locomotor {
 
     final void applyConstraint(int param0) {
         if (param0 != 1) {
-          field_r = (ko) null;
+          field_r = (MenuInputState) null;
         }
     }
 
@@ -208,7 +208,7 @@ final class FacePointLocomotor extends Locomotor {
     public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 >= -43) {
-          field_r = (ko) null;
+          field_r = (MenuInputState) null;
         }
     }
 
@@ -266,6 +266,6 @@ final class FacePointLocomotor extends Locomotor {
     }
 
     static {
-        field_r = new ko(1);
+        field_r = new MenuInputState(1);
     }
 }

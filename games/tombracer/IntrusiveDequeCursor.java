@@ -364,7 +364,7 @@ final class IntrusiveDequeCursor {
         return var19Lifetime1;
     }
 
-    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+    final IntrusiveNode firstFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;

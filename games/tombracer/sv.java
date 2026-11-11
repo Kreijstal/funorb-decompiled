@@ -57,18 +57,18 @@ final class sv extends MenuScreen {
         if (param0 < 111) {
           this.getItemY(19, -86);
           if (param1 == -1 + this.items.length) {
-            return aaa.a(false) - this.items[param1].e(-163);
+            return aaa.a(false) - this.items[param1].getWidth(-163);
           }
           if (param1 < 3) {
-            return 30 + (20 + aaa.a(false) / 2) - this.items[param1].e(-163);
+            return 30 + (20 + aaa.a(false) / 2) - this.items[param1].getWidth(-163);
           }
           return aaa.a(false) / 2 + 30;
         }
         if (param1 == -1 + this.items.length) {
-          return aaa.a(false) - this.items[param1].e(-163);
+          return aaa.a(false) - this.items[param1].getWidth(-163);
         }
         if (param1 < 3) {
-          return 30 + (20 + aaa.a(false) / 2) - this.items[param1].e(-163);
+          return 30 + (20 + aaa.a(false) / 2) - this.items[param1].getWidth(-163);
         }
         return aaa.a(false) / 2 + 30;
     }
@@ -93,10 +93,10 @@ final class sv extends MenuScreen {
 
     final int getItemRight(int param0, byte param1) {
         if (param1 == -48) {
-          return this.getItemX((byte) 116, param0) + this.items[param0].e(-163);
+          return this.getItemX((byte) 116, param0) + this.items[param0].getWidth(-163);
         }
         this.getItemY(-74, 3);
-        return this.getItemX((byte) 116, param0) + this.items[param0].e(-163);
+        return this.getItemX((byte) 116, param0) + this.items[param0].getWidth(-163);
     }
 
     final void update(boolean param0, boolean param1, int param2) {
@@ -122,22 +122,22 @@ final class sv extends MenuScreen {
         if (param0 == 0) {
           var3 = 60;
           param0 = -1 + this.items.length;
-          return -var3 + this.firstItemY - (-(param0 * this.itemSpacing) + this.items[param0].d(11919));
+          return -var3 + this.firstItemY - (-(param0 * this.itemSpacing) + this.items[param0].getHeight(11919));
         }
         if (param0 == this.items.length - 1) {
           var3Lifetime1 = 60;
           param0 = -1 + this.items.length;
-          return -var3Lifetime1 + this.firstItemY - (-(param0 * this.itemSpacing) + this.items[param0].d(11919));
+          return -var3Lifetime1 + this.firstItemY - (-(param0 * this.itemSpacing) + this.items[param0].getHeight(11919));
         }
         if (3 > param0) {
           var3Lifetime2 = 20;
-          return var3Lifetime2 + (this.firstItemY + (param0 - 1) * this.items[param0].d(11919) - this.items[0].d(11919));
+          return var3Lifetime2 + (this.firstItemY + (param0 - 1) * this.items[param0].getHeight(11919) - this.items[0].getHeight(11919));
         }
         if (param1 == 30) {
-          return this.firstItemY + ((param0 - 3) * this.itemSpacing - this.items[param0].d(11919));
+          return this.firstItemY + ((param0 - 3) * this.itemSpacing - this.items[param0].getHeight(11919));
         }
         field_q = (String) null;
-        return this.firstItemY + ((param0 - 3) * this.itemSpacing - this.items[param0].d(11919));
+        return this.firstItemY + ((param0 - 3) * this.itemSpacing - this.items[param0].getHeight(11919));
     }
 
     final static AntialiasedBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, int param4) {

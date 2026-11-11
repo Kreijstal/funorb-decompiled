@@ -124,7 +124,7 @@ final class VoronoiNoiseOperator extends TextureOperator {
           var5 = param2.field_A;
           var6 = param2.field_G;
           var7 = param2.field_t;
-          var37.field_f.b(var5, var7, -67, var6, var4);
+          var37.field_f.openAt(var5, var7, -67, var6, var4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nw.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

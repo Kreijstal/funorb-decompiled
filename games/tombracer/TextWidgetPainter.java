@@ -196,10 +196,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_e.c(this.getDisplayText(-4, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128) + var11, param7, param0);
+              this.field_e.drawText(this.getDisplayText(-4, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128) + var11, param7, param0);
             }
           } else {
-            this.field_e.a(this.getDisplayText(param5 ^ -12591, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128), var9_int, var10, param7, param0, this.field_l, this.field_a, this.field_f);
+            this.field_e.drawParagraph(this.getDisplayText(param5 ^ -12591, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128), var9_int, var10, param7, param0, this.field_l, this.field_a, this.field_f);
           }
           pfa.a(1);
           return;
@@ -357,7 +357,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    private final void c(int param0, UiWidget param1) {
+    private final void layoutSingleLine(int param0, UiWidget param1) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -571,7 +571,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             this.field_e = (BitmapFont) null;
           }
           if (!this.field_b) {
-            this.c(param1 ^ 14131, param0);
+            this.layoutSingleLine(param1 ^ 14131, param0);
           } else {
             ((CachedTextLayout) (param0.field_l)).a(this.field_e, (byte) -49, this.getDisplayText(param1 ^ -14159, param0), this.getAvailableTextWidth((byte) 91, param0), this.field_a, this.b(param1 ^ 2147469490, param0), this.field_l, this.field_f);
           }

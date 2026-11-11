@@ -405,7 +405,7 @@ final class ResultsPhase extends MatchPhase {
           var10Lifetime1Lifetime1 = wga.field_a[var8Lifetime3];
           gca.field_a.draw(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
           tga.field_a.la();
-          this.matchState.players[var8Lifetime3].getAnimator((byte) -42).a(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
+          this.matchState.players[var8Lifetime3].getAnimator((byte) -42).drawPortrait(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
           MembersUpsellMenu.a(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
           if (!this.field_p &&
             var7Lifetime2 >= var8Lifetime3 * 50 + efa.field_y &&
@@ -824,9 +824,9 @@ final class ResultsPhase extends MatchPhase {
         }
         for (var3 = 0; var3 < this.matchState.players.length; var3++) {
           if (!this.field_q) {
-            this.matchState.players[var3].getAnimator((byte) -98).a(26, 4, true);
+            this.matchState.players[var3].getAnimator((byte) -98).setAnimationState(26, 4, true);
           }
-          this.matchState.players[var3].getAnimator((byte) -127).a(param0 + 21383);
+          this.matchState.players[var3].getAnimator((byte) -127).tick(param0 + 21383);
           this.matchState.players[var3].getAnimator((byte) -54).updateAnimation(-4366);
         }
         this.field_q = true;

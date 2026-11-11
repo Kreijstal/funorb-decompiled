@@ -94,7 +94,7 @@ final class gga extends ofa implements ButtonListener {
         }
         pfa.a(1);
         if (TimeSwitchBehaviour.field_r >= 150) {
-          bra.field_O.c(var3 + 15, var4 + 10, var5);
+          bra.field_O.drawAlpha(var3 + 15, var4 + 10, var5);
         } else {
           vha.field_a.drawHalfSize(var3, var4);
         }
@@ -119,7 +119,7 @@ final class gga extends ofa implements ButtonListener {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          Player.field_W.c(15 + var3, 10 + var4, var5 * var7Lifetime1 >> 8);
+          Player.field_W.drawAlpha(15 + var3, 10 + var4, var5 * var7Lifetime1 >> 8);
         }
     }
 

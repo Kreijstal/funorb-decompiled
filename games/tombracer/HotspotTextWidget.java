@@ -8,7 +8,7 @@ class HotspotTextWidget extends FocusableWidget {
     private bm field_A;
     private String[] field_C;
 
-    private final bm a(int param0, int param1, byte param2) {
+    private final bm findHotspot(int param0, int param1, byte param2) {
         bm var4;
         bm var5;
         int var6;
@@ -57,7 +57,7 @@ class HotspotTextWidget extends FocusableWidget {
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void setHotspotTooltip(String param0, int param1, int param2) {
         int var5 = 0;
         String[] var4 = null;
         int var6 = 0;
@@ -115,7 +115,7 @@ class HotspotTextWidget extends FocusableWidget {
           if (this.field_f) {
             var5_int = -param0 + (AgeValidator.field_j - this.field_i);
             var6 = GridWidgetContainer.field_B - param3 - this.field_n;
-            this.field_A = this.a(var6, var5_int, (byte) -20);
+            this.field_A = this.findHotspot(var6, var5_int, (byte) -20);
           }
           if (param1 != 2097152) {
             field_z = (int[][]) null;
@@ -135,7 +135,7 @@ class HotspotTextWidget extends FocusableWidget {
         }
     }
 
-    final void b(int param0) {
+    final void rebuildHotspots(int param0) {
         int var2;
         WidgetTextLayout var3;
         TextLayout var4;
@@ -278,7 +278,7 @@ class HotspotTextWidget extends FocusableWidget {
         if (param3 > -40) {
           UiWidget var8 = (UiWidget) null;
           this.requestKeyboardFocus((UiWidget) null, false);
-          var7 = this.a(var6, var5, (byte) -20);
+          var7 = this.findHotspot(var6, var5, (byte) -20);
           if (var7 == null) {
             return;
           }
@@ -288,7 +288,7 @@ class HotspotTextWidget extends FocusableWidget {
           }
           return;
         }
-        var7Lifetime1 = this.a(var6, var5, (byte) -20);
+        var7Lifetime1 = this.findHotspot(var6, var5, (byte) -20);
         if (var7Lifetime1 == null) {
           return;
         }
@@ -349,7 +349,7 @@ class HotspotTextWidget extends FocusableWidget {
 
     final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.b(18758);
+        this.rebuildHotspots(18758);
     }
 
     final static oc a(ResourceArchive param0, String param1, String param2, boolean param3) {

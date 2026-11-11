@@ -55,7 +55,7 @@ final class upa extends IntrusiveNode {
         if (mla.field_a <= 0) {
           if (GameKeyHandler.field_a > param1) {
             if (null != fta.field_b) {
-              fta.field_b.d(nra.field_c.field_qb, 0);
+              fta.field_b.drawOpaque(nra.field_c.field_qb, 0);
             }
             stackIn_46_0 = nra.field_c;
             stackIn_46_1 = param1 + 118;
@@ -68,7 +68,7 @@ final class upa extends IntrusiveNode {
           } else {
             if (0 < fp.field_e) {
               if (null != fta.field_b) {
-                fta.field_b.d(nra.field_c.field_qb, 0);
+                fta.field_b.drawOpaque(nra.field_c.field_qb, 0);
               }
               stackIn_60_0 = nra.field_c;
               stackIn_60_1 = param1 + 118;
@@ -82,7 +82,7 @@ final class upa extends IntrusiveNode {
           }
         } else {
           if (fta.field_b != null) {
-            fta.field_b.d(nra.field_a.field_qb, 0);
+            fta.field_b.drawOpaque(nra.field_a.field_qb, 0);
           }
           stackIn_6_0 = nra.field_a;
           stackIn_6_1 = param1 + 80;
@@ -94,7 +94,7 @@ final class upa extends IntrusiveNode {
           ((jea) (Object) stackIn_10_0).b(stackIn_10_1, stackIn_11_2);
           if (GameKeyHandler.field_a > param1) {
             if (null != fta.field_b) {
-              fta.field_b.d(nra.field_c.field_qb, 0);
+              fta.field_b.drawOpaque(nra.field_c.field_qb, 0);
             }
             stackIn_32_0 = nra.field_c;
             stackIn_32_1 = param1 + 118;
@@ -107,7 +107,7 @@ final class upa extends IntrusiveNode {
           } else {
             if (0 < fp.field_e) {
               if (null != fta.field_b) {
-                fta.field_b.d(nra.field_c.field_qb, 0);
+                fta.field_b.drawOpaque(nra.field_c.field_qb, 0);
               }
               stackIn_19_0 = nra.field_c;
               stackIn_19_1 = param1 + 118;

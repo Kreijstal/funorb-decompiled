@@ -219,10 +219,10 @@ final class PlantModel extends TrapModel {
           if (param0) {
             PlantModel.b(true, -117);
           }
-          var5 = (bb) (mg.field_b.first(-80));
+          var5 = (bb) (TimingPattern.field_b.first(-80));
           while (var5 != null) {
             BeamSegment.a(param0, param1, var5);
-            var5 = (bb) (mg.field_b.next(122));
+            var5 = (bb) (TimingPattern.field_b.next(122));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

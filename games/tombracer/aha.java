@@ -69,7 +69,7 @@ final class aha {
                 if (this.field_f != 0) {
                   var15 = 0;
                   while (var15 < this.field_b) {
-                    var28 = var14.a();
+                    var28 = var14.decodeVector();
                     for (var17 = 0; var17 < var14.field_d; var17++) {
                       param0[var13 + var15] = param0[var13 + var15] + var28[var17];
                       var15++;
@@ -78,7 +78,7 @@ final class aha {
                 } else {
                   var15 = this.field_b / var14.field_d;
                   for (var16 = 0; var16 < var15; var16++) {
-                    var27 = var14.a();
+                    var27 = var14.decodeVector();
                     for (var18 = 0; var18 < var14.field_d; var18++) {
                       param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                     }

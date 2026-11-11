@@ -143,7 +143,7 @@ final class ft {
                   wp.field_c[var23Lifetime2] = -2147483648;
                 } else {
                   MatchStatistics.field_f[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
-                  mg.field_e[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
+                  TimingPattern.field_e[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   if (var29Lifetime1 < var7_int) {
                     var7_int = var29Lifetime1;
                   }

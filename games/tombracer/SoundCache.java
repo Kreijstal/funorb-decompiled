@@ -373,7 +373,7 @@ final class SoundCache {
             stackIn_11_0 = null;
             return (u) (stackIn_11_0);
           }
-          var10 = var9.a();
+          var10 = var9.toPcmSample();
           var8Lifetime1 = var10;
           this.field_a.put(var6, 103, var8Lifetime1);
           if (param3 != null) {

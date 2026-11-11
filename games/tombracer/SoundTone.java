@@ -128,14 +128,14 @@ final class SoundTone {
           return field_x;
         }
         var3 = (double)param0 / ((double)param1 + 0.0);
-        this.field_g.a();
-        this.field_y.a();
+        this.field_g.reset();
+        this.field_y.reset();
         var5 = 0;
         var6 = 0;
         var7 = 0;
         if (this.field_c != null) {
-          this.field_c.a();
-          this.field_l.a();
+          this.field_c.reset();
+          this.field_l.reset();
           var5 = (int)((double)(this.field_c.field_i - this.field_c.field_e) * 32.768 / var3);
           var6 = (int)((double)this.field_c.field_e * 32.768 / var3);
         }
@@ -143,8 +143,8 @@ final class SoundTone {
         var9 = 0;
         var10 = 0;
         if (this.field_e != null) {
-          this.field_e.a();
-          this.field_p.a();
+          this.field_e.reset();
+          this.field_p.reset();
           var8 = (int)((double)(this.field_e.field_i - this.field_e.field_e) * 32.768 / var3);
           var9 = (int)((double)this.field_e.field_e * 32.768 / var3);
         }
@@ -183,8 +183,8 @@ final class SoundTone {
           }
         }
         if (this.field_k != null) {
-          this.field_k.a();
-          this.field_h.a();
+          this.field_k.reset();
+          this.field_h.reset();
           var11Lifetime2 = 0;
           var12Lifetime1 = 0;
           var13Lifetime1 = 1;
@@ -216,7 +216,7 @@ final class SoundTone {
         }
         if (!(this.field_n.field_a[0] <= 0) ||
           !(this.field_n.field_a[1] <= 0)) {
-          this.field_d.a();
+          this.field_d.reset();
           var11Lifetime4 = this.field_d.advance(param0 + 1);
           var12Lifetime3 = this.field_n.computeCoefficients(0, (float)var11Lifetime4 / 65536.0f);
           var13Lifetime2 = this.field_n.computeCoefficients(1, (float)var11Lifetime4 / 65536.0f);

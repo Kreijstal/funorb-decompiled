@@ -104,7 +104,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
 
     final static boolean a(int param0, byte param1, int param2) {
         int var3 = 118 / ((-39 - param1) / 53);
-        return (jj.hasAnyMask33(param2, param0, -32842) | mg.hasAnyMask34((byte) -53, param2, param0) | gha.hasAnyMask52(param2, param0, 86)) & ArchiveRequest.hasFlag2048(param2, 0, param0);
+        return (jj.hasAnyMask33(param2, param0, -32842) | TimingPattern.hasAnyMask34((byte) -53, param2, param0) | gha.hasAnyMask52(param2, param0, 86)) & ArchiveRequest.hasFlag2048(param2, 0, param0);
     }
 
     final String getHoverText(byte param0) {

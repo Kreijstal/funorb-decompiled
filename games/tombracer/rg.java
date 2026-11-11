@@ -258,7 +258,7 @@ final class rg extends SingleChildWidget {
           nm.a(var6, (byte) 110);
           this.child.renderLayer(param2, 0, 0, param3);
           pfa.a(1);
-          var6.c(param0 + this.field_i, this.field_n + param1, this.field_y);
+          var6.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_y);
           return;
         }
         this.child.renderLayer(param0 + this.field_i, this.field_n + param1, 0, param3);

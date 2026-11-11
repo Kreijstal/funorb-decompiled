@@ -6,28 +6,28 @@ final class MatchStatistics {
     static SpriteData field_g;
     static String field_k;
     static String field_l;
-    private int[] field_b;
+    private int[] charactersFaced;
     private boolean[] penalised;
     static int[] field_f;
     private int[] field_p;
     static FontMetrics field_n;
-    private int[] field_a;
+    private int[] bladeDeaths;
     private int[] treasureScore;
-    private int[] field_m;
-    private int[] field_j;
-    private boolean[] field_d;
-    private int[] field_h;
-    private int[] field_o;
+    private int[] crushDeaths;
+    private int[] fireDeaths;
+    private boolean[] lostRound;
+    private int[] fallDeaths;
+    private int[] charactersPlayed;
 
     final void addTreasureScore(int param0, int param1, int param2) {
         this.treasureScore[param0] = this.treasureScore[param0] + param2;
         if (param1 != 65408) {
-          this.e(-108, -74);
+          this.addFallDeath(-108, -74);
         }
     }
 
-    private final void f(int param0, int param1) {
-        this.field_j[param1] = this.field_j[param1] + 1;
+    private final void addFireDeath(int param0, int param1) {
+        this.fireDeaths[param1] = this.fireDeaths[param1] + 1;
         int var3 = 125 % ((param0 + 38) / 60);
     }
 
@@ -43,25 +43,25 @@ final class MatchStatistics {
           this.a(param1, 9266);
         } else {
           if (5 == var4) {
-            this.e(-127, param1);
+            this.addFallDeath(-127, param1);
           } else {
             if (var4 == 12) {
-              this.f(-112, param1);
+              this.addFireDeath(-112, param1);
             } else {
               if (var4 == 10) {
-                this.c(param1, -11);
+                this.addBladeDeath(param1, -11);
               } else {
                 if (15 == var4) {
-                  this.c(param1, -11);
+                  this.addBladeDeath(param1, -11);
                 } else {
                   if (var4 == 14) {
-                    this.b(-5, param1);
+                    this.addCrushDeath(-5, param1);
                   } else {
                     if (var4 == 3) {
-                      this.b(-5, param1);
+                      this.addCrushDeath(-5, param1);
                     } else {
                       if (var4 == 4) {
-                        this.b(-5, param1);
+                        this.addCrushDeath(-5, param1);
                       }
                     }
                   }
@@ -74,11 +74,11 @@ final class MatchStatistics {
         return;
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void markCharacterFaced(int param0, int param1, boolean param2) {
         if (!param2) {
           return;
         }
-        this.field_b[param0] = WallTile.bitwiseOr(this.field_b[param0], 1 << param1);
+        this.charactersFaced[param0] = WallTile.bitwiseOr(this.charactersFaced[param0], 1 << param1);
     }
 
     final static void a(byte param0, boolean param1) {
@@ -97,23 +97,23 @@ final class MatchStatistics {
         int var4 = 41 % ((param1 + 34) / 36);
     }
 
-    private final void e(int param0, int param1) {
-        this.field_h[param1] = this.field_h[param1] + 1;
+    private final void addFallDeath(int param0, int param1) {
+        this.fallDeaths[param1] = this.fallDeaths[param1] + 1;
         if (param0 != -127) {
-          this.field_h = (int[]) null;
+          this.fallDeaths = (int[]) null;
         }
     }
 
     final void a(byte param0) {
         if (param0 < 42) {
-          this.c(-107, 24);
+          this.addBladeDeath(-107, 24);
         }
     }
 
-    private final void c(int param0, int param1) {
-        this.field_a[param0] = this.field_a[param0] + 1;
+    private final void addBladeDeath(int param0, int param1) {
+        this.bladeDeaths[param0] = this.bladeDeaths[param0] + 1;
         if (param1 != -11) {
-          this.a(43, false);
+          this.markRoundLosers(43, false);
         }
     }
 
@@ -128,10 +128,10 @@ final class MatchStatistics {
         field_n = null;
     }
 
-    private final void b(int param0, int param1) {
-        this.field_m[param1] = this.field_m[param1] + 1;
+    private final void addCrushDeath(int param0, int param1) {
+        this.crushDeaths[param1] = this.crushDeaths[param1] + 1;
         if (param0 != -5) {
-          this.a(52, 52, false);
+          this.markCharacterFaced(52, 52, false);
         }
     }
 
@@ -142,8 +142,8 @@ final class MatchStatistics {
         this.field_p[param0] = this.field_p[param0] + 1;
     }
 
-    final void a(int param0, byte param1, int param2) {
-        this.field_o[param0] = WallTile.bitwiseOr(this.field_o[param0], 1 << param2);
+    final void markCharacterPlayed(int param0, byte param1, int param2) {
+        this.charactersPlayed[param0] = WallTile.bitwiseOr(this.charactersPlayed[param0], 1 << param2);
         if (param1 != -52) {
           MatchStatistics.releaseStatics(false);
         }
@@ -154,7 +154,7 @@ final class MatchStatistics {
         this.penalised[param0] = true;
     }
 
-    final static int c(int param0, int param1, int param2) {
+    final static int scaleLightness(int param0, int param1, int param2) {
         param2 = (127 & param1) * param2 >> 7;
         if (param0 != -127) {
           field_n = (FontMetrics) null;
@@ -180,29 +180,29 @@ final class MatchStatistics {
     }
 
     MatchStatistics(int param0) {
-        this.field_j = new int[param0];
+        this.fireDeaths = new int[param0];
         this.trapsDestroyed = new int[param0];
         this.field_p = new int[param0];
-        this.field_b = new int[param0];
-        this.field_m = new int[param0];
-        this.field_h = new int[param0];
-        this.field_d = new boolean[param0];
+        this.charactersFaced = new int[param0];
+        this.crushDeaths = new int[param0];
+        this.fallDeaths = new int[param0];
+        this.lostRound = new boolean[param0];
         this.penalised = new boolean[param0];
-        this.field_a = new int[param0];
+        this.bladeDeaths = new int[param0];
         this.treasureScore = new int[param0];
-        this.field_o = new int[param0];
+        this.charactersPlayed = new int[param0];
     }
 
-    final void a(int param0, boolean param1) {
+    final void markRoundLosers(int param0, boolean param1) {
         int var3 = 0;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (param1) {
           return;
         }
-        for (var3 = 0; this.field_d.length > var3; var3++) {
+        for (var3 = 0; this.lostRound.length > var3; var3++) {
           if (var3 != param0) {
-            this.field_d[var3] = true;
+            this.lostRound[var3] = true;
           }
         }
     }

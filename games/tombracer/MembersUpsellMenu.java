@@ -116,9 +116,9 @@ final class MembersUpsellMenu extends MenuScreen {
         }
         if (param1 == 1 &&
           this.items.length == 3) {
-          return aaa.a(false) - this.items[param1].e(-163) >> 1;
+          return aaa.a(false) - this.items[param1].getWidth(-163) >> 1;
         }
-        return aaa.a(false) - this.items[param1].e(-163) - 10;
+        return aaa.a(false) - this.items[param1].getWidth(-163) - 10;
     }
 
     final void draw(byte param0, boolean param1) {
@@ -220,8 +220,8 @@ final class MembersUpsellMenu extends MenuScreen {
         return false;
     }
 
-    final void a(byte param0) {
-        super.a((byte) 85);
+    final void onActivated(byte param0) {
+        super.onActivated((byte) 85);
         this.field_s = -30;
         this.field_t = 0;
         this.field_r = this.e(-18796);
@@ -238,7 +238,7 @@ final class MembersUpsellMenu extends MenuScreen {
         this.field_q.addLast((byte) -92, new cc(5, 7, ta.field_vb[2], EdgeDetectOperator.field_m[2], 3, 3));
         this.field_q.addLast((byte) -96, new cc(6, 8, 4));
         if (param0 <= 78) {
-          this.b(true, false, 48);
+          this.activateItem(true, false, 48);
         }
         this.field_q.addLast((byte) -107, new cc(6, 7, ta.field_vb[3], EdgeDetectOperator.field_m[3], 3, 3));
         this.field_q.addLast((byte) -51, new cc(7, 8, ta.field_vb[4], EdgeDetectOperator.field_m[4], 1, 2));
@@ -280,7 +280,7 @@ final class MembersUpsellMenu extends MenuScreen {
         if (param1 != -48) {
           this.draw((byte) 114, true);
         }
-        return this.getItemX((byte) 112, param0) + this.items[param0].e(-163);
+        return this.getItemX((byte) 112, param0) + this.items[param0].getWidth(-163);
     }
 
     private final void f(int param0) {
@@ -289,11 +289,11 @@ final class MembersUpsellMenu extends MenuScreen {
         }
     }
 
-    final void b(boolean param0, boolean param1, int param2) {
+    final void activateItem(boolean param0, boolean param1, int param2) {
         if (param2 >= 0 &&
           param2 < this.items.length) {
-          super.b(param0, param1, param2);
-          if (this.field_k.a(param0) &&
+          super.activateItem(param0, param1, param2);
+          if (this.field_k.isActivated(param0) &&
             this.items[param2].field_g == 21) {
             this.b(false);
           }

@@ -183,7 +183,7 @@ final class StandingsPhase extends MatchPhase {
             var9 = -var8 + var6;
             var10 = -(var5 * var9) + SwitchLinkList.b(0);
             var11 = var4 * var22 + (var3 - (var4 >> 1) * (-1 + var6));
-            this.matchState.players[var22].getAnimator((byte) -120).a(-1, var11, 800, 0, var10);
+            this.matchState.players[var22].getAnimator((byte) -120).drawPortrait(-1, var11, 800, 0, var10);
             IntrusiveDeque.field_c.a(var11 - (IntrusiveDeque.field_c.width() >> 1) + 1, var10 - 8);
             if (var8 == 0) {
               GridWidgetContainer.field_y[-1 + GridWidgetContainer.field_y.length].a(-(GridWidgetContainer.field_y[GridWidgetContainer.field_y.length - 1].width() >> 1) + var11 - 1, var10 - 12);
@@ -307,7 +307,7 @@ final class StandingsPhase extends MatchPhase {
           stackIn_62_2 = true;
           stackIn_62_3 = 1;
           stackIn_63_4 = (this.field_n == var3);
-          ((MenuEntry) (Object) stackIn_62_0).a(stackIn_62_1, stackIn_62_2, stackIn_62_3, stackIn_63_4);
+          ((MenuEntry) (Object) stackIn_62_0).draw(stackIn_62_1, stackIn_62_2, stackIn_62_3, stackIn_63_4);
         }
         if (param0 >= -50) {
           field_m = (long[]) null;
@@ -362,9 +362,9 @@ final class StandingsPhase extends MatchPhase {
             } else {
               stackIn_6_2 = 23;
             }
-            ((PlayerModel) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2, false);
+            ((PlayerModel) (Object) stackIn_5_0).setAnimationState(stackIn_5_1, stackIn_6_2, false);
           }
-          var4_ref_hf.a(21463);
+          var4_ref_hf.tick(21463);
           var4_ref_hf.updateAnimation(-4366);
         }
         this.field_n = -1;
@@ -397,7 +397,7 @@ final class StandingsPhase extends MatchPhase {
           stackIn_29_0 = this.field_p[var3Lifetime1];
           stackIn_29_1 = true;
           stackIn_30_2 = (this.field_n == var3Lifetime1);
-          ((MenuEntry) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_30_2, true, 6);
+          ((MenuEntry) (Object) stackIn_29_0).update(stackIn_29_1, stackIn_30_2, true, 6);
           if (param1 &&
             var4 != 0 &&
             0 != PlayerModel.field_b) {

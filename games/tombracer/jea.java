@@ -623,9 +623,9 @@ class jea extends um {
             var24 = var24 + (-var17.field_k + this.field_t);
           }
           if (256 <= this.field_I) {
-            var17.b(var23_int, var24);
+            var17.drawTransparent(var23_int, var24);
           } else {
-            var17.c(var23_int, var24, this.field_I);
+            var17.drawAlpha(var23_int, var24, this.field_I);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -649,7 +649,7 @@ class jea extends um {
               var22 = var22 + (-this.field_H.field_k - this.field_H.field_w + this.field_t) / 2;
             }
             if (this.field_z == 0) {
-              this.field_H.b(var23Lifetime2, var21 + this.field_x + this.field_q, var22 + (this.field_A + this.field_H.field_w), var18, -1, this.field_s);
+              this.field_H.drawTextAlpha(var23Lifetime2, var21 + this.field_x + this.field_q, var22 + (this.field_A + this.field_H.field_w), var18, -1, this.field_s);
             } else {
               if (this.field_z == 1) {
                 this.field_H.drawCenteredTextAlpha(var23Lifetime2, (-(this.field_x * 2) + this.field_G) / 2 + this.field_q + this.field_x + var21, this.field_A + var22 + this.field_H.field_w, var18, -1, this.field_s);

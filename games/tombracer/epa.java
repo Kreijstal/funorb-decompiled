@@ -5,7 +5,7 @@ final class epa extends MenuScreen {
     static int[] field_r;
     static String field_q;
 
-    final int e(int param0, int param1) {
+    final int getItemHeight(int param0, int param1) {
         if (param1 < 121) {
           return -92;
         }
@@ -37,12 +37,12 @@ final class epa extends MenuScreen {
         if (param1 != 30) {
           field_r = (int[]) null;
           if (param0 < 5) {
-            return this.firstItemY + this.e(0, 125) - cq.field_d.field_w;
+            return this.firstItemY + this.getItemHeight(0, 125) - cq.field_d.field_w;
           }
           return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.firstItemY + (-2 + param0) * this.itemSpacing);
         }
         if (param0 < 5) {
-          return this.firstItemY + this.e(0, 125) - cq.field_d.field_w;
+          return this.firstItemY + this.getItemHeight(0, 125) - cq.field_d.field_w;
         }
         return (param0 > 4 ? 30 : -1 + this.items.length == param0 ? 60 : 30) - cq.field_d.field_w + (this.firstItemY + (-2 + param0) * this.itemSpacing);
     }

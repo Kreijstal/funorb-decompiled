@@ -182,10 +182,10 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var13 = TombRacer.field_G ? 1 : 0;
         var6 = this.field_I.getState(-4666);
         if (var6 == BevelOperator.field_p) {
-          var17 = ko.field_g;
+          var17 = MenuInputState.field_g;
           if (!var17.equals(this.field_o)) {
             this.field_o = var17;
-            this.b(18758);
+            this.rebuildHotspots(18758);
             super.renderLayer(param0, param1, param2, param3);
             var6 = this.field_I.getState(-4666);
             var54 = (WidgetTextLayout) ((Object) this.field_r);
@@ -267,10 +267,10 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           return;
         }
         if (tea.field_b == var6) {
-          var26 = ko.field_g;
+          var26 = MenuInputState.field_g;
           if (!var26.equals(this.field_o)) {
             this.field_o = var26;
-            this.b(18758);
+            this.rebuildHotspots(18758);
             super.renderLayer(param0, param1, param2, param3);
             var6 = this.field_I.getState(-4666);
             var56 = (WidgetTextLayout) ((Object) this.field_r);
@@ -391,7 +391,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             return;
           }
           this.field_o = var5;
-          this.b(18758);
+          this.rebuildHotspots(18758);
           super.renderLayer(param0, param1, param2, param3);
           var6Lifetime1Lifetime1 = this.field_I.getState(-4666);
           var60 = (WidgetTextLayout) ((Object) this.field_r);
@@ -441,7 +441,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var5Lifetime1 = var35;
         if (!var35.equals(this.field_o)) {
           this.field_o = var35;
-          this.b(18758);
+          this.rebuildHotspots(18758);
           super.renderLayer(param0, param1, param2, param3);
           var6Lifetime2 = this.field_I.getState(-4666);
           var58 = (WidgetTextLayout) ((Object) this.field_r);

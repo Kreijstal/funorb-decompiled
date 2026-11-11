@@ -123,7 +123,7 @@ final class LightSource extends IntrusiveNode {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void setColour(int param0, int param1) {
         if (this.animatedLight == null) {
           return;
         }
@@ -162,7 +162,7 @@ final class LightSource extends IntrusiveNode {
         return false;
     }
 
-    final boolean c(int param0) {
+    final boolean isRemoved(int param0) {
         if (param0 != -1459852242) {
           this.getAnimatedLight(-60);
           return this.field_r;
@@ -170,7 +170,7 @@ final class LightSource extends IntrusiveNode {
         return this.field_r;
     }
 
-    final void a(byte param0, int param1) {
+    final void updateLightPosition(byte param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
         if (this.animatedLight == null ||
@@ -229,7 +229,7 @@ final class LightSource extends IntrusiveNode {
         return this.disabled;
     }
 
-    final void e(int param0) {
+    final void markRemoved(int param0) {
         this.field_r = true;
         if (param0 != 2) {
           this.animatedLight = (AnimatedLight) null;
@@ -251,7 +251,7 @@ final class LightSource extends IntrusiveNode {
 
     final void b(int param0, int param1) {
         if (param1 != 0) {
-          this.c(-107, 111);
+          this.setColour(-107, 111);
           this.field_n = param0;
           return;
         }

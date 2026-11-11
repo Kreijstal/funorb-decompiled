@@ -198,7 +198,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         String var2 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.e(127)});
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, HardwareSpecularEffect.field_f);
-        var3 = var3 + (this.a(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
+        var3 = var3 + (this.addFieldWithHelp(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
         var3 = var3 + this.addLabeledField(this.field_E, var3, 170, (byte) 59, rta.field_j);
         var3 = var3 + (this.a(gea.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
         var3 = var3 + (this.a(CrusherBehaviour.field_r, za.field_f, this.field_G, -3, 170, var3) + 5);
@@ -209,8 +209,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         TextWidgetPainter var5 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
         this.field_A = new HotspotTextWidget(var2, var5);
         this.field_A.field_q = "";
-        this.field_A.a(sw.field_Fb, 0, 0);
-        this.field_A.a(sw.field_Fb, 1, 0);
+        this.field_A.setHotspotTooltip(sw.field_Fb, 0, 0);
+        this.field_A.setHotspotTooltip(sw.field_Fb, 1, 0);
         this.field_A.field_h = (WidgetListener) (this);
         this.field_A.a(var3, (byte) -120, -90 + this.field_m, 46);
         var3 = var3 + (this.field_A.field_p + 15);
@@ -236,7 +236,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         }
     }
 
-    private final int a(int param0, int param1, UiWidget param2, int param3, int param4, String param5, String param6) {
+    private final int addFieldWithHelp(int param0, int param1, UiWidget param2, int param3, int param4, String param5, String param6) {
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
         jsa var10 = null;
@@ -417,7 +417,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           if (param1 <= 18) {
             this.field_A = (HotspotTextWidget) null;
           }
-          ((TextInputWidget) ((Object) var3)).a(false, -16719, var4);
+          ((TextInputWidget) ((Object) var3)).setText(false, -16719, var4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mr.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -458,7 +458,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
             var8 = (HotspotTextWidget) null;
             this.onHotspotAction((HotspotTextWidget) null, -33, -81, -72);
           }
-          stackIn_3_0 = this.a(param5, param3 + 112, param2, param4, 35, param1, param0);
+          stackIn_3_0 = this.addFieldWithHelp(param5, param3 + 112, param2, param4, 35, param1, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -19,7 +19,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
             var4 = (String) null;
             this.validateText((byte) 77, (String) null);
           }
-          stackIn_5_0 = (MenuEntry.a(param0 ^ -118, param1) != null) ? 0 : 1;
+          stackIn_5_0 = (MenuEntry.validateEmail(param0 ^ -118, param1) != null) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
             return LightSource.field_k;

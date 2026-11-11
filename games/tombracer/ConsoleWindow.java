@@ -23,7 +23,7 @@ abstract class ConsoleWindow implements ShellListener {
     private String field_r;
     private int field_q;
 
-    private final void a(boolean param0, String param1) {
+    private final void addToHistory(boolean param0, String param1) {
         gka var3 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -82,14 +82,14 @@ abstract class ConsoleWindow implements ShellListener {
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];
             if (var4_int <= this.field_m.stringWidth(var8)) {
-              var9 = this.a(var4_int, true, var8);
+              var9 = this.wrapText(var4_int, true, var8);
               var10 = (gka) (var9.first(param0 ^ -24277));
               while (var10 != null) {
-                this.b(var10.field_h, param2, 230);
+                this.appendLine(var10.field_h, param2, 230);
                 var10 = (gka) (var9.next(param0 ^ 24289));
               }
             } else {
-              this.b(var8, param2, param0 - 23989);
+              this.appendLine(var8, param2, param0 - 23989);
             }
           }
           return;
@@ -107,7 +107,7 @@ abstract class ConsoleWindow implements ShellListener {
         }
     }
 
-    private final IntrusiveDeque a(int param0, boolean param1, String param2) {
+    private final IntrusiveDeque wrapText(int param0, boolean param1, String param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int stackIn_12_0 = 0;
@@ -142,7 +142,7 @@ abstract class ConsoleWindow implements ShellListener {
                   32 != param2.charAt(var7)) {
                   incrementValue$0 = var7;
                   var7--;
-                  var5 = var5 - this.field_m.a(param2.charAt(incrementValue$0));
+                  var5 = var5 - this.field_m.charWidth(param2.charAt(incrementValue$0));
                   continue;
                 }
                 break;
@@ -158,7 +158,7 @@ abstract class ConsoleWindow implements ShellListener {
               while (var5 > param0) {
                 incrementValue$1 = var7Lifetime1;
                 var7Lifetime1--;
-                var5 = var5 - this.field_m.a(param2.charAt(incrementValue$1));
+                var5 = var5 - this.field_m.charWidth(param2.charAt(incrementValue$1));
               }
               var6 = param2.substring(0, var7Lifetime1);
               param2 = param2.substring(var7Lifetime1 + 1);
@@ -260,7 +260,7 @@ abstract class ConsoleWindow implements ShellListener {
           this.field_p.b(74, false);
           var2Lifetime1 = var2Lifetime1 + (5 + this.field_k);
           for (var3Lifetime1 = 0; this.field_b.length > var3Lifetime1; var3Lifetime1++) {
-            this.field_m.c(this.field_b[var3Lifetime1], this.field_p.field_q + 10, var2Lifetime1, 13421772, -1);
+            this.field_m.drawText(this.field_b[var3Lifetime1], this.field_p.field_q + 10, var2Lifetime1, 13421772, -1);
             var2Lifetime1 = var2Lifetime1 + this.field_k;
           }
         }
@@ -303,13 +303,13 @@ abstract class ConsoleWindow implements ShellListener {
         jea var3 = new jea();
         if (param0 <= 80) {
           String var4 = (String) null;
-          this.a(true, (String) null);
+          this.addToHistory(true, (String) null);
         }
         var3.field_w = RoomLighting.a(param1, 0, 4);
         return var3;
     }
 
-    private final jea a(String param0, int param1, int param2) {
+    private final jea createLineWidget(String param0, int param1, int param2) {
         jea var4 = null;
         RuntimeException var4_ref = null;
         jea stackIn_2_0 = null;
@@ -353,7 +353,7 @@ abstract class ConsoleWindow implements ShellListener {
           field_l = (String[]) null;
         }
         if (96 == param1) {
-          this.d(2);
+          this.toggleOpen(2);
           return true;
         }
         if (!this.open) {
@@ -399,7 +399,7 @@ abstract class ConsoleWindow implements ShellListener {
             var5.field_ib = 16733525;
           }
           this.field_o.clear((byte) -113);
-          this.a(true, var7);
+          this.addToHistory(true, var7);
           this.field_g = null;
         }
         return true;
@@ -429,7 +429,7 @@ abstract class ConsoleWindow implements ShellListener {
 
     abstract boolean a(String param0, byte param1);
 
-    private final void d(int param0) {
+    private final void toggleOpen(int param0) {
         boolean stackIn_3_1 = false;
         stackIn_3_1 = !(this.open);
         this.open = stackIn_3_1;
@@ -496,28 +496,28 @@ abstract class ConsoleWindow implements ShellListener {
         if (param2 != 0) {
           field_f = (String[]) null;
         }
-        bb var5 = (bb) (mg.field_b.first(-80));
+        bb var5 = (bb) (TimingPattern.field_b.first(-80));
         while (var5 != null) {
           if (param1 == var5.field_n) {
             return var5;
           }
-          var5 = (bb) (mg.field_b.next(126));
+          var5 = (bb) (TimingPattern.field_b.next(126));
         }
         var5 = new bb();
         var5.field_j = param3;
         var5.field_i = param4;
         var5.field_n = param1;
-        mg.field_b.addLast((byte) -48, var5);
+        TimingPattern.field_b.addLast((byte) -48, var5);
         BeamSegment.a(false, param0, var5);
         return var5;
     }
 
-    private final void b(String param0, int param1, int param2) {
+    private final void appendLine(String param0, int param1, int param2) {
         int var4_int = 0;
         jea var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_a.field_tb.b(param2 ^ -155, this.a(param0, 16733525, param1));
+          this.field_a.field_tb.b(param2 ^ -155, this.createLineWidget(param0, 16733525, param1));
           if (this.field_a.field_tb.field_J.size((byte) -16) > 256) {
             this.field_a.field_tb.field_J.removeFirst(-106);
           }

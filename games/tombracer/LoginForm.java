@@ -246,7 +246,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         try {
           var3 = this.field_A;
           var4 = param0;
-          var3.a(false, -16719, var4);
+          var3.setText(false, -16719, var4);
           if (param1 < 121) {
             LoginForm.releaseStatics(-98);
           }
@@ -312,7 +312,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
 
     final void renderLayer(int param0, int param1, int param2, int param3) {
         if (null != this.field_F) {
-          KeySwitchComponent.field_J.a(this.field_F, param0 + (this.field_i + 20), param1 + this.field_n + 15, this.field_m - 40, this.field_p, 16777215, -1, 1, 0, KeySwitchComponent.field_J.field_w);
+          KeySwitchComponent.field_J.drawParagraph(this.field_F, param0 + (this.field_i + 20), param1 + this.field_n + 15, this.field_m - 40, this.field_p, 16777215, -1, 1, 0, KeySwitchComponent.field_J.field_w);
         }
         if (this.field_E != null) {
           SoftwareRasterizer.drawHorizontalLine(param0 + 10, param1 + 134, this.field_m - 20, 4210752);

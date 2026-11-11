@@ -20,35 +20,35 @@ final class LightSourceModel extends TrapModel {
           return;
         }
         if (this.body == null) {
-          this.k(param0 ^ -24643);
+          this.releaseLight(param0 ^ -24643);
           return;
         }
         this.field_s.setPosition(this.getRenderZ((byte) -123), (byte) 127, this.getRenderY((byte) 105), this.getRenderX((byte) -117));
         if (this.body.isExpired(18407)) {
-          this.k(24642);
+          this.releaseLight(24642);
           return;
         }
         if (this.part == null) {
           return;
         }
         if (this.part.isStopped((byte) 87)) {
-          this.k(24642);
+          this.releaseLight(24642);
           return;
         }
         if (this.part instanceof mra) {
           var4 = (mra) ((Object) this.part);
-          if (!var4.b(-90)) {
-            this.i(94);
+          if (!var4.isFiring(-90)) {
+            this.disableLight(94);
             return;
           }
-          this.a(false);
+          this.enableLight(false);
           return;
         }
         if (!this.part.isEnabled(param0 - 85)) {
-          this.i(-34);
+          this.disableLight(-34);
           return;
         }
-        this.a(false);
+        this.enableLight(false);
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
@@ -60,7 +60,7 @@ final class LightSourceModel extends TrapModel {
         }
     }
 
-    private final void i(int param0) {
+    private final void disableLight(int param0) {
         if (this.field_s.isDisabled(1)) {
           return;
         }
@@ -71,17 +71,17 @@ final class LightSourceModel extends TrapModel {
         this.field_s.setDisabled(true, 1011094480);
     }
 
-    private final void k(int param0) {
+    private final void releaseLight(int param0) {
         if (param0 != 24642) {
           return;
         }
         if (null != this.field_s) {
-          this.field_s.e(2);
+          this.field_s.markRemoved(2);
           this.field_s = null;
         }
     }
 
-    private final void a(boolean param0) {
+    private final void enableLight(boolean param0) {
         if (!this.field_s.isDisabled(1)) {
           return;
         }
@@ -108,7 +108,7 @@ final class LightSourceModel extends TrapModel {
 
     final void addToLayer(byte param0, int param1, RenderScene param2) {
         try {
-          this.j(0);
+          this.createLight(0);
           if (param0 <= 50) {
             field_p = -20;
           }
@@ -117,7 +117,7 @@ final class LightSourceModel extends TrapModel {
         }
     }
 
-    private final void j(int param0) {
+    private final void createLight(int param0) {
         RenderScene var3;
         RenderListener var4;
         RoomLighting var5;
@@ -346,9 +346,9 @@ final class LightSourceModel extends TrapModel {
         try {
           if (param2 < 40) {
             this.field_s = (LightSource) null;
-            this.k(24642);
+            this.releaseLight(24642);
           } else {
-            this.k(24642);
+            this.releaseLight(24642);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -465,7 +465,7 @@ final class LightSourceModel extends TrapModel {
     final void a(boolean param0, int param1) {
         this.field_n.a(false, param1);
         if (!param0) {
-          this.j(8);
+          this.createLight(8);
         }
     }
 

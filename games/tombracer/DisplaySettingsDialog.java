@@ -189,11 +189,11 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           this.field_T.field_E = 83;
           this.field_T.a(5, 5, (byte) 97);
           this.addChild(this.field_T, -1);
-          this.field_W = this.a(-82, DirectByteStorage.field_f, ke.field_a, (WidgetListener) (this));
+          this.field_W = this.addIconButton(-82, DirectByteStorage.field_f, ke.field_a, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
-            this.field_N = this.a(-87, RasterShape.field_a, NativeSceneLight.field_o, (WidgetListener) (this));
+            this.field_N = this.addIconButton(-87, RasterShape.field_a, NativeSceneLight.field_o, (WidgetListener) (this));
           }
-          this.field_V = this.a(-94, ita.field_e, pa.field_c, (WidgetListener) (this));
+          this.field_V = this.addIconButton(-94, ita.field_e, pa.field_c, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
@@ -222,11 +222,11 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             this.field_ab.setBounds((byte) -31, 126, 18, this.field_V.field_i + this.field_T.field_i, -19 + (this.field_V.field_p + (this.field_V.field_n + this.field_T.field_n)));
             this.children.addFirst((byte) 126, (IntrusiveNode) (this.field_ab));
           }
-          this.field_Z = this.a((WidgetListener) (this), CachedTextLayout.field_i, 30815);
+          this.field_Z = this.addButton((WidgetListener) (this), CachedTextLayout.field_i, 30815);
           var5Lifetime1 = this.field_Z.field_m / 2 + this.field_Z.field_i;
           this.field_Z.field_m = 150;
           this.field_Z.field_i = -this.field_Z.field_m + (var5Lifetime1 - 20);
-          this.field_L = this.a((WidgetListener) (this), wm.field_b, 30815);
+          this.field_L = this.addButton((WidgetListener) (this), wm.field_b, 30815);
           this.field_L.field_y = false;
           this.field_L.field_i = var5Lifetime1 + 20;
           this.field_L.field_m = this.field_Z.field_m;
@@ -438,7 +438,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           } else {
             if (this.field_L != param2) {
               if (param2 == this.field_W) {
-                this.a(20306, param2);
+                this.selectButton(20306, param2);
               } else {
                 if (param2 != this.field_N) {
                   if (this.field_ab != null) {
@@ -451,7 +451,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                     this.field_V == param2) {
                     if (this.field_M) {
                       if (ReportAbuseDialog.field_ub > 0) {
-                        this.a(20306, param2);
+                        this.selectButton(20306, param2);
                       } else {
                         this.field_z.c(new bra(this.field_z), 84);
                       }
@@ -460,11 +460,11 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                     }
                   }
                 } else {
-                  this.a(20306, param2);
+                  this.selectButton(20306, param2);
                 }
               }
             } else {
-              this.i(-1);
+              this.applySelectedOption(-1);
             }
           }
           if (param4 < 44) {
@@ -493,11 +493,11 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         this.field_B = false;
         if (param0 != -8266) {
           WidgetListener var3 = (WidgetListener) null;
-          discarded$0 = this.a(-99, (IndexedSprite[]) null, (String) null, (WidgetListener) null);
+          discarded$0 = this.addIconButton(-99, (IndexedSprite[]) null, (String) null, (WidgetListener) null);
         }
     }
 
-    private final void a(int param0, FocusableWidget param1) {
+    private final void selectButton(int param0, FocusableWidget param1) {
         FocusableWidget discarded$1 = null;
         FocusableWidget var3 = null;
         int var4 = 0;
@@ -519,7 +519,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           stackIn_2_0.field_y = stackIn_3_1;
           if (param0 != 20306) {
             var6 = (WidgetListener) null;
-            discarded$1 = this.a(-82, (IndexedSprite[]) null, (String) null, (WidgetListener) null);
+            discarded$1 = this.addIconButton(-82, (IndexedSprite[]) null, (String) null, (WidgetListener) null);
           }
           if (param1 == this.field_V) {
             if (var3 == param1) {
@@ -528,17 +528,17 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                 var5 = this.field_P[var4];
                 if (OpenGlSceneLight.field_o.field_s == var5.field_a &&
                   OpenGlSceneLight.field_o.field_p == var5.field_c) {
-                  this.j((byte) -30);
+                  this.refreshButtonHighlights((byte) -30);
                   return;
                 }
                 this.field_L.field_y = true;
               }
-              this.j((byte) -30);
+              this.refreshButtonHighlights((byte) -30);
             } else {
-              this.j((byte) -30);
+              this.refreshButtonHighlights((byte) -30);
             }
           } else {
-            this.j((byte) -30);
+            this.refreshButtonHighlights((byte) -30);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -562,7 +562,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         return ota.isPlayerReachable(ica.field_b, (byte) 13, mn.field_n);
     }
 
-    private final FocusableWidget a(WidgetListener param0, String param1, int param2) {
+    private final FocusableWidget addButton(WidgetListener param0, String param1, int param2) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -620,7 +620,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         return this.field_W;
     }
 
-    private final void i(int param0) {
+    private final void applySelectedOption(int param0) {
         FocusableWidget discarded$1 = null;
         int var3;
         String var4;
@@ -628,7 +628,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -1) {
           var4 = (String) null;
-          discarded$1 = this.a((WidgetListener) null, (String) null, -2);
+          discarded$1 = this.addButton((WidgetListener) null, (String) null, -2);
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_W == this.field_S) {
@@ -667,7 +667,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
 
     }
 
-    private final void j(byte param0) {
+    private final void refreshButtonHighlights(byte param0) {
         int var3 = 0;
         FocusableWidget var4 = null;
         FocusableWidget discarded$0 = null;
@@ -680,7 +680,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         }
         if (param0 != -30) {
           WidgetListener var6 = (WidgetListener) null;
-          discarded$0 = this.a(-33, (IndexedSprite[]) null, (String) null, (WidgetListener) null);
+          discarded$0 = this.addIconButton(-33, (IndexedSprite[]) null, (String) null, (WidgetListener) null);
         }
     }
 
@@ -726,7 +726,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             if (stackIn_14_0 != (this.field_O ? 1 : 0)) {
               return;
             }
-            this.a(20306, this.field_V);
+            this.selectButton(20306, this.field_V);
             this.field_O = this.field_ab.j((byte) 76);
           }
           return;
@@ -744,7 +744,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         }
     }
 
-    private final FocusableWidget a(int param0, IndexedSprite[] param1, String param2, WidgetListener param3) {
+    private final FocusableWidget addIconButton(int param0, IndexedSprite[] param1, String param2, WidgetListener param3) {
         FocusableWidget var5 = null;
         RuntimeException var5_ref = null;
         GridWidgetContainer var6 = null;

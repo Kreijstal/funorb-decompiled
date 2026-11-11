@@ -4,7 +4,7 @@
 class Sprite extends SpriteState {
     int[] pixels;
 
-    final void c() {
+    final void makeRasterTarget() {
         SoftwareRasterizer.setTarget(this.pixels, this.field_m, this.field_q);
     }
 
@@ -39,7 +39,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void d(int param0, int param1) {
+    void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -85,7 +85,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void d(int param0, int param1, int param2) {
+    void drawRecoloured(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -261,7 +261,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawMask(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -421,7 +421,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void drawMultiply(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -594,7 +594,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void b(int param0, int param1) {
+    void drawTransparent(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1131,7 +1131,7 @@ class Sprite extends SpriteState {
         this.field_o = 0;
     }
 
-    void c(int param0, int param1, int param2) {
+    void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

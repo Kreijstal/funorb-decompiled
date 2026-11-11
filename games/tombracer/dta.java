@@ -154,7 +154,7 @@ final class dta {
                 var21 = (var21 >> 1) + 1;
                 var20 = 1 + (var20 >> 1);
               }
-              MembersUpsellMenu.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(102, mg.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, eda.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
+              MembersUpsellMenu.a(LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(102, TimingPattern.field_k, new String[]{Integer.toString(var20), Integer.toString(var21)}).toUpperCase(), 11903361, eda.field_f, -1, param5 + var18 + 58, var17 + (param0 + 64), 0);
               var18Lifetime1 = -75 + param6 - var8_int;
               var17Lifetime1 = -10;
               var22 = var12.getWeapon(-163585215);
@@ -376,7 +376,7 @@ final class dta {
           }
           var9_int = (-param0 + param1 >> 1) + param0;
           var10Lifetime1 = param5 + (param6 - param5 >> 1);
-          PlayerViewport.a(50, 200, (byte) 94, var9_int - 100, aq.field_a, -34 + var10Lifetime1);
+          PlayerViewport.drawTiledFrame(50, 200, (byte) 94, var9_int - 100, aq.field_a, -34 + var10Lifetime1);
           MembersUpsellMenu.a(hu.field_d, 11903361, eda.field_f, -1, var10Lifetime1, var9_int, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -33,7 +33,7 @@ final class je extends haa {
               SoftwareRasterizer.fillRectangleAlpha(2 + var5, 4 + var6, -4 + this.field_m, this.field_K, 2188450, 128);
             }
             var6 = var6 + this.field_K;
-            this.field_F.c(var10, var5 + 2, var6, 10000536, -1);
+            this.field_F.drawText(var10, var5 + 2, var6, 10000536, -1);
           }
         }
     }

@@ -32,7 +32,7 @@ final class SoundEnvelope {
         this.decodeSegments(param0);
     }
 
-    final void a() {
+    final void reset() {
         this.field_h = 0;
         this.field_c = 0;
         this.field_b = 0;

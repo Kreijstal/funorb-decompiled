@@ -32,8 +32,8 @@ final class CourseLayoutFactory implements BitDecodableFactory {
           var1_int = 0;
           var2 = 0;
           while (NanoTickClock.pollKeyEvent(true)) {
-            FacePointLocomotor.field_r.c(102);
-            if (FacePointLocomotor.field_r.a(false)) {
+            FacePointLocomotor.field_r.handleVerticalNavigation(102);
+            if (FacePointLocomotor.field_r.isActivated(false)) {
               var1_int = 1;
             }
             if (MenuEntry.field_h != 13) {
@@ -45,14 +45,14 @@ final class CourseLayoutFactory implements BitDecodableFactory {
             stackIn_10_0 = 95;
             return stackIn_10_0;
           }
-          FacePointLocomotor.field_r.a(wg.a(1541709953, PasswordValidator.field_m, RidgedNoise3D.field_p), 73, wg.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
-          if (FacePointLocomotor.field_r.a(false)) {
+          FacePointLocomotor.field_r.updatePointer(wg.a(1541709953, PasswordValidator.field_m, RidgedNoise3D.field_p), 73, wg.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
+          if (FacePointLocomotor.field_r.isActivated(false)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            FacePointLocomotor.field_r.field_h >= 0) {
-            var3 = SpriteTileOperator.field_w[FacePointLocomotor.field_r.field_h];
+            FacePointLocomotor.field_r.selectedIndex >= 0) {
+            var3 = SpriteTileOperator.field_w[FacePointLocomotor.field_r.selectedIndex];
             if (var3 == 2) {
               AppletGameShell.resetConnectionStatics(-18);
             } else if (var3 == 5) {

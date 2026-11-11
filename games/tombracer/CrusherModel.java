@@ -380,7 +380,7 @@ final class CrusherModel extends TrapModel {
             this.field_r = this.field_n - this.field_n * this.field_v.getPhaseTicks((byte) -107) / this.field_v.getWindUpTicks((byte) 90);
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+              this.getRoom(42).getParticleEffects(false).spawnCrusherDust(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
             var13 = (SoundEventPlayer) (this.getRoom(param0 + 44).soundQueue);
             if (var13 == null) {
@@ -428,7 +428,7 @@ final class CrusherModel extends TrapModel {
             this.field_r = 0;
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+              this.getRoom(42).getParticleEffects(false).spawnCrusherDust(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
             var9 = (SoundEventPlayer) (this.getRoom(param0 + 44).soundQueue);
             if (var9 == null) {
@@ -476,7 +476,7 @@ final class CrusherModel extends TrapModel {
             this.field_r = this.field_n * this.field_v.getPhaseTicks((byte) -120) / this.field_v.getRetractTicks(false);
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+              this.getRoom(42).getParticleEffects(false).spawnCrusherDust(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
             var11 = (SoundEventPlayer) (this.getRoom(param0 + 44).soundQueue);
             if (var11 == null) {
@@ -563,7 +563,7 @@ final class CrusherModel extends TrapModel {
             }
             return;
           }
-          this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+          this.getRoom(42).getParticleEffects(false).spawnCrusherDust(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
         }
         var17_ref = (SoundEventPlayer) (this.getRoom(param0 + 44).soundQueue);
         if (var17_ref == null) {

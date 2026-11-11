@@ -17,7 +17,7 @@ class MidiPcmStream extends PcmStream {
     private int[] field_m;
     private MidiFileReader field_w;
     private int[] field_o;
-    private int field_G;
+    private int masterVolume;
     private int[] field_y;
     int[] field_u;
     private int field_H;
@@ -117,7 +117,7 @@ class MidiPcmStream extends PcmStream {
             stackIn_6_0 = -110;
             return stackIn_6_0;
           }
-          var4 = this.field_G * var4 + 128 >> 8;
+          var4 = this.masterVolume * var4 + 128 >> 8;
           var4 = var4 * this.field_N[param0.field_k] + 128 >> 8;
           if (var10.field_n > 0) {
             var4 = (int)(0.5 + Math.pow(0.5, 0.00001953125 * (double)param0.field_f * (double)var10.field_n) * (double)var4);
@@ -159,9 +159,9 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, int param1) {
+    final synchronized void setMasterVolume(int param0, int param1) {
         int var3 = 87 / ((param1 - 53) / 54);
-        this.field_G = param0;
+        this.masterVolume = param0;
     }
 
     final boolean c(int param0, rta param1) {
@@ -705,7 +705,7 @@ class MidiPcmStream extends PcmStream {
         if (param0 <= 118) {
           return 11;
         }
-        return this.field_G;
+        return this.masterVolume;
     }
 
     private final void b(boolean param0, int param1) {
@@ -1525,7 +1525,7 @@ class MidiPcmStream extends PcmStream {
         this.field_I = new rta[16][128];
         this.field_D = new int[16];
         this.field_N = new int[16];
-        this.field_G = 256;
+        this.masterVolume = 256;
         this.field_O = new int[16];
         this.field_H = 1000000;
         this.field_L = new int[16];
@@ -1553,7 +1553,7 @@ class MidiPcmStream extends PcmStream {
         this.field_I = new rta[16][128];
         this.field_D = new int[16];
         this.field_N = new int[16];
-        this.field_G = 256;
+        this.masterVolume = 256;
         this.field_O = new int[16];
         this.field_H = 1000000;
         this.field_L = new int[16];

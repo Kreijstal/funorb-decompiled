@@ -93,7 +93,7 @@ final class IndexedSprite extends rka {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -148,7 +148,7 @@ final class IndexedSprite extends rka {
         this.field_g = param7;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

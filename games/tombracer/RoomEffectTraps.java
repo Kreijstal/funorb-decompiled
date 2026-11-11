@@ -4,9 +4,9 @@
 final class RoomEffectTraps {
     private Room room;
     static int field_b;
-    private Trap[] field_d;
-    private boolean field_a;
-    private Trap[] field_e;
+    private Trap[] skeletonTraps;
+    private boolean mirroredByEffect;
+    private Trap[] barrierTraps;
     private Trap[] darknessTraps;
     static String field_g;
 
@@ -23,13 +23,13 @@ final class RoomEffectTraps {
           return;
         }
         var4 = this.getSimulation((byte) -115);
-        if (null == this.field_e &&
+        if (null == this.barrierTraps &&
           var4.isEffectActive(4, 10915)) {
-          this.a(1, 3, (byte) -127, 2);
+          this.spawnBarrier(1, 3, (byte) -127, 2);
         } else {
-          if (null != this.field_e &&
+          if (null != this.barrierTraps &&
             !var4.isEffectActive(4, 10915)) {
-            this.a(-83);
+            this.removeBarrier(-83);
           }
         }
         if (this.darknessTraps == null &&
@@ -43,51 +43,51 @@ final class RoomEffectTraps {
           if (this.darknessTraps != null &&
             !var4.isEffectActive(5, 10915)) {
             stackIn_17_1 = !(param0);
-            this.b(stackIn_17_1);
+            this.removeDarknessTraps(stackIn_17_1);
           }
         }
-        if (null == this.field_d &&
+        if (null == this.skeletonTraps &&
           var4.isEffectActive(6, 10915)) {
-          this.a((byte) 82, 5);
+          this.spawnSkeletons((byte) 82, 5);
         } else {
-          if (null != this.field_d &&
+          if (null != this.skeletonTraps &&
             !var4.isEffectActive(6, 10915)) {
-            this.a(false);
+            this.removeSkeletons(false);
           }
         }
-        if (!this.field_a &&
+        if (!this.mirroredByEffect &&
           var4.isEffectActive(7, 10915)) {
-          this.c((byte) 96);
+          this.toggleMirror((byte) 96);
         } else {
-          if (this.field_a &&
+          if (this.mirroredByEffect &&
             !var4.isEffectActive(7, 10915)) {
-            this.c((byte) 54);
+            this.toggleMirror((byte) 54);
           }
         }
     }
 
     final void forgetTraps(byte param0) {
         int var2 = 49 / ((46 - param0) / 38);
-        this.field_e = null;
+        this.barrierTraps = null;
         this.darknessTraps = null;
-        this.field_a = false;
-        this.field_d = null;
+        this.mirroredByEffect = false;
+        this.skeletonTraps = null;
     }
 
-    private final void a(boolean param0) {
+    private final void removeSkeletons(boolean param0) {
         int var3 = 0;
         Trap[] var2;
         Trap var4;
         int var5;
         Trap[] var6;
         var5 = TombRacer.field_G ? 1 : 0;
-        if (null == this.field_d) {
+        if (null == this.skeletonTraps) {
           return;
         }
         if (param0) {
           return;
         }
-        var6 = this.field_d;
+        var6 = this.skeletonTraps;
         var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
@@ -95,7 +95,7 @@ final class RoomEffectTraps {
             this.room.removeTrap(var4, 2);
           }
         }
-        this.field_d = null;
+        this.skeletonTraps = null;
     }
 
     final static void a(int param0, int param1, int param2, String param3, int param4, GameFont param5, int param6) {
@@ -130,7 +130,7 @@ final class RoomEffectTraps {
 
     private final void spawnDarknessTrap(boolean param0, byte param1) {
         if (this.darknessTraps != null) {
-          this.b(false);
+          this.removeDarknessTraps(false);
         }
         int var3 = this.room.getWidth((byte) -86) >> 16;
         int var4 = this.room.getHeight(param1 ^ -107) >> 16;
@@ -144,11 +144,11 @@ final class RoomEffectTraps {
         this.darknessTraps[0].rebuildBehaviourModels(437453352, false);
         this.room.addTrap(this.darknessTraps[0], (byte) 32);
         if (param0) {
-          var5.e(false);
+          var5.clearMask(false);
         }
     }
 
-    private final void a(int param0, int param1, byte param2, int param3) {
+    private final void spawnBarrier(int param0, int param1, byte param2, int param3) {
         Room stackIn_14_0;
         Object stackIn_14_1;
         int stackIn_14_2;
@@ -183,25 +183,25 @@ final class RoomEffectTraps {
         int var12Lifetime1;
         int var13Lifetime1;
         var15 = TombRacer.field_G ? 1 : 0;
-        if (null != this.field_e) {
-          this.a(-93);
+        if (null != this.barrierTraps) {
+          this.removeBarrier(-93);
         }
         var5 = this.room.getWidth((byte) -86);
         var6 = this.room.getHeight(param2 ^ -29);
         if (param2 != -127) {
-          this.field_d = (Trap[]) null;
+          this.skeletonTraps = (Trap[]) null;
         }
         if (param3 != 0 &&
           param3 != 2) {
           var10 = 32;
-          this.field_e = new Trap[(var6 >> 16) / 32];
+          this.barrierTraps = new Trap[(var6 >> 16) / 32];
           var9 = var5 >> 16;
           var7 = var9 / 2;
           var8 = 16;
           var11 = 0;
           var12 = 0;
           while (var12 == 0) {
-            for (var13 = 0; var13 < this.field_e.length; var13++) {
+            for (var13 = 0; var13 < this.barrierTraps.length; var13++) {
               stackIn_34_0 = this.room;
               stackIn_34_1 = null;
               stackIn_34_2 = 2097152;
@@ -242,12 +242,12 @@ final class RoomEffectTraps {
           var9 = 32;
           var10 = var6 >> 16;
           var7 = 16;
-          this.field_e = new Trap[(var5 >> 16) / 32];
+          this.barrierTraps = new Trap[(var5 >> 16) / 32];
           var8 = var10 / 2;
           var11 = 0;
           var12 = 0;
           while (var12 == 0) {
-            for (var13 = 0; var13 < this.field_e.length; var13++) {
+            for (var13 = 0; var13 < this.barrierTraps.length; var13++) {
               stackIn_14_0 = this.room;
               stackIn_14_1 = null;
               stackIn_14_2 = 2097152;
@@ -286,7 +286,7 @@ final class RoomEffectTraps {
           }
           var8 = stackIn_26_0 + stackIn_26_1 * (stackIn_26_2 * stackIn_27_3);
         }
-        for (var11Lifetime1 = 0; var11Lifetime1 < this.field_e.length; var11Lifetime1++) {
+        for (var11Lifetime1 = 0; var11Lifetime1 < this.barrierTraps.length; var11Lifetime1++) {
           if (param3 != 0 &&
             param3 != 2) {
             var12Lifetime1 = var7;
@@ -295,20 +295,20 @@ final class RoomEffectTraps {
             var13Lifetime1 = var8;
             var12Lifetime1 = var11Lifetime1 * 32 + var7;
           }
-          this.field_e[var11Lifetime1] = new Trap(this.room, var12Lifetime1, var13Lifetime1, var9, var10, 0, true);
+          this.barrierTraps[var11Lifetime1] = new Trap(this.room, var12Lifetime1, var13Lifetime1, var9, var10, 0, true);
           var14 = new WindZoneBehaviour(this.room, true);
           var14.b(param2 ^ 5, param3);
           var14.a(param0, param1, 19072);
-          this.field_e[var11Lifetime1].addBehaviour((byte) 83, (Behaviour) (var14));
-          this.room.addTrap(this.field_e[var11Lifetime1], (byte) 32);
+          this.barrierTraps[var11Lifetime1].addBehaviour((byte) 83, (Behaviour) (var14));
+          this.room.addTrap(this.barrierTraps[var11Lifetime1], (byte) 32);
         }
     }
 
-    private final void c(byte param0) {
+    private final void toggleMirror(byte param0) {
         if (param0 < 9) {
-          this.a(-57, -122, (byte) 28, -22);
+          this.spawnBarrier(-57, -122, (byte) 28, -22);
         }
-        this.field_a = !this.field_a ? true : false;
+        this.mirroredByEffect = !this.mirroredByEffect ? true : false;
         this.room.mirrorRoom(7, true);
     }
 
@@ -319,26 +319,26 @@ final class RoomEffectTraps {
         }
     }
 
-    private final void a(int param0) {
+    private final void removeBarrier(int param0) {
         int var3 = 0;
         Trap var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        if (this.field_e == null) {
+        if (this.barrierTraps == null) {
           return;
         }
         if (param0 > -72) {
           this.update(true);
         }
-        Trap[] var6 = this.field_e;
+        Trap[] var6 = this.barrierTraps;
         Trap[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           this.room.removeTrap(var4, 2);
         }
-        this.field_e = null;
+        this.barrierTraps = null;
     }
 
-    private final void a(byte param0, int param1) {
+    private final void spawnSkeletons(byte param0, int param1) {
         int var10 = 0;
         int stackIn_17_0 = 0;
         int var3;
@@ -355,12 +355,12 @@ final class RoomEffectTraps {
         int var15;
         int var16;
         var16 = TombRacer.field_G ? 1 : 0;
-        if (null != this.field_d) {
-          this.a(false);
+        if (null != this.skeletonTraps) {
+          this.removeSkeletons(false);
         }
         var3 = this.room.getWidth((byte) -86);
         var4 = this.room.getHeight(125);
-        this.field_d = new Trap[param1];
+        this.skeletonTraps = new Trap[param1];
         var5 = vha.field_c.createSkeletonComponent(this.room, (byte) 118);
         var6 = var5.getWidth(-41);
         var7 = var5.getHeight((byte) 55);
@@ -388,7 +388,7 @@ final class RoomEffectTraps {
               }
               var5.setPosition(1434528720, var13, var12);
               var5.instantiate(true, true, this.room, 0, 0, -1, (Trap) null);
-              this.field_d[var10] = (Trap) (var5.u(kha.bitwiseXor((int) param0, -24)));
+              this.skeletonTraps[var10] = (Trap) (var5.u(kha.bitwiseXor((int) param0, -24)));
               continue;
             }
             break;
@@ -397,7 +397,7 @@ final class RoomEffectTraps {
         return;
     }
 
-    private final void b(boolean param0) {
+    private final void removeDarknessTraps(boolean param0) {
         PlayerSimulation discarded$0 = null;
         int var3 = 0;
         Trap var4 = null;

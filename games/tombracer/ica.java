@@ -357,10 +357,10 @@ final class ica {
             field_b = 106L;
           }
           for (var3 = 0; 15 > var3; var3++) {
-            var2.b(-2, -2, 16777215);
+            var2.drawMask(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          bw.field_a.c();
+          bw.field_a.makeRasterTarget();
           var1.drawHalfSize(0, 0);
           pfa.a(1);
         } catch (RuntimeException runtimeException) {

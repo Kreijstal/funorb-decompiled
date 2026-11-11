@@ -18,7 +18,7 @@ final class ila {
         }
         FloatingMessage var4 = (FloatingMessage) (this.field_d.first(-80));
         while (var4 != null) {
-          var4.b((byte) -111);
+          var4.draw((byte) -111);
           var4 = (FloatingMessage) (this.field_d.next(107));
         }
     }
@@ -112,7 +112,7 @@ final class ila {
           var7_refLifetime1 = (FloatingMessage) (this.field_d.first(-80));
           while (var7_refLifetime1 != null) {
             var7_refLifetime1.a(var6Lifetime1, 4, aaa.a(false) - var7_refLifetime1.c((byte) -96));
-            var7_refLifetime1.a(-43);
+            var7_refLifetime1.tick(-43);
             if (var7_refLifetime1.c(-1)) {
               var6Lifetime1 = var6Lifetime1 + var7_refLifetime1.a(true);
             }

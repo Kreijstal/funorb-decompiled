@@ -122,7 +122,7 @@ abstract class gn extends WidgetContainer {
           this.a(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
-          fta.field_a.c(param0 + this.field_i, this.field_n + param1, this.field_x);
+          fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
         }
         if (fta.field_a.field_m < this.field_m) {
@@ -132,7 +132,7 @@ abstract class gn extends WidgetContainer {
           this.a(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
-          fta.field_a.c(param0 + this.field_i, this.field_n + param1, this.field_x);
+          fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
         }
         if (fta.field_a.field_q >= this.field_p) {
@@ -141,7 +141,7 @@ abstract class gn extends WidgetContainer {
           this.a(0, (byte) -67, 0);
           super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
           pfa.a(param2 ^ 1);
-          fta.field_a.c(param0 + this.field_i, this.field_n + param1, this.field_x);
+          fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
           return;
         }
         fta.field_a = new Sprite(this.field_m, this.field_p);
@@ -150,7 +150,7 @@ abstract class gn extends WidgetContainer {
         this.a(0, (byte) -67, 0);
         super.renderLayer(-this.field_i - param0, -param1 - this.field_n, param2, param3);
         pfa.a(param2 ^ 1);
-        fta.field_a.c(param0 + this.field_i, this.field_n + param1, this.field_x);
+        fta.field_a.drawAlpha(param0 + this.field_i, this.field_n + param1, this.field_x);
     }
 
     abstract void a(int param0, byte param1, int param2);

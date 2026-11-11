@@ -60,18 +60,18 @@ final class hpa extends aa {
             var12 = SafeZoneBehaviour.field_s;
             var11.field_f.addItem((byte) -93, 20, var12);
           }
-          hka.field_b.a((byte) -19);
+          hka.field_b.addLobbyGameActions((byte) -19);
           hka.field_b.a((byte) -22, false);
-          hka.field_b.a(param1.field_h, param1.field_d, 19);
+          hka.field_b.addSocialActions(param1.field_h, param1.field_d, 19);
           hka.field_b.c(0);
-          hka.field_b.a(param1, 13);
+          hka.field_b.addChatFilterActions(param1, 13);
           var13 = hka.field_b;
           var3 = PasswordValidator.field_m;
           if (param0 != -2) {
             return;
           }
           var4 = RidgedNoise3D.field_p;
-          var13.field_f.b(var4, 0, -89, 0, var3);
+          var13.field_f.openAt(var4, 0, -89, 0, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -4,7 +4,7 @@
 final class TeleportLocomotor extends Locomotor {
     private gea field_q;
     static String field_o;
-    private mg field_s;
+    private TimingPattern field_s;
     private int field_u;
     private int field_r;
     private boolean field_p;
@@ -35,8 +35,8 @@ final class TeleportLocomotor extends Locomotor {
         int[][] var7 = var8;
         int[][] var13 = var7;
         if (this.field_r < var10.length) {
-          this.field_s.d(0);
-          if (!this.field_s.c(0)) {
+          this.field_s.tick(0);
+          if (!this.field_s.hasToggled(0)) {
             return;
           }
           var3 = var7[this.field_r][0] + this.getTrapInitialLocalX((byte) -115);
@@ -67,8 +67,8 @@ final class TeleportLocomotor extends Locomotor {
         }
         this.field_r = 0;
         if (!this.field_q.a((byte) 21)) {
-          this.field_s.d(0);
-          if (!this.field_s.c(0)) {
+          this.field_s.tick(0);
+          if (!this.field_s.hasToggled(0)) {
             return;
           }
           var3Lifetime1 = var7[this.field_r][0] + this.getTrapInitialLocalX((byte) -115);
@@ -98,8 +98,8 @@ final class TeleportLocomotor extends Locomotor {
           return;
         }
         this.stopped = true;
-        this.field_s.d(0);
-        if (!this.field_s.c(0)) {
+        this.field_s.tick(0);
+        if (!this.field_s.hasToggled(0)) {
           return;
         }
         var3Lifetime2 = var7[this.field_r][0] + this.getTrapInitialLocalX((byte) -115);
@@ -157,7 +157,7 @@ final class TeleportLocomotor extends Locomotor {
 
     TeleportLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
-        this.field_s = new mg();
+        this.field_s = new TimingPattern();
         this.field_u = 0;
         this.field_p = false;
         this.field_t = new IntPoint();
@@ -166,7 +166,7 @@ final class TeleportLocomotor extends Locomotor {
           if (param0.formatVersion < 11) {
             this.field_q.a(1 == param1.readBits((byte) 44, 1) ? true : false, 1);
           }
-          this.field_s = new mg(param0.formatVersion, param1);
+          this.field_s = new TimingPattern(param0.formatVersion, param1);
           if (11 <= param0.formatVersion) {
             this.field_p = param1.readBits((byte) 44, 1) == 1 ? true : false;
             this.field_u = param1.readBits((byte) 44, 8);
@@ -184,7 +184,7 @@ final class TeleportLocomotor extends Locomotor {
           }
           super.encode(param0, (byte) -110);
           this.field_q.a(param0, 0);
-          this.field_s.a(15637, param0);
+          this.field_s.encode(15637, param0);
           param0.writeBits((byte) -126, this.field_p ? 1 : 0, 1);
           param0.writeBits((byte) -127, this.field_u, 8);
         } catch (RuntimeException runtimeException) {
@@ -198,7 +198,7 @@ final class TeleportLocomotor extends Locomotor {
           this.field_q.a(true);
           return;
         }
-        this.field_s = (mg) null;
+        this.field_s = (TimingPattern) null;
         super.mirror((byte) -118);
         this.field_q.a(true);
     }

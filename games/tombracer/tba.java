@@ -31,13 +31,13 @@ final class tba extends IntrusiveNode {
           var7 = SoftwareRasterizer.width;
           var8 = SoftwareRasterizer.height;
           var20 = new Sprite(16, param2);
-          var20.c();
+          var20.makeRasterTarget();
           SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param2, param3, param4);
           var10 = null;
           if (param5) {
             var21 = var20.copy();
             var10 = var21;
-            var21.c();
+            var21.makeRasterTarget();
             SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
             SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
             SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -48,7 +48,7 @@ final class tba extends IntrusiveNode {
           if (param1) {
             var22 = var20.copy();
             var11 = var22;
-            var22.c();
+            var22.makeRasterTarget();
             SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
             SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
             SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
@@ -62,13 +62,13 @@ final class tba extends IntrusiveNode {
         var7Lifetime1 = SoftwareRasterizer.width;
         var8Lifetime1 = SoftwareRasterizer.height;
         Sprite var17 = new Sprite(16, param2);
-        var17.c();
+        var17.makeRasterTarget();
         SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param2, param3, param4);
         var10 = null;
         if (param5) {
           var18 = var17.copy();
           var10 = var18;
-          var18.c();
+          var18.makeRasterTarget();
           SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -79,7 +79,7 @@ final class tba extends IntrusiveNode {
         if (param1) {
           var19 = var17.copy();
           var11 = var19;
-          var19.c();
+          var19.makeRasterTarget();
           SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);

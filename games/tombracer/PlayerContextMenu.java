@@ -23,7 +23,7 @@ final class PlayerContextMenu {
     final boolean handleEscape(int param0) {
         if (param0 != 13) {
           gqa var3 = (gqa) null;
-          this.a((gqa) null, -72);
+          this.addChatFilterActions((gqa) null, -72);
           if (this.field_f == null) {
             return false;
           }
@@ -63,7 +63,7 @@ final class PlayerContextMenu {
         this.field_f.b(44, param1);
     }
 
-    final void a(byte param0) {
+    final void addLobbyGameActions(byte param0) {
         String var3;
         int var4;
         ht var5;
@@ -114,14 +114,14 @@ final class PlayerContextMenu {
     }
 
     final boolean a(boolean param0, int param1, int param2, int param3, int param4) {
-        int var6 = this.field_f.d(0, param0);
+        int var6 = this.field_f.updateAndPollAction(0, param0);
         if (param3 == var6) {
           return false;
         }
         boolean discarded$0 = this.a(param3 - 16, var6, param2);
         boolean discarded$1 = this.b(var6, (byte) -121, param4);
         boolean discarded$2 = this.a(var6, (byte) -39, param4);
-        boolean discarded$3 = this.b(param1, var6, 114);
+        boolean discarded$3 = this.openReportAbuse(param1, var6, 114);
         return true;
     }
 
@@ -248,7 +248,7 @@ final class PlayerContextMenu {
         return true;
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void addSocialActions(int[] param0, int param1, int param2) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -319,7 +319,7 @@ final class PlayerContextMenu {
         }
     }
 
-    final void a(gqa param0, int param1) {
+    final void addChatFilterActions(gqa param0, int param1) {
         String discarded$1 = null;
         RuntimeException var3 = null;
         RuntimeException stackIn_20_0 = null;
@@ -475,10 +475,10 @@ final class PlayerContextMenu {
           return;
         }
         gqa var3 = (gqa) null;
-        this.a((gqa) null, -104);
+        this.addChatFilterActions((gqa) null, -104);
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean openReportAbuse(int param0, int param1, int param2) {
         if (param2 < 93) {
           field_a = (String) null;
           if (param1 != 17) {

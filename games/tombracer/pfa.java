@@ -1209,7 +1209,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("room_X_of_Y", (byte) 116);
                 if (null != var2) {
-                  mg.field_k = jaa.decodeText((byte) 71, var2);
+                  TimingPattern.field_k = jaa.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("completed", (byte) 104);
                 if (var2 != null) {

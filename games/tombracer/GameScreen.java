@@ -32,14 +32,14 @@ abstract class GameScreen {
               }
               if (VerticalGradientOperator.field_n != 2) {
                 if (2 == VerticalGradientOperator.field_n) {
-                  if (VerticalScrollbar.i(-1)) {
+                  if (VerticalScrollbar.isRetryAllowed(-1)) {
                     var4 = (String) null;
                     ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                   }
                   return true;
                 }
                 if (var3 == 0) {
-                  if (VerticalScrollbar.i(-1)) {
+                  if (VerticalScrollbar.isRetryAllowed(-1)) {
                     var4 = (String) null;
                     ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                   }
@@ -52,7 +52,7 @@ abstract class GameScreen {
                   var3 != 0) {
                   return false;
                 }
-                if (VerticalScrollbar.i(-1)) {
+                if (VerticalScrollbar.isRetryAllowed(-1)) {
                   var4 = (String) null;
                   ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
                 }
@@ -73,7 +73,7 @@ abstract class GameScreen {
                 var3 != 0) {
                 return false;
               }
-              if (VerticalScrollbar.i(-1)) {
+              if (VerticalScrollbar.isRetryAllowed(-1)) {
                 var4Lifetime3 = (String) null;
                 ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
               }
@@ -108,7 +108,7 @@ abstract class GameScreen {
               var3 != 0) {
               return false;
             }
-            if (VerticalScrollbar.i(-1)) {
+            if (VerticalScrollbar.isRetryAllowed(-1)) {
               var4Lifetime1 = (String) null;
               ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
             }
@@ -128,7 +128,7 @@ abstract class GameScreen {
             var3 != 0) {
             return false;
           }
-          if (VerticalScrollbar.i(-1)) {
+          if (VerticalScrollbar.isRetryAllowed(-1)) {
             var4Lifetime2 = (String) null;
             ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, CharacterSelectPhase.field_q);
           }
@@ -207,7 +207,7 @@ abstract class GameScreen {
         dea.a(60);
     }
 
-    abstract boolean b(int param0);
+    abstract boolean isFullScreen(int param0);
 
     abstract void draw(byte param0, boolean param1);
 
@@ -225,7 +225,7 @@ abstract class GameScreen {
         field_a = null;
     }
 
-    abstract void a(int param0);
+    abstract void onDeactivated(int param0);
 
     final static String replaceCharacter(char param0, String param1, String param2, int param3) {
         StringBuilder discarded$0 = null;
@@ -300,7 +300,7 @@ abstract class GameScreen {
 
     abstract boolean handleKey(int param0, char param1, int param2);
 
-    abstract void a(byte param0);
+    abstract void onActivated(byte param0);
 
     GameScreen(int param0) {
         this.field_c = param0;

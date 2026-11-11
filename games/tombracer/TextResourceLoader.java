@@ -1227,7 +1227,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -85, "checking");
                 if (var2 != null) {
-                  ko.field_g = jaa.decodeText((byte) 46, var2);
+                  MenuInputState.field_g = jaa.decodeText((byte) 46, var2);
                 }
                 var2 = dn.a((byte) -54, "create_namealreadytaken");
                 if (null != var2) {

@@ -92,8 +92,8 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
           this.field_t = param1;
           this.field_p = param0;
           this.field_n = param2;
-          jaggl.OpenGL.glGenRenderbuffersEXT(1, mg.field_h, 0);
-          this.field_m = mg.field_h[0];
+          jaggl.OpenGL.glGenRenderbuffersEXT(1, TimingPattern.field_h, 0);
+          this.field_m = TimingPattern.field_h[0];
           jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_m);
           jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_t, this.field_n, this.field_l);
           this.field_o = this.field_n * (this.field_l * this.field_p.a(this.field_t, (byte) -86));
@@ -110,8 +110,8 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
           this.field_p = param0;
           this.field_t = param1;
           this.field_l = param3;
-          jaggl.OpenGL.glGenRenderbuffersEXT(1, mg.field_h, 0);
-          this.field_m = mg.field_h[0];
+          jaggl.OpenGL.glGenRenderbuffersEXT(1, TimingPattern.field_h, 0);
+          this.field_m = TimingPattern.field_h[0];
           jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_m);
           jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, this.field_t, this.field_n, this.field_l);
           this.field_o = this.field_n * this.field_l * this.field_p.a(this.field_t, (byte) -64);

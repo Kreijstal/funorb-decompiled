@@ -3,14 +3,14 @@
  */
 final class PitModel extends TrapModel {
     private LightSource field_u;
-    private oia[][] field_q;
+    private oia[][] edgePieces;
     static PcmStreamMixer field_n;
     static String field_r;
-    private dpa[][] field_m;
+    private dpa[][] tiles;
     static jea[] field_p;
     static kea field_s;
     private int field_t;
-    private int field_v;
+    private int style;
     private int field_o;
 
     PitModel(int param0) {
@@ -30,8 +30,8 @@ final class PitModel extends TrapModel {
             this.field_t = 34;
           }
           super.removeFromScene(param0, 87);
-          this.field_q = (oia[][]) null;
-          this.field_m = (dpa[][]) null;
+          this.edgePieces = (oia[][]) null;
+          this.tiles = (dpa[][]) null;
           if (null != this.field_u) {
             var3 = param0.getListener((byte) 59);
             if (var3 instanceof RoomLighting) {
@@ -75,7 +75,7 @@ final class PitModel extends TrapModel {
             var5 = (BitPacketBuffer) null;
             this.encode((byte) -47, (BitPacketBuffer) null);
           }
-          var3_int = this.field_v;
+          var3_int = this.style;
           if (var3_int != 0 &&
             var3_int == 1) {
             var3_int = param1.field_j;
@@ -223,7 +223,7 @@ final class PitModel extends TrapModel {
         super(param0, param1, param2);
     }
 
-    private final void n(byte param0) {
+    private final void buildTiles(byte param0) {
         int var8 = 0;
         int var10 = 0;
         int stackIn_9_0 = 0;
@@ -273,7 +273,7 @@ final class PitModel extends TrapModel {
         var6 = this.body.getY(param0 + 9758);
         this.field_o = this.body.getWidth(-128) / 2097152;
         this.field_t = this.body.getHeight((byte) 55) / 2097152;
-        this.field_m = new dpa[this.field_o][this.field_t];
+        this.tiles = new dpa[this.field_o][this.field_t];
         var7 = -(this.body.getHeight((byte) 55) / 2) + (var6 + 1048576);
         if (param0 != -110) {
           var27 = (dpa) null;
@@ -286,7 +286,7 @@ final class PitModel extends TrapModel {
             var29 = var28;
             var31 = var29;
             var11 = var31;
-            this.field_m[var10][var8] = var28;
+            this.tiles[var10][var8] = var28;
             stackIn_9_0 = (0 >= var10) ? 0 : 1;
             var12 = stackIn_9_0;
             stackIn_12_0 = (-1 + this.field_o <= var10) ? 0 : 1;
@@ -521,7 +521,7 @@ final class PitModel extends TrapModel {
         try {
           int var3_int = -114 % ((param0 + 8) / 40);
           super.encode((byte) -68, param1);
-          param1.writeBits((byte) -127, this.field_v, 2);
+          param1.writeBits((byte) -127, this.style, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kva.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -537,12 +537,12 @@ final class PitModel extends TrapModel {
           this.field_o = 122;
         }
         super.mirror(70);
-        if (null == this.field_m) {
+        if (null == this.tiles) {
           return;
         }
         for (var2 = 0; this.field_o > var2; var2++) {
           for (var3 = 0; var3 < this.field_t; var3++) {
-            var4 = this.field_m[var2][var3];
+            var4 = this.tiles[var2][var3];
             var5 = LegacyOpenGlUnderwaterEffect.field_j[var4.field_j];
             var4.field_f = GameScreen.positiveModulo(-var4.field_f + var5, 2048, 93);
             var4.field_i = -var4.field_i;
@@ -573,10 +573,10 @@ final class PitModel extends TrapModel {
         int var5Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_m != null) {
+          if (this.tiles != null) {
             for (var4_int = 0; this.field_o > var4_int; var4_int++) {
               for (var5 = 0; var5 < this.field_t; var5++) {
-                var9 = this.field_m[var4_int][var5];
+                var9 = this.tiles[var4_int][var5];
                 var6 = var9;
                 if (var9 != null &&
                   var9.field_j != 3) {
@@ -588,13 +588,13 @@ final class PitModel extends TrapModel {
               }
             }
           }
-          if (this.field_q != null) {
+          if (this.edgePieces != null) {
             for (var4_intLifetime1 = 0; this.field_o > var4_intLifetime1; var4_intLifetime1++) {
               var8 = 0;
               var5Lifetime1 = var8;
               while (var8 < this.field_t) {
-                if (this.field_q[var4_intLifetime1][var8] != null) {
-                  param1.removeFromLayer(0, this.field_q[var4_intLifetime1][var8], (byte) -33);
+                if (this.edgePieces[var4_intLifetime1][var8] != null) {
+                  param1.removeFromLayer(0, this.edgePieces[var4_intLifetime1][var8], (byte) -33);
                 }
                 var8++;
               }
@@ -653,7 +653,7 @@ final class PitModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 102 / ((param0 + 68) / 49);
-          var7 = this.field_v;
+          var7 = this.style;
           if (var7 == 0) {
             return null;
           }
@@ -693,7 +693,7 @@ final class PitModel extends TrapModel {
           }
           super.decode(122, param1, param2);
           if (param1.formatVersion >= 19) {
-            this.field_v = param2.readBits((byte) 44, 2);
+            this.style = param2.readBits((byte) 44, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -716,7 +716,7 @@ final class PitModel extends TrapModel {
         }
     }
 
-    private final void j(int param0) {
+    private final void buildEdgeGrid(int param0) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -727,13 +727,13 @@ final class PitModel extends TrapModel {
         if (param0 != 9859) {
           return;
         }
-        this.field_q = new oia[this.field_o][this.field_t];
+        this.edgePieces = new oia[this.field_o][this.field_t];
         int var4 = -(this.body.getHeight((byte) 55) / 2) + var3 + 1048576;
         for (var5 = 0; this.field_t > var5; var5++) {
           var6 = 1048576 + (var2 - this.body.getWidth(-100) / 2);
           for (var7 = 0; var7 < this.field_o; var7++) {
             var8 = new oia();
-            this.field_q[var7][var5] = var8;
+            this.edgePieces[var7][var5] = var8;
             var8.field_c = this;
             var8.field_b = var4 - var3;
             var8.field_a = var6 - var2;
@@ -759,10 +759,10 @@ final class PitModel extends TrapModel {
         int var5Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (null != this.field_m) {
+          if (null != this.tiles) {
             for (var4_int = 0; this.field_o > var4_int; var4_int++) {
               for (var5 = 0; var5 < this.field_t; var5++) {
-                var9 = this.field_m[var4_int][var5];
+                var9 = this.tiles[var4_int][var5];
                 var6 = var9;
                 if (var9 != null &&
                   var9.field_j != 3) {
@@ -774,13 +774,13 @@ final class PitModel extends TrapModel {
               }
             }
           }
-          if (null != this.field_q) {
+          if (null != this.edgePieces) {
             for (var4_intLifetime1 = 0; var4_intLifetime1 < this.field_o; var4_intLifetime1++) {
               var8 = 0;
               var5Lifetime1 = var8;
               while (this.field_t > var8) {
-                if (null != this.field_q[var4_intLifetime1][var8]) {
-                  param2.addToLayer((byte) 17, 0, this.field_q[var4_intLifetime1][var8]);
+                if (null != this.edgePieces[var4_intLifetime1][var8]) {
+                  param2.addToLayer((byte) 17, 0, this.edgePieces[var4_intLifetime1][var8]);
                 }
                 var8++;
               }
@@ -809,13 +809,13 @@ final class PitModel extends TrapModel {
         RenderListener var4 = null;
         RoomLighting var5 = null;
         try {
-          if (null == this.field_m) {
-            this.n((byte) -110);
+          if (null == this.tiles) {
+            this.buildTiles((byte) -110);
           }
-          if (this.field_q == null) {
-            this.j(9859);
+          if (this.edgePieces == null) {
+            this.buildEdgeGrid(9859);
           }
-          if (this.field_v == 1) {
+          if (this.style == 1) {
             var6 = new AnimatedLight(tga.field_a, 0, 0, 0, 0, 16720418, 200, 8);
             this.field_u = new LightSource(var6);
             this.field_u.setPosition(-17825792 + this.getRenderZ((byte) -118) + 4194304, (byte) 95, this.getRenderY((byte) 108), this.getRenderX((byte) 84));
@@ -831,8 +831,8 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final void b(int param0, int param1) {
-        this.field_v = param1;
+    final void setStyle(int param0, int param1) {
+        this.style = param1;
         if (param0 != 2097152) {
           this.field_u = (LightSource) null;
         }

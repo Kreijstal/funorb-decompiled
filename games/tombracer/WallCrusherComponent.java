@@ -39,7 +39,7 @@ final class WallCrusherComponent extends PrefabComponent {
         SimpleMoveLocomotor var6 = null;
         SimpleMoveLocomotor var7 = null;
         int[] var8 = null;
-        mg var9 = null;
+        TimingPattern var9 = null;
         int var10 = 0;
         SwitchState var11 = null;
         ModelCodec var12 = null;
@@ -70,14 +70,14 @@ final class WallCrusherComponent extends PrefabComponent {
           var14.addLocomotor(var7, param1 ^ param1);
           this.field_G = new TimeSwitchBehaviour(param2, param0);
           var8 = new int[]{this.field_O * 50 >> 16, this.field_M * 50 >> 16};
-          var9 = new mg(var8);
+          var9 = new TimingPattern(var8);
           if (!this.field_N) {
             var10 = this.field_L;
           } else {
             var10 = param2.getRandom(-86).nextBounded(16, 0);
           }
-          var10 = var10 * var9.a((byte) -94) / 16;
-          var9.a(false, var10);
+          var10 = var10 * var9.getTotalDuration((byte) -94) / 16;
+          var9.setPhaseOffset(false, var10);
           if (var10 > 50 * this.field_O) {
             var6.toggle(-24);
             var7.toggle(-70);

@@ -145,7 +145,7 @@ final class iea {
               var17 = hka.field_b;
               var13 = PasswordValidator.field_m;
               var14 = RidgedNoise3D.field_p;
-              var17.field_f.b(var14, 0, -69, 0, var13);
+              var17.field_f.openAt(var14, 0, -69, 0, var13);
             }
             var5 = var6;
             var6 = (mu) (var4.next(126));

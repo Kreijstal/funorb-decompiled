@@ -8,7 +8,7 @@ abstract class MenuScreen extends GameScreen {
     int itemX;
     MenuEntry[] items;
     int firstItemY;
-    ko field_k;
+    MenuInputState field_k;
     int itemRight;
     static IntrusiveDeque field_l;
     static String field_h;
@@ -33,7 +33,7 @@ abstract class MenuScreen extends GameScreen {
         try {
           var3_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(this.field_k.field_i > var3_int)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(this.field_k.itemCount > var3_int)))) {
             var4 = this.items[var3_int];
             stackOut_3_0 = this.isItemEnabled(var3_int, param0 + 28);
             stackIn_16_0 = stackOut_3_0 ? 1 : 0;
@@ -44,8 +44,8 @@ abstract class MenuScreen extends GameScreen {
                 stackIn_12_1 = this.a(param0 + 15, var3_int);
                 stackIn_12_2 = this.isActionEnabled(var4.field_g, -30487);
                 stackIn_12_3 = 1;
-                stackIn_13_4 = (this.field_k.field_h == var3_int);
-                ((MenuEntry) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4);
+                stackIn_13_4 = (this.field_k.selectedIndex == var3_int);
+                ((MenuEntry) (Object) stackIn_12_0).draw(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4);
               }
               var3_int++;
               continue;
@@ -66,7 +66,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    void b(boolean param0, boolean param1, int param2) {
+    void activateItem(boolean param0, boolean param1, int param2) {
         boolean discarded$0 = false;
         int stackIn_44_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -87,10 +87,10 @@ abstract class MenuScreen extends GameScreen {
           if (0 <= param2 &&
             this.items.length > param2) {
             var4_int = this.items[param2].field_g;
-            var5 = this.field_k.a(param0) ? 1 : 0;
+            var5 = this.field_k.isActivated(param0) ? 1 : 0;
             if (var5 != 0) {
               dsa.a(-80);
-              discarded$0 = this.a(var4_int, param1, (byte) 119);
+              discarded$0 = this.performAction(var4_int, param1, (byte) 119);
             }
             var8 = var4_int;
             if ((5 != var8 ||
@@ -100,17 +100,17 @@ abstract class MenuScreen extends GameScreen {
             if (5 == var8 &&
               var11 == 0 || var11 != 0) {
               var6 = 0;
-              if (this.field_k.a(0) &&
+              if (this.field_k.isHomePressed(0) &&
                 tk.a(-22636) > 0) {
                 qfa.a(0, 20815);
                 var6 = 1;
               }
-              if (this.field_k.f(75) &&
+              if (this.field_k.isEndPressed(75) &&
                 tk.a(-22636) < CircleMovementLocomotor.e((byte) 71)) {
                 var6 = 1;
                 qfa.a(CircleMovementLocomotor.e((byte) 126), 20815);
               }
-              if (this.field_k.a((byte) -128)) {
+              if (this.field_k.isPointerHeld((byte) -128)) {
                 var8 = -24 + (aaa.a(false) >> 1);
                 var9 = -var8 + AgeValidator.field_j;
                 var10 = var9 << 1;
@@ -128,12 +128,12 @@ abstract class MenuScreen extends GameScreen {
                 var6 = stackIn_44_0;
                 qfa.a(var10, 20815);
               }
-              if (this.field_k.d(96) &&
+              if (this.field_k.isLeftPressed(96) &&
                 0 < tk.a(-22636)) {
                 var6 = 1;
                 to.b(11);
               }
-              if (this.field_k.e(94) &&
+              if (this.field_k.isRightPressed(94) &&
                 tk.a(-22636) < CircleMovementLocomotor.e((byte) 87)) {
                 var6 = 1;
                 EventFactory.a((byte) -117);
@@ -141,7 +141,7 @@ abstract class MenuScreen extends GameScreen {
               if (var6 == 0) {
                 return;
               }
-              if (this.field_k.a((byte) -127) &&
+              if (this.field_k.isPointerHeld((byte) -127) &&
                 AgeValidator.field_j % 5 != 0) {
                 return;
               }
@@ -151,13 +151,13 @@ abstract class MenuScreen extends GameScreen {
               }
             }
             var7 = CircleMovementLocomotor.e((byte) 124);
-            if (this.field_k.a(0)) {
+            if (this.field_k.isHomePressed(0)) {
               mqa.a(0, (byte) -118);
             }
-            if (this.field_k.f(-6)) {
+            if (this.field_k.isEndPressed(-6)) {
               mqa.a(var7, (byte) 124);
             }
-            if (this.field_k.a((byte) -128)) {
+            if (this.field_k.isPointerHeld((byte) -128)) {
               var8Lifetime1 = -24 + (aaa.a(false) >> 1);
               var9Lifetime1 = -var8Lifetime1 + AgeValidator.field_j;
               var10Lifetime1 = var9Lifetime1 << 1;
@@ -182,10 +182,10 @@ abstract class MenuScreen extends GameScreen {
                 }
               }
             }
-            if (this.field_k.d(96)) {
+            if (this.field_k.isLeftPressed(96)) {
               bv.d((byte) -55);
             }
-            if (this.field_k.e(97)) {
+            if (this.field_k.isRightPressed(97)) {
               ila.a(true);
             }
             return;
@@ -205,7 +205,7 @@ abstract class MenuScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -30487) {
-            discarded$1 = this.b(-53, false, -31);
+            discarded$1 = this.findItemAt(-53, false, -31);
           }
           if (param0 != 28) {
             return true;
@@ -257,7 +257,7 @@ abstract class MenuScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 111) {
-            this.b(61);
+            this.isFullScreen(61);
           }
           stackIn_4_0 = this.itemX;
           return stackIn_4_0;
@@ -284,12 +284,12 @@ abstract class MenuScreen extends GameScreen {
           }
           var4_int = 0;
           scanLoop1: while (true) {
-            if (this.field_k.field_i > var4_int) {
+            if (this.field_k.itemCount > var4_int) {
               if (var5 == 0) {
                 stackIn_11_0 = this.items[var4_int];
                 stackIn_11_1 = param0;
-                stackIn_12_2 = (~this.field_k.field_h == ~var4_int);
-                ((MenuEntry) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2, param1, 6);
+                stackIn_12_2 = (~this.field_k.selectedIndex == ~var4_int);
+                ((MenuEntry) (Object) stackIn_11_0).update(stackIn_11_1, stackIn_12_2, param1, 6);
                 if (6 == this.items[var4_int].field_g) {
                   this.items[var4_int].field_i = this.items[var4_int - 1].field_i + 33;
                 }
@@ -309,10 +309,10 @@ abstract class MenuScreen extends GameScreen {
               if (ColouriseOperator.field_q) {
                 break scanLoop1;
               }
-              this.field_k.a(this.b(RidgedNoise3D.field_p, true, PasswordValidator.field_m), 71, this.b(GridWidgetContainer.field_B, true, AgeValidator.field_j));
+              this.field_k.updatePointer(this.findItemAt(RidgedNoise3D.field_p, true, PasswordValidator.field_m), 71, this.findItemAt(GridWidgetContainer.field_B, true, AgeValidator.field_j));
             }
-            if (this.field_k.field_h != -1) {
-              this.b(false, true, this.field_k.field_h);
+            if (this.field_k.selectedIndex != -1) {
+              this.activateItem(false, true, this.field_k.selectedIndex);
             }
             break;
           }
@@ -356,7 +356,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isFullScreen(int param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -421,7 +421,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    private final boolean a(int param0, boolean param1, byte param2) {
+    private final boolean performAction(int param0, boolean param1, byte param2) {
         boolean stackIn_312_0 = false;
         boolean stackIn_318_0 = false;
         boolean stackIn_324_0 = false;
@@ -684,7 +684,7 @@ abstract class MenuScreen extends GameScreen {
         RuntimeException var3 = null;
         try {
           if (param0 != 0) {
-            this.b(false, false, 19);
+            this.activateItem(false, false, 19);
           }
           if (this.field_c == 0 &&
             3 != param1 &&
@@ -735,10 +735,10 @@ abstract class MenuScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_k.a(param2, param0 + 29954, param1, this.b(GridWidgetContainer.field_B, true, AgeValidator.field_j));
+          this.field_k.initializeSelection(param2, param0 + 29954, param1, this.findItemAt(GridWidgetContainer.field_B, true, AgeValidator.field_j));
           var4_int = param0;
           while (var4_int < this.items.length) {
-            this.items[var4_int].c(1701110401);
+            this.items[var4_int].reset(1701110401);
             var4_int++;
             if (var5 != 0) {
               return;
@@ -753,7 +753,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    void a(byte param0) {
+    void onActivated(byte param0) {
         try {
           if (param0 <= 78) {
             this.firstItemY = 36;
@@ -763,13 +763,13 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           field_l = null;
           if (param0) {
-            MenuScreen.a(false);
+            MenuScreen.releaseStatics(false);
           }
           field_h = null;
           return;
@@ -788,13 +788,13 @@ abstract class MenuScreen extends GameScreen {
         try {
           if (13 != param0) {
             if (!this.field_o) {
-              this.field_k.a(0, param2 ^ -123);
+              this.field_k.handleHorizontalNavigation(0, param2 ^ -123);
               if (var5 != 0) {
-                this.field_k.c(117);
+                this.field_k.handleVerticalNavigation(117);
                 this.c(-6);
               }
             } else {
-              this.field_k.c(117);
+              this.field_k.handleVerticalNavigation(117);
               if (var5 != 0) {
                 this.c(-6);
               }
@@ -809,7 +809,7 @@ abstract class MenuScreen extends GameScreen {
             39 == param0) {
             CoinItemComponent.a(cq.field_d, (byte) -128);
           }
-          this.b(false, false, this.field_k.field_h);
+          this.activateItem(false, false, this.field_k.selectedIndex);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -901,15 +901,15 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    int e(int param0, int param1) {
+    int getItemHeight(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 121) {
-            this.b(false, false, 75);
+            this.activateItem(false, false, 75);
           }
-          stackIn_4_0 = this.items[param0].d(11919);
+          stackIn_4_0 = this.items[param0].getHeight(11919);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -933,7 +933,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    final void a(int param0) {
+    final void onDeactivated(int param0) {
         try {
           if (param0 >= -102) {
             field_h = (String) null;
@@ -973,7 +973,7 @@ abstract class MenuScreen extends GameScreen {
           if (param1 != 30) {
             this.itemX = -17;
           }
-          stackIn_4_0 = this.firstItemY + this.itemSpacing * param0 - this.e(param0, 126);
+          stackIn_4_0 = this.firstItemY + this.itemSpacing * param0 - this.getItemHeight(param0, 126);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -998,7 +998,7 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    private final int b(int param0, boolean param1, int param2) {
+    private final int findItemAt(int param0, boolean param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1011,10 +1011,10 @@ abstract class MenuScreen extends GameScreen {
         boolean stackOut_14_0;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_k.field_h >= 0 &&
-            this.isItemEnabled(this.field_k.field_h, 0) &&
-            this.items[this.field_k.field_h].a(-30323, param2, param0)) {
-            stackIn_9_0 = this.field_k.field_h;
+          if (this.field_k.selectedIndex >= 0 &&
+            this.isItemEnabled(this.field_k.selectedIndex, 0) &&
+            this.items[this.field_k.selectedIndex].a(-30323, param2, param0)) {
+            stackIn_9_0 = this.field_k.selectedIndex;
             return stackIn_9_0;
           }
           var4_int = 0;
@@ -1090,7 +1090,7 @@ abstract class MenuScreen extends GameScreen {
             if (param1.length > var9) {
               this.items[var9] = new MenuEntry(param1[var9], this.getActionLabel(param1[var9], (byte) 125), this.f(0, param1[var9]), this.d(-72, param1[var9]));
               this.items[var9].field_b = this.getItemX((byte) 119, var9) + this.getItemRight(var9, (byte) -48) >> 1;
-              this.items[var9].c(1701110401);
+              this.items[var9].reset(1701110401);
               stackIn_43_0 = -38;
               stackIn_43_1 = ~param1[var9];
               if (var10 != 0) {
@@ -1168,7 +1168,7 @@ abstract class MenuScreen extends GameScreen {
           if (null != var4) {
             TextSpewerBehaviour.a((byte) -91, new MenuEntry[]{this.items[((int[]) (var4))[0]], this.items[((int[]) (var4))[1]]});
           }
-          this.field_k = new ko(this.items.length);
+          this.field_k = new MenuInputState(this.items.length);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -5,7 +5,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
     static String field_p;
     private SwitchState field_s;
     static int field_r;
-    private mg field_o;
+    private TimingPattern field_o;
     static long[] field_q;
     static SpriteData field_n;
 
@@ -56,7 +56,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
         try {
           super.encode(param0, param1);
           this.field_s.encode(this.getScope((byte) 123), (byte) 76, param1);
-          this.field_o.a(15637, param1);
+          this.field_o.encode(15637, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -74,7 +74,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
         if (param1 < -48) {
           return this.field_s.hashState(86, param0);
         }
-        this.field_o = (mg) null;
+        this.field_o = (TimingPattern) null;
         return this.field_s.hashState(86, param0);
     }
 
@@ -83,7 +83,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
         this.field_s.resolveLinks((byte) 48, this.getScope((byte) 119));
     }
 
-    final void a(mg param0, byte param1) {
+    final void a(TimingPattern param0, byte param1) {
         if (param1 >= -60) {
           return;
         }
@@ -137,14 +137,14 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
 
     public final int getMaxLevel(int param0) {
         int var2 = -99 % ((-46 - param0) / 45);
-        return this.field_o.a(false);
+        return this.field_o.getCurrentDuration(false);
     }
 
     TimeSwitchBehaviour(Room param0, boolean param1) {
         super(param0, param1);
         try {
           this.field_s = new SwitchState(15);
-          this.field_o = new mg();
+          this.field_o = new TimingPattern();
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -176,10 +176,10 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
 
     public final int getLevel(byte param0) {
         if (param0 == -108) {
-          return this.field_o.a(false) - this.field_o.b(12);
+          return this.field_o.getCurrentDuration(false) - this.field_o.getTicksLeft(12);
         }
         field_p = (String) null;
-        return this.field_o.a(false) - this.field_o.b(12);
+        return this.field_o.getCurrentDuration(false) - this.field_o.getTicksLeft(12);
     }
 
     public final int getLitColour(byte param0) {
@@ -193,7 +193,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
         super(param0, param1, param2);
         try {
           this.field_s = new SwitchState(15, param0, param1);
-          this.field_o = new mg(param0.formatVersion, param1);
+          this.field_o = new TimingPattern(param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -204,22 +204,22 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           this.getMaxLevel(27);
           if (this.field_s.f((byte) -56)) {
             this.stop(false);
-            this.field_o.d(0);
-            this.field_s.setInput((byte) -14, this.field_o.c(0));
+            this.field_o.tick(0);
+            this.field_s.setInput((byte) -14, this.field_o.hasToggled(0));
             return;
           }
-          this.field_o.d(0);
-          this.field_s.setInput((byte) -14, this.field_o.c(0));
+          this.field_o.tick(0);
+          this.field_s.setInput((byte) -14, this.field_o.hasToggled(0));
           return;
         }
         if (!this.field_s.f((byte) -56)) {
-          this.field_o.d(0);
-          this.field_s.setInput((byte) -14, this.field_o.c(0));
+          this.field_o.tick(0);
+          this.field_s.setInput((byte) -14, this.field_o.hasToggled(0));
           return;
         }
         this.stop(false);
-        this.field_o.d(0);
-        this.field_s.setInput((byte) -14, this.field_o.c(0));
+        this.field_o.tick(0);
+        this.field_s.setInput((byte) -14, this.field_o.hasToggled(0));
     }
 
     static {

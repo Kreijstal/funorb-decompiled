@@ -131,7 +131,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var11 = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(109, ColourFillOperator.field_o, new String[]{param3});
             var10.field_f.addItem((byte) -125, 10, var11);
           }
-          hka.field_b.a((byte) -84);
+          hka.field_b.addLobbyGameActions((byte) -84);
           if (param2) {
             if (hka.field_b.field_k == RasterizerOperator.field_o) {
               var14 = hka.field_b;
@@ -150,7 +150,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var7 = (String) null;
             ImageProducerRasterBuffer.a((byte) 0, (ht) null, false, (String) null);
           }
-          var16.field_f.b(var6, 0, -61, 0, var5);
+          var16.field_f.openAt(var6, 0, -61, 0, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

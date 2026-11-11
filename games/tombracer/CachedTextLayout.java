@@ -115,7 +115,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_g = param7;
           this.field_f = param5;
           this.field_h = false;
-          var17 = new String[param0.a(param2, param3) + 1];
+          var17 = new String[param0.countWrappedLines(param2, param3) + 1];
           var18 = var17;
           var10 = Math.max(1, param0.wrapText(param2, new int[]{param3}, var18));
           if (3 == this.field_e &&

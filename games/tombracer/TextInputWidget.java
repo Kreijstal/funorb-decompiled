@@ -4,14 +4,14 @@
 class TextInputWidget extends FocusableWidget {
     private long field_H;
     static String field_A;
-    private int field_I;
+    private int caret;
     private int field_F;
     private boolean field_E;
     private long field_G;
-    private int field_B;
+    private int selectionAnchor;
     private boolean field_D;
     static String[] field_z;
-    private int field_C;
+    private int maxLength;
 
     final void renderLayer(int param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
@@ -20,19 +20,19 @@ class TextInputWidget extends FocusableWidget {
         long var6 = 0L;
         try {
           if (param2 != 0) {
-            this.field_I = 26;
+            this.caret = 26;
           }
           if (this.field_r != null &&
             param3 == 0) {
             this.field_r.paintWidget((UiWidget) (this), param0, param2 ^ 16777215, param1, this.field_y);
             if (this.field_r instanceof WidgetTextLayout) {
               var5 = (WidgetTextLayout) ((Object) this.field_r);
-              if (this.field_B != this.field_I) {
-                var5.drawSelection(-1, (UiWidget) (this), param1, param0, this.field_B, this.field_I);
+              if (this.selectionAnchor != this.caret) {
+                var5.drawSelection(-1, (UiWidget) (this), param1, param0, this.selectionAnchor, this.caret);
               }
               var6 = bva.currentTimeMillis((byte) -107);
               if ((-this.field_H + var6) % 1000L < 500L) {
-                var5.drawCaret(this.field_I, param1, param2 - 22502, param0, (UiWidget) (this));
+                var5.drawCaret(this.caret, param1, param2 - 22502, param0, (UiWidget) (this));
               }
             }
           }
@@ -64,23 +64,23 @@ class TextInputWidget extends FocusableWidget {
             }
             if (param0 >= 32 &&
               param0 <= 126) {
-              if (this.field_I != this.field_B) {
-                this.k(0);
+              if (this.caret != this.selectionAnchor) {
+                this.deleteSelection(0);
               }
-              if (-1 == this.field_C ||
-                !(this.field_o.length() >= this.field_C)) {
-                boolean decompiledSharedTail0 = !(this.field_I < this.field_o.length());
+              if (-1 == this.maxLength ||
+                !(this.field_o.length() >= this.maxLength)) {
+                boolean decompiledSharedTail0 = !(this.caret < this.field_o.length());
                 if (!decompiledSharedTail0) {
-                  this.field_o = this.field_o.substring(0, this.field_I) + param0 + this.field_o.substring(this.field_I, this.field_o.length());
-                  this.field_I = this.field_I + 1;
-                  this.field_B = this.field_I;
+                  this.field_o = this.field_o.substring(0, this.caret) + param0 + this.field_o.substring(this.caret, this.field_o.length());
+                  this.caret = this.caret + 1;
+                  this.selectionAnchor = this.caret;
                   decompiledSharedTail0 = (TombRacer.field_G);
                 }
                 if (decompiledSharedTail0) {
                   this.field_o = this.field_o + param0;
                   dupTemp$0 = this.field_o.length();
-                  this.field_I = dupTemp$0;
-                  this.field_B = dupTemp$0;
+                  this.caret = dupTemp$0;
+                  this.selectionAnchor = dupTemp$0;
                 }
                 this.notifySubmitted(200);
               }
@@ -88,13 +88,13 @@ class TextInputWidget extends FocusableWidget {
             }
             if (param2 != 85) {
               if (param2 == 101) {
-                if (this.field_B != this.field_I) {
-                  this.k(0);
+                if (this.selectionAnchor != this.caret) {
+                  this.deleteSelection(0);
                   return true;
                 }
-                if (this.field_I < this.field_o.length()) {
-                  this.field_B = 1 + this.field_I;
-                  this.k(0);
+                if (this.caret < this.field_o.length()) {
+                  this.selectionAnchor = 1 + this.caret;
+                  this.deleteSelection(0);
                   return true;
                 }
               } else {
@@ -103,35 +103,35 @@ class TextInputWidget extends FocusableWidget {
                   return true;
                 }
                 if (param2 == 96) {
-                  if (0 < this.field_I) {
+                  if (0 < this.caret) {
                     stackIn_104_1 = 95;
                     if (!VerticalScrollbar.field_tb[82]) {
-                      stackIn_105_2 = -1 + this.field_I;
+                      stackIn_105_2 = -1 + this.caret;
                     } else {
-                      stackIn_105_2 = this.b(param3);
+                      stackIn_105_2 = this.previousWordStart(param3);
                     }
-                    this.a(stackIn_104_1, stackIn_105_2);
+                    this.setCaret(stackIn_104_1, stackIn_105_2);
                     return true;
                   }
                 } else {
                   if (97 == param2) {
-                    if (this.field_I < this.field_o.length()) {
+                    if (this.caret < this.field_o.length()) {
                       stackIn_95_1 = -126;
                       if (VerticalScrollbar.field_tb[82]) {
-                        stackIn_96_2 = this.b(-59);
+                        stackIn_96_2 = this.nextWordEnd(-59);
                       } else {
-                        stackIn_96_2 = this.field_I + 1;
+                        stackIn_96_2 = this.caret + 1;
                       }
-                      this.a(stackIn_95_1, stackIn_96_2);
+                      this.setCaret(stackIn_95_1, stackIn_96_2);
                       return true;
                     }
                   } else {
                     if (param2 == 102) {
-                      this.a(-127, 0);
+                      this.setCaret(-127, 0);
                       return true;
                     }
                     if (param2 == 103) {
-                      this.a(-123, this.field_o.length());
+                      this.setCaret(-123, this.field_o.length());
                       return true;
                     }
                     if (param2 == 84) {
@@ -140,7 +140,7 @@ class TextInputWidget extends FocusableWidget {
                     }
                     if (VerticalScrollbar.field_tb[82] &&
                       param2 == 65) {
-                      this.l(10571);
+                      this.cutSelection(10571);
                       return true;
                     }
                     if (VerticalScrollbar.field_tb[82] &&
@@ -157,13 +157,13 @@ class TextInputWidget extends FocusableWidget {
                 }
               }
             } else {
-              if (this.field_B != this.field_I) {
-                this.k(0);
+              if (this.selectionAnchor != this.caret) {
+                this.deleteSelection(0);
                 return true;
               }
-              if (this.field_I > 0) {
-                this.field_B = -1 + this.field_I;
-                this.k(0);
+              if (this.caret > 0) {
+                this.selectionAnchor = -1 + this.caret;
+                this.deleteSelection(0);
                 return true;
               }
             }
@@ -418,9 +418,9 @@ class TextInputWidget extends FocusableWidget {
             if (param0 != 0) {
               return;
             }
-            var2 = this.h(-106);
+            var2 = this.getSelectedText(-106);
             if (var2.length() > 0) {
-              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.h(86))), (java.awt.datatransfer.ClipboardOwner) null);
+              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText(86))), (java.awt.datatransfer.ClipboardOwner) null);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -464,7 +464,7 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    private final void h(byte param0) {
+    private final void scrollToCaret(byte param0) {
         RuntimeException decompiledCaughtException = null;
         WidgetTextLayout var2 = null;
         RuntimeException var2_ref = null;
@@ -496,7 +496,7 @@ class TextInputWidget extends FocusableWidget {
             this.field_t = 0;
             return;
           }
-          var8 = this.field_t + var3.a((byte) -59, this.field_I);
+          var8 = this.field_t + var3.a((byte) -59, this.caret);
           if (var8 <= var5 - var6) {
             if (!(var6 <= var8)) {
               this.field_t = this.field_t + (var6 - var8);
@@ -525,7 +525,7 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    private final void k(int param0) {
+    private final void deleteSelection(int param0) {
         int stackIn_10_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -536,21 +536,21 @@ class TextInputWidget extends FocusableWidget {
           if (param0 != 0) {
             TextInputWidget.g((byte) 76);
           }
-          if (this.field_B != this.field_I) {
-            if (this.field_I <= this.field_B) {
-              stackIn_10_0 = this.field_I;
+          if (this.selectionAnchor != this.caret) {
+            if (this.caret <= this.selectionAnchor) {
+              stackIn_10_0 = this.caret;
             } else {
-              stackIn_10_0 = this.field_B;
+              stackIn_10_0 = this.selectionAnchor;
             }
             var2_int = stackIn_10_0;
-            if (this.field_B >= this.field_I) {
-              stackIn_14_0 = this.field_B;
+            if (this.selectionAnchor >= this.caret) {
+              stackIn_14_0 = this.selectionAnchor;
             } else {
-              stackIn_14_0 = this.field_I;
+              stackIn_14_0 = this.caret;
             }
             var3 = stackIn_14_0;
-            this.field_I = var2_int;
-            this.field_B = var2_int;
+            this.caret = var2_int;
+            this.selectionAnchor = var2_int;
             this.field_o = this.field_o.substring(0, var2_int) + this.field_o.substring(var3, this.field_o.length());
             this.notifySubmitted(200);
           }
@@ -562,15 +562,15 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void setCaret(int param0, int param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 36 / ((-89 - param0) / 32);
-          this.field_I = param1;
+          this.caret = param1;
           if (!VerticalScrollbar.field_tb[81]) {
-            this.field_B = this.field_I;
+            this.selectionAnchor = this.caret;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -590,7 +590,7 @@ class TextInputWidget extends FocusableWidget {
         int var6 = 0;
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.h((byte) -105);
+          this.scrollToCaret((byte) -105);
           if (this.field_s == 1) {
             if (this.field_r instanceof WidgetTextLayout) {
               var5 = (WidgetTextLayout) ((Object) this.field_r);
@@ -598,10 +598,10 @@ class TextInputWidget extends FocusableWidget {
               if (var6 != -1) {
                 if (this.field_E &&
                   var6 < this.field_F &&
-                  var6 > this.field_B) {
+                  var6 > this.selectionAnchor) {
                   var6 = this.field_F;
                 }
-                this.field_I = var6;
+                this.caret = var6;
               }
             }
             this.field_H = bva.currentTimeMillis((byte) -107);
@@ -645,18 +645,18 @@ class TextInputWidget extends FocusableWidget {
             } else {
               stackIn_11_2 = var8_int;
             }
-            this.a(stackIn_10_1, stackIn_11_2);
+            this.setCaret(stackIn_10_1, stackIn_11_2);
             var8_long = bva.currentTimeMillis((byte) -107);
             stackIn_15_1 = !(250L <= -this.field_G + var8_long);
             this.field_E = stackIn_15_1;
             if (this.field_E) {
-              this.field_B = this.b(true);
-              this.field_I = this.b(-76);
-              if (this.field_I > 0 &&
-                this.field_o.charAt(-1 + this.field_I) == 32) {
-                this.field_I = this.field_I - 1;
+              this.selectionAnchor = this.previousWordStart(true);
+              this.caret = this.nextWordEnd(-76);
+              if (this.caret > 0 &&
+                this.field_o.charAt(-1 + this.caret) == 32) {
+                this.caret = this.caret - 1;
               }
-              this.field_F = this.field_I;
+              this.field_F = this.caret;
             }
             this.field_G = var8_long;
             return true;
@@ -704,8 +704,8 @@ class TextInputWidget extends FocusableWidget {
             try {
               var3 = -61 % ((-29 - param0) / 55);
               var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-              this.k(0);
-              this.a(var2, false);
+              this.deleteSelection(0);
+              this.insertText(var2, false);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -723,7 +723,7 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    private final int b(boolean param0) {
+    private final int previousWordStart(boolean param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -736,11 +736,11 @@ class TextInputWidget extends FocusableWidget {
         char stackOut_6_0;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          if (0 == this.field_I) {
-            stackIn_3_0 = this.field_I;
+          if (0 == this.caret) {
+            stackIn_3_0 = this.caret;
             return stackIn_3_0;
           }
-          var2_int = -1 + this.field_I;
+          var2_int = -1 + this.caret;
           scanLoop1: while (true) {
             if (0 < var2_int) {
               stackOut_6_0 = this.field_o.charAt(var2_int - 1);
@@ -776,7 +776,7 @@ class TextInputWidget extends FocusableWidget {
         RuntimeException var2 = null;
         try {
           if (param0 != 200) {
-            this.k(-51);
+            this.deleteSelection(-51);
           }
           if (this.field_h instanceof TextInputListener) {
             ((TextInputListener) (this.field_h)).onTextChanged(this, -10);
@@ -789,7 +789,7 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    private final void a(String param0, boolean param1) {
+    private final void insertText(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -797,26 +797,26 @@ class TextInputWidget extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_C != -1) {
-            var3_int = this.field_C - this.field_o.length();
+          if (this.maxLength != -1) {
+            var3_int = this.maxLength - this.field_o.length();
             if (var3_int >= 0) {
               return;
             }
             param0 = param0.substring(0, var3_int);
           }
-          boolean decompiledSharedTail0 = (~this.field_I != ~this.field_o.length());
+          boolean decompiledSharedTail0 = (~this.caret != ~this.field_o.length());
           if (!decompiledSharedTail0) {
             this.field_o = this.field_o + param0;
             decompiledSharedTail0 = (TombRacer.field_G);
           }
           if (decompiledSharedTail0) {
-            this.field_o = this.field_o.substring(0, this.field_I) + param0 + this.field_o.substring(this.field_I, this.field_o.length());
+            this.field_o = this.field_o.substring(0, this.caret) + param0 + this.field_o.substring(this.caret, this.field_o.length());
           }
-          this.field_I = this.field_I + param0.length();
+          this.caret = this.caret + param0.length();
           if (param1) {
             this.pasteClipboardText(104);
           }
-          this.field_B = this.field_I;
+          this.selectionAnchor = this.caret;
           this.notifySubmitted(200);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -833,16 +833,16 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    private final void l(int param0) {
+    private final void cutSelection(int param0) {
         try {
           this.copySelectedTextToClipboard(0);
-          this.k(param0 ^ param0);
+          this.deleteSelection(param0 ^ param0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tra.QA(" + param0 + ')');
         }
     }
 
-    final void a(boolean param0, int param1, String param2) {
+    final void setText(boolean param0, int param1, String param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_21_0 = null;
@@ -859,13 +859,13 @@ class TextInputWidget extends FocusableWidget {
           }
           this.field_o = param2;
           var4_int = param2.length();
-          if (-1 != this.field_C &&
-            var4_int > this.field_C) {
-            this.field_o = this.field_o.substring(0, this.field_C);
+          if (-1 != this.maxLength &&
+            var4_int > this.maxLength) {
+            this.field_o = this.field_o.substring(0, this.maxLength);
           }
           dupTemp$1 = this.field_o.length();
-          this.field_B = dupTemp$1;
-          this.field_I = dupTemp$1;
+          this.selectionAnchor = dupTemp$1;
+          this.caret = dupTemp$1;
           if (!param0) {
             this.notifySubmitted(param1 ^ -16775);
           }
@@ -915,16 +915,16 @@ class TextInputWidget extends FocusableWidget {
     final void clearText(int param0) {
         try {
           this.field_o = "";
-          this.field_I = 0;
+          this.caret = 0;
           int var2_int = -100 % ((param0 + 80) / 39);
-          this.field_B = 0;
+          this.selectionAnchor = 0;
           this.notifySubmitted(200);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tra.KA(" + param0 + ')');
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_z = null;
           field_A = null;
@@ -948,8 +948,8 @@ class TextInputWidget extends FocusableWidget {
         this.field_G = 0L;
         try {
           this.field_r = afa.field_c.field_e;
-          this.field_C = param2;
-          this.a(true, -16719, param0);
+          this.maxLength = param2;
+          this.setText(true, -16719, param0);
           this.field_D = true;
           this.field_H = bva.currentTimeMillis((byte) -107);
           return;
@@ -973,7 +973,7 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    private final int b(int param0) {
+    private final int nextWordEnd(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -985,12 +985,12 @@ class TextInputWidget extends FocusableWidget {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           var2_int = this.field_o.length();
-          if (var2_int == this.field_I) {
-            stackIn_3_0 = this.field_I;
+          if (var2_int == this.caret) {
+            stackIn_3_0 = this.caret;
             return stackIn_3_0;
           }
           var3 = 99 / ((param0 - 37) / 56);
-          var4 = 1 + this.field_I;
+          var4 = 1 + this.caret;
           scanLoop1: while (true) {
             if (var2_int > var4) {
               stackIn_14_0 = ~this.field_o.charAt(-1 + var4);
@@ -1013,7 +1013,7 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    private final String h(int param0) {
+    private final String getSelectedText(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -1024,16 +1024,16 @@ class TextInputWidget extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = -77 / ((param0 + 20) / 55);
-          if (this.field_I > this.field_B) {
-            stackIn_4_0 = this.field_B;
+          if (this.caret > this.selectionAnchor) {
+            stackIn_4_0 = this.selectionAnchor;
           } else {
-            stackIn_4_0 = this.field_I;
+            stackIn_4_0 = this.caret;
           }
           var2_int = stackIn_4_0;
-          if (this.field_I > this.field_B) {
-            stackIn_8_0 = this.field_I;
+          if (this.caret > this.selectionAnchor) {
+            stackIn_8_0 = this.caret;
           } else {
-            stackIn_8_0 = this.field_B;
+            stackIn_8_0 = this.selectionAnchor;
           }
           var4 = stackIn_8_0;
           stackIn_9_0 = this.field_o.substring(var2_int, var4);

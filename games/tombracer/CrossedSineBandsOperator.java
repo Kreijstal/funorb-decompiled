@@ -225,10 +225,10 @@ final class CrossedSineBandsOperator extends TextureOperator {
           var2 = var28.readUnsignedByte(255);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort(122);
-            var4 = (bb) (mg.field_b.first(-80));
+            var4 = (bb) (TimingPattern.field_b.first(-80));
             while (var4 != null) {
               if (var4.field_n != var3) {
-                var4 = (bb) (mg.field_b.next(124));
+                var4 = (bb) (TimingPattern.field_b.next(124));
                 continue;
               }
               break;

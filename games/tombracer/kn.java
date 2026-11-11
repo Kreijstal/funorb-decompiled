@@ -96,7 +96,7 @@ final class kn {
           }
           SoftwareRasterizer.drawRectangle(var12, var13Lifetime1, var5_int + var9, var6 + var10, this.field_a);
           SoftwareRasterizer.fillRectangle(var12 + 1, var13Lifetime1 + 1, var9 + (var5_int - 2), var10 + var6 - 2, this.field_c);
-          this.field_q.a(param1, this.field_i + var12, this.field_t + var13Lifetime1, var9, var10, this.field_s, -1, 0, 0, var7);
+          this.field_q.drawParagraph(param1, this.field_i + var12, this.field_t + var13Lifetime1, var9, var10, this.field_s, -1, 0, 0, var7);
           var14Lifetime1 = -78 % ((-56 - param0) / 47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -192,7 +192,7 @@ final class kn {
           }
           SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, 6 + var6, this.field_s);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_c);
-          this.field_q.c(param2, var7 + 3, this.field_q.field_G + (3 + var8), this.field_s, -1);
+          this.field_q.drawText(param2, var7 + 3, this.field_q.field_G + (3 + var8), this.field_s, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -255,7 +255,7 @@ final class kn {
           this.field_f = 3;
           this.field_b = 3;
           this.field_o = -1;
-          var4.createStateLayer(0, (byte) 41).b(15658734, -2147483648).setSprites(2, gn.b(8947848, 1, 10066329, 7829367));
+          var4.createStateLayer(0, (byte) 41).withTextColour(15658734, -2147483648).setSprites(2, gn.b(8947848, 1, 10066329, 7829367));
           var4.createStateLayer(1, (byte) 98).setSprites(2, gn.b(11184810, 1, 10066329, 13421772));
           var4.createStateLayer(3, (byte) 42).setSprites(2, gn.b(8947848, 1, 7829367, 10066329)).c(-1, 1).setHorizontalOffset(1, 1);
           var5 = new Sprite[9];
@@ -266,20 +266,20 @@ final class kn {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.createStateLayer(4, (byte) 127).a(-2, true).setSprites(2, var5);
-          var4.createStateLayer(5, (byte) 107).setSprites(2, jsa.b(65793, 2, 0, 0, 0)).a(-2, true).b(-1, -2147483648);
+          var4.createStateLayer(5, (byte) 107).setSprites(2, jsa.b(65793, 2, 0, 0, 0)).a(-2, true).withTextColour(-1, -2147483648);
           this.field_u = (WidgetPainter) ((Object) var4);
           var6 = new StatefulWidgetPainter(var4, true);
           var6.field_l = 0;
           var7 = new StatefulWidgetPainter(var4, true);
           var7.field_l = 0;
           var7.a(-18379, eca.a(4, 8947848));
-          var7.createStateLayer(1, (byte) 85).setSprites(2, eca.a(4, 11184810)).b(2236962, -2147483648);
+          var7.createStateLayer(1, (byte) 85).setSprites(2, eca.a(4, 11184810)).withTextColour(2236962, -2147483648);
           this.field_d = (WidgetPainter) ((Object) new jr(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new bsa(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new cj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
           var17.a(var8, -107);
-          var8.createStateLayer(0, (byte) 65).setSprites(2, gn.b(15658734, 1, 7829367, 10066329)).b(1118481, -2147483648).a((byte) 7, -1);
+          var8.createStateLayer(0, (byte) 65).setSprites(2, gn.b(15658734, 1, 7829367, 10066329)).withTextColour(1118481, -2147483648).a((byte) 7, -1);
           var8.createStateLayer(4, (byte) 87).a(-2, true).setSprites(2, var5);
           this.field_e = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];

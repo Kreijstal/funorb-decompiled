@@ -171,7 +171,7 @@ final class fp {
         MirrorComponent.field_F = SpriteData.loadSprite(param2, "", "endround_divider_line");
         rp.field_f = SpriteData.loadSprite(param2, "", "endround_smoke_trail");
         StandingsPhase.field_o = SpriteData.loadSheet(param2, "", "endround_stage_lines");
-        ko.field_j = SpriteData.loadSprite(param2, "", "podium");
+        MenuInputState.field_j = SpriteData.loadSprite(param2, "", "podium");
         int incrementValue$7 = param1;
         param1++;
         var16_ref.a(incrementValue$7, (byte) 47, param0);
@@ -254,7 +254,7 @@ final class fp {
           for (var3 = 0; DefaultTileRenderable.field_g.length > var3; var3++) {
             var4 = CoinItemComponent.field_H[var3];
             if (var4 >= 0) {
-              if (FacePointLocomotor.field_r.field_h == var4) {
+              if (FacePointLocomotor.field_r.selectedIndex == var4) {
                 var5 = ct.field_a;
               } else {
                 var5 = MandelbrotOperator.field_m;
@@ -305,7 +305,7 @@ final class fp {
             var7Lifetime1 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(stackIn_39_0, stackIn_39_1, stackIn_40_2);
             var8Lifetime1 = ega.field_c - (var7Lifetime1 >> 1);
             if (0 <= var4) {
-              if (var4 == FacePointLocomotor.field_r.field_h) {
+              if (var4 == FacePointLocomotor.field_r.selectedIndex) {
                 stackIn_45_0 = mpa.field_V;
               } else {
                 stackIn_45_0 = jaa.field_b;
@@ -318,10 +318,10 @@ final class fp {
               var1_int = var1_int + GasVentModel.field_p;
             }
             if (var4 >= 0) {
-              qt.field_a.c(var6, var8Lifetime1, MatchPhase.field_j + var1_int, var5, -1);
+              qt.field_a.drawText(var6, var8Lifetime1, MatchPhase.field_j + var1_int, var5, -1);
               var1_int = var1_int + (nt.field_d + GasVentModel.field_p + mha.field_C);
             } else {
-              ConsoleValue.field_c.c(var6, var8Lifetime1, var1_int + vi.field_a, var5, -1);
+              ConsoleValue.field_c.drawText(var6, var8Lifetime1, var1_int + vi.field_a, var5, -1);
               var1_int = var1_int + ComponentTargetList.field_b;
             }
           }

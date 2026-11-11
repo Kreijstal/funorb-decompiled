@@ -9,7 +9,7 @@ final class VorbisCodebook {
     private int[] field_f;
     private int[] field_b;
 
-    final float[] a() {
+    final float[] decodeVector() {
         return this.field_c[this.decodeScalar()];
     }
 

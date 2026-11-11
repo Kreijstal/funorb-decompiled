@@ -54,7 +54,7 @@ final class SoundEffect {
         return var3;
     }
 
-    final u a() {
+    final u toPcmSample() {
         byte[] var1 = this.mixSamples();
         return new u(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }

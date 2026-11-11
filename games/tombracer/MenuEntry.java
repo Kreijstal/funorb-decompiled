@@ -15,7 +15,7 @@ final class MenuEntry {
     boolean field_a;
     private boolean field_l;
 
-    final void c(int param0) {
+    final void reset(int param0) {
         this.field_c.c(-72);
         if (param0 != 1701110401) {
           this.field_e = (String) null;
@@ -38,7 +38,7 @@ final class MenuEntry {
         }
     }
 
-    final int d(int param0) {
+    final int getHeight(int param0) {
         ToolkitSprite var2;
         int var3;
         if (this.field_g == 5) {
@@ -67,7 +67,7 @@ final class MenuEntry {
         field_j = null;
     }
 
-    final void a(boolean param0, boolean param1, boolean param2, int param3) {
+    final void update(boolean param0, boolean param1, boolean param2, int param3) {
         dea stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         boolean stackIn_6_2 = false;
@@ -97,7 +97,7 @@ final class MenuEntry {
         }
     }
 
-    final void a(boolean param0, boolean param1, int param2, boolean param3) {
+    final void draw(boolean param0, boolean param1, int param2, boolean param3) {
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_19_0 = 0;
@@ -145,8 +145,8 @@ final class MenuEntry {
         stackIn_3_0 = (!param0) ? 2431750 : 10827264;
         var5 = stackIn_3_0;
         var6 = eda.field_f;
-        var7 = this.e(-163) / 2;
-        var8 = this.d(param2 + 11918) / 2;
+        var7 = this.getWidth(-163) / 2;
+        var8 = this.getHeight(param2 + 11918) / 2;
         var9 = this.field_i + this.field_c.e(param2 ^ -103);
         if (param2 != 1) {
           return;
@@ -154,8 +154,8 @@ final class MenuEntry {
         var10 = -var7 + this.field_b;
         var11 = var9 - var8;
         var12 = this.b(-28425);
-        var13 = this.e(-163);
-        var14 = this.d(11919);
+        var13 = this.getWidth(-163);
+        var14 = this.getHeight(11919);
         var15 = -1;
         if (36 != this.field_g) {
           if (this.field_g != 37) {
@@ -356,7 +356,7 @@ final class MenuEntry {
         return;
     }
 
-    final int e(int param0) {
+    final int getWidth(int param0) {
         if (param0 != -163) {
           return -37;
         }
@@ -367,12 +367,12 @@ final class MenuEntry {
     final void a(boolean param0) {
         if (param0) {
           String var3 = (String) null;
-          MenuEntry.a(86, (String) null);
+          MenuEntry.validateEmail(86, (String) null);
         }
         this.field_c.d(31990);
     }
 
-    final static hra a(int param0, String param1) {
+    final static hra validateEmail(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -460,8 +460,8 @@ final class MenuEntry {
           var9 = ema.a(this.field_l, 0, var7, this.field_f, var8) ? 1 : 0;
           return var9 != 0;
         }
-        var4 = this.e(-163);
-        var5Lifetime1 = this.d(11919);
+        var4 = this.getWidth(-163);
+        var5Lifetime1 = this.getHeight(11919);
         return RewardChoicePhase.isPointInRect(-(var5Lifetime1 / 2) + this.field_i, param1, var5Lifetime1 / 2 + this.field_i, param2, this.field_b + var4 / 2, this.field_b - var4 / 2, 104);
     }
 

@@ -171,14 +171,14 @@ final class PitComponent extends PrefabComponent {
           var7 = (PitModel) (var6.createModel(10, 111));
           var8 = this.field_F;
           if (0 == var8) {
-            var7.b(2097152, 0);
+            var7.setStyle(2097152, 0);
             var5.a(16, false);
           } else {
             if (var8 == 1) {
-              var7.b(param1 + 2097149, 1);
+              var7.setStyle(param1 + 2097149, 1);
               var5.a(16, true);
             } else {
-              var7.b(2097152, 0);
+              var7.setStyle(2097152, 0);
               var5.a(16, false);
             }
           }

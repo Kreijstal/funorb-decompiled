@@ -97,7 +97,7 @@ abstract class ShooterComponent extends PrefabComponent {
         IsaacCipher var5 = null;
         Weapon var6 = null;
         int var7 = 0;
-        mg var8 = null;
+        TimingPattern var8 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -117,8 +117,8 @@ abstract class ShooterComponent extends PrefabComponent {
               var5 = param2.getRandom(-85);
               this.field_H = var5.nextBounded(16, param0 - 43);
               if (!(param1 instanceof WeaponShooterBehaviour)) {
-                var8.a(false, this.field_H * var8.a((byte) -94) / 16);
-                param1.a(102, var8);
+                var8.setPhaseOffset(false, this.field_H * var8.getTotalDuration((byte) -94) / 16);
+                param1.setTimingPattern(102, var8);
                 return;
               }
               var6 = ((WeaponShooterBehaviour) (param1)).l(-2);
@@ -129,9 +129,9 @@ abstract class ShooterComponent extends PrefabComponent {
                 }
               }
             }
-            var8.a(false, this.field_H * var8.a((byte) -94) / 16);
+            var8.setPhaseOffset(false, this.field_H * var8.getTotalDuration((byte) -94) / 16);
           }
-          param1.a(102, var8);
+          param1.setTimingPattern(102, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

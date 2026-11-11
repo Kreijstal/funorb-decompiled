@@ -243,7 +243,7 @@ final class qna {
             }
             PlatformComponent.field_H = bva.currentTimeMillis((byte) -107);
           }
-          FacePointLocomotor.field_r.field_i = SpriteTileOperator.field_w.length;
+          FacePointLocomotor.field_r.itemCount = SpriteTileOperator.field_w.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < DefaultTileRenderable.field_g.length; var4Lifetime1++) {
             stackIn_88_0 = -116;
@@ -273,7 +273,7 @@ final class qna {
               }
             }
           }
-          hg.field_f = FacePointLocomotor.field_r.field_i * (mha.field_C + GasVentModel.field_p << 1);
+          hg.field_f = FacePointLocomotor.field_r.itemCount * (mha.field_C + GasVentModel.field_p << 1);
           FurnitureModel.field_o = ega.field_c - (var3_intLifetime1 >> 1);
           tia.field_a = var3_intLifetime1 + (ega.field_c - (var3_intLifetime1 >> 1));
           for (var4Lifetime2 = 0; var4Lifetime2 < DefaultTileRenderable.field_g.length; var4Lifetime2++) {
@@ -310,9 +310,9 @@ final class qna {
             var4Lifetime3++;
           }
           if (2 == mq.field_a) {
-            FacePointLocomotor.field_r.a(param1, 29954, -1, -1);
+            FacePointLocomotor.field_r.initializeSelection(param1, 29954, -1, -1);
           } else {
-            FacePointLocomotor.field_r.a(param1, param0 + 29953, 0, wg.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
+            FacePointLocomotor.field_r.initializeSelection(param1, param0 + 29953, 0, wg.a(1541709953, AgeValidator.field_j, GridWidgetContainer.field_B));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

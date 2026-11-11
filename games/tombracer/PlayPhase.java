@@ -37,7 +37,7 @@ final class PlayPhase extends MatchPhase {
           if (!this.viewports[var4].c(1727002282) &&
             this.matchState.hasResigned((byte) -127, var4)) {
             this.viewports[var4].a(60, true);
-            this.viewports[var4].a(0, (byte) 108, 2 * aaa.a(false));
+            this.viewports[var4].scrollBy(0, (byte) 108, 2 * aaa.a(false));
           }
         }
         if (this.screen.isSpectating((byte) 95)) {
@@ -59,15 +59,15 @@ final class PlayPhase extends MatchPhase {
             }
           }
         }
-        this.b((byte) 101);
+        this.applyViewportLayout((byte) 101);
         var6 = 0;
         var4Lifetime1 = var6;
         while (var6 < this.viewports.length) {
-          this.viewports[var6].a((byte) 111);
+          this.viewports[var6].update((byte) 111);
           var6++;
         }
         if (!this.screen.field_D) {
-          this.i(0);
+          this.checkRoundEnd(0);
         }
     }
 
@@ -135,7 +135,7 @@ final class PlayPhase extends MatchPhase {
                 var6Lifetime2 = var7_int;
               }
             }
-            this.viewports[var6Lifetime2].a(0, ByteStorage.field_e, -20186);
+            this.viewports[var6Lifetime2].applyLayout(0, ByteStorage.field_e, -20186);
             this.viewports[var6Lifetime2].b(23479);
           } else {
             if (var5_int > 2) {
@@ -154,7 +154,7 @@ final class PlayPhase extends MatchPhase {
                 var8 = this.matchState.standings.order[var19[var4_int][var7_int]];
                 if (var8 != -1 &&
                   var3 != var8) {
-                  this.viewports[var8].a(var7_int, mma.field_c, -20186);
+                  this.viewports[var8].applyLayout(var7_int, mma.field_c, -20186);
                   this.viewports[var8].b(23479);
                 }
               }
@@ -168,12 +168,12 @@ final class PlayPhase extends MatchPhase {
             var5_intLifetime1 = 16;
             var6Lifetime1 = 256;
             var7_intLifetime1 = 64;
-            PlayerViewport.a(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
+            PlayerViewport.drawTiledFrame(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
             SocketConnector.a(dpa.field_c, 0, SingleChildWidget.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
             SocketConnector.a(CrossedSineBandsOperator.field_q + ": " + this.screen.getColouredPlayerName(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
-            PlayerViewport.a(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
+            PlayerViewport.drawTiledFrame(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
             kn.field_p.a((aa) null, var6Lifetime1, 40, 0, var5_intLifetime1 + 2, SoundEvent.a(false, 0), SpriteState.field_l, 1, SoundEvent.a(false, 11903361), WhiteLightShooterComponent.field_J, (byte) 116, var7_intLifetime1Lifetime2, 0, id.field_h, var4_intLifetime1, 1);
           }
           if (!param1) {
@@ -191,7 +191,7 @@ final class PlayPhase extends MatchPhase {
             var5_intLifetime1Lifetime1 = 40 + MatchStatistics.field_n.a(var4, (byte) 41);
             var6Lifetime1Lifetime1 = aaa.a(false) / 2;
             var7_intLifetime1Lifetime1 = SwitchLinkList.b(0) / 2;
-            PlayerViewport.a(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -MatchStatistics.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
+            PlayerViewport.drawTiledFrame(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -MatchStatistics.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
             if (this.field_q > 50) {
               if (0 != this.matchState.field_K) {
                 MembersUpsellMenu.a(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
@@ -361,19 +361,19 @@ final class PlayPhase extends MatchPhase {
         return true;
     }
 
-    private final void a(int param0, int param1) {
+    private final void showMatchResult(int param0, int param1) {
         this.screen.showMatchResult(param1, param0 ^ 62);
         if (param0 != 0) {
           this.field_o = true;
         }
     }
 
-    private final void b(byte param0) {
+    private final void applyViewportLayout(byte param0) {
         int var2 = this.screen.getViewedPlayerIndex(89);
         if (this.matchState.playersRemaining <= 1) {
-          this.viewports[var2].a(0, mf.field_d, -20186);
+          this.viewports[var2].applyLayout(0, mf.field_d, -20186);
         } else {
-          this.viewports[var2].a(0, OpenGlEnvironmentWaterEffect.field_j, -20186);
+          this.viewports[var2].applyLayout(0, OpenGlEnvironmentWaterEffect.field_j, -20186);
         }
         if (param0 < 52) {
           this.field_p = false;
@@ -388,7 +388,7 @@ final class PlayPhase extends MatchPhase {
         }
     }
 
-    private final void i(int param0) {
+    private final void checkRoundEnd(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5;
@@ -397,7 +397,7 @@ final class PlayPhase extends MatchPhase {
         if (!this.screen.c(false) &&
           this.matchState.allFinishedRound(0)) {
           if (this.matchState.simulations[0].hasTimedOut(-31170)) {
-            this.a(0, -2);
+            this.showMatchResult(0, -2);
           } else {
             if (this.matchState.roundsToWin > 1) {
               var7 = new int[this.matchState.playerCount][3];
@@ -408,7 +408,7 @@ final class PlayPhase extends MatchPhase {
               }
               this.screen.onRoundEnded((byte) 101, var7, this.screen.localPlayerIndex);
             } else {
-              this.a(0, this.screen.localPlayerIndex);
+              this.showMatchResult(0, this.screen.localPlayerIndex);
             }
           }
         }
@@ -666,7 +666,7 @@ final class PlayPhase extends MatchPhase {
         }
     }
 
-    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
+    final static byte[] whirlpoolDigest(int param0, byte[] param1, int param2, int param3) {
         int var5_int = 0;
         byte[] var4 = null;
         int var7 = 0;
@@ -734,7 +734,7 @@ final class PlayPhase extends MatchPhase {
             TripBeamComponent.b(1, 1);
           }
           this.screen.roundDeadlineTick = -1;
-          this.b((byte) 122);
+          this.applyViewportLayout((byte) 122);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

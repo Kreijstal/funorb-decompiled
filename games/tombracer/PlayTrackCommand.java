@@ -459,7 +459,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                 }
                 var38 = var37.toString();
                 var12.field_Qb.field_r = var38;
-                var39Lifetime1 = var12.field_Qb.field_H.a(var38, var12.field_G - 2 * var12.field_Qb.field_x);
+                var39Lifetime1 = var12.field_Qb.field_H.countWrappedLines(var38, var12.field_G - 2 * var12.field_Qb.field_x);
                 var12.field_Qb.a(var12.field_G, var39Lifetime1 * di.field_a, param1 ^ -23776, var31, 0);
                 var31 = var31 + di.field_a * var39Lifetime1;
               }
@@ -476,7 +476,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             }
             var33 = ProxySocketConnector.formatLobbyPlayerStatus(var32, param1 + 8793, var12.field_Ib);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Rb.field_H.a(var33, var12.field_G - mna.field_d - mna.field_d);
+              var34_intLifetime1 = var12.field_Rb.field_H.countWrappedLines(var33, var12.field_G - mna.field_d - mna.field_d);
               var12.field_Rb.field_r = var33;
               var12.field_Rb.field_s = var12.field_zb * 256 / qsa.field_a;
               var12.field_Rb.a(-(mna.field_d * 2) + var12.field_G, di.field_a * var34_intLifetime1, param1 - 23776, var31, mna.field_d);

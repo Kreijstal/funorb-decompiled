@@ -529,7 +529,7 @@ abstract class OpenGlTexture implements GpuTexture {
         if (param0 > -113) {
           return;
         }
-        ko.c((byte) 57);
+        MenuInputState.openDisplaySettings((byte) 57);
     }
 
     private final void a(byte param0, int param1) {

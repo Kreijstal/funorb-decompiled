@@ -19,7 +19,7 @@ abstract class GameEvent extends IntrusiveNode {
 
     abstract int getValue(byte param0);
 
-    abstract void a(int param0, byte param1, PlayerSimulation param2);
+    abstract void finish(int param0, byte param1, PlayerSimulation param2);
 
     abstract int getTypeId(byte param0);
 
@@ -40,9 +40,9 @@ abstract class GameEvent extends IntrusiveNode {
     GameEvent(int param0, BitPacketBuffer param1) {
     }
 
-    abstract boolean a(boolean param0, GameEvent param1);
+    abstract boolean isEquivalentTo(boolean param0, GameEvent param1);
 
-    abstract void a(PlayerSimulation param0, int param1, int param2, int param3);
+    abstract void applyTick(PlayerSimulation param0, int param1, int param2, int param3);
 
     public static void releaseStatics(int param0) {
         field_h = null;

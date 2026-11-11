@@ -236,22 +236,22 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
             }
             if (param1[0] != null) {
               SoftwareRasterizer.intersectClip(param5, param2, var16, var18);
-              param1[0].b(param5, param2);
+              param1[0].drawTransparent(param5, param2);
               SoftwareRasterizer.restoreClip(bba.field_a);
             }
             if (null != param1[2]) {
               SoftwareRasterizer.intersectClip(var17, param2, var10, var18);
-              param1[2].b(var13, param2);
+              param1[2].drawTransparent(var13, param2);
               SoftwareRasterizer.restoreClip(bba.field_a);
             }
             if (param1[6] != null) {
               SoftwareRasterizer.intersectClip(param5, var19, var16, var11);
-              param1[6].b(param5, var15);
+              param1[6].drawTransparent(param5, var15);
               SoftwareRasterizer.restoreClip(bba.field_a);
             }
             if (param1[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
-              param1[8].b(var13, var15);
+              param1[8].drawTransparent(var13, var15);
               SoftwareRasterizer.restoreClip(bba.field_a);
             }
             if (param3 > -116) {
@@ -261,7 +261,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
               param1[1].field_n != 0) {
               SoftwareRasterizer.intersectClip(var16, param2, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param1[1].field_n) {
-                param1[1].b(var20, param2);
+                param1[1].drawTransparent(var20, param2);
               }
               SoftwareRasterizer.restoreClip(bba.field_a);
             }
@@ -269,7 +269,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
               param1[7].field_n != 0) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].field_n) {
-                param1[7].b(var20Lifetime1, var15);
+                param1[7].drawTransparent(var20Lifetime1, var15);
               }
               SoftwareRasterizer.restoreClip(bba.field_a);
             }
@@ -277,7 +277,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
               param1[3].field_k != 0) {
               SoftwareRasterizer.intersectClip(param5, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param1[3].field_k) {
-                param1[3].b(param5, var20Lifetime2);
+                param1[3].drawTransparent(param5, var20Lifetime2);
               }
               SoftwareRasterizer.restoreClip(bba.field_a);
             }
@@ -285,7 +285,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
               param1[5].field_k != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param1[5].field_k) {
-                param1[5].b(var13, var20Lifetime3);
+                param1[5].drawTransparent(var13, var20Lifetime3);
               }
               SoftwareRasterizer.restoreClip(bba.field_a);
             }
@@ -295,7 +295,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param1[4].field_k) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param1[4].field_n) {
-                  param1[4].b(var21, var20Lifetime4);
+                  param1[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
               SoftwareRasterizer.restoreClip(bba.field_a);

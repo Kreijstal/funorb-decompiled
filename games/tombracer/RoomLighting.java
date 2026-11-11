@@ -72,8 +72,8 @@ final class RoomLighting implements RenderListener {
           if (LightSource.a((byte) -7)) {
             var12 = (LightSource) (this.lightSources.first(-80));
             while (var12 != null) {
-              if (!var12.c(param1 - 1459836712)) {
-                var12.a((byte) 100, this.room.getSimulation(-1553494544).tick);
+              if (!var12.isRemoved(param1 - 1459836712)) {
+                var12.updateLightPosition((byte) 100, this.room.getSimulation(-1553494544).tick);
               } else {
                 var12.unlink(57);
               }

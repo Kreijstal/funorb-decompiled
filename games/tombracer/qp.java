@@ -113,7 +113,7 @@ final class qp extends we {
 
     final int getItemX(byte param0, int param1) {
         if (param0 > 111) {
-          return -80 + (aaa.a(false) >> 1) - ((this.items[0].e(-163) >> 1) * this.items.length - param1 * this.items[0].e(-163));
+          return -80 + (aaa.a(false) >> 1) - ((this.items[0].getWidth(-163) >> 1) * this.items.length - param1 * this.items[0].getWidth(-163));
         }
         return 100;
     }
@@ -129,7 +129,7 @@ final class qp extends we {
         if (param1 != -48) {
           return 88;
         }
-        return this.getItemX((byte) 116, param0) + this.items[param0].e(-163);
+        return this.getItemX((byte) 116, param0) + this.items[param0].getWidth(-163);
     }
 
     qp(int param0, int param1, int param2, int param3, int param4, int[] param5) {

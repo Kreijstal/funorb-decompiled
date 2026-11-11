@@ -17,8 +17,8 @@ final class kc {
         try {
           var1_int = 0;
           while (NanoTickClock.pollKeyEvent(true)) {
-            lp.field_h.c(18);
-            if (!lp.field_h.a(false)) {
+            lp.field_h.handleVerticalNavigation(18);
+            if (!lp.field_h.isActivated(false)) {
               continue;
             }
             var1_int = 1;
@@ -27,14 +27,14 @@ final class kc {
             stackIn_8_0 = -17;
             return stackIn_8_0;
           }
-          lp.field_h.a(ColourRowCache.a(PasswordValidator.field_m, (byte) -113, RidgedNoise3D.field_p), 35, ColourRowCache.a(AgeValidator.field_j, (byte) -113, GridWidgetContainer.field_B));
-          if (lp.field_h.a(false)) {
+          lp.field_h.updatePointer(ColourRowCache.a(PasswordValidator.field_m, (byte) -113, RidgedNoise3D.field_p), 35, ColourRowCache.a(AgeValidator.field_j, (byte) -113, GridWidgetContainer.field_B));
+          if (lp.field_h.isActivated(false)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            lp.field_h.field_h >= 0) {
-            var2 = rga.field_b[lp.field_h.field_h];
+            lp.field_h.selectedIndex >= 0) {
+            var2 = rga.field_b[lp.field_h.selectedIndex];
             if (var2 == 2) {
               qfa.a(-103);
             }

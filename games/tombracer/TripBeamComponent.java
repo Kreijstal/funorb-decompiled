@@ -93,7 +93,7 @@ final class TripBeamComponent extends SwitchComponent {
           var4.setObstructionLevel(param1, 0);
           var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new TripBeamBehaviour(param2, param0);
-          var5.a((byte) -8, new mg(new int[]{}));
+          var5.a((byte) -8, new TimingPattern(new int[]{}));
           var5.b(0, 636);
           this.a(var5, (byte) -107);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));

@@ -314,7 +314,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         Obstacle var5 = (Obstacle) (this.obstacles.first(-80));
         while (var5 != null) {
-          if (!var5.b(param1, 1569)) {
+          if (!var5.isInVariant(param1, 1569)) {
             this.removeObstacle(var5, -26755);
             var5.ensureModels(0);
           }
@@ -333,7 +333,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         Obstacle var7 = (Obstacle) (this.obstacles.first(-80));
         while (var7 != null) {
-          var7.c(true);
+          var7.refreshModelOccupancy(true);
           var7 = (Obstacle) (this.obstacles.next(114));
         }
     }
@@ -391,7 +391,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         Obstacle var7 = (Obstacle) (this.obstacles.first(-80));
         while (var7 != null) {
-          var7.a(-76, this);
+          var7.mirror(-76, this);
           var7 = (Obstacle) (this.obstacles.next(122));
         }
         RoomComponent var8 = (RoomComponent) (this.components.first(-80));
@@ -1612,7 +1612,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         Obstacle var8 = (Obstacle) (this.obstacles.first(-80));
         while (var8 != null) {
-          var8.a(param1 - 105, var3);
+          var8.shiftPosition(param1 - 105, var3);
           var8 = (Obstacle) (this.obstacles.next(108));
         }
     }
@@ -1627,7 +1627,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         if (var7.b(0) ||
           uca.cosmeticRandom.nextBounded(5, 0) == 0) {
-          this.particleEffects.b(param0, param3, param5, param1, 0, param4);
+          this.particleEffects.spawnDust(param0, param3, param5, param1, 0, param4);
         }
     }
 
@@ -1770,7 +1770,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         if (var7.b(0) &&
           0 == uca.cosmeticRandom.nextBounded(5, 0)) {
-          this.particleEffects.b(param4, param1, param3, param2, 0, param5);
+          this.particleEffects.spawnDust(param4, param1, param3, param2, 0, param5);
         }
         if (param0) {
           this.spawnParticle(55, 54, (byte) -12, -30);

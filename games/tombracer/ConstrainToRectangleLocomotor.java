@@ -177,7 +177,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           }
           wm.field_a = SpriteTileOperator.field_t;
           if (null != wm.field_a) {
-            wm.field_a.a(-123);
+            wm.field_a.onDeactivated(-123);
             if (wm.field_a.field_c == 1) {
               fp.a(108);
             }
@@ -190,7 +190,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           if (SpriteTileOperator.field_t instanceof MenuScreen) {
             ((MenuScreen) (SpriteTileOperator.field_t)).a(0, 0, param0);
           }
-          SpriteTileOperator.field_t.a((byte) 114);
+          SpriteTileOperator.field_t.onActivated((byte) 114);
           if (mpa.field_X) {
             MandelbrotOperator.field_o = null;
             RotaterMountComponent.field_H = new IntrusiveDeque();

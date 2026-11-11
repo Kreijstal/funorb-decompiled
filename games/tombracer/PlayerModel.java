@@ -19,7 +19,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
     private Player field_p;
     private bua field_n;
 
-    public final void a(int param0, byte param1, int param2, int param3, int param4) {
+    public final void drawShadow(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = -66 / ((-33 - param1) / 61);
         gqa.a(0, -83584144, param3, param4, PowerUpItemBehaviour.field_t[6], param2);
     }
@@ -38,7 +38,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         return this.field_p.getX(3);
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void drawIcon(int param0, int param1, int param2) {
         if (param1 <= 119) {
           PlayerModel.isNameSeparator(2, 'ﾇ');
         }
@@ -63,19 +63,19 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         boolean decompiledSharedTail0 = (11 != this.field_p.getAnimationState(false) ||
           !(this.field_p.getAnimationStateTicks(false) <= 3));
         if (!decompiledSharedTail0) {
-          this.field_l.c(-10874, 16777130);
+          this.field_l.setColour(-10874, 16777130);
           this.field_l.setRadius(160, param0 ^ 4376);
           this.field_l.getAnimatedLight(8).mode = 0;
           decompiledSharedTail0 = (TombRacer.field_G);
         }
         if (decompiledSharedTail0) {
-          this.field_l.c(param0 ^ 15220, 16633231);
+          this.field_l.setColour(param0 ^ 15220, 16633231);
           this.field_l.setRadius(128, -71);
           this.field_l.getAnimatedLight(85).mode = 11;
         }
     }
 
-    public final boolean a(byte param0) {
+    public final boolean isAnimationFinished(byte param0) {
         if (param0 >= -107) {
           return true;
         }
@@ -85,7 +85,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
     private final boolean b(boolean param0) {
         boolean stackIn_11_0 = false;
         if (!param0) {
-          this.a(-20, -33);
+          this.setCharacter(-20, -33);
         }
         stackIn_11_0 = (this.field_f == 29) || (this.field_f == 24) || (this.field_f == 12) || (this.field_f == 15) || (this.field_f == 1) || (this.b(83));
         return stackIn_11_0;
@@ -239,7 +239,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         return;
     }
 
-    public final void a(int param0) {
+    public final void tick(int param0) {
         int stackIn_35_0 = 0;
         int stackIn_41_0 = 0;
         boolean stackIn_50_1 = false;
@@ -354,7 +354,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4) {
+    public final void drawPortrait(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != -1) {
           return;
         }
@@ -365,7 +365,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         hp.a(param2, param3, 0, var6, -1918106173, param4, param1);
     }
 
-    public final void a(int param0, int param1) {
+    public final void setCharacter(int param0, int param1) {
         this.field_j = param0;
         if (this.field_j >= 13) {
           this.field_j = this.field_j % 13;
@@ -391,7 +391,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
 
     public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
-          this.a((byte) 117);
+          this.isAnimationFinished((byte) 117);
         }
         return this.field_p.getElevation((byte) 115);
     }
@@ -404,7 +404,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         return false;
     }
 
-    public final void a(int param0, int param1, boolean param2) {
+    public final void setAnimationState(int param0, int param1, boolean param2) {
         SoundEventQueue stackIn_8_0 = null;
         int stackIn_51_0 = 0;
         int stackIn_58_0 = 0;
@@ -824,7 +824,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
     private final boolean f(byte param0) {
         boolean stackIn_14_0 = false;
         if (param0 != 62) {
-          this.a(-102, 87, -37, 69, 88);
+          this.drawPortrait(-102, 87, -37, 69, 88);
         }
         stackIn_14_0 = (this.field_j == 0) || (this.field_j == 2) || (this.field_j == 4) || (this.field_j == 10) || (12 == this.field_j) || (1 == this.field_j) || (this.field_j == 5) || (this.field_j == 7) || (this.field_j == 9);
         return stackIn_14_0;
@@ -832,7 +832,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
 
     public final int getRenderY(byte param0) {
         if (param0 < 91) {
-          this.a(-8);
+          this.tick(-8);
         }
         return this.field_p.getY(9648);
     }
@@ -889,7 +889,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         try {
           this.field_p = param0;
           this.field_i = param1;
-          this.a(param1, 1);
+          this.setCharacter(param1, 1);
           var3 = new AnimatedLight(tga.field_a, 0, 0, 0, 0, 0, 0, 0);
           this.field_l = new LightSource(var3);
         } catch (RuntimeException runtimeException) {
@@ -897,7 +897,7 @@ final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
         }
     }
 
-    public final void a(int param0, Room param1) {
+    public final void setRoom(int param0, Room param1) {
         RoomLighting var5 = null;
         if (param1 == null) {
           return;

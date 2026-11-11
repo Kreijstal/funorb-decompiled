@@ -47,18 +47,18 @@ final class RemovedFromGameMenu extends MenuScreen {
 
     final int getItemRight(int param0, byte param1) {
         if (param1 == -48) {
-          return this.getItemX((byte) 117, param0) + this.items[param0].e(-163);
+          return this.getItemX((byte) 117, param0) + this.items[param0].getWidth(-163);
         }
         field_q = (String) null;
-        return this.getItemX((byte) 117, param0) + this.items[param0].e(-163);
+        return this.getItemX((byte) 117, param0) + this.items[param0].getWidth(-163);
     }
 
     final int getItemX(byte param0, int param1) {
         if (param0 > 111) {
-          return aaa.a(false) - this.items[param1].e(-163) >> 1;
+          return aaa.a(false) - this.items[param1].getWidth(-163) >> 1;
         }
         field_r = (String) null;
-        return aaa.a(false) - this.items[param1].e(-163) >> 1;
+        return aaa.a(false) - this.items[param1].getWidth(-163) >> 1;
     }
 
     RemovedFromGameMenu(int param0, int param1, int param2, int param3, int param4, int[] param5) {

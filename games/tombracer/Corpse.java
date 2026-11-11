@@ -103,7 +103,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
           return;
         }
         try {
-          this.field_h.getAnimator((byte) -66).a(this.field_k, (byte) -101, this.field_f, this.field_g, this.field_l);
+          this.field_h.getAnimator((byte) -66).drawShadow(this.field_k, (byte) -101, this.field_f, this.field_g, this.field_l);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kua.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

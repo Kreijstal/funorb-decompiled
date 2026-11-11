@@ -78,7 +78,7 @@ final class kaa implements WidgetPainter {
             var12 = (byte[]) null;
             kaa.copyByteRange(91, (byte[]) null, 83);
           }
-          this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6_int, -1, this.field_a, this.field_b, this.field_c.field_k + this.field_c.field_w);
+          this.field_c.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6_int, -1, this.field_a, this.field_b, this.field_c.field_k + this.field_c.field_w);
           if (!param0.hasKeyboardFocus((byte) -34)) {
             return;
           }

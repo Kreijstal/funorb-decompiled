@@ -45,7 +45,7 @@ final class ConsoleToken extends IntrusiveNode {
             if (var4 < 0) {
               var5 = OpenGlToolkit.field_H;
             } else {
-              if (lp.field_h.field_h == var4) {
+              if (lp.field_h.selectedIndex == var4) {
                 var5 = RewardChoiceSlot.field_a;
               } else {
                 var5 = RotaterMountComponent.field_I;
@@ -57,7 +57,7 @@ final class ConsoleToken extends IntrusiveNode {
             var7 = apa.$cfr$intArgs$a$62abead39cee(stackIn_12_0, stackIn_13_1, var6);
             var8 = -(var7 >> 1) + Transform3D.field_a;
             if (var4 >= 0) {
-              if (lp.field_h.field_h == var4) {
+              if (lp.field_h.selectedIndex == var4) {
                 stackIn_17_0 = pua.field_c;
               } else {
                 stackIn_17_0 = QuickChatPhraseDefinition.field_o;
@@ -70,10 +70,10 @@ final class ConsoleToken extends IntrusiveNode {
               var2 = var2 + RenderLayer.field_d;
             }
             if (0 > var4) {
-              LegacyOpenGlTexture.field_b.c(var6, var8, sb.field_d + var2, var5, -1);
+              LegacyOpenGlTexture.field_b.drawText(var6, var8, sb.field_d + var2, var5, -1);
               var2 = var2 + CharacterSelectPhase.field_x;
             } else {
-              OpenGlUnderwaterEffect.field_d.c(var6, var8, var2 + vo.field_f, var5, -1);
+              OpenGlUnderwaterEffect.field_d.drawText(var6, var8, var2 + vo.field_f, var5, -1);
               var2 = var2 + (aqa.field_a + RenderLayer.field_d + FurnitureModel.field_n);
             }
           }

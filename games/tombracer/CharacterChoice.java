@@ -363,8 +363,8 @@ final class CharacterChoice implements dv {
             return;
           }
           if (this.player.getAnimator((byte) -84) != null) {
-            this.player.getAnimator((byte) -115).a(param0, 1);
-            this.player.getAnimator((byte) -82).a(26, 0, true);
+            this.player.getAnimator((byte) -115).setCharacter(param0, 1);
+            this.player.getAnimator((byte) -82).setAnimationState(26, 0, true);
             return;
           }
           return;
@@ -375,8 +375,8 @@ final class CharacterChoice implements dv {
         if (this.player.getAnimator((byte) -84) == null) {
           return;
         }
-        this.player.getAnimator((byte) -115).a(param0, 1);
-        this.player.getAnimator((byte) -82).a(26, 0, true);
+        this.player.getAnimator((byte) -115).setCharacter(param0, 1);
+        this.player.getAnimator((byte) -82).setAnimationState(26, 0, true);
     }
 
     CharacterChoice(Player param0) {

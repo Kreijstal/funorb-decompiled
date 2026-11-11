@@ -355,7 +355,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           }
           this.field_V = false;
           if (this.animator != null) {
-            this.animator.a(param0 ^ 21458);
+            this.animator.tick(param0 ^ 21458);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -934,7 +934,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
                           this.setAnimationState(-5636, 17, true);
                           this.setAnimationState(-5636, 16, true);
                           this.setAnimationState(-5636, 13, true);
-                          this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
+                          this.room.getParticleEffects(false).spawnDeathBurst((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                         }
                       }
                     }} else {
@@ -942,19 +942,19 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
                     if (var5 != 0) {
                       this.setAnimationState(-5636, 16, true);
                       this.setAnimationState(-5636, 13, true);
-                      this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
+                      this.room.getParticleEffects(false).spawnDeathBurst((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                     }
                   }
                 } else {
                   this.setAnimationState(-5636, 16, true);
                   if (var5 != 0) {
                     this.setAnimationState(-5636, 13, true);
-                    this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
+                    this.room.getParticleEffects(false).spawnDeathBurst((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                   }
                 }
               } else {
                 this.setAnimationState(-5636, 13, true);
-                this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
+                this.room.getParticleEffects(false).spawnDeathBurst((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
               }
             }
             this.dropHeldItem(30358);
@@ -1123,24 +1123,24 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           var7 = SoftwareRasterizer.width;
           var8 = SoftwareRasterizer.height;
           var9 = new Sprite(param2, -(param2 * 2) + param0);
-          var9.c();
+          var9.makeRasterTarget();
           SoftwareRasterizer.fillVerticalGradient(0, 0, param2, -(param2 * 2) + param0, param3, param5);
           var10 = new Sprite(param2, param2);
-          var10.c();
+          var10.makeRasterTarget();
           SoftwareRasterizer.fillRectangle(0, 0, param2, param2, param3);
           var11 = new Sprite(16, param2);
-          var11.c();
+          var11.makeRasterTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 16, param2, param3);
           var12 = new Sprite(param2, param2);
-          var12.c();
+          var12.makeRasterTarget();
           SoftwareRasterizer.fillRectangle(0, 0, param2, param2, param5);
           var13 = new Sprite(16, param2);
-          var13.c();
+          var13.makeRasterTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 16, param2, param5);
           var14 = null;
           if (param1 > 0) {
             var14 = new Sprite(16, 16);
-            ((Sprite) (var14)).c();
+            ((Sprite) (var14)).makeRasterTarget();
             SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param1);
           }
           SoftwareRasterizer.setTarget(var6, var7, var8);
@@ -2228,7 +2228,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
               if (this.animator == null) {
                 continue;
               }
-              this.animator.a(21463);
+              this.animator.tick(21463);
               continue;
             }
             break;
@@ -2889,7 +2889,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           if (this.animationState == 11 &&
             7 == param1 &&
             null != this.animator &&
-            !this.animator.a((byte) -113)) {
+            !this.animator.isAnimationFinished((byte) -113)) {
             return;
           }
           if (param0 != -5636) {
@@ -2930,7 +2930,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           this.animationState = param1;
           this.animationStateTicks = 0;
           if (null != this.animator) {
-            this.animator.a(26, param1, param2);
+            this.animator.setAnimationState(26, param1, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3887,7 +3887,7 @@ final class Player implements Renderable, WorldBody, Collidable, CameraTarget, T
           var3_int = -37 / ((-23 - param0) / 38);
           if (this.animator != null) {
             param1.addToLayer((byte) -82, 7, this.animator);
-            this.animator.a(30355, this.room);
+            this.animator.setRoom(30355, this.room);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

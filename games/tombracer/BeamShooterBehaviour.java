@@ -4,7 +4,7 @@
 final class BeamShooterBehaviour extends Behaviour implements mra {
     private BeamSegment field_s;
     private Effect field_r;
-    private mg field_n;
+    private TimingPattern timingPattern;
     private int field_u;
     private boolean field_q;
     private int field_w;
@@ -13,12 +13,12 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
     private int field_o;
     static int field_p;
 
-    public final boolean b(int param0) {
+    public final boolean isFiring(int param0) {
         int var2 = -21 % ((37 - param0) / 45);
         return this.field_t;
     }
 
-    final void a(Effect param0, boolean param1) {
+    final void setEffect(Effect param0, boolean param1) {
         try {
           this.field_r = param0;
           if (!param1) {
@@ -50,9 +50,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           return;
         }
         if (!this.getSimulation(12340).isTimeFrozen(108) &&
-          null != this.field_n) {
-          this.field_n.d(0);
-          if (this.field_n.c(0)) {
+          null != this.timingPattern) {
+          this.timingPattern.tick(0);
+          if (this.timingPattern.hasToggled(0)) {
             stackIn_12_1 = !(this.field_v);
             this.field_v = stackIn_12_1;
             this.field_o = 0;
@@ -95,7 +95,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
         var9 = this.getRoom(true);
         var10 = var9.castBeamSegment(1, this.trap, -66, this.field_s, this.getRoot(6), this.field_r) ? 1 : 0;
-        var9.getParticleEffects(false).a((byte) 120, this.field_s, this.field_r);
+        var9.getParticleEffects(false).spawnBeamParticles((byte) 120, this.field_s, this.field_r);
         if (var10 != 0) {
           var11 = this.field_s;
           while (var11 != null) {
@@ -103,7 +103,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
               return;
             }
             if (null == var11.nextSegment) {
-              var9.getParticleEffects(false).a(var11, this.trap, (byte) -123);
+              var9.getParticleEffects(false).spawnBeamHitParticles(var11, this.trap, (byte) -123);
               var9.applyAreaEffect(param0 ^ 5463, var11.field_a, this.field_r, 524288, 524288, var11.field_e);
             }
             var11 = var11.nextSegment;
@@ -113,7 +113,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         return;
     }
 
-    final BeamSegment c(int param0) {
+    final BeamSegment getBeam(int param0) {
         if (param0 < 99) {
           return (BeamSegment) null;
         }
@@ -180,7 +180,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           if (param0) {
             this.field_u = -117;
           }
-          this.field_n.a(15637, param1);
+          this.timingPattern.encode(15637, param1);
           param1.writeBits((byte) -23, this.field_w >> 16, 10);
           this.field_r.a(param1, (byte) 125);
           param1.writeBits((byte) 85, !this.field_q ? 0 : 1, 1);
@@ -383,7 +383,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         this.field_s = new BeamSegment();
         this.field_o = 0;
         try {
-          this.field_n = new mg(param0.formatVersion, param1);
+          this.timingPattern = new TimingPattern(param0.formatVersion, param1);
           this.field_w = param1.readBits((byte) 44, 10) << 16;
           this.field_r = ad.a((byte) 87, param1);
           if (8 <= param0.formatVersion) {
@@ -423,7 +423,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         return stackIn_7_0;
     }
 
-    final static boolean b(int param0, int param1) {
+    final static boolean isScreenActive(int param0, int param1) {
         int var2;
         boolean stackIn_4_0 = false;
         var2 = -1 % ((param0 - 63) / 46);
@@ -451,9 +451,9 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    public final void a(int param0, mg param1) {
+    public final void setTimingPattern(int param0, TimingPattern param1) {
         try {
-          this.field_n = param1;
+          this.timingPattern = param1;
           if (param0 < 81) {
             this.freezesInTimeStop((byte) -109);
           }
@@ -487,7 +487,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         this.field_s = new BeamSegment();
         this.field_o = 0;
         try {
-          this.field_n = new mg();
+          this.timingPattern = new TimingPattern();
           this.field_r = new Effect(1, 10);
           this.field_r.b(1, 13);
           this.field_w = 0;

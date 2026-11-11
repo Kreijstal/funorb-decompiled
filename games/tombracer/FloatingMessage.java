@@ -37,7 +37,7 @@ final class FloatingMessage extends IntrusiveNode {
         return this.field_n;
     }
 
-    final void b(byte param0) {
+    final void draw(byte param0) {
         int var3 = -52 % ((param0 + 59) / 45);
         int var2 = 255 - (this.field_o * 255 >> 16);
         SecondaryNodeDequeIterator.a(var2 / 2, this.field_k, 1, this.field_g, (byte) 99, this.field_s, this.field_t);
@@ -61,7 +61,7 @@ final class FloatingMessage extends IntrusiveNode {
         return this.field_j;
     }
 
-    final void a(int param0) {
+    final void tick(int param0) {
         int var2;
         int var3;
         int var4;
@@ -195,7 +195,7 @@ final class FloatingMessage extends IntrusiveNode {
 
     final void a(int param0, int param1) {
         if (param0 != 1) {
-          this.a(-94);
+          this.tick(-94);
           this.field_g = param1;
           return;
         }

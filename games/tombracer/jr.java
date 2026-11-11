@@ -58,7 +58,7 @@ final class jr implements WidgetPainter {
             return;
           }
           var10 = this.field_l + this.field_e + this.field_m;
-          this.field_k.a(param0.field_o, param0.field_i + (param1 + var10), param3 + (param0.field_n + this.field_a), param0.field_m - (this.field_m + var10), param0.field_p - (this.field_m << 1), this.field_f, this.field_i, this.field_g, this.field_h, 0);
+          this.field_k.drawParagraph(param0.field_o, param0.field_i + (param1 + var10), param3 + (param0.field_n + this.field_a), param0.field_m - (this.field_m + var10), param0.field_p - (this.field_m << 1), this.field_f, this.field_i, this.field_g, this.field_h, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

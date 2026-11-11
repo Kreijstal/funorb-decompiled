@@ -66,18 +66,18 @@ final class fha {
           }
           var9Lifetime1 = var17.field_q;
           gb.a(-29711);
-          var17.c();
+          var17.makeRasterTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.c();
-          var17.d(0, 0);
+          var18.makeRasterTarget();
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.c();
-          var17.d(var9Lifetime1 - var17.field_m, 0);
+          var11.makeRasterTarget();
+          var17.drawOpaque(var9Lifetime1 - var17.field_m, 0);
           var12 = new Sprite(var17.field_m - var9Lifetime1 * 2, var9Lifetime1);
-          var12.c();
-          var17.d(-var9Lifetime1, 0);
+          var12.makeRasterTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           pfa.a(1);
           MonochromeFillOperator.field_n = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

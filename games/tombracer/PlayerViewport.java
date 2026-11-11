@@ -3,21 +3,21 @@
  */
 final class PlayerViewport {
     private boolean field_q;
-    private int field_p;
-    private int field_m;
+    private int left;
+    private int targetRight;
     static boolean field_o;
     private int field_e;
-    private int field_f;
-    private boolean field_i;
+    private int targetTop;
+    private boolean snapNextUpdate;
     private RoomViewRenderer field_n;
-    private int field_g;
-    private int field_c;
+    private int targetLeft;
+    private int top;
     static int field_b;
-    private int field_h;
-    private int field_l;
+    private int moveDivisor;
+    private int bottom;
     private dta field_d;
-    private int field_k;
-    private int field_j;
+    private int right;
+    private int targetBottom;
     private MatchScreen field_a;
 
     final boolean c(int param0) {
@@ -70,7 +70,7 @@ final class PlayerViewport {
         }
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int approach(int param0, int param1, int param2) {
         int var6 = 0;
         if (param2 == param0) {
           return param0;
@@ -82,34 +82,34 @@ final class PlayerViewport {
         } else {
           var6 = -1;
         }
-        if (this.field_h <= var5) {
-          return var4 / this.field_h + param2;
+        if (this.moveDivisor <= var5) {
+          return var4 / this.moveDivisor + param2;
         }
         return var6 + param2;
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void scrollBy(int param0, byte param1, int param2) {
         if (param1 >= 26) {
-          this.field_g = this.field_g + param2;
-          this.field_m = this.field_m + param2;
-          this.field_j = this.field_j + param0;
-          this.field_f = this.field_f + param0;
-          this.field_h = 16;
+          this.targetLeft = this.targetLeft + param2;
+          this.targetRight = this.targetRight + param2;
+          this.targetBottom = this.targetBottom + param0;
+          this.targetTop = this.targetTop + param0;
+          this.moveDivisor = 16;
           return;
         }
-        this.a((byte) -94);
-        this.field_g = this.field_g + param2;
-        this.field_m = this.field_m + param2;
-        this.field_j = this.field_j + param0;
-        this.field_f = this.field_f + param0;
-        this.field_h = 16;
+        this.update((byte) -94);
+        this.targetLeft = this.targetLeft + param2;
+        this.targetRight = this.targetRight + param2;
+        this.targetBottom = this.targetBottom + param0;
+        this.targetTop = this.targetTop + param0;
+        this.moveDivisor = 16;
     }
 
     final void b(int param0) {
-        if (!this.a(0)) {
+        if (!this.isOnScreen(0)) {
           return;
         }
-        this.field_n.render(this.field_e, this.field_p, this.field_k, this.field_c, this.field_l, this.field_a, 51);
+        this.field_n.render(this.field_e, this.left, this.right, this.top, this.bottom, this.field_a, 51);
         if (param0 != 23479) {
           ConsoleToken[] var3 = (ConsoleToken[]) null;
           PlayerViewport.a(true, (ConsoleToken[]) null, 44);
@@ -119,9 +119,9 @@ final class PlayerViewport {
           if (this.field_a.field_A) {
             return;
           }
-          this.field_d.a(this.field_p, this.field_k, this.field_e, -88, this.field_a, this.field_c, this.field_l);
+          this.field_d.a(this.left, this.right, this.field_e, -88, this.field_a, this.top, this.bottom);
           if (this.field_a.field_D) {
-            TextInputWidget.a(0, bm.field_f, (byte) -72, this.field_p, tga.field_a, this.field_k - this.field_p, 1, -this.field_c + this.field_l, this.field_c, -16777216 | wga.field_a[this.field_e]);
+            TextInputWidget.a(0, bm.field_f, (byte) -72, this.left, tga.field_a, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
             return;
           }
           return;
@@ -132,14 +132,14 @@ final class PlayerViewport {
         if (this.field_a.field_A) {
           return;
         }
-        this.field_d.a(this.field_p, this.field_k, this.field_e, -88, this.field_a, this.field_c, this.field_l);
+        this.field_d.a(this.left, this.right, this.field_e, -88, this.field_a, this.top, this.bottom);
         if (!this.field_a.field_D) {
           return;
         }
-        TextInputWidget.a(0, bm.field_f, (byte) -72, this.field_p, tga.field_a, this.field_k - this.field_p, 1, -this.field_c + this.field_l, this.field_c, -16777216 | wga.field_a[this.field_e]);
+        TextInputWidget.a(0, bm.field_f, (byte) -72, this.left, tga.field_a, this.right - this.left, 1, -this.top + this.bottom, this.top, -16777216 | wga.field_a[this.field_e]);
     }
 
-    final void a(int param0, wm param1, int param2) {
+    final void applyLayout(int param0, wm param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -156,21 +156,21 @@ final class PlayerViewport {
           var4_int = aaa.a(false) - SwitchLinkList.b(0) / 2;
           var5 = SwitchLinkList.b(0) / 2;
           if (mf.field_d == param1) {
-            this.a(0, 0, 8, aaa.a(false), SwitchLinkList.b(0));
+            this.setEdges(0, 0, 8, aaa.a(false), SwitchLinkList.b(0));
             return;
           }
           if (param1 == OpenGlEnvironmentWaterEffect.field_j) {
-            this.a(0, 0, param2 + 20194, var4_int, SwitchLinkList.b(param2 ^ -20186));
+            this.setEdges(0, 0, param2 + 20194, var4_int, SwitchLinkList.b(param2 ^ -20186));
             return;
           }
           if (ByteStorage.field_e == param1) {
-            this.a(var4_int, 0, 8, aaa.a(false), var5 << 1);
+            this.setEdges(var4_int, 0, 8, aaa.a(false), var5 << 1);
             return;
           }
           if (param1 != mma.field_c) {
             return;
           }
-          this.a(var4_int, param0 * var5, 8, aaa.a(false), (param0 + 1) * var5);
+          this.setEdges(var4_int, param0 * var5, 8, aaa.a(false), (param0 + 1) * var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,33 +186,33 @@ final class PlayerViewport {
         }
     }
 
-    private final boolean a(int param0, byte param1, int param2, int param3, int param4) {
+    private final boolean intersectsArea(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 != 59) {
-          this.field_g = -31;
-          if (param0 < this.field_p) {
+          this.targetLeft = -31;
+          if (param0 < this.left) {
             return false;
           }
-          if (param2 < this.field_c) {
+          if (param2 < this.top) {
             return false;
           }
-          if (param3 > this.field_k) {
+          if (param3 > this.right) {
             return false;
           }
-          if (this.field_l >= param4) {
+          if (this.bottom >= param4) {
             return true;
           }
           return false;
         }
-        if (param0 < this.field_p) {
+        if (param0 < this.left) {
           return false;
         }
-        if (param2 < this.field_c) {
+        if (param2 < this.top) {
           return false;
         }
-        if (param3 > this.field_k) {
+        if (param3 > this.right) {
           return false;
         }
-        if (this.field_l >= param4) {
+        if (this.bottom >= param4) {
           return true;
         }
         return false;
@@ -223,22 +223,22 @@ final class PlayerViewport {
         if (param0 > 26) {
           return;
         }
-        this.field_p = -104;
+        this.left = -104;
     }
 
-    final void a(byte param0) {
-        if (this.field_i) {
-          this.field_i = false;
-          this.field_p = this.field_g;
-          this.field_l = this.field_j;
-          this.field_k = this.field_m;
-          this.field_c = this.field_f;
+    final void update(byte param0) {
+        if (this.snapNextUpdate) {
+          this.snapNextUpdate = false;
+          this.left = this.targetLeft;
+          this.bottom = this.targetBottom;
+          this.right = this.targetRight;
+          this.top = this.targetTop;
           return;
         }
-        this.field_p = this.a(this.field_g, 0, this.field_p);
-        this.field_c = this.a(this.field_f, 0, this.field_c);
-        this.field_k = this.a(this.field_m, 0, this.field_k);
-        this.field_l = this.a(this.field_j, 0, this.field_l);
+        this.left = this.approach(this.targetLeft, 0, this.left);
+        this.top = this.approach(this.targetTop, 0, this.top);
+        this.right = this.approach(this.targetRight, 0, this.right);
+        this.bottom = this.approach(this.targetBottom, 0, this.bottom);
         this.field_n.a(-8);
         if (param0 >= 77) {
           this.field_d.a((byte) -21);
@@ -246,24 +246,24 @@ final class PlayerViewport {
         }
     }
 
-    private final boolean a(int param0) {
+    private final boolean isOnScreen(int param0) {
         if (param0 == 0) {
-          return this.a(aaa.a(false), (byte) 59, SwitchLinkList.b(param0 ^ 0), 0, 0);
+          return this.intersectsArea(aaa.a(false), (byte) 59, SwitchLinkList.b(param0 ^ 0), 0, 0);
         }
-        this.field_f = 126;
-        return this.a(aaa.a(false), (byte) 59, SwitchLinkList.b(param0 ^ 0), 0, 0);
+        this.targetTop = 126;
+        return this.intersectsArea(aaa.a(false), (byte) 59, SwitchLinkList.b(param0 ^ 0), 0, 0);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
-        this.field_f = param1;
-        this.field_c = param1;
-        this.field_g = param0;
-        this.field_j = param4;
-        this.field_m = param3;
-        this.field_h = param2;
-        this.field_p = param0;
-        this.field_k = param3;
-        this.field_l = param4;
+    private final void setEdges(int param0, int param1, int param2, int param3, int param4) {
+        this.targetTop = param1;
+        this.top = param1;
+        this.targetLeft = param0;
+        this.targetBottom = param4;
+        this.targetRight = param3;
+        this.moveDivisor = param2;
+        this.left = param0;
+        this.right = param3;
+        this.bottom = param4;
     }
 
     final void a(byte param0, int param1) {
@@ -271,7 +271,7 @@ final class PlayerViewport {
         this.field_n.a(0, param1);
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, ToolkitSprite[] param4, int param5) {
+    final static void drawTiledFrame(int param0, int param1, byte param2, int param3, ToolkitSprite[] param4, int param5) {
         int var9 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -312,7 +312,7 @@ final class PlayerViewport {
             return;
           }
           var11 = (ToolkitSprite[]) null;
-          PlayerViewport.a(110, 85, (byte) -45, -18, (ToolkitSprite[]) null, -3);
+          PlayerViewport.drawTiledFrame(110, 85, (byte) -45, -18, (ToolkitSprite[]) null, -3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -329,8 +329,8 @@ final class PlayerViewport {
     }
 
     PlayerViewport(MatchScreen param0, int param1) {
-        this.field_i = true;
-        this.field_h = 8;
+        this.snapNextUpdate = true;
+        this.moveDivisor = 8;
         try {
           this.field_a = param0;
           this.field_e = param1;

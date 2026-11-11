@@ -22,7 +22,7 @@ final class LaserShooterComponent extends ShooterComponent {
           var5 = new BeamShooterBehaviour(param2, param0);
           var6 = new Effect(1, 10);
           var6.b(1, 13);
-          var5.a(var6, true);
+          var5.setEffect(var6, true);
           this.a((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var7 = rm.field_a;

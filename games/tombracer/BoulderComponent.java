@@ -35,7 +35,7 @@ final class BoulderComponent extends PathMoverComponent {
             var4Lifetime2 = hka.field_b;
             var5 = PasswordValidator.field_m;
             var6 = RidgedNoise3D.field_p;
-            var4Lifetime2.field_f.b(var6, 0, -100, 0, var5);
+            var4Lifetime2.field_f.openAt(var6, 0, -100, 0, var5);
           }
           iea.a(param2, (byte) -56, param0);
           return;
@@ -51,7 +51,7 @@ final class BoulderComponent extends PathMoverComponent {
           var4Lifetime1Lifetime1 = hka.field_b;
           var5Lifetime1 = PasswordValidator.field_m;
           var6Lifetime1 = RidgedNoise3D.field_p;
-          var4Lifetime1Lifetime1.field_f.b(var6Lifetime1, 0, -100, 0, var5Lifetime1);
+          var4Lifetime1Lifetime1.field_f.openAt(var6Lifetime1, 0, -100, 0, var5Lifetime1);
         }
         iea.a(param2, (byte) -56, param0);
     }

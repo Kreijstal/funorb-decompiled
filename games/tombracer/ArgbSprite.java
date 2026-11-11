@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArgbSprite extends Sprite {
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitArgb(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -30,7 +30,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -71,7 +71,7 @@ final class ArgbSprite extends Sprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blitArgb(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void blitArgbAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -200,7 +200,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1);
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbRecoloured(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$6 = 0;
@@ -254,7 +254,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blitAdditiveRows(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         int var14;
         for (param8 = -param10; param8 < 0; param8++) {
@@ -321,14 +321,14 @@ final class ArgbSprite extends Sprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.blitAdditiveRows(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void drawRecoloured(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -369,10 +369,10 @@ final class ArgbSprite extends Sprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.blitArgbRecoloured(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -416,7 +416,7 @@ final class ArgbSprite extends Sprite {
         ArgbSprite.blitArgbAlpha(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void b(int param0, int param1) {
+    final void drawTransparent(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -457,6 +457,6 @@ final class ArgbSprite extends Sprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blitArgb(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 }

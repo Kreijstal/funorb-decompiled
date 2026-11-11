@@ -5,7 +5,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
     static ToolkitSprite field_y;
     private int field_n;
     private boolean field_D;
-    private mg field_t;
+    private TimingPattern field_t;
     private int field_q;
     private SwitchState field_C;
     private boolean field_v;
@@ -122,8 +122,8 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         var11 = this.getRoom(true);
         if (!this.getSimulation(12340).isTimeFrozen(112) &&
           null != this.field_t) {
-          this.field_t.d(param0 - 5418);
-          if (this.field_t.c(0)) {
+          this.field_t.tick(param0 - 5418);
+          if (this.field_t.hasToggled(0)) {
             this.field_s = 0;
             stackIn_7_1 = !(this.field_A);
             this.field_A = stackIn_7_1;
@@ -164,12 +164,12 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           var4 = this.a(this.field_u, (byte) 72);
           this.q((byte) 92);
           var11.castBeamSegment(1, this.trap, -91, this.field_u, this.getRoot(6), this.field_z);
-          var11.getParticleEffects(false).a((byte) 119, this.field_u, this.field_z);
+          var11.getParticleEffects(false).spawnBeamParticles((byte) 119, this.field_u, this.field_z);
           var7_ref_pc = this.field_u;
           while (var7_ref_pc.nextSegment != null) {
             var7_ref_pc = var7_ref_pc.nextSegment;
           }
-          var11.getParticleEffects(false).a(var7_ref_pc, this.trap, (byte) -119);
+          var11.getParticleEffects(false).spawnBeamHitParticles(var7_ref_pc, this.trap, (byte) -119);
           var5 = this.a(this.field_u, (byte) -65);
         } else {
           this.q((byte) 92);
@@ -207,9 +207,9 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
                 }
                 if (null == var8.nextSegment) {
                   if (!this.field_r) {
-                    var11.getParticleEffects(false).a(var8.field_a, (byte) -120, 8, var9, 1, 0, 2, 0, var8.field_e, 2, 4);
+                    var11.getParticleEffects(false).spawnBurst(var8.field_a, (byte) -120, 8, var9, 1, 0, 2, 0, var8.field_e, 2, 4);
                   } else {
-                    var11.getParticleEffects(false).a(var8.field_a, (byte) -117, 9, var9, 1, 0, 4, 0, var8.field_e, 4, 8);
+                    var11.getParticleEffects(false).spawnBurst(var8.field_a, (byte) -117, 9, var9, 1, 0, 4, 0, var8.field_e, 4, 8);
                   }
                 }
                 var8 = var8.nextSegment;
@@ -255,9 +255,9 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             if (var8Lifetime1.blocked) {
               if (null == var8Lifetime1.nextSegment) {
                 if (!this.field_r) {
-                  var11.getParticleEffects(false).a(var8Lifetime1.field_a, (byte) -120, 8, var9Lifetime1, 1, 0, 2, 0, var8Lifetime1.field_e, 2, 4);
+                  var11.getParticleEffects(false).spawnBurst(var8Lifetime1.field_a, (byte) -120, 8, var9Lifetime1, 1, 0, 2, 0, var8Lifetime1.field_e, 2, 4);
                 } else {
-                  var11.getParticleEffects(false).a(var8Lifetime1.field_a, (byte) -117, 9, var9Lifetime1, 1, 0, 4, 0, var8Lifetime1.field_e, 4, 8);
+                  var11.getParticleEffects(false).spawnBurst(var8Lifetime1.field_a, (byte) -117, 9, var9Lifetime1, 1, 0, 4, 0, var8Lifetime1.field_e, 4, 8);
                 }
               }
               var8Lifetime1 = var8Lifetime1.nextSegment;
@@ -303,9 +303,9 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           if (var8Lifetime2.blocked) {
             if (null == var8Lifetime2.nextSegment) {
               if (!this.field_r) {
-                var11.getParticleEffects(false).a(var8Lifetime2.field_a, (byte) -120, 8, var9Lifetime2, 1, 0, 2, 0, var8Lifetime2.field_e, 2, 4);
+                var11.getParticleEffects(false).spawnBurst(var8Lifetime2.field_a, (byte) -120, 8, var9Lifetime2, 1, 0, 2, 0, var8Lifetime2.field_e, 2, 4);
               } else {
-                var11.getParticleEffects(false).a(var8Lifetime2.field_a, (byte) -117, 9, var9Lifetime2, 1, 0, 4, 0, var8Lifetime2.field_e, 4, 8);
+                var11.getParticleEffects(false).spawnBurst(var8Lifetime2.field_a, (byte) -117, 9, var9Lifetime2, 1, 0, 4, 0, var8Lifetime2.field_e, 4, 8);
               }
             }
             var8Lifetime2 = var8Lifetime2.nextSegment;
@@ -386,7 +386,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         this.field_s = 0;
         try {
           this.field_C = new SwitchState(15);
-          this.field_t = new mg();
+          this.field_t = new TimingPattern();
           this.field_n = 0;
           this.field_q = 16777216;
           this.field_v = true;
@@ -404,7 +404,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         this.field_q = param0;
     }
 
-    final void a(byte param0, mg param1) {
+    final void a(byte param0, TimingPattern param1) {
         try {
           if (param0 != -8) {
             this.getTypeId(true);
@@ -419,7 +419,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         try {
           super.encode(param0, param1);
           this.field_C.encode(this.getScope((byte) 118), (byte) 113, param1);
-          this.field_t.a(15637, param1);
+          this.field_t.encode(15637, param1);
           param1.writeBits((byte) -125, this.field_q >> 16, 10);
           param1.writeBits((byte) -127, !this.field_v ? 0 : 1, 1);
           param1.writeBits((byte) 110, !this.field_D ? 0 : 1, 1);
@@ -490,7 +490,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         this.field_s = 0;
         try {
           this.field_C = new SwitchState(15, param0, param1);
-          this.field_t = new mg(param0.formatVersion, param1);
+          this.field_t = new TimingPattern(param0.formatVersion, param1);
           this.field_q = param1.readBits((byte) 44, 10) << 16;
           this.field_v = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_D = param1.readBits((byte) 44, 1) == 1 ? true : false;

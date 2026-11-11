@@ -9,7 +9,7 @@ abstract class rka {
     int field_f;
     int field_d;
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int param0, int param1, int param2);
 
     final static void a(String param0, boolean param1) {
         try {
@@ -31,7 +31,7 @@ abstract class rka {
         System.gc();
     }
 
-    abstract void b(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     final static String a(int param0, boolean param1) {
         if (param1) {

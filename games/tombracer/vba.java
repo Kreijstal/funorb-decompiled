@@ -29,7 +29,7 @@ final class vba extends we {
         if (param1 != -48) {
           return 48;
         }
-        return this.getItemX((byte) 126, param0) + this.items[param0].e(param1 ^ 141);
+        return this.getItemX((byte) 126, param0) + this.items[param0].getWidth(param1 ^ 141);
     }
 
     final void update(boolean param0, boolean param1, int param2) {
@@ -205,7 +205,7 @@ final class vba extends we {
         if (param0 <= 111) {
           return 68;
         }
-        return aaa.a(false) / 2 - (-15 + this.items[param1].e(-163) / 2 * this.items.length) + this.items[param1].e(-163) * param1;
+        return aaa.a(false) / 2 - (-15 + this.items[param1].getWidth(-163) / 2 * this.items.length) + this.items[param1].getWidth(-163) * param1;
     }
 
     private final void c(int param0, byte param1) {

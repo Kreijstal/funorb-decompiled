@@ -106,7 +106,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonLi
         }
         BitmapFont var5 = KeySwitchComponent.field_J;
         if (null != this.field_A) {
-          var5.a(ch.field_e, param0 + this.field_i, param1 + this.field_n, this.field_m, 20, 16777215, -1, 0, 0, var5.field_k + var5.field_w);
+          var5.drawParagraph(ch.field_e, param0 + this.field_i, param1 + this.field_n, this.field_m, 20, 16777215, -1, 0, 0, var5.field_k + var5.field_w);
         }
     }
 
