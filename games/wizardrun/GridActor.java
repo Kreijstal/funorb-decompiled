@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class qh {
-    ob field_i;
+class GridActor {
+    GridPoint tilePosition;
     static byte[][] field_a;
-    int field_e;
+    int verticalVelocity;
     static ResourceArchive field_c;
     static int field_j;
-    ob field_f;
+    GridPoint tileOffset;
     static int field_g;
     static int keyQueueWriteIndex;
     static int field_l;
@@ -15,7 +15,7 @@ class qh {
     int field_h;
     int field_d;
 
-    final static int a(String param0, int param1, boolean param2, int param3, String param4, boolean param5) {
+    final static int advanceLoginHandshake(String param0, int param1, boolean param2, int param3, String param4, boolean param5) {
         try {
           int stackIn_6_0 = 0;
           int stackIn_9_0 = 0;
@@ -73,7 +73,7 @@ class qh {
               hc.a(1, param3 ^ 28257)) {
               var6_int = AccountCreationForm.field_N.readUnsignedByte(255);
               if (var6_int == 0) {
-                NodeHashTableIterator.field_j = bd.field_b;
+                NodeHashTableIterator.field_j = ExceptionSupport.field_b;
               } else {
                 NodeHashTableIterator.field_j = MouseWheelInput.field_c;
                 ra.field_k = var6_int;
@@ -81,9 +81,9 @@ class qh {
               }
               AccountCreationForm.field_N.position = 0;
             }
-            if (bd.field_b == NodeHashTableIterator.field_j &&
+            if (ExceptionSupport.field_b == NodeHashTableIterator.field_j &&
               hc.a(8, -28266)) {
-              tg.field_g = AccountCreationForm.field_N.readLong((byte) 0);
+              LevelData.field_g = AccountCreationForm.field_N.readLong((byte) 0);
               AccountCreationForm.field_N.position = 0;
               gi.a(param2, eh.field_e, true, param5, param1);
               NodeHashTableIterator.field_j = vb.field_F;
@@ -111,11 +111,11 @@ class qh {
               }
               if (decompiledFrameRemainder0) {
                 DelegatingCanvas.field_c = -1;
-                NodeHashTableIterator.field_j = fc.field_b;
+                NodeHashTableIterator.field_j = DateFormattingHelpers.field_b;
               }
             }
-            if (fc.field_b == NodeHashTableIterator.field_j &&
-              bd.b(param3 + 71)) {
+            if (DateFormattingHelpers.field_b == NodeHashTableIterator.field_j &&
+              ExceptionSupport.b(param3 + 71)) {
               WidgetContainer.field_D = AccountCreationForm.field_N.readLong((byte) 0);
               TextHotspotRange.field_m = AccountCreationForm.field_N.readUnsignedByte(255);
               AccountCreationForm.field_N.readUnsignedByte(255);
@@ -143,8 +143,8 @@ class qh {
                   DirectByteStorage.field_f[var8] = AccountCreationForm.field_N.readByte(0);
                 }
               }
-              d.field_a = AccountCreationForm.field_N.readCp1252String(0);
-              var12 = (CharSequence) ((Object) d.field_a);
+              MonotonicClockHelpers.field_a = AccountCreationForm.field_N.readCp1252String(0);
+              var12 = (CharSequence) ((Object) MonotonicClockHelpers.field_a);
               IntrusiveNode.field_a = MouseWheelInput.a(-124, var12);
               RasterSnapshot.field_t = AccountCreationForm.field_N.readUnsignedByte(255);
               NodeHashTableIterator.field_j = BufferedSocket.field_l;
@@ -162,14 +162,14 @@ class qh {
               if (ArchiveProvider.field_a <= 0 &&
                 !kd.field_c) {
                 try {
-                  cl.a(jg.f(param3 ^ -10), -3264, "unzap");
+                  BrowserScriptBridge.call(jg.f(param3 ^ -10), -3264, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  cl.a(new Object[]{WeightedLruCache.a(WidgetContainer.field_D, param3 + 77)}, "zap", 30383, jg.f(1));
+                  BrowserScriptBridge.call(new Object[]{WeightedLruCache.a(WidgetContainer.field_D, param3 + 77)}, "zap", 30383, jg.f(1));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -187,7 +187,7 @@ class qh {
               return stackIn_79_0;
             }
             if (NodeHashTableIterator.field_j == MouseWheelInput.field_c &&
-              bd.b(param3 + 85)) {
+              ExceptionSupport.b(param3 + 85)) {
               ql.a(-77);
               if (ra.field_k == 7 &&
                 !n.field_a) {
@@ -237,7 +237,7 @@ class qh {
             } else {
               stackIn_107_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param5).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -250,27 +250,27 @@ class qh {
         field_a = (byte[][]) null;
         if (param0 != -25) {
           String var2 = (String) null;
-          qh.a((String) null, 125, true, 98, (String) null, false);
+          GridActor.advanceLoginHandshake((String) null, 125, true, 98, (String) null, false);
         }
         field_c = null;
     }
 
-    final void a(byte param0) {
-        if (this.field_f.field_b < 0) {
-          this.field_f.field_b = this.field_f.field_b + 240;
-          this.field_i.field_b = this.field_i.field_b - 1;
+    final void wrapHorizontalPosition(byte param0) {
+        if (this.tileOffset.column < 0) {
+          this.tileOffset.column = this.tileOffset.column + 240;
+          this.tilePosition.column = this.tilePosition.column - 1;
         }
-        if (!(this.field_f.field_b < 240)) {
-          this.field_f.field_b = this.field_f.field_b - 240;
-          this.field_i.field_b = this.field_i.field_b + 1;
+        if (!(this.tileOffset.column < 240)) {
+          this.tileOffset.column = this.tileOffset.column - 240;
+          this.tilePosition.column = this.tilePosition.column + 1;
         }
         if (param0 <= 51) {
-          tg var3 = (tg) null;
-          this.b((tg) null, 94);
+          LevelData var3 = (LevelData) null;
+          this.b((LevelData) null, 94);
         }
     }
 
-    final void a(int param0, PcmSample[] param1, tg param2, int param3, int param4, int param5, PcmStreamMixer param6, boolean param7, byte param8) {
+    final void a(int param0, PcmSample[] param1, LevelData param2, int param3, int param4, int param5, PcmStreamMixer param6, boolean param7, byte param8) {
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
@@ -282,58 +282,58 @@ class qh {
         int var10_int = 0;
         RuntimeException var10 = null;
         int var11 = 0;
-        ob var12 = null;
+        GridPoint var12 = null;
         int var10_intLifetime1;
         var11 = wizardrun.field_H;
         try {
           if (2 != param0) {
             if (1 == this.b(param2, -4) &&
-              this.field_f.field_a == 0 &&
-              this.field_e < 0) {
-              this.field_e = 0;
+              this.tileOffset.row == 0 &&
+              this.verticalVelocity < 0) {
+              this.verticalVelocity = 0;
             }
             if (this.b(param2, -4) == 0 ||
-              this.field_e > 0 ||
-              !(this.field_f.field_a <= 0)) {
-              this.a(param2, -80);
+              this.verticalVelocity > 0 ||
+              !(this.tileOffset.row <= 0)) {
+              this.applyGravity(param2, -80);
               if (param3 == 0) {
                 return;
               }
             }
             if (param0 == 0) {
-              var12 = new ob(this.field_i);
-              this.field_i.field_b = this.field_i.field_b + this.field_h;
+              var12 = new GridPoint(this.tilePosition);
+              this.tilePosition.column = this.tilePosition.column + this.field_h;
               if (this.b(param2, -4) == 0) {
                 this.field_h = -this.field_h;
               }
-              this.field_i = var12;
+              this.tilePosition = var12;
             }
           }
           if (this.field_h < 0) {
-            this.field_f.field_b = this.field_f.field_b - param4;
+            this.tileOffset.column = this.tileOffset.column - param4;
           } else {
-            this.field_f.field_b = this.field_f.field_b + param4;
+            this.tileOffset.column = this.tileOffset.column + param4;
           }
           if (param5 == 1) {
-            if (32 * this.field_f.field_b / 240 + this.field_i.field_b * 32 <= 0) {
+            if (32 * this.tileOffset.column / 240 + this.tilePosition.column * 32 <= 0) {
               this.field_h = 1;
-              this.field_f.field_b = this.field_f.field_b + param4;
+              this.tileOffset.column = this.tileOffset.column + param4;
             }
-            if (this.field_f.field_b * 32 / 240 - (-(32 * this.field_i.field_b) - this.field_d) > 640) {
-              this.field_f.field_b = this.field_f.field_b - param4;
+            if (this.tileOffset.column * 32 / 240 - (-(32 * this.tilePosition.column) - this.field_d) > 640) {
+              this.tileOffset.column = this.tileOffset.column - param4;
               this.field_h = -1;
             }
           } else {
-            if (this.field_i.field_b >= -2 &&
-              this.field_i.field_b <= 20) {
+            if (this.tilePosition.column >= -2 &&
+              this.tilePosition.column <= 20) {
               var10_int = 102 % ((param8 - 83) / 43);
-              this.a((byte) 67);
+              this.wrapHorizontalPosition((byte) 67);
               return;
             }
             this.field_k = 1;
           }
           var10_intLifetime1 = 102 % ((param8 - 83) / 43);
-          this.a((byte) 67);
+          this.wrapHorizontalPosition((byte) 67);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -357,12 +357,12 @@ class qh {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
-    private final void a(tg param0, int param1) {
-        tg var4 = null;
+    private final void applyGravity(LevelData param0, int param1) {
+        LevelData var4 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -370,28 +370,28 @@ class qh {
         RuntimeException var3 = null;
         try {
           if (param1 > -29) {
-            var4 = (tg) null;
-            this.a((tg) null, 121);
+            var4 = (LevelData) null;
+            this.applyGravity((LevelData) null, 121);
           }
-          if (this.field_e > -60) {
-            this.field_e = this.field_e - 2;
+          if (this.verticalVelocity > -60) {
+            this.verticalVelocity = this.verticalVelocity - 2;
           }
-          this.field_f.field_a = this.field_f.field_a + this.field_e;
-          if (this.field_f.field_a < 0) {
+          this.tileOffset.row = this.tileOffset.row + this.verticalVelocity;
+          if (this.tileOffset.row < 0) {
             if (this.b(param0, -4) == 0) {
-              this.field_f.field_a = this.field_f.field_a + 240;
-              this.field_i.field_a = this.field_i.field_a - 1;
+              this.tileOffset.row = this.tileOffset.row + 240;
+              this.tilePosition.row = this.tilePosition.row - 1;
             } else {
-              this.field_e = 0;
-              this.field_f.field_a = 0;
+              this.verticalVelocity = 0;
+              this.tileOffset.row = 0;
             }
           }
-          if (this.field_f.field_a >= 240) {
-            if (this.field_i.field_a >= 15) {
+          if (this.tileOffset.row >= 240) {
+            if (this.tilePosition.row >= 15) {
               return;
             }
-            this.field_f.field_a = this.field_f.field_a - 240;
-            this.field_i.field_a = this.field_i.field_a + 1;
+            this.tileOffset.row = this.tileOffset.row - 240;
+            this.tilePosition.row = this.tilePosition.row + 1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -404,11 +404,11 @@ class qh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, PcmStreamMixer param1, boolean param2, PcmSample[] param3, byte param4, tg param5) {
+    final void moveWithGravity(int param0, PcmStreamMixer param1, boolean param2, PcmSample[] param3, byte param4, LevelData param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -419,33 +419,33 @@ class qh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          if (this.field_e > -60) {
-            this.field_e = this.field_e - 2;
+          if (this.verticalVelocity > -60) {
+            this.verticalVelocity = this.verticalVelocity - 2;
           }
-          this.field_f.field_a = this.field_f.field_a + this.field_e;
-          if (0 > this.field_f.field_a) {
-            this.field_f.field_a = this.field_f.field_a + 240;
-            this.field_i.field_a = this.field_i.field_a - 1;
+          this.tileOffset.row = this.tileOffset.row + this.verticalVelocity;
+          if (0 > this.tileOffset.row) {
+            this.tileOffset.row = this.tileOffset.row + 240;
+            this.tilePosition.row = this.tilePosition.row - 1;
           }
           if (param4 != -15) {
             return;
           }
           if (this.field_h >= 0) {
-            this.field_f.field_b = this.field_f.field_b + param0;
+            this.tileOffset.column = this.tileOffset.column + param0;
           } else {
-            this.field_f.field_b = this.field_f.field_b - param0;
+            this.tileOffset.column = this.tileOffset.column - param0;
           }
-          if (this.field_f.field_a >= 240) {
-            this.field_f.field_a = this.field_f.field_a - 240;
-            this.field_i.field_a = this.field_i.field_a + 1;
+          if (this.tileOffset.row >= 240) {
+            this.tileOffset.row = this.tileOffset.row - 240;
+            this.tilePosition.row = this.tilePosition.row + 1;
           }
-          if (this.field_i.field_b >= -1 &&
-            this.field_i.field_b <= 20) {
-            this.a((byte) 85);
+          if (this.tilePosition.column >= -1 &&
+            this.tilePosition.column <= 20) {
+            this.wrapHorizontalPosition((byte) 85);
             return;
           }
           this.field_k = 1;
-          this.a((byte) 85);
+          this.wrapHorizontalPosition((byte) 85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -469,22 +469,22 @@ class qh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
     final static void a(boolean param0) {
         if (param0) {
-          qh.b(false);
+          GridActor.drawScreenshotPreview(false);
         }
     }
 
-    final int b(tg param0, int param1) {
-        ob var3 = null;
+    final int b(LevelData param0, int param1) {
+        GridPoint var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        ob var6 = null;
+        GridPoint var6 = null;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -494,21 +494,21 @@ class qh {
         RuntimeException decompiledCaughtException = null;
         var5 = wizardrun.field_H;
         try {
-          this.a((byte) 66);
-          var6 = new ob(this.field_i);
+          this.wrapHorizontalPosition((byte) 66);
+          var6 = new GridPoint(this.tilePosition);
           var3 = var6;
-          var3.field_a = var3.field_a - 1;
-          var4 = param1 + (32 * this.field_f.field_b / 240 + this.field_d);
-          if (0 > var3.field_a) {
+          var3.row = var3.row - 1;
+          var4 = param1 + (32 * this.tileOffset.column / 240 + this.field_d);
+          if (0 > var3.row) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
           while (0 < var4) {
-            if (1 == param0.field_f[var6.a((byte) -68)]) {
+            if (1 == param0.field_f[var6.toTileIndex((byte) -68)]) {
               stackIn_8_0 = 1;
               return stackIn_8_0;
             }
-            var3.field_b = var3.field_b + 1;
+            var3.column = var3.column + 1;
             var4 -= 32;
           }
           stackIn_11_0 = 0;
@@ -523,20 +523,20 @@ class qh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    qh() {
+    GridActor() {
         this.field_h = 0;
         this.field_k = 0;
-        this.field_e = 0;
+        this.verticalVelocity = 0;
         this.field_d = 24;
-        this.field_i = new ob();
-        this.field_f = new ob();
+        this.tilePosition = new GridPoint();
+        this.tileOffset = new GridPoint();
     }
 
-    final static void b(boolean param0) {
+    final static void drawScreenshotPreview(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2_int = 0;
@@ -611,7 +611,7 @@ class qh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "qh.I(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "qh.I(" + param0 + ')');
         }
     }
 

@@ -47,7 +47,7 @@ final class wc {
           if (param0 != 102) {
             this.field_i = -108;
           }
-          if (~tg.field_e == ~this.field_e) {
+          if (~LevelData.field_e == ~this.field_e) {
             return 1;
           }
           if (jg.field_k == 2 &&
@@ -66,13 +66,13 @@ final class wc {
         this.field_c = NodeHashTableIterator.field_g;
         this.field_h = vl.field_f;
         this.field_d = QuickChatPhraseDefinition.field_r;
-        this.field_b = tg.field_b;
+        this.field_b = LevelData.field_b;
         if (!param0) {
           this.field_l = null;
         } else {
           this.field_l = rh.field_m;
         }
-        this.field_e = ug.field_N;
+        this.field_e = RadialSelectorWidget.field_N;
     }
 
     static {

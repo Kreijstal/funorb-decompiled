@@ -48,7 +48,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           param0.field_i = this.field_i;
           param0.field_f = this.field_f;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ll.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ll.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -303,7 +303,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -335,7 +335,7 @@ class WidgetPainter implements WidgetRenderer, qe {
             bb.b(4);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ll.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ll.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -349,7 +349,7 @@ class WidgetPainter implements WidgetRenderer, qe {
         try {
           this.a(param0, param2, param1, 0);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ll.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ll.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -376,7 +376,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -406,7 +406,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -441,7 +441,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -519,7 +519,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -527,7 +527,7 @@ class WidgetPainter implements WidgetRenderer, qe {
         try {
           this.a(this.field_m, 0, param2, param1, this.field_i, param0, (byte) 114, param3);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ll.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ll.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -554,7 +554,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -581,7 +581,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -610,7 +610,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -640,7 +640,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -668,7 +668,7 @@ class WidgetPainter implements WidgetRenderer, qe {
           this.field_d = param9;
           this.field_i = param5;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ll.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ll.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

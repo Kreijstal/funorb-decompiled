@@ -25,7 +25,7 @@ final class hj {
         IndexedSprite[] var1 = new IndexedSprite[wb.field_f];
         if (param0 >= 48) {
           for (var2 = 0; wb.field_f > var2; var2++) {
-            var1[var2] = new IndexedSprite(ProgressDialog.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], TextFieldValidator.field_j[var2], ic.field_b);
+            var1[var2] = new IndexedSprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], TextFieldValidator.field_j[var2], ic.field_b);
           }
           ClientException.a(0);
           return var1;

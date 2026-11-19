@@ -53,7 +53,7 @@ final class WrappedTextLayout extends TextLayout {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class WrappedTextLayout extends TextLayout {
           var9.field_e[param4.length()] = param0;
           lk.a(-58, param2, 0, var9, param4);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "cf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "cf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class WrappedTextLayout extends TextLayout {
           var8.field_e[param1.length()] = param2 + (var7 >> 1);
           lk.a(90, param0, 0, var8, param1);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "cf.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "cf.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class WrappedTextLayout extends TextLayout {
         stackIn_5_0 = ((var3 & 128) != 0);
         rb.field_a = stackIn_5_0;
         il.field_a = var8.readUnsignedByte(255);
-        ug.field_N = var8.readLong((byte) 0);
+        RadialSelectorWidget.field_N = var8.readLong((byte) 0);
         if (ByteStorage.field_e == 2) {
           NodeHashTableIterator.field_g = var8.readUnsignedShort(-14477);
           QuickChatPhraseDefinition.field_r = var8.readUnsignedMedium((byte) 80);
@@ -167,9 +167,9 @@ final class WrappedTextLayout extends TextLayout {
         var4 = stackIn_11_0;
         DualLinkDeque.field_e = var8.readCp1252String(0);
         if (var4 == 0) {
-          tg.field_b = DualLinkDeque.field_e;
+          LevelData.field_b = DualLinkDeque.field_e;
         } else {
-          tg.field_b = var8.readCp1252String(0);
+          LevelData.field_b = var8.readCp1252String(0);
         }
         if (ByteStorage.field_e == 1 ||
           ByteStorage.field_e == 4) {
@@ -181,7 +181,7 @@ final class WrappedTextLayout extends TextLayout {
           try {
             var9 = il.field_b.b((byte) 47, var5);
             vl.field_f = var9.getTemplateText(10592);
-            if (!tg.field_b.equals(d.field_a)) {
+            if (!LevelData.field_b.equals(MonotonicClockHelpers.field_a)) {
               stackIn_24_0 = var9.field_p;
             } else {
               stackIn_24_0 = null;
@@ -333,7 +333,7 @@ final class WrappedTextLayout extends TextLayout {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -365,7 +365,7 @@ final class WrappedTextLayout extends TextLayout {
           var8.field_e[param3.length()] = param4.stringWidth(param3) + param2;
           lk.a(113, param4, 0, var8, param3);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -400,7 +400,7 @@ final class WrappedTextLayout extends TextLayout {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 

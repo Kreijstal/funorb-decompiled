@@ -19,12 +19,12 @@ final class ec {
             ec.releaseStatics(-127);
           }
           uk.a(125, param0);
-          IntrusiveNodeHashTable.a(param0, (byte) 1);
+          IntrusiveNodeHashTable.loadEndingFrame(param0, (byte) 1);
           vf.a(256);
           TimedValidator.c(350);
           DualLinkNodeHashTable.field_f = 0 - WidgetContainer.field_B;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ec.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ec.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

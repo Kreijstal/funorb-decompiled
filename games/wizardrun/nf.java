@@ -30,7 +30,7 @@ final class nf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class nf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -536,7 +536,7 @@ final class nf {
           var1_int = IntrusiveDequeCursor.field_f;
           var2 = 0;
           if (oc.field_d == 2) {
-            var3_long = -DirectByteStorage.field_g + d.a((byte) 63);
+            var3_long = -DirectByteStorage.field_g + MonotonicClockHelpers.monotonicMillis((byte) 63);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -546,10 +546,10 @@ final class nf {
           if (param0 <= 83) {
             nf.a((byte) -49);
           }
-          while (a.field_b.length > var3) {
+          while (FlatTriangleRasterizer.field_b.length > var3) {
             var4 = ec.field_g[var3];
             if (var4 < 0) {
-              var5 = ge.field_b;
+              var5 = MenuController.field_b;
             } else {
               if (ga.field_d.field_g != var4) {
                 var5 = jl.field_s;
@@ -557,7 +557,7 @@ final class nf {
                 var5 = tc.field_i;
               }
             }
-            var6 = a.field_b[var3];
+            var6 = FlatTriangleRasterizer.field_b[var3];
             if (oc.field_d == 2 &&
               var2 == 1) {
               if (ke.field_t.length < GrowableIntList.field_f.length) {
@@ -622,7 +622,7 @@ final class nf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "nf.C(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "nf.C(" + param0 + ')');
         }
     }
 

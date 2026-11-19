@@ -63,7 +63,7 @@ final class fi extends ml {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -71,8 +71,8 @@ final class fi extends ml {
         try {
           if (UiWidget.field_t != null) {
             try {
-              UiWidget.field_t.a(0L, (byte) -64);
-              UiWidget.field_t.a(18729, AccountCreationForm.field_N.payload, 24, AccountCreationForm.field_N.position);
+              UiWidget.field_t.seek(0L, (byte) -64);
+              UiWidget.field_t.write(18729, AccountCreationForm.field_N.payload, 24, AccountCreationForm.field_N.position);
             } catch (Exception exception) {
             }
           }

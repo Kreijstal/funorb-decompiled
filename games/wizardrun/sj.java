@@ -18,7 +18,7 @@ final class sj extends TextFieldValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (tg.a(param0, param1) != null) ? 0 : 1;
+          stackIn_3_0 = (LevelData.a(param0, param1) != null) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int != 0) {
             stackIn_7_0 = gf.field_V;
@@ -36,7 +36,7 @@ final class sj extends TextFieldValidator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class sj extends TextFieldValidator {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

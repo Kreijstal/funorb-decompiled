@@ -3,7 +3,7 @@
  */
 final class tc extends IntrusiveNode {
     static boolean field_j;
-    static tg field_l;
+    static LevelData field_l;
     static int field_k;
     static MouseInputHandler mouseHandler;
     static String field_n;
@@ -24,7 +24,7 @@ final class tc extends IntrusiveNode {
 
     static {
         field_k = 0;
-        field_l = new tg();
+        field_l = new LevelData();
         mouseHandler = new MouseInputHandler();
         field_n = "Try again";
     }

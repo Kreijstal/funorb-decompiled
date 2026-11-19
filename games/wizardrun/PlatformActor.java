@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg extends qh {
-    int field_n;
+final class PlatformActor extends GridActor {
+    int animationFrame;
     static long field_C;
     int field_x;
     static String field_t;
@@ -17,10 +17,10 @@ final class eg extends qh {
     static ResourceArchive field_u;
     int field_r;
     int field_s;
-    int field_B;
+    int actorType;
     int field_y;
 
-    private final void a(int param0, int param1, boolean param2, String param3, int param4) {
+    private final void drawOutlinedLabel(int param0, int param1, boolean param2, String param3, int param4) {
         GameGraphicsResources.wizardFont2.drawStringCentered(param3, -1 + param1, param4, 0, -1);
         GameGraphicsResources.wizardFont2.drawStringCentered(param3, param1 + 1, param4, 0, -1);
         GameGraphicsResources.wizardFont2.drawStringCentered(param3, param1, -1 + param4, 0, -1);
@@ -31,11 +31,11 @@ final class eg extends qh {
         try {
           GameGraphicsResources.wizardFont2.drawStringCentered(param3, param1, param4, param0, -1);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "eg.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "eg.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    private final void a(boolean param0, int param1, tg param2) {
+    private final void a(boolean param0, int param1, LevelData param2) {
         int var6 = 0;
         Object stackIn_88_0 = null;
         int stackIn_89_1 = 0;
@@ -57,50 +57,50 @@ final class eg extends qh {
           if (param1 != 120) {
             return;
           }
-          this.a(20, tl.field_a, pk.field_s, BufferedRandomAccessFile.soundEffects, (byte) -15, param2);
+          this.moveWithGravity(20, tl.field_a, pk.field_s, BufferedRandomAccessFile.soundEffects, (byte) -15, param2);
           this.field_o = 6;
           this.field_w = this.field_w + 1;
           if (param0) {
-            if (this.field_n < 31) {
-              this.field_n = 31;
+            if (this.animationFrame < 31) {
+              this.animationFrame = 31;
             }
-            if (this.field_n > 34) {
-              this.field_n = 31;
+            if (this.animationFrame > 34) {
+              this.animationFrame = 31;
             }
             this.field_z = this.field_z + 1;
             if (5 < this.field_z) {
               this.field_z = 0;
-              if (this.field_n < 34) {
-                this.field_n = this.field_n + 1;
+              if (this.animationFrame < 34) {
+                this.animationFrame = this.animationFrame + 1;
               }
             }
           } else {
-            this.field_n = 31;
-            if (0 > this.field_e) {
-              this.field_n = 32;
+            this.animationFrame = 31;
+            if (0 > this.verticalVelocity) {
+              this.animationFrame = 32;
             }
           }
-          if (!(this.field_i.field_a >= -2) ||
-            !(0 <= this.field_i.field_b) ||
-            !(20 >= this.field_i.field_b) ||
-            !(this.field_e > -30) ||
+          if (!(this.tilePosition.row >= -2) ||
+            !(0 <= this.tilePosition.column) ||
+            !(20 >= this.tilePosition.column) ||
+            !(this.verticalVelocity > -30) ||
             this.field_k == 1) {
             if (1 == this.field_k) {
-              this.field_i.field_b = (int)(Math.random() * 18.0) + 1;
-              this.field_i.field_a = 17;
+              this.tilePosition.column = (int)(Math.random() * 18.0) + 1;
+              this.tilePosition.row = 17;
               this.field_k = 0;
             } else {
-              if (this.field_i.field_a < -2) {
-                this.field_i.field_a = 17;
+              if (this.tilePosition.row < -2) {
+                this.tilePosition.row = 17;
               }
             }
             this.field_o = 0;
             if (param0) {
               for (var4_int = 0; 1000 > var4_int; var4_int++) {
                 if (null != ii.field_e[var4_int] &&
-                  ii.field_e[var4_int].field_B > 2 &&
-                  21 != ii.field_e[var4_int].field_B &&
-                  ii.field_e[var4_int].field_B != 20) {
+                  ii.field_e[var4_int].actorType > 2 &&
+                  21 != ii.field_e[var4_int].actorType &&
+                  ii.field_e[var4_int].actorType != 20) {
                   ii.field_e[var4_int].field_p = 0;
                 }
               }
@@ -111,23 +111,23 @@ final class eg extends qh {
               }
               var4_intLifetime2 = 0;
               var5 = 6;
-              if (this.field_B == 12) {
+              if (this.actorType == 12) {
                 var5 = 10;
                 var4_intLifetime2 = 1;
               }
-              if (17 == this.field_B) {
+              if (17 == this.actorType) {
                 var5 = 10;
                 var4_intLifetime2 = 2;
               }
-              if (26 == this.field_B) {
+              if (26 == this.actorType) {
                 var5 = 10;
                 var4_intLifetime2 = 3;
               }
-              if (this.field_B == 33) {
+              if (this.actorType == 33) {
                 var5 = 10;
                 var4_intLifetime2 = 4;
               }
-              if (this.field_B == 40) {
+              if (this.actorType == 40) {
                 var4_intLifetime2 = 5;
                 var5 = 20;
                 if (!GameApplet.field_g) {
@@ -137,27 +137,27 @@ final class eg extends qh {
               for (var6 = 0; var6 < var5; var6++) {
                 var7 = this;
                 if (var6 != 0) {
-                  ii.field_e[WidgetTheme.field_k].a(param1 + 9027, 21, new ob(this.field_i));
+                  ii.field_e[WidgetTheme.field_k].initialize(param1 + 9027, 21, new GridPoint(this.tilePosition));
                   var7 = ii.field_e[WidgetTheme.field_k];
                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
                 }
-                ((eg) (var7)).a(9147, 21, this.field_i);
-                ((eg) (var7)).field_f.a(param1 - 246, this.field_f);
-                ((eg) (var7)).field_f.field_b = ((eg) (var7)).field_f.field_b + (int)(Math.sin(6.28 * (double)var6 / (double)var5) * 64.0);
-                ((eg) (var7)).field_f.field_a = ((eg) (var7)).field_f.field_a + (int)(64.0 * Math.cos((double)var6 * 6.28 / (double)var5));
-                ((eg) (var7)).field_e = 0;
-                ((eg) (var7)).field_o = var4_intLifetime2;
+                ((PlatformActor) (var7)).initialize(9147, 21, this.tilePosition);
+                ((PlatformActor) (var7)).tileOffset.set(param1 - 246, this.tileOffset);
+                ((PlatformActor) (var7)).tileOffset.column = ((PlatformActor) (var7)).tileOffset.column + (int)(Math.sin(6.28 * (double)var6 / (double)var5) * 64.0);
+                ((PlatformActor) (var7)).tileOffset.row = ((PlatformActor) (var7)).tileOffset.row + (int)(64.0 * Math.cos((double)var6 * 6.28 / (double)var5));
+                ((PlatformActor) (var7)).verticalVelocity = 0;
+                ((PlatformActor) (var7)).field_o = var4_intLifetime2;
                 stackIn_88_0 = var7;
                 if (var5 / 2 <= var6) {
                   stackIn_89_1 = 1;
                 } else {
                   stackIn_89_1 = -1;
                 }
-                ((eg) (stackIn_88_0)).field_h = stackIn_89_1;
+                ((PlatformActor) (stackIn_88_0)).field_h = stackIn_89_1;
               }
               ra.a(2);
-            } else if (this.field_B != 8 &&
-              this.field_B != 36) {
+            } else if (this.actorType != 8 &&
+              this.actorType != 36) {
               this.field_o = 0;
               if (this.field_d == 32) {
                 this.field_o = 0;
@@ -174,12 +174,12 @@ final class eg extends qh {
               if (this.field_d == 96) {
                 this.field_o = 5;
               }
-              if (1 < qh.field_l &&
+              if (1 < GridActor.field_l &&
                 this.field_o < 5) {
                 this.field_o = this.field_o + 1;
               }
-              this.field_B = 21;
-              if (3 < qh.field_l &&
+              this.actorType = 21;
+              if (3 < GridActor.field_l &&
                 5 > this.field_o) {
                 this.field_o = this.field_o + 1;
               }
@@ -204,7 +204,7 @@ final class eg extends qh {
           } else {
             stackIn_101_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
         }
     }
 
@@ -212,8 +212,8 @@ final class eg extends qh {
         boolean discarded$0 = false;
         nj.field_r = nj.field_r - 1;
         if (param0 != -1569) {
-          tg var3 = (tg) null;
-          discarded$0 = this.a(false, (tg) null, 6);
+          LevelData var3 = (LevelData) null;
+          discarded$0 = this.a(false, (LevelData) null, 6);
         }
         if (!(155 < nj.field_r)) {
           ql.a(param0 ^ -1570, 244, 11);
@@ -228,28 +228,28 @@ final class eg extends qh {
 
     private final void b(int param0) {
         boolean stackIn_34_0 = false;
-        ob var3;
-        ob var4;
-        ob var5;
-        var4 = new ob();
+        GridPoint var3;
+        GridPoint var4;
+        GridPoint var5;
+        var4 = new GridPoint();
         var5 = var4;
-        var3 = new ob();
-        var5.field_a = this.field_A;
-        var4.field_b = this.field_y;
-        var3.field_b = ii.field_e[0].field_y;
-        var3.field_a = ii.field_e[0].field_A;
+        var3 = new GridPoint();
+        var5.row = this.field_A;
+        var4.column = this.field_y;
+        var3.column = ii.field_e[0].field_y;
+        var3.row = ii.field_e[0].field_A;
         if (param0 != 5) {
           this.d(69);
         }
         if (ii.field_e[0].field_s == 0 &&
           this.field_q != null &&
           null != ii.field_e[0].field_q &&
-          j.a(this.field_q, var5.field_b, var4.field_a, ii.field_e[0].field_q, var3.field_b, var3.field_a)) {
-          if (this.field_B == 21) {
+          SpriteCollision.overlapsOpaquePixels(this.field_q, var5.column, var4.row, ii.field_e[0].field_q, var3.column, var3.row)) {
+          if (this.actorType == 21) {
             if (this.field_o == 0) {
               BufferedSocket.field_c = BufferedSocket.field_c + 640;
               DiskCacheStore.field_f = DiskCacheStore.field_f + 10;
-              if (qh.field_l == 5 &&
+              if (GridActor.field_l == 5 &&
                 ve.a((byte) 110, 0)) {
                 this.d(-1569);
               }
@@ -261,7 +261,7 @@ final class eg extends qh {
             if (this.field_o == 2) {
               me.field_f = me.field_f - 3200;
               DiskCacheStore.field_f = DiskCacheStore.field_f + 50;
-              if (5 == qh.field_l &&
+              if (5 == GridActor.field_l &&
                 ve.a((byte) 89, 0)) {
                 this.d(param0 ^ -1574);
               }
@@ -291,11 +291,11 @@ final class eg extends qh {
               tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[7], 100, ee.field_p * 256 / 100);
             }
             this.field_w = 0;
-            this.field_B = 44;
+            this.actorType = 44;
           } else {
-            this.field_e = 40;
+            this.verticalVelocity = 40;
             this.field_r = 0;
-            this.field_B = 21;
+            this.actorType = 21;
             this.field_o = 0;
             if (this.field_d == 32) {
               this.field_o = 0;
@@ -306,11 +306,11 @@ final class eg extends qh {
             if (64 == this.field_d) {
               this.field_o = 2;
             }
-            if (qh.field_l > 1 &&
+            if (GridActor.field_l > 1 &&
               this.field_o < 5) {
               this.field_o = this.field_o + 1;
             }
-            if (3 < qh.field_l &&
+            if (3 < GridActor.field_l &&
               this.field_o < 5) {
               this.field_o = this.field_o + 1;
             }
@@ -324,7 +324,7 @@ final class eg extends qh {
         }
     }
 
-    final void d(boolean param0) {
+    final void drawActor(boolean param0) {
         int var13 = 0;
         int stackIn_87_1 = 0;
         int stackIn_90_1 = 0;
@@ -346,51 +346,51 @@ final class eg extends qh {
         int var15;
         var15 = wizardrun.field_H;
         this.field_q = null;
-        var2 = 32 * this.field_f.field_b / 240 + 32 * this.field_i.field_b;
-        var3 = 32 * (-1 + (15 - this.field_i.field_a)) - 32 * this.field_f.field_a / 240;
+        var2 = 32 * this.tileOffset.column / 240 + 32 * this.tilePosition.column;
+        var3 = 32 * (-1 + (15 - this.tilePosition.row)) - 32 * this.tileOffset.row / 240;
         var3 = var3 - (this.field_d - 32);
         if (!param0) {
-          this.a(-46, -3, (byte) 15);
+          this.drawWizard(-46, -3, (byte) 15);
         }
         regionExit1: {
-          var11 = this.field_B;
+          var11 = this.actorType;
           if (var11 != 0) {
             if (var11 == 1) {
-              var5 = this.field_f.field_b + (240 * this.field_i.field_b + this.field_w);
+              var5 = this.tileOffset.column + (240 * this.tilePosition.column + this.field_w);
               if (0 <= this.field_w &&
                 this.field_w <= 10) {
-                ob.field_c.a(12 + var2, var3 + 12, -87, 128, var5);
+                GridPoint.field_c.a(12 + var2, var3 + 12, -87, 128, var5);
               }
               if (10 < this.field_w &&
                 this.field_w <= 15) {
-                ob.field_c.a(12 + var2, var3 + 12, -119, 112, var5);
+                GridPoint.field_c.a(12 + var2, var3 + 12, -119, 112, var5);
               }
               if (this.field_w > 15 &&
                 20 >= this.field_w) {
-                ob.field_c.a(var2 + 12, var3 + 12, -96, 96, var5);
+                GridPoint.field_c.a(var2 + 12, var3 + 12, -96, 96, var5);
               }
               if (this.field_w > 20) {
                 if (this.field_w <= 25) {
-                  ob.field_c.a(12 + var2, var3 + 12, -106, 80, var5);
+                  GridPoint.field_c.a(12 + var2, var3 + 12, -106, 80, var5);
                 }
                 if (this.field_w > 25 &&
                   30 >= this.field_w) {
-                  ob.field_c.a(12 + var2, 12 + var3, -121, 64, var5);
+                  GridPoint.field_c.a(12 + var2, 12 + var3, -121, 64, var5);
                 }
               } else {
                 if (this.field_w > 25 &&
                   30 >= this.field_w) {
-                  ob.field_c.a(12 + var2, 12 + var3, -121, 64, var5);
+                  GridPoint.field_c.a(12 + var2, 12 + var3, -121, 64, var5);
                 }
               }
-              this.field_q = ob.field_c;
+              this.field_q = GridPoint.field_c;
               this.field_A = var3;
               this.field_y = var2;
             } else {
               if (var11 == 2) {
                 for (var11 = 0; 10 > var11; var11++) {
                   var6 = 6.28 * (double)var11 / 10.0 + (double)this.field_w;
-                  ob.field_c.drawScaledAlpha(-6 + (var2 + (int)(32.0 * Math.cos(var6) + 32.0)), -6 + (var3 + (int)(32.0 + 32.0 * Math.sin(var6))), 12, 12, 255 - 10 * var11);
+                  GridPoint.field_c.drawScaledAlpha(-6 + (var2 + (int)(32.0 * Math.cos(var6) + 32.0)), -6 + (var3 + (int)(32.0 + 32.0 * Math.sin(var6))), 12, 12, 255 - 10 * var11);
                 }
                 this.field_A = var3;
                 this.field_y = var2;
@@ -398,30 +398,30 @@ final class eg extends qh {
               } else {
                 switch (var11) {
                   case 3:
-                    this.a(32, 0, (byte) 62);
+                    this.drawWizard(32, 0, (byte) 62);
                     break;
                   case 4:
-                    this.a(32, 1, (byte) 62);
+                    this.drawWizard(32, 1, (byte) 62);
                     break;
                   case 5:
-                    this.a(40, 2, (byte) 62);
+                    this.drawWizard(40, 2, (byte) 62);
                     break;
                   default:
                     switch (var11) {
                       case 6:
-                        this.a(40, 4, (byte) 62);
+                        this.drawWizard(40, 4, (byte) 62);
                         break;
                       case 7:
-                        this.a(40, 0, (byte) 62);
+                        this.drawWizard(40, 0, (byte) 62);
                         break;
                       case 8:
-                        this.a(32, 1, (byte) 62);
+                        this.drawWizard(32, 1, (byte) 62);
                         break;
                       case 9:
-                        this.a(32, 2, (byte) 62);
+                        this.drawWizard(32, 2, (byte) 62);
                         break;
                       case 10:
-                        this.a(40, 3, (byte) 62);
+                        this.drawWizard(40, 3, (byte) 62);
                         break;
                       case 11:
                         if (this.field_h != -1) {
@@ -438,71 +438,71 @@ final class eg extends qh {
                         break;
                       case 12:
                         this.field_h = -this.field_h;
-                        this.a(40, 4, (byte) 62);
+                        this.drawWizard(40, 4, (byte) 62);
                         this.field_h = -this.field_h;
                         break;
                       case 13:
-                        this.a(32, 0, (byte) 62);
+                        this.drawWizard(32, 0, (byte) 62);
                         break;
                       case 14:
                         this.field_h = -this.field_h;
-                        this.a(40, 1, (byte) 62);
+                        this.drawWizard(40, 1, (byte) 62);
                         this.field_h = -this.field_h;
                         break;
                       case 15:
-                        this.a(40, 2, (byte) 62);
+                        this.drawWizard(40, 2, (byte) 62);
                         break;
                       case 16:
-                        this.a(40, 3, (byte) 62);
+                        this.drawWizard(40, 3, (byte) 62);
                         break;
                       case 17:
-                        this.a(80, 4, (byte) 62);
+                        this.drawWizard(80, 4, (byte) 62);
                         break;
                       case 18:
-                        if (this.field_n < 34) {
-                          this.field_n = 34;
+                        if (this.animationFrame < 34) {
+                          this.animationFrame = 34;
                         }
                         if (this.field_h == 1) {
-                          oc.field_b[2][this.field_n].drawTransparent(var2, var3);
-                          this.field_q = oc.field_b[2][this.field_n];
+                          oc.field_b[2][this.animationFrame].drawTransparent(var2, var3);
+                          this.field_q = oc.field_b[2][this.animationFrame];
                           this.field_y = var2;
                           this.field_A = var3;
                           break;
                         }
-                        oc.field_b[2][this.field_n].drawMirrored(var2 - 24, var3);
-                        this.field_q = oc.field_b[2][this.field_n].flipHorizontal();
+                        oc.field_b[2][this.animationFrame].drawMirrored(var2 - 24, var3);
+                        this.field_q = oc.field_b[2][this.animationFrame].flipHorizontal();
                         this.field_y = -24 + var2;
                         this.field_A = var3;
                         break;
                       case 19:
-                        if (37 > this.field_n) {
-                          this.field_n = 37;
+                        if (37 > this.animationFrame) {
+                          this.animationFrame = 37;
                         }
                         if (this.field_h != 1) {
-                          oc.field_b[3][this.field_n].drawMirrored(var2, var3);
-                          this.field_q = oc.field_b[3][this.field_n].flipHorizontal();
+                          oc.field_b[3][this.animationFrame].drawMirrored(var2, var3);
+                          this.field_q = oc.field_b[3][this.animationFrame].flipHorizontal();
                           this.field_y = var2;
                           this.field_A = var3;
                           break;
                         }
-                        oc.field_b[3][this.field_n].drawTransparent(var2, var3);
-                        this.field_q = oc.field_b[3][this.field_n];
+                        oc.field_b[3][this.animationFrame].drawTransparent(var2, var3);
+                        this.field_q = oc.field_b[3][this.animationFrame];
                         this.field_A = var3;
                         this.field_y = var2;
                         break;
                       case 25:
-                        if (this.field_n < 36) {
-                          this.field_n = 36;
+                        if (this.animationFrame < 36) {
+                          this.animationFrame = 36;
                         }
                         if (this.field_h != -1) {
-                          oc.field_b[4][this.field_n].drawMirrored(var2, var3);
-                          this.field_q = oc.field_b[4][this.field_n].flipHorizontal();
+                          oc.field_b[4][this.animationFrame].drawMirrored(var2, var3);
+                          this.field_q = oc.field_b[4][this.animationFrame].flipHorizontal();
                           this.field_A = var3;
                           this.field_y = var2;
                           break;
                         }
-                        oc.field_b[4][this.field_n].drawTransparent(var2, var3);
-                        this.field_q = oc.field_b[4][this.field_n];
+                        oc.field_b[4][this.animationFrame].drawTransparent(var2, var3);
+                        this.field_q = oc.field_b[4][this.animationFrame];
                         this.field_y = var2;
                         this.field_A = var3;
                         break;
@@ -517,7 +517,7 @@ final class eg extends qh {
                             }
                             if ((this.field_o == 0 ||
                               this.field_o == 2) &&
-                              (qh.field_l == 5 &&
+                              (GridActor.field_l == 5 &&
                               ve.a((byte) 123, 0))) {
                               GameGraphicsResources.gemSprites[8].drawTransparent(var2, var3);
                             } else {
@@ -528,16 +528,16 @@ final class eg extends qh {
                             this.field_A = var3;
                             break regionExit1;
                           case 22:
-                            this.a(40, 0, (byte) 62);
+                            this.drawWizard(40, 0, (byte) 62);
                             break regionExit1;
                           case 23:
-                            this.a(80, 1, (byte) 62);
+                            this.drawWizard(80, 1, (byte) 62);
                             break regionExit1;
                           case 24:
-                            this.a(40, 2, (byte) 62);
+                            this.drawWizard(40, 2, (byte) 62);
                             break regionExit1;
                           case 26:
-                            this.a(96, 4, (byte) 62);
+                            this.drawWizard(96, 4, (byte) 62);
                             break regionExit1;
                           case 27:
                             oc.field_b[4][37].drawTransparent(var2, var3);
@@ -552,20 +552,20 @@ final class eg extends qh {
                             this.field_A = var3;
                             break regionExit1;
                           case 29:
-                            this.a(40, 0, (byte) 62);
+                            this.drawWizard(40, 0, (byte) 62);
                             break regionExit1;
                           case 30:
-                            this.a(40, 1, (byte) 62);
+                            this.drawWizard(40, 1, (byte) 62);
                             break regionExit1;
                           case 31:
-                            this.a(56, 2, (byte) 62);
+                            this.drawWizard(56, 2, (byte) 62);
                             break regionExit1;
                           case 32:
-                            this.a(56, 3, (byte) 62);
+                            this.drawWizard(56, 3, (byte) 62);
                             break regionExit1;
                           case 33:
                             this.field_h = -this.field_h;
-                            this.a(56, 4, (byte) 62);
+                            this.drawWizard(56, 4, (byte) 62);
                             this.field_h = -this.field_h;
                             break regionExit1;
                           case 34:
@@ -615,37 +615,37 @@ final class eg extends qh {
                                   this.field_A = var3;
                                   break regionExit1;
                                 case 36:
-                                  this.a(24, 0, (byte) 62);
+                                  this.drawWizard(24, 0, (byte) 62);
                                   break regionExit1;
                                 case 37:
-                                  this.a(56, 1, (byte) 62);
+                                  this.drawWizard(56, 1, (byte) 62);
                                   break regionExit1;
                                 case 38:
-                                  this.a(40, 2, (byte) 62);
+                                  this.drawWizard(40, 2, (byte) 62);
                                   break regionExit1;
                                 case 39:
-                                  this.a(40, 3, (byte) 62);
+                                  this.drawWizard(40, 3, (byte) 62);
                                   break regionExit1;
                                 case 40:
-                                  this.a(40, 4, (byte) 62);
+                                  this.drawWizard(40, 4, (byte) 62);
                                   break regionExit1;
                                 case 41:
                                   if (this.field_h == -1) {
-                                    MusicPatch.field_j[this.field_n].drawTransparent(var2, var3);
-                                    this.field_q = MusicPatch.field_j[this.field_n];
+                                    MusicPatch.field_j[this.animationFrame].drawTransparent(var2, var3);
+                                    this.field_q = MusicPatch.field_j[this.animationFrame];
                                     this.field_A = var3;
                                     this.field_y = var2;
                                     break regionExit1;
                                   }
-                                  MusicPatch.field_j[this.field_n].drawMirrored(var2, var3);
-                                  this.field_q = MusicPatch.field_j[this.field_n].flipHorizontal();
+                                  MusicPatch.field_j[this.animationFrame].drawMirrored(var2, var3);
+                                  this.field_q = MusicPatch.field_j[this.animationFrame].flipHorizontal();
                                   this.field_A = var3;
                                   this.field_y = var2;
                                   break regionExit1;
                                 default:
                                   break regionExit1;
                                 case 45:
-                                  this.a(40, 4, (byte) 62);
+                                  this.drawWizard(40, 4, (byte) 62);
                                   break regionExit1;
                                 case 44:
                                   var10 = 0;
@@ -673,11 +673,11 @@ final class eg extends qh {
                                   if (this.field_o == 7) {
                                     var10 = 500;
                                   }
-                                  a.font12.drawStringCentered(Integer.toString(var10), 16 + var2, var3 - 1, 0, -1);
-                                  a.font12.drawStringCentered(Integer.toString(var10), 16 + var2, var3 + 1, 0, -1);
-                                  a.font12.drawStringCentered(Integer.toString(var10), var2 + 16 - 1, var3, 0, -1);
-                                  a.font12.drawStringCentered(Integer.toString(var10), 17 + var2, var3, 0, -1);
-                                  a.font12.drawStringCentered(Integer.toString(var10), var2 + 16, var3, 16777215, -1);
+                                  FlatTriangleRasterizer.font12.drawStringCentered(Integer.toString(var10), 16 + var2, var3 - 1, 0, -1);
+                                  FlatTriangleRasterizer.font12.drawStringCentered(Integer.toString(var10), 16 + var2, var3 + 1, 0, -1);
+                                  FlatTriangleRasterizer.font12.drawStringCentered(Integer.toString(var10), var2 + 16 - 1, var3, 0, -1);
+                                  FlatTriangleRasterizer.font12.drawStringCentered(Integer.toString(var10), 17 + var2, var3, 0, -1);
+                                  FlatTriangleRasterizer.font12.drawStringCentered(Integer.toString(var10), var2 + 16, var3, 16777215, -1);
                                   break regionExit1;
                               }
                             }
@@ -718,16 +718,16 @@ final class eg extends qh {
               }
             }
           } else {
-            if (0 <= qh.field_g &&
+            if (0 <= GridActor.field_g &&
               !pg.field_q) {
               if (this.field_h == -1) {
-                ve.wizardSprites[this.field_n].drawTransparent(var2, var3);
-                this.field_q = ra.wizardNoHatSprites[this.field_n];
+                ve.wizardSprites[this.animationFrame].drawTransparent(var2, var3);
+                this.field_q = ra.wizardNoHatSprites[this.animationFrame];
                 this.field_y = var2;
                 this.field_A = var3;
               } else {
-                ve.wizardSprites[this.field_n].drawMirrored(var2, var3);
-                this.field_q = ra.wizardNoHatSprites[this.field_n].flipHorizontal();
+                ve.wizardSprites[this.animationFrame].drawMirrored(var2, var3);
+                this.field_q = ra.wizardNoHatSprites[this.animationFrame].flipHorizontal();
                 this.field_A = var3;
                 this.field_y = var2;
               }
@@ -741,18 +741,18 @@ final class eg extends qh {
                   } else {
                     stackIn_87_1 = 16776960;
                   }
-                  this.a(stackIn_87_1, var2, true, "(", 32 + var3);
+                  this.drawOutlinedLabel(stackIn_87_1, var2, true, "(", 32 + var3);
                   if (uc.field_g < 20) {
                     stackIn_90_1 = 16711680;
                   } else {
                     stackIn_90_1 = 16776960;
                   }
-                  this.a(stackIn_90_1, ve.wizardSprites[this.field_n].fullWidth + var2, true, ")", 32 + var3);
+                  this.drawOutlinedLabel(stackIn_90_1, ve.wizardSprites[this.animationFrame].fullWidth + var2, true, ")", 32 + var3);
                 }
                 if (AccountCreationForm.field_T >= 50 &&
                   AccountCreationForm.field_T < 100) {
                   var11 = GameGraphicsResources.wizardFont2.stringWidth(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
-                  var12 = var2 + ve.wizardSprites[this.field_n].fullWidth / 2;
+                  var12 = var2 + ve.wizardSprites[this.animationFrame].fullWidth / 2;
                   if (var12 < var11 / 2) {
                     var12 = var11 / 2;
                   }
@@ -764,12 +764,12 @@ final class eg extends qh {
                   } else {
                     stackIn_103_1 = 16776960;
                   }
-                  this.a(stackIn_103_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 107, ka.field_g), -4 + var3);
+                  this.drawOutlinedLabel(stackIn_103_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 107, ka.field_g), -4 + var3);
                 }
                 if (AccountCreationForm.field_T >= 100 &&
                   AccountCreationForm.field_T < 150) {
                   var11 = GameGraphicsResources.wizardFont2.stringWidth(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
-                  var12 = var2 + ve.wizardSprites[this.field_n].fullWidth / 2;
+                  var12 = var2 + ve.wizardSprites[this.animationFrame].fullWidth / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
                   }
@@ -781,12 +781,12 @@ final class eg extends qh {
                   } else {
                     stackIn_115_1 = 16711680;
                   }
-                  this.a(stackIn_115_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 61, wb.field_a), var3 - 4);
+                  this.drawOutlinedLabel(stackIn_115_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 61, wb.field_a), var3 - 4);
                 }
                 if (AccountCreationForm.field_T >= 150 &&
                   AccountCreationForm.field_T < 200) {
                   var11 = GameGraphicsResources.wizardFont2.stringWidth(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, RasterSnapshot.field_m));
-                  var12 = var2 + ve.wizardSprites[this.field_n].fullWidth / 2;
+                  var12 = var2 + ve.wizardSprites[this.animationFrame].fullWidth / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
                   }
@@ -798,16 +798,16 @@ final class eg extends qh {
                   } else {
                     stackIn_125_1 = 16776960;
                   }
-                  this.a(stackIn_125_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 46, RasterSnapshot.field_m), -4 + var3);
+                  this.drawOutlinedLabel(stackIn_125_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 46, RasterSnapshot.field_m), -4 + var3);
                 }
               }
               if (DiskCacheWorker.field_e > 0 &&
                 7 > DiskCacheWorker.field_e % 10 &&
                 1 < DiskCacheWorker.field_e % 10) {
                 if (this.field_h != -1) {
-                  ve.wizardSprites[this.field_n].flipHorizontal().drawSilhouette(var2, var3, 16777215);
+                  ve.wizardSprites[this.animationFrame].flipHorizontal().drawSilhouette(var2, var3, 16777215);
                 } else {
-                  ve.wizardSprites[this.field_n].drawSilhouette(var2, var3, 16777215);
+                  ve.wizardSprites[this.animationFrame].drawSilhouette(var2, var3, 16777215);
                 }
               }
               if (120 > fi.field_x) {
@@ -819,7 +819,7 @@ final class eg extends qh {
                   if (100 < fi.field_x) {
                     var14 = var14 + (10 - Math.abs(-110 + fi.field_x));
                   }
-                  ob.field_c.drawScaledAlpha(-6 + var2 + (int)(Math.cos(var11_double) * (double)var14 + 32.0), -6 + ((int)(32.0 + Math.sin(var11_double) * (double)var14) + var3), 12, 12, var4);
+                  GridPoint.field_c.drawScaledAlpha(-6 + var2 + (int)(Math.cos(var11_double) * (double)var14 + 32.0), -6 + ((int)(32.0 + Math.sin(var11_double) * (double)var14) + var3), 12, 12, var4);
                 }
               }
             }
@@ -830,12 +830,12 @@ final class eg extends qh {
     private final void c(int param0) {
         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[10], 100, ee.field_p * 256 / 100);
         if (param0 != 1) {
-          tg var3 = (tg) null;
-          this.a(-123, (byte) -40, (tg) null, true);
+          LevelData var3 = (LevelData) null;
+          this.a(-123, (byte) -40, (LevelData) null, true);
         }
     }
 
-    private final boolean a(boolean param0, tg param1, int param2) {
+    private final boolean a(boolean param0, LevelData param1, int param2) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -843,7 +843,7 @@ final class eg extends qh {
         RuntimeException var4 = null;
         try {
           this.field_z = this.field_z + 1;
-          this.field_n = param2;
+          this.animationFrame = param2;
           if (this.field_s > 0 &&
             !param0) {
             this.field_s = this.field_s - 1;
@@ -860,12 +860,12 @@ final class eg extends qh {
               }
             }
             if (0 >= this.field_p) {
-              this.field_e = 60;
+              this.verticalVelocity = 60;
             }
           }
           if (!param0) {
             if (this.field_z > 35) {
-              this.field_n = 26;
+              this.animationFrame = 26;
             }
             if (this.field_z > 50) {
               this.field_x = 0;
@@ -877,13 +877,13 @@ final class eg extends qh {
             return true;
           }
           if (this.field_z > 15) {
-            this.field_n = 26;
+            this.animationFrame = 26;
           }
           if (this.field_z > 30) {
-            this.field_n = 27;
+            this.animationFrame = 27;
           }
           if (this.field_z > 40) {
-            this.field_n = 28;
+            this.animationFrame = 28;
           }
           if (this.field_z > 50) {
             this.field_z = 0;
@@ -903,11 +903,11 @@ final class eg extends qh {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(int param0, byte param1, tg param2, boolean param3) {
+    private final void a(int param0, byte param1, LevelData param2, boolean param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
@@ -916,25 +916,25 @@ final class eg extends qh {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ob var7 = null;
-        ob var8 = null;
+        GridPoint var7 = null;
+        GridPoint var8 = null;
         var6 = wizardrun.field_H;
         try {
-          if (0 <= this.field_e) {
-            this.field_e = this.field_e + 3;
-            var7 = new ob(this.field_i);
+          if (0 <= this.verticalVelocity) {
+            this.verticalVelocity = this.verticalVelocity + 3;
+            var7 = new GridPoint(this.tilePosition);
             var8 = var7;
-            var8.field_a = var8.field_a + 1;
-            if (param2.field_f[var7.a((byte) -68)] == 1 ||
-              !(var8.field_a < 14)) {
-              this.field_e = -Math.abs(this.field_e);
+            var8.row = var8.row + 1;
+            if (param2.field_f[var7.toTileIndex((byte) -68)] == 1 ||
+              !(var8.row < 14)) {
+              this.verticalVelocity = -Math.abs(this.verticalVelocity);
             }
-            if (this.field_e > 20) {
-              this.field_e = 5;
+            if (this.verticalVelocity > 20) {
+              this.verticalVelocity = 5;
             }
           } else {
-            if (this.field_e < -20) {
-              this.field_e = -5;
+            if (this.verticalVelocity < -20) {
+              this.verticalVelocity = -5;
             }
           }
           var5_int = 64 % ((param1 - 58) / 56);
@@ -946,23 +946,23 @@ final class eg extends qh {
             if (1 < this.field_o) {
               this.field_o = 0;
             }
-            this.field_n = this.field_n + 1;
+            this.animationFrame = this.animationFrame + 1;
             if (param3) {
               this.field_z = 5;
-              if (9 < this.field_n) {
-                this.field_n = 2;
+              if (9 < this.animationFrame) {
+                this.animationFrame = 2;
               }
             } else {
-              if (5 < this.field_n) {
-                this.field_n = 2;
+              if (5 < this.animationFrame) {
+                this.animationFrame = 2;
               }
             }
-            if (this.field_n < 2) {
-              this.field_n = 2;
+            if (this.animationFrame < 2) {
+              this.animationFrame = 2;
             }
           }
-          if (this.field_e == 0) {
-            this.field_e = 20;
+          if (this.verticalVelocity == 0) {
+            this.verticalVelocity = 20;
           }
           this.a(1, BufferedRandomAccessFile.soundEffects, param2, 1, param0, 1, tl.field_a, pk.field_s, (byte) 127);
           if (this.field_s > 0 &&
@@ -980,7 +980,7 @@ final class eg extends qh {
               }
             }
             if (this.field_p <= 0) {
-              this.field_e = 60;
+              this.verticalVelocity = 60;
               return;
             }
           }
@@ -995,12 +995,12 @@ final class eg extends qh {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final void a(int param0, tg param1) {
-        this.field_e = this.field_e + 1;
+    private final void a(int param0, LevelData param1) {
+        this.verticalVelocity = this.verticalVelocity + 1;
         this.field_w = this.field_w + 1;
         if (this.field_w > 1000) {
           this.field_w = 0;
@@ -1011,13 +1011,13 @@ final class eg extends qh {
         }
         this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) -57);
         if (1 == this.b(param1, -4) &&
-          this.field_f.field_a == 0) {
-          this.field_e = 20;
+          this.tileOffset.row == 0) {
+          this.verticalVelocity = 20;
           if (pk.field_s) {
             tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[2], 100, ee.field_p * 64 / 100);
           }
         }
-        this.field_n = 31;
+        this.animationFrame = 31;
         this.field_o = 7;
         if (param0 <= 13) {
           return;
@@ -1025,28 +1025,28 @@ final class eg extends qh {
         try {
           this.b(5);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "eg.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "eg.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void e(boolean param0) {
-        ob var2;
-        ob var3;
-        ob var4;
+        GridPoint var2;
+        GridPoint var3;
+        GridPoint var4;
         if (param0) {
           return;
         }
         if (0 == ii.field_e[0].field_s &&
           this.field_q != null &&
           ii.field_e[0].field_q != null) {
-          var4 = new ob();
+          var4 = new GridPoint();
           var2 = var4;
-          var3 = new ob();
-          var2.field_b = this.field_y;
-          var4.field_a = this.field_A;
-          var3.field_b = ii.field_e[0].field_y;
-          var3.field_a = ii.field_e[0].field_A;
-          if (j.a(this.field_q, var2.field_b, var4.field_a, ii.field_e[0].field_q, var3.field_b, var3.field_a)) {
+          var3 = new GridPoint();
+          var2.column = this.field_y;
+          var4.row = this.field_A;
+          var3.column = ii.field_e[0].field_y;
+          var3.row = ii.field_e[0].field_A;
+          if (SpriteCollision.overlapsOpaquePixels(this.field_q, var2.column, var4.row, ii.field_e[0].field_q, var3.column, var3.row)) {
             ii.field_e[0].field_s = 1;
           }
         }
@@ -1055,92 +1055,92 @@ final class eg extends qh {
     private final void c(boolean param0) {
         String var3;
         ol.field_e = true;
-        if (3 == this.field_B) {
+        if (3 == this.actorType) {
           tl.field_a.addSample(SpriteState.secondarySoundEffects[3], 100, ee.field_p * 256 / 100);
         } else {
-          if (this.field_B == 4) {
+          if (this.actorType == 4) {
             tl.field_a.addSample(SpriteState.secondarySoundEffects[4], 100, ee.field_p * 256 / 100);
           } else {
-            if (5 == this.field_B) {
+            if (5 == this.actorType) {
               tl.field_a.addSample(SpriteState.secondarySoundEffects[5], 100, ee.field_p * 256 / 100);
             } else {
-              if (this.field_B == 6) {
+              if (this.actorType == 6) {
                 tl.field_a.addSample(SpriteState.secondarySoundEffects[7], 100, ee.field_p * 256 / 100);
               } else {
-                if (this.field_B == 8) {
+                if (this.actorType == 8) {
                   tl.field_a.addSample(SpriteState.secondarySoundEffects[8], 100, 256 * ee.field_p / 100);
                 } else {
-                  if (this.field_B == 7) {
+                  if (this.actorType == 7) {
                     tl.field_a.addSample(SpriteState.secondarySoundEffects[9], 100, 256 * ee.field_p / 100);
                   } else {
-                    if (this.field_B == 9) {
+                    if (this.actorType == 9) {
                       tl.field_a.addSample(SpriteState.secondarySoundEffects[10], 100, 256 * ee.field_p / 100);
                     } else {
-                      if (this.field_B == 10) {
+                      if (this.actorType == 10) {
                         tl.field_a.addSample(SpriteState.secondarySoundEffects[11], 100, 256 * ee.field_p / 100);
                       } else {
-                        if (this.field_B == 12) {
+                        if (this.actorType == 12) {
                           tl.field_a.addSample(SpriteState.secondarySoundEffects[13], 100, ee.field_p * 256 / 100);
                         } else {
-                          if (this.field_B == 14) {
+                          if (this.actorType == 14) {
                             tl.field_a.addSample(SpriteState.secondarySoundEffects[14], 100, ee.field_p * 256 / 100);
                           } else {
-                            if (this.field_B == 13) {
+                            if (this.actorType == 13) {
                               tl.field_a.addSample(SpriteState.secondarySoundEffects[15], 100, 256 * ee.field_p / 100);
                             } else {
-                              if (this.field_B == 15) {
+                              if (this.actorType == 15) {
                                 tl.field_a.addSample(SpriteState.secondarySoundEffects[16], 100, 256 * ee.field_p / 100);
                               } else {
-                                if (this.field_B == 16) {
+                                if (this.actorType == 16) {
                                   tl.field_a.addSample(SpriteState.secondarySoundEffects[19], 100, ee.field_p * 256 / 100);
                                 } else {
-                                  if (this.field_B == 17) {
+                                  if (this.actorType == 17) {
                                     tl.field_a.addSample(SpriteState.secondarySoundEffects[21], 100, 256 * ee.field_p / 100);
                                   } else {
-                                    if (22 == this.field_B) {
+                                    if (22 == this.actorType) {
                                       tl.field_a.addSample(SpriteState.secondarySoundEffects[22], 100, ee.field_p * 256 / 100);
                                     } else {
-                                      if (this.field_B == 24) {
+                                      if (this.actorType == 24) {
                                         tl.field_a.addSample(SpriteState.secondarySoundEffects[23], 100, 256 * ee.field_p / 100);
                                       } else {
-                                        if (this.field_B == 23) {
+                                        if (this.actorType == 23) {
                                           tl.field_a.addSample(SpriteState.secondarySoundEffects[24], 100, ee.field_p * 256 / 100);
                                         } else {
-                                          if (26 == this.field_B) {
+                                          if (26 == this.actorType) {
                                             tl.field_a.addSample(SpriteState.secondarySoundEffects[26], 100, ee.field_p * 256 / 100);
                                           } else {
-                                            if (this.field_B == 29) {
+                                            if (this.actorType == 29) {
                                               tl.field_a.addSample(SpriteState.secondarySoundEffects[27], 100, 256 * ee.field_p / 100);
                                             } else {
-                                              if (31 == this.field_B) {
+                                              if (31 == this.actorType) {
                                                 tl.field_a.addSample(SpriteState.secondarySoundEffects[28], 100, ee.field_p * 256 / 100);
                                               } else {
-                                                if (30 == this.field_B) {
+                                                if (30 == this.actorType) {
                                                   tl.field_a.addSample(SpriteState.secondarySoundEffects[29], 100, 256 * ee.field_p / 100);
                                                 } else {
-                                                  if (this.field_B == 32) {
+                                                  if (this.actorType == 32) {
                                                     tl.field_a.addSample(SpriteState.secondarySoundEffects[30], 100, 256 * ee.field_p / 100);
                                                   } else {
-                                                    if (this.field_B == 33) {
+                                                    if (this.actorType == 33) {
                                                       tl.field_a.addSample(SpriteState.secondarySoundEffects[31], 100, 256 * ee.field_p / 100);
                                                     } else {
-                                                      if (this.field_B == 36) {
+                                                      if (this.actorType == 36) {
                                                         tl.field_a.addSample(SpriteState.secondarySoundEffects[32], 100, 256 * ee.field_p / 100);
                                                       } else {
                                                         if (param0) {
                                                           var3 = (String) null;
-                                                          this.a(-17, 111, false, (String) null, 55);
+                                                          this.drawOutlinedLabel(-17, 111, false, (String) null, 55);
                                                         }
-                                                        if (this.field_B == 38) {
+                                                        if (this.actorType == 38) {
                                                           tl.field_a.addSample(SpriteState.secondarySoundEffects[33], 100, ee.field_p * 256 / 100);
                                                         } else {
-                                                          if (this.field_B == 37) {
+                                                          if (this.actorType == 37) {
                                                             tl.field_a.addSample(SpriteState.secondarySoundEffects[34], 100, ee.field_p * 256 / 100);
                                                           } else {
-                                                            if (39 == this.field_B) {
+                                                            if (39 == this.actorType) {
                                                               tl.field_a.addSample(SpriteState.secondarySoundEffects[35], 100, ee.field_p * 256 / 100);
                                                             } else {
-                                                              if (this.field_B == 40) {
+                                                              if (this.actorType == 40) {
                                                                 tl.field_a.addSample(SpriteState.secondarySoundEffects[37], 100, 256 * ee.field_p / 100);
                                                               } else {
                                                                 tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[9], 100, ee.field_p * 256 / 100);
@@ -1174,40 +1174,40 @@ final class eg extends qh {
         }
     }
 
-    final void a(byte param0, tg param1) {
+    final void updateActor(byte param0, LevelData param1) {
         int fieldTemp$0 = 0;
-        ob dupTemp$1 = null;
-        ob dupTemp$2 = null;
-        ob dupTemp$3 = null;
-        ob dupTemp$4 = null;
-        ob dupTemp$5 = null;
-        ob dupTemp$6 = null;
-        ob dupTemp$7 = null;
-        ob dupTemp$8 = null;
-        ob dupTemp$9 = null;
-        ob dupTemp$10 = null;
-        ob dupTemp$11 = null;
-        ob dupTemp$12 = null;
-        ob dupTemp$13 = null;
-        eg dupTemp$14 = null;
-        eg dupTemp$15 = null;
+        GridPoint dupTemp$1 = null;
+        GridPoint dupTemp$2 = null;
+        GridPoint dupTemp$3 = null;
+        GridPoint dupTemp$4 = null;
+        GridPoint dupTemp$5 = null;
+        GridPoint dupTemp$6 = null;
+        GridPoint dupTemp$7 = null;
+        GridPoint dupTemp$8 = null;
+        GridPoint dupTemp$9 = null;
+        GridPoint dupTemp$10 = null;
+        GridPoint dupTemp$11 = null;
+        GridPoint dupTemp$12 = null;
+        GridPoint dupTemp$13 = null;
+        PlatformActor dupTemp$14 = null;
+        PlatformActor dupTemp$15 = null;
         int fieldTemp$75 = 0;
         int fieldTemp$16 = 0;
         int fieldTemp$69 = 0;
         int fieldTemp$70 = 0;
-        ob dupTemp$71 = null;
-        ob dupTemp$72 = null;
+        GridPoint dupTemp$71 = null;
+        GridPoint dupTemp$72 = null;
         int fieldTemp$17 = 0;
         int fieldTemp$18 = 0;
         int fieldTemp$67 = 0;
         int fieldTemp$68 = 0;
         int fieldTemp$19 = 0;
-        ob dupTemp$20 = null;
-        ob dupTemp$21 = null;
+        GridPoint dupTemp$20 = null;
+        GridPoint dupTemp$21 = null;
         int fieldTemp$22 = 0;
         int fieldTemp$23 = 0;
-        ob dupTemp$24 = null;
-        ob dupTemp$25 = null;
+        GridPoint dupTemp$24 = null;
+        GridPoint dupTemp$25 = null;
         int fieldTemp$26 = 0;
         int fieldTemp$27 = 0;
         int fieldTemp$28 = 0;
@@ -1215,23 +1215,23 @@ final class eg extends qh {
         int fieldTemp$66 = 0;
         int fieldTemp$60 = 0;
         int fieldTemp$61 = 0;
-        ob dupTemp$62 = null;
-        ob dupTemp$63 = null;
+        GridPoint dupTemp$62 = null;
+        GridPoint dupTemp$63 = null;
         int fieldTemp$56 = 0;
         int fieldTemp$57 = 0;
-        ob dupTemp$58 = null;
-        ob dupTemp$59 = null;
+        GridPoint dupTemp$58 = null;
+        GridPoint dupTemp$59 = null;
         int fieldTemp$30 = 0;
         int fieldTemp$31 = 0;
-        ob dupTemp$32 = null;
-        ob dupTemp$33 = null;
+        GridPoint dupTemp$32 = null;
+        GridPoint dupTemp$33 = null;
         int fieldTemp$34 = 0;
         int fieldTemp$35 = 0;
-        ob dupTemp$36 = null;
-        ob dupTemp$37 = null;
+        GridPoint dupTemp$36 = null;
+        GridPoint dupTemp$37 = null;
         int fieldTemp$55 = 0;
-        ob dupTemp$53 = null;
-        ob dupTemp$54 = null;
+        GridPoint dupTemp$53 = null;
+        GridPoint dupTemp$54 = null;
         int fieldTemp$38 = 0;
         int fieldTemp$39 = 0;
         int fieldTemp$51 = 0;
@@ -1239,13 +1239,13 @@ final class eg extends qh {
         int fieldTemp$49 = 0;
         int fieldTemp$50 = 0;
         int fieldTemp$40 = 0;
-        ob dupTemp$41 = null;
-        ob dupTemp$42 = null;
+        GridPoint dupTemp$41 = null;
+        GridPoint dupTemp$42 = null;
         int fieldTemp$43 = 0;
         int fieldTemp$44 = 0;
         int fieldTemp$45 = 0;
-        ob dupTemp$46 = null;
-        ob dupTemp$47 = null;
+        GridPoint dupTemp$46 = null;
+        GridPoint dupTemp$47 = null;
         int fieldTemp$48 = 0;
         int fieldTemp$64 = 0;
         int fieldTemp$65 = 0;
@@ -1302,23 +1302,23 @@ final class eg extends qh {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        eg var4_ref_eg = null;
+        PlatformActor var4_ref_eg = null;
         int var7 = 0;
-        ob var8 = null;
-        ob var9 = null;
-        ob var10 = null;
-        ob var11 = null;
+        GridPoint var8 = null;
+        GridPoint var9 = null;
+        GridPoint var10 = null;
+        GridPoint var11 = null;
         var7 = wizardrun.field_H;
         try {
-          if (17 < this.field_i.field_a) {
-            this.field_i.field_a = -2;
+          if (17 < this.tilePosition.row) {
+            this.tilePosition.row = -2;
           }
-          if (this.field_i.field_a < -2) {
-            this.field_i.field_a = 17;
+          if (this.tilePosition.row < -2) {
+            this.tilePosition.row = 17;
           }
           regionExit1: {
             var3_int = 15;
-            var4 = this.field_B;
+            var4 = this.actorType;
             if (var4 == 0) {
               if (DiskCacheWorker.field_e > 0) {
                 DiskCacheWorker.field_e = DiskCacheWorker.field_e - 1;
@@ -1335,25 +1335,25 @@ final class eg extends qh {
                   this.field_h = -1;
                 }
                 if (sc.field_m.field_f &&
-                  0 == this.field_f.field_a &&
+                  0 == this.tileOffset.row &&
                   this.b(param1, param0 + 119) == 1) {
-                  this.field_e = 70;
+                  this.verticalVelocity = 70;
                   if (pk.field_s) {
                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[3], 100, ee.field_p * 256 / 100);
                   }
                 }
-                this.field_f.field_b = this.field_f.field_b + 120;
+                this.tileOffset.column = this.tileOffset.column + 120;
                 this.field_d = this.field_d / 2;
-                this.a((byte) 114);
+                this.wrapHorizontalPosition((byte) 114);
                 if (0 != var3_int) {
                   this.field_w = this.field_w - 1;
                   fieldTemp$0 = this.field_z;
                   this.field_z = this.field_z - 1;
                   if (0 > fieldTemp$0) {
                     this.field_z = 5;
-                    this.field_n = this.field_n + 1;
-                    if (this.field_n > 3) {
-                      this.field_n = 0;
+                    this.animationFrame = this.animationFrame + 1;
+                    if (this.animationFrame > 3) {
+                      this.animationFrame = 0;
                     }
                   }
                   if (0 > this.field_w) {
@@ -1367,33 +1367,33 @@ final class eg extends qh {
                 } else {
                   this.field_o = 0;
                   this.field_z = 0;
-                  this.field_n = 1;
+                  this.animationFrame = 1;
                 }
-                if (!(0 >= this.field_f.field_a) ||
+                if (!(0 >= this.tileOffset.row) ||
                   this.b(param1, param0 ^ 121) == 0) {
-                  if (this.field_e > 0) {
-                    this.field_n = 9;
+                  if (this.verticalVelocity > 0) {
+                    this.animationFrame = 9;
                   }
-                  if (this.field_e > 30) {
-                    this.field_n = 8;
+                  if (this.verticalVelocity > 30) {
+                    this.animationFrame = 8;
                   }
-                  if (this.field_e > 50) {
-                    this.field_n = 7;
+                  if (this.verticalVelocity > 50) {
+                    this.animationFrame = 7;
                   }
-                  if (0 >= this.field_e) {
-                    this.field_n = 10;
+                  if (0 >= this.verticalVelocity) {
+                    this.animationFrame = 10;
                   }
                 }
                 if (0 < ValidatedTextField.field_V) {
-                  this.field_n = 4;
+                  this.animationFrame = 4;
                   ValidatedTextField.field_V = ValidatedTextField.field_V - 1;
                   if (ValidatedTextField.field_V < 15) {
-                    this.field_n = 5;
+                    this.animationFrame = 5;
                   }
                 }
                 if (!sc.field_m.field_f &&
-                  10 < this.field_e) {
-                  this.field_e = this.field_e - 4;
+                  10 < this.verticalVelocity) {
+                  this.verticalVelocity = this.verticalVelocity - 4;
                 }
                 this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, var3_int, 1, tl.field_a, pk.field_s, (byte) -104);
                 if (!sc.field_m.field_d) {
@@ -1402,13 +1402,13 @@ final class eg extends qh {
                       10 > fi.field_x) {
                       ValidatedTextField.field_V = 25;
                       fi.field_x = 0;
-                      ii.field_e[WidgetTheme.field_k].a(9147, 1, this.field_i);
-                      ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ 42, this.field_f);
-                      dupTemp$1 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$1.field_a = dupTemp$1.field_a + 140;
+                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, this.tilePosition);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ 42, this.tileOffset);
+                      dupTemp$1 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$1.row = dupTemp$1.row + 140;
                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
-                      dupTemp$2 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$2.field_b = dupTemp$2.field_b + 40;
+                      dupTemp$2 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$2.column = dupTemp$2.column + 40;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       if (pk.field_s) {
                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
@@ -1421,23 +1421,23 @@ final class eg extends qh {
                       if (fi.field_x < 0) {
                         fi.field_x = 0;
                       }
-                      ii.field_e[WidgetTheme.field_k].a(9147, 1, this.field_i);
-                      ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ 21, this.field_f);
-                      dupTemp$3 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$3.field_a = dupTemp$3.field_a + 140;
+                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, this.tilePosition);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ 21, this.tileOffset);
+                      dupTemp$3 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$3.row = dupTemp$3.row + 140;
                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
-                      dupTemp$4 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$4.field_b = dupTemp$4.field_b + 40;
-                      ii.field_e[WidgetTheme.field_k].field_e = -10;
+                      dupTemp$4 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$4.column = dupTemp$4.column + 40;
+                      ii.field_e[WidgetTheme.field_k].verticalVelocity = -10;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      ii.field_e[WidgetTheme.field_k].a(param0 + 9270, 1, this.field_i);
-                      ii.field_e[WidgetTheme.field_k].field_f.a(-112, this.field_f);
-                      dupTemp$5 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$5.field_a = dupTemp$5.field_a + 140;
+                      ii.field_e[WidgetTheme.field_k].initialize(param0 + 9270, 1, this.tilePosition);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-112, this.tileOffset);
+                      dupTemp$5 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$5.row = dupTemp$5.row + 140;
                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
-                      dupTemp$6 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$6.field_b = dupTemp$6.field_b + 40;
-                      ii.field_e[WidgetTheme.field_k].field_e = 10;
+                      dupTemp$6 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$6.column = dupTemp$6.column + 40;
+                      ii.field_e[WidgetTheme.field_k].verticalVelocity = 10;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       if (pk.field_s) {
                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[23], 100, ee.field_p * 256 / 100);
@@ -1450,32 +1450,32 @@ final class eg extends qh {
                       if (fi.field_x < 0) {
                         fi.field_x = 0;
                       }
-                      ii.field_e[WidgetTheme.field_k].a(9147, 1, this.field_i);
-                      ii.field_e[WidgetTheme.field_k].field_f.a(-87, this.field_f);
-                      dupTemp$7 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$7.field_a = dupTemp$7.field_a + 140;
+                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, this.tilePosition);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-87, this.tileOffset);
+                      dupTemp$7 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$7.row = dupTemp$7.row + 140;
                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
-                      dupTemp$8 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$8.field_b = dupTemp$8.field_b + 40;
-                      ii.field_e[WidgetTheme.field_k].field_e = 30;
+                      dupTemp$8 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$8.column = dupTemp$8.column + 40;
+                      ii.field_e[WidgetTheme.field_k].verticalVelocity = 30;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      ii.field_e[WidgetTheme.field_k].a(9147, 1, this.field_i);
-                      ii.field_e[WidgetTheme.field_k].field_f.a(-82, this.field_f);
-                      dupTemp$9 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$9.field_a = dupTemp$9.field_a + 140;
+                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, this.tilePosition);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-82, this.tileOffset);
+                      dupTemp$9 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$9.row = dupTemp$9.row + 140;
                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
-                      dupTemp$10 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$10.field_b = dupTemp$10.field_b + 40;
-                      ii.field_e[WidgetTheme.field_k].field_e = 0;
+                      dupTemp$10 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$10.column = dupTemp$10.column + 40;
+                      ii.field_e[WidgetTheme.field_k].verticalVelocity = 0;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      ii.field_e[WidgetTheme.field_k].a(9147, 1, this.field_i);
-                      ii.field_e[WidgetTheme.field_k].field_f.a(-97, this.field_f);
-                      dupTemp$11 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$11.field_a = dupTemp$11.field_a + 140;
+                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, this.tilePosition);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-97, this.tileOffset);
+                      dupTemp$11 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$11.row = dupTemp$11.row + 140;
                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
-                      dupTemp$12 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$12.field_b = dupTemp$12.field_b + 40;
-                      ii.field_e[WidgetTheme.field_k].field_e = -30;
+                      dupTemp$12 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$12.column = dupTemp$12.column + 40;
+                      ii.field_e[WidgetTheme.field_k].verticalVelocity = -30;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       if (pk.field_s) {
                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[24], 100, ee.field_p * 256 / 100);
@@ -1483,21 +1483,21 @@ final class eg extends qh {
                     }
                     if (fi.field_x < 100) {
                       this.field_d = this.field_d * 2;
-                      this.field_f.field_b = this.field_f.field_b - 120;
-                      this.a((byte) 83);
+                      this.tileOffset.column = this.tileOffset.column - 120;
+                      this.wrapHorizontalPosition((byte) 83);
                       break regionExit1;
                     }
                     fi.field_x = 0;
                     ValidatedTextField.field_V = 25;
-                    if (this.field_e >= 0) {
-                      this.field_e = this.field_e - 10;
+                    if (this.verticalVelocity >= 0) {
+                      this.verticalVelocity = this.verticalVelocity - 10;
                     }
-                    ii.field_e[WidgetTheme.field_k].a(9147, 2, this.field_i);
-                    ii.field_e[WidgetTheme.field_k].field_f.a(-83, this.field_f);
+                    ii.field_e[WidgetTheme.field_k].initialize(9147, 2, this.tilePosition);
+                    ii.field_e[WidgetTheme.field_k].tileOffset.set(-83, this.tileOffset);
                     ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
-                    dupTemp$13 = ii.field_e[WidgetTheme.field_k].field_f;
-                    dupTemp$13.field_b = dupTemp$13.field_b + 60 * this.field_h;
-                    ii.field_e[WidgetTheme.field_k].field_e = 5 * (fi.field_x / 10);
+                    dupTemp$13 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                    dupTemp$13.column = dupTemp$13.column + 60 * this.field_h;
+                    ii.field_e[WidgetTheme.field_k].verticalVelocity = 5 * (fi.field_x / 10);
                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
                     stackIn_183_0 = !(pk.field_s);
                     if (!stackIn_183_0) {
@@ -1517,13 +1517,13 @@ final class eg extends qh {
                   }
                 }
                 this.field_d = this.field_d * 2;
-                this.field_f.field_b = this.field_f.field_b - 120;
-                this.a((byte) 83);
+                this.tileOffset.column = this.tileOffset.column - 120;
+                this.wrapHorizontalPosition((byte) 83);
               } else {
-                this.field_n = Math.abs(this.field_e) / 10 % 2 + 12;
+                this.animationFrame = Math.abs(this.verticalVelocity) / 10 % 2 + 12;
                 fi.field_x = 0;
                 if (this.field_s == 1) {
-                  this.field_e = -40;
+                  this.verticalVelocity = -40;
                   this.field_s = 2;
                   stackIn_83_0 = 0;
                   if (pk.field_s) {
@@ -1535,34 +1535,34 @@ final class eg extends qh {
                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[8], 100, ee.field_p * 256 / 100);
                   }
                 }
-                this.field_e = this.field_e + 1;
+                this.verticalVelocity = this.verticalVelocity + 1;
                 this.field_o = 1;
-                this.field_f.field_a = this.field_f.field_a - this.field_e;
-                if (this.field_e > 0) {
+                this.tileOffset.row = this.tileOffset.row - this.verticalVelocity;
+                if (this.verticalVelocity > 0) {
                   this.field_o = 2;
                 }
-                if (this.field_f.field_a < 0) {
-                  this.field_f.field_a = this.field_f.field_a + 240;
-                  this.field_i.field_a = this.field_i.field_a - 1;
+                if (this.tileOffset.row < 0) {
+                  this.tileOffset.row = this.tileOffset.row + 240;
+                  this.tilePosition.row = this.tilePosition.row - 1;
                 }
-                if (this.field_i.field_a < -2) {
-                  this.field_i.field_a = 2;
-                  this.field_i.field_b = 2;
-                  if (4 == qh.field_l &&
+                if (this.tilePosition.row < -2) {
+                  this.tilePosition.row = 2;
+                  this.tilePosition.column = 2;
+                  if (4 == GridActor.field_l &&
                     ql.field_c == 5) {
-                    this.field_i.field_b = this.field_i.field_b + 1;
+                    this.tilePosition.column = this.tilePosition.column + 1;
                   }
                   DelegatingCanvas.field_b = true;
                   DiskCacheWorker.field_e = 100;
-                  this.field_f.field_a = 0;
+                  this.tileOffset.row = 0;
                   this.field_s = 0;
                   GameApplet.field_g = true;
-                  qh.field_g = qh.field_g - 1;
+                  GridActor.field_g = GridActor.field_g - 1;
                   BufferedSocket.field_c = BufferedSocket.field_c + 1;
                   this.field_h = 1;
-                  this.field_e = 0;
-                  this.field_f.field_b = 0;
-                  if (qh.field_g < 0) {
+                  this.verticalVelocity = 0;
+                  this.tileOffset.column = 0;
+                  if (GridActor.field_g < 0) {
                     bb.field_j = me.field_b;
                     BufferedSocket.field_a = 580;
                   }
@@ -1570,12 +1570,12 @@ final class eg extends qh {
               }
             } else {
               if (var4 == 1) {
-                if (this.field_e <= 0 &&
+                if (this.verticalVelocity <= 0 &&
                   1 == this.b(param1, param0 + 119) &&
-                  0 == this.field_f.field_a) {
-                  this.field_e = 30;
-                  if (this.field_i.field_b >= 0 &&
-                    this.field_i.field_b < 20) {
+                  0 == this.tileOffset.row) {
+                  this.verticalVelocity = 30;
+                  if (this.tilePosition.column >= 0 &&
+                    this.tilePosition.column < 20) {
                     stackIn_195_0 = (pk.field_s) ? 0 : 1;
                     if (stackIn_195_0 != 1) {
                       tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[1], 100, ee.field_p * 128 / 100);
@@ -1591,20 +1591,20 @@ final class eg extends qh {
                         ii.field_e[var4].field_r == 0 &&
                         null != ii.field_e[var4].field_q &&
                         this.field_q != null) {
-                        var8 = new ob();
-                        var9 = new ob();
-                        var8.field_b = this.field_y;
-                        var8.field_a = this.field_A;
-                        var9.field_b = ii.field_e[var4].field_y;
-                        var9.field_a = ii.field_e[var4].field_A;
-                        if (j.a(this.field_q, var8.field_b, var8.field_a, ii.field_e[var4].field_q, var9.field_b, var9.field_a)) {
+                        var8 = new GridPoint();
+                        var9 = new GridPoint();
+                        var8.column = this.field_y;
+                        var8.row = this.field_A;
+                        var9.column = ii.field_e[var4].field_y;
+                        var9.row = ii.field_e[var4].field_A;
+                        if (SpriteCollision.overlapsOpaquePixels(this.field_q, var8.column, var8.row, ii.field_e[var4].field_q, var9.column, var9.row)) {
                           dupTemp$14 = ii.field_e[var4];
                           dupTemp$14.field_s = dupTemp$14.field_s + 1;
                           if (pk.field_s) {
                             tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[10], 100, 256 * ee.field_p / 100);
                           }
                           ii.field_e[var4].field_m = this.field_h;
-                          this.field_B = 20;
+                          this.actorType = 20;
                           this.field_w = 4;
                         }
                       }
@@ -1620,33 +1620,33 @@ final class eg extends qh {
               } else {
                 if (var4 == 2) {
                   this.field_w = this.field_w + 1;
-                  this.field_e = 2;
+                  this.verticalVelocity = 2;
                   if (this.field_w < 10) {
-                    this.field_i.field_a = this.field_i.field_a - 1;
-                    if (param1.field_d[this.field_i.a((byte) -68)]) {
-                      param1.field_d[this.field_i.a((byte) -68)] = false;
-                      ii.field_e[WidgetTheme.field_k].a(9147, 21, new ob(this.field_i));
+                    this.tilePosition.row = this.tilePosition.row - 1;
+                    if (param1.field_d[this.tilePosition.toTileIndex((byte) -68)]) {
+                      param1.field_d[this.tilePosition.toTileIndex((byte) -68)] = false;
+                      ii.field_e[WidgetTheme.field_k].initialize(9147, 21, new GridPoint(this.tilePosition));
                       var4_ref_eg = ii.field_e[WidgetTheme.field_k];
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      var4_ref_eg.field_f.a(-117, this.field_f);
+                      var4_ref_eg.tileOffset.set(-117, this.tileOffset);
                       var4_ref_eg.field_o = 0;
-                      var4_ref_eg.field_e = 4;
-                      var4_ref_eg.field_i.field_a = var4_ref_eg.field_i.field_a + 2;
+                      var4_ref_eg.verticalVelocity = 4;
+                      var4_ref_eg.tilePosition.row = var4_ref_eg.tilePosition.row + 2;
                       var4_ref_eg.field_h = this.field_h;
                     }
-                    this.field_i.field_a = this.field_i.field_a + 1;
+                    this.tilePosition.row = this.tilePosition.row + 1;
                     this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 29);
                     for (var4 = 0; var4 < WidgetTheme.field_k; var4++) {
                       if (ii.field_e[var4].field_p > 0 &&
                         this.field_q != null &&
                         null != ii.field_e[var4].field_q) {
-                        var10 = new ob();
-                        var11 = new ob();
-                        var10.field_a = this.field_A;
-                        var10.field_b = this.field_y;
-                        var11.field_b = ii.field_e[var4].field_y;
-                        var11.field_a = ii.field_e[var4].field_A;
-                        if (j.a(this.field_q, var10.field_b, var10.field_a, ii.field_e[var4].field_q, var11.field_b, var11.field_a)) {
+                        var10 = new GridPoint();
+                        var11 = new GridPoint();
+                        var10.row = this.field_A;
+                        var10.column = this.field_y;
+                        var11.column = ii.field_e[var4].field_y;
+                        var11.row = ii.field_e[var4].field_A;
+                        if (SpriteCollision.overlapsOpaquePixels(this.field_q, var10.column, var10.row, ii.field_e[var4].field_q, var11.column, var11.row)) {
                           if (ii.field_e[var4].field_d <= 64 &&
                             ii.field_e[var4].field_p <= 10) {
                             ii.field_e[var4].field_m = this.field_h;
@@ -1673,7 +1673,7 @@ final class eg extends qh {
                             if (!(ii.field_e[var4].field_p < 10) ||
                               !(ii.field_e[var4].field_d <= 64)) {
                               this.field_w = 4;
-                              this.field_B = 20;
+                              this.actorType = 20;
                             }
                           }
                         }
@@ -1700,18 +1700,18 @@ final class eg extends qh {
                             this.a(77, param1);
                           } else {
                             if (this.field_x == 0) {
-                              this.field_n = 19;
+                              this.animationFrame = 19;
                               if (15 < this.field_w) {
-                                this.field_n = 22;
+                                this.animationFrame = 22;
                               }
                               fieldTemp$75 = this.field_w;
                               this.field_w = this.field_w + 1;
                               if (fieldTemp$75 > 25) {
                                 this.field_x = 2;
-                                this.field_e = 85;
+                                this.verticalVelocity = 85;
                                 this.field_w = 0;
-                                if (this.field_i.field_a >= ii.field_e[0].field_i.field_a) {
-                                  this.field_e = 60;
+                                if (this.tilePosition.row >= ii.field_e[0].tilePosition.row) {
+                                  this.verticalVelocity = 60;
                                 }
                               }
                             }
@@ -1734,13 +1734,13 @@ final class eg extends qh {
                             this.field_z = this.field_z - 1;
                             if (this.field_z <= 0) {
                               this.field_z = 5;
-                              this.field_n = this.field_n + 1;
+                              this.animationFrame = this.animationFrame + 1;
                             }
-                            if (this.field_n > 1) {
-                              this.field_n = 0;
+                            if (this.animationFrame > 1) {
+                              this.animationFrame = 0;
                             }
-                            if (this.field_n < 0) {
-                              this.field_n = 0;
+                            if (this.animationFrame < 0) {
+                              this.animationFrame = 0;
                             }
                             if (this.field_s > 0) {
                               this.field_s = this.field_s - 1;
@@ -1757,28 +1757,28 @@ final class eg extends qh {
                             this.field_o = 0;
                           } else {
                             if (0 == this.field_x) {
-                              this.field_n = 19;
+                              this.animationFrame = 19;
                               if (this.field_w > 25) {
-                                this.field_n = 20;
+                                this.animationFrame = 20;
                               }
                               if (this.field_w > 40) {
-                                this.field_n = 21;
+                                this.animationFrame = 21;
                               }
                               this.field_z = 0;
                               fieldTemp$16 = this.field_w;
                               this.field_w = this.field_w + 1;
                               if (fieldTemp$16 > 50) {
                                 this.field_w = 0;
-                                this.field_e = 100;
+                                this.verticalVelocity = 100;
                                 this.field_x = 2;
-                                if (ii.field_e[0].field_i.field_a == this.field_i.field_a) {
-                                  this.field_e = 70;
+                                if (ii.field_e[0].tilePosition.row == this.tilePosition.row) {
+                                  this.verticalVelocity = 70;
                                 }
-                                if (this.field_i.field_a > ii.field_e[0].field_i.field_a) {
-                                  this.field_e = -10;
-                                  this.field_i.field_a = this.field_i.field_a - 1;
+                                if (this.tilePosition.row > ii.field_e[0].tilePosition.row) {
+                                  this.verticalVelocity = -10;
+                                  this.tilePosition.row = this.tilePosition.row - 1;
                                   this.field_x = 3;
-                                  this.field_f.field_a = this.field_f.field_a + 230;
+                                  this.tileOffset.row = this.tileOffset.row + 230;
                                 }
                               }
                             }
@@ -1799,7 +1799,7 @@ final class eg extends qh {
                                 break regionExit1;
                               }
                               this.c(false);
-                              this.field_e = 80;
+                              this.verticalVelocity = 80;
                             }
                           }
                           this.e(false);
@@ -1816,7 +1816,7 @@ final class eg extends qh {
                               this.a(114, param1);
                             } else {
                               if (0 == this.field_x) {
-                                if (this.field_i.field_a < ii.field_e[0].field_i.field_a) {
+                                if (this.tilePosition.row < ii.field_e[0].tilePosition.row) {
                                   this.field_w = this.field_w + 1;
                                 }
                                 this.a(false, 2, 20, (byte) -76, param1);
@@ -1836,10 +1836,10 @@ final class eg extends qh {
                                 this.field_w = this.field_w + 1;
                                 if (fieldTemp$70 > 25) {
                                   this.field_w = 0;
-                                  this.field_e = 70;
+                                  this.verticalVelocity = 70;
                                   this.field_x = 2;
                                 }
-                                this.field_n = 19;
+                                this.animationFrame = 19;
                               }
                               if (2 == this.field_x) {
                                 this.a(false, 22, 15, param1);
@@ -1861,12 +1861,12 @@ final class eg extends qh {
                                 if (!this.a(false, param1, param0 + 148)) {
                                   this.e(false);
                                 } else {
-                                  ii.field_e[WidgetTheme.field_k].a(param0 ^ -9154, 11, this.field_i);
-                                  ii.field_e[WidgetTheme.field_k].field_f.a(-82, this.field_f);
-                                  dupTemp$71 = ii.field_e[WidgetTheme.field_k].field_f;
-                                  dupTemp$71.field_b = dupTemp$71.field_b + (this.field_h * 120 + 40);
-                                  dupTemp$72 = ii.field_e[WidgetTheme.field_k].field_f;
-                                  dupTemp$72.field_a = dupTemp$72.field_a + 40;
+                                  ii.field_e[WidgetTheme.field_k].initialize(param0 ^ -9154, 11, this.tilePosition);
+                                  ii.field_e[WidgetTheme.field_k].tileOffset.set(-82, this.tileOffset);
+                                  dupTemp$71 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                  dupTemp$71.column = dupTemp$71.column + (this.field_h * 120 + 40);
+                                  dupTemp$72 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                  dupTemp$72.row = dupTemp$72.row + 40;
                                   ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                   ii.field_e[WidgetTheme.field_k].field_w = 10;
                                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -1883,7 +1883,7 @@ final class eg extends qh {
                           }
                         } else {
                           if (var4 == 11) {
-                            this.field_e = 2;
+                            this.verticalVelocity = 2;
                             this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 127);
                             this.e(false);
                           } else {
@@ -1895,40 +1895,40 @@ final class eg extends qh {
                                   boolean decompiledFrameRemainder0 = true;
                                   if (this.field_x == 0) {
                                     this.a(true, 3, 30, (byte) -61, param1);
-                                    if (this.field_i.field_b > 1 &&
-                                      17 > this.field_i.field_b) {
+                                    if (this.tilePosition.column > 1 &&
+                                      17 > this.tilePosition.column) {
                                       if (((this.field_z == 1)) &&
-                                        ((this.field_n == 3))) {
+                                        ((this.animationFrame == 3))) {
                                         tl.field_a.addSample(SpriteState.secondarySoundEffects[12], 100, 256 * ee.field_p / 100);
                                       }
                                       decompiledFrameRemainder0 = false;
                                     }
                                     else {
-                                      if (this.field_i.field_b >= ii.field_e[0].field_i.field_b) {
+                                      if (this.tilePosition.column >= ii.field_e[0].tilePosition.column) {
                                         this.field_h = -1;
                                       } else {
                                         this.field_h = 1;
                                       }
-                                      if (this.field_i.field_a < ii.field_e[0].field_i.field_a &&
-                                        this.field_i.field_a < 10) {
+                                      if (this.tilePosition.row < ii.field_e[0].tilePosition.row &&
+                                        this.tilePosition.row < 10) {
                                         this.field_x = 1;
                                         this.field_w = 0;
                                       }
-                                      if (ii.field_e[0].field_i.field_a < this.field_i.field_a &&
-                                        this.field_i.field_a > 2) {
+                                      if (ii.field_e[0].tilePosition.row < this.tilePosition.row &&
+                                        this.tilePosition.row > 2) {
                                         this.field_x = 3;
-                                        this.field_i.field_a = this.field_i.field_a - 1;
-                                        this.field_e = -20;
-                                        this.field_f.field_a = this.field_f.field_a + 230;
+                                        this.tilePosition.row = this.tilePosition.row - 1;
+                                        this.verticalVelocity = -20;
+                                        this.tileOffset.row = this.tileOffset.row + 230;
                                       }
                                     }
                                   }
                                   if (this.field_x == 1) {
-                                    this.field_n = 19;
+                                    this.animationFrame = 19;
                                     fieldTemp$17 = this.field_w;
                                     this.field_w = this.field_w + 1;
                                     if (fieldTemp$17 > 5) {
-                                      this.field_e = 70;
+                                      this.verticalVelocity = 70;
                                       this.field_x = 2;
                                       this.field_w = 0;
                                     }
@@ -1946,21 +1946,21 @@ final class eg extends qh {
                                   this.field_p = this.field_p - 1;
                                   this.field_s = this.field_s - 1;
                                   if (25 == this.field_p) {
-                                    ii.field_e[WidgetTheme.field_k].a(9147, 10, this.field_i);
-                                    ii.field_e[WidgetTheme.field_k].field_f.a(-108, this.field_f);
-                                    ii.field_e[WidgetTheme.field_k].field_i.field_b = 0;
-                                    ii.field_e[WidgetTheme.field_k].field_i.field_a = 16;
-                                    ii.field_e[WidgetTheme.field_k].field_f.field_b = 0;
-                                    ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                                    ii.field_e[WidgetTheme.field_k].initialize(9147, 10, this.tilePosition);
+                                    ii.field_e[WidgetTheme.field_k].tileOffset.set(-108, this.tileOffset);
+                                    ii.field_e[WidgetTheme.field_k].tilePosition.column = 0;
+                                    ii.field_e[WidgetTheme.field_k].tilePosition.row = 16;
+                                    ii.field_e[WidgetTheme.field_k].tileOffset.column = 0;
+                                    ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                                     ii.field_e[WidgetTheme.field_k].field_h = 1;
                                     ii.field_e[WidgetTheme.field_k].field_w = 10;
                                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                    ii.field_e[WidgetTheme.field_k].a(9147, 10, this.field_i);
-                                    ii.field_e[WidgetTheme.field_k].field_f.a(param0 + 19, this.field_f);
-                                    ii.field_e[WidgetTheme.field_k].field_i.field_b = 19;
-                                    ii.field_e[WidgetTheme.field_k].field_i.field_a = 16;
-                                    ii.field_e[WidgetTheme.field_k].field_f.field_b = 0;
-                                    ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                                    ii.field_e[WidgetTheme.field_k].initialize(9147, 10, this.tilePosition);
+                                    ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 + 19, this.tileOffset);
+                                    ii.field_e[WidgetTheme.field_k].tilePosition.column = 19;
+                                    ii.field_e[WidgetTheme.field_k].tilePosition.row = 16;
+                                    ii.field_e[WidgetTheme.field_k].tileOffset.column = 0;
+                                    ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                                     ii.field_e[WidgetTheme.field_k].field_h = -1;
                                     ii.field_e[WidgetTheme.field_k].field_w = 10;
                                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -1970,17 +1970,17 @@ final class eg extends qh {
                                   }
                                   if (this.field_p <= 0) {
                                     this.c(false);
-                                    this.field_e = 70;
+                                    this.verticalVelocity = 70;
                                   }
                                 } else {
                                   this.field_o = 7;
                                   fieldTemp$18 = this.field_z;
                                   this.field_z = this.field_z - 1;
                                   if (fieldTemp$18 <= 0) {
-                                    this.field_n = this.field_n + 1;
+                                    this.animationFrame = this.animationFrame + 1;
                                     this.field_z = 5;
-                                    if (this.field_n > 1) {
-                                      this.field_n = 0;
+                                    if (this.animationFrame > 1) {
+                                      this.animationFrame = 0;
                                     }
                                   }
                                   if (this.field_s > 0) {
@@ -2005,7 +2005,7 @@ final class eg extends qh {
                                     this.a(54, param1);
                                   } else {
                                     if (this.field_x == 0) {
-                                      if (this.field_i.field_a < ii.field_e[0].field_i.field_a) {
+                                      if (this.tilePosition.row < ii.field_e[0].tilePosition.row) {
                                         this.field_w = this.field_w + 1;
                                       }
                                       this.a(false, 1, 20, (byte) -66, param1);
@@ -2014,7 +2014,7 @@ final class eg extends qh {
                                       if (fieldTemp$67 > 200) {
                                         this.field_w = 0;
                                         this.field_x = 1;
-                                        if (ii.field_e[0].field_i.field_b >= this.field_i.field_b) {
+                                        if (ii.field_e[0].tilePosition.column >= this.tilePosition.column) {
                                           stackIn_507_1 = 1;
                                         } else {
                                           stackIn_507_1 = -1;
@@ -2027,10 +2027,10 @@ final class eg extends qh {
                                       this.field_w = this.field_w + 1;
                                       if (fieldTemp$68 > 25) {
                                         this.field_w = 0;
-                                        this.field_e = 70;
+                                        this.verticalVelocity = 70;
                                         this.field_x = 2;
                                       }
-                                      this.field_n = 19;
+                                      this.animationFrame = 19;
                                     }
                                     if (2 == this.field_x) {
                                       this.a(false, 22, 16, param1);
@@ -2073,12 +2073,12 @@ final class eg extends qh {
                                           break regionExit1;
                                         }
                                         this.field_w = 0;
-                                        ii.field_e[WidgetTheme.field_k].a(9147, 18, this.field_i);
-                                        ii.field_e[WidgetTheme.field_k].field_f.a(-84, this.field_f);
-                                        dupTemp$20 = ii.field_e[WidgetTheme.field_k].field_f;
-                                        dupTemp$20.field_b = dupTemp$20.field_b + (this.field_h * 200 + 120);
-                                        dupTemp$21 = ii.field_e[WidgetTheme.field_k].field_f;
-                                        dupTemp$21.field_a = dupTemp$21.field_a - 40;
+                                        ii.field_e[WidgetTheme.field_k].initialize(9147, 18, this.tilePosition);
+                                        ii.field_e[WidgetTheme.field_k].tileOffset.set(-84, this.tileOffset);
+                                        dupTemp$20 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                        dupTemp$20.column = dupTemp$20.column + (this.field_h * 200 + 120);
+                                        dupTemp$21 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                        dupTemp$21.row = dupTemp$21.row - 40;
                                         ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                         ii.field_e[WidgetTheme.field_k].field_w = 0;
                                         ii.field_e[WidgetTheme.field_k].field_o = 8;
@@ -2100,7 +2100,7 @@ final class eg extends qh {
                                         this.a(param0 + 163, param1);
                                       } else {
                                         if (this.field_x == 0) {
-                                          if (ii.field_e[0].field_i.field_a > this.field_i.field_a) {
+                                          if (ii.field_e[0].tilePosition.row > this.tilePosition.row) {
                                             this.field_w = this.field_w + 1;
                                           }
                                           this.a(false, 2, 10, (byte) -105, param1);
@@ -2109,14 +2109,14 @@ final class eg extends qh {
                                           if (fieldTemp$22 > 200) {
                                             this.field_x = 1;
                                             this.field_w = 0;
-                                            if (this.field_i.field_b > ii.field_e[0].field_i.field_b) {
+                                            if (this.tilePosition.column > ii.field_e[0].tilePosition.column) {
                                               stackIn_551_1 = 1;
                                             } else {
                                               stackIn_551_1 = -1;
                                             }
                                             this.field_h = stackIn_551_1;
                                             if (50.0 > 100.0 * Math.random()) {
-                                              if (ii.field_e[0].field_i.field_b < this.field_i.field_b) {
+                                              if (ii.field_e[0].tilePosition.column < this.tilePosition.column) {
                                                 stackIn_555_1 = -1;
                                               } else {
                                                 stackIn_555_1 = 1;
@@ -2127,11 +2127,11 @@ final class eg extends qh {
                                           }
                                         }
                                         if (this.field_x == 1) {
-                                          this.field_n = 19;
+                                          this.animationFrame = 19;
                                           fieldTemp$23 = this.field_w;
                                           this.field_w = this.field_w + 1;
                                           if (fieldTemp$23 > 25) {
-                                            this.field_e = 70;
+                                            this.verticalVelocity = 70;
                                             this.field_x = 2;
                                             this.field_w = 0;
                                           }
@@ -2150,16 +2150,16 @@ final class eg extends qh {
                                         }
                                         if (4 == this.field_x &&
                                           this.a(false, param1, param0 + 148)) {
-                                          ii.field_e[WidgetTheme.field_k].a(9147, 19, this.field_i);
-                                          ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ 13, this.field_f);
-                                          dupTemp$24 = ii.field_e[WidgetTheme.field_k].field_f;
-                                          dupTemp$24.field_b = dupTemp$24.field_b + (40 + 360 * this.field_h);
-                                          dupTemp$25 = ii.field_e[WidgetTheme.field_k].field_f;
-                                          dupTemp$25.field_a = dupTemp$25.field_a + 160;
+                                          ii.field_e[WidgetTheme.field_k].initialize(9147, 19, this.tilePosition);
+                                          ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ 13, this.tileOffset);
+                                          dupTemp$24 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                          dupTemp$24.column = dupTemp$24.column + (40 + 360 * this.field_h);
+                                          dupTemp$25 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                          dupTemp$25.row = dupTemp$25.row + 160;
                                           ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                           ii.field_e[WidgetTheme.field_k].field_w = 0;
-                                          ii.field_e[WidgetTheme.field_k].field_e = 25;
-                                          ii.field_e[WidgetTheme.field_k].field_n = 37;
+                                          ii.field_e[WidgetTheme.field_k].verticalVelocity = 25;
+                                          ii.field_e[WidgetTheme.field_k].animationFrame = 37;
                                           WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                           stackIn_574_0 = !(pk.field_s);
                                           if (!stackIn_574_0) {
@@ -2179,10 +2179,10 @@ final class eg extends qh {
                                           fieldTemp$26 = this.field_z;
                                           this.field_z = this.field_z - 1;
                                           if (fieldTemp$26 <= 0) {
-                                            this.field_n = this.field_n + 1;
+                                            this.animationFrame = this.animationFrame + 1;
                                             this.field_z = 5;
-                                            if (this.field_n > 1) {
-                                              this.field_n = 0;
+                                            if (this.animationFrame > 1) {
+                                              this.animationFrame = 0;
                                             }
                                           }
                                           this.field_o = 7;
@@ -2196,7 +2196,7 @@ final class eg extends qh {
                                           w.field_b = w.field_b + 1;
                                         } else {
                                           if (this.field_x == 0) {
-                                            if (this.field_i.field_a < ii.field_e[0].field_i.field_a) {
+                                            if (this.tilePosition.row < ii.field_e[0].tilePosition.row) {
                                               this.field_w = this.field_w + 1;
                                             }
                                             this.a(true, 1, 25, (byte) -94, param1);
@@ -2204,7 +2204,7 @@ final class eg extends qh {
                                             this.field_w = this.field_w + 1;
                                             if (fieldTemp$27 > 200) {
                                               this.field_w = 0;
-                                              if (this.field_i.field_b <= ii.field_e[0].field_i.field_b) {
+                                              if (this.tilePosition.column <= ii.field_e[0].tilePosition.column) {
                                                 stackIn_590_1 = 1;
                                               } else {
                                                 stackIn_590_1 = -1;
@@ -2214,11 +2214,11 @@ final class eg extends qh {
                                             }
                                           }
                                           if (this.field_x == 1) {
-                                            this.field_n = 19;
+                                            this.animationFrame = 19;
                                             fieldTemp$28 = this.field_w;
                                             this.field_w = this.field_w + 1;
                                             if (25 < fieldTemp$28) {
-                                              this.field_e = 70;
+                                              this.verticalVelocity = 70;
                                               this.field_x = 2;
                                               this.field_w = 0;
                                             }
@@ -2239,8 +2239,8 @@ final class eg extends qh {
                                             this.field_p = this.field_p - 1;
                                             this.field_s = this.field_s - 1;
                                             if (0 == this.field_p % 10) {
-                                              ii.field_e[WidgetTheme.field_k].a(9147, 14, this.field_i);
-                                              ii.field_e[WidgetTheme.field_k].field_f.a(-102, this.field_f);
+                                              ii.field_e[WidgetTheme.field_k].initialize(9147, 14, this.tilePosition);
+                                              ii.field_e[WidgetTheme.field_k].tileOffset.set(-102, this.tileOffset);
                                               ii.field_e[WidgetTheme.field_k].field_h = 1;
                                               ii.field_e[WidgetTheme.field_k].field_w = 10;
                                               WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -2251,7 +2251,7 @@ final class eg extends qh {
                                             }
                                             if (this.field_p <= 0) {
                                               this.c(false);
-                                              this.field_e = 60;
+                                              this.verticalVelocity = 60;
                                             }
                                           }
                                           this.e(false);
@@ -2261,35 +2261,35 @@ final class eg extends qh {
                                       if (var4 == 18) {
                                         this.e(false);
                                         if (this.b(param1, -4) == 1 &&
-                                          this.field_f.field_a == 0) {
+                                          this.tileOffset.row == 0) {
                                           this.field_w = this.field_w + 1;
-                                          if (35 < this.field_n) {
+                                          if (35 < this.animationFrame) {
                                             this.field_z = 0;
                                           }
-                                          this.field_n = 35;
+                                          this.animationFrame = 35;
                                           fieldTemp$29 = this.field_z;
                                           this.field_z = this.field_z + 1;
                                           if (fieldTemp$29 > 10) {
-                                            this.field_n = 34;
+                                            this.animationFrame = 34;
                                           }
                                         } else {
                                           this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) 127);
-                                          if (36 > this.field_n) {
-                                            this.field_n = 36;
+                                          if (36 > this.animationFrame) {
+                                            this.animationFrame = 36;
                                           }
                                           this.field_z = this.field_z - 1;
                                           if (this.field_z <= 5) {
-                                            this.field_n = 37;
+                                            this.animationFrame = 37;
                                           }
                                           if (this.field_z <= 0) {
                                             this.field_z = 10;
                                           }
                                         }
-                                        if (this.field_f.field_a < 0) {
-                                          this.field_f.field_a = this.field_f.field_a + 240;
-                                          this.field_i.field_a = this.field_i.field_a - 1;
+                                        if (this.tileOffset.row < 0) {
+                                          this.tileOffset.row = this.tileOffset.row + 240;
+                                          this.tilePosition.row = this.tilePosition.row - 1;
                                         }
-                                        if (this.field_i.field_a < 0) {
+                                        if (this.tilePosition.row < 0) {
                                           this.field_w = 21;
                                         }
                                         this.e(false);
@@ -2300,52 +2300,52 @@ final class eg extends qh {
                                         if (var4 == 19) {
                                           this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 25, 0, tl.field_a, pk.field_s, (byte) -120);
                                           this.e(false);
-                                          this.field_n = 37;
+                                          this.animationFrame = 37;
                                           if (((this.b(param1, -4) == 1)) &&
-                                            ((this.field_f.field_a == 0))) {
-                                            this.field_e = 20;
-                                            this.field_n = 37;
+                                            ((this.tileOffset.row == 0))) {
+                                            this.verticalVelocity = 20;
+                                            this.animationFrame = 37;
                                           }
                                         } else {
                                           if (25 == var4) {
-                                            this.a((byte) 78);
-                                            if (this.field_f.field_a < 0) {
-                                              this.field_f.field_a = this.field_f.field_a + 240;
-                                              this.field_i.field_a = this.field_i.field_a - 1;
+                                            this.wrapHorizontalPosition((byte) 78);
+                                            if (this.tileOffset.row < 0) {
+                                              this.tileOffset.row = this.tileOffset.row + 240;
+                                              this.tilePosition.row = this.tilePosition.row - 1;
                                             }
                                             this.field_z = this.field_z + 1;
-                                            if (this.field_f.field_a >= 240) {
-                                              this.field_f.field_a = this.field_f.field_a - 240;
-                                              this.field_i.field_a = this.field_i.field_a + 1;
+                                            if (this.tileOffset.row >= 240) {
+                                              this.tileOffset.row = this.tileOffset.row - 240;
+                                              this.tilePosition.row = this.tilePosition.row + 1;
                                             }
                                             if (this.field_z % 10 < 6) {
                                               stackIn_658_1 = 36;
                                             } else {
                                               stackIn_658_1 = 37;
                                             }
-                                            this.field_n = stackIn_658_1;
+                                            this.animationFrame = stackIn_658_1;
                                             if (this.field_z < 20) {
-                                              if (this.field_i.field_b < ii.field_e[0].field_i.field_b) {
-                                                this.field_f.field_b = this.field_f.field_b + 15;
+                                              if (this.tilePosition.column < ii.field_e[0].tilePosition.column) {
+                                                this.tileOffset.column = this.tileOffset.column + 15;
                                                 this.field_h = 1;
                                               }
-                                              if (ii.field_e[0].field_i.field_a > this.field_i.field_a) {
-                                                this.field_f.field_a = this.field_f.field_a + 15;
+                                              if (ii.field_e[0].tilePosition.row > this.tilePosition.row) {
+                                                this.tileOffset.row = this.tileOffset.row + 15;
                                               }
-                                              if (ii.field_e[0].field_i.field_b < this.field_i.field_b) {
+                                              if (ii.field_e[0].tilePosition.column < this.tilePosition.column) {
                                                 this.field_h = -1;
-                                                this.field_f.field_b = this.field_f.field_b - 15;
+                                                this.tileOffset.column = this.tileOffset.column - 15;
                                               }
-                                              if (this.field_i.field_a > ii.field_e[0].field_i.field_a) {
-                                                this.field_f.field_a = this.field_f.field_a - 15;
+                                              if (this.tilePosition.row > ii.field_e[0].tilePosition.row) {
+                                                this.tileOffset.row = this.tileOffset.row - 15;
                                               }
                                             } else {
-                                              this.field_f.field_b = this.field_f.field_b + this.field_h * 15;
-                                              if (this.field_i.field_a < ii.field_e[0].field_i.field_a) {
-                                                this.field_f.field_a = this.field_f.field_a + 18;
+                                              this.tileOffset.column = this.tileOffset.column + this.field_h * 15;
+                                              if (this.tilePosition.row < ii.field_e[0].tilePosition.row) {
+                                                this.tileOffset.row = this.tileOffset.row + 18;
                                               }
-                                              if (this.field_i.field_a > ii.field_e[0].field_i.field_a) {
-                                                this.field_f.field_a = this.field_f.field_a - 18;
+                                              if (this.tilePosition.row > ii.field_e[0].tilePosition.row) {
+                                                this.tileOffset.row = this.tileOffset.row - 18;
                                               }
                                             }
                                             this.e(false);
@@ -2356,19 +2356,19 @@ final class eg extends qh {
                                           }
                                           if ((var4 != 20)) {
                                             if (var4 == 21) {
-                                              if (this.field_i.field_b < 0) {
+                                              if (this.tilePosition.column < 0) {
                                                 this.field_h = 1;
-                                                this.field_i.field_b = 0;
-                                                this.field_f.field_b = 0;
+                                                this.tilePosition.column = 0;
+                                                this.tileOffset.column = 0;
                                               }
-                                              if (this.field_i.field_b >= 20) {
-                                                this.field_i.field_b = 20;
+                                              if (this.tilePosition.column >= 20) {
+                                                this.tilePosition.column = 20;
                                                 this.field_h = -1;
-                                                this.field_f.field_b = 0;
+                                                this.tileOffset.column = 0;
                                               }
                                               if (this.b(param1, -4) == 1 &&
-                                                this.field_f.field_a == 0 &&
-                                                this.field_e <= 0) {
+                                                this.tileOffset.row == 0 &&
+                                                this.verticalVelocity <= 0) {
                                                 this.b(5);
                                               } else {
                                                 this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 1, tl.field_a, pk.field_s, (byte) 126);
@@ -2382,18 +2382,18 @@ final class eg extends qh {
                                                     this.a(113, param1);
                                                   } else {
                                                     if (this.field_x == 0) {
-                                                      this.field_n = 19;
+                                                      this.animationFrame = 19;
                                                       if (15 < this.field_w) {
-                                                        this.field_n = 22;
+                                                        this.animationFrame = 22;
                                                       }
                                                       fieldTemp$66 = this.field_w;
                                                       this.field_w = this.field_w + 1;
                                                       if (25 < fieldTemp$66) {
                                                         this.field_x = 2;
-                                                        this.field_e = 70;
+                                                        this.verticalVelocity = 70;
                                                         this.field_w = 0;
-                                                        if (ii.field_e[0].field_i.field_a <= this.field_i.field_a) {
-                                                          this.field_e = 50;
+                                                        if (ii.field_e[0].tilePosition.row <= this.tilePosition.row) {
+                                                          this.verticalVelocity = 50;
                                                         }
                                                       }
                                                     }
@@ -2418,9 +2418,9 @@ final class eg extends qh {
                                                         fieldTemp$60 = this.field_z;
                                                         this.field_z = this.field_z - 1;
                                                         if (fieldTemp$60 <= 0) {
-                                                          this.field_n = this.field_n + 1;
-                                                          if (this.field_n > 1) {
-                                                            this.field_n = 0;
+                                                          this.animationFrame = this.animationFrame + 1;
+                                                          if (this.animationFrame > 1) {
+                                                            this.animationFrame = 0;
                                                           }
                                                           this.field_z = 5;
                                                         }
@@ -2436,23 +2436,23 @@ final class eg extends qh {
                                                       } else {
                                                         w.field_b = w.field_b + 1;
                                                         if (0 == this.field_x) {
-                                                          if (!(this.field_i.field_b > 0) ||
-                                                            !(16 > this.field_i.field_b)) {
-                                                            if (ii.field_e[0].field_i.field_a > this.field_i.field_a) {
+                                                          if (!(this.tilePosition.column > 0) ||
+                                                            !(16 > this.tilePosition.column)) {
+                                                            if (ii.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                               this.field_x = 1;
                                                               this.field_w = 0;
                                                             }
-                                                            if (ii.field_e[0].field_i.field_b > this.field_i.field_b) {
+                                                            if (ii.field_e[0].tilePosition.column > this.tilePosition.column) {
                                                               this.field_h = 1;
                                                             } else {
                                                               this.field_h = -1;
                                                             }
-                                                            if (this.field_i.field_a > ii.field_e[0].field_i.field_a &&
-                                                              this.field_i.field_a > 2) {
-                                                              this.field_i.field_a = this.field_i.field_a - 1;
+                                                            if (this.tilePosition.row > ii.field_e[0].tilePosition.row &&
+                                                              this.tilePosition.row > 2) {
+                                                              this.tilePosition.row = this.tilePosition.row - 1;
                                                               this.field_x = 3;
-                                                              this.field_e = -20;
-                                                              this.field_f.field_a = this.field_f.field_a + 230;
+                                                              this.verticalVelocity = -20;
+                                                              this.tileOffset.row = this.tileOffset.row + 230;
                                                             }
                                                           }
                                                           if (350 < w.field_b) {
@@ -2470,11 +2470,11 @@ final class eg extends qh {
                                                           fieldTemp$61 = this.field_w;
                                                           this.field_w = this.field_w + 1;
                                                           if (fieldTemp$61 > 5) {
-                                                            this.field_e = 70;
+                                                            this.verticalVelocity = 70;
                                                             this.field_x = 2;
                                                             this.field_w = 0;
                                                           }
-                                                          this.field_n = 19;
+                                                          this.animationFrame = 19;
                                                         }
                                                         if (this.field_x == 2) {
                                                           this.a(true, 22, 0, param1);
@@ -2490,15 +2490,15 @@ final class eg extends qh {
                                                         }
                                                         if (this.field_x == 4 &&
                                                           this.a(true, param1, 25)) {
-                                                          ii.field_e[WidgetTheme.field_k].a(9147, 27, this.field_i);
-                                                          ii.field_e[WidgetTheme.field_k].field_f.a(-81, this.field_f);
-                                                          dupTemp$62 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                          dupTemp$62.field_b = dupTemp$62.field_b + (40 + this.field_h * 240);
-                                                          dupTemp$63 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                          dupTemp$63.field_a = dupTemp$63.field_a + 80;
+                                                          ii.field_e[WidgetTheme.field_k].initialize(9147, 27, this.tilePosition);
+                                                          ii.field_e[WidgetTheme.field_k].tileOffset.set(-81, this.tileOffset);
+                                                          dupTemp$62 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                          dupTemp$62.column = dupTemp$62.column + (40 + this.field_h * 240);
+                                                          dupTemp$63 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                          dupTemp$63.row = dupTemp$63.row + 80;
                                                           ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                           ii.field_e[WidgetTheme.field_k].field_w = 0;
-                                                          ii.field_e[WidgetTheme.field_k].field_e = 40;
+                                                          ii.field_e[WidgetTheme.field_k].verticalVelocity = 40;
                                                           ii.field_e[WidgetTheme.field_k].field_o = 5;
                                                           WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                           stackIn_773_0 = 0;
@@ -2516,21 +2516,21 @@ final class eg extends qh {
                                                           this.field_s = this.field_s - 1;
                                                           if (this.field_p == 10 ||
                                                             this.field_p == 30) {
-                                                            ii.field_e[WidgetTheme.field_k].a(param0 + 9270, 23, this.field_i);
-                                                            ii.field_e[WidgetTheme.field_k].field_f.a(-94, this.field_f);
-                                                            ii.field_e[WidgetTheme.field_k].field_i.field_b = 0;
-                                                            ii.field_e[WidgetTheme.field_k].field_i.field_a = 16;
-                                                            ii.field_e[WidgetTheme.field_k].field_f.field_b = 0;
-                                                            ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                                                            ii.field_e[WidgetTheme.field_k].initialize(param0 + 9270, 23, this.tilePosition);
+                                                            ii.field_e[WidgetTheme.field_k].tileOffset.set(-94, this.tileOffset);
+                                                            ii.field_e[WidgetTheme.field_k].tilePosition.column = 0;
+                                                            ii.field_e[WidgetTheme.field_k].tilePosition.row = 16;
+                                                            ii.field_e[WidgetTheme.field_k].tileOffset.column = 0;
+                                                            ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                                                             ii.field_e[WidgetTheme.field_k].field_h = 1;
                                                             ii.field_e[WidgetTheme.field_k].field_w = 10;
                                                             WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                                            ii.field_e[WidgetTheme.field_k].a(9147, 23, this.field_i);
-                                                            ii.field_e[WidgetTheme.field_k].field_f.a(-117, this.field_f);
-                                                            ii.field_e[WidgetTheme.field_k].field_i.field_b = 19;
-                                                            ii.field_e[WidgetTheme.field_k].field_i.field_a = 16;
-                                                            ii.field_e[WidgetTheme.field_k].field_f.field_b = 0;
-                                                            ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                                                            ii.field_e[WidgetTheme.field_k].initialize(9147, 23, this.tilePosition);
+                                                            ii.field_e[WidgetTheme.field_k].tileOffset.set(-117, this.tileOffset);
+                                                            ii.field_e[WidgetTheme.field_k].tilePosition.column = 19;
+                                                            ii.field_e[WidgetTheme.field_k].tilePosition.row = 16;
+                                                            ii.field_e[WidgetTheme.field_k].tileOffset.column = 0;
+                                                            ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                                                             ii.field_e[WidgetTheme.field_k].field_h = -1;
                                                             ii.field_e[WidgetTheme.field_k].field_w = 10;
                                                             WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -2541,7 +2541,7 @@ final class eg extends qh {
                                                           }
                                                           if (this.field_p <= 0) {
                                                             this.c(false);
-                                                            this.field_e = 70;
+                                                            this.verticalVelocity = 70;
                                                           }
                                                         }
                                                       }
@@ -2552,17 +2552,17 @@ final class eg extends qh {
                                                       this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) 126);
                                                       this.e(false);
                                                       if (((this.b(param1, -4) == 1)) &&
-                                                        ((this.field_f.field_a == 0))) {
+                                                        ((this.tileOffset.row == 0))) {
                                                         this.field_d = 24;
-                                                        this.field_f.field_b = this.field_f.field_b + 40;
-                                                        this.field_e = 50;
-                                                        this.field_B = 28;
-                                                        this.field_f.field_a = this.field_f.field_a + 40;
-                                                        ii.field_e[WidgetTheme.field_k].a(9147, 28, this.field_i);
-                                                        ii.field_e[WidgetTheme.field_k].field_f.a(-116, this.field_f);
+                                                        this.tileOffset.column = this.tileOffset.column + 40;
+                                                        this.verticalVelocity = 50;
+                                                        this.actorType = 28;
+                                                        this.tileOffset.row = this.tileOffset.row + 40;
+                                                        ii.field_e[WidgetTheme.field_k].initialize(9147, 28, this.tilePosition);
+                                                        ii.field_e[WidgetTheme.field_k].tileOffset.set(-116, this.tileOffset);
                                                         ii.field_e[WidgetTheme.field_k].field_h = -this.field_h;
                                                         ii.field_e[WidgetTheme.field_k].field_w = 0;
-                                                        ii.field_e[WidgetTheme.field_k].field_e = 50;
+                                                        ii.field_e[WidgetTheme.field_k].verticalVelocity = 50;
                                                         ii.field_e[WidgetTheme.field_k].field_o = 5;
                                                         WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                         stackIn_808_0 = (pk.field_s) ? 0 : 1;
@@ -2575,7 +2575,7 @@ final class eg extends qh {
                                                         this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 20, 0, tl.field_a, pk.field_s, (byte) -50);
                                                         this.e(false);
                                                         if (((this.b(param1, -4) == 1)) &&
-                                                          ((this.field_f.field_a == 0))) {
+                                                          ((this.tileOffset.row == 0))) {
                                                           this.field_k = 1;
                                                           stackIn_817_0 = (pk.field_s) ? 0 : 1;
                                                           if ((stackIn_817_0 != 1)) {
@@ -2591,14 +2591,14 @@ final class eg extends qh {
                                                               this.a(120, param1);
                                                             } else {
                                                               if (0 == this.field_x) {
-                                                                if (ii.field_e[0].field_i.field_a > this.field_i.field_a) {
+                                                                if (ii.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                                   this.field_w = this.field_w + 1;
                                                                 }
                                                                 this.a(false, 2, 20, (byte) -88, param1);
                                                                 fieldTemp$56 = this.field_w;
                                                                 this.field_w = this.field_w + 1;
                                                                 if (fieldTemp$56 > 200) {
-                                                                  if (this.field_i.field_b > ii.field_e[0].field_i.field_b) {
+                                                                  if (this.tilePosition.column > ii.field_e[0].tilePosition.column) {
                                                                     stackIn_833_1 = -1;
                                                                   } else {
                                                                     stackIn_833_1 = 1;
@@ -2618,9 +2618,9 @@ final class eg extends qh {
                                                                 if (fieldTemp$57 > 25) {
                                                                   this.field_x = 2;
                                                                   this.field_w = 0;
-                                                                  this.field_e = 70;
+                                                                  this.verticalVelocity = 70;
                                                                 }
-                                                                this.field_n = 19;
+                                                                this.animationFrame = 19;
                                                               }
                                                               if (2 == this.field_x) {
                                                                 this.a(false, 22, 15, param1);
@@ -2638,12 +2638,12 @@ final class eg extends qh {
                                                               }
                                                               if (4 == this.field_x) {
                                                                 if (this.a(false, param1, 25)) {
-                                                                  ii.field_e[WidgetTheme.field_k].a(9147, 34, this.field_i);
-                                                                  ii.field_e[WidgetTheme.field_k].field_f.a(-108, this.field_f);
-                                                                  dupTemp$58 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                  dupTemp$58.field_b = dupTemp$58.field_b + (this.field_h * 120 + 40);
-                                                                  dupTemp$59 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                  dupTemp$59.field_a = dupTemp$59.field_a + 40;
+                                                                  ii.field_e[WidgetTheme.field_k].initialize(9147, 34, this.tilePosition);
+                                                                  ii.field_e[WidgetTheme.field_k].tileOffset.set(-108, this.tileOffset);
+                                                                  dupTemp$58 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                  dupTemp$58.column = dupTemp$58.column + (this.field_h * 120 + 40);
+                                                                  dupTemp$59 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                  dupTemp$59.row = dupTemp$59.row + 40;
                                                                   ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                   ii.field_e[WidgetTheme.field_k].field_w = 10;
                                                                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -2667,7 +2667,7 @@ final class eg extends qh {
                                                                 this.a(100, param1);
                                                               } else {
                                                                 if (this.field_x == 0) {
-                                                                  if (this.field_i.field_a < ii.field_e[0].field_i.field_a) {
+                                                                  if (this.tilePosition.row < ii.field_e[0].tilePosition.row) {
                                                                     this.field_w = this.field_w + 1;
                                                                   }
                                                                   this.a(false, 2, 20, (byte) -78, param1);
@@ -2675,7 +2675,7 @@ final class eg extends qh {
                                                                   this.field_w = this.field_w + 1;
                                                                   if (200 < fieldTemp$30) {
                                                                     this.field_x = 1;
-                                                                    if (this.field_i.field_b <= ii.field_e[0].field_i.field_b) {
+                                                                    if (this.tilePosition.column <= ii.field_e[0].tilePosition.column) {
                                                                       stackIn_871_1 = -1;
                                                                     } else {
                                                                       stackIn_871_1 = 1;
@@ -2685,7 +2685,7 @@ final class eg extends qh {
                                                                     this.field_w = 0;
                                                                     if (80.0 > 100.0 * Math.random()) {
                                                                       this.field_x = 4;
-                                                                      if (ii.field_e[0].field_i.field_b >= this.field_i.field_b) {
+                                                                      if (ii.field_e[0].tilePosition.column >= this.tilePosition.column) {
                                                                         stackIn_875_1 = 1;
                                                                       } else {
                                                                         stackIn_875_1 = -1;
@@ -2698,11 +2698,11 @@ final class eg extends qh {
                                                                   fieldTemp$31 = this.field_w;
                                                                   this.field_w = this.field_w + 1;
                                                                   if (fieldTemp$31 > 25) {
-                                                                    this.field_e = 70;
+                                                                    this.verticalVelocity = 70;
                                                                     this.field_w = 0;
                                                                     this.field_x = 2;
                                                                   }
-                                                                  this.field_n = 19;
+                                                                  this.animationFrame = 19;
                                                                 }
                                                                 if (2 == this.field_x) {
                                                                   this.a(false, 22, 25, param1);
@@ -2720,12 +2720,12 @@ final class eg extends qh {
                                                                 }
                                                                 if (this.field_x == 4 &&
                                                                   this.a(false, param1, param0 ^ -100)) {
-                                                                  ii.field_e[WidgetTheme.field_k].a(9147, 35, this.field_i);
-                                                                  ii.field_e[WidgetTheme.field_k].field_f.a(-103, this.field_f);
-                                                                  dupTemp$32 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                  dupTemp$32.field_b = dupTemp$32.field_b + (40 + 120 * this.field_h);
-                                                                  dupTemp$33 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                  dupTemp$33.field_a = dupTemp$33.field_a + 520;
+                                                                  ii.field_e[WidgetTheme.field_k].initialize(9147, 35, this.tilePosition);
+                                                                  ii.field_e[WidgetTheme.field_k].tileOffset.set(-103, this.tileOffset);
+                                                                  dupTemp$32 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                  dupTemp$32.column = dupTemp$32.column + (40 + 120 * this.field_h);
+                                                                  dupTemp$33 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                  dupTemp$33.row = dupTemp$33.row + 520;
                                                                   ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                   ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -2751,7 +2751,7 @@ final class eg extends qh {
                                                                   this.a(param0 + 150, param1);
                                                                 } else {
                                                                   if (this.field_x == 0) {
-                                                                    if (ii.field_e[0].field_i.field_a > this.field_i.field_a) {
+                                                                    if (ii.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                                       this.field_w = this.field_w + 1;
                                                                     }
                                                                     this.a(false, 2, 20, (byte) -92, param1);
@@ -2764,24 +2764,24 @@ final class eg extends qh {
                                                                     }
                                                                   }
                                                                   if (3 == this.field_x) {
-                                                                    this.field_n = this.field_n - 4;
+                                                                    this.animationFrame = this.animationFrame - 4;
                                                                     this.a(20, (byte) 116, param1, false);
-                                                                    this.field_n = this.field_n + 4;
+                                                                    this.animationFrame = this.animationFrame + 4;
                                                                     fieldTemp$35 = this.field_w;
                                                                     this.field_w = this.field_w + 1;
                                                                     if (fieldTemp$35 > 300 &&
                                                                       1 == this.b(param1, param0 ^ 121) &&
-                                                                      this.field_f.field_a == 0) {
+                                                                      this.tileOffset.row == 0) {
                                                                       this.field_x = 0;
                                                                       this.field_w = 0;
                                                                     }
                                                                     if (this.field_w % 100 == 25) {
-                                                                      ii.field_e[WidgetTheme.field_k].a(9147, 42, this.field_i);
-                                                                      ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ 26, this.field_f);
-                                                                      dupTemp$36 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                      dupTemp$36.field_b = dupTemp$36.field_b + (this.field_h * 120 + 40);
-                                                                      dupTemp$37 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                      dupTemp$37.field_a = dupTemp$37.field_a + 40;
+                                                                      ii.field_e[WidgetTheme.field_k].initialize(9147, 42, this.tilePosition);
+                                                                      ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ 26, this.tileOffset);
+                                                                      dupTemp$36 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                      dupTemp$36.column = dupTemp$36.column + (this.field_h * 120 + 40);
+                                                                      dupTemp$37 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                      dupTemp$37.row = dupTemp$37.row + 40;
                                                                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                       ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -2791,10 +2791,10 @@ final class eg extends qh {
                                                                     }
                                                                     if (this.field_w % 100 > 20 &&
                                                                       this.field_w % 100 < 30) {
-                                                                      this.field_n = 26;
+                                                                      this.animationFrame = 26;
                                                                     } else {
-                                                                      if (10 < this.field_n) {
-                                                                        this.field_n = 6;
+                                                                      if (10 < this.animationFrame) {
+                                                                        this.animationFrame = 6;
                                                                       }
                                                                     }
                                                                   }
@@ -2808,9 +2808,9 @@ final class eg extends qh {
                                                                   fieldTemp$55 = this.field_z;
                                                                   this.field_z = this.field_z - 1;
                                                                   if (fieldTemp$55 <= 0) {
-                                                                    this.field_n = this.field_n + 1;
-                                                                    if (1 < this.field_n) {
-                                                                      this.field_n = 0;
+                                                                    this.animationFrame = this.animationFrame + 1;
+                                                                    if (1 < this.animationFrame) {
+                                                                      this.animationFrame = 0;
                                                                     }
                                                                     this.field_z = 5;
                                                                   }
@@ -2838,12 +2838,12 @@ final class eg extends qh {
                                                                     this.field_w = this.field_w + 1;
                                                                     if (25 == this.field_w % 50 &&
                                                                       this.field_w < 250) {
-                                                                      ii.field_e[WidgetTheme.field_k].a(9147, 43, this.field_i);
-                                                                      ii.field_e[WidgetTheme.field_k].field_f.a(-112, this.field_f);
-                                                                      dupTemp$53 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                      dupTemp$53.field_b = dupTemp$53.field_b + (this.field_h * 120 + 40);
-                                                                      dupTemp$54 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                      dupTemp$54.field_a = dupTemp$54.field_a + 40;
+                                                                      ii.field_e[WidgetTheme.field_k].initialize(9147, 43, this.tilePosition);
+                                                                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-112, this.tileOffset);
+                                                                      dupTemp$53 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                      dupTemp$53.column = dupTemp$53.column + (this.field_h * 120 + 40);
+                                                                      dupTemp$54 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                      dupTemp$54.row = dupTemp$54.row + 40;
                                                                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                       ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -2854,25 +2854,25 @@ final class eg extends qh {
                                                                     if (this.field_w < 250) {
                                                                       if (this.field_w % 50 > 5 &&
                                                                         this.field_w % 50 < 10) {
-                                                                        this.field_n = 25;
+                                                                        this.animationFrame = 25;
                                                                       }
                                                                       if (this.field_w % 50 > 15 &&
                                                                         this.field_w % 50 < 20) {
-                                                                        this.field_n = 26;
+                                                                        this.animationFrame = 26;
                                                                       }
                                                                       if (this.field_w % 50 > 20 &&
                                                                         this.field_w % 50 < 25) {
-                                                                        this.field_n = 27;
+                                                                        this.animationFrame = 27;
                                                                       }
                                                                       if (this.field_w % 50 > 25 &&
                                                                         30 > this.field_w % 50) {
-                                                                        if (ii.field_e[0].field_i.field_b < this.field_i.field_b) {
+                                                                        if (ii.field_e[0].tilePosition.column < this.tilePosition.column) {
                                                                           stackIn_972_1 = -1;
                                                                         } else {
                                                                           stackIn_972_1 = 1;
                                                                         }
                                                                         this.field_h = stackIn_972_1;
-                                                                        this.field_n = 28;
+                                                                        this.animationFrame = 28;
                                                                       }
                                                                     }
                                                                     if (this.field_w > 300 &&
@@ -2888,12 +2888,12 @@ final class eg extends qh {
                                                                       this.field_p = this.field_p - 1;
                                                                       if (this.field_p == 50 ||
                                                                         this.field_p == 30) {
-                                                                        ii.field_e[WidgetTheme.field_k].a(9147, 32, this.field_i);
-                                                                        ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ 2, this.field_f);
-                                                                        ii.field_e[WidgetTheme.field_k].field_i.field_b = 10;
-                                                                        ii.field_e[WidgetTheme.field_k].field_i.field_a = 16;
-                                                                        ii.field_e[WidgetTheme.field_k].field_f.field_b = 0;
-                                                                        ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                                                                        ii.field_e[WidgetTheme.field_k].initialize(9147, 32, this.tilePosition);
+                                                                        ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ 2, this.tileOffset);
+                                                                        ii.field_e[WidgetTheme.field_k].tilePosition.column = 10;
+                                                                        ii.field_e[WidgetTheme.field_k].tilePosition.row = 16;
+                                                                        ii.field_e[WidgetTheme.field_k].tileOffset.column = 0;
+                                                                        ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                                                                         ii.field_e[WidgetTheme.field_k].field_h = 1;
                                                                         ii.field_e[WidgetTheme.field_k].field_w = 10;
                                                                         WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -2903,14 +2903,14 @@ final class eg extends qh {
                                                                       }
                                                                       if (!(this.field_p > 0)) {
                                                                         this.c(false);
-                                                                        this.field_e = 70;
+                                                                        this.verticalVelocity = 70;
                                                                       }
                                                                     }
                                                                   }
                                                                 }
                                                               } else {
                                                                 if (var4 == 34) {
-                                                                  this.field_e = 2;
+                                                                  this.verticalVelocity = 2;
                                                                   this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) 126);
                                                                   this.e(false);
                                                                 } else {
@@ -2925,14 +2925,14 @@ final class eg extends qh {
                                                                           this.field_p = 0;
                                                                         } else {
                                                                           if (this.field_x == 0) {
-                                                                            if (ii.field_e[0].field_i.field_a > this.field_i.field_a) {
+                                                                            if (ii.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                                               this.field_w = 0;
-                                                                              if (ii.field_e[0].field_i.field_b <= this.field_i.field_b - 5) {
+                                                                              if (ii.field_e[0].tilePosition.column <= this.tilePosition.column - 5) {
                                                                                 this.field_h = -1;
                                                                               }
-                                                                              this.field_e = 30;
+                                                                              this.verticalVelocity = 30;
                                                                               this.field_x = 2;
-                                                                              if (this.field_i.field_b + 5 <= ii.field_e[0].field_i.field_b) {
+                                                                              if (this.tilePosition.column + 5 <= ii.field_e[0].tilePosition.column) {
                                                                                 this.field_h = 1;
                                                                               }
                                                                             } else {
@@ -2961,14 +2961,14 @@ final class eg extends qh {
                                                                           } else {
                                                                             if (this.field_x == 0) {
                                                                               this.a(false, 1, 15, (byte) -64, param1);
-                                                                              if (ii.field_e[0].field_i.field_a > this.field_i.field_a) {
+                                                                              if (ii.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                                                 this.field_w = this.field_w + 5;
                                                                               }
                                                                               fieldTemp$38 = this.field_w;
                                                                               this.field_w = this.field_w + 1;
                                                                               if (fieldTemp$38 > 200) {
                                                                                 this.field_w = 0;
-                                                                                if (ii.field_e[0].field_i.field_b < this.field_i.field_b) {
+                                                                                if (ii.field_e[0].tilePosition.column < this.tilePosition.column) {
                                                                                   stackIn_1043_1 = -1;
                                                                                 } else {
                                                                                   stackIn_1043_1 = 1;
@@ -2978,15 +2978,15 @@ final class eg extends qh {
                                                                               }
                                                                             }
                                                                             if (this.field_x == 1) {
-                                                                              this.field_n = 19;
+                                                                              this.animationFrame = 19;
                                                                               fieldTemp$39 = this.field_w;
                                                                               this.field_w = this.field_w + 1;
                                                                               if (80 < fieldTemp$39) {
-                                                                                this.field_e = 85;
+                                                                                this.verticalVelocity = 85;
                                                                                 this.field_x = 2;
                                                                                 this.field_w = 0;
-                                                                                if (this.field_i.field_a >= ii.field_e[0].field_i.field_a) {
-                                                                                  this.field_e = 35;
+                                                                                if (this.tilePosition.row >= ii.field_e[0].tilePosition.row) {
+                                                                                  this.verticalVelocity = 35;
                                                                                 }
                                                                               }
                                                                             }
@@ -3014,14 +3014,14 @@ final class eg extends qh {
                                                                               this.a(60, param1);
                                                                             } else {
                                                                               if (0 == this.field_x) {
-                                                                                if (this.field_i.field_a < ii.field_e[0].field_i.field_a) {
+                                                                                if (this.tilePosition.row < ii.field_e[0].tilePosition.row) {
                                                                                   this.field_w = this.field_w + 5;
                                                                                 }
                                                                                 this.a(false, 1, 25, (byte) -90, param1);
                                                                                 fieldTemp$51 = this.field_w;
                                                                                 this.field_w = this.field_w + 1;
                                                                                 if (200 < fieldTemp$51) {
-                                                                                  if (this.field_i.field_b <= ii.field_e[0].field_i.field_b) {
+                                                                                  if (this.tilePosition.column <= ii.field_e[0].tilePosition.column) {
                                                                                     stackIn_1071_1 = 1;
                                                                                   } else {
                                                                                     stackIn_1071_1 = -1;
@@ -3032,15 +3032,15 @@ final class eg extends qh {
                                                                                 }
                                                                               }
                                                                               if (this.field_x == 1) {
-                                                                                this.field_n = 19;
+                                                                                this.animationFrame = 19;
                                                                                 fieldTemp$52 = this.field_w;
                                                                                 this.field_w = this.field_w + 1;
                                                                                 if (fieldTemp$52 > 20) {
                                                                                   this.field_w = 0;
-                                                                                  this.field_e = 70;
+                                                                                  this.verticalVelocity = 70;
                                                                                   this.field_x = 2;
-                                                                                  if (this.field_i.field_a >= ii.field_e[0].field_i.field_a) {
-                                                                                    this.field_e = 40;
+                                                                                  if (this.tilePosition.row >= ii.field_e[0].tilePosition.row) {
+                                                                                    this.verticalVelocity = 40;
                                                                                   }
                                                                                 }
                                                                               }
@@ -3068,7 +3068,7 @@ final class eg extends qh {
                                                                                 this.a(35, param1);
                                                                               } else {
                                                                                 if (this.field_x == 0) {
-                                                                                  if (ii.field_e[0].field_i.field_a > this.field_i.field_a) {
+                                                                                  if (ii.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                                                     this.field_w = this.field_w + 1;
                                                                                   }
                                                                                   this.a(false, 2, 20, (byte) -122, param1);
@@ -3081,20 +3081,20 @@ final class eg extends qh {
                                                                                   }
                                                                                 }
                                                                                 if (this.field_x == 3) {
-                                                                                  this.field_n = this.field_n - 4;
+                                                                                  this.animationFrame = this.animationFrame - 4;
                                                                                   this.a(10, (byte) -13, param1, false);
                                                                                   this.a(10, (byte) 118, param1, false);
-                                                                                  this.field_n = this.field_n + 4;
+                                                                                  this.animationFrame = this.animationFrame + 4;
                                                                                   fieldTemp$50 = this.field_w;
                                                                                   this.field_w = this.field_w + 1;
                                                                                   if (fieldTemp$50 > 300 &&
                                                                                     this.b(param1, -4) == 1 &&
-                                                                                    this.field_f.field_a == 0) {
+                                                                                    this.tileOffset.row == 0) {
                                                                                     this.field_w = 0;
                                                                                     this.field_x = 0;
                                                                                   }
-                                                                                  if (this.field_n > 10) {
-                                                                                    this.field_n = 6;
+                                                                                  if (this.animationFrame > 10) {
+                                                                                    this.animationFrame = 6;
                                                                                   }
                                                                                 }
                                                                                 this.e(false);
@@ -3104,24 +3104,24 @@ final class eg extends qh {
                                                                             if (40 != var4) {
                                                                               switch (var4) {
                                                                                 case 41:
-                                                                                  this.field_e = 2;
+                                                                                  this.verticalVelocity = 2;
                                                                                   this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 100, 0, tl.field_a, pk.field_s, (byte) -126);
                                                                                   this.e(false);
                                                                                   this.field_w = this.field_w + 1;
                                                                                   if (this.field_w % 10 >= 5) {
-                                                                                    this.field_n = 37;
+                                                                                    this.animationFrame = 37;
                                                                                   } else {
-                                                                                    this.field_n = 18;
+                                                                                    this.animationFrame = 18;
                                                                                   }
                                                                                   if (50 > this.field_w % 100) {
-                                                                                    this.field_f.field_a = this.field_f.field_a + (-(this.field_w % 50) + 50 - 25) / 4;
+                                                                                    this.tileOffset.row = this.tileOffset.row + (-(this.field_w % 50) + 50 - 25) / 4;
                                                                                   } else {
-                                                                                    this.field_f.field_a = this.field_f.field_a + (-25 + this.field_w % 50) / 4;
+                                                                                    this.tileOffset.row = this.tileOffset.row + (-25 + this.field_w % 50) / 4;
                                                                                   }
                                                                                   this.e(false);
                                                                                   break regionExit1;
                                                                                 case 42:
-                                                                                  this.field_e = 2;
+                                                                                  this.verticalVelocity = 2;
                                                                                   this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 50, 0, tl.field_a, pk.field_s, (byte) 126);
                                                                                   this.e(false);
                                                                                   break regionExit1;
@@ -3130,14 +3130,14 @@ final class eg extends qh {
                                                                                   if (this.field_w > 150) {
                                                                                     this.field_k = 1;
                                                                                   }
-                                                                                  this.field_f.field_a = this.field_f.field_a + 4;
+                                                                                  this.tileOffset.row = this.tileOffset.row + 4;
                                                                                   break regionExit1;
                                                                                 default:
                                                                                   break regionExit1;
                                                                                 case 45:
-                                                                                  this.field_n = 36;
+                                                                                  this.animationFrame = 36;
                                                                                   if (this.field_w % 10 > 5) {
-                                                                                    this.field_n = 37;
+                                                                                    this.animationFrame = 37;
                                                                                   }
                                                                                   fieldTemp$40 = this.field_w;
                                                                                   this.field_w = this.field_w + 1;
@@ -3158,12 +3158,12 @@ final class eg extends qh {
                                                                               }
                                                                               if (this.field_s > 0) {
                                                                                 if (ql.field_c == 6) {
-                                                                                  ii.field_e[WidgetTheme.field_k].a(param0 ^ -9154, 36, this.field_i);
-                                                                                  ii.field_e[WidgetTheme.field_k].field_f.a(-110, this.field_f);
-                                                                                  dupTemp$41 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                                  dupTemp$41.field_b = dupTemp$41.field_b + (40 + this.field_h * 120);
-                                                                                  dupTemp$42 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                                  dupTemp$42.field_a = dupTemp$42.field_a + 40;
+                                                                                  ii.field_e[WidgetTheme.field_k].initialize(param0 ^ -9154, 36, this.tilePosition);
+                                                                                  ii.field_e[WidgetTheme.field_k].tileOffset.set(-110, this.tileOffset);
+                                                                                  dupTemp$41 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                                  dupTemp$41.column = dupTemp$41.column + (40 + this.field_h * 120);
+                                                                                  dupTemp$42 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                                  dupTemp$42.row = dupTemp$42.row + 40;
                                                                                   ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                                   ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -3184,24 +3184,24 @@ final class eg extends qh {
                                                                                 this.field_z = this.field_z - 1;
                                                                                 if (0 > fieldTemp$43) {
                                                                                   this.field_z = 10;
-                                                                                  this.field_n = this.field_n + 1;
-                                                                                  if (this.field_n > 3) {
-                                                                                    this.field_n = 0;
+                                                                                  this.animationFrame = this.animationFrame + 1;
+                                                                                  if (this.animationFrame > 3) {
+                                                                                    this.animationFrame = 0;
                                                                                   }
                                                                                 }
                                                                                 if (this.field_w == 500 ||
                                                                                   this.field_w == 2500) {
-                                                                                  ii.field_e[WidgetTheme.field_k].a(param0 + 9270, 39, this.field_i);
-                                                                                  ii.field_e[WidgetTheme.field_k].field_i.field_b = 0;
-                                                                                  ii.field_e[WidgetTheme.field_k].field_i.field_a = 15;
+                                                                                  ii.field_e[WidgetTheme.field_k].initialize(param0 + 9270, 39, this.tilePosition);
+                                                                                  ii.field_e[WidgetTheme.field_k].tilePosition.column = 0;
+                                                                                  ii.field_e[WidgetTheme.field_k].tilePosition.row = 15;
                                                                                   ii.field_e[WidgetTheme.field_k].field_h = 1;
                                                                                   ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                                 }
                                                                                 if (this.field_w == 1500) {
-                                                                                  ii.field_e[WidgetTheme.field_k].a(param0 ^ -9154, 39, this.field_i);
-                                                                                  ii.field_e[WidgetTheme.field_k].field_i.field_b = 19;
-                                                                                  ii.field_e[WidgetTheme.field_k].field_i.field_a = 15;
+                                                                                  ii.field_e[WidgetTheme.field_k].initialize(param0 ^ -9154, 39, this.tilePosition);
+                                                                                  ii.field_e[WidgetTheme.field_k].tilePosition.column = 19;
+                                                                                  ii.field_e[WidgetTheme.field_k].tilePosition.row = 15;
                                                                                   ii.field_e[WidgetTheme.field_k].field_h = 1;
                                                                                   ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -3211,9 +3211,9 @@ final class eg extends qh {
                                                                                   this.field_d = 96;
                                                                                   wg.field_b = wg.field_b - ql.field_c;
                                                                                   ic.field_a = ic.field_a - 6;
-                                                                                  this.field_n = 0;
+                                                                                  this.animationFrame = 0;
                                                                                   this.field_w = 0;
-                                                                                  this.field_f.field_b = this.field_f.field_b - 40;
+                                                                                  this.tileOffset.column = this.tileOffset.column - 40;
                                                                                   ql.field_c = 6;
                                                                                   this.field_x = 0;
                                                                                   if (pk.field_s) {
@@ -3224,20 +3224,20 @@ final class eg extends qh {
                                                                               if (ql.field_c == 6) {
                                                                                 if (0 == this.field_x ||
                                                                                   this.field_x == 1) {
-                                                                                  this.field_n = 0;
+                                                                                  this.animationFrame = 0;
                                                                                   if (this.field_w < 0) {
-                                                                                    this.field_n = 3;
+                                                                                    this.animationFrame = 3;
                                                                                   }
                                                                                   fieldTemp$44 = this.field_w;
                                                                                   this.field_w = this.field_w + 1;
                                                                                   if (10 < fieldTemp$44) {
                                                                                     this.field_w = 0;
-                                                                                    this.field_e = 100;
+                                                                                    this.verticalVelocity = 100;
                                                                                     this.field_x = 2;
-                                                                                    if (ii.field_e[0].field_i.field_a <= this.field_i.field_a) {
-                                                                                      this.field_e = 70;
+                                                                                    if (ii.field_e[0].tilePosition.row <= this.tilePosition.row) {
+                                                                                      this.verticalVelocity = 70;
                                                                                     }
-                                                                                    if (this.field_i.field_b > ii.field_e[0].field_i.field_b) {
+                                                                                    if (this.tilePosition.column > ii.field_e[0].tilePosition.column) {
                                                                                       stackIn_1157_1 = -1;
                                                                                     } else {
                                                                                       stackIn_1157_1 = 1;
@@ -3247,25 +3247,25 @@ final class eg extends qh {
                                                                                 }
                                                                                 if (2 == this.field_x) {
                                                                                   this.a(true, 22, 15, param1);
-                                                                                  this.field_n = 1;
-                                                                                  if (this.field_e < 60) {
-                                                                                    this.field_n = 2;
+                                                                                  this.animationFrame = 1;
+                                                                                  if (this.verticalVelocity < 60) {
+                                                                                    this.animationFrame = 2;
                                                                                   }
                                                                                 }
                                                                                 if (3 == this.field_x) {
                                                                                   this.a(15, param0 + 7, true, param1);
-                                                                                  this.field_n = 2;
+                                                                                  this.animationFrame = 2;
                                                                                   if (this.field_x == 0) {
                                                                                     this.field_w = -10;
-                                                                                    if (this.field_i.field_a > ii.field_e[0].field_i.field_a &&
-                                                                                      this.field_i.field_a > 2) {
-                                                                                      this.field_i.field_a = this.field_i.field_a - 1;
-                                                                                      this.field_f.field_a = this.field_f.field_a + 230;
+                                                                                    if (this.tilePosition.row > ii.field_e[0].tilePosition.row &&
+                                                                                      this.tilePosition.row > 2) {
+                                                                                      this.tilePosition.row = this.tilePosition.row - 1;
+                                                                                      this.tileOffset.row = this.tileOffset.row + 230;
                                                                                       this.field_x = 3;
                                                                                     } else {
-                                                                                      this.field_n = 3;
-                                                                                      ii.field_e[WidgetTheme.field_k].a(9147, 45, this.field_i);
-                                                                                      ii.field_e[WidgetTheme.field_k].field_f.a(-88, this.field_f);
+                                                                                      this.animationFrame = 3;
+                                                                                      ii.field_e[WidgetTheme.field_k].initialize(9147, 45, this.tilePosition);
+                                                                                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-88, this.tileOffset);
                                                                                       ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                                       if (pk.field_s) {
@@ -3276,7 +3276,7 @@ final class eg extends qh {
                                                                                 }
                                                                                 if (75 > this.field_p &&
                                                                                   this.field_x != 4) {
-                                                                                  this.field_e = 60;
+                                                                                  this.verticalVelocity = 60;
                                                                                   this.field_x = 4;
                                                                                 }
                                                                                 if (this.field_x == 4) {
@@ -3284,12 +3284,12 @@ final class eg extends qh {
                                                                                   if (3 == this.field_x) {
                                                                                     this.field_x = 4;
                                                                                   }
-                                                                                  this.field_n = 31;
+                                                                                  this.animationFrame = 31;
                                                                                   if (this.field_x == 0) {
-                                                                                    if (2 >= this.field_i.field_a) {
-                                                                                      this.field_i.field_a = 2;
-                                                                                      this.field_n = 2;
-                                                                                      this.field_f.field_a = 0;
+                                                                                    if (2 >= this.tilePosition.row) {
+                                                                                      this.tilePosition.row = 2;
+                                                                                      this.animationFrame = 2;
+                                                                                      this.tileOffset.row = 0;
                                                                                       me.field_f = me.field_f + ql.field_c;
                                                                                       w.field_b = 0;
                                                                                       BufferedSocket.field_c = BufferedSocket.field_c + 7;
@@ -3297,8 +3297,8 @@ final class eg extends qh {
                                                                                       this.field_d = 128;
                                                                                       this.field_w = 0;
                                                                                       ql.field_c = 7;
-                                                                                      this.field_f.field_b = this.field_f.field_b - 40;
-                                                                                      this.field_n = 0;
+                                                                                      this.tileOffset.column = this.tileOffset.column - 40;
+                                                                                      this.animationFrame = 0;
                                                                                       stackIn_1184_0 = 0;
                                                                                       if (pk.field_s) {
                                                                                         stackIn_1185_1 = 0;
@@ -3309,9 +3309,9 @@ final class eg extends qh {
                                                                                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, 256 * ee.field_p / 100);
                                                                                       }
                                                                                     } else {
-                                                                                      this.field_i.field_a = this.field_i.field_a - 1;
+                                                                                      this.tilePosition.row = this.tilePosition.row - 1;
                                                                                       this.field_x = 4;
-                                                                                      this.field_f.field_a = this.field_f.field_a + 230;
+                                                                                      this.tileOffset.row = this.tileOffset.row + 230;
                                                                                     }
                                                                                   }
                                                                                 }
@@ -3321,9 +3321,9 @@ final class eg extends qh {
                                                                                   fieldTemp$45 = this.field_z;
                                                                                   this.field_z = this.field_z - 1;
                                                                                   if (0 >= fieldTemp$45) {
-                                                                                    this.field_n = this.field_n + 1;
-                                                                                    if (this.field_n > 1) {
-                                                                                      this.field_n = 0;
+                                                                                    this.animationFrame = this.animationFrame + 1;
+                                                                                    if (this.animationFrame > 1) {
+                                                                                      this.animationFrame = 0;
                                                                                     }
                                                                                     this.field_z = 5;
                                                                                   }
@@ -3331,7 +3331,7 @@ final class eg extends qh {
                                                                                   this.field_p = 75;
                                                                                   w.field_b = w.field_b + 1;
                                                                                   if (200 < w.field_b) {
-                                                                                    this.field_n = 23;
+                                                                                    this.animationFrame = 23;
                                                                                     stackIn_1239_0 = 0;
                                                                                     if (pk.field_s) {
                                                                                       stackIn_1240_1 = 0;
@@ -3346,20 +3346,20 @@ final class eg extends qh {
                                                                                     this.field_z = 0;
                                                                                     this.field_x = 0;
                                                                                     this.field_w = 0;
-                                                                                    this.field_n = 25;
+                                                                                    this.animationFrame = 25;
                                                                                   }
                                                                                 } else {
                                                                                   if (this.field_x == 0) {
                                                                                     this.field_z = this.field_z + 1;
                                                                                     if (10 < this.field_z) {
-                                                                                      this.field_n = this.field_n + 1;
-                                                                                      if (this.field_n == 27) {
-                                                                                        ii.field_e[WidgetTheme.field_k].a(9147, 41, this.field_i);
-                                                                                        ii.field_e[WidgetTheme.field_k].field_f.a(-85, this.field_f);
-                                                                                        dupTemp$46 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                                        dupTemp$46.field_b = dupTemp$46.field_b + (40 + this.field_h * 120);
-                                                                                        dupTemp$47 = ii.field_e[WidgetTheme.field_k].field_f;
-                                                                                        dupTemp$47.field_a = dupTemp$47.field_a + 40;
+                                                                                      this.animationFrame = this.animationFrame + 1;
+                                                                                      if (this.animationFrame == 27) {
+                                                                                        ii.field_e[WidgetTheme.field_k].initialize(9147, 41, this.tilePosition);
+                                                                                        ii.field_e[WidgetTheme.field_k].tileOffset.set(-85, this.tileOffset);
+                                                                                        dupTemp$46 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                                        dupTemp$46.column = dupTemp$46.column + (40 + this.field_h * 120);
+                                                                                        dupTemp$47 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                                                                                        dupTemp$47.row = dupTemp$47.row + 40;
                                                                                         ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                                         ii.field_e[WidgetTheme.field_k].field_w = (int)(Math.random() * 100.0);
                                                                                         WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -3367,11 +3367,11 @@ final class eg extends qh {
                                                                                           tl.field_a.addSample(SpriteState.secondarySoundEffects[36], 100, 192 * ee.field_p / 100);
                                                                                         }
                                                                                       }
-                                                                                      if (25 > this.field_n) {
-                                                                                        this.field_n = 25;
+                                                                                      if (25 > this.animationFrame) {
+                                                                                        this.animationFrame = 25;
                                                                                       }
-                                                                                      if (this.field_n > 27) {
-                                                                                        this.field_n = 19;
+                                                                                      if (this.animationFrame > 27) {
+                                                                                        this.animationFrame = 19;
                                                                                         this.field_w = this.field_w + 1;
                                                                                       }
                                                                                     }
@@ -3379,28 +3379,28 @@ final class eg extends qh {
                                                                                       this.field_w = 0;
                                                                                       this.field_x = 2;
                                                                                       this.field_z = 0;
-                                                                                      this.field_e = 5;
-                                                                                      if (ii.field_e[0].field_i.field_a > 2 + this.field_i.field_a) {
-                                                                                        this.field_e = 80;
+                                                                                      this.verticalVelocity = 5;
+                                                                                      if (ii.field_e[0].tilePosition.row > 2 + this.tilePosition.row) {
+                                                                                        this.verticalVelocity = 80;
                                                                                       }
-                                                                                      if (ii.field_e[0].field_i.field_a < this.field_i.field_a) {
-                                                                                        this.field_i.field_a = this.field_i.field_a - 1;
-                                                                                        this.field_f.field_a = this.field_f.field_a + 230;
-                                                                                        this.field_e = -5;
+                                                                                      if (ii.field_e[0].tilePosition.row < this.tilePosition.row) {
+                                                                                        this.tilePosition.row = this.tilePosition.row - 1;
+                                                                                        this.tileOffset.row = this.tileOffset.row + 230;
+                                                                                        this.verticalVelocity = -5;
                                                                                         this.field_x = 3;
                                                                                       }
                                                                                     }
                                                                                   }
                                                                                   if (this.field_x == 2) {
                                                                                     this.a(false, 22, 25, param1);
-                                                                                    if (this.field_e <= 0) {
+                                                                                    if (this.verticalVelocity <= 0) {
                                                                                       this.field_x = 3;
                                                                                     }
-                                                                                    this.field_n = 21;
+                                                                                    this.animationFrame = 21;
                                                                                   }
                                                                                   if (this.field_x == 3) {
                                                                                     var4 = 40;
-                                                                                    if (ii.field_e[0].field_i.field_a < -2 + this.field_i.field_a) {
+                                                                                    if (ii.field_e[0].tilePosition.row < -2 + this.tilePosition.row) {
                                                                                       var4 = 20;
                                                                                     }
                                                                                     this.a(var4, (byte) -82, param1, true);
@@ -3408,11 +3408,11 @@ final class eg extends qh {
                                                                                     this.field_w = this.field_w + 1;
                                                                                     if (fieldTemp$48 > 25 &&
                                                                                       this.b(param1, -4) == 1 &&
-                                                                                      this.field_f.field_a == 0) {
-                                                                                      this.field_n = 25;
+                                                                                      this.tileOffset.row == 0) {
+                                                                                      this.animationFrame = 25;
                                                                                       this.field_w = 0;
                                                                                       this.field_z = 0;
-                                                                                      if (ii.field_e[0].field_i.field_b >= this.field_i.field_b) {
+                                                                                      if (ii.field_e[0].tilePosition.column >= this.tilePosition.column) {
                                                                                         stackIn_1225_1 = 1;
                                                                                       } else {
                                                                                         stackIn_1225_1 = -1;
@@ -3444,9 +3444,9 @@ final class eg extends qh {
                                                                     }
                                                                     this.e(false);
                                                                     if (1 == this.b(param1, -4) &&
-                                                                      0 == this.field_f.field_a &&
+                                                                      0 == this.tileOffset.row &&
                                                                       this.field_w <= 2) {
-                                                                      this.field_e = 5;
+                                                                      this.verticalVelocity = 5;
                                                                       stackIn_1000_0 = 0;
                                                                       if (pk.field_s) {
                                                                         stackIn_1001_1 = 0;
@@ -3456,8 +3456,8 @@ final class eg extends qh {
                                                                       if (stackIn_1000_0 == stackIn_1001_1) {
                                                                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[14], 100, ee.field_p * 256 / 100);
                                                                       }
-                                                                      ii.field_e[WidgetTheme.field_k].a(9147, this.field_B, this.field_i);
-                                                                      ii.field_e[WidgetTheme.field_k].field_f.a(-112, this.field_f);
+                                                                      ii.field_e[WidgetTheme.field_k].initialize(9147, this.actorType, this.tilePosition);
+                                                                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-112, this.tileOffset);
                                                                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                       ii.field_e[WidgetTheme.field_k].field_w = 11;
                                                                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -3486,7 +3486,7 @@ final class eg extends qh {
                                                       this.a(param0 ^ -72, param1);
                                                     } else {
                                                       if (this.field_x == 0) {
-                                                        if (ii.field_e[0].field_i.field_a > this.field_i.field_a) {
+                                                        if (ii.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                           this.field_w = this.field_w + 1;
                                                         }
                                                         this.a(false, 1, 20, (byte) -67, param1);
@@ -3494,7 +3494,7 @@ final class eg extends qh {
                                                         this.field_w = this.field_w + 1;
                                                         if (200 < fieldTemp$64) {
                                                           this.field_w = 0;
-                                                          if (ii.field_e[0].field_i.field_b < this.field_i.field_b) {
+                                                          if (ii.field_e[0].tilePosition.column < this.tilePosition.column) {
                                                             stackIn_716_1 = -1;
                                                           } else {
                                                             stackIn_716_1 = 1;
@@ -3504,15 +3504,15 @@ final class eg extends qh {
                                                         }
                                                       }
                                                       if (1 == this.field_x) {
-                                                        this.field_n = 19;
+                                                        this.animationFrame = 19;
                                                         fieldTemp$65 = this.field_w;
                                                         this.field_w = this.field_w + 1;
                                                         if (fieldTemp$65 > 40) {
                                                           this.field_w = 0;
                                                           this.field_x = 2;
-                                                          this.field_e = 80;
-                                                          if (this.field_i.field_a >= ii.field_e[0].field_i.field_a) {
-                                                            this.field_e = 40;
+                                                          this.verticalVelocity = 80;
+                                                          if (this.tilePosition.row >= ii.field_e[0].tilePosition.row) {
+                                                            this.verticalVelocity = 40;
                                                           }
                                                         }
                                                       }
@@ -3550,7 +3550,7 @@ final class eg extends qh {
                         this.a(false, 120, param1);
                       } else {
                         if (0 != this.field_r) {
-                          if (this.field_B != 8) {
+                          if (this.actorType != 8) {
                             this.a(98, param1);
                           } else {
                             this.field_p = 0;
@@ -3558,11 +3558,11 @@ final class eg extends qh {
                           }
                         } else {
                           var4 = 15;
-                          if (this.field_B == 7) {
+                          if (this.actorType == 7) {
                             var4 = 10;
                           }
                           if (this.field_x == 0) {
-                            if (this.field_i.field_a < ii.field_e[0].field_i.field_a) {
+                            if (this.tilePosition.row < ii.field_e[0].tilePosition.row) {
                               this.field_w = this.field_w + 1;
                             }
                             this.a(false, 0, var4, (byte) -68, param1);
@@ -3573,7 +3573,7 @@ final class eg extends qh {
                               this.field_w = 0;
                               this.field_z = 0;
                               if (100.0 * Math.random() < 10.0 &&
-                                7 == this.field_B) {
+                                7 == this.actorType) {
                                 this.field_x = 4;
                               }
                             }
@@ -3584,9 +3584,9 @@ final class eg extends qh {
                             if (fieldTemp$74 > 25) {
                               this.field_x = 2;
                               this.field_w = 0;
-                              this.field_e = 70;
+                              this.verticalVelocity = 70;
                             }
-                            this.field_n = 19;
+                            this.animationFrame = 19;
                           }
                           if (this.field_x == 2) {
                             this.a(false, 22, var4, param1);
@@ -3615,8 +3615,8 @@ final class eg extends qh {
                             }
                             this.field_x = 0;
                             this.field_w = 0;
-                            ii.field_e[WidgetTheme.field_k].a(param0 ^ -9154, 8, this.field_i);
-                            ii.field_e[WidgetTheme.field_k].field_f.a(-88, this.field_f);
+                            ii.field_e[WidgetTheme.field_k].initialize(param0 ^ -9154, 8, this.tilePosition);
+                            ii.field_e[WidgetTheme.field_k].tileOffset.set(-88, this.tileOffset);
                             ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                             ii.field_e[WidgetTheme.field_k].field_w = 10;
                             WidgetTheme.field_k = WidgetTheme.field_k + 1;
@@ -3640,7 +3640,7 @@ final class eg extends qh {
                     if (this.field_p > 0) {
                       if (this.field_r == 0) {
                         if (this.field_x == 0) {
-                          if (this.field_i.field_a < ii.field_e[0].field_i.field_a) {
+                          if (this.tilePosition.row < ii.field_e[0].tilePosition.row) {
                             this.field_w = this.field_w + 1;
                           }
                           stackIn_276_1 = false;
@@ -3662,13 +3662,13 @@ final class eg extends qh {
                           }
                         }
                         if (this.field_x == 1) {
-                          this.field_n = 19;
+                          this.animationFrame = 19;
                           fieldTemp$77 = this.field_w;
                           this.field_w = this.field_w + 1;
                           if (25 < fieldTemp$77) {
                             this.field_x = 2;
                             this.field_w = 0;
-                            this.field_e = 80;
+                            this.verticalVelocity = 80;
                           }
                         }
                         if (2 == this.field_x) {
@@ -3713,11 +3713,11 @@ final class eg extends qh {
           } else {
             stackIn_1270_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_1269_0), ((StringBuilder) (Object) stackIn_1269_1).append(stackIn_1270_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_1269_0), ((StringBuilder) (Object) stackIn_1269_1).append(stackIn_1270_2).append(')').toString());
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
+    final static void loadCommonWidgetSprites(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         Sprite var16 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -3741,15 +3741,15 @@ final class eg extends qh {
           vf.field_j = WidgetContainer.loadSpriteStrip("commonui", param3, "button", 121);
           te.field_k = Js5Index.a((byte) 125, "commonui", param3, "validation");
           e.field_b = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo12", 67, param0));
-          gh.field_b = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo14", 93, param0));
+          Crc32Helpers.field_b = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo14", 93, param0));
           PacketBuffer.field_i = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo14bold", 118, param0));
           var16 = new Sprite(param2.a(122, "", "button.gif"), (java.awt.Component) ((Object) wizardrun.field_G));
           TextFieldValidator.a("commonui", "dropdown", param3, (byte) -108);
           var5 = re.a(param3, "commonui", "screen_options", 112);
           IterableNodeHashTable.field_f = new IndexedSprite[4];
-          s.field_c = new IndexedSprite[4];
+          CharSequenceJoiner.field_c = new IndexedSprite[4];
           nj.field_k = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{IterableNodeHashTable.field_f, s.field_c, nj.field_k};
+          var6 = new IndexedSprite[][]{IterableNodeHashTable.field_f, CharSequenceJoiner.field_c, nj.field_k};
           var17 = new int[4][];
           var15 = var17;
           var7 = var15;
@@ -3768,7 +3768,7 @@ final class eg extends qh {
             }
           }
           var9Lifetime1 = var16.height;
-          ph.d(-31782);
+          GameMenu.d(-31782);
           int var10 = -88 / ((15 - param1) / 44);
           var16.bindAsRasterTarget();
           SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
@@ -3784,11 +3784,11 @@ final class eg extends qh {
           bb.b(4);
           vf.field_j = new Sprite[]{var11, var13, var12};
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "eg.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "eg.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void drawWizard(int param0, int param1, byte param2) {
         int var11 = 0;
         int stackIn_21_1 = 0;
         int var4;
@@ -3802,8 +3802,8 @@ final class eg extends qh {
         if (param2 != 62) {
           this.field_q = (Sprite) null;
         }
-        var4 = this.field_f.field_b * 32 / 240 + 32 * this.field_i.field_b;
-        var5 = 32 * (15 - this.field_i.field_a) - (32 + this.field_f.field_a * 32 / 240);
+        var4 = this.tileOffset.column * 32 / 240 + 32 * this.tilePosition.column;
+        var5 = 32 * (15 - this.tilePosition.row) - (32 + this.tileOffset.row * 32 / 240);
         var5 = var5 - (this.field_d - 32);
         var6 = oc.field_b[param1];
         if (param1 == 4 &&
@@ -3815,35 +3815,35 @@ final class eg extends qh {
           var6 = MusicPatch.field_j;
         }
         if (this.field_p <= 0) {
-          var7 = 240 * this.field_i.field_b + this.field_f.field_b;
+          var7 = 240 * this.tilePosition.column + this.tileOffset.column;
           var7 = 0;
-          var6[this.field_n].a(var4 + this.field_d / 2, var5 + this.field_d / 2, -105, 128, var7);
+          var6[this.animationFrame].a(var4 + this.field_d / 2, var5 + this.field_d / 2, -105, 128, var7);
         } else {
           if (this.field_r != 0) {
-            var7 = this.field_i.field_b * 240 + this.field_f.field_b;
+            var7 = this.tilePosition.column * 240 + this.tileOffset.column;
             var8 = this.field_d / 2;
-            var6[this.field_n].a(var8 + var4, var8 + var5, -112, 128, var7);
-            this.field_q = var6[this.field_n].flipHorizontal();
+            var6[this.animationFrame].a(var8 + var4, var8 + var5, -112, 128, var7);
+            this.field_q = var6[this.animationFrame].flipHorizontal();
             this.field_A = var5;
             this.field_y = var4;
             for (var11 = 0; -(var8 * this.field_w / 1000) + var8 > var11; var11 += 2) {
-              var9 = (0.5 * (double)(this.field_f.field_b + this.field_i.field_b * 240) + 6.28 * (double)var11) / (double)var8;
-              ob.field_c.drawScaledAlpha((int)((double)var8 * Math.cos((double)this.field_h * var9) + (double)var8) + (var4 - 6), var5 + ((int)((double)var8 + Math.sin(var9 * (double)this.field_h) * (double)var8) - 6), 12, 12, 255 - var11 % 10 * 25);
-              ob.field_c.drawScaledAlpha(var4 - (int)((double)var8 * Math.cos((double)this.field_h * var9) - (double)var8) - 6, -(int)((double)(-var8) + (double)var8 * Math.sin(var9 * (double)this.field_h)) + (var5 - 6), 12, 12, 255 - 25 * (var11 % 10));
+              var9 = (0.5 * (double)(this.tileOffset.column + this.tilePosition.column * 240) + 6.28 * (double)var11) / (double)var8;
+              GridPoint.field_c.drawScaledAlpha((int)((double)var8 * Math.cos((double)this.field_h * var9) + (double)var8) + (var4 - 6), var5 + ((int)((double)var8 + Math.sin(var9 * (double)this.field_h) * (double)var8) - 6), 12, 12, 255 - var11 % 10 * 25);
+              GridPoint.field_c.drawScaledAlpha(var4 - (int)((double)var8 * Math.cos((double)this.field_h * var9) - (double)var8) - 6, -(int)((double)(-var8) + (double)var8 * Math.sin(var9 * (double)this.field_h)) + (var5 - 6), 12, 12, 255 - 25 * (var11 % 10));
             }
           } else {
             if (-1 == this.field_h) {
-              var6[this.field_n].drawTransparent(var4, var5);
-              this.field_q = var6[this.field_n];
+              var6[this.animationFrame].drawTransparent(var4, var5);
+              this.field_q = var6[this.animationFrame];
               this.field_A = var5;
               this.field_y = var4;
             } else {
-              var6[this.field_n].drawMirrored(var4, var5);
-              this.field_q = var6[this.field_n].flipHorizontal();
+              var6[this.animationFrame].drawMirrored(var4, var5);
+              this.field_q = var6[this.animationFrame].flipHorizontal();
               this.field_y = var4;
               this.field_A = var5;
             }
-            if (!(AccountCreationForm.field_T < 250) && (qh.field_l == 0 &&
+            if (!(AccountCreationForm.field_T < 250) && (GridActor.field_l == 0 &&
               ql.field_c == 0 &&
               AccountCreationForm.field_T < 400)) {
               if (uc.field_g >= 20) {
@@ -3851,13 +3851,13 @@ final class eg extends qh {
               } else {
                 stackIn_21_1 = 16711680;
               }
-              this.a(stackIn_21_1, var6[this.field_n].fullWidth / 2 + var4, true, "*", -4 + var5);
+              this.drawOutlinedLabel(stackIn_21_1, var6[this.animationFrame].fullWidth / 2 + var4, true, "*", -4 + var5);
             }
           }
         }
     }
 
-    private final void a(int param0, int param1, boolean param2, tg param3) {
+    private final void a(int param0, int param1, boolean param2, LevelData param3) {
         int stackIn_13_0 = 0;
         int stackIn_14_1 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -3873,12 +3873,12 @@ final class eg extends qh {
             return;
           }
           if (this.b(param3, -4) == 1 &&
-            0 == this.field_e) {
+            0 == this.verticalVelocity) {
             this.field_z = 0;
             this.field_x = 0;
-            if (this.field_B != 5 &&
-              this.field_B != 22 &&
-              38 != this.field_B &&
+            if (this.actorType != 5 &&
+              this.actorType != 22 &&
+              38 != this.actorType &&
               64 >= this.field_d) {
               stackIn_13_0 = 0;
               if (pk.field_s) {
@@ -3888,7 +3888,7 @@ final class eg extends qh {
               }
               if (stackIn_13_0 != stackIn_14_1) {
                 if (pk.field_s) {
-                  if (6 == this.field_B) {
+                  if (6 == this.actorType) {
                     tl.field_a.addSample(SpriteState.secondarySoundEffects[6], 100, 256 * ee.field_p / 100);
                   } else {
                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, ee.field_p * 256 / 100);
@@ -3901,21 +3901,21 @@ final class eg extends qh {
           }
           if (param2) {
             this.field_z = this.field_z + 1;
-            this.field_n = 21;
+            this.animationFrame = 21;
             if (25 < this.field_z) {
-              this.field_n = 22;
+              this.animationFrame = 22;
             }
-            if (this.field_B == 6) {
-              this.field_n = 22;
+            if (this.actorType == 6) {
+              this.animationFrame = 22;
               if (this.field_z > 15) {
-                this.field_n = 23;
+                this.animationFrame = 23;
               }
               if (this.field_z > 25) {
-                this.field_n = 24;
+                this.animationFrame = 24;
               }
             }
           } else {
-            this.field_n = 21;
+            this.animationFrame = 21;
           }
           if (this.field_s > 0) {
             if (param2) {
@@ -3937,7 +3937,7 @@ final class eg extends qh {
             if (this.field_p > 0) {
               return;
             }
-            this.field_e = 60;
+            this.verticalVelocity = 60;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3950,30 +3950,30 @@ final class eg extends qh {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, tg param3) {
+    private final void a(boolean param0, int param1, int param2, LevelData param3) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        ob var6 = null;
+        GridPoint var6 = null;
         try {
           if (param1 != 22) {
-            var6 = (ob) null;
-            this.a(81, 113, (ob) null);
+            var6 = (GridPoint) null;
+            this.initialize(81, 113, (GridPoint) null);
           }
           this.a(1, BufferedRandomAccessFile.soundEffects, param3, 1, param2, 1, tl.field_a, pk.field_s, (byte) -37);
-          if (this.field_e <= 0) {
+          if (this.verticalVelocity <= 0) {
             this.field_x = 3;
             this.field_z = 0;
           }
-          this.field_n = 20;
-          if (6 == this.field_B) {
-            this.field_n = 22;
+          this.animationFrame = 20;
+          if (6 == this.actorType) {
+            this.animationFrame = 22;
           }
           if (this.field_s > 0) {
             if (param0) {
@@ -3995,7 +3995,7 @@ final class eg extends qh {
             if (this.field_p > 0) {
               return;
             }
-            this.field_e = 60;
+            this.verticalVelocity = 60;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4008,11 +4008,11 @@ final class eg extends qh {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, byte param3, tg param4) {
+    private final void a(boolean param0, int param1, int param2, byte param3, LevelData param4) {
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
         String stackIn_60_2 = null;
@@ -4035,8 +4035,8 @@ final class eg extends qh {
             this.a(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) -117);
           }
           if (param1 == 1) {
-            if (this.field_i.field_a <= ii.field_e[0].field_i.field_a &&
-              this.field_e == 0) {
+            if (this.tilePosition.row <= ii.field_e[0].tilePosition.row &&
+              this.verticalVelocity == 0) {
               this.a(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 127);
             } else {
               this.a(1, BufferedRandomAccessFile.soundEffects, param4, 1, param2, 1, tl.field_a, pk.field_s, (byte) -65);
@@ -4045,25 +4045,25 @@ final class eg extends qh {
           this.field_z = this.field_z - 1;
           if (0 >= this.field_z) {
             this.field_z = 5;
-            this.field_n = this.field_n + 1;
+            this.animationFrame = this.animationFrame + 1;
             if (param0) {
               this.field_z = 2;
             }
           }
-          if (this.field_n < 2) {
-            this.field_n = 2;
+          if (this.animationFrame < 2) {
+            this.animationFrame = 2;
           }
           if (!param0) {
-            if (5 < this.field_n) {
-              this.field_n = 2;
+            if (5 < this.animationFrame) {
+              this.animationFrame = 2;
             }
           } else {
-            if (this.field_n > 9) {
-              this.field_n = 2;
+            if (this.animationFrame > 9) {
+              this.animationFrame = 2;
             }
           }
           if (param3 >= -58) {
-            this.a(-80, -12, (byte) -64);
+            this.drawWizard(-80, -12, (byte) -64);
           }
           if (this.field_s > 0) {
             if (param0) {
@@ -4096,7 +4096,7 @@ final class eg extends qh {
                 this.c(1);
               }
             }
-            this.field_e = 60;
+            this.verticalVelocity = 60;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4109,27 +4109,27 @@ final class eg extends qh {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, ob param2) {
+    final void initialize(int param0, int param1, GridPoint param2) {
         RuntimeException stackIn_119_0 = null;
         StringBuilder stackIn_119_1 = null;
         String stackIn_120_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_n = 0;
+          this.animationFrame = 0;
           this.field_w = 0;
           this.field_q = null;
           this.field_z = 0;
-          this.field_B = param1;
+          this.actorType = param1;
           this.field_x = 0;
-          this.field_i.a(-109, param2);
-          this.field_f.b(17939);
+          this.tilePosition.set(-109, param2);
+          this.tileOffset.clear(17939);
           this.field_m = 0;
-          this.field_e = 0;
+          this.verticalVelocity = 0;
           this.field_z = 0;
           this.field_r = 0;
           this.field_o = 0;
@@ -4164,7 +4164,7 @@ final class eg extends qh {
           }
           if (param1 == 6) {
             this.field_d = 65;
-            this.field_f.field_b = this.field_f.field_b - 80;
+            this.tileOffset.column = this.tileOffset.column - 80;
             this.field_p = 50;
             this.field_o = 7;
           }
@@ -4314,21 +4314,21 @@ final class eg extends qh {
           } else {
             stackIn_120_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_119_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_119_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
         }
     }
 
-    eg() {
+    PlatformActor() {
         this.field_k = 0;
         this.field_w = 0;
         this.field_x = 0;
-        this.field_B = 0;
-        this.field_i.b(17939);
-        this.field_f.b(17939);
+        this.actorType = 0;
+        this.tilePosition.clear(17939);
+        this.tileOffset.clear(17939);
         this.field_m = 0;
         this.field_p = 0;
         this.field_r = 0;
-        this.field_e = 0;
+        this.verticalVelocity = 0;
         this.field_h = 1;
         this.field_o = 0;
         this.field_q = null;

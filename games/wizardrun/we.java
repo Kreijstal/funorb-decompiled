@@ -79,7 +79,7 @@ final class we {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
         }
     }
 

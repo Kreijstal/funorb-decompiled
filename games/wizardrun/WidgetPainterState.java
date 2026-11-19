@@ -72,7 +72,7 @@ final class WidgetPainterState {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class WidgetPainterState {
           param0.field_j = this.field_j;
           param0.field_e = this.field_e;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "la.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "la.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class WidgetPainterState {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ final class WidgetPainterState {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

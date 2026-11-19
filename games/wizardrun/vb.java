@@ -44,8 +44,8 @@ final class vb extends TextButton {
             }
             var11 = 2147483647;
             var12 = -1;
-            for (var13 = 0; var13 < this.field_H.a(31); var13++) {
-              var14 = -var9 + this.field_H.a(-112, var13);
+            for (var13 = 0; var13 < this.field_H.size(31); var13++) {
+              var14 = -var9 + this.field_H.get(-112, var13);
               var14 = var14 * var14;
               if (var11 > var14) {
                 var12 = var13;
@@ -56,7 +56,7 @@ final class vb extends TextButton {
               this.field_H.removeAt(-1, var12);
             }
           } else {
-            this.field_H.e(16711838, var9);
+            this.field_H.add(16711838, var9);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -69,7 +69,7 @@ final class vb extends TextButton {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -78,17 +78,17 @@ final class vb extends TextButton {
           this.field_J = 63;
         }
         if (param1 < 0 ||
-          this.field_H.a(param0 + 10327) <= param1) {
+          this.field_H.size(param0 + 10327) <= param1) {
           return -1;
         }
-        return this.field_H.a(-126, param1);
+        return this.field_H.get(-126, param1);
     }
 
     final int d(int param0) {
         if (param0 != 0) {
           return 84;
         }
-        return this.field_H.a(-5);
+        return this.field_H.size(-5);
     }
 
     final static Sprite[] c(int param0, int param1, int param2, int param3, int param4) {

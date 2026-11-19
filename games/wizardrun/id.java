@@ -19,7 +19,7 @@ final class id {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = fa.a((byte) 117, "", param1, '_');
+          param1 = BrowserCookieHelpers.a((byte) 117, "", param1, '_');
           if (param2 != 0) {
             id.a((byte) 108, 39, 2);
           }
@@ -42,7 +42,7 @@ final class id {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -94,9 +94,9 @@ final class id {
           }
           var5 = new WhirlpoolHasher();
           var5.reset(117);
-          var5.a((long)(param2 * 8), var4, (byte) -19);
+          var5.updateBits((long)(param2 * 8), var4, (byte) -19);
           var6 = new byte[64];
-          var5.a(var6, 0, (byte) 124);
+          var5.finish(var6, 0, (byte) 124);
           stackIn_7_0 = var6;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -109,7 +109,7 @@ final class id {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -121,13 +121,13 @@ final class id {
           if (jc.field_H != null && (0 > param1 ||
             NodeHashTableIterator.field_j == BufferedSocket.field_l)) {
             if (n.field_b.position == 0 &&
-              BufferedSocket.field_k + 10000L < d.a((byte) 44)) {
-              n.field_b.c((byte) 65, param1);
+              BufferedSocket.field_k + 10000L < MonotonicClockHelpers.monotonicMillis((byte) 44)) {
+              n.field_b.writeCipheredOpcode((byte) 65, param1);
             }
             if (n.field_b.position > 0) {
               try {
-                jc.field_H.a(n.field_b.position, n.field_b.payload, 1, 0);
-                BufferedSocket.field_k = d.a((byte) 29);
+                jc.field_H.write(n.field_b.position, n.field_b.payload, 1, 0);
+                BufferedSocket.field_k = MonotonicClockHelpers.monotonicMillis((byte) 29);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

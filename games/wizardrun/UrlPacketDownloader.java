@@ -42,13 +42,13 @@ final class UrlPacketDownloader implements Runnable {
               pk.field_o = false;
               var3_int = 1;
             }
-            ug.a(10487, var3_int != 0, dl.a(true), NameSuggestionsPanel.g(17325), sa.field_e);
+            RadialSelectorWidget.a(10487, var3_int != 0, dl.a(true), NameSuggestionsPanel.g(17325), sa.field_e);
             return;
           }
           if (!w.a((byte) -117)) {
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clear();
             dg.a(320, 240, (byte) -97);
-            fc.a((byte) 80, 0, param2, 0);
+            DateFormattingHelpers.a((byte) 80, 0, param2, 0);
             return;
           }
           if (ml.field_t != 0) {
@@ -56,7 +56,7 @@ final class UrlPacketDownloader implements Runnable {
             return;
           }
           uk.a((byte) -123, param1, false);
-          fc.a((byte) 80, 0, param2, 0);
+          DateFormattingHelpers.a((byte) 80, 0, param2, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,7 +68,7 @@ final class UrlPacketDownloader implements Runnable {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class UrlPacketDownloader implements Runnable {
               break;
             }
             if (this.field_i.position == this.field_i.payload.length) {
-              throw UrlPacketDownloader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.payload.length + " " + this.field_d));
+              throw UrlPacketDownloader.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_i.payload.length + " " + this.field_d));
             }
             var1 = this;
             synchronized (var1) {
@@ -135,22 +135,22 @@ final class UrlPacketDownloader implements Runnable {
         RuntimeException var2 = null;
         var4 = wizardrun.field_H;
         try {
-          var5 = (dc) (v.field_d.b((byte) 111));
+          var5 = (dc) (v.field_d.first((byte) 111));
           while (var5 != null) {
             SecondaryNodeDeque.a(-14149, param0, var5);
-            var5 = (dc) (v.field_d.d(8192));
+            var5 = (dc) (v.field_d.next(8192));
           }
           var3 = 105 % ((param1 + 34) / 40);
-          var6 = (sc) (tg.field_c.b((byte) 118));
+          var6 = (sc) (LevelData.field_c.first((byte) 118));
           while (var6 != null) {
             ld.a(param0, var6, 0);
-            var6 = (sc) (tg.field_c.d(8192));
+            var6 = (sc) (LevelData.field_c.next(8192));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2), "ud.B(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2), "ud.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -295,10 +295,10 @@ final class UrlPacketDownloader implements Runnable {
           return;
         }
         try {
-          ph.d(-31782);
+          GameMenu.d(-31782);
           SoftwareRasterizer.setTarget(param0.pixels, param0.fullWidth, param0.fullHeight);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ud.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ud.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -308,7 +308,7 @@ final class UrlPacketDownloader implements Runnable {
           this.field_k = param0;
           this.field_i = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -318,7 +318,7 @@ final class UrlPacketDownloader implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -42,7 +42,7 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
           this.field_H.field_w = (WidgetRenderer) ((Object) new jl());
           var7 = WeightedLruCache.a(new String[]{this.a(0), this.h((byte) -85)}, (byte) 79, t.field_b);
           var3 = 20;
-          var4 = new WidgetPainter(gh.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, gh.field_b.field_M, -1, 2147483647, true);
+          var4 = new WidgetPainter(Crc32Helpers.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, Crc32Helpers.field_b.field_M, -1, 2147483647, true);
           this.field_J = new HotspotTextWidget(var7, var4);
           this.field_J.field_p = "";
           this.field_J.a(1, AccountCreationForm.field_R, 0);
@@ -121,7 +121,7 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
           this.a((UiWidget) (this.field_H), (byte) 126);
           this.a(127, 0, var5 + var3 + 55, 300, 0);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -185,19 +185,19 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
         int var6 = wizardrun.field_H;
         try {
           if (param0 == 0) {
-            fa.a("terms.ws", 12);
+            BrowserCookieHelpers.a("terms.ws", 12);
           } else {
             if (1 == param0) {
-              fa.a("privacy.ws", 12);
+              BrowserCookieHelpers.a("privacy.ws", 12);
             } else {
               if (param0 == 2) {
-                fa.a("conduct.ws", 12);
+                BrowserCookieHelpers.a("conduct.ws", 12);
               }
             }
           }
           int var5_int = -13 / ((36 - param3) / 53);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "re.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "re.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

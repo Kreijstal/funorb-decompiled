@@ -23,7 +23,7 @@ final class tk implements WidgetRenderer {
           jg.field_m = param5;
           kk.field_xb = param4;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -92,12 +92,12 @@ final class tk implements WidgetRenderer {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public tk() {
-        this.field_d = gh.field_b;
+        this.field_d = Crc32Helpers.field_b;
         this.field_b = 1;
         this.field_c = 1;
     }
@@ -108,7 +108,7 @@ final class tk implements WidgetRenderer {
           this.field_d = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

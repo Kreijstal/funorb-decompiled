@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class tg implements Serializable {
+final class LevelData implements Serializable {
     int[] field_j;
     boolean[] field_d;
     int[] field_f;
@@ -39,7 +39,7 @@ final class tg implements Serializable {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
-            var5 = fc.a(var3, param0);
+            var5 = DateFormattingHelpers.a(var3, param0);
             if (var5 == null) {
               stackIn_12_0 = dh.a(-27602, var4);
               return stackIn_12_0;
@@ -59,18 +59,18 @@ final class tg implements Serializable {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final static void a(long param0, boolean param1) {
+    final static void sleepMillis(long param0, boolean param1) {
         if (param0 <= 0L) {
           return;
         }
         if (param0 % 10L != 0L) {
           pg.a(param0, 2);
           if (param1) {
-            tg.releaseStatics(true);
+            LevelData.releaseStatics(true);
             return;
           }
           return;
@@ -78,7 +78,7 @@ final class tg implements Serializable {
         pg.a(-1L + param0, 2);
         pg.a(1L, 2);
         if (param1) {
-          tg.releaseStatics(true);
+          LevelData.releaseStatics(true);
           return;
         }
     }
@@ -92,7 +92,7 @@ final class tg implements Serializable {
         }
     }
 
-    tg() {
+    LevelData() {
         this.field_j = new int[300];
         this.field_d = new boolean[300];
         this.field_f = new int[300];

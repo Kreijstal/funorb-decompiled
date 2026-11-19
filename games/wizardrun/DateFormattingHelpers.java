@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class fc {
+final class DateFormattingHelpers {
     static String field_a;
     static rc field_b;
 
     public static void releaseStatics(int param0) {
         if (param0 != 10) {
-          fc.a((byte) 69, -69L);
+          DateFormattingHelpers.formatGmtTimestamp((byte) 69, -69L);
           field_b = null;
           field_a = null;
           return;
@@ -113,7 +113,7 @@ final class fc {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -127,11 +127,11 @@ final class fc {
         try {
           GameShell.field_A.b((UiWidget) (aa.field_lb), (byte) 55);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "fc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "fc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static String a(byte param0, long param1) {
+    final static String formatGmtTimestamp(byte param0, long param1) {
         int var8 = 0;
         int var9 = 0;
         ArchiveProvider.field_c.setTime(new Date(param1));
@@ -181,7 +181,7 @@ final class fc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 

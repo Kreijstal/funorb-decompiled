@@ -48,7 +48,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           this.field_F[var4_int] = this.a(0, param1, (WidgetListener) (this));
           this.field_E[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "vc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "vc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           var4_int = this.field_I != null ? this.field_J.measureWrappedHeight(this.field_I, 260, this.field_J.field_M) : 0;
           this.a(123, 0, 22 + var4_int, 288, 0);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -185,9 +185,9 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           if (param0 >= -67) {
             field_G = -79;
           }
-          fc.a(sd.field_c, false, -120);
+          DateFormattingHelpers.a(sd.field_c, false, -120);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "vc.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "vc.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

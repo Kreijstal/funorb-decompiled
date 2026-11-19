@@ -14,7 +14,7 @@ final class NanoTickClock extends TickClock {
     private long[] field_k;
     private long field_g;
 
-    final void a(int param0) {
+    final void reset(int param0) {
         this.field_g = 0L;
         if (this.field_m < this.field_h) {
           this.field_m = this.field_m + (-this.field_m + this.field_h);
@@ -67,7 +67,7 @@ final class NanoTickClock extends TickClock {
             boolean decompiledFrameRemainder0 = true;
             if (SingleChildWidget.field_B[var3].field_i == param1.field_i) {
               var4 = SingleChildWidget.field_B[var3].a((byte) 102);
-              if (qh.field_j < hj.field_b[var4]) {
+              if (GridActor.field_j < hj.field_b[var4]) {
                 hj.field_b[var4] = hj.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
@@ -93,12 +93,12 @@ final class NanoTickClock extends TickClock {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    final long b(byte param0) {
-        this.field_m = this.field_m + this.a(true);
+    final long delayMillis(byte param0) {
+        this.field_m = this.field_m + this.averageFrameNanos(true);
         if (param0 != 66) {
           return -28L;
         }
@@ -120,18 +120,18 @@ final class NanoTickClock extends TickClock {
           var1_int = id.field_b[param0];
           for (var2 = 1; var2 < id.field_b.length; var2++) {
             var3 = id.field_b[var2];
-            g.a(cb.field_e, var2 << 4, cb.field_e, var1_int, var3);
+            ArrayOperations.copy(cb.field_e, var2 << 4, cb.field_e, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "ia.J(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "ia.J(" + param0 + ')');
         }
     }
 
-    final int a(long param0, boolean param1) {
+    final int advanceTicks(long param0, boolean param1) {
         int var4;
         int var5;
         var5 = wizardrun.field_H;
@@ -156,7 +156,7 @@ final class NanoTickClock extends TickClock {
         return var4;
     }
 
-    private final long a(boolean param0) {
+    private final long averageFrameNanos(boolean param0) {
         int var8 = 0;
         int var9 = wizardrun.field_H;
         if (!param0) {

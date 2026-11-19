@@ -20,7 +20,7 @@ final class SoftwareRasterizer {
         clipTop = param0[1];
         clipRight = param0[2];
         clipBottom = param0[3];
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.releaseScratch();
     }
 
     final static void drawHorizontalLine(int param0, int param1, int param2, int param3) {
@@ -50,7 +50,7 @@ final class SoftwareRasterizer {
         clipTop = 0;
         clipRight = width;
         clipBottom = height;
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.releaseScratch();
     }
 
     final static void drawRectOutline(int param0, int param1, int param2, int param3, int param4) {
@@ -82,7 +82,7 @@ final class SoftwareRasterizer {
         clipTop = param1;
         clipRight = param2;
         clipBottom = param3;
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.releaseScratch();
     }
 
     final static void saveClip(int[] param0) {
@@ -161,9 +161,9 @@ final class SoftwareRasterizer {
         var29 = field_j;
         var26 = var29;
         var11 = var26;
-        g.a(var27, 0, param8);
-        g.a(var28, 0, param8);
-        g.a(var29, 0, param8);
+        ArrayOperations.clear(var27, 0, param8);
+        ArrayOperations.clear(var28, 0, param8);
+        ArrayOperations.clear(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {
@@ -1353,7 +1353,7 @@ final class SoftwareRasterizer {
         return;
     }
 
-    final static void d() {
+    final static void clear() {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1465,7 +1465,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    private final static void b() {
+    private final static void releaseScratch() {
         field_f = null;
         field_g = null;
     }
@@ -1569,7 +1569,7 @@ final class SoftwareRasterizer {
         if (clipBottom > param3) {
           clipBottom = param3;
         }
-        SoftwareRasterizer.b();
+        SoftwareRasterizer.releaseScratch();
     }
 
     static {

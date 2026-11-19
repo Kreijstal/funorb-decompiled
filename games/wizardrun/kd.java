@@ -23,7 +23,7 @@ final class kd {
         int var5 = 0;
         var5 = wizardrun.field_H;
         try {
-          sb.field_d = sb.field_d + 65536;
+          Base37Codec.field_d = Base37Codec.field_d + 65536;
           if (param0 != 586) {
             stackIn_3_0 = -4;
             return stackIn_3_0;
@@ -31,14 +31,14 @@ final class kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2), "kd.A(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2), "kd.A(" + param0 + ',' + param1 + ')');
         }
-        stackIn_6_0 = sb.field_d;
+        stackIn_6_0 = Base37Codec.field_d;
         try {
           while (uf.a(stackIn_6_0, MidiPcmStream.field_V, 65535) >= 65536) {
-            sb.field_d = sb.field_d - MidiPcmStream.field_V;
+            Base37Codec.field_d = Base37Codec.field_d - MidiPcmStream.field_V;
             hj.field_c = hj.field_c + 1;
-            stackIn_6_0 = sb.field_d;
+            stackIn_6_0 = Base37Codec.field_d;
           }
           var2_int = -1;
           if (null != f.field_d) {
@@ -152,7 +152,7 @@ final class kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2), "kd.A(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2), "kd.A(" + param0 + ',' + param1 + ')');
         }
     }
 

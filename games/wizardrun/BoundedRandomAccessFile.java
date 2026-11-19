@@ -10,7 +10,7 @@ final class BoundedRandomAccessFile {
     private RandomAccessFile field_c;
     static int field_a;
 
-    final void a(long param0, byte param1) throws IOException {
+    final void seek(long param0, byte param1) throws IOException {
         if (param1 == -24) {
           this.field_c.seek(param0);
           this.field_d = param0;
@@ -22,7 +22,7 @@ final class BoundedRandomAccessFile {
         this.field_d = param0;
     }
 
-    final void a(int param0, byte[] param1, boolean param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, boolean param2, int param3) throws IOException {
         try {
           if (this.field_e < (this.field_d + (long)param0)) {
             this.field_c.seek(this.field_e);
@@ -35,11 +35,11 @@ final class BoundedRandomAccessFile {
           }
           this.field_d = this.field_d + (long)param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ri.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ri.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final int a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final int read(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
@@ -69,11 +69,11 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final long b(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != 0) {
           BoundedRandomAccessFile.c(97);
           return this.field_c.length();
@@ -116,18 +116,18 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     protected final void finalize() throws Throwable {
         if (null != this.field_c) {
           System.out.println("");
-          this.a(-1);
+          this.close(-1);
         }
     }
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (null != this.field_c) {
           this.field_c.close();
           this.field_c = null;
@@ -163,7 +163,7 @@ final class BoundedRandomAccessFile {
           }
           this.field_c.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -175,14 +175,14 @@ final class BoundedRandomAccessFile {
             BoundedRandomAccessFile.a((byte) -79, (String) null);
           }
           var3 = n.field_b;
-          var3.c((byte) 113, param1);
+          var3.writeCipheredOpcode((byte) 113, param1);
           var3.writeByte((byte) 11, 5);
           var3.writeByte((byte) 11, 0);
           var3.writeShort(-1947079288, param0.field_l);
           var3.writeByte((byte) 11, param0.field_j);
           var3.writeByte((byte) 11, param0.field_o);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ri.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ri.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

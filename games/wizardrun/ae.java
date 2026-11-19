@@ -116,7 +116,7 @@ final class ae {
               else {
                 if (stackIn_63_0 >= stackIn_63_1) {
                   SpriteState.field_A[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
-                  d.field_c[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
+                  MonotonicClockHelpers.field_c[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   if (var29Lifetime1 > var8) {
                     var8 = var29Lifetime1;
                   }
@@ -216,7 +216,7 @@ final class ae {
             stackIn_72_1 = 11;
             break;
           }
-          ug.$cfr$intArgs$a$c8d31f67c1d5(stackIn_72_0 != 0, stackIn_72_1, var8, var7_int, param2);
+          RadialSelectorWidget.drawMeshWithIntGuard(stackIn_72_0 != 0, stackIn_72_1, var8, var7_int, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,7 +240,7 @@ final class ae {
           } else {
             stackIn_86_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(')').toString());
         }
     }
 
@@ -256,19 +256,19 @@ final class ae {
           var1_int = 108 % ((param0 + 6) / 55);
           var2_ref = HotspotTextWidget.keyHandler;
           synchronized (var2_ref) {
-            if (tg.keyQueueReadIndex == ph.field_r) {
+            if (LevelData.keyQueueReadIndex == GameMenu.field_r) {
               return false;
             }
-            MidiNote.field_r = ge.keyCodeQueue[tg.keyQueueReadIndex];
-            field_a = ve.typedCharQueue[tg.keyQueueReadIndex];
-            tg.keyQueueReadIndex = 1 + tg.keyQueueReadIndex & 127;
+            MidiNote.field_r = MenuController.keyCodeQueue[LevelData.keyQueueReadIndex];
+            field_a = ve.typedCharQueue[LevelData.keyQueueReadIndex];
+            LevelData.keyQueueReadIndex = 1 + LevelData.keyQueueReadIndex & 127;
             stackIn_5_0 = true;
           }
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (RuntimeException) (Object) decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "ae.C(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "ae.C(" + param0 + ')');
         }
     }
 
@@ -280,7 +280,7 @@ final class ae {
             field_b = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ae.B(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ae.B(" + param0 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "ae.toString()");
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "ae.toString()");
         }
     }
 
@@ -306,7 +306,7 @@ final class ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var4), "ae.E(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var4), "ae.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -323,7 +323,7 @@ final class ae {
           }
           var2 = param0.getParameter("username");
           if (var2 != null &&
-            sb.a((byte) 122, (CharSequence) ((Object) var2)) != 0L) {
+            Base37Codec.encodeBase37((byte) 122, (CharSequence) ((Object) var2)) != 0L) {
             return;
           }
           return;
@@ -337,7 +337,7 @@ final class ae {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

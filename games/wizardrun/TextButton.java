@@ -54,7 +54,7 @@ class TextButton extends UiWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ class TextButton extends UiWidget {
           }
           this.field_q = param5;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "pl.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pl.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ class TextButton extends UiWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ class TextButton extends UiWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ class TextButton extends UiWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -215,17 +215,17 @@ class TextButton extends UiWidget {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_q != 0) {
-            if (sh.field_c == this.field_q) {
+            if (BrowserUrlLauncher.field_c == this.field_q) {
               return;
             }
             if (this.b(fi.field_B, pg.field_n, 0, param2, param1) &&
-              0 == sh.field_c) {
+              0 == BrowserUrlLauncher.field_c) {
               this.b(-88, pg.field_n - param2, -param1 + fi.field_B, this.field_q);
             }
             this.a(param2, fi.field_B, param1, pg.field_n, param3, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "pl.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pl.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -266,7 +266,7 @@ class TextButton extends UiWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -94,7 +94,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -123,11 +123,11 @@ final class MidiPcmStream extends PcmStream {
           if (param1 > ~param4) {
             var7 = new int[]{param4};
           }
-          var8 = (pb) (param3.field_i.b((byte) 61));
+          var8 = (pb) (param3.field_i.first((byte) 61));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8 == null))) {
             var9 = (int)var8.key;
-            var10 = (MusicPatch) (this.field_G.a(1, (long)var9));
+            var10 = (MusicPatch) (this.field_G.get(1, (long)var9));
             if (var11 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (var10 == null) {
@@ -137,14 +137,14 @@ final class MidiPcmStream extends PcmStream {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  this.field_G.a(var10, -9, (long)var9);
+                  this.field_G.put(var10, -9, (long)var9);
                 }
               }
               if ((decompiledFrameRemainder0) &&
                 (!var10.a(var8.field_j, param2, -75, (int[]) (var7)))) {
                 var6_int = 0;
               }
-              var8 = (pb) (param3.field_i.b(1));
+              var8 = (pb) (param3.field_i.next(1));
               continue;
             }
             break;
@@ -177,7 +177,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ final class MidiPcmStream extends PcmStream {
         var9 = wizardrun.field_H;
         this.a(param3, 64, param0, (byte) -16);
         if ((this.field_y[param0] & 2) != 0) {
-          var5 = (MidiNote) (this.field_A.field_p.a((byte) 11));
+          var5 = (MidiNote) (this.field_A.field_p.last((byte) 11));
           while (var5 != null) {
             if (param0 == var5.field_F &&
               var5.field_j < 0) {
@@ -212,14 +212,14 @@ final class MidiPcmStream extends PcmStream {
               var5.field_y = 4096;
               return;
             }
-            var5 = (MidiNote) (this.field_A.field_p.a(102));
+            var5 = (MidiNote) (this.field_A.field_p.previous(102));
             if (var9 == 0) {
               continue;
             }
             break;
           }
         }
-        var10 = (MusicPatch) (this.field_G.a(1, (long)this.field_P[param0]));
+        var10 = (MusicPatch) (this.field_G.get(1, (long)this.field_P[param0]));
         var11 = var10;
         if (var11 == null) {
           return;
@@ -269,7 +269,7 @@ final class MidiPcmStream extends PcmStream {
           }
           this.field_J[param0][var7.field_t] = var7;
         }
-        this.field_A.field_p.a(var7, false);
+        this.field_A.field_p.addLast(var7, false);
         this.field_S[param0][param3] = var7;
         return;
     }
@@ -281,10 +281,10 @@ final class MidiPcmStream extends PcmStream {
         if (!param0) {
           this.a(-72, 96);
         }
-        var4 = (MusicPatch) (this.field_G.b((byte) -87));
+        var4 = (MusicPatch) (this.field_G.first((byte) -87));
         while (var4 != null) {
           var4.a(-106);
-          var4 = (MusicPatch) (this.field_G.b(1));
+          var4 = (MusicPatch) (this.field_G.next(1));
           if (var3 == 0) {
             continue;
           }
@@ -427,7 +427,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -475,7 +475,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -501,7 +501,7 @@ final class MidiPcmStream extends PcmStream {
           return;
         }
         if ((2 & this.field_y[param1]) != 0) {
-          var3 = (MidiNote) (this.field_A.field_p.b((byte) 91));
+          var3 = (MidiNote) (this.field_A.field_p.first((byte) 91));
           while (var3 != null) {
             if (var4 != 0) {
               break;
@@ -511,7 +511,7 @@ final class MidiPcmStream extends PcmStream {
               var3.field_j < 0) {
               var3.field_j = 0;
             }
-            var3 = (MidiNote) (this.field_A.field_p.d(param0 ^ 8448));
+            var3 = (MidiNote) (this.field_A.field_p.next(param0 ^ 8448));
           }
         }
     }
@@ -775,7 +775,7 @@ final class MidiPcmStream extends PcmStream {
           }
           this.a(param0, true, 0, param2);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "fl.T(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "fl.T(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -799,7 +799,7 @@ final class MidiPcmStream extends PcmStream {
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
         var4 = wizardrun.field_H;
-        var3 = (MidiNote) (this.field_A.field_p.b((byte) 110));
+        var3 = (MidiNote) (this.field_A.field_p.first((byte) 110));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
           stackIn_10_0 = -1;
@@ -811,7 +811,7 @@ final class MidiPcmStream extends PcmStream {
               this.field_S[var3.field_F][var3.field_k] = null;
               var3.field_j = 0;
             }
-            var3 = (MidiNote) (this.field_A.field_p.d(param1 ^ -8193));
+            var3 = (MidiNote) (this.field_A.field_p.next(param1 ^ -8193));
             continue;
           }
           break;
@@ -868,7 +868,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -895,7 +895,7 @@ final class MidiPcmStream extends PcmStream {
             return false;
           }
           if (param1.field_j >= 0) {
-            param1.a(false);
+            param1.unlink(false);
             if (param1.field_t > 0 &&
               this.field_J[param1.field_F][param1.field_t] == param1) {
               this.field_J[param1.field_F][param1.field_t] = null;
@@ -913,7 +913,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -988,7 +988,7 @@ final class MidiPcmStream extends PcmStream {
           if (param2.field_j >= 0 && (null == param2.field_w ||
             param2.field_w.isOutOfBounds())) {
             param2.a(0);
-            param2.a(false);
+            param2.unlink(false);
             if (0 < param2.field_t &&
               param2 == this.field_J[param2.field_F][param2.field_t]) {
               this.field_J[param2.field_F][param2.field_t] = null;
@@ -1111,7 +1111,7 @@ final class MidiPcmStream extends PcmStream {
           }
           param2.a(0);
           if (param2.field_j >= 0) {
-            param2.a(false);
+            param2.unlink(false);
             if (param2.field_t > 0 &&
               this.field_J[param2.field_F][param2.field_t] == param2) {
               this.field_J[param2.field_F][param2.field_t] = null;
@@ -1134,7 +1134,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1185,7 +1185,7 @@ final class MidiPcmStream extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2), "fl.QA(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2), "fl.QA(" + param0 + ',' + param1 + ')');
         }
         stackIn_5_0 = lg.field_d;
         try {
@@ -1209,7 +1209,7 @@ final class MidiPcmStream extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2), "fl.QA(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2), "fl.QA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1280,7 +1280,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1298,7 +1298,7 @@ final class MidiPcmStream extends PcmStream {
         boolean decompiledFrameCompleted0 = true;
         this.field_S[param2][param0] = null;
         if ((this.field_y[param2] & 2) != 0) {
-          var6 = (MidiNote) (this.field_A.field_p.b((byte) 84));
+          var6 = (MidiNote) (this.field_A.field_p.first((byte) 84));
           while (true) {
             if (var6 != null) {
               stackIn_16_0 = ~var8.field_F;
@@ -1312,7 +1312,7 @@ final class MidiPcmStream extends PcmStream {
                 var6 != var8) {
                 var8.field_j = 0;
               } else {
-                var6 = (MidiNote) (this.field_A.field_p.d(8192));
+                var6 = (MidiNote) (this.field_A.field_p.next(8192));
                 continue;
               }
             }
@@ -1386,7 +1386,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1438,7 +1438,7 @@ final class MidiPcmStream extends PcmStream {
         int var4;
         var4 = wizardrun.field_H;
         if (param0 != ~(4 & this.field_y[param1])) {
-          var3 = (MidiNote) (this.field_A.field_p.b((byte) 55));
+          var3 = (MidiNote) (this.field_A.field_p.first((byte) 55));
           while (var3 != null) {
             if (var4 != 0) {
               break;
@@ -1446,7 +1446,7 @@ final class MidiPcmStream extends PcmStream {
             if (param1 == var3.field_F) {
               var3.field_H = 0;
             }
-            var3 = (MidiNote) (this.field_A.field_p.d(8192));
+            var3 = (MidiNote) (this.field_A.field_p.next(8192));
           }
         }
     }
@@ -1462,7 +1462,7 @@ final class MidiPcmStream extends PcmStream {
         if (param0 != 0) {
           return;
         }
-        var3 = (MidiNote) (this.field_A.field_p.b((byte) 92));
+        var3 = (MidiNote) (this.field_A.field_p.first((byte) 92));
         while (var3 != null) {
           if (var4 == 0) {
             if (param1 < 0 ||
@@ -1477,9 +1477,9 @@ final class MidiPcmStream extends PcmStream {
               if (var3.field_j < 0) {
                 this.field_S[var3.field_F][var3.field_k] = null;
               }
-              var3.a(false);
+              var3.unlink(false);
             }
-            var3 = (MidiNote) (this.field_A.field_p.d(8192));
+            var3 = (MidiNote) (this.field_A.field_p.next(8192));
             continue;
           }
           break;

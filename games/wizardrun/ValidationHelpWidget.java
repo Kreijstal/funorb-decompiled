@@ -57,7 +57,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
           this.field_T = param0;
           this.a(125, param3, param5, param4, param2);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var6), "l.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var6), "l.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
           }
           super.a(param0 + 0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "l.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "l.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
             this.field_R.width >= var11 &&
             var12 <= this.field_R.height) {
             UrlPacketDownloader.a(this.field_R, false);
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clear();
           } else {
             this.field_R = new Sprite(var11, var12);
             UrlPacketDownloader.a(this.field_R, false);
@@ -224,7 +224,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -46,7 +46,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_o + param0;
         int var6 = this.field_l + param3;
-        gh.field_b.a(ci.field_c, var5 + 20, 20 + var6, this.field_r - 40, this.field_n - 50, 16777215, -1, 1, 0, gh.field_b.field_M);
+        Crc32Helpers.field_b.a(ci.field_c, var5 + 20, 20 + var6, this.field_r - 40, this.field_n - 50, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
         super.a(param0, param1, param2, param3);
     }
 
@@ -138,7 +138,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

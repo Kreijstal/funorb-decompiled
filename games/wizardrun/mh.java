@@ -20,7 +20,7 @@ class mh extends gf implements ButtonActionListener {
           field_tb = 105;
         }
         this.field_ub.a(2121792, -1028717695, 4210752);
-        MessagePanel var2 = new MessagePanel(this, this.field_qb, sh.field_d);
+        MessagePanel var2 = new MessagePanel(this, this.field_qb, BrowserUrlLauncher.field_d);
         var2.a((byte) -31, UrlPacketDownloader.field_a, 15);
         this.c(var2, param0 - 119);
     }
@@ -52,7 +52,7 @@ class mh extends gf implements ButtonActionListener {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ class mh extends gf implements ButtonActionListener {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ class mh extends gf implements ButtonActionListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ class mh extends gf implements ButtonActionListener {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -326,7 +326,7 @@ class mh extends gf implements ButtonActionListener {
           this.field_ub.field_I = true;
           this.a((UiWidget) (this.field_ub), (byte) 127);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

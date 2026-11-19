@@ -7,7 +7,7 @@ final class ClientException extends RuntimeException {
     static boolean field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        ph.d(-31782);
+        GameMenu.d(-31782);
         if (param0 != 0) {
           return;
         }
@@ -21,12 +21,12 @@ final class ClientException extends RuntimeException {
         ImageProducerRasterBuffer.field_k = null;
         if (param0 == 0) {
           ne.field_h = null;
-          ph.field_q = null;
+          GameMenu.field_q = null;
           return;
         }
         field_a = false;
         ne.field_h = null;
-        ph.field_q = null;
+        GameMenu.field_q = null;
     }
 
     ClientException(Throwable param0, String param1) {
@@ -77,7 +77,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

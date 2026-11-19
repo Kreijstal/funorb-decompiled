@@ -13,7 +13,7 @@ final class pa {
         try {
           MidiNote.a(param3.payload, param4, param2, true, param3.position, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "pa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class pa {
             var4 = (PacketBuffer) null;
             pa.a((java.math.BigInteger) null, -113, (java.math.BigInteger) null, (PacketBuffer) null, (PacketBuffer) null);
           }
-          param1 = fa.a((byte) 122, "", param1, '_');
+          param1 = BrowserCookieHelpers.a((byte) 122, "", param1, '_');
           var3 = StrongCacheEntry.a(param2, 1);
           stackIn_7_0 = (param1.indexOf(param2) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_7_0;
@@ -60,7 +60,7 @@ final class pa {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

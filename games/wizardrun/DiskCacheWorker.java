@@ -25,20 +25,20 @@ final class DiskCacheWorker implements Runnable {
           param1.writeShort(-1947079288, param3);
           param1.writeByte((byte) 11, param0);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "cd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "cd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
-          IntrusiveNode.a("", param0, (byte) -98);
+          IntrusiveNode.writeSessionCookie("", param0, (byte) -98);
           ga.a(param0, (byte) -72);
           if (param1 != -113) {
             PacketBuffer var3 = (PacketBuffer) null;
             DiskCacheWorker.a(-24, (PacketBuffer) null, 100, -92, -33);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "cd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "cd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -107,20 +107,20 @@ final class DiskCacheWorker implements Runnable {
               DiskCacheWorker.a(ej.field_d, var3, 20443, TextLayoutLine.field_c, MidiNoteMixer.field_q);
               var3.writeByte((byte) 11, 15);
               var3.writeInt(pg.field_j, 613003928);
-              BufferedRandomAccessFile.field_q.a(13, var3.payload, 1, 0);
+              BufferedRandomAccessFile.field_q.write(13, var3.payload, 1, 0);
               wc.field_k = wc.field_k + 1;
-              WidgetPainterState.field_g = d.a((byte) 109) + 30000L;
+              WidgetPainterState.field_g = MonotonicClockHelpers.monotonicMillis((byte) 109) + 30000L;
             }
             if (wc.field_k == 3) {
-              if (BufferedRandomAccessFile.field_q.c((byte) 89) > 0) {
-                var1_int = BufferedRandomAccessFile.field_q.a((byte) 19);
+              if (BufferedRandomAccessFile.field_q.available((byte) 89) > 0) {
+                var1_int = BufferedRandomAccessFile.field_q.readByte((byte) 19);
                 if (var1_int != 0) {
                   stackIn_29_0 = mh.a((byte) 85, var1_int);
                   return stackIn_29_0;
                 }
                 wc.field_k = wc.field_k + 1;
               } else {
-                if (WidgetPainterState.field_g < d.a((byte) 127)) {
+                if (WidgetPainterState.field_g < MonotonicClockHelpers.monotonicMillis((byte) 127)) {
                   stackIn_26_0 = mh.a((byte) 122, -2);
                   return stackIn_26_0;
                 }
@@ -176,7 +176,7 @@ final class DiskCacheWorker implements Runnable {
           while (var8.field_a == 0) {
             stackIn_9_0 = 10L;
             stackIn_10_1 = !(param0);
-            tg.a(stackIn_9_0, stackIn_10_1);
+            LevelData.sleepMillis(stackIn_9_0, stackIn_10_1);
           }
           if (var8.field_a == 2) {
             stackIn_13_0 = new rb[]{};
@@ -209,7 +209,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class DiskCacheWorker implements Runnable {
           var4.field_x = 1;
           var5 = this.field_f;
           synchronized (var5) {
-            var6 = (sk) (this.field_f.a(param1 ^ param1));
+            var6 = (sk) (this.field_f.first(param1 ^ param1));
             while (var6 != null) {
               if (~var6.secondaryKey == ~(long)param0 &&
                 var6.field_w == param2 &&
@@ -319,10 +319,10 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_9_0 = var4;
                 return stackIn_9_0;
               }
-              var6 = (sk) (this.field_f.d(123));
+              var6 = (sk) (this.field_f.next(123));
             }
           }
-          var4.field_A = param2.a(true, param0);
+          var4.field_A = param2.read(true, param0);
           var4.field_s = false;
           var4.field_r = true;
           stackIn_16_0 = var4;
@@ -337,13 +337,13 @@ final class DiskCacheWorker implements Runnable {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
     private final void a(sk param0, int param1) {
         synchronized (this.field_f) {
-          this.field_f.a(param0, 14);
+          this.field_f.addLast(param0, 14);
           this.field_b = this.field_b + 1;
           this.field_f.notifyAll();
           if (param1 != -1) {
@@ -380,7 +380,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.field_g) {
             var2 = this.field_f;
             synchronized (var2) {
-              var7 = (sk) (this.field_f.b(46));
+              var7 = (sk) (this.field_f.removeFirst(46));
               if (var7 == null) {
                 try {
                   this.field_f.wait();
@@ -399,11 +399,11 @@ final class DiskCacheWorker implements Runnable {
             }
             try {
               if (var7.field_x == 2) {
-                var7.field_w.a(var7.field_A, (int)var7.secondaryKey, 0, var7.field_A.length);
+                var7.field_w.write(var7.field_A, (int)var7.secondaryKey, 0, var7.field_A.length);
                 var7.field_s = false;
               } else {
                 if (3 == var7.field_x) {
-                  var7.field_A = var7.field_w.a(true, (int)var7.secondaryKey);
+                  var7.field_A = var7.field_w.read(true, (int)var7.secondaryKey);
                   var7.field_s = false;
                 } else {
                   var7.field_s = false;
@@ -432,14 +432,14 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.a((byte) -98, (Runnable) (this), 5);
           while (var2.field_a == 0) {
-            tg.a(10L, false);
+            LevelData.sleepMillis(10L, false);
           }
           if (var2.field_a == 2) {
             throw new RuntimeException();
           }
           this.field_i = (Thread) (var2.field_e);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "cd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "cd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

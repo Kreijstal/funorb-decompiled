@@ -56,12 +56,12 @@ final class ve {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0, String param1) {
-        System.out.println("Error: " + TickClock.a("%0a", param1, 28834, "\n"));
+        System.out.println("Error: " + TickClock.replaceAll("%0a", param1, 28834, "\n"));
         if (param0 < 74) {
           wizardSprites = (Sprite[]) null;
         }

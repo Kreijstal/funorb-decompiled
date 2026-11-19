@@ -36,7 +36,7 @@ final class rd {
         sj.field_m[lg.field_d] = lg.field_d;
         if (param3 > -77) {
           rd.a(58, -125, 62, 83, 51, -33);
-          ug.field_I[lg.field_d] = param4;
+          RadialSelectorWidget.field_I[lg.field_d] = param4;
           if (param4 <= rb.field_e) {
             if (param4 < dg.field_d) {
               gf.field_W = param4;
@@ -77,7 +77,7 @@ final class rd {
           lg.field_d = lg.field_d + 1;
           return;
         }
-        ug.field_I[lg.field_d] = param4;
+        RadialSelectorWidget.field_I[lg.field_d] = param4;
         if (param4 <= rb.field_e) {
           if (param4 < dg.field_d) {
             gf.field_W = param4;

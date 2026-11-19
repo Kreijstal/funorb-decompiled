@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb {
+final class SettingsCookieReader {
     static double field_b;
     static ql field_d;
     static String field_e;
@@ -18,7 +18,7 @@ final class fb {
         field_a = null;
     }
 
-    final static String a(java.applet.Applet param0, byte param1) {
+    final static String readSettingsCookie(java.applet.Applet param0, byte param1) {
         try {
           int var6 = 0;
           String var3 = null;
@@ -39,11 +39,11 @@ final class fb {
           try {
             try {
               if (param1 != 102) {
-                fb.releaseStatics(78);
+                SettingsCookieReader.releaseStatics(78);
               }
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (cl.a(param0, -3264, "getcookies"));
+              var4 = (String) (BrowserScriptBridge.call(param0, -3264, "getcookies"));
               var5 = FadingDialog.a(var4, -22710, ';');
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -72,7 +72,7 @@ final class fb {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

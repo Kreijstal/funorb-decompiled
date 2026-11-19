@@ -21,7 +21,7 @@ final class BufferedSocket implements Runnable {
     static long field_k;
     static int field_a;
 
-    final int a(byte param0) throws IOException {
+    final int readByte(byte param0) throws IOException {
         if (param0 != 19) {
           return 111;
         }
@@ -35,7 +35,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -57,7 +57,7 @@ final class BufferedSocket implements Runnable {
             this.field_i = new byte[this.field_n];
           }
           if (param2 != 1) {
-            this.b((byte) 47);
+            this.close((byte) 47);
           }
           var5 = this;
           synchronized (var5) {
@@ -84,11 +84,11 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         if (this.field_g) {
           return;
         }
@@ -107,7 +107,7 @@ final class BufferedSocket implements Runnable {
         throw new IOException();
     }
 
-    final static java.awt.Canvas d(byte param0) {
+    final static java.awt.Canvas activeCanvas(byte param0) {
         if (param0 > 66) {
           return null == LoginChoicePanel.field_E ? wizardrun.field_G : (java.awt.Canvas) ((Object) LoginChoicePanel.field_E);
         }
@@ -115,7 +115,7 @@ final class BufferedSocket implements Runnable {
         return null == LoginChoicePanel.field_E ? wizardrun.field_G : (java.awt.Canvas) ((Object) LoginChoicePanel.field_E);
     }
 
-    final void b(byte param0) {
+    final void close(byte param0) {
         try {
           InterruptedException var2 = null;
           int var4 = 0;
@@ -129,14 +129,14 @@ final class BufferedSocket implements Runnable {
           var2_ref = this;
           synchronized (var2_ref) {
             if (param0 != 76) {
-              BufferedSocket.d((byte) 8);
+              BufferedSocket.activeCanvas((byte) 8);
             }
             this.field_g = true;
             this.notifyAll();
           }
           if (null != this.field_e) {
             while (this.field_e.field_a == 0) {
-              tg.a(1L, false);
+              LevelData.sleepMillis(1L, false);
             }
             if (1 == this.field_e.field_a) {
               try {
@@ -160,7 +160,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int c(byte param0) throws IOException {
+    final int available(byte param0) throws IOException {
         if (param0 != 89) {
           this.field_g = true;
           if (this.field_g) {
@@ -175,10 +175,10 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.b((byte) 76);
+        this.close((byte) 76);
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void readFully(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -212,7 +212,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -336,7 +336,7 @@ final class BufferedSocket implements Runnable {
           this.field_h = this.field_o.getOutputStream();
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

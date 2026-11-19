@@ -171,72 +171,72 @@ final class TriangleMesh {
             var3_int = bl.a((byte) 59, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, qb.field_s);
             var4 = 3 + var3_int;
             ec.field_g = new int[var4];
-            a.field_b = new String[var4];
+            FlatTriangleRasterizer.field_b = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
               ec.field_g[var5] = -1;
             }
             MusicPatch.field_s = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              a.field_b[var5] = WidgetContainer.field_z[var5];
+              FlatTriangleRasterizer.field_b[var5] = WidgetContainer.field_z[var5];
             }
-            a.field_b[-3 + var4] = "";
-            a.field_b[-2 + var4] = MouseWheelInput.field_e;
+            FlatTriangleRasterizer.field_b[-3 + var4] = "";
+            FlatTriangleRasterizer.field_b[-2 + var4] = MouseWheelInput.field_e;
             ec.field_g[-2 + var4] = 0;
             MusicPatch.field_s[0] = 4;
-            a.field_b[var4 - 1] = wizardrun.field_F;
+            FlatTriangleRasterizer.field_b[var4 - 1] = wizardrun.field_F;
             ec.field_g[var4 - 1] = 1;
             MusicPatch.field_s[1] = 5;
           } else if (oc.field_d == 1) {
             var3_int = bl.a((byte) 41, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, qb.field_s);
             var4 = 2 + var3_int;
-            a.field_b = new String[var4];
+            FlatTriangleRasterizer.field_b = new String[var4];
             ec.field_g = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               ec.field_g[var5] = -1;
             }
             MusicPatch.field_s = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              a.field_b[var5] = WidgetContainer.field_z[var5];
+              FlatTriangleRasterizer.field_b[var5] = WidgetContainer.field_z[var5];
             }
-            a.field_b[-2 + var4] = "";
-            a.field_b[-1 + var4] = wizardrun.field_F;
+            FlatTriangleRasterizer.field_b[-2 + var4] = "";
+            FlatTriangleRasterizer.field_b[-1 + var4] = wizardrun.field_F;
             ec.field_g[-1 + var4] = 0;
             MusicPatch.field_s[0] = 5;
           } else if (2 != oc.field_d) {
             if (oc.field_d == 3) {
               if (!ld.field_g.field_s) {
-                var3_int = bl.a((byte) -125, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, qi.field_b);
+                var3_int = bl.a((byte) -125, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, FullscreenController.field_b);
               } else {
                 var3_int = bl.a((byte) 72, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, e.field_c);
               }
               var4 = 2 + var3_int;
               ec.field_g = new int[var4];
-              a.field_b = new String[var4];
+              FlatTriangleRasterizer.field_b = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 ec.field_g[var5] = -1;
               }
               MusicPatch.field_s = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                a.field_b[var5] = WidgetContainer.field_z[var5];
+                FlatTriangleRasterizer.field_b[var5] = WidgetContainer.field_z[var5];
               }
-              a.field_b[-2 + var4] = "";
-              a.field_b[var4 - 1] = wizardrun.field_F;
+              FlatTriangleRasterizer.field_b[-2 + var4] = "";
+              FlatTriangleRasterizer.field_b[var4 - 1] = wizardrun.field_F;
               ec.field_g[-1 + var4] = 0;
               MusicPatch.field_s[0] = 5;
             } else if (oc.field_d == 4) {
               var3_int = bl.a((byte) 125, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, SocketConnector.field_b);
               var4 = var3_int + 2;
               ec.field_g = new int[var4];
-              a.field_b = new String[var4];
+              FlatTriangleRasterizer.field_b = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 ec.field_g[var5] = -1;
               }
               MusicPatch.field_s = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                a.field_b[var5] = WidgetContainer.field_z[var5];
+                FlatTriangleRasterizer.field_b[var5] = WidgetContainer.field_z[var5];
               }
-              a.field_b[-2 + var4] = "";
-              a.field_b[var4 - 1] = wizardrun.field_F;
+              FlatTriangleRasterizer.field_b[-2 + var4] = "";
+              FlatTriangleRasterizer.field_b[var4 - 1] = wizardrun.field_F;
               ec.field_g[var4 - 1] = 0;
               MusicPatch.field_s[0] = 5;
             } else {
@@ -245,20 +245,20 @@ final class TriangleMesh {
               }
               var3_int = bl.a((byte) -100, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, DialogLayer.field_G);
               var4 = var3_int + 3;
-              a.field_b = new String[var4];
+              FlatTriangleRasterizer.field_b = new String[var4];
               ec.field_g = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 ec.field_g[var5] = -1;
               }
               MusicPatch.field_s = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                a.field_b[var5] = WidgetContainer.field_z[var5];
+                FlatTriangleRasterizer.field_b[var5] = WidgetContainer.field_z[var5];
               }
-              a.field_b[-3 + var4] = "";
-              a.field_b[var4 - 2] = tc.field_n;
+              FlatTriangleRasterizer.field_b[-3 + var4] = "";
+              FlatTriangleRasterizer.field_b[var4 - 2] = tc.field_n;
               ec.field_g[-2 + var4] = 0;
               MusicPatch.field_s[0] = 3;
-              a.field_b[var4 - 1] = wizardrun.field_F;
+              FlatTriangleRasterizer.field_b[var4 - 1] = wizardrun.field_F;
               ec.field_g[var4 - 1] = 1;
               MusicPatch.field_s[1] = 5;
             }
@@ -276,10 +276,10 @@ final class TriangleMesh {
               throw new IllegalStateException();
             }
             ke.field_t = new String[var4];
-            g.a(WidgetContainer.field_z, 0, ke.field_t, 0, var4);
+            ArrayOperations.copy(WidgetContainer.field_z, 0, ke.field_t, 0, var4);
             ec.field_a = new String[-var4 + (var3_int - 1)];
-            g.a(WidgetContainer.field_z, 1 + var4, ec.field_a, 0, -var4 + var3_int - 1);
-            var3_int = bl.a((byte) -112, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, WeightedLruCache.a(new String[]{"<br><%0><br>"}, (byte) 43, ge.field_k));
+            ArrayOperations.copy(WidgetContainer.field_z, 1 + var4, ec.field_a, 0, -var4 + var3_int - 1);
+            var3_int = bl.a((byte) -112, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, WeightedLruCache.a(new String[]{"<br><%0><br>"}, (byte) 43, MenuController.field_k));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(WidgetContainer.field_z[var5])) {
@@ -292,9 +292,9 @@ final class TriangleMesh {
               throw new IllegalStateException();
             }
             GrowableIntList.field_f = new String[var4];
-            g.a(WidgetContainer.field_z, 0, GrowableIntList.field_f, 0, var4);
+            ArrayOperations.copy(WidgetContainer.field_z, 0, GrowableIntList.field_f, 0, var4);
             f.field_b = new String[-1 + (var3_int - var4)];
-            g.a(WidgetContainer.field_z, var4 + 1, f.field_b, 0, var3_int - var4 - 1);
+            ArrayOperations.copy(WidgetContainer.field_z, var4 + 1, f.field_b, 0, var3_int - var4 - 1);
             if (GrowableIntList.field_f.length <= ke.field_t.length) {
               stackIn_66_0 = ke.field_t.length;
             } else {
@@ -308,24 +308,24 @@ final class TriangleMesh {
             }
             var6 = stackIn_69_0;
             var7 = var6 + (var5 + 7);
-            a.field_b = new String[var7];
+            FlatTriangleRasterizer.field_b = new String[var7];
             ec.field_g = new int[var7];
             for (var8 = 0; var7 > var8; var8++) {
               ec.field_g[var8] = -1;
             }
             ec.field_g[1] = 0;
             MusicPatch.field_s = new int[2];
-            a.field_b[0] = bh.field_c;
-            a.field_b[1] = ca.field_a;
+            FlatTriangleRasterizer.field_b[0] = bh.field_c;
+            FlatTriangleRasterizer.field_b[1] = ca.field_a;
             MusicPatch.field_s[0] = 5;
-            a.field_b[4] = StripedProgressBar.field_E;
-            a.field_b[3] = wb.field_h;
+            FlatTriangleRasterizer.field_b[4] = StripedProgressBar.field_E;
+            FlatTriangleRasterizer.field_b[3] = wb.field_h;
             MusicPatch.field_s[1] = 2;
-            a.field_b[5] = "";
+            FlatTriangleRasterizer.field_b[5] = "";
             ec.field_g[3] = 1;
-            a.field_b[2] = MidiEnvelope.field_g;
+            FlatTriangleRasterizer.field_b[2] = MidiEnvelope.field_g;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
-              stackIn_76_0 = a.field_b;
+              stackIn_76_0 = FlatTriangleRasterizer.field_b;
               stackIn_76_1 = var8Lifetime2 + 6;
               if (0 <= GrowableIntList.field_f.length + var8Lifetime2 - var5) {
                 stackIn_77_2 = GrowableIntList.field_f[GrowableIntList.field_f.length + var8Lifetime2 - var5];
@@ -334,10 +334,10 @@ final class TriangleMesh {
               }
               stackIn_76_0[stackIn_76_1] = stackIn_77_2;
             }
-            a.field_b[6 + var5] = null;
+            FlatTriangleRasterizer.field_b[6 + var5] = null;
             ec.field_g[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
-              stackIn_81_0 = a.field_b;
+              stackIn_81_0 = FlatTriangleRasterizer.field_b;
               stackIn_81_1 = 7 + (var5 + var8Lifetime3);
               stackIn_81_2 = ~f.field_b.length;
               stackIn_81_3 = ~var8Lifetime3;
@@ -348,13 +348,13 @@ final class TriangleMesh {
               }
               stackIn_81_0[stackIn_81_1] = stackIn_84_2;
             }
-            DirectByteStorage.field_g = d.a((byte) 41);
+            DirectByteStorage.field_g = MonotonicClockHelpers.monotonicMillis((byte) 41);
           }
           ga.field_d.field_c = MusicPatch.field_s.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < a.field_b.length; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < FlatTriangleRasterizer.field_b.length; var4Lifetime1++) {
             stackIn_91_0 = !(ec.field_g[var4Lifetime1] < 0);
-            var5Lifetime1 = sf.a(stackIn_91_0, 110, a.field_b[var4Lifetime1]);
+            var5Lifetime1 = sf.a(stackIn_91_0, 110, FlatTriangleRasterizer.field_b[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -381,7 +381,7 @@ final class TriangleMesh {
           fe.field_l = id.field_c - (var3_intLifetime1 >> 1);
           sj.field_n = var3_intLifetime1 + id.field_c - (var3_intLifetime1 >> 1);
           CachedArchiveProvider.field_f = (e.field_d + Js5Transport.field_e << 1) * ga.field_d.field_c;
-          for (var4Lifetime2 = 0; a.field_b.length > var4Lifetime2; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; FlatTriangleRasterizer.field_b.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_115_0 = CachedArchiveProvider.field_f;
             if (ec.field_g[var4Lifetime2] < 0) {
               stackIn_116_1 = BufferedRandomAccessFile.field_f;
@@ -391,13 +391,13 @@ final class TriangleMesh {
             CachedArchiveProvider.field_f = stackIn_115_0 + stackIn_116_1;
           }
           IntrusiveDequeCursor.field_f = ii.field_a - (CachedArchiveProvider.field_f >> 1);
-          NodeHashTableIterator.field_m = new int[a.field_b.length][];
+          NodeHashTableIterator.field_m = new int[FlatTriangleRasterizer.field_b.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = IntrusiveDequeCursor.field_f;
-          while (var4Lifetime3 < a.field_b.length) {
+          while (var4Lifetime3 < FlatTriangleRasterizer.field_b.length) {
             var6Lifetime1 = ec.field_g[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = sf.a(true, 110, a.field_b[var4Lifetime3]);
+              var7Lifetime2 = sf.a(true, 110, FlatTriangleRasterizer.field_b[var4Lifetime3]);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + id.field_c;
               var5Lifetime3 = var5Lifetime3 + Js5Transport.field_e;
               NodeHashTableIterator.field_m[var4Lifetime3] = new int[4];
@@ -423,7 +423,7 @@ final class TriangleMesh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var3), "le.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var3), "le.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

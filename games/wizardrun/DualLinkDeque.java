@@ -12,12 +12,12 @@ final class DualLinkDeque {
     static String field_b;
     private DualLinkNode field_f;
 
-    final static void b(byte param0) {
+    final static void pollMouseState(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         var1 = tc.mouseHandler;
         synchronized (var1) {
-          sh.field_c = ve.pressedButton;
+          BrowserUrlLauncher.field_c = ve.pressedButton;
           oc.mouseIdleTime = oc.mouseIdleTime + 1;
           pg.field_n = wizardrun.pointerX;
           fi.field_B = IterableNodeHashTable.pointerY;
@@ -33,7 +33,7 @@ final class DualLinkDeque {
         }
     }
 
-    final DualLinkNode d(int param0) {
+    final DualLinkNode next(int param0) {
         DualLinkNode var2 = this.field_f;
         if (this.field_c == var2) {
           this.field_f = null;
@@ -48,10 +48,10 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode first(int param0) {
         DualLinkNode var2 = this.field_c.secondaryNext;
         if (param0 != 0) {
-          this.b(68);
+          this.removeFirst(68);
           if (this.field_c != var2) {
             this.field_f = var2.secondaryNext;
             return var2;
@@ -67,7 +67,7 @@ final class DualLinkDeque {
         return null;
     }
 
-    final int c(int param0) {
+    final int size(int param0) {
         int var4 = wizardrun.field_H;
         int var2 = 0;
         DualLinkNode var3 = this.field_c.secondaryNext;
@@ -81,7 +81,7 @@ final class DualLinkDeque {
         return -16;
     }
 
-    final static StringBuilder a(StringBuilder param0, char param1, int param2, int param3) {
+    final static StringBuilder padBuilder(StringBuilder param0, char param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -117,7 +117,7 @@ final class DualLinkDeque {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -132,35 +132,35 @@ final class DualLinkDeque {
         field_d = null;
     }
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         try {
           if (param1 != 14) {
-            this.a(-10);
+            this.first(-10);
           }
           if (param0.secondaryPrevious != null) {
-            param0.unlink(false);
+            param0.unlinkSecondary(false);
           }
           param0.secondaryNext = this.field_c;
           param0.secondaryPrevious = this.field_c.secondaryPrevious;
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "th.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "th.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final DualLinkNode b(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         DualLinkNode var2 = this.field_c.secondaryNext;
         if (param0 < 33) {
           field_g = (nj) null;
           if (this.field_c != var2) {
-            var2.unlink(false);
+            var2.unlinkSecondary(false);
             return var2;
           }
           return null;
         }
         if (this.field_c != var2) {
-          var2.unlink(false);
+          var2.unlinkSecondary(false);
           return var2;
         }
         return null;

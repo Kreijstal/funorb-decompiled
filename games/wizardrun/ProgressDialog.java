@@ -48,7 +48,7 @@ final class ProgressDialog extends ResizableDialog {
           this.field_Z.field_z = (int)(65536.0f * (param1 / 100.0f));
           this.field_X = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "hk.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "hk.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class ProgressDialog extends ResizableDialog {
           this.field_U = false;
           this.a((UiWidget) (this.field_Z), (byte) 27);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

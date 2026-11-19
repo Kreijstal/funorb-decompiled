@@ -21,7 +21,7 @@ final class of extends IntrusiveNode {
             of.a((ResourceArchive) null, 20, (byte) -110, 17);
           }
           if (MusicPatch.a(param3, param1, param0, -128)) {
-            return TickClock.c((byte) -92);
+            return TickClock.buildFirstIndexedSprite((byte) -92);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -34,7 +34,7 @@ final class of extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class of extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ final class of extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1_ref), "of.C(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1_ref), "of.C(" + param0 + ')');
         }
     }
 

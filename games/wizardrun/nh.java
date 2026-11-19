@@ -337,7 +337,7 @@ final class nh extends bb {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -486,7 +486,7 @@ final class nh extends bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var5), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var5), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

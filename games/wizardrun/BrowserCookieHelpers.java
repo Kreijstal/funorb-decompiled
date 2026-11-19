@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa {
+final class BrowserCookieHelpers {
     static ai field_a;
     static Sprite field_c;
     static Sprite[] field_b;
     static String field_d;
 
-    final static void a(long param0, String param1, boolean param2, String param3, java.applet.Applet param4) {
+    final static void writeCookie(long param0, String param1, boolean param2, String param3, java.applet.Applet param4) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;
@@ -40,9 +40,9 @@ final class fa {
               if (param0 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + fc.a((byte) -23, d.a((byte) 90) + 1000L * param0) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + DateFormattingHelpers.formatGmtTimestamp((byte) -23, MonotonicClockHelpers.monotonicMillis((byte) 90) + 1000L * param0) + "; Max-Age=" + param0;
               }
-              cl.a(param4, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) -121);
+              BrowserScriptBridge.eval(param4, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) -121);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class fa {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -150,7 +150,7 @@ final class fa {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class fa {
         field_b = null;
         if (param0 != 52) {
           String var2 = (String) null;
-          fa.a((byte) -111, (String) null, (String) null, '7');
+          BrowserCookieHelpers.a((byte) -111, (String) null, (String) null, '7');
         }
     }
 
@@ -170,7 +170,7 @@ final class fa {
           dh.field_c = param0;
           jc.a((byte) 42, param1);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

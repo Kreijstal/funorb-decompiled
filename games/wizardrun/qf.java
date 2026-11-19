@@ -29,7 +29,7 @@ final class qf extends TextFieldValidator {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class qf extends TextFieldValidator {
             return stackIn_3_0;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = ph.a(1124, var5);
+          var3_int = GameMenu.a(1124, var5);
           if (param0 > ~var3_int &&
             130 >= var3_int) {
             return gf.field_V;
@@ -68,7 +68,7 @@ final class qf extends TextFieldValidator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ug extends TextButton {
+final class RadialSelectorWidget extends TextButton {
     int field_G;
     int field_O;
     int field_L;
@@ -21,44 +21,44 @@ final class ug extends TextButton {
         try {
           DiskCacheStore.field_b = new Sprite[6][];
           ValidationState.field_e = new Sprite[6][5][];
-          bd.field_c = new Sprite[6];
+          ExceptionSupport.field_c = new Sprite[6];
           ValidationState.field_e[0][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster00", 110);
           ValidationState.field_e[0][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster01", 125);
           ValidationState.field_e[0][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster02", 121);
           ValidationState.field_e[0][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster04", 94);
           DiskCacheStore.field_b[0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level1blocks", 110);
-          bd.field_c[0] = vg.loadSprite(15, "level1background", SingleChildWidget.field_E, "");
-          bd.field_c[1] = vg.loadSprite(15, "level2background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[0] = vg.loadSprite(15, "level1background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[1] = vg.loadSprite(15, "level2background", SingleChildWidget.field_E, "");
           DiskCacheStore.field_b[1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level2blocks", 122);
           ValidationState.field_e[1][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster10", 97);
           ValidationState.field_e[1][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster11", 121);
           ValidationState.field_e[1][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster12", 96);
           ValidationState.field_e[1][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster13", 115);
           ValidationState.field_e[1][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster14", 112);
-          bd.field_c[2] = vg.loadSprite(15, "level3background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[2] = vg.loadSprite(15, "level3background", SingleChildWidget.field_E, "");
           DiskCacheStore.field_b[2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level3blocks", 102);
           ValidationState.field_e[2][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster20", 89);
           ValidationState.field_e[2][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster21", 124);
           ValidationState.field_e[2][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster22", 118);
           ValidationState.field_e[2][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster23", 97);
           ValidationState.field_e[2][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster24", 119);
-          bd.field_c[3] = vg.loadSprite(15, "level4background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[3] = vg.loadSprite(15, "level4background", SingleChildWidget.field_E, "");
           DiskCacheStore.field_b[3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level4blocks", 90);
           ValidationState.field_e[3][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster30", 111);
           ValidationState.field_e[3][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster31", 104);
           ValidationState.field_e[3][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster32", 118);
           ValidationState.field_e[3][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster34", 105);
-          bd.field_c[4] = vg.loadSprite(15, "level5background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[4] = vg.loadSprite(15, "level5background", SingleChildWidget.field_E, "");
           DiskCacheStore.field_b[4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level5blocks", 92);
           ValidationState.field_e[4][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster40", 125);
           if (param0 > -27) {
-            ug.$cfr$intArgs$a$c8d31f67c1d5(false, -19, 6, -5, (TriangleMesh) null);
+            RadialSelectorWidget.drawMeshWithIntGuard(false, -19, 6, -5, (TriangleMesh) null);
           }
           ValidationState.field_e[4][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster41", 91);
           ValidationState.field_e[4][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster42", 119);
           ValidationState.field_e[4][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster43", 121);
           ValidationState.field_e[4][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster44", 114);
-          bd.field_c[5] = vg.loadSprite(15, "level6background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[5] = vg.loadSprite(15, "level6background", SingleChildWidget.field_E, "");
           DiskCacheStore.field_b[5] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level6blocks", 93);
           ValidationState.field_e[5][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster50", 107);
           ValidationState.field_e[5][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster52", 115);
@@ -71,7 +71,7 @@ final class ug extends TextButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "ug.EA(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "ug.EA(" + param0 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class ug extends TextButton {
           var9 = -param0 - this.field_o + (-this.field_J + param2);
           var10 = param5 + (-this.field_L - param3) - this.field_l;
           if ((var9 * var9 + var10 * var10) < (this.field_G * this.field_G)) {
-            var11 = Math.atan2((double)var10, (double)var9) - fb.field_b;
+            var11 = Math.atan2((double)var10, (double)var9) - SettingsCookieReader.field_b;
             if (var11 < 0.0) {
               var11 = var11 - 3.141592653589793 / (double)this.field_O;
               if ((var13 != 0) &&
@@ -140,11 +140,11 @@ final class ug extends TextButton {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, byte param1, int param2, int param3, TriangleMesh param4) {
+    final static void drawMesh(boolean param0, byte param1, int param2, int param3, TriangleMesh param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_28_0 = 0;
@@ -202,11 +202,11 @@ final class ug extends TextButton {
             if (var19 == 0) {
               if (stackIn_10_0) {
                 var12 = SpriteState.field_A[var9];
-                var13 = d.field_c[var9];
+                var13 = MonotonicClockHelpers.field_c[var9];
                 var14 = -var12 + SpriteState.field_A[var10];
                 var15 = -var12 + SpriteState.field_A[var11];
-                var16 = -var13 + d.field_c[var10];
-                var17 = d.field_c[var11] - var13;
+                var16 = -var13 + MonotonicClockHelpers.field_c[var10];
+                var17 = MonotonicClockHelpers.field_c[var11] - var13;
               }
               if (!stackIn_10_0 ||
                 !(var14 * var17 - var16 * var15 >= 0)) {
@@ -289,7 +289,7 @@ final class ug extends TextButton {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ final class ug extends TextButton {
         RuntimeException var1 = null;
         try {
           if (param0 != -13542) {
-            ug.releaseStatics(-125);
+            RadialSelectorWidget.releaseStatics(-125);
           }
           field_F = null;
           field_I = null;
@@ -307,7 +307,7 @@ final class ug extends TextButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "ug.DA(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "ug.DA(" + param0 + ')');
         }
     }
 
@@ -345,7 +345,7 @@ final class ug extends TextButton {
               var6 = hg.field_b.getGraphics();
               var6.setColor(param4);
               if (param0 != 10487) {
-                ug.a(106, false, -93, (String) null, (java.awt.Color) null);
+                RadialSelectorWidget.a(106, false, -93, (String) null, (java.awt.Color) null);
               }
               var6.drawRect(0, 0, 303, 33);
               var6.fillRect(2, 2, param2 * 3, 30);
@@ -398,11 +398,11 @@ final class ug extends TextButton {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
-    private ug() throws Throwable {
+    private RadialSelectorWidget() throws Throwable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -410,7 +410,7 @@ final class ug extends TextButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "ug.<init>()");
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "ug.<init>()");
         }
     }
 
@@ -421,7 +421,7 @@ final class ug extends TextButton {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c8d31f67c1d5(boolean param0, int param1, int param2, int param3, TriangleMesh param4) {
+    final static void drawMeshWithIntGuard(boolean param0, int param1, int param2, int param3, TriangleMesh param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_28_0 = 0;
@@ -479,11 +479,11 @@ final class ug extends TextButton {
             if (var19 == 0) {
               if (stackIn_10_0) {
                 var12 = SpriteState.field_A[var9];
-                var13 = d.field_c[var9];
+                var13 = MonotonicClockHelpers.field_c[var9];
                 var14 = -var12 + SpriteState.field_A[var10];
                 var15 = -var12 + SpriteState.field_A[var11];
-                var16 = -var13 + d.field_c[var10];
-                var17 = d.field_c[var11] - var13;
+                var16 = -var13 + MonotonicClockHelpers.field_c[var10];
+                var17 = MonotonicClockHelpers.field_c[var11] - var13;
               }
               if (!stackIn_10_0 ||
                 !(var14 * var17 - var16 * var15 >= 0)) {
@@ -566,7 +566,7 @@ final class ug extends TextButton {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
         }
     }
 }

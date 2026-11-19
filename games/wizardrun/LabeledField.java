@@ -18,7 +18,7 @@ final class LabeledField extends SingleChildWidget {
         lc.field_d = true;
         GameShell.field_A.d(false);
         int var1 = -82 / ((param0 - 71) / 54);
-        fc.a(uh.field_f, false, -124);
+        DateFormattingHelpers.a(uh.field_f, false, -124);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -94,7 +94,7 @@ final class LabeledField extends SingleChildWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

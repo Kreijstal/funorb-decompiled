@@ -40,7 +40,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           }
           ((EditableTextWidget) ((Object) var3)).a(-1, false, var4);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "nk.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "nk.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           if (!param2) {
             field_U = (bh) null;
           }
-          var8 = new LabeledField(20, param4, 120 + param0, 25, param1, false, 120, 3, gh.field_b, 16777215, param3);
+          var8 = new LabeledField(20, param4, 120 + param0, 25, param1, false, 120, 3, Crc32Helpers.field_b, 16777215, param3);
           this.a((UiWidget) (var8), (byte) 39);
           var7 = new ValidationIndicator(((ValidatorProvider) ((Object) param1)).getValidator((byte) 120));
           this.a((UiWidget) (var7), (byte) 28);
@@ -173,7 +173,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new LabeledField(20, param5, 120 + param4, 25, param2, false, 120, 3, gh.field_b, 16777215, param1);
+          var10 = new LabeledField(20, param5, 120 + param4, 25, param2, false, 120, 3, Crc32Helpers.field_b, 16777215, param1);
           this.a((UiWidget) (var10), (byte) 39);
           var9 = new ValidationHelpWidget(((ValidatorProvider) ((Object) param2)).getValidator((byte) 109), param6, 126, param5 + var10.field_n, param4 + 50, param0);
           if (param3 != 7501) {
@@ -257,7 +257,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
             stackIn_2_0 = -4;
             return stackIn_2_0;
           }
-          var6 = new LabeledField(20, param0, param2 + 120, 25, param3, false, 120, 3, gh.field_b, 16777215, param4);
+          var6 = new LabeledField(20, param0, param2 + 120, 25, param3, false, 120, 3, Crc32Helpers.field_b, 16777215, param4);
           this.a((UiWidget) (var6), (byte) 62);
           stackIn_4_0 = var6.field_n;
           return stackIn_4_0;
@@ -297,7 +297,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -326,10 +326,10 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         this.field_V = new TextButton(w.field_d, (WidgetListener) null);
         this.field_I = new TextButton(v.field_c, (WidgetListener) null);
         this.field_G.field_p = DiskCacheWorker.field_a;
-        this.field_F.field_p = fb.field_c;
+        this.field_F.field_p = SettingsCookieReader.field_c;
         this.field_H.field_p = ec.field_e;
         this.field_S.field_p = GameShell.field_v;
-        this.field_O.field_p = ph.field_s;
+        this.field_O.field_p = GameMenu.field_s;
         this.field_P.field_p = GameGraphicsResources.field_c;
         this.field_E.field_p = Js5Index.field_o;
         this.field_G.a(0, new jg(this.field_G));
@@ -356,12 +356,12 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         var3 = var3 + (5 + this.a(20, ve.field_b, this.field_H, 7501, 170, var3, ""));
         var3 = var3 + this.a(var3, true, 170, this.field_S, WhirlpoolHasher.field_d);
         var3 = var3 + (this.a((byte) 4, this.field_O, RasterBuffer.field_i, 170, var3, LabeledField.field_H) + 5);
-        var3 = var3 + (5 + this.a((byte) 4, this.field_G, re.field_E, 170, var3, d.field_b));
-        var3 = var3 + this.a(170, this.field_P, true, sb.field_a, var3);
-        LabeledField var4 = new LabeledField(46, var3, -90 + this.field_r, 25, this.field_E, true, -120 + this.field_r, 5, e.field_b, 11579568, fb.field_e);
+        var3 = var3 + (5 + this.a((byte) 4, this.field_G, re.field_E, 170, var3, MonotonicClockHelpers.field_b));
+        var3 = var3 + this.a(170, this.field_P, true, Base37Codec.field_a, var3);
+        LabeledField var4 = new LabeledField(46, var3, -90 + this.field_r, 25, this.field_E, true, -120 + this.field_r, 5, e.field_b, 11579568, SettingsCookieReader.field_e);
         this.a((UiWidget) (var4), (byte) 58);
         var3 = var3 + var4.field_n;
-        WidgetPainter var5 = new WidgetPainter(gh.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, gh.field_b.field_M, -1, 2147483647, true);
+        WidgetPainter var5 = new WidgetPainter(Crc32Helpers.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, Crc32Helpers.field_b.field_M, -1, 2147483647, true);
         this.field_L = new HotspotTextWidget(var2, var5);
         this.field_L.field_p = "";
         this.field_L.a(1, field_R, 0);
@@ -423,7 +423,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -439,14 +439,14 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         try {
           if (param0 != 0) {
             if (1 == param0) {
-              fa.a("privacy.ws", 12);
+              BrowserCookieHelpers.a("privacy.ws", 12);
             } else {
               if (param0 == 2) {
-                fa.a("conduct.ws", 12);
+                BrowserCookieHelpers.a("conduct.ws", 12);
               }
             }
           } else {
-            fa.a("terms.ws", 12);
+            BrowserCookieHelpers.a("terms.ws", 12);
           }
           var5_int = -16 % ((36 - param3) / 53);
           return;
@@ -460,7 +460,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -506,7 +506,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -515,7 +515,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           super.a(param0, param1, param2, param3);
           this.field_V.field_B = this.g(param0 - 10000586);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "nk.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "nk.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -61,14 +61,14 @@ final class dl {
             return 80;
           }
         }
-        if (qh.field_c != null) {
-          if (!qh.field_c.ensureIndex(17820)) {
+        if (GridActor.field_c != null) {
+          if (!GridActor.field_c.ensureIndex(17820)) {
             return 14;
           }
-          if (!qh.field_c.c(-1, "")) {
+          if (!GridActor.field_c.c(-1, "")) {
             return 29;
           }
-          if (!qh.field_c.a((byte) 29, "")) {
+          if (!GridActor.field_c.a((byte) 29, "")) {
             return 29;
           }
         }

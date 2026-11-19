@@ -60,16 +60,16 @@ final class jk {
             if (var5 == null) {
               var5 = IterableNodeHashTable.a(var6, -30782);
               if (null != var5) {
-                IntrusiveNode.field_f.a(var5, (long)var7.hashCode(), 122);
+                IntrusiveNode.field_f.put(var5, (long)var7.hashCode(), 122);
               }
             }
             if (null == var5) {
               var5 = new aa();
-              IntrusiveNode.field_f.a(var5, (long)var7.hashCode(), 112);
+              IntrusiveNode.field_f.put(var5, (long)var7.hashCode(), 112);
               fieldTemp$0 = hj.field_e;
               hj.field_e = hj.field_e + 1;
               var5.field_ob = fieldTemp$0;
-              bd.field_a.a(var5, false);
+              ExceptionSupport.field_a.addLast(var5, false);
             }
             var5.field_mb = var4_ref_String;
             return;
@@ -113,24 +113,24 @@ final class jk {
           if (var6_ref == null) {
             var6_ref = IterableNodeHashTable.a((byte) -116, var5_ref);
             if (var6_ref != null) {
-              lj.field_f.a(var6_ref, (long)MouseWheelInput.a(-78, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), 125);
+              lj.field_f.put(var6_ref, (long)MouseWheelInput.a(-78, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), 125);
             }
           }
           if (null == var6_ref) {
             var6_ref = new aa();
-            lj.field_f.a(var6_ref, (long)MouseWheelInput.a(-57, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), 107);
+            lj.field_f.put(var6_ref, (long)MouseWheelInput.a(-57, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), 107);
             fieldTemp$1 = DirectByteStorage.field_h;
             DirectByteStorage.field_h = DirectByteStorage.field_h + 1;
             var6_ref.field_ob = fieldTemp$1;
-            WhirlpoolHasher.field_g.a(var6_ref, false);
+            WhirlpoolHasher.field_g.addLast(var6_ref, false);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
           var6_ref.field_jb = (String) (var3Lifetime1);
           var6_ref.field_mb = var4_ref_StringLifetime1;
-          var6_ref.a(false);
-          var7_ref = (aa) (WhirlpoolHasher.field_g.b((byte) 80));
+          var6_ref.unlink(false);
+          var7_ref = (aa) (WhirlpoolHasher.field_g.first((byte) 80));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != var7_ref) {
@@ -140,7 +140,7 @@ final class jk {
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_53_0)) {
-                var7_ref = (aa) (WhirlpoolHasher.field_g.d(8192));
+                var7_ref = (aa) (WhirlpoolHasher.field_g.next(8192));
                 continue;
               }
             }
@@ -150,18 +150,18 @@ final class jk {
               }
               stackIn_60_0 = 74;
             }
-            GameShell.$cfr$intArgs$a$894bb1585d61(stackIn_60_0, var7_ref, var6_ref);
+            GameShell.insertNodeBeforeWithIntGuard(stackIn_60_0, var7_ref, var6_ref);
             if (var8 == 0) {
               return;
             }
             break;
           }
-          WhirlpoolHasher.field_g.a(var6_ref, false);
+          WhirlpoolHasher.field_g.addLast(var6_ref, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1_ref), "jk.B(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1_ref), "jk.B(" + param0 + ')');
         }
     }
 
@@ -171,7 +171,7 @@ final class jk {
           field_a = null;
           int var1_int = 5 / ((-70 - param0) / 36);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "jk.A(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "jk.A(" + param0 + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class jk {
           this.field_f = false;
           this.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "jk.<init>()");
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "jk.<init>()");
         }
     }
 

@@ -15,7 +15,7 @@ final class DirectByteStorage extends ByteStorage {
           int var3_int = -117 % ((param1 - 75) / 38);
           this.field_i.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "kh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "kh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

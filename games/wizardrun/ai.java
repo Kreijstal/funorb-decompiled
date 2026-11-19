@@ -33,7 +33,7 @@ final class ai extends IntrusiveNode {
           td.field_f = new kb(GameShell.field_A, TimedValidator.field_b);
           GameShell.field_A.b((UiWidget) (td.field_f), (byte) 117);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class ai extends IntrusiveNode {
           this.field_p = param5;
           this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ai.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ai.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class ai extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$87b210a2f664(boolean param0, int param1, String param2, boolean param3) {
+    final static void openLoginDialogWithIntGuard(boolean param0, int param1, String param2, boolean param3) {
         try {
           LoginChoicePanel.h((byte) 98);
           GameShell.field_A.d(false);
@@ -71,7 +71,7 @@ final class ai extends IntrusiveNode {
           td.field_f = new kb(GameShell.field_A, TimedValidator.field_b);
           GameShell.field_A.b((UiWidget) (td.field_f), (byte) 117);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 }

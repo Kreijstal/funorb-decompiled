@@ -10,31 +10,31 @@ final class WeightedLruCache {
     static boolean[] field_g;
     static int field_e;
 
-    final Object a(byte param0, long param1) {
+    final Object get(byte param0, long param1) {
         StrongCacheEntry var6 = null;
-        CacheEntry var7 = (CacheEntry) (this.field_b.a(false, param1));
+        CacheEntry var7 = (CacheEntry) (this.field_b.get(false, param1));
         if (var7 == null) {
           return null;
         }
         Object var5 = var7.getValue(1);
         if (param0 < 60) {
-          this.a((byte) 14, 32L);
+          this.get((byte) 14, 32L);
         }
         if (var5 == null) {
-          var7.a(false);
           var7.unlink(false);
+          var7.unlinkSecondary(false);
           this.field_c = this.field_c + var7.field_p;
           return null;
         }
         if (var7.isSoftReference(-9861)) {
           var6 = new StrongCacheEntry(var5, var7.field_p);
-          this.field_b.a(var7.key, var6, (byte) -106);
-          this.field_d.a(var6, 10);
+          this.field_b.put(var7.key, var6, (byte) -106);
+          this.field_d.addLast(var6, 10);
           ((CacheEntry) ((Object) var6)).secondaryKey = 0L;
-          var7.a(false);
           var7.unlink(false);
+          var7.unlinkSecondary(false);
         } else {
-          this.field_d.a(var7, 10);
+          this.field_d.addLast(var7, 10);
           var7.secondaryKey = 0L;
         }
         return var5;
@@ -48,17 +48,17 @@ final class WeightedLruCache {
 
     final static void a(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
-        ai.$cfr$intArgs$a$87b210a2f664(param1, 126, (String) null, param0);
+        ai.openLoginDialogWithIntGuard(param1, 126, (String) null, param0);
         if (param2 <= 106) {
           WeightedLruCache.a(-92L, -11);
         }
     }
 
-    final void a(long param0, int param1, Object param2) {
+    final void put(long param0, int param1, Object param2) {
         try {
-          this.a((byte) -30, param1, param0, param2);
+          this.putWeighted((byte) -30, param1, param0, param2);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "di.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "di.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class WeightedLruCache {
                 continue;
               }
               var5++;
-              var8 = ph.a(1124, (CharSequence) ((Object) var7_ref_String));
+              var8 = GameMenu.a(1124, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (args[var8].length() - var5 + var6_int);
               continue;
             }
@@ -150,7 +150,7 @@ final class WeightedLruCache {
               continue;
             }
             var5Lifetime1++;
-            var10 = ph.a(1124, (CharSequence) ((Object) var9));
+            var10 = GameMenu.a(1124, (CharSequence) ((Object) var9));
             discarded$0 = var6.append(param2.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(args[var10]);
@@ -171,7 +171,7 @@ final class WeightedLruCache {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class WeightedLruCache {
             field_g = (boolean[]) null;
           }
           while (QuickChatPhraseDefinition.a((byte) 125)) {
-            var1.c((byte) 49, 8);
+            var1.writeCipheredOpcode((byte) 49, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
@@ -241,19 +241,19 @@ final class WeightedLruCache {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1_ref), "di.E(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1_ref), "di.E(" + param0 + ')');
         }
     }
 
-    private final void b(long param0, int param1) {
+    private final void remove(long param0, int param1) {
         if (param1 <= 75) {
-          this.b(26L, 18);
+          this.remove(26L, 18);
         }
-        CacheEntry var4 = (CacheEntry) (this.field_b.a(false, param0));
-        this.a(var4, -111);
+        CacheEntry var4 = (CacheEntry) (this.field_b.get(false, param0));
+        this.removeEntry(var4, -111);
     }
 
-    private final void a(CacheEntry param0, int param1) {
+    private final void removeEntry(CacheEntry param0, int param1) {
         String var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -262,8 +262,8 @@ final class WeightedLruCache {
         RuntimeException var3 = null;
         try {
           if (param0 != null) {
-            param0.a(false);
             param0.unlink(false);
+            param0.unlinkSecondary(false);
             this.field_c = this.field_c + param0.field_p;
           }
           if (param1 >= -16) {
@@ -281,7 +281,7 @@ final class WeightedLruCache {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -296,23 +296,23 @@ final class WeightedLruCache {
         }
         try {
           var3 = n.field_b;
-          var3.c((byte) 124, param1);
+          var3.writeCipheredOpcode((byte) 124, param1);
           var3.writeByte((byte) 11, param0.field_j);
           var3.writeByte((byte) 11, param0.field_i);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "di.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "di.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(byte param0) {
+    final static void exitFullscreen(byte param0) {
         if (LoginChoicePanel.field_E == null) {
           return;
         }
         ka.a(LoginChoicePanel.field_E, 8053);
         LoginChoicePanel.field_E.a(ld.field_g, (byte) 19);
         LoginChoicePanel.field_E = null;
-        if (oa.field_c != null) {
-          oa.field_c.a(127);
+        if (StringPaddingHelpers.field_c != null) {
+          StringPaddingHelpers.field_c.a(127);
         }
         wizardrun.field_G.requestFocus();
         if (param0 != 60) {
@@ -320,7 +320,7 @@ final class WeightedLruCache {
         }
     }
 
-    private final void a(byte param0, int param1, long param2, Object param3) {
+    private final void putWeighted(byte param0, int param1, long param2, Object param3) {
         CacheEntry var6 = null;
         StrongCacheEntry var6_ref = null;
         int var7 = wizardrun.field_H;
@@ -331,18 +331,18 @@ final class WeightedLruCache {
           if (param1 > this.field_f) {
             throw new IllegalStateException();
           }
-          this.b(param2, 104);
+          this.remove(param2, 104);
           this.field_c = this.field_c - param1;
           while (this.field_c < 0) {
-            var6 = (CacheEntry) (this.field_d.b((byte) -115));
-            this.a(var6, -26);
+            var6 = (CacheEntry) (this.field_d.peekFirst((byte) -115));
+            this.removeEntry(var6, -26);
           }
           var6_ref = new StrongCacheEntry(param3, param1);
-          this.field_b.a(param2, var6_ref, (byte) -117);
-          this.field_d.a(var6_ref, 10);
+          this.field_b.put(param2, var6_ref, (byte) -117);
+          this.field_d.addLast(var6_ref, 10);
           ((CacheEntry) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "di.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "di.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

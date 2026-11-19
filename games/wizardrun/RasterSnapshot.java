@@ -41,7 +41,7 @@ final class RasterSnapshot extends IntrusiveNode {
           this.field_u = param7;
           this.field_p = param3;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ei.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ei.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -86,15 +86,15 @@ final class RasterSnapshot extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (pg) (sf.field_j.b((byte) 115));
+          var4 = (pg) (sf.field_j.first((byte) 115));
           while (var4 != null) {
             pg.a(param1, true, var4);
-            var4 = (pg) (sf.field_j.d(8192));
+            var4 = (pg) (sf.field_j.next(8192));
           }
-          var2 = AudioServiceThread.field_d.b((byte) 96);
+          var2 = AudioServiceThread.field_d.first((byte) 96);
           while (var2 != null) {
             hg.a(param1, (byte) 106);
-            var2 = AudioServiceThread.field_d.d(param0 + 8141);
+            var2 = AudioServiceThread.field_d.next(param0 + 8141);
           }
           if (param0 == 51) {
             return;
@@ -104,7 +104,7 @@ final class RasterSnapshot extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2_ref), "ei.D(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2_ref), "ei.D(" + param0 + ',' + param1 + ')');
         }
     }
 

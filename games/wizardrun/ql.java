@@ -14,13 +14,13 @@ final class ql {
         }
         qf.field_l = qf.field_l | var3;
         IsaacRandom.field_a = IsaacRandom.field_a | var3;
-        uc.field_b.a(new ra(param2), false);
+        uc.field_b.addLast(new ra(param2), false);
         if (!tc.field_j) {
-          ie.field_l.a(new pg(param2, param1, BufferedSocket.field_c + qh.field_g, -(64 * DiskCacheStore.field_f) + wg.field_b, field_c + me.field_f, ic.field_a + 6 * qh.field_l), false);
+          ie.field_l.addLast(new pg(param2, param1, BufferedSocket.field_c + GridActor.field_g, -(64 * DiskCacheStore.field_f) + wg.field_b, field_c + me.field_f, ic.field_a + 6 * GridActor.field_l), false);
           return;
         }
         if (TextHotspotRange.field_m >= 2) {
-          ie.field_l.a(new pg(param2, param1, BufferedSocket.field_c + qh.field_g, -(64 * DiskCacheStore.field_f) + wg.field_b, field_c + me.field_f, ic.field_a + 6 * qh.field_l), false);
+          ie.field_l.addLast(new pg(param2, param1, BufferedSocket.field_c + GridActor.field_g, -(64 * DiskCacheStore.field_f) + wg.field_b, field_c + me.field_f, ic.field_a + 6 * GridActor.field_l), false);
           return;
         }
     }
@@ -48,7 +48,7 @@ final class ql {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ final class ql {
           return;
         }
         if (null != jc.field_H) {
-          jc.field_H.b((byte) 76);
+          jc.field_H.close((byte) 76);
           jc.field_H = null;
         }
     }
@@ -65,18 +65,18 @@ final class ql {
     final static boolean a(boolean param0) {
         if (param0) {
           ql.a(-48, 28, 36);
-          if (oa.field_c == null) {
+          if (StringPaddingHelpers.field_c == null) {
             return false;
           }
-          if (oa.field_c.b(0)) {
+          if (StringPaddingHelpers.field_c.b(0)) {
             return true;
           }
           return false;
         }
-        if (oa.field_c == null) {
+        if (StringPaddingHelpers.field_c == null) {
           return false;
         }
-        if (oa.field_c.b(0)) {
+        if (StringPaddingHelpers.field_c.b(0)) {
           return true;
         }
         return false;
@@ -292,7 +292,7 @@ final class ql {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bd {
+final class ExceptionSupport {
     static rc field_b;
     static IntrusiveDeque field_a;
     static Sprite[] field_c;
@@ -47,7 +47,7 @@ final class bd {
           return;
         }
         String var2 = (String) null;
-        bd.wrapException((Throwable) null, (String) null);
+        ExceptionSupport.wrapException((Throwable) null, (String) null);
         field_b = null;
         field_a = null;
         field_c = null;

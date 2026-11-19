@@ -11,10 +11,10 @@ final class IntrusiveDeque {
     static String[] field_e;
     static String field_d;
 
-    final void a(IntrusiveNode param0, int param1) {
+    final void addFirst(IntrusiveNode param0, int param1) {
         try {
           if (param0.previous != null) {
-            param0.a(false);
+            param0.unlink(false);
           }
           if (param1 != -5441) {
             field_d = (String) null;
@@ -24,38 +24,38 @@ final class IntrusiveDeque {
           param0.previous.next = param0;
           param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "oi.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "oi.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode removeFirst(int param0) {
         IntrusiveNode var2 = this.field_a.next;
         if (var2 != this.field_a) {
           int var3 = -45 % ((param0 - 32) / 56);
-          var2.a(false);
+          var2.unlink(false);
           return var2;
         }
         return null;
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode removeLast(int param0) {
         IntrusiveNode var2 = this.field_a.previous;
         if (param0 != 8192) {
           field_f = (int[]) null;
           if (this.field_a != var2) {
-            var2.a(false);
+            var2.unlink(false);
             return var2;
           }
           return null;
         }
         if (this.field_a != var2) {
-          var2.a(false);
+          var2.unlink(false);
           return var2;
         }
         return null;
     }
 
-    final boolean f(int param0) {
+    final boolean isEmpty(int param0) {
         if (param0 == 8192) {
           return this.field_a.next == this.field_a ? true : false;
         }
@@ -63,7 +63,7 @@ final class IntrusiveDeque {
         return this.field_a.next == this.field_a ? true : false;
     }
 
-    final void a(boolean param0) {
+    final void clear(boolean param0) {
         IntrusiveNode var2 = null;
         int var3 = wizardrun.field_H;
         while (true) {
@@ -71,7 +71,7 @@ final class IntrusiveDeque {
           if (var2 == this.field_a) {
             break;
           }
-          var2.a(false);
+          var2.unlink(false);
         }
         if (!param0) {
           this.field_b = null;
@@ -79,7 +79,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final void a(IntrusiveNode param0, boolean param1) {
+    final void addLast(IntrusiveNode param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -87,7 +87,7 @@ final class IntrusiveDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != param0.previous) {
-            param0.a(param1);
+            param0.unlink(param1);
           }
           param0.next = this.field_a;
           param0.previous = this.field_a.previous;
@@ -108,11 +108,11 @@ final class IntrusiveDeque {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final IntrusiveNode d(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = this.field_b;
         if (var2 == this.field_a) {
           this.field_b = null;
@@ -125,7 +125,7 @@ final class IntrusiveDeque {
         return (IntrusiveNode) null;
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode last(byte param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 11) {
@@ -157,7 +157,7 @@ final class IntrusiveDeque {
         field_f = null;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode previous(int param0) {
         IntrusiveNode var2 = this.field_b;
         if (this.field_a == var2) {
           this.field_b = null;
@@ -174,7 +174,7 @@ final class IntrusiveDeque {
         this.field_a.previous = this.field_a;
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode first(byte param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 < 45) {

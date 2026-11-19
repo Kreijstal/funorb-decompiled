@@ -9,7 +9,7 @@ final class uk {
 
     final QuickChatPhraseDefinition b(byte param0, int param1) {
         byte[] var4 = null;
-        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_d.a((byte) 70, (long)param1));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_d.get((byte) 70, (long)param1));
         if (var3 != null) {
           return var3;
         }
@@ -28,7 +28,7 @@ final class uk {
         if (param1 >= 32768) {
           var3.markGlobalPhraseIds((byte) -127);
         }
-        this.field_d.a((long)param1, 1, var3);
+        this.field_d.put((long)param1, 1, var3);
         return var3;
     }
 
@@ -79,7 +79,7 @@ final class uk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class uk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class uk {
         if (param2) {
           SoftwareRasterizer.fillRectangleBlended(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
         } else {
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
         }
         WidgetTheme.a(param0 ^ 4, param2);
         if (param0 != -123) {
@@ -196,14 +196,14 @@ final class uk {
           var8 = new IsaacPacketBuffer(param1.a(93, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte(255);
-          var10.l(19967);
+          var10.beginBitAccess(19967);
           oh.field_a = ie.a(12, var10);
           cb.field_d = new int[var3][];
           NanoTickClock.field_f = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
             NanoTickClock.field_f[var4] = mh.a((byte) -117, var8);
           }
-          var10.i((byte) -31);
+          var10.finishBitAccess((byte) -31);
           if (param0 <= 115) {
             uk.releaseStatics((byte) -19);
           }
@@ -229,7 +229,7 @@ final class uk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

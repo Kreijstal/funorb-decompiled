@@ -25,7 +25,7 @@ final class AudioServiceThread implements Runnable {
                 var2.service();
               }
             }
-            tg.a(10L, false);
+            LevelData.sleepMillis(10L, false);
             Object var5 = (Object) null;
             bi.a(this.field_c, (byte) -105, (Object) null);
           }
@@ -70,7 +70,7 @@ final class AudioServiceThread implements Runnable {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class AudioServiceThread implements Runnable {
     }
 
     final static void b(int param0) {
-        vf var1 = (vf) (TimedValidator.field_d.b((byte) 72));
+        vf var1 = (vf) (TimedValidator.field_d.first((byte) 72));
         if (var1 == null) {
           ql.a(-82);
           return;
@@ -101,7 +101,7 @@ final class AudioServiceThread implements Runnable {
         var2.readInt(255);
         var2.readInt(255);
         var2.readInt(255);
-        var1.a(false);
+        var1.unlink(false);
     }
 
     static {

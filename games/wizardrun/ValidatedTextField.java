@@ -45,7 +45,7 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
           super.a(param0 + 0, param1, param2, param3);
           this.field_X = -param2 + (pg.field_n - this.field_o);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "p.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "p.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
         try {
           this.field_T = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "p.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "p.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -96,10 +96,10 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
           }
           int var4_int = 25 % ((param0 + 75) / 34);
           ProxySocketConnector.field_e.a(param1, param3, 2113632, param2);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           WidgetTheme.a(-117, true);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "p.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "p.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

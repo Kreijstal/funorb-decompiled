@@ -47,7 +47,7 @@ final class IterableNodeHashTable implements Iterable {
             stackIn_12_0 = null;
             return (aa) (stackIn_12_0);
           }
-          var3 = (aa) (lj.field_f.a((long)var2.hashCode(), (byte) 104));
+          var3 = (aa) (lj.field_f.get((long)var2.hashCode(), (byte) 104));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_mb);
             var4 = MouseWheelInput.a(-51, var7);
@@ -55,7 +55,7 @@ final class IterableNodeHashTable implements Iterable {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (aa) (lj.field_f.a(false));
+            var3 = (aa) (lj.field_f.nextMatch(false));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,7 +68,7 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -235,7 +235,7 @@ final class IterableNodeHashTable implements Iterable {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (aa) (IntrusiveNode.field_f.a((long)var2.hashCode(), (byte) 124));
+          var3 = (aa) (IntrusiveNode.field_f.get((long)var2.hashCode(), (byte) 124));
           while (true) {
             if (var3 == null) {
               return null;
@@ -246,7 +246,7 @@ final class IterableNodeHashTable implements Iterable {
               var4 = var3.field_mb;
             }
             if (!var4.equals(var2)) {
-              var3 = (aa) (IntrusiveNode.field_f.a(false));
+              var3 = (aa) (IntrusiveNode.field_f.nextMatch(false));
               continue;
             }
             break;
@@ -263,7 +263,7 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -276,7 +276,7 @@ final class IterableNodeHashTable implements Iterable {
         IterableNodeHashTable.a((byte) -10, (String) null);
     }
 
-    final IntrusiveNode a(boolean param0, long param1) {
+    final IntrusiveNode get(boolean param0, long param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;
@@ -317,7 +317,7 @@ final class IterableNodeHashTable implements Iterable {
         return var5Lifetime1;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachMouseListeners(java.awt.Component param0, int param1) {
         if (param1 <= 21) {
           return;
         }
@@ -326,13 +326,13 @@ final class IterableNodeHashTable implements Iterable {
           param0.addMouseMotionListener(tc.mouseHandler);
           param0.addFocusListener(tc.mouseHandler);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "gj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "gj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(long param0, IntrusiveNode param1, byte param2) {
+    final void put(long param0, IntrusiveNode param1, byte param2) {
         if (null != param1.previous) {
-          param1.a(false);
+          param1.unlink(false);
         }
         IntrusiveNode var5 = this.field_c[(int)((long)(-1 + this.field_d) & param0)];
         param1.previous = var5.previous;
@@ -345,7 +345,7 @@ final class IterableNodeHashTable implements Iterable {
           param1.key = param0;
           param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "gj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "gj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

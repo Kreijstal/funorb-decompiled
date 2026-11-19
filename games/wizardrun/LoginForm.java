@@ -28,7 +28,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           var3.a(-1, false, var4);
           this.field_Q.e(true);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "qc.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "qc.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             this.onButtonAction(56, (TextButton) null, 121, 39, 55);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "qc.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "qc.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         if (param0 != 4210752) {
           return;
         }
-        if (qi.d(-1) ||
+        if (FullscreenController.d(-1) ||
           !(0 >= this.field_K.field_k.length()) &&
           !(this.field_Q.field_k.length() <= 0)) {
           w.a(this.field_Q.field_k, this.field_K.field_k, -124);
@@ -56,7 +56,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
 
     final void a(int param0, int param1, int param2, int param3) {
         if (this.field_F != null) {
-          gh.field_b.a(this.field_F, 20 + (param0 + this.field_o), 15 + (this.field_l + param3), this.field_r - 40, this.field_n, 16777215, -1, 1, 0, gh.field_b.field_M);
+          Crc32Helpers.field_b.a(this.field_F, 20 + (param0 + this.field_o), 15 + (this.field_l + param3), this.field_r - 40, this.field_n, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
         }
         if (null != this.field_M) {
           SoftwareRasterizer.drawHorizontalLine(10 + param0, 134 + param3, this.field_r - 20, 4210752);
@@ -127,7 +127,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -335,10 +335,10 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
               this.field_G.field_w = (WidgetRenderer) ((Object) new tk());
             }
           } else {
-            this.field_G.field_p = sh.field_a;
+            this.field_G.field_p = BrowserUrlLauncher.field_a;
           }
           this.field_l = 15;
-          var7 = gh.field_b;
+          var7 = Crc32Helpers.field_b;
           if (null != this.field_F) {
             this.field_l = this.field_l + (5 + var7.measureWrappedHeight(this.field_F, -40 + this.field_r, var7.field_M));
           }
@@ -412,7 +412,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           CacheEntry.field_q = new DiskCacheWorker(param3);
           DialogLayer.field_L = new ArchiveCatalog(ii.field_f, CacheEntry.field_q);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "qc.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "qc.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

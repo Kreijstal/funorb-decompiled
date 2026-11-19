@@ -12,15 +12,15 @@ abstract class ByteStorage {
         try {
           we.field_c = ql.a("", false);
           we.field_c.a(false, 104);
-          eg.a(param3, param0 - 2109, param1, param2);
-          bd.a(-126);
+          PlatformActor.loadCommonWidgetSprites(param3, param0 - 2109, param1, param2);
+          ExceptionSupport.a(-126);
           fi.field_y = ej.field_b;
           if (param0 != 2202) {
             field_a = (String) null;
           }
           wc.field_j = ej.field_b;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "dj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "dj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

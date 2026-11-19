@@ -37,7 +37,7 @@ final class ci {
           bi.field_a = bi.field_a + (var2_intLifetime2 >> 1);
           NanoTickClock.field_j = NanoTickClock.field_j + param1.readUnsignedShort(-14477);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

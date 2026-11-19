@@ -55,7 +55,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (pk) (kj.field_d.b((byte) 46));
+          var4 = (pk) (kj.field_d.first((byte) 46));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -78,7 +78,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1_ref), "ac.J(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1_ref), "ac.J(" + param0 + ')');
         }
     }
 
@@ -149,7 +149,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           }
           var3_intLifetime1 = 44 % ((-38 - param1) / 36);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ac.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ac.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

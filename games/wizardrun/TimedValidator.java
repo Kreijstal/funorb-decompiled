@@ -39,7 +39,7 @@ abstract class TimedValidator implements Validator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -47,7 +47,7 @@ abstract class TimedValidator implements Validator {
         if (this.isEmpty(7245)) {
           return PacketBuffer.field_o;
         }
-        if (!(d.a((byte) 25) >= this.field_f + 350L)) {
+        if (!(MonotonicClockHelpers.monotonicMillis((byte) 25) >= this.field_f + 350L)) {
           return nf.field_c;
         }
         if (!param0) {
@@ -69,7 +69,7 @@ abstract class TimedValidator implements Validator {
           var1 = new Sprite(540, 140);
           UrlPacketDownloader.a(var1, false);
           cj.c();
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           DualLinkNodeHashTable.field_f = 0;
           gf.k(param0 ^ -301);
           var2 = var1.copy();
@@ -84,7 +84,7 @@ abstract class TimedValidator implements Validator {
           }
           bb.b(4);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "r.N(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "r.N(" + param0 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ abstract class TimedValidator implements Validator {
         if (this.isEmpty(7245)) {
           return null;
         }
-        if ((this.field_f + 350L) > d.a((byte) 29)) {
+        if ((this.field_f + 350L) > MonotonicClockHelpers.monotonicMillis((byte) 29)) {
           return null;
         }
         return this.b((byte) -82);
@@ -114,7 +114,7 @@ abstract class TimedValidator implements Validator {
         if (param0 >= -59) {
           return;
         }
-        this.field_f = d.a((byte) 31);
+        this.field_f = MonotonicClockHelpers.monotonicMillis((byte) 31);
     }
 
     static {

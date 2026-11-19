@@ -13,7 +13,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (null == this.field_a) {
           throw new IllegalStateException();
         }
-        this.field_a.unlink(false);
+        this.field_a.unlinkSecondary(false);
         this.field_a = null;
     }
 
@@ -40,7 +40,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_d = this.field_b.field_b.secondaryNext;
           this.field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

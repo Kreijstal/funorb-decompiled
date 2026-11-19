@@ -29,7 +29,7 @@ final class WhirlpoolHasher {
         BufferedRandomAccessFile.field_f = param0;
     }
 
-    final void a(byte[] param0, int param1, byte param2) {
+    final void finish(byte[] param0, int param1, byte param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -60,7 +60,7 @@ final class WhirlpoolHasher {
             this.field_a = this.field_a + 1;
             this.field_o[fieldTemp$1] = (byte) 0;
           }
-          g.a(this.field_m, 0, this.field_o, 32, 32);
+          ArrayOperations.copy(this.field_m, 0, this.field_o, 32, 32);
           this.compressBlock(-34);
           var4_int = 0;
           var5 = param1;
@@ -89,7 +89,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class WhirlpoolHasher {
           if (param5 != 0) {
             WhirlpoolHasher.releaseStatics((byte) 13);
           }
-          stackIn_3_0 = qi.a(var7, var8, param0, param4, param1, param6, param5 ^ 27851);
+          stackIn_3_0 = FullscreenController.a(var7, var8, param0, param4, param1, param6, param5 ^ 27851);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class WhirlpoolHasher {
         int var1 = -28 / ((-26 - param0) / 44);
     }
 
-    final void a(long param0, byte[] param1, byte param2) {
+    final void updateBits(long param0, byte[] param1, byte param2) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -304,7 +304,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
         }
     }
 

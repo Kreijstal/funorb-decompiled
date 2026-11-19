@@ -5,7 +5,7 @@ final class aa extends hh {
     String field_mb;
     int field_ob;
     static String field_gb;
-    static ob field_ib;
+    static GridPoint field_ib;
     static String field_nb;
     String field_jb;
     static String field_hb;
@@ -25,7 +25,7 @@ final class aa extends hh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -47) {
-            field_ib = (ob) null;
+            field_ib = (GridPoint) null;
           }
           stackIn_5_0 = (IterableNodeHashTable.a((byte) -116, param0) != null);
           return stackIn_5_0;
@@ -39,7 +39,7 @@ final class aa extends hh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -65,7 +65,7 @@ final class aa extends hh {
 
     static {
         field_gb = "Waiting for levels";
-        field_ib = new ob();
+        field_ib = new GridPoint();
         field_kb = "The Village";
     }
 }

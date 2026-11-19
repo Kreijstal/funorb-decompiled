@@ -98,10 +98,10 @@ final class MidiTrack extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (pb) (this.field_i.a(1, (long)var13));
+                var14 = (pb) (this.field_i.get(1, (long)var13));
                 if (var14 == null) {
                   var14 = new pb(new byte[128]);
-                  this.field_i.a(var14, -98, (long)var13);
+                  this.field_i.put(var14, -98, (long)var13);
                 }
                 var14.field_j[var11Lifetime2] = (byte) 1;
               }

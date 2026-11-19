@@ -22,7 +22,7 @@ final class ra extends IntrusiveNode {
 
     final static void a(int param0) {
         int var2 = 0;
-        eg dupTemp$0 = null;
+        PlatformActor dupTemp$0 = null;
         int var1_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -41,8 +41,8 @@ final class ra extends IntrusiveNode {
           }
           var1_intLifetime1 = WidgetTheme.field_k;
           for (var2 = 0; var1_intLifetime1 > var2; var2++) {
-            if (ii.field_e[var2].field_B == 21) {
-              ii.field_e[var2].field_e = 20;
+            if (ii.field_e[var2].actorType == 21) {
+              ii.field_e[var2].verticalVelocity = 20;
               ii.field_e[var2].field_h = -ii.field_e[var2].field_h;
               dupTemp$0 = ii.field_e[var2];
               dupTemp$0.field_o = dupTemp$0.field_o + 2;
@@ -52,7 +52,7 @@ final class ra extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "ra.C(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "ra.C(" + param0 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class ra extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -53,10 +53,10 @@ abstract class ResizableDialog extends FadingDialog {
               var3 = var3 + param1;
             }
             ve.a(118, var3);
-            var7 = TickClock.a(":", var3, param2 + 29396, "%3a");
-            var8 = TickClock.a("@", var7, 28834, "%40");
-            var9 = TickClock.a("&", var8, 28834, "%26");
-            var10 = TickClock.a("#", var9, param2 + 29396, "%23");
+            var7 = TickClock.replaceAll(":", var3, param2 + 29396, "%3a");
+            var8 = TickClock.replaceAll("@", var7, 28834, "%40");
+            var9 = TickClock.replaceAll("&", var8, 28834, "%26");
+            var10 = TickClock.replaceAll("#", var9, param2 + 29396, "%23");
             if (param2 != -562) {
               field_R = -121;
             }
@@ -79,7 +79,7 @@ abstract class ResizableDialog extends FadingDialog {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_p).append("&v2=").append(PlatformTaskDispatcher.field_b).append("&e=").append(var10).toString()), 123);
             while (var4.field_a == 0) {
-              tg.a(1L, false);
+              LevelData.sleepMillis(1L, false);
             }
             if (var4.field_a == 1) {
               var5 = (DataInputStream) (var4.field_e);

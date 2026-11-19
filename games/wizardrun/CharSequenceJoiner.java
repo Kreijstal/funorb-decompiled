@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class s {
+final class CharSequenceJoiner {
     static IndexedSprite[] field_c;
     static WidgetTheme field_b;
     static Sprite field_a;
 
-    final static String a(int param0, CharSequence[] param1, int param2, int param3) {
+    final static String join(int param0, CharSequence[] param1, int param2, int param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$0 = null;
@@ -78,7 +78,7 @@ final class s {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -179,7 +179,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = ph.a(1124, var13);
+                                  var10 = GameMenu.a(1124, var13);
                                   var11_ref_jf = this.field_s[var10];
                                   if (this.field_C == null) {
                                     stackIn_27_0 = var11_ref_jf.field_j;
@@ -321,7 +321,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = ph.a(1124, var10);
+                                  var9_int = GameMenu.a(1124, var10);
                                   var4 = var4 + this.field_s[var9_int].field_b;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -623,7 +623,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_I = ph.a(1124, var4);
+                field_I = GameMenu.a(1124, var4);
               }
             } else {
               field_y = field_x;
@@ -680,7 +680,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        DualLinkDeque.a(field_p, ' ', 0, 1);
+        DualLinkDeque.padBuilder(field_p, ' ', 0, 1);
         var4 = 0;
         var5 = 0;
         var6 = -1;
@@ -712,7 +712,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = ph.a(1124, var18);
+                                    var16_int = GameMenu.a(1124, var18);
                                     var4 = var4 + this.field_s[var16_int].field_b;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {

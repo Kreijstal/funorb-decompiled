@@ -16,7 +16,7 @@ abstract class MouseWheelInput {
         }
         boolean decompiledFrameRemainder0 = true;
         if (BoundedRandomAccessFile.field_a >= 20 &&
-          ph.a((byte) 71) && (!(0 < RasterSnapshot.field_t) ||
+          GameMenu.a((byte) 71) && (!(0 < RasterSnapshot.field_t) ||
           StripedProgressBar.g((byte) 80))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
@@ -69,14 +69,14 @@ abstract class MouseWheelInput {
           var2_int = 0;
           var3 = param1.length();
           while (var2_int < var3) {
-            if (d.a(true, param1.charAt(var2_int))) {
+            if (MonotonicClockHelpers.a(true, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (d.a(true, param1.charAt(var3 - 1))) {
+            if (MonotonicClockHelpers.a(true, param1.charAt(var3 - 1))) {
               var3--;
               continue;
             }
@@ -116,7 +116,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

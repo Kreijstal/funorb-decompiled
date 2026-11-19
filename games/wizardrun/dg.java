@@ -22,7 +22,7 @@ final class dg {
     final static boolean b(int param0) {
         int var1 = 118 / ((param0 + 4) / 48);
         BoundedRandomAccessFile.field_b = true;
-        sb.field_c = d.a((byte) 91) + 15000L;
+        Base37Codec.field_c = MonotonicClockHelpers.monotonicMillis((byte) 91) + 15000L;
         return ml.field_t == 11 ? true : false;
     }
 
@@ -51,23 +51,23 @@ final class dg {
         if (DualLinkNodeHashTable.field_f > 200) {
           var5 = (-DualLinkNodeHashTable.field_f + 250 << 8) / 50;
         }
-        UrlPacketDownloader.a(s.field_a, false);
+        UrlPacketDownloader.a(CharSequenceJoiner.field_a, false);
         cj.c();
         var6 = 14 % ((param2 + 9) / 50);
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clear();
         gf.k(-120);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleBlended(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           bb.b(4);
           if (DualLinkNodeHashTable.field_f < 150) {
-            s.field_a.drawHalfSize(var3, var4);
+            CharSequenceJoiner.field_a.drawHalfSize(var3, var4);
           } else {
             TextLayout.field_a.drawAlpha(var3 + 15, var4 + 10, var5);
           }
         } else {
           bb.b(4);
           if (DualLinkNodeHashTable.field_f < 150) {
-            s.field_a.drawHalfSize(var3, var4);
+            CharSequenceJoiner.field_a.drawHalfSize(var3, var4);
             var7 = DualLinkNodeHashTable.field_f - 125;
             if (var7 <= 0) {
               var7 = DualLinkNodeHashTable.field_f - 140;
@@ -247,7 +247,7 @@ final class dg {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 

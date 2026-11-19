@@ -12,7 +12,7 @@ final class GameGraphicsResources {
         int var2 = wizardrun.field_H;
         int var1_intLifetime1;
         try {
-          WidgetContainer.field_y.a(5);
+          WidgetContainer.field_y.reset(5);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             Js5Index.field_k[var1_int] = 0L;
           }
@@ -21,7 +21,7 @@ final class GameGraphicsResources {
           }
           uh.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ')');
         }
     }
 

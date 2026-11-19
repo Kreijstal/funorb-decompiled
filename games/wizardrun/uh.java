@@ -23,10 +23,10 @@ abstract class uh {
           if (td.field_c[param1] > td.field_c[param0]) {
             return false;
           }
-          if (ug.field_I[param0] > ug.field_I[param1]) {
+          if (RadialSelectorWidget.field_I[param0] > RadialSelectorWidget.field_I[param1]) {
             return true;
           }
-          if (ug.field_I[param0] < ug.field_I[param1]) {
+          if (RadialSelectorWidget.field_I[param0] < RadialSelectorWidget.field_I[param1]) {
             return false;
           }
           var4 = sk.field_B[param1] + MouseInputHandler.field_c[param1] + mk.field_c[param1];
@@ -50,10 +50,10 @@ abstract class uh {
           }
           return !(param0 <= param1);
         }
-        if (ug.field_I[param1] < ug.field_I[param0]) {
+        if (RadialSelectorWidget.field_I[param1] < RadialSelectorWidget.field_I[param0]) {
           return true;
         }
-        if (ug.field_I[param0] < ug.field_I[param1]) {
+        if (RadialSelectorWidget.field_I[param0] < RadialSelectorWidget.field_I[param1]) {
           return false;
         }
         if (td.field_c[param0] > td.field_c[param1]) {

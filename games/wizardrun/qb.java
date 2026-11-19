@@ -46,7 +46,7 @@ class qb extends WidgetPainter {
             var6 = param3;
           } else {
             var7 = (CharSequence) ((Object) param3);
-            var4_long = sb.a((byte) 124, var7);
+            var4_long = Base37Codec.encodeBase37((byte) 124, var7);
           }
           stackIn_6_0 = uk.a((String) (var6), 8355711, var4_long, param1, param0);
           return stackIn_6_0;
@@ -66,7 +66,7 @@ class qb extends WidgetPainter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ class qb extends WidgetPainter {
           }
           super.drawWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "qb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "qb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ class qb extends WidgetPainter {
     }
 
     qb(int param0) {
-        this(gh.field_b, param0);
+        this(Crc32Helpers.field_b, param0);
     }
 
     static {

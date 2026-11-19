@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sh {
+final class BrowserUrlLauncher {
     static Sprite field_b;
     static String field_a;
     static String field_d;
@@ -18,7 +18,7 @@ final class sh {
         field_b = null;
     }
 
-    final static void a(boolean param0, int param1, String param2, java.applet.Applet param3) {
+    final static void openExternalUrl(boolean param0, int param1, String param2, java.applet.Applet param3) {
         try {
           int var4_int = 0;
           RuntimeException var4 = null;
@@ -60,7 +60,7 @@ final class sh {
             } else {
               stackIn_14_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

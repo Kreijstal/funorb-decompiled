@@ -73,7 +73,7 @@ final class AwtDisplayController {
             return;
           }
         }
-        throw AwtDisplayController.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw AwtDisplayController.<RuntimeException>rethrowUnchecked(new Exception());
     }
 
     public final int[] listmodes() {
@@ -98,7 +98,7 @@ final class AwtDisplayController {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

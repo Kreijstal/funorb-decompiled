@@ -41,18 +41,18 @@ abstract class Js5Transport {
 
     final int d(int param0) {
         if (param0 == -14289) {
-          return this.field_b.c(4) + this.field_a.c(param0 + 14293);
+          return this.field_b.size(4) + this.field_a.size(param0 + 14293);
         }
         this.field_k = -124;
-        return this.field_b.c(4) + this.field_a.c(param0 + 14293);
+        return this.field_b.size(4) + this.field_a.size(param0 + 14293);
     }
 
     final int c(byte param0) {
         if (param0 < -16) {
-          return this.field_j.c(4) + this.field_m.c(4);
+          return this.field_j.size(4) + this.field_m.size(4);
         }
         this.a(120);
-        return this.field_j.c(4) + this.field_m.c(4);
+        return this.field_j.size(4) + this.field_m.size(4);
     }
 
     abstract void a(boolean param0);
@@ -74,12 +74,12 @@ abstract class Js5Transport {
           if (this.d(-14289) >= 20) {
             throw new RuntimeException();
           }
-          this.field_b.a(var8, 14);
+          this.field_b.addLast(var8, 14);
         } else {
           if (!(20 > this.c((byte) -76))) {
             throw new RuntimeException();
           }
-          this.field_j.a(var8, 14);
+          this.field_j.addLast(var8, 14);
         }
         if (param2 < -64) {
           return var8;

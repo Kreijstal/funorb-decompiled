@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class a {
+final class FlatTriangleRasterizer {
     static MonochromeBitmapFont font12;
     static String[] field_b;
 
@@ -197,14 +197,14 @@ final class a {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != -331851056) {
           int[] var2 = (int[]) null;
-          a.a(-97, -4, 61, -122, (int[]) null, -38, 93, 89, -73);
+          FlatTriangleRasterizer.a(-97, -4, 61, -122, (int[]) null, -38, 93, 89, -73);
         }
         field_b = null;
         font12 = null;

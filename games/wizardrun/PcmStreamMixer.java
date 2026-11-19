@@ -10,10 +10,10 @@ final class PcmStreamMixer extends PcmStream {
     private final void normalizeListenerDeadlines() {
         PcmMixerListener var1 = null;
         if (this.field_m > 0) {
-          var1 = (PcmMixerListener) (this.field_p.b((byte) 84));
+          var1 = (PcmMixerListener) (this.field_p.first((byte) 84));
           while (var1 != null) {
             var1.field_i = var1.field_i - this.field_m;
-            var1 = (PcmMixerListener) (this.field_p.d(8192));
+            var1 = (PcmMixerListener) (this.field_p.next(8192));
           }
           this.field_o = this.field_o - this.field_m;
           this.field_m = 0;
@@ -21,7 +21,7 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final PcmStream firstSubstream() {
-        return (PcmStream) (this.field_n.b((byte) 106));
+        return (PcmStream) (this.field_n.first((byte) 106));
     }
 
     final void addSample(PcmSample param0, int param1, int param2) {
@@ -29,11 +29,11 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final synchronized void addStream(PcmStream param0) {
-        this.field_n.a(param0, -5441);
+        this.field_n.addFirst(param0, -5441);
     }
 
     private final void removeListener(PcmMixerListener param0) {
-        param0.a(false);
+        param0.unlink(false);
         param0.a();
         IntrusiveNode var2 = this.field_p.field_a.next;
         if (var2 == this.field_p.field_a) {
@@ -68,7 +68,7 @@ final class PcmStreamMixer extends PcmStream {
           param0 = param0 - var2;
           this.field_m = this.field_m + var2;
           this.normalizeListenerDeadlines();
-          var3 = (PcmMixerListener) (this.field_p.b((byte) 106));
+          var3 = (PcmMixerListener) (this.field_p.first((byte) 106));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -87,7 +87,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListener(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_p.field_a) {
-            GameShell.$cfr$intArgs$a$894bb1585d61(74, param0, param1);
+            GameShell.insertNodeBeforeWithIntGuard(74, param0, param1);
             this.field_o = ((PcmMixerListener) (this.field_p.field_a.next)).field_i;
             return;
           }
@@ -97,28 +97,28 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        GameShell.$cfr$intArgs$a$894bb1585d61(74, param0, param1);
+        GameShell.insertNodeBeforeWithIntGuard(74, param0, param1);
         this.field_o = ((PcmMixerListener) (this.field_p.field_a.next)).field_i;
         return;
     }
 
     final PcmStream nextSubstream() {
-        return (PcmStream) (this.field_n.d(8192));
+        return (PcmStream) (this.field_n.next(8192));
     }
 
     private final void mixSubstreams(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_n.b((byte) 87));
+        PcmStream var4 = (PcmStream) (this.field_n.first((byte) 87));
         while (var4 != null) {
           var4.update(param0, param1, param2);
-          var4 = (PcmStream) (this.field_n.d(8192));
+          var4 = (PcmStream) (this.field_n.next(8192));
         }
     }
 
     private final void skipSubstreams(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_n.b((byte) 98));
+        PcmStream var2 = (PcmStream) (this.field_n.first((byte) 98));
         while (var2 != null) {
           var2.skipFrames(param0);
-          var2 = (PcmStream) (this.field_n.d(8192));
+          var2 = (PcmStream) (this.field_n.next(8192));
         }
     }
 
@@ -144,7 +144,7 @@ final class PcmStreamMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_m = this.field_m + var4;
           this.normalizeListenerDeadlines();
-          var5 = (PcmMixerListener) (this.field_p.b((byte) 99));
+          var5 = (PcmMixerListener) (this.field_p.first((byte) 99));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);

@@ -4,14 +4,14 @@
 import java.io.*;
 import java.util.*;
 
-public class fd {
+public class CacheFileLocator {
     private static String field_e;
     private static boolean field_d;
     private static Hashtable field_a;
     private static String field_c;
     private static int field_b;
 
-    public static void a(String param0, int param1, byte param2) {
+    public static void initialize(String param0, int param1, byte param2) {
         Exception var3 = null;
         Throwable decompiledCaughtException = null;
         field_b = param1;
@@ -47,20 +47,20 @@ public class fd {
         field_e = "~/";
     }
 
-    public static File a(String param0, int param1, String param2, int param3) {
+    public static File resolveRedirected(String param0, int param1, String param2, int param3) {
         return net.alterorb.launcher.Hook.cacheRedirect(param2, param0);
     }
 
-    private fd() throws Throwable {
+    private CacheFileLocator() throws Throwable {
         throw new Error();
     }
 
-    public static File a(String param0, byte param1) {
+    public static File resolve(String param0, byte param1) {
         if (param1 != 115) {
           field_c = (String) null;
-          return fd.a(param0, field_b, field_c, 66);
+          return CacheFileLocator.resolveRedirected(param0, field_b, field_c, 66);
         }
-        return fd.a(param0, field_b, field_c, 66);
+        return CacheFileLocator.resolveRedirected(param0, field_b, field_c, 66);
     }
 
     static {

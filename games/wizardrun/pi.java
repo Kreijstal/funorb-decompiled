@@ -147,11 +147,11 @@ final class pi {
             }
             var21 = stackIn_38_0;
             var22 = SpriteState.field_A[var15Lifetime1];
-            var23 = d.field_c[var15Lifetime1];
+            var23 = MonotonicClockHelpers.field_c[var15Lifetime1];
             var24 = SpriteState.field_A[var16];
-            var25 = d.field_c[var16];
+            var25 = MonotonicClockHelpers.field_c[var16];
             var26 = SpriteState.field_A[var17];
-            var27 = d.field_c[var17];
+            var27 = MonotonicClockHelpers.field_c[var17];
             if (var18 == var19 &&
               var19 == var20) {
               var28 = var55[var18];
@@ -203,7 +203,7 @@ final class pi {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ final class pi {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = ic.field_b[ResourceArchive.b(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(ProgressDialog.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var5);
+          var1[var2] = new Sprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var5);
         }
         ClientException.a(param0 ^ 0);
         return var1;
@@ -269,7 +269,7 @@ final class pi {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

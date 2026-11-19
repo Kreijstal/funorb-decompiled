@@ -67,7 +67,7 @@ abstract class IndexedSpriteState {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -90,12 +90,12 @@ abstract class IndexedSpriteState {
                 field_g = (String) null;
               }
               var3 = jl.a(-101, var4, param1).getFile();
-              cl.a(new Object[]{"home", var3 + "home.ws"}, "updatelinks", 30383, param1);
-              cl.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", 30383, param1);
-              cl.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", 30383, param1);
-              cl.a(new Object[]{"options", var3 + "options.ws"}, "updatelinks", 30383, param1);
-              cl.a(new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", 30383, param1);
-              cl.a(new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", 30383, param1);
+              BrowserScriptBridge.call(new Object[]{"home", var3 + "home.ws"}, "updatelinks", 30383, param1);
+              BrowserScriptBridge.call(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", 30383, param1);
+              BrowserScriptBridge.call(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", 30383, param1);
+              BrowserScriptBridge.call(new Object[]{"options", var3 + "options.ws"}, "updatelinks", 30383, param1);
+              BrowserScriptBridge.call(new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", 30383, param1);
+              BrowserScriptBridge.call(new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", 30383, param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
@@ -111,7 +111,7 @@ abstract class IndexedSpriteState {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -135,12 +135,12 @@ abstract class IndexedSpriteState {
         }
         try {
           ResourceArchive.a(0, (java.awt.Component) ((Object) param1));
-          IterableNodeHashTable.a((java.awt.Component) ((Object) param1), 98);
+          IterableNodeHashTable.attachMouseListeners((java.awt.Component) ((Object) param1), 98);
           if (MessagePanel.field_K != null) {
             MessagePanel.field_K.b((java.awt.Component) ((Object) param1), -1);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "jf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "jf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -36,12 +36,12 @@ class bb extends uh {
           ic.field_c = param1;
           tl.field_c = param3;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "bb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "bb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(byte param0) {
-        if (!oa.a(param0 ^ 25325)) {
+        if (!StringPaddingHelpers.a(param0 ^ 25325)) {
           return;
         }
         TriangleMesh.a(false, 4, 15991);
@@ -91,19 +91,19 @@ class bb extends uh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void b(int param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (lh.field_b.c(8192));
+        RasterSnapshot var1 = (RasterSnapshot) (lh.field_b.removeLast(8192));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         SoftwareRasterizer.setTarget(var1.field_q, var1.field_v, var1.field_o);
         SoftwareRasterizer.setClip(var1.field_r, var1.field_u, var1.field_s, var1.field_p);
         var1.field_q = null;
-        StatefulWidgetPainter.field_q.a(var1, false);
+        StatefulWidgetPainter.field_q.addLast(var1, false);
         if (param0 == 4) {
           return;
         }
@@ -119,7 +119,7 @@ class bb extends uh {
             this.a(-43, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "bb.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "bb.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -128,7 +128,7 @@ class bb extends uh {
           this.field_m = param0;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "bb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "bb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

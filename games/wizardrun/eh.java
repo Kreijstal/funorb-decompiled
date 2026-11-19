@@ -62,7 +62,7 @@ final class eh implements WidgetRenderer {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -88,16 +88,16 @@ final class eh implements WidgetRenderer {
           this.field_b = param0;
           this.field_a = param4;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     final static long a(int param0) {
         if (param0 != 2) {
           field_e = (uh) null;
-          return d.a((byte) 75) - eg.field_C;
+          return MonotonicClockHelpers.monotonicMillis((byte) 75) - PlatformActor.field_C;
         }
-        return d.a((byte) 75) - eg.field_C;
+        return MonotonicClockHelpers.monotonicMillis((byte) 75) - PlatformActor.field_C;
     }
 
     static {

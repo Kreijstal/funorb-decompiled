@@ -33,7 +33,7 @@ final class hc extends TextFieldValidator {
           if (jc.field_H == null) {
             return false;
           }
-          int var2_int = jc.field_H.c((byte) 89);
+          int var2_int = jc.field_H.available((byte) 89);
           if (param1 != -28266) {
             hc.f(-28);
           }
@@ -41,8 +41,8 @@ final class hc extends TextFieldValidator {
             if (-AccountCreationForm.field_N.position + param0 < var2_int) {
               var2_int = -AccountCreationForm.field_N.position + param0;
             }
-            jc.field_H.a(AccountCreationForm.field_N.payload, 114, var2_int, AccountCreationForm.field_N.position);
-            eg.field_C = d.a((byte) 29);
+            jc.field_H.readFully(AccountCreationForm.field_N.payload, 114, var2_int, AccountCreationForm.field_N.position);
+            PlatformActor.field_C = MonotonicClockHelpers.monotonicMillis((byte) 29);
             AccountCreationForm.field_N.position = AccountCreationForm.field_N.position + var2_int;
             if (param0 > AccountCreationForm.field_N.position) {
               return false;
@@ -98,7 +98,7 @@ final class hc extends TextFieldValidator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -137,10 +137,10 @@ final class hc extends TextFieldValidator {
 
     final static void a(pg param0, boolean param1, int param2) {
         try {
-          sf.field_j.a(param0, param1);
+          sf.field_j.addLast(param0, param1);
           pg.a(param2, true, param0);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "hc.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "hc.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class hc extends TextFieldValidator {
         try {
           this.field_k = new fe(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class hc extends TextFieldValidator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

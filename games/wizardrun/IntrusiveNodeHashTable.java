@@ -11,7 +11,7 @@ final class IntrusiveNodeHashTable {
     private IntrusiveNode field_f;
     static Sprite field_c;
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode next(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3;
@@ -57,7 +57,7 @@ final class IntrusiveNodeHashTable {
         return var5;
     }
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int param0, long param1) {
         IntrusiveNode var4;
         IntrusiveNode var5;
         int var6;
@@ -103,7 +103,7 @@ final class IntrusiveNodeHashTable {
         return 0;
     }
 
-    final static void a(ResourceArchive param0, byte param1) {
+    final static void loadEndingFrame(ResourceArchive param0, byte param1) {
         Sprite var2 = null;
         int var4 = 0;
         int var5 = 0;
@@ -112,7 +112,7 @@ final class IntrusiveNodeHashTable {
           var2 = new Sprite(param0.a(104, "", "final_frame.jpg"), (java.awt.Component) ((Object) wizardrun.field_G));
           var4 = var2.width;
           var5 = var2.height;
-          ph.d(-31782);
+          GameMenu.d(-31782);
           TextLayout.field_a = new Sprite(var4, var5 * 3 / 4);
           TextLayout.field_a.bindAsRasterTarget();
           var2.drawWithOffsets(0, 0);
@@ -122,7 +122,7 @@ final class IntrusiveNodeHashTable {
           ee.field_q.offsetY = TextLayout.field_a.height;
           bb.b(4);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ab.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ab.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -134,10 +134,10 @@ final class IntrusiveNodeHashTable {
         return DialogLayer.field_L.b((byte) -17);
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode first(byte param0) {
         this.field_g = 0;
         int var2 = -80 / ((-5 - param0) / 33);
-        return this.b(1);
+        return this.next(1);
     }
 
     IntrusiveNodeHashTable(int param0) {
@@ -156,9 +156,9 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final void a(IntrusiveNode param0, int param1, long param2) {
+    final void put(IntrusiveNode param0, int param1, long param2) {
         if (null != param0.previous) {
-          param0.a(false);
+          param0.unlink(false);
         }
         IntrusiveNode var5 = this.field_d[(int)((long)(this.field_a - 1) & param2)];
         if (param1 >= -1) {
@@ -171,7 +171,7 @@ final class IntrusiveNodeHashTable {
           param0.next.previous = param0;
           param0.key = param2;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ab.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ab.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

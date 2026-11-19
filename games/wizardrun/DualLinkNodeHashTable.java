@@ -11,14 +11,14 @@ final class DualLinkNodeHashTable {
     private DualLinkNode[] field_d;
     private int field_e;
 
-    final void a(DualLinkNode param0, long param1, int param2) {
+    final void put(DualLinkNode param0, long param1, int param2) {
         DualLinkNode var5 = null;
         if (param2 <= 103) {
           return;
         }
         try {
           if (param0.secondaryPrevious != null) {
-            param0.unlink(false);
+            param0.unlinkSecondary(false);
           }
           var5 = this.field_d[(int)((long)(this.field_e - 1) & param1)];
           param0.secondaryNext = var5;
@@ -27,11 +27,11 @@ final class DualLinkNodeHashTable {
           param0.secondaryNext.secondaryPrevious = param0;
           param0.secondaryKey = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "jd.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "jd.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final DualLinkNode a(boolean param0) {
+    final DualLinkNode nextMatch(boolean param0) {
         DualLinkNode var3 = null;
         int var4 = wizardrun.field_H;
         DualLinkNode var3Lifetime1;
@@ -73,7 +73,7 @@ final class DualLinkNodeHashTable {
         field_b = 86;
     }
 
-    final DualLinkNode a(long param0, byte param1) {
+    final DualLinkNode get(long param0, byte param1) {
         DualLinkNode var5 = null;
         int var6 = wizardrun.field_H;
         DualLinkNode var5Lifetime1;

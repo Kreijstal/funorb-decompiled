@@ -12,7 +12,7 @@ final class rc {
             rc.a(93, 80);
           }
           try {
-            cl.a(new Object[]{new Integer(param1)}, "resizing", param0 + 30383, jg.f(1));
+            BrowserScriptBridge.call(new Object[]{new Integer(param1)}, "resizing", param0 + 30383, jg.f(1));
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;
@@ -31,7 +31,7 @@ final class rc {
         if (vb.field_F == this) {
           return true;
         }
-        if (this == fc.field_b) {
+        if (this == DateFormattingHelpers.field_b) {
           return true;
         }
         if (BufferedSocket.field_l != this) {
@@ -68,7 +68,7 @@ final class rc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

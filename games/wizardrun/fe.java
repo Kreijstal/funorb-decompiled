@@ -10,7 +10,7 @@ final class fe extends TextFieldValidator {
         try {
           this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class fe extends TextFieldValidator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -98,54 +98,54 @@ final class fe extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void c(byte param0) {
-        ob stackIn_5_0 = null;
+        GridPoint stackIn_5_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        ob var3 = null;
-        ob var4 = null;
+        GridPoint var3 = null;
+        GridPoint var4 = null;
         var2 = wizardrun.field_H;
         try {
-          var3 = new ob();
+          var3 = new GridPoint();
           var4 = var3;
-          var4.field_b = 0;
+          var4.column = 0;
           if (param0 <= 91) {
             return;
           }
           stackIn_5_0 = var4;
-          while (stackIn_5_0.field_b < 20) {
-            var4.field_a = 0;
-            while (var4.field_a < 15) {
-              if (tc.field_l.field_j[var3.a((byte) -68)] > 0) {
-                lk.field_b[-1 + tc.field_l.field_j[var3.a((byte) -68)]].drawTransparent(32 * var4.field_b, 32 * (-var4.field_a + 14));
+          while (stackIn_5_0.column < 20) {
+            var4.row = 0;
+            while (var4.row < 15) {
+              if (tc.field_l.field_j[var3.toTileIndex((byte) -68)] > 0) {
+                lk.field_b[-1 + tc.field_l.field_j[var3.toTileIndex((byte) -68)]].drawTransparent(32 * var4.column, 32 * (-var4.row + 14));
               }
-              if (0 < tc.field_l.field_a[var3.a((byte) -68)] &&
-                oc.field_b[-1 + tc.field_l.field_a[var3.a((byte) -68)]] != null) {
-                oc.field_b[-1 + tc.field_l.field_a[var3.a((byte) -68)]][0].drawTransparent(var4.field_b * 32, 32 * (-1 + (15 - var4.field_a)));
+              if (0 < tc.field_l.field_a[var3.toTileIndex((byte) -68)] &&
+                oc.field_b[-1 + tc.field_l.field_a[var3.toTileIndex((byte) -68)]] != null) {
+                oc.field_b[-1 + tc.field_l.field_a[var3.toTileIndex((byte) -68)]][0].drawTransparent(var4.column * 32, 32 * (-1 + (15 - var4.row)));
               }
-              if (tc.field_l.field_d[var3.a((byte) -68)] &&
+              if (tc.field_l.field_d[var3.toTileIndex((byte) -68)] &&
                 ke.field_w) {
-                SoftwareRasterizer.fillRectangleBlended(32 * var4.field_b, -32 + (480 - var4.field_a * 32), 32, 32, 16777215, 128);
+                SoftwareRasterizer.fillRectangleBlended(32 * var4.column, -32 + (480 - var4.row * 32), 32, 32, 16777215, 128);
               }
-              var4.field_a = var4.field_a + 1;
+              var4.row = var4.row + 1;
             }
-            var4.field_b = var4.field_b + 1;
+            var4.column = var4.column + 1;
             stackIn_5_0 = var4;
           }
           if (DialogLayer.field_K != 0) {
             return;
           }
-          ld.field_d.drawTransparent(aa.field_ib.field_b * 24, 336 - aa.field_ib.field_a * 24);
+          ld.field_d.drawTransparent(aa.field_ib.column * 24, 336 - aa.field_ib.row * 24);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "fe.B(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "fe.B(" + param0 + ')');
         }
     }
 

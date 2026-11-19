@@ -68,7 +68,7 @@ final class kb extends gf {
           var23 = null;
           var12 = wizardrun.field_H;
           try {
-            var13 = (pk) (kj.field_d.b((byte) 60));
+            var13 = (pk) (kj.field_d.first((byte) 60));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -208,7 +208,7 @@ final class kb extends gf {
               var5++;
             }
             param1.appendCrc(var4, -1182887024);
-            var17.a(false);
+            var17.unlink(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -220,7 +220,7 @@ final class kb extends gf {
             } else {
               stackIn_68_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -236,7 +236,7 @@ final class kb extends gf {
             field_jb = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "kb.VB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "kb.VB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

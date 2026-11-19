@@ -14,7 +14,7 @@ final class ValidationIndicator extends TextButton {
           this.field_K = this.field_K + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "kc.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "kc.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class ValidationIndicator extends TextButton {
           }
           if (SoundCache.field_d.height >= var10) {
             UrlPacketDownloader.a(SoundCache.field_d, false);
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clear();
             var15.drawRotatedAboutPivot(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_K << 10, 4096);
             bb.b(4);
             SoundCache.field_d.drawAdditive(var5 - var15.fullWidth, var6 - var15.fullHeight, 256);
@@ -103,7 +103,7 @@ final class ValidationIndicator extends TextButton {
           }
           if (SoundCache.field_d.height >= var10Lifetime1) {
             UrlPacketDownloader.a(SoundCache.field_d, false);
-            SoftwareRasterizer.d();
+            SoftwareRasterizer.clear();
             var18.drawRotatedAboutPivot(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_K << 10, 4096);
             bb.b(4);
             SoundCache.field_d.drawAdditive(var5 - var18.fullWidth, var6 - var18.fullHeight, 256);
@@ -149,7 +149,7 @@ final class ValidationIndicator extends TextButton {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class ValidationIndicator extends TextButton {
         try {
           this.field_F = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

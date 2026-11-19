@@ -15,7 +15,7 @@ final class IntrusiveDequeCursor {
         return -fe.field_l + sj.field_n;
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = this.field_a;
         if (param0 != 35) {
           field_c = (String) null;
@@ -34,7 +34,7 @@ final class IntrusiveDequeCursor {
         return null;
     }
 
-    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+    final IntrusiveNode startForward(IntrusiveNode param0, int param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
@@ -70,11 +70,11 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int divideFloor(int param0, int param1, int param2) {
         if (param1 < 107) {
           return -123;
         }
@@ -82,7 +82,7 @@ final class IntrusiveDequeCursor {
         return (param0 + var3) / param2 - var3;
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         IntrusiveNode var2 = this.field_d.field_a.next;
         if (this.field_d.field_a == var2) {
           this.field_a = null;
@@ -96,7 +96,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+    final IntrusiveNode startBackward(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -131,11 +131,11 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode previous(boolean param0) {
         IntrusiveNode var2 = this.field_a;
         if (var2 == this.field_d.field_a) {
           this.field_a = null;
@@ -149,7 +149,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode last(byte param0) {
         IntrusiveNode var2 = this.field_d.field_a.previous;
         int var3 = -75 / ((-15 - param0) / 61);
         if (this.field_d.field_a == var2) {
@@ -176,7 +176,7 @@ final class IntrusiveDequeCursor {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "pf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

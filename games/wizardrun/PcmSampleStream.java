@@ -181,7 +181,7 @@ final class PcmSampleStream extends PcmStream {
         int var2Lifetime1;
         if (param0 == 0) {
           this.setVolume(0);
-          this.a(false);
+          this.unlink(false);
           return;
         }
         if (this.leftGain != 0) {
@@ -241,7 +241,7 @@ final class PcmSampleStream extends PcmStream {
         this.rampFrames = 0;
         this.targetVolume = 0;
         this.volume = 0;
-        this.a(false);
+        this.unlink(false);
     }
 
     final int mixingCost() {
@@ -582,7 +582,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.positionQ8 < 0) {
           if (this.stepQ8 <= 0) {
             this.cancelRamp();
-            this.a(false);
+            this.unlink(false);
             return;
           }
           this.positionQ8 = 0;
@@ -590,7 +590,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.positionQ8 >= var7) {
           if (this.stepQ8 >= 0) {
             this.cancelRamp();
-            this.a(false);
+            this.unlink(false);
             return;
           }
           this.positionQ8 = var7 - 1;
@@ -717,7 +717,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.positionQ8 >= var7) {
             this.positionQ8 = var7;
             this.cancelRamp();
-            this.a(false);
+            this.unlink(false);
           }
           return;
         }
@@ -727,7 +727,7 @@ final class PcmSampleStream extends PcmStream {
         }
         this.positionQ8 = -1;
         this.cancelRamp();
-        this.a(false);
+        this.unlink(false);
         return;
     }
 
@@ -906,7 +906,7 @@ final class PcmSampleStream extends PcmStream {
               this.rightGain = 0;
               this.leftGain = 0;
               this.volume = 0;
-              this.a(false);
+              this.unlink(false);
               param0 = this.rampFrames;
             }
             this.rampFrames = 0;
@@ -924,7 +924,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.positionQ8 < 0) {
           if (this.stepQ8 <= 0) {
             this.cancelRamp();
-            this.a(false);
+            this.unlink(false);
             return;
           }
           this.positionQ8 = 0;
@@ -932,7 +932,7 @@ final class PcmSampleStream extends PcmStream {
         if (this.positionQ8 >= var5) {
           if (this.stepQ8 >= 0) {
             this.cancelRamp();
-            this.a(false);
+            this.unlink(false);
             return;
           }
           this.positionQ8 = var5 - 1;
@@ -1045,7 +1045,7 @@ final class PcmSampleStream extends PcmStream {
           if (this.positionQ8 >= var5) {
             this.positionQ8 = var5;
             this.cancelRamp();
-            this.a(false);
+            this.unlink(false);
           }
           return;
         }
@@ -1054,7 +1054,7 @@ final class PcmSampleStream extends PcmStream {
         }
         this.positionQ8 = -1;
         this.cancelRamp();
-        this.a(false);
+        this.unlink(false);
     }
 
     private final static int mixReverseMonoAlignedRamp(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
@@ -1154,7 +1154,7 @@ final class PcmSampleStream extends PcmStream {
           this.rightGain = 0;
           this.leftGain = 0;
           this.volume = 0;
-          this.a(false);
+          this.unlink(false);
           return true;
         }
         if (this.volume >= var1) {

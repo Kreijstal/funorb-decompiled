@@ -7,7 +7,7 @@ final class IntHashTable {
     private int[] field_b;
     static char[] field_c;
 
-    final int b(byte param0, int param1) {
+    final int findIndex(byte param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -38,24 +38,24 @@ final class IntHashTable {
         RuntimeException var2_ref = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (ie) (pa.field_e.b((byte) 68));
+          var4 = (ie) (pa.field_e.first((byte) 68));
           while (var4 != null) {
             tb.a(param1, param0 ^ 18014, var4);
-            var4 = (ie) (pa.field_e.d(8192));
+            var4 = (ie) (pa.field_e.next(8192));
           }
           if (param0 != -86) {
             IntHashTable.releaseStatics(100);
           }
-          var2 = RasterBuffer.field_c.b((byte) 49);
+          var2 = RasterBuffer.field_c.first((byte) 49);
           while (var2 != null) {
             UiWidget.a(0, param1);
-            var2 = RasterBuffer.field_c.d(8192);
+            var2 = RasterBuffer.field_c.next(8192);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2_ref), "oe.B(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2_ref), "oe.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class IntHashTable {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = WeightedLruCache.a(sb.a((byte) -75, param1), 74);
+          var2 = WeightedLruCache.a(Base37Codec.encodeBase37((byte) -75, param1), 74);
           if (param0 != 27) {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
@@ -89,7 +89,7 @@ final class IntHashTable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class IntHashTable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class IntHashTable {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

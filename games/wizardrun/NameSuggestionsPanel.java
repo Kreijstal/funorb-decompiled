@@ -42,7 +42,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -126,8 +126,8 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         if (!(BoundedRandomAccessFile.field_a >= 2)) {
           return IndexedSpriteState.field_f;
         }
-        if (qh.field_c != null) {
-          if (!qh.field_c.ensureIndex(param0 + 495)) {
+        if (GridActor.field_c != null) {
+          if (!GridActor.field_c.ensureIndex(param0 + 495)) {
             return bl.field_c;
           }
           return td.field_e;
@@ -193,7 +193,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         try {
           this.field_H = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         if (param2 != 0) {
           return;
         }
-        BitmapFont var5 = gh.field_b;
+        BitmapFont var5 = Crc32Helpers.field_b;
         if (null != this.field_F) {
           var5.a(ml.field_p, param0 + this.field_o, param3 + this.field_l, this.field_r, 20, 16777215, -1, 0, 0, var5.field_B + var5.field_M);
         }
@@ -221,7 +221,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         int var6 = 0;
         var6 = wizardrun.field_H;
         try {
-          this.field_A.a(false);
+          this.field_A.clear(false);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;
@@ -232,7 +232,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_F[var4_int] = IntHashTable.a((byte) 27, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
-            var4 = new tk(gh.field_b, 0, 1);
+            var4 = new tk(Crc32Helpers.field_b, 0, 1);
             this.field_I = new TextButton[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_I[var5] = new TextButton(this.field_F[var5], (WidgetListener) (this));
@@ -241,7 +241,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
               this.field_I[var5].a(109, 20 + var5 * 16, 15, 80, 0);
               this.a((UiWidget) (this.field_I[var5]), (byte) 64);
             }
-            this.field_I[var3_int] = new TextButton(eg.field_t, (WidgetListener) (this));
+            this.field_I[var3_int] = new TextButton(PlatformActor.field_t, (WidgetListener) (this));
             this.field_I[var3_int].field_w = (WidgetRenderer) ((Object) var4);
             this.field_I[var3_int].a(param0 ^ 44, 16 * var3_int + 36, 15, 100, 0);
             this.a((UiWidget) (this.field_I[var3_int]), (byte) 71);
@@ -259,7 +259,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

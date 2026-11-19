@@ -11,7 +11,7 @@ abstract class SocketConnector {
 
     abstract java.net.Socket a(byte param0) throws IOException;
 
-    final java.net.Socket a(int param0) throws IOException {
+    final java.net.Socket openSocket(int param0) throws IOException {
         if (param0 != -14394) {
           return (java.net.Socket) null;
         }
@@ -40,7 +40,7 @@ abstract class SocketConnector {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (cl.a(param1, -3264, "getcookies"));
+              var3 = (String) (BrowserScriptBridge.call(param1, -3264, "getcookies"));
               var4 = FadingDialog.a(var3, -22710, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -68,7 +68,7 @@ abstract class SocketConnector {
             } else {
               stackIn_25_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

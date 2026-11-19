@@ -47,7 +47,7 @@ final class vf extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "vf.A(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "vf.A(" + param0 + ')');
         }
     }
 

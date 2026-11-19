@@ -30,7 +30,7 @@ final class jg extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "jg.J(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "jg.J(" + param0 + ')');
         }
     }
 
@@ -94,10 +94,10 @@ final class jg extends TextFieldValidator {
           ne.field_h = new int[wb.field_f];
           ImageProducerRasterBuffer.field_k = new int[wb.field_f];
           v.field_e = new boolean[wb.field_f];
-          ph.field_q = new int[wb.field_f];
+          GameMenu.field_q = new int[wb.field_f];
           var2.position = param0.length - (7 + 8 * wb.field_f);
           ProgressDialog.field_bb = var2.readUnsignedShort(-14477);
-          eg.field_v = var2.readUnsignedShort(-14477);
+          PlatformActor.field_v = var2.readUnsignedShort(-14477);
           var3 = 1 + (255 & var2.readUnsignedByte(255));
           var4 = 0;
           do {
@@ -105,7 +105,7 @@ final class jg extends TextFieldValidator {
               var4 = 0;
               break;
             }
-            ph.field_q[var4] = var2.readUnsignedShort(-14477);
+            GameMenu.field_q[var4] = var2.readUnsignedShort(-14477);
             var4++;
           } while (var15 == 0);
           do {
@@ -265,7 +265,7 @@ final class jg extends TextFieldValidator {
           } else {
             stackIn_99_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ final class jg extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2), "jg.B(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2), "jg.B(" + param0 + ')');
         }
     }
 
@@ -335,7 +335,7 @@ final class jg extends TextFieldValidator {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -353,7 +353,7 @@ final class jg extends TextFieldValidator {
             field_m = 69;
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "jg.I(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "jg.I(" + param0 + ')');
         }
     }
 
@@ -402,7 +402,7 @@ final class jg extends TextFieldValidator {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

@@ -67,7 +67,7 @@ final class ni {
         var7 = wizardrun.field_H;
         try {
           var1 = null;
-          var1_array = MidiPcmStream.field_T[qh.field_l][ql.field_c];
+          var1_array = MidiPcmStream.field_T[GridActor.field_l][ql.field_c];
           if (var1_array == null) {
             return;
           }
@@ -90,19 +90,19 @@ final class ni {
               stackIn_14_0 = 0;
             }
             var3 = stackIn_14_0;
-            if (1 == qh.field_l &&
+            if (1 == GridActor.field_l &&
               7 <= tc.field_l.field_j[var6] &&
               tc.field_l.field_j[var6] <= 9) {
               var3 = 1;
               tc.field_l.field_f[var6] = 1;
             }
-            if (qh.field_l == 2 &&
+            if (GridActor.field_l == 2 &&
               tc.field_l.field_j[var6] >= 10 &&
               12 >= tc.field_l.field_j[var6]) {
               var3 = 1;
               tc.field_l.field_f[var6] = 1;
             }
-            if (qh.field_l == 0 &&
+            if (GridActor.field_l == 0 &&
               ql.field_c == 0) {
               var3 = 0;
             }
@@ -130,13 +130,13 @@ final class ni {
             var2++;
             tc.field_l.field_a[var6] = var1_array[incrementValue$2];
           }
-          ge.field_f = 0;
+          MenuController.field_f = 0;
           il.field_e = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1_ref), "ni.C(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1_ref), "ni.C(" + param0 + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class ni {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 

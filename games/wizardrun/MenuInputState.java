@@ -39,7 +39,7 @@ final class MenuInputState {
           TimedValidator.field_b = new LoginForm(param1, param0, false, true, param2);
           td.field_f.c(TimedValidator.field_b, -111);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "rj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "rj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -57,14 +57,14 @@ final class MenuInputState {
         if (w.field_c == 0) {
           var4 = -3 % ((-4 - param1) / 32);
           if (this.field_h != 0 &&
-            sh.field_c != 0) {
+            BrowserUrlLauncher.field_c != 0) {
             if (0 >= this.field_a) {
               this.field_a = MessagePanel.field_G;
             }
             this.field_a = this.field_a - 1;
           }
           if (w.field_c == 0 &&
-            sh.field_c == 0) {
+            BrowserUrlLauncher.field_c == 0) {
             this.field_h = 0;
           }
           if (this.field_h != 0) {
@@ -95,7 +95,7 @@ final class MenuInputState {
         var4Lifetime1 = -3 % ((-4 - param1) / 32);
         if (this.field_h == 0) {
           if (w.field_c == 0 &&
-            sh.field_c == 0) {
+            BrowserUrlLauncher.field_c == 0) {
             this.field_h = 0;
           }
           if (this.field_h != 0) {
@@ -120,9 +120,9 @@ final class MenuInputState {
           }
           return;
         }
-        if (sh.field_c == 0) {
+        if (BrowserUrlLauncher.field_c == 0) {
           if (w.field_c == 0 &&
-            sh.field_c == 0) {
+            BrowserUrlLauncher.field_c == 0) {
             this.field_h = 0;
           }
           if (this.field_h != 0) {
@@ -152,7 +152,7 @@ final class MenuInputState {
         }
         this.field_a = this.field_a - 1;
         if (w.field_c == 0 &&
-          sh.field_c == 0) {
+          BrowserUrlLauncher.field_c == 0) {
           this.field_h = 0;
         }
         if (this.field_h != 0) {

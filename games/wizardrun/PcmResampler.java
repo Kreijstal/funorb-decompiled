@@ -12,7 +12,7 @@ final class PcmResampler {
     static String field_d;
     private int field_e;
 
-    final int a(boolean param0, int param1) {
+    final int scaleRate(boolean param0, int param1) {
         if (this.field_b != null) {
           param1 = (int)((long)this.field_e * (long)param1 / (long)this.field_a);
         }
@@ -22,7 +22,7 @@ final class PcmResampler {
         return param1;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, long param5, int param6, String param7, int param8, int param9, boolean param10, int param11, int param12, PlatformTaskDispatcher param13) {
+    final static void configureClientNetwork(int param0, int param1, int param2, boolean param3, int param4, long param5, int param6, String param7, int param8, int param9, boolean param10, int param11, int param12, PlatformTaskDispatcher param13) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -38,7 +38,7 @@ final class PcmResampler {
             bl.field_a = param0;
             RasterBuffer.field_a = param2;
             bl.field_d = param5;
-            sb.field_e = param13;
+            Base37Codec.field_e = param13;
             cb.field_g = param3;
             MidiNote.field_l = param1;
             vl.field_d = param11;
@@ -49,9 +49,9 @@ final class PcmResampler {
             IntrusiveDequeCursor.field_g = param10;
             FadingDialog.field_J = param6;
             aa.field_nb = param7;
-            if (null != sb.field_e.field_c) {
+            if (null != Base37Codec.field_e.field_c) {
               try {
-                UiWidget.field_t = new BufferedRandomAccessFile(sb.field_e.field_c, 64, 0);
+                UiWidget.field_t = new BufferedRandomAccessFile(Base37Codec.field_e.field_c, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -75,7 +75,7 @@ final class PcmResampler {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -88,14 +88,14 @@ final class PcmResampler {
         field_f = null;
         if (param0 != 43) {
           PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
-          PcmResampler.a(-34, -29, -66, true, -96, -49L, 126, (String) null, -127, 99, false, 19, 4, (PlatformTaskDispatcher) null);
+          PcmResampler.configureClientNetwork(-34, -29, -66, true, -96, -49L, 126, (String) null, -127, 99, false, 19, 4, (PlatformTaskDispatcher) null);
         }
         field_d = null;
         field_c = null;
         field_g = null;
     }
 
-    final byte[] a(byte param0, byte[] param1) {
+    final byte[] resample(byte param0, byte[] param1) {
         byte[] stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -120,7 +120,7 @@ final class PcmResampler {
         var11 = wizardrun.field_H;
         try {
           if (param0 != 47) {
-            this.a((byte) 13, -83);
+            this.scalePosition((byte) 13, -83);
           }
           if (null != this.field_b) {
             var3_int = (int)((long)param1.length * (long)this.field_e / (long)this.field_a) + 14;
@@ -169,7 +169,7 @@ final class PcmResampler {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ final class PcmResampler {
         return;
     }
 
-    final int a(byte param0, int param1) {
+    final int scalePosition(byte param0, int param1) {
         if (this.field_b != null) {
           param1 = (int)((long)this.field_e * (long)param1 / (long)this.field_a) + 6;
         }

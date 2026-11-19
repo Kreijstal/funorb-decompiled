@@ -23,7 +23,7 @@ final class IsaacRandom {
         return null;
     }
 
-    private final void b(int param0) {
+    private final void initialize(int param0) {
         int var2 = 0;
         int var11 = wizardrun.field_H;
         int var2Lifetime1;
@@ -149,11 +149,11 @@ final class IsaacRandom {
           this.field_b[var2Lifetime2 + 6] = var9;
           this.field_b[var2Lifetime2 + 7] = var10;
         }
-        this.d((byte) 121);
+        this.generate((byte) 121);
         this.field_g = 256;
     }
 
-    private final void d(byte param0) {
+    private final void generate(byte param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -200,13 +200,13 @@ final class IsaacRandom {
         field_h = null;
     }
 
-    final int b(byte param0) {
+    final int nextInt(byte param0) {
         if (0 == this.field_g) {
-          this.d((byte) 121);
+          this.generate((byte) 121);
           this.field_g = 256;
         }
         if (param0 <= 58) {
-          this.b(13);
+          this.initialize(13);
         }
         int fieldTemp$0 = this.field_g - 1;
         this.field_g = this.field_g - 1;
@@ -264,7 +264,7 @@ final class IsaacRandom {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -276,9 +276,9 @@ final class IsaacRandom {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_f[var2_int] = param0[var2_int];
           }
-          this.b(-97);
+          this.initialize(-97);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -291,7 +291,7 @@ final class IsaacRandom {
           if (!pk.a((byte) -35)) {
             if (LoginChoicePanel.field_E != null &&
               LoginChoicePanel.field_E.field_b) {
-              WeightedLruCache.a((byte) 60);
+              WeightedLruCache.exitFullscreen((byte) 60);
               kj.field_b.b((UiWidget) (new vg(kj.field_b, WrappedTextLayout.field_f)), (byte) 96);
             }
             return;
@@ -308,7 +308,7 @@ final class IsaacRandom {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "ti.B(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "ti.B(" + param0 + ')');
         }
     }
 

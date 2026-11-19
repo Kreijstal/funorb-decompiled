@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class d {
+final class MonotonicClockHelpers {
     static String field_b;
     static String field_a;
     static int[] field_c;
@@ -74,7 +74,7 @@ final class d {
           ee.field_r = -1;
           EditableTextWidget.field_O = -1;
           if (param1 != 0) {
-            d.a(false, 'b');
+            MonotonicClockHelpers.a(false, 'b');
           }
           if (ol.field_b &&
             MidiEnvelope.field_b == IterableNodeHashTable.field_b) {
@@ -93,7 +93,7 @@ final class d {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -104,13 +104,13 @@ final class d {
           field_a = null;
           return;
         }
-        d.a((byte) 113);
+        MonotonicClockHelpers.monotonicMillis((byte) 113);
         field_c = null;
         field_b = null;
         field_a = null;
     }
 
-    final synchronized static long a(byte param0) {
+    final synchronized static long monotonicMillis(byte param0) {
         if (param0 < 16) {
           return 0L;
         }
@@ -126,7 +126,7 @@ final class d {
 
     final static boolean a(boolean param0, char param1) {
         if (!param0) {
-          d.releaseStatics(87);
+          MonotonicClockHelpers.releaseStatics(87);
           if (160 == param1) {
             return true;
           }

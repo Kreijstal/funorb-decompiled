@@ -20,22 +20,22 @@ final class pj extends SingleChildWidget {
         var9 = wizardrun.field_H;
         if (param7 < param0) {
           if (param0 < param4) {
-            a.a(param6, param5, param0, param2, SoftwareRasterizer.pixels, param3, param4, -20476, param7);
+            FlatTriangleRasterizer.a(param6, param5, param0, param2, SoftwareRasterizer.pixels, param3, param4, -20476, param7);
           } else {
             if (param4 <= param7) {
-              a.a(param3, param5, param7, param6, SoftwareRasterizer.pixels, param2, param0, -20476, param4);
+              FlatTriangleRasterizer.a(param3, param5, param7, param6, SoftwareRasterizer.pixels, param2, param0, -20476, param4);
             } else {
-              a.a(param3, param5, param4, param2, SoftwareRasterizer.pixels, param6, param0, -20476, param7);
+              FlatTriangleRasterizer.a(param3, param5, param4, param2, SoftwareRasterizer.pixels, param6, param0, -20476, param7);
             }
           }
         } else {
           if (param7 < param4) {
-            a.a(param6, param5, param7, param3, SoftwareRasterizer.pixels, param2, param4, -20476, param0);
+            FlatTriangleRasterizer.a(param6, param5, param7, param3, SoftwareRasterizer.pixels, param2, param4, -20476, param0);
           } else {
             if (param4 > param0) {
-              a.a(param2, param5, param4, param3, SoftwareRasterizer.pixels, param6, param7, -20476, param0);
+              FlatTriangleRasterizer.a(param2, param5, param4, param3, SoftwareRasterizer.pixels, param6, param7, -20476, param0);
             } else {
-              a.a(param2, param5, param0, param6, SoftwareRasterizer.pixels, param3, param7, -20476, param4);
+              FlatTriangleRasterizer.a(param2, param5, param0, param6, SoftwareRasterizer.pixels, param3, param7, -20476, param4);
             }
           }
         }
@@ -89,7 +89,7 @@ final class pj extends SingleChildWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class pj extends SingleChildWidget {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_q = 0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "pj.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pj.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class pj extends SingleChildWidget {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -214,7 +214,7 @@ final class pj extends SingleChildWidget {
             return stackIn_10_0 != 0;
           }
           if (param4 == 1) {
-            tg.field_h = this;
+            LevelData.field_h = this;
             this.field_H = param2 - this.field_o - param0;
             this.field_I = -this.field_l + param5 - param3;
           }
@@ -230,7 +230,7 @@ final class pj extends SingleChildWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ final class pj extends SingleChildWidget {
           var2 = var9.readUnsignedByte(255);
           var3 = var9.readUnsignedByte(255);
           if (var2 == 0) {
-            var4 = (sc) (tg.field_c.b((byte) 110));
+            var4 = (sc) (LevelData.field_c.first((byte) 110));
             if (var4 == null) {
               ql.a(-64);
               return;
@@ -274,7 +274,7 @@ final class pj extends SingleChildWidget {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(255) << ResourceArchive.b(768, var7 << 8));
             }
             var4.field_j = true;
-            var4.a(false);
+            var4.unlink(false);
             return;
           }
           if (var2 != 1) {
@@ -283,17 +283,17 @@ final class pj extends SingleChildWidget {
             return;
           }
           var4_int = var9.readSignedSmart(param0 + 37623);
-          var5_ref_dc = (dc) (v.field_d.b((byte) 100));
+          var5_ref_dc = (dc) (v.field_d.first((byte) 100));
           while (var5_ref_dc != null) {
             if (var5_ref_dc.field_k != var3 ||
               var4_int != var5_ref_dc.field_m) {
-              var5_ref_dc = (dc) (v.field_d.d(param0 ^ -25336));
+              var5_ref_dc = (dc) (v.field_d.next(param0 ^ -25336));
               continue;
             }
             break;
           }
           if (var5_ref_dc != null) {
-            var5_ref_dc.a(false);
+            var5_ref_dc.unlink(false);
             return;
           }
           ql.a(-100);
@@ -301,7 +301,7 @@ final class pj extends SingleChildWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "pj.NA(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "pj.NA(" + param0 + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class pj extends SingleChildWidget {
           this.field_O = param8 ? true : false;
           this.field_F = param6;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "pj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 

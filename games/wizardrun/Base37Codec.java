@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb {
+final class Base37Codec {
     static String field_a;
     static long field_c;
     static int[] field_b;
     static int field_d;
     static PlatformTaskDispatcher field_e;
 
-    final static long a(byte param0, CharSequence param1) {
+    final static long encodeBase37(byte param0, CharSequence param1) {
         long var2_long = 0L;
         int var4 = 0;
         int var5 = 0;
@@ -67,7 +67,7 @@ final class sb {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class sb {
         field_e = null;
         if (param0 != 553) {
           CharSequence var2 = (CharSequence) null;
-          sb.a((byte) 18, (CharSequence) null);
+          Base37Codec.encodeBase37((byte) 18, (CharSequence) null);
         }
     }
 

@@ -13,7 +13,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_b = true;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ui.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ui.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -22,7 +22,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           int var3_int = -58 % ((-46 - param1) / 36);
           MidiEnvelope.a(-119, this.field_c, param0);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ui.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ui.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             throw new IllegalArgumentException("");
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

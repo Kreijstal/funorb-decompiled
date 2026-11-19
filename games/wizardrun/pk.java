@@ -23,7 +23,7 @@ final class pk extends IntrusiveNode {
           }
           StrongCacheEntry.field_v = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "pk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

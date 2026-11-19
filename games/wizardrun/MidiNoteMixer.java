@@ -25,7 +25,7 @@ final class MidiNoteMixer extends PcmStream {
         var7 = wizardrun.field_H;
         try {
           this.field_o.fill(param0, param1, param2);
-          var6 = (MidiNote) (this.field_p.b((byte) 86));
+          var6 = (MidiNote) (this.field_p.first((byte) 86));
           while (var6 != null) {
             if (!this.field_t.b(-1, var6)) {
               var4_int = param1;
@@ -41,7 +41,7 @@ final class MidiNoteMixer extends PcmStream {
                 var4_int = var4_int + var6.field_E;
               } while (!this.field_t.a(0, param0, var6, var5, var4_int));
             }
-            var6 = (MidiNote) (this.field_p.d(8192));
+            var6 = (MidiNote) (this.field_p.next(8192));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ final class MidiNoteMixer extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class MidiNoteMixer extends PcmStream {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -198,14 +198,14 @@ final class MidiNoteMixer extends PcmStream {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final PcmStream nextSubstream() {
         MidiNote var1_ref = null;
         do {
-          var1_ref = (MidiNote) (this.field_p.d(8192));
+          var1_ref = (MidiNote) (this.field_p.next(8192));
           if (var1_ref == null) {
             return null;
           }
@@ -267,12 +267,12 @@ final class MidiNoteMixer extends PcmStream {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
     final PcmStream firstSubstream() {
-        MidiNote var1 = (MidiNote) (this.field_p.b((byte) 124));
+        MidiNote var1 = (MidiNote) (this.field_p.first((byte) 124));
         if (var1 == null) {
           return null;
         }
@@ -292,7 +292,7 @@ final class MidiNoteMixer extends PcmStream {
         try {
           this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -303,7 +303,7 @@ final class MidiNoteMixer extends PcmStream {
         boolean stackIn_4_0 = false;
         var4 = wizardrun.field_H;
         this.field_o.skipFrames(param0);
-        var3 = (MidiNote) (this.field_p.b((byte) 122));
+        var3 = (MidiNote) (this.field_p.first((byte) 122));
         while (var3 != null) {
           stackIn_4_0 = this.field_t.b(-1, var3);
           boolean decompiledFrameCompleted0 = true;
@@ -322,7 +322,7 @@ final class MidiNoteMixer extends PcmStream {
               var3.field_E = var3.field_E - var2;
             }
           }
-          var3 = (MidiNote) (this.field_p.d(8192));
+          var3 = (MidiNote) (this.field_p.next(8192));
         }
     }
 

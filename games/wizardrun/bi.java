@@ -27,7 +27,7 @@ final class bi {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (param0.field_a.peekEvent() != null) {
-              tg.a(1L, false);
+              LevelData.sleepMillis(1L, false);
               continue;
             }
             break;
@@ -57,7 +57,7 @@ final class bi {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class bi {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class bi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 10510) {
-            stackIn_4_0 = gh.a(param0, 113, 0, param2);
+            stackIn_4_0 = Crc32Helpers.crc32(param0, 113, 0, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = 0;
@@ -151,7 +151,7 @@ final class bi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

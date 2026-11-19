@@ -40,12 +40,12 @@ final class hg {
             }
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!d.a(true, var4.charAt(0)) &&
-                !d.a(true, var4.charAt(var4.length() - 1))) {
+              if (!MonotonicClockHelpers.a(true, var4.charAt(0)) &&
+                !MonotonicClockHelpers.a(true, var4.charAt(var4.length() - 1))) {
                 var5 = 0;
                 for (var6 = 0; var6 < param0.length(); var6++) {
                   var7 = param0.charAt(var6);
-                  if (d.a(true, (char) var7)) {
+                  if (MonotonicClockHelpers.a(true, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;
@@ -80,7 +80,7 @@ final class hg {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class hg {
 
     final static void a(int param0, byte param1) {
         IsaacPacketBuffer var2 = n.field_b;
-        var2.c((byte) -70, param0);
+        var2.writeCipheredOpcode((byte) -70, param0);
         var2.writeByte((byte) 11, 1);
         if (param1 != 106) {
           hg.a(-86, (byte) 34);

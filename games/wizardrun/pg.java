@@ -62,7 +62,7 @@ final class pg extends IntrusiveNode {
           }
           if (var3 == 0 &&
             oc.field_d == 2) {
-            var4 = -DirectByteStorage.field_g + d.a((byte) 115);
+            var4 = -DirectByteStorage.field_g + MonotonicClockHelpers.monotonicMillis((byte) 115);
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {
               var3 = 2;
@@ -74,7 +74,7 @@ final class pg extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "pg.F(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "pg.F(" + param0 + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class pg extends IntrusiveNode {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class pg extends IntrusiveNode {
             pg.a(122L, 90);
           }
           var5 = n.field_b;
-          var5.c((byte) 92, param0);
+          var5.writeCipheredOpcode((byte) 92, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte((byte) 11, 1);
@@ -272,7 +272,7 @@ final class pg extends IntrusiveNode {
           var5.appendCrc(var4, -1182887024);
           var5.backpatchByteLength(-var4 + var5.position, -117);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

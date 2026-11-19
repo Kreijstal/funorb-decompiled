@@ -8,14 +8,14 @@ abstract class TickClock {
     static int[] field_e;
     static ResourceArchive field_b;
 
-    final int a(long param0, int param1) {
+    final int sleepAndAdvance(long param0, int param1) {
         long var4 = 0L;
         if (param1 == 0) {
-          var4 = this.b((byte) 66);
+          var4 = this.delayMillis((byte) 66);
           if (var4 > 0L) {
-            tg.a(var4, false);
+            LevelData.sleepMillis(var4, false);
           }
-          return this.a(param0, true);
+          return this.advanceTicks(param0, true);
         }
         return -118;
     }
@@ -33,8 +33,8 @@ abstract class TickClock {
         field_b = null;
     }
 
-    final static IndexedSprite c(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(ProgressDialog.field_bb, eg.field_v, ph.field_q[0], ne.field_h[0], ImageProducerRasterBuffer.field_k[0], MouseInputHandler.field_b[0], TextFieldValidator.field_j[0], ic.field_b);
+    final static IndexedSprite buildFirstIndexedSprite(byte param0) {
+        IndexedSprite var1 = new IndexedSprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[0], ne.field_h[0], ImageProducerRasterBuffer.field_k[0], MouseInputHandler.field_b[0], TextFieldValidator.field_j[0], ic.field_b);
         if (param0 == -92) {
           ClientException.a(0);
           return var1;
@@ -42,11 +42,11 @@ abstract class TickClock {
         return (IndexedSprite) null;
     }
 
-    abstract int a(long param0, boolean param1);
+    abstract int advanceTicks(long param0, boolean param1);
 
-    abstract void a(int param0);
+    abstract void reset(int param0);
 
-    final static String a(String param0, String param1, int param2, String param3) {
+    final static String replaceAll(String param0, String param1, int param2, String param3) {
         int var5 = wizardrun.field_H;
         int var4 = param1.indexOf(param0);
         while (var4 != -1) {
@@ -60,7 +60,7 @@ abstract class TickClock {
         return param1;
     }
 
-    abstract long b(byte param0);
+    abstract long delayMillis(byte param0);
 
     static {
         field_d = false;

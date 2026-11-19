@@ -38,17 +38,17 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (param0 != -3) {
           CachedArchiveProvider.c(16, 122);
         }
-        IntrusiveNode var2 = this.field_u.b((byte) 72);
+        IntrusiveNode var2 = this.field_u.first((byte) 72);
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 < 0) {
-            var2.a(false);
+            var2.unlink(false);
           } else {
             if (var3 >= this.field_s.field_s) {
-              var2.a(false);
+              var2.unlink(false);
             } else {
               if (0 == this.field_s.field_p[var3]) {
-                var2.a(false);
+                var2.unlink(false);
               } else {
                 if (this.field_w[var3] == 0) {
                   discarded$0 = this.a(-23529, 1, var3);
@@ -57,12 +57,12 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   discarded$1 = this.a(-23529, 2, var3);
                 }
                 if (this.field_w[var3] == 1) {
-                  var2.a(false);
+                  var2.unlink(false);
                 }
               }
             }
           }
-          var2 = this.field_u.d(param0 ^ -8195);
+          var2 = this.field_u.next(param0 ^ -8195);
         }
     }
 
@@ -92,18 +92,18 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
           if (this.field_r) {
             var2_int = 1;
-            var3 = this.field_p.b((byte) 83);
+            var3 = this.field_p.first((byte) 83);
             while (var3 != null) {
               var4 = (int)var3.key;
               if (0 == this.field_w[var4]) {
                 discarded$3 = this.a(-23529, 1, var4);
               }
               if (this.field_w[var4] != 0) {
-                var3.a(false);
+                var3.unlink(false);
               } else {
                 var2_int = 0;
               }
-              var3 = this.field_p.d(8192);
+              var3 = this.field_p.next(8192);
             }
             scanLoop1: while (true) {
               if (this.field_s.field_p.length > this.field_o) {
@@ -119,7 +119,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_o;
                     var2_int = 0;
-                    this.field_p.a(var6, false);
+                    this.field_p.addLast(var6, false);
                   }
                 }
                 this.field_o = this.field_o + 1;
@@ -136,7 +136,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           else {
             if (this.field_j) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_p.b((byte) 73);
+              var3Lifetime1 = this.field_p.first((byte) 73);
               while (var3Lifetime1 != null) {
                 var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_w[var4Lifetime1] != 1) {
@@ -145,9 +145,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 if (this.field_w[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.a(false);
+                  var3Lifetime1.unlink(false);
                 }
-                var3Lifetime1 = this.field_p.d(8192);
+                var3Lifetime1 = this.field_p.next(8192);
               }
               while (this.field_o < this.field_s.field_p.length) {
                 if (this.field_s.field_p[this.field_o] == 0) {
@@ -161,7 +161,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   if (this.field_w[this.field_o] != 1) {
                     var7 = new IntrusiveNode();
                     var7.key = (long)this.field_o;
-                    this.field_p.a(var7, false);
+                    this.field_p.addLast(var7, false);
                     var2_intLifetime1 = 0;
                   }
                   this.field_o = this.field_o + 1;
@@ -184,10 +184,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (!this.field_e) {
           return;
         }
-        if (d.a((byte) 100) < this.field_h) {
+        if (MonotonicClockHelpers.monotonicMillis((byte) 100) < this.field_h) {
           return;
         }
-        var2 = (ml) (this.field_n.b((byte) -114));
+        var2 = (ml) (this.field_n.first((byte) -114));
         while (var2 != null) {
           if (!var2.field_s) {
             if (!var2.field_q) {
@@ -196,12 +196,12 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (!var2.field_r) {
                 throw new RuntimeException();
               }
-              var2.a(false);
+              var2.unlink(false);
             }
           }
-          var2 = (ml) (this.field_n.b(param0 ^ 24));
+          var2 = (ml) (this.field_n.next(param0 ^ 24));
         }
-        this.field_h = 1000L + d.a((byte) 67);
+        this.field_h = 1000L + MonotonicClockHelpers.monotonicMillis((byte) 67);
         return;
     }
 
@@ -228,13 +228,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (param0 != -23529) {
           return (ml) null;
         }
-        var12 = (ml) (this.field_n.a(1, (long)param2));
+        var12 = (ml) (this.field_n.get(1, (long)param2));
         var4 = var12;
         if (var12 != null &&
           param1 == 0 &&
           !var12.field_r &&
           var12.field_s) {
-          var12.a(false);
+          var12.unlink(false);
           var4 = null;
         }
         if (var4 == null) {
@@ -270,7 +270,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               var4 = this.field_q.a((byte) -46, param2, this.field_g);
             }
           }
-          this.field_n.a((IntrusiveNode) (var4), param0 + 23462, (long)param2);
+          this.field_n.put((IntrusiveNode) (var4), param0 + 23462, (long)param2);
         }
         if (((ml) (var4)).field_s) {
           return null;
@@ -307,11 +307,11 @@ final class CachedArchiveProvider extends ArchiveProvider {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             this.field_i.a(true);
-            ((ml) (var4)).a(false);
+            ((ml) (var4)).unlink(false);
             if (((ml) (var4)).field_r &&
               !this.field_i.a(3473)) {
               var4 = this.field_i.a(this.field_d, param2, (byte) -125, (byte) 2, true);
-              this.field_n.a((IntrusiveNode) (var4), -115, (long)param2);
+              this.field_n.put((IntrusiveNode) (var4), -115, (long)param2);
             }
             return null;
           }
@@ -324,7 +324,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
           }
           if (!((ml) (var4)).field_r) {
-            ((ml) (var4)).a(false);
+            ((ml) (var4)).unlink(false);
           }
           return (ml) (var4);
         }
@@ -360,7 +360,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               this.field_w[param2] = (byte) 1;
             }
             if (!((ml) (var4)).field_r) {
-              ((ml) (var4)).a(false);
+              ((ml) (var4)).unlink(false);
             }
             stackIn_91_0 = var4;
             return (ml) (stackIn_91_0);
@@ -370,7 +370,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           this.field_w[param2] = (byte)-1;
-          ((ml) (var4)).a(false);
+          ((ml) (var4)).unlink(false);
           if (!((ml) (var4)).field_r) {
             return null;
           }
@@ -378,7 +378,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             return null;
           }
           var4 = this.field_i.a(this.field_d, param2, (byte) -123, (byte) 2, true);
-          this.field_n.a((IntrusiveNode) (var4), -103, (long)param2);
+          this.field_n.put((IntrusiveNode) (var4), -103, (long)param2);
           return null;
         }
     }
@@ -398,24 +398,24 @@ final class CachedArchiveProvider extends ArchiveProvider {
         RuntimeException var2 = null;
         var3 = wizardrun.field_H;
         try {
-          var5 = (ai) (field_t.b((byte) 100));
+          var5 = (ai) (field_t.first((byte) 100));
           if (param0 != -28323) {
             CachedArchiveProvider.releaseStatics((byte) 68);
           }
           while (var5 != null) {
             EditableTextWidget.a(var5, param1, 123);
-            var5 = (ai) (field_t.d(8192));
+            var5 = (ai) (field_t.next(8192));
           }
-          var4 = (nj) (Js5Index.field_l.b((byte) 91));
+          var4 = (nj) (Js5Index.field_l.first((byte) 91));
           while (var4 != null) {
             BoundedRandomAccessFile.a(var4, param1, (byte) 121);
-            var4 = (nj) (Js5Index.field_l.d(8192));
+            var4 = (nj) (Js5Index.field_l.next(8192));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2), "fh.G(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2), "fh.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -427,7 +427,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (param0 >= -21) {
             CachedArchiveProvider.c(-33, -78);
           }
-          var3.a(false);
+          var3.unlink(false);
           return var4;
         }
         return null;
@@ -440,19 +440,19 @@ final class CachedArchiveProvider extends ArchiveProvider {
         RuntimeException var2 = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (of) (bh.field_b.b((byte) 96));
+          var4 = (of) (bh.field_b.first((byte) 96));
           if (param1 != 0) {
             field_f = 48;
           }
           while (var4 != null) {
             WeightedLruCache.a(var4, param0, (byte) -81);
-            var4 = (of) (bh.field_b.d(param1 ^ 8192));
+            var4 = (of) (bh.field_b.next(param1 ^ 8192));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2), "fh.B(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2), "fh.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -561,7 +561,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     }
 
     final int a(boolean param0, int param1) {
-        ml var3 = (ml) (this.field_n.a(1, (long)param1));
+        ml var3 = (ml) (this.field_n.get(1, (long)param1));
         if (var3 != null) {
           return var3.c(false);
         }
@@ -646,7 +646,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

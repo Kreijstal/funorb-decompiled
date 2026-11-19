@@ -19,15 +19,15 @@ class IntrusiveNode {
         return false;
     }
 
-    final static TickClock b(int param0) {
+    final static TickClock createClock(int param0) {
         if (param0 != 250) {
-          IntrusiveNode.b(58);
+          IntrusiveNode.createClock(58);
           return (TickClock) ((Object) new NanoTickClock());
         }
         return (TickClock) ((Object) new NanoTickClock());
     }
 
-    final static void a(String param0, java.applet.Applet param1, byte param2) {
+    final static void writeSessionCookie(String param0, java.applet.Applet param1, byte param2) {
         try {
           String var3 = null;
           String var4 = null;
@@ -52,7 +52,7 @@ class IntrusiveNode {
               if (param2 >= -89) {
                 return;
               }
-              cl.a(param1, "document.cookie=\"" + var5 + "\"", (byte) -102);
+              BrowserScriptBridge.eval(param1, "document.cookie=\"" + var5 + "\"", (byte) -102);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = decompiledCaughtException;
@@ -75,7 +75,7 @@ class IntrusiveNode {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -84,7 +84,7 @@ class IntrusiveNode {
         }
     }
 
-    final void a(boolean param0) {
+    final void unlink(boolean param0) {
         if (this.previous == null) {
           return;
         }
@@ -108,7 +108,7 @@ class IntrusiveNode {
           field_g = (byte[][]) null;
           return;
         }
-        IntrusiveNode.b(-85);
+        IntrusiveNode.createClock(-85);
         field_a = null;
         field_d = null;
         field_g = (byte[][]) null;

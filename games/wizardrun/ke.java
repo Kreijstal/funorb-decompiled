@@ -8,7 +8,7 @@ final class ke extends qb {
     static String[] field_t;
 
     ke(int param0) {
-        this(gh.field_b, param0);
+        this(Crc32Helpers.field_b, param0);
     }
 
     private ke(BitmapFont param0, int param1) {
@@ -35,7 +35,7 @@ final class ke extends qb {
           if (param1 != -57) {
             field_u = (IntrusiveDeque) null;
           }
-          stackIn_3_0 = oa.a((byte) -95, '*', param0.field_k.length());
+          stackIn_3_0 = StringPaddingHelpers.repeatCharacter((byte) -95, '*', param0.field_k.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,7 +47,7 @@ final class ke extends qb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

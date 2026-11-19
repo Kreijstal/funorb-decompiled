@@ -28,7 +28,7 @@ class EditableTextWidget extends TextButton {
             if (this.field_J != this.field_L) {
               var8.a(this.field_L, true, this.field_J, param3, param0, (UiWidget) (this));
             }
-            var6 = d.a((byte) 54);
+            var6 = MonotonicClockHelpers.monotonicMillis((byte) 54);
             if ((-this.field_I + var6) % 1000L < 500L) {
               var8.a(param3, param0, (UiWidget) (this), 0, this.field_L);
             }
@@ -78,9 +78,9 @@ class EditableTextWidget extends TextButton {
           this.field_H = param2;
           this.a(-1, true, param0);
           this.field_F = true;
-          this.field_I = d.a((byte) 94);
+          this.field_I = MonotonicClockHelpers.monotonicMillis((byte) 94);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ class EditableTextWidget extends TextButton {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_I = d.a((byte) 99);
+          this.field_I = MonotonicClockHelpers.monotonicMillis((byte) 99);
           if (param0 != 60 &&
             param0 != 62) {
             if (param2 >= -96) {
@@ -218,7 +218,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ class EditableTextWidget extends TextButton {
         try {
           var8 = n.field_b;
           var9 = var8;
-          var9.c((byte) -105, param1);
+          var9.writeCipheredOpcode((byte) -105, param1);
           var9.position = var9.position + 1;
           var4 = var9.position;
           var9.writeByte((byte) 11, 1);
@@ -302,7 +302,7 @@ class EditableTextWidget extends TextButton {
           var9.appendCrc(var4, -1182887024);
           var9.backpatchByteLength(-var4 + var9.position, -87);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "og.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "og.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ class EditableTextWidget extends TextButton {
               stackIn_6_2 = var8_int;
             }
             this.a((byte) stackIn_5_1, stackIn_6_2);
-            var8_long = d.a((byte) 42);
+            var8_long = MonotonicClockHelpers.monotonicMillis((byte) 42);
             stackIn_9_1 = !(var8_long - this.field_K >= 250L);
             this.field_Q = stackIn_9_1;
             if (this.field_Q) {
@@ -356,7 +356,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -388,10 +388,10 @@ class EditableTextWidget extends TextButton {
                 this.field_L = var6;
               }
             }
-            this.field_I = d.a((byte) 44);
+            this.field_I = MonotonicClockHelpers.monotonicMillis((byte) 44);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "og.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "og.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -545,7 +545,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

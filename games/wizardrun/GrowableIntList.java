@@ -126,16 +126,16 @@ final class GrowableIntList {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final int a(int param0) {
+    final int size(int param0) {
         int var2 = 46 / ((-57 - param0) / 42);
         return 1 + this.field_a;
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void set(byte param0, int param1, int param2) {
         if (param2 > this.field_a) {
           this.field_a = param2;
           if (param0 > 100) {
@@ -164,16 +164,16 @@ final class GrowableIntList {
         }
     }
 
-    final void e(int param0, int param1) {
+    final void add(int param0, int param1) {
         if (param0 == 16711838) {
-          this.a((byte) 103, param1, 1 + this.field_a);
+          this.set((byte) 103, param1, 1 + this.field_a);
           return;
         }
         this.field_d = (int[]) null;
-        this.a((byte) 103, param1, 1 + this.field_a);
+        this.set((byte) 103, param1, 1 + this.field_a);
     }
 
-    private final int b(int param0, int param1) {
+    private final int capacityFor(int param0, int param1) {
         int var3;
         int var4;
         java.applet.Applet var5;
@@ -195,7 +195,7 @@ final class GrowableIntList {
           return var3;
         }
         var5 = (java.applet.Applet) null;
-        GrowableIntList.a(54, (java.applet.Applet) null);
+        GrowableIntList.openServerList(54, (java.applet.Applet) null);
         var3Lifetime1 = this.field_d.length;
         while (param0 >= var3Lifetime1) {
           if (!this.field_b) {
@@ -211,7 +211,7 @@ final class GrowableIntList {
         return var3Lifetime1;
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openServerList(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -244,7 +244,7 @@ final class GrowableIntList {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -264,14 +264,14 @@ final class GrowableIntList {
           this.field_a = this.field_a - 1;
           return;
         }
-        g.a(this.field_d, param1 + 1, this.field_d, param1, -param1 + this.field_a);
+        ArrayOperations.copy(this.field_d, param1 + 1, this.field_d, param1, -param1 + this.field_a);
         this.field_a = this.field_a - 1;
     }
 
     private final void growToIndex(int param0, int param1) {
-        int[] var5 = new int[this.b(param0, 0)];
+        int[] var5 = new int[this.capacityFor(param0, 0)];
         int[] var3 = var5;
-        g.a(this.field_d, 0, var5, 0, this.field_d.length);
+        ArrayOperations.copy(this.field_d, 0, var5, 0, this.field_d.length);
         int var4 = 80 % ((1 - param1) / 41);
         this.field_d = var5;
     }
@@ -280,10 +280,10 @@ final class GrowableIntList {
         throw new Error();
     }
 
-    final int a(int param0, int param1) {
+    final int get(int param0, int param1) {
         if (param0 > -60) {
           java.applet.Applet var4 = (java.applet.Applet) null;
-          GrowableIntList.a(-122, (java.applet.Applet) null);
+          GrowableIntList.openServerList(-122, (java.applet.Applet) null);
           if (this.field_a < param1) {
             throw new ArrayIndexOutOfBoundsException(param1);
           }

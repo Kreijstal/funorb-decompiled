@@ -44,7 +44,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_q.field_g = true;
             while (field_q.field_e) {
-              tg.a(50L, false);
+              LevelData.sleepMillis(50L, false);
             }
             field_q = null;
           }
@@ -151,7 +151,7 @@ class AudioOutput {
         if (field_r) {
           var3 = var3 << 1;
         }
-        g.a(param0, 0, var3);
+        ArrayOperations.clear(param0, 0, var3);
         this.field_h = this.field_h - param1;
         if (this.field_s != null &&
           this.field_h <= 0) {
@@ -245,7 +245,7 @@ class AudioOutput {
         if (this.field_s != null) {
           this.field_s.fill(param0, 0, param1);
         }
-        this.field_a = d.a((byte) 102);
+        this.field_a = MonotonicClockHelpers.monotonicMillis((byte) 102);
     }
 
     private final void skipFrames(int param0) {
@@ -286,7 +286,7 @@ class AudioOutput {
           if (this.field_e) {
             return;
           }
-          var1 = d.a((byte) 64);
+          var1 = MonotonicClockHelpers.monotonicMillis((byte) 64);
           try {
             if (var1 > this.field_a + 6000L) {
               this.field_a = var1 - 6000L;
@@ -294,7 +294,7 @@ class AudioOutput {
             while (var1 > this.field_a + 5000L) {
               this.skipFrames(256);
               this.field_a = this.field_a + (long)(256000 / field_l);
-              var1 = d.a((byte) 87);
+              var1 = MonotonicClockHelpers.monotonicMillis((byte) 87);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_g = 32;
         this.field_e = false;
-        this.field_a = d.a((byte) 120);
+        this.field_a = MonotonicClockHelpers.monotonicMillis((byte) 120);
         this.field_j = 0;
         this.field_d = 0;
         this.field_f = 0L;

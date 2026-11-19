@@ -87,7 +87,7 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var9.field_b;
                 switch (var2_int) {
                   case 1:
-                    if (d.a((byte) 21) < field_d) {
+                    if (MonotonicClockHelpers.monotonicMillis((byte) 21) < field_d) {
                       throw new IOException();
                     }
                     var9.field_e = new java.net.Socket(java.net.InetAddress.getByName((String) (var9.field_g)), var9.field_d);
@@ -100,7 +100,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var9.field_e = var18;
                     break;
                   case 4:
-                    if (d.a((byte) 56) < field_d) {
+                    if (MonotonicClockHelpers.monotonicMillis((byte) 56) < field_d) {
                       throw new IOException();
                     }
                     var9.field_e = new DataInputStream(((java.net.URL) (var9.field_g)).openStream());
@@ -121,18 +121,18 @@ final class PlatformTaskDispatcher implements Runnable {
                   case 16:
                   default:
                     if (!this.field_s) {
-                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
-                        if (d.a((byte) 25) < field_d) {
+                        if (MonotonicClockHelpers.monotonicMillis((byte) 25) < field_d) {
                           throw new IOException();
                         }
                         var15 = (var9.field_d >> 24 & 255) + "." + (255 & var9.field_d >> 16) + "." + ((65409 & var9.field_d) >> 8) + "." + (255 & var9.field_d);
                         var9.field_e = java.net.InetAddress.getByName(var15).getHostName();
                         break;
                       case 21:
-                        if (d.a((byte) 84) < field_d) {
+                        if (MonotonicClockHelpers.monotonicMillis((byte) 84) < field_d) {
                           throw new IOException();
                         }
                         var9.field_e = java.net.InetAddress.getByName((String) (var9.field_g)).getAddress();
@@ -200,21 +200,21 @@ final class PlatformTaskDispatcher implements Runnable {
                           Class.forName("AwtCursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_h, new Object[]{var12[0], var12[1], new Integer(var9.field_d), new Integer(var9.field_f), var12[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_k.startsWith("win")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var7 = (String) (var9.field_g);
                             if (!var7.startsWith("http://") &&
                               !var7.startsWith("https://")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var7.length() > var5; var5++) {
                               if (var4_ref_String.indexOf((int) var7.charAt(var5)) == -1) {
-                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var7 + "\"");
@@ -223,7 +223,7 @@ final class PlatformTaskDispatcher implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var9.field_e = var3_ref2;
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(var3_ref2);
                           }
                         }
                         break;
@@ -242,7 +242,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var9.field_e = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                     break;
                   case 22:
-                    if (d.a((byte) 50) < field_d) {
+                    if (MonotonicClockHelpers.monotonicMillis((byte) 50) < field_d) {
                       throw new IOException();
                     }
                     try {
@@ -426,7 +426,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (null != this.field_m) {
             try {
-              this.field_m.a(-1);
+              this.field_m.close(-1);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -434,7 +434,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (null != this.field_i) {
             try {
-              this.field_i.a(-1);
+              this.field_i.close(-1);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -444,7 +444,7 @@ final class PlatformTaskDispatcher implements Runnable {
             for (var2_int = 0; var2_int < this.field_f.length; var2_int++) {
               if (this.field_f[var2_int] != null) {
                 try {
-                  this.field_f[var2_int].a(param0 ^ 2);
+                  this.field_f[var2_int].close(param0 ^ 2);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -454,7 +454,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_c != null) {
             try {
-              this.field_c.a(param0 + 2);
+              this.field_c.close(param0 + 2);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -576,14 +576,14 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        fd.a(field_v, field_w, (byte) 125);
+        CacheFileLocator.initialize(field_v, field_w, (byte) 125);
         if (this.field_s) {
-          this.field_c = new BoundedRandomAccessFile(fd.a("random.dat", field_w, (String) null, -93), "rw", 25L);
-          this.field_m = new BoundedRandomAccessFile(fd.a("main_file_cache.dat2", (byte) 115), "rw", 314572800L);
-          this.field_i = new BoundedRandomAccessFile(fd.a("main_file_cache.idx255", (byte) 115), "rw", 1048576L);
+          this.field_c = new BoundedRandomAccessFile(CacheFileLocator.resolveRedirected("random.dat", field_w, (String) null, -93), "rw", 25L);
+          this.field_m = new BoundedRandomAccessFile(CacheFileLocator.resolve("main_file_cache.dat2", (byte) 115), "rw", 314572800L);
+          this.field_i = new BoundedRandomAccessFile(CacheFileLocator.resolve("main_file_cache.idx255", (byte) 115), "rw", 1048576L);
           this.field_f = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_f[var5_int] = new BoundedRandomAccessFile(fd.a("main_file_cache.idx" + var5_int, (byte) 115), "rw", 1048576L);
+            this.field_f[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.resolve("main_file_cache.idx" + var5_int, (byte) 115), "rw", 1048576L);
           }
           if (this.field_j) {
             try {
@@ -627,7 +627,7 @@ final class PlatformTaskDispatcher implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -61,11 +61,11 @@ final class ej {
           }
           if (param0 == 30000 &&
             id.field_a > 0) {
-            fieldTemp$12 = qh.field_a;
+            fieldTemp$12 = GridActor.field_a;
             fieldTemp$13 = id.field_a - 1;
             id.field_a = id.field_a - 1;
             var2_ref_byte__Lifetime4 = fieldTemp$12[fieldTemp$13];
-            qh.field_a[id.field_a] = null;
+            GridActor.field_a[id.field_a] = null;
             return var2_ref_byte__Lifetime4;
           }
           if (param1 == 1) {
@@ -119,11 +119,11 @@ final class ej {
         }
         if (param0 == 30000 &&
           id.field_a > 0) {
-          fieldTemp$4 = qh.field_a;
+          fieldTemp$4 = GridActor.field_a;
           fieldTemp$5 = id.field_a - 1;
           id.field_a = id.field_a - 1;
           var2_ref_byte__Lifetime3 = fieldTemp$4[fieldTemp$5];
-          qh.field_a[id.field_a] = null;
+          GridActor.field_a[id.field_a] = null;
           return var2_ref_byte__Lifetime3;
         }
         if (param1 == 1) {
@@ -192,7 +192,7 @@ final class ej {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var3), "ej.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var3), "ej.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

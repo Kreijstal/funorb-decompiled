@@ -29,7 +29,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -42,17 +42,17 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (var2_int != 0 &&
               var2_int != 65535 &&
               ne.a((char) var2_int, 160)) {
-              var3 = qh.keyQueueWriteIndex + 1 & 127;
-              if (tg.keyQueueReadIndex != var3) {
-                ge.keyCodeQueue[qh.keyQueueWriteIndex] = -1;
-                ve.typedCharQueue[qh.keyQueueWriteIndex] = (char)var2_int;
-                qh.keyQueueWriteIndex = var3;
+              var3 = GridActor.keyQueueWriteIndex + 1 & 127;
+              if (LevelData.keyQueueReadIndex != var3) {
+                MenuController.keyCodeQueue[GridActor.keyQueueWriteIndex] = -1;
+                ve.typedCharQueue[GridActor.keyQueueWriteIndex] = (char)var2_int;
+                GridActor.keyQueueWriteIndex = var3;
               }
             }
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "oj.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "oj.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,11 +71,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             field_a = (String) null;
           }
           var3 = n.field_b;
-          var3.c((byte) -127, param0);
+          var3.writeCipheredOpcode((byte) -127, param0);
           var3.writeByte((byte) 11, param1.field_k);
           var3.writeShort(-1947079288, param1.field_i);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "oj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "oj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -154,11 +154,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
           }
           if (var2_int >= 0) {
-            var3 = 127 & qh.keyQueueWriteIndex + 1;
-            if (var3 != tg.keyQueueReadIndex) {
-              ge.keyCodeQueue[qh.keyQueueWriteIndex] = var2_int;
-              ve.typedCharQueue[qh.keyQueueWriteIndex] = (char)0;
-              qh.keyQueueWriteIndex = var3;
+            var3 = 127 & GridActor.keyQueueWriteIndex + 1;
+            if (var3 != LevelData.keyQueueReadIndex) {
+              MenuController.keyCodeQueue[GridActor.keyQueueWriteIndex] = var2_int;
+              ve.typedCharQueue[GridActor.keyQueueWriteIndex] = (char)0;
+              GridActor.keyQueueWriteIndex = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();
@@ -179,7 +179,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

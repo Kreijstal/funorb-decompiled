@@ -45,7 +45,7 @@ final class pd extends SingleChildWidget {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -56,10 +56,10 @@ final class pd extends SingleChildWidget {
         if (ArchiveProvider.field_a <= 0) {
           var2 = (e.a(-89)) ? 0 : 1;
         } else {
-          if (null == oa.field_c) {
+          if (null == StringPaddingHelpers.field_c) {
             LoginChoicePanel.field_E = hb.a(0, 640, 0, 480, 0, ld.field_g);
           } else {
-            LoginChoicePanel.field_E = oa.field_c.c(0);
+            LoginChoicePanel.field_E = StringPaddingHelpers.field_c.c(0);
             rc.a(0, 2);
           }
           if (LoginChoicePanel.field_E != null) {
@@ -69,7 +69,7 @@ final class pd extends SingleChildWidget {
             var2 = 3;
           }
         }
-        if (null == oa.field_c &&
+        if (null == StringPaddingHelpers.field_c &&
           dg.field_b) {
           TriangleMesh.a(param0, var2, 15991);
         }
@@ -115,7 +115,7 @@ final class pd extends SingleChildWidget {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(255);
             }
-            var14 = (te) (AudioServiceThread.field_d.b((byte) 97));
+            var14 = (te) (AudioServiceThread.field_d.first((byte) 97));
             if (var14 == null) {
               ql.a(-113);
               return;
@@ -123,19 +123,19 @@ final class pd extends SingleChildWidget {
             var14.field_l = var3;
             var14.field_j = var16[0];
             var14.field_i = true;
-            var14.a(false);
+            var14.unlink(false);
             return;
           }
           if (var2 == 1) {
-            var11 = (pg) (sf.field_j.b((byte) 123));
+            var11 = (pg) (sf.field_j.first((byte) 123));
             if (var11 == null) {
               ql.a(-58);
               return;
             }
-            var11.a(false);
+            var11.unlink(false);
           } else {
             if (var2 == 2) {
-              var15 = (te) (AudioServiceThread.field_d.b((byte) 48));
+              var15 = (te) (AudioServiceThread.field_d.first((byte) 48));
               if (var15 == null) {
                 ql.a(-34);
                 return;
@@ -143,7 +143,7 @@ final class pd extends SingleChildWidget {
               var15.field_l = mh.m(-26421);
               var15.field_i = true;
               var15.field_j = var15.field_l[0];
-              var15.a(false);
+              var15.unlink(false);
             } else {
               ResizableDialog.a((Throwable) null, "A1: " + ni.c(6), -562);
               ql.a(-109);
@@ -153,7 +153,7 @@ final class pd extends SingleChildWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "pd.OA(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "pd.OA(" + param0 + ')');
         }
     }
 
@@ -166,17 +166,17 @@ final class pd extends SingleChildWidget {
         RuntimeException var7_ref = null;
         try {
           super.a(param0, param1, param2, param3, param4, param5 + param5);
-          var7 = tg.field_h;
+          var7 = LevelData.field_h;
           if (var7 != null &&
             this.b(param1, param3, 0, param0, param2)) {
             if (this.field_s instanceof qg) {
               ((qg) (this.field_s)).a(var7, -95, this);
-              tg.field_h = null;
+              LevelData.field_h = null;
               return;
             }
             if (var7.field_s instanceof qg) {
               ((qg) (var7.field_s)).a(var7, -106, this);
-              tg.field_h = null;
+              LevelData.field_h = null;
               return;
             }
           }
@@ -191,7 +191,7 @@ final class pd extends SingleChildWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class pd extends SingleChildWidget {
         try {
           this.field_F = param6;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

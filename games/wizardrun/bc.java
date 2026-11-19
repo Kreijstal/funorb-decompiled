@@ -11,9 +11,9 @@ final class bc {
         var3 = -116 / ((-20 - param0) / 43);
         if (null == MidiNoteMixer.field_m) {
           MidiNoteMixer.field_m = new int[param2 * 2];
-          if (ug.field_I == null ||
-            !(param2 <= ug.field_I.length)) {
-            ug.field_I = new int[2 * param2];
+          if (RadialSelectorWidget.field_I == null ||
+            !(param2 <= RadialSelectorWidget.field_I.length)) {
+            RadialSelectorWidget.field_I = new int[2 * param2];
           }
           if (sk.field_B == null ||
             !(sk.field_B.length >= param2)) {
@@ -94,9 +94,9 @@ final class bc {
           }
         } else {
           if (MidiNoteMixer.field_m.length >= param2) {
-            if (ug.field_I == null ||
-              !(param2 <= ug.field_I.length)) {
-              ug.field_I = new int[2 * param2];
+            if (RadialSelectorWidget.field_I == null ||
+              !(param2 <= RadialSelectorWidget.field_I.length)) {
+              RadialSelectorWidget.field_I = new int[2 * param2];
             }
             if (sk.field_B == null ||
               !(sk.field_B.length >= param2)) {
@@ -177,9 +177,9 @@ final class bc {
             }
           } else {
             MidiNoteMixer.field_m = new int[param2 * 2];
-            if (ug.field_I == null ||
-              !(param2 <= ug.field_I.length)) {
-              ug.field_I = new int[2 * param2];
+            if (RadialSelectorWidget.field_I == null ||
+              !(param2 <= RadialSelectorWidget.field_I.length)) {
+              RadialSelectorWidget.field_I = new int[2 * param2];
             }
             if (sk.field_B == null ||
               !(sk.field_B.length >= param2)) {
@@ -320,7 +320,7 @@ final class bc {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

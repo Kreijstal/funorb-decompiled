@@ -87,7 +87,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -570,7 +570,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[var29Lifetime3 + 1];
               var32 = (var30 - var27Lifetime6) / 2 + (-var27Lifetime6 + var30) * var28;
               for (var33 = var27Lifetime6; var30 > var33; var33++) {
-                var34 = IntrusiveDequeCursor.a(var32, 115, -var27Lifetime6 + var30);
+                var34 = IntrusiveDequeCursor.divideFloor(var32, 115, -var27Lifetime6 + var30);
                 var32 = var32 + (var31 - var28);
                 this.field_q[var33] = (byte)(32 + this.field_q[var33] * var34 >> 6);
               }
@@ -611,7 +611,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime6Lifetime1;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime2) {
-                var34Lifetime1 = IntrusiveDequeCursor.a(var32Lifetime1, 125, -var27Lifetime6Lifetime1 + var30Lifetime2);
+                var34Lifetime1 = IntrusiveDequeCursor.divideFloor(var32Lifetime1, 125, -var27Lifetime6Lifetime1 + var30Lifetime2);
                 var35 = var34Lifetime1 + (this.field_o[var37] & 255);
                 if (0 > var35) {
                   var35 = 0;
@@ -679,7 +679,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_209_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_208_0), ((StringBuilder) (Object) stackIn_208_1).append(stackIn_209_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_208_0), ((StringBuilder) (Object) stackIn_208_1).append(stackIn_209_2).append(')').toString());
         }
     }
 

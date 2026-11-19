@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ph extends ge {
+final class GameMenu extends MenuController {
     static int[] field_q;
     static int field_r;
     static String field_s;
     boolean field_p;
     static int field_o;
 
-    final void a(int param0, boolean param1, int param2, byte param3) {
+    final void drawMenuItem(int param0, boolean param1, int param2, byte param3) {
         int var5;
         String var6;
         int var11;
@@ -44,7 +44,7 @@ final class ph extends ge {
               ValidationState.selectStarSprites[2].drawTransparent(var7 / 2 + 268, param0);
             }
             if (param3 > -98) {
-              ph.a((byte) 46);
+              GameMenu.a((byte) 46);
             }
             GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
             GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
@@ -126,7 +126,7 @@ final class ph extends ge {
                     ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime2Lifetime2 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
-                    ph.a((byte) 46);
+                    GameMenu.a((byte) 46);
                   }
                   GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
                   GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
@@ -152,7 +152,7 @@ final class ph extends ge {
                     ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime2Lifetime3 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
-                    ph.a((byte) 46);
+                    GameMenu.a((byte) 46);
                   }
                   GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
                   GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
@@ -177,7 +177,7 @@ final class ph extends ge {
               ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime3 / 2 + 268, param0);
             }
             if (param3 > -98) {
-              ph.a((byte) 46);
+              GameMenu.a((byte) 46);
             }
             GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
             GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
@@ -203,7 +203,7 @@ final class ph extends ge {
           ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime1 / 2 + 268, param0);
         }
         if (param3 > -98) {
-          ph.a((byte) 46);
+          GameMenu.a((byte) 46);
         }
         GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
         GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
@@ -214,7 +214,7 @@ final class ph extends ge {
         GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, param0 + 18, var5, -1);
     }
 
-    ph() {
+    GameMenu() {
         super(e.a(-106) ? 5 : 6, 160, 392, 152, 32);
         int stackIn_3_1 = 0;
         if (!e.a(-106)) {
@@ -225,7 +225,7 @@ final class ph extends ge {
     }
 
     final static void d(int param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (StatefulWidgetPainter.field_q.c(param0 + 39974));
+        RasterSnapshot var1 = (RasterSnapshot) (StatefulWidgetPainter.field_q.removeLast(param0 + 39974));
         if (var1 == null) {
           var1 = new RasterSnapshot();
         }
@@ -233,7 +233,7 @@ final class ph extends ge {
         if (param0 != -31782) {
           field_o = 6;
         }
-        lh.field_b.a(var1, false);
+        lh.field_b.addLast(var1, false);
     }
 
     final void b(int param0, int param1) {
@@ -268,7 +268,7 @@ final class ph extends ge {
                   if (((param1 == 4)) &&
                     (!(e.a(-106)))) {
                     if (LoginChoicePanel.field_E != null) {
-                      WeightedLruCache.a((byte) 60);
+                      WeightedLruCache.exitFullscreen((byte) 60);
                     } else {
                       pd.a(false, false);
                     }
@@ -279,9 +279,9 @@ final class ph extends ge {
             }
             else {
               if (2 == DialogLayer.field_K) {
-                BufferedSocket.field_c = BufferedSocket.field_c + (qh.field_g + 1);
+                BufferedSocket.field_c = BufferedSocket.field_c + (GridActor.field_g + 1);
                 BufferedSocket.field_a = -350;
-                qh.field_g = -1;
+                GridActor.field_g = -1;
               }
               this.field_p = true;
             }
@@ -315,7 +315,7 @@ final class ph extends ge {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -398,7 +398,7 @@ final class ph extends ge {
         field_s = null;
     }
 
-    final void c(int param0) {
+    final void drawMenuItems(int param0) {
         if (param0 <= 12) {
           return;
         }
@@ -407,7 +407,7 @@ final class ph extends ge {
         } else {
           kb.field_jb.drawWithOffsets(0, 0);
         }
-        super.c(68);
+        super.drawMenuItems(68);
     }
 
     final static boolean a(byte param0) {

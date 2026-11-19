@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ge {
+abstract class MenuController {
     private int field_l;
     private int field_e;
     static int field_j;
@@ -57,12 +57,12 @@ abstract class ge {
         this.b(-128, param0);
     }
 
-    void c(int param0) {
+    void drawMenuItems(int param0) {
         int var4 = wizardrun.field_H;
         int var2 = 0;
         int var3 = this.field_d;
         while (this.field_e > var2) {
-          this.a(var3, this.field_a == var2 ? true : false, var2, (byte) -120);
+          this.drawMenuItem(var3, this.field_a == var2 ? true : false, var2, (byte) -120);
           var3 = var3 + this.field_c;
           var2++;
         }
@@ -76,7 +76,7 @@ abstract class ge {
 
     abstract void a(int param0, boolean param1);
 
-    final void b(int param0) {
+    final void updateKeyboardSelection(int param0) {
         int var3;
         var3 = wizardrun.field_H;
         if (param0 != 0) {
@@ -108,7 +108,7 @@ abstract class ge {
 
     abstract void a(int param0, int param1);
 
-    final void a(int param0) {
+    final void updatePointerSelection(int param0) {
         int var2 = 0;
         int var3 = wizardrun.field_H;
         int var2Lifetime1;
@@ -118,12 +118,12 @@ abstract class ge {
           return;
         }
         if (w.field_c == 0) {
-          if (sh.field_c == 0) {
+          if (BrowserUrlLauncher.field_c == 0) {
             this.field_m = false;
             if (!ih.field_a) {
               return;
             }
-            var2 = this.a(pg.field_n, -77, fi.field_B);
+            var2 = this.hitTestOption(pg.field_n, -77, fi.field_B);
             if (-1 != var2) {
               this.field_g = false;
               this.field_a = var2;
@@ -141,7 +141,7 @@ abstract class ge {
             if (!ih.field_a) {
               return;
             }
-            var2Lifetime2 = this.a(pg.field_n, -77, fi.field_B);
+            var2Lifetime2 = this.hitTestOption(pg.field_n, -77, fi.field_B);
             if (-1 != var2Lifetime2) {
               this.field_g = false;
               this.field_a = var2Lifetime2;
@@ -158,10 +158,10 @@ abstract class ge {
           if (var2Lifetime3 == -1) {
             return;
           }
-          this.a(pg.field_n, var2Lifetime3, -this.field_d + (fi.field_B - this.field_c * var2Lifetime3), sh.field_c, true, false);
+          this.a(pg.field_n, var2Lifetime3, -this.field_d + (fi.field_B - this.field_c * var2Lifetime3), BrowserUrlLauncher.field_c, true, false);
           return;
         }
-        var2Lifetime1 = this.a(MouseInputHandler.field_e, param0 - 57, dh.field_b);
+        var2Lifetime1 = this.hitTestOption(MouseInputHandler.field_e, param0 - 57, dh.field_b);
         this.field_a = var2Lifetime1;
         if (var2Lifetime1 != -1) {
           this.field_m = true;
@@ -198,18 +198,18 @@ abstract class ge {
         this.a(-72, -13, 38, -1, true, true);
     }
 
-    abstract void a(int param0, boolean param1, int param2, byte param3);
+    abstract void drawMenuItem(int param0, boolean param1, int param2, byte param3);
 
     public static void releaseStatics(boolean param0) {
         field_i = null;
         field_k = null;
         keyCodeQueue = null;
         if (!param0) {
-          ge.releaseStatics(false);
+          MenuController.releaseStatics(false);
         }
     }
 
-    ge(int param0, int param1, int param2, int param3, int param4) {
+    MenuController(int param0, int param1, int param2, int param3, int param4) {
         this.field_a = 0;
         this.field_g = true;
         this.field_d = param3;
@@ -219,7 +219,7 @@ abstract class ge {
         this.field_l = param1;
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int hitTestOption(int param0, int param1, int param2) {
         if (param0 < this.field_l) {
           return -1;
         }

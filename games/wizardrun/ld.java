@@ -63,7 +63,7 @@ final class ld {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -71,12 +71,12 @@ final class ld {
         IsaacPacketBuffer var3 = null;
         try {
           var3 = n.field_b;
-          var3.c((byte) 87, param0);
+          var3.writeCipheredOpcode((byte) 87, param0);
           var3.writeByte((byte) 11, 2);
           var3.writeByte((byte) 11, param2);
           var3.writeByte((byte) 11, param1.field_k);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ld.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ld.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

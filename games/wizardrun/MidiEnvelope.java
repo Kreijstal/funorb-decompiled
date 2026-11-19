@@ -57,11 +57,11 @@ final class MidiEnvelope {
               var5Lifetime4 = var8;
               var5Lifetime5 = var8;
               if (0 != param2.length()) {
-                var5Lifetime6 = var8 + "; Expires=" + fc.a((byte) -32, 94608000000L + d.a((byte) 30)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + DateFormattingHelpers.formatGmtTimestamp((byte) -32, 94608000000L + MonotonicClockHelpers.monotonicMillis((byte) 30)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              cl.a(param1, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) -111);
+              BrowserScriptBridge.eval(param1, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) -111);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -89,7 +89,7 @@ final class MidiEnvelope {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -114,10 +114,10 @@ final class MidiEnvelope {
           while (true) {
             var3 = param2.a(7, param1);
             while (var3.field_a == 0) {
-              tg.a(10L, false);
+              LevelData.sleepMillis(10L, false);
             }
             if (var3.field_a != 1) {
-              tg.a(100L, false);
+              LevelData.sleepMillis(100L, false);
               continue;
             }
             break;
@@ -142,7 +142,7 @@ final class MidiEnvelope {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

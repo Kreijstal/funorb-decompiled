@@ -50,8 +50,8 @@ final class wd {
           var4 = MouseWheelInput.a(-77, param1);
           if (var4 != null &&
             1 <= var4.length()) {
-            if (!d.a(true, var4.charAt(0)) &&
-              !d.a(true, var4.charAt(var4.length() - 1))) {
+            if (!MonotonicClockHelpers.a(true, var4.charAt(0)) &&
+              !MonotonicClockHelpers.a(true, var4.charAt(var4.length() - 1))) {
               var5 = 0;
               if (param0 != 43) {
                 var9 = (CharSequence) null;
@@ -59,7 +59,7 @@ final class wd {
               }
               for (var6 = 0; param1.length() > var6; var6++) {
                 var7 = param1.charAt(var6);
-                if (d.a(true, (char) var7)) {
+                if (MonotonicClockHelpers.a(true, (char) var7)) {
                   var5++;
                 } else {
                   var5 = 0;
@@ -87,7 +87,7 @@ final class wd {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
         }
     }
 

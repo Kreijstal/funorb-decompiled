@@ -18,7 +18,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new ai(param8, param7, param6, param0, param5, param2, param1);
-          CachedArchiveProvider.field_t.a(var9, false);
+          CachedArchiveProvider.field_t.addLast(var9, false);
           EditableTextWidget.a(var9, param3, param4 - 160);
           if (param4 != 99) {
             var10 = (byte[]) null;
@@ -36,7 +36,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -56,7 +56,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var3 = new CoverageBitmapFont(param1, ph.field_q, ne.field_h, ImageProducerRasterBuffer.field_k, MouseInputHandler.field_b, ic.field_b, TextFieldValidator.field_j);
+          var3 = new CoverageBitmapFont(param1, GameMenu.field_q, ne.field_h, ImageProducerRasterBuffer.field_k, MouseInputHandler.field_b, ic.field_b, TextFieldValidator.field_j);
           ClientException.a(0);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -70,7 +70,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
         field_q = null;
     }
 
-    final void i(byte param0) {
+    final void finishBitAccess(byte param0) {
         this.position = (this.field_p + 7) / 8;
         if (param0 != -31) {
           field_q = (String[]) null;
@@ -100,17 +100,17 @@ final class IsaacPacketBuffer extends PacketBuffer {
         int var2 = -128 % ((param0 + 9) / 54);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$0] - this.field_r.b((byte) 73);
+        return 255 & this.payload[fieldTemp$0] - this.field_r.nextInt((byte) 73);
     }
 
-    final void c(byte param0, int param1) {
+    final void writeCipheredOpcode(byte param0, int param1) {
         int var3 = -41 / ((-1 - param0) / 44);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_r.b((byte) 60) + param1);
+        this.payload[fieldTemp$0] = (byte)(this.field_r.nextInt((byte) 60) + param1);
     }
 
-    final void l(int param0) {
+    final void beginBitAccess(int param0) {
         if (param0 != 19967) {
           return;
         }
@@ -121,7 +121,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) {
+    final void readCipheredBytes(int param0, int param1, int param2, byte[] param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -135,7 +135,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
           for (var5_int = param2; var5_int < param1; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_r.b((byte) 125));
+            param3[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_r.nextInt((byte) 125));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -148,7 +148,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -159,7 +159,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
         try {
           this.field_r = new IsaacRandom(param0);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "mg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "mg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -37,7 +37,7 @@ final class jl extends WidgetPainter {
             }
             if (null != ld.field_e) {
               try {
-                ld.field_e.a(-1);
+                ld.field_e.close(-1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -47,7 +47,7 @@ final class jl extends WidgetPainter {
               for (var1_int = 0; var1_int < SocketJs5Transport.field_o.length; var1_int++) {
                 if (null != SocketJs5Transport.field_o[var1_int]) {
                   try {
-                    SocketJs5Transport.field_o[var1_int].a(-1);
+                    SocketJs5Transport.field_o[var1_int].close(-1);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -60,7 +60,7 @@ final class jl extends WidgetPainter {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw bd.wrapException((Throwable) ((Object) var1), "jl.V(" + param0 + ')');
+            throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "jl.V(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -113,7 +113,7 @@ final class jl extends WidgetPainter {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class jl extends WidgetPainter {
           vl.field_h = param5;
           EditableTextWidget.field_S = param3;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "jl.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "jl.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -185,27 +185,27 @@ final class jl extends WidgetPainter {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static WidgetTheme c(int param0) {
-        if (s.field_b == null) {
-          s.field_b = new WidgetTheme();
-          s.field_b.a(gh.field_b, -120);
-          s.field_b.field_e = 7697781;
-          s.field_b.field_g = e.field_b;
-          s.field_b.field_h = 4;
-          s.field_b.field_t = 14;
-          s.field_b.field_p = 2763306;
-          s.field_b.field_l = 6;
-          s.field_b.field_i = 5;
-          s.field_b.field_r = 0;
+        if (CharSequenceJoiner.field_b == null) {
+          CharSequenceJoiner.field_b = new WidgetTheme();
+          CharSequenceJoiner.field_b.a(Crc32Helpers.field_b, -120);
+          CharSequenceJoiner.field_b.field_e = 7697781;
+          CharSequenceJoiner.field_b.field_g = e.field_b;
+          CharSequenceJoiner.field_b.field_h = 4;
+          CharSequenceJoiner.field_b.field_t = 14;
+          CharSequenceJoiner.field_b.field_p = 2763306;
+          CharSequenceJoiner.field_b.field_l = 6;
+          CharSequenceJoiner.field_b.field_i = 5;
+          CharSequenceJoiner.field_b.field_r = 0;
         }
         if (param0 != 4) {
           field_w = (Sprite) null;
         }
-        return s.field_b;
+        return CharSequenceJoiner.field_b;
     }
 
     public static void releaseStatics(int param0) {

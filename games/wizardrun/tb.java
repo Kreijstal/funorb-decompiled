@@ -60,7 +60,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -74,17 +74,17 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
           }
           this.field_F.field_B = this.d(false);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "tb.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "tb.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     public tb() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_E = new ValidatedTextField("", (WidgetListener) null, 12);
-        WidgetPainter var1 = new WidgetPainter(e.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, gh.field_b.field_M, -1, 2147483647, true);
+        WidgetPainter var1 = new WidgetPainter(e.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, Crc32Helpers.field_b.field_M, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(MouseWheelInput.field_d, var1, (WidgetListener) null);
         this.field_F = new TextButton(td.field_b, (WidgetListener) null);
-        this.field_G = new TextButton(oa.field_a, (WidgetListener) null);
+        this.field_G = new TextButton(StringPaddingHelpers.field_a, (WidgetListener) null);
         this.field_E.field_p = DiskCacheWorker.field_a;
         this.field_E.a(0, new jg(this.field_E));
         this.field_F.field_B = false;
@@ -97,7 +97,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
         int var5 = 200;
         this.a(var2, (byte) 16);
         var3 += 50;
-        var3 = var3 + (5 + this.a(170, d.field_b, re.field_E, 29171, var3, this.field_E));
+        var3 = var3 + (5 + this.a(170, MonotonicClockHelpers.field_b, re.field_E, 29171, var3, this.field_E));
         this.field_F.a(109, var3, 40, var5, -var5 + 496 >> 1);
         this.field_G.a(118, 15 + var3, 40, 60, var4 + 3);
         this.field_G.field_s = (WidgetListener) (this);
@@ -112,7 +112,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
 
     final static void a(int param0, int param1, ie param2) {
         IsaacPacketBuffer var5 = n.field_b;
-        var5.c((byte) 77, param0);
+        var5.writeCipheredOpcode((byte) 77, param0);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         if (param1 != -17932) {
@@ -131,12 +131,12 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
           param2.field_k = var5.readInt(255);
           var5.backpatchByteLength(var5.position - var4, -88);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "tb.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "tb.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, boolean param1) {
-        sb.field_d = param0;
+        Base37Codec.field_d = param0;
         WidgetTheme.field_j = MidiPcmStream.field_M;
         hj.field_c = 0;
         ej.field_c = 0;
@@ -173,7 +173,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new LabeledField(20, param1, 120 + param5, 25, param4, false, 120, 3, gh.field_b, 16777215, param6);
+          var11 = new LabeledField(20, param1, 120 + param5, 25, param4, false, 120, 3, Crc32Helpers.field_b, 16777215, param6);
           if (param0 != -31970) {
             var10 = (TextButton) null;
             this.onButtonAction(19, (TextButton) null, -126, -50, 59);
@@ -279,7 +279,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -317,7 +317,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
           var4 = param0;
           ((EditableTextWidget) ((Object) var3)).a(-1, false, var4);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "tb.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "tb.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

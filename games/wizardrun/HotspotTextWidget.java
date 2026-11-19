@@ -28,7 +28,7 @@ class HotspotTextWidget extends TextButton {
         try {
           this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ff.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ff.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,7 +57,7 @@ class HotspotTextWidget extends TextButton {
         sc var4 = new sc();
         var4.field_n = new int[param1];
         var4.field_k = param3;
-        tg.field_c.a(var4, false);
+        LevelData.field_c.addLast(var4, false);
         ld.a(param0, var4, param2 ^ param2);
         return var4;
     }
@@ -92,7 +92,7 @@ class HotspotTextWidget extends TextButton {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -127,18 +127,18 @@ class HotspotTextWidget extends TextButton {
         int var6;
         nj var5Lifetime1;
         var6 = wizardrun.field_H;
-        var5 = (nj) (Js5Index.field_l.b((byte) 93));
+        var5 = (nj) (Js5Index.field_l.first((byte) 93));
         while (var5 != null) {
           if (param1 == var5.field_l) {
             return var5;
           }
-          var5 = (nj) (Js5Index.field_l.d(8192));
+          var5 = (nj) (Js5Index.field_l.next(8192));
         }
         var5Lifetime1 = new nj();
         var5Lifetime1.field_j = param0;
         var5Lifetime1.field_l = param1;
         var5Lifetime1.field_o = param4;
-        Js5Index.field_l.a(var5Lifetime1, false);
+        Js5Index.field_l.addLast(var5Lifetime1, false);
         BoundedRandomAccessFile.a(var5Lifetime1, param3, (byte) 121);
         if (param2 != 59) {
           HotspotTextWidget.a(88, 105, (byte) -48, -68, 37);
@@ -205,7 +205,7 @@ class HotspotTextWidget extends TextButton {
               ((TextHotspotRange) (var10)).field_l = var15;
             }
             var10 = var15;
-            this.field_G.a(var15, false);
+            this.field_G.addLast(var15, false);
           }
         }
     }
@@ -233,7 +233,7 @@ class HotspotTextWidget extends TextButton {
           }
           this.field_I[param2] = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ff.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ff.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ class HotspotTextWidget extends TextButton {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ class HotspotTextWidget extends TextButton {
         if (param0 > -91) {
           return (TextHotspotRange) null;
         }
-        var4 = (TextHotspotRange) (this.field_G.b((byte) 80));
+        var4 = (TextHotspotRange) (this.field_G.first((byte) 80));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -290,7 +290,7 @@ class HotspotTextWidget extends TextButton {
             }
             var5 = var5.field_l;
           }
-          var4 = (TextHotspotRange) (this.field_G.d(8192));
+          var4 = (TextHotspotRange) (this.field_G.next(8192));
         }
         return null;
     }

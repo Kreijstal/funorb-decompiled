@@ -30,7 +30,7 @@ public final class wizardrun extends GameShell {
         Object var5;
         Object var6;
         int var7_int;
-        ob var7;
+        GridPoint var7;
         int var9;
         PcmResampler var10;
         SoundCache var11;
@@ -56,8 +56,8 @@ public final class wizardrun extends GameShell {
               SingleChildWidget.soundArchive.areAllGroupsAvailable(-110)) {
               if (jl.bossSoundArchive.ensureIndex(17820) &&
                 jl.bossSoundArchive.areAllGroupsAvailable(-85)) {
-                if (eg.field_u.ensureIndex(param1 ^ 17842) &&
-                  eg.field_u.areAllGroupsAvailable(-67)) {
+                if (PlatformActor.field_u.ensureIndex(param1 ^ 17842) &&
+                  PlatformActor.field_u.areAllGroupsAvailable(-67)) {
                   if (TickClock.field_b.ensureIndex(17820) &&
                     TickClock.field_b.areAllGroupsAvailable(83)) {
                     if (bb.field_h.ensureIndex(17820) &&
@@ -70,7 +70,7 @@ public final class wizardrun extends GameShell {
                         }
                         WrappedTextLayout.a((byte) 79);
                         this.f(-98);
-                        a.font12 = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "b12", bc.field_a);
+                        FlatTriangleRasterizer.font12 = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "b12", bc.field_a);
                         hj.wizardFont = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "wizfont", bc.field_a);
                         GameGraphicsResources.wizardFont2 = IsaacRandom.loadFont(param1 + 800863540, "", SingleChildWidget.field_E, "wizfont2", bc.field_a);
                         lk.field_b = new Sprite[16];
@@ -79,14 +79,14 @@ public final class wizardrun extends GameShell {
                         GameGraphicsResources.gemSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "gems", 114);
                         oc.field_c = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "playerintro", 117);
                         lg.field_a = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "highwizard", 100);
-                        sh.field_b = vg.loadSprite(15, "benefits", SingleChildWidget.field_E, "");
-                        fa.field_b = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "screenshots", 87);
+                        BrowserUrlLauncher.field_b = vg.loadSprite(15, "benefits", SingleChildWidget.field_E, "");
+                        BrowserCookieHelpers.field_b = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "screenshots", 87);
                         var12 = vg.loadSprite(15, "gamelogo", SingleChildWidget.field_E, "");
                         var4 = vg.loadSprite(15, "mbstar", SingleChildWidget.field_E, "");
-                        uc.a(-1, MidiNote.field_u, sh.field_b);
+                        uc.a(-1, MidiNote.field_u, BrowserUrlLauncher.field_b);
                         pk.a(var12, false);
                         tk.a(0, var4, var4.fullWidth, 0, 2500, 0, 2, var4.fullHeight, 0);
-                        FullscreenFocusCanvas.a(true, fa.field_b);
+                        FullscreenFocusCanvas.a(true, BrowserCookieHelpers.field_b);
                         ck.a((java.applet.Applet) (this), ValidationHelpWidget.field_O, 0, 34, 16777215, 255);
                         TickClock.field_c = null;
                         IntHashTable.field_a = vg.loadSprite(param1 - 31, "paused", SingleChildWidget.field_E, "");
@@ -101,17 +101,17 @@ public final class wizardrun extends GameShell {
                         FullscreenFocusCanvas.field_a = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "achievements", 108);
                         sk.field_z = vg.loadSprite(15, "unachieved", bb.field_h, "basic");
                         wc.field_f = vg.loadSprite(15, "orbcoin", bb.field_h, "basic");
-                        fa.field_c = vg.loadSprite(15, "locked", bb.field_h, "basic");
+                        BrowserCookieHelpers.field_c = vg.loadSprite(15, "locked", bb.field_h, "basic");
                         kk.field_Bb = new Sprite[5];
                         kk.field_Bb[0] = vg.loadSprite(15, "highscore", SingleChildWidget.field_E, "");
                         kk.field_Bb[1] = vg.loadSprite(15, "highscorebar", SingleChildWidget.field_E, "");
                         kk.field_Bb[2] = vg.loadSprite(param1 - 31, "stage", SingleChildWidget.field_E, "");
-                        kk.field_Bb[3] = vg.loadSprite(DiskCacheStore.a(param1, 33), "score", SingleChildWidget.field_E, "");
+                        kk.field_Bb[3] = vg.loadSprite(DiskCacheStore.xor(param1, 33), "score", SingleChildWidget.field_E, "");
                         kk.field_Bb[4] = numberSprites[10];
                         pd.frameSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "frame", 91);
                         LoginForm.field_E = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "buttonframe", 119);
-                        ob.field_c = new Sprite(32, 32);
-                        ob.field_c.bindAsRasterTarget();
+                        GridPoint.field_c = new Sprite(32, 32);
+                        GridPoint.field_c.bindAsRasterTarget();
                         ve.wizardSprites[6].drawWithOffsets(-18, -18);
                         ArchiveProvider.field_b.b(68);
                         ec.field_b = new Sprite(64, 64);
@@ -141,7 +141,7 @@ public final class wizardrun extends GameShell {
                         kb.field_jb = vg.loadSprite(15, "optionscreen", SingleChildWidget.field_E, "");
                         we.field_b = vg.loadSprite(param1 - 31, "endscreen", SingleChildWidget.field_E, "");
                         il.a(240, GameGraphicsResources.wizardFont2, pd.frameSprites, (byte) -113, pd.frameSprites, 16777215, 16777088, 12, 12, 16776960, 320, 12, pd.frameSprites, 12, 12);
-                        ug.a((byte) -94);
+                        RadialSelectorWidget.a((byte) -94);
                         MidiPcmStream.field_T = new byte[6][6][];
                         SingleChildWidget.field_E = null;
                         for (var5_intLifetime1 = 0; var5_intLifetime1 <= 5; var5_intLifetime1++) {
@@ -226,7 +226,7 @@ public final class wizardrun extends GameShell {
                         ne.field_b = MidiTrack.a(TickClock.field_b, "", "wizard_run_mountains");
                         PacketBuffer.field_j = MidiTrack.a(TickClock.field_b, "", "wizard_run_volcano");
                         ec.field_d = MidiTrack.a(TickClock.field_b, "", "wizard_run_lair");
-                        fb.field_a = MidiTrack.a(TickClock.field_b, "", "wizard_run_boss");
+                        SettingsCookieReader.field_a = MidiTrack.a(TickClock.field_b, "", "wizard_run_boss");
                         DirectByteStorage.field_j = MidiTrack.a(TickClock.field_b, "", "wizard_run_intro");
                         bh.field_e = MidiTrack.a(TickClock.field_b, "", "wizard_run_cutscene");
                         qj.field_e = MidiTrack.a(TickClock.field_b, "", "wizard_run_endscene");
@@ -244,23 +244,23 @@ public final class wizardrun extends GameShell {
                         SingleChildWidget.soundArchive = null;
                         jl.bossSoundArchive = null;
                         for (var7_int = 0; 7 > var7_int; var7_int++) {
-                          SingleChildWidget.field_D.a(eg.field_u, -1, var11, SocketJs5Transport.musicTracks[var7_int], 0);
+                          SingleChildWidget.field_D.a(PlatformActor.field_u, -1, var11, SocketJs5Transport.musicTracks[var7_int], 0);
                         }
-                        SingleChildWidget.field_D.a(eg.field_u, -1, var18, bh.field_e, 0);
-                        SingleChildWidget.field_D.a(eg.field_u, -1, var18, qj.field_e, 0);
-                        SingleChildWidget.field_D.a(eg.field_u, param1 ^ -47, var18, fb.field_a, 0);
+                        SingleChildWidget.field_D.a(PlatformActor.field_u, -1, var18, bh.field_e, 0);
+                        SingleChildWidget.field_D.a(PlatformActor.field_u, -1, var18, qj.field_e, 0);
+                        SingleChildWidget.field_D.a(PlatformActor.field_u, param1 ^ -47, var18, SettingsCookieReader.field_a, 0);
                         SingleChildWidget.field_D.b(true);
-                        eg.field_u = null;
+                        PlatformActor.field_u = null;
                         var6 = null;
                         for (var7_intLifetime1 = 0; var7_intLifetime1 < 1000; var7_intLifetime1++) {
-                          ii.field_e[var7_intLifetime1] = new eg();
+                          ii.field_e[var7_intLifetime1] = new PlatformActor();
                         }
                         DialogLayer.field_K = 1;
                         DiskCacheWorker.field_e = 500;
-                        var7 = new ob();
+                        var7 = new GridPoint();
                         fi.field_x = 0;
-                        var7.field_a = 1;
-                        var7.field_b = 3;
+                        var7.row = 1;
+                        var7.column = 3;
                         FadingDialog.field_I = 0;
                         sc.field_m = new jk();
                         uk.a((byte) 91, 50);
@@ -292,13 +292,13 @@ public final class wizardrun extends GameShell {
                   ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, ej.field_e, TickClock.field_b, lj.field_d), 80.0f, 0);
                   return;
                 }
-                ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, pa.field_d, eg.field_u, IndexedSpriteState.field_g), 70.0f, 0);
+                ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, pa.field_d, PlatformActor.field_u, IndexedSpriteState.field_g), 70.0f, 0);
                 return;
               }
-              ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, ge.field_i, jl.bossSoundArchive, il.field_d), 60.0f, 0);
+              ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, MenuController.field_i, jl.bossSoundArchive, il.field_d), 60.0f, 0);
               return;
             }
-            ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, ge.field_i, SingleChildWidget.soundArchive, il.field_d), 50.0f, param1 - 46);
+            ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, MenuController.field_i, SingleChildWidget.soundArchive, il.field_d), 50.0f, param1 - 46);
             return;
           }
           ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, WhirlpoolHasher.field_e, mh.field_jb, aa.field_gb), 40.0f, 0);
@@ -314,7 +314,7 @@ public final class wizardrun extends GameShell {
           me.field_f = me.field_f - 5;
           ql.field_c = 5;
         }
-        GameApplet.a(7775, 64 * DiskCacheStore.field_f + (ql.field_c + 6 * qh.field_l));
+        GameApplet.a(7775, 64 * DiskCacheStore.field_f + (ql.field_c + 6 * GridActor.field_l));
         rc.field_a = 0;
         sf.field_h = 2;
         stackIn_6_1 = !(0 >= ArchiveProvider.field_a);
@@ -336,7 +336,7 @@ public final class wizardrun extends GameShell {
         }
         if (DiskCacheStore.field_f == 0 &&
           qf.field_l == 0 &&
-          ke.field_u.f(8192)) {
+          ke.field_u.isEmpty(8192)) {
           sf.field_h = 0;
           this.field_J = true;
           BufferedSocket.field_a = -350;
@@ -344,18 +344,18 @@ public final class wizardrun extends GameShell {
         if (!e.a(-90)) {
           BufferedSocket.field_c = BufferedSocket.field_c - (ql.field_c - 6);
           wg.field_b = wg.field_b - (DiskCacheStore.field_f << 6);
-          me.field_f = me.field_f + (qh.field_l * 6 + 6);
-          qh.field_l = -1;
+          me.field_f = me.field_f + (GridActor.field_l * 6 + 6);
+          GridActor.field_l = -1;
           DiskCacheStore.field_f = 0;
           ql.field_c = 6;
         }
-        BufferedSocket.field_c = BufferedSocket.field_c + qh.field_g;
+        BufferedSocket.field_c = BufferedSocket.field_c + GridActor.field_g;
         wg.field_b = wg.field_b - 5;
         WidgetTheme.field_k = 0;
         ga.field_e = SocketJs5Transport.musicTracks[6];
         DialogLayer.field_K = 1;
         DiskCacheWorker.field_e = 500;
-        qh.field_g = 5;
+        GridActor.field_g = 5;
         if (tl.field_e) {
           SingleChildWidget.field_D.a(true, param0 - 314, ga.field_e);
         }
@@ -379,7 +379,7 @@ public final class wizardrun extends GameShell {
         Js5Index.field_d.service();
         if (null != LoginChoicePanel.field_E &&
           LoginChoicePanel.field_E.field_b) {
-          WeightedLruCache.a((byte) 60);
+          WeightedLruCache.exitFullscreen((byte) 60);
           bb.b((byte) -100);
         }
         stackIn_6_1 = -4114;
@@ -392,7 +392,7 @@ public final class wizardrun extends GameShell {
         if (MouseWheelInput.a((byte) 60)) {
           this.d((byte) -122);
           if (!DualLinkDeque.resourcesLoaded &&
-            ph.a((byte) 123)) {
+            GameMenu.a((byte) 123)) {
             this.loadGameResources(false, 46);
           }
           if (MouseWheelInput.a((byte) 60)) {
@@ -403,10 +403,10 @@ public final class wizardrun extends GameShell {
           if (!ImageProducerRasterBuffer.c((byte) 54)) {
             hc.c(true);
           } else {
-            if (oa.a(-25231)) {
+            if (StringPaddingHelpers.a(-25231)) {
               var2 = pg.d((byte) -48);
               if (var2 == 2) {
-                WeightedLruCache.a((byte) 60);
+                WeightedLruCache.exitFullscreen((byte) 60);
               } else {
                 if (3 != var2) {
                   if (4 == var2) {
@@ -425,7 +425,7 @@ public final class wizardrun extends GameShell {
                 var2 = this.a((byte) stackIn_23_1, stackIn_24_2);
                 if (var2 == 1 ||
                   var2 == 2) {
-                  WeightedLruCache.a((byte) 60);
+                  WeightedLruCache.exitFullscreen((byte) 60);
                   if (var2 == 2) {
                     bc.a(127, jg.f(1));
                   }
@@ -438,7 +438,7 @@ public final class wizardrun extends GameShell {
         }
         if (!e.a(-81)) {
           while (true) {
-            var6 = (pg) (ie.field_l.b(114));
+            var6 = (pg) (ie.field_l.removeFirst(114));
             if (var6 != null) {
               hc.a(var6, false, 4);
               continue;
@@ -446,7 +446,7 @@ public final class wizardrun extends GameShell {
             break;
           }
           while (true) {
-            var5 = (dc) (ke.field_u.b(109));
+            var5 = (dc) (ke.field_u.removeFirst(109));
             if (var5 == null) {
               break;
             }
@@ -502,7 +502,7 @@ public final class wizardrun extends GameShell {
                         pd.a(false, false);
                         break regionExit1;
                       }
-                      WeightedLruCache.a((byte) 60);
+                      WeightedLruCache.exitFullscreen((byte) 60);
                       break regionExit1;
                     case 5:
                       if (param1 != 0) {
@@ -855,7 +855,7 @@ public final class wizardrun extends GameShell {
         int var14Lifetime1Lifetime1;
         var33 = null;
         var18 = field_H;
-        var19 = BufferedSocket.d((byte) 72);
+        var19 = BufferedSocket.activeCanvas((byte) 72);
         if (MouseWheelInput.a((byte) 60)) {
           UrlPacketDownloader.a((byte) 38, dh.a(255), var19);
           return;
@@ -894,36 +894,36 @@ public final class wizardrun extends GameShell {
               }
               var5 = 50;
               stackIn_318_0Lifetime1 = -3;
-              stackIn_318_1Lifetime1 = ~qh.field_l;
+              stackIn_318_1Lifetime1 = ~GridActor.field_l;
               if (stackIn_318_0Lifetime1 == stackIn_318_1Lifetime1) {
                 var5 = 75;
               }
-              if (qh.field_l == 3) {
+              if (GridActor.field_l == 3) {
                 var5 = 75;
               }
-              if (4 == qh.field_l) {
+              if (4 == GridActor.field_l) {
                 var5 = 75;
               }
-              if (qh.field_l == 5) {
+              if (GridActor.field_l == 5) {
                 var5 = 200;
               }
               var6 = 0;
-              if (0 == qh.field_l) {
+              if (0 == GridActor.field_l) {
                 var6 = 64;
               }
-              if (qh.field_l == 1) {
+              if (GridActor.field_l == 1) {
                 var6 = 64;
               }
-              if (qh.field_l == 2) {
+              if (GridActor.field_l == 2) {
                 var6 = -GameShell.field_x.fullHeight + 384;
               }
-              if (3 == qh.field_l) {
+              if (3 == GridActor.field_l) {
                 var6 = 64;
               }
-              if (4 == qh.field_l) {
+              if (4 == GridActor.field_l) {
                 var6 = 384 - GameShell.field_x.fullHeight;
               }
-              if (qh.field_l == 5) {
+              if (GridActor.field_l == 5) {
                 var6 = 64;
               }
               IsaacPacketBuffer.field_s.drawTransparent(320 - GameShell.field_x.fullWidth / 2, var6);
@@ -936,7 +936,7 @@ public final class wizardrun extends GameShell {
               break;
             }
           }
-          if (qh.field_l > -1) {
+          if (GridActor.field_l > -1) {
             if (!pg.field_q) {
               var26 = new String[9];
               var3_ref_String__ = var26;
@@ -971,7 +971,7 @@ public final class wizardrun extends GameShell {
               SoftwareRasterizer.resetClip();
             }
             var3 = 2;
-            if (qh.field_g > 0) {
+            if (GridActor.field_g > 0) {
               GameGraphicsResources.wizardFont2.drawString(hh.field_J, 8, 471, 0, -1);
               GameGraphicsResources.wizardFont2.drawString(hh.field_J, 8, 473, 0, -1);
               GameGraphicsResources.wizardFont2.drawString(hh.field_J, 7, 472, 0, -1);
@@ -979,33 +979,33 @@ public final class wizardrun extends GameShell {
               GameGraphicsResources.wizardFont2.drawString(hh.field_J, 8, 472, 16777215, -1);
               var3 = GameGraphicsResources.wizardFont2.stringWidth(hh.field_J) + 8;
               var4_int = 0;
-              while (var4_int < qh.field_g) {
-                stackIn_378_0 = qh.field_g;
+              while (var4_int < GridActor.field_g) {
+                stackIn_378_0 = GridActor.field_g;
                 stackIn_378_1 = 25 + var4_int;
                 if (stackIn_378_0 <= stackIn_378_1) {
-                  if (qh.field_g <= (var4_int + 10)) {
-                    if ((var4_int + 5) >= qh.field_g) {
+                  if (GridActor.field_g <= (var4_int + 10)) {
+                    if ((var4_int + 5) >= GridActor.field_g) {
                       ValidationState.selectStarSprites[0].drawScaled(var3, 446, 24, 24);
                       gf.field_bb.drawScaled(var3, 446, 24, 24);
                       var3 += 24;
                     } else {
                       ValidationState.selectStarSprites[0].drawScaled(var3, 446, 32, 32);
                       gf.field_bb.drawScaled(var3, 446, 32, 32);
-                      a.font12.drawString("5", var3, 461, 16777215, -1);
+                      FlatTriangleRasterizer.font12.drawString("5", var3, 461, 16777215, -1);
                       var3 += 32;
                       var4_int += 4;
                     }
                   } else {
                     ValidationState.selectStarSprites[0].drawScaled(var3, 446, 32, 32);
                     gf.field_bb.drawScaled(var3, 446, 32, 32);
-                    a.font12.drawString("10", var3, 461, 16777215, -1);
+                    FlatTriangleRasterizer.font12.drawString("10", var3, 461, 16777215, -1);
                     var3 += 32;
                     var4_int += 9;
                   }
                 } else {
                   ValidationState.selectStarSprites[0].drawScaled(var3, 446, 32, 32);
                   gf.field_bb.drawScaled(var3, 446, 32, 32);
-                  a.font12.drawString("25", var3, 461, 16777215, -1);
+                  FlatTriangleRasterizer.font12.drawString("25", var3, 461, 16777215, -1);
                   var3 += 32;
                   var4_int += 24;
                 }
@@ -1024,7 +1024,7 @@ public final class wizardrun extends GameShell {
             }
             if (DialogLayer.field_K == 2) {
               if (!pg.field_q &&
-                5 == qh.field_l &&
+                5 == GridActor.field_l &&
                 5 <= ql.field_c) {
                 this.field_Q = this.field_Q + 1;
                 if (this.field_Q >= 40) {
@@ -1033,7 +1033,7 @@ public final class wizardrun extends GameShell {
                 lg.field_a[12 + this.field_Q / 10 % 4].drawTransparent(512, 0);
               }
               for (var4_int = 0; WidgetTheme.field_k > var4_int; var4_int++) {
-                ii.field_e[var4_int].d(true);
+                ii.field_e[var4_int].drawActor(true);
               }
             }
             if (pg.field_q) {
@@ -1043,12 +1043,12 @@ public final class wizardrun extends GameShell {
                   this.field_Q = 0;
                 }
                 lg.field_a[12 + this.field_Q / 10 % 4].drawTransparent(512, 0);
-                var4_int = -32 + ((15 - ii.field_e[0].field_i.field_a - 1) * 32 - ii.field_e[0].field_f.field_a * 32 / 240);
-                var3 = ii.field_e[0].field_i.field_b * 32 + ii.field_e[0].field_f.field_b * 32 / 240;
+                var4_int = -32 + ((15 - ii.field_e[0].tilePosition.row - 1) * 32 - ii.field_e[0].tileOffset.row * 32 / 240);
+                var3 = ii.field_e[0].tilePosition.column * 32 + ii.field_e[0].tileOffset.column * 32 / 240;
                 if (ii.field_e[0].field_h != -1) {
-                  ve.wizardSprites[ii.field_e[0].field_n].drawMirrored(var3, var4_int);
+                  ve.wizardSprites[ii.field_e[0].animationFrame].drawMirrored(var3, var4_int);
                 } else {
-                  ve.wizardSprites[ii.field_e[0].field_n].drawTransparent(var3, var4_int);
+                  ve.wizardSprites[ii.field_e[0].animationFrame].drawTransparent(var3, var4_int);
                 }
               }
               if (this.field_R == 12) {
@@ -1056,8 +1056,8 @@ public final class wizardrun extends GameShell {
                 lg.field_a[12 + (2 + this.field_Q / 10) % 4].drawTransparent(512, 0);
                 var3 = 64;
                 if (this.field_Q < 10) {
-                  var4_int = -64 - ii.field_e[0].field_i.field_a * 32 + (480 - ii.field_e[0].field_f.field_a * 32 / 240);
-                  var3 = 32 * ii.field_e[0].field_f.field_b / 240 + ii.field_e[0].field_i.field_b * 32;
+                  var4_int = -64 - ii.field_e[0].tilePosition.row * 32 + (480 - ii.field_e[0].tileOffset.row * 32 / 240);
+                  var3 = 32 * ii.field_e[0].tileOffset.column / 240 + ii.field_e[0].tilePosition.column * 32;
                   var5 = -var3 + 64;
                   var3 = var3 + var5 * this.field_Q / 10;
                   var6 = -var4_int + 352;
@@ -1076,7 +1076,7 @@ public final class wizardrun extends GameShell {
                   var7_double = 0.0;
                   for (var9 = 0; var9 < 5; var9++) {
                     var7_doubleLifetime1 = (double)this.field_Q + 6.28 * (double)var9 / 5.0;
-                    ob.field_c.drawScaledAlpha(-6 + ((int)(32.0 + 32.0 * Math.cos(var7_doubleLifetime1)) + var3), var4_int - (-(int)(32.0 + Math.sin(var7_doubleLifetime1) * 32.0) + 6), 12, 12, var6);
+                    GridPoint.field_c.drawScaledAlpha(-6 + ((int)(32.0 + 32.0 * Math.cos(var7_doubleLifetime1)) + var3), var4_int - (-(int)(32.0 + Math.sin(var7_doubleLifetime1) * 32.0) + 6), 12, 12, var6);
                   }
                 }
                 if (this.field_Q >= 50 &&
@@ -1085,13 +1085,13 @@ public final class wizardrun extends GameShell {
                   var7 = 64 - var4_int;
                   var8 = var6 * (-50 + this.field_Q) / 40 + var3;
                   var9 = var7 * (this.field_Q - 50) / 40 + var4_int;
-                  ob.field_c.a(var8, var9, -123, 128, 2 * this.field_Q);
+                  GridPoint.field_c.a(var8, var9, -123, 128, 2 * this.field_Q);
                   var8 = var3 + (int)(Math.sin(3.14 * (double)(this.field_Q - 50) / 80.0) * (double)var6);
                   var9 = var4_int + var7 * (-50 + this.field_Q) / 40;
-                  ob.field_c.a(var8, var9, -118, 128, this.field_Q * 2);
+                  GridPoint.field_c.a(var8, var9, -118, 128, this.field_Q * 2);
                   var8 = var6 * (this.field_Q - 50) / 40 + var3;
                   var9 = (int)((double)var7 * Math.sin((double)(-50 + this.field_Q) * 3.14 / 80.0)) + var4_int;
-                  ob.field_c.a(var8, var9, -115, 128, 2 * this.field_Q);
+                  GridPoint.field_c.a(var8, var9, -115, 128, 2 * this.field_Q);
                 }
               }
               if (this.field_R == 13) {
@@ -1278,7 +1278,7 @@ public final class wizardrun extends GameShell {
                 if (this.field_Q > 50) {
                   var5 = 12;
                 }
-                if (3 < qh.field_g) {
+                if (3 < GridActor.field_g) {
                   oc.field_c[var5].drawMirrored(var3, var4_int);
                 } else {
                   oc.field_c[var5].drawTransparent(var3, var4_int);
@@ -1366,22 +1366,22 @@ public final class wizardrun extends GameShell {
             CacheEntry.a(pd.frameSprites, 16, (byte) -110, 311, 608, 153);
             GameGraphicsResources.wizardFont2.drawStringCentered(uh.field_b, 320, GameGraphicsResources.wizardFont2.field_M + 169, 16777215, -1);
             var3 = 96;
-            if (qh.field_l < 0) {
-              BufferedSocket.field_c = BufferedSocket.field_c - qh.field_l * 6;
-              qh.field_l = 0;
+            if (GridActor.field_l < 0) {
+              BufferedSocket.field_c = BufferedSocket.field_c - GridActor.field_l * 6;
+              GridActor.field_l = 0;
             }
             var4_int = var3 * 96 / 128;
-            if (qh.field_l > 5) {
+            if (GridActor.field_l > 5) {
               wg.field_b = wg.field_b + 30;
-              BufferedSocket.field_c = BufferedSocket.field_c - qh.field_l * 6;
-              qh.field_l = 5;
+              BufferedSocket.field_c = BufferedSocket.field_c - GridActor.field_l * 6;
+              GridActor.field_l = 5;
             }
             var5 = 0;
             while (true) {
               if (var5 < 6) {
                 var6 = var3 * var5 + 32;
                 var7 = 208;
-                bd.field_c[var5].drawScaled(var3 * var5 + 32, 208, var3, var4_int);
+                ExceptionSupport.field_c[var5].drawScaled(var3 * var5 + 32, 208, var3, var4_int);
                 stackIn_80_0 = ~var5;
                 stackIn_80_1 = ~TextButton.field_A;
                 if (stackIn_80_0 < stackIn_80_1 ||
@@ -1390,10 +1390,10 @@ public final class wizardrun extends GameShell {
                   SoftwareRasterizer.fillRectangleBlended(var6, var7, var3, var4_int, 0, 192);
                   if (ArchiveProvider.field_a <= 0 &&
                     var5 > 1) {
-                    fa.field_c.drawDownscaledAveraged(var3 / 2 + (32 + (var5 * var3 - var4_int / 2)), 208, var4_int, var4_int);
+                    BrowserCookieHelpers.field_c.drawDownscaledAveraged(var3 / 2 + (32 + (var5 * var3 - var4_int / 2)), 208, var4_int, var4_int);
                   }
                 }
-                if (var5 != qh.field_l) {
+                if (var5 != GridActor.field_l) {
                   SoftwareRasterizer.drawRectOutline(var5 * var3 + 32, 208, var3, var4_int, 0);
                   SoftwareRasterizer.drawRoundedRectangle(32 + var5 * var3, 208, var3, var4_int, 1, 8421376);
                   SoftwareRasterizer.drawRoundedRectangle(var3 * var5 + 32, 208, var3, var4_int, 2, 16776960);
@@ -1409,47 +1409,47 @@ public final class wizardrun extends GameShell {
                   fi.field_B >= var7 &&
                   (var7 + var4_int) > fi.field_B) {
                   SoftwareRasterizer.drawRectOutline(var3 * var5 + 32, 208, var3, var4_int, 16777215);
-                  if (sh.field_c == 1) {
-                    BufferedSocket.field_c = BufferedSocket.field_c - qh.field_l * 6;
+                  if (BrowserUrlLauncher.field_c == 1) {
+                    BufferedSocket.field_c = BufferedSocket.field_c - GridActor.field_l * 6;
                     wg.field_b = wg.field_b + var5 * 6;
-                    qh.field_l = var5;
+                    GridActor.field_l = var5;
                   }
                 }
                 var5++;
                 continue;
               }
               var5 = 16777215;
-              stackIn_80_0Lifetime1 = qh.field_l;
+              stackIn_80_0Lifetime1 = GridActor.field_l;
               stackIn_80_1Lifetime1 = TextButton.field_A;
               if (stackIn_80_0Lifetime1 > stackIn_80_1Lifetime1 ||
-                !(qh.field_l <= 1) &&
+                !(GridActor.field_l <= 1) &&
                 !(ArchiveProvider.field_a > 0)) {
                 var5 = 16777088;
-                if (qh.field_l > 1 &&
+                if (GridActor.field_l > 1 &&
                   ArchiveProvider.field_a <= 0) {
                   var5 = 16711680;
                 }
               }
               var6_ref_String = "BLAH BLAH BLAH!";
-              if (qh.field_l == 0) {
+              if (GridActor.field_l == 0) {
                 var6_ref_String = aa.field_kb;
               }
-              if (qh.field_l == 1) {
+              if (GridActor.field_l == 1) {
                 var6_ref_String = GameShell.field_o;
               }
-              if (qh.field_l == 2) {
+              if (GridActor.field_l == 2) {
                 var6_ref_String = ra.field_l;
               }
-              if (qh.field_l == 3) {
+              if (GridActor.field_l == 3) {
                 var6_ref_String = SecondaryNodeDeque.field_c;
               }
-              if (4 == qh.field_l) {
+              if (4 == GridActor.field_l) {
                 var6_ref_String = DialogLayer.field_H;
               }
-              if (qh.field_l == 5) {
+              if (GridActor.field_l == 5) {
                 var6_ref_String = kk.field_vb;
               }
-              GameGraphicsResources.wizardFont2.drawStringCentered(qj.field_c + (qh.field_l + 1), 320, var4_int + 192 + (16 + GameGraphicsResources.wizardFont2.field_M), var5, -1);
+              GameGraphicsResources.wizardFont2.drawStringCentered(qj.field_c + (GridActor.field_l + 1), 320, var4_int + 192 + (16 + GameGraphicsResources.wizardFont2.field_M), var5, -1);
               GameGraphicsResources.wizardFont2.drawStringCentered(var6_ref_String, 320, 2 * GameGraphicsResources.wizardFont2.field_M + (208 + var4_int), var5, -1);
               if (var5 == 16777088) {
                 GameGraphicsResources.wizardFont2.drawStringCentered(BufferedRandomAccessFile.field_g, 320, 192 + var4_int + 16 + 3 * GameGraphicsResources.wizardFont2.field_M, var5, -1);
@@ -1462,18 +1462,18 @@ public final class wizardrun extends GameShell {
                   this.a(400, 128, 65535, sc.field_l, 1) &&
                   5 > FadingDialog.field_I &&
                   0 >= pa.field_c) {
-                  ic.field_a = ic.field_a - qh.field_g;
-                  qh.field_g = 0;
+                  ic.field_a = ic.field_a - GridActor.field_g;
+                  GridActor.field_g = 0;
                   AccountCreationForm.field_T = 0;
-                  if (0 < qh.field_l) {
+                  if (0 < GridActor.field_l) {
                     BufferedSocket.field_c = BufferedSocket.field_c - 5;
                     DelegatingCanvas.field_b = false;
-                    qh.field_g = 5;
+                    GridActor.field_g = 5;
                   }
                   WidgetTheme.field_k = 0;
                   FadingDialog.field_I = 5;
                   sj.field_l = 0;
-                  if (qh.field_l > 0) {
+                  if (GridActor.field_l > 0) {
                     AccountCreationForm.field_T = 400;
                   }
                 }
@@ -1495,17 +1495,17 @@ public final class wizardrun extends GameShell {
                   if (this.a(400, var7, 65535, sc.field_l, 1) &&
                     FadingDialog.field_I < 5 &&
                     pa.field_c <= 0) {
-                    wg.field_b = wg.field_b + qh.field_g;
-                    qh.field_g = 0;
+                    wg.field_b = wg.field_b + GridActor.field_g;
+                    GridActor.field_g = 0;
                     FadingDialog.field_I = 5;
-                    if (qh.field_l > 0) {
+                    if (GridActor.field_l > 0) {
                       DelegatingCanvas.field_b = false;
                       me.field_f = me.field_f + 5;
-                      qh.field_g = 5;
+                      GridActor.field_g = 5;
                     }
                     WidgetTheme.field_k = 0;
                     AccountCreationForm.field_T = 0;
-                    if (qh.field_l > 0) {
+                    if (GridActor.field_l > 0) {
                       AccountCreationForm.field_T = 400;
                     }
                     sj.field_l = 0;
@@ -1546,7 +1546,7 @@ public final class wizardrun extends GameShell {
             }
             var6 = 0;
             var7 = 1;
-            var8 = a.font12.field_E;
+            var8 = FlatTriangleRasterizer.font12.field_E;
             for (var9 = 0; SpriteState.field_t.length > var9; var9++) {
               var10 = 1;
               stackIn_224_0 = ~var9;
@@ -1585,7 +1585,7 @@ public final class wizardrun extends GameShell {
                       var9 != 2 &&
                       var9 != 5 &&
                       var9 != 6) {
-                      fa.field_c.drawDownscaledAveraged(-var11 + var3, var4_int - var11, var11 * 2 + 32, 2 * var11 + 32);
+                      BrowserCookieHelpers.field_c.drawDownscaledAveraged(-var11 + var3, var4_int - var11, var11 * 2 + 32, 2 * var11 + 32);
                     } else {
                       sk.field_z.drawDownscaledAveraged(-var11 + var3, -var11 + var4_int, var11 * 2 + 32, 32 + var11 * 2);
                     }
@@ -1603,13 +1603,13 @@ public final class wizardrun extends GameShell {
                     var7 = 0;
                     this.drawBorderedText(-12926, SpriteState.field_t[var9], 15583488, 440, 255);
                     if ((1 << var9 & var5) == 0) {
-                      a.font12.drawStringRight(uf.field_b, 620, 247 + (GameGraphicsResources.wizardFont2.field_M - 1), 0, 0);
-                      a.font12.drawStringRight(uf.field_b, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
-                      a.font12.drawStringRight(uf.field_b, 620, GameGraphicsResources.wizardFont2.field_M + 247, 16727871, -1);
+                      FlatTriangleRasterizer.font12.drawStringRight(uf.field_b, 620, 247 + (GameGraphicsResources.wizardFont2.field_M - 1), 0, 0);
+                      FlatTriangleRasterizer.font12.drawStringRight(uf.field_b, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
+                      FlatTriangleRasterizer.font12.drawStringRight(uf.field_b, 620, GameGraphicsResources.wizardFont2.field_M + 247, 16727871, -1);
                     } else {
-                      a.font12.drawStringRight(bc.field_c, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
-                      a.font12.drawStringRight(bc.field_c, 620, 246 + GameGraphicsResources.wizardFont2.field_M, 0, 0);
-                      a.font12.drawStringRight(bc.field_c, 620, 247 + GameGraphicsResources.wizardFont2.field_M, 16777215, -1);
+                      FlatTriangleRasterizer.font12.drawStringRight(bc.field_c, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
+                      FlatTriangleRasterizer.font12.drawStringRight(bc.field_c, 620, 246 + GameGraphicsResources.wizardFont2.field_M, 0, 0);
+                      FlatTriangleRasterizer.font12.drawStringRight(bc.field_c, 620, 247 + GameGraphicsResources.wizardFont2.field_M, 16777215, -1);
                     }
                     var12 = GameGraphicsResources.wizardFont2.field_M * 5 / 2 + 231;
                     if ((1 << var9 & var5) != 0) {
@@ -1620,7 +1620,7 @@ public final class wizardrun extends GameShell {
                         var9 != 2 &&
                         var9 != 5 &&
                         var9 != 6) {
-                        fa.field_c.drawTransparent(260, var12);
+                        BrowserCookieHelpers.field_c.drawTransparent(260, var12);
                       } else {
                         sk.field_z.drawTransparent(260, var12);
                       }
@@ -1629,22 +1629,22 @@ public final class wizardrun extends GameShell {
                     if (0 == (var5 & 1 << var9) &&
                       5 <= var9 &&
                       var9 != 11) {
-                      a.font12.a(f.field_f, 398, var12 - 1, 222, 480, 0, 0, 0, 0, var8);
-                      a.font12.a(f.field_f, 397, var12, 222, 480, 0, 0, 0, 0, var8);
-                      var12 = var12 + (var8 * 3 + 0 * a.font12.a(f.field_f, 398, var12, 222, 480, 16777215, -1, 0, 0, var8));
+                      FlatTriangleRasterizer.font12.a(f.field_f, 398, var12 - 1, 222, 480, 0, 0, 0, 0, var8);
+                      FlatTriangleRasterizer.font12.a(f.field_f, 397, var12, 222, 480, 0, 0, 0, 0, var8);
+                      var12 = var12 + (var8 * 3 + 0 * FlatTriangleRasterizer.font12.a(f.field_f, 398, var12, 222, 480, 16777215, -1, 0, 0, var8));
                     } else {
-                      a.font12.a(mh.field_sb[var9], 397, -a.font12.field_M + var12, 222, 480, 0, 0, 0, 0, var8);
-                      a.font12.a(mh.field_sb[var9], 398, -a.font12.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, var8);
-                      var12 = var12 + (3 * var8 + a.font12.a(mh.field_sb[var9], 398, var12 - a.font12.field_M, 222, 480, 16777215, -1, 0, 0, var8) * 0);
-                      GameGraphicsResources.wizardFont2.a(ResourceArchive.field_e + GameShell.field_m[var9], 397, var12 - a.font12.field_M, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
-                      GameGraphicsResources.wizardFont2.a(ResourceArchive.field_e + GameShell.field_m[var9], 398, -a.font12.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
-                      var12 = var12 + GameGraphicsResources.wizardFont2.field_M * GameGraphicsResources.wizardFont2.a(ResourceArchive.field_e + GameShell.field_m[var9], 398, -a.font12.field_M + var12, 222, 480, 16777215, -1, 0, 0, GameGraphicsResources.wizardFont2.field_M);
-                      GameGraphicsResources.wizardFont2.a(nf.field_a, 397, var12 - a.font12.field_M, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
-                      GameGraphicsResources.wizardFont2.a(nf.field_a, 398, -a.font12.field_M - 1 + var12, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
-                      GameGraphicsResources.wizardFont2.a(nf.field_a, 398, -a.font12.field_M + var12, 222, 480, 16777215, -1, 0, 0, GameGraphicsResources.wizardFont2.field_M);
+                      FlatTriangleRasterizer.font12.a(mh.field_sb[var9], 397, -FlatTriangleRasterizer.font12.field_M + var12, 222, 480, 0, 0, 0, 0, var8);
+                      FlatTriangleRasterizer.font12.a(mh.field_sb[var9], 398, -FlatTriangleRasterizer.font12.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, var8);
+                      var12 = var12 + (3 * var8 + FlatTriangleRasterizer.font12.a(mh.field_sb[var9], 398, var12 - FlatTriangleRasterizer.font12.field_M, 222, 480, 16777215, -1, 0, 0, var8) * 0);
+                      GameGraphicsResources.wizardFont2.a(ResourceArchive.field_e + GameShell.field_m[var9], 397, var12 - FlatTriangleRasterizer.font12.field_M, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
+                      GameGraphicsResources.wizardFont2.a(ResourceArchive.field_e + GameShell.field_m[var9], 398, -FlatTriangleRasterizer.font12.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
+                      var12 = var12 + GameGraphicsResources.wizardFont2.field_M * GameGraphicsResources.wizardFont2.a(ResourceArchive.field_e + GameShell.field_m[var9], 398, -FlatTriangleRasterizer.font12.field_M + var12, 222, 480, 16777215, -1, 0, 0, GameGraphicsResources.wizardFont2.field_M);
+                      GameGraphicsResources.wizardFont2.a(nf.field_a, 397, var12 - FlatTriangleRasterizer.font12.field_M, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
+                      GameGraphicsResources.wizardFont2.a(nf.field_a, 398, -FlatTriangleRasterizer.font12.field_M - 1 + var12, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
+                      GameGraphicsResources.wizardFont2.a(nf.field_a, 398, -FlatTriangleRasterizer.font12.field_M + var12, 222, 480, 16777215, -1, 0, 0, GameGraphicsResources.wizardFont2.field_M);
                       var13 = TickClock.field_e[var9];
                       for (var14 = 0; var14 < var13; var14++) {
-                        wc.field_f.drawQuarterSize(GameGraphicsResources.wizardFont2.stringWidth(nf.field_a) - var13 * 3 / 2 + (8 * var14 + 398), 4 + var12 - a.font12.field_M);
+                        wc.field_f.drawQuarterSize(GameGraphicsResources.wizardFont2.stringWidth(nf.field_a) - var13 * 3 / 2 + (8 * var14 + 398), 4 + var12 - FlatTriangleRasterizer.font12.field_M);
                       }
                     }
                   }
@@ -1685,9 +1685,9 @@ public final class wizardrun extends GameShell {
             var21 = new StringBuilder(0);
             var5_ref_String = var21.toString();
             if (!e.a(-122)) {
-              a.font12.a(we.field_e, 289, 370, 340, 64, 0, 0, 1, 1, a.font12.field_M);
-              a.font12.a(we.field_e, 290, 369, 340, 64, 0, 0, 1, 1, a.font12.field_M);
-              a.font12.a(we.field_e, 290, 370, 340, 64, 16744448, -1, 1, 1, a.font12.field_M);
+              FlatTriangleRasterizer.font12.a(we.field_e, 289, 370, 340, 64, 0, 0, 1, 1, FlatTriangleRasterizer.font12.field_M);
+              FlatTriangleRasterizer.font12.a(we.field_e, 290, 369, 340, 64, 0, 0, 1, 1, FlatTriangleRasterizer.font12.field_M);
+              FlatTriangleRasterizer.font12.a(we.field_e, 290, 370, 340, 64, 16744448, -1, 1, 1, FlatTriangleRasterizer.font12.field_M);
               if (null == DualLinkDeque.field_g) {
                 DualLinkDeque.field_g = HotspotTextWidget.a(10, 2, (byte) 59, 3, 1);
               }
@@ -1698,7 +1698,7 @@ public final class wizardrun extends GameShell {
                   var3 = 128;
                   var39 = DualLinkDeque.field_g.field_i[DiskCacheWorker.field_c];
                   var9 = 0;
-                  var10_ref_ai = fa.field_a;
+                  var10_ref_ai = BrowserCookieHelpers.field_a;
                   var11Lifetime1 = 0;
                   for (var12Lifetime1 = 0; 11 > var12Lifetime1; var12Lifetime1++) {
                     var13Lifetime1 = 16744448;
@@ -1743,18 +1743,18 @@ public final class wizardrun extends GameShell {
                             var5_ref_String = ai.field_s;
                           }
                           if (var11Lifetime1 != 0) {
-                            a.font12.drawString(var5_ref_String, 322, 10 + var3, 0, -1);
-                            a.font12.drawString(var5_ref_String, 324, 10 + var3, 0, -1);
-                            a.font12.drawString(var5_ref_String, 323, var3 + 9, 0, -1);
-                            a.font12.drawString(var5_ref_String, 323, 11 + var3, 0, -1);
-                            a.font12.drawString(var5_ref_String, 323, var3 + 10, var13Lifetime1, -1);
+                            FlatTriangleRasterizer.font12.drawString(var5_ref_String, 322, 10 + var3, 0, -1);
+                            FlatTriangleRasterizer.font12.drawString(var5_ref_String, 324, 10 + var3, 0, -1);
+                            FlatTriangleRasterizer.font12.drawString(var5_ref_String, 323, var3 + 9, 0, -1);
+                            FlatTriangleRasterizer.font12.drawString(var5_ref_String, 323, 11 + var3, 0, -1);
+                            FlatTriangleRasterizer.font12.drawString(var5_ref_String, 323, var3 + 10, var13Lifetime1, -1);
                           } else {
                             if (!(1 < var12Lifetime1)) {
-                              a.font12.drawStringCentered(var5_ref_String, 468, 10 + var3, 0, -1);
-                              a.font12.drawStringCentered(var5_ref_String, 470, var3 + 10, 0, -1);
-                              a.font12.drawStringCentered(var5_ref_String, 469, 9 + var3, 0, -1);
-                              a.font12.drawStringCentered(var5_ref_String, 469, 11 + var3, 0, -1);
-                              a.font12.drawStringCentered(var5_ref_String, 469, var3 + 10, var13Lifetime1, -1);
+                              FlatTriangleRasterizer.font12.drawStringCentered(var5_ref_String, 468, 10 + var3, 0, -1);
+                              FlatTriangleRasterizer.font12.drawStringCentered(var5_ref_String, 470, var3 + 10, 0, -1);
+                              FlatTriangleRasterizer.font12.drawStringCentered(var5_ref_String, 469, 9 + var3, 0, -1);
+                              FlatTriangleRasterizer.font12.drawStringCentered(var5_ref_String, 469, 11 + var3, 0, -1);
+                              FlatTriangleRasterizer.font12.drawStringCentered(var5_ref_String, 469, var3 + 10, var13Lifetime1, -1);
                             }
                           }
                         }
@@ -1762,21 +1762,21 @@ public final class wizardrun extends GameShell {
                       }
                       var11Lifetime1 = 1;
                       if (var12Lifetime1 == 0) {
-                        a.font12.drawString(bb.field_l, 299, 16 + var3, 0, 0);
-                        a.font12.drawStringRight(qj.field_f, 619, var3 + 16, 0, 0);
-                        a.font12.drawString(bb.field_l, 300, 16 + (var3 - 1), 0, 0);
-                        a.font12.drawStringRight(qj.field_f, 620, -1 + (var3 + 16), 0, 0);
-                        a.font12.drawString(bb.field_l, 300, var3 + 16, 16777215, -1);
-                        a.font12.drawStringRight(qj.field_f, 620, var3 + 16, 16777215, -1);
-                        if ((a.font12.stringWidth(nj.field_p) / 2 + 510) < (620 - (a.font12.stringWidth(qj.field_f) + 8))) {
-                          a.font12.drawStringCentered(nj.field_p, 509, 16 + var3, 0, 0);
-                          a.font12.drawStringCentered(nj.field_p, 510, -1 + var3 + 16, 0, 0);
-                          a.font12.drawStringCentered(nj.field_p, 510, 16 + var3, 16777215, -1);
+                        FlatTriangleRasterizer.font12.drawString(bb.field_l, 299, 16 + var3, 0, 0);
+                        FlatTriangleRasterizer.font12.drawStringRight(qj.field_f, 619, var3 + 16, 0, 0);
+                        FlatTriangleRasterizer.font12.drawString(bb.field_l, 300, 16 + (var3 - 1), 0, 0);
+                        FlatTriangleRasterizer.font12.drawStringRight(qj.field_f, 620, -1 + (var3 + 16), 0, 0);
+                        FlatTriangleRasterizer.font12.drawString(bb.field_l, 300, var3 + 16, 16777215, -1);
+                        FlatTriangleRasterizer.font12.drawStringRight(qj.field_f, 620, var3 + 16, 16777215, -1);
+                        if ((FlatTriangleRasterizer.font12.stringWidth(nj.field_p) / 2 + 510) < (620 - (FlatTriangleRasterizer.font12.stringWidth(qj.field_f) + 8))) {
+                          FlatTriangleRasterizer.font12.drawStringCentered(nj.field_p, 509, 16 + var3, 0, 0);
+                          FlatTriangleRasterizer.font12.drawStringCentered(nj.field_p, 510, -1 + var3 + 16, 0, 0);
+                          FlatTriangleRasterizer.font12.drawStringCentered(nj.field_p, 510, 16 + var3, 16777215, -1);
                         } else {
-                          var14Lifetime1 = -a.font12.stringWidth(qj.field_f) + 620 - 8;
-                          a.font12.drawStringRight(nj.field_p, var14Lifetime1 - 1, var3 + 16, 0, 0);
-                          a.font12.drawStringRight(nj.field_p, var14Lifetime1, 16 + (var3 - 1), 0, 0);
-                          a.font12.drawStringRight(nj.field_p, var14Lifetime1, var3 + 16, 16777215, -1);
+                          var14Lifetime1 = -FlatTriangleRasterizer.font12.stringWidth(qj.field_f) + 620 - 8;
+                          FlatTriangleRasterizer.font12.drawStringRight(nj.field_p, var14Lifetime1 - 1, var3 + 16, 0, 0);
+                          FlatTriangleRasterizer.font12.drawStringRight(nj.field_p, var14Lifetime1, 16 + (var3 - 1), 0, 0);
+                          FlatTriangleRasterizer.font12.drawStringRight(nj.field_p, var14Lifetime1, var3 + 16, 16777215, -1);
                         }
                       }
                       var14Lifetime1Lifetime1 = 0;
@@ -1790,7 +1790,7 @@ public final class wizardrun extends GameShell {
                           var9 == 0) {
                           var13Lifetime1 = 16777215;
                           var14Lifetime1Lifetime1 = RasterSnapshot.field_k;
-                          var5_ref_String = d.field_a;
+                          var5_ref_String = MonotonicClockHelpers.field_a;
                         }
                       }
                       var15 = 300;
@@ -1809,40 +1809,40 @@ public final class wizardrun extends GameShell {
                         }
                       }
                       if (decompiledFrameRemainder1) {
-                        SoftwareRasterizer.setClip(0, 0, 510 - a.font12.stringWidth(MidiEnvelope.field_l) / 2, 640);
-                        a.font12.drawString(var5_ref_String, 2 + var15, 10 + var3, 0, -1);
-                        a.font12.drawString(var5_ref_String, var15 + 4, var3 + 10, 0, -1);
-                        a.font12.drawString(var5_ref_String, 3 + var15, var3 + 9, 0, -1);
-                        a.font12.drawString(var5_ref_String, var15 + 3, var3 + 11, 0, -1);
-                        a.font12.drawString(var5_ref_String, var15 + 3, 10 + var3, var13Lifetime1, -1);
+                        SoftwareRasterizer.setClip(0, 0, 510 - FlatTriangleRasterizer.font12.stringWidth(MidiEnvelope.field_l) / 2, 640);
+                        FlatTriangleRasterizer.font12.drawString(var5_ref_String, 2 + var15, 10 + var3, 0, -1);
+                        FlatTriangleRasterizer.font12.drawString(var5_ref_String, var15 + 4, var3 + 10, 0, -1);
+                        FlatTriangleRasterizer.font12.drawString(var5_ref_String, 3 + var15, var3 + 9, 0, -1);
+                        FlatTriangleRasterizer.font12.drawString(var5_ref_String, var15 + 3, var3 + 11, 0, -1);
+                        FlatTriangleRasterizer.font12.drawString(var5_ref_String, var15 + 3, 10 + var3, var13Lifetime1, -1);
                         SoftwareRasterizer.resetClip();
                         var5_ref_String = 1 + var16 / 6 + "-" + (1 + var16 % 6);
                         if (1 + var16 / 6 == 7) {
                           var5_ref_String = MidiEnvelope.field_l;
                         }
-                        a.font12.drawStringCentered(var5_ref_String, 508, 10 + var3, 0, -1);
-                        a.font12.drawStringCentered(var5_ref_String, 510, 10 + var3, 0, -1);
-                        a.font12.drawStringCentered(var5_ref_String, 509, 9 + var3, 0, -1);
-                        a.font12.drawStringCentered(var5_ref_String, 509, var3 + 11, 0, -1);
-                        a.font12.drawStringCentered(var5_ref_String, 509, 10 + var3, var13Lifetime1, -1);
+                        FlatTriangleRasterizer.font12.drawStringCentered(var5_ref_String, 508, 10 + var3, 0, -1);
+                        FlatTriangleRasterizer.font12.drawStringCentered(var5_ref_String, 510, 10 + var3, 0, -1);
+                        FlatTriangleRasterizer.font12.drawStringCentered(var5_ref_String, 509, 9 + var3, 0, -1);
+                        FlatTriangleRasterizer.font12.drawStringCentered(var5_ref_String, 509, var3 + 11, 0, -1);
+                        FlatTriangleRasterizer.font12.drawStringCentered(var5_ref_String, 509, 10 + var3, var13Lifetime1, -1);
                         var25 = Integer.toString(var17);
-                        a.font12.drawStringRight(var25, 621, 10 + var3, 0, -1);
-                        a.font12.drawStringRight(var25, 623, 10 + var3, 0, -1);
-                        a.font12.drawStringRight(var25, 622, var3 + 9, 0, -1);
-                        a.font12.drawStringRight(var25, 622, var3 + 11, 0, -1);
-                        a.font12.drawStringRight(var25, 622, 10 + var3, var13Lifetime1, -1);
+                        FlatTriangleRasterizer.font12.drawStringRight(var25, 621, 10 + var3, 0, -1);
+                        FlatTriangleRasterizer.font12.drawStringRight(var25, 623, 10 + var3, 0, -1);
+                        FlatTriangleRasterizer.font12.drawStringRight(var25, 622, var3 + 9, 0, -1);
+                        FlatTriangleRasterizer.font12.drawStringRight(var25, 622, var3 + 11, 0, -1);
+                        FlatTriangleRasterizer.font12.drawStringRight(var25, 622, 10 + var3, var13Lifetime1, -1);
                       }
                     }
                   }
                 } else {
-                  a.font12.drawStringCentered(rd.field_a, 466, 248, 16744448, -1);
+                  FlatTriangleRasterizer.font12.drawStringCentered(rd.field_a, 466, 248, 16744448, -1);
                 }
               } else {
-                a.font12.drawStringCentered(lf.field_a, 466, 144, 16744448, -1);
+                FlatTriangleRasterizer.font12.drawStringCentered(lf.field_a, 466, 144, 16744448, -1);
               }
               var3 = 418;
             } else {
-              a.font12.drawStringCentered(ByteStorage.field_c, 466, 248, 16744448, -1);
+              FlatTriangleRasterizer.font12.drawStringCentered(ByteStorage.field_c, 466, 248, 16744448, -1);
             }
           }
         }
@@ -1857,9 +1857,9 @@ public final class wizardrun extends GameShell {
           }
         }
         if (!(-350 >= BufferedSocket.field_a) ||
-          qh.field_l == 0) {
+          GridActor.field_l == 0) {
           var3Lifetime1 = BufferedSocket.field_a;
-          if (qh.field_l == 0) {
+          if (GridActor.field_l == 0) {
             stackIn_524_0 = (pg.field_q) ? 0 : 1;
             if (stackIn_524_0 != 1) {
             }
@@ -1878,8 +1878,8 @@ public final class wizardrun extends GameShell {
           SoftwareRasterizer.fillRect(5 + (-(GameGraphicsResources.wizardFont2.stringWidth(bb.field_j) / 2) + 320 - 16), -11 - GameGraphicsResources.wizardFont2.field_M + var4_intLifetime1, GameGraphicsResources.wizardFont2.stringWidth(bb.field_j) + 32 - 10, -10 + hj.wizardFont.field_M + 16, 13158);
           CacheEntry.a(pd.frameSprites, -16 - GameGraphicsResources.wizardFont2.stringWidth(bb.field_j) / 2 + 320, (byte) -110, 16 + hj.wizardFont.field_M, 32 + GameGraphicsResources.wizardFont2.stringWidth(bb.field_j), var4_intLifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
           this.drawOutlinedText(var4_intLifetime1, bb.field_j, 16777215, -57, 319);
-          if (qh.field_l == 0 &&
-            qh.field_g >= 0) {
+          if (GridActor.field_l == 0 &&
+            GridActor.field_g >= 0) {
             var5Lifetime1 = 64 + var4_intLifetime1;
             if (0 == ql.field_c &&
               ef.field_F != bb.field_j) {
@@ -1897,9 +1897,9 @@ public final class wizardrun extends GameShell {
               var6Lifetime1Lifetime1 = 500;
               SoftwareRasterizer.fillRect(304 - var6Lifetime1Lifetime1 / 2 + 5, -GameGraphicsResources.wizardFont2.field_M + (var5Lifetime1 - 16 + 5), -10 + var6Lifetime1Lifetime1 + 32, 96 + (hj.wizardFont.field_M - 10), 13158);
               CacheEntry.a(pd.frameSprites, -16 + (-(var6Lifetime1Lifetime1 / 2) + 320), (byte) -110, hj.wizardFont.field_M + 96, var6Lifetime1Lifetime1 + 32, -16 + (var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M));
-              GameGraphicsResources.wizardFont2.a(fa.field_d + " " + MouseWheelInput.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 + (-16 + var5Lifetime1 - (-4 - (-GameGraphicsResources.wizardFont2.field_M - 1))), var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
-              GameGraphicsResources.wizardFont2.a(fa.field_d + " " + MouseWheelInput.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 - GameGraphicsResources.wizardFont2.field_M + 4 + (var5Lifetime1 - 16) - 1, var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
-              GameGraphicsResources.wizardFont2.a(fa.field_d + " " + MouseWheelInput.field_f, 320 - var6Lifetime1Lifetime1 / 2, -16 - GameGraphicsResources.wizardFont2.field_M + 4 + (var5Lifetime1 + 5), var6Lifetime1Lifetime1, 480, 16777215, -1, 1, 0, GameGraphicsResources.wizardFont2.field_M);
+              GameGraphicsResources.wizardFont2.a(BrowserCookieHelpers.field_d + " " + MouseWheelInput.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 + (-16 + var5Lifetime1 - (-4 - (-GameGraphicsResources.wizardFont2.field_M - 1))), var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
+              GameGraphicsResources.wizardFont2.a(BrowserCookieHelpers.field_d + " " + MouseWheelInput.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 - GameGraphicsResources.wizardFont2.field_M + 4 + (var5Lifetime1 - 16) - 1, var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
+              GameGraphicsResources.wizardFont2.a(BrowserCookieHelpers.field_d + " " + MouseWheelInput.field_f, 320 - var6Lifetime1Lifetime1 / 2, -16 - GameGraphicsResources.wizardFont2.field_M + 4 + (var5Lifetime1 + 5), var6Lifetime1Lifetime1, 480, 16777215, -1, 1, 0, GameGraphicsResources.wizardFont2.field_M);
               var5Lifetime1 += 64;
             }
             if (2 == ql.field_c) {
@@ -1921,9 +1921,9 @@ public final class wizardrun extends GameShell {
                 SoftwareRasterizer.fillRect(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16 + 5, -10 + (32 + var6Lifetime1Lifetime2), 128 + (hj.wizardFont.field_M - 10), 13158);
                 CacheEntry.a(pd.frameSprites, 304 - var6Lifetime1Lifetime2 / 2, (byte) -110, hj.wizardFont.field_M + 128, 32 + var6Lifetime1Lifetime2, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16);
                 var28 = DiskCacheWorker.field_h + " " + vl.field_a + " " + ld.field_a;
-                a.font12.a(var28, 32, -20 + var5Lifetime1, 575, 48, 0, 0, 1, 1, 14);
-                a.font12.a(var28, 32, -20 + var5Lifetime1 - 1, 576, 48, 0, 0, 1, 1, 14);
-                a.font12.a(var28, 32, var5Lifetime1 - 20, 576, 48, 16777215, -1, 1, 1, 14);
+                FlatTriangleRasterizer.font12.a(var28, 32, -20 + var5Lifetime1, 575, 48, 0, 0, 1, 1, 14);
+                FlatTriangleRasterizer.font12.a(var28, 32, -20 + var5Lifetime1 - 1, 576, 48, 0, 0, 1, 1, 14);
+                FlatTriangleRasterizer.font12.a(var28, 32, var5Lifetime1 - 20, 576, 48, 16777215, -1, 1, 1, 14);
                 var5Lifetime1 += 48;
               }
               GameGraphicsResources.gemSprites[0].drawTransparent(222, -20 + var5Lifetime1);
@@ -2004,7 +2004,7 @@ public final class wizardrun extends GameShell {
               var5Lifetime1 += 32;
               this.drawOutlinedText(var5Lifetime1, ql.field_a, 16777215, 78, 319);
               var5Lifetime1 += 32;
-              this.drawOutlinedText(var5Lifetime1, ug.field_P, 16777215, 95, 319);
+              this.drawOutlinedText(var5Lifetime1, RadialSelectorWidget.field_P, 16777215, 95, 319);
               var5Lifetime1 += 32;
             }
             var5Lifetime1 += 16;
@@ -2016,7 +2016,7 @@ public final class wizardrun extends GameShell {
           BufferedSocket.field_a = var3Lifetime1;
         }
         if (GameApplet.field_e != null) {
-          GameApplet.field_e.c(40);
+          GameApplet.field_e.drawMenuItems(40);
         }
         if (1 == sf.field_h ||
           sf.field_h == 2 ||
@@ -2030,14 +2030,14 @@ public final class wizardrun extends GameShell {
               (!(pg.field_n >= 88)) &&
               (!(fi.field_B < 436))) {
               var4_intLifetime2 = 16777215;
-              if ((sh.field_c == 1 ||
+              if ((BrowserUrlLauncher.field_c == 1 ||
                 BufferedSocket.field_p[84]) && pa.field_c < 32) {
                 pa.field_c = 32;
               }
             }
           } else {
             var4_intLifetime2 = 16777215;
-            if ((sh.field_c == 1 ||
+            if ((BrowserUrlLauncher.field_c == 1 ||
               BufferedSocket.field_p[84]) && pa.field_c < 32) {
               pa.field_c = 32;
             }
@@ -2055,7 +2055,7 @@ public final class wizardrun extends GameShell {
               !(pg.field_n >= (GameGraphicsResources.wizardFont2.stringWidth(var31) + 32 + var4_intLifetime2Lifetime1)) &&
               !(436 > fi.field_B) &&
               this.field_N == -1) {
-              if ((sh.field_c != 0 ||
+              if ((BrowserUrlLauncher.field_c != 0 ||
                 BufferedSocket.field_p[84]) &&
                 0 == pa.field_c) {
                 DualLinkDeque.field_i = 3;
@@ -2084,7 +2084,7 @@ public final class wizardrun extends GameShell {
                 !(pg.field_n < var4_intLifetime2Lifetime2) &&
                 !(pg.field_n >= var6Lifetime2 + var4_intLifetime2Lifetime2) &&
                 !(fi.field_B < 436)) {
-                if (sh.field_c != 0 ||
+                if (BrowserUrlLauncher.field_c != 0 ||
                   BufferedSocket.field_p[84]) {
                   DiskCacheWorker.field_c = var5Lifetime2Lifetime1;
                 }
@@ -2104,7 +2104,7 @@ public final class wizardrun extends GameShell {
               !(pg.field_n >= 264) &&
               !(fi.field_B < 436) &&
               -1 == this.field_N) {
-              if (sh.field_c != 0 ||
+              if (BrowserUrlLauncher.field_c != 0 ||
                 BufferedSocket.field_p[84]) {
                 SocketJs5Transport.a(sf.field_h, sf.field_h, -128);
               }
@@ -2121,7 +2121,7 @@ public final class wizardrun extends GameShell {
         }
         var3Lifetime2 = 8 / ((param0 + 43) / 50);
         if (sf.field_h == 6) {
-          var32 = a.font12;
+          var32 = FlatTriangleRasterizer.font12;
           var5Lifetime3 = 180 + var32.field_M;
           var6Lifetime3 = 4 + (var32.field_B + var32.field_q);
           SoftwareRasterizer.fillRectangleBlended(40, 170, 560, 20 + (120 + 5 * var6Lifetime3), 0, 192);
@@ -2129,7 +2129,7 @@ public final class wizardrun extends GameShell {
           var32.drawStringCentered(vg.field_U, 320, var5Lifetime3, 16777215, -1);
           stackIn_657_0 = var32;
           stackIn_658_1 = (0 == qf.field_l) ? false : true;
-          stackIn_661_2 = (ke.field_u.f(8192)) ? false : true;
+          stackIn_661_2 = (ke.field_u.isEmpty(8192)) ? false : true;
           stackIn_664_3 = (DiskCacheStore.field_f == 0) ? false : true;
           ((MonochromeBitmapFont) (Object) stackIn_657_0).drawStringCentered(MusicPatch.a(stackIn_658_1, stackIn_661_2, stackIn_664_3, 26505), 320, var5Lifetime3 + var6Lifetime3, 16777215, -1);
           if (this.a(var5Lifetime3 + 4 * var6Lifetime3, 320, 65535, DiskCacheWorker.field_d, 1)) {
@@ -2138,7 +2138,7 @@ public final class wizardrun extends GameShell {
           stackIn_668_1 = (qf.field_l == 0) ? false : true;
           stackIn_670_2 = 2;
           stackIn_671_3 = (DiskCacheStore.field_f == 0) ? false : true;
-          stackIn_674_4 = (ke.field_u.f(8192)) ? false : true;
+          stackIn_674_4 = (ke.field_u.isEmpty(8192)) ? false : true;
           ((MonochromeBitmapFont) (Object) stackIn_667_0).drawStringCentered(ka.a(stackIn_668_1, stackIn_670_2, stackIn_671_3, stackIn_674_4), 320, (int)(2.5 * (double)var6Lifetime3) + var5Lifetime3 + 60, 16777215, -1);
           discarded$5 = this.a(60 + (var6Lifetime3 / 2 + var6Lifetime3 * 5 + var5Lifetime3), 320, 65535, gf.field_X, 1);
           stackIn_676_0 = var32;
@@ -2158,14 +2158,14 @@ public final class wizardrun extends GameShell {
             } else {
               sf.field_h = ProgressDialog.field_Y;
               if (sf.field_h == 10) {
-                GameApplet.a(7775, ql.field_c + qh.field_l * 6 + DiskCacheStore.field_f * 64);
+                GameApplet.a(7775, ql.field_c + GridActor.field_l * 6 + DiskCacheStore.field_f * 64);
                 ic.field_a = ic.field_a + (DiskCacheStore.field_f << 6);
                 me.field_f = me.field_f + (-6 + ql.field_c);
-                wg.field_b = wg.field_b - (6 * qh.field_l + 1);
+                wg.field_b = wg.field_b - (6 * GridActor.field_l + 1);
                 stackIn_690_1 = !(ArchiveProvider.field_a <= 0);
                 this.field_J = stackIn_690_1;
                 DiskCacheStore.field_f = 0;
-                qh.field_l = -1;
+                GridActor.field_l = -1;
                 ql.field_c = 6;
                 sf.field_h = 2;
                 if (qf.field_l > 0) {
@@ -2199,7 +2199,7 @@ public final class wizardrun extends GameShell {
             !(pg.field_n < 0) &&
             !(88 <= pg.field_n) &&
             !(436 > fi.field_B)) {
-            if (sh.field_c == 1 ||
+            if (BrowserUrlLauncher.field_c == 1 ||
               BufferedSocket.field_p[84]) {
               TextButton.field_D = true;
             }
@@ -2207,7 +2207,7 @@ public final class wizardrun extends GameShell {
           }
           this.drawBorderedText(-12926, var4, var5Lifetime4, 44, 458 + GameGraphicsResources.wizardFont2.field_M / 4);
         }
-        var33_ref = (ra) (uc.field_b.b((byte) 87));
+        var33_ref = (ra) (uc.field_b.first((byte) 87));
         if (var33_ref != null) {
           var6Lifetime4 = this.field_M;
           if (80 > var6Lifetime4) {
@@ -2224,7 +2224,7 @@ public final class wizardrun extends GameShell {
           FullscreenFocusCanvas.field_a[var33_ref.field_n].drawScaled(8, var5Lifetime5, 32, 32);
           GameGraphicsResources.wizardFont2.drawString(SpriteState.field_t[var33_ref.field_n], 48, GameGraphicsResources.wizardFont2.field_M + var5Lifetime5, 16776960, -1);
         }
-        if (!oa.a(-25231)) {
+        if (!StringPaddingHelpers.a(-25231)) {
           if (dg.b(70)) {
             rl.a(dh.a(255), false);
           }
@@ -2236,7 +2236,7 @@ public final class wizardrun extends GameShell {
         if (ke.field_w) {
           GameGraphicsResources.wizardFont2.drawStringCentered("DEBUG PAUSE ON: PRESS 'V' TO CONTINUE", 320, 460, 16711680, 0);
         }
-        fc.a((byte) 80, 0, var19, 0);
+        DateFormattingHelpers.a((byte) 80, 0, var19, 0);
         return;
     }
 
@@ -2251,7 +2251,7 @@ public final class wizardrun extends GameShell {
         SingleChildWidget.soundArchive = BufferedRandomAccessFile.a(-117, 3);
         jl.bossSoundArchive = BufferedRandomAccessFile.a(-118, 4);
         int var2 = -60 / ((param0 - 39) / 38);
-        eg.field_u = BufferedRandomAccessFile.a(-106, 6);
+        PlatformActor.field_u = BufferedRandomAccessFile.a(-106, 6);
         TickClock.field_b = BufferedRandomAccessFile.a(-90, 5);
         bc.field_a = BufferedRandomAccessFile.a(84, 7);
         ol.a(bb.field_h, TickClock.field_c, (byte) 109);
@@ -2261,9 +2261,9 @@ public final class wizardrun extends GameShell {
         param1 = param1 & 8191;
         int var2 = 79 / ((15 - param0) / 52);
         if (param1 < 4096) {
-          return 2048 > param1 ? sb.field_b[2048 - param1] : -sb.field_b[param1 - 2048];
+          return 2048 > param1 ? Base37Codec.field_b[2048 - param1] : -Base37Codec.field_b[param1 - 2048];
         }
-        return param1 < 6144 ? -sb.field_b[6144 - param1] : sb.field_b[param1 - 6144];
+        return param1 < 6144 ? -Base37Codec.field_b[6144 - param1] : Base37Codec.field_b[param1 - 6144];
     }
 
     private final boolean a(int param0, int param1, int param2, String param3, int param4) {
@@ -2293,7 +2293,7 @@ public final class wizardrun extends GameShell {
           if (param2 != 16777215) {
             return false;
           }
-          if (sh.field_c == 0) {
+          if (BrowserUrlLauncher.field_c == 0) {
             return false;
           }
           return true;
@@ -2307,7 +2307,7 @@ public final class wizardrun extends GameShell {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -2320,14 +2320,14 @@ public final class wizardrun extends GameShell {
           int incrementValue$3 = 0;
           int fieldTemp$5 = 0;
           int fieldTemp$6 = 0;
-          ob dupTemp$7 = null;
-          ob dupTemp$8 = null;
+          GridPoint dupTemp$7 = null;
+          GridPoint dupTemp$8 = null;
           int fieldTemp$9 = 0;
           int fieldTemp$10 = 0;
           int fieldTemp$11 = 0;
           int fieldTemp$12 = 0;
-          ob dupTemp$13 = null;
-          ob dupTemp$14 = null;
+          GridPoint dupTemp$13 = null;
+          GridPoint dupTemp$14 = null;
           int fieldTemp$15 = 0;
           int fieldTemp$16 = 0;
           int fieldTemp$17 = 0;
@@ -2337,8 +2337,8 @@ public final class wizardrun extends GameShell {
           int fieldTemp$21 = 0;
           int fieldTemp$22 = 0;
           int fieldTemp$23 = 0;
-          ob dupTemp$24 = null;
-          ob dupTemp$25 = null;
+          GridPoint dupTemp$24 = null;
+          GridPoint dupTemp$25 = null;
           int fieldTemp$26 = 0;
           MonochromeBitmapFont stackIn_30_0 = null;
           boolean stackIn_31_1 = false;
@@ -2371,7 +2371,7 @@ public final class wizardrun extends GameShell {
           int stackIn_855_1 = 0;
           Throwable decompiledCaughtException = null;
           int var2 = 0;
-          ob var2_ref_ob = null;
+          GridPoint var2_ref_ob = null;
           int var3 = 0;
           int var4 = 0;
           byte[] var4_ref_byte__ = null;
@@ -2380,12 +2380,12 @@ public final class wizardrun extends GameShell {
           Exception var6 = null;
           int var7 = 0;
           int var8 = 0;
-          ob var9 = null;
-          ob var10 = null;
+          GridPoint var9 = null;
+          GridPoint var10 = null;
           MonochromeBitmapFont var11 = null;
           byte[] var12 = null;
-          ob var13 = null;
-          ob var14 = null;
+          GridPoint var13 = null;
+          GridPoint var14 = null;
           byte[] var15 = null;
           int stackIn_113_0Lifetime1;
           int stackIn_113_1Lifetime1;
@@ -2421,13 +2421,13 @@ public final class wizardrun extends GameShell {
           }
           if (pg.field_n != this.field_K ||
             ~fi.field_B != ~this.field_S ||
-            sh.field_c == 1) {
+            BrowserUrlLauncher.field_c == 1) {
             this.field_K = pg.field_n;
             this.field_S = fi.field_B;
             this.field_N = -1;
           }
           if (6 == sf.field_h) {
-            var11 = a.font12;
+            var11 = FlatTriangleRasterizer.font12;
             var3 = 180 + var11.field_M;
             var4 = 4 + (var11.field_B + var11.field_q);
             var6_int = 320;
@@ -2452,8 +2452,8 @@ public final class wizardrun extends GameShell {
               w.field_c == 1) {
               RasterSnapshot.field_k = 0;
               qf.field_l = 0;
-              ke.field_u.a(false);
-              ie.field_l.a(false);
+              ke.field_u.clear(false);
+              ie.field_l.clear(false);
               BufferedSocket.field_a = -350;
               sf.field_h = 9;
               TextButton.field_A = 0;
@@ -2524,14 +2524,14 @@ public final class wizardrun extends GameShell {
             if (BufferedSocket.field_a >= 240) {
               BufferedSocket.field_a = BufferedSocket.field_a - 8;
               if (BufferedSocket.field_a < 240) {
-                if (qh.field_l == 0 &&
+                if (GridActor.field_l == 0 &&
                   !pg.field_q &&
-                  qh.field_g >= 0) {
+                  GridActor.field_g >= 0) {
                   BufferedSocket.field_a = 240;
                 }
                 if (BufferedSocket.field_p[84] ||
                   BufferedSocket.field_p[13] ||
-                  sh.field_c != 0) {
+                  BrowserUrlLauncher.field_c != 0) {
                   BufferedSocket.field_a = -10;
                 }
               }
@@ -2540,12 +2540,12 @@ public final class wizardrun extends GameShell {
                 BufferedSocket.field_a = BufferedSocket.field_a - 8;
               }
             }
-            if (uc.field_b.b((byte) 55) != null) {
+            if (uc.field_b.first((byte) 55) != null) {
               fieldTemp$0 = this.field_M + 1;
               this.field_M = this.field_M + 1;
               if (335 == fieldTemp$0) {
                 this.field_M = 0;
-                uc.field_b.b(-40);
+                uc.field_b.removeFirst(-40);
               }
             }
             if (this.field_I > 0) {
@@ -2641,7 +2641,7 @@ public final class wizardrun extends GameShell {
                 if (w.field_c == 1) {
                   var2 = 1;
                 }
-                if (qh.field_g >= 0) {
+                if (GridActor.field_g >= 0) {
                   regionExit1: {
                     if (var2 != 0) {
                       BufferedRandomAccessFile.field_h = -1;
@@ -2664,7 +2664,7 @@ public final class wizardrun extends GameShell {
                       if ((stackIn_138_0Lifetime1 == stackIn_138_1Lifetime1 ||
                         3 == BufferedRandomAccessFile.field_h) &&
                         pg.field_n >= 144) {
-                        if (sh.field_c == 1) {
+                        if (BrowserUrlLauncher.field_c == 1) {
                           this.a(-123, 2, BufferedRandomAccessFile.field_h);
                           break regionExit1;
                         }
@@ -2678,7 +2678,7 @@ public final class wizardrun extends GameShell {
                     }
                     if ((2 == BufferedRandomAccessFile.field_h ||
                       BufferedRandomAccessFile.field_h == 3) && (pg.field_n > 144 &&
-                      sh.field_c == 1)) {
+                      BrowserUrlLauncher.field_c == 1)) {
                       this.a(-114, 2, BufferedRandomAccessFile.field_h);
                     }
                   }
@@ -2733,7 +2733,7 @@ public final class wizardrun extends GameShell {
                 if (this.field_P &&
                   DialogLayer.field_K != 1) {
                   this.field_P = false;
-                  GameApplet.field_e = new ph();
+                  GameApplet.field_e = new GameMenu();
                   rf.field_b = 0;
                   rc.field_a = 0;
                   return;
@@ -2748,7 +2748,7 @@ public final class wizardrun extends GameShell {
             }
             if (LoginChoicePanel.field_E != null &&
               LoginChoicePanel.field_E.field_b) {
-              WeightedLruCache.a((byte) 60);
+              WeightedLruCache.exitFullscreen((byte) 60);
             }
             var2 = 0;
             while (true) {
@@ -2786,10 +2786,10 @@ public final class wizardrun extends GameShell {
                       var5++;
                       var4_ref_byte__[incrementValue$3] = (byte)tc.field_l.field_a[var6_int];
                     }
-                    MidiPcmStream.field_T[qh.field_l][ql.field_c] = var15;
+                    MidiPcmStream.field_T[GridActor.field_l][ql.field_c] = var15;
                     try {
                       var5 = 0;
-                      AudioServiceThread.a(var4_ref_byte__, var15.length, true, new File("level" + qh.field_l + ql.field_c + ".dat"));
+                      AudioServiceThread.a(var4_ref_byte__, var15.length, true, new File("level" + GridActor.field_l + ql.field_c + ".dat"));
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var6 = (Exception) (Object) decompiledCaughtException;
@@ -2868,7 +2868,7 @@ public final class wizardrun extends GameShell {
                     BufferedSocket.field_c = BufferedSocket.field_c + 1;
                     ql.field_c = ql.field_c + 1;
                     if (ql.field_c == 5) {
-                      ga.field_e = fb.field_a;
+                      ga.field_e = SettingsCookieReader.field_a;
                       if (tl.field_e) {
                         SingleChildWidget.field_D.a(true, -101, ga.field_e);
                       }
@@ -2876,18 +2876,18 @@ public final class wizardrun extends GameShell {
                     if (ql.field_c >= 6) {
                       BufferedSocket.field_c = BufferedSocket.field_c - ql.field_c;
                       wg.field_b = wg.field_b + 6;
-                      qh.field_l = qh.field_l + 1;
+                      GridActor.field_l = GridActor.field_l + 1;
                       ql.field_c = 0;
-                      if (5 >= qh.field_l) {
+                      if (5 >= GridActor.field_l) {
                         MidiNote.a((byte) -75);
                       } else {
-                        wg.field_b = wg.field_b - qh.field_l * 6;
+                        wg.field_b = wg.field_b - GridActor.field_l * 6;
                         me.field_f = me.field_f - 30;
-                        qh.field_l = 5;
+                        GridActor.field_l = 5;
                       }
                     }
                     ni.b(7530);
-                    if (2 == qh.field_l && (!(ArchiveProvider.field_a > 0) ||
+                    if (2 == GridActor.field_l && (!(ArchiveProvider.field_a > 0) ||
                       e.a(param0 - 751))) {
                       this.s(208);
                     }
@@ -2902,13 +2902,13 @@ public final class wizardrun extends GameShell {
                   }
                   if (ql.field_c < 0) {
                     ql.field_c = 5;
-                    qh.field_l = qh.field_l - 1;
-                    if (qh.field_l < 0) {
-                      qh.field_l = 0;
+                    GridActor.field_l = GridActor.field_l - 1;
+                    if (GridActor.field_l < 0) {
+                      GridActor.field_l = 0;
                     } else {
                       MidiNote.a((byte) -118);
                     }
-                    ga.field_e = fb.field_a;
+                    ga.field_e = SettingsCookieReader.field_a;
                     if (tl.field_e) {
                       SingleChildWidget.field_D.a(true, param0 - 740, ga.field_e);
                     }
@@ -2944,7 +2944,7 @@ public final class wizardrun extends GameShell {
                     if (null == GameApplet.field_e) {
                       continue;
                     }
-                    GameApplet.field_e.b(0);
+                    GameApplet.field_e.updateKeyboardSelection(0);
                     continue;
                   }
                   if (GameApplet.field_e.field_a == 2) {
@@ -2956,7 +2956,7 @@ public final class wizardrun extends GameShell {
                   this.a(93, 3, 3);
                 }
                 if (GameApplet.field_e != null) {
-                  GameApplet.field_e.a(param0 ^ -642);
+                  GameApplet.field_e.updatePointerSelection(param0 ^ -642);
                 }
                 if (null != GameApplet.field_e) {
                   return;
@@ -2982,7 +2982,7 @@ public final class wizardrun extends GameShell {
                     return;
                   }
                   if (MidiNote.field_r == 96 &&
-                    sh.field_c == 0) {
+                    BrowserUrlLauncher.field_c == 0) {
                     if (2 == sf.field_h) {
                       if (!e.a(param0 - 755)) {
                         this.field_N = this.field_N - 1;
@@ -3008,9 +3008,9 @@ public final class wizardrun extends GameShell {
                       }
                     }
                     if (sf.field_h == 11 &&
-                      qh.field_l > 0 &&
+                      GridActor.field_l > 0 &&
                       FadingDialog.field_I < 5) {
-                      qh.field_l = qh.field_l - 1;
+                      GridActor.field_l = GridActor.field_l - 1;
                       wg.field_b = wg.field_b - 6;
                     }
                     if (sf.field_h == 1) {
@@ -3018,7 +3018,7 @@ public final class wizardrun extends GameShell {
                     }
                   }
                   if (97 == MidiNote.field_r &&
-                    0 == sh.field_c) {
+                    0 == BrowserUrlLauncher.field_c) {
                     if (sf.field_h == 2) {
                       if (e.a(param0 - 727)) {
                         this.field_N = this.field_N + 1;
@@ -3044,9 +3044,9 @@ public final class wizardrun extends GameShell {
                       }
                     }
                     if (11 == sf.field_h &&
-                      5 > qh.field_l &&
+                      5 > GridActor.field_l &&
                       5 > FadingDialog.field_I) {
-                      qh.field_l = qh.field_l + 1;
+                      GridActor.field_l = GridActor.field_l + 1;
                       me.field_f = me.field_f - 6;
                     }
                     if (sf.field_h == 1) {
@@ -3105,22 +3105,22 @@ public final class wizardrun extends GameShell {
                     pa.field_c = 32;
                     continue;
                   }
-                  if (qh.field_l > TextButton.field_A) {
+                  if (GridActor.field_l > TextButton.field_A) {
                     continue;
                   }
                   if (FadingDialog.field_I >= 5) {
                     continue;
                   }
-                  BufferedSocket.field_c = BufferedSocket.field_c + qh.field_g;
-                  qh.field_g = 0;
+                  BufferedSocket.field_c = BufferedSocket.field_c + GridActor.field_g;
+                  GridActor.field_g = 0;
                   AccountCreationForm.field_T = 0;
                   WidgetTheme.field_k = 0;
-                  if (0 >= qh.field_l) {
+                  if (0 >= GridActor.field_l) {
                     DelegatingCanvas.field_b = false;
                   } else {
                     DelegatingCanvas.field_b = true;
                     me.field_f = me.field_f + 5;
-                    qh.field_g = 5;
+                    GridActor.field_g = 5;
                   }
                   FadingDialog.field_I = 5;
                   if ((4 & IsaacRandom.field_a) > 0) {
@@ -3149,39 +3149,39 @@ public final class wizardrun extends GameShell {
                 if (FadingDialog.field_I == 255) {
                   DualLinkDeque.field_g = null;
                   WidgetTheme.field_k = 0;
-                  if (TextButton.field_A < qh.field_l &&
-                    qh.field_l > 1) {
-                    wg.field_b = wg.field_b - 3 * qh.field_l;
-                    BufferedSocket.field_c = BufferedSocket.field_c - 3 * qh.field_l;
-                    qh.field_l = 0;
+                  if (TextButton.field_A < GridActor.field_l &&
+                    GridActor.field_l > 1) {
+                    wg.field_b = wg.field_b - 3 * GridActor.field_l;
+                    BufferedSocket.field_c = BufferedSocket.field_c - 3 * GridActor.field_l;
+                    GridActor.field_l = 0;
                   }
                   DialogLayer.field_K = 2;
-                  fa.field_a = null;
+                  BrowserCookieHelpers.field_a = null;
                   BufferedSocket.field_c = BufferedSocket.field_c - ql.field_c;
                   ql.field_c = 0;
                   MidiNote.a((byte) -43);
                   ni.b(param0 ^ 8170);
-                  if (qh.field_l == 0 &&
+                  if (GridActor.field_l == 0 &&
                     ql.field_c == 0) {
                     BufferedSocket.field_a = 580;
                     bb.field_j = ef.field_F;
                   } else {
                     BufferedSocket.field_a = 580;
-                    bb.field_j = wg.field_f + (1 + qh.field_l) + eh.field_i + (1 + ql.field_c);
+                    bb.field_j = wg.field_f + (1 + GridActor.field_l) + eh.field_i + (1 + ql.field_c);
                   }
-                  var9 = new ob();
+                  var9 = new GridPoint();
                   var13 = var9;
-                  var13.field_b = 2;
-                  if (4 == qh.field_l &&
+                  var13.column = 2;
+                  if (4 == GridActor.field_l &&
                     ql.field_c == 5) {
-                    var13.field_b = var13.field_b + 1;
+                    var13.column = var13.column + 1;
                   }
-                  var9.field_a = 2;
-                  ii.field_e[WidgetTheme.field_k].a(9147, 0, var13);
+                  var9.row = 2;
+                  ii.field_e[WidgetTheme.field_k].initialize(9147, 0, var13);
                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
                   vj.c(param0 - 762);
                   GameApplet.field_g = false;
-                  if (qh.field_l == 0) {
+                  if (GridActor.field_l == 0) {
                     this.field_Q = 0;
                     pg.field_q = true;
                     this.field_R = 1;
@@ -3207,15 +3207,15 @@ public final class wizardrun extends GameShell {
               }
               if (2 == DialogLayer.field_K) {
                 if (((ql.field_c != 0 ||
-                  qh.field_l != 0) &&
+                  GridActor.field_l != 0) &&
                   DiskCacheStore.field_f > hg.field_a ||
                   ql.field_c == 0 &&
-                  qh.field_l == 0 &&
-                  !(qh.field_g >= 5) &&
-                  !(qh.field_g <= 0)) && !pg.field_q) {
-                  qh.field_g = qh.field_g + 1;
+                  GridActor.field_l == 0 &&
+                  !(GridActor.field_g >= 5) &&
+                  !(GridActor.field_g <= 0)) && !pg.field_q) {
+                  GridActor.field_g = GridActor.field_g + 1;
                   if (ql.field_c != 0 ||
-                    qh.field_l != 0) {
+                    GridActor.field_l != 0) {
                     if (hg.field_a >= 10000) {
                       hg.field_a = hg.field_a + 10000;
                     }
@@ -3235,38 +3235,38 @@ public final class wizardrun extends GameShell {
                   ic.field_a = ic.field_a + 1;
                   for (var2 = 0; var2 < 5; var2++) {
                     fi.field_x = 0;
-                    ii.field_e[WidgetTheme.field_k].a(9147, 1, ii.field_e[0].field_i);
-                    ii.field_e[WidgetTheme.field_k].field_f.a(-92, ii.field_e[0].field_f);
-                    ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                    ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
+                    ii.field_e[WidgetTheme.field_k].tileOffset.set(-92, ii.field_e[0].tileOffset);
+                    ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                     ii.field_e[WidgetTheme.field_k].field_h = -1;
-                    dupTemp$7 = ii.field_e[WidgetTheme.field_k].field_f;
-                    dupTemp$7.field_b = dupTemp$7.field_b + 80;
-                    ii.field_e[WidgetTheme.field_k].field_e = var2 * 20;
+                    dupTemp$7 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                    dupTemp$7.column = dupTemp$7.column + 80;
+                    ii.field_e[WidgetTheme.field_k].verticalVelocity = var2 * 20;
                     fi.field_x = 0;
                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                    ii.field_e[WidgetTheme.field_k].a(param0 + 8507, 1, ii.field_e[0].field_i);
-                    ii.field_e[WidgetTheme.field_k].field_f.a(param0 - 746, ii.field_e[0].field_f);
-                    ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                    ii.field_e[WidgetTheme.field_k].initialize(param0 + 8507, 1, ii.field_e[0].tilePosition);
+                    ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 - 746, ii.field_e[0].tileOffset);
+                    ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                     ii.field_e[WidgetTheme.field_k].field_h = 1;
-                    dupTemp$8 = ii.field_e[WidgetTheme.field_k].field_f;
-                    dupTemp$8.field_b = dupTemp$8.field_b + 80;
-                    ii.field_e[WidgetTheme.field_k].field_e = 20 * var2;
+                    dupTemp$8 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                    dupTemp$8.column = dupTemp$8.column + 80;
+                    ii.field_e[WidgetTheme.field_k].verticalVelocity = 20 * var2;
                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
                   }
                 }
                 if (!pg.field_q) {
                   var2 = 0;
                   for (var3 = 0; WidgetTheme.field_k > var3; var3++) {
-                    stackIn_540_0 = ii.field_e[var3].field_B;
+                    stackIn_540_0 = ii.field_e[var3].actorType;
                     stackIn_540_1 = 2;
                     if (stackIn_540_0 > stackIn_540_1) {
                       var2 = 1;
                     }
                   }
                   if (var2 == 0 &&
-                    !(0 > qh.field_g) &&
+                    !(0 > GridActor.field_g) &&
                     FadingDialog.field_I == 0) {
-                    if (5 == qh.field_l &&
+                    if (5 == GridActor.field_l &&
                       ql.field_c > 5) {
                       this.field_R = 11;
                       pg.field_q = true;
@@ -3300,7 +3300,7 @@ public final class wizardrun extends GameShell {
                     FadingDialog.field_I = 5;
                   }
                   if (BufferedSocket.field_p[39] &&
-                    5 > qh.field_l) {
+                    5 > GridActor.field_l) {
                     pg.field_q = false;
                     FadingDialog.field_I = 5;
                     ql.field_c = 6;
@@ -3309,11 +3309,11 @@ public final class wizardrun extends GameShell {
                   if (!BufferedSocket.field_p[68]) {
                   }
                   if (BufferedSocket.field_p[56]) {
-                    if (qh.field_g > 50) {
-                      qh.field_g = 5;
+                    if (GridActor.field_g > 50) {
+                      GridActor.field_g = 5;
                       tc.field_j = true;
                     } else {
-                      qh.field_g = 100;
+                      GridActor.field_g = 100;
                       tc.field_j = true;
                     }
                   }
@@ -3322,9 +3322,9 @@ public final class wizardrun extends GameShell {
                     DiskCacheStore.field_f = (int)(Math.random() * 1000.0 + 500.0);
                   }
                 }
-                if (50 < qh.field_g &&
+                if (50 < GridActor.field_g &&
                   tc.field_j) {
-                  qh.field_g = 100;
+                  GridActor.field_g = 100;
                 }
                 if (0 < FadingDialog.field_I) {
                   FadingDialog.field_I = FadingDialog.field_I + 5;
@@ -3334,19 +3334,19 @@ public final class wizardrun extends GameShell {
                 }
                 if (pg.field_q) {
                   if (this.field_R == 11) {
-                    if (ii.field_e[0].field_i.field_a <= 2) {
-                      if (2 < ii.field_e[0].field_i.field_b) {
+                    if (ii.field_e[0].tilePosition.row <= 2) {
+                      if (2 < ii.field_e[0].tilePosition.column) {
                         sc.field_m.field_b = -1;
                       }
-                      if (ii.field_e[0].field_i.field_b < 2) {
+                      if (ii.field_e[0].tilePosition.column < 2) {
                         sc.field_m.field_b = 1;
                       }
                     } else {
                       sc.field_m.field_b = -1;
                     }
-                    ii.field_e[0].a((byte) -123, tc.field_l);
-                    if (ii.field_e[0].field_i.field_b == 2 &&
-                      2 == ii.field_e[0].field_i.field_a) {
+                    ii.field_e[0].updateActor((byte) -123, tc.field_l);
+                    if (ii.field_e[0].tilePosition.column == 2 &&
+                      2 == ii.field_e[0].tilePosition.row) {
                       this.field_R = 12;
                       this.field_Q = 0;
                       if (tl.field_e) {
@@ -3356,13 +3356,13 @@ public final class wizardrun extends GameShell {
                   }
                   if (this.field_R == 12) {
                     if (this.field_Q >= 90) {
-                      var10 = new ob();
+                      var10 = new GridPoint();
                       var2_ref_ob = var10;
-                      var2_ref_ob.field_b = 16 + (int)(4.0 * Math.random());
-                      var2_ref_ob.field_a = (int)(Math.random() * 4.0) + 11;
-                      ii.field_e[WidgetTheme.field_k].a(param0 + 8507, 20, var10);
-                      ii.field_e[WidgetTheme.field_k].field_f.field_b = (int)(Math.random() * 240.0);
-                      ii.field_e[WidgetTheme.field_k].field_f.field_a = (int)(Math.random() * 240.0);
+                      var2_ref_ob.column = 16 + (int)(4.0 * Math.random());
+                      var2_ref_ob.row = (int)(Math.random() * 4.0) + 11;
+                      ii.field_e[WidgetTheme.field_k].initialize(param0 + 8507, 20, var10);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.column = (int)(Math.random() * 240.0);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.row = (int)(Math.random() * 240.0);
                       ii.field_e[WidgetTheme.field_k].field_w = 4;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                     }
@@ -3414,29 +3414,29 @@ public final class wizardrun extends GameShell {
                   }
                   if (16 == this.field_R) {
                     if (this.field_Q == 75 &&
-                      qh.field_g > 0) {
+                      GridActor.field_g > 0) {
                       ic.field_a = ic.field_a - 64000;
                       BufferedSocket.field_c = BufferedSocket.field_c + 1;
-                      qh.field_g = qh.field_g - 1;
+                      GridActor.field_g = GridActor.field_g - 1;
                       DiskCacheStore.field_f = DiskCacheStore.field_f + 1000;
-                      var2 = qh.field_g % 5;
+                      var2 = GridActor.field_g % 5;
                       fi.field_x = 0;
-                      ii.field_e[WidgetTheme.field_k].a(9147, 1, ii.field_e[0].field_i);
-                      ii.field_e[WidgetTheme.field_k].field_f.a(-113, ii.field_e[0].field_f);
-                      ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-113, ii.field_e[0].tileOffset);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                       ii.field_e[WidgetTheme.field_k].field_h = -1;
-                      dupTemp$13 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$13.field_b = dupTemp$13.field_b + 790;
-                      ii.field_e[WidgetTheme.field_k].field_e = var2 * 20;
+                      dupTemp$13 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$13.column = dupTemp$13.column + 790;
+                      ii.field_e[WidgetTheme.field_k].verticalVelocity = var2 * 20;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       fi.field_x = 0;
-                      ii.field_e[WidgetTheme.field_k].a(9147, 1, ii.field_e[0].field_i);
-                      ii.field_e[WidgetTheme.field_k].field_f.a(-98, ii.field_e[0].field_f);
-                      ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-98, ii.field_e[0].tileOffset);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                       ii.field_e[WidgetTheme.field_k].field_h = 1;
-                      dupTemp$14 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$14.field_b = dupTemp$14.field_b + 790;
-                      ii.field_e[WidgetTheme.field_k].field_e = 20 * var2;
+                      dupTemp$14 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$14.column = dupTemp$14.column + 790;
+                      ii.field_e[WidgetTheme.field_k].verticalVelocity = 20 * var2;
                       this.field_Q = 70;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                     }
@@ -3451,12 +3451,12 @@ public final class wizardrun extends GameShell {
                     fieldTemp$16 = this.field_Q;
                     this.field_Q = this.field_Q + 1;
                     if (200 < fieldTemp$16) {
-                      BufferedSocket.field_c = BufferedSocket.field_c + (qh.field_g + 1);
+                      BufferedSocket.field_c = BufferedSocket.field_c + (GridActor.field_g + 1);
                       me.field_f = me.field_f - 36;
-                      ic.field_a = ic.field_a + (ql.field_c + 6 * qh.field_l);
-                      qh.field_g = -1;
+                      ic.field_a = ic.field_a + (ql.field_c + 6 * GridActor.field_l);
+                      GridActor.field_g = -1;
                       ql.field_c = 0;
-                      qh.field_l = 6;
+                      GridActor.field_l = 6;
                     }
                   }
                   if (this.field_R == 1) {
@@ -3532,27 +3532,27 @@ public final class wizardrun extends GameShell {
                       SingleChildWidget.field_D.a(true, param0 ^ -740, ga.field_e);
                     }
                     if (75 == this.field_Q &&
-                      qh.field_g < 5) {
+                      GridActor.field_g < 5) {
                       wg.field_b = wg.field_b - 1;
-                      qh.field_g = qh.field_g + 1;
+                      GridActor.field_g = GridActor.field_g + 1;
                       fi.field_x = 0;
-                      var2 = qh.field_g;
-                      ii.field_e[WidgetTheme.field_k].a(param0 ^ 8507, 1, ii.field_e[0].field_i);
-                      ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ -751, ii.field_e[0].field_f);
-                      ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                      var2 = GridActor.field_g;
+                      ii.field_e[WidgetTheme.field_k].initialize(param0 ^ 8507, 1, ii.field_e[0].tilePosition);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ -751, ii.field_e[0].tileOffset);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                       ii.field_e[WidgetTheme.field_k].field_h = -1;
-                      dupTemp$24 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$24.field_b = dupTemp$24.field_b + 40;
-                      ii.field_e[WidgetTheme.field_k].field_e = var2 % 3 * 20;
+                      dupTemp$24 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$24.column = dupTemp$24.column + 40;
+                      ii.field_e[WidgetTheme.field_k].verticalVelocity = var2 % 3 * 20;
                       fi.field_x = 0;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      ii.field_e[WidgetTheme.field_k].a(9147, 1, ii.field_e[0].field_i);
-                      ii.field_e[WidgetTheme.field_k].field_f.a(-124, ii.field_e[0].field_f);
-                      ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-124, ii.field_e[0].tileOffset);
+                      ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
                       ii.field_e[WidgetTheme.field_k].field_h = 1;
-                      dupTemp$25 = ii.field_e[WidgetTheme.field_k].field_f;
-                      dupTemp$25.field_b = dupTemp$25.field_b + 40;
-                      ii.field_e[WidgetTheme.field_k].field_e = 20 * (var2 % 3);
+                      dupTemp$25 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      dupTemp$25.column = dupTemp$25.column + 40;
+                      ii.field_e[WidgetTheme.field_k].verticalVelocity = 20 * (var2 % 3);
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       this.field_Q = 70;
                     }
@@ -3573,7 +3573,7 @@ public final class wizardrun extends GameShell {
                     stackIn_688_1 = ~var2;
                     if (stackIn_688_0 != stackIn_688_1 ||
                       !pg.field_q) {
-                      ii.field_e[var2].a((byte) -123, tc.field_l);
+                      ii.field_e[var2].updateActor((byte) -123, tc.field_l);
                     }
                   }
                 }
@@ -3585,14 +3585,14 @@ public final class wizardrun extends GameShell {
                     ql.field_c = ql.field_c + 1;
                     wg.field_b = wg.field_b + 1;
                     if (ql.field_c == 5 &&
-                      qh.field_l == 0 &&
+                      GridActor.field_l == 0 &&
                       !ol.field_e) {
                       ql.a(1, 254, 1);
                     }
                     fi.field_x = 0;
                     if (5 == ql.field_c) {
                       w.field_b = 0;
-                      ga.field_e = fb.field_a;
+                      ga.field_e = SettingsCookieReader.field_a;
                       if (tl.field_e) {
                         SingleChildWidget.field_D.a(true, -127, ga.field_e);
                       }
@@ -3600,70 +3600,70 @@ public final class wizardrun extends GameShell {
                     }
                     if (ql.field_c >= 6) {
                       if (!GameApplet.field_g) {
-                        if (qh.field_l == 0) {
+                        if (GridActor.field_l == 0) {
                           ql.a(1, 250, 5);
                         }
-                        if (1 == qh.field_l) {
+                        if (1 == GridActor.field_l) {
                           ql.a(1, 249, 6);
                         }
-                        if (qh.field_l == 2) {
+                        if (GridActor.field_l == 2) {
                           ql.a(1, 248, 7);
                         }
-                        if (qh.field_l == 3) {
+                        if (GridActor.field_l == 3) {
                           ql.a(1, 247, 8);
                         }
-                        if (qh.field_l == 4) {
+                        if (GridActor.field_l == 4) {
                           ql.a(1, 246, 9);
                         }
                       }
                       if (!DelegatingCanvas.field_b) {
-                        if (2 == qh.field_l) {
+                        if (2 == GridActor.field_l) {
                           ql.a(param0 ^ 641, 252, 3);
                         }
-                        if (qh.field_l == 4) {
+                        if (GridActor.field_l == 4) {
                           ql.a(1, 251, 4);
                         }
                       }
-                      if (qh.field_l == 0) {
+                      if (GridActor.field_l == 0) {
                         ql.a(1, 253, 2);
                       }
                       BufferedSocket.field_c = BufferedSocket.field_c - (ql.field_c - 6);
-                      qh.field_l = qh.field_l + 1;
+                      GridActor.field_l = GridActor.field_l + 1;
                       ql.field_c = 0;
-                      if (TextButton.field_A < qh.field_l) {
-                        ke.field_u.a(new dc(0, qh.field_l - 1, 0, 0, 0, 0), false);
-                        TextButton.field_A = qh.field_l;
+                      if (TextButton.field_A < GridActor.field_l) {
+                        ke.field_u.addLast(new dc(0, GridActor.field_l - 1, 0, 0, 0, 0), false);
+                        TextButton.field_A = GridActor.field_l;
                       }
-                      if (qh.field_l < 6) {
+                      if (GridActor.field_l < 6) {
                         MidiNote.a((byte) -71);
                       }
                     }
                     BufferedSocket.field_a = 580;
-                    bb.field_j = wg.field_f + (qh.field_l + 1) + eh.field_i + (1 + ql.field_c);
-                    if (-1 < qh.field_g) {
-                      if (qh.field_l < 6) {
+                    bb.field_j = wg.field_f + (GridActor.field_l + 1) + eh.field_i + (1 + ql.field_c);
+                    if (-1 < GridActor.field_g) {
+                      if (GridActor.field_l < 6) {
                         ni.b(7530);
                       }
-                      var14 = new ob();
-                      var14.field_a = 2;
-                      var14.field_b = 2;
-                      if (qh.field_l == 4 &&
+                      var14 = new GridPoint();
+                      var14.row = 2;
+                      var14.column = 2;
+                      if (GridActor.field_l == 4 &&
                         ql.field_c == 5) {
-                        var14.field_b = var14.field_b + 1;
+                        var14.column = var14.column + 1;
                       }
-                      ii.field_e[WidgetTheme.field_k].a(9147, 0, var14);
+                      ii.field_e[WidgetTheme.field_k].initialize(9147, 0, var14);
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       vj.c(69);
                       NanoTickClock.field_n = 0;
                       DiskCacheWorker.field_e = 100;
                     }
-                    if (qh.field_l == 2 && (!(0 < ArchiveProvider.field_a) ||
+                    if (GridActor.field_l == 2 && (!(0 < ArchiveProvider.field_a) ||
                       e.a(param0 ^ -766))) {
                       this.s(208);
                     }
                   }
                 }
-                if (qh.field_g < 0 &&
+                if (GridActor.field_g < 0 &&
                   BufferedSocket.field_a < -350) {
                   FadingDialog.field_I = 100;
                   this.s(208);
@@ -3672,7 +3672,7 @@ public final class wizardrun extends GameShell {
                 sc.field_m.field_f = false;
                 sc.field_m.field_b = 0;
                 if (pg.field_q &&
-                  0 == qh.field_l &&
+                  0 == GridActor.field_l &&
                   ql.field_c == 0) {
                   while (true) {
                     if (ae.a(125)) {
@@ -3688,9 +3688,9 @@ public final class wizardrun extends GameShell {
                       if (tl.field_e) {
                         SingleChildWidget.field_D.a(true, -93, ga.field_e);
                       }
-                      me.field_f = me.field_f - qh.field_g;
+                      me.field_f = me.field_f - GridActor.field_g;
                       wg.field_b = wg.field_b - 5;
-                      qh.field_g = 5;
+                      GridActor.field_g = 5;
                       continue;
                     }
                     stackIn_759_0Lifetime1 = ~w.field_c;
@@ -3699,10 +3699,10 @@ public final class wizardrun extends GameShell {
                       break;
                     }
                     pg.field_q = false;
-                    me.field_f = me.field_f - qh.field_g;
+                    me.field_f = me.field_f - GridActor.field_g;
                     BufferedSocket.field_a = 580;
                     wg.field_b = wg.field_b - 5;
-                    qh.field_g = 5;
+                    GridActor.field_g = 5;
                     bb.field_j = cc.field_b;
                     if (!tl.field_e) {
                       break;
@@ -3803,35 +3803,35 @@ public final class wizardrun extends GameShell {
                     var2 = 0;
                     while (var2 < WidgetTheme.field_k) {
                       stackIn_855_0 = 2;
-                      stackIn_855_1 = ii.field_e[var2].field_B;
+                      stackIn_855_1 = ii.field_e[var2].actorType;
                       if (stackIn_855_0 < stackIn_855_1 &&
-                        ii.field_e[var2].field_B != 21 &&
-                        44 != ii.field_e[var2].field_B) {
+                        ii.field_e[var2].actorType != 21 &&
+                        44 != ii.field_e[var2].actorType) {
                         var3 = 1;
                       }
                       if (!(BufferedSocket.field_a > -350) ||
-                        !(0 <= qh.field_g)) {
-                        ii.field_e[var2].a((byte) -123, tc.field_l);
+                        !(0 <= GridActor.field_g)) {
+                        ii.field_e[var2].updateActor((byte) -123, tc.field_l);
                       }
                       var2++;
                     }
                     if (il.field_e) {
                       if (0 >= BufferedSocket.field_a) {
-                        ge.field_f = ge.field_f + 1;
+                        MenuController.field_f = MenuController.field_f + 1;
                       }
                       if (ql.field_c == 5 &&
-                        qh.field_l == 1 &&
+                        GridActor.field_l == 1 &&
                         ArchiveProvider.field_a <= 0 &&
-                        ge.field_f == 370) {
-                        ge.field_f = ge.field_f + 1;
+                        MenuController.field_f == 370) {
+                        MenuController.field_f = MenuController.field_f + 1;
                         bb.field_j = PcmResampler.field_d;
                         BufferedSocket.field_a = 580;
                       }
-                      if (375 < ge.field_f) {
+                      if (375 < MenuController.field_f) {
                         var4 = WidgetTheme.field_k;
                         for (var2 = 0; var4 > var2; var2++) {
                           stackIn_855_0Lifetime1 = 21;
-                          stackIn_855_1Lifetime1 = ii.field_e[var2].field_B;
+                          stackIn_855_1Lifetime1 = ii.field_e[var2].actorType;
                           if (stackIn_855_0Lifetime1 == stackIn_855_1Lifetime1) {
                             ii.field_e[var2].field_k = 1;
                           }
@@ -3850,12 +3850,12 @@ public final class wizardrun extends GameShell {
                         ii.field_e[var2].field_w = ii.field_e[WidgetTheme.field_k].field_w;
                         ii.field_e[var2].field_o = ii.field_e[WidgetTheme.field_k].field_o;
                         ii.field_e[var2].field_z = ii.field_e[WidgetTheme.field_k].field_z;
-                        ii.field_e[var2].field_n = ii.field_e[WidgetTheme.field_k].field_n;
-                        ii.field_e[var2].field_B = ii.field_e[WidgetTheme.field_k].field_B;
+                        ii.field_e[var2].animationFrame = ii.field_e[WidgetTheme.field_k].animationFrame;
+                        ii.field_e[var2].actorType = ii.field_e[WidgetTheme.field_k].actorType;
                         ii.field_e[var2].field_x = ii.field_e[WidgetTheme.field_k].field_x;
-                        ii.field_e[var2].field_e = ii.field_e[WidgetTheme.field_k].field_e;
-                        ii.field_e[var2].field_i.a(-116, ii.field_e[WidgetTheme.field_k].field_i);
-                        ii.field_e[var2].field_f.a(-89, ii.field_e[WidgetTheme.field_k].field_f);
+                        ii.field_e[var2].verticalVelocity = ii.field_e[WidgetTheme.field_k].verticalVelocity;
+                        ii.field_e[var2].tilePosition.set(-116, ii.field_e[WidgetTheme.field_k].tilePosition);
+                        ii.field_e[var2].tileOffset.set(-89, ii.field_e[WidgetTheme.field_k].tileOffset);
                         ii.field_e[var2].field_h = ii.field_e[WidgetTheme.field_k].field_h;
                         ii.field_e[var2].field_d = ii.field_e[WidgetTheme.field_k].field_d;
                         ii.field_e[var2].field_k = ii.field_e[WidgetTheme.field_k].field_k;
@@ -3894,7 +3894,7 @@ public final class wizardrun extends GameShell {
           GameGraphicsResources.wizardFont2.drawStringCentered(var6, 1 + param4, param0, 0, -1);
           GameGraphicsResources.wizardFont2.drawStringCentered(param1, param4, param0, param2, -1);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "wizardrun.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "wizardrun.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -3940,7 +3940,7 @@ public final class wizardrun extends GameShell {
               var12 = sj.field_m[var11];
               stackIn_34_0 = param0;
               if (stackIn_34_0) {
-                stackIn_27_0 = ug.field_I[var12];
+                stackIn_27_0 = RadialSelectorWidget.field_I[var12];
               } else {
                 stackIn_27_0 = td.field_c[var12];
               }
@@ -3987,7 +3987,7 @@ public final class wizardrun extends GameShell {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var7), "wizardrun.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var7), "wizardrun.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -4006,8 +4006,8 @@ public final class wizardrun extends GameShell {
         hg.field_a = 500;
         BufferedSocket.field_c = BufferedSocket.field_c - DiskCacheStore.field_f * 64;
         wg.field_b = wg.field_b - ql.field_c;
-        me.field_f = me.field_f + qh.field_l * 6;
-        qh.field_l = 0;
+        me.field_f = me.field_f + GridActor.field_l * 6;
+        GridActor.field_l = 0;
         DiskCacheStore.field_f = 0;
         NanoTickClock.field_n = 0;
         IntHashTable.field_d = new ol[16];
@@ -4047,13 +4047,13 @@ public final class wizardrun extends GameShell {
           GameGraphicsResources.wizardFont2.drawStringCentered(param1, param3 - 2, param4, 1377125, -1);
           GameGraphicsResources.wizardFont2.drawStringCentered(param1, param3, param4, param2, 1377125);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "wizardrun.GB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "wizardrun.GB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void a(boolean param0) {
         if (LoginChoicePanel.field_E != null) {
-          WeightedLruCache.a((byte) 60);
+          WeightedLruCache.exitFullscreen((byte) 60);
         }
         if (NodeHashTableIterator.field_k != null) {
           NodeHashTableIterator.field_k.shutdown();
@@ -4079,14 +4079,14 @@ public final class wizardrun extends GameShell {
         GameKeyHandler.releaseStatics((byte) 100);
         mk.releaseStatics(-7241);
         mj.releaseStatics(13214);
-        oa.releaseStatics(true);
+        StringPaddingHelpers.releaseStatics(true);
         ve.releaseStatics(true);
         ic.releaseStatics(true);
         hj.releaseStatics((byte) -62);
         w.releaseStatics(-91);
         id.releaseStatics(0);
         GameShell.releaseStatics(-18084);
-        sb.releaseStatics(param0 - 6516);
+        Base37Codec.releaseStatics(param0 - 6516);
         GameApplet.releaseStatics(113);
         UrlPacketDownloader.releaseStatics(240);
         MouseInputHandler.releaseStatics(4286);
@@ -4096,7 +4096,7 @@ public final class wizardrun extends GameShell {
         t.releaseStatics((byte) 102);
         rl.releaseStatics(param0 ^ -32304);
         PacketBuffer.releaseStatics((byte) 118);
-        d.releaseStatics(-5309);
+        MonotonicClockHelpers.releaseStatics(-5309);
         me.releaseStatics((byte) -31);
         bl.releaseStatics(false);
         ni.releaseStatics(36);
@@ -4113,7 +4113,7 @@ public final class wizardrun extends GameShell {
         RasterBuffer.releaseStatics((byte) 75);
         uc.releaseStatics((byte) 37);
         FullscreenFocusCanvas.releaseStatics(true);
-        qi.releaseStatics(false);
+        FullscreenController.releaseStatics(false);
         Js5Transport.releaseStatics(0);
         DiskCacheWorker.releaseStatics(false);
         ArchiveCatalog.releaseStatics(-111);
@@ -4121,16 +4121,16 @@ public final class wizardrun extends GameShell {
         BufferedSocket.releaseStatics(param0 - 37603);
         MidiPcmStream.releaseStatics(91);
         ol.releaseStatics(false);
-        eg.releaseStatics(param0 - 7133);
+        PlatformActor.releaseStatics(param0 - 7133);
         jk.releaseStatics(param0 ^ -7150);
-        ob.releaseStatics(12523);
-        tg.releaseStatics(true);
+        GridPoint.releaseStatics(12523);
+        LevelData.releaseStatics(true);
         AudioOutput.releaseStatics();
-        ph.releaseStatics(0);
+        GameMenu.releaseStatics(0);
         IntrusiveNode.releaseStatics((byte) 81);
         gi.releaseStatics(false);
         ne.releaseStatics(-1);
-        bd.releaseStatics(1);
+        ExceptionSupport.releaseStatics(1);
         td.releaseStatics(param0 - 7065);
         sd.releaseStatics(0);
         uh.releaseStatics(8192);
@@ -4147,7 +4147,7 @@ public final class wizardrun extends GameShell {
         v.releaseStatics(102);
         BitmapFont.releaseStatics();
         rf.releaseStatics((byte) 25);
-        s.releaseStatics(540);
+        CharSequenceJoiner.releaseStatics(540);
         MenuInputState.releaseStatics(28);
         ec.releaseStatics(param0 - 7115);
         DialogLayer.releaseStatics((byte) 117);
@@ -4165,7 +4165,7 @@ public final class wizardrun extends GameShell {
         SpriteState.releaseStatics(110);
         DualLinkNode.releaseStatics(param0 - 7070);
         IndexedSpriteState.releaseStatics(false);
-        ge.releaseStatics(true);
+        MenuController.releaseStatics(true);
         ee.releaseStatics(-21880);
         qj.releaseStatics(-6145);
         ii.releaseStatics(1000);
@@ -4173,7 +4173,7 @@ public final class wizardrun extends GameShell {
         SynthInstrument.releaseStatics();
         VorbisSample.releaseStatics();
         VorbisFloor.releaseStatics();
-        qh.releaseStatics((byte) -25);
+        GridActor.releaseStatics((byte) -25);
         pa.releaseStatics(-49);
         SocketJs5Transport.releaseStatics(-1);
         DualLinkDeque.releaseStatics((byte) 92);
@@ -4210,7 +4210,7 @@ public final class wizardrun extends GameShell {
         ValidationHelpWidget.releaseStatics((byte) 101);
         ef.releaseStatics(param0 ^ 20678);
         TextFieldValidator.releaseStatics(29);
-        fa.releaseStatics((byte) 52);
+        BrowserCookieHelpers.releaseStatics((byte) 52);
         re.releaseStatics((byte) -55);
         cj.releaseStatics();
         we.releaseStatics(-7077);
@@ -4218,7 +4218,7 @@ public final class wizardrun extends GameShell {
         bc.releaseStatics(param0 - 7067);
         ca.releaseStatics((byte) -120);
         TriangleMesh.releaseStatics(0);
-        sh.releaseStatics((byte) -125);
+        BrowserUrlLauncher.releaseStatics((byte) -125);
         dg.releaseStatics(param0 - 6813);
         GameGraphicsResources.releaseStatics(0);
         lh.releaseStatics(false);
@@ -4232,34 +4232,34 @@ public final class wizardrun extends GameShell {
         gk.releaseStatics(-124);
         pk.releaseStatics(param0 ^ -10072);
         ej.releaseStatics((byte) -43);
-        gh.releaseStatics(-681844375);
+        Crc32Helpers.releaseStatics(-681844375);
         QuickChatPhraseDefinition.releaseStatics(0);
         il.releaseStatics(true);
         uk.releaseStatics((byte) -44);
         WeightedLruCache.releaseStatics((byte) 80);
         nf.releaseStatics(param0 - 7190);
         ql.releaseStatics(110);
-        fb.releaseStatics(-106);
+        SettingsCookieReader.releaseStatics(-106);
         dl.releaseStatics(param0 ^ 12465);
         SocketConnector.releaseStatics((byte) -64);
         hf.releaseStatics(3543);
         NanoTickClock.releaseStatics(false);
         ImageProducerRasterBuffer.releaseStatics(0);
-        a.releaseStatics(-331851056);
+        FlatTriangleRasterizer.releaseStatics(-331851056);
         rb.releaseStatics(-1926289535);
         WhirlpoolHasher.releaseStatics((byte) 58);
         pb.releaseStatics(false);
         MusicPatch.releaseStatics(true);
         MidiEnvelope.releaseStatics(false);
         dh.releaseStatics(false);
-        ug.releaseStatics(-13542);
+        RadialSelectorWidget.releaseStatics(-13542);
         vb.releaseStatics((byte) 126);
         SynthFilter.releaseStatics();
         WrappedTextLayout.releaseStatics(10881);
         GrowableIntList.releaseStatics((byte) 55);
         pj.releaseStatics(125);
         pd.releaseStatics(-27864);
-        fc.releaseStatics(param0 ^ 7063);
+        DateFormattingHelpers.releaseStatics(param0 ^ 7063);
         DirectByteStorage.releaseStatics(0);
         bh.releaseStatics((byte) 21);
         IterableNodeHashTable.releaseStatics((byte) 94);

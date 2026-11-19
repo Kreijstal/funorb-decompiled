@@ -57,10 +57,10 @@ final class TextLayoutLine {
           var2 = var27.readUnsignedByte(255);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(-14477);
-            var4_ref_nj = (nj) (Js5Index.field_l.b((byte) 116));
+            var4_ref_nj = (nj) (Js5Index.field_l.first((byte) 116));
             while (var4_ref_nj != null) {
               if (var4_ref_nj.field_l != var3) {
-                var4_ref_nj = (nj) (Js5Index.field_l.d(8192));
+                var4_ref_nj = (nj) (Js5Index.field_l.next(8192));
                 continue;
               }
               break;
@@ -72,7 +72,7 @@ final class TextLayoutLine {
             var5 = var27.readUnsignedByte(255);
             if (var5 != 0) {
               var6_int = var4_ref_nj.field_j;
-              f.field_a[0].field_g = d.field_a;
+              f.field_a[0].field_g = MonotonicClockHelpers.field_a;
               var7 = var4_ref_nj.field_o;
               f.field_a[0].field_h = false;
               f.field_a[0].field_d = null;
@@ -121,7 +121,7 @@ final class TextLayoutLine {
                   }
                   if (var21 != null &&
                     qj.a(var21, 107)) {
-                    var8[1][var13] = d.field_a;
+                    var8[1][var13] = MonotonicClockHelpers.field_a;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
@@ -150,16 +150,16 @@ final class TextLayoutLine {
               }
             }
             var4_ref_nj.field_m = true;
-            var4_ref_nj.a(false);
+            var4_ref_nj.unlink(false);
             return;
           }
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort(-14477);
             var4 = var27.readLong((byte) 0);
-            var6 = (ai) (CachedArchiveProvider.field_t.b((byte) 109));
+            var6 = (ai) (CachedArchiveProvider.field_t.first((byte) 109));
             while (var6 != null) {
               if (var3Lifetime1 != var6.field_i) {
-                var6 = (ai) (CachedArchiveProvider.field_t.d(8192));
+                var6 = (ai) (CachedArchiveProvider.field_t.next(8192));
                 continue;
               }
               break;
@@ -169,7 +169,7 @@ final class TextLayoutLine {
               return;
             }
             var6.field_n = var4;
-            var6.a(false);
+            var6.unlink(false);
             return;
           }
           ResizableDialog.a((Throwable) null, "HS1: " + ni.c(6), -562);
@@ -178,7 +178,7 @@ final class TextLayoutLine {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "fg.E(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "fg.E(" + param0 + ')');
         }
     }
 
@@ -244,7 +244,7 @@ final class TextLayoutLine {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2_ref), "fg.D(" + param0 + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2_ref), "fg.D(" + param0 + ',' + param1 + ')');
         }
     }
 

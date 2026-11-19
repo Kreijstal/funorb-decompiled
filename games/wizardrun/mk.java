@@ -26,7 +26,7 @@ final class mk {
             return stackIn_2_0;
           }
           var4 = (String) null;
-          stackIn_4_0 = qi.a(param2, param0, (String) null, 0, 0, false, 27851);
+          stackIn_4_0 = FullscreenController.a(param2, param0, (String) null, 0, 0, false, 27851);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,7 +44,7 @@ final class mk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

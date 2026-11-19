@@ -30,12 +30,12 @@ final class ck {
             if (!TextLayout.a((CharSequence) ((Object) var6), (byte) 78)) {
               bb.field_k = 2;
             } else {
-              bb.field_k = ph.a(1124, (CharSequence) ((Object) var6));
+              bb.field_k = GameMenu.a(1124, (CharSequence) ((Object) var6));
             }
           }
           nh.field_n = param2;
           wd.field_g = param5;
-          ug.field_H = param4;
+          RadialSelectorWidget.field_H = param4;
           dc.field_s = new Sprite[param1.length];
           if (param3 != 34) {
             ck.a(-99, 41, 24);
@@ -61,12 +61,12 @@ final class ck {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
-        WeightedLruCache.a((byte) 60);
+        WeightedLruCache.exitFullscreen((byte) 60);
         if (param0 != 84) {
           return;
         }
@@ -75,7 +75,7 @@ final class ck {
           NodeHashTableIterator.b((byte) -104);
           jl.b(1);
           if (ne.b(22845)) {
-            n.field_b.c((byte) 88, 1);
+            n.field_b.writeCipheredOpcode((byte) 88, 1);
             id.a((byte) -67, 0);
           }
           ql.a(param0 ^ -55);
@@ -86,7 +86,7 @@ final class ck {
         NodeHashTableIterator.b((byte) -104);
         jl.b(1);
         if (ne.b(22845)) {
-          n.field_b.c((byte) 88, 1);
+          n.field_b.writeCipheredOpcode((byte) 88, 1);
           id.a((byte) -67, 0);
         }
         ql.a(param0 ^ -55);
@@ -114,7 +114,7 @@ final class ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var3), "ck.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var3), "ck.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

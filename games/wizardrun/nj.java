@@ -39,7 +39,7 @@ final class nj extends IntrusiveNode {
               if (DialogLayer.field_J) {
                 param1 = PcmResampler.field_f;
               } else {
-                param1 = fc.field_a;
+                param1 = DateFormattingHelpers.field_a;
               }
               param2 = 2;
               TimedValidator.field_b.a(param0 + 5980, ResizableDialog.field_S);
@@ -79,7 +79,7 @@ final class nj extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 

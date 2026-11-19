@@ -4,7 +4,7 @@
 final class ii {
     static String field_d;
     static Js5Transport field_f;
-    static eg[] field_e;
+    static PlatformActor[] field_e;
     static String field_b;
     static int field_a;
     static int field_c;
@@ -34,7 +34,7 @@ final class ii {
     }
 
     static {
-        field_e = new eg[1000];
+        field_e = new PlatformActor[1000];
         field_d = "Email (Login):";
         field_b = "Unfortunately we are unable to create an account for you at this time.";
     }

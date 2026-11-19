@@ -13,8 +13,8 @@ abstract class RasterBuffer {
     static String field_e;
 
     final static Boolean b(byte param0) {
-        Boolean var1 = gh.field_c;
-        gh.field_c = null;
+        Boolean var1 = Crc32Helpers.field_c;
+        Crc32Helpers.field_c = null;
         if (param0 >= -21) {
           field_e = (String) null;
         }
@@ -84,7 +84,7 @@ abstract class RasterBuffer {
           param2.drawAdditive(1 + param6, param5 + 1, param4);
           SoftwareRasterizer.restoreClip(ld.field_b);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "df.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "df.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ abstract class RasterBuffer {
             SoftwareRasterizer.saveClip(ld.field_b);
             var11 = new Sprite(4 + ra.field_p.width, ra.field_p.height + 4);
             var11.bindAsRasterTarget();
-            ra.field_p.drawTintedGrayscale(2, 2, ug.field_H);
+            ra.field_p.drawTintedGrayscale(2, 2, RadialSelectorWidget.field_H);
             oh.a(var11.height, var11, 0, var11.width, 2, (byte) 45, 0, 1);
             ra.field_p = var11;
             IntrusiveDequeCursor.field_b = ra.field_p.flipHorizontal();
@@ -184,7 +184,7 @@ abstract class RasterBuffer {
             var12.drawTransparent(18 - MouseWheelInput.field_b.offsetX, -MouseWheelInput.field_b.offsetY + 241);
             for (var7 = 0; SpriteState.field_w.length > var7; var7++) {
               dc.field_s[var7].bindAsRasterTarget();
-              AudioServiceThread.field_a.a(SpriteState.field_w[var7], 3, 3, dc.field_s[var7].width - 6, -6 + dc.field_s[var7].height, ug.field_H, -1, 1, 1, AudioServiceThread.field_a.field_B + AudioServiceThread.field_a.field_M);
+              AudioServiceThread.field_a.a(SpriteState.field_w[var7], 3, 3, dc.field_s[var7].width - 6, -6 + dc.field_s[var7].height, RadialSelectorWidget.field_H, -1, 1, 1, AudioServiceThread.field_a.field_B + AudioServiceThread.field_a.field_M);
               oh.a(dc.field_s[var7].height, dc.field_s[var7], 0, dc.field_s[var7].width, 3, (byte) 37, 0, 1);
             }
             SpriteState.field_w = null;
@@ -387,13 +387,13 @@ abstract class RasterBuffer {
               }
             }
           }
-          qh.b(true);
+          GridActor.drawScreenshotPreview(true);
           dc.field_s[ej.field_c].drawTransparent(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1_ref), "df.E(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1_ref), "df.E(" + param0 + ')');
         }
     }
 

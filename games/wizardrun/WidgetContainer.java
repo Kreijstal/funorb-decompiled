@@ -16,9 +16,9 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           if (param1 <= 15) {
             field_y = (TickClock) null;
           }
-          this.field_A.a(param0, false);
+          this.field_A.addLast(param0, false);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "pe.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pe.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -41,14 +41,14 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         try {
           var6 = -90 % ((param1 - 30) / 43);
           var5 = new IntrusiveDequeCursor(this.field_A);
-          var7 = (UiWidget) (var5.a((byte) 31));
+          var7 = (UiWidget) (var5.first((byte) 31));
           while (var7 != null) {
             discarded$3 = param3.append('\n');
             for (var8 = 0; param0 >= var8; var8++) {
               discarded$4 = param3.append(' ');
             }
             var7.a(param2, (byte) 102, 1 + param0, param3);
-            var7 = (UiWidget) (var5.b(35));
+            var7 = (UiWidget) (var5.next(35));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -67,7 +67,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -86,10 +86,10 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         if (param0) {
           field_B = -77;
         }
-        UiWidget var3 = (UiWidget) (var2.a((byte) 31));
+        UiWidget var3 = (UiWidget) (var2.first((byte) 31));
         while (var3 != null) {
           var3.b(param0);
-          var3 = (UiWidget) (var2.b(35));
+          var3 = (UiWidget) (var2.next(35));
         }
     }
 
@@ -100,10 +100,10 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           this.field_w.drawWidget(param0, param3, (UiWidget) (this), true, true);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_A);
-        UiWidget var6 = (UiWidget) (var5.b((byte) 103));
+        UiWidget var6 = (UiWidget) (var5.last((byte) 103));
         while (var6 != null) {
           var6.a(param0 + this.field_o, 0, param2, param3 + this.field_l);
-          var6 = (UiWidget) (var5.a(true));
+          var6 = (UiWidget) (var5.previous(true));
         }
         if (param1 != 0) {
           StringBuilder var8 = (StringBuilder) null;
@@ -145,7 +145,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var5), "pe.KA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var5), "pe.KA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -184,7 +184,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -211,28 +211,28 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         RuntimeException decompiledCaughtException = null;
         var7 = wizardrun.field_H;
         try {
-          if (this.field_A.f(8192)) {
+          if (this.field_A.isEmpty(8192)) {
             return false;
           }
           if (param1 != 1) {
             field_D = -109L;
           }
           var8 = new IntrusiveDequeCursor(this.field_A);
-          var4 = (UiWidget) (var8.a((byte) 31));
+          var4 = (UiWidget) (var8.first((byte) 31));
           while (var4 != null) {
             if (var4.d((byte) 53)) {
               var5 = new IntrusiveDequeCursor(this.field_A);
-              var5.a(var4, -79);
-              var6 = (UiWidget) (var5.b(35));
+              var5.startForward(var4, -79);
+              var6 = (UiWidget) (var5.next(35));
               while (var6 != null) {
                 if (!var6.a(param0, param1 ^ 9)) {
-                  var6 = (UiWidget) (var5.b(35));
+                  var6 = (UiWidget) (var5.next(35));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (UiWidget) (var8.b(35));
+            var4 = (UiWidget) (var8.next(35));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -245,7 +245,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         var7 = wizardrun.field_H;
         try {
           var8 = new IntrusiveDequeCursor(this.field_A);
-          var9 = (UiWidget) (var8.a((byte) 31));
+          var9 = (UiWidget) (var8.first((byte) 31));
           if (param2 > -96) {
             field_z = (String[]) null;
           }
@@ -273,7 +273,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
                 var9.a(param0, param1, (byte) -126, param3)) {
                 return true;
               }
-              var9 = (UiWidget) (var8.b(35));
+              var9 = (UiWidget) (var8.next(35));
               continue;
             }
             break;
@@ -298,7 +298,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -315,11 +315,11 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         try {
           super.a(param0, param1, param2, param3);
           var5 = new IntrusiveDequeCursor(this.field_A);
-          var6 = (UiWidget) (var5.a((byte) 31));
+          var6 = (UiWidget) (var5.first((byte) 31));
           while (var6 != null) {
             if (var6.isLinked((byte) -50)) {
               var6.a(10000536, this.field_l + param1, this.field_o + param2, param3);
-              var6 = (UiWidget) (var5.b(35));
+              var6 = (UiWidget) (var5.next(35));
               continue;
             }
             break;
@@ -335,7 +335,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -352,28 +352,28 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         RuntimeException decompiledCaughtException = null;
         var7 = wizardrun.field_H;
         try {
-          if (this.field_A.f(8192)) {
+          if (this.field_A.isEmpty(8192)) {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.field_A);
           if (param0 != -117) {
             return false;
           }
-          var4 = (UiWidget) (var8.b((byte) 51));
+          var4 = (UiWidget) (var8.last((byte) 51));
           while (var4 != null) {
             if (var4.d((byte) 53)) {
               var5 = new IntrusiveDequeCursor(this.field_A);
-              var5.a(-80, var4);
-              var6 = (UiWidget) (var5.a(true));
+              var5.startBackward(-80, var4);
+              var6 = (UiWidget) (var5.previous(true));
               while (var6 != null) {
                 if (!var6.a(param1, param0 ^ -125)) {
-                  var6 = (UiWidget) (var5.a(true));
+                  var6 = (UiWidget) (var5.previous(true));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (UiWidget) (var8.a(true));
+            var4 = (UiWidget) (var8.previous(true));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -386,7 +386,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -456,13 +456,13 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         try {
           var8 = new IntrusiveDequeCursor(this.field_A);
           var9 = 18 % ((param1 - 12) / 36);
-          var10 = (UiWidget) (var8.a((byte) 31));
+          var10 = (UiWidget) (var8.first((byte) 31));
           while (var10 != null) {
             if (var10.isLinked((byte) -76)) {
               if (var10.a(this.field_o + param0, (byte) 83, param2, this.field_l + param3, param4, param5, param6)) {
                 return true;
               }
-              var10 = (UiWidget) (var8.b(35));
+              var10 = (UiWidget) (var8.next(35));
               continue;
             }
             break;
@@ -478,7 +478,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -492,13 +492,13 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           return (String) null;
         }
         var2 = new IntrusiveDequeCursor(this.field_A);
-        var3 = (UiWidget) (var2.a((byte) 31));
+        var3 = (UiWidget) (var2.first((byte) 31));
         while (var3 != null) {
           var4 = var3.getTooltip(false);
           if (var4 != null) {
             return var4;
           }
-          var3 = (UiWidget) (var2.b(35));
+          var3 = (UiWidget) (var2.next(35));
         }
         return null;
     }
@@ -518,11 +518,11 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           if (param5 != 0) {
             this.field_A = (IntrusiveDeque) null;
           }
-          var8 = (UiWidget) (var7.a((byte) 31));
+          var8 = (UiWidget) (var7.first((byte) 31));
           while (var8 != null) {
             if (var8.isLinked((byte) 110)) {
               var8.a(this.field_o + param0, param1, this.field_l + param2, param3, param4, param5 ^ 0);
-              var8 = (UiWidget) (var7.b(35));
+              var8 = (UiWidget) (var7.next(35));
               continue;
             }
             break;
@@ -538,17 +538,17 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
         }
     }
 
     private final void f(int param0) {
         int var4 = wizardrun.field_H;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
-        UiWidget var3 = (UiWidget) (var2.a((byte) 31));
+        UiWidget var3 = (UiWidget) (var2.first((byte) 31));
         while (var3 != null) {
           var3.c(param0 ^ 124);
-          var3 = (UiWidget) (var2.b(35));
+          var3 = (UiWidget) (var2.next(35));
         }
         if (param0 != 1) {
           UiWidget var5 = (UiWidget) null;
@@ -565,12 +565,12 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         if (param0 != -16) {
           field_z = (String[]) null;
         }
-        var3 = (UiWidget) (var2.a((byte) 31));
+        var3 = (UiWidget) (var2.first((byte) 31));
         while (var3 != null) {
           if (var3.d((byte) 53)) {
             return var3;
           }
-          var3 = (UiWidget) (var2.b(35));
+          var3 = (UiWidget) (var2.next(35));
         }
         return null;
     }
@@ -588,14 +588,14 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         var10 = wizardrun.field_H;
         try {
           var12 = new IntrusiveDequeCursor(this.field_A);
-          var9 = (UiWidget) (var12.a((byte) 31));
+          var9 = (UiWidget) (var12.first((byte) 31));
           while (var9 != null) {
             if (var9.isLinked((byte) -109)) {
               if (var9.d((byte) 53) &&
                 var9.a(param0, -23023, param2, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (UiWidget) (var12.b(35));
+              var9 = (UiWidget) (var12.next(35));
               continue;
             }
             break;
@@ -616,7 +616,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -635,12 +635,12 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           if (param1 != 8) {
             field_C = (int[]) null;
           }
-          var4 = (UiWidget) (var3.a((byte) 31));
+          var4 = (UiWidget) (var3.first((byte) 31));
           while (var4 != null) {
             if (var4.a(param0, param1 ^ 0)) {
               return true;
             }
-            var4 = (UiWidget) (var3.b(35));
+            var4 = (UiWidget) (var3.next(35));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -653,7 +653,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -670,13 +670,13 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         int var6 = wizardrun.field_H;
         int var2 = 0;
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_A);
-        UiWidget var4 = (UiWidget) (var3.a((byte) 31));
+        UiWidget var4 = (UiWidget) (var3.first((byte) 31));
         while (var4 != null) {
           var5 = var4.e((byte) 93);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (UiWidget) (var3.b(35));
+          var4 = (UiWidget) (var3.next(35));
         }
         if (param0 < 23) {
           return -1;

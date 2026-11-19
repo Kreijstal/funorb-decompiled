@@ -87,7 +87,7 @@ abstract class FadingDialog extends WidgetContainer {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ abstract class FadingDialog extends WidgetContainer {
         if (RasterSnapshot.field_n == null) {
           RasterSnapshot.field_n = new Sprite(this.field_r, this.field_n);
           UrlPacketDownloader.a(RasterSnapshot.field_n, false);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           this.b(param1, -1, 0);
           super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
           bb.b(4);
@@ -137,7 +137,7 @@ abstract class FadingDialog extends WidgetContainer {
         if (this.field_r > RasterSnapshot.field_n.width) {
           RasterSnapshot.field_n = new Sprite(this.field_r, this.field_n);
           UrlPacketDownloader.a(RasterSnapshot.field_n, false);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           this.b(param1, -1, 0);
           super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
           bb.b(4);
@@ -147,7 +147,7 @@ abstract class FadingDialog extends WidgetContainer {
         if (this.field_n > RasterSnapshot.field_n.height) {
           RasterSnapshot.field_n = new Sprite(this.field_r, this.field_n);
           UrlPacketDownloader.a(RasterSnapshot.field_n, false);
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.clear();
           this.b(param1, -1, 0);
           super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
           bb.b(4);
@@ -155,7 +155,7 @@ abstract class FadingDialog extends WidgetContainer {
           return;
         }
         UrlPacketDownloader.a(RasterSnapshot.field_n, false);
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clear();
         this.b(param1, -1, 0);
         super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
         bb.b(4);
@@ -175,9 +175,9 @@ abstract class FadingDialog extends WidgetContainer {
             String var6 = (String) null;
             FadingDialog.a(-110, (String) null);
           }
-          fa.a(var4, var2, false, var3, param1);
+          BrowserCookieHelpers.writeCookie(var4, var2, false, var3, param1);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "tj.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "tj.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -236,7 +236,7 @@ abstract class FadingDialog extends WidgetContainer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ abstract class FadingDialog extends WidgetContainer {
           this.field_E = param0;
           this.field_K = 0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "tj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

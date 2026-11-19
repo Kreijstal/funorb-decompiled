@@ -51,7 +51,7 @@ abstract class gf extends ResizableDialog {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ abstract class gf extends ResizableDialog {
     private final void a(UiWidget param0, boolean param1) {
         try {
           if (this.field_ab != null) {
-            this.field_ab.a(false);
+            this.field_ab.unlink(false);
           }
           if (param0 != null) {
             param0.a(127, this.field_hb + 6, param0.field_n, param0.field_r, 6);
@@ -124,7 +124,7 @@ abstract class gf extends ResizableDialog {
           }
           this.field_cb = null;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "gf.RB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "gf.RB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -149,7 +149,7 @@ abstract class gf extends ResizableDialog {
           this.field_Z = param4;
           this.a(param1, true);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ abstract class gf extends ResizableDialog {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "gf.QB(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "gf.QB(" + param0 + ')');
         }
     }
 
@@ -268,7 +268,7 @@ abstract class gf extends ResizableDialog {
             field_V = (ValidationState) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "gf.TB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "gf.TB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -303,7 +303,7 @@ abstract class gf extends ResizableDialog {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

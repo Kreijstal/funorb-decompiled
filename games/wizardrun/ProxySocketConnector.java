@@ -9,8 +9,8 @@ final class ProxySocketConnector extends SocketConnector {
     static ProgressDialog field_e;
     private java.net.ProxySelector field_g;
 
-    final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadClientText(int param0, ResourceArchive param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2617_0;
             StringBuilder stackIn_2617_1;
             String stackIn_2618_2;
@@ -22,7 +22,7 @@ final class ProxySocketConnector extends SocketConnector {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2617_0 = null;
@@ -34,7 +34,7 @@ final class ProxySocketConnector extends SocketConnector {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginAccountAndReportTexts() throws java.lang.RuntimeException {
                 qb.field_r = param1;
                 var2 = ra.a("loginm3", (byte) -113);
                 if (var2 != null) {
@@ -952,7 +952,7 @@ final class ProxySocketConnector extends SocketConnector {
                   nf.a((byte) 87, var2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadRuleSocialAndResourceTexts() throws java.lang.RuntimeException {
                 var2 = ra.a("rule_0_4", (byte) -127);
                 if (null != var2) {
                   nf.a((byte) 111, var2);
@@ -1007,7 +1007,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("cancel", (byte) -128);
                 if (null != var2) {
-                  oa.field_a = nf.a((byte) 111, var2);
+                  StringPaddingHelpers.field_a = nf.a((byte) 111, var2);
                 }
                 var2 = ra.a("pleaselogintoplay", (byte) -123);
                 if (var2 != null) {
@@ -1023,7 +1023,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("invaliduserorpass", (byte) -116);
                 if (var2 != null) {
-                  fc.field_a = nf.a((byte) 115, var2);
+                  DateFormattingHelpers.field_a = nf.a((byte) 115, var2);
                 }
                 var2 = ra.a("pleasetryagain", (byte) -121);
                 if (var2 != null) {
@@ -1143,11 +1143,11 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("connectionrestored", (byte) -105);
                 if (var2 != null) {
-                  sh.field_d = nf.a((byte) 92, var2);
+                  BrowserUrlLauncher.field_d = nf.a((byte) 92, var2);
                 }
                 var2 = ra.a("warning_ifyouquit", (byte) -123);
                 if (var2 != null) {
-                  sh.field_a = nf.a((byte) 90, var2);
+                  BrowserUrlLauncher.field_a = nf.a((byte) 90, var2);
                 }
                 var2 = ra.a("warning_ifyouquitorleavepage", (byte) -110);
                 if (null != var2) {
@@ -1419,7 +1419,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("create_age", (byte) -95);
                 if (var2 != null) {
-                  sb.field_a = nf.a((byte) 103, var2);
+                  Base37Codec.field_a = nf.a((byte) 103, var2);
                 }
                 var2 = ra.a("create_u13_email", (byte) -95);
                 if (var2 != null) {
@@ -1451,7 +1451,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("create_more_suggestions", (byte) -110);
                 if (var2 != null) {
-                  eg.field_t = nf.a((byte) 94, var2);
+                  PlatformActor.field_t = nf.a((byte) 94, var2);
                 }
                 var2 = ra.a("create_select_alternative", (byte) -112);
                 if (null != var2) {
@@ -1459,7 +1459,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("create_optin_news", (byte) -95);
                 if (var2 != null) {
-                  fb.field_e = nf.a((byte) 94, var2);
+                  SettingsCookieReader.field_e = nf.a((byte) 94, var2);
                 }
                 var2 = ra.a("create_agreeterms", (byte) -110);
                 if (null != var2) {
@@ -1523,7 +1523,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("create_displayname_hint", (byte) -119);
                 if (var2 != null) {
-                  d.field_b = nf.a((byte) 108, var2);
+                  MonotonicClockHelpers.field_b = nf.a((byte) 108, var2);
                 }
                 var2 = ra.a("create_password_tooltip", (byte) -128);
                 if (null != var2) {
@@ -1535,11 +1535,11 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("create_password_confirm_tooltip", (byte) -125);
                 if (null != var2) {
-                  ph.field_s = nf.a((byte) 94, var2);
+                  GameMenu.field_s = nf.a((byte) 94, var2);
                 }
                 var2 = ra.a("create_email_tooltip", (byte) -103);
                 if (null != var2) {
-                  fb.field_c = nf.a((byte) 115, var2);
+                  SettingsCookieReader.field_c = nf.a((byte) 115, var2);
                 }
                 var2 = ra.a("create_email_confirm_tooltip", (byte) -109);
                 if (var2 != null) {
@@ -1655,7 +1655,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("create_passwordvalid", (byte) -118);
                 if (var2 != null) {
-                  ug.field_F = nf.a((byte) 110, var2);
+                  RadialSelectorWidget.field_F = nf.a((byte) 110, var2);
                 }
                 var2 = ra.a("create_emailvalid", (byte) -115);
                 if (null != var2) {
@@ -1815,7 +1815,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("loading_soundeffects", (byte) -126);
                 if (var2 != null) {
-                  ge.field_i = nf.a((byte) 97, var2);
+                  MenuController.field_i = nf.a((byte) 97, var2);
                 }
                 var2 = ra.a("loading_music", (byte) -108);
                 if (var2 != null) {
@@ -1831,7 +1831,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("loading_extradata", (byte) -109);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadLoadingFullscreenAndMembershipTexts() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   WidgetTheme.field_s = nf.a((byte) 94, var2);
                 }
@@ -2581,19 +2581,19 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("reconnect_lost_seq,0", (byte) -119);
                 if (null != var2) {
-                  gh.field_a[0] = nf.a((byte) 96, var2);
+                  Crc32Helpers.field_a[0] = nf.a((byte) 96, var2);
                 }
                 var2 = ra.a("reconnect_lost_seq,1", (byte) -116);
                 if (var2 != null) {
-                  gh.field_a[1] = nf.a((byte) 105, var2);
+                  Crc32Helpers.field_a[1] = nf.a((byte) 105, var2);
                 }
                 var2 = ra.a("reconnect_lost_seq,2", (byte) -119);
                 if (var2 != null) {
-                  gh.field_a[2] = nf.a((byte) 89, var2);
+                  Crc32Helpers.field_a[2] = nf.a((byte) 89, var2);
                 }
                 var2 = ra.a("reconnect_lost_seq,3", (byte) -102);
                 if (var2 != null) {
-                  gh.field_a[3] = nf.a((byte) 123, var2);
+                  Crc32Helpers.field_a[3] = nf.a((byte) 123, var2);
                 }
                 var2 = ra.a("reconnect_lost", (byte) -121);
                 if (null != var2) {
@@ -2669,7 +2669,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("fs_accept_countdown_pl", (byte) -114);
                 if (var2 != null) {
-                  ge.field_k = nf.a((byte) 110, var2);
+                  MenuController.field_k = nf.a((byte) 110, var2);
                 }
                 var2 = ra.a("fs_nonmember", (byte) -128);
                 if (null != var2) {
@@ -2689,7 +2689,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 var2 = ra.a("fs_unavailable_try_signed_applet", (byte) -124);
                 if (null != var2) {
-                  qi.field_b = nf.a((byte) 106, var2);
+                  FullscreenController.field_b = nf.a((byte) 106, var2);
                 }
                 var2 = ra.a("fs_focus", (byte) -95);
                 if (var2 != null) {
@@ -2740,7 +2740,7 @@ final class ProxySocketConnector extends SocketConnector {
                   jg.field_p = nf.a((byte) 111, var2);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadScoresRatingsAndSubscriptionTexts() throws java.lang.RuntimeException {
                 var2 = ra.a("mb_exclusive_2", (byte) -101);
                 if (var2 != null) {
                   ra.field_i = nf.a((byte) 103, var2);
@@ -3026,13 +3026,13 @@ final class ProxySocketConnector extends SocketConnector {
             void run() {
                 var3 = wizardrun.field_H;
                 try {
-                  runChunk0();
+                  loadLoginAccountAndReportTexts();
                   if (finished) return;
-                  runChunk1();
+                  loadRuleSocialAndResourceTexts();
                   if (finished) return;
-                  runChunk2();
+                  loadLoadingFullscreenAndMembershipTexts();
                   if (finished) return;
-                  runChunk3();
+                  loadScoresRatingsAndSubscriptionTexts();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3044,7 +3044,7 @@ final class ProxySocketConnector extends SocketConnector {
                   } else {
                     stackIn_2618_2 = "{...}";
                   }
-                  throw bd.wrapException((Throwable) ((Object) stackIn_2617_0), ((StringBuilder) (Object) stackIn_2617_1).append(stackIn_2618_2).append(')').toString());
+                  throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_2617_0), ((StringBuilder) (Object) stackIn_2617_1).append(stackIn_2618_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2626_0 = (!GameApplet.field_h);
@@ -3052,7 +3052,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 
@@ -3064,7 +3064,7 @@ final class ProxySocketConnector extends SocketConnector {
             ProxySocketConnector.c(14);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ')');
         }
     }
 
@@ -3146,7 +3146,7 @@ final class ProxySocketConnector extends SocketConnector {
           } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-            stackIn_20_0 = this.a(-14394);
+            stackIn_20_0 = this.openSocket(-14394);
             return stackIn_20_0;
           }
           if (param0 != -128) {
@@ -3193,16 +3193,16 @@ final class ProxySocketConnector extends SocketConnector {
               }
             }
             if (var7 != null) {
-              throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+              throw ProxySocketConnector.<RuntimeException>rethrowUnchecked((Throwable) var7);
             }
-            stackIn_42_0 = this.a(-14394);
+            stackIn_42_0 = this.openSocket(-14394);
             break;
           }
           return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
           decompiledCaughtException = decompiledCaughtParameter3;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var2), "ea.A(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var2), "ea.A(" + param0 + ')');
         }
     }
 
@@ -3213,7 +3213,7 @@ final class ProxySocketConnector extends SocketConnector {
             field_e = (ProgressDialog) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ea.H(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ea.H(" + param0 + ')');
         }
     }
 
@@ -3242,7 +3242,7 @@ final class ProxySocketConnector extends SocketConnector {
         String var13 = null;
         try {
           if (param1.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_2_0 = this.a(-14394);
+            stackIn_2_0 = this.openSocket(-14394);
             return stackIn_2_0;
           }
           if (param0 != 5) {
@@ -3299,7 +3299,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -3395,7 +3395,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 
@@ -3403,7 +3403,7 @@ final class ProxySocketConnector extends SocketConnector {
         try {
           this.field_g = java.net.ProxySelector.getDefault();
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "ea.<init>()");
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ea.<init>()");
         }
     }
 
@@ -3412,7 +3412,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

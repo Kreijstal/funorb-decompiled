@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi {
+final class FullscreenController {
     private boolean field_d;
     private int field_q;
     private int field_o;
@@ -68,10 +68,10 @@ final class qi {
         }
         if (ResizableDialog.field_R >= this.field_o) {
           if (this.field_o > 0) {
-            ph.field_o = 0;
+            GameMenu.field_o = 0;
           }
         } else {
-          ph.field_o = (-ResizableDialog.field_R + this.field_o) / 2;
+          GameMenu.field_o = (-ResizableDialog.field_R + this.field_o) / 2;
         }
         if (this.field_f != ResizableDialog.field_R ||
           ResizableDialog.field_P != this.field_g) {
@@ -149,7 +149,7 @@ final class qi {
             return stackIn_6_0;
           }
           if (FadingDialog.field_G == NodeHashTableIterator.field_j) {
-            gh.field_c = null;
+            Crc32Helpers.field_c = null;
             n.field_b.position = 0;
             if (param2 != null) {
               var9 = 0;
@@ -169,7 +169,7 @@ final class qi {
               n.field_b.writeByte((byte) 11, 18);
               n.field_b.position = n.field_b.position + 2;
               var10 = n.field_b.position;
-              var11_ref_StringLifetime1 = fb.a(jg.f(1), (byte) 102);
+              var11_ref_StringLifetime1 = SettingsCookieReader.readSettingsCookie(jg.f(1), (byte) 102);
               if (var11_ref_StringLifetime1 == null) {
                 var11_ref_StringLifetime1 = "";
               }
@@ -227,7 +227,7 @@ final class qi {
               }
               if (var9Lifetime1 == 99) {
                 hc.a(uf.a(true), param6 ^ -675);
-                gh.field_c = new Boolean(qj.a((byte) -100, AccountCreationForm.field_N));
+                Crc32Helpers.field_c = new Boolean(qj.a((byte) -100, AccountCreationForm.field_N));
                 AccountCreationForm.field_N.position = 0;
               } else {
                 NodeHashTableIterator.field_j = gf.field_ib;
@@ -254,7 +254,7 @@ final class qi {
             }
           }
           if (gf.field_ib == NodeHashTableIterator.field_j &&
-            bd.b(92)) {
+            ExceptionSupport.b(92)) {
             if (ra.field_k != 255) {
               bh.field_g = AccountCreationForm.field_N.readCp1252String(0);
             } else {
@@ -308,20 +308,20 @@ final class qi {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final static void e(int param0) {
-        d.field_a = AccountCreationForm.field_N.readCp1252String(param0 ^ param0);
-        CharSequence var2 = (CharSequence) ((Object) d.field_a);
+        MonotonicClockHelpers.field_a = AccountCreationForm.field_N.readCp1252String(param0 ^ param0);
+        CharSequence var2 = (CharSequence) ((Object) MonotonicClockHelpers.field_a);
         IntrusiveNode.field_a = MouseWheelInput.a(-49, var2);
     }
 
     final boolean b(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
-          qi.e(61);
+          FullscreenController.e(61);
         }
         stackIn_6_0 = (DualLinkNodeHashTable.field_b >= this.field_q) && (0 < ArchiveProvider.field_a);
         return stackIn_6_0;
@@ -371,11 +371,11 @@ final class qi {
           this.field_m.a(var3, var2, -109);
         }
         if (this.field_o > 0) {
-          ph.field_o = (-ResizableDialog.field_R + this.field_o) / 2;
+          GameMenu.field_o = (-ResizableDialog.field_R + this.field_o) / 2;
         }
     }
 
-    private qi() throws Throwable {
+    private FullscreenController() throws Throwable {
         throw new Error();
     }
 

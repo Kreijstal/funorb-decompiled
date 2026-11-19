@@ -120,7 +120,7 @@ final class WidgetTheme {
           var19 = new StatefulWidgetPainter(var4, true);
           var19.a((byte) 106, var13);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "od.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "od.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class WidgetTheme {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ final class WidgetTheme {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -299,7 +299,7 @@ final class WidgetTheme {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class WidgetTheme {
         if (param0 <= 106) {
           WidgetTheme.a(64, false);
         }
-        return new bh[]{nh.field_p, ProxySocketConnector.field_f, WrappedTextLayout.field_n, jk.field_a, oa.field_b, SoundCache.field_h, jg.field_q, Js5Index.field_a, SingleChildWidget.field_A, gi.field_a, AccountCreationForm.field_U, rl.field_a, DualLinkDeque.field_d, lh.field_a};
+        return new bh[]{nh.field_p, ProxySocketConnector.field_f, WrappedTextLayout.field_n, jk.field_a, StringPaddingHelpers.field_b, SoundCache.field_h, jg.field_q, Js5Index.field_a, SingleChildWidget.field_A, gi.field_a, AccountCreationForm.field_U, rl.field_a, DualLinkDeque.field_d, lh.field_a};
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -357,7 +357,7 @@ final class WidgetTheme {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

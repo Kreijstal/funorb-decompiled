@@ -41,32 +41,32 @@ final class MidiNote extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        ga.field_e = SocketJs5Transport.musicTracks[qh.field_l];
+        ga.field_e = SocketJs5Transport.musicTracks[GridActor.field_l];
         if (tl.field_e) {
           SingleChildWidget.field_D.a(true, -110, ga.field_e);
         }
         if (param0 < -39) {
-          oc.field_b = ValidationState.field_e[qh.field_l];
-          lk.field_b = DiskCacheStore.field_b[qh.field_l];
-          wg.field_e = bd.field_c[qh.field_l];
+          oc.field_b = ValidationState.field_e[GridActor.field_l];
+          lk.field_b = DiskCacheStore.field_b[GridActor.field_l];
+          wg.field_e = ExceptionSupport.field_c[GridActor.field_l];
           return;
         }
         MidiNote.d((byte) 8);
-        oc.field_b = ValidationState.field_e[qh.field_l];
-        lk.field_b = DiskCacheStore.field_b[qh.field_l];
-        wg.field_e = bd.field_c[qh.field_l];
+        oc.field_b = ValidationState.field_e[GridActor.field_l];
+        lk.field_b = DiskCacheStore.field_b[GridActor.field_l];
+        wg.field_e = ExceptionSupport.field_c[GridActor.field_l];
     }
 
     final static String d(byte param0) {
         if (param0 > -79) {
           MidiNote.a(107, 125, 75, 15);
-          if (d.field_a != null) {
-            return d.field_a;
+          if (MonotonicClockHelpers.field_a != null) {
+            return MonotonicClockHelpers.field_a;
           }
           return "";
         }
-        if (d.field_a != null) {
-          return d.field_a;
+        if (MonotonicClockHelpers.field_a != null) {
+          return MonotonicClockHelpers.field_a;
         }
         return "";
     }
@@ -170,12 +170,12 @@ final class MidiNote extends IntrusiveNode {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param6).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        ge.field_b = param2;
+        MenuController.field_b = param2;
         tc.field_i = param3;
         int var4 = -91 / ((param0 - 9) / 62);
         jl.field_s = param1;

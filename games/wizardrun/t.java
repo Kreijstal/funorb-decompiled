@@ -17,7 +17,7 @@ final class t {
           var1 = HotspotTextWidget.keyHandler;
           synchronized (var1) {
             MusicPatch.keyIdleTime = MusicPatch.keyIdleTime + 1;
-            tg.keyQueueReadIndex = ph.field_r;
+            LevelData.keyQueueReadIndex = GameMenu.field_r;
             if (param0 < ~GzipDecompressor.keyEventWriteIndex) {
               for (var2 = 0; var2 < 112; var2++) {
                 BufferedSocket.field_p[var2] = false;
@@ -34,13 +34,13 @@ final class t {
                 BufferedSocket.field_p[~var2] = false;
               }
             }
-            ph.field_r = qh.keyQueueWriteIndex;
+            GameMenu.field_r = GridActor.keyQueueWriteIndex;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1_ref), "t.B(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1_ref), "t.B(" + param0 + ')');
         }
     }
 

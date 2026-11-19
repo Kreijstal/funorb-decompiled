@@ -21,7 +21,7 @@ final class wb implements WidgetRenderer {
     }
 
     public final void drawWidget(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
-        ug var15 = null;
+        RadialSelectorWidget var15 = null;
         int var7 = 0;
         int var8 = 0;
         int var13 = 0;
@@ -32,7 +32,7 @@ final class wb implements WidgetRenderer {
         int var11Lifetime1;
         int var12Lifetime1;
         try {
-          var15 = param2 instanceof ug ? (ug) (param2) : null;
+          var15 = param2 instanceof RadialSelectorWidget ? (RadialSelectorWidget) (param2) : null;
           if (var15 == null) {
           }
           SoftwareRasterizer.fillRect(param2.field_o + param0, param2.field_l + param1, param2.field_r, param2.field_n, this.field_g);
@@ -59,7 +59,7 @@ final class wb implements WidgetRenderer {
             this.field_d.a(param2.field_k, var13 + (param2.field_o + param0), this.field_j + (param1 + param2.field_l), param2.field_r - (var13 + this.field_k), param2.field_n - (this.field_k << 1), this.field_c, this.field_i, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class wb implements WidgetRenderer {
           this.field_b = param5;
           this.field_i = param4;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "wb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "wb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

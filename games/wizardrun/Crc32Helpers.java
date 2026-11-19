@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh {
+final class Crc32Helpers {
     static BitmapFont field_b;
     static Boolean field_c;
     static String[] field_a;
@@ -19,11 +19,11 @@ final class gh {
         kj.field_d = new IntrusiveDeque();
         if (param0 <= 93) {
           byte[] var2 = (byte[]) null;
-          gh.a((byte[]) null, 57, -42, 25);
+          Crc32Helpers.crc32((byte[]) null, 57, -42, 25);
         }
     }
 
-    final static int a(byte[] param0, int param1, int param2, int param3) {
+    final static int crc32(byte[] param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -37,7 +37,7 @@ final class gh {
         try {
           var4_int = -1;
           if (param1 <= 84) {
-            gh.releaseStatics(47);
+            Crc32Helpers.releaseStatics(47);
           }
           for (var5 = param2; var5 < param3; var5++) {
             var4_int = var4_int >>> 8 ^ wd.field_f[255 & (param0[var5] ^ var4_int)];
@@ -55,7 +55,7 @@ final class gh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

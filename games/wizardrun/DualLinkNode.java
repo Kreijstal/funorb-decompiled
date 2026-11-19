@@ -12,7 +12,7 @@ class DualLinkNode extends IntrusiveNode {
     static Sprite field_m;
     static int field_n;
 
-    final void unlink(boolean param0) {
+    final void unlinkSecondary(boolean param0) {
         if (null == this.secondaryPrevious) {
           return;
         }
@@ -50,7 +50,7 @@ class DualLinkNode extends IntrusiveNode {
           var9 = AccountCreationForm.field_N;
           var2 = var9.readUnsignedByte(param0 + 257);
           if (var2 == 0) {
-            var8 = (tc) (RasterBuffer.field_c.b((byte) 107));
+            var8 = (tc) (RasterBuffer.field_c.first((byte) 107));
             if (var8 == null) {
               ql.a(-78);
               return;
@@ -67,7 +67,7 @@ class DualLinkNode extends IntrusiveNode {
               ql.a(-97);
               return;
             }
-            var8.a(false);
+            var8.unlink(false);
             return;
           }
           if (var2 != 1) {
@@ -76,10 +76,10 @@ class DualLinkNode extends IntrusiveNode {
             return;
           }
           var3 = var9.readInt(param0 + 257);
-          var4_ref_ie = (ie) (pa.field_e.b((byte) 61));
+          var4_ref_ie = (ie) (pa.field_e.first((byte) 61));
           while (var4_ref_ie != null) {
             if (var3 != var4_ref_ie.field_k) {
-              var4_ref_ie = (ie) (pa.field_e.d(8192));
+              var4_ref_ie = (ie) (pa.field_e.next(8192));
               continue;
             }
             break;
@@ -88,12 +88,12 @@ class DualLinkNode extends IntrusiveNode {
             ql.a(-85);
             return;
           }
-          var4_ref_ie.a(false);
+          var4_ref_ie.unlink(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.wrapException((Throwable) ((Object) var1), "rk.F(" + param0 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "rk.F(" + param0 + ')');
         }
     }
 

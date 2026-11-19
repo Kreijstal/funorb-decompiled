@@ -30,8 +30,8 @@ final class gi {
         try {
           uh.field_d[0] = IntrusiveDeque.field_c.nextInt();
           uh.field_d[1] = IntrusiveDeque.field_c.nextInt();
-          uh.field_d[2] = (int)(tg.field_g >> 32);
-          uh.field_d[3] = (int)tg.field_g;
+          uh.field_d[2] = (int)(LevelData.field_g >> 32);
+          uh.field_d[3] = (int)LevelData.field_g;
           re.field_G.position = 0;
           re.field_G.writeInt(uh.field_d[0], 613003928);
           re.field_G.writeInt(uh.field_d[1], 613003928);
@@ -67,7 +67,7 @@ final class gi {
           if (!param2) {
             field_c = -6;
           }
-          var7 = fb.a(jg.f(1), (byte) 102);
+          var7 = SettingsCookieReader.readSettingsCookie(jg.f(1), (byte) 102);
           if (var7 == null) {
             var7 = "";
           }
@@ -89,7 +89,7 @@ final class gi {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

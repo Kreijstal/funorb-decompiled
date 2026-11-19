@@ -15,19 +15,19 @@ final class SecondaryNodeDeque implements Iterable {
           return;
         }
         try {
-          fc.a(sd.field_c, param3, -122);
+          DateFormattingHelpers.a(sd.field_c, param3, -122);
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "de.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "de.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode peekFirst(byte param0) {
         DualLinkNode var2 = this.field_b.secondaryNext;
         if (param0 > -15) {
           return (DualLinkNode) null;
         }
         if (this.field_b != var2) {
-          var2.unlink(false);
+          var2.unlinkSecondary(false);
           return var2;
         }
         return null;
@@ -77,7 +77,7 @@ final class SecondaryNodeDeque implements Iterable {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class SecondaryNodeDeque implements Iterable {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = n.field_b;
-          var5.c((byte) -61, param1);
+          var5.writeCipheredOpcode((byte) -61, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte((byte) 11, 1);
@@ -118,7 +118,7 @@ final class SecondaryNodeDeque implements Iterable {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -140,9 +140,9 @@ final class SecondaryNodeDeque implements Iterable {
         field_c = null;
     }
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         if (null != param0.secondaryPrevious) {
-          param0.unlink(false);
+          param0.unlinkSecondary(false);
         }
         param0.secondaryPrevious = this.field_b.secondaryPrevious;
         param0.secondaryNext = this.field_b;
@@ -153,7 +153,7 @@ final class SecondaryNodeDeque implements Iterable {
         try {
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.wrapException((Throwable) ((Object) runtimeException), "de.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "de.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
