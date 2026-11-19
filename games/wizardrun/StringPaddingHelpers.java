@@ -6,7 +6,7 @@ final class StringPaddingHelpers {
     static QuickChatDynamicCommand field_b;
     static FullscreenController field_c;
 
-    final static boolean a(int param0) {
+    final static boolean isMenuScreenActive(int param0) {
         if (param0 != -25231) {
           field_a = (String) null;
           return ClientException.field_a;
@@ -37,7 +37,7 @@ final class StringPaddingHelpers {
           }
           return new String(var6);
         }
-        StringPaddingHelpers.a(-22);
+        StringPaddingHelpers.isMenuScreenActive(-22);
         for (var4Lifetime1 = 0; param2 > var4Lifetime1; var4Lifetime1++) {
           var6[var4Lifetime1] = param1;
         }

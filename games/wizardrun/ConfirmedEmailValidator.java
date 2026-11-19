@@ -14,7 +14,7 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
         if (param0 != 92682) {
           field_l = (int[]) null;
         }
-        SecondaryNodeDeque.a((byte) -52, we.field_a, EmailCheckRequest.field_a, true);
+        SecondaryNodeDeque.beginLogin((byte) -52, UiSpriteThemeHelpers.field_a, EmailCheckRequest.field_a, true);
         IntegerSyntaxHelpers.field_a = true;
     }
 
@@ -30,10 +30,10 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
           if (!(AccountCreationForm.field_N.position < param0)) {
             return true;
           }
-          if (jc.field_H == null) {
+          if (OpacityWidget.field_H == null) {
             return false;
           }
-          int var2_int = jc.field_H.available((byte) 89);
+          int var2_int = OpacityWidget.field_H.available((byte) 89);
           if (param1 != -28266) {
             ConfirmedEmailValidator.f(-28);
           }
@@ -41,7 +41,7 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
             if (-AccountCreationForm.field_N.position + param0 < var2_int) {
               var2_int = -AccountCreationForm.field_N.position + param0;
             }
-            jc.field_H.readFully(AccountCreationForm.field_N.payload, 114, var2_int, AccountCreationForm.field_N.position);
+            OpacityWidget.field_H.readFully(AccountCreationForm.field_N.payload, 114, var2_int, AccountCreationForm.field_N.position);
             PlatformActor.field_C = MonotonicClockHelpers.monotonicMillis((byte) 29);
             AccountCreationForm.field_N.position = AccountCreationForm.field_N.position + var2_int;
             if (param0 > AccountCreationForm.field_N.position) {
@@ -53,7 +53,7 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
           try {
             if (false) throw (IOException) null;
             if (var2_int >= 0 &&
-              30000L >= eh.a(2)) {
+              30000L >= MarkerSliderPainter.getAccountConnectionAge(2)) {
               return false;
             }
             HuffmanDecoder.closeAccountConnection(-114);
@@ -83,7 +83,7 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (this.validateText(-1, param0) != DisplayNameSyntaxHelpers.field_c) {
-            stackIn_7_0 = eh.field_h;
+            stackIn_7_0 = MarkerSliderPainter.field_h;
             return stackIn_7_0;
           }
           stackIn_5_0 = IntrusiveNode.field_d;
@@ -102,11 +102,11 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
         }
     }
 
-    final static void c(boolean param0) {
+    final static void refreshPlayerProgress(boolean param0) {
         if (!param0) {
           field_o = 35;
         }
-        if (!f.field_e) {
+        if (!HighscorePlayerState.field_e) {
           if (null == ValidationState.field_c) {
             ValidationState.field_c = ProgressSubmission.requestAchievementState((byte) 103, 4);
           }
@@ -114,23 +114,23 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
             AgeValidator.field_l = AgeValidator.field_l & ~ValidationState.field_c.firstStateWord;
             IsaacRandom.field_a = IsaacRandom.field_a | ValidationState.field_c.firstStateWord;
             ValidationState.field_c = null;
-            f.field_e = true;
+            HighscorePlayerState.field_e = true;
           }
         }
-        if (!e.field_a) {
+        if (!ThreePieceFrameHelpers.field_a) {
           if (null == ProgressRefreshState.field_a) {
-            ProgressRefreshState.field_a = HotspotTextWidget.c(5, 1, 2, 0);
+            ProgressRefreshState.field_a = HotspotTextWidget.requestProgress(5, 1, 2, 0);
           }
           if (ProgressRefreshState.field_a.complete) {
             if (ProgressRefreshState.field_a.values[0] > TextButton.field_A) {
               TextButton.field_A = ProgressRefreshState.field_a.values[0];
             }
-            e.field_a = true;
+            ThreePieceFrameHelpers.field_a = true;
             ProgressRefreshState.field_a = null;
           }
         }
-        if (f.field_e &&
-          e.field_a) {
+        if (HighscorePlayerState.field_e &&
+          ThreePieceFrameHelpers.field_a) {
           WrappedTextLayout.a((byte) 79);
         }
     }
@@ -171,7 +171,7 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param1.equals(this.checkedEmail)) {
-            var3 = ArchiveCatalog.a(param1, 6);
+            var3 = ArchiveCatalog.getEmailCheck(param1, 6);
             if (!var3.isComplete(true)) {
               stackIn_7_0 = ValidationHelpWidget.field_S;
               return stackIn_7_0;
@@ -182,7 +182,7 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
           if (!this.emailAvailable) {
             stackIn_12_0 = DisplayNameSyntaxHelpers.field_c;
           } else {
-            stackIn_12_0 = gf.field_V;
+            stackIn_12_0 = ContentTransitionDialog.field_V;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

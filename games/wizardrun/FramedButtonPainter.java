@@ -48,7 +48,7 @@ class FramedButtonPainter extends WidgetPainter {
             var7 = (CharSequence) ((Object) param3);
             var4_long = Base37Codec.encodeBase37((byte) 124, var7);
           }
-          stackIn_6_0 = uk.selectLoginCredentials((String) (var6), 8355711, var4_long, param1, param0);
+          stackIn_6_0 = QuickChatPhraseRepository.selectLoginCredentials((String) (var6), 8355711, var4_long, param1, param0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ class FramedButtonPainter extends WidgetPainter {
     public final void drawWidget(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         try {
           if (param4) {
-            WidgetContainer.a(param2.height, (byte) -14, param1 + param2.y, param2.width, param0 + param2.x);
+            WidgetContainer.drawWidgetBorder(param2.height, (byte) -14, param1 + param2.y, param2.width, param0 + param2.x);
           }
           super.drawWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

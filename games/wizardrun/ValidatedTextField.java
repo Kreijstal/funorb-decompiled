@@ -5,14 +5,14 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
     static int field_W;
     private int field_X;
     static int field_V;
-    private Validator field_T;
+    private Validator validator;
     static int field_U;
 
     ValidatedTextField(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final static boolean a(boolean param0, String param1) {
+    final static boolean isRepeatedCharacterPassword(boolean param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -61,53 +61,53 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
         }
     }
 
-    final void a(int param0, Validator param1) {
+    final void setValidator(int param0, Validator param1) {
         if (param0 != 0) {
           return;
         }
         try {
-          this.field_T = param1;
+          this.validator = param1;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "p.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void i(byte param0) {
-        super.i((byte) -73);
+    final void notifyTextChanged(byte param0) {
+        super.notifyTextChanged((byte) -73);
         if (param0 > -59) {
           Validator var3 = (Validator) null;
-          this.a(-16, (Validator) null);
+          this.setValidator(-16, (Validator) null);
         }
-        if (null != this.field_T) {
-          this.field_T.invalidate((byte) -115);
+        if (null != this.validator) {
+          this.validator.invalidate((byte) -115);
         }
     }
 
     public final Validator getValidator(byte param0) {
         int var2 = -2 % ((62 - param0) / 36);
-        return this.field_T;
+        return this.validator;
     }
 
     final static void drawProgressBar(byte param0, String param1, boolean param2, float param3) {
         try {
           if (ProxySocketConnector.field_e == null) {
             ProxySocketConnector.field_e = new ProgressDialog(GameShell.field_A, QuickChatDynamicCommand.field_a);
-            GameShell.field_A.b((UiWidget) (ProxySocketConnector.field_e), (byte) 126);
+            GameShell.field_A.showDialog((UiWidget) (ProxySocketConnector.field_e), (byte) 126);
           }
           int var4_int = 25 % ((param0 + 75) / 34);
           ProxySocketConnector.field_e.a(param1, param3, 2113632, param2);
           SoftwareRasterizer.clear();
-          WidgetTheme.a(-117, true);
+          WidgetTheme.drawDialogLayer(-117, true);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "p.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static LoginMethodPreference[] l(byte param0) {
+    final static LoginMethodPreference[] getLoginMethodPreferences(byte param0) {
         if (param0 != 100) {
           return (LoginMethodPreference[]) null;
         }
-        return new LoginMethodPreference[]{StripedProgressBar.field_C, IndexedSpriteState.field_e, ra.field_j};
+        return new LoginMethodPreference[]{StripedProgressBar.field_C, IndexedSpriteState.field_e, AchievementUnlock.field_j};
     }
 
     final String getTooltip(boolean param0) {
@@ -120,7 +120,7 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
         if (param0) {
           this.getValidator((byte) -27);
         }
-        EditableTextWidget.a(AchievementSubmission.field_n - this.field_X + this.width, NetworkArchiveRequest.field_B, -91);
+        EditableTextWidget.setTooltipAnchor(AchievementSubmission.field_n - this.field_X + this.width, NetworkArchiveRequest.field_B, -91);
         return this.tooltip;
     }
 

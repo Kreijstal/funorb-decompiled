@@ -10,20 +10,20 @@ abstract class FadingDialog extends WidgetContainer {
     private DialogLayer field_E;
     static int field_I;
 
-    private final int h(int param0) {
+    private final int getTargetOpacity(int param0) {
         if (param0 == -660264703) {
-          return !this.field_H ? 0 : this.field_E.f(param0 ^ -660264703) != this ? 0 : 256;
+          return !this.field_H ? 0 : this.field_E.getTopVisibleDialog(param0 ^ -660264703) != this ? 0 : 256;
         }
         return 75;
     }
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void drawDialogFrame(int param0, int param1, int param2);
 
-    boolean a(int param0) {
+    boolean finishAnimationAndCheckClosed(int param0) {
         if (param0 != 16) {
           return true;
         }
-        this.field_K = this.h(-660264703);
+        this.field_K = this.getTargetOpacity(-660264703);
         if (this.field_K != 0) {
           return false;
         }
@@ -33,15 +33,15 @@ abstract class FadingDialog extends WidgetContainer {
         return false;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void resizeAndCenter(int param0, int param1, int param2) {
         this.setBounds(110, LabeledField.field_K - param1 >> 1, param1, param2, EmailDomainHelpers.field_a - param2 >> 1);
         if (param0 != 6154) {
           String var5 = (String) null;
-          FadingDialog.a(-85, (String) null);
+          FadingDialog.openWindowsBrowser(-85, (String) null);
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean openWindowsBrowser(int param0, String param1) {
         int var3 = 0;
         String var2 = null;
         Exception var2_ref = null;
@@ -91,11 +91,11 @@ abstract class FadingDialog extends WidgetContainer {
         }
     }
 
-    boolean g(int param0) {
+    boolean animateAndCheckClosed(int param0) {
         if (param0 != 1) {
           return true;
         }
-        int var2 = this.h(-660264703);
+        int var2 = this.getTargetOpacity(-660264703);
         int var3 = -this.field_K + var2;
         if (var3 > 0) {
           this.field_K = this.field_K + (-1 + (var3 + 8)) / 8;
@@ -118,7 +118,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (this.field_K >= 256) {
           if (param2 == 0) {
-            this.b(this.x + param0, -1, this.y + param3);
+            this.drawDialogFrame(this.x + param0, -1, this.y + param3);
             super.drawLayer(param0, param1 ^ 0, param2, param3);
             return;
           }
@@ -128,9 +128,9 @@ abstract class FadingDialog extends WidgetContainer {
           RasterSnapshot.field_n = new Sprite(this.width, this.height);
           UrlPacketDownloader.a(RasterSnapshot.field_n, false);
           SoftwareRasterizer.clear();
-          this.b(param1, -1, 0);
+          this.drawDialogFrame(param1, -1, 0);
           super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
-          UsernameLoginCredentials.b(4);
+          UsernameLoginCredentials.popRasterState(4);
           RasterSnapshot.field_n.drawAlpha(this.x + param0, param3 + this.y, this.field_K);
           return;
         }
@@ -138,9 +138,9 @@ abstract class FadingDialog extends WidgetContainer {
           RasterSnapshot.field_n = new Sprite(this.width, this.height);
           UrlPacketDownloader.a(RasterSnapshot.field_n, false);
           SoftwareRasterizer.clear();
-          this.b(param1, -1, 0);
+          this.drawDialogFrame(param1, -1, 0);
           super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
-          UsernameLoginCredentials.b(4);
+          UsernameLoginCredentials.popRasterState(4);
           RasterSnapshot.field_n.drawAlpha(this.x + param0, param3 + this.y, this.field_K);
           return;
         }
@@ -148,17 +148,17 @@ abstract class FadingDialog extends WidgetContainer {
           RasterSnapshot.field_n = new Sprite(this.width, this.height);
           UrlPacketDownloader.a(RasterSnapshot.field_n, false);
           SoftwareRasterizer.clear();
-          this.b(param1, -1, 0);
+          this.drawDialogFrame(param1, -1, 0);
           super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
-          UsernameLoginCredentials.b(4);
+          UsernameLoginCredentials.popRasterState(4);
           RasterSnapshot.field_n.drawAlpha(this.x + param0, param3 + this.y, this.field_K);
           return;
         }
         UrlPacketDownloader.a(RasterSnapshot.field_n, false);
         SoftwareRasterizer.clear();
-        this.b(param1, -1, 0);
+        this.drawDialogFrame(param1, -1, 0);
         super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
-        UsernameLoginCredentials.b(4);
+        UsernameLoginCredentials.popRasterState(4);
         RasterSnapshot.field_n.drawAlpha(this.x + param0, param3 + this.y, this.field_K);
     }
 
@@ -167,13 +167,13 @@ abstract class FadingDialog extends WidgetContainer {
         String var3 = null;
         long var4 = 0L;
         try {
-          kk.field_yb = true;
+          NameCheckProgressDialog.field_yb = true;
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
           if (param0 != 3088) {
             String var6 = (String) null;
-            FadingDialog.a(-110, (String) null);
+            FadingDialog.openWindowsBrowser(-110, (String) null);
           }
           BrowserCookieHelpers.writeCookie(var4, var2, false, var3, param1);
         } catch (RuntimeException runtimeException) {
@@ -189,7 +189,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
     }
 
-    final static String[] a(String param0, int param1, char param2) {
+    final static String[] splitOnCharacter(String param0, int param1, char param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
@@ -240,8 +240,8 @@ abstract class FadingDialog extends WidgetContainer {
         }
     }
 
-    final UiWidget d(int param0) {
-        UiWidget var2 = super.d(param0);
+    final UiWidget getFocusedWidget(int param0) {
+        UiWidget var2 = super.getFocusedWidget(param0);
         if (var2 != null) {
           return var2;
         }

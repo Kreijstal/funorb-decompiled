@@ -6,7 +6,7 @@ final class LabeledField extends SingleChildWidget {
     private int field_L;
     private String field_I;
     static String field_H;
-    static tb field_G;
+    static DisplayNameForm field_G;
     private int field_J;
     private BitmapFont field_N;
     private boolean field_O;
@@ -15,10 +15,10 @@ final class LabeledField extends SingleChildWidget {
     final static void g(int param0) {
         LoginChoicePanel.h((byte) 91);
         DialogLayer.field_J = true;
-        lc.field_d = true;
-        GameShell.field_A.d(false);
+        ArchiveReadinessHelpers.field_d = true;
+        GameShell.field_A.hideAllDialogs(false);
         int var1 = -82 / ((param0 - 71) / 54);
-        DateFormattingHelpers.a(LoginCredentials.field_f, false, -124);
+        DateFormattingHelpers.showAccountProgress(LoginCredentials.field_f, false, -124);
     }
 
     final void drawLayer(int param0, int param1, int param2, int param3) {

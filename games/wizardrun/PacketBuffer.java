@@ -458,7 +458,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = ej.a(param0, 1);
+        this.payload = ByteArrayPool.allocateBytes(param0, 1);
     }
 
     final void padToPosition(int param0, int param1) {

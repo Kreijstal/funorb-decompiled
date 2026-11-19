@@ -112,16 +112,16 @@ final class FlatTriangleRasterizer {
                     if (var18 == 0) {
                       if (var17 >= 0 &&
                         var17 < TriangleRasterState.viewportWidth) {
-                        se.a(var17 + var16Lifetime2, 123, param1, var18, param4);
+                        IntegerMathHelpers.fillHalfBlendSpan(var17 + var16Lifetime2, 123, param1, var18, param4);
                       }
                     } else {
                       if (var18 + var17 >= TriangleRasterState.viewportWidth) {
                         var18 = -1 + (-var17 + TriangleRasterState.viewportWidth);
                       }
                       if (var17 < 0) {
-                        se.a(var16Lifetime2, 95, param1, var17 + var18, param4);
+                        IntegerMathHelpers.fillHalfBlendSpan(var16Lifetime2, 95, param1, var17 + var18, param4);
                       } else {
-                        se.a(var17 + var16Lifetime2, param7 + 20599, param1, var18, param4);
+                        IntegerMathHelpers.fillHalfBlendSpan(var17 + var16Lifetime2, param7 + 20599, param1, var18, param4);
                       }
                     }
                   }
@@ -163,16 +163,16 @@ final class FlatTriangleRasterizer {
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < TriangleRasterState.viewportWidth) {
-                    se.a(var15Lifetime1 + var16Lifetime1, 123, param1, var17Lifetime1, param4);
+                    IntegerMathHelpers.fillHalfBlendSpan(var15Lifetime1 + var16Lifetime1, 123, param1, var17Lifetime1, param4);
                   }
                 } else {
                   if (TriangleRasterState.viewportWidth <= var16Lifetime1 + var17Lifetime1) {
                     var17Lifetime1 = -1 + (TriangleRasterState.viewportWidth - var16Lifetime1);
                   }
                   if (0 <= var16Lifetime1) {
-                    se.a(var15Lifetime1 + var16Lifetime1, 89, param1, var17Lifetime1, param4);
+                    IntegerMathHelpers.fillHalfBlendSpan(var15Lifetime1 + var16Lifetime1, 89, param1, var17Lifetime1, param4);
                   } else {
-                    se.a(var15Lifetime1, 84, param1, var16Lifetime1 + var17Lifetime1, param4);
+                    IntegerMathHelpers.fillHalfBlendSpan(var15Lifetime1, 84, param1, var16Lifetime1 + var17Lifetime1, param4);
                   }
                 }
               }

@@ -1,7 +1,7 @@
 # Reading Wizard Run
 
-Resolved declarations: 227/299 classes and 1227/1865 methods have readable names; 221 constructors follow their class names.
-Remaining: 72 opaque classes and 638 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 299/299 classes and 1625/1865 methods have readable names; 221 constructors follow their class names.
+Remaining: 0 opaque classes and 240 opaque methods. The complete naming goal is still in progress.
 
 Start at `wizardrun`. Shared engine code includes named audio synthesis, Vorbis, PCM mixing, rasterization, sprites, archive transport and cache storage.
 

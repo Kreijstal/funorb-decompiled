@@ -88,8 +88,8 @@ final class EmailValidationError {
           var21Lifetime1 = -param6[0] + param4[0];
           var22Lifetime1 = param4[1] - param6[1];
           var23Lifetime1 = -param6[2] + param4[2];
-          var9 = var23Lifetime1 * param6[5] + var21Lifetime1 * param6[3] + param6[4] * var22Lifetime1 >> 16 - rl.field_b;
-          var10 = param6[7] * var22Lifetime1 + (var21Lifetime1 * param6[6] + var23Lifetime1 * param6[8]) >> 16 - rl.field_b;
+          var9 = var23Lifetime1 * param6[5] + var21Lifetime1 * param6[3] + param6[4] * var22Lifetime1 >> 16 - MenuOverlayHelpers.field_b;
+          var10 = param6[7] * var22Lifetime1 + (var21Lifetime1 * param6[6] + var23Lifetime1 * param6[8]) >> 16 - MenuOverlayHelpers.field_b;
           var11 = var23Lifetime1 * param6[11] + var22Lifetime1 * param6[10] + param6[9] * var21Lifetime1 >> 16;
           var21Lifetime2 = TriangleRasterState.centerX;
           var22Lifetime2 = TriangleRasterState.centerY;
@@ -100,14 +100,14 @@ final class EmailValidationError {
               var24Lifetime1 = param2.field_P[var23Lifetime2];
               var25Lifetime1 = param2.field_a[var23Lifetime2];
               var26Lifetime1 = param2.field_w[var23Lifetime2];
-              var27Lifetime1 = var9 + (var26Lifetime1 * var18 + var12 * var24Lifetime1 + var25Lifetime1 * var15 >> 16 - rl.field_b);
-              var28Lifetime1 = var10 + (var25Lifetime1 * var16 + var24Lifetime1 * var13 + var26Lifetime1 * var19 >> 16 - rl.field_b);
+              var27Lifetime1 = var9 + (var26Lifetime1 * var18 + var12 * var24Lifetime1 + var25Lifetime1 * var15 >> 16 - MenuOverlayHelpers.field_b);
+              var28Lifetime1 = var10 + (var25Lifetime1 * var16 + var24Lifetime1 * var13 + var26Lifetime1 * var19 >> 16 - MenuOverlayHelpers.field_b);
               var29Lifetime1 = (var17 * var25Lifetime1 + var14 * var24Lifetime1 + var26Lifetime1 * var20 >> 16) + var11;
               stackIn_63_0 = -51;
               stackIn_63_1 = ~var29Lifetime1;
               if (var31 != 0) {
                 if (stackIn_63_0 > stackIn_63_1) {
-                  stackIn_72_0 = ~gk.field_g.length;
+                  stackIn_72_0 = ~Bzip2State.field_g.length;
                   stackIn_72_1 = ~var18;
                   break scanLoop1;
                 }
@@ -120,16 +120,16 @@ final class EmailValidationError {
                   if (var29Lifetime1 > var8) {
                     var8 = var29Lifetime1;
                   }
-                  dl.field_a[var23Lifetime2] = var29Lifetime1;
+                  CommonUiLoadingProgress.field_a[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 < var7_int) {
                     var7_int = var29Lifetime1;
                   }
                 } else {
-                  dl.field_a[var23Lifetime2] = -2147483648;
+                  CommonUiLoadingProgress.field_a[var23Lifetime2] = -2147483648;
                 }
                 if (param0) {
-                  gk.field_o[var23Lifetime2] = var27Lifetime1 >> rl.field_b;
-                  AccountFormText.field_e[var23Lifetime2] = var28Lifetime1 >> rl.field_b;
+                  Bzip2State.field_o[var23Lifetime2] = var27Lifetime1 >> MenuOverlayHelpers.field_b;
+                  AccountFormText.field_e[var23Lifetime2] = var28Lifetime1 >> MenuOverlayHelpers.field_b;
                   LoginCredentials.field_e[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -164,7 +164,7 @@ final class EmailValidationError {
                   var24Lifetime1Lifetime1 = param2.field_t[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param2.field_u[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param2.field_q[var23Lifetime2];
-                  ci.field_b[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + (var15 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12) >> 16);
+                  RankingStatsDecoder.field_b[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + (var15 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12) >> 16);
                   IntrusiveDeque.field_f[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var16 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
                   LoginCredentialKind.field_f[var23Lifetime2] = (var26Lifetime1Lifetime1 * var20 + var17 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var14 >> 16) + var11;
                   var23Lifetime2++;
@@ -194,7 +194,7 @@ final class EmailValidationError {
                   if (stackIn_63_0Lifetime1 <= stackIn_63_1Lifetime1) {
                     break;
                   }
-                  stackIn_72_0 = ~gk.field_g.length;
+                  stackIn_72_0 = ~Bzip2State.field_g.length;
                   stackIn_72_1 = ~var18;
                   if (var31 != 0) {
                     break scanLoop1;
@@ -205,7 +205,7 @@ final class EmailValidationError {
                   var19 = param2.field_k[var18];
                   var20 = param2.field_R[var18];
                   var21Lifetime2 = param2.field_o[var18];
-                  gk.field_g[var18] = var12 * var20 + (var9 * var19 + var15 * var21Lifetime2) >> 16;
+                  Bzip2State.field_g[var18] = var12 * var20 + (var9 * var19 + var15 * var21Lifetime2) >> 16;
                   DelayedServerPacket.field_o[var18] = var16 * var21Lifetime2 + (var20 * var13 + var19 * var10) >> 16;
                   TextWrappingHelpers.field_b[var18] = var11 * var19 - (-(var14 * var20) - var17 * var21Lifetime2) >> 16;
                   var18++;
@@ -260,7 +260,7 @@ final class EmailValidationError {
               return false;
             }
             MidiNote.field_r = MenuController.keyCodeQueue[LevelData.keyQueueReadIndex];
-            typedCharacter = ve.typedCharQueue[LevelData.keyQueueReadIndex];
+            typedCharacter = ErrorReportingHelpers.typedCharQueue[LevelData.keyQueueReadIndex];
             LevelData.keyQueueReadIndex = 1 + LevelData.keyQueueReadIndex & 127;
             stackIn_5_0 = true;
           }

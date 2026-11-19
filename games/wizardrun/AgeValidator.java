@@ -46,15 +46,15 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!TextLayout.a(var4, (byte) 78)) {
+          if (!TextLayout.isDecimalInteger(var4, (byte) 78)) {
             stackIn_3_0 = DisplayNameSyntaxHelpers.field_c;
             return stackIn_3_0;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = GameMenu.a(1124, var5);
+          var3_int = GameMenu.parseDecimalInteger(1124, var5);
           if (param0 > ~var3_int &&
             130 >= var3_int) {
-            return gf.field_V;
+            return ContentTransitionDialog.field_V;
           }
           stackIn_8_0 = DisplayNameSyntaxHelpers.field_c;
           return stackIn_8_0;
@@ -83,10 +83,10 @@ final class AgeValidator extends TextFieldValidator {
     final static String getLoginIdentifierPrefill(byte param0) {
         String var1 = "";
         if (TimedValidator.field_b != null) {
-          var1 = TimedValidator.field_b.d(false);
+          var1 = TimedValidator.field_b.getLoginIdentifier(false);
         }
         if (0 == var1.length()) {
-          var1 = MidiNote.d((byte) -110);
+          var1 = MidiNote.getCurrentPlayerName((byte) -110);
         }
         if (param0 == 77) {
           if (0 == var1.length()) {

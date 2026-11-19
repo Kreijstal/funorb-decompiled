@@ -15,10 +15,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (tc.mouseHandler == null) {
+          if (SavedDataRequest.mouseHandler == null) {
             return;
           }
-          oc.mouseIdleTime = 0;
+          CoverageFontLoader.mouseIdleTime = 0;
           wizardrun.pointerX = param0.getX();
           IterableNodeHashTable.pointerY = param0.getY();
           IndexedSpriteState.field_i = true;
@@ -39,8 +39,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (tc.mouseHandler != null) {
-            ve.pressedButton = 0;
+          if (SavedDataRequest.mouseHandler != null) {
+            ErrorReportingHelpers.pressedButton = 0;
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "tf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
@@ -54,10 +54,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == tc.mouseHandler) {
+          if (null == SavedDataRequest.mouseHandler) {
             return;
           }
-          oc.mouseIdleTime = 0;
+          CoverageFontLoader.mouseIdleTime = 0;
           wizardrun.pointerX = -1;
           IterableNodeHashTable.pointerY = -1;
           IndexedSpriteState.field_i = true;
@@ -84,17 +84,17 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (tc.mouseHandler != null) {
-            oc.mouseIdleTime = 0;
-            mh.clickX = param0.getX();
+          if (SavedDataRequest.mouseHandler != null) {
+            CoverageFontLoader.mouseIdleTime = 0;
+            AccountProgressDialog.clickX = param0.getX();
             ProgressSubmission.clickY = param0.getY();
             MonotonicClockHelpers.monotonicMillis((byte) 93);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               NetworkArchiveRequest.field_w = 1;
-              ve.pressedButton = 1;
+              ErrorReportingHelpers.pressedButton = 1;
             } else {
               NetworkArchiveRequest.field_w = 2;
-              ve.pressedButton = 2;
+              ErrorReportingHelpers.pressedButton = 2;
             }
             var2_int = param0.getModifiers();
             if ((var2_int & 16) == 0) {
@@ -124,7 +124,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static int a(int param0) {
+    final static int processAccountUiInput(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -137,14 +137,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         var2 = wizardrun.field_H;
         try {
-          GameShell.field_A.processMouseInput(126, true, StatefulWidgetPainter.field_s, dg.field_f);
-          GameShell.field_A.g((byte) 105);
+          GameShell.field_A.processMouseInput(126, true, StatefulWidgetPainter.field_s, ArchiveContainerHelpers.field_f);
+          GameShell.field_A.animateDialogs((byte) 105);
           while (EmailValidationError.pollKeyboardEvent(param0 ^ -20316)) {
             GameShell.field_A.dispatchKeyPress(-90, MidiNote.field_r, EmailValidationError.typedCharacter);
           }
-          if (w.field_a != -1) {
-            var1_int = w.field_a;
-            jc.a((byte) 43, -1);
+          if (UiThemeSetupHelpers.field_a != -1) {
+            var1_int = UiThemeSetupHelpers.field_a;
+            OpacityWidget.setAccountWorkflowState((byte) 43, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }
@@ -155,11 +155,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             stackIn_13_0 = 3;
             return stackIn_13_0;
           }
-          if (wc.field_j == TextButton.field_E) {
+          if (ChatMessage.field_j == TextButton.field_E) {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (!we.field_c.isComplete(true)) {
+          if (!UiSpriteThemeHelpers.field_c.isComplete(true)) {
             stackIn_20_0 = 1;
             return stackIn_20_0;
           }
@@ -191,8 +191,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (tc.mouseHandler != null) {
-            oc.mouseIdleTime = 0;
+          if (SavedDataRequest.mouseHandler != null) {
+            CoverageFontLoader.mouseIdleTime = 0;
             wizardrun.pointerX = param0.getX();
             IterableNodeHashTable.pointerY = param0.getY();
             IndexedSpriteState.field_i = true;
@@ -235,10 +235,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == tc.mouseHandler) {
+          if (null == SavedDataRequest.mouseHandler) {
             return;
           }
-          oc.mouseIdleTime = 0;
+          CoverageFontLoader.mouseIdleTime = 0;
           wizardrun.pointerX = param0.getX();
           IterableNodeHashTable.pointerY = param0.getY();
           IndexedSpriteState.field_i = true;
@@ -265,9 +265,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (tc.mouseHandler != null) {
-            oc.mouseIdleTime = 0;
-            ve.pressedButton = 0;
+          if (SavedDataRequest.mouseHandler != null) {
+            CoverageFontLoader.mouseIdleTime = 0;
+            ErrorReportingHelpers.pressedButton = 0;
             IndexedSpriteState.field_i = true;
             var2_int = param0.getModifiers();
             if (0 == (var2_int & 16)) {

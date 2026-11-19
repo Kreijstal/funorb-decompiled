@@ -139,7 +139,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         break;
                       case 5:
                         if (this.field_j) {
-                          var9.result = this.field_u.a(true);
+                          var9.result = this.field_u.getDisplayModes(true);
                         } else {
                           var9.result = Class.forName("AwtDisplayController").getMethod("listmodes", new Class[]{}).invoke(this.field_t, new Object[]{});
                         }
@@ -151,12 +151,12 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_j) {
                           Class.forName("AwtDisplayController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_t, new Object[]{var14, new Integer(var9.argument >>> 16), new Integer(var9.argument & 65535), new Integer(var9.secondaryArgument >> 16), new Integer(65535 & var9.secondaryArgument)});
                         } else {
-                          this.field_u.a(var9.secondaryArgument >> 16, (byte) 122, var9.argument >>> 16, 65535 & var9.argument, var9.secondaryArgument & 65535, var14);
+                          this.field_u.enterFullscreen(var9.secondaryArgument >> 16, (byte) 122, var9.argument >>> 16, 65535 & var9.argument, var9.secondaryArgument & 65535, var14);
                         }
                         break;
                       case 7:
                         if (this.field_j) {
-                          this.field_u.a(-2147483648, (java.awt.Frame) (var9.input));
+                          this.field_u.exitFullscreen(-2147483648, (java.awt.Frame) (var9.input));
                         } else {
                           Class.forName("AwtDisplayController").getMethod("exit", new Class[]{}).invoke(this.field_t, new Object[]{});
                         }
@@ -176,7 +176,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = var9.argument;
                           var4 = var9.secondaryArgument;
                           if (this.field_j) {
-                            this.field_x.a(var3_int, var4, (byte) 116);
+                            this.field_x.setCursorPosition(var3_int, var4, (byte) 116);
                           } else {
                             Class.forName("AwtCursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_h, new Object[]{new Integer(var3_int), new Integer(var4)});
                           }
@@ -190,7 +190,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.field_j) {
                             Class.forName("AwtCursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_h, new Object[]{var13, new Boolean(var3_int != 0)});
                           } else {
-                            this.field_x.a(0, var3_int != 0, var13);
+                            this.field_x.setCursorVisible(0, var3_int != 0, var13);
                           }
                           break;
                         }
@@ -247,7 +247,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationException) null;
-                      var9.result = mj.a((String) (var9.input), var9.argument, -1).connect((byte) -128);
+                      var9.result = ThrowableFormattingHelpers.a((String) (var9.input), var9.argument, -1).connect((byte) -128);
                     } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationException) (Object) decompiledCaughtException;

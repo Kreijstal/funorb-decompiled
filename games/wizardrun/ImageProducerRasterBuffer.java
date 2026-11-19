@@ -11,7 +11,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     static int[] field_n;
     static String[] field_o;
 
-    private final synchronized void c(int param0) {
+    private final synchronized void publishPixels(int param0) {
         if (null == this.field_j) {
           return;
         }
@@ -23,13 +23,13 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (param0 != 54) {
           return false;
         }
-        if (e.a(-111)) {
+        if (ThreePieceFrameHelpers.a(-111)) {
           return true;
         }
-        if (!f.field_e) {
+        if (!HighscorePlayerState.field_e) {
           return false;
         }
-        if (!e.field_a) {
+        if (!ThreePieceFrameHelpers.field_a) {
           return false;
         }
         return true;
@@ -75,9 +75,9 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(java.awt.Graphics param0, int param1, int param2, int param3) {
+    final void drawToGraphics(java.awt.Graphics param0, int param1, int param2, int param3) {
         try {
-          this.c(0);
+          this.publishPixels(0);
           param0.drawImage(this.field_g, param2, param3, (java.awt.image.ImageObserver) (this));
           if (param1 != -29402) {
             java.awt.Image var6 = (java.awt.Image) null;
@@ -95,12 +95,12 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.field_d = param3;
           this.field_l = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_g = param2.createImage((java.awt.image.ImageProducer) (this));
-          this.c(0);
+          this.publishPixels(0);
           param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
           int var5_int = -33 / ((-53 - param0) / 36);
-          this.c(0);
+          this.publishPixels(0);
           param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.c(0);
+          this.publishPixels(0);
           param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
           this.bindRasterTarget(91);
         } catch (RuntimeException runtimeException) {

@@ -29,8 +29,8 @@ final class AchievementSubmission extends IntrusiveNode {
           var1_int = 0;
           var2 = 0;
           while (EmailValidationError.pollKeyboardEvent(-121)) {
-            IntegerSyntaxHelpers.field_d.a(46);
-            if (IntegerSyntaxHelpers.field_d.b(-1)) {
+            IntegerSyntaxHelpers.field_d.handleVerticalKey(46);
+            if (IntegerSyntaxHelpers.field_d.wasActivated(-1)) {
               var1_int = 1;
             }
             if (MidiNote.field_r != 13) {
@@ -38,8 +38,8 @@ final class AchievementSubmission extends IntrusiveNode {
             }
             var2 = 1;
           }
-          IntegerSyntaxHelpers.field_d.a(DisplayModeInfo.a(-578629823, field_n, NetworkArchiveRequest.field_B), 83, DisplayModeInfo.a(-578629823, MouseInputHandler.field_e, EmailDomainHelpers.field_b));
-          if (IntegerSyntaxHelpers.field_d.b(param0 + 47)) {
+          IntegerSyntaxHelpers.field_d.updatePointer(DisplayModeInfo.a(-578629823, field_n, NetworkArchiveRequest.field_B), 83, DisplayModeInfo.a(-578629823, MouseInputHandler.field_e, EmailDomainHelpers.field_b));
+          if (IntegerSyntaxHelpers.field_d.wasActivated(param0 + 47)) {
             var1_int = 1;
           }
           var3 = 0;
@@ -48,12 +48,12 @@ final class AchievementSubmission extends IntrusiveNode {
             var3 = MusicPatch.field_s[IntegerSyntaxHelpers.field_d.field_g];
             if (var3 == 2 ||
               var3 == 5) {
-              DiskCacheStore.a((byte) 64);
+              DiskCacheStore.clearMenuScreenResources((byte) 64);
             }
           } else {
             if (var2 != 0 &&
-              oc.field_d != 2) {
-              DiskCacheStore.a((byte) 64);
+              CoverageFontLoader.field_d != 2) {
+              DiskCacheStore.clearMenuScreenResources((byte) 64);
             }
           }
           if (param0 != -48) {
@@ -61,7 +61,7 @@ final class AchievementSubmission extends IntrusiveNode {
             return stackIn_23_0;
           }
           if (var3 == 0 &&
-            oc.field_d == 2) {
+            CoverageFontLoader.field_d == 2) {
             var4 = -DirectByteStorage.field_g + MonotonicClockHelpers.monotonicMillis((byte) 115);
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {
@@ -238,7 +238,7 @@ final class AchievementSubmission extends IntrusiveNode {
 
     final static void clearLoginDialogs(int param0) {
         DisplayNameSyntaxHelpers.field_b = null;
-        mh.field_ob = null;
+        AccountProgressDialog.field_ob = null;
         if (param0 != -382) {
           field_j = 3;
         }
@@ -258,7 +258,7 @@ final class AchievementSubmission extends IntrusiveNode {
           if (!param1) {
             AchievementSubmission.sleepMillisUnchecked(122L, 90);
           }
-          var5 = n.field_b;
+          var5 = AccountPacketState.field_b;
           var5.writeCipheredOpcode((byte) 92, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -280,7 +280,7 @@ final class AchievementSubmission extends IntrusiveNode {
         if (param0 != -97) {
           field_q = false;
         }
-        td.field_f.c(new LoginChoicePanel(), -123);
+        KeyboardShutdownHelpers.field_f.transitionToContent(new LoginChoicePanel(), -123);
     }
 
     AchievementSubmission(int param0, int param1, int param2, int param3, int param4, int param5) {

@@ -47,11 +47,11 @@ final class NameAvailabilityRequest {
           if (var3_int > 12) {
             return false;
           }
-          var4 = MouseWheelInput.a(-77, param1);
+          var4 = MouseWheelInput.normalizePlayerName(-77, param1);
           if (var4 != null &&
             1 <= var4.length()) {
-            if (!MonotonicClockHelpers.a(true, var4.charAt(0)) &&
-              !MonotonicClockHelpers.a(true, var4.charAt(var4.length() - 1))) {
+            if (!MonotonicClockHelpers.isNameSeparator(true, var4.charAt(0)) &&
+              !MonotonicClockHelpers.isNameSeparator(true, var4.charAt(var4.length() - 1))) {
               var5 = 0;
               if (param0 != 43) {
                 var9 = (CharSequence) null;
@@ -59,7 +59,7 @@ final class NameAvailabilityRequest {
               }
               for (var6 = 0; param1.length() > var6; var6++) {
                 var7 = param1.charAt(var6);
-                if (MonotonicClockHelpers.a(true, (char) var7)) {
+                if (MonotonicClockHelpers.isNameSeparator(true, (char) var7)) {
                   var5++;
                 } else {
                   var5 = 0;

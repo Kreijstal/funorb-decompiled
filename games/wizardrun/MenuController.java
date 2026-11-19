@@ -20,41 +20,41 @@ abstract class MenuController {
     private final void a(int param0, byte param1) {
         int var4 = wizardrun.field_H;
         if (param1 != 81) {
-          this.b(-42, -78);
+          this.activateMenuItem(-42, -78);
           if (MidiNote.field_r == 96) {
-            this.a(param1 - 87, param0);
+            this.decreaseMenuVolume(param1 - 87, param0);
             return;
           }
           if (97 == MidiNote.field_r) {
-            this.a(param0, false);
+            this.increaseMenuVolume(param0, false);
             return;
           }
           if (MidiNote.field_r == 84) {
-            this.b(-128, param0);
+            this.activateMenuItem(-128, param0);
             return;
           }
           if (MidiNote.field_r == 83) {
-            this.b(-128, param0);
+            this.activateMenuItem(-128, param0);
             return;
           }
           return;
         }
         if (MidiNote.field_r == 96) {
-          this.a(param1 - 87, param0);
+          this.decreaseMenuVolume(param1 - 87, param0);
           return;
         }
         if (97 == MidiNote.field_r) {
-          this.a(param0, false);
+          this.increaseMenuVolume(param0, false);
           return;
         }
         if (MidiNote.field_r == 84) {
-          this.b(-128, param0);
+          this.activateMenuItem(-128, param0);
           return;
         }
         if (MidiNote.field_r != 83) {
           return;
         }
-        this.b(-128, param0);
+        this.activateMenuItem(-128, param0);
     }
 
     void drawMenuItems(int param0) {
@@ -72,9 +72,9 @@ abstract class MenuController {
         field_j = 114;
     }
 
-    abstract void b(int param0, int param1);
+    abstract void activateMenuItem(int param0, int param1);
 
-    abstract void a(int param0, boolean param1);
+    abstract void increaseMenuVolume(int param0, boolean param1);
 
     final void updateKeyboardSelection(int param0) {
         int var3;
@@ -106,7 +106,7 @@ abstract class MenuController {
         this.field_g = true;
     }
 
-    abstract void a(int param0, int param1);
+    abstract void decreaseMenuVolume(int param0, int param1);
 
     final void updatePointerSelection(int param0) {
         int var2 = 0;
@@ -117,10 +117,10 @@ abstract class MenuController {
         if (param0 != -2) {
           return;
         }
-        if (w.field_c == 0) {
+        if (UiThemeSetupHelpers.field_c == 0) {
           if (BrowserUrlLauncher.field_c == 0) {
             this.field_m = false;
-            if (!ih.field_a) {
+            if (!NameCheckHelpers.field_a) {
               return;
             }
             var2 = this.hitTestOption(AchievementSubmission.field_n, -77, NetworkArchiveRequest.field_B);
@@ -138,7 +138,7 @@ abstract class MenuController {
           }
           if (!this.field_m) {
             this.field_m = false;
-            if (!ih.field_a) {
+            if (!NameCheckHelpers.field_a) {
               return;
             }
             var2Lifetime2 = this.hitTestOption(AchievementSubmission.field_n, -77, NetworkArchiveRequest.field_B);
@@ -165,7 +165,7 @@ abstract class MenuController {
         this.field_a = var2Lifetime1;
         if (var2Lifetime1 != -1) {
           this.field_m = true;
-          this.a(MouseInputHandler.field_e, var2Lifetime1, -(this.field_c * var2Lifetime1) + EmailDomainHelpers.field_b - this.field_d, w.field_c, false, false);
+          this.a(MouseInputHandler.field_e, var2Lifetime1, -(this.field_c * var2Lifetime1) + EmailDomainHelpers.field_b - this.field_d, UiThemeSetupHelpers.field_c, false, false);
           return;
         }
         this.field_m = false;
@@ -176,20 +176,20 @@ abstract class MenuController {
         var8 = wizardrun.field_H;
         if (!param4) {
           if (param3 == 1) {
-            this.b(-125, param1);
+            this.activateMenuItem(-125, param1);
           } else {
-            this.a(-6, param1);
+            this.decreaseMenuVolume(-6, param1);
           }
-          ie.field_j = jl.field_r;
+          SavedDataSubmission.field_j = SpriteButtonPainter.field_r;
         } else {
-          ie.field_j = ie.field_j - 1;
-          if (0 >= ie.field_j) {
+          SavedDataSubmission.field_j = SavedDataSubmission.field_j - 1;
+          if (0 >= SavedDataSubmission.field_j) {
             if (param3 == 1) {
-              this.b(-127, param1);
+              this.activateMenuItem(-127, param1);
             } else {
-              this.a(-6, param1);
+              this.decreaseMenuVolume(-6, param1);
             }
-            ie.field_j = mk.field_b;
+            SavedDataSubmission.field_j = AccountValidationHelpers.field_b;
           }
         }
         if (!param5) {

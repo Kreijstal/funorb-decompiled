@@ -26,7 +26,7 @@ final class SoundCache {
         field_b = null;
     }
 
-    final PcmSample a(int param0, int[] param1, int param2) {
+    final PcmSample getVorbisSampleFlat(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         PcmSample stackIn_6_0 = null;
@@ -37,7 +37,7 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_c.getGroupCapacity(0) == 1) {
-            stackIn_3_0 = this.a(param2, true, 0, param1);
+            stackIn_3_0 = this.getVorbisSample(param2, true, 0, param1);
             return stackIn_3_0;
           }
           if (param0 != 19830) {
@@ -47,7 +47,7 @@ final class SoundCache {
           if (1 != this.field_c.getFileCapacity(param0 ^ -19719, param2)) {
             throw new RuntimeException();
           }
-          stackIn_9_0 = this.a(0, true, param2, param1);
+          stackIn_9_0 = this.getVorbisSample(0, true, param2, param1);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ final class SoundCache {
         }
     }
 
-    final PcmSample b(int param0, int[] param1, int param2) {
+    final PcmSample getSoundEffectFlat(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         PcmSample stackIn_7_0 = null;
@@ -73,13 +73,13 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_f.getGroupCapacity(param0 ^ param0) == 1) {
-            stackIn_3_0 = this.a(param1, param0 + 29237, param2, 0);
+            stackIn_3_0 = this.getSoundEffect(param1, param0 + 29237, param2, 0);
             return stackIn_3_0;
           }
           if (this.field_f.getFileCapacity(-110, param2) != 1) {
             throw new RuntimeException();
           }
-          stackIn_7_0 = this.a(param1, param0 + 29237, 0, param2);
+          stackIn_7_0 = this.getSoundEffect(param1, param0 + 29237, 0, param2);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,7 +95,7 @@ final class SoundCache {
         }
     }
 
-    private final PcmSample a(int param0, boolean param1, int param2, int[] param3) {
+    private final PcmSample getVorbisSample(int param0, boolean param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -160,7 +160,7 @@ final class SoundCache {
         }
     }
 
-    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample getSoundEffect(int[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;

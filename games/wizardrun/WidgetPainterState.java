@@ -2,55 +2,55 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class WidgetPainterState {
-    private int field_e;
-    Sprite[] field_j;
+    private int offsetY;
+    Sprite[] frame;
     static long field_g;
-    private int field_a;
-    private int field_c;
+    private int shadowColor;
+    private int alpha;
     static boolean field_d;
-    private boolean field_b;
-    Sprite field_i;
-    private int field_h;
-    private int field_f;
+    private boolean drawBaseFirst;
+    Sprite icon;
+    private int offsetX;
+    private int textColor;
 
-    final WidgetPainterState a(int param0, boolean param1) {
+    final WidgetPainterState setDrawBaseFirst(int param0, boolean param1) {
         int var3 = 23 / ((param0 - 58) / 49);
-        this.field_b = param1 ? true : false;
+        this.drawBaseFirst = param1 ? true : false;
         return this;
     }
 
-    final WidgetPainterState b(byte param0, int param1) {
-        this.field_e = param1;
+    final WidgetPainterState setOffsetY(byte param0, int param1) {
+        this.offsetY = param1;
         if (param0 >= -121) {
-          this.a(116, 12);
+          this.setTextColor(116, 12);
           return this;
         }
         return this;
     }
 
-    final WidgetPainterState a(int param0, byte param1) {
+    final WidgetPainterState setShadowColor(int param0, byte param1) {
         if (param1 != 105) {
           return (WidgetPainterState) null;
         }
-        this.field_a = param0;
+        this.shadowColor = param0;
         return this;
     }
 
-    final WidgetPainterState a(int param0, int param1) {
-        this.field_f = param1;
+    final WidgetPainterState setTextColor(int param0, int param1) {
+        this.textColor = param1;
         int var3 = -10 / ((param0 - 54) / 43);
         return this;
     }
 
-    final WidgetPainterState a(byte param0, int param1) {
-        this.field_h = param1;
+    final WidgetPainterState setOffsetX(byte param0, int param1) {
+        this.offsetX = param1;
         if (param0 >= -83) {
           return (WidgetPainterState) null;
         }
         return this;
     }
 
-    final WidgetPainterState a(int param0, Sprite[] param1) {
+    final WidgetPainterState setFrame(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -58,9 +58,9 @@ final class WidgetPainterState {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 55) {
-            this.a((byte) -5, -10);
+            this.setOffsetX((byte) -5, -10);
           }
-          this.field_j = param1;
+          this.frame = param1;
           return this;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,36 +76,36 @@ final class WidgetPainterState {
         }
     }
 
-    final void a(int param0) {
-        this.field_j = null;
-        this.field_f = 0;
-        this.field_i = null;
-        this.field_h = 0;
-        this.field_e = param0;
-        this.field_a = -1;
-        this.field_c = 256;
+    final void reset(int param0) {
+        this.frame = null;
+        this.textColor = 0;
+        this.icon = null;
+        this.offsetX = 0;
+        this.offsetY = param0;
+        this.shadowColor = -1;
+        this.alpha = 256;
     }
 
-    final void a(WidgetPainterState param0, byte param1) {
+    final void copyTo(WidgetPainterState param0, byte param1) {
         try {
-          param0.field_c = this.field_c;
-          param0.field_f = this.field_f;
-          param0.field_a = this.field_a;
-          param0.field_h = this.field_h;
+          param0.alpha = this.alpha;
+          param0.textColor = this.textColor;
+          param0.shadowColor = this.shadowColor;
+          param0.offsetX = this.offsetX;
           if (param1 >= -2) {
             Sprite[] var4 = (Sprite[]) null;
-            this.a(-37, (Sprite[]) null);
+            this.setFrame(-37, (Sprite[]) null);
           }
-          param0.field_i = this.field_i;
-          param0.field_b = this.field_b;
-          param0.field_j = this.field_j;
-          param0.field_e = this.field_e;
+          param0.icon = this.icon;
+          param0.drawBaseFirst = this.drawBaseFirst;
+          param0.frame = this.frame;
+          param0.offsetY = this.offsetY;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "la.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(UiWidget param0, boolean param1, int param2, StatefulWidgetPainter param3, int param4) {
+    final void drawState(UiWidget param0, boolean param1, int param2, StatefulWidgetPainter param3, int param4) {
         BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
@@ -131,50 +131,50 @@ final class WidgetPainterState {
         try {
           if (param1) {
             var8 = (StatefulWidgetPainter) null;
-            this.a(41, 36, -40, (UiWidget) null, (WidgetPainterState) null, (StatefulWidgetPainter) null);
+            this.applyToState(41, 36, -40, (UiWidget) null, (WidgetPainterState) null, (StatefulWidgetPainter) null);
           }
-          CacheEntry.a(this.field_j, param4 + param0.x, (byte) -110, param0.height, param0.width, param2 + param0.y);
-          if (this.field_i != null) {
-            var6_int = this.field_h + (param4 + param0.x);
+          CacheEntry.a(this.frame, param4 + param0.x, (byte) -110, param0.height, param0.width, param2 + param0.y);
+          if (this.icon != null) {
+            var6_int = this.offsetX + (param4 + param0.x);
             if (param3.field_l == 1) {
-              var6_int = var6_int + (-this.field_i.fullWidth + param0.width) / 2;
+              var6_int = var6_int + (-this.icon.fullWidth + param0.width) / 2;
             }
-            var7 = param2 + (param0.y + this.field_e);
+            var7 = param2 + (param0.y + this.offsetY);
             if (param3.field_l == 2) {
-              var6_int = var6_int + (-this.field_i.fullWidth + param0.width);
+              var6_int = var6_int + (-this.icon.fullWidth + param0.width);
             }
             if (param3.field_a == 1) {
-              var7 = var7 + (-this.field_i.fullHeight + param0.height) / 2;
+              var7 = var7 + (-this.icon.fullHeight + param0.height) / 2;
             }
             if (param3.field_a == 2) {
-              var7 = var7 + (-this.field_i.fullHeight + param0.height);
+              var7 = var7 + (-this.icon.fullHeight + param0.height);
             }
-            this.field_i.drawTransparent(var6_int, var7);
+            this.icon.drawTransparent(var6_int, var7);
           }
-          var6 = param3.b(param0, (byte) -57);
+          var6 = param3.getDisplayText(param0, (byte) -57);
           if (var6 != null &&
             param3.field_k != null &&
-            this.field_f >= 0) {
+            this.textColor >= 0) {
             stackIn_20_0 = param3.field_k;
             stackIn_20_1 = var6;
-            if (this.field_h != -2147483648) {
-              stackIn_21_2 = this.field_h;
+            if (this.offsetX != -2147483648) {
+              stackIn_21_2 = this.offsetX;
             } else {
               stackIn_21_2 = 0;
             }
             stackIn_23_2 = stackIn_21_2 + param3.field_n + (param4 + param0.x);
-            if (this.field_e != -2147483648) {
-              stackIn_24_3 = this.field_e;
+            if (this.offsetY != -2147483648) {
+              stackIn_24_3 = this.offsetY;
             } else {
               stackIn_24_3 = 0;
             }
             stackIn_26_3 = stackIn_24_3 + (param3.field_b + (param0.y + param2));
             stackIn_26_4 = -param3.field_n + (param0.width - param3.field_h);
             stackIn_26_5 = -param3.field_b + param0.height - param3.field_j;
-            stackIn_26_6 = this.field_f;
-            stackIn_26_7 = this.field_a;
-            if (this.field_c != -2147483648) {
-              stackIn_27_8 = this.field_c;
+            stackIn_26_6 = this.textColor;
+            stackIn_26_7 = this.shadowColor;
+            if (this.alpha != -2147483648) {
+              stackIn_27_8 = this.alpha;
             } else {
               stackIn_27_8 = 256;
             }
@@ -201,7 +201,7 @@ final class WidgetPainterState {
         }
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3, WidgetPainterState param4, StatefulWidgetPainter param5) {
+    final void applyToState(int param0, int param1, int param2, UiWidget param3, WidgetPainterState param4, StatefulWidgetPainter param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -212,35 +212,35 @@ final class WidgetPainterState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          if (this.field_b) {
-            param4.a(param3, false, param0, param5, param2);
-            param4.a(0);
+          if (this.drawBaseFirst) {
+            param4.drawState(param3, false, param0, param5, param2);
+            param4.reset(0);
           }
           if (param1 < 72) {
-            this.field_e = 76;
+            this.offsetY = 76;
           }
-          if (this.field_i != null) {
-            param4.field_i = this.field_i;
+          if (this.icon != null) {
+            param4.icon = this.icon;
           }
-          if (this.field_f >= -1) {
-            param4.field_f = this.field_f;
+          if (this.textColor >= -1) {
+            param4.textColor = this.textColor;
           }
-          if (null != this.field_j) {
-            param4.field_j = this.field_j;
+          if (null != this.frame) {
+            param4.frame = this.frame;
           }
-          if (this.field_e != -2147483648) {
-            param4.field_e = this.field_e;
+          if (this.offsetY != -2147483648) {
+            param4.offsetY = this.offsetY;
           }
-          if (this.field_a >= -1) {
-            param4.field_a = this.field_a;
+          if (this.shadowColor >= -1) {
+            param4.shadowColor = this.shadowColor;
           }
-          if (this.field_h != -2147483648) {
-            param4.field_h = this.field_h;
+          if (this.offsetX != -2147483648) {
+            param4.offsetX = this.offsetX;
           }
-          if (this.field_c == -2147483648) {
+          if (this.alpha == -2147483648) {
             return;
           }
-          param4.field_c = this.field_c;
+          param4.alpha = this.alpha;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,14 +269,14 @@ final class WidgetPainterState {
     }
 
     WidgetPainterState() {
-        this.field_j = null;
-        this.field_c = -2147483648;
-        this.field_b = false;
-        this.field_e = -2147483648;
-        this.field_i = null;
-        this.field_a = -2;
-        this.field_h = -2147483648;
-        this.field_f = -2;
+        this.frame = null;
+        this.alpha = -2147483648;
+        this.drawBaseFirst = false;
+        this.offsetY = -2147483648;
+        this.icon = null;
+        this.shadowColor = -2;
+        this.offsetX = -2147483648;
+        this.textColor = -2;
     }
 
     static {

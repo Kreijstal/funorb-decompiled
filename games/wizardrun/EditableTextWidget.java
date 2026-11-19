@@ -3,18 +3,18 @@
  */
 class EditableTextWidget extends TextButton {
     private boolean field_F;
-    private int field_L;
-    private int field_H;
+    private int caretIndex;
+    private int maximumLength;
     private boolean field_Q;
     private long field_I;
-    static qj field_N;
+    static NineSliceFrame field_N;
     static String field_P;
-    static qj field_S;
+    static NineSliceFrame field_S;
     static String[] field_R;
     static int field_O;
     private int field_M;
     static String field_G;
-    private int field_J;
+    private int selectionAnchor;
     private long field_K;
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
@@ -25,12 +25,12 @@ class EditableTextWidget extends TextButton {
           this.renderer.drawWidget(param0, param3, (UiWidget) (this), true, this.field_B);
           if (this.renderer instanceof TextWidgetRenderer) {
             var8 = (TextWidgetRenderer) ((Object) this.renderer);
-            if (this.field_J != this.field_L) {
-              var8.drawSelection(this.field_L, true, this.field_J, param3, param0, (UiWidget) (this));
+            if (this.selectionAnchor != this.caretIndex) {
+              var8.drawSelection(this.caretIndex, true, this.selectionAnchor, param3, param0, (UiWidget) (this));
             }
             var6 = MonotonicClockHelpers.monotonicMillis((byte) 54);
             if ((-this.field_I + var6) % 1000L < 500L) {
-              var8.drawCaret(param3, param0, (UiWidget) (this), 0, this.field_L);
+              var8.drawCaret(param3, param0, (UiWidget) (this), 0, this.caretIndex);
             }
           }
         }
@@ -39,27 +39,27 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setTooltipAnchor(int param0, int param1, int param2) {
         if (param2 > -69) {
           return;
         }
         field_O = param0;
-        ee.field_r = param1;
+        StyleNode.field_r = param1;
     }
 
-    private final int g(byte param0) {
+    private final int nextWordBoundary(byte param0) {
         int var2;
         int var3;
         int var4;
         var4 = wizardrun.field_H;
         var2 = this.text.length();
-        if (this.field_L == var2) {
-          return this.field_L;
+        if (this.caretIndex == var2) {
+          return this.caretIndex;
         }
         if (param0 < 19) {
           return 50;
         }
-        for (var3 = 1 + this.field_L; var3 < var2; var3++) {
+        for (var3 = 1 + this.caretIndex; var3 < var2; var3++) {
           if (this.text.charAt(-1 + var3) != 32) {
             continue;
           }
@@ -75,8 +75,8 @@ class EditableTextWidget extends TextButton {
         this.field_K = 0L;
         try {
           this.renderer = ValidationIndicator.field_H.field_b;
-          this.field_H = param2;
-          this.a(-1, true, param0);
+          this.maximumLength = param2;
+          this.setText(-1, true, param0);
           this.field_F = true;
           this.field_I = MonotonicClockHelpers.monotonicMillis((byte) 94);
         } catch (RuntimeException runtimeException) {
@@ -104,60 +104,60 @@ class EditableTextWidget extends TextButton {
             }
             if (param0 >= 32 &&
               param0 <= 126) {
-              if (this.field_J != this.field_L) {
+              if (this.selectionAnchor != this.caretIndex) {
                 this.deleteSelection(-110);
               }
-              if (this.field_H != -1 &&
-                this.text.length() >= this.field_H) {
+              if (this.maximumLength != -1 &&
+                this.text.length() >= this.maximumLength) {
                 return true;
               }
-              if (this.field_L >= this.text.length()) {
+              if (this.caretIndex >= this.text.length()) {
                 this.text = this.text + param0;
                 dupTemp$0 = this.text.length();
-                this.field_L = dupTemp$0;
-                this.field_J = dupTemp$0;
+                this.caretIndex = dupTemp$0;
+                this.selectionAnchor = dupTemp$0;
               } else {
-                this.text = this.text.substring(0, this.field_L) + param0 + this.text.substring(this.field_L, this.text.length());
-                this.field_L = this.field_L + 1;
-                this.field_J = this.field_L;
+                this.text = this.text.substring(0, this.caretIndex) + param0 + this.text.substring(this.caretIndex, this.text.length());
+                this.caretIndex = this.caretIndex + 1;
+                this.selectionAnchor = this.caretIndex;
               }
-              this.i((byte) -84);
+              this.notifyTextChanged((byte) -84);
               return true;
             }
             if (param1 != 85) {
               if (param1 != 101) {
                 if (param1 == 13) {
-                  this.e(true);
+                  this.clearText(true);
                   return true;
                 }
                 if (96 == param1) {
-                  if (0 < this.field_L) {
+                  if (0 < this.caretIndex) {
                     stackIn_70_1 = 27;
                     if (BufferedSocket.field_p[82]) {
                       stackIn_71_2 = this.previousWordBoundary(31823);
                     } else {
-                      stackIn_71_2 = -1 + this.field_L;
+                      stackIn_71_2 = -1 + this.caretIndex;
                     }
-                    this.a((byte) stackIn_70_1, stackIn_71_2);
+                    this.moveCaret((byte) stackIn_70_1, stackIn_71_2);
                     return true;
                   }
                 } else {
                   if (param1 != 97) {
                     if (param1 == 102) {
-                      this.a((byte) 10, 0);
+                      this.moveCaret((byte) 10, 0);
                       return true;
                     }
                     if (param1 == 103) {
-                      this.a((byte) 92, this.text.length());
+                      this.moveCaret((byte) 92, this.text.length());
                       return true;
                     }
                     if (param1 == 84) {
-                      this.h(0);
+                      this.notifyTextSubmitted(0);
                       return true;
                     }
                     if (BufferedSocket.field_p[82] &&
                       param1 == 65) {
-                      this.j((byte) 75);
+                      this.cutSelection((byte) 75);
                       return true;
                     }
                     if (BufferedSocket.field_p[82] &&
@@ -171,36 +171,36 @@ class EditableTextWidget extends TextButton {
                       return true;
                     }
                   } else {
-                    if (this.field_L < this.text.length()) {
+                    if (this.caretIndex < this.text.length()) {
                       stackIn_41_1 = -127;
                       if (!BufferedSocket.field_p[82]) {
-                        stackIn_42_2 = 1 + this.field_L;
+                        stackIn_42_2 = 1 + this.caretIndex;
                       } else {
-                        stackIn_42_2 = this.g((byte) 24);
+                        stackIn_42_2 = this.nextWordBoundary((byte) 24);
                       }
-                      this.a((byte) stackIn_41_1, stackIn_42_2);
+                      this.moveCaret((byte) stackIn_41_1, stackIn_42_2);
                       return true;
                     }
                   }
                 }
               } else {
-                if (this.field_L != this.field_J) {
+                if (this.caretIndex != this.selectionAnchor) {
                   this.deleteSelection(76);
                   return true;
                 }
-                if (this.field_L < this.text.length()) {
-                  this.field_J = 1 + this.field_L;
+                if (this.caretIndex < this.text.length()) {
+                  this.selectionAnchor = 1 + this.caretIndex;
                   this.deleteSelection(-73);
                   return true;
                 }
               }
             } else {
-              if (this.field_J != this.field_L) {
+              if (this.selectionAnchor != this.caretIndex) {
                 this.deleteSelection(-92);
                 return true;
               }
-              if (this.field_L > 0) {
-                this.field_J = -1 + this.field_L;
+              if (this.caretIndex > 0) {
+                this.selectionAnchor = -1 + this.caretIndex;
                 this.deleteSelection(31);
                 return true;
               }
@@ -222,7 +222,7 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    private final void b(String param0, int param1) {
+    private final void insertText(String param0, int param1) {
         int var3_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -230,24 +230,24 @@ class EditableTextWidget extends TextButton {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_H != -1) {
-            var3_int = this.field_H - this.text.length();
+          if (this.maximumLength != -1) {
+            var3_int = this.maximumLength - this.text.length();
             if (var3_int >= 0) {
               return;
             }
             param0 = param0.substring(0, var3_int);
           }
-          if (this.field_L != this.text.length()) {
-            this.text = this.text.substring(0, this.field_L) + param0 + this.text.substring(this.field_L, this.text.length());
+          if (this.caretIndex != this.text.length()) {
+            this.text = this.text.substring(0, this.caretIndex) + param0 + this.text.substring(this.caretIndex, this.text.length());
           } else {
             this.text = this.text + param0;
           }
-          this.field_L = this.field_L + param0.length();
+          this.caretIndex = this.caretIndex + param0.length();
           if (param1 <= 76) {
-            this.a((byte) -42, -84);
+            this.moveCaret((byte) -42, -84);
           }
-          this.field_J = this.field_L;
-          this.i((byte) -122);
+          this.selectionAnchor = this.caretIndex;
+          this.notifyTextChanged((byte) -122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,23 +263,23 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    void i(byte param0) {
+    void notifyTextChanged(byte param0) {
         if (this.listener instanceof TextChangeListener) {
-          ((TextChangeListener) (this.listener)).onTextSubmitted(this, 5);
+          ((TextChangeListener) (this.listener)).onTextChanged(this, 5);
         }
         if (param0 >= -59) {
           this.field_Q = true;
         }
     }
 
-    final static void a(ScoreSubmission param0, int param1, int param2) {
+    final static void writeScoreSubmission(ScoreSubmission param0, int param1, int param2) {
         IsaacPacketBuffer var8 = null;
         IsaacPacketBuffer var9 = null;
         int var4 = 0;
         int var5 = 0;
         int var7 = wizardrun.field_H;
         try {
-          var8 = n.field_b;
+          var8 = AccountPacketState.field_b;
           var9 = var8;
           var9.writeCipheredOpcode((byte) -105, param1);
           var9.position = var9.position + 1;
@@ -328,18 +328,18 @@ class EditableTextWidget extends TextButton {
             } else {
               stackIn_6_2 = var8_int;
             }
-            this.a((byte) stackIn_5_1, stackIn_6_2);
+            this.moveCaret((byte) stackIn_5_1, stackIn_6_2);
             var8_long = MonotonicClockHelpers.monotonicMillis((byte) 42);
             stackIn_9_1 = !(var8_long - this.field_K >= 250L);
             this.field_Q = stackIn_9_1;
             if (this.field_Q) {
-              this.field_J = this.previousWordBoundary(31823);
-              this.field_L = this.g((byte) 113);
-              if (this.field_L > 0 &&
-                this.text.charAt(-1 + this.field_L) == 32) {
-                this.field_L = this.field_L - 1;
+              this.selectionAnchor = this.previousWordBoundary(31823);
+              this.caretIndex = this.nextWordBoundary((byte) 113);
+              if (this.caretIndex > 0 &&
+                this.text.charAt(-1 + this.caretIndex) == 32) {
+                this.caretIndex = this.caretIndex - 1;
               }
-              this.field_M = this.field_L;
+              this.field_M = this.caretIndex;
             }
             this.field_K = var8_long;
             return true;
@@ -360,14 +360,14 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final void e(boolean param0) {
-        this.field_J = 0;
-        this.field_L = 0;
+    final void clearText(boolean param0) {
+        this.selectionAnchor = 0;
+        this.caretIndex = 0;
         this.text = "";
         if (!param0) {
           return;
         }
-        this.i((byte) -81);
+        this.notifyTextChanged((byte) -81);
     }
 
     void updateInput(int param0, int param1, int param2, UiWidget param3) {
@@ -375,17 +375,17 @@ class EditableTextWidget extends TextButton {
         int var6 = 0;
         try {
           super.updateInput(param0 + 0, param1, param2, param3);
-          this.e(param0 ^ param0);
+          this.scrollCaretIntoView(param0 ^ param0);
           if (this.pressedMouseButton == 1) {
             if (this.renderer instanceof TextWidgetRenderer) {
               var7 = (TextWidgetRenderer) ((Object) this.renderer);
               var6 = var7.getTextIndexAt(9397, AchievementSubmission.field_n, param2, (UiWidget) (this), param1, NetworkArchiveRequest.field_B);
               if (var6 != -1) {
                 if (this.field_Q && var6 < this.field_M &&
-                  var6 > this.field_J) {
+                  var6 > this.selectionAnchor) {
                   var6 = this.field_M;
                 }
-                this.field_L = var6;
+                this.caretIndex = var6;
               }
             }
             this.field_I = MonotonicClockHelpers.monotonicMillis((byte) 44);
@@ -400,7 +400,7 @@ class EditableTextWidget extends TextButton {
         field_G = null;
         if (param0 != 37) {
           ScoreSubmission var2 = (ScoreSubmission) null;
-          EditableTextWidget.a((ScoreSubmission) null, 98, 109);
+          EditableTextWidget.writeScoreSubmission((ScoreSubmission) null, 98, 109);
         }
         field_N = null;
         field_R = null;
@@ -411,13 +411,13 @@ class EditableTextWidget extends TextButton {
         int var2;
         int var3;
         var3 = wizardrun.field_H;
-        if (this.field_L == 0) {
-          return this.field_L;
+        if (this.caretIndex == 0) {
+          return this.caretIndex;
         }
         if (param0 != 31823) {
           field_O = -60;
         }
-        for (var2 = this.field_L - 1; 0 < var2; var2--) {
+        for (var2 = this.caretIndex - 1; 0 < var2; var2--) {
           if (this.text.charAt(-1 + var2) != 32) {
             continue;
           }
@@ -426,33 +426,33 @@ class EditableTextWidget extends TextButton {
         return var2;
     }
 
-    private final void h(int param0) {
+    private final void notifyTextSubmitted(int param0) {
         if (param0 != 0) {
           this.drawLayer(59, -78, 27, 72);
         }
         if (this.listener instanceof TextChangeListener) {
-          ((TextChangeListener) (this.listener)).onTextChanged(param0 ^ -117, this);
+          ((TextChangeListener) (this.listener)).onTextSubmitted(param0 ^ -117, this);
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void moveCaret(byte param0, int param1) {
         int var3 = 10 % ((-48 - param0) / 44);
-        this.field_L = param1;
+        this.caretIndex = param1;
         if (!BufferedSocket.field_p[81]) {
-          this.field_J = this.field_L;
+          this.selectionAnchor = this.caretIndex;
         }
     }
 
     private final String getSelectedText(int param0) {
         if (param0 != -12938) {
-          this.field_J = 68;
+          this.selectionAnchor = 68;
         }
-        int var2 = this.field_L > this.field_J ? this.field_J : this.field_L;
-        int var3 = this.field_L > this.field_J ? this.field_L : this.field_J;
+        int var2 = this.caretIndex > this.selectionAnchor ? this.selectionAnchor : this.caretIndex;
+        int var3 = this.caretIndex > this.selectionAnchor ? this.caretIndex : this.selectionAnchor;
         return this.text.substring(var2, var3);
     }
 
-    private final void e(int param0) {
+    private final void scrollCaretIntoView(int param0) {
         TextLayout var3;
         int var4;
         int var5;
@@ -474,7 +474,7 @@ class EditableTextWidget extends TextButton {
         }
         var9 = (TextWidgetRenderer) ((Object) this.renderer);
         var3 = var9.getTextLayout((UiWidget) (this), (byte) 78);
-        var4 = var3.a(-127);
+        var4 = var3.getMaximumLineWidth(-127);
         var5 = var9.getContentWidth((UiWidget) (this), param0 - 106);
         var6 = var9.getLineHeight((byte) 62) >> 1;
         if (var4 < var5 - var6) {
@@ -482,7 +482,7 @@ class EditableTextWidget extends TextButton {
           this.textOffsetY = 0;
           return;
         }
-        var7 = this.textOffsetX + var3.a(62, this.field_L);
+        var7 = this.textOffsetX + var3.getCharacterX(62, this.caretIndex);
         if (var5 - var6 >= var7) {
           if (var6 > var7) {
             this.textOffsetX = this.textOffsetX + var6 - var7;
@@ -510,7 +510,7 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final void a(int param0, boolean param1, String param2) {
+    final void setText(int param0, boolean param1, String param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_12_0 = null;
@@ -524,15 +524,15 @@ class EditableTextWidget extends TextButton {
           }
           this.text = param2;
           var4_int = param2.length();
-          if (this.field_H != param0 &&
-            this.field_H < var4_int) {
-            this.text = this.text.substring(0, this.field_H);
+          if (this.maximumLength != param0 &&
+            this.maximumLength < var4_int) {
+            this.text = this.text.substring(0, this.maximumLength);
           }
           dupTemp$1 = this.text.length();
-          this.field_J = dupTemp$1;
-          this.field_L = dupTemp$1;
+          this.selectionAnchor = dupTemp$1;
+          this.caretIndex = dupTemp$1;
           if (!param1) {
-            this.i((byte) -94);
+            this.notifyTextChanged((byte) -94);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -553,13 +553,13 @@ class EditableTextWidget extends TextButton {
         int var3 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        if (this.field_J != this.field_L) {
-          var2 = this.field_L > this.field_J ? this.field_J : this.field_L;
-          var3 = this.field_L <= this.field_J ? this.field_J : this.field_L;
-          this.field_L = var2;
-          this.field_J = var2;
+        if (this.selectionAnchor != this.caretIndex) {
+          var2 = this.caretIndex > this.selectionAnchor ? this.selectionAnchor : this.caretIndex;
+          var3 = this.caretIndex <= this.selectionAnchor ? this.selectionAnchor : this.caretIndex;
+          this.caretIndex = var2;
+          this.selectionAnchor = var2;
           this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
-          this.i((byte) -115);
+          this.notifyTextChanged((byte) -115);
         }
         var2Lifetime1 = 47 / ((param0 + 20) / 43);
     }
@@ -572,10 +572,10 @@ class EditableTextWidget extends TextButton {
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
             if (param0 < 1) {
-              this.field_J = -125;
+              this.selectionAnchor = -125;
             }
             this.deleteSelection(-125);
-            this.b(var2, 84);
+            this.insertText(var2, 84);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -587,7 +587,7 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    private final void j(byte param0) {
+    private final void cutSelection(byte param0) {
         if (param0 != 75) {
           this.drawLayer(-59, 57, 98, 61);
         }

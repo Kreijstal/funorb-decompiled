@@ -27,28 +27,28 @@ final class RadialSelectorWidget extends TextButton {
           ValidationState.field_e[0][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster02", 121);
           ValidationState.field_e[0][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster04", 94);
           DiskCacheStore.field_b[0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level1blocks", 110);
-          ExceptionSupport.field_c[0] = vg.loadSprite(15, "level1background", SingleChildWidget.field_E, "");
-          ExceptionSupport.field_c[1] = vg.loadSprite(15, "level2background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[0] = FullscreenFailureDialog.loadSprite(15, "level1background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[1] = FullscreenFailureDialog.loadSprite(15, "level2background", SingleChildWidget.field_E, "");
           DiskCacheStore.field_b[1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level2blocks", 122);
           ValidationState.field_e[1][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster10", 97);
           ValidationState.field_e[1][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster11", 121);
           ValidationState.field_e[1][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster12", 96);
           ValidationState.field_e[1][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster13", 115);
           ValidationState.field_e[1][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster14", 112);
-          ExceptionSupport.field_c[2] = vg.loadSprite(15, "level3background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[2] = FullscreenFailureDialog.loadSprite(15, "level3background", SingleChildWidget.field_E, "");
           DiskCacheStore.field_b[2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level3blocks", 102);
           ValidationState.field_e[2][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster20", 89);
           ValidationState.field_e[2][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster21", 124);
           ValidationState.field_e[2][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster22", 118);
           ValidationState.field_e[2][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster23", 97);
           ValidationState.field_e[2][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster24", 119);
-          ExceptionSupport.field_c[3] = vg.loadSprite(15, "level4background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[3] = FullscreenFailureDialog.loadSprite(15, "level4background", SingleChildWidget.field_E, "");
           DiskCacheStore.field_b[3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level4blocks", 90);
           ValidationState.field_e[3][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster30", 111);
           ValidationState.field_e[3][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster31", 104);
           ValidationState.field_e[3][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster32", 118);
           ValidationState.field_e[3][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster34", 105);
-          ExceptionSupport.field_c[4] = vg.loadSprite(15, "level5background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[4] = FullscreenFailureDialog.loadSprite(15, "level5background", SingleChildWidget.field_E, "");
           DiskCacheStore.field_b[4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level5blocks", 92);
           ValidationState.field_e[4][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster40", 125);
           if (param0 > -27) {
@@ -58,14 +58,14 @@ final class RadialSelectorWidget extends TextButton {
           ValidationState.field_e[4][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster42", 119);
           ValidationState.field_e[4][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster43", 121);
           ValidationState.field_e[4][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster44", 114);
-          ExceptionSupport.field_c[5] = vg.loadSprite(15, "level6background", SingleChildWidget.field_E, "");
+          ExceptionSupport.field_c[5] = FullscreenFailureDialog.loadSprite(15, "level6background", SingleChildWidget.field_E, "");
           DiskCacheStore.field_b[5] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level6blocks", 93);
           ValidationState.field_e[5][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster50", 107);
           ValidationState.field_e[5][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster52", 115);
           ValidationState.field_e[5][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster51", 90);
           ValidationState.field_e[5][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster53", 98);
           ValidationState.field_e[5][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster54", 107);
-          hh.field_eb = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster55", 110);
+          SpriteTextStyle.field_eb = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster55", 110);
           MusicPatch.field_j = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster56", 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,13 +181,13 @@ final class RadialSelectorWidget extends TextButton {
         int var13Lifetime1;
         var19 = wizardrun.field_H;
         try {
-          var5_int = ByteStorage.a(false, 3 * (param2 - param3));
+          var5_int = ByteStorage.bitLength(false, 3 * (param2 - param3));
           var6 = 3 * param3;
           var7 = -10 + var5_int;
-          vj.b(0);
+          LevelActorSpawner.b(0);
           if (0 < param4.field_n &&
             null != param4.field_x) {
-            of.c(45);
+            RankingRequest.c(45);
           }
           SecondaryNodeDequeIterator.field_c = 0;
           var8 = 0;
@@ -210,11 +210,11 @@ final class RadialSelectorWidget extends TextButton {
               }
               if (!stackIn_10_0 ||
                 !(var14 * var17 - var16 * var15 >= 0)) {
-                var12Lifetime1 = dl.field_a[var9];
+                var12Lifetime1 = CommonUiLoadingProgress.field_a[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = dl.field_a[var10];
+                  var13Lifetime1 = CommonUiLoadingProgress.field_a[var10];
                   if (-2147483648 != var13Lifetime1) {
-                    var14 = dl.field_a[var11];
+                    var14 = CommonUiLoadingProgress.field_a[var11];
                     if (-2147483648 != var14) {
                       var15 = var14 + (var13Lifetime1 + var12Lifetime1) - var6;
                       if (var7 >= 0) {
@@ -222,8 +222,8 @@ final class RadialSelectorWidget extends TextButton {
                       } else {
                         stackIn_28_0 = var15 << -var7;
                       }
-                      var16 = -stackIn_28_0 + (id.field_b.length - 1);
-                      var17 = id.field_b[var16];
+                      var16 = -stackIn_28_0 + (PasswordContentHelpers.field_b.length - 1);
+                      var17 = PasswordContentHelpers.field_b[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -233,18 +233,18 @@ final class RadialSelectorWidget extends TextButton {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = id.field_b[var16];
+                          var17 = PasswordContentHelpers.field_b[var16];
                           continue;
                         }
                         stackIn_39_0Lifetime1 = var16 << 4;
                         stackIn_39_1Lifetime1 = var17;
                         var18 = stackIn_39_0Lifetime1 + stackIn_39_1Lifetime1;
                         BeveledFrameFactory.field_e[var18] = var8;
-                        id.field_b[var16] = var17 + 1;
+                        PasswordContentHelpers.field_b[var16] = var17 + 1;
                         if (0 < param4.field_n &&
                           param4.field_x != null) {
                           dupTemp$0 = param4.field_x[var8];
-                          t.field_a[dupTemp$0] = t.field_a[dupTemp$0] + 1;
+                          KeyboardQueueConsumer.field_a[dupTemp$0] = KeyboardQueueConsumer.field_a[dupTemp$0] + 1;
                         }
                         SecondaryNodeDequeIterator.field_c = SecondaryNodeDequeIterator.field_c + 1;
                         break;
@@ -268,9 +268,9 @@ final class RadialSelectorWidget extends TextButton {
             null != param4.field_x) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(t.field_a.length <= var9Lifetime1)) {
-              var10Lifetime1 = t.field_a[var9Lifetime1];
-              t.field_a[var9Lifetime1] = var8Lifetime1;
+            while (!(KeyboardQueueConsumer.field_a.length <= var9Lifetime1)) {
+              var10Lifetime1 = KeyboardQueueConsumer.field_a[var9Lifetime1];
+              KeyboardQueueConsumer.field_a[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -328,8 +328,8 @@ final class RadialSelectorWidget extends TextButton {
         try {
           try {
             var5 = wizardrun.field_G.getGraphics();
-            if (null == mh.field_ob) {
-              mh.field_ob = new java.awt.Font("Helvetica", 1, 13);
+            if (null == AccountProgressDialog.field_ob) {
+              AccountProgressDialog.field_ob = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param1) {
               var5.setColor(java.awt.Color.black);
@@ -352,7 +352,7 @@ final class RadialSelectorWidget extends TextButton {
               var6.setColor(java.awt.Color.black);
               var6.drawRect(1, 1, 301, 31);
               var6.fillRect(param2 * 3 + 2, 2, -(param2 * 3) + 300, 30);
-              var6.setFont(mh.field_ob);
+              var6.setFont(AccountProgressDialog.field_ob);
               var6.setColor(java.awt.Color.white);
               var6.drawString(param3, (-(6 * param3.length()) + 304) / 2, 22);
               var5.drawImage(DisplayNameSyntaxHelpers.field_b, ResizableDialog.field_R / 2 - 152, -18 + ResizableDialog.field_P / 2, (java.awt.image.ImageObserver) null);
@@ -367,12 +367,12 @@ final class RadialSelectorWidget extends TextButton {
               var5.setColor(java.awt.Color.black);
               var5.drawRect(var7 + 1, 1 + var8, 301, 31);
               var5.fillRect(var7 + 2 + 3 * param2, 2 + var8, -(3 * param2) + 300, 30);
-              var5.setFont(mh.field_ob);
+              var5.setFont(AccountProgressDialog.field_ob);
               var5.setColor(java.awt.Color.white);
               var5.drawString(param3, var7 + (304 - param3.length() * 6) / 2, 22 + var8);
             }
             if (LoginPacketBuilder.field_e != null) {
-              var5.setFont(mh.field_ob);
+              var5.setFont(AccountProgressDialog.field_ob);
               var5.setColor(java.awt.Color.white);
               var5.drawString(LoginPacketBuilder.field_e, ResizableDialog.field_R / 2 - LoginPacketBuilder.field_e.length() * 6 / 2, ResizableDialog.field_P / 2 - 26);
             }
@@ -458,13 +458,13 @@ final class RadialSelectorWidget extends TextButton {
         int var13Lifetime1;
         var19 = wizardrun.field_H;
         try {
-          var5_int = ByteStorage.a(false, 3 * (param2 - param3));
+          var5_int = ByteStorage.bitLength(false, 3 * (param2 - param3));
           var6 = 3 * param3;
           var7 = -10 + var5_int;
-          vj.b(0);
+          LevelActorSpawner.b(0);
           if (0 < param4.field_n &&
             null != param4.field_x) {
-            of.c(45);
+            RankingRequest.c(45);
           }
           SecondaryNodeDequeIterator.field_c = 0;
           var8 = 0;
@@ -487,11 +487,11 @@ final class RadialSelectorWidget extends TextButton {
               }
               if (!stackIn_10_0 ||
                 !(var14 * var17 - var16 * var15 >= 0)) {
-                var12Lifetime1 = dl.field_a[var9];
+                var12Lifetime1 = CommonUiLoadingProgress.field_a[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = dl.field_a[var10];
+                  var13Lifetime1 = CommonUiLoadingProgress.field_a[var10];
                   if (-2147483648 != var13Lifetime1) {
-                    var14 = dl.field_a[var11];
+                    var14 = CommonUiLoadingProgress.field_a[var11];
                     if (-2147483648 != var14) {
                       var15 = var14 + (var13Lifetime1 + var12Lifetime1) - var6;
                       if (var7 >= 0) {
@@ -499,8 +499,8 @@ final class RadialSelectorWidget extends TextButton {
                       } else {
                         stackIn_28_0 = var15 << -var7;
                       }
-                      var16 = -stackIn_28_0 + (id.field_b.length - 1);
-                      var17 = id.field_b[var16];
+                      var16 = -stackIn_28_0 + (PasswordContentHelpers.field_b.length - 1);
+                      var17 = PasswordContentHelpers.field_b[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -510,18 +510,18 @@ final class RadialSelectorWidget extends TextButton {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = id.field_b[var16];
+                          var17 = PasswordContentHelpers.field_b[var16];
                           continue;
                         }
                         stackIn_39_0Lifetime1 = var16 << 4;
                         stackIn_39_1Lifetime1 = var17;
                         var18 = stackIn_39_0Lifetime1 + stackIn_39_1Lifetime1;
                         BeveledFrameFactory.field_e[var18] = var8;
-                        id.field_b[var16] = var17 + 1;
+                        PasswordContentHelpers.field_b[var16] = var17 + 1;
                         if (0 < param4.field_n &&
                           param4.field_x != null) {
                           dupTemp$0 = param4.field_x[var8];
-                          t.field_a[dupTemp$0] = t.field_a[dupTemp$0] + 1;
+                          KeyboardQueueConsumer.field_a[dupTemp$0] = KeyboardQueueConsumer.field_a[dupTemp$0] + 1;
                         }
                         SecondaryNodeDequeIterator.field_c = SecondaryNodeDequeIterator.field_c + 1;
                         break;
@@ -545,9 +545,9 @@ final class RadialSelectorWidget extends TextButton {
             null != param4.field_x) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(t.field_a.length <= var9Lifetime1)) {
-              var10Lifetime1 = t.field_a[var9Lifetime1];
-              t.field_a[var9Lifetime1] = var8Lifetime1;
+            while (!(KeyboardQueueConsumer.field_a.length <= var9Lifetime1)) {
+              var10Lifetime1 = KeyboardQueueConsumer.field_a[var9Lifetime1];
+              KeyboardQueueConsumer.field_a[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

@@ -42,11 +42,11 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
         if (param0 >= -118) {
           PacketBuffer var4 = (PacketBuffer) null;
-          this.a(92, (PacketBuffer) null, 16);
+          this.decodeOpcode(92, (PacketBuffer) null, 16);
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isReflectionCheckReady(byte param0) {
         int var2 = 0;
         ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
@@ -55,7 +55,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (ReflectionCheck) (kj.field_d.first((byte) 46));
+          var4 = (ReflectionCheck) (SystemMemoryHelpers.field_d.first((byte) 46));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -86,10 +86,10 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         if (param0 != 0) {
           return;
         }
-        MouseInputHandler.a(-20232);
+        MouseInputHandler.processAccountUiInput(-20232);
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void decodeOpcode(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -136,7 +136,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.field_v = FadingDialog.a(param1.readCp1252String(0), -22710, '<');
+            this.field_v = FadingDialog.splitOnCharacter(param1.readCp1252String(0), -22710, '<');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -164,7 +164,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     QuickChatPhraseDefinition() {
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void decode(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = wizardrun.field_H;
         int var3_intLifetime1;
@@ -174,7 +174,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             if (var3_int == 0) {
               break;
             }
-            this.a(117, param0, var3_int);
+            this.decodeOpcode(117, param0, var3_int);
           }
           var3_intLifetime1 = 44 % ((-38 - param1) / 36);
         } catch (RuntimeException runtimeException) {

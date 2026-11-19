@@ -42,21 +42,21 @@ final class UrlPacketDownloader implements Runnable {
               ReflectionCheck.field_o = false;
               var3_int = 1;
             }
-            RadialSelectorWidget.a(10487, var3_int != 0, dl.getCommonUiLoadProgress(true), NameSuggestionsPanel.g(17325), ArchiveLoadingStage.field_e);
+            RadialSelectorWidget.a(10487, var3_int != 0, CommonUiLoadingProgress.getCommonUiLoadProgress(true), NameSuggestionsPanel.getAccountUiLoadMessage(17325), ArchiveLoadingStage.field_e);
             return;
           }
-          if (!w.a((byte) -117)) {
+          if (!UiThemeSetupHelpers.isLogoAnimationComplete((byte) -117)) {
             SoftwareRasterizer.clear();
-            dg.a(320, 240, (byte) -97);
-            DateFormattingHelpers.a((byte) 80, 0, param2, 0);
+            ArchiveContainerHelpers.a(320, 240, (byte) -97);
+            DateFormattingHelpers.presentRaster((byte) 80, 0, param2, 0);
             return;
           }
           if (ArchiveRequest.field_t != 0) {
             ArchiveLoadingPlan.drawLoadingScreen(false, param2);
             return;
           }
-          uk.a((byte) -123, param1, false);
-          DateFormattingHelpers.a((byte) 80, 0, param2, 0);
+          QuickChatPhraseRepository.drawMenuOverlay((byte) -123, param1, false);
+          DateFormattingHelpers.presentRaster((byte) 80, 0, param2, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,15 +135,15 @@ final class UrlPacketDownloader implements Runnable {
         RuntimeException var2 = null;
         var4 = wizardrun.field_H;
         try {
-          var5 = (ProgressSubmission) (v.field_d.first((byte) 111));
+          var5 = (ProgressSubmission) (SpriteAlphaState.field_d.first((byte) 111));
           while (var5 != null) {
             SecondaryNodeDeque.writeProgressSubmission(-14149, param0, var5);
-            var5 = (ProgressSubmission) (v.field_d.next(8192));
+            var5 = (ProgressSubmission) (SpriteAlphaState.field_d.next(8192));
           }
           var3 = 105 % ((param1 + 34) / 40);
           var6 = (ProgressQuery) (LevelData.field_c.first((byte) 118));
           while (var6 != null) {
-            ld.writeProgressQuery(param0, var6, 0);
+            MusicPatchLoader.writeProgressQuery(param0, var6, 0);
             var6 = (ProgressQuery) (LevelData.field_c.next(8192));
           }
           return;
@@ -295,7 +295,7 @@ final class UrlPacketDownloader implements Runnable {
           return;
         }
         try {
-          GameMenu.d(-31782);
+          GameMenu.pushRasterState(-31782);
           SoftwareRasterizer.setTarget(param0.pixels, param0.fullWidth, param0.fullHeight);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ud.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

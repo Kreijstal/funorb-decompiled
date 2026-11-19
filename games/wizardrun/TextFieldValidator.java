@@ -9,7 +9,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
 
     abstract ValidationState validateText(int param0, String param1);
 
-    public final void onTextChanged(int param0, EditableTextWidget param1) {
+    public final void onTextSubmitted(int param0, EditableTextWidget param1) {
         try {
           if (param0 > -111) {
             this.getCurrentValidationMessage((byte) -122);
@@ -63,11 +63,11 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
           return this.getTextValidationMessage(this.field_i.text, -1);
         }
         EditableTextWidget var3 = (EditableTextWidget) null;
-        this.onTextChanged(-1, (EditableTextWidget) null);
+        this.onTextSubmitted(-1, (EditableTextWidget) null);
         return this.getTextValidationMessage(this.field_i.text, -1);
     }
 
-    public final void onTextSubmitted(EditableTextWidget param0, int param1) {
+    public final void onTextChanged(EditableTextWidget param0, int param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -113,7 +113,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
           var5 = 91 / ((-19 - param3) / 54);
           var4_int = param2.getGroupId(-1, param0);
           var6 = param2.getFileId(var4_int, param1, -11986);
-          stackIn_1_0 = of.loadIndexedSprite(param2, var6, (byte) -128, var4_int);
+          stackIn_1_0 = RankingRequest.loadIndexedSprite(param2, var6, (byte) -128, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

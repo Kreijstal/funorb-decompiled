@@ -23,7 +23,7 @@ final class MidiEnvelope {
         field_l = null;
     }
 
-    final static void a(int param0, java.applet.Applet param1, String param2) {
+    final static void writeSettingsCookie(int param0, java.applet.Applet param1, String param2) {
         try {
           RuntimeException stackIn_12_0 = null;
           StringBuilder stackIn_12_1 = null;
@@ -45,7 +45,7 @@ final class MidiEnvelope {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            pa.field_f = param2;
+            EncryptedLoginHelpers.field_f = param2;
             try {
               var7 = param1.getParameter("cookieprefix");
               var5 = var7;
@@ -71,7 +71,7 @@ final class MidiEnvelope {
               return;
             }
             var6 = (String) null;
-            MidiEnvelope.a(-77, (java.applet.Applet) null, (String) null);
+            MidiEnvelope.writeSettingsCookie(-77, (java.applet.Applet) null, (String) null);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -98,7 +98,7 @@ final class MidiEnvelope {
         }
     }
 
-    final static void a(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
+    final static void exitAndDisposeFullscreen(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
         AsyncRequest var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;

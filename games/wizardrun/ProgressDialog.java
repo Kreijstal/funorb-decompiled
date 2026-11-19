@@ -11,8 +11,8 @@ final class ProgressDialog extends ResizableDialog {
     private String field_cb;
     private boolean field_ab;
 
-    final void b(int param0, int param1, int param2) {
-        super.b(param0, -1, param2);
+    final void drawDialogFrame(int param0, int param1, int param2) {
+        super.drawDialogFrame(param0, -1, param2);
         PacketBuffer.field_i.drawStringCentered(this.field_X, (this.width >> 1) + param0, 103 + param2, 16777215, param1);
         if (null != this.field_cb) {
           SoftwareRasterizer.drawHorizontalLine(20 + param0, -7 + param2 + 120, 260, 8421504);
@@ -32,10 +32,10 @@ final class ProgressDialog extends ResizableDialog {
         if ((!param3 ? 1 : 0) == (this.field_U ? 1 : 0)) {
           this.field_U = param3 ? true : false;
           if (this.field_U) {
-            this.field_Z.a(8405024, -1028717695, 4210752);
+            this.field_Z.setBarColors(8405024, -1028717695, 4210752);
             this.field_Z.field_I = true;
           } else {
-            this.field_Z.a(2113632, -1028717695, 4210752);
+            this.field_Z.setBarColors(2113632, -1028717695, 4210752);
             if (this.field_ab) {
               this.field_Z.field_I = false;
             }
@@ -66,13 +66,13 @@ final class ProgressDialog extends ResizableDialog {
           this.field_cb = param1;
           if (null != this.field_cb) {
             var3_int = PacketBuffer.field_i.measureWrappedHeight(this.field_cb, 260, PacketBuffer.field_i.field_M);
-            this.a(6154, 150 + var3_int, 300);
+            this.resizeAndCenter(6154, 150 + var3_int, 300);
           }
           this.field_Z = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Z.field_I = true;
           this.field_ab = false;
           this.field_U = false;
-          this.a((UiWidget) (this.field_Z), (byte) 27);
+          this.addChild((UiWidget) (this.field_Z), (byte) 27);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

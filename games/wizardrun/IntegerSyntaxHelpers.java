@@ -132,7 +132,7 @@ final class IntegerSyntaxHelpers {
                 var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4Lifetime2);
-              param0.getAppletContext().showDocument(jl.a(-122, var5, param0), "_self");
+              param0.getAppletContext().showDocument(SpriteButtonPainter.appendChangedSessionParameters(-122, var5, param0), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

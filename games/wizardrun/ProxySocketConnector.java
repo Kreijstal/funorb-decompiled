@@ -36,2990 +36,2990 @@ final class ProxySocketConnector extends SocketConnector {
             }
             void loadLoginAccountAndReportTexts() throws java.lang.RuntimeException {
                 FramedButtonPainter.field_r = param1;
-                var2 = ra.loadNamedResource("loginm3", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("loginm3", (byte) -113);
                 if (var2 != null) {
-                  ArchiveLoadingStage.field_b = nf.a((byte) 115, var2);
+                  ArchiveLoadingStage.field_b = AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("loginm2", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("loginm2", (byte) -114);
                 if (var2 != null) {
-                  TextLayoutLine.field_d = nf.a((byte) 108, var2);
+                  TextLayoutLine.field_d = AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("loginm1", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("loginm1", (byte) -108);
                 if (null != var2) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("idlemessage20min", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("idlemessage20min", (byte) -99);
                 if (null != var2) {
-                  RasterBuffer.field_e = nf.a((byte) 110, var2);
+                  RasterBuffer.field_e = AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("error_js5crc", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("error_js5crc", (byte) -115);
                 if (var2 != null) {
-                  ScoreSubmission.field_r = nf.a((byte) 106, var2);
+                  ScoreSubmission.field_r = AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("error_js5io", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("error_js5io", (byte) -102);
                 if (var2 != null) {
-                  ld.field_f = nf.a((byte) 92, var2);
+                  MusicPatchLoader.field_f = AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("error_js5connect_full", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("error_js5connect_full", (byte) -109);
                 if (var2 != null) {
-                  AccountFormText.field_d = nf.a((byte) 100, var2);
+                  AccountFormText.field_d = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("error_js5connect", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("error_js5connect", (byte) -118);
                 if (var2 != null) {
-                  SingleChildWidget.field_C = nf.a((byte) 96, var2);
+                  SingleChildWidget.field_C = AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("login_gameupdated", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("login_gameupdated", (byte) -110);
                 if (var2 != null) {
-                  LoginChoicePanel.field_L = nf.a((byte) 118, var2);
+                  LoginChoicePanel.field_L = AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("create_unable", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("create_unable", (byte) -119);
                 if (var2 != null) {
-                  ii.field_b = nf.a((byte) 119, var2);
+                  NameAvailabilityFactory.field_b = AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("create_ineligible", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("create_ineligible", (byte) -113);
                 if (null != var2) {
-                  tk.field_f = nf.a((byte) 108, var2);
+                  HyperlinkPainter.field_f = AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("usernameprompt", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("usernameprompt", (byte) -106);
                 if (null != var2) {
-                  nf.a((byte) 91, var2);
+                  AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("passwordprompt", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("passwordprompt", (byte) -126);
                 if (var2 != null) {
-                  nf.a((byte) 110, var2);
+                  AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("andagainprompt", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("andagainprompt", (byte) -98);
                 if (null != var2) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("ticketing_read", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("ticketing_read", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("ticketing_ignore", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("ticketing_ignore", (byte) -117);
                 if (var2 != null) {
-                  nf.a((byte) 125, var2);
+                  AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("ticketing_oneunread", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("ticketing_oneunread", (byte) -121);
                 if (var2 != null) {
-                  SocketConnector.field_d = nf.a((byte) 97, var2);
+                  SocketConnector.field_d = AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("ticketing_xunread", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("ticketing_xunread", (byte) -115);
                 if (var2 != null) {
-                  of.field_m = nf.a((byte) 107, var2);
+                  RankingRequest.field_m = AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("ticketing_gotowebsite", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("ticketing_gotowebsite", (byte) -111);
                 if (null != var2) {
-                  IntrusiveDequeCursor.field_c = nf.a((byte) 113, var2);
+                  IntrusiveDequeCursor.field_c = AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("ticketing_waitingformessages", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("ticketing_waitingformessages", (byte) -118);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_on", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_on", (byte) -115);
                 if (var2 != null) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_friends", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_friends", (byte) -120);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_off", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_off", (byte) -116);
                 if (null != var2) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_lobby", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_lobby", (byte) -117);
                 if (null != var2) {
-                  nf.a((byte) 96, var2);
+                  AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_public", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_public", (byte) -115);
                 if (null != var2) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_ignore", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_ignore", (byte) -98);
                 if (null != var2) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_tips", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_tips", (byte) -127);
                 if (var2 != null) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_game", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_game", (byte) -128);
                 if (null != var2) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_private", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_private", (byte) -107);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_entered_game", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_entered_game", (byte) -115);
                 if (null != var2) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_joined_your_game", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_joined_your_game", (byte) -111);
                 if (null != var2) {
-                  nf.a((byte) 101, var2);
+                  AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_entered_other_game", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_entered_other_game", (byte) -103);
                 if (var2 != null) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_left_lobby", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_left_lobby", (byte) -95);
                 if (var2 != null) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_lost_con", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_lost_con", (byte) -103);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_cannot_join_full", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_cannot_join_full", (byte) -117);
                 if (null != var2) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_cannot_join_inprogress", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_cannot_join_inprogress", (byte) -110);
                 if (var2 != null) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_declined_invite", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_declined_invite", (byte) -98);
                 if (null != var2) {
-                  nf.a((byte) 92, var2);
+                  AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_withdrew_request", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_withdrew_request", (byte) -106);
                 if (var2 != null) {
-                  nf.a((byte) 101, var2);
+                  AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_removed", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_removed", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("mu_x_dropped_out", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("mu_x_dropped_out", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("mu_entered_other_game", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("mu_entered_other_game", (byte) -100);
                 if (null != var2) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("mu_game_is_full", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("mu_game_is_full", (byte) -119);
                 if (null != var2) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("mu_game_has_started", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("mu_game_has_started", (byte) -113);
                 if (var2 != null) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("mu_you_declined_invite", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("mu_you_declined_invite", (byte) -108);
                 if (var2 != null) {
-                  nf.a((byte) 94, var2);
+                  AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("mu_invite_withdrawn", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("mu_invite_withdrawn", (byte) -119);
                 if (null != var2) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("mu_request_declined", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("mu_request_declined", (byte) -109);
                 if (null != var2) {
-                  nf.a((byte) 123, var2);
+                  AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("mu_request_withdrawn", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("mu_request_withdrawn", (byte) -127);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("mu_all_players_have_left", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("mu_all_players_have_left", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 105, var2);
+                  AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("mu_lobby_name", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("mu_lobby_name", (byte) -123);
                 if (null != var2) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("mu_lobby_rating", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("mu_lobby_rating", (byte) -125);
                 if (var2 != null) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("mu_lobby_friend_add", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("mu_lobby_friend_add", (byte) -106);
                 if (null != var2) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("mu_lobby_friend_rm", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("mu_lobby_friend_rm", (byte) -122);
                 if (var2 != null) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("mu_lobby_name_add", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("mu_lobby_name_add", (byte) -100);
                 if (null != var2) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("mu_lobby_name_rm", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("mu_lobby_name_rm", (byte) -110);
                 if (var2 != null) {
-                  nf.a((byte) 101, var2);
+                  AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("mu_lobby_location", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("mu_lobby_location", (byte) -114);
                 if (null != var2) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gamelist_all_games", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("mu_gamelist_all_games", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 125, var2);
+                  AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gamelist_status", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("mu_gamelist_status", (byte) -110);
                 if (var2 != null) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gamelist_owner", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("mu_gamelist_owner", (byte) -119);
                 if (null != var2) {
-                  nf.a((byte) 121, var2);
+                  AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gamelist_players", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("mu_gamelist_players", (byte) -124);
                 if (null != var2) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gamelist_avg_rating", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("mu_gamelist_avg_rating", (byte) -118);
                 if (null != var2) {
-                  nf.a((byte) 124, var2);
+                  AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gamelist_options", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("mu_gamelist_options", (byte) -116);
                 if (null != var2) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gamelist_elapsed_time", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("mu_gamelist_elapsed_time", (byte) -111);
                 if (null != var2) {
-                  nf.a((byte) 125, var2);
+                  AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("mu_play_rated", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("mu_play_rated", (byte) -123);
                 if (null != var2) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("mu_create_unrated", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("mu_create_unrated", (byte) -117);
                 if (var2 != null) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("mu_options", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("mu_options", (byte) -96);
                 if (null != var2) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("mu_options_whocanjoin", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("mu_options_whocanjoin", (byte) -107);
                 if (null != var2) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("mu_options_players", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("mu_options_players", (byte) -109);
                 if (var2 != null) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("mu_options_dontmind", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("mu_options_dontmind", (byte) -126);
                 if (null != var2) {
-                  nf.a((byte) 111, var2);
+                  AccountFormTextHelpers.a((byte) 111, var2);
                 }
-                var2 = ra.loadNamedResource("mu_options_allow_spectate", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("mu_options_allow_spectate", (byte) -126);
                 if (null != var2) {
-                  nf.a((byte) 113, var2);
+                  AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("mu_options_ratedgametype", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("mu_options_ratedgametype", (byte) -115);
                 if (var2 != null) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("yes", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("yes", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("no", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("no", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("mu_invite_players", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("mu_invite_players", (byte) -113);
                 if (var2 != null) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("close", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("close", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("add_x_to_friends", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("add_x_to_friends", (byte) -120);
                 if (null != var2) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("add_x_to_ignore", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("add_x_to_ignore", (byte) -114);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("rm_x_from_friends", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("rm_x_from_friends", (byte) -103);
                 if (var2 != null) {
-                  nf.a((byte) 105, var2);
+                  AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("rm_x_from_ignore", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("rm_x_from_ignore", (byte) -117);
                 if (null != var2) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("send_pm_to_x", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("send_pm_to_x", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("send_qc_to_x", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("send_qc_to_x", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("send_pm", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("send_pm", (byte) -111);
                 if (null != var2) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("invite_accept_xs_game", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("invite_accept_xs_game", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("invite_decline_xs_game", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("invite_decline_xs_game", (byte) -106);
                 if (null != var2) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("join_xs_game", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("join_xs_game", (byte) -110);
                 if (null != var2) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("join_request_xs_game", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("join_request_xs_game", (byte) -128);
                 if (var2 != null) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("join_withdraw_request_xs_game", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("join_withdraw_request_xs_game", (byte) -95);
                 if (var2 != null) {
-                  nf.a((byte) 125, var2);
+                  AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gameopt_kick_x_from_this_game", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("mu_gameopt_kick_x_from_this_game", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
                 if (param0 != 0) {
                   finished = true; return;
                 }
-                var2 = ra.loadNamedResource("mu_gameopt_withdraw_invite_to_x", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("mu_gameopt_withdraw_invite_to_x", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 113, var2);
+                  AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gameopt_accept_x_into_game", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("mu_gameopt_accept_x_into_game", (byte) -120);
                 if (null != var2) {
-                  nf.a((byte) 102, var2);
+                  AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gameopt_reject_x_from_game", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("mu_gameopt_reject_x_from_game", (byte) -100);
                 if (null != var2) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("mu_gameopt_invite_x_to_game", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("mu_gameopt_invite_x_to_game", (byte) -107);
                 if (var2 != null) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("report_x_for_abuse", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("report_x_for_abuse", (byte) -118);
                 if (null != var2) {
-                  nf.a((byte) 92, var2);
+                  AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("unable_to_send_message_password_a", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("unable_to_send_message_password_a", (byte) -111);
                 if (null != var2) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("unable_to_send_message_password_b", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("unable_to_send_message_password_b", (byte) -127);
                 if (null != var2) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_lobby_show_all", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_lobby_show_all", (byte) -98);
                 if (null != var2) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_lobby_friends_only", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_lobby_friends_only", (byte) -128);
                 if (null != var2) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_lobby_friends", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_lobby_friends", (byte) -100);
                 if (null != var2) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_lobby_hide", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_lobby_hide", (byte) -119);
                 if (var2 != null) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_game_show_all", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_game_show_all", (byte) -112);
                 if (null != var2) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_game_friends_only", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_game_friends_only", (byte) -114);
                 if (var2 != null) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_game_friends", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_game_friends", (byte) -99);
                 if (var2 != null) {
-                  nf.a((byte) 110, var2);
+                  AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_game_hide", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_game_hide", (byte) -113);
                 if (null != var2) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_pm_show_all", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_pm_show_all", (byte) -110);
                 if (var2 != null) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_pm_friends_only", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_pm_friends_only", (byte) -119);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_pm_friends", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_pm_friends", (byte) -104);
                 if (var2 != null) {
-                  nf.a((byte) 124, var2);
+                  AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("mu_chat_invisible_and_silent_mode", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("mu_chat_invisible_and_silent_mode", (byte) -96);
                 if (null != var2) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("you_have_been_removed_from_xs_game", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("you_have_been_removed_from_xs_game", (byte) -100);
                 if (null != var2) {
-                  nf.a((byte) 121, var2);
+                  AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("your_rating_is_x", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("your_rating_is_x", (byte) -110);
                 if (null != var2) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("you_are_on_x_server", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("you_are_on_x_server", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("rated_game", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("rated_game", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("unrated_game", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("unrated_game", (byte) -102);
                 if (var2 != null) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("rated_game_tips", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("rated_game_tips", (byte) -107);
                 if (var2 != null) {
-                  nf.a((byte) 87, var2);
+                  AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("searching_for_opponent_singular", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("searching_for_opponent_singular", (byte) -122);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("searching_for_opponents_plural", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("searching_for_opponents_plural", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("find_opponent_singular", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("find_opponent_singular", (byte) -102);
                 if (var2 != null) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("find_opponents_plural", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("find_opponents_plural", (byte) -95);
                 if (var2 != null) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("rated_game_tips_setup_singular", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("rated_game_tips_setup_singular", (byte) -128);
                 if (var2 != null) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("rated_game_tips_setup_plural", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("rated_game_tips_setup_plural", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 111, var2);
+                  AccountFormTextHelpers.a((byte) 111, var2);
                 }
-                var2 = ra.loadNamedResource("waiting_to_start_hint", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("waiting_to_start_hint", (byte) -123);
                 if (var2 != null) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("your_game", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("your_game", (byte) -107);
                 if (null != var2) {
-                  nf.a((byte) 111, var2);
+                  AccountFormTextHelpers.a((byte) 111, var2);
                 }
-                var2 = ra.loadNamedResource("game_full", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("game_full", (byte) -125);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("join_requests_one", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("join_requests_one", (byte) -100);
                 if (null != var2) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("join_requests_many", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("join_requests_many", (byte) -116);
                 if (var2 != null) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("xs_game", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("xs_game", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("waiting_for_x_to_start_game", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("waiting_for_x_to_start_game", (byte) -107);
                 if (null != var2) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("game_options_changed", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("game_options_changed", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 124, var2);
+                  AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("players_x_of_y", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("players_x_of_y", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("message_lobby", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("message_lobby", (byte) -116);
                 if (null != var2) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_lobby", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_lobby", (byte) -110);
                 if (var2 != null) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("message_game", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("message_game", (byte) -105);
                 if (var2 != null) {
-                  nf.a((byte) 105, var2);
+                  AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("message_team", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("message_team", (byte) -128);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_game", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_game", (byte) -128);
                 if (null != var2) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("kick", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("kick", (byte) -125);
                 if (var2 != null) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("inviting_x", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("inviting_x", (byte) -101);
                 if (null != var2) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("x_wants_to_join", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("x_wants_to_join", (byte) -105);
                 if (var2 != null) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("accept", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("accept", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("reject", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("reject", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("invite", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("invite", (byte) -108);
                 if (var2 != null) {
-                  nf.a((byte) 102, var2);
+                  AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("status_concluded", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("status_concluded", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("status_spectate", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("status_spectate", (byte) -120);
                 if (var2 != null) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("status_playing", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("status_playing", (byte) -125);
                 if (null != var2) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("status_join", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("status_join", (byte) -116);
                 if (var2 != null) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("status_private", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("status_private", (byte) -127);
                 if (var2 != null) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("status_full", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("status_full", (byte) -97);
                 if (var2 != null) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("players_in_game", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("players_in_game", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("you_are_invited_to_xs_game", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("you_are_invited_to_xs_game", (byte) -109);
                 if (var2 != null) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("asking_to_join_xs_game", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("asking_to_join_xs_game", (byte) -103);
                 if (var2 != null) {
-                  nf.a((byte) 92, var2);
+                  AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("who_can_join", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("who_can_join", (byte) -97);
                 if (null != var2) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("you_can_join", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("you_can_join", (byte) -113);
                 if (null != var2) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("you_can_ask_to_join", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("you_can_ask_to_join", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("you_cannot_join_in_progress", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("you_cannot_join_in_progress", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("you_can_spectate", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("you_can_spectate", (byte) -96);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("you_can_not_spectate", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("you_can_not_spectate", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("spectate_xs_game", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("spectate_xs_game", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("hide_players_in_xs_game", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("hide_players_in_xs_game", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("show_players_in_xs_game", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("show_players_in_xs_game", (byte) -115);
                 if (null != var2) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("connecting_to_friend_server_twoline", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("connecting_to_friend_server_twoline", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("loading", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("loading", (byte) -108);
                 if (null != var2) {
-                  NameSuggestionsPanel.field_G = nf.a((byte) 101, var2);
+                  NameSuggestionsPanel.field_G = AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("offline", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("offline", (byte) -106);
                 if (var2 != null) {
-                  nf.a((byte) 104, var2);
+                  AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("multiconst_invite_only", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("multiconst_invite_only", (byte) -113);
                 if (var2 != null) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("multiconst_clan", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("multiconst_clan", (byte) -103);
                 if (null != var2) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("multiconst_friends", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("multiconst_friends", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 124, var2);
+                  AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("multiconst_similar_rating", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("multiconst_similar_rating", (byte) -106);
                 if (null != var2) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("multiconst_open", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("multiconst_open", (byte) -110);
                 if (var2 != null) {
-                  nf.a((byte) 92, var2);
+                  AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("no_options_available", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("no_options_available", (byte) -113);
                 if (var2 != null) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("reportabuse", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("reportabuse", (byte) -100);
                 if (var2 != null) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("presstabtochat", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("presstabtochat", (byte) -124);
                 if (null != var2) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("pressf10toquickchat", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("pressf10toquickchat", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("dob_chatdisabled", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("dob_chatdisabled", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("dob_enterforchat", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("dob_enterforchat", (byte) -117);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("tab_hidechattemporarily", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("tab_hidechattemporarily", (byte) -107);
                 if (null != var2) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("esc_cancelprivatemessage", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("esc_cancelprivatemessage", (byte) -106);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("esc_cancelthisline", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("esc_cancelthisline", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("privatequickchat_from_x", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("privatequickchat_from_x", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("privatequickchat_to_x", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("privatequickchat_to_x", (byte) -121);
                 if (null != var2) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("privatechat_blankarea_explanation", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("privatechat_blankarea_explanation", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("publicchat_unavailable_ratedgame", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("publicchat_unavailable_ratedgame", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("privatechat_friend_offline", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("privatechat_friend_offline", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 104, var2);
+                  AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("privatechat_friend_notlisted", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("privatechat_friend_notlisted", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 111, var2);
+                  AccountFormTextHelpers.a((byte) 111, var2);
                 }
-                var2 = ra.loadNamedResource("chatviewscrolledup", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("chatviewscrolledup", (byte) -121);
                 if (var2 != null) {
-                  nf.a((byte) 96, var2);
+                  AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("thisisrunescapeclan", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("thisisrunescapeclan", (byte) -97);
                 if (null != var2) {
-                  nf.a((byte) 121, var2);
+                  AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("thisisrunescapeclan_notowner", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("thisisrunescapeclan_notowner", (byte) -115);
                 if (null != var2) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("runescapeclan", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("runescapeclan", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("rated_membersonly", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("rated_membersonly", (byte) -125);
                 if (var2 != null) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_membersonly", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_membersonly", (byte) -107);
                 if (var2 != null) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_1moreratedgame", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_1moreratedgame", (byte) -118);
                 if (null != var2) {
-                  nf.a((byte) 113, var2);
+                  AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_moreratedgames", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_moreratedgames", (byte) -96);
                 if (var2 != null) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_needrating", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_needrating", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_unratedonly", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_unratedonly", (byte) -113);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_notunlocked", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_notunlocked", (byte) -97);
                 if (null != var2) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_cannotbecombined1", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_cannotbecombined1", (byte) -102);
                 if (null != var2) {
-                  nf.a((byte) 102, var2);
+                  AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_cannotbecombined2", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_cannotbecombined2", (byte) -120);
                 if (var2 != null) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_playernotmember", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_playernotmember", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 92, var2);
+                  AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_younotmember", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_younotmember", (byte) -123);
                 if (null != var2) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_playerneedsrating", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_playerneedsrating", (byte) -124);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_youneedrating", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_youneedrating", (byte) -95);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_playerneedsratedgames", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_playerneedsratedgames", (byte) -113);
                 if (null != var2) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_youneedratedgames", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_youneedratedgames", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_playerneeds1ratedgame", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_playerneeds1ratedgame", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 121, var2);
+                  AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_youneed1ratedgame", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_youneed1ratedgame", (byte) -107);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_playerhasntunlocked", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_playerhasntunlocked", (byte) -114);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_youhaventunlocked", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_youhaventunlocked", (byte) -103);
                 if (var2 != null) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_trychanging1", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_trychanging1", (byte) -107);
                 if (null != var2) {
-                  nf.a((byte) 92, var2);
+                  AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_trychanging2", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_trychanging2", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 101, var2);
+                  AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_needchanging1", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_needchanging1", (byte) -120);
                 if (var2 != null) {
-                  nf.a((byte) 105, var2);
+                  AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_needchanging2", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_needchanging2", (byte) -97);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_mightchange", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_mightchange", (byte) -119);
                 if (null != var2) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_playersdontqualify", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_playersdontqualify", (byte) -104);
                 if (var2 != null) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_playersdontqualify_selectgametab", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_playersdontqualify_selectgametab", (byte) -105);
                 if (var2 != null) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_unselectedoptions", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_unselectedoptions", (byte) -108);
                 if (null != var2) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_pleaseselectoption1", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_pleaseselectoption1", (byte) -109);
                 if (var2 != null) {
-                  nf.a((byte) 87, var2);
+                  AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_pleaseselectoption2", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_pleaseselectoption2", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_badnumplayers", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_badnumplayers", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_inviteplayers_or_trychanging1", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_inviteplayers_or_trychanging1", (byte) -115);
                 if (var2 != null) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_inviteplayers_or_trychanging2", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_inviteplayers_or_trychanging2", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_novalidcombos", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_novalidcombos", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("gameopt_pleasetrychanging", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("gameopt_pleasetrychanging", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 84, var2);
+                  AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("ra_title", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("ra_title", (byte) -123);
                 if (null != var2) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("ra_mutethisplayer", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("ra_mutethisplayer", (byte) -103);
                 if (null != var2) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("ra_suggestmute", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("ra_suggestmute", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 102, var2);
+                  AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("ra_intro", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("ra_intro", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("ra_intro_no_name", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("ra_intro_no_name", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("ra_explanation", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("ra_explanation", (byte) -100);
                 if (var2 != null) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("rule_pillar_0", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("rule_pillar_0", (byte) -114);
                 if (null != var2) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("rule_0_0", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("rule_0_0", (byte) -128);
                 if (null != var2) {
-                  nf.a((byte) 123, var2);
+                  AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("rule_0_1", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("rule_0_1", (byte) -117);
                 if (var2 != null) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("rule_0_2", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("rule_0_2", (byte) -102);
                 if (null != var2) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("rule_0_3", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("rule_0_3", (byte) -118);
                 if (null != var2) {
-                  nf.a((byte) 87, var2);
+                  AccountFormTextHelpers.a((byte) 87, var2);
                 }
             }
             void loadRuleSocialAndResourceTexts() throws java.lang.RuntimeException {
-                var2 = ra.loadNamedResource("rule_0_4", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("rule_0_4", (byte) -127);
                 if (null != var2) {
-                  nf.a((byte) 111, var2);
+                  AccountFormTextHelpers.a((byte) 111, var2);
                 }
-                var2 = ra.loadNamedResource("rule_0_5", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("rule_0_5", (byte) -128);
                 if (var2 != null) {
-                  nf.a((byte) 124, var2);
+                  AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("rule_pillar_1", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("rule_pillar_1", (byte) -103);
                 if (null != var2) {
-                  nf.a((byte) 94, var2);
+                  AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("rule_1_0", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("rule_1_0", (byte) -116);
                 if (var2 != null) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("rule_1_1", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("rule_1_1", (byte) -109);
                 if (null != var2) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("rule_1_2", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("rule_1_2", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 105, var2);
+                  AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("rule_1_3", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("rule_1_3", (byte) -104);
                 if (var2 != null) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("rule_1_4", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("rule_1_4", (byte) -121);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("rule_pillar_2", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("rule_pillar_2", (byte) -104);
                 if (var2 != null) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("rule_2_0", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("rule_2_0", (byte) -106);
                 if (null != var2) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("rule_2_1", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("rule_2_1", (byte) -127);
                 if (var2 != null) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("rule_2_2", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("rule_2_2", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 96, var2);
+                  AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("createafreeaccount", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("createafreeaccount", (byte) -101);
                 if (null != var2) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("cancel", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("cancel", (byte) -128);
                 if (null != var2) {
-                  StringPaddingHelpers.field_a = nf.a((byte) 111, var2);
+                  StringPaddingHelpers.field_a = AccountFormTextHelpers.a((byte) 111, var2);
                 }
-                var2 = ra.loadNamedResource("pleaselogintoplay", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("pleaselogintoplay", (byte) -123);
                 if (var2 != null) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("pleaselogin", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("pleaselogin", (byte) -116);
                 if (null != var2) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("pleaselogin_member", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("pleaselogin_member", (byte) -117);
                 if (null != var2) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("invaliduserorpass", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("invaliduserorpass", (byte) -116);
                 if (var2 != null) {
-                  DateFormattingHelpers.field_a = nf.a((byte) 115, var2);
+                  DateFormattingHelpers.field_a = AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("pleasetryagain", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("pleasetryagain", (byte) -121);
                 if (var2 != null) {
-                  ca.field_g = nf.a((byte) 113, var2);
+                  MeshMaterial.field_g = AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("pleasereenterpass", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("pleasereenterpass", (byte) -97);
                 if (null != var2) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("playfreeversion", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("playfreeversion", (byte) -113);
                 if (var2 != null) {
-                  NodeHashTableIterator.field_b = nf.a((byte) 96, var2);
+                  NodeHashTableIterator.field_b = AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("reloadgame", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("reloadgame", (byte) -116);
                 if (null != var2) {
-                  GameApplet.field_j = nf.a((byte) 97, var2);
+                  GameApplet.field_j = AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("toserverlist", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("toserverlist", (byte) -109);
                 if (var2 != null) {
-                  vl.field_g = nf.a((byte) 118, var2);
+                  CheckboxPainter.field_g = AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("tocustomersupport", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("tocustomersupport", (byte) -117);
                 if (null != var2) {
-                  EmailLoginCredentials.field_h = nf.a((byte) 126, var2);
+                  EmailLoginCredentials.field_h = AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("changedisplayname", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("changedisplayname", (byte) -120);
                 if (var2 != null) {
-                  SecondaryNodeDeque.field_a = nf.a((byte) 84, var2);
+                  SecondaryNodeDeque.field_a = AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("returntohomepage", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("returntohomepage", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 102, var2);
+                  AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("justplay", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("justplay", (byte) -119);
                 if (var2 != null) {
-                  DualLinkDeque.field_b = nf.a((byte) 116, var2);
+                  DualLinkDeque.field_b = AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("justplay_excl", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("justplay_excl", (byte) -111);
                 if (null != var2) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("login", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("login", (byte) -119);
                 if (null != var2) {
-                  ByteStorage.field_a = nf.a((byte) 98, var2);
+                  ByteStorage.field_a = AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("goback", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("goback", (byte) -123);
                 if (null != var2) {
-                  v.field_c = nf.a((byte) 110, var2);
+                  SpriteAlphaState.field_c = AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("otheroptions", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("otheroptions", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("proceed", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("proceed", (byte) -109);
                 if (var2 != null) {
-                  nf.a((byte) 94, var2);
+                  AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("connectingtoserver", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("connectingtoserver", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("pleasewait", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("pleasewait", (byte) -103);
                 if (var2 != null) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("logging_in", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("logging_in", (byte) -102);
                 if (var2 != null) {
-                  LoginCredentialKind.field_c = nf.a((byte) 104, var2);
+                  LoginCredentialKind.field_c = AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("reconnect", (byte) -123);
                 if (var2 != null) {
-                  nf.a((byte) 91, var2);
+                  AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("backtoerror", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("backtoerror", (byte) -112);
                 if (null != var2) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("pleasecheckinternet", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("pleasecheckinternet", (byte) -123);
                 if (null != var2) {
-                  nf.a((byte) 113, var2);
+                  AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("attemptingtoreconnect", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("attemptingtoreconnect", (byte) -111);
                 if (null != var2) {
-                  nf.a((byte) 121, var2);
+                  AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("connectionlost_reconnecting", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("connectionlost_reconnecting", (byte) -114);
                 if (var2 != null) {
-                  LoginCredentials.field_f = nf.a((byte) 100, var2);
+                  LoginCredentials.field_f = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("connectionlost_withreason", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("connectionlost_withreason", (byte) -119);
                 if (null != var2) {
-                  ca.field_d = nf.a((byte) 110, var2);
+                  MeshMaterial.field_d = AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("passwordverificationrequired", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("passwordverificationrequired", (byte) -121);
                 if (null != var2) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("invalidpass", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("invalidpass", (byte) -95);
                 if (null != var2) {
-                  PcmResampler.field_f = nf.a((byte) 127, var2);
+                  PcmResampler.field_f = AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("retry", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("retry", (byte) -119);
                 if (var2 != null) {
-                  me.field_a = nf.a((byte) 91, var2);
+                  LoadingMessageHelpers.field_a = AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("back", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("back", (byte) -104);
                 if (null != var2) {
-                  IsaacRandom.field_h = nf.a((byte) 93, var2);
+                  IsaacRandom.field_h = AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("exitfullscreenmode", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("exitfullscreenmode", (byte) -95);
                 if (var2 != null) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("quittowebsite", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("quittowebsite", (byte) -119);
                 if (var2 != null) {
-                  ReflectionCheck.field_q = nf.a((byte) 99, var2);
+                  ReflectionCheck.field_q = AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("connectionrestored", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("connectionrestored", (byte) -105);
                 if (var2 != null) {
-                  BrowserUrlLauncher.field_d = nf.a((byte) 92, var2);
+                  BrowserUrlLauncher.field_d = AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("warning_ifyouquit", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("warning_ifyouquit", (byte) -123);
                 if (var2 != null) {
-                  BrowserUrlLauncher.field_a = nf.a((byte) 90, var2);
+                  BrowserUrlLauncher.field_a = AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("warning_ifyouquitorleavepage", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("warning_ifyouquitorleavepage", (byte) -110);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("resubscribe_withoutlosing_fs", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("resubscribe_withoutlosing_fs", (byte) -122);
                 if (var2 != null) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("resubscribe_withoutlosing", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("resubscribe_withoutlosing", (byte) -112);
                 if (null != var2) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("customersupport_withoutlosing_fs", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("customersupport_withoutlosing_fs", (byte) -126);
                 if (null != var2) {
-                  nf.a((byte) 87, var2);
+                  AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("customersupport_withoutlosing", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("customersupport_withoutlosing", (byte) -115);
                 if (var2 != null) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("js5help_withoutlosing_fs", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("js5help_withoutlosing_fs", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("js5help_withoutlosing", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("js5help_withoutlosing", (byte) -118);
                 if (null != var2) {
-                  nf.a((byte) 123, var2);
+                  AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("checkinternet_withoutlosing_fs", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("checkinternet_withoutlosing_fs", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("checkinternet_withoutlosing", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("checkinternet_withoutlosing", (byte) -117);
                 if (null != var2) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("create_intro", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("create_intro", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("create_sameaccounttip_unnamed", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("create_sameaccounttip_unnamed", (byte) -100);
                 if (var2 != null) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("dateofbirthprompt", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("dateofbirthprompt", (byte) -95);
                 if (var2 != null) {
-                  nf.a((byte) 110, var2);
+                  AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("fetchingcountrylist", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("fetchingcountrylist", (byte) -116);
                 if (null != var2) {
-                  nf.a((byte) 110, var2);
+                  AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("countryprompt", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("countryprompt", (byte) -124);
                 if (null != var2) {
-                  nf.a((byte) 121, var2);
+                  AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("countrylisterror", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("countrylisterror", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("theonlypersonalquestions", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("theonlypersonalquestions", (byte) -121);
                 if (var2 != null) {
-                  nf.a((byte) 105, var2);
+                  AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("create_submittingdata", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("create_submittingdata", (byte) -127);
                 if (var2 != null) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("check", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("check", (byte) -119);
                 if (null != var2) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("create_pleasechooseausername", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("create_pleasechooseausername", (byte) -102);
                 if (var2 != null) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("create_usernameblurb", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("create_usernameblurb", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("checkingavailability", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("checkingavailability", (byte) -107);
                 if (null != var2) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("checking", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("checking", (byte) -97);
                 if (var2 != null) {
-                  ke.field_v = nf.a((byte) 109, var2);
+                  PasswordFieldPainter.field_v = AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("create_namealreadytaken", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("create_namealreadytaken", (byte) -107);
                 if (null != var2) {
-                  nf.a((byte) 124, var2);
+                  AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("create_sameaccounttip_named", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("create_sameaccounttip_named", (byte) -108);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("create_nosuggestions", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("create_nosuggestions", (byte) -116);
                 if (var2 != null) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("create_alternativelygoback", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("create_alternativelygoback", (byte) -102);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("create_available", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("create_available", (byte) -97);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("create_willnowshowtermsandconditions", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("create_willnowshowtermsandconditions", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 125, var2);
+                  AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("fetchingterms", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("fetchingterms", (byte) -112);
                 if (null != var2) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("termserror", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("termserror", (byte) -103);
                 if (var2 != null) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("create_iagree", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("create_iagree", (byte) -107);
                 if (var2 != null) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("create_idisagree", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("create_idisagree", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("create_pleasescrolldowntoaccept", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("create_pleasescrolldowntoaccept", (byte) -114);
                 if (null != var2) {
-                  nf.a((byte) 96, var2);
+                  AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("create_linkaddress", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("create_linkaddress", (byte) -122);
                 if (var2 != null) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("openinpopupwindow", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("openinpopupwindow", (byte) -126);
                 if (var2 != null) {
-                  AccountCreationForm.field_R = nf.a((byte) 126, var2);
+                  AccountCreationForm.field_R = AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("create", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("create", (byte) -97);
                 if (null != var2) {
-                  w.field_d = nf.a((byte) 99, var2);
+                  UiThemeSetupHelpers.field_d = AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("create_pleasechooseapassword", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("create_pleasechooseapassword", (byte) -96);
                 if (null != var2) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("create_passwordblurb", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("create_passwordblurb", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("create_nevergivepassword", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("create_nevergivepassword", (byte) -110);
                 if (null != var2) {
-                  nf.a((byte) 87, var2);
+                  AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("creatingyouraccount", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("creatingyouraccount", (byte) -123);
                 if (var2 != null) {
-                  ProgressQuery.field_o = nf.a((byte) 102, var2);
+                  ProgressQuery.field_o = AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("create_youmustaccept", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("create_youmustaccept", (byte) -115);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("create_passwordsdifferent", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("create_passwordsdifferent", (byte) -109);
                 if (var2 != null) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("create_success", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("create_success", (byte) -97);
                 if (var2 != null) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("day", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("day", (byte) -126);
                 if (var2 != null) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("month", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("month", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 84, var2);
+                  AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("year", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("year", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,0", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,0", (byte) -110);
                 if (null != var2) {
-                  IsaacPacketBuffer.field_q[0] = nf.a((byte) 122, var2);
+                  IsaacPacketBuffer.field_q[0] = AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,1", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,1", (byte) -97);
                 if (var2 != null) {
-                  IsaacPacketBuffer.field_q[1] = nf.a((byte) 101, var2);
+                  IsaacPacketBuffer.field_q[1] = AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,2", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,2", (byte) -106);
                 if (null != var2) {
-                  IsaacPacketBuffer.field_q[2] = nf.a((byte) 92, var2);
+                  IsaacPacketBuffer.field_q[2] = AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,3", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,3", (byte) -112);
                 if (var2 != null) {
-                  IsaacPacketBuffer.field_q[3] = nf.a((byte) 89, var2);
+                  IsaacPacketBuffer.field_q[3] = AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,4", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,4", (byte) -115);
                 if (var2 != null) {
-                  IsaacPacketBuffer.field_q[4] = nf.a((byte) 94, var2);
+                  IsaacPacketBuffer.field_q[4] = AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,5", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,5", (byte) -96);
                 if (var2 != null) {
-                  IsaacPacketBuffer.field_q[5] = nf.a((byte) 98, var2);
+                  IsaacPacketBuffer.field_q[5] = AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,6", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,6", (byte) -102);
                 if (null != var2) {
-                  IsaacPacketBuffer.field_q[6] = nf.a((byte) 125, var2);
+                  IsaacPacketBuffer.field_q[6] = AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,7", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,7", (byte) -98);
                 if (var2 != null) {
-                  IsaacPacketBuffer.field_q[7] = nf.a((byte) 124, var2);
+                  IsaacPacketBuffer.field_q[7] = AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,8", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,8", (byte) -103);
                 if (null != var2) {
-                  IsaacPacketBuffer.field_q[8] = nf.a((byte) 91, var2);
+                  IsaacPacketBuffer.field_q[8] = AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,9", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,9", (byte) -128);
                 if (var2 != null) {
-                  IsaacPacketBuffer.field_q[9] = nf.a((byte) 89, var2);
+                  IsaacPacketBuffer.field_q[9] = AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,10", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,10", (byte) -106);
                 if (null != var2) {
-                  IsaacPacketBuffer.field_q[10] = nf.a((byte) 118, var2);
+                  IsaacPacketBuffer.field_q[10] = AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("monthnames,11", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("monthnames,11", (byte) -122);
                 if (var2 != null) {
-                  IsaacPacketBuffer.field_q[11] = nf.a((byte) 122, var2);
+                  IsaacPacketBuffer.field_q[11] = AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("create_welcome", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("create_welcome", (byte) -116);
                 if (var2 != null) {
-                  ci.field_c = nf.a((byte) 109, var2);
+                  RankingStatsDecoder.field_c = AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("create_u13_welcome", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("create_u13_welcome", (byte) -118);
                 if (null != var2) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("create_createanaccount", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("create_createanaccount", (byte) -108);
                 if (null != var2) {
-                  WhirlpoolHasher.field_h = nf.a((byte) 126, var2);
+                  WhirlpoolHasher.field_h = AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("create_username", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("create_username", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("create_displayname", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("create_displayname", (byte) -123);
                 if (null != var2) {
-                  re.field_E = nf.a((byte) 110, var2);
+                  AccountConsentPanel.field_E = AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("create_password", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("create_password", (byte) -104);
                 if (var2 != null) {
-                  WhirlpoolHasher.field_d = nf.a((byte) 100, var2);
+                  WhirlpoolHasher.field_d = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("create_password_confirm", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("create_password_confirm", (byte) -107);
                 if (var2 != null) {
-                  RasterBuffer.field_i = nf.a((byte) 122, var2);
+                  RasterBuffer.field_i = AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("create_email", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("create_email", (byte) -100);
                 if (var2 != null) {
-                  ii.field_d = nf.a((byte) 126, var2);
+                  NameAvailabilityFactory.field_d = AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("create_email_confirm", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("create_email_confirm", (byte) -97);
                 if (null != var2) {
-                  ve.field_b = nf.a((byte) 100, var2);
+                  ErrorReportingHelpers.field_b = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("create_age", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("create_age", (byte) -95);
                 if (var2 != null) {
-                  Base37Codec.field_a = nf.a((byte) 103, var2);
+                  Base37Codec.field_a = AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("create_u13_email", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("create_u13_email", (byte) -95);
                 if (var2 != null) {
-                  nf.a((byte) 104, var2);
+                  AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("create_u13_email_confirm", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("create_u13_email_confirm", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 110, var2);
+                  AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("create_dob", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("create_dob", (byte) -124);
                 if (null != var2) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("create_country", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("create_country", (byte) -110);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("create_alternatives_header", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("create_alternatives_header", (byte) -117);
                 if (var2 != null) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("create_alternatives_select", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("create_alternatives_select", (byte) -126);
                 if (var2 != null) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("create_suggestions", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("create_suggestions", (byte) -106);
                 if (var2 != null) {
-                  ArchiveRequest.field_p = nf.a((byte) 119, var2);
+                  ArchiveRequest.field_p = AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("create_more_suggestions", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("create_more_suggestions", (byte) -110);
                 if (var2 != null) {
-                  PlatformActor.field_t = nf.a((byte) 94, var2);
+                  PlatformActor.field_t = AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("create_select_alternative", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("create_select_alternative", (byte) -112);
                 if (null != var2) {
-                  ni.field_a = nf.a((byte) 124, var2);
+                  LevelDecodingHelpers.field_a = AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("create_optin_news", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("create_optin_news", (byte) -95);
                 if (var2 != null) {
-                  SettingsCookieReader.field_e = nf.a((byte) 94, var2);
+                  SettingsCookieReader.field_e = AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("create_agreeterms", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("create_agreeterms", (byte) -110);
                 if (null != var2) {
-                  qj.field_b = nf.a((byte) 120, var2);
+                  NineSliceFrame.field_b = AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("create_u13terms", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("create_u13terms", (byte) -118);
                 if (var2 != null) {
-                  t.field_b = nf.a((byte) 116, var2);
+                  KeyboardQueueConsumer.field_b = AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("login_username_email", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("login_username_email", (byte) -128);
                 if (null != var2) {
-                  ScoreSubmission.field_j = nf.a((byte) 95, var2);
+                  ScoreSubmission.field_j = AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("login_username", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("login_username", (byte) -111);
                 if (var2 != null) {
-                  tl.field_b = nf.a((byte) 88, var2);
+                  FriendOrderingHelpers.field_b = AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("login_email", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("login_email", (byte) -120);
                 if (null != var2) {
-                  ProgressSubmission.field_q = nf.a((byte) 126, var2);
+                  ProgressSubmission.field_q = AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("login_username_tooltip", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("login_username_tooltip", (byte) -121);
                 if (null != var2) {
-                  MouseInputHandler.field_a = nf.a((byte) 102, var2);
+                  MouseInputHandler.field_a = AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("login_password_tooltip", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("login_password_tooltip", (byte) -128);
                 if (var2 != null) {
-                  nf.a((byte) 91, var2);
+                  AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("login_login_tooltip", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("login_login_tooltip", (byte) -128);
                 if (var2 != null) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("login_create_tooltip", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("login_create_tooltip", (byte) -110);
                 if (var2 != null) {
-                  DelayedServerPacket.field_i = nf.a((byte) 92, var2);
+                  DelayedServerPacket.field_i = AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("login_justplay_tooltip", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("login_justplay_tooltip", (byte) -128);
                 if (var2 != null) {
-                  ProxyAuthenticationException.field_a = nf.a((byte) 107, var2);
+                  ProxyAuthenticationException.field_a = AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("login_back_tooltip", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("login_back_tooltip", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("login_no_displayname", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("login_no_displayname", (byte) -112);
                 if (null != var2) {
-                  MouseWheelInput.field_d = nf.a((byte) 116, var2);
+                  MouseWheelInput.field_d = AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("create_username_tooltip", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("create_username_tooltip", (byte) -127);
                 if (null != var2) {
-                  nf.a((byte) 96, var2);
+                  AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("create_username_hint", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("create_username_hint", (byte) -105);
                 if (var2 != null) {
-                  nf.a((byte) 121, var2);
+                  AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("create_displayname_tooltip", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("create_displayname_tooltip", (byte) -125);
                 if (null != var2) {
-                  DiskCacheWorker.field_a = nf.a((byte) 95, var2);
+                  DiskCacheWorker.field_a = AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("create_displayname_hint", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("create_displayname_hint", (byte) -119);
                 if (var2 != null) {
-                  MonotonicClockHelpers.field_b = nf.a((byte) 108, var2);
+                  MonotonicClockHelpers.field_b = AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("create_password_tooltip", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("create_password_tooltip", (byte) -128);
                 if (null != var2) {
-                  GameShell.field_v = nf.a((byte) 111, var2);
+                  GameShell.field_v = AccountFormTextHelpers.a((byte) 111, var2);
                 }
-                var2 = ra.loadNamedResource("create_password_hint", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("create_password_hint", (byte) -100);
                 if (null != var2) {
-                  LabeledField.field_H = nf.a((byte) 92, var2);
+                  LabeledField.field_H = AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("create_password_confirm_tooltip", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("create_password_confirm_tooltip", (byte) -125);
                 if (null != var2) {
-                  GameMenu.field_s = nf.a((byte) 94, var2);
+                  GameMenu.field_s = AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("create_email_tooltip", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("create_email_tooltip", (byte) -103);
                 if (null != var2) {
-                  SettingsCookieReader.field_c = nf.a((byte) 115, var2);
+                  SettingsCookieReader.field_c = AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("create_email_confirm_tooltip", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("create_email_confirm_tooltip", (byte) -109);
                 if (var2 != null) {
-                  ec.field_e = nf.a((byte) 116, var2);
+                  LogoAnimationLoader.field_e = AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("create_age_tooltip", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("create_age_tooltip", (byte) -104);
                 if (null != var2) {
-                  GameGraphicsResources.field_c = nf.a((byte) 123, var2);
+                  GameGraphicsResources.field_c = AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("create_optin_news_tooltip", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("create_optin_news_tooltip", (byte) -117);
                 if (var2 != null) {
-                  Js5Index.field_o = nf.a((byte) 92, var2);
+                  Js5Index.field_o = AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("create_u13_email_tooltip", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("create_u13_email_tooltip", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("create_u13_email_confirm_tooltip", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("create_u13_email_confirm_tooltip", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("create_dob_tooltip", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("create_dob_tooltip", (byte) -106);
                 if (var2 != null) {
-                  nf.a((byte) 121, var2);
+                  AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("create_country_tooltip", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("create_country_tooltip", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 124, var2);
+                  AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("create_optin_tooltip", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("create_optin_tooltip", (byte) -121);
                 if (null != var2) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("create_continue", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("create_continue", (byte) -109);
                 if (var2 != null) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("create_username_unavailable", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("create_username_unavailable", (byte) -116);
                 if (var2 != null) {
-                  ArchiveLoadingPlan.field_e = nf.a((byte) 94, var2);
+                  ArchiveLoadingPlan.field_e = AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("create_username_available", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("create_username_available", (byte) -105);
                 if (var2 != null) {
-                  GameKeyHandler.field_d = nf.a((byte) 115, var2);
+                  GameKeyHandler.field_d = AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_namelength", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_namelength", (byte) -118);
                 if (var2 != null) {
-                  ValidationIndicator.field_J = nf.a((byte) 89, var2);
+                  ValidationIndicator.field_J = AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_namechars", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_namechars", (byte) -106);
                 if (var2 != null) {
-                  AccountCreationForm.field_Q = nf.a((byte) 108, var2);
+                  AccountCreationForm.field_Q = AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_nameleadingspace", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_nameleadingspace", (byte) -126);
                 if (var2 != null) {
-                  lg.field_c = nf.a((byte) 120, var2);
+                  FullscreenFailureKind.field_c = AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_doublespace", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_doublespace", (byte) -96);
                 if (null != var2) {
-                  WidgetPainter.field_g = nf.a((byte) 100, var2);
+                  WidgetPainter.field_g = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_passchars", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_passchars", (byte) -112);
                 if (var2 != null) {
-                  ProgressSubmission.field_o = nf.a((byte) 123, var2);
+                  ProgressSubmission.field_o = AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_passrepeated", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_passrepeated", (byte) -126);
                 if (null != var2) {
-                  DraggableWidget.field_L = nf.a((byte) 86, var2);
+                  DraggableWidget.field_L = AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_passlength", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_passlength", (byte) -121);
                 if (var2 != null) {
-                  QuickChatDynamicCommand.field_d = nf.a((byte) 110, var2);
+                  QuickChatDynamicCommand.field_d = AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_passcontainsname", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_passcontainsname", (byte) -100);
                 if (var2 != null) {
-                  NetworkArchiveRequest.field_v = nf.a((byte) 105, var2);
+                  NetworkArchiveRequest.field_v = AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_passcontainsemail", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_passcontainsemail", (byte) -98);
                 if (var2 != null) {
-                  NodeHashTableIterator.field_c = nf.a((byte) 120, var2);
+                  NodeHashTableIterator.field_c = AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_passcontainsname_partial", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_passcontainsname_partial", (byte) -119);
                 if (null != var2) {
-                  LoginPacketBuilder.field_d = nf.a((byte) 112, var2);
+                  LoginPacketBuilder.field_d = AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_checkname", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_checkname", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_invalidemail", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_invalidemail", (byte) -112);
                 if (var2 != null) {
-                  kd.field_b = nf.a((byte) 92, var2);
+                  ContentTransitionPhase.field_b = AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_email_unavailable", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_email_unavailable", (byte) -113);
                 if (var2 != null) {
-                  IntrusiveNode.field_d = nf.a((byte) 126, var2);
+                  IntrusiveNode.field_d = AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_invaliddate", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_invaliddate", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_invalidage", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_invalidage", (byte) -107);
                 if (null != var2) {
-                  WeightedLruCache.field_a = nf.a((byte) 101, var2);
+                  WeightedLruCache.field_a = AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_yearrange", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_yearrange", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 91, var2);
+                  AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("create_alert_mismatch", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("create_alert_mismatch", (byte) -108);
                 if (null != var2) {
-                  ec.field_h = nf.a((byte) 85, var2);
+                  LogoAnimationLoader.field_h = AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("create_passwordvalid", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("create_passwordvalid", (byte) -118);
                 if (var2 != null) {
-                  RadialSelectorWidget.field_F = nf.a((byte) 110, var2);
+                  RadialSelectorWidget.field_F = AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("create_emailvalid", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("create_emailvalid", (byte) -115);
                 if (null != var2) {
-                  eh.field_h = nf.a((byte) 124, var2);
+                  MarkerSliderPainter.field_h = AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("create_account_success", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("create_account_success", (byte) -108);
                 if (var2 != null) {
-                  jl.field_v = nf.a((byte) 89, var2);
+                  SpriteButtonPainter.field_v = AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("invalid_name", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("invalid_name", (byte) -125);
                 if (null != var2) {
-                  nf.a((byte) 92, var2);
+                  AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("cannot_add_yourself", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("cannot_add_yourself", (byte) -107);
                 if (var2 != null) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("unable_to_add_friend", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("unable_to_add_friend", (byte) -107);
                 if (var2 != null) {
-                  nf.a((byte) 84, var2);
+                  AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("unable_to_add_ignore", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("unable_to_add_ignore", (byte) -96);
                 if (var2 != null) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("unable_to_delete_friend", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("unable_to_delete_friend", (byte) -124);
                 if (null != var2) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("unable_to_delete_ignore", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("unable_to_delete_ignore", (byte) -99);
                 if (var2 != null) {
-                  nf.a((byte) 96, var2);
+                  AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("friendlistfull", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("friendlistfull", (byte) -103);
                 if (var2 != null) {
-                  nf.a((byte) 84, var2);
+                  AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("friendlistdupe", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("friendlistdupe", (byte) -110);
                 if (null != var2) {
-                  nf.a((byte) 91, var2);
+                  AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("friendnotfound", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("friendnotfound", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 94, var2);
+                  AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("ignorelistfull", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("ignorelistfull", (byte) -106);
                 if (var2 != null) {
-                  nf.a((byte) 96, var2);
+                  AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("ignorelistdupe", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("ignorelistdupe", (byte) -109);
                 if (null != var2) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("ignorenotfound", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("ignorenotfound", (byte) -107);
                 if (var2 != null) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("removeignorefirst", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("removeignorefirst", (byte) -105);
                 if (var2 != null) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("removefriendfirst", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("removefriendfirst", (byte) -122);
                 if (var2 != null) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("enterfriend_add", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("enterfriend_add", (byte) -112);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("enterfriend_del", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("enterfriend_del", (byte) -103);
                 if (var2 != null) {
-                  nf.a((byte) 104, var2);
+                  AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("enterignore_add", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("enterignore_add", (byte) -125);
                 if (var2 != null) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("enterignore_del", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("enterignore_del", (byte) -113);
                 if (var2 != null) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("text_removed_from_game", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("text_removed_from_game", (byte) -126);
                 if (null != var2) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("text_lobby_pleaselogin_free", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("text_lobby_pleaselogin_free", (byte) -97);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("opengl", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("opengl", (byte) -109);
                 if (null != var2) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("sse", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("sse", (byte) -116);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("purejava", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("purejava", (byte) -128);
                 if (var2 != null) {
-                  nf.a((byte) 123, var2);
+                  AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_graphics", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_graphics", (byte) -117);
                 if (var2 != null) {
-                  FramedButtonPainter.field_q = nf.a((byte) 100, var2);
+                  FramedButtonPainter.field_q = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_models", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_models", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_fonts", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_fonts", (byte) -120);
                 if (var2 != null) {
-                  IndexedSpriteArrayFactory.field_d = nf.a((byte) 124, var2);
+                  IndexedSpriteArrayFactory.field_d = AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_soundeffects", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_soundeffects", (byte) -99);
                 if (null != var2) {
-                  RadixParsingHelpers.field_d = nf.a((byte) 110, var2);
+                  RadixParsingHelpers.field_d = AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_music", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_music", (byte) -117);
                 if (var2 != null) {
-                  lj.field_d = nf.a((byte) 117, var2);
+                  FriendLookupState.field_d = AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_instruments", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_instruments", (byte) -114);
                 if (var2 != null) {
-                  IndexedSpriteState.field_g = nf.a((byte) 87, var2);
+                  IndexedSpriteState.field_g = AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_levels", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_levels", (byte) -102);
                 if (var2 != null) {
-                  aa.field_gb = nf.a((byte) 115, var2);
+                  FriendEntry.field_gb = AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_extradata", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_extradata", (byte) -117);
                 if (null != var2) {
-                  AlternateUsernameLoginCredentials.field_o = nf.a((byte) 92, var2);
+                  AlternateUsernameLoginCredentials.field_o = AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_languages", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_languages", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_textures", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_textures", (byte) -122);
                 if (var2 != null) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("waitingfor_animations", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("waitingfor_animations", (byte) -96);
                 if (var2 != null) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("loading_graphics", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("loading_graphics", (byte) -97);
                 if (null != var2) {
-                  tk.field_e = nf.a((byte) 88, var2);
+                  HyperlinkPainter.field_e = AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("loading_models", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("loading_models", (byte) -111);
                 if (null != var2) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("loading_fonts", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("loading_fonts", (byte) -123);
                 if (var2 != null) {
-                  mj.field_d = nf.a((byte) 89, var2);
+                  ThrowableFormattingHelpers.field_d = AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("loading_soundeffects", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("loading_soundeffects", (byte) -126);
                 if (var2 != null) {
-                  MenuController.field_i = nf.a((byte) 97, var2);
+                  MenuController.field_i = AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("loading_music", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("loading_music", (byte) -108);
                 if (var2 != null) {
-                  ej.field_e = nf.a((byte) 122, var2);
+                  ByteArrayPool.field_e = AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("loading_instruments", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("loading_instruments", (byte) -96);
                 if (null != var2) {
-                  pa.field_d = nf.a((byte) 84, var2);
+                  EncryptedLoginHelpers.field_d = AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("loading_levels", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("loading_levels", (byte) -115);
                 if (var2 != null) {
-                  WhirlpoolHasher.field_e = nf.a((byte) 111, var2);
+                  WhirlpoolHasher.field_e = AccountFormTextHelpers.a((byte) 111, var2);
                 }
-                var2 = ra.loadNamedResource("loading_extradata", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("loading_extradata", (byte) -109);
             }
             void loadLoadingFullscreenAndMembershipTexts() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  WidgetTheme.field_s = nf.a((byte) 94, var2);
+                  WidgetTheme.field_s = AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("loading_languages", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("loading_languages", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 91, var2);
+                  AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("loading_textures", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("loading_textures", (byte) -120);
                 if (var2 != null) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("loading_animations", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("loading_animations", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("unpacking_graphics", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("unpacking_graphics", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("unpacking_models", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("unpacking_models", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("unpacking_soundeffects", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("unpacking_soundeffects", (byte) -103);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("unpacking_music", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("unpacking_music", (byte) -125);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("unpacking_levels", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("unpacking_levels", (byte) -108);
                 if (var2 != null) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("unpacking_languages", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("unpacking_languages", (byte) -116);
                 if (var2 != null) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("unpacking_animations", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("unpacking_animations", (byte) -123);
                 if (var2 != null) {
-                  nf.a((byte) 102, var2);
+                  AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("unpacking_toolkit", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("unpacking_toolkit", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 101, var2);
+                  AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("instructions", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("instructions", (byte) -101);
                 if (var2 != null) {
-                  MidiNote.field_o = nf.a((byte) 97, var2);
+                  MidiNote.field_o = AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("tutorial", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("tutorial", (byte) -125);
                 if (var2 != null) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("playtutorial", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("playtutorial", (byte) -117);
                 if (null != var2) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("sound_colon", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("sound_colon", (byte) -114);
                 if (var2 != null) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("music_colon", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("music_colon", (byte) -104);
                 if (var2 != null) {
-                  nf.a((byte) 125, var2);
+                  AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("fullscreen", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("fullscreen", (byte) -99);
                 if (var2 != null) {
-                  mh.field_lb = nf.a((byte) 87, var2);
+                  AccountProgressDialog.field_lb = AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("screensize", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("screensize", (byte) -106);
                 if (var2 != null) {
-                  nf.a((byte) 113, var2);
+                  AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("highscores", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("highscores", (byte) -127);
                 if (var2 != null) {
-                  WrappedTextLayout.field_m = nf.a((byte) 100, var2);
+                  WrappedTextLayout.field_m = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("rankings", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("rankings", (byte) -115);
                 if (var2 != null) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("achievements", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("achievements", (byte) -128);
                 if (var2 != null) {
-                  AgeValidator.field_k = nf.a((byte) 85, var2);
+                  AgeValidator.field_k = AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("achievementsthisgame", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("achievementsthisgame", (byte) -97);
                 if (null != var2) {
-                  DisplayModeInfo.field_b = nf.a((byte) 120, var2);
+                  DisplayModeInfo.field_b = AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("achievementsthissession", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("achievementsthissession", (byte) -117);
                 if (var2 != null) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("watchintroduction", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("watchintroduction", (byte) -110);
                 if (var2 != null) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("quit", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("quit", (byte) -112);
                 if (var2 != null) {
-                  lj.field_e = nf.a((byte) 101, var2);
+                  FriendLookupState.field_e = AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("login_createaccount", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("login_createaccount", (byte) -100);
                 if (var2 != null) {
-                  DiskCacheWorker.field_d = nf.a((byte) 97, var2);
+                  DiskCacheWorker.field_d = AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("tohighscores", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("tohighscores", (byte) -100);
                 if (null != var2) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("returntomainmenu", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("returntomainmenu", (byte) -126);
                 if (null != var2) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("returntopausemenu", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("returntopausemenu", (byte) -101);
                 if (null != var2) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("returntooptionsmenu_notpaused", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("returntooptionsmenu_notpaused", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("mainmenu", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("mainmenu", (byte) -123);
                 if (null != var2) {
-                  EditableTextWidget.field_G = nf.a((byte) 123, var2);
+                  EditableTextWidget.field_G = AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("pausemenu", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("pausemenu", (byte) -123);
                 if (var2 != null) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("optionsmenu_notpaused", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("optionsmenu_notpaused", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("menu", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("menu", (byte) -95);
                 if (var2 != null) {
-                  AccountFormText.field_a = nf.a((byte) 84, var2);
+                  AccountFormText.field_a = AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("selectlevel", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("selectlevel", (byte) -98);
                 if (var2 != null) {
-                  nf.a((byte) 124, var2);
+                  AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("nextlevel", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("nextlevel", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 121, var2);
+                  AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("startgame", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("startgame", (byte) -127);
                 if (null != var2) {
-                  ProgressQuery.field_l = nf.a((byte) 121, var2);
+                  ProgressQuery.field_l = AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("newgame", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("newgame", (byte) -101);
                 if (null != var2) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("resumegame", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("resumegame", (byte) -122);
                 if (null != var2) {
-                  AccountCreationForm.field_K = nf.a((byte) 117, var2);
+                  AccountCreationForm.field_K = AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("resumetutorial", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("resumetutorial", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("skip", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("skip", (byte) -122);
                 if (var2 != null) {
-                  nf.a((byte) 101, var2);
+                  AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("skiptutorial", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("skiptutorial", (byte) -108);
                 if (null != var2) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("skipending", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("skipending", (byte) -104);
                 if (null != var2) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("restartlevel", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("restartlevel", (byte) -115);
                 if (var2 != null) {
-                  nf.a((byte) 84, var2);
+                  AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("endtest", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("endtest", (byte) -106);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("endgame", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("endgame", (byte) -127);
                 if (var2 != null) {
-                  WidgetTheme.field_o = nf.a((byte) 103, var2);
+                  WidgetTheme.field_o = AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("endtutorial", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("endtutorial", (byte) -113);
                 if (var2 != null) {
-                  nf.a((byte) 125, var2);
+                  AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("ok", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("ok", (byte) -100);
                 if (null != var2) {
-                  td.field_b = nf.a((byte) 112, var2);
+                  KeyboardShutdownHelpers.field_b = AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("on", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("on", (byte) -109);
                 if (var2 != null) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("off", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("off", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 91, var2);
+                  AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("previous", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("previous", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("prev", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("prev", (byte) -123);
                 if (null != var2) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("next", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("next", (byte) -117);
                 if (var2 != null) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_colon", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("graphics_colon", (byte) -100);
                 if (var2 != null) {
-                  nf.a((byte) 102, var2);
+                  AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("hotseatmultiplayer", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("hotseatmultiplayer", (byte) -113);
                 if (var2 != null) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("entermultiplayerlobby", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("entermultiplayerlobby", (byte) -119);
                 if (var2 != null) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("singleplayergame", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("singleplayergame", (byte) -120);
                 if (var2 != null) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("returntogame", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("returntogame", (byte) -99);
                 if (var2 != null) {
-                  UrlPacketDownloader.field_a = nf.a((byte) 90, var2);
+                  UrlPacketDownloader.field_a = AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("endgameresign", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("endgameresign", (byte) -106);
                 if (var2 != null) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("offerdraw", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("offerdraw", (byte) -108);
                 if (var2 != null) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("canceldraw", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("canceldraw", (byte) -114);
                 if (var2 != null) {
-                  nf.a((byte) 87, var2);
+                  AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("acceptdraw", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("acceptdraw", (byte) -116);
                 if (var2 != null) {
-                  nf.a((byte) 102, var2);
+                  AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("resign", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("resign", (byte) -124);
                 if (null != var2) {
-                  nf.a((byte) 92, var2);
+                  AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("returntolobby", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("returntolobby", (byte) -122);
                 if (var2 != null) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("cont", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("cont", (byte) -97);
                 if (null != var2) {
-                  e.field_e = nf.a((byte) 106, var2);
+                  ThreePieceFrameHelpers.field_e = AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("continue_spectating", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("continue_spectating", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("messages", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("messages", (byte) -113);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_fastest", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("graphics_fastest", (byte) -117);
                 if (null != var2) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_medium", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("graphics_medium", (byte) -128);
                 if (var2 != null) {
-                  nf.a((byte) 94, var2);
+                  AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_best", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("graphics_best", (byte) -113);
                 if (var2 != null) {
-                  nf.a((byte) 96, var2);
+                  AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_directx", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("graphics_directx", (byte) -125);
                 if (var2 != null) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_opengl", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("graphics_opengl", (byte) -119);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_java", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("graphics_java", (byte) -113);
                 if (var2 != null) {
-                  nf.a((byte) 94, var2);
+                  AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_quality_high", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("graphics_quality_high", (byte) -101);
                 if (null != var2) {
-                  nf.a((byte) 84, var2);
+                  AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_quality_low", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("graphics_quality_low", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_mode", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("graphics_mode", (byte) -103);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_quality", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("graphics_quality", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("mode", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("mode", (byte) -100);
                 if (var2 != null) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("quality", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("quality", (byte) -124);
                 if (null != var2) {
-                  nf.a((byte) 84, var2);
+                  AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("keys", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("keys", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("objective", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("objective", (byte) -123);
                 if (var2 != null) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("currentobjective", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("currentobjective", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("pressescforpausemenu", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("pressescforpausemenu", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 92, var2);
+                  AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("pressescforpausemenuortoskiptutorial", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("pressescforpausemenuortoskiptutorial", (byte) -110);
                 if (null != var2) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("pressescforoptionsmenu_doesntpause", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("pressescforoptionsmenu_doesntpause", (byte) -97);
                 if (null != var2) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("pressescforoptionsmenu_doesntpause_short", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("pressescforoptionsmenu_doesntpause_short", (byte) -96);
                 if (var2 != null) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("powerups", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("powerups", (byte) -114);
                 if (var2 != null) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("latestlevel_suffix", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("latestlevel_suffix", (byte) -110);
                 if (null != var2) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("unreachedlevel_name", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("unreachedlevel_name", (byte) -96);
                 if (var2 != null) {
-                  nf.a((byte) 96, var2);
+                  AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("unreachedlevel_cannotplayreason", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("unreachedlevel_cannotplayreason", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("unreachedlevel_cannotplayreason_shorter", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("unreachedlevel_cannotplayreason_shorter", (byte) -123);
                 if (var2 != null) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("unreachedworld_cannotplayreason", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("unreachedworld_cannotplayreason", (byte) -111);
                 if (var2 != null) {
-                  nf.a((byte) 101, var2);
+                  AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("memberslevel_name", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("memberslevel_name", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 122, var2);
+                  AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("memberslevel_cannotplayreason", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("memberslevel_cannotplayreason", (byte) -125);
                 if (var2 != null) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("membersworld_cannotplayreason", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("membersworld_cannotplayreason", (byte) -118);
                 if (null != var2) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("unreachedlevel_createtip", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("unreachedlevel_createtip", (byte) -95);
                 if (var2 != null) {
-                  nf.a((byte) 102, var2);
+                  AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("unreachedlevel_createtip_line1", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("unreachedlevel_createtip_line1", (byte) -113);
                 if (var2 != null) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("unreachedlevel_createtip_line2", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("unreachedlevel_createtip_line2", (byte) -114);
                 if (null != var2) {
-                  nf.a((byte) 101, var2);
+                  AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("unreachedlevel_logintip", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("unreachedlevel_logintip", (byte) -102);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("memberslevel_logintip", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("memberslevel_logintip", (byte) -108);
                 if (null != var2) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("displayname_none", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("displayname_none", (byte) -108);
                 if (var2 != null) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("levelxofy1", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("levelxofy1", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("levelxofy2", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("levelxofy2", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("levelxofy", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("levelxofy", (byte) -117);
                 if (var2 != null) {
-                  nf.a((byte) 99, var2);
+                  AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("ingame_level", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("ingame_level", (byte) -99);
                 if (var2 != null) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("mouseoveranicon", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("mouseoveranicon", (byte) -113);
                 if (var2 != null) {
-                  gk.field_r = nf.a((byte) 88, var2);
+                  Bzip2State.field_r = AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("notyetachieved", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("notyetachieved", (byte) -107);
                 if (null != var2) {
-                  LoginMethodPreference.field_b = nf.a((byte) 120, var2);
+                  LoginMethodPreference.field_b = AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("achieved", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("achieved", (byte) -116);
                 if (null != var2) {
-                  MeshWorkspaceHelpers.field_c = nf.a((byte) 99, var2);
+                  RankingWorkspaceHelpers.field_c = AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("orbpoints", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("orbpoints", (byte) -104);
                 if (var2 != null) {
-                  ResourceArchive.field_e = nf.a((byte) 122, var2);
+                  ResourceArchive.field_e = AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("orbcoins", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("orbcoins", (byte) -107);
                 if (var2 != null) {
-                  nf.field_a = nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.field_a = AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("orbpoints_colon", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("orbpoints_colon", (byte) -109);
                 if (var2 != null) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("orbcoins_colon", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("orbcoins_colon", (byte) -125);
                 if (null != var2) {
-                  nf.a((byte) 118, var2);
+                  AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("achieved_colon_description", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("achieved_colon_description", (byte) -101);
                 if (null != var2) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("secretachievement", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("secretachievement", (byte) -96);
                 if (var2 != null) {
-                  nf.a((byte) 95, var2);
+                  AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("no_highscores", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("no_highscores", (byte) -123);
                 if (null != var2) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("hs_name", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("hs_name", (byte) -128);
                 if (null != var2) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("hs_level", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("hs_level", (byte) -96);
                 if (var2 != null) {
-                  nf.a((byte) 104, var2);
+                  AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("hs_fromlevel", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("hs_fromlevel", (byte) -96);
                 if (var2 != null) {
-                  nf.a((byte) 91, var2);
+                  AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("hs_tolevel", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("hs_tolevel", (byte) -108);
                 if (var2 != null) {
-                  nf.a((byte) 113, var2);
+                  AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("hs_score", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("hs_score", (byte) -128);
                 if (null != var2) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("hs_end", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("hs_end", (byte) -125);
                 if (var2 != null) {
-                  nf.a((byte) 94, var2);
+                  AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("ingame_score", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("ingame_score", (byte) -115);
                 if (null != var2) {
-                  nf.a((byte) 123, var2);
+                  AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("score_colon", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("score_colon", (byte) -128);
                 if (var2 != null) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("mp_leavegame", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("mp_leavegame", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("mp_offerrematch", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("mp_offerrematch", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 101, var2);
+                  AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("mp_offerrematch_unrated", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("mp_offerrematch_unrated", (byte) -102);
                 if (null != var2) {
-                  nf.a((byte) 104, var2);
+                  AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("mp_acceptrematch", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("mp_acceptrematch", (byte) -116);
                 if (var2 != null) {
-                  nf.a((byte) 111, var2);
+                  AccountFormTextHelpers.a((byte) 111, var2);
                 }
-                var2 = ra.loadNamedResource("mp_acceptrematch_unrated", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("mp_acceptrematch_unrated", (byte) -126);
                 if (null != var2) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("mp_cancelrematch", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("mp_cancelrematch", (byte) -102);
                 if (null != var2) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("mp_cancelrematch_unrated", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("mp_cancelrematch_unrated", (byte) -108);
                 if (null != var2) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("mp_rematchnewgame", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("mp_rematchnewgame", (byte) -106);
                 if (null != var2) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("mp_rematchnewgame_unrated", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("mp_rematchnewgame_unrated", (byte) -126);
                 if (null != var2) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("mp_x_wantstodraw", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("mp_x_wantstodraw", (byte) -98);
                 if (null != var2) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("mp_x_offersrematch", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("mp_x_offersrematch", (byte) -117);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("mp_x_offersrematch_unrated", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("mp_x_offersrematch_unrated", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("mp_youofferrematch", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("mp_youofferrematch", (byte) -121);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("mp_youofferrematch_unrated", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("mp_youofferrematch_unrated", (byte) -100);
                 if (var2 != null) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("mp_youofferdraw", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("mp_youofferdraw", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("mp_youresigned", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("mp_youresigned", (byte) -116);
                 if (null != var2) {
-                  nf.a((byte) 125, var2);
+                  AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("mp_youresigned_rematch", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("mp_youresigned_rematch", (byte) -110);
                 if (null != var2) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("mp_x_hasresignedandleft", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("mp_x_hasresignedandleft", (byte) -124);
                 if (null != var2) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("mp_x_hasresigned_rematch", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("mp_x_hasresigned_rematch", (byte) -125);
                 if (null != var2) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("mp_x_hasresigned", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("mp_x_hasresigned", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("mp_x_hasleft", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("mp_x_hasleft", (byte) -108);
                 if (null != var2) {
-                  nf.a((byte) 104, var2);
+                  AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("mp_x_haswon", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("mp_x_haswon", (byte) -99);
                 if (null != var2) {
-                  nf.a((byte) 121, var2);
+                  AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("mp_youhavewon", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("mp_youhavewon", (byte) -106);
                 if (null != var2) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("mp_gamedrawn", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("mp_gamedrawn", (byte) -110);
                 if (var2 != null) {
-                  nf.a((byte) 85, var2);
+                  AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("mp_timeremaining", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("mp_timeremaining", (byte) -114);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("mp_x_turn", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("mp_x_turn", (byte) -123);
                 if (null != var2) {
-                  nf.a((byte) 125, var2);
+                  AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("mp_yourturn", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("mp_yourturn", (byte) -100);
                 if (null != var2) {
-                  nf.a((byte) 107, var2);
+                  AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("gameover", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("gameover", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 84, var2);
+                  AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("mp_hidechat", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("mp_hidechat", (byte) -127);
                 if (null != var2) {
-                  nf.a((byte) 87, var2);
+                  AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("mp_showchat_nounread", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("mp_showchat_nounread", (byte) -125);
                 if (var2 != null) {
-                  nf.a((byte) 100, var2);
+                  AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("mp_showchat_unread1", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("mp_showchat_unread1", (byte) -110);
                 if (var2 != null) {
-                  nf.a((byte) 87, var2);
+                  AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("mp_showchat_unread2", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("mp_showchat_unread2", (byte) -108);
                 if (var2 != null) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("click_to_quickchat", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("click_to_quickchat", (byte) -105);
                 if (var2 != null) {
-                  nf.a((byte) 126, var2);
+                  AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("autorespond", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("autorespond", (byte) -121);
                 if (null != var2) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_help", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_help", (byte) -107);
                 if (var2 != null) {
-                  nf.a((byte) 125, var2);
+                  AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_help_title", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_help_title", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 113, var2);
+                  AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_help,0", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_help,0", (byte) -107);
                 if (null != var2) {
-                  LoginCredentialKind.field_d[0] = nf.a((byte) 111, var2);
+                  LoginCredentialKind.field_d[0] = AccountFormTextHelpers.a((byte) 111, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_help,1", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_help,1", (byte) -118);
                 if (null != var2) {
-                  LoginCredentialKind.field_d[1] = nf.a((byte) 91, var2);
+                  LoginCredentialKind.field_d[1] = AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_help,2", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_help,2", (byte) -106);
                 if (null != var2) {
-                  LoginCredentialKind.field_d[2] = nf.a((byte) 104, var2);
+                  LoginCredentialKind.field_d[2] = AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_help,3", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_help,3", (byte) -95);
                 if (null != var2) {
-                  LoginCredentialKind.field_d[3] = nf.a((byte) 85, var2);
+                  LoginCredentialKind.field_d[3] = AccountFormTextHelpers.a((byte) 85, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_help,4", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_help,4", (byte) -114);
                 if (null != var2) {
-                  LoginCredentialKind.field_d[4] = nf.a((byte) 106, var2);
+                  LoginCredentialKind.field_d[4] = AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_help,5", (byte) -123);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_help,5", (byte) -123);
                 if (null != var2) {
-                  LoginCredentialKind.field_d[5] = nf.a((byte) 102, var2);
+                  LoginCredentialKind.field_d[5] = AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_keys,0", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_keys,0", (byte) -119);
                 if (null != var2) {
-                  ImageProducerRasterBuffer.field_o[0] = nf.a((byte) 101, var2);
+                  ImageProducerRasterBuffer.field_o[0] = AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_keys,1", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_keys,1", (byte) -122);
                 if (null != var2) {
-                  ImageProducerRasterBuffer.field_o[1] = nf.a((byte) 127, var2);
+                  ImageProducerRasterBuffer.field_o[1] = AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_keys,2", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_keys,2", (byte) -119);
                 if (var2 != null) {
-                  ImageProducerRasterBuffer.field_o[2] = nf.a((byte) 119, var2);
+                  ImageProducerRasterBuffer.field_o[2] = AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_keys,3", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_keys,3", (byte) -117);
                 if (var2 != null) {
-                  ImageProducerRasterBuffer.field_o[3] = nf.a((byte) 100, var2);
+                  ImageProducerRasterBuffer.field_o[3] = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_keys,4", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_keys,4", (byte) -120);
                 if (var2 != null) {
-                  ImageProducerRasterBuffer.field_o[4] = nf.a((byte) 100, var2);
+                  ImageProducerRasterBuffer.field_o[4] = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("quickchat_shortcut_keys,5", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("quickchat_shortcut_keys,5", (byte) -106);
                 if (null != var2) {
-                  ImageProducerRasterBuffer.field_o[5] = nf.a((byte) 119, var2);
+                  ImageProducerRasterBuffer.field_o[5] = AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("keychar_the_character_under_questionmark", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("keychar_the_character_under_questionmark", (byte) -117);
                 if (null != var2) {
-                  ie.a((byte) -26, var2[0]);
+                  SavedDataSubmission.decodeCp1252Byte((byte) -26, var2[0]);
                 }
-                var2 = ra.loadNamedResource("rating_noratings", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("rating_noratings", (byte) -107);
                 if (null != var2) {
-                  nf.a((byte) 97, var2);
+                  AccountFormTextHelpers.a((byte) 97, var2);
                 }
-                var2 = ra.loadNamedResource("rating_rating", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("rating_rating", (byte) -96);
                 if (null != var2) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("rating_played", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("rating_played", (byte) -105);
                 if (null != var2) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("rating_won", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("rating_won", (byte) -119);
                 if (var2 != null) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("rating_lost", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("rating_lost", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("rating_drawn", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("rating_drawn", (byte) -116);
                 if (null != var2) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("benefits_fullscreen", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("benefits_fullscreen", (byte) -101);
                 if (var2 != null) {
-                  nf.a((byte) 104, var2);
+                  AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("benefits_noadverts", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("benefits_noadverts", (byte) -95);
                 if (null != var2) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("benefits_price", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("benefits_price", (byte) -104);
                 if (var2 != null) {
-                  BufferedRandomAccessFile.field_b = nf.a((byte) 123, var2);
+                  BufferedRandomAccessFile.field_b = AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("members_expansion_benefits,0", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("members_expansion_benefits,0", (byte) -119);
                 if (null != var2) {
-                  pi.field_a[0] = nf.a((byte) 121, var2);
+                  MeshLightingHelpers.field_a[0] = AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("members_expansion_benefits,1", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("members_expansion_benefits,1", (byte) -111);
                 if (null != var2) {
-                  pi.field_a[1] = nf.a((byte) 87, var2);
+                  MeshLightingHelpers.field_a[1] = AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("members_expansion_benefits,2", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("members_expansion_benefits,2", (byte) -118);
                 if (null != var2) {
-                  pi.field_a[2] = nf.a((byte) 105, var2);
+                  MeshLightingHelpers.field_a[2] = AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("members_expansion_price_top", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("members_expansion_price_top", (byte) -112);
                 if (null != var2) {
-                  nf.a((byte) 90, var2);
+                  AccountFormTextHelpers.a((byte) 90, var2);
                 }
-                var2 = ra.loadNamedResource("members_expansion_price_bottom", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("members_expansion_price_bottom", (byte) -96);
                 if (null != var2) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_lost_seq,0", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_lost_seq,0", (byte) -119);
                 if (null != var2) {
-                  Crc32Helpers.field_a[0] = nf.a((byte) 96, var2);
+                  Crc32Helpers.field_a[0] = AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_lost_seq,1", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_lost_seq,1", (byte) -116);
                 if (var2 != null) {
-                  Crc32Helpers.field_a[1] = nf.a((byte) 105, var2);
+                  Crc32Helpers.field_a[1] = AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_lost_seq,2", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_lost_seq,2", (byte) -119);
                 if (var2 != null) {
-                  Crc32Helpers.field_a[2] = nf.a((byte) 89, var2);
+                  Crc32Helpers.field_a[2] = AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_lost_seq,3", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_lost_seq,3", (byte) -102);
                 if (var2 != null) {
-                  Crc32Helpers.field_a[3] = nf.a((byte) 123, var2);
+                  Crc32Helpers.field_a[3] = AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_lost", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_lost", (byte) -121);
                 if (null != var2) {
-                  nf.a((byte) 98, var2);
+                  AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_restored", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_restored", (byte) -104);
                 if (var2 != null) {
-                  nf.a((byte) 102, var2);
+                  AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_please_check", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_please_check", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 117, var2);
+                  AccountFormTextHelpers.a((byte) 117, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_wait", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_wait", (byte) -96);
                 if (var2 != null) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_retry", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_retry", (byte) -115);
                 if (null != var2) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_resume", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_resume", (byte) -128);
                 if (null != var2) {
-                  nf.a((byte) 92, var2);
+                  AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_or", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_or", (byte) -116);
                 if (var2 != null) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_exitfs", (byte) -121);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_exitfs", (byte) -121);
                 if (null != var2) {
-                  nf.a((byte) 116, var2);
+                  AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_exitfs_quit", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_exitfs_quit", (byte) -109);
                 if (var2 != null) {
-                  nf.a((byte) 124, var2);
+                  AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_quit", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_quit", (byte) -124);
                 if (var2 != null) {
-                  nf.a((byte) 88, var2);
+                  AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_check_fs", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_check_fs", (byte) -105);
                 if (null != var2) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("reconnect_check_nonfs", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("reconnect_check_nonfs", (byte) -100);
                 if (null != var2) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("fs_accept_beforeaccept", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("fs_accept_beforeaccept", (byte) -104);
                 if (var2 != null) {
-                  QuickChatDynamicCommand.field_c = nf.a((byte) 121, var2);
+                  QuickChatDynamicCommand.field_c = AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("fs_button_accept", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("fs_button_accept", (byte) -95);
                 if (var2 != null) {
-                  ca.field_a = nf.a((byte) 92, var2);
+                  MeshMaterial.field_a = AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("fs_accept_afteraccept", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("fs_accept_afteraccept", (byte) -106);
                 if (var2 != null) {
-                  MidiEnvelope.field_g = nf.a((byte) 89, var2);
+                  MidiEnvelope.field_g = AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("fs_button_cancel", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("fs_button_cancel", (byte) -95);
                 if (null != var2) {
-                  wb.field_h = nf.a((byte) 101, var2);
+                  RadialSelectorPainter.field_h = AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("fs_accept_aftercancel", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("fs_accept_aftercancel", (byte) -126);
                 if (null != var2) {
-                  StripedProgressBar.field_E = nf.a((byte) 123, var2);
+                  StripedProgressBar.field_E = AccountFormTextHelpers.a((byte) 123, var2);
                 }
-                var2 = ra.loadNamedResource("fs_accept_countdown_sing", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("fs_accept_countdown_sing", (byte) -120);
                 if (null != var2) {
-                  gk.field_e = nf.a((byte) 95, var2);
+                  Bzip2State.field_e = AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("fs_accept_countdown_pl", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("fs_accept_countdown_pl", (byte) -114);
                 if (var2 != null) {
-                  MenuController.field_k = nf.a((byte) 110, var2);
+                  MenuController.field_k = AccountFormTextHelpers.a((byte) 110, var2);
                 }
-                var2 = ra.loadNamedResource("fs_nonmember", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("fs_nonmember", (byte) -128);
                 if (null != var2) {
-                  FramedButtonPainter.field_s = nf.a((byte) 102, var2);
+                  FramedButtonPainter.field_s = AccountFormTextHelpers.a((byte) 102, var2);
                 }
-                var2 = ra.loadNamedResource("fs_button_close", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("fs_button_close", (byte) -114);
                 if (null != var2) {
-                  wizardrun.field_F = nf.a((byte) 103, var2);
+                  wizardrun.field_F = AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("fs_button_members", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("fs_button_members", (byte) -106);
                 if (null != var2) {
-                  MouseWheelInput.field_e = nf.a((byte) 107, var2);
+                  MouseWheelInput.field_e = AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("fs_unavailable", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("fs_unavailable", (byte) -103);
                 if (var2 != null) {
-                  e.field_c = nf.a((byte) 113, var2);
+                  ThreePieceFrameHelpers.field_c = AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("fs_unavailable_try_signed_applet", (byte) -124);
+                var2 = AchievementUnlock.loadNamedResource("fs_unavailable_try_signed_applet", (byte) -124);
                 if (null != var2) {
-                  FullscreenController.field_b = nf.a((byte) 106, var2);
+                  FullscreenController.field_b = AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("fs_focus", (byte) -95);
+                var2 = AchievementUnlock.loadNamedResource("fs_focus", (byte) -95);
                 if (var2 != null) {
-                  SocketConnector.field_b = nf.a((byte) 122, var2);
+                  SocketConnector.field_b = AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("fs_focus_or_resolution", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("fs_focus_or_resolution", (byte) -107);
                 if (var2 != null) {
-                  ArchiveCatalog.field_c = nf.a((byte) 126, var2);
+                  ArchiveCatalog.field_c = AccountFormTextHelpers.a((byte) 126, var2);
                 }
-                var2 = ra.loadNamedResource("fs_timeout", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("fs_timeout", (byte) -100);
                 if (null != var2) {
-                  DialogLayer.field_G = nf.a((byte) 121, var2);
+                  DialogLayer.field_G = AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("fs_button_tryagain", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("fs_button_tryagain", (byte) -99);
                 if (null != var2) {
-                  tc.field_n = nf.a((byte) 125, var2);
+                  SavedDataRequest.field_n = AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_ui_fs_countdown", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("graphics_ui_fs_countdown", (byte) -107);
                 if (var2 != null) {
-                  nf.a((byte) 89, var2);
+                  AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("mb_caption_title", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("mb_caption_title", (byte) -102);
                 if (null != var2) {
-                  lg.field_b = nf.a((byte) 125, var2);
+                  FullscreenFailureKind.field_b = AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("mb_including_gamename", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("mb_including_gamename", (byte) -112);
                 if (null != var2) {
-                  RasterBuffer.field_b = nf.a((byte) 125, var2);
+                  RasterBuffer.field_b = AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("mb_full_access_1", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("mb_full_access_1", (byte) -116);
                 if (var2 != null) {
-                  of.field_l = nf.a((byte) 116, var2);
+                  RankingRequest.field_l = AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("mb_full_access_2", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("mb_full_access_2", (byte) -116);
                 if (var2 != null) {
-                  PcmResampler.field_g = nf.a((byte) 113, var2);
+                  PcmResampler.field_g = AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("mb_achievement_count_1", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("mb_achievement_count_1", (byte) -97);
                 if (null != var2) {
-                  MeshWorkspaceHelpers.field_b = nf.a((byte) 84, var2);
+                  RankingWorkspaceHelpers.field_b = AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("mb_achievement_count_2", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("mb_achievement_count_2", (byte) -101);
                 if (var2 != null) {
-                  AlternateUsernameLoginCredentials.field_q = nf.a((byte) 104, var2);
+                  AlternateUsernameLoginCredentials.field_q = AccountFormTextHelpers.a((byte) 104, var2);
                 }
-                var2 = ra.loadNamedResource("mb_exclusive_1", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("mb_exclusive_1", (byte) -116);
                 if (null != var2) {
-                  DisplayNameValidator.field_p = nf.a((byte) 111, var2);
+                  DisplayNameValidator.field_p = AccountFormTextHelpers.a((byte) 111, var2);
                 }
             }
             void loadScoresRatingsAndSubscriptionTexts() throws java.lang.RuntimeException {
-                var2 = ra.loadNamedResource("mb_exclusive_2", (byte) -101);
+                var2 = AchievementUnlock.loadNamedResource("mb_exclusive_2", (byte) -101);
                 if (var2 != null) {
-                  ra.field_i = nf.a((byte) 103, var2);
+                  AchievementUnlock.field_i = AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("me_extra_benefits", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("me_extra_benefits", (byte) -102);
                 if (null != var2) {
-                  nf.a((byte) 96, var2);
+                  AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("hs_friend_tip", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("hs_friend_tip", (byte) -127);
                 if (null != var2) {
-                  we.field_e = nf.a((byte) 94, var2);
+                  UiSpriteThemeHelpers.field_e = AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("hs_friend_tip_multi", (byte) -106);
+                var2 = AchievementUnlock.loadNamedResource("hs_friend_tip_multi", (byte) -106);
                 if (null != var2) {
-                  nf.a((byte) 114, var2);
+                  AccountFormTextHelpers.a((byte) 114, var2);
                 }
-                var2 = ra.loadNamedResource("hs_mode_name,0", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("hs_mode_name,0", (byte) -112);
                 if (var2 != null) {
-                  NodeHashTableIterator.field_l[0] = nf.a((byte) 109, var2);
+                  NodeHashTableIterator.field_l[0] = AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("hs_mode_name,1", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("hs_mode_name,1", (byte) -111);
                 if (var2 != null) {
-                  NodeHashTableIterator.field_l[1] = nf.a((byte) 119, var2);
+                  NodeHashTableIterator.field_l[1] = AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("hs_mode_name,2", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("hs_mode_name,2", (byte) -120);
                 if (null != var2) {
-                  NodeHashTableIterator.field_l[2] = nf.a((byte) 125, var2);
+                  NodeHashTableIterator.field_l[2] = AccountFormTextHelpers.a((byte) 125, var2);
                 }
-                var2 = ra.loadNamedResource("rating_mode_name,0", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("rating_mode_name,0", (byte) -107);
                 if (null != var2) {
-                  ih.field_c[0] = nf.a((byte) 92, var2);
+                  NameCheckHelpers.field_c[0] = AccountFormTextHelpers.a((byte) 92, var2);
                 }
-                var2 = ra.loadNamedResource("rating_mode_name,1", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("rating_mode_name,1", (byte) -109);
                 if (null != var2) {
-                  ih.field_c[1] = nf.a((byte) 103, var2);
+                  NameCheckHelpers.field_c[1] = AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("rating_mode_long_name,0", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("rating_mode_long_name,0", (byte) -115);
                 if (var2 != null) {
-                  gf.field_eb[0] = nf.a((byte) 96, var2);
+                  ContentTransitionDialog.field_eb[0] = AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("rating_mode_long_name,1", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("rating_mode_long_name,1", (byte) -126);
                 if (var2 != null) {
-                  gf.field_eb[1] = nf.a((byte) 105, var2);
+                  ContentTransitionDialog.field_eb[1] = AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_config_fixed_size", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("graphics_config_fixed_size", (byte) -115);
                 if (var2 != null) {
-                  nf.a((byte) 127, var2);
+                  AccountFormTextHelpers.a((byte) 127, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_config_resizable", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("graphics_config_resizable", (byte) -110);
                 if (null != var2) {
-                  nf.a((byte) 115, var2);
+                  AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_config_fullscreen", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("graphics_config_fullscreen", (byte) -118);
                 if (var2 != null) {
-                  nf.a((byte) 108, var2);
+                  AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_config_done", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("graphics_config_done", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 120, var2);
+                  AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_config_apply", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("graphics_config_apply", (byte) -122);
                 if (null != var2) {
-                  nf.a((byte) 105, var2);
+                  AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_config_title", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("graphics_config_title", (byte) -117);
                 if (null != var2) {
-                  nf.a((byte) 106, var2);
+                  AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_config_instruction", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("graphics_config_instruction", (byte) -109);
                 if (var2 != null) {
-                  nf.a((byte) 86, var2);
+                  AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("graphics_config_need_memory", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("graphics_config_need_memory", (byte) -127);
                 if (null != var2) {
-                  nf.a((byte) 119, var2);
+                  AccountFormTextHelpers.a((byte) 119, var2);
                 }
-                var2 = ra.loadNamedResource("pleasewait_dotdotdot", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("pleasewait_dotdotdot", (byte) -102);
                 if (null != var2) {
-                  GameShell.field_u = nf.a((byte) 96, var2);
+                  GameShell.field_u = AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("serviceunavailable", (byte) -110);
+                var2 = AchievementUnlock.loadNamedResource("serviceunavailable", (byte) -110);
                 if (var2 != null) {
-                  nf.a((byte) 109, var2);
+                  AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("createtouse", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("createtouse", (byte) -104);
                 if (var2 != null) {
-                  vl.field_n = nf.a((byte) 96, var2);
+                  CheckboxPainter.field_n = AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("achievementsoffline", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("achievementsoffline", (byte) -112);
                 if (var2 != null) {
-                  nf.a((byte) 103, var2);
+                  AccountFormTextHelpers.a((byte) 103, var2);
                 }
-                var2 = ra.loadNamedResource("warning", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("warning", (byte) -114);
                 if (null != var2) {
-                  nf.a((byte) 112, var2);
+                  AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("DEFAULT_PLAYER_NAME", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("DEFAULT_PLAYER_NAME", (byte) -98);
                 if (null != var2) {
-                  RasterSnapshot.field_i = nf.a((byte) 105, var2);
+                  RasterSnapshot.field_i = AccountFormTextHelpers.a((byte) 105, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin1", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin1", (byte) -126);
                 if (var2 != null) {
-                  vg.field_U = nf.a((byte) 100, var2);
+                  FullscreenFailureDialog.field_U = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin2,1", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin2,1", (byte) -96);
                 if (var2 != null) {
-                  NanoTickClock.field_p[1] = nf.a((byte) 113, var2);
+                  NanoTickClock.field_p[1] = AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin2,2", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin2,2", (byte) -108);
                 if (null != var2) {
-                  NanoTickClock.field_p[2] = nf.a((byte) 96, var2);
+                  NanoTickClock.field_p[2] = AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin2,3", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin2,3", (byte) -117);
                 if (var2 != null) {
-                  NanoTickClock.field_p[3] = nf.a((byte) 115, var2);
+                  NanoTickClock.field_p[3] = AccountFormTextHelpers.a((byte) 115, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin2,4", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin2,4", (byte) -112);
                 if (var2 != null) {
-                  NanoTickClock.field_p[4] = nf.a((byte) 116, var2);
+                  NanoTickClock.field_p[4] = AccountFormTextHelpers.a((byte) 116, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin2,5", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin2,5", (byte) -125);
                 if (var2 != null) {
-                  NanoTickClock.field_p[5] = nf.a((byte) 87, var2);
+                  NanoTickClock.field_p[5] = AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin2,6", (byte) -112);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin2,6", (byte) -112);
                 if (null != var2) {
-                  NanoTickClock.field_p[6] = nf.a((byte) 112, var2);
+                  NanoTickClock.field_p[6] = AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin2,7", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin2,7", (byte) -118);
                 if (null != var2) {
-                  NanoTickClock.field_p[7] = nf.a((byte) 100, var2);
+                  NanoTickClock.field_p[7] = AccountFormTextHelpers.a((byte) 100, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin3,1", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin3,1", (byte) -120);
                 if (null != var2) {
-                  IntrusiveDeque.field_e[1] = nf.a((byte) 98, var2);
+                  IntrusiveDeque.field_e[1] = AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin3,2", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin3,2", (byte) -120);
                 if (null != var2) {
-                  IntrusiveDeque.field_e[2] = nf.a((byte) 96, var2);
+                  IntrusiveDeque.field_e[2] = AccountFormTextHelpers.a((byte) 96, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin3,3", (byte) -114);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin3,3", (byte) -114);
                 if (null != var2) {
-                  IntrusiveDeque.field_e[3] = nf.a((byte) 94, var2);
+                  IntrusiveDeque.field_e[3] = AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin3,4", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin3,4", (byte) -120);
                 if (var2 != null) {
-                  IntrusiveDeque.field_e[4] = nf.a((byte) 86, var2);
+                  IntrusiveDeque.field_e[4] = AccountFormTextHelpers.a((byte) 86, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin3,5", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin3,5", (byte) -105);
                 if (var2 != null) {
-                  IntrusiveDeque.field_e[5] = nf.a((byte) 93, var2);
+                  IntrusiveDeque.field_e[5] = AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin3,6", (byte) -125);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin3,6", (byte) -125);
                 if (var2 != null) {
-                  IntrusiveDeque.field_e[6] = nf.a((byte) 108, var2);
+                  IntrusiveDeque.field_e[6] = AccountFormTextHelpers.a((byte) 108, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin3,7", (byte) -113);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin3,7", (byte) -113);
                 if (var2 != null) {
-                  IntrusiveDeque.field_e[7] = nf.a((byte) 112, var2);
+                  IntrusiveDeque.field_e[7] = AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("discard", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("discard", (byte) -109);
                 if (null != var2) {
-                  gf.field_X = nf.a((byte) 106, var2);
+                  ContentTransitionDialog.field_X = AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin4,1", (byte) -98);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin4,1", (byte) -98);
                 if (var2 != null) {
-                  DiskCacheRequest.field_y[1] = nf.a((byte) 98, var2);
+                  DiskCacheRequest.field_y[1] = AccountFormTextHelpers.a((byte) 98, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin4,2", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin4,2", (byte) -119);
                 if (null != var2) {
-                  DiskCacheRequest.field_y[2] = nf.a((byte) 109, var2);
+                  DiskCacheRequest.field_y[2] = AccountFormTextHelpers.a((byte) 109, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin4,3", (byte) -104);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin4,3", (byte) -104);
                 if (null != var2) {
-                  DiskCacheRequest.field_y[3] = nf.a((byte) 95, var2);
+                  DiskCacheRequest.field_y[3] = AccountFormTextHelpers.a((byte) 95, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin4,4", (byte) -103);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin4,4", (byte) -103);
                 if (var2 != null) {
-                  DiskCacheRequest.field_y[4] = nf.a((byte) 124, var2);
+                  DiskCacheRequest.field_y[4] = AccountFormTextHelpers.a((byte) 124, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin4,5", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin4,5", (byte) -120);
                 if (null != var2) {
-                  DiskCacheRequest.field_y[5] = nf.a((byte) 99, var2);
+                  DiskCacheRequest.field_y[5] = AccountFormTextHelpers.a((byte) 99, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin4,6", (byte) -100);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin4,6", (byte) -100);
                 if (null != var2) {
-                  DiskCacheRequest.field_y[6] = nf.a((byte) 107, var2);
+                  DiskCacheRequest.field_y[6] = AccountFormTextHelpers.a((byte) 107, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin4,7", (byte) -105);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin4,7", (byte) -105);
                 if (var2 != null) {
-                  DiskCacheRequest.field_y[7] = nf.a((byte) 120, var2);
+                  DiskCacheRequest.field_y[7] = AccountFormTextHelpers.a((byte) 120, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin_notloggedin", (byte) -120);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin_notloggedin", (byte) -120);
                 if (null != var2) {
-                  nf.a((byte) 94, var2);
+                  AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin_alternate,1", (byte) -128);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin_alternate,1", (byte) -128);
                 if (var2 != null) {
-                  HighscorePlayer.field_a[1] = nf.a((byte) 88, var2);
+                  HighscorePlayer.field_a[1] = AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin_alternate,2", (byte) -99);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin_alternate,2", (byte) -99);
                 if (var2 != null) {
-                  HighscorePlayer.field_a[2] = nf.a((byte) 89, var2);
+                  HighscorePlayer.field_a[2] = AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin_alternate,3", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin_alternate,3", (byte) -96);
                 if (var2 != null) {
-                  HighscorePlayer.field_a[3] = nf.a((byte) 89, var2);
+                  HighscorePlayer.field_a[3] = AccountFormTextHelpers.a((byte) 89, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin_alternate,4", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin_alternate,4", (byte) -109);
                 if (null != var2) {
-                  HighscorePlayer.field_a[4] = nf.a((byte) 121, var2);
+                  HighscorePlayer.field_a[4] = AccountFormTextHelpers.a((byte) 121, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin_alternate,5", (byte) -118);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin_alternate,5", (byte) -118);
                 if (null != var2) {
-                  HighscorePlayer.field_a[5] = nf.a((byte) 113, var2);
+                  HighscorePlayer.field_a[5] = AccountFormTextHelpers.a((byte) 113, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin_alternate,6", (byte) -111);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin_alternate,6", (byte) -111);
                 if (null != var2) {
-                  HighscorePlayer.field_a[6] = nf.a((byte) 106, var2);
+                  HighscorePlayer.field_a[6] = AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("mustlogin_alternate,7", (byte) -97);
+                var2 = AchievementUnlock.loadNamedResource("mustlogin_alternate,7", (byte) -97);
                 if (var2 != null) {
-                  HighscorePlayer.field_a[7] = nf.a((byte) 101, var2);
+                  HighscorePlayer.field_a[7] = AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,0", (byte) -109);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,0", (byte) -109);
                 if (null != var2) {
-                  ArchiveLoadingPlan.field_d[0] = nf.a((byte) 118, var2);
+                  ArchiveLoadingPlan.field_d[0] = AccountFormTextHelpers.a((byte) 118, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,1", (byte) -96);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,1", (byte) -96);
                 if (null != var2) {
-                  ArchiveLoadingPlan.field_d[1] = nf.a((byte) 101, var2);
+                  ArchiveLoadingPlan.field_d[1] = AccountFormTextHelpers.a((byte) 101, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,2", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,2", (byte) -122);
                 if (null != var2) {
-                  ArchiveLoadingPlan.field_d[2] = nf.a((byte) 122, var2);
+                  ArchiveLoadingPlan.field_d[2] = AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,3", (byte) -119);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,3", (byte) -119);
                 if (null != var2) {
-                  ArchiveLoadingPlan.field_d[3] = nf.a((byte) 93, var2);
+                  ArchiveLoadingPlan.field_d[3] = AccountFormTextHelpers.a((byte) 93, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,4", (byte) -117);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,4", (byte) -117);
                 if (var2 != null) {
-                  ArchiveLoadingPlan.field_d[4] = nf.a((byte) 122, var2);
+                  ArchiveLoadingPlan.field_d[4] = AccountFormTextHelpers.a((byte) 122, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,5", (byte) -108);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,5", (byte) -108);
                 if (null != var2) {
-                  ArchiveLoadingPlan.field_d[5] = nf.a((byte) 94, var2);
+                  ArchiveLoadingPlan.field_d[5] = AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,6", (byte) -126);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,6", (byte) -126);
                 if (null != var2) {
-                  ArchiveLoadingPlan.field_d[6] = nf.a((byte) 106, var2);
+                  ArchiveLoadingPlan.field_d[6] = AccountFormTextHelpers.a((byte) 106, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,7", (byte) -116);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,7", (byte) -116);
                 if (null != var2) {
-                  ArchiveLoadingPlan.field_d[7] = nf.a((byte) 84, var2);
+                  ArchiveLoadingPlan.field_d[7] = AccountFormTextHelpers.a((byte) 84, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,8", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,8", (byte) -122);
                 if (null != var2) {
-                  ArchiveLoadingPlan.field_d[8] = nf.a((byte) 94, var2);
+                  ArchiveLoadingPlan.field_d[8] = AccountFormTextHelpers.a((byte) 94, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,9", (byte) -102);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,9", (byte) -102);
                 if (var2 != null) {
-                  ArchiveLoadingPlan.field_d[9] = nf.a((byte) 87, var2);
+                  ArchiveLoadingPlan.field_d[9] = AccountFormTextHelpers.a((byte) 87, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,10", (byte) -122);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,10", (byte) -122);
                 if (var2 != null) {
-                  ArchiveLoadingPlan.field_d[10] = nf.a((byte) 91, var2);
+                  ArchiveLoadingPlan.field_d[10] = AccountFormTextHelpers.a((byte) 91, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,11", (byte) -127);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,11", (byte) -127);
                 if (null != var2) {
-                  ArchiveLoadingPlan.field_d[11] = nf.a((byte) 112, var2);
+                  ArchiveLoadingPlan.field_d[11] = AccountFormTextHelpers.a((byte) 112, var2);
                 }
-                var2 = ra.loadNamedResource("subscription_cost_monthly,12", (byte) -115);
+                var2 = AchievementUnlock.loadNamedResource("subscription_cost_monthly,12", (byte) -115);
                 if (var2 != null) {
-                  ArchiveLoadingPlan.field_d[12] = nf.a((byte) 88, var2);
+                  ArchiveLoadingPlan.field_d[12] = AccountFormTextHelpers.a((byte) 88, var2);
                 }
-                var2 = ra.loadNamedResource("sentence_separator", (byte) -107);
+                var2 = AchievementUnlock.loadNamedResource("sentence_separator", (byte) -107);
                 if (var2 != null) {
-                  nf.a((byte) 93, var2);
+                  AccountFormTextHelpers.a((byte) 93, var2);
                 }
                 FramedButtonPainter.field_r = null;
             }
@@ -3208,7 +3208,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     final static void c(int param0) {
         try {
-          jc.a((byte) 67, 17);
+          OpacityWidget.setAccountWorkflowState((byte) 67, 17);
           if (param0 != -31722) {
             field_e = (ProgressDialog) null;
           }

@@ -31,13 +31,13 @@ final class AudioServiceThread implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          ResizableDialog.a((Throwable) ((Object) exception), (String) null, -562);
+          ResizableDialog.reportClientError((Throwable) ((Object) exception), (String) null, -562);
         } finally {
           this.field_e = false;
         }
     }
 
-    final static void a(byte[] param0, int param1, boolean param2, File param3) throws IOException {
+    final static void writeFileBytes(byte[] param0, int param1, boolean param2, File param3) throws IOException {
         FileOutputStream var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -89,8 +89,8 @@ final class AudioServiceThread implements Runnable {
         this.field_e = false;
     }
 
-    final static void b(int param0) {
-        vf var1 = (vf) (TimedValidator.field_d.first((byte) 72));
+    final static void readRankingStatsReply(int param0) {
+        RankingStatsRequest var1 = (RankingStatsRequest) (TimedValidator.field_d.first((byte) 72));
         if (var1 == null) {
           HuffmanDecoder.closeAccountConnection(-82);
           return;

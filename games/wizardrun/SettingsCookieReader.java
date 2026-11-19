@@ -44,7 +44,7 @@ final class SettingsCookieReader {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
               var4 = (String) (BrowserScriptBridge.call(param0, -3264, "getcookies"));
-              var5 = FadingDialog.a(var4, -22710, ';');
+              var5 = FadingDialog.splitOnCharacter(var4, -22710, ';');
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (0 <= var7 &&
@@ -57,10 +57,10 @@ final class SettingsCookieReader {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (pa.field_f == null) {
+            if (EncryptedLoginHelpers.field_f == null) {
               return param0.getParameter("settings");
             }
-            stackIn_16_0 = pa.field_f;
+            stackIn_16_0 = EncryptedLoginHelpers.field_f;
             return stackIn_16_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

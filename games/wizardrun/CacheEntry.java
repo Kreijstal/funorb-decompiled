@@ -86,7 +86,7 @@ abstract class CacheEntry extends DualLinkNode {
             }
             var18 = var14;
             var19 = var15;
-            SoftwareRasterizer.saveClip(td.field_a);
+            SoftwareRasterizer.saveClip(KeyboardShutdownHelpers.field_a);
             if (var18 > var19) {
               var19 = param3 * var8 / (var9 + var8) + param5;
               var18 = param3 * var8 / (var9 + var8) + param5;
@@ -94,22 +94,22 @@ abstract class CacheEntry extends DualLinkNode {
             if (null != param0[0]) {
               SoftwareRasterizer.intersectClip(param1, param5, var16, var18);
               param0[0].drawTransparent(param1, param5);
-              SoftwareRasterizer.restoreClip(td.field_a);
+              SoftwareRasterizer.restoreClip(KeyboardShutdownHelpers.field_a);
             }
             if (param0[2] != null) {
               SoftwareRasterizer.intersectClip(var17, param5, var10, var18);
               param0[2].drawTransparent(var13, param5);
-              SoftwareRasterizer.restoreClip(td.field_a);
+              SoftwareRasterizer.restoreClip(KeyboardShutdownHelpers.field_a);
             }
             if (param0[6] != null) {
               SoftwareRasterizer.intersectClip(param1, var19, var16, var11);
               param0[6].drawTransparent(param1, var15);
-              SoftwareRasterizer.restoreClip(td.field_a);
+              SoftwareRasterizer.restoreClip(KeyboardShutdownHelpers.field_a);
             }
             if (param0[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param0[8].drawTransparent(var13, var15);
-              SoftwareRasterizer.restoreClip(td.field_a);
+              SoftwareRasterizer.restoreClip(KeyboardShutdownHelpers.field_a);
             }
             if (param0[1] != null &&
               param0[1].fullWidth != 0) {
@@ -117,7 +117,7 @@ abstract class CacheEntry extends DualLinkNode {
               for (var20 = var12; var20 < var13; var20 = var20 + param0[1].fullWidth) {
                 param0[1].drawTransparent(var20, param5);
               }
-              SoftwareRasterizer.restoreClip(td.field_a);
+              SoftwareRasterizer.restoreClip(KeyboardShutdownHelpers.field_a);
             }
             if (param0[7] != null &&
               param0[7].fullWidth != 0) {
@@ -125,7 +125,7 @@ abstract class CacheEntry extends DualLinkNode {
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param0[7].fullWidth) {
                 param0[7].drawTransparent(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.restoreClip(td.field_a);
+              SoftwareRasterizer.restoreClip(KeyboardShutdownHelpers.field_a);
             }
             if (param0[3] != null &&
               0 != param0[3].fullHeight) {
@@ -133,7 +133,7 @@ abstract class CacheEntry extends DualLinkNode {
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param0[3].fullHeight) {
                 param0[3].drawTransparent(param1, var20Lifetime2);
               }
-              SoftwareRasterizer.restoreClip(td.field_a);
+              SoftwareRasterizer.restoreClip(KeyboardShutdownHelpers.field_a);
             }
             if (null != param0[5] &&
               param0[5].fullHeight != 0) {
@@ -141,7 +141,7 @@ abstract class CacheEntry extends DualLinkNode {
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param0[5].fullHeight) {
                 param0[5].drawTransparent(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.restoreClip(td.field_a);
+              SoftwareRasterizer.restoreClip(KeyboardShutdownHelpers.field_a);
             }
             if (param0[4] != null &&
               0 != param0[4].fullWidth &&
@@ -152,7 +152,7 @@ abstract class CacheEntry extends DualLinkNode {
                   param0[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.restoreClip(td.field_a);
+              SoftwareRasterizer.restoreClip(KeyboardShutdownHelpers.field_a);
               return;
             }
             return;

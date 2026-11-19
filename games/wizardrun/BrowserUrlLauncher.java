@@ -31,7 +31,7 @@ final class BrowserUrlLauncher {
           Throwable decompiledCaughtException = null;
           try {
             if (PlatformTaskDispatcher.field_k.startsWith("win") &&
-              FadingDialog.a(99, param2)) {
+              FadingDialog.openWindowsBrowser(99, param2)) {
               return;
             }
             var4_int = 116 / ((63 - param1) / 56);
@@ -41,7 +41,7 @@ final class BrowserUrlLauncher {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              ResizableDialog.a((Throwable) null, "MGR1: " + param2, -562);
+              ResizableDialog.reportClientError((Throwable) null, "MGR1: " + param2, -562);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

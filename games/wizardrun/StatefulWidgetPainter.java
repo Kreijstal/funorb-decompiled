@@ -3,12 +3,12 @@
  */
 final class StatefulWidgetPainter extends WidgetPainter {
     static int field_s;
-    static lg field_r;
+    static FullscreenFailureKind field_r;
     private WidgetPainterState field_p;
     private WidgetPainterState[] field_t;
     static IntrusiveDeque field_q;
 
-    final void a(byte param0, Sprite[] param1) {
+    final void setAllStateFrames(byte param0, Sprite[] param1) {
         int var4 = 0;
         WidgetPainterState[] var3 = null;
         WidgetPainterState var5 = null;
@@ -29,7 +29,7 @@ final class StatefulWidgetPainter extends WidgetPainter {
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null) {
-              var5.field_j = param1;
+              var5.frame = param1;
             }
           }
           return;
@@ -50,15 +50,15 @@ final class StatefulWidgetPainter extends WidgetPainter {
     StatefulWidgetPainter(StatefulWidgetPainter param0, boolean param1) {
         this();
         try {
-          param0.a(0, param1, this);
+          param0.copyStatefulStyleTo(0, param1, this);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final WidgetPainterState a(int param0, int param1) {
+    final WidgetPainterState createState(int param0, int param1) {
         if (param0 != 0) {
-          StatefulWidgetPainter.c(23);
+          StatefulWidgetPainter.advanceLogoAnimation(23);
         }
         WidgetPainterState dupTemp$0 = new WidgetPainterState();
         this.field_t[param1] = dupTemp$0;
@@ -73,7 +73,7 @@ final class StatefulWidgetPainter extends WidgetPainter {
         }
     }
 
-    final static void c(int param0) {
+    final static void advanceLogoAnimation(int param0) {
         if (DualLinkNodeHashTable.field_f != -WidgetContainer.field_B + 0 &&
           250 - WidgetContainer.field_B != DualLinkNodeHashTable.field_f) {
         }
@@ -89,10 +89,10 @@ final class StatefulWidgetPainter extends WidgetPainter {
         WidgetPainterState dupTemp$0 = new WidgetPainterState();
         this.field_t[0] = dupTemp$0;
         WidgetPainterState var1 = dupTemp$0;
-        var1.a(0);
+        var1.reset(0);
     }
 
-    final void a(int param0, Sprite[] param1, byte param2) {
+    final void setStateFrame(int param0, Sprite[] param1, byte param2) {
         int var5 = 0;
         try {
           int var4_int = -120 / ((43 - param2) / 36);
@@ -100,13 +100,13 @@ final class StatefulWidgetPainter extends WidgetPainter {
           if (this.field_t[var5] == null) {
             this.field_t[var5] = new WidgetPainterState();
           }
-          this.field_t[param0].field_j = param1;
+          this.field_t[param0].frame = param1;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "qa.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(byte param0, Sprite param1) {
+    final void setAllStateIcons(byte param0, Sprite param1) {
         int var4 = 0;
         WidgetPainterState[] var3 = null;
         WidgetPainterState var5 = null;
@@ -120,14 +120,14 @@ final class StatefulWidgetPainter extends WidgetPainter {
         var6 = wizardrun.field_H;
         try {
           if (param0 < 46) {
-            this.a(-74, -15);
+            this.createState(-74, -15);
           }
           var7 = this.field_t;
           var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null) {
-              var5.field_i = param1;
+              var5.icon = param1;
             }
           }
           return;
@@ -145,7 +145,7 @@ final class StatefulWidgetPainter extends WidgetPainter {
         }
     }
 
-    private final void a(int param0, boolean param1, StatefulWidgetPainter param2) {
+    private final void copyStatefulStyleTo(int param0, boolean param1, StatefulWidgetPainter param2) {
         int var4_int = 0;
         WidgetPainterState dupTemp$0 = null;
         WidgetPainterState stackIn_9_0 = null;
@@ -160,7 +160,7 @@ final class StatefulWidgetPainter extends WidgetPainter {
         int var7 = 0;
         var7 = wizardrun.field_H;
         try {
-          super.a(param2, param0);
+          super.copyStyleTo(param2, param0);
           if (param1) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_t[var4_int];
@@ -174,7 +174,7 @@ final class StatefulWidgetPainter extends WidgetPainter {
                 } else {
                   stackIn_10_1 = var6;
                 }
-                ((WidgetPainterState) (Object) stackIn_9_0).a(stackIn_10_1, (byte) -26);
+                ((WidgetPainterState) (Object) stackIn_9_0).copyTo(stackIn_10_1, (byte) -26);
               } else {
                 param2.field_t[var4_int] = null;
               }
@@ -221,13 +221,13 @@ final class StatefulWidgetPainter extends WidgetPainter {
             stackIn_3_0 = (UiWidget) (param2);
           }
           var10 = (TextButton) (stackIn_3_0);
-          ClientException.a(0, param1 - (-param2.y - param2.height), param0 + param2.x, param2.y + param1, param0 + param2.x + param2.width);
+          ClientException.pushRasterStateAndClip(0, param1 - (-param2.y - param2.height), param0 + param2.x, param2.y + param1, param0 + param2.x + param2.width);
           if (var10 != null) {
             param4 = param4 & var10.field_B;
           }
           var7 = this.field_t[0];
-          this.field_p.a(0);
-          var7.a(param1, 83, param0, param2, this.field_p, this);
+          this.field_p.reset(0);
+          var7.applyToState(param1, 83, param0, param2, this.field_p, this);
           if (!param3) {
             StatefulWidgetPainter.releaseStatics(9);
           }
@@ -235,18 +235,18 @@ final class StatefulWidgetPainter extends WidgetPainter {
             if (var10.selected) {
               var11 = this.field_t[1];
               if (var11 != null) {
-                var11.a(param1, 100, param0, param2, this.field_p, this);
+                var11.applyToState(param1, 100, param0, param2, this.field_p, this);
               }
             }
             if (var10.hovered) {
               var12 = this.field_t[3];
               if (var10.pressedMouseButton != 0 &&
                 var12 != null) {
-                var12.a(param1, 90, param0, param2, this.field_p, this);
+                var12.applyToState(param1, 90, param0, param2, this.field_p, this);
               } else {
                 var9 = this.field_t[2];
                 if (var9 != null) {
-                  var9.a(param1, 100, param0, param2, this.field_p, this);
+                  var9.applyToState(param1, 100, param0, param2, this.field_p, this);
                 }
               }
             }
@@ -254,20 +254,20 @@ final class StatefulWidgetPainter extends WidgetPainter {
           if (param2.isFocused((byte) 53)) {
             var13 = this.field_t[5];
             if (var13 != null) {
-              var13.a(param1, 92, param0, param2, this.field_p, this);
+              var13.applyToState(param1, 92, param0, param2, this.field_p, this);
             }
           }
           if (!param4) {
             var14 = this.field_t[4];
             if (var14 != null) {
-              var14.a(param1, 95, param0, param2, this.field_p, this);
+              var14.applyToState(param1, 95, param0, param2, this.field_p, this);
             }
           }
           stackIn_33_0 = this.field_p;
           stackIn_33_1 = (UiWidget) (param2);
           stackIn_34_2 = !(param3);
-          ((WidgetPainterState) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_34_2, param1, this, param0);
-          UsernameLoginCredentials.b(4);
+          ((WidgetPainterState) (Object) stackIn_33_0).drawState(stackIn_33_1, stackIn_34_2, param1, this, param0);
+          UsernameLoginCredentials.popRasterState(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -284,7 +284,7 @@ final class StatefulWidgetPainter extends WidgetPainter {
     }
 
     static {
-        field_r = new lg();
+        field_r = new FullscreenFailureKind();
         field_q = new IntrusiveDeque();
     }
 }

@@ -17,7 +17,7 @@ final class BoundedRandomAccessFile {
           return;
         }
         String var5 = (String) null;
-        BoundedRandomAccessFile.a((byte) -93, (String) null);
+        BoundedRandomAccessFile.containsNonAlphanumericPasswordCharacter((byte) -93, (String) null);
         this.field_c.seek(param0);
         this.field_d = param0;
     }
@@ -75,13 +75,13 @@ final class BoundedRandomAccessFile {
 
     final long length(int param0) throws IOException {
         if (param0 != 0) {
-          BoundedRandomAccessFile.c(97);
+          BoundedRandomAccessFile.hasAccountEligibilityCookie(97);
           return this.field_c.length();
         }
         return this.field_c.length();
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean containsNonAlphanumericPasswordCharacter(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -95,8 +95,8 @@ final class BoundedRandomAccessFile {
         try {
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!f.a((char) var3, true) &&
-              !vl.a((char) var3, -5717)) {
+            if (!HighscorePlayerState.isAsciiLetter((char) var3, true) &&
+              !CheckboxPainter.a((char) var3, -5717)) {
               return true;
             }
           }
@@ -104,7 +104,7 @@ final class BoundedRandomAccessFile {
             return false;
           }
           var5 = (String) null;
-          BoundedRandomAccessFile.a((byte) -90, (String) null);
+          BoundedRandomAccessFile.containsNonAlphanumericPasswordCharacter((byte) -90, (String) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,14 +167,14 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static void a(HighscoreRequest param0, int param1, byte param2) {
+    final static void writeHighscoreRequest(HighscoreRequest param0, int param1, byte param2) {
         IsaacPacketBuffer var3 = null;
         try {
           if (param2 != 121) {
             String var4 = (String) null;
-            BoundedRandomAccessFile.a((byte) -79, (String) null);
+            BoundedRandomAccessFile.containsNonAlphanumericPasswordCharacter((byte) -79, (String) null);
           }
-          var3 = n.field_b;
+          var3 = AccountPacketState.field_b;
           var3.writeCipheredOpcode((byte) 113, param1);
           var3.writeByte((byte) 11, 5);
           var3.writeByte((byte) 11, 0);
@@ -186,11 +186,11 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean hasAccountEligibilityCookie(int param0) {
         if (param0 < 18) {
           return false;
         }
-        return SocketConnector.a((byte) 46, DisplayNameValidator.getActiveApplet(1));
+        return SocketConnector.hasAccountEligibilityCookie((byte) 46, DisplayNameValidator.getActiveApplet(1));
     }
 
     static {

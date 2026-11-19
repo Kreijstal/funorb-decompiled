@@ -38,13 +38,13 @@ abstract class MouseWheelInput {
         field_b = null;
     }
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detach(java.awt.Component param0, int param1);
 
-    abstract void b(java.awt.Component param0, int param1);
+    abstract void attach(java.awt.Component param0, int param1);
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizePlayerName(int param0, CharSequence param1) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         Object stackIn_3_0 = null;
@@ -69,14 +69,14 @@ abstract class MouseWheelInput {
           var2_int = 0;
           var3 = param1.length();
           while (var2_int < var3) {
-            if (MonotonicClockHelpers.a(true, param1.charAt(var2_int))) {
+            if (MonotonicClockHelpers.isNameSeparator(true, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (MonotonicClockHelpers.a(true, param1.charAt(var3 - 1))) {
+            if (MonotonicClockHelpers.isNameSeparator(true, param1.charAt(var3 - 1))) {
               var3--;
               continue;
             }
@@ -95,7 +95,7 @@ abstract class MouseWheelInput {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
-            if (TextLayoutLine.a((char) var7, 0)) {
+            if (TextLayoutLine.isAllowedNameCharacter((char) var7, 0)) {
               var8 = EmailCheckRequest.normalizeNameCharacter(-1514, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

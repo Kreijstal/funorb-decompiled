@@ -17,10 +17,10 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final void a(PlatformTaskDispatcher param0, byte param1) {
+    final void disposeFullscreen(PlatformTaskDispatcher param0, byte param1) {
         try {
           int var3_int = -58 % ((-46 - param1) / 36);
-          MidiEnvelope.a(-119, this.field_c, param0);
+          MidiEnvelope.exitAndDisposeFullscreen(-119, this.field_c, param0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ui.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -39,13 +39,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     FullscreenFocusCanvas() {
     }
 
-    final static void a(boolean param0, Sprite[] param1) {
+    final static void setMembershipSlides(boolean param0, Sprite[] param1) {
         try {
-          f.field_d = param1;
+          HighscorePlayerState.field_d = param1;
           if (!param0) {
             field_a = (Sprite[]) null;
           }
-          if (null != f.field_d &&
+          if (null != HighscorePlayerState.field_d &&
             param1.length < 3) {
             throw new IllegalArgumentException("");
           }

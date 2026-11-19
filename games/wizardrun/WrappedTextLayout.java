@@ -12,10 +12,10 @@ final class WrappedTextLayout extends TextLayout {
     private int field_l;
     private int field_o;
     private int field_k;
-    static lg field_f;
+    static FullscreenFailureKind field_f;
     static String field_m;
 
-    private final TextLayoutLine a(String param0, int param1, int param2, BitmapFont param3) {
+    private final TextLayoutLine createSingleLine(String param0, int param1, int param2, BitmapFont param3) {
         TextLayoutLine var5 = null;
         RuntimeException var5_ref = null;
         TextLayoutLine var6 = null;
@@ -34,7 +34,7 @@ final class WrappedTextLayout extends TextLayout {
           }
           var6 = new TextLayoutLine(-param3.field_M + param2, param3.field_B + param2, param0.length());
           var5 = var6;
-          this.field_d = new TextLayoutLine[]{var6};
+          this.lines = new TextLayoutLine[]{var6};
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,11 +57,11 @@ final class WrappedTextLayout extends TextLayout {
         }
     }
 
-    final void a(int param0, byte param1, BitmapFont param2, int param3, String param4) {
+    final void layoutRightAlignedLine(int param0, byte param1, BitmapFont param2, int param3, String param4) {
         TextLayoutLine var8 = null;
         TextLayoutLine var9 = null;
         if (param4 == null) {
-          this.field_d = null;
+          this.lines = null;
           return;
         }
         if (this.field_j == param2 &&
@@ -79,11 +79,11 @@ final class WrappedTextLayout extends TextLayout {
           }
           this.field_k = 2;
           this.field_j = param2;
-          var8 = this.a(param4, 108, param3, param2);
+          var8 = this.createSingleLine(param4, 108, param3, param2);
           var9 = var8;
-          var9.field_e[0] = param0 - param2.stringWidth(param4);
-          var9.field_e[param4.length()] = param0;
-          lk.a(-58, param2, 0, var9, param4);
+          var9.characterPositions[0] = param0 - param2.stringWidth(param4);
+          var9.characterPositions[param4.length()] = param0;
+          TextPositionHelpers.buildCharacterPositions(-58, param2, 0, var9, param4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "cf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -94,7 +94,7 @@ final class WrappedTextLayout extends TextLayout {
         field_m = null;
         if (param0 != 10881) {
           ResourceArchive var2 = (ResourceArchive) null;
-          WrappedTextLayout.a(53, -122, (ResourceArchive) null, -97);
+          WrappedTextLayout.loadOpaqueSprites(53, -122, (ResourceArchive) null, -97);
         }
         field_f = null;
     }
@@ -106,11 +106,11 @@ final class WrappedTextLayout extends TextLayout {
         GameApplet.h(0);
     }
 
-    final void a(BitmapFont param0, String param1, int param2, boolean param3, int param4) {
+    final void layoutCenteredLine(BitmapFont param0, String param1, int param2, boolean param3, int param4) {
         TextLayoutLine var8 = null;
         int var7 = 0;
         if (param1 == null) {
-          this.field_d = null;
+          this.lines = null;
           return;
         }
         if (this.field_j == param0 && this.field_g && this.field_k == 1 && this.field_q != null &&
@@ -121,17 +121,17 @@ final class WrappedTextLayout extends TextLayout {
           this.field_g = param3 ? true : false;
           this.field_k = 1;
           this.field_j = param0;
-          var8 = this.a(param1, 46, param4, param0);
+          var8 = this.createSingleLine(param1, 46, param4, param0);
           var7 = param0.stringWidth(param1);
-          var8.field_e[0] = -(var7 >> 1) + param2;
-          var8.field_e[param1.length()] = param2 + (var7 >> 1);
-          lk.a(90, param0, 0, var8, param1);
+          var8.characterPositions[0] = -(var7 >> 1) + param2;
+          var8.characterPositions[param1.length()] = param2 + (var7 >> 1);
+          TextPositionHelpers.buildCharacterPositions(90, param0, 0, var8, param1);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "cf.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static wc a(int param0, boolean param1) {
+    final static ChatMessage readChatMessage(int param0, boolean param1) {
         boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
@@ -146,7 +146,7 @@ final class WrappedTextLayout extends TextLayout {
         QuickChatPhraseDefinition var9 = null;
         var7 = wizardrun.field_H;
         if (param0 != -2) {
-          field_f = (lg) null;
+          field_f = (FullscreenFailureKind) null;
         }
         var8 = AccountCreationForm.field_N;
         var2 = var8;
@@ -179,8 +179,8 @@ final class WrappedTextLayout extends TextLayout {
         if (param1) {
           var5 = var8.readUnsignedShort(-14477);
           try {
-            var9 = RadixParsingHelpers.field_b.b((byte) 47, var5);
-            vl.field_f = var9.getTemplateText(10592);
+            var9 = RadixParsingHelpers.field_b.getPhrase((byte) 47, var5);
+            CheckboxPainter.field_f = var9.getTemplateText(10592);
             if (!LevelData.field_b.equals(MonotonicClockHelpers.field_a)) {
               stackIn_24_0 = var9.field_p;
             } else {
@@ -190,18 +190,18 @@ final class WrappedTextLayout extends TextLayout {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            ResizableDialog.a((Throwable) ((Object) var6), "CC1", -562);
-            vl.field_f = null;
+            ResizableDialog.reportClientError((Throwable) ((Object) var6), "CC1", -562);
+            CheckboxPainter.field_f = null;
             PasswordValidator.field_m = null;
           }
         } else {
-          vl.field_f = ol.a(80, var8, (byte) 45);
+          CheckboxPainter.field_f = AccountSocketHelpers.readHuffmanString(80, var8, (byte) 45);
           PasswordValidator.field_m = null;
         }
-        return new wc(param1);
+        return new ChatMessage(param1);
     }
 
-    final void a(String param0, int param1, int param2, int param3, byte param4, BitmapFont param5, int param6, int param7) {
+    final void layoutWrappedText(String param0, int param1, int param2, int param3, byte param4, BitmapFont param5, int param6, int param7) {
         TextLayoutLine stackIn_37_0;
         TextLayoutLine stackIn_37_1;
         int stackIn_37_2;
@@ -234,7 +234,7 @@ final class WrappedTextLayout extends TextLayout {
             param1 = param5.field_E;
           }
           if (param0 == null) {
-            this.field_d = null;
+            this.lines = null;
             return;
           }
           if (param5 == this.field_j &&
@@ -263,7 +263,7 @@ final class WrappedTextLayout extends TextLayout {
             var10 == 1) {
             this.field_p = 1;
           }
-          this.field_d = new TextLayoutLine[var10];
+          this.lines = new TextLayoutLine[var10];
           if (this.field_p == 0) {
             var11 = param5.field_M;
           } else {
@@ -301,20 +301,20 @@ final class WrappedTextLayout extends TextLayout {
               stackIn_38_4 = 0;
             }
             var14 = new TextLayoutLine(stackIn_37_2, stackIn_37_3, stackIn_38_4);
-            var14.field_e[0] = 0;
+            var14.characterPositions[0] = 0;
             if (var13 != null) {
-              var14.field_e[var13.length()] = param5.stringWidth(var13);
+              var14.characterPositions[var13.length()] = param5.stringWidth(var13);
               stackIn_41_0 = -76;
               stackIn_41_1 = (BitmapFont) (param5);
               if (param2 != 3) {
                 stackIn_42_2 = 0;
               } else {
-                stackIn_42_2 = this.a(param5.stringWidth(var13), var13, 6454, param3);
+                stackIn_42_2 = this.computeJustificationSpacing(param5.stringWidth(var13), var13, 6454, param3);
               }
-              lk.a(stackIn_41_0, stackIn_41_1, stackIn_42_2, var14, var13);
+              TextPositionHelpers.buildCharacterPositions(stackIn_41_0, stackIn_41_1, stackIn_42_2, var14, var13);
             }
             var11 = var11 + param1;
-            this.field_d[var12Lifetime1] = var14;
+            this.lines[var12Lifetime1] = var14;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -337,14 +337,14 @@ final class WrappedTextLayout extends TextLayout {
         }
     }
 
-    final void a(int param0, byte param1, int param2, String param3, BitmapFont param4) {
+    final void layoutLeftAlignedLine(int param0, byte param1, int param2, String param3, BitmapFont param4) {
         TextLayoutLine var7 = null;
         TextLayoutLine var8 = null;
         if (param1 > -71) {
           this.field_p = 2;
         }
         if (param3 == null) {
-          this.field_d = null;
+          this.lines = null;
           return;
         }
         if (this.field_j == param4 &&
@@ -359,11 +359,11 @@ final class WrappedTextLayout extends TextLayout {
           this.field_j = param4;
           this.field_g = true;
           this.field_q = param3;
-          var7 = this.a(param3, 70, param0, param4);
+          var7 = this.createSingleLine(param3, 70, param0, param4);
           var8 = var7;
-          var7.field_e[0] = param2;
-          var8.field_e[param3.length()] = param4.stringWidth(param3) + param2;
-          lk.a(113, param4, 0, var8, param3);
+          var7.characterPositions[0] = param2;
+          var8.characterPositions[param3.length()] = param4.stringWidth(param3) + param2;
+          TextPositionHelpers.buildCharacterPositions(113, param4, 0, var8, param3);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -372,7 +372,7 @@ final class WrappedTextLayout extends TextLayout {
     public WrappedTextLayout() {
     }
 
-    final static Sprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static Sprite[] loadOpaqueSprites(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite[] stackIn_6_0 = null;
@@ -381,14 +381,14 @@ final class WrappedTextLayout extends TextLayout {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!MusicPatch.a(param0, param3, param2, -126)) {
+          if (!MusicPatch.loadSpriteSheet(param0, param3, param2, -126)) {
             stackIn_2_0 = null;
             return (Sprite[]) (stackIn_2_0);
           }
           if (param1 != 30736) {
             field_m = (String) null;
           }
-          stackIn_6_0 = pi.b(0);
+          stackIn_6_0 = MeshLightingHelpers.b(0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -407,7 +407,7 @@ final class WrappedTextLayout extends TextLayout {
     static {
         field_i = false;
         field_n = new QuickChatDynamicCommand(2, 4, 4, 0);
-        field_f = new lg();
+        field_f = new FullscreenFailureKind();
         field_m = "Highscores";
     }
 }

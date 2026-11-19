@@ -34,21 +34,21 @@ final class PcmResampler {
           RuntimeException var15_ref = null;
           try {
             AccountCreationForm.field_N = new IsaacPacketBuffer(param8);
-            n.field_b = new IsaacPacketBuffer(param9);
+            AccountPacketState.field_b = new IsaacPacketBuffer(param9);
             TextWrappingHelpers.field_a = param0;
             RasterBuffer.field_a = param2;
             TextWrappingHelpers.field_d = param5;
             Base37Codec.field_e = param13;
             BeveledFrameFactory.field_g = param3;
             MidiNote.field_l = param1;
-            vl.field_d = param11;
+            CheckboxPainter.field_d = param11;
             MidiNote.field_G = param4;
             if (param12 != 64) {
               field_d = (String) null;
             }
             IntrusiveDequeCursor.field_g = param10;
             FadingDialog.field_J = param6;
-            aa.field_nb = param7;
+            FriendEntry.field_nb = param7;
             if (null != Base37Codec.field_e.field_c) {
               try {
                 UiWidget.randomSeedFile = new BufferedRandomAccessFile(Base37Codec.field_e.field_c, 64, 0);
@@ -186,7 +186,7 @@ final class PcmResampler {
         if (param0 == param1) {
           return;
         }
-        var3 = se.a(param1, param0, 0);
+        var3 = IntegerMathHelpers.greatestCommonDivisor(param1, param0, 0);
         param1 = param1 / var3;
         param0 = param0 / var3;
         this.field_e = param1;

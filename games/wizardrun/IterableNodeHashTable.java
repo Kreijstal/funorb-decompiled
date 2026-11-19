@@ -11,16 +11,16 @@ final class IterableNodeHashTable implements Iterable {
     int field_d;
     IntrusiveNode[] field_c;
 
-    final static aa a(byte param0, String param1) {
+    final static FriendEntry findFriend(byte param0, String param1) {
         String var2 = null;
-        aa var3 = null;
+        FriendEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         Object stackIn_7_0 = null;
         Object stackIn_12_0 = null;
-        aa stackIn_19_0 = null;
+        FriendEntry stackIn_19_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -28,7 +28,7 @@ final class IterableNodeHashTable implements Iterable {
         RuntimeException var2_ref = null;
         var5 = wizardrun.field_H;
         try {
-          if (null == lj.field_f) {
+          if (null == FriendLookupState.field_f) {
             return null;
           }
           if (param1 == null) {
@@ -36,26 +36,26 @@ final class IterableNodeHashTable implements Iterable {
           }
           if (param1.length() == 0) {
             stackIn_7_0 = null;
-            return (aa) (stackIn_7_0);
+            return (FriendEntry) (stackIn_7_0);
           }
           if (param0 != -116) {
             field_b = -125;
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = MouseWheelInput.a(-60, var6);
+          var2 = MouseWheelInput.normalizePlayerName(-60, var6);
           if (var2 == null) {
             stackIn_12_0 = null;
-            return (aa) (stackIn_12_0);
+            return (FriendEntry) (stackIn_12_0);
           }
-          var3 = (aa) (lj.field_f.get((long)var2.hashCode(), (byte) 104));
+          var3 = (FriendEntry) (FriendLookupState.field_f.get((long)var2.hashCode(), (byte) 104));
           while (var3 != null) {
-            var7 = (CharSequence) ((Object) var3.field_mb);
-            var4 = MouseWheelInput.a(-51, var7);
+            var7 = (CharSequence) ((Object) var3.displayName);
+            var4 = MouseWheelInput.normalizePlayerName(-51, var7);
             if (var4.equals(var2)) {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (aa) (lj.field_f.nextMatch(false));
+            var3 = (FriendEntry) (FriendLookupState.field_f.nextMatch(false));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class IterableNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final static void a(byte param0, int param1) {
+    final static void setLogoPieceTransform(byte param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -143,7 +143,7 @@ final class IterableNodeHashTable implements Iterable {
               var4 = 1;
               var5 = 1;
             }
-            ImageProducerRasterBuffer.field_m = f.a(var4 * var2, var5 * var2, 24268);
+            ImageProducerRasterBuffer.field_m = HighscorePlayerState.a(var4 * var2, var5 * var2, 24268);
             return;
           }
           if (var3 < 120) {
@@ -202,19 +202,19 @@ final class IterableNodeHashTable implements Iterable {
           var4Lifetime1 = 1;
           var5Lifetime1 = 1;
         }
-        ImageProducerRasterBuffer.field_m = f.a(var4Lifetime1 * var2, var5Lifetime1 * var2, 24268);
+        ImageProducerRasterBuffer.field_m = HighscorePlayerState.a(var4Lifetime1 * var2, var5Lifetime1 * var2, 24268);
     }
 
-    final static aa a(String param0, int param1) {
+    final static FriendEntry findIgnoredPlayer(String param0, int param1) {
         String var2 = null;
-        aa var3 = null;
+        FriendEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        aa stackIn_3_0 = null;
+        FriendEntry stackIn_3_0 = null;
         Object stackIn_6_0 = null;
-        aa stackIn_18_0 = null;
+        FriendEntry stackIn_18_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -223,30 +223,30 @@ final class IterableNodeHashTable implements Iterable {
         var5 = wizardrun.field_H;
         try {
           if (param1 != -30782) {
-            stackIn_3_0 = (aa) null;
+            stackIn_3_0 = (FriendEntry) null;
             return stackIn_3_0;
           }
           if (null == IntrusiveNode.field_f) {
             stackIn_6_0 = null;
-            return (aa) (stackIn_6_0);
+            return (FriendEntry) (stackIn_6_0);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = MouseWheelInput.a(-55, var6);
+          var2 = MouseWheelInput.normalizePlayerName(-55, var6);
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (aa) (IntrusiveNode.field_f.get((long)var2.hashCode(), (byte) 124));
+          var3 = (FriendEntry) (IntrusiveNode.field_f.get((long)var2.hashCode(), (byte) 124));
           while (true) {
             if (var3 == null) {
               return null;
             }
-            var7 = (CharSequence) ((Object) var3.field_mb);
-            var4 = MouseWheelInput.a(param1 + 30710, var7);
+            var7 = (CharSequence) ((Object) var3.displayName);
+            var4 = MouseWheelInput.normalizePlayerName(param1 + 30710, var7);
             if (var4 == null) {
-              var4 = var3.field_mb;
+              var4 = var3.displayName;
             }
             if (!var4.equals(var2)) {
-              var3 = (aa) (IntrusiveNode.field_f.nextMatch(false));
+              var3 = (FriendEntry) (IntrusiveNode.field_f.nextMatch(false));
               continue;
             }
             break;
@@ -273,7 +273,7 @@ final class IterableNodeHashTable implements Iterable {
           return;
         }
         String var2 = (String) null;
-        IterableNodeHashTable.a((byte) -10, (String) null);
+        IterableNodeHashTable.findFriend((byte) -10, (String) null);
     }
 
     final IntrusiveNode get(boolean param0, long param1) {
@@ -300,7 +300,7 @@ final class IterableNodeHashTable implements Iterable {
           this.field_e = this.field_e.next;
           return var5;
         }
-        IterableNodeHashTable.a((byte) 61, -95);
+        IterableNodeHashTable.setLogoPieceTransform((byte) 61, -95);
         while (true) {
           if (var4 == this.field_e) {
             this.field_e = null;
@@ -322,9 +322,9 @@ final class IterableNodeHashTable implements Iterable {
           return;
         }
         try {
-          param0.addMouseListener(tc.mouseHandler);
-          param0.addMouseMotionListener(tc.mouseHandler);
-          param0.addFocusListener(tc.mouseHandler);
+          param0.addMouseListener(SavedDataRequest.mouseHandler);
+          param0.addMouseMotionListener(SavedDataRequest.mouseHandler);
+          param0.addFocusListener(SavedDataRequest.mouseHandler);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "gj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

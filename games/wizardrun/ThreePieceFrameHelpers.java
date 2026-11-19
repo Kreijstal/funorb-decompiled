@@ -1,0 +1,84 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ThreePieceFrameHelpers {
+    static BitmapFont field_b;
+    static int field_d;
+    static boolean field_a;
+    static String field_c;
+    static String field_e;
+
+    final static boolean a(int param0) {
+        if (param0 >= -71) {
+          Sprite[] var2 = (Sprite[]) null;
+          ThreePieceFrameHelpers.a((Sprite[]) null, 123, 6, (byte) 67, 68, 39);
+          return FramedButtonPainter.field_p;
+        }
+        return FramedButtonPainter.field_p;
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_c = null;
+        field_e = null;
+        if (param0 != -2) {
+          field_c = (String) null;
+          field_b = null;
+          return;
+        }
+        field_b = null;
+    }
+
+    final static void a(Sprite[] param0, int param1, int param2, byte param3, int param4, int param5) {
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        var11 = wizardrun.field_H;
+        try {
+          if (param0 != null &&
+            param5 > 0) {
+            if (param3 <= 27) {
+              ThreePieceFrameHelpers.a(59);
+            }
+            var6_int = param0[0].fullWidth;
+            var7 = param0[2].fullWidth;
+            var8 = param0[1].fullWidth;
+            param0[0].drawRecoloredNeutral(param4, param1, param2);
+            param0[2].drawRecoloredNeutral(param4 + param5 - var7, param1, param2);
+            SoftwareRasterizer.saveClip(QuickChatPhraseDefinition.field_q);
+            SoftwareRasterizer.intersectClip(var6_int + param4, param1, param4 + param5 - var7, param1 + param0[1].fullHeight);
+            var9 = param4 + var6_int;
+            var10 = -var7 + param5 + param4;
+            for (param4 = var9; param4 < var10; param4 = param4 + var8) {
+              param0[1].drawRecoloredNeutral(param4, param1, param2);
+            }
+            SoftwareRasterizer.restoreClip(QuickChatPhraseDefinition.field_q);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_13_0 = var6;
+          stackIn_13_1 = new StringBuilder().append("e.B(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    static {
+        field_e = "Continue";
+        field_c = "Unfortunately your configuration doesn't support fullscreen mode.";
+    }
+}

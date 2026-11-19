@@ -19,7 +19,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
         int var8 = 64 % ((-53 - param0) / 36);
     }
 
-    final void a(java.awt.Graphics param0, int param1, int param2, int param3) {
+    final void drawToGraphics(java.awt.Graphics param0, int param1, int param2, int param3) {
         if (param1 != -29402) {
           return;
         }

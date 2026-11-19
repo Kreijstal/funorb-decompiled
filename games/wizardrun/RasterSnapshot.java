@@ -49,7 +49,7 @@ final class RasterSnapshot extends IntrusiveNode {
         Sprite dupTemp$1 = null;
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = id.createSolidSquareSprite((byte) 107, param1, param3);
+        Sprite dupTemp$0 = PasswordContentHelpers.createSolidSquareSprite((byte) 107, param1, param3);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
@@ -57,24 +57,24 @@ final class RasterSnapshot extends IntrusiveNode {
         var5[0] = dupTemp$0;
         if (param4 != 20230) {
           RasterSnapshot.releaseStatics(-59);
-          dupTemp$1 = id.createSolidSquareSprite((byte) 76, param0, param3);
+          dupTemp$1 = PasswordContentHelpers.createSolidSquareSprite((byte) 76, param0, param3);
           var6[8] = dupTemp$1;
           var5[7] = dupTemp$1;
           var5[5] = dupTemp$1;
           if (param2 != 0) {
-            var6[4] = id.createSolidSquareSprite((byte) 98, param2, 64);
+            var6[4] = PasswordContentHelpers.createSolidSquareSprite((byte) 98, param2, 64);
             return var5;
           }
           return var5;
         }
-        Sprite dupTemp$2 = id.createSolidSquareSprite((byte) 76, param0, param3);
+        Sprite dupTemp$2 = PasswordContentHelpers.createSolidSquareSprite((byte) 76, param0, param3);
         var6[8] = dupTemp$2;
         var5[7] = dupTemp$2;
         var5[5] = dupTemp$2;
         if (param2 == 0) {
           return var5;
         }
-        var6[4] = id.createSolidSquareSprite((byte) 98, param2, 64);
+        var6[4] = PasswordContentHelpers.createSolidSquareSprite((byte) 98, param2, 64);
         return var5;
     }
 

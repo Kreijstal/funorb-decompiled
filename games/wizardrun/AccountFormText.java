@@ -19,11 +19,11 @@ final class AccountFormText {
         return MusicPatch.keyIdleTime;
     }
 
-    final static boolean b(int param0) {
+    final static boolean canSendAccountPackets(int param0) {
         if (param0 != 22845) {
           return true;
         }
-        if (jc.field_H == null) {
+        if (OpacityWidget.field_H == null) {
           return false;
         }
         if (!NodeHashTableIterator.field_j.canCommunicate(0)) {
@@ -55,16 +55,16 @@ final class AccountFormText {
         }
     }
 
-    final static String b(byte param0) {
+    final static String getVisibleTooltip(byte param0) {
         int var1 = -110 / ((70 - param0) / 56);
-        if (ol.field_b) {
+        if (AccountSocketHelpers.field_b) {
           return null;
         }
-        if (jc.field_I > IterableNodeHashTable.field_b) {
+        if (OpacityWidget.field_I > IterableNodeHashTable.field_b) {
           return null;
         }
-        if (jc.field_I + WidgetPainter.field_o > IterableNodeHashTable.field_b) {
-          return vb.field_I;
+        if (OpacityWidget.field_I + WidgetPainter.field_o > IterableNodeHashTable.field_b) {
+          return MarkerSliderWidget.field_I;
         }
         return null;
     }

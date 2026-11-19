@@ -15,7 +15,7 @@ final class GzipDecompressor {
     private GzipDecompressor(int param0, int param1, int param2) {
     }
 
-    final void a(byte[] param0, PacketBuffer param1, int param2) {
+    final void decompress(byte[] param0, PacketBuffer param1, int param2) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;

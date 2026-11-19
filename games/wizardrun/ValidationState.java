@@ -67,7 +67,7 @@ final class ValidationState {
 
     final static void showLoadingProgress(String param0, float param1, int param2) {
         try {
-          dg.loadingMessage = param0;
+          ArchiveContainerHelpers.loadingMessage = param0;
           if (param2 != 0) {
             field_a = (Sprite[]) null;
           }

@@ -78,59 +78,59 @@ final class DiskCacheWorker implements Runnable {
             var2 = (PlatformTaskDispatcher) null;
             DiskCacheWorker.enumerateDisplayModes(true, (PlatformTaskDispatcher) null);
           }
-          if (ii.field_f.field_k >= 4) {
-            if (-1 == ii.field_f.field_n) {
+          if (NameAvailabilityFactory.field_f.field_k >= 4) {
+            if (-1 == NameAvailabilityFactory.field_f.field_n) {
               return 3;
             }
-            if (ii.field_f.field_n != -2) {
+            if (NameAvailabilityFactory.field_f.field_n != -2) {
               return 1;
             }
             return 4;
           }
           try {
-            if (wc.field_k == 0) {
-              DelayedServerPacket.field_k = MidiNote.field_p.requestSocket(aa.field_hb, nf.field_b, (byte) -20);
-              wc.field_k = wc.field_k + 1;
+            if (ChatMessage.field_k == 0) {
+              DelayedServerPacket.field_k = MidiNote.field_p.requestSocket(FriendEntry.field_hb, AccountFormTextHelpers.field_b, (byte) -20);
+              ChatMessage.field_k = ChatMessage.field_k + 1;
             }
-            if (1 == wc.field_k) {
+            if (1 == ChatMessage.field_k) {
               if (DelayedServerPacket.field_k.status == 2) {
-                stackIn_15_0 = mh.a((byte) -121, -1);
+                stackIn_15_0 = AccountProgressDialog.a((byte) -121, -1);
                 return stackIn_15_0;
               }
               if (DelayedServerPacket.field_k.status == 1) {
-                wc.field_k = wc.field_k + 1;
+                ChatMessage.field_k = ChatMessage.field_k + 1;
               }
             }
-            if (wc.field_k == 2) {
+            if (ChatMessage.field_k == 2) {
               BufferedRandomAccessFile.field_q = new BufferedSocket((java.net.Socket) (DelayedServerPacket.field_k.result), MidiNote.field_p);
               var3 = new PacketBuffer(13);
-              DiskCacheWorker.writeConnectionPreamble(ej.field_d, var3, 20443, TextLayoutLine.field_c, MidiNoteMixer.field_q);
+              DiskCacheWorker.writeConnectionPreamble(ByteArrayPool.field_d, var3, 20443, TextLayoutLine.field_c, MidiNoteMixer.field_q);
               var3.writeByte((byte) 11, 15);
               var3.writeInt(AchievementSubmission.field_j, 613003928);
               BufferedRandomAccessFile.field_q.write(13, var3.payload, 1, 0);
-              wc.field_k = wc.field_k + 1;
+              ChatMessage.field_k = ChatMessage.field_k + 1;
               WidgetPainterState.field_g = MonotonicClockHelpers.monotonicMillis((byte) 109) + 30000L;
             }
-            if (wc.field_k == 3) {
+            if (ChatMessage.field_k == 3) {
               if (BufferedRandomAccessFile.field_q.available((byte) 89) > 0) {
                 var1_int = BufferedRandomAccessFile.field_q.readByte((byte) 19);
                 if (var1_int != 0) {
-                  stackIn_29_0 = mh.a((byte) 85, var1_int);
+                  stackIn_29_0 = AccountProgressDialog.a((byte) 85, var1_int);
                   return stackIn_29_0;
                 }
-                wc.field_k = wc.field_k + 1;
+                ChatMessage.field_k = ChatMessage.field_k + 1;
               } else {
                 if (WidgetPainterState.field_g < MonotonicClockHelpers.monotonicMillis((byte) 127)) {
-                  stackIn_26_0 = mh.a((byte) 122, -2);
+                  stackIn_26_0 = AccountProgressDialog.a((byte) 122, -2);
                   return stackIn_26_0;
                 }
               }
             }
-            if (wc.field_k != 4) {
+            if (ChatMessage.field_k != 4) {
               return -1;
             }
-            ii.field_f.setConnection(LoginPacketBuilder.field_b, BufferedRandomAccessFile.field_q, param0 ^ -18153);
-            wc.field_k = 0;
+            NameAvailabilityFactory.field_f.setConnection(LoginPacketBuilder.field_b, BufferedRandomAccessFile.field_q, param0 ^ -18153);
+            ChatMessage.field_k = 0;
             DelayedServerPacket.field_k = null;
             BufferedRandomAccessFile.field_q = null;
             stackIn_34_0 = 0;
@@ -138,7 +138,7 @@ final class DiskCacheWorker implements Runnable {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return mh.a((byte) 87, -3);
+            return AccountProgressDialog.a((byte) 87, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -413,7 +413,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              ResizableDialog.a((Throwable) ((Object) var2_ref), (String) null, -562);
+              ResizableDialog.reportClientError((Throwable) ((Object) var2_ref), (String) null, -562);
               var7.pending = false;
             }
           }

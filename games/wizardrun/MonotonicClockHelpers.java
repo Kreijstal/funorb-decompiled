@@ -18,21 +18,21 @@ final class MonotonicClockHelpers {
         var3 = wizardrun.field_H;
         try {
           if (EditableTextWidget.field_O == -1 &&
-            ee.field_r == -1) {
+            StyleNode.field_r == -1) {
             EditableTextWidget.field_O = AchievementSubmission.field_n;
-            ee.field_r = NetworkArchiveRequest.field_B;
+            StyleNode.field_r = NetworkArchiveRequest.field_B;
           }
           boolean decompiledFrameRemainder0 = true;
           IterableNodeHashTable.field_b = IterableNodeHashTable.field_b + 1;
           if (param0 != null) {
-            decompiledFrameRemainder0 = !(param0.equals(vb.field_I));
+            decompiledFrameRemainder0 = !(param0.equals(MarkerSliderWidget.field_I));
           } else {
-            decompiledFrameRemainder0 = (null == vb.field_I);
+            decompiledFrameRemainder0 = (null == MarkerSliderWidget.field_I);
           }
           if (decompiledFrameRemainder0) {
-            if (!ol.field_b) {
-              if (jc.field_I <= IterableNodeHashTable.field_b) {
-                stackIn_16_0 = (jc.field_I + WidgetPainter.field_o > IterableNodeHashTable.field_b) ? 1 : 0;
+            if (!AccountSocketHelpers.field_b) {
+              if (OpacityWidget.field_I <= IterableNodeHashTable.field_b) {
+                stackIn_16_0 = (OpacityWidget.field_I + WidgetPainter.field_o > IterableNodeHashTable.field_b) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -43,42 +43,42 @@ final class MonotonicClockHelpers {
             if (param0 == null) {
               IterableNodeHashTable.field_b = 0;
             } else {
-              if (ol.field_b) {
-                IterableNodeHashTable.field_b = jc.field_I;
+              if (AccountSocketHelpers.field_b) {
+                IterableNodeHashTable.field_b = OpacityWidget.field_I;
               } else {
                 if (var2_int == 0) {
                   IterableNodeHashTable.field_b = 0;
                 } else {
-                  IterableNodeHashTable.field_b = jc.field_I;
+                  IterableNodeHashTable.field_b = OpacityWidget.field_I;
                 }
               }
             }
             ArchiveLoadingPlan.field_a = EditableTextWidget.field_O;
             if (param0 == null) {
               if (var2_int != 0) {
-                ol.field_b = true;
+                AccountSocketHelpers.field_b = true;
               }
             } else {
-              ol.field_b = false;
+              AccountSocketHelpers.field_b = false;
             }
-            StrongCacheEntry.field_u = ee.field_r;
+            StrongCacheEntry.field_u = StyleNode.field_r;
           }
-          if (!ol.field_b &&
-            jc.field_I > IterableNodeHashTable.field_b &&
-            ih.field_a) {
-            StrongCacheEntry.field_u = ee.field_r;
+          if (!AccountSocketHelpers.field_b &&
+            OpacityWidget.field_I > IterableNodeHashTable.field_b &&
+            NameCheckHelpers.field_a) {
+            StrongCacheEntry.field_u = StyleNode.field_r;
             ArchiveLoadingPlan.field_a = EditableTextWidget.field_O;
             IterableNodeHashTable.field_b = 0;
           }
-          vb.field_I = param0;
-          ee.field_r = -1;
+          MarkerSliderWidget.field_I = param0;
+          StyleNode.field_r = -1;
           EditableTextWidget.field_O = -1;
           if (param1 != 0) {
-            MonotonicClockHelpers.a(false, 'b');
+            MonotonicClockHelpers.isNameSeparator(false, 'b');
           }
-          if (ol.field_b &&
+          if (AccountSocketHelpers.field_b &&
             MidiEnvelope.field_b == IterableNodeHashTable.field_b) {
-            ol.field_b = false;
+            AccountSocketHelpers.field_b = false;
             IterableNodeHashTable.field_b = 0;
             return;
           }
@@ -124,7 +124,7 @@ final class MonotonicClockHelpers {
         return DisplayModeInfo.field_d + var1;
     }
 
-    final static boolean a(boolean param0, char param1) {
+    final static boolean isNameSeparator(boolean param0, char param1) {
         if (!param0) {
           MonotonicClockHelpers.releaseStatics(87);
           if (160 == param1) {

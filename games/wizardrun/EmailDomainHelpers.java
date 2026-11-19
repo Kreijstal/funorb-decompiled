@@ -39,10 +39,10 @@ final class EmailDomainHelpers {
             return stackIn_4_0;
           }
           if (255 < var2_int) {
-            stackIn_7_0 = kj.field_c;
+            stackIn_7_0 = SystemMemoryHelpers.field_c;
             return stackIn_7_0;
           }
-          var3 = FadingDialog.a(param1, -22710, '.');
+          var3 = FadingDialog.splitOnCharacter(param1, -22710, '.');
           if (var3.length < 2) {
             stackIn_10_0 = ValidationState.field_f;
             return stackIn_10_0;
@@ -53,7 +53,7 @@ final class EmailDomainHelpers {
           var4 = var3;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
-            var7 = MidiNoteMixer.a(param0 ^ -27522, var6);
+            var7 = MidiNoteMixer.validateEmailDomainLabel(param0 ^ -27522, var6);
             if (var7 != null) {
               stackIn_18_0 = var7;
               return stackIn_18_0;
@@ -87,7 +87,7 @@ final class EmailDomainHelpers {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!MusicPatch.a(param1, param0, param4, -118)) {
+          if (!MusicPatch.loadSpriteSheet(param1, param0, param4, -118)) {
             stackIn_2_0 = null;
             return (MonochromeBitmapFont) (stackIn_2_0);
           }

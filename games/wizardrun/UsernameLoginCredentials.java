@@ -27,21 +27,21 @@ class UsernameLoginCredentials extends LoginCredentials {
         field_h = null;
     }
 
-    final static void a(int param0, int param1, byte param2, qj param3) {
+    final static void a(int param0, int param1, byte param2, NineSliceFrame param3) {
         try {
-          ii.field_c = param0;
+          NameAvailabilityFactory.field_c = param0;
           if (param2 != -13) {
             field_k = 125;
           }
           DecodedSpritePalette.field_c = param1;
-          tl.field_c = param3;
+          FriendOrderingHelpers.field_c = param3;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "bb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(byte param0) {
-        if (!StringPaddingHelpers.a(param0 ^ 25325)) {
+        if (!StringPaddingHelpers.isMenuScreenActive(param0 ^ 25325)) {
           return;
         }
         TriangleMesh.a(false, 4, 15991);
@@ -73,7 +73,7 @@ class UsernameLoginCredentials extends LoginCredentials {
             if (param0.length() <= var4) {
               return null;
             }
-            if (RasterBuffer.a(param0.charAt(var4), true)) {
+            if (RasterBuffer.isBasicNameCharacter(param0.charAt(var4), true)) {
               var4++;
               continue;
             }
@@ -95,8 +95,8 @@ class UsernameLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static void b(int param0) {
-        RasterSnapshot var1 = (RasterSnapshot) (lh.field_b.removeLast(8192));
+    final static void popRasterState(int param0) {
+        RasterSnapshot var1 = (RasterSnapshot) (RasterSnapshotStack.field_b.removeLast(8192));
         if (var1 == null) {
           throw new IllegalStateException();
         }

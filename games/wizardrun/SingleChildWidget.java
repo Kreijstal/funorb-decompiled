@@ -10,7 +10,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
     static ResourceArchive field_E;
     static MidiPcmStream field_D;
     static String field_C;
-    static wc[] field_B;
+    static ChatMessage[] field_B;
     static QuickChatDynamicCommand field_A;
 
     void updateInput(int param0, int param1, int param2, UiWidget param3) {
@@ -258,10 +258,10 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var9 > var17) {
-                      var12[var17] = LoginForm.a(var10[var17], (byte) -39);
+                      var12[var17] = LoginForm.resolveReflectionType(var10[var17], (byte) -39);
                       var17++;
                     }
-                    var18.methodTasks[var5] = param2.requestMethod(var8, var12, LoginForm.a(var20, (byte) -39), 3617);
+                    var18.methodTasks[var5] = param2.requestMethod(var8, var12, LoginForm.resolveReflectionType(var20, (byte) -39), 3617);
                     var18.serializedArguments[var5] = var21;
                   }
                 } else {
@@ -275,7 +275,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
                   }
                   var18.operationTypes[var5] = var6_int;
                   var18.fieldWriteValues[var5] = var9;
-                  var18.fieldTasks[var5] = param2.requestField(-8024, LoginForm.a(var15, (byte) -39), var16);
+                  var18.fieldTasks[var5] = param2.requestField(-8024, LoginForm.resolveReflectionType(var15, (byte) -39), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -299,7 +299,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
                 var18.lookupErrors[var5] = -5;
               }
             }
-            kj.field_d.addLast(var18, false);
+            SystemMemoryHelpers.field_d.addLast(var18, false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -357,7 +357,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
             return false;
           }
           for (var3_int = param2; param0.length() > var3_int; var3_int++) {
-            if (!RasterBuffer.a(param0.charAt(var3_int), true)) {
+            if (!RasterBuffer.isBasicNameCharacter(param0.charAt(var3_int), true)) {
               return false;
             }
           }
@@ -543,7 +543,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
     final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setBounds(123, param1, param2, param3, param4);
         if (param0 < 108) {
-          field_B = (wc[]) null;
+          field_B = (ChatMessage[]) null;
         }
         this.refreshChildLayout(81);
     }
@@ -553,7 +553,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
           this.field_F.clearFocus(false);
         }
         if (param0) {
-          field_B = (wc[]) null;
+          field_B = (ChatMessage[]) null;
         }
     }
 

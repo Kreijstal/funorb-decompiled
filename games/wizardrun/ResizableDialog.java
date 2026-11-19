@@ -14,13 +14,13 @@ abstract class ResizableDialog extends FadingDialog {
     static int field_P;
     private int field_L;
 
-    void j(int param0) {
+    void onResizeFinished(int param0) {
         if (param0 != -8144) {
           ResizableDialog.releaseStatics(49);
         }
     }
 
-    final static void a(Throwable param0, String param1, int param2) {
+    final static void reportClientError(Throwable param0, String param1, int param2) {
         try {
           PlatformTaskDispatcher stackIn_16_0;
           java.net.URL stackIn_16_1;
@@ -44,7 +44,7 @@ abstract class ResizableDialog extends FadingDialog {
           try {
             var3 = "";
             if (param0 != null) {
-              var3 = mj.a(param0, (byte) -91);
+              var3 = ThrowableFormattingHelpers.a(param0, (byte) -91);
             }
             if (param1 != null) {
               if (param0 != null) {
@@ -52,7 +52,7 @@ abstract class ResizableDialog extends FadingDialog {
               }
               var3 = var3 + param1;
             }
-            ve.a(118, var3);
+            ErrorReportingHelpers.logClientError(118, var3);
             var7 = TickClock.replaceAll(":", var3, param2 + 29396, "%3a");
             var8 = TickClock.replaceAll("@", var7, 28834, "%40");
             var9 = TickClock.replaceAll("&", var8, 28834, "%26");
@@ -60,18 +60,18 @@ abstract class ResizableDialog extends FadingDialog {
             if (param2 != -562) {
               field_R = -121;
             }
-            if (null == ej.field_a) {
+            if (null == ByteArrayPool.field_a) {
               return;
             }
             stackIn_16_0 = AgeValidator.field_m;
             stackIn_16_1 = null;
             stackIn_16_2 = null;
-            stackIn_16_3 = ej.field_a.getCodeBase();
+            stackIn_16_3 = ByteArrayPool.field_a.getCodeBase();
             stackIn_16_4 = new StringBuilder().append("clienterror.ws?c=").append(NetworkArchiveRequest.field_A).append("&u=");
-            if (null != gf.field_Y) {
+            if (null != ContentTransitionDialog.field_Y) {
               stackIn_17_1 = null;
               stackIn_17_2 = null;
-              stackIn_17_5 = gf.field_Y;
+              stackIn_17_5 = ContentTransitionDialog.field_Y;
             } else {
               stackIn_17_1 = null;
               stackIn_17_2 = null;
@@ -97,14 +97,14 @@ abstract class ResizableDialog extends FadingDialog {
         }
     }
 
-    void g(byte param0) {
+    void finishResize(byte param0) {
         if (this.field_O <= 0) {
           return;
         }
-        this.a(6154, this.field_M, this.field_N);
+        this.resizeAndCenter(6154, this.field_M, this.field_N);
         if (param0 == -3) {
           this.field_O = 0;
-          this.j(-8144);
+          this.onResizeFinished(-8144);
           return;
         }
     }
@@ -119,11 +119,11 @@ abstract class ResizableDialog extends FadingDialog {
         field_S = null;
         if (param0 != -6) {
           String var2 = (String) null;
-          ResizableDialog.a((Throwable) null, (String) null, -82);
+          ResizableDialog.reportClientError((Throwable) null, (String) null, -82);
         }
     }
 
-    void b(int param0, int param1, int param2) {
+    void drawDialogFrame(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -220,8 +220,8 @@ abstract class ResizableDialog extends FadingDialog {
           var7Lifetime1++;
         }
         DisplayNameSyntaxHelpers.field_d.drawTransparent(-90 + (this.width + param0), param2 + 10);
-        nf.a(5 + param0, param2 + 35, -10 + this.width, (byte) -106, ValidationState.field_a);
-        nf.a(param0, param2 - (-this.height + 22), this.width, (byte) -114, NanoTickClock.field_i);
+        AccountFormTextHelpers.a(5 + param0, param2 + 35, -10 + this.width, (byte) -106, ValidationState.field_a);
+        AccountFormTextHelpers.a(param0, param2 - (-this.height + 22), this.width, (byte) -114, NanoTickClock.field_i);
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;
         var4Lifetime2 = this.height - 79;
@@ -240,15 +240,15 @@ abstract class ResizableDialog extends FadingDialog {
         }
     }
 
-    boolean a(int param0) {
-        this.g((byte) -3);
+    boolean finishAnimationAndCheckClosed(int param0) {
+        this.finishResize((byte) -3);
         if (param0 != 16) {
           ResizableDialog.releaseStatics(-88);
         }
-        return super.a(param0 + 0);
+        return super.finishAnimationAndCheckClosed(param0 + 0);
     }
 
-    boolean g(int param0) {
+    boolean animateAndCheckClosed(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -266,20 +266,20 @@ abstract class ResizableDialog extends FadingDialog {
             var3 = this.field_Q + var4 * (this.field_M - this.field_Q) / var5;
           } else {
             this.field_O = 0;
-            this.j(-8144);
+            this.onResizeFinished(-8144);
           }
-          this.a(6154, var3, var2);
+          this.resizeAndCenter(6154, var3, var2);
         }
         if (param0 != 1) {
           String var6 = (String) null;
-          ResizableDialog.a((Throwable) null, (String) null, 94);
+          ResizableDialog.reportClientError((Throwable) null, (String) null, 94);
         }
-        return super.g(1);
+        return super.animateAndCheckClosed(1);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void animateResize(int param0, int param1, int param2, int param3) {
         if (param2 >= param3) {
-          this.a(6154, param1, param0);
+          this.resizeAndCenter(6154, param1, param0);
           return;
         }
         this.field_T = 0;

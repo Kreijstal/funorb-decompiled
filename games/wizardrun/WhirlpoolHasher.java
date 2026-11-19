@@ -20,8 +20,8 @@ final class WhirlpoolHasher {
     static String field_h;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        ec.field_c = param4;
-        lc.field_a = param2;
+        LogoAnimationLoader.field_c = param4;
+        ArchiveReadinessHelpers.field_a = param2;
         if (param3 != 1882) {
           WhirlpoolHasher.releaseStatics((byte) 84);
         }
@@ -163,7 +163,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_b[var2] = GameApplet.a(gf.a(255L, (long)this.field_o[var3 + 7]), GameApplet.a(gf.a((long)this.field_o[var3 + 6] << 8, 65280L), GameApplet.a(GameApplet.a(gf.a((long)this.field_o[4 + var3] << 24, 4278190080L), GameApplet.a(GameApplet.a(GameApplet.a(gf.a((long)this.field_o[var3 + 1] << 48, 71776119061217280L), (long)this.field_o[var3] << 56), gf.a(280375465082880L, (long)this.field_o[2 + var3] << 40)), gf.a(255L, (long)this.field_o[var3 + 3]) << 32)), gf.a(16711680L, (long)this.field_o[var3 + 5] << 16))));
+          this.field_b[var2] = GameApplet.a(ContentTransitionDialog.bitAndLong(255L, (long)this.field_o[var3 + 7]), GameApplet.a(ContentTransitionDialog.bitAndLong((long)this.field_o[var3 + 6] << 8, 65280L), GameApplet.a(GameApplet.a(ContentTransitionDialog.bitAndLong((long)this.field_o[4 + var3] << 24, 4278190080L), GameApplet.a(GameApplet.a(GameApplet.a(ContentTransitionDialog.bitAndLong((long)this.field_o[var3 + 1] << 48, 71776119061217280L), (long)this.field_o[var3] << 56), ContentTransitionDialog.bitAndLong(280375465082880L, (long)this.field_o[2 + var3] << 40)), ContentTransitionDialog.bitAndLong(255L, (long)this.field_o[var3 + 3]) << 32)), ContentTransitionDialog.bitAndLong(16711680L, (long)this.field_o[var3 + 5] << 16))));
           var3 += 8;
           var2++;
         }

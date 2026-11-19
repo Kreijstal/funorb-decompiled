@@ -70,10 +70,10 @@ final class ArchiveLoadingPlan {
             ArchiveLoadingPlan.drawLoadingScreen(true, (java.awt.Canvas) null);
           }
           if (11 == ArchiveRequest.field_t) {
-            hh.a((byte) 124);
+            SpriteTextStyle.prepareLoadingOverlay((byte) 124);
           }
-          ValidatedTextField.drawProgressBar((byte) 67, dg.loadingMessage, BeveledFrameFactory.field_c, ValidationState.loadingProgress);
-          DateFormattingHelpers.a((byte) 80, 0, param1, 0);
+          ValidatedTextField.drawProgressBar((byte) 67, ArchiveContainerHelpers.loadingMessage, BeveledFrameFactory.field_c, ValidationState.loadingProgress);
+          DateFormattingHelpers.presentRaster((byte) 80, 0, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

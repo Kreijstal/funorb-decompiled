@@ -46,11 +46,11 @@ final class WeightedLruCache {
         field_g = null;
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void showLoginDialog(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
         ScoreSubmission.openLoginDialogWithIntGuard(param1, 126, (String) null, param0);
         if (param2 <= 106) {
-          WeightedLruCache.a(-92L, -11);
+          WeightedLruCache.decodeBase37DisplayName(-92L, -11);
         }
     }
 
@@ -62,7 +62,7 @@ final class WeightedLruCache {
         }
     }
 
-    final static String a(String[] args, byte param1, String param2) {
+    final static String formatPlaceholders(String[] args, byte param1, String param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -97,13 +97,13 @@ final class WeightedLruCache {
             var6_int = param2.indexOf("<%", var5);
             if (0 <= var6_int) {
               for (var5 = 2 + var6_int; var3_int > var5; var5++) {
-                if (vl.a(param2.charAt(var5), -5717)) {
+                if (CheckboxPainter.a(param2.charAt(var5), -5717)) {
                   continue;
                 }
                 break;
               }
               var7_ref_String = param2.substring(var6_int + 2, var5);
-              if (!TextLayout.a((CharSequence) ((Object) var7_ref_String), (byte) 78)) {
+              if (!TextLayout.isDecimalInteger((CharSequence) ((Object) var7_ref_String), (byte) 78)) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -113,7 +113,7 @@ final class WeightedLruCache {
                 continue;
               }
               var5++;
-              var8 = GameMenu.a(1124, (CharSequence) ((Object) var7_ref_String));
+              var8 = GameMenu.parseDecimalInteger(1124, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (args[var8].length() - var5 + var6_int);
               continue;
             }
@@ -134,13 +134,13 @@ final class WeightedLruCache {
               return stackIn_27_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (vl.a(param2.charAt(var5Lifetime1), -5717)) {
+              if (CheckboxPainter.a(param2.charAt(var5Lifetime1), -5717)) {
                 continue;
               }
               break;
             }
             var9 = param2.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!TextLayout.a((CharSequence) ((Object) var9), (byte) 78)) {
+            if (!TextLayout.isDecimalInteger((CharSequence) ((Object) var9), (byte) 78)) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {
@@ -150,7 +150,7 @@ final class WeightedLruCache {
               continue;
             }
             var5Lifetime1++;
-            var10 = GameMenu.a(1124, (CharSequence) ((Object) var9));
+            var10 = GameMenu.parseDecimalInteger(1124, (CharSequence) ((Object) var9));
             discarded$0 = var6.append(param2.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(args[var10]);
@@ -175,7 +175,7 @@ final class WeightedLruCache {
         }
     }
 
-    final static String a(long param0, int param1) {
+    final static String decodeBase37DisplayName(long param0, int param1) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
@@ -191,7 +191,7 @@ final class WeightedLruCache {
           return null;
         }
         if (param1 < 32) {
-          WeightedLruCache.a(true, false, -92);
+          WeightedLruCache.showLoginDialog(true, false, -92);
         }
         int var3 = 0;
         long var4 = param0;
@@ -203,7 +203,7 @@ final class WeightedLruCache {
         while (param0 != 0L) {
           var7 = param0;
           param0 = param0 / 37L;
-          var9 = jk.field_c[(int)(-(37L * param0) + var7)];
+          var9 = FriendsListState.field_c[(int)(-(37L * param0) + var7)];
           if (var9 == 95) {
             var10 = -1 + var6.length();
             var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
@@ -216,7 +216,7 @@ final class WeightedLruCache {
         return var6.toString();
     }
 
-    final static void a(int param0) {
+    final static void sendReadyReflectionChecks(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         IsaacPacketBuffer var1 = null;
@@ -225,17 +225,17 @@ final class WeightedLruCache {
         int var3 = 0;
         var3 = wizardrun.field_H;
         try {
-          var1 = n.field_b;
+          var1 = AccountPacketState.field_b;
           if (param0 != 8) {
             field_g = (boolean[]) null;
           }
-          while (QuickChatPhraseDefinition.a((byte) 125)) {
+          while (QuickChatPhraseDefinition.isReflectionCheckReady((byte) 125)) {
             var1.writeCipheredOpcode((byte) 49, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            kb.a(39, var1);
-            n.field_b.backpatchByteLength(-var2 + var1.position, -57);
+            StandardContentTransitionDialog.writeReflectionCheckReply(39, var1);
+            AccountPacketState.field_b.backpatchByteLength(-var2 + var1.position, -57);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -268,7 +268,7 @@ final class WeightedLruCache {
           }
           if (param1 >= -16) {
             var4 = (String) null;
-            WeightedLruCache.a((String[]) null, (byte) -84, (String) null);
+            WeightedLruCache.formatPlaceholders((String[]) null, (byte) -84, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -289,13 +289,13 @@ final class WeightedLruCache {
         throw new Error();
     }
 
-    final static void a(of param0, int param1, byte param2) {
+    final static void a(RankingRequest param0, int param1, byte param2) {
         IsaacPacketBuffer var3 = null;
         if (param2 > -71) {
           return;
         }
         try {
-          var3 = n.field_b;
+          var3 = AccountPacketState.field_b;
           var3.writeCipheredOpcode((byte) 124, param1);
           var3.writeByte((byte) 11, param0.field_j);
           var3.writeByte((byte) 11, param0.field_i);
@@ -309,7 +309,7 @@ final class WeightedLruCache {
           return;
         }
         EmailLoginCredentials.a(LoginChoicePanel.field_E, 8053);
-        LoginChoicePanel.field_E.a(ld.field_g, (byte) 19);
+        LoginChoicePanel.field_E.disposeFullscreen(MusicPatchLoader.field_g, (byte) 19);
         LoginChoicePanel.field_E = null;
         if (StringPaddingHelpers.field_c != null) {
           StringPaddingHelpers.field_c.a(127);

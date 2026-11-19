@@ -14,7 +14,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
     private Validator field_T;
     static int field_P;
 
-    final static String a(boolean param0, int param1, boolean param2, boolean param3) {
+    final static String getDiscardPrompt(boolean param0, int param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param3) {
           var4 += 4;
@@ -31,7 +31,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
         return DiskCacheRequest.field_y[var4];
     }
 
-    final static ResourceArchive a(int param0, int param1, boolean param2, int param3, boolean param4) {
+    final static ResourceArchive createUiArchive(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param1 != -1784753947) {
           field_M = (Sprite) null;
         }
@@ -40,7 +40,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
 
     public static void releaseStatics(byte param0) {
         if (param0 <= 59) {
-          ValidationHelpWidget.a(-35, -95, true, 66, true);
+          ValidationHelpWidget.createUiArchive(-35, -95, true, 66, true);
         }
         field_M = null;
         field_S = null;
@@ -157,14 +157,14 @@ final class ValidationHelpWidget extends HotspotTextWidget {
         ValidationState var6Lifetime1;
         var13 = wizardrun.field_H;
         var6 = this.field_T.getState(true);
-        if (var6 != nf.field_c &&
+        if (var6 != AccountFormTextHelpers.field_c &&
           var6 != field_S) {
           var5 = this.field_T.getMessage(-2864);
           if (var5 == null) {
             var5 = this.field_L;
           }
         } else {
-          var5 = ke.field_v;
+          var5 = PasswordFieldPainter.field_v;
         }
         if (!var5.equals(this.text)) {
           this.text = var5;
@@ -175,12 +175,12 @@ final class ValidationHelpWidget extends HotspotTextWidget {
         var8 = (TextWidgetRenderer) ((Object) this.renderer);
         var9 = param0 + this.x;
         var10 = var8.getTextOriginY(true, param3, (UiWidget) (this)) + (var8.getTextLayout((UiWidget) (this), (byte) 96).height(126) >> 1);
-        if (var6Lifetime1 != nf.field_c &&
+        if (var6Lifetime1 != AccountFormTextHelpers.field_c &&
           field_S != var6Lifetime1) {
           if (var6Lifetime1 == DisplayNameSyntaxHelpers.field_c) {
             var14 = AchievementStateRequest.field_k[2];
             var14.drawAdditive(var9, var10 - (var14.height >> 1), 256);
-          } else if (gf.field_V == var6Lifetime1) {
+          } else if (ContentTransitionDialog.field_V == var6Lifetime1) {
             var15 = AchievementStateRequest.field_k[1];
             var15.drawAdditive(var9, -(var15.height >> 1) + var10, 256);
           }
@@ -198,7 +198,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
             UrlPacketDownloader.a(this.field_R, false);
           }
           var16.drawRotatedAboutPivot(112, 144, var16.fullWidth << 4, var16.fullHeight << 4, -this.field_U << 10, 4096);
-          UsernameLoginCredentials.b(4);
+          UsernameLoginCredentials.popRasterState(4);
           this.field_R.drawAdditive(-(var16.fullWidth >> 1) + var9, -var16.fullHeight + var10, 256);
         }
     }

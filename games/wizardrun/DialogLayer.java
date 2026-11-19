@@ -26,14 +26,14 @@ final class DialogLayer extends SingleChildWidget {
         }
         while (var3 != null) {
           if (var3.field_H) {
-            return var3.d(-16);
+            return var3.getFocusedWidget(-16);
           }
           var3 = (FadingDialog) (var2.next(35));
         }
         return null;
     }
 
-    final void g(int param0) {
+    final void finishDialogAnimations(int param0) {
         int var4 = wizardrun.field_H;
         if (param0 != -5903) {
           this.drawLayer(86, 9, -39, -76);
@@ -41,14 +41,14 @@ final class DialogLayer extends SingleChildWidget {
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_I);
         FadingDialog var3 = (FadingDialog) (var2.first((byte) 31));
         while (var3 != null) {
-          if (var3.a(16)) {
+          if (var3.finishAnimationAndCheckClosed(16)) {
             var3.unlink(false);
           }
           var3 = (FadingDialog) (var2.next(35));
         }
     }
 
-    final void d(boolean param0) {
+    final void hideAllDialogs(boolean param0) {
         int var4 = wizardrun.field_H;
         if (param0) {
           return;
@@ -62,7 +62,7 @@ final class DialogLayer extends SingleChildWidget {
         this.field_F = null;
     }
 
-    final FadingDialog f(int param0) {
+    final FadingDialog getTopVisibleDialog(int param0) {
         IntrusiveDequeCursor var2;
         FadingDialog var3;
         int var4;
@@ -81,7 +81,7 @@ final class DialogLayer extends SingleChildWidget {
         return null;
     }
 
-    final void b(UiWidget param0, byte param1) {
+    final void showDialog(UiWidget param0, byte param1) {
         FadingDialog var3 = null;
         try {
           if (!(param0 instanceof FadingDialog)) {
@@ -89,7 +89,7 @@ final class DialogLayer extends SingleChildWidget {
           }
           var3 = (FadingDialog) (param0);
           if (param1 < 50) {
-            this.f(95);
+            this.getTopVisibleDialog(95);
           }
           this.field_I.addFirst(var3, -5441);
           var3.field_H = true;
@@ -124,12 +124,12 @@ final class DialogLayer extends SingleChildWidget {
         field_L = null;
     }
 
-    final void g(byte param0) {
+    final void animateDialogs(byte param0) {
         int var4 = wizardrun.field_H;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_I);
         FadingDialog var3 = (FadingDialog) (var2.first((byte) 31));
         while (var3 != null) {
-          if (var3.g(1)) {
+          if (var3.animateAndCheckClosed(1)) {
             var3.unlink(false);
           }
           var3 = (FadingDialog) (var2.next(35));
@@ -137,7 +137,7 @@ final class DialogLayer extends SingleChildWidget {
         if (param0 <= 102) {
           field_L = (ArchiveCatalog) null;
         }
-        this.field_F = (UiWidget) ((Object) this.f(0));
+        this.field_F = (UiWidget) ((Object) this.getTopVisibleDialog(0));
     }
 
     static {

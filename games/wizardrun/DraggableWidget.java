@@ -278,16 +278,16 @@ final class DraggableWidget extends SingleChildWidget {
             return;
           }
           if (var2 != 1) {
-            ResizableDialog.a((Throwable) null, "LR1: " + ni.c(6), -562);
+            ResizableDialog.reportClientError((Throwable) null, "LR1: " + LevelDecodingHelpers.describeAccountPacket(6), -562);
             HuffmanDecoder.closeAccountConnection(-66);
             return;
           }
           var4_int = var9.readSignedSmart(param0 + 37623);
-          var5_ref_dc = (ProgressSubmission) (v.field_d.first((byte) 100));
+          var5_ref_dc = (ProgressSubmission) (SpriteAlphaState.field_d.first((byte) 100));
           while (var5_ref_dc != null) {
             if (var5_ref_dc.category != var3 ||
               var4_int != var5_ref_dc.recordId) {
-              var5_ref_dc = (ProgressSubmission) (v.field_d.next(param0 ^ -25336));
+              var5_ref_dc = (ProgressSubmission) (SpriteAlphaState.field_d.next(param0 ^ -25336));
               continue;
             }
             break;

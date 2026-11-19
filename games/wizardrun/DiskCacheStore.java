@@ -133,7 +133,7 @@ final class DiskCacheStore {
         }
     }
 
-    final static String a(String param0, java.applet.Applet param1, int param2) {
+    final static String readBrowserCookie(String param0, java.applet.Applet param1, int param2) {
         try {
           int var5 = 0;
           String var3 = null;
@@ -154,7 +154,7 @@ final class DiskCacheStore {
           try {
             try {
               var3 = (String) (BrowserScriptBridge.call(param1, -3264, "getcookies"));
-              var4 = FadingDialog.a(var3, -22710, ';');
+              var4 = FadingDialog.splitOnCharacter(var3, -22710, ';');
               for (var5 = param2; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -198,13 +198,13 @@ final class DiskCacheStore {
         return "" + this.field_a;
     }
 
-    final static void a(byte param0) {
+    final static void clearMenuScreenResources(byte param0) {
         if (param0 != 64) {
-          DiskCacheStore.a((byte) -126);
+          DiskCacheStore.clearMenuScreenResources((byte) -126);
         }
-        ec.field_a = null;
-        f.field_b = null;
-        ke.field_t = null;
+        LogoAnimationLoader.field_a = null;
+        HighscorePlayerState.field_b = null;
+        PasswordFieldPainter.field_t = null;
         GrowableIntList.field_f = null;
         ClientException.field_a = false;
     }

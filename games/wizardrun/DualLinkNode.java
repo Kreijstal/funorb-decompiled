@@ -30,16 +30,16 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryPrevious = null;
     }
 
-    final static void c(int param0) {
+    final static void readSavedDataResponse(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        ie var4_ref_ie = null;
+        SavedDataSubmission var4_ref_ie = null;
         Object var5 = null;
         int var6 = 0;
-        tc var8 = null;
+        SavedDataRequest var8 = null;
         IsaacPacketBuffer var9 = null;
         byte[] var13 = null;
         var6 = wizardrun.field_H;
@@ -50,7 +50,7 @@ class DualLinkNode extends IntrusiveNode {
           var9 = AccountCreationForm.field_N;
           var2 = var9.readUnsignedByte(param0 + 257);
           if (var2 == 0) {
-            var8 = (tc) (RasterBuffer.field_c.first((byte) 107));
+            var8 = (SavedDataRequest) (RasterBuffer.field_c.first((byte) 107));
             if (var8 == null) {
               HuffmanDecoder.closeAccountConnection(-78);
               return;
@@ -71,15 +71,15 @@ class DualLinkNode extends IntrusiveNode {
             return;
           }
           if (var2 != 1) {
-            ResizableDialog.a((Throwable) null, "A1: " + ni.c(6), -562);
+            ResizableDialog.reportClientError((Throwable) null, "A1: " + LevelDecodingHelpers.describeAccountPacket(6), -562);
             HuffmanDecoder.closeAccountConnection(param0 ^ 117);
             return;
           }
           var3 = var9.readInt(param0 + 257);
-          var4_ref_ie = (ie) (pa.field_e.first((byte) 61));
+          var4_ref_ie = (SavedDataSubmission) (EncryptedLoginHelpers.field_e.first((byte) 61));
           while (var4_ref_ie != null) {
-            if (var3 != var4_ref_ie.field_k) {
-              var4_ref_ie = (ie) (pa.field_e.next(8192));
+            if (var3 != var4_ref_ie.crc) {
+              var4_ref_ie = (SavedDataSubmission) (EncryptedLoginHelpers.field_e.next(8192));
               continue;
             }
             break;

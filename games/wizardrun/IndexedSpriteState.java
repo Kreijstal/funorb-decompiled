@@ -18,7 +18,7 @@ abstract class IndexedSpriteState {
           return;
         }
         LoginCredentials.a((byte) -99);
-        jc.a((byte) 100, 4);
+        OpacityWidget.setAccountWorkflowState((byte) 100, 4);
     }
 
     abstract void draw(int param0, int param1);
@@ -39,15 +39,15 @@ abstract class IndexedSpriteState {
         RuntimeException decompiledCaughtException = null;
         var6 = wizardrun.field_H;
         try {
-          var2 = DiskCacheStore.a("jagex-last-login-method", param0, 0);
+          var2 = DiskCacheStore.readBrowserCookie("jagex-last-login-method", param0, 0);
           if (var2 == null) {
-            stackIn_4_0 = ra.field_j;
+            stackIn_4_0 = AchievementUnlock.field_j;
             return stackIn_4_0;
           }
           if (param1 != 48) {
             field_i = true;
           }
-          var3 = ValidatedTextField.l((byte) 100);
+          var3 = ValidatedTextField.getLoginMethodPreferences((byte) 100);
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5.matchesLoginMethod(var2, 126)) {
@@ -55,7 +55,7 @@ abstract class IndexedSpriteState {
               return stackIn_12_0;
             }
           }
-          stackIn_15_0 = ra.field_j;
+          stackIn_15_0 = AchievementUnlock.field_j;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ abstract class IndexedSpriteState {
               if (param0 <= 5) {
                 field_g = (String) null;
               }
-              var3 = jl.a(-101, var4, param1).getFile();
+              var3 = SpriteButtonPainter.appendChangedSessionParameters(-101, var4, param1).getFile();
               BrowserScriptBridge.call(new Object[]{"home", var3 + "home.ws"}, "updatelinks", 30383, param1);
               BrowserScriptBridge.call(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", 30383, param1);
               BrowserScriptBridge.call(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", 30383, param1);
@@ -137,7 +137,7 @@ abstract class IndexedSpriteState {
           ResourceArchive.attachKeyboardListeners(0, (java.awt.Component) ((Object) param1));
           IterableNodeHashTable.attachMouseListeners((java.awt.Component) ((Object) param1), 98);
           if (MessagePanel.field_K != null) {
-            MessagePanel.field_K.b((java.awt.Component) ((Object) param1), -1);
+            MessagePanel.field_K.attach((java.awt.Component) ((Object) param1), -1);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "jf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

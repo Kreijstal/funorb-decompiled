@@ -15,7 +15,7 @@ final class LevelData implements Serializable {
     static int keyQueueReadIndex;
     static String field_b;
 
-    final static EmailValidationError a(int param0, String param1) {
+    final static EmailValidationError validateEmailAddress(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -39,7 +39,7 @@ final class LevelData implements Serializable {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
-            var5 = DateFormattingHelpers.a(var3, param0);
+            var5 = DateFormattingHelpers.validateEmailLocalPart(var3, param0);
             if (var5 == null) {
               stackIn_12_0 = EmailDomainHelpers.validateEmailDomain(-27602, var4);
               return stackIn_12_0;

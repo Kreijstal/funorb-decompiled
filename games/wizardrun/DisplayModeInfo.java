@@ -40,18 +40,18 @@ final class DisplayModeInfo {
         stackIn_6_0 = FlatTriangleRasterizer.field_b;
         try {
           while (stackIn_6_0.length > var3_int) {
-            var5 = ec.field_g[var3_int];
+            var5 = LogoAnimationLoader.field_g[var3_int];
             if (0 > var5) {
               var4 = var4 + BufferedRandomAccessFile.field_f;
             } else {
               var6 = EmailCheckRequest.measureTextWidth(true, 110, FlatTriangleRasterizer.field_b[var3_int]);
-              var7 = -(var6 >> 1) + id.field_c;
+              var7 = -(var6 >> 1) + PasswordContentHelpers.field_c;
               var4 = var4 + Js5Transport.field_e;
-              if (ih.isPointInsideRectangle(-vl.field_h + var7, (vl.field_h << 1) + var6, ec.field_c + (e.field_d << 1), var4, true, param1, param2)) {
+              if (NameCheckHelpers.isPointInsideRectangle(-CheckboxPainter.field_h + var7, (CheckboxPainter.field_h << 1) + var6, LogoAnimationLoader.field_c + (ThreePieceFrameHelpers.field_d << 1), var4, true, param1, param2)) {
                 stackIn_11_0 = var5;
                 return stackIn_11_0;
               }
-              var4 = var4 + (ec.field_c + (Js5Transport.field_e + (e.field_d << 1)));
+              var4 = var4 + (LogoAnimationLoader.field_c + (Js5Transport.field_e + (ThreePieceFrameHelpers.field_d << 1)));
             }
             var3_int++;
             stackIn_6_0 = FlatTriangleRasterizer.field_b;
@@ -65,20 +65,20 @@ final class DisplayModeInfo {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resendRankingStatsRequests(int param0, byte param1) {
         int var3 = 0;
-        vf var4 = null;
+        RankingStatsRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (vf) (TimedValidator.field_d.first((byte) 50));
+          var4 = (RankingStatsRequest) (TimedValidator.field_d.first((byte) 50));
           if (param1 >= -72) {
-            DisplayModeInfo.a(57, (byte) -120);
+            DisplayModeInfo.resendRankingStatsRequests(57, (byte) -120);
           }
           while (var4 != null) {
-            GameKeyHandler.a(param0, var4, -22);
-            var4 = (vf) (TimedValidator.field_d.next(8192));
+            GameKeyHandler.writeRankingStatsRequest(param0, var4, -22);
+            var4 = (RankingStatsRequest) (TimedValidator.field_d.next(8192));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -93,10 +93,10 @@ final class DisplayModeInfo {
         if (param0 == -1926289535) {
           return;
         }
-        DisplayModeInfo.a(-27, (byte) -34);
+        DisplayModeInfo.resendRankingStatsRequests(-27, (byte) -34);
     }
 
-    final static void a(String param0, int param1, java.applet.Applet param2) {
+    final static void openRelativeBrowserPage(String param0, int param1, java.applet.Applet param2) {
         try {
           java.net.URL var3 = null;
           Exception var3_ref = null;
@@ -113,7 +113,7 @@ final class DisplayModeInfo {
             }
             try {
               var3 = new java.net.URL(param2.getCodeBase(), param0);
-              var3 = jl.a(-91, var3, param2);
+              var3 = SpriteButtonPainter.appendChangedSessionParameters(-91, var3, param2);
               BrowserUrlLauncher.openExternalUrl(true, 127, var3.toString(), param2);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {

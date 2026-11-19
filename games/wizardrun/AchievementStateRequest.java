@@ -38,10 +38,10 @@ final class AchievementStateRequest extends IntrusiveNode {
           }
           var5_int = 0;
           while (true) {
-            if (var5_int >= id.field_b.length) {
+            if (var5_int >= PasswordContentHelpers.field_b.length) {
               return;
             }
-            param4 = id.field_b[var5_int];
+            param4 = PasswordContentHelpers.field_b[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param4;

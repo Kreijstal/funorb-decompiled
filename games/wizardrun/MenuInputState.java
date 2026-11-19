@@ -11,7 +11,7 @@ final class MenuInputState {
     private int field_a;
     private int field_h;
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void resetSelection(int param0, int param1, boolean param2, int param3) {
         if (param0 != -12785) {
           return;
         }
@@ -31,19 +31,19 @@ final class MenuInputState {
         field_f = null;
     }
 
-    final static void a(String param0, String param1, boolean param2) {
+    final static void showLoginWithMessage(String param0, String param1, boolean param2) {
         try {
-          if (null != aa.field_lb) {
-            aa.field_lb.l(-27697);
+          if (null != FriendEntry.field_lb) {
+            FriendEntry.field_lb.closeProgressDialog(-27697);
           }
           TimedValidator.field_b = new LoginForm(param1, param0, false, true, param2);
-          td.field_f.c(TimedValidator.field_b, -111);
+          KeyboardShutdownHelpers.field_f.transitionToContent(TimedValidator.field_b, -111);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "rj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void updatePointer(int param0, int param1, int param2) {
         int var4;
         int var4Lifetime1;
         if (param0 >= this.field_c) {
@@ -54,7 +54,7 @@ final class MenuInputState {
         }
         this.field_e = 0;
         this.field_b = 0;
-        if (w.field_c == 0) {
+        if (UiThemeSetupHelpers.field_c == 0) {
           var4 = -3 % ((-4 - param1) / 32);
           if (this.field_h != 0 &&
             BrowserUrlLauncher.field_c != 0) {
@@ -63,7 +63,7 @@ final class MenuInputState {
             }
             this.field_a = this.field_a - 1;
           }
-          if (w.field_c == 0 &&
+          if (UiThemeSetupHelpers.field_c == 0 &&
             BrowserUrlLauncher.field_c == 0) {
             this.field_h = 0;
           }
@@ -71,7 +71,7 @@ final class MenuInputState {
             return;
           }
           if (!this.field_d &&
-            !ih.field_a) {
+            !NameCheckHelpers.field_a) {
             return;
           }
           if (param0 < 0) {
@@ -87,14 +87,14 @@ final class MenuInputState {
           this.field_d = true;
           return;
         }
-        this.field_b = w.field_c;
+        this.field_b = UiThemeSetupHelpers.field_c;
         this.field_a = DelayedServerPacket.field_m;
         this.field_d = true;
-        this.field_h = w.field_c;
+        this.field_h = UiThemeSetupHelpers.field_c;
         this.field_g = param2;
         var4Lifetime1 = -3 % ((-4 - param1) / 32);
         if (this.field_h == 0) {
-          if (w.field_c == 0 &&
+          if (UiThemeSetupHelpers.field_c == 0 &&
             BrowserUrlLauncher.field_c == 0) {
             this.field_h = 0;
           }
@@ -102,7 +102,7 @@ final class MenuInputState {
             return;
           }
           if (!this.field_d &&
-            !ih.field_a) {
+            !NameCheckHelpers.field_a) {
             return;
           }
           if (param0 >= 0) {
@@ -121,7 +121,7 @@ final class MenuInputState {
           return;
         }
         if (BrowserUrlLauncher.field_c == 0) {
-          if (w.field_c == 0 &&
+          if (UiThemeSetupHelpers.field_c == 0 &&
             BrowserUrlLauncher.field_c == 0) {
             this.field_h = 0;
           }
@@ -129,7 +129,7 @@ final class MenuInputState {
             return;
           }
           if (!this.field_d &&
-            !ih.field_a) {
+            !NameCheckHelpers.field_a) {
             return;
           }
           if (param0 >= 0) {
@@ -151,7 +151,7 @@ final class MenuInputState {
           this.field_a = MessagePanel.field_G;
         }
         this.field_a = this.field_a - 1;
-        if (w.field_c == 0 &&
+        if (UiThemeSetupHelpers.field_c == 0 &&
           BrowserUrlLauncher.field_c == 0) {
           this.field_h = 0;
         }
@@ -159,7 +159,7 @@ final class MenuInputState {
           return;
         }
         if (!this.field_d &&
-          !ih.field_a) {
+          !NameCheckHelpers.field_a) {
           return;
         }
         if (param0 < 0) {
@@ -175,9 +175,9 @@ final class MenuInputState {
         this.field_d = true;
     }
 
-    final boolean b(int param0) {
+    final boolean wasActivated(int param0) {
         if (param0 != -1) {
-          this.a((byte) -122, 31);
+          this.handleHorizontalKey((byte) -122, 31);
           if (this.field_b != 0) {
             return true;
           }
@@ -198,7 +198,7 @@ final class MenuInputState {
         return true;
     }
 
-    final void a(int param0) {
+    final void handleVerticalKey(int param0) {
         String var3;
         this.field_e = 0;
         this.field_b = 0;
@@ -207,7 +207,7 @@ final class MenuInputState {
         }
         if (param0 <= 12) {
           var3 = (String) null;
-          MenuInputState.a((String) null, (String) null, true);
+          MenuInputState.showLoginWithMessage((String) null, (String) null, true);
           if (0 != this.field_h) {
             if (this.field_h == 0 &&
               MidiNote.field_r == 99) {
@@ -271,7 +271,7 @@ final class MenuInputState {
         this.field_g = 0;
     }
 
-    final void a(byte param0, int param1) {
+    final void handleHorizontalKey(byte param0, int param1) {
         int var3;
         int var3Lifetime1;
         this.field_e = 0;

@@ -32,24 +32,24 @@ final class LoginPacketBuilder {
           LoginCredentials.field_d[1] = IntrusiveDeque.field_c.nextInt();
           LoginCredentials.field_d[2] = (int)(LevelData.field_g >> 32);
           LoginCredentials.field_d[3] = (int)LevelData.field_g;
-          re.field_G.position = 0;
-          re.field_G.writeInt(LoginCredentials.field_d[0], 613003928);
-          re.field_G.writeInt(LoginCredentials.field_d[1], 613003928);
-          re.field_G.writeInt(LoginCredentials.field_d[2], 613003928);
-          re.field_G.writeInt(LoginCredentials.field_d[3], 613003928);
-          GameShell.a(re.field_G, -18);
-          re.field_G.writeShort(-1947079288, param4);
-          param1.writeCredentials(4, re.field_G);
-          n.field_b.position = 0;
+          AccountConsentPanel.field_G.position = 0;
+          AccountConsentPanel.field_G.writeInt(LoginCredentials.field_d[0], 613003928);
+          AccountConsentPanel.field_G.writeInt(LoginCredentials.field_d[1], 613003928);
+          AccountConsentPanel.field_G.writeInt(LoginCredentials.field_d[2], 613003928);
+          AccountConsentPanel.field_G.writeInt(LoginCredentials.field_d[3], 613003928);
+          GameShell.a(AccountConsentPanel.field_G, -18);
+          AccountConsentPanel.field_G.writeShort(-1947079288, param4);
+          param1.writeCredentials(4, AccountConsentPanel.field_G);
+          AccountPacketState.field_b.position = 0;
           if (!param3) {
-            n.field_b.writeByte((byte) 11, 16);
+            AccountPacketState.field_b.writeByte((byte) 11, 16);
           } else {
-            n.field_b.writeByte((byte) 11, 18);
+            AccountPacketState.field_b.writeByte((byte) 11, 18);
           }
-          n.field_b.position = n.field_b.position + 2;
-          var5_int = n.field_b.position;
-          n.field_b.writeInt(MidiNote.field_G, 613003928);
-          n.field_b.writeLong(1290648728, TextWrappingHelpers.field_d);
+          AccountPacketState.field_b.position = AccountPacketState.field_b.position + 2;
+          var5_int = AccountPacketState.field_b.position;
+          AccountPacketState.field_b.writeInt(MidiNote.field_G, 613003928);
+          AccountPacketState.field_b.writeLong(1290648728, TextWrappingHelpers.field_d);
           var6 = 0;
           if (IntrusiveDequeCursor.field_g) {
             var6 = var6 | 1;
@@ -63,7 +63,7 @@ final class LoginPacketBuilder {
           if (EmailCheckRequest.field_b != null) {
             var6 = var6 | 16;
           }
-          n.field_b.writeByte((byte) 11, var6);
+          AccountPacketState.field_b.writeByte((byte) 11, var6);
           if (!param2) {
             field_c = -6;
           }
@@ -71,13 +71,13 @@ final class LoginPacketBuilder {
           if (var7 == null) {
             var7 = "";
           }
-          n.field_b.writeCp1252String(var7, false);
+          AccountPacketState.field_b.writeCp1252String(var7, false);
           if (null != EmailCheckRequest.field_b) {
-            n.field_b.writePrefixedCp1252String(0, EmailCheckRequest.field_b);
+            AccountPacketState.field_b.writePrefixedCp1252String(0, EmailCheckRequest.field_b);
           }
-          pa.a(StrongCacheEntry.field_s, 0, ArchiveCatalog.field_d, re.field_G, n.field_b);
-          n.field_b.backpatchShortLength(n.field_b.position - var5_int, (byte) -67);
-          id.flushAccountPackets((byte) -67, -1);
+          EncryptedLoginHelpers.writeEncryptedPayload(StrongCacheEntry.field_s, 0, ArchiveCatalog.field_d, AccountConsentPanel.field_G, AccountPacketState.field_b);
+          AccountPacketState.field_b.backpatchShortLength(AccountPacketState.field_b.position - var5_int, (byte) -67);
+          PasswordContentHelpers.flushAccountPackets((byte) -67, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

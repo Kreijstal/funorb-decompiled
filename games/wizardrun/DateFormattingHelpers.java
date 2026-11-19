@@ -18,7 +18,7 @@ final class DateFormattingHelpers {
         field_a = null;
     }
 
-    final static EmailValidationError a(String param0, int param1) {
+    final static EmailValidationError validateEmailLocalPart(String param0, int param1) {
         EmailValidationError stackIn_4_0 = null;
         EmailValidationError stackIn_7_0 = null;
         EmailValidationError stackIn_12_0 = null;
@@ -48,12 +48,12 @@ final class DateFormattingHelpers {
             return stackIn_4_0;
           }
           if (64 < var2_int) {
-            stackIn_7_0 = kj.field_c;
+            stackIn_7_0 = SystemMemoryHelpers.field_c;
             return stackIn_7_0;
           }
           if (param0.charAt(0) == 34) {
             if (34 != param0.charAt(var2_int - 1)) {
-              stackIn_12_0 = tl.field_d;
+              stackIn_12_0 = FriendOrderingHelpers.field_d;
               return stackIn_12_0;
             }
             var3 = 0;
@@ -62,7 +62,7 @@ final class DateFormattingHelpers {
               if (92 != var5) {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_24_0 = tl.field_d;
+                  stackIn_24_0 = FriendOrderingHelpers.field_d;
                   return stackIn_24_0;
                 }
                 var3 = 0;
@@ -85,13 +85,13 @@ final class DateFormattingHelpers {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_38_0 = tl.field_d;
+                stackIn_38_0 = FriendOrderingHelpers.field_d;
                 return stackIn_38_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (ProgressQuery.field_i.indexOf(var5Lifetime1) == -1) {
-                stackIn_43_0 = tl.field_d;
+                stackIn_43_0 = FriendOrderingHelpers.field_d;
                 return stackIn_43_0;
               }
               var3Lifetime1 = 0;
@@ -117,15 +117,15 @@ final class DateFormattingHelpers {
         }
     }
 
-    final static void a(String param0, boolean param1, int param2) {
+    final static void showAccountProgress(String param0, boolean param1, int param2) {
         IntegerSyntaxHelpers.field_a = param1;
         WrappedTextLayout.field_i = true;
-        aa.field_lb = new mh(GameShell.field_A, PacketBuffer.field_i, param0, DialogLayer.field_J, IntegerSyntaxHelpers.field_a);
+        FriendEntry.field_lb = new AccountProgressDialog(GameShell.field_A, PacketBuffer.field_i, param0, DialogLayer.field_J, IntegerSyntaxHelpers.field_a);
         if (param2 > -119) {
           return;
         }
         try {
-          GameShell.field_A.b((UiWidget) (aa.field_lb), (byte) 55);
+          GameShell.field_A.showDialog((UiWidget) (FriendEntry.field_lb), (byte) 55);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "fc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -143,12 +143,12 @@ final class DateFormattingHelpers {
         if (param0 <= -3) {
           var8 = ArchiveProvider.field_c.get(12);
           var9 = ArchiveProvider.field_c.get(13);
-          return of.field_k[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + MenuInputState.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return RankingRequest.field_k[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + MenuInputState.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }
 
-    final static void a(byte param0, int param1, java.awt.Canvas param2, int param3) {
+    final static void presentRaster(byte param0, int param1, java.awt.Canvas param2, int param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -162,7 +162,7 @@ final class DateFormattingHelpers {
               field_a = (String) null;
             }
             var4 = param2.getGraphics();
-            ArchiveProvider.field_b.a(var4, -29402, param1, param3);
+            ArchiveProvider.field_b.drawToGraphics(var4, -29402, param1, param3);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

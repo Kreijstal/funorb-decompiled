@@ -74,7 +74,7 @@ final class Js5Index {
         int var13Lifetime1Lifetime1;
         var16 = wizardrun.field_H;
         try {
-          var17 = new PacketBuffer(dg.decompressArchiveContainer(param0, 31027));
+          var17 = new PacketBuffer(ArchiveContainerHelpers.decompressArchiveContainer(param0, 31027));
           var4 = var17.readUnsignedByte(param1 + 255);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -260,7 +260,7 @@ final class Js5Index {
           field_d = (AudioOutput) null;
         }
         String var2 = (String) null;
-        MenuInputState.a((String) null, "", true);
+        MenuInputState.showLoginWithMessage((String) null, "", true);
     }
 
     Js5Index(byte[] param0, int param1, byte[] param2) {
@@ -274,7 +274,7 @@ final class Js5Index {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_b = id.whirlpoolDigest(param0, 0, param0.length, 0);
+            this.field_b = PasswordContentHelpers.whirlpoolDigest(param0, 0, param0.length, 0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_b[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

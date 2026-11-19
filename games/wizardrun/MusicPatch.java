@@ -15,7 +15,7 @@ final class MusicPatch extends IntrusiveNode {
     byte[] field_o;
     MidiEnvelope[] field_t;
 
-    final boolean a(byte[] param0, SoundCache param1, int param2, int[] param3) {
+    final boolean loadSamples(byte[] param0, SoundCache param1, int param2, int[] param3) {
         int var9 = 0;
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -48,9 +48,9 @@ final class MusicPatch extends IntrusiveNode {
                   var7 = var10;
                   var10--;
                   if ((1 & var10) == 0) {
-                    var8 = param1.b(-32480, param3, var10 >> 2);
+                    var8 = param1.getSoundEffectFlat(-32480, param3, var10 >> 2);
                   } else {
-                    var8 = param1.a(19830, param3, var10 >> 2);
+                    var8 = param1.getVorbisSampleFlat(19830, param3, var10 >> 2);
                   }
                   if (var8 == null) {
                     var5_int = 0;
@@ -91,16 +91,16 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isGuestSessionActive(boolean param0) {
         boolean stackIn_7_0 = false;
         if (!param0) {
           return false;
         }
-        stackIn_7_0 = (ArchiveRequest.field_t >= 10) && (!FramedButtonPainter.field_p) && (!NameSuggestionsPanel.a(0));
+        stackIn_7_0 = (ArchiveRequest.field_t >= 10) && (!FramedButtonPainter.field_p) && (!NameSuggestionsPanel.isAccountLoggedIn(0));
         return stackIn_7_0;
     }
 
-    final static boolean a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static boolean loadSpriteSheet(int param0, int param1, ResourceArchive param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -133,14 +133,14 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, int param3) {
+    final static String getSavePrompt(boolean param0, boolean param1, boolean param2, int param3) {
         int var4 = 0;
         if (param0) {
           var4 += 4;
         }
         if (param3 != 26505) {
           ResourceArchive var5 = (ResourceArchive) null;
-          MusicPatch.a(-70, -30, (ResourceArchive) null, 2);
+          MusicPatch.loadSpriteSheet(-70, -30, (ResourceArchive) null, 2);
         }
         if (param2) {
           var4 += 2;
@@ -151,7 +151,7 @@ final class MusicPatch extends IntrusiveNode {
         return NanoTickClock.field_p[var4];
     }
 
-    final void a(int param0) {
+    final void clearSampleIds(int param0) {
         int var2 = -16 / ((param0 - 53) / 58);
         this.field_i = null;
     }
@@ -159,7 +159,7 @@ final class MusicPatch extends IntrusiveNode {
     public static void releaseStatics(boolean param0) {
         if (!param0) {
           ResourceArchive var2 = (ResourceArchive) null;
-          MusicPatch.a(109, -121, (ResourceArchive) null, -59);
+          MusicPatch.loadSpriteSheet(109, -121, (ResourceArchive) null, -59);
         }
         field_j = null;
         field_s = null;

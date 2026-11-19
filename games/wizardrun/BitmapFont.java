@@ -36,7 +36,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int charWidth(char param0) {
-        return this.field_G[nf.a(26614, param0) & 255];
+        return this.field_G[AccountFormTextHelpers.a(26614, param0) & 255];
     }
 
     final int maxLineWidth(String param0, int param1) {
@@ -179,7 +179,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = GameMenu.a(1124, var13);
+                                  var10 = GameMenu.parseDecimalInteger(1124, var13);
                                   var11_ref_jf = this.field_s[var10];
                                   if (this.field_C == null) {
                                     stackIn_27_0 = var11_ref_jf.field_j;
@@ -228,7 +228,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(nf.a(26614, (char) var8) & 255);
+              var8 = (char)(AccountFormTextHelpers.a(26614, (char) var8) & 255);
               if (this.field_u != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_u[(var5 << 8) + var8];
@@ -321,7 +321,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = GameMenu.a(1124, var10);
+                                  var9_int = GameMenu.parseDecimalInteger(1124, var10);
                                   var4 = var4 + this.field_s[var9_int].field_b;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -358,7 +358,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(nf.a(26614, (char) var7) & 255);
+              var7 = (char)(AccountFormTextHelpers.a(26614, (char) var7) & 255);
               var4 = var4 + this.field_G[var7];
               if (this.field_u != null &&
                 var3 != 0) {
@@ -596,7 +596,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_A = vg.a(16, true, var7);
+                                field_A = FullscreenFailureDialog.parseSignedInteger(16, true, var7);
                               }
                             } else {
                               field_H = -1;
@@ -606,7 +606,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_H = vg.a(16, true, var6);
+                          field_H = FullscreenFailureDialog.parseSignedInteger(16, true, var6);
                         }
                       } else {
                         field_D = -1;
@@ -616,21 +616,21 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_D = vg.a(16, true, var5);
+                    field_D = FullscreenFailureDialog.parseSignedInteger(16, true, var5);
                   }
                 } else {
                   field_I = field_r;
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_I = GameMenu.a(1124, var4);
+                field_I = GameMenu.parseDecimalInteger(1124, var4);
               }
             } else {
               field_y = field_x;
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_y = vg.a(16, true, var3);
+            field_y = FullscreenFailureDialog.parseSignedInteger(16, true, var3);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -712,7 +712,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = GameMenu.a(1124, var18);
+                                    var16_int = GameMenu.parseDecimalInteger(1124, var18);
                                     var4 = var4 + this.field_s[var16_int].field_b;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -797,7 +797,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_p.append((char) var14);
-                var14 = (char)(nf.a(26614, (char) var14) & 255);
+                var14 = (char)(AccountFormTextHelpers.a(26614, (char) var14) & 255);
                 var4 = var4 + this.field_G[var14];
                 if (this.field_u != null &&
                   var10 != 0) {

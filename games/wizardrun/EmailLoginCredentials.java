@@ -16,15 +16,15 @@ final class EmailLoginCredentials extends LoginCredentials {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          mj.a((java.awt.Component) ((Object) param0), (byte) 96);
-          ee.detachMouseListeners((java.awt.Component) ((Object) param0), 6769);
+          ThrowableFormattingHelpers.a((java.awt.Component) ((Object) param0), (byte) 96);
+          StyleNode.detachMouseListeners((java.awt.Component) ((Object) param0), 6769);
           if (MessagePanel.field_K != null) {
-            MessagePanel.field_K.a((java.awt.Component) ((Object) param0), param1 ^ -8058);
+            MessagePanel.field_K.detach((java.awt.Component) ((Object) param0), param1 ^ -8058);
           }
           if (param1 == 8053) {
             return;
           }
-          EmailLoginCredentials.a(false, -94, false, true);
+          EmailLoginCredentials.getDiscardAlternativePrefix(false, -94, false, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,7 +40,7 @@ final class EmailLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static String a(boolean param0, int param1, boolean param2, boolean param3) {
+    final static String getDiscardAlternativePrefix(boolean param0, int param1, boolean param2, boolean param3) {
         int var4;
         var4 = 0;
         if (param0) {
@@ -65,7 +65,7 @@ final class EmailLoginCredentials extends LoginCredentials {
           field_g = null;
           return;
         }
-        EmailLoginCredentials.a(false, 106, false, false);
+        EmailLoginCredentials.getDiscardAlternativePrefix(false, 106, false, false);
         field_h = null;
         field_l = null;
         field_g = null;

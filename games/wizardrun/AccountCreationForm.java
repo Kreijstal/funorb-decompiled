@@ -21,14 +21,14 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
     static int field_T;
     static IsaacPacketBuffer field_N;
 
-    public final void a(int param0) {
+    public final void invalidateNameAvailability(int param0) {
         if (param0 != 2147483647) {
           return;
         }
         ((DisplayNameValidator) (this.field_G.getValidator((byte) -114))).clearCachedNameResult(113);
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onNameSelected(String param0, byte param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -38,7 +38,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
             TextButton var5 = (TextButton) null;
             this.onButtonAction(122, (TextButton) null, -97, 3, -8);
           }
-          ((EditableTextWidget) ((Object) var3)).a(-1, false, var4);
+          ((EditableTextWidget) ((Object) var3)).setText(-1, false, var4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "nk.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -56,7 +56,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           var2 = Integer.parseInt(this.field_P.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return ih.a(this.field_G.text, this.field_E.selected, this, 0, var2, this.field_S.text, this.field_F.text);
+        return NameCheckHelpers.a(this.field_G.text, this.field_E.selected, this, 0, var2, this.field_S.text, this.field_F.text);
     }
 
     private final boolean g(int param0) {
@@ -151,9 +151,9 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
             field_U = (QuickChatDynamicCommand) null;
           }
           var8 = new LabeledField(20, param4, 120 + param0, 25, param1, false, 120, 3, Crc32Helpers.field_b, 16777215, param3);
-          this.a((UiWidget) (var8), (byte) 39);
+          this.addChild((UiWidget) (var8), (byte) 39);
           var7 = new ValidationIndicator(((ValidatorProvider) ((Object) param1)).getValidator((byte) 120));
-          this.a((UiWidget) (var7), (byte) 28);
+          this.addChild((UiWidget) (var7), (byte) 28);
           var7.setBounds(119, var8.y + (var8.height - 15 >> 1), 15, 15, 3 + var8.x + var8.width);
           stackIn_3_0 = var8.height;
           return stackIn_3_0;
@@ -226,13 +226,13 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new LabeledField(20, param5, 120 + param4, 25, param2, false, 120, 3, Crc32Helpers.field_b, 16777215, param1);
-          this.a((UiWidget) (var10), (byte) 39);
+          this.addChild((UiWidget) (var10), (byte) 39);
           var9 = new ValidationHelpWidget(((ValidatorProvider) ((Object) param2)).getValidator((byte) 109), param6, 126, param5 + var10.height, param4 + 50, param0);
           if (param3 != 7501) {
             this.field_P = (ValidatedTextField) null;
           }
           var9.listener = (WidgetListener) (this);
-          this.a((UiWidget) (var9), (byte) 39);
+          this.addChild((UiWidget) (var9), (byte) 39);
           stackIn_3_0 = var9.height + var10.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -278,7 +278,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
             return stackIn_2_0;
           }
           var6 = new LabeledField(20, param0, param2 + 120, 25, param3, false, 120, 3, Crc32Helpers.field_b, 16777215, param4);
-          this.a((UiWidget) (var6), (byte) 62);
+          this.addChild((UiWidget) (var6), (byte) 62);
           stackIn_4_0 = var6.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -323,64 +323,64 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         this.field_P = new ValidatedTextField("", (WidgetListener) null, 3);
         int var1 = 1;
         this.field_E = new ToggleButton("", (WidgetListener) null, var1 != 0);
-        this.field_V = new TextButton(w.field_d, (WidgetListener) null);
-        this.field_I = new TextButton(v.field_c, (WidgetListener) null);
+        this.field_V = new TextButton(UiThemeSetupHelpers.field_d, (WidgetListener) null);
+        this.field_I = new TextButton(SpriteAlphaState.field_c, (WidgetListener) null);
         this.field_G.tooltip = DiskCacheWorker.field_a;
         this.field_F.tooltip = SettingsCookieReader.field_c;
-        this.field_H.tooltip = ec.field_e;
+        this.field_H.tooltip = LogoAnimationLoader.field_e;
         this.field_S.tooltip = GameShell.field_v;
         this.field_O.tooltip = GameMenu.field_s;
         this.field_P.tooltip = GameGraphicsResources.field_c;
         this.field_E.tooltip = Js5Index.field_o;
-        this.field_G.a(0, new DisplayNameValidator(this.field_G));
-        this.field_F.a(0, new EmailAddressValidator(this.field_F));
-        this.field_H.a(0, new ConfirmedEmailValidator(this.field_H, this.field_F));
-        this.field_S.a(0, new PasswordValidator(this.field_S, this.field_G, this.field_F));
-        this.field_O.a(0, new MatchingTextValidator(this.field_O, this.field_S));
-        this.field_P.a(0, new AgeValidator(this.field_P));
+        this.field_G.setValidator(0, new DisplayNameValidator(this.field_G));
+        this.field_F.setValidator(0, new EmailAddressValidator(this.field_F));
+        this.field_H.setValidator(0, new ConfirmedEmailValidator(this.field_H, this.field_F));
+        this.field_S.setValidator(0, new PasswordValidator(this.field_S, this.field_G, this.field_F));
+        this.field_O.setValidator(0, new MatchingTextValidator(this.field_O, this.field_S));
+        this.field_P.setValidator(0, new AgeValidator(this.field_P));
         this.field_V.field_B = false;
-        this.field_V.renderer = (WidgetRenderer) ((Object) new jl());
-        this.field_I.renderer = (WidgetRenderer) ((Object) new tk());
+        this.field_V.renderer = (WidgetRenderer) ((Object) new SpriteButtonPainter());
+        this.field_I.renderer = (WidgetRenderer) ((Object) new HyperlinkPainter());
         this.field_G.renderer = (WidgetRenderer) ((Object) new FramedButtonPainter(10000536));
         FramedButtonPainter dupTemp$0 = new FramedButtonPainter(10000536);
         this.field_H.renderer = (WidgetRenderer) ((Object) dupTemp$0);
         this.field_F.renderer = (WidgetRenderer) ((Object) dupTemp$0);
         this.field_P.renderer = (WidgetRenderer) ((Object) new FramedButtonPainter(10000536));
         this.field_E.renderer = (WidgetRenderer) ((Object) new IconButtonPainter());
-        ke dupTemp$1 = new ke(10000536);
+        PasswordFieldPainter dupTemp$1 = new PasswordFieldPainter(10000536);
         this.field_O.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         this.field_S.renderer = (WidgetRenderer) ((Object) dupTemp$1);
-        String var2 = WeightedLruCache.a(new String[]{this.d(false), this.g((byte) 2)}, (byte) 76, qj.field_b);
+        String var2 = WeightedLruCache.formatPlaceholders(new String[]{this.d(false), this.g((byte) 2)}, (byte) 76, NineSliceFrame.field_b);
         int var3 = 20;
-        var3 = var3 + this.a(var3, true, 170, this.field_F, ii.field_d);
-        var3 = var3 + (5 + this.a(20, ve.field_b, this.field_H, 7501, 170, var3, ""));
+        var3 = var3 + this.a(var3, true, 170, this.field_F, NameAvailabilityFactory.field_d);
+        var3 = var3 + (5 + this.a(20, ErrorReportingHelpers.field_b, this.field_H, 7501, 170, var3, ""));
         var3 = var3 + this.a(var3, true, 170, this.field_S, WhirlpoolHasher.field_d);
         var3 = var3 + (this.a((byte) 4, this.field_O, RasterBuffer.field_i, 170, var3, LabeledField.field_H) + 5);
-        var3 = var3 + (5 + this.a((byte) 4, this.field_G, re.field_E, 170, var3, MonotonicClockHelpers.field_b));
+        var3 = var3 + (5 + this.a((byte) 4, this.field_G, AccountConsentPanel.field_E, 170, var3, MonotonicClockHelpers.field_b));
         var3 = var3 + this.a(170, this.field_P, true, Base37Codec.field_a, var3);
-        LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.field_E, true, -120 + this.width, 5, e.field_b, 11579568, SettingsCookieReader.field_e);
-        this.a((UiWidget) (var4), (byte) 58);
+        LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.field_E, true, -120 + this.width, 5, ThreePieceFrameHelpers.field_b, 11579568, SettingsCookieReader.field_e);
+        this.addChild((UiWidget) (var4), (byte) 58);
         var3 = var3 + var4.height;
         WidgetPainter var5 = new WidgetPainter(Crc32Helpers.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, Crc32Helpers.field_b.field_M, -1, 2147483647, true);
         this.field_L = new HotspotTextWidget(var2, var5);
         this.field_L.tooltip = "";
-        this.field_L.a(1, field_R, 0);
-        this.field_L.a(1, field_R, 1);
+        this.field_L.setHotspotTooltip(1, field_R, 0);
+        this.field_L.setHotspotTooltip(1, field_R, 1);
         this.field_L.listener = (WidgetListener) (this);
-        this.field_L.a(var3, (byte) 61, this.width - 90, 46);
+        this.field_L.setBoundsToPreferredHeight(var3, (byte) 61, this.width - 90, 46);
         var3 = var3 + (this.field_L.height + 15);
-        this.a((UiWidget) (this.field_L), (byte) 98);
+        this.addChild((UiWidget) (this.field_L), (byte) 98);
         int var6 = 4;
         int var7 = 200;
         this.field_V.setBounds(110, var3, 40, var7, 496 - var7 >> 1);
         this.field_I.setBounds(125, 15 + var3, 40, 60, 3 + var6);
         this.field_I.listener = (WidgetListener) (this);
         this.field_V.listener = (WidgetListener) (this);
-        this.a((UiWidget) (this.field_V), (byte) 108);
-        this.a((UiWidget) (this.field_I), (byte) 121);
+        this.addChild((UiWidget) (this.field_V), (byte) 108);
+        this.addChild((UiWidget) (this.field_I), (byte) 121);
         this.field_J = new NameSuggestionsPanel((NameSelectionListener) (this));
         this.field_J.setBounds(118, 20 + this.field_G.y, 150, -this.field_G.width + (-this.field_G.x + this.width - 60), this.field_G.width + this.field_G.x + 60);
-        this.a((UiWidget) (this.field_J), (byte) 34);
+        this.addChild((UiWidget) (this.field_J), (byte) 34);
         this.setBounds(115, 0, 55 + (var3 + var6), 496, 0);
     }
 
@@ -402,12 +402,12 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           if (DisplayNameSyntaxHelpers.field_c == var4) {
             return false;
           }
-          if (nf.field_c == var4) {
+          if (AccountFormTextHelpers.field_c == var4) {
             return false;
           }
           if (param0 < 59) {
             var5 = (String) null;
-            this.a((String) null, (byte) -6);
+            this.onNameSelected((String) null, (byte) -6);
           }
           if (PacketBuffer.field_o != var4) {
             return true;
@@ -439,14 +439,14 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         try {
           if (param0 != 0) {
             if (1 == param0) {
-              BrowserCookieHelpers.a("privacy.ws", 12);
+              BrowserCookieHelpers.setAccountWorkflowResult("privacy.ws", 12);
             } else {
               if (param0 == 2) {
-                BrowserCookieHelpers.a("conduct.ws", 12);
+                BrowserCookieHelpers.setAccountWorkflowResult("conduct.ws", 12);
               }
             }
           } else {
-            BrowserCookieHelpers.a("terms.ws", 12);
+            BrowserCookieHelpers.setAccountWorkflowResult("terms.ws", 12);
           }
           var5_int = -16 % ((36 - param3) / 53);
           return;
@@ -484,11 +484,11 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
             return true;
           }
           if (param1 == 98) {
-            stackIn_5_0 = this.a((byte) -117, param3);
+            stackIn_5_0 = this.focusPreviousChild((byte) -117, param3);
             return stackIn_5_0;
           }
           if (param1 == 99) {
-            stackIn_8_0 = this.b(param3, 1);
+            stackIn_8_0 = this.focusNextChild(param3, 1);
             return stackIn_8_0;
           }
           if (param2 < -96) {

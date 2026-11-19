@@ -21,7 +21,7 @@ final class HighscoreRequest extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, String param1, int param2) {
+    final static void handleAccountResult(int param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -31,9 +31,9 @@ final class HighscoreRequest extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           WrappedTextLayout.field_i = false;
-          lc.field_d = false;
-          if (null != aa.field_lb &&
-            aa.field_lb.field_H) {
+          ArchiveReadinessHelpers.field_d = false;
+          if (null != FriendEntry.field_lb &&
+            FriendEntry.field_lb.field_H) {
             var3_int = 1;
             if (param2 == 8) {
               if (DialogLayer.field_J) {
@@ -42,32 +42,32 @@ final class HighscoreRequest extends IntrusiveNode {
                 param1 = DateFormattingHelpers.field_a;
               }
               param2 = 2;
-              TimedValidator.field_b.a(param0 + 5980, ResizableDialog.field_S);
+              TimedValidator.field_b.setLoginIdentifier(param0 + 5980, ResizableDialog.field_S);
             }
             if (param2 == 10) {
               var3_int = 0;
-              ie.a(-3870);
+              SavedDataSubmission.showDisplayNameForm(-3870);
             }
             if (var3_int != 0) {
-              if (lc.field_d) {
-                param1 = WeightedLruCache.a(new String[]{param1}, (byte) 84, ca.field_d);
+              if (ArchiveReadinessHelpers.field_d) {
+                param1 = WeightedLruCache.formatPlaceholders(new String[]{param1}, (byte) 84, MeshMaterial.field_d);
               }
               if (IntegerSyntaxHelpers.field_a) {
-                param1 = ca.field_g;
+                param1 = MeshMaterial.field_g;
               }
-              aa.field_lb.a(param1, 57, param2);
+              FriendEntry.field_lb.showAccountResult(param1, 57, param2);
             }
             if (param2 != 256 &&
               10 != param2 &&
               !DialogLayer.field_J) {
-              TimedValidator.field_b.h(-71);
+              TimedValidator.field_b.clearCredentials(-71);
             }
           }
           if (param0 == 10) {
             return;
           }
           var4 = (String) null;
-          HighscoreRequest.a(-77, (String) null, 102);
+          HighscoreRequest.handleAccountResult(-77, (String) null, 102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

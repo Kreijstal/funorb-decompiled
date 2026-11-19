@@ -9,7 +9,7 @@ final class GrowableIntList {
     private boolean field_b;
     private int field_c;
 
-    final static int a(byte param0) {
+    final static int getMenuWidth(byte param0) {
         if (param0 != 47) {
           field_f = (String[]) null;
           return CachedArchiveProvider.field_f;
@@ -226,7 +226,7 @@ final class GrowableIntList {
               if (param0 < 16) {
                 return;
               }
-              param1.getAppletContext().showDocument(jl.a(-119, var2, param1), "_top");
+              param1.getAppletContext().showDocument(SpriteButtonPainter.appendChangedSessionParameters(-119, var2, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

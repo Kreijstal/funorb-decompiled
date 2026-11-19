@@ -80,7 +80,7 @@ final class BrowserCookieHelpers {
         }
     }
 
-    final static String a(byte param0, String param1, String param2, char param3) {
+    final static String replaceCharacter(byte param0, String param1, String param2, char param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -161,14 +161,14 @@ final class BrowserCookieHelpers {
         field_b = null;
         if (param0 != 52) {
           String var2 = (String) null;
-          BrowserCookieHelpers.a((byte) -111, (String) null, (String) null, '7');
+          BrowserCookieHelpers.replaceCharacter((byte) -111, (String) null, (String) null, '7');
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void setAccountWorkflowResult(String param0, int param1) {
         try {
           EmailDomainHelpers.field_c = param0;
-          jc.a((byte) 42, param1);
+          OpacityWidget.setAccountWorkflowState((byte) 42, param1);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

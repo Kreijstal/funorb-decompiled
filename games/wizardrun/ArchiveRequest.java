@@ -13,10 +13,10 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     final static WidgetPainter defaultWidgetPainter(byte param0) {
         int var1 = 57 / ((43 - param0) / 33);
-        if (we.field_d == null) {
-          we.field_d = new WidgetPainter(e.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, e.field_b.field_M, -1, 2147483647, true);
+        if (UiSpriteThemeHelpers.field_d == null) {
+          UiSpriteThemeHelpers.field_d = new WidgetPainter(ThreePieceFrameHelpers.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, ThreePieceFrameHelpers.field_b.field_M, -1, 2147483647, true);
         }
-        return we.field_d;
+        return UiSpriteThemeHelpers.field_d;
     }
 
     public static void releaseStatics(int param0) {
@@ -33,7 +33,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!MusicPatch.a(param3, param1, param0, -116)) {
+          if (!MusicPatch.loadSpriteSheet(param3, param1, param0, -116)) {
             return null;
           }
           if (param2 != -26955) {
@@ -59,11 +59,11 @@ abstract class ArchiveRequest extends DualLinkNode {
         if (param0 != 11579568) {
           return;
         }
-        WeightedLruCache.a(false, param1, 117);
+        WeightedLruCache.showLoginDialog(false, param1, 117);
     }
 
     final static void submitProgress(ProgressSubmission param0, int param1, int param2) {
-        v.field_d.addLast(param0, false);
+        SpriteAlphaState.field_d.addLast(param0, false);
         if (param2 != -1) {
           return;
         }

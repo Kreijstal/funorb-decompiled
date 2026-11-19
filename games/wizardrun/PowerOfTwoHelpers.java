@@ -21,7 +21,7 @@ final class PowerOfTwoHelpers {
         return param0 + 1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void addRankingEntry(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_8_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_36_0 = 0;
@@ -32,18 +32,18 @@ final class PowerOfTwoHelpers {
         int var6Lifetime2;
         int var7Lifetime1;
         int var7Lifetime2;
-        MidiNoteMixer.field_m[lg.field_d] = param0;
-        EmailAddressValidator.field_m[lg.field_d] = lg.field_d;
+        MidiNoteMixer.field_m[FullscreenFailureKind.rankingCount] = param0;
+        EmailAddressValidator.field_m[FullscreenFailureKind.rankingCount] = FullscreenFailureKind.rankingCount;
         if (param3 > -77) {
-          PowerOfTwoHelpers.a(58, -125, 62, 83, 51, -33);
-          RadialSelectorWidget.field_I[lg.field_d] = param4;
+          PowerOfTwoHelpers.addRankingEntry(58, -125, 62, 83, 51, -33);
+          RadialSelectorWidget.field_I[FullscreenFailureKind.rankingCount] = param4;
           if (param4 <= DisplayModeInfo.field_e) {
-            if (param4 < dg.field_d) {
-              gf.field_W = param4;
+            if (param4 < ArchiveContainerHelpers.field_d) {
+              ContentTransitionDialog.field_W = param4;
             }
-            DiskCacheRequest.field_B[lg.field_d] = param1;
-            MouseInputHandler.field_c[lg.field_d] = param2;
-            mk.field_c[lg.field_d] = param5;
+            DiskCacheRequest.field_B[FullscreenFailureKind.rankingCount] = param1;
+            MouseInputHandler.field_c[FullscreenFailureKind.rankingCount] = param2;
+            AccountValidationHelpers.field_c[FullscreenFailureKind.rankingCount] = param5;
             var6 = param2 + param1 + param5;
             if (var6 == 0) {
               stackIn_21_0 = 0;
@@ -53,12 +53,12 @@ final class PowerOfTwoHelpers {
             var7 = stackIn_21_0;
           } else {
             ByteStorage.field_b = param4;
-            if (param4 < dg.field_d) {
-              gf.field_W = param4;
+            if (param4 < ArchiveContainerHelpers.field_d) {
+              ContentTransitionDialog.field_W = param4;
             }
-            DiskCacheRequest.field_B[lg.field_d] = param1;
-            MouseInputHandler.field_c[lg.field_d] = param2;
-            mk.field_c[lg.field_d] = param5;
+            DiskCacheRequest.field_B[FullscreenFailureKind.rankingCount] = param1;
+            MouseInputHandler.field_c[FullscreenFailureKind.rankingCount] = param2;
+            AccountValidationHelpers.field_c[FullscreenFailureKind.rankingCount] = param5;
             var6 = param2 + param1 + param5;
             if (var6 == 0) {
               stackIn_8_0 = 0;
@@ -67,24 +67,24 @@ final class PowerOfTwoHelpers {
             }
             var7 = stackIn_8_0;
           }
-          td.field_c[lg.field_d] = var7;
-          if (gf.field_W > var7) {
-            gf.field_W = var7;
+          KeyboardShutdownHelpers.field_c[FullscreenFailureKind.rankingCount] = var7;
+          if (ContentTransitionDialog.field_W > var7) {
+            ContentTransitionDialog.field_W = var7;
           }
           if (ByteStorage.field_b < var7) {
             ByteStorage.field_b = var7;
           }
-          lg.field_d = lg.field_d + 1;
+          FullscreenFailureKind.rankingCount = FullscreenFailureKind.rankingCount + 1;
           return;
         }
-        RadialSelectorWidget.field_I[lg.field_d] = param4;
+        RadialSelectorWidget.field_I[FullscreenFailureKind.rankingCount] = param4;
         if (param4 <= DisplayModeInfo.field_e) {
-          if (param4 < dg.field_d) {
-            gf.field_W = param4;
+          if (param4 < ArchiveContainerHelpers.field_d) {
+            ContentTransitionDialog.field_W = param4;
           }
-          DiskCacheRequest.field_B[lg.field_d] = param1;
-          MouseInputHandler.field_c[lg.field_d] = param2;
-          mk.field_c[lg.field_d] = param5;
+          DiskCacheRequest.field_B[FullscreenFailureKind.rankingCount] = param1;
+          MouseInputHandler.field_c[FullscreenFailureKind.rankingCount] = param2;
+          AccountValidationHelpers.field_c[FullscreenFailureKind.rankingCount] = param5;
           var6Lifetime1 = param2 + param1 + param5;
           if (var6Lifetime1 == 0) {
             stackIn_36_0 = 0;
@@ -92,23 +92,23 @@ final class PowerOfTwoHelpers {
             stackIn_36_0 = param1 * 1000 / var6Lifetime1;
           }
           var7Lifetime1 = stackIn_36_0;
-          td.field_c[lg.field_d] = var7Lifetime1;
-          if (gf.field_W > var7Lifetime1) {
-            gf.field_W = var7Lifetime1;
+          KeyboardShutdownHelpers.field_c[FullscreenFailureKind.rankingCount] = var7Lifetime1;
+          if (ContentTransitionDialog.field_W > var7Lifetime1) {
+            ContentTransitionDialog.field_W = var7Lifetime1;
           }
           if (ByteStorage.field_b < var7Lifetime1) {
             ByteStorage.field_b = var7Lifetime1;
           }
-          lg.field_d = lg.field_d + 1;
+          FullscreenFailureKind.rankingCount = FullscreenFailureKind.rankingCount + 1;
           return;
         }
         ByteStorage.field_b = param4;
-        if (param4 < dg.field_d) {
-          gf.field_W = param4;
+        if (param4 < ArchiveContainerHelpers.field_d) {
+          ContentTransitionDialog.field_W = param4;
         }
-        DiskCacheRequest.field_B[lg.field_d] = param1;
-        MouseInputHandler.field_c[lg.field_d] = param2;
-        mk.field_c[lg.field_d] = param5;
+        DiskCacheRequest.field_B[FullscreenFailureKind.rankingCount] = param1;
+        MouseInputHandler.field_c[FullscreenFailureKind.rankingCount] = param2;
+        AccountValidationHelpers.field_c[FullscreenFailureKind.rankingCount] = param5;
         var6Lifetime2 = param2 + param1 + param5;
         if (var6Lifetime2 == 0) {
           stackIn_49_0 = 0;
@@ -116,14 +116,14 @@ final class PowerOfTwoHelpers {
           stackIn_49_0 = param1 * 1000 / var6Lifetime2;
         }
         var7Lifetime2 = stackIn_49_0;
-        td.field_c[lg.field_d] = var7Lifetime2;
-        if (gf.field_W > var7Lifetime2) {
-          gf.field_W = var7Lifetime2;
+        KeyboardShutdownHelpers.field_c[FullscreenFailureKind.rankingCount] = var7Lifetime2;
+        if (ContentTransitionDialog.field_W > var7Lifetime2) {
+          ContentTransitionDialog.field_W = var7Lifetime2;
         }
         if (ByteStorage.field_b < var7Lifetime2) {
           ByteStorage.field_b = var7Lifetime2;
         }
-        lg.field_d = lg.field_d + 1;
+        FullscreenFailureKind.rankingCount = FullscreenFailureKind.rankingCount + 1;
         return;
     }
 

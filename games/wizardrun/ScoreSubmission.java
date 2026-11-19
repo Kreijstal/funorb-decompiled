@@ -24,14 +24,14 @@ final class ScoreSubmission extends IntrusiveNode {
         field_r = null;
     }
 
-    final static void a(boolean param0, byte param1, String param2, boolean param3) {
+    final static void showLoginDialog(boolean param0, byte param1, String param2, boolean param3) {
         try {
           LoginChoicePanel.h((byte) 98);
-          GameShell.field_A.d(false);
+          GameShell.field_A.hideAllDialogs(false);
           TimedValidator.field_b = new LoginForm(ResizableDialog.field_S, (String) null, DialogLayer.field_J, param0, param3);
           int var4_int = -71 % ((param1 - 89) / 37);
-          td.field_f = new kb(GameShell.field_A, TimedValidator.field_b);
-          GameShell.field_A.b((UiWidget) (td.field_f), (byte) 117);
+          KeyboardShutdownHelpers.field_f = new StandardContentTransitionDialog(GameShell.field_A, TimedValidator.field_b);
+          GameShell.field_A.showDialog((UiWidget) (KeyboardShutdownHelpers.field_f), (byte) 117);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -44,8 +44,8 @@ final class ScoreSubmission extends IntrusiveNode {
           this.field_o = param1;
           this.field_m = param4;
           this.field_q = param6;
-          fieldTemp$0 = dg.field_c;
-          dg.field_c = dg.field_c + 1;
+          fieldTemp$0 = ArchiveContainerHelpers.field_c;
+          ArchiveContainerHelpers.field_c = ArchiveContainerHelpers.field_c + 1;
           this.field_i = fieldTemp$0 & 65535;
           this.field_k = param2;
           this.field_p = param5;
@@ -65,11 +65,11 @@ final class ScoreSubmission extends IntrusiveNode {
     final static void openLoginDialogWithIntGuard(boolean param0, int param1, String param2, boolean param3) {
         try {
           LoginChoicePanel.h((byte) 98);
-          GameShell.field_A.d(false);
+          GameShell.field_A.hideAllDialogs(false);
           TimedValidator.field_b = new LoginForm(ResizableDialog.field_S, (String) null, DialogLayer.field_J, param0, param3);
           int var4_int = -71 % ((param1 - 89) / 37);
-          td.field_f = new kb(GameShell.field_A, TimedValidator.field_b);
-          GameShell.field_A.b((UiWidget) (td.field_f), (byte) 117);
+          KeyboardShutdownHelpers.field_f = new StandardContentTransitionDialog(GameShell.field_A, TimedValidator.field_b);
+          GameShell.field_A.showDialog((UiWidget) (KeyboardShutdownHelpers.field_f), (byte) 117);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

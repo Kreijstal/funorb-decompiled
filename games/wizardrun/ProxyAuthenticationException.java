@@ -20,7 +20,7 @@ final class ProxyAuthenticationException extends IOException {
         field_a = null;
     }
 
-    final static NameAvailabilityRequest a(int param0, String param1, int param2) {
+    final static NameAvailabilityRequest createNameAvailabilityError(int param0, String param1, int param2) {
         NameAvailabilityRequest var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -33,7 +33,7 @@ final class ProxyAuthenticationException extends IOException {
           var3 = new NameAvailabilityRequest(false);
           if (param0 >= -19) {
             var4 = (String) null;
-            ProxyAuthenticationException.a(49, (String) null, 1);
+            ProxyAuthenticationException.createNameAvailabilityError(49, (String) null, 1);
           }
           var3.field_b = param2;
           var3.field_h = param1;

@@ -24,7 +24,7 @@ class AudioOutput {
     private PcmStream[] field_o;
     private int field_h;
 
-    int a() throws Exception {
+    int getBufferedFrames() throws Exception {
         return this.field_t;
     }
 
@@ -49,7 +49,7 @@ class AudioOutput {
             field_q = null;
           }
         }
-        this.c();
+        this.closeDevice();
         this.field_p = null;
         this.field_e = true;
     }
@@ -259,11 +259,11 @@ class AudioOutput {
         }
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void setRootStream(PcmStream param0) {
         this.field_s = param0;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void configureAudio(int param0, boolean param1, int param2) {
         if (param0 < 8000 ||
           param0 > 48000) {
           throw new IllegalArgumentException();
@@ -273,7 +273,7 @@ class AudioOutput {
         field_n = param2;
     }
 
-    void c() {
+    void closeDevice() {
     }
 
     final synchronized void service() {
@@ -313,7 +313,7 @@ class AudioOutput {
               this.field_f = 0L;
               this.field_m = true;
             }
-            var3_int = this.a();
+            var3_int = this.getBufferedFrames();
             if (this.field_d - var3_int > this.field_u) {
               this.field_u = this.field_d - var3_int;
             }
@@ -326,7 +326,7 @@ class AudioOutput {
               if (this.field_t > 16384) {
                 this.field_t = 16384;
               }
-              this.c();
+              this.closeDevice();
               this.openDevice(this.field_t);
               var3_int = 0;
               this.field_m = true;
@@ -346,7 +346,7 @@ class AudioOutput {
               } else {
                 if (this.field_u == 0 &&
                   this.field_j == 0) {
-                  this.c();
+                  this.closeDevice();
                   this.field_f = var1 + 2000L;
                   return;
                 }
@@ -360,7 +360,7 @@ class AudioOutput {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.c();
+            this.closeDevice();
             this.field_f = var1 + 2000L;
           }
           return;

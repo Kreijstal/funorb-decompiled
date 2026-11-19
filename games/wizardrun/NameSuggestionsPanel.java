@@ -24,12 +24,12 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           }
           while (var6_int < this.field_F.length) {
             if (param1 == this.field_I[var6_int]) {
-              this.field_H.a(this.field_F[var6_int], (byte) 88);
+              this.field_H.onNameSelected(this.field_F[var6_int], (byte) 88);
             }
             var6_int++;
           }
           if (this.field_I[this.field_F.length] == param1) {
-            this.field_H.a(2147483647);
+            this.field_H.invalidateNameAvailability(2147483647);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -46,7 +46,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
     }
 
-    final static int a(CharSequence param0, int param1) {
+    final static int hashCp1252Text(CharSequence param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -62,10 +62,10 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           var2_int = param0.length();
           var3 = 0;
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = nf.a(26614, param0.charAt(var4)) + (var3 << 5) - var3;
+            var3 = AccountFormTextHelpers.a(26614, param0.charAt(var4)) + (var3 << 5) - var3;
           }
           if (param1 != 2148) {
-            NameSuggestionsPanel.g(-126);
+            NameSuggestionsPanel.getAccountUiLoadMessage(-126);
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -96,11 +96,11 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
             return true;
           }
           if (98 == param1) {
-            stackIn_7_0 = this.a((byte) -117, param3);
+            stackIn_7_0 = this.focusPreviousChild((byte) -117, param3);
             return stackIn_7_0;
           }
           if (param1 == 99) {
-            stackIn_10_0 = this.b(param3, 1);
+            stackIn_10_0 = this.focusNextChild(param3, 1);
             return stackIn_10_0;
           }
           if (param2 < -96) {
@@ -122,7 +122,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
     }
 
-    final static String g(int param0) {
+    final static String getAccountUiLoadMessage(int param0) {
         if (!(BoundedRandomAccessFile.field_a >= 2)) {
           return IndexedSpriteState.field_f;
         }
@@ -130,25 +130,25 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           if (!GridActor.field_c.ensureIndex(param0 + 495)) {
             return TextWrappingHelpers.field_c;
           }
-          return td.field_e;
+          return KeyboardShutdownHelpers.field_e;
         }
         if (!UiWidget.field_x.ensureIndex(17820)) {
           return FramedButtonPainter.field_q;
         }
         if (!UiWidget.field_x.ensureNamedGroupLoaded((byte) 29, "commonui")) {
-          return tk.field_e + " - " + UiWidget.field_x.getNamedGroupProgress(0, "commonui") + "%";
+          return HyperlinkPainter.field_e + " - " + UiWidget.field_x.getNamedGroupProgress(0, "commonui") + "%";
         }
-        if (!vj.field_b.ensureIndex(param0 ^ 1585)) {
+        if (!LevelActorSpawner.field_b.ensureIndex(param0 ^ 1585)) {
           return IndexedSpriteArrayFactory.field_d;
         }
-        if (!vj.field_b.ensureNamedGroupLoaded((byte) 29, "commonui")) {
-          return mj.field_d + " - " + vj.field_b.getNamedGroupProgress(0, "commonui") + "%";
+        if (!LevelActorSpawner.field_b.ensureNamedGroupLoaded((byte) 29, "commonui")) {
+          return ThrowableFormattingHelpers.field_d + " - " + LevelActorSpawner.field_b.getNamedGroupProgress(0, "commonui") + "%";
         }
         if (!IconButtonPainter.field_a.ensureIndex(17820)) {
           return AlternateUsernameLoginCredentials.field_o;
         }
         if (param0 != 17325) {
-          NameSuggestionsPanel.a(113);
+          NameSuggestionsPanel.isAccountLoggedIn(113);
         }
         if (!IconButtonPainter.field_a.areAllGroupsAvailable(-97)) {
           return WidgetTheme.field_s + " - " + IconButtonPainter.field_a.getLoadProgress((byte) 75) + "%";
@@ -156,14 +156,14 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         return GameShell.field_u;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isAccountLoggedIn(int param0) {
         CharSequence var2;
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
           var2 = (CharSequence) null;
-          NameSuggestionsPanel.a((CharSequence) null, -18);
+          NameSuggestionsPanel.hashCp1252Text((CharSequence) null, -18);
         }
-        stackIn_6_0 = (null != jc.field_H) && (NodeHashTableIterator.field_j == BufferedSocket.field_l);
+        stackIn_6_0 = (null != OpacityWidget.field_H) && (NodeHashTableIterator.field_j == BufferedSocket.field_l);
         return stackIn_6_0;
     }
 
@@ -181,11 +181,11 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         field_G = null;
     }
 
-    final static boolean g(byte param0) {
+    final static boolean isEmailCheckPending(byte param0) {
         if (param0 >= -77) {
-          NameSuggestionsPanel.g(-18);
+          NameSuggestionsPanel.getAccountUiLoadMessage(-18);
         }
-        return !we.field_c.isComplete(true) ? true : false;
+        return !UiSpriteThemeHelpers.field_c.isComplete(true) ? true : false;
     }
 
     NameSuggestionsPanel(NameSelectionListener param0) {
@@ -208,7 +208,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
     }
 
-    final void a(byte param0, String[] param1) {
+    final void setSuggestions(byte param0, String[] param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -217,7 +217,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        tk var4 = null;
+        HyperlinkPainter var4 = null;
         int var6 = 0;
         var6 = wizardrun.field_H;
         try {
@@ -232,19 +232,19 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_F[var4_int] = IntHashTable.a((byte) 27, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
-            var4 = new tk(Crc32Helpers.field_b, 0, 1);
+            var4 = new HyperlinkPainter(Crc32Helpers.field_b, 0, 1);
             this.field_I = new TextButton[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_I[var5] = new TextButton(this.field_F[var5], (WidgetListener) (this));
               this.field_I[var5].renderer = (WidgetRenderer) ((Object) var4);
-              this.field_I[var5].tooltip = ni.field_a;
+              this.field_I[var5].tooltip = LevelDecodingHelpers.field_a;
               this.field_I[var5].setBounds(109, 20 + var5 * 16, 15, 80, 0);
-              this.a((UiWidget) (this.field_I[var5]), (byte) 64);
+              this.addChild((UiWidget) (this.field_I[var5]), (byte) 64);
             }
             this.field_I[var3_int] = new TextButton(PlatformActor.field_t, (WidgetListener) (this));
             this.field_I[var3_int].renderer = (WidgetRenderer) ((Object) var4);
             this.field_I[var3_int].setBounds(param0 ^ 44, 16 * var3_int + 36, 15, 100, 0);
-            this.a((UiWidget) (this.field_I[var3_int]), (byte) 71);
+            this.addChild((UiWidget) (this.field_I[var3_int]), (byte) 71);
             return;
           }
           this.field_F = null;

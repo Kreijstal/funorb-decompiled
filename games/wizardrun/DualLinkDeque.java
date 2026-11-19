@@ -15,19 +15,19 @@ final class DualLinkDeque {
     final static void pollMouseState(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = tc.mouseHandler;
+        var1 = SavedDataRequest.mouseHandler;
         synchronized (var1) {
-          BrowserUrlLauncher.field_c = ve.pressedButton;
-          oc.mouseIdleTime = oc.mouseIdleTime + 1;
+          BrowserUrlLauncher.field_c = ErrorReportingHelpers.pressedButton;
+          CoverageFontLoader.mouseIdleTime = CoverageFontLoader.mouseIdleTime + 1;
           AchievementSubmission.field_n = wizardrun.pointerX;
           NetworkArchiveRequest.field_B = IterableNodeHashTable.pointerY;
-          ih.field_a = IndexedSpriteState.field_i;
+          NameCheckHelpers.field_a = IndexedSpriteState.field_i;
           if (param0 != -21) {
             DualLinkDeque.releaseStatics((byte) 88);
           }
           IndexedSpriteState.field_i = false;
-          w.field_c = NetworkArchiveRequest.field_w;
-          MouseInputHandler.field_e = mh.clickX;
+          UiThemeSetupHelpers.field_c = NetworkArchiveRequest.field_w;
+          MouseInputHandler.field_e = AccountProgressDialog.clickX;
           EmailDomainHelpers.field_b = ProgressSubmission.clickY;
           NetworkArchiveRequest.field_w = 0;
         }

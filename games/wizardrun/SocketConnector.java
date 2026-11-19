@@ -18,7 +18,7 @@ abstract class SocketConnector {
         return new java.net.Socket(this.field_a, this.field_c);
     }
 
-    final static boolean a(byte param0, java.applet.Applet param1) {
+    final static boolean hasAccountEligibilityCookie(byte param0, java.applet.Applet param1) {
         try {
           int var5 = 0;
           String var2 = null;
@@ -35,13 +35,13 @@ abstract class SocketConnector {
           Throwable var2_ref2 = null;
           var7 = wizardrun.field_H;
           try {
-            if (kk.field_yb) {
+            if (NameCheckProgressDialog.field_yb) {
               return true;
             }
             try {
               var2 = "tuhstatbut";
               var3 = (String) (BrowserScriptBridge.call(param1, -3264, "getcookies"));
-              var4 = FadingDialog.a(var3, -22710, ';');
+              var4 = FadingDialog.splitOnCharacter(var3, -22710, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -82,7 +82,7 @@ abstract class SocketConnector {
         field_b = null;
         if (param0 != -64) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          SocketConnector.a((byte) -62, (java.applet.Applet) null);
+          SocketConnector.hasAccountEligibilityCookie((byte) -62, (java.applet.Applet) null);
         }
     }
 

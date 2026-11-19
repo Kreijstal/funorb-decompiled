@@ -11,12 +11,12 @@ final class IsaacRandom {
     private int field_g;
     static String field_h;
 
-    final static NameAvailabilityRequest a(byte param0) {
-        if (NetworkArchiveRequest.field_y == ej.field_b) {
+    final static NameAvailabilityRequest pollNameCheckResult(byte param0) {
+        if (NetworkArchiveRequest.field_y == ByteArrayPool.field_b) {
           throw new IllegalStateException();
         }
         if (NetworkArchiveRequest.field_y == SingleChildWidget.field_z) {
-          NetworkArchiveRequest.field_y = ej.field_b;
+          NetworkArchiveRequest.field_y = ByteArrayPool.field_b;
           return LoginChoicePanel.field_F;
         }
         int var1 = 86 / ((param0 - 59) / 38);
@@ -282,7 +282,7 @@ final class IsaacRandom {
         }
     }
 
-    final static void a(int param0) {
+    final static void processFullscreenDialogs(int param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -292,17 +292,17 @@ final class IsaacRandom {
             if (LoginChoicePanel.field_E != null &&
               LoginChoicePanel.field_E.field_b) {
               WeightedLruCache.exitFullscreen((byte) 60);
-              kj.field_b.b((UiWidget) (new vg(kj.field_b, WrappedTextLayout.field_f)), (byte) 96);
+              SystemMemoryHelpers.field_b.showDialog((UiWidget) (new FullscreenFailureDialog(SystemMemoryHelpers.field_b, WrappedTextLayout.field_f)), (byte) 96);
             }
             return;
           }
           if (param0 != 8) {
             return;
           }
-          kj.field_b.processMouseInput(param0 + 118, true, AccountFormText.field_g, EmailCheckRequest.field_d);
-          kj.field_b.g((byte) 118);
+          SystemMemoryHelpers.field_b.processMouseInput(param0 + 118, true, AccountFormText.field_g, EmailCheckRequest.field_d);
+          SystemMemoryHelpers.field_b.animateDialogs((byte) 118);
           while (EmailValidationError.pollKeyboardEvent(-61)) {
-            kj.field_b.dispatchKeyPress(param0 ^ -125, MidiNote.field_r, EmailValidationError.typedCharacter);
+            SystemMemoryHelpers.field_b.dispatchKeyPress(param0 ^ -125, MidiNote.field_r, EmailValidationError.typedCharacter);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

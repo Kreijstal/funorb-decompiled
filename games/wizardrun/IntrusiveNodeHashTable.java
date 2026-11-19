@@ -91,9 +91,9 @@ final class IntrusiveNodeHashTable {
         field_b = null;
     }
 
-    final static int c(int param0) {
+    final static int serviceArchiveTransport(int param0) {
         DialogLayer.field_L.serviceProviders((byte) -84);
-        if (!ii.field_f.service((byte) 0)) {
+        if (!NameAvailabilityFactory.field_f.service((byte) 0)) {
           return DiskCacheWorker.pollJs5Connection(-18067);
         }
         if (param0 == 14326) {
@@ -112,21 +112,21 @@ final class IntrusiveNodeHashTable {
           var2 = new Sprite(param0.getNamedFile(104, "", "final_frame.jpg"), (java.awt.Component) ((Object) wizardrun.field_G));
           var4 = var2.width;
           var5 = var2.height;
-          GameMenu.d(-31782);
+          GameMenu.pushRasterState(-31782);
           TextLayout.field_a = new Sprite(var4, var5 * 3 / 4);
           TextLayout.field_a.bindAsRasterTarget();
           var2.drawWithOffsets(0, 0);
-          ee.field_q = new Sprite(var4, -TextLayout.field_a.height + var5);
-          ee.field_q.bindAsRasterTarget();
+          StyleNode.field_q = new Sprite(var4, -TextLayout.field_a.height + var5);
+          StyleNode.field_q.bindAsRasterTarget();
           var2.drawWithOffsets(0, -TextLayout.field_a.height);
-          ee.field_q.offsetY = TextLayout.field_a.height;
-          UsernameLoginCredentials.b(4);
+          StyleNode.field_q.offsetY = TextLayout.field_a.height;
+          UsernameLoginCredentials.popRasterState(4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ab.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static boolean d(int param0) {
+    final static boolean ensureMasterIndex(int param0) {
         if (param0 >= -13) {
           IntrusiveNodeHashTable.releaseStatics(-73);
           return DialogLayer.field_L.ensureMasterIndex((byte) -17);
@@ -178,10 +178,10 @@ final class IntrusiveNodeHashTable {
     final static void a(byte param0) {
         if (param0 == -69) {
           EditableTextWidget.field_R = new String[8];
-          EditableTextWidget.field_R[7] = lj.field_e;
+          EditableTextWidget.field_R[7] = FriendLookupState.field_e;
           EditableTextWidget.field_R[1] = MidiNote.field_o;
           EditableTextWidget.field_R[3] = DualLinkNodeHashTable.field_a;
-          EditableTextWidget.field_R[4] = mh.field_lb;
+          EditableTextWidget.field_R[4] = AccountProgressDialog.field_lb;
           EditableTextWidget.field_R[2] = EmailValidationError.field_b;
           EditableTextWidget.field_R[0] = ProgressQuery.field_l;
           EditableTextWidget.field_R[6] = AgeValidator.field_k;
@@ -190,10 +190,10 @@ final class IntrusiveNodeHashTable {
         }
         field_h = (AsyncRequest) null;
         EditableTextWidget.field_R = new String[8];
-        EditableTextWidget.field_R[7] = lj.field_e;
+        EditableTextWidget.field_R[7] = FriendLookupState.field_e;
         EditableTextWidget.field_R[1] = MidiNote.field_o;
         EditableTextWidget.field_R[3] = DualLinkNodeHashTable.field_a;
-        EditableTextWidget.field_R[4] = mh.field_lb;
+        EditableTextWidget.field_R[4] = AccountProgressDialog.field_lb;
         EditableTextWidget.field_R[2] = EmailValidationError.field_b;
         EditableTextWidget.field_R[0] = ProgressQuery.field_l;
         EditableTextWidget.field_R[6] = AgeValidator.field_k;

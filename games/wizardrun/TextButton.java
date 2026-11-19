@@ -89,19 +89,19 @@ class TextButton extends UiWidget {
             stackIn_2_0 = (NameAvailabilityRequest) null;
             return stackIn_2_0;
           }
-          if (wc.field_j == field_E) {
+          if (ChatMessage.field_j == field_E) {
             stackIn_5_0 = null;
             return (NameAvailabilityRequest) (stackIn_5_0);
           }
-          if (wc.field_j == SingleChildWidget.field_z &&
+          if (ChatMessage.field_j == SingleChildWidget.field_z &&
             param1.equals(LoginForm.field_I)) {
-            wc.field_j = ej.field_b;
-            stackIn_12_0 = kd.field_a;
+            ChatMessage.field_j = ByteArrayPool.field_b;
+            stackIn_12_0 = ContentTransitionPhase.field_a;
             return stackIn_12_0;
           }
-          kd.field_a = null;
+          ContentTransitionPhase.field_a = null;
           LoginForm.field_I = param1;
-          wc.field_j = field_E;
+          ChatMessage.field_j = field_E;
           stackIn_10_0 = null;
           return (NameAvailabilityRequest) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

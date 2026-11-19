@@ -50,210 +50,210 @@ public final class wizardrun extends GameShell {
         }
         if (SingleChildWidget.field_E.ensureIndex(17820) &&
           SingleChildWidget.field_E.areAllGroupsAvailable(-56)) {
-          if (mh.field_jb.ensureIndex(17820) &&
-            mh.field_jb.areAllGroupsAvailable(param1 ^ -94)) {
+          if (AccountProgressDialog.field_jb.ensureIndex(17820) &&
+            AccountProgressDialog.field_jb.areAllGroupsAvailable(param1 ^ -94)) {
             if (SingleChildWidget.soundArchive.ensureIndex(17820) &&
               SingleChildWidget.soundArchive.areAllGroupsAvailable(-110)) {
-              if (jl.bossSoundArchive.ensureIndex(17820) &&
-                jl.bossSoundArchive.areAllGroupsAvailable(-85)) {
+              if (SpriteButtonPainter.bossSoundArchive.ensureIndex(17820) &&
+                SpriteButtonPainter.bossSoundArchive.areAllGroupsAvailable(-85)) {
                 if (PlatformActor.field_u.ensureIndex(param1 ^ 17842) &&
                   PlatformActor.field_u.areAllGroupsAvailable(-67)) {
                   if (TickClock.field_b.ensureIndex(17820) &&
                     TickClock.field_b.areAllGroupsAvailable(83)) {
                     if (UsernameLoginCredentials.field_h.ensureIndex(17820) &&
                       UsernameLoginCredentials.field_h.ensureNamedGroupLoaded((byte) 29, "basic")) {
-                      if (MeshWorkspaceHelpers.field_a.ensureIndex(param1 ^ 17842) &&
-                        MeshWorkspaceHelpers.field_a.areAllGroupsAvailable(-85)) {
+                      if (RankingWorkspaceHelpers.field_a.ensureIndex(param1 ^ 17842) &&
+                        RankingWorkspaceHelpers.field_a.areAllGroupsAvailable(-85)) {
                         ValidationState.showLoadingProgress(AlternateUsernameLoginCredentials.field_o, 100.0f, 0);
                         if (!param0) {
                           return;
                         }
                         WrappedTextLayout.a((byte) 79);
                         this.f(-98);
-                        FlatTriangleRasterizer.font12 = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "b12", MeshWorkspaceHelpers.field_a);
-                        IndexedSpriteArrayFactory.wizardFont = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "wizfont", MeshWorkspaceHelpers.field_a);
-                        GameGraphicsResources.wizardFont2 = IsaacRandom.loadFont(param1 + 800863540, "", SingleChildWidget.field_E, "wizfont2", MeshWorkspaceHelpers.field_a);
-                        lk.field_b = new Sprite[16];
-                        MeshWorkspaceHelpers.field_a = null;
+                        FlatTriangleRasterizer.font12 = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "b12", RankingWorkspaceHelpers.field_a);
+                        IndexedSpriteArrayFactory.wizardFont = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "wizfont", RankingWorkspaceHelpers.field_a);
+                        GameGraphicsResources.wizardFont2 = IsaacRandom.loadFont(param1 + 800863540, "", SingleChildWidget.field_E, "wizfont2", RankingWorkspaceHelpers.field_a);
+                        TextPositionHelpers.field_b = new Sprite[16];
+                        RankingWorkspaceHelpers.field_a = null;
                         numberSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "numbers", param1 + 45);
                         GameGraphicsResources.gemSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "gems", 114);
-                        oc.field_c = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "playerintro", 117);
-                        lg.field_a = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "highwizard", 100);
-                        BrowserUrlLauncher.field_b = vg.loadSprite(15, "benefits", SingleChildWidget.field_E, "");
+                        CoverageFontLoader.field_c = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "playerintro", 117);
+                        FullscreenFailureKind.field_a = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "highwizard", 100);
+                        BrowserUrlLauncher.field_b = FullscreenFailureDialog.loadSprite(15, "benefits", SingleChildWidget.field_E, "");
                         BrowserCookieHelpers.field_b = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "screenshots", 87);
-                        var12 = vg.loadSprite(15, "gamelogo", SingleChildWidget.field_E, "");
-                        var4 = vg.loadSprite(15, "mbstar", SingleChildWidget.field_E, "");
+                        var12 = FullscreenFailureDialog.loadSprite(15, "gamelogo", SingleChildWidget.field_E, "");
+                        var4 = FullscreenFailureDialog.loadSprite(15, "mbstar", SingleChildWidget.field_E, "");
                         ArchiveLoadingPlan.setMembershipOffer(-1, MidiNote.field_u, BrowserUrlLauncher.field_b);
                         ReflectionCheck.setMembershipOfferIcon(var12, false);
-                        tk.a(0, var4, var4.fullWidth, 0, 2500, 0, 2, var4.fullHeight, 0);
-                        FullscreenFocusCanvas.a(true, BrowserCookieHelpers.field_b);
-                        ck.a((java.applet.Applet) (this), ValidationHelpWidget.field_O, 0, 34, 16777215, 255);
+                        HyperlinkPainter.a(0, var4, var4.fullWidth, 0, 2500, 0, 2, var4.fullHeight, 0);
+                        FullscreenFocusCanvas.setMembershipSlides(true, BrowserCookieHelpers.field_b);
+                        ClientShutdownHelpers.configureMembershipOffers((java.applet.Applet) (this), ValidationHelpWidget.field_O, 0, 34, 16777215, 255);
                         TickClock.field_c = null;
-                        IntHashTable.field_a = vg.loadSprite(param1 - 31, "paused", SingleChildWidget.field_E, "");
-                        ValidationState.selectStarSprites[0] = vg.loadSprite(15, "selstar", SingleChildWidget.field_E, "");
-                        ValidationState.selectStarSprites[1] = vg.loadSprite(15, "selstar2", SingleChildWidget.field_E, "");
-                        ValidationState.selectStarSprites[2] = vg.loadSprite(15, "selstar3", SingleChildWidget.field_E, "");
-                        vg.loadSprite(15, "gameover", SingleChildWidget.field_E, "");
-                        IsaacPacketBuffer.field_s = vg.loadSprite(15, "bosshealth2", SingleChildWidget.field_E, "");
-                        ve.wizardSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "wizard", 95);
-                        ra.wizardNoHatSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "wizardnohat", param1 + 42);
-                        DualLinkNode.field_m = vg.loadSprite(param1 ^ 33, "explosion", SingleChildWidget.field_E, "");
+                        IntHashTable.field_a = FullscreenFailureDialog.loadSprite(param1 - 31, "paused", SingleChildWidget.field_E, "");
+                        ValidationState.selectStarSprites[0] = FullscreenFailureDialog.loadSprite(15, "selstar", SingleChildWidget.field_E, "");
+                        ValidationState.selectStarSprites[1] = FullscreenFailureDialog.loadSprite(15, "selstar2", SingleChildWidget.field_E, "");
+                        ValidationState.selectStarSprites[2] = FullscreenFailureDialog.loadSprite(15, "selstar3", SingleChildWidget.field_E, "");
+                        FullscreenFailureDialog.loadSprite(15, "gameover", SingleChildWidget.field_E, "");
+                        IsaacPacketBuffer.field_s = FullscreenFailureDialog.loadSprite(15, "bosshealth2", SingleChildWidget.field_E, "");
+                        ErrorReportingHelpers.wizardSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "wizard", 95);
+                        AchievementUnlock.wizardNoHatSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "wizardnohat", param1 + 42);
+                        DualLinkNode.field_m = FullscreenFailureDialog.loadSprite(param1 ^ 33, "explosion", SingleChildWidget.field_E, "");
                         FullscreenFocusCanvas.field_a = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "achievements", 108);
-                        DiskCacheRequest.field_z = vg.loadSprite(15, "unachieved", UsernameLoginCredentials.field_h, "basic");
-                        wc.field_f = vg.loadSprite(15, "orbcoin", UsernameLoginCredentials.field_h, "basic");
-                        BrowserCookieHelpers.field_c = vg.loadSprite(15, "locked", UsernameLoginCredentials.field_h, "basic");
-                        kk.field_Bb = new Sprite[5];
-                        kk.field_Bb[0] = vg.loadSprite(15, "highscore", SingleChildWidget.field_E, "");
-                        kk.field_Bb[1] = vg.loadSprite(15, "highscorebar", SingleChildWidget.field_E, "");
-                        kk.field_Bb[2] = vg.loadSprite(param1 - 31, "stage", SingleChildWidget.field_E, "");
-                        kk.field_Bb[3] = vg.loadSprite(DiskCacheStore.xor(param1, 33), "score", SingleChildWidget.field_E, "");
-                        kk.field_Bb[4] = numberSprites[10];
+                        DiskCacheRequest.field_z = FullscreenFailureDialog.loadSprite(15, "unachieved", UsernameLoginCredentials.field_h, "basic");
+                        ChatMessage.field_f = FullscreenFailureDialog.loadSprite(15, "orbcoin", UsernameLoginCredentials.field_h, "basic");
+                        BrowserCookieHelpers.field_c = FullscreenFailureDialog.loadSprite(15, "locked", UsernameLoginCredentials.field_h, "basic");
+                        NameCheckProgressDialog.field_Bb = new Sprite[5];
+                        NameCheckProgressDialog.field_Bb[0] = FullscreenFailureDialog.loadSprite(15, "highscore", SingleChildWidget.field_E, "");
+                        NameCheckProgressDialog.field_Bb[1] = FullscreenFailureDialog.loadSprite(15, "highscorebar", SingleChildWidget.field_E, "");
+                        NameCheckProgressDialog.field_Bb[2] = FullscreenFailureDialog.loadSprite(param1 - 31, "stage", SingleChildWidget.field_E, "");
+                        NameCheckProgressDialog.field_Bb[3] = FullscreenFailureDialog.loadSprite(DiskCacheStore.xor(param1, 33), "score", SingleChildWidget.field_E, "");
+                        NameCheckProgressDialog.field_Bb[4] = numberSprites[10];
                         DropTargetWidget.frameSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "frame", 91);
                         LoginForm.field_E = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "buttonframe", 119);
                         GridPoint.field_c = new Sprite(32, 32);
                         GridPoint.field_c.bindAsRasterTarget();
-                        ve.wizardSprites[6].drawWithOffsets(-18, -18);
+                        ErrorReportingHelpers.wizardSprites[6].drawWithOffsets(-18, -18);
                         ArchiveProvider.field_b.bindRasterTarget(68);
-                        ec.field_b = new Sprite(64, 64);
-                        ec.field_b.bindAsRasterTarget();
+                        LogoAnimationLoader.field_b = new Sprite(64, 64);
+                        LogoAnimationLoader.field_b.bindAsRasterTarget();
                         SoftwareRasterizer.fillCircle(32, 32, 30, 16777215);
                         ArchiveProvider.field_b.bindRasterTarget(param1 + 17);
-                        gf.field_bb = ve.wizardSprites[1];
-                        ld.field_d = vg.loadSprite(param1 - 31, "selector", SingleChildWidget.field_E, "");
-                        GameShell.field_x = vg.loadSprite(param1 - 31, "bosshealth", SingleChildWidget.field_E, "");
-                        jl.field_w = vg.loadSprite(param1 - 31, "title", SingleChildWidget.field_E, "");
-                        NodeHashTableIterator.field_d = vg.loadSprite(15, "highscorescreen", SingleChildWidget.field_E, "");
-                        ValidationHelpWidget.field_M = vg.loadSprite(param1 ^ 33, "achievementscreen", SingleChildWidget.field_E, "");
-                        AudioServiceThread.field_b = vg.loadSprite(param1 ^ 33, "controlscreen", SingleChildWidget.field_E, "");
+                        ContentTransitionDialog.field_bb = ErrorReportingHelpers.wizardSprites[1];
+                        MusicPatchLoader.field_d = FullscreenFailureDialog.loadSprite(param1 - 31, "selector", SingleChildWidget.field_E, "");
+                        GameShell.field_x = FullscreenFailureDialog.loadSprite(param1 - 31, "bosshealth", SingleChildWidget.field_E, "");
+                        SpriteButtonPainter.field_w = FullscreenFailureDialog.loadSprite(param1 - 31, "title", SingleChildWidget.field_E, "");
+                        NodeHashTableIterator.field_d = FullscreenFailureDialog.loadSprite(15, "highscorescreen", SingleChildWidget.field_E, "");
+                        ValidationHelpWidget.field_M = FullscreenFailureDialog.loadSprite(param1 ^ 33, "achievementscreen", SingleChildWidget.field_E, "");
+                        AudioServiceThread.field_b = FullscreenFailureDialog.loadSprite(param1 ^ 33, "controlscreen", SingleChildWidget.field_E, "");
                         AudioServiceThread.field_b.bindAsRasterTarget();
                         var5_int = param1;
-                        var13 = WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 112, EditableTextWidget.field_P);
+                        var13 = WeightedLruCache.formatPlaceholders(new String[]{IntrusiveNode.field_h[SpriteTextStyle.field_S], IntrusiveNode.field_h[AccountFormTextHelpers.field_d]}, (byte) 112, EditableTextWidget.field_P);
                         this.drawBorderedText(param1 ^ -12884, var13, 15583488, GameGraphicsResources.wizardFont2.stringWidth(var13) / 2 + 165, 180 + var5_int);
-                        var14 = WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 49, qj.field_a);
+                        var14 = WeightedLruCache.formatPlaceholders(new String[]{IntrusiveNode.field_h[SpriteTextStyle.field_S], IntrusiveNode.field_h[AccountFormTextHelpers.field_d]}, (byte) 49, NineSliceFrame.field_a);
                         this.drawBorderedText(-12926, var14, 15583488, GameGraphicsResources.wizardFont2.stringWidth(var14) / 2 + 165, var5_int * 2 + 180);
-                        var15 = WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 94, kj.field_e);
+                        var15 = WeightedLruCache.formatPlaceholders(new String[]{IntrusiveNode.field_h[SpriteTextStyle.field_S], IntrusiveNode.field_h[AccountFormTextHelpers.field_d]}, (byte) 94, SystemMemoryHelpers.field_e);
                         this.drawBorderedText(-12926, var15, 15583488, 165 + GameGraphicsResources.wizardFont2.stringWidth(var15) / 2, 180 + 3 * var5_int);
-                        var16 = WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 124, IntrusiveDeque.field_d);
+                        var16 = WeightedLruCache.formatPlaceholders(new String[]{IntrusiveNode.field_h[SpriteTextStyle.field_S], IntrusiveNode.field_h[AccountFormTextHelpers.field_d]}, (byte) 124, IntrusiveDeque.field_d);
                         this.drawBorderedText(-12926, var16, 15583488, GameGraphicsResources.wizardFont2.stringWidth(var16) / 2 + 165, -15 + var5_int * 4 + 180);
-                        var17 = WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 97, DiskCacheRequest.field_C);
+                        var17 = WeightedLruCache.formatPlaceholders(new String[]{IntrusiveNode.field_h[SpriteTextStyle.field_S], IntrusiveNode.field_h[AccountFormTextHelpers.field_d]}, (byte) 97, DiskCacheRequest.field_C);
                         this.drawBorderedText(-12926, var17, 15583488, GameGraphicsResources.wizardFont2.stringWidth(var17) / 2 + 165, 5 * var5_int + 180);
                         ArchiveProvider.field_b.bindRasterTarget(106);
-                        kb.field_jb = vg.loadSprite(15, "optionscreen", SingleChildWidget.field_E, "");
-                        we.field_b = vg.loadSprite(param1 - 31, "endscreen", SingleChildWidget.field_E, "");
+                        StandardContentTransitionDialog.field_jb = FullscreenFailureDialog.loadSprite(15, "optionscreen", SingleChildWidget.field_E, "");
+                        UiSpriteThemeHelpers.field_b = FullscreenFailureDialog.loadSprite(param1 - 31, "endscreen", SingleChildWidget.field_E, "");
                         RadixParsingHelpers.a(240, GameGraphicsResources.wizardFont2, DropTargetWidget.frameSprites, (byte) -113, DropTargetWidget.frameSprites, 16777215, 16777088, 12, 12, 16776960, 320, 12, DropTargetWidget.frameSprites, 12, 12);
                         RadialSelectorWidget.a((byte) -94);
                         MidiPcmStream.field_T = new byte[6][6][];
                         SingleChildWidget.field_E = null;
                         for (var5_intLifetime1 = 0; var5_intLifetime1 <= 5; var5_intLifetime1++) {
                           for (var6_int = 0; var6_int <= 5; var6_int++) {
-                            MidiPcmStream.field_T[var5_intLifetime1][var6_int] = mh.field_jb.getNamedFile(52, "level" + var5_intLifetime1 + var6_int + ".dat", "");
+                            MidiPcmStream.field_T[var5_intLifetime1][var6_int] = AccountProgressDialog.field_jb.getNamedFile(52, "level" + var5_intLifetime1 + var6_int + ".dat", "");
                           }
                         }
-                        mh.field_jb = null;
+                        AccountProgressDialog.field_jb = null;
                         var10 = new PcmResampler(22050, AudioOutput.field_l);
-                        BufferedRandomAccessFile.soundEffects[0] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spell").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[1] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spell2").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[2] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "bubblefire").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[3] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "jump").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[4] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "land").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[5] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "bigthud").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[6] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "bubblepop").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[7] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "gotgem2").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[10] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "enemyhit").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[11] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "shield").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[12] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "slimesplit").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[13] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "zapshot").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[14] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "fireball").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[15] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "alljump").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[16] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "stars").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[23] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spell_higher").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[24] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spell_highest").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[0] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "intro_bird_squawk").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[1] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "end_cage_release").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[2] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "end_cage_smash").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[3] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "rat_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[4] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "wasp_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[5] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spider_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[6] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spider_boss_land").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[7] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spider_boss_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[8] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "small_crab_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[9] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "crab_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[10] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "seagull_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[11] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "cannibal_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[15] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "green_bird_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[16] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "ghost_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[17] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "ghost_spit").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[18] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "skeleton_cannon_fire").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[22] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "venus_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[23] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "bat_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[25] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "ogre_boss_rock").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[32] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "fireimp_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[35] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "harpie_death").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[36] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "dark_knight_attack").toPcmSample().a(var10);
-                        SpriteState.secondarySoundEffects[37] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "dark_knight_death").toPcmSample().a(var10);
-                        BufferedRandomAccessFile.soundEffects[8] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "wizard_ooh").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[9] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "enemyeek").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[17] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "lizard_boss").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[18] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "hissing").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[19] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "vampire_laugh").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[20] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "ogre_boss").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[21] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "dragon_boss").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[22] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "demon_boss").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[25] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "spiderhit").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[26] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "ogrehit").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[27] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "dragonhit").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[28] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "demonhit").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[29] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "vampirehit").decodeAllToPcm().a(var10);
-                        BufferedRandomAccessFile.soundEffects[30] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "spiderboss").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[13] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "voodoo_boss_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[19] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "skeleton_cannon_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[21] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "pirate_boss_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[26] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "ogre_boss_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[27] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "cyclops_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[29] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "yeti_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[30] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "dragon_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[31] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "ice_dragon_boss_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[33] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "city_guard_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[34] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "executioner_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[12] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "voodoo_boss_attack").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[14] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "skeleton_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[24] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "goblin_death").decodeAllToPcm().a(var10);
-                        SpriteState.secondarySoundEffects[28] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "horned_demon_death").decodeAllToPcm().a(var10);
+                        BufferedRandomAccessFile.soundEffects[0] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spell").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[1] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spell2").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[2] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "bubblefire").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[3] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "jump").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[4] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "land").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[5] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "bigthud").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[6] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "bubblepop").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[7] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "gotgem2").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[10] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "enemyhit").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[11] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "shield").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[12] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "slimesplit").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[13] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "zapshot").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[14] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "fireball").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[15] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "alljump").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[16] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "stars").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[23] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spell_higher").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[24] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spell_highest").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[0] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "intro_bird_squawk").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[1] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "end_cage_release").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[2] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "end_cage_smash").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[3] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "rat_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[4] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "wasp_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[5] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spider_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[6] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spider_boss_land").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[7] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "spider_boss_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[8] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "small_crab_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[9] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "crab_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[10] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "seagull_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[11] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "cannibal_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[15] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "green_bird_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[16] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "ghost_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[17] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "ghost_spit").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[18] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "skeleton_cannon_fire").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[22] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "venus_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[23] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "bat_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[25] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "ogre_boss_rock").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[32] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "fireimp_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[35] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "harpie_death").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[36] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "dark_knight_attack").toPcmSample().resample(var10);
+                        SpriteState.secondarySoundEffects[37] = SoundEffect.loadNamed(SingleChildWidget.soundArchive, "", "dark_knight_death").toPcmSample().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[8] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "wizard_ooh").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[9] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "enemyeek").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[17] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "lizard_boss").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[18] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "hissing").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[19] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "vampire_laugh").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[20] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "ogre_boss").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[21] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "dragon_boss").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[22] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "demon_boss").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[25] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "spiderhit").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[26] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "ogrehit").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[27] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "dragonhit").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[28] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "demonhit").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[29] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "vampirehit").decodeAllToPcm().resample(var10);
+                        BufferedRandomAccessFile.soundEffects[30] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "spiderboss").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[13] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "voodoo_boss_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[19] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "skeleton_cannon_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[21] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "pirate_boss_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[26] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "ogre_boss_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[27] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "cyclops_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[29] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "yeti_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[30] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "dragon_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[31] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "ice_dragon_boss_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[33] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "city_guard_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[34] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "executioner_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[12] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "voodoo_boss_attack").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[14] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "skeleton_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[24] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "goblin_death").decodeAllToPcm().resample(var10);
+                        SpriteState.secondarySoundEffects[28] = VorbisSample.loadNamed(SpriteButtonPainter.bossSoundArchive, "", "horned_demon_death").decodeAllToPcm().resample(var10);
                         var5 = null;
-                        DraggableWidget.field_G = MidiTrack.a(TickClock.field_b, "", "wizard_run_forest");
-                        EmailLoginCredentials.field_l = MidiTrack.a(TickClock.field_b, "", "wizard_run_swamp");
-                        ArchiveRequest.field_u = MidiTrack.a(TickClock.field_b, "", "wizard_run_caves");
-                        AccountFormText.field_b = MidiTrack.a(TickClock.field_b, "", "wizard_run_mountains");
-                        PacketBuffer.field_j = MidiTrack.a(TickClock.field_b, "", "wizard_run_volcano");
-                        ec.field_d = MidiTrack.a(TickClock.field_b, "", "wizard_run_lair");
-                        SettingsCookieReader.field_a = MidiTrack.a(TickClock.field_b, "", "wizard_run_boss");
-                        DirectByteStorage.field_j = MidiTrack.a(TickClock.field_b, "", "wizard_run_intro");
-                        QuickChatDynamicCommand.field_e = MidiTrack.a(TickClock.field_b, "", "wizard_run_cutscene");
-                        qj.field_e = MidiTrack.a(TickClock.field_b, "", "wizard_run_endscene");
+                        DraggableWidget.field_G = MidiTrack.loadNamedTrack(TickClock.field_b, "", "wizard_run_forest");
+                        EmailLoginCredentials.field_l = MidiTrack.loadNamedTrack(TickClock.field_b, "", "wizard_run_swamp");
+                        ArchiveRequest.field_u = MidiTrack.loadNamedTrack(TickClock.field_b, "", "wizard_run_caves");
+                        AccountFormText.field_b = MidiTrack.loadNamedTrack(TickClock.field_b, "", "wizard_run_mountains");
+                        PacketBuffer.field_j = MidiTrack.loadNamedTrack(TickClock.field_b, "", "wizard_run_volcano");
+                        LogoAnimationLoader.field_d = MidiTrack.loadNamedTrack(TickClock.field_b, "", "wizard_run_lair");
+                        SettingsCookieReader.field_a = MidiTrack.loadNamedTrack(TickClock.field_b, "", "wizard_run_boss");
+                        DirectByteStorage.field_j = MidiTrack.loadNamedTrack(TickClock.field_b, "", "wizard_run_intro");
+                        QuickChatDynamicCommand.field_e = MidiTrack.loadNamedTrack(TickClock.field_b, "", "wizard_run_cutscene");
+                        NineSliceFrame.field_e = MidiTrack.loadNamedTrack(TickClock.field_b, "", "wizard_run_endscene");
                         TickClock.field_b = null;
                         SocketJs5Transport.musicTracks = new MidiTrack[7];
                         SocketJs5Transport.musicTracks[3] = AccountFormText.field_b;
-                        SocketJs5Transport.musicTracks[5] = ec.field_d;
+                        SocketJs5Transport.musicTracks[5] = LogoAnimationLoader.field_d;
                         SocketJs5Transport.musicTracks[4] = PacketBuffer.field_j;
                         SocketJs5Transport.musicTracks[2] = ArchiveRequest.field_u;
                         SocketJs5Transport.musicTracks[6] = DirectByteStorage.field_j;
                         SocketJs5Transport.musicTracks[0] = DraggableWidget.field_G;
                         SocketJs5Transport.musicTracks[1] = EmailLoginCredentials.field_l;
-                        var11 = new SoundCache(SingleChildWidget.soundArchive, jl.bossSoundArchive);
+                        var11 = new SoundCache(SingleChildWidget.soundArchive, SpriteButtonPainter.bossSoundArchive);
                         var18 = var11;
                         SingleChildWidget.soundArchive = null;
-                        jl.bossSoundArchive = null;
+                        SpriteButtonPainter.bossSoundArchive = null;
                         for (var7_int = 0; 7 > var7_int; var7_int++) {
-                          SingleChildWidget.field_D.a(PlatformActor.field_u, -1, var11, SocketJs5Transport.musicTracks[var7_int], 0);
+                          SingleChildWidget.field_D.loadTrackInstruments(PlatformActor.field_u, -1, var11, SocketJs5Transport.musicTracks[var7_int], 0);
                         }
-                        SingleChildWidget.field_D.a(PlatformActor.field_u, -1, var18, QuickChatDynamicCommand.field_e, 0);
-                        SingleChildWidget.field_D.a(PlatformActor.field_u, -1, var18, qj.field_e, 0);
-                        SingleChildWidget.field_D.a(PlatformActor.field_u, param1 ^ -47, var18, SettingsCookieReader.field_a, 0);
-                        SingleChildWidget.field_D.b(true);
+                        SingleChildWidget.field_D.loadTrackInstruments(PlatformActor.field_u, -1, var18, QuickChatDynamicCommand.field_e, 0);
+                        SingleChildWidget.field_D.loadTrackInstruments(PlatformActor.field_u, -1, var18, NineSliceFrame.field_e, 0);
+                        SingleChildWidget.field_D.loadTrackInstruments(PlatformActor.field_u, param1 ^ -47, var18, SettingsCookieReader.field_a, 0);
+                        SingleChildWidget.field_D.clearPatchSampleIds(true);
                         PlatformActor.field_u = null;
                         var6 = null;
                         for (var7_intLifetime1 = 0; var7_intLifetime1 < 1000; var7_intLifetime1++) {
-                          ii.field_e[var7_intLifetime1] = new PlatformActor();
+                          NameAvailabilityFactory.field_e[var7_intLifetime1] = new PlatformActor();
                         }
                         DialogLayer.field_K = 1;
                         DiskCacheWorker.field_e = 500;
@@ -262,56 +262,56 @@ public final class wizardrun extends GameShell {
                         var7.row = 1;
                         var7.column = 3;
                         FadingDialog.field_I = 0;
-                        ProgressQuery.field_m = new jk();
-                        uk.setTickRate((byte) 91, 50);
-                        MidiNote.a((byte) -74);
+                        ProgressQuery.field_m = new FriendsListState();
+                        QuickChatPhraseRepository.setTickRate((byte) 91, 50);
+                        MidiNote.selectLevelMusic((byte) -74);
                         IntegerSyntaxHelpers.field_e = SocketJs5Transport.musicTracks[6];
-                        SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
-                        if (tl.field_e) {
-                          SingleChildWidget.field_D.a(true, param1 ^ -72, IntegerSyntaxHelpers.field_e);
+                        SingleChildWidget.field_D.setMasterVolume(-1, ConfirmedEmailValidator.field_o);
+                        if (FriendOrderingHelpers.field_e) {
+                          SingleChildWidget.field_D.startTrack(true, param1 ^ -72, IntegerSyntaxHelpers.field_e);
                         }
                         for (var8 = 0; var8 < 300; var8++) {
-                          tc.field_l.field_j[var8] = 0;
-                          tc.field_l.field_f[var8] = 0;
-                          tc.field_l.field_d[var8] = false;
-                          tc.field_l.field_a[var8] = 0;
+                          SavedDataRequest.level.field_j[var8] = 0;
+                          SavedDataRequest.level.field_f[var8] = 0;
+                          SavedDataRequest.level.field_d[var8] = false;
+                          SavedDataRequest.level.field_a[var8] = 0;
                         }
                         DualLinkDeque.resourcesLoaded = true;
                         EmailCheckRequest.field_h = 0;
-                        HighscorePlayer.field_e = jl.field_w;
+                        HighscorePlayer.field_e = SpriteButtonPainter.field_w;
                         TickClock.field_a = new int[100][3];
                         GameGraphicsResources.b(0);
                         return;
                       }
-                      ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, mj.field_d, MeshWorkspaceHelpers.field_a, IndexedSpriteArrayFactory.field_d), 95.0f, 0);
+                      ValidationState.showLoadingProgress(SecondaryNodeDeque.formatArchiveLoadStatus(-40, ThrowableFormattingHelpers.field_d, RankingWorkspaceHelpers.field_a, IndexedSpriteArrayFactory.field_d), 95.0f, 0);
                       return;
                     }
-                    ValidationState.showLoadingProgress(oh.a(FramedButtonPainter.field_q, tk.field_e, UsernameLoginCredentials.field_h, param1 ^ -90, "basic"), 85.0f, param1 ^ 46);
+                    ValidationState.showLoadingProgress(SpriteFilterHelpers.a(FramedButtonPainter.field_q, HyperlinkPainter.field_e, UsernameLoginCredentials.field_h, param1 ^ -90, "basic"), 85.0f, param1 ^ 46);
                     return;
                   }
-                  ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, ej.field_e, TickClock.field_b, lj.field_d), 80.0f, 0);
+                  ValidationState.showLoadingProgress(SecondaryNodeDeque.formatArchiveLoadStatus(-40, ByteArrayPool.field_e, TickClock.field_b, FriendLookupState.field_d), 80.0f, 0);
                   return;
                 }
-                ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, pa.field_d, PlatformActor.field_u, IndexedSpriteState.field_g), 70.0f, 0);
+                ValidationState.showLoadingProgress(SecondaryNodeDeque.formatArchiveLoadStatus(-40, EncryptedLoginHelpers.field_d, PlatformActor.field_u, IndexedSpriteState.field_g), 70.0f, 0);
                 return;
               }
-              ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, MenuController.field_i, jl.bossSoundArchive, RadixParsingHelpers.field_d), 60.0f, 0);
+              ValidationState.showLoadingProgress(SecondaryNodeDeque.formatArchiveLoadStatus(-40, MenuController.field_i, SpriteButtonPainter.bossSoundArchive, RadixParsingHelpers.field_d), 60.0f, 0);
               return;
             }
-            ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, MenuController.field_i, SingleChildWidget.soundArchive, RadixParsingHelpers.field_d), 50.0f, param1 - 46);
+            ValidationState.showLoadingProgress(SecondaryNodeDeque.formatArchiveLoadStatus(-40, MenuController.field_i, SingleChildWidget.soundArchive, RadixParsingHelpers.field_d), 50.0f, param1 - 46);
             return;
           }
-          ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, WhirlpoolHasher.field_e, mh.field_jb, aa.field_gb), 40.0f, 0);
+          ValidationState.showLoadingProgress(SecondaryNodeDeque.formatArchiveLoadStatus(-40, WhirlpoolHasher.field_e, AccountProgressDialog.field_jb, FriendEntry.field_gb), 40.0f, 0);
           return;
         }
-        ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, tk.field_e, SingleChildWidget.field_E, FramedButtonPainter.field_q), 30.0f, param1 ^ 46);
+        ValidationState.showLoadingProgress(SecondaryNodeDeque.formatArchiveLoadStatus(-40, HyperlinkPainter.field_e, SingleChildWidget.field_E, FramedButtonPainter.field_q), 30.0f, param1 ^ 46);
     }
 
     private final void s(int param0) {
         boolean stackIn_6_1 = false;
         if (5 < HuffmanDecoder.field_c) {
           BufferedSocket.field_c = BufferedSocket.field_c - HuffmanDecoder.field_c;
-          me.field_f = me.field_f - 5;
+          LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f - 5;
           HuffmanDecoder.field_c = 5;
         }
         GameApplet.a(7775, 64 * DiskCacheStore.field_f + (HuffmanDecoder.field_c + 6 * GridActor.field_l));
@@ -320,7 +320,7 @@ public final class wizardrun extends GameShell {
         stackIn_6_1 = !(0 >= ArchiveProvider.field_a);
         this.field_J = stackIn_6_1;
         ProgressRefreshState.field_b = 0;
-        tc.field_j = false;
+        SavedDataRequest.field_j = false;
         HighscorePlayer.field_e = NodeHashTableIterator.field_d;
         if (0 < AgeValidator.field_l) {
           EmailCheckRequest.field_h = 5;
@@ -331,20 +331,20 @@ public final class wizardrun extends GameShell {
           return;
         }
         DisplayNameSyntaxHelpers.field_a = 500;
-        if (e.a(-96)) {
+        if (ThreePieceFrameHelpers.a(-96)) {
           EmailCheckRequest.field_h = 6;
         }
         if (DiskCacheStore.field_f == 0 &&
           AgeValidator.field_l == 0 &&
-          ke.field_u.isEmpty(8192)) {
+          PasswordFieldPainter.field_u.isEmpty(8192)) {
           EmailCheckRequest.field_h = 0;
           this.field_J = true;
           BufferedSocket.field_a = -350;
         }
-        if (!e.a(-90)) {
+        if (!ThreePieceFrameHelpers.a(-90)) {
           BufferedSocket.field_c = BufferedSocket.field_c - (HuffmanDecoder.field_c - 6);
           HighscorePlayer.field_b = HighscorePlayer.field_b - (DiskCacheStore.field_f << 6);
-          me.field_f = me.field_f + (GridActor.field_l * 6 + 6);
+          LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f + (GridActor.field_l * 6 + 6);
           GridActor.field_l = -1;
           DiskCacheStore.field_f = 0;
           HuffmanDecoder.field_c = 6;
@@ -356,8 +356,8 @@ public final class wizardrun extends GameShell {
         DialogLayer.field_K = 1;
         DiskCacheWorker.field_e = 500;
         GridActor.field_g = 5;
-        if (tl.field_e) {
-          SingleChildWidget.field_D.a(true, param0 - 314, IntegerSyntaxHelpers.field_e);
+        if (FriendOrderingHelpers.field_e) {
+          SingleChildWidget.field_D.startTrack(true, param0 - 314, IntegerSyntaxHelpers.field_e);
         }
         FadingDialog.field_I = 255;
         BufferedSocket.field_a = -350;
@@ -385,9 +385,9 @@ public final class wizardrun extends GameShell {
         stackIn_6_1 = -4114;
         stackIn_7_2 = (null != LoginChoicePanel.field_E);
         this.c(stackIn_6_1, stackIn_7_2);
-        if (f.field_c) {
+        if (HighscorePlayerState.field_c) {
           this.openResourceArchives(-51);
-          f.field_c = false;
+          HighscorePlayerState.field_c = false;
         }
         if (MouseWheelInput.a((byte) 60)) {
           this.d((byte) -122);
@@ -401,23 +401,23 @@ public final class wizardrun extends GameShell {
         }
         if (DualLinkDeque.resourcesLoaded) {
           if (!ImageProducerRasterBuffer.c((byte) 54)) {
-            ConfirmedEmailValidator.c(true);
+            ConfirmedEmailValidator.refreshPlayerProgress(true);
           } else {
-            if (StringPaddingHelpers.a(-25231)) {
+            if (StringPaddingHelpers.isMenuScreenActive(-25231)) {
               var2 = AchievementSubmission.d((byte) -48);
               if (var2 == 2) {
                 WeightedLruCache.exitFullscreen((byte) 60);
               } else {
                 if (3 != var2) {
                   if (4 == var2) {
-                    gf.h((byte) 107);
+                    ContentTransitionDialog.h((byte) 107);
                   }
                 } else {
                   DropTargetWidget.a(true, false);
                 }
               }
             } else {
-              if (!dg.b(-76)) {
+              if (!ArchiveContainerHelpers.b(-76)) {
                 this.updateGameState(640);
               } else {
                 stackIn_23_1 = 39;
@@ -427,7 +427,7 @@ public final class wizardrun extends GameShell {
                   var2 == 2) {
                   WeightedLruCache.exitFullscreen((byte) 60);
                   if (var2 == 2) {
-                    MeshWorkspaceHelpers.openQuitPage(127, DisplayNameValidator.getActiveApplet(1));
+                    RankingWorkspaceHelpers.openQuitPage(127, DisplayNameValidator.getActiveApplet(1));
                   }
                 }
               }
@@ -436,9 +436,9 @@ public final class wizardrun extends GameShell {
         } else {
           this.loadGameResources(true, 46);
         }
-        if (!e.a(-81)) {
+        if (!ThreePieceFrameHelpers.a(-81)) {
           while (true) {
-            var6 = (AchievementSubmission) (ie.field_l.removeFirst(114));
+            var6 = (AchievementSubmission) (SavedDataSubmission.field_l.removeFirst(114));
             if (var6 != null) {
               ConfirmedEmailValidator.submitAchievement(var6, false, 4);
               continue;
@@ -446,7 +446,7 @@ public final class wizardrun extends GameShell {
             break;
           }
           while (true) {
-            var5 = (ProgressSubmission) (ke.field_u.removeFirst(109));
+            var5 = (ProgressSubmission) (PasswordFieldPainter.field_u.removeFirst(109));
             if (var5 == null) {
               break;
             }
@@ -457,11 +457,11 @@ public final class wizardrun extends GameShell {
         while (UiWidget.a(0, ValidationIndicator.field_G)) {
           this.b(true);
         }
-        id.flushAccountPackets((byte) -67, 0);
-        if (MusicPatch.b(true)) {
+        PasswordContentHelpers.flushAccountPackets((byte) -67, 0);
+        if (MusicPatch.isGuestSessionActive(true)) {
           var3 = this.o(-10618);
           if (var3 == 2) {
-            ci.a((byte) -124);
+            RankingStatsDecoder.a((byte) -124);
           }
         }
     }
@@ -478,7 +478,7 @@ public final class wizardrun extends GameShell {
         int var5;
         int var6;
         var6 = field_H;
-        if (pa.field_c > 0) {
+        if (EncryptedLoginHelpers.field_c > 0) {
           return;
         }
         if (param1 == 2 &&
@@ -509,22 +509,22 @@ public final class wizardrun extends GameShell {
                         break regionExit1;
                       }
                       DualLinkDeque.field_i = 3;
-                      pa.field_c = 32;
+                      EncryptedLoginHelpers.field_c = 32;
                       if (!ReflectionCheck.field_s) {
                         break regionExit1;
                       }
-                      tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
+                      FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * StyleNode.field_p / 100);
                       break regionExit1;
                     case 6:
                       if (param1 != 0) {
                         break regionExit1;
                       }
                       DualLinkDeque.field_i = 4;
-                      pa.field_c = 32;
+                      EncryptedLoginHelpers.field_c = 32;
                       if (!ReflectionCheck.field_s) {
                         break regionExit1;
                       }
-                      tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
+                      FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, StyleNode.field_p * 256 / 100);
                       break regionExit1;
                     default:
                       break regionExit1;
@@ -533,9 +533,9 @@ public final class wizardrun extends GameShell {
                         break regionExit1;
                       }
                       if (ReflectionCheck.field_s) {
-                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
+                        FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, StyleNode.field_p * 256 / 100);
                       }
-                      MeshWorkspaceHelpers.openQuitPage(124, DisplayNameValidator.getActiveApplet(1));
+                      RankingWorkspaceHelpers.openQuitPage(124, DisplayNameValidator.getActiveApplet(1));
                       break regionExit1;
                   }
                 }
@@ -554,7 +554,7 @@ public final class wizardrun extends GameShell {
                 boolean decompiledFrameRemainder1 = true;
                 if (param1 == 2) {
                   if (AchievementSubmission.field_n >= 144 &&
-                    tl.field_e) {
+                    FriendOrderingHelpers.field_e) {
                     param1 = 0;
                     if (AchievementSubmission.field_n < (168 + 108 * ConfirmedEmailValidator.field_o / 200)) {
                       param1 = 200 * (AchievementSubmission.field_n - (ConfirmedEmailValidator.field_o * 108 / 200 + 172)) / 108;
@@ -565,48 +565,48 @@ public final class wizardrun extends GameShell {
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    stackIn_99_0 = !(tl.field_e);
+                    stackIn_99_0 = !(FriendOrderingHelpers.field_e);
                     if (!stackIn_99_0) {
-                      tl.field_e = false;
-                      SingleChildWidget.field_D.d(-89);
+                      FriendOrderingHelpers.field_e = false;
+                      SingleChildWidget.field_D.stopPlayback(-89);
                     } else {
-                      tl.field_e = true;
-                      SingleChildWidget.field_D.a(true, -93, IntegerSyntaxHelpers.field_e);
+                      FriendOrderingHelpers.field_e = true;
+                      SingleChildWidget.field_D.startTrack(true, -93, IntegerSyntaxHelpers.field_e);
                     }
                     param1 = 0;
                   }
                 } else {
                   if (param1 == 0) {
                     stackIn_86_0 = 0;
-                    if (tl.field_e) {
+                    if (FriendOrderingHelpers.field_e) {
                       stackIn_87_1 = 0;
                     } else {
                       stackIn_87_1 = 1;
                     }
                     if (stackIn_86_0 != stackIn_87_1) {
-                      tl.field_e = true;
-                      SingleChildWidget.field_D.a(true, -85, IntegerSyntaxHelpers.field_e);
+                      FriendOrderingHelpers.field_e = true;
+                      SingleChildWidget.field_D.startTrack(true, -85, IntegerSyntaxHelpers.field_e);
                     } else {
-                      tl.field_e = false;
-                      SingleChildWidget.field_D.d(-38);
+                      FriendOrderingHelpers.field_e = false;
+                      SingleChildWidget.field_D.stopPlayback(-38);
                     }
                   }
                 }
                 if (param1 <= -1) {
                   ConfirmedEmailValidator.field_o = ConfirmedEmailValidator.field_o + param1;
                   if (ConfirmedEmailValidator.field_o > 0) {
-                    SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
+                    SingleChildWidget.field_D.setMasterVolume(-1, ConfirmedEmailValidator.field_o);
                   } else {
                     ConfirmedEmailValidator.field_o = 0;
                     stackIn_108_0 = 0;
-                    if (tl.field_e) {
+                    if (FriendOrderingHelpers.field_e) {
                       stackIn_109_1 = 0;
                     } else {
                       stackIn_109_1 = 1;
                     }
                     if (stackIn_108_0 == stackIn_109_1) {
-                      tl.field_e = false;
-                      SingleChildWidget.field_D.d(-104);
+                      FriendOrderingHelpers.field_e = false;
+                      SingleChildWidget.field_D.stopPlayback(-104);
                     }
                   }
                 }
@@ -615,15 +615,15 @@ public final class wizardrun extends GameShell {
                   if (ConfirmedEmailValidator.field_o > 200) {
                     ConfirmedEmailValidator.field_o = 200;
                   }
-                  SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
-                  if (!tl.field_e) {
-                    tl.field_e = true;
-                    SingleChildWidget.field_D.a(true, -120, IntegerSyntaxHelpers.field_e);
+                  SingleChildWidget.field_D.setMasterVolume(-1, ConfirmedEmailValidator.field_o);
+                  if (!FriendOrderingHelpers.field_e) {
+                    FriendOrderingHelpers.field_e = true;
+                    SingleChildWidget.field_D.startTrack(true, -120, IntegerSyntaxHelpers.field_e);
                   }
                 }
                 if (ReflectionCheck.field_s) {
                   if (SpriteState.field_y <= 0) {
-                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
+                    FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, StyleNode.field_p * 256 / 100);
                     SpriteState.field_y = 25;
                   }
                   return;
@@ -651,11 +651,11 @@ public final class wizardrun extends GameShell {
                   if (AchievementSubmission.field_n >= 144 &&
                     ReflectionCheck.field_s) {
                     param1 = 0;
-                    if (AchievementSubmission.field_n < (-1 + (172 + ee.field_p * 108 / 104))) {
-                      param1 = (-(108 * ee.field_p / 104) - 172 + AchievementSubmission.field_n) * 104 / 108;
+                    if (AchievementSubmission.field_n < (-1 + (172 + StyleNode.field_p * 108 / 104))) {
+                      param1 = (-(108 * StyleNode.field_p / 104) - 172 + AchievementSubmission.field_n) * 104 / 108;
                     }
-                    if (!(108 * ee.field_p / 104 + 172 + 1 >= AchievementSubmission.field_n)) {
-                      param1 = 104 * (AchievementSubmission.field_n - (172 + ee.field_p * 108 / 104)) / 108;
+                    if (!(108 * StyleNode.field_p / 104 + 172 + 1 >= AchievementSubmission.field_n)) {
+                      param1 = 104 * (AchievementSubmission.field_n - (172 + StyleNode.field_p * 108 / 104)) / 108;
                     }
                     decompiledFrameRemainder0 = false;
                   }
@@ -666,22 +666,22 @@ public final class wizardrun extends GameShell {
                   }
                 }
                 if (-1 >= param1) {
-                  ee.field_p = ee.field_p + param1;
-                  if (ee.field_p <= 0) {
+                  StyleNode.field_p = StyleNode.field_p + param1;
+                  if (StyleNode.field_p <= 0) {
                     ReflectionCheck.field_s = false;
-                    ee.field_p = 0;
+                    StyleNode.field_p = 0;
                   }
                 }
                 if (param1 >= 1) {
-                  ee.field_p = ee.field_p + param1;
+                  StyleNode.field_p = StyleNode.field_p + param1;
                   ReflectionCheck.field_s = true;
-                  if (ee.field_p > 104) {
-                    ee.field_p = 104;
+                  if (StyleNode.field_p > 104) {
+                    StyleNode.field_p = 104;
                   }
                 }
                 if (ReflectionCheck.field_s) {
                   if (0 >= SpriteState.field_y) {
-                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
+                    FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * StyleNode.field_p / 100);
                     SpriteState.field_y = 25;
                   }
                   return;
@@ -691,9 +691,9 @@ public final class wizardrun extends GameShell {
             }
             if (param1 == 0) {
               DualLinkDeque.field_i = 1;
-              pa.field_c = 32;
+              EncryptedLoginHelpers.field_c = 32;
               if (ReflectionCheck.field_s) {
-                tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
+                FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, StyleNode.field_p * 256 / 100);
               }
             }
           } else {
@@ -702,16 +702,16 @@ public final class wizardrun extends GameShell {
             DiskCacheStore.field_f = 0;
             if (param1 == 0) {
               DualLinkDeque.field_i = 5;
-              pa.field_c = 32;
+              EncryptedLoginHelpers.field_c = 32;
               if (ReflectionCheck.field_s) {
-                tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
+                FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, StyleNode.field_p * 256 / 100);
               }
             }
           }
         }
         if (ReflectionCheck.field_s &&
           param1 != 2) {
-          tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
+          FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * StyleNode.field_p / 100);
         }
     }
 
@@ -799,7 +799,7 @@ public final class wizardrun extends GameShell {
         String var31 = null;
         MonochromeBitmapFont var32 = null;
         Object var33 = null;
-        ra var33_ref = null;
+        AchievementUnlock var33_ref = null;
         long[] var38 = null;
         int[] var39 = null;
         String var3_ref_StringLifetime1;
@@ -878,15 +878,15 @@ public final class wizardrun extends GameShell {
             var5 = 1;
             while (true) {
               if (WidgetTheme.field_k > var5) {
-                stackIn_318_0 = ii.field_e[var5].field_d;
+                stackIn_318_0 = NameAvailabilityFactory.field_e[var5].field_d;
                 stackIn_318_1 = var3;
                 if (stackIn_318_0 == stackIn_318_1 &&
-                  ii.field_e[var5].field_p > ii.field_e[var4_int].field_p) {
-                  var3 = ii.field_e[var5].field_d;
+                  NameAvailabilityFactory.field_e[var5].field_p > NameAvailabilityFactory.field_e[var4_int].field_p) {
+                  var3 = NameAvailabilityFactory.field_e[var5].field_d;
                   var4_int = var5;
                 }
-                if (var3 < ii.field_e[var5].field_d) {
-                  var3 = ii.field_e[var5].field_d;
+                if (var3 < NameAvailabilityFactory.field_e[var5].field_d) {
+                  var3 = NameAvailabilityFactory.field_e[var5].field_d;
                   var4_int = var5;
                 }
                 var5++;
@@ -930,7 +930,7 @@ public final class wizardrun extends GameShell {
               if (var4_int == 0) {
                 break;
               }
-              SoftwareRasterizer.setClip(1 + (320 - GameShell.field_x.fullWidth / 2), 0, 320 - GameShell.field_x.fullWidth / 2 + (-2 + GameShell.field_x.fullWidth) * ii.field_e[var4_int].field_p / var5, 480);
+              SoftwareRasterizer.setClip(1 + (320 - GameShell.field_x.fullWidth / 2), 0, 320 - GameShell.field_x.fullWidth / 2 + (-2 + GameShell.field_x.fullWidth) * NameAvailabilityFactory.field_e[var4_int].field_p / var5, 480);
               GameShell.field_x.drawTransparent(320 - GameShell.field_x.fullWidth / 2, var6);
               SoftwareRasterizer.resetClip();
               break;
@@ -972,12 +972,12 @@ public final class wizardrun extends GameShell {
             }
             var3 = 2;
             if (GridActor.field_g > 0) {
-              GameGraphicsResources.wizardFont2.drawString(hh.field_J, 8, 471, 0, -1);
-              GameGraphicsResources.wizardFont2.drawString(hh.field_J, 8, 473, 0, -1);
-              GameGraphicsResources.wizardFont2.drawString(hh.field_J, 7, 472, 0, -1);
-              GameGraphicsResources.wizardFont2.drawString(hh.field_J, 9, 472, 0, -1);
-              GameGraphicsResources.wizardFont2.drawString(hh.field_J, 8, 472, 16777215, -1);
-              var3 = GameGraphicsResources.wizardFont2.stringWidth(hh.field_J) + 8;
+              GameGraphicsResources.wizardFont2.drawString(SpriteTextStyle.field_J, 8, 471, 0, -1);
+              GameGraphicsResources.wizardFont2.drawString(SpriteTextStyle.field_J, 8, 473, 0, -1);
+              GameGraphicsResources.wizardFont2.drawString(SpriteTextStyle.field_J, 7, 472, 0, -1);
+              GameGraphicsResources.wizardFont2.drawString(SpriteTextStyle.field_J, 9, 472, 0, -1);
+              GameGraphicsResources.wizardFont2.drawString(SpriteTextStyle.field_J, 8, 472, 16777215, -1);
+              var3 = GameGraphicsResources.wizardFont2.stringWidth(SpriteTextStyle.field_J) + 8;
               var4_int = 0;
               while (var4_int < GridActor.field_g) {
                 stackIn_378_0 = GridActor.field_g;
@@ -986,25 +986,25 @@ public final class wizardrun extends GameShell {
                   if (GridActor.field_g <= (var4_int + 10)) {
                     if ((var4_int + 5) >= GridActor.field_g) {
                       ValidationState.selectStarSprites[0].drawScaled(var3, 446, 24, 24);
-                      gf.field_bb.drawScaled(var3, 446, 24, 24);
+                      ContentTransitionDialog.field_bb.drawScaled(var3, 446, 24, 24);
                       var3 += 24;
                     } else {
                       ValidationState.selectStarSprites[0].drawScaled(var3, 446, 32, 32);
-                      gf.field_bb.drawScaled(var3, 446, 32, 32);
+                      ContentTransitionDialog.field_bb.drawScaled(var3, 446, 32, 32);
                       FlatTriangleRasterizer.font12.drawString("5", var3, 461, 16777215, -1);
                       var3 += 32;
                       var4_int += 4;
                     }
                   } else {
                     ValidationState.selectStarSprites[0].drawScaled(var3, 446, 32, 32);
-                    gf.field_bb.drawScaled(var3, 446, 32, 32);
+                    ContentTransitionDialog.field_bb.drawScaled(var3, 446, 32, 32);
                     FlatTriangleRasterizer.font12.drawString("10", var3, 461, 16777215, -1);
                     var3 += 32;
                     var4_int += 9;
                   }
                 } else {
                   ValidationState.selectStarSprites[0].drawScaled(var3, 446, 32, 32);
-                  gf.field_bb.drawScaled(var3, 446, 32, 32);
+                  ContentTransitionDialog.field_bb.drawScaled(var3, 446, 32, 32);
                   FlatTriangleRasterizer.font12.drawString("25", var3, 461, 16777215, -1);
                   var3 += 32;
                   var4_int += 24;
@@ -1030,10 +1030,10 @@ public final class wizardrun extends GameShell {
                 if (this.field_Q >= 40) {
                   this.field_Q = 0;
                 }
-                lg.field_a[12 + this.field_Q / 10 % 4].drawTransparent(512, 0);
+                FullscreenFailureKind.field_a[12 + this.field_Q / 10 % 4].drawTransparent(512, 0);
               }
               for (var4_int = 0; WidgetTheme.field_k > var4_int; var4_int++) {
-                ii.field_e[var4_int].drawActor(true);
+                NameAvailabilityFactory.field_e[var4_int].drawActor(true);
               }
             }
             if (AchievementSubmission.field_q) {
@@ -1042,22 +1042,22 @@ public final class wizardrun extends GameShell {
                 if (this.field_Q >= 40) {
                   this.field_Q = 0;
                 }
-                lg.field_a[12 + this.field_Q / 10 % 4].drawTransparent(512, 0);
-                var4_int = -32 + ((15 - ii.field_e[0].tilePosition.row - 1) * 32 - ii.field_e[0].tileOffset.row * 32 / 240);
-                var3 = ii.field_e[0].tilePosition.column * 32 + ii.field_e[0].tileOffset.column * 32 / 240;
-                if (ii.field_e[0].field_h != -1) {
-                  ve.wizardSprites[ii.field_e[0].animationFrame].drawMirrored(var3, var4_int);
+                FullscreenFailureKind.field_a[12 + this.field_Q / 10 % 4].drawTransparent(512, 0);
+                var4_int = -32 + ((15 - NameAvailabilityFactory.field_e[0].tilePosition.row - 1) * 32 - NameAvailabilityFactory.field_e[0].tileOffset.row * 32 / 240);
+                var3 = NameAvailabilityFactory.field_e[0].tilePosition.column * 32 + NameAvailabilityFactory.field_e[0].tileOffset.column * 32 / 240;
+                if (NameAvailabilityFactory.field_e[0].field_h != -1) {
+                  ErrorReportingHelpers.wizardSprites[NameAvailabilityFactory.field_e[0].animationFrame].drawMirrored(var3, var4_int);
                 } else {
-                  ve.wizardSprites[ii.field_e[0].animationFrame].drawTransparent(var3, var4_int);
+                  ErrorReportingHelpers.wizardSprites[NameAvailabilityFactory.field_e[0].animationFrame].drawTransparent(var3, var4_int);
                 }
               }
               if (this.field_R == 12) {
                 var4_int = 352;
-                lg.field_a[12 + (2 + this.field_Q / 10) % 4].drawTransparent(512, 0);
+                FullscreenFailureKind.field_a[12 + (2 + this.field_Q / 10) % 4].drawTransparent(512, 0);
                 var3 = 64;
                 if (this.field_Q < 10) {
-                  var4_int = -64 - ii.field_e[0].tilePosition.row * 32 + (480 - ii.field_e[0].tileOffset.row * 32 / 240);
-                  var3 = 32 * ii.field_e[0].tileOffset.column / 240 + ii.field_e[0].tilePosition.column * 32;
+                  var4_int = -64 - NameAvailabilityFactory.field_e[0].tilePosition.row * 32 + (480 - NameAvailabilityFactory.field_e[0].tileOffset.row * 32 / 240);
+                  var3 = 32 * NameAvailabilityFactory.field_e[0].tileOffset.column / 240 + NameAvailabilityFactory.field_e[0].tilePosition.column * 32;
                   var5 = -var3 + 64;
                   var3 = var3 + var5 * this.field_Q / 10;
                   var6 = -var4_int + 352;
@@ -1070,7 +1070,7 @@ public final class wizardrun extends GameShell {
                 if (this.field_Q > 60) {
                   var5 = 12;
                 }
-                oc.field_c[var5].drawMirrored(var3, var4_int);
+                CoverageFontLoader.field_c[var5].drawMirrored(var3, var4_int);
                 if (50 > this.field_Q) {
                   var6 = this.field_Q * 256 / 50;
                   var7_double = 0.0;
@@ -1107,34 +1107,34 @@ public final class wizardrun extends GameShell {
                 if (this.field_Q > 90) {
                   var5 = 10;
                 }
-                oc.field_c[var5].drawMirrored(var3, var4_int);
+                CoverageFontLoader.field_c[var5].drawMirrored(var3, var4_int);
                 if (this.field_Q >= 50) {
-                  lg.field_a[this.field_Q / 10 % 4 + 22].drawTransparent(512, 288);
+                  FullscreenFailureKind.field_a[this.field_Q / 10 % 4 + 22].drawTransparent(512, 288);
                 } else {
-                  lg.field_a[this.field_Q / 10 % 4 + 18].drawTransparent(512, this.field_Q * 288 / 50);
+                  FullscreenFailureKind.field_a[this.field_Q / 10 % 4 + 18].drawTransparent(512, this.field_Q * 288 / 50);
                 }
               }
               if (14 == this.field_R) {
-                lg.field_a[22 + (2 + this.field_Q / 10) % 4].drawTransparent(512, 288);
+                FullscreenFailureKind.field_a[22 + (2 + this.field_Q / 10) % 4].drawTransparent(512, 288);
                 var3 = this.field_Q + 64;
                 var4_int = 352;
                 var5 = 2 + this.field_Q / 10 % 4;
-                oc.field_c[var5].drawMirrored(var3, var4_int);
+                CoverageFontLoader.field_c[var5].drawMirrored(var3, var4_int);
               }
               if (this.field_R == 15) {
                 var3 = 164;
                 if (this.field_Q < 50) {
-                  lg.field_a[22 + this.field_Q / 10 % 4].drawTransparent(512, 288);
+                  FullscreenFailureKind.field_a[22 + this.field_Q / 10 % 4].drawTransparent(512, 288);
                 } else {
-                  lg.field_a[this.field_Q / 10 % 4 + 26].drawTransparent(512, 288);
+                  FullscreenFailureKind.field_a[this.field_Q / 10 % 4 + 26].drawTransparent(512, 288);
                 }
                 var4_int = 352;
                 var5 = this.field_Q / 5 % 2 + 19;
-                oc.field_c[var5].drawMirrored(var3, var4_int);
+                CoverageFontLoader.field_c[var5].drawMirrored(var3, var4_int);
               }
               if (this.field_R == 16) {
                 var4_int = 352;
-                lg.field_a[26 + (2 + this.field_Q / 10) % 4].drawTransparent(512, 288);
+                FullscreenFailureKind.field_a[26 + (2 + this.field_Q / 10) % 4].drawTransparent(512, 288);
                 var3 = 164;
                 var5 = 10;
                 if (this.field_Q > 10) {
@@ -1146,23 +1146,23 @@ public final class wizardrun extends GameShell {
                 if (50 <= this.field_Q) {
                   var5 = 13;
                 }
-                oc.field_c[var5].drawMirrored(var3, var4_int);
+                CoverageFontLoader.field_c[var5].drawMirrored(var3, var4_int);
               }
               if (this.field_R == 17) {
-                lg.field_a[(this.field_Q / 10 + 2) % 4 + 30].drawTransparent(512, 288);
-                oc.field_c[(this.field_Q / 5 + 2) % 2 + 17].drawTransparent(164, 352);
+                FullscreenFailureKind.field_a[(this.field_Q / 10 + 2) % 4 + 30].drawTransparent(512, 288);
+                CoverageFontLoader.field_c[(this.field_Q / 5 + 2) % 2 + 17].drawTransparent(164, 352);
               }
               if (this.field_R == 1) {
                 var3 = 256;
                 var4_int = 288;
                 var5 = this.field_Q / 10 % 8 - 0;
-                lg.field_a[var5].drawTransparent(var3, var4_int);
+                FullscreenFailureKind.field_a[var5].drawTransparent(var3, var4_int);
               }
               if (2 == this.field_R) {
                 var5 = this.field_Q / 10 % 8 - 0;
                 var3 = 256;
                 var4_int = 288;
-                lg.field_a[var5].drawTransparent(var3, var4_int);
+                FullscreenFailureKind.field_a[var5].drawTransparent(var3, var4_int);
                 var4_int = var4_int - (32 - this.field_Q + 100);
                 var5 = this.field_Q / 5 % 4 + 6;
                 var3 = var3 - (-64 + (100 - this.field_Q) * 5);
@@ -1174,34 +1174,34 @@ public final class wizardrun extends GameShell {
                 var3 = 256;
                 var4_int = var4_int - this.field_Q;
                 var3 = var3 + 5 * this.field_Q;
-                lg.field_a[var5].drawTransparent(var3, var4_int);
+                FullscreenFailureKind.field_a[var5].drawTransparent(var3, var4_int);
               }
               if (this.field_R == 4) {
                 var3 = 2 * this.field_Q - 64;
                 var5 = 6 + this.field_Q / 10 % 4;
                 var4_int = 352;
-                oc.field_c[var5].drawMirrored(var3, var4_int);
+                CoverageFontLoader.field_c[var5].drawMirrored(var3, var4_int);
               }
               if (this.field_R == 5) {
                 var5 = 6 + (2 + this.field_Q / 10) % 4;
                 var4_int = 352;
                 if (this.field_Q < 100) {
                   var3 = -64 + (2 * this.field_Q + 200);
-                  oc.field_c[var5].drawMirrored(var3, var4_int);
+                  CoverageFontLoader.field_c[var5].drawMirrored(var3, var4_int);
                 } else {
                   var3 = 336;
                   var5 = 7;
                   if (this.field_Q < 150) {
-                    oc.field_c[var5].drawMirrored(var3, var4_int);
+                    CoverageFontLoader.field_c[var5].drawMirrored(var3, var4_int);
                   } else {
-                    oc.field_c[var5].drawTransparent(var3, var4_int);
+                    CoverageFontLoader.field_c[var5].drawTransparent(var3, var4_int);
                   }
                 }
                 if (100 < this.field_Q) {
                   var3 = 64 + (int)(Math.sin(3.14 * (double)this.field_Q / 100.0) * 32.0);
                   var4_int = -448 + 2 * this.field_Q;
                   var5 = 36 + this.field_Q / 25 % 2;
-                  oc.field_c[var5].drawTransparent(var3, var4_int);
+                  CoverageFontLoader.field_c[var5].drawTransparent(var3, var4_int);
                 }
               }
               if (6 == this.field_R) {
@@ -1221,21 +1221,21 @@ public final class wizardrun extends GameShell {
                 if (this.field_Q > 175) {
                   var5 = 29;
                 }
-                oc.field_c[var5].drawTransparent(var3, var4_int);
+                CoverageFontLoader.field_c[var5].drawTransparent(var3, var4_int);
                 var3 = (int)(Math.sin((double)this.field_Q * 3.14 / 100.0) * 32.0) + 64;
                 var5 = 36 + this.field_Q / 25 % 2;
                 var4_int = 2 * this.field_Q - 48;
-                oc.field_c[var5].drawTransparent(var3, var4_int);
+                CoverageFontLoader.field_c[var5].drawTransparent(var3, var4_int);
               }
               if (this.field_R == 7) {
                 if (this.field_Q >= 50) {
                   var4_int = 352;
                   var3 = 64;
                   if (this.field_Q >= 75) {
-                    oc.field_c[10].drawTransparent(var3, var4_int);
+                    CoverageFontLoader.field_c[10].drawTransparent(var3, var4_int);
                   } else {
-                    oc.field_c[0].drawTransparent(var3, var4_int);
-                    oc.field_c[36].drawTransparent(var3, var4_int);
+                    CoverageFontLoader.field_c[0].drawTransparent(var3, var4_int);
+                    CoverageFontLoader.field_c[36].drawTransparent(var3, var4_int);
                   }
                 } else {
                   var5 = this.field_Q / 5 % 4 + 6;
@@ -1243,11 +1243,11 @@ public final class wizardrun extends GameShell {
                   var4_int = 352;
                   var6 = 64 - var3;
                   var3 = var3 + var6 * this.field_Q / 50;
-                  oc.field_c[var5].drawTransparent(var3, var4_int);
+                  CoverageFontLoader.field_c[var5].drawTransparent(var3, var4_int);
                   var5 = 36;
                   var3 = 64;
                   var4_int = 352;
-                  oc.field_c[var5].drawTransparent(var3, var4_int);
+                  CoverageFontLoader.field_c[var5].drawTransparent(var3, var4_int);
                 }
               }
               if (this.field_R == 8) {
@@ -1255,17 +1255,17 @@ public final class wizardrun extends GameShell {
                 var4_int = 352;
                 if (40 > this.field_Q) {
                   var3 = 64 + this.field_Q * 3;
-                  oc.field_c[var5].drawMirrored(var3, var4_int);
+                  CoverageFontLoader.field_c[var5].drawMirrored(var3, var4_int);
                 }
                 if (this.field_Q >= 40 &&
                   this.field_Q < 60) {
                   var3 = 184;
-                  oc.field_c[3].drawMirrored(var3, var4_int);
+                  CoverageFontLoader.field_c[3].drawMirrored(var3, var4_int);
                 }
                 if (this.field_Q >= 60 &&
                   this.field_Q <= 100) {
                   var3 = 364 - this.field_Q * 3;
-                  oc.field_c[var5].drawTransparent(var3, var4_int);
+                  CoverageFontLoader.field_c[var5].drawTransparent(var3, var4_int);
                 }
               }
               if (this.field_R == 9) {
@@ -1279,9 +1279,9 @@ public final class wizardrun extends GameShell {
                   var5 = 12;
                 }
                 if (3 < GridActor.field_g) {
-                  oc.field_c[var5].drawMirrored(var3, var4_int);
+                  CoverageFontLoader.field_c[var5].drawMirrored(var3, var4_int);
                 } else {
-                  oc.field_c[var5].drawTransparent(var3, var4_int);
+                  CoverageFontLoader.field_c[var5].drawTransparent(var3, var4_int);
                 }
               }
             }
@@ -1305,7 +1305,7 @@ public final class wizardrun extends GameShell {
                 if (!ReflectionCheck.field_s) {
                   stackIn_25_0 = 0;
                 } else {
-                  stackIn_25_0 = ee.field_p;
+                  stackIn_25_0 = StyleNode.field_p;
                 }
                 var8 = stackIn_25_0;
                 ValidationState.selectStarSprites[0].a(174, -10 + var3 - 6, -93, 20, 0);
@@ -1327,7 +1327,7 @@ public final class wizardrun extends GameShell {
                 ValidationState.selectStarSprites[0].a(174 + var8 * 108 / 104, var3 - 6, -95, 40, 0);
               }
               if (3 == var5) {
-                if (tl.field_e) {
+                if (FriendOrderingHelpers.field_e) {
                   stackIn_37_0 = ConfirmedEmailValidator.field_o;
                 } else {
                   stackIn_37_0 = 0;
@@ -1432,13 +1432,13 @@ public final class wizardrun extends GameShell {
               }
               var6_ref_String = "BLAH BLAH BLAH!";
               if (GridActor.field_l == 0) {
-                var6_ref_String = aa.field_kb;
+                var6_ref_String = FriendEntry.field_kb;
               }
               if (GridActor.field_l == 1) {
                 var6_ref_String = GameShell.field_o;
               }
               if (GridActor.field_l == 2) {
-                var6_ref_String = ra.field_l;
+                var6_ref_String = AchievementUnlock.field_l;
               }
               if (GridActor.field_l == 3) {
                 var6_ref_String = SecondaryNodeDeque.field_c;
@@ -1447,9 +1447,9 @@ public final class wizardrun extends GameShell {
                 var6_ref_String = DialogLayer.field_H;
               }
               if (GridActor.field_l == 5) {
-                var6_ref_String = kk.field_vb;
+                var6_ref_String = NameCheckProgressDialog.field_vb;
               }
-              GameGraphicsResources.wizardFont2.drawStringCentered(qj.field_c + (GridActor.field_l + 1), 320, var4_int + 192 + (16 + GameGraphicsResources.wizardFont2.field_M), var5, -1);
+              GameGraphicsResources.wizardFont2.drawStringCentered(NineSliceFrame.field_c + (GridActor.field_l + 1), 320, var4_int + 192 + (16 + GameGraphicsResources.wizardFont2.field_M), var5, -1);
               GameGraphicsResources.wizardFont2.drawStringCentered(var6_ref_String, 320, 2 * GameGraphicsResources.wizardFont2.field_M + (208 + var4_int), var5, -1);
               if (var5 == 16777088) {
                 GameGraphicsResources.wizardFont2.drawStringCentered(BufferedRandomAccessFile.field_g, 320, 192 + var4_int + 16 + 3 * GameGraphicsResources.wizardFont2.field_M, var5, -1);
@@ -1457,11 +1457,11 @@ public final class wizardrun extends GameShell {
               if (16711680 == var5) {
                 GameGraphicsResources.wizardFont2.drawStringCentered(GameKeyHandler.field_a, 320, 192 - (-var4_int - 16 - 3 * GameGraphicsResources.wizardFont2.field_M), var5, -1);
               }
-              if (!e.a(-109)) {
+              if (!ThreePieceFrameHelpers.a(-109)) {
                 if (var5 == 16777215 &&
                   this.a(400, 128, 65535, ProgressQuery.field_l, 1) &&
                   5 > FadingDialog.field_I &&
-                  0 >= pa.field_c) {
+                  0 >= EncryptedLoginHelpers.field_c) {
                   DecodedSpritePalette.field_a = DecodedSpritePalette.field_a - GridActor.field_g;
                   GridActor.field_g = 0;
                   AccountCreationForm.field_T = 0;
@@ -1479,28 +1479,28 @@ public final class wizardrun extends GameShell {
                 }
               } else {
                 var7 = 98;
-                if (mh.field_tb == 2) {
+                if (AccountProgressDialog.field_tb == 2) {
                   var7 += 20;
                 }
                 if (this.a(400, var7, 65535, SoundCache.field_b, 1) &&
                   FadingDialog.field_I < 5 &&
-                  pa.field_c <= 0) {
+                  EncryptedLoginHelpers.field_c <= 0) {
                   SocketJs5Transport.a(11, 11, -127);
                 }
                 if (var5 == 16777215) {
                   var7 = 320;
-                  if (mh.field_tb == 2) {
+                  if (AccountProgressDialog.field_tb == 2) {
                     var7 += 30;
                   }
                   if (this.a(400, var7, 65535, ProgressQuery.field_l, 1) &&
                     FadingDialog.field_I < 5 &&
-                    pa.field_c <= 0) {
+                    EncryptedLoginHelpers.field_c <= 0) {
                     HighscorePlayer.field_b = HighscorePlayer.field_b + GridActor.field_g;
                     GridActor.field_g = 0;
                     FadingDialog.field_I = 5;
                     if (GridActor.field_l > 0) {
                       DelegatingCanvas.field_b = false;
-                      me.field_f = me.field_f + 5;
+                      LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f + 5;
                       GridActor.field_g = 5;
                     }
                     WidgetTheme.field_k = 0;
@@ -1518,10 +1518,10 @@ public final class wizardrun extends GameShell {
               if (FadingDialog.field_I >= 5) {
                 break;
               }
-              if (pa.field_c > 0) {
+              if (EncryptedLoginHelpers.field_c > 0) {
                 break;
               }
-              pa.field_c = 32;
+              EncryptedLoginHelpers.field_c = 32;
               break;
             }
           }
@@ -1540,7 +1540,7 @@ public final class wizardrun extends GameShell {
               stackIn_148_0 = AgeValidator.field_l;
             }
             var5 = stackIn_148_0;
-            if (ve.a((byte) 50, 0) ||
+            if (ErrorReportingHelpers.a((byte) 50, 0) ||
               (var5 & 2048) > 0) {
               var3 = 325;
             }
@@ -1553,7 +1553,7 @@ public final class wizardrun extends GameShell {
               stackIn_224_1 = -12;
               if (stackIn_224_0 == stackIn_224_1) {
                 if ((1 << var9 & var5) == 0 &&
-                  !ve.a((byte) 103, 0)) {
+                  !ErrorReportingHelpers.a((byte) 103, 0)) {
                   var10 = 0;
                 }
                 var3 = 525;
@@ -1562,7 +1562,7 @@ public final class wizardrun extends GameShell {
               boolean decompiledFrameRemainder0 = true;
               if (var10 != 0) {
                 var11 = 0;
-                if (tk.field_a == var9) {
+                if (HyperlinkPainter.field_a == var9) {
                   var11 = 2;
                   ValidationState.selectStarSprites[0].drawScaled(var3 - 8, -8 + var4_int, 48, 48);
                 }
@@ -1572,7 +1572,7 @@ public final class wizardrun extends GameShell {
                   NetworkArchiveRequest.field_B <= (32 + var4_int) && (AgeValidator.field_l == 0 ||
                   0 != (1 << var9 & var5))) {
                   var11 = 2;
-                  if (~tk.field_a != ~var9) {
+                  if (~HyperlinkPainter.field_a != ~var9) {
                     ValidationState.selectStarSprites[0].drawScaledAlpha(-4 + var3, var4_int - 4, 40, 40, 128);
                   }
                   BeveledFrameFactory.field_f = var9;
@@ -1594,12 +1594,12 @@ public final class wizardrun extends GameShell {
                   FullscreenFocusCanvas.field_a[var9].drawDownscaledAveraged(-var11 + var3, var4_int - var11, 2 * var11 + 32, 2 * var11 + 32);
                 }
                 if (decompiledFrameRemainder0) {
-                  if (~var9 == ~tk.field_a ||
+                  if (~var9 == ~HyperlinkPainter.field_a ||
                     !(AchievementSubmission.field_n < var3) &&
                     !(AchievementSubmission.field_n > (var3 + 32)) &&
                     !(var4_int > NetworkArchiveRequest.field_B) &&
                     !(32 + var4_int < NetworkArchiveRequest.field_B) &&
-                    tk.field_a == -1) {
+                    HyperlinkPainter.field_a == -1) {
                     var7 = 0;
                     this.drawBorderedText(-12926, SpriteState.field_t[var9], 15583488, 440, 255);
                     if ((1 << var9 & var5) == 0) {
@@ -1607,9 +1607,9 @@ public final class wizardrun extends GameShell {
                       FlatTriangleRasterizer.font12.drawStringRight(LoginMethodPreference.field_b, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
                       FlatTriangleRasterizer.font12.drawStringRight(LoginMethodPreference.field_b, 620, GameGraphicsResources.wizardFont2.field_M + 247, 16727871, -1);
                     } else {
-                      FlatTriangleRasterizer.font12.drawStringRight(MeshWorkspaceHelpers.field_c, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
-                      FlatTriangleRasterizer.font12.drawStringRight(MeshWorkspaceHelpers.field_c, 620, 246 + GameGraphicsResources.wizardFont2.field_M, 0, 0);
-                      FlatTriangleRasterizer.font12.drawStringRight(MeshWorkspaceHelpers.field_c, 620, 247 + GameGraphicsResources.wizardFont2.field_M, 16777215, -1);
+                      FlatTriangleRasterizer.font12.drawStringRight(RankingWorkspaceHelpers.field_c, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
+                      FlatTriangleRasterizer.font12.drawStringRight(RankingWorkspaceHelpers.field_c, 620, 246 + GameGraphicsResources.wizardFont2.field_M, 0, 0);
+                      FlatTriangleRasterizer.font12.drawStringRight(RankingWorkspaceHelpers.field_c, 620, 247 + GameGraphicsResources.wizardFont2.field_M, 16777215, -1);
                     }
                     var12 = GameGraphicsResources.wizardFont2.field_M * 5 / 2 + 231;
                     if ((1 << var9 & var5) != 0) {
@@ -1629,22 +1629,22 @@ public final class wizardrun extends GameShell {
                     if (0 == (var5 & 1 << var9) &&
                       5 <= var9 &&
                       var9 != 11) {
-                      FlatTriangleRasterizer.font12.a(f.field_f, 398, var12 - 1, 222, 480, 0, 0, 0, 0, var8);
-                      FlatTriangleRasterizer.font12.a(f.field_f, 397, var12, 222, 480, 0, 0, 0, 0, var8);
-                      var12 = var12 + (var8 * 3 + 0 * FlatTriangleRasterizer.font12.a(f.field_f, 398, var12, 222, 480, 16777215, -1, 0, 0, var8));
+                      FlatTriangleRasterizer.font12.a(HighscorePlayerState.field_f, 398, var12 - 1, 222, 480, 0, 0, 0, 0, var8);
+                      FlatTriangleRasterizer.font12.a(HighscorePlayerState.field_f, 397, var12, 222, 480, 0, 0, 0, 0, var8);
+                      var12 = var12 + (var8 * 3 + 0 * FlatTriangleRasterizer.font12.a(HighscorePlayerState.field_f, 398, var12, 222, 480, 16777215, -1, 0, 0, var8));
                     } else {
-                      FlatTriangleRasterizer.font12.a(mh.field_sb[var9], 397, -FlatTriangleRasterizer.font12.field_M + var12, 222, 480, 0, 0, 0, 0, var8);
-                      FlatTriangleRasterizer.font12.a(mh.field_sb[var9], 398, -FlatTriangleRasterizer.font12.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, var8);
-                      var12 = var12 + (3 * var8 + FlatTriangleRasterizer.font12.a(mh.field_sb[var9], 398, var12 - FlatTriangleRasterizer.font12.field_M, 222, 480, 16777215, -1, 0, 0, var8) * 0);
+                      FlatTriangleRasterizer.font12.a(AccountProgressDialog.field_sb[var9], 397, -FlatTriangleRasterizer.font12.field_M + var12, 222, 480, 0, 0, 0, 0, var8);
+                      FlatTriangleRasterizer.font12.a(AccountProgressDialog.field_sb[var9], 398, -FlatTriangleRasterizer.font12.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, var8);
+                      var12 = var12 + (3 * var8 + FlatTriangleRasterizer.font12.a(AccountProgressDialog.field_sb[var9], 398, var12 - FlatTriangleRasterizer.font12.field_M, 222, 480, 16777215, -1, 0, 0, var8) * 0);
                       GameGraphicsResources.wizardFont2.a(ResourceArchive.field_e + GameShell.field_m[var9], 397, var12 - FlatTriangleRasterizer.font12.field_M, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
                       GameGraphicsResources.wizardFont2.a(ResourceArchive.field_e + GameShell.field_m[var9], 398, -FlatTriangleRasterizer.font12.field_M + (-1 + var12), 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
                       var12 = var12 + GameGraphicsResources.wizardFont2.field_M * GameGraphicsResources.wizardFont2.a(ResourceArchive.field_e + GameShell.field_m[var9], 398, -FlatTriangleRasterizer.font12.field_M + var12, 222, 480, 16777215, -1, 0, 0, GameGraphicsResources.wizardFont2.field_M);
-                      GameGraphicsResources.wizardFont2.a(nf.field_a, 397, var12 - FlatTriangleRasterizer.font12.field_M, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
-                      GameGraphicsResources.wizardFont2.a(nf.field_a, 398, -FlatTriangleRasterizer.font12.field_M - 1 + var12, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
-                      GameGraphicsResources.wizardFont2.a(nf.field_a, 398, -FlatTriangleRasterizer.font12.field_M + var12, 222, 480, 16777215, -1, 0, 0, GameGraphicsResources.wizardFont2.field_M);
+                      GameGraphicsResources.wizardFont2.a(AccountFormTextHelpers.field_a, 397, var12 - FlatTriangleRasterizer.font12.field_M, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
+                      GameGraphicsResources.wizardFont2.a(AccountFormTextHelpers.field_a, 398, -FlatTriangleRasterizer.font12.field_M - 1 + var12, 222, 480, 0, 0, 0, 0, GameGraphicsResources.wizardFont2.field_M);
+                      GameGraphicsResources.wizardFont2.a(AccountFormTextHelpers.field_a, 398, -FlatTriangleRasterizer.font12.field_M + var12, 222, 480, 16777215, -1, 0, 0, GameGraphicsResources.wizardFont2.field_M);
                       var13 = TickClock.field_e[var9];
                       for (var14 = 0; var14 < var13; var14++) {
-                        wc.field_f.drawQuarterSize(GameGraphicsResources.wizardFont2.stringWidth(nf.field_a) - var13 * 3 / 2 + (8 * var14 + 398), 4 + var12 - FlatTriangleRasterizer.font12.field_M);
+                        ChatMessage.field_f.drawQuarterSize(GameGraphicsResources.wizardFont2.stringWidth(AccountFormTextHelpers.field_a) - var13 * 3 / 2 + (8 * var14 + 398), 4 + var12 - FlatTriangleRasterizer.font12.field_M);
                       }
                     }
                   }
@@ -1667,13 +1667,13 @@ public final class wizardrun extends GameShell {
               }
               var9 = GameGraphicsResources.wizardFont2.field_M * 5 / 2 + 231;
               var9 = var9 + GameGraphicsResources.wizardFont2.field_M;
-              GameGraphicsResources.wizardFont2.a(gk.field_r, 260, -1 + (var9 - 32), 360, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
-              GameGraphicsResources.wizardFont2.a(gk.field_r, 259, -32 + var9, 360, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
-              GameGraphicsResources.wizardFont2.a(gk.field_r, 260, -32 + var9, 360, 480, 16777215, -1, 1, 0, GameGraphicsResources.wizardFont2.field_M);
-              if (e.a(-86)) {
-                GameGraphicsResources.wizardFont2.a(vl.field_n, 260, -1 + var9 + 32, 360, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
-                GameGraphicsResources.wizardFont2.a(vl.field_n, 259, 32 + var9, 360, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
-                GameGraphicsResources.wizardFont2.a(vl.field_n, 260, 32 + var9, 360, 480, 16777215, -1, 1, 0, GameGraphicsResources.wizardFont2.field_M);
+              GameGraphicsResources.wizardFont2.a(Bzip2State.field_r, 260, -1 + (var9 - 32), 360, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
+              GameGraphicsResources.wizardFont2.a(Bzip2State.field_r, 259, -32 + var9, 360, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
+              GameGraphicsResources.wizardFont2.a(Bzip2State.field_r, 260, -32 + var9, 360, 480, 16777215, -1, 1, 0, GameGraphicsResources.wizardFont2.field_M);
+              if (ThreePieceFrameHelpers.a(-86)) {
+                GameGraphicsResources.wizardFont2.a(CheckboxPainter.field_n, 260, -1 + var9 + 32, 360, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
+                GameGraphicsResources.wizardFont2.a(CheckboxPainter.field_n, 259, 32 + var9, 360, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
+                GameGraphicsResources.wizardFont2.a(CheckboxPainter.field_n, 260, 32 + var9, 360, 480, 16777215, -1, 1, 0, GameGraphicsResources.wizardFont2.field_M);
               }
             }
           }
@@ -1684,12 +1684,12 @@ public final class wizardrun extends GameShell {
             CacheEntry.a(DropTargetWidget.frameSprites, 285, (byte) -110, 310, 350, 120);
             var21 = new StringBuilder(0);
             var5_ref_String = var21.toString();
-            if (!e.a(-122)) {
-              FlatTriangleRasterizer.font12.a(we.field_e, 289, 370, 340, 64, 0, 0, 1, 1, FlatTriangleRasterizer.font12.field_M);
-              FlatTriangleRasterizer.font12.a(we.field_e, 290, 369, 340, 64, 0, 0, 1, 1, FlatTriangleRasterizer.font12.field_M);
-              FlatTriangleRasterizer.font12.a(we.field_e, 290, 370, 340, 64, 16744448, -1, 1, 1, FlatTriangleRasterizer.font12.field_M);
+            if (!ThreePieceFrameHelpers.a(-122)) {
+              FlatTriangleRasterizer.font12.a(UiSpriteThemeHelpers.field_e, 289, 370, 340, 64, 0, 0, 1, 1, FlatTriangleRasterizer.font12.field_M);
+              FlatTriangleRasterizer.font12.a(UiSpriteThemeHelpers.field_e, 290, 369, 340, 64, 0, 0, 1, 1, FlatTriangleRasterizer.font12.field_M);
+              FlatTriangleRasterizer.font12.a(UiSpriteThemeHelpers.field_e, 290, 370, 340, 64, 16744448, -1, 1, 1, FlatTriangleRasterizer.font12.field_M);
               if (null == DualLinkDeque.field_g) {
-                DualLinkDeque.field_g = HotspotTextWidget.a(10, 2, (byte) 59, 3, 1);
+                DualLinkDeque.field_g = HotspotTextWidget.requestHighscores(10, 2, (byte) 59, 3, 1);
               }
               if (DualLinkDeque.field_g.field_m) {
                 if (null != DualLinkDeque.field_g.field_n) {
@@ -1707,7 +1707,7 @@ public final class wizardrun extends GameShell {
                     if (stackIn_513_0 > stackIn_513_1 &&
                       var9 == 0 &&
                       var10_ref_ai != null &&
-                      qj.a(var22[var12Lifetime1], 66) &&
+                      NineSliceFrame.isCurrentPlayerName(var22[var12Lifetime1], 66) &&
                       var10_ref_ai.field_n == var38[var12Lifetime1] &&
                       RasterSnapshot.field_k == var39[var12Lifetime1]) {
                       var13Lifetime1 = 16777215;
@@ -1763,17 +1763,17 @@ public final class wizardrun extends GameShell {
                       var11Lifetime1 = 1;
                       if (var12Lifetime1 == 0) {
                         FlatTriangleRasterizer.font12.drawString(UsernameLoginCredentials.field_l, 299, 16 + var3, 0, 0);
-                        FlatTriangleRasterizer.font12.drawStringRight(qj.field_f, 619, var3 + 16, 0, 0);
+                        FlatTriangleRasterizer.font12.drawStringRight(NineSliceFrame.field_f, 619, var3 + 16, 0, 0);
                         FlatTriangleRasterizer.font12.drawString(UsernameLoginCredentials.field_l, 300, 16 + (var3 - 1), 0, 0);
-                        FlatTriangleRasterizer.font12.drawStringRight(qj.field_f, 620, -1 + (var3 + 16), 0, 0);
+                        FlatTriangleRasterizer.font12.drawStringRight(NineSliceFrame.field_f, 620, -1 + (var3 + 16), 0, 0);
                         FlatTriangleRasterizer.font12.drawString(UsernameLoginCredentials.field_l, 300, var3 + 16, 16777215, -1);
-                        FlatTriangleRasterizer.font12.drawStringRight(qj.field_f, 620, var3 + 16, 16777215, -1);
-                        if ((FlatTriangleRasterizer.font12.stringWidth(HighscoreRequest.field_p) / 2 + 510) < (620 - (FlatTriangleRasterizer.font12.stringWidth(qj.field_f) + 8))) {
+                        FlatTriangleRasterizer.font12.drawStringRight(NineSliceFrame.field_f, 620, var3 + 16, 16777215, -1);
+                        if ((FlatTriangleRasterizer.font12.stringWidth(HighscoreRequest.field_p) / 2 + 510) < (620 - (FlatTriangleRasterizer.font12.stringWidth(NineSliceFrame.field_f) + 8))) {
                           FlatTriangleRasterizer.font12.drawStringCentered(HighscoreRequest.field_p, 509, 16 + var3, 0, 0);
                           FlatTriangleRasterizer.font12.drawStringCentered(HighscoreRequest.field_p, 510, -1 + var3 + 16, 0, 0);
                           FlatTriangleRasterizer.font12.drawStringCentered(HighscoreRequest.field_p, 510, 16 + var3, 16777215, -1);
                         } else {
-                          var14Lifetime1 = -FlatTriangleRasterizer.font12.stringWidth(qj.field_f) + 620 - 8;
+                          var14Lifetime1 = -FlatTriangleRasterizer.font12.stringWidth(NineSliceFrame.field_f) + 620 - 8;
                           FlatTriangleRasterizer.font12.drawStringRight(HighscoreRequest.field_p, var14Lifetime1 - 1, var3 + 16, 0, 0);
                           FlatTriangleRasterizer.font12.drawStringRight(HighscoreRequest.field_p, var14Lifetime1, 16 + (var3 - 1), 0, 0);
                           FlatTriangleRasterizer.font12.drawStringRight(HighscoreRequest.field_p, var14Lifetime1, var3 + 16, 16777215, -1);
@@ -1838,7 +1838,7 @@ public final class wizardrun extends GameShell {
                   FlatTriangleRasterizer.font12.drawStringCentered(PowerOfTwoHelpers.field_a, 466, 248, 16744448, -1);
                 }
               } else {
-                FlatTriangleRasterizer.font12.drawStringCentered(lf.field_a, 466, 144, 16744448, -1);
+                FlatTriangleRasterizer.font12.drawStringCentered(HighscoreMessages.field_a, 466, 144, 16744448, -1);
               }
               var3 = 418;
             } else {
@@ -1883,14 +1883,14 @@ public final class wizardrun extends GameShell {
             var5Lifetime1 = 64 + var4_intLifetime1;
             if (0 == HuffmanDecoder.field_c &&
               ToggleButton.field_F != UsernameLoginCredentials.field_j) {
-              var6Lifetime1 = GameGraphicsResources.wizardFont2.stringWidth(ol.field_d);
+              var6Lifetime1 = GameGraphicsResources.wizardFont2.stringWidth(AccountSocketHelpers.field_d);
               SoftwareRasterizer.fillRect(5 + (320 - var6Lifetime1 / 2 - 16), 5 + (-GameGraphicsResources.wizardFont2.field_M + (var5Lifetime1 - 16)), var6Lifetime1 + 32 - 10, 118 + IndexedSpriteArrayFactory.wizardFont.field_M, 13158);
               CacheEntry.a(DropTargetWidget.frameSprites, -16 + (320 - var6Lifetime1 / 2), (byte) -110, IndexedSpriteArrayFactory.wizardFont.field_M + 128, var6Lifetime1 + 32, var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
               this.drawOutlinedText(var5Lifetime1, TimedValidator.field_c, 16777215, 123, 319);
               var5Lifetime1 += 32;
-              this.drawOutlinedText(var5Lifetime1, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 45, PcmResampler.field_c), 16777215, -83, 319);
+              this.drawOutlinedText(var5Lifetime1, WeightedLruCache.formatPlaceholders(new String[]{IntrusiveNode.field_h[SpriteTextStyle.field_S], IntrusiveNode.field_h[AccountFormTextHelpers.field_d]}, (byte) 45, PcmResampler.field_c), 16777215, -83, 319);
               var5Lifetime1 += 32;
-              this.drawOutlinedText(var5Lifetime1, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, pb.field_i), 16777215, -91, 319);
+              this.drawOutlinedText(var5Lifetime1, WeightedLruCache.formatPlaceholders(new String[]{IntrusiveNode.field_h[SpriteTextStyle.field_S], IntrusiveNode.field_h[AccountFormTextHelpers.field_d]}, (byte) 126, MidiKeyUsage.field_i), 16777215, -91, 319);
               var5Lifetime1 += 32;
             }
             if (1 == HuffmanDecoder.field_c) {
@@ -1903,24 +1903,24 @@ public final class wizardrun extends GameShell {
               var5Lifetime1 += 64;
             }
             if (2 == HuffmanDecoder.field_c) {
-              var6Lifetime1Lifetime2 = GameGraphicsResources.wizardFont2.stringWidth(vl.field_a);
-              if (GameGraphicsResources.wizardFont2.stringWidth(ol.field_d) > var6Lifetime1Lifetime2) {
-                var6Lifetime1Lifetime2 = GameGraphicsResources.wizardFont2.stringWidth(ol.field_d);
+              var6Lifetime1Lifetime2 = GameGraphicsResources.wizardFont2.stringWidth(CheckboxPainter.field_a);
+              if (GameGraphicsResources.wizardFont2.stringWidth(AccountSocketHelpers.field_d) > var6Lifetime1Lifetime2) {
+                var6Lifetime1Lifetime2 = GameGraphicsResources.wizardFont2.stringWidth(AccountSocketHelpers.field_d);
               }
               if (608 >= var6Lifetime1Lifetime2) {
                 SoftwareRasterizer.fillRect(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -11 + (-GameGraphicsResources.wizardFont2.field_M + var5Lifetime1), -10 + (32 + var6Lifetime1Lifetime2), IndexedSpriteArrayFactory.wizardFont.field_M + 150, 13158);
                 CacheEntry.a(DropTargetWidget.frameSprites, 304 - var6Lifetime1Lifetime2 / 2, (byte) -110, IndexedSpriteArrayFactory.wizardFont.field_M + 160, var6Lifetime1Lifetime2 + 32, var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
                 this.drawOutlinedText(var5Lifetime1, DiskCacheWorker.field_h, 16777215, -102, 319);
                 var5Lifetime1 += 32;
-                this.drawOutlinedText(var5Lifetime1, vl.field_a, 16777215, -126, 319);
+                this.drawOutlinedText(var5Lifetime1, CheckboxPainter.field_a, 16777215, -126, 319);
                 var5Lifetime1 += 32;
-                this.drawOutlinedText(var5Lifetime1, ld.field_a, 16777215, -35, 319);
+                this.drawOutlinedText(var5Lifetime1, MusicPatchLoader.field_a, 16777215, -35, 319);
                 var5Lifetime1 += 32;
               } else {
                 var6Lifetime1Lifetime2 = 608;
                 SoftwareRasterizer.fillRect(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16 + 5, -10 + (32 + var6Lifetime1Lifetime2), 128 + (IndexedSpriteArrayFactory.wizardFont.field_M - 10), 13158);
                 CacheEntry.a(DropTargetWidget.frameSprites, 304 - var6Lifetime1Lifetime2 / 2, (byte) -110, IndexedSpriteArrayFactory.wizardFont.field_M + 128, 32 + var6Lifetime1Lifetime2, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16);
-                var28 = DiskCacheWorker.field_h + " " + vl.field_a + " " + ld.field_a;
+                var28 = DiskCacheWorker.field_h + " " + CheckboxPainter.field_a + " " + MusicPatchLoader.field_a;
                 FlatTriangleRasterizer.font12.a(var28, 32, -20 + var5Lifetime1, 575, 48, 0, 0, 1, 1, 14);
                 FlatTriangleRasterizer.font12.a(var28, 32, -20 + var5Lifetime1 - 1, 576, 48, 0, 0, 1, 1, 14);
                 FlatTriangleRasterizer.font12.a(var28, 32, var5Lifetime1 - 20, 576, 48, 16777215, -1, 1, 1, 14);
@@ -1938,9 +1938,9 @@ public final class wizardrun extends GameShell {
               var6Lifetime1Lifetime3 = 600;
               SoftwareRasterizer.fillRect(-11 + (-(var6Lifetime1Lifetime3 / 2) + 320), -11 + (-GameGraphicsResources.wizardFont2.field_M + var5Lifetime1), 22 + var6Lifetime1Lifetime3, 160 + (IndexedSpriteArrayFactory.wizardFont.field_M - 10), 13158);
               CacheEntry.a(DropTargetWidget.frameSprites, -16 - var6Lifetime1Lifetime3 / 2 + 320, (byte) -110, 160 + IndexedSpriteArrayFactory.wizardFont.field_M, 32 + var6Lifetime1Lifetime3, -16 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M);
-              GameGraphicsResources.wizardFont2.a(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 102, StrongCacheEntry.field_w), -(var6Lifetime1Lifetime3 / 2) + 319, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
-              GameGraphicsResources.wizardFont2.a(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 61, StrongCacheEntry.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
-              GameGraphicsResources.wizardFont2.a(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 107, StrongCacheEntry.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -24 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 16777215, -1, 0, 0, 20);
+              GameGraphicsResources.wizardFont2.a(WeightedLruCache.formatPlaceholders(new String[]{IntrusiveNode.field_h[SpriteTextStyle.field_S], IntrusiveNode.field_h[AccountFormTextHelpers.field_d]}, (byte) 102, StrongCacheEntry.field_w), -(var6Lifetime1Lifetime3 / 2) + 319, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
+              GameGraphicsResources.wizardFont2.a(WeightedLruCache.formatPlaceholders(new String[]{IntrusiveNode.field_h[SpriteTextStyle.field_S], IntrusiveNode.field_h[AccountFormTextHelpers.field_d]}, (byte) 61, StrongCacheEntry.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
+              GameGraphicsResources.wizardFont2.a(WeightedLruCache.formatPlaceholders(new String[]{IntrusiveNode.field_h[SpriteTextStyle.field_S], IntrusiveNode.field_h[AccountFormTextHelpers.field_d]}, (byte) 107, StrongCacheEntry.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -24 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 16777215, -1, 0, 0, 20);
               var5Lifetime1 += 32;
               var5Lifetime1 -= 24;
               var29 = new String[9];
@@ -1950,7 +1950,7 @@ public final class wizardrun extends GameShell {
               }
               var8Lifetime1Lifetime1 = 0;
               var9Lifetime1 = 0;
-              if (mh.field_tb == 1) {
+              if (AccountProgressDialog.field_tb == 1) {
                 var9Lifetime1 = -80;
               }
               for (var10Lifetime1 = var9Lifetime1 + 440; var10Lifetime1 <= 610 + var9Lifetime1; var10Lifetime1 += 20) {
@@ -1980,9 +1980,9 @@ public final class wizardrun extends GameShell {
               SoftwareRasterizer.resetClip();
               var5Lifetime1 += 24;
               var5Lifetime1 += 32;
-              GameGraphicsResources.wizardFont2.a(lc.field_c + " " + LoginCredentialKind.field_e, -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 1, 0, 20);
-              GameGraphicsResources.wizardFont2.a(lc.field_c + " " + LoginCredentialKind.field_e, 319 - var6Lifetime1Lifetime3 / 2, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 0, 0, 1, 0, 20);
-              GameGraphicsResources.wizardFont2.a(lc.field_c + " " + LoginCredentialKind.field_e, 320 - var6Lifetime1Lifetime3 / 2, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 16777215, -1, 1, 0, 20);
+              GameGraphicsResources.wizardFont2.a(ArchiveReadinessHelpers.field_c + " " + LoginCredentialKind.field_e, -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 1, 0, 20);
+              GameGraphicsResources.wizardFont2.a(ArchiveReadinessHelpers.field_c + " " + LoginCredentialKind.field_e, 319 - var6Lifetime1Lifetime3 / 2, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 0, 0, 1, 0, 20);
+              GameGraphicsResources.wizardFont2.a(ArchiveReadinessHelpers.field_c + " " + LoginCredentialKind.field_e, 320 - var6Lifetime1Lifetime3 / 2, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 16777215, -1, 1, 0, 20);
               var5Lifetime1 += 64;
             }
             stackIn_567_0Lifetime1 = -5;
@@ -1997,7 +1997,7 @@ public final class wizardrun extends GameShell {
               var5Lifetime1 += 64;
             }
             if (HuffmanDecoder.field_c == 5) {
-              var6Lifetime1Lifetime5 = GameGraphicsResources.wizardFont2.stringWidth(ol.field_d);
+              var6Lifetime1Lifetime5 = GameGraphicsResources.wizardFont2.stringWidth(AccountSocketHelpers.field_d);
               SoftwareRasterizer.fillRect(-11 - var6Lifetime1Lifetime5 / 2 + 320, -11 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M, var6Lifetime1Lifetime5 + 22, 128 + IndexedSpriteArrayFactory.wizardFont.field_M - 10, 13158);
               CacheEntry.a(DropTargetWidget.frameSprites, 304 - var6Lifetime1Lifetime5 / 2, (byte) -110, IndexedSpriteArrayFactory.wizardFont.field_M + 128, var6Lifetime1Lifetime5 + 32, -16 + (var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M));
               this.drawOutlinedText(var5Lifetime1, DualLinkNodeHashTable.field_c, 16777215, -52, 319);
@@ -2010,7 +2010,7 @@ public final class wizardrun extends GameShell {
             var5Lifetime1 += 16;
             stackIn_574_0 = !(AchievementSubmission.field_q);
             if (stackIn_574_0) {
-              this.drawOutlinedText(var5Lifetime1, ol.field_d, 16777215, -74, 319);
+              this.drawOutlinedText(var5Lifetime1, AccountSocketHelpers.field_d, 16777215, -74, 319);
             }
           }
           BufferedSocket.field_a = var3Lifetime1;
@@ -2031,15 +2031,15 @@ public final class wizardrun extends GameShell {
               (!(NetworkArchiveRequest.field_B < 436))) {
               var4_intLifetime2 = 16777215;
               if ((BrowserUrlLauncher.field_c == 1 ||
-                BufferedSocket.field_p[84]) && pa.field_c < 32) {
-                pa.field_c = 32;
+                BufferedSocket.field_p[84]) && EncryptedLoginHelpers.field_c < 32) {
+                EncryptedLoginHelpers.field_c = 32;
               }
             }
           } else {
             var4_intLifetime2 = 16777215;
             if ((BrowserUrlLauncher.field_c == 1 ||
-              BufferedSocket.field_p[84]) && pa.field_c < 32) {
-              pa.field_c = 32;
+              BufferedSocket.field_p[84]) && EncryptedLoginHelpers.field_c < 32) {
+              EncryptedLoginHelpers.field_c = 32;
             }
           }
           this.drawBorderedText(-12926, var30, var4_intLifetime2, 44, 458 + GameGraphicsResources.wizardFont2.field_M / 4);
@@ -2057,16 +2057,16 @@ public final class wizardrun extends GameShell {
               this.field_N == -1) {
               if ((BrowserUrlLauncher.field_c != 0 ||
                 BufferedSocket.field_p[84]) &&
-                0 == pa.field_c) {
+                0 == EncryptedLoginHelpers.field_c) {
                 DualLinkDeque.field_i = 3;
-                pa.field_c = 32;
+                EncryptedLoginHelpers.field_c = 32;
               }
               var5Lifetime2 = 16777215;
             }
             this.drawBorderedText(-12926, var31, var5Lifetime2, 16 + var4_intLifetime2Lifetime1 + GameGraphicsResources.wizardFont2.stringWidth(var31) / 2, 458 + GameGraphicsResources.wizardFont2.field_M / 4);
           }
           if (EmailCheckRequest.field_h == 2 &&
-            !e.a(-108)) {
+            !ThreePieceFrameHelpers.a(-108)) {
             var4_intLifetime2Lifetime2 = 88;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 <= 2; var5Lifetime2Lifetime1++) {
               var4_intLifetime2Lifetime2 += 8;
@@ -2094,7 +2094,7 @@ public final class wizardrun extends GameShell {
               var4_intLifetime2Lifetime2 = var4_intLifetime2Lifetime2 + var6Lifetime2;
             }
           }
-          if (e.a(-128) && (2 == EmailCheckRequest.field_h ||
+          if (ThreePieceFrameHelpers.a(-128) && (2 == EmailCheckRequest.field_h ||
             EmailCheckRequest.field_h == 5)) {
             var3_ref_StringLifetime1 = SoundCache.field_b;
             CacheEntry.a(LoginForm.field_E, 96, (byte) -110, 44, 176, 436);
@@ -2126,41 +2126,41 @@ public final class wizardrun extends GameShell {
           var6Lifetime3 = 4 + (var32.field_B + var32.field_q);
           SoftwareRasterizer.fillRectangleBlended(40, 170, 560, 20 + (120 + 5 * var6Lifetime3), 0, 192);
           CacheEntry.a(DropTargetWidget.frameSprites, 31, (byte) -110, 14 + (20 + (5 * var6Lifetime3 + 120)), 578, 163);
-          var32.drawStringCentered(vg.field_U, 320, var5Lifetime3, 16777215, -1);
+          var32.drawStringCentered(FullscreenFailureDialog.field_U, 320, var5Lifetime3, 16777215, -1);
           stackIn_657_0 = var32;
           stackIn_658_1 = (0 == AgeValidator.field_l) ? false : true;
-          stackIn_661_2 = (ke.field_u.isEmpty(8192)) ? false : true;
+          stackIn_661_2 = (PasswordFieldPainter.field_u.isEmpty(8192)) ? false : true;
           stackIn_664_3 = (DiskCacheStore.field_f == 0) ? false : true;
-          ((MonochromeBitmapFont) (Object) stackIn_657_0).drawStringCentered(MusicPatch.a(stackIn_658_1, stackIn_661_2, stackIn_664_3, 26505), 320, var5Lifetime3 + var6Lifetime3, 16777215, -1);
+          ((MonochromeBitmapFont) (Object) stackIn_657_0).drawStringCentered(MusicPatch.getSavePrompt(stackIn_658_1, stackIn_661_2, stackIn_664_3, 26505), 320, var5Lifetime3 + var6Lifetime3, 16777215, -1);
           if (this.a(var5Lifetime3 + 4 * var6Lifetime3, 320, 65535, DiskCacheWorker.field_d, 1)) {
           }
           stackIn_667_0 = var32;
           stackIn_668_1 = (AgeValidator.field_l == 0) ? false : true;
           stackIn_670_2 = 2;
           stackIn_671_3 = (DiskCacheStore.field_f == 0) ? false : true;
-          stackIn_674_4 = (ke.field_u.isEmpty(8192)) ? false : true;
-          ((MonochromeBitmapFont) (Object) stackIn_667_0).drawStringCentered(EmailLoginCredentials.a(stackIn_668_1, stackIn_670_2, stackIn_671_3, stackIn_674_4), 320, (int)(2.5 * (double)var6Lifetime3) + var5Lifetime3 + 60, 16777215, -1);
-          discarded$5 = this.a(60 + (var6Lifetime3 / 2 + var6Lifetime3 * 5 + var5Lifetime3), 320, 65535, gf.field_X, 1);
+          stackIn_674_4 = (PasswordFieldPainter.field_u.isEmpty(8192)) ? false : true;
+          ((MonochromeBitmapFont) (Object) stackIn_667_0).drawStringCentered(EmailLoginCredentials.getDiscardAlternativePrefix(stackIn_668_1, stackIn_670_2, stackIn_671_3, stackIn_674_4), 320, (int)(2.5 * (double)var6Lifetime3) + var5Lifetime3 + 60, 16777215, -1);
+          discarded$5 = this.a(60 + (var6Lifetime3 / 2 + var6Lifetime3 * 5 + var5Lifetime3), 320, 65535, ContentTransitionDialog.field_X, 1);
           stackIn_676_0 = var32;
           stackIn_677_1 = (0 == DiskCacheStore.field_f) ? false : true;
           stackIn_679_2 = -3567;
           stackIn_679_3 = false;
           stackIn_680_4 = (0 == AgeValidator.field_l) ? false : true;
-          ((MonochromeBitmapFont) (Object) stackIn_676_0).drawStringCentered(ValidationHelpWidget.a(stackIn_677_1, stackIn_679_2, stackIn_679_3, stackIn_680_4), 320, 120 + (var5Lifetime3 + 4 * var6Lifetime3), 16777215, -1);
+          ((MonochromeBitmapFont) (Object) stackIn_676_0).drawStringCentered(ValidationHelpWidget.getDiscardPrompt(stackIn_677_1, stackIn_679_2, stackIn_679_3, stackIn_680_4), 320, 120 + (var5Lifetime3 + 4 * var6Lifetime3), 16777215, -1);
         }
         if (EmailCheckRequest.field_h == 7) {
-          ih.a(0);
+          NameCheckHelpers.a(0);
           EmailCheckRequest.field_h = 8;
         } else {
           if (EmailCheckRequest.field_h == 8) {
-            if (e.a(-113)) {
-              EmailCheckRequest.field_h = n.field_c;
+            if (ThreePieceFrameHelpers.a(-113)) {
+              EmailCheckRequest.field_h = AccountPacketState.field_c;
             } else {
               EmailCheckRequest.field_h = ProgressDialog.field_Y;
               if (EmailCheckRequest.field_h == 10) {
                 GameApplet.a(7775, HuffmanDecoder.field_c + GridActor.field_l * 6 + DiskCacheStore.field_f * 64);
                 DecodedSpritePalette.field_a = DecodedSpritePalette.field_a + (DiskCacheStore.field_f << 6);
-                me.field_f = me.field_f + (-6 + HuffmanDecoder.field_c);
+                LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f + (-6 + HuffmanDecoder.field_c);
                 HighscorePlayer.field_b = HighscorePlayer.field_b - (6 * GridActor.field_l + 1);
                 stackIn_690_1 = !(ArchiveProvider.field_a <= 0);
                 this.field_J = stackIn_690_1;
@@ -2179,18 +2179,18 @@ public final class wizardrun extends GameShell {
           GameApplet.field_e == null) {
           SoftwareRasterizer.fillRect(0, 0, 640, 480, 0);
         }
-        if (se.field_a > 0) {
-          SoftwareRasterizer.fillRectangleBlended(0, 0, 640, 480, 0, se.field_a);
+        if (IntegerMathHelpers.field_a > 0) {
+          SoftwareRasterizer.fillRectangleBlended(0, 0, 640, 480, 0, IntegerMathHelpers.field_a);
         }
-        if (pa.field_c > 0) {
-          if (pa.field_c < 256) {
-            SoftwareRasterizer.fillRectangleBlended(0, 0, 640, 480, 0, pa.field_c);
+        if (EncryptedLoginHelpers.field_c > 0) {
+          if (EncryptedLoginHelpers.field_c < 256) {
+            SoftwareRasterizer.fillRectangleBlended(0, 0, 640, 480, 0, EncryptedLoginHelpers.field_c);
           } else {
-            SoftwareRasterizer.fillRectangleBlended(0, 0, 640, 480, 0, 512 - pa.field_c);
+            SoftwareRasterizer.fillRectangleBlended(0, 0, 640, 480, 0, 512 - EncryptedLoginHelpers.field_c);
           }
         }
         if (TickClock.field_d) {
-          AudioServiceThread.field_b.drawAlpha(0, 0, pa.field_c);
+          AudioServiceThread.field_b.drawAlpha(0, 0, EncryptedLoginHelpers.field_c);
           var4 = AccountFormText.field_a;
           CacheEntry.a(LoginForm.field_E, 0, (byte) -110, 44, 88, 436);
           var5Lifetime4 = 16776960;
@@ -2207,7 +2207,7 @@ public final class wizardrun extends GameShell {
           }
           this.drawBorderedText(-12926, var4, var5Lifetime4, 44, 458 + GameGraphicsResources.wizardFont2.field_M / 4);
         }
-        var33_ref = (ra) (ArchiveLoadingPlan.field_b.first((byte) 87));
+        var33_ref = (AchievementUnlock) (ArchiveLoadingPlan.field_b.first((byte) 87));
         if (var33_ref != null) {
           var6Lifetime4 = this.field_M;
           if (80 > var6Lifetime4) {
@@ -2224,37 +2224,37 @@ public final class wizardrun extends GameShell {
           FullscreenFocusCanvas.field_a[var33_ref.field_n].drawScaled(8, var5Lifetime5, 32, 32);
           GameGraphicsResources.wizardFont2.drawString(SpriteState.field_t[var33_ref.field_n], 48, GameGraphicsResources.wizardFont2.field_M + var5Lifetime5, 16776960, -1);
         }
-        if (!StringPaddingHelpers.a(-25231)) {
-          if (dg.b(70)) {
-            rl.a(EmailDomainHelpers.a(255), false);
+        if (!StringPaddingHelpers.isMenuScreenActive(-25231)) {
+          if (ArchiveContainerHelpers.b(70)) {
+            MenuOverlayHelpers.drawDimmedMenuOverlay(EmailDomainHelpers.a(255), false);
           }
         } else {
           SoftwareRasterizer.fillRectangleBlended(0, 0, 640, 480, 0, 128);
-          SoftwareRasterizer.fillRect(-3 - IntrusiveDequeCursor.c((byte) -117) / 2 + 320, 240 - (GrowableIntList.a((byte) 47) / 2 + 5), 6 + IntrusiveDequeCursor.c((byte) 84), 10 + GrowableIntList.a((byte) 47), 0);
-          of.a(72);
+          SoftwareRasterizer.fillRect(-3 - IntrusiveDequeCursor.getMenuHeight((byte) -117) / 2 + 320, 240 - (GrowableIntList.getMenuWidth((byte) 47) / 2 + 5), 6 + IntrusiveDequeCursor.getMenuHeight((byte) 84), 10 + GrowableIntList.getMenuWidth((byte) 47), 0);
+          RankingRequest.a(72);
         }
-        if (ke.field_w) {
+        if (PasswordFieldPainter.field_w) {
           GameGraphicsResources.wizardFont2.drawStringCentered("DEBUG PAUSE ON: PRESS 'V' TO CONTINUE", 320, 460, 16711680, 0);
         }
-        DateFormattingHelpers.a((byte) 80, 0, var19, 0);
+        DateFormattingHelpers.presentRaster((byte) 80, 0, var19, 0);
         return;
     }
 
     private final void openResourceArchives(int param0) {
-        if (null != oh.field_b) {
-          UiWidget.loadGameTextResources(-37, oh.field_b);
-          oh.field_b = null;
+        if (null != SpriteFilterHelpers.field_b) {
+          UiWidget.loadGameTextResources(-37, SpriteFilterHelpers.field_b);
+          SpriteFilterHelpers.field_b = null;
           GameGraphicsResources.b(0);
         }
-        SingleChildWidget.field_E = BufferedRandomAccessFile.a(87, 1);
-        mh.field_jb = BufferedRandomAccessFile.a(92, 2);
-        SingleChildWidget.soundArchive = BufferedRandomAccessFile.a(-117, 3);
-        jl.bossSoundArchive = BufferedRandomAccessFile.a(-118, 4);
+        SingleChildWidget.field_E = BufferedRandomAccessFile.createDefaultArchive(87, 1);
+        AccountProgressDialog.field_jb = BufferedRandomAccessFile.createDefaultArchive(92, 2);
+        SingleChildWidget.soundArchive = BufferedRandomAccessFile.createDefaultArchive(-117, 3);
+        SpriteButtonPainter.bossSoundArchive = BufferedRandomAccessFile.createDefaultArchive(-118, 4);
         int var2 = -60 / ((param0 - 39) / 38);
-        PlatformActor.field_u = BufferedRandomAccessFile.a(-106, 6);
-        TickClock.field_b = BufferedRandomAccessFile.a(-90, 5);
-        MeshWorkspaceHelpers.field_a = BufferedRandomAccessFile.a(84, 7);
-        ol.a(UsernameLoginCredentials.field_h, TickClock.field_c, (byte) 109);
+        PlatformActor.field_u = BufferedRandomAccessFile.createDefaultArchive(-106, 6);
+        TickClock.field_b = BufferedRandomAccessFile.createDefaultArchive(-90, 5);
+        RankingWorkspaceHelpers.field_a = BufferedRandomAccessFile.createDefaultArchive(84, 7);
+        AccountSocketHelpers.setMembershipArchives(UsernameLoginCredentials.field_h, TickClock.field_c, (byte) 109);
     }
 
     final static int a(byte param0, int param1) {
@@ -2438,77 +2438,77 @@ public final class wizardrun extends GameShell {
               AchievementSubmission.field_n <= (16 + var6_int) &&
               (-GameGraphicsResources.wizardFont2.field_M + var7 - 16) < NetworkArchiveRequest.field_B &&
               NetworkArchiveRequest.field_B <= var7 + 16 &&
-              1 == w.field_c) {
+              1 == UiThemeSetupHelpers.field_c) {
               SocketJs5Transport.a(6, 10, -127);
             }
             var6_int = 320;
-            var5 = GameGraphicsResources.wizardFont2.stringWidth(gf.field_X);
+            var5 = GameGraphicsResources.wizardFont2.stringWidth(ContentTransitionDialog.field_X);
             var7Lifetime1 = 60 + (var4 / 2 + var3) + var4 * 5;
             var6_int = var6_int + var5 / 2;
             if ((-var5 + var6_int - 16) < AchievementSubmission.field_n &&
               AchievementSubmission.field_n <= (var6_int + 16) &&
               NetworkArchiveRequest.field_B > (-16 + (-GameGraphicsResources.wizardFont2.field_M + var7Lifetime1)) &&
               16 + var7Lifetime1 >= NetworkArchiveRequest.field_B &&
-              w.field_c == 1) {
+              UiThemeSetupHelpers.field_c == 1) {
               RasterSnapshot.field_k = 0;
               AgeValidator.field_l = 0;
-              ke.field_u.clear(false);
-              ie.field_l.clear(false);
+              PasswordFieldPainter.field_u.clear(false);
+              SavedDataSubmission.field_l.clear(false);
               BufferedSocket.field_a = -350;
               EmailCheckRequest.field_h = 9;
               TextButton.field_A = 0;
-              tb.a(0, true);
+              DisplayNameForm.a(0, true);
             }
             stackIn_30_0 = var11;
             stackIn_31_1 = (DiskCacheStore.field_f == 0) ? false : true;
             stackIn_33_2 = -3567;
             stackIn_33_3 = false;
             stackIn_34_4 = (AgeValidator.field_l == 0) ? false : true;
-            ((MonochromeBitmapFont) (Object) stackIn_30_0).drawStringCentered(ValidationHelpWidget.a(stackIn_31_1, stackIn_33_2, stackIn_33_3, stackIn_34_4), 320, var4 * 4 + (var3 + 120), 16777215, -1);
+            ((MonochromeBitmapFont) (Object) stackIn_30_0).drawStringCentered(ValidationHelpWidget.getDiscardPrompt(stackIn_31_1, stackIn_33_2, stackIn_33_3, stackIn_34_4), 320, var4 * 4 + (var3 + 120), 16777215, -1);
           }
           if (EmailCheckRequest.field_h == 9) {
             stackIn_38_0 = param0 - 54;
-            stackIn_39_1 = (dg.b(98)) ? false : true;
-            var2 = kd.a(stackIn_38_0, stackIn_39_1);
+            stackIn_39_1 = (ArchiveContainerHelpers.b(98)) ? false : true;
+            var2 = ContentTransitionPhase.a(stackIn_38_0, stackIn_39_1);
             if (var2 == 3) {
-              SpriteState.a(DisplayNameValidator.getActiveApplet(param0 ^ 641), true);
+              SpriteState.openSubscriptionPage(DisplayNameValidator.getActiveApplet(param0 ^ 641), true);
             }
             if (1 == var2) {
-              if (pa.field_c <= 0) {
-                pa.field_c = pa.field_c + 32;
+              if (EncryptedLoginHelpers.field_c <= 0) {
+                EncryptedLoginHelpers.field_c = EncryptedLoginHelpers.field_c + 32;
               }
               this.field_N = 0;
             }
             this.field_J = true;
             if (var2 == 2) {
-              if (pa.field_c <= 0) {
-                pa.field_c = pa.field_c + 32;
+              if (EncryptedLoginHelpers.field_c <= 0) {
+                EncryptedLoginHelpers.field_c = EncryptedLoginHelpers.field_c + 32;
               }
               this.field_N = -1;
             }
           }
           if (5 == EmailCheckRequest.field_h) {
-            if (w.field_c != 0 &&
+            if (UiThemeSetupHelpers.field_c != 0 &&
               BeveledFrameFactory.field_f != -1) {
-              if (~tk.field_a == ~BeveledFrameFactory.field_f) {
-                tk.field_a = -1;
+              if (~HyperlinkPainter.field_a == ~BeveledFrameFactory.field_f) {
+                HyperlinkPainter.field_a = -1;
               } else {
-                tk.field_a = BeveledFrameFactory.field_f;
+                HyperlinkPainter.field_a = BeveledFrameFactory.field_f;
               }
             }
           } else {
-            tk.field_a = -1;
+            HyperlinkPainter.field_a = -1;
           }
           if (TickClock.field_d) {
             if (!TextButton.field_D) {
-              if (256 > pa.field_c) {
-                pa.field_c = pa.field_c + 32;
+              if (256 > EncryptedLoginHelpers.field_c) {
+                EncryptedLoginHelpers.field_c = EncryptedLoginHelpers.field_c + 32;
               }
             } else {
-              if (pa.field_c > 0) {
-                pa.field_c = pa.field_c - 32;
+              if (EncryptedLoginHelpers.field_c > 0) {
+                EncryptedLoginHelpers.field_c = EncryptedLoginHelpers.field_c - 32;
               }
-              if (pa.field_c == 0) {
+              if (EncryptedLoginHelpers.field_c == 0) {
                 TextButton.field_D = false;
                 TickClock.field_d = false;
               }
@@ -2551,9 +2551,9 @@ public final class wizardrun extends GameShell {
             if (this.field_I > 0) {
               this.field_I = this.field_I - 1;
             }
-            if (0 < pa.field_c) {
-              pa.field_c = pa.field_c + 32;
-              if (256 == pa.field_c) {
+            if (0 < EncryptedLoginHelpers.field_c) {
+              EncryptedLoginHelpers.field_c = EncryptedLoginHelpers.field_c + 32;
+              if (256 == EncryptedLoginHelpers.field_c) {
                 if (EmailCheckRequest.field_h == 0) {
                   if (DualLinkDeque.field_i == 1) {
                     EmailCheckRequest.field_h = 1;
@@ -2582,15 +2582,15 @@ public final class wizardrun extends GameShell {
                     }
                     EmailCheckRequest.field_h = 0;
                     if (!this.field_J) {
-                      tb.a(0, true);
+                      DisplayNameForm.a(0, true);
                       this.field_J = true;
                       EmailCheckRequest.field_h = 9;
                     }
                   }
                 }
               }
-              if (pa.field_c >= 512) {
-                pa.field_c = 0;
+              if (EncryptedLoginHelpers.field_c >= 512) {
+                EncryptedLoginHelpers.field_c = 0;
               }
             } else {
               if (EmailCheckRequest.field_h == 0 &&
@@ -2604,15 +2604,15 @@ public final class wizardrun extends GameShell {
                   var2 = 0;
                   while (true) {
                     if (var2 < 25) {
-                      pb.field_k = pb.field_k + 1;
+                      MidiKeyUsage.field_k = MidiKeyUsage.field_k + 1;
                       stackIn_113_0 = -101;
-                      stackIn_113_1 = ~pb.field_k;
+                      stackIn_113_1 = ~MidiKeyUsage.field_k;
                       if (stackIn_113_0 >= stackIn_113_1) {
-                        pb.field_k = 0;
+                        MidiKeyUsage.field_k = 0;
                       }
-                      TickClock.field_a[pb.field_k][0] = GameGraphicsResources.wizardFont2.stringWidth(EditableTextWidget.field_R[AccountConnectionState.field_a]) * (-13 + var2) / 25 + 177;
-                      TickClock.field_a[pb.field_k][1] = (int)(-Math.random() * (double)GameGraphicsResources.wizardFont2.field_M + 208.0 + (double)(32 * AccountConnectionState.field_a));
-                      TickClock.field_a[pb.field_k][2] = 128;
+                      TickClock.field_a[MidiKeyUsage.field_k][0] = GameGraphicsResources.wizardFont2.stringWidth(EditableTextWidget.field_R[AccountConnectionState.field_a]) * (-13 + var2) / 25 + 177;
+                      TickClock.field_a[MidiKeyUsage.field_k][1] = (int)(-Math.random() * (double)GameGraphicsResources.wizardFont2.field_M + 208.0 + (double)(32 * AccountConnectionState.field_a));
+                      TickClock.field_a[MidiKeyUsage.field_k][2] = 128;
                       var2++;
                       continue;
                     }
@@ -2622,7 +2622,7 @@ public final class wizardrun extends GameShell {
                     if (!ReflectionCheck.field_s) {
                       break;
                     }
-                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
+                    FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * StyleNode.field_p / 100);
                     break;
                   }
                 }
@@ -2631,14 +2631,14 @@ public final class wizardrun extends GameShell {
                   TriangleMesh.field_i = AchievementSubmission.field_n;
                   var2 = 1;
                 }
-                if (NetworkArchiveRequest.field_B != qj.field_d) {
+                if (NetworkArchiveRequest.field_B != NineSliceFrame.field_d) {
                   var2 = 1;
-                  qj.field_d = NetworkArchiveRequest.field_B;
+                  NineSliceFrame.field_d = NetworkArchiveRequest.field_B;
                 }
                 if (AccountConnectionState.field_a < 2) {
                   var2 = 0;
                 }
-                if (w.field_c == 1) {
+                if (UiThemeSetupHelpers.field_c == 1) {
                   var2 = 1;
                 }
                 if (GridActor.field_g >= 0) {
@@ -2669,7 +2669,7 @@ public final class wizardrun extends GameShell {
                           break regionExit1;
                         }
                       } else {
-                        if (w.field_c != 1) {
+                        if (UiThemeSetupHelpers.field_c != 1) {
                           break regionExit1;
                         }
                         this.a(54, 2, BufferedRandomAccessFile.field_h);
@@ -2683,11 +2683,11 @@ public final class wizardrun extends GameShell {
                     }
                   }
                   if (0 <= BufferedRandomAccessFile.field_h) {
-                    pb.field_k = pb.field_k + 1;
-                    if (pb.field_k >= 100) {
-                      pb.field_k = 0;
+                    MidiKeyUsage.field_k = MidiKeyUsage.field_k + 1;
+                    if (MidiKeyUsage.field_k >= 100) {
+                      MidiKeyUsage.field_k = 0;
                     }
-                    if (pb.field_k % 25 == 0) {
+                    if (MidiKeyUsage.field_k % 25 == 0) {
                       TickClock.field_a[0][0] = 161 - GameGraphicsResources.wizardFont2.stringWidth(EditableTextWidget.field_R[BufferedRandomAccessFile.field_h]) / 2;
                       TickClock.field_a[0][1] = -GameGraphicsResources.wizardFont2.field_M / 2 + 208 + 32 * BufferedRandomAccessFile.field_h;
                       if (BufferedRandomAccessFile.field_h == 2) {
@@ -2698,7 +2698,7 @@ public final class wizardrun extends GameShell {
                       }
                       TickClock.field_a[0][2] = 128;
                     }
-                    if (12 == pb.field_k % 25) {
+                    if (12 == MidiKeyUsage.field_k % 25) {
                       TickClock.field_a[1][0] = 16 + (GameGraphicsResources.wizardFont2.stringWidth(EditableTextWidget.field_R[BufferedRandomAccessFile.field_h]) / 2 + 177);
                       if (BufferedRandomAccessFile.field_h == 2) {
                         TickClock.field_a[1][0] = 327;
@@ -2716,20 +2716,20 @@ public final class wizardrun extends GameShell {
             if ((GameApplet.field_e == null ||
               !GameApplet.field_e.field_p) &&
               !this.field_P) {
-              if (0 < se.field_a) {
-                se.field_a = se.field_a / 2;
+              if (0 < IntegerMathHelpers.field_a) {
+                IntegerMathHelpers.field_a = IntegerMathHelpers.field_a / 2;
               }
-              if (!(0 >= se.field_a)) {
-                se.field_a = se.field_a - 1;
+              if (!(0 >= IntegerMathHelpers.field_a)) {
+                IntegerMathHelpers.field_a = IntegerMathHelpers.field_a - 1;
               }
             } else {
-              if (256 > se.field_a) {
-                se.field_a = se.field_a / 2 + 128;
+              if (256 > IntegerMathHelpers.field_a) {
+                IntegerMathHelpers.field_a = IntegerMathHelpers.field_a / 2 + 128;
               }
-              if (256 > se.field_a) {
-                se.field_a = se.field_a + 1;
+              if (256 > IntegerMathHelpers.field_a) {
+                IntegerMathHelpers.field_a = IntegerMathHelpers.field_a + 1;
               }
-              if (256 == se.field_a) {
+              if (256 == IntegerMathHelpers.field_a) {
                 if (this.field_P &&
                   DialogLayer.field_K != 1) {
                   this.field_P = false;
@@ -2778,18 +2778,18 @@ public final class wizardrun extends GameShell {
                     for (var6_int = 0; var6_int < 300; var6_int++) {
                       incrementValue$1 = var5;
                       var5++;
-                      var4_ref_byte__[incrementValue$1] = (byte)tc.field_l.field_j[var6_int];
+                      var4_ref_byte__[incrementValue$1] = (byte)SavedDataRequest.level.field_j[var6_int];
                       incrementValue$2 = var5;
                       var5++;
-                      var4_ref_byte__[incrementValue$2] = (byte)tc.field_l.field_f[var6_int];
+                      var4_ref_byte__[incrementValue$2] = (byte)SavedDataRequest.level.field_f[var6_int];
                       incrementValue$3 = var5;
                       var5++;
-                      var4_ref_byte__[incrementValue$3] = (byte)tc.field_l.field_a[var6_int];
+                      var4_ref_byte__[incrementValue$3] = (byte)SavedDataRequest.level.field_a[var6_int];
                     }
                     MidiPcmStream.field_T[GridActor.field_l][HuffmanDecoder.field_c] = var15;
                     try {
                       var5 = 0;
-                      AudioServiceThread.a(var4_ref_byte__, var15.length, true, new File("level" + GridActor.field_l + HuffmanDecoder.field_c + ".dat"));
+                      AudioServiceThread.writeFileBytes(var4_ref_byte__, var15.length, true, new File("level" + GridActor.field_l + HuffmanDecoder.field_c + ".dat"));
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var6 = (Exception) (Object) decompiledCaughtException;
@@ -2797,80 +2797,80 @@ public final class wizardrun extends GameShell {
                     }
                   }
                   if (16 == MidiNote.field_r) {
-                    tc.field_l.field_a[var3 * 20 + var2] = 1;
+                    SavedDataRequest.level.field_a[var3 * 20 + var2] = 1;
                   }
                   if (MidiNote.field_r == 17) {
-                    tc.field_l.field_a[var2 + var3 * 20] = 2;
+                    SavedDataRequest.level.field_a[var2 + var3 * 20] = 2;
                   }
                   if (MidiNote.field_r == 18) {
-                    tc.field_l.field_a[var2 + var3 * 20] = 3;
+                    SavedDataRequest.level.field_a[var2 + var3 * 20] = 3;
                   }
                   if (MidiNote.field_r == 19) {
-                    tc.field_l.field_a[20 * var3 + var2] = 4;
+                    SavedDataRequest.level.field_a[20 * var3 + var2] = 4;
                   }
                   if (20 == MidiNote.field_r) {
-                    tc.field_l.field_a[var2 + 20 * var3] = 5;
+                    SavedDataRequest.level.field_a[var2 + 20 * var3] = 5;
                   }
                   if (MidiNote.field_r == 35) {
-                    tc.field_l.field_j[var2 + 20 * var3] = 0;
-                    tc.field_l.field_f[20 * var3 + var2] = 0;
-                    tc.field_l.field_a[20 * var3 + var2] = 0;
+                    SavedDataRequest.level.field_j[var2 + 20 * var3] = 0;
+                    SavedDataRequest.level.field_f[20 * var3 + var2] = 0;
+                    SavedDataRequest.level.field_a[20 * var3 + var2] = 0;
                   }
                   if (MidiNote.field_r == 32) {
-                    tc.field_l.field_j[var2 + 20 * var3] = 1;
-                    tc.field_l.field_f[var2 + var3 * 20] = 1;
+                    SavedDataRequest.level.field_j[var2 + 20 * var3] = 1;
+                    SavedDataRequest.level.field_f[var2 + var3 * 20] = 1;
                   }
                   if (MidiNote.field_r == 33) {
-                    tc.field_l.field_j[20 * var3 + var2] = 2;
-                    tc.field_l.field_f[20 * var3 + var2] = 1;
+                    SavedDataRequest.level.field_j[20 * var3 + var2] = 2;
+                    SavedDataRequest.level.field_f[20 * var3 + var2] = 1;
                   }
                   if (34 == MidiNote.field_r) {
-                    tc.field_l.field_j[20 * var3 + var2] = 3;
-                    tc.field_l.field_f[var2 + var3 * 20] = 1;
+                    SavedDataRequest.level.field_j[20 * var3 + var2] = 3;
+                    SavedDataRequest.level.field_f[var2 + var3 * 20] = 1;
                   }
                   if (MidiNote.field_r == 48) {
-                    tc.field_l.field_j[var2 + var3 * 20] = 4;
-                    tc.field_l.field_f[var2 + var3 * 20] = 0;
+                    SavedDataRequest.level.field_j[var2 + var3 * 20] = 4;
+                    SavedDataRequest.level.field_f[var2 + var3 * 20] = 0;
                   }
                   if (MidiNote.field_r == 49) {
-                    tc.field_l.field_j[var3 * 20 + var2] = 5;
-                    tc.field_l.field_f[var2 + var3 * 20] = 0;
+                    SavedDataRequest.level.field_j[var3 * 20 + var2] = 5;
+                    SavedDataRequest.level.field_f[var2 + var3 * 20] = 0;
                   }
                   if (50 == MidiNote.field_r) {
-                    tc.field_l.field_j[20 * var3 + var2] = 6;
-                    tc.field_l.field_f[var2 + var3 * 20] = 0;
+                    SavedDataRequest.level.field_j[20 * var3 + var2] = 6;
+                    SavedDataRequest.level.field_f[var2 + var3 * 20] = 0;
                   }
                   if (MidiNote.field_r == 64) {
-                    tc.field_l.field_j[var3 * 20 + var2] = 7;
-                    tc.field_l.field_f[var3 * 20 + var2] = 0;
+                    SavedDataRequest.level.field_j[var3 * 20 + var2] = 7;
+                    SavedDataRequest.level.field_f[var3 * 20 + var2] = 0;
                   }
                   if (MidiNote.field_r == 65) {
-                    tc.field_l.field_j[var2 + 20 * var3] = 8;
-                    tc.field_l.field_f[20 * var3 + var2] = 0;
+                    SavedDataRequest.level.field_j[var2 + 20 * var3] = 8;
+                    SavedDataRequest.level.field_f[20 * var3 + var2] = 0;
                   }
                   if (MidiNote.field_r == 66) {
-                    tc.field_l.field_j[var3 * 20 + var2] = 9;
-                    tc.field_l.field_f[20 * var3 + var2] = 0;
+                    SavedDataRequest.level.field_j[var3 * 20 + var2] = 9;
+                    SavedDataRequest.level.field_f[20 * var3 + var2] = 0;
                   }
                   if (MidiNote.field_r == 67) {
-                    tc.field_l.field_j[var2 + 20 * var3] = 10;
-                    tc.field_l.field_f[var2 + 20 * var3] = 0;
+                    SavedDataRequest.level.field_j[var2 + 20 * var3] = 10;
+                    SavedDataRequest.level.field_f[var2 + 20 * var3] = 0;
                   }
                   if (MidiNote.field_r == 68) {
-                    tc.field_l.field_j[var2 + var3 * 20] = 11;
-                    tc.field_l.field_f[20 * var3 + var2] = 0;
+                    SavedDataRequest.level.field_j[var2 + var3 * 20] = 11;
+                    SavedDataRequest.level.field_f[20 * var3 + var2] = 0;
                   }
                   if (MidiNote.field_r == 69) {
-                    tc.field_l.field_j[var2 + var3 * 20] = 12;
-                    tc.field_l.field_f[var2 + var3 * 20] = 0;
+                    SavedDataRequest.level.field_j[var2 + var3 * 20] = 12;
+                    SavedDataRequest.level.field_f[var2 + var3 * 20] = 0;
                   }
                   if (MidiNote.field_r == 43) {
                     BufferedSocket.field_c = BufferedSocket.field_c + 1;
                     HuffmanDecoder.field_c = HuffmanDecoder.field_c + 1;
                     if (HuffmanDecoder.field_c == 5) {
                       IntegerSyntaxHelpers.field_e = SettingsCookieReader.field_a;
-                      if (tl.field_e) {
-                        SingleChildWidget.field_D.a(true, -101, IntegerSyntaxHelpers.field_e);
+                      if (FriendOrderingHelpers.field_e) {
+                        SingleChildWidget.field_D.startTrack(true, -101, IntegerSyntaxHelpers.field_e);
                       }
                     }
                     if (HuffmanDecoder.field_c >= 6) {
@@ -2879,16 +2879,16 @@ public final class wizardrun extends GameShell {
                       GridActor.field_l = GridActor.field_l + 1;
                       HuffmanDecoder.field_c = 0;
                       if (5 >= GridActor.field_l) {
-                        MidiNote.a((byte) -75);
+                        MidiNote.selectLevelMusic((byte) -75);
                       } else {
                         HighscorePlayer.field_b = HighscorePlayer.field_b - GridActor.field_l * 6;
-                        me.field_f = me.field_f - 30;
+                        LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f - 30;
                         GridActor.field_l = 5;
                       }
                     }
-                    ni.b(7530);
+                    LevelDecodingHelpers.decodeCurrentLevel(7530);
                     if (2 == GridActor.field_l && (!(ArchiveProvider.field_a > 0) ||
-                      e.a(param0 - 751))) {
+                      ThreePieceFrameHelpers.a(param0 - 751))) {
                       this.s(208);
                     }
                   }
@@ -2898,7 +2898,7 @@ public final class wizardrun extends GameShell {
                   HuffmanDecoder.field_c = HuffmanDecoder.field_c - 1;
                   BufferedSocket.field_c = BufferedSocket.field_c + 1;
                   if (HuffmanDecoder.field_c == 4) {
-                    MidiNote.a((byte) -59);
+                    MidiNote.selectLevelMusic((byte) -59);
                   }
                   if (HuffmanDecoder.field_c < 0) {
                     HuffmanDecoder.field_c = 5;
@@ -2906,14 +2906,14 @@ public final class wizardrun extends GameShell {
                     if (GridActor.field_l < 0) {
                       GridActor.field_l = 0;
                     } else {
-                      MidiNote.a((byte) -118);
+                      MidiNote.selectLevelMusic((byte) -118);
                     }
                     IntegerSyntaxHelpers.field_e = SettingsCookieReader.field_a;
-                    if (tl.field_e) {
-                      SingleChildWidget.field_D.a(true, param0 - 740, IntegerSyntaxHelpers.field_e);
+                    if (FriendOrderingHelpers.field_e) {
+                      SingleChildWidget.field_D.startTrack(true, param0 - 740, IntegerSyntaxHelpers.field_e);
                     }
                   }
-                  ni.b(7530);
+                  LevelDecodingHelpers.decodeCurrentLevel(7530);
                 }
                 break;
               }
@@ -2976,7 +2976,7 @@ public final class wizardrun extends GameShell {
                       return;
                     }
                     this.field_P = false;
-                    tb.a(0, true);
+                    DisplayNameForm.a(0, true);
                     this.field_J = true;
                     EmailCheckRequest.field_h = 9;
                     return;
@@ -2984,7 +2984,7 @@ public final class wizardrun extends GameShell {
                   if (MidiNote.field_r == 96 &&
                     BrowserUrlLauncher.field_c == 0) {
                     if (2 == EmailCheckRequest.field_h) {
-                      if (!e.a(param0 - 755)) {
+                      if (!ThreePieceFrameHelpers.a(param0 - 755)) {
                         this.field_N = this.field_N - 1;
                         if (this.field_N < 0) {
                           this.field_N = 0;
@@ -2997,7 +2997,7 @@ public final class wizardrun extends GameShell {
                       }
                     }
                     if (EmailCheckRequest.field_h == 5) {
-                      if (!e.a(param0 ^ -739) &&
+                      if (!ThreePieceFrameHelpers.a(param0 ^ -739) &&
                         AgeValidator.field_l <= 0) {
                         this.field_N = 0;
                       } else {
@@ -3020,7 +3020,7 @@ public final class wizardrun extends GameShell {
                   if (97 == MidiNote.field_r &&
                     0 == BrowserUrlLauncher.field_c) {
                     if (EmailCheckRequest.field_h == 2) {
-                      if (e.a(param0 - 727)) {
+                      if (ThreePieceFrameHelpers.a(param0 - 727)) {
                         this.field_N = this.field_N + 1;
                         if (this.field_N > 1) {
                           this.field_N = 1;
@@ -3033,7 +3033,7 @@ public final class wizardrun extends GameShell {
                       }
                     }
                     if (EmailCheckRequest.field_h == 5) {
-                      if (!e.a(param0 - 751) &&
+                      if (!ThreePieceFrameHelpers.a(param0 - 751) &&
                         0 >= AgeValidator.field_l) {
                         this.field_N = 0;
                       } else {
@@ -3047,7 +3047,7 @@ public final class wizardrun extends GameShell {
                       5 > GridActor.field_l &&
                       5 > FadingDialog.field_I) {
                       GridActor.field_l = GridActor.field_l + 1;
-                      me.field_f = me.field_f - 6;
+                      LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f - 6;
                     }
                     if (EmailCheckRequest.field_h == 1) {
                       this.field_N = 0;
@@ -3089,7 +3089,7 @@ public final class wizardrun extends GameShell {
                     this.a(param0 ^ 760, 0, BufferedRandomAccessFile.field_h);
                     continue;
                   }
-                  if (pa.field_c > 0) {
+                  if (EncryptedLoginHelpers.field_c > 0) {
                     continue;
                   }
                   if (84 != MidiNote.field_r) {
@@ -3102,7 +3102,7 @@ public final class wizardrun extends GameShell {
                     if (EmailCheckRequest.field_h == 5) {
                       continue;
                     }
-                    pa.field_c = 32;
+                    EncryptedLoginHelpers.field_c = 32;
                     continue;
                   }
                   if (GridActor.field_l > TextButton.field_A) {
@@ -3119,7 +3119,7 @@ public final class wizardrun extends GameShell {
                     DelegatingCanvas.field_b = false;
                   } else {
                     DelegatingCanvas.field_b = true;
-                    me.field_f = me.field_f + 5;
+                    LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f + 5;
                     GridActor.field_g = 5;
                   }
                   FadingDialog.field_I = 5;
@@ -3129,7 +3129,7 @@ public final class wizardrun extends GameShell {
                   EmailAddressValidator.field_l = 0;
                 }
                 if (EmailCheckRequest.field_h == 0) {
-                  HighscorePlayer.field_e = jl.field_w;
+                  HighscorePlayer.field_e = SpriteButtonPainter.field_w;
                 }
                 if (1 == EmailCheckRequest.field_h) {
                   HighscorePlayer.field_e = AudioServiceThread.field_b;
@@ -3144,7 +3144,7 @@ public final class wizardrun extends GameShell {
                   FadingDialog.field_I = FadingDialog.field_I + 5;
                 }
                 if (4 == EmailCheckRequest.field_h) {
-                  HighscorePlayer.field_e = we.field_b;
+                  HighscorePlayer.field_e = UiSpriteThemeHelpers.field_b;
                 }
                 if (FadingDialog.field_I == 255) {
                   DualLinkDeque.field_g = null;
@@ -3159,15 +3159,15 @@ public final class wizardrun extends GameShell {
                   BrowserCookieHelpers.field_a = null;
                   BufferedSocket.field_c = BufferedSocket.field_c - HuffmanDecoder.field_c;
                   HuffmanDecoder.field_c = 0;
-                  MidiNote.a((byte) -43);
-                  ni.b(param0 ^ 8170);
+                  MidiNote.selectLevelMusic((byte) -43);
+                  LevelDecodingHelpers.decodeCurrentLevel(param0 ^ 8170);
                   if (GridActor.field_l == 0 &&
                     HuffmanDecoder.field_c == 0) {
                     BufferedSocket.field_a = 580;
                     UsernameLoginCredentials.field_j = ToggleButton.field_F;
                   } else {
                     BufferedSocket.field_a = 580;
-                    UsernameLoginCredentials.field_j = HighscorePlayer.field_f + (1 + GridActor.field_l) + eh.field_i + (1 + HuffmanDecoder.field_c);
+                    UsernameLoginCredentials.field_j = HighscorePlayer.field_f + (1 + GridActor.field_l) + MarkerSliderPainter.field_i + (1 + HuffmanDecoder.field_c);
                   }
                   var9 = new GridPoint();
                   var13 = var9;
@@ -3177,9 +3177,9 @@ public final class wizardrun extends GameShell {
                     var13.column = var13.column + 1;
                   }
                   var9.row = 2;
-                  ii.field_e[WidgetTheme.field_k].initialize(9147, 0, var13);
+                  NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(9147, 0, var13);
                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                  vj.c(param0 - 762);
+                  LevelActorSpawner.c(param0 - 762);
                   GameApplet.field_g = false;
                   if (GridActor.field_l == 0) {
                     this.field_Q = 0;
@@ -3191,10 +3191,10 @@ public final class wizardrun extends GameShell {
                   DelegatingCanvas.field_b = false;
                   NanoTickClock.field_n = 0;
                   DiskCacheWorker.field_e = 100;
-                  ol.field_e = false;
-                  if (tl.field_e &&
+                  AccountSocketHelpers.field_e = false;
+                  if (FriendOrderingHelpers.field_e &&
                     AchievementSubmission.field_q) {
-                    SingleChildWidget.field_D.a(true, -115, QuickChatDynamicCommand.field_e);
+                    SingleChildWidget.field_D.startTrack(true, -115, QuickChatDynamicCommand.field_e);
                   }
                 }
                 if (510 < FadingDialog.field_I) {
@@ -3235,29 +3235,29 @@ public final class wizardrun extends GameShell {
                   DecodedSpritePalette.field_a = DecodedSpritePalette.field_a + 1;
                   for (var2 = 0; var2 < 5; var2++) {
                     NetworkArchiveRequest.field_x = 0;
-                    ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
-                    ii.field_e[WidgetTheme.field_k].tileOffset.set(-92, ii.field_e[0].tileOffset);
-                    ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
-                    ii.field_e[WidgetTheme.field_k].field_h = -1;
-                    dupTemp$7 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                    NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(9147, 1, NameAvailabilityFactory.field_e[0].tilePosition);
+                    NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(-92, NameAvailabilityFactory.field_e[0].tileOffset);
+                    NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.row = 0;
+                    NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_h = -1;
+                    dupTemp$7 = NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset;
                     dupTemp$7.column = dupTemp$7.column + 80;
-                    ii.field_e[WidgetTheme.field_k].verticalVelocity = var2 * 20;
+                    NameAvailabilityFactory.field_e[WidgetTheme.field_k].verticalVelocity = var2 * 20;
                     NetworkArchiveRequest.field_x = 0;
                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                    ii.field_e[WidgetTheme.field_k].initialize(param0 + 8507, 1, ii.field_e[0].tilePosition);
-                    ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 - 746, ii.field_e[0].tileOffset);
-                    ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
-                    ii.field_e[WidgetTheme.field_k].field_h = 1;
-                    dupTemp$8 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                    NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(param0 + 8507, 1, NameAvailabilityFactory.field_e[0].tilePosition);
+                    NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(param0 - 746, NameAvailabilityFactory.field_e[0].tileOffset);
+                    NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.row = 0;
+                    NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_h = 1;
+                    dupTemp$8 = NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset;
                     dupTemp$8.column = dupTemp$8.column + 80;
-                    ii.field_e[WidgetTheme.field_k].verticalVelocity = 20 * var2;
+                    NameAvailabilityFactory.field_e[WidgetTheme.field_k].verticalVelocity = 20 * var2;
                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
                   }
                 }
                 if (!AchievementSubmission.field_q) {
                   var2 = 0;
                   for (var3 = 0; WidgetTheme.field_k > var3; var3++) {
-                    stackIn_540_0 = ii.field_e[var3].actorType;
+                    stackIn_540_0 = NameAvailabilityFactory.field_e[var3].actorType;
                     stackIn_540_1 = 2;
                     if (stackIn_540_0 > stackIn_540_1) {
                       var2 = 1;
@@ -3280,23 +3280,23 @@ public final class wizardrun extends GameShell {
                 stackIn_540_1Lifetime1 = 2;
                 if (stackIn_540_0Lifetime1 >= stackIn_540_1Lifetime1) {
                   if (BufferedSocket.field_p[66]) {
-                    ke.field_w = true;
+                    PasswordFieldPainter.field_w = true;
                   }
                   if (BufferedSocket.field_p[67]) {
-                    ke.field_w = false;
+                    PasswordFieldPainter.field_w = false;
                   }
-                  if (ke.field_w) {
+                  if (PasswordFieldPainter.field_w) {
                     return;
                   }
                   if (BufferedSocket.field_p[55]) {
-                    tc.field_j = true;
+                    SavedDataRequest.field_j = true;
                     FadingDialog.field_I = 5;
                     AchievementSubmission.field_q = false;
                     HuffmanDecoder.field_c = 4;
                   }
                   if (BufferedSocket.field_p[40]) {
                     AchievementSubmission.field_q = false;
-                    tc.field_j = true;
+                    SavedDataRequest.field_j = true;
                     FadingDialog.field_I = 5;
                   }
                   if (BufferedSocket.field_p[39] &&
@@ -3304,26 +3304,26 @@ public final class wizardrun extends GameShell {
                     AchievementSubmission.field_q = false;
                     FadingDialog.field_I = 5;
                     HuffmanDecoder.field_c = 6;
-                    tc.field_j = true;
+                    SavedDataRequest.field_j = true;
                   }
                   if (!BufferedSocket.field_p[68]) {
                   }
                   if (BufferedSocket.field_p[56]) {
                     if (GridActor.field_g > 50) {
                       GridActor.field_g = 5;
-                      tc.field_j = true;
+                      SavedDataRequest.field_j = true;
                     } else {
                       GridActor.field_g = 100;
-                      tc.field_j = true;
+                      SavedDataRequest.field_j = true;
                     }
                   }
                   if (BufferedSocket.field_p[38]) {
-                    tc.field_j = false;
+                    SavedDataRequest.field_j = false;
                     DiskCacheStore.field_f = (int)(Math.random() * 1000.0 + 500.0);
                   }
                 }
                 if (50 < GridActor.field_g &&
-                  tc.field_j) {
+                  SavedDataRequest.field_j) {
                   GridActor.field_g = 100;
                 }
                 if (0 < FadingDialog.field_I) {
@@ -3334,23 +3334,23 @@ public final class wizardrun extends GameShell {
                 }
                 if (AchievementSubmission.field_q) {
                   if (this.field_R == 11) {
-                    if (ii.field_e[0].tilePosition.row <= 2) {
-                      if (2 < ii.field_e[0].tilePosition.column) {
+                    if (NameAvailabilityFactory.field_e[0].tilePosition.row <= 2) {
+                      if (2 < NameAvailabilityFactory.field_e[0].tilePosition.column) {
                         ProgressQuery.field_m.field_b = -1;
                       }
-                      if (ii.field_e[0].tilePosition.column < 2) {
+                      if (NameAvailabilityFactory.field_e[0].tilePosition.column < 2) {
                         ProgressQuery.field_m.field_b = 1;
                       }
                     } else {
                       ProgressQuery.field_m.field_b = -1;
                     }
-                    ii.field_e[0].updateActor((byte) -123, tc.field_l);
-                    if (ii.field_e[0].tilePosition.column == 2 &&
-                      2 == ii.field_e[0].tilePosition.row) {
+                    NameAvailabilityFactory.field_e[0].updateActor((byte) -123, SavedDataRequest.level);
+                    if (NameAvailabilityFactory.field_e[0].tilePosition.column == 2 &&
+                      2 == NameAvailabilityFactory.field_e[0].tilePosition.row) {
                       this.field_R = 12;
                       this.field_Q = 0;
-                      if (tl.field_e) {
-                        SingleChildWidget.field_D.a(true, param0 ^ -727, qj.field_e);
+                      if (FriendOrderingHelpers.field_e) {
+                        SingleChildWidget.field_D.startTrack(true, param0 ^ -727, NineSliceFrame.field_e);
                       }
                     }
                   }
@@ -3360,10 +3360,10 @@ public final class wizardrun extends GameShell {
                       var2_ref_ob = var10;
                       var2_ref_ob.column = 16 + (int)(4.0 * Math.random());
                       var2_ref_ob.row = (int)(Math.random() * 4.0) + 11;
-                      ii.field_e[WidgetTheme.field_k].initialize(param0 + 8507, 20, var10);
-                      ii.field_e[WidgetTheme.field_k].tileOffset.column = (int)(Math.random() * 240.0);
-                      ii.field_e[WidgetTheme.field_k].tileOffset.row = (int)(Math.random() * 240.0);
-                      ii.field_e[WidgetTheme.field_k].field_w = 4;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(param0 + 8507, 20, var10);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.column = (int)(Math.random() * 240.0);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.row = (int)(Math.random() * 240.0);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_w = 4;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                     }
                     if (90 == this.field_Q) {
@@ -3374,7 +3374,7 @@ public final class wizardrun extends GameShell {
                         stackIn_595_1 = 1;
                       }
                       if (stackIn_594_0 == stackIn_595_1) {
-                        tl.field_a.addSample(SpriteState.secondarySoundEffects[1], 100, ee.field_p * 256 / 100);
+                        FriendOrderingHelpers.field_a.addSample(SpriteState.secondarySoundEffects[1], 100, StyleNode.field_p * 256 / 100);
                       }
                     }
                     fieldTemp$9 = this.field_Q;
@@ -3387,7 +3387,7 @@ public final class wizardrun extends GameShell {
                   if (this.field_R == 13) {
                     if (50 == this.field_Q &&
                       ReflectionCheck.field_s) {
-                      tl.field_a.addSample(SpriteState.secondarySoundEffects[2], 100, 256 * ee.field_p / 100);
+                      FriendOrderingHelpers.field_a.addSample(SpriteState.secondarySoundEffects[2], 100, 256 * StyleNode.field_p / 100);
                     }
                     fieldTemp$10 = this.field_Q;
                     this.field_Q = this.field_Q + 1;
@@ -3421,22 +3421,22 @@ public final class wizardrun extends GameShell {
                       DiskCacheStore.field_f = DiskCacheStore.field_f + 1000;
                       var2 = GridActor.field_g % 5;
                       NetworkArchiveRequest.field_x = 0;
-                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
-                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-113, ii.field_e[0].tileOffset);
-                      ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
-                      ii.field_e[WidgetTheme.field_k].field_h = -1;
-                      dupTemp$13 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(9147, 1, NameAvailabilityFactory.field_e[0].tilePosition);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(-113, NameAvailabilityFactory.field_e[0].tileOffset);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.row = 0;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_h = -1;
+                      dupTemp$13 = NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset;
                       dupTemp$13.column = dupTemp$13.column + 790;
-                      ii.field_e[WidgetTheme.field_k].verticalVelocity = var2 * 20;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].verticalVelocity = var2 * 20;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       NetworkArchiveRequest.field_x = 0;
-                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
-                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-98, ii.field_e[0].tileOffset);
-                      ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
-                      ii.field_e[WidgetTheme.field_k].field_h = 1;
-                      dupTemp$14 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(9147, 1, NameAvailabilityFactory.field_e[0].tilePosition);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(-98, NameAvailabilityFactory.field_e[0].tileOffset);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.row = 0;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_h = 1;
+                      dupTemp$14 = NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset;
                       dupTemp$14.column = dupTemp$14.column + 790;
-                      ii.field_e[WidgetTheme.field_k].verticalVelocity = 20 * var2;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].verticalVelocity = 20 * var2;
                       this.field_Q = 70;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                     }
@@ -3452,7 +3452,7 @@ public final class wizardrun extends GameShell {
                     this.field_Q = this.field_Q + 1;
                     if (200 < fieldTemp$16) {
                       BufferedSocket.field_c = BufferedSocket.field_c + (GridActor.field_g + 1);
-                      me.field_f = me.field_f - 36;
+                      LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f - 36;
                       DecodedSpritePalette.field_a = DecodedSpritePalette.field_a + (HuffmanDecoder.field_c + 6 * GridActor.field_l);
                       GridActor.field_g = -1;
                       HuffmanDecoder.field_c = 0;
@@ -3477,7 +3477,7 @@ public final class wizardrun extends GameShell {
                   if (this.field_R == 3) {
                     if (this.field_Q == 5 &&
                       ReflectionCheck.field_s) {
-                      tl.field_a.addSample(SpriteState.secondarySoundEffects[0], 100, 256 * ee.field_p / 100);
+                      FriendOrderingHelpers.field_a.addSample(SpriteState.secondarySoundEffects[0], 100, 256 * StyleNode.field_p / 100);
                     }
                     fieldTemp$18 = this.field_Q;
                     this.field_Q = this.field_Q + 1;
@@ -3528,8 +3528,8 @@ public final class wizardrun extends GameShell {
                   }
                   if (this.field_R == 9) {
                     if (50 == this.field_Q &&
-                      tl.field_e) {
-                      SingleChildWidget.field_D.a(true, param0 ^ -740, IntegerSyntaxHelpers.field_e);
+                      FriendOrderingHelpers.field_e) {
+                      SingleChildWidget.field_D.startTrack(true, param0 ^ -740, IntegerSyntaxHelpers.field_e);
                     }
                     if (75 == this.field_Q &&
                       GridActor.field_g < 5) {
@@ -3537,22 +3537,22 @@ public final class wizardrun extends GameShell {
                       GridActor.field_g = GridActor.field_g + 1;
                       NetworkArchiveRequest.field_x = 0;
                       var2 = GridActor.field_g;
-                      ii.field_e[WidgetTheme.field_k].initialize(param0 ^ 8507, 1, ii.field_e[0].tilePosition);
-                      ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ -751, ii.field_e[0].tileOffset);
-                      ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
-                      ii.field_e[WidgetTheme.field_k].field_h = -1;
-                      dupTemp$24 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(param0 ^ 8507, 1, NameAvailabilityFactory.field_e[0].tilePosition);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ -751, NameAvailabilityFactory.field_e[0].tileOffset);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.row = 0;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_h = -1;
+                      dupTemp$24 = NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset;
                       dupTemp$24.column = dupTemp$24.column + 40;
-                      ii.field_e[WidgetTheme.field_k].verticalVelocity = var2 % 3 * 20;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].verticalVelocity = var2 % 3 * 20;
                       NetworkArchiveRequest.field_x = 0;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
-                      ii.field_e[WidgetTheme.field_k].tileOffset.set(-124, ii.field_e[0].tileOffset);
-                      ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
-                      ii.field_e[WidgetTheme.field_k].field_h = 1;
-                      dupTemp$25 = ii.field_e[WidgetTheme.field_k].tileOffset;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(9147, 1, NameAvailabilityFactory.field_e[0].tilePosition);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(-124, NameAvailabilityFactory.field_e[0].tileOffset);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.row = 0;
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_h = 1;
+                      dupTemp$25 = NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset;
                       dupTemp$25.column = dupTemp$25.column + 40;
-                      ii.field_e[WidgetTheme.field_k].verticalVelocity = 20 * (var2 % 3);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].verticalVelocity = 20 * (var2 % 3);
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       this.field_Q = 70;
                     }
@@ -3573,7 +3573,7 @@ public final class wizardrun extends GameShell {
                     stackIn_688_1 = ~var2;
                     if (stackIn_688_0 != stackIn_688_1 ||
                       !AchievementSubmission.field_q) {
-                      ii.field_e[var2].updateActor((byte) -123, tc.field_l);
+                      NameAvailabilityFactory.field_e[var2].updateActor((byte) -123, SavedDataRequest.level);
                     }
                   }
                 }
@@ -3586,15 +3586,15 @@ public final class wizardrun extends GameShell {
                     HighscorePlayer.field_b = HighscorePlayer.field_b + 1;
                     if (HuffmanDecoder.field_c == 5 &&
                       GridActor.field_l == 0 &&
-                      !ol.field_e) {
+                      !AccountSocketHelpers.field_e) {
                       HuffmanDecoder.a(1, 254, 1);
                     }
                     NetworkArchiveRequest.field_x = 0;
                     if (5 == HuffmanDecoder.field_c) {
-                      w.field_b = 0;
+                      UiThemeSetupHelpers.field_b = 0;
                       IntegerSyntaxHelpers.field_e = SettingsCookieReader.field_a;
-                      if (tl.field_e) {
-                        SingleChildWidget.field_D.a(true, -127, IntegerSyntaxHelpers.field_e);
+                      if (FriendOrderingHelpers.field_e) {
+                        SingleChildWidget.field_D.startTrack(true, -127, IntegerSyntaxHelpers.field_e);
                       }
                       GameApplet.field_g = false;
                     }
@@ -3631,18 +3631,18 @@ public final class wizardrun extends GameShell {
                       GridActor.field_l = GridActor.field_l + 1;
                       HuffmanDecoder.field_c = 0;
                       if (TextButton.field_A < GridActor.field_l) {
-                        ke.field_u.addLast(new ProgressSubmission(0, GridActor.field_l - 1, 0, 0, 0, 0), false);
+                        PasswordFieldPainter.field_u.addLast(new ProgressSubmission(0, GridActor.field_l - 1, 0, 0, 0, 0), false);
                         TextButton.field_A = GridActor.field_l;
                       }
                       if (GridActor.field_l < 6) {
-                        MidiNote.a((byte) -71);
+                        MidiNote.selectLevelMusic((byte) -71);
                       }
                     }
                     BufferedSocket.field_a = 580;
-                    UsernameLoginCredentials.field_j = HighscorePlayer.field_f + (GridActor.field_l + 1) + eh.field_i + (1 + HuffmanDecoder.field_c);
+                    UsernameLoginCredentials.field_j = HighscorePlayer.field_f + (GridActor.field_l + 1) + MarkerSliderPainter.field_i + (1 + HuffmanDecoder.field_c);
                     if (-1 < GridActor.field_g) {
                       if (GridActor.field_l < 6) {
-                        ni.b(7530);
+                        LevelDecodingHelpers.decodeCurrentLevel(7530);
                       }
                       var14 = new GridPoint();
                       var14.row = 2;
@@ -3651,14 +3651,14 @@ public final class wizardrun extends GameShell {
                         HuffmanDecoder.field_c == 5) {
                         var14.column = var14.column + 1;
                       }
-                      ii.field_e[WidgetTheme.field_k].initialize(9147, 0, var14);
+                      NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(9147, 0, var14);
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      vj.c(69);
+                      LevelActorSpawner.c(69);
                       NanoTickClock.field_n = 0;
                       DiskCacheWorker.field_e = 100;
                     }
                     if (GridActor.field_l == 2 && (!(0 < ArchiveProvider.field_a) ||
-                      e.a(param0 ^ -766))) {
+                      ThreePieceFrameHelpers.a(param0 ^ -766))) {
                       this.s(208);
                     }
                   }
@@ -3685,29 +3685,29 @@ public final class wizardrun extends GameShell {
                       UsernameLoginCredentials.field_j = IconButtonPainter.field_b;
                       BufferedSocket.field_a = 580;
                       AchievementSubmission.field_q = false;
-                      if (tl.field_e) {
-                        SingleChildWidget.field_D.a(true, -93, IntegerSyntaxHelpers.field_e);
+                      if (FriendOrderingHelpers.field_e) {
+                        SingleChildWidget.field_D.startTrack(true, -93, IntegerSyntaxHelpers.field_e);
                       }
-                      me.field_f = me.field_f - GridActor.field_g;
+                      LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f - GridActor.field_g;
                       HighscorePlayer.field_b = HighscorePlayer.field_b - 5;
                       GridActor.field_g = 5;
                       continue;
                     }
-                    stackIn_759_0Lifetime1 = ~w.field_c;
+                    stackIn_759_0Lifetime1 = ~UiThemeSetupHelpers.field_c;
                     stackIn_759_1Lifetime1 = -2;
                     if (stackIn_759_0Lifetime1 != stackIn_759_1Lifetime1) {
                       break;
                     }
                     AchievementSubmission.field_q = false;
-                    me.field_f = me.field_f - GridActor.field_g;
+                    LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f - GridActor.field_g;
                     BufferedSocket.field_a = 580;
                     HighscorePlayer.field_b = HighscorePlayer.field_b - 5;
                     GridActor.field_g = 5;
                     UsernameLoginCredentials.field_j = IconButtonPainter.field_b;
-                    if (!tl.field_e) {
+                    if (!FriendOrderingHelpers.field_e) {
                       break;
                     }
-                    SingleChildWidget.field_D.a(true, -86, IntegerSyntaxHelpers.field_e);
+                    SingleChildWidget.field_D.startTrack(true, -86, IntegerSyntaxHelpers.field_e);
                     break;
                   }
                 }
@@ -3725,12 +3725,12 @@ public final class wizardrun extends GameShell {
                         ReflectionCheck.field_s = stackIn_777_0;
                       } else {
                         if (MidiNote.field_r == 70) {
-                          if (tl.field_e) {
-                            tl.field_e = false;
-                            SingleChildWidget.field_D.d(-94);
+                          if (FriendOrderingHelpers.field_e) {
+                            FriendOrderingHelpers.field_e = false;
+                            SingleChildWidget.field_D.stopPlayback(-94);
                           } else {
-                            tl.field_e = true;
-                            SingleChildWidget.field_D.a(true, -101, IntegerSyntaxHelpers.field_e);
+                            FriendOrderingHelpers.field_e = true;
+                            SingleChildWidget.field_D.startTrack(true, -101, IntegerSyntaxHelpers.field_e);
                           }
                         }
                       }
@@ -3746,7 +3746,7 @@ public final class wizardrun extends GameShell {
                       }
                       if (EmailCheckRequest.field_h == 6) {
                         this.field_P = false;
-                        tb.a(0, true);
+                        DisplayNameForm.a(0, true);
                         EmailCheckRequest.field_h = 9;
                         this.field_J = true;
                       }
@@ -3779,7 +3779,7 @@ public final class wizardrun extends GameShell {
                         }
                         ProgressQuery.field_m.field_b = 1;
                       }
-                      if (BufferedSocket.field_p[nf.field_d] ||
+                      if (BufferedSocket.field_p[AccountFormTextHelpers.field_d] ||
                         BufferedSocket.field_p[98]) {
                         ProgressQuery.field_m.field_f = true;
                         if (AccountCreationForm.field_T >= 100 &&
@@ -3788,7 +3788,7 @@ public final class wizardrun extends GameShell {
                           AccountCreationForm.field_T = 250;
                         }
                       }
-                      if (BufferedSocket.field_p[hh.field_S] ||
+                      if (BufferedSocket.field_p[SpriteTextStyle.field_S] ||
                         BufferedSocket.field_p[83]) {
                         ProgressQuery.field_m.field_d = true;
                         if (50 <= AccountCreationForm.field_T &&
@@ -3803,15 +3803,15 @@ public final class wizardrun extends GameShell {
                     var2 = 0;
                     while (var2 < WidgetTheme.field_k) {
                       stackIn_855_0 = 2;
-                      stackIn_855_1 = ii.field_e[var2].actorType;
+                      stackIn_855_1 = NameAvailabilityFactory.field_e[var2].actorType;
                       if (stackIn_855_0 < stackIn_855_1 &&
-                        ii.field_e[var2].actorType != 21 &&
-                        44 != ii.field_e[var2].actorType) {
+                        NameAvailabilityFactory.field_e[var2].actorType != 21 &&
+                        44 != NameAvailabilityFactory.field_e[var2].actorType) {
                         var3 = 1;
                       }
                       if (!(BufferedSocket.field_a > -350) ||
                         !(0 <= GridActor.field_g)) {
-                        ii.field_e[var2].updateActor((byte) -123, tc.field_l);
+                        NameAvailabilityFactory.field_e[var2].updateActor((byte) -123, SavedDataRequest.level);
                       }
                       var2++;
                     }
@@ -3831,40 +3831,40 @@ public final class wizardrun extends GameShell {
                         var4 = WidgetTheme.field_k;
                         for (var2 = 0; var4 > var2; var2++) {
                           stackIn_855_0Lifetime1 = 21;
-                          stackIn_855_1Lifetime1 = ii.field_e[var2].actorType;
+                          stackIn_855_1Lifetime1 = NameAvailabilityFactory.field_e[var2].actorType;
                           if (stackIn_855_0Lifetime1 == stackIn_855_1Lifetime1) {
-                            ii.field_e[var2].field_k = 1;
+                            NameAvailabilityFactory.field_e[var2].field_k = 1;
                           }
                         }
                       }
                     }
                     if (var3 == 0 &&
                       !RadixParsingHelpers.field_e) {
-                      ra.a(2);
+                      AchievementUnlock.activateLevelExitEffect(2);
                     }
                     stackIn_855_0Lifetime2 = -1;
                     stackIn_855_1Lifetime2 = WidgetTheme.field_k;
                     for (var2 = stackIn_855_0Lifetime2 + stackIn_855_1Lifetime2; var2 >= 0; var2--) {
-                      if (ii.field_e[var2].field_k == 1) {
+                      if (NameAvailabilityFactory.field_e[var2].field_k == 1) {
                         WidgetTheme.field_k = WidgetTheme.field_k - 1;
-                        ii.field_e[var2].field_w = ii.field_e[WidgetTheme.field_k].field_w;
-                        ii.field_e[var2].field_o = ii.field_e[WidgetTheme.field_k].field_o;
-                        ii.field_e[var2].field_z = ii.field_e[WidgetTheme.field_k].field_z;
-                        ii.field_e[var2].animationFrame = ii.field_e[WidgetTheme.field_k].animationFrame;
-                        ii.field_e[var2].actorType = ii.field_e[WidgetTheme.field_k].actorType;
-                        ii.field_e[var2].field_x = ii.field_e[WidgetTheme.field_k].field_x;
-                        ii.field_e[var2].verticalVelocity = ii.field_e[WidgetTheme.field_k].verticalVelocity;
-                        ii.field_e[var2].tilePosition.set(-116, ii.field_e[WidgetTheme.field_k].tilePosition);
-                        ii.field_e[var2].tileOffset.set(-89, ii.field_e[WidgetTheme.field_k].tileOffset);
-                        ii.field_e[var2].field_h = ii.field_e[WidgetTheme.field_k].field_h;
-                        ii.field_e[var2].field_d = ii.field_e[WidgetTheme.field_k].field_d;
-                        ii.field_e[var2].field_k = ii.field_e[WidgetTheme.field_k].field_k;
-                        ii.field_e[var2].field_p = ii.field_e[WidgetTheme.field_k].field_p;
-                        ii.field_e[var2].field_r = ii.field_e[WidgetTheme.field_k].field_r;
-                        ii.field_e[var2].field_s = ii.field_e[WidgetTheme.field_k].field_s;
-                        ii.field_e[var2].field_y = ii.field_e[WidgetTheme.field_k].field_y;
-                        ii.field_e[var2].field_A = ii.field_e[WidgetTheme.field_k].field_A;
-                        ii.field_e[var2].field_q = ii.field_e[WidgetTheme.field_k].field_q;
+                        NameAvailabilityFactory.field_e[var2].field_w = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_w;
+                        NameAvailabilityFactory.field_e[var2].field_o = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_o;
+                        NameAvailabilityFactory.field_e[var2].field_z = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_z;
+                        NameAvailabilityFactory.field_e[var2].animationFrame = NameAvailabilityFactory.field_e[WidgetTheme.field_k].animationFrame;
+                        NameAvailabilityFactory.field_e[var2].actorType = NameAvailabilityFactory.field_e[WidgetTheme.field_k].actorType;
+                        NameAvailabilityFactory.field_e[var2].field_x = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_x;
+                        NameAvailabilityFactory.field_e[var2].verticalVelocity = NameAvailabilityFactory.field_e[WidgetTheme.field_k].verticalVelocity;
+                        NameAvailabilityFactory.field_e[var2].tilePosition.set(-116, NameAvailabilityFactory.field_e[WidgetTheme.field_k].tilePosition);
+                        NameAvailabilityFactory.field_e[var2].tileOffset.set(-89, NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset);
+                        NameAvailabilityFactory.field_e[var2].field_h = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_h;
+                        NameAvailabilityFactory.field_e[var2].field_d = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_d;
+                        NameAvailabilityFactory.field_e[var2].field_k = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_k;
+                        NameAvailabilityFactory.field_e[var2].field_p = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_p;
+                        NameAvailabilityFactory.field_e[var2].field_r = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_r;
+                        NameAvailabilityFactory.field_e[var2].field_s = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_s;
+                        NameAvailabilityFactory.field_e[var2].field_y = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_y;
+                        NameAvailabilityFactory.field_e[var2].field_A = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_A;
+                        NameAvailabilityFactory.field_e[var2].field_q = NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_q;
                       }
                     }
                   }
@@ -3898,7 +3898,7 @@ public final class wizardrun extends GameShell {
         }
     }
 
-    final static void a(boolean param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void sortRankingIndices(boolean param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         int incrementValue$0 = 0;
         int stackIn_12_0 = 0;
         boolean stackIn_16_0 = false;
@@ -3942,7 +3942,7 @@ public final class wizardrun extends GameShell {
               if (stackIn_34_0) {
                 stackIn_27_0 = RadialSelectorWidget.field_I[var12];
               } else {
-                stackIn_27_0 = td.field_c[var12];
+                stackIn_27_0 = KeyboardShutdownHelpers.field_c[var12];
               }
               var13 = stackIn_27_0;
               if (var7_int >= var13) {
@@ -3960,9 +3960,9 @@ public final class wizardrun extends GameShell {
               }
               var11++;
             }
-            wizardrun.a(param0, param1, param2, var8, var9, param5, param6);
+            wizardrun.sortRankingIndices(param0, param1, param2, var8, var9, param5, param6);
             stackIn_34_0Lifetime1 = param0;
-            wizardrun.a(stackIn_34_0Lifetime1, (byte) 11, param2, param3, param4, var10, var8);
+            wizardrun.sortRankingIndices(stackIn_34_0Lifetime1, (byte) 11, param2, param3, param4, var10, var8);
             return;
           }
           var7_intLifetime1 = -1 + param3;
@@ -3995,25 +3995,25 @@ public final class wizardrun extends GameShell {
         int var2 = 0;
         int var3 = field_H;
         this.a(11, false, 8, 10, false, 9, param0, 0);
-        AudioOutput.a(22050, false, 10);
-        NodeHashTableIterator.field_k = AudioOutput.create(ld.field_g, (java.awt.Component) ((Object) field_G), 0, 512);
-        Js5Index.field_d = AudioOutput.create(ld.field_g, (java.awt.Component) ((Object) field_G), 1, 22050);
-        tl.field_a = new PcmStreamMixer();
-        NodeHashTableIterator.field_k.a(tl.field_a);
+        AudioOutput.configureAudio(22050, false, 10);
+        NodeHashTableIterator.field_k = AudioOutput.create(MusicPatchLoader.field_g, (java.awt.Component) ((Object) field_G), 0, 512);
+        Js5Index.field_d = AudioOutput.create(MusicPatchLoader.field_g, (java.awt.Component) ((Object) field_G), 1, 22050);
+        FriendOrderingHelpers.field_a = new PcmStreamMixer();
+        NodeHashTableIterator.field_k.setRootStream(FriendOrderingHelpers.field_a);
         SingleChildWidget.field_D = new MidiPcmStream();
-        SingleChildWidget.field_D.a(128, 9, (byte) 108);
-        Js5Index.field_d.a(SingleChildWidget.field_D);
+        SingleChildWidget.field_D.setInitialProgram(128, 9, (byte) 108);
+        Js5Index.field_d.setRootStream(SingleChildWidget.field_D);
         DisplayNameSyntaxHelpers.field_a = 500;
         BufferedSocket.field_c = BufferedSocket.field_c - DiskCacheStore.field_f * 64;
         HighscorePlayer.field_b = HighscorePlayer.field_b - HuffmanDecoder.field_c;
-        me.field_f = me.field_f + GridActor.field_l * 6;
+        LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f + GridActor.field_l * 6;
         GridActor.field_l = 0;
         DiskCacheStore.field_f = 0;
         NanoTickClock.field_n = 0;
-        IntHashTable.field_d = new ol[16];
+        IntHashTable.field_d = new AccountSocketHelpers[16];
         HuffmanDecoder.field_c = 0;
         for (var2 = 0; 16 > var2; var2++) {
-          IntHashTable.field_d[var2] = new ol();
+          IntHashTable.field_d[var2] = new AccountSocketHelpers();
         }
         NanoTickClock.field_n = IntHashTable.field_d[0].field_a;
         this.a(false, true, true, true, false);
@@ -4064,7 +4064,7 @@ public final class wizardrun extends GameShell {
         if (param0) {
           return;
         }
-        ck.a((byte) 84);
+        ClientShutdownHelpers.shutdownClient((byte) 84);
     }
 
     final void d(int param0) {
@@ -4073,18 +4073,18 @@ public final class wizardrun extends GameShell {
           field_E = -28;
         }
         wizardrun.releaseStatics(true);
-        ra.releaseStatics(114);
+        AchievementUnlock.releaseStatics(114);
         IntrusiveDeque.releaseStatics(param0 - 6962);
-        lk.releaseStatics(param0 ^ -7070);
+        TextPositionHelpers.releaseStatics(param0 ^ -7070);
         GameKeyHandler.releaseStatics((byte) 100);
-        mk.releaseStatics(-7241);
-        mj.releaseStatics(13214);
+        AccountValidationHelpers.releaseStatics(-7241);
+        ThrowableFormattingHelpers.releaseStatics(13214);
         StringPaddingHelpers.releaseStatics(true);
-        ve.releaseStatics(true);
+        ErrorReportingHelpers.releaseStatics(true);
         DecodedSpritePalette.releaseStatics(true);
         IndexedSpriteArrayFactory.releaseStatics((byte) -62);
-        w.releaseStatics(-91);
-        id.releaseStatics(0);
+        UiThemeSetupHelpers.releaseStatics(-91);
+        PasswordContentHelpers.releaseStatics(0);
         GameShell.releaseStatics(-18084);
         Base37Codec.releaseStatics(param0 - 6516);
         GameApplet.releaseStatics(113);
@@ -4093,22 +4093,22 @@ public final class wizardrun extends GameShell {
         MouseWheelInput.releaseStatics(param0 ^ -7070);
         SoftwareRasterizer.releaseStatics();
         ResourceArchive.releaseStatics(param0 + 15706);
-        t.releaseStatics((byte) 102);
-        rl.releaseStatics(param0 ^ -32304);
+        KeyboardQueueConsumer.releaseStatics((byte) 102);
+        MenuOverlayHelpers.releaseStatics(param0 ^ -32304);
         PacketBuffer.releaseStatics((byte) 118);
         MonotonicClockHelpers.releaseStatics(-5309);
-        me.releaseStatics((byte) -31);
+        LoadingMessageHelpers.releaseStatics((byte) -31);
         TextWrappingHelpers.releaseStatics(false);
-        ni.releaseStatics(36);
-        n.releaseStatics(-1);
-        ld.releaseStatics((byte) -122);
-        oh.releaseStatics(21100);
-        kj.releaseStatics((byte) 64);
-        wc.releaseStatics(param0 ^ 7071);
+        LevelDecodingHelpers.releaseStatics(36);
+        AccountPacketState.releaseStatics(-1);
+        MusicPatchLoader.releaseStatics((byte) -122);
+        SpriteFilterHelpers.releaseStatics(21100);
+        SystemMemoryHelpers.releaseStatics((byte) 64);
+        ChatMessage.releaseStatics(param0 ^ 7071);
         DisplayNameSyntaxHelpers.releaseStatics(0);
         BeveledFrameFactory.releaseStatics(param0 ^ 7127);
-        ci.releaseStatics(false);
-        tl.releaseStatics((byte) -99);
+        RankingStatsDecoder.releaseStatics(false);
+        FriendOrderingHelpers.releaseStatics((byte) -99);
         TickClock.releaseStatics((byte) -97);
         RasterBuffer.releaseStatics((byte) 75);
         ArchiveLoadingPlan.releaseStatics((byte) 37);
@@ -4120,9 +4120,9 @@ public final class wizardrun extends GameShell {
         BufferedRandomAccessFile.releaseStatics((byte) -92);
         BufferedSocket.releaseStatics(param0 - 37603);
         MidiPcmStream.releaseStatics(91);
-        ol.releaseStatics(false);
+        AccountSocketHelpers.releaseStatics(false);
         PlatformActor.releaseStatics(param0 - 7133);
-        jk.releaseStatics(param0 ^ -7150);
+        FriendsListState.releaseStatics(param0 ^ -7150);
         GridPoint.releaseStatics(12523);
         LevelData.releaseStatics(true);
         AudioOutput.releaseStatics();
@@ -4131,67 +4131,67 @@ public final class wizardrun extends GameShell {
         LoginPacketBuilder.releaseStatics(false);
         AccountFormText.releaseStatics(-1);
         ExceptionSupport.releaseStatics(1);
-        td.releaseStatics(param0 - 7065);
+        KeyboardShutdownHelpers.releaseStatics(param0 - 7065);
         LoginCredentialKind.releaseStatics(0);
         LoginCredentials.releaseStatics(8192);
         IsaacPacketBuffer.releaseStatics((byte) -102);
-        e.releaseStatics((byte) -2);
+        ThreePieceFrameHelpers.releaseStatics((byte) -2);
         IntrusiveNodeHashTable.releaseStatics(1);
         MidiNote.releaseStatics(true);
         MidiFileReader.releaseStatics();
         MidiNoteMixer.releaseStatics(-28471);
         SoundCache.releaseStatics(param0 - 7069);
-        pi.releaseStatics(32348);
-        oc.releaseStatics((byte) 124);
+        MeshLightingHelpers.releaseStatics(32348);
+        CoverageFontLoader.releaseStatics((byte) 124);
         AudioServiceThread.releaseStatics(2);
-        v.releaseStatics(102);
+        SpriteAlphaState.releaseStatics(102);
         BitmapFont.releaseStatics();
         ProgressRefreshState.releaseStatics((byte) 25);
         CharSequenceJoiner.releaseStatics(540);
         MenuInputState.releaseStatics(28);
-        ec.releaseStatics(param0 - 7115);
+        LogoAnimationLoader.releaseStatics(param0 - 7115);
         DialogLayer.releaseStatics((byte) 117);
-        kk.releaseStatics((byte) 120);
+        NameCheckProgressDialog.releaseStatics((byte) 120);
         ProgressDialog.releaseStatics(false);
-        kb.releaseStatics(1);
-        mh.releaseStatics(true);
+        StandardContentTransitionDialog.releaseStatics(1);
+        AccountProgressDialog.releaseStatics(true);
         AccountCreationForm.releaseStatics(-1);
         LoginChoicePanel.releaseStatics((byte) -121);
         LoginForm.releaseStatics(-6664);
         WidgetTheme.releaseStatics(23285);
-        ih.releaseStatics(0);
+        NameCheckHelpers.releaseStatics(0);
         Js5Index.releaseStatics(1);
         ArchiveProvider.releaseStatics(true);
         SpriteState.releaseStatics(110);
         DualLinkNode.releaseStatics(param0 - 7070);
         IndexedSpriteState.releaseStatics(false);
         MenuController.releaseStatics(true);
-        ee.releaseStatics(-21880);
-        qj.releaseStatics(-6145);
-        ii.releaseStatics(1000);
+        StyleNode.releaseStatics(-21880);
+        NineSliceFrame.releaseStatics(-6145);
+        NameAvailabilityFactory.releaseStatics(1000);
         PcmResampler.releaseStatics((byte) 43);
         SynthInstrument.releaseStatics();
         VorbisSample.releaseStatics();
         VorbisFloor.releaseStatics();
         GridActor.releaseStatics((byte) -25);
-        pa.releaseStatics(-49);
+        EncryptedLoginHelpers.releaseStatics(-49);
         SocketJs5Transport.releaseStatics(-1);
         DualLinkDeque.releaseStatics((byte) 92);
         NetworkArchiveRequest.releaseStatics((byte) -101);
         DiskCacheStore.releaseStatics((byte) 111);
         DiskCacheRequest.releaseStatics(100);
         CachedArchiveProvider.releaseStatics((byte) -8);
-        lc.releaseStatics(param0 ^ -7105);
+        ArchiveReadinessHelpers.releaseStatics(param0 ^ -7105);
         ArchiveRequest.releaseStatics(-86);
         IsaacRandom.releaseStatics((byte) -80);
-        lj.releaseStatics((byte) -60);
+        FriendLookupState.releaseStatics((byte) -60);
         PowerOfTwoHelpers.releaseStatics((byte) -63);
         WidgetPainter.releaseStatics(param0 - 3055);
-        f.releaseStatics(-74);
-        vl.releaseStatics(param0 - 6994);
+        HighscorePlayerState.releaseStatics(-74);
+        CheckboxPainter.releaseStatics(param0 - 6994);
         StatefulWidgetPainter.releaseStatics(param0 - 17128);
-        wb.releaseStatics(param0 ^ -7141);
-        eh.releaseStatics(param0 - 7067);
+        RadialSelectorPainter.releaseStatics(param0 ^ -7141);
+        MarkerSliderPainter.releaseStatics(param0 - 7067);
         IntrusiveDequeCursor.releaseStatics(91);
         UiWidget.releaseStatics((byte) 31);
         SingleChildWidget.releaseStatics(param0 ^ -7071);
@@ -4201,7 +4201,7 @@ public final class wizardrun extends GameShell {
         TextButton.releaseStatics(true);
         EditableTextWidget.releaseStatics((byte) 37);
         WidgetContainer.releaseStatics((byte) -106);
-        gf.releaseStatics((byte) -68);
+        ContentTransitionDialog.releaseStatics((byte) -68);
         ResizableDialog.releaseStatics(-6);
         StripedProgressBar.releaseStatics((byte) 111);
         NameSuggestionsPanel.releaseStatics(false);
@@ -4211,36 +4211,36 @@ public final class wizardrun extends GameShell {
         ToggleButton.releaseStatics(param0 ^ 20678);
         TextFieldValidator.releaseStatics(29);
         BrowserCookieHelpers.releaseStatics((byte) 52);
-        re.releaseStatics((byte) -55);
+        AccountConsentPanel.releaseStatics((byte) -55);
         TriangleRasterState.releaseStatics();
-        we.releaseStatics(-7077);
-        vg.releaseStatics(80);
-        MeshWorkspaceHelpers.releaseStatics(param0 - 7067);
-        ca.releaseStatics((byte) -120);
+        UiSpriteThemeHelpers.releaseStatics(-7077);
+        FullscreenFailureDialog.releaseStatics(80);
+        RankingWorkspaceHelpers.releaseStatics(param0 - 7067);
+        MeshMaterial.releaseStatics((byte) -120);
         TriangleMesh.releaseStatics(0);
         BrowserUrlLauncher.releaseStatics((byte) -125);
-        dg.releaseStatics(param0 - 6813);
+        ArchiveContainerHelpers.releaseStatics(param0 - 6813);
         GameGraphicsResources.releaseStatics(0);
-        lh.releaseStatics(false);
-        lf.releaseStatics(-13078);
-        hh.releaseStatics(30828);
+        RasterSnapshotStack.releaseStatics(false);
+        HighscoreMessages.releaseStatics(-13078);
+        SpriteTextStyle.releaseStatics(30828);
         DualLinkNodeHashTable.releaseStatics(-1);
-        vj.releaseStatics(0);
+        LevelActorSpawner.releaseStatics(0);
         IntHashTable.releaseStatics(31);
         ByteStorage.releaseStatics(16);
-        li.releaseStatics();
-        gk.releaseStatics(-124);
+        Bzip2Decoder.releaseStatics();
+        Bzip2State.releaseStatics(-124);
         ReflectionCheck.releaseStatics(param0 ^ -10072);
-        ej.releaseStatics((byte) -43);
+        ByteArrayPool.releaseStatics((byte) -43);
         Crc32Helpers.releaseStatics(-681844375);
         QuickChatPhraseDefinition.releaseStatics(0);
         RadixParsingHelpers.releaseStatics(true);
-        uk.releaseStatics((byte) -44);
+        QuickChatPhraseRepository.releaseStatics((byte) -44);
         WeightedLruCache.releaseStatics((byte) 80);
-        nf.releaseStatics(param0 - 7190);
+        AccountFormTextHelpers.releaseStatics(param0 - 7190);
         HuffmanDecoder.releaseStatics(110);
         SettingsCookieReader.releaseStatics(-106);
-        dl.releaseStatics(param0 ^ 12465);
+        CommonUiLoadingProgress.releaseStatics(param0 ^ 12465);
         SocketConnector.releaseStatics((byte) -64);
         ProxyAuthenticationException.releaseStatics(3543);
         NanoTickClock.releaseStatics(false);
@@ -4248,12 +4248,12 @@ public final class wizardrun extends GameShell {
         FlatTriangleRasterizer.releaseStatics(-331851056);
         DisplayModeInfo.releaseStatics(-1926289535);
         WhirlpoolHasher.releaseStatics((byte) 58);
-        pb.releaseStatics(false);
+        MidiKeyUsage.releaseStatics(false);
         MusicPatch.releaseStatics(true);
         MidiEnvelope.releaseStatics(false);
         EmailDomainHelpers.releaseStatics(false);
         RadialSelectorWidget.releaseStatics(-13542);
-        vb.releaseStatics((byte) 126);
+        MarkerSliderWidget.releaseStatics((byte) 126);
         SynthFilter.releaseStatics();
         WrappedTextLayout.releaseStatics(10881);
         GrowableIntList.releaseStatics((byte) 55);
@@ -4268,7 +4268,7 @@ public final class wizardrun extends GameShell {
         StrongCacheEntry.releaseStatics(param0 - 6950);
         ProxySocketConnector.releaseStatics(4);
         NodeHashTableIterator.releaseStatics(339);
-        vf.releaseStatics(false);
+        RankingStatsRequest.releaseStatics(false);
         AchievementStateRequest.releaseStatics(10615);
         AchievementSubmission.releaseStatics((byte) -73);
         EmailCheckRequest.releaseStatics(125);
@@ -4277,17 +4277,17 @@ public final class wizardrun extends GameShell {
         ProgressSubmission.releaseStatics(param0 - 7157);
         IntegerSyntaxHelpers.releaseStatics(-44);
         NameAvailabilityRequest.releaseStatics((byte) 119);
-        jl.releaseStatics(2763306);
-        tk.releaseStatics(117);
+        SpriteButtonPainter.releaseStatics(2763306);
+        HyperlinkPainter.releaseStatics(117);
         FramedButtonPainter.releaseStatics(-1);
-        ke.releaseStatics((byte) -110);
+        PasswordFieldPainter.releaseStatics((byte) -110);
         IconButtonPainter.releaseStatics((byte) -85);
-        jc.releaseStatics((byte) -19);
+        OpacityWidget.releaseStatics((byte) -19);
         HighscoreRequest.releaseStatics(-89);
         ScoreSubmission.releaseStatics(65535);
         HighscorePlayer.releaseStatics(true);
-        aa.releaseStatics(false);
-        of.releaseStatics((byte) 118);
+        FriendEntry.releaseStatics(false);
+        RankingRequest.releaseStatics((byte) 118);
         ArchiveLoadingStage.releaseStatics((byte) -118);
         LoginMethodPreference.releaseStatics(-119);
         UsernameLoginCredentials.releaseStatics(24957);
@@ -4301,12 +4301,12 @@ public final class wizardrun extends GameShell {
         EmailAddressValidator.releaseStatics(-128);
         ConfirmedEmailValidator.releaseStatics(param0 ^ 2098084476);
         AgeValidator.releaseStatics(true);
-        kd.releaseStatics(24188);
+        ContentTransitionPhase.releaseStatics(24188);
         ValidationState.releaseStatics(0);
         TimedValidator.releaseStatics(param0 - 6948);
-        lg.releaseStatics((byte) 99);
-        tc.releaseStatics((byte) -100);
-        ie.releaseStatics(-1);
+        FullscreenFailureKind.releaseStatics((byte) 99);
+        SavedDataRequest.releaseStatics((byte) -100);
+        SavedDataSubmission.releaseStatics(-1);
         EmailValidationError.releaseStatics(-2076560510);
         this.field_y = null;
     }

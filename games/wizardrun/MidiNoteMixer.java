@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MidiNoteMixer extends PcmStream {
-    private MidiPcmStream field_t;
+    private MidiPcmStream synthesizer;
     static java.awt.Frame field_u;
     IntrusiveDeque field_p;
     static int field_q;
@@ -27,19 +27,19 @@ final class MidiNoteMixer extends PcmStream {
           this.field_o.fill(param0, param1, param2);
           var6 = (MidiNote) (this.field_p.first((byte) 86));
           while (var6 != null) {
-            if (!this.field_t.b(-1, var6)) {
+            if (!this.synthesizer.removeInactiveNote(-1, var6)) {
               var4_int = param1;
               var5 = param2;
               do {
                 if (var5 <= var6.field_E) {
-                  this.a(var4_int, var5, param0, var6, var5 + var4_int, 66);
+                  this.mixNote(var4_int, var5, param0, var6, var5 + var4_int, 66);
                   var6.field_E = var6.field_E - var5;
                   break;
                 }
-                this.a(var4_int, var6.field_E, param0, var6, var5 + var4_int, 124);
+                this.mixNote(var4_int, var6.field_E, param0, var6, var5 + var4_int, 124);
                 var5 = var5 - var6.field_E;
                 var4_int = var4_int + var6.field_E;
-              } while (!this.field_t.a(0, param0, var6, var5, var4_int));
+              } while (!this.synthesizer.updateNote(0, param0, var6, var5, var4_int));
             }
             var6 = (MidiNote) (this.field_p.next(8192));
           }
@@ -58,7 +58,7 @@ final class MidiNoteMixer extends PcmStream {
         }
     }
 
-    private final void a(int param0, MidiNote param1, int param2) {
+    private final void skipNote(int param0, MidiNote param1, int param2) {
         MidiPcmStream stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
@@ -70,28 +70,28 @@ final class MidiNoteMixer extends PcmStream {
         RuntimeException var4 = null;
         int var5 = 0;
         try {
-          if (param2 != ~(this.field_t.field_y[param1.field_F] & 4) &&
+          if (param2 != ~(this.synthesizer.channelFlags[param1.channel] & 4) &&
             0 > param1.field_j) {
-            var4_int = this.field_t.field_Q[param1.field_F] / AudioOutput.field_l;
+            var4_int = this.synthesizer.retriggerPhaseStep[param1.channel] / AudioOutput.field_l;
             var5 = (-param1.field_H + var4_int + 1048575) / var4_int;
             param1.field_H = var4_int * param0 + param1.field_H & 1048575;
             if (param0 >= var5) {
-              if (this.field_t.field_o[param1.field_F] == 0) {
-                param1.field_w = PcmSampleStream.createAtStepQ8(param1.field_v, param1.field_w.getRateMagnitude(), param1.field_w.getVolume(), param1.field_w.getPan());
+              if (this.synthesizer.sampleStartOffset[param1.channel] == 0) {
+                param1.sampleStream = PcmSampleStream.createAtStepQ8(param1.sample, param1.sampleStream.getRateMagnitude(), param1.sampleStream.getVolume(), param1.sampleStream.getPan());
               } else {
-                param1.field_w = PcmSampleStream.createAtStepQ8(param1.field_v, param1.field_w.getRateMagnitude(), 0, param1.field_w.getPan());
-                stackIn_7_0 = this.field_t;
+                param1.sampleStream = PcmSampleStream.createAtStepQ8(param1.sample, param1.sampleStream.getRateMagnitude(), 0, param1.sampleStream.getPan());
+                stackIn_7_0 = this.synthesizer;
                 stackIn_7_1 = 15;
-                stackIn_8_2 = !(param1.field_C.field_r[param1.field_k] >= 0);
-                ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_8_2, param1);
+                stackIn_8_2 = !(param1.patch.field_r[param1.key] >= 0);
+                ((MidiPcmStream) (Object) stackIn_7_0).applySampleStartOffset(stackIn_7_1, stackIn_8_2, param1);
               }
-              if (param1.field_C.field_r[param1.field_k] < 0) {
-                param1.field_w.setLoopCount(-1);
+              if (param1.patch.field_r[param1.key] < 0) {
+                param1.sampleStream.setLoopCount(-1);
               }
               param0 = param1.field_H / var4_int;
             }
           }
-          param1.field_w.skipFrames(param0);
+          param1.sampleStream.skipFrames(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -118,7 +118,7 @@ final class MidiNoteMixer extends PcmStream {
         field_s = null;
     }
 
-    private final void a(int param0, int param1, int[] param2, MidiNote param3, int param4, int param5) {
+    private final void mixNote(int param0, int param1, int[] param2, MidiNote param3, int param4, int param5) {
         MidiPcmStream stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
@@ -137,16 +137,16 @@ final class MidiNoteMixer extends PcmStream {
         int var12 = 0;
         var12 = wizardrun.field_H;
         try {
-          if ((4 & this.field_t.field_y[param3.field_F]) != 0 &&
+          if ((4 & this.synthesizer.channelFlags[param3.channel]) != 0 &&
             param3.field_j < 0) {
-            var7_int = this.field_t.field_Q[param3.field_F] / AudioOutput.field_l;
+            var7_int = this.synthesizer.retriggerPhaseStep[param3.channel] / AudioOutput.field_l;
             while (true) {
               var8 = (1048575 - (-var7_int + param3.field_H)) / var7_int;
               if (param1 < var8) {
                 param3.field_H = param3.field_H + var7_int * param1;
                 break;
               }
-              param3.field_w.fill(param2, param0, var8);
+              param3.sampleStream.fill(param2, param0, var8);
               param0 = param0 + var8;
               param1 = param1 - var8;
               param3.field_H = param3.field_H + (var8 * var7_int - 1048576);
@@ -155,19 +155,19 @@ final class MidiNoteMixer extends PcmStream {
               if (var10 < var9) {
                 var9 = var10;
               }
-              var11 = param3.field_w;
-              if (this.field_t.field_o[param3.field_F] == 0) {
-                param3.field_w = PcmSampleStream.createAtStepQ8(param3.field_v, var11.getRateMagnitude(), var11.getVolume(), var11.getPan());
+              var11 = param3.sampleStream;
+              if (this.synthesizer.sampleStartOffset[param3.channel] == 0) {
+                param3.sampleStream = PcmSampleStream.createAtStepQ8(param3.sample, var11.getRateMagnitude(), var11.getVolume(), var11.getPan());
               } else {
-                param3.field_w = PcmSampleStream.createAtStepQ8(param3.field_v, var11.getRateMagnitude(), 0, var11.getPan());
-                stackIn_12_0 = this.field_t;
+                param3.sampleStream = PcmSampleStream.createAtStepQ8(param3.sample, var11.getRateMagnitude(), 0, var11.getPan());
+                stackIn_12_0 = this.synthesizer;
                 stackIn_12_1 = 15;
-                stackIn_13_2 = !(param3.field_C.field_r[param3.field_k] >= 0);
-                ((MidiPcmStream) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2, param3);
-                param3.field_w.rampVolume(var9, var11.getVolume());
+                stackIn_13_2 = !(param3.patch.field_r[param3.key] >= 0);
+                ((MidiPcmStream) (Object) stackIn_12_0).applySampleStartOffset(stackIn_12_1, stackIn_13_2, param3);
+                param3.sampleStream.rampVolume(var9, var11.getVolume());
               }
-              if (param3.field_C.field_r[param3.field_k] < 0) {
-                param3.field_w.setLoopCount(-1);
+              if (param3.patch.field_r[param3.key] < 0) {
+                param3.sampleStream.setLoopCount(-1);
               }
               var11.fadeOutAndUnlink(var9);
               var11.fill(param2, param0, -param0 + param4);
@@ -180,7 +180,7 @@ final class MidiNoteMixer extends PcmStream {
           if (param5 <= 55) {
             this.firstSubstream();
           }
-          param3.field_w.fill(param2, param0, param1);
+          param3.sampleStream.fill(param2, param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -209,11 +209,11 @@ final class MidiNoteMixer extends PcmStream {
           if (var1_ref == null) {
             return null;
           }
-        } while (null == var1_ref.field_w);
-        return (PcmStream) ((Object) var1_ref.field_w);
+        } while (null == var1_ref.sampleStream);
+        return (PcmStream) ((Object) var1_ref.sampleStream);
     }
 
-    final static EmailValidationError a(int param0, String param1) {
+    final static EmailValidationError validateEmailDomainLabel(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
@@ -238,7 +238,7 @@ final class MidiNoteMixer extends PcmStream {
             return stackIn_6_0;
           }
           if (var2_int > 63) {
-            stackIn_10_0 = kj.field_c;
+            stackIn_10_0 = SystemMemoryHelpers.field_c;
             return stackIn_10_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {
@@ -246,12 +246,12 @@ final class MidiNoteMixer extends PcmStream {
             if (45 == var4) {
               if (var3 == 0 ||
                 -1 + var2_int == var3) {
-                stackIn_20_0 = tl.field_d;
+                stackIn_20_0 = FriendOrderingHelpers.field_d;
                 return stackIn_20_0;
               }
             } else {
               if (-1 == DisplayNameValidator.field_r.indexOf(var4)) {
-                stackIn_24_0 = tl.field_d;
+                stackIn_24_0 = FriendOrderingHelpers.field_d;
                 return stackIn_24_0;
               }
             }
@@ -276,8 +276,8 @@ final class MidiNoteMixer extends PcmStream {
         if (var1 == null) {
           return null;
         }
-        if (null != var1.field_w) {
-          return (PcmStream) ((Object) var1.field_w);
+        if (null != var1.sampleStream) {
+          return (PcmStream) ((Object) var1.sampleStream);
         }
         return this.nextSubstream();
     }
@@ -290,7 +290,7 @@ final class MidiNoteMixer extends PcmStream {
         this.field_p = new IntrusiveDeque();
         this.field_o = new PcmStreamMixer();
         try {
-          this.field_t = param0;
+          this.synthesizer = param0;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -305,20 +305,20 @@ final class MidiNoteMixer extends PcmStream {
         this.field_o.skipFrames(param0);
         var3 = (MidiNote) (this.field_p.first((byte) 122));
         while (var3 != null) {
-          stackIn_4_0 = this.field_t.b(-1, var3);
+          stackIn_4_0 = this.synthesizer.removeInactiveNote(-1, var3);
           boolean decompiledFrameCompleted0 = true;
           if (!stackIn_4_0) {
             var2 = param0;
             while (var3.field_E < var2) {
-              this.a(var3.field_E, var3, -1);
+              this.skipNote(var3.field_E, var3, -1);
               var2 = var2 - var3.field_E;
-              if (this.field_t.a(0, (int[]) null, var3, var2, 0)) {
+              if (this.synthesizer.updateNote(0, (int[]) null, var3, var2, 0)) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
             }
             if (decompiledFrameCompleted0) {
-              this.a(var2, var3, -1);
+              this.skipNote(var2, var3, -1);
               var3.field_E = var3.field_E - var2;
             }
           }

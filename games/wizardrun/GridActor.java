@@ -47,8 +47,8 @@ class GridActor {
           int var8Lifetime1;
           var9 = wizardrun.field_H;
           try {
-            if (null == jc.field_H &&
-              !ol.a(124, param5)) {
+            if (null == OpacityWidget.field_H &&
+              !AccountSocketHelpers.pollAccountConnection(124, param5)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
@@ -58,15 +58,15 @@ class GridActor {
             }
             if (NodeHashTableIterator.field_j == FadingDialog.field_G) {
               if (!param5) {
-                eh.field_e = FramedButtonPainter.createLoginCredentials(param0, false, (byte) -90, param4);
+                MarkerSliderPainter.field_e = FramedButtonPainter.createLoginCredentials(param0, false, (byte) -90, param4);
               } else {
                 var10 = (String) null;
-                eh.field_e = uk.selectLoginCredentials((String) null, 8355711, WidgetContainer.field_D, false, param0);
+                MarkerSliderPainter.field_e = QuickChatPhraseRepository.selectLoginCredentials((String) null, 8355711, WidgetContainer.field_D, false, param0);
               }
-              n.field_b.position = 0;
-              n.field_b.writeByte((byte) 11, 14);
-              n.field_b.writeByte((byte) 11, eh.field_e.getCredentialKind(true).protocolId);
-              id.flushAccountPackets((byte) -67, -1);
+              AccountPacketState.field_b.position = 0;
+              AccountPacketState.field_b.writeByte((byte) 11, 14);
+              AccountPacketState.field_b.writeByte((byte) 11, MarkerSliderPainter.field_e.getCredentialKind(true).protocolId);
+              PasswordContentHelpers.flushAccountPackets((byte) -67, -1);
               NodeHashTableIterator.field_j = DraggableWidget.field_P;
             }
             if (NodeHashTableIterator.field_j == DraggableWidget.field_P &&
@@ -76,7 +76,7 @@ class GridActor {
                 NodeHashTableIterator.field_j = ExceptionSupport.field_b;
               } else {
                 NodeHashTableIterator.field_j = MouseWheelInput.field_c;
-                ra.field_k = var6_int;
+                AchievementUnlock.field_k = var6_int;
                 DelegatingCanvas.field_c = -1;
               }
               AccountCreationForm.field_N.position = 0;
@@ -85,15 +85,15 @@ class GridActor {
               ConfirmedEmailValidator.ensureAccountResponseBytes(8, -28266)) {
               LevelData.field_g = AccountCreationForm.field_N.readLong((byte) 0);
               AccountCreationForm.field_N.position = 0;
-              LoginPacketBuilder.buildLoginPacket(param2, eh.field_e, true, param5, param1);
-              NodeHashTableIterator.field_j = vb.field_F;
+              LoginPacketBuilder.buildLoginPacket(param2, MarkerSliderPainter.field_e, true, param5, param1);
+              NodeHashTableIterator.field_j = MarkerSliderWidget.field_F;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (NodeHashTableIterator.field_j == vb.field_F &&
+            if (NodeHashTableIterator.field_j == MarkerSliderWidget.field_F &&
               ConfirmedEmailValidator.ensureAccountResponseBytes(1, -28266)) {
               var6_intLifetime1 = AccountCreationForm.field_N.readUnsignedByte(255);
               EmailCheckRequest.field_b = null;
-              ra.field_k = var6_intLifetime1;
+              AchievementUnlock.field_k = var6_intLifetime1;
               AccountCreationForm.field_N.position = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
@@ -104,7 +104,7 @@ class GridActor {
                 }
                 else {
                   HuffmanDecoder.closeAccountConnection(-57);
-                  n.field_a = false;
+                  AccountPacketState.field_a = false;
                   stackIn_34_0 = var6_intLifetime1;
                   return stackIn_34_0;
                 }
@@ -115,7 +115,7 @@ class GridActor {
               }
             }
             if (DateFormattingHelpers.field_b == NodeHashTableIterator.field_j &&
-              ExceptionSupport.b(param3 + 71)) {
+              ExceptionSupport.ensurePacketPayload(param3 + 71)) {
               WidgetContainer.field_D = AccountCreationForm.field_N.readLong((byte) 0);
               TextHotspotRange.field_m = AccountCreationForm.field_N.readUnsignedByte(255);
               AccountCreationForm.field_N.readUnsignedByte(255);
@@ -129,7 +129,7 @@ class GridActor {
                 stackIn_48_0 = ((8 & var7) != 0);
                 WidgetPainterState.field_d = stackIn_48_0;
                 stackIn_51_0 = (0 != (4 & var7));
-                kd.field_c = stackIn_51_0;
+                ContentTransitionPhase.field_c = stackIn_51_0;
                 if (WidgetPainterState.field_d) {
                 }
               }
@@ -145,22 +145,22 @@ class GridActor {
               }
               MonotonicClockHelpers.field_a = AccountCreationForm.field_N.readCp1252String(0);
               var12 = (CharSequence) ((Object) MonotonicClockHelpers.field_a);
-              IntrusiveNode.field_a = MouseWheelInput.a(-124, var12);
+              IntrusiveNode.field_a = MouseWheelInput.normalizePlayerName(-124, var12);
               RasterSnapshot.field_t = AccountCreationForm.field_N.readUnsignedByte(255);
               NodeHashTableIterator.field_j = BufferedSocket.field_l;
-              if (eh.field_e.getCredentialKind(true) == Js5Index.field_v) {
+              if (MarkerSliderPainter.field_e.getCredentialKind(true) == Js5Index.field_v) {
                 StripedProgressBar.field_C.saveLoginMethodCookie(DisplayNameValidator.getActiveApplet(param3 + 10), 8910);
               } else {
-                if (eh.field_e.getCredentialKind(true) == UrlPacketDownloader.field_c) {
+                if (MarkerSliderPainter.field_e.getCredentialKind(true) == UrlPacketDownloader.field_c) {
                   IndexedSpriteState.field_e.saveLoginMethodCookie(DisplayNameValidator.getActiveApplet(1), param3 ^ -8903);
                 }
               }
-              n.field_a = false;
+              AccountPacketState.field_a = false;
               if (var11 != null) {
-                MidiEnvelope.a(26017, DisplayNameValidator.getActiveApplet(1), var11);
+                MidiEnvelope.writeSettingsCookie(26017, DisplayNameValidator.getActiveApplet(1), var11);
               }
               if (ArchiveProvider.field_a <= 0 &&
-                !kd.field_c) {
+                !ContentTransitionPhase.field_c) {
                 try {
                   BrowserScriptBridge.call(DisplayNameValidator.getActiveApplet(param3 ^ -10), -3264, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -169,7 +169,7 @@ class GridActor {
                 }
               } else {
                 try {
-                  BrowserScriptBridge.call(new Object[]{WeightedLruCache.a(WidgetContainer.field_D, param3 + 77)}, "zap", 30383, DisplayNameValidator.getActiveApplet(1));
+                  BrowserScriptBridge.call(new Object[]{WeightedLruCache.decodeBase37DisplayName(WidgetContainer.field_D, param3 + 77)}, "zap", 30383, DisplayNameValidator.getActiveApplet(1));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -178,45 +178,45 @@ class GridActor {
               if (ArchiveProvider.field_a > 0) {
                 IntrusiveDequeCursor.field_g = true;
               }
-              n.field_b.initializeCipher(LoginCredentials.field_d, (byte) 109);
+              AccountPacketState.field_b.initializeCipher(LoginCredentials.field_d, (byte) 109);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 LoginCredentials.field_d[var8Lifetime1] = LoginCredentials.field_d[var8Lifetime1] + 50;
               }
               AccountCreationForm.field_N.initializeCipher(LoginCredentials.field_d, (byte) 109);
-              stackIn_79_0 = ra.field_k;
+              stackIn_79_0 = AchievementUnlock.field_k;
               return stackIn_79_0;
             }
             if (NodeHashTableIterator.field_j == MouseWheelInput.field_c &&
-              ExceptionSupport.b(param3 + 85)) {
+              ExceptionSupport.ensurePacketPayload(param3 + 85)) {
               HuffmanDecoder.closeAccountConnection(-77);
-              if (ra.field_k == 7 &&
-                !n.field_a) {
-                n.field_a = true;
+              if (AchievementUnlock.field_k == 7 &&
+                !AccountPacketState.field_a) {
+                AccountPacketState.field_a = true;
                 stackIn_85_0 = -1;
                 return stackIn_85_0;
               }
-              if (7 == ra.field_k) {
-                ra.field_k = 3;
+              if (7 == AchievementUnlock.field_k) {
+                AchievementUnlock.field_k = 3;
               }
               QuickChatDynamicCommand.field_g = AccountCreationForm.field_N.readCp1252String(0);
-              n.field_a = false;
-              stackIn_90_0 = ra.field_k;
+              AccountPacketState.field_a = false;
+              stackIn_90_0 = AchievementUnlock.field_k;
               return stackIn_90_0;
             }
-            if (jc.field_H == null) {
-              if (n.field_a) {
-                if (eh.a(2) > 30000L) {
+            if (OpacityWidget.field_H == null) {
+              if (AccountPacketState.field_a) {
+                if (MarkerSliderPainter.getAccountConnectionAge(2) > 30000L) {
                   QuickChatDynamicCommand.field_g = ArchiveLoadingStage.field_b;
                 } else {
                   QuickChatDynamicCommand.field_g = TextLayoutLine.field_d;
                 }
-                n.field_a = false;
+                AccountPacketState.field_a = false;
                 stackIn_97_0 = 3;
                 return stackIn_97_0;
               }
-              var6_intLifetime2 = vl.field_d;
-              vl.field_d = FadingDialog.field_J;
-              n.field_a = true;
+              var6_intLifetime2 = CheckboxPainter.field_d;
+              CheckboxPainter.field_d = FadingDialog.field_J;
+              AccountPacketState.field_a = true;
               FadingDialog.field_J = var6_intLifetime2;
             }
             stackIn_100_0 = -1;
@@ -554,13 +554,13 @@ class GridActor {
         try {
           SoftwareRasterizer.drawRectOutline(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRect(244, 198, 367, 141, 0);
-          if (null == f.field_d) {
+          if (null == HighscorePlayerState.field_d) {
             if (null != AudioServiceThread.field_a) {
               AudioServiceThread.field_a.a(NameSuggestionsPanel.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
-          var6 = f.field_d[ej.field_c];
+          var6 = HighscorePlayerState.field_d[ByteArrayPool.field_c];
           var7 = var6;
           var7Lifetime1 = var6;
           if (var6 == null) {
@@ -571,7 +571,7 @@ class GridActor {
             var6.drawTransparent(245, 199);
           }
           if (MidiPcmStream.field_M > WidgetTheme.field_j) {
-            var7Lifetime2 = f.field_d[ra.field_o];
+            var7Lifetime2 = HighscorePlayerState.field_d[AchievementUnlock.field_o];
             if (var7Lifetime2 != null) {
               var2_int = (60 + var7Lifetime2.fullWidth) * WidgetTheme.field_j / MidiPcmStream.field_M;
               var3 = var2_int - 30;
@@ -589,8 +589,8 @@ class GridActor {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
-            while (f.field_d.length > var5) {
-              var8 = f.field_d[var5];
+            while (HighscorePlayerState.field_d.length > var5) {
+              var8 = HighscorePlayerState.field_d[var5];
               if (var8 != null && (var8.fullWidth != 365 ||
                 var8.fullHeight != 139)) {
                 if (var2 == null) {

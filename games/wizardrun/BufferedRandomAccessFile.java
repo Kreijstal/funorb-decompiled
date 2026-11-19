@@ -61,7 +61,7 @@ final class BufferedRandomAccessFile {
         field_b = null;
         soundEffects = null;
         if (param0 != -92) {
-          BufferedRandomAccessFile.a(-38, 97);
+          BufferedRandomAccessFile.createDefaultArchive(-38, 97);
         }
         field_q = null;
     }
@@ -178,7 +178,7 @@ final class BufferedRandomAccessFile {
         int var7;
         var7 = wizardrun.field_H;
         if (param0 != -5701) {
-          BufferedRandomAccessFile.a(-93, 38);
+          BufferedRandomAccessFile.createDefaultArchive(-93, 38);
         }
         if (this.field_m != -1L) {
           if (~this.field_p != ~this.field_m) {
@@ -256,7 +256,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final static ResourceArchive a(int param0, int param1) {
+    final static ResourceArchive createDefaultArchive(int param0, int param1) {
         int var2 = -72 / ((-23 - param0) / 63);
         return ProgressQuery.createResourceArchive(param1, 12000, 1, false, false, true);
     }

@@ -3,7 +3,7 @@
  */
 final class IntHashTable {
     static Sprite field_a;
-    static ol[] field_d;
+    static AccountSocketHelpers[] field_d;
     private int[] field_b;
     static char[] field_c;
 
@@ -33,15 +33,15 @@ final class IntHashTable {
     final static void a(byte param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        ie var4 = null;
+        SavedDataSubmission var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (ie) (pa.field_e.first((byte) 68));
+          var4 = (SavedDataSubmission) (EncryptedLoginHelpers.field_e.first((byte) 68));
           while (var4 != null) {
-            tb.a(param1, param0 ^ 18014, var4);
-            var4 = (ie) (pa.field_e.next(8192));
+            DisplayNameForm.writeSavedDataSubmission(param1, param0 ^ 18014, var4);
+            var4 = (SavedDataSubmission) (EncryptedLoginHelpers.field_e.next(8192));
           }
           if (param0 != -86) {
             IntHashTable.releaseStatics(100);
@@ -69,7 +69,7 @@ final class IntHashTable {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = WeightedLruCache.a(Base37Codec.encodeBase37((byte) -75, param1), 74);
+          var2 = WeightedLruCache.decodeBase37DisplayName(Base37Codec.encodeBase37((byte) -75, param1), 74);
           if (param0 != 27) {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;

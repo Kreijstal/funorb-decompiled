@@ -101,7 +101,7 @@ final class HighscorePlayer {
         if (param1 == 9) {
           var3 = new Sprite[9];
           var2 = var3;
-          var3[4] = id.createSolidSquareSprite((byte) 98, param0, 64);
+          var3[4] = PasswordContentHelpers.createSolidSquareSprite((byte) 98, param0, 64);
           return var2;
         }
         return (Sprite[]) null;
@@ -138,7 +138,7 @@ final class HighscorePlayer {
             }
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(jl.a(param0 - 1338, var2, param1), "_top");
+              param1.getAppletContext().showDocument(SpriteButtonPainter.appendChangedSessionParameters(param0 - 1338, var2, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

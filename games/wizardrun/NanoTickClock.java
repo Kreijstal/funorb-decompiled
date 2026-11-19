@@ -33,7 +33,7 @@ final class NanoTickClock extends TickClock {
         field_p = null;
     }
 
-    final static void a(int param0, wc param1) {
+    final static void a(int param0, ChatMessage param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -54,19 +54,19 @@ final class NanoTickClock extends TickClock {
           for (var2_int = 0; 3 > var2_int; var2_int++) {
             IndexedSpriteArrayFactory.field_b[var2_int] = 0;
           }
-          for (var2_intLifetime1 = param0; var2_intLifetime1 < ca.field_e; var2_intLifetime1++) {
-            if (param1.field_i == SingleChildWidget.field_B[var2_intLifetime1].field_i) {
-              dupTemp$3 = SingleChildWidget.field_B[var2_intLifetime1].a((byte) 102);
+          for (var2_intLifetime1 = param0; var2_intLifetime1 < MeshMaterial.field_e; var2_intLifetime1++) {
+            if (param1.messageType == SingleChildWidget.field_B[var2_intLifetime1].messageType) {
+              dupTemp$3 = SingleChildWidget.field_B[var2_intLifetime1].getRetentionPriority((byte) 102);
               IndexedSpriteArrayFactory.field_b[dupTemp$3] = IndexedSpriteArrayFactory.field_b[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param1.a((byte) 102);
+          dupTemp$0 = param1.getRetentionPriority((byte) 102);
           IndexedSpriteArrayFactory.field_b[dupTemp$0] = IndexedSpriteArrayFactory.field_b[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; ca.field_e > var3; var3++) {
+          for (var3 = 0; MeshMaterial.field_e > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (SingleChildWidget.field_B[var3].field_i == param1.field_i) {
-              var4 = SingleChildWidget.field_B[var3].a((byte) 102);
+            if (SingleChildWidget.field_B[var3].messageType == param1.messageType) {
+              var4 = SingleChildWidget.field_B[var3].getRetentionPriority((byte) 102);
               if (GridActor.field_j < IndexedSpriteArrayFactory.field_b[var4]) {
                 IndexedSpriteArrayFactory.field_b[var4] = IndexedSpriteArrayFactory.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -78,9 +78,9 @@ final class NanoTickClock extends TickClock {
               SingleChildWidget.field_B[incrementValue$2] = SingleChildWidget.field_B[var3];
             }
           }
-          ca.field_e = var2_intLifetime2;
-          fieldTemp$1 = ca.field_e;
-          ca.field_e = ca.field_e + 1;
+          MeshMaterial.field_e = var2_intLifetime2;
+          fieldTemp$1 = MeshMaterial.field_e;
+          MeshMaterial.field_e = MeshMaterial.field_e + 1;
           SingleChildWidget.field_B[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,9 +117,9 @@ final class NanoTickClock extends TickClock {
         RuntimeException var1 = null;
         var4 = wizardrun.field_H;
         try {
-          var1_int = id.field_b[param0];
-          for (var2 = 1; var2 < id.field_b.length; var2++) {
-            var3 = id.field_b[var2];
+          var1_int = PasswordContentHelpers.field_b[param0];
+          for (var2 = 1; var2 < PasswordContentHelpers.field_b.length; var2++) {
+            var3 = PasswordContentHelpers.field_b[var2];
             ArrayOperations.copy(BeveledFrameFactory.field_e, var2 << 4, BeveledFrameFactory.field_e, var1_int, var3);
             var1_int = var1_int + var3;
           }

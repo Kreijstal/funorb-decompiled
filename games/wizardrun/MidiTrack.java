@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MidiTrack extends IntrusiveNode {
-    IntrusiveNodeHashTable field_i;
-    byte[] field_j;
+    IntrusiveNodeHashTable keyUsage;
+    byte[] midiBytes;
 
-    final static MidiTrack a(ResourceArchive param0, String param1, String param2) {
+    final static MidiTrack loadNamedTrack(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.getNamedFile(79, param2, param1);
         if (var3 == null) {
           return null;
@@ -13,7 +13,7 @@ final class MidiTrack extends IntrusiveNode {
         return new MidiTrack(new PacketBuffer(var3));
     }
 
-    final void a() {
+    final void buildKeyUsage() {
         int[] var1;
         int[] var2;
         MidiFileReader var4;
@@ -26,7 +26,7 @@ final class MidiTrack extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        pb var14;
+        MidiKeyUsage var14;
         int[] var15;
         int[] var17;
         int[] var18;
@@ -38,10 +38,10 @@ final class MidiTrack extends IntrusiveNode {
         int var11Lifetime1;
         int var11Lifetime2;
         int var12Lifetime1;
-        if (this.field_i != null) {
+        if (this.keyUsage != null) {
           return;
         }
-        this.field_i = new IntrusiveNodeHashTable(16);
+        this.keyUsage = new IntrusiveNodeHashTable(16);
         var20 = new int[16];
         var17 = var20;
         var1 = var17;
@@ -51,7 +51,7 @@ final class MidiTrack extends IntrusiveNode {
         var22 = var1;
         var18[9] = 128;
         var22[9] = 128;
-        var4 = new MidiFileReader(this.field_j);
+        var4 = new MidiFileReader(this.midiBytes);
         var5 = var4.getTrackCount();
         for (var6 = 0; var6 < var5; var6++) {
           var4.seekTrack(var6);
@@ -98,12 +98,12 @@ final class MidiTrack extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (pb) (this.field_i.get(1, (long)var13));
+                var14 = (MidiKeyUsage) (this.keyUsage.get(1, (long)var13));
                 if (var14 == null) {
-                  var14 = new pb(new byte[128]);
-                  this.field_i.put(var14, -98, (long)var13);
+                  var14 = new MidiKeyUsage(new byte[128]);
+                  this.keyUsage.put(var14, -98, (long)var13);
                 }
-                var14.field_j[var11Lifetime2] = (byte) 1;
+                var14.keys[var11Lifetime2] = (byte) 1;
               }
             }
             var4.readDeltaTicks(var6Lifetime1);
@@ -112,8 +112,8 @@ final class MidiTrack extends IntrusiveNode {
         }
     }
 
-    final void b() {
-        this.field_i = null;
+    final void clearKeyUsage() {
+        this.keyUsage = null;
     }
 
     private MidiTrack(PacketBuffer param0) {
@@ -418,8 +418,8 @@ final class MidiTrack extends IntrusiveNode {
         param0.position = param0.position + var25;
         var50 = param0.position;
         param0.position = param0.position + var5 * 3;
-        this.field_j = new byte[var4];
-        var51 = new PacketBuffer(this.field_j);
+        this.midiBytes = new byte[var4];
+        var51 = new PacketBuffer(this.midiBytes);
         var51.writeInt(1297377380, 613003928);
         var51.writeInt(6, 613003928);
         stackIn_84_0 = var51;

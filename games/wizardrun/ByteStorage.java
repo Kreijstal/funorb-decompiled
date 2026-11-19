@@ -8,17 +8,17 @@ abstract class ByteStorage {
     static int field_e;
     static int field_d;
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
+    final static void loadAccountUi(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         try {
-          we.field_c = HuffmanDecoder.createEmailCheck("", false);
-          we.field_c.complete(false, 104);
+          UiSpriteThemeHelpers.field_c = HuffmanDecoder.createEmailCheck("", false);
+          UiSpriteThemeHelpers.field_c.complete(false, 104);
           PlatformActor.loadCommonWidgetSprites(param3, param0 - 2109, param1, param2);
-          ExceptionSupport.a(-126);
-          NetworkArchiveRequest.field_y = ej.field_b;
+          ExceptionSupport.initializeAccountUi(-126);
+          NetworkArchiveRequest.field_y = ByteArrayPool.field_b;
           if (param0 != 2202) {
             field_a = (String) null;
           }
-          wc.field_j = ej.field_b;
+          ChatMessage.field_j = ByteArrayPool.field_b;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "dj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -34,13 +34,13 @@ abstract class ByteStorage {
         field_c = null;
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int bitLength(boolean param0, int param1) {
         int var2;
         ResourceArchive var3;
         int var2Lifetime1;
         if (param0) {
           var3 = (ResourceArchive) null;
-          ByteStorage.a(-74, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, true);
+          ByteStorage.loadAccountUi(-74, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, true);
           var2 = 0;
           if (param1 < 0) {
             var2 += 16;

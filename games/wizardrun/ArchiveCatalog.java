@@ -12,11 +12,11 @@ final class ArchiveCatalog {
     private NetworkArchiveRequest field_f;
     static java.math.BigInteger field_d;
 
-    final static int a(int param0, int param1, boolean param2, int param3) {
+    final static int processAccountInput(int param0, int param1, boolean param2, int param3) {
         if (param3 != 72) {
           return -89;
         }
-        return MouseInputHandler.a(-20232);
+        return MouseInputHandler.processAccountUiInput(-20232);
     }
 
     final void serviceProviders(byte param0) {
@@ -36,7 +36,7 @@ final class ArchiveCatalog {
         var4 = 0;
         var2Lifetime1 = var4;
         if (param0 != -84) {
-          ArchiveCatalog.a(-2, -101, true, -78);
+          ArchiveCatalog.processAccountInput(-2, -101, true, -78);
         }
         while (var4 < this.field_i.length) {
           if (this.field_i[var4] != null) {
@@ -91,7 +91,7 @@ final class ArchiveCatalog {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = id.whirlpoolDigest(var10.payload, 0, -5 + (-var13.length + var10.position), 5);
+        var15 = PasswordContentHelpers.whirlpoolDigest(var10.payload, 0, -5 + (-var13.length + var10.position), 5);
         if (param0 != -17) {
           ArchiveCatalog.releaseStatics(-98);
         }
@@ -160,7 +160,7 @@ final class ArchiveCatalog {
         }
     }
 
-    final static EmailCheckRequest a(String param0, int param1) {
+    final static EmailCheckRequest getEmailCheck(String param0, int param1) {
         RuntimeException var2 = null;
         EmailCheckRequest stackIn_5_0 = null;
         EmailCheckRequest stackIn_7_0 = null;
@@ -169,12 +169,12 @@ final class ArchiveCatalog {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (we.field_c.isComplete(true) &&
-            !param0.equals(we.field_c.getEmail((byte) 8))) {
-            we.field_c = HuffmanDecoder.createEmailCheck(param0, false);
+          if (UiSpriteThemeHelpers.field_c.isComplete(true) &&
+            !param0.equals(UiSpriteThemeHelpers.field_c.getEmail((byte) 8))) {
+            UiSpriteThemeHelpers.field_c = HuffmanDecoder.createEmailCheck(param0, false);
           }
           if (param1 == 6) {
-            stackIn_7_0 = we.field_c;
+            stackIn_7_0 = UiSpriteThemeHelpers.field_c;
             return stackIn_7_0;
           }
           stackIn_5_0 = (EmailCheckRequest) null;
@@ -199,7 +199,7 @@ final class ArchiveCatalog {
         field_c = null;
     }
 
-    final static boolean a(CharSequence param0, byte param1) {
+    final static boolean isValidDisplayName(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;

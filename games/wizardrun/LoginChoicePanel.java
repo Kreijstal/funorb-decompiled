@@ -28,13 +28,13 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
             this.field_J = (TextButton) null;
           }
           if (param1 == 98) {
-            stackIn_9_0 = this.a((byte) -117, param3);
+            stackIn_9_0 = this.focusPreviousChild((byte) -117, param3);
             return stackIn_9_0;
           }
           if (99 != param1) {
             return false;
           }
-          stackIn_13_0 = this.b(param3, 1);
+          stackIn_13_0 = this.focusNextChild(param3, 1);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,9 +53,9 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
     public LoginChoicePanel() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
         this.field_K = new TextButton(WhirlpoolHasher.field_h, (WidgetListener) null);
-        this.field_H = new TextButton(v.field_c, (WidgetListener) null);
+        this.field_H = new TextButton(SpriteAlphaState.field_c, (WidgetListener) null);
         this.field_J = new TextButton(DualLinkDeque.field_b, (WidgetListener) null);
-        jl var1 = new jl();
+        SpriteButtonPainter var1 = new SpriteButtonPainter();
         this.field_K.renderer = (WidgetRenderer) ((Object) var1);
         this.field_H.renderer = (WidgetRenderer) ((Object) var1);
         this.field_J.renderer = (WidgetRenderer) ((Object) var1);
@@ -70,9 +70,9 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         this.field_J.listener = (WidgetListener) (this);
         this.field_K.tooltip = DelayedServerPacket.field_i;
         this.field_J.tooltip = ProxyAuthenticationException.field_a;
-        this.a((UiWidget) (this.field_H), (byte) 101);
-        this.a((UiWidget) (this.field_K), (byte) 47);
-        this.a((UiWidget) (this.field_J), (byte) 46);
+        this.addChild((UiWidget) (this.field_H), (byte) 101);
+        this.addChild((UiWidget) (this.field_K), (byte) 47);
+        this.addChild((UiWidget) (this.field_J), (byte) 46);
     }
 
     public static void releaseStatics(byte param0) {
@@ -86,21 +86,21 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
     final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.x + param0;
         int var6 = this.y + param3;
-        Crc32Helpers.field_b.a(ci.field_c, var5 + 20, 20 + var6, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
+        Crc32Helpers.field_b.a(RankingStatsDecoder.field_c, var5 + 20, 20 + var6, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
         super.drawLayer(param0, param1, param2, param3);
     }
 
     final static void h(byte param0) {
         DialogLayer.field_J = false;
         WrappedTextLayout.field_i = false;
-        jc.a((byte) 79, -1);
-        NetworkArchiveRequest.field_y = ej.field_b;
+        OpacityWidget.setAccountWorkflowState((byte) 79, -1);
+        NetworkArchiveRequest.field_y = ByteArrayPool.field_b;
         if (param0 > 64) {
-          wc.field_j = ej.field_b;
+          ChatMessage.field_j = ByteArrayPool.field_b;
           return;
         }
         LoginChoicePanel.releaseStatics((byte) -56);
-        wc.field_j = ej.field_b;
+        ChatMessage.field_j = ByteArrayPool.field_b;
     }
 
     public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
@@ -116,7 +116,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
             Js5Index.a(-1);
           } else {
             if (param1 == this.field_K) {
-              w.b(-1);
+              UiThemeSetupHelpers.showAccountCreationForm(-1);
             } else {
               if (param1 == this.field_J) {
                 IndexedSpriteState.a(55);

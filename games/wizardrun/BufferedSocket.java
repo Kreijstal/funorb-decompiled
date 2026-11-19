@@ -313,7 +313,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            ResizableDialog.a((Throwable) ((Object) var1_ref), (String) null, -562);
+            ResizableDialog.reportClientError((Throwable) ((Object) var1_ref), (String) null, -562);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

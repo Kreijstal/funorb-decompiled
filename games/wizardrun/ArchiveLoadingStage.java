@@ -8,14 +8,14 @@ final class ArchiveLoadingStage {
     static String field_b;
     static java.awt.Color field_e;
     String waitingMessage;
-    static kd field_g;
+    static ContentTransitionPhase field_g;
     int groupId;
 
     public static void releaseStatics(byte param0) {
         field_b = null;
         field_e = null;
         if (param0 != -118) {
-          field_g = (kd) null;
+          field_g = (ContentTransitionPhase) null;
         }
         field_g = null;
     }
@@ -89,6 +89,6 @@ final class ArchiveLoadingStage {
     static {
         field_b = "Connection timed out. Please try using a different server.";
         field_e = new java.awt.Color(10040319);
-        field_g = new kd();
+        field_g = new ContentTransitionPhase();
     }
 }

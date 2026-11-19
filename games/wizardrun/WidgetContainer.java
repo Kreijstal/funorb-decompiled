@@ -11,7 +11,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
     static TickClock field_y;
     static int[] field_C;
 
-    final void a(UiWidget param0, byte param1) {
+    final void addChild(UiWidget param0, byte param1) {
         try {
           if (param1 <= 15) {
             field_y = (TickClock) null;
@@ -22,7 +22,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    private final void b(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    private final void appendChildrenDebugTree(int param0, int param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$3 = null;
         int var8 = 0;
         StringBuilder discarded$4 = null;
@@ -107,11 +107,11 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         }
         if (param1 != 0) {
           StringBuilder var8 = (StringBuilder) null;
-          this.b(67, 85, (Hashtable) null, (StringBuilder) null);
+          this.appendChildrenDebugTree(67, 85, (Hashtable) null, (StringBuilder) null);
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4) {
+    final static void drawWidgetBorder(int param0, byte param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -164,7 +164,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           }
           if (this.beginDebugDescription(param3, param0, param2, true)) {
             this.appendDebugProperties(83, param2, param0, param3);
-            this.b(param2, -21, param0, param3);
+            this.appendChildrenDebugTree(param2, -21, param0, param3);
           }
           stackIn_5_0 = (StringBuilder) (param3);
           return stackIn_5_0;
@@ -188,7 +188,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    final static java.awt.Container e(int param0) {
+    final static java.awt.Container getAppletContainer(int param0) {
         if (param0 != 152) {
           return (java.awt.Container) null;
         }
@@ -198,7 +198,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         return (java.awt.Container) ((Object) DisplayNameValidator.getActiveApplet(1));
     }
 
-    final boolean b(UiWidget param0, int param1) {
+    final boolean focusNextChild(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -283,9 +283,9 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
             return false;
           }
           if (!BufferedSocket.field_p[81]) {
-            stackIn_15_0 = this.b(param3, 1);
+            stackIn_15_0 = this.focusNextChild(param3, 1);
           } else {
-            stackIn_15_0 = this.a((byte) -117, param3);
+            stackIn_15_0 = this.focusPreviousChild((byte) -117, param3);
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -339,7 +339,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusPreviousChild(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -409,7 +409,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
           if (param3 < 86) {
             field_B = -113;
           }
-          stackIn_3_0 = WrappedTextLayout.a(var4_int, 30736, param1, var5);
+          stackIn_3_0 = WrappedTextLayout.loadOpaqueSprites(var4_int, 30736, param1, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -542,7 +542,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    private final void f(int param0) {
+    private final void refreshChildrenLayout(int param0) {
         int var4 = wizardrun.field_H;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
         UiWidget var3 = (UiWidget) (var2.first((byte) 31));
@@ -556,7 +556,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    UiWidget d(int param0) {
+    UiWidget getFocusedWidget(int param0) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         int var4;
@@ -662,7 +662,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         if (param0 < 108) {
           this.isFocused((byte) 109);
         }
-        this.f(1);
+        this.refreshChildrenLayout(1);
     }
 
     final int getLastDrawLayer(byte param0) {
@@ -688,7 +688,7 @@ class WidgetContainer extends UiWidget implements WidgetGroupMarker {
         if (param0 != 53) {
           return false;
         }
-        return this.d(-16) != null ? true : false;
+        return this.getFocusedWidget(-16) != null ? true : false;
     }
 
     static {

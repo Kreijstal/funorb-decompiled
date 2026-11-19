@@ -30,18 +30,18 @@ final class ReflectionCheck extends IntrusiveNode {
     final static boolean a(byte param0) {
         if (param0 != -35) {
           ReflectionCheck.releaseStatics(63);
-          if (null == kj.field_b) {
+          if (null == SystemMemoryHelpers.field_b) {
             return false;
           }
-          if (kj.field_b.f(0) != null) {
+          if (SystemMemoryHelpers.field_b.getTopVisibleDialog(0) != null) {
             return true;
           }
           return false;
         }
-        if (null == kj.field_b) {
+        if (null == SystemMemoryHelpers.field_b) {
           return false;
         }
-        if (kj.field_b.f(0) != null) {
+        if (SystemMemoryHelpers.field_b.getTopVisibleDialog(0) != null) {
           return true;
         }
         return false;

@@ -34,18 +34,18 @@ final class DisplayNameSyntaxHelpers {
           var3_int = param0.length();
           if (1 <= var3_int &&
             var3_int <= 12) {
-            var4 = MouseWheelInput.a(-76, param0);
+            var4 = MouseWheelInput.normalizePlayerName(-76, param0);
             if (param1 > -33) {
               DisplayNameSyntaxHelpers.requestAchievementState(123, (byte) 15);
             }
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!MonotonicClockHelpers.a(true, var4.charAt(0)) &&
-                !MonotonicClockHelpers.a(true, var4.charAt(var4.length() - 1))) {
+              if (!MonotonicClockHelpers.isNameSeparator(true, var4.charAt(0)) &&
+                !MonotonicClockHelpers.isNameSeparator(true, var4.charAt(var4.length() - 1))) {
                 var5 = 0;
                 for (var6 = 0; var6 < param0.length(); var6++) {
                   var7 = param0.charAt(var6);
-                  if (MonotonicClockHelpers.a(true, (char) var7)) {
+                  if (MonotonicClockHelpers.isNameSeparator(true, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;
@@ -59,10 +59,10 @@ final class DisplayNameSyntaxHelpers {
                 if (var5 <= 0) {
                   return null;
                 }
-                stackIn_35_0 = lg.field_c;
+                stackIn_35_0 = FullscreenFailureKind.field_c;
                 return stackIn_35_0;
               }
-              stackIn_21_0 = lg.field_c;
+              stackIn_21_0 = FullscreenFailureKind.field_c;
               return stackIn_21_0;
             }
             stackIn_16_0 = ValidationIndicator.field_J;
@@ -101,7 +101,7 @@ final class DisplayNameSyntaxHelpers {
     }
 
     final static void requestAchievementState(int param0, byte param1) {
-        IsaacPacketBuffer var2 = n.field_b;
+        IsaacPacketBuffer var2 = AccountPacketState.field_b;
         var2.writeCipheredOpcode((byte) -70, param0);
         var2.writeByte((byte) 11, 1);
         if (param1 != 106) {

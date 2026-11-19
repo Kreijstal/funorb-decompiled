@@ -5,7 +5,7 @@ final class RadixParsingHelpers {
     static int field_a;
     static String field_d;
     static boolean field_e;
-    static uk field_b;
+    static QuickChatPhraseRepository field_b;
     static int field_c;
 
     final static int parseIntRadix(int param0, byte param1, CharSequence param2, boolean param3) {
@@ -109,7 +109,7 @@ final class RadixParsingHelpers {
           var17 = 116 % ((-65 - param3) / 32);
           var15_int = param1.field_B + param1.field_q;
           var16 = param1.field_q;
-          we.a(480, -76, param1, param8, param2, var16, param13, param11, param1, param0, var15_int, param9, param10, param5, param14, var15_int, param6, param4, param7, param12, var16);
+          UiSpriteThemeHelpers.configureUiSpriteTheme(480, -76, param1, param8, param2, var16, param13, param11, param1, param0, var15_int, param9, param10, param5, param14, var15_int, param6, param4, param7, param12, var16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

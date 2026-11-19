@@ -18,10 +18,10 @@ final class EmailAddressValidator extends TextFieldValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (LevelData.a(param0, param1) != null) ? 0 : 1;
+          stackIn_3_0 = (LevelData.validateEmailAddress(param0, param1) != null) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int != 0) {
-            stackIn_7_0 = gf.field_V;
+            stackIn_7_0 = ContentTransitionDialog.field_V;
             return stackIn_7_0;
           }
           stackIn_5_0 = DisplayNameSyntaxHelpers.field_c;
@@ -53,9 +53,9 @@ final class EmailAddressValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.validateText(param1, param0) != DisplayNameSyntaxHelpers.field_c) {
-            return eh.field_h;
+            return MarkerSliderPainter.field_h;
           }
-          stackIn_3_0 = kd.field_b;
+          stackIn_3_0 = ContentTransitionPhase.field_b;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

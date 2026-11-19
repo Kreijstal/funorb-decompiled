@@ -5,7 +5,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
     static int field_G;
     private String field_I;
     static boolean field_M;
-    private mh field_L;
+    private AccountProgressDialog field_L;
     private int[] field_E;
     static MouseWheelInput field_K;
     private BitmapFont field_J;
@@ -25,11 +25,11 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new TextButton(param1, param2);
-          var4.renderer = (WidgetRenderer) ((Object) new jl());
+          var4.renderer = (WidgetRenderer) ((Object) new SpriteButtonPainter());
           var5 = -2 + this.height;
           this.setBounds(param0 ^ 111, 0, this.height + 34, this.width, param0);
           var4.setBounds(110, var5, 30, this.width - 14, 7);
-          this.a((UiWidget) (var4), (byte) 98);
+          this.addChild((UiWidget) (var4), (byte) 98);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,7 +79,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         }
     }
 
-    MessagePanel(mh param0, BitmapFont param1, String param2) {
+    MessagePanel(AccountProgressDialog param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_H = 0;
@@ -106,7 +106,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         var8 = wizardrun.field_H;
         try {
           if (param0 != -18905) {
-            this.field_L = (mh) null;
+            this.field_L = (AccountProgressDialog) null;
           }
           for (var6_int = 0; this.field_H > var6_int; var6_int++) {
             if (param1 != this.field_F[var6_int]) {
@@ -114,9 +114,9 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
             }
             var7 = this.field_E[var6_int];
             if (-1 != var7) {
-              jc.a((byte) 94, this.field_E[var6_int]);
+              OpacityWidget.setAccountWorkflowState((byte) 94, this.field_E[var6_int]);
             } else {
-              this.field_L.l(param0 ^ 9704);
+              this.field_L.closeProgressDialog(param0 ^ 9704);
             }
             break;
           }
@@ -144,18 +144,18 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           field_M = false;
         }
         if (DialogLayer.field_J) {
-          aa.field_lb.n(8);
+          FriendEntry.field_lb.n(8);
         } else {
           var1 = RasterSnapshot.field_t;
           if (var1 > 0) {
             if (var1 == 1) {
               QuickChatDynamicCommand.field_a = SocketConnector.field_d;
             } else {
-              QuickChatDynamicCommand.field_a = WeightedLruCache.a(new String[]{Integer.toString(var1)}, (byte) 46, of.field_m);
+              QuickChatDynamicCommand.field_a = WeightedLruCache.formatPlaceholders(new String[]{Integer.toString(var1)}, (byte) 46, RankingRequest.field_m);
             }
-            QuickChatDynamicCommand.field_a = ol.a(new CharSequence[]{(CharSequence) ((Object) QuickChatDynamicCommand.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IntrusiveDequeCursor.field_c)}, 550);
+            QuickChatDynamicCommand.field_a = AccountSocketHelpers.joinAll(new CharSequence[]{(CharSequence) ((Object) QuickChatDynamicCommand.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IntrusiveDequeCursor.field_c)}, 550);
           }
-          aa.field_lb.l(-27697);
+          FriendEntry.field_lb.closeProgressDialog(-27697);
           LoginCredentials.a((byte) 125);
         }
     }
@@ -185,7 +185,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           if (param0 >= -67) {
             field_G = -79;
           }
-          DateFormattingHelpers.a(LoginCredentialKind.field_c, false, -120);
+          DateFormattingHelpers.showAccountProgress(LoginCredentialKind.field_c, false, -120);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "vc.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

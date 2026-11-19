@@ -24,12 +24,12 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_3_0 = DisplayNameSyntaxHelpers.field_c;
             return stackIn_3_0;
           }
-          if (!WidgetTheme.a(var4, var3, 67)) {
+          if (!WidgetTheme.isPasswordAllowedForUsername(var4, var3, 67)) {
             stackIn_7_0 = DisplayNameSyntaxHelpers.field_c;
             return stackIn_7_0;
           }
           if (!this.containsEmailPart((byte) 38, param1)) {
-            return gf.field_V;
+            return ContentTransitionDialog.field_V;
           }
           stackIn_11_0 = DisplayNameSyntaxHelpers.field_c;
           return stackIn_11_0;
@@ -145,11 +145,11 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_7_0 = QuickChatDynamicCommand.field_d;
             return stackIn_7_0;
           }
-          if (BoundedRandomAccessFile.a((byte) -56, var5)) {
+          if (BoundedRandomAccessFile.containsNonAlphanumericPasswordCharacter((byte) -56, var5)) {
             stackIn_11_0 = ProgressSubmission.field_o;
             return stackIn_11_0;
           }
-          if (ValidatedTextField.a(false, var5)) {
+          if (ValidatedTextField.isRepeatedCharacterPassword(false, var5)) {
             stackIn_15_0 = DraggableWidget.field_L;
             return stackIn_15_0;
           }
@@ -165,11 +165,11 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_23_0 = NetworkArchiveRequest.field_v;
             return stackIn_23_0;
           }
-          if (pa.a(0, var7, var5)) {
+          if (EncryptedLoginHelpers.usernameContainsPassword(0, var7, var5)) {
             stackIn_26_0 = LoginPacketBuilder.field_d;
             return stackIn_26_0;
           }
-          if (!id.a(var5, var7, 0)) {
+          if (!PasswordContentHelpers.containsNormalizedUsername(var5, var7, 0)) {
             stackIn_31_0 = QuickChatDynamicCommand.field_d;
             return stackIn_31_0;
           }

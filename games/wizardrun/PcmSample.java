@@ -8,7 +8,7 @@ final class PcmSample extends AbstractAudioSample {
     int field_n;
     int field_l;
 
-    final PcmSample a(PcmResampler param0) {
+    final PcmSample resample(PcmResampler param0) {
         this.field_k = param0.resample((byte) 47, this.field_k);
         this.field_m = param0.scaleRate(true, this.field_m);
         if (this.field_n != this.field_l) {

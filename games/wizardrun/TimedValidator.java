@@ -23,7 +23,7 @@ abstract class TimedValidator implements Validator {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          if (MusicPatch.a(param3, param0, param1, -120)) {
+          if (MusicPatch.loadSpriteSheet(param3, param0, param1, -120)) {
             stackIn_7_0 = ProgressSubmission.buildDecodedSprites(19999);
             return stackIn_7_0;
           }
@@ -48,7 +48,7 @@ abstract class TimedValidator implements Validator {
           return PacketBuffer.field_o;
         }
         if (!(MonotonicClockHelpers.monotonicMillis((byte) 25) >= this.field_f + 350L)) {
-          return nf.field_c;
+          return AccountFormTextHelpers.field_c;
         }
         if (!param0) {
           field_b = (LoginForm) null;
@@ -71,7 +71,7 @@ abstract class TimedValidator implements Validator {
           TriangleRasterState.useRasterClip();
           SoftwareRasterizer.clear();
           DualLinkNodeHashTable.field_f = 0;
-          gf.k(param0 ^ -301);
+          ContentTransitionDialog.drawLogoMeshes(param0 ^ -301);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);
@@ -82,7 +82,7 @@ abstract class TimedValidator implements Validator {
           if (param0 != 350) {
             field_a = 72;
           }
-          UsernameLoginCredentials.b(4);
+          UsernameLoginCredentials.popRasterState(4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "r.N(" + param0 + ')');
         }

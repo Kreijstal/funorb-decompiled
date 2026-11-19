@@ -330,8 +330,8 @@ final class EmailCheckRequest {
         }
     }
 
-    final static void a(byte param0) {
-        jc.a((byte) 43, 4);
+    final static void requestAccountCreation(byte param0) {
+        OpacityWidget.setAccountWorkflowState((byte) 43, 4);
         if (param0 != -89) {
           field_j = (IntrusiveDeque) null;
         }

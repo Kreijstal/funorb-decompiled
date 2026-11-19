@@ -17,7 +17,7 @@ final class ExceptionSupport {
         return var2;
     }
 
-    final static boolean b(int param0) {
+    final static boolean ensurePacketPayload(int param0) {
         if (param0 < 20) {
           return true;
         }
@@ -53,15 +53,15 @@ final class ExceptionSupport {
         field_c = null;
     }
 
-    final static void a(int param0) {
-        ValidationIndicator.field_H = jl.c(4);
+    final static void initializeAccountUi(int param0) {
+        ValidationIndicator.field_H = SpriteButtonPainter.getDefaultWidgetTheme(4);
         GameShell.field_A = new DialogLayer();
         if (param0 <= -26) {
-          WeightedLruCache.a(true, true, 117);
+          WeightedLruCache.showLoginDialog(true, true, 117);
           return;
         }
         field_b = (AccountConnectionState) null;
-        WeightedLruCache.a(true, true, 117);
+        WeightedLruCache.showLoginDialog(true, true, 117);
     }
 
     static {

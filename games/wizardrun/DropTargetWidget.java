@@ -20,7 +20,7 @@ final class DropTargetWidget extends SingleChildWidget {
           if (param1 >= -86) {
             return true;
           }
-          var3 = StrongCacheEntry.a(param0, 1);
+          var3 = StrongCacheEntry.reverseString(param0, 1);
           if (-1 != param2.indexOf(param0)) {
             return true;
           }
@@ -54,10 +54,10 @@ final class DropTargetWidget extends SingleChildWidget {
         int var3;
         var3 = wizardrun.field_H;
         if (ArchiveProvider.field_a <= 0) {
-          var2 = (e.a(-89)) ? 0 : 1;
+          var2 = (ThreePieceFrameHelpers.a(-89)) ? 0 : 1;
         } else {
           if (null == StringPaddingHelpers.field_c) {
-            LoginChoicePanel.field_E = DelayedServerPacket.createFullscreenCanvas(0, 640, 0, 480, 0, ld.field_g);
+            LoginChoicePanel.field_E = DelayedServerPacket.createFullscreenCanvas(0, 640, 0, 480, 0, MusicPatchLoader.field_g);
           } else {
             LoginChoicePanel.field_E = StringPaddingHelpers.field_c.c(0);
             AccountConnectionState.notifyBrowserResize(0, 2);
@@ -70,7 +70,7 @@ final class DropTargetWidget extends SingleChildWidget {
           }
         }
         if (null == StringPaddingHelpers.field_c &&
-          dg.field_b) {
+          ArchiveContainerHelpers.field_b) {
           TriangleMesh.a(param0, var2, 15991);
         }
         if (param1) {
@@ -104,7 +104,7 @@ final class DropTargetWidget extends SingleChildWidget {
           var12 = AccountCreationForm.field_N;
           var2 = var12.readUnsignedByte(255);
           if (var2 == 0) {
-            var10 = mh.m(-26421);
+            var10 = AccountProgressDialog.createAchievementStateWords(-26421);
             var16 = var10;
             var13 = var16;
             var3 = var13;
@@ -140,12 +140,12 @@ final class DropTargetWidget extends SingleChildWidget {
                 HuffmanDecoder.closeAccountConnection(-34);
                 return;
               }
-              var15.stateWords = mh.m(-26421);
+              var15.stateWords = AccountProgressDialog.createAchievementStateWords(-26421);
               var15.complete = true;
               var15.firstStateWord = var15.stateWords[0];
               var15.unlink(false);
             } else {
-              ResizableDialog.a((Throwable) null, "A1: " + ni.c(6), -562);
+              ResizableDialog.reportClientError((Throwable) null, "A1: " + LevelDecodingHelpers.describeAccountPacket(6), -562);
               HuffmanDecoder.closeAccountConnection(-109);
             }
           }

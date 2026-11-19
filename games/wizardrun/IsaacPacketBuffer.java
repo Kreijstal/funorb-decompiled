@@ -7,7 +7,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
     static Sprite field_s;
     private IsaacRandom field_r;
 
-    final static ScoreSubmission a(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
+    final static ScoreSubmission submitScore(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
         ScoreSubmission var9 = null;
         RuntimeException var9_ref = null;
         byte[] var10 = null;
@@ -19,10 +19,10 @@ final class IsaacPacketBuffer extends PacketBuffer {
         try {
           var9 = new ScoreSubmission(param8, param7, param6, param0, param5, param2, param1);
           CachedArchiveProvider.field_t.addLast(var9, false);
-          EditableTextWidget.a(var9, param3, param4 - 160);
+          EditableTextWidget.writeScoreSubmission(var9, param3, param4 - 160);
           if (param4 != 99) {
             var10 = (byte[]) null;
-            IsaacPacketBuffer.a(88, (byte[]) null);
+            IsaacPacketBuffer.buildDecodedCoverageFont(88, (byte[]) null);
           }
           stackIn_3_0 = var9;
           return stackIn_3_0;
@@ -40,7 +40,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static CoverageBitmapFont a(int param0, byte[] param1) {
+    final static CoverageBitmapFont buildDecodedCoverageFont(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         CoverageBitmapFont var3 = null;
@@ -57,7 +57,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
             return (CoverageBitmapFont) (stackIn_2_0);
           }
           var3 = new CoverageBitmapFont(param1, GameMenu.field_q, AccountFormText.field_h, ImageProducerRasterBuffer.field_k, MouseInputHandler.field_b, DecodedSpritePalette.palette, TextFieldValidator.field_j);
-          ClientException.a(0);
+          ClientException.clearDecodedSpriteState(0);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -176,14 +176,14 @@ final class IsaacPacketBuffer extends PacketBuffer {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.payload[incrementValue$0] & lj.field_b[var4]) << param0 - var4);
+          var5 = var5 + ((this.payload[incrementValue$0] & FriendLookupState.field_b[var4]) << param0 - var4);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (var4 == param0) {
-          var5 = var5 + (lj.field_b[var4] & this.payload[var3]);
+          var5 = var5 + (FriendLookupState.field_b[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.payload[var3] >> var4 - param0 & lj.field_b[param0]);
+          var5 = var5 + (this.payload[var3] >> var4 - param0 & FriendLookupState.field_b[param0]);
         }
         return var5;
     }

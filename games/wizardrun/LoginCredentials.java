@@ -17,10 +17,10 @@ abstract class LoginCredentials {
         int var5Lifetime2;
         int var5Lifetime3;
         if (!param2) {
-          if (td.field_c[param1] < td.field_c[param0]) {
+          if (KeyboardShutdownHelpers.field_c[param1] < KeyboardShutdownHelpers.field_c[param0]) {
             return true;
           }
-          if (td.field_c[param1] > td.field_c[param0]) {
+          if (KeyboardShutdownHelpers.field_c[param1] > KeyboardShutdownHelpers.field_c[param0]) {
             return false;
           }
           if (RadialSelectorWidget.field_I[param0] > RadialSelectorWidget.field_I[param1]) {
@@ -29,9 +29,9 @@ abstract class LoginCredentials {
           if (RadialSelectorWidget.field_I[param0] < RadialSelectorWidget.field_I[param1]) {
             return false;
           }
-          var4 = DiskCacheRequest.field_B[param1] + MouseInputHandler.field_c[param1] + mk.field_c[param1];
+          var4 = DiskCacheRequest.field_B[param1] + MouseInputHandler.field_c[param1] + AccountValidationHelpers.field_c[param1];
           if (param3 == -54) {
-            var5 = MouseInputHandler.field_c[param0] + (DiskCacheRequest.field_B[param0] + mk.field_c[param0]);
+            var5 = MouseInputHandler.field_c[param0] + (DiskCacheRequest.field_B[param0] + AccountValidationHelpers.field_c[param0]);
             if (var5 > var4) {
               return true;
             }
@@ -41,7 +41,7 @@ abstract class LoginCredentials {
             return !(param0 <= param1);
           }
           LoginCredentials.releaseStatics(-121);
-          var5Lifetime3 = MouseInputHandler.field_c[param0] + (DiskCacheRequest.field_B[param0] + mk.field_c[param0]);
+          var5Lifetime3 = MouseInputHandler.field_c[param0] + (DiskCacheRequest.field_B[param0] + AccountValidationHelpers.field_c[param0]);
           if (var5Lifetime3 > var4) {
             return true;
           }
@@ -56,16 +56,16 @@ abstract class LoginCredentials {
         if (RadialSelectorWidget.field_I[param0] < RadialSelectorWidget.field_I[param1]) {
           return false;
         }
-        if (td.field_c[param0] > td.field_c[param1]) {
+        if (KeyboardShutdownHelpers.field_c[param0] > KeyboardShutdownHelpers.field_c[param1]) {
           return true;
         }
-        if (td.field_c[param0] < td.field_c[param1]) {
+        if (KeyboardShutdownHelpers.field_c[param0] < KeyboardShutdownHelpers.field_c[param1]) {
           return false;
         }
-        var4Lifetime1 = DiskCacheRequest.field_B[param1] + MouseInputHandler.field_c[param1] + mk.field_c[param1];
+        var4Lifetime1 = DiskCacheRequest.field_B[param1] + MouseInputHandler.field_c[param1] + AccountValidationHelpers.field_c[param1];
         if (param3 != -54) {
           LoginCredentials.releaseStatics(-121);
-          var5Lifetime1 = MouseInputHandler.field_c[param0] + (DiskCacheRequest.field_B[param0] + mk.field_c[param0]);
+          var5Lifetime1 = MouseInputHandler.field_c[param0] + (DiskCacheRequest.field_B[param0] + AccountValidationHelpers.field_c[param0]);
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
@@ -74,7 +74,7 @@ abstract class LoginCredentials {
           }
           return !(param0 <= param1);
         }
-        var5Lifetime2 = MouseInputHandler.field_c[param0] + (DiskCacheRequest.field_B[param0] + mk.field_c[param0]);
+        var5Lifetime2 = MouseInputHandler.field_c[param0] + (DiskCacheRequest.field_B[param0] + AccountValidationHelpers.field_c[param0]);
         if (var5Lifetime2 > var4Lifetime1) {
           return true;
         }
@@ -90,11 +90,11 @@ abstract class LoginCredentials {
     abstract LoginCredentialKind getCredentialKind(boolean param0);
 
     final static void a(byte param0) {
-        GameShell.field_A.d(false);
+        GameShell.field_A.hideAllDialogs(false);
         if (ProxySocketConnector.field_e == null) {
           ProxySocketConnector.field_e = new ProgressDialog(GameShell.field_A, QuickChatDynamicCommand.field_a);
         }
-        GameShell.field_A.b((UiWidget) (ProxySocketConnector.field_e), (byte) 73);
+        GameShell.field_A.showDialog((UiWidget) (ProxySocketConnector.field_e), (byte) 73);
         int var1 = -118 % ((76 - param0) / 49);
     }
 

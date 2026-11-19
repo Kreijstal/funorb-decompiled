@@ -25,7 +25,7 @@ final class DisplayNameValidator extends TextFieldValidator {
           if (param0 != 1) {
             field_m = 77;
           }
-          stackIn_7_0 = ca.field_c;
+          stackIn_7_0 = MeshMaterial.field_c;
           return (java.applet.Applet) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,24 +84,24 @@ final class DisplayNameValidator extends TextFieldValidator {
         try {
           var2 = new PacketBuffer(param0);
           var2.position = -2 + param0.length;
-          wb.field_f = var2.readUnsignedShort(-14477);
+          RadialSelectorPainter.field_f = var2.readUnsignedShort(-14477);
           if (!param1) {
             return;
           }
-          SoundCache.field_e = new byte[wb.field_f][];
-          TextFieldValidator.field_j = new byte[wb.field_f][];
-          MouseInputHandler.field_b = new int[wb.field_f];
-          AccountFormText.field_h = new int[wb.field_f];
-          ImageProducerRasterBuffer.field_k = new int[wb.field_f];
-          v.field_e = new boolean[wb.field_f];
-          GameMenu.field_q = new int[wb.field_f];
-          var2.position = param0.length - (7 + 8 * wb.field_f);
+          SoundCache.field_e = new byte[RadialSelectorPainter.field_f][];
+          TextFieldValidator.field_j = new byte[RadialSelectorPainter.field_f][];
+          MouseInputHandler.field_b = new int[RadialSelectorPainter.field_f];
+          AccountFormText.field_h = new int[RadialSelectorPainter.field_f];
+          ImageProducerRasterBuffer.field_k = new int[RadialSelectorPainter.field_f];
+          SpriteAlphaState.hasAlpha = new boolean[RadialSelectorPainter.field_f];
+          GameMenu.field_q = new int[RadialSelectorPainter.field_f];
+          var2.position = param0.length - (7 + 8 * RadialSelectorPainter.field_f);
           ProgressDialog.field_bb = var2.readUnsignedShort(-14477);
           PlatformActor.field_v = var2.readUnsignedShort(-14477);
           var3 = 1 + (255 & var2.readUnsignedByte(255));
           var4 = 0;
           do {
-            if (!(wb.field_f > var4)) {
+            if (!(RadialSelectorPainter.field_f > var4)) {
               var4 = 0;
               break;
             }
@@ -109,7 +109,7 @@ final class DisplayNameValidator extends TextFieldValidator {
             var4++;
           } while (var15 == 0);
           do {
-            if (!(var4 < wb.field_f)) {
+            if (!(var4 < RadialSelectorPainter.field_f)) {
               var4 = 0;
               break;
             }
@@ -117,7 +117,7 @@ final class DisplayNameValidator extends TextFieldValidator {
             var4++;
           } while (var15 == 0);
           do {
-            if (!(var4 < wb.field_f)) {
+            if (!(var4 < RadialSelectorPainter.field_f)) {
               var4 = 0;
               break;
             }
@@ -125,8 +125,8 @@ final class DisplayNameValidator extends TextFieldValidator {
             var4++;
           } while (var15 == 0);
           do {
-            if (!(wb.field_f > var4)) {
-              var2.position = -(wb.field_f * 8) + (-7 + param0.length + (-(var3 * 3) + 3));
+            if (!(RadialSelectorPainter.field_f > var4)) {
+              var2.position = -(RadialSelectorPainter.field_f * 8) + (-7 + param0.length + (-(var3 * 3) + 3));
               DecodedSpritePalette.palette = new int[var3];
               break;
             }
@@ -166,7 +166,7 @@ final class DisplayNameValidator extends TextFieldValidator {
             stackIn_45_0 = var4;
             while (true) {
               stackIn_46_0Lifetime1 = stackIn_45_0;
-              stackIn_46_1Lifetime1 = wb.field_f;
+              stackIn_46_1Lifetime1 = RadialSelectorPainter.field_f;
               if (stackIn_46_0Lifetime1 >= stackIn_46_1Lifetime1) {
                 return;
               }
@@ -249,7 +249,7 @@ final class DisplayNameValidator extends TextFieldValidator {
                     }
                   }
                 }
-                v.field_e[var4] = var10Lifetime1 != 0;
+                SpriteAlphaState.hasAlpha[var4] = var10Lifetime1 != 0;
                 var4++;
                 continue scanLoop1;
               }
@@ -371,7 +371,7 @@ final class DisplayNameValidator extends TextFieldValidator {
           if (param0 != -1) {
             field_k = -25;
           }
-          if (!ArchiveCatalog.a((CharSequence) ((Object) param1), (byte) 120)) {
+          if (!ArchiveCatalog.isValidDisplayName((CharSequence) ((Object) param1), (byte) 120)) {
             stackIn_5_0 = DisplayNameSyntaxHelpers.field_c;
             return stackIn_5_0;
           }
@@ -387,7 +387,7 @@ final class DisplayNameValidator extends TextFieldValidator {
             }
           }
           if (this.nameAvailable) {
-            stackIn_18_0 = gf.field_V;
+            stackIn_18_0 = ContentTransitionDialog.field_V;
           } else {
             stackIn_18_0 = DisplayNameSyntaxHelpers.field_c;
           }

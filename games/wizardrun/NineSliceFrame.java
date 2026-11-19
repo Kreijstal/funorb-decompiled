@@ -1,0 +1,172 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NineSliceFrame {
+    static MidiTrack field_e;
+    static String field_c;
+    static String field_b;
+    static String field_f;
+    static String field_a;
+    static int field_d;
+    private Sprite[] sprites;
+
+    final void drawFrame(int param0, int param1, int param2, int param3, int param4) {
+        if (param3 != 1) {
+          return;
+        }
+        CacheEntry.a(this.sprites, param4, (byte) -110, param1, param2, param0);
+    }
+
+    public static void releaseStatics(int param0) {
+        field_a = null;
+        field_c = null;
+        if (param0 != -6145) {
+          return;
+        }
+        field_e = null;
+        field_b = null;
+        field_f = null;
+    }
+
+    final static boolean readBooleanByte(byte param0, PacketBuffer param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != -100) {
+            NineSliceFrame.createMouseWheelHandler(false);
+          }
+          var2_int = param1.readUnsignedByte(255);
+          stackIn_5_0 = (var2_int == 1) ? 1 : 0;
+          var3 = stackIn_5_0;
+          stackIn_6_0 = var3;
+          return stackIn_6_0 != 0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_9_0 = var2;
+          stackIn_9_1 = new StringBuilder().append("qj.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    final static boolean isCurrentPlayerName(String param0, int param1) {
+        RuntimeException var2 = null;
+        String var3 = null;
+        CharSequence var4 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 < 40) {
+            var3 = (String) null;
+            NineSliceFrame.isCurrentPlayerName((String) null, -48);
+          }
+          var4 = (CharSequence) ((Object) param0);
+          stackIn_3_0 = IntrusiveNode.field_a.equals(MouseWheelInput.normalizePlayerName(-63, var4));
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("qj.D(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static int a(int param0, int param1) {
+        int stackIn_5_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_19_0 = 0;
+        if (param0 == -2942) {
+          param1 = param1 & 8191;
+          if (param1 < 4096) {
+            if (param1 < 2048) {
+              stackIn_19_0 = Base37Codec.field_b[param1];
+            } else {
+              stackIn_19_0 = Base37Codec.field_b[4096 - param1];
+            }
+            return stackIn_19_0;
+          }
+          if (param1 < 6144) {
+            stackIn_15_0 = -Base37Codec.field_b[-4096 + param1];
+          } else {
+            stackIn_15_0 = -Base37Codec.field_b[-param1 + 8192];
+          }
+          return stackIn_15_0;
+        }
+        NineSliceFrame.releaseStatics(42);
+        param1 = param1 & 8191;
+        if (param1 < 4096) {
+          if (param1 < 2048) {
+            stackIn_9_0 = Base37Codec.field_b[param1];
+          } else {
+            stackIn_9_0 = Base37Codec.field_b[4096 - param1];
+          }
+          return stackIn_9_0;
+        }
+        if (param1 < 6144) {
+          stackIn_5_0 = -Base37Codec.field_b[-4096 + param1];
+        } else {
+          stackIn_5_0 = -Base37Codec.field_b[-param1 + 8192];
+        }
+        return stackIn_5_0;
+    }
+
+    final static MouseWheelInput createMouseWheelHandler(boolean param0) {
+        try {
+          Throwable var1 = null;
+          MouseWheelInput stackIn_3_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0) {
+              NineSliceFrame.createMouseWheelHandler(true);
+            }
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
+            return stackIn_3_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    NineSliceFrame(Sprite[] param0) {
+        try {
+          this.sprites = param0;
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "qj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_c = "WORLD ";
+        field_b = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+        field_a = "Jump";
+        field_f = "Score";
+    }
+}

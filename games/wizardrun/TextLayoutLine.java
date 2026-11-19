@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextLayoutLine {
-    int[] field_e;
-    int field_a;
+    int[] characterPositions;
+    int top;
     static String field_d;
-    int field_b;
+    int bottom;
     static int field_c;
 
-    final static void a(byte param0) {
+    final static void readHighscoreResponse(byte param0) {
         int var8_int = 0;
         String[][] dupTemp$0 = null;
         long[][] dupTemp$1 = null;
@@ -72,17 +72,17 @@ final class TextLayoutLine {
             var5 = var27.readUnsignedByte(255);
             if (var5 != 0) {
               var6_int = var4_ref_nj.field_j;
-              f.field_a[0].displayName = MonotonicClockHelpers.field_a;
+              HighscorePlayerState.players[0].displayName = MonotonicClockHelpers.field_a;
               var7 = var4_ref_nj.field_o;
-              f.field_a[0].included = false;
-              f.field_a[0].alternateName = null;
+              HighscorePlayerState.players[0].included = false;
+              HighscorePlayerState.players[0].alternateName = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                f.field_a[var8_int].displayName = var27.readCp1252String(0);
-                f.field_a[var8_int].included = false;
+                HighscorePlayerState.players[var8_int].displayName = var27.readCp1252String(0);
+                HighscorePlayerState.players[var8_int].included = false;
                 if (var27.readUnsignedByte(255) != 1) {
-                  f.field_a[var8_int].alternateName = null;
+                  HighscorePlayerState.players[var8_int].alternateName = null;
                 } else {
-                  f.field_a[var8_int].alternateName = var27.readCp1252String(0);
+                  HighscorePlayerState.players[var8_int].alternateName = var27.readCp1252String(0);
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -105,12 +105,12 @@ final class TextLayoutLine {
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var27.readUnsignedByte(255);
-                  var21 = f.field_a[var20].displayName;
+                  var21 = HighscorePlayerState.players[var20].displayName;
                   var22 = var27.readLong((byte) 0);
                   var24 = var27.position;
                   if (var19 < var6_int) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = f.field_a[var20].alternateName;
+                    var9[0][var12] = HighscorePlayerState.players[var20].alternateName;
                     var10[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var7 > var25; var25++) {
@@ -120,7 +120,7 @@ final class TextLayoutLine {
                     }
                   }
                   if (var21 != null &&
-                    qj.a(var21, 107)) {
+                    NineSliceFrame.isCurrentPlayerName(var21, 107)) {
                     var8[1][var13] = MonotonicClockHelpers.field_a;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
@@ -133,10 +133,10 @@ final class TextLayoutLine {
                     }
                   }
                   if (var6_int > var14 &&
-                    !f.field_a[var20].included) {
-                    f.field_a[var20].included = true;
+                    !HighscorePlayerState.players[var20].included) {
+                    HighscorePlayerState.players[var20].included = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = f.field_a[var20].alternateName;
+                    var9[2][var14] = HighscorePlayerState.players[var20].alternateName;
                     var10[2][var14] = var22;
                     var27.position = var24;
                     var14++;
@@ -172,7 +172,7 @@ final class TextLayoutLine {
             var6.unlink(false);
             return;
           }
-          ResizableDialog.a((Throwable) null, "HS1: " + ni.c(6), -562);
+          ResizableDialog.reportClientError((Throwable) null, "HS1: " + LevelDecodingHelpers.describeAccountPacket(6), -562);
           HuffmanDecoder.closeAccountConnection(-48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -185,25 +185,25 @@ final class TextLayoutLine {
     public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 0) {
-          TextLayoutLine.a((byte) -91);
+          TextLayoutLine.readHighscoreResponse((byte) -91);
         }
     }
 
     final int width(int param0) {
         int stackIn_6_0 = 0;
         if (param0 != 0) {
-          this.field_e = (int[]) null;
+          this.characterPositions = (int[]) null;
         }
-        if (this.field_e != null &&
-          this.field_e.length != 0) {
-          stackIn_6_0 = this.field_e[-1 + this.field_e.length];
+        if (this.characterPositions != null &&
+          this.characterPositions.length != 0) {
+          stackIn_6_0 = this.characterPositions[-1 + this.characterPositions.length];
         } else {
           stackIn_6_0 = 0;
         }
         return stackIn_6_0;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAllowedNameCharacter(char param0, int param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -249,30 +249,30 @@ final class TextLayoutLine {
     }
 
     TextLayoutLine(int param0, int param1, int param2) {
-        this.field_e = new int[param2 + 1];
-        this.field_a = param0;
-        this.field_b = param1;
+        this.characterPositions = new int[param2 + 1];
+        this.top = param0;
+        this.bottom = param1;
     }
 
-    final int a(int param0, int param1) {
+    final int getCharacterIndexAtX(int param0, int param1) {
         int var3 = 0;
         int var4;
         var4 = wizardrun.field_H;
-        if (null == this.field_e) {
+        if (null == this.characterPositions) {
           return 0;
         }
-        if (0 == this.field_e.length) {
+        if (0 == this.characterPositions.length) {
           return 0;
         }
         if (param0 != -1) {
-          TextLayoutLine.a((byte) -28);
+          TextLayoutLine.readHighscoreResponse((byte) -28);
         }
-        for (var3 = 1; var3 < this.field_e.length; var3++) {
-          if (param1 < (this.field_e[var3 - 1] + this.field_e[var3] >> 1)) {
+        for (var3 = 1; var3 < this.characterPositions.length; var3++) {
+          if (param1 < (this.characterPositions[var3 - 1] + this.characterPositions[var3] >> 1)) {
             return var3 - 1;
           }
         }
-        return -1 + this.field_e.length;
+        return -1 + this.characterPositions.length;
     }
 
     static {

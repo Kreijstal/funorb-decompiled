@@ -18,7 +18,7 @@ final class IconButtonPainter implements WidgetRenderer {
         try {
           var6_int = param2.x + param0;
           var7 = param1 + param2.y;
-          WidgetContainer.a(param2.height, (byte) -14, var7, param2.width, var6_int);
+          WidgetContainer.drawWidgetBorder(param2.height, (byte) -14, var7, param2.width, var6_int);
           if (!param3) {
             var9 = (UiWidget) null;
             this.drawWidget(0, 116, (UiWidget) null, true, true);

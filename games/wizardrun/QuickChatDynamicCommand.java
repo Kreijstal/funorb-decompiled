@@ -30,7 +30,7 @@ final class QuickChatDynamicCommand {
           if (param1 instanceof byte[]) {
             var3 = (byte[]) (param1);
             if (param2) {
-              stackIn_9_0 = vg.a(var3, -110);
+              stackIn_9_0 = FullscreenFailureDialog.copyBytes(var3, -110);
               return stackIn_9_0;
             }
             stackIn_7_0 = var3;

@@ -6,15 +6,15 @@ final class ClientException extends RuntimeException {
     Throwable field_c;
     static boolean field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        GameMenu.d(-31782);
+    final static void pushRasterStateAndClip(int param0, int param1, int param2, int param3, int param4) {
+        GameMenu.pushRasterState(-31782);
         if (param0 != 0) {
           return;
         }
         SoftwareRasterizer.intersectClip(param2, param3, param4, param1);
     }
 
-    final static void a(int param0) {
+    final static void clearDecodedSpriteState(int param0) {
         DecodedSpritePalette.palette = null;
         MouseInputHandler.field_b = null;
         TextFieldValidator.field_j = (byte[][]) null;
@@ -34,7 +34,7 @@ final class ClientException extends RuntimeException {
         this.field_b = param1;
     }
 
-    final static IndexedSprite a(IndexedSprite param0, byte param1, int[] param2) {
+    final static IndexedSprite copyIndexedSpriteWithPalette(IndexedSprite param0, byte param1, int[] param2) {
         IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
         IndexedSprite stackIn_2_0 = null;

@@ -13,7 +13,7 @@ class HotspotTextWidget extends TextButton {
         int var5 = param1 - this.x;
         int var6 = -this.y + param2;
         if (param0 > -45) {
-          this.a(-20, (byte) -111, 69, -112);
+          this.setBoundsToPreferredHeight(-20, (byte) -111, 69, -112);
         }
         TextHotspotRange var7 = this.findHotspot((byte) -117, var6, var5);
         if (var7 != null &&
@@ -53,12 +53,12 @@ class HotspotTextWidget extends TextButton {
         return this.field_I[this.field_F.field_k];
     }
 
-    final static ProgressQuery c(int param0, int param1, int param2, int param3) {
+    final static ProgressQuery requestProgress(int param0, int param1, int param2, int param3) {
         ProgressQuery var4 = new ProgressQuery();
         var4.values = new int[param1];
         var4.category = param3;
         LevelData.field_c.addLast(var4, false);
-        ld.writeProgressQuery(param0, var4, param2 ^ param2);
+        MusicPatchLoader.writeProgressQuery(param0, var4, param2 ^ param2);
         return var4;
     }
 
@@ -96,7 +96,7 @@ class HotspotTextWidget extends TextButton {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setBoundsToPreferredHeight(int param0, byte param1, int param2, int param3) {
         this.setBounds(127, param0, ((TextWidgetRenderer) ((Object) this.renderer)).getPreferredHeight((byte) 89, (UiWidget) (this)), param2, param3);
         if (param1 != 61) {
           keyHandler = (GameKeyHandler) null;
@@ -122,7 +122,7 @@ class HotspotTextWidget extends TextButton {
         }
     }
 
-    final static HighscoreRequest a(int param0, int param1, byte param2, int param3, int param4) {
+    final static HighscoreRequest requestHighscores(int param0, int param1, byte param2, int param3, int param4) {
         HighscoreRequest var5;
         int var6;
         HighscoreRequest var5Lifetime1;
@@ -139,9 +139,9 @@ class HotspotTextWidget extends TextButton {
         var5Lifetime1.field_l = param1;
         var5Lifetime1.field_o = param4;
         Js5Index.field_l.addLast(var5Lifetime1, false);
-        BoundedRandomAccessFile.a(var5Lifetime1, param3, (byte) 121);
+        BoundedRandomAccessFile.writeHighscoreRequest(var5Lifetime1, param3, (byte) 121);
         if (param2 != 59) {
-          HotspotTextWidget.a(88, 105, (byte) -48, -68, 37);
+          HotspotTextWidget.requestHighscores(88, 105, (byte) -48, -68, 37);
         }
         return var5Lifetime1;
     }
@@ -179,28 +179,28 @@ class HotspotTextWidget extends TextButton {
           var6 = this.text.substring(var5 + 9, var7);
           var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.text.indexOf("</hotspot>", var5);
-          var8 = var4.a((byte) 110, var5);
-          var9 = var4.a((byte) 89, var2);
+          var8 = var4.getLineIndex((byte) 110, var5);
+          var9 = var4.getLineIndex((byte) 89, var2);
           var10 = null;
           for (var11 = var8; var11 <= var9; var11++) {
-            var12 = var4.field_d[var11];
+            var12 = var4.lines[var11];
             if (var11 == var8) {
-              stackIn_7_0 = var4.a(62, var5);
+              stackIn_7_0 = var4.getCharacterX(62, var5);
             } else {
-              stackIn_7_0 = var12.field_e[0];
+              stackIn_7_0 = var12.characterPositions[0];
             }
             var13 = stackIn_7_0;
             if (var11 == var9) {
-              stackIn_12_0 = var4.a(62, var2);
+              stackIn_12_0 = var4.getCharacterX(62, var2);
             } else {
               if (var12 != null) {
-                stackIn_12_0 = var12.field_e[-1 + var12.field_e.length];
+                stackIn_12_0 = var12.characterPositions[-1 + var12.characterPositions.length];
               } else {
                 stackIn_12_0 = 0;
               }
             }
             var14 = stackIn_12_0;
-            var15 = new TextHotspotRange(var7Lifetime1, var13, var12.field_a, var14 - var13, Math.max(var3.getLineHeight((byte) -104), -var12.field_a + var12.field_b));
+            var15 = new TextHotspotRange(var7Lifetime1, var13, var12.top, var14 - var13, Math.max(var3.getLineHeight((byte) -104), -var12.top + var12.bottom));
             if (var10 != null) {
               ((TextHotspotRange) (var10)).field_l = var15;
             }
@@ -210,7 +210,7 @@ class HotspotTextWidget extends TextButton {
         }
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void setHotspotTooltip(int param0, String param1, int param2) {
         String[] var7 = null;
         String[] var8 = null;
         int var5 = 0;

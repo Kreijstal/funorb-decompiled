@@ -27,7 +27,7 @@ final class FullscreenController {
         this.field_p = ResizableDialog.field_P;
         this.field_m.onDisplayResized(this.field_l, this.field_j, -93);
         FadingDialog.field_F = false;
-        FullscreenFocusCanvas var2 = DelayedServerPacket.createFullscreenCanvas(0, this.field_j, param0, this.field_l, 0, ld.field_g);
+        FullscreenFocusCanvas var2 = DelayedServerPacket.createFullscreenCanvas(0, this.field_j, param0, this.field_l, 0, MusicPatchLoader.field_g);
         if (var2 == null) {
           this.a(122);
         }
@@ -143,44 +143,44 @@ final class FullscreenController {
           var14 = param0.getText(160);
           var8 = param1.getText(160);
           var11_ref_String = var8;
-          if (null == jc.field_H &&
-            !ol.a(127, false)) {
+          if (null == OpacityWidget.field_H &&
+            !AccountSocketHelpers.pollAccountConnection(127, false)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
           if (FadingDialog.field_G == NodeHashTableIterator.field_j) {
             Crc32Helpers.field_c = null;
-            n.field_b.position = 0;
+            AccountPacketState.field_b.position = 0;
             if (param2 != null) {
               var9 = 0;
-              re.field_G.position = 0;
+              AccountConsentPanel.field_G.position = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
-              re.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), param6 + 612976077);
-              re.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), 613003928);
-              re.field_G.writePrefixedCp1252String(param6 - 27851, var14);
-              re.field_G.writePrefixedCp1252String(param6 ^ 27851, var8);
+              AccountConsentPanel.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), param6 + 612976077);
+              AccountConsentPanel.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), 613003928);
+              AccountConsentPanel.field_G.writePrefixedCp1252String(param6 - 27851, var14);
+              AccountConsentPanel.field_G.writePrefixedCp1252String(param6 ^ 27851, var8);
               var15 = (CharSequence) ((Object) param2);
-              re.field_G.writePrefixedCp1252String(0, NetworkArchiveRequest.normalizeAccountName(var15, param6 - 27768));
-              re.field_G.writeShort(param6 - 1947107139, param4);
-              re.field_G.writeByte((byte) 11, param3);
-              re.field_G.writeByte((byte) 11, var9);
-              n.field_b.writeByte((byte) 11, 18);
-              n.field_b.position = n.field_b.position + 2;
-              var10 = n.field_b.position;
+              AccountConsentPanel.field_G.writePrefixedCp1252String(0, NetworkArchiveRequest.normalizeAccountName(var15, param6 - 27768));
+              AccountConsentPanel.field_G.writeShort(param6 - 1947107139, param4);
+              AccountConsentPanel.field_G.writeByte((byte) 11, param3);
+              AccountConsentPanel.field_G.writeByte((byte) 11, var9);
+              AccountPacketState.field_b.writeByte((byte) 11, 18);
+              AccountPacketState.field_b.position = AccountPacketState.field_b.position + 2;
+              var10 = AccountPacketState.field_b.position;
               var11_ref_StringLifetime1 = SettingsCookieReader.readSettingsCookie(DisplayNameValidator.getActiveApplet(1), (byte) 102);
               if (var11_ref_StringLifetime1 == null) {
                 var11_ref_StringLifetime1 = "";
               }
-              n.field_b.writeCp1252String(var11_ref_StringLifetime1, false);
-              pa.a(StrongCacheEntry.field_s, 0, ArchiveCatalog.field_d, re.field_G, n.field_b);
-              n.field_b.backpatchShortLength(n.field_b.position - var10, (byte) -67);
+              AccountPacketState.field_b.writeCp1252String(var11_ref_StringLifetime1, false);
+              EncryptedLoginHelpers.writeEncryptedPayload(StrongCacheEntry.field_s, 0, ArchiveCatalog.field_d, AccountConsentPanel.field_G, AccountPacketState.field_b);
+              AccountPacketState.field_b.backpatchShortLength(AccountPacketState.field_b.position - var10, (byte) -67);
             } else {
-              re.field_G.position = 0;
-              re.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), 613003928);
-              re.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), 613003928);
-              stackIn_11_0 = re.field_G;
+              AccountConsentPanel.field_G.position = 0;
+              AccountConsentPanel.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), 613003928);
+              AccountConsentPanel.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), 613003928);
+              stackIn_11_0 = AccountConsentPanel.field_G;
               stackIn_11_1 = 0;
               if (!param0.shouldSubmitText((byte) 127)) {
                 stackIn_12_2 = "";
@@ -188,7 +188,7 @@ final class FullscreenController {
                 stackIn_12_2 = var14;
               }
               ((PacketBuffer) (Object) stackIn_11_0).writePrefixedCp1252String(stackIn_11_1, stackIn_12_2);
-              stackIn_14_0 = re.field_G;
+              stackIn_14_0 = AccountConsentPanel.field_G;
               stackIn_14_1 = 0;
               if (!param1.shouldSubmitText((byte) 125)) {
                 stackIn_15_2 = "";
@@ -196,13 +196,13 @@ final class FullscreenController {
                 stackIn_15_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_14_0).writePrefixedCp1252String(stackIn_14_1, stackIn_15_2);
-              n.field_b.writeByte((byte) 11, 16);
-              n.field_b.position = n.field_b.position + 1;
-              var9 = n.field_b.position;
-              pa.a(StrongCacheEntry.field_s, 0, ArchiveCatalog.field_d, re.field_G, n.field_b);
-              n.field_b.backpatchByteLength(n.field_b.position - var9, -115);
+              AccountPacketState.field_b.writeByte((byte) 11, 16);
+              AccountPacketState.field_b.position = AccountPacketState.field_b.position + 1;
+              var9 = AccountPacketState.field_b.position;
+              EncryptedLoginHelpers.writeEncryptedPayload(StrongCacheEntry.field_s, 0, ArchiveCatalog.field_d, AccountConsentPanel.field_G, AccountPacketState.field_b);
+              AccountPacketState.field_b.backpatchByteLength(AccountPacketState.field_b.position - var9, -115);
             }
-            id.flushAccountPackets((byte) -67, -1);
+            PasswordContentHelpers.flushAccountPackets((byte) -67, -1);
             NodeHashTableIterator.field_j = PacketBuffer.field_l;
           }
           if (param6 != 27851) {
@@ -215,28 +215,28 @@ final class FullscreenController {
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               DropTargetWidget.field_I = new String[-100 + var9Lifetime1];
-              NodeHashTableIterator.field_j = vj.field_a;
+              NodeHashTableIterator.field_j = LevelActorSpawner.field_a;
             } else {
               if (var9Lifetime1 == 248) {
                 FadingDialog.a(3088, DisplayNameValidator.getActiveApplet(param6 ^ 27850));
-                QuickChatDynamicCommand.field_g = ii.field_b;
+                QuickChatDynamicCommand.field_g = NameAvailabilityFactory.field_b;
                 HuffmanDecoder.closeAccountConnection(-71);
-                n.field_a = false;
+                AccountPacketState.field_a = false;
                 stackIn_32_0 = var9Lifetime1;
                 return stackIn_32_0;
               }
               if (var9Lifetime1 == 99) {
                 ConfirmedEmailValidator.ensureAccountResponseBytes(LoginMethodPreference.getAccountResponseByteCount(true), param6 ^ -675);
-                Crc32Helpers.field_c = new Boolean(qj.a((byte) -100, AccountCreationForm.field_N));
+                Crc32Helpers.field_c = new Boolean(NineSliceFrame.readBooleanByte((byte) -100, AccountCreationForm.field_N));
                 AccountCreationForm.field_N.position = 0;
               } else {
-                NodeHashTableIterator.field_j = gf.field_ib;
-                ra.field_k = var9Lifetime1;
+                NodeHashTableIterator.field_j = ContentTransitionDialog.field_ib;
+                AchievementUnlock.field_k = var9Lifetime1;
                 DelegatingCanvas.field_c = -1;
               }
             }
           }
-          if (NodeHashTableIterator.field_j == vj.field_a) {
+          if (NodeHashTableIterator.field_j == LevelActorSpawner.field_a) {
             var9Lifetime2 = 2;
             if (ConfirmedEmailValidator.ensureAccountResponseBytes(var9Lifetime2, -28266)) {
               var10Lifetime1 = AccountCreationForm.field_N.readUnsignedShort(param6 - 42328);
@@ -247,42 +247,42 @@ final class FullscreenController {
                   DropTargetWidget.field_I[var12] = AccountCreationForm.field_N.readPrefixedCp1252String(727059944);
                 }
                 HuffmanDecoder.closeAccountConnection(-107);
-                n.field_a = false;
+                AccountPacketState.field_a = false;
                 stackIn_44_0 = 100 + var11;
                 return stackIn_44_0;
               }
             }
           }
-          if (gf.field_ib == NodeHashTableIterator.field_j &&
-            ExceptionSupport.b(92)) {
-            if (ra.field_k != 255) {
+          if (ContentTransitionDialog.field_ib == NodeHashTableIterator.field_j &&
+            ExceptionSupport.ensurePacketPayload(92)) {
+            if (AchievementUnlock.field_k != 255) {
               QuickChatDynamicCommand.field_g = AccountCreationForm.field_N.readCp1252String(0);
             } else {
               var9_ref_String = AccountCreationForm.field_N.readNullableCp1252String(-1);
               if (var9_ref_String != null) {
-                MidiEnvelope.a(26017, DisplayNameValidator.getActiveApplet(1), var9_ref_String);
+                MidiEnvelope.writeSettingsCookie(26017, DisplayNameValidator.getActiveApplet(1), var9_ref_String);
               }
             }
             HuffmanDecoder.closeAccountConnection(-36);
-            n.field_a = false;
-            stackIn_54_0 = ra.field_k;
+            AccountPacketState.field_a = false;
+            stackIn_54_0 = AchievementUnlock.field_k;
             return stackIn_54_0;
           }
-          if (jc.field_H == null) {
-            if (n.field_a) {
-              if (eh.a(2) > 30000L) {
+          if (OpacityWidget.field_H == null) {
+            if (AccountPacketState.field_a) {
+              if (MarkerSliderPainter.getAccountConnectionAge(2) > 30000L) {
                 QuickChatDynamicCommand.field_g = ArchiveLoadingStage.field_b;
               } else {
                 QuickChatDynamicCommand.field_g = TextLayoutLine.field_d;
               }
-              n.field_a = false;
+              AccountPacketState.field_a = false;
               stackIn_61_0 = 249;
               return stackIn_61_0;
             }
-            var9Lifetime3 = vl.field_d;
-            vl.field_d = FadingDialog.field_J;
+            var9Lifetime3 = CheckboxPainter.field_d;
+            CheckboxPainter.field_d = FadingDialog.field_J;
             FadingDialog.field_J = var9Lifetime3;
-            n.field_a = true;
+            AccountPacketState.field_a = true;
           }
           stackIn_64_0 = -1;
           return stackIn_64_0;
@@ -315,7 +315,7 @@ final class FullscreenController {
     final static void e(int param0) {
         MonotonicClockHelpers.field_a = AccountCreationForm.field_N.readCp1252String(param0 ^ param0);
         CharSequence var2 = (CharSequence) ((Object) MonotonicClockHelpers.field_a);
-        IntrusiveNode.field_a = MouseWheelInput.a(-49, var2);
+        IntrusiveNode.field_a = MouseWheelInput.normalizePlayerName(-49, var2);
     }
 
     final boolean b(int param0) {

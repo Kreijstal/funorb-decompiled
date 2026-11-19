@@ -8,14 +8,14 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_c;
     static String field_a;
 
-    final static void a(byte param0, String param1, String param2, boolean param3) {
+    final static void beginLogin(byte param0, String param1, String param2, boolean param3) {
         ResizableDialog.field_S = param1;
         GrowableIntList.field_e = param2;
         if (param0 != -52) {
           return;
         }
         try {
-          DateFormattingHelpers.a(LoginCredentialKind.field_c, param3, -122);
+          DateFormattingHelpers.showAccountProgress(LoginCredentialKind.field_c, param3, -122);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "de.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -33,7 +33,7 @@ final class SecondaryNodeDeque implements Iterable {
         return null;
     }
 
-    final static String a(int param0, String param1, ResourceArchive param2, String param3) {
+    final static String formatArchiveLoadStatus(int param0, String param1, ResourceArchive param2, String param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -90,7 +90,7 @@ final class SecondaryNodeDeque implements Iterable {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = n.field_b;
+          var5 = AccountPacketState.field_b;
           var5.writeCipheredOpcode((byte) -61, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;

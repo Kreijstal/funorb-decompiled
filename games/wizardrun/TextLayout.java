@@ -5,10 +5,10 @@ abstract class TextLayout {
     static String[] field_c;
     static String field_b;
     static Sprite field_a;
-    TextLayoutLine[] field_d;
+    TextLayoutLine[] lines;
     static int field_e;
 
-    final int a(int param0, String param1, int param2, int param3) {
+    final int computeJustificationSpacing(int param0, String param1, int param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -67,7 +67,7 @@ abstract class TextLayout {
         }
     }
 
-    final static boolean a(CharSequence param0, byte param1) {
+    final static boolean isDecimalInteger(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -94,7 +94,7 @@ abstract class TextLayout {
         }
     }
 
-    final int a(int param0) {
+    final int getMaximumLineWidth(int param0) {
         int var4 = 0;
         int var2;
         TextLayoutLine[] var3;
@@ -106,8 +106,8 @@ abstract class TextLayout {
           TextLayout.releaseStatics(false);
         }
         var2 = -1;
-        if (null != this.field_d) {
-          var3 = this.field_d;
+        if (null != this.lines) {
+          var3 = this.lines;
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
@@ -121,18 +121,18 @@ abstract class TextLayout {
         return var2;
     }
 
-    final int a(int param0, int param1) {
+    final int getCharacterX(int param0, int param1) {
         int var4 = 0;
         TextLayoutLine var5 = null;
         int var6 = wizardrun.field_H;
-        TextLayoutLine[] var7 = this.field_d;
+        TextLayoutLine[] var7 = this.lines;
         TextLayoutLine[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          if (param1 < var5.field_e.length) {
-            return var5.field_e[param1];
+          if (param1 < var5.characterPositions.length) {
+            return var5.characterPositions[param1];
           }
-          param1 = param1 - (-1 + var5.field_e.length);
+          param1 = param1 - (-1 + var5.characterPositions.length);
         }
         if (param0 != 62) {
           field_c = (String[]) null;
@@ -145,64 +145,64 @@ abstract class TextLayout {
         field_c = null;
         if (param0) {
           CharSequence var2 = (CharSequence) null;
-          TextLayout.a((CharSequence) null, (byte) 104);
+          TextLayout.isDecimalInteger((CharSequence) null, (byte) 104);
         }
         field_b = null;
         field_a = null;
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int getTextIndexAt(int param0, int param1, int param2) {
         int var5 = 0;
         TextLayoutLine var6 = null;
         int var7 = 0;
         int var8 = wizardrun.field_H;
-        if (this.field_d == null ||
-          this.field_d.length == 0 ||
-          param2 < this.field_d[0].field_a) {
+        if (this.lines == null ||
+          this.lines.length == 0 ||
+          param2 < this.lines[0].top) {
           return -1;
         }
-        if (!(this.field_d[-1 + this.field_d.length].field_b >= param2)) {
+        if (!(this.lines[-1 + this.lines.length].bottom >= param2)) {
           return -1;
         }
-        if (this.field_d.length == 1) {
-          return this.field_d[0].a(-1, param0);
+        if (this.lines.length == 1) {
+          return this.lines[0].getCharacterIndexAtX(-1, param0);
         }
         if (param1 <= 104) {
           return -9;
         }
         int var4 = 0;
-        for (var5 = 0; var5 < this.field_d.length; var5++) {
-          var6 = this.field_d[var5];
-          if (var6.field_a <= param2 &&
-            param2 <= var6.field_b) {
-            var7 = var6.a(-1, param0);
+        for (var5 = 0; var5 < this.lines.length; var5++) {
+          var6 = this.lines[var5];
+          if (var6.top <= param2 &&
+            param2 <= var6.bottom) {
+            var7 = var6.getCharacterIndexAtX(-1, param0);
             if (-1 == var7) {
               return -1;
             }
             return var7 + var4;
           }
-          var4 = var4 + (var6.field_e.length - 1);
+          var4 = var4 + (var6.characterPositions.length - 1);
         }
         return -1;
     }
 
-    final int a(byte param0, int param1) {
+    final int getLineIndex(byte param0, int param1) {
         TextLayoutLine var4 = null;
         int var5 = wizardrun.field_H;
         int var3 = 0;
         if (param0 < 86) {
           CharSequence var6 = (CharSequence) null;
-          TextLayout.a((CharSequence) null, (byte) -48);
+          TextLayout.isDecimalInteger((CharSequence) null, (byte) -48);
         }
-        while (var3 < this.field_d.length) {
-          var4 = this.field_d[var3];
-          if (param1 < var4.field_e.length) {
+        while (var3 < this.lines.length) {
+          var4 = this.lines[var3];
+          if (param1 < var4.characterPositions.length) {
             return var3;
           }
-          param1 = param1 - (-1 + var4.field_e.length);
+          param1 = param1 - (-1 + var4.characterPositions.length);
           var3++;
         }
-        return this.field_d.length;
+        return this.lines.length;
     }
 
     final int height(int param0) {
@@ -210,9 +210,9 @@ abstract class TextLayout {
         if (param0 <= 1) {
           return -35;
         }
-        if (this.field_d != null &&
-          this.field_d.length > 0) {
-          stackIn_6_0 = this.field_d[-1 + this.field_d.length].field_b - this.field_d[0].field_a;
+        if (this.lines != null &&
+          this.lines.length > 0) {
+          stackIn_6_0 = this.lines[-1 + this.lines.length].bottom - this.lines[0].top;
         } else {
           stackIn_6_0 = 0;
         }

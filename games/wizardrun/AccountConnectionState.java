@@ -28,7 +28,7 @@ final class AccountConnectionState {
         if (param0 != 0) {
           return false;
         }
-        if (vb.field_F == this) {
+        if (MarkerSliderWidget.field_F == this) {
           return true;
         }
         if (this == DateFormattingHelpers.field_b) {

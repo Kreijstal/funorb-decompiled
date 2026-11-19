@@ -24,18 +24,18 @@ final class WidgetTheme {
     static String field_o;
     WidgetRenderer field_u;
 
-    final static void a(int param0, boolean param1) {
+    final static void drawDialogLayer(int param0, boolean param1) {
         GameShell.field_A.drawAllLayers(true, 0, 0);
         if (param0 > -113) {
           WidgetTheme.releaseStatics(16);
         }
     }
 
-    final void a(BitmapFont param0, int param1) {
+    final void initializeTheme(BitmapFont param0, int param1) {
         int var7_int = 0;
         StatefulWidgetPainter var7 = null;
-        wb discarded$0 = null;
-        eh discarded$1 = null;
+        RadialSelectorPainter discarded$0 = null;
+        MarkerSliderPainter discarded$1 = null;
         StatefulWidgetPainter var8 = null;
         Sprite[] var9 = null;
         Sprite[] var10 = null;
@@ -52,7 +52,7 @@ final class WidgetTheme {
         var17.field_i = 16777215;
         this.field_u = (WidgetRenderer) ((Object) var17);
         StatefulWidgetPainter var4 = new StatefulWidgetPainter();
-        var17.a(var4, 0);
+        var17.copyStyleTo(var4, 0);
         this.field_r = 3;
         this.field_p = 5592405;
         this.field_l = 3;
@@ -64,9 +64,9 @@ final class WidgetTheme {
         this.field_i = 3;
         var4.field_e = 15658734;
         var4.field_f = 11711154;
-        var4.a(0, 0).a(-34, 15658734).a(60, NameSuggestionsPanel.b(10066329, 8947848, 7829367, 1));
-        var4.a(0, 1).a(68, NameSuggestionsPanel.b(10066329, 11184810, 13421772, 1));
-        var4.a(0, 3).a(80, NameSuggestionsPanel.b(7829367, 8947848, 10066329, 1)).a((byte) -85, 1).b((byte) -124, 1);
+        var4.createState(0, 0).setTextColor(-34, 15658734).setFrame(60, NameSuggestionsPanel.b(10066329, 8947848, 7829367, 1));
+        var4.createState(0, 1).setFrame(68, NameSuggestionsPanel.b(10066329, 11184810, 13421772, 1));
+        var4.createState(0, 3).setFrame(80, NameSuggestionsPanel.b(7829367, 8947848, 10066329, 1)).setOffsetX((byte) -85, 1).setOffsetY((byte) -124, 1);
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -74,8 +74,8 @@ final class WidgetTheme {
           var16.pixels[var7_int] = 1077952576;
         }
         var5[4] = (Sprite) ((Object) var18);
-        var4.a(0, 4).a(124, true).a(124, var5);
-        var4.a(0, 5).a(61, vb.c(-3, 0, 0, 0, 65793)).a(-28, true).a(-67, -1);
+        var4.createState(0, 4).setDrawBaseFirst(124, true).setFrame(124, var5);
+        var4.createState(0, 5).setFrame(61, MarkerSliderWidget.createMarkerSliderFrame(-3, 0, 0, 0, 65793)).setDrawBaseFirst(-28, true).setTextColor(-67, -1);
         this.field_c = (WidgetRenderer) ((Object) var4);
         StatefulWidgetPainter var6 = new StatefulWidgetPainter(var4, true);
         if (param1 > -109) {
@@ -85,15 +85,15 @@ final class WidgetTheme {
           var6.field_l = 0;
           var7 = new StatefulWidgetPainter(var4, true);
           var7.field_l = 0;
-          var7.a((byte) 11, HighscorePlayer.createSolidCenterFrame(8947848, 9));
-          var7.a(0, 1).a(83, HighscorePlayer.createSolidCenterFrame(11184810, 9)).a(101, 2236962);
-          this.field_a = (WidgetRenderer) ((Object) new vl(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          discarded$0 = new wb(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new eh(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          var7.setAllStateFrames((byte) 11, HighscorePlayer.createSolidCenterFrame(8947848, 9));
+          var7.createState(0, 1).setFrame(83, HighscorePlayer.createSolidCenterFrame(11184810, 9)).setTextColor(101, 2236962);
+          this.field_a = (WidgetRenderer) ((Object) new CheckboxPainter(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          discarded$0 = new RadialSelectorPainter(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$1 = new MarkerSliderPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
-          var17.a(var8, 0);
-          var8.a(0, 0).a(80, NameSuggestionsPanel.b(7829367, 15658734, 10066329, 1)).a(123, 1118481).a(-1, (byte) 105);
-          var8.a(0, 4).a(-119, true).a(109, var5);
+          var17.copyStyleTo(var8, 0);
+          var8.createState(0, 0).setFrame(80, NameSuggestionsPanel.b(7829367, 15658734, 10066329, 1)).setTextColor(123, 1118481).setShadowColor(-1, (byte) 105);
+          var8.createState(0, 4).setDrawBaseFirst(-119, true).setFrame(109, var5);
           this.field_b = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
@@ -104,27 +104,27 @@ final class WidgetTheme {
           var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new StatefulWidgetPainter();
           var12 = new StatefulWidgetPainter();
-          var11.a(0, var9, (byte) 95);
-          var12.a(0, var10, (byte) -103);
+          var11.setStateFrame(0, var9, (byte) 95);
+          var12.setStateFrame(0, var10, (byte) -103);
           var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new StatefulWidgetPainter(var4, true);
-          var14.a((byte) 59, var13.copy());
+          var14.setAllStateIcons((byte) 59, var13.copy());
           var13.rotateCounterClockwise();
           var14Lifetime1 = new StatefulWidgetPainter(var4, true);
-          var14Lifetime1.a((byte) 71, var13.copy());
+          var14Lifetime1.setAllStateIcons((byte) 71, var13.copy());
           var13.rotateCounterClockwise();
           var14Lifetime2 = new StatefulWidgetPainter(var4, true);
-          var14Lifetime2.a((byte) 110, var13.copy());
+          var14Lifetime2.setAllStateIcons((byte) 110, var13.copy());
           var13.rotateCounterClockwise();
           var19 = new StatefulWidgetPainter(var4, true);
-          var19.a((byte) 106, var13);
+          var19.setAllStateIcons((byte) 106, var13);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "od.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    final void fillAlphaRectangle(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         int var8 = -61 / ((-16 - param6) / 63);
         SoftwareRasterizer.fillRectangleBlended(param0, param5, param1, param3, param4, param2);
     }
@@ -135,11 +135,11 @@ final class WidgetTheme {
         field_s = null;
         field_f = null;
         if (param0 != 23285) {
-          WidgetTheme.a(-64, false);
+          WidgetTheme.drawDialogLayer(-64, false);
         }
     }
 
-    private final void a(int param0, int param1, byte param2, String param3) {
+    private final void drawWrappedTooltip(int param0, int param1, byte param2, String param3) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -220,7 +220,7 @@ final class WidgetTheme {
         }
     }
 
-    final void a(int param0, int param1, String param2, int param3) {
+    final void drawTooltip(int param0, int param1, String param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -231,9 +231,9 @@ final class WidgetTheme {
             this.field_i = 88;
           }
           if (this.field_d) {
-            this.a(param1, param0, (byte) 56, param2);
+            this.drawWrappedTooltip(param1, param0, (byte) 56, param2);
           } else {
-            this.a(param2, param0, param1, 2562);
+            this.drawSimpleTooltip(param2, param0, param1, 2562);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,7 +250,7 @@ final class WidgetTheme {
         }
     }
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean isPasswordAllowedForUsername(String param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_31_0 = null;
@@ -260,11 +260,11 @@ final class WidgetTheme {
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (BoundedRandomAccessFile.a((byte) -56, param0)) {
+          if (BoundedRandomAccessFile.containsNonAlphanumericPasswordCharacter((byte) -56, param0)) {
             return false;
           }
           var3_int = 93 / ((15 - param2) / 35);
-          if (ValidatedTextField.a(false, param0)) {
+          if (ValidatedTextField.isRepeatedCharacterPassword(false, param0)) {
             return false;
           }
           if (UiWidget.isPasswordLengthInvalid(param0, 94)) {
@@ -276,10 +276,10 @@ final class WidgetTheme {
           if (DropTargetWidget.a(param1, (byte) -109, param0)) {
             return false;
           }
-          if (pa.a(0, param1, param0)) {
+          if (EncryptedLoginHelpers.usernameContainsPassword(0, param1, param0)) {
             return false;
           }
-          if (!id.a(param0, param1, 0)) {
+          if (!PasswordContentHelpers.containsNormalizedUsername(param0, param1, 0)) {
             return true;
           }
           return false;
@@ -303,21 +303,21 @@ final class WidgetTheme {
         }
     }
 
-    final static QuickChatDynamicCommand[] b(int param0) {
+    final static QuickChatDynamicCommand[] getQuickChatCommands(int param0) {
         if (param0 <= 106) {
-          WidgetTheme.a(64, false);
+          WidgetTheme.drawDialogLayer(64, false);
         }
-        return new QuickChatDynamicCommand[]{AlternateUsernameLoginCredentials.field_p, ProxySocketConnector.field_f, WrappedTextLayout.field_n, jk.field_a, StringPaddingHelpers.field_b, SoundCache.field_h, DisplayNameValidator.field_q, Js5Index.field_a, SingleChildWidget.field_A, LoginPacketBuilder.field_a, AccountCreationForm.field_U, rl.field_a, DualLinkDeque.field_d, lh.field_a};
+        return new QuickChatDynamicCommand[]{AlternateUsernameLoginCredentials.field_p, ProxySocketConnector.field_f, WrappedTextLayout.field_n, FriendsListState.field_a, StringPaddingHelpers.field_b, SoundCache.field_h, DisplayNameValidator.field_q, Js5Index.field_a, SingleChildWidget.field_A, LoginPacketBuilder.field_a, AccountCreationForm.field_U, MenuOverlayHelpers.field_a, DualLinkDeque.field_d, RasterSnapshotStack.field_a};
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.drawLine(param2, param0, param5, param1, param4);
         if (param3 != 0) {
           this.field_c = (WidgetRenderer) null;
         }
     }
 
-    private final void a(String param0, int param1, int param2, int param3) {
+    private final void drawSimpleTooltip(String param0, int param1, int param2, int param3) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -332,7 +332,7 @@ final class WidgetTheme {
           var5_int = this.field_g.stringWidth(param0);
           if (param3 != 2562) {
             var9 = (String) null;
-            this.a(8, 10, (byte) 65, (String) null);
+            this.drawWrappedTooltip(8, 10, (byte) 65, (String) null);
           }
           var6 = this.field_g.field_q + this.field_g.field_B;
           var7 = param2;

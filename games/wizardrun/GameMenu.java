@@ -56,12 +56,12 @@ final class GameMenu extends MenuController {
             return;
           }
           if ((param2 != 5 ||
-            e.a(-116)) &&
+            ThreePieceFrameHelpers.a(-116)) &&
             (param2 != 4 ||
-            !e.a(-103))) {
+            !ThreePieceFrameHelpers.a(-103))) {
             if (param2 == 2) {
               if (ReflectionCheck.field_s) {
-                stackIn_54_0 = ee.field_p;
+                stackIn_54_0 = StyleNode.field_p;
               } else {
                 stackIn_54_0 = 0;
               }
@@ -90,7 +90,7 @@ final class GameMenu extends MenuController {
             }
             else {
               if (3 == param2) {
-                if (tl.field_e) {
+                if (FriendOrderingHelpers.field_e) {
                   stackIn_27_0 = ConfirmedEmailValidator.field_o;
                 } else {
                   stackIn_27_0 = 0;
@@ -137,11 +137,11 @@ final class GameMenu extends MenuController {
                   GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, param0 + 18, var5, -1);
                   return;
                 }
-                if (!e.a(-114)) {
+                if (!ThreePieceFrameHelpers.a(-114)) {
                   if (null == LoginChoicePanel.field_E) {
-                    var6 = mh.field_lb;
+                    var6 = AccountProgressDialog.field_lb;
                   } else {
-                    var6 = mh.field_lb;
+                    var6 = AccountProgressDialog.field_lb;
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -215,16 +215,16 @@ final class GameMenu extends MenuController {
     }
 
     GameMenu() {
-        super(e.a(-106) ? 5 : 6, 160, 392, 152, 32);
+        super(ThreePieceFrameHelpers.a(-106) ? 5 : 6, 160, 392, 152, 32);
         int stackIn_3_1 = 0;
-        if (!e.a(-106)) {
+        if (!ThreePieceFrameHelpers.a(-106)) {
           stackIn_3_1 = 6;
         } else {
           stackIn_3_1 = 5;
         }
     }
 
-    final static void d(int param0) {
+    final static void pushRasterState(int param0) {
         RasterSnapshot var1 = (RasterSnapshot) (StatefulWidgetPainter.field_q.removeLast(param0 + 39974));
         if (var1 == null) {
           var1 = new RasterSnapshot();
@@ -233,10 +233,10 @@ final class GameMenu extends MenuController {
         if (param0 != -31782) {
           field_o = 6;
         }
-        lh.field_b.addLast(var1, false);
+        RasterSnapshotStack.field_b.addLast(var1, false);
     }
 
-    final void b(int param0, int param1) {
+    final void activateMenuItem(int param0, int param1) {
         int var4;
         boolean stackIn_24_0 = false;
         var4 = wizardrun.field_H;
@@ -249,24 +249,24 @@ final class GameMenu extends MenuController {
             TickClock.field_d = true;
           } else {
             if ((5 != param1 ||
-              e.a(-112)) &&
+              ThreePieceFrameHelpers.a(-112)) &&
               (4 != param1 ||
-              !e.a(-115))) {
+              !ThreePieceFrameHelpers.a(-115))) {
               if (param1 == 2) {
                 stackIn_24_0 = !(ReflectionCheck.field_s);
                 ReflectionCheck.field_s = stackIn_24_0;
               } else {
                 if (param1 == 3) {
-                  if (tl.field_e) {
-                    tl.field_e = false;
-                    SingleChildWidget.field_D.d(-101);
+                  if (FriendOrderingHelpers.field_e) {
+                    FriendOrderingHelpers.field_e = false;
+                    SingleChildWidget.field_D.stopPlayback(-101);
                   } else {
-                    tl.field_e = true;
-                    SingleChildWidget.field_D.a(true, -122, IntegerSyntaxHelpers.field_e);
+                    FriendOrderingHelpers.field_e = true;
+                    SingleChildWidget.field_D.startTrack(true, -122, IntegerSyntaxHelpers.field_e);
                   }
                 } else {
                   if (((param1 == 4)) &&
-                    (!(e.a(-106)))) {
+                    (!(ThreePieceFrameHelpers.a(-106)))) {
                     if (LoginChoicePanel.field_E != null) {
                       WeightedLruCache.exitFullscreen((byte) 60);
                     } else {
@@ -292,7 +292,7 @@ final class GameMenu extends MenuController {
 
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int parseDecimalInteger(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -327,13 +327,13 @@ final class GameMenu extends MenuController {
           if (260 <= param0 &&
             ReflectionCheck.field_s) {
             if (param0 <= 368) {
-              ee.field_p = (param0 - 260) * 104 / 108;
+              StyleNode.field_p = (param0 - 260) * 104 / 108;
             } else {
-              ee.field_p = 104;
+              StyleNode.field_p = 104;
             }
             if ((!(!ReflectionCheck.field_s)) &&
               (!(SpriteState.field_y > 0))) {
-              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
+              FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, StyleNode.field_p * 256 / 100);
               SpriteState.field_y = 25;
             }
             decompiledFrameRemainder0 = false;
@@ -360,33 +360,33 @@ final class GameMenu extends MenuController {
             }
             if (ReflectionCheck.field_s &&
               SpriteState.field_y <= 0) {
-              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
+              FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * StyleNode.field_p / 100);
               SpriteState.field_y = 25;
             }
             if (ConfirmedEmailValidator.field_o >= 10) {
-              if (!tl.field_e) {
-                tl.field_e = true;
-                SingleChildWidget.field_D.a(true, -76, IntegerSyntaxHelpers.field_e);
+              if (!FriendOrderingHelpers.field_e) {
+                FriendOrderingHelpers.field_e = true;
+                SingleChildWidget.field_D.startTrack(true, -76, IntegerSyntaxHelpers.field_e);
               }
-              SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
+              SingleChildWidget.field_D.setMasterVolume(-1, ConfirmedEmailValidator.field_o);
             } else {
               ConfirmedEmailValidator.field_o = 10;
-              if (!tl.field_e) {
+              if (!FriendOrderingHelpers.field_e) {
                 if (param5) {
-                  this.b(-123, 44);
+                  this.activateMenuItem(-123, 44);
                 }
                 return;
               }
-              SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
-              tl.field_e = false;
-              SingleChildWidget.field_D.d(-123);
+              SingleChildWidget.field_D.setMasterVolume(-1, ConfirmedEmailValidator.field_o);
+              FriendOrderingHelpers.field_e = false;
+              SingleChildWidget.field_D.stopPlayback(-123);
             }
           } else {
             super.a(param0, param1, param2, param3, param4, false);
           }
         }
         if (param5) {
-          this.b(-123, 44);
+          this.activateMenuItem(-123, 44);
         }
     }
 
@@ -405,7 +405,7 @@ final class GameMenu extends MenuController {
         if (DialogLayer.field_K == 2) {
           IntHashTable.field_a.drawWithOffsets(0, 0);
         } else {
-          kb.field_jb.drawWithOffsets(0, 0);
+          StandardContentTransitionDialog.field_jb.drawWithOffsets(0, 0);
         }
         super.drawMenuItems(68);
     }
@@ -419,7 +419,7 @@ final class GameMenu extends MenuController {
         return stackIn_6_0;
     }
 
-    final void a(int param0, int param1) {
+    final void decreaseMenuVolume(int param0, int param1) {
         int stackIn_7_0 = 0;
         int stackIn_8_1 = 0;
         int var4;
@@ -428,9 +428,9 @@ final class GameMenu extends MenuController {
           return;
         }
         if (param1 == 2) {
-          ee.field_p = ee.field_p - 13;
-          if (ee.field_p <= 0) {
-            ee.field_p = 0;
+          StyleNode.field_p = StyleNode.field_p - 13;
+          if (StyleNode.field_p <= 0) {
+            StyleNode.field_p = 0;
             ReflectionCheck.field_s = false;
           }
         } else {
@@ -439,19 +439,19 @@ final class GameMenu extends MenuController {
             if (ConfirmedEmailValidator.field_o <= 0) {
               ConfirmedEmailValidator.field_o = 0;
               stackIn_7_0 = 1;
-              stackIn_8_1 = (tl.field_e) ? 0 : 1;
+              stackIn_8_1 = (FriendOrderingHelpers.field_e) ? 0 : 1;
               if (stackIn_7_0 != stackIn_8_1) {
-                tl.field_e = false;
-                SingleChildWidget.field_D.d(-102);
+                FriendOrderingHelpers.field_e = false;
+                SingleChildWidget.field_D.stopPlayback(-102);
               }
             } else {
-              SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
+              SingleChildWidget.field_D.setMasterVolume(-1, ConfirmedEmailValidator.field_o);
             }
           }
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void increaseMenuVolume(int param0, boolean param1) {
         if (param1) {
           return;
         }
@@ -461,16 +461,16 @@ final class GameMenu extends MenuController {
             if (ConfirmedEmailValidator.field_o > 200) {
               ConfirmedEmailValidator.field_o = 200;
             }
-            SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
-            if (!tl.field_e) {
-              tl.field_e = true;
-              SingleChildWidget.field_D.a(true, -117, IntegerSyntaxHelpers.field_e);
+            SingleChildWidget.field_D.setMasterVolume(-1, ConfirmedEmailValidator.field_o);
+            if (!FriendOrderingHelpers.field_e) {
+              FriendOrderingHelpers.field_e = true;
+              SingleChildWidget.field_D.startTrack(true, -117, IntegerSyntaxHelpers.field_e);
             }
           }
         } else {
-          ee.field_p = ee.field_p + 13;
-          if (104 < ee.field_p) {
-            ee.field_p = 104;
+          StyleNode.field_p = StyleNode.field_p + 13;
+          if (104 < StyleNode.field_p) {
+            StyleNode.field_p = 104;
           }
           ReflectionCheck.field_s = true;
         }

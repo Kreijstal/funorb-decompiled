@@ -15,8 +15,8 @@ final class Crc32Helpers {
         field_c = null;
     }
 
-    final static void a(byte param0) {
-        kj.field_d = new IntrusiveDeque();
+    final static void initializeReflectionQueue(byte param0) {
+        SystemMemoryHelpers.field_d = new IntrusiveDeque();
         if (param0 <= 93) {
           byte[] var2 = (byte[]) null;
           Crc32Helpers.crc32((byte[]) null, 57, -42, 25);

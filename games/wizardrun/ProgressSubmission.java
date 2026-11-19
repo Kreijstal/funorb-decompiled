@@ -30,7 +30,7 @@ final class ProgressSubmission extends IntrusiveNode {
             return (MonochromeBitmapFont) (stackIn_2_0);
           }
           var2 = new MonochromeBitmapFont(param0, GameMenu.field_q, AccountFormText.field_h, ImageProducerRasterBuffer.field_k, MouseInputHandler.field_b, TextFieldValidator.field_j);
-          ClientException.a(param1);
+          ClientException.clearDecodedSpriteState(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,11 +63,11 @@ final class ProgressSubmission extends IntrusiveNode {
         int[] var22;
         byte[] var23;
         var8 = wizardrun.field_H;
-        var1 = new Sprite[wb.field_f];
-        for (var2 = 0; wb.field_f > var2; var2++) {
+        var1 = new Sprite[RadialSelectorPainter.field_f];
+        for (var2 = 0; RadialSelectorPainter.field_f > var2; var2++) {
           var3 = ImageProducerRasterBuffer.field_k[var2] * MouseInputHandler.field_b[var2];
           var21 = TextFieldValidator.field_j[var2];
-          if (!v.field_e[var2]) {
+          if (!SpriteAlphaState.hasAlpha[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6_int = 0; var3 > var6_int; var6_int++) {
@@ -85,7 +85,7 @@ final class ProgressSubmission extends IntrusiveNode {
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[var2], AccountFormText.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var17));
           }
         }
-        ClientException.a(0);
+        ClientException.clearDecodedSpriteState(0);
         if (param0 == 19999) {
           return var1;
         }

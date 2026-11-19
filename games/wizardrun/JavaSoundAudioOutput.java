@@ -26,7 +26,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         this.field_x.write(this.field_v, 0, var1 << 1);
     }
 
-    final void c() {
+    final void closeDevice() {
         if (this.field_x != null) {
           this.field_x.close();
           this.field_x = null;
@@ -107,7 +107,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         }
     }
 
-    final int a() {
+    final int getBufferedFrames() {
         return this.field_y - (this.field_x.available() >> (field_r ? 2 : 1));
     }
 

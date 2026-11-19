@@ -14,13 +14,13 @@ final class HuffmanDecoder {
         }
         AgeValidator.field_l = AgeValidator.field_l | var3;
         IsaacRandom.field_a = IsaacRandom.field_a | var3;
-        ArchiveLoadingPlan.field_b.addLast(new ra(param2), false);
-        if (!tc.field_j) {
-          ie.field_l.addLast(new AchievementSubmission(param2, param1, BufferedSocket.field_c + GridActor.field_g, -(64 * DiskCacheStore.field_f) + HighscorePlayer.field_b, field_c + me.field_f, DecodedSpritePalette.field_a + 6 * GridActor.field_l), false);
+        ArchiveLoadingPlan.field_b.addLast(new AchievementUnlock(param2), false);
+        if (!SavedDataRequest.field_j) {
+          SavedDataSubmission.field_l.addLast(new AchievementSubmission(param2, param1, BufferedSocket.field_c + GridActor.field_g, -(64 * DiskCacheStore.field_f) + HighscorePlayer.field_b, field_c + LoadingMessageHelpers.field_f, DecodedSpritePalette.field_a + 6 * GridActor.field_l), false);
           return;
         }
         if (TextHotspotRange.field_m >= 2) {
-          ie.field_l.addLast(new AchievementSubmission(param2, param1, BufferedSocket.field_c + GridActor.field_g, -(64 * DiskCacheStore.field_f) + HighscorePlayer.field_b, field_c + me.field_f, DecodedSpritePalette.field_a + 6 * GridActor.field_l), false);
+          SavedDataSubmission.field_l.addLast(new AchievementSubmission(param2, param1, BufferedSocket.field_c + GridActor.field_g, -(64 * DiskCacheStore.field_f) + HighscorePlayer.field_b, field_c + LoadingMessageHelpers.field_f, DecodedSpritePalette.field_a + 6 * GridActor.field_l), false);
           return;
         }
     }
@@ -56,9 +56,9 @@ final class HuffmanDecoder {
         if (param0 >= -32) {
           return;
         }
-        if (null != jc.field_H) {
-          jc.field_H.close((byte) 76);
-          jc.field_H = null;
+        if (null != OpacityWidget.field_H) {
+          OpacityWidget.field_H.close((byte) 76);
+          OpacityWidget.field_H = null;
         }
     }
 

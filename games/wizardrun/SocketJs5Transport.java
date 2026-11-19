@@ -27,7 +27,7 @@ final class SocketJs5Transport extends Js5Transport {
         if (param0 <= 124) {
           SocketJs5Transport.releaseStatics(-10);
         }
-        return ol.field_c;
+        return AccountSocketHelpers.field_c;
     }
 
     final boolean service(byte param0) {
@@ -295,7 +295,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
         EmailCheckRequest.field_h = 7;
         ProgressDialog.field_Y = param1;
-        n.field_c = param0;
+        AccountPacketState.field_c = param0;
     }
 
     final void close(byte param0) {
@@ -325,7 +325,7 @@ final class SocketJs5Transport extends Js5Transport {
           var3[var4_int] = DecodedSpritePalette.palette[ResourceArchive.bitAnd((int) var2[var4_int], 255)];
         }
         Sprite var4 = new Sprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[0], AccountFormText.field_h[0], ImageProducerRasterBuffer.field_k[param0], MouseInputHandler.field_b[0], var3);
-        ClientException.a(param0 ^ 0);
+        ClientException.clearDecodedSpriteState(param0 ^ 0);
         return var4;
     }
 

@@ -9,7 +9,7 @@ final class ProgressQuery extends IntrusiveNode {
     boolean complete;
     static String field_o;
     int[] values;
-    static jk field_m;
+    static FriendsListState field_m;
     static String field_l;
 
     public static void releaseStatics(byte param0) {
@@ -20,8 +20,8 @@ final class ProgressQuery extends IntrusiveNode {
           field_m = null;
           return;
         }
-        wc var2 = (wc) null;
-        ProgressQuery.a((wc) null, false);
+        ChatMessage var2 = (ChatMessage) null;
+        ProgressQuery.acceptChatMessage((ChatMessage) null, false);
         field_l = null;
         field_i = null;
         field_o = null;
@@ -42,11 +42,11 @@ final class ProgressQuery extends IntrusiveNode {
             var6 = null;
             var7 = null;
             if (MidiNote.field_p.field_m != null) {
-              ld.field_e = new BufferedRandomAccessFile(MidiNote.field_p.field_m, 5200, 0);
+              MusicPatchLoader.field_e = new BufferedRandomAccessFile(MidiNote.field_p.field_m, 5200, 0);
               MidiNote.field_p.field_m = null;
-              var6 = new DiskCacheStore(255, ld.field_e, new BufferedRandomAccessFile(MidiNote.field_p.field_i, 12000, 0), 2097152);
+              var6 = new DiskCacheStore(255, MusicPatchLoader.field_e, new BufferedRandomAccessFile(MidiNote.field_p.field_i, 12000, 0), 2097152);
             }
-            if (ld.field_e != null) {
+            if (MusicPatchLoader.field_e != null) {
               if (null == SocketJs5Transport.field_o) {
                 SocketJs5Transport.field_o = new BufferedRandomAccessFile[MidiNote.field_p.field_f.length];
               }
@@ -54,7 +54,7 @@ final class ProgressQuery extends IntrusiveNode {
                 SocketJs5Transport.field_o[param0] = new BufferedRandomAccessFile(MidiNote.field_p.field_f[param0], 12000, 0);
                 MidiNote.field_p.field_f[param0] = null;
               }
-              var7 = new DiskCacheStore(param0, ld.field_e, SocketJs5Transport.field_o[param0], 2097152);
+              var7 = new DiskCacheStore(param0, MusicPatchLoader.field_e, SocketJs5Transport.field_o[param0], 2097152);
             }
             var8 = DialogLayer.field_L.getProvider(param3, param1 - 11928, (DiskCacheStore) (var7), param0, (DiskCacheStore) (var6));
             if (param4) {
@@ -82,9 +82,9 @@ final class ProgressQuery extends IntrusiveNode {
         return String.valueOf(param1);
     }
 
-    final static void a(wc param0, boolean param1) {
+    final static void acceptChatMessage(ChatMessage param0, boolean param1) {
         int var2_int = 0;
-        wc var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -96,21 +96,21 @@ final class ProgressQuery extends IntrusiveNode {
           if (param1) {
             return;
           }
-          if (null == param0.field_h) {
+          if (null == param0.message) {
             return;
           }
           if (param0.field_c != 0 ||
             param0.field_d != 0) {
-            for (var2_int = 0; ca.field_e > var2_int; var2_int++) {
+            for (var2_int = 0; MeshMaterial.field_e > var2_int; var2_int++) {
               var3 = SingleChildWidget.field_B[var2_int];
-              if (var3.field_i == 2 &&
+              if (var3.messageType == 2 &&
                 param0.field_c == var3.field_c &&
                 var3.field_d == param0.field_d) {
                 return;
               }
             }
           }
-          if (param0.field_l != null) {
+          if (param0.quickChatParameters != null) {
           }
           NanoTickClock.a(0, param0);
           return;
@@ -128,7 +128,7 @@ final class ProgressQuery extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0) {
+    final static int getAccountAge(int param0) {
         if (param0 != 0) {
           return 94;
         }

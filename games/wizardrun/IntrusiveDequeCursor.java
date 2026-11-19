@@ -10,7 +10,7 @@ final class IntrusiveDequeCursor {
     private IntrusiveNode field_a;
     static char[] field_e;
 
-    final static int c(byte param0) {
+    final static int getMenuHeight(byte param0) {
         int var1 = 48 / ((-9 - param0) / 52);
         return -MatchingTextValidator.field_l + EmailAddressValidator.field_n;
     }

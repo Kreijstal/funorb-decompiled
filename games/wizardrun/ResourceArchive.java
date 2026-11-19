@@ -28,7 +28,7 @@ final class ResourceArchive {
             ((long[]) (this.packedGroups[0]))[20] = -49L;
           }
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNames.findIndex((byte) 60, NameSuggestionsPanel.a(var4, 2148));
+          var3_int = this.index.groupNames.findIndex((byte) 60, NameSuggestionsPanel.hashCp1252Text(var4, 2148));
           stackIn_7_0 = this.ensureGroupLoaded(false, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -67,7 +67,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNames.findIndex((byte) 98, NameSuggestionsPanel.a(var5, 2148));
+          var3_int = this.index.groupNames.findIndex((byte) 98, NameSuggestionsPanel.hashCp1252Text(var5, 2148));
           if (this.isValidGroupId(var3_int, 6447)) {
             return var3_int;
           }
@@ -108,7 +108,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.index.fileNames[param0].findIndex((byte) 80, NameSuggestionsPanel.a(var5, 2148));
+          var4_int = this.index.fileNames[param0].findIndex((byte) 80, NameSuggestionsPanel.hashCp1252Text(var5, 2148));
           if (this.isValidFile(var4_int, param0, true)) {
             stackIn_9_0 = var4_int;
             return stackIn_9_0;
@@ -244,7 +244,7 @@ final class ResourceArchive {
             var9 = QuickChatDynamicCommand.getStoredBytes((byte) 115, this.packedGroups[param2], false);
           }
           try {
-            var36 = dg.decompressArchiveContainer(var9, 31027);
+            var36 = ArchiveContainerHelpers.decompressArchiveContainer(var9, 31027);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -352,7 +352,7 @@ final class ResourceArchive {
                 var18Lifetime2 = var17Lifetime3;
               }
               if (0 == this.discardUnpackedMode) {
-                var7[var18Lifetime2] = pi.a(var40[var17Lifetime3], 0, false);
+                var7[var18Lifetime2] = MeshLightingHelpers.a(var40[var17Lifetime3], 0, false);
               } else {
                 var7[var18Lifetime2] = var40[var17Lifetime3];
               }
@@ -366,7 +366,7 @@ final class ResourceArchive {
             if (this.discardUnpackedMode != 0) {
               var7[var11] = var43;
             } else {
-              var7[var11] = pi.a(var36, 0, false);
+              var7[var11] = MeshLightingHelpers.a(var36, 0, false);
             }
           }
           return true;
@@ -432,7 +432,7 @@ final class ResourceArchive {
           0 > param0 ||
           param1 >= this.index.fileCapacities.length ||
           this.index.fileCapacities[param1] <= param0) {
-          if (v.field_a) {
+          if (SpriteAlphaState.field_a) {
             throw new IllegalArgumentException(param1 + " " + param0);
           }
           return false;
@@ -535,7 +535,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNames.findIndex((byte) 117, NameSuggestionsPanel.a(var4, param0 ^ -2149));
+          var3_int = this.index.groupNames.findIndex((byte) 117, NameSuggestionsPanel.hashCp1252Text(var4, param0 ^ -2149));
           if (param0 >= ~var3_int) {
             return true;
           }
@@ -586,12 +586,12 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.index.groupNames.findIndex((byte) 104, NameSuggestionsPanel.a(var7, 2148));
+          var5 = this.index.groupNames.findIndex((byte) 104, NameSuggestionsPanel.hashCp1252Text(var7, 2148));
           if (!this.isValidGroupId(var5, 6447)) {
             return null;
           }
           var8 = (CharSequence) ((Object) param1);
-          var6 = this.index.fileNames[var5].findIndex((byte) 99, NameSuggestionsPanel.a(var8, 2148));
+          var6 = this.index.fileNames[var5].findIndex((byte) 99, NameSuggestionsPanel.hashCp1252Text(var8, 2148));
           stackIn_7_0 = this.getFile(var6, var5, 1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -626,7 +626,7 @@ final class ResourceArchive {
           }
           return false;
         }
-        if (v.field_a) {
+        if (SpriteAlphaState.field_a) {
           throw new IllegalArgumentException(Integer.toString(param0));
         }
         return false;
@@ -652,7 +652,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNames.findIndex((byte) 102, NameSuggestionsPanel.a(var4, 2148));
+          var3_int = this.index.groupNames.findIndex((byte) 102, NameSuggestionsPanel.hashCp1252Text(var4, 2148));
           stackIn_6_0 = this.getGroupProgress((byte) -72, var3_int);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -746,7 +746,7 @@ final class ResourceArchive {
           return;
         }
         if (!this.discardPacked) {
-          this.packedGroups[param0] = pi.a(this.provider.getGroupData((byte) -23, param0), 0, false);
+          this.packedGroups[param0] = MeshLightingHelpers.a(this.provider.getGroupData((byte) -23, param0), 0, false);
         } else {
           this.packedGroups[param0] = this.provider.getGroupData((byte) -22, param0);
         }
@@ -815,12 +815,12 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param1);
-          var4_int = this.index.groupNames.findIndex((byte) 63, NameSuggestionsPanel.a(var6, 2148));
+          var4_int = this.index.groupNames.findIndex((byte) 63, NameSuggestionsPanel.hashCp1252Text(var6, 2148));
           if (!this.isValidGroupId(var4_int, 6447)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.index.fileNames[var4_int].findIndex((byte) 89, NameSuggestionsPanel.a(var7, 2148));
+          var5 = this.index.fileNames[var4_int].findIndex((byte) 89, NameSuggestionsPanel.hashCp1252Text(var7, 2148));
           stackIn_11_0 = this.ensureFileLoaded(var4_int, var5, (byte) -66);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

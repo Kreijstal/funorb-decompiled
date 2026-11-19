@@ -143,14 +143,14 @@ final class AlternateUsernameLoginCredentials extends UsernameLoginCredentials {
                         var38 = TriangleRasterState.viewportWidth - (var37 + 1);
                       }
                       if (var37 < 0) {
-                        uk.a(var38 + var37, var39, var41, var21 - var37 * var39, var36Lifetime2, var40, param13, true, var25 - var40 * var37, var29 - var41 * var37);
+                        QuickChatPhraseRepository.a(var38 + var37, var39, var41, var21 - var37 * var39, var36Lifetime2, var40, param13, true, var25 - var40 * var37, var29 - var41 * var37);
                       } else {
-                        uk.a(var38, var39, var41, var21, var37 + var36Lifetime2, var40, param13, true, var25, var29);
+                        QuickChatPhraseRepository.a(var38, var39, var41, var21, var37 + var36Lifetime2, var40, param13, true, var25, var29);
                       }
                     } else {
                       if (var37 >= 0 &&
                         TriangleRasterState.viewportWidth > var37) {
-                        uk.a(var38, 0, 0, var21, var37 + var36Lifetime2, 0, param13, true, var25, var29);
+                        QuickChatPhraseRepository.a(var38, 0, 0, var21, var37 + var36Lifetime2, 0, param13, true, var25, var29);
                       }
                     }
                   }
@@ -299,14 +299,14 @@ final class AlternateUsernameLoginCredentials extends UsernameLoginCredentials {
                     var37Lifetime1 = TriangleRasterState.viewportWidth + (-var36Lifetime1 - 1);
                   }
                   if (0 <= var36Lifetime1) {
-                    uk.a(var37Lifetime1, var38Lifetime1, var40Lifetime1, var21, var35Lifetime1 + var36Lifetime1, var39Lifetime1, param13, true, var25, var29);
+                    QuickChatPhraseRepository.a(var37Lifetime1, var38Lifetime1, var40Lifetime1, var21, var35Lifetime1 + var36Lifetime1, var39Lifetime1, param13, true, var25, var29);
                   } else {
-                    uk.a(var36Lifetime1 + var37Lifetime1, var38Lifetime1, var40Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var35Lifetime1, var39Lifetime1, param13, true, var25 - var36Lifetime1 * var39Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29);
+                    QuickChatPhraseRepository.a(var36Lifetime1 + var37Lifetime1, var38Lifetime1, var40Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var35Lifetime1, var39Lifetime1, param13, true, var25 - var36Lifetime1 * var39Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29);
                   }
                 } else {
                   if (0 <= var36Lifetime1 &&
                     var36Lifetime1 < TriangleRasterState.viewportWidth) {
-                    uk.a(var37Lifetime1, 0, 0, var21, var35Lifetime1 + var36Lifetime1, 0, param13, true, var25, var29);
+                    QuickChatPhraseRepository.a(var37Lifetime1, 0, 0, var21, var35Lifetime1 + var36Lifetime1, 0, param13, true, var25, var29);
                   }
                 }
               }
@@ -351,7 +351,7 @@ final class AlternateUsernameLoginCredentials extends UsernameLoginCredentials {
         int var4;
         QuickChatDynamicCommand[] var5;
         var4 = wizardrun.field_H;
-        var5 = WidgetTheme.b(109);
+        var5 = WidgetTheme.getQuickChatCommands(109);
         var2 = var5;
         for (var3 = param0; var3 < var5.length; var3++) {
           if (param1 == var5[var3].protocolId) {
@@ -371,9 +371,9 @@ final class AlternateUsernameLoginCredentials extends UsernameLoginCredentials {
     final static void c(byte param0) {
         IterableNodeHashTable.field_b = 0;
         StrongCacheEntry.field_u = -1;
-        vb.field_I = null;
+        MarkerSliderWidget.field_I = null;
         ArchiveLoadingPlan.field_a = -1;
-        ol.field_b = false;
+        AccountSocketHelpers.field_b = false;
         int var1 = 71 / ((25 - param0) / 57);
     }
 

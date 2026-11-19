@@ -291,7 +291,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (null != this.index.groupDigests &&
                 null != this.index.groupDigests[param2]) {
                 var28 = this.index.groupDigests[param2];
-                var27 = id.whirlpoolDigest(var5, 0, var18.length - 2, 0);
+                var27 = PasswordContentHelpers.whirlpoolDigest(var5, 0, var18.length - 2, 0);
                 for (var9 = 0; 64 > var9; var9++) {
                   if (~var27[var9] != ~var28[var9]) {
                     throw new RuntimeException();
@@ -340,7 +340,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             if (null != this.index.groupDigests &&
               null != this.index.groupDigests[param2]) {
               var30 = this.index.groupDigests[param2];
-              var29 = id.whirlpoolDigest(var5, 0, -2 + var18.length, 0);
+              var29 = PasswordContentHelpers.whirlpoolDigest(var5, 0, -2 + var18.length, 0);
               var11 = 0;
               var9 = var11;
               while (64 > var11) {
@@ -403,12 +403,12 @@ final class CachedArchiveProvider extends ArchiveProvider {
             CachedArchiveProvider.releaseStatics((byte) 68);
           }
           while (var5 != null) {
-            EditableTextWidget.a(var5, param1, 123);
+            EditableTextWidget.writeScoreSubmission(var5, param1, 123);
             var5 = (ScoreSubmission) (field_t.next(8192));
           }
           var4 = (HighscoreRequest) (Js5Index.field_l.first((byte) 91));
           while (var4 != null) {
-            BoundedRandomAccessFile.a(var4, param1, (byte) 121);
+            BoundedRandomAccessFile.writeHighscoreRequest(var4, param1, (byte) 121);
             var4 = (HighscoreRequest) (Js5Index.field_l.next(8192));
           }
           return;
@@ -435,18 +435,18 @@ final class CachedArchiveProvider extends ArchiveProvider {
 
     final static void c(int param0, int param1) {
         int var3 = 0;
-        of var4 = null;
+        RankingRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (of) (QuickChatDynamicCommand.field_b.first((byte) 96));
+          var4 = (RankingRequest) (QuickChatDynamicCommand.field_b.first((byte) 96));
           if (param1 != 0) {
             field_f = 48;
           }
           while (var4 != null) {
             WeightedLruCache.a(var4, param0, (byte) -81);
-            var4 = (of) (QuickChatDynamicCommand.field_b.next(param1 ^ 8192));
+            var4 = (RankingRequest) (QuickChatDynamicCommand.field_b.next(param1 ^ 8192));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

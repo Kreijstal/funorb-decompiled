@@ -166,14 +166,14 @@ final class TriangleMesh {
         var9 = wizardrun.field_H;
         try {
           ClientException.field_a = true;
-          oc.field_d = param1;
-          if (oc.field_d == 0) {
+          CoverageFontLoader.field_d = param1;
+          if (CoverageFontLoader.field_d == 0) {
             var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 59, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, FramedButtonPainter.field_s);
             var4 = 3 + var3_int;
-            ec.field_g = new int[var4];
+            LogoAnimationLoader.field_g = new int[var4];
             FlatTriangleRasterizer.field_b = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              ec.field_g[var5] = -1;
+              LogoAnimationLoader.field_g[var5] = -1;
             }
             MusicPatch.field_s = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -181,18 +181,18 @@ final class TriangleMesh {
             }
             FlatTriangleRasterizer.field_b[-3 + var4] = "";
             FlatTriangleRasterizer.field_b[-2 + var4] = MouseWheelInput.field_e;
-            ec.field_g[-2 + var4] = 0;
+            LogoAnimationLoader.field_g[-2 + var4] = 0;
             MusicPatch.field_s[0] = 4;
             FlatTriangleRasterizer.field_b[var4 - 1] = wizardrun.field_F;
-            ec.field_g[var4 - 1] = 1;
+            LogoAnimationLoader.field_g[var4 - 1] = 1;
             MusicPatch.field_s[1] = 5;
-          } else if (oc.field_d == 1) {
+          } else if (CoverageFontLoader.field_d == 1) {
             var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 41, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, FramedButtonPainter.field_s);
             var4 = 2 + var3_int;
             FlatTriangleRasterizer.field_b = new String[var4];
-            ec.field_g = new int[var4];
+            LogoAnimationLoader.field_g = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              ec.field_g[var5] = -1;
+              LogoAnimationLoader.field_g[var5] = -1;
             }
             MusicPatch.field_s = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -200,20 +200,20 @@ final class TriangleMesh {
             }
             FlatTriangleRasterizer.field_b[-2 + var4] = "";
             FlatTriangleRasterizer.field_b[-1 + var4] = wizardrun.field_F;
-            ec.field_g[-1 + var4] = 0;
+            LogoAnimationLoader.field_g[-1 + var4] = 0;
             MusicPatch.field_s[0] = 5;
-          } else if (2 != oc.field_d) {
-            if (oc.field_d == 3) {
-              if (!ld.field_g.field_s) {
+          } else if (2 != CoverageFontLoader.field_d) {
+            if (CoverageFontLoader.field_d == 3) {
+              if (!MusicPatchLoader.field_g.field_s) {
                 var3_int = TextWrappingHelpers.wrapBalancedLines((byte) -125, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, FullscreenController.field_b);
               } else {
-                var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 72, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, e.field_c);
+                var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 72, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, ThreePieceFrameHelpers.field_c);
               }
               var4 = 2 + var3_int;
-              ec.field_g = new int[var4];
+              LogoAnimationLoader.field_g = new int[var4];
               FlatTriangleRasterizer.field_b = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                ec.field_g[var5] = -1;
+                LogoAnimationLoader.field_g[var5] = -1;
               }
               MusicPatch.field_s = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -221,15 +221,15 @@ final class TriangleMesh {
               }
               FlatTriangleRasterizer.field_b[-2 + var4] = "";
               FlatTriangleRasterizer.field_b[var4 - 1] = wizardrun.field_F;
-              ec.field_g[-1 + var4] = 0;
+              LogoAnimationLoader.field_g[-1 + var4] = 0;
               MusicPatch.field_s[0] = 5;
-            } else if (oc.field_d == 4) {
+            } else if (CoverageFontLoader.field_d == 4) {
               var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 125, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, SocketConnector.field_b);
               var4 = var3_int + 2;
-              ec.field_g = new int[var4];
+              LogoAnimationLoader.field_g = new int[var4];
               FlatTriangleRasterizer.field_b = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                ec.field_g[var5] = -1;
+                LogoAnimationLoader.field_g[var5] = -1;
               }
               MusicPatch.field_s = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -237,33 +237,33 @@ final class TriangleMesh {
               }
               FlatTriangleRasterizer.field_b[-2 + var4] = "";
               FlatTriangleRasterizer.field_b[var4 - 1] = wizardrun.field_F;
-              ec.field_g[var4 - 1] = 0;
+              LogoAnimationLoader.field_g[var4 - 1] = 0;
               MusicPatch.field_s[0] = 5;
             } else {
-              if (oc.field_d != 5) {
+              if (CoverageFontLoader.field_d != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = TextWrappingHelpers.wrapBalancedLines((byte) -100, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, DialogLayer.field_G);
               var4 = var3_int + 3;
               FlatTriangleRasterizer.field_b = new String[var4];
-              ec.field_g = new int[var4];
+              LogoAnimationLoader.field_g = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                ec.field_g[var5] = -1;
+                LogoAnimationLoader.field_g[var5] = -1;
               }
               MusicPatch.field_s = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 FlatTriangleRasterizer.field_b[var5] = WidgetContainer.field_z[var5];
               }
               FlatTriangleRasterizer.field_b[-3 + var4] = "";
-              FlatTriangleRasterizer.field_b[var4 - 2] = tc.field_n;
-              ec.field_g[-2 + var4] = 0;
+              FlatTriangleRasterizer.field_b[var4 - 2] = SavedDataRequest.field_n;
+              LogoAnimationLoader.field_g[-2 + var4] = 0;
               MusicPatch.field_s[0] = 3;
               FlatTriangleRasterizer.field_b[var4 - 1] = wizardrun.field_F;
-              ec.field_g[var4 - 1] = 1;
+              LogoAnimationLoader.field_g[var4 - 1] = 1;
               MusicPatch.field_s[1] = 5;
             }
           } else {
-            var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 39, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, WeightedLruCache.a(new String[]{"<br><%0><br>"}, (byte) 108, gk.field_e));
+            var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 39, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, WeightedLruCache.formatPlaceholders(new String[]{"<br><%0><br>"}, (byte) 108, Bzip2State.field_e));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(WidgetContainer.field_z[var5])) {
@@ -275,11 +275,11 @@ final class TriangleMesh {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            ke.field_t = new String[var4];
-            ArrayOperations.copy(WidgetContainer.field_z, 0, ke.field_t, 0, var4);
-            ec.field_a = new String[-var4 + (var3_int - 1)];
-            ArrayOperations.copy(WidgetContainer.field_z, 1 + var4, ec.field_a, 0, -var4 + var3_int - 1);
-            var3_int = TextWrappingHelpers.wrapBalancedLines((byte) -112, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, WeightedLruCache.a(new String[]{"<br><%0><br>"}, (byte) 43, MenuController.field_k));
+            PasswordFieldPainter.field_t = new String[var4];
+            ArrayOperations.copy(WidgetContainer.field_z, 0, PasswordFieldPainter.field_t, 0, var4);
+            LogoAnimationLoader.field_a = new String[-var4 + (var3_int - 1)];
+            ArrayOperations.copy(WidgetContainer.field_z, 1 + var4, LogoAnimationLoader.field_a, 0, -var4 + var3_int - 1);
+            var3_int = TextWrappingHelpers.wrapBalancedLines((byte) -112, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, WeightedLruCache.formatPlaceholders(new String[]{"<br><%0><br>"}, (byte) 43, MenuController.field_k));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(WidgetContainer.field_z[var5])) {
@@ -293,36 +293,36 @@ final class TriangleMesh {
             }
             GrowableIntList.field_f = new String[var4];
             ArrayOperations.copy(WidgetContainer.field_z, 0, GrowableIntList.field_f, 0, var4);
-            f.field_b = new String[-1 + (var3_int - var4)];
-            ArrayOperations.copy(WidgetContainer.field_z, var4 + 1, f.field_b, 0, var3_int - var4 - 1);
-            if (GrowableIntList.field_f.length <= ke.field_t.length) {
-              stackIn_66_0 = ke.field_t.length;
+            HighscorePlayerState.field_b = new String[-1 + (var3_int - var4)];
+            ArrayOperations.copy(WidgetContainer.field_z, var4 + 1, HighscorePlayerState.field_b, 0, var3_int - var4 - 1);
+            if (GrowableIntList.field_f.length <= PasswordFieldPainter.field_t.length) {
+              stackIn_66_0 = PasswordFieldPainter.field_t.length;
             } else {
               stackIn_66_0 = GrowableIntList.field_f.length;
             }
             var5 = stackIn_66_0;
-            if (f.field_b.length > ec.field_a.length) {
-              stackIn_69_0 = f.field_b.length;
+            if (HighscorePlayerState.field_b.length > LogoAnimationLoader.field_a.length) {
+              stackIn_69_0 = HighscorePlayerState.field_b.length;
             } else {
-              stackIn_69_0 = ec.field_a.length;
+              stackIn_69_0 = LogoAnimationLoader.field_a.length;
             }
             var6 = stackIn_69_0;
             var7 = var6 + (var5 + 7);
             FlatTriangleRasterizer.field_b = new String[var7];
-            ec.field_g = new int[var7];
+            LogoAnimationLoader.field_g = new int[var7];
             for (var8 = 0; var7 > var8; var8++) {
-              ec.field_g[var8] = -1;
+              LogoAnimationLoader.field_g[var8] = -1;
             }
-            ec.field_g[1] = 0;
+            LogoAnimationLoader.field_g[1] = 0;
             MusicPatch.field_s = new int[2];
             FlatTriangleRasterizer.field_b[0] = QuickChatDynamicCommand.field_c;
-            FlatTriangleRasterizer.field_b[1] = ca.field_a;
+            FlatTriangleRasterizer.field_b[1] = MeshMaterial.field_a;
             MusicPatch.field_s[0] = 5;
             FlatTriangleRasterizer.field_b[4] = StripedProgressBar.field_E;
-            FlatTriangleRasterizer.field_b[3] = wb.field_h;
+            FlatTriangleRasterizer.field_b[3] = RadialSelectorPainter.field_h;
             MusicPatch.field_s[1] = 2;
             FlatTriangleRasterizer.field_b[5] = "";
-            ec.field_g[3] = 1;
+            LogoAnimationLoader.field_g[3] = 1;
             FlatTriangleRasterizer.field_b[2] = MidiEnvelope.field_g;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_76_0 = FlatTriangleRasterizer.field_b;
@@ -335,16 +335,16 @@ final class TriangleMesh {
               stackIn_76_0[stackIn_76_1] = stackIn_77_2;
             }
             FlatTriangleRasterizer.field_b[6 + var5] = null;
-            ec.field_g[var5 + 6] = -2;
+            LogoAnimationLoader.field_g[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_81_0 = FlatTriangleRasterizer.field_b;
               stackIn_81_1 = 7 + (var5 + var8Lifetime3);
-              stackIn_81_2 = ~f.field_b.length;
+              stackIn_81_2 = ~HighscorePlayerState.field_b.length;
               stackIn_81_3 = ~var8Lifetime3;
               if (stackIn_81_2 >= stackIn_81_3) {
                 stackIn_84_2 = "";
               } else {
-                stackIn_84_2 = f.field_b[var8Lifetime3];
+                stackIn_84_2 = HighscorePlayerState.field_b[var8Lifetime3];
               }
               stackIn_81_0[stackIn_81_1] = stackIn_84_2;
             }
@@ -353,14 +353,14 @@ final class TriangleMesh {
           IntegerSyntaxHelpers.field_d.field_c = MusicPatch.field_s.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < FlatTriangleRasterizer.field_b.length; var4Lifetime1++) {
-            stackIn_91_0 = !(ec.field_g[var4Lifetime1] < 0);
+            stackIn_91_0 = !(LogoAnimationLoader.field_g[var4Lifetime1] < 0);
             var5Lifetime1 = EmailCheckRequest.measureTextWidth(stackIn_91_0, 110, FlatTriangleRasterizer.field_b[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (oc.field_d == 2) {
-            var10 = ke.field_t;
+          if (CoverageFontLoader.field_d == 2) {
+            var10 = PasswordFieldPainter.field_t;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
@@ -369,7 +369,7 @@ final class TriangleMesh {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = ec.field_a;
+            var4_ref_String__Lifetime1 = LogoAnimationLoader.field_a;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = EmailCheckRequest.measureTextWidth(false, 110, var12);
@@ -378,43 +378,43 @@ final class TriangleMesh {
               }
             }
           }
-          MatchingTextValidator.field_l = id.field_c - (var3_intLifetime1 >> 1);
-          EmailAddressValidator.field_n = var3_intLifetime1 + id.field_c - (var3_intLifetime1 >> 1);
-          CachedArchiveProvider.field_f = (e.field_d + Js5Transport.field_e << 1) * IntegerSyntaxHelpers.field_d.field_c;
+          MatchingTextValidator.field_l = PasswordContentHelpers.field_c - (var3_intLifetime1 >> 1);
+          EmailAddressValidator.field_n = var3_intLifetime1 + PasswordContentHelpers.field_c - (var3_intLifetime1 >> 1);
+          CachedArchiveProvider.field_f = (ThreePieceFrameHelpers.field_d + Js5Transport.field_e << 1) * IntegerSyntaxHelpers.field_d.field_c;
           for (var4Lifetime2 = 0; FlatTriangleRasterizer.field_b.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_115_0 = CachedArchiveProvider.field_f;
-            if (ec.field_g[var4Lifetime2] < 0) {
+            if (LogoAnimationLoader.field_g[var4Lifetime2] < 0) {
               stackIn_116_1 = BufferedRandomAccessFile.field_f;
             } else {
-              stackIn_116_1 = ec.field_c;
+              stackIn_116_1 = LogoAnimationLoader.field_c;
             }
             CachedArchiveProvider.field_f = stackIn_115_0 + stackIn_116_1;
           }
-          IntrusiveDequeCursor.field_f = ii.field_a - (CachedArchiveProvider.field_f >> 1);
+          IntrusiveDequeCursor.field_f = NameAvailabilityFactory.field_a - (CachedArchiveProvider.field_f >> 1);
           NodeHashTableIterator.field_m = new int[FlatTriangleRasterizer.field_b.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = IntrusiveDequeCursor.field_f;
           while (var4Lifetime3 < FlatTriangleRasterizer.field_b.length) {
-            var6Lifetime1 = ec.field_g[var4Lifetime3];
+            var6Lifetime1 = LogoAnimationLoader.field_g[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = EmailCheckRequest.measureTextWidth(true, 110, FlatTriangleRasterizer.field_b[var4Lifetime3]);
-              var8Lifetime1 = -(var7Lifetime2 >> 1) + id.field_c;
+              var8Lifetime1 = -(var7Lifetime2 >> 1) + PasswordContentHelpers.field_c;
               var5Lifetime3 = var5Lifetime3 + Js5Transport.field_e;
               NodeHashTableIterator.field_m[var4Lifetime3] = new int[4];
-              NodeHashTableIterator.field_m[var4Lifetime3][0] = var8Lifetime1 - vl.field_h;
+              NodeHashTableIterator.field_m[var4Lifetime3][0] = var8Lifetime1 - CheckboxPainter.field_h;
               NodeHashTableIterator.field_m[var4Lifetime3][1] = var5Lifetime3;
-              NodeHashTableIterator.field_m[var4Lifetime3][2] = (vl.field_h << 1) + var7Lifetime2;
-              NodeHashTableIterator.field_m[var4Lifetime3][3] = ec.field_c + (e.field_d << 1);
-              var5Lifetime3 = var5Lifetime3 + (Js5Transport.field_e + (e.field_d << 1) + ec.field_c);
+              NodeHashTableIterator.field_m[var4Lifetime3][2] = (CheckboxPainter.field_h << 1) + var7Lifetime2;
+              NodeHashTableIterator.field_m[var4Lifetime3][3] = LogoAnimationLoader.field_c + (ThreePieceFrameHelpers.field_d << 1);
+              var5Lifetime3 = var5Lifetime3 + (Js5Transport.field_e + (ThreePieceFrameHelpers.field_d << 1) + LogoAnimationLoader.field_c);
             } else {
               var5Lifetime3 = var5Lifetime3 + BufferedRandomAccessFile.field_f;
             }
             var4Lifetime3++;
           }
-          if (oc.field_d == 2) {
-            IntegerSyntaxHelpers.field_d.a(-12785, -1, param0, -1);
+          if (CoverageFontLoader.field_d == 2) {
+            IntegerSyntaxHelpers.field_d.resetSelection(-12785, -1, param0, -1);
           } else {
-            IntegerSyntaxHelpers.field_d.a(-12785, DisplayModeInfo.a(-578629823, AchievementSubmission.field_n, NetworkArchiveRequest.field_B), param0, 0);
+            IntegerSyntaxHelpers.field_d.resetSelection(-12785, DisplayModeInfo.a(-578629823, AchievementSubmission.field_n, NetworkArchiveRequest.field_B), param0, 0);
           }
           if (param2 != 15991) {
             TriangleMesh.releaseStatics(20);
@@ -495,7 +495,7 @@ final class TriangleMesh {
         field_f[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = 8 * (-1 + var0);
-            field_f[var0] = GameApplet.a(GameApplet.a(GameApplet.a(gf.a(16711680L, field_A[5][var1 + 5]), GameApplet.a(gf.a(field_A[4][4 + var1], 4278190080L), GameApplet.a(GameApplet.a(gf.a(field_A[2][2 + var1], 280375465082880L), GameApplet.a(gf.a(field_A[0][var1], -72057594037927936L), gf.a(71776119061217280L, field_A[1][var1 + 1]))), gf.a(1095216660480L, field_A[3][var1 + 3])))), gf.a(field_A[6][var1 + 6], 65280L)), gf.a(field_A[7][var1 + 7], 255L));
+            field_f[var0] = GameApplet.a(GameApplet.a(GameApplet.a(ContentTransitionDialog.bitAndLong(16711680L, field_A[5][var1 + 5]), GameApplet.a(ContentTransitionDialog.bitAndLong(field_A[4][4 + var1], 4278190080L), GameApplet.a(GameApplet.a(ContentTransitionDialog.bitAndLong(field_A[2][2 + var1], 280375465082880L), GameApplet.a(ContentTransitionDialog.bitAndLong(field_A[0][var1], -72057594037927936L), ContentTransitionDialog.bitAndLong(71776119061217280L, field_A[1][var1 + 1]))), ContentTransitionDialog.bitAndLong(1095216660480L, field_A[3][var1 + 3])))), ContentTransitionDialog.bitAndLong(field_A[6][var1 + 6], 65280L)), ContentTransitionDialog.bitAndLong(field_A[7][var1 + 7], 255L));
         }
     }
 }

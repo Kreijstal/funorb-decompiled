@@ -28,7 +28,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.matchingField instanceof ValidatorProvider) {
             var3 = ((ValidatorProvider) ((Object) this.matchingField)).getValidator((byte) 119);
             if (var3 != null &&
-              var3.getState(true) != gf.field_V) {
+              var3.getState(true) != ContentTransitionDialog.field_V) {
               stackIn_4_0 = DisplayNameSyntaxHelpers.field_c;
               return stackIn_4_0;
             }
@@ -40,7 +40,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (!param1.equals(this.matchingField.text)) {
             stackIn_11_0 = DisplayNameSyntaxHelpers.field_c;
           } else {
-            stackIn_11_0 = gf.field_V;
+            stackIn_11_0 = ContentTransitionDialog.field_V;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -71,9 +71,9 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.matchingField instanceof ValidatorProvider) {
             var3 = ((ValidatorProvider) ((Object) this.matchingField)).getValidator((byte) 113);
             if (var3 != null) {
-              if (var3.getState(true) == gf.field_V &&
+              if (var3.getState(true) == ContentTransitionDialog.field_V &&
                 !param0.equals(this.matchingField.text)) {
-                stackIn_8_0 = ec.field_h;
+                stackIn_8_0 = LogoAnimationLoader.field_h;
                 return stackIn_8_0;
               }
               stackIn_10_0 = var3.getMessage(-2864);
@@ -86,7 +86,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (param0.equals(this.matchingField.text)) {
             return null;
           }
-          stackIn_16_0 = ec.field_h;
+          stackIn_16_0 = LogoAnimationLoader.field_h;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -121,15 +121,15 @@ final class MatchingTextValidator extends TextFieldValidator {
           while (stackIn_5_0.column < 20) {
             var4.row = 0;
             while (var4.row < 15) {
-              if (tc.field_l.field_j[var3.toTileIndex((byte) -68)] > 0) {
-                lk.field_b[-1 + tc.field_l.field_j[var3.toTileIndex((byte) -68)]].drawTransparent(32 * var4.column, 32 * (-var4.row + 14));
+              if (SavedDataRequest.level.field_j[var3.toTileIndex((byte) -68)] > 0) {
+                TextPositionHelpers.field_b[-1 + SavedDataRequest.level.field_j[var3.toTileIndex((byte) -68)]].drawTransparent(32 * var4.column, 32 * (-var4.row + 14));
               }
-              if (0 < tc.field_l.field_a[var3.toTileIndex((byte) -68)] &&
-                oc.field_b[-1 + tc.field_l.field_a[var3.toTileIndex((byte) -68)]] != null) {
-                oc.field_b[-1 + tc.field_l.field_a[var3.toTileIndex((byte) -68)]][0].drawTransparent(var4.column * 32, 32 * (-1 + (15 - var4.row)));
+              if (0 < SavedDataRequest.level.field_a[var3.toTileIndex((byte) -68)] &&
+                CoverageFontLoader.field_b[-1 + SavedDataRequest.level.field_a[var3.toTileIndex((byte) -68)]] != null) {
+                CoverageFontLoader.field_b[-1 + SavedDataRequest.level.field_a[var3.toTileIndex((byte) -68)]][0].drawTransparent(var4.column * 32, 32 * (-1 + (15 - var4.row)));
               }
-              if (tc.field_l.field_d[var3.toTileIndex((byte) -68)] &&
-                ke.field_w) {
+              if (SavedDataRequest.level.field_d[var3.toTileIndex((byte) -68)] &&
+                PasswordFieldPainter.field_w) {
                 SoftwareRasterizer.fillRectangleBlended(32 * var4.column, -32 + (480 - var4.row * 32), 32, 32, 16777215, 128);
               }
               var4.row = var4.row + 1;
@@ -140,7 +140,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (DialogLayer.field_K != 0) {
             return;
           }
-          ld.field_d.drawTransparent(aa.field_ib.column * 24, 336 - aa.field_ib.row * 24);
+          MusicPatchLoader.field_d.drawTransparent(FriendEntry.field_ib.column * 24, 336 - FriendEntry.field_ib.row * 24);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
